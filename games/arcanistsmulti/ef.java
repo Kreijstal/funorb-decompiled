@@ -10,7 +10,7 @@ final class ef extends lk {
     static String field_q;
     private k field_w;
     static boolean field_r;
-    static vn field_u;
+    static IntrusiveDeque field_u;
 
     final void a(byte param0) {
         try {
@@ -30,7 +30,7 @@ final class ef extends lk {
         try {
           IOException iOException = null;
           Object var5 = null;
-          wk stackIn_7_0 = null;
+          PacketBuffer stackIn_7_0 = null;
           int stackIn_8_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -42,16 +42,16 @@ final class ef extends lk {
               var5 = (Object) null;
               this.a(false, true, (Object) null);
             }
-            this.field_c.field_g = 0;
+            this.field_c.position = 0;
             stackIn_7_0 = this.field_c;
             if (!param1) {
               stackIn_8_1 = 3;
             } else {
               stackIn_8_1 = 2;
             }
-            ((wk) (Object) stackIn_7_0).f(stackIn_8_1, (byte) -62);
-            this.field_c.a((byte) -118, 0L);
-            this.field_w.a(this.field_c.field_j.length, 0, (byte) 122, this.field_c.field_j);
+            ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_8_1, (byte) -62);
+            this.field_c.writeFiveByteValue((byte) -118, 0L);
+            this.field_w.a(this.field_c.payload.length, 0, (byte) 122, this.field_c.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -109,7 +109,7 @@ final class ef extends lk {
             this.d((byte) 113);
             this.a(-101, param0);
             this.field_n = null;
-            this.field_e.field_g = 0;
+            this.field_e.position = 0;
             while (true) {
               var4_ref = (vk) (this.field_g.a((byte) 118));
               if (var4_ref != null) {
@@ -128,11 +128,11 @@ final class ef extends lk {
             }
             if (this.field_a != 0) {
               try {
-                this.field_c.field_g = 0;
-                this.field_c.f(4, (byte) -116);
-                this.field_c.f((int) this.field_a, (byte) -67);
-                this.field_c.a(0, (byte) -101);
-                this.field_w.a(this.field_c.field_j.length, 0, (byte) 122, this.field_c.field_j);
+                this.field_c.position = 0;
+                this.field_c.writeByte(4, (byte) -116);
+                this.field_c.writeByte((int) this.field_a, (byte) -67);
+                this.field_c.writeInt(0, (byte) -101);
+                this.field_w.a(this.field_c.payload.length, 0, (byte) 122, this.field_c.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -172,11 +172,11 @@ final class ef extends lk {
         }
     }
 
-    final static ll a(int[] param0, byte param1, ll param2) {
+    final static IndexedSprite a(int[] param0, byte param1, IndexedSprite param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ll var4 = null;
-        ll stackIn_1_0 = null;
+        IndexedSprite var4 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -185,7 +185,7 @@ final class ef extends lk {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 15 / ((param1 - 29) / 49);
-          var4 = new ll(0, 0, 0);
+          var4 = new IndexedSprite(0, 0, 0);
           var4.field_m = param2.field_m;
           var4.field_j = param2.field_j;
           var4.field_f = param2.field_f;
@@ -275,10 +275,10 @@ final class ef extends lk {
             this.field_w.a(false);
             var2 = (vk) (this.field_b.b(96));
             while (var2 != null) {
-              this.field_c.field_g = 0;
-              this.field_c.f(1, (byte) -64);
-              this.field_c.a((byte) -127, var2.field_k);
-              this.field_w.a(this.field_c.field_j.length, 0, (byte) 116, this.field_c.field_j);
+              this.field_c.position = 0;
+              this.field_c.writeByte(1, (byte) -64);
+              this.field_c.writeFiveByteValue((byte) -127, var2.secondaryKey);
+              this.field_w.a(this.field_c.payload.length, 0, (byte) 116, this.field_c.payload);
               this.field_g.a(var2, 15893);
               var2 = (vk) (this.field_b.e(-30));
             }
@@ -287,10 +287,10 @@ final class ef extends lk {
             }
             var2Lifetime1 = (vk) (this.field_f.b(63));
             while (var2Lifetime1 != null) {
-              this.field_c.field_g = 0;
-              this.field_c.f(0, (byte) -68);
-              this.field_c.a((byte) -121, var2Lifetime1.field_k);
-              this.field_w.a(this.field_c.field_j.length, 0, (byte) 116, this.field_c.field_j);
+              this.field_c.position = 0;
+              this.field_c.writeByte(0, (byte) -68);
+              this.field_c.writeFiveByteValue((byte) -121, var2Lifetime1.secondaryKey);
+              this.field_w.a(this.field_c.payload.length, 0, (byte) 116, this.field_c.payload);
               this.field_m.a(var2Lifetime1, 15893);
               var2Lifetime1 = (vk) (this.field_f.e(param0 + 3265));
             }
@@ -310,27 +310,27 @@ final class ef extends lk {
                   }
                 }
                 if (var4 <= 0) {
-                  var5 = this.field_n.field_A.field_j.length - this.field_n.field_y;
+                  var5 = this.field_n.field_A.payload.length - this.field_n.field_y;
                   var6 = -this.field_n.field_x + 512;
-                  if (var6 > -this.field_n.field_A.field_g + var5) {
-                    var6 = -this.field_n.field_A.field_g + var5;
+                  if (var6 > -this.field_n.field_A.position + var5) {
+                    var6 = -this.field_n.field_A.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_w.a(this.field_n.field_A.field_j, (byte) -123, this.field_n.field_A.field_g, var6);
+                  this.field_w.a(this.field_n.field_A.payload, (byte) -123, this.field_n.field_A.position, var6);
                   if (this.field_a != 0) {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_n.field_A.field_j[this.field_n.field_A.field_g + var17] = (byte)hh.a((int) this.field_n.field_A.field_j[this.field_n.field_A.field_g + var17], (int) this.field_a);
+                      this.field_n.field_A.payload[this.field_n.field_A.position + var17] = (byte)hh.a((int) this.field_n.field_A.payload[this.field_n.field_A.position + var17], (int) this.field_a);
                       var17++;
                     }
                   }
                   this.field_n.field_x = this.field_n.field_x + var6;
-                  this.field_n.field_A.field_g = this.field_n.field_A.field_g + var6;
-                  if (var5 == this.field_n.field_A.field_g) {
-                    this.field_n.a((byte) 88);
+                  this.field_n.field_A.position = this.field_n.field_A.position + var6;
+                  if (var5 == this.field_n.field_A.position) {
+                    this.field_n.unlinkSecondary((byte) 88);
                     this.field_n.field_p = false;
                     this.field_n = null;
                   } else {
@@ -339,24 +339,24 @@ final class ef extends lk {
                     }
                   }
                 } else {
-                  var5 = var4 - this.field_e.field_g;
+                  var5 = var4 - this.field_e.position;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_w.a(this.field_e.field_j, (byte) -125, this.field_e.field_g, var5);
+                  this.field_w.a(this.field_e.payload, (byte) -125, this.field_e.position, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_e.field_j[this.field_e.field_g + var6] = (byte)hh.a((int) this.field_e.field_j[this.field_e.field_g + var6], (int) this.field_a);
+                      this.field_e.payload[this.field_e.position + var6] = (byte)hh.a((int) this.field_e.payload[this.field_e.position + var6], (int) this.field_a);
                     }
                   }
-                  this.field_e.field_g = this.field_e.field_g + var5;
-                  if (this.field_e.field_g >= var4) {
+                  this.field_e.position = this.field_e.position + var5;
+                  if (this.field_e.position >= var4) {
                     if (this.field_n == null) {
-                      this.field_e.field_g = 0;
-                      var6 = this.field_e.e((byte) -104);
-                      var7 = this.field_e.d(-10674);
-                      var8 = this.field_e.e((byte) 63);
-                      var9 = this.field_e.d(-10674);
+                      this.field_e.position = 0;
+                      var6 = this.field_e.readUnsignedByte((byte) -104);
+                      var7 = this.field_e.readInt(-10674);
+                      var8 = this.field_e.readUnsignedByte((byte) 63);
+                      var9 = this.field_e.readInt(-10674);
                       var10 = var8 & 127;
                       stackIn_53_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -367,7 +367,7 @@ final class ef extends lk {
                       if (var11 == 0) {
                         var14_ref = (vk) (this.field_g.b(54));
                         while (var14_ref != null) {
-                          if (~var14_ref.field_k == ~var12) {
+                          if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -379,7 +379,7 @@ final class ef extends lk {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (vk) (this.field_m.b(54));
                         while (var14_ref != null) {
-                          if (~var12 == ~var14_ref.field_k) {
+                          if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
                           var14_ref = (vk) (this.field_m.e(-6));
@@ -391,17 +391,17 @@ final class ef extends lk {
                       this.field_n = var14_ref;
                       stackIn_70_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_70_0;
-                      this.field_n.field_A = new wk(var15 + (var9 + this.field_n.field_y));
-                      this.field_n.field_A.f(var10, (byte) -62);
-                      this.field_n.field_A.a(var9, (byte) -101);
-                      this.field_e.field_g = 0;
+                      this.field_n.field_A = new PacketBuffer(var15 + (var9 + this.field_n.field_y));
+                      this.field_n.field_A.writeByte(var10, (byte) -62);
+                      this.field_n.field_A.writeInt(var9, (byte) -101);
+                      this.field_e.position = 0;
                       this.field_n.field_x = 10;
                     } else {
                       if (this.field_n.field_x != 0) {
                         throw new IOException();
                       }
-                      if (-1 == this.field_e.field_j[0]) {
-                        this.field_e.field_g = 0;
+                      if (-1 == this.field_e.payload[0]) {
+                        this.field_e.position = 0;
                         this.field_n.field_x = 1;
                       } else {
                         this.field_n = null;
@@ -454,12 +454,12 @@ final class ef extends lk {
             return;
           }
           try {
-            this.field_c.field_g = 0;
-            this.field_c.f(6, (byte) -18);
+            this.field_c.position = 0;
+            this.field_c.writeByte(6, (byte) -18);
             var2_int = 1 % ((param0 - 54) / 43);
-            this.field_c.a((byte) -120, 3);
-            this.field_c.c(0, (byte) -66);
-            this.field_w.a(this.field_c.field_j.length, 0, (byte) 117, this.field_c.field_j);
+            this.field_c.writeMedium((byte) -120, 3);
+            this.field_c.writeShort(0, (byte) -66);
+            this.field_w.a(this.field_c.payload.length, 0, (byte) 117, this.field_c.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -495,6 +495,6 @@ final class ef extends lk {
         field_s = "Quick Chat game";
         field_q = "Rating";
         field_r = true;
-        field_u = new vn();
+        field_u = new IntrusiveDeque();
     }
 }

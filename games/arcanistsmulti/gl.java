@@ -73,7 +73,7 @@ final class gl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, qb[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -240,7 +240,7 @@ final class gl {
 
     final static void a(boolean param0, int param1) {
         int var3;
-        qb[] var4;
+        Sprite[] var4;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 ||
           wi.field_f == null) {
@@ -310,8 +310,8 @@ final class gl {
           }
         }
         if (param1 != 0) {
-          var4 = (qb[]) null;
-          gl.a(126, -38, -58, 81, (qb[]) null, 13);
+          var4 = (Sprite[]) null;
+          gl.a(126, -38, -58, 81, (Sprite[]) null, 13);
         }
     }
 

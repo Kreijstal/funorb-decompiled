@@ -4,7 +4,7 @@
 final class re extends kh {
     static String[] field_t;
     private boolean field_n;
-    static qb[] field_j;
+    static Sprite[] field_j;
     static int field_r;
     private int field_l;
     private int field_s;

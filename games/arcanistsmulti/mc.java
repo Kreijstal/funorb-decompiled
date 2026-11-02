@@ -3,7 +3,7 @@
  */
 final class mc {
     static int field_c;
-    static qb[] field_a;
+    static Sprite[] field_a;
     static dj field_b;
 
     final static void a(int param0, int param1, int param2, boolean param3) {

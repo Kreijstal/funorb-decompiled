@@ -29,7 +29,7 @@ final class co {
     }
 
     final static int a(int param0) {
-        vn var1 = null;
+        IntrusiveDeque var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         ml var3 = null;
@@ -40,7 +40,7 @@ final class co {
         try {
           var1 = rk.field_O.g((byte) 56);
           var2 = 0;
-          var3 = (ml) (var1.b(param0 + 33298));
+          var3 = (ml) (var1.first(param0 + 33298));
           if (param0 != -20675) {
             field_h = (am) null;
           }
@@ -48,7 +48,7 @@ final class co {
             if (40 == var3.field_jb) {
               var2++;
             }
-            var3 = (ml) (var1.a(0));
+            var3 = (ml) (var1.next(0));
           }
           stackIn_8_0 = var2;
           return stackIn_8_0;

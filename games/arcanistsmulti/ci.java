@@ -5,12 +5,12 @@ final class ci {
     static String field_b;
     static gd field_c;
     static kc field_a;
-    static qb field_e;
+    static Sprite field_e;
     static pb field_d;
 
     final static void a(byte param0) {
         io.field_n = oo.d(-9685);
-        p.field_b = new h();
+        ClientException.field_b = new h();
         if (param0 > 49) {
           sc.a(true, false, true);
           return;
@@ -52,7 +52,7 @@ final class ci {
             return (bd) ((Object) stackIn_6_0);
           }
           if (param2 >= -49) {
-            field_e = (qb) null;
+            field_e = (Sprite) null;
           }
           stackIn_12_0 = new im(param3, param4);
           return (bd) ((Object) stackIn_12_0);

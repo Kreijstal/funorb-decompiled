@@ -6,7 +6,7 @@ final class vm {
     static String field_f;
     static byte[][][] field_a;
     static String field_b;
-    static ll[] field_g;
+    static IndexedSprite[] field_g;
     static String field_e;
     static String[] field_d;
 
@@ -28,11 +28,11 @@ final class vm {
         Object var1 = null;
         var1 = ob.field_hb;
         synchronized (var1) {
-          wk.field_m = rk.field_K;
+          PacketBuffer.field_m = rk.field_K;
           rf.field_o = rf.field_o + 1;
           an.field_g = j.field_g;
           me.field_I = dd.field_i;
-          tl.field_d = qa.field_g;
+          ArchiveProvider.field_d = qa.field_g;
           qa.field_g = false;
           re.field_r = eh.field_c;
           pb.field_h = bo.field_e;

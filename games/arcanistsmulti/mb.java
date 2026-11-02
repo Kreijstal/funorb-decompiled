@@ -7,7 +7,7 @@ final class mb extends mh {
     int field_Q;
     static String field_R;
     static long[][] field_L;
-    static ll[] field_cb;
+    static IndexedSprite[] field_cb;
     int field_T;
     Object[] field_W;
     static int[] field_U;
@@ -17,7 +17,7 @@ final class mb extends mh {
     static int field_P;
     static String field_O;
     static String field_Z;
-    static ll[] field_ab;
+    static IndexedSprite[] field_ab;
     static String field_N;
     static int field_bb;
 

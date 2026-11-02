@@ -123,11 +123,11 @@ final class ba {
         if (param0 != 0) {
           ba.a(-120);
         }
-        p.field_b.f(-120);
+        ClientException.field_b.f(-120);
         if (null == ci.field_c) {
-          ci.field_c = new gd(p.field_b, fg.field_o);
+          ci.field_c = new gd(ClientException.field_b, fg.field_o);
         }
-        p.field_b.b(ci.field_c, param0 + 15637);
+        ClientException.field_b.b(ci.field_c, param0 + 15637);
     }
 
     final static void b(int param0) {
@@ -172,8 +172,8 @@ final class ba {
 
     final static void d(int param0) {
         int var1 = -96 / ((param0 + 52) / 63);
-        if (null != p.field_b) {
-          p.field_b.h((byte) 83);
+        if (null != ClientException.field_b) {
+          ClientException.field_b.h((byte) 83);
         }
         if (ci.field_c != null) {
           ci.field_c.k((byte) 61);

@@ -6,7 +6,7 @@ final class sb {
     static String field_c;
     static String field_b;
     static boolean field_a;
-    static qb field_g;
+    static Sprite field_g;
     static int[] field_h;
     static String field_d;
     static int field_e;
@@ -29,7 +29,7 @@ final class sb {
         if (param0 <= 42) {
           sb.a(-95);
         }
-        rb var4 = (rb) (pb.field_m.b(12623));
+        rb var4 = (rb) (pb.field_m.first(12623));
         if (var4 != null) {
           var2 = an.field_f / 2;
           var3 = an.field_j - 10;
@@ -96,7 +96,7 @@ final class sb {
     }
 
     final static void a(boolean param0, int param1) {
-        qb stackIn_5_0;
+        Sprite stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;
         int[] stackIn_5_3;
@@ -131,7 +131,7 @@ final class sb {
           } else {
             stackIn_6_4 = bm.field_g.field_I;
           }
-          ((qb) (Object) stackIn_5_0).d(stackIn_5_1, stackIn_5_2, stackIn_5_3[stackIn_6_4]);
+          ((Sprite) (Object) stackIn_5_0).d(stackIn_5_1, stackIn_5_2, stackIn_5_3[stackIn_6_4]);
           pm.field_a.c(0, -pm.field_a.field_w + (lo.field_q + var2_int), 128);
           if (param1 >= -38) {
             return;
@@ -239,15 +239,15 @@ final class sb {
           } else {
             vh.field_n = false;
           }
-          if (null != mo.field_f &&
+          if (null != IntrusiveNodeHashTable.field_f &&
             param0) {
             if (bm.field_g.field_B) {
-              mo.field_f = mo.field_f + sk.field_c;
+              IntrusiveNodeHashTable.field_f = IntrusiveNodeHashTable.field_f + sk.field_c;
             }
             var4 = 0;
             var5Lifetime1 = 0;
-            var6 = mi.field_B.c(mo.field_f, kl.field_A - 32);
-            var7 = 32 + mi.field_B.field_C * mi.field_B.a(mo.field_f, -32 + var6);
+            var6 = mi.field_B.c(IntrusiveNodeHashTable.field_f, kl.field_A - 32);
+            var7 = 32 + mi.field_B.field_C * mi.field_B.a(IntrusiveNodeHashTable.field_f, -32 + var6);
             var6 += 32;
             var8 = Math.min(-var6 + an.field_f, an.field_f / 2 + 54);
             de.e(-var4 + var8, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 16777215, 192);
@@ -259,7 +259,7 @@ final class sb {
             de.a(var8 - var4, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 11768360);
             var4++;
             de.a(var8 - var4, -var4 + var5Lifetime1, var6 + 2 * var4, 2 * var4 + var7, 0);
-            mi.field_B.a(mo.field_f, 16 + var8, var5Lifetime1, -32 + var6, var7, 0, -1, 1, 1, mi.field_B.field_C);
+            mi.field_B.a(IntrusiveNodeHashTable.field_f, 16 + var8, var5Lifetime1, -32 + var6, var7, 0, -1, 1, 1, mi.field_B.field_C);
             var4++;
           }
           return;

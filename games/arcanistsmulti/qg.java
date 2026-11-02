@@ -61,15 +61,15 @@ final class qg extends RuntimeException {
                 oh.field_i = true;
               }
             }
-            mo.field_p = rl.field_m;
+            IntrusiveNodeHashTable.field_p = rl.field_m;
             ka.field_p = ln.field_J;
           }
           var2_intLifetime1 = -49 / ((param0 + 45) / 60);
           cb.field_c = param1;
           if (!oh.field_i &&
             oa.field_e > jh.field_f &&
-            tl.field_d) {
-            mo.field_p = rl.field_m;
+            ArchiveProvider.field_d) {
+            IntrusiveNodeHashTable.field_p = rl.field_m;
             ka.field_p = ln.field_J;
             jh.field_f = 0;
           }

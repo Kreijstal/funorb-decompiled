@@ -4,18 +4,18 @@
 final class bc {
     static String field_a;
     static int field_b;
-    static mo field_c;
+    static IntrusiveNodeHashTable field_c;
 
     final static void a(int param0, int param1) {
-        ab var2 = he.field_e;
-        var2.b((byte) -106, param0);
-        var2.f(1, (byte) -74);
+        CipherPacketBuffer var2 = he.field_e;
+        var2.writeOpcode((byte) -106, param0);
+        var2.writeByte(1, (byte) -74);
         if (param1 == -14431) {
-          var2.f(1, (byte) -118);
+          var2.writeByte(1, (byte) -118);
           return;
         }
-        field_c = (mo) null;
-        var2.f(1, (byte) -118);
+        field_c = (IntrusiveNodeHashTable) null;
+        var2.writeByte(1, (byte) -118);
     }
 
     public static void a(int param0) {

@@ -8,7 +8,7 @@ final class ki extends rl {
     static oc field_v;
     static String field_u;
     static String field_t;
-    static eg field_s;
+    static ResourceArchive field_s;
     static int[] field_r;
 
     final eh a(String param0, int param1) {

@@ -4,7 +4,7 @@
 final class rc {
     float field_b;
     static String field_o;
-    static qb field_h;
+    static Sprite field_h;
     private int field_e;
     static String field_f;
     private int field_p;
@@ -13,11 +13,11 @@ final class rc {
     private int field_q;
     String field_j;
     static String field_n;
-    static eg field_a;
+    static ResourceArchive field_a;
     static int field_m;
     static String field_l;
-    static qb[] field_k;
-    static ll[] field_d;
+    static Sprite[] field_k;
+    static IndexedSprite[] field_d;
     static String field_i;
 
     private final void a(ta param0, int param1, int param2) {
@@ -57,11 +57,11 @@ final class rc {
         if (param0 == -1321) {
           return null != tc.field_A ? true : false;
         }
-        field_a = (eg) null;
+        field_a = (ResourceArchive) null;
         return null != tc.field_A ? true : false;
     }
 
-    final static lg a(eg param0, int param1, String param2, String param3, eg param4) {
+    final static lg a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -143,7 +143,7 @@ final class rc {
           field_f = null;
           return;
         }
-        field_k = (qb[]) null;
+        field_k = (Sprite[]) null;
         field_f = null;
     }
 
@@ -257,7 +257,7 @@ final class rc {
         field_o = "Hide players in <%0>'s game";
         field_f = "Targeted spells:";
         field_g = "Year";
-        field_h = new qb(540, 140);
+        field_h = new Sprite(540, 140);
         field_n = "Just play";
         field_l = "You cannot cast Vine Bridge while flying, land to cast it";
         field_i = "<br><br>Your familiar is already at maximum power.";

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends qb {
+final class od extends Sprite {
     final void e(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;

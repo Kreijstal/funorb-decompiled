@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qb extends jb {
+class Sprite extends SpriteState {
     int[] field_A;
 
     void c(int param0, int param1, int param2) {
@@ -45,7 +45,7 @@ class qb extends jb {
           if (var6 <= 0) {
             return;
           }
-          qb.b(de.field_l, this.field_A, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(de.field_l, this.field_A, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -382,15 +382,15 @@ class qb extends jb {
           if (var6 <= 0) {
             return;
           }
-          qb.c(de.field_l, this.field_A, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.c(de.field_l, this.field_A, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    final qb b() {
+    final Sprite b() {
         int var2 = 0;
         int var3 = 0;
-        qb var1 = new qb(this.field_q, this.field_y);
+        Sprite var1 = new Sprite(this.field_q, this.field_y);
         var1.field_n = this.field_n;
         var1.field_w = this.field_w;
         var1.field_x = this.field_n - this.field_q - this.field_x;
@@ -557,7 +557,7 @@ class qb extends jb {
           if (var5 <= 0) {
             return;
           }
-          qb.a(de.field_l, this.field_A, var4, var3, var6, var5, var7, var8);
+          Sprite.a(de.field_l, this.field_A, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -569,7 +569,7 @@ class qb extends jb {
         int var4 = param0 + (this.field_q >> 1) > de.field_h ? de.field_h - param0 << 1 : this.field_q;
         int var5 = param1 < de.field_c ? de.field_c - param1 << 1 : 0;
         int var6 = param1 + (this.field_y >> 1) > de.field_k ? de.field_k - param1 << 1 : this.field_y;
-        qb.a(this.field_A, var5 * this.field_q + var3, (param1 + (var5 >> 1)) * de.field_e + (param0 + (var3 >> 1)), (this.field_q << 1) - (var4 - var3) + (this.field_q & 1), de.field_e - (var4 - var3 >> 1), this.field_q, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_A, var5 * this.field_q + var3, (param1 + (var5 >> 1)) * de.field_e + (param0 + (var3 >> 1)), (this.field_q << 1) - (var4 - var3) + (this.field_q & 1), de.field_e - (var4 - var3 >> 1), this.field_q, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void c() {
@@ -873,12 +873,12 @@ class qb extends jb {
         int var4Lifetime2;
         int var5Lifetime1;
         var1 = this.field_y - 1;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var1 >= 0) {
             var2 = var1 * this.field_q;
             for (var3 = 0; var3 < this.field_q; var3++) {
               if (this.field_A[var2 + var3] != 0) {
-                break L1;
+                break scanLoop1;
               }
             }
             var1--;
@@ -887,12 +887,12 @@ class qb extends jb {
           break;
         }
         var2Lifetime1 = 0;
-        L4: while (true) {
+        scanLoop2: while (true) {
           if (var2Lifetime1 < var1) {
             var3Lifetime1 = var2Lifetime1 * this.field_q;
             for (var4 = 0; var4 < this.field_q; var4++) {
               if (this.field_A[var3Lifetime1 + var4] != 0) {
-                break L4;
+                break scanLoop2;
               }
             }
             var2Lifetime1++;
@@ -901,11 +901,11 @@ class qb extends jb {
           break;
         }
         var3Lifetime2 = this.field_q - 1;
-        L7: while (true) {
+        scanLoop3: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
               if (this.field_A[var4Lifetime1 * this.field_q + var3Lifetime2] != 0) {
-                break L7;
+                break scanLoop3;
               }
             }
             var3Lifetime2--;
@@ -914,11 +914,11 @@ class qb extends jb {
           break;
         }
         var4Lifetime2 = 0;
-        L10: while (true) {
+        scanLoop4: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
               if (this.field_A[var5 * this.field_q + var4Lifetime2] != 0) {
-                break L10;
+                break scanLoop4;
               }
             }
             var4Lifetime2++;
@@ -989,7 +989,7 @@ class qb extends jb {
           if (var5 <= 0) {
             return;
           }
-          qb.a(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1057,7 +1057,7 @@ class qb extends jb {
           if (var5 <= 0) {
             return;
           }
-          qb.c(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.c(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1173,7 +1173,7 @@ class qb extends jb {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          qb.a(de.field_l, this.field_A, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.a(de.field_l, this.field_A, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1219,7 +1219,7 @@ class qb extends jb {
           if (var6 <= 0) {
             return;
           }
-          qb.b(de.field_l, this.field_A, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.b(de.field_l, this.field_A, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1266,9 +1266,9 @@ class qb extends jb {
             return;
           }
           if (param2 == 256) {
-            qb.a(0, 0, 0, de.field_l, this.field_A, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, de.field_l, this.field_A, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            qb.a(0, 0, 0, de.field_l, this.field_A, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, de.field_l, this.field_A, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1365,7 +1365,7 @@ class qb extends jb {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          qb.a(de.field_l, this.field_A, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(de.field_l, this.field_A, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1873,7 +1873,7 @@ class qb extends jb {
           if (var5 <= 0) {
             return;
           }
-          qb.a(0, de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1919,7 +1919,7 @@ class qb extends jb {
           if (var6 <= 0) {
             return;
           }
-          qb.b(de.field_l, this.field_A, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.b(de.field_l, this.field_A, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -2672,7 +2672,7 @@ class qb extends jb {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          qb.b(de.field_l, this.field_A, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.b(de.field_l, this.field_A, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -2797,14 +2797,14 @@ class qb extends jb {
           if (var5 <= 0) {
             return;
           }
-          qb.a(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final qb g() {
+    final Sprite g() {
         int var3 = 0;
-        qb var1 = new qb(this.field_q, this.field_y);
+        Sprite var1 = new Sprite(this.field_q, this.field_y);
         var1.field_n = this.field_n;
         var1.field_w = this.field_w;
         var1.field_x = this.field_x;
@@ -2899,7 +2899,7 @@ class qb extends jb {
           if (var6 <= 0) {
             return;
           }
-          qb.a(de.field_l, this.field_A, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(de.field_l, this.field_A, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2945,12 +2945,12 @@ class qb extends jb {
           if (var5 <= 0) {
             return;
           }
-          qb.c(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.c(de.field_l, this.field_A, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    qb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_n = param0;
         this.field_w = param1;
         this.field_x = param2;
@@ -3007,7 +3007,7 @@ class qb extends jb {
         }
     }
 
-    qb(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_A = new int[param0 * param1];
         this.field_n = param0;
         this.field_q = param0;
@@ -3017,7 +3017,7 @@ class qb extends jb {
         this.field_x = 0;
     }
 
-    qb(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

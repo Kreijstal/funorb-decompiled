@@ -4,7 +4,7 @@
 final class oa {
     static String field_a;
     static int field_e;
-    static ll[] field_d;
+    static IndexedSprite[] field_d;
     static String field_b;
     static sn field_c;
 

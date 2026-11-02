@@ -35,7 +35,7 @@ abstract class hg {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        vn var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         wa var6 = null;
         int var7 = 0;
@@ -58,8 +58,8 @@ abstract class hg {
           stackIn_6_1 = (dd.field_h == dd.field_c.field_Db);
           var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, ga.field_r + 2, 2, param0 * (ga.field_r * 3 + 6), param1) ? 1 : 0;
           var4 = dd.field_c.field_Eb.field_G;
-          if (jb.field_t != 2 &&
-            jb.field_t != 1) {
+          if (SpriteState.field_t != 2 &&
+            SpriteState.field_t != 1) {
             dd.field_c.field_ub = false;
             dd.field_c.field_Db.field_Hb.field_rb = hn.field_l;
             fc.a((byte) -104, dd.field_c.field_Eb);
@@ -68,7 +68,7 @@ abstract class hg {
           dd.field_c.field_Db.field_Hb.field_rb = null;
           dd.field_c.field_ub = true;
           var5 = null;
-          var6 = (wa) (var4.b(12623));
+          var6 = (wa) (var4.first(12623));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_G == null) {
@@ -131,16 +131,16 @@ abstract class hg {
               var14 = ja.field_s;
               var17.field_l.a(0, 0, -29466, var14, var13);
             }
-            var6 = (wa) (var4.a(0));
+            var6 = (wa) (var4.next(0));
           }
           if (dd.field_c.field_Jb.field_U != 0) {
-            tc.field_A = new dh(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, fh.field_a, ck.field_a, pg.field_c, pg.field_c);
+            tc.field_A = new dh(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, fh.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
             vd.field_h = 2;
           }
           if (dd.field_c.field_Lb.field_U == 0) {
             return;
           }
-          tc.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, wd.field_i, ck.field_a, pg.field_c, pg.field_c);
+          tc.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, wd.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
           vd.field_h = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -235,19 +235,19 @@ abstract class hg {
         ng.a((byte) -23);
         ba.b(11670);
         if (tm.a(!param0 ? true : false)) {
-          he.field_e.b((byte) -107, 1);
+          he.field_e.writeOpcode((byte) -107, 1);
           we.a(0, (byte) 94);
         }
         ka.b(param0);
     }
 
-    final static void a(eg param0, boolean param1, eg param2, byte param3) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, byte param3) {
         try {
           if (param3 > -97) {
             field_b = 88;
           }
-          ul.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, hh.field_c, param1, j.field_f, th.field_k, 27874, hh.field_d, pg.field_c, vn.field_i);
-          tl.field_a = qe.a(param2, "chatfilter", "lobby", 119);
+          ul.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, hh.field_c, param1, j.field_f, th.field_k, 27874, hh.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
+          ArchiveProvider.field_a = qe.a(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = ag.field_A;
           cf.field_b[1] = u.field_d;
           cf.field_b[0] = nb.field_e;

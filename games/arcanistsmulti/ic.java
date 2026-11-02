@@ -16,13 +16,13 @@ final class ic {
         field_c = null;
     }
 
-    final static qb[] a(qb[] param0, byte param1) {
+    final static Sprite[] a(Sprite[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        qb var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        qb[] stackIn_3_0 = null;
-        qb[] stackIn_8_0 = null;
+        Sprite[] stackIn_3_0 = null;
+        Sprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -30,7 +30,7 @@ final class ic {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 > -72) {
-            stackIn_3_0 = (qb[]) null;
+            stackIn_3_0 = (Sprite[]) null;
             return stackIn_3_0;
           }
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
@@ -40,7 +40,7 @@ final class ic {
             param0[var2_int].field_n = param0[var2_int].field_q;
             param0[var2_int].field_w = param0[var2_int].field_y;
           }
-          stackIn_8_0 = (qb[]) (param0);
+          stackIn_8_0 = (Sprite[]) (param0);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

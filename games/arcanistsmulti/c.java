@@ -4,7 +4,7 @@
 final class c {
     static java.security.SecureRandom field_b;
     static String field_c;
-    static ll[] field_a;
+    static IndexedSprite[] field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9;
@@ -103,7 +103,7 @@ final class c {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        vn var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         cg var18_ref = null;
@@ -126,7 +126,7 @@ final class c {
         try {
           ej.a(16, oo.field_y);
           if (wi.field_f != null) {
-            mo.field_o.field_ub = true;
+            IntrusiveNodeHashTable.field_o.field_ub = true;
             var22 = go.field_d;
             var27 = var22;
             go.field_d.field_I = 0;
@@ -189,12 +189,12 @@ final class c {
                   tk.field_q[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_int = 0;
                     stackIn_65_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_65_0;
                     while (true) {
@@ -207,7 +207,7 @@ final class c {
                         var13 = var20;
                         stackIn_61_0 = 0;
                         var14_int = stackIn_61_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var14_int < var26.length) {
                             var15 = var26[var14_int];
                             var16 = var20[1 + var14_int];
@@ -221,11 +221,11 @@ final class c {
                               }
                               var17_int = stackIn_43_0;
                               if (~var17_int != ~var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (~(wi.field_f.field_Wb[var15] & 255) != ~var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -329,15 +329,15 @@ final class c {
                   var16 = 0;
                 }
                 var17 = lf.field_b.field_Cb.field_G;
-                var18_ref = (cg) (var17.b(12623));
-                L49: while (true) {
+                var18_ref = (cg) (var17.first(12623));
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
                     stackOut_107_0 = var18_ref.e(183874081);
                     stackIn_125_0 = stackOut_107_0 ? 1 : 0;
                     stackIn_108_0 = stackOut_107_0;
                     if (var19 != 0) {
-                      break L49;
+                      break scanLoop3;
                     }
                     if (!stackIn_108_0 ||
                       var19 != 0) {
@@ -372,7 +372,7 @@ final class c {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (cg) (var17.a(0));
+                      var18_ref = (cg) (var17.next(0));
                       continue;
                     }
                   }
@@ -498,7 +498,7 @@ final class c {
               }
               var8.field_rb = tj.a(113, new String[]{Integer.toString(var9)}, ef.field_v);
             }
-            aj.field_d.field_rb = tj.a(116, new String[]{Integer.toString(wi.field_f.field_Rb), Integer.toString(wi.field_f.field_dc)}, ug.field_h);
+            aj.field_d.field_rb = tj.a(116, new String[]{Integer.toString(wi.field_f.field_Rb), Integer.toString(wi.field_f.field_dc)}, IsaacCipher.field_h);
           }
           stackIn_182_0 = hl.field_m;
           stackIn_183_1 = (param4) && (!param1) && (!so.field_j);
@@ -514,7 +514,7 @@ final class c {
             return;
           }
           if (wi.field_f != null) {
-            if (mo.field_o.field_U != 0) {
+            if (IntrusiveNodeHashTable.field_o.field_U != 0) {
               qc.a(false, wi.field_f.h((byte) 94), param0);
             }
             if (0 != go.field_d.field_U) {

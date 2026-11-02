@@ -79,7 +79,7 @@ final class ja extends rl {
           if (!param0.equals(this.field_q)) {
             var3 = ib.a(2, param0);
             if (!var3.a((byte) -111)) {
-              stackIn_7_0 = ug.field_c;
+              stackIn_7_0 = IsaacCipher.field_c;
               return stackIn_7_0;
             }
             this.field_q = param0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends s {
+final class IndexedSprite extends IndexedSpriteState {
     int[] field_l;
     byte[] field_m;
 
@@ -286,13 +286,13 @@ final class ll extends s {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        ll.a(de.field_l, this.field_m, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        IndexedSprite.a(de.field_l, this.field_m, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final ll a() {
+    final IndexedSprite a() {
         int var4 = 0;
         int var3 = 0;
-        ll var1 = new ll(this.field_h, this.field_c, this.field_l.length);
+        IndexedSprite var1 = new IndexedSprite(this.field_h, this.field_c, this.field_l.length);
         int var3Lifetime1;
         var1.field_g = this.field_g;
         var1.field_k = this.field_k;
@@ -351,7 +351,7 @@ final class ll extends s {
           var6 <= 0) {
           return;
         }
-        ll.d(de.field_l, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.d(de.field_l, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void c() {
@@ -543,7 +543,7 @@ final class ll extends s {
           var6 <= 0) {
           return;
         }
-        ll.c(de.field_l, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.c(de.field_l, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -591,7 +591,7 @@ final class ll extends s {
           var7 <= 0) {
           return;
         }
-        ll.b(de.field_l, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+        IndexedSprite.b(de.field_l, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
     }
 
     private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -633,14 +633,14 @@ final class ll extends s {
         }
     }
 
-    final qb b() {
+    final Sprite b() {
         int var3 = 0;
         int var1 = this.field_h * this.field_c;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
           var2[var3] = this.field_l[this.field_m[var3] & 255];
         }
-        return new qb(this.field_g, this.field_k, this.field_j, this.field_f, this.field_h, this.field_c, var2);
+        return new Sprite(this.field_g, this.field_k, this.field_j, this.field_f, this.field_h, this.field_c, var2);
     }
 
     final void a(int param0, int param1) {
@@ -684,7 +684,7 @@ final class ll extends s {
           var5 <= 0) {
           return;
         }
-        ll.b(de.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.b(de.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void d(int param0, int param1) {
@@ -728,10 +728,10 @@ final class ll extends s {
           var5 <= 0) {
           return;
         }
-        ll.a(de.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(de.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    ll(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_g = param0;
         this.field_k = param1;
         this.field_j = param2;
@@ -742,7 +742,7 @@ final class ll extends s {
         this.field_l = param7;
     }
 
-    ll(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_h = param0;
         this.field_g = param0;
         this.field_c = param1;

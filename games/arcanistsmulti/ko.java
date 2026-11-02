@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ko extends pg {
+final class ko extends IntrusiveNode {
     int field_l;
     static kc field_h;
     int field_i;
@@ -55,33 +55,33 @@ final class ko extends pg {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        eg var8 = null;
+        ResourceArchive var8 = null;
         ne var10 = null;
-        qb var11 = null;
+        Sprite var11 = null;
         String var12 = null;
         ne var13 = null;
-        qb var14 = null;
+        Sprite var14 = null;
         String var15 = null;
         ne var16 = null;
-        qb var17 = null;
+        Sprite var17 = null;
         String var18 = null;
         ne var19 = null;
-        qb var20 = null;
+        Sprite var20 = null;
         String var21 = null;
         ne var22 = null;
-        qb var23 = null;
+        Sprite var23 = null;
         String var24 = null;
         ne var25 = null;
-        qb var26 = null;
+        Sprite var26 = null;
         String var27 = null;
         ne var28 = null;
-        qb var29 = null;
+        Sprite var29 = null;
         String var30 = null;
         ne var31 = null;
-        qb var32 = null;
+        Sprite var32 = null;
         String var33 = null;
         ne var34 = null;
-        qb var35 = null;
+        Sprite var35 = null;
         String var36 = null;
         ne var37 = null;
         RuntimeException stackIn_13_0 = null;
@@ -89,29 +89,29 @@ final class ko extends pg {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        qb var20Lifetime1;
-        qb var20Lifetime2;
-        qb var20Lifetime3;
-        qb var20Lifetime4;
-        qb var20Lifetime5;
-        qb var20Lifetime6;
+        Sprite var20Lifetime1;
+        Sprite var20Lifetime2;
+        Sprite var20Lifetime3;
+        Sprite var20Lifetime4;
+        Sprite var20Lifetime5;
+        Sprite var20Lifetime6;
         try {
           ArcanistsMulti.a(-26335, (int[]) null, (dn) null, (String) null, 0L, param0, -1, (String) null, param1);
           if (param0 == 0) {
             var10 = eo.field_c;
-            var11 = tl.field_a[0];
+            var11 = ArchiveProvider.field_a[0];
             var20 = var11;
             var20Lifetime2 = var11;
             var12 = oh.field_q;
             var10.field_l.a((byte) -32, 11, var11, var12);
             var13 = eo.field_c;
-            var14 = tl.field_a[1];
+            var14 = ArchiveProvider.field_a[1];
             var20Lifetime3 = var14;
             var20Lifetime4 = var14;
             var15 = cj.field_c;
             var13.field_l.a((byte) -32, 12, var14, var15);
             var16 = eo.field_c;
-            var17 = tl.field_a[2];
+            var17 = ArchiveProvider.field_a[2];
             var20Lifetime5 = var17;
             var20Lifetime6 = var17;
             var18 = jg.field_j;
@@ -119,29 +119,29 @@ final class ko extends pg {
           }
           if (1 == param0) {
             var19 = eo.field_c;
-            var20Lifetime1 = tl.field_a[0];
-            var21 = ug.field_f;
+            var20Lifetime1 = ArchiveProvider.field_a[0];
+            var21 = IsaacCipher.field_f;
             var19.field_l.a((byte) -32, 11, var20Lifetime1, var21);
             var22 = eo.field_c;
-            var23 = tl.field_a[1];
+            var23 = ArchiveProvider.field_a[1];
             var24 = wa.field_Hb;
             var22.field_l.a((byte) -32, 12, var23, var24);
             var25 = eo.field_c;
-            var26 = tl.field_a[2];
+            var26 = ArchiveProvider.field_a[2];
             var27 = dm.field_J;
             var25.field_l.a((byte) -32, 13, var26, var27);
           }
           if (param0 == 2) {
             var28 = eo.field_c;
-            var29 = tl.field_a[0];
+            var29 = ArchiveProvider.field_a[0];
             var30 = w.field_Jb;
             var28.field_l.a((byte) -32, 11, var29, var30);
             var31 = eo.field_c;
-            var32 = tl.field_a[1];
+            var32 = ArchiveProvider.field_a[1];
             var33 = lk.field_l;
             var31.field_l.a((byte) -32, 12, var32, var33);
             var34 = eo.field_c;
-            var35 = tl.field_a[2];
+            var35 = ArchiveProvider.field_a[2];
             var36 = ol.field_c;
             var34.field_l.a((byte) -32, 13, var35, var36);
           }
@@ -152,8 +152,8 @@ final class ko extends pg {
           var7 = param1.field_I;
           var37.field_l.a(var6, var7, -29466, var5, var4);
           if (param2 > -51) {
-            var8 = (eg) null;
-            ko.a(99, (byte) -116, 31, (eg) null);
+            var8 = (ResourceArchive) null;
+            ko.a(99, (byte) -116, 31, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -180,16 +180,16 @@ final class ko extends pg {
         field_j = (dj) null;
     }
 
-    final static ll[] a(int param0, byte param1, int param2, eg param3) {
+    final static IndexedSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        ll[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 94) {
-            stackIn_2_0 = (ll[]) null;
+            stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
           if (fc.a(19, param3, param0, param2)) {
@@ -258,7 +258,7 @@ final class ko extends pg {
           !wm.c(false)) {
           var3 = 0;
         }
-        if (84 == vn.field_d) {
+        if (84 == IntrusiveDeque.field_d) {
           if (var3 == 0) {
             if (0 == nj.field_c) {
               return true;
@@ -272,7 +272,7 @@ final class ko extends pg {
             var4_ref_String = hi.field_e.toString();
             var7 = var4_ref_String;
             var7Lifetime2 = var4_ref_String;
-            if (!p.a(-1, var4_ref_String)) {
+            if (!ClientException.a(-1, var4_ref_String)) {
               var5 = nj.field_c;
               if (0 == var5 &&
                 wi.field_f != null) {
@@ -297,7 +297,7 @@ final class ko extends pg {
           }
           return true;
         }
-        if (vn.field_d == 85) {
+        if (IntrusiveDeque.field_d == 85) {
           if (var3 == 0) {
             return true;
           }
@@ -386,7 +386,7 @@ final class ko extends pg {
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        ll var6 = null;
+        IndexedSprite var6 = null;
         int[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -399,8 +399,8 @@ final class ko extends pg {
           var3 = new int[8];
           var4 = 0;
           if (!param2) {
-            var6 = (ll) null;
-            ko.a((nf) null, -45, 124, 15, (ll) null, 88);
+            var6 = (IndexedSprite) null;
+            ko.a((nf) null, -45, 124, 15, (IndexedSprite) null, 88);
           }
           while (var4 < 8) {
             var3[var4] = fj.b(param0[var4], param1[var4]);
@@ -467,8 +467,8 @@ final class ko extends pg {
         throw new Error();
     }
 
-    final static boolean a(nf param0, int param1, int param2, int param3, ll param4, int param5) {
-        qb var6 = null;
+    final static boolean a(nf param0, int param1, int param2, int param3, IndexedSprite param4, int param5) {
+        Sprite var6 = null;
         RuntimeException var6_ref = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_4_0 = null;
@@ -478,7 +478,7 @@ final class ko extends pg {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new qb(param3 * 2, 2 * param3);
+          var6 = new Sprite(param3 * 2, 2 * param3);
           var6.a();
           de.i(param3, param3, param3, param5);
           stackIn_1_0 = fk.a(param0, -(param3 * 2) + param1, param4, param2 - param3, (byte) -1, var6);

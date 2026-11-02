@@ -70,10 +70,10 @@ final class na extends kc {
 
     final boolean e(int param0) {
         if (param0 < -34) {
-          return !this.d((byte) -17) ? true : false;
+          return !this.isSecondaryLinked((byte) -17) ? true : false;
         }
         this.e(102);
-        return !this.d((byte) -17) ? true : false;
+        return !this.isSecondaryLinked((byte) -17) ? true : false;
     }
 
     final boolean a(na param0, int param1) {
@@ -196,13 +196,13 @@ final class na extends kc {
 
     final static void a(long param0, int param1, int param2) {
         int var5 = 89 / ((param1 - 3) / 62);
-        ab var4 = he.field_e;
-        var4.b((byte) -99, param2);
-        var4.field_g = var4.field_g + 1;
-        int var6 = var4.field_g;
-        var4.f(7, (byte) -5);
+        CipherPacketBuffer var4 = he.field_e;
+        var4.writeOpcode((byte) -99, param2);
+        var4.position = var4.position + 1;
+        int var6 = var4.position;
+        var4.writeByte(7, (byte) -5);
         var4.a(param0, (byte) 110);
-        var4.b(-var6 + var4.field_g, (byte) 43);
+        var4.writeByteLengthAtMark(-var6 + var4.position, (byte) 43);
     }
 
     final static void i(byte param0) {
@@ -221,8 +221,8 @@ final class na extends kc {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            df.field_z = new ab(param9);
-            he.field_e = new ab(param6);
+            df.field_z = new CipherPacketBuffer(param9);
+            he.field_e = new CipherPacketBuffer(param6);
             md.field_c = param8;
             ho.field_c = param10;
             q.field_P = param2;
@@ -241,7 +241,7 @@ final class na extends kc {
               return;
             }
             try {
-              pg.field_f = new sd(qg.field_b.field_n, 64, 0);
+              IntrusiveNode.field_f = new sd(qg.field_b.field_n, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

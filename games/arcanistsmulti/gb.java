@@ -4,9 +4,9 @@
 import java.util.*;
 
 final class gb implements Iterable {
-    static ll[] field_c;
+    static IndexedSprite[] field_c;
     static String field_b;
-    tf field_g;
+    DualLinkNode field_g;
     static byte[] field_d;
     static int field_f;
     static String field_e;
@@ -35,21 +35,21 @@ final class gb implements Iterable {
         }
     }
 
-    final tf b(int param0) {
-        tf var2 = null;
-        tf var2Lifetime1;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 31) {
           field_a = (String) null;
-          var2 = this.field_g.field_l;
+          var2 = this.field_g.secondaryNext;
           if (var2 != this.field_g) {
-            var2.a((byte) 88);
+            var2.unlinkSecondary((byte) 88);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_g.field_l;
+        var2Lifetime1 = this.field_g.secondaryNext;
         if (var2Lifetime1 != this.field_g) {
-          var2Lifetime1.a((byte) 88);
+          var2Lifetime1.unlinkSecondary((byte) 88);
           return var2Lifetime1;
         }
         return null;
@@ -127,37 +127,37 @@ final class gb implements Iterable {
     }
 
     final static void a(int param0, boolean param1) {
-        ab var2 = null;
+        CipherPacketBuffer var2 = null;
         if (param1) {
           var2 = he.field_e;
-          var2.b((byte) -124, param0);
-          var2.f(1, (byte) -54);
-          var2.f(2, (byte) -47);
+          var2.writeOpcode((byte) -124, param0);
+          var2.writeByte(1, (byte) -54);
+          var2.writeByte(2, (byte) -47);
           return;
         }
     }
 
-    final void a(byte param0, tf param1) {
-        if (null != param1.field_i) {
-          param1.a((byte) 88);
+    final void a(byte param0, DualLinkNode param1) {
+        if (null != param1.secondaryPrevious) {
+          param1.unlinkSecondary((byte) 88);
         }
-        param1.field_l = this.field_g;
-        param1.field_i = this.field_g.field_i;
+        param1.secondaryNext = this.field_g;
+        param1.secondaryPrevious = this.field_g.secondaryPrevious;
         if (param0 != 37) {
           return;
         }
         try {
-          param1.field_i.field_l = param1;
-          param1.field_l.field_i = param1;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     gb() {
-        this.field_g = new tf();
-        this.field_g.field_l = this.field_g;
-        this.field_g.field_i = this.field_g;
+        this.field_g = new DualLinkNode();
+        this.field_g.secondaryNext = this.field_g;
+        this.field_g.secondaryPrevious = this.field_g;
     }
 
     public static void b(byte param0) {

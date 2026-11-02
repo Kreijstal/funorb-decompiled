@@ -3,16 +3,16 @@
  */
 final class nm {
     static String field_g;
-    static qb[] field_i;
+    static Sprite[] field_i;
     static String field_f;
     static int field_h;
-    static ll[] field_c;
+    static IndexedSprite[] field_c;
     static String field_e;
     static String field_d;
     static String field_a;
     static String field_b;
 
-    final static String a(int param0, String param1, eg param2, String param3, String param4) {
+    final static String a(int param0, String param1, ResourceArchive param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;

@@ -10,7 +10,7 @@ final class hj extends IOException {
     static String field_c;
     static int field_b;
 
-    final static void a(dj param0, eg param1, int param2) {
+    final static void a(dj param0, ResourceArchive param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -54,18 +54,18 @@ final class hj extends IOException {
             return;
           }
           gl.field_c = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 112, 16764006, 0, 0, 0);
-          ab.field_p = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 81, 16777215, 0, 0, 0);
+          CipherPacketBuffer.field_p = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 81, 16777215, 0, 0, 0);
           var5 = de.field_e;
           var6 = de.field_j;
           var16 = de.field_l;
-          ql.field_c = new qb(10, 14);
+          ql.field_c = new Sprite(10, 14);
           ql.field_c.a();
           for (var8 = 2; var8 < 7; var8++) {
             de.d(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           de.a(var16, var5, var6);
-          ag.field_C = bl.a(true, gl.field_c, ab.field_p, var4, mj.field_z);
-          co.field_f.field_G = new vn();
+          ag.field_C = bl.a(true, gl.field_c, CipherPacketBuffer.field_p, var4, mj.field_z);
+          co.field_f.field_G = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,12 +154,12 @@ final class hj extends IOException {
         ml var3 = null;
         ml var4 = null;
         int var5 = 0;
-        vn var6 = null;
+        IntrusiveDeque var6 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var6 = rk.field_O.g((byte) 101);
           var2 = null;
-          var3 = (ml) (var6.b(param0 + 33225));
+          var3 = (ml) (var6.first(param0 + 33225));
           if (param0 != -20602) {
             field_a = (int[]) null;
           }
@@ -168,7 +168,7 @@ final class hj extends IOException {
               var2 == null)) {
               var2 = var3;
             }
-            var3 = (ml) (var6.a(0));
+            var3 = (ml) (var6.next(0));
           }
           var4 = rk.field_O.a(0, true);
           if (var2 != null) {
@@ -285,13 +285,13 @@ final class hj extends IOException {
         field_a = null;
         if (param0 <= 93) {
           nf var2 = (nf) null;
-          hj.a((ll) null, -60, 88, (nf) null, (byte) -107, -114, 54);
+          hj.a((IndexedSprite) null, -60, 88, (nf) null, (byte) -107, -114, 54);
         }
         field_c = null;
         field_e = null;
     }
 
-    final static void a(ll param0, int param1, int param2, nf param3, byte param4, int param5, int param6) {
+    final static void a(IndexedSprite param0, int param1, int param2, nf param3, byte param4, int param5, int param6) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -458,10 +458,10 @@ final class hj extends IOException {
         super(param0);
     }
 
-    final static qb a(int param0, eg param1, int param2, byte param3) {
+    final static Sprite a(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        qb stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -475,7 +475,7 @@ final class hj extends IOException {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (qb) (stackIn_4_0);
+          return (Sprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

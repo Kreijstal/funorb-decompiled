@@ -4,7 +4,7 @@
 abstract class ee implements pd {
     static String field_c;
     static String field_a;
-    static ll[] field_b;
+    static IndexedSprite[] field_b;
     static dn field_g;
     private long field_e;
     static int[] field_d;
@@ -22,14 +22,14 @@ abstract class ee implements pd {
           field_f = null;
           return;
         }
-        ll var2 = (ll) null;
-        ee.a((ll) null, -106, -125, 14);
+        IndexedSprite var2 = (IndexedSprite) null;
+        ee.a((IndexedSprite) null, -106, -125, 14);
         field_d = null;
         field_b = null;
         field_f = null;
     }
 
-    final static boolean a(ll param0, int param1, int param2, int param3) {
+    final static boolean a(IndexedSprite param0, int param1, int param2, int param3) {
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -152,7 +152,7 @@ abstract class ee implements pd {
           Throwable var2_ref = null;
           Long var3 = null;
           Object[] var4 = null;
-          ll var5 = null;
+          IndexedSprite var5 = null;
           try {
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
             if (var1 != null) {
@@ -171,8 +171,8 @@ abstract class ee implements pd {
                 if (param0) {
                   return;
                 }
-                var5 = (ll) null;
-                ee.a((ll) null, 125, 14, -99);
+                var5 = (IndexedSprite) null;
+                ee.a((IndexedSprite) null, 125, 14, -99);
                 return;
               }
             }
@@ -183,8 +183,8 @@ abstract class ee implements pd {
           if (param0) {
             return;
           }
-          var5 = (ll) null;
-          ee.a((ll) null, 125, 14, -99);
+          var5 = (IndexedSprite) null;
+          ee.a((IndexedSprite) null, 125, 14, -99);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

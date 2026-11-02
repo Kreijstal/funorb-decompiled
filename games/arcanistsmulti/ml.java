@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends tf {
+final class ml extends DualLinkNode {
     private int field_o;
     int field_R;
     ml field_s;
@@ -24,13 +24,13 @@ final class ml extends tf {
     private int field_O;
     private int field_n;
     boolean field_J;
-    private qb field_B;
+    private Sprite field_B;
     mi field_gb;
     int field_E;
     int field_u;
-    static ll[] field_v;
-    private qb field_cb;
-    private qb field_bb;
+    static IndexedSprite[] field_v;
+    private Sprite field_cb;
+    private Sprite field_bb;
     int field_M;
     static byte[] field_m;
     private boolean field_hb;
@@ -39,16 +39,16 @@ final class ml extends tf {
     private int field_t;
     private int field_ab;
     private nf field_L;
-    qb field_w;
+    Sprite field_w;
     int field_eb;
     private int field_A;
     int field_ib;
-    private qb field_Q;
-    private qb field_fb;
+    private Sprite field_Q;
+    private Sprite field_fb;
     static kc field_S;
     private int field_Z;
     int field_x;
-    qb field_I;
+    Sprite field_I;
     boolean field_z;
     static String field_K;
     int field_Y;
@@ -62,7 +62,7 @@ final class ml extends tf {
           if (param0 != -1) {
             this.x(99);
           }
-          stackIn_8_0 = !(this.field_ib > 0) || !(this.b((byte) -81));
+          stackIn_8_0 = !(this.field_ib > 0) || !(this.isLinked((byte) -81));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,14 +256,14 @@ final class ml extends tf {
           if (20 == this.field_jb) {
             this.field_q = 25;
             this.field_Y = uj.field_i[0].field_w;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[0].a(this.field_Y / 2 - uj.field_i[0].field_n / 2, 0, 16777215);
           }
           if (this.field_jb == 22) {
             this.field_q = 75;
             this.field_Y = uj.field_i[1].field_w;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[1].a(-(uj.field_i[1].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
@@ -273,35 +273,35 @@ final class ml extends tf {
           if (this.field_jb == 38) {
             this.field_Y = uj.field_i[6].field_w;
             this.field_q = 75;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[6].a(-(uj.field_i[6].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 21) {
             this.field_q = 100;
             this.field_Y = uj.field_i[2].field_w;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[2].a(this.field_Y / 2 - uj.field_i[2].field_n / 2, 0, 16777215);
           }
           if (this.field_jb == 23) {
             this.field_Y = uj.field_i[3].field_w;
             this.field_q = 75;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[3].a(-(uj.field_i[3].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 24) {
             this.field_Y = uj.field_i[4].field_w;
             this.field_q = 75;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[4].a(-(uj.field_i[4].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 35) {
             this.field_Y = -16 + (80 + uj.field_i[5].field_w);
             this.field_q = 75;
-            this.field_w = new qb(this.field_Y, this.field_Y);
+            this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.a();
             uj.field_i[5].a(this.field_Y / 2 - uj.field_i[5].field_n / 2, 64, 16777215);
             de.i(this.field_Y / 2, 80, 16, 16777215);
@@ -515,9 +515,9 @@ final class ml extends tf {
     }
 
     final void c(int param0, int param1, int param2) {
-        ll[] stackIn_143_0 = null;
+        IndexedSprite[] stackIn_143_0 = null;
         int stackIn_144_1 = 0;
-        ll[] stackIn_148_0 = null;
+        IndexedSprite[] stackIn_148_0 = null;
         int stackIn_149_1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -525,12 +525,12 @@ final class ml extends tf {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        qb var8_ref_qb = null;
+        Sprite var8_ref_qb = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        qb var12_ref_qb = null;
+        Sprite var12_ref_qb = null;
         int var13_int = 0;
         Object var13 = null;
         int var14 = 0;
@@ -540,7 +540,7 @@ final class ml extends tf {
         int[] var18 = null;
         int var19 = 0;
         int var20 = 0;
-        qb var21 = null;
+        Sprite var21 = null;
         int var21_int = 0;
         int[] var22 = null;
         int var22_int = 0;
@@ -552,7 +552,7 @@ final class ml extends tf {
         int[] var28 = null;
         int var29 = 0;
         int var30 = 0;
-        qb var31 = null;
+        Sprite var31 = null;
         int var32 = 0;
         int var33 = 0;
         int var34 = 0;
@@ -563,14 +563,14 @@ final class ml extends tf {
         mi var39 = null;
         mi var40 = null;
         int[] var41 = null;
-        qb var42 = null;
-        qb var43 = null;
-        qb var44 = null;
-        qb var45 = null;
+        Sprite var42 = null;
+        Sprite var43 = null;
+        Sprite var44 = null;
+        Sprite var45 = null;
         mi var46 = null;
         mi var47 = null;
-        qb var12_ref_qbLifetime1;
-        qb var12_ref_qbLifetime2;
+        Sprite var12_ref_qbLifetime1;
+        Sprite var12_ref_qbLifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
@@ -645,7 +645,7 @@ final class ml extends tf {
             go.field_j[29].a(-128 + var35[0], var35[1] - 256);
             de.a();
           }
-          L6: {
+          regionExit1: {
             if (this.field_jb == 40) {
               var7 = (int)(4.0 * Math.sin(this.field_F * 2.0) + 18.0);
               var8 = (int)(32.0 + 4.0 * Math.cos(2.0 * this.field_F));
@@ -706,7 +706,7 @@ final class ml extends tf {
                                 this.field_I.c(-16 + var41[0], var6 + (var41[1] - (this.field_Y >> 1) - 32));
                               }
                             }
-                            var7 = 255 & jb.field_v;
+                            var7 = 255 & SpriteState.field_v;
                             if (128 < var7) {
                               var7 = 256 - var7;
                             }
@@ -738,7 +738,7 @@ final class ml extends tf {
                               } else {
                                 ff.field_b[var7].d(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (this.field_jb == 39 &&
                               ub.field_e != null) {
@@ -766,7 +766,7 @@ final class ml extends tf {
                               } else {
                                 ub.field_e[var7].a(var41[0] - (this.field_Y >> 1), -this.field_Y + var41[1]);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (13 == this.field_jb &&
                               rc.field_d != null) {
@@ -794,7 +794,7 @@ final class ml extends tf {
                               } else {
                                 rc.field_d[var7].d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (15 == this.field_jb &&
                               bk.field_L != null) {
@@ -822,10 +822,10 @@ final class ml extends tf {
                               } else {
                                 bk.field_L[var7].d(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (14 == this.field_jb &&
-                              null != jk.field_m) {
+                              null != ArchiveIndex.field_m) {
                               var7 = 0;
                               if (this.field_F > 1.5) {
                                 var7 = 1;
@@ -846,11 +846,11 @@ final class ml extends tf {
                                 }
                               }
                               if (-1 == this.field_E) {
-                                jk.field_m[var7].d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                ArchiveIndex.field_m[var7].d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                jk.field_m[var7].a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                ArchiveIndex.field_m[var7].a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (17 == this.field_jb &&
                               null != ra.field_c) {
@@ -871,7 +871,7 @@ final class ml extends tf {
                                 } else {
                                   stackIn_149_1 = 4;
                                 }
-                                ((ll) (Object) stackIn_148_0[stackIn_149_1 + var7]).d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                ((IndexedSprite) (Object) stackIn_148_0[stackIn_149_1 + var7]).d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
                                 stackIn_143_0 = ra.field_c;
                                 if (!this.field_U) {
@@ -879,9 +879,9 @@ final class ml extends tf {
                                 } else {
                                   stackIn_144_1 = 4;
                                 }
-                                ((ll) (Object) stackIn_143_0[stackIn_144_1 + var7]).a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                ((IndexedSprite) (Object) stackIn_143_0[stackIn_144_1 + var7]).a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (this.field_jb == 6 &&
                               null != wl.field_U) {
@@ -912,7 +912,7 @@ final class ml extends tf {
                               } else {
                                 wl.field_U[var7].d(var41[0] - 24, -36 + var41[1]);
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             if (this.field_jb != 7 &&
                               this.field_jb != 9 &&
@@ -964,7 +964,7 @@ final class ml extends tf {
                                     }
                                     var9 = -4 + (this.field_n + var41[0]) - (var7 >> 2);
                                     var10 = this.field_N + (var41[1] - this.field_Y + (8 + var6));
-                                    var11 = jb.field_v & 255;
+                                    var11 = SpriteState.field_v & 255;
                                     if (var11 >= 128) {
                                       var11 = 256 - var11;
                                     }
@@ -973,8 +973,8 @@ final class ml extends tf {
                                     de.c(var9, var10, 10, var8, var11);
                                     de.c(var9, var10, 8, var8, var11);
                                     for (var12 = 0; var12 < 7; var12++) {
-                                      var13_int = (int)(9.0 * Math.sin(3.14 * (0.1 * (double)jb.field_v + (double)var12) / 3.5)) + var9;
-                                      var14 = var10 + (int)(9.0 * Math.cos(3.14 * ((double)var12 + 0.1 * (double)jb.field_v) / 3.5));
+                                      var13_int = (int)(9.0 * Math.sin(3.14 * (0.1 * (double)SpriteState.field_v + (double)var12) / 3.5)) + var9;
+                                      var14 = var10 + (int)(9.0 * Math.cos(3.14 * ((double)var12 + 0.1 * (double)SpriteState.field_v) / 3.5));
                                       jg.field_c[var12].b(-2 + var13_int, -2 + var14);
                                       de.c(var13_int, var14, 4, var8, 32);
                                     }
@@ -1004,7 +1004,7 @@ final class ml extends tf {
                                     }
                                     gi.field_m[var8].a(-48 + var41[0], -48 + var41[1]);
                                   }
-                                  break L6;
+                                  break regionExit1;
                                 }
                                 if (null != this.field_B) {
                                   this.field_B.e(-(var7 >> 2) + (-(var7 >> 1) + var41[0]) - this.field_r, this.field_O + (-var7 + var41[1]) + var6);
@@ -1048,7 +1048,7 @@ final class ml extends tf {
                                   }
                                   var9 = 4 + ((var7 >> 2) + var41[0] - this.field_n);
                                   var10 = this.field_N + (-this.field_Y + var41[1]) - (-8 - var6);
-                                  var11 = 255 & jb.field_v;
+                                  var11 = 255 & SpriteState.field_v;
                                   if (var11 >= 128) {
                                     var11 = -var11 + 256;
                                   }
@@ -1057,8 +1057,8 @@ final class ml extends tf {
                                   de.c(var9, var10, 10, var8, var11);
                                   de.c(var9, var10, 8, var8, var11);
                                   for (var12 = 0; var12 < 7; var12++) {
-                                    var13_intLifetime1 = var9 + (int)(9.0 * Math.sin(3.14 * ((double)var12 + 0.1 * (double)jb.field_v) / 3.5));
-                                    var14Lifetime2 = (int)(9.0 * Math.cos(((double)jb.field_v * 0.1 + (double)var12) * 3.14 / 3.5)) + var10;
+                                    var13_intLifetime1 = var9 + (int)(9.0 * Math.sin(3.14 * ((double)var12 + 0.1 * (double)SpriteState.field_v) / 3.5));
+                                    var14Lifetime2 = (int)(9.0 * Math.cos(((double)SpriteState.field_v * 0.1 + (double)var12) * 3.14 / 3.5)) + var10;
                                     jg.field_c[var12].b(-2 + var13_intLifetime1, var14Lifetime2 - 2);
                                     de.c(var13_intLifetime1, var14Lifetime2, 4, var8, 32);
                                   }
@@ -1081,7 +1081,7 @@ final class ml extends tf {
                                   gi.field_m[var8].d(-32 + (var41[0] + 16), var41[1] - 48);
                                 }
                               }
-                              break L6;
+                              break regionExit1;
                             }
                             var7 = this.field_Y;
                             if (this.field_jb == 7 ||
@@ -1123,7 +1123,7 @@ final class ml extends tf {
                                           var9 = var9 + this.field_gb.field_u / 2;
                                           var10 = var10 + this.field_gb.field_F / 2;
                                           var12_ref_qb = var8_ref_qb;
-                                          var44 = new qb(128, 128);
+                                          var44 = new Sprite(128, 128);
                                           var8_ref_qb = var44;
                                           var10 -= 32;
                                           var9 -= 32;
@@ -1135,7 +1135,7 @@ final class ml extends tf {
                                         var10 = var10 - this.field_gb.field_y * this.field_gb.field_F / 100;
                                         var9 = var9 - this.field_gb.field_y * this.field_gb.field_u / 100;
                                         var12_ref_qbLifetime2 = var8_ref_qb;
-                                        var43 = new qb(2 * this.field_Y, this.field_Y * 2);
+                                        var43 = new Sprite(2 * this.field_Y, this.field_Y * 2);
                                         var8_ref_qb = var43;
                                         var9 = var9 - this.field_Y / 2;
                                         var10 = var10 - this.field_Y / 2;
@@ -1151,7 +1151,7 @@ final class ml extends tf {
                                       var12_ref_qbLifetime1 = var8_ref_qb;
                                       var9 -= 32;
                                       var10 -= 32;
-                                      var45 = new qb(128, 128);
+                                      var45 = new Sprite(128, 128);
                                       var8_ref_qb = var45;
                                       var45.a();
                                       var12_ref_qbLifetime1.b(512, 768, 1024, 1024, this.field_E * 4000 * -this.field_gb.field_y, 4096);
@@ -1183,7 +1183,7 @@ final class ml extends tf {
                                 if (var11Lifetime2 == 0) {
                                   this.field_I.e(var41[0] - (var7 >> 1), var41[1] - var7 * 3 / 2 + var6);
                                 } else {
-                                  var12Lifetime2 = (int)(Math.sin(0.2 * (double)jb.field_v) * (500.0 * Math.random() + 1000.0));
+                                  var12Lifetime2 = (int)(Math.sin(0.2 * (double)SpriteState.field_v) * (500.0 * Math.random() + 1000.0));
                                   this.field_I.b().a(4096, var41[1] + (-(var7 * 3 / 4) + var6), 19, var41[0], var12Lifetime2);
                                 }
                               }
@@ -1207,7 +1207,7 @@ final class ml extends tf {
                                 if (var11Lifetime2 == 0) {
                                   this.field_I.c(var41[0] - (var7 >> 1), var6 - var7 * 3 / 2 + var41[1]);
                                 } else {
-                                  var12Lifetime2 = -(int)(Math.sin((double)jb.field_v * 0.2) * (500.0 * Math.random() + 1000.0));
+                                  var12Lifetime2 = -(int)(Math.sin((double)SpriteState.field_v * 0.2) * (500.0 * Math.random() + 1000.0));
                                   this.field_I.a(4096, -(3 * var7 / 4) + (var41[1] + var6), param2 ^ 1703903772, var41[0], var12Lifetime2);
                                 }
                               }
@@ -1252,13 +1252,13 @@ final class ml extends tf {
             this.field_jb != 12 &&
             this.field_jb != 40) {
             for (var7Lifetime1 = 0; var7Lifetime1 < 3; var7Lifetime1++) {
-              var8Lifetime1 = var41[0] + (int)(Math.sin(3.14 * (double)var7Lifetime1 / 1.5 + 0.125 * (double)jb.field_v) * 16.0);
+              var8Lifetime1 = var41[0] + (int)(Math.sin(3.14 * (double)var7Lifetime1 / 1.5 + 0.125 * (double)SpriteState.field_v) * 16.0);
               var9Lifetime1 = -this.field_Y + (var41[1] - 10);
-              var10Lifetime1 = (int)(Math.cos(3.14 * (double)var7Lifetime1 / 1.5 + 0.125 * (double)jb.field_v) * 8.0);
+              var10Lifetime1 = (int)(Math.cos(3.14 * (double)var7Lifetime1 / 1.5 + 0.125 * (double)SpriteState.field_v) * 8.0);
               if (var10Lifetime1 <= 0) {
-                bb.field_g[(3 * var7Lifetime1 + jb.field_v / 7 & 1) + 86].e(var8Lifetime1 - 20, var9Lifetime1 - (-var10Lifetime1 + 20));
+                bb.field_g[(3 * var7Lifetime1 + SpriteState.field_v / 7 & 1) + 86].e(var8Lifetime1 - 20, var9Lifetime1 - (-var10Lifetime1 + 20));
               } else {
-                bb.field_g[(1 & jb.field_v / 7 + var7Lifetime1 * 3) + 86].c(var8Lifetime1 - 20, -20 + (var9Lifetime1 + var10Lifetime1));
+                bb.field_g[(1 & SpriteState.field_v / 7 + var7Lifetime1 * 3) + 86].c(var8Lifetime1 - 20, -20 + (var9Lifetime1 + var10Lifetime1));
               }
             }
           }
@@ -1278,7 +1278,7 @@ final class ml extends tf {
                 var13 = lf.field_c;
               }
               if (var7Lifetime2 == 1) {
-                var13 = tf.field_j;
+                var13 = DualLinkNode.field_j;
               }
               if (var7Lifetime2 == 2) {
                 var12Lifetime1 = 1;
@@ -1345,29 +1345,29 @@ final class ml extends tf {
                 var18[2] = this.field_L.field_N[var19][11];
               }
               if (var12Lifetime1 != 0) {
-                var20 = jb.field_v / var14Lifetime1 % java.lang.reflect.Array.getLength(var13);
-                var21 = new qb(((qb) (((Object[]) (var13))[0])).field_n, ((qb) (((Object[]) (var13))[0])).field_w);
+                var20 = SpriteState.field_v / var14Lifetime1 % java.lang.reflect.Array.getLength(var13);
+                var21 = new Sprite(((Sprite) (((Object[]) (var13))[0])).field_n, ((Sprite) (((Object[]) (var13))[0])).field_w);
                 var22 = de.field_l;
                 var23 = de.field_e;
                 var24 = de.field_j;
                 var21.a();
-                pc.$cfr$intArgs$a$5f050b8899ac(var17, 0, var18, var15, 106, var16, (qb) (((Object[]) (var13))[var20]), 0);
+                pc.$cfr$intArgs$a$5f050b8899ac(var17, 0, var18, var15, 106, var16, (Sprite) (((Object[]) (var13))[var20]), 0);
                 de.field_e = var23;
                 de.field_j = var24;
                 de.field_l = var22;
                 de.a();
-                var25 = (int)(4.0 * Math.sin((double)(jb.field_v >> 4)));
+                var25 = (int)(4.0 * Math.sin((double)(SpriteState.field_v >> 4)));
                 if (var7Lifetime2 == 4 ||
                   var7Lifetime2 == 6) {
                   var25 = -1;
                 }
                 if (this.field_E < 0 &&
                   var7Lifetime2 != 4) {
-                  var21.e(-(((qb) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -var25 - ((qb) (((Object[]) (var13))[var20])).field_w + var11Lifetime1);
+                  var21.e(-(((Sprite) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -var25 - ((Sprite) (((Object[]) (var13))[var20])).field_w + var11Lifetime1);
                 } else {
                   if (var7Lifetime2 != 4 ||
                     !((-1 + this.field_L.field_X[this.field_u]) % 5 - (-1 + (this.field_L.field_X[this.field_u] - 1) / 5) <= 0)) {
-                    var21.c(-(((qb) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -((qb) (((Object[]) (var13))[var20])).field_w + var11Lifetime1 - var25);
+                    var21.c(-(((Sprite) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -((Sprite) (((Object[]) (var13))[var20])).field_w + var11Lifetime1 - var25);
                   }
                 }
               } else {
@@ -1382,30 +1382,30 @@ final class ml extends tf {
                 var26 = this.field_Z;
                 var27 = this.field_o;
                 if (0 < this.field_q) {
-                  var20 = (int)(4.0 * Math.sin((double)(jb.field_v >> 3)) + 4.0);
+                  var20 = (int)(4.0 * Math.sin((double)(SpriteState.field_v >> 3)) + 4.0);
                   var21_int = -var20;
-                  var22_int = (int)(Math.sin((double)(jb.field_v >> 2)) * 4.0);
+                  var22_int = (int)(Math.sin((double)(SpriteState.field_v >> 2)) * 4.0);
                   var23 = -var22_int;
                 }
                 var28 = de.field_l;
                 var29 = de.field_e;
                 var30 = de.field_j;
-                var31 = new qb(64, 64);
+                var31 = new Sprite(64, 64);
                 var31.a();
                 var32 = 20;
                 var33 = 32;
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var22_int, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], (qb) (((Object[]) (var13))[5]), var32 + var20);
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var26 + var33, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], (qb) (((Object[]) (var13))[4]), var24 + var32);
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 64, kg.field_d[1], (qb) (((Object[]) (var13))[3]), var32);
+                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var22_int, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
+                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var26 + var33, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
+                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 64, kg.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
                 var33 -= 3;
                 var33 -= 6;
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 58, kg.field_d[1], (qb) (((Object[]) (var13))[2]), var32);
+                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 58, kg.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
                 var33 += 6;
                 var33 -= 6;
                 var33 += 3;
                 var33 += 6;
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var27, kg.field_d[3], kg.field_d[0], -91, kg.field_d[1], (qb) (((Object[]) (var13))[1]), var25 + var32);
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var23, kg.field_d[3], kg.field_d[0], 18, kg.field_d[1], (qb) (((Object[]) (var13))[0]), var32 + var21_int);
+                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var27, kg.field_d[3], kg.field_d[0], -91, kg.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
+                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var23, kg.field_d[3], kg.field_d[0], 18, kg.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
                 de.field_l = var28;
                 de.field_j = var30;
                 de.field_e = var29;
@@ -1524,7 +1524,7 @@ final class ml extends tf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 24501) {
-            this.field_bb = (qb) null;
+            this.field_bb = (Sprite) null;
           }
           stackIn_3_0 = this.field_s;
           return stackIn_3_0;
@@ -1679,7 +1679,7 @@ final class ml extends tf {
               }
               if (var2_int == 6 &&
                 null != rc.field_k) {
-                if (13 <= jb.field_v / 10 % rc.field_k.length &&
+                if (13 <= SpriteState.field_v / 10 % rc.field_k.length &&
                   !this.field_z) {
                   var5_int = this.field_lb;
                   var3 = this.field_lb;
@@ -1692,7 +1692,7 @@ final class ml extends tf {
               }
               if (2 == var2_int &&
                 null != rc.field_k) {
-                if (jb.field_v / 10 % ij.field_Pb.length >= ij.field_Pb.length - 1 &&
+                if (SpriteState.field_v / 10 % ij.field_Pb.length >= ij.field_Pb.length - 1 &&
                   !this.field_z) {
                   var5_int = this.field_lb;
                   var3 = this.field_lb;
@@ -1980,42 +1980,42 @@ final class ml extends tf {
         int[] var6 = null;
         int var7 = 0;
         int[] var8 = null;
-        qb[][] var9 = null;
+        Sprite[][] var9 = null;
         int var10 = 0;
-        ll[] var11 = null;
+        IndexedSprite[] var11 = null;
         int var12 = 0;
-        qb[][] var13_ref_qb____ = null;
+        Sprite[][] var13_ref_qb____ = null;
         int var13 = 0;
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        qb var20 = null;
+        Sprite var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
         int[] var25 = null;
-        qb var26 = null;
-        qb var27 = null;
-        qb var28 = null;
-        qb var29 = null;
-        qb var30 = null;
-        qb var31 = null;
+        Sprite var26 = null;
+        Sprite var27 = null;
+        Sprite var28 = null;
+        Sprite var29 = null;
+        Sprite var30 = null;
+        Sprite var31 = null;
         int[] var32 = null;
-        qb var33 = null;
-        qb var34 = null;
-        qb var35 = null;
-        qb var36 = null;
-        qb var37 = null;
-        qb var38 = null;
-        qb var39 = null;
-        qb var40 = null;
-        qb var41 = null;
-        qb var42 = null;
-        qb var43 = null;
-        qb var44 = null;
+        Sprite var33 = null;
+        Sprite var34 = null;
+        Sprite var35 = null;
+        Sprite var36 = null;
+        Sprite var37 = null;
+        Sprite var38 = null;
+        Sprite var39 = null;
+        Sprite var40 = null;
+        Sprite var41 = null;
+        Sprite var42 = null;
+        Sprite var43 = null;
+        Sprite var44 = null;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (this.field_J) {
@@ -2065,13 +2065,13 @@ final class ml extends tf {
           if (param0 != 12) {
             return;
           }
-          L7: {
+          regionExit1: {
             var12 = this.field_jb;
             if (var12 == 40) {
               this.field_Y = 64;
               this.field_ib = 10;
               this.field_J = true;
-              this.field_w = new qb(this.field_Y, this.field_Y);
+              this.field_w = new Sprite(this.field_Y, this.field_Y);
               this.field_w.a();
               de.i(32, 32, 10, 16777215);
               de.i(32, 63, 1, 16777215);
@@ -2081,7 +2081,7 @@ final class ml extends tf {
                 this.field_ib = 75;
                 this.field_z = true;
                 this.field_Y = 256;
-                this.field_w = new qb(this.field_Y, this.field_Y);
+                this.field_w = new Sprite(this.field_Y, this.field_Y);
                 this.field_w.a();
                 go.field_j[29].a(0, 0);
                 de.d(0, -2 + (go.field_j[29].field_f + go.field_j[29].field_c), this.field_Y, this.field_Y, 0);
@@ -2090,7 +2090,7 @@ final class ml extends tf {
                   this.field_J = true;
                   this.field_Y = 100;
                   this.field_ib = 100;
-                  this.field_w = new qb(this.field_Y, this.field_Y);
+                  this.field_w = new Sprite(this.field_Y, this.field_Y);
                   this.field_w.a();
                   de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                 } else {
@@ -2098,7 +2098,7 @@ final class ml extends tf {
                     this.field_J = true;
                     this.field_ib = 200;
                     this.field_Y = 100;
-                    this.field_w = new qb(this.field_Y, this.field_Y);
+                    this.field_w = new Sprite(this.field_Y, this.field_Y);
                     this.field_w.a();
                     de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                   } else {
@@ -2113,12 +2113,12 @@ final class ml extends tf {
                               }
                               this.field_ab = 2;
                               if (param1) {
-                                this.field_w = new qb(this.field_Y, this.field_Y);
+                                this.field_w = new Sprite(this.field_Y, this.field_Y);
                                 this.field_w.a();
                                 de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new qb[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
                               if (kc.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2128,7 +2128,7 @@ final class ml extends tf {
                                 var6 = var22;
                                 var24 = new int[]{255, 192, 255};
                                 var4 = var24;
-                                var20 = new qb(64, 96);
+                                var20 = new Sprite(64, 96);
                                 var20.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 16, var22, var23, -8, var24, var13_ref_qb____[0][var25[1]], 0);
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 32, var22, var23, -96, var24, var13_ref_qb____[4][var25[5]], 0);
@@ -2137,42 +2137,42 @@ final class ml extends tf {
                                   pc.$cfr$intArgs$a$5f050b8899ac(var21, 32, var22, var23, 74, var24, var13_ref_qb____[6][var25[6]], 0);
                                 }
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 16, var22, var23, 25, var24, var13_ref_qb____[5][var25[4]], 0);
-                                this.field_I = new qb(64, 96);
+                                this.field_I = new Sprite(64, 96);
                                 this.field_I.a();
                                 var20.a(32, 48, 0, 4096);
                                 this.field_I.e();
-                                var26 = new qb(64, 64);
+                                var26 = new Sprite(64, 64);
                                 var26.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, 49, var24, var13_ref_qb____[1][var25[0]], 0);
-                                this.field_bb = new qb(64, 64);
+                                this.field_bb = new Sprite(64, 64);
                                 this.field_bb.a();
                                 var26.a(32, 32, 0, 4096);
                                 this.field_bb.e();
-                                var27 = new qb(64, 64);
+                                var27 = new Sprite(64, 64);
                                 var27.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -104, var24, var13_ref_qb____[7][0], 0);
-                                this.field_Q = new qb(64, 64);
+                                this.field_Q = new Sprite(64, 64);
                                 this.field_Q.a();
                                 var27.a(32, 32, 0, 4096);
                                 this.field_Q.e();
-                                var28 = new qb(64, 64);
+                                var28 = new Sprite(64, 64);
                                 var28.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -124, var24, var13_ref_qb____[8][0], 0);
-                                this.field_cb = new qb(64, 64);
+                                this.field_cb = new Sprite(64, 64);
                                 this.field_cb.a();
                                 var28.a(32, 32, 0, 4096);
                                 this.field_cb.e();
-                                var29 = new qb(64, 64);
+                                var29 = new Sprite(64, 64);
                                 var29.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -112, var24, var13_ref_qb____[2][var25[2]], 0);
-                                this.field_fb = new qb(64, 64);
+                                this.field_fb = new Sprite(64, 64);
                                 this.field_fb.a();
                                 var29.a(32, 32, 0, 4096);
                                 this.field_fb.e();
-                                var30 = new qb(64, 64);
+                                var30 = new Sprite(64, 64);
                                 var30.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -79, var24, var13_ref_qb____[3][var25[3]], 0);
-                                this.field_B = new qb(64, 64);
+                                this.field_B = new Sprite(64, 64);
                                 this.field_B.a();
                                 var30.a(32, 32, 0, 4096);
                                 this.field_B.e();
@@ -2181,7 +2181,7 @@ final class ml extends tf {
                                 this.field_J = false;
                               }
                             } else {
-                              L11: {
+                              regionExit2: {
                                 if (var12 != 22 &&
                                   23 != var12 &&
                                   var12 != 21 &&
@@ -2200,7 +2200,7 @@ final class ml extends tf {
                                       var12 != 1) {
                                       switch (var12) {
                                         default:
-                                          break L11;
+                                          break regionExit2;
                                         case 2:
                                         case 3:
                                         case 8:
@@ -2243,7 +2243,7 @@ final class ml extends tf {
                                       var11 = dh.field_Jb;
                                     }
                                     if (this.field_jb == 33) {
-                                      var11 = jk.field_n;
+                                      var11 = ArchiveIndex.field_n;
                                       this.field_Y = 32;
                                       this.field_ib = 40;
                                     }
@@ -2325,11 +2325,11 @@ final class ml extends tf {
                                     if (param1) {
                                       if (this.field_jb != 7 &&
                                         this.field_jb != 9) {
-                                        this.field_w = new qb(this.field_Y, this.field_Y);
+                                        this.field_w = new Sprite(this.field_Y, this.field_Y);
                                         this.field_w.a();
                                         de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                                       } else {
-                                        this.field_w = new qb(48, 48);
+                                        this.field_w = new Sprite(48, 48);
                                         this.field_w.a();
                                         de.i(24, 24, 24, 16777215);
                                       }
@@ -2337,7 +2337,7 @@ final class ml extends tf {
                                     if (var11 == null) {
                                       this.field_J = false;
                                     } else {
-                                      var39 = new qb(this.field_Y, 3 * this.field_Y / 2);
+                                      var39 = new Sprite(this.field_Y, 3 * this.field_Y / 2);
                                       var39.a();
                                       if (this.field_jb != 11 &&
                                         this.field_jb != 8 &&
@@ -2349,23 +2349,23 @@ final class ml extends tf {
                                         pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].b(), 0);
                                       }
                                       this.field_I = var39.g();
-                                      var40 = new qb(this.field_Y, this.field_Y);
+                                      var40 = new Sprite(this.field_Y, this.field_Y);
                                       var40.a();
                                       pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 70, var4, var11[3].b(), 0);
                                       this.field_bb = var40.g();
-                                      var41 = new qb(this.field_Y, this.field_Y);
+                                      var41 = new Sprite(this.field_Y, this.field_Y);
                                       var41.a();
                                       pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 33, var4, var11[1].b(), 0);
                                       this.field_Q = var41.g();
-                                      var42 = new qb(this.field_Y, this.field_Y);
+                                      var42 = new Sprite(this.field_Y, this.field_Y);
                                       var42.a();
                                       pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -127, var4, var11[4].b(), 0);
                                       this.field_cb = var42.g();
-                                      var43 = new qb(this.field_Y, this.field_Y);
+                                      var43 = new Sprite(this.field_Y, this.field_Y);
                                       var43.a();
                                       pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -4, var4, var11[0].b(), 0);
                                       this.field_fb = var43.g();
-                                      var44 = new qb(this.field_Y, this.field_Y);
+                                      var44 = new Sprite(this.field_Y, this.field_Y);
                                       var44.a();
                                       pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -86, var4, var11[5].b(), 0);
                                       this.field_B = var44.g();
@@ -2374,18 +2374,18 @@ final class ml extends tf {
                                     if (!(param1)) {
                                       this.field_ib = var10;
                                     }
-                                    break L7;
+                                    break regionExit1;
                                   }
                                   this.field_J = true;
                                   this.field_Y = 24;
                                   this.field_ib = 25;
-                                  this.field_w = new qb(this.field_Y, this.field_Y);
+                                  this.field_w = new Sprite(this.field_Y, this.field_Y);
                                   this.field_w.a();
                                   de.i(12, 12, 12, 16777215);
                                   this.field_p = this.field_ib;
                                   this.field_Y = this.field_w.field_n;
                                   this.e((byte) 6);
-                                  break L7;
+                                  break regionExit1;
                                 }
                               }
                               if (param1) {
@@ -2393,7 +2393,7 @@ final class ml extends tf {
                               }
                               this.field_Y = 32;
                               if (param1) {
-                                this.field_w = new qb(this.field_Y, this.field_Y);
+                                this.field_w = new Sprite(this.field_Y, this.field_Y);
                                 this.field_w.a();
                                 de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
@@ -2406,11 +2406,11 @@ final class ml extends tf {
                                   var16++;
                                 }
                               }
-                              var9 = new qb[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var9 = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
                               if (kc.field_kb == null) {
                                 this.field_J = false;
                               } else {
-                                var31 = new qb(64, 96);
+                                var31 = new Sprite(64, 96);
                                 var31.a();
                                 if (this.field_jb != 16) {
                                   pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 78, var18, var9[0][var8[1]], 0);
@@ -2423,46 +2423,46 @@ final class ml extends tf {
                                 } else {
                                   pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 116, var18, tk.field_x[2], 0);
                                 }
-                                this.field_I = new qb(32, 48);
+                                this.field_I = new Sprite(32, 48);
                                 this.field_I.a();
                                 var31.a(16, 24, 0, 2048);
                                 this.field_I.e();
-                                var33 = new qb(64, 64);
+                                var33 = new Sprite(64, 64);
                                 var33.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 91, var18, var9[1][var8[0]], 0);
-                                this.field_bb = new qb(32, 32);
+                                this.field_bb = new Sprite(32, 32);
                                 this.field_bb.a();
                                 var33.a(16, 16, 0, 2048);
                                 this.field_bb.e();
-                                var34 = new qb(64, 64);
+                                var34 = new Sprite(64, 64);
                                 var34.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 123, var18, var9[7][0], 0);
-                                this.field_Q = new qb(32, 32);
+                                this.field_Q = new Sprite(32, 32);
                                 this.field_Q.a();
                                 if (var8[0] != 46) {
                                   var34.a(16, 16, 0, 2048);
                                 }
                                 this.field_Q.e();
-                                var35 = new qb(64, 64);
+                                var35 = new Sprite(64, 64);
                                 var35.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, -81, var18, var9[8][0], 0);
-                                this.field_cb = new qb(32, 32);
+                                this.field_cb = new Sprite(32, 32);
                                 this.field_cb.a();
                                 if (var8[0] != 46) {
                                   var35.a(16, 16, 0, 2048);
                                 }
                                 this.field_cb.e();
-                                var36 = new qb(64, 64);
+                                var36 = new Sprite(64, 64);
                                 var36.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 126, var18, var9[2][var8[2]], 0);
-                                this.field_fb = new qb(32, 32);
+                                this.field_fb = new Sprite(32, 32);
                                 this.field_fb.a();
                                 var36.a(16, 16, 0, 2048);
                                 this.field_fb.e();
-                                var37 = new qb(64, 64);
+                                var37 = new Sprite(64, 64);
                                 var37.a();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 14, var18, var9[3][var8[3]], 0);
-                                this.field_B = new qb(32, 32);
+                                this.field_B = new Sprite(32, 32);
                                 this.field_B.a();
                                 var37.a(16, 16, 0, 2048);
                                 this.field_B.e();
@@ -2478,7 +2478,7 @@ final class ml extends tf {
                                 }
                                 if (var8[2] == 54) {
                                   this.field_ab = 3;
-                                  var38 = new qb(64, 64);
+                                  var38 = new Sprite(64, 64);
                                   var38.a();
                                   var13 = 32;
                                   if (this.field_B != null) {
@@ -2512,7 +2512,7 @@ final class ml extends tf {
                             this.field_Y = 80;
                             this.field_J = true;
                             this.field_ib = 100;
-                            this.field_w = new qb(this.field_Y, this.field_Y);
+                            this.field_w = new Sprite(this.field_Y, this.field_Y);
                             this.field_w.a();
                             de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                           }
@@ -2520,7 +2520,7 @@ final class ml extends tf {
                           this.field_Y = 100;
                           this.field_ib = 150;
                           this.field_J = true;
-                          this.field_w = new qb(this.field_Y, this.field_Y);
+                          this.field_w = new Sprite(this.field_Y, this.field_Y);
                           this.field_w.a();
                           de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                         }
@@ -2528,7 +2528,7 @@ final class ml extends tf {
                         this.field_ib = 150;
                         this.field_J = true;
                         this.field_Y = 100;
-                        this.field_w = new qb(this.field_Y, this.field_Y);
+                        this.field_w = new Sprite(this.field_Y, this.field_Y);
                         this.field_w.a();
                         de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                       }
@@ -2536,7 +2536,7 @@ final class ml extends tf {
                       this.field_J = true;
                       this.field_Y = 100;
                       this.field_ib = 150;
-                      this.field_w = new qb(this.field_Y, this.field_Y);
+                      this.field_w = new Sprite(this.field_Y, this.field_Y);
                       this.field_w.a();
                       de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                     }
@@ -2791,7 +2791,7 @@ final class ml extends tf {
           if (param1 < 4) {
             return;
           }
-          L8: {
+          regionExit1: {
             var4 = this.field_jb;
             if (var4 == 40) {
               var10 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
@@ -2803,68 +2803,68 @@ final class ml extends tf {
                   case 3:
                     var12 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.b(52, var12);
-                    break L8;
+                    break regionExit1;
                   case 7:
                     var13 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var13);
-                    break L8;
+                    break regionExit1;
                   case 1:
                     var14 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
                     this.field_L.b(52, var14);
-                    break L8;
+                    break regionExit1;
                   case 5:
                     var15 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.b(52, var15);
-                    break L8;
+                    break regionExit1;
                   case 2:
                     var16 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
                     this.field_L.b(52, var16);
-                    break L8;
+                    break regionExit1;
                   case 11:
                     var17 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
                     this.field_L.b(52, var17);
-                    break L8;
+                    break regionExit1;
                   case 9:
                     var18 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                     this.field_L.b(52, var18);
-                    break L8;
+                    break regionExit1;
                   case 17:
                     if (this.field_U) {
                       var20 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                       this.field_L.b(52, var20);
-                      break L8;
+                      break regionExit1;
                     }
                     var19 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
                     this.field_L.b(52, var19);
-                    break L8;
+                    break regionExit1;
                   case 10:
                     var21 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                     this.field_L.b(52, var21);
-                    break L8;
+                    break regionExit1;
                   case 6:
                     var22 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var22);
-                    break L8;
+                    break regionExit1;
                   case 25:
                     var23 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.b(52, var23);
-                    break L8;
+                    break regionExit1;
                   case 4:
                     var24 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.b(52, var24);
-                    break L8;
+                    break regionExit1;
                   case 8:
                     var25 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var25);
-                    break L8;
+                    break regionExit1;
                   case 13:
                     var26 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 85, this.field_L, this.field_lb);
                     this.field_L.b(52, var26);
-                    break L8;
+                    break regionExit1;
                   case 37:
                     var27 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                     this.field_L.b(52, var27);
-                    break L8;
+                    break regionExit1;
                   case 39:
                     var28 = aj.a(this.field_s, -10 + (-(this.field_Y / 2) + this.field_db), false, 159, this.field_L, -10 + this.field_lb);
                     this.field_L.b(52, var28);
@@ -2884,22 +2884,22 @@ final class ml extends tf {
                     var31.field_F = 20;
                     var32 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                     this.field_L.b(52, var32);
-                    break L8;
+                    break regionExit1;
                   case 15:
                     var33 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.b(52, var33);
-                    break L8;
+                    break regionExit1;
                   case 14:
                     var34 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.b(52, var34);
-                    break L8;
+                    break regionExit1;
                   case 26:
                     var35 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var35);
-                    break L8;
+                    break regionExit1;
                   case 12:
                     this.field_L.a(this.field_db - 256, -60, this.field_lb - 128, go.field_j[29].b());
-                    break L8;
+                    break regionExit1;
                   case 28:
                   case 32:
                   case 34:
@@ -2913,29 +2913,29 @@ final class ml extends tf {
                           case 28:
                             var40 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                             this.field_L.b(52, var40);
-                            break L8;
+                            break regionExit1;
                           case 34:
                             var38 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 146, this.field_L, this.field_lb);
                             this.field_L.b(52, var38);
                             var38.field_y = 250;
-                            break L8;
+                            break regionExit1;
                           default:
-                            break L8;
+                            break regionExit1;
                           case 36:
                             var39 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 128, this.field_L, this.field_lb);
                             this.field_L.b(52, var39);
-                            break L8;
+                            break regionExit1;
                           case 32:
                             break;
                         }
                       }
                       var41 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                       this.field_L.b(52, var41);
-                      break L8;
+                      break regionExit1;
                     }
                     var36 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 154, this.field_L, this.field_lb);
                     this.field_L.b(52, var36);
-                    break L8;
+                    break regionExit1;
                 }
               }
               this.b(-30225, 53);
@@ -2943,8 +2943,8 @@ final class ml extends tf {
               this.field_L.b(52, var11);
             }
           }
-          this.a(true);
-          this.a((byte) 88);
+          this.unlink(true);
+          this.unlinkSecondary((byte) 88);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3750,7 +3750,7 @@ final class ml extends tf {
               this.field_z = true;
               this.field_q = 0;
               this.field_Y = 32;
-              this.field_w = new qb(this.field_Y, this.field_Y);
+              this.field_w = new Sprite(this.field_Y, this.field_Y);
               this.field_w.a();
               de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
             }
@@ -4128,10 +4128,10 @@ final class ml extends tf {
         RuntimeException var2 = null;
         try {
           if (!param0) {
-            this.field_B = (qb) null;
+            this.field_B = (Sprite) null;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.b((byte) -82) && (this.field_z ||
+          if (this.isLinked((byte) -82) && (this.field_z ||
             this.field_hb ||
             this.field_x != 0 ||
             this.field_ib <= 0)) {
@@ -4201,7 +4201,7 @@ final class ml extends tf {
             this.b(-30225, in.field_Fb[param1]);
           }
           if (this.field_jb == 8) {
-            this.b(-30225, s.field_i[param1]);
+            this.b(-30225, IndexedSpriteState.field_i[param1]);
           }
           if (this.field_jb == 11) {
             this.b(-30225, lj.field_g[param1]);
@@ -4343,7 +4343,7 @@ final class ml extends tf {
               this.field_R = this.field_db << 4;
               this.field_q = 0;
               this.field_z = true;
-              this.field_w = new qb(this.field_Y, this.field_Y);
+              this.field_w = new Sprite(this.field_Y, this.field_Y);
               this.field_w.a();
               de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
             }

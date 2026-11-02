@@ -109,16 +109,16 @@ abstract class wn extends qm implements a {
               } else {
                 fd.field_e = cf.a(param3, param5, (byte) -128, false);
               }
-              he.field_e.field_g = 0;
-              he.field_e.f(14, (byte) -105);
-              he.field_e.f(fd.field_e.a(0).field_g, (byte) -106);
+              he.field_e.position = 0;
+              he.field_e.writeByte(14, (byte) -105);
+              he.field_e.writeByte(fd.field_e.a(0).field_g, (byte) -106);
               we.a(-1, (byte) 86);
               ob.field_eb = pe.field_Db;
             }
             if (ob.field_eb == pe.field_Db &&
               pe.a((byte) -86, 1)) {
-              var6_int = df.field_z.e((byte) -123);
-              df.field_z.field_g = 0;
+              var6_int = df.field_z.readUnsignedByte((byte) -123);
+              df.field_z.position = 0;
               if (0 == var6_int) {
                 ob.field_eb = go.field_c;
               } else {
@@ -129,16 +129,16 @@ abstract class wn extends qm implements a {
             }
             if (ob.field_eb == go.field_c &&
               pe.a((byte) -86, 8)) {
-              of.field_j = df.field_z.c(-943038560);
-              df.field_z.field_g = 0;
+              of.field_j = df.field_z.readLong(-943038560);
+              df.field_z.position = 0;
               dn.a(param4, fd.field_e, (byte) 116, param2, param0);
               ob.field_eb = co.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ob.field_eb == co.field_h &&
               pe.a((byte) -86, 1)) {
-              var6_intLifetime1 = df.field_z.e((byte) -122);
-              df.field_z.field_g = 0;
+              var6_intLifetime1 = df.field_z.readUnsignedByte((byte) -122);
+              df.field_z.position = 0;
               rj.field_i = null;
               on.field_g = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
@@ -162,13 +162,13 @@ abstract class wn extends qm implements a {
             }
             if (ob.field_eb == bb.field_c &&
               pn.b(-12564)) {
-              fk.field_k = df.field_z.c(-943038560);
+              fk.field_k = df.field_z.readLong(-943038560);
               fn.field_f = param5;
-              qf.field_d = df.field_z.e((byte) 115);
-              ib.field_r = df.field_z.e((byte) 93);
-              ah.field_c = df.field_z.n(-98);
-              var6 = df.field_z.g(103);
-              var7 = df.field_z.e((byte) -94);
+              qf.field_d = df.field_z.readUnsignedByte((byte) 115);
+              ib.field_r = df.field_z.readUnsignedByte((byte) 93);
+              ah.field_c = df.field_z.readUnsignedShort(-98);
+              var6 = df.field_z.readOptionalString(103);
+              var7 = df.field_z.readUnsignedByte((byte) -94);
               if ((1 & var7) != 0) {
                 j.b(-69);
               }
@@ -186,19 +186,19 @@ abstract class wn extends qm implements a {
               stackIn_58_0 = (0 != (16 & var7));
               ag.field_E = stackIn_58_0;
               if (fl.field_a) {
-                df.field_z.e((byte) 110);
-                ne.field_g = df.field_z.e((byte) -115);
-                df.field_z.d(-10674);
-                wd.field_d = df.field_z.n(-98);
+                df.field_z.readUnsignedByte((byte) 110);
+                ne.field_g = df.field_z.readUnsignedByte((byte) -115);
+                df.field_z.readInt(-10674);
+                wd.field_d = df.field_z.readUnsignedShort(-98);
                 ra.field_f = new byte[wd.field_d];
                 for (var8 = 0; var8 < wd.field_d; var8++) {
-                  ra.field_f[var8] = df.field_z.o(6);
+                  ra.field_f[var8] = df.field_z.readByte(6);
                 }
               }
-              ah.field_b = df.field_z.l(-1);
+              ah.field_b = df.field_z.readString(-1);
               var11 = (CharSequence) ((Object) ah.field_b);
               nm.field_b = gk.a(var11, -13);
-              dd.field_j = df.field_z.e((byte) 65);
+              dd.field_j = df.field_z.readUnsignedByte((byte) 65);
               ob.field_eb = qc.field_c;
               if (fd.field_e.a(0) == k.field_q) {
                 ea.field_y.a(cd.e(118), (byte) -93);
@@ -230,11 +230,11 @@ abstract class wn extends qm implements a {
               if (ah.field_c > 0) {
                 lk.field_d = true;
               }
-              he.field_e.b(-107, hj.field_a);
+              he.field_e.installCipher(-107, hj.field_a);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 hj.field_a[var8Lifetime1] = hj.field_a[var8Lifetime1] + 50;
               }
-              df.field_z.b(90, hj.field_a);
+              df.field_z.installCipher(90, hj.field_a);
               stackIn_85_0 = on.field_g;
               return stackIn_85_0;
             }
@@ -250,7 +250,7 @@ abstract class wn extends qm implements a {
               if (on.field_g == 7) {
                 on.field_g = 3;
               }
-              me.field_E = df.field_z.l(-1);
+              me.field_E = df.field_z.readString(-1);
               bb.field_h = false;
               stackIn_96_0 = on.field_g;
               return stackIn_96_0;

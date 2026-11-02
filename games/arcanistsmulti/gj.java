@@ -5,7 +5,7 @@ final class gj {
     static int[] field_a;
     static String field_e;
     static int[][] field_c;
-    static ll[] field_f;
+    static IndexedSprite[] field_f;
     static String field_b;
     static int[] field_g;
     static kc field_d;
@@ -27,7 +27,7 @@ final class gj {
             if (mn.field_r == 10) {
               var4 = -1;
             }
-            tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
+            ArchiveProvider.field_f[mn.field_r].a(param0, var4, (byte) -115);
           }
         } else {
           field_b = (String) null;
@@ -44,7 +44,7 @@ final class gj {
             if (mn.field_r == 10) {
               var4 = -1;
             }
-            tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
+            ArchiveProvider.field_f[mn.field_r].a(param0, var4, (byte) -115);
           }
         }
     }
@@ -74,7 +74,7 @@ final class gj {
           if (!hk.c(0)) {
             return false;
           }
-          if ((jb.field_v & 8) == 0) {
+          if ((SpriteState.field_v & 8) == 0) {
             return true;
           }
           return false;
@@ -82,7 +82,7 @@ final class gj {
         if (!hk.c(0)) {
           return false;
         }
-        if ((jb.field_v & 8) == 0) {
+        if ((SpriteState.field_v & 8) == 0) {
           return true;
         }
         return false;

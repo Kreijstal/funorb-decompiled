@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oo extends tf {
+final class oo extends DualLinkNode {
     static int field_y;
     static ih field_C;
     char[] field_n;
@@ -18,11 +18,11 @@ final class oo extends tf {
     static volatile long field_s;
     static String field_m;
     static String field_o;
-    static vn field_B;
+    static IntrusiveDeque field_B;
     static vg[] field_u;
-    static qb field_t;
+    static Sprite field_t;
 
-    private final void a(wk param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         char[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_11_2 = 0;
@@ -43,15 +43,15 @@ final class oo extends tf {
         try {
           var4_int = -1 % ((-32 - param2) / 44);
           if (1 == param1) {
-            this.field_w = param0.l(-1);
+            this.field_w = param0.readString(-1);
           } else {
             if (param1 == 2) {
-              var5 = param0.e((byte) -112);
+              var5 = param0.readUnsignedByte((byte) -112);
               this.field_n = new char[var5];
               this.field_p = new int[var5];
               for (var6 = 0; var5 > var6; var6++) {
-                this.field_p[var6] = param0.n(-98);
-                var7 = param0.o(6);
+                this.field_p[var6] = param0.readUnsignedShort(-98);
+                var7 = param0.readByte(6);
                 stackIn_16_0 = this.field_n;
                 stackIn_16_1 = var6;
                 if (var7 == 0) {
@@ -62,12 +62,12 @@ final class oo extends tf {
                 stackIn_16_0[stackIn_16_1] = stackIn_17_2;
               }
             } else if (param1 == 3) {
-              var5 = param0.e((byte) 34);
+              var5 = param0.readUnsignedByte((byte) 34);
               this.field_z = new char[var5];
               this.field_D = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
-                this.field_D[var6] = param0.n(-98);
-                var7 = param0.o(6);
+                this.field_D[var6] = param0.readUnsignedShort(-98);
+                var7 = param0.readByte(6);
                 stackIn_10_0 = this.field_z;
                 stackIn_10_1 = var6;
                 if (var7 != 0) {
@@ -117,14 +117,14 @@ final class oo extends tf {
     }
 
     final static void c(int param0) {
-        uh var1 = (uh) (lk.field_j.d(true));
+        uh var1 = (uh) (lk.field_j.removeLast(true));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         de.a(var1.field_j, var1.field_o, var1.field_p);
         de.h(var1.field_k, var1.field_g, var1.field_r, var1.field_h);
         var1.field_j = null;
-        km.field_a.b(var1, -1);
+        km.field_a.addLast(var1, -1);
         if (param0 != -15405) {
           oo.g(-25);
         }
@@ -172,7 +172,7 @@ final class oo extends tf {
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -186,7 +186,7 @@ final class oo extends tf {
             field_r = (String) null;
           }
           while (true) {
-            var3_int = param1.e((byte) -98);
+            var3_int = param1.readUnsignedByte((byte) -98);
             if (0 == var3_int) {
               return;
             }

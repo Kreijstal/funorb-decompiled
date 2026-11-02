@@ -4,7 +4,7 @@
 final class ii implements pf {
     static boolean field_f;
     static kc field_b;
-    static qb field_d;
+    static Sprite field_d;
     static int field_c;
     static int field_a;
     static String field_e;
@@ -17,7 +17,7 @@ final class ii implements pf {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        qb var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param2 + param0.field_n;
           if (param1 != 5592405) {
@@ -94,25 +94,25 @@ final class ii implements pf {
         try {
           var1_int = 53 / ((26 - param0) / 49);
           while (ib.b(false)) {
-            if (vn.field_d == 16) {
+            if (IntrusiveDeque.field_d == 16) {
               io.a(65, (byte) -84);
             }
-            if (vn.field_d == 17) {
+            if (IntrusiveDeque.field_d == 17) {
               io.a(73, (byte) 112);
             }
-            if (vn.field_d == 18) {
+            if (IntrusiveDeque.field_d == 18) {
               io.a(97, (byte) -93);
             }
-            if (vn.field_d == 19) {
+            if (IntrusiveDeque.field_d == 19) {
               io.a(69, (byte) 76);
             }
-            if (vn.field_d == 20) {
+            if (IntrusiveDeque.field_d == 20) {
               io.a(67, (byte) 89);
             }
-            if (vn.field_d == 21) {
+            if (IntrusiveDeque.field_d == 21) {
               io.a(17, (byte) 31);
             }
-            if (vn.field_d == 13 &&
+            if (IntrusiveDeque.field_d == 13 &&
               (ch.field_b & 64) > 0) {
               stackIn_19_0 = 2;
               return stackIn_19_0;

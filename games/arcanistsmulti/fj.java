@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends pg {
+final class fj extends IntrusiveNode {
     static String field_g;
     static int field_h;
     static String field_i;
@@ -102,26 +102,26 @@ final class fj extends pg {
     }
 
     final static void a(int param0, nk param1, int param2) {
-        ab var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = he.field_e;
-          var3.b((byte) -36, param2);
+          var3.writeOpcode((byte) -36, param2);
           if (param0 != -26971) {
             String var4 = (String) null;
-            fj.a((String) null, 34, (eg) null, (String) null);
+            fj.a((String) null, 34, (ResourceArchive) null, (String) null);
           }
-          var3.f(param1.field_p, (byte) -41);
-          var3.f(param1.field_t, (byte) -85);
+          var3.writeByte(param1.field_p, (byte) -41);
+          var3.writeByte(param1.field_t, (byte) -85);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static qb a(String param0, int param1, eg param2, String param3) {
+    final static Sprite a(String param0, int param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qb stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -185,7 +185,7 @@ final class fj extends pg {
         }
         String var1 = ho.b((byte) 103);
         wh.field_f = new e(var1, (String) null, true, false, false);
-        p.field_b.b(g.field_e, 15637);
+        ClientException.field_b.b(g.field_e, 15637);
         g.field_e.a((byte) -92, (qm) (wh.field_f));
         g.field_e.a(111);
     }

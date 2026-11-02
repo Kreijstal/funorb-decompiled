@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends RuntimeException {
+final class ClientException extends RuntimeException {
     static kc field_d;
     static h field_b;
     static int field_c;
-    Throwable field_g;
+    Throwable cause;
     static String field_j;
-    String field_i;
+    String context;
     static int field_a;
     static String field_f;
     static String field_h;
@@ -45,28 +45,28 @@ final class p extends RuntimeException {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param2 == 11) {
-          he.field_e.b((byte) -124, 58);
-          he.field_e.f(param0, (byte) -82);
-          he.field_e.c(param6, (byte) -68);
-          he.field_e.c(param8, (byte) -68);
-          he.field_e.c(param7, (byte) -95);
-          he.field_e.c(param1, (byte) -59);
-          he.field_e.c(param4, (byte) -66);
-          he.field_e.f(param3, (byte) -35);
-          he.field_e.f(param5, (byte) -128);
+          he.field_e.writeOpcode((byte) -124, 58);
+          he.field_e.writeByte(param0, (byte) -82);
+          he.field_e.writeShort(param6, (byte) -68);
+          he.field_e.writeShort(param8, (byte) -68);
+          he.field_e.writeShort(param7, (byte) -95);
+          he.field_e.writeShort(param1, (byte) -59);
+          he.field_e.writeShort(param4, (byte) -66);
+          he.field_e.writeByte(param3, (byte) -35);
+          he.field_e.writeByte(param5, (byte) -128);
           return;
         }
         String var10 = (String) null;
-        p.a(2, (String) null);
-        he.field_e.b((byte) -124, 58);
-        he.field_e.f(param0, (byte) -82);
-        he.field_e.c(param6, (byte) -68);
-        he.field_e.c(param8, (byte) -68);
-        he.field_e.c(param7, (byte) -95);
-        he.field_e.c(param1, (byte) -59);
-        he.field_e.c(param4, (byte) -66);
-        he.field_e.f(param3, (byte) -35);
-        he.field_e.f(param5, (byte) -128);
+        ClientException.a(2, (String) null);
+        he.field_e.writeOpcode((byte) -124, 58);
+        he.field_e.writeByte(param0, (byte) -82);
+        he.field_e.writeShort(param6, (byte) -68);
+        he.field_e.writeShort(param8, (byte) -68);
+        he.field_e.writeShort(param7, (byte) -95);
+        he.field_e.writeShort(param1, (byte) -59);
+        he.field_e.writeShort(param4, (byte) -66);
+        he.field_e.writeByte(param3, (byte) -35);
+        he.field_e.writeByte(param5, (byte) -128);
     }
 
     public static void a(byte param0) {
@@ -80,9 +80,9 @@ final class p extends RuntimeException {
         field_f = null;
     }
 
-    p(Throwable param0, String param1) {
-        this.field_g = param0;
-        this.field_i = param1;
+    ClientException(Throwable param0, String param1) {
+        this.cause = param0;
+        this.context = param1;
     }
 
     static {

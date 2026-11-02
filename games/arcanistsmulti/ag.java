@@ -121,9 +121,9 @@ class ag extends qm {
           super.a(param0, param1, param2, param3);
           this.field_F = 0;
           if (0 != this.field_t &&
-            wk.field_m != this.field_t) {
+            PacketBuffer.field_m != this.field_t) {
             if (this.a((byte) -47, param3, me.field_I, param1, an.field_g) &&
-              wk.field_m == 0) {
+              PacketBuffer.field_m == 0) {
               this.a(-102, -param1 + an.field_g, this.field_t, me.field_I - param3);
             }
             this.a(me.field_I, -20592, an.field_g, param3, param1, param0);
@@ -272,7 +272,7 @@ class ag extends qm {
           return;
         }
         nn.field_q = param0;
-        co.field_f.field_G.c(param1 + 185);
+        co.field_f.field_G.clear(param1 + 185);
         if (param1 != -104) {
           return;
         }

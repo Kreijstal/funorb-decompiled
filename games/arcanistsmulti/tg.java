@@ -6,23 +6,23 @@ final class tg {
     static hg field_e;
     static String field_a;
     static int[] field_f;
-    private tf field_h;
+    private DualLinkNode field_h;
     static int field_d;
-    private tf field_c;
-    static ll[] field_b;
+    private DualLinkNode field_c;
+    static IndexedSprite[] field_b;
 
-    final void a(tf param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
-          if (param0.field_i != null) {
-            param0.a((byte) 88);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary((byte) 88);
           }
-          param0.field_l = this.field_h;
-          param0.field_i = this.field_h.field_i;
-          param0.field_i.field_l = param0;
+          param0.secondaryNext = this.field_h;
+          param0.secondaryPrevious = this.field_h.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
           if (param1 != 15893) {
             this.a((byte) -116);
           }
-          param0.field_l.field_i = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -30,7 +30,7 @@ final class tg {
 
     final boolean d(int param0) {
         int var2 = -79 / ((param0 - 63) / 45);
-        return this.field_h == this.field_h.field_l ? true : false;
+        return this.field_h == this.field_h.secondaryNext ? true : false;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -41,10 +41,10 @@ final class tg {
         return rg.a(param0, param2, 13, param3);
     }
 
-    final tf e(int param0) {
-        tf var2 = this.field_c;
+    final DualLinkNode e(int param0) {
+        DualLinkNode var2 = this.field_c;
         if (this.field_h != var2) {
-          this.field_c = var2.field_l;
+          this.field_c = var2.secondaryNext;
           int var3 = -86 % ((65 - param0) / 55);
           return var2;
         }
@@ -52,21 +52,21 @@ final class tg {
         return null;
     }
 
-    final tf a(byte param0) {
-        tf var2 = null;
-        tf var2Lifetime1;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 < 115) {
           this.a(-116);
-          var2 = this.field_h.field_l;
+          var2 = this.field_h.secondaryNext;
           if (var2 != this.field_h) {
-            var2.a((byte) 88);
+            var2.unlinkSecondary((byte) 88);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_h.field_l;
+        var2Lifetime1 = this.field_h.secondaryNext;
         if (var2Lifetime1 != this.field_h) {
-          var2Lifetime1.a((byte) 88);
+          var2Lifetime1.unlinkSecondary((byte) 88);
           return var2Lifetime1;
         }
         return null;
@@ -75,10 +75,10 @@ final class tg {
     final int b(byte param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         int var2 = 0;
-        tf var3 = this.field_h.field_l;
+        DualLinkNode var3 = this.field_h.secondaryNext;
         while (this.field_h != var3) {
           var2++;
-          var3 = var3.field_l;
+          var3 = var3.secondaryNext;
         }
         if (param0 < -64) {
           return var2;
@@ -88,13 +88,13 @@ final class tg {
     }
 
     final void a(int param0) {
-        tf var2;
+        DualLinkNode var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         while (true) {
-          var2 = this.field_h.field_l;
+          var2 = this.field_h.secondaryNext;
           if (var2 != this.field_h) {
-            var2.a((byte) 88);
+            var2.unlinkSecondary((byte) 88);
             continue;
           }
           break;
@@ -119,23 +119,23 @@ final class tg {
         field_g = null;
     }
 
-    final tf b(int param0) {
+    final DualLinkNode b(int param0) {
         if (param0 < 23) {
-          return (tf) null;
+          return (DualLinkNode) null;
         }
-        tf var2 = this.field_h.field_l;
+        DualLinkNode var2 = this.field_h.secondaryNext;
         if (this.field_h == var2) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2.field_l;
+        this.field_c = var2.secondaryNext;
         return var2;
     }
 
     public tg() {
-        this.field_h = new tf();
-        this.field_h.field_i = this.field_h;
-        this.field_h.field_l = this.field_h;
+        this.field_h = new DualLinkNode();
+        this.field_h.secondaryPrevious = this.field_h;
+        this.field_h.secondaryNext = this.field_h;
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {

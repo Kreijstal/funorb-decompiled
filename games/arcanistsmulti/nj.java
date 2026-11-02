@@ -12,7 +12,7 @@ final class nj {
     static String field_b;
     static String field_h;
     static nk field_e;
-    static ll[] field_k;
+    static IndexedSprite[] field_k;
     static int[] field_a;
     static int[] field_n;
     static dn field_m;

@@ -7,7 +7,7 @@ final class gf extends ob implements vb {
     static String field_jb;
     static String field_V;
 
-    final static void a(ll[] param0, boolean param1, byte param2, eg param3, byte[] param4, String[][] param5, byte[] param6, eg param7, int param8, eg param9, int[] param10, int param11, int param12, qb[][] param13, qb[][] param14, String[] param15, String[] param16, int[] param17, String[][] param18) {
+    final static void a(IndexedSprite[] param0, boolean param1, byte param2, ResourceArchive param3, byte[] param4, String[][] param5, byte[] param6, ResourceArchive param7, int param8, ResourceArchive param9, int[] param10, int param11, int param12, Sprite[][] param13, Sprite[][] param14, String[] param15, String[] param16, int[] param17, String[][] param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -386,7 +386,7 @@ final class gf extends ob implements vb {
         }
     }
 
-    final static void a(byte param0, eg param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         kc var6 = null;
         kc var7 = null;
         kc var3 = null;
@@ -395,26 +395,26 @@ final class gf extends ob implements vb {
           nl.field_Gb = new hb(0L, oh.field_r, ln.field_T, vk.field_z);
           dd.field_c = new hb(0L, oh.field_r, dm.field_I, wl.field_M);
           ec.field_d = new kc(0L, (kc) null);
-          lj.field_j = new kc(0L, pg.field_c);
+          lj.field_j = new kc(0L, IntrusiveNode.field_c);
           lj.field_j.field_X = 1;
-          p.field_d = new kc(0L, vf.field_u, hb.field_Bb);
+          ClientException.field_d = new kc(0L, vf.field_u, hb.field_Bb);
           nk.field_n = new kc(0L, vf.field_i, hc.field_d);
           cc.field_a = new kc(0L, nj.field_d);
           ec.field_d.a(lj.field_j, 106);
-          ec.field_d.a(p.field_d, param0 + 14);
+          ec.field_d.a(ClientException.field_d, param0 + 14);
           ec.field_d.a(nk.field_n, 8);
           ec.field_d.a(nl.field_Gb, param0 - 61);
           ec.field_d.a(cc.field_a, 85);
           if (param0 != 72) {
-            eg var4 = (eg) null;
-            gf.a((byte) 119, (eg) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            gf.a((byte) 119, (ResourceArchive) null);
           }
-          nl.field_Gb.field_Db.field_Hb.a(pg.field_c, (byte) 127);
+          nl.field_Gb.field_Db.field_Hb.a(IntrusiveNode.field_c, (byte) 127);
           nl.field_Gb.field_Db.field_Hb.field_gb = 1;
           var6 = nl.field_Gb.field_Db.field_Hb;
           var7 = var6;
           var7.field_X = 1;
-          dd.field_c.field_Db.field_Hb.a(pg.field_c, (byte) 114);
+          dd.field_c.field_Db.field_Hb.a(IntrusiveNode.field_c, (byte) 114);
           var3 = dd.field_c.field_Db.field_Hb;
           dd.field_c.field_Db.field_Hb.field_gb = 1;
           var3.field_X = 1;
@@ -483,7 +483,7 @@ final class gf extends ob implements vb {
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
-        eg var7 = null;
+        ResourceArchive var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -491,7 +491,7 @@ final class gf extends ob implements vb {
         RuntimeException var6 = null;
         try {
           if (this.field_lb == param4) {
-            vn.a((byte) 4);
+            IntrusiveDeque.a((byte) 4);
             this.g(48);
           } else {
             if (this.field_kb == param4) {
@@ -499,8 +499,8 @@ final class gf extends ob implements vb {
             }
           }
           if (!param0) {
-            var7 = (eg) null;
-            gf.a((byte) -109, (eg) null);
+            var7 = (ResourceArchive) null;
+            gf.a((byte) -109, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

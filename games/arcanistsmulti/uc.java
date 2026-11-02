@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uc {
-    static mo field_c;
+    static IntrusiveNodeHashTable field_c;
     static int field_b;
     static kc field_d;
     static int field_a;
@@ -13,11 +13,11 @@ final class uc {
     }
 
     final static void a(int param0, byte param1) {
-        ab var2 = he.field_e;
-        var2.b((byte) -81, param0);
-        var2.f(1, (byte) -101);
+        CipherPacketBuffer var2 = he.field_e;
+        var2.writeOpcode((byte) -81, param0);
+        var2.writeByte(1, (byte) -101);
         if (param1 == -96) {
-          var2.f(3, (byte) -48);
+          var2.writeByte(3, (byte) -48);
           return;
         }
     }

@@ -20,7 +20,7 @@ final class cg extends kc {
     String field_Tb;
     static String field_Rb;
     int field_Sb;
-    static qb field_Ib;
+    static Sprite field_Ib;
     int field_Pb;
     boolean field_Db;
     String field_Qb;
@@ -259,11 +259,11 @@ final class cg extends kc {
         }
     }
 
-    final static qb a(String param0, byte param1, eg param2, String param3) {
+    final static Sprite a(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qb stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -311,7 +311,7 @@ final class cg extends kc {
           String var3 = (String) null;
           this.a((String) null, (String) null, 2);
         }
-        return !this.d((byte) -17) ? true : false;
+        return !this.isSecondaryLinked((byte) -17) ? true : false;
     }
 
     static {

@@ -27,11 +27,11 @@ final class gg {
         field_f = null;
     }
 
-    final static qb[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        qb[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -42,7 +42,7 @@ final class gg {
         int[] var21;
         byte[] var22;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
-        var1 = new qb[h.field_J];
+        var1 = new Sprite[h.field_J];
         for (var2 = param0; var2 < h.field_J; var2++) {
           var3 = ho.field_i[var2] * jg.field_p[var2];
           var20 = ln.field_I[var2];
@@ -52,7 +52,7 @@ final class gg {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = ph.field_c[dg.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new qb(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var21);
+            var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var21);
           } else {
             var22 = vi.field_O[var2];
             var16 = new int[var3];
@@ -61,7 +61,7 @@ final class gg {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = fj.b(ph.field_c[dg.a(255, (int) var20[var7])], dg.a(-16777216, var22[var7] << 24));
             }
-            var1[var2] = (qb) ((Object) new od(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
+            var1[var2] = (Sprite) ((Object) new od(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
           }
         }
         dk.a(-18229);

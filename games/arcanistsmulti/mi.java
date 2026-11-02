@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends tf {
+final class mi extends DualLinkNode {
     int field_v;
     int field_F;
     static kc field_A;
@@ -19,8 +19,8 @@ final class mi extends tf {
     boolean field_w;
     private jd field_C;
     int field_y;
-    private qb field_p;
-    static qb field_E;
+    private Sprite field_p;
+    static Sprite field_E;
     static String field_s;
     int field_u;
     int field_G;
@@ -226,7 +226,7 @@ final class mi extends tf {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ll var12_ref_ll = null;
+        IndexedSprite var12_ref_ll = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -239,21 +239,21 @@ final class mi extends tf {
           if (param0 != 6016) {
             return;
           }
-          L1: {
+          regionExit1: {
             var5 = null;
             var6 = this.field_I;
             if (var6 == 84 &&
               var19 == 0) {
-              break L1;
+              break regionExit1;
             }
             if (var6 == 81 &&
               var19 == 0) {
-              break L1;
+              break regionExit1;
             }
             if (var6 != 75) {
               if (var6 == 73 &&
                 var19 == 0) {
-                break L1;
+                break regionExit1;
               }
               if (var6 != 97 &&
                 113 != var6 &&
@@ -261,7 +261,7 @@ final class mi extends tf {
                 var6 != 144) {
                 if (var6 == 153 &&
                   var19 == 0) {
-                  break L1;
+                  break regionExit1;
                 }
                 if (var6 == 133 &&
                   var19 == 0) {
@@ -340,77 +340,77 @@ final class mi extends tf {
                 }
                 if (var6 != 45) {
                   if (28 != var6) {
-                    L19: {
+                    regionExit2: {
                       if (var6 != 49) {
                         if (23 == var6 &&
                           var19 == 0) {
-                          break L19;
+                          break regionExit2;
                         }
                         if (var6 != 24) {
                           if (var6 == 82 &&
                             var19 == 0) {
-                            break L19;
+                            break regionExit2;
                           }
                           if (21 == var6 &&
                             var19 == 0) {
-                            break L19;
+                            break regionExit2;
                           }
                           if (42 == var6 &&
                             var19 == 0) {
-                            break L19;
+                            break regionExit2;
                           }
                           if (var6 == 43 &&
                             var19 == 0) {
-                            break L19;
+                            break regionExit2;
                           }
                           if (var6 != 40 &&
                             var6 != 44) {
                             if (var6 == 96 &&
                               var19 == 0) {
-                              break L19;
+                              break regionExit2;
                             }
                             if (10 != var6) {
                               if (17 == var6 &&
                                 var19 == 0) {
-                                break L19;
+                                break regionExit2;
                               }
                               if (var6 == 14 &&
                                 var19 == 0) {
-                                break L19;
+                                break regionExit2;
                               }
                               if (var6 == 11 &&
                                 var19 == 0) {
-                                break L19;
+                                break regionExit2;
                               }
                               if (var6 == 18 &&
                                 var19 == 0) {
-                                break L19;
+                                break regionExit2;
                               }
                               if (var6 == 0 &&
                                 var19 == 0) {
-                                break L19;
+                                break regionExit2;
                               }
                               if (var6 == 91 &&
                                 var19 == 0) {
-                                break L19;
+                                break regionExit2;
                               }
                               if (var6 != 92) {
                                 if (var6 == 52 &&
                                   var19 == 0) {
-                                  break L19;
+                                  break regionExit2;
                                 }
                                 if (var6 == 50 &&
                                   var19 == 0) {
-                                  break L19;
+                                  break regionExit2;
                                 }
                                 if (var6 != 54) {
                                   if (var6 == 115 &&
                                     var19 == 0) {
-                                    break L19;
+                                    break regionExit2;
                                   }
                                   if (var6 == 140 &&
                                     var19 == 0) {
-                                    break L19;
+                                    break regionExit2;
                                   }
                                   if (var6 != 120 &&
                                     124 != var6 &&
@@ -418,16 +418,16 @@ final class mi extends tf {
                                     156 != var6) {
                                     if (158 == var6 &&
                                       var19 == 0) {
-                                      break L19;
+                                      break regionExit2;
                                     }
                                     if (var6 == 161 &&
                                       var19 == 0) {
-                                      break L19;
+                                      break regionExit2;
                                     }
                                     if (var6 != 162) {
                                       if (var6 == 164 &&
                                         var19 == 0) {
-                                        break L19;
+                                        break regionExit2;
                                       }
                                       if (var6 == 3) {
                                         this.field_x = this.field_x + 8;
@@ -581,7 +581,7 @@ final class mi extends tf {
                                               var11 = this.field_o;
                                               var12 = this.field_z;
                                               var13 = 0;
-                                              L65: while (true) {
+                                              scanLoop3: while (true) {
                                                 this.field_z = this.field_z + (this.field_F + 4);
                                                 this.field_o = this.field_o + this.field_u;
                                                 jo.field_b = false;
@@ -678,7 +678,7 @@ final class mi extends tf {
                                                   }
                                                   if (var9 == 0 &&
                                                     var13 < 5) {
-                                                    continue L65;
+                                                    continue scanLoop3;
                                                   }
                                                   stackIn_1293_0 = -6;
                                                   stackIn_1293_1 = ~var13;
@@ -734,7 +734,7 @@ final class mi extends tf {
                                               return;
                                             }
                                             if (var19 != 0) {
-                                              break L1;
+                                              break regionExit1;
                                             }
                                           }
                                           var6 = 1;
@@ -940,8 +940,8 @@ final class mi extends tf {
                                               }
                                             }
                                           }
-                                          L134: {
-                                            L135: {
+                                          regionExit4: {
+                                            regionExit5: {
                                               if (var6 != 0) {
                                                 var7 = 0;
                                                 if (null != this.field_t &&
@@ -1022,16 +1022,16 @@ final class mi extends tf {
                                                 var9 = this.field_o;
                                                 var10 = this.field_z;
                                                 var11 = 0;
-                                                L149: while (true) {
+                                                scanLoop6: while (true) {
                                                   boolean decompiledFrameCompleted25 = true;
                                                   boolean decompiledFrameCompleted12 = true;
-                                                  L151: {
+                                                  regionExit7: {
                                                     boolean decompiledFrameCompleted8 = true;
                                                     boolean decompiledFrameCompleted24 = true;
                                                     boolean decompiledFrameCompleted22 = true;
                                                     boolean decompiledFrameCompleted11 = true;
                                                     boolean decompiledFrameCompleted9 = true;
-                                                    L153: {
+                                                    regionExit8: {
                                                       boolean decompiledFrameCompleted23 = true;
                                                       boolean decompiledFrameCompleted10 = true;
                                                       boolean decompiledFrameCompleted28 = true;
@@ -1065,7 +1065,7 @@ final class mi extends tf {
                                                             continue;
                                                           }
                                                           this.e((byte) -123);
-                                                          break L151;
+                                                          break regionExit7;
                                                         }
                                                       }
                                                       if (this.field_I == 46) {
@@ -1337,7 +1337,7 @@ final class mi extends tf {
                                                           }
                                                           if (var8 == 0 &&
                                                             5 > var11) {
-                                                            continue L149;
+                                                            continue scanLoop6;
                                                           }
                                                           this.e((byte) -123);
                                                         } while (var19 != 0);
@@ -1355,7 +1355,7 @@ final class mi extends tf {
                                                           (decompiledFrameCompleted24) &&
                                                           (decompiledFrameCompleted23) &&
                                                           (decompiledFrameCompleted22)) {
-                                                          break L151;
+                                                          break regionExit7;
                                                         }
                                                       }
                                                       if ((decompiledFrameCompleted35) &&
@@ -1631,7 +1631,7 @@ final class mi extends tf {
                                                           }
                                                           if (var8 == 0 &&
                                                             5 > var11) {
-                                                            continue L149;
+                                                            continue scanLoop6;
                                                           }
                                                           this.e((byte) -123);
                                                           if (var19 == 0) {
@@ -1677,7 +1677,7 @@ final class mi extends tf {
                                                         (decompiledFrameCompleted8)) {
                                                         this.a(2, (byte) 37, 0);
                                                         this.a(5, 20, 32, 8);
-                                                        break L153;
+                                                        break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted33) &&
                                                         (decompiledFrameCompleted32) &&
@@ -1707,7 +1707,7 @@ final class mi extends tf {
                                                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
                                                         this.field_q.b(52, (mi) (var5));
                                                         this.a(5, 20, 32, 8);
-                                                        break L153;
+                                                        break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted32) &&
                                                         (decompiledFrameCompleted31) &&
@@ -1733,7 +1733,7 @@ final class mi extends tf {
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
                                                         this.a(10, 32, 32, param0 - 6008);
-                                                        break L153;
+                                                        break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted31) &&
                                                         (decompiledFrameCompleted30) &&
@@ -1758,7 +1758,7 @@ final class mi extends tf {
                                                         (decompiledFrameCompleted8)) {
                                                         this.a(50, 128, 128, 8);
                                                         this.field_q.a(-this.field_r + this.field_G, -120, this.field_v - this.field_r, this.field_p);
-                                                        break L153;
+                                                        break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted29) &&
                                                         (decompiledFrameCompleted28) &&
@@ -1781,7 +1781,7 @@ final class mi extends tf {
                                                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 132, this.field_G, this.field_q);
                                                         this.field_q.b(param0 ^ 6068, (mi) (var5));
                                                         this.a(3, 20, 32, param0 ^ 6024);
-                                                        break L153;
+                                                        break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted28) &&
                                                         (decompiledFrameCompleted27) &&
@@ -1802,7 +1802,7 @@ final class mi extends tf {
                                                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 95, this.field_G, this.field_q);
                                                         this.field_q.b(param0 - 5964, (mi) (var5));
                                                         this.a(5, 20, 32, 8);
-                                                        break L153;
+                                                        break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted28) &&
                                                         (decompiledFrameCompleted26) &&
@@ -1935,9 +1935,9 @@ final class mi extends tf {
                                                       this.field_u = this.field_u >> 1;
                                                     }
                                                     if (var19 == 0) {
-                                                      break L134;
+                                                      break regionExit4;
                                                     }
-                                                    break L135;
+                                                    break regionExit5;
                                                   }
                                                   break;
                                                 }
@@ -1986,14 +1986,14 @@ final class mi extends tf {
                                                   if (!this.field_q.b(1 + this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
                                                     this.field_y = 0;
                                                     if (var19 == 0) {
-                                                      break L134;
+                                                      break regionExit4;
                                                     }
                                                     decompiledFrameRemainder15 = false;
                                                   }
                                                   else {
                                                     if (jo.field_b) {
                                                       if (this.field_I != 16) {
-                                                        break L134;
+                                                        break regionExit4;
                                                       }
                                                       this.a(2, (byte) 37, 0);
                                                       this.a(5, 20, 32, 8);
@@ -2001,11 +2001,11 @@ final class mi extends tf {
                                                       return;
                                                     }
                                                     if (16 != this.field_I) {
-                                                      break L134;
+                                                      break regionExit4;
                                                     }
                                                     if ((-32 + this.field_q.field_H) >= this.field_G &&
                                                       !this.field_q.b(this.field_G - this.field_r + 1, 2, -this.field_r + this.field_v, gj.field_f[0].b())) {
-                                                      break L134;
+                                                      break regionExit4;
                                                     }
                                                     this.f(0);
                                                     return;
@@ -3556,7 +3556,7 @@ final class mi extends tf {
           }
           var3_int = Math.abs(this.field_F) + Math.abs(this.field_u);
           if (param1 != 19227) {
-            field_E = (qb) null;
+            field_E = (Sprite) null;
           }
           var4 = var3_int / 10 + 100;
           var5 = 16;
@@ -3907,7 +3907,7 @@ final class mi extends tf {
         int stackIn_748_0 = 0;
         int stackIn_748_1 = 0;
         int stackIn_823_0 = 0;
-        ll[] stackIn_950_1 = null;
+        IndexedSprite[] stackIn_950_1 = null;
         int stackIn_951_2 = 0;
         Object stackIn_953_0 = null;
         nf stackIn_957_0 = null;
@@ -4012,10 +4012,10 @@ final class mi extends tf {
           if (this.field_p == null) {
             return;
           }
-          if (this.d((byte) -17)) {
+          if (this.isSecondaryLinked((byte) -17)) {
             return;
           }
-          L1: {
+          regionExit1: {
             var6 = 109 / ((19 - param1) / 55);
             var5 = null;
             var9 = this.field_I;
@@ -4235,16 +4235,16 @@ final class mi extends tf {
                 this.f(0);
                 return;
               }
-              L43: {
+              regionExit2: {
                 if (157 != var9 &&
                   168 != var9) {
                   if (var9 == 55) {
-                    break L43;
+                    break regionExit2;
                   }
                   if (var9 == 111) {
-                    break L43;
+                    break regionExit2;
                   }
-                  L45: {
+                  regionExit3: {
                     if (var9 == 56) {
                       if (!this.field_t.c(-1) &&
                         (128 + this.field_q.field_H) > this.field_t.field_db) {
@@ -4278,7 +4278,7 @@ final class mi extends tf {
                           if (var19 == 0) {
                             return;
                           }
-                          break L45;
+                          break regionExit3;
                         }
                         this.f(0);
                         return;
@@ -4307,64 +4307,64 @@ final class mi extends tf {
                           this.f(0);
                           return;
                         }
-                        L53: {
+                        regionExit4: {
                           if (var9 != 85 &&
                             var9 != 86 &&
                             var9 != 103) {
                             if (var9 == 104 &&
                               var19 == 0) {
-                              break L53;
+                              break regionExit4;
                             }
                             if (var9 != 163) {
                               if (var9 == 105 &&
                                 var19 == 0) {
-                                break L53;
+                                break regionExit4;
                               }
                               if (var9 == 87 &&
                                 var19 == 0) {
-                                break L53;
+                                break regionExit4;
                               }
                               if (var9 != 88 &&
                                 var9 != 90) {
                                 if (89 == var9 &&
                                   var19 == 0) {
-                                  break L53;
+                                  break regionExit4;
                                 }
                                 if (var9 == 100 &&
                                   var19 == 0) {
-                                  break L53;
+                                  break regionExit4;
                                 }
                                 if (var9 == 166 &&
                                   var19 == 0) {
-                                  break L53;
+                                  break regionExit4;
                                 }
                                 if (var9 != 99) {
                                   if (var9 == 94 &&
                                     var19 == 0) {
-                                    break L53;
+                                    break regionExit4;
                                   }
                                   if (95 == var9 &&
                                     var19 == 0) {
-                                    break L53;
+                                    break regionExit4;
                                   }
                                   if (101 != var9) {
                                     if (128 == var9 &&
                                       var19 == 0) {
-                                      break L53;
+                                      break regionExit4;
                                     }
                                     if (var9 != 154) {
                                       if (var9 == 130 &&
                                         var19 == 0) {
-                                        break L53;
+                                        break regionExit4;
                                       }
                                       if (var9 == 131 &&
                                         var19 == 0) {
-                                        break L53;
+                                        break regionExit4;
                                       }
                                       if (var9 != 132) {
                                         if (var9 == 129 &&
                                           var19 == 0) {
-                                          break L53;
+                                          break regionExit4;
                                         }
                                         if (137 == var9 &&
                                           var19 == 0) {
@@ -4518,7 +4518,7 @@ final class mi extends tf {
                                             this.field_o = var10Lifetime1;
                                             this.field_G = this.field_z >> 4;
                                             this.field_v = this.field_o >> 4;
-                                            L90: {
+                                            regionExit5: {
                                               if (var12Lifetime1 <= var9 &&
                                                 var12Lifetime1 > 5) {
                                                 var14Lifetime1 = 0;
@@ -4540,7 +4540,7 @@ final class mi extends tf {
                                                       stackIn_951_2 = 27;
                                                     }
                                                   }
-                                                  ((mi) (stackIn_953_0)).field_p = ((ll) (Object) stackIn_950_1[stackIn_951_2]).b();
+                                                  ((mi) (stackIn_953_0)).field_p = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).b();
                                                   ((mi) (var5)).field_y = var18;
                                                   ((mi) (var5)).field_x = 2 * var14Lifetime1;
                                                   this.field_q.b(52, (mi) (var5));
@@ -4549,7 +4549,7 @@ final class mi extends tf {
                                                 ti.field_N = -1;
                                                 stackIn_953_0Lifetime1 = this;
                                                 this.field_y = 1;
-                                                break L90;
+                                                break regionExit5;
                                               }
                                               stackIn_957_0 = this.field_q;
                                               stackIn_957_1 = 87;
@@ -4972,13 +4972,13 @@ final class mi extends tf {
                                                   if (this.field_y == -1) {
                                                     this.field_y = 0;
                                                   }
-                                                  L167: while (true) {
+                                                  scanLoop6: while (true) {
                                                     if (this.field_q.field_H > this.field_G) {
                                                       stackOut_1433_0 = this.field_q.b(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p);
                                                       stackIn_1444_0 = stackOut_1433_0 ? 1 : 0;
                                                       stackIn_1434_0 = stackOut_1433_0;
                                                       if (var19 != 0) {
-                                                        break L167;
+                                                        break scanLoop6;
                                                       }
                                                       if (!stackIn_1434_0) {
                                                         this.field_z = this.field_z + 16;
@@ -5012,7 +5012,7 @@ final class mi extends tf {
                                                     var9 = -this.field_q.field_H;
                                                     while (true) {
                                                       if (var9 < this.field_G) {
-                                                        var10Lifetime1 = this.field_v + (int)(Math.sin((double)(this.field_G - var9) * 3.14 / (double)(this.field_G + this.field_q.field_H)) * Math.cos(-((double)jb.field_v * 0.1) + (double)(-var9)) * 64.0);
+                                                        var10Lifetime1 = this.field_v + (int)(Math.sin((double)(this.field_G - var9) * 3.14 / (double)(this.field_G + this.field_q.field_H)) * Math.cos(-((double)SpriteState.field_v * 0.1) + (double)(-var9)) * 64.0);
                                                         var5 = this.a(var10Lifetime1, (ml) null, (byte) 81, 129, var9 + (int)(32.0 * Math.random() - 16.0), this.field_q);
                                                         this.field_q.b(52, (mi) (var5));
                                                         ((mi) (var5)).field_u = (int)(Math.random() * 5.0 - 2.0);
@@ -5057,7 +5057,7 @@ final class mi extends tf {
                                                     stackOut_1493_0 = var9_ref_miLifetime1;
                                                     stackIn_1544_0 = stackOut_1493_0;
                                                     stackIn_1494_0 = stackOut_1493_0;
-                                                    L184: {
+                                                    regionExit7: {
                                                       if (((mi) (Object) stackIn_1494_0).h(-139) &&
                                                         126 != var9_ref_miLifetime1.field_I &&
                                                         var9_ref_miLifetime1.field_I != 30 &&
@@ -5077,7 +5077,7 @@ final class mi extends tf {
                                                             } else {
                                                               var9_ref_miLifetime1.field_u = var9_ref_miLifetime1.field_u + 4;
                                                             }
-                                                            break L184;
+                                                            break regionExit7;
                                                           }
                                                           if (var9_ref_miLifetime1.field_u <= 0) {
                                                             var9_ref_miLifetime1.field_u = var9_ref_miLifetime1.field_u - 4;
@@ -5123,10 +5123,10 @@ final class mi extends tf {
                                                   return;
                                                 }
                                                 if (var9 != 15) {
-                                                  L208: {
-                                                    L209: {
-                                                      L210: {
-                                                        L211: {
+                                                  regionExit8: {
+                                                    regionExit9: {
+                                                      regionExit10: {
+                                                        regionExit11: {
                                                           if (148 == var9) {
                                                             if (!this.field_t.c(-1) &&
                                                               128 + this.field_q.field_H > this.field_t.field_db) {
@@ -5141,7 +5141,7 @@ final class mi extends tf {
                                                               if (var19 == 0) {
                                                                 return;
                                                               }
-                                                              break L211;
+                                                              break regionExit11;
                                                             }
                                                             if (this.field_q.d(false) == this.field_t.field_T) {
                                                             }
@@ -5150,13 +5150,13 @@ final class mi extends tf {
                                                           }
                                                           if (121 != var9) {
                                                             if (106 == var9) {
-                                                              break L210;
+                                                              break regionExit10;
                                                             }
                                                             if (var9 == 107) {
-                                                              break L209;
+                                                              break regionExit9;
                                                             }
                                                             if (68 == var9) {
-                                                              break L208;
+                                                              break regionExit8;
                                                             }
                                                             if ((47 != var9 ||
                                                               var19 != 0) &&
@@ -5559,7 +5559,7 @@ final class mi extends tf {
                                                                     if (var19 == 0) {
                                                                       return;
                                                                     }
-                                                                    break L1;
+                                                                    break regionExit1;
                                                                   }
                                                                   if (this.field_C == null) {
                                                                     this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
@@ -5805,7 +5805,7 @@ final class mi extends tf {
                                                                   var10Lifetime1 = var10Lifetime1 - var9;
                                                                 }
                                                                 if (null == pn.field_e) {
-                                                                  pn.field_e = new qb(512, 128);
+                                                                  pn.field_e = new Sprite(512, 128);
                                                                 }
                                                                 pn.field_e.a();
                                                                 de.d(0, 0, 512, 128, 0);
@@ -6248,7 +6248,7 @@ final class mi extends tf {
                                               this.f(0);
                                               return;
                                             }
-                                            L405: {
+                                            regionExit12: {
                                               this.field_t.field_gb = this;
                                               this.field_y = this.field_y + 1;
                                               if (0 == this.field_y % 2) {
@@ -6305,13 +6305,13 @@ final class mi extends tf {
                                                     this.a(1, 32, 28, 8);
                                                     this.field_G = this.field_G + 2;
                                                     if (var19 == 0) {
-                                                      break L405;
+                                                      break regionExit12;
                                                     }
                                                   }
                                                   if ((this.field_I == 98)) {
                                                     this.a(10, 5, 36, 8);
                                                   }
-                                                  break L405;
+                                                  break regionExit12;
                                                 }
                                                 this.f(0);
                                                 return;
@@ -6690,7 +6690,7 @@ final class mi extends tf {
                   if (var19 == 0) {
                     return;
                   }
-                  break L43;
+                  break regionExit2;
                 }
                 var10_ref_oc = new oc(this.field_q.field_r);
                 var11_ref_miLifetime1 = (mi) (var10_ref_oc.b(-123));
@@ -6701,7 +6701,7 @@ final class mi extends tf {
                     return;
                   }
                   if (((var9 >> 4) * var9) > (var13Lifetime1Lifetime2 * (var13Lifetime1Lifetime2 >> 4) + (var12Lifetime1Lifetime2 >> 4) * var12Lifetime1Lifetime2)) {
-                    this.field_q.field_kb.b(var11_ref_miLifetime1, -1);
+                    this.field_q.field_kb.addLast(var11_ref_miLifetime1, -1);
                   }
                   var11_ref_miLifetime1 = (mi) (var10_ref_oc.d(-18502));
                 }
@@ -6812,14 +6812,14 @@ final class mi extends tf {
         try {
           var2_int = 69 / ((param0 + 50) / 32);
           if (ra.field_a == null) {
-            ra.field_a = new qb(15, 15);
+            ra.field_a = new Sprite(15, 15);
             ra.field_a.a();
             de.i(7, 7, 7, 16777215);
           }
           this.field_p = ra.field_a;
           if (46 == this.field_I) {
             if (null == sb.field_g) {
-              sb.field_g = new qb(16, 16);
+              sb.field_g = new Sprite(16, 16);
               sb.field_g.a();
               de.d(6, 6, 7, 7, 16777214);
             }
@@ -7865,7 +7865,7 @@ final class mi extends tf {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          L71: {
+          regionExit1: {
             if ((this.field_I == 54 ||
               55 == this.field_I ||
               this.field_I == 53 ||
@@ -7937,7 +7937,7 @@ final class mi extends tf {
                         var7_ref.field_jb == 7) {
                       }
                       var7_ref = (ml) (var6Lifetime1.d(-18502));
-                      break L71;
+                      break regionExit1;
                     }
                   }
                 }
@@ -8147,10 +8147,10 @@ final class mi extends tf {
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        qb var2 = null;
+        Sprite var2 = null;
         RuntimeException var2_ref = null;
-        qb var3 = null;
-        qb var4 = null;
+        Sprite var3 = null;
+        Sprite var4 = null;
         oc var5 = null;
         ml var6_ref_ml = null;
         int var6 = 0;
@@ -8186,14 +8186,14 @@ final class mi extends tf {
           }
           var6 = stackIn_14_0;
           var7 = 36 % ((-26 - param0) / 51);
-          L5: while (true) {
+          scanLoop1: while (true) {
             stackIn_16_0 = 0;
             if (stackIn_16_0 <= var6) {
               if (var12 != 0) {
                 return;
               }
               var8 = 0;
-              L9: while (true) {
+              scanLoop2: while (true) {
                 stackIn_20_0 = ~var8;
                 stackIn_20_1 = -65;
                 if (stackIn_20_0 > stackIn_20_1) {
@@ -8220,12 +8220,12 @@ final class mi extends tf {
                     var9 += 64;
                   }
                   var8 += 8;
-                  continue L9;
+                  continue scanLoop2;
                 }
                 break;
               }
               var6--;
-              continue L5;
+              continue scanLoop1;
             }
             break;
           }
@@ -8238,13 +8238,13 @@ final class mi extends tf {
     }
 
     final void a(int param0, int param1, int param2) {
-        qb stackIn_473_0 = null;
+        Sprite stackIn_473_0 = null;
         int stackIn_473_1 = 0;
         int stackIn_474_2 = 0;
-        qb stackIn_477_0 = null;
+        Sprite stackIn_477_0 = null;
         int stackIn_477_1 = 0;
         int stackIn_478_2 = 0;
-        ll[] stackIn_508_0 = null;
+        IndexedSprite[] stackIn_508_0 = null;
         int stackIn_512_1 = 0;
         int stackIn_593_0 = 0;
         int stackIn_593_1 = 0;
@@ -8283,48 +8283,48 @@ final class mi extends tf {
               return;
             }
           }
-          L3: {
-            L4: {
-              L5: {
-                L6: {
-                  L7: {
-                    L8: {
-                      L9: {
-                        L10: {
-                          L11: {
-                            L12: {
-                              L13: {
-                                L14: {
-                                  L15: {
-                                    L16: {
-                                      L17: {
-                                        L18: {
-                                          L19: {
-                                            L20: {
-                                              L21: {
-                                                L22: {
-                                                  L23: {
-                                                    L24: {
-                                                      L25: {
-                                                        L26: {
-                                                          L27: {
-                                                            L28: {
-                                                              L29: {
-                                                                L30: {
-                                                                  L31: {
-                                                                    L32: {
-                                                                      L33: {
-                                                                        L34: {
-                                                                          L35: {
-                                                                            L36: {
-                                                                              L37: {
-                                                                                L38: {
-                                                                                  L39: {
-                                                                                    L40: {
-                                                                                      L41: {
-                                                                                        L42: {
-                                                                                          L43: {
-                                                                                            L44: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
+                  regionExit5: {
+                    regionExit6: {
+                      regionExit7: {
+                        regionExit8: {
+                          regionExit9: {
+                            regionExit10: {
+                              regionExit11: {
+                                regionExit12: {
+                                  regionExit13: {
+                                    regionExit14: {
+                                      regionExit15: {
+                                        regionExit16: {
+                                          regionExit17: {
+                                            regionExit18: {
+                                              regionExit19: {
+                                                regionExit20: {
+                                                  regionExit21: {
+                                                    regionExit22: {
+                                                      regionExit23: {
+                                                        regionExit24: {
+                                                          regionExit25: {
+                                                            regionExit26: {
+                                                              regionExit27: {
+                                                                regionExit28: {
+                                                                  regionExit29: {
+                                                                    regionExit30: {
+                                                                      regionExit31: {
+                                                                        regionExit32: {
+                                                                          regionExit33: {
+                                                                            regionExit34: {
+                                                                              regionExit35: {
+                                                                                regionExit36: {
+                                                                                  regionExit37: {
+                                                                                    regionExit38: {
+                                                                                      regionExit39: {
+                                                                                        regionExit40: {
+                                                                                          regionExit41: {
+                                                                                            regionExit42: {
                                                                                               var4_int = -47 % ((param1 - 8) / 33);
                                                                                               var5 = this.field_I;
                                                                                               if (var5 == 167) {
@@ -8332,13 +8332,13 @@ final class mi extends tf {
                                                                                                 if ((this.field_x & 8) > 0) {
                                                                                                   var5++;
                                                                                                 }
-                                                                                                L47: {
+                                                                                                regionExit43: {
                                                                                                   var6_int = this.field_v - (-param2 + 20);
                                                                                                   var7 = param0 + this.field_G - 20;
                                                                                                   if (this.field_u > 0) {
                                                                                                     bb.field_g[var5].c(var6_int, var7);
                                                                                                     if (var16 == 0) {
-                                                                                                      break L47;
+                                                                                                      break regionExit43;
                                                                                                     }
                                                                                                   }
                                                                                                   bb.field_g[var5].e(var6_int, var7);
@@ -8380,7 +8380,7 @@ final class mi extends tf {
                                                                                                   } else {
                                                                                                     stackIn_474_2 = 0;
                                                                                                   }
-                                                                                                  ((qb) (Object) stackIn_473_0).f(stackIn_473_1 - (-stackIn_474_2 - (int)(10.0 * Math.cos(0.2 * (double)this.field_x))), var7 + (int)(5.0 * Math.sin((double)this.field_x * 0.2)));
+                                                                                                  ((Sprite) (Object) stackIn_473_0).f(stackIn_473_1 - (-stackIn_474_2 - (int)(10.0 * Math.cos(0.2 * (double)this.field_x))), var7 + (int)(5.0 * Math.sin((double)this.field_x * 0.2)));
                                                                                                   stackIn_477_0 = bb.field_g[var8].b();
                                                                                                   stackIn_477_1 = 20 + var6_int;
                                                                                                   if (this.field_u <= 0) {
@@ -8388,7 +8388,7 @@ final class mi extends tf {
                                                                                                   } else {
                                                                                                     stackIn_478_2 = 0;
                                                                                                   }
-                                                                                                  ((qb) (Object) stackIn_477_0).f(stackIn_477_1 - (-stackIn_478_2 + (int)(Math.cos((double)this.field_x * 0.2) * 10.0)), -(int)(Math.sin(0.2 * (double)this.field_x) * 5.0) + var7);
+                                                                                                  ((Sprite) (Object) stackIn_477_0).f(stackIn_477_1 - (-stackIn_478_2 + (int)(Math.cos((double)this.field_x * 0.2) * 10.0)), -(int)(Math.sin(0.2 * (double)this.field_x) * 5.0) + var7);
                                                                                                 }
                                                                                                 if (var16 == 0) {
                                                                                                   return;
@@ -8396,13 +8396,13 @@ final class mi extends tf {
                                                                                               } else {
                                                                                                 if (var5 != 136) {
                                                                                                   if (var5 == 123) {
-                                                                                                    break L44;
+                                                                                                    break regionExit42;
                                                                                                   }
                                                                                                   if (var5 == 143) {
-                                                                                                    break L43;
+                                                                                                    break regionExit41;
                                                                                                   }
                                                                                                   if (var5 == 119) {
-                                                                                                    break L42;
+                                                                                                    break regionExit40;
                                                                                                   }
                                                                                                   if (var5 == 139) {
                                                                                                     return;
@@ -8458,172 +8458,172 @@ final class mi extends tf {
                                                                                                     return;
                                                                                                   }
                                                                                                   if (151 == var5) {
-                                                                                                    break L41;
+                                                                                                    break regionExit39;
                                                                                                   }
                                                                                                   if ((var5 == 149) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L40;
+                                                                                                    break regionExit38;
                                                                                                   }
                                                                                                   if (var5 == 60) {
-                                                                                                    break L39;
+                                                                                                    break regionExit37;
                                                                                                   }
                                                                                                   if ((var5 == 155) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L38;
+                                                                                                    break regionExit36;
                                                                                                   }
                                                                                                   if (106 == var5) {
-                                                                                                    break L37;
+                                                                                                    break regionExit35;
                                                                                                   }
                                                                                                   if (var5 == 148) {
-                                                                                                    break L36;
+                                                                                                    break regionExit34;
                                                                                                   }
                                                                                                   if (var5 == 127) {
-                                                                                                    break L35;
+                                                                                                    break regionExit33;
                                                                                                   }
                                                                                                   if ((var5 == 121) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L34;
+                                                                                                    break regionExit32;
                                                                                                   }
                                                                                                   if (var5 == 120) {
-                                                                                                    break L33;
+                                                                                                    break regionExit31;
                                                                                                   }
                                                                                                   if (var5 == 107) {
-                                                                                                    break L32;
+                                                                                                    break regionExit30;
                                                                                                   }
                                                                                                   if ((var5 == 126) &&
                                                                                                     (var16 == 0)) {
                                                                                                     return;
                                                                                                   }
                                                                                                   if (var5 == 63) {
-                                                                                                    break L31;
+                                                                                                    break regionExit29;
                                                                                                   }
                                                                                                   if (64 == var5) {
-                                                                                                    break L30;
+                                                                                                    break regionExit28;
                                                                                                   }
                                                                                                   if ((61 == var5) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L29;
+                                                                                                    break regionExit27;
                                                                                                   }
                                                                                                   if (var5 == 109) {
-                                                                                                    break L28;
+                                                                                                    break regionExit26;
                                                                                                   }
                                                                                                   if ((var5 == 108) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L27;
+                                                                                                    break regionExit25;
                                                                                                   }
                                                                                                   if (var5 == 0) {
-                                                                                                    break L26;
+                                                                                                    break regionExit24;
                                                                                                   }
                                                                                                   if ((var5 == 147) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L25;
+                                                                                                    break regionExit23;
                                                                                                   }
                                                                                                   if (var5 == 2) {
-                                                                                                    break L24;
+                                                                                                    break regionExit22;
                                                                                                   }
                                                                                                   if (var5 == 77) {
-                                                                                                    break L23;
+                                                                                                    break regionExit21;
                                                                                                   }
                                                                                                   if ((var5 == 56) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L22;
+                                                                                                    break regionExit20;
                                                                                                   }
                                                                                                   if (var5 == 85) {
-                                                                                                    break L21;
+                                                                                                    break regionExit19;
                                                                                                   }
                                                                                                   if ((var5 == 86) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L20;
+                                                                                                    break regionExit18;
                                                                                                   }
                                                                                                   if ((163 == var5) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L19;
+                                                                                                    break regionExit17;
                                                                                                   }
                                                                                                   if ((var5 == 166) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L18;
+                                                                                                    break regionExit16;
                                                                                                   }
                                                                                                   if (var5 == 87) {
-                                                                                                    break L17;
+                                                                                                    break regionExit15;
                                                                                                   }
                                                                                                   if ((var5 == 88) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L16;
+                                                                                                    break regionExit14;
                                                                                                   }
                                                                                                   if (var5 == 68) {
-                                                                                                    break L15;
+                                                                                                    break regionExit13;
                                                                                                   }
                                                                                                   if ((var5 == 69) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L14;
+                                                                                                    break regionExit12;
                                                                                                   }
                                                                                                   if (70 == var5) {
-                                                                                                    break L13;
+                                                                                                    break regionExit11;
                                                                                                   }
                                                                                                   if (var5 == 15) {
-                                                                                                    break L12;
+                                                                                                    break regionExit10;
                                                                                                   }
                                                                                                   if (var5 == 89) {
-                                                                                                    break L11;
+                                                                                                    break regionExit9;
                                                                                                   }
                                                                                                   if (var5 == 103) {
-                                                                                                    break L10;
+                                                                                                    break regionExit8;
                                                                                                   }
                                                                                                   if ((104 == var5) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L9;
+                                                                                                    break regionExit7;
                                                                                                   }
                                                                                                   if ((90 == var5) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L8;
+                                                                                                    break regionExit6;
                                                                                                   }
                                                                                                   if ((var5 == 99) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L7;
+                                                                                                    break regionExit5;
                                                                                                   }
                                                                                                   if ((var5 == 101) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L6;
+                                                                                                    break regionExit4;
                                                                                                   }
                                                                                                   if ((100 == var5) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L5;
+                                                                                                    break regionExit3;
                                                                                                   }
                                                                                                   if (var5 == 132) {
-                                                                                                    break L4;
+                                                                                                    break regionExit2;
                                                                                                   }
                                                                                                   if (var5 == 135) {
-                                                                                                    break L3;
+                                                                                                    break regionExit1;
                                                                                                   }
                                                                                                   if ((152 == var5) &&
                                                                                                     (var16 == 0)) {
-                                                                                                    break L3;
+                                                                                                    break regionExit1;
                                                                                                   }
-                                                                                                  L88: {
-                                                                                                    L89: {
-                                                                                                      L90: {
-                                                                                                        L91: {
-                                                                                                          L92: {
-                                                                                                            L93: {
-                                                                                                              L94: {
-                                                                                                                L95: {
-                                                                                                                  L96: {
-                                                                                                                    L97: {
-                                                                                                                      L98: {
-                                                                                                                        L99: {
-                                                                                                                          L100: {
-                                                                                                                            L101: {
-                                                                                                                              L102: {
-                                                                                                                                L103: {
-                                                                                                                                  L104: {
-                                                                                                                                    L105: {
-                                                                                                                                      L106: {
-                                                                                                                                        L107: {
-                                                                                                                                          L108: {
-                                                                                                                                            L109: {
-                                                                                                                                              L110: {
-                                                                                                                                                L111: {
-                                                                                                                                                  L112: {
+                                                                                                  regionExit44: {
+                                                                                                    regionExit45: {
+                                                                                                      regionExit46: {
+                                                                                                        regionExit47: {
+                                                                                                          regionExit48: {
+                                                                                                            regionExit49: {
+                                                                                                              regionExit50: {
+                                                                                                                regionExit51: {
+                                                                                                                  regionExit52: {
+                                                                                                                    regionExit53: {
+                                                                                                                      regionExit54: {
+                                                                                                                        regionExit55: {
+                                                                                                                          regionExit56: {
+                                                                                                                            regionExit57: {
+                                                                                                                              regionExit58: {
+                                                                                                                                regionExit59: {
+                                                                                                                                  regionExit60: {
+                                                                                                                                    regionExit61: {
+                                                                                                                                      regionExit62: {
+                                                                                                                                        regionExit63: {
+                                                                                                                                          regionExit64: {
+                                                                                                                                            regionExit65: {
+                                                                                                                                              regionExit66: {
+                                                                                                                                                regionExit67: {
+                                                                                                                                                  regionExit68: {
                                                                                                                                                     if ((var5 == 128) &&
                                                                                                                                                       (var16 == 0)) {
                                                                                                                                                       if (si.field_p == null) {
@@ -8635,108 +8635,108 @@ final class mi extends tf {
                                                                                                                                                       if (var5 != 154) {
                                                                                                                                                         if ((var5 == 130) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L112;
+                                                                                                                                                          break regionExit68;
                                                                                                                                                         }
                                                                                                                                                         if (131 == var5) {
-                                                                                                                                                          break L111;
+                                                                                                                                                          break regionExit67;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 129) {
-                                                                                                                                                          break L110;
+                                                                                                                                                          break regionExit66;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 137) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L109;
+                                                                                                                                                          break regionExit65;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 114) {
-                                                                                                                                                          break L108;
+                                                                                                                                                          break regionExit64;
                                                                                                                                                         }
                                                                                                                                                         if ((94 == var5) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L107;
+                                                                                                                                                          break regionExit63;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 95) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L106;
+                                                                                                                                                          break regionExit62;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 30) {
-                                                                                                                                                          break L105;
+                                                                                                                                                          break regionExit61;
                                                                                                                                                         }
                                                                                                                                                         if (93 == var5) {
-                                                                                                                                                          break L105;
+                                                                                                                                                          break regionExit61;
                                                                                                                                                         }
                                                                                                                                                         if (112 == var5) {
-                                                                                                                                                          break L105;
+                                                                                                                                                          break regionExit61;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 31) {
-                                                                                                                                                          break L104;
+                                                                                                                                                          break regionExit60;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 47) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L103;
+                                                                                                                                                          break regionExit59;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 142) {
-                                                                                                                                                          break L102;
+                                                                                                                                                          break regionExit58;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 71) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L101;
+                                                                                                                                                          break regionExit57;
                                                                                                                                                         }
                                                                                                                                                         if (36 == var5) {
-                                                                                                                                                          break L100;
+                                                                                                                                                          break regionExit56;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 62) {
-                                                                                                                                                          break L99;
+                                                                                                                                                          break regionExit55;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 3) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L98;
+                                                                                                                                                          break regionExit54;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 102) {
-                                                                                                                                                          break L97;
+                                                                                                                                                          break regionExit53;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 91) {
-                                                                                                                                                          break L96;
+                                                                                                                                                          break regionExit52;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 20) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L95;
+                                                                                                                                                          break regionExit51;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 34) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L94;
+                                                                                                                                                          break regionExit50;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 124) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L93;
+                                                                                                                                                          break regionExit49;
                                                                                                                                                         }
                                                                                                                                                         if (var5 == 158) {
-                                                                                                                                                          break L92;
+                                                                                                                                                          break regionExit48;
                                                                                                                                                         }
                                                                                                                                                         if (161 == var5) {
-                                                                                                                                                          break L92;
+                                                                                                                                                          break regionExit48;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 162) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L92;
+                                                                                                                                                          break regionExit48;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 157) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L91;
+                                                                                                                                                          break regionExit47;
                                                                                                                                                         }
                                                                                                                                                         if ((168 == var5) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L91;
+                                                                                                                                                          break regionExit47;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 55) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L90;
+                                                                                                                                                          break regionExit46;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 111) &&
                                                                                                                                                           (var16 == 0)) {
-                                                                                                                                                          break L90;
+                                                                                                                                                          break regionExit46;
                                                                                                                                                         }
                                                                                                                                                         if (46 == var5) {
-                                                                                                                                                          break L89;
+                                                                                                                                                          break regionExit45;
                                                                                                                                                         }
                                                                                                                                                         if ((var5 == 78) &&
                                                                                                                                                           (var16 == 0)) {
@@ -8745,7 +8745,7 @@ final class mi extends tf {
                                                                                                                                                         if (var5 == 22) {
                                                                                                                                                           return;
                                                                                                                                                         }
-                                                                                                                                                        break L88;
+                                                                                                                                                        break regionExit44;
                                                                                                                                                       }
                                                                                                                                                     }
                                                                                                                                                     if (rf.field_j == null) {
@@ -8855,11 +8855,11 @@ final class mi extends tf {
                                                                                                                                     var7_ref_int__[-1 + var5] = -(this.field_F >> 4) + (param0 + this.field_G);
                                                                                                                                     var8 = (var5 - 1) / 2;
                                                                                                                                     while (true) {
-                                                                                                                                      L138: {
+                                                                                                                                      regionExit69: {
                                                                                                                                         if (var8 >= 1) {
                                                                                                                                           stackIn_950_0 = var8;
                                                                                                                                           if (var16 != 0) {
-                                                                                                                                            break L138;
+                                                                                                                                            break regionExit69;
                                                                                                                                           }
                                                                                                                                           var10 = stackIn_950_0;
                                                                                                                                           while (var10 < var5) {
@@ -9067,24 +9067,24 @@ final class mi extends tf {
                                                                                                           return;
                                                                                                         }
                                                                                                       }
-                                                                                                      L164: {
+                                                                                                      regionExit70: {
                                                                                                         if ((this.field_t != null) &&
                                                                                                           (6 == this.field_t.field_jb)) {
                                                                                                           if (this.field_y < 1) {
                                                                                                             wg.field_J[this.field_x >> 2].c(-64 + (this.field_v + param2), this.field_G - (-param0 + 64), 128, 128, 64);
                                                                                                             if (var16 == 0) {
-                                                                                                              break L164;
+                                                                                                              break regionExit70;
                                                                                                             }
                                                                                                           }
                                                                                                           wg.field_J[this.field_x >> 2].c(this.field_v - (-param2 + 64), this.field_G + (param0 - 64), 128, 128, 32);
                                                                                                           if (var16 == 0) {
-                                                                                                            break L164;
+                                                                                                            break regionExit70;
                                                                                                           }
                                                                                                         }
                                                                                                         if (this.field_y >= 1) {
                                                                                                           wg.field_J[this.field_x >> 2].c(-128 + (param2 + this.field_v), this.field_G + (param0 - 128), 256, 256, 32);
                                                                                                           if (var16 == 0) {
-                                                                                                            break L164;
+                                                                                                            break regionExit70;
                                                                                                           }
                                                                                                         }
                                                                                                         wg.field_J[this.field_x >> 2].c(this.field_v + param2 - 128, -128 + this.field_G + param0, 256, 256, 64);
@@ -9198,7 +9198,7 @@ final class mi extends tf {
                                                                                           } else {
                                                                                             stackIn_512_1 = 22;
                                                                                           }
-                                                                                          ((ll) (Object) stackIn_508_0[stackIn_512_1]).a(-8 + this.field_v + param2 + var6_int * var8 / 23, var7 * var8 / 23 + this.field_G + (param0 - 8));
+                                                                                          ((IndexedSprite) (Object) stackIn_508_0[stackIn_512_1]).a(-8 + this.field_v + param2 + var6_int * var8 / 23, var7 * var8 / 23 + this.field_G + (param0 - 8));
                                                                                           var8++;
                                                                                           continue;
                                                                                         }
@@ -9355,7 +9355,7 @@ final class mi extends tf {
                                                                                   var10 = var9 * var9 + var8 * var8;
                                                                                   var11 = this.field_t.field_lb + var8 + param2;
                                                                                   var12 = -(this.field_t.field_Y / 2) + var9 + (param0 + this.field_t.field_db);
-                                                                                  var13 = 64 * (63 & jb.field_v + var9 / 2) + (63 & var8 / 2 + jb.field_v);
+                                                                                  var13 = 64 * (63 & SpriteState.field_v + var9 / 2) + (63 & var8 / 2 + SpriteState.field_v);
                                                                                   stackIn_593_0 = ~tk.field_x[9].field_A.length;
                                                                                   stackIn_593_1 = ~var13;
                                                                                   if (stackIn_593_0 >= stackIn_593_1) {
@@ -9389,11 +9389,11 @@ final class mi extends tf {
                                                                             return;
                                                                           }
                                                                           var5 = this.field_t.field_Y >> 1;
-                                                                          var8 = 512 * jb.field_v;
+                                                                          var8 = 512 * SpriteState.field_v;
                                                                           var9 = 0;
                                                                           while (var9 < 16) {
-                                                                            var6_int = (int)((double)(param2 + this.field_v) + Math.sin(0.12 * (double)jb.field_v + 0.6 * (double)var9) * (double)var5);
-                                                                            var7 = (int)((double)(param0 + this.field_G - var5) + Math.cos((double)jb.field_v * 0.12 + (double)var9 * 0.6) * (double)var5);
+                                                                            var6_int = (int)((double)(param2 + this.field_v) + Math.sin(0.12 * (double)SpriteState.field_v + 0.6 * (double)var9) * (double)var5);
+                                                                            var7 = (int)((double)(param0 + this.field_G - var5) + Math.cos((double)SpriteState.field_v * 0.12 + (double)var9 * 0.6) * (double)var5);
                                                                             gj.field_f[20].b().a(4096 - 500 * var9, var7, -18, var6_int, var8);
                                                                             var9++;
                                                                             if (var16 != 0) {
@@ -9409,21 +9409,21 @@ final class mi extends tf {
                                                                           return;
                                                                         }
                                                                         var5 = this.field_t.field_Y >> 1;
-                                                                        var8 = 512 * jb.field_v;
-                                                                        var6_int = (int)((double)(this.field_v + param2) + Math.sin((double)jb.field_v * 0.1 - 1.6) * (double)var5);
-                                                                        var7 = (int)((double)(-var5 + param0 + this.field_G) + (double)var5 * Math.cos(0.09 * (double)jb.field_v - 1.6));
+                                                                        var8 = 512 * SpriteState.field_v;
+                                                                        var6_int = (int)((double)(this.field_v + param2) + Math.sin((double)SpriteState.field_v * 0.1 - 1.6) * (double)var5);
+                                                                        var7 = (int)((double)(-var5 + param0 + this.field_G) + (double)var5 * Math.cos(0.09 * (double)SpriteState.field_v - 1.6));
                                                                         tg.field_b[13].b().a(2000, var7, 127, var6_int, var8);
-                                                                        var6_int = (int)((double)(this.field_v + param2) + (double)var5 * Math.sin((double)jb.field_v * 0.1 - 0.8));
-                                                                        var7 = (int)((double)(this.field_G + param0 - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)jb.field_v));
+                                                                        var6_int = (int)((double)(this.field_v + param2) + (double)var5 * Math.sin((double)SpriteState.field_v * 0.1 - 0.8));
+                                                                        var7 = (int)((double)(this.field_G + param0 - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)SpriteState.field_v));
                                                                         tg.field_b[13].b().a(2500, var7, 124, var6_int, var8);
-                                                                        var6_int = (int)((double)(this.field_v + param2) + Math.sin(0.1 * (double)jb.field_v) * (double)var5);
-                                                                        var7 = (int)((double)(-var5 + this.field_G + param0) + (double)var5 * Math.cos((double)jb.field_v * 0.09));
+                                                                        var6_int = (int)((double)(this.field_v + param2) + Math.sin(0.1 * (double)SpriteState.field_v) * (double)var5);
+                                                                        var7 = (int)((double)(-var5 + this.field_G + param0) + (double)var5 * Math.cos((double)SpriteState.field_v * 0.09));
                                                                         tg.field_b[13].b().a(3000, var7, 123, var6_int, var8);
                                                                         if (var16 == 0) {
                                                                           return;
                                                                         }
                                                                       }
-                                                                      var5 = 2000 * jb.field_v;
+                                                                      var5 = 2000 * SpriteState.field_v;
                                                                       this.field_p.a(4096, param0 + this.field_G, -43, param2 + this.field_v, var5);
                                                                       if (var16 == 0) {
                                                                         return;
@@ -9747,9 +9747,9 @@ final class mi extends tf {
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        qb[] var2 = null;
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        qb var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -9760,7 +9760,7 @@ final class mi extends tf {
         int var11 = 0;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2 = new qb[]{gj.field_f[22].b(), gj.field_f[26].b(), gj.field_f[27].b()};
+          var2 = new Sprite[]{gj.field_f[22].b(), gj.field_f[26].b(), gj.field_f[27].b()};
           var3 = tg.field_b[13].b();
           if (param0 < 9) {
             this.field_x = 106;
@@ -9772,14 +9772,14 @@ final class mi extends tf {
             var5 = var5 + this.field_q.field_X[this.field_t.field_u] * 16 / 20;
           }
           var6 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             stackIn_11_0 = 0;
             if (stackIn_11_0 <= var6) {
               if (var11 != 0) {
                 return;
               }
               var7 = 0;
-              L6: while (true) {
+              scanLoop2: while (true) {
                 stackIn_15_0 = var7;
                 stackIn_15_1 = var5;
                 if (stackIn_15_0 < stackIn_15_1) {
@@ -9807,12 +9807,12 @@ final class mi extends tf {
                     var8 += 64;
                   }
                   var7 += 8;
-                  continue L6;
+                  continue scanLoop2;
                 }
                 break;
               }
               var6--;
-              continue L2;
+              continue scanLoop1;
             }
             break;
           }

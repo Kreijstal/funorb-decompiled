@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends pg {
+final class ce extends IntrusiveNode {
     static int field_o;
     static int field_n;
     static String field_l;
@@ -27,25 +27,25 @@ final class ce extends pg {
         field_m = null;
     }
 
-    final static qb b(int param0, int param1, int param2) {
-        qb var6 = null;
-        qb var3 = null;
+    final static Sprite b(int param0, int param1, int param2) {
+        Sprite var6 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        qb var6Lifetime1;
-        qb var3Lifetime1;
+        Sprite var6Lifetime1;
+        Sprite var3Lifetime1;
         int var4Lifetime1;
         if (param2 != 21385) {
           ce.b(true);
         } else {
-          var6 = new qb(param0, param0);
+          var6 = new Sprite(param0, param0);
           var3 = var6;
           for (var4 = 0; var3.field_A.length > var4; var4++) {
             var6.field_A[var4] = param1;
           }
           return var3;
         }
-        var6Lifetime1 = new qb(param0, param0);
+        var6Lifetime1 = new Sprite(param0, param0);
         var3Lifetime1 = var6Lifetime1;
         for (var4Lifetime1 = 0; var3Lifetime1.field_A.length > var4Lifetime1; var4Lifetime1++) {
           var6Lifetime1.field_A[var4Lifetime1] = param1;
@@ -55,9 +55,9 @@ final class ce extends pg {
 
     final static void a(int param0, int param1, int param2) {
         na var7 = null;
-        ab var9 = null;
-        ab var10 = null;
-        ab var11 = null;
+        CipherPacketBuffer var9 = null;
+        CipherPacketBuffer var10 = null;
+        CipherPacketBuffer var11 = null;
         na var6 = null;
         na var6Lifetime1;
         na var6Lifetime2;
@@ -66,7 +66,7 @@ final class ce extends pg {
           if (param0 == ki.field_q) {
             return;
           }
-          var6 = (na) (nk.field_q.a((long)ki.field_q, (byte) -109));
+          var6 = (na) (nk.field_q.get((long)ki.field_q, (byte) -109));
           var7 = var6;
           var6Lifetime2 = var7;
           ki.field_q = param0;
@@ -74,40 +74,40 @@ final class ce extends pg {
             var7.field_Qb = null;
           } else {
             var9 = he.field_e;
-            var9.b((byte) -23, param1);
-            var9.f(3, (byte) -99);
-            var9.f(11, (byte) -90);
-            var9.c(param0, (byte) -104);
+            var9.writeOpcode((byte) -23, param1);
+            var9.writeByte(3, (byte) -99);
+            var9.writeByte(11, (byte) -90);
+            var9.writeShort(param0, (byte) -104);
             return;
           }
           var10 = he.field_e;
-          var10.b((byte) -23, param1);
-          var10.f(3, (byte) -99);
-          var10.f(11, (byte) -90);
-          var10.c(param0, (byte) -104);
+          var10.writeOpcode((byte) -23, param1);
+          var10.writeByte(3, (byte) -99);
+          var10.writeByte(11, (byte) -90);
+          var10.writeShort(param0, (byte) -104);
           return;
         }
         if (param0 == ki.field_q) {
           return;
         }
-        var6Lifetime1 = (na) (nk.field_q.a((long)ki.field_q, (byte) -109));
+        var6Lifetime1 = (na) (nk.field_q.get((long)ki.field_q, (byte) -109));
         na var8 = var6Lifetime1;
         ki.field_q = param0;
         if (var8 != null) {
           var8.field_Qb = null;
         } else {
           var11 = he.field_e;
-          var11.b((byte) -23, param1);
-          var11.f(3, (byte) -99);
-          var11.f(11, (byte) -90);
-          var11.c(param0, (byte) -104);
+          var11.writeOpcode((byte) -23, param1);
+          var11.writeByte(3, (byte) -99);
+          var11.writeByte(11, (byte) -90);
+          var11.writeShort(param0, (byte) -104);
           return;
         }
-        ab var12 = he.field_e;
-        var12.b((byte) -23, param1);
-        var12.f(3, (byte) -99);
-        var12.f(11, (byte) -90);
-        var12.c(param0, (byte) -104);
+        CipherPacketBuffer var12 = he.field_e;
+        var12.writeOpcode((byte) -23, param1);
+        var12.writeByte(3, (byte) -99);
+        var12.writeByte(11, (byte) -90);
+        var12.writeShort(param0, (byte) -104);
     }
 
     static {

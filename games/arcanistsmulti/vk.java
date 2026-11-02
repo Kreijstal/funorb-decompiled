@@ -4,9 +4,9 @@
 final class vk extends ve {
     static aj field_B;
     static int field_u;
-    wk field_A;
+    PacketBuffer field_A;
     byte field_y;
-    static ll[] field_w;
+    static IndexedSprite[] field_w;
     int field_x;
     static String field_v;
     static String field_z;
@@ -22,7 +22,7 @@ final class vk extends ve {
         if (param0 >= -71) {
           field_u = -34;
         }
-        return this.field_A.field_g * 100 / (-this.field_y + this.field_A.field_j.length);
+        return this.field_A.position * 100 / (-this.field_y + this.field_A.payload.length);
     }
 
     final byte[] c(int param0) {
@@ -30,10 +30,10 @@ final class vk extends ve {
           field_z = (String) null;
         }
         if (this.field_p ||
-          this.field_A.field_g < -this.field_y + this.field_A.field_j.length) {
+          this.field_A.position < -this.field_y + this.field_A.payload.length) {
           throw new RuntimeException();
         }
-        return this.field_A.field_j;
+        return this.field_A.payload;
     }
 
     public static void f(byte param0) {
@@ -41,7 +41,7 @@ final class vk extends ve {
         field_z = null;
         field_B = null;
         if (param0 != 20) {
-          field_w = (ll[]) null;
+          field_w = (IndexedSprite[]) null;
         }
         field_w = null;
     }

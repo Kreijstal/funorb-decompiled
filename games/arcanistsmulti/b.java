@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class b {
-    static vn field_a;
+    static IntrusiveDeque field_a;
     static ri field_e;
     static String field_c;
     static int[] field_f;
@@ -21,7 +21,7 @@ final class b {
           field_e = null;
           return;
         }
-        field_a = (vn) null;
+        field_a = (IntrusiveDeque) null;
         field_e = null;
     }
 
@@ -37,7 +37,7 @@ final class b {
         int var11;
         String var12;
         int var14;
-        p var15;
+        ClientException var15;
         StringWriter var16;
         String var17;
         String var18;
@@ -64,10 +64,10 @@ final class b {
         String var2Lifetime3Lifetime12;
         String var12Lifetime3Lifetime1;
         var14 = ArcanistsMulti.field_G ? 1 : 0;
-        if (param1 instanceof p) {
-          var15 = (p) ((Object) param1);
-          param1 = var15.field_g;
-          var2 = var15.field_i + " | ";
+        if (param1 instanceof ClientException) {
+          var15 = (ClientException) ((Object) param1);
+          param1 = var15.cause;
+          var2 = var15.context + " | ";
           var12 = var2;
         } else {
           var2 = "";
@@ -133,7 +133,7 @@ final class b {
     }
 
     static {
-        field_a = new vn();
+        field_a = new IntrusiveDeque();
         field_e = new ri();
         field_f = new int[]{0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
         field_b = "<%0> cannot join; the game is full.";

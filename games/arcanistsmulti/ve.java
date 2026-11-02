@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ve extends tf {
+abstract class ve extends DualLinkNode {
     volatile boolean field_p;
-    static vn field_o;
+    static IntrusiveDeque field_o;
     boolean field_n;
     boolean field_q;
-    static qb[] field_t;
+    static Sprite[] field_t;
     static String field_r;
     static String field_s;
     static int field_m;
 
-    final static void a(int param0, eg param1, int[] param2, ll[] param3, eg param4) {
-        qb[] dupTemp$0 = null;
-        qb[] dupTemp$1 = null;
-        qb[] dupTemp$2 = null;
-        qb[] dupTemp$3 = null;
-        ll[] var5 = null;
+    final static void a(int param0, ResourceArchive param1, int[] param2, IndexedSprite[] param3, ResourceArchive param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
+        IndexedSprite[] var5 = null;
         int[] var6 = null;
-        ll[] var6_array = null;
+        IndexedSprite[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        ll[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -43,12 +43,12 @@ abstract class ve extends tf {
         kc var9 = null;
         kc var10 = null;
         kc var11 = null;
-        qb[] var12 = null;
-        qb[] var13 = null;
-        qb[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         kc var15 = null;
-        qb[] var16 = null;
-        qb[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         var18 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -57,7 +57,7 @@ abstract class ve extends tf {
           var5 = var20;
           dg.field_u = var20.length;
           if (param3 != null) {
-            var6_array = new ll[param3.length + dg.field_u];
+            var6_array = new IndexedSprite[param3.length + dg.field_u];
             for (var7_int = 0; var7_int < dg.field_u; var7_int++) {
               var6_array[var7_int] = var20[var7_int];
             }
@@ -155,12 +155,12 @@ abstract class ve extends tf {
           vf.field_i = new kc((long)param0, var10);
           vf.field_i.field_t = 2;
           vf.field_i.field_v = rb.a(false, true, 652, 2039583, 3815994, 30);
-          pg.field_c = new kc(0L, (kc) null);
-          pg.field_c.field_ob = 13421772;
-          pg.field_c.field_Z = (dj) ((Object) ea.field_w);
-          pg.field_c.field_z = ga.field_r;
-          pg.field_c.field_gb = 1;
-          nj.field_d = new kc(0L, pg.field_c);
+          IntrusiveNode.field_c = new kc(0L, (kc) null);
+          IntrusiveNode.field_c.field_ob = 13421772;
+          IntrusiveNode.field_c.field_Z = (dj) ((Object) ea.field_w);
+          IntrusiveNode.field_c.field_z = ga.field_r;
+          IntrusiveNode.field_c.field_gb = 1;
+          nj.field_d = new kc(0L, IntrusiveNode.field_c);
           nj.field_d.field_zb = 16777215;
           nj.field_d.field_eb = 16777215;
           nj.field_d.field_J = 16777215;
@@ -170,10 +170,10 @@ abstract class ve extends tf {
           var15.field_z = ga.field_r;
           var15.field_Z = (dj) ((Object) var7);
           var15.field_ob = 16777215;
-          j.field_f = new kc(0L, pg.field_c);
+          j.field_f = new kc(0L, IntrusiveNode.field_c);
           j.field_f.field_v = rb.a(false, false, 652, 2236962, 2236962, 16);
           j.field_f.field_t = 2;
-          mi.field_A = new kc(0L, pg.field_c);
+          mi.field_A = new kc(0L, IntrusiveNode.field_c);
           mi.field_A.field_v = rb.a(false, false, 652, 1513239, 1513239, 16);
           mi.field_A.field_t = 2;
           le.field_E = new kc(0L, j.field_f);
@@ -181,7 +181,7 @@ abstract class ve extends tf {
           qa.field_j = new kc(0L, mi.field_A);
           qa.field_j.a(nj.field_d, (byte) 119);
           var16 = qe.a(param1, "button_mouseover", "lobby", param0 + 91);
-          ml.field_H = new pe(ck.field_a, var12, pg.field_c, nj.field_d, 3, 2, mm.field_p, 3, ga.field_r);
+          ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, mm.field_p, 3, ga.field_r);
           rn.field_L = new kc(0L, nj.field_d);
           rn.field_L.field_Y = 1;
           rn.field_L.field_wb = 1;
@@ -282,8 +282,8 @@ abstract class ve extends tf {
           db.field_b.field_lb = fj.a("lobby", -22612, param1, "downbutton_mouseover");
           db.field_b.field_vb = fj.a("lobby", -22612, param1, "downbutton_mouseheld");
           db.field_b.field_R = fj.a("lobby", -22612, param1, "downbutton_disabled");
-          vn.field_i = new in(0L, pi.field_d, db.field_b, qe.field_m, be.field_b);
-          oh.field_r = new hb(0L, (kc) null, am.field_c, vn.field_i, hg.field_d, (String) null, (String) null);
+          IntrusiveDeque.field_i = new in(0L, pi.field_d, db.field_b, qe.field_m, be.field_b);
+          oh.field_r = new hb(0L, (kc) null, am.field_c, IntrusiveDeque.field_i, hg.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -375,7 +375,7 @@ abstract class ve extends tf {
     }
 
     static {
-        field_o = new vn();
+        field_o = new IntrusiveDeque();
         field_s = "<shad><col=<%0>>FLAME</col></shad>";
         field_r = "Offensive account name";
         field_m = -1;

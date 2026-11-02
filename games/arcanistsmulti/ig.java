@@ -49,7 +49,7 @@ final class ig {
         try {
           var5_int = jl.a(param3, (-param4 + param2) * 3);
           var6 = param4 * 3;
-          tl.e((byte) -79);
+          ArchiveProvider.e((byte) -79);
           var7 = -10 + var5_int;
           if (param1.field_F > 0 &&
             param1.field_H != null) {
@@ -76,11 +76,11 @@ final class ig {
               }
               if (!stackIn_10_0 ||
                 !(-(var15 * var16) + var14 * var17 >= 0)) {
-                var12Lifetime1 = eg.field_a[var9];
+                var12Lifetime1 = ResourceArchive.field_a[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = eg.field_a[var10];
+                  var13Lifetime1 = ResourceArchive.field_a[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = eg.field_a[var11];
+                    var14 = ResourceArchive.field_a[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + var14 + (var13Lifetime1 + var12Lifetime1);
                       if (var7 < 0) {
@@ -110,7 +110,7 @@ final class ig {
                         if (param1.field_F > 0 &&
                           null != param1.field_H) {
                           dupTemp$0 = param1.field_H[var8];
-                          jb.field_s[dupTemp$0] = jb.field_s[dupTemp$0] + 1;
+                          SpriteState.field_s[dupTemp$0] = SpriteState.field_s[dupTemp$0] + 1;
                         }
                         ol.field_i = ol.field_i + 1;
                         break;
@@ -131,9 +131,9 @@ final class ig {
             param1.field_H != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(jb.field_s.length <= var9Lifetime1)) {
-              var10Lifetime1 = jb.field_s[var9Lifetime1];
-              jb.field_s[var9Lifetime1] = var8Lifetime1;
+            while (!(SpriteState.field_s.length <= var9Lifetime1)) {
+              var10Lifetime1 = SpriteState.field_s[var9Lifetime1];
+              SpriteState.field_s[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -183,7 +183,7 @@ final class ig {
           var6_ref = new nh(param3, param1);
           this.field_c.a((byte) -68, var6_ref, param2);
           this.field_b.a((byte) 37, var6_ref);
-          ((nn) ((Object) var6_ref)).field_k = 0L;
+          ((nn) ((Object) var6_ref)).secondaryKey = 0L;
           if (param0 >= -99) {
             this.a((byte) -27, 45, 65L, (Object) null);
           }
@@ -249,8 +249,8 @@ final class ig {
         RuntimeException var3 = null;
         try {
           if (param0 != null) {
-            param0.a(true);
-            param0.a((byte) 88);
+            param0.unlink(true);
+            param0.unlinkSecondary((byte) 88);
             this.field_f = this.field_f + param0.field_r;
           }
           if (param1 != 2147483647) {
@@ -293,8 +293,8 @@ final class ig {
             return stackIn_5_0;
           }
           if (var5 == null) {
-            var4.a(true);
-            var4.a((byte) 88);
+            var4.unlink(true);
+            var4.unlinkSecondary((byte) 88);
             this.field_f = this.field_f + var4.field_r;
             stackIn_10_0 = null;
             return stackIn_10_0;
@@ -302,16 +302,16 @@ final class ig {
           boolean decompiledSharedTail0 = !(!var4.f((byte) 96));
           if (!decompiledSharedTail0) {
             this.field_b.a((byte) 37, var4);
-            var4.field_k = 0L;
+            var4.secondaryKey = 0L;
             decompiledSharedTail0 = (ArcanistsMulti.field_G);
           }
           if (decompiledSharedTail0) {
             var6 = new nh(var5, var4.field_r);
-            this.field_c.a((byte) -99, var6, var4.field_e);
+            this.field_c.a((byte) -99, var6, var4.key);
             this.field_b.a((byte) 37, var6);
-            ((nn) ((Object) var6)).field_k = 0L;
-            var4.a(true);
-            var4.a((byte) 88);
+            ((nn) ((Object) var6)).secondaryKey = 0L;
+            var4.unlink(true);
+            var4.unlinkSecondary((byte) 88);
           }
           stackIn_17_0 = var5;
           return stackIn_17_0;
@@ -339,7 +339,7 @@ final class ig {
         RuntimeException var2 = null;
         try {
           if (ce.field_h > 0 &&
-            pg.field_d) {
+            IntrusiveNode.field_d) {
             de.b(0, 0, de.field_e, n.field_g.field_nb);
             gm.field_h.a(param1, true);
           }

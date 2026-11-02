@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ai extends pg {
+final class ai extends IntrusiveNode {
     private static int[] field_H;
     private static float[] field_N;
     private int field_h;
@@ -92,7 +92,7 @@ final class ai extends pg {
         return new wf(this.field_h, var12, this.field_w, this.field_M, this.field_z);
     }
 
-    final static ai a(eg param0, String param1, String param2) {
+    final static ai a(ResourceArchive param0, String param1, String param2) {
         try {
           ai var4_ref = null;
           if (!ai.a(param0)) {
@@ -122,16 +122,16 @@ final class ai extends pg {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        wk var2 = new wk(param0);
-        this.field_h = var2.d(-10674);
-        this.field_t = var2.d(-10674);
-        this.field_w = var2.d(-10674);
-        this.field_M = var2.d(-10674);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_h = var2.readInt(-10674);
+        this.field_t = var2.readInt(-10674);
+        this.field_w = var2.readInt(-10674);
+        this.field_M = var2.readInt(-10674);
         if (this.field_M < 0) {
           this.field_M = ~this.field_M;
           this.field_z = true;
         }
-        int var3 = var2.d(-10674);
+        int var3 = var2.readInt(-10674);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -139,7 +139,7 @@ final class ai extends pg {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.e((byte) 115);
+            var6_int = var2.readUnsignedByte((byte) 115);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -717,7 +717,7 @@ final class ai extends pg {
         return var0;
     }
 
-    private final static boolean a(eg param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_B) {
           var1 = param0.b(0, 26219, 0);
@@ -729,7 +729,7 @@ final class ai extends pg {
         return true;
     }
 
-    final static ai a(eg param0, int param1, int param2) {
+    final static ai a(ResourceArchive param0, int param1, int param2) {
         try {
           ai var4_ref = null;
           if (!ai.a(param0)) {

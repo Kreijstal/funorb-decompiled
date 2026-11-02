@@ -16,7 +16,7 @@ abstract class bd {
         field_c = null;
     }
 
-    abstract void a(wk param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     final static boolean a(byte param0, String param1) {
         RuntimeException var2 = null;

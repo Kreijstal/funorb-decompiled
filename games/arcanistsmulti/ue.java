@@ -4,14 +4,14 @@
 final class ue {
     static String field_a;
     static boolean field_e;
-    static eg field_d;
-    static wk field_c;
+    static ResourceArchive field_d;
+    static PacketBuffer field_c;
     static int[][] field_b;
 
     final static void b(int param0) {
         hi.field_e.setLength(0);
         if (param0 != 10) {
-          field_c = (wk) null;
+          field_c = (PacketBuffer) null;
           nj.field_c = 0;
           return;
         }
@@ -41,7 +41,7 @@ final class ue {
           ti.field_N = -1;
           bk.field_J = param1.field_V;
           bm.field_g = param1;
-          mo.field_f = null;
+          IntrusiveNodeHashTable.field_f = null;
           i.b(-120);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

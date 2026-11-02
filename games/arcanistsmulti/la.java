@@ -5,7 +5,7 @@ final class la implements ok {
     static String field_e;
     static int field_f;
     static boolean field_a;
-    static vn field_b;
+    static IntrusiveDeque field_b;
     static kc field_c;
     static int field_d;
 
@@ -39,6 +39,6 @@ final class la implements ok {
     static {
         field_e = "Members";
         field_f = 0;
-        field_b = new vn();
+        field_b = new IntrusiveDeque();
     }
 }

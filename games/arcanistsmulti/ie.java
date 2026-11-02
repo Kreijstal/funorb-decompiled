@@ -11,13 +11,13 @@ final class ie extends ed implements vb {
     static int field_Sb;
     static boolean field_Pb;
     static int field_Vb;
-    static ll[] field_Tb;
+    static IndexedSprite[] field_Tb;
     private boolean field_Wb;
     static String field_Mb;
     private boolean field_Ob;
     static String field_Jb;
     static String field_Nb;
-    static mo field_Qb;
+    static IntrusiveNodeHashTable field_Qb;
 
     final static boolean a(int param0, boolean param1) {
         long dupTemp$2 = 0L;
@@ -42,14 +42,14 @@ final class ie extends ed implements vb {
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
         if (!param0) {
-          field_Tb = (ll[]) null;
+          field_Tb = (IndexedSprite[]) null;
         }
         if (this.field_Wb) {
           sc.a(true, false, false);
           return;
         }
         try {
-          mo.g(-1);
+          IntrusiveNodeHashTable.g(-1);
           this.h(77);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ie.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -144,7 +144,7 @@ final class ie extends ed implements vb {
     }
 
     final void l(int param0) {
-        this.a(ab.a(0, param0, g.field_c), (byte) 124, true);
+        this.a(CipherPacketBuffer.a(0, param0, g.field_c), (byte) 124, true);
     }
 
     private final void a(ho param0, byte param1, boolean param2) {

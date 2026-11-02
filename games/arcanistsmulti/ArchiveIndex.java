@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk {
+final class ArchiveIndex {
     static int field_u;
     private int[][] field_q;
     byte[][] field_k;
     private int field_w;
     int[] field_h;
     private int[] field_t;
-    static qb field_o;
+    static Sprite field_o;
     private byte[] field_x;
-    static ll[] field_n;
+    static IndexedSprite[] field_n;
     int[][] field_e;
     static String field_d;
     static String field_j;
     int[] field_r;
     int[] field_i;
-    static ll[] field_m;
+    static IndexedSprite[] field_m;
     int field_p;
     static int[] field_a;
     static String field_s;
@@ -58,7 +58,7 @@ final class jk {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        wk var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -74,22 +74,22 @@ final class jk {
         int var13Lifetime1Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var17 = new wk(hb.a(false, param0));
-          var4 = var17.e((byte) 31);
+          var17 = new PacketBuffer(hb.a(false, param0));
+          var4 = var17.readUnsignedByte((byte) 31);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_g = var17.d(-10674);
+              this.field_g = var17.readInt(-10674);
             } else {
               this.field_g = 0;
             }
-            var5 = var17.e((byte) 94);
+            var5 = var17.readUnsignedByte((byte) 94);
             stackIn_11_0 = (0 == (var5 & 1)) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_14_0;
             if (7 > var4) {
-              this.field_w = var17.n(param1 ^ -110);
+              this.field_w = var17.readUnsignedShort(param1 ^ -110);
             } else {
               this.field_w = var17.a((byte) -29);
             }
@@ -101,7 +101,7 @@ final class jk {
             var9 = -1;
             if (7 > var4) {
               for (var10 = 0; this.field_w > var10; var10++) {
-                dupTemp$0 = var8 + var17.n(-98);
+                dupTemp$0 = var8 + var17.readUnsignedShort(-98);
                 var8 = dupTemp$0;
                 this.field_r[var10] = dupTemp$0;
                 if (this.field_r[var10] > var9) {
@@ -133,16 +133,16 @@ final class jk {
                 this.field_t[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_w; var10Lifetime1Lifetime1++) {
-                this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.d(hh.a(param1, -10686));
+                this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.readInt(hh.a(param1, -10686));
               }
               this.field_l = new n(this.field_t);
             }
             for (var10Lifetime2 = 0; this.field_w > var10Lifetime2; var10Lifetime2++) {
-              this.field_h[this.field_r[var10Lifetime2]] = var17.d(-10674);
+              this.field_h[this.field_r[var10Lifetime2]] = var17.readInt(-10674);
             }
             if (var7 == 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_w; var10Lifetime3++) {
-                this.field_y[this.field_r[var10Lifetime3]] = var17.d(-10674);
+                this.field_y[this.field_r[var10Lifetime3]] = var17.readInt(-10674);
               }
             } else {
               for (var10Lifetime3 = 0; this.field_w > var10Lifetime3; var10Lifetime3++) {
@@ -151,7 +151,7 @@ final class jk {
                 this.field_k[this.field_r[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_w; var10Lifetime3++) {
-                this.field_y[this.field_r[var10Lifetime3]] = var17.d(-10674);
+                this.field_y[this.field_r[var10Lifetime3]] = var17.readInt(-10674);
               }
             }
             if (7 <= var4) {
@@ -182,7 +182,7 @@ final class jk {
               }
             } else {
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_w; var10Lifetime4++) {
-                this.field_b[this.field_r[var10Lifetime4]] = var17.n(-98);
+                this.field_b[this.field_r[var10Lifetime4]] = var17.readUnsignedShort(-98);
               }
               for (var10Lifetime4 = 0; this.field_w > var10Lifetime4; var10Lifetime4++) {
                 var11 = this.field_r[var10Lifetime4];
@@ -192,7 +192,7 @@ final class jk {
                 this.field_e[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.n(-98);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(-98);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_e[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -224,7 +224,7 @@ final class jk {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.d(hh.a(param1, -10686));
+                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(hh.a(param1, -10686));
                 }
                 this.field_c[var11Lifetime1] = new n(this.field_q[var11Lifetime1]);
               }
@@ -257,7 +257,7 @@ final class jk {
         field_j = null;
         if (param0 != 0) {
           v var2 = (v) null;
-          jk.a(2, (v) null);
+          ArchiveIndex.a(2, (v) null);
         }
         field_v = null;
     }
@@ -277,7 +277,7 @@ final class jk {
         try {
           if (param0 != 3) {
             var5 = (jg) null;
-            jk.a(-73, (jg) null);
+            ArchiveIndex.a(-73, (jg) null);
           }
           var2 = null;
           if (param1.field_g != null) {
@@ -377,18 +377,18 @@ final class jk {
     final static void a(byte param0) {
         int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
-        if (null == jb.field_z) {
+        if (null == SpriteState.field_z) {
           return;
         }
         if (param0 != 121) {
           field_v = (String) null;
         }
-        if (!jb.field_z.field_i) {
-          if ((1 << jb.field_z.field_I & jb.field_z.field_b) == 0) {
-            if (jb.field_z.field_b != 0) {
-              ce.field_g[12] = mo.field_g;
+        if (!SpriteState.field_z.field_i) {
+          if ((1 << SpriteState.field_z.field_I & SpriteState.field_z.field_b) == 0) {
+            if (SpriteState.field_z.field_b != 0) {
+              ce.field_g[12] = IntrusiveNodeHashTable.field_g;
             } else {
-              if ((jb.field_z.field_a | 1 << jb.field_z.field_I) == (1 << jb.field_z.field_V.s(0)) - 1) {
+              if ((SpriteState.field_z.field_a | 1 << SpriteState.field_z.field_I) == (1 << SpriteState.field_z.field_V.s(0)) - 1) {
                 ce.field_g[12] = rb.field_m;
               } else {
                 ce.field_g[12] = ra.field_n;
@@ -398,11 +398,11 @@ final class jk {
             ce.field_g[12] = eh.field_d;
           }
         } else {
-          if ((1 << jb.field_z.field_I & jb.field_z.field_b) != 0) {
+          if ((1 << SpriteState.field_z.field_I & SpriteState.field_z.field_b) != 0) {
             ce.field_g[12] = vm.field_e;
           } else {
-            if (0 == jb.field_z.field_b) {
-              if ((1 << jb.field_z.field_I | jb.field_z.field_a) != -1 + (1 << jb.field_z.field_V.s(param0 ^ 121))) {
+            if (0 == SpriteState.field_z.field_b) {
+              if ((1 << SpriteState.field_z.field_I | SpriteState.field_z.field_a) != -1 + (1 << SpriteState.field_z.field_V.s(param0 ^ 121))) {
                 ce.field_g[12] = nl.field_Bb;
               } else {
                 ce.field_g[12] = so.field_b;
@@ -414,7 +414,7 @@ final class jk {
         }
     }
 
-    jk(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_p = mj.a(param0.length, (byte) -104, param0);

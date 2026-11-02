@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd extends sg {
+final class kd extends PcmStream {
     private boolean field_w;
     private int field_m;
     private int field_u;
@@ -348,7 +348,7 @@ final class kd extends sg {
         if (this.field_m < 0) {
           if (this.field_p <= 0) {
             this.l();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_m = 0;
@@ -356,7 +356,7 @@ final class kd extends sg {
         if (this.field_m >= var7) {
           if (this.field_p >= 0) {
             this.l();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_m = var7 - 1;
@@ -483,7 +483,7 @@ final class kd extends sg {
           if (this.field_m >= var7) {
             this.field_m = var7;
             this.l();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -493,7 +493,7 @@ final class kd extends sg {
         }
         this.field_m = -1;
         this.l();
-        this.a(true);
+        this.unlink(true);
         return;
     }
 
@@ -523,7 +523,7 @@ final class kd extends sg {
               this.field_y = 0;
               this.field_t = 0;
               this.field_s = 0;
-              this.a(true);
+              this.unlink(true);
               param0 = this.field_r;
             }
             this.field_r = 0;
@@ -541,7 +541,7 @@ final class kd extends sg {
         if (this.field_m < 0) {
           if (this.field_p <= 0) {
             this.l();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_m = 0;
@@ -549,7 +549,7 @@ final class kd extends sg {
         if (this.field_m >= var5) {
           if (this.field_p >= 0) {
             this.l();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_m = var5 - 1;
@@ -662,7 +662,7 @@ final class kd extends sg {
           if (this.field_m >= var5) {
             this.field_m = var5;
             this.l();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -671,7 +671,7 @@ final class kd extends sg {
         }
         this.field_m = -1;
         this.l();
-        this.a(true);
+        this.unlink(true);
     }
 
     final int d() {
@@ -940,7 +940,7 @@ final class kd extends sg {
         return param3;
     }
 
-    final sg a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -1042,7 +1042,7 @@ final class kd extends sg {
         this.a(param0, this.g());
     }
 
-    final sg b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -1392,7 +1392,7 @@ final class kd extends sg {
         int var2Lifetime1;
         if (param0 == 0) {
           this.c(0);
-          this.a(true);
+          this.unlink(true);
           return;
         }
         if (this.field_t != 0) {
@@ -1452,7 +1452,7 @@ final class kd extends sg {
         this.field_r = 0;
         this.field_u = 0;
         this.field_s = 0;
-        this.a(true);
+        this.unlink(true);
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, kd param9) {
@@ -1552,7 +1552,7 @@ final class kd extends sg {
           this.field_y = 0;
           this.field_t = 0;
           this.field_s = 0;
-          this.a(true);
+          this.unlink(true);
           return true;
         }
         if (this.field_s >= var1) {

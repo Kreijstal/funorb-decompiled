@@ -11,7 +11,7 @@ final class so {
     static int[] field_c;
     static boolean field_j;
     private int field_e;
-    static eg field_k;
+    static ResourceArchive field_k;
     static String field_g;
     int field_h;
     private int field_o;
@@ -37,17 +37,17 @@ final class so {
             this.field_e = hn.field_p;
           }
           if (this.field_m != 0 &&
-            wk.field_m != 0) {
+            PacketBuffer.field_m != 0) {
             if (0 >= this.field_e) {
               this.field_e = o.field_g;
               this.field_e = this.field_e - 1;
               if (0 == re.field_r &&
-                wk.field_m == 0) {
+                PacketBuffer.field_m == 0) {
                 this.field_m = 0;
               }
               if (this.field_m == 0) {
                 if (!this.field_l &&
-                  !tl.field_d) {
+                  !ArchiveProvider.field_d) {
                   return;
                 }
                 if (0 > param0) {
@@ -69,11 +69,11 @@ final class so {
             this.field_e = this.field_e - 1;
           }
           if (0 == re.field_r &&
-            wk.field_m == 0) {
+            PacketBuffer.field_m == 0) {
             this.field_m = 0;
             if (this.field_m == 0) {
               if (!this.field_l &&
-                !tl.field_d) {
+                !ArchiveProvider.field_d) {
                 return;
               }
               if (0 > param0) {
@@ -109,7 +109,7 @@ final class so {
             this.field_l = true;
             return;
           }
-          if (!tl.field_d) {
+          if (!ArchiveProvider.field_d) {
             return;
           }
           if (0 > param0) {
@@ -132,17 +132,17 @@ final class so {
         this.field_o = 0;
         if (0 == re.field_r) {
           if (this.field_m != 0 &&
-            wk.field_m != 0) {
+            PacketBuffer.field_m != 0) {
             if (0 >= this.field_e) {
               this.field_e = o.field_g;
               this.field_e = this.field_e - 1;
               if (0 == re.field_r &&
-                wk.field_m == 0) {
+                PacketBuffer.field_m == 0) {
                 this.field_m = 0;
               }
               if (this.field_m == 0) {
                 if (!this.field_l &&
-                  !tl.field_d) {
+                  !ArchiveProvider.field_d) {
                   return;
                 }
                 if (0 > param0) {
@@ -164,11 +164,11 @@ final class so {
             this.field_e = this.field_e - 1;
           }
           if (0 == re.field_r &&
-            wk.field_m == 0) {
+            PacketBuffer.field_m == 0) {
             this.field_m = 0;
             if (this.field_m == 0) {
               if (!this.field_l &&
-                !tl.field_d) {
+                !ArchiveProvider.field_d) {
                 return;
               }
               if (0 > param0) {
@@ -204,7 +204,7 @@ final class so {
             this.field_l = true;
             return;
           }
-          if (!tl.field_d) {
+          if (!ArchiveProvider.field_d) {
             return;
           }
           if (0 > param0) {
@@ -225,17 +225,17 @@ final class so {
         this.field_m = re.field_r;
         this.field_e = hn.field_p;
         if (this.field_m != 0 &&
-          wk.field_m != 0) {
+          PacketBuffer.field_m != 0) {
           if (0 >= this.field_e) {
             this.field_e = o.field_g;
             this.field_e = this.field_e - 1;
             if (0 == re.field_r &&
-              wk.field_m == 0) {
+              PacketBuffer.field_m == 0) {
               this.field_m = 0;
             }
             if (this.field_m == 0) {
               if (!this.field_l &&
-                !tl.field_d) {
+                !ArchiveProvider.field_d) {
                 return;
               }
               if (0 > param0) {
@@ -257,13 +257,13 @@ final class so {
           this.field_e = this.field_e - 1;
         }
         if (0 == re.field_r &&
-          wk.field_m == 0) {
+          PacketBuffer.field_m == 0) {
           this.field_m = 0;
           if (this.field_m != 0) {
             return;
           }
           if (!this.field_l &&
-            !tl.field_d) {
+            !ArchiveProvider.field_d) {
             return;
           }
         } else {
@@ -271,7 +271,7 @@ final class so {
             return;
           }
           if (!this.field_l &&
-            !tl.field_d) {
+            !ArchiveProvider.field_d) {
             return;
           }
         }
@@ -294,14 +294,14 @@ final class so {
         this.field_o = 0;
         this.field_a = 0;
         if (this.field_m == 0) {
-          this.field_a = vn.field_d;
+          this.field_a = IntrusiveDeque.field_d;
         }
         if (this.field_m == 0) {
-          if (vn.field_d != 96) {
+          if (IntrusiveDeque.field_d != 96) {
             if (this.field_m != 0) {
               if (this.field_m == 0) {
-                if (vn.field_d != 98 &&
-                  vn.field_d != 99) {
+                if (IntrusiveDeque.field_d != 98 &&
+                  IntrusiveDeque.field_d != 99) {
                   return;
                 }
                 this.field_l = false;
@@ -311,10 +311,10 @@ final class so {
               }
               return;
             }
-            if (vn.field_d != 97) {
+            if (IntrusiveDeque.field_d != 97) {
               if (this.field_m == 0) {
-                if (vn.field_d != 98 &&
-                  vn.field_d != 99) {
+                if (IntrusiveDeque.field_d != 98 &&
+                  IntrusiveDeque.field_d != 99) {
                   return;
                 }
                 this.field_l = false;
@@ -330,8 +330,8 @@ final class so {
               this.field_h = 0;
             }
             if (this.field_m == 0) {
-              if (vn.field_d != 98 &&
-                vn.field_d != 99) {
+              if (IntrusiveDeque.field_d != 98 &&
+                IntrusiveDeque.field_d != 99) {
                 return;
               }
               this.field_l = false;
@@ -348,7 +348,7 @@ final class so {
           this.field_l = false;
         }
         if (this.field_m == 0 &&
-          vn.field_d == 97) {
+          IntrusiveDeque.field_d == 97) {
           this.field_h = this.field_h + 1;
           this.field_l = false;
           if (this.field_h >= this.field_f) {
@@ -358,8 +358,8 @@ final class so {
         if (this.field_m != 0) {
           return;
         }
-        if (vn.field_d != 98 &&
-          vn.field_d != 99) {
+        if (IntrusiveDeque.field_d != 98 &&
+          IntrusiveDeque.field_d != 99) {
           return;
         }
         this.field_l = false;
@@ -376,10 +376,10 @@ final class so {
           field_p = (String) null;
         }
         if (this.field_m == 0) {
-          this.field_a = vn.field_d;
+          this.field_a = IntrusiveDeque.field_d;
         }
         if (this.field_m == 0 &&
-          vn.field_d == 98) {
+          IntrusiveDeque.field_d == 98) {
           if (this.field_h <= 0) {
             this.field_h = this.field_f;
           }
@@ -389,7 +389,7 @@ final class so {
         if (this.field_m != 0) {
           return;
         }
-        if (99 != vn.field_d) {
+        if (99 != IntrusiveDeque.field_d) {
           return;
         }
         this.field_h = this.field_h + 1;
@@ -473,10 +473,10 @@ final class so {
 
     final static aj[] c(int param0) {
         if (param0 == 96) {
-          return new aj[]{sc.field_W, vk.field_B, oc.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, dc.field_e};
+          return new aj[]{sc.field_W, vk.field_B, oc.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
         }
         field_i = (se) null;
-        return new aj[]{sc.field_W, vk.field_B, oc.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, dc.field_e};
+        return new aj[]{sc.field_W, vk.field_B, oc.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
     }
 
     final void d(int param0) {
@@ -486,7 +486,7 @@ final class so {
         if (0 != this.field_m) {
           return;
         }
-        this.field_a = vn.field_d;
+        this.field_a = IntrusiveDeque.field_d;
     }
 
     public static void a(boolean param0) {

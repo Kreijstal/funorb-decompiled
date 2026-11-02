@@ -6,35 +6,35 @@ class kc extends to {
     int field_z;
     int field_x;
     private int field_O;
-    qb field_R;
-    qb[] field_hb;
+    Sprite field_R;
+    Sprite[] field_hb;
     private int field_F;
-    qb[] field_v;
+    Sprite[] field_v;
     private boolean field_Q;
     int field_gb;
     int field_sb;
     int field_V;
-    qb field_w;
+    Sprite field_w;
     int field_eb;
-    qb[] field_Ab;
+    Sprite[] field_Ab;
     int field_u;
     private boolean field_E;
     private int field_qb;
     int field_ib;
     int field_t;
     int field_B;
-    qb field_vb;
-    qb[] field_K;
+    Sprite field_vb;
+    Sprite[] field_K;
     boolean field_C;
     private boolean field_pb;
     private int field_fb;
     int field_J;
     boolean field_yb;
-    static qb[] field_kb;
+    static Sprite[] field_kb;
     int field_X;
     int field_ob;
     int field_P;
-    vn field_G;
+    IntrusiveDeque field_G;
     private int field_mb;
     static int[] field_N;
     int field_U;
@@ -43,7 +43,7 @@ class kc extends to {
     int field_bb;
     private int field_tb;
     int field_Y;
-    qb field_lb;
+    Sprite field_lb;
     int field_zb;
     boolean field_A;
     dj field_Z;
@@ -51,8 +51,8 @@ class kc extends to {
     boolean field_ub;
     private int field_y;
     int field_cb;
-    qb field_W;
-    qb[] field_xb;
+    Sprite field_W;
+    Sprite[] field_xb;
     String field_rb;
     int field_wb;
     int field_S;
@@ -69,8 +69,8 @@ class kc extends to {
         int var13;
         int var14;
         int var15;
-        qb[] var16;
-        qb var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -236,10 +236,10 @@ class kc extends to {
           }
         }
         if (this.field_G != null) {
-          var24_ref = (kc) (this.field_G.b(12623));
+          var24_ref = (kc) (this.field_G.first(12623));
           while (var24_ref != null) {
             var24_ref.a(param0, param1, param2, this.field_I, param4, this.field_x, this.field_V + var19, (byte) 84, param8, this.field_Q, this.field_nb + var20);
-            var24_ref = (kc) (this.field_G.a(0));
+            var24_ref = (kc) (this.field_G.next(0));
           }
         }
         de.h(var12, var13, var14, var15);
@@ -249,7 +249,7 @@ class kc extends to {
         fd.field_i = !param0 ? true : false;
         ui.field_v = !param0 ? true : false;
         if (param1 < 28) {
-          this.field_xb = (qb[]) null;
+          this.field_xb = (Sprite[]) null;
         }
         this.a(de.field_e, 0, true, -1, de.field_j, 0);
     }
@@ -276,13 +276,13 @@ class kc extends to {
           }
         }
         if (null != this.field_G) {
-          var5 = (kc) (this.field_G.b(12623));
+          var5 = (kc) (this.field_G.first(12623));
           while (var5 != null) {
             var6 = var5.field_x + var5.field_T;
             if (var6 > var4) {
               var4 = var6;
             }
-            var5 = (kc) (this.field_G.a(0));
+            var5 = (kc) (this.field_G.next(0));
           }
         }
         return var4;
@@ -497,11 +497,11 @@ class kc extends to {
           this.e((byte) -84);
         }
         if (null != this.field_G) {
-          var4 = (kc) (this.field_G.a(true));
+          var4 = (kc) (this.field_G.last(true));
           while (var4 != null) {
             var4.field_E = true;
             var4.e((byte) 20);
-            var4 = (kc) (this.field_G.b((byte) 120));
+            var4 = (kc) (this.field_G.previous((byte) 120));
           }
         }
     }
@@ -514,9 +514,9 @@ class kc extends to {
         RuntimeException var3 = null;
         try {
           if (this.field_G == null) {
-            this.field_G = new vn();
+            this.field_G = new IntrusiveDeque();
           }
-          this.field_G.b(param0, -1);
+          this.field_G.addLast(param0, -1);
           if (param1 < 6) {
             this.field_z = -117;
           }
@@ -556,11 +556,11 @@ class kc extends to {
         int var9Lifetime1;
         if (!param2) {
           var9 = 0;
-          var10_ref_kc = (kc) (this.field_G.b(12623));
+          var10_ref_kc = (kc) (this.field_G.first(12623));
           while (var10_ref_kc != null) {
             var10_ref_kc.field_bb = var9 - var10_ref_kc.field_db;
             var9 = var9 + (var10_ref_kc.field_B + (var10_ref_kc.field_I + param1));
-            var10_ref_kc = (kc) (this.field_G.a(0));
+            var10_ref_kc = (kc) (this.field_G.next(0));
           }
           var8 = var9 - param1;
         }
@@ -659,16 +659,16 @@ class kc extends to {
         }
         stackIn_30_1 = (!ui.field_v) && (an.field_g >= de.field_i) && (de.field_h > an.field_g) && (me.field_I >= de.field_c) && (de.field_k > me.field_I);
         this.field_A = stackIn_30_1;
-        if (wk.field_m == 0) {
+        if (PacketBuffer.field_m == 0) {
           this.field_P = 0;
         }
-        stackIn_38_1 = (this.field_A) && (this.field_P == wk.field_m) && (param2);
+        stackIn_38_1 = (this.field_A) && (this.field_P == PacketBuffer.field_m) && (param2);
         this.field_C = stackIn_38_1;
         if (this.field_G != null) {
-          var13 = (kc) (this.field_G.a(true));
+          var13 = (kc) (this.field_G.last(true));
           while (var13 != null) {
             var13.a(this.field_x, this.field_nb, param2, -1, this.field_I, this.field_V);
-            var13 = (kc) (this.field_G.b((byte) 31));
+            var13 = (kc) (this.field_G.previous((byte) 31));
           }
         }
         if (this.field_A) {
@@ -761,7 +761,7 @@ class kc extends to {
           this.field_T = param2;
           this.field_I = param5;
           this.field_x = param4;
-          this.field_e = param0;
+          this.key = param0;
           this.field_db = param3;
           this.a(param1, (byte) 124);
           if (param6 != null) {

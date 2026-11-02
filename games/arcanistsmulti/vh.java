@@ -29,7 +29,7 @@ final class vh {
     int field_w;
     int field_j;
     static String field_m;
-    static vn field_a;
+    static IntrusiveDeque field_a;
 
     final static String a(int param0, int param1, CharSequence[] param2, boolean param3) {
         int var6_int = 0;
@@ -264,13 +264,13 @@ final class vh {
         var4.a((byte) -37, 0).b(0, 15658734).a((byte) -71, ff.a((byte) 109, 7829367, 10066329, 8947848));
         var4.a((byte) -121, 1).a((byte) -71, ff.a((byte) 35, 13421772, 10066329, 11184810));
         var4.a((byte) -68, 3).a((byte) -71, ff.a((byte) 53, 10066329, 7829367, 8947848)).c(-1, 1).a(1, (byte) 120);
-        qb[] var5 = new qb[9];
+        Sprite[] var5 = new Sprite[9];
         od var16 = new od(32, 32);
         od var18 = var16;
         for (var7_int = 0; var7_int < var18.field_A.length; var7_int++) {
           var16.field_A[var7_int] = 1077952576;
         }
-        var5[4] = (qb) ((Object) var18);
+        var5[4] = (Sprite) ((Object) var18);
         var4.a((byte) -62, 4).a(true, -5859).a((byte) -71, var5);
         var4.a((byte) -113, 5).a((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
         this.field_u = (pf) ((Object) var4);
@@ -288,11 +288,11 @@ final class vh {
         var8.a((byte) -25, 0).a((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
         var8.a((byte) -100, 4).a(true, -5859).a((byte) -71, var5);
         this.field_l = (pf) ((Object) var8);
-        qb[] var9 = new qb[9];
-        qb[] var10 = new qb[9];
-        var9[4] = new qb(2, 1);
-        var10[4] = new qb(1, 2);
-        qb dupTemp$2 = var9[4];
+        Sprite[] var9 = new Sprite[9];
+        Sprite[] var10 = new Sprite[9];
+        var9[4] = new Sprite(2, 1);
+        var10[4] = new Sprite(1, 2);
+        Sprite dupTemp$2 = var9[4];
         dupTemp$2.field_A = new int[]{6710886, 7829367};
         var10[4].field_A = new int[]{6710886, 7829367};
         mj var11 = new mj();
@@ -301,7 +301,7 @@ final class vh {
         var12.a((byte) 123, 0, var10);
         this.field_x = (pf) ((Object) var12);
         this.field_g = (pf) ((Object) var4);
-        qb var13 = new qb(7, 4);
+        Sprite var13 = new Sprite(7, 4);
         var13.field_A = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
         this.field_p = 10;
         if (param0 > -62) {

@@ -7,9 +7,9 @@ final class e extends df implements bn, vb {
     static String field_D;
     private ag field_L;
     private rn field_O;
-    static ll[] field_M;
+    static IndexedSprite[] field_M;
     private ag field_P;
-    static ll[] field_I;
+    static IndexedSprite[] field_I;
     private String field_E;
     static String field_C;
     private ag field_J;
@@ -50,11 +50,11 @@ final class e extends df implements bn, vb {
           if (param0 != -49) {
             return;
           }
-          var1 = (rb) (pb.field_m.b(12623));
+          var1 = (rb) (pb.field_m.first(12623));
           if (null != var1) {
             var1.field_h = var1.field_h - 1;
             if (var1.field_h < 0) {
-              var1.a(true);
+              var1.unlink(true);
             }
           }
           return;
@@ -173,7 +173,7 @@ final class e extends df implements bn, vb {
             e.g((byte) 123);
           }
           qj.field_a = param4;
-          mo.field_h = param2;
+          IntrusiveNodeHashTable.field_h = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ final class e extends df implements bn, vb {
         StringBuilder stackIn_103_1 = null;
         String stackIn_104_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wk var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -240,9 +240,9 @@ final class e extends df implements bn, vb {
         int var12Lifetime3;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2 = new wk(param0);
-          var2.field_g = param0.length - 2;
-          h.field_J = var2.n(-98);
+          var2 = new PacketBuffer(param0);
+          var2.position = param0.length - 2;
+          h.field_J = var2.readUnsignedShort(-98);
           jg.field_p = new int[h.field_J];
           vi.field_O = new byte[h.field_J][];
           be.field_d = new int[h.field_J];
@@ -250,17 +250,17 @@ final class e extends df implements bn, vb {
           ln.field_I = new byte[h.field_J][];
           hl.field_l = new int[h.field_J];
           dn.field_Ib = new boolean[h.field_J];
-          var2.field_g = param0.length - (7 + h.field_J * 8);
-          pb.field_g = var2.n(-98);
-          gn.field_a = var2.n(-98);
-          var3 = 1 + (var2.e((byte) -103) & 255);
+          var2.position = param0.length - (7 + h.field_J * 8);
+          pb.field_g = var2.readUnsignedShort(-98);
+          gn.field_a = var2.readUnsignedShort(-98);
+          var3 = 1 + (var2.readUnsignedByte((byte) -103) & 255);
           var4 = 0;
           do {
             if (!(var4 < h.field_J)) {
               var4 = 0;
               break;
             }
-            hl.field_l[var4] = var2.n(-98);
+            hl.field_l[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           do {
@@ -268,7 +268,7 @@ final class e extends df implements bn, vb {
               var4 = 0;
               break;
             }
-            be.field_d[var4] = var2.n(-98);
+            be.field_d[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           do {
@@ -276,22 +276,22 @@ final class e extends df implements bn, vb {
               var4 = 0;
               break;
             }
-            jg.field_p[var4] = var2.n(-98);
+            jg.field_p[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           do {
             if (!(h.field_J > var4)) {
-              var2.field_g = -(3 * (-1 + var3)) - 8 * h.field_J + (-7 + param0.length);
+              var2.position = -(3 * (-1 + var3)) - 8 * h.field_J + (-7 + param0.length);
               ph.field_c = new int[var3];
               break;
             }
-            ho.field_i[var4] = var2.n(-98);
+            ho.field_i[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           var4 = 1;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 >= var3))) {
-            ph.field_c[var4] = var2.h(11609);
+            ph.field_c[var4] = var2.readUnsignedMedium(11609);
             stackIn_42_0 = -1;
             stackIn_42_1 = ~ph.field_c[var4];
             if (var15 == 0) {
@@ -304,7 +304,7 @@ final class e extends df implements bn, vb {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var2.field_g = 0;
+            var2.position = 0;
             stackIn_42_0 = param1 ? 1 : 0;
             stackIn_42_1 = 1;
           }
@@ -326,7 +326,7 @@ final class e extends df implements bn, vb {
               var9 = new byte[var7];
               vi.field_O[var4] = var9;
               var10 = 0;
-              var11 = var2.e((byte) -117);
+              var11 = var2.readUnsignedByte((byte) -117);
               if (var15 != 0) {
                 return;
               }
@@ -334,13 +334,13 @@ final class e extends df implements bn, vb {
                 if ((var11 & 1) == 0) {
                   var12 = 0;
                   while (var12 < var7) {
-                    var8[var12] = var2.o(6);
+                    var8[var12] = var2.readByte(6);
                     var12++;
                   }
                   if ((0 != (var11 & 2))) {
                     var12Lifetime3 = 0;
                     while (var12Lifetime3 < var7) {
-                      dupTemp$0 = var2.o(6);
+                      dupTemp$0 = var2.readByte(6);
                       var9[var12Lifetime3] = dupTemp$0;
                       var13 = dupTemp$0;
                       stackIn_48_0 = var10;
@@ -361,7 +361,7 @@ final class e extends df implements bn, vb {
                     stackIn_81_0 = 0;
                     var13Lifetime1 = stackIn_81_0;
                     while (var6 > var13Lifetime1) {
-                      var8[var13Lifetime1 * var5 + var12Lifetime1] = var2.o(6);
+                      var8[var13Lifetime1 * var5 + var12Lifetime1] = var2.readByte(6);
                       var13Lifetime1++;
                     }
                     var12Lifetime1++;
@@ -378,7 +378,7 @@ final class e extends df implements bn, vb {
                       stackIn_47_0Lifetime1 = 0;
                       var13Lifetime2 = stackIn_47_0Lifetime1;
                       while (var13Lifetime2 < var6) {
-                        dupTemp$1 = var2.o(6);
+                        dupTemp$1 = var2.readByte(6);
                         var9[var5 * var13Lifetime2 + var12Lifetime2] = dupTemp$1;
                         var14 = dupTemp$1;
                         stackIn_86_0Lifetime1 = var10;
@@ -689,7 +689,7 @@ final class e extends df implements bn, vb {
                 return;
               }
             }
-            wk.k(970210916);
+            PacketBuffer.k(970210916);
             if (var7 == 0) {
               return;
             }

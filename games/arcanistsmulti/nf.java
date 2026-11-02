@@ -7,7 +7,7 @@ final class nf {
     int field_mb;
     private int field_w;
     private tg field_I;
-    ll field_V;
+    IndexedSprite field_V;
     private int[] field_ib;
     int field_t;
     int field_hb;
@@ -23,7 +23,7 @@ final class nf {
     private boolean field_zb;
     int[] field_Eb;
     int field_Q;
-    private mo field_B;
+    private IntrusiveNodeHashTable field_B;
     int field_Hb;
     int field_tb;
     int[] field_Ab;
@@ -37,17 +37,17 @@ final class nf {
     int[] field_U;
     static int[] field_z;
     int[] field_X;
-    vn field_kb;
+    IntrusiveDeque field_kb;
     int[] field_R;
     int field_bb;
     private int field_nb;
     int field_C;
     private int field_m;
     wf[] field_rb;
-    vn field_Kb;
+    IntrusiveDeque field_Kb;
     private int field_Cb;
     int[] field_cb;
-    vn field_i;
+    IntrusiveDeque field_i;
     int[] field_o;
     int[] field_ab;
     private int field_jb;
@@ -56,7 +56,7 @@ final class nf {
     int[] field_wb;
     static kc field_j;
     int[] field_b;
-    private vn field_Db;
+    private IntrusiveDeque field_Db;
     private int[][] field_lb;
     boolean field_D;
     String[] field_k;
@@ -66,7 +66,7 @@ final class nf {
     int[] field_n;
     int[] field_p;
     int[] field_K;
-    private ll field_Jb;
+    private IndexedSprite field_Jb;
     int[] field_Nb;
     tg field_h;
     int field_H;
@@ -81,7 +81,7 @@ final class nf {
     wf[] field_sb;
     int[] field_T;
     int field_F;
-    vn field_r;
+    IntrusiveDeque field_r;
     private int[][] field_vb;
     int[][] field_N;
     private int field_J;
@@ -196,10 +196,10 @@ final class nf {
         if (!param1) {
           this.field_u = (boolean[]) null;
         }
-        return (ml) (this.field_B.a((long)param0, (byte) -87));
+        return (ml) (this.field_B.get((long)param0, (byte) -87));
     }
 
-    final boolean b(int param0, int param1, int param2, qb param3) {
+    final boolean b(int param0, int param1, int param2, Sprite param3) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -294,11 +294,11 @@ final class nf {
         if (this.field_O == 5) {
           var4 = 4;
         }
-        L7: {
+        regionExit1: {
           var5 = 0;
           if (this.field_O != 6) {
             var6 = 0;
-            L8: while (true) {
+            scanLoop2: while (true) {
               stackIn_19_0 = ~this.field_H;
               stackIn_19_1 = ~var6;
               boolean decompiledFrameRemainder0 = true;
@@ -366,11 +366,11 @@ final class nf {
                 stackIn_51_0 = this.field_H;
                 stackIn_51_1 = var6;
                 if (stackIn_51_0 <= stackIn_51_1) {
-                  break L8;
+                  break scanLoop2;
                 }
                 stackIn_72_0 = 0;
                 if (var10 != 0) {
-                  break L7;
+                  break regionExit1;
                 }
                 var7Lifetime2 = stackIn_72_0;
                 while (this.field_y > var7Lifetime2) {
@@ -452,9 +452,9 @@ final class nf {
         byte stackOut_8_1;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ll var5 = null;
+        IndexedSprite var5 = null;
         int var6 = 0;
-        qb var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -467,21 +467,21 @@ final class nf {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        ll var20 = null;
+        IndexedSprite var20 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var4_int = uj.a(param1, 8, (byte) -61) + 8 * this.field_O;
           var6 = -115 % ((param2 + 59) / 54);
           var5 = go.field_j[var4_int];
-          var7 = new qb(512, 512);
+          var7 = new Sprite(512, 512);
           var8 = 128;
-          L0: while (var8 < -128 + this.field_y) {
+          scanLoop1: while (var8 < -128 + this.field_y) {
             var9 = 0;
             if (var19 != 0) {
               return;
             }
             var10 = 0;
-            L2: while (true) {
+            scanLoop2: while (true) {
               var10++;
               var11 = 0;
               var12 = 0;
@@ -515,7 +515,7 @@ final class nf {
                 }
                 stackIn_18_0 = var8;
                 stackIn_18_1 = var5.field_h / 4;
-                L10: {
+                regionExit3: {
                   boolean decompiledFrameRemainder1 = true;
                   boolean decompiledFrameRemainder0 = true;
                   var13 = stackIn_18_0 - stackIn_18_1;
@@ -534,7 +534,7 @@ final class nf {
                   if (decompiledFrameRemainder1) {
                     var4_int = uj.a(param1, 8, (byte) -26) + 8 * this.field_O;
                     var5 = go.field_j[var4_int];
-                    break L10;
+                    break regionExit3;
                   }
                   var9 = 1;
                   var14 = (var12 + var11) / 2;
@@ -551,14 +551,14 @@ final class nf {
                   if (!ig.field_a[var4_int]) {
                     var15 = 0;
                   }
-                  L19: {
+                  regionExit4: {
                     if (var4_int != 25 &&
                       26 != var4_int &&
                       var4_int != 27 &&
                       6 != var4_int) {
                       switch (var4_int) {
                         default:
-                          break L19;
+                          break regionExit4;
                         case 7:
                         case 33:
                         case 34:
@@ -655,7 +655,7 @@ final class nf {
                 }
                 if (var9 == 0 &&
                   var10 < 50) {
-                  continue L2;
+                  continue scanLoop2;
                 }
                 var4_int = uj.a(param1, 8, (byte) -83) + this.field_O * 8;
                 var20 = go.field_j[var4_int];
@@ -666,7 +666,7 @@ final class nf {
                   var8 += 24;
                 }
                 var8 = var8 + (32 + uj.a(param1, 128, (byte) -62));
-                continue L0;
+                continue scanLoop1;
               }
             }
           }
@@ -812,17 +812,17 @@ final class nf {
         int var18 = 0;
         int[] var19 = null;
         int[] var20 = null;
-        ll var21 = null;
-        ll var22 = null;
-        ll var23 = null;
-        ll var24 = null;
-        ll var25 = null;
-        ll var26 = null;
-        ll var27 = null;
-        ll var28 = null;
-        ll var29 = null;
-        ll var30 = null;
-        ll var33 = null;
+        IndexedSprite var21 = null;
+        IndexedSprite var22 = null;
+        IndexedSprite var23 = null;
+        IndexedSprite var24 = null;
+        IndexedSprite var25 = null;
+        IndexedSprite var26 = null;
+        IndexedSprite var27 = null;
+        IndexedSprite var28 = null;
+        IndexedSprite var29 = null;
+        IndexedSprite var30 = null;
+        IndexedSprite var33 = null;
         int[] var34 = null;
         int[] var35 = null;
         int[] var40 = null;
@@ -876,7 +876,7 @@ final class nf {
                 var5[var9] = -(var4 >> 1) + (this.field_y - 1);
               }
               var10 = 0;
-              L7: while (true) {
+              scanLoop1: while (true) {
                 stackIn_16_0 = ~var4;
                 stackIn_16_1 = ~var10;
                 if (stackIn_16_0 < stackIn_16_1) {
@@ -902,7 +902,7 @@ final class nf {
                     var11++;
                   }
                   var10++;
-                  continue L7;
+                  continue scanLoop1;
                 }
                 break;
               }
@@ -911,7 +911,7 @@ final class nf {
             }
             if (decompiledFrameRemainder0) {
               System.gc();
-              this.field_V = new ll(this.field_y, this.field_H, gg.field_c);
+              this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
             }
             if (null != ti.field_I) {
               this.field_V.field_l = ti.field_I[this.field_O].field_l;
@@ -956,7 +956,7 @@ final class nf {
             var41 = new int[1000];
             var12 = 0;
             var13 = 0;
-            L22: while (true) {
+            scanLoop2: while (true) {
               stackIn_48_0 = 1000;
               stackIn_48_1 = var13;
               if (stackIn_48_0 > stackIn_48_1) {
@@ -984,7 +984,7 @@ final class nf {
                   this.a(false, var14, this.field_V, false, var15, var33.b());
                 }
                 var13++;
-                continue L22;
+                continue scanLoop2;
               }
               break;
             }
@@ -1056,7 +1056,7 @@ final class nf {
             var4 = 0;
           }
           var5 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             stackIn_5_0 = -1 + param0.length;
             while (true) {
               stackIn_6_0 = stackIn_5_0;
@@ -1074,7 +1074,7 @@ final class nf {
                   if (var21 == 0) {
                     boolean decompiledFrameCompleted0 = true;
                     if (stackIn_100_0 < stackIn_100_1) {
-                      L8: do {
+                      scanLoop2: do {
                         boolean decompiledFrameRemainder1 = true;
                         var11 = 0;
                         if (var5 < -2 + param0.length) {
@@ -1234,7 +1234,7 @@ final class nf {
                       }
                     }
                     var5++;
-                    continue L1;
+                    continue scanLoop1;
                   }
                 } else {
                   stackIn_100_0 = param1;
@@ -1314,7 +1314,7 @@ final class nf {
             sf.a(param1.field_vb[var3_int], 0, this.field_vb[var3_int], 0, 16);
             var3_int++;
           } while (var5 == 0);
-          L10: while (true) {
+          scanLoop1: while (true) {
             if (this.field_L.length > var3_int) {
               sf.a(param1.field_L[var3_int], 0, this.field_L[var3_int], 0, 16);
               var3_int++;
@@ -1322,47 +1322,47 @@ final class nf {
                 continue;
               }
             } else {
-              var3 = (ml) (this.field_i.b(12623));
+              var3 = (ml) (this.field_i.first(12623));
               while (true) {
                 if (var3 != null) {
-                  var3.a(true);
-                  var3.a((byte) 88);
-                  var3 = (ml) (this.field_i.a(0));
+                  var3.unlink(true);
+                  var3.unlinkSecondary((byte) 88);
+                  var3 = (ml) (this.field_i.next(0));
                   if (var5 == 0) {
                     continue;
                   }
                 } else {
-                  var3_ref = (mi) (this.field_Kb.b(12623));
+                  var3_ref = (mi) (this.field_Kb.first(12623));
                   do {
                     if (var3_ref == null) {
-                      var3_ref = (mi) (this.field_r.b(12623));
+                      var3_ref = (mi) (this.field_r.first(12623));
                       break;
                     }
                     var3_ref.f(0);
-                    var3_ref = (mi) (this.field_Kb.a(0));
+                    var3_ref = (mi) (this.field_Kb.next(0));
                   } while (var5 == 0);
                   do {
                     if (var3_ref == null) {
-                      this.field_Kb.c(-3);
-                      this.field_r.c(3);
+                      this.field_Kb.clear(-3);
+                      this.field_r.clear(3);
                       break;
                     }
                     var3_ref.f(0);
-                    var3_ref = (mi) (this.field_r.a(0));
+                    var3_ref = (mi) (this.field_r.next(0));
                   } while (var5 == 0);
-                  var3 = (ml) (param1.field_i.b(12623));
+                  var3 = (ml) (param1.field_i.first(12623));
                 }
                 break;
               }
               do {
                 if (var3 == null) {
-                  var3 = (ml) (this.field_i.b(12623));
+                  var3 = (ml) (this.field_i.first(12623));
                   break;
                 }
                 var6 = var3.a(this, (byte) 59);
-                this.field_i.b(var6, -1);
-                this.field_B.a(var6, (long)var6.field_T, (byte) 121);
-                var3 = (ml) (param1.field_i.a(0));
+                this.field_i.addLast(var6, -1);
+                this.field_B.put(var6, (long)var6.field_T, (byte) 121);
+                var3 = (ml) (param1.field_i.next(0));
               } while (var5 == 0);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
@@ -1374,40 +1374,40 @@ final class nf {
                   if (null != var7.field_s) {
                     var3.field_s = this.a(var7.field_s.field_T, true);
                   }
-                  var3 = (ml) (this.field_i.a(0));
+                  var3 = (ml) (this.field_i.next(0));
                   continue;
                 }
                 break;
               }
               if (decompiledNaturalLoopExit0) {
-                stackIn_59_0 = param1.field_Kb.b(12623);
+                stackIn_59_0 = param1.field_Kb.first(12623);
               }
               var3_ref = (mi) (stackIn_59_0);
               do {
                 if (var3_ref == null) {
-                  var3_ref = (mi) (param1.field_r.b(12623));
+                  var3_ref = (mi) (param1.field_r.first(12623));
                   break;
                 }
                 var4 = var3_ref.b(21310, this);
-                this.field_Kb.b(var4, -1);
-                var3_ref = (mi) (param1.field_Kb.a(0));
+                this.field_Kb.addLast(var4, -1);
+                var3_ref = (mi) (param1.field_Kb.next(0));
               } while (var5 == 0);
               do {
                 if (var3_ref == null) {
                   if (param1.field_I.b(116) == null &&
-                    param1.field_kb.b(true) &&
+                    param1.field_kb.isEmpty(true) &&
                     param1.field_h.d(122)) {
                     this.field_I.a(17);
-                    this.field_kb.c(74);
+                    this.field_kb.clear(74);
                     this.field_h.a(17);
                     var3_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   break;
                 }
                 var4 = var3_ref.b(21310, this);
-                this.field_r.b(var4, -1);
-                var3_ref = (mi) (param1.field_r.a(0));
+                this.field_r.addLast(var4, -1);
+                var3_ref = (mi) (param1.field_r.next(0));
               } while (var5 == 0);
               throw new RuntimeException();
             }
@@ -1473,10 +1473,10 @@ final class nf {
             throw new IllegalStateException();
           }
           this.field_Mb = false;
-          if (!param1.field_Db.b(true)) {
+          if (!param1.field_Db.isEmpty(true)) {
             throw new IllegalStateException();
           }
-          this.field_Db.c(29);
+          this.field_Db.clear(29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1732,16 +1732,16 @@ final class nf {
         if (param0 != -1) {
           field_e = (String) null;
         }
-        L2: {
+        regionExit1: {
           boolean decompiledFrameRemainder0 = true;
           var2 = this.field_J;
           if (!this.field_d) {
-            L4: while (true) {
+            scanLoop2: while (true) {
               this.field_jb = this.field_jb + 1;
               this.field_J = (this.field_J + 1) % this.field_q;
               do {
                 if (this.a(this.field_J, true) == null) {
-                  continue L4;
+                  continue scanLoop2;
                 }
               } while (var3 != 0);
               break;
@@ -1750,24 +1750,24 @@ final class nf {
           }
           else {
             this.field_J = this.field_Cb;
-            L6: while (true) {
+            scanLoop3: while (true) {
               this.field_J = (this.field_J + 2) % this.field_q;
               this.field_jb = this.field_jb + 1;
               do {
                 if (this.a(this.field_J, true) == null) {
-                  continue L6;
+                  continue scanLoop3;
                 }
               } while (var3 != 0);
               break;
             }
-            break L2;
+            break regionExit1;
           }
-          L8: while (true) {
+          scanLoop4: while (true) {
             this.field_jb = this.field_jb + 1;
             this.field_J = (this.field_J + 1) % this.field_q;
             do {
               if (this.a(this.field_J, true) == null) {
-                continue L8;
+                continue scanLoop4;
               }
             } while (var3 != 0);
             break;
@@ -1793,7 +1793,7 @@ final class nf {
             -16 + this.field_H >= param1) {
             discarded$3 = this.a(param0, var5_int >> 1, this.field_H - 16, -59);
             if (param2 != -75) {
-              this.field_i = (vn) null;
+              this.field_i = (IntrusiveDeque) null;
             }
             stackIn_12_0 = !(jo.field_b);
             return stackIn_12_0;
@@ -1813,7 +1813,7 @@ final class nf {
         }
     }
 
-    final vn g(byte param0) {
+    final IntrusiveDeque g(byte param0) {
         if (param0 <= 33) {
           this.p(-3);
         }
@@ -1897,7 +1897,7 @@ final class nf {
           var5 = var14;
           this.field_w = -320;
           var6 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var17.length > var6) {
               var5[var6] = this.field_H - (uj.a(param0, this.field_H / 3, (byte) -126) + Math.abs((this.field_y / 2 - this.field_y * var6 / var17.length) * this.field_H / this.field_y));
               var6++;
@@ -1905,13 +1905,13 @@ final class nf {
                 continue;
               }
             } else {
-              L4: while (true) {
+              scanLoop2: while (true) {
                 if (var5.length < (this.field_y / 64)) {
                   var3_int = 100;
                   stackIn_21_0 = var5.length;
                   stackIn_21_1 = this.field_y / 8;
                   if (var13 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_21_0 > stackIn_21_1) {
                     var3_intLifetime2 = 5;
@@ -1938,7 +1938,7 @@ final class nf {
                       var6++;
                     }
                     var5 = var7;
-                    continue L4;
+                    continue scanLoop2;
                   }
                 }
                 break;
@@ -1969,12 +1969,12 @@ final class nf {
           while (true) {
             stackIn_29_0 = -3;
             stackIn_29_1 = ~var8;
-            L16: {
+            regionExit3: {
               if (stackIn_29_0 < stackIn_29_1) {
-                L18: while (true) {
+                scanLoop4: while (true) {
                   stackIn_47_0 = ~this.field_y;
                   if (var13 != 0) {
-                    break L16;
+                    break regionExit3;
                   }
                   if (stackIn_47_0 < ~var18[var8].length) {
                     var3_intLifetime1 = 100;
@@ -2007,7 +2007,7 @@ final class nf {
                         var6++;
                       }
                       var7_array[var8] = var19;
-                      continue L18;
+                      continue scanLoop4;
                     }
                   }
                   break;
@@ -2090,7 +2090,7 @@ final class nf {
         try {
           param3 = param3 - bg.field_e.field_w;
           if (param2 != 30882) {
-            this.field_Kb = (vn) null;
+            this.field_Kb = (IntrusiveDeque) null;
           }
           param0 = param0 - bg.field_e.field_n / 2;
           if (0 <= param0 &&
@@ -2117,7 +2117,7 @@ final class nf {
         }
     }
 
-    final vn e(int param0) {
+    final IntrusiveDeque e(int param0) {
         int var2 = -15 / ((-54 - param0) / 34);
         return this.field_Kb;
     }
@@ -2129,7 +2129,7 @@ final class nf {
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qb var6 = null;
+        Sprite var6 = null;
         RuntimeException var6_ref = null;
         try {
           var6 = uj.field_i[0];
@@ -2211,7 +2211,7 @@ final class nf {
         return false;
     }
 
-    final void a(int param0, int param1, ll param2, int param3) {
+    final void a(int param0, int param1, IndexedSprite param2, int param3) {
         try {
           int var5_int = 37 % ((-78 - param0) / 34);
           this.a(param3, this.field_Jb, param2, param1, -126);
@@ -2353,7 +2353,7 @@ final class nf {
           ge.field_p.a((byte) 31, this.field_i);
         }
         var3 = (ml) (ge.field_p.b(-98));
-        L9: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameCompleted1 = true;
           if (var3 != null) {
             stackIn_250_0 = ~var3.field_u;
@@ -2379,7 +2379,7 @@ final class nf {
                   var3.field_jb != 12 &&
                   !var3.field_U) {
                   var4 = null;
-                  var5_ref_mi = (mi) (this.field_Kb.b(12623));
+                  var5_ref_mi = (mi) (this.field_Kb.first(12623));
                   while (var5_ref_mi != null) {
                     stackIn_41_0 = -107;
                     stackIn_41_1 = ~var5_ref_mi.field_I;
@@ -2391,7 +2391,7 @@ final class nf {
                       var5_ref_mi.field_t == var3) {
                       var4 = var5_ref_mi;
                     }
-                    var5_ref_mi = (mi) (this.field_Kb.a(0));
+                    var5_ref_mi = (mi) (this.field_Kb.next(0));
                   }
                   if (decompiledFrameCompleted0) {
                     if (var4 != null) {
@@ -2543,7 +2543,7 @@ final class nf {
               stackIn_111_0 = stackOut_105_0;
               stackIn_106_0 = stackOut_105_0;
               if (var31 != 0) {
-                break L9;
+                break scanLoop1;
               }
               stackIn_107_0 = ~stackIn_106_0.field_jb;
               stackIn_107_1 = -36;
@@ -2555,7 +2555,7 @@ final class nf {
               var3 = (ml) (ge.field_p.d(-18502));
             }
           }
-          stackIn_111_0 = this.field_Kb.b(12623);
+          stackIn_111_0 = this.field_Kb.first(12623);
           break;
         }
         var3_ref = (mi) (stackIn_111_0);
@@ -2810,7 +2810,7 @@ final class nf {
               }
             }
           }
-          var3_ref = (mi) (this.field_Kb.a(0));
+          var3_ref = (mi) (this.field_Kb.next(0));
         }
         this.p((byte) 123);
         return;
@@ -2905,7 +2905,7 @@ final class nf {
               this.b(52, var19);
               this.field_mb = -1;
               var6 = 0;
-              var7 = (ml) (this.field_i.b(param0 ^ -29924));
+              var7 = (ml) (this.field_i.first(param0 ^ -29924));
               while (var7 != null) {
                 stackIn_68_0 = ~var7.field_jb;
                 stackIn_68_1 = -12;
@@ -2927,7 +2927,7 @@ final class nf {
                   this.field_t = var7.field_R >> 4;
                   this.field_mb = var7.field_X >> 4;
                 }
-                var7 = (ml) (this.field_i.a(0));
+                var7 = (ml) (this.field_i.next(0));
               }
               stackIn_68_0Lifetime1 = -1;
               stackIn_68_1Lifetime1 = this.field_mb;
@@ -3077,7 +3077,7 @@ final class nf {
 
     final boolean a(ml param0, int param1, int param2, int param3) {
         boolean discarded$1 = false;
-        ll var6 = null;
+        IndexedSprite var6 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -3115,7 +3115,7 @@ final class nf {
         }
     }
 
-    private final void a(int param0, int param1, ll param2, int param3, ll param4) {
+    private final void a(int param0, int param1, IndexedSprite param2, int param3, IndexedSprite param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -3174,7 +3174,7 @@ final class nf {
           }
           if (var9 > 0 &&
             var8 > 0) {
-            vn.a(param2.field_m, var9, var7, 111, var6_int, var11, var8, param4.field_m, var10, true);
+            IntrusiveDeque.a(param2.field_m, var9, var7, 111, var6_int, var11, var8, param4.field_m, var10, true);
             return;
           }
           return;
@@ -3286,7 +3286,7 @@ final class nf {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        this.field_Db.b(new ge(param0, param7, param4, param5, param8, param6, param1, param3), -1);
+        this.field_Db.addLast(new ge(param0, param7, param4, param5, param8, param6, param1, param3), -1);
         int var10 = -97 % ((param2 + 41) / 40);
     }
 
@@ -3296,7 +3296,7 @@ final class nf {
         if (param0 != -128) {
           discarded$1 = this.a(-37, (jd) null);
         }
-        stackIn_7_0 = (this.j((byte) -94)) || !(this.field_Db.b(true));
+        stackIn_7_0 = (this.j((byte) -94)) || !(this.field_Db.isEmpty(true));
         return stackIn_7_0;
     }
 
@@ -3312,7 +3312,7 @@ final class nf {
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           this.a(false, (ol) null, 106);
           if (!this.d((byte) -128) &&
             !this.field_zb &&
@@ -3325,7 +3325,7 @@ final class nf {
           var2++;
           do {
             if (4096 >= var2) {
-              continue L0;
+              continue scanLoop1;
             }
           } while (var3 != 0);
           break;
@@ -3349,7 +3349,7 @@ final class nf {
             (this.field_l)) {
             return;
           }
-          this.field_kb.b(param1, -1);
+          this.field_kb.addLast(param1, -1);
           if (param0 != 52) {
             this.field_Z = true;
           }
@@ -3509,7 +3509,7 @@ final class nf {
         }
     }
 
-    final vn l(byte param0) {
+    final IntrusiveDeque l(byte param0) {
         if (param0 != 48) {
           this.field_t = -21;
         }
@@ -3579,7 +3579,7 @@ final class nf {
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        qb var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int[] var10_ref_int__ = null;
@@ -3632,13 +3632,13 @@ final class nf {
         boolean decompiledFrameRemainder3 = true;
         var3 = 0;
         var4 = this.field_q;
-        var7 = new qb(36, 36);
+        var7 = new Sprite(36, 36);
         var7.a();
         de.i(18, 18, 16, 16777215);
         if (this.field_d) {
           var8 = 0;
           var9 = this.field_q;
-          L4: while (true) {
+          scanLoop1: while (true) {
             var29 = new int[var4];
             var21 = var29;
             var6 = var21;
@@ -3647,9 +3647,9 @@ final class nf {
             var20 = var28;
             var5 = var20;
             var12 = 0;
-            L5: while (true) {
+            scanLoop2: while (true) {
               stackIn_6_0 = ~var4;
-              L6: while (true) {
+              scanLoop3: while (true) {
                 if (stackIn_6_0 < ~var12) {
                   var13 = this.field_y / 2 * (1 + var12) / (1 + var4);
                   stackIn_33_0 = var12 & 1;
@@ -3702,7 +3702,7 @@ final class nf {
                       }
                     }
                     var12++;
-                    continue L5;
+                    continue scanLoop2;
                   }
                 } else {
                   stackIn_33_0 = ~this.field_q;
@@ -3710,7 +3710,7 @@ final class nf {
                 if (stackIn_33_0 < ~var3) {
                   var4 += 4;
                   if (var4 < 100) {
-                    continue L4;
+                    continue scanLoop1;
                   }
                 }
                 while (true) {
@@ -3724,7 +3724,7 @@ final class nf {
                   var11 = var17;
                   stackIn_6_0 = 0;
                   if (var16 != 0) {
-                    continue L6;
+                    continue scanLoop3;
                   }
                   var12 = stackIn_6_0;
                   while (true) {
@@ -3844,7 +3844,7 @@ final class nf {
           decompiledFrameRemainder3 = false;
         }
         else {
-          L41: while (true) {
+          scanLoop4: while (true) {
             array$5 = new int[var4];
             var19 = array$5;
             var6 = array$5;
@@ -3853,7 +3853,7 @@ final class nf {
             var5 = array$6;
             var3 = 0;
             var8 = 0;
-            L42: while (true) {
+            scanLoop5: while (true) {
               stackIn_88_0 = ~var4;
               do {
                 if (stackIn_88_0 < ~var8) {
@@ -3909,7 +3909,7 @@ final class nf {
                       }
                     }
                     var8++;
-                    continue L42;
+                    continue scanLoop5;
                   }
                 } else {
                   stackIn_115_0 = ~var3;
@@ -3919,7 +3919,7 @@ final class nf {
                   var16 != 0) {
                   var4 += 4;
                   if (var4 < 100) {
-                    continue L41;
+                    continue scanLoop4;
                   }
                 }
                 this.field_nb = 0;
@@ -3990,7 +3990,7 @@ final class nf {
           if (var4_int != 0) {
             this.a(-109, param1);
           }
-          var5 = (mi) (this.field_Kb.b(12623));
+          var5 = (mi) (this.field_Kb.first(12623));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var5 == null))) {
             var5.a(this.field_jb, (byte) -47, this.field_t, this.field_mb);
@@ -3998,10 +3998,10 @@ final class nf {
             stackIn_14_0 = stackOut_9_0;
             stackIn_10_0 = stackOut_9_0;
             if (var6 == 0) {
-              if (((mi) (Object) stackIn_10_0).b((byte) -32)) {
+              if (((mi) (Object) stackIn_10_0).isLinked((byte) -32)) {
                 this.field_Gb = this.field_Gb | var5.h(-139);
               }
-              var5 = (mi) (this.field_Kb.a(0));
+              var5 = (mi) (this.field_Kb.next(0));
               continue;
             }
             break;
@@ -4023,7 +4023,7 @@ final class nf {
                 this.field_zb = true;
               }
               var5_ref.k(-55);
-              if (var5_ref.b((byte) -32)) {
+              if (var5_ref.isLinked((byte) -32)) {
                 this.field_Gb = this.field_Gb | var5_ref.f(true);
                 this.field_Mb = this.field_Mb | var5_ref.e(120);
               } else {
@@ -4131,7 +4131,7 @@ final class nf {
             var5++;
           } while (var12 == 0);
           var4[1 + var5] = (var4[param0 + var5] + var16[var5]) / 2;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var4.length < this.field_y) {
               var6 = new int[var4.length * 2 - 1];
               stackIn_10_0 = var6;
@@ -4141,7 +4141,7 @@ final class nf {
                 stackIn_10_0[stackIn_10_1] = stackIn_10_2;
                 stackIn_20_0 = 1;
                 if (var12 != 0) {
-                  break L3;
+                  break scanLoop1;
                 }
                 var5 = stackIn_20_0;
                 while (var5 < var4.length) {
@@ -4159,7 +4159,7 @@ final class nf {
                   var5++;
                 }
                 var4 = var6;
-                continue L3;
+                continue scanLoop1;
               }
             }
             stackIn_20_0 = 6;
@@ -4185,12 +4185,12 @@ final class nf {
           var7 = 0;
           while (true) {
             stackIn_25_0 = ~var7;
-            L14: {
+            regionExit2: {
               if (stackIn_25_0 > -7) {
-                L16: while (true) {
+                scanLoop3: while (true) {
                   stackIn_40_0 = ~var17[var7].length;
                   if (var12 != 0) {
-                    break L14;
+                    break regionExit2;
                   }
                   if (stackIn_40_0 > ~this.field_y) {
                     var18 = new int[1 + 2 * (var17[var7].length - 1)];
@@ -4218,7 +4218,7 @@ final class nf {
                         var5++;
                       }
                       var6_array[var7] = var18;
-                      continue L16;
+                      continue scanLoop3;
                     }
                   }
                   break;
@@ -4449,7 +4449,7 @@ final class nf {
     final boolean m(int param0) {
         boolean discarded$0 = false;
         if (param0 != -28046) {
-          discarded$0 = this.a((ml) null, (qb) null, 91, 30, -97);
+          discarded$0 = this.a((ml) null, (Sprite) null, 91, 30, -97);
         }
         return this.field_l;
     }
@@ -4542,7 +4542,7 @@ final class nf {
         return false;
     }
 
-    final boolean a(int param0, qb param1, int param2, int param3, int param4) {
+    final boolean a(int param0, Sprite param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -4580,7 +4580,7 @@ final class nf {
         }
     }
 
-    final void a(int param0, int param1, int param2, qb param3) {
+    final void a(int param0, int param1, int param2, Sprite param3) {
         try {
           if (param1 > -3) {
             this.c((byte) 69);
@@ -4597,11 +4597,11 @@ final class nf {
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_nb = 0;
-        var2 = (ml) (this.field_i.b(param0 ^ -12561));
+        var2 = (ml) (this.field_i.first(param0 ^ -12561));
         while (var2 != null) {
-          var2.a(true);
-          var2.a((byte) 88);
-          var2 = (ml) (this.field_i.a(0));
+          var2.unlink(true);
+          var2.unlinkSecondary((byte) 88);
+          var2 = (ml) (this.field_i.next(0));
           if (var3 != 0) {
             return;
           }
@@ -4609,8 +4609,8 @@ final class nf {
         if (param0 != -96) {
           return;
         }
-        this.field_Kb.c(param0 + 91);
-        this.field_r.c(-126);
+        this.field_Kb.clear(param0 + 91);
+        this.field_r.clear(-126);
         return;
     }
 
@@ -4636,7 +4636,7 @@ final class nf {
         int var6Lifetime1;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 649860712) {
-          this.field_Jb = (ll) null;
+          this.field_Jb = (IndexedSprite) null;
         }
         var16 = new jd(new int[]{this.field_Q, -1});
         this.field_O = this.field_xb;
@@ -4656,7 +4656,7 @@ final class nf {
           if (null == mn.field_y ||
             this.field_y != mn.field_y.field_g ||
             mn.field_y.field_k != this.field_H) {
-            mn.field_y = new ll(this.field_y, this.field_H, gg.field_c);
+            mn.field_y = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
             decompiledFrameRemainder2 = (null != go.field_j);
             if (decompiledFrameRemainder2) {
               mn.field_y.field_l = go.field_j[8 * this.field_O].field_l;
@@ -4695,7 +4695,7 @@ final class nf {
           if (null == mn.field_y ||
             this.field_y != mn.field_y.field_g ||
             mn.field_y.field_k != this.field_H) {
-            mn.field_y = new ll(this.field_y, this.field_H, gg.field_c);
+            mn.field_y = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
             decompiledFrameRemainder2 = (null != go.field_j);
             if (decompiledFrameRemainder2) {
               mn.field_y.field_l = go.field_j[8 * this.field_O].field_l;
@@ -4785,7 +4785,7 @@ final class nf {
         }
         if (var4_array != null) {
           System.gc();
-          this.field_V = new ll(this.field_y, this.field_H, gg.field_c);
+          this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
           if (ti.field_I != null) {
             this.field_V.field_l = ti.field_I[this.field_O].field_l;
           }
@@ -4794,7 +4794,7 @@ final class nf {
           this.a(0, 113, this.field_V, 0, mn.field_y);
           this.b((byte) 5);
         }
-        this.field_Jb = new ll(this.field_hb, this.field_Hb, gg.field_c);
+        this.field_Jb = new IndexedSprite(this.field_hb, this.field_Hb, gg.field_c);
         this.field_Jb.field_l = this.field_V.field_l;
         this.a(0, this.field_Jb, this.field_V, 0, -126);
         var5Lifetime1 = 0;
@@ -4918,7 +4918,7 @@ final class nf {
             var5++;
           } while (var12 == 0);
           var4[var5 + 1] = (var17[var5] + var4[1 + var5]) / 2;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var4.length < this.field_y) {
               var13 = new int[2 * (var4.length - 1) + 1];
               var6 = var13;
@@ -4929,7 +4929,7 @@ final class nf {
                 stackIn_10_0[stackIn_10_1] = stackIn_10_2;
                 stackIn_20_0 = 1;
                 if (var12 != 0) {
-                  break L3;
+                  break scanLoop1;
                 }
                 var5 = stackIn_20_0;
                 while (var4.length > var5) {
@@ -4947,19 +4947,19 @@ final class nf {
                   var5++;
                 }
                 var4 = var6;
-                continue L3;
+                continue scanLoop1;
               }
             }
             stackIn_20_0 = 0;
             break;
           }
           var5 = stackIn_20_0;
-          L10: while (true) {
+          scanLoop2: while (true) {
             if (var4.length > var5) {
               var6_int = this.field_y * var5 / var4.length + this.field_y * var4[var5];
               stackIn_31_0 = 0;
               if (var12 != 0) {
-                break L10;
+                break scanLoop2;
               }
               var7 = stackIn_31_0;
               while (var7 < this.field_H - var4[var5]) {
@@ -4968,7 +4968,7 @@ final class nf {
                 var7++;
               }
               var5++;
-              continue L10;
+              continue scanLoop2;
             }
             stackIn_31_0 = 6;
             break;
@@ -4977,7 +4977,7 @@ final class nf {
           var15 = var18;
           var6_array = var15;
           if (param0 < 18) {
-            this.a(-85, (byte) 104, 4, (ll) null, (qb) null);
+            this.a(-85, (byte) 104, 4, (IndexedSprite) null, (Sprite) null);
           }
           var5 = 0;
           do {
@@ -5001,12 +5001,12 @@ final class nf {
           var7Lifetime1 = 0;
           while (true) {
             stackIn_41_0 = -7;
-            L22: {
+            regionExit3: {
               if (stackIn_41_0 < ~var7Lifetime1) {
-                L24: while (true) {
+                scanLoop4: while (true) {
                   stackIn_56_0 = ~var18[var7Lifetime1].length;
                   if (var12 != 0) {
-                    break L22;
+                    break regionExit3;
                   }
                   if (stackIn_56_0 > ~this.field_y) {
                     var19 = new int[-2 + (var18[var7Lifetime1].length * 2 + 1)];
@@ -5035,7 +5035,7 @@ final class nf {
                         var5++;
                       }
                       var6_array[var7Lifetime1] = var19;
-                      continue L24;
+                      continue scanLoop4;
                     }
                   }
                   break;
@@ -5195,17 +5195,17 @@ final class nf {
 
     final void a(byte param0, ml param1) {
         try {
-          this.field_i.b(param1, -1);
+          this.field_i.addLast(param1, -1);
           if (param0 > -114) {
             this.field_f = false;
           }
-          this.field_B.a(param1, (long)param1.field_T, (byte) 110);
+          this.field_B.put(param1, (long)param1.field_T, (byte) 110);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nf.KD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, byte param1, int param2, ll param3, qb param4) {
+    private final void a(int param0, byte param1, int param2, IndexedSprite param3, Sprite param4) {
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -5301,14 +5301,14 @@ final class nf {
           var29 = var31;
           var17 = var29;
           var18 = var15;
-          L8: while (true) {
+          scanLoop1: while (true) {
             stackIn_23_0 = var18;
             if (stackIn_23_0 <= var16) {
               if (var26 != 0) {
                 return;
               }
               var19 = var13;
-              L11: while (true) {
+              scanLoop2: while (true) {
                 stackIn_27_0 = var19;
                 stackIn_27_1 = var14;
                 if (stackIn_27_0 <= stackIn_27_1) {
@@ -5336,12 +5336,12 @@ final class nf {
                   }
                   param3.field_m[var21] = (byte)hk.field_p[this.field_O].a(fj.b(fj.b(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
                   var19 += 2;
-                  continue L11;
+                  continue scanLoop2;
                 }
                 break;
               }
               var18 += 2;
-              continue L8;
+              continue scanLoop1;
             }
             break;
           }
@@ -5437,7 +5437,7 @@ final class nf {
         int[] var6_ref_int__ = null;
         int var6 = 0;
         int var7_int = 0;
-        ll var7 = null;
+        IndexedSprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -5468,7 +5468,7 @@ final class nf {
             var5++;
           } while (var15 == 0);
           var16[var20.length - 1] = var20[0];
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var4.length < (this.field_y / 32)) {
               var6_ref_int__ = new int[1 + (2 * var4.length - 2)];
               stackIn_10_0 = var6_ref_int__;
@@ -5478,7 +5478,7 @@ final class nf {
                 stackIn_10_0[stackIn_10_1] = stackIn_10_2;
                 stackIn_20_0 = 1;
                 if (var15 != 0) {
-                  break L3;
+                  break scanLoop1;
                 }
                 var5 = stackIn_20_0;
                 while (var4.length > var5) {
@@ -5497,7 +5497,7 @@ final class nf {
                   var5++;
                 }
                 var4 = var6_ref_int__;
-                continue L3;
+                continue scanLoop1;
               }
             }
             this.a(var4, (byte) -113);
@@ -5506,11 +5506,11 @@ final class nf {
             break;
           }
           var6 = stackIn_20_0;
-          L10: while (true) {
+          scanLoop2: while (true) {
             var5++;
             var7_int = uj.a(param1, this.field_y / 2, (byte) -94) + this.field_y / 4;
             var8 = 2;
-            L11: while (true) {
+            scanLoop3: while (true) {
               var9 = this.field_y * var8 + var7_int;
               while (this.field_H > var8) {
                 if (mn.field_y.field_m[var9] == 0) {
@@ -5528,7 +5528,7 @@ final class nf {
                   var7_int = var7_int - this.field_y;
                   var9 = var9 - this.field_y;
                   if (var15 != 0) {
-                    continue L11;
+                    continue scanLoop3;
                   }
                   continue;
                 }
@@ -5549,10 +5549,10 @@ final class nf {
                 var6 = 0;
               }
               if (var6 > 128) {
-                continue L10;
+                continue scanLoop2;
               }
               System.gc();
-              this.field_V = new ll(this.field_y, this.field_H, gg.field_c);
+              this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
             } while (var15 != 0);
             break;
           }
@@ -5564,7 +5564,7 @@ final class nf {
           var26 = new int[1000];
           var10 = param0;
           var5 = 0;
-          L19: while (true) {
+          scanLoop4: while (true) {
             stackIn_47_0 = -11;
             stackIn_47_1 = ~var5;
             if (stackIn_47_0 < stackIn_47_1) {
@@ -5589,7 +5589,7 @@ final class nf {
                 this.a(false, var11, this.field_V, false, var12, var7.b());
               }
               var5++;
-              continue L19;
+              continue scanLoop4;
             }
             break;
           }
@@ -5617,7 +5617,7 @@ final class nf {
         this.b(649860712, false);
     }
 
-    private final void a(int param0, ll param1, ll param2, int param3, int param4) {
+    private final void a(int param0, IndexedSprite param1, IndexedSprite param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -5697,14 +5697,14 @@ final class nf {
           var26 = var27;
           var16 = var26;
           var17 = var14;
-          L4: while (true) {
+          scanLoop1: while (true) {
             stackIn_17_0 = var15;
             if (stackIn_17_0 >= var17) {
               if (var25 != 0) {
                 return;
               }
               var18 = var12;
-              L7: while (true) {
+              scanLoop2: while (true) {
                 stackIn_21_0 = ~var13;
                 stackIn_21_1 = ~var18;
                 if (stackIn_21_0 <= stackIn_21_1) {
@@ -5732,12 +5732,12 @@ final class nf {
                   }
                   param1.field_m[var20] = (byte)hk.field_p[this.field_O].a(fj.b(var23 >> 2, fj.b(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
                   var18 += 2;
-                  continue L7;
+                  continue scanLoop2;
                 }
                 break;
               }
               var17 += 2;
-              continue L4;
+              continue scanLoop1;
             }
             break;
           }
@@ -5984,7 +5984,7 @@ final class nf {
 
     final boolean k(int param0) {
         int var2 = 16 % ((param0 - 46) / 48);
-        return !this.field_Db.b(true) ? true : false;
+        return !this.field_Db.isEmpty(true) ? true : false;
     }
 
     final void d(int param0, boolean param1) {
@@ -5994,7 +5994,7 @@ final class nf {
         this.field_Q = param0;
     }
 
-    private final boolean a(ml param0, qb param1, int param2, int param3, int param4) {
+    private final boolean a(ml param0, Sprite param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -6062,7 +6062,7 @@ final class nf {
             }
             var4 = 0;
             var5 = 0;
-            var6_ref_ml = (ml) (this.field_i.b(12623));
+            var6_ref_ml = (ml) (this.field_i.first(12623));
             while (true) {
               if (var6_ref_ml != null) {
                 stackIn_18_0 = var6_ref_ml.field_jb;
@@ -6074,7 +6074,7 @@ final class nf {
                   if (var6_ref_ml.field_jb == 30) {
                     var4++;
                   }
-                  var6_ref_ml = (ml) (this.field_i.a(0));
+                  var6_ref_ml = (ml) (this.field_i.next(0));
                   continue;
                 }
               } else {
@@ -6321,7 +6321,7 @@ final class nf {
         var2 = 0;
         var3 = -5 / ((param0 + 57) / 54);
         var4 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var4 < this.field_q) {
             var5 = this.a(var4, true);
             if (var6 == 0) {
@@ -6334,7 +6334,7 @@ final class nf {
           } else {
             if (var2 <= 1) {
               stackIn_10_0 = true;
-              break L1;
+              break scanLoop1;
             }
           }
           stackIn_10_0 = false;
@@ -6361,7 +6361,7 @@ final class nf {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        qb var18 = null;
+        Sprite var18 = null;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -6437,7 +6437,7 @@ final class nf {
           var11 = var27[var7];
           var25[(var7 + var6) / 2] = 64 + this.field_H;
           var25[(var7 + var8) / 2] = this.field_H + 64;
-          L8: while (true) {
+          scanLoop1: while (true) {
             if (this.field_y / 32 > var4.length) {
               var12_ref_int__ = new int[(-1 + var4.length) * 2 + 1];
               stackIn_20_0 = var12_ref_int__;
@@ -6447,7 +6447,7 @@ final class nf {
                 stackIn_20_0[stackIn_20_1] = stackIn_20_2;
                 stackIn_30_0 = 1;
                 if (var24 != 0) {
-                  break L8;
+                  break scanLoop1;
                 }
                 var5 = stackIn_30_0;
                 while (var4.length > var5) {
@@ -6466,7 +6466,7 @@ final class nf {
                   var5++;
                 }
                 var4 = var12_ref_int__;
-                continue L8;
+                continue scanLoop1;
               }
             }
             var6 = (var6 + 1) * var4.length / 20;
@@ -6496,7 +6496,7 @@ final class nf {
             if (var14 >= 1) {
               this.a(var4, (byte) -106);
               System.gc();
-              this.field_V = new ll(this.field_y, this.field_H, gg.field_c);
+              this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
               break;
             }
             var4[var14 + var6] = var4[var14 + var6] - 64;
@@ -6513,7 +6513,7 @@ final class nf {
           var15 = this.field_y * var7 / var4.length;
           var16 = var8 * this.field_y / var4.length;
           var17 = var12 * this.field_y / var4.length;
-          var18 = new qb(20, 20);
+          var18 = new Sprite(20, 20);
           var18.a();
           gj.field_f[5].a(2, 2);
           var19 = 0;
@@ -6578,9 +6578,9 @@ final class nf {
         }
     }
 
-    final ll m(byte param0) {
+    final IndexedSprite m(byte param0) {
         if (param0 != 69) {
-          return (ll) null;
+          return (IndexedSprite) null;
         }
         return this.field_Jb;
     }
@@ -6615,7 +6615,7 @@ final class nf {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = new oc(this.field_i);
         if (param0 != 86) {
-          this.field_Kb = (vn) null;
+          this.field_Kb = (IntrusiveDeque) null;
         }
         var3 = (ml) (var2.b(-42));
         while (var3 != null) {
@@ -6666,7 +6666,7 @@ final class nf {
             var5++;
           } while (var7 == 0);
           var4[var9.length - 1] = var9[0];
-          L4: while (true) {
+          scanLoop1: while (true) {
             if ((this.field_y / 32) > var4.length) {
               var6 = new int[1 + 2 * (-1 + var4.length)];
               stackIn_11_0 = var6;
@@ -6675,7 +6675,7 @@ final class nf {
               while (true) {
                 stackIn_11_0[stackIn_11_1] = stackIn_11_2;
                 if (var7 != 0) {
-                  break L4;
+                  break scanLoop1;
                 }
                 var5 = 1;
                 while (var4.length > var5) {
@@ -6693,7 +6693,7 @@ final class nf {
                   var5++;
                 }
                 var4 = var6;
-                continue L4;
+                continue scanLoop1;
               }
             }
             this.a(var4, (byte) -115);
@@ -6727,7 +6727,7 @@ final class nf {
 
     final boolean a(int param0, int param1, byte param2) {
         if (param2 != -83) {
-          this.a(1, (byte) 42, 71, (ll) null, (qb) null);
+          this.a(1, (byte) 42, 71, (IndexedSprite) null, (Sprite) null);
         }
         return ee.a(this.field_Jb, param0, param1, 96);
     }
@@ -6742,7 +6742,7 @@ final class nf {
             var2 = (mi) (this.field_h.b(117));
             break;
           }
-          var2.a(true);
+          var2.unlink(true);
           var2 = (mi) (this.field_I.e(-124));
         } while (var3 == 0);
         do {
@@ -6751,18 +6751,18 @@ final class nf {
             this.field_I.a(17);
             break;
           }
-          this.field_r.b(var2, -1);
+          this.field_r.addLast(var2, -1);
           var2 = (mi) (this.field_h.e(123));
         } while (var3 == 0);
         if (param0 <= 71) {
-          this.a(-89, (byte) 119, 52, (ll) null, (qb) null);
+          this.a(-89, (byte) 119, 52, (IndexedSprite) null, (Sprite) null);
         }
         this.field_h.a(17);
-        this.field_kb.c(-128);
+        this.field_kb.clear(-128);
         return;
     }
 
-    private final void a(boolean param0, int param1, ll param2, boolean param3, int param4, qb param5) {
+    private final void a(boolean param0, int param1, IndexedSprite param2, boolean param3, int param4, Sprite param5) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -6838,7 +6838,7 @@ final class nf {
                 return;
               }
             }
-            vn.a(var17, var10, var8, 115, var7_int, var12, var9, param2.field_m, var11, param3);
+            IntrusiveDeque.a(var17, var10, var8, 115, var7_int, var12, var9, param2.field_m, var11, param3);
             return;
           }
           return;
@@ -6941,7 +6941,7 @@ final class nf {
         double var28_double = 0.0;
         int var28_int = 0;
         ml var28_ref = null;
-        qb var29 = null;
+        Sprite var29 = null;
         double var30 = 0.0;
         double var32 = 0.0;
         double var34 = 0.0;
@@ -7089,7 +7089,7 @@ final class nf {
           if (this.j((byte) -82)) {
             throw new IllegalStateException();
           }
-          var3 = (ge) (this.field_Db.c(true));
+          var3 = (ge) (this.field_Db.removeFirst(true));
           if (var3 == null) {
             return;
           }
@@ -7149,7 +7149,7 @@ final class nf {
             }
             if (var11 > 0) {
               var3.field_h = var11;
-              this.field_Db.a((pg) (var3), (byte) -58);
+              this.field_Db.addFirst((IntrusiveNode) (var3), (byte) -58);
             }
             return;
           }
@@ -7159,7 +7159,7 @@ final class nf {
           }
           boolean decompiledFrameCompleted14 = true;
           if (null == var12.field_s) {
-            var13_ref_mi = (mi) (this.field_Kb.b(12623));
+            var13_ref_mi = (mi) (this.field_Kb.first(12623));
             while (var13_ref_mi != null) {
               if (var47 != 0) {
                 decompiledFrameCompleted14 = false;
@@ -7169,7 +7169,7 @@ final class nf {
                 var13_ref_mi.field_I == 107) {
                 var13_ref_mi.f(0);
               }
-              var13_ref_mi = (mi) (this.field_Kb.a(0));
+              var13_ref_mi = (mi) (this.field_Kb.next(0));
             }
           }
           if ((decompiledFrameCompleted14) &&
@@ -7552,7 +7552,7 @@ final class nf {
               var18 == 70 ||
               var18 == 68 ||
               var18 == 157) {
-              var24_ref_mi = (mi) (this.field_Kb.b(12623));
+              var24_ref_mi = (mi) (this.field_Kb.first(12623));
               while (var24_ref_mi != null) {
                 stackIn_312_0 = var18;
                 stackIn_312_1 = var24_ref_mi.field_I;
@@ -7564,11 +7564,11 @@ final class nf {
                   var24_ref_mi.field_t == var12) {
                   var24_ref_mi.f(0);
                 }
-                var24_ref_mi = (mi) (this.field_Kb.a(0));
+                var24_ref_mi = (mi) (this.field_Kb.next(0));
               }
             }
             if (decompiledFrameCompleted13) {
-              var24_ref_mi = (mi) (this.field_Kb.b(12623));
+              var24_ref_mi = (mi) (this.field_Kb.first(12623));
               while (var24_ref_mi != null) {
                 stackIn_312_0 = 69;
                 stackIn_312_1 = var24_ref_mi.field_I;
@@ -7579,7 +7579,7 @@ final class nf {
                 if (stackIn_312_0 == stackIn_312_1) {
                   var24_ref_mi.field_y = 0;
                 }
-                var24_ref_mi = (mi) (this.field_Kb.a(0));
+                var24_ref_mi = (mi) (this.field_Kb.next(0));
               }
               if (decompiledFrameCompleted12) {
                 this.a((byte) 80, var10, var4);
@@ -8273,7 +8273,7 @@ final class nf {
                   var27_ref_int__[1] = this.field_N[var28_int][10];
                   var27_ref_int__[2] = this.field_N[var28_int][11];
                 }
-                var29 = new qb(64, 96);
+                var29 = new Sprite(64, 96);
                 var29.a();
                 pc.$cfr$intArgs$a$5f050b8899ac(var50, 16, var51, var48, 80, var49, tk.field_x[2], 0);
                 var12.field_I.f();
@@ -8463,7 +8463,7 @@ final class nf {
             this.b(52, var25Lifetime11);
             var25Lifetime11Lifetime1 = aj.a(var12, -32 - var12.field_Y + var12.field_db, false, 101, this, var12.field_lb);
             this.b(52, var25Lifetime11Lifetime1);
-            var25Lifetime11Lifetime2 = (mi) (this.field_Kb.b(12623));
+            var25Lifetime11Lifetime2 = (mi) (this.field_Kb.first(12623));
             while (var25Lifetime11Lifetime2 != null) {
               stackIn_631_0 = var25Lifetime11Lifetime2.field_I;
               stackIn_631_1 = 149;
@@ -8475,7 +8475,7 @@ final class nf {
                 var12 == var25Lifetime11Lifetime2.field_t) {
                 var25Lifetime11Lifetime2.f(0);
               }
-              var25Lifetime11Lifetime2 = (mi) (this.field_Kb.a(0));
+              var25Lifetime11Lifetime2 = (mi) (this.field_Kb.next(0));
             }
             if (decompiledFrameCompleted1) {
               var25Lifetime11Lifetime3 = j.a(var12, -32 + (var12.field_db - var12.field_Y), (byte) 29, this, var10, var12.field_lb, 149);
@@ -8517,7 +8517,7 @@ final class nf {
                 var12.field_Y = 32;
                 var12.field_R = var12.field_db << 4;
                 var12.field_jb = 0;
-                var12.field_w = new qb(var12.field_Y, var12.field_Y);
+                var12.field_w = new Sprite(var12.field_Y, var12.field_Y);
                 var12.field_w.a();
                 de.i(var12.field_Y >> 1, var12.field_Y >> 1, var12.field_Y >> 1, 16777215);
               }
@@ -8833,17 +8833,17 @@ final class nf {
             }
             var6 = stackIn_24_0;
             var7 = 0;
-            L12: while (true) {
+            scanLoop1: while (true) {
               var7++;
               var8 = uj.a(param1, this.field_y, (byte) -36);
               var9 = 2;
               var10 = var8 + this.field_y * var9;
-              L14: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_H > var9) {
                   stackIn_36_0 = ~mn.field_y.field_m[var10];
                   stackIn_36_1 = -1;
                   if (var12 != 0) {
-                    break L14;
+                    break scanLoop2;
                   }
                   if (stackIn_36_0 == stackIn_36_1) {
                     var10 = var10 + this.field_y;
@@ -8879,7 +8879,7 @@ final class nf {
                   var6 = 0;
                 }
                 if (var6 > 128) {
-                  continue L12;
+                  continue scanLoop1;
                 }
               } while (var12 != 0);
               break;
@@ -9247,13 +9247,13 @@ final class nf {
           return;
         }
         var4 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameRemainder0 = true;
           if (var4 < 16) {
             stackIn_45_0 = param1;
             stackIn_45_1 = this.field_v[param2][var4];
             if (var5 != 0) {
-              break L1;
+              break scanLoop1;
             }
             if (stackIn_45_0 == stackIn_45_1) {
               this.field_L[param2][var4] = true;
@@ -9541,13 +9541,13 @@ final class nf {
           var15 = 0;
           do {
             if (var15 >= this.field_q) {
-              this.field_i = new vn();
-              this.field_B = new mo(32);
-              this.field_Kb = new vn();
+              this.field_i = new IntrusiveDeque();
+              this.field_B = new IntrusiveNodeHashTable(32);
+              this.field_Kb = new IntrusiveDeque();
               this.field_I = new tg();
-              this.field_kb = new vn();
-              this.field_Db = new vn();
-              this.field_r = new vn();
+              this.field_kb = new IntrusiveDeque();
+              this.field_Db = new IntrusiveDeque();
+              this.field_r = new IntrusiveDeque();
               this.field_h = new tg();
               this.field_v = new int[this.field_q][16];
               this.field_x = new int[this.field_q];

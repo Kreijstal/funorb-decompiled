@@ -5,7 +5,7 @@ final class da {
     static eh field_f;
     static ln field_d;
     static String field_a;
-    static eg field_b;
+    static ResourceArchive field_b;
     static String field_e;
     static int field_c;
 
@@ -31,18 +31,18 @@ final class da {
         de.a(param3, param4, param0, param1);
     }
 
-    final static void a(pg param0, int param1, pg param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         if (param1 != 20) {
           return;
         }
         try {
-          if (param2.field_a != null) {
-            param2.a(true);
+          if (param2.previous != null) {
+            param2.unlink(true);
           }
-          param2.field_a = param0.field_a;
-          param2.field_b = param0;
-          param2.field_a.field_b = param2;
-          param2.field_b.field_a = param2;
+          param2.previous = param0.previous;
+          param2.next = param0;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

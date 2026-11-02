@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg {
+final class ResourceArchive {
     private Object[] field_c;
-    private jk field_i;
+    private ArchiveIndex field_i;
     static int[] field_g;
     boolean field_h;
     static int[] field_a;
-    private tl field_e;
+    private ArchiveProvider field_e;
     private Object[][] field_b;
     static String field_d;
     int field_f;
@@ -48,10 +48,10 @@ final class eg {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        wk var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        wk var30 = null;
-        wk var32 = null;
+        PacketBuffer var30 = null;
+        PacketBuffer var32 = null;
         int[] var33 = null;
         byte[][] var34 = null;
         int[] var35 = null;
@@ -117,8 +117,8 @@ final class eg {
             var36 = td.a(this.field_c[param3], -128, true);
             var26 = var36;
             var9 = var26;
-            var27 = new wk(var36);
-            var27.a(param1, 5, var27.field_j.length, 127);
+            var27 = new PacketBuffer(var36);
+            var27.a(param1, 5, var27.payload.length, 127);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -150,14 +150,14 @@ final class eg {
               var11--;
               var12 = 255 & var24[var11];
               var11 = var11 - var5_int * (var12 * 4);
-              var30 = new wk(var44);
+              var30 = new PacketBuffer(var44);
               var14_int = 0;
               var15_int = 0;
-              var30.field_g = var11;
+              var30.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var30.d(-10674);
+                  var17 = var17 + var30.readInt(-10674);
                   if (var6 != null) {
                     var19 = var35[var18];
                   } else {
@@ -173,13 +173,13 @@ final class eg {
                 return true;
               }
               var45 = new byte[var14_int];
-              var30.field_g = var11;
+              var30.position = var11;
               var14_intLifetime1 = 0;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var30.d(-10674);
+                  var19Lifetime2 = var19Lifetime2 + var30.readInt(-10674);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -199,15 +199,15 @@ final class eg {
             var11--;
             var12Lifetime1 = 255 & var24[var11];
             var11 = var11 - var12Lifetime1 * var5_int * 4;
-            var32 = new wk(var44);
+            var32 = new PacketBuffer(var44);
             var40 = new int[var5_int];
             var33 = var40;
             var14 = var33;
-            var32.field_g = var11;
+            var32.position = var11;
             for (var15_intLifetime1 = 0; var12Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var32.d(-10674);
+                var16Lifetime1 = var16Lifetime1 + var32.readInt(-10674);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -219,12 +219,12 @@ final class eg {
               var15[var16Lifetime2] = array$1;
               var40[var16Lifetime2] = 0;
             }
-            var32.field_g = var11;
+            var32.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var17Lifetime2 < var12Lifetime1; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var32.d(-10674);
+                var18Lifetime1 = var18Lifetime1 + var32.readInt(-10674);
                 sf.a(var44, var16Lifetime3, var41[var19Lifetime1], var40[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
@@ -386,7 +386,7 @@ final class eg {
           return true;
         }
         if (!param0) {
-          eg.a(((boolean[]) (this.field_c[0]))[14]);
+          ResourceArchive.a(((boolean[]) (this.field_c[0]))[14]);
         }
         this.c(param1, -125);
         if (null != this.field_c[param1]) {
@@ -400,7 +400,7 @@ final class eg {
           field_a = (int[]) null;
         }
         int var1 = mb.j((byte) 19);
-        int var2 = mo.b(25117);
+        int var2 = IntrusiveNodeHashTable.b(25117);
         ol.field_f.a(-mj.field_r + bk.field_I, -tg.field_d + qe.field_o, -98, var1 + (mj.field_r << 1), (tg.field_d << 1) + var2);
         mn.d(-1);
     }
@@ -423,7 +423,7 @@ final class eg {
           return 100;
         }
         if (param1 != -23760) {
-          this.field_i = (jk) (this.field_c[2]);
+          this.field_i = (ArchiveIndex) (this.field_c[2]);
         }
         return this.field_e.a(param0, (byte) 124);
     }
@@ -645,7 +645,7 @@ final class eg {
             return false;
           }
           if (param1 != -24417) {
-            this.field_e = (tl) null;
+            this.field_e = (ArchiveProvider) null;
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
@@ -670,7 +670,7 @@ final class eg {
         field_d = null;
         field_g = null;
         if (param0) {
-          eg.a(true);
+          ResourceArchive.a(true);
         }
         field_a = null;
     }
@@ -691,7 +691,7 @@ final class eg {
           return true;
         }
         if (param2) {
-          this.field_e = (tl) null;
+          this.field_e = (ArchiveProvider) null;
         }
         if (this.field_c[param0] != null) {
           return true;
@@ -883,7 +883,7 @@ final class eg {
           kn.a(param0, (byte) -112, 0, 0);
           if (param1 > -15) {
             var3 = (java.awt.Canvas) null;
-            eg.a((java.awt.Canvas) null, (byte) -58);
+            ResourceArchive.a((java.awt.Canvas) null, (byte) -58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -900,7 +900,7 @@ final class eg {
         }
     }
 
-    eg(tl param0, boolean param1, int param2) {
+    ResourceArchive(ArchiveProvider param0, boolean param1, int param2) {
         this.field_i = null;
         try {
           if (0 > param2 ||

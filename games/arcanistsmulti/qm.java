@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class qm extends pg {
+class qm extends IntrusiveNode {
     int field_t;
     static String field_l;
     String field_q;
@@ -165,7 +165,7 @@ class qm extends pg {
           return;
         }
         if (var5 != null) {
-          io.field_n.a(var5, (byte) 60, ka.field_p, mo.field_p);
+          io.field_n.a(var5, (byte) 60, ka.field_p, IntrusiveNodeHashTable.field_p);
         }
     }
 
@@ -267,13 +267,13 @@ class qm extends pg {
             re.field_r != 0) {
             this.d((byte) 29);
           }
-          la.field_f = wk.field_m;
+          la.field_f = PacketBuffer.field_m;
           qg.a(38, this.b(false));
           return param2;
         }
         if (wn.field_y == 0) {
           if (0 == re.field_r) {
-            if (0 == wk.field_m &&
+            if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
               this.a(me.field_I, -20592, an.field_g, param1, param0, this);
               var8 = so.field_i;
@@ -289,13 +289,13 @@ class qm extends pg {
                 this.d((byte) 29);
               }
             }
-            la.field_f = wk.field_m;
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
           if (!this.a(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
             if (var5 == 0) {
-              if (0 == wk.field_m &&
+              if (0 == PacketBuffer.field_m &&
                 la.field_f != 0) {
                 this.a(me.field_I, -20592, an.field_g, param1, param0, this);
                 var9 = so.field_i;
@@ -313,7 +313,7 @@ class qm extends pg {
                   this.d((byte) 29);
                 }
               }
-              la.field_f = wk.field_m;
+              la.field_f = PacketBuffer.field_m;
               qg.a(38, this.b(false));
               return param2;
             }
@@ -324,13 +324,13 @@ class qm extends pg {
           } else {
             param2 = false;
           }
-          if (0 != wk.field_m) {
-            la.field_f = wk.field_m;
+          if (0 != PacketBuffer.field_m) {
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
           if (la.field_f == 0) {
-            la.field_f = wk.field_m;
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
@@ -347,13 +347,13 @@ class qm extends pg {
             re.field_r != 0) {
             this.d((byte) 29);
           }
-          la.field_f = wk.field_m;
+          la.field_f = PacketBuffer.field_m;
           qg.a(38, this.b(false));
           return param2;
         }
         if (var5 == 0) {
           if (0 == re.field_r) {
-            if (0 == wk.field_m &&
+            if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
               this.a(me.field_I, -20592, an.field_g, param1, param0, this);
               var11 = so.field_i;
@@ -369,12 +369,12 @@ class qm extends pg {
                 this.d((byte) 29);
               }
             }
-            la.field_f = wk.field_m;
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
           if (!this.a(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
-            if (0 == wk.field_m &&
+            if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
               this.a(me.field_I, -20592, an.field_g, param1, param0, this);
               var12 = so.field_i;
@@ -392,18 +392,18 @@ class qm extends pg {
                 this.d((byte) 29);
               }
             }
-            la.field_f = wk.field_m;
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
           param2 = false;
-          if (0 != wk.field_m) {
-            la.field_f = wk.field_m;
+          if (0 != PacketBuffer.field_m) {
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
           if (la.field_f == 0) {
-            la.field_f = wk.field_m;
+            la.field_f = PacketBuffer.field_m;
             qg.a(38, this.b(false));
             return param2;
           }
@@ -420,13 +420,13 @@ class qm extends pg {
             re.field_r != 0) {
             this.d((byte) 29);
           }
-          la.field_f = wk.field_m;
+          la.field_f = PacketBuffer.field_m;
           qg.a(38, this.b(false));
           return param2;
         }
         this.a(param1, param0, an.field_g, me.field_I, wn.field_y, 0, this);
         if (0 == re.field_r) {
-          if (0 == wk.field_m &&
+          if (0 == PacketBuffer.field_m &&
             la.field_f != 0) {
             this.a(me.field_I, -20592, an.field_g, param1, param0, this);
             var14 = so.field_i;
@@ -442,7 +442,7 @@ class qm extends pg {
               this.d((byte) 29);
             }
           }
-          la.field_f = wk.field_m;
+          la.field_f = PacketBuffer.field_m;
           qg.a(38, this.b(false));
           return param2;
         }
@@ -454,13 +454,13 @@ class qm extends pg {
         } else {
           param2 = false;
         }
-        if (0 != wk.field_m) {
-          la.field_f = wk.field_m;
+        if (0 != PacketBuffer.field_m) {
+          la.field_f = PacketBuffer.field_m;
           qg.a(38, this.b(false));
           return param2;
         }
         if (la.field_f == 0) {
-          la.field_f = wk.field_m;
+          la.field_f = PacketBuffer.field_m;
           qg.a(38, this.b(false));
           return param2;
         }
@@ -477,7 +477,7 @@ class qm extends pg {
           re.field_r != 0) {
           this.d((byte) 29);
         }
-        la.field_f = wk.field_m;
+        la.field_f = PacketBuffer.field_m;
         qg.a(38, this.b(false));
         return param2;
     }

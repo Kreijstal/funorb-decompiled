@@ -6,7 +6,7 @@ final class fo {
     static String field_b;
     static int field_a;
     static long field_h;
-    static qb[] field_g;
+    static Sprite[] field_g;
     static int field_k;
     static String field_j;
     static String field_f;

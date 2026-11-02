@@ -5,8 +5,8 @@ final class gm implements pf {
     static int[] field_g;
     static String field_i;
     private dj field_m;
-    static qb field_l;
-    static vn field_j;
+    static Sprite field_l;
+    static IntrusiveDeque field_j;
     static String field_n;
     private int field_e;
     static int field_d;

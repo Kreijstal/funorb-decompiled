@@ -83,7 +83,7 @@ final class dd {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, qb[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;

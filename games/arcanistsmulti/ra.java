@@ -9,14 +9,14 @@ final class ra {
     static eh field_k;
     static String field_l;
     static String field_i;
-    static ll[] field_j;
+    static IndexedSprite[] field_j;
     static int field_m;
     static int field_h;
     static String field_n;
-    static qb field_a;
+    static Sprite field_a;
     static String field_e;
     static String field_d;
-    static ll[] field_c;
+    static IndexedSprite[] field_c;
     static byte[] field_f;
 
     final static int a(int param0) {
@@ -49,16 +49,16 @@ final class ra {
     final static void a(kc param0, int param1, kc param2) {
         try {
           if (null == param0.field_G) {
-            param0.field_G = new vn();
+            param0.field_G = new IntrusiveDeque();
           }
           if (param2.field_G == null) {
-            param2.field_G = new vn();
+            param2.field_G = new IntrusiveDeque();
           }
           if (ie.field_Qb == null) {
-            ie.field_Qb = new mo(64);
+            ie.field_Qb = new IntrusiveNodeHashTable(64);
           }
           if (null == uc.field_c) {
-            uc.field_c = new mo(64);
+            uc.field_c = new IntrusiveNodeHashTable(64);
           }
           vd.field_d = param0.field_G;
           if (param1 != 64) {

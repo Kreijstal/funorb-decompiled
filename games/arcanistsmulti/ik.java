@@ -53,11 +53,11 @@ final class ik {
     }
 
     final static void a(boolean param0, int param1) {
-        tn.field_Ob = !param0 ? new i(ec.field_b, bk.field_M) : new i(ab.field_r, vc.field_c);
+        tn.field_Ob = !param0 ? new i(ec.field_b, bk.field_M) : new i(CipherPacketBuffer.field_r, vc.field_c);
         hl.field_m = new kc(0L, (kc) null);
         hl.field_m.a(tn.field_Ob.field_c, 89);
         int var2 = 34 / ((param1 - 24) / 48);
-        hl.field_m.a(mo.field_o, 55);
+        hl.field_m.a(IntrusiveNodeHashTable.field_o, 55);
         nl.field_Fb = new kc(0L, mf.field_d);
         gk.field_g = new kc(0L, (kc) null);
         nl.field_Fb.a(hf.field_t, 61);
@@ -68,10 +68,10 @@ final class ik {
     }
 
     final static void a(int param0, int param1) {
-        ab var2 = he.field_e;
-        var2.b((byte) -66, param0);
-        var2.f(1, (byte) -127);
-        var2.f(param1, (byte) -44);
+        CipherPacketBuffer var2 = he.field_e;
+        var2.writeOpcode((byte) -66, param0);
+        var2.writeByte(1, (byte) -127);
+        var2.writeByte(param1, (byte) -44);
     }
 
     public static void a(int param0) {

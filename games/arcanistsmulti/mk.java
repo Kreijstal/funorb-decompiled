@@ -65,10 +65,10 @@ final class mk extends ag {
         int var9;
         int var10;
         int var11;
-        qb var13;
-        qb var14;
-        qb var15;
-        qb var16;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
@@ -86,29 +86,29 @@ final class mk extends ag {
           var16 = qk.field_lb[0];
           var9 = var16.field_n << 1;
           var10 = var16.field_w << 1;
-          if (jk.field_o == null) {
-            jk.field_o = new qb(var9, var10);
-            fk.a(jk.field_o, -23095);
+          if (ArchiveIndex.field_o == null) {
+            ArchiveIndex.field_o = new Sprite(var9, var10);
+            fk.a(ArchiveIndex.field_o, -23095);
           } else {
-            if (jk.field_o.field_q < var9) {
-              jk.field_o = new qb(var9, var10);
-              fk.a(jk.field_o, -23095);
+            if (ArchiveIndex.field_o.field_q < var9) {
+              ArchiveIndex.field_o = new Sprite(var9, var10);
+              fk.a(ArchiveIndex.field_o, -23095);
             } else {
-              if (var10 <= jk.field_o.field_y) {
-                fk.a(jk.field_o, -23095);
+              if (var10 <= ArchiveIndex.field_o.field_y) {
+                fk.a(ArchiveIndex.field_o, -23095);
                 de.b();
               } else {
-                jk.field_o = new qb(var9, var10);
-                fk.a(jk.field_o, -23095);
+                ArchiveIndex.field_o = new Sprite(var9, var10);
+                fk.a(ArchiveIndex.field_o, -23095);
               }
             }
           }
           var16.b(112, 144, var16.field_n << 4, var16.field_w << 4, -this.field_H << 10, 4096);
           oo.c(-15405);
-          jk.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
+          ArchiveIndex.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
           return;
         }
-        if (var8 != ug.field_c) {
+        if (var8 != IsaacCipher.field_c) {
           if (ra.field_k == var8) {
             var14 = qk.field_lb[2];
             var14.b(-(var14.field_q >> 1) + var5, -(var14.field_y >> 1) + var6, 256);
@@ -124,26 +124,26 @@ final class mk extends ag {
         var15 = qk.field_lb[0];
         var9Lifetime1 = var15.field_n << 1;
         var10Lifetime1 = var15.field_w << 1;
-        if (jk.field_o == null) {
-          jk.field_o = new qb(var9Lifetime1, var10Lifetime1);
-          fk.a(jk.field_o, -23095);
+        if (ArchiveIndex.field_o == null) {
+          ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
+          fk.a(ArchiveIndex.field_o, -23095);
         } else {
-          if (jk.field_o.field_q < var9Lifetime1) {
-            jk.field_o = new qb(var9Lifetime1, var10Lifetime1);
-            fk.a(jk.field_o, -23095);
+          if (ArchiveIndex.field_o.field_q < var9Lifetime1) {
+            ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
+            fk.a(ArchiveIndex.field_o, -23095);
           } else {
-            if (var10Lifetime1 <= jk.field_o.field_y) {
-              fk.a(jk.field_o, -23095);
+            if (var10Lifetime1 <= ArchiveIndex.field_o.field_y) {
+              fk.a(ArchiveIndex.field_o, -23095);
               de.b();
             } else {
-              jk.field_o = new qb(var9Lifetime1, var10Lifetime1);
-              fk.a(jk.field_o, -23095);
+              ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
+              fk.a(ArchiveIndex.field_o, -23095);
             }
           }
         }
         var15.b(112, 144, var15.field_n << 4, var15.field_w << 4, -this.field_H << 10, 4096);
         oo.c(-15405);
-        jk.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
+        ArchiveIndex.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
     }
 
     final boolean a(int param0, qm param1) {

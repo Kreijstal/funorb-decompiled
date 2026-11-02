@@ -8,9 +8,9 @@ final class vd {
     static int field_k;
     static int field_l;
     static dj field_c;
-    static qb field_b;
+    static Sprite field_b;
     static String field_j;
-    static vn field_d;
+    static IntrusiveDeque field_d;
     static int field_i;
     int field_e;
     static String field_a;
@@ -37,14 +37,14 @@ final class vd {
     final static void a(int param0, int param1, int param2, boolean param3) {
         if (param1 < 120) {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
-          vd.a(true, (wk) null, (java.math.BigInteger) null, (wk) null, (java.math.BigInteger) null);
+          vd.a(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
         qn.a(ra.field_h, -115, ga.field_r, param2, param3, param0, dh.field_Gb);
     }
 
-    final static void a(boolean param0, wk param1, java.math.BigInteger param2, wk param3, java.math.BigInteger param4) {
+    final static void a(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
-          we.a(param4, 0, param3.field_j, param1, 0, param2, param3.field_g);
+          we.a(param4, 0, param3.payload, param1, 0, param2, param3.position);
           if (param0) {
             vd.a(-96, -100, -118, true);
           }

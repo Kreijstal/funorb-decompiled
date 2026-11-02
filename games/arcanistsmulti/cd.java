@@ -3,7 +3,7 @@
  */
 final class cd extends jm {
     static int[] field_p;
-    private ll[] field_r;
+    private IndexedSprite[] field_r;
     static String field_q;
     static String field_s;
 
@@ -21,7 +21,7 @@ final class cd extends jm {
         if (bd.field_c != null) {
           return bd.field_c;
         }
-        return (java.applet.Applet) ((Object) ug.field_k);
+        return (java.applet.Applet) ((Object) IsaacCipher.field_k);
     }
 
     public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
@@ -37,7 +37,7 @@ final class cd extends jm {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ll var10 = null;
+        IndexedSprite var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -104,7 +104,7 @@ final class cd extends jm {
         field_s = null;
     }
 
-    cd(ll[] param0) {
+    cd(IndexedSprite[] param0) {
         try {
           this.field_g = ia.field_c;
           this.field_r = param0;

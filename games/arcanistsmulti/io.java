@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class io extends sg {
+final class io extends PcmStream {
     private int[] field_p;
     private gh field_v;
     private int field_E;
@@ -360,7 +360,7 @@ final class io extends sg {
         }
     }
 
-    final sg b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -379,7 +379,7 @@ final class io extends sg {
         field_x = null;
     }
 
-    final sg a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -435,7 +435,7 @@ final class io extends sg {
           hf.field_q.a(nn.field_p + 42, -40 + (bk.field_M.field_x - nn.field_p - 2), ga.field_r + 2, 18, (byte) -120);
           lf.field_b.a(ga.field_r + 22, nn.field_p, bk.field_M.field_x, false, 0, bk.field_M.field_I - (ga.field_r + 2) - 20, 2);
           var2_int = -29 / ((84 - param0) / 36);
-          mo.field_o.a(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
+          IntrusiveNodeHashTable.field_o.a(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
           nl.field_Db.a(oh.field_h.field_x, 0, 0, 30, (byte) -120);
           mi.field_m.a(oh.field_h.field_x, 0, 30, -42 + oh.field_h.field_I - 30, (byte) -120);
           var3 = 3 + vf.field_l;
@@ -464,10 +464,10 @@ final class io extends sg {
                 var16 = wd.field_g[var7];
                 wd.field_g[var7].field_I = 0;
                 var16.field_x = 0;
-                for (var9 = 0; s.field_e[var7].length > var9; var9++) {
-                  if (s.field_e[var7][var9] != null) {
-                    var10 = s.field_e[var7][var9];
-                    s.field_e[var7][var9].field_I = 0;
+                for (var9 = 0; IndexedSpriteState.field_e[var7].length > var9; var9++) {
+                  if (IndexedSpriteState.field_e[var7][var9] != null) {
+                    var10 = IndexedSpriteState.field_e[var7][var9];
+                    IndexedSpriteState.field_e[var7][var9].field_I = 0;
                     var10.field_x = 0;
                   }
                 }
@@ -476,10 +476,10 @@ final class io extends sg {
                 var15 = wd.field_g[var7];
                 wd.field_g[var7].field_I = 0;
                 var15.field_x = 0;
-                for (var9 = 0; s.field_e[var7].length > var9; var9++) {
-                  if (s.field_e[var7][var9] != null) {
-                    var10 = s.field_e[var7][var9];
-                    s.field_e[var7][var9].field_I = 0;
+                for (var9 = 0; IndexedSpriteState.field_e[var7].length > var9; var9++) {
+                  if (IndexedSpriteState.field_e[var7][var9] != null) {
+                    var10 = IndexedSpriteState.field_e[var7][var9];
+                    IndexedSpriteState.field_e[var7][var9].field_I = 0;
                     var10.field_x = 0;
                   }
                 }
@@ -504,10 +504,10 @@ final class io extends sg {
                   var9_ref_kc.field_x = 0;
                   var17 = 0;
                   var10_int = var17;
-                  while (s.field_e[var7].length > var17) {
-                    if (s.field_e[var7][var17] != null) {
-                      var11 = s.field_e[var7][var17];
-                      s.field_e[var7][var17].field_I = 0;
+                  while (IndexedSpriteState.field_e[var7].length > var17) {
+                    if (IndexedSpriteState.field_e[var7][var17] != null) {
+                      var11 = IndexedSpriteState.field_e[var7][var17];
+                      IndexedSpriteState.field_e[var7][var17].field_I = 0;
                       var11.field_x = 0;
                     }
                     var17++;
@@ -516,20 +516,20 @@ final class io extends sg {
                   wd.field_g[var7].a(103, 5, var6, var4, (byte) -120);
                   var9 = 110;
                   if (param1) {
-                    s.field_e[var7][0].a(2, 0, var4, 38, var9, var6, mm.field_p);
+                    IndexedSpriteState.field_e[var7][0].a(2, 0, var4, 38, var9, var6, mm.field_p);
                     var9 += 40;
                   } else {
-                    if (s.field_e[var7][0] != null) {
-                      var10 = s.field_e[var7][0];
-                      s.field_e[var7][0].field_I = 0;
+                    if (IndexedSpriteState.field_e[var7][0] != null) {
+                      var10 = IndexedSpriteState.field_e[var7][0];
+                      IndexedSpriteState.field_e[var7][0].field_I = 0;
                       var10.field_x = 0;
                     }
                   }
                   var10_int = 2 + oh.field_h.field_x - 5 - var9;
-                  var11_int = -1 + s.field_e[var7].length;
+                  var11_int = -1 + IndexedSpriteState.field_e[var7].length;
                   for (var12 = 0; var12 < var11_int; var12++) {
                     var13 = var10_int * var12 / var11_int;
-                    s.field_e[var7][1 + var12].a(2, 0, var4, -var13 + (var12 + 1) * var10_int / var11_int - 2, var9 + var13, var6, mm.field_p);
+                    IndexedSpriteState.field_e[var7][1 + var12].a(2, 0, var4, -var13 + (var12 + 1) * var10_int / var11_int - 2, var9 + var13, var6, mm.field_p);
                   }
                   var6 = var6 + (2 + var4);
                 }
@@ -571,8 +571,8 @@ final class io extends sg {
               field_u = (String) null;
             }
             var9 = on.field_c.getGraphics();
-            if (null == jb.field_m) {
-              jb.field_m = new java.awt.Font("Helvetica", 1, 13);
+            if (null == SpriteState.field_m) {
+              SpriteState.field_m = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
@@ -592,7 +592,7 @@ final class io extends sg {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(2 + param3 * 3, 2, -(param3 * 3) + 300, 30);
-              var10.setFont(jb.field_m);
+              var10.setFont(SpriteState.field_m);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param1, (-(param1.length() * 6) + 304) / 2, 22);
               var9.drawImage(ik.field_e, o.field_r / 2 - 152, co.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -607,12 +607,12 @@ final class io extends sg {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, var8 + 1, 301, 31);
               var9.fillRect(var7 + (2 + 3 * param3), 2 + var8, -(param3 * 3) + 300, 30);
-              var9.setFont(jb.field_m);
+              var9.setFont(SpriteState.field_m);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param1, var7 + (304 - param1.length() * 6) / 2, var8 + 22);
             }
             if (jh.field_a != null) {
-              var9.setFont(jb.field_m);
+              var9.setFont(SpriteState.field_m);
               var9.setColor(java.awt.Color.white);
               var9.drawString(jh.field_a, o.field_r / 2 - 6 * jh.field_a.length() / 2, -26 + co.field_c / 2);
             }
@@ -654,7 +654,7 @@ final class io extends sg {
         try {
           ch.field_b = param0;
           if (eh.field_e == null) {
-            eh.field_e = new qb(640, 480);
+            eh.field_e = new Sprite(640, 480);
             if (de.field_l.length != eh.field_e.field_A.length) {
               var2_int = 0;
               for (var3 = -eh.field_e.field_A.length; var3 < 0; var3++) {

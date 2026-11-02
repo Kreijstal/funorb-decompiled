@@ -9,27 +9,27 @@ final class di {
     static int[] field_n;
     private int field_k;
     static am field_i;
-    private pg[] field_f;
+    private IntrusiveNode[] field_f;
     static boolean field_h;
     static int[] field_l;
-    static qb field_d;
-    private pg field_g;
-    private pg field_a;
+    static Sprite field_d;
+    private IntrusiveNode field_g;
+    private IntrusiveNode field_a;
     static String field_c;
     static boolean field_j;
     static int field_m;
 
-    final pg c(int param0) {
+    final IntrusiveNode c(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        pg var4;
-        pg var5;
-        pg var6;
-        pg var9;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
+        IntrusiveNode var9;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 >= -51) {
-          return (pg) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_e <= 0) {
           do {
@@ -38,15 +38,15 @@ final class di {
             }
             fieldTemp$1 = this.field_e;
             this.field_e = this.field_e + 1;
-            var4 = this.field_f[fieldTemp$1].field_b;
+            var4 = this.field_f[fieldTemp$1].next;
             var5 = var4;
           } while (var4 == this.field_f[this.field_e - 1]);
-          this.field_a = var5.field_b;
+          this.field_a = var5.next;
           return var5;
         }
         if (this.field_f[this.field_e - 1] != this.field_a) {
           var9 = this.field_a;
-          this.field_a = var9.field_b;
+          this.field_a = var9.next;
           return var9;
         }
         do {
@@ -55,17 +55,17 @@ final class di {
           }
           fieldTemp$0 = this.field_e;
           this.field_e = this.field_e + 1;
-          var4 = this.field_f[fieldTemp$0].field_b;
+          var4 = this.field_f[fieldTemp$0].next;
           var6 = var4;
         } while (var4 == this.field_f[this.field_e - 1]);
-        this.field_a = var6.field_b;
+        this.field_a = var6.next;
         return var6;
     }
 
-    final pg a(int param0) {
+    final IntrusiveNode a(int param0) {
         this.field_e = 0;
         if (param0 != 10) {
-          return (pg) null;
+          return (IntrusiveNode) null;
         }
         return this.c(-107);
     }
@@ -83,21 +83,21 @@ final class di {
         field_l = (int[]) null;
     }
 
-    final pg a(long param0, int param1) {
-        pg var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 > -30) {
-          return (pg) null;
+          return (IntrusiveNode) null;
         }
-        pg var4 = this.field_f[(int)(param0 & (long)(-1 + this.field_k))];
-        this.field_g = var4.field_b;
+        IntrusiveNode var4 = this.field_f[(int)(param0 & (long)(-1 + this.field_k))];
+        this.field_g = var4.next;
         while (var4 != this.field_g) {
-          if (~param0 == ~this.field_g.field_e) {
+          if (~param0 == ~this.field_g.key) {
             var5 = this.field_g;
-            this.field_g = this.field_g.field_b;
+            this.field_g = this.field_g.next;
             return var5;
           }
-          this.field_g = this.field_g.field_b;
+          this.field_g = this.field_g.next;
         }
         this.field_g = null;
         return null;
@@ -118,20 +118,20 @@ final class di {
         return rm.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + no.field_ub[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final void a(pg param0, boolean param1, long param2) {
-        if (param0.field_a != null) {
-          param0.a(true);
+    final void a(IntrusiveNode param0, boolean param1, long param2) {
+        if (param0.previous != null) {
+          param0.unlink(true);
         }
-        pg var5 = this.field_f[(int)(param2 & (long)(this.field_k - 1))];
-        param0.field_a = var5.field_a;
-        param0.field_b = var5;
-        param0.field_a.field_b = param0;
+        IntrusiveNode var5 = this.field_f[(int)(param2 & (long)(this.field_k - 1))];
+        param0.previous = var5.previous;
+        param0.next = var5;
+        param0.previous.next = param0;
         if (!param1) {
           return;
         }
         try {
-          param0.field_b.field_a = param0;
-          param0.field_e = param2;
+          param0.next.previous = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -139,17 +139,17 @@ final class di {
 
     di(int param0) {
         int var2 = 0;
-        pg dupTemp$1 = null;
-        pg var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_e = 0;
         this.field_k = param0;
-        this.field_f = new pg[param0];
+        this.field_f = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new pg();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
-          var3.field_b = var3;
-          var3.field_a = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

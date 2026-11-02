@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sg extends pg {
-    sg field_g;
+abstract class PcmStream extends IntrusiveNode {
+    PcmStream field_g;
     int field_h;
     tb field_j;
     volatile boolean field_i;
@@ -21,15 +21,15 @@ abstract class sg extends pg {
 
     abstract void a(int param0);
 
-    abstract sg b();
+    abstract PcmStream b();
 
     abstract void a(int[] param0, int param1, int param2);
 
     abstract int c();
 
-    abstract sg a();
+    abstract PcmStream a();
 
-    protected sg() {
+    protected PcmStream() {
         this.field_i = true;
     }
 }

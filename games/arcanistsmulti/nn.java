@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nn extends tf {
+abstract class nn extends DualLinkNode {
     static String field_t;
     static ij field_q;
     static eh field_s;
@@ -32,7 +32,7 @@ abstract class nn extends tf {
           var1 = var6 + ":";
           for (var2 = 0; var2 < fj.field_h; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & df.field_z.field_j[var2];
+            var3 = 255 & df.field_z.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 < 10) {
@@ -64,7 +64,7 @@ abstract class nn extends tf {
         field_n = (int[][]) null;
     }
 
-    final static void a(byte[] param0, int[] param1, int param2, qb[][] param3, int param4, String[] param5, String[][] param6, String[] param7, eg param8, byte[] param9, String[] param10, String[][] param11, int param12, qb[][] param13, int param14) {
+    final static void a(byte[] param0, int[] param1, int param2, Sprite[][] param3, int param4, String[] param5, String[][] param6, String[] param7, ResourceArchive param8, byte[] param9, String[] param10, String[][] param11, int param12, Sprite[][] param13, int param14) {
         nl[] array$0 = null;
         nl[] array$1 = null;
         nl[] array$2 = null;
@@ -130,7 +130,7 @@ abstract class nn extends tf {
           ob.field_bb = param10;
           ml.field_m = param9;
           gb.field_d = param0;
-          mo.field_b = qe.a(param8, "gameprivacy", "lobby", 92);
+          IntrusiveNodeHashTable.field_b = qe.a(param8, "gameprivacy", "lobby", 92);
           re.field_j = qe.a(param8, "ratedgame", "lobby", 81);
           sk.field_f = qe.a(param8, "opentome", "lobby", 71);
           ec.field_i = qe.a(param8, "allowspectators", "lobby", 88);
@@ -143,18 +143,18 @@ abstract class nn extends tf {
           mj.field_s = new kc(0L, (kc) null);
           uc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
           nh.field_z = new kc(0L, vf.field_i, ef.field_q);
-          nj.field_m = new dn(0L, new kc(0L, (kc) null), am.field_c, vn.field_i);
+          nj.field_m = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           mj.field_s.a(uc.field_d, param14 + 87);
           if (fc.field_a) {
             mj.field_s.a(nh.field_z, 41);
           }
           mj.field_s.a(nj.field_m, 47);
-          nj.field_m.field_Hb.a(pg.field_c, (byte) 126);
+          nj.field_m.field_Hb.a(IntrusiveNode.field_c, (byte) 126);
           var23 = nj.field_m.field_Hb;
           var24 = var23;
           nj.field_m.field_Hb.field_gb = 1;
           var24.field_X = 1;
-          kg.field_c = new kc(0L, pg.field_c);
+          kg.field_c = new kc(0L, IntrusiveNode.field_c);
           kg.field_c.field_X = 1;
           ii.field_b = new kc(0L, th.field_c, ti.field_M.toUpperCase());
           sm.field_c = new kc(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
@@ -165,7 +165,7 @@ abstract class nn extends tf {
           lo.field_r = new kc(0L, rn.field_S, dk.field_h);
           vc.field_j = new kc(0L, rn.field_S, g.field_b);
           jo.field_a = new kc(0L, vf.field_i, kh.field_a);
-          ee.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, vn.field_i);
+          ee.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           of.field_a = new kc(0L, ko.field_h, fi.field_f.toUpperCase());
           of.field_a.field_ub = fc.field_a;
           stackIn_5_0 = null;
@@ -198,7 +198,7 @@ abstract class nn extends tf {
             fn.field_e.a(of.field_a, 20);
           }
           fn.field_e.a(jl.field_a, 15);
-          la.field_c = new kc(0L, pg.field_c);
+          la.field_c = new kc(0L, IntrusiveNode.field_c);
           la.field_c.field_gb = 0;
           la.field_c.field_X = 1;
           dm.field_E = new kc(0L, gn.field_c, im.field_f.toUpperCase());
@@ -206,58 +206,58 @@ abstract class nn extends tf {
           gm.field_h.a(la.field_c, 110);
           gm.field_h.a(dm.field_E, 121);
           vc.field_c = new kc(0L, am.field_c);
-          vc.field_c.a(pg.field_c, (byte) 119);
+          vc.field_c.a(IntrusiveNode.field_c, (byte) 119);
           vc.field_c.field_gb = 1;
           var16 = vc.field_c;
           var16.field_X = 1;
           bk.field_M = new kc(0L, (kc) null);
-          aj.field_d = new kc(0L, pg.field_c);
+          aj.field_d = new kc(0L, IntrusiveNode.field_c);
           aj.field_d.field_X = 1;
           qc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
           hf.field_q = new kc(0L, vf.field_i, ef.field_q);
-          lf.field_b = new dn(0L, new kc(0L, (kc) null), am.field_c, vn.field_i);
+          lf.field_b = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           bk.field_M.a(aj.field_d, 30);
           bk.field_M.a(qc.field_d, 51);
           if (fc.field_a) {
             bk.field_M.a(hf.field_q, param14 + 10);
           }
           bk.field_M.a(lf.field_b, 31);
-          mo.field_o = new kc(0L, th.field_c, gb.field_a.toUpperCase());
+          IntrusiveNodeHashTable.field_o = new kc(0L, th.field_c, gb.field_a.toUpperCase());
           nl.field_Db = new kc(0L, wa.field_Pb);
           mi.field_m = new kc(0L, ia.field_a);
           ib.field_s = new kc(0L, dd.field_b, o.field_o.toUpperCase());
-          s.field_e = new nl[param2 + 4][];
+          IndexedSpriteState.field_e = new nl[param2 + 4][];
           wd.field_g = new kc[4 + param2];
           wd.field_g[0] = new kc(0L, mi.field_A, gg.field_i);
-          s.field_e[0] = new nl[6];
+          IndexedSpriteState.field_e[0] = new nl[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            s.field_e[0][var17_int + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, mo.field_b[var17_int], vm.field_c[var17_int]);
+            IndexedSpriteState.field_e[0][var17_int + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
           }
           if (ao.field_h.length >= 2) {
             wd.field_g[1] = new kc(0L, mi.field_A, w.field_Bb);
             array$0 = new nl[ao.field_h.length + 1];
-            s.field_e[1] = array$0;
-            s.field_e[1][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) null, ij.field_Rb);
+            IndexedSpriteState.field_e[1] = array$0;
+            IndexedSpriteState.field_e[1][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var17_intLifetime1 = 0; ao.field_h.length > var17_intLifetime1; var17_intLifetime1++) {
-              s.field_e[1][var17_intLifetime1 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) null, Integer.toString(ao.field_h[var17_intLifetime1]));
+              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
             }
           }
           wd.field_g[2] = new kc(0L, mi.field_A, gb.field_b);
-          s.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) null, ij.field_Rb), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[0], nh.field_B), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[1], cf.field_d)};
+          IndexedSpriteState.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[0], nh.field_B), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[1], cf.field_d)};
           if (le.field_q > 1) {
             wd.field_g[3] = new kc(0L, mi.field_A, fm.field_e);
             array$1 = new nl[le.field_q + 1];
-            s.field_e[3] = array$1;
-            s.field_e[3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) null, ij.field_Rb);
+            IndexedSpriteState.field_e[3] = array$1;
+            IndexedSpriteState.field_e[3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < le.field_q; var17_intLifetime2++) {
-              s.field_e[3][1 + var17_intLifetime2] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) null, fl.field_b[var17_intLifetime2]);
+              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
             wd.field_g[var17_intLifetime3 + 4] = new kc(0L, mi.field_A, ob.field_bb[var17_intLifetime3]);
             array$2 = new nl[1 + dg.a((int) gb.field_d[var17_intLifetime3], 255)];
-            s.field_e[var17_intLifetime3 + 4] = array$2;
-            s.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) null, ij.field_Rb);
+            IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
+            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var18 = 0; var18 < (gb.field_d[var17_intLifetime3] & 255); var18++) {
               if (null == pn.field_b) {
                 var19_ref = null;
@@ -277,18 +277,18 @@ abstract class nn extends tf {
                   var20 = null;
                 }
               }
-              s.field_e[4 + var17_intLifetime3][var18 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (qb) (var19_ref), (String) (var20));
+              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param2 + 4 > var17_intLifetime4; var17_intLifetime4++) {
             if (wd.field_g[var17_intLifetime4] != null) {
               wd.field_g[var17_intLifetime4].field_z = 11;
             }
-            if (s.field_e[var17_intLifetime4] != null) {
-              for (var18Lifetime1 = 0; s.field_e[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
-                if (s.field_e[var17_intLifetime4][var18Lifetime1] != null &&
-                  s.field_e[var17_intLifetime4][var18Lifetime1].field_Eb != null) {
-                  s.field_e[var17_intLifetime4][var18Lifetime1].field_Eb.field_z = 11;
+            if (IndexedSpriteState.field_e[var17_intLifetime4] != null) {
+              for (var18Lifetime1 = 0; IndexedSpriteState.field_e[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
+                if (IndexedSpriteState.field_e[var17_intLifetime4][var18Lifetime1] != null &&
+                  IndexedSpriteState.field_e[var17_intLifetime4][var18Lifetime1].field_Eb != null) {
+                  IndexedSpriteState.field_e[var17_intLifetime4][var18Lifetime1].field_Eb.field_z = 11;
                 }
               }
             }
@@ -296,7 +296,7 @@ abstract class nn extends tf {
           go.field_d = new kc(0L, ko.field_h);
           dk.field_k = new kc(0L, ko.field_h);
           jf.field_d = new kc(0L, j.field_f);
-          jf.field_d.a(pg.field_c, (byte) 119);
+          jf.field_d.a(IntrusiveNode.field_c, (byte) 119);
           var17 = jf.field_d;
           jf.field_d.field_gb = 1;
           var17.field_X = 1;
@@ -309,9 +309,9 @@ abstract class nn extends tf {
               !(2 > ao.field_h.length)) && (3 != var18Lifetime2 ||
               !(1 >= le.field_q))) {
               mi.field_m.a(wd.field_g[var18Lifetime2], param14 + 5);
-              for (var19 = 0; s.field_e[var18Lifetime2].length > var19; var19++) {
-                if (s.field_e[var18Lifetime2][var19] != null) {
-                  mi.field_m.a(s.field_e[var18Lifetime2][var19], 92);
+              for (var19 = 0; IndexedSpriteState.field_e[var18Lifetime2].length > var19; var19++) {
+                if (IndexedSpriteState.field_e[var18Lifetime2][var19] != null) {
+                  mi.field_m.a(IndexedSpriteState.field_e[var18Lifetime2][var19], 92);
                 }
               }
             }
@@ -426,7 +426,7 @@ abstract class nn extends tf {
           }
           var5 = new rm();
           if (param1 != -93) {
-            nn.a((byte[]) null, (int[]) null, 89, (qb[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (eg) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (qb[][]) null, -101);
+            nn.a((byte[]) null, (int[]) null, 89, (Sprite[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (Sprite[][]) null, -101);
           }
           var5.c(-23645);
           var5.a((long)(8 * param0), 8, var4);

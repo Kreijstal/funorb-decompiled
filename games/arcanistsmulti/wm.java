@@ -4,7 +4,7 @@
 final class wm extends wn {
     static int field_I;
     static String field_G;
-    static qb[] field_H;
+    static Sprite[] field_H;
     static String field_F;
     static String field_J;
 

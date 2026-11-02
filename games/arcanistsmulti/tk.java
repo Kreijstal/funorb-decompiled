@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends tf {
+final class tk extends DualLinkNode {
     private int[] field_t;
     static String field_o;
-    static qb[] field_x;
+    static Sprite[] field_x;
     static String field_p;
     static boolean[] field_q;
     static String field_w;
@@ -15,7 +15,7 @@ final class tk extends tf {
     int[] field_u;
     static String field_r;
 
-    private final void a(int param0, wk param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -28,32 +28,32 @@ final class tk extends tf {
         int var6 = 0;
         aj var7 = null;
         int var9 = 0;
-        wk var10 = null;
+        PacketBuffer var10 = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2 == 1) {
-            this.field_n = eh.a(false, '<', param1.l(-1));
+            this.field_n = eh.a(false, '<', param1.readString(-1));
           } else {
             if (param2 == 2) {
-              var4_int = param1.e((byte) 120);
+              var4_int = param1.readUnsignedByte((byte) 120);
               this.field_u = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_u[var5] = param1.n(-98);
+                this.field_u[var5] = param1.readUnsignedShort(-98);
               }
             } else {
               if (param2 == 3) {
-                var4_int = param1.e((byte) 62);
+                var4_int = param1.readUnsignedByte((byte) 62);
                 this.field_t = new int[var4_int];
                 this.field_v = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param1.n(param0 - 94);
+                  var6 = param1.readUnsignedShort(param0 - 94);
                   var7 = no.a(var6, 0);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_e];
                     this.field_v[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_e; var8++) {
-                      this.field_v[var5][var8] = param1.n(-98);
+                      this.field_v[var5][var8] = param1.readUnsignedShort(-98);
                     }
                   }
                 }
@@ -64,8 +64,8 @@ final class tk extends tf {
             }
           }
           if (param0 != -4) {
-            var10 = (wk) null;
-            this.a(5, (wk) null, -90);
+            var10 = (PacketBuffer) null;
+            this.a(5, (PacketBuffer) null, -90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class tk extends tf {
         }
     }
 
-    final void a(wk param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -96,7 +96,7 @@ final class tk extends tf {
             return;
           }
           while (true) {
-            var3_int = param0.e((byte) -92);
+            var3_int = param0.readUnsignedByte((byte) -92);
             if (var3_int == 0) {
               return;
             }

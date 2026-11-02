@@ -65,7 +65,7 @@ final class ke extends wn {
         }
     }
 
-    final static void a(qb[] param0, boolean param1, dj param2, int param3, qb[] param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, boolean param12, int param13, int param14) {
+    final static void a(Sprite[] param0, boolean param1, dj param2, int param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, boolean param12, int param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -81,7 +81,7 @@ final class ke extends wn {
         try {
           if (param14 != -21071) {
             var16 = (String) null;
-            ke.a((qb[]) null, true, (dj) null, -83, (qb[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
+            ke.a((Sprite[]) null, true, (dj) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
           }
           kh.a(param6, param3, mj.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, ol.field_f, ql.field_a, param2, tg.field_d, new ec(param0), wm.field_I);
           dk.a(param11, (byte) -72, param12, param5, param1);

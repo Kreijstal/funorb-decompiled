@@ -3,8 +3,8 @@
  */
 final class lf {
     static am field_f;
-    static ll[] field_e;
-    static qb[] field_c;
+    static IndexedSprite[] field_e;
+    static Sprite[] field_c;
     static String field_h;
     static String field_i;
     static String field_d;
@@ -24,7 +24,7 @@ final class lf {
             return;
           }
           if (ij.b(si.field_g, 10)) {
-            tl.field_f[si.field_g].d((byte) 103);
+            ArchiveProvider.field_f[si.field_g].d((byte) 103);
           }
           var1_int = si.field_g;
           si.field_g = mn.field_r;
@@ -32,8 +32,8 @@ final class lf {
           km.field_c = 0;
           if (si.field_g == -1 &&
             5 == var1_int &&
-            null != jb.field_z) {
-            jb.field_z.field_z = jb.field_z.field_z - (250 - o.field_s);
+            null != SpriteState.field_z) {
+            SpriteState.field_z.field_z = SpriteState.field_z.field_z - (250 - o.field_s);
           }
           if (si.field_g == 0 ||
             si.field_g == -4 ||
@@ -59,17 +59,17 @@ final class lf {
             vl.d((byte) 112);
           }
           if (fi.field_h) {
-            if (null != jb.field_z ||
+            if (null != SpriteState.field_z ||
               r.field_b != null) {
               mi.a(jh.field_c[0], 3);
             }
             r.field_b = null;
-            jb.field_z = null;
+            SpriteState.field_z = null;
             System.gc();
             fi.field_h = false;
           }
           if (tn.field_Cb) {
-            wh.field_h = new vn();
+            wh.field_h = new IntrusiveDeque();
             tn.field_Cb = false;
             ad.field_f = new int[8];
           }

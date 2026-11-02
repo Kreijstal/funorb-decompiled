@@ -4,12 +4,12 @@
 final class bb {
     static sd[] field_b;
     static String field_e;
-    static eg field_a;
+    static ResourceArchive field_a;
     static am field_c;
     static String field_f;
     static boolean field_h;
     static String field_d;
-    static qb[] field_g;
+    static Sprite[] field_g;
     static String[] field_i;
 
     final static boolean a(String param0, String param1, int param2, ln param3, int param4, String param5, boolean param6) {
@@ -34,9 +34,9 @@ final class bb {
             var8 = (String) null;
             bb.a((String) null, (String) null, 89, (ln) null, 120, (String) null, false);
           }
-          var9 = new ie(p.field_b, param3);
-          p.field_b.b(var9, 15637);
-          if (jk.b(63)) {
+          var9 = new ie(ClientException.field_b, param3);
+          ClientException.field_b.b(var9, 15637);
+          if (ArchiveIndex.b(63)) {
             var9.l(248);
             return true;
           }
@@ -154,12 +154,12 @@ final class bb {
             }
             for (var2 = 0; di.field_l.length > var2; var2++) {
               if (di.field_l[var2] == param0 &&
-                tf.field_g[var2] > 0) {
-                dupTemp$25 = tf.field_g[var2] - 1;
+                DualLinkNode.field_g[var2] > 0) {
+                dupTemp$25 = DualLinkNode.field_g[var2] - 1;
                 arrayValue$26 = vm.field_a[var2];
-                tf.field_g[var2] = dupTemp$25;
+                DualLinkNode.field_g[var2] = dupTemp$25;
                 var3 = arrayValue$26[dupTemp$25];
-                vm.field_a[var2][tf.field_g[var2]] = null;
+                vm.field_a[var2][DualLinkNode.field_g[var2]] = null;
                 return var3;
               }
             }
@@ -179,12 +179,12 @@ final class bb {
             }
             for (var2Lifetime4 = 0; di.field_l.length > var2Lifetime4; var2Lifetime4++) {
               if (di.field_l[var2Lifetime4] == param0 &&
-                tf.field_g[var2Lifetime4] > 0) {
-                dupTemp$17 = tf.field_g[var2Lifetime4] - 1;
+                DualLinkNode.field_g[var2Lifetime4] > 0) {
+                dupTemp$17 = DualLinkNode.field_g[var2Lifetime4] - 1;
                 arrayValue$18 = vm.field_a[var2Lifetime4];
-                tf.field_g[var2Lifetime4] = dupTemp$17;
+                DualLinkNode.field_g[var2Lifetime4] = dupTemp$17;
                 var3Lifetime4 = arrayValue$18[dupTemp$17];
-                vm.field_a[var2Lifetime4][tf.field_g[var2Lifetime4]] = null;
+                vm.field_a[var2Lifetime4][DualLinkNode.field_g[var2Lifetime4]] = null;
                 return var3Lifetime4;
               }
             }
@@ -210,12 +210,12 @@ final class bb {
           }
           for (var2Lifetime5 = 0; di.field_l.length > var2Lifetime5; var2Lifetime5++) {
             if (di.field_l[var2Lifetime5] == param0 &&
-              tf.field_g[var2Lifetime5] > 0) {
-              dupTemp$20 = tf.field_g[var2Lifetime5] - 1;
+              DualLinkNode.field_g[var2Lifetime5] > 0) {
+              dupTemp$20 = DualLinkNode.field_g[var2Lifetime5] - 1;
               arrayValue$21 = vm.field_a[var2Lifetime5];
-              tf.field_g[var2Lifetime5] = dupTemp$20;
+              DualLinkNode.field_g[var2Lifetime5] = dupTemp$20;
               var3Lifetime5 = arrayValue$21[dupTemp$20];
-              vm.field_a[var2Lifetime5][tf.field_g[var2Lifetime5]] = null;
+              vm.field_a[var2Lifetime5][DualLinkNode.field_g[var2Lifetime5]] = null;
               return var3Lifetime5;
             }
           }
@@ -244,12 +244,12 @@ final class bb {
             }
             for (var2Lifetime1 = 0; di.field_l.length > var2Lifetime1; var2Lifetime1++) {
               if (di.field_l[var2Lifetime1] == param0 &&
-                tf.field_g[var2Lifetime1] > 0) {
-                dupTemp$13 = tf.field_g[var2Lifetime1] - 1;
+                DualLinkNode.field_g[var2Lifetime1] > 0) {
+                dupTemp$13 = DualLinkNode.field_g[var2Lifetime1] - 1;
                 arrayValue$14 = vm.field_a[var2Lifetime1];
-                tf.field_g[var2Lifetime1] = dupTemp$13;
+                DualLinkNode.field_g[var2Lifetime1] = dupTemp$13;
                 var3Lifetime1 = arrayValue$14[dupTemp$13];
-                vm.field_a[var2Lifetime1][tf.field_g[var2Lifetime1]] = null;
+                vm.field_a[var2Lifetime1][DualLinkNode.field_g[var2Lifetime1]] = null;
                 return var3Lifetime1;
               }
             }
@@ -267,12 +267,12 @@ final class bb {
           }
           for (var2Lifetime1Lifetime1 = 0; di.field_l.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
             if (di.field_l[var2Lifetime1Lifetime1] == param0 &&
-              tf.field_g[var2Lifetime1Lifetime1] > 0) {
-              dupTemp$10 = tf.field_g[var2Lifetime1Lifetime1] - 1;
+              DualLinkNode.field_g[var2Lifetime1Lifetime1] > 0) {
+              dupTemp$10 = DualLinkNode.field_g[var2Lifetime1Lifetime1] - 1;
               arrayValue$11 = vm.field_a[var2Lifetime1Lifetime1];
-              tf.field_g[var2Lifetime1Lifetime1] = dupTemp$10;
+              DualLinkNode.field_g[var2Lifetime1Lifetime1] = dupTemp$10;
               var3Lifetime1Lifetime1 = arrayValue$11[dupTemp$10];
-              vm.field_a[var2Lifetime1Lifetime1][tf.field_g[var2Lifetime1Lifetime1]] = null;
+              vm.field_a[var2Lifetime1Lifetime1][DualLinkNode.field_g[var2Lifetime1Lifetime1]] = null;
               return var3Lifetime1Lifetime1;
             }
           }
@@ -290,12 +290,12 @@ final class bb {
           if (null != vm.field_a) {
             for (var2Lifetime2 = 0; di.field_l.length > var2Lifetime2; var2Lifetime2++) {
               if (di.field_l[var2Lifetime2] == param0 &&
-                tf.field_g[var2Lifetime2] > 0) {
-                dupTemp$3 = tf.field_g[var2Lifetime2] - 1;
+                DualLinkNode.field_g[var2Lifetime2] > 0) {
+                dupTemp$3 = DualLinkNode.field_g[var2Lifetime2] - 1;
                 arrayValue$4 = vm.field_a[var2Lifetime2];
-                tf.field_g[var2Lifetime2] = dupTemp$3;
+                DualLinkNode.field_g[var2Lifetime2] = dupTemp$3;
                 var3Lifetime2 = arrayValue$4[dupTemp$3];
-                vm.field_a[var2Lifetime2][tf.field_g[var2Lifetime2]] = null;
+                vm.field_a[var2Lifetime2][DualLinkNode.field_g[var2Lifetime2]] = null;
                 return var3Lifetime2;
               }
             }
@@ -320,12 +320,12 @@ final class bb {
         if (null != vm.field_a) {
           for (var2Lifetime3 = 0; di.field_l.length > var2Lifetime3; var2Lifetime3++) {
             if (di.field_l[var2Lifetime3] == param0 &&
-              tf.field_g[var2Lifetime3] > 0) {
-              dupTemp$7 = tf.field_g[var2Lifetime3] - 1;
+              DualLinkNode.field_g[var2Lifetime3] > 0) {
+              dupTemp$7 = DualLinkNode.field_g[var2Lifetime3] - 1;
               arrayValue$8 = vm.field_a[var2Lifetime3];
-              tf.field_g[var2Lifetime3] = dupTemp$7;
+              DualLinkNode.field_g[var2Lifetime3] = dupTemp$7;
               var3Lifetime3 = arrayValue$8[dupTemp$7];
-              vm.field_a[var2Lifetime3][tf.field_g[var2Lifetime3]] = null;
+              vm.field_a[var2Lifetime3][DualLinkNode.field_g[var2Lifetime3]] = null;
               return var3Lifetime3;
             }
           }
@@ -357,7 +357,7 @@ final class bb {
             return;
           }
           lc.a((byte) 112);
-          he.field_e.b((byte) -76, 68);
+          he.field_e.writeOpcode((byte) -76, 68);
           if (param0 >= -116) {
             return;
           }
@@ -381,7 +381,7 @@ final class bb {
         }
         if (lh.field_g != null) {
           if (!lh.field_g.c(-10923)) {
-            return vn.field_f;
+            return IntrusiveDeque.field_f;
           }
           return ld.field_o;
         }

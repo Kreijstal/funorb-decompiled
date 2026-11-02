@@ -133,7 +133,7 @@ final class on {
         }
     }
 
-    final static void a(byte param0, eg param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2624_0;
             StringBuilder stackIn_2624_1;
@@ -143,9 +143,9 @@ final class on {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            eg param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, eg initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2624_0 = null;
@@ -192,7 +192,7 @@ final class on {
                 }
                 var2 = fg.a("login_gameupdated", (byte) -45);
                 if (var2 != null) {
-                  s.field_d = sc.a((byte) 104, var2);
+                  IndexedSpriteState.field_d = sc.a((byte) 104, var2);
                 }
                 var2 = fg.a("create_unable", (byte) -45);
                 if (null != var2) {
@@ -264,7 +264,7 @@ final class on {
                 }
                 var2 = fg.a("mu_chat_tips", (byte) -45);
                 if (var2 != null) {
-                  ab.field_r = sc.a((byte) 117, var2);
+                  CipherPacketBuffer.field_r = sc.a((byte) 117, var2);
                 }
                 var2 = fg.a("mu_chat_game", (byte) -45);
                 if (var2 != null) {
@@ -552,7 +552,7 @@ final class on {
                 }
                 var2 = fg.a("mu_chat_game_show_all", (byte) -45);
                 if (var2 != null) {
-                  ug.field_f = sc.a((byte) 86, var2);
+                  IsaacCipher.field_f = sc.a((byte) 86, var2);
                 }
                 var2 = fg.a("mu_chat_game_friends_only", (byte) -45);
                 if (null != var2) {
@@ -664,7 +664,7 @@ final class on {
                 }
                 var2 = fg.a("players_x_of_y", (byte) -45);
                 if (null != var2) {
-                  ug.field_h = sc.a((byte) 103, var2);
+                  IsaacCipher.field_h = sc.a((byte) 103, var2);
                 }
                 var2 = fg.a("message_lobby", (byte) -45);
                 if (null != var2) {
@@ -944,7 +944,7 @@ final class on {
                 }
                 var2 = fg.a("gameopt_playerneedsratedgames", (byte) -45);
                 if (null != var2) {
-                  s.field_b = sc.a((byte) 97, var2);
+                  IndexedSpriteState.field_b = sc.a((byte) 97, var2);
                 }
                 var2 = fg.a("gameopt_youneedratedgames", (byte) -45);
                 if (var2 != null) {
@@ -984,7 +984,7 @@ final class on {
                 }
                 var2 = fg.a("gameopt_mightchange", (byte) -45);
                 if (var2 != null) {
-                  tl.field_c = sc.a((byte) 105, var2);
+                  ArchiveProvider.field_c = sc.a((byte) 105, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -1070,7 +1070,7 @@ final class on {
                 }
                 var2 = fg.a("rule_0_3", (byte) -45);
                 if (var2 != null) {
-                  jb.field_r = sc.a((byte) 120, var2);
+                  SpriteState.field_r = sc.a((byte) 120, var2);
                 }
                 var2 = fg.a("rule_0_4", (byte) -45);
                 if (null != var2) {
@@ -1658,7 +1658,7 @@ final class on {
                 }
                 var2 = fg.a("create_email_tooltip", (byte) -45);
                 if (null != var2) {
-                  jk.field_s = sc.a((byte) 103, var2);
+                  ArchiveIndex.field_s = sc.a((byte) 103, var2);
                 }
                 var2 = fg.a("create_email_confirm_tooltip", (byte) -45);
                 if (var2 != null) {
@@ -1702,7 +1702,7 @@ final class on {
                 }
                 var2 = fg.a("create_username_available", (byte) -45);
                 if (var2 != null) {
-                  wk.field_i = sc.a((byte) 112, var2);
+                  PacketBuffer.field_i = sc.a((byte) 112, var2);
                 }
                 var2 = fg.a("create_alert_namelength", (byte) -45);
                 if (null != var2) {
@@ -2156,7 +2156,7 @@ final class on {
                 }
                 var2 = fg.a("previous", (byte) -45);
                 if (null != var2) {
-                  ab.field_q = sc.a((byte) 94, var2);
+                  CipherPacketBuffer.field_q = sc.a((byte) 94, var2);
                 }
                 var2 = fg.a("prev", (byte) -45);
                 if (var2 != null) {
@@ -2204,7 +2204,7 @@ final class on {
                 }
                 var2 = fg.a("resign", (byte) -45);
                 if (null != var2) {
-                  eg.field_d = sc.a((byte) 89, var2);
+                  ResourceArchive.field_d = sc.a((byte) 89, var2);
                 }
                 var2 = fg.a("returntolobby", (byte) -45);
                 if (null != var2) {
@@ -2460,7 +2460,7 @@ final class on {
                 }
                 var2 = fg.a("mp_acceptrematch", (byte) -45);
                 if (null != var2) {
-                  mo.field_g = sc.a((byte) 111, var2);
+                  IntrusiveNodeHashTable.field_g = sc.a((byte) 111, var2);
                 }
                 var2 = fg.a("mp_acceptrematch_unrated", (byte) -45);
                 if (var2 != null) {
@@ -2584,7 +2584,7 @@ final class on {
                 }
                 var2 = fg.a("quickchat_help", (byte) -45);
                 if (var2 != null) {
-                  mo.field_j = sc.a((byte) 104, var2);
+                  IntrusiveNodeHashTable.field_j = sc.a((byte) 104, var2);
                 }
                 var2 = fg.a("quickchat_help_title", (byte) -45);
                 if (var2 != null) {
@@ -2830,7 +2830,7 @@ final class on {
                 }
                 var2 = fg.a("graphics_ui_fs_countdown", (byte) -45);
                 if (null != var2) {
-                  p.field_f = sc.a((byte) 104, var2);
+                  ClientException.field_f = sc.a((byte) 104, var2);
                 }
                 var2 = fg.a("mb_caption_title", (byte) -45);
                 if (null != var2) {
@@ -3168,7 +3168,7 @@ final class on {
                   }
                   throw aa.a((Throwable) ((Object) stackIn_2624_0), ((StringBuilder) (Object) stackIn_2624_1).append(stackIn_2625_2).append(')').toString());
                 }
-                if (dc.field_b != 0) {
+                if (GameAppletShell.field_b != 0) {
                   ArcanistsMulti.field_G = (var3 == 0);
                 }
             }

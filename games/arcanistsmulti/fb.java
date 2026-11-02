@@ -4,7 +4,7 @@
 final class fb {
     static int[] field_b;
     static String field_c;
-    static ll[] field_a;
+    static IndexedSprite[] field_a;
 
     public static void a(boolean param0) {
         field_a = null;

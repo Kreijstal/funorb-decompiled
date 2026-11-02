@@ -12,7 +12,7 @@ final class wl extends mg {
     private rn field_Q;
     static String field_R;
     static String field_N;
-    static ll[] field_U;
+    static IndexedSprite[] field_U;
     static long field_O;
     static String field_H;
     static int field_K;
@@ -23,45 +23,45 @@ final class wl extends mg {
         int stackIn_9_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        ab var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        ab var8 = null;
+        CipherPacketBuffer var8 = null;
         tk var9 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         var8 = df.field_z;
         var2 = var8;
-        var3 = var8.e((byte) 122);
+        var3 = var8.readUnsignedByte((byte) 122);
         stackIn_3_0 = ((128 & var3) != 0);
         sc.field_V = stackIn_3_0;
         sl.field_W = var3 & 127;
-        db.field_e = var8.e((byte) 44);
-        vi.field_P = var8.c(-943038560);
+        db.field_e = var8.readUnsignedByte((byte) 44);
+        vi.field_P = var8.readLong(-943038560);
         if (sl.field_W != 2) {
           ma.field_M = 0;
           i.field_f = 0;
         } else {
-          i.field_f = var8.n(-98);
-          ma.field_M = var8.h(11609);
+          i.field_f = var8.readUnsignedShort(-98);
+          ma.field_M = var8.readUnsignedMedium(11609);
         }
-        stackIn_9_0 = (var8.e((byte) -105) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte((byte) -105) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        vf.field_j = var8.l(-1);
+        vf.field_j = var8.readString(-1);
         if (var4 == 0) {
           ff.field_a = vf.field_j;
         } else {
-          ff.field_a = var8.l(-1);
+          ff.field_a = var8.readString(-1);
         }
         if (sl.field_W == 1) {
-          mc.field_c = var8.n(-98);
-          field_N = var8.l(-1);
+          mc.field_c = var8.readUnsignedShort(-98);
+          field_N = var8.readString(-1);
         } else {
           if (sl.field_W == 4) {
-            mc.field_c = var8.n(-98);
-            field_N = var8.l(-1);
+            mc.field_c = var8.readUnsignedShort(-98);
+            field_N = var8.readString(-1);
           } else {
             field_N = null;
             mc.field_c = 0;
@@ -75,7 +75,7 @@ final class wl extends mg {
           ga.field_s = null;
           return new jg(param0);
         }
-        var5 = var8.n(-98);
+        var5 = var8.readUnsignedShort(-98);
         try {
           var9 = th.field_d.a(var5, (byte) -119);
           fe.field_p = var9.c(true);

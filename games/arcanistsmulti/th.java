@@ -45,14 +45,14 @@ final class th {
         }
     }
 
-    final static qb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        qb[] var10;
-        qb[] var11_ref_qb__;
+        Sprite[] var10;
+        Sprite[] var11_ref_qb__;
         int var11;
         int var12;
-        qb var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -61,10 +61,10 @@ final class th {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        qb[] var10Lifetime1;
+        Sprite[] var10Lifetime1;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         var9 = param1 + param7 + param6;
-        var10 = new qb[]{new qb(var9, var9), new qb(param2, var9), new qb(var9, var9), new qb(var9, param2), new qb(64, 64), new qb(var9, param2), new qb(var9, var9), new qb(param2, var9), new qb(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param2, var9), new Sprite(var9, var9), new Sprite(var9, param2), new Sprite(64, 64), new Sprite(var9, param2), new Sprite(var9, var9), new Sprite(param2, var9), new Sprite(var9, var9)};
         var11_ref_qb__ = var10;
         for (var12 = 0; var11_ref_qb__.length > var12; var12++) {
           var13 = var11_ref_qb__[var12];
@@ -113,7 +113,7 @@ final class th {
         return var10Lifetime1;
     }
 
-    final static void a(eg param0, eg param1, eg param2, byte param3, boolean param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, boolean param4) {
         try {
           wn.field_z = nj.a("", param3 + 133);
           wn.field_z.a(false, (byte) -59);
@@ -151,14 +151,14 @@ final class th {
         field_d = null;
         field_b = null;
         if (param0 != -113) {
-          ll var2 = (ll) null;
-          th.a((nf) null, (ll) null, -127, -97, -25, -84);
+          IndexedSprite var2 = (IndexedSprite) null;
+          th.a((nf) null, (IndexedSprite) null, -127, -97, -25, -84);
         }
         field_j = null;
         field_c = null;
     }
 
-    final static void a(nf param0, ll param1, int param2, int param3, int param4, int param5) {
+    final static void a(nf param0, IndexedSprite param1, int param2, int param3, int param4, int param5) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

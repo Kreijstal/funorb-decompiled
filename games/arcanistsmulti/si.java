@@ -4,7 +4,7 @@
 final class si implements pf {
     private dj field_h;
     private int field_o;
-    static ll[] field_p;
+    static IndexedSprite[] field_p;
     static String field_q;
     private int field_m;
     private int field_j;

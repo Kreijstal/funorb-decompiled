@@ -47,7 +47,7 @@ final class jo {
         return new String(var6);
     }
 
-    final static boolean a(wk param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -58,7 +58,7 @@ final class jo {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.e((byte) -88);
+          var2_int = param0.readUnsignedByte((byte) -88);
           stackIn_3_0 = (param1 == ~var2_int) ? 1 : 0;
           var3 = stackIn_3_0;
           stackIn_4_0 = var3;

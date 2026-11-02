@@ -4,7 +4,7 @@
 final class an extends bd {
     private String field_k;
     private String field_i;
-    static eg field_o;
+    static ResourceArchive field_o;
     static int field_g;
     static int field_f;
     static int field_j;
@@ -14,7 +14,7 @@ final class an extends bd {
     static int[] field_h;
     static boolean field_l;
 
-    final void a(wk param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_k, (byte) -89);
           int var3_int = 124 / ((-35 - param1) / 36);

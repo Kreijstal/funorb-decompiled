@@ -18,35 +18,35 @@ final class we {
           if (null != ch.field_c) {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (qc.field_c == ob.field_eb);
-              if ((decompiledFrameRemainder0) && (he.field_e.field_g == 0 &&
+              if ((decompiledFrameRemainder0) && (he.field_e.position == 0 &&
                 qj.b(-26572) > 10000L + fo.field_d)) {
-                he.field_e.b((byte) -50, param0);
+                he.field_e.writeOpcode((byte) -50, param0);
               }
             } else {
-              if (he.field_e.field_g == 0 &&
+              if (he.field_e.position == 0 &&
                 qj.b(-26572) > 10000L + fo.field_d) {
-                he.field_e.b((byte) -50, param0);
+                he.field_e.writeOpcode((byte) -50, param0);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param1 < 73) {
                 field_d = (String) null;
               }
-              if (he.field_e.field_g > 0) {
+              if (he.field_e.position > 0) {
                 try {
-                  ch.field_c.a(he.field_e.field_g, 0, (byte) 122, he.field_e.field_j);
+                  ch.field_c.a(he.field_e.position, 0, (byte) 122, he.field_e.payload);
                   fo.field_d = qj.b(-26572);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   ka.b(false);
                 }
-                he.field_e.field_g = 0;
+                he.field_e.position = 0;
               }
               return;
             }
           }
-          he.field_e.field_g = 0;
+          he.field_e.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -119,7 +119,7 @@ final class we {
         return true;
     }
 
-    final static void a(java.math.BigInteger param0, int param1, byte[] param2, wk param3, int param4, java.math.BigInteger param5, int param6) {
+    final static void a(java.math.BigInteger param0, int param1, byte[] param2, PacketBuffer param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -152,29 +152,29 @@ final class we {
             var8[var9] = c.field_b.nextInt();
           }
           if (ue.field_c == null ||
-            !(var7_int <= ue.field_c.field_j.length)) {
-            ue.field_c = new wk(var7_int);
+            !(var7_int <= ue.field_c.payload.length)) {
+            ue.field_c = new PacketBuffer(var7_int);
           }
-          ue.field_c.field_g = 0;
+          ue.field_c.position = 0;
           ue.field_c.a(param2, param4, (byte) -86, param6);
-          ue.field_c.e(var7_int, (byte) 83);
+          ue.field_c.padTo(var7_int, (byte) 83);
           ue.field_c.a(param1 ^ 127, var13);
           if (ji.field_b == null ||
-            !(ji.field_b.field_j.length >= 100)) {
-            ji.field_b = new wk(100);
+            !(ji.field_b.payload.length >= 100)) {
+            ji.field_b = new PacketBuffer(100);
           }
-          ji.field_b.field_g = 0;
-          ji.field_b.f(10, (byte) -33);
+          ji.field_b.position = 0;
+          ji.field_b.writeByte(10, (byte) -33);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            ji.field_b.a(var13[var11], (byte) -101);
+            ji.field_b.writeInt(var13[var11], (byte) -101);
             var11++;
           }
-          ji.field_b.c(param6, (byte) -60);
+          ji.field_b.writeShort(param6, (byte) -60);
           ji.field_b.a(param0, (byte) 95, param5);
-          param3.a(ji.field_b.field_j, 0, (byte) -86, ji.field_b.field_g);
-          param3.a(ue.field_c.field_j, param1, (byte) -86, ue.field_c.field_g);
+          param3.a(ji.field_b.payload, 0, (byte) -86, ji.field_b.position);
+          param3.a(ue.field_c.payload, param1, (byte) -86, ue.field_c.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

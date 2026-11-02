@@ -43,14 +43,14 @@ final class am {
           var2_long = qj.b(-26572);
           if (ob.field_ab != 0 &&
             so.field_d < 0) {
-            var4_ref_qe = (qe) (uf.field_a.b(12623));
+            var4_ref_qe = (qe) (uf.field_a.first(12623));
             if (var4_ref_qe != null &&
               var4_ref_qe.field_q < var2_long) {
-              var4_ref_qe.a(true);
+              var4_ref_qe.unlink(true);
               fj.field_h = var4_ref_qe.field_k.length;
-              df.field_z.field_g = 0;
+              df.field_z.position = 0;
               for (var5_int = 0; var5_int < fj.field_h; var5_int++) {
-                df.field_z.field_j[var5_int] = var4_ref_qe.field_k[var5_int];
+                df.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
               }
               ve.field_m = nf.field_W;
               nf.field_W = se.field_I;
@@ -61,12 +61,12 @@ final class am {
           }
           while (true) {
             if (0 > so.field_d) {
-              df.field_z.field_g = 0;
+              df.field_z.position = 0;
               if (!pe.a((byte) -86, 1)) {
                 return false;
               }
-              so.field_d = df.field_z.g((byte) 62);
-              df.field_z.field_g = 0;
+              so.field_d = df.field_z.readOpcode((byte) 62);
+              df.field_z.position = 0;
               fj.field_h = param1[so.field_d];
             }
             if (!pn.b(-12564)) {
@@ -89,9 +89,9 @@ final class am {
             }
             var5 = new qe(var2_long + (long)var4, so.field_d, new byte[fj.field_h]);
             for (var6 = 0; fj.field_h > var6; var6++) {
-              var5.field_k[var6] = df.field_z.field_j[var6];
+              var5.field_k[var6] = df.field_z.payload[var6];
             }
-            uf.field_a.b(var5, -1);
+            uf.field_a.addLast(var5, -1);
             so.field_d = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

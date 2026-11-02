@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends pg {
+final class aa extends IntrusiveNode {
     static String field_h;
     int[] field_g;
     static String field_j;
     static String field_i;
 
-    final static void a(int param0, eg param1, eg param2, eg param3) {
-        qb var17 = null;
-        ll[] var5 = null;
-        ll[][] var6 = null;
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+        Sprite var17 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        ll[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
-        qb var15 = null;
-        qb var18 = null;
-        qb var11 = null;
-        qb var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = ArcanistsMulti.field_G ? 1 : 0;
@@ -34,13 +34,13 @@ final class aa extends pg {
           vc.field_e = (dj) ((Object) rm.a("arezzo12", param1, "commonui", -119, param3));
           ia.field_c = (dj) ((Object) rm.a("arezzo14", param1, "commonui", -120, param3));
           go.field_k = (dj) ((Object) rm.a("arezzo14bold", param1, "commonui", -123, param3));
-          var17 = new qb(param2.a("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
+          var17 = new Sprite(param2.a("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
           af.a("dropdown", "commonui", 19412, param3);
           var5 = pk.a("commonui", 0, "screen_options", param3);
-          fg.field_k = new ll[4];
-          oa.field_d = new ll[4];
-          qj.field_j = new ll[4];
-          var6 = new ll[][]{oa.field_d, fg.field_k, qj.field_j};
+          fg.field_k = new IndexedSprite[4];
+          oa.field_d = new IndexedSprite[4];
+          qj.field_j = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{oa.field_d, fg.field_k, qj.field_j};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -57,7 +57,7 @@ final class aa extends pg {
           }
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            ll[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
               var14[var11_int] = ef.a(var19[var11_int], (byte) -59, var5[var9]);
             }
@@ -66,30 +66,30 @@ final class aa extends pg {
           ec.a(65280);
           var17.a();
           de.e(0, 0, de.field_e, de.field_j);
-          var15 = new qb(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();
           var17.h(0, 0);
-          var11 = new qb(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.a();
           var17.h(-var17.field_q + var9Lifetime1, 0);
-          var12 = new qb(-(var9Lifetime1 * 2) + var17.field_q, var9Lifetime1);
+          var12 = new Sprite(-(var9Lifetime1 * 2) + var17.field_q, var9Lifetime1);
           var12.a();
           var17.h(-var9Lifetime1, 0);
           oo.c(-15405);
-          af.field_Jb = new qb[]{var15, var12, var11};
+          af.field_Jb = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static p a(Throwable param0, String param1) {
-        p var2 = null;
-        if (!(param0 instanceof p)) {
-          var2 = new p(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (p) ((Object) param0);
-          var2.field_i = var2.field_i + ' ' + param1;
+          var2 = (ClientException) ((Object) param0);
+          var2.context = var2.context + ' ' + param1;
         }
         return var2;
     }

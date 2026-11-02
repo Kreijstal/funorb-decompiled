@@ -8,12 +8,12 @@ final class lh implements pf {
     private int field_l;
     private int field_b;
     private dj field_j;
-    static vn field_c;
+    static IntrusiveDeque field_c;
     private int field_i;
     static String field_h;
     static String field_d;
     static boolean field_n;
-    static eg field_g;
+    static ResourceArchive field_g;
     static String field_a;
     static String[] field_e;
 
@@ -100,7 +100,7 @@ final class lh implements pf {
     }
 
     static {
-        field_c = new vn();
+        field_c = new IntrusiveDeque();
         field_d = "Just one target left; you're almost there! If a target is hard to hit, try aiming away from it and watching how Arcane Arrow curves around to the focus point.";
         field_h = "Remaining time this turn";
         field_a = "Discard";

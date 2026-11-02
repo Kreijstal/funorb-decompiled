@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends pg {
+final class fe extends IntrusiveNode {
     int[] field_i;
     boolean field_l;
-    static qb field_o;
+    static Sprite field_o;
     static ch field_n;
-    static qb field_g;
+    static Sprite field_g;
     static String field_m;
     static String field_p;
-    static ll[] field_h;
+    static IndexedSprite[] field_h;
     static String field_k;
     static int field_j;
 
@@ -22,7 +22,7 @@ final class fe extends pg {
         int var2Lifetime4;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 >= 16) {
-          L4: {
+          regionExit1: {
             if ((0 >= param1 ||
               param1 >= 128) &&
               (160 > param1 ||
@@ -136,7 +136,7 @@ final class fe extends pg {
                   }
                 }
               }
-              break L4;
+              break regionExit1;
             }
             var2 = (byte)param1;
           }
@@ -618,7 +618,7 @@ final class fe extends pg {
     final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, boolean param9, int param10, boolean param11) {
         f.a(param8, param3, param2, param11, (byte) -38, 16777215, param9, param4, param10, param7, param5, param6, 16777215, param1);
         if (!param0) {
-          field_h = (ll[]) null;
+          field_h = (IndexedSprite[]) null;
         }
     }
 

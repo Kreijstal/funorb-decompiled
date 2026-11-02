@@ -7,7 +7,7 @@ final class ck {
     static kc field_d;
     static String field_e;
     static kc field_a;
-    static eg field_b;
+    static ResourceArchive field_b;
     static String field_g;
 
     final static kc a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, dj param7, int param8, int param9, int param10, int param11, int param12) {

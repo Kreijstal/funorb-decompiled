@@ -4,7 +4,7 @@
 class ej extends ag {
     private vl field_K;
     static String field_Q;
-    private vn field_O;
+    private IntrusiveDeque field_O;
     private String[] field_I;
     static am field_R;
     static String field_M;
@@ -149,7 +149,7 @@ class ej extends ag {
         if (param0 != 63) {
           ej.a(-9);
         }
-        this.field_O = new vn();
+        this.field_O = new IntrusiveDeque();
         var2 = 0;
         var3 = (ac) ((Object) this.field_r);
         var4 = var3.a((qm) (this), -127);
@@ -187,7 +187,7 @@ class ej extends ag {
             if (var10 != null) {
               ((vl) (var10)).field_h = var15;
             }
-            this.field_O.b(var15, -1);
+            this.field_O.addLast(var15, -1);
             var10 = var15;
           }
         }
@@ -201,7 +201,7 @@ class ej extends ag {
         if (param1 != 102) {
           return (vl) null;
         }
-        var4 = (vl) (this.field_O.b(12623));
+        var4 = (vl) (this.field_O.first(12623));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -213,7 +213,7 @@ class ej extends ag {
             }
             var5 = var5.field_h;
           }
-          var4 = (vl) (this.field_O.a(0));
+          var4 = (vl) (this.field_O.next(0));
         }
         return null;
     }
@@ -233,10 +233,10 @@ class ej extends ag {
             oo.field_t.h(k.field_d.field_T, 0);
           }
           stackIn_7_0 = k.field_d;
-          stackIn_8_1 = (param1) && (!pg.field_d);
+          stackIn_8_1 = (param1) && (!IntrusiveNode.field_d);
           ((kc) (Object) stackIn_7_0).a(stackIn_8_1, true);
           stackIn_11_0 = fn.field_e;
-          stackIn_12_1 = (param1) && (!pg.field_d);
+          stackIn_12_1 = (param1) && (!IntrusiveNode.field_d);
           ((kc) (Object) stackIn_11_0).a(stackIn_12_1, true);
         }
         if (param0 != -11837) {
@@ -565,12 +565,12 @@ class ej extends ag {
             var4Lifetime1Lifetime1 = var2_int - 480 + 430;
             tj.field_t.a(tc.field_w[ti.field_N], var3Lifetime1Lifetime1, var4Lifetime1Lifetime1, 16777215, 0);
           }
-          L8: {
+          regionExit1: {
             if (mf.field_g > -1) {
               var3Lifetime2 = 75;
               if (hc.field_f) {
                 kl.field_A = 256;
-                mo.field_f = vm.field_d[lm.field_f[mf.field_g]];
+                IntrusiveNodeHashTable.field_f = vm.field_d[lm.field_f[mf.field_g]];
               }
               var4Lifetime2 = -50 + var2_int;
               if (8 == bk.field_J.a(-31497) &&
@@ -622,7 +622,7 @@ class ej extends ag {
                   bk.field_J.a(bm.field_g.field_bb, true).o(-22625) == 31))) {
                   if (bk.field_J.field_f &&
                     !bk.field_J.d((byte) 66, lm.field_f[mf.field_g])) {
-                    var31 = s.field_a;
+                    var31 = IndexedSpriteState.field_a;
                     if (8 + mi.field_B.b(var31) + var5Lifetime1 + var3Lifetime2Lifetime1 > 640) {
                       var3Lifetime2Lifetime1 = 640 + (-var5Lifetime1 - mi.field_B.b(var31) - 8);
                     }
@@ -662,7 +662,7 @@ class ej extends ag {
                             mi.field_B.a(var29, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
                             mi.field_B.a(var29, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
                             mi.field_B.a(var29, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
-                            break L8;
+                            break regionExit1;
                           }
                           var15 = qa.field_k;
                           var28 = bk.field_J.a(bm.field_g.field_bb, true);
@@ -774,7 +774,7 @@ class ej extends ag {
                       }
                     }
                   }
-                  break L8;
+                  break regionExit1;
                 }
                 var32 = "";
                 var14Lifetime1 = var32;

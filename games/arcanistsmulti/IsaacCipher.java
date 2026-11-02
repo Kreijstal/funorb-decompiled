@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug {
+final class IsaacCipher {
     private int field_i;
     private int field_b;
     static String field_l;
@@ -11,7 +11,7 @@ final class ug {
     private int field_a;
     private int[] field_e;
     static String field_h;
-    static dc field_k;
+    static GameAppletShell field_k;
     static eh field_c;
     static int[][] field_d;
 
@@ -78,7 +78,7 @@ final class ug {
         }
     }
 
-    final static void a(int param0, m param1, eg param2, int param3) {
+    final static void a(int param0, m param1, ResourceArchive param2, int param3) {
         try {
           sn.field_G = param0 * gm.b(-2) / 1000;
           ed.a((byte) -17, param2);
@@ -214,7 +214,7 @@ final class ug {
           this.field_g[7 + var2Lifetime1] = var10;
         }
         if (param0 <= 124) {
-          this.a(false);
+          this.nextValue(false);
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
           var7 = var7 + this.field_g[var2Lifetime2 + 4];
@@ -262,12 +262,12 @@ final class ug {
         this.field_b = 256;
     }
 
-    final int a(boolean param0) {
-        if (param0) {
+    final int nextValue(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return -76;
         }
         if (this.field_b == 0) {
-          this.b(param0);
+          this.b(obfuscationGuard);
           this.field_b = 256;
         }
         int fieldTemp$0 = this.field_b - 1;
@@ -275,7 +275,7 @@ final class ug {
         return this.field_e[fieldTemp$0];
     }
 
-    ug(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_e = new int[256];

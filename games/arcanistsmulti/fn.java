@@ -9,7 +9,7 @@ final class fn {
     static kc field_e;
     static String field_i;
     static String field_f;
-    static qb[] field_b;
+    static Sprite[] field_b;
     static String field_d;
 
     final static void a(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
@@ -194,7 +194,7 @@ final class fn {
         if (param1 < 109) {
           return (cg) null;
         }
-        return (cg) (bc.field_c.a(param0, (byte) -63));
+        return (cg) (bc.field_c.get(param0, (byte) -63));
     }
 
     private final static void a(int param0, dn param1, boolean param2, int param3, boolean param4) {
@@ -217,7 +217,7 @@ final class fn {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        vn var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         cg var12 = null;
@@ -314,7 +314,7 @@ final class fn {
           var9Lifetime1 = stackIn_47_0;
           var10 = param1.field_Cb.field_G;
           var11 = null;
-          var12 = (cg) (var10.b(12623));
+          var12 = (cg) (var10.first(12623));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_G == null) {
@@ -325,7 +325,7 @@ final class fn {
                 var12.a(var12.field_Gb, 17);
               }
               var12.field_Gb.field_X = 2;
-              var12.field_Cb = new kc(0L, pg.field_c);
+              var12.field_Cb = new kc(0L, IntrusiveNode.field_c);
               var12.a(var12.field_Cb, 109);
               var12.e((byte) 20);
               var12.field_Hb = new kc(0L, ml.field_V);
@@ -543,7 +543,7 @@ final class fn {
                     if (var25_int == 1) {
                       var24Lifetime2 = tj.a(-115, new String[]{var20}, nm.field_g);
                     }
-                    var24Lifetime2 = tj.a(127, new String[]{var20, Integer.toString(var25_int)}, s.field_b);
+                    var24Lifetime2 = tj.a(127, new String[]{var20, Integer.toString(var25_int)}, IndexedSpriteState.field_b);
                   } else {
                     if (var12.field_Pb < var6) {
                       var24Lifetime2 = tj.a(126, new String[]{var20, Integer.toString(var6)}, um.field_c);
@@ -641,12 +641,12 @@ final class fn {
                 if (lf.field_b == param1 &&
                   !qk.k((byte) 72)) {
                   var27 = wi.field_f.field_ic;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + tj.a(126, new String[]{var27}, tl.field_c);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + tj.a(126, new String[]{var27}, ArchiveProvider.field_c);
                 }
                 kh.field_c = (String) (var24Lifetime2);
               }
             }
-            var12 = (cg) (var10.a(0));
+            var12 = (cg) (var10.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -666,15 +666,15 @@ final class fn {
     final static void a(int param0, boolean param1, String param2, long param3, int param4, int param5) {
         int var7_int = 0;
         try {
-          he.field_e.b((byte) -48, param5);
-          he.field_e.field_g = he.field_e.field_g + 1;
-          var7_int = he.field_e.field_g;
+          he.field_e.writeOpcode((byte) -48, param5);
+          he.field_e.position = he.field_e.position + 1;
+          var7_int = he.field_e.position;
           he.field_e.a(param3, (byte) 85);
           he.field_e.a(param2, 23333);
-          he.field_e.f(param4, (byte) -84);
-          he.field_e.f(!param1 ? 0 : 1, (byte) -52);
+          he.field_e.writeByte(param4, (byte) -84);
+          he.field_e.writeByte(!param1 ? 0 : 1, (byte) -52);
           int var8 = 106 % ((param0 - 32) / 56);
-          he.field_e.b(-var7_int + he.field_e.field_g, (byte) 43);
+          he.field_e.writeByteLengthAtMark(-var7_int + he.field_e.position, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fn.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

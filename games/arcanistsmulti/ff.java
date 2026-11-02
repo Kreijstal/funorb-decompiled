@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff {
-    static ll[] field_b;
+    static IndexedSprite[] field_b;
     static String field_d;
     static int field_c;
     static String[] field_f;
@@ -123,7 +123,7 @@ final class ff {
         }
     }
 
-    final static qb[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
         if (param0 > 25) {
           return qa.a(param3, param1, 1, param2, (byte) 123);
         }

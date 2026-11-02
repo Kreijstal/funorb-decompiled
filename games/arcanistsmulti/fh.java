@@ -5,10 +5,10 @@ import java.util.*;
 
 final class fh implements Iterator {
     static String field_d;
-    private tf field_b;
+    private DualLinkNode field_b;
     static String field_a;
     static int field_e;
-    private tf field_c;
+    private DualLinkNode field_c;
     static int field_g;
     private gb field_h;
     static String field_f;
@@ -18,7 +18,7 @@ final class fh implements Iterator {
         if (null == this.field_b) {
           throw new IllegalStateException();
         }
-        this.field_b.a((byte) 88);
+        this.field_b.unlinkSecondary((byte) 88);
         this.field_b = null;
     }
 
@@ -35,12 +35,12 @@ final class fh implements Iterator {
     public final Object next() {
         Object var1 = this.field_c;
         if (var1 != this.field_h.field_g) {
-          this.field_c = ((tf) (var1)).field_l;
+          this.field_c = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.field_c = null;
           var1 = null;
         }
-        this.field_b = (tf) (var1);
+        this.field_b = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -102,7 +102,7 @@ final class fh implements Iterator {
         try {
           this.field_h = param0;
           this.field_b = null;
-          this.field_c = this.field_h.field_g.field_l;
+          this.field_c = this.field_h.field_g.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

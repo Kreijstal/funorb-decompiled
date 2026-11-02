@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends sg {
+final class hk extends PcmStream {
     static boolean field_s;
     private gh field_q;
-    vn field_l;
+    IntrusiveDeque field_l;
     static wj[] field_p;
     static int field_o;
     static ch field_m;
     m field_n;
-    static qb field_k;
+    static Sprite field_k;
     static String field_r;
 
     final void a(int[] param0, int param1, int param2) {
@@ -26,14 +26,14 @@ final class hk extends sg {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           this.field_n.a(param0, param1, param2);
-          var6 = (o) (this.field_l.b(12623));
-          L0: while (true) {
+          var6 = (o) (this.field_l.first(12623));
+          scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             stackIn_4_0 = this.field_q.a(true, var6);
             if (stackIn_4_0) {
-              var6 = (o) (this.field_l.a(0));
+              var6 = (o) (this.field_l.next(0));
               continue;
             }
             var5 = param2;
@@ -42,14 +42,14 @@ final class hk extends sg {
               if (var5 <= var6.field_C) {
                 this.a(var6, var4_int, var5, var4_int + var5, param0, 59);
                 var6.field_C = var6.field_C - var5;
-                var6 = (o) (this.field_l.a(0));
-                continue L0;
+                var6 = (o) (this.field_l.next(0));
+                continue scanLoop1;
               }
               this.a(var6, var4_int, var6.field_C, var5 + var4_int, param0, 82);
               var4_int = var4_int + var6.field_C;
               var5 = var5 - var6.field_C;
             } while (!this.field_q.a(var4_int, 24464, var5, param0, var6));
-            var6 = (o) (this.field_l.a(0));
+            var6 = (o) (this.field_l.next(0));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,17 +166,17 @@ final class hk extends sg {
         }
     }
 
-    final sg b() {
+    final PcmStream b() {
         o var1;
         int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         while (true) {
-          var1 = (o) (this.field_l.a(0));
+          var1 = (o) (this.field_l.next(0));
           if (var1 == null) {
             return null;
           }
           if (null != var1.field_n) {
-            return (sg) ((Object) var1.field_n);
+            return (PcmStream) ((Object) var1.field_n);
           }
         }
     }
@@ -189,13 +189,13 @@ final class hk extends sg {
         return null == ka.field_m ? ie.field_Pb : true;
     }
 
-    final sg a() {
-        o var1 = (o) (this.field_l.b(12623));
+    final PcmStream a() {
+        o var1 = (o) (this.field_l.first(12623));
         if (var1 == null) {
           return null;
         }
         if (var1.field_n != null) {
-          return (sg) ((Object) var1.field_n);
+          return (PcmStream) ((Object) var1.field_n);
         }
         return this.b();
     }
@@ -259,14 +259,14 @@ final class hk extends sg {
         int var2;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_n.a(param0);
-        var3 = (o) (this.field_l.b(12623));
-        L0: while (true) {
+        var3 = (o) (this.field_l.first(12623));
+        scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           stackIn_4_0 = this.field_q.a(true, var3);
           if (stackIn_4_0) {
-            var3 = (o) (this.field_l.a(0));
+            var3 = (o) (this.field_l.next(0));
             continue;
           }
           var2 = param0;
@@ -274,13 +274,13 @@ final class hk extends sg {
             if (var3.field_C >= var2) {
               this.a(var3, 0, var2);
               var3.field_C = var3.field_C - var2;
-              var3 = (o) (this.field_l.a(0));
-              continue L0;
+              var3 = (o) (this.field_l.next(0));
+              continue scanLoop1;
             }
             this.a(var3, 0, var3.field_C);
             var2 = var2 - var3.field_C;
           } while (!this.field_q.a(0, 24464, var2, (int[]) null, var3));
-          var3 = (o) (this.field_l.a(0));
+          var3 = (o) (this.field_l.next(0));
         }
     }
 
@@ -300,7 +300,7 @@ final class hk extends sg {
     }
 
     hk(gh param0) {
-        this.field_l = new vn();
+        this.field_l = new IntrusiveDeque();
         this.field_n = new m();
         try {
           this.field_q = param0;

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends pg {
-    static qb[] field_i;
+final class qe extends IntrusiveNode {
+    static Sprite[] field_i;
     int field_g;
     static String field_n;
     static boolean field_p;
@@ -16,7 +16,7 @@ final class qe extends pg {
     long field_q;
     static kc field_m;
 
-    final static String a(String param0, int param1, eg param2, String param3) {
+    final static String a(String param0, int param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         String var5 = null;
         String stackIn_5_0 = null;
@@ -32,7 +32,7 @@ final class qe extends pg {
         try {
           if (param1 < 68) {
             var5 = (String) null;
-            qe.a((String) null, -87, (eg) null, (String) null);
+            qe.a((String) null, -87, (ResourceArchive) null, (String) null);
           }
           if (!param2.c(-10923)) {
             stackIn_5_0 = (String) (param3);
@@ -66,7 +66,7 @@ final class qe extends pg {
         }
     }
 
-    final static void a(dl param0, int param1, wk param2, int param3) {
+    final static void a(dl param0, int param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -104,8 +104,8 @@ final class qe extends pg {
           var14 = ArcanistsMulti.field_G ? 1 : 0;
           try {
             var18 = new oh();
-            var18.field_s = param2.e((byte) 99);
-            var18.field_m = param2.d(-10674);
+            var18.field_s = param2.readUnsignedByte((byte) 99);
+            var18.field_m = param2.readInt(-10674);
             var18.field_p = new int[var18.field_s];
             var18.field_o = new int[var18.field_s];
             var18.field_l = new byte[var18.field_s][][];
@@ -114,25 +114,25 @@ final class qe extends pg {
             var18.field_j = new int[var18.field_s];
             for (var5 = param3; var5 < var18.field_s; var5++) {
               try {
-                var6_int = param2.e((byte) -120);
+                var6_int = param2.readUnsignedByte((byte) -120);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.l(-1);
-                    var8 = param2.l(~param3);
-                    var9 = param2.e((byte) 53);
+                    var20 = param2.readString(-1);
+                    var8 = param2.readString(~param3);
+                    var9 = param2.readUnsignedByte((byte) 53);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param2.l(hh.a(param3, -1));
+                      var10[var11_int] = param2.readString(hh.a(param3, -1));
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param2.d(-10674);
+                        var13 = param2.readInt(-10674);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param2.a((byte) 92, 0, var21[var12_int], var13);
@@ -150,13 +150,13 @@ final class qe extends pg {
                     var18.field_l[var5] = var21;
                   }
                 } else {
-                  var16 = param2.l(~param3);
+                  var16 = param2.readString(~param3);
                   var7 = var16;
-                  var15 = param2.l(-1);
+                  var15 = param2.readString(-1);
                   var8 = var15;
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param2.d(-10674);
+                    var9 = param2.readInt(-10674);
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_p[var5] = var9;
@@ -184,7 +184,7 @@ final class qe extends pg {
                 var18.field_j[var5] = -5;
               }
             }
-            la.field_b.b(var18, -1);
+            la.field_b.addLast(var18, -1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -212,21 +212,21 @@ final class qe extends pg {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        ab var3 = he.field_e;
-        var3.b((byte) -49, param2);
-        var3.f(3, (byte) -76);
-        var3.f(10, (byte) -105);
+        CipherPacketBuffer var3 = he.field_e;
+        var3.writeOpcode((byte) -49, param2);
+        var3.writeByte(3, (byte) -76);
+        var3.writeByte(10, (byte) -105);
         if (param1 != -35) {
           field_s = (String) null;
         }
-        var3.c(param0, (byte) -85);
+        var3.writeShort(param0, (byte) -85);
     }
 
-    final static qb[] a(eg param0, String param1, String param2, int param3) {
+    final static Sprite[] a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qb[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -285,7 +285,7 @@ final class qe extends pg {
         field_j = null;
         if (param0 >= -53) {
           String var2 = (String) null;
-          qe.a((eg) null, (String) null, (String) null, 12);
+          qe.a((ResourceArchive) null, (String) null, (String) null, 12);
         }
         field_s = null;
         field_n = null;

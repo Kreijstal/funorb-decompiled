@@ -4,19 +4,19 @@
 final class ea extends ve {
     static String field_B;
     be field_x;
-    static ll[] field_v;
+    static IndexedSprite[] field_v;
     byte[] field_z;
-    static eg field_C;
+    static ResourceArchive field_C;
     static String field_G;
     static String field_I;
     static String field_D;
-    static qb[] field_E;
+    static Sprite[] field_E;
     static ql field_y;
     int field_A;
     static int field_F;
     static lg field_w;
-    static ll[] field_H;
-    static qb[] field_u;
+    static IndexedSprite[] field_H;
+    static Sprite[] field_u;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {

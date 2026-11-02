@@ -3,7 +3,7 @@
  */
 final class md {
     static String field_e;
-    static qb[] field_f;
+    static Sprite[] field_f;
     static String field_d;
     static kc field_b;
     static int field_c;

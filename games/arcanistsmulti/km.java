@@ -4,11 +4,11 @@
 final class km {
     private String field_h;
     static int field_c;
-    static vn field_a;
+    static IntrusiveDeque field_a;
     private boolean field_f;
     private boolean field_d;
     static String field_b;
-    static qb field_e;
+    static Sprite field_e;
     static String field_g;
 
     final static int a(int param0, int param1, int param2, int param3, int param4) {
@@ -49,7 +49,7 @@ final class km {
         this.field_f = param0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, dj param4, int param5, byte param6, int param7, boolean param8, qb[] param9, int param10, qb[] param11) {
+    final static void a(int param0, int param1, int param2, int param3, dj param4, int param5, byte param6, int param7, boolean param8, Sprite[] param9, int param10, Sprite[] param11) {
         try {
           wj.a(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
           if (param6 != 40) {
@@ -103,7 +103,7 @@ final class km {
 
     static {
         field_b = "  You earn wands when you compete against other players in Rated games. There are more wands available in larger games and you will get more wands depending on how many of the following factors you do best at:";
-        field_a = new vn();
+        field_a = new IntrusiveDeque();
         field_g = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find suitable opponents in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
     }
 }

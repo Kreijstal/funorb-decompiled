@@ -59,17 +59,17 @@ final class q extends wn {
         }
     }
 
-    final static qb[] a(int param0, int param1) {
-        qb[] var2 = null;
-        qb[] var2Lifetime1;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var2 = null;
+        Sprite[] var2Lifetime1;
         if (param1 == 0) {
-          var2 = new qb[9];
+          var2 = new Sprite[9];
           var2[4] = ce.b(64, param0, hh.a(param1, 21385));
           return var2;
         }
         kc var3 = (kc) null;
         q.a((kc) null, false, (kc) null, (kc) null, (kc) null);
-        var2Lifetime1 = new qb[9];
+        var2Lifetime1 = new Sprite[9];
         var2Lifetime1[4] = ce.b(64, param0, hh.a(param1, 21385));
         return var2Lifetime1;
     }
@@ -105,12 +105,12 @@ final class q extends wn {
             var5 = rk.field_N;
           }
           var7 = (String) null;
-          rb.a(jk.field_u, var5, 0, (String) null, 97);
+          rb.a(ArchiveIndex.field_u, var5, 0, (String) null, 97);
           lo.field_y = sa.field_Cb;
           wd.field_a = wn.field_D;
-          wn.field_D.field_J = jk.field_u + (-(8355711 & jk.field_u >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
-          wn.field_D.field_eb = -((16711423 & jk.field_u) >> 1) + jk.field_u + (8355711 & nf.field_A.field_eb >> 1);
-          wn.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & jk.field_u >> 1) + jk.field_u);
+          wn.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
+          wn.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & nf.field_A.field_eb >> 1);
+          wn.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
           tm.field_d = new kc(0L, param3);
           bi.field_U = new kc(0L, param2);
           in.field_Jb = new kc(0L, (kc) null);

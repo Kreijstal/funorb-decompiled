@@ -6,13 +6,13 @@ final class vc {
     static dj field_e;
     private int field_m;
     private boolean field_k;
-    qb[] field_b;
+    Sprite[] field_b;
     static kc field_c;
     static kc field_j;
     static String field_l;
     static String field_f;
     private int field_g;
-    qb field_d;
+    Sprite field_d;
     private int field_i;
     private int field_h;
 
@@ -73,7 +73,7 @@ final class vc {
         return this;
     }
 
-    final vc a(byte param0, qb[] param1) {
+    final vc a(byte param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

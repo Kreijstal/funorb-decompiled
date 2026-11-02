@@ -10,7 +10,7 @@ final class sk {
     static String field_g;
     static String field_c;
     static String field_i;
-    static qb[] field_f;
+    static Sprite[] field_f;
 
     final static String a(int param0) {
         if (oh.field_i) {

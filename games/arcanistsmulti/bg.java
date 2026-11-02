@@ -6,7 +6,7 @@ abstract class bg {
     static String field_b;
     static int field_c;
     static boolean field_a;
-    static qb field_e;
+    static Sprite field_e;
 
     public static void a(byte param0) {
         if (param0 <= -7) {
@@ -96,8 +96,8 @@ abstract class bg {
         if (nm.field_h == -1) {
           nm.field_h = param1;
           lc.a((byte) 112);
-          he.field_e.b((byte) -76, 66);
-          he.field_e.f(param1, (byte) -78);
+          he.field_e.writeOpcode((byte) -76, 66);
+          he.field_e.writeByte(param1, (byte) -78);
           if (param0 > qf.field_d) {
             return;
           }
@@ -117,8 +117,8 @@ abstract class bg {
         }
         nm.field_h = param1;
         lc.a((byte) 112);
-        he.field_e.b((byte) -76, 66);
-        he.field_e.f(param1, (byte) -78);
+        he.field_e.writeOpcode((byte) -76, 66);
+        he.field_e.writeByte(param1, (byte) -78);
         if (param0 > qf.field_d) {
           return;
         }

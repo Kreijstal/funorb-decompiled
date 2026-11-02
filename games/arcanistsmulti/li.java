@@ -88,8 +88,8 @@ final class li extends df implements vb {
           an.field_j <= 0) {
           return;
         }
-        int var1_int = wk.field_l.field_w;
-        int var2 = wk.field_l.field_n;
+        int var1_int = PacketBuffer.field_l.field_w;
+        int var2 = PacketBuffer.field_l.field_n;
         int var3 = km.field_e.field_n;
         int var4 = -var3 + an.field_f;
         int var5 = km.field_e.field_w;
@@ -106,8 +106,8 @@ final class li extends df implements vb {
           km.field_e.a(var4, var6);
           de.h(var3, 0, var4, an.field_j);
           for (var9 = var3; var4 > var9; var9 = var9 + var2) {
-            wk.field_l.c(var9, 0);
-            wk.field_l.d(var9, var8);
+            PacketBuffer.field_l.c(var9, 0);
+            PacketBuffer.field_l.d(var9, var8);
           }
           de.h(0, var5, an.field_f, var6);
           for (var9Lifetime1 = var5; var9Lifetime1 < var6; var9Lifetime1 = var9Lifetime1 + var2) {
@@ -190,7 +190,7 @@ final class li extends df implements vb {
         int var7 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          this.field_B.c(109);
+          this.field_B.clear(109);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

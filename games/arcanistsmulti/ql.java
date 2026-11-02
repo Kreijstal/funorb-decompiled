@@ -4,7 +4,7 @@
 final class ql {
     static int field_a;
     static String field_e;
-    static qb field_c;
+    static Sprite field_c;
     static int[] field_b;
     private String field_d;
 
@@ -48,7 +48,7 @@ final class ql {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        qb var6 = null;
+        Sprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -161,14 +161,14 @@ final class ql {
         return mc.a((byte) 21);
     }
 
-    final static qb[] a(int param0, byte param1, int param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
-        qb[] var7 = new qb[9];
-        qb[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = ce.b(param0, param3, 21385);
         if (param1 < 69) {
-          return (qb[]) null;
+          return (Sprite[]) null;
         }
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
@@ -241,7 +241,7 @@ final class ql {
     }
 
     final static void a(boolean param0) {
-        ah.field_b = df.field_z.l(-1);
+        ah.field_b = df.field_z.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) ah.field_b);
         nm.field_b = gk.a(var2, -13);
         if (!param0) {

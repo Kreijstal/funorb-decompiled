@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends pg {
+final class qa extends IntrusiveNode {
     int field_n;
     static char[] field_i;
     static kc field_j;
@@ -13,19 +13,19 @@ final class qa extends pg {
     static volatile boolean field_g;
     static String field_p;
 
-    final static qb[] a(int param0, int param1, int param2, int param3, byte param4) {
-        qb[] var6 = new qb[9];
-        qb[] var5 = var6;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
         if (param4 != 123) {
-          return (qb[]) null;
+          return (Sprite[]) null;
         }
-        qb dupTemp$0 = ce.b(param2, param3, 21385);
+        Sprite dupTemp$0 = ce.b(param2, param3, 21385);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        qb dupTemp$1 = ce.b(param2, param1, param4 + 21262);
+        Sprite dupTemp$1 = ce.b(param2, param1, param4 + 21262);
         var5[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -201,8 +201,8 @@ final class qa extends pg {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            jb.field_u = new String[var4];
-            sf.a(qg.field_a, 0, jb.field_u, 0, var4);
+            SpriteState.field_u = new String[var4];
+            sf.a(qg.field_a, 0, SpriteState.field_u, 0, var4);
             ik.field_c = new String[-1 + (-var4 + var3_int)];
             sf.a(qg.field_a, var4 + 1, ik.field_c, 0, var3_int - var4 - 1);
             var4 = -1;
@@ -221,8 +221,8 @@ final class qa extends pg {
             sf.a(qg.field_a, 0, lo.field_u, 0, var4);
             dk.field_c = new String[-1 + var3_int - var4];
             sf.a(qg.field_a, 1 + var4, dk.field_c, 0, -var4 + var3_int - 1);
-            if (jb.field_u.length >= lo.field_u.length) {
-              stackIn_34_0 = jb.field_u.length;
+            if (SpriteState.field_u.length >= lo.field_u.length) {
+              stackIn_34_0 = SpriteState.field_u.length;
             } else {
               stackIn_34_0 = lo.field_u.length;
             }
@@ -284,7 +284,7 @@ final class qa extends pg {
             }
           }
           if (go.field_i == 2) {
-            var10 = jb.field_u;
+            var10 = SpriteState.field_u;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -308,7 +308,7 @@ final class qa extends pg {
             if (oe.field_c[var4Lifetime2] < 0) {
               stackIn_115_1 = qj.field_a;
             } else {
-              stackIn_115_1 = mo.field_h;
+              stackIn_115_1 = IntrusiveNodeHashTable.field_h;
             }
             rd.field_a = stackIn_114_0 + stackIn_115_1;
           }
@@ -326,8 +326,8 @@ final class qa extends pg {
               wh.field_d[var4Lifetime3][0] = var8Lifetime1 - la.field_d;
               wh.field_d[var4Lifetime3][1] = var5Lifetime3;
               wh.field_d[var4Lifetime3][2] = var7Lifetime2 + (la.field_d << 1);
-              var5Lifetime3 = var5Lifetime3 + ((bm.field_h << 1) + da.field_c + mo.field_h);
-              wh.field_d[var4Lifetime3][3] = mo.field_h + (bm.field_h << 1);
+              var5Lifetime3 = var5Lifetime3 + ((bm.field_h << 1) + da.field_c + IntrusiveNodeHashTable.field_h);
+              wh.field_d[var4Lifetime3][3] = IntrusiveNodeHashTable.field_h + (bm.field_h << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + qj.field_a;
             }

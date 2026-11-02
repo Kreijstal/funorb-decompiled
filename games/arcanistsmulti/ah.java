@@ -9,7 +9,7 @@ final class ah {
     static int[] field_f;
     static String field_d;
 
-    final static void a(qb[] param0, int param1, int param2, int param3, qb[] param4, dj param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, Sprite[] param4, dj param5, int param6, int param7, int param8, int param9, int param10) {
         try {
           int var11_int = -49 % ((13 - param10) / 58);
           fk.d(-11);

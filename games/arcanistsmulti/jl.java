@@ -28,7 +28,7 @@ final class jl {
         RuntimeException decompiledCaughtException = null;
         int var4Lifetime1;
         try {
-          pg.field_d = true;
+          IntrusiveNode.field_d = true;
           la.field_c.field_rb = param1;
           var2_int = ce.field_m.field_e;
           var3 = ce.field_m.field_m;
@@ -146,7 +146,7 @@ final class jl {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            rb.a(jk.field_u, (String) (var2), 0, (String) null, param0 ^ -96);
+            rb.a(ArchiveIndex.field_u, (String) (var2), 0, (String) null, param0 ^ -96);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {

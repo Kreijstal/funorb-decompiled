@@ -4,9 +4,9 @@
 final class gn {
     private ig field_i;
     static String field_j;
-    private eg field_h;
-    private eg field_d;
-    static eg field_e;
+    private ResourceArchive field_h;
+    private ResourceArchive field_d;
+    static ResourceArchive field_e;
     static kc field_c;
     static int field_k;
     static int[][] field_g;
@@ -25,7 +25,7 @@ final class gn {
           }
           var3 = new tk();
           if (var4 != null) {
-            var3.a(new wk(var4), -22034);
+            var3.a(new PacketBuffer(var4), -22034);
           }
           if (32768 <= param0) {
             var3.e((byte) -127);
@@ -160,7 +160,7 @@ final class gn {
         field_g = (int[][]) null;
     }
 
-    gn(int param0, eg param1, eg param2, ok param3) {
+    gn(int param0, ResourceArchive param1, ResourceArchive param2, ok param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

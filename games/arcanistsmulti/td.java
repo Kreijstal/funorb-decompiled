@@ -71,7 +71,7 @@ final class td extends df implements vb {
             return;
           }
           if (param4 == this.field_C) {
-            wk.k(970210916);
+            PacketBuffer.k(970210916);
             return;
           }
           if (this.field_H != param4) {
@@ -213,7 +213,7 @@ final class td extends df implements vb {
         return qf.field_d >= 2 ? true : false;
     }
 
-    final static void a(int param0, byte param1, int param2, ll param3, int param4, int param5) {
+    final static void a(int param0, byte param1, int param2, IndexedSprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;

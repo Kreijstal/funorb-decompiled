@@ -8,7 +8,7 @@ final class pe extends kc {
     private int field_Bb;
     private int field_Gb;
     private int field_Eb;
-    private qb[] field_Rb;
+    private Sprite[] field_Rb;
     private kc field_Qb;
     private nl[] field_Ob;
     private int[] field_Pb;
@@ -16,9 +16,9 @@ final class pe extends kc {
     private int field_Sb;
     private int field_Kb;
     private int field_Cb;
-    static vn field_Lb;
+    static IntrusiveDeque field_Lb;
     static am field_Db;
-    static qb field_Ib;
+    static Sprite field_Ib;
     static int[][] field_Fb;
     static String field_Nb;
     static boolean field_Jb;
@@ -28,7 +28,7 @@ final class pe extends kc {
           if (param0 != -86) {
             pe.a(-103, 27, (byte) -56, 44);
           }
-          if (param1 <= df.field_z.field_g) {
+          if (param1 <= df.field_z.position) {
             return true;
           }
           if (null == ch.field_c) {
@@ -36,16 +36,16 @@ final class pe extends kc {
           }
           int var2_int = ch.field_c.b(0);
           if (var2_int > 0) {
-            if (!(param1 - df.field_z.field_g >= var2_int)) {
-              var2_int = param1 - df.field_z.field_g;
+            if (!(param1 - df.field_z.position >= var2_int)) {
+              var2_int = param1 - df.field_z.position;
             }
-            ch.field_c.a(df.field_z.field_j, (byte) -127, df.field_z.field_g, var2_int);
+            ch.field_c.a(df.field_z.payload, (byte) -127, df.field_z.position, var2_int);
             hi.field_d = qj.b(-26572);
-            df.field_z.field_g = df.field_z.field_g + var2_int;
-            if (param1 > df.field_z.field_g) {
+            df.field_z.position = df.field_z.position + var2_int;
+            if (param1 > df.field_z.position) {
               return false;
             }
-            df.field_z.field_g = 0;
+            df.field_z.position = 0;
             return true;
           }
           try {
@@ -93,9 +93,9 @@ final class pe extends kc {
         int stackIn_35_0 = 0;
         int stackIn_69_0 = 0;
         int stackIn_80_0 = 0;
-        qb[] stackIn_82_0 = null;
+        Sprite[] stackIn_82_0 = null;
         int stackIn_83_1 = 0;
-        qb[] stackIn_90_0 = null;
+        Sprite[] stackIn_90_0 = null;
         int stackIn_91_1 = 0;
         String stackIn_154_0 = null;
         String stackIn_163_0 = null;
@@ -103,7 +103,7 @@ final class pe extends kc {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        vn var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         na var12 = null;
@@ -137,7 +137,7 @@ final class pe extends kc {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        qb var42 = null;
+        Sprite var42 = null;
         kc var43 = null;
         kc var44 = null;
         kc var45 = null;
@@ -146,14 +146,14 @@ final class pe extends kc {
         kc var48 = null;
         kc var49 = null;
         Object var50 = null;
-        qb var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        qb var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        qb var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        qb var53_ref = null;
-        qb var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -178,7 +178,7 @@ final class pe extends kc {
           var8 = ee.field_g.field_Cb.field_G;
           var9 = qj.b(-26572);
           var11 = null;
-          var12 = (na) (var8.b(param3 + 12623));
+          var12 = (na) (var8.first(param3 + 12623));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_G == null) {
@@ -265,7 +265,7 @@ final class pe extends kc {
               var12.a(var12.field_Ib, 56);
               var12.field_fc = new kc(0L, nj.field_d);
               var12.a(var12.field_fc, 24);
-              var12.field_Kb = new kc(0L, pg.field_c);
+              var12.field_Kb = new kc(0L, IntrusiveNode.field_c);
               var12.a(var12.field_Kb, 44);
               var12.e((byte) 20);
               var12.field_Zb = new kc(0L, ml.field_V);
@@ -409,7 +409,7 @@ final class pe extends kc {
               var12.field_ec.a(365 - var33_intLifetime1 - 2, var33_intLifetime1, var31, ga.field_r, (byte) -120);
               var34_int = mm.field_p;
               if ((var14Lifetime1 & 1 << ma.field_U) != 0) {
-                var50_ref = mo.field_b[var12.field_Pb];
+                var50_ref = IntrusiveNodeHashTable.field_b[var12.field_Pb];
                 var12.field_Ub.field_W = var50_ref;
                 var12.field_Ub.a(var50_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
                 var34_int = var34_int + (var50_ref.field_n + mm.field_p);
@@ -589,7 +589,7 @@ final class pe extends kc {
             boolean decompiledFrameRemainder0 = true;
             if (0 != var12.field_U) {
               if (var12.e(-125)) {
-                var12 = (na) (var8.a(0));
+                var12 = (na) (var8.next(0));
                 continue;
               }
               if (0 == var12.field_Zb.field_U) {
@@ -606,7 +606,7 @@ final class pe extends kc {
                 }
               }
             }
-            var12 = (na) (var8.a(0));
+            var12 = (na) (var8.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -620,7 +620,7 @@ final class pe extends kc {
         if (this.field_Cb != -2) {
           return false;
         }
-        if (vn.field_d == 13) {
+        if (IntrusiveDeque.field_d == 13) {
           this.field_Cb = -1;
         }
         if (param0 != -22632) {
@@ -649,8 +649,8 @@ final class pe extends kc {
           return true;
         }
         if (param2 <= 25) {
-          ll var5 = (ll) null;
-          pe.a(6, (nf) null, (byte) -73, -25, -95, (qb) null, (ll) null);
+          IndexedSprite var5 = (IndexedSprite) null;
+          pe.a(6, (nf) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
         }
         return false;
     }
@@ -679,7 +679,7 @@ final class pe extends kc {
         }
         if (param0 != -1) {
           String var5 = (String) null;
-          this.a((byte) -81, 76, (qb) null, (String) null);
+          this.a((byte) -81, 76, (Sprite) null, (String) null);
         }
         for (var3 = 0; this.field_Kb > var3; var3++) {
           if (0 != this.field_Ob[var3].field_U) {
@@ -698,7 +698,7 @@ final class pe extends kc {
         }
     }
 
-    final static void a(int param0, nf param1, byte param2, int param3, int param4, qb param5, ll param6) {
+    final static void a(int param0, nf param1, byte param2, int param3, int param4, Sprite param5, IndexedSprite param6) {
         int var19 = 0;
         int var20 = 0;
         int var23 = 0;
@@ -827,7 +827,7 @@ final class pe extends kc {
 
     final void a(int param0, String param1, byte param2) {
         try {
-          this.field_Ob[this.field_Kb] = new nl(0L, (kc) null, (kc) null, this.field_Hb, (qb) null, param1);
+          this.field_Ob[this.field_Kb] = new nl(0L, (kc) null, (kc) null, this.field_Hb, (Sprite) null, param1);
           this.field_Ob[this.field_Kb].field_Ab = this.field_Rb;
           if (param2 != -26) {
             pe.a((byte) 5, 119);
@@ -864,7 +864,7 @@ final class pe extends kc {
         int var8Lifetime1;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_Kb == 0) {
-          this.field_Ob[this.field_Kb] = new nl(0L, (kc) null, (kc) null, this.field_Qb, (qb) null, db.field_c);
+          this.field_Ob[this.field_Kb] = new nl(0L, (kc) null, (kc) null, this.field_Qb, (Sprite) null, db.field_c);
           this.field_Ob[this.field_Kb].field_gb = 1;
           this.a(this.field_Ob[this.field_Kb], 97);
           this.field_Pb[this.field_Kb] = -1;
@@ -891,7 +891,7 @@ final class pe extends kc {
         return;
     }
 
-    pe(kc param0, qb[] param1, kc param2, kc param3, int param4, int param5, int param6, int param7, int param8) {
+    pe(kc param0, Sprite[] param1, kc param2, kc param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ob = new nl[256];
         this.field_Pb = new int[256];
@@ -910,7 +910,7 @@ final class pe extends kc {
         }
     }
 
-    final void a(byte param0, int param1, qb param2, String param3) {
+    final void a(byte param0, int param1, Sprite param2, String param3) {
         try {
           this.field_Ob[this.field_Kb] = new nl(0L, (kc) null, (kc) null, this.field_Hb, param2, param3);
           this.field_Ob[this.field_Kb].field_Ab = this.field_Rb;
@@ -932,7 +932,7 @@ final class pe extends kc {
     }
 
     static {
-        field_Lb = new vn();
+        field_Lb = new IntrusiveDeque();
         field_Db = new am();
         field_Nb = "Accept draw";
     }

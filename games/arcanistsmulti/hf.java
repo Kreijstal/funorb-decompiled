@@ -4,11 +4,11 @@
 final class hf {
     static kc field_f;
     static String field_m;
-    static qb field_o;
+    static Sprite field_o;
     private int field_p;
     private String field_j;
     private int field_n;
-    private qb field_k;
+    private Sprite field_k;
     static kc field_q;
     static int field_r;
     private int field_l;
@@ -18,10 +18,10 @@ final class hf {
     private boolean field_h;
     static kc field_t;
     private String[] field_a;
-    private qb field_e;
+    private Sprite field_e;
     private int field_s;
-    private qb field_g;
-    private ll[] field_i;
+    private Sprite field_g;
+    private IndexedSprite[] field_i;
     private so field_d;
 
     public static void a(boolean param0) {
@@ -55,7 +55,7 @@ final class hf {
 
     private final int a(byte param0) {
         if (param0 >= -61) {
-          this.field_i = (ll[]) null;
+          this.field_i = (IndexedSprite[]) null;
         }
         this.field_d.a((byte) -76);
         if (this.field_d.b(true)) {
@@ -67,7 +67,7 @@ final class hf {
             return 1;
           }
         }
-        if (vn.field_d == 13) {
+        if (IntrusiveDeque.field_d == 13) {
           return 1;
         }
         return 0;
@@ -116,7 +116,7 @@ final class hf {
 
     final static void c(int param0) {
         wh.field_g = false;
-        ld.field_p = df.field_z.e((byte) 88) == 0 ? true : false;
+        ld.field_p = df.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
         if (param0 < 15) {
           hf.a(true);
         }
@@ -276,7 +276,7 @@ final class hf {
 
     final static String a(String param0, String param1, int param2, int param3) {
         RuntimeException var4 = null;
-        ab var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         wa var7 = null;
         CharSequence var8 = null;
@@ -292,11 +292,11 @@ final class hf {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param0);
-          if (!vn.a(var8, 0)) {
+          if (!IntrusiveDeque.a(var8, 0)) {
             stackIn_2_0 = fn.field_h;
             return stackIn_2_0;
           }
-          if (jb.field_t != 2) {
+          if (SpriteState.field_t != 2) {
             stackIn_5_0 = rk.field_L;
             return stackIn_5_0;
           }
@@ -305,19 +305,19 @@ final class hf {
             stackIn_9_0 = tj.a(param3 ^ 10068676, new String[]{param1}, k.field_f);
             return stackIn_9_0;
           }
-          var7.a(true);
-          var7.a((byte) 88);
+          var7.unlink(true);
+          var7.unlinkSecondary((byte) 88);
           pc.field_b = pc.field_b - 1;
           var5 = he.field_e;
-          var5.b((byte) -50, param2);
-          var5.field_g = var5.field_g + 1;
-          var6 = var5.field_g;
-          var5.f(3, (byte) -99);
+          var5.writeOpcode((byte) -50, param2);
+          var5.position = var5.position + 1;
+          var6 = var5.position;
+          var5.writeByte(3, (byte) -99);
           if (param3 != 10068666) {
             field_t = (kc) null;
           }
           var5.a(param0, 23333);
-          var5.b(-var6 + var5.field_g, (byte) 43);
+          var5.writeByteLengthAtMark(-var6 + var5.position, (byte) 43);
           stackIn_13_0 = null;
           return (String) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,7 +351,7 @@ final class hf {
         }
     }
 
-    private final void a(ll[] param0, int param1, String param2, java.applet.Applet param3, boolean param4, String[] param5) {
+    private final void a(IndexedSprite[] param0, int param1, String param2, java.applet.Applet param3, boolean param4, String[] param5) {
         String var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -368,7 +368,7 @@ final class hf {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
             fi.a((CharSequence) ((Object) var7), 10)) {
-            this.field_u = dc.a((CharSequence) ((Object) var7), 126);
+            this.field_u = GameAppletShell.a((CharSequence) ((Object) var7), 126);
           } else {
             this.field_u = 2;
           }
@@ -424,14 +424,14 @@ final class hf {
         int[] var13 = null;
         int[] var11 = null;
         int[] var9 = null;
-        qb var5 = null;
+        Sprite var5 = null;
         String var6 = null;
         String var7 = null;
         if (this.field_k == null) {
           if (fd.field_b == null) {
             return;
           }
-          this.field_k = new qb(622, 47);
+          this.field_k = new Sprite(622, 47);
           fk.a(this.field_k, -23095);
           de.c(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
@@ -439,12 +439,12 @@ final class hf {
           var15 = kb.a(var3, var2, param0 ^ 16128330);
           this.a(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
           oo.c(-15405);
-          this.field_g = new qb(475, 24);
+          this.field_g = new Sprite(475, 24);
           this.a(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, mm.field_r, 475);
           var13 = kb.a(526344, 526344, 65535);
           var11 = var13;
           var9 = var11;
-          var5 = new qb(121, 122);
+          var5 = new Sprite(121, 122);
           fk.a(var5, param0 ^ -16170116);
           de.c(0, 0, var5.field_q, var5.field_y / 2, param0, 16306250);
           de.c(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
@@ -454,7 +454,7 @@ final class hf {
           this.a(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
           this.a(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, gk.field_f[this.field_u], var5.field_q);
           oo.c(-15405);
-          this.field_e = new qb(121, 122);
+          this.field_e = new Sprite(121, 122);
           fk.a(this.field_e, param0 - 16204012);
           var5.a(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
           oo.c(param0 - 16196322);
@@ -462,7 +462,7 @@ final class hf {
         }
     }
 
-    private final void a(qb param0, float param1, int param2, int param3, int param4, int[] param5, int param6, dj param7, String param8, int param9) {
+    private final void a(Sprite param0, float param1, int param2, int param3, int param4, int[] param5, int param6, dj param7, String param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -476,14 +476,14 @@ final class hf {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        qb var13 = null;
+        Sprite var13 = null;
         try {
           var11_int = (int)((float)param9 / param1);
           var12 = (int)((float)param4 / param1);
           if (param3 != 127) {
             return;
           }
-          var13 = new qb(var11_int, var12);
+          var13 = new Sprite(var11_int, var12);
           fk.a(var13, -23095);
           param0.c((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
           this.a(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
@@ -525,13 +525,13 @@ final class hf {
     }
 
     private final void c(byte param0) {
-        ll var2;
+        IndexedSprite var2;
         int var3;
         int var4;
         int var5;
-        ll var6;
-        ll var7;
-        ll var2Lifetime1;
+        IndexedSprite var6;
+        IndexedSprite var7;
+        IndexedSprite var2Lifetime1;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_i) {
           if (li.field_F != null) {
@@ -806,7 +806,7 @@ final class hf {
         }
     }
 
-    hf(java.applet.Applet param0, String param1, ll[] param2, String[] param3) {
+    hf(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
         this.field_p = 0;
         this.field_c = 0;
         this.field_h = true;

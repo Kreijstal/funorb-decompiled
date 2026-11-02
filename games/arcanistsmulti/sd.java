@@ -47,9 +47,9 @@ final class sd {
         }
     }
 
-    final static eg a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 < 5) {
-          return (eg) null;
+          return (ResourceArchive) null;
         }
         return me.a(param0, true, 2097152, false, 1, false);
     }
@@ -410,27 +410,27 @@ final class sd {
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4, String param5) {
-        ab var9 = null;
+        CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
           var9 = he.field_e;
-          var9.b((byte) -58, param3);
-          var9.field_g = var9.field_g + 1;
+          var9.writeOpcode((byte) -58, param3);
+          var9.position = var9.position + 1;
           if (param2 <= 60) {
             String var8 = (String) null;
             sd.a(-27, (String) null, 28, 54, -6, (String) null);
           }
-          var7 = var9.field_g;
-          var9.f(param4, (byte) -71);
+          var7 = var9.position;
+          var9.writeByte(param4, (byte) -71);
           if (param4 == 2) {
             var9.a(param5, 23333);
           }
           if (param1 == null) {
-            var9.c(param0, (byte) -119);
+            var9.writeShort(param0, (byte) -119);
           } else {
             jh.a(var9, (byte) 127, param1);
           }
-          var9.b(-var7 + var9.field_g, (byte) 43);
+          var9.writeByteLengthAtMark(-var7 + var9.position, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

@@ -18,7 +18,7 @@ final class kn extends ob implements vb {
     static String field_pb;
     private ag field_xb;
     private ag field_jb;
-    static mo field_qb;
+    static IntrusiveNodeHashTable field_qb;
     private ua field_ob;
 
     final void a(qm param0, int param1, int param2, int param3) {
@@ -37,7 +37,7 @@ final class kn extends ob implements vb {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (tl.field_d) {
+          if (ArchiveProvider.field_d) {
             param0.d((byte) 29);
             var9 = this.field_vb;
             var5 = var9;
@@ -81,7 +81,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    final static lg a(eg param0, int param1, boolean param2, int param3, eg param4) {
+    final static lg a(ResourceArchive param0, int param1, boolean param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         lg stackIn_6_0 = null;
@@ -277,7 +277,7 @@ final class kn extends ob implements vb {
             }
             this.field_zb = new ti(var5_ref_String__, var6_int, 150);
             this.field_zb.a(18, this.field_lb.field_k + (this.field_lb.field_j + (this.field_ob.field_j - 19)), 126, this.field_ob.field_n + this.field_lb.field_n, -54);
-            this.field_B.a((pg) (this.field_zb), (byte) -58);
+            this.field_B.addFirst((IntrusiveNode) (this.field_zb), (byte) -58);
           }
           this.field_kb = this.a((wc) (this), lm.field_a, 410);
           var5Lifetime1 = this.field_kb.field_v / 2 + this.field_kb.field_n;
@@ -463,12 +463,12 @@ final class kn extends ob implements vb {
                 ko.a(var4_int, var5, (byte) -86);
               }
               var6 = oh.a((byte) 119, var4_int);
-              ia.field_b[var4_int].field_W = tl.field_a[var6];
+              ia.field_b[var4_int].field_W = ArchiveProvider.field_a[var6];
               oc.field_f[var4_int].field_rb = cf.field_b[var6];
             }
           }
           if (g.field_g.field_U != 0) {
-            db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, be.field_l, wj.field_b, pg.field_c, ec.field_g, nj.field_d, (String) null, 0L);
+            db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, be.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
           }
           var9 = f.a(16711422, param1, ga.field_r, dh.field_Gb);
           if (var9 != null) {
@@ -495,7 +495,7 @@ final class kn extends ob implements vb {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_jb == this.field_xb) {
           u.b(6);
-          tl.a(-30267);
+          ArchiveProvider.a(-30267);
         } else {
           if (this.field_xb != this.field_mb) {
             if (this.field_xb != this.field_lb) {
@@ -527,8 +527,8 @@ final class kn extends ob implements vb {
 
     final static void g(boolean param0) {
         if (param0) {
-          eg var2 = (eg) null;
-          kn.a((eg) null, -48, false, -99, (eg) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          kn.a((ResourceArchive) null, -48, false, -99, (ResourceArchive) null);
         }
         k.field_o = 0;
     }
@@ -611,7 +611,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final ag a(int param0, String param1, ll[] param2, wc param3) {
+    private final ag a(int param0, String param1, IndexedSprite[] param2, wc param3) {
         ag var5 = null;
         RuntimeException var5_ref = null;
         ua var6 = null;

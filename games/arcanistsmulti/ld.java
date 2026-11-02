@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld extends im {
-    static eg field_q;
+    static ResourceArchive field_q;
     static boolean field_p;
     static String field_l;
     static int[][] field_n;
@@ -25,7 +25,7 @@ final class ld extends im {
 
     final static pb a(int param0, boolean param1) {
         pb var2 = new pb();
-        hn.field_q.b(var2, -1);
+        hn.field_q.addLast(var2, -1);
         ik.a(param0, 0);
         if (!param1) {
           return var2;
@@ -62,7 +62,7 @@ final class ld extends im {
 
     final static void a(cm param0, int param1, int param2) {
         try {
-          cc.field_e.b(param0, -1);
+          cc.field_e.addLast(param0, -1);
           hb.a(param0, param2, (byte) 92);
           if (param1 < 89) {
             field_o = (String) null;

@@ -7,8 +7,8 @@ abstract class vi extends df {
     static int field_L;
     static String field_F;
     static long field_P;
-    static qb field_I;
-    static ll[] field_M;
+    static Sprite field_I;
+    static IndexedSprite[] field_M;
     boolean field_G;
     static String field_Q;
     static String field_K;
@@ -17,7 +17,7 @@ abstract class vi extends df {
     static byte[][] field_O;
     static String field_J;
     private int field_S;
-    static qb[] field_E;
+    static Sprite[] field_E;
     static String field_R;
 
     final static void a(byte param0, String param1) {
@@ -46,7 +46,7 @@ abstract class vi extends df {
         if (param0 != -1) {
           return;
         }
-        p.field_c = param2;
+        ClientException.field_c = param2;
         sl.field_T = param1;
     }
 
@@ -115,18 +115,18 @@ abstract class vi extends df {
           return;
         }
         if (null == ed.field_vb) {
-          ed.field_vb = new qb(this.field_v, this.field_k);
+          ed.field_vb = new Sprite(this.field_v, this.field_k);
         } else {
           if (ed.field_vb.field_q < this.field_v) {
-            ed.field_vb = new qb(this.field_v, this.field_k);
+            ed.field_vb = new Sprite(this.field_v, this.field_k);
           } else {
             if (this.field_k > ed.field_vb.field_y) {
-              ed.field_vb = new qb(this.field_v, this.field_k);
+              ed.field_vb = new Sprite(this.field_v, this.field_k);
             }
           }
         }
         if (param0 >= -52) {
-          field_E = (qb[]) null;
+          field_E = (Sprite[]) null;
         }
         fk.a(ed.field_vb, -23095);
         de.b();

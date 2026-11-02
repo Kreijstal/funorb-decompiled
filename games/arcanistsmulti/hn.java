@@ -5,10 +5,10 @@ import java.io.*;
 
 final class hn implements Runnable {
     private int field_b;
-    private wk field_h;
+    private PacketBuffer field_h;
     static String field_c;
     private og field_j;
-    static vn field_q;
+    static IntrusiveDeque field_q;
     private java.net.URL field_m;
     static String field_l;
     private og field_a;
@@ -17,7 +17,7 @@ final class hn implements Runnable {
     static int[] field_k;
     static String field_o;
     static String field_i;
-    static qb[] field_d;
+    static Sprite[] field_d;
     private DataInputStream field_f;
     static int field_p;
     static String field_e;
@@ -34,9 +34,9 @@ final class hn implements Runnable {
         field_q = null;
     }
 
-    final wk b(int param0) {
+    final PacketBuffer b(int param0) {
         if (param0 != 21496) {
-          return (wk) null;
+          return (PacketBuffer) null;
         }
         if (this.field_b != 3) {
           return null;
@@ -94,7 +94,7 @@ final class hn implements Runnable {
               var3.write(go.a(var5, (byte) -82));
               this.field_f = new DataInputStream(var4.getInputStream());
             }
-            this.field_h.field_g = 0;
+            this.field_h.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,16 +219,16 @@ final class hn implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = ArcanistsMulti.field_G ? 1 : 0;
           try {
-            while (this.field_h.field_j.length > this.field_h.field_g) {
-              var1_int = this.field_f.read(this.field_h.field_j, this.field_h.field_g, this.field_h.field_j.length - this.field_h.field_g);
+            while (this.field_h.payload.length > this.field_h.position) {
+              var1_int = this.field_f.read(this.field_h.payload, this.field_h.position, this.field_h.payload.length - this.field_h.position);
               if (var1_int >= 0) {
-                this.field_h.field_g = this.field_h.field_g + var1_int;
+                this.field_h.position = this.field_h.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_h.field_j.length == this.field_h.field_g) {
-              throw hn.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_j.length + " " + this.field_m));
+            if (this.field_h.payload.length == this.field_h.position) {
+              throw hn.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_m));
             }
             var1 = this;
             synchronized (var1) {
@@ -312,7 +312,7 @@ final class hn implements Runnable {
         try {
           this.field_m = param1;
           this.field_n = param0;
-          this.field_h = new wk(param2);
+          this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -321,7 +321,7 @@ final class hn implements Runnable {
     static {
         field_c = "Advanced Elemental Control";
         field_l = "Loading...";
-        field_q = new vn();
+        field_q = new IntrusiveDeque();
         field_i = "Either affect your Arcanist or the whole arena - just click the mouse to activate.";
         field_e = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
         field_o = "Goblin Caves:";
