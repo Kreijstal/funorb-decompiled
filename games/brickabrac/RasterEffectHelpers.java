@@ -407,10 +407,10 @@ final class RasterEffectHelpers {
         RasterEffectHelpers.blitGrayscalePalette(Rasterizer2D.pixels, sprite.pixels, 0, sourceOffset, destinationOffset, 0, 0, width, height, destinationRowSkip, sourceRowSkip, grayPalette);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         missingEmailPart = null;
         field_b = null;
-        if (param0 >= -59) {
+        if (obfuscationGuard >= -59) {
           int[] var2 = (int[]) null;
           RasterEffectHelpers.drawBranchedGlow(4, 89, -93, -46, -111, (int[]) null, 101);
         }

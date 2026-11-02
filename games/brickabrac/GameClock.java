@@ -89,13 +89,13 @@ abstract class GameClock {
         return AchievementIcon.field_j == 11 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         chocolateSmallNearSprite = null;
         field_f = null;
         collisionBody = null;
         field_h = null;
         halloweenFarSprite = null;
-        int var1 = 25 % ((param0 + 34) / 58);
+        int var1 = 25 % ((obfuscationGuard + 34) / 58);
     }
 
     abstract long getSleepMillis(byte obfuscationGuard);

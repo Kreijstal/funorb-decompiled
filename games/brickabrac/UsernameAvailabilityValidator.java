@@ -31,8 +31,8 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           LogoRenderHelpers.drawLogoPieces(-115);
           var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
-            var3.d(-2, -2, 16777215);
-            Rasterizer2D.e(4, 4, 0, 0, 540, 140);
+            var3.drawSilhouette(-2, -2, 16777215);
+            Rasterizer2D.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           JavaRandomHelpers.field_b.bindRasterTarget();
           var1.drawHalfSize(0, 0);
@@ -112,8 +112,8 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         this.usernameAvailable = false;
     }
 
-    public static void f(int param0) {
-        if (param0 >= -35) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard >= -35) {
           field_l = 72L;
           field_m = null;
           return;

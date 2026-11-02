@@ -13,8 +13,8 @@ final class QuickChatParameterType {
     int commandId;
     static boolean field_b;
 
-    public static void a(int param0) {
-        int var1 = -115 % ((83 - param0) / 41);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = -115 % ((83 - obfuscationGuard) / 41);
         field_f = null;
         field_a = null;
         field_i = null;
@@ -22,7 +22,7 @@ final class QuickChatParameterType {
         field_j = null;
     }
 
-    final static boolean a(int[] param0, long param1, int param2, boolean param3, String param4) {
+    final static boolean openQuickChatForRecipient(int[] menuIndices, long recipientId, int channel, boolean flag, String recipientName) {
         QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
@@ -33,19 +33,19 @@ final class QuickChatParameterType {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!QuickChatHelpDialog.a(param1, -3, param4, param0, param2)) {
+          if (!QuickChatHelpDialog.canUseQuickChat(recipientId, -3, recipientName, menuIndices, channel)) {
             return false;
           }
-          if (param2 == 1) {
-            param2 = 0;
+          if (channel == 1) {
+            channel = 0;
           }
-          DualLinkNode.quickChatRecipient = param4;
-          ScreenNavigationHelpers.quickChatChannel = param2;
-          var7 = (CharSequence) ((Object) param4);
+          DualLinkNode.quickChatRecipient = recipientName;
+          ScreenNavigationHelpers.quickChatChannel = channel;
+          var7 = (CharSequence) ((Object) recipientName);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var7, 64);
-          CanvasResizeController.field_n = param1;
-          var6 = SaveResultsPromptScreen.a(param0, WidgetLayerStack.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
-          if (param3) {
+          CanvasResizeController.field_n = recipientId;
+          var6 = SaveResultsPromptScreen.a(menuIndices, WidgetLayerStack.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
+          if (flag) {
             field_f = (String) null;
           }
           HuffmanCodec.installQuickChatMenu(105, var6);
@@ -55,13 +55,13 @@ final class QuickChatParameterType {
           var6_ref = decompiledCaughtException;
           stackIn_12_0 = var6_ref;
           stackIn_12_1 = new StringBuilder().append("th.B(");
-          if (param0 == null) {
+          if (menuIndices == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(recipientId).append(',').append(channel).append(',').append(flag).append(',');
+          if (recipientName == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -72,12 +72,12 @@ final class QuickChatParameterType {
 
     final static void a(byte param0) {
         if (param0 == -63) {
-          UsernameSuggestionPanel.c(true);
+          UsernameSuggestionPanel.increaseMasterSoundGain(true);
           return;
         }
         String var2 = (String) null;
-        QuickChatParameterType.a((int[]) null, 43L, -67, true, (String) null);
-        UsernameSuggestionPanel.c(true);
+        QuickChatParameterType.openQuickChatForRecipient((int[]) null, 43L, -67, true, (String) null);
+        UsernameSuggestionPanel.increaseMasterSoundGain(true);
     }
 
     final static String a(CharSequence param0, int param1) {

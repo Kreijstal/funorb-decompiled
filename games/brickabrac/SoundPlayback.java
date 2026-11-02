@@ -9,14 +9,14 @@ final class SoundPlayback extends IntrusiveNode {
     static String field_k;
     IntrusiveNode sourceNode;
 
-    final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
+    final static void renderBackdropSurface(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-89, param2.sprite);
           RasterEffectHelpers.drawGrayscalePaletteSprite(param5, (-param5.canvasWidth + param2.width) / 2, -param5.canvasHeight + (param0 + param2.height), MatchCompleteScreen.field_C[param3]);
           RasterStackHelpers.popRaster(-95);
           if (param1 != 26746) {
             RgbSprite var7 = (RgbSprite) null;
-            SoundPlayback.a(-125, 69, (RasterCacheSurface) null, 30, 70, (RgbSprite) null);
+            SoundPlayback.renderBackdropSurface(-125, 69, (RasterCacheSurface) null, 30, 70, (RgbSprite) null);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -37,9 +37,9 @@ final class SoundPlayback extends IntrusiveNode {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         soundCache = null;
-        if (param0 <= 22) {
+        if (obfuscationGuard <= 22) {
           soundCache = (SoundCache) null;
           field_k = null;
           return;

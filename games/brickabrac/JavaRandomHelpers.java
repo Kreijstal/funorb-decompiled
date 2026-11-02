@@ -8,9 +8,9 @@ final class JavaRandomHelpers {
     static NodeDeque achievementIconPool;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
-        if (param0 < 64) {
+        if (obfuscationGuard < 64) {
           JavaRandomHelpers.a((byte) 28);
           achievementIconPool = null;
           field_c = null;

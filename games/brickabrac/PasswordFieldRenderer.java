@@ -10,10 +10,10 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
     static long field_G;
     static NodeDeque pendingIntArrayRequests;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         pendingIntArrayRequests = null;
         fireworkBursts = null;
-        if (param0 >= -55) {
+        if (obfuscationGuard >= -55) {
           return;
         }
         field_H = null;

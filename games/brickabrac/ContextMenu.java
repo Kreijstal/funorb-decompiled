@@ -96,9 +96,9 @@ final class ContextMenu extends UiComponent {
         this(styleTemplate, styleTemplate.hoverFrameSprites, styleTemplate.emptyItemStyle, styleTemplate.itemStyle, styleTemplate.borderInsetX, styleTemplate.itemInsetX, styleTemplate.iconLabelGap, styleTemplate.borderInsetY, styleTemplate.itemHeight);
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_Ub = null;
-        if (param0 < 20) {
+        if (obfuscationGuard < 20) {
           return;
         }
         field_bc = (int[][]) null;

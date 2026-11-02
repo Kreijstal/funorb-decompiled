@@ -42,7 +42,7 @@ abstract class ArchiveFetchClient {
             email = account;
           } else {
             accountCharacters = (CharSequence) ((Object) account);
-            identifier = HighscoresScreen.a(false, accountCharacters);
+            identifier = HighscoresScreen.encodeBase37Name(false, accountCharacters);
           }
           credentials = AccountIntroductionPanel.createLoginCredentials(identifier, 20, alternateNumericKind, password, (String) (email));
           return credentials;
@@ -90,9 +90,9 @@ abstract class ArchiveFetchClient {
         return this.pendingBackground.size(-25906) + this.activeBackground.size(-25906);
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_j = null;
-        if (param0 != -12200) {
+        if (obfuscationGuard != -12200) {
           field_j = (String[]) null;
           field_k = null;
           localPlayerNameKey = null;
@@ -102,15 +102,15 @@ abstract class ArchiveFetchClient {
         localPlayerNameKey = null;
     }
 
-    final static void a(RasterCacheSurface param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
+    final static void renderBackdropSurface(RasterCacheSurface param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-77, param0.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, Bzip2State.jungleBackgroundColors[param2], 16777215);
-          param1.b((-param1.canvasWidth + param0.width) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.height - 200 / param3), 55, 110);
+          param1.drawWithVerticalAlphaGradient((-param1.canvasWidth + param0.width) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.height - 200 / param3), 55, 110);
           RasterStackHelpers.popRaster(-117);
           if (!param5) {
             RgbSprite var7 = (RgbSprite) null;
-            ArchiveFetchClient.a((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);
+            ArchiveFetchClient.renderBackdropSurface((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -163,7 +163,7 @@ abstract class ArchiveFetchClient {
           return;
         }
         try {
-          MusicPatch.a(0, WidgetTextLayout.field_d, param0);
+          MusicPatch.pushAccountMessageDialog(0, WidgetTextLayout.field_d, param0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -180,7 +180,7 @@ abstract class ArchiveFetchClient {
 
     final static void a(byte param0, boolean param1) {
         if (param0 > -16) {
-          ArchiveFetchClient.c(-18);
+          ArchiveFetchClient.clearSharedReferences(-18);
           RankingsScreen.a(param1, -58, true);
           return;
         }

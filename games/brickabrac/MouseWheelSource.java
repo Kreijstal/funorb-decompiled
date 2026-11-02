@@ -9,11 +9,11 @@ abstract class MouseWheelSource {
 
     abstract void detach(java.awt.Component component, int obfuscationGuard);
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_d = null;
         friendNameHeading = null;
         field_b = null;
-        if (param0 < 72) {
+        if (obfuscationGuard < 72) {
           resizeFrameCounter = 14;
         }
     }

@@ -6,8 +6,8 @@ class NumericLoginCredentials extends LoginCredentials {
     private String password;
     static boolean repeatMessageAvailable;
 
-    final static LoginMethodPreference[] b(int param0) {
-        if (param0 == 140) {
+    final static LoginMethodPreference[] getLoginMethodPreferences(int obfuscationGuard) {
+        if (obfuscationGuard == 140) {
           return new LoginMethodPreference[]{EmailConfirmationValidator.field_k, PasswordTooltipHelpers.field_d, LinkWidgetRenderer.field_c};
         }
         return (LoginMethodPreference[]) null;
@@ -38,7 +38,7 @@ class NumericLoginCredentials extends LoginCredentials {
         try {
           VerticalScrollbar.a(243, param1, 140, ContextActionController.field_g, -15531, 2);
           if (param0 <= 93) {
-            NumericLoginCredentials.b(99);
+            NumericLoginCredentials.getLoginMethodPreferences(99);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -205,7 +205,7 @@ final class GameSettingConstraintHelpers {
             }
           }
           if (param5 != 0) {
-            GameSettingConstraintHelpers.a(33);
+            GameSettingConstraintHelpers.clearSharedReferences(33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -229,8 +229,8 @@ final class GameSettingConstraintHelpers {
         return AchievementBrowserScreen.field_u;
     }
 
-    public static void a(int param0) {
-        if (param0 != -1) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           LobbyGame var2 = (LobbyGame) null;
           GameSettingConstraintHelpers.a(true, (LobbyGame) null, -103, -124, -112, 116, 82, 7);
         }

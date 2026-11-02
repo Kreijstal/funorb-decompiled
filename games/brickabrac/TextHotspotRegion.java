@@ -16,8 +16,8 @@ final class TextHotspotRegion extends IntrusiveNode {
     static String field_m;
     static RgbSprite[] powerUpMeterIcons;
 
-    public static void a(byte param0) {
-        int var1 = 127 % ((-74 - param0) / 42);
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        int var1 = 127 % ((-74 - obfuscationGuard) / 42);
         activePaddleCenterSprite = null;
         decodedSpriteHeights = null;
         field_q = null;

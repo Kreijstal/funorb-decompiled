@@ -18,7 +18,7 @@ final class ReflectionCheck extends IntrusiveNode {
 
     final static int getLegacyMonthLength(int year, int obfuscationGuard, int monthIndex) {
         if (obfuscationGuard != 29) {
-          ReflectionCheck.a(6);
+          ReflectionCheck.clearSharedReferences(6);
           if (monthIndex != 1) {
             return CalendarMatchmakingState.commonYearMonthLengths[monthIndex];
           }
@@ -36,8 +36,8 @@ final class ReflectionCheck extends IntrusiveNode {
         return CalendarMatchmakingState.commonYearMonthLengths[monthIndex];
     }
 
-    public static void a(int param0) {
-        if (param0 != 6) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 6) {
           return;
         }
         field_n = (int[][]) null;

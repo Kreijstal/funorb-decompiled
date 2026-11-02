@@ -21,13 +21,13 @@ final class WidgetLayerBootstrap {
         ArrayWidgetGroup.a((byte) -16, true, true);
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_f = null;
         jungleFarSprite = null;
         field_e = null;
         volcanicSegsSprites = (RgbSprite[][]) null;
-        if (!param0) {
-          WidgetLayerBootstrap.a(false);
+        if (!obfuscationGuard) {
+          WidgetLayerBootstrap.clearSharedReferences(false);
         }
     }
 

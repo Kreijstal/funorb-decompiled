@@ -95,17 +95,17 @@ final class AppletResourceHelpers {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_c = null;
         validationEmpty = null;
         field_b = null;
-        if (param0 >= 32) {
+        if (obfuscationGuard >= 32) {
           field_d = null;
           field_e = null;
           field_a = null;
           return;
         }
-        AppletResourceHelpers.a((byte) 51);
+        AppletResourceHelpers.clearSharedReferences((byte) 51);
         field_d = null;
         field_e = null;
         field_a = null;

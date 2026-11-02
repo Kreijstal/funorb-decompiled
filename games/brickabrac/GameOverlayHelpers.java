@@ -57,11 +57,11 @@ final class GameOverlayHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         smallLeverSprites = null;
         decodedSpriteIndices = (byte[][]) null;
         field_b = null;
-        if (param0 < 97) {
+        if (obfuscationGuard < 97) {
           PlayerBoard var2 = (PlayerBoard) null;
           GameOverlayHelpers.drawScorePopup((ScorePopup) null, (PlayerBoard) null, 41, -50, 10);
         }

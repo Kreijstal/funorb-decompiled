@@ -115,13 +115,13 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
             return true;
           }
           if (keyCode == 98) {
-            stackIn_6_0 = this.b(focusRoot, (byte) 87);
+            stackIn_6_0 = this.focusPreviousChild(focusRoot, (byte) 87);
             return stackIn_6_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(focusRoot, (byte) -127);
+          stackIn_10_0 = this.focusNextChild(focusRoot, (byte) -127);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,12 +194,12 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         IsaacGenerator.field_n = param1 * 100 / 150;
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_P = null;
         field_H = null;
         field_J = null;
         field_M = null;
-        int var1 = -119 / ((-4 - param0) / 38);
+        int var1 = -119 / ((-4 - obfuscationGuard) / 38);
     }
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {

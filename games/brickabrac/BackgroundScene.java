@@ -20,8 +20,8 @@ abstract class BackgroundScene {
     static RgbSprite[][] field_k;
     static int masterSoundGain;
 
-    RgbSprite c(byte param0) {
-        if (param0 > -74) {
+    RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard > -74) {
           return (RgbSprite) null;
         }
         return QuickChatHelpDialog.field_Ub[ChatMessage.backgroundVariant];
@@ -51,8 +51,8 @@ abstract class BackgroundScene {
 
     abstract void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX);
 
-    RgbSprite[] b(int param0) {
-        if (param0 >= -12) {
+    RgbSprite[] getLeverSprites(int obfuscationGuard) {
+        if (obfuscationGuard >= -12) {
           return (RgbSprite[]) null;
         }
         return GzipInflater.field_a;
@@ -100,8 +100,8 @@ abstract class BackgroundScene {
         }
     }
 
-    RgbSprite[] a(byte param0, int param1) {
-        int var3 = -89 % ((param0 - 65) / 49);
+    RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = -89 % ((obfuscationGuard - 65) / 49);
         return null;
     }
 
@@ -109,8 +109,8 @@ abstract class BackgroundScene {
 
     abstract boolean hasSprites(byte obfuscationGuard);
 
-    RgbSprite a(boolean param0, int param1) {
-        if (param0) {
+    RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (obfuscationGuard) {
           return null;
         }
         field_g = (String) null;
@@ -119,8 +119,8 @@ abstract class BackgroundScene {
 
     abstract void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY);
 
-    public static void a(byte param0) {
-        if (param0 != 7) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard != 7) {
           return;
         }
         field_o = null;
@@ -148,7 +148,7 @@ abstract class BackgroundScene {
           fieldTemp$1 = OpacityWidget.pendingMusicLoads - 1;
           OpacityWidget.pendingMusicLoads = OpacityWidget.pendingMusicLoads - 1;
           if (0 == fieldTemp$1) {
-            ConditionalTextValue.musicSynthesizer.a((byte) 118);
+            ConditionalTextValue.musicSynthesizer.releaseSampleCodes((byte) 118);
           }
         }
         this.musicReady = true;
@@ -178,7 +178,7 @@ abstract class BackgroundScene {
           try {
             try {
               if (param1 < 74) {
-                BackgroundScene.a((byte) 0);
+                BackgroundScene.clearSharedReferences((byte) 0);
               }
               var3 = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -127, param0));
               var4 = FarmBackground.splitPreservingEmptyParts((byte) 122, var3, ';');
@@ -221,17 +221,17 @@ abstract class BackgroundScene {
         }
     }
 
-    int c(int param0) {
-        if (param0 > -72) {
-          this.a(57, false);
+    int getMusicChannelGain(int obfuscationGuard) {
+        if (obfuscationGuard > -72) {
+          this.getPaddleSegmentSprites(57, false);
         }
         return 256;
     }
 
     abstract void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16);
 
-    RgbSprite[] a(int param0, boolean param1) {
-        if (param1) {
+    RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return null;
         }
         return (RgbSprite[]) null;

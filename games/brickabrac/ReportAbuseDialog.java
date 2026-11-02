@@ -80,7 +80,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.keyboardResult = -1;
         }
         if (obfuscationGuard < 61) {
-          ReportAbuseDialog.k(105);
+          ReportAbuseDialog.clearSharedReferences(105);
         }
         return true;
     }
@@ -132,11 +132,11 @@ final class ReportAbuseDialog extends UiComponent {
         return this.reportedName.toString();
     }
 
-    public static void k(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_Qb = null;
         field_Zb = null;
         field_cc = null;
-        if (param0 != 8421504) {
+        if (obfuscationGuard != 8421504) {
           field_cc = (String) null;
         }
     }
@@ -377,7 +377,7 @@ final class ReportAbuseDialog extends UiComponent {
             reasonColumns[2].setBounds(columnHeight, nextY, 39 + columnWidth * 2, columnWidth, (byte) 64);
             columnsY = nextY;
             this.body.setBounds(columnsY + columnHeight + 10, 24, 0, 13 + (contentWidth + 13), (byte) 64);
-            this.body.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, this.body.height, 2105376);
+            this.body.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 8421504, 3, 11579568, this.body.height, 2105376);
             popupWidth = 13 + contentWidth + 13;
             popupHeight = 10 + columnsY + 24 + columnHeight;
             popupX = OptionsScreen.choosePopupX(-1, popupWidth, anchorX, anchorWidth);
@@ -395,7 +395,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.instructions.setBounds(WidgetLayerBootstrap.uiRowHeight * infoLineCount, infoNextY, 13, infoContentWidth, (byte) 64);
           infoNextY = infoNextY + infoLineCount * WidgetLayerBootstrap.uiRowHeight;
           this.body.setBounds(10 + infoNextY, 24, 0, 13 + (infoContentWidth + 13), (byte) 64);
-          this.body.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, this.body.height, 2105376);
+          this.body.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 8421504, 3, 11579568, this.body.height, 2105376);
           infoPopupWidth = infoContentWidth + 13 + 13;
           infoPopupHeight = infoNextY + 34;
           infoPopupX = OptionsScreen.choosePopupX(-1, infoPopupWidth, anchorX, anchorWidth);

@@ -25,7 +25,7 @@ final class PlayerInputBatch extends IntrusiveNode {
           this.readIndex = this.readIndex + 1;
           return this.controlMasks[consumedIndex];
         }
-        PlayerInputBatch.b(true);
+        PlayerInputBatch.clearSharedReferences(true);
         int fallbackIndex = this.readIndex;
         this.readIndex = this.readIndex + 1;
         return this.controlMasks[fallbackIndex];
@@ -51,12 +51,12 @@ final class PlayerInputBatch extends IntrusiveNode {
         return true;
     }
 
-    final static String a(int param0) {
+    final static String getAccountNameOrFallback(int obfuscationGuard) {
         String var1 = "";
         if (null != DirectByteStorage.field_k) {
           var1 = DirectByteStorage.field_k.getAccount((byte) -76);
         }
-        if (param0 < -98) {
+        if (obfuscationGuard < -98) {
           if (0 == var1.length()) {
             var1 = MultiValueSliderRenderer.b(100);
           }
@@ -75,16 +75,16 @@ final class PlayerInputBatch extends IntrusiveNode {
         return var1;
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_j = null;
         halfBallSprite = null;
         field_p = null;
-        if (param0) {
-          PlayerInputBatch.b(true);
+        if (obfuscationGuard) {
+          PlayerInputBatch.clearSharedReferences(true);
         }
     }
 
-    final static RgbSprite a(int param0, RgbSprite param1, int param2, int param3) {
+    final static RgbSprite createBlurredSilhouetteSprite(int obfuscationGuard, RgbSprite sprite, int passes, int color) {
         int var5 = 0;
         RuntimeException var4 = null;
         int var6 = 0;
@@ -96,31 +96,31 @@ final class PlayerInputBatch extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7 = new RgbSprite(param1.width + param2 * 2, param1.height + param2 * 2);
+          var7 = new RgbSprite(sprite.width + passes * 2, sprite.height + passes * 2);
           var7.bindRasterTarget();
-          for (var5 = 0; param2 > var5; var5++) {
-            param1.d(param2 - param1.offsetX, -param1.offsetY + param2, param3);
-            Rasterizer2D.e(1, 1, 0, 0, var7.width, var7.height);
+          for (var5 = 0; passes > var5; var5++) {
+            sprite.drawSilhouette(passes - sprite.offsetX, -sprite.offsetY + passes, color);
+            Rasterizer2D.blurRectangle(1, 1, 0, 0, var7.width, var7.height);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 104);
-          var7.offsetY = -param2 + param1.offsetY;
-          if (param0 != -12) {
+          var7.offsetY = -passes + sprite.offsetY;
+          if (obfuscationGuard != -12) {
             field_j = (String) null;
           }
-          var7.offsetX = param1.offsetX - param2;
+          var7.offsetX = sprite.offsetX - passes;
           stackIn_7_0 = var7;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("p.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("p.A(").append(obfuscationGuard).append(',');
+          if (sprite == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(passes).append(',').append(color).append(')').toString());
         }
     }
 

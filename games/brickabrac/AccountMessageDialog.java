@@ -49,7 +49,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
     final static boolean n(int param0) {
         if (param0 != -5) {
           spaceSmallLeverSprites = (RgbSprite[]) null;
-          if (!LegacyUtf8Decoder.a((byte) -80)) {
+          if (!LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -80)) {
             return false;
           }
           if (0 == (MembershipBenefitsScreen.clientTick & 8)) {
@@ -57,7 +57,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
           }
           return false;
         }
-        if (!LegacyUtf8Decoder.a((byte) -80)) {
+        if (!LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -80)) {
           return false;
         }
         if (0 == (MembershipBenefitsScreen.clientTick & 8)) {
@@ -92,7 +92,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
           if (obfuscationGuard < -22) {
             return;
           }
-          AccountMessageDialog.o(-11);
+          AccountMessageDialog.clearSharedReferences(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,17 +230,17 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
         }
     }
 
-    public static void o(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         queuedAchievementSubmissions = null;
         field_ub = null;
         currentScreen = null;
         field_Ab = null;
-        if (param0 == 50) {
+        if (obfuscationGuard == 50) {
           validationInvalid = null;
           spaceSmallLeverSprites = null;
           return;
         }
-        AccountMessageDialog.o(29);
+        AccountMessageDialog.clearSharedReferences(29);
         validationInvalid = null;
         spaceSmallLeverSprites = null;
     }

@@ -8,11 +8,11 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements WidgetAction
     static String field_N;
     private FocusableWidget continueButton;
 
-    public static void d(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_R = null;
         field_N = null;
-        if (param0) {
-          BirthDateEntryPanel.d(false);
+        if (obfuscationGuard) {
+          BirthDateEntryPanel.clearSharedReferences(false);
           field_O = null;
           return;
         }
@@ -42,7 +42,7 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements WidgetAction
         try {
           AccountDateHelpers.sendBirthDate(this.dateFields.getYear(5390), (byte) 103, this.dateFields.getDay((byte) -125), this.dateFields.getMonthIndex((byte) -117));
           if (obfuscationGuard >= -22) {
-            BirthDateEntryPanel.d(true);
+            BirthDateEntryPanel.clearSharedReferences(true);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mo.Q(" + pointerY + ',' + button + ',' + obfuscationGuard + ',' + pointerX + ',' + (widget != null ? "{...}" : "null") + ')');

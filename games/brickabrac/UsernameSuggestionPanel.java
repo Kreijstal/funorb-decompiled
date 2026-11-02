@@ -129,13 +129,13 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
             return true;
           }
           if (keyCode == 98) {
-            stackIn_7_0 = this.b(focusRoot, (byte) -60);
+            stackIn_7_0 = this.focusPreviousChild(focusRoot, (byte) -60);
             return stackIn_7_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_11_0 = this.a(focusRoot, (byte) -117);
+          stackIn_11_0 = this.focusNextChild(focusRoot, (byte) -117);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -213,9 +213,9 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         fullscreenDialogButtonActions = null;
-        if (param0 != -83) {
+        if (obfuscationGuard != -83) {
           field_O = (String) null;
         }
         field_O = null;
@@ -223,15 +223,15 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         field_N = null;
     }
 
-    final static void c(boolean param0) {
+    final static void increaseMasterSoundGain(boolean obfuscationGuard) {
         int var1 = 0;
         if (BackgroundScene.masterSoundGain < 224) {
           var1 = BackgroundScene.masterSoundGain % 32;
-          SingleChildWidget.a(13894, BackgroundScene.masterSoundGain + (32 - var1));
+          SingleChildWidget.applyMasterSoundGain(13894, BackgroundScene.masterSoundGain + (32 - var1));
         } else {
-          SingleChildWidget.a(13894, 256);
+          SingleChildWidget.applyMasterSoundGain(13894, 256);
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_M = -128;
         }
     }

@@ -138,15 +138,15 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         fullPaddleCenterSprite = null;
-        if (param0 != -11310) {
+        if (obfuscationGuard != -11310) {
           fullPaddleCenterSprite = (RgbSprite) null;
         }
     }
 
-    private final String j(int param0) {
-        if (param0 != -987472479) {
+    private final String getLinkCloseTag(int obfuscationGuard) {
+        if (obfuscationGuard != -987472479) {
           return (String) null;
         }
         return "</col></u>";
@@ -164,8 +164,8 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         return ArchiveSource.a(this.usernameField.text, this.passwordField.text, this.emailField.text, var2, (byte) -126, this, this.newsletterToggle.active);
     }
 
-    private final String c(boolean param0) {
-        if (!param0) {
+    private final String getLinkOpenTag(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (String) null;
         }
         return "<u=2164A2><col=2164A2>";
@@ -246,7 +246,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         RuntimeException var6 = null;
         try {
           if (this.backButton == widget) {
-            BytePayloadSubmission.a(103);
+            BytePayloadSubmission.showAccountIntroductionPanel(103);
           } else {
             if (widget == this.registerButton) {
               discarded$1 = this.submitRegistration(-1);
@@ -439,7 +439,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           var4 = username;
           ((TextFieldWidget) ((Object) var3)).setText(var4, -12592, false);
           if (obfuscationGuard != 56) {
-            discarded$1 = this.c(true);
+            discarded$1 = this.getLinkOpenTag(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -456,14 +456,14 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
+    final static void renderBackdropSurface(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         IndexedSpriteGeometry.pushSpriteRaster(-85, param2.sprite);
         Rasterizer2D.fillVerticalGradient(0, 0, param2.width, param2.height, RadialSelectorRenderer.arcticBackgroundColors[param1], 16777215);
         if (param4 != 23275) {
           return;
         }
         try {
-          param5.b((-param5.canvasWidth + param2.width) / 2, -(342 / param0) + (-param5.canvasHeight + param2.height), 55, 83);
+          param5.drawWithVerticalAlphaGradient((-param5.canvasWidth + param2.width) / 2, -(342 / param0) + (-param5.canvasHeight + param2.height), 55, 83);
           RasterStackHelpers.popRaster(-84);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -483,13 +483,13 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             return true;
           }
           if (keyCode == 98) {
-            stackIn_6_0 = this.b(focusRoot, (byte) 119);
+            stackIn_6_0 = this.focusPreviousChild(focusRoot, (byte) 119);
             return stackIn_6_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(focusRoot, (byte) -122);
+          stackIn_10_0 = this.focusNextChild(focusRoot, (byte) -122);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -616,7 +616,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         PasswordFieldRenderer dupTemp$1 = new PasswordFieldRenderer(10000536);
         this.passwordConfirmationField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.passwordField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = GamePresentationHelpers.formatIndexedText(SocialListResponseHelpers.createAccountConsentText, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
+        String var2 = GamePresentationHelpers.formatIndexedText(SocialListResponseHelpers.createAccountConsentText, new String[]{this.getLinkOpenTag(true), this.getLinkCloseTag(-987472479)}, (byte) 103);
         int var3 = 20;
         var3 = var3 + this.a(IntNode.field_l, this.emailField, var3, 37, 170);
         var3 = var3 + (this.a(this.emailConfirmationField, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
@@ -633,7 +633,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.termsLinks.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
         this.termsLinks.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
         this.termsLinks.listener = (WidgetListener) (this);
-        this.termsLinks.a(46, (byte) 46, -90 + this.width, var3);
+        this.termsLinks.setPreferredBounds(46, (byte) 46, -90 + this.width, var3);
         var3 = var3 + (15 + this.termsLinks.height);
         this.addChild(this.termsLinks, true);
         int var6 = 4;

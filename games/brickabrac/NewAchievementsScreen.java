@@ -16,11 +16,11 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
     final static void f(int param0) {
         if (param0 != 967) {
           discardGameplayOnTransition = false;
-          NinjaBackground.e((byte) -95);
+          NinjaBackground.showLoadingProgressDialog((byte) -95);
           CheckboxWidgetRenderer.a(4, true);
           return;
         }
-        NinjaBackground.e((byte) -95);
+        NinjaBackground.showLoadingProgressDialog((byte) -95);
         CheckboxWidgetRenderer.a(4, true);
     }
 
@@ -47,10 +47,10 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
         Rasterizer2D.restoreClip(LevelPackSelectScreen.field_v);
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         viewFacePointThreeY = null;
-        if (param0 != 6) {
-          NewAchievementsScreen.g(49);
+        if (obfuscationGuard != 6) {
+          NewAchievementsScreen.clearSharedReferences(49);
           field_F = null;
           return;
         }

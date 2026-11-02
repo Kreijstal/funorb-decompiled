@@ -6,9 +6,9 @@ final class FontSceneGlobals {
     static RgbSprite waterNearSprite;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
-        int var1 = -11 / ((-26 - param0) / 61);
+        int var1 = -11 / ((-26 - obfuscationGuard) / 61);
         waterNearSprite = null;
     }
 

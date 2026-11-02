@@ -170,29 +170,29 @@ final class LevelPackCard {
         int var2Lifetime1;
         if (obfuscationGuard > 89) {
           var2 = InteractiveGameClient.sine8192(100 * (-this.focusStartTick + MembershipBenefitsScreen.clientTick), -4097) + 65536 >> 12;
-          Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2 : 0) + 32);
-          Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
+          Rasterizer2D.fillRoundedRectangleAlpha(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2 : 0) + 32);
+          Rasterizer2D.fillRoundedRectangle(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
           this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
           ContextActionController.field_g.drawCentered(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
           return;
         }
         this.viewport = (MenuButton) null;
         var2Lifetime1 = InteractiveGameClient.sine8192(100 * (-this.focusStartTick + MembershipBenefitsScreen.clientTick), -4097) + 65536 >> 12;
-        Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2Lifetime1 : 0) + 32);
-        Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
+        Rasterizer2D.fillRoundedRectangleAlpha(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2Lifetime1 : 0) + 32);
+        Rasterizer2D.fillRoundedRectangle(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
         this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
         ContextActionController.field_g.drawCentered(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_n = null;
         field_a = null;
-        if (param0 == 32156) {
+        if (obfuscationGuard == 32156) {
           viewFacePointTwoX = null;
           farmNearSprite = null;
           return;
         }
-        LevelPackCard.a(-115);
+        LevelPackCard.clearSharedReferences(-115);
         viewFacePointTwoX = null;
         farmNearSprite = null;
     }

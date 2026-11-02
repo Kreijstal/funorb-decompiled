@@ -22,9 +22,9 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_f = null;
-        if (param0 != 10) {
+        if (obfuscationGuard != 10) {
           return;
         }
         keyEventCodes = null;
@@ -38,7 +38,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         super(authenticationScheme);
     }
 
-    final static void a(RgbSprite param0, RgbSprite param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
+    final static void drawParallaxLayers(RgbSprite param0, RgbSprite param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
         param0.drawAt((-param0.canvasWidth + param9) / 2 + (param2 + (param4 * 5 >> 16)), param5);
         param1.drawTransparent((10 * param4 >> 16) + (param2 - (-((-param1.canvasWidth + param9) / 2) - 10 / param8)), -(22 / param8) + param5 + (param6 + 480 - param1.canvasHeight));
         if (param3) {
@@ -91,21 +91,21 @@ final class ProxyAuthenticationRequiredException extends IOException {
           MusicVoice.field_l = StatefulWidgetRenderer.field_v;
           if (param2 != 255) {
             if (param2 < 100) {
-              AccountIntroductionPanel.field_H = AchievementIcon.a(param2, -60, param0);
+              AccountIntroductionPanel.field_H = AchievementIcon.createAccountResponseWithMessage(param2, -60, param0);
               return;
             }
             if (param2 > 105) {
-              AccountIntroductionPanel.field_H = AchievementIcon.a(param2, -60, param0);
+              AccountIntroductionPanel.field_H = AchievementIcon.createAccountResponseWithMessage(param2, -60, param0);
               return;
             }
             var8 = param3;
             InstructionsScreen.a(var8, true);
-            AccountIntroductionPanel.field_H = IntKeyIndex.a(param1 ^ 2167, param3);
+            AccountIntroductionPanel.field_H = IntKeyIndex.createAccountResponseWithSuggestions(param1 ^ 2167, param3);
             return;
           }
           stackIn_6_0 = true;
           stackIn_7_1 = !(Paddle.field_x >= 13);
-          AccountIntroductionPanel.field_H = LoginCredentialKind.a(stackIn_6_0, stackIn_7_1);
+          AccountIntroductionPanel.field_H = LoginCredentialKind.createAccountResponse(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           InstructionsScreen.a((String[]) null, true);
           return;

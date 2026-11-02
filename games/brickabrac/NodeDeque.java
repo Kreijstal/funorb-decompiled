@@ -8,11 +8,11 @@ final class NodeDeque {
     IntrusiveNode sentinel;
     private IntrusiveNode cursor;
 
-    final static void a(int param0, int param1) {
-        if (param0 <= 11) {
+    final static void setTickRate(int obfuscationGuard, int ticksPerSecond) {
+        if (obfuscationGuard <= 11) {
           return;
         }
-        ResourceRequest.tickDurationNanos = 1000000000L / (long)param1;
+        ResourceRequest.tickDurationNanos = 1000000000L / (long)ticksPerSecond;
     }
 
     final IntrusiveNode last(int obfuscationGuard) {
@@ -90,8 +90,8 @@ final class NodeDeque {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 != 100) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard != 100) {
           NodeDeque.a(false, 28);
           field_c = null;
           field_a = (boolean[][]) null;
@@ -110,7 +110,7 @@ final class NodeDeque {
           node.next = this.sentinel.next;
           node.previous.next = node;
           if (!obfuscationGuard) {
-            NodeDeque.a(107, 77);
+            NodeDeque.setTickRate(107, 77);
           }
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
@@ -309,7 +309,7 @@ final class NodeDeque {
         }
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode startIterationAt(byte obfuscationGuard, IntrusiveNode startNode) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
@@ -319,11 +319,11 @@ final class NodeDeque {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 94) {
+          if (obfuscationGuard < 94) {
             this.cursor = (IntrusiveNode) null;
           }
-          if (param1 != null) {
-            var3 = param1;
+          if (startNode != null) {
+            var3 = startNode;
           } else {
             var3 = this.sentinel.next;
           }
@@ -339,8 +339,8 @@ final class NodeDeque {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("vl.J(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("vl.J(").append(obfuscationGuard).append(',');
+          if (startNode == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

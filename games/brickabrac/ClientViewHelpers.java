@@ -19,13 +19,13 @@ final class ClientViewHelpers {
         AchievementIcon.field_j = param0;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_d = null;
         displayNameChangedSprite = null;
         field_a = null;
         field_e = null;
         field_b = null;
-        if (param0 > -2) {
+        if (obfuscationGuard > -2) {
           ClientViewHelpers.a(false);
         }
     }

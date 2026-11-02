@@ -38,7 +38,7 @@ final class OpacityWidget extends SingleChildWidget {
           OptionsScreen.resultCounterOne = 57;
           DelegatingCanvas.field_c = 13;
           if (obfuscationGuard != -12665) {
-            OpacityWidget.a(122);
+            OpacityWidget.clearSharedReferences(122);
           }
           QuickChatMenu.field_Wb = 3;
           DisplayModeInfo.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(102) << 16);
@@ -169,11 +169,11 @@ final class OpacityWidget extends SingleChildWidget {
         IndexedSpriteGeometry.pushSpriteRaster(-113, var6);
         this.child.drawLayer(0, 0, layer, obfuscationGuard);
         RasterStackHelpers.popRaster(obfuscationGuard ^ 119);
-        var6.b(parentX + this.x, parentY + this.y, this.opacity256);
+        var6.drawAlphaBlended(parentX + this.x, parentY + this.y, this.opacity256);
     }
 
-    public static void a(int param0) {
-        if (param0 != 51550) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 51550) {
           clientSession = (String) null;
         }
         constructionCentreSprites = null;

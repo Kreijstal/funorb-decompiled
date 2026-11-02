@@ -8,10 +8,10 @@ final class ArchiveConnectionHelpers {
     static int field_a;
     static long[] tickTimes;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         tickTimes = null;
-        if (param0 != 30000) {
-          ArchiveConnectionHelpers.a(21);
+        if (obfuscationGuard != 30000) {
+          ArchiveConnectionHelpers.clearSharedReferences(21);
         }
     }
 

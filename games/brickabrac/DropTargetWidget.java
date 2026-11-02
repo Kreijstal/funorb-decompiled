@@ -38,10 +38,10 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_I = null;
         field_G = null;
-        if (param0 >= -47) {
+        if (obfuscationGuard >= -47) {
           DropTargetWidget.requestJoinGame(-87, 55, -124);
         }
     }

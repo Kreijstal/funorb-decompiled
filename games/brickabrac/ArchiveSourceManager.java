@@ -112,9 +112,9 @@ final class ArchiveSourceManager {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = null;
-        int var1 = -35 % ((param0 - 34) / 39);
+        int var1 = -35 % ((obfuscationGuard - 34) / 39);
         field_j = null;
         field_d = null;
         field_f = null;

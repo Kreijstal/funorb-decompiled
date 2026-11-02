@@ -72,10 +72,10 @@ class IntrusiveNode {
         this.next = null;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         gameEyeSprites = null;
         field_c = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_h = null;

@@ -73,7 +73,7 @@ final class QuickChatPhraseRegistry {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         nineSliceClipScratch = null;
         fullscreenTimeout = null;
         field_e = null;
@@ -81,8 +81,8 @@ final class QuickChatPhraseRegistry {
         chocolateFarSprite = null;
         field_b = null;
         fullscreenSingularPrefix = null;
-        if (param0 != 64) {
-          QuickChatPhraseRegistry.a(-104);
+        if (obfuscationGuard != 64) {
+          QuickChatPhraseRegistry.clearSharedReferences(-104);
         }
     }
 

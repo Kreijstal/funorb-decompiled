@@ -109,7 +109,7 @@ final class BitPacketBuffer extends PacketBuffer {
           var9 = var24.boardHeight;
           Rasterizer2D.setClip(destinationX, destinationY, destinationX + var8 / scaleDivisor, var9 / scaleDivisor + destinationY);
           if (var24.brickGroups != null) {
-            ProducerFramebuffer.a(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
+            ProducerFramebuffer.drawBricks(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
           }
           if (var24.positionOrderTicks != -1) {
             var10_double = (double)(500 - var24.positionOrderTicks);
@@ -194,7 +194,7 @@ final class BitPacketBuffer extends PacketBuffer {
               }
             }
             Rasterizer2D.fillRectangleAlpha(7, 280, 510, 45, 0, 96 * var12 / 256);
-            ScreenshotViewer.field_r.b(7 + (-ScreenshotViewer.field_r.width + 510) / 2, 260, var12);
+            ScreenshotViewer.field_r.drawAlphaBlended(7 + (-ScreenshotViewer.field_r.width + 510) / 2, 260, var12);
           }
           if (3 == var24.boardState) {
             BoardPresentationHelpers.drawBoardEndOverlay((byte) -113, ClientException.gameOverMessageSprite, var8, var9, var24);
@@ -217,7 +217,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var28 = (ScorePopup) (var24.scorePopups.next((byte) 116));
           }
           if (0 != (match.playerMaskThree & 1 << playerId)) {
-            WidgetLayerStack.a(destinationX, var8, var9, (byte) 126, var24, destinationY, scaleDivisor);
+            WidgetLayerStack.drawBoardEndOverlay(destinationX, var8, var9, (byte) 126, var24, destinationY, scaleDivisor);
           }
           if (0 != (1 << playerId & match.playerMaskTwo)) {
             GameRenderAudioHelpers.drawBoardMaskOverlay(destinationX, destinationY, var9, var24, var8, scaleDivisor, SpaceBackground.field_s.toLowerCase(), (byte) 123);
@@ -283,7 +283,7 @@ final class BitPacketBuffer extends PacketBuffer {
         this.position = (this.bitPosition + 7) / 8;
         if (obfuscationGuard < 69) {
           RasterCacheSurface var3 = (RasterCacheSurface) null;
-          BitPacketBuffer.a((RgbSprite) null, (RasterCacheSurface) null, 39, 118, (byte) 103, -79);
+          BitPacketBuffer.renderBackdropSurface((RgbSprite) null, (RasterCacheSurface) null, 39, 118, (byte) 103, -79);
         }
     }
 
@@ -325,7 +325,7 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void a(RgbSprite param0, RasterCacheSurface param1, int param2, int param3, byte param4, int param5) {
+    final static void renderBackdropSurface(RgbSprite param0, RasterCacheSurface param1, int param2, int param3, byte param4, int param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-102, param1.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, IntegerPowerHelpers.volcanicBackgroundColors[param2], 10792131);
@@ -370,20 +370,20 @@ final class BitPacketBuffer extends PacketBuffer {
         int var2 = 53 % ((obfuscationGuard + 14) / 35);
     }
 
-    final static void a(int param0, String param1, long param2) {
+    final static void selectQuickChatRecipient(int obfuscationGuard, String recipientName, long recipientId) {
         CharSequence var5 = null;
         ScreenNavigationHelpers.quickChatChannel = 2;
-        if (param0 != 21846) {
+        if (obfuscationGuard != 21846) {
           return;
         }
         try {
-          DualLinkNode.quickChatRecipient = param1;
-          var5 = (CharSequence) ((Object) param1);
+          DualLinkNode.quickChatRecipient = recipientName;
+          var5 = (CharSequence) ((Object) recipientName);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, 96);
-          CanvasResizeController.field_n = param2;
+          CanvasResizeController.field_n = recipientId;
           QuickChatSineHelpers.activateDefaultQuickChatMenu((byte) -120);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pi.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pi.JB(" + obfuscationGuard + ',' + (recipientName != null ? "{...}" : "null") + ',' + recipientId + ')');
         }
     }
 

@@ -5,9 +5,9 @@ final class WhirlpoolDigestHelpers {
     static String field_b;
     static UiComponent field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           CharSequence var2 = (CharSequence) null;
           WhirlpoolDigestHelpers.a((byte) -52, true, (CharSequence) null);
           field_b = null;

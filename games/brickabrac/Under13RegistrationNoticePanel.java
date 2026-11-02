@@ -11,8 +11,8 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
     static RgbSprite field_P;
     static String field_J;
 
-    private final String h(int param0) {
-        if (param0 != 0) {
+    private final String getLinkCloseTag(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           FocusableWidget var3 = (FocusableWidget) null;
           this.onAction(50, 62, (byte) 59, -10, (FocusableWidget) null);
         }
@@ -135,7 +135,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
           this.registrationDialog = registrationDialog;
           this.continueButton = new FocusableWidget(UsernameSuggestionPanel.field_L, (WidgetListener) null);
           this.continueButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
-          var7 = GamePresentationHelpers.formatIndexedText(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
+          var7 = GamePresentationHelpers.formatIndexedText(MainMenuScreen.field_z, new String[]{this.getLinkOpenTag((byte) 34), this.getLinkCloseTag(0)}, (byte) 103);
           var3 = 20;
           var4 = new TextWidgetRenderer(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.noticeLinks = new HotspotTextWidget(var7, var4);
@@ -144,7 +144,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
           this.noticeLinks.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
           this.noticeLinks.listener = (WidgetListener) (this);
           this.noticeLinks.width = -40 + this.width;
-          this.noticeLinks.a(26, (byte) 46, -40 + this.width, var3);
+          this.noticeLinks.setPreferredBounds(26, (byte) 46, -40 + this.width, var3);
           var3 = var3 + (15 + this.noticeLinks.height);
           this.addChild(this.noticeLinks, true);
           var5 = 4;
@@ -158,16 +158,16 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
         }
     }
 
-    private final String a(byte param0) {
-        if (param0 != 34) {
+    private final String getLinkOpenTag(byte obfuscationGuard) {
+        if (obfuscationGuard != 34) {
           field_P = (RgbSprite) null;
         }
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_P = null;
-        if (param0 != 12127) {
+        if (obfuscationGuard != 12127) {
           field_J = (String) null;
         }
         renderTimes = null;
@@ -227,13 +227,13 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
             return true;
           }
           if (keyCode == 98) {
-            stackIn_7_0 = this.b(focusRoot, (byte) 86);
+            stackIn_7_0 = this.focusPreviousChild(focusRoot, (byte) 86);
             return stackIn_7_0;
           }
           if (99 != keyCode) {
             return false;
           }
-          stackIn_10_0 = this.a(focusRoot, (byte) -119);
+          stackIn_10_0 = this.focusNextChild(focusRoot, (byte) -119);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

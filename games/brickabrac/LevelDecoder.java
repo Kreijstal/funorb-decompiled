@@ -10,16 +10,16 @@ final class LevelDecoder {
         try {
           OutgoingPacketHelpers.writeEncryptedPayload(destination, sourcePacket.position, (byte) 126, rsaExponent, 0, sourcePacket.data, rsaModulus);
           if (obfuscationGuard != -72) {
-            LevelDecoder.a((byte) -97);
+            LevelDecoder.clearSharedReferences((byte) -97);
           }
         } catch (RuntimeException failure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "dq.B(" + (destination != null ? "{...}" : "null") + ',' + (sourcePacket != null ? "{...}" : "null") + ',' + (rsaExponent != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (rsaModulus != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_c = null;
-        if (param0 != 89) {
+        if (obfuscationGuard != 89) {
           return;
         }
         field_a = null;

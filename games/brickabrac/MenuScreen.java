@@ -51,9 +51,9 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    String e(byte param0) {
+    String getActionEightLabel(byte obfuscationGuard) {
         int discarded$0 = 0;
-        if (param0 <= 53) {
+        if (obfuscationGuard <= 53) {
           discarded$0 = this.findButtonAt(18, (byte) 84, -33);
         }
         return ArrayWidgetGroup.buttonLabels[7];
@@ -67,12 +67,12 @@ abstract class MenuScreen extends GameScreen {
         return 0;
     }
 
-    private final void c(boolean param0, int param1) {
+    private final void playSelectionChangeSound(boolean guard, int newIndex) {
         if (this.selection.selectedIndex != -1 &&
-          param1 != this.selection.selectedIndex) {
-          PlayerBoard.playGameplaySound(NineSliceFrame.uiSounds[0], -106, FramedMenuScreen.g((byte) -44) / 4);
+          newIndex != this.selection.selectedIndex) {
+          PlayerBoard.playGameplaySound(NineSliceFrame.uiSounds[0], -106, FramedMenuScreen.getMasterSoundGain((byte) -44) / 4);
         }
-        if (!param0) {
+        if (!guard) {
           this.buttonLeft = -36;
         }
     }
@@ -94,7 +94,7 @@ abstract class MenuScreen extends GameScreen {
         for (var3 = 0; this.buttons.length > var3; var3++) {
           var4_ref_q = this.buttons[var3];
           if (var4_ref_q.actionId == 8) {
-            stackIn_5_0 = this.e((byte) 108);
+            stackIn_5_0 = this.getActionEightLabel((byte) 108);
           } else {
             stackIn_5_0 = ArrayWidgetGroup.buttonLabels[var4_ref_q.actionId];
           }
@@ -152,10 +152,10 @@ abstract class MenuScreen extends GameScreen {
           var4 = this.selection.selectedIndex;
           this.handleNavigationKey(-120, keyCode, character);
           this.selection.pollKeyboardCode((byte) -124);
-          if (this.a(false, (byte) 126)) {
+          if (this.activateSelectedButton(false, (byte) 126)) {
             SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
           }
-          this.c(true, var4);
+          this.playSelectionChangeSound(true, var4);
         } else {
           this.navigateBack(-1);
         }
@@ -175,7 +175,7 @@ abstract class MenuScreen extends GameScreen {
     void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         this.selection.navigateVertical(obfuscationGuard + 119);
         if (obfuscationGuard != -120) {
-          this.c(true, 117);
+          this.playSelectionChangeSound(true, 117);
         }
     }
 
@@ -204,11 +204,11 @@ abstract class MenuScreen extends GameScreen {
           !RadialSelectorWidget.field_L &&
           !IntegerBitLengthHelpers.field_d) {
           this.selection.updatePointer(this.findButtonAt(ResourcePreparationEntry.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(PlayerNameChooserPanel.pressY, (byte) -80, LoadingProgressDialog.pressX));
-          if (this.a(true, (byte) -117)) {
+          if (this.activateSelectedButton(true, (byte) -117)) {
             SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
           }
         }
-        this.c(true, var4);
+        this.playSelectionChangeSound(true, var4);
         if (AccountMessageDialog.currentScreen == this &&
           GzipInflater.field_e > 0) {
           fieldTemp$2 = GzipInflater.field_e - 1;
@@ -220,14 +220,14 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    final void a(int param0) {
+    final void drawEnabledButtons(int startIndex) {
         int var2 = 0;
         int var3;
         MenuButton stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
-        for (var2 = param0; var2 < this.selection.itemCount; var2++) {
+        for (var2 = startIndex; var2 < this.selection.itemCount; var2++) {
           if (this.isButtonEnabled((byte) 99, var2)) {
             stackIn_7_0 = this.buttons[var2];
             stackIn_7_1 = 4;
@@ -237,11 +237,11 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    private final boolean a(boolean param0, byte param1) {
-        int var3 = 5 % ((param1 - 69) / 51);
+    private final boolean activateSelectedButton(boolean flag, byte obfuscationGuard) {
+        int var3 = 5 % ((obfuscationGuard - 69) / 51);
         if (this.buttons.length != 0 &&
           0 <= this.selection.selectedIndex) {
-          return this.handleMenuAction(this.selection.selectedIndex, param0, (byte) 123);
+          return this.handleMenuAction(this.selection.selectedIndex, flag, (byte) 123);
         }
         return false;
     }
@@ -261,7 +261,7 @@ abstract class MenuScreen extends GameScreen {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != HighscoresScreen.a(false, var3)) {
+            if (0L != HighscoresScreen.encodeBase37Name(false, var3)) {
               return;
             }
           }
@@ -384,22 +384,22 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 20) {
                 var7 = 0;
                 if (this.selection.isHomeKey(-103) &&
-                  FramedMenuScreen.g((byte) -44) > 0) {
-                  LabeledWidget.a((byte) -113, 0);
+                  FramedMenuScreen.getMasterSoundGain((byte) -44) > 0) {
+                  LabeledWidget.applyMasterSoundGain((byte) -113, 0);
                   var7 = 1;
                 }
                 if (this.selection.isEndKey(-1) &&
-                  FramedMenuScreen.g((byte) -44) < MenuSelection.e((byte) 44)) {
-                  LabeledWidget.a((byte) 47, MenuSelection.e((byte) 31));
+                  FramedMenuScreen.getMasterSoundGain((byte) -44) < MenuSelection.e((byte) 44)) {
+                  LabeledWidget.applyMasterSoundGain((byte) 47, MenuSelection.e((byte) 31));
                   var7 = 1;
                 }
                 if (this.selection.isLeftArrow((byte) -57) &&
-                  FramedMenuScreen.g((byte) -44) > 0) {
+                  FramedMenuScreen.getMasterSoundGain((byte) -44) > 0) {
                   TextFieldValidator.d((byte) 116);
                   var7 = 1;
                 }
                 if (this.selection.isRightArrow(-98) &&
-                  FramedMenuScreen.g((byte) -44) < MenuSelection.e((byte) 90)) {
+                  FramedMenuScreen.getMasterSoundGain((byte) -44) < MenuSelection.e((byte) 90)) {
                   var7 = 1;
                   QuickChatParameterType.a((byte) -63);
                 }
@@ -408,12 +408,12 @@ abstract class MenuScreen extends GameScreen {
                   var9 = MusicPatch.pointerX - var8;
                   var10 = var9 * MenuSelection.e((byte) 51) / 120;
                   if (var10 <= 0) {
-                    LabeledWidget.a((byte) -114, 0);
+                    LabeledWidget.applyMasterSoundGain((byte) -114, 0);
                   } else {
                     if (var10 < MenuSelection.e((byte) 81)) {
-                      LabeledWidget.a((byte) -127, var10);
+                      LabeledWidget.applyMasterSoundGain((byte) -127, var10);
                     } else {
-                      LabeledWidget.a((byte) 95, MenuSelection.e((byte) 32));
+                      LabeledWidget.applyMasterSoundGain((byte) 95, MenuSelection.e((byte) 32));
                     }
                   }
                   var7 = 1;
@@ -499,7 +499,7 @@ abstract class MenuScreen extends GameScreen {
                   } else {
                     var12 = (String) null;
                     AccountIntroductionPanel.a((String) null, true, (byte) 123);
-                    if (WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1)) {
+                    if (WidgetGroup.containsNonzeroInFirstEight(SpriteInputHelpers.pendingAchievementMask, -1)) {
                       CacheEntry.field_z = 9;
                     } else {
                       stackIn_143_0 = (null != VerticalScrollbar.field_Ub) ? 5 : 0;
@@ -662,7 +662,7 @@ abstract class MenuScreen extends GameScreen {
         MenuButton var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
         if (!obfuscationGuard) {
-          this.e((byte) -7);
+          this.getActionEightLabel((byte) -7);
         }
         for (var2 = 0; var2 < this.buttons.length; var2++) {
           var3 = this.buttons[var2];
@@ -688,17 +688,17 @@ abstract class MenuScreen extends GameScreen {
           MultiplayerExitScreen.repeatRecipientId = recipientId;
           UiComponentNode.repeatRecipientName = recipientName;
           if (obfuscationGuard != 29295) {
-            MenuScreen.b(48);
+            MenuScreen.clearSharedReferences(48);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "km.P(" + messageId + ',' + obfuscationGuard + ',' + recipientId + ',' + (recipientName != null ? "{...}" : "null") + ',' + channel + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_o = null;
         field_n = null;
-        if (param0 >= -57) {
+        if (obfuscationGuard >= -57) {
           PlayerBoard var2 = (PlayerBoard) null;
           MenuScreen.drawPowerUpMeterGrid((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
         }

@@ -13,16 +13,16 @@ final class CalendarRankingHelpers {
     static boolean field_f;
     static QuickChatParameterType field_b;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_b = null;
         field_h = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_d = null;
           field_e = null;
           field_c = null;
           return;
         }
-        CalendarRankingHelpers.a(true);
+        CalendarRankingHelpers.clearSharedReferences(true);
         field_d = null;
         field_e = null;
         field_c = null;
@@ -32,7 +32,7 @@ final class CalendarRankingHelpers {
         if (obfuscationGuard == 1) {
           return 1900 + new Date().getYear();
         }
-        CalendarRankingHelpers.a(false);
+        CalendarRankingHelpers.clearSharedReferences(false);
         return 1900 + new Date().getYear();
     }
 

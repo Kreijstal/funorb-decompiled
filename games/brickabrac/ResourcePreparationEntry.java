@@ -18,22 +18,22 @@ final class ResourcePreparationEntry {
         IntegerParsingHelpers.quickChatHelpDialog = new QuickChatHelpDialog(MenuSelection.field_m, GameConnectionHelpers.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         countryListRequest = null;
         field_c = null;
-        int var1 = -88 % ((param0 - 44) / 45);
+        int var1 = -88 % ((obfuscationGuard - 44) / 45);
     }
 
-    final static void a(int param0) {
+    final static void increaseMusicGain(int obfuscationGuard) {
         int var1 = 0;
-        if (param0 != 13) {
+        if (obfuscationGuard != 13) {
           return;
         }
         if (224 <= ScorePopup.field_p) {
-          SoundCache.a(1, 256);
+          SoundCache.setMusicGain(1, 256);
         } else {
           var1 = ScorePopup.field_p % 32;
-          SoundCache.a(param0 ^ 12, 32 + (ScorePopup.field_p - var1));
+          SoundCache.setMusicGain(obfuscationGuard ^ 12, 32 + (ScorePopup.field_p - var1));
         }
     }
 

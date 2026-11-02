@@ -9,11 +9,11 @@ final class VolcanicBackground extends BackgroundScene {
     static int field_u;
     static UiComponent field_v;
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (!param0) {
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (!obfuscationGuard) {
           return (RgbSprite) null;
         }
-        return LevelList.volcanicCentreSprites[-1 + param1];
+        return LevelList.volcanicCentreSprites[-1 + scaleDivisor];
     }
 
     VolcanicBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
@@ -81,12 +81,12 @@ final class VolcanicBackground extends BackgroundScene {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_w = null;
         field_v = null;
         field_t = null;
         field_r = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_u = 41;
           field_s = null;
           return;
@@ -101,10 +101,10 @@ final class VolcanicBackground extends BackgroundScene {
         } else {
           var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            BitPacketBuffer.a(ByteArrayNode.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
+            BitPacketBuffer.renderBackdropSurface(ByteArrayNode.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ArchiveIndex.a(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, WidgetLayerStack.volcanicMidSprite);
+          ArchiveIndex.drawParallaxLayers(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, WidgetLayerStack.volcanicMidSprite);
         }
         if (!obfuscationGuard) {
           field_v = (UiComponent) null;
@@ -173,16 +173,16 @@ final class VolcanicBackground extends BackgroundScene {
         }
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (RgbSprite[]) null;
         }
-        return WidgetLayerBootstrap.volcanicSegsSprites[-1 + param0];
+        return WidgetLayerBootstrap.volcanicSegsSprites[-1 + scaleDivisor];
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = -91 / ((65 - param0) / 49);
-        return CacheIoWorker.volcanicCapsSprites[param1 - 1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = -91 / ((65 - obfuscationGuard) / 49);
+        return CacheIoWorker.volcanicCapsSprites[scaleDivisor - 1];
     }
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
@@ -192,10 +192,10 @@ final class VolcanicBackground extends BackgroundScene {
         } else {
           var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -111);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            BitPacketBuffer.a(RectangleBody.field_p, var6, colorIndex, 2, (byte) 119, -14);
+            BitPacketBuffer.renderBackdropSurface(RectangleBody.field_p, var6, colorIndex, 2, (byte) 119, -14);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ArchiveIndex.a(-113, -14, NanoGameClock.field_q, scroll16, var6.sprite, colorIndex, 306, 2, destinationX, destinationY, NameEntryPopup.field_Sb);
+          ArchiveIndex.drawParallaxLayers(-113, -14, NanoGameClock.field_q, scroll16, var6.sprite, colorIndex, 306, 2, destinationX, destinationY, NameEntryPopup.field_Sb);
         }
         if (obfuscationGuard >= -84) {
           field_v = (UiComponent) null;
@@ -203,7 +203,7 @@ final class VolcanicBackground extends BackgroundScene {
         }
     }
 
-    final static void g(int param0) {
+    final static void randomizeGlowSequence(int startIndex) {
         int var2 = 0;
         IsaacGenerator var1 = null;
         int var3 = 0;
@@ -214,14 +214,14 @@ final class VolcanicBackground extends BackgroundScene {
         try {
           var4 = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           var1 = var4;
-          for (var2 = param0; var2 < UiComponent.glowSequenceWords.length; var2++) {
+          for (var2 = startIndex; var2 < UiComponent.glowSequenceWords.length; var2++) {
             UiComponent.glowSequenceWords[var2] = var4.nextInt(101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "td.M(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "td.M(" + startIndex + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class VolcanicBackground extends BackgroundScene {
             try {
               codeBase = applet.getCodeBase();
               if (obfuscationGuard) {
-                VolcanicBackground.g(-95);
+                VolcanicBackground.randomizeGlowSequence(-95);
               }
               rewrittenPrefix = DisplayModeInfo.applyChangedAppletParameters(applet, codeBase, -1).getFile();
               AppletJavaScriptBridge.callFunction(new Object[]{"home", rewrittenPrefix + "home.ws"}, 111, applet, "updatelinks");

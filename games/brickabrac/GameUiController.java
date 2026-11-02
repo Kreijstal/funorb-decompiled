@@ -32,10 +32,10 @@ final class GameUiController implements GameUiLifecycle {
 
     public final void initializeUi(boolean obfuscationGuard) {
         boolean discarded$0 = false;
-        NodeDeque.a(127, 50);
+        NodeDeque.setTickRate(127, 50);
         TranslucentNineSliceFrame var2 = new TranslucentNineSliceFrame(LoginCredentialKind.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
-        MidiSynthesizer.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, ContextActionController.field_g, 0, 2, 100, 8, 0, 320, 0);
+        MidiSynthesizer.configureFullscreenDialogFromFont(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, ContextActionController.field_g, 0, 2, 100, 8, 0, 320, 0);
         InvitationDialogHelpers.configureFullscreenDialogFrame(93, var2, 20, 20);
         if (obfuscationGuard) {
           discarded$0 = this.pollSavedProgress((byte) -1);
@@ -46,9 +46,9 @@ final class GameUiController implements GameUiLifecycle {
         TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         InputOptionsHelpers.field_g = true;
         GrowableIntList.field_e = IntegerRemainderHelpers.lobbyGameLogoSprite;
-        LevelResultSubmission.b(-9, 200);
-        KeyboardInput.a(new BrickGameLayerController(), 0);
-        VolcanicBackground.g(0);
+        LevelResultSubmission.configureChatHistory(-9, 200);
+        KeyboardInput.insertGameLayerController(new BrickGameLayerController(), 0);
+        VolcanicBackground.randomizeGlowSequence(0);
         CanvasResizeController.initializeFireworkSpawnArea(240, 0, 640, 0, -6532);
         GameRenderAudioHelpers.initializeBackgroundScenes(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
         Widget.initializeDiagnosticOverlay(1, PasswordFieldRenderer.field_D);
@@ -71,11 +71,11 @@ final class GameUiController implements GameUiLifecycle {
         return (GameScreen) ((Object) FullscreenDialogHelpers.lookupMenuScreen(screenId, 28472));
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_f = null;
         field_e = null;
-        if (param0) {
-          GameUiController.c(true);
+        if (obfuscationGuard) {
+          GameUiController.clearSharedReferences(true);
         }
         field_c = null;
         field_b = null;
@@ -147,16 +147,16 @@ final class GameUiController implements GameUiLifecycle {
           GameplayAudioEvent.field_k = null;
           MeshLobbyUiHelpers.b(2);
         }
-        KeyDispatchHelpers.field_a = TextChoiceDialogHitTest.a(3, true);
+        KeyDispatchHelpers.field_a = TextChoiceDialogHitTest.createResourceArchiveForIndex(3, true);
         BackgroundScene.field_f = FullscreenDialogHelpers.createConfiguredArchive(-6, 0, false, 5, true);
-        ScorePopup.field_l = TextChoiceDialogHitTest.a(6, true);
-        FarmBackground.field_r = TextChoiceDialogHitTest.a(7, true);
-        AchievementIcon.field_s = TextChoiceDialogHitTest.a(8, obfuscationGuard);
-        LevelList.field_o = TextChoiceDialogHitTest.a(9, true);
-        NodeDequeCursor.field_i = TextChoiceDialogHitTest.a(10, true);
-        IncomingPacketHelpers.field_a = TextChoiceDialogHitTest.a(11, true);
-        IntHistoryBuffer.field_i = TextChoiceDialogHitTest.a(12, true);
-        QuickChatPhraseDefinition.field_C = TextChoiceDialogHitTest.a(13, true);
+        ScorePopup.field_l = TextChoiceDialogHitTest.createResourceArchiveForIndex(6, true);
+        FarmBackground.field_r = TextChoiceDialogHitTest.createResourceArchiveForIndex(7, true);
+        AchievementIcon.field_s = TextChoiceDialogHitTest.createResourceArchiveForIndex(8, obfuscationGuard);
+        LevelList.field_o = TextChoiceDialogHitTest.createResourceArchiveForIndex(9, true);
+        NodeDequeCursor.field_i = TextChoiceDialogHitTest.createResourceArchiveForIndex(10, true);
+        IncomingPacketHelpers.field_a = TextChoiceDialogHitTest.createResourceArchiveForIndex(11, true);
+        IntHistoryBuffer.field_i = TextChoiceDialogHitTest.createResourceArchiveForIndex(12, true);
+        QuickChatPhraseDefinition.field_C = TextChoiceDialogHitTest.createResourceArchiveForIndex(13, true);
         FriendListUi.a(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
         AccountContentTransitionLayer.startupResources = new ResourcePreparationQueue(82);
         AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
@@ -190,7 +190,7 @@ final class GameUiController implements GameUiLifecycle {
                 if (4 == var3) {
                   ParisBackground.a((byte) 24, 92.0f, Ball.field_x);
                   CacheEntry.field_C.renderClient(121);
-                  BrickGameLayerController.a(IncomingPacketHelpers.field_a, IntHistoryBuffer.field_i, 2);
+                  BrickGameLayerController.loadLevelPacks(IncomingPacketHelpers.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
                   if (var3 != 5) {
                     return true;
@@ -215,7 +215,7 @@ final class GameUiController implements GameUiLifecycle {
           }
         } else {
           UiCleanupHelpers.cleanupPopupUi((byte) 115);
-          LevelList.a(-1);
+          LevelList.initializeButtonLabels(-1);
           SecondaryNodeQueue.a(LevelList.field_o, NodeDequeCursor.field_i, (byte) -38, AchievementIcon.field_s, FarmBackground.field_r);
         }
         if (var2 != 0) {

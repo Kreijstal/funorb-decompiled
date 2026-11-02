@@ -6,10 +6,10 @@ final class LobbySetupHelpers {
     static String[] field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
         field_b = null;
-        if (param0 != 8) {
+        if (obfuscationGuard != 8) {
           return;
         }
         field_c = null;

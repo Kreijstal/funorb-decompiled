@@ -38,7 +38,7 @@ final class MidiSynthesizer extends AudioStream {
     private MusicTrack field_I;
     private int field_M;
 
-    private final int b(int param0, MusicVoice param1) {
+    private final int computeVoicePan(int obfuscationGuard, MusicVoice voice) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
@@ -48,22 +48,22 @@ final class MidiSynthesizer extends AudioStream {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 2) {
+          if (obfuscationGuard != 2) {
             field_u = (String) null;
           }
-          var3_int = this.channelPan[param1.channel];
+          var3_int = this.channelPan[voice.channel];
           if (var3_int < 8192) {
-            stackIn_6_0 = 32 + param1.notePan * var3_int >> 6;
+            stackIn_6_0 = 32 + voice.notePan * var3_int >> 6;
             return stackIn_6_0;
           }
-          stackIn_4_0 = 16384 - ((-param1.notePan + 128) * (-var3_int + 16384) + 32 >> 6);
+          stackIn_4_0 = 16384 - ((-voice.notePan + 128) * (-var3_int + 16384) + 32 >> 6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("ie.IA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("ie.IA(").append(obfuscationGuard).append(',');
+          if (voice == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -72,7 +72,7 @@ final class MidiSynthesizer extends AudioStream {
         }
     }
 
-    final boolean a(int param0, int[] param1, int param2, MusicVoice param3, int param4) {
+    final boolean updateVoiceControls(int obfuscationGuard, int[] output, int frames, MusicVoice voice, int offset) {
         RuntimeException stackIn_70_0 = null;
         StringBuilder stackIn_70_1 = null;
         String stackIn_71_2 = null;
@@ -87,103 +87,103 @@ final class MidiSynthesizer extends AudioStream {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          param3.updateFrames = PcmPlayer.sampleRate / 100;
-          if (0 <= param3.releaseProgress && (null == param3.pcmStream ||
-            param3.pcmStream.isOutOfRange())) {
-            param3.releaseResources(param0 ^ -23346);
-            param3.unlink((byte) 111);
-            if (param3.exclusiveGroup > 0) {
-              if (this.voicesByGroup[param3.channel][param3.exclusiveGroup] != param3) {
+          voice.updateFrames = PcmPlayer.sampleRate / 100;
+          if (0 <= voice.releaseProgress && (null == voice.pcmStream ||
+            voice.pcmStream.isOutOfRange())) {
+            voice.releaseResources(obfuscationGuard ^ -23346);
+            voice.unlink((byte) 111);
+            if (voice.exclusiveGroup > 0) {
+              if (this.voicesByGroup[voice.channel][voice.exclusiveGroup] != voice) {
                 return true;
               }
-              this.voicesByGroup[param3.channel][param3.exclusiveGroup] = null;
+              this.voicesByGroup[voice.channel][voice.exclusiveGroup] = null;
             }
             return true;
           }
-          var6_int = param3.portamentoScale;
-          if (param0 != 23300) {
+          var6_int = voice.portamentoScale;
+          if (obfuscationGuard != 23300) {
             return false;
           }
           if (var6_int > 0) {
-            var6_int = var6_int - (int)(0.5 + 16.0 * Math.pow(2.0, 0.0004921259842519685 * (double)this.channelPortamentoTime[param3.channel]));
+            var6_int = var6_int - (int)(0.5 + 16.0 * Math.pow(2.0, 0.0004921259842519685 * (double)this.channelPortamentoTime[voice.channel]));
             if (0 > var6_int) {
               var6_int = 0;
             }
-            param3.portamentoScale = var6_int;
+            voice.portamentoScale = var6_int;
           }
-          param3.pcmStream.setSpeed(this.a(-11, param3));
-          var7 = param3.envelope;
-          param3.ageTicks = param3.ageTicks + 1;
+          voice.pcmStream.setSpeed(this.computeVoiceSpeed(-11, voice));
+          var7 = voice.envelope;
+          voice.ageTicks = voice.ageTicks + 1;
           var8 = 0;
-          param3.vibratoPhase = param3.vibratoPhase + var7.vibratoRate;
-          var9 = 0.000005086263020833333 * (double)((param3.note - 60 << 8) + (param3.portamentoScale * param3.portamentoDelta >> 12));
+          voice.vibratoPhase = voice.vibratoPhase + var7.vibratoRate;
+          var9 = 0.000005086263020833333 * (double)((voice.note - 60 << 8) + (voice.portamentoScale * voice.portamentoDelta >> 12));
           if (var7.decayRate > 0) {
             if (var7.field_k <= 0) {
-              param3.decayProgress = param3.decayProgress + 128;
+              voice.decayProgress = voice.decayProgress + 128;
             } else {
-              param3.decayProgress = param3.decayProgress + (int)(Math.pow(2.0, (double)var7.field_k * var9) * 128.0 + 0.5);
+              voice.decayProgress = voice.decayProgress + (int)(Math.pow(2.0, (double)var7.field_k * var9) * 128.0 + 0.5);
             }
-            if (param3.decayProgress * var7.decayRate >= 819200) {
+            if (voice.decayProgress * var7.decayRate >= 819200) {
               var8 = 1;
             }
           }
           if (null != var7.volumeEnvelope) {
             if (var7.field_h > 0) {
-              param3.volumeEnvelopeProgress = param3.volumeEnvelopeProgress + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_h) * 128.0);
+              voice.volumeEnvelopeProgress = voice.volumeEnvelopeProgress + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_h) * 128.0);
             } else {
-              param3.volumeEnvelopeProgress = param3.volumeEnvelopeProgress + 128;
+              voice.volumeEnvelopeProgress = voice.volumeEnvelopeProgress + 128;
             }
-            while (param3.volumeEnvelopeIndex < -2 + var7.volumeEnvelope.length) {
-              if (param3.volumeEnvelopeProgress > (255 & var7.volumeEnvelope[param3.volumeEnvelopeIndex + 2]) << 8) {
-                param3.volumeEnvelopeIndex = param3.volumeEnvelopeIndex + 2;
+            while (voice.volumeEnvelopeIndex < -2 + var7.volumeEnvelope.length) {
+              if (voice.volumeEnvelopeProgress > (255 & var7.volumeEnvelope[voice.volumeEnvelopeIndex + 2]) << 8) {
+                voice.volumeEnvelopeIndex = voice.volumeEnvelopeIndex + 2;
                 continue;
               }
               break;
             }
-            if (-2 + var7.volumeEnvelope.length == param3.volumeEnvelopeIndex &&
-              var7.volumeEnvelope[param3.volumeEnvelopeIndex + 1] == 0) {
+            if (-2 + var7.volumeEnvelope.length == voice.volumeEnvelopeIndex &&
+              var7.volumeEnvelope[voice.volumeEnvelopeIndex + 1] == 0) {
               var8 = 1;
             }
           }
-          if (param3.releaseProgress >= 0 &&
+          if (voice.releaseProgress >= 0 &&
             var7.releaseEnvelope != null &&
-            0 == (1 & this.channelFlags[param3.channel]) && (!(param3.exclusiveGroup >= 0) ||
-            param3 != this.voicesByGroup[param3.channel][param3.exclusiveGroup])) {
+            0 == (1 & this.channelFlags[voice.channel]) && (!(voice.exclusiveGroup >= 0) ||
+            voice != this.voicesByGroup[voice.channel][voice.exclusiveGroup])) {
             if (var7.field_b <= 0) {
-              param3.releaseProgress = param3.releaseProgress + 128;
+              voice.releaseProgress = voice.releaseProgress + 128;
             } else {
-              param3.releaseProgress = param3.releaseProgress + (int)(128.0 * Math.pow(2.0, var9 * (double)var7.field_b) + 0.5);
+              voice.releaseProgress = voice.releaseProgress + (int)(128.0 * Math.pow(2.0, var9 * (double)var7.field_b) + 0.5);
             }
-            while (var7.releaseEnvelope.length - 2 > param3.releaseEnvelopeIndex) {
-              if (param3.releaseProgress > (var7.releaseEnvelope[2 + param3.releaseEnvelopeIndex] << 8 & 65280)) {
-                param3.releaseEnvelopeIndex = param3.releaseEnvelopeIndex + 2;
+            while (var7.releaseEnvelope.length - 2 > voice.releaseEnvelopeIndex) {
+              if (voice.releaseProgress > (var7.releaseEnvelope[2 + voice.releaseEnvelopeIndex] << 8 & 65280)) {
+                voice.releaseEnvelopeIndex = voice.releaseEnvelopeIndex + 2;
                 continue;
               }
               break;
             }
-            if (param3.releaseEnvelopeIndex == -2 + var7.releaseEnvelope.length) {
+            if (voice.releaseEnvelopeIndex == -2 + var7.releaseEnvelope.length) {
               var8 = 1;
             }
           }
           if (var8 == 0) {
-            param3.pcmStream.rampGainAndPan(param3.updateFrames, this.b(param3, param0 - 29023), this.b(2, param3));
+            voice.pcmStream.rampGainAndPan(voice.updateFrames, this.computeVoiceGain(voice, obfuscationGuard - 29023), this.computeVoicePan(2, voice));
             return false;
           }
-          param3.pcmStream.fadeOut(param3.updateFrames);
-          if (param1 != null) {
-            param3.pcmStream.fill(param1, param4, param2);
+          voice.pcmStream.fadeOut(voice.updateFrames);
+          if (output != null) {
+            voice.pcmStream.fill(output, offset, frames);
           } else {
-            param3.pcmStream.skip(param2);
+            voice.pcmStream.skip(frames);
           }
-          if (param3.pcmStream.isRamping()) {
-            this.voiceMixer.fadingStreams.addStream(param3.pcmStream);
+          if (voice.pcmStream.isRamping()) {
+            this.voiceMixer.fadingStreams.addStream(voice.pcmStream);
           }
-          param3.releaseResources(-94);
-          if (param3.releaseProgress >= 0) {
-            param3.unlink((byte) 111);
-            if (param3.exclusiveGroup > 0 &&
-              param3 == this.voicesByGroup[param3.channel][param3.exclusiveGroup]) {
-              this.voicesByGroup[param3.channel][param3.exclusiveGroup] = null;
+          voice.releaseResources(-94);
+          if (voice.releaseProgress >= 0) {
+            voice.unlink((byte) 111);
+            if (voice.exclusiveGroup > 0 &&
+              voice == this.voicesByGroup[voice.channel][voice.exclusiveGroup]) {
+              this.voicesByGroup[voice.channel][voice.exclusiveGroup] = null;
             }
           }
           return true;
@@ -191,71 +191,71 @@ final class MidiSynthesizer extends AudioStream {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_70_0 = var6;
-          stackIn_70_1 = new StringBuilder().append("ie.SA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_70_1 = new StringBuilder().append("ie.SA(").append(obfuscationGuard).append(',');
+          if (output == null) {
             stackIn_71_2 = "null";
           } else {
             stackIn_71_2 = "{...}";
           }
-          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(frames).append(',');
+          if (voice == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(offset).append(')').toString());
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void resetRetriggerPhase(int channel, int obfuscationGuard) {
         MusicVoice var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
-        if ((4 & this.channelFlags[param0]) != 0) {
+        if ((4 & this.channelFlags[channel]) != 0) {
           var3 = (MusicVoice) (this.voiceMixer.voices.first(-117));
           while (var3 != null) {
-            if (var3.channel == param0) {
+            if (var3.channel == channel) {
               var3.field_j = 0;
             }
             var3 = (MusicVoice) (this.voiceMixer.voices.next((byte) 116));
           }
         }
-        if (param1 != 0) {
+        if (obfuscationGuard != 0) {
           this.field_L = false;
         }
     }
 
-    private final void f(int param0, int param1, int param2) {
-        if (param2 != 2) {
+    private final void setPitchBend(int channel, int value14, int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           MusicVoice var5 = (MusicVoice) null;
           this.discardInactiveVoice((MusicVoice) null, 102);
         }
-        this.channelPitchBend[param0] = param1;
+        this.channelPitchBend[channel] = value14;
     }
 
     final synchronized AudioStream nextSubStream() {
         return null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendIntArrayRequests(int opcode, byte obfuscationGuard) {
         int var3 = 0;
         IntArrayRequestHelpers var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != -46) {
+          if (obfuscationGuard != -46) {
             return;
           }
           var4 = (IntArrayRequestHelpers) (SoundCache.field_f.first(-33));
           while (var4 != null) {
-            SaveResultsPromptScreen.a(var4, param0, 49);
+            SaveResultsPromptScreen.writeIntArrayRequest(var4, opcode, 49);
             var4 = (IntArrayRequestHelpers) (SoundCache.field_f.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ie.EA(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ie.EA(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -266,51 +266,51 @@ final class MidiSynthesizer extends AudioStream {
         this.masterGain = gain;
     }
 
-    private final void a(int param0, int param1) {
+    private final void releaseDetachedVoices(int obfuscationGuard, int channel) {
         MusicVoice var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
-        if ((this.channelFlags[param1] & 2) != 0) {
+        if ((this.channelFlags[channel] & 2) != 0) {
           var3 = (MusicVoice) (this.voiceMixer.voices.first(-70));
           while (var3 != null) {
-            if (param1 == var3.channel &&
-              this.voicesByNote[param1][var3.note] == null &&
+            if (channel == var3.channel &&
+              this.voicesByNote[channel][var3.note] == null &&
               var3.releaseProgress < 0) {
               var3.releaseProgress = 0;
             }
             var3 = (MusicVoice) (this.voiceMixer.voices.next((byte) 116));
           }
         }
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           pendingBytePayloadSubmissions = (NodeDeque) null;
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
-        this.initialPrograms[param1] = param0;
-        this.channelBank[param1] = IntrusiveHashIterator.a(param2, param0);
-        this.a(param2 ^ 203445448, param0, param1);
+    private final void selectInitialProgram(int program, int channel, int obfuscationGuard) {
+        this.initialPrograms[channel] = program;
+        this.channelBank[channel] = IntrusiveHashIterator.bitwiseAnd(obfuscationGuard, program);
+        this.setChannelProgram(obfuscationGuard ^ 203445448, program, channel);
     }
 
-    final synchronized void a(byte param0) {
+    final synchronized void releaseSampleCodes(byte obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        int var2 = -47 / ((param0 + 49) / 33);
+        int var2 = -47 / ((obfuscationGuard + 49) / 33);
         MusicPatch var3 = (MusicPatch) (this.patches.first(-15519));
         while (var3 != null) {
-          var3.c((byte) 81);
+          var3.releaseSampleCodes((byte) 81);
           var3 = (MusicPatch) (this.patches.next(true));
         }
     }
 
-    private final void a(int param0, int param1, byte param2, int param3) {
-        if (param2 != 23) {
+    private final void handleKeyPressure(int note, int channel, byte obfuscationGuard, int pressure) {
+        if (obfuscationGuard != 23) {
           this.channelRetriggerValue = (int[]) null;
         }
     }
 
-    private final void g(int param0, int param1, int param2) {
-        this.channelRetriggerValue[param2] = param0;
-        this.field_U[param2] = (int)(Math.pow(2.0, 0.00054931640625 * (double)param0) * 2097152.0 + 0.5);
-        if (param1 != 1010) {
+    private final void setRetriggerValue(int value, int obfuscationGuard, int channel) {
+        this.channelRetriggerValue[channel] = value;
+        this.field_U[channel] = (int)(Math.pow(2.0, 0.00054931640625 * (double)value) * 2097152.0 + 0.5);
+        if (obfuscationGuard != 1010) {
           field_o = (String) null;
         }
     }
@@ -319,7 +319,7 @@ final class MidiSynthesizer extends AudioStream {
         return 0;
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean openUrlWithWindowsShell(String url, boolean obfuscationGuard) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -336,24 +336,24 @@ final class MidiSynthesizer extends AudioStream {
             if (!PlatformServices.osNameLowercase.startsWith("win")) {
               return false;
             }
-            if (!param0.startsWith("http://") &&
-              !param0.startsWith("https://")) {
+            if (!url.startsWith("http://") &&
+              !url.startsWith("https://")) {
               return false;
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             var3 = 0;
-            while (var3 < param0.length()) {
-              if (var2.indexOf((int) param0.charAt(var3)) != -1) {
+            while (var3 < url.length()) {
+              if (var2.indexOf((int) url.charAt(var3)) != -1) {
                 var3++;
                 continue;
               }
               return false;
             }
-            if (param1) {
+            if (obfuscationGuard) {
               var5 = (String) null;
-              MidiSynthesizer.a((String) null, true);
+              MidiSynthesizer.openUrlWithWindowsShell((String) null, true);
             }
-            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
             return true;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -365,16 +365,16 @@ final class MidiSynthesizer extends AudioStream {
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_23_0 = var2_ref2;
           stackIn_23_1 = new StringBuilder().append("ie.G(");
-          if (param0 == null) {
+          if (url == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void e(int param0) {
+    private final void dispatchDueMidiMessages(int obfuscationGuard) {
         int var2;
         int var3;
         long var4;
@@ -386,15 +386,15 @@ final class MidiSynthesizer extends AudioStream {
         var4 = this.field_B;
         if (null != this.field_I &&
           this.field_M == var3) {
-          this.a(this.field_L, true, this.field_N, this.field_I);
-          this.e(-2);
+          this.startTrack(this.field_L, true, this.field_N, this.field_I);
+          this.dispatchDueMidiMessages(-2);
           return;
         }
         while (true) {
           if (var3 != this.field_O) {
             this.field_x = var2;
             this.field_O = var3;
-            if (param0 != -2) {
+            if (obfuscationGuard != -2) {
               field_o = (String) null;
             }
             this.field_B = var4;
@@ -422,7 +422,7 @@ final class MidiSynthesizer extends AudioStream {
             if (this.midiReader.isDone()) {
               if (this.field_I != null) {
                 this.playTrack(this.field_I, 126, this.field_N);
-                this.e(param0 ^ 0);
+                this.dispatchDueMidiMessages(obfuscationGuard ^ 0);
                 return;
               }
               if (this.field_N &&
@@ -502,7 +502,7 @@ final class MidiSynthesizer extends AudioStream {
         var7.volumeEnvelopeIndex = 0;
         var7.releaseProgress = -1;
         if (this.channelSampleOffset[channel] != 0) {
-          var7.pcmStream = PcmStream.createWithGain(var6, this.a(-11, var7), 0, this.b(2, var7));
+          var7.pcmStream = PcmStream.createWithGain(var6, this.computeVoiceSpeed(-11, var7), 0, this.computeVoicePan(2, var7));
           stackIn_20_1 = false;
           stackIn_20_2 = var7;
           if (var11.pitchOffsets[note] >= 0) {
@@ -512,9 +512,9 @@ final class MidiSynthesizer extends AudioStream {
             stackIn_21_0 = this;
             stackIn_21_3 = true;
           }
-          this.a(stackIn_20_1, stackIn_20_2, stackIn_21_3);
+          this.setVoiceStartPosition(stackIn_20_1, stackIn_20_2, stackIn_21_3);
         } else {
-          var7.pcmStream = PcmStream.createWithGain(var6, this.a(-11, var7), this.b(var7, -5723), this.b(2, var7));
+          var7.pcmStream = PcmStream.createWithGain(var6, this.computeVoiceSpeed(-11, var7), this.computeVoiceGain(var7, -5723), this.computeVoicePan(2, var7));
         }
         if (var11.pitchOffsets[note] < 0) {
           var7.pcmStream.setLoopCount(-1);
@@ -536,7 +536,7 @@ final class MidiSynthesizer extends AudioStream {
     final synchronized void playTrack(MusicTrack track, int obfuscationGuard, boolean loop) {
         try {
           int var4_int = -17 / ((obfuscationGuard - 74) / 51);
-          this.a(true, true, loop, track);
+          this.startTrack(true, true, loop, track);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ie.GA(" + (track != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + loop + ')');
         }
@@ -558,14 +558,14 @@ final class MidiSynthesizer extends AudioStream {
         this.channelPitchBend[channel] = 8192;
         this.channelModulation[channel] = 0;
         this.channelPortamentoTime[channel] = 8192;
-        this.a(0, channel);
-        this.c(channel, 0);
+        this.releaseDetachedVoices(0, channel);
+        this.resetRetriggerPhase(channel, 0);
         this.channelFlags[channel] = 0;
         var3 = 30 % ((obfuscationGuard - 7) / 59);
         this.channelParameter[channel] = 32767;
         this.channelPitchBendRange[channel] = 256;
         this.channelSampleOffset[channel] = 0;
-        this.g(8192, 1010, channel);
+        this.setRetriggerValue(8192, 1010, channel);
         return;
     }
 
@@ -607,10 +607,10 @@ final class MidiSynthesizer extends AudioStream {
         return (AudioStream) ((Object) this.voiceMixer);
     }
 
-    private final void c(int param0, int param1, int param2) {
-        if (param0 != -1427) {
+    private final void handleChannelPressure(int obfuscationGuard, int pressure, int channel) {
+        if (obfuscationGuard != -1427) {
           MusicVoice var5 = (MusicVoice) null;
-          this.a(-16, (int[]) null, -83, (MusicVoice) null, 92);
+          this.updateVoiceControls(-16, (int[]) null, -83, (MusicVoice) null, 92);
         }
     }
 
@@ -649,22 +649,22 @@ final class MidiSynthesizer extends AudioStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setChannelProgram(int obfuscationGuard, int program, int channel) {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        if (param0 != -203445432) {
+        if (obfuscationGuard != -203445432) {
           MusicVoice var6 = (MusicVoice) null;
-          this.a(-40, (int[]) null, 15, (MusicVoice) null, -126);
+          this.updateVoiceControls(-40, (int[]) null, 15, (MusicVoice) null, -126);
         }
-        if (param1 != this.channelProgram[param2]) {
-          this.channelProgram[param2] = param1;
+        if (program != this.channelProgram[channel]) {
+          this.channelProgram[channel] = program;
           for (var4 = 0; var4 < 128; var4++) {
-            this.voicesByGroup[param2][var4] = null;
+            this.voicesByGroup[channel][var4] = null;
           }
         }
     }
 
-    final void a(boolean param0, MusicVoice param1, boolean param2) {
+    final void setVoiceStartPosition(boolean clearPitchBend, MusicVoice voice, boolean reverseLoop) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -674,21 +674,21 @@ final class MidiSynthesizer extends AudioStream {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param1.sample.samples.length;
-          if (param2 &&
-            param1.sample.pingPong) {
-            var6 = var4_int - (-var4_int + param1.sample.loopStart);
-            var5 = (int)((long)this.channelSampleOffset[param1.channel] * (long)var6 >> 6);
+          var4_int = voice.sample.samples.length;
+          if (reverseLoop &&
+            voice.sample.pingPong) {
+            var6 = var4_int - (-var4_int + voice.sample.loopStart);
+            var5 = (int)((long)this.channelSampleOffset[voice.channel] * (long)var6 >> 6);
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
-              param1.pcmStream.setReverse(true);
+              voice.pcmStream.setReverse(true);
               var5 = var4_int + var4_int + (-1 - var5);
             }
           } else {
-            var5 = (int)((long)var4_int * (long)this.channelSampleOffset[param1.channel] >> 6);
+            var5 = (int)((long)var4_int * (long)this.channelSampleOffset[voice.channel] >> 6);
           }
-          param1.pcmStream.setPosition(var5);
-          if (param0) {
+          voice.pcmStream.setPosition(var5);
+          if (clearPitchBend) {
             this.channelPitchBend = (int[]) null;
           }
           return;
@@ -696,23 +696,23 @@ final class MidiSynthesizer extends AudioStream {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("ie.S(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ie.S(").append(clearPitchBend).append(',');
+          if (voice == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(reverseLoop).append(')').toString());
         }
     }
 
-    private final synchronized void a(boolean param0, int param1) {
-        if (param1 != 8192) {
+    private final synchronized void clearTrackAndReset(boolean stopImmediately, int obfuscationGuard) {
+        if (obfuscationGuard != 8192) {
           return;
         }
         this.midiReader.clear();
         this.field_I = null;
-        this.reset(param1 ^ -8246, param0);
+        this.reset(obfuscationGuard ^ -8246, stopImmediately);
     }
 
     final synchronized boolean prepareTrack(int obfuscationGuard, MusicTrack track, int sampleBudget, ResourceArchive patchArchive, SoundCache soundCache) {
@@ -742,7 +742,7 @@ final class MidiSynthesizer extends AudioStream {
             var7 = new int[]{sampleBudget};
           }
           if (obfuscationGuard > -110) {
-            this.f(115, 34, -56);
+            this.setPitchBend(115, 34, -56);
           }
           var8 = (ByteArrayNode) (track.instrumentUsage.first(-15519));
           while (var8 != null) {
@@ -821,7 +821,7 @@ final class MidiSynthesizer extends AudioStream {
         int var6 = 0;
         var3 = var6;
         while (16 > var6) {
-          this.channelBank[var6] = IntrusiveHashIterator.a(-128, this.initialPrograms[var6]);
+          this.channelBank[var6] = IntrusiveHashIterator.bitwiseAnd(-128, this.initialPrograms[var6]);
           var6++;
         }
     }
@@ -842,7 +842,7 @@ final class MidiSynthesizer extends AudioStream {
         }
     }
 
-    private final int b(MusicVoice param0, int param1) {
+    private final int computeVoiceGain(MusicVoice voice, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -863,42 +863,42 @@ final class MidiSynthesizer extends AudioStream {
         int var7Lifetime1;
         int var8Lifetime1;
         try {
-          if (this.channelGain[param0.channel] == 0) {
+          if (this.channelGain[voice.channel] == 0) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          var9 = param0.envelope;
+          var9 = voice.envelope;
           var10 = var9;
-          var4 = 4096 + this.channelExpression[param0.channel] * this.channelVolume[param0.channel] >> 13;
+          var4 = 4096 + this.channelExpression[voice.channel] * this.channelVolume[voice.channel] >> 13;
           var4 = 16384 + var4 * var4 >> 15;
-          var4 = 16384 + param0.velocityGain * var4 >> 15;
+          var4 = 16384 + voice.velocityGain * var4 >> 15;
           var4 = this.masterGain * var4 + 128 >> 8;
-          var4 = 128 + this.channelGain[param0.channel] * var4 >> 8;
+          var4 = 128 + this.channelGain[voice.channel] * var4 >> 8;
           if (var10.decayRate > 0) {
-            var4 = (int)(0.5 + Math.pow(0.5, (double)var10.decayRate * ((double)param0.decayProgress * 0.00001953125)) * (double)var4);
+            var4 = (int)(0.5 + Math.pow(0.5, (double)var10.decayRate * ((double)voice.decayProgress * 0.00001953125)) * (double)var4);
           }
-          if (param1 != -5723) {
+          if (obfuscationGuard != -5723) {
             stackIn_8_0 = -126;
             return stackIn_8_0;
           }
           if (null != var10.volumeEnvelope) {
-            var5 = param0.volumeEnvelopeProgress;
-            var6 = var10.volumeEnvelope[param0.volumeEnvelopeIndex + 1];
-            if (param0.volumeEnvelopeIndex < -2 + var10.volumeEnvelope.length) {
-              var7 = var9.volumeEnvelope[param0.volumeEnvelopeIndex] << 8 & 65280;
-              var8 = var10.volumeEnvelope[param0.volumeEnvelopeIndex + 2] << 8 & 65280;
-              var6 = var6 + (-var7 + var5) * (-var6 + var10.volumeEnvelope[param0.volumeEnvelopeIndex + 3]) / (-var7 + var8);
+            var5 = voice.volumeEnvelopeProgress;
+            var6 = var10.volumeEnvelope[voice.volumeEnvelopeIndex + 1];
+            if (voice.volumeEnvelopeIndex < -2 + var10.volumeEnvelope.length) {
+              var7 = var9.volumeEnvelope[voice.volumeEnvelopeIndex] << 8 & 65280;
+              var8 = var10.volumeEnvelope[voice.volumeEnvelopeIndex + 2] << 8 & 65280;
+              var6 = var6 + (-var7 + var5) * (-var6 + var10.volumeEnvelope[voice.volumeEnvelopeIndex + 3]) / (-var7 + var8);
             }
             var4 = 32 + var4 * var6 >> 6;
           }
-          if (param0.releaseProgress > 0 &&
+          if (voice.releaseProgress > 0 &&
             var10.releaseEnvelope != null) {
-            var5Lifetime1 = param0.releaseProgress;
-            var6Lifetime1 = var10.releaseEnvelope[1 + param0.releaseEnvelopeIndex];
-            if (param0.releaseEnvelopeIndex < var10.releaseEnvelope.length - 2) {
-              var7Lifetime1 = (255 & var9.releaseEnvelope[param0.releaseEnvelopeIndex]) << 8;
-              var8Lifetime1 = (255 & var10.releaseEnvelope[2 + param0.releaseEnvelopeIndex]) << 8;
-              var6Lifetime1 = var6Lifetime1 + (var5Lifetime1 - var7Lifetime1) * (-var6Lifetime1 + var10.releaseEnvelope[param0.releaseEnvelopeIndex + 3]) / (var8Lifetime1 - var7Lifetime1);
+            var5Lifetime1 = voice.releaseProgress;
+            var6Lifetime1 = var10.releaseEnvelope[1 + voice.releaseEnvelopeIndex];
+            if (voice.releaseEnvelopeIndex < var10.releaseEnvelope.length - 2) {
+              var7Lifetime1 = (255 & var9.releaseEnvelope[voice.releaseEnvelopeIndex]) << 8;
+              var8Lifetime1 = (255 & var10.releaseEnvelope[2 + voice.releaseEnvelopeIndex]) << 8;
+              var6Lifetime1 = var6Lifetime1 + (var5Lifetime1 - var7Lifetime1) * (-var6Lifetime1 + var10.releaseEnvelope[voice.releaseEnvelopeIndex + 3]) / (var8Lifetime1 - var7Lifetime1);
             }
             var4 = var4 * var6Lifetime1 + 32 >> 6;
           }
@@ -909,12 +909,12 @@ final class MidiSynthesizer extends AudioStream {
           var3 = decompiledCaughtException;
           stackIn_25_0 = var3;
           stackIn_25_1 = new StringBuilder().append("ie.CA(");
-          if (param0 == null) {
+          if (voice == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -968,26 +968,26 @@ final class MidiSynthesizer extends AudioStream {
           var4Lifetime2 = message & 15;
           var5Lifetime2 = 127 & message >> 8;
           var6Lifetime2 = message >> 16 & 127;
-          this.a(var5Lifetime2, var4Lifetime2, (byte) 23, var6Lifetime2);
+          this.handleKeyPressure(var5Lifetime2, var4Lifetime2, (byte) 23, var6Lifetime2);
           return;
         }
         if (176 != var3) {
           if (var3 == 192) {
             var4Lifetime3 = message & 15;
             var5Lifetime3 = (message & 32532) >> 8;
-            this.a(-203445432, var5Lifetime3 + this.channelBank[var4Lifetime3], var4Lifetime3);
+            this.setChannelProgram(-203445432, var5Lifetime3 + this.channelBank[var4Lifetime3], var4Lifetime3);
             return;
           }
           if (var3 == 208) {
             var4Lifetime3Lifetime1 = message & 15;
             var5Lifetime3Lifetime1 = message >> 8 & 127;
-            this.c(-1427, var5Lifetime3Lifetime1, var4Lifetime3Lifetime1);
+            this.handleChannelPressure(-1427, var5Lifetime3Lifetime1, var4Lifetime3Lifetime1);
             return;
           }
           if (var3 == 224) {
             var4Lifetime3Lifetime2 = 15 & message;
             var5Lifetime3Lifetime2 = (message >> 9 & 16256) + (127 & message >> 8);
-            this.f(var4Lifetime3Lifetime2, var5Lifetime3Lifetime2, 2);
+            this.setPitchBend(var4Lifetime3Lifetime2, var5Lifetime3Lifetime2, 2);
             return;
           }
           var3 = 255 & message;
@@ -1001,67 +1001,67 @@ final class MidiSynthesizer extends AudioStream {
         var5Lifetime4 = (32710 & message) >> 8;
         var6Lifetime3 = (message & 8377946) >> 16;
         if (var5Lifetime4 == 0) {
-          this.channelBank[var4Lifetime4] = IntrusiveHashIterator.a(-2080769, this.channelBank[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.channelBank[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(-2080769, this.channelBank[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.channelBank[var4Lifetime4] = IntrusiveHashIterator.a(this.channelBank[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelBank[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelBank[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 1) {
-          this.channelModulation[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(-16257, this.channelModulation[var4Lifetime4]);
+          this.channelModulation[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.bitwiseAnd(-16257, this.channelModulation[var4Lifetime4]);
         }
         if (33 == var5Lifetime4) {
-          this.channelModulation[var4Lifetime4] = IntrusiveHashIterator.a(-128, this.channelModulation[var4Lifetime4]) + var6Lifetime3;
+          this.channelModulation[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(-128, this.channelModulation[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.channelPortamentoTime[var4Lifetime4] = IntrusiveHashIterator.a(this.channelPortamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelPortamentoTime[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelPortamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 37) {
-          this.channelPortamentoTime[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(this.channelPortamentoTime[var4Lifetime4], -128);
+          this.channelPortamentoTime[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.bitwiseAnd(this.channelPortamentoTime[var4Lifetime4], -128);
         }
         if (7 == var5Lifetime4) {
-          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(-16257, this.channelVolume[var4Lifetime4]);
+          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.bitwiseAnd(-16257, this.channelVolume[var4Lifetime4]);
         }
         if (39 == var5Lifetime4) {
-          this.channelVolume[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(this.channelVolume[var4Lifetime4], -128);
+          this.channelVolume[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.bitwiseAnd(this.channelVolume[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 10) {
-          this.channelPan[var4Lifetime4] = IntrusiveHashIterator.a(this.channelPan[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelPan[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelPan[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 42) {
-          this.channelPan[var4Lifetime4] = IntrusiveHashIterator.a(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
+          this.channelPan[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.channelExpression[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(this.channelExpression[var4Lifetime4], -16257);
+          this.channelExpression[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.bitwiseAnd(this.channelExpression[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 43) {
-          this.channelExpression[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(-128, this.channelExpression[var4Lifetime4]);
+          this.channelExpression[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.bitwiseAnd(-128, this.channelExpression[var4Lifetime4]);
         }
         if (64 == var5Lifetime4) {
           if (var6Lifetime3 >= 64) {
-            this.channelFlags[var4Lifetime4] = LevelSelectScreen.d(this.channelFlags[var4Lifetime4], 1);
+            this.channelFlags[var4Lifetime4] = LevelSelectScreen.bitwiseOr(this.channelFlags[var4Lifetime4], 1);
           } else {
-            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.a(this.channelFlags[var4Lifetime4], -2);
+            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelFlags[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 >= 64) {
-            this.channelFlags[var4Lifetime4] = LevelSelectScreen.d(this.channelFlags[var4Lifetime4], 2);
+            this.channelFlags[var4Lifetime4] = LevelSelectScreen.bitwiseOr(this.channelFlags[var4Lifetime4], 2);
           } else {
-            this.a(0, var4Lifetime4);
-            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.a(this.channelFlags[var4Lifetime4], -3);
+            this.releaseDetachedVoices(0, var4Lifetime4);
+            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelFlags[var4Lifetime4], -3);
           }
         }
         if (99 == var5Lifetime4) {
-          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(127, this.channelParameter[var4Lifetime4]);
+          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.bitwiseAnd(127, this.channelParameter[var4Lifetime4]);
         }
         if (var5Lifetime4 == 98) {
-          this.channelParameter[var4Lifetime4] = IntrusiveHashIterator.a(16256, this.channelParameter[var4Lifetime4]) + var6Lifetime3;
+          this.channelParameter[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(16256, this.channelParameter[var4Lifetime4]) + var6Lifetime3;
         }
         if (101 == var5Lifetime4) {
-          this.channelParameter[var4Lifetime4] = 16384 + IntrusiveHashIterator.a(127, this.channelParameter[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelParameter[var4Lifetime4] = 16384 + IntrusiveHashIterator.bitwiseAnd(127, this.channelParameter[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 100) {
-          this.channelParameter[var4Lifetime4] = IntrusiveHashIterator.a(16256, this.channelParameter[var4Lifetime4]) + (16384 + var6Lifetime3);
+          this.channelParameter[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(16256, this.channelParameter[var4Lifetime4]) + (16384 + var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.allSoundOff((byte) -86, var4Lifetime4);
@@ -1075,40 +1075,40 @@ final class MidiSynthesizer extends AudioStream {
         if (var5Lifetime4 == 6) {
           var7 = this.channelParameter[var4Lifetime4];
           if (var7 == 16384) {
-            this.channelPitchBendRange[var4Lifetime4] = IntrusiveHashIterator.a(-16257, this.channelPitchBendRange[var4Lifetime4]) + (var6Lifetime3 << 7);
+            this.channelPitchBendRange[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(-16257, this.channelPitchBendRange[var4Lifetime4]) + (var6Lifetime3 << 7);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.channelParameter[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.channelPitchBendRange[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(this.channelPitchBendRange[var4Lifetime4], -128);
+            this.channelPitchBendRange[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.bitwiseAnd(this.channelPitchBendRange[var4Lifetime4], -128);
           }
         }
         if (var5Lifetime4 == 16) {
-          this.channelSampleOffset[var4Lifetime4] = IntrusiveHashIterator.a(this.channelSampleOffset[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelSampleOffset[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelSampleOffset[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.channelSampleOffset[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(-128, this.channelSampleOffset[var4Lifetime4]);
+          this.channelSampleOffset[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.bitwiseAnd(-128, this.channelSampleOffset[var4Lifetime4]);
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
-            this.channelFlags[var4Lifetime4] = LevelSelectScreen.d(this.channelFlags[var4Lifetime4], 4);
+            this.channelFlags[var4Lifetime4] = LevelSelectScreen.bitwiseOr(this.channelFlags[var4Lifetime4], 4);
           } else {
-            this.c(var4Lifetime4, 0);
-            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.a(this.channelFlags[var4Lifetime4], -5);
+            this.resetRetriggerPhase(var4Lifetime4, 0);
+            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.bitwiseAnd(this.channelFlags[var4Lifetime4], -5);
           }
         }
         if (var5Lifetime4 == 17) {
-          this.g((-16257 & this.channelRetriggerValue[var4Lifetime4]) + (var6Lifetime3 << 7), 1010, var4Lifetime4);
+          this.setRetriggerValue((-16257 & this.channelRetriggerValue[var4Lifetime4]) + (var6Lifetime3 << 7), 1010, var4Lifetime4);
         }
         if (var5Lifetime4 == 49) {
-          this.g(var6Lifetime3 + (this.channelRetriggerValue[var4Lifetime4] & -128), 1010, var4Lifetime4);
+          this.setRetriggerValue(var6Lifetime3 + (this.channelRetriggerValue[var4Lifetime4] & -128), 1010, var4Lifetime4);
         }
     }
 
-    final synchronized void b(int param0, int param1, int param2) {
-        this.d(param2, param1, -128);
-        if (param0 != 0) {
+    final synchronized void setInitialProgram(int obfuscationGuard, int channel, int program) {
+        this.selectInitialProgram(program, channel, -128);
+        if (obfuscationGuard != 0) {
           this.channelVolume = (int[]) null;
         }
     }
@@ -1137,7 +1137,7 @@ final class MidiSynthesizer extends AudioStream {
               this.field_F = this.field_F + (long)var4_int * (long)var7;
               this.voiceMixer.fill(output, offset, var7);
               frames = frames - var7;
-              this.e(-2);
+              this.dispatchDueMidiMessages(-2);
               offset = offset + var7;
               if (this.midiReader.hasData()) {
                 continue;
@@ -1162,30 +1162,30 @@ final class MidiSynthesizer extends AudioStream {
         }
     }
 
-    final synchronized void a(int param0, MusicTrack param1, int param2, boolean param3, int param4, boolean param5) {
+    final synchronized void scheduleTrackAtBoundary(int tempoScale, MusicTrack track, int beats, boolean loop, int delay, boolean loopTransition) {
         int var7_int = 0;
         int var8 = 0;
         if (!this.midiReader.hasData()) {
-          this.playTrack(param1, -61, param3);
+          this.playTrack(track, -61, loop);
           return;
         }
         try {
-          this.field_N = param3 ? true : false;
-          this.field_L = param5 ? true : false;
-          this.field_I = param1;
-          var7_int = this.midiReader.timeToTick(this.field_F) * param0;
-          var8 = param2 * this.midiReader.division;
-          var7_int = var8 * ((param4 + var8 + var7_int) / var8);
-          this.field_M = (var7_int + (param0 >> 1)) / param0;
+          this.field_N = loop ? true : false;
+          this.field_L = loopTransition ? true : false;
+          this.field_I = track;
+          var7_int = this.midiReader.timeToTick(this.field_F) * tempoScale;
+          var8 = beats * this.midiReader.division;
+          var7_int = var8 * ((delay + var8 + var7_int) / var8);
+          this.field_M = (var7_int + (tempoScale >> 1)) / tempoScale;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ie.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ie.N(" + tempoScale + ',' + (track != null ? "{...}" : "null") + ',' + beats + ',' + loop + ',' + delay + ',' + loopTransition + ')');
         }
     }
 
-    public static void c(int param0) {
-        if (param0 != -1) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           String var2 = (String) null;
-          MidiSynthesizer.a((String) null, false);
+          MidiSynthesizer.openUrlWithWindowsShell((String) null, false);
         }
         field_u = null;
         field_q = null;
@@ -1194,13 +1194,13 @@ final class MidiSynthesizer extends AudioStream {
     }
 
     final synchronized void stopTrack(int obfuscationGuard) {
-        this.a(true, obfuscationGuard ^ -16582);
+        this.clearTrackAndReset(true, obfuscationGuard ^ -16582);
         if (obfuscationGuard != -24774) {
           this.channelSampleOffset = (int[]) null;
         }
     }
 
-    private final int a(int param0, MusicVoice param1) {
+    private final int computeVoiceSpeed(int obfuscationGuard, MusicVoice voice) {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1214,32 +1214,32 @@ final class MidiSynthesizer extends AudioStream {
         double var7 = 0.0;
         int var5Lifetime1;
         try {
-          var3_int = param1.basePitch256 + (param1.portamentoDelta * param1.portamentoScale >> 12);
-          var3_int = var3_int + (this.channelPitchBendRange[param1.channel] * (-8192 + this.channelPitchBend[param1.channel]) >> 12);
-          var4 = param1.envelope;
+          var3_int = voice.basePitch256 + (voice.portamentoDelta * voice.portamentoScale >> 12);
+          var3_int = var3_int + (this.channelPitchBendRange[voice.channel] * (-8192 + this.channelPitchBend[voice.channel]) >> 12);
+          var4 = voice.envelope;
           if (0 < var4.vibratoRate && (!(var4.vibratoDepth <= 0) ||
-            this.channelModulation[param1.channel] > 0)) {
+            this.channelModulation[voice.channel] > 0)) {
             var5 = var4.vibratoDepth << 2;
             var6 = var4.vibratoDelay << 1;
-            if (param1.ageTicks < var6) {
-              var5 = var5 * param1.ageTicks / var6;
+            if (voice.ageTicks < var6) {
+              var5 = var5 * voice.ageTicks / var6;
             }
-            var5 = var5 + (this.channelModulation[param1.channel] >> 7);
-            var7 = Math.sin(0.01227184630308513 * (double)(param1.vibratoPhase & 511));
+            var5 = var5 + (this.channelModulation[voice.channel] >> 7);
+            var7 = Math.sin(0.01227184630308513 * (double)(voice.vibratoPhase & 511));
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          if (param0 != -11) {
+          if (obfuscationGuard != -11) {
             this.field_N = true;
           }
-          var5Lifetime1 = (int)((double)(param1.sample.sampleRate * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayer.sampleRate + 0.5);
+          var5Lifetime1 = (int)((double)(voice.sample.sampleRate * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayer.sampleRate + 0.5);
           stackIn_12_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("ie.V(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ie.V(").append(obfuscationGuard).append(',');
+          if (voice == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -1260,7 +1260,7 @@ final class MidiSynthesizer extends AudioStream {
           this.channelGain[channel] = gain;
         }
         if (obfuscationGuard != 16) {
-          this.c(-83, 39, -63);
+          this.handleChannelPressure(-83, 39, -63);
         }
     }
 
@@ -1306,7 +1306,7 @@ final class MidiSynthesizer extends AudioStream {
             this.field_F = this.field_F + (long)var5 * (long)var2;
             this.voiceMixer.skip(var5);
             frames = frames - var5;
-            this.e(-2);
+            this.dispatchDueMidiMessages(-2);
             if (!this.midiReader.hasData()) {
               break;
             }
@@ -1315,33 +1315,33 @@ final class MidiSynthesizer extends AudioStream {
         this.voiceMixer.skip(frames);
     }
 
-    private final synchronized void a(boolean param0, boolean param1, boolean param2, MusicTrack param3) {
+    private final synchronized void startTrack(boolean stopImmediately, boolean obfuscationGuard, boolean loop, MusicTrack track) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.a(param0, 8192);
-          this.midiReader.parse(param3.midiBytes);
+          this.clearTrackAndReset(stopImmediately, 8192);
+          this.midiReader.parse(track.midiBytes);
           this.field_F = 0L;
-          this.field_N = param2 ? true : false;
+          this.field_N = loop ? true : false;
           var5_int = this.midiReader.getTrackCount();
           for (var6 = 0; var6 < var5_int; var6++) {
             this.midiReader.seekTrack(var6);
             this.midiReader.readTrackDelta(var6);
             this.midiReader.saveTrackPosition(var6);
           }
-          if (!param1) {
+          if (!obfuscationGuard) {
             field_u = (String) null;
           }
           this.field_x = this.midiReader.nextTrack();
           this.field_O = this.midiReader.trackTicks[this.field_x];
           this.field_B = this.midiReader.getTickTime(this.field_O);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ie.W(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ie.W(" + stopImmediately + ',' + obfuscationGuard + ',' + loop + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, RgbSprite[] param2, int param3, RgbSprite[] param4, int param5, int param6, TextFont param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void configureFullscreenDialogFromFont(int param0, RgbSprite[] param1, RgbSprite[] param2, int param3, RgbSprite[] param4, int param5, int param6, TextFont param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

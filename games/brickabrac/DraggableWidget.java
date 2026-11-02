@@ -120,10 +120,10 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final void a(byte param0) {
-        super.a((byte) -39);
+    final void layoutChild(byte obfuscationGuard) {
+        super.layoutChild((byte) -39);
         this.child.setBounds(this.height, 0, 0, (byte) -119, this.width);
-        if (param0 > -7) {
+        if (obfuscationGuard > -7) {
           DraggableWidget.g(1);
         }
         this.originX = this.x;
@@ -219,9 +219,9 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_J = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           DraggableWidget.g(-43);
         }
         field_N = null;
@@ -256,7 +256,7 @@ final class DraggableWidget extends SingleChildWidget {
         packet.writeShort((byte) 122, gameId);
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int indent, Hashtable visited, int obfuscationGuard, StringBuilder builder) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
@@ -269,33 +269,33 @@ final class DraggableWidget extends SingleChildWidget {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, 1595637992, param0, param1)) {
-            this.a(param1, param0, 0, param3);
-            this.a(param3, true, param1, param0);
-            discarded$64 = param3.append(" revert=").append(this.returnToOrigin);
+          if (this.beginDebugEntry(builder, 1595637992, indent, visited)) {
+            this.appendDebugSummary(visited, indent, 0, builder);
+            this.appendDebugChild(builder, true, visited, indent);
+            discarded$64 = builder.append(" revert=").append(this.returnToOrigin);
             if (this.originX != 2147483647 &&
               this.originY != 2147483647) {
-              discarded$65 = param3.append(" to ").append(this.originX).append(',').append(this.originY);
+              discarded$65 = builder.append(" to ").append(this.originX).append(',').append(this.originY);
             }
           }
-          if (param2 != 24) {
+          if (obfuscationGuard != 24) {
             var6 = (StringBuilder) null;
-            this.a(-94, (Hashtable) null, 17, (StringBuilder) null);
+            this.appendDebugTree(-94, (Hashtable) null, 17, (StringBuilder) null);
           }
-          stackIn_8_0 = (StringBuilder) (param3);
+          stackIn_8_0 = (StringBuilder) (builder);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("dn.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("dn.UA(").append(indent).append(',');
+          if (visited == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

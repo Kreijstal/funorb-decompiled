@@ -20,7 +20,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
         if (param0 < 114) {
           return;
         }
-        LobbyOverlayHelpers.d(-105);
+        LobbyOverlayHelpers.decreaseMasterSoundGain(-105);
     }
 
     abstract String describeTextValidation(int obfuscationGuard, String text);
@@ -53,7 +53,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
         }
     }
 
-    final static RgbSprite a(RgbSprite param0, int param1, int param2) {
+    final static RgbSprite createVerticallyTiledSprite(RgbSprite sprite, int obfuscationGuard, int count) {
         int var4 = 0;
         RgbSprite var3 = null;
         RuntimeException var3_ref = null;
@@ -65,13 +65,13 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = new RgbSprite(param0.canvasWidth, param2 * param0.canvasHeight);
+          var3 = new RgbSprite(sprite.canvasWidth, count * sprite.canvasHeight);
           var3.bindRasterTarget();
-          if (param1 <= 74) {
+          if (obfuscationGuard <= 74) {
             field_i = (String) null;
           }
-          for (var4 = 0; var4 < param2; var4++) {
-            param0.drawTransparent(0, param0.canvasHeight * var4);
+          for (var4 = 0; var4 < count; var4++) {
+            sprite.drawTransparent(0, sprite.canvasHeight * var4);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 89);
           stackIn_7_0 = var3;
@@ -81,12 +81,12 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("k.U(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',').append(count).append(')').toString());
         }
     }
 
@@ -306,11 +306,11 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_i = null;
         field_j = null;
         outgoingPackets = null;
-        if (param0 > -73) {
+        if (obfuscationGuard > -73) {
           field_i = (String) null;
         }
     }

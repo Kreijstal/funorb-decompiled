@@ -9,10 +9,10 @@ final class MonotonicTime {
     static int tooltipDelayTicks;
     static boolean field_c;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         brickHitPendingTypes = null;
         field_a = null;
-        if (param0 != -114) {
+        if (obfuscationGuard != -114) {
           return;
         }
         field_f = null;

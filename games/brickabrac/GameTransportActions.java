@@ -31,9 +31,9 @@ final class GameTransportActions {
         textChoiceOuterFrame = (NineSliceFrame) null;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
-        if (param0 < 12) {
+        if (obfuscationGuard < 12) {
           return;
         }
         field_b = null;

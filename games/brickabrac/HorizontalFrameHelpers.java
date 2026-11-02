@@ -27,7 +27,7 @@ final class HorizontalFrameHelpers {
           if (sprites != null &&
             width > 0) {
             if (obfuscationGuard != 743) {
-              HorizontalFrameHelpers.a((byte) 123);
+              HorizontalFrameHelpers.clearSharedReferences((byte) 123);
             }
             leftWidth = sprites[0].canvasWidth;
             rightWidth = sprites[2].canvasWidth;
@@ -71,9 +71,9 @@ final class HorizontalFrameHelpers {
         LobbyGame.textChoiceSelectedButtonTextColor = selectedButtonColor;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         activePaddleSegmentSprites = null;
-        if (param0 != 15) {
+        if (obfuscationGuard != 15) {
           return;
         }
         archiveCrc = null;

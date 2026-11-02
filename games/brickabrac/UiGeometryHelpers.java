@@ -19,7 +19,7 @@ final class UiGeometryHelpers {
         try {
           halfSizeSprite = new RgbSprite(source.canvasWidth / 2, source.canvasHeight / 2);
           halfSizeSprite.bindRasterTarget();
-          source.a(destinationX, 0, source.canvasWidth / 2, source.canvasHeight / 2);
+          source.drawScaled(destinationX, 0, source.canvasWidth / 2, source.canvasHeight / 2);
           BallPulseEffect.framebuffer.bindRaster((byte) 102);
           result = halfSizeSprite;
           return result;

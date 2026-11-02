@@ -8,8 +8,8 @@ final class ContentTransitionPhase {
     static String field_a;
     static String[] field_e;
 
-    public static void a(int param0) {
-        if (param0 < -62) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard < -62) {
           field_e = null;
           field_a = null;
           field_b = null;

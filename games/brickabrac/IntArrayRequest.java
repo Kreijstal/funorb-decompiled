@@ -18,9 +18,9 @@ final class IntArrayRequest extends IntrusiveNode {
     static int field_r;
     boolean complete;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         heldKeys = null;
-        if (param0 == 112) {
+        if (obfuscationGuard == 112) {
           field_p = null;
           gameplayScreen = null;
           field_k = null;

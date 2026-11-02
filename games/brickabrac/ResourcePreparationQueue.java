@@ -97,7 +97,7 @@ final class ResourcePreparationQueue {
 
     final static void a(byte param0) {
         String var2 = (String) null;
-        Mesh3D.a(true, (String) null, ReportAbuseDialog.field_cc);
+        Mesh3D.transitionToLoginPanel(true, (String) null, ReportAbuseDialog.field_cc);
         if (param0 == -30) {
           return;
         }
@@ -112,16 +112,16 @@ final class ResourcePreparationQueue {
           return;
         }
         RgbSprite var2 = (RgbSprite) null;
-        ResourcePreparationQueue.a((RgbSprite) null, -53, 56, (RgbSprite) null, (RasterCacheSurface) null, -22, (byte) -5, (RgbSprite) null);
+        ResourcePreparationQueue.renderBackdropSurface((RgbSprite) null, -53, 56, (RgbSprite) null, (RasterCacheSurface) null, -22, (byte) -5, (RgbSprite) null);
         IsaacGenerator.field_b.setScrollPaneBounds(2, (byte) -118, Ball.field_A.width, 0, 20, DialogMessagePanel.uiScrollbarWidth, Ball.field_A.height - 20);
     }
 
-    final static boolean a(int param0) {
-        int var1 = -86 / ((28 - param0) / 42);
+    final static boolean isNameEntryPopupOpen(int obfuscationGuard) {
+        int var1 = -86 / ((28 - obfuscationGuard) / 42);
         return MusicCrossfadeStream.nameEntryPopup != null ? true : false;
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, RgbSprite param3, RasterCacheSurface param4, int param5, byte param6, RgbSprite param7) {
+    final static void renderBackdropSurface(RgbSprite param0, int param1, int param2, RgbSprite param3, RasterCacheSurface param4, int param5, byte param6, RgbSprite param7) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -138,7 +138,7 @@ final class ResourcePreparationQueue {
           IndexedSpriteGeometry.pushSpriteRaster(-72, param4.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, CacheIoWorker.halloweenBackgroundColors[param2], 22953);
           param3.drawTransparent((-param3.canvasWidth + param4.width) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
-          param0.b(-(80 / param1) + (param4.width - param0.canvasWidth) / 2, -(201 / param1) + (param4.height + param5) - param0.canvasHeight, 41, 110);
+          param0.drawWithVerticalAlphaGradient(-(80 / param1) + (param4.width - param0.canvasWidth) / 2, -(201 / param1) + (param4.height + param5) - param0.canvasHeight, 41, 110);
           var8_int = -97 / ((param6 - 54) / 61);
           RasterStackHelpers.popRaster(-95);
           return;
@@ -179,13 +179,13 @@ final class ResourcePreparationQueue {
         this.progressScale = progressScale;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
         arcticNearSprite = null;
-        if (param0 == 4862) {
+        if (obfuscationGuard == 4862) {
           return;
         }
-        ResourcePreparationQueue.c(25);
+        ResourcePreparationQueue.clearSharedReferences(25);
     }
 
     private final void reportBlockedEntry(int entryPercent, int obfuscationGuard, ResourcePreparationEntry entry) {

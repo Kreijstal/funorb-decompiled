@@ -14,9 +14,9 @@ final class TableRowSubmission extends IntrusiveNode {
     int[] values;
     int tableId;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_s = null;
-        if (param0 != -241) {
+        if (obfuscationGuard != -241) {
           field_l = -95;
         }
     }
@@ -39,7 +39,7 @@ final class TableRowSubmission extends IntrusiveNode {
         var14 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param7 != -1) {
-            TableRowSubmission.a(-117);
+            TableRowSubmission.clearSharedReferences(-117);
           }
           for (var12 = -param4; var12 < 0; var12++) {
             for (var13 = -param6; var13 < 0; var13++) {
@@ -52,7 +52,7 @@ final class TableRowSubmission extends IntrusiveNode {
                 var10_int = param0[param8];
                 incrementValue$1 = param8;
                 param8++;
-                param0[incrementValue$1] = LevelSelectScreen.d(IntrusiveHashIterator.a(var11 * IntrusiveHashIterator.a(var10_int, 65280) >> 8, 65280), LevelSelectScreen.d(IntrusiveHashIterator.a(-16777216, var10_int), IntrusiveHashIterator.a(16711935, IntrusiveHashIterator.a(var10_int, 16711935) * var11 >> 8)));
+                param0[incrementValue$1] = LevelSelectScreen.bitwiseOr(IntrusiveHashIterator.bitwiseAnd(var11 * IntrusiveHashIterator.bitwiseAnd(var10_int, 65280) >> 8, 65280), LevelSelectScreen.bitwiseOr(IntrusiveHashIterator.bitwiseAnd(-16777216, var10_int), IntrusiveHashIterator.bitwiseAnd(16711935, IntrusiveHashIterator.bitwiseAnd(var10_int, 16711935) * var11 >> 8)));
               } else {
                 param8++;
               }

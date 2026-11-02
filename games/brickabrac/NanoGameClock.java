@@ -70,7 +70,7 @@ final class NanoGameClock extends GameClock {
         VolcanicBackground.field_v.setBounds(40, FontRequestHelpers.field_a.height - 40, var3, -var3 + FontRequestHelpers.field_a.width, (byte) 64);
     }
 
-    final static int a(int param0, byte[] param1, byte param2) {
+    final static int computeByteArrayCrc32(int length, byte[] data, byte obfuscationGuard) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -78,22 +78,22 @@ final class NanoGameClock extends GameClock {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != -86) {
+          if (obfuscationGuard != -86) {
             field_i = -76L;
           }
-          stackIn_3_0 = UiComponentNode.computeCrc32(param1, 9, 0, param0);
+          stackIn_3_0 = UiComponentNode.computeCrc32(data, 9, 0, length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("cg.J(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("cg.J(").append(length).append(',');
+          if (data == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -206,8 +206,8 @@ final class NanoGameClock extends GameClock {
         }
     }
 
-    public static void f(byte param0) {
-        if (param0 > -89) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard > -89) {
           field_q = (RgbSprite) null;
         }
         field_s = null;

@@ -11,11 +11,11 @@ final class CanvasViewGlobals {
     static int field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         chocolateSmallFarSprite = null;
         field_e = null;
         field_b = null;
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           field_b = (String) null;
           field_f = null;
           return;

@@ -9,13 +9,13 @@ final class TextChoiceDialogStyles {
     static int loginPrivilegeByteTwo;
     static boolean field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
         diagnosticDecimalScratch = null;
         field_d = null;
         field_b = null;
-        if (param0 != -21727) {
-          TextChoiceDialogStyles.a(-77);
+        if (obfuscationGuard != -21727) {
+          TextChoiceDialogStyles.clearSharedReferences(-77);
         }
     }
 
@@ -86,7 +86,7 @@ final class TextChoiceDialogStyles {
     final static void a(int param0, boolean param1) {
         SaveResultsPromptScreen.advanceAndDrawFireworks(true, param1, 0);
         if (param0 < 119) {
-          TextChoiceDialogStyles.a(35);
+          TextChoiceDialogStyles.clearSharedReferences(35);
         }
     }
 

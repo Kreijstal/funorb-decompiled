@@ -9,8 +9,8 @@ final class LobbyCaptionGlobals {
     static String field_f;
     static String field_d;
 
-    public static void a(int param0) {
-        if (param0 == -18657) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == -18657) {
           field_d = null;
           field_f = null;
           field_e = null;
@@ -31,7 +31,7 @@ final class LobbyCaptionGlobals {
     final static void b(int param0) {
         TooltipSprite.e(40);
         if (param0 != 18) {
-          LobbyCaptionGlobals.a(81);
+          LobbyCaptionGlobals.clearSharedReferences(81);
         }
     }
 

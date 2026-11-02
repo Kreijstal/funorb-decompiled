@@ -250,7 +250,7 @@ class RectangleBody extends MovingBody {
             var9Lifetime1 = -var9Lifetime1;
           }
           if (obfuscationGuard) {
-            RectangleBody.c(111);
+            RectangleBody.showPlayerNameChooserPanel(111);
           }
           if (var3_long + (long)(this.width256 / 2) <= var9Lifetime1) {
             return false;
@@ -303,8 +303,8 @@ class RectangleBody extends MovingBody {
         }
     }
 
-    final static void c(int param0) {
-        int var1 = 62 / ((25 - param0) / 57);
+    final static void showPlayerNameChooserPanel(int obfuscationGuard) {
+        int var1 = 62 / ((25 - obfuscationGuard) / 57);
         if (StrongCacheEntry.field_I != null) {
           StrongCacheEntry.field_I.closeDialog(17);
         }
@@ -339,11 +339,11 @@ class RectangleBody extends MovingBody {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_p = null;
         encryptedKeyHeaderScratch = null;
         field_q = null;
-        int var1 = 51 / ((-46 - param0) / 34);
+        int var1 = 51 / ((-46 - obfuscationGuard) / 34);
         field_t = null;
     }
 

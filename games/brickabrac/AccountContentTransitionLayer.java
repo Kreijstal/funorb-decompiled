@@ -21,10 +21,10 @@ final class AccountContentTransitionLayer extends ContentTransitionLayer {
         super(layerStack, content, 33, 20, 30);
     }
 
-    public static void n(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_ub = null;
         contentFadingOut = null;
-        if (param0 < 26) {
+        if (obfuscationGuard < 26) {
           return;
         }
         startupResources = null;

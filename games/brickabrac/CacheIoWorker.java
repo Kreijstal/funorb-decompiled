@@ -35,8 +35,8 @@ final class CacheIoWorker implements Runnable {
         }
     }
 
-    static long a(long param0, long param1) {
-        return param0 | param1;
+    static long bitwiseOr(long left, long right) {
+        return left | right;
     }
 
     final CacheIoRequest readImmediate(FileCacheStore store, int entryId, int obfuscationGuard) {
@@ -324,12 +324,12 @@ final class CacheIoWorker implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
         desertBackgroundColors = null;
         volcanicCapsSprites = (RgbSprite[][]) null;
         fullscreenDialogWrapScratch = null;
-        if (param0 == 26679) {
+        if (obfuscationGuard == 26679) {
           halloweenBackgroundColors = null;
           field_e = null;
           return;

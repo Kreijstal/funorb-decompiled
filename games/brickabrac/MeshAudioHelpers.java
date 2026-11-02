@@ -16,61 +16,61 @@ final class MeshAudioHelpers {
         if (obfuscationGuard < -51) {
           if (yA < yB) {
             if (yB < yC) {
-              MovingBody.a(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
+              MovingBody.rasterInterpolatedMeshTriangle(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
               return;
             }
             if (yC <= yA) {
-              MovingBody.a(blueC, xB, yC, (byte) -111, xA, greenC, greenA, xC, redB, Rasterizer2D.pixels, redA, blueB, greenB, blueA, yA, yB, redC);
+              MovingBody.rasterInterpolatedMeshTriangle(blueC, xB, yC, (byte) -111, xA, greenC, greenA, xC, redB, Rasterizer2D.pixels, redA, blueB, greenB, blueA, yA, yB, redC);
               return;
             }
-            MovingBody.a(blueA, xB, yA, (byte) -111, xC, greenA, greenC, xA, redB, Rasterizer2D.pixels, redC, blueB, greenB, blueC, yC, yB, redA);
+            MovingBody.rasterInterpolatedMeshTriangle(blueA, xB, yA, (byte) -111, xC, greenA, greenC, xA, redB, Rasterizer2D.pixels, redC, blueB, greenB, blueC, yC, yB, redA);
             return;
           }
           if (yA < yC) {
-            MovingBody.a(blueB, xC, yB, (byte) -111, xA, greenB, greenA, xB, redC, Rasterizer2D.pixels, redA, blueC, greenC, blueA, yA, yC, redB);
+            MovingBody.rasterInterpolatedMeshTriangle(blueB, xC, yB, (byte) -111, xA, greenB, greenA, xB, redC, Rasterizer2D.pixels, redA, blueC, greenC, blueA, yA, yC, redB);
             return;
           }
           if (yC > yB) {
-            MovingBody.a(blueB, xA, yB, (byte) -111, xC, greenB, greenC, xB, redA, Rasterizer2D.pixels, redC, blueA, greenA, blueC, yC, yA, redB);
+            MovingBody.rasterInterpolatedMeshTriangle(blueB, xA, yB, (byte) -111, xC, greenB, greenC, xB, redA, Rasterizer2D.pixels, redC, blueA, greenA, blueC, yC, yA, redB);
             return;
           }
-          MovingBody.a(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
+          MovingBody.rasterInterpolatedMeshTriangle(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
           return;
         }
-        MeshAudioHelpers.a(82);
+        MeshAudioHelpers.clearSharedReferences(82);
         if (yA < yB) {
           if (yB < yC) {
-            MovingBody.a(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
+            MovingBody.rasterInterpolatedMeshTriangle(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
             return;
           }
           if (yC <= yA) {
-            MovingBody.a(blueC, xB, yC, (byte) -111, xA, greenC, greenA, xC, redB, Rasterizer2D.pixels, redA, blueB, greenB, blueA, yA, yB, redC);
+            MovingBody.rasterInterpolatedMeshTriangle(blueC, xB, yC, (byte) -111, xA, greenC, greenA, xC, redB, Rasterizer2D.pixels, redA, blueB, greenB, blueA, yA, yB, redC);
             return;
           }
-          MovingBody.a(blueA, xB, yA, (byte) -111, xC, greenA, greenC, xA, redB, Rasterizer2D.pixels, redC, blueB, greenB, blueC, yC, yB, redA);
+          MovingBody.rasterInterpolatedMeshTriangle(blueA, xB, yA, (byte) -111, xC, greenA, greenC, xA, redB, Rasterizer2D.pixels, redC, blueB, greenB, blueC, yC, yB, redA);
           return;
         }
         if (yA < yC) {
-          MovingBody.a(blueB, xC, yB, (byte) -111, xA, greenB, greenA, xB, redC, Rasterizer2D.pixels, redA, blueC, greenC, blueA, yA, yC, redB);
+          MovingBody.rasterInterpolatedMeshTriangle(blueB, xC, yB, (byte) -111, xA, greenB, greenA, xB, redC, Rasterizer2D.pixels, redA, blueC, greenC, blueA, yA, yC, redB);
           return;
         }
         if (yC > yB) {
-          MovingBody.a(blueB, xA, yB, (byte) -111, xC, greenB, greenC, xB, redA, Rasterizer2D.pixels, redC, blueA, greenA, blueC, yC, yA, redB);
+          MovingBody.rasterInterpolatedMeshTriangle(blueB, xA, yB, (byte) -111, xC, greenB, greenC, xB, redA, Rasterizer2D.pixels, redC, blueA, greenA, blueC, yC, yA, redB);
           return;
         }
-        MovingBody.a(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
+        MovingBody.rasterInterpolatedMeshTriangle(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
     }
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_h = null;
         field_g = null;
         field_b = null;
         accountPacketScratch = null;
-        if (param0 == 1024) {
+        if (obfuscationGuard == 1024) {
           field_a = null;
           field_d = null;
           field_e = null;

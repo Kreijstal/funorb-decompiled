@@ -7,11 +7,11 @@ final class ModalOverlayHelpers {
     static int field_d;
     static CanvasResizeController canvasResizeController;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         canvasResizeController = null;
         field_b = null;
-        if (!param0) {
-          ModalOverlayHelpers.a(false);
+        if (!obfuscationGuard) {
+          ModalOverlayHelpers.clearSharedReferences(false);
         }
     }
 
@@ -62,7 +62,7 @@ final class ModalOverlayHelpers {
             return var1 != 0;
           }
           if (!HotspotTextWidget.a(9)) {
-            if (EmailConfirmationValidator.f(21651)) {
+            if (EmailConfirmationValidator.isTextChoiceDialogOpen(21651)) {
               Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
               var1 = 1;
               DesertBackground.drawTextChoiceDialog(param0 ^ -11184849);
@@ -115,7 +115,7 @@ final class ModalOverlayHelpers {
           return var1 != 0;
         }
         if (!HotspotTextWidget.a(9)) {
-          if (EmailConfirmationValidator.f(21651)) {
+          if (EmailConfirmationValidator.isTextChoiceDialogOpen(21651)) {
             Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
             var1 = 1;
             DesertBackground.drawTextChoiceDialog(param0 ^ -11184849);

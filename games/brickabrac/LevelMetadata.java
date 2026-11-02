@@ -12,10 +12,10 @@ final class LevelMetadata extends IntrusiveNode {
     static boolean field_p;
     static String archiveHost;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         archiveHost = null;
-        if (param0 <= 90) {
-          LevelMetadata.a((byte) -14);
+        if (obfuscationGuard <= 90) {
+          LevelMetadata.clearSharedReferences((byte) -14);
         }
     }
 

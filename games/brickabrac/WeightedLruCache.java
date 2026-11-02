@@ -77,10 +77,10 @@ final class WeightedLruCache {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = null;
         primaryActivityLoop = null;
-        int var1 = 77 / ((-29 - param0) / 44);
+        int var1 = 77 / ((-29 - obfuscationGuard) / 44);
         validEmailMessage = null;
         field_h = null;
         powerUpDropPeriods = null;

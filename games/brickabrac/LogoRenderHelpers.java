@@ -139,10 +139,10 @@ final class LogoRenderHelpers {
         return stackIn_8_0;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         incomingPackets = null;
         field_d = null;
-        if (param0 != 31186) {
+        if (obfuscationGuard != 31186) {
           String var2 = (String) null;
           LogoRenderHelpers.requestAddFriend(-88, (String) null, -64);
         }

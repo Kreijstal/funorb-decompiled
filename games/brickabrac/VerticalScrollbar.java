@@ -197,12 +197,12 @@ final class VerticalScrollbar extends UiComponent {
         this(id, styleTemplate.upButton, styleTemplate.downButton, styleTemplate.pageUpRegion, styleTemplate.thumb);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         ninjaBackgroundColors = null;
         field_Rb = null;
         field_Ub = null;
         field_Qb = null;
-        if (param0 == 33) {
+        if (obfuscationGuard == 33) {
           rankingSortIndices = null;
           return;
         }
@@ -241,12 +241,12 @@ final class VerticalScrollbar extends UiComponent {
         return scrollOffset;
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] createBeveledFrameSprites(int param0, int param1, int param2, int param3, int param4) {
         if (param3 == 1) {
-          return SpriteGeometry.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
+          return SpriteGeometry.createBeveledFrameSprites(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
         }
         field_Ub = (TableRowSubmission) null;
-        return SpriteGeometry.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
+        return SpriteGeometry.createBeveledFrameSprites(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
     }
 
     final void layoutScrollbar(int obfuscationGuard, int contentHeight, int scrollOffset, int viewportHeight) {
@@ -382,7 +382,7 @@ final class VerticalScrollbar extends UiComponent {
     final static void a(int param0, String param1, int param2, PaletteFont param3, int param4, int param5) {
         try {
           if (param4 != -15531) {
-            VerticalScrollbar.e((byte) 21);
+            VerticalScrollbar.clearSharedReferences((byte) 21);
           }
           InteractiveGameClient.a(param2, param3, param1, 320, param0, param5, -126);
         } catch (RuntimeException runtimeException) {

@@ -88,8 +88,8 @@ final class RasterSnapshot extends IntrusiveNode {
         return true;
     }
 
-    public static void a(int param0) {
-        if (param0 == 20888) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 20888) {
           field_l = null;
           field_r = null;
           field_s = null;

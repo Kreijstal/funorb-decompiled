@@ -14,10 +14,10 @@ class CircleBody extends MovingBody {
         this.radius256 = radius256;
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_s = null;
         field_t = (RgbSprite[][]) null;
-        int var1 = -78 % ((-14 - param0) / 61);
+        int var1 = -78 % ((-14 - obfuscationGuard) / 61);
         field_q = null;
         reportAbuseDialog = null;
     }

@@ -48,10 +48,10 @@ final class IsaacGenerator {
             }
           }
           this.accumulator = this.accumulator + this.memory[255 & wordIndex + 128];
-          newMemoryWord = this.lastResult + (this.accumulator + this.memory[IntrusiveHashIterator.a(1020, oldMemoryWord) >> 2]);
+          newMemoryWord = this.lastResult + (this.accumulator + this.memory[IntrusiveHashIterator.bitwiseAnd(1020, oldMemoryWord) >> 2]);
           memoryWord = newMemoryWord;
           this.memory[wordIndex] = newMemoryWord;
-          newResult = this.memory[IntrusiveHashIterator.a(memoryWord >> 8 >> 2, 255)] + oldMemoryWord;
+          newResult = this.memory[IntrusiveHashIterator.bitwiseAnd(memoryWord >> 8 >> 2, 255)] + oldMemoryWord;
           this.lastResult = newResult;
           this.results[wordIndex] = newResult;
         }
@@ -127,7 +127,7 @@ final class IsaacGenerator {
           mixA = mixA + mixB;
         }
         if (!obfuscationGuard) {
-          IsaacGenerator.a(-63);
+          IsaacGenerator.clearSharedReferences(-63);
         }
         for (seedBlockOffset = 0; 256 > seedBlockOffset; seedBlockOffset += 8) {
           mixG = mixG + this.results[6 + seedBlockOffset];
@@ -230,8 +230,8 @@ final class IsaacGenerator {
         return this.results[resultIndex];
     }
 
-    public static void a(int param0) {
-        if (param0 != 2) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           return;
         }
         field_b = null;

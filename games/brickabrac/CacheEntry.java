@@ -13,12 +13,12 @@ abstract class CacheEntry extends DualLinkNode {
     static String[] field_A;
     static boolean field_w;
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_x = null;
         receivedChatContextLabel = null;
         field_A = null;
         field_B = null;
-        if (param0 != 31434) {
+        if (obfuscationGuard != 31434) {
           CacheEntry.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
         }
         field_C = null;
@@ -221,7 +221,7 @@ abstract class CacheEntry extends DualLinkNode {
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             ChatMessage.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, ProxySocketConnector.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
-            array$2 = new AlignedIconLabel[IntrusiveHashIterator.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
+            array$2 = new AlignedIconLabel[IntrusiveHashIterator.bitwiseAnd((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
             MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {

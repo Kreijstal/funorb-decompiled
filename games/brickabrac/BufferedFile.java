@@ -29,9 +29,9 @@ final class BufferedFile {
         this.position = position;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isQuickChatUiOpen(boolean obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return true;
         }
         stackIn_7_0 = (null != IntegerParsingHelpers.quickChatHelpDialog) || (TooltipSprite.quickChatMenuOpen);
@@ -273,8 +273,8 @@ final class BufferedFile {
         }
     }
 
-    public static void a(int param0) {
-        int var1 = 27 % ((62 - param0) / 62);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = 27 % ((62 - obfuscationGuard) / 62);
         field_q = null;
         field_d = null;
         field_a = null;
@@ -456,7 +456,7 @@ final class BufferedFile {
           }
           var11 = (var10 * var8.width >> 7) / scaleDivisor;
           var12 = (var10 * var8.height >> 7) / scaleDivisor;
-          var8.b(-(var11 >> 1) + var6_int, var7 - (var12 >> 1), var11, var12, var9Lifetime1);
+          var8.drawScaledAlphaBlended(-(var11 >> 1) + var6_int, var7 - (var12 >> 1), var11, var12, var9Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

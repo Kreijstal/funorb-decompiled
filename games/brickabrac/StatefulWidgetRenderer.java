@@ -144,7 +144,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         WidgetPaintStyle disabledStyle = null;
         try {
           if (callbackGuard != -20618) {
-            StatefulWidgetRenderer.b(62);
+            StatefulWidgetRenderer.clearSharedReferences(62);
           }
           if (!(widget instanceof FocusableWidget)) {
             stackIn_5_0 = null;
@@ -152,7 +152,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             stackIn_5_0 = (Widget) (widget);
           }
           focusableWidget = (FocusableWidget) (stackIn_5_0);
-          MovingBody.a((byte) 106, widget.width + widget.x + parentX, parentX + widget.x, parentY + widget.y, parentY + widget.y + widget.height);
+          MovingBody.pushRasterIntersectClip((byte) 106, widget.width + widget.x + parentX, parentX + widget.x, parentY + widget.y, parentY + widget.y + widget.height);
           if (focusableWidget != null) {
             obfuscationGuard = obfuscationGuard & focusableWidget.enabled;
           }
@@ -217,10 +217,10 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_w = null;
-        if (param0 != 3) {
-          StatefulWidgetRenderer.b(20);
+        if (obfuscationGuard != 3) {
+          StatefulWidgetRenderer.clearSharedReferences(20);
         }
         field_x = null;
         field_v = null;

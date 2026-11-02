@@ -13,7 +13,7 @@ final class HuffmanCodec {
     static RgbSprite field_e;
     static String field_d;
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
+    final static boolean areCommonUiArchivesReady(ResourceArchive archiveA, ResourceArchive archiveB, ResourceArchive archiveC, int obfuscationGuard) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -24,19 +24,19 @@ final class HuffmanCodec {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.ensureIndex((byte) -127)) {
+          if (!archiveB.ensureIndex((byte) -127)) {
             return false;
           }
-          if (!param1.ensureGroupAvailableByName("commonui", -28138)) {
+          if (!archiveB.ensureGroupAvailableByName("commonui", -28138)) {
             return false;
           }
-          if (param3 > -63) {
+          if (obfuscationGuard > -63) {
             return true;
           }
-          if (param0.ensureIndex((byte) -127) &&
-            param0.ensureGroupAvailableByName("commonui", -28138)) {
-            if (param2.ensureIndex((byte) -127) &&
-              param2.ensureGroupAvailableByName("button.gif", -28138)) {
+          if (archiveA.ensureIndex((byte) -127) &&
+            archiveA.ensureGroupAvailableByName("commonui", -28138)) {
+            if (archiveC.ensureIndex((byte) -127) &&
+              archiveC.ensureGroupAvailableByName("button.gif", -28138)) {
               return true;
             }
             return false;
@@ -47,24 +47,24 @@ final class HuffmanCodec {
           var4 = decompiledCaughtException;
           stackIn_22_0 = var4;
           stackIn_22_1 = new StringBuilder().append("fk.E(");
-          if (param0 == null) {
+          if (archiveA == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param1 == null) {
+          if (archiveB == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
           stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
-          if (param2 == null) {
+          if (archiveC == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class HuffmanCodec {
             lastOutputByte = outputByteIndex + (codeShift + (codeLength - 1) >> 3);
             bitPosition = bitPosition + codeLength;
             codeShift += 24;
-            dupTemp$0 = LevelSelectScreen.d(pendingByte, codeword >>> codeShift);
+            dupTemp$0 = LevelSelectScreen.bitwiseOr(pendingByte, codeword >>> codeShift);
             pendingByte = dupTemp$0;
             output[outputByteIndex] = (byte)dupTemp$0;
             if (lastOutputByte > outputByteIndex) {
@@ -251,7 +251,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static void a(int param0) {
+    final static void writeReflectionCheckResponses(int obfuscationGuard) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         BitPacketBuffer var1 = null;
@@ -261,9 +261,9 @@ final class HuffmanCodec {
         ResourceArchive var4 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 != 14114) {
+          if (obfuscationGuard != 14114) {
             var4 = (ResourceArchive) null;
-            HuffmanCodec.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
+            HuffmanCodec.areCommonUiArchivesReady((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
           }
           var1 = TextFieldValidator.outgoingPackets;
           while (IntrusiveHashIterator.isReflectionCheckReady(104)) {
@@ -278,16 +278,16 @@ final class HuffmanCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "fk.H(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "fk.H(" + obfuscationGuard + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         fullscreenPluralSuffix = null;
         field_c = null;
         field_e = null;
         pendingRankingsRequests = null;
-        if (param0 != -94) {
+        if (obfuscationGuard != -94) {
           HuffmanCodec.updateLogoPiecePose(119, (byte) 34);
         }
         field_d = null;
@@ -338,7 +338,7 @@ final class HuffmanCodec {
             return stackIn_4_0;
           }
           if (!obfuscationGuard) {
-            HuffmanCodec.a((byte) 104);
+            HuffmanCodec.clearSharedReferences((byte) 104);
           }
           length = length + outputOffset;
           trieIndex = 0;
@@ -513,7 +513,7 @@ final class HuffmanCodec {
           try {
             var4_int = 60 / ((1 - param0) / 62);
             if (PlatformServices.osNameLowercase.startsWith("win") &&
-              MidiSynthesizer.a(param2, false)) {
+              MidiSynthesizer.openUrlWithWindowsShell(param2, false)) {
               return;
             }
             try {
@@ -607,7 +607,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  nextCodeByLength[var10] = LevelSelectScreen.d(var12, var11);
+                  nextCodeByLength[var10] = LevelSelectScreen.bitwiseOr(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

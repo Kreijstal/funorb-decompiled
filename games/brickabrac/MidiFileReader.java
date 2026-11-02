@@ -41,7 +41,7 @@ final class MidiFileReader {
         return true;
     }
 
-    public static void g() {
+    public static void clearSharedReferences() {
         messageDataLengths = null;
     }
 

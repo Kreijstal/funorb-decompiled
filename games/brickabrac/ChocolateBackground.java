@@ -28,14 +28,14 @@ final class ChocolateBackground extends BackgroundScene {
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var7 = null;
         if (obfuscationGuard > -84) {
-          this.b(33);
+          this.getLeverSprites(33);
           if (!this.hasSprites((byte) -128)) {
             Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
             return;
           }
           var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            SoundPlayback.a(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
+            SoundPlayback.renderBackdropSurface(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
             GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
@@ -50,7 +50,7 @@ final class ChocolateBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          SoundPlayback.a(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
+          SoundPlayback.renderBackdropSurface(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
           GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
@@ -59,13 +59,13 @@ final class ChocolateBackground extends BackgroundScene {
         GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
     }
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (param0) {
-          return IntKeyIndex.chocCentreSprites[param1 - 1];
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (obfuscationGuard) {
+          return IntKeyIndex.chocCentreSprites[scaleDivisor - 1];
         }
         java.applet.Applet var4 = (java.applet.Applet) null;
         ChocolateBackground.a((java.applet.Applet) null, 68);
-        return IntKeyIndex.chocCentreSprites[param1 - 1];
+        return IntKeyIndex.chocCentreSprites[scaleDivisor - 1];
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
@@ -92,26 +92,26 @@ final class ChocolateBackground extends BackgroundScene {
         return true;
     }
 
-    final RgbSprite c(byte param0) {
-        if (param0 >= -74) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard >= -74) {
           this.drawFullBackground(false, 35, 0, 38, 68);
           return MeshAttributeRecord.chocolateCharacterSprite;
         }
         return MeshAttributeRecord.chocolateCharacterSprite;
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_t = (String) null;
-          return TextChoiceDialogHitTest.chocSegsSprites[-1 + param0];
+          return TextChoiceDialogHitTest.chocSegsSprites[-1 + scaleDivisor];
         }
-        return TextChoiceDialogHitTest.chocSegsSprites[-1 + param0];
+        return TextChoiceDialogHitTest.chocSegsSprites[-1 + scaleDivisor];
     }
 
     final static ConditionalTextValue f(int param0) {
         String var1 = LevelSelectScreen.d(true);
         if (param0 < 68) {
-          ChocolateBackground.d((byte) 97);
+          ChocolateBackground.clearSharedReferences((byte) 97);
           if (var1 != null) {
             if (!(0 > var1.indexOf('@'))) {
               var1 = "";
@@ -130,8 +130,8 @@ final class ChocolateBackground extends BackgroundScene {
         return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
     }
 
-    final RgbSprite[] b(int param0) {
-        if (param0 >= -12) {
+    final RgbSprite[] getLeverSprites(int obfuscationGuard) {
+        if (obfuscationGuard >= -12) {
           field_r = false;
           return NameEntryPopup.chocLeverSprites;
         }
@@ -143,7 +143,7 @@ final class ChocolateBackground extends BackgroundScene {
         if (this.hasSprites((byte) -112)) {
           var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            SoundPlayback.a(0, 26746, var6, colorIndex, 1, QuickChatPhraseRegistry.chocolateFarSprite);
+            SoundPlayback.renderBackdropSurface(0, 26746, var6, colorIndex, 1, QuickChatPhraseRegistry.chocolateFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           GameplayRenderHelpers.drawOffsetParallaxLayers(IncomingPacketHelpers.chocolateNearSprite, destinationX, 640, destinationY, chocolateMidSprite, 95, var6.sprite, scroll16, colorIndex, 1, CappedUrlRequest.chocolateSpiresSprite, 0);
@@ -160,9 +160,9 @@ final class ChocolateBackground extends BackgroundScene {
         }
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = -63 % ((65 - param0) / 49);
-        return Brick.chocCapsSprites[-1 + param1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = -63 % ((65 - obfuscationGuard) / 49);
+        return Brick.chocCapsSprites[-1 + scaleDivisor];
     }
 
     ChocolateBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
@@ -262,8 +262,8 @@ final class ChocolateBackground extends BackgroundScene {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 < -29) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard < -29) {
           field_t = null;
           chocolateMidSprite = null;
           field_y = null;

@@ -573,10 +573,10 @@ final class CachedArchiveSource extends ArchiveSource {
         return this.index;
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         chatFont = null;
         field_t = null;
-        if (param0 != 56) {
+        if (obfuscationGuard != 56) {
           fullscreenDialogTop = 120;
         }
         ignoreEntries = null;

@@ -7,8 +7,8 @@ final class ToggleButtonWidget extends FocusableWidget {
     static RgbSprite parisFarSprite;
     static NodeDeque friendEntries;
 
-    public static void a(int param0) {
-        if (param0 != 8192) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 8192) {
           return;
         }
         friendEntries = null;
@@ -73,18 +73,18 @@ final class ToggleButtonWidget extends FocusableWidget {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, String param3) {
+    final static void showLoginPanel(boolean flagOne, boolean flagTwo, int obfuscationGuard, String message) {
         try {
           IntKeyIndex.a(-1);
           ResourceArchive.field_f.hideLayers(-127);
-          if (param2 != -15947) {
+          if (obfuscationGuard != -15947) {
             parisFarSprite = (RgbSprite) null;
           }
-          DirectByteStorage.field_k = new LoginPanel(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
+          DirectByteStorage.field_k = new LoginPanel(GameScreen.field_d, (String) null, NanoGameClock.field_l, flagOne, flagTwo);
           TextHuffmanHelpers.accountContentLayer = new AccountContentTransitionLayer(ResourceArchive.field_f, DirectByteStorage.field_k);
           ResourceArchive.field_f.pushLayer(-117, TextHuffmanHelpers.accountContentLayer);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + flagOne + ',' + flagTwo + ',' + obfuscationGuard + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 

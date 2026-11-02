@@ -444,7 +444,7 @@ final class GameRenderAudioHelpers {
             BackgroundRegistry.scenes[5] = (BackgroundScene) ((Object) new HalloweenBackground(5, "BaB_halloween", "BaB_block_halloween", 8));
           }
           if (obfuscationGuard != 24876) {
-            GameRenderAudioHelpers.a((byte) 96);
+            GameRenderAudioHelpers.clearSharedReferences((byte) 96);
           }
           BackgroundRegistry.scenes[11] = (BackgroundScene) ((Object) new NinjaBackground(11, "BAB_ninja", "BaB_block_ninja", 7));
           OpacityWidget.pendingMusicLoads = 11;
@@ -493,16 +493,16 @@ final class GameRenderAudioHelpers {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         try {
           field_e = null;
           contextActions = null;
           field_b = null;
           field_f = null;
-          int var1_int = -21 / ((param0 + 44) / 60);
+          int var1_int = -21 / ((obfuscationGuard + 44) / 60);
           customBytePools = (byte[][][]) null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bm.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bm.F(" + obfuscationGuard + ')');
         }
     }
 

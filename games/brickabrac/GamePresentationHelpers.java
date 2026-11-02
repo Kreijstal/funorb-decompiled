@@ -93,7 +93,7 @@ final class GamePresentationHelpers {
         int var3 = 0;
         Object var2 = null;
         if (obfuscationGuard != 19) {
-          GamePresentationHelpers.a((byte) -86);
+          GamePresentationHelpers.clearSharedReferences((byte) -86);
         }
         ChatMessage.backgroundVariant = ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 2);
         if (selector == 0) {
@@ -238,7 +238,7 @@ final class GamePresentationHelpers {
           indices = GameOverlayHelpers.decodedSpriteIndices[spriteIndex];
           pixels = new int[pixelCount];
           for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
-            pixels[pixelIndex] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) indices[pixelIndex], 255)];
+            pixels[pixelIndex] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.bitwiseAnd((int) indices[pixelIndex], 255)];
           }
           sprites[spriteIndex] = new RgbSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], UiGeometryHelpers.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
         }
@@ -249,10 +249,10 @@ final class GamePresentationHelpers {
         return sprites;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_e = null;
         field_b = null;
-        if (param0 != 46) {
+        if (obfuscationGuard != 46) {
           GamePresentationHelpers.buildRgbSprites(110);
         }
         field_c = null;

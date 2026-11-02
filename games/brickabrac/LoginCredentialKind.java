@@ -75,17 +75,17 @@ final class LoginCredentialKind {
         return true;
     }
 
-    final static AccountResponse a(boolean param0, boolean param1) {
-        AccountResponse var2 = new AccountResponse(param0);
-        var2.underThirteen = param1 ? true : false;
+    final static AccountResponse createAccountResponse(boolean flag, boolean underThirteen) {
+        AccountResponse var2 = new AccountResponse(flag);
+        var2.underThirteen = underThirteen ? true : false;
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         fullscreenDialogButtonFrame = null;
         field_h = null;
         field_d = null;
-        int var1 = 123 / ((param0 + 23) / 38);
+        int var1 = 123 / ((obfuscationGuard + 23) / 38);
         field_f = null;
         field_b = null;
         titleMusicTrack = null;

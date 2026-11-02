@@ -30,7 +30,7 @@ final class DelayedPacket extends IntrusiveNode {
         return true;
     }
 
-    final static RgbSprite a(RgbSprite param0, int param1, int param2) {
+    final static RgbSprite createBlurredSilhouetteSprite(RgbSprite sprite, int radius, int obfuscationGuard) {
         int var4 = 0;
         RuntimeException var3 = null;
         int var5 = 0;
@@ -42,21 +42,21 @@ final class DelayedPacket extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param2 != -17912) {
+          if (obfuscationGuard != -17912) {
             DelayedPacket.c(-48);
           }
-          var6 = new RgbSprite(param1 * 2 + param0.width, 2 * param1 + param0.height);
+          var6 = new RgbSprite(radius * 2 + sprite.width, 2 * radius + sprite.height);
           var6.bindRasterTarget();
           Rasterizer2D.fillRectangle(0, 0, var6.width, var6.height, 16777215);
-          for (var4 = 0; param1 > var4; var4++) {
-            param0.d(-param0.offsetX + param1, -param0.offsetY + param1, 0);
-            Rasterizer2D.e(1, 1, 0, 0, var6.width, var6.height);
+          for (var4 = 0; radius > var4; var4++) {
+            sprite.drawSilhouette(-sprite.offsetX + radius, -sprite.offsetY + radius, 0);
+            Rasterizer2D.blurRectangle(1, 1, 0, 0, var6.width, var6.height);
           }
           var6.replaceZeroWithOne();
-          param0.d(-param0.offsetX + param1, param1 - param0.offsetY, 0);
+          sprite.drawSilhouette(-sprite.offsetX + radius, radius - sprite.offsetY, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 109);
-          var6.offsetY = param0.offsetY - param1;
-          var6.offsetX = -param1 + param0.offsetX;
+          var6.offsetY = sprite.offsetY - radius;
+          var6.offsetX = -radius + sprite.offsetX;
           stackIn_7_0 = var6;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,23 +64,23 @@ final class DelayedPacket extends IntrusiveNode {
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("pg.D(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(radius).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         menuScreens = null;
         field_o = null;
         field_i = null;
         field_p = null;
         field_q = null;
         field_n = null;
-        if (param0 > -123) {
+        if (obfuscationGuard > -123) {
           field_p = (RgbSprite) null;
         }
     }
@@ -102,7 +102,7 @@ final class DelayedPacket extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void drawPointerTooltipText(boolean obfuscationGuard, String text) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -113,20 +113,20 @@ final class DelayedPacket extends IntrusiveNode {
         try {
           var2_int = MusicPatch.pointerX;
           var3 = ResourcePreparationEntry.pointerY;
-          if (param0) {
+          if (obfuscationGuard) {
             String var9 = (String) null;
-            DelayedPacket.a(false, (String) null);
+            DelayedPacket.drawPointerTooltipText(false, (String) null);
           }
-          var4 = CappedUrlRequest.field_l.font.countWrappedLines(param1, 500);
-          var5 = CappedUrlRequest.field_l.font.measureWrappedWidth(param1, 500) + 6;
+          var4 = CappedUrlRequest.field_l.font.countWrappedLines(text, 500);
+          var5 = CappedUrlRequest.field_l.font.measureWrappedWidth(text, 500) + 6;
           var6 = 2 + WidgetLayerBootstrap.uiRowHeight * var4;
           var7 = OptionsScreen.choosePopupX(-1, var5, var2_int, 12);
           var8 = ContextMenu.choosePopupY(var6, var3, 20, -30);
           Rasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
           Rasterizer2D.fillRectangle(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
-          CappedUrlRequest.field_l.font.drawParagraph(param1, 3 + var7, -CappedUrlRequest.field_l.font.ascent + (1 + var8) + ClientViewHelpers.field_f, 500, 1000, 0, -1, 0, 0, WidgetLayerBootstrap.uiRowHeight);
+          CappedUrlRequest.field_l.font.drawParagraph(text, 3 + var7, -CappedUrlRequest.field_l.font.ascent + (1 + var8) + ClientViewHelpers.field_f, 500, 1000, 0, -1, 0, 0, WidgetLayerBootstrap.uiRowHeight);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pg.A(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 

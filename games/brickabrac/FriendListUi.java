@@ -308,14 +308,14 @@ final class FriendListUi {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         try {
           desertNearSprite = null;
-          int var1_int = 98 / ((param0 - 73) / 36);
+          int var1_int = 98 / ((obfuscationGuard - 73) / 36);
           field_c = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wn.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wn.F(" + obfuscationGuard + ')');
         }
     }
 

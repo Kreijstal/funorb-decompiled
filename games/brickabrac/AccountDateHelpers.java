@@ -63,9 +63,9 @@ final class AccountDateHelpers {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_c = null;
-        int var1 = 112 / ((param0 + 36) / 63);
+        int var1 = 112 / ((obfuscationGuard + 36) / 63);
         field_d = null;
         field_b = null;
         field_a = null;
@@ -73,7 +73,7 @@ final class AccountDateHelpers {
 
     final static int pollAccountDialogResult(int obfuscationGuard, int unusedWheelDelta, int unusedLocaleId, boolean unusedFlag) {
         if (obfuscationGuard != -27790) {
-          AccountDateHelpers.a((byte) 15);
+          AccountDateHelpers.clearSharedReferences((byte) 15);
           return MovingBody.pollAccountDialogResult((byte) 109);
         }
         return MovingBody.pollAccountDialogResult((byte) 109);

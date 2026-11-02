@@ -209,12 +209,12 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
         }
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_ib = null;
         field_hb = null;
         field_jb = null;
         defaultQuickChatMenu = null;
-        if (param0 <= 78) {
+        if (obfuscationGuard <= 78) {
           return;
         }
         field_gb = null;

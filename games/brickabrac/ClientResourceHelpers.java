@@ -74,11 +74,11 @@ final class ClientResourceHelpers {
         NineSliceFrame.uiSounds[14] = GameScreen.field_e.getMusicSampleByName((byte) -105, "BaB_get_ready_FX", "");
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         awaitingValidationStrings = null;
         field_b = null;
         field_a = null;
-        if (param0 == 31583) {
+        if (obfuscationGuard == 31583) {
           currentLobbyGame = null;
           field_c = null;
           field_h = null;

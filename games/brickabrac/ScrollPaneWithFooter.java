@@ -13,24 +13,24 @@ final class ScrollPaneWithFooter extends UiComponent {
     static int field_Yb;
     static String field_Vb;
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, int param3, int param4) {
-        if (param1 >= -62) {
+    final static RgbSprite[] createTwoToneSpriteGrid(int size, byte obfuscationGuard, int topLeftColor, int centerColor, int bottomRightColor) {
+        if (obfuscationGuard >= -62) {
           field_Pb = -111;
         }
         RgbSprite[] var6 = new RgbSprite[9];
         RgbSprite[] var5 = var6;
-        RgbSprite dupTemp$0 = InvitationDialogHelpers.a(param2, param0, (byte) -6);
+        RgbSprite dupTemp$0 = InvitationDialogHelpers.createSolidSprite(topLeftColor, size, (byte) -6);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        RgbSprite dupTemp$1 = InvitationDialogHelpers.a(param4, param0, (byte) -6);
+        RgbSprite dupTemp$1 = InvitationDialogHelpers.createSolidSprite(bottomRightColor, size, (byte) -6);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (param3 != 0) {
-          var6[4] = InvitationDialogHelpers.a(param3, 64, (byte) -6);
+        if (centerColor != 0) {
+          var6[4] = InvitationDialogHelpers.createSolidSprite(centerColor, 64, (byte) -6);
         }
         return var5;
     }
@@ -148,10 +148,10 @@ final class ScrollPaneWithFooter extends UiComponent {
         this.layoutPaneFooter(footerHeight, -779, scrollbarWidth, contentRightInset);
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_Ub = null;
         field_Sb = null;
-        if (param0 > -15) {
+        if (obfuscationGuard > -15) {
           ChatMessage var2 = (ChatMessage) null;
           ScrollPaneWithFooter.a(-63, (ChatMessage) null);
         }
@@ -188,13 +188,13 @@ final class ScrollPaneWithFooter extends UiComponent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5) {
+    final static void drawTooltipBox(int x, int bottom, int height, int width, String text, int borderColor) {
         try {
-          Rasterizer2D.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
-          Rasterizer2D.c(param0, -param2 + param1, param3, param2, 3, param5);
-          PasswordFieldRenderer.field_D.drawLeft(param4, MusicPatch.pointerX, -1 + (-PasswordFieldRenderer.field_D.descent + ResourcePreparationEntry.pointerY - PasswordFieldRenderer.field_D.descent), 2, -1);
+          Rasterizer2D.fillRoundedRectangleAlpha(x, -height + bottom, width, height, 3, 0, 196);
+          Rasterizer2D.drawRoundedRectangle(x, -height + bottom, width, height, 3, borderColor);
+          PasswordFieldRenderer.field_D.drawLeft(text, MusicPatch.pointerX, -1 + (-PasswordFieldRenderer.field_D.descent + ResourcePreparationEntry.pointerY - PasswordFieldRenderer.field_D.descent), 2, -1);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.F(" + x + ',' + bottom + ',' + height + ',' + width + ',' + (text != null ? "{...}" : "null") + ',' + borderColor + ')');
         }
     }
 

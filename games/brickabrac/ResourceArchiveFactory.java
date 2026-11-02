@@ -11,11 +11,11 @@ final class ResourceArchiveFactory {
     static RgbSprite waterRaysSprite;
     static BufferedFile field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_f = null;
         field_a = null;
         waterRaysSprite = null;
-        if (param0 != -7393) {
+        if (obfuscationGuard != -7393) {
           currentKeyCharacter = '￾';
         }
     }
@@ -51,7 +51,7 @@ final class ResourceArchiveFactory {
               groupCache = new FileCacheStore(archiveId, Widget.field_k, ClientException.field_g[archiveId], 2097152);
             }
             if (!obfuscationGuard) {
-              ResourceArchiveFactory.a(78);
+              ResourceArchiveFactory.clearSharedReferences(78);
             }
             source = HalloweenBackground.archiveSourceManager.getArchiveSource(81, cleanupEnabled, (FileCacheStore) (indexCacheOrFailure), archiveId, (FileCacheStore) (groupCache));
             if (prefetch) {

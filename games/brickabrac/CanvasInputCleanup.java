@@ -11,9 +11,9 @@ final class CanvasInputCleanup {
     static UiComponent field_f;
     static boolean field_g;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = null;
-        if (param0 == -11470) {
+        if (obfuscationGuard == -11470) {
           field_f = null;
           field_b = null;
           field_d = null;

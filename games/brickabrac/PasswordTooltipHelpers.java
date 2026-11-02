@@ -46,12 +46,12 @@ final class PasswordTooltipHelpers {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_d = null;
         field_c = null;
         field_a = null;
         field_e = null;
-        if (param0) {
+        if (obfuscationGuard) {
           String var2 = (String) null;
           PasswordTooltipHelpers.usernameContainsPasswordOrReverse((String) null, (byte) 37, (String) null);
         }

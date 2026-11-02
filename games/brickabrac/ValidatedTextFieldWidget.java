@@ -20,7 +20,7 @@ final class ValidatedTextFieldWidget extends TextFieldWidget implements Validata
           }
           return;
         }
-        ValidatedTextFieldWidget.o(8);
+        ValidatedTextFieldWidget.clearSharedReferences(8);
         super.notifyTextChanged(90);
         if (this.validationSource != null) {
           this.validationSource.markEdited(false);
@@ -74,17 +74,17 @@ final class ValidatedTextFieldWidget extends TextFieldWidget implements Validata
         return this.tooltip;
     }
 
-    public static void o(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_U = null;
         constructionFarSprite = null;
         field_bb = null;
         field_X = null;
         constructionNearSprite = null;
-        if (param0 == -16124) {
+        if (obfuscationGuard == -16124) {
           field_V = null;
           return;
         }
-        ValidatedTextFieldWidget.o(121);
+        ValidatedTextFieldWidget.clearSharedReferences(121);
         field_V = null;
     }
 

@@ -32,11 +32,11 @@ final class RasterCacheSurface extends IntrusiveNode {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_o = null;
         horizontalFrameClipScratch = null;
         field_l = null;
-        if (param0 < 22) {
+        if (obfuscationGuard < 22) {
           field_l = (String) null;
           volcanicNearSprite = null;
           return;
@@ -50,14 +50,14 @@ final class RasterCacheSurface extends IntrusiveNode {
           this.cacheKeyTwo = cacheKeyTwo;
           return;
         }
-        RasterCacheSurface.a(13, -48);
+        RasterCacheSurface.formatPageIndicator(13, -48);
         this.cacheKeyOne = cacheKeyOne;
         this.cacheKeyTwo = cacheKeyTwo;
     }
 
-    final static String a(int param0, int param1) {
-        if (param1 == 4) {
-          return 1 + param0 + "/" + TextChoiceDialogStyles.field_b.length;
+    final static String formatPageIndicator(int index, int mode) {
+        if (mode == 4) {
+          return 1 + index + "/" + TextChoiceDialogStyles.field_b.length;
         }
         return (String) null;
     }

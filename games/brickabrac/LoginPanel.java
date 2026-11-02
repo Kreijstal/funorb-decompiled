@@ -49,13 +49,13 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             return true;
           }
           if (98 == keyCode) {
-            stackIn_7_0 = this.b(focusRoot, (byte) -78);
+            stackIn_7_0 = this.focusPreviousChild(focusRoot, (byte) -78);
             return stackIn_7_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_11_0 = this.a(focusRoot, (byte) -122);
+          stackIn_11_0 = this.focusNextChild(focusRoot, (byte) -122);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         }
     }
 
-    final static void a(TextFont param0, byte param1, ResourceArchive param2) {
+    final static void initializeQuickChat(TextFont font, byte obfuscationGuard, ResourceArchive archive) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -91,24 +91,24 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         try {
           var3_int = LoginCredentialKind.field_e;
           QuickChatPhraseDefinition.quickChatMenuRoot = new UiComponent(0L, (UiComponent) null);
-          if (param2 == null) {
-            AlignedIconLabel.a("QC1", (Throwable) null, param1 ^ 118);
+          if (archive == null) {
+            AlignedIconLabel.a("QC1", (Throwable) null, obfuscationGuard ^ 118);
             return;
           }
-          param2.decodedFilePolicy = 0;
-          param2.discardPackedGroups = false;
-          DebouncedValidationSource.quickChatCategories = new QuickChatCategoryRegistry(var3_int, param2, param2);
-          LobbyUiHelpers.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new FontRequestHelpers());
+          archive.decodedFilePolicy = 0;
+          archive.discardPackedGroups = false;
+          DebouncedValidationSource.quickChatCategories = new QuickChatCategoryRegistry(var3_int, archive, archive);
+          LobbyUiHelpers.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, archive, archive, new FontRequestHelpers());
           var4 = TableQuickChatHelpers.findRootQuickChatCategory(0);
           if (var4 == null) {
-            AlignedIconLabel.a("QC2", (Throwable) null, param1 - 14);
+            AlignedIconLabel.a("QC2", (Throwable) null, obfuscationGuard - 14);
             return;
           }
           ResourceRequest.setQuickChatHelpEntry(var4, false);
           var10 = (TextFont) null;
           ArchiveIndex.field_j = DateInputWidget.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
-          SoftwareFramebuffer.field_e = DateInputWidget.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
-          WidgetLayerStack.field_K = DateInputWidget.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
+          SoftwareFramebuffer.field_e = DateInputWidget.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, font, 16764006, 0, 0, 0);
+          WidgetLayerStack.field_K = DateInputWidget.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, font, 16777215, 0, 0, 0);
           var5 = Rasterizer2D.width;
           var6 = Rasterizer2D.height;
           var14 = Rasterizer2D.pixels;
@@ -117,8 +117,8 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           for (var8 = 2; 7 > var8; var8++) {
             Rasterizer2D.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
-          if (param1 != 90) {
-            LoginPanel.i((byte) 86);
+          if (obfuscationGuard != 90) {
+            LoginPanel.clearSharedReferences((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
           ContentTransitionLayer.defaultQuickChatMenu = AchievementSubmission.buildQuickChatCategoryMenu(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
@@ -129,13 +129,13 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           var3 = decompiledCaughtException;
           stackIn_17_0 = var3;
           stackIn_17_1 = new StringBuilder().append("hk.F(");
-          if (param0 == null) {
+          if (font == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -268,7 +268,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
               if (widget == this.backOrGuestButton) {
                 if (!this.retryMode) {
                   if (this.showGuestPlayButton) {
-                    BytePayloadSubmission.a(-107);
+                    BytePayloadSubmission.showAccountIntroductionPanel(-107);
                   } else {
                     ResourceRequest.g(29);
                   }
@@ -277,7 +277,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
                 }
               }
             } else {
-              Mesh3D.d(-1);
+              Mesh3D.showAccountRegistrationPanel(-1);
             }
           } else {
             this.submitLogin(25);
@@ -473,9 +473,9 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_J = null;
-        if (param0 != 88) {
+        if (obfuscationGuard != 88) {
           return;
         }
         arcticFarSprite = null;

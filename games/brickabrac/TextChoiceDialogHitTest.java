@@ -6,8 +6,8 @@ final class TextChoiceDialogHitTest {
     static String field_b;
     static RgbSprite[][] chocSegsSprites;
 
-    public static void b(int param0) {
-        if (param0 == -789103103) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == -789103103) {
           field_c = (RgbSprite[][]) null;
           chocSegsSprites = (RgbSprite[][]) null;
           field_b = null;
@@ -19,17 +19,17 @@ final class TextChoiceDialogHitTest {
         field_b = null;
     }
 
-    final static ResourceArchive a(int param0, boolean param1) {
-        if (param1) {
-          return ResourceArchiveFactory.createResourceArchive(false, param0, false, 1, true, true);
+    final static ResourceArchive createResourceArchiveForIndex(int archiveIndex, boolean obfuscationGuard) {
+        if (obfuscationGuard) {
+          return ResourceArchiveFactory.createResourceArchive(false, archiveIndex, false, 1, true, true);
         }
         field_b = (String) null;
-        return ResourceArchiveFactory.createResourceArchive(false, param0, false, 1, true, true);
+        return ResourceArchiveFactory.createResourceArchive(false, archiveIndex, false, 1, true, true);
     }
 
     final static UiComponent a(int param0) {
         if (param0 != 1345) {
-          TextChoiceDialogHitTest.b(94);
+          TextChoiceDialogHitTest.clearSharedReferences(94);
           return LobbyCaptionGlobals.field_e.content;
         }
         return LobbyCaptionGlobals.field_e.content;

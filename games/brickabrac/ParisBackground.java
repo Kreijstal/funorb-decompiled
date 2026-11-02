@@ -30,13 +30,13 @@ final class ParisBackground extends BackgroundScene {
         }
     }
 
-    final RgbSprite c(byte param0) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
         RuntimeException var2 = null;
         RgbSprite stackIn_2_0 = null;
         RgbSprite stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < -74) {
+          if (obfuscationGuard < -74) {
             stackIn_4_0 = BallPulseEffect.parisCharacterSprite;
             return stackIn_4_0;
           }
@@ -45,7 +45,7 @@ final class ParisBackground extends BackgroundScene {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ai.H(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ai.H(" + obfuscationGuard + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class ParisBackground extends BackgroundScene {
           if (decompiledSharedTail0) {
             var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -34);
             if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              StrongCacheEntry.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
+              StrongCacheEntry.renderBackdropSurface(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
               var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
             ParallaxMusicHelpers.drawParisParallaxLayers(destinationY, scroll16, UnderwaterBackground.field_t, 118, 306, 0, destinationX, 2, IntrusiveHashTable.field_i, var6.sprite, colorIndex);
@@ -186,15 +186,15 @@ final class ParisBackground extends BackgroundScene {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_t = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         try {
           cp1252Extensions = null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ai.N(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ai.N(" + obfuscationGuard + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class ParisBackground extends BackgroundScene {
             LegacyUtf8Decoder.field_c = new UiComponent(0L, param4);
             LegacyUtf8Decoder.field_c.text = RadialSelectorWidget.field_Y;
             DualLinkDeque.field_d.addChild(LegacyUtf8Decoder.field_c, 0);
-            stackIn_34_0 = IntrusiveHashIterator.a(false) ? 1 : 0;
+            stackIn_34_0 = IntrusiveHashIterator.isLoggedInTransportActive(false) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
             !TextWidgetRenderer.field_e) {
@@ -421,7 +421,7 @@ final class ParisBackground extends BackgroundScene {
           }
           var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            StrongCacheEntry.a(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
+            StrongCacheEntry.renderBackdropSurface(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ParallaxMusicHelpers.drawParisParallaxLayers(destinationY, scroll16, QuickChatParameterType.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);

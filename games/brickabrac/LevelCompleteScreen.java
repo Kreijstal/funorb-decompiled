@@ -14,9 +14,9 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     static RgbSprite field_I;
     static int[] viewFacePointTwoZ;
 
-    public static void h(int param0) {
-        if (param0 != -257) {
-          LevelCompleteScreen.h(-94);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != -257) {
+          LevelCompleteScreen.clearSharedReferences(-94);
         }
         crc32Table = null;
         field_F = null;
@@ -46,7 +46,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.drawMenuFrame(124);
         DelayedPacket.d(0);
-        this.a(0);
+        this.drawEnabledButtons(0);
     }
 
     LevelCompleteScreen() {

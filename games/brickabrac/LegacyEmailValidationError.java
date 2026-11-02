@@ -11,8 +11,8 @@ final class LegacyEmailValidationError {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
-        if (param0 < 13) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard < 13) {
           return;
         }
         field_c = null;
@@ -44,7 +44,7 @@ final class LegacyEmailValidationError {
           if (obfuscationGuard == 60) {
             return;
           }
-          LegacyEmailValidationError.a((byte) 126);
+          LegacyEmailValidationError.clearSharedReferences((byte) 126);
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

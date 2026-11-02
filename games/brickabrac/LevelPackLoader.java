@@ -12,22 +12,22 @@ final class LevelPackLoader {
     static PlatformServices field_e;
     static RgbSprite halloweenSmallSprite;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_i = null;
         halloweenSmallSprite = null;
         field_c = null;
         field_d = null;
         field_h = null;
         field_a = null;
-        if (param0 == -30593) {
+        if (obfuscationGuard == -30593) {
           field_b = null;
           field_e = null;
           return;
         }
     }
 
-    final static void a(int param0) {
-        if (param0 != 4252) {
+    final static void resetQuickChatToDefaultMenu(int obfuscationGuard) {
+        if (obfuscationGuard != 4252) {
           return;
         }
         ScreenNavigationHelpers.quickChatChannel = 0;
@@ -88,8 +88,8 @@ final class LevelPackLoader {
         }
     }
 
-    final static boolean a(byte param0) {
-        int var1 = 25 % ((param0 - 55) / 54);
+    final static boolean appletHasTuhstatbutMarker(byte obfuscationGuard) {
+        int var1 = 25 % ((obfuscationGuard - 55) / 54);
         return AppletResourceHelpers.hasTuhstatbutMarker(EmailConfirmationValidator.e((byte) -95), (byte) 14);
     }
 

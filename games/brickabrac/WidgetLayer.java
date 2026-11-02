@@ -10,12 +10,12 @@ abstract class WidgetLayer extends WidgetGroup {
     static NodeDeque field_M;
     boolean visible;
 
-    private final int h(byte param0) {
+    private final int getTargetOpacity(byte obfuscationGuard) {
         int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 != 90) {
+          if (obfuscationGuard != 90) {
             field_M = (NodeDeque) null;
           }
           if (this.visible) {
@@ -27,7 +27,7 @@ abstract class WidgetLayer extends WidgetGroup {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "jc.OB(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "jc.OB(" + obfuscationGuard + ')');
         }
     }
 
@@ -38,7 +38,7 @@ abstract class WidgetLayer extends WidgetGroup {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var2_int = this.h((byte) 90);
+          var2_int = this.getTargetOpacity((byte) 90);
           var3 = var2_int - this.opacity256;
           if (var3 > 0) {
             this.opacity256 = this.opacity256 + (-1 + var3 + 8) / 8;
@@ -55,15 +55,15 @@ abstract class WidgetLayer extends WidgetGroup {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         try {
           activeSteelBallSprite = null;
           field_M = null;
-          if (param0 != -17) {
+          if (obfuscationGuard != -17) {
             field_M = (NodeDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.W(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.W(" + obfuscationGuard + ')');
         }
     }
 
@@ -92,7 +92,7 @@ abstract class WidgetLayer extends WidgetGroup {
           this.paintLayerFrame(0, obfuscationGuard ^ -281, 0);
           super.drawLayer(-parentY - this.y, -parentX - this.x, layer, obfuscationGuard);
           RasterStackHelpers.popRaster(-117);
-          IncomingPacketHelpers.field_e.b(parentX + this.x, parentY + this.y, this.opacity256);
+          IncomingPacketHelpers.field_e.drawAlphaBlended(parentX + this.x, parentY + this.y, this.opacity256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,13 +101,13 @@ abstract class WidgetLayer extends WidgetGroup {
         }
     }
 
-    final Widget g(byte param0) {
+    final Widget getFocusedChild(byte obfuscationGuard) {
         Widget var2 = null;
         Widget stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          var2 = super.g(param0);
+          var2 = super.getFocusedChild(obfuscationGuard);
           if (var2 != null) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
@@ -116,7 +116,7 @@ abstract class WidgetLayer extends WidgetGroup {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "jc.GB(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "jc.GB(" + obfuscationGuard + ')');
         }
     }
 
@@ -168,7 +168,7 @@ abstract class WidgetLayer extends WidgetGroup {
         try {
           ArchiveNetworkRequest.setSessionCookie("", 121, param0);
           if (param1 != 97) {
-            WidgetLayer.a((byte) -100);
+            WidgetLayer.clearSharedReferences((byte) -100);
           }
           ContentTransitionPhase.a((byte) -111, param0);
           return;
@@ -194,7 +194,7 @@ abstract class WidgetLayer extends WidgetGroup {
           if (obfuscationGuard > -22) {
             this.opacity256 = 90;
           }
-          this.opacity256 = this.h((byte) 90);
+          this.opacity256 = this.getTargetOpacity((byte) 90);
           stackIn_7_0 = (this.opacity256 == 0) && (!this.visible);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ abstract class WidgetLayer extends WidgetGroup {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2 >= -84) {
-            WidgetLayer.a((byte) 8);
+            WidgetLayer.clearSharedReferences((byte) 8);
           }
           if (0 == param1) {
             if (TextValidationHelpers.field_a == 14) {

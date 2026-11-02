@@ -12,11 +12,11 @@ final class LobbyRenderGlobals {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
         field_e = null;
         field_h = null;
-        if (param0 != -29988) {
+        if (obfuscationGuard != -29988) {
           return;
         }
         field_b = null;

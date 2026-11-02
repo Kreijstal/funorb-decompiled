@@ -17,7 +17,7 @@ final class WhirlpoolHasher {
     static SecondaryHashTable lobbyPlayerIndex;
 
     final static void a(int param0) {
-        ActivityIndicatorWidget.f((byte) -45);
+        ActivityIndicatorWidget.closeContextActions((byte) -45);
         if (param0 != 7) {
           gameTransport = (BufferedSocket) null;
         }
@@ -108,7 +108,7 @@ final class WhirlpoolHasher {
           this.roundTemporary = (long[]) null;
         }
         while (blockWordIndex < 8) {
-          this.blockWords[blockWordIndex] = RegistrationResponseDialog.a(RegistrationResponseDialog.a(RegistrationResponseDialog.a(RegistrationResponseDialog.a(RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd(255L, (long)this.inputBlock[inputOffset + 3]) << 32, RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[2 + inputOffset], 255L) << 40, RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[1 + inputOffset], 255L) << 48, (long)this.inputBlock[inputOffset] << 56))), SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[inputOffset + 4], 255L) << 24), SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[inputOffset + 5], 255L) << 16), SocialListResponseHelpers.bitwiseAnd(65280L, (long)this.inputBlock[6 + inputOffset] << 8)), SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[inputOffset + 7], 255L));
+          this.blockWords[blockWordIndex] = RegistrationResponseDialog.bitwiseXor(RegistrationResponseDialog.bitwiseXor(RegistrationResponseDialog.bitwiseXor(RegistrationResponseDialog.bitwiseXor(RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd(255L, (long)this.inputBlock[inputOffset + 3]) << 32, RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[2 + inputOffset], 255L) << 40, RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[1 + inputOffset], 255L) << 48, (long)this.inputBlock[inputOffset] << 56))), SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[inputOffset + 4], 255L) << 24), SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[inputOffset + 5], 255L) << 16), SocialListResponseHelpers.bitwiseAnd(65280L, (long)this.inputBlock[6 + inputOffset] << 8)), SocialListResponseHelpers.bitwiseAnd((long)this.inputBlock[inputOffset + 7], 255L));
           blockWordIndex++;
           inputOffset += 8;
         }
@@ -116,7 +116,7 @@ final class WhirlpoolHasher {
           hashWord = this.hashState[initialWordIndex];
           blockWord = this.blockWords[initialWordIndex];
           this.roundKey[initialWordIndex] = hashWord;
-          this.cipherState[initialWordIndex] = RegistrationResponseDialog.a(blockWord, hashWord);
+          this.cipherState[initialWordIndex] = RegistrationResponseDialog.bitwiseXor(blockWord, hashWord);
         }
         for (round = 1; round <= 10; round++) {
           for (keyWordIndex = 0; keyWordIndex < 8; keyWordIndex++) {
@@ -124,7 +124,7 @@ final class WhirlpoolHasher {
             keyTableIndex = 0;
             keyByteShift = 56;
             while (8 > keyTableIndex) {
-              this.roundTemporary[keyWordIndex] = RegistrationResponseDialog.a(this.roundTemporary[keyWordIndex], TabbedPane.whirlpoolRoundTables[keyTableIndex][IntrusiveHashIterator.a((int)(this.roundKey[IntrusiveHashIterator.a(keyWordIndex - keyTableIndex, 7)] >>> keyByteShift), 255)]);
+              this.roundTemporary[keyWordIndex] = RegistrationResponseDialog.bitwiseXor(this.roundTemporary[keyWordIndex], TabbedPane.whirlpoolRoundTables[keyTableIndex][IntrusiveHashIterator.bitwiseAnd((int)(this.roundKey[IntrusiveHashIterator.bitwiseAnd(keyWordIndex - keyTableIndex, 7)] >>> keyByteShift), 255)]);
               keyTableIndex++;
               keyByteShift -= 8;
             }
@@ -132,14 +132,14 @@ final class WhirlpoolHasher {
           for (keyCopyIndex = 0; 8 > keyCopyIndex; keyCopyIndex++) {
             this.roundKey[keyCopyIndex] = this.roundTemporary[keyCopyIndex];
           }
-          this.roundKey[0] = RegistrationResponseDialog.a(this.roundKey[0], TabbedPane.whirlpoolRoundConstants[round]);
+          this.roundKey[0] = RegistrationResponseDialog.bitwiseXor(this.roundKey[0], TabbedPane.whirlpoolRoundConstants[round]);
           for (cipherWordIndex = 0; cipherWordIndex < 8; cipherWordIndex++) {
             this.roundTemporary[cipherWordIndex] = this.roundKey[cipherWordIndex];
             cipherTableIndex = 0;
             unusedCipherIndex = cipherTableIndex;
             cipherByteShift = 56;
             while (cipherTableIndex < 8) {
-              this.roundTemporary[cipherWordIndex] = RegistrationResponseDialog.a(this.roundTemporary[cipherWordIndex], TabbedPane.whirlpoolRoundTables[cipherTableIndex][IntrusiveHashIterator.a(255, (int)(this.cipherState[IntrusiveHashIterator.a(cipherWordIndex - cipherTableIndex, 7)] >>> cipherByteShift))]);
+              this.roundTemporary[cipherWordIndex] = RegistrationResponseDialog.bitwiseXor(this.roundTemporary[cipherWordIndex], TabbedPane.whirlpoolRoundTables[cipherTableIndex][IntrusiveHashIterator.bitwiseAnd(255, (int)(this.cipherState[IntrusiveHashIterator.bitwiseAnd(cipherWordIndex - cipherTableIndex, 7)] >>> cipherByteShift))]);
               cipherTableIndex++;
               cipherByteShift -= 8;
             }
@@ -149,7 +149,7 @@ final class WhirlpoolHasher {
           }
         }
         for (feedForwardIndex = 0; feedForwardIndex < 8; feedForwardIndex++) {
-          this.hashState[feedForwardIndex] = RegistrationResponseDialog.a(this.hashState[feedForwardIndex], RegistrationResponseDialog.a(this.cipherState[feedForwardIndex], this.blockWords[feedForwardIndex]));
+          this.hashState[feedForwardIndex] = RegistrationResponseDialog.bitwiseXor(this.hashState[feedForwardIndex], RegistrationResponseDialog.bitwiseXor(this.cipherState[feedForwardIndex], this.blockWords[feedForwardIndex]));
         }
     }
 
@@ -168,7 +168,7 @@ final class WhirlpoolHasher {
         int unusedGameFlag = 0;
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          this.inputBlock[this.bufferPosition] = (byte)LevelSelectScreen.d((int) this.inputBlock[this.bufferPosition], 128 >>> IntrusiveHashIterator.a(7, this.bufferedBits));
+          this.inputBlock[this.bufferPosition] = (byte)LevelSelectScreen.bitwiseOr((int) this.inputBlock[this.bufferPosition], 128 >>> IntrusiveHashIterator.bitwiseAnd(7, this.bufferedBits));
           var4_int = -48 % ((-28 - obfuscationGuard) / 38);
           this.bufferPosition = this.bufferPosition + 1;
           if (this.bufferPosition > 32) {
@@ -254,7 +254,7 @@ final class WhirlpoolHasher {
             alignedByte = input[inputByteIndex] << inputPaddingBits & 255 | (input[inputByteIndex + 1] & 255) >>> -inputPaddingBits + 8;
             if (alignedByte >= 0 &&
               256 > alignedByte) {
-              this.inputBlock[this.bufferPosition] = (byte)LevelSelectScreen.d((int) this.inputBlock[this.bufferPosition], alignedByte >>> bufferBitOffset);
+              this.inputBlock[this.bufferPosition] = (byte)LevelSelectScreen.bitwiseOr((int) this.inputBlock[this.bufferPosition], alignedByte >>> bufferBitOffset);
               this.bufferPosition = this.bufferPosition + 1;
               this.bufferedBits = this.bufferedBits + (-bufferBitOffset + 8);
               if (this.bufferedBits == 512) {
@@ -262,7 +262,7 @@ final class WhirlpoolHasher {
                 this.bufferedBits = 0;
                 this.bufferPosition = 0;
               }
-              this.inputBlock[this.bufferPosition] = (byte)IntrusiveHashIterator.a(255, alignedByte << 8 - bufferBitOffset);
+              this.inputBlock[this.bufferPosition] = (byte)IntrusiveHashIterator.bitwiseAnd(255, alignedByte << 8 - bufferBitOffset);
               this.bufferedBits = this.bufferedBits + bufferBitOffset;
               inputByteIndex++;
               bitCount = bitCount - 8L;
@@ -274,7 +274,7 @@ final class WhirlpoolHasher {
             finalAlignedByte = 0;
           } else {
             finalAlignedByte = 255 & input[inputByteIndex] << inputPaddingBits;
-            this.inputBlock[this.bufferPosition] = (byte)LevelSelectScreen.d((int) this.inputBlock[this.bufferPosition], finalAlignedByte >>> bufferBitOffset);
+            this.inputBlock[this.bufferPosition] = (byte)LevelSelectScreen.bitwiseOr((int) this.inputBlock[this.bufferPosition], finalAlignedByte >>> bufferBitOffset);
           }
           if ((long)bufferBitOffset + bitCount >= 8L) {
             bitCount = bitCount - (long)(8 - bufferBitOffset);
@@ -285,7 +285,7 @@ final class WhirlpoolHasher {
               this.bufferedBits = 0;
               this.bufferPosition = 0;
             }
-            this.inputBlock[this.bufferPosition] = (byte)IntrusiveHashIterator.a(255, finalAlignedByte << 8 - bufferBitOffset);
+            this.inputBlock[this.bufferPosition] = (byte)IntrusiveHashIterator.bitwiseAnd(255, finalAlignedByte << 8 - bufferBitOffset);
             this.bufferedBits = this.bufferedBits + (int)bitCount;
           } else {
             this.bufferedBits = (int)((long)this.bufferedBits + bitCount);
@@ -305,12 +305,12 @@ final class WhirlpoolHasher {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         lobbyPlayerIndex = null;
         field_b = null;
         gameTransport = null;
         field_i = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           lobbyPlayerIndex = (SecondaryHashTable) null;
         }
     }

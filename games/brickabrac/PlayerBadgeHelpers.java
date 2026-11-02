@@ -9,11 +9,11 @@ final class PlayerBadgeHelpers {
     static String gameFullText;
     static String friendsAndOpponentsPrivateChatText;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         decodedSpritePalette = null;
         gameFullText = null;
         askToJoinGameText = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_f = null;
           friendsAndOpponentsPrivateChatText = null;
           field_e = null;

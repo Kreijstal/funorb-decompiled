@@ -56,39 +56,39 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    void c(int param0, int param1, int param2) {
+    void drawNeutralPixelsTinted(int x, int y, int tintRgb) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -97,7 +97,7 @@ class RgbSprite extends SpriteGeometry {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.b(Rasterizer2D.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          RgbSprite.tintNeutralPixels(Rasterizer2D.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, tintRgb);
           return;
         }
     }
@@ -143,12 +143,12 @@ class RgbSprite extends SpriteGeometry {
           if (height <= 0) {
             return;
           }
-          RgbSprite.b(Rasterizer2D.pixels, this.pixels, 0, sourceOffset, destinationOffset, width, height, destinationRowSkip, sourceRowSkip);
+          RgbSprite.copyNonzeroPixels(Rasterizer2D.pixels, this.pixels, 0, sourceOffset, destinationOffset, width, height, destinationRowSkip, sourceRowSkip);
           return;
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawWithVerticalAlphaGradient(int x, int y, int startAlpha, int endAlpha) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -169,39 +169,39 @@ class RgbSprite extends SpriteGeometry {
         if (this.height == 0) {
           return;
         }
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
         var5 = this.height;
         var6 = this.width;
-        var7 = param2 << 8;
-        var8 = (param3 - param2 << 8) / var5;
+        var7 = startAlpha << 8;
+        var8 = (endAlpha - startAlpha << 8) / var5;
         var9 = 0;
-        if (param0 < Rasterizer2D.clipLeft) {
-          var6 = var6 - (Rasterizer2D.clipLeft - param0);
-          var9 = var9 + (Rasterizer2D.clipLeft - param0);
-          param0 = Rasterizer2D.clipLeft;
+        if (x < Rasterizer2D.clipLeft) {
+          var6 = var6 - (Rasterizer2D.clipLeft - x);
+          var9 = var9 + (Rasterizer2D.clipLeft - x);
+          x = Rasterizer2D.clipLeft;
         }
-        if (param1 < Rasterizer2D.clipTop) {
-          var7 = var7 + (Rasterizer2D.clipTop - param1) * var8;
-          var5 = var5 - (Rasterizer2D.clipTop - param1);
-          var9 = var9 + (Rasterizer2D.clipTop - param1) * this.width;
-          param1 = Rasterizer2D.clipTop;
+        if (y < Rasterizer2D.clipTop) {
+          var7 = var7 + (Rasterizer2D.clipTop - y) * var8;
+          var5 = var5 - (Rasterizer2D.clipTop - y);
+          var9 = var9 + (Rasterizer2D.clipTop - y) * this.width;
+          y = Rasterizer2D.clipTop;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var6 = Rasterizer2D.clipRight - param0;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var6 = Rasterizer2D.clipRight - x;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = Rasterizer2D.clipBottom - param1;
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = Rasterizer2D.clipBottom - y;
         }
         var10 = Rasterizer2D.width - var6;
         var11 = this.width - var6;
-        var12 = param0 + param1 * Rasterizer2D.width;
-        for (param1 = -var5; param1 < 0; param1++) {
+        var12 = x + y * Rasterizer2D.width;
+        for (y = -var5; y < 0; y++) {
           var13 = var7 >> 8;
           var14 = 256 - var13;
           if (var13 >= 0) {
             if (var13 > 255) {
-              for (param0 = -var6; param0 < 0; param0++) {
+              for (x = -var6; x < 0; x++) {
                 incrementValue$2 = var9;
                 var9++;
                 var15 = this.pixels[incrementValue$2];
@@ -214,7 +214,7 @@ class RgbSprite extends SpriteGeometry {
                 }
               }
             } else {
-              for (param0 = -var6; param0 < 0; param0++) {
+              for (x = -var6; x < 0; x++) {
                 incrementValue$0 = var9;
                 var9++;
                 var15 = this.pixels[incrementValue$0];
@@ -329,7 +329,7 @@ class RgbSprite extends SpriteGeometry {
         this.offsetX = this.canvasWidth - this.width - this.offsetX;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendPixelsWithAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -353,7 +353,7 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void addPixelsSaturating(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -375,39 +375,39 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    void f(int param0, int param1, int param2) {
+    void drawAdditive(int x, int y, int intensity) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -416,16 +416,16 @@ class RgbSprite extends SpriteGeometry {
           if (var6 <= 0) {
             return;
           }
-          if (param2 == 256) {
-            RgbSprite.a(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
+          if (intensity == 256) {
+            RgbSprite.addPixelsSaturating(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            RgbSprite.a(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.addPixelsSaturatingScaled(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, intensity);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blendScaledPixelsWithAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -453,7 +453,7 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void copyNonzeroPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -500,39 +500,39 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void drawAlphaBlended(int x, int y, int alpha) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -541,12 +541,12 @@ class RgbSprite extends SpriteGeometry {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blendPixelsWithAlpha(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, alpha);
           return;
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawScaled(int x, int y, int destinationWidth, int destinationHeight) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -562,8 +562,8 @@ class RgbSprite extends SpriteGeometry {
         int var13Lifetime2;
         int var15Lifetime1;
         int var15Lifetime2;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (destinationWidth > 0) {
+          if (destinationHeight <= 0) {
             return;
           }
           var5 = this.width;
@@ -572,53 +572,53 @@ class RgbSprite extends SpriteGeometry {
           var8 = 0;
           var9 = this.canvasWidth;
           var10 = this.canvasHeight;
-          var11 = (var9 << 16) / param2;
-          var12 = (var10 << 16) / param3;
+          var11 = (var9 << 16) / destinationWidth;
+          var12 = (var10 << 16) / destinationHeight;
           if (this.offsetX > 0) {
             var13 = ((this.offsetX << 16) + var11 - 1) / var11;
-            param0 = param0 + var13;
+            x = x + var13;
             var7 = var7 + (var13 * var11 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
-            param1 = param1 + var13Lifetime1;
+            y = y + var13Lifetime1;
             var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
           }
           if (var5 < var9) {
-            param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+            destinationWidth = ((var5 << 16) - var7 + var11 - 1) / var11;
           }
           if (var6 < var10) {
-            param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            destinationHeight = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param0 + param1 * Rasterizer2D.width;
-          var14 = Rasterizer2D.width - param2;
-          if (param1 + param3 > Rasterizer2D.clipBottom) {
-            param3 = param3 - (param1 + param3 - Rasterizer2D.clipBottom);
+          var13Lifetime2 = x + y * Rasterizer2D.width;
+          var14 = Rasterizer2D.width - destinationWidth;
+          if (y + destinationHeight > Rasterizer2D.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - Rasterizer2D.clipBottom);
           }
-          if (param1 < Rasterizer2D.clipTop) {
-            var15 = Rasterizer2D.clipTop - param1;
-            param3 = param3 - var15;
+          if (y < Rasterizer2D.clipTop) {
+            var15 = Rasterizer2D.clipTop - y;
+            destinationHeight = destinationHeight - var15;
             var13Lifetime2 = var13Lifetime2 + var15 * Rasterizer2D.width;
             var8 = var8 + var12 * var15;
           }
-          if (param0 + param2 > Rasterizer2D.clipRight) {
-            var15Lifetime1 = param0 + param2 - Rasterizer2D.clipRight;
-            param2 = param2 - var15Lifetime1;
+          if (x + destinationWidth > Rasterizer2D.clipRight) {
+            var15Lifetime1 = x + destinationWidth - Rasterizer2D.clipRight;
+            destinationWidth = destinationWidth - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param0 < Rasterizer2D.clipLeft) {
-            var15Lifetime2 = Rasterizer2D.clipLeft - param0;
-            param2 = param2 - var15Lifetime2;
+          if (x < Rasterizer2D.clipLeft) {
+            var15Lifetime2 = Rasterizer2D.clipLeft - x;
+            destinationWidth = destinationWidth - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          RgbSprite.a(Rasterizer2D.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          RgbSprite.copyScaledNonzeroPixels(Rasterizer2D.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, destinationWidth, destinationHeight, var11, var12, var5);
           return;
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void drawScaledAveraged(int x, int y, int destinationWidth, int destinationHeight) {
         int var11 = 0;
         int var12 = 0;
         int var30 = 0;
@@ -648,12 +648,12 @@ class RgbSprite extends SpriteGeometry {
         int var31;
         int var32;
         int var28Lifetime1;
-        if (param2 <= this.canvasWidth &&
-          param3 <= this.canvasHeight) {
-          var5 = param0 + this.offsetX * param2 / this.canvasWidth;
-          var6 = param0 + ((this.offsetX + this.width) * param2 + this.canvasWidth - 1) / this.canvasWidth;
-          var7 = param1 + this.offsetY * param3 / this.canvasHeight;
-          var8 = param1 + ((this.offsetY + this.height) * param3 + this.canvasHeight - 1) / this.canvasHeight;
+        if (destinationWidth <= this.canvasWidth &&
+          destinationHeight <= this.canvasHeight) {
+          var5 = x + this.offsetX * destinationWidth / this.canvasWidth;
+          var6 = x + ((this.offsetX + this.width) * destinationWidth + this.canvasWidth - 1) / this.canvasWidth;
+          var7 = y + this.offsetY * destinationHeight / this.canvasHeight;
+          var8 = y + ((this.offsetY + this.height) * destinationHeight + this.canvasHeight - 1) / this.canvasHeight;
           if (var5 < Rasterizer2D.clipLeft) {
             var5 = Rasterizer2D.clipLeft;
           }
@@ -676,12 +676,12 @@ class RgbSprite extends SpriteGeometry {
           var10 = Rasterizer2D.width - (var6 - var5);
           for (var11 = var7; var11 < var8; var11++) {
             for (var12 = var5; var12 < var6; var12++) {
-              var13 = var12 - param0 << 4;
-              var14 = var11 - param1 << 4;
-              var15 = var13 * this.canvasWidth / param2 - (this.offsetX << 4);
-              var16 = (var13 + 16) * this.canvasWidth / param2 - (this.offsetX << 4);
-              var17 = var14 * this.canvasHeight / param3 - (this.offsetY << 4);
-              var18 = (var14 + 16) * this.canvasHeight / param3 - (this.offsetY << 4);
+              var13 = var12 - x << 4;
+              var14 = var11 - y << 4;
+              var15 = var13 * this.canvasWidth / destinationWidth - (this.offsetX << 4);
+              var16 = (var13 + 16) * this.canvasWidth / destinationWidth - (this.offsetX << 4);
+              var17 = var14 * this.canvasHeight / destinationHeight - (this.offsetY << 4);
+              var18 = (var14 + 16) * this.canvasHeight / destinationHeight - (this.offsetY << 4);
               var19 = (var16 - var15) * (var18 - var17) >> 1;
               if (var19 != 0) {
                 if (var15 < 0) {
@@ -755,7 +755,7 @@ class RgbSprite extends SpriteGeometry {
         throw new IllegalArgumentException();
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedScaled(int anchorX16, int anchorY16, int destinationX16, int destinationY16, int angle, int scale) {
         double var7;
         int var9;
         int var10;
@@ -816,22 +816,22 @@ class RgbSprite extends SpriteGeometry {
         int var35Lifetime2Lifetime1;
         int var35Lifetime4;
         int var35Lifetime3Lifetime1;
-        if (param5 == 0) {
+        if (scale == 0) {
           return;
         }
-        param0 = param0 - (this.offsetX << 4);
-        param1 = param1 - (this.offsetY << 4);
-        var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-        var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-        var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-        var11 = -param0 * var10 + -param1 * var9;
-        var12 = -(-param0) * var9 + -param1 * var10;
-        var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
-        var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
-        var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
-        var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
-        var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
-        var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
+        anchorX16 = anchorX16 - (this.offsetX << 4);
+        anchorY16 = anchorY16 - (this.offsetY << 4);
+        var7 = (double)(angle & 65535) * 0.00009587379924285257;
+        var9 = (int)Math.floor(Math.sin(var7) * (double)scale + 0.5);
+        var10 = (int)Math.floor(Math.cos(var7) * (double)scale + 0.5);
+        var11 = -anchorX16 * var10 + -anchorY16 * var9;
+        var12 = -(-anchorX16) * var9 + -anchorY16 * var10;
+        var13 = ((this.width << 4) - anchorX16) * var10 + -anchorY16 * var9;
+        var14 = -((this.width << 4) - anchorX16) * var9 + -anchorY16 * var10;
+        var15 = -anchorX16 * var10 + ((this.height << 4) - anchorY16) * var9;
+        var16 = -(-anchorX16) * var9 + ((this.height << 4) - anchorY16) * var10;
+        var17 = ((this.width << 4) - anchorX16) * var10 + ((this.height << 4) - anchorY16) * var9;
+        var18 = -((this.width << 4) - anchorX16) * var9 + ((this.height << 4) - anchorY16) * var10;
         if (var11 >= var13) {
           var19 = var13;
           var20 = var11;
@@ -874,10 +874,10 @@ class RgbSprite extends SpriteGeometry {
         var20 = var20 + 4095 >> 12;
         var21 = var21 >> 12;
         var22 = var22 + 4095 >> 12;
-        var19 = var19 + param2;
-        var20 = var20 + param2;
-        var21 = var21 + param3;
-        var22 = var22 + param3;
+        var19 = var19 + destinationX16;
+        var20 = var20 + destinationX16;
+        var21 = var21 + destinationY16;
+        var22 = var22 + destinationY16;
         var19 = var19 >> 4;
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
@@ -904,13 +904,13 @@ class RgbSprite extends SpriteGeometry {
         }
         var23 = var21 * Rasterizer2D.width + var19;
         var24 = Rasterizer2D.width + var20;
-        var25 = 16777216.0 / (double)param5;
+        var25 = 16777216.0 / (double)scale;
         var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
         var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
-        var29 = (var19 << 4) + 8 - param2;
-        var30 = (var21 << 4) + 8 - param3;
-        var31 = (param0 << 8) - 2048 - (var30 * var27 >> 4);
-        var32 = (param1 << 8) - 2048 + (var30 * var28 >> 4);
+        var29 = (var19 << 4) + 8 - destinationX16;
+        var30 = (var21 << 4) + 8 - destinationY16;
+        var31 = (anchorX16 << 8) - 2048 - (var30 * var27 >> 4);
+        var32 = (anchorY16 << 8) - 2048 + (var30 * var28 >> 4);
         if (var28 >= 0) {
           if (var27 >= 0) {
             var36 = var22;
@@ -957,7 +957,7 @@ class RgbSprite extends SpriteGeometry {
                     if (var37 >> 12 < this.width) {
                       var34 = var38 >> 12;
                       if (var38 >> 12 < this.height) {
-                        this.a(var23, var33, var34, var37, var38);
+                        this.sampleRotatedPixel(var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
                         var38 = var38 + var27;
@@ -1021,7 +1021,7 @@ class RgbSprite extends SpriteGeometry {
                     var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < this.width) {
                       var34Lifetime3 = var38Lifetime3 >> 12;
-                      this.a(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
+                      this.sampleRotatedPixel(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
                       var38Lifetime3 = var38Lifetime3 + var27;
@@ -1086,7 +1086,7 @@ class RgbSprite extends SpriteGeometry {
                     var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < this.height) {
                       var33Lifetime1 = var37Lifetime1 >> 12;
-                      this.a(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
+                      this.sampleRotatedPixel(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
                       var38Lifetime1 = var38Lifetime1 + var27;
@@ -1150,7 +1150,7 @@ class RgbSprite extends SpriteGeometry {
                   var38Lifetime2 >= -4096) {
                   var33Lifetime2 = var37Lifetime2 >> 12;
                   var34Lifetime2 = var38Lifetime2 >> 12;
-                  this.a(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
+                  this.sampleRotatedPixel(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
                   var38Lifetime2 = var38Lifetime2 + var27;
@@ -1170,7 +1170,7 @@ class RgbSprite extends SpriteGeometry {
         return;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void copyOpaqueRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -1200,7 +1200,7 @@ class RgbSprite extends SpriteGeometry {
         this.pixels = pixels;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void sampleRotatedPixel(int destinationOffset, int sourceX, int sourceY, int fixedX, int fixedY) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
@@ -1218,16 +1218,16 @@ class RgbSprite extends SpriteGeometry {
         int var16;
         int var17;
         int var18;
-        var6 = param2 * this.width + param1;
-        param3 = param3 & 4095;
-        param4 = param4 & 4095;
-        if (param2 < 0) {
+        var6 = sourceY * this.width + sourceX;
+        fixedX = fixedX & 4095;
+        fixedY = fixedY & 4095;
+        if (sourceY < 0) {
           var12 = 0;
           var11 = 0;
           var8 = 0;
           var7 = 0;
         } else {
-          if (param1 < 0) {
+          if (sourceX < 0) {
             var11 = 0;
             var7 = 0;
           } else {
@@ -1235,11 +1235,11 @@ class RgbSprite extends SpriteGeometry {
             if (var7 == 0) {
               stackIn_5_0 = 0;
             } else {
-              stackIn_5_0 = (4096 - param3) * (4096 - param4);
+              stackIn_5_0 = (4096 - fixedX) * (4096 - fixedY);
             }
             var11 = stackIn_5_0;
           }
-          if (param1 >= this.width - 1) {
+          if (sourceX >= this.width - 1) {
             var12 = 0;
             var8 = 0;
           } else {
@@ -1247,18 +1247,18 @@ class RgbSprite extends SpriteGeometry {
             if (var8 == 0) {
               stackIn_11_0 = 0;
             } else {
-              stackIn_11_0 = param3 * (4096 - param4);
+              stackIn_11_0 = fixedX * (4096 - fixedY);
             }
             var12 = stackIn_11_0;
           }
         }
-        if (param2 >= this.height - 1) {
+        if (sourceY >= this.height - 1) {
           var14 = 0;
           var13 = 0;
           var10 = 0;
           var9 = 0;
         } else {
-          if (param1 < 0) {
+          if (sourceX < 0) {
             var13 = 0;
             var9 = 0;
           } else {
@@ -1266,11 +1266,11 @@ class RgbSprite extends SpriteGeometry {
             if (var9 == 0) {
               stackIn_19_0 = 0;
             } else {
-              stackIn_19_0 = (4096 - param3) * param4;
+              stackIn_19_0 = (4096 - fixedX) * fixedY;
             }
             var13 = stackIn_19_0;
           }
-          if (param1 >= this.width - 1) {
+          if (sourceX >= this.width - 1) {
             var14 = 0;
             var10 = 0;
           } else {
@@ -1278,7 +1278,7 @@ class RgbSprite extends SpriteGeometry {
             if (var10 == 0) {
               stackIn_25_0 = 0;
             } else {
-              stackIn_25_0 = param3 * param4;
+              stackIn_25_0 = fixedX * fixedY;
             }
             var14 = stackIn_25_0;
           }
@@ -1300,7 +1300,7 @@ class RgbSprite extends SpriteGeometry {
           if (var18 == 0) {
             var18 = 1;
           }
-          Rasterizer2D.pixels[param0] = var18;
+          Rasterizer2D.pixels[destinationOffset] = var18;
         } else {
           var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
           var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
@@ -1310,11 +1310,11 @@ class RgbSprite extends SpriteGeometry {
           if (var18 == 0) {
             var18 = 1;
           }
-          Rasterizer2D.pixels[param0] = var18;
+          Rasterizer2D.pixels[destinationOffset] = var18;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void copyScaledNonzeroPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1336,15 +1336,15 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    final void e(int param0, int param1, int param2, int param3) {
+    final void drawRotatedAboutCenter(int x, int y, int angle, int scale) {
         int var5 = this.canvasWidth << 3;
         int var6 = this.canvasHeight << 3;
-        param0 = (param0 << 4) + (var5 & 15);
-        param1 = (param1 << 4) + (var6 & 15);
-        this.a(var5, var6, param0, param1, param2, param3);
+        x = (x << 4) + (var5 & 15);
+        y = (y << 4) + (var6 & 15);
+        this.drawRotatedScaled(var5, var6, x, y, angle, scale);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void fillNonzeroPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1386,7 +1386,7 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void multiplyNonzeroOntoDestination(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -1427,39 +1427,39 @@ class RgbSprite extends SpriteGeometry {
         RgbSprite.drawHalfSizePixels(this.pixels, firstSourceRow * this.width + firstSourceColumn, (y + (firstSourceRow >> 1)) * Rasterizer2D.width + (x + (firstSourceColumn >> 1)), (this.width << 1) - (lastSourceColumn - firstSourceColumn) + (this.width & 1), Rasterizer2D.width - (lastSourceColumn - firstSourceColumn >> 1), this.width, lastSourceColumn - firstSourceColumn >> 1, lastSourceRow - firstSourceRow >> 1);
     }
 
-    void f(int param0, int param1) {
+    void drawHorizontallyFlipped(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + (this.canvasWidth - this.width - this.offsetX);
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * Rasterizer2D.width;
+        x = x + (this.canvasWidth - this.width - this.offsetX);
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = this.width - 1;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = Rasterizer2D.width - var6;
         int var8 = var6 + var6;
-        if (param1 < Rasterizer2D.clipTop) {
-          var9 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = var5 - (param1 + var5 - Rasterizer2D.clipBottom);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1468,12 +1468,12 @@ class RgbSprite extends SpriteGeometry {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.copyNonzeroPixelsReversed(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void tintNeutralPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$14 = 0;
         int var12;
         int var13;
@@ -1500,7 +1500,7 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3, int param4) {
+    void drawScaledAlphaBlended(int x, int y, int destinationWidth, int destinationHeight, int alpha) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1516,8 +1516,8 @@ class RgbSprite extends SpriteGeometry {
         int var14Lifetime2;
         int var16Lifetime1;
         int var16Lifetime2;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (destinationWidth > 0) {
+          if (destinationHeight <= 0) {
             return;
           }
           var6 = this.width;
@@ -1526,85 +1526,85 @@ class RgbSprite extends SpriteGeometry {
           var9 = 0;
           var10 = this.canvasWidth;
           var11 = this.canvasHeight;
-          var12 = (var10 << 16) / param2;
-          var13 = (var11 << 16) / param3;
+          var12 = (var10 << 16) / destinationWidth;
+          var13 = (var11 << 16) / destinationHeight;
           if (this.offsetX > 0) {
             var14 = ((this.offsetX << 16) + var12 - 1) / var12;
-            param0 = param0 + var14;
+            x = x + var14;
             var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
-            param1 = param1 + var14Lifetime1;
+            y = y + var14Lifetime1;
             var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
-            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            destinationWidth = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
           if (var7 < var11) {
-            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+            destinationHeight = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * Rasterizer2D.width;
-          var15 = Rasterizer2D.width - param2;
-          if (param1 + param3 > Rasterizer2D.clipBottom) {
-            param3 = param3 - (param1 + param3 - Rasterizer2D.clipBottom);
+          var14Lifetime2 = x + y * Rasterizer2D.width;
+          var15 = Rasterizer2D.width - destinationWidth;
+          if (y + destinationHeight > Rasterizer2D.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - Rasterizer2D.clipBottom);
           }
-          if (param1 < Rasterizer2D.clipTop) {
-            var16 = Rasterizer2D.clipTop - param1;
-            param3 = param3 - var16;
+          if (y < Rasterizer2D.clipTop) {
+            var16 = Rasterizer2D.clipTop - y;
+            destinationHeight = destinationHeight - var16;
             var14Lifetime2 = var14Lifetime2 + var16 * Rasterizer2D.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > Rasterizer2D.clipRight) {
-            var16Lifetime1 = param0 + param2 - Rasterizer2D.clipRight;
-            param2 = param2 - var16Lifetime1;
+          if (x + destinationWidth > Rasterizer2D.clipRight) {
+            var16Lifetime1 = x + destinationWidth - Rasterizer2D.clipRight;
+            destinationWidth = destinationWidth - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < Rasterizer2D.clipLeft) {
-            var16Lifetime2 = Rasterizer2D.clipLeft - param0;
-            param2 = param2 - var16Lifetime2;
+          if (x < Rasterizer2D.clipLeft) {
+            var16Lifetime2 = Rasterizer2D.clipLeft - x;
+            destinationWidth = destinationWidth - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.a(Rasterizer2D.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          RgbSprite.blendScaledPixelsWithAlpha(Rasterizer2D.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, destinationWidth, destinationHeight, var12, var13, var6, alpha);
           return;
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawSilhouette(int x, int y, int rgb) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1613,12 +1613,12 @@ class RgbSprite extends SpriteGeometry {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(Rasterizer2D.pixels, this.pixels, param2, var5, var4, var7, var6, var8, var9);
+          RgbSprite.fillNonzeroPixels(Rasterizer2D.pixels, this.pixels, rgb, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPixelsDimmed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -1683,12 +1683,12 @@ class RgbSprite extends SpriteGeometry {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.b(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.copyNonzeroPixels(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    void e(int param0, int param1) {
+    void drawQuarterSize(int x, int y) {
         int var9 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -1711,35 +1711,35 @@ class RgbSprite extends SpriteGeometry {
         int var13Lifetime1;
         var3 = this.width >> 2;
         var4 = this.height >> 2;
-        param0 = param0 + this.offsetX / 4;
-        param1 = param1 + this.offsetY / 4;
-        if (param0 >= Rasterizer2D.clipLeft) {
+        x = x + this.offsetX / 4;
+        y = y + this.offsetY / 4;
+        if (x >= Rasterizer2D.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = Rasterizer2D.clipLeft - param0 << 2;
+          stackIn_3_0 = Rasterizer2D.clipLeft - x << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= Rasterizer2D.clipRight) {
+        if (x + var3 <= Rasterizer2D.clipRight) {
           stackIn_6_0 = this.width - 4;
         } else {
-          stackIn_6_0 = (Rasterizer2D.clipRight - param0 << 2) - 4;
+          stackIn_6_0 = (Rasterizer2D.clipRight - x << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= Rasterizer2D.clipTop) {
+        if (y >= Rasterizer2D.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = Rasterizer2D.clipTop - param1 << 2;
+          stackIn_9_0 = Rasterizer2D.clipTop - y << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= Rasterizer2D.clipBottom) {
+        if (y + var4 <= Rasterizer2D.clipBottom) {
           stackIn_12_0 = this.height - 4;
         } else {
-          stackIn_12_0 = (Rasterizer2D.clipBottom - param1 << 2) - 4;
+          stackIn_12_0 = (Rasterizer2D.clipBottom - y << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
           var10 = var9 * this.width + var5;
-          var11 = (param1 + (var9 >> 2)) * Rasterizer2D.width + (param0 + (var5 >> 2));
+          var11 = (y + (var9 >> 2)) * Rasterizer2D.width + (x + (var5 >> 2));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -1779,39 +1779,39 @@ class RgbSprite extends SpriteGeometry {
         return var1;
     }
 
-    void e(int param0, int param1, int param2) {
+    void drawNeutralPixelsRecolored(int x, int y, int tintRgb) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1820,44 +1820,44 @@ class RgbSprite extends SpriteGeometry {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.recolorNeutralPixels(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, tintRgb);
           return;
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawMultipliedOntoDestination(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var9 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = var5 - (param1 + var5 - Rasterizer2D.clipBottom);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1866,12 +1866,12 @@ class RgbSprite extends SpriteGeometry {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(0, Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.multiplyNonzeroOntoDestination(0, Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void copyNonzeroPixelsReversed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1918,43 +1918,43 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawDimmed(int x, int y, int brightness) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        if (param2 == 256) {
-          this.drawTransparent(param0, param1);
+        if (brightness == 256) {
+          this.drawTransparent(x, y);
           return;
         }
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1963,12 +1963,12 @@ class RgbSprite extends SpriteGeometry {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.b(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.copyNonzeroPixelsDimmed(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, brightness);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addPixelsSaturatingScaled(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -2030,7 +2030,7 @@ class RgbSprite extends SpriteGeometry {
         this.offsetX = 0;
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void recolorNeutralPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -2241,7 +2241,7 @@ class RgbSprite extends SpriteGeometry {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(Rasterizer2D.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
+          RgbSprite.copyOpaqueRows(Rasterizer2D.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

@@ -17,7 +17,7 @@ final class GrowableIntList {
     static RgbSprite field_e;
     static String field_n;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         completionMusicTrack = null;
         field_d = null;
         field_m = null;
@@ -26,7 +26,7 @@ final class GrowableIntList {
         fullscreenDialogSelectedFrame = null;
         field_e = null;
         field_c = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           PacketBuffer var2 = (PacketBuffer) null;
           GrowableIntList.writeServiceHeader(6, -63, 125, -38, (PacketBuffer) null);
           return;

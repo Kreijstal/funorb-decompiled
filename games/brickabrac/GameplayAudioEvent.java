@@ -54,9 +54,9 @@ final class GameplayAudioEvent extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         pendingTableRequests = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_l = null;
@@ -130,13 +130,13 @@ final class GameplayAudioEvent extends IntrusiveNode {
             }
             return;
           }
-          ParallaxMusicHelpers.field_b.a(TextHuffmanHelpers.field_b, LobbyRenderGlobals.field_g, param0 - 27268, true);
+          ParallaxMusicHelpers.field_b.processPointerInput(TextHuffmanHelpers.field_b, LobbyRenderGlobals.field_g, param0 - 27268, true);
           if (param0 != 27144) {
             return;
           }
-          ParallaxMusicHelpers.field_b.i(82);
+          ParallaxMusicHelpers.field_b.updateLayers(82);
           while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
-            ParallaxMusicHelpers.field_b.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
+            ParallaxMusicHelpers.field_b.handleKeyInput(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,35 +150,35 @@ final class GameplayAudioEvent extends IntrusiveNode {
         this(eventCode, -1);
     }
 
-    final static String a(long param0, byte param1) {
+    final static String decodeBase37Name(long value, byte obfuscationGuard) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
         int var11 = BrickABrac.field_J ? 1 : 0;
-        if (0L >= param0) {
+        if (0L >= value) {
           return null;
         }
-        if (param0 >= 6582952005840035281L) {
+        if (value >= 6582952005840035281L) {
           return null;
         }
-        if (0L == param0 % 37L) {
+        if (0L == value % 37L) {
           return null;
         }
         int var3 = 0;
-        if (param1 != 3) {
+        if (obfuscationGuard != 3) {
           GameplayAudioEvent.c(21);
         }
-        long var4 = param0;
+        long var4 = value;
         while (var4 != 0L) {
           var4 = var4 / 37L;
           var3++;
         }
         StringBuilder var6 = new StringBuilder(var3);
-        while (param0 != 0L) {
-          var7 = param0;
-          param0 = param0 / 37L;
-          var9 = AchievementBrowserScreen.field_B[(int)(var7 - 37L * param0)];
+        while (value != 0L) {
+          var7 = value;
+          value = value / 37L;
+          var9 = AchievementBrowserScreen.field_B[(int)(var7 - 37L * value)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var9 = 160;

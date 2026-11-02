@@ -92,13 +92,13 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
         super(sprites);
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         fullBrickSprites = null;
         glowBranchScratch = null;
         field_k = null;
         field_h = null;
         field_j = null;
-        if (param0 != 5) {
+        if (obfuscationGuard != 5) {
           return;
         }
         field_l = null;

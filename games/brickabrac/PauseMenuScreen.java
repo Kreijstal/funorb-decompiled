@@ -8,10 +8,10 @@ class PauseMenuScreen extends FramedMenuScreen {
     static String field_w;
     static String field_v;
 
-    public static void h(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_w = null;
         field_u = null;
-        if (param0 != -34) {
+        if (obfuscationGuard != -34) {
           return;
         }
         field_v = null;
@@ -56,11 +56,11 @@ class PauseMenuScreen extends FramedMenuScreen {
         this.drawMenuFrame(102);
         DelayedPacket.d(0);
         if (obfuscationGuard <= -14) {
-          this.a(0);
+          this.drawEnabledButtons(0);
           return;
         }
         field_v = (String) null;
-        this.a(0);
+        this.drawEnabledButtons(0);
     }
 
     static {

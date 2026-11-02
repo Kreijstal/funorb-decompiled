@@ -142,10 +142,10 @@ abstract class MovingBody extends IntrusiveNode {
         RuntimeException caughtFailure = null;
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          ResourceArchive.field_f.a(ClientException.field_e, DualLinkNode.field_r, -114, true);
-          ResourceArchive.field_f.i(79);
+          ResourceArchive.field_f.processPointerInput(ClientException.field_e, DualLinkNode.field_r, -114, true);
+          ResourceArchive.field_f.updateLayers(79);
           while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
-            ResourceArchive.field_f.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
+            ResourceArchive.field_f.handleKeyInput(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           guardCalculation = -30 % ((55 - obfuscationGuard) / 43);
           if (SocialListResponseHelpers.field_b != -1) {
@@ -179,14 +179,14 @@ abstract class MovingBody extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
-        if (param0 >= -81) {
+    final static void drawGameLogo(byte obfuscationGuard) {
+        if (obfuscationGuard >= -81) {
           field_n = (String) null;
         }
         IncomingPacketHelpers.gameLogoSprite.drawTransparent((640 - IncomingPacketHelpers.gameLogoSprite.canvasWidth) / 2, 19);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void rasterInterpolatedMeshTriangle(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -529,7 +529,7 @@ abstract class MovingBody extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= 79) {
-            MovingBody.a((byte) 80);
+            MovingBody.drawGameLogo((byte) 80);
           }
           stackIn_3_0 = (11 * this.stateWord + 666 << 23 | 3 * (this.typeId + 5) << 7) ^ (this.y256 * 17 + 10855845 << 3 ^ this.x256 * 31 + 15790320) + (58339 + 11 * this.velocityX256 | 29 * this.velocityY256 << 13);
           return stackIn_3_0;
@@ -547,18 +547,18 @@ abstract class MovingBody extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_n = null;
-        if (param0 != 34) {
+        if (obfuscationGuard != 34) {
           int[] var2 = (int[]) null;
-          MovingBody.a(-84, 122, -97, (byte) 68, 30, 8, -62, -26, -113, (int[]) null, 112, -31, -33, -94, -22, -100, 90);
+          MovingBody.rasterInterpolatedMeshTriangle(-84, 122, -97, (byte) 68, 30, 8, -62, -26, -113, (int[]) null, 112, -31, -33, -94, -22, -100, 90);
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4) {
+    final static void pushRasterIntersectClip(byte obfuscationGuard, int right, int left, int top, int bottom) {
         HighscorePackSelector.pushRaster(-99);
-        Rasterizer2D.intersectClip(param2, param3, param1, param4);
-        if (param0 < 68) {
+        Rasterizer2D.intersectClip(left, top, right, bottom);
+        if (obfuscationGuard < 68) {
           field_n = (String) null;
         }
     }

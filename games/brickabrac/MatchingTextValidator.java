@@ -20,7 +20,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           return;
         }
         if (null == StrongCacheEntry.field_I) {
-          var1 = PlayerInputBatch.a(-123);
+          var1 = PlayerInputBatch.getAccountNameOrFallback(-123);
           DirectByteStorage.field_k = new LoginPanel(var1, (String) null, true, false, false);
           ResourceArchive.field_f.pushLayer(-126, TextHuffmanHelpers.accountContentLayer);
           TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
@@ -28,7 +28,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           return;
         }
         StrongCacheEntry.field_I.closeDialog(17);
-        var1Lifetime1 = PlayerInputBatch.a(-123);
+        var1Lifetime1 = PlayerInputBatch.getAccountNameOrFallback(-123);
         DirectByteStorage.field_k = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         ResourceArchive.field_f.pushLayer(-126, TextHuffmanHelpers.accountContentLayer);
         TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
@@ -79,9 +79,9 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_o = null;
-        int var1 = 55 / ((58 - param0) / 54);
+        int var1 = 55 / ((58 - obfuscationGuard) / 54);
         field_p = null;
         field_l = null;
     }
@@ -161,7 +161,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         try {
           StateIconLabel.tuhstatbutMarkerSet = true;
           if (obfuscationGuard != 9) {
-            MatchingTextValidator.f(-31);
+            MatchingTextValidator.clearSharedReferences(-31);
           }
           markerName = "tuhstatbut";
           markerValue = "rvnadlm";

@@ -23,8 +23,8 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    public static void i(int param0) {
-        if (param0 < 63) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard < 63) {
           return;
         }
         field_K = null;
@@ -84,7 +84,7 @@ class TextFieldWidget extends FocusableWidget {
         return var3;
     }
 
-    private final void f(byte param0) {
+    private final void scrollCaretIntoView(byte obfuscationGuard) {
         WidgetTextLayout var3;
         int var4;
         int var5;
@@ -101,7 +101,7 @@ class TextFieldWidget extends FocusableWidget {
         if (!(this.renderer instanceof WidgetLayoutProvider)) {
           return;
         }
-        if (param0 != 81) {
+        if (obfuscationGuard != 81) {
           this.selectionAnchor = 16;
         }
         var9 = (WidgetLayoutProvider) ((Object) this.renderer);
@@ -155,7 +155,7 @@ class TextFieldWidget extends FocusableWidget {
           this.caretIndex = this.caretIndex + text.length();
           this.selectionAnchor = this.caretIndex;
           if (copyToClipboard) {
-            this.l(95);
+            this.copySelectionToClipboard(95);
             this.notifyTextChanged(80);
           } else {
             this.notifyTextChanged(80);
@@ -185,7 +185,7 @@ class TextFieldWidget extends FocusableWidget {
         RuntimeException var5 = null;
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
-          this.f((byte) 81);
+          this.scrollCaretIntoView((byte) 81);
           if (this.pressedButton == 1) {
             if (this.renderer instanceof WidgetLayoutProvider) {
               var7 = (WidgetLayoutProvider) ((Object) this.renderer);
@@ -216,17 +216,17 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    private final void m(int param0) {
+    private final void pasteClipboard(int obfuscationGuard) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
           Exception var2_ref = null;
-          if (param0 != 32) {
+          if (obfuscationGuard != 32) {
             serviceHeaderWordOne = 68;
           }
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.deleteSelection(param0 ^ -8);
+            this.deleteSelection(obfuscationGuard ^ -8);
             this.insertClipboardText(false, var2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,16 +283,16 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    private final void l(int param0) {
+    private final void copySelectionToClipboard(int minimumLength) {
         String var2 = this.getSelectedText((byte) -108);
-        if (!(var2.length() <= param0)) {
+        if (!(var2.length() <= minimumLength)) {
           java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -124))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void a(int param0, int param1) {
-        this.caretIndex = param0;
-        if (!IntArrayRequest.heldKeys[param1]) {
+    private final void moveCaret(int caretIndex, int modifierKeyIndex) {
+        this.caretIndex = caretIndex;
+        if (!IntArrayRequest.heldKeys[modifierKeyIndex]) {
           this.selectionAnchor = this.caretIndex;
         }
     }
@@ -311,7 +311,7 @@ class TextFieldWidget extends FocusableWidget {
           ((TextFieldListener) (this.listener)).onTextChanged(this, (byte) -100);
         }
         if (obfuscationGuard <= 7) {
-          TextFieldWidget.i(41);
+          TextFieldWidget.clearSharedReferences(41);
         }
     }
 
@@ -436,7 +436,7 @@ class TextFieldWidget extends FocusableWidget {
                   } else {
                     stackIn_38_1 = this.previousWordBoundary(false);
                   }
-                  this.a(stackIn_38_1, obfuscationGuard - 29);
+                  this.moveCaret(stackIn_38_1, obfuscationGuard - 29);
                   return true;
                 }
                 if (keyCode == 97) {
@@ -446,16 +446,16 @@ class TextFieldWidget extends FocusableWidget {
                     } else {
                       stackIn_69_1 = this.nextWordBoundary((byte) 106);
                     }
-                    this.a(stackIn_69_1, 81);
+                    this.moveCaret(stackIn_69_1, 81);
                     return true;
                   }
                 } else {
                   if (keyCode == 102) {
-                    this.a(0, 81);
+                    this.moveCaret(0, 81);
                     return true;
                   }
                   if (keyCode == 103) {
-                    this.a(this.text.length(), 81);
+                    this.moveCaret(this.text.length(), 81);
                     return true;
                   }
                   if (keyCode == 84) {
@@ -464,17 +464,17 @@ class TextFieldWidget extends FocusableWidget {
                   }
                   if (IntArrayRequest.heldKeys[82] &&
                     keyCode == 65) {
-                    this.g((byte) -49);
+                    this.cutSelection((byte) -49);
                     return true;
                   }
                   if (IntArrayRequest.heldKeys[82] &&
                     66 == keyCode) {
-                    this.l(0);
+                    this.copySelectionToClipboard(0);
                     return true;
                   }
                   if (IntArrayRequest.heldKeys[82] &&
                     67 == keyCode) {
-                    this.m(32);
+                    this.pasteClipboard(32);
                     return true;
                   }
                 }
@@ -507,10 +507,10 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    private final void g(byte param0) {
-        this.l(param0 ^ -49);
+    private final void cutSelection(byte obfuscationGuard) {
+        this.copySelectionToClipboard(obfuscationGuard ^ -49);
         this.deleteSelection(-118);
-        if (param0 != -49) {
+        if (obfuscationGuard != -49) {
           this.caretBlinkStartMillis = -103L;
         }
     }
@@ -538,7 +538,7 @@ class TextFieldWidget extends FocusableWidget {
           } else {
             stackIn_7_1 = var8_int;
           }
-          this.a(stackIn_7_1, 81);
+          this.moveCaret(stackIn_7_1, 81);
           var8_long = MonotonicTime.nowMillis(false);
           stackIn_10_1 = !(-this.lastPressMillis + var8_long >= 250L);
           this.doubleClickSelection = stackIn_10_1;

@@ -16,7 +16,7 @@ final class PowerUp extends CircleBody {
           component.removeKeyListener(DualLinkDeque.keyboardInput);
           component.removeFocusListener(DualLinkDeque.keyboardInput);
           if (obfuscationGuard != -2846) {
-            PowerUp.c(91);
+            PowerUp.clearSharedReferences(91);
           }
           SpriteInputHelpers.keyChangeWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
@@ -29,10 +29,10 @@ final class PowerUp extends CircleBody {
         this.activationTick = activationTick;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_x = null;
-        if (param0 != 6) {
-          PowerUp.c(-60);
+        if (obfuscationGuard != 6) {
+          PowerUp.clearSharedReferences(-60);
         }
     }
 
@@ -264,7 +264,7 @@ final class PowerUp extends CircleBody {
             board.paddle.reversedControlTicks = board.paddle.reversedControlTicks + 250;
           }
           if (obfuscationGuard != 99) {
-            PowerUp.c(-104);
+            PowerUp.clearSharedReferences(-104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

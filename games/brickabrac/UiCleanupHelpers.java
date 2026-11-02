@@ -9,11 +9,11 @@ final class UiCleanupHelpers {
     static int sortedFaceCount;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         volcanicSmallSprite = null;
         field_a = null;
         connectionFailed = null;
-        if (param0 > -46) {
+        if (obfuscationGuard > -46) {
           UiCleanupHelpers.cleanupPopupUi((byte) -35);
           field_b = null;
           return;

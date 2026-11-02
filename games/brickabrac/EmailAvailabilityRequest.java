@@ -10,10 +10,10 @@ final class EmailAvailabilityRequest {
     static String field_d;
     private boolean available;
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
         field_d = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_f = 58;
         }
     }
@@ -87,8 +87,8 @@ final class EmailAvailabilityRequest {
             var6_int = param0[0].canvasWidth;
             var7 = param0[2].canvasWidth;
             var8 = param0[1].canvasWidth;
-            param0[0].e(param2, param1, param4);
-            param0[2].e(param3 + (param2 - var7), param1, param4);
+            param0[0].drawNeutralPixelsRecolored(param2, param1, param4);
+            param0[2].drawNeutralPixelsRecolored(param3 + (param2 - var7), param1, param4);
             Rasterizer2D.saveClip(RasterCacheSurface.horizontalFrameClipScratch);
             Rasterizer2D.intersectClip(param2 + var6_int, param1, -var7 + param2 + param3, param1 + param0[1].canvasHeight);
             var9 = param2 + var6_int;
@@ -97,7 +97,7 @@ final class EmailAvailabilityRequest {
               field_f = 55;
             }
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param0[1].e(param2, param1, param4);
+              param0[1].drawNeutralPixelsRecolored(param2, param1, param4);
             }
             Rasterizer2D.restoreClip(RasterCacheSurface.horizontalFrameClipScratch);
             return;

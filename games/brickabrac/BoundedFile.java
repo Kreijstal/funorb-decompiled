@@ -98,10 +98,10 @@ final class BoundedFile {
         return this.file.length();
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_g = null;
         logoOriginalCenters = (int[][]) null;
-        if (param0 == 57) {
+        if (obfuscationGuard == 57) {
           field_b = null;
           field_d = null;
           field_a = null;

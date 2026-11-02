@@ -10,10 +10,10 @@ class FramedMenuScreen extends MenuScreen {
         super(screenId, buttonLeft, buttonRight, buttonTop, buttonSpacing, actionIds);
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_t = null;
-        if (param0 >= -64) {
-          FramedMenuScreen.f(72);
+        if (obfuscationGuard >= -64) {
+          FramedMenuScreen.getIgnoreListContent(72);
           field_s = null;
           field_r = null;
           return;
@@ -35,8 +35,8 @@ class FramedMenuScreen extends MenuScreen {
         GzipInflater.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var4.height + (var4.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
     }
 
-    final static UiComponent f(int param0) {
-        if (param0 <= 94) {
+    final static UiComponent getIgnoreListContent(int obfuscationGuard) {
+        if (obfuscationGuard <= 94) {
           field_t = (String) null;
           return TableResponseHelpers.ignoreListPane.content;
         }
@@ -79,7 +79,7 @@ class FramedMenuScreen extends MenuScreen {
             filePath = url.getFile();
             prefixEnd = 0;
             if (obfuscationGuard != 60) {
-              FramedMenuScreen.f((byte) 78);
+              FramedMenuScreen.clearSharedReferences((byte) 78);
             }
             while (true) {
               if (filePath.regionMatches(prefixEnd, "/l=", 0, 3)) {
@@ -195,8 +195,8 @@ class FramedMenuScreen extends MenuScreen {
         return var3;
     }
 
-    final static int g(byte param0) {
-        if (param0 != -44) {
+    final static int getMasterSoundGain(byte obfuscationGuard) {
+        if (obfuscationGuard != -44) {
           return 92;
         }
         return BackgroundScene.masterSoundGain;

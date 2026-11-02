@@ -35,7 +35,7 @@ final class FullscreenFailureKind {
               DirectByteStorage.field_k.setAccountAndClearPassword(70, GameScreen.field_d);
             }
             if (param2 == 10) {
-              RectangleBody.c(116);
+              RectangleBody.showPlayerNameChooserPanel(116);
               var3_int = 0;
             }
             if (var3_int != 0) {
@@ -66,8 +66,8 @@ final class FullscreenFailureKind {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
-        if (param0 == 6) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 6) {
           javaKeyCodeMap = null;
           cacheSectorScratch = null;
           field_f = null;
@@ -152,7 +152,7 @@ final class FullscreenFailureKind {
         }
     }
 
-    final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
+    final static void renderBackdropSurface(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-68, param2.sprite);
           Rasterizer2D.fillRectangle(0, 0, param2.width, param2.height, 16777215);

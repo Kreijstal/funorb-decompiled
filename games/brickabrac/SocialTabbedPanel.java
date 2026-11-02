@@ -25,9 +25,9 @@ final class SocialTabbedPanel {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         awaitingValidationBody = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_f = null;
           field_a = null;
           field_b = null;
@@ -52,7 +52,7 @@ final class SocialTabbedPanel {
         try {
           var4_int = -2 / ((41 - param2) / 40);
           if (null != MeshAttributeRecord.musicCrossfadeStream) {
-            ScorePopup.a(1048576, param3, param1, param0, -104);
+            ScorePopup.selectCrossfadeTrack(1048576, param3, param1, param0, -104);
           }
           if (null == ConditionalTextValue.musicSynthesizer) {
             return;

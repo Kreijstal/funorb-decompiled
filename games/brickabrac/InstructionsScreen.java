@@ -92,7 +92,7 @@ final class InstructionsScreen extends MenuScreen {
         try {
           var3_int = packet.position;
           var5 = (CharSequence) ((Object) text);
-          var4 = LevelList.a(var5, false);
+          var4 = LevelList.encodeCp1252(var5, false);
           packet.writeUnsignedSmart(-1, var4.length);
           packet.position = packet.position + QuickChatCategoryRegistry.textHuffman.compress((byte) -119, var4.length, 0, packet.data, packet.position, var4);
           if (obfuscationGuard == 26152) {
@@ -151,7 +151,7 @@ final class InstructionsScreen extends MenuScreen {
         if (var3 != 37) {
           return true;
         }
-        stackIn_16_0 = (TextChoiceDialogStyles.field_b.length - 1 == this.pageIndex) && (!IntKeyIndex.a((byte) -10));
+        stackIn_16_0 = (TextChoiceDialogStyles.field_b.length - 1 == this.pageIndex) && (!IntKeyIndex.isGameplayActive((byte) -10));
         return stackIn_16_0;
     }
 
@@ -232,7 +232,7 @@ final class InstructionsScreen extends MenuScreen {
           if (var6_ref_q.actionId != 8) {
             stackIn_5_0 = ArrayWidgetGroup.buttonLabels[var6_ref_q.actionId];
           } else {
-            stackIn_5_0 = this.e((byte) 112);
+            stackIn_5_0 = this.getActionEightLabel((byte) 112);
           }
           var7_ref_String = stackIn_5_0;
           var8_int = ContextActionController.field_g.measureText(var7_ref_String);
@@ -257,9 +257,9 @@ final class InstructionsScreen extends MenuScreen {
         this.parentScreenId = AccountMessageDialog.currentScreen.screenId;
     }
 
-    public static void g(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_x = null;
-        if (param0 <= 23) {
+        if (obfuscationGuard <= 23) {
           return;
         }
         field_t = null;
@@ -278,7 +278,7 @@ final class InstructionsScreen extends MenuScreen {
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -27);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -101, 45);
-        AchievementMaskRequest.a(this.screenId, 19);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
         if (this.pageIndex != 0) {
           PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, RankingSocketHelpers.field_f);
         } else {
@@ -323,10 +323,10 @@ final class InstructionsScreen extends MenuScreen {
           var3 = var3 + (ConditionalTextValue.field_j + var8);
         }
         if (obfuscationGuard >= -14) {
-          InstructionsScreen.g((byte) 61);
+          InstructionsScreen.clearSharedReferences((byte) 61);
         }
-        ContextActionController.field_g.drawRight(RasterCacheSurface.a(this.pageIndex, 4), 581, -12 + (ContextActionController.field_g.capHeight + 373), 0, -1);
-        this.a(0);
+        ContextActionController.field_g.drawRight(RasterCacheSurface.formatPageIndicator(this.pageIndex, 4), 581, -12 + (ContextActionController.field_g.capHeight + 373), 0, -1);
+        this.drawEnabledButtons(0);
     }
 
     final static void attachKeyboardInput(int obfuscationGuard, java.awt.Component component) {
@@ -340,8 +340,8 @@ final class InstructionsScreen extends MenuScreen {
         }
     }
 
-    final String e(byte param0) {
-        if (param0 < 53) {
+    final String getActionEightLabel(byte obfuscationGuard) {
+        if (obfuscationGuard < 53) {
           java.awt.Component var3 = (java.awt.Component) null;
           InstructionsScreen.attachKeyboardInput(-108, (java.awt.Component) null);
         }

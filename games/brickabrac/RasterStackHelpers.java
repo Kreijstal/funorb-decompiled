@@ -6,8 +6,8 @@ final class RasterStackHelpers {
     static String field_a;
     static boolean field_c;
 
-    public static void a(int param0) {
-        if (param0 < 1) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard < 1) {
           field_a = (String) null;
           field_b = null;
           field_a = null;

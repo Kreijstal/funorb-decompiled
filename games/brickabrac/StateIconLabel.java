@@ -37,7 +37,7 @@ final class StateIconLabel extends UiComponent {
             halloweenMidSprite = (RgbSprite) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + DateFieldsWidget.a(-8250, name.charAt(var4));
+            var3 = (var3 << 5) - var3 + DateFieldsWidget.unicodeToCp1252Byte(-8250, name.charAt(var4));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -99,13 +99,13 @@ final class StateIconLabel extends UiComponent {
         return PasswordFieldRenderer.soundMixer;
     }
 
-    public static void d(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         halloweenMidSprite = null;
         field_Pb = null;
         field_Tb = null;
         fullscreenDialogBodyFont = null;
         field_Rb = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_Rb = (AccountResponse) null;
         }
     }
@@ -114,7 +114,7 @@ final class StateIconLabel extends UiComponent {
         this.setBounds(height, y, x, width, (byte) 64);
         this.layoutIconLabel(-32434, gap);
         if (!obfuscationGuard) {
-          StateIconLabel.d(false);
+          StateIconLabel.clearSharedReferences(false);
         }
     }
 

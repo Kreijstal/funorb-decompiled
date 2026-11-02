@@ -23,10 +23,10 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_j = null;
         field_k = null;
-        if (param0 != 11) {
+        if (obfuscationGuard != 11) {
           field_k = (String) null;
         }
         field_h = null;
@@ -121,7 +121,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
         }
     }
 
-    final static void a(int param0, PlayerBoard param1, int param2, MultiplayerMatch param3, int param4, int param5, int param6) {
+    final static void drawBricks(int scaleDivisor, PlayerBoard board, int playerIndex, MultiplayerMatch match, int x, int obfuscationGuard, int y) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
@@ -154,27 +154,27 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
         var20 = BrickABrac.field_J ? 1 : 0;
         try {
           var7_int = 0;
-          if (param5 != 30) {
-            ProducerFramebuffer.b(42);
+          if (obfuscationGuard != 30) {
+            ProducerFramebuffer.clearSharedReferences(42);
           }
           var8 = 0;
           var24 = new int[4];
           Rasterizer2D.saveClip(var24);
           var10 = new RgbSprite(FireworkBurst.activeBrickSprites[0].canvasWidth, FireworkBurst.activeBrickSprites[0].canvasHeight);
           var10.bindRasterTarget();
-          FireworkBurst.activeBrickSprites[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
+          FireworkBurst.activeBrickSprites[24].drawNeutralPixelsTinted(0, 0, ScorePopup.hueToRgb(255, board.simulationTick % 360 << 8));
           BallPulseEffect.framebuffer.bindRaster((byte) 105);
           Rasterizer2D.restoreClip(var24);
-          stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;
+          stackIn_6_0 = ((1 << playerIndex & (match.playerMaskThree | (match.playerMaskOne | match.playerMaskTwo))) != 0) ? 0 : 1;
           var11 = stackIn_6_0;
-          for (var12 = 0; var12 < param1.brickGroups.length; var12++) {
-            var13 = param1.brickGroups[var12];
+          for (var12 = 0; var12 < board.brickGroups.length; var12++) {
+            var13 = board.brickGroups[var12];
             var14 = (Brick) (var13.first(-105));
             while (var14 != null) {
               boolean decompiledFrameRemainder0 = true;
               if ((1 & var14.flags) == 0) {
-                var8 = param6 + (var14.y256 >> 8) / param0;
-                var7_int = (var14.x256 >> 8) / param0 + param4;
+                var8 = y + (var14.y256 >> 8) / scaleDivisor;
+                var7_int = (var14.x256 >> 8) / scaleDivisor + x;
                 stackIn_14_0 = var14.typeId;
                 if ((var14.flags & 2) != 0) {
                   stackIn_15_1 = 29;
@@ -189,10 +189,10 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                 }
                 var16 = stackIn_18_0;
                 if (var14.pendingTypeId < 0) {
-                  if (param3.playerCount != 1 &&
+                  if (match.playerCount != 1 &&
                     var11 == 0) {
-                    if (!(param1.maskedTicks >= 50)) {
-                      var16.b(var7_int, var8, (-(256 * param1.maskedTicks) + 12800) / 50);
+                    if (!(board.maskedTicks >= 50)) {
+                      var16.drawAlphaBlended(var7_int, var8, (-(256 * board.maskedTicks) + 12800) / 50);
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -203,14 +203,14 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                       4 == LobbyOverlayHelpers.field_i &&
                       (2 & var14.flags) != 0) {
                       var17 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
-                      var16.f(var7_int, var8, 64 + (InteractiveGameClient.sine8192(200 * var17, param5 ^ -4127) >> 10));
+                      var16.drawAdditive(var7_int, var8, 64 + (InteractiveGameClient.sine8192(200 * var17, obfuscationGuard ^ -4127) >> 10));
                     }
                   }
                 } else {
                   var17 = var14.transitionCode;
                   var18 = -(var14.stateWord * 16) + 256;
                   if (var11 == 0) {
-                    var19 = var14.stateWord + param1.maskedTicks;
+                    var19 = var14.stateWord + board.maskedTicks;
                     stackIn_35_0 = 256;
                     stackIn_35_1 = 16;
                     if (16 >= var19) {
@@ -226,29 +226,29 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                     for (var19 = 0; var19 < 10; var19++) {
                       if (var19 <= 5 ||
                         var19 >= 8) {
-                        Rasterizer2D.f(var7_int + (var19 + var14.stateWord * 2), var8 + var16.canvasHeight, 10 + var7_int + var19 + 2 * var14.stateWord, var8, 16777215, var18);
+                        Rasterizer2D.addLine(var7_int + (var19 + var14.stateWord * 2), var8 + var16.canvasHeight, 10 + var7_int + var19 + 2 * var14.stateWord, var8, 16777215, var18);
                       }
                     }
                   } else {
                     switch (var17) {
                       case 0:
-                        var16.b(var7_int, var8, var18);
+                        var16.drawAlphaBlended(var7_int, var8, var18);
                         break;
                       case 5:
-                        var16.b(var7_int, var8, -var18 + 256);
+                        var16.drawAlphaBlended(var7_int, var8, -var18 + 256);
                         break;
                       case 2:
                         var19 = -(2 * var14.stateWord) + 34;
-                        var16.a(var14.stateWord / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
+                        var16.drawScaled(var14.stateWord / scaleDivisor + var7_int, var8, var19 / scaleDivisor, var16.canvasHeight);
                         break;
                       case 9:
-                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(var14.stateWord * 4) + 64);
-                        Rasterizer2D.setClip(var7_int, var8, var7_int + (var16.canvasWidth - var14.stateWord * 2 / param0), var16.canvasHeight + var8);
+                        var16.drawScaledAlphaBlended(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(var14.stateWord * 4) + 64);
+                        Rasterizer2D.setClip(var7_int, var8, var7_int + (var16.canvasWidth - var14.stateWord * 2 / scaleDivisor), var16.canvasHeight + var8);
                         var16.drawTransparent(var7_int, var8);
                         break;
                       case 4:
                         var19 = 16 - var14.stateWord;
-                        var16.a(var7_int, var8 + var14.stateWord / (param0 * 2), 34 / param0, var19 / param0);
+                        var16.drawScaled(var7_int, var8 + var14.stateWord / (scaleDivisor * 2), 34 / scaleDivisor, var19 / scaleDivisor);
                         break;
                       default:
                         Rasterizer2D.restoreClip(var24);
@@ -265,49 +265,49 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                         if (var19 > 0) {
                           var19 = 0;
                         }
-                        var16.a(var7_int + var19 / param0, var19 / param0 + var8, var16.canvasWidth - 2 * var19 / param0, -(var19 * 2 / param0) + var16.canvasHeight);
+                        var16.drawScaled(var7_int + var19 / scaleDivisor, var19 / scaleDivisor + var8, var16.canvasWidth - 2 * var19 / scaleDivisor, -(var19 * 2 / scaleDivisor) + var16.canvasHeight);
                         break;
                       case 3:
-                        Rasterizer2D.setClip(-(var14.stateWord / param0) + var7_int, -(var14.stateWord / param0) + var8, var16.canvasWidth / 2 - var14.stateWord / param0 + var7_int, var16.canvasHeight / 2 + var8 - var14.stateWord / param0);
-                        var16.b(-(var14.stateWord / param0) + var7_int, -(var14.stateWord / param0) + var8, var18);
-                        Rasterizer2D.setClip(var16.canvasWidth / 2 + var14.stateWord / param0 + var7_int, var8 - var14.stateWord / param0, var14.stateWord / param0 + (var7_int + var16.canvasWidth), -(var14.stateWord / param0) + var8 + var16.canvasHeight / 2);
-                        var16.b(var14.stateWord / param0 + var7_int, var8 - var14.stateWord / param0, var18);
-                        Rasterizer2D.setClip(-(var14.stateWord / param0) + var7_int, var14.stateWord / param0 + (var8 + var16.canvasHeight / 2), -(var14.stateWord / param0) + var7_int + var16.canvasWidth / 2, var16.canvasHeight + var8 + var14.stateWord / param0);
-                        var16.b(var7_int - var14.stateWord / param0, var14.stateWord / param0 + var8, var18);
-                        Rasterizer2D.setClip(var16.canvasWidth / 2 + var14.stateWord / param0 + var7_int, var14.stateWord / param0 + var8 + var16.canvasHeight / 2, var7_int + var14.stateWord / param0 + var16.canvasWidth, var8 + var14.stateWord / param0 + var16.canvasHeight);
-                        var16.b(var7_int + var14.stateWord / param0, var8 + var14.stateWord / param0, var18);
+                        Rasterizer2D.setClip(-(var14.stateWord / scaleDivisor) + var7_int, -(var14.stateWord / scaleDivisor) + var8, var16.canvasWidth / 2 - var14.stateWord / scaleDivisor + var7_int, var16.canvasHeight / 2 + var8 - var14.stateWord / scaleDivisor);
+                        var16.drawAlphaBlended(-(var14.stateWord / scaleDivisor) + var7_int, -(var14.stateWord / scaleDivisor) + var8, var18);
+                        Rasterizer2D.setClip(var16.canvasWidth / 2 + var14.stateWord / scaleDivisor + var7_int, var8 - var14.stateWord / scaleDivisor, var14.stateWord / scaleDivisor + (var7_int + var16.canvasWidth), -(var14.stateWord / scaleDivisor) + var8 + var16.canvasHeight / 2);
+                        var16.drawAlphaBlended(var14.stateWord / scaleDivisor + var7_int, var8 - var14.stateWord / scaleDivisor, var18);
+                        Rasterizer2D.setClip(-(var14.stateWord / scaleDivisor) + var7_int, var14.stateWord / scaleDivisor + (var8 + var16.canvasHeight / 2), -(var14.stateWord / scaleDivisor) + var7_int + var16.canvasWidth / 2, var16.canvasHeight + var8 + var14.stateWord / scaleDivisor);
+                        var16.drawAlphaBlended(var7_int - var14.stateWord / scaleDivisor, var14.stateWord / scaleDivisor + var8, var18);
+                        Rasterizer2D.setClip(var16.canvasWidth / 2 + var14.stateWord / scaleDivisor + var7_int, var14.stateWord / scaleDivisor + var8 + var16.canvasHeight / 2, var7_int + var14.stateWord / scaleDivisor + var16.canvasWidth, var8 + var14.stateWord / scaleDivisor + var16.canvasHeight);
+                        var16.drawAlphaBlended(var7_int + var14.stateWord / scaleDivisor, var8 + var14.stateWord / scaleDivisor, var18);
                         break;
                       case 1:
                         var19 = var14.stateWord - 6;
-                        var16.b(var7_int + var19 / param0, var19 / param0 + var8, -(var19 * 2 / param0) + var16.canvasWidth, var16.canvasHeight - var19 * 2 / param0, var18);
+                        var16.drawScaledAlphaBlended(var7_int + var19 / scaleDivisor, var19 / scaleDivisor + var8, -(var19 * 2 / scaleDivisor) + var16.canvasWidth, var16.canvasHeight - var19 * 2 / scaleDivisor, var18);
                         break;
                       case 8:
-                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(var14.stateWord * 4) + 64);
-                        Rasterizer2D.setClip(var7_int + var14.stateWord * 2 / param0, var8, var7_int + var16.canvasWidth, var16.canvasHeight + var8);
+                        var16.drawScaledAlphaBlended(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(var14.stateWord * 4) + 64);
+                        Rasterizer2D.setClip(var7_int + var14.stateWord * 2 / scaleDivisor, var8, var7_int + var16.canvasWidth, var16.canvasHeight + var8);
                         var16.drawTransparent(var7_int, var8);
                         break;
                       case 7:
-                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(4 * var14.stateWord) + 64);
-                        Rasterizer2D.setClip(var7_int, var8, var7_int + var16.canvasWidth, var8 + (var16.canvasHeight - var14.stateWord / param0));
+                        var16.drawScaledAlphaBlended(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(4 * var14.stateWord) + 64);
+                        Rasterizer2D.setClip(var7_int, var8, var7_int + var16.canvasWidth, var8 + (var16.canvasHeight - var14.stateWord / scaleDivisor));
                         var16.drawTransparent(var7_int, var8);
                         break;
                       case 6:
-                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(4 * var14.stateWord) + 64);
-                        Rasterizer2D.setClip(var7_int, var14.stateWord / param0 + var8, var16.canvasWidth + var7_int, var8 + var16.canvasHeight);
+                        var16.drawScaledAlphaBlended(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(4 * var14.stateWord) + 64);
+                        Rasterizer2D.setClip(var7_int, var14.stateWord / scaleDivisor + var8, var16.canvasWidth + var7_int, var8 + var16.canvasHeight);
                         var16.drawTransparent(var7_int, var8);
                         break;
                       case 10:
                         if (var14.stateWord < 8) {
                           var19 = 34 - var14.stateWord * 4;
-                          var16.a(var14.stateWord * 2 / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
+                          var16.drawScaled(var14.stateWord * 2 / scaleDivisor + var7_int, var8, var19 / scaleDivisor, var16.canvasHeight);
                         } else {
                           var19 = -26 + var14.stateWord * 4;
-                          FireworkBurst.activeBrickSprites[var14.pendingTypeId].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
+                          FireworkBurst.activeBrickSprites[var14.pendingTypeId].drawScaled((-(2 * var14.stateWord) + 30) / scaleDivisor + var7_int, var8, var19 / scaleDivisor, var16.canvasHeight);
                         }
                         break;
                       case 11:
                         FireworkBurst.activeBrickSprites[var14.pendingTypeId].drawTransparent(var7_int, var8);
-                        var16.b(var7_int, var8, var18);
+                        var16.drawAlphaBlended(var7_int, var8, var18);
                         break;
                     }
                   }
@@ -322,19 +322,19 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_86_0 = var7;
-          stackIn_86_1 = new StringBuilder().append("jo.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_86_1 = new StringBuilder().append("jo.E(").append(scaleDivisor).append(',');
+          if (board == null) {
             stackIn_87_2 = "null";
           } else {
             stackIn_87_2 = "{...}";
           }
-          stackIn_89_1 = ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_89_1 = ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).append(',').append(playerIndex).append(',');
+          if (match == null) {
             stackIn_90_2 = "null";
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(x).append(',').append(obfuscationGuard).append(',').append(y).append(')').toString());
         }
     }
 

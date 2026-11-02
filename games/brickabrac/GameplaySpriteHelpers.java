@@ -7,10 +7,10 @@ final class GameplaySpriteHelpers {
     static RgbSprite[] menuLeverSprites;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_b = null;
         menuLeverSprites = null;
-        if (param0 <= 109) {
+        if (obfuscationGuard <= 109) {
           GameplaySpriteHelpers.selectGameplaySpriteScale(47, 0);
         }
         activeBallSprite = null;

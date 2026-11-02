@@ -174,7 +174,7 @@ final class TextValidationHelpers {
         ScreenshotViewer.fullscreenDialogCenterY = y;
     }
 
-    final static int a(PlayerBoard param0, byte param1, MultiplayerMatch param2) {
+    final static int getLevelIndexWithinPeriod(PlayerBoard board, byte obfuscationGuard, MultiplayerMatch match) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -186,15 +186,15 @@ final class TextValidationHelpers {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.configuration.repeats) {
-            stackIn_3_0 = param0.levelIndex;
+          if (match.configuration.repeats) {
+            stackIn_3_0 = board.levelIndex;
             return stackIn_3_0;
           }
-          var3_int = 44 / ((param1 + 59) / 34);
-          if (param0.levelIndex >= param2.configuration.getPeriod(-30)) {
-            stackIn_7_0 = -1 + param2.configuration.getPeriod(79);
+          var3_int = 44 / ((obfuscationGuard + 59) / 34);
+          if (board.levelIndex >= match.configuration.getPeriod(-30)) {
+            stackIn_7_0 = -1 + match.configuration.getPeriod(79);
           } else {
-            stackIn_7_0 = param0.levelIndex;
+            stackIn_7_0 = board.levelIndex;
           }
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,13 +202,13 @@ final class TextValidationHelpers {
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("pp.C(");
-          if (param0 == null) {
+          if (board == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',');
+          if (match == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -217,9 +217,9 @@ final class TextValidationHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_c = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           CharSequence var2 = (CharSequence) null;
           TextValidationHelpers.countCharacter((byte) -84, 'ﾽ', (CharSequence) null);
           field_b = null;

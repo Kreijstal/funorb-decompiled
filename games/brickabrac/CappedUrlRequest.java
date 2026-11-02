@@ -55,7 +55,7 @@ final class CappedUrlRequest implements Runnable {
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (param1 != 10000) {
-            CappedUrlRequest.b(46);
+            CappedUrlRequest.clearSharedReferences(46);
           }
           if (null == BrowserResizeNotificationHelpers.field_d) {
             BrowserResizeNotificationHelpers.field_d = FramedMenuScreen.field_s.requestSocketConnection(MeshAudioHelpers.field_h, (byte) 120, SocketConnector.field_b);
@@ -190,7 +190,7 @@ final class CappedUrlRequest implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.url.getFile() + "\n\n"));
-              var3.write(LevelList.a(var5, false));
+              var3.write(LevelList.encodeCp1252(var5, false));
               this.input = new DataInputStream(var4.getInputStream());
             }
             this.packet.position = 0;
@@ -230,11 +230,11 @@ final class CappedUrlRequest implements Runnable {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = null;
         field_l = null;
         chocolateSpiresSprite = null;
-        if (param0 != -16637) {
+        if (obfuscationGuard != -16637) {
           CappedUrlRequest.a(true, 13);
         }
     }

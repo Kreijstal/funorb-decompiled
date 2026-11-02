@@ -48,7 +48,7 @@ final class Mesh3D {
 
     final static boolean a(byte param0) {
         if (param0 <= 33) {
-          Mesh3D.d(-80);
+          Mesh3D.showAccountRegistrationPanel(-80);
         }
         return NanoGameClock.field_l;
     }
@@ -129,9 +129,9 @@ final class Mesh3D {
         this.invalidateBounds(-122);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         rasterSnapshotPool = null;
-        if (param0 != -52) {
+        if (obfuscationGuard != -52) {
           field_l = (int[]) null;
         }
         field_e = null;
@@ -242,21 +242,21 @@ final class Mesh3D {
         this.maxX = maximumX;
     }
 
-    final static void a(boolean param0, String param1, String param2) {
+    final static void transitionToLoginPanel(boolean flag, String firstText, String secondText) {
         try {
           if (null != StrongCacheEntry.field_I) {
             StrongCacheEntry.field_I.closeDialog(17);
           }
-          DirectByteStorage.field_k = new LoginPanel(param2, param1, false, true, param0);
+          DirectByteStorage.field_k = new LoginPanel(secondText, firstText, false, true, flag);
           TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 114, DirectByteStorage.field_k);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + flag + ',' + (firstText != null ? "{...}" : "null") + ',' + (secondText != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void d(int param0) {
+    final static void showAccountRegistrationPanel(int obfuscationGuard) {
         ClientResourceHelpers.field_c = new AccountRegistrationPanel();
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return;
         }
         TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 120, ClientResourceHelpers.field_c);

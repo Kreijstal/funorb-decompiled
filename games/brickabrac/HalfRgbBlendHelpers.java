@@ -34,7 +34,7 @@ final class HalfRgbBlendHelpers {
             targetAlias = targetStorage;
             pixelIndex = offset;
             sourceHalfRgb = halfRgb;
-            targetStorage[pixelIndex] = sourceHalfRgb + (IntrusiveHashIterator.a(targetStorage[pixelIndex], 16711422) >> 1);
+            targetStorage[pixelIndex] = sourceHalfRgb + (IntrusiveHashIterator.bitwiseAnd(targetStorage[pixelIndex], 16711422) >> 1);
             offset++;
           }
         } catch (java.lang.RuntimeException caughtParameter) {
@@ -53,11 +53,11 @@ final class HalfRgbBlendHelpers {
 
     final static void a(boolean param0, int param1) {
         if (param1 == -1) {
-          ResourceArchive.field_f.a(0, 0, param1 + 1);
+          ResourceArchive.field_f.drawLayersAndTooltip(0, 0, param1 + 1);
           return;
         }
         uiPressClaimed = false;
-        ResourceArchive.field_f.a(0, 0, param1 + 1);
+        ResourceArchive.field_f.drawLayersAndTooltip(0, 0, param1 + 1);
     }
 
     public static void clearSharedReferences(int obfuscationGuard) {

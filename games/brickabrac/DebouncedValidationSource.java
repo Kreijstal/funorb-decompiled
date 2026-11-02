@@ -24,13 +24,13 @@ abstract class DebouncedValidationSource implements ValidationSource {
         this.lastEditMillis = MonotonicTime.nowMillis(obfuscationGuard);
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         quickChatCategories = null;
         field_e = null;
         rankingWinRateThousandths = null;
         field_d = null;
-        if (param0 != 31366) {
-          DebouncedValidationSource.d(-12);
+        if (obfuscationGuard != 31366) {
+          DebouncedValidationSource.clearSharedReferences(-12);
         }
     }
 
@@ -43,7 +43,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
           return AppletResourceHelpers.validationEmpty;
         }
         if (obfuscationGuard != -31) {
-          DebouncedValidationSource.d(100);
+          DebouncedValidationSource.clearSharedReferences(100);
           if (MonotonicTime.nowMillis(false) >= this.lastEditMillis + 350L) {
             return this.computeValidationStatus(4);
           }

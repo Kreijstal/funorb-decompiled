@@ -55,7 +55,7 @@ final class RankingsScreen extends MenuScreen {
             var6.height = this.getButtonHeight((byte) -30, var5_int);
             var4 = var4 + (10 + var6.width);
           }
-          var2Lifetime1 = 30 + ContextActionController.field_g.measureText(this.e((byte) 111));
+          var2Lifetime1 = 30 + ContextActionController.field_g.measureText(this.getActionEightLabel((byte) 111));
           var4Lifetime1 = (-var2Lifetime1 + 640) / 2;
           var5 = this.buttons[2];
           var5.x = var4Lifetime1;
@@ -91,14 +91,14 @@ final class RankingsScreen extends MenuScreen {
         }
     }
 
-    final static void a(RasterCacheSurface param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
+    final static void renderBackdropSurface(RasterCacheSurface param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-59, param0.sprite);
           if (param5 < 39) {
             RankingsScreen.a(true, 49, true);
           }
           Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, CacheIoWorker.desertBackgroundColors[param4], 16777215);
-          param3.b((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
+          param3.drawWithVerticalAlphaGradient((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
           RasterStackHelpers.popRaster(-94);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -155,9 +155,9 @@ final class RankingsScreen extends MenuScreen {
     final static void f(int param0) {
         if (param0 != -1) {
           RgbSprite var2 = (RgbSprite) null;
-          RankingsScreen.a((RasterCacheSurface) null, -117, -10, (RgbSprite) null, -120, 52);
+          RankingsScreen.renderBackdropSurface((RasterCacheSurface) null, -117, -10, (RgbSprite) null, -120, 52);
         }
-        ArrayWidgetGroup.f((byte) 122);
+        ArrayWidgetGroup.decreaseMusicGain((byte) 122);
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
@@ -220,8 +220,8 @@ final class RankingsScreen extends MenuScreen {
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -101);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -62, 45);
-        AchievementMaskRequest.a(this.screenId, 19);
-        this.a(0);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
+        this.drawEnabledButtons(0);
         if (QuickChatMenu.h(-26090)) {
           NumericLoginCredentials.a((byte) 97, DateFieldsWidget.field_N);
           return;
@@ -333,11 +333,11 @@ final class RankingsScreen extends MenuScreen {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         rankingWins = null;
         field_t = null;
         field_s = null;
-        if (param0 >= -65) {
+        if (obfuscationGuard >= -65) {
           lastDiagnosticAllocatedHeapKiB = 26L;
         }
     }

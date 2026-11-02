@@ -116,7 +116,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a("alreadyloaded", 4000);
+                this.redirectToErrorPage("alreadyloaded", 4000);
                 return;
               }
               WeightedLruCache.canvasWidth = param3;
@@ -146,7 +146,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
               AlignedIconLabel.a((String) null, var8, 52);
-              this.a("crash", 4000);
+              this.redirectToErrorPage("crash", 4000);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -329,7 +329,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a("wrongjava", 4000);
+                    this.redirectToErrorPage("wrongjava", 4000);
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -351,7 +351,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                       var4 = var2.substring(6, var3);
                       if (MeshAttributeRecord.isDecimalInt((CharSequence) ((Object) var4), -102) &&
                         !(UsernameAvailabilityValidator.parseDecimalInt((CharSequence) ((Object) var4), -28734) >= 10)) {
-                        this.a("wrongjava", 4000);
+                        this.redirectToErrorPage("wrongjava", 4000);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -441,7 +441,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               AlignedIconLabel.a((String) null, (Throwable) (var1), 77);
-              this.a("crash", 4000);
+              this.redirectToErrorPage("crash", 4000);
             }
             this.shutdown(true, -93);
             return;
@@ -745,7 +745,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         }
     }
 
-    final void a(String param0, int param1) {
+    final void redirectToErrorPage(String errorCode, int obfuscationGuard) {
         try {
           Throwable throwable = null;
           Exception exception = null;
@@ -759,7 +759,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               return;
             }
             this.field_d = true;
-            System.out.println("error_game_" + param0);
+            System.out.println("error_game_" + errorCode);
             try {
               AppletJavaScriptBridge.callFunctionWithoutArguments("loggedout", -123, EmailConfirmationValidator.e((byte) -124));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -767,12 +767,12 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               throwable = decompiledCaughtException;
             }
             try {
-              this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + param0 + ".ws"), "_top");
+              this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + errorCode + ".ws"), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
             }
-            if (param1 != 4000) {
+            if (obfuscationGuard != 4000) {
               field_k = (String) null;
             }
             return;
@@ -781,12 +781,12 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             runtimeException = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_17_0 = runtimeException;
             stackIn_17_1 = new StringBuilder().append("ke.CA(");
-            if (param0 == null) {
+            if (errorCode == null) {
               stackIn_18_2 = "null";
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -821,7 +821,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
 
     abstract void clearClientResources(boolean obfuscationGuard);
 
-    final static String a(byte param0, long param1) {
+    final static String formatTimestamp(byte obfuscationGuard, long epochMillis) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -833,13 +833,13 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         String stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          field_n.setTime(new Date(param1));
+          field_n.setTime(new Date(epochMillis));
           var3_int = field_n.get(7);
           var4 = field_n.get(5);
           var5 = field_n.get(2);
           var6 = field_n.get(1);
           var7 = field_n.get(11);
-          if (param0 != -75) {
+          if (obfuscationGuard != -75) {
             AppletGameShell.shuffleFivePasses((int[]) null, (byte) -75, (IsaacGenerator) null);
           }
           var8 = field_n.get(12);
@@ -849,7 +849,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "ke.P(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "ke.P(" + obfuscationGuard + ',' + epochMillis + ')');
         }
     }
 

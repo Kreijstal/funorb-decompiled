@@ -29,7 +29,7 @@ final class CanvasInputHelpers {
           if (!param0) {
             CanvasInputHelpers.setPendingTooltipAnchor(-35, 121, (byte) -8);
           }
-          var2 = GameplayAudioEvent.a(HighscoresScreen.a(!param0, param1), (byte) 3);
+          var2 = GameplayAudioEvent.decodeBase37Name(HighscoresScreen.encodeBase37Name(!param0, param1), (byte) 3);
           if (var2 == null) {
             var2 = "";
           }
@@ -94,15 +94,15 @@ final class CanvasInputHelpers {
         return PowerUpWarning.field_l[param0 >> 16] >> 4;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         halloweenCentreSprites = null;
         ninjaMidSprite = null;
         field_a = null;
         field_e = null;
         field_d = null;
         field_b = null;
-        if (param0) {
-          CanvasInputHelpers.a(true);
+        if (obfuscationGuard) {
+          CanvasInputHelpers.clearSharedReferences(true);
         }
     }
 

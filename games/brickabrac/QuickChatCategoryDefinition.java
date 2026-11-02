@@ -91,10 +91,10 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         textChoiceLines = null;
-        if (param0 <= 44) {
-          QuickChatCategoryDefinition.a((byte) -32);
+        if (obfuscationGuard <= 44) {
+          QuickChatCategoryDefinition.clearSharedReferences((byte) -32);
         }
     }
 
@@ -138,7 +138,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
             SecondaryHashTable.a(-1);
           }
           if (!param0) {
-            QuickChatCategoryDefinition.a((byte) -116);
+            QuickChatCategoryDefinition.clearSharedReferences((byte) -116);
           }
           ToggleButtonWidget.a(UsernameSuggestionPanel.field_N, 8192, WidgetTextLayout.field_a, LevelCompleteScreen.field_C);
           DiagnosticTextLine.a(param1, 0, 14209, 0);
@@ -158,14 +158,14 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         }
         if (null != this.phraseIds) {
           for (phraseIndex = 0; phraseIndex < this.phraseIds.length; phraseIndex++) {
-            this.phraseIds[phraseIndex] = LevelSelectScreen.d(this.phraseIds[phraseIndex], 32768);
+            this.phraseIds[phraseIndex] = LevelSelectScreen.bitwiseOr(this.phraseIds[phraseIndex], 32768);
           }
         }
         if (this.subcategoryIds != null) {
           childIndex = 0;
           unusedChildIndex = childIndex;
           while (childIndex < this.subcategoryIds.length) {
-            this.subcategoryIds[childIndex] = LevelSelectScreen.d(this.subcategoryIds[childIndex], 32768);
+            this.subcategoryIds[childIndex] = LevelSelectScreen.bitwiseOr(this.subcategoryIds[childIndex], 32768);
             childIndex++;
           }
         }

@@ -21,13 +21,13 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int guardDivision;
         if (null != this.linkedPhraseIds) {
           for (linkIndex = 0; linkIndex < this.linkedPhraseIds.length; linkIndex++) {
-            this.linkedPhraseIds[linkIndex] = LevelSelectScreen.d(this.linkedPhraseIds[linkIndex], 32768);
+            this.linkedPhraseIds[linkIndex] = LevelSelectScreen.bitwiseOr(this.linkedPhraseIds[linkIndex], 32768);
           }
         }
         guardDivision = 122 % ((obfuscationGuard + 60) / 61);
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_F = null;
         field_E = null;
         field_x = null;
@@ -35,8 +35,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         field_C = null;
         field_D = null;
         quickChatMenuRoot = null;
-        if (param0 != 32463) {
-          QuickChatPhraseDefinition.f(-119);
+        if (obfuscationGuard != 32463) {
+          QuickChatPhraseDefinition.clearSharedReferences(-119);
         }
     }
 

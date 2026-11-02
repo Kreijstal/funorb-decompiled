@@ -9,10 +9,10 @@ abstract class ByteStorage {
 
     abstract byte[] toByteArray(int obfuscationGuard);
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_d = null;
         field_a = null;
-        if (param0 == 10) {
+        if (obfuscationGuard == 10) {
           field_c = null;
           missingEmailAddress = null;
           return;

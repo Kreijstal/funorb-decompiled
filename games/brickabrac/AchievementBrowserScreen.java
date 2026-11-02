@@ -64,7 +64,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         var14 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -104);
         GzipInflater.a(550, 5, 88, 5, 140, (byte) -72, 45);
-        MovingBody.a((byte) 98, 560, 80, 140, 228);
+        MovingBody.pushRasterIntersectClip((byte) 98, 560, 80, 140, 228);
         var17 = (AchievementIcon) (this.visibleIcons.first(-94));
         while (var17 != null) {
           var17.draw((byte) 103);
@@ -128,8 +128,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
             PasswordFieldRenderer.field_D.drawLeft(DateFieldsWidget.field_N, 209, var6, 2, -1);
           }
         }
-        AchievementMaskRequest.a(this.screenId, 19);
-        this.a(0);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
+        this.drawEnabledButtons(0);
     }
 
     final static String buildSavePrompt(boolean hasAchievements, boolean hasScore, boolean hasProgress, int obfuscationGuard) {
@@ -256,9 +256,9 @@ abstract class AchievementBrowserScreen extends MenuScreen {
 
     abstract boolean isAchievementExcluded(int achievementId, byte obfuscationGuard);
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_A = null;
-        if (param0 >= -92) {
+        if (obfuscationGuard >= -92) {
           return;
         }
         constructionMidSprite = null;
@@ -554,7 +554,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         for (var5 = 2; this.buttons.length > var5; var5++) {
           var6_ref_q = this.buttons[var5];
           if (var6_ref_q.actionId == 8) {
-            stackIn_7_0 = this.e((byte) 105);
+            stackIn_7_0 = this.getActionEightLabel((byte) 105);
           } else {
             stackIn_7_0 = ArrayWidgetGroup.buttonLabels[var6_ref_q.actionId];
           }

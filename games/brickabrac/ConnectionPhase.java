@@ -101,12 +101,12 @@ final class ConnectionPhase {
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var1 = UiGeometryHelpers.decodedSpriteWidths[0] * TextHotspotRegion.decodedSpriteHeights[0];
         if (obfuscationGuard != 21) {
-          ConnectionPhase.b(-24);
+          ConnectionPhase.clearSharedReferences(-24);
         }
         byte[] var2 = GameOverlayHelpers.decodedSpriteIndices[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];
+          var3[var4_int] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.bitwiseAnd(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], UiGeometryHelpers.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
@@ -122,10 +122,10 @@ final class ConnectionPhase {
         return phaseAllowsTransport;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         nameColumnHeadingText = null;
         waterFarSprite = null;
-        if (param0 != -2) {
+        if (obfuscationGuard != -2) {
           return;
         }
         field_b = null;

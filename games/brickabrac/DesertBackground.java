@@ -12,7 +12,7 @@ final class DesertBackground extends BackgroundScene {
         if (this.hasSprites((byte) -127)) {
           var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            RankingsScreen.a(var6, 1, 0, OptionsScreen.desertFarSprite, colorIndex, 100);
+            RankingsScreen.renderBackdropSurface(var6, 1, 0, OptionsScreen.desertFarSprite, colorIndex, 100);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             InteractiveGameClient.drawParallaxLayers((byte) 119, FriendListUi.desertNearSprite, destinationY, 1, PowerUpWarning.desertMidSprite, var6.sprite, scroll16, 640, 0, destinationX);
             if (!obfuscationGuard) {
@@ -75,33 +75,33 @@ final class DesertBackground extends BackgroundScene {
         return false;
     }
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (param0) {
-          return TextWidgetRenderer.desertCentreSprites[-1 + param1];
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (obfuscationGuard) {
+          return TextWidgetRenderer.desertCentreSprites[-1 + scaleDivisor];
         }
         this.drawPreview((byte) 65, 25, -62, -115);
-        return TextWidgetRenderer.desertCentreSprites[-1 + param1];
+        return TextWidgetRenderer.desertCentreSprites[-1 + scaleDivisor];
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = 105 % ((param0 - 65) / 49);
-        return GzipInflater.desertCapsSprites[param1 - 1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = 105 % ((obfuscationGuard - 65) / 49);
+        return GzipInflater.desertCapsSprites[scaleDivisor - 1];
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_u = (String) null;
-          return TableNameEntry.desertSegsSprites[param0 - 1];
+          return TableNameEntry.desertSegsSprites[scaleDivisor - 1];
         }
-        return TableNameEntry.desertSegsSprites[param0 - 1];
+        return TableNameEntry.desertSegsSprites[scaleDivisor - 1];
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_u = null;
         field_t = null;
         field_r = null;
         field_s = null;
-        if (param0 != -417029247) {
+        if (obfuscationGuard != -417029247) {
           DesertBackground.drawTextChoiceDialog(-5);
         }
     }
@@ -116,7 +116,7 @@ final class DesertBackground extends BackgroundScene {
           }
           var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            RankingsScreen.a(var7, 2, -13, TextValidationHelpers.field_b, colorIndex, 102);
+            RankingsScreen.renderBackdropSurface(var7, 2, -13, TextValidationHelpers.field_b, colorIndex, 102);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
             InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var7.sprite, scroll16, 306, -13, destinationX);
@@ -131,7 +131,7 @@ final class DesertBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          RankingsScreen.a(var8, 2, -13, TextValidationHelpers.field_b, colorIndex, 102);
+          RankingsScreen.renderBackdropSurface(var8, 2, -13, TextValidationHelpers.field_b, colorIndex, 102);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
           InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var8.sprite, scroll16, 306, -13, destinationX);

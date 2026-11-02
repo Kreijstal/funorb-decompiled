@@ -92,12 +92,12 @@ final class MeshLobbyUiHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = null;
         halfPaddleFlameSprites = (RgbSprite[][]) null;
         field_d = null;
         field_b = null;
-        if (param0 >= -59) {
+        if (obfuscationGuard >= -59) {
           joinRequestsPanelOpen = true;
         }
         ninjaSmallSprite = null;
@@ -233,7 +233,7 @@ final class MeshLobbyUiHelpers {
           AccountMessageDialog.field_Ab = new UiComponent(0L, (UiComponent) null);
           AccountMessageDialog.field_Ab.frameSprites = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
           TableResponseHelpers.field_a = new UiComponent(0L, (UiComponent) null);
-          TableResponseHelpers.field_a.frameSprites = DateFieldsWidget.a(false, 6316128, 3, 6316128, 114, 1);
+          TableResponseHelpers.field_a.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 6316128, 3, 6316128, 114, 1);
           GameUiController.field_c = new UiComponent(0L, (UiComponent) null);
           GameUiController.field_c.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
           var12 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
@@ -299,9 +299,9 @@ final class MeshLobbyUiHelpers {
           WidgetTheme.field_n.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
           WidgetTheme.field_n.selectedFrameSprites = var14;
           InvitationDialogHelpers.field_c = new UiComponent(0L, (UiComponent) null);
-          InvitationDialogHelpers.field_c.frameSprites = DateFieldsWidget.a(false, 1127256, 3, 1856141, 206, -1);
+          InvitationDialogHelpers.field_c.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 1127256, 3, 1856141, 206, -1);
           FarmBackground.field_x = new UiComponent(0L, (UiComponent) null);
-          FarmBackground.field_x.frameSprites = DateFieldsWidget.a(false, 6052956, 3, 11579568, 290, -1);
+          FarmBackground.field_x.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 6052956, 3, 11579568, 290, -1);
           LobbyKeyboardGlobals.field_b = new UiComponent(0L, var15);
           LobbyKeyboardGlobals.field_b.selectedOffsetX = 1;
           LobbyKeyboardGlobals.field_b.selectedOffsetY = 1;
@@ -363,10 +363,10 @@ final class MeshLobbyUiHelpers {
           var17 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "checkbox", 2);
           BlankScreen.field_k = new StateIconLabel(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
           QuickChatHelpDialog.field_Vb = new UiComponent(0L, (UiComponent) null);
-          QuickChatHelpDialog.field_Vb.frameSprites = HighscorePackSelector.a(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion", (byte) -95, param3), -52);
-          QuickChatHelpDialog.field_Vb.activeFrameSprites = HighscorePackSelector.a(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
-          QuickChatHelpDialog.field_Vb.capturedFrameSprites = HighscorePackSelector.a(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
-          QuickChatHelpDialog.field_Vb.disabledFrameSprites = HighscorePackSelector.a(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
+          QuickChatHelpDialog.field_Vb.frameSprites = HighscorePackSelector.createCenterOnlySpriteGrid(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion", (byte) -95, param3), -52);
+          QuickChatHelpDialog.field_Vb.activeFrameSprites = HighscorePackSelector.createCenterOnlySpriteGrid(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
+          QuickChatHelpDialog.field_Vb.capturedFrameSprites = HighscorePackSelector.createCenterOnlySpriteGrid(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
+          QuickChatHelpDialog.field_Vb.disabledFrameSprites = HighscorePackSelector.createCenterOnlySpriteGrid(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
           RankingsScreen.field_s = new UiComponent(0L, (UiComponent) null);
           RankingsScreen.field_s.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
           RankingsScreen.field_s.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);

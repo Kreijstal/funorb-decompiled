@@ -8,11 +8,11 @@ final class ByteArrayPoolHelpers {
     static int archiveConnectPort;
     static String receivedChatText;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_b = null;
         receivedChatText = null;
         field_e = null;
-        if (param0) {
+        if (obfuscationGuard) {
           receivedChatText = (String) null;
           draggedWidget = null;
           return;

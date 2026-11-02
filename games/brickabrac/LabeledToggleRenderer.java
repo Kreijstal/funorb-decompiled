@@ -46,7 +46,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
           Rasterizer2D.fillRectangle(widget.x + parentX, parentY + widget.y, widget.width, widget.height, this.backgroundColor);
           var8 = this.boxX + parentX + widget.x;
           var9 = this.boxY + parentY + widget.y;
-          Rasterizer2D.a(var8, var9, this.boxWidth, this.boxHeight, 5592405);
+          Rasterizer2D.drawShadowEdges(var8, var9, this.boxWidth, this.boxHeight, 5592405);
           if (callbackGuard != -20618) {
             this.boxY = 116;
           }
@@ -97,13 +97,13 @@ final class LabeledToggleRenderer implements WidgetRenderer {
             AppletGameShell.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) AppletGameShell.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ConditionalTextValue.field_e)}, true);
           }
           StrongCacheEntry.field_I.closeDialog(param0 + 17);
-          NinjaBackground.e((byte) -117);
+          NinjaBackground.showLoadingProgressDialog((byte) -117);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_g = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           return;
         }
         field_a = null;

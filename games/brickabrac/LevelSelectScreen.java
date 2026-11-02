@@ -92,12 +92,12 @@ final class LevelSelectScreen extends MenuScreen {
         int var5;
         int var6;
         super.drawScreen((byte) -101);
-        AchievementMaskRequest.a(13, 19);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(13, 19);
         GzipInflater.a(550, 5, 33, 5, 140, (byte) -106, 45);
         GzipInflater.a(160, 5, 243, 5, 178, (byte) -88, 45);
         GzipInflater.a(385, 5, 243, 5, 178, (byte) -124, 210);
         ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.pack.packId], 320, 1 + (178 - ContextActionController.field_g.xHeight), 0, -1);
-        ArchiveNetworkRequest.packSelectorIcons[this.pack.packId].e(565, 140, -2048, 4096);
+        ArchiveNetworkRequest.packSelectorIcons[this.pack.packId].drawRotatedAboutCenter(565, 140, -2048, 4096);
         if (this.levelList.selectedLevelIndex >= 0 &&
           this.levelList.selectedLevelIndex < this.pack.levelCount) {
           var2 = ContextActionController.field_g.capHeight + 2;
@@ -132,21 +132,21 @@ final class LevelSelectScreen extends MenuScreen {
             var4 = LevelCompleteScreen.field_F;
             var5 = 210 + (385 - var4.canvasWidth) / 2;
             var6 = (243 - var4.canvasHeight) / 2 + 178;
-            var4.b(var5, var6, 196);
+            var4.drawAlphaBlended(var5, var6, 196);
           }
         } else {
           ContextActionController.field_g.drawCentered(this.emptySelectionText, 402, 299 + ContextActionController.field_g.descent, 0, -1);
           this.previewLevelIndex = -1;
         }
         this.levelList.draw((byte) 28);
-        this.a(0);
+        this.drawEnabledButtons(0);
         if (obfuscationGuard >= -14) {
           this.previewRight256 = -125;
         }
     }
 
-    static int d(int param0, int param1) {
-        return param0 | param1;
+    static int bitwiseOr(int left, int right) {
+        return left | right;
     }
 
     LevelSelectScreen(int screenId, int packIndex) {
@@ -165,8 +165,8 @@ final class LevelSelectScreen extends MenuScreen {
         }
     }
 
-    final String e(byte param0) {
-        if (param0 <= 53) {
+    final String getActionEightLabel(byte obfuscationGuard) {
+        if (obfuscationGuard <= 53) {
           return (String) null;
         }
         return ArrayWidgetGroup.buttonLabels[DelayedPacket.c(61) ? 7 : 39];
@@ -256,7 +256,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (keyCode != 48) {
           return super.handleKey(character, 100, keyCode);
         }
-        if (PauseMenuHelpers.a((byte) 62)) {
+        if (PauseMenuHelpers.isLoginPrivilegeAtLeastTwo((byte) 62)) {
           GameConnectionShell.field_t = true;
           return true;
         }
@@ -386,10 +386,10 @@ final class LevelSelectScreen extends MenuScreen {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_t = null;
         field_x = null;
-        int var1 = 2 % ((-51 - param0) / 58);
+        int var1 = 2 % ((-51 - obfuscationGuard) / 58);
     }
 
     final void refreshMenu(int obfuscationGuard) {
@@ -414,7 +414,7 @@ final class LevelSelectScreen extends MenuScreen {
           var9 = (Brick) (this.previewBrickGroups[var8].first(-109));
           while (var9 != null) {
             if ((1 & var9.flags) == 0) {
-              TranslucentNineSliceFrame.fullBrickSprites[var9.typeId].a((var9.x256 - this.previewLeft256 >> 9) + param2, (var9.y256 - this.previewTop256 >> 9) + param0, 17, 8);
+              TranslucentNineSliceFrame.fullBrickSprites[var9.typeId].drawScaled((var9.x256 - this.previewLeft256 >> 9) + param2, (var9.y256 - this.previewTop256 >> 9) + param0, 17, 8);
             }
             var9 = (Brick) (this.previewBrickGroups[var8].next((byte) 116));
           }
@@ -466,7 +466,7 @@ final class LevelSelectScreen extends MenuScreen {
           if (var7_ref_q.actionId != 8) {
             stackIn_9_0 = ArrayWidgetGroup.buttonLabels[var7_ref_q.actionId];
           } else {
-            stackIn_9_0 = this.e((byte) 74);
+            stackIn_9_0 = this.getActionEightLabel((byte) 74);
           }
           var12 = stackIn_9_0;
           var8 = var12;

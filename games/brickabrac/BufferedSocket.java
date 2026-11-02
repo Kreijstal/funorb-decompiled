@@ -223,8 +223,8 @@ final class BufferedSocket implements Runnable {
         this(socket, taskScheduler, 5000);
     }
 
-    public static void b(int param0) {
-        if (param0 < 89) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard < 89) {
           return;
         }
         field_h = null;

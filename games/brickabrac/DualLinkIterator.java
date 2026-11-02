@@ -14,11 +14,11 @@ final class DualLinkIterator implements Iterator {
     static RgbSprite[][] jungleSegsSprites;
     static int fullscreenDialogBodyBaseline;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_i = null;
         validationValid = null;
         archiveGzipInflater = null;
-        if (param0 < 55) {
+        if (obfuscationGuard < 55) {
           return;
         }
         jungleSegsSprites = (RgbSprite[][]) null;
@@ -27,7 +27,7 @@ final class DualLinkIterator implements Iterator {
     final static void closeTextChoiceDialog(byte obfuscationGuard) {
         DialogPointerGlobals.textChoiceDialogOpen = false;
         if (obfuscationGuard < 97) {
-          DualLinkIterator.a((byte) -19);
+          DualLinkIterator.clearSharedReferences((byte) -19);
         }
     }
 
@@ -65,7 +65,7 @@ final class DualLinkIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != -23176) {
-            DualLinkIterator.a((byte) -84);
+            DualLinkIterator.clearSharedReferences((byte) -84);
           }
           if (BytePayloadSubmission.decodeSpritesFromArchive(-107, fileId, archive, groupId)) {
             stackIn_6_0 = GamePresentationHelpers.buildRgbSprites(117);

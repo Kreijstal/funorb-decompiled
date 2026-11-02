@@ -215,12 +215,12 @@ final class SocialListEntry extends UiComponent {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         gamePlayers = null;
         field_Pb = null;
         field_Zb = null;
         field_Vb = null;
-        if (param0 >= -54) {
+        if (obfuscationGuard >= -54) {
           return;
         }
         field_bc = null;

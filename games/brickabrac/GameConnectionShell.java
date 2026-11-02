@@ -81,7 +81,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           this.g(false);
         }
         this.initializePacketLengths(123);
-        Widget.c((byte) -35);
+        Widget.resetEnabledFeatureMask((byte) -35);
     }
 
     final static RgbSprite a(RgbSprite param0, int param1) {
@@ -232,7 +232,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           return var2;
         }
         if (!LoginPanel.field_R) {
-          this.a("reconnect", 4000);
+          this.redirectToErrorPage("reconnect", 4000);
         }
         FarmBackground.g(108);
         FullscreenFailureKind.a(DirectByteStorage.field_e, (byte) -61, var2);
@@ -253,7 +253,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (KeyDispatchHelpers.enabledCommonPackets[1]) {
-            MidiSynthesizer.a(2, (byte) -46);
+            MidiSynthesizer.resendIntArrayRequests(2, (byte) -46);
           }
           if (KeyDispatchHelpers.enabledCommonPackets[2]) {
             LoginCredentials.a((byte) -61, 3);
@@ -262,7 +262,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             TooltipSprite.resendPendingAchievements(4, 13330);
           }
           if (KeyDispatchHelpers.enabledCommonPackets[4]) {
-            AppletSettingsUiHelpers.a(5, (byte) 115);
+            AppletSettingsUiHelpers.resendPendingLevelResultsAndRequests(5, (byte) 115);
           }
           if (KeyDispatchHelpers.enabledCommonPackets[5]) {
             ScrollPaneWithFooter.resendBytePayloadOperations(6, 0);
@@ -465,7 +465,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           discarded$1 = this.a(stackIn_13_1, (byte) 46, false);
         } else {
           if (clientStage >= 10) {
-            if (BubbleDistortion.e((byte) -126)) {
+            if (BubbleDistortion.isLogoAnimationFinished((byte) -126)) {
               if (AchievementIcon.field_j == 0) {
                 discarded$2 = this.a(false, (byte) 46, false);
               } else {
@@ -478,10 +478,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         halloweenSegsSprites = (RgbSprite[][]) null;
         fullPaddleSegmentSprites = null;
-        if (param0 > -103) {
+        if (obfuscationGuard > -103) {
           fullPaddleSegmentSprites = (RgbSprite[]) null;
         }
         field_z = null;
@@ -517,7 +517,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            ArchiveSource.a(27423);
+                            ArchiveSource.readLocalPlayerName(27423);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -621,7 +621,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             AlignedIconLabel.a((String) null, (Throwable) ((Object) var6_ref), 58);
-            this.a("crash", 4000);
+            this.redirectToErrorPage("crash", 4000);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -718,11 +718,11 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (NinjaBackground.mouseWheelSource != null) {
           GameplayAudioEvent.mouseWheelDelta = NinjaBackground.mouseWheelSource.pollRotation(500);
         }
-        if (IntrusiveHashIterator.a(false)) {
+        if (IntrusiveHashIterator.isLoggedInTransportActive(false)) {
           var3 = FriendListUi.a((byte) -98) * 1200;
           if (this.reconnectRequested ||
-            !(ProxySocketConnector.c(1) <= var3) &&
-            !(var3 >= QuickChatCategoryRegistry.a((byte) -35))) {
+            !(ProxySocketConnector.getKeyboardIdleTicks(1) <= var3) &&
+            !(var3 >= QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35))) {
             this.reconnectRequested = false;
             GameTransportHelpers.closeGameTransport((byte) 91);
             FarmBackground.g(120);
@@ -777,18 +777,18 @@ abstract class GameConnectionShell extends AppletGameShell {
               if (4 != OutgoingPacketHelpers.field_a) {
                 if (OutgoingPacketHelpers.field_a != 2) {
                   if (5 != OutgoingPacketHelpers.field_a) {
-                    this.a("js5connect", 4000);
+                    this.redirectToErrorPage("js5connect", 4000);
                   } else {
-                    this.a("outofdate", 4000);
+                    this.redirectToErrorPage("outofdate", 4000);
                   }
                 } else {
-                  this.a("js5connect_full", 4000);
+                  this.redirectToErrorPage("js5connect_full", 4000);
                 }
               } else {
-                this.a("js5io", 4000);
+                this.redirectToErrorPage("js5io", 4000);
               }
             } else {
-              this.a("js5crc", 4000);
+              this.redirectToErrorPage("js5crc", 4000);
             }
           }
         }
@@ -813,7 +813,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (clientStage == guardCode) {
           if (LoginCredentialKind.field_e != 0) {
-            ValidationIconWidget.field_K = TextChoiceDialogHitTest.a(PacketBuffer.field_j, true);
+            ValidationIconWidget.field_K = TextChoiceDialogHitTest.createResourceArchiveForIndex(PacketBuffer.field_j, true);
           }
           LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, RankingSocketHelpers.field_c, false);
           RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, InputOptionsHelpers.field_c, false);
@@ -840,7 +840,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
         }
         if (3 == clientStage &&
-          HuffmanCodec.a(RadialSelectorWidget.field_S, LabeledWidget.field_P, BoardPresentationHelpers.field_c, -111) &&
+          HuffmanCodec.areCommonUiArchivesReady(RadialSelectorWidget.field_S, LabeledWidget.field_P, BoardPresentationHelpers.field_c, -111) &&
           QuickChatPhraseRegistry.a(BoardPresentationHelpers.field_c, (byte) 101)) {
           AppletSettingsUiHelpers.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
@@ -851,7 +851,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             null != LevelDecoder.field_a) {
             stackIn_99_0 = !(MatchingTextValidator.field_k);
             stackIn_102_1 = !(MatchingTextValidator.field_k);
-            ToggleButtonWidget.a(stackIn_99_0, stackIn_102_1, guardCode ^ -15948, LevelDecoder.field_a);
+            ToggleButtonWidget.showLoginPanel(stackIn_99_0, stackIn_102_1, guardCode ^ -15948, LevelDecoder.field_a);
           }
           if (MatchResultScreen.field_u) {
             NewAchievementsScreen.f(967);
@@ -870,7 +870,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (10 == clientStage) {
           if (0 != LoginCredentialKind.field_e) {
-            GameplayAudioEvent.field_k = TextChoiceDialogHitTest.a(LevelPackCard.field_i, true);
+            GameplayAudioEvent.field_k = TextChoiceDialogHitTest.createResourceArchiveForIndex(LevelPackCard.field_i, true);
           }
           clientStage = 11;
         }
@@ -878,7 +878,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (clientStage == 11) {
           if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
             !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
-            ParisBackground.a((byte) 24, 0.0f, WidgetPaintStyle.a(GameplayAudioEvent.field_k, FriendListUi.field_a, 125, FocusableWidget.field_C));
+            ParisBackground.a((byte) 24, 0.0f, WidgetPaintStyle.formatArchiveProgressText(GameplayAudioEvent.field_k, FriendListUi.field_a, 125, FocusableWidget.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -908,7 +908,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.windowCanvas);
         }
         if (KeyDispatchHelpers.enabledCommonPackets[8]) {
-          HuffmanCodec.a(14114);
+          HuffmanCodec.writeReflectionCheckResponses(14114);
         }
     }
 

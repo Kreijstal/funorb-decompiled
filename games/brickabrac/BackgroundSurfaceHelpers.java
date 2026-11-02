@@ -7,11 +7,11 @@ final class BackgroundSurfaceHelpers {
     static String[] field_d;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_d = null;
         field_b = null;
         field_c = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_b = (String) null;
           field_a = null;
           return;

@@ -168,10 +168,10 @@ final class OutgoingPacketHelpers {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         crc64LookupTable = null;
         field_h = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         decodedSpriteHasAlpha = null;

@@ -8,9 +8,9 @@ final class KeyDispatchHelpers {
     static int field_b;
     static RgbSprite field_e;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_a = null;
-        if (param0 != 85) {
+        if (obfuscationGuard != 85) {
           return;
         }
         field_e = null;

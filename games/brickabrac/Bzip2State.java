@@ -41,11 +41,11 @@ final class Bzip2State {
     static String field_H;
     private static String field_J;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_r = null;
         jungleBackgroundColors = null;
         field_v = null;
-        if (param0 <= -95) {
+        if (obfuscationGuard <= -95) {
           field_H = null;
           field_m = null;
           return;

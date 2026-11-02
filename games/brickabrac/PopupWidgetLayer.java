@@ -255,9 +255,9 @@ abstract class PopupWidgetLayer extends WidgetLayer {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         heapDiagnosticLine = null;
-        if (param0 <= 110) {
+        if (obfuscationGuard <= 110) {
           return;
         }
         field_V = null;

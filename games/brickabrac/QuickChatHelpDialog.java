@@ -15,7 +15,7 @@ final class QuickChatHelpDialog extends UiComponent {
     static long field_Zb;
     static String field_Qb;
 
-    final static boolean a(long param0, int param1, String param2, int[] param3, int param4) {
+    final static boolean canUseQuickChat(long recipientId, int obfuscationGuard, String recipientName, int[] menuIndices, int channel) {
         RuntimeException var6 = null;
         PlayerBoard var7 = null;
         boolean stackIn_8_0 = false;
@@ -26,13 +26,13 @@ final class QuickChatHelpDialog extends UiComponent {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -3) {
+          if (obfuscationGuard != -3) {
             var7 = (PlayerBoard) null;
             QuickChatHelpDialog.getLeverFrameIndex((MultiplayerMatch) null, 109, -70, (PlayerBoard) null);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (param3 != null && (param4 != 2 ||
-            LevelSelectScreen.a(param0, param2, -123))) {
+          if (menuIndices != null && (channel != 2 ||
+            LevelSelectScreen.a(recipientId, recipientName, -123))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -44,25 +44,25 @@ final class QuickChatHelpDialog extends UiComponent {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_11_0 = var6;
-          stackIn_11_1 = new StringBuilder().append("kb.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_11_1 = new StringBuilder().append("kb.F(").append(recipientId).append(',').append(obfuscationGuard).append(',');
+          if (recipientName == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
+          if (menuIndices == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(channel).append(')').toString());
         }
     }
 
     final boolean updateAndPollDismissal(byte obfuscationGuard, boolean unusedInputFlag) {
         if (obfuscationGuard < 63) {
-          QuickChatHelpDialog.h(-91);
+          QuickChatHelpDialog.getFriendsListContent(-91);
           this.updateRoot(true, -15211);
           if (BackgroundScene.pressedButton == 0) {
             return this.closeButton.pressedButton != 0 ? true : false;
@@ -85,8 +85,8 @@ final class QuickChatHelpDialog extends UiComponent {
         return true;
     }
 
-    public static void d(byte param0) {
-        if (param0 >= 40) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard >= 40) {
           field_Ub = null;
           field_Tb = null;
           field_Rb = null;
@@ -216,7 +216,7 @@ final class QuickChatHelpDialog extends UiComponent {
           this.closeButton.setBounds(15, 5, -20 + title.width, 15, (byte) 64);
           body.setBounds(this.height - title.height, title.height, 0, this.width, (byte) 64);
           subtitle.setBounds(15, 20, 0, this.width, (byte) 64);
-          body.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, body.height, 2105376);
+          body.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 8421504, 3, 11579568, body.height, 2105376);
           title.addChild(this.closeButton, 0);
           body.addChild(subtitle, 0);
           this.addChild(title, 0);
@@ -268,8 +268,8 @@ final class QuickChatHelpDialog extends UiComponent {
         }
     }
 
-    final static UiComponent h(int param0) {
-        if (param0 != 2) {
+    final static UiComponent getFriendsListContent(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           field_Vb = (UiComponent) null;
           return GameScreen.friendsListPane.content;
         }
@@ -280,7 +280,7 @@ final class QuickChatHelpDialog extends UiComponent {
         try {
           RadialSelectorRenderer.a(48, param0);
           int var2_int = 81 % ((param1 - 86) / 38);
-          MusicPatch.a(0, WidgetTextLayout.field_d, false);
+          MusicPatch.pushAccountMessageDialog(0, WidgetTextLayout.field_d, false);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -318,7 +318,7 @@ final class QuickChatHelpDialog extends UiComponent {
           isPlayerMasked = maskedValue;
           if (obfuscationGuard <= 63) {
             unusedWords = (int[]) null;
-            QuickChatHelpDialog.a(-35L, 83, (String) null, (int[]) null, -41);
+            QuickChatHelpDialog.canUseQuickChat(-35L, 83, (String) null, (int[]) null, -41);
           }
           if (isPlayerMasked == 0 &&
             board.boardState == 2 && (!TextFieldRenderer.field_A ||

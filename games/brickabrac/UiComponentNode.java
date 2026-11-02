@@ -111,7 +111,7 @@ class UiComponentNode extends DualLinkNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         halloweenCharacterSprite = null;
         field_B = null;
         field_x = null;
@@ -119,7 +119,7 @@ class UiComponentNode extends DualLinkNode {
         field_v = null;
         field_u = null;
         field_y = null;
-        if (param0 > -98) {
+        if (obfuscationGuard > -98) {
           byte[] var2 = (byte[]) null;
           UiComponentNode.computeCrc32((byte[]) null, 51, 121, 59);
         }

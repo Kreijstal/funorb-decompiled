@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteGeometry {
     byte[] indices;
     int[] palette;
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendPaletteRowsWithAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -31,7 +31,7 @@ final class IndexedSprite extends IndexedSpriteGeometry {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -134,7 +134,7 @@ final class IndexedSprite extends IndexedSpriteGeometry {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.b(Rasterizer2D.pixels, this.indices, this.palette, var5, var4, var7, var6, var8, var9, alpha);
+        IndexedSprite.blendPaletteRowsWithAlpha(Rasterizer2D.pixels, this.indices, this.palette, var5, var4, var7, var6, var8, var9, alpha);
     }
 
     final void drawQuarter(int x, int y) {
@@ -259,10 +259,10 @@ final class IndexedSprite extends IndexedSpriteGeometry {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(Rasterizer2D.pixels, this.indices, this.palette, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyPaletteRows(Rasterizer2D.pixels, this.indices, this.palette, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void copyPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -365,7 +365,7 @@ final class IndexedSprite extends IndexedSpriteGeometry {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(Rasterizer2D.pixels, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyNonzeroPaletteRows(Rasterizer2D.pixels, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
     IndexedSprite(int width, int height, int paletteSize) {

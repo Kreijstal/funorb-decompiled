@@ -20,7 +20,7 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard) {
-            DirectByteStorage.c(-28);
+            DirectByteStorage.clearSharedReferences(-28);
           }
           stackIn_5_0 = (1 == packet.readBits(1, (byte) 127));
           return stackIn_5_0;
@@ -113,9 +113,9 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_l = null;
-        if (param0 != 7301) {
+        if (obfuscationGuard != 7301) {
           return;
         }
         field_g = null;

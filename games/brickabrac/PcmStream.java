@@ -298,7 +298,7 @@ final class PcmStream extends AudioStream {
         return this.targetGain == -2147483648 ? 0 : this.targetGain;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmStream param8) {
+    private final static int mixUnitSpeedMonoForward(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -351,7 +351,7 @@ final class PcmStream extends AudioStream {
         return param3;
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmStream param8) {
+    private final static int mixUnitSpeedMonoBackward(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -421,7 +421,7 @@ final class PcmStream extends AudioStream {
         this.recalculateGains();
     }
 
-    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
+    private final static int mixResampledStereoBackward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -470,7 +470,7 @@ final class PcmStream extends AudioStream {
         return param5 >> 1;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmStream param13, int param14, int param15) {
+    private final static int mixResampledStereoRampedForward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -605,7 +605,7 @@ final class PcmStream extends AudioStream {
         this.setGainAndPan(volume << 6, this.getPan());
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmStream param12) {
+    private final static int mixUnitSpeedStereoRampedForward(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -808,7 +808,7 @@ final class PcmStream extends AudioStream {
         return this.pan < 0 ? -1 : this.pan;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10) {
+    private final static int mixUnitSpeedStereoBackward(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -874,7 +874,7 @@ final class PcmStream extends AudioStream {
         return param4 >> 1;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
+    private final static int mixResampledMonoRampedForward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.leftGain = param11.leftGain - param11.leftGainStep * param5;
@@ -918,7 +918,7 @@ final class PcmStream extends AudioStream {
         return param5;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
+    private final static int mixResampledMonoRampedBackward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.leftGain = param11.leftGain - param11.leftGainStep * param5;
@@ -966,47 +966,47 @@ final class PcmStream extends AudioStream {
         return null;
     }
 
-    private final int b(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixForward(int[] output, int offset, int boundary256, int endOffset, int boundarySample) {
         int var6;
         do {
           if (this.rampRemaining <= 0) {
             if (this.step256 == 256 &&
               (this.position256 & 255) == 0) {
               if (PcmPlayer.stereo) {
-                return PcmStream.b(0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, 0, param3, param2, this);
+                return PcmStream.mixUnitSpeedStereoForward(0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, 0, endOffset, boundary256, this);
               }
-              return PcmStream.a(((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, 0, param3, param2, this);
+              return PcmStream.mixUnitSpeedMonoForward(((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, 0, endOffset, boundary256, this);
             }
             if (PcmPlayer.stereo) {
-              return PcmStream.c(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, 0, param3, param2, this, this.step256, param4);
+              return PcmStream.mixResampledStereoForward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, 0, endOffset, boundary256, this, this.step256, boundarySample);
             }
-            return PcmStream.b(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, 0, param3, param2, this, this.step256, param4);
+            return PcmStream.mixResampledMonoForward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, 0, endOffset, boundary256, this, this.step256, boundarySample);
           }
-          var6 = param1 + this.rampRemaining;
-          if (var6 > param3) {
-            var6 = param3;
+          var6 = offset + this.rampRemaining;
+          if (var6 > endOffset) {
+            var6 = endOffset;
           }
-          this.rampRemaining = this.rampRemaining + param1;
+          this.rampRemaining = this.rampRemaining + offset;
           if (this.step256 == 256 &&
             (this.position256 & 255) == 0) {
             if (!PcmPlayer.stereo) {
-              param1 = PcmStream.b(((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, this.gainStep, 0, var6, param2, this);
+              offset = PcmStream.mixUnitSpeedMonoRampedForward(((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, this.gainStep, 0, var6, boundary256, this);
             } else {
-              param1 = PcmStream.b(0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this);
+              offset = PcmStream.mixUnitSpeedStereoRampedForward(0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, boundary256, this);
             }
           } else {
             if (!PcmPlayer.stereo) {
-              param1 = PcmStream.a(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, this.gainStep, 0, var6, param2, this, this.step256, param4);
+              offset = PcmStream.mixResampledMonoRampedForward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, this.gainStep, 0, var6, boundary256, this, this.step256, boundarySample);
             } else {
-              param1 = PcmStream.a(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this, this.step256, param4);
+              offset = PcmStream.mixResampledStereoRampedForward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, boundary256, this, this.step256, boundarySample);
             }
           }
-          this.rampRemaining = this.rampRemaining - param1;
+          this.rampRemaining = this.rampRemaining - offset;
           if (this.rampRemaining != 0) {
-            return param1;
+            return offset;
           }
         } while (!this.finishRamp());
-        return param3;
+        return endOffset;
     }
 
     final static PcmStream createWithGain(PcmSound sound, int step256, int gain, int pan) {
@@ -1031,7 +1031,7 @@ final class PcmStream extends AudioStream {
         this.step256 = -this.step256;
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmStream param9) {
+    private final static int mixUnitSpeedMonoRampedForward(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1093,7 +1093,7 @@ final class PcmStream extends AudioStream {
         return param3;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10) {
+    private final static int mixUnitSpeedStereoForward(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1208,7 +1208,7 @@ final class PcmStream extends AudioStream {
           if (!this.pingPong) {
             if (this.step256 >= 0) {
               while (true) {
-                var9 = this.b(output, var9, var6, frames, (int) var4.samples[this.loopStart]);
+                var9 = this.mixForward(output, var9, var6, frames, (int) var4.samples[this.loopStart]);
                 if (this.position256 < var6) {
                   return;
                 }
@@ -1216,7 +1216,7 @@ final class PcmStream extends AudioStream {
               }
             }
             while (true) {
-              var9 = this.a(output, var9, var5, frames, (int) var4.samples[this.loopEnd - 1]);
+              var9 = this.mixBackward(output, var9, var5, frames, (int) var4.samples[this.loopEnd - 1]);
               if (this.position256 >= var5) {
                 return;
               }
@@ -1224,7 +1224,7 @@ final class PcmStream extends AudioStream {
             }
           }
           if (this.step256 < 0) {
-            var9 = this.a(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
+            var9 = this.mixBackward(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
             if (this.position256 >= var5) {
               return;
             }
@@ -1232,13 +1232,13 @@ final class PcmStream extends AudioStream {
             this.step256 = -this.step256;
           }
           while (true) {
-            var9 = this.b(output, var9, var6, frames, (int) var4.samples[this.loopEnd - 1]);
+            var9 = this.mixForward(output, var9, var6, frames, (int) var4.samples[this.loopEnd - 1]);
             if (this.position256 < var6) {
               return;
             }
             this.position256 = var6 + var6 - 1 - this.position256;
             this.step256 = -this.step256;
-            var9 = this.a(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
+            var9 = this.mixBackward(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
             if (this.position256 >= var5) {
               return;
             }
@@ -1251,7 +1251,7 @@ final class PcmStream extends AudioStream {
           if (!this.pingPong) {
             if (this.step256 < 0) {
               while (true) {
-                var9 = this.a(output, var9, var5, frames, (int) var4.samples[this.loopEnd - 1]);
+                var9 = this.mixBackward(output, var9, var5, frames, (int) var4.samples[this.loopEnd - 1]);
                 if (this.position256 >= var5) {
                   return;
                 }
@@ -1267,7 +1267,7 @@ final class PcmStream extends AudioStream {
               this.loopCount = 0;
             } else {
               while (true) {
-                var9 = this.b(output, var9, var6, frames, (int) var4.samples[this.loopStart]);
+                var9 = this.mixForward(output, var9, var6, frames, (int) var4.samples[this.loopStart]);
                 if (this.position256 < var6) {
                   return;
                 }
@@ -1286,7 +1286,7 @@ final class PcmStream extends AudioStream {
           }
           else {
             if (this.step256 < 0) {
-              var9 = this.a(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
+              var9 = this.mixBackward(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
               if (this.position256 >= var5) {
                 return;
               }
@@ -1298,7 +1298,7 @@ final class PcmStream extends AudioStream {
             }
             if (decompiledFrameRemainder0) {
               do {
-                var9 = this.b(output, var9, var6, frames, (int) var4.samples[this.loopEnd - 1]);
+                var9 = this.mixForward(output, var9, var6, frames, (int) var4.samples[this.loopEnd - 1]);
                 if (this.position256 < var6) {
                   return;
                 }
@@ -1309,7 +1309,7 @@ final class PcmStream extends AudioStream {
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                var9 = this.a(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
+                var9 = this.mixBackward(output, var9, var5, frames, (int) var4.samples[this.loopStart]);
                 if (this.position256 >= var5) {
                   return;
                 }
@@ -1322,7 +1322,7 @@ final class PcmStream extends AudioStream {
           }
         }
         if (this.step256 >= 0) {
-          discarded$4 = this.b(output, var9, var7, frames, 0);
+          discarded$4 = this.mixForward(output, var9, var7, frames, 0);
           if (this.position256 >= var7) {
             this.position256 = var7;
             this.cancelRamp();
@@ -1330,7 +1330,7 @@ final class PcmStream extends AudioStream {
           }
           return;
         }
-        discarded$3 = this.a(output, var9, 0, frames, 0);
+        discarded$3 = this.mixBackward(output, var9, 0, frames, 0);
         if (this.position256 >= 0) {
           return;
         }
@@ -1340,7 +1340,7 @@ final class PcmStream extends AudioStream {
         return;
     }
 
-    private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
+    private final static int mixResampledStereoForward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1390,7 +1390,7 @@ final class PcmStream extends AudioStream {
         return param5 >> 1;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmStream param9) {
+    private final static int mixUnitSpeedMonoRampedBackward(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1456,50 +1456,50 @@ final class PcmStream extends AudioStream {
         return this.step256 < 0 ? -this.step256 : this.step256;
     }
 
-    private final int a(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixBackward(int[] output, int offset, int boundary256, int endOffset, int boundarySample) {
         int var6;
         do {
           if (this.rampRemaining <= 0) {
             if (this.step256 == -256 &&
               (this.position256 & 255) == 0) {
               if (PcmPlayer.stereo) {
-                return PcmStream.a(0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, 0, param3, param2, this);
+                return PcmStream.mixUnitSpeedStereoBackward(0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, 0, endOffset, boundary256, this);
               }
-              return PcmStream.b(((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, 0, param3, param2, this);
+              return PcmStream.mixUnitSpeedMonoBackward(((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, 0, endOffset, boundary256, this);
             }
             if (PcmPlayer.stereo) {
-              return PcmStream.d(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, 0, param3, param2, this, this.step256, param4);
+              return PcmStream.mixResampledStereoBackward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, 0, endOffset, boundary256, this, this.step256, boundarySample);
             }
-            return PcmStream.a(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, 0, param3, param2, this, this.step256, param4);
+            return PcmStream.mixResampledMonoBackward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, 0, endOffset, boundary256, this, this.step256, boundarySample);
           }
-          var6 = param1 + this.rampRemaining;
-          if (var6 > param3) {
-            var6 = param3;
+          var6 = offset + this.rampRemaining;
+          if (var6 > endOffset) {
+            var6 = endOffset;
           }
-          this.rampRemaining = this.rampRemaining + param1;
+          this.rampRemaining = this.rampRemaining + offset;
           if (this.step256 == -256 &&
             (this.position256 & 255) == 0) {
             if (!PcmPlayer.stereo) {
-              param1 = PcmStream.a(((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, this.gainStep, 0, var6, param2, this);
+              offset = PcmStream.mixUnitSpeedMonoRampedBackward(((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, this.gainStep, 0, var6, boundary256, this);
             } else {
-              param1 = PcmStream.a(0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this);
+              offset = PcmStream.mixUnitSpeedStereoRampedBackward(0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, boundary256, this);
             }
           } else {
             if (!PcmPlayer.stereo) {
-              param1 = PcmStream.b(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.currentGain, this.gainStep, 0, var6, param2, this, this.step256, param4);
+              offset = PcmStream.mixResampledMonoRampedBackward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.currentGain, this.gainStep, 0, var6, boundary256, this, this.step256, boundarySample);
             } else {
-              param1 = PcmStream.b(0, 0, ((PcmSound) (this.data)).samples, param0, this.position256, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this, this.step256, param4);
+              offset = PcmStream.mixResampledStereoRampedBackward(0, 0, ((PcmSound) (this.data)).samples, output, this.position256, offset, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, boundary256, this, this.step256, boundarySample);
             }
           }
-          this.rampRemaining = this.rampRemaining - param1;
+          this.rampRemaining = this.rampRemaining - offset;
           if (this.rampRemaining != 0) {
-            return param1;
+            return offset;
           }
         } while (!this.finishRamp());
-        return param3;
+        return endOffset;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10, int param11, int param12) {
+    private final static int mixResampledMonoBackward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -1536,7 +1536,7 @@ final class PcmStream extends AudioStream {
         return param5;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmStream param12) {
+    private final static int mixUnitSpeedStereoRampedBackward(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1625,7 +1625,7 @@ final class PcmStream extends AudioStream {
         return this.rampRemaining != 0;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmStream param13, int param14, int param15) {
+    private final static int mixResampledStereoRampedBackward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1693,7 +1693,7 @@ final class PcmStream extends AudioStream {
         return pan < 0 ? -gain : (int)((double)gain * Math.sqrt((double)pan * 0.0001220703125) + 0.5);
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10, int param11, int param12) {
+    private final static int mixResampledMonoForward(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {

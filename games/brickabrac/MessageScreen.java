@@ -7,12 +7,12 @@ final class MessageScreen extends MenuScreen {
     static UiComponent field_s;
     static MusicTrack panicMusicTrack;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         panicMusicTrack = null;
         field_r = null;
         field_u = null;
         field_s = null;
-        if (param0 == 88) {
+        if (obfuscationGuard == 88) {
           return;
         }
         MessageScreen.a((String) null, -65L, 54);
@@ -201,7 +201,7 @@ final class MessageScreen extends MenuScreen {
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -107, 45);
         ContextActionController.field_g.drawParagraph(CanvasResizeController.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (obfuscationGuard < -14) {
-          this.a(0);
+          this.drawEnabledButtons(0);
           return;
         }
     }
@@ -211,12 +211,12 @@ final class MessageScreen extends MenuScreen {
         if (obfuscationGuard) {
           return;
         }
-        MessageScreen.f((byte) -66);
+        MessageScreen.clearSharedReferences((byte) -66);
     }
 
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
         if (obfuscationGuard != 1) {
-          MessageScreen.f((byte) 127);
+          MessageScreen.clearSharedReferences((byte) 127);
           return this.buttonTop;
         }
         return this.buttonTop;

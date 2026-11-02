@@ -221,8 +221,8 @@ final class BubbleDistortion extends CircleBody {
         }
     }
 
-    public static void c(int param0) {
-        if (param0 <= 122) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard <= 122) {
           return;
         }
         field_A = null;
@@ -236,14 +236,14 @@ final class BubbleDistortion extends CircleBody {
 
     final static void a(byte param0, int param1) {
         if (param0 != 86) {
-          BubbleDistortion.e((byte) -105);
-          SoundCache.a(param0 ^ 87, param1);
+          BubbleDistortion.isLogoAnimationFinished((byte) -105);
+          SoundCache.setMusicGain(param0 ^ 87, param1);
           return;
         }
-        SoundCache.a(param0 ^ 87, param1);
+        SoundCache.setMusicGain(param0 ^ 87, param1);
     }
 
-    final static void a(int param0, RgbSprite param1, RgbSprite param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11) {
+    final static void drawParallaxLayers(int param0, RgbSprite param1, RgbSprite param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11) {
         try {
           param2.drawAt(param9 + ((-param2.canvasWidth + param11) / 2 + (param0 * 5 >> 16)), param8);
           param5.drawTransparent((10 * param0 >> 16) + ((-param5.canvasWidth + param11) / 2 + param9 - 87 / param3), -(80 / param3) + (-param5.canvasHeight + 480 + (param6 + param8)));
@@ -298,12 +298,12 @@ final class BubbleDistortion extends CircleBody {
         }
     }
 
-    final static boolean e(byte param0) {
-        if (param0 < -77) {
+    final static boolean isLogoAnimationFinished(byte obfuscationGuard) {
+        if (obfuscationGuard < -77) {
           return MatchResultScreen.logoAnimationTicks > 250 ? true : false;
         }
         RgbSprite var2 = (RgbSprite) null;
-        BubbleDistortion.a(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
+        BubbleDistortion.drawParallaxLayers(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
         return MatchResultScreen.logoAnimationTicks > 250 ? true : false;
     }
 

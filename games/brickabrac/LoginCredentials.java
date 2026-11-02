@@ -60,7 +60,7 @@ abstract class LoginCredentials {
 
     abstract LoginCredentialKind getCredentialKind(int obfuscationGuard);
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_h = null;
         field_i = (String[][]) null;
         diagnosticLines = null;
@@ -69,7 +69,7 @@ abstract class LoginCredentials {
         field_a = null;
         field_g = null;
         field_e = null;
-        int var1 = -5 % ((param0 - 66) / 48);
+        int var1 = -5 % ((obfuscationGuard - 66) / 48);
         field_j = null;
     }
 

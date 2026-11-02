@@ -92,7 +92,7 @@ final class ArchiveIndex {
             cumulativeGroupId = 0;
             this.groupIds = new int[this.groupCount];
             if (obfuscationGuard) {
-              ArchiveIndex.a((byte) 19);
+              ArchiveIndex.clearSharedReferences((byte) 19);
             }
             maxGroupId = -1;
             if (formatVersion >= 7) {
@@ -266,7 +266,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(int param0, int param1, RgbSprite param2, int param3, RgbSprite param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
+    final static void drawParallaxLayers(int param0, int param1, RgbSprite param2, int param3, RgbSprite param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -310,8 +310,8 @@ final class ArchiveIndex {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 <= 108) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard <= 108) {
           return;
         }
         field_q = null;
@@ -321,7 +321,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] data, int expectedCrc, byte[] expectedDigest) {
         int var4_int = 0;
         try {
-          this.indexCrc = NanoGameClock.a(data.length, data, (byte) -86);
+          this.indexCrc = NanoGameClock.computeByteArrayCrc32(data.length, data, (byte) -86);
           if (expectedCrc != this.indexCrc) {
             throw new RuntimeException();
           }

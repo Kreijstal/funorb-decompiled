@@ -90,9 +90,9 @@ final class TimedSplashScreen extends MenuScreen {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_u = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_s = null;
           keyEventCharacters = null;
           return;
@@ -109,7 +109,7 @@ final class TimedSplashScreen extends MenuScreen {
         }
         RankingsScreen.field_t.drawOpaque(0, 0);
         DelayedPacket.d(0);
-        MovingBody.a((byte) -115);
+        MovingBody.drawGameLogo((byte) -115);
     }
 
     final static RgbSprite[] a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {

@@ -11,10 +11,10 @@ final class TableNameEntry {
     static UiComponent field_h;
     String name;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_h = null;
         field_g = null;
-        if (param0 >= -51) {
+        if (obfuscationGuard >= -51) {
           return;
         }
         desertSegsSprites = (RgbSprite[][]) null;
@@ -44,9 +44,9 @@ final class TableNameEntry {
             ResourcePreparationEntry.a(ArchiveNetworkRequest.d((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
             return;
           }
-          if (!BubbleDistortion.e((byte) -94)) {
+          if (!BubbleDistortion.isLogoAnimationFinished((byte) -94)) {
             Rasterizer2D.clear();
-            MultiValueSliderRenderer.a(false, 240, 320);
+            MultiValueSliderRenderer.drawLogoAnimation(false, 240, 320);
             DiagnosticTextLine.a(param1, 0, 14209, 0);
             return;
           }

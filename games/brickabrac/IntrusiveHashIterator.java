@@ -16,8 +16,8 @@ final class IntrusiveHashIterator implements Iterator {
     static String[] fullscreenPluralPrefix;
     static RgbSprite field_c;
 
-    static int a(int param0, int param1) {
-        return param0 & param1;
+    static int bitwiseAnd(int left, int right) {
+        return left & right;
     }
 
     private final void resetIterator(int obfuscationGuard) {
@@ -76,9 +76,9 @@ final class IntrusiveHashIterator implements Iterator {
         return var1;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isLoggedInTransportActive(boolean obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0) {
+        if (obfuscationGuard) {
           field_g = (MeshAudioHelpers) null;
         }
         stackIn_6_0 = (null != WhirlpoolHasher.gameTransport) && (MenuButton.loggedInConnection == GameConnectionHelpers.connectionPhase);
@@ -185,8 +185,8 @@ final class IntrusiveHashIterator implements Iterator {
         }
     }
 
-    public static void c(int param0) {
-        if (param0 > -8) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard > -8) {
           return;
         }
         field_g = null;

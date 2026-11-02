@@ -9,8 +9,8 @@ final class DialogPointerGlobals {
     static volatile int livePressY;
     private static String field_z;
 
-    public static void a(int param0) {
-        if (param0 == -15504) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == -15504) {
           field_c = null;
           field_d = null;
           field_b = null;

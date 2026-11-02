@@ -59,10 +59,10 @@ abstract class DateInputWidget extends WidgetGroup implements ValidatableWidget 
 
     abstract int getYear(int obfuscationGuard);
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_J = null;
         field_K = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           TextFont var2 = (TextFont) null;
           DateInputWidget.a(102, -93, (byte) 33, 30, -107, 27, -54, 36, (TextFont) null, 50, -58, -25, 44);
         }

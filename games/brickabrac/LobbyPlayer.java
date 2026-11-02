@@ -25,8 +25,8 @@ final class LobbyPlayer extends UiComponent {
     UiComponent ratingLabel;
     int statusChangeTick;
 
-    public static void h(int param0) {
-        int var1 = 102 % ((param0 - 48) / 43);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = 102 % ((obfuscationGuard - 48) / 43);
         field_jc = null;
         field_bc = null;
         field_Sb = null;

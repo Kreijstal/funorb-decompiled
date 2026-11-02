@@ -19,10 +19,10 @@ final class FarmBackground extends BackgroundScene {
         if (this.hasSprites((byte) -122)) {
           var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -36);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            RegistrationResponseDialog.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
+            RegistrationResponseDialog.renderBackdropSurface(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          MultiValueSliderRenderer.a(-899814320, 306, destinationX, ActivityIndicatorWidget.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
+          MultiValueSliderRenderer.drawParallaxLayers(-899814320, 306, destinationX, ActivityIndicatorWidget.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, FontRequestHelpers.farmBackgroundColors[colorIndex], 22953);
         }
@@ -33,10 +33,10 @@ final class FarmBackground extends BackgroundScene {
         if (this.hasSprites((byte) -106)) {
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            RegistrationResponseDialog.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
+            RegistrationResponseDialog.renderBackdropSurface(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          MultiValueSliderRenderer.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, FontRequestHelpers.farmMidSprite, scroll16, 0);
+          MultiValueSliderRenderer.drawParallaxLayers(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, FontRequestHelpers.farmMidSprite, scroll16, 0);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, FontRequestHelpers.farmBackgroundColors[colorIndex], 22953);
         }
@@ -45,7 +45,7 @@ final class FarmBackground extends BackgroundScene {
         }
     }
 
-    final static RgbSprite a(RgbSprite param0, boolean param1, int param2) {
+    final static RgbSprite createHorizontallyTiledSprite(RgbSprite sprite, boolean obfuscationGuard, int count) {
         int var4 = 0;
         RgbSprite var3 = null;
         RuntimeException var3_ref = null;
@@ -58,14 +58,14 @@ final class FarmBackground extends BackgroundScene {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             stackIn_3_0 = (RgbSprite) null;
             return stackIn_3_0;
           }
-          var3 = new RgbSprite(param0.canvasWidth * param2, param0.canvasHeight);
+          var3 = new RgbSprite(sprite.canvasWidth * count, sprite.canvasHeight);
           var3.bindRasterTarget();
-          for (var4 = 0; param2 > var4; var4++) {
-            param0.drawTransparent(param0.canvasWidth * var4, 0);
+          for (var4 = 0; count > var4; var4++) {
+            sprite.drawTransparent(sprite.canvasWidth * var4, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 116);
           stackIn_8_0 = var3;
@@ -75,12 +75,12 @@ final class FarmBackground extends BackgroundScene {
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("qb.P(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(',').append(count).append(')').toString());
         }
     }
 
@@ -272,11 +272,11 @@ final class FarmBackground extends BackgroundScene {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_t = null;
         field_v = null;
         field_y = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           String var2 = (String) null;
           FarmBackground.addExceptionContext((Throwable) null, (String) null);
         }
@@ -303,7 +303,7 @@ final class FarmBackground extends BackgroundScene {
           AchievementIcon.field_j = 11;
         }
         if (param0 < 105) {
-          FarmBackground.f(-80);
+          FarmBackground.clearSharedReferences(-80);
         }
         LevelCompleteScreen.field_C = true;
     }

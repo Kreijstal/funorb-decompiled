@@ -31,10 +31,10 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_l = null;
         field_m = null;
-        if (param0 <= 122) {
+        if (obfuscationGuard <= 122) {
           EmailValidator.snapshotMouseInput(23);
           field_k = null;
           return;

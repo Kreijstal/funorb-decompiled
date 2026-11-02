@@ -10,9 +10,9 @@ final class FileCacheStore {
     private int maxEntryBytes;
     private BufferedFile indexFile;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_e = null;
-        if (param0 != 47) {
+        if (obfuscationGuard != 47) {
           field_e = (String) null;
         }
     }
@@ -132,7 +132,7 @@ final class FileCacheStore {
                 FullscreenFailureKind.cacheSectorScratch[5] = (byte)sector;
                 FullscreenFailureKind.cacheSectorScratch[2] = (byte)length;
                 if (!obfuscationGuard) {
-                  FileCacheStore.a((byte) 8);
+                  FileCacheStore.clearSharedReferences((byte) 8);
                 }
                 FullscreenFailureKind.cacheSectorScratch[1] = (byte)(length >> 8);
                 FullscreenFailureKind.cacheSectorScratch[3] = (byte)(sector >> 16);

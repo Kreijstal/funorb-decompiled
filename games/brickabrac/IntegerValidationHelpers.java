@@ -15,7 +15,7 @@ final class IntegerValidationHelpers {
           return MouseInput.sharedWidgetTheme;
         }
         MouseInput.sharedWidgetTheme = new WidgetTheme();
-        MouseInput.sharedWidgetTheme.a(ArchiveNetworkClient.field_u, 13421772);
+        MouseInput.sharedWidgetTheme.installRenderers(ArchiveNetworkClient.field_u, 13421772);
         MouseInput.sharedWidgetTheme.field_p = 2763306;
         MouseInput.sharedWidgetTheme.field_h = 6;
         MouseInput.sharedWidgetTheme.field_a = 4;
@@ -144,11 +144,11 @@ final class IntegerValidationHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
         field_c = null;
         field_d = null;
-        if (param0 <= 110) {
+        if (obfuscationGuard <= 110) {
           field_d = (UiComponent) null;
         }
     }

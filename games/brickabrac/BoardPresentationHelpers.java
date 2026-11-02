@@ -64,8 +64,8 @@ final class BoardPresentationHelpers {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 == 2) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 2) {
           field_b = null;
           field_c = null;
           arcticSegsSprites = (RgbSprite[][]) null;
@@ -114,7 +114,7 @@ final class BoardPresentationHelpers {
             if (96 < messageFade96) {
               messageFade96 = 96;
             }
-            messageSprite.b(7 + (-messageSprite.canvasWidth + boardWidth) / 2, 260, messageFade96 * 256 / 96);
+            messageSprite.drawAlphaBlended(7 + (-messageSprite.canvasWidth + boardWidth) / 2, 260, messageFade96 * 256 / 96);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

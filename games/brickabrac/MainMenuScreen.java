@@ -54,7 +54,7 @@ final class MainMenuScreen extends MenuScreen {
               var8 = Rasterizer2D.pixels[var7];
               incrementValue$0 = var7;
               var7++;
-              Rasterizer2D.pixels[incrementValue$0] = IntrusiveHashIterator.a(-16711936, IntrusiveHashIterator.a(var8, 16711935) * param3) + IntrusiveHashIterator.a(16711680, param3 * IntrusiveHashIterator.a(65280, var8)) >>> 8;
+              Rasterizer2D.pixels[incrementValue$0] = IntrusiveHashIterator.bitwiseAnd(-16711936, IntrusiveHashIterator.bitwiseAnd(var8, 16711935) * param3) + IntrusiveHashIterator.bitwiseAnd(16711680, param3 * IntrusiveHashIterator.bitwiseAnd(65280, var8)) >>> 8;
             }
             var7 = var7 + var6_int;
           }
@@ -85,8 +85,8 @@ final class MainMenuScreen extends MenuScreen {
         int var3 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -68);
         GzipInflater.a(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
-        MovingBody.a((byte) -105);
-        this.a(0);
+        MovingBody.drawGameLogo((byte) -105);
+        this.drawEnabledButtons(0);
         if (obfuscationGuard > -14) {
           field_s = (RgbSprite) null;
         }
@@ -183,14 +183,14 @@ final class MainMenuScreen extends MenuScreen {
 
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_s = null;
         field_u = null;
         field_z = null;
         field_t = null;
         field_y = null;
         field_w = null;
-        if (param0) {
+        if (obfuscationGuard) {
           int[] var2 = (int[]) null;
           MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
         }
@@ -199,7 +199,7 @@ final class MainMenuScreen extends MenuScreen {
 
     final void refreshMenu(int obfuscationGuard) {
         if (obfuscationGuard > -60) {
-          MainMenuScreen.c(false);
+          MainMenuScreen.clearSharedReferences(false);
         }
         if (!DelayedPacket.c(102)) {
           this.initializeButtons(PasswordValidator.field_o, 0);
@@ -256,7 +256,7 @@ final class MainMenuScreen extends MenuScreen {
             var13 = greenQ16;
             var14 = blueQ16;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = IntrusiveHashIterator.a(255, var14 >> 17) - (-IntrusiveHashIterator.a(var12 >> 1, 16711680) + (-(IntrusiveHashIterator.a(33423869, var13) >> 9) - var15));
+            var10[var11] = IntrusiveHashIterator.bitwiseAnd(255, var14 >> 17) - (-IntrusiveHashIterator.bitwiseAnd(var12 >> 1, 16711680) + (-(IntrusiveHashIterator.bitwiseAnd(33423869, var13) >> 9) - var15));
             greenQ16 = greenQ16 + greenStepQ16;
             blueQ16 = blueQ16 + blueStepQ16;
             offset++;

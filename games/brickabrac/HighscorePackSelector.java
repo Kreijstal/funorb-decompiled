@@ -34,7 +34,7 @@ final class HighscorePackSelector {
         return false;
     }
 
-    final static RgbSprite[] a(RgbSprite param0, int param1) {
+    final static RgbSprite[] createCenterOnlySpriteGrid(RgbSprite sprite, int obfuscationGuard) {
         RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -45,10 +45,10 @@ final class HighscorePackSelector {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = 48 / ((param1 - 55) / 32);
+          var3 = 48 / ((obfuscationGuard - 55) / 32);
           var4 = new RgbSprite[9];
           var2 = var4;
-          var4[4] = param0;
+          var4[4] = sprite;
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,12 +56,12 @@ final class HighscorePackSelector {
           var2_ref = decompiledCaughtException;
           stackIn_4_0 = var2_ref;
           stackIn_4_1 = new StringBuilder().append("jf.F(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class HighscorePackSelector {
         for (var6 = 0; var6 < this.packCount; var6++) {
           if (this.selectedPackIndex == var6) {
             SoftwareFramebuffer.a(-111, var5, var4, AlternateNumericLoginCredentials.field_r[var6]);
-            IntrusiveHashIterator.field_f[var6].f(var4, var5 - 1, 256);
+            IntrusiveHashIterator.field_f[var6].drawAdditive(var4, var5 - 1, 256);
           }
           ArchiveNetworkRequest.packSelectorIcons[var6].drawTransparent(var4, var5);
           var5 = var5 + (20 + ArchiveNetworkRequest.packSelectorIcons[var6].canvasHeight);
@@ -189,8 +189,8 @@ final class HighscorePackSelector {
         }
     }
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return;
         }
         field_d = null;

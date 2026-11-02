@@ -84,7 +84,7 @@ final class Ball extends CircleBody {
         return new int[8];
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         accountRsaExponent = null;
         activeBoardMaskSprite = null;
         field_G = null;
@@ -92,7 +92,7 @@ final class Ball extends CircleBody {
         field_A = null;
         field_H = null;
         fullSteelBallSprite = null;
-        if (param0 >= 91) {
+        if (obfuscationGuard >= 91) {
           field_K = null;
           return;
         }

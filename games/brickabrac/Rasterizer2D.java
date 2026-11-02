@@ -40,7 +40,7 @@ final class Rasterizer2D {
         }
     }
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void halveRowBrightness(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {
@@ -79,7 +79,7 @@ final class Rasterizer2D {
         Rasterizer2D.clearScanlineMask();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillRoundedRectangleAlpha(int x, int y, int rectangleWidth, int rectangleHeight, int cornerRadius, int color, int alpha256) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -121,32 +121,32 @@ final class Rasterizer2D {
         int var22Lifetime2;
         int var23Lifetime1;
         int var23Lifetime2;
-        if (param6 == 256) {
-          Rasterizer2D.b(param0, param1, param2, param3, param4, param5);
+        if (alpha256 == 256) {
+          Rasterizer2D.fillRoundedRectangle(x, y, rectangleWidth, rectangleHeight, cornerRadius, color);
           return;
         }
-        if (param4 == 0) {
-          Rasterizer2D.fillRectangleAlpha(param0, param1, param2, param3, param5, param6);
+        if (cornerRadius == 0) {
+          Rasterizer2D.fillRectangleAlpha(x, y, rectangleWidth, rectangleHeight, color, alpha256);
           return;
         }
-        var7 = 256 - param6;
-        param5 = ((param5 & 16711935) * param6 >> 8 & 16711935) + ((param5 & 65280) * param6 >> 8 & 65280);
-        if (param4 < 0) {
-          param4 = -param4;
+        var7 = 256 - alpha256;
+        color = ((color & 16711935) * alpha256 >> 8 & 16711935) + ((color & 65280) * alpha256 >> 8 & 65280);
+        if (cornerRadius < 0) {
+          cornerRadius = -cornerRadius;
         }
-        var8 = param0 + param4;
-        var9 = param1 + param4;
-        var10 = param1;
+        var8 = x + cornerRadius;
+        var9 = y + cornerRadius;
+        var10 = y;
         if (var10 < clipTop) {
           var10 = clipTop;
         }
-        var11 = param1 + param3;
+        var11 = y + rectangleHeight;
         if (var11 > clipBottom) {
           var11 = clipBottom;
         }
-        var12 = param2 - param4 - param4 - 1;
+        var12 = rectangleWidth - cornerRadius - cornerRadius - 1;
         var13 = var10;
-        var14 = param4 * param4;
+        var14 = cornerRadius * cornerRadius;
         var15 = 0;
         var16 = var9 - var13;
         var17 = var16 * var16;
@@ -172,7 +172,7 @@ final class Rasterizer2D {
                 var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
                 incrementValue$5 = var21;
                 var21++;
-                pixels[incrementValue$5] = param5 + var23;
+                pixels[incrementValue$5] = color + var23;
               }
               var13++;
               incrementValue$4 = var16;
@@ -188,17 +188,17 @@ final class Rasterizer2D {
           }
         }
         var16Lifetime1 = var13 - var9;
-        var19Lifetime1 = param0;
+        var19Lifetime1 = x;
         if (var19Lifetime1 < clipLeft) {
           var19Lifetime1 = clipLeft;
         }
-        var20Lifetime1 = param0 + param2;
+        var20Lifetime1 = x + rectangleWidth;
         if (var20Lifetime1 > clipRight) {
           var20Lifetime1 = clipRight;
         }
         var21Lifetime1 = var19Lifetime1 + var13 * width;
         var22Lifetime1 = width + var19Lifetime1 - var20Lifetime1;
-        var23Lifetime1 = param1 + param3 - param4 - 1;
+        var23Lifetime1 = y + rectangleHeight - cornerRadius - 1;
         if (var23Lifetime1 > clipBottom) {
           var23Lifetime1 = clipBottom;
         }
@@ -208,13 +208,13 @@ final class Rasterizer2D {
             var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
             incrementValue$3 = var21Lifetime1;
             var21Lifetime1++;
-            pixels[incrementValue$3] = param5 + var25;
+            pixels[incrementValue$3] = color + var25;
           }
           var13++;
           var21Lifetime1 = var21Lifetime1 + var22Lifetime1;
         }
         var16Lifetime2 = 0;
-        var15Lifetime1 = param4;
+        var15Lifetime1 = cornerRadius;
         var18Lifetime1 = var16Lifetime2 * var16Lifetime2 + var14;
         var17Lifetime1 = var18Lifetime1 - var15Lifetime1;
         var18Lifetime1 = var18Lifetime1 - var16Lifetime2;
@@ -243,7 +243,7 @@ final class Rasterizer2D {
             var23Lifetime2 = ((var23Lifetime2 & 16711935) * var7 >> 8 & 16711935) + ((var23Lifetime2 & 65280) * var7 >> 8 & 65280);
             incrementValue$2 = var21Lifetime2;
             var21Lifetime2++;
-            pixels[incrementValue$2] = param5 + var23Lifetime2;
+            pixels[incrementValue$2] = color + var23Lifetime2;
           }
           var13++;
           var18Lifetime1 = var18Lifetime1 + (var16Lifetime2 + var16Lifetime2);
@@ -286,7 +286,7 @@ final class Rasterizer2D {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int centerX, int centerY, int radius, int color) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -313,39 +313,39 @@ final class Rasterizer2D {
         int var13Lifetime1;
         int var14Lifetime1;
         int var15Lifetime1;
-        if (param2 == 0) {
-          Rasterizer2D.setPixel(param0, param1, param3);
+        if (radius == 0) {
+          Rasterizer2D.setPixel(centerX, centerY, color);
           return;
         }
-        if (param2 < 0) {
-          param2 = -param2;
+        if (radius < 0) {
+          radius = -radius;
         }
-        var4 = param1 - param2;
+        var4 = centerY - radius;
         if (var4 < clipTop) {
           var4 = clipTop;
         }
-        var5 = param1 + param2 + 1;
+        var5 = centerY + radius + 1;
         if (var5 > clipBottom) {
           var5 = clipBottom;
         }
         var6 = var4;
-        var7 = param2 * param2;
+        var7 = radius * radius;
         var8 = 0;
-        var9 = param1 - var6;
+        var9 = centerY - var6;
         var10 = var9 * var9;
         var11 = var10 - var9;
-        if (param1 > var5) {
-          param1 = var5;
+        if (centerY > var5) {
+          centerY = var5;
         }
-        while (var6 < param1) {
+        while (var6 < centerY) {
           while (true) {
             if (var11 > var7 &&
               var10 > var7) {
-              var12 = param0 - var8 + 1;
+              var12 = centerX - var8 + 1;
               if (var12 < clipLeft) {
                 var12 = clipLeft;
               }
-              var13 = param0 + var8;
+              var13 = centerX + var8;
               if (var13 > clipRight) {
                 var13 = clipRight;
               }
@@ -353,7 +353,7 @@ final class Rasterizer2D {
               for (var15 = var12; var15 < var13; var15++) {
                 incrementValue$4 = var14;
                 var14++;
-                pixels[incrementValue$4] = param3;
+                pixels[incrementValue$4] = color;
               }
               var6++;
               incrementValue$3 = var9;
@@ -368,8 +368,8 @@ final class Rasterizer2D {
             var11 = var11 + (incrementValue$5 + var8);
           }
         }
-        var8Lifetime1 = param2;
-        var9Lifetime1 = var6 - param1;
+        var8Lifetime1 = radius;
+        var9Lifetime1 = var6 - centerY;
         var11Lifetime1 = var9Lifetime1 * var9Lifetime1 + var7;
         var10Lifetime1 = var11Lifetime1 - var8Lifetime1;
         var11Lifetime1 = var11Lifetime1 - var9Lifetime1;
@@ -384,11 +384,11 @@ final class Rasterizer2D {
             }
             break;
           }
-          var12Lifetime1 = param0 - var8Lifetime1;
+          var12Lifetime1 = centerX - var8Lifetime1;
           if (var12Lifetime1 < clipLeft) {
             var12Lifetime1 = clipLeft;
           }
-          var13Lifetime1 = param0 + var8Lifetime1;
+          var13Lifetime1 = centerX + var8Lifetime1;
           if (var13Lifetime1 > clipRight - 1) {
             var13Lifetime1 = clipRight - 1;
           }
@@ -396,7 +396,7 @@ final class Rasterizer2D {
           for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
             incrementValue$2 = var14Lifetime1;
             var14Lifetime1++;
-            pixels[incrementValue$2] = param3;
+            pixels[incrementValue$2] = color;
           }
           var6++;
           var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
@@ -424,7 +424,7 @@ final class Rasterizer2D {
         }
         int var4 = width - rectangleWidth;
         int var5 = x + y * width;
-        Rasterizer2D.a(var5, pixels, 0, rectangleWidth, -rectangleHeight, var4);
+        Rasterizer2D.halveRowBrightness(var5, pixels, 0, rectangleWidth, -rectangleHeight, var4);
     }
 
     final static void setClip(int left, int top, int right, int bottom) {
@@ -447,31 +447,31 @@ final class Rasterizer2D {
         Rasterizer2D.clearScanlineMask();
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4) {
+    private final static void addHorizontalLine(int x, int y, int length, int color, int intensity) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
         int var6Lifetime1;
-        if (param1 >= clipTop) {
-          if (param1 >= clipBottom) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          var5 = param0 + param1 * width;
-          var6 = (param3 & 16711935) * param4;
-          param3 = (var6 & -16711936) + (param3 * param4 - var6 & 16711680) >>> 8;
-          for (var7 = 0; var7 < param2; var7++) {
+          var5 = x + y * width;
+          var6 = (color & 16711935) * intensity;
+          color = (var6 & -16711936) + (color * intensity - var6 & 16711680) >>> 8;
+          for (var7 = 0; var7 < length; var7++) {
             var6Lifetime1 = pixels[var5];
-            var8 = param3 + var6Lifetime1;
-            var6Lifetime1 = (param3 & 16711935) + (var6Lifetime1 & 16711935);
+            var8 = color + var6Lifetime1;
+            var6Lifetime1 = (color & 16711935) + (var6Lifetime1 & 16711935);
             var6Lifetime1 = (var6Lifetime1 & 16777472) + (var8 - var6Lifetime1 & 65536);
             incrementValue$0 = var5;
             var5++;
@@ -481,7 +481,7 @@ final class Rasterizer2D {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRoundedRectangle(int x, int y, int rectangleWidth, int rectangleHeight, int cornerRadius, int color) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var6;
@@ -504,52 +504,52 @@ final class Rasterizer2D {
         int var22Lifetime1;
         int var22Lifetime2;
         int var22Lifetime3;
-        if (param4 == 0) {
-          Rasterizer2D.drawRectangle(param0, param1, param2, param3, param5);
+        if (cornerRadius == 0) {
+          Rasterizer2D.drawRectangle(x, y, rectangleWidth, rectangleHeight, color);
           return;
         }
-        if (param4 < 0) {
-          param4 = -param4;
+        if (cornerRadius < 0) {
+          cornerRadius = -cornerRadius;
         }
-        var6 = param0 + param4;
-        var7 = param1 + param4;
-        var8 = param0 + param2 - param4 - 1;
-        var9 = param1 + param3 - param4 - 1;
+        var6 = x + cornerRadius;
+        var7 = y + cornerRadius;
+        var8 = x + rectangleWidth - cornerRadius - 1;
+        var9 = y + rectangleHeight - cornerRadius - 1;
         if (clipRight > clipLeft) {
           if (clipBottom <= clipTop) {
             return;
           }
-          if (param0 + param2 > clipLeft) {
-            if (param0 < clipRight &&
-              param1 + param3 >= clipTop &&
-              param1 < clipBottom) {
-              var10 = var6 + (var7 - param4) * width;
-              var11 = var8 + (var7 - param4) * width;
+          if (x + rectangleWidth > clipLeft) {
+            if (x < clipRight &&
+              y + rectangleHeight >= clipTop &&
+              y < clipBottom) {
+              var10 = var6 + (var7 - cornerRadius) * width;
+              var11 = var8 + (var7 - cornerRadius) * width;
               var12 = var6 + var7 * width;
               var13 = var8 + var7 * width;
               var14 = var6 + var9 * width;
               var15 = var8 + var9 * width;
-              var16 = var6 + (var9 + param4) * width;
-              var17 = var8 + (var9 + param4) * width;
-              var18 = param4;
+              var16 = var6 + (var9 + cornerRadius) * width;
+              var17 = var8 + (var9 + cornerRadius) * width;
+              var18 = cornerRadius;
               var19 = 0;
-              var20 = param4 * param4;
+              var20 = cornerRadius * cornerRadius;
               var21 = var20 - var18;
-              if (param0 >= clipLeft &&
-                param0 + param2 < clipRight &&
-                param1 >= clipTop &&
-                param1 + param3 < clipBottom) {
+              if (x >= clipLeft &&
+                x + rectangleWidth < clipRight &&
+                y >= clipTop &&
+                y + rectangleHeight < clipBottom) {
                 for (var22 = var12; var22 <= var14; var22 = var22 + width) {
-                  pixels[var22 - var18] = param5;
+                  pixels[var22 - var18] = color;
                 }
                 for (var22Lifetime1 = var13; var22Lifetime1 <= var15; var22Lifetime1 = var22Lifetime1 + width) {
-                  pixels[var22Lifetime1 + var18] = param5;
+                  pixels[var22Lifetime1 + var18] = color;
                 }
                 for (var22Lifetime2 = var10; var22Lifetime2 <= var11; var22Lifetime2++) {
-                  pixels[var22Lifetime2] = param5;
+                  pixels[var22Lifetime2] = color;
                 }
                 for (var22Lifetime3 = var16; var22Lifetime3 <= var17; var22Lifetime3++) {
-                  pixels[var22Lifetime3] = param5;
+                  pixels[var22Lifetime3] = color;
                 }
                 while (true) {
                   incrementValue$0 = var19;
@@ -570,20 +570,20 @@ final class Rasterizer2D {
                   if (var18 < var19) {
                     return;
                   }
-                  pixels[var10 - var19] = param5;
-                  pixels[var11 + var19] = param5;
-                  pixels[var12 - var18] = param5;
-                  pixels[var13 + var18] = param5;
-                  pixels[var14 - var18] = param5;
-                  pixels[var15 + var18] = param5;
-                  pixels[var16 - var19] = param5;
-                  pixels[var17 + var19] = param5;
+                  pixels[var10 - var19] = color;
+                  pixels[var11 + var19] = color;
+                  pixels[var12 - var18] = color;
+                  pixels[var13 + var18] = color;
+                  pixels[var14 - var18] = color;
+                  pixels[var15 + var18] = color;
+                  pixels[var16 - var19] = color;
+                  pixels[var17 + var19] = color;
                 }
               }
-              Rasterizer2D.drawVerticalLine(param0, param1 + var18, param3 - var18 - var18, param5);
-              Rasterizer2D.drawVerticalLine(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-              Rasterizer2D.drawHorizontalLine(param0 + var18, param1, param2 - var18 - var18, param5);
-              Rasterizer2D.drawHorizontalLine(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+              Rasterizer2D.drawVerticalLine(x, y + var18, rectangleHeight - var18 - var18, color);
+              Rasterizer2D.drawVerticalLine(x + rectangleWidth - 1, y + var18, rectangleHeight - var18 - var18, color);
+              Rasterizer2D.drawHorizontalLine(x + var18, y, rectangleWidth - var18 - var18, color);
+              Rasterizer2D.drawHorizontalLine(x + var18, y + rectangleHeight - 1, rectangleWidth - var18 - var18, color);
               while (true) {
                 incrementValue$1 = var19;
                 var19++;
@@ -607,33 +607,33 @@ final class Rasterizer2D {
                   var7 - var18 < clipBottom) {
                   if (var6 - var19 >= clipLeft &&
                     var6 - var19 < clipRight) {
-                    pixels[var10 - var19] = param5;
+                    pixels[var10 - var19] = color;
                   }
                   if (var8 + var19 >= clipLeft &&
                     var8 + var19 < clipRight) {
-                    pixels[var11 + var19] = param5;
+                    pixels[var11 + var19] = color;
                   }
                 }
                 if (var7 - var19 >= clipTop &&
                   var7 - var19 < clipBottom) {
                   if (var6 - var18 >= clipLeft &&
                     var6 - var18 < clipRight) {
-                    pixels[var12 - var18] = param5;
+                    pixels[var12 - var18] = color;
                   }
                   if (var8 + var18 >= clipLeft &&
                     var8 + var18 < clipRight) {
-                    pixels[var13 + var18] = param5;
+                    pixels[var13 + var18] = color;
                   }
                 }
                 if (var9 + var19 >= clipTop &&
                   var9 + var19 < clipBottom) {
                   if (var6 - var18 >= clipLeft &&
                     var6 - var18 < clipRight) {
-                    pixels[var14 - var18] = param5;
+                    pixels[var14 - var18] = color;
                   }
                   if (var8 + var18 >= clipLeft &&
                     var8 + var18 < clipRight) {
-                    pixels[var15 + var18] = param5;
+                    pixels[var15 + var18] = color;
                   }
                 }
                 if (var9 + var18 < clipTop) {
@@ -644,7 +644,7 @@ final class Rasterizer2D {
                 }
                 if (var6 - var19 >= clipLeft &&
                   var6 - var19 < clipRight) {
-                  pixels[var16 - var19] = param5;
+                  pixels[var16 - var19] = color;
                 }
                 if (var8 + var19 < clipLeft) {
                   continue;
@@ -652,7 +652,7 @@ final class Rasterizer2D {
                 if (var8 + var19 >= clipRight) {
                   continue;
                 }
-                pixels[var17 + var19] = param5;
+                pixels[var17 + var19] = color;
               }
             }
             return;
@@ -661,7 +661,7 @@ final class Rasterizer2D {
         return;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurColumnsVertically(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -1044,7 +1044,7 @@ final class Rasterizer2D {
         }
     }
 
-    private final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int[] param11, int param12, int param13, int param14) {
+    private final static boolean addRadialGlowRowSegment(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int[] param11, int param12, int param13, int param14) {
         param3 = param14;
         param4 = param13;
         while (param8 < 0) {
@@ -1066,7 +1066,7 @@ final class Rasterizer2D {
         return false;
     }
 
-    private final static void h(int param0, int param1, int param2, int param3, int param4) {
+    private final static void addVerticalLine(int x, int y, int length, int color, int intensity) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1074,24 +1074,24 @@ final class Rasterizer2D {
         int var9 = 0;
         int var6Lifetime1;
         int var6Lifetime1Lifetime1;
-        if (param0 >= clipLeft) {
-          if (param0 >= clipRight) {
+        if (x >= clipLeft) {
+          if (x >= clipRight) {
             return;
           }
-          if (param1 < clipTop) {
-            param2 = param2 - (clipTop - param1);
-            param1 = clipTop;
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
           }
-          if (param1 + param2 > clipBottom) {
-            param2 = clipBottom - param1;
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
           }
-          var5 = param0 + param1 * width;
-          var6 = (param3 & 16711935) * param4;
-          param3 = (var6 & -16711936) + (param3 * param4 - var6 & 16711680) >>> 8;
-          for (var7 = 0; var7 < param2; var7++) {
+          var5 = x + y * width;
+          var6 = (color & 16711935) * intensity;
+          color = (var6 & -16711936) + (color * intensity - var6 & 16711680) >>> 8;
+          for (var7 = 0; var7 < length; var7++) {
             var6Lifetime1 = pixels[var5];
-            var8 = param3 + var6Lifetime1;
-            var9 = (param3 & 16711935) + (var6Lifetime1 & 16711935);
+            var8 = color + var6Lifetime1;
+            var9 = (color & 16711935) + (var6Lifetime1 & 16711935);
             var6Lifetime1Lifetime1 = (var9 & 16777472) + (var8 - var9 & 65536);
             pixels[var5] = var8 - var6Lifetime1Lifetime1 | var6Lifetime1Lifetime1 - (var6Lifetime1Lifetime1 >>> 8);
             var5 = var5 + width;
@@ -1220,7 +1220,7 @@ final class Rasterizer2D {
         Rasterizer2D.clearScanlineMask();
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void addLine(int x1, int y1, int x2, int y2, int color, int intensity) {
         int var6;
         int var7;
         int var8;
@@ -1236,91 +1236,91 @@ final class Rasterizer2D {
         int var11Lifetime1;
         int var6Lifetime1Lifetime1;
         int var6Lifetime2Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            Rasterizer2D.c(param0 + param2, param1, -param2 + 1, param4, param5);
+        x2 = x2 - x1;
+        y2 = y2 - y1;
+        if (y2 == 0) {
+          if (x2 < 0) {
+            Rasterizer2D.addHorizontalLine(x1 + x2, y1, -x2 + 1, color, intensity);
           } else {
-            Rasterizer2D.c(param0, param1, param2 + 1, param4, param5);
+            Rasterizer2D.addHorizontalLine(x1, y1, x2 + 1, color, intensity);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            Rasterizer2D.h(param0, param1 + param3, -param3 + 1, param4, param5);
+        if (x2 == 0) {
+          if (y2 < 0) {
+            Rasterizer2D.addVerticalLine(x1, y1 + y2, -y2 + 1, color, intensity);
           } else {
-            Rasterizer2D.h(param0, param1, param3 + 1, param4, param5);
+            Rasterizer2D.addVerticalLine(x1, y1, y2 + 1, color, intensity);
           }
           return;
         }
-        var6 = (param4 & 16711935) * param5;
-        param4 = (var6 & -16711936) + (param4 * param5 - var6 & 16711680) >>> 8;
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        var6 = (color & 16711935) * intensity;
+        color = (var6 & -16711936) + (color * intensity - var6 & 16711680) >>> 8;
+        if (x2 + y2 < 0) {
+          x1 = x1 + x2;
+          x2 = -x2;
+          y1 = y1 + y2;
+          y2 = -y2;
         }
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var9 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < clipTop) {
-            param0 = param0 + var9 * (clipTop - param1);
-            param1 = clipTop;
+        if (x2 <= y2) {
+          x1 = x1 << 16;
+          x1 = x1 + 32768;
+          x2 = x2 << 16;
+          var9 = (int)Math.floor((double)x2 / (double)y2 + 0.5);
+          y2 = y2 + y1;
+          if (y1 < clipTop) {
+            x1 = x1 + var9 * (clipTop - y1);
+            y1 = clipTop;
           }
-          if (param3 >= clipBottom) {
-            param3 = clipBottom - 1;
+          if (y2 >= clipBottom) {
+            y2 = clipBottom - 1;
           }
-          while (param1 <= param3) {
-            var10 = param0 >> 16;
+          while (y1 <= y2) {
+            var10 = x1 >> 16;
             if (var10 >= clipLeft &&
               var10 < clipRight) {
-              var8 = var10 + param1 * width;
+              var8 = var10 + y1 * width;
               var6Lifetime1 = pixels[var8];
-              var7 = param4 + var6Lifetime1;
-              var11 = (param4 & 16711935) + (var6Lifetime1 & 16711935);
+              var7 = color + var6Lifetime1;
+              var11 = (color & 16711935) + (var6Lifetime1 & 16711935);
               var6Lifetime1Lifetime1 = (var11 & 16777472) + (var7 - var11 & 65536);
               pixels[var8] = var7 - var6Lifetime1Lifetime1 | var6Lifetime1Lifetime1 - (var6Lifetime1Lifetime1 >>> 8);
             }
-            param0 = param0 + var9;
-            param1++;
+            x1 = x1 + var9;
+            y1++;
           }
           return;
         }
-        param1 = param1 << 16;
-        param1 = param1 + 32768;
-        param3 = param3 << 16;
-        var9Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-        param2 = param2 + param0;
-        if (param0 < clipLeft) {
-          param1 = param1 + var9Lifetime1 * (clipLeft - param0);
-          param0 = clipLeft;
+        y1 = y1 << 16;
+        y1 = y1 + 32768;
+        y2 = y2 << 16;
+        var9Lifetime1 = (int)Math.floor((double)y2 / (double)x2 + 0.5);
+        x2 = x2 + x1;
+        if (x1 < clipLeft) {
+          y1 = y1 + var9Lifetime1 * (clipLeft - x1);
+          x1 = clipLeft;
         }
-        if (param2 >= clipRight) {
-          param2 = clipRight - 1;
+        if (x2 >= clipRight) {
+          x2 = clipRight - 1;
         }
-        while (param0 <= param2) {
-          var10Lifetime1 = param1 >> 16;
+        while (x1 <= x2) {
+          var10Lifetime1 = y1 >> 16;
           if (var10Lifetime1 >= clipTop &&
             var10Lifetime1 < clipBottom) {
-            var8Lifetime1 = param0 + var10Lifetime1 * width;
+            var8Lifetime1 = x1 + var10Lifetime1 * width;
             var6Lifetime2 = pixels[var8Lifetime1];
-            var7Lifetime1 = param4 + var6Lifetime2;
-            var11Lifetime1 = (param4 & 16711935) + (var6Lifetime2 & 16711935);
+            var7Lifetime1 = color + var6Lifetime2;
+            var11Lifetime1 = (color & 16711935) + (var6Lifetime2 & 16711935);
             var6Lifetime2Lifetime1 = (var11Lifetime1 & 16777472) + (var7Lifetime1 - var11Lifetime1 & 65536);
             pixels[var8Lifetime1] = var7Lifetime1 - var6Lifetime2Lifetime1 | var6Lifetime2Lifetime1 - (var6Lifetime2Lifetime1 >>> 8);
           }
-          param1 = param1 + var9Lifetime1;
-          param0++;
+          y1 = y1 + var9Lifetime1;
+          x1++;
         }
         return;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void drawRadialGlowRowBounded(int centerX16, int centerY16, int radius16, int peakIntensity, int[] colorRamp) {
         int var16 = 0;
         int var5;
         int var6;
@@ -1350,20 +1350,20 @@ final class Rasterizer2D {
         int var21Lifetime2;
         int var22Lifetime1;
         int var22Lifetime2;
-        var5 = param2 * param2;
-        var6 = param1 - param2 >> 4;
-        var7 = param1 + param2 + 15 >> 4;
+        var5 = radius16 * radius16;
+        var6 = centerY16 - radius16 >> 4;
+        var7 = centerY16 + radius16 + 15 >> 4;
         if (var6 < clipTop) {
           var6 = clipTop;
         }
         if (var7 > clipBottom) {
           var7 = clipBottom;
         }
-        var8 = (var6 << 4) - param1;
+        var8 = (var6 << 4) - centerY16;
         var8 = var8 * var8;
-        var9 = (var6 + 1 << 4) - param1;
+        var9 = (var6 + 1 << 4) - centerY16;
         var9 = var9 * var9;
-        var10 = (var6 + 2 << 4) - param1;
+        var10 = (var6 + 2 << 4) - centerY16;
         var10 = var10 * var10;
         var11 = var9 - var8;
         var12 = var10 - var9;
@@ -1371,19 +1371,19 @@ final class Rasterizer2D {
         var14 = var6 * width;
         var15 = width;
         for (var16 = var6 - var7; var16 < 0; var16++) {
-          var17 = param0 - param2 >> 4;
-          var18 = param0 + param2 + 15 >> 4;
+          var17 = centerX16 - radius16 >> 4;
+          var18 = centerX16 + radius16 + 15 >> 4;
           if (var17 < clipLeft) {
             var17 = clipLeft;
           }
           if (var18 > clipRight) {
             var18 = clipRight;
           }
-          var19 = param0 + 15 >> 4;
+          var19 = centerX16 + 15 >> 4;
           var20 = var19;
           while (var17 < var19) {
             var21 = var17 + var19 >> 1;
-            var22 = (var21 << 4) - param0;
+            var22 = (var21 << 4) - centerX16;
             var22 = var22 * var22;
             if (var8 + var22 >= var5) {
               var17 = var21 + 1;
@@ -1393,7 +1393,7 @@ final class Rasterizer2D {
           }
           while (var18 > var20) {
             var21Lifetime1 = var20 + var18 >> 1;
-            var22Lifetime1 = (var21Lifetime1 << 4) - param0;
+            var22Lifetime1 = (var21Lifetime1 << 4) - centerX16;
             var22Lifetime1 = var22Lifetime1 * var22Lifetime1;
             if (var8 + var22Lifetime1 >= var5) {
               var18 = var21Lifetime1;
@@ -1401,22 +1401,22 @@ final class Rasterizer2D {
             }
             var20 = var21Lifetime1 + 1;
           }
-          var21Lifetime2 = (var17 << 4) - param0;
+          var21Lifetime2 = (var17 << 4) - centerX16;
           var21Lifetime2 = var21Lifetime2 * var21Lifetime2;
-          var22Lifetime2 = (var17 + 1 << 4) - param0;
+          var22Lifetime2 = (var17 + 1 << 4) - centerX16;
           var22Lifetime2 = var22Lifetime2 * var22Lifetime2;
-          var23 = (var17 + 2 << 4) - param0;
+          var23 = (var17 + 2 << 4) - centerX16;
           var23 = var23 * var23;
           var24 = var22Lifetime2 - var21Lifetime2;
           var25 = var23 - var22Lifetime2;
           var26 = var25 - var24;
-          var27 = (var18 - 1 << 4) - param0;
+          var27 = (var18 - 1 << 4) - centerX16;
           var27 = var27 * var27;
-          var28 = (var18 - 2 << 4) - param0;
+          var28 = (var18 - 2 << 4) - centerX16;
           var28 = var28 * var28;
           var29 = var28 - var27;
-          if (Rasterizer2D.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, pixels, param3, param4, 1, var24, var8 + var21Lifetime2)) {
-            Rasterizer2D.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, pixels, param3, param4, -1, var29, var8 + var27);
+          if (Rasterizer2D.addRadialGlowRowSegment(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, pixels, peakIntensity, colorRamp, 1, var24, var8 + var21Lifetime2)) {
+            Rasterizer2D.addRadialGlowRowSegment(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, pixels, peakIntensity, colorRamp, -1, var29, var8 + var27);
           }
           var14 = var14 + var15;
           var8 = var8 + var11;
@@ -1551,13 +1551,13 @@ final class Rasterizer2D {
         Rasterizer2D.addRadialGlowScanlines(0, 0, 0, 0, 0, xDistanceSecondDifference, radiusSquared, destinationIndex, pixels, peakIntensity, colorRamp, destinationRowSkip, xDistanceStep, left - right, topDistanceSquared + leftDistanceSquared, yDistanceStep, yDistanceSecondDifference, top - bottom);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawShadowEdges(int x, int y, int rectangleWidth, int rectangleHeight, int color) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          Rasterizer2D.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          Rasterizer2D.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          Rasterizer2D.drawHorizontalLineAlpha(x + var6, y + rectangleHeight + var6, rectangleWidth, color, var5);
+          Rasterizer2D.drawVerticalLineAlpha(x + rectangleWidth + var6, y + var6, rectangleHeight + 1, color, var5);
         }
     }
 
@@ -1568,9 +1568,9 @@ final class Rasterizer2D {
         Rasterizer2D.drawVerticalLine(x + rectangleWidth - 1, y, rectangleHeight, color);
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        Rasterizer2D.a(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
-        Rasterizer2D.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
+    final static void blurRectangle(int horizontalRadius, int verticalRadius, int x, int y, int rectangleWidth, int rectangleHeight) {
+        Rasterizer2D.blurRowsHorizontally(pixels, 0, x + y * width, horizontalRadius, x, rectangleWidth, width - rectangleWidth, rectangleHeight);
+        Rasterizer2D.blurColumnsVertically(pixels, 0, x + y * width, verticalRadius, y, rectangleHeight, width - rectangleWidth, x, rectangleWidth);
     }
 
     private final static void drawVerticalLineAlpha(int x, int y, int length, int color, int alpha256) {
@@ -1642,7 +1642,7 @@ final class Rasterizer2D {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRoundedRectangle(int x, int y, int rectangleWidth, int rectangleHeight, int cornerRadius, int color) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -1680,26 +1680,26 @@ final class Rasterizer2D {
         int var19Lifetime2;
         int var20Lifetime1;
         int var20Lifetime2;
-        if (param4 == 0) {
-          Rasterizer2D.fillRectangle(param0, param1, param2, param3, param5);
+        if (cornerRadius == 0) {
+          Rasterizer2D.fillRectangle(x, y, rectangleWidth, rectangleHeight, color);
           return;
         }
-        if (param4 < 0) {
-          param4 = -param4;
+        if (cornerRadius < 0) {
+          cornerRadius = -cornerRadius;
         }
-        var6 = param0 + param4;
-        var7 = param1 + param4;
-        var8 = param1;
+        var6 = x + cornerRadius;
+        var7 = y + cornerRadius;
+        var8 = y;
         if (var8 < clipTop) {
           var8 = clipTop;
         }
-        var9 = param1 + param3;
+        var9 = y + rectangleHeight;
         if (var9 > clipBottom) {
           var9 = clipBottom;
         }
-        var10 = param2 - param4 - param4 - 1;
+        var10 = rectangleWidth - cornerRadius - cornerRadius - 1;
         var11 = var8;
-        var12 = param4 * param4;
+        var12 = cornerRadius * cornerRadius;
         var13 = 0;
         var14 = var7 - var11;
         var15 = var14 * var14;
@@ -1723,7 +1723,7 @@ final class Rasterizer2D {
               for (var20 = var17; var20 < var18; var20++) {
                 incrementValue$5 = var19;
                 var19++;
-                pixels[incrementValue$5] = param5;
+                pixels[incrementValue$5] = color;
               }
               var11++;
               incrementValue$4 = var14;
@@ -1739,17 +1739,17 @@ final class Rasterizer2D {
           }
         }
         var14Lifetime1 = var11 - var7;
-        var17Lifetime1 = param0;
+        var17Lifetime1 = x;
         if (var17Lifetime1 < clipLeft) {
           var17Lifetime1 = clipLeft;
         }
-        var18Lifetime1 = param0 + param2;
+        var18Lifetime1 = x + rectangleWidth;
         if (var18Lifetime1 > clipRight) {
           var18Lifetime1 = clipRight;
         }
         var19Lifetime1 = var17Lifetime1 + var11 * width;
         var20Lifetime1 = width + var17Lifetime1 - var18Lifetime1;
-        var21 = param1 + param3 - param4 - 1;
+        var21 = y + rectangleHeight - cornerRadius - 1;
         if (var21 > clipBottom) {
           var21 = clipBottom;
         }
@@ -1757,13 +1757,13 @@ final class Rasterizer2D {
           for (var22 = var17Lifetime1; var22 < var18Lifetime1; var22++) {
             incrementValue$3 = var19Lifetime1;
             var19Lifetime1++;
-            pixels[incrementValue$3] = param5;
+            pixels[incrementValue$3] = color;
           }
           var11++;
           var19Lifetime1 = var19Lifetime1 + var20Lifetime1;
         }
         var14Lifetime2 = 0;
-        var13Lifetime1 = param4;
+        var13Lifetime1 = cornerRadius;
         var16Lifetime1 = var14Lifetime2 * var14Lifetime2 + var12;
         var15Lifetime1 = var16Lifetime1 - var13Lifetime1;
         var16Lifetime1 = var16Lifetime1 - var14Lifetime2;
@@ -1790,7 +1790,7 @@ final class Rasterizer2D {
           for (var20Lifetime2 = var17Lifetime2; var20Lifetime2 <= var18Lifetime2; var20Lifetime2++) {
             incrementValue$2 = var19Lifetime2;
             var19Lifetime2++;
-            pixels[incrementValue$2] = param5;
+            pixels[incrementValue$2] = color;
           }
           var11++;
           var16Lifetime1 = var16Lifetime1 + (var14Lifetime2 + var14Lifetime2);
@@ -1818,7 +1818,7 @@ final class Rasterizer2D {
         destination[3] = clipBottom;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurRowsHorizontally(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;

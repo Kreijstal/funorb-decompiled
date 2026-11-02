@@ -64,11 +64,11 @@ final class AlignedIconLabel extends UiComponent {
         return stackIn_13_0;
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         currentSocialServer = null;
         field_Sb = null;
-        if (param0 != 21) {
-          AlignedIconLabel.d((byte) -26);
+        if (obfuscationGuard != 21) {
+          AlignedIconLabel.clearSharedReferences((byte) -26);
         }
     }
 
@@ -108,11 +108,11 @@ final class AlignedIconLabel extends UiComponent {
               }
               var3 = var3 + param0;
             }
-            LoginMethodPreference.a(var3, -107);
-            var7 = AccountResponse.a((byte) 13, "%3a", var3, ":");
-            var8 = AccountResponse.a((byte) 13, "%40", var7, "@");
-            var9 = AccountResponse.a((byte) 13, "%26", var8, "&");
-            var10 = AccountResponse.a((byte) 13, "%23", var9, "#");
+            LoginMethodPreference.printEscapedError(var3, -107);
+            var7 = AccountResponse.replaceAllOccurrences((byte) 13, "%3a", var3, ":");
+            var8 = AccountResponse.replaceAllOccurrences((byte) 13, "%40", var7, "@");
+            var9 = AccountResponse.replaceAllOccurrences((byte) 13, "%26", var8, "&");
+            var10 = AccountResponse.replaceAllOccurrences((byte) 13, "%23", var9, "#");
             if (null == SecondaryHashTable.field_i) {
               return;
             }

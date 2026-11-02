@@ -25,7 +25,7 @@ final class IntegerPowerHelpers {
         unlockedLevelCounts = null;
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, RasterCacheSurface param3, int param4, int param5, RgbSprite param6) {
+    final static void renderBackdropSurface(RgbSprite param0, int param1, int param2, RasterCacheSurface param3, int param4, int param5, RgbSprite param6) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

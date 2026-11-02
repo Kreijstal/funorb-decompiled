@@ -31,7 +31,7 @@ final class PauseMenuHelpers {
         Object var5 = null;
         int var4Lifetime1;
         if (obfuscationGuard != -2635) {
-          PauseMenuHelpers.a(-1);
+          PauseMenuHelpers.clearSharedReferences(-1);
           var6 = null;
           var4 = screenId;
           if (var4 == 1) {
@@ -91,18 +91,18 @@ final class PauseMenuHelpers {
         return new PauseMenuScreen(screenId, var20, var21);
     }
 
-    final static boolean a(byte param0) {
-        if (param0 == 62) {
+    final static boolean isLoginPrivilegeAtLeastTwo(byte obfuscationGuard) {
+        if (obfuscationGuard == 62) {
           return 2 <= QuickChatHelpDialog.loginPrivilegeByteOne ? true : false;
         }
-        PauseMenuHelpers.a((byte) 59);
+        PauseMenuHelpers.isLoginPrivilegeAtLeastTwo((byte) 59);
         return 2 <= QuickChatHelpDialog.loginPrivilegeByteOne ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         bytePool100 = (byte[][]) null;
-        if (param0 != -12251) {
-          PauseMenuHelpers.a((byte) -13);
+        if (obfuscationGuard != -12251) {
+          PauseMenuHelpers.isLoginPrivilegeAtLeastTwo((byte) -13);
           rankingSourceIndices = null;
           return;
         }

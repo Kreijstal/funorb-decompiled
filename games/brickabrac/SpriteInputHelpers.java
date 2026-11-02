@@ -69,9 +69,9 @@ final class SpriteInputHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_f = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           ResourceArchive var2 = (ResourceArchive) null;
           SpriteInputHelpers.loadRgbSpriteByName((String) null, (String) null, (byte) -53, (ResourceArchive) null);
         }
@@ -192,7 +192,7 @@ final class SpriteInputHelpers {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 0) {
-            SpriteInputHelpers.a(-94);
+            SpriteInputHelpers.clearSharedReferences(-94);
           }
           if (!buttonLine) {
             bodyWidth = Widget.textChoiceBodyFont.measureText(text);
