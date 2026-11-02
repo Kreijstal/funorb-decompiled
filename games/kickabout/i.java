@@ -50,7 +50,7 @@ class i extends jb {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        nl var3 = null;
+        FootballerAgent var3 = null;
         int var4 = 0;
         boolean[] var5 = null;
         ut var5_ref = null;
@@ -139,7 +139,7 @@ class i extends jb {
             }
           }
           if (var2 != 0) {
-            stackIn_49_0 = (4 != var3.field_u) ? 0 : 1;
+            stackIn_49_0 = (4 != var3.action) ? 0 : 1;
             var4Lifetime1 = stackIn_49_0;
             stackIn_51_0 = kd.field_y;
             if (!cl.field_d) {

@@ -55,7 +55,7 @@ final class IntrusiveNodeHashTable {
     }
 
     final static void a(int param0, int param1) {
-        ua.field_l = param0;
+        GoalStateAgent.field_l = param0;
         if (param1 != 415422632) {
           return;
         }

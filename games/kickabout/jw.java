@@ -67,10 +67,10 @@ final class jw extends hd {
               et.field_d.field_E.b(22997);
             }
           }
-          et.field_d.field_R[0].field_g = 0;
+          et.field_d.participantStatus[0].field_g = 0;
           ks.field_e = param0;
           ic.field_i = false;
-          et.field_d.field_R[1].field_g = 0;
+          et.field_d.participantStatus[1].field_g = 0;
           if (ks.field_e == 1) {
             mh.field_k.a(29360128, false, 0, 107085824);
             mh.field_k.field_R = 1024;
@@ -97,7 +97,7 @@ final class jw extends hd {
                         vb.field_d = 3;
                         var8 = (gm) (et.field_d.field_P[1][4]);
                         var8.a(-13107200, false, 0, 22937600);
-                        et.field_d.field_R[1].field_g = 4;
+                        et.field_d.participantStatus[1].field_g = 4;
                         var8.field_G = 8;
                         ld.field_f.field_G = 4;
                       } else {
@@ -115,7 +115,7 @@ final class jw extends hd {
                                   if (ks.field_e != 13) {
                                     if (ks.field_e == 14) {
                                       um.field_e.b(26415, 2);
-                                      et.field_d.field_s = false;
+                                      et.field_d.disableLocal = false;
                                       je.field_m = 500;
                                     }
                                   } else {

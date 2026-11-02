@@ -41,7 +41,7 @@ final class ej extends hd {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        nl var4 = et.field_d.b((byte) -96);
+        FootballerAgent var4 = et.field_d.b((byte) -96);
         var4.field_O = false;
         var4.field_x = param0;
         var4.field_P = param2;

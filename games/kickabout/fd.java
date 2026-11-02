@@ -394,7 +394,7 @@ class fd extends IntrusiveNode {
               }
             }
           }
-          if (nl.field_p == 0 &&
+          if (FootballerAgent.field_p == 0 &&
             vg.field_Ob != 0) {
             this.a(param0, n.field_m, el.field_A, this, param1 ^ -31948, param2);
             var6 = mp.field_g;
@@ -411,7 +411,7 @@ class fd extends IntrusiveNode {
             this.g(84);
           }
         }
-        vg.field_Ob = nl.field_p;
+        vg.field_Ob = FootballerAgent.field_p;
         cg.a(this.f(-1), (byte) -98);
         if (param1 == 31947) {
           return param3;

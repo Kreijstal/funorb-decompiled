@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends mo {
+final class FormationAgent extends MatchAgent {
     static ff field_h;
     static int field_j;
     int[] field_k;
@@ -81,7 +81,7 @@ final class wr extends mo {
           this.field_k[0] = param0.l(3, 59);
           if (param1 != 2) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
-            wr.a((java.awt.Canvas) null, 103);
+            FormationAgent.a((java.awt.Canvas) null, 103);
           }
           this.field_k[1] = param0.l(3, 59);
           this.field_i[0] = mu.a(param0, (byte) -39);
@@ -167,7 +167,7 @@ final class wr extends mo {
           su.a(param1 ^ -23390, 0, 0, param0);
           if (param1 != -14142) {
             var3 = (String) null;
-            wr.a((String) null, -39, 'ￜ');
+            FormationAgent.a((String) null, -39, 'ￜ');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,11 +184,11 @@ final class wr extends mo {
         }
     }
 
-    final void a(byte param0, mo param1) {
+    final void a(byte param0, MatchAgent param1) {
         int var4 = 0;
-        wr var3 = null;
+        FormationAgent var3 = null;
         int var5 = 0;
-        wr var6 = null;
+        FormationAgent var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -196,14 +196,14 @@ final class wr extends mo {
         RuntimeException var3_ref = null;
         var5 = Kickabout.field_G;
         try {
-          var6 = (wr) (param1);
+          var6 = (FormationAgent) (param1);
           var3 = var6;
           for (var4 = 0; var4 < 2; var4++) {
             this.field_k[var4] = var6.field_k[var4];
             this.field_i[var4] = var6.field_i[var4];
           }
           if (param0 > -52) {
-            wr.a(false);
+            FormationAgent.a(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,7 +220,7 @@ final class wr extends mo {
         }
     }
 
-    public wr() {
+    public FormationAgent() {
         this.field_k = new int[2];
         this.field_i = new boolean[2];
     }

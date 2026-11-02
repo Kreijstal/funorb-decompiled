@@ -55,7 +55,7 @@ final class sn {
         field_k = null;
     }
 
-    sn(ma param0) {
+    sn(NetworkGameClient param0) {
         try {
           java.net.URL var2 = null;
           java.net.MalformedURLException var2_ref = null;

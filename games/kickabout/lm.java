@@ -198,7 +198,7 @@ final class lm extends js {
         int var2 = 20;
         on.a(-(this.field_A >> 1) + 320, var2, this.field_A, this.field_n, 8, 0, 128);
         on.a(-(-20 + this.field_A >> 1) + 320, var2 + 10, this.field_A - 20, 30, 8, 65793, 128);
-        un.field_d.d("<u=ffffff>" + jc.field_e[2].toUpperCase() + "</u> " + (null != this.field_r ? this.field_r : ""), 320, var2 + 30, 16777215, -1);
+        un.field_d.d("<u=ffffff>" + LoggedPlayer.field_e[2].toUpperCase() + "</u> " + (null != this.field_r ? this.field_r : ""), 320, var2 + 30, 16777215, -1);
         var2 = var2 + ii.field_l;
         int var3 = 22;
         int var4 = 80;
@@ -219,7 +219,7 @@ final class lm extends js {
         var2 = var2 + this.field_D.length * param0;
         var2 += 20;
         on.a(320 - (-60 + this.field_A >> 1), var2 + 10, this.field_A - 60, 30, 8, 65793, 128);
-        un.field_d.d(oe.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
+        un.field_d.d(TeamSelectionAgent.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
         eo.a(250, var2, sr.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_Y.length * 32;
@@ -426,39 +426,39 @@ final class lm extends js {
             stackIn_97_1 = (param1) && (el.field_A >= this.field_G) && (570 + this.field_G >= el.field_A) && (n.field_m >= this.field_q) && (this.field_q + 12 >= n.field_m);
             this.field_U = stackIn_97_1;
             if (this.field_i) {
-              if (nl.field_p == 1) {
+              if (FootballerAgent.field_p == 1) {
                 if (this.field_k != 0) {
                   if (this.field_h > this.field_k) {
                     this.field_h = this.field_h - 32;
                     if (this.field_U &&
-                      1 == nl.field_p &&
+                      1 == FootballerAgent.field_p &&
                       this.field_h < 0) {
                       this.field_h = this.field_h + 32;
                     }
                   } else {
                     if (this.field_U &&
-                      1 == nl.field_p &&
+                      1 == FootballerAgent.field_p &&
                       this.field_h < 0) {
                       this.field_h = this.field_h + 32;
                     }
                   }
                 } else {
                   if (this.field_U &&
-                    1 == nl.field_p &&
+                    1 == FootballerAgent.field_p &&
                     this.field_h < 0) {
                     this.field_h = this.field_h + 32;
                   }
                 }
               } else {
                 if (this.field_U &&
-                  1 == nl.field_p &&
+                  1 == FootballerAgent.field_p &&
                   this.field_h < 0) {
                   this.field_h = this.field_h + 32;
                 }
               }
             } else {
               if (this.field_U &&
-                1 == nl.field_p &&
+                1 == FootballerAgent.field_p &&
                 this.field_h < 0) {
                 this.field_h = this.field_h + 32;
               }
@@ -826,7 +826,7 @@ final class lm extends js {
         on.a(-(this.field_A >> 1) + 320, 20, this.field_A, this.field_n, 8, 0, 128);
         on.a(320 - (this.field_A - 20 >> 1), 30, -20 + this.field_A, 30, 8, 65793, 128);
         stackIn_2_0 = un.field_d;
-        stackIn_2_1 = new StringBuilder().append("<u=ffffff>").append(jc.field_e[0].toUpperCase()).append("</u> ");
+        stackIn_2_1 = new StringBuilder().append("<u=ffffff>").append(LoggedPlayer.field_e[0].toUpperCase()).append("</u> ");
         if (this.field_r == null) {
           stackIn_3_2 = "";
         } else {
@@ -987,7 +987,7 @@ final class lm extends js {
         on.a(-(this.field_A >> 1) + 320, 20, this.field_A, this.field_n, 8, 0, 128);
         on.a(-(-var3 + this.field_A >> 1) + 320, 30, this.field_A - var3, 30, 8, 65793, 128);
         stackIn_10_0 = un.field_d;
-        stackIn_10_1 = new StringBuilder().append("<u=ffffff>").append(jc.field_e[1].toUpperCase()).append("</u> ");
+        stackIn_10_1 = new StringBuilder().append("<u=ffffff>").append(LoggedPlayer.field_e[1].toUpperCase()).append("</u> ");
         if (null != this.field_r) {
           stackIn_11_2 = this.field_r;
         } else {

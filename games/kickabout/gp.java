@@ -148,7 +148,7 @@ final class gp extends ps {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ua.field_i.indexOf(var6Lifetime1) == -1) {
+              if (GoalStateAgent.field_i.indexOf(var6Lifetime1) == -1) {
                 stackIn_44_0 = lm.field_F;
                 return stackIn_44_0;
               }

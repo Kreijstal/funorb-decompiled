@@ -161,7 +161,7 @@ final class e extends js {
               var12.field_zb = new hd(0L, dw.field_e);
               var12.a((byte) -112, var12.field_zb);
               var12.b(false);
-              var12.field_Tb = new hd(0L, jc.field_r);
+              var12.field_Tb = new hd(0L, LoggedPlayer.field_r);
               var12.a((byte) -115, var12.field_Tb);
               var12.field_Hb = new hd(0L, mb.field_F);
               var13 = 1;
@@ -340,7 +340,7 @@ final class e extends js {
                 } else {
                   if (var12.field_Db >= var7) {
                     if (var12.field_Qb < var6) {
-                      var24Lifetime2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, nu.field_D, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, CommonGame.field_D, new String[]{var20, Integer.toString(var6)});
                       var30Lifetime1 = var24Lifetime2;
                       var25 = var30Lifetime1;
                       var24Lifetime2 = var25;

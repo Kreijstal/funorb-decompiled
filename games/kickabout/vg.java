@@ -671,7 +671,7 @@ final class vg extends hd {
             }
             this.field_Sb = var3_long;
           } else {
-            if (1 == nl.field_p &&
+            if (1 == FootballerAgent.field_p &&
               this.field_Jb) {
               if (this.field_Hb &&
                 var2 < this.field_Tb &&

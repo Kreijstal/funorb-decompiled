@@ -9,18 +9,18 @@ final class df extends dj {
     static hd field_G;
 
     final static void d(boolean param0) {
-        nl var1 = null;
-        nl var2 = null;
+        FootballerAgent var1 = null;
+        FootballerAgent var2 = null;
         if (!param0) {
           df.g(57);
         }
-        if (0 != et.field_d.field_R[1].field_g) {
+        if (0 != et.field_d.participantStatus[1].field_g) {
           if (et.field_d.field_V.field_m == 1) {
             var1 = et.field_d.a((byte) 104, 0);
             var2 = et.field_d.a((byte) -71, 1);
             ej.b(var1.f(-121) - var2.f(-99), -2, var1.a(true) - var2.a(true), 10);
           }
-          et.field_d.field_R[1].field_g = 0;
+          et.field_d.participantStatus[1].field_g = 0;
         }
     }
 
@@ -150,8 +150,8 @@ final class df extends dj {
               if (var3 == 1) {
                 var6 += 50;
               }
-              for (var7 = 0; var7 < tj.field_w[var3].length; var7++) {
-                var8 = tj.field_w[var3][var7];
+              for (var7 = 0; var7 < BallAgent.field_w[var3].length; var7++) {
+                var8 = BallAgent.field_w[var3][var7];
                 var6 = var6 + (20 + pb.field_C.a(var8, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
               }
             }

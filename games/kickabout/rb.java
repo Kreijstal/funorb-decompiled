@@ -64,7 +64,7 @@ final class rb extends hd {
               var12 = qa.a(var8_ref_tv, 31100);
               var8_ref_tv.field_s = new hd(0L, vv.field_o, var11);
               var6 = var6 + param1;
-              var8_ref_tv.field_s.field_X = nl.field_i;
+              var8_ref_tv.field_s.field_X = FootballerAgent.field_i;
               var8_ref_tv.field_s.field_ub = -(8355711 & var12 >> 1) + var12 + (8355711 & vv.field_o.field_ub >> 1);
               var8_ref_tv.field_s.field_ab = var12 - (((16711423 & var12) >> 1) - ((vv.field_o.field_ab & 16711422) >> 1));
               var8_ref_tv.field_s.field_y = var12;

@@ -198,7 +198,7 @@ final class wc {
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          tj.a(var3, param1, (byte) -5, var4, var2);
+          BallAgent.a(var3, param1, (byte) -5, var4, var2);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

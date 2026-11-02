@@ -25,7 +25,7 @@ final class sq extends i {
           return true;
         }
         if (11 == cc.field_e &&
-          nu.field_j) {
+          CommonGame.field_j) {
           if (qs.field_K == 2 &&
             !nq.a(false, oc.field_f, qh.field_c)) {
             return false;

@@ -51,7 +51,7 @@ final class lr extends hs {
           if (this.field_g != -2 &&
             this.field_g == this.field_a.b((byte) -89, this.field_h)) {
             var3_int = 0;
-            for (var4 = 0; var4 < this.field_a.field_I; var4++) {
+            for (var4 = 0; var4 < this.field_a.playerCount; var4++) {
               if (~this.field_a.field_g[var4].field_p == ~this.field_h) {
                 var3_int++;
               }
@@ -79,7 +79,7 @@ final class lr extends hs {
         on.a(390, var5, 205, var6, 10, 65793, 140);
         pb.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         this.d(param0 - 95);
-        this.b(param0 ^ -2352, this.field_a.field_v);
+        this.b(param0 ^ -2352, this.field_a.phaseTime);
         var2 = this.field_a.field_C.field_k[this.field_h];
         on.a(220, 332, 150, 26, 8, 65793, 128);
         var3 = df.field_F[var2].toLowerCase();
@@ -109,7 +109,7 @@ final class lr extends hs {
         }
     }
 
-    lr(nu param0, int param1, boolean param2) {
+    lr(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, new int[]{41});
         int var4_int = 0;
         int var5 = 0;

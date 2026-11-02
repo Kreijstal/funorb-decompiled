@@ -171,7 +171,7 @@ final class mb extends wj implements ur, vh {
         var2.a(50, 1, 20, 270, var3);
         this.a(-86, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, jk.field_i, ua.field_f, this.field_C, (byte) 29, 170));
+        var3 = var3 + (5 + this.a(var3, jk.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
         this.field_B.a(40, 1, -var5 + 496 >> 1, var5, var3);
         this.field_E.a(40, 1, var4 + 3, 60, 15 + var3);
         this.field_E.field_k = (jv) (this);

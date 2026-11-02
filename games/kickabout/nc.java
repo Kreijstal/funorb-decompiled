@@ -7,7 +7,7 @@ final class nc {
     static String field_d;
     static String field_b;
 
-    final static void a(nu param0, byte param1, int param2, boolean param3) {
+    final static void a(CommonGame param0, byte param1, int param2, boolean param3) {
         int var6 = 0;
         cn var4 = null;
         int var5 = 0;
@@ -26,9 +26,9 @@ final class nc {
           u.field_c = param3;
           var9 = un.field_d;
           var4 = var9;
-          kn.field_G = new String[vt.field_c.field_I];
+          kn.field_G = new String[vt.field_c.playerCount];
           var5 = 0;
-          for (var6 = 0; var6 < vt.field_c.field_I; var6++) {
+          for (var6 = 0; var6 < vt.field_c.playerCount; var6++) {
             kn.field_G[var6] = vt.field_c.field_S[var6].toLowerCase();
             var7 = ((hu) ((Object) var9)).a(kn.field_G[var6]);
             if (var7 > var5) {

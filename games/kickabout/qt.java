@@ -95,7 +95,7 @@ class qt extends js {
           this.field_p = -20;
         }
         if (this.field_i[param0].field_m == 37) {
-          return wr.field_f - 50;
+          return FormationAgent.field_f - 50;
         }
         return 190;
     }
@@ -144,10 +144,10 @@ class qt extends js {
           var3Lifetime1 = -((this.field_j << 6) / 640);
           var8 = ug.field_b[this.field_o][1];
           var5_ref_ut = ug.field_b[this.field_o][0];
-          for (var6Lifetime1 = 0; var6Lifetime1 < wr.field_f - var5_ref_ut.field_o; var6Lifetime1 = var6Lifetime1 + var8.field_o) {
+          for (var6Lifetime1 = 0; var6Lifetime1 < FormationAgent.field_f - var5_ref_ut.field_o; var6Lifetime1 = var6Lifetime1 + var8.field_o) {
             var8.d(var6Lifetime1, var3Lifetime1);
           }
-          var5_ref_ut.d(-var5_ref_ut.field_o + wr.field_f, var3Lifetime1);
+          var5_ref_ut.d(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
           var6Lifetime1Lifetime1 = var3Lifetime1 - (-var5_ref_ut.field_v + 18);
           if (null != this.field_w) {
             un.field_d.a(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
@@ -274,7 +274,7 @@ class qt extends js {
               this.field_j = -this.field_j;
             }
           } else {
-            this.field_j = wr.field_f - po.a((js) (this), -4);
+            this.field_j = FormationAgent.field_f - po.a((js) (this), -4);
           }
           if (param2 >= -28) {
             this.field_j = 124;
@@ -462,7 +462,7 @@ class qt extends js {
             return stackIn_34_0;
           }
           if (ks.field_e == 10) {
-            stackIn_39_0 = (et.field_d.field_R[0].field_g == 4);
+            stackIn_39_0 = (et.field_d.participantStatus[0].field_g == 4);
             return stackIn_39_0;
           }
           if (11 == ks.field_e) {

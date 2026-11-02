@@ -84,7 +84,7 @@ final class ja extends ta {
           var4Lifetime1++;
           kj.a((byte) -116);
         }
-        if (wr.field_f < wt.field_x &&
+        if (FormationAgent.field_f < wt.field_x &&
           id.field_v != 0) {
           stackIn_28_0 = var4Lifetime1;
           stackIn_29_1 = (id.field_v >= 0) ? 1 : -1;

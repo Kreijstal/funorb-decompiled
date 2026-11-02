@@ -92,7 +92,7 @@ final class mi {
           at.field_Kb = param1;
           ov.field_b = param3;
           var7 = (CharSequence) ((Object) param1);
-          qi.field_o = mo.a(0, var7);
+          qi.field_o = MatchAgent.a(0, var7);
           if (param2 < 114) {
             field_d = -66;
           }

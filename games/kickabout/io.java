@@ -440,7 +440,7 @@ final class io {
                 this.field_p = fb.field_N.toLowerCase();
                 if (um.field_e != null &&
                   um.field_e.field_h >= 0 &&
-                  um.field_e.field_o.field_R[um.field_e.field_h].field_q) {
+                  um.field_e.field_o.participantStatus[um.field_e.field_h].offerDraw) {
                   this.field_p = wq.field_b.toLowerCase();
                 }
               }

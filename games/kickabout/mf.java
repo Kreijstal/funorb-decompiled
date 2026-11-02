@@ -703,8 +703,8 @@ final class mf extends hd {
         rv.field_d[0] = rv.field_a;
         rv.field_d[5] = rq.field_B;
         rv.field_d[10] = hm.field_C;
-        rv.field_d[17] = gt.field_r;
-        rv.field_d[20] = gt.field_m;
+        rv.field_d[17] = ParticipantStatus.field_r;
+        rv.field_d[20] = ParticipantStatus.field_m;
         rv.field_d[21] = pf.field_a;
         rv.field_d[15] = dr.field_f;
         rv.field_d[16] = qk.field_F;
@@ -727,8 +727,8 @@ final class mf extends hd {
         eb.field_g = new String[4];
         qb.field_Qb[0] = at.field_Bb;
         qb.field_Qb[3] = op.field_u;
-        qb.field_Qb[1] = wr.field_g;
-        qb.field_Qb[2] = mo.field_a;
+        qb.field_Qb[1] = FormationAgent.field_g;
+        qb.field_Qb[2] = MatchAgent.field_a;
         eb.field_g[1] = qa.field_F;
         eb.field_g[3] = bv.field_n;
         eb.field_g[0] = av.field_d;

@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gt extends mo {
+final class ParticipantStatus extends MatchAgent {
     static int[][][][] field_h;
     static String field_j;
     static int[] field_f;
-    boolean field_i;
-    boolean field_n;
-    boolean field_s;
+    boolean loadedPitch;
+    boolean rewardEligible;
+    boolean resigned;
     static bi field_t;
     static String field_m;
     int field_g;
     static String field_r;
-    boolean field_q;
+    boolean offerDraw;
     static int field_w;
     boolean field_k;
-    boolean field_u;
+    boolean megamode;
     int field_l;
     int field_p;
-    boolean field_v;
+    boolean departed;
     static String field_o;
 
     final static void a(int param0, int param1, byte param2, int param3) {
@@ -82,7 +82,7 @@ final class gt extends mo {
           if (param0 != 3511) {
             field_o = (String) null;
           }
-          stackIn_7_0 = (!this.field_s) && (!this.field_v);
+          stackIn_7_0 = (!this.resigned) && (!this.departed);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,12 +104,12 @@ final class gt extends mo {
           this.field_g = -1 + param0.l(3, 59);
           this.field_p = param0.l(3, param1 ^ 58) - param1;
           this.field_k = mu.a(param0, (byte) -39);
-          this.field_q = mu.a(param0, (byte) -39);
-          this.field_s = mu.a(param0, (byte) -39);
-          this.field_v = mu.a(param0, (byte) -39);
-          this.field_i = mu.a(param0, (byte) -39);
-          this.field_n = mu.a(param0, (byte) -39);
-          this.field_u = mu.a(param0, (byte) -39);
+          this.offerDraw = mu.a(param0, (byte) -39);
+          this.resigned = mu.a(param0, (byte) -39);
+          this.departed = mu.a(param0, (byte) -39);
+          this.loadedPitch = mu.a(param0, (byte) -39);
+          this.rewardEligible = mu.a(param0, (byte) -39);
+          this.megamode = mu.a(param0, (byte) -39);
           this.field_l = param0.l(8, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,9 +168,9 @@ final class gt extends mo {
         }
     }
 
-    final void a(byte param0, mo param1) {
+    final void a(byte param0, MatchAgent param1) {
         RuntimeException runtimeException = null;
-        gt var3 = null;
+        ParticipantStatus var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -179,17 +179,17 @@ final class gt extends mo {
           if (param0 >= -52) {
             this.field_g = -97;
           }
-          var3 = (gt) (param1);
-          this.field_q = var3.field_q;
+          var3 = (ParticipantStatus) (param1);
+          this.offerDraw = var3.offerDraw;
           this.field_l = var3.field_l;
-          this.field_i = var3.field_i;
-          this.field_v = var3.field_v;
-          this.field_s = var3.field_s;
+          this.loadedPitch = var3.loadedPitch;
+          this.departed = var3.departed;
+          this.resigned = var3.resigned;
           this.field_g = var3.field_g;
           this.field_k = var3.field_k;
           this.field_p = var3.field_p;
-          this.field_n = var3.field_n;
-          this.field_u = var3.field_u;
+          this.rewardEligible = var3.rewardEligible;
+          this.megamode = var3.megamode;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,7 +209,7 @@ final class gt extends mo {
         try {
           field_r = null;
           if (!param0) {
-            gt.$cfr$intArgs$a$60f25194e713(false, -40, 99, -28);
+            ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -40, 99, -28);
           }
           field_t = null;
           field_j = null;
@@ -222,8 +222,8 @@ final class gt extends mo {
         }
     }
 
-    public gt() {
-        this.field_u = false;
+    public ParticipantStatus() {
+        this.megamode = false;
         this.field_l = 0;
     }
 

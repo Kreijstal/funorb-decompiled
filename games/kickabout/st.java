@@ -17,7 +17,7 @@ final class st extends iq {
     static String field_d;
     static String field_f;
 
-    final static void a(nu param0, int param1, int param2) {
+    final static void a(CommonGame param0, int param1, int param2) {
         try {
           vl.field_d = true;
           gp.field_i = -pq.field_Q.field_o;
@@ -99,8 +99,8 @@ final class st extends iq {
           var8.field_b[0] = param0;
           var9.field_b[param1.length()] = param3.a(param1) + param0;
           if (param2 != 80) {
-            nu var7 = (nu) null;
-            st.a((nu) null, -19, 117);
+            CommonGame var7 = (CommonGame) null;
+            st.a((CommonGame) null, -19, 117);
           }
           is.a(param3, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {

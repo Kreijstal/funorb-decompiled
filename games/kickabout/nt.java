@@ -18,10 +18,10 @@ final class nt extends hd implements lv {
 
     final static void j(int param0) {
         int var2;
-        nl var2_ref_nl;
+        FootballerAgent var2_ref_nl;
         int var3;
         int var4;
-        tj var5;
+        BallAgent var5;
         var4 = Kickabout.field_G;
         if (param0 != 13459) {
           return;

@@ -113,7 +113,7 @@ final class el extends tm {
           sg.field_c[3] = 16736511;
           sg.field_c[0] = 16764000;
           sg.field_c[1] = 6356832;
-          nl.field_i = param0;
+          FootballerAgent.field_i = param0;
           ag.field_e = 8421504;
           sb.field_h[3] = 16736511;
           sb.field_h[2] = 16736352;
@@ -140,7 +140,7 @@ final class el extends tm {
           kd.field_z = new hd(0L, param11);
           uf.field_b.a((byte) -128, kd.field_z);
           ei.field_b = new hd(0L, param9);
-          ei.field_b.field_X = nl.field_i;
+          ei.field_b.field_X = FootballerAgent.field_i;
           kd.field_z.a((byte) -116, ei.field_b);
           kd.field_z.b(false);
           ij.field_s = new hd(0L, (hd) null);

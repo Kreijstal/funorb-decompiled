@@ -90,7 +90,7 @@ final class gl {
         }
     }
 
-    final static void a(int param0, nu param1) {
+    final static void a(int param0, CommonGame param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -106,12 +106,12 @@ final class gl {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        nu var12 = null;
+        CommonGame var12 = null;
         var11 = Kickabout.field_G;
         try {
           if (param0 != 6711) {
-            var12 = (nu) null;
-            gl.a(-102, (nu) null);
+            var12 = (CommonGame) null;
+            gl.a(-102, (CommonGame) null);
           }
           if (in.field_c == null) {
             in.field_c = new int[2][4][4][10][2];
@@ -150,7 +150,7 @@ final class gl {
                   vl.a(param1, (byte) -75);
                   param1.field_V.field_t = var9;
                   param1.field_V.field_p = var10;
-                  gt.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
+                  ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
                   in.field_c[var2_int][var3][var4][var6][0] = ge.field_m[0];
                   in.field_c[var2_int][var3][var4][var6][1] = ge.field_m[1];
                 }

@@ -116,7 +116,7 @@ final class eh implements pk {
           pb.field_C.a(new kg[]{var5}, new int[]{10});
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
-          ch.a(var6, (ot) (bg.a("menu", bo.field_Cb, (byte) 77, "locked")), (ot) (bg.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
+          LoggedGoal.a(var6, (ot) (bg.a("menu", bo.field_Cb, (byte) 77, "locked")), (ot) (bg.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
           sh.field_g = nh.b(nh.a(var6));
           nn.field_B = (ot) (bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
           tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
@@ -654,28 +654,28 @@ final class eh implements pk {
         sj var4 = kh.field_g;
         sj var3 = IterableNodeHashTable.field_b;
         mp.field_h = new qe(55);
-        mp.field_h.a(var4, bh.field_q, -6869, "basic", nu.field_M);
-        mp.field_h.a(sj.field_f, bh.field_q, -6869, "", nu.field_M);
-        mp.field_h.a(var4, bh.field_q, -6869, "arialish12", nu.field_M);
-        mp.field_h.a(bo.field_Cb, lj.field_l, -6869, "fonts", nu.field_M);
+        mp.field_h.a(var4, bh.field_q, -6869, "basic", CommonGame.field_M);
+        mp.field_h.a(sj.field_f, bh.field_q, -6869, "", CommonGame.field_M);
+        mp.field_h.a(var4, bh.field_q, -6869, "arialish12", CommonGame.field_M);
+        mp.field_h.a(bo.field_Cb, lj.field_l, -6869, "fonts", CommonGame.field_M);
         mp.field_h.a(v.field_b, lj.field_l, -6869, "fonts", te.field_b);
         mp.field_h.a(var3, lj.field_l, -6869, "arialish12", te.field_b);
         mp.field_h.a(var3, lj.field_l, -6869, "lobby", te.field_b);
-        mp.field_h.a(bo.field_Cb, p.field_a, -6869, "menu", nu.field_M);
-        mp.field_h.a(bo.field_Cb, sm.field_j, param0 - 14181, "hud", nu.field_M);
-        mp.field_h.a(bo.field_Cb, pn.field_B, -6869, "lobby", nu.field_M);
-        mp.field_h.a(var4, pn.field_B, -6869, "lobby", nu.field_M);
+        mp.field_h.a(bo.field_Cb, p.field_a, -6869, "menu", CommonGame.field_M);
+        mp.field_h.a(bo.field_Cb, sm.field_j, param0 - 14181, "hud", CommonGame.field_M);
+        mp.field_h.a(bo.field_Cb, pn.field_B, -6869, "lobby", CommonGame.field_M);
+        mp.field_h.a(var4, pn.field_B, -6869, "lobby", CommonGame.field_M);
         if (ih.field_c == 0) {
-          mp.field_h.a(bo.field_Cb, pi.field_c, param0 - 14181, "park", nu.field_M);
-          mp.field_h.a(bo.field_Cb, pi.field_c, param0 - 14181, "park_surface0", nu.field_M);
+          mp.field_h.a(bo.field_Cb, pi.field_c, param0 - 14181, "park", CommonGame.field_M);
+          mp.field_h.a(bo.field_Cb, pi.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
         }
         if (ih.field_c == 1) {
-          mp.field_h.a(bo.field_Cb, th.field_b, -6869, "beach", nu.field_M);
-          mp.field_h.a(bo.field_Cb, th.field_b, -6869, "beach_surface0", nu.field_M);
+          mp.field_h.a(bo.field_Cb, th.field_b, -6869, "beach", CommonGame.field_M);
+          mp.field_h.a(bo.field_Cb, th.field_b, -6869, "beach_surface0", CommonGame.field_M);
         }
         if (ih.field_c == 2) {
-          mp.field_h.a(bo.field_Cb, h.field_d, param0 - 14181, "street", nu.field_M);
-          mp.field_h.a(bo.field_Cb, h.field_d, -6869, "beach_surface0", nu.field_M);
+          mp.field_h.a(bo.field_Cb, h.field_d, param0 - 14181, "street", CommonGame.field_M);
+          mp.field_h.a(bo.field_Cb, h.field_d, -6869, "beach_surface0", CommonGame.field_M);
         }
         mp.field_h.a(IterableNodeHashTable.field_c, (byte) -115, us.field_f, qj.field_c);
         mp.field_h.a(qj.field_c, d.field_b, -100);

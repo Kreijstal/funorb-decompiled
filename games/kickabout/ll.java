@@ -14,7 +14,7 @@ final class ll extends pf {
     static ut field_n;
 
     final static void c(byte param0) {
-        ma.k((byte) -118);
+        NetworkGameClient.k((byte) -118);
         int var1 = 115 % ((param0 + 48) / 42);
         ae.m(-19417);
     }

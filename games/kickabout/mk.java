@@ -386,7 +386,7 @@ final class mk {
                           var4.a(ek.b(true, var2_int, 920), 3);
                         }
                         var4.a(ss.field_b, 3);
-                        var2 = gt.c(0);
+                        var2 = ParticipantStatus.c(0);
                         var2.a(896, 940, -51);
                         var4.a(var2, param0 + 1625);
                       }

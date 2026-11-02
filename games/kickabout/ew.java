@@ -33,7 +33,7 @@ final class ew {
         Object var1 = null;
         var1 = lw.field_e;
         synchronized (var1) {
-          nl.field_p = ao.field_d;
+          FootballerAgent.field_p = ao.field_d;
           lb.field_M = lb.field_M + 1;
           el.field_A = vf.field_G;
           n.field_m = gf.field_b;
@@ -65,7 +65,7 @@ final class ew {
           if (ov.field_b == 2 &&
             null != qi.field_o) {
             var3 = (CharSequence) ((Object) param1);
-            if (!qi.field_o.equals(mo.a(0, var3))) {
+            if (!qi.field_o.equals(MatchAgent.a(0, var3))) {
               return false;
             }
             return true;

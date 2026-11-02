@@ -7,7 +7,7 @@ final class nw {
     static String field_c;
     static ut[] field_a;
     private IntrusiveNode field_f;
-    static nu field_b;
+    static CommonGame field_b;
 
     public static void c(byte param0) {
         int var1 = 119 / ((34 - param0) / 56);

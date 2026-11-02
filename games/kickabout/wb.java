@@ -36,7 +36,7 @@ final class wb extends hs {
         var10 = Kickabout.field_G;
         this.c(108);
         this.a(false, gb.field_H);
-        this.b(-2351, this.field_a.field_v);
+        this.b(-2351, this.field_a.phaseTime);
         if (~this.field_g != param0) {
           stackIn_6_0 = (this.field_a.field_n.a(8658, this.field_g)) ? 1 : 0;
         } else {
@@ -56,7 +56,7 @@ final class wb extends hs {
             if (var4 == 0) {
               var5_ref_String = he.field_Ub;
             } else {
-              var5_ref_String = nu.field_a;
+              var5_ref_String = CommonGame.field_a;
             }
           }
           wj.a(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
@@ -75,9 +75,9 @@ final class wb extends hs {
         }
         this.field_t.a(96, false);
         var4Lifetime1 = 128;
-        for (var5 = 0; var5 < this.field_a.field_I; var5++) {
+        for (var5 = 0; var5 < this.field_a.playerCount; var5++) {
           var6 = this.field_k[var5];
-          if (!this.field_a.field_R[var5].d(3511)) {
+          if (!this.field_a.participantStatus[var5].d(3511)) {
             var7 = un.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
@@ -187,7 +187,7 @@ final class wb extends hs {
         }
     }
 
-    wb(nu param0, int param1, boolean param2) {
+    wb(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
         int var4_int = 0;
         RuntimeException runtimeException = null;
@@ -199,8 +199,8 @@ final class wb extends hs {
         try {
           this.field_t = new hd();
           this.field_t.a(true, 640, 0, 0, 480);
-          this.field_k = new hd[param0.field_I];
-          for (var4_int = 0; param0.field_I > var4_int; var4_int++) {
+          this.field_k = new hd[param0.playerCount];
+          for (var4_int = 0; param0.playerCount > var4_int; var4_int++) {
             var5 = new hd();
             var5.field_E = param0.field_S[var4_int].toLowerCase();
             var5.field_y = 16777215;
@@ -351,7 +351,7 @@ final class wb extends hs {
         int var3Lifetime1;
         var8 = Kickabout.field_G;
         super.a(-103, param1);
-        for (var3 = 0; this.field_a.field_I > var3; var3++) {
+        for (var3 = 0; this.field_a.playerCount > var3; var3++) {
           stackIn_4_0 = this.field_k[var3];
           stackIn_5_1 = (~(this.field_k[var3].field_s + (this.field_k[var3].field_q >> 1)) == ~qs.field_P[this.field_a.field_n.field_k[var3] + 1]);
           stackIn_4_0.field_lb = stackIn_5_1;
@@ -362,7 +362,7 @@ final class wb extends hs {
         this.field_t.b(0, param1);
         var9 = 0;
         var3Lifetime1 = var9;
-        while (this.field_a.field_I > var9) {
+        while (this.field_a.playerCount > var9) {
           var4 = this.field_k[var9];
           var5 = 1 + this.field_a.field_n.field_k[var9];
           var6 = qs.field_P[var5] - (var4.field_q >> 1);

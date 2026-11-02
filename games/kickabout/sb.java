@@ -94,7 +94,7 @@ final class sb {
           bh.field_i[9] = we.field_e;
           bh.field_i[20] = vr.field_a;
           bh.field_i[4] = fp.field_n;
-          bh.field_i[13] = gt.field_o;
+          bh.field_i[13] = ParticipantStatus.field_o;
           bh.field_i[7] = ca.field_b;
           bh.field_i[21] = mp.field_e;
           bh.field_i[5] = fs.field_c;
@@ -105,7 +105,7 @@ final class sb {
         bh.field_i[9] = we.field_e;
         bh.field_i[20] = vr.field_a;
         bh.field_i[4] = fp.field_n;
-        bh.field_i[13] = gt.field_o;
+        bh.field_i[13] = ParticipantStatus.field_o;
         bh.field_i[7] = ca.field_b;
         bh.field_i[21] = mp.field_e;
         bh.field_i[5] = fs.field_c;

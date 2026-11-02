@@ -179,13 +179,13 @@ final class np extends hd {
     }
 
     final static void b(int param0) {
-        gt.field_t.field_o = 0;
+        ParticipantStatus.field_t.field_o = 0;
         if (param0 != 23877) {
           np.a(85, 43, -33);
-          gt.field_t.field_l = 0;
+          ParticipantStatus.field_t.field_l = 0;
           return;
         }
-        gt.field_t.field_l = 0;
+        ParticipantStatus.field_t.field_l = 0;
     }
 
     public static void i(byte param0) {

@@ -33,7 +33,7 @@ final class mn implements gj {
           var6_int = param3.field_t + param4;
           var8 = param3.field_g + param2;
           kj.a(12105912, var8, var6_int, param3.field_i, param3.field_n);
-          var9 = jc.field_g[1];
+          var9 = LoggedPlayer.field_g[1];
           if (param3 instanceof wi &&
             ((wi) (param3)).field_A) {
             var9.c((-var9.field_o + param3.field_n >> 1) + (1 + var6_int), 1 + (var8 + (-var9.field_v + param3.field_i >> 1)), 256);

@@ -103,7 +103,7 @@ final class cp implements Runnable {
 
     final static int a(int param0) {
         al.field_Ab.a(0);
-        if (!gt.field_t.a((byte) -46)) {
+        if (!ParticipantStatus.field_t.a((byte) -46)) {
           return fw.h((byte) 66);
         }
         if (param0 != 522) {

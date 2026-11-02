@@ -300,7 +300,7 @@ abstract class wt extends fd implements jp {
         }
     }
 
-    final static void a(int param0, nu param1, int param2, ut[] param3) {
+    final static void a(int param0, CommonGame param1, int param2, ut[] param3) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -347,8 +347,8 @@ abstract class wt extends fd implements jp {
         }
     }
 
-    final static boolean a(tj param0, nl param1, byte param2, int param3) {
-        nl stackIn_17_0 = null;
+    final static boolean a(BallAgent param0, FootballerAgent param1, byte param2, int param3) {
+        FootballerAgent stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -382,7 +382,7 @@ abstract class wt extends fd implements jp {
                   param1.c(var6, 5);
                   return true;
                 }
-                stackIn_17_0 = (nl) (param1);
+                stackIn_17_0 = (FootballerAgent) (param1);
                 if (param1.field_M < var6) {
                   stackIn_18_1 = 8;
                 } else {

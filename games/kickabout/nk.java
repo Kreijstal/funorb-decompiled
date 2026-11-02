@@ -15,12 +15,12 @@ final class nk extends dg {
           if (param0 != -59) {
             nk.a(114);
           }
-          if (vb.field_b == wl.field_n) {
+          if (vb.field_b == LineupAgent.field_n) {
             return false;
           }
-          cc.field_e = bt.field_a[wl.field_n];
-          il.field_c = up.field_a[wl.field_n];
-          wl.field_n = 127 & 1 + wl.field_n;
+          cc.field_e = bt.field_a[LineupAgent.field_n];
+          il.field_c = up.field_a[LineupAgent.field_n];
+          LineupAgent.field_n = 127 & 1 + LineupAgent.field_n;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;
@@ -116,12 +116,12 @@ final class nk extends dg {
           if (param0 != -59) {
             nk.a(114);
           }
-          if (vb.field_b == wl.field_n) {
+          if (vb.field_b == LineupAgent.field_n) {
             return false;
           }
-          cc.field_e = bt.field_a[wl.field_n];
-          il.field_c = up.field_a[wl.field_n];
-          wl.field_n = 127 & 1 + wl.field_n;
+          cc.field_e = bt.field_a[LineupAgent.field_n];
+          il.field_c = up.field_a[LineupAgent.field_n];
+          LineupAgent.field_n = 127 & 1 + LineupAgent.field_n;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

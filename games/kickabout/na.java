@@ -346,7 +346,7 @@ final class na extends hd {
               var5 = du.field_a;
             } else {
               if (re.field_c.field_e == var4) {
-                var5 = gt.field_w;
+                var5 = ParticipantStatus.field_w;
               } else {
                 var5 = ju.field_U;
               }

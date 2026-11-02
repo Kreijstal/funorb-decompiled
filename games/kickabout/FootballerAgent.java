@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nl extends mo {
+class FootballerAgent extends MatchAgent {
     int field_n;
     private int field_g;
-    int field_I;
-    int field_J;
+    int aiWait;
+    int archetype;
     int field_v;
     int field_x;
     int field_h;
@@ -19,10 +19,10 @@ class nl extends mo {
     int field_o;
     private int field_D;
     int field_M;
-    boolean field_y;
+    boolean member;
     private int field_A;
     int field_G;
-    boolean field_l;
+    boolean megamode;
     int field_m;
     int field_B;
     int field_w;
@@ -32,7 +32,7 @@ class nl extends mo {
     up field_N;
     static tf field_f;
     int field_P;
-    int field_u;
+    int action;
     int field_F;
     int field_L;
     int field_k;
@@ -49,7 +49,7 @@ class nl extends mo {
         field_i = null;
         field_f = null;
         if (param0 > -49) {
-          nl.a(true, (byte) -47);
+          FootballerAgent.a(true, (byte) -47);
         }
     }
 
@@ -58,7 +58,7 @@ class nl extends mo {
         if (param0 != 292603688) {
           this.field_z = -70;
         }
-        stackIn_7_0 = ((3 & (this.field_G >> 2 ^ this.field_G)) != 0) || (this.field_u == 4);
+        stackIn_7_0 = ((3 & (this.field_G >> 2 ^ this.field_G)) != 0) || (this.action == 4);
         return stackIn_7_0;
     }
 
@@ -99,17 +99,17 @@ class nl extends mo {
             this.field_C = this.field_C - 1;
           }
           stackIn_6_1 = (param2);
-          this.field_l = stackIn_6_1;
-          if (this.field_u != 0) {
+          this.megamode = stackIn_6_1;
+          if (this.action != 0) {
             this.field_L = this.field_L - 1;
           }
           var5_int = 0;
           var6 = 0;
-          if (3 == this.field_u ||
-            this.field_u == 12 ||
-            this.field_u == 13) {
+          if (3 == this.action ||
+            this.action == 12 ||
+            this.action == 13) {
             if (!this.field_s) {
-              if (this.field_N.a((byte) 44, this.field_y) &&
+              if (this.field_N.a((byte) 44, this.member) &&
                 this.field_G != 0) {
                 this.a(this.field_G, param0 ^ 26212);
                 if (this.field_n != 0 &&
@@ -124,7 +124,7 @@ class nl extends mo {
               }
               var7Lifetime7 = this.field_k;
               var8 = this.field_m;
-              if (this.field_l) {
+              if (this.megamode) {
                 var7Lifetime7 = var7Lifetime7 << 1;
                 var8 = var8 << 1;
               }
@@ -135,7 +135,7 @@ class nl extends mo {
               var6 = this.field_B;
             }
           }
-          if (this.field_u == 5) {
+          if (this.action == 5) {
             var7Lifetime1 = -(this.field_o << 14) + 327680;
             if (this.field_t - var7Lifetime1 > this.field_M) {
               var5_int = var7Lifetime1;
@@ -144,10 +144,10 @@ class nl extends mo {
               var5_int = -var7Lifetime1;
             }
           }
-          if (param0 == this.field_u) {
+          if (param0 == this.action) {
             this.a(this.field_h, 26214);
           }
-          if (this.field_u == 4) {
+          if (this.action == 4) {
             if (this.field_n != 0 &&
               this.field_j != 0) {
               stackIn_40_0 = this.field_g;
@@ -155,30 +155,30 @@ class nl extends mo {
               stackIn_40_0 = this.field_A;
             }
             var7Lifetime2 = stackIn_40_0 << 1;
-            if (this.field_N.b(this.field_y, 100)) {
+            if (this.field_N.b(this.member, 100)) {
               this.a(this.field_G, 26214);
             }
             var6 = var7Lifetime2 * this.field_n;
             var5_int = var7Lifetime2 * this.field_j;
           }
-          stackIn_46_0 = (this.field_u != 0) ? 0 : 1;
+          stackIn_46_0 = (this.action != 0) ? 0 : 1;
           var7Lifetime3 = stackIn_46_0;
           stackIn_48_0 = var7Lifetime3;
-          if (this.field_u != 1) {
+          if (this.action != 1) {
             stackIn_49_1 = 0;
           } else {
             stackIn_49_1 = 1;
           }
           var7Lifetime4 = stackIn_48_0 | stackIn_49_1;
           stackIn_51_0 = var7Lifetime4;
-          if (this.field_u != 11) {
+          if (this.action != 11) {
             stackIn_52_1 = 0;
           } else {
             stackIn_52_1 = 1;
           }
           var7Lifetime5 = stackIn_51_0 | stackIn_52_1;
           stackIn_54_0 = var7Lifetime5;
-          if (this.field_u != 14) {
+          if (this.action != 14) {
             stackIn_55_1 = 0;
           } else {
             stackIn_55_1 = 1;
@@ -192,24 +192,24 @@ class nl extends mo {
               stackIn_60_0 = this.field_g;
             }
             var8Lifetime1 = stackIn_60_0;
-            if (this.field_l) {
+            if (this.megamode) {
               var8Lifetime1 = var8Lifetime1 * 5 >> 2;
             }
             if (param3) {
               var8Lifetime1 = 9 * var8Lifetime1 / 10;
             }
             this.a(this.field_G, 26214);
-            if (this.field_u == 14) {
+            if (this.action == 14) {
               var8Lifetime1 = 73728;
             }
-            if (1 == this.field_u) {
-              if (!this.field_N.c(this.field_y, (byte) -62)) {
+            if (1 == this.action) {
+              if (!this.field_N.c(this.member, (byte) -62)) {
                 var8Lifetime1 = var8Lifetime1 >> 2;
               } else {
                 var8Lifetime1 = var8Lifetime1 >> 1;
               }
             }
-            if (this.field_u == 11) {
+            if (this.action == 11) {
               var8Lifetime1 = io.field_q[this.field_N.field_q] * 3 >> 1;
               if (this.b(false)) {
                 var8Lifetime1 = var8Lifetime1 * 181 >> 8;
@@ -251,10 +251,10 @@ class nl extends mo {
 
     final int a(int param0, byte param1) {
         int var9 = 0;
-        int var3 = this.field_N.d(this.field_y, param1 ^ -68);
+        int var3 = this.field_N.d(this.member, param1 ^ -68);
         int var4 = var3 * 14 / 100;
         if (param1 != -68) {
-          nl.e((byte) 48);
+          FootballerAgent.e((byte) 48);
         }
         int var5 = -var4 + 14;
         int var6 = this.c((byte) -99);
@@ -284,14 +284,14 @@ class nl extends mo {
         var2 = fj.a(-40, this.field_w ^ var2);
         var2 = fj.a(-40, var2 ^ this.field_v);
         var2 = fj.a(-40, var2 ^ this.field_K);
-        var2 = fj.a(-40, this.field_I ^ var2);
+        var2 = fj.a(-40, this.aiWait ^ var2);
         var2 = fj.a(-40, var2 ^ this.field_o);
         var2 = fj.a(-40, var2 ^ this.field_t);
         var2 = fj.a(-40, this.field_G ^ var2);
         var2 = fj.a(-40, this.field_h ^ var2);
         var2 = fj.a(-40, var2 ^ this.field_j);
         var2 = fj.a(-40, var2 ^ this.field_n);
-        var2 = fj.a(-40, var2 ^ this.field_u);
+        var2 = fj.a(-40, var2 ^ this.action);
         var2 = fj.a(-40, this.field_L ^ var2);
         var2 = fj.a(-40, this.field_C ^ var2);
         var2 = fj.a(-40, var2 ^ this.field_z);
@@ -303,9 +303,9 @@ class nl extends mo {
         var2 = fj.a(-40, var2 ^ (!this.field_s ? 0 : 1));
         var2 = fj.a(-40, var2 ^ this.field_r);
         var2 = fj.a(-40, var2 ^ this.field_B);
-        var2 = fj.a(-40, this.field_J ^ var2);
-        var2 = fj.a(-40, var2 ^ (this.field_y ? 1 : 0));
-        var2 = fj.a(-40, var2 ^ (this.field_l ? 1 : 0));
+        var2 = fj.a(-40, this.archetype ^ var2);
+        var2 = fj.a(-40, var2 ^ (this.member ? 1 : 0));
+        var2 = fj.a(-40, var2 ^ (this.megamode ? 1 : 0));
         return var2;
     }
 
@@ -325,10 +325,10 @@ class nl extends mo {
           this.field_G = param1.l(4, 59);
           this.field_n = param1.l(2, 59) - 1;
           this.field_j = -1 + param1.l(2, param0 + 13977);
-          this.field_u = hq.a(param0 ^ -28255, kb.a(14, false), param1, 0);
+          this.action = hq.a(param0 ^ -28255, kb.a(14, false), param1, 0);
           this.field_L = hq.a(22531, 8, param1, 0);
           this.field_C = hq.a(22531, 9, param1, 0);
-          this.field_I = param1.l(3, param0 ^ -13927);
+          this.aiWait = param1.l(3, param0 ^ -13927);
           this.field_O = mu.a(param1, (byte) -39);
           this.field_s = mu.a(param1, (byte) -39);
           this.field_k = mk.a(param1, 30, (byte) 6, 18);
@@ -354,17 +354,17 @@ class nl extends mo {
         }
     }
 
-    final void a(byte param0, mo param1) {
-        nl var4 = null;
+    final void a(byte param0, MatchAgent param1) {
+        FootballerAgent var4 = null;
         try {
-          var4 = (nl) (param1);
+          var4 = (FootballerAgent) (param1);
           this.field_n = var4.field_n;
           this.field_w = var4.field_w;
           this.field_O = var4.field_O;
           this.field_L = var4.field_L;
           this.field_t = var4.field_t;
           this.field_B = var4.field_B;
-          this.field_I = var4.field_I;
+          this.aiWait = var4.aiWait;
           this.field_C = var4.field_C;
           this.field_j = var4.field_j;
           this.field_r = var4.field_r;
@@ -383,7 +383,7 @@ class nl extends mo {
             this.b(-65, -41);
           }
           this.field_K = var4.field_K;
-          this.field_u = var4.field_u;
+          this.action = var4.action;
           this.field_h = var4.field_h;
           this.field_x = var4.field_x;
           this.field_k = var4.field_k;
@@ -413,12 +413,12 @@ class nl extends mo {
             this.field_j = param1.l(2, 59) - 1;
           }
           if (mu.a(param1, (byte) -39)) {
-            this.field_u = param1.l(kb.a(14, false), 59);
+            this.action = param1.l(kb.a(14, false), 59);
             this.field_L = param1.l(8, param0 ^ 50);
           }
           this.field_C = hq.a(param0 ^ 22538, param0, param1, 0);
           if (mu.a(param1, (byte) -39)) {
-            this.field_I = param1.l(3, 59);
+            this.aiWait = param1.l(3, 59);
           }
           if (mu.a(param1, (byte) -39)) {
             this.field_O = mu.a(param1, (byte) -39);
@@ -440,7 +440,7 @@ class nl extends mo {
             this.field_q = param1.l(32, 59);
             this.field_D = param1.l(32, 59);
           }
-          if (this.field_J == 4 &&
+          if (this.archetype == 4 &&
             mu.a(param1, (byte) -39)) {
             this.field_o = param1.l(4, 59);
             this.field_t = param1.l(26, param0 + 50);
@@ -466,8 +466,8 @@ class nl extends mo {
           this.c((byte) 63);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_u != 0 && (this.field_u != 4 ||
-          !this.field_N.a((byte) 44, this.field_y))) {
+        if (this.action != 0 && (this.action != 4 ||
+          !this.field_N.a((byte) 44, this.member))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -499,7 +499,7 @@ class nl extends mo {
         this.field_j = 0;
         this.field_n = 0;
         if (param1 != 26214) {
-          nl.a(true, (byte) 88);
+          FootballerAgent.a(true, (byte) 88);
         }
         if ((param0 & 4) > 0) {
           this.field_n = this.field_n - 1;
@@ -526,7 +526,7 @@ class nl extends mo {
         if (this.field_G == 0) {
           this.a(en.b(param0, -25147), 26214);
         }
-        this.field_L = this.field_L + this.field_N.a(this.field_y, 0) / 5;
+        this.field_L = this.field_L + this.field_N.a(this.member, 0) / 5;
         this.field_F = param1;
         this.field_s = false;
     }
@@ -534,9 +534,9 @@ class nl extends mo {
     final int c(byte param0) {
         String discarded$0 = null;
         if (param0 != -99) {
-          discarded$0 = this.c(-72);
+          discarded$0 = this.archetypeName(-72);
         }
-        int var2 = -this.field_N.d(this.field_y, 0) + 100;
+        int var2 = -this.field_N.d(this.member, 0) + 100;
         return 80 + 120 * var2 / 100;
     }
 
@@ -544,7 +544,7 @@ class nl extends mo {
         if (param0 != -99) {
           this.f(-27);
         }
-        return 200 - (this.field_N.d(this.field_y, (byte) -127) * 2 - 120) + vf.field_I[4];
+        return 200 - (this.field_N.d(this.member, (byte) -127) * 2 - 120) + vf.field_I[4];
     }
 
     final void a(boolean param0, up param1, int param2) {
@@ -561,22 +561,22 @@ class nl extends mo {
         try {
           this.field_N = param1;
           stackIn_3_1 = (param0);
-          this.field_y = stackIn_3_1;
-          this.field_J = this.field_N.field_q;
-          if (this.field_N.c(this.field_y, param2 - 109)) {
+          this.member = stackIn_3_1;
+          this.archetype = this.field_N.field_q;
+          if (this.field_N.c(this.member, param2 - 109)) {
             stackIn_6_0 = 3;
           } else {
-            stackIn_6_0 = this.field_J;
+            stackIn_6_0 = this.archetype;
           }
           var4_int = stackIn_6_0;
-          this.field_A = ea.field_j[var4_int] + (io.field_q[var4_int] - ea.field_j[var4_int]) * this.field_N.d(this.field_y, (byte) -84) / 100;
-          if (this.field_N.a((byte) 44, this.field_y)) {
+          this.field_A = ea.field_j[var4_int] + (io.field_q[var4_int] - ea.field_j[var4_int]) * this.field_N.d(this.member, (byte) -84) / 100;
+          if (this.field_N.a((byte) 44, this.member)) {
             stackIn_9_0 = 0;
           } else {
-            stackIn_9_0 = this.field_J;
+            stackIn_9_0 = this.archetype;
           }
           var5 = stackIn_9_0;
-          this.field_q = g.field_b[var5] + (-g.field_b[var5] + pv.field_J[var5]) * this.field_N.a(this.field_y, param2 - 3) / 100;
+          this.field_q = g.field_b[var5] + (-g.field_b[var5] + pv.field_J[var5]) * this.field_N.a(this.member, param2 - 3) / 100;
           if (param2 != 3) {
             this.field_m = 74;
           }
@@ -598,24 +598,24 @@ class nl extends mo {
         }
     }
 
-    private final String c(int param0) {
-        if (this.field_J == 0) {
+    private final String archetypeName(int param0) {
+        if (this.archetype == 0) {
           return "Tank";
         }
         if (param0 != 9) {
-          this.field_J = 110;
+          this.archetype = 110;
         }
-        if (1 == this.field_J) {
+        if (1 == this.archetype) {
           return "Htshot";
         }
-        if (this.field_J == 3) {
+        if (this.archetype == 3) {
           return "Ranger";
         }
-        if (2 == this.field_J) {
+        if (2 == this.archetype) {
           return "Elite";
         }
-        if (4 != this.field_J) {
-          return "Invalid[" + this.field_J + "]";
+        if (4 != this.archetype) {
+          return "Invalid[" + this.archetype + "]";
         }
         return "Keeper";
     }
@@ -642,77 +642,77 @@ class nl extends mo {
 
     final void a(byte param0, int param1) {
         String discarded$0 = null;
-        this.field_u = param1;
-        this.field_L = vf.field_I[this.field_u];
-        if (this.field_l) {
-          if (8 == this.field_u) {
+        this.action = param1;
+        this.field_L = vf.field_I[this.action];
+        if (this.megamode) {
+          if (8 == this.action) {
             this.field_L = this.field_L + 60;
           }
-          if (3 == this.field_u) {
+          if (3 == this.action) {
             this.field_L = this.field_L + 10;
           }
         }
         if (param0 != -31) {
-          discarded$0 = this.c(false);
+          discarded$0 = this.actionName(false);
         }
     }
 
-    private final String c(boolean param0) {
-        if (0 == this.field_u) {
+    private final String actionName(boolean param0) {
+        if (0 == this.action) {
           return "Idle";
         }
-        if (1 == this.field_u) {
+        if (1 == this.action) {
           return "ACTION_CHARGE_KICK";
         }
-        if (this.field_u == 2) {
+        if (this.action == 2) {
           return "ACTION_KICK";
         }
-        if (this.field_u == 3) {
+        if (this.action == 3) {
           return "ACTION_TACKLE";
         }
-        if (4 == this.field_u) {
+        if (4 == this.action) {
           return "ACTION_DASH";
         }
-        if (this.field_u == 5) {
+        if (this.action == 5) {
           return "ACTION_DIVE";
         }
-        if (this.field_u == 6) {
+        if (this.action == 6) {
           return "ACTION_DIVE_STAND";
         }
-        if (this.field_u == 7) {
+        if (this.action == 7) {
           return "ACTION_FALL_TACKLED";
         }
-        if (this.field_u == 8) {
+        if (this.action == 8) {
           return "ACTION_PAUSE_TACKLED";
         }
-        if (this.field_u == 9) {
+        if (this.action == 9) {
           return "ACTION_STAND_TACKLED";
         }
-        if (this.field_u == 10) {
+        if (this.action == 10) {
           return "ACTION_TACKLE_STAND";
         }
-        if (this.field_u == 11) {
+        if (this.action == 11) {
           return "ACTION_RUN_HOME";
         }
         if (!param0) {
           return (String) null;
         }
-        if (this.field_u == 12) {
+        if (this.action == 12) {
           return "ACTION_TACKLE_SUCCESS";
         }
-        if (this.field_u == 13) {
+        if (this.action == 13) {
           return "ACTION_HEADER";
         }
-        if (14 == this.field_u) {
+        if (14 == this.action) {
           return "ACTION_KEEPER_SHUFFLE";
         }
-        return "Invalid(" + this.field_u + ")";
+        return "Invalid(" + this.action + ")";
     }
 
     public final String toString() {
         StringBuilder discarded$34 = null;
         StringBuilder discarded$130 = null;
-        StringBuilder var2 = new StringBuilder("AgentFootballer[" + this.c(9) + "]");
+        StringBuilder var2 = new StringBuilder("AgentFootballer[" + this.archetypeName(9) + "]");
         StringBuilder discarded$0 = var2.append("\n\t\tloc=\t[");
         eh.a(this.field_M, 100, var2);
         StringBuilder discarded$1 = var2.append(", ");
@@ -732,8 +732,8 @@ class nl extends mo {
         eh.a(this.field_D, 100, var2);
         StringBuilder discarded$9 = var2.append("]");
         StringBuilder discarded$10 = var2.append("\n\t\tstathash=" + this.field_N.h(0));
-        StringBuilder discarded$33 = var2.append("\n\t\tact=\t[" + this.field_L + ", " + this.c(true) + ", ai_wait=" + this.field_I + "]");
-        if (4 == this.field_J) {
+        StringBuilder discarded$33 = var2.append("\n\t\tact=\t[" + this.field_L + ", " + this.actionName(true) + ", ai_wait=" + this.aiWait + "]");
+        if (4 == this.archetype) {
           discarded$34 = var2.append("\n\t\tkeeperstate=[" + this.field_o + "," + this.field_t + "]");
         }
         StringBuilder discarded$35 = var2.append("\n\t\tdirec=\t[");
@@ -743,16 +743,16 @@ class nl extends mo {
         StringBuilder discarded$37 = var2.append("," + this.field_j + "," + this.field_n + "]");
         StringBuilder discarded$38 = var2.append("\n\t\tkick=\t[" + this.field_z + "," + this.field_x + "," + this.field_P + "," + this.field_O + "]");
         StringBuilder discarded$129 = var2.append("\n\t\ttackle=\t[" + this.field_k + "," + this.field_m + "," + this.field_s + "," + this.field_r + "," + this.field_B + "]");
-        if (this.field_l) {
+        if (this.megamode) {
           discarded$130 = var2.append("\n\t\tMEGAMODE");
         }
-        StringBuilder discarded$131 = var2.append("\n\t\t" + (this.field_y ? "" : "!") + "member, " + (!this.field_l ? "!" : "") + "mega");
+        StringBuilder discarded$131 = var2.append("\n\t\t" + (this.member ? "" : "!") + "member, " + (!this.megamode ? "!" : "") + "mega");
         return var2.toString();
     }
 
-    public nl() {
+    public FootballerAgent() {
         this.field_o = 0;
-        this.field_l = false;
+        this.megamode = false;
         this.field_F = -1;
     }
 
@@ -768,7 +768,7 @@ class nl extends mo {
           var2 = var2 | 1;
         }
         if (param0 != 5339) {
-          this.field_u = 35;
+          this.action = 35;
         }
         if (this.field_n < 0) {
           var2 = var2 | 4;

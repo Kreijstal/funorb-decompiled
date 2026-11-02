@@ -25,7 +25,7 @@ final class pj extends ct {
         RuntimeException decompiledCaughtException = null;
         var7 = Kickabout.field_G;
         try {
-          stackIn_3_0 = oe.field_p;
+          stackIn_3_0 = TeamSelectionAgent.field_p;
           if (param0) {
             stackIn_4_1 = 0;
           } else {

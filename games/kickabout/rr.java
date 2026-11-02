@@ -125,7 +125,7 @@ final class rr {
           }
           ov.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
-          qi.field_o = mo.a(param1 ^ -70, var5);
+          qi.field_o = MatchAgent.a(param1 ^ -70, var5);
           ik.field_A = param2;
           la.a(true);
         } catch (RuntimeException runtimeException) {

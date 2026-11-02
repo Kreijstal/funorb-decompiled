@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends tj {
+final class ob extends BallAgent {
     private int[] field_G;
     static boolean[] field_T;
     private int[] field_D;
@@ -124,7 +124,7 @@ final class ob extends tj {
             }
             he.a(128, false, 240, var6 + jo.field_E, var5Lifetime1);
           }
-          if (this.field_A > 0) {
+          if (this.highFriction > 0) {
             var5Lifetime2 = this.e(92) >> 16;
             var6Lifetime1 = var5Lifetime2 * 160 / 324;
             if (var6Lifetime1 > 255) {
@@ -168,7 +168,7 @@ final class ob extends tj {
           return 110;
         }
         int var2 = 1200;
-        if (7 == this.field_l) {
+        if (7 == this.modelId) {
           var2 = 4300;
         }
         if (0 != this.field_M) {
@@ -195,7 +195,7 @@ final class ob extends tj {
         if (this.field_J != param3) {
           this.a((byte) -113, param3, 300);
         }
-        qo.field_l[this.field_l].a(this.field_D, this.field_G);
+        qo.field_l[this.modelId].a(this.field_D, this.field_G);
     }
 
     private final int k(int param0) {
@@ -396,8 +396,8 @@ final class ob extends tj {
         nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, lf.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, m.field_d);
     }
 
-    final void a(mo param0, int param1, int param2, int param3) {
-        tj var5 = null;
+    final void a(MatchAgent param0, int param1, int param2, int param3) {
+        BallAgent var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -408,7 +408,7 @@ final class ob extends tj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          var5 = (tj) (param0);
+          var5 = (BallAgent) (param0);
           if (this.a(-108, var5, param2, param1)) {
             return;
           }
@@ -666,7 +666,7 @@ final class ob extends tj {
         }
     }
 
-    ob(tj param0) {
+    ob(BallAgent param0) {
         this.field_I = true;
         try {
           this.a(param0, false);

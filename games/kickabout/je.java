@@ -109,13 +109,13 @@ final class je extends IntrusiveNode {
                   }
                 } else {
                   if (ks.field_e == 14) {
-                    if (2 == et.field_d.field_u) {
+                    if (2 == et.field_d.phase) {
                       return 18;
                     }
-                    if (et.field_d.field_u == 3) {
+                    if (et.field_d.phase == 3) {
                       return 19;
                     }
-                    if (et.field_d.field_u == 4 &&
+                    if (et.field_d.phase == 4 &&
                       field_m > 0) {
                       return 20;
                     }
@@ -134,7 +134,7 @@ final class je extends IntrusiveNode {
           }
           if (sl.field_Eb &&
             1 == et.field_d.field_V.field_m &&
-            et.field_d.b((byte) -96).field_u == 0) {
+            et.field_d.b((byte) -96).action == 0) {
             return 8;
           }
         }

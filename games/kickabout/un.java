@@ -19,7 +19,7 @@ final class un {
         }
     }
 
-    final static void a(nu param0, int param1, int param2) {
+    final static void a(CommonGame param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

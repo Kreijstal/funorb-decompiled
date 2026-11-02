@@ -67,7 +67,7 @@ final class tt {
             }
             var6 = fm.a(var4_ref_String, 145);
             var7 = var1.a(-113);
-            var8 = mo.a(0, (CharSequence) ((Object) var4_ref_String));
+            var8 = MatchAgent.a(0, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -132,12 +132,12 @@ final class tt {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = tr.a(var5Lifetime1, (byte) 40);
             if (null != var6Lifetime1) {
-              kw.field_b.a(var6Lifetime1, (byte) -4, (long)mo.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              kw.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new gg();
-            kw.field_b.a(var6Lifetime1, (byte) -4, (long)mo.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            kw.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = bc.field_d;
             bc.field_d = bc.field_d + 1;
             var6Lifetime1.field_Cb = fieldTemp$1;

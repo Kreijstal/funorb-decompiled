@@ -94,7 +94,7 @@ final class wp {
           i.field_E = se.a(param9, -119, "lobby", "allowspectators");
           wj.field_w = new String[5];
           wj.field_w[0] = lk.field_m;
-          wj.field_w[4] = oe.field_g;
+          wj.field_w[4] = TeamSelectionAgent.field_g;
           wj.field_w[3] = bq.field_b;
           wj.field_w[2] = bl.field_h;
           wj.field_w[1] = mn.field_d;
@@ -255,7 +255,7 @@ final class wp {
             }
           }
           em.field_d = new hd(0L, vg.field_Qb);
-          ua.field_k = new hd(0L, vg.field_Qb);
+          GoalStateAgent.field_k = new hd(0L, vg.field_Qb);
           nv.field_F = new hd(0L, ip.field_c);
           nv.field_F.a(dw.field_e, (byte) -99);
           var17 = nv.field_F;
@@ -278,7 +278,7 @@ final class wp {
             }
           }
           fp.field_p.a((byte) -112, em.field_d);
-          fp.field_p.a((byte) -124, ua.field_k);
+          fp.field_p.a((byte) -124, GoalStateAgent.field_k);
           fp.field_p.a((byte) -108, nv.field_F);
           is.field_b = new hd(0L, ai.field_H, po.field_b.toUpperCase());
           kt.field_i = new hd(0L, dc.field_a, bk.field_d.toUpperCase());
@@ -431,7 +431,7 @@ final class wp {
             var6 = param3;
           } else {
             var8 = (CharSequence) ((Object) param3);
-            var4_long = jc.a(var8, false);
+            var4_long = LoggedPlayer.a(var8, false);
           }
           stackIn_6_0 = ti.a(param1, var4_long, (byte) 31, param2, (String) (var6));
           return stackIn_6_0;

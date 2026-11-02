@@ -14,7 +14,7 @@ final class gk {
     final static void a(String param0, int param1, long param2, int param3, byte param4) {
         vb.field_h = param1;
         oc.field_f = param0;
-        nu.field_j = true;
+        CommonGame.field_j = true;
         if (param4 > -49) {
           return;
         }

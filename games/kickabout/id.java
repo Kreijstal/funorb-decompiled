@@ -192,7 +192,7 @@ final class id extends qv {
           vb.field_a = se.a(param3, -120, "commonui", "frame_bottom");
           aa.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
           nw.field_a = se.a(param3, -29, "commonui", "button");
-          jc.field_g = ng.a("validation", "commonui", 2, param3);
+          LoggedPlayer.field_g = ng.a("validation", "commonui", 2, param3);
           qo.field_k = (hu) ((Object) gm.a(param1, 10, "arezzo12", param3, "commonui"));
           gf.field_a = (hu) ((Object) gm.a(param1, 10, "arezzo14", param3, "commonui"));
           fj.field_b = (hu) ((Object) gm.a(param1, 10, "arezzo14bold", param3, "commonui"));
@@ -203,9 +203,9 @@ final class id extends qv {
           fw.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
           var5 = jo.a(param3, 17369, "commonui", "screen_options");
           dw.field_d = new kg[4];
-          tj.field_f = new kg[4];
+          BallAgent.field_f = new kg[4];
           kk.field_Q = new kg[4];
-          var6 = new kg[][]{kk.field_Q, tj.field_f, dw.field_d};
+          var6 = new kg[][]{kk.field_Q, BallAgent.field_f, dw.field_d};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

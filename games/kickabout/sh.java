@@ -5,7 +5,7 @@ final class sh {
     static int field_d;
     static String field_b;
     static ot field_g;
-    static nu field_a;
+    static CommonGame field_a;
     static int[] field_f;
     static String field_e;
     static int field_c;

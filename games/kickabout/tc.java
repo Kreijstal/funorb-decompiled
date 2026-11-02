@@ -41,7 +41,7 @@ final class tc extends am {
                 stackIn_16_0 = this.field_q;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
-                  stackIn_17_2 = nl.a(false, (byte) var6);
+                  stackIn_17_2 = FootballerAgent.a(false, (byte) var6);
                 } else {
                   stackIn_17_2 = 0;
                 }
@@ -58,7 +58,7 @@ final class tc extends am {
                   stackIn_10_0 = this.field_p;
                   stackIn_10_1 = var5;
                   if (0 != var6) {
-                    stackIn_11_2 = nl.a(false, (byte) var6);
+                    stackIn_11_2 = FootballerAgent.a(false, (byte) var6);
                   } else {
                     stackIn_11_2 = 0;
                   }
@@ -105,25 +105,25 @@ final class tc extends am {
         var3 = Kickabout.field_G;
         if (param1 != 5464) {
           field_s = false;
-          if (ua.field_l != param0) {
-            if (param0 > ua.field_l) {
-              var2 = (param0 - ua.field_l) / 10;
-              stackIn_23_0 = ua.field_l;
+          if (GoalStateAgent.field_l != param0) {
+            if (param0 > GoalStateAgent.field_l) {
+              var2 = (param0 - GoalStateAgent.field_l) / 10;
+              stackIn_23_0 = GoalStateAgent.field_l;
               if (1 < var2) {
                 stackIn_24_1 = var2;
               } else {
                 stackIn_24_1 = 1;
               }
-              ua.field_l = stackIn_23_0 + stackIn_24_1;
+              GoalStateAgent.field_l = stackIn_23_0 + stackIn_24_1;
             } else {
-              var2 = (param0 - ua.field_l) / 10;
-              stackIn_19_0 = ua.field_l;
+              var2 = (param0 - GoalStateAgent.field_l) / 10;
+              stackIn_19_0 = GoalStateAgent.field_l;
               if (var2 >= -1) {
                 stackIn_20_1 = -1;
               } else {
                 stackIn_20_1 = var2;
               }
-              ua.field_l = stackIn_19_0 + stackIn_20_1;
+              GoalStateAgent.field_l = stackIn_19_0 + stackIn_20_1;
             }
           }
           if (cf.field_Db + dc.field_d != param0) {
@@ -146,16 +146,16 @@ final class tc extends am {
           }
           return;
         }
-        if (ua.field_l != param0) {
-          if (param0 <= ua.field_l) {
-            var2Lifetime1 = (param0 - ua.field_l) / 10;
-            stackIn_54_0 = ua.field_l;
+        if (GoalStateAgent.field_l != param0) {
+          if (param0 <= GoalStateAgent.field_l) {
+            var2Lifetime1 = (param0 - GoalStateAgent.field_l) / 10;
+            stackIn_54_0 = GoalStateAgent.field_l;
             if (var2Lifetime1 >= -1) {
               stackIn_55_1 = -1;
             } else {
               stackIn_55_1 = var2Lifetime1;
             }
-            ua.field_l = stackIn_54_0 + stackIn_55_1;
+            GoalStateAgent.field_l = stackIn_54_0 + stackIn_55_1;
             if (cf.field_Db + dc.field_d != param0) {
               dc.field_d = -cf.field_Db + param0;
             }
@@ -176,14 +176,14 @@ final class tc extends am {
             }
             return;
           }
-          var2Lifetime1Lifetime1 = (param0 - ua.field_l) / 10;
-          stackIn_71_0 = ua.field_l;
+          var2Lifetime1Lifetime1 = (param0 - GoalStateAgent.field_l) / 10;
+          stackIn_71_0 = GoalStateAgent.field_l;
           if (1 < var2Lifetime1Lifetime1) {
             stackIn_72_1 = var2Lifetime1Lifetime1;
           } else {
             stackIn_72_1 = 1;
           }
-          ua.field_l = stackIn_71_0 + stackIn_72_1;
+          GoalStateAgent.field_l = stackIn_71_0 + stackIn_72_1;
         }
         if (cf.field_Db + dc.field_d == param0) {
           if (dc.field_d == 0) {
@@ -241,8 +241,8 @@ final class tc extends am {
         }
     }
 
-    final static boolean a(int param0, byte param1, int param2, nl param3, int param4) {
-        nl stackIn_23_0 = null;
+    final static boolean a(int param0, byte param1, int param2, FootballerAgent param3, int param4) {
+        FootballerAgent stackIn_23_0 = null;
         int stackIn_24_1 = 0;
         int stackIn_27_2 = 0;
         int stackIn_30_3 = 0;
@@ -279,7 +279,7 @@ final class tc extends am {
             param3.a(param0, 26214);
             return true;
           }
-          stackIn_23_0 = (nl) (param3);
+          stackIn_23_0 = (FootballerAgent) (param3);
           if (param4 > param3.field_w) {
             stackIn_24_1 = 1;
           } else {
@@ -324,8 +324,8 @@ final class tc extends am {
         ir.a(rv.field_c[param2][param3][2], -88, rv.field_c[param2][param3][5], rv.field_c[param2][param3][4], rv.field_c[param2][param3][1], rv.field_c[param2][param3][0], rv.field_c[param2][param3][3]);
         ic.a(rv.field_c[param2][param3][4], rv.field_c[param2][param3][5], rv.field_c[param2][param3][3], rv.field_c[param2][param3][0], rv.field_c[param2][param3][2], (byte) -113, rv.field_c[param2][param3][1]);
         if (param1 != 8710) {
-          nl var5 = (nl) null;
-          tc.a(117, (byte) -18, -15, (nl) null, 51);
+          FootballerAgent var5 = (FootballerAgent) null;
+          tc.a(117, (byte) -18, -15, (FootballerAgent) null, 51);
           return;
         }
     }

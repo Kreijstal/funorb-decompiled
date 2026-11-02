@@ -8,8 +8,8 @@ class ri extends qv {
     static String field_v;
     static int field_r;
 
-    final static void a(byte param0, int param1, nu param2, int param3) {
-        nl stackIn_17_0 = null;
+    final static void a(byte param0, int param1, CommonGame param2, int param3) {
+        FootballerAgent stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -27,14 +27,14 @@ class ri extends qv {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        nl var16 = null;
+        FootballerAgent var16 = null;
         var15 = Kickabout.field_G;
         try {
           var16 = param2.field_P[param3][param1];
-          if (var16.field_u != 0) {
+          if (var16.action != 0) {
             return;
           }
-          var5 = 255 & 19 * ((1 + param3) * (1 + param1)) + param2.field_J;
+          var5 = 255 & 19 * ((1 + param3) * (1 + param1)) + param2.aiTick;
           if (param0 != -93) {
             ri.a(113, false, true, 5);
           }
@@ -42,7 +42,7 @@ class ri extends qv {
           var7 = var16.a(true);
           var8 = param2.field_V.a(true);
           var9 = param2.field_V.c(879306160);
-          if ((var5 & (1 << var16.field_I) - 1) != 0) {
+          if ((var5 & (1 << var16.aiWait) - 1) != 0) {
             if ((1 & var16.field_G) != 0 &&
               88080384 <= var16.field_w) {
               var16.field_G = var16.field_G & -2;
@@ -64,7 +64,7 @@ class ri extends qv {
               var16.field_G = var16.field_G | 8;
             }
           } else {
-            gt.a(param1, param3, (byte) 103, param2.field_r[param3]);
+            ParticipantStatus.a(param1, param3, (byte) 103, param2.field_r[param3]);
             var10 = var6 - ge.field_m[0];
             var11 = -ge.field_m[1] + var7;
             var12 = 24;
@@ -83,7 +83,7 @@ class ri extends qv {
               } else {
                 stackIn_18_1 = 7;
               }
-              stackIn_17_0.field_I = stackIn_18_1;
+              stackIn_17_0.aiWait = stackIn_18_1;
               var16.field_G = 0;
             } else {
               var14 = 0;
@@ -100,18 +100,18 @@ class ri extends qv {
                 var14 = var14 | 1;
               }
               if (var16.field_G != var14) {
-                var16.field_I = 1;
+                var16.aiWait = 1;
               } else {
-                if (var16.field_I < 4 &&
+                if (var16.aiWait < 4 &&
                   var16.field_G == var14) {
-                  var16.field_I = var16.field_I + 1;
+                  var16.aiWait = var16.aiWait + 1;
                 }
               }
               var16.field_G = var14;
             }
           }
           if (var16.field_G == 0 &&
-            0 == var16.field_u &&
+            0 == var16.action &&
             var5 % 10 == 0) {
             var16.a(uv.a(true, -var7 + var9, -var6 + var8), 26214);
             return;
@@ -169,7 +169,7 @@ class ri extends qv {
         hd var15 = null;
         ut[] var16 = null;
         ut[] var17 = null;
-        nu var19 = null;
+        CommonGame var19 = null;
         int var7_intLifetime1;
         var18 = Kickabout.field_G;
         try {
@@ -245,8 +245,8 @@ class ri extends qv {
           var10 = new hd(0L, (hd) null);
           var10.field_y = 16777215;
           if (param2 > -51) {
-            var19 = (nu) null;
-            ri.a((byte) -76, -14, (nu) null, 71);
+            var19 = (CommonGame) null;
+            ri.a((byte) -76, -14, (CommonGame) null, 71);
           }
           var10.field_X = (hu) ((Object) rq.field_E);
           var10.field_xb = sh.field_c;
@@ -340,7 +340,7 @@ class ri extends qv {
           um.field_d.field_A = 1;
           um.field_d.field_x = 1;
           um.field_d.field_eb = 1;
-          jc.field_r = new hd(0L, um.field_d);
+          LoggedPlayer.field_r = new hd(0L, um.field_d);
           mb.field_F = new hd(0L, um.field_d);
           ev.field_D = new hd(0L, vg.field_Qb);
           kn.field_F = new hd(0L, um.field_d);
@@ -359,9 +359,9 @@ class ri extends qv {
           vg.field_Qb.field_S = ClientException.a(se.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
           vg.field_Qb.field_rb = ClientException.a(se.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
           vg.field_Qb.field_tb = ClientException.a(se.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
-          jc.field_r.field_R = ClientException.a(se.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
-          jc.field_r.field_S = ClientException.a(se.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
-          jc.field_r.field_rb = ClientException.a(se.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
+          LoggedPlayer.field_r.field_R = ClientException.a(se.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
+          LoggedPlayer.field_r.field_S = ClientException.a(se.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
+          LoggedPlayer.field_r.field_rb = ClientException.a(se.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
           mb.field_F.field_R = ClientException.a(se.a(param4, -123, "lobby", "redbutton"), (byte) 93);
           mb.field_F.field_S = ClientException.a(se.a(param4, -124, "lobby", "redbutton_mouseover"), (byte) -121);
           mb.field_F.field_rb = ClientException.a(se.a(param4, -37, "lobby", "redbutton_mouseheld"), (byte) -101);
@@ -568,8 +568,8 @@ class ri extends qv {
             var5 = em.field_d;
             em.field_d.field_mb = 0;
             var5.field_q = 0;
-            ua.field_k.field_mb = 0;
-            var6 = ua.field_k;
+            GoalStateAgent.field_k.field_mb = 0;
+            var6 = GoalStateAgent.field_k;
             var6.field_q = 0;
             nv.field_F.field_mb = 0;
             var7 = nv.field_F;
@@ -577,7 +577,7 @@ class ri extends qv {
             ci.field_h.field_E = qn.field_d.toUpperCase();
             var8 = (2 + fp.field_p.field_q) / 2;
             nv.field_F.a(true, -2 + var8, 0, -40 + fp.field_p.field_mb, 40);
-            ua.field_k.a(true, -var8 + fp.field_p.field_q, var8, -40 + fp.field_p.field_mb, 40);
+            GoalStateAgent.field_k.a(true, -var8 + fp.field_p.field_q, var8, -40 + fp.field_p.field_mb, 40);
             if (rn.field_d.length == 1 &&
               rn.field_d[0] == 2) {
               var9 = 0;
@@ -607,7 +607,7 @@ class ri extends qv {
                 break;
               }
             }
-            ua.field_k.field_lb = true;
+            GoalStateAgent.field_k.field_lb = true;
             if (hw.field_k) {
               ac.field_b.field_lb = false;
               w.field_e.field_E = qr.field_c;
@@ -633,9 +633,9 @@ class ri extends qv {
                 var10 = (String) (var10) + "...";
               }
               nv.field_F.field_E = (String) (var10);
-              ua.field_k.field_E = vt.field_a.toUpperCase();
+              GoalStateAgent.field_k.field_E = vt.field_a.toUpperCase();
             } else {
-              stackIn_23_0 = ua.field_k;
+              stackIn_23_0 = GoalStateAgent.field_k;
               if (var9 != 0) {
                 stackIn_24_1 = bm.field_F;
               } else {
@@ -649,7 +649,7 @@ class ri extends qv {
               } else {
                 stackIn_27_2 = vr.field_b;
               }
-              stackIn_26_0.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{ua.field_k.field_E});
+              stackIn_26_0.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
               nv.field_F.field_E = jw.field_Db;
               ac.field_b.field_lb = true;
               tt.field_c = true;
@@ -673,8 +673,8 @@ class ri extends qv {
                 }
               }
               if (!tt.field_c) {
-                ua.field_k.field_lb = false;
-                if (ua.field_k.field_Q) {
+                GoalStateAgent.field_k.field_lb = false;
+                if (GoalStateAgent.field_k.field_Q) {
                   var10 = null;
                   if (ee.field_e) {
                     var10 = "<col=A00000>" + qk.field_H + "</col>";
@@ -718,14 +718,14 @@ class ri extends qv {
             if (stackIn_78_0 != ac.field_b.field_sb) {
               nv.a(param3, 32361);
             }
-            if (ua.field_k.field_sb != 0) {
+            if (GoalStateAgent.field_k.field_sb != 0) {
               if (hw.field_k) {
                 mp.a(param3, (byte) 79);
               } else {
                 up.a(param3, 0);
               }
             }
-            ma.a(param3, (byte) -127, ow.field_b, true);
+            NetworkGameClient.a(param3, (byte) -127, ow.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -57,8 +57,8 @@ final class or {
         }
     }
 
-    final static void a(nu param0, int param1, int param2, byte param3) {
-        nl var30 = null;
+    final static void a(CommonGame param0, int param1, int param2, byte param3) {
+        FootballerAgent var30 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -98,17 +98,17 @@ final class or {
             var11 = -var9 + 1344 - var11;
             var10 = -var8 + 896 - var10;
           }
-          gt.a(param1, param2, (byte) 112, param0.field_r[param2]);
+          ParticipantStatus.a(param1, param2, (byte) 112, param0.field_r[param2]);
           var12 = ug.a(param3 - 99, var5);
           var13 = lf.a((byte) -96, var6);
           var14 = ug.a(0, ge.field_m[0]);
           var15 = lf.a((byte) -76, ge.field_m[1]);
           var16 = hw.field_i * 10 >> 8;
-          var17 = (-1 + (1 << var30.field_I) & (1 + param1) * ((1 + param2) * 19) + param0.field_J) * hw.field_i >> 8;
+          var17 = (-1 + (1 << var30.aiWait) & (1 + param1) * ((1 + param2) * 19) + param0.aiTick) * hw.field_i >> 8;
           if (param3 != 99) {
             field_a = (int[]) null;
           }
-          var18 = (1 << var30.field_I) * hw.field_i >> 8;
+          var18 = (1 << var30.aiWait) * hw.field_i >> 8;
           var19 = param2 == 1 ? 13369344 : ih.field_c != 2 ? 65793 : 16777215;
           var20 = 24;
           var21 = 24;

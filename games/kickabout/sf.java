@@ -16,7 +16,7 @@ final class sf extends qt {
         }
     }
 
-    final static void a(int param0, int param1, nu param2, boolean param3) {
+    final static void a(int param0, int param1, CommonGame param2, boolean param3) {
         try {
           jn.field_kb = param1;
           tq.field_F = param2;

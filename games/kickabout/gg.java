@@ -12,7 +12,7 @@ final class gg extends hd {
     static int field_Db;
     hd field_Fb;
 
-    final static void a(int param0, int param1, tj param2) {
+    final static void a(int param0, int param1, BallAgent param2) {
         int[] stackIn_3_0;
         int stackIn_3_1;
         int[] stackIn_3_2;

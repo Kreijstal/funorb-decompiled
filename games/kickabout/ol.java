@@ -210,14 +210,14 @@ final class ol extends hs {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        gt var10 = null;
+        ParticipantStatus var10 = null;
         tf var10_ref = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        gt var10Lifetime1;
+        ParticipantStatus var10Lifetime1;
         tf var10_refLifetime1;
         int stackIn_34_0Lifetime1;
         int stackIn_34_1Lifetime1;
@@ -237,7 +237,7 @@ final class ol extends hs {
           var2_int = this.field_ib;
           un.field_d.d("<u=FFFFFF>" + dw.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           un.field_d.d(he.field_Ub.toUpperCase(), var2_int + 140, this.field_Q + 130, 16777215, -1);
-          un.field_d.d(nu.field_a.toUpperCase(), 500 + var2_int, this.field_Q + 130, 16777215, -1);
+          un.field_d.d(CommonGame.field_a.toUpperCase(), 500 + var2_int, this.field_Q + 130, 16777215, -1);
           var3 = this.field_Q + 140;
           var4 = 360 + var2_int;
           st.b(var4, param0 ^ 16777113, var3);
@@ -297,8 +297,8 @@ final class ol extends hs {
               else {
                 if (stackIn_34_0 == stackIn_34_1 ||
                   var15 != 0) {
-                  var10 = this.field_a.field_R[var9];
-                  var11 = var10.field_v ? 1 : 0;
+                  var10 = this.field_a.participantStatus[var9];
+                  var11 = var10.departed ? 1 : 0;
                   stackIn_28_0 = (var11 != 0) ? 11184810 : 16777215;
                   var12 = stackIn_28_0;
                   var13 = 65793;
@@ -360,8 +360,8 @@ final class ol extends hs {
               else {
                 if (stackIn_61_0 == stackIn_61_1 ||
                   var15 != 0) {
-                  var10Lifetime1 = this.field_a.field_R[var9];
-                  var11Lifetime1 = var10Lifetime1.field_v ? 1 : 0;
+                  var10Lifetime1 = this.field_a.participantStatus[var9];
+                  var11Lifetime1 = var10Lifetime1.departed ? 1 : 0;
                   stackIn_55_0 = (var11Lifetime1 != 0) ? 11184810 : 16777215;
                   var12Lifetime1 = stackIn_55_0;
                   var13Lifetime1 = 65793;
@@ -443,7 +443,7 @@ final class ol extends hs {
           var9 = this.a(var10_ref, var2_int, var9, true);
           var9 += 35;
           on.a(42 + var2_int, var9 - 20, 552, 28, 10, 65793, 128);
-          un.field_d.d(nu.field_a.toUpperCase(), var2_int + 320, var9, 16777215, -1);
+          un.field_d.d(CommonGame.field_a.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var10_refLifetime1 = this.field_q;
           var9 += 20;
           var9 = this.a(var10_refLifetime1, var2_int, var9, true);
@@ -544,13 +544,13 @@ final class ol extends hs {
           un.field_d.d(lw.field_f.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var11Lifetime2 = var2_int + 240;
           var12Lifetime2 = 80 + var9;
-          eo.a(var11Lifetime2, var12Lifetime2, qe.field_j, this.field_p, (String[]) null, 160, 21, this.field_a.field_I, this.field_a.field_S, this.field_g);
-          var9 = var9 + (140 + 25 * (this.field_a.field_I + 1));
+          eo.a(var11Lifetime2, var12Lifetime2, qe.field_j, this.field_p, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
+          var9 = var9 + (140 + 25 * (this.field_a.playerCount + 1));
           on.a(var2_int + 42, -20 + var9, 552, 28, 10, 65793, 128);
           var12Lifetime3 = var9 + 80;
           un.field_d.d(ad.field_b.toUpperCase(), var2_int + 320, var9, 16777215, -1);
-          eo.a(var11Lifetime2, var12Lifetime3, d.field_c, this.field_ab, (String[]) null, 160, 21, this.field_a.field_I, this.field_a.field_S, this.field_g);
-          var9 = var9 + ((1 + this.field_a.field_I) * 25 + 140);
+          eo.a(var11Lifetime2, var12Lifetime3, d.field_c, this.field_ab, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
+          var9 = var9 + ((1 + this.field_a.playerCount) * 25 + 140);
           if (this.field_lb != 0 &&
             this.field_lb < this.field_M) {
             ta.e(122);
@@ -883,7 +883,7 @@ final class ol extends hs {
         }
     }
 
-    ol(nu param0, int param1, boolean param2) {
+    ol(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
         int dupTemp$0 = 0;
         String[] arrayValue$1 = null;
@@ -966,10 +966,10 @@ final class ol extends hs {
           }
           if (null != param0.field_X) {
             this.field_Z = mu.field_S;
-            if (param0.field_X.field_j[1] > param0.field_X.field_j[0]) {
+            if (param0.field_X.score[1] > param0.field_X.score[0]) {
               this.field_Z = qq.field_J;
             }
-            this.field_Z = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_Z, new String[]{Integer.toString(param0.field_X.field_j[0]), Integer.toString(param0.field_X.field_j[1])});
+            this.field_Z = vo.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_Z, new String[]{Integer.toString(param0.field_X.score[0]), Integer.toString(param0.field_X.score[1])});
           }
           this.field_m = new int[2];
           this.field_w = new String[2][8];
@@ -977,7 +977,7 @@ final class ol extends hs {
           this.field_J = new int[]{-1, -1};
           var5Lifetime1 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var5Lifetime1 < param0.field_I)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var5Lifetime1 < param0.playerCount)))) {
             stackOut_20_0 = param0.field_g[var5Lifetime1].field_l;
             stackIn_33_0 = stackOut_20_0 ? 1 : 0;
             stackIn_21_0 = stackOut_20_0;
@@ -1001,8 +1001,8 @@ final class ol extends hs {
             this.field_I = new String[]{lr.field_l, of.field_c};
             stackIn_33_0 = 0;
           }
-          if (stackIn_33_0 == ~param0.field_Z ||
-            param0.field_Z == -3 ||
+          if (stackIn_33_0 == ~param0.winner ||
+            param0.winner == -3 ||
             param0.field_L &&
             (0 == this.field_m[0] ||
             this.field_m[1] == 0)) {
@@ -1014,7 +1014,7 @@ final class ol extends hs {
           if (0 <= param1) {
             var5Lifetime2 = 0;
             var6 = param0.field_g[param1];
-            this.field_N = param0.field_R[param1].field_n;
+            this.field_N = param0.participantStatus[param1].rewardEligible;
             this.field_G = var6.field_g;
             if (!this.field_a.field_e) {
               this.field_hb = new int[]{-1, -1, -1, -1};
@@ -1081,7 +1081,7 @@ final class ol extends hs {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            st.a((nu) null, this.field_g, 50);
+            st.a((CommonGame) null, this.field_g, 50);
             oa.b(-23217);
             stackIn_76_0 = 111;
           }
@@ -1091,13 +1091,13 @@ final class ol extends hs {
           this.field_fb[0] = ae.a(true, (byte) -52, 0, 80, 7126504);
           this.field_fb[1] = ae.a(true, (byte) -52, 1, 80, 7126504);
           if (this.field_p == null) {
-            this.field_p = new int[this.field_a.field_I][4];
+            this.field_p = new int[this.field_a.playerCount][4];
           }
           if (null == this.field_ab) {
-            this.field_ab = new int[this.field_a.field_I][4];
+            this.field_ab = new int[this.field_a.playerCount][4];
           }
           this.field_u = new int[2];
-          this.field_k = new int[this.field_a.field_I];
+          this.field_k = new int[this.field_a.playerCount];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1281,7 +1281,7 @@ final class ol extends hs {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ch var11_ref_ch = null;
+        LoggedGoal var11_ref_ch = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -1312,7 +1312,7 @@ final class ol extends hs {
             un.field_d.d(lt.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
             ta.e(122);
             var10 = 0;
-            var11_ref_ch = (ch) (param0.g(24009));
+            var11_ref_ch = (LoggedGoal) (param0.g(24009));
             while (null != var11_ref_ch) {
               param2 += 23;
               var12 = 65793;
@@ -1338,9 +1338,9 @@ final class ol extends hs {
               var10++;
               un.field_d.d(Integer.toString(var10), -14 + var5_int, 16 + param2, 16777215, -1);
               un.field_d.d(var14, (var8 >> 1) + var5_int, 16 + param2, 16777215, -1);
-              un.field_d.d(this.g(var11_ref_ch.field_t, -16305), var6 + (var9 >> 1), param2 + 16, 16777215, -1);
-              un.field_d.d(this.a((byte) -110, var11_ref_ch.field_l), (var9 >> 1) + var7, 16 + param2, 16777215, -1);
-              var11_ref_ch = (ch) (param0.c(33));
+              un.field_d.d(this.g(var11_ref_ch.goalType, -16305), var6 + (var9 >> 1), param2 + 16, 16777215, -1);
+              un.field_d.d(this.a((byte) -110, var11_ref_ch.time), (var9 >> 1) + var7, 16 + param2, 16777215, -1);
+              var11_ref_ch = (LoggedGoal) (param0.c(33));
             }
             if (decompiledFrameCompleted0) {
               param2 += 23;
@@ -1468,7 +1468,7 @@ final class ol extends hs {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        gt var10 = null;
+        ParticipantStatus var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -1493,8 +1493,8 @@ final class ol extends hs {
                 var8 = 140;
                 var9 = 0;
                 while (this.field_m[var5] > var9) {
-                  var10 = this.field_a.field_R[this.field_O[var5][var9]];
-                  var11 = var10.field_v ? 1 : 0;
+                  var10 = this.field_a.participantStatus[this.field_O[var5][var9]];
+                  var11 = var10.departed ? 1 : 0;
                   stackOut_16_0 = this.field_a.field_g[this.field_O[var5][var9]].field_i;
                   stackIn_40_0 = stackOut_16_0 ? 1 : 0;
                   stackIn_17_0 = stackOut_16_0;
@@ -1512,7 +1512,7 @@ final class ol extends hs {
                   } else {
                     hn.a(8, 14492194, 110, var7, var8, 11184810, vc.field_A);
                   }
-                  if (var10.field_s) {
+                  if (var10.resigned) {
                     qq.a(110, (byte) -101, 13421772, ss.field_g, var8, var7, 14492194);
                   }
                   var8 += 23;
@@ -1537,7 +1537,7 @@ final class ol extends hs {
           }
           if (stackIn_49_0 >= stackIn_49_1) {
             if (this.field_a.field_g[this.field_g].field_l &&
-              this.field_a.field_Z == -3) {
+              this.field_a.winner == -3) {
               var4 = jl.field_b;
             } else {
               if (!um.field_e.field_s) {
@@ -1553,7 +1553,7 @@ final class ol extends hs {
               } else {
                 var4 = ar.field_d;
                 if (um.field_e.field_q) {
-                  var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, oe.field_m + " " + tq.field_E, new String[]{this.field_a.field_S[1 - this.field_g]});
+                  var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TeamSelectionAgent.field_m + " " + tq.field_E, new String[]{this.field_a.field_S[1 - this.field_g]});
                   if ((var13 != 0) &&
                     (!this.field_N)) {
                     var4 = pe.field_c;
@@ -1839,7 +1839,7 @@ final class ol extends hs {
         try {
           super.a(-94, param1);
           var3_int = this.field_bb.a(false) + this.field_q.a(false);
-          this.field_lb = -((this.field_a.field_I + 1) * 50 + 100);
+          this.field_lb = -((this.field_a.playerCount + 1) * 50 + 100);
           if (0 >= var3_int) {
             stackIn_5_1 = 0;
           } else {
@@ -1938,7 +1938,7 @@ final class ol extends hs {
               this.field_X = this.field_X + 596;
             }
             if (this.field_y &&
-              nl.field_p == 1 &&
+              FootballerAgent.field_p == 1 &&
               this.field_P != 0 &&
               this.field_M > this.field_P) {
               if (wj.field_A == 1) {
@@ -1947,7 +1947,7 @@ final class ol extends hs {
               this.field_M = this.field_M - 32;
             }
             if (this.field_F &&
-              1 == nl.field_p &&
+              1 == FootballerAgent.field_p &&
               this.field_M < 0) {
               if (wj.field_A == 1) {
                 ii.a((byte) -122);
@@ -1955,7 +1955,7 @@ final class ol extends hs {
               this.field_M = this.field_M + 32;
             }
             if (this.field_U &&
-              nl.field_p == 1 &&
+              FootballerAgent.field_p == 1 &&
               this.field_lb != 0 &&
               this.field_M > this.field_lb) {
               if (wj.field_A == 1) {
@@ -1964,7 +1964,7 @@ final class ol extends hs {
               this.field_M = this.field_M - 32;
             }
             if (this.field_t &&
-              nl.field_p == 1 &&
+              FootballerAgent.field_p == 1 &&
               this.field_M < 0) {
               if (wj.field_A == 1) {
                 ii.a((byte) -127);
@@ -2010,8 +2010,8 @@ final class ol extends hs {
           }
           var11 = 0;
           var12_int = 0;
-          while (var12_int < this.field_a.field_I) {
-            if (!this.field_a.field_R[var12_int].field_v) {
+          while (var12_int < this.field_a.playerCount) {
+            if (!this.field_a.participantStatus[var12_int].departed) {
               var11++;
             }
             var12_int++;
@@ -2026,7 +2026,7 @@ final class ol extends hs {
           }
           if ((var11 != 1 ||
             var15 != 0) &&
-            this.field_a.field_R[this.field_g].field_k) {
+            this.field_a.participantStatus[this.field_g].field_k) {
             var12 = gw.field_e;
           }
           this.field_c[4].field_p = var12.toLowerCase();
@@ -2142,7 +2142,7 @@ final class ol extends hs {
         String stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param1 = -param1 + this.field_a.field_O;
+          param1 = -param1 + this.field_a.timeLimit;
           var3_int = param1 / 50;
           var4 = var3_int / 60;
           var6 = 121 % ((param0 - 27) / 45);

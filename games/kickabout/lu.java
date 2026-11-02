@@ -97,8 +97,8 @@ abstract class lu extends am {
             var21 = em.field_d;
             var26 = var21;
             var26.field_q = 0;
-            ua.field_k.field_mb = 0;
-            var6 = ua.field_k;
+            GoalStateAgent.field_k.field_mb = 0;
+            var6 = GoalStateAgent.field_k;
             var6.field_q = 0;
             nv.field_F.field_mb = 0;
             var7 = nv.field_F;
@@ -133,12 +133,12 @@ abstract class lu extends am {
                   em.field_d.field_R = vg.field_Qb.field_S;
                 }
               }
-              ua.field_k.a(true, fp.field_p.field_q - var9, var9, -40 + fp.field_p.field_mb, 40);
-              ua.field_k.field_E = hj.field_g.toUpperCase();
-              stackIn_18_0 = ua.field_k;
+              GoalStateAgent.field_k.a(true, fp.field_p.field_q - var9, var9, -40 + fp.field_p.field_mb, 40);
+              GoalStateAgent.field_k.field_E = hj.field_g.toUpperCase();
+              stackIn_18_0 = GoalStateAgent.field_k;
               stackIn_19_1 = (param3) && (0L == vg.field_Ib);
               stackIn_18_0.field_lb = stackIn_19_1;
-              var8 = ua.field_k;
+              var8 = GoalStateAgent.field_k;
               var10 = 2;
               if (la.field_k != null) {
                 if (hm.field_G == null) {
@@ -299,8 +299,8 @@ abstract class lu extends am {
                     var16Lifetime1Lifetime1 = 0;
                   }
                   if ((var16Lifetime1Lifetime1 != 0)) {
-                    ua.field_k.field_lb = false;
-                    if (!(!ua.field_k.field_Q)) {
+                    GoalStateAgent.field_k.field_lb = false;
+                    if (!(!GoalStateAgent.field_k.field_Q)) {
                       if (ni.field_l.field_b.field_Db != 0) {
                         sn.field_e = vo.$cfr$intArgs$a$53ce4ab4c593(-18, pu.field_Fb, new String[]{c.field_d});
                       } else {
@@ -312,8 +312,8 @@ abstract class lu extends am {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                ua.field_k.field_lb = false;
-                if (ua.field_k.field_Q) {
+                GoalStateAgent.field_k.field_lb = false;
+                if (GoalStateAgent.field_k.field_Q) {
                   var11 = null;
                   var12Lifetime2 = 0;
                   for (var13_intLifetime1 = 0; ss.field_j > var13_intLifetime1; var13_intLifetime1++) {
@@ -373,7 +373,7 @@ abstract class lu extends am {
             if (ac.field_b.field_sb != 0) {
               gu.a(uv.field_i.h((byte) 73), (byte) -108, param1);
             }
-            if (ua.field_k.field_sb != 0) {
+            if (GoalStateAgent.field_k.field_sb != 0) {
               gs.field_e = true;
             }
             if (em.field_d.field_sb != 0) {
@@ -382,7 +382,7 @@ abstract class lu extends am {
             if (kt.field_i.field_sb != 0) {
               td.field_b = false;
             }
-            ma.a(param1, (byte) -57, uv.field_i, false);
+            NetworkGameClient.a(param1, (byte) -57, uv.field_i, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

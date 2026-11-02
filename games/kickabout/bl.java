@@ -125,7 +125,7 @@ final class bl {
     }
 
     final static boolean a(byte param0) {
-        if (oe.field_p != null) {
+        if (TeamSelectionAgent.field_p != null) {
           return true;
         }
         if (param0 != -94) {
@@ -134,7 +134,7 @@ final class bl {
         if (!bo.field_Cb.a("scenery", "bleachers", (byte) -10)) {
           return false;
         }
-        oe.field_p = ng.a("bleachers", "scenery", 2, bo.field_Cb);
+        TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, bo.field_Cb);
         return true;
     }
 

@@ -136,7 +136,7 @@ final class vl {
 
     final void a(int param0, java.applet.Applet param1) {
         try {
-          tj.a(this.field_a, param1, (byte) -5, 31536000L, "jagex-last-login-method");
+          BallAgent.a(this.field_a, param1, (byte) -5, 31536000L, "jagex-last-login-method");
           if (param0 > -110) {
             vl.a(78, 31, 85, 37, 61);
           }
@@ -145,7 +145,7 @@ final class vl {
         }
     }
 
-    final static void a(nu param0, byte param1) {
+    final static void a(CommonGame param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

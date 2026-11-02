@@ -202,7 +202,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         stackIn_20_1 = (param0) ? false : true;
         ((hd) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
         jn.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
-        sp.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, oe.field_f);
+        sp.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;
         dr.field_d.a(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
         if (!ui.field_t) {

@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-abstract class mo {
+abstract class MatchAgent {
     private int field_c;
     int field_b;
     static String field_d;
     static String field_a;
     int field_e;
 
-    private final void a(mo param0, int param1) {
+    private final void a(MatchAgent param0, int param1) {
         if (param1 != 0) {
           return;
         }
@@ -26,12 +26,12 @@ abstract class mo {
         field_d = null;
         if (param0 != -3) {
           CharSequence var2 = (CharSequence) null;
-          mo.a(86, (CharSequence) null);
+          MatchAgent.a(86, (CharSequence) null);
         }
         field_a = null;
     }
 
-    final boolean a(int param0, mo param1, int param2, int param3) {
+    final boolean a(int param0, MatchAgent param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -72,7 +72,7 @@ abstract class mo {
         }
     }
 
-    final void a(mo param0, boolean param1) {
+    final void a(MatchAgent param0, boolean param1) {
         try {
           this.a((byte) -105, param0);
           if (param1) {
@@ -98,12 +98,12 @@ abstract class mo {
         return var4;
     }
 
-    void a(mo param0, byte param1) {
+    void a(MatchAgent param0, byte param1) {
         try {
           this.field_b = 0;
           if (param1 != 84) {
-            mo var4 = (mo) null;
-            this.a((mo) null, (byte) 91);
+            MatchAgent var4 = (MatchAgent) null;
+            this.a((MatchAgent) null, (byte) 91);
           }
           this.field_e = param0.field_e;
         } catch (RuntimeException runtimeException) {
@@ -318,7 +318,7 @@ abstract class mo {
         }
     }
 
-    abstract void a(byte param0, mo param1);
+    abstract void a(byte param0, MatchAgent param1);
 
     final static String a(int param0, CharSequence param1) {
         int var6 = 0;
@@ -393,7 +393,7 @@ abstract class mo {
         }
     }
 
-    void a(mo param0, int param1, int param2, int param3) {
+    void a(MatchAgent param0, int param1, int param2, int param3) {
         if (param3 <= 38) {
           this.field_e = -23;
         }
@@ -408,7 +408,7 @@ abstract class mo {
     }
 
     final void b(CipherPacketBuffer param0, int param1) {
-        mo var4 = null;
+        MatchAgent var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -416,8 +416,8 @@ abstract class mo {
         RuntimeException var3 = null;
         try {
           if (param1 != 4) {
-            var4 = (mo) null;
-            this.a((byte) 17, (mo) null);
+            var4 = (MatchAgent) null;
+            this.a((byte) 17, (MatchAgent) null);
           }
           this.field_b = -hq.a(22531, 6, param0, 0) + 64;
           if (mu.a(param0, (byte) -39)) {
@@ -438,7 +438,7 @@ abstract class mo {
         }
     }
 
-    mo() {
+    MatchAgent() {
         this.field_e = -1;
     }
 

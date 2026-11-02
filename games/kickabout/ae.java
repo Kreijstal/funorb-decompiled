@@ -263,7 +263,7 @@ final class ae extends wj implements qu, vh, ur {
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
         var3 = var3 + this.a(170, at.field_Ib, 21621, var3, this.field_T);
         var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, ev.field_A) + 5);
-        var3 = var3 + (this.a(this.field_E, ua.field_f, 35, 170, var3, jk.field_i) + 5);
+        var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, jk.field_i) + 5);
         var3 = var3 + this.a(var3, pl.field_a, 170, this.field_J, (byte) 117);
         cg var4 = new cg(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, qo.field_k, 11579568, pn.field_v);
         this.a(-35, var4);

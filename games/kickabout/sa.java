@@ -50,7 +50,7 @@ final class sa extends java.awt.Canvas {
               var10 = param0.getParameter("cookieprefix");
               var3 = var10 + "settings";
               var4 = (String) (mm.a(30858, "getcookies", param0));
-              var5 = wr.a(var4, 2, ';');
+              var5 = FormationAgent.a(var4, 2, ';');
               var6 = 0;
               var7 = 35 % ((param1 - 32) / 57);
               while (var6 < var5.length) {

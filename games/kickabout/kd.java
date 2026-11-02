@@ -669,7 +669,7 @@ final class kd extends be {
             stackIn_9_0 = var6;
             return stackIn_9_0;
           }
-          var7 = oe.field_p[0].field_o;
+          var7 = TeamSelectionAgent.field_p[0].field_o;
           if (param3) {
             kd.a('^', (byte) 107);
           }

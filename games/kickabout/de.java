@@ -69,7 +69,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (0 != var2_int && 65535 != var2_int &&
               kd.a((char) var2_int, (byte) 80)) {
               var3 = du.field_j + 1 & 127;
-              if (var3 != wl.field_n) {
+              if (var3 != LineupAgent.field_n) {
                 bt.field_a[du.field_j] = -1;
                 up.field_a[du.field_j] = (char)var2_int;
                 du.field_j = var3;
@@ -143,7 +143,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var18 = c.field_f[0].field_v * hw.field_i >> 8;
           var20 = 84 % ((30 - param0) / 34);
           var19 = c.field_f[0].field_o * hw.field_i >> 8;
-          var21 = hw.field_i * (ch.field_o.field_o + 78) >> 8;
+          var21 = hw.field_i * (LoggedGoal.field_o.field_o + 78) >> 8;
           if (var6 != 0 &&
             var7 != 0) {
             im.a(-12376, -var21 + var14, var15 - var5, wh.field_p);
@@ -166,7 +166,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < 3; var22Lifetime1++) {
             if (var6 != 0) {
-              im.a(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, ch.field_o);
+              im.a(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, LoggedGoal.field_o);
               wf.a(-840618968, -var19 + var14, hl.field_e[var1_int], var22Lifetime1 * var13 + var15);
             }
             if (var8 != 0) {
@@ -231,7 +231,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (var2_int >= 0) {
               var3 = 127 & du.field_j + 1;
-              if (var3 != wl.field_n) {
+              if (var3 != LineupAgent.field_n) {
                 bt.field_a[du.field_j] = var2_int;
                 up.field_a[du.field_j] = (char)0;
                 du.field_j = var3;

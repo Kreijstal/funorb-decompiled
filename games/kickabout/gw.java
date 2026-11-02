@@ -24,7 +24,7 @@ final class gw {
             fieldTemp$0 = var1.field_n + 1;
             var1.field_n = var1.field_n + 1;
             var2 = fieldTemp$0;
-            mo.a(var1, 0);
+            MatchAgent.a(var1, 0);
             or.field_d.c(param0 ^ 59, -var2 + var1.field_n);
           }
           if (param0 == 5) {

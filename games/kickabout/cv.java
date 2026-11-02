@@ -225,7 +225,7 @@ abstract class cv {
           cq.field_h = ra.field_G;
           ra.field_G = null;
           ce.field_I = 0;
-          wr.field_f = po.a(cq.field_h, -4);
+          FormationAgent.field_f = po.a(cq.field_h, -4);
           if (wi.field_B) {
             sr.field_l = null;
             wi.field_B = false;

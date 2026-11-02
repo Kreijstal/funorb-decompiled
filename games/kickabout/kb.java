@@ -135,7 +135,7 @@ final class kb extends tm {
             var4[1][1].b(var1_int + 14 + 38, var3 + 49, 20, 20);
             var4[2][1].b(19 + (14 + var1_int), 1 + (var3 + 49 - 20), 20, 20);
             var4[3][1].b(20 + (var1_int + 13), 49 + var3, 20, 20);
-            pb.field_C.d(tj.field_g, 14 + (var1_int + 20) + 10, 20 + var3 + 65, 16777215, -1);
+            pb.field_C.d(BallAgent.field_g, 14 + (var1_int + 20) + 10, 20 + var3 + 65, 16777215, -1);
             if (ks.field_e > 1) {
               pb.field_C.d(nr.field_k, 115 + var1_int, 20 + (var3 + 49 + 16), 16777215, -1);
               var5 = kd.field_y[var2][1];
