@@ -11,7 +11,7 @@ final class d extends p {
     private static int[] field_K;
     private int[] field_bb;
     private int field_D;
-    private gd[] field_B;
+    private PcmSampleStream[] field_B;
     private int field_eb;
     private int[] field_W;
     private int field_Z;
@@ -62,7 +62,7 @@ final class d extends p {
 
     private final void a(int param0, int param1) {
         if (this.field_B[param0] != null) {
-          this.field_B[param0].f(param1 * 256 / ba.field_m);
+          this.field_B[param0].f(param1 * 256 / AudioMixer.field_m);
         }
     }
 
@@ -77,7 +77,7 @@ final class d extends p {
 
     private final void a(int param0) {
         if (this.field_B[param0] != null) {
-          this.field_B[param0].g(ba.field_m >> 7);
+          this.field_B[param0].g(AudioMixer.field_m >> 7);
           this.field_B[param0] = null;
         }
     }
@@ -159,7 +159,7 @@ final class d extends p {
           !this.field_ab) {
           return -1;
         }
-        int var3 = ba.field_m;
+        int var3 = AudioMixer.field_m;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_db * this.field_z);
     }
@@ -180,7 +180,7 @@ final class d extends p {
               param2 = 256;
             }
           }
-          this.field_B[param0].b(ba.field_m >> 7, param1 * this.field_O * this.field_A >> 12, param2);
+          this.field_B[param0].b(AudioMixer.field_m >> 7, param1 * this.field_O * this.field_A >> 12, param2);
         }
     }
 
@@ -218,7 +218,7 @@ final class d extends p {
         this.field_w = new int[this.field_y.field_r];
         this.field_r = new int[this.field_y.field_r];
         this.field_Q = new boolean[this.field_y.field_r];
-        this.field_B = new gd[this.field_y.field_r];
+        this.field_B = new PcmSampleStream[this.field_y.field_r];
         this.f();
     }
 
@@ -350,10 +350,10 @@ final class d extends p {
           this.field_lb = this.field_lb + 1;
         }
         for (var15 = 0; var15 < this.field_y.field_r; var15++) {
-          L55: {
+          regionExit1: {
             if (this.field_ob != 0) {
               if (this.field_n[var15] < 0) {
-                break L55;
+                break regionExit1;
               }
               var16 = this.field_n[var15];
             } else {
@@ -1020,15 +1020,15 @@ final class d extends p {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ud stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        gd stackIn_17_0 = null;
+        PcmSampleStream stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        gd stackIn_20_0 = null;
+        PcmSampleStream stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         Throwable decompiledCaughtException = null;
-        gd var7 = null;
+        PcmSampleStream var7 = null;
         Object var8 = null;
         this.a(param0);
         if (param3 > field_P[7999] &&
@@ -1048,23 +1048,23 @@ final class d extends p {
             param5 = 0;
           }
           stackIn_14_0 = this.field_y.field_j[param1];
-          stackIn_14_1 = param3 * 256 / ba.field_m;
+          stackIn_14_1 = param3 * 256 / AudioMixer.field_m;
           if (param2 == 0) {
             stackIn_15_2 = param4 * this.field_O * this.field_A >> 12;
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = gd.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7 = PcmSampleStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
           var7.d(this.field_y.field_t[param1], this.field_y.field_v[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_y.field_c[param1] == 0) ? 0 : -1;
-          ((gd) (Object) stackIn_17_0).e(stackIn_18_1);
+          ((PcmSampleStream) (Object) stackIn_17_0).e(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_y.field_c[param1] != 2) ? false : true;
-          ((gd) (Object) stackIn_20_0).a(stackIn_21_1);
+          ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.h(param2);
-            var7.b(ba.field_m >> 7, param4 * this.field_O * this.field_A >> 12, param5);
+            var7.b(AudioMixer.field_m >> 7, param4 * this.field_O * this.field_A >> 12, param5);
           }
           this.field_B[param0] = var7;
           if (this.field_k != null) {

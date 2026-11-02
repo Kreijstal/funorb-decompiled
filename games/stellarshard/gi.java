@@ -91,9 +91,9 @@ final class gi {
                 return null;
               }
               this.field_d.a((long)(6 * param1), 0);
-              this.field_d.a(6, (byte) -93, 0, gg.field_e);
-              var4_int = (gg.field_e[0] << 16 & 16711680) + ((gg.field_e[1] & 255) << 8) + (255 & gg.field_e[2]);
-              var5 = (gg.field_e[5] & 255) + ((255 & gg.field_e[3]) << 16) + ((gg.field_e[4] & 255) << 8);
+              this.field_d.a(6, (byte) -93, 0, IntrusiveNode.field_e);
+              var4_int = (IntrusiveNode.field_e[0] << 16 & 16711680) + ((IntrusiveNode.field_e[1] & 255) << 8) + (255 & IntrusiveNode.field_e[2]);
+              var5 = (IntrusiveNode.field_e[5] & 255) + ((255 & IntrusiveNode.field_e[3]) << 16) + ((IntrusiveNode.field_e[4] & 255) << 8);
               if (var4_int < 0) {
                 return null;
               }
@@ -126,21 +126,21 @@ final class gi {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_e.a(var14 + var9, (byte) -93, 0, gg.field_e);
-                  var10 = ((255 & gg.field_e[0]) << 8) + (255 & gg.field_e[1]);
-                  var12 = (16711680 & gg.field_e[4] << 16) + (65280 & gg.field_e[5] << 8) + (255 & gg.field_e[6]);
-                  var11 = (255 & gg.field_e[3]) + (gg.field_e[2] << 8 & 65280);
-                  var13 = gg.field_e[7] & 255;
+                  this.field_e.a(var14 + var9, (byte) -93, 0, IntrusiveNode.field_e);
+                  var10 = ((255 & IntrusiveNode.field_e[0]) << 8) + (255 & IntrusiveNode.field_e[1]);
+                  var12 = (16711680 & IntrusiveNode.field_e[4] << 16) + (65280 & IntrusiveNode.field_e[5] << 8) + (255 & IntrusiveNode.field_e[6]);
+                  var11 = (255 & IntrusiveNode.field_e[3]) + (IntrusiveNode.field_e[2] << 8 & 65280);
+                  var13 = IntrusiveNode.field_e[7] & 255;
                 } else {
                   if (510 < var9) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_e.a(var9 + var14, (byte) -93, 0, gg.field_e);
-                  var13 = 255 & gg.field_e[9];
-                  var12 = (255 & gg.field_e[8]) + (((255 & gg.field_e[6]) << 16) + (65280 & gg.field_e[7] << 8));
-                  var10 = (gg.field_e[3] & 255) + ((65280 & gg.field_e[2] << 8) + (((gg.field_e[0] & 255) << 24) + ((255 & gg.field_e[1]) << 16)));
-                  var11 = (255 & gg.field_e[5]) + ((255 & gg.field_e[4]) << 8);
+                  this.field_e.a(var9 + var14, (byte) -93, 0, IntrusiveNode.field_e);
+                  var13 = 255 & IntrusiveNode.field_e[9];
+                  var12 = (255 & IntrusiveNode.field_e[8]) + (((255 & IntrusiveNode.field_e[6]) << 16) + (65280 & IntrusiveNode.field_e[7] << 8));
+                  var10 = (IntrusiveNode.field_e[3] & 255) + ((65280 & IntrusiveNode.field_e[2] << 8) + (((IntrusiveNode.field_e[0] & 255) << 24) + ((255 & IntrusiveNode.field_e[1]) << 16)));
+                  var11 = (255 & IntrusiveNode.field_e[5]) + ((255 & IntrusiveNode.field_e[4]) << 8);
                 }
                 if (param1 != var10) {
                   return null;
@@ -163,7 +163,7 @@ final class gi {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = gg.field_e[var16];
+                  var6[incrementValue$2] = IntrusiveNode.field_e[var16];
                 }
                 var5 = var12;
                 var8++;
@@ -214,8 +214,8 @@ final class gi {
                     return false;
                   }
                   this.field_d.a((long)(6 * param0), param3 + 0);
-                  this.field_d.a(6, (byte) -93, 0, gg.field_e);
-                  var7_int = (gg.field_e[5] & 255) + ((65280 & gg.field_e[4] << 8) + (16711680 & gg.field_e[3] << 16));
+                  this.field_d.a(6, (byte) -93, 0, IntrusiveNode.field_e);
+                  var7_int = (IntrusiveNode.field_e[5] & 255) + ((65280 & IntrusiveNode.field_e[4] << 8) + (16711680 & IntrusiveNode.field_e[3] << 16));
                   if (0 >= var7_int ||
                     !((long)var7_int <= this.field_e.c(110) / 520L)) {
                     return false;
@@ -226,17 +226,17 @@ final class gi {
                     var7_int = 1;
                   }
                 }
-                gg.field_e[5] = (byte)var7_int;
-                gg.field_e[4] = (byte)(var7_int >> 8);
-                gg.field_e[3] = (byte)(var7_int >> 16);
-                gg.field_e[2] = (byte)param1;
-                gg.field_e[1] = (byte)(param1 >> 8);
-                gg.field_e[param3] = (byte)(param1 >> 16);
+                IntrusiveNode.field_e[5] = (byte)var7_int;
+                IntrusiveNode.field_e[4] = (byte)(var7_int >> 8);
+                IntrusiveNode.field_e[3] = (byte)(var7_int >> 16);
+                IntrusiveNode.field_e[2] = (byte)param1;
+                IntrusiveNode.field_e[1] = (byte)(param1 >> 8);
+                IntrusiveNode.field_e[param3] = (byte)(param1 >> 16);
                 this.field_d.a((long)(param0 * 6), 0);
-                this.field_d.a(6, 0, -1, gg.field_e);
+                this.field_d.a(6, 0, -1, IntrusiveNode.field_e);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param1 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -244,7 +244,7 @@ final class gi {
                       this.field_e.a((long)(520 * var7_int), 0);
                       if (65535 >= param0) {
                         try {
-                          this.field_e.a(8, (byte) -93, 0, gg.field_e);
+                          this.field_e.a(8, (byte) -93, 0, IntrusiveNode.field_e);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -252,15 +252,15 @@ final class gi {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
-                        var13 = gg.field_e[7] & 255;
-                        var10 = (255 & gg.field_e[6]) + (((gg.field_e[4] & 255) << 16) + ((255 & gg.field_e[5]) << 8));
-                        var11 = ((gg.field_e[0] & 255) << 8) + (gg.field_e[1] & 255);
-                        var12 = (65280 & gg.field_e[2] << 8) + (255 & gg.field_e[3]);
+                        var13 = IntrusiveNode.field_e[7] & 255;
+                        var10 = (255 & IntrusiveNode.field_e[6]) + (((IntrusiveNode.field_e[4] & 255) << 16) + ((255 & IntrusiveNode.field_e[5]) << 8));
+                        var11 = ((IntrusiveNode.field_e[0] & 255) << 8) + (IntrusiveNode.field_e[1] & 255);
+                        var12 = (65280 & IntrusiveNode.field_e[2] << 8) + (255 & IntrusiveNode.field_e[3]);
                       } else {
                         try {
-                          this.field_e.a(10, (byte) -93, 0, gg.field_e);
+                          this.field_e.a(10, (byte) -93, 0, IntrusiveNode.field_e);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -268,12 +268,12 @@ final class gi {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
-                        var12 = (gg.field_e[5] & 255) + ((255 & gg.field_e[4]) << 8);
-                        var13 = gg.field_e[9] & 255;
-                        var11 = ((255 & gg.field_e[2]) << 8) + ((gg.field_e[0] & 255) << 24) + ((gg.field_e[1] << 16 & 16711680) + (255 & gg.field_e[3]));
-                        var10 = (255 & gg.field_e[8]) + (((gg.field_e[7] & 255) << 8) + (gg.field_e[6] << 16 & 16711680));
+                        var12 = (IntrusiveNode.field_e[5] & 255) + ((255 & IntrusiveNode.field_e[4]) << 8);
+                        var13 = IntrusiveNode.field_e[9] & 255;
+                        var11 = ((255 & IntrusiveNode.field_e[2]) << 8) + ((IntrusiveNode.field_e[0] & 255) << 24) + ((IntrusiveNode.field_e[1] << 16 & 16711680) + (255 & IntrusiveNode.field_e[3]));
+                        var10 = (255 & IntrusiveNode.field_e[8]) + (((IntrusiveNode.field_e[7] & 255) << 8) + (IntrusiveNode.field_e[6] << 16 & 16711680));
                       }
                       if ((param0 == var11 &&
                         var12 == var9 &&
@@ -300,16 +300,16 @@ final class gi {
                       var10 = 0;
                     }
                     if (param0 <= 65535) {
-                      gg.field_e[0] = (byte)(param0 >> 8);
-                      gg.field_e[5] = (byte)(var10 >> 8);
-                      gg.field_e[1] = (byte)param0;
-                      gg.field_e[6] = (byte)var10;
-                      gg.field_e[3] = (byte)var9;
-                      gg.field_e[4] = (byte)(var10 >> 16);
-                      gg.field_e[7] = (byte)this.field_b;
-                      gg.field_e[2] = (byte)(var9 >> 8);
+                      IntrusiveNode.field_e[0] = (byte)(param0 >> 8);
+                      IntrusiveNode.field_e[5] = (byte)(var10 >> 8);
+                      IntrusiveNode.field_e[1] = (byte)param0;
+                      IntrusiveNode.field_e[6] = (byte)var10;
+                      IntrusiveNode.field_e[3] = (byte)var9;
+                      IntrusiveNode.field_e[4] = (byte)(var10 >> 16);
+                      IntrusiveNode.field_e[7] = (byte)this.field_b;
+                      IntrusiveNode.field_e[2] = (byte)(var9 >> 8);
                       this.field_e.a((long)(520 * var7_int), param3 + 0);
-                      this.field_e.a(8, 0, ~param3, gg.field_e);
+                      this.field_e.a(8, 0, ~param3, IntrusiveNode.field_e);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;
@@ -317,18 +317,18 @@ final class gi {
                       this.field_e.a(var11, var8, ~param3, param4);
                       var8 = var8 + var11;
                     } else {
-                      gg.field_e[6] = (byte)(var10 >> 16);
-                      gg.field_e[3] = (byte)param0;
-                      gg.field_e[5] = (byte)var9;
-                      gg.field_e[2] = (byte)(param0 >> 8);
-                      gg.field_e[0] = (byte)(param0 >> 24);
-                      gg.field_e[7] = (byte)(var10 >> 8);
-                      gg.field_e[4] = (byte)(var9 >> 8);
-                      gg.field_e[1] = (byte)(param0 >> 16);
-                      gg.field_e[9] = (byte)this.field_b;
-                      gg.field_e[8] = (byte)var10;
+                      IntrusiveNode.field_e[6] = (byte)(var10 >> 16);
+                      IntrusiveNode.field_e[3] = (byte)param0;
+                      IntrusiveNode.field_e[5] = (byte)var9;
+                      IntrusiveNode.field_e[2] = (byte)(param0 >> 8);
+                      IntrusiveNode.field_e[0] = (byte)(param0 >> 24);
+                      IntrusiveNode.field_e[7] = (byte)(var10 >> 8);
+                      IntrusiveNode.field_e[4] = (byte)(var9 >> 8);
+                      IntrusiveNode.field_e[1] = (byte)(param0 >> 16);
+                      IntrusiveNode.field_e[9] = (byte)this.field_b;
+                      IntrusiveNode.field_e[8] = (byte)var10;
                       this.field_e.a((long)(520 * var7_int), 0);
-                      this.field_e.a(10, 0, -1, gg.field_e);
+                      this.field_e.a(10, 0, -1, IntrusiveNode.field_e);
                       var11 = param1 - var8;
                       if (510 < var11) {
                         var11 = 510;

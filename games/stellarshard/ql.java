@@ -62,10 +62,10 @@ final class ql extends tb {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        s.field_c.c(this.field_P, param2 + (this.field_p >> 1), param1 + 103, 16777215, -1);
+        DualLinkDequeIterator.field_c.c(this.field_P, param2 + (this.field_p >> 1), param1 + 103, 16777215, -1);
         if (this.field_R != null) {
           ti.g(20 + param2, -7 + param1 + 120, 260, 8421504);
-          s.field_c.a(this.field_R, 20 + param2, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, s.field_c.field_N);
+          DualLinkDequeIterator.field_c.a(this.field_R, 20 + param2, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, DualLinkDequeIterator.field_c.field_N);
         }
     }
 
@@ -75,7 +75,7 @@ final class ql extends tb {
         try {
           this.field_R = param1;
           if (this.field_R != null) {
-            var3_int = s.field_c.b(this.field_R, 260, s.field_c.field_N);
+            var3_int = DualLinkDequeIterator.field_c.b(this.field_R, 260, DualLinkDequeIterator.field_c.field_N);
             this.a(300, (byte) -107, var3_int + 150);
           }
           this.field_T = new nc(13, 50, 274, 30, 15, 2113632, 4210752);

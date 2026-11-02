@@ -11,7 +11,7 @@ final class gk {
     private pf field_d;
     private uh field_f;
 
-    final ud a(byte param0, int param1, int param2) {
+    final PcmSample a(byte param0, int param1, int param2) {
         int var4 = -50 % ((param0 + 10) / 50);
         return this.a(param1, param2, (int[]) null, 1);
     }
@@ -26,10 +26,10 @@ final class gk {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        ka stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
-        ka stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         String stackIn_18_2 = null;
         int stackIn_33_0 = 0;
@@ -81,37 +81,37 @@ final class gk {
             return stackIn_8_0;
           }
           if (sl.field_d == oa.field_C) {
-            pg.field_fb.field_k = 0;
+            pg.field_fb.position = 0;
             nb.field_M = null;
             if (param3 != null) {
               var9 = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              uc.field_c.field_k = 0;
-              uc.field_c.b(0, pl.field_P.nextInt());
-              uc.field_c.b(0, pl.field_P.nextInt());
+              uc.field_c.position = 0;
+              uc.field_c.writeInt(0, pl.field_P.nextInt());
+              uc.field_c.writeInt(0, pl.field_P.nextInt());
               uc.field_c.a(-104, var14);
               uc.field_c.a(-106, var8);
               var15 = (CharSequence) ((Object) param3);
-              uc.field_c.a(-117, gg.a(var15, param6));
+              uc.field_c.a(-117, IntrusiveNode.a(var15, param6));
               uc.field_c.c(param0, -127);
-              uc.field_c.a(false, param4);
-              uc.field_c.a(false, var9);
-              pg.field_fb.a(false, 18);
-              pg.field_fb.field_k = pg.field_fb.field_k + 2;
-              var10 = pg.field_fb.field_k;
+              uc.field_c.writeByte(false, param4);
+              uc.field_c.writeByte(false, var9);
+              pg.field_fb.writeByte(false, 18);
+              pg.field_fb.position = pg.field_fb.position + 2;
+              var10 = pg.field_fb.position;
               var11_ref_StringLifetime4 = dd.a(0, hf.a((byte) -118));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               pg.field_fb.b(var11_ref_StringLifetime4, -9799);
               ha.a(fj.field_l, pg.field_fb, uc.field_c, -105, u.field_o);
-              pg.field_fb.d(-1, -var10 + pg.field_fb.field_k);
+              pg.field_fb.d(-1, -var10 + pg.field_fb.position);
             } else {
-              uc.field_c.field_k = 0;
-              uc.field_c.b(0, pl.field_P.nextInt());
-              uc.field_c.b(0, pl.field_P.nextInt());
+              uc.field_c.position = 0;
+              uc.field_c.writeInt(0, pl.field_P.nextInt());
+              uc.field_c.writeInt(0, pl.field_P.nextInt());
               stackIn_14_0 = uc.field_c;
               stackIn_14_1 = 96;
               if (!param2.a(5)) {
@@ -119,7 +119,7 @@ final class gk {
               } else {
                 stackIn_15_2 = var14;
               }
-              ((ka) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
               stackIn_17_0 = uc.field_c;
               stackIn_17_1 = 126;
               if (!param5.a(5)) {
@@ -127,20 +127,20 @@ final class gk {
               } else {
                 stackIn_18_2 = var8;
               }
-              ((ka) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
-              pg.field_fb.a(false, 16);
-              pg.field_fb.field_k = pg.field_fb.field_k + 1;
-              var9 = pg.field_fb.field_k;
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
+              pg.field_fb.writeByte(false, 16);
+              pg.field_fb.position = pg.field_fb.position + 1;
+              var9 = pg.field_fb.position;
               ha.a(fj.field_l, pg.field_fb, uc.field_c, -121, u.field_o);
-              pg.field_fb.a(pg.field_fb.field_k - var9, (byte) -94);
+              pg.field_fb.a(pg.field_fb.position - var9, (byte) -94);
             }
             ue.a((byte) -108, -1);
             sl.field_d = i.field_d;
           }
           if (sl.field_d == i.field_d &&
-            qe.b(64, 1)) {
-            var9Lifetime1 = ae.field_N.f(4);
-            ae.field_N.field_k = 0;
+            GameEntity.b(64, 1)) {
+            var9Lifetime1 = ae.field_N.readUnsignedByte(4);
+            ae.field_N.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               fc.field_b = new String[-100 + var9Lifetime1];
@@ -148,18 +148,18 @@ final class gk {
             } else {
               if (var9Lifetime1 == 248) {
                 aa.a(hf.a((byte) -64), false);
-                ga.field_a = pg.field_eb;
-                oj.c(-2290);
+                NodeHashTableIterator.field_a = pg.field_eb;
+                IntrusiveDeque.c(-2290);
                 ta.field_u = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                qe.b(64, ug.b(1));
+                GameEntity.b(64, IntrusiveDequeCursor.b(1));
                 nb.field_M = new Boolean(h.a(ae.field_N, 31184));
-                ae.field_N.field_k = 0;
+                ae.field_N.position = 0;
               } else {
-                sl.field_d = bg.field_c;
+                sl.field_d = DualLinkDeque.field_c;
                 ja.field_t = var9Lifetime1;
                 ue.field_b = -1;
               }
@@ -167,22 +167,22 @@ final class gk {
           }
           if (sl.field_d == stellarshard.field_E) {
             var9Lifetime2 = 2;
-            if (qe.b(64, var9Lifetime2)) {
-              var10Lifetime1 = ae.field_N.c((byte) 74);
-              ae.field_N.field_k = 0;
-              if (qe.b(64, var10Lifetime1)) {
+            if (GameEntity.b(64, var9Lifetime2)) {
+              var10Lifetime1 = ae.field_N.readUnsignedShort((byte) 74);
+              ae.field_N.position = 0;
+              if (GameEntity.b(64, var10Lifetime1)) {
                 var11 = fc.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   fc.field_b[var12] = ae.field_N.f((byte) 94);
                 }
-                oj.c(-2290);
+                IntrusiveDeque.c(-2290);
                 ta.field_u = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
             }
           }
-          if (sl.field_d == bg.field_c &&
+          if (sl.field_d == DualLinkDeque.field_c &&
             cd.e((byte) 123)) {
             if (ja.field_t == 255) {
               var9_ref_String = ae.field_N.a(0);
@@ -190,9 +190,9 @@ final class gk {
                 dj.a(false, hf.a((byte) -101), var9_ref_String);
               }
             } else {
-              ga.field_a = ae.field_N.e((byte) 96);
+              NodeHashTableIterator.field_a = ae.field_N.e((byte) 96);
             }
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             ta.field_u = false;
             stackIn_55_0 = ja.field_t;
             return stackIn_55_0;
@@ -200,9 +200,9 @@ final class gk {
           if (null == ob.field_b) {
             if (ta.field_u) {
               if (tk.b(127) > 30000L) {
-                ga.field_a = hj.field_a;
+                NodeHashTableIterator.field_a = hj.field_a;
               } else {
-                ga.field_a = wb.field_h;
+                NodeHashTableIterator.field_a = wb.field_h;
               }
               ta.field_u = false;
               stackIn_63_0 = 249;
@@ -241,29 +241,29 @@ final class gk {
         }
     }
 
-    private final ud a(int param0, int[] param1, int param2, int param3) {
-        ud discarded$1 = null;
+    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
+        PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ud var8 = null;
+        PcmSample var8 = null;
         kj var9 = null;
         int[] var10 = null;
-        ud var11 = null;
-        ud stackIn_2_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_11_0 = null;
-        ud stackIn_15_0 = null;
+        PcmSample stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ud var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = ((param0 & -2147479553) << 4 | param0 >>> 12) ^ param3;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (ud) (this.field_f.a(var6, 74));
+          var8 = (PcmSample) (this.field_f.a(var6, 74));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -271,7 +271,7 @@ final class gk {
           if (param1 != null &&
             param1[0] <= 0) {
             stackIn_6_0 = null;
-            return (ud) (stackIn_6_0);
+            return (PcmSample) (stackIn_6_0);
           }
           var9 = kj.a(this.field_b, param0, param3);
           if (param2 != -26190) {
@@ -280,7 +280,7 @@ final class gk {
           }
           if (var9 == null) {
             stackIn_11_0 = null;
-            return (ud) (stackIn_11_0);
+            return (PcmSample) (stackIn_11_0);
           }
           var11 = var9.a();
           var8Lifetime1 = var11;
@@ -312,26 +312,26 @@ final class gk {
         field_c = null;
     }
 
-    private final ud a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ud var8 = null;
+        PcmSample var8 = null;
         ad var9 = null;
-        ud stackIn_2_0 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_11_0 = null;
-        ud stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ud var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param0 ^ (param1 >>> 12 | 65523 & param1 << 4);
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (ud) (this.field_f.a(var6, -105));
+          var8 = (PcmSample) (this.field_f.a(var6, -105));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -339,14 +339,14 @@ final class gk {
           if (param2 != null &&
             0 >= param2[0]) {
             stackIn_6_0 = null;
-            return (ud) (stackIn_6_0);
+            return (PcmSample) (stackIn_6_0);
           }
           var9 = (ad) (this.field_e.a(var6, param3 ^ -125));
           if (var9 == null) {
             var9 = ad.a(this.field_d, param1, param0);
             if (var9 == null) {
               stackIn_11_0 = null;
-              return (ud) (stackIn_11_0);
+              return (PcmSample) (stackIn_11_0);
             }
             this.field_e.a(var9, var6, param3 + 0);
           }
@@ -354,7 +354,7 @@ final class gk {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(20);
+          var9.unlink(20);
           this.field_f.a(var8Lifetime1, var6, param3);
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -372,8 +372,8 @@ final class gk {
         }
     }
 
-    final ud a(int param0, int param1, boolean param2) {
-        ud discarded$0 = null;
+    final PcmSample a(int param0, int param1, boolean param2) {
+        PcmSample discarded$0 = null;
         if (param2) {
           int[] var5 = (int[]) null;
           discarded$0 = this.a(-93, (int[]) null, 110, 16);

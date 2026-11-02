@@ -74,7 +74,7 @@ final class wk {
         }
         var3 = new od();
         if (var4 != null) {
-          var3.a(new ka(var4), 745);
+          var3.a(new PacketBuffer(var4), 745);
         }
         if (param1 >= 32768) {
           var3.f(20865);

@@ -13,7 +13,7 @@ final class va extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    final void a(ej param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           kf.a(this.field_d, 16711935, param0);
           if (param1 > -10) {

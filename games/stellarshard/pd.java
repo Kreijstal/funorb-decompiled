@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd extends vk {
-    private bd field_t;
-    static pb field_s;
+    private BitmapFont field_t;
+    static Sprite field_s;
     private int field_o;
     static String[] field_g;
     static lj field_e;
@@ -11,7 +11,7 @@ final class pd extends vk {
     private int field_n;
     private String field_m;
     private int field_k;
-    static vi field_h;
+    static RasterBuffer field_h;
     private boolean field_r;
     static int field_q;
     static long[] field_j;
@@ -21,7 +21,7 @@ final class pd extends vk {
     private int field_i;
     static String field_p;
 
-    final void a(boolean param0, String param1, int param2, int param3, bd param4) {
+    final void a(boolean param0, String param1, int param2, int param3, BitmapFont param4) {
         uj var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -40,13 +40,13 @@ final class pd extends vk {
           var7 = param4.b(param1);
           var8.field_a[0] = -(var7 >> 1) + param3;
           var8.field_a[param1.length()] = (var7 >> 1) + param3;
-          mh.a(1, 0, param1, var8, param4);
+          ImageProducerRasterBuffer.a(1, 0, param1, var8, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, bd param4, int param5, String param6, byte param7) {
+    final void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, String param6, byte param7) {
         uj stackIn_36_0;
         uj stackIn_36_1;
         int stackIn_36_2;
@@ -84,7 +84,7 @@ final class pd extends vk {
           }
           if (param7 >= -32) {
             var16 = (String) null;
-            this.a(-57, -104, 68, -43, (bd) null, -58, (String) null, (byte) -4);
+            this.a(-57, -104, 68, -43, (BitmapFont) null, -58, (String) null, (byte) -4);
           }
           if (this.field_t == param4 &&
             !this.field_r &&
@@ -156,7 +156,7 @@ final class pd extends vk {
               } else {
                 stackIn_41_1 = this.a(var13, false, param2, param4.b(var13));
               }
-              mh.a(stackIn_40_0, stackIn_41_1, var13, var14, param4);
+              ImageProducerRasterBuffer.a(stackIn_40_0, stackIn_41_1, var13, var14, param4);
             }
             var11 = var11 + param1;
             this.field_a[var12Lifetime1] = var14;
@@ -218,7 +218,7 @@ final class pd extends vk {
         }
     }
 
-    final void a(int param0, bd param1, String param2, int param3, int param4) {
+    final void a(int param0, BitmapFont param1, String param2, int param3, int param4) {
         uj var7 = null;
         uj var8 = null;
         if (param2 == null) {
@@ -238,13 +238,13 @@ final class pd extends vk {
           var8 = var7;
           var7.field_a[param3] = param0;
           var8.field_a[param2.length()] = param1.b(param2) + param0;
-          mh.a(param3 + 1, 0, param2, var8, param1);
+          ImageProducerRasterBuffer.a(param3 + 1, 0, param2, var8, param1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, bd param1, int param2, String param3, byte param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, byte param4) {
         uj var8 = null;
         uj var9 = null;
         if (param3 == null) {
@@ -264,19 +264,19 @@ final class pd extends vk {
           this.field_o = 2;
           this.field_r = true;
           if (param4 != 22) {
-            field_h = (vi) null;
+            field_h = (RasterBuffer) null;
           }
           var8 = this.a(param2, false, param3, param1);
           var9 = var8;
           var9.field_a[0] = param0 - param1.b(param3);
           var9.field_a[param3.length()] = param0;
-          mh.a(1, 0, param3, var9, param1);
+          ImageProducerRasterBuffer.a(1, 0, param3, var9, param1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final uj a(int param0, boolean param1, String param2, bd param3) {
+    private final uj a(int param0, boolean param1, String param2, BitmapFont param3) {
         uj var5 = null;
         RuntimeException var5_ref = null;
         uj var6 = null;
@@ -292,7 +292,7 @@ final class pd extends vk {
           var5 = var6;
           this.field_a = new uj[]{var6};
           if (param1) {
-            this.field_t = (bd) null;
+            this.field_t = (BitmapFont) null;
           }
           stackIn_3_0 = var5;
           return stackIn_3_0;
@@ -321,14 +321,14 @@ final class pd extends vk {
         try {
           var3 = pg.field_fb;
           var3.f(param0, 950);
-          var3.a(false, 5);
+          var3.writeByte(false, 5);
           if (param2 < 1) {
             field_u = (int[]) null;
           }
-          var3.a(false, 0);
+          var3.writeByte(false, 0);
           var3.c(param1.field_t, -128);
-          var3.a(false, param1.field_q);
-          var3.a(false, param1.field_r);
+          var3.writeByte(false, param1.field_q);
+          var3.writeByte(false, param1.field_r);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -361,7 +361,7 @@ final class pd extends vk {
         long var10 = 0L;
         long var12 = 0L;
         int var14 = 0;
-        field_s = new pb(270, 70);
+        field_s = new Sprite(270, 70);
         field_l = new long[8][256];
         field_j = new long[11];
         int var0 = 0;

@@ -13,7 +13,7 @@ final class cj {
         }
     }
 
-    final static pb[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 == -17768) {
           return a.a(param1, param0, 1, -128, param2);
         }

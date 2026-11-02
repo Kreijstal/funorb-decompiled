@@ -22,7 +22,7 @@ final class oa extends dg {
           this.field_y.a(param0, (byte) -57, param2 + this.field_k, this.field_w + param3);
           return;
         }
-        pb var5 = new pb(this.field_y.field_p, this.field_y.field_t);
+        Sprite var5 = new Sprite(this.field_y.field_p, this.field_y.field_t);
         hj.a(var5, 1);
         this.field_y.a(param0, param1, 0, 0);
         id.b((byte) -58);
@@ -34,7 +34,7 @@ final class oa extends dg {
         this.field_A = 256;
     }
 
-    oa(rj param0) {
+    oa(UiWidget param0) {
         super(param0.field_w, param0.field_k, param0.field_p, param0.field_t, (uk) null, (lf) null);
         try {
           param0.b(this.field_p, 0, 0, this.field_t, 23987);

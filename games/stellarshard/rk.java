@@ -238,7 +238,7 @@ final class rk implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              qe.a(60, (String) null, (Throwable) ((Object) var2_ref));
+              GameEntity.a(60, (String) null, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -253,7 +253,7 @@ final class rk implements Runnable {
         }
     }
 
-    rk(ej param0) {
+    rk(PlatformTaskDispatcher param0) {
         re var2 = null;
         this.field_d = new al();
         this.field_e = 0;

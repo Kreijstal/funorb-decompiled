@@ -3,7 +3,7 @@
  */
 final class sa extends i {
     static int field_h;
-    static pb[] field_g;
+    static Sprite[] field_g;
     static int field_i;
     private java.nio.ByteBuffer field_f;
 
@@ -59,9 +59,9 @@ final class sa extends i {
             stackIn_2_0 = null;
             return (bm) (stackIn_2_0);
           }
-          var2 = new bm(param1, ak.field_c, vi.field_c, vc.field_b, ih.field_d, gj.field_w, ih.field_b);
+          var2 = new bm(param1, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, gj.field_w, ih.field_b);
           if (param0 != 2376) {
-            field_g = (pb[]) null;
+            field_g = (Sprite[]) null;
           }
           tb.f((byte) -62);
           stackIn_6_0 = var2;

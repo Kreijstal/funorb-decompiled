@@ -40,7 +40,7 @@ final class ke {
     }
 
     final static void a(int param0, int param1) {
-        ug.field_d = ib.field_h[param1];
+        IntrusiveDequeCursor.field_d = ib.field_h[param1];
         rg.field_I = se.field_E[param1];
         kf.field_d = e.field_f[param1];
         if (param0 <= 33) {

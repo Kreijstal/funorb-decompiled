@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oc {
-    static oj field_c;
+    static IntrusiveDeque field_c;
     static boolean field_d;
     static volatile int field_b;
     static int field_e;
@@ -21,6 +21,6 @@ final class oc {
         field_z = "oc.A(";
         field_b = 0;
         field_e = 0;
-        field_c = new oj();
+        field_c = new IntrusiveDeque();
     }
 }

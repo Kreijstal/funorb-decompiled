@@ -6,7 +6,7 @@ final class hh implements uk {
     private int field_g;
     private int field_e;
     private int field_f;
-    private bd field_c;
+    private BitmapFont field_c;
     private int field_i;
     private int field_h;
     private int field_a;
@@ -19,7 +19,7 @@ final class hh implements uk {
         }
     }
 
-    hh(bd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    hh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param4;
           this.field_f = param3;
@@ -34,7 +34,7 @@ final class hh implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         fg var14 = null;
         int var7 = 0;
         int var8 = 0;

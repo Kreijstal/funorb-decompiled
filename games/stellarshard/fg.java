@@ -6,10 +6,10 @@ final class fg extends ig {
     int field_F;
     int field_I;
     int field_J;
-    static oj field_G;
+    static IntrusiveDeque field_G;
     int field_L;
     int field_H;
-    static pb[] field_P;
+    static Sprite[] field_P;
     static int field_O;
     static int field_M;
     static float field_K;
@@ -22,7 +22,7 @@ final class fg extends ig {
         field_G = null;
     }
 
-    final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -80,6 +80,6 @@ final class fg extends ig {
     }
 
     static {
-        field_G = new oj();
+        field_G = new IntrusiveDeque();
     }
 }

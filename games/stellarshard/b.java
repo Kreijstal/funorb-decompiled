@@ -7,7 +7,7 @@ final class b extends id {
     private int field_r;
     private int field_q;
     private int field_p;
-    private pb[] field_s;
+    private Sprite[] field_s;
     static pf field_u;
 
     final static ek[] a(int param0, int param1, int param2, pf param3) {
@@ -195,14 +195,14 @@ final class b extends id {
     }
 
     private b(int param0, int param1, int param2) {
-        this.field_a = s.field_c;
+        this.field_a = DualLinkDequeIterator.field_c;
         this.field_r = param0;
         this.field_p = param2;
         this.field_q = param1;
-        this.field_s = mh.field_i;
+        this.field_s = ImageProducerRasterBuffer.field_i;
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;

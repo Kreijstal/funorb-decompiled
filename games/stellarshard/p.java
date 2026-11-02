@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class p extends gg {
+abstract class p extends IntrusiveNode {
     int field_l;
     hl field_k;
 

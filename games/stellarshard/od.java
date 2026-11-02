@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class od extends ah {
+final class od extends DualLinkNode {
     private int[] field_t;
     static fb field_v;
     static int field_r;
@@ -56,7 +56,7 @@ final class od extends ah {
         return stackIn_13_0;
     }
 
-    final void a(ka param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -67,7 +67,7 @@ final class od extends ah {
         var4 = stellarshard.field_B;
         try {
           while (true) {
-            var3_int = param0.f(4);
+            var3_int = param0.readUnsignedByte(4);
             if (var3_int != 0) {
               this.a(param0, -11682, var3_int);
               continue;
@@ -119,7 +119,7 @@ final class od extends ah {
         return var2.toString();
     }
 
-    private final void a(ka param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -132,30 +132,30 @@ final class od extends ah {
         int var6 = 0;
         li var7 = null;
         int var9 = 0;
-        ka var10 = null;
+        PacketBuffer var10 = null;
         var9 = stellarshard.field_B;
         try {
           if (param2 != 1) {
             if (2 == param2) {
-              var4_int = param0.f(param1 ^ -11686);
+              var4_int = param0.readUnsignedByte(param1 ^ -11686);
               this.field_y = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_y[var5] = param0.c((byte) 107);
+                this.field_y[var5] = param0.readUnsignedShort((byte) 107);
               }
             } else {
               if (3 == param2) {
-                var4_int = param0.f(param1 + 11686);
+                var4_int = param0.readUnsignedByte(param1 + 11686);
                 this.field_t = new int[var4_int];
                 this.field_x = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param0.c((byte) 54);
+                  var6 = param0.readUnsignedShort((byte) 54);
                   var7 = ee.a(var6, (byte) 8);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_c];
                     this.field_x[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_c; var8++) {
-                      this.field_x[var5][var8] = param0.c((byte) 96);
+                      this.field_x[var5][var8] = param0.readUnsignedShort((byte) 96);
                     }
                   }
                 }
@@ -168,8 +168,8 @@ final class od extends ah {
             this.field_u = qj.a('<', param0.e((byte) 106), 10287);
           }
           if (param1 != -11682) {
-            var10 = (ka) null;
-            this.a((ka) null, 76, -96);
+            var10 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 76, -96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

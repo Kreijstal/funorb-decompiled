@@ -11,7 +11,7 @@ final class gh {
         if (!param0) {
           return 109;
         }
-        return ac.field_e;
+        return GameApplet.field_e;
     }
 
     final static boolean b(byte param0) {

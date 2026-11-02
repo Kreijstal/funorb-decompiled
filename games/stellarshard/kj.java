@@ -6,9 +6,9 @@ final class kj {
     private tj[] field_a;
     private int field_c;
 
-    final ud a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new ud(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     final static kj a(pf param0, String param1, String param2) {
@@ -16,7 +16,7 @@ final class kj {
         if (var3 == null) {
           return null;
         }
-        return new kj(new ka(var3));
+        return new kj(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,20 +59,20 @@ final class kj {
         return var3;
     }
 
-    private kj(ka param0) {
+    private kj(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new tj[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.f(4);
+          var3 = param0.readUnsignedByte(4);
           if (var3 != 0) {
-            param0.field_k = param0.field_k - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new tj();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.c((byte) 27);
-        this.field_b = param0.c((byte) 116);
+        this.field_c = param0.readUnsignedShort((byte) 27);
+        this.field_b = param0.readUnsignedShort((byte) 116);
     }
 
     final static kj a(pf param0, int param1, int param2) {
@@ -80,6 +80,6 @@ final class kj {
         if (var3 == null) {
           return null;
         }
-        return new kj(new ka(var3));
+        return new kj(new PacketBuffer(var3));
     }
 }

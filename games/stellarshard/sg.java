@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sg {
-    static pi field_a;
+    static Quaternion field_a;
     static String field_b;
     static String field_d;
     static String[] field_c;
@@ -75,7 +75,7 @@ final class sg {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, String param2, int param3, ej param4, int param5, int param6, boolean param7, long param8, int param9, int param10, int param11, int param12, boolean param13) {
+    final static void a(int param0, int param1, String param2, int param3, PlatformTaskDispatcher param4, int param5, int param6, boolean param7, long param8, int param9, int param10, int param11, int param12, boolean param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -140,7 +140,7 @@ final class sg {
 
     static {
         field_b = "Discard";
-        field_a = new pi();
+        field_a = new Quaternion();
         field_c = new String[]{"Battle alien squadrons", "Play in fullscreen", "Activate the Phoenix Device"};
         field_d = "Current level : ";
     }

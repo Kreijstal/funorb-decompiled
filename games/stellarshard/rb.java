@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rb extends ac {
+abstract class rb extends GameApplet {
     private boolean field_x;
     private boolean field_o;
     private long field_y;
@@ -10,7 +10,7 @@ abstract class rb extends ac {
     static String field_t;
     String field_C;
     private int field_r;
-    static ci field_u;
+    static FrameTimer field_u;
     private int field_v;
     private int field_D;
     static int field_w;
@@ -47,7 +47,7 @@ abstract class rb extends ac {
         int var3 = stellarshard.field_B;
         ek[] var1 = new ek[sb.field_b];
         for (var2 = 0; sb.field_b > var2; var2++) {
-          var1[var2] = new ek(nc.field_G, wd.field_b, ak.field_c[var2], vi.field_c[var2], vc.field_b[var2], ih.field_d[var2], ih.field_b[var2], gj.field_w);
+          var1[var2] = new ek(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], ih.field_b[var2], gj.field_w);
         }
         if (param0 == 1851) {
           tb.f((byte) -118);
@@ -97,7 +97,7 @@ abstract class rb extends ac {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          ka var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = stellarshard.field_B;
@@ -111,9 +111,9 @@ abstract class rb extends ac {
           if (var4 == 1) {
             var5_int = dc.a(tb.g((byte) 118), -112, n.a(20));
             if (var5_int != -1) {
-              sl.a(ga.field_a, var5_int, (byte) -110, fc.field_b);
+              sl.a(NodeHashTableIterator.field_a, var5_int, (byte) -110, fc.field_b);
               fc.field_b = null;
-              ga.field_a = null;
+              NodeHashTableIterator.field_a = null;
             }
             var11 = wj.g(-117);
             if (var11 != null) {
@@ -121,10 +121,10 @@ abstract class rb extends ac {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = qe.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), jg.i((byte) 113));
+            var5_intLifetime1 = GameEntity.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), jg.i((byte) 113));
             if (var5_intLifetime1 != -1) {
-              pk.a(ga.field_a, fc.field_b, var5_intLifetime1, (byte) 125);
-              ga.field_a = null;
+              pk.a(NodeHashTableIterator.field_a, fc.field_b, var5_intLifetime1, (byte) 125);
+              NodeHashTableIterator.field_a = null;
               fc.field_b = null;
             }
           }
@@ -143,8 +143,8 @@ abstract class rb extends ac {
                   cg.field_a = false;
                   eg.field_d = 10;
                 } else {
-                  wl.a(var5_intLifetime2, -8440, ga.field_a);
-                  ga.field_a = null;
+                  wl.a(var5_intLifetime2, -8440, NodeHashTableIterator.field_a);
+                  NodeHashTableIterator.field_a = null;
                 }
               }
             } else {
@@ -192,7 +192,7 @@ abstract class rb extends ac {
               if (q.field_d.a(14709)) {
                 var12 = q.field_d.b(-4);
                 if (var12 != null) {
-                  var7 = kk.a(var12.field_k, (byte) 97, 0, var12.field_r);
+                  var7 = kk.a(var12.position, (byte) 97, 0, var12.payload);
                   il.a(7110, var7);
                 } else {
                   var9 = (String) null;
@@ -203,7 +203,7 @@ abstract class rb extends ac {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              qe.a(-123, "S1", (Throwable) ((Object) var5));
+              GameEntity.a(-123, "S1", (Throwable) ((Object) var5));
               var10 = (String) null;
               il.a(7110, (String) null);
               q.field_d = null;
@@ -247,7 +247,7 @@ abstract class rb extends ac {
         bb.field_d = this.field_q;
         ke.a(41, bb.field_d);
         sg.a(5000, this.field_D, this.field_C, bb.field_d, ic.field_d, param5, 96, param4, this.field_y, 5000, this.field_A, this.field_z, this.field_r, this.field_o);
-        bg.a(69, this.field_r, bb.field_d, this.field_A, ic.field_d, param5, this.field_C, this.field_z, this.field_D);
+        DualLinkDeque.a(69, this.field_r, bb.field_d, this.field_A, ic.field_d, param5, this.field_C, this.field_z, this.field_D);
         bl.a((byte) -62);
         og.field_c = ck.n(2113632);
         nc.a(qd.field_j, (byte) 123);
@@ -278,7 +278,7 @@ abstract class rb extends ac {
     private final void j(byte param0) {
         int var4 = 0;
         byte[] var5 = null;
-        int var2 = ae.field_N.f(4);
+        int var2 = ae.field_N.readUnsignedByte(4);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 == 108) {
           var4 = -1 + ue.field_b;
@@ -333,11 +333,11 @@ abstract class rb extends ac {
           }
           ja.field_m.b(0);
         }
-        ci.a(36);
+        FrameTimer.a(36);
         ii.g(256);
         if (!ee.b(-117) &&
           eg.field_d != 11) {
-          ie.d((byte) -56);
+          SpriteState.d((byte) -56);
         }
         if (null != og.field_c) {
           ke.field_b = og.field_c.b(-115);
@@ -348,7 +348,7 @@ abstract class rb extends ac {
             !(kf.a(65280) <= var3) &&
             !(var3 >= gh.a(true))) {
             this.field_p = false;
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             pk.a(4);
             wl.a(2, -8440, wc.field_p);
             cm.a((byte) -117);
@@ -402,13 +402,13 @@ abstract class rb extends ac {
                 wl.a(256, -8440, al.field_a);
               } else {
                 if (ei.field_F == 4) {
-                  wl.a(256, -8440, eb.field_d);
+                  wl.a(256, -8440, KeyHandler.field_d);
                 } else {
                   if (2 != ei.field_F) {
                     if (ei.field_F != 5) {
                       wl.a(256, -8440, ui.field_B);
                     } else {
-                      wl.a(5, -8440, ah.field_n);
+                      wl.a(5, -8440, DualLinkNode.field_n);
                     }
                   } else {
                     wl.a(256, -8440, ea.field_n);
@@ -447,7 +447,7 @@ abstract class rb extends ac {
           am.field_g = o.a(1, 2, vd.field_b, false, true);
           rk.field_f = 2;
           fc.field_a = lk.field_i;
-          ie.field_u = wf.field_e;
+          SpriteState.field_u = wf.field_e;
         }
         if (rk.field_f == 2) {
           if (pg.field_db != null &&
@@ -456,7 +456,7 @@ abstract class rb extends ac {
               pg.field_db = null;
             } else {
               if (pg.field_db.a("", (byte) -109)) {
-                g.a(pg.field_db, 1);
+                WidgetContainer.a(pg.field_db, 1);
                 pg.field_db = null;
                 rg.g(-33);
               }
@@ -475,12 +475,12 @@ abstract class rb extends ac {
           qh.field_d = false;
           hc.a(am.field_g, lk.field_i, wf.field_e, uj.field_f, (byte) -88);
           if (v.field_b ||
-            null != ai.field_g) {
+            null != IterableNodeHashTable.field_g) {
             stackIn_100_0 = !(v.field_b);
             stackIn_102_1 = -1;
-            stackIn_102_2 = ai.field_g;
+            stackIn_102_2 = IterableNodeHashTable.field_g;
             stackIn_103_3 = !(v.field_b);
-            ai.a(stackIn_100_0, stackIn_102_1, stackIn_102_2, stackIn_103_3);
+            IterableNodeHashTable.a(stackIn_100_0, stackIn_102_1, stackIn_102_2, stackIn_103_3);
           }
           if (wi.field_a) {
             qh.a(true);
@@ -507,7 +507,7 @@ abstract class rb extends ac {
         if (rk.field_f == 11) {
           if (ld.field_G != null && (!ld.field_G.a((byte) -36) ||
             !ld.field_G.c((byte) -111))) {
-            rd.a((byte) -76, 0.0f, pi.a(kf.field_d, ld.field_G, rg.field_I, 1));
+            rd.a((byte) -76, 0.0f, Quaternion.a(kf.field_d, ld.field_G, rg.field_I, 1));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -587,7 +587,7 @@ abstract class rb extends ac {
     private final void b(boolean param0) {
         int discarded$0 = 0;
         String var2 = wa.a(-1);
-        be.a(hf.a((byte) -70), var2, (byte) 116);
+        MouseHandler.a(hf.a((byte) -70), var2, (byte) 116);
         if (param0) {
           discarded$0 = this.a(false, false, true);
         }
@@ -660,7 +660,7 @@ abstract class rb extends ac {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            qe.a(-105, (String) null, (Throwable) ((Object) var6_ref));
+            GameEntity.a(-105, (String) null, (Throwable) ((Object) var6_ref));
             this.a(1, "crash");
           }
           return;
@@ -726,8 +726,8 @@ abstract class rb extends ac {
                                 sl.a((byte) 51);
                                 return;
                               }
-                              qe.a(-6, "MGS1: " + bh.b((byte) -98), (Throwable) null);
-                              oj.c(-2290);
+                              GameEntity.a(-6, "MGS1: " + bh.b((byte) -98), (Throwable) null);
+                              IntrusiveDeque.c(-2290);
                               return;
                             }
                             stackIn_32_0 = (var2 == 12);
@@ -752,8 +752,8 @@ abstract class rb extends ac {
           }
           return;
         }
-        qe.a(86, "MGS2: " + bh.b((byte) -118), (Throwable) null);
-        oj.c(-2290);
+        GameEntity.a(86, "MGS2: " + bh.b((byte) -118), (Throwable) null);
+        IntrusiveDeque.c(-2290);
     }
 
     final void a(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
@@ -838,7 +838,7 @@ abstract class rb extends ac {
             this.a(1, "reconnect");
           }
           pk.a(4);
-          wl.a(var2, -8440, ga.field_a);
+          wl.a(var2, -8440, NodeHashTableIterator.field_a);
           pc.field_m = true;
           vc.field_a = 15000L + ih.a((byte) -98);
           return var2;

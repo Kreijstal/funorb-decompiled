@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends g implements oi {
+final class ul extends WidgetContainer implements oi {
     static int field_G;
-    static pb field_B;
+    static Sprite field_B;
     private String[] field_E;
     static String field_H;
     private rf field_F;
@@ -24,7 +24,7 @@ final class ul extends g implements oi {
         if (param0 != 0) {
           return;
         }
-        bd var5 = si.field_V;
+        BitmapFont var5 = si.field_V;
         if (null != this.field_E) {
           var5.a(ic.field_b, param3 + this.field_w, this.field_k + param2, this.field_p, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_N);
         }
@@ -66,7 +66,7 @@ final class ul extends g implements oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -114,7 +114,7 @@ final class ul extends g implements oi {
         int var6 = 0;
         var6 = stellarshard.field_B;
         try {
-          this.field_y.a((byte) -8);
+          this.field_y.clear((byte) -8);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

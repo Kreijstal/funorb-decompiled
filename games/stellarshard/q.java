@@ -3,7 +3,7 @@
  */
 final class q {
     static int field_a;
-    static pb field_b;
+    static Sprite field_b;
     static v field_d;
     static int field_c;
 
@@ -11,8 +11,8 @@ final class q {
         field_b = null;
         field_d = null;
         if (param0 != 84) {
-          pb[] var2 = (pb[]) null;
-          q.a(-104, (pb[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          q.a(-104, (Sprite[]) null);
         }
     }
 
@@ -90,7 +90,7 @@ final class q {
         }
     }
 
-    final static void a(int param0, pb[] param1) {
+    final static void a(int param0, Sprite[] param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         RuntimeException stackIn_9_0 = null;

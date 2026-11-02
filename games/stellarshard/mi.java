@@ -42,7 +42,7 @@ final class mi {
         var2 = this.field_k.length;
         System.arraycopy(this.field_k, 0, field_i, 0, var2);
         var3 = field_b[this.field_f - 1];
-        var4 = ug.a(var3 - 1, 4);
+        var4 = IntrusiveDequeCursor.a(var3 - 1, 4);
         field_g[0] = ad.d(var4);
         field_g[1] = ad.d(var4);
         var5 = 2;

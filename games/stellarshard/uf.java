@@ -7,7 +7,7 @@ final class uf {
     static String[] field_b;
     String field_d;
     boolean field_a;
-    static pb field_g;
+    static Sprite field_g;
     String field_e;
     private static String field_z;
 

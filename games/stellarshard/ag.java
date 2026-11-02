@@ -35,7 +35,7 @@ final class ag {
             return stackIn_3_0;
           }
           if (var2_int > 63) {
-            stackIn_7_0 = bg.field_a;
+            stackIn_7_0 = DualLinkDeque.field_a;
             return stackIn_7_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {

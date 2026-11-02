@@ -32,7 +32,7 @@ final class vd {
             }
             var2 = 1;
           }
-          ua.field_i.a(eb.a(eb.field_a, ni.field_e, -94), eb.a(oc.field_e, di.field_b, -119), -1);
+          ua.field_i.a(KeyHandler.a(KeyHandler.field_a, ni.field_e, -94), KeyHandler.a(oc.field_e, di.field_b, -119), -1);
           if (ua.field_i.c(-62)) {
             var1_int = 1;
           }
@@ -116,8 +116,8 @@ final class vd {
             field_c = (String) null;
           }
           for (var2_intLifetime1 = 0; gi.field_g > var2_intLifetime1; var2_intLifetime1++) {
-            if (ai.field_d[var2_intLifetime1].field_p == param0.field_p) {
-              dupTemp$3 = ai.field_d[var2_intLifetime1].a((byte) 95);
+            if (IterableNodeHashTable.field_d[var2_intLifetime1].field_p == param0.field_p) {
+              dupTemp$3 = IterableNodeHashTable.field_d[var2_intLifetime1].a((byte) 95);
               cg.field_d[dupTemp$3] = cg.field_d[dupTemp$3] + 1;
             }
           }
@@ -126,8 +126,8 @@ final class vd {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < gi.field_g; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_p == ai.field_d[var3].field_p) {
-              var4 = ai.field_d[var3].a((byte) 105);
+            if (param0.field_p == IterableNodeHashTable.field_d[var3].field_p) {
+              var4 = IterableNodeHashTable.field_d[var3].a((byte) 105);
               if (pd.field_q < cg.field_d[var4]) {
                 cg.field_d[var4] = cg.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -136,13 +136,13 @@ final class vd {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              ai.field_d[incrementValue$2] = ai.field_d[var3];
+              IterableNodeHashTable.field_d[incrementValue$2] = IterableNodeHashTable.field_d[var3];
             }
           }
           gi.field_g = var2_intLifetime2;
           fieldTemp$1 = gi.field_g;
           gi.field_g = gi.field_g + 1;
-          ai.field_d[fieldTemp$1] = param0;
+          IterableNodeHashTable.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -13,7 +13,7 @@ final class el extends ki {
     final static ek i(int param0) {
         ek var1 = null;
         if (param0 >= 88) {
-          var1 = new ek(nc.field_G, wd.field_b, ak.field_c[0], vi.field_c[0], vc.field_b[0], ih.field_d[0], ih.field_b[0], gj.field_w);
+          var1 = new ek(nc.field_G, wd.field_b, ak.field_c[0], RasterBuffer.field_c[0], vc.field_b[0], ih.field_d[0], ih.field_b[0], gj.field_w);
           tb.f((byte) -113);
           return var1;
         }

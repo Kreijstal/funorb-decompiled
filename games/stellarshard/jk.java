@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jk extends vi {
+final class jk extends RasterBuffer {
     private java.awt.Component field_h;
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {

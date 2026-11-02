@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends gg {
+final class hk extends IntrusiveNode {
     boolean field_s;
     long[][] field_w;
     String[][] field_u;
     static String field_m;
     static int field_k;
     static String field_v;
-    static pb[] field_l;
+    static Sprite[] field_l;
     static int field_n;
     int field_q;
     int[][] field_o;

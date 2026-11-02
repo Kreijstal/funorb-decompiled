@@ -8,7 +8,7 @@ final class ab {
         he var2 = null;
         if (param0 == -5094) {
           var2 = new he();
-          pl.field_W.b(-112, var2);
+          pl.field_W.addLast(-112, var2);
           bf.a(param1, (byte) -59);
           return var2;
         }

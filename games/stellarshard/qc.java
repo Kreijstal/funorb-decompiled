@@ -4,7 +4,7 @@
 final class qc {
     static boolean field_b;
     static boolean field_a;
-    private pb[] field_c;
+    private Sprite[] field_c;
 
     final static int a(byte param0, boolean param1) {
         int stackIn_6_0 = 0;
@@ -96,8 +96,8 @@ final class qc {
             }
             if (var4 == 0 &&
               ha.field_w > cj.field_c &&
-              eb.field_a > var3 &&
-              ea.field_l.field_y + var3 > eb.field_a) {
+              KeyHandler.field_a > var3 &&
+              ea.field_l.field_y + var3 > KeyHandler.field_a) {
               if (ni.field_e > 269 - ea.field_l.field_v &&
                 ni.field_e < 269) {
                 ha.field_w = cj.field_c;
@@ -111,7 +111,7 @@ final class qc {
           if (!param1) {
             return 0;
           }
-          cd.field_L.a(af.a(1, ni.field_e, eb.field_a), af.a(1, di.field_b, oc.field_e), -1);
+          cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), af.a(1, di.field_b, oc.field_e), -1);
           if (cd.field_L.c(-18)) {
             if (0 == cd.field_L.field_f) {
               stackIn_65_0 = 3;
@@ -202,7 +202,7 @@ final class qc {
           qh.field_g = true;
           rb.field_s = param0;
           if (rb.field_s == 0) {
-            var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
             var4 = 3 + var3_int;
             sj.field_J = new int[var4];
             stellarshard.field_L = new String[var4];
@@ -221,7 +221,7 @@ final class qc {
             sj.field_J[var4 - 1] = 1;
             pk.field_j[1] = 5;
           } else if (rb.field_s == 1) {
-            var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
             var4 = 2 + var3_int;
             stellarshard.field_L = new String[var4];
             sj.field_J = new int[var4];
@@ -239,9 +239,9 @@ final class qc {
           } else if (rb.field_s != 2) {
             if (rb.field_s == 3) {
               if (ic.field_d.field_p) {
-                var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, ei.field_E);
+                var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ei.field_E);
               } else {
-                var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, ld.field_D);
+                var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ld.field_D);
               }
               var4 = var3_int + 2;
               stellarshard.field_L = new String[var4];
@@ -258,7 +258,7 @@ final class qc {
               sj.field_J[var4 - 1] = 0;
               pk.field_j[0] = 5;
             } else if (rb.field_s == 4) {
-              var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, wh.field_d);
+              var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, wh.field_d);
               var4 = var3_int + 2;
               sj.field_J = new int[var4];
               stellarshard.field_L = new String[var4];
@@ -277,7 +277,7 @@ final class qc {
               if (rb.field_s != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, df.field_k);
+              var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, df.field_k);
               var4 = var3_int + 3;
               stellarshard.field_L = new String[var4];
               sj.field_J = new int[var4];
@@ -297,7 +297,7 @@ final class qc {
               pk.field_j[1] = 5;
             }
           } else {
-            var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(le.field_q, 0, new String[]{"<br><%0><br>"}));
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(le.field_q, 0, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(hc.field_m[var5])) {
@@ -313,7 +313,7 @@ final class qc {
             ri.a(hc.field_m, 0, pd.field_g, 0, var4);
             fb.field_e = new String[-var4 + (var3_int - 1)];
             ri.a(hc.field_m, var4 + 1, fb.field_e, 0, var3_int + (-var4 - 1));
-            var3_int = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(dl.field_K, 0, new String[]{"<br><%0><br>"}));
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(dl.field_K, 0, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(hc.field_m[var5])) {
@@ -388,7 +388,7 @@ final class qc {
             stackIn_87_0 = -39;
             stackIn_87_1 = stellarshard.field_L[var4Lifetime1];
             stackIn_88_2 = !(sj.field_J[var4Lifetime1] < 0);
-            var5Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(stackIn_87_0, stackIn_87_1, stackIn_88_2);
+            var5Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_87_0, stackIn_87_1, stackIn_88_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -398,7 +398,7 @@ final class qc {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(-33, var11, false);
+              var7Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(-33, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -406,14 +406,14 @@ final class qc {
             var4_ref_String__Lifetime1 = fb.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(-40, var12, false);
+              var7Lifetime1Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(-40, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
             }
           }
-          dd.field_e = s.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          od.field_r = -(var3_intLifetime1 >> 1) + s.field_b;
+          dd.field_e = DualLinkDequeIterator.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
+          od.field_r = -(var3_intLifetime1 >> 1) + DualLinkDequeIterator.field_b;
           fl.field_a = ua.field_i.field_i * (nh.field_h + nh.field_f << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < stellarshard.field_L.length; var4Lifetime2++) {
             stackIn_110_0 = fl.field_a;
@@ -431,9 +431,9 @@ final class qc {
           while (var4Lifetime3 < stellarshard.field_L.length) {
             var6Lifetime1 = sj.field_J[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = qe.$cfr$intArgs$a$590e95718a07(-21, stellarshard.field_L[var4Lifetime3], true);
+              var7Lifetime2 = GameEntity.$cfr$intArgs$a$590e95718a07(-21, stellarshard.field_L[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + nh.field_f;
-              var8Lifetime1 = s.field_b - (var7Lifetime2 >> 1);
+              var8Lifetime1 = DualLinkDequeIterator.field_b - (var7Lifetime2 >> 1);
               vl.field_o[var4Lifetime3] = new int[4];
               vl.field_o[var4Lifetime3][0] = var8Lifetime1 - le.field_k;
               vl.field_o[var4Lifetime3][1] = var5Lifetime3;
@@ -446,7 +446,7 @@ final class qc {
             var4Lifetime3++;
           }
           if (rb.field_s != 2) {
-            ua.field_i.a(eb.a(eb.field_a, ni.field_e, -112), 0, param1, false);
+            ua.field_i.a(KeyHandler.a(KeyHandler.field_a, ni.field_e, -112), 0, param1, false);
           } else {
             ua.field_i.a(-1, -1, param1, false);
           }
@@ -484,7 +484,7 @@ final class qc {
         return stackIn_10_0;
     }
 
-    qc(pb[] param0) {
+    qc(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

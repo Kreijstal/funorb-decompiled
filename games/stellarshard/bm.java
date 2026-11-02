@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends bd {
+final class bm extends BitmapFont {
     private byte[][] field_P;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {

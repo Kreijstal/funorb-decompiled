@@ -9,10 +9,10 @@ final class ii extends ig {
     private w field_H;
 
     final void a(int param0, byte param1, int param2, int param3) {
-        pb var15 = null;
-        pb var18 = null;
-        pb var12 = null;
-        pb var21 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var12 = null;
+        Sprite var21 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = stellarshard.field_B;
@@ -26,11 +26,11 @@ final class ii extends ig {
         int var6 = (this.field_t >> 1) + (param2 + this.field_k);
         cg var8 = this.field_H.b(-28036);
         if (eh.field_c == var8) {
-          var15 = ah.field_p[0];
+          var15 = DualLinkNode.field_p[0];
           var9 = var15.field_w << 1;
           var10 = var15.field_x << 1;
           if (ta.field_s == null) {
-            ta.field_s = new pb(var9, var10);
+            ta.field_s = new Sprite(var9, var10);
             hj.a(ta.field_s, 1);
             var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
@@ -38,7 +38,7 @@ final class ii extends ig {
             return;
           }
           if (var9 > ta.field_s.field_v) {
-            ta.field_s = new pb(var9, var10);
+            ta.field_s = new Sprite(var9, var10);
             hj.a(ta.field_s, 1);
             var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
@@ -53,7 +53,7 @@ final class ii extends ig {
             ta.field_s.d(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
-          ta.field_s = new pb(var9, var10);
+          ta.field_s = new Sprite(var9, var10);
           hj.a(ta.field_s, 1);
           var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
           id.b((byte) -58);
@@ -61,11 +61,11 @@ final class ii extends ig {
           return;
         }
         if (var8 == vk.field_d) {
-          var18 = ah.field_p[0];
+          var18 = DualLinkNode.field_p[0];
           var9Lifetime1 = var18.field_w << 1;
           var10Lifetime1 = var18.field_x << 1;
           if (ta.field_s == null) {
-            ta.field_s = new pb(var9Lifetime1, var10Lifetime1);
+            ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             hj.a(ta.field_s, 1);
             var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
@@ -73,7 +73,7 @@ final class ii extends ig {
             return;
           }
           if (var9Lifetime1 > ta.field_s.field_v) {
-            ta.field_s = new pb(var9Lifetime1, var10Lifetime1);
+            ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             hj.a(ta.field_s, 1);
             var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
@@ -88,7 +88,7 @@ final class ii extends ig {
             ta.field_s.d(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
-          ta.field_s = new pb(var9Lifetime1, var10Lifetime1);
+          ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
           hj.a(ta.field_s, 1);
           var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
           id.b((byte) -58);
@@ -96,12 +96,12 @@ final class ii extends ig {
           return;
         }
         if (var8 == qj.field_c) {
-          var12 = ah.field_p[2];
+          var12 = DualLinkNode.field_p[2];
           var12.d(-(var12.field_v >> 1) + var5, -(var12.field_y >> 1) + var6, 256);
           return;
         }
         if (var8 == lg.field_c) {
-          var21 = ah.field_p[1];
+          var21 = DualLinkNode.field_p[1];
           var21.d(var5 - (var21.field_v >> 1), -(var21.field_y >> 1) + var6, 256);
           return;
         }
@@ -125,7 +125,7 @@ final class ii extends ig {
           }
           var3 = pg.field_fb;
           var3.f(param1, 950);
-          var3.a(false, param0.field_q);
+          var3.writeByte(false, param0.field_q);
           var3.c(param0.field_n, -115);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ii.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -142,11 +142,11 @@ final class ii extends ig {
           if (param0 != 256) {
             return;
           }
-          ac.field_e = ac.field_e + 1;
+          GameApplet.field_e = GameApplet.field_e + 1;
           ni.field_e = pg.field_gb;
-          eb.field_a = ak.field_e;
-          qc.field_a = hi.field_a;
-          hi.field_a = false;
+          KeyHandler.field_a = ak.field_e;
+          qc.field_a = DelegatingCanvas.field_a;
+          DelegatingCanvas.field_a = false;
           gh.field_c = tg.field_b;
           di.field_b = oc.field_b;
           oc.field_e = wl.field_R;
@@ -154,17 +154,17 @@ final class ii extends ig {
         }
     }
 
-    final boolean a(int param0, rj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2147483648) {
-            var4 = (rj) null;
-            this.a(43, false, 76, (rj) null);
+            var4 = (UiWidget) null;
+            this.a(43, false, 76, (UiWidget) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ final class ii extends ig {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           this.field_I = this.field_I + 1;
           super.a(param0, param1, param2, param3);

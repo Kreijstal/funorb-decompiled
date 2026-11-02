@@ -12,8 +12,8 @@ final class cg {
           sf.field_f.b(new se(), 23143);
           return;
         }
-        bd var2 = (bd) null;
-        cg.a(-26, (qc) null, -94, -80, -18, 102, -121, (qc) null, (bd) null, (byte) 5, 41, -60, 79, (qc) null, -121, 122, 103, 36, 121, (bd) null, 37);
+        BitmapFont var2 = (BitmapFont) null;
+        cg.a(-26, (qc) null, -94, -80, -18, 102, -121, (qc) null, (BitmapFont) null, (byte) 5, 41, -60, 79, (qc) null, -121, 122, 103, 36, 121, (BitmapFont) null, 37);
         sf.field_f.b(new se(), 23143);
     }
 
@@ -29,7 +29,7 @@ final class cg {
         field_b = null;
     }
 
-    final static void a(int param0, qc param1, int param2, int param3, int param4, int param5, int param6, qc param7, bd param8, byte param9, int param10, int param11, int param12, qc param13, int param14, int param15, int param16, int param17, int param18, bd param19, int param20) {
+    final static void a(int param0, qc param1, int param2, int param3, int param4, int param5, int param6, qc param7, BitmapFont param8, byte param9, int param10, int param11, int param12, qc param13, int param14, int param15, int param16, int param17, int param18, BitmapFont param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -48,7 +48,7 @@ final class cg {
           if (param9 != 45) {
             return;
           }
-          qe.a(param4, -29770, param10, param12, param5);
+          GameEntity.a(param4, -29770, param10, param12, param5);
           ki.a(param0, param3, -126);
           ph.a(14835, param13, param20, param11, param2, param7);
           jb.a(param16, param6, param1, -100);
@@ -92,16 +92,16 @@ final class cg {
         }
     }
 
-    final static vi a(java.awt.Component param0, boolean param1, int param2, int param3) {
+    final static RasterBuffer a(java.awt.Component param0, boolean param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          vi var5 = null;
-          mh var5_ref = null;
-          vi stackIn_2_0 = null;
-          vi stackIn_4_0 = null;
-          mh stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -110,20 +110,20 @@ final class cg {
             try {
               var4 = Class.forName("jk");
               if (param1) {
-                stackIn_2_0 = (vi) null;
+                stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5 = (vi) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param0, param3, param2, (byte) -122);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new mh();
-              ((vi) ((Object) var5_ref)).a(param0, param3, param2, (byte) -117);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param0, param3, param2, (byte) -117);
               stackIn_6_0 = var5_ref;
-              return (vi) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

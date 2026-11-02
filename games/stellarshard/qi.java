@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qi {
-    static int field_a;
+    static int level;
     static int field_b;
 
     final static int a(byte[] param0, int param1, int param2, int param3, CharSequence param4, int param5) {

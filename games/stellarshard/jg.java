@@ -16,7 +16,7 @@ final class jg extends ck implements oi {
     }
 
     jg(ei param0, mj param1) {
-        super(param0, s.field_c, vj.field_b, false, false);
+        super(param0, DualLinkDequeIterator.field_c, vj.field_b, false, false);
         try {
           this.field_nb = param1;
         } catch (RuntimeException runtimeException) {
@@ -45,7 +45,7 @@ final class jg extends ck implements oi {
           return;
         }
         try {
-          ai.a((byte) 98);
+          IterableNodeHashTable.a((byte) 98);
           this.o(3);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "jg.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -86,7 +86,7 @@ final class jg extends ck implements oi {
           } else {
             var4 = mb.field_a;
           }
-          var5 = new vf((ck) (this), s.field_c, var4);
+          var5 = new vf((ck) (this), DualLinkDequeIterator.field_c, var4);
           if (!param0.field_f) {
             if (!this.field_lb) {
               if (5 == param0.field_g) {

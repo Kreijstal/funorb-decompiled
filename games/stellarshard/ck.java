@@ -7,12 +7,12 @@ class ck extends wl implements oi {
     static int field_hb;
     private boolean field_fb;
     private nc field_cb;
-    private bd field_jb;
+    private BitmapFont field_jb;
     static byte[][] field_ib;
     private boolean field_kb;
     private boolean field_gb;
 
-    ck(ei param0, bd param1, String param2, boolean param3, boolean param4) {
+    ck(ei param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vf((ck) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = param1;
@@ -105,7 +105,7 @@ class ck extends wl implements oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -143,16 +143,16 @@ class ck extends wl implements oi {
         }
     }
 
-    final static fe n(int param0) {
+    final static MouseWheelInput n(int param0) {
         try {
           Throwable var1 = null;
-          fe stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != 2113632) {
             field_db = true;
           }
           try {
-            stackIn_3_0 = (fe) (Class.forName("hb").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,7 +273,7 @@ class ck extends wl implements oi {
           if (!param0) {
             field_ib = (byte[][]) null;
           }
-          if (ac.field_k == null) {
+          if (GameApplet.field_k == null) {
             return null;
           }
           if (param1 == null) {
@@ -288,7 +288,7 @@ class ck extends wl implements oi {
           if (var2 == null) {
             return null;
           }
-          var3 = (fd) (ac.field_k.a((long)var2.hashCode(), -119));
+          var3 = (fd) (GameApplet.field_k.a((long)var2.hashCode(), -119));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_rb);
             var4 = nh.a(var7, false);
@@ -296,7 +296,7 @@ class ck extends wl implements oi {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (fd) (ac.field_k.a(true));
+            var3 = (fd) (GameApplet.field_k.a(true));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

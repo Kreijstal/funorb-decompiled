@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha extends ka {
+final class ha extends PacketBuffer {
     static int field_w;
     static String field_v;
     static int field_t;
@@ -18,14 +18,14 @@ final class ha extends ka {
     final int h(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == -9) {
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          return 255 & this.field_r[fieldTemp$0] - this.field_u.a(-609392408);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return 255 & this.payload[fieldTemp$0] - this.field_u.a(-609392408);
         }
         field_x = (String) null;
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        return 255 & this.field_r[fieldTemp$1] - this.field_u.a(-609392408);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$1] - this.field_u.a(-609392408);
     }
 
     final void a(byte[] param0, boolean param1, int param2, int param3) {
@@ -43,9 +43,9 @@ final class ha extends ka {
             this.field_u = (na) null;
           }
           for (var5_int = 0; param3 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_k;
-            this.field_k = this.field_k + 1;
-            param0[param2 + var5_int] = (byte)(this.field_r[fieldTemp$0] - this.field_u.a(-609392408));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_u.a(-609392408));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,9 +63,9 @@ final class ha extends ka {
     }
 
     final void f(int param0, int param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_r[fieldTemp$0] = (byte)(this.field_u.a(param1 - 609393358) + param0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_u.a(param1 - 609393358) + param0);
         if (param1 != 950) {
           this.f(-75, 25);
         }
@@ -82,12 +82,12 @@ final class ha extends ka {
         }
     }
 
-    final static void a(java.math.BigInteger param0, ka param1, ka param2, int param3, java.math.BigInteger param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, int param3, java.math.BigInteger param4) {
         try {
           if (param3 >= -94) {
             ha.k(109);
           }
-          rl.a(-13791, param1, param0, param4, param2.field_r, param2.field_k, 0);
+          rl.a(-13791, param1, param0, param4, param2.payload, param2.position, 0);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ha.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -130,14 +130,14 @@ final class ha extends ka {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((hd.field_d[var4] & this.field_r[incrementValue$0]) << -var4 + param0);
+          var5 = var5 + ((hd.field_d[var4] & this.payload[incrementValue$0]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 == var4) {
-          var5 = var5 + (hd.field_d[var4] & this.field_r[var3]);
+          var5 = var5 + (hd.field_d[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.field_r[var3] >> var4 - param0 & hd.field_d[param0]);
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & hd.field_d[param0]);
         }
         return var5;
     }
@@ -148,7 +148,7 @@ final class ha extends ka {
 
     final void g(byte param0) {
         int var2 = 47 % ((-50 - param0) / 57);
-        this.field_k = (this.field_s + 7) / 8;
+        this.position = (this.field_s + 7) / 8;
     }
 
     ha(int param0) {
@@ -156,7 +156,7 @@ final class ha extends ka {
     }
 
     final void j(int param0) {
-        this.field_s = param0 * this.field_k;
+        this.field_s = param0 * this.position;
     }
 
     static {

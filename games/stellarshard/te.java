@@ -16,7 +16,7 @@ final class te {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, pb param6, int param7, byte param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite param6, int param7, byte param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -50,14 +50,14 @@ final class te {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, pb param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, int param7, int param8) {
         try {
           vh.field_i = param1;
           i.field_a = param6;
           kk.field_o = param8;
           t.field_a = param0;
-          ug.field_f = param4;
-          vi.field_d = param3;
+          IntrusiveDequeCursor.field_f = param4;
+          RasterBuffer.field_d = param3;
           bl.field_d = param2;
           if (param7 <= 59) {
             field_c = 117;

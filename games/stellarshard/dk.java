@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk {
-    final static boolean a(pb param0, int param1, int param2, pb param3, int param4, int param5) {
+    final static boolean a(Sprite param0, int param1, int param2, Sprite param3, int param4, int param5) {
         int var22 = 0;
         int var23 = 0;
         int stackIn_9_0 = 0;

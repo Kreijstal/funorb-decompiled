@@ -9,18 +9,18 @@ final class kg extends dg {
     static int field_E;
     private int field_I;
     private int field_B;
-    private bd field_F;
+    private BitmapFont field_F;
     static int field_D;
 
     final static void d(boolean param0) {
         ma var1 = null;
         if (!param0) {
-          var1 = (ma) (mb.field_b.c((byte) -111));
+          var1 = (ma) (mb.field_b.removeLast((byte) -111));
           if (var1 == null) {
             var1 = new ma();
           }
           var1.a(543992579, ti.field_f, ti.field_b, ti.field_e, ti.field_a, ti.field_c, ti.field_i, ti.field_l);
-          dd.field_g.b(-105, var1);
+          dd.field_g.addLast(-105, var1);
           return;
         }
     }
@@ -41,9 +41,9 @@ final class kg extends dg {
         try {
           var3 = pg.field_fb;
           var3.f(param0, 950);
-          var3.a(param2, 2);
-          var3.a(param2, 0);
-          var3.a(false, param1.field_p);
+          var3.writeByte(param2, 2);
+          var3.writeByte(param2, 0);
+          var3.writeByte(false, param1.field_p);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "kg.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -61,10 +61,10 @@ final class kg extends dg {
         if (param0) {
           return true;
         }
-        return qe.field_o;
+        return GameEntity.field_o;
     }
 
-    kg(int param0, int param1, int param2, int param3, rj param4, boolean param5, int param6, int param7, bd param8, int param9, String param10) {
+    kg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (uk) null, (lf) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

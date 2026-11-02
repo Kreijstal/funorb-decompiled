@@ -58,7 +58,7 @@ abstract class sk {
 
     abstract ua a(int param0);
 
-    abstract void a(int param0, ka param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     static {
         field_a = new double[12];

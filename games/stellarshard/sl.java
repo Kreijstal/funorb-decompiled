@@ -59,19 +59,19 @@ final class sl {
         byte[] var6 = null;
         Object var7 = null;
         String[] var9 = null;
-        ka var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new ka(param1);
-          var3 = var10.f(4);
+          var10 = new PacketBuffer(param1);
+          var3 = var10.readUnsignedByte(4);
           if (param0 >= -57) {
             var9 = (String[]) null;
             sl.a((String) null, 44, (byte) -44, (String[]) null);
           }
-          var4 = var10.b(false);
+          var4 = var10.readInt(false);
           if (var4 >= 0 && (0 == of.field_B ||
             !(var4 > of.field_B))) {
             if (var3 == 0) {
@@ -82,7 +82,7 @@ final class sl {
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var10.b(false);
+            var5 = var10.readInt(false);
             if (var5 >= 0 && (of.field_B == 0 ||
               !(of.field_B < var5))) {
               var14 = new byte[var5];
@@ -173,7 +173,7 @@ final class sl {
         }
     }
 
-    private final void a(int param0, byte[] param1, ka param2) {
+    private final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -184,13 +184,13 @@ final class sl {
           Exception var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (param2.field_r[param2.field_k] == 31 &&
-              param2.field_r[param2.field_k + 1] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[param2.position + 1] == -117) {
               if (this.field_f == null) {
                 this.field_f = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_f.setInput(param2.field_r, param2.field_k + 10, -10 - param2.field_k - (8 - param2.field_r.length));
+                this.field_f.setInput(param2.payload, param2.position + 10, -10 - param2.position - (8 - param2.payload.length));
                 if (param0 != -1) {
                   return;
                 }
@@ -234,10 +234,10 @@ final class sl {
         wd.field_c = false;
         if (param0 != 51) {
           field_b = -49;
-          ae.field_N.f(4);
+          ae.field_N.readUnsignedByte(4);
           return;
         }
-        ae.field_N.f(4);
+        ae.field_N.readUnsignedByte(4);
     }
 
     final static void a(java.awt.Component param0, byte param1) {

@@ -5,7 +5,7 @@ final class eg {
     static String[] field_a;
     static int field_d;
     static String field_c;
-    static oj field_b;
+    static IntrusiveDeque field_b;
 
     public static void b(int param0) {
         if (param0 > -85) {
@@ -46,6 +46,6 @@ final class eg {
     static {
         field_a = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = "Change display name";
-        field_b = new oj();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends g implements md, oi, rf {
+final class mj extends WidgetContainer implements md, oi, rf {
     private pl field_C;
     private ig field_I;
     private pl field_K;
@@ -12,7 +12,7 @@ final class mj extends g implements md, oi, rf {
     ul field_O;
     static int field_L;
     private pl field_N;
-    static bd field_E;
+    static BitmapFont field_E;
     private pl field_G;
     private pl field_B;
     private ig field_J;
@@ -73,7 +73,7 @@ final class mj extends g implements md, oi, rf {
         }
         if (ta.field_m == o.field_l) {
           o.field_l = ok.field_a;
-          return hi.field_d;
+          return DelegatingCanvas.field_d;
         }
         return null;
     }
@@ -189,7 +189,7 @@ final class mj extends g implements md, oi, rf {
         }
     }
 
-    private final int a(int param0, rj param1, int param2, byte param3, String param4, String param5) {
+    private final int a(int param0, UiWidget param1, int param2, byte param3, String param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -279,7 +279,7 @@ final class mj extends g implements md, oi, rf {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -314,7 +314,7 @@ final class mj extends g implements md, oi, rf {
         }
     }
 
-    private final int a(int param0, String param1, rj param2, int param3, int param4) {
+    private final int a(int param0, String param1, UiWidget param2, int param3, int param4) {
         kg var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -352,7 +352,7 @@ final class mj extends g implements md, oi, rf {
         }
     }
 
-    private final int a(int param0, int param1, rj param2, String param3, int param4) {
+    private final int a(int param0, int param1, UiWidget param2, String param3, int param4) {
         RuntimeException var6 = null;
         ii var7 = null;
         kg var8 = null;
@@ -405,14 +405,14 @@ final class mj extends g implements md, oi, rf {
         int var1 = 1;
         this.field_D = new nd("", (lf) null, var1 != 0);
         this.field_I = new ig(ta.field_k, (lf) null);
-        this.field_J = new ig(bc.field_h, (lf) null);
+        this.field_J = new ig(ProxySocketConnector.field_h, (lf) null);
         this.field_N.field_x = fc.field_d;
         this.field_H.field_x = fk.field_r;
         this.field_K.field_x = ib.field_m;
-        this.field_G.field_x = wg.field_d;
+        this.field_G.field_x = ClientException.field_d;
         this.field_B.field_x = bi.field_t;
         this.field_C.field_x = si.field_B;
-        this.field_D.field_x = ci.field_c;
+        this.field_D.field_x = FrameTimer.field_c;
         this.field_N.a((byte) -2, new ge(this.field_N));
         this.field_H.a((byte) -2, new qb(this.field_H));
         this.field_K.a((byte) -2, new ef(this.field_K, this.field_H));
@@ -465,7 +465,7 @@ final class mj extends g implements md, oi, rf {
         this.b(496, 0, 0, var3 - (-55 - var6), 23987);
     }
 
-    private final int a(String param0, int param1, String param2, rj param3, int param4, int param5, int param6) {
+    private final int a(String param0, int param1, String param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         cd var9 = null;
         kg var10 = null;
@@ -527,8 +527,8 @@ final class mj extends g implements md, oi, rf {
         if (param0 == 5255) {
           return wd.a(var2, this.field_D.field_z, 5, this.field_H.field_m, this.field_G.field_m, this.field_N.field_m, this);
         }
-        rj var4 = (rj) null;
-        this.a(-3, false, -41, (rj) null);
+        UiWidget var4 = (UiWidget) null;
+        this.a(-3, false, -41, (UiWidget) null);
         return wd.a(var2, this.field_D.field_z, 5, this.field_H.field_m, this.field_G.field_m, this.field_N.field_m, this);
     }
 
@@ -581,7 +581,7 @@ final class mj extends g implements md, oi, rf {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_I.field_E = this.h(40);
@@ -594,8 +594,8 @@ final class mj extends g implements md, oi, rf {
         if (param0 >= 87) {
           return "</col></u>";
         }
-        rj var3 = (rj) null;
-        int discarded$0 = this.a(-39, (String) null, (rj) null, 36, -97);
+        UiWidget var3 = (UiWidget) null;
+        int discarded$0 = this.a(-39, (String) null, (UiWidget) null, 36, -97);
         return "</col></u>";
     }
 

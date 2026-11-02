@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class dg extends rj implements f {
-    rj field_y;
+abstract class dg extends UiWidget implements f {
+    UiWidget field_y;
     static ei field_z;
 
     public static void h(int param0) {
@@ -14,7 +14,7 @@ abstract class dg extends rj implements f {
         field_z = null;
     }
 
-    final boolean a(int param0, rj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -89,7 +89,7 @@ abstract class dg extends rj implements f {
         }
     }
 
-    void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (null != this.field_y) {
             this.field_y.a(param0, -126, param2, this.field_w + param3, param4 + this.field_k, param5);
@@ -103,8 +103,8 @@ abstract class dg extends rj implements f {
     final boolean e(int param0) {
         boolean discarded$0 = false;
         if (param0 != 0) {
-          rj var3 = (rj) null;
-          discarded$0 = this.b(false, (rj) null);
+          UiWidget var3 = (UiWidget) null;
+          discarded$0 = this.b(false, (UiWidget) null);
         }
         return this.a(257) != null ? true : false;
     }
@@ -116,7 +116,7 @@ abstract class dg extends rj implements f {
         rh.a(17, (byte) -72);
     }
 
-    final boolean a(int param0, int param1, rj param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -125,7 +125,7 @@ abstract class dg extends rj implements f {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 <= 30) {
-            this.field_y = (rj) null;
+            this.field_y = (UiWidget) null;
           }
           stackIn_7_0 = (this.field_y != null) && (this.field_y.e(0)) && (this.field_y.a(param0, param1, param2, param3, 38, param5, param6));
           return stackIn_7_0;
@@ -164,7 +164,7 @@ abstract class dg extends rj implements f {
     void a(int param0, byte param1, int param2, int param3) {
         if (param0 == 0 &&
           null != this.field_u) {
-          this.field_u.a(true, param3, param2, (rj) (this), 4549);
+          this.field_u.a(true, param3, param2, (UiWidget) (this), 4549);
         }
         if (param1 != -57) {
           return;
@@ -186,10 +186,10 @@ abstract class dg extends rj implements f {
         return var2;
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -202,8 +202,8 @@ abstract class dg extends rj implements f {
             return true;
           }
           if (param0 != 29657) {
-            var6 = (rj) null;
-            this.a((rj) null, -24, -59, -50, 25, (byte) -57, -73);
+            var6 = (UiWidget) null;
+            this.a((UiWidget) null, -24, -59, -50, 25, (byte) -57, -73);
           }
           var5_int = param1;
           if (var5_int != 80) {
@@ -229,11 +229,11 @@ abstract class dg extends rj implements f {
         }
     }
 
-    rj a(int param0) {
+    UiWidget a(int param0) {
         if (param0 != 257) {
           field_z = (ei) null;
         }
-        rj var2 = this.field_y;
+        UiWidget var2 = this.field_y;
         if (var2 == null) {
           return null;
         }
@@ -248,7 +248,7 @@ abstract class dg extends rj implements f {
         this.a((byte) 79);
     }
 
-    void a(int param0, boolean param1, int param2, rj param3) {
+    void a(int param0, boolean param1, int param2, UiWidget param3) {
         Hashtable var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -279,7 +279,7 @@ abstract class dg extends rj implements f {
         }
     }
 
-    boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -317,7 +317,7 @@ abstract class dg extends rj implements f {
         return null != this.field_y ? this.field_y.a(false) : 0;
     }
 
-    private final boolean a(boolean param0, rj param1) {
+    private final boolean a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -383,7 +383,7 @@ abstract class dg extends rj implements f {
         }
     }
 
-    private final boolean b(boolean param0, rj param1) {
+    private final boolean b(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -415,7 +415,7 @@ abstract class dg extends rj implements f {
           this.field_y.f(0);
         }
         if (param0 != 79) {
-          this.field_y = (rj) null;
+          this.field_y = (UiWidget) null;
         }
     }
 

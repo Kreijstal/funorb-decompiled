@@ -27,7 +27,7 @@ final class ee {
         RuntimeException var2_ref = null;
         var5 = stellarshard.field_B;
         try {
-          if (ac.field_n == null) {
+          if (GameApplet.field_n == null) {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -38,7 +38,7 @@ final class ee {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (fd) (ac.field_n.a((long)var2.hashCode(), param1 - 18));
+          var3 = (fd) (GameApplet.field_n.a((long)var2.hashCode(), param1 - 18));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_rb);
             var4 = nh.a(var7, false);
@@ -49,7 +49,7 @@ final class ee {
               stackIn_17_0 = var3;
               return stackIn_17_0;
             }
-            var3 = (fd) (ac.field_n.a(true));
+            var3 = (fd) (GameApplet.field_n.a(true));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,8 +100,8 @@ final class ee {
           u.field_p > 0) {
           fieldTemp$2 = u.field_p - 1;
           u.field_p = u.field_p - 1;
-          var2_ref_byte__Lifetime2 = mh.field_j[fieldTemp$2];
-          mh.field_j[u.field_p] = null;
+          var2_ref_byte__Lifetime2 = ImageProducerRasterBuffer.field_j[fieldTemp$2];
+          ImageProducerRasterBuffer.field_j[u.field_p] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (qf.field_i != null) {
@@ -144,7 +144,7 @@ final class ee {
         if (param2 >= -108) {
           field_a = 106;
         }
-        pf.field_b.b(-53, var4);
+        pf.field_b.addLast(-53, var4);
         kg.a(param0, var4, false);
         return var4;
     }

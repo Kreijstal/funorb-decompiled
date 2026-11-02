@@ -24,7 +24,7 @@ final class nj {
     static double[] field_l;
     static String field_s;
 
-    final static int a(int param0, bd param1, String[] param2, byte param3, String param4) {
+    final static int a(int param0, BitmapFont param1, String[] param2, byte param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -147,7 +147,7 @@ final class nj {
         field_b = null;
         if (param0 >= -6) {
           String var2 = (String) null;
-          nj.a(115, (bd) null, (String[]) null, (byte) -113, (String) null);
+          nj.a(115, (BitmapFont) null, (String[]) null, (byte) -113, (String) null);
         }
         field_e = null;
     }
@@ -156,12 +156,12 @@ final class nj {
         this.field_c = ha.field_t;
         this.field_a = mg.field_y;
         if (param0) {
-          this.field_k = rc.field_k;
+          this.field_k = NanoFrameTimer.field_k;
         } else {
           this.field_k = null;
         }
         this.field_r = k.field_d;
-        this.field_m = ug.field_b;
+        this.field_m = IntrusiveDequeCursor.field_b;
         this.field_i = il.field_w;
         this.field_p = ii.field_J;
         this.field_d = eh.field_d;

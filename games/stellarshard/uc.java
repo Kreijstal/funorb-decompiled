@@ -3,7 +3,7 @@
  */
 final class uc {
     static char field_b;
-    static ka field_c;
+    static PacketBuffer field_c;
     static int[] field_a;
 
     public static void a(int param0) {
@@ -19,7 +19,7 @@ final class uc {
     }
 
     static {
-        field_c = new ka(256);
+        field_c = new PacketBuffer(256);
         field_a = new int[25];
     }
 }

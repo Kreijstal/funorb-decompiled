@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class de {
-    static bd field_c;
+    static BitmapFont field_c;
     static li field_d;
     static th field_a;
     static int[] field_b;

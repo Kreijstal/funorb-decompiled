@@ -117,7 +117,7 @@ final class h {
         }
     }
 
-    final static boolean a(ka param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -128,7 +128,7 @@ final class h {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.f(param1 - 31180);
+          var2_int = param0.readUnsignedByte(param1 - 31180);
           stackIn_3_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_3_0;
           if (param1 != 31184) {
@@ -154,7 +154,7 @@ final class h {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
-        ka var7 = null;
+        PacketBuffer var7 = null;
         CharSequence var8 = null;
         sk stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -166,8 +166,8 @@ final class h {
         try {
           var4_long = 0L;
           if (param1 > -95) {
-            var7 = (ka) null;
-            h.a((ka) null, 24);
+            var7 = (PacketBuffer) null;
+            h.a((PacketBuffer) null, 24);
           }
           var6 = null;
           if (param3.indexOf('@') != -1) {
@@ -206,7 +206,7 @@ final class h {
     }
 
     final static void a(int param0, int param1) {
-        gg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         String var4 = null;
         le var5 = null;
@@ -219,10 +219,10 @@ final class h {
             nh.a(var5, (byte) -30, param1);
             var5 = (le) (fg.field_G.b((byte) -32));
           }
-          var2 = gg.field_b.b(-109);
+          var2 = IntrusiveNode.field_b.b(-109);
           while (var2 != null) {
             ff.a(1, param1);
-            var2 = gg.field_b.b((byte) 103);
+            var2 = IntrusiveNode.field_b.b((byte) 103);
           }
           if (param0 > -25) {
             var4 = (String) null;

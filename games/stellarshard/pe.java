@@ -3,7 +3,7 @@
  */
 final class pe {
     static String field_b;
-    static bd field_c;
+    static BitmapFont field_c;
     static String field_a;
 
     final static void b(int param0) {
@@ -15,20 +15,20 @@ final class pe {
     final static void c(int param0) {
         u var1 = (u) (i.field_c.b(-103));
         if (var1 == null) {
-          oj.c(-2290);
+          IntrusiveDeque.c(-2290);
           return;
         }
         ha var2 = ae.field_N;
-        var2.b(false);
-        var2.b(false);
-        var2.b(false);
-        var2.b(false);
+        var2.readInt(false);
+        var2.readInt(false);
+        var2.readInt(false);
+        var2.readInt(false);
         if (param0 == 25214) {
-          var1.c(param0 - 25194);
+          var1.unlink(param0 - 25194);
           return;
         }
-        field_c = (bd) null;
-        var1.c(param0 - 25194);
+        field_c = (BitmapFont) null;
+        var1.unlink(param0 - 25194);
     }
 
     public static void a(int param0) {

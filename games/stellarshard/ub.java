@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends bd {
+final class ub extends BitmapFont {
     private byte[][] field_P;
 
     ub(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {

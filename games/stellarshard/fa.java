@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends gg {
+final class fa extends IntrusiveNode {
     static fj field_n;
-    static ej field_p;
+    static PlatformTaskDispatcher field_p;
     long field_m;
     byte[] field_l;
-    static pb[] field_k;
+    static Sprite[] field_k;
     int field_o;
 
     final static boolean a(int param0) {
@@ -32,7 +32,7 @@ final class fa extends gg {
     final static int d(int param0) {
         mc.field_c.a((byte) -123);
         if (param0 != 0) {
-          field_p = (ej) null;
+          field_p = (PlatformTaskDispatcher) null;
           if (!od.field_v.f(26348)) {
             return vc.a((byte) 35);
           }

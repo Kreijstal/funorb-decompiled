@@ -3,7 +3,7 @@
  */
 final class tk {
     static String field_a;
-    static pb field_c;
+    static Sprite field_c;
     static int field_b;
 
     final static void a(int param0) {
@@ -14,7 +14,7 @@ final class tk {
           }
           var1 = kl.a((byte) 124);
           af.field_r = new la(var1, (String) null, true, false, false);
-          na.field_d.a((byte) 107, (rj) (sf.field_f));
+          na.field_d.a((byte) 107, (UiWidget) (sf.field_f));
           sf.field_f.b(af.field_r, 23143);
           sf.field_f.i(3642);
           int var2 = -85 / ((61 - param0) / 57);
@@ -50,7 +50,7 @@ final class tk {
         if (param0 < 124) {
           return 12L;
         }
-        return ih.a((byte) -98) - ka.field_o;
+        return ih.a((byte) -98) - PacketBuffer.field_o;
     }
 
     public static void a(byte param0) {

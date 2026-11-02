@@ -3,8 +3,8 @@
  */
 final class ea extends lk {
     static int field_p;
-    static pb field_m;
-    static pb field_l;
+    static Sprite field_m;
+    static Sprite field_l;
     private ae field_q;
     static ua field_o;
     static String field_k;
@@ -20,25 +20,25 @@ final class ea extends lk {
           var7 = pg.field_fb;
           var8 = var7;
           var8.f(param0, 950);
-          var8.field_k = var8.field_k + 1;
-          var4 = var8.field_k;
-          var8.a(false, 1);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(false, 1);
           var8.c(param1.field_u, -123);
           var8.c(param1.field_s, -123);
           var8.c(param1.field_q, -118);
-          var8.b(0, param1.field_l);
-          var8.b(0, param1.field_p);
-          var8.b(0, param1.field_t);
-          var8.b(0, param1.field_n);
-          var8.a(false, param1.field_m.length);
+          var8.writeInt(0, param1.field_l);
+          var8.writeInt(0, param1.field_p);
+          var8.writeInt(0, param1.field_t);
+          var8.writeInt(0, param1.field_n);
+          var8.writeByte(false, param1.field_m.length);
           for (var5 = 0; param1.field_m.length > var5; var5++) {
-            var7.b(0, param1.field_m[var5]);
+            var7.writeInt(0, param1.field_m[var5]);
           }
           if (param2 != 80) {
             ea.e((byte) 58);
           }
           var8.c(var4, (byte) -3);
-          var8.a(-var4 + var8.field_k, (byte) -124);
+          var8.a(-var4 + var8.position, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -116,7 +116,7 @@ final class ea extends lk {
             ea.g((byte) 66);
           }
           for (var1_int = 0; 1000 > var1_int; var1_int++) {
-            a.field_h[var1_int] = null;
+            a.entities[var1_int] = null;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 3000; var1_intLifetime1++) {
             wk.field_b[var1_intLifetime1] = null;
@@ -127,7 +127,7 @@ final class ea extends lk {
           gh.field_b = 0;
           e.field_e = -1;
           nc.field_H = 0;
-          s.field_i = false;
+          DualLinkDequeIterator.field_i = false;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ea.B(" + param0 + ')');
         }

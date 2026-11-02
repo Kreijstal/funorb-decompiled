@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wb {
-    static oj field_f;
+    static IntrusiveDeque field_f;
     static int[] field_g;
     static char[] field_d;
     static String field_i;
@@ -12,18 +12,18 @@ final class wb {
     static java.security.SecureRandom field_a;
     static String field_h;
 
-    final static pb[] a(int param0, int param1, pf param2, int param3) {
+    final static Sprite[] a(int param0, int param1, pf param2, int param3) {
         RuntimeException var4 = null;
-        pb[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        pb[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 55) {
-            stackIn_2_0 = (pb[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (tl.a(param2, (byte) -5, param1, param0)) {
@@ -31,7 +31,7 @@ final class wb {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (pb[]) (stackIn_5_0);
+          return (Sprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -50,7 +50,7 @@ final class wb {
         throw new IllegalStateException();
     }
 
-    final static va a(int param0, int param1, int param2, ej param3, int param4, int param5) {
+    final static va a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         va var7 = null;
@@ -103,7 +103,7 @@ final class wb {
           field_a = null;
           return;
         }
-        field_f = (oj) null;
+        field_f = (IntrusiveDeque) null;
         field_f = null;
         field_i = null;
         field_e = null;
@@ -112,7 +112,7 @@ final class wb {
     }
 
     static {
-        field_f = new oj();
+        field_f = new IntrusiveDeque();
         field_g = new int[8192];
         field_d = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
         field_i = "SCANNER";

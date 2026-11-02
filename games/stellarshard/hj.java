@@ -47,7 +47,7 @@ final class hj {
         }
     }
 
-    final static void a(pb param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         kg.d(false);
         if (param1 != 1) {
           return;
@@ -63,17 +63,17 @@ final class hj {
         lh.field_d = lh.field_d + param1;
         lg.field_f = lg.field_f + ed.field_b * param1;
         int var3 = param2 << param1;
-        if ((var3 & sd.field_d) != 0) {
+        if ((var3 & ScorePopup.field_d) != 0) {
           return;
         }
-        sd.field_d = sd.field_d | var3;
+        ScorePopup.field_d = ScorePopup.field_d | var3;
         tl.field_a = tl.field_a | var3;
-        hf.field_i.b(-46, new jf(param1));
+        hf.field_i.addLast(-46, new jf(param1));
         if (e.field_c) {
           return;
         }
-        if (ah.a(-1)) {
-          ue.field_c.b(-47, new kl(param1, param0, hk.field_p, lg.field_f, lh.field_d, ed.field_b));
+        if (DualLinkNode.a(-1)) {
+          ue.field_c.addLast(-47, new kl(param1, param0, hk.field_p, lg.field_f, lh.field_d, ed.field_b));
           return;
         }
         vj.a(lh.field_d, ed.field_b, (byte) 15, hk.field_p, lg.field_f, param1, param0, 4);

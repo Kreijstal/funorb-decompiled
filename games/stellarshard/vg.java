@@ -23,12 +23,12 @@ class vg extends id {
         this(si.field_V, param0);
     }
 
-    final static pb c(byte param0) {
+    final static Sprite c(byte param0) {
         int var1 = 0;
         byte[] var2 = null;
         int[] var3 = null;
         int var4_int = 0;
-        pb var4 = null;
+        Sprite var4 = null;
         int var5 = stellarshard.field_B;
         if (param0 <= -80) {
           var1 = vc.field_b[0] * ih.field_d[0];
@@ -37,18 +37,18 @@ class vg extends id {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = gj.field_w[sa.a(255, (int) var2[var4_int])];
           }
-          var4 = new pb(nc.field_G, wd.field_b, ak.field_c[0], vi.field_c[0], vc.field_b[0], ih.field_d[0], var3);
+          var4 = new Sprite(nc.field_G, wd.field_b, ak.field_c[0], RasterBuffer.field_c[0], vc.field_b[0], ih.field_d[0], var3);
           tb.f((byte) -73);
           return var4;
         }
-        return (pb) null;
+        return (Sprite) null;
     }
 
-    vg(bd param0, int param1) {
+    vg(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_N, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         try {
           if (param0) {
             nd.a(param3.field_p, param2 + param3.field_k, param3.field_t, param3.field_w + param1, (byte) -103);

@@ -34,7 +34,7 @@ final class ca {
           var6 = param3.a(param2, 16, param0);
           var5 = var6;
           if (var6 != null) {
-            stackIn_7_0 = new jj(new ka(var6), param4);
+            stackIn_7_0 = new jj(new PacketBuffer(var6), param4);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -66,17 +66,17 @@ final class ca {
           int var3_int = 112 / ((11 - param2) / 36);
           var4 = pg.field_fb;
           var4.f(param0, 950);
-          var4.field_k = var4.field_k + 1;
-          var5 = var4.field_k;
-          var4.a(false, 1);
-          var4.a(false, param1.field_l);
-          var4.a(false, param1.field_s);
-          var4.b(0, param1.field_m);
-          var4.b(0, param1.field_n);
-          var4.b(0, param1.field_q);
-          var4.b(0, param1.field_p);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(false, 1);
+          var4.writeByte(false, param1.field_l);
+          var4.writeByte(false, param1.field_s);
+          var4.writeInt(0, param1.field_m);
+          var4.writeInt(0, param1.field_n);
+          var4.writeInt(0, param1.field_q);
+          var4.writeInt(0, param1.field_p);
           var4.c(var5, (byte) -3);
-          var4.a(var4.field_k - var5, (byte) -94);
+          var4.a(var4.position - var5, (byte) -94);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ca.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -109,7 +109,7 @@ final class ca {
         }
     }
 
-    final static void a(ka param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;

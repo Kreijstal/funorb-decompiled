@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends gg {
+final class ta extends IntrusiveNode {
     static uc field_m;
     static String field_r;
     int field_o;
-    static pb field_s;
+    static Sprite field_s;
     static int field_q;
     int field_t;
     static String field_k;
@@ -32,11 +32,11 @@ final class ta extends gg {
         nk.field_c = 0;
         cd.field_L = new qd(2);
         if (param1 == 713) {
-          cd.field_L.a(af.a(1, ni.field_e, eb.field_a), -1, param0, false);
+          cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), -1, param0, false);
           return;
         }
         ta.a(false, -126);
-        cd.field_L.a(af.a(1, ni.field_e, eb.field_a), -1, param0, false);
+        cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), -1, param0, false);
     }
 
     public static void a(boolean param0) {

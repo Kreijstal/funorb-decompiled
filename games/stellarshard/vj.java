@@ -8,12 +8,12 @@ final class vj {
     final static kl a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         kl var8 = new kl(param5, param6, param3, param4, param0, param1);
         if (param2 == 15) {
-          nl.field_e.b(-127, var8);
+          SocketConnector.field_e.addLast(-127, var8);
           ca.a(param7, var8, (byte) -70);
           return var8;
         }
         field_b = (String) null;
-        nl.field_e.b(-127, var8);
+        SocketConnector.field_e.addLast(-127, var8);
         ca.a(param7, var8, (byte) -70);
         return var8;
     }
@@ -128,9 +128,9 @@ final class vj {
         var5 = stellarshard.field_B;
         try {
           var1_int = -73 / ((param0 - 83) / 35);
-          var2 = gg.field_h[0];
-          for (var3 = 1; gg.field_h.length > var3; var3++) {
-            var4 = gg.field_h[var3];
+          var2 = IntrusiveNode.field_h[0];
+          for (var3 = 1; IntrusiveNode.field_h.length > var3; var3++) {
+            var4 = IntrusiveNode.field_h[var3];
             ri.a(ki.field_z, var3 << 4, ki.field_z, var2, var4);
             var2 = var2 + var4;
           }

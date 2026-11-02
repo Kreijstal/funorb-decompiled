@@ -41,21 +41,21 @@ final class qg {
         this.field_k = 0;
     }
 
-    final void a(ka param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_e = param0.f(4);
+        this.field_e = param0.readUnsignedByte(4);
         this.field_j = new int[this.field_e];
         this.field_b = new int[this.field_e];
         for (var2 = 0; var2 < this.field_e; var2++) {
-          this.field_j[var2] = param0.c((byte) 113);
-          this.field_b[var2] = param0.c((byte) 115);
+          this.field_j[var2] = param0.readUnsignedShort((byte) 113);
+          this.field_b[var2] = param0.readUnsignedShort((byte) 115);
         }
     }
 
-    final void b(ka param0) {
-        this.field_h = param0.f(4);
-        this.field_d = param0.b(false);
-        this.field_i = param0.b(false);
+    final void b(PacketBuffer param0) {
+        this.field_h = param0.readUnsignedByte(4);
+        this.field_d = param0.readInt(false);
+        this.field_i = param0.readInt(false);
         this.a(param0);
     }
 

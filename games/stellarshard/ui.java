@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ui extends g {
+abstract class ui extends WidgetContainer {
     private int field_E;
     private ei field_H;
     boolean field_G;
-    static pb field_F;
+    static Sprite field_F;
     static li field_C;
     static String field_D;
     static String field_B;
@@ -22,42 +22,42 @@ abstract class ui extends g {
           super.a(param0, (byte) -57, param2, param3);
           return;
         }
-        if (rj.field_s == null) {
-          rj.field_s = new pb(this.field_p, this.field_t);
-          hj.a(rj.field_s, 1);
+        if (UiWidget.field_s == null) {
+          UiWidget.field_s = new Sprite(this.field_p, this.field_t);
+          hj.a(UiWidget.field_s, 1);
           ti.d();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
-          rj.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+          UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
-        if (this.field_p > rj.field_s.field_v) {
-          rj.field_s = new pb(this.field_p, this.field_t);
-          hj.a(rj.field_s, 1);
+        if (this.field_p > UiWidget.field_s.field_v) {
+          UiWidget.field_s = new Sprite(this.field_p, this.field_t);
+          hj.a(UiWidget.field_s, 1);
           ti.d();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
-          rj.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+          UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
-        if (this.field_t > rj.field_s.field_y) {
-          rj.field_s = new pb(this.field_p, this.field_t);
-          hj.a(rj.field_s, 1);
+        if (this.field_t > UiWidget.field_s.field_y) {
+          UiWidget.field_s = new Sprite(this.field_p, this.field_t);
+          hj.a(UiWidget.field_s, 1);
           ti.d();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
-          rj.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+          UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
-        hj.a(rj.field_s, 1);
+        hj.a(UiWidget.field_s, 1);
         ti.d();
         this.b(param1 + 58, 0, 0);
         super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
         id.b((byte) -58);
-        rj.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+        UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
     }
 
     private final int a(int param0) {
@@ -130,12 +130,12 @@ abstract class ui extends g {
         return stackIn_38_0;
     }
 
-    final rj a(byte param0) {
-        rj var2 = super.a(param0);
+    final UiWidget a(byte param0) {
+        UiWidget var2 = super.a(param0);
         if (var2 != null) {
           return var2;
         }
-        return (rj) (this);
+        return (UiWidget) (this);
     }
 
     boolean h(int param0) {

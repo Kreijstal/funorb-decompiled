@@ -5,7 +5,7 @@ abstract class ic implements w {
     static String field_b;
     private long field_c;
     static int field_a;
-    static ej field_d;
+    static PlatformTaskDispatcher field_d;
 
     public final cg b(int param0) {
         if (this.a((byte) 28)) {
@@ -68,7 +68,7 @@ abstract class ic implements w {
           return;
         }
         try {
-          var8 = ai.a(param0, "<col", "<", -101);
+          var8 = IterableNodeHashTable.a(param0, "<col", "<", -101);
           l.field_f.c(var8, -1 + param4, param6, 0, -1);
           l.field_f.c(var8, 1 + param4, param6, 0, -1);
           l.field_f.c(var8, param4 + 1, -1 + param6, 0, -1);

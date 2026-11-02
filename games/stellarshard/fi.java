@@ -152,7 +152,7 @@ final class fi {
           var2 = 0;
           var3_int = ad.d(5) + 1;
           while (var2 < this.field_c) {
-            var4_int = ad.d(ug.a(this.field_c - var2, 4));
+            var4_int = ad.d(IntrusiveDequeCursor.a(this.field_c - var2, 4));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

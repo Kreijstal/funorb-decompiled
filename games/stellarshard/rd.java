@@ -3,7 +3,7 @@
  */
 final class rd {
     static String field_b;
-    static pb[][] field_a;
+    static Sprite[][] field_a;
 
     final static void a(byte param0, float param1, String param2) {
         try {
@@ -21,13 +21,13 @@ final class rd {
     public static void a(byte param0) {
         if (param0 < -26) {
           field_b = null;
-          field_a = (pb[][]) null;
+          field_a = (Sprite[][]) null;
           return;
         }
         String var2 = (String) null;
         rd.a((String) null, 105);
         field_b = null;
-        field_a = (pb[][]) null;
+        field_a = (Sprite[][]) null;
     }
 
     public final String toString() {
@@ -121,6 +121,6 @@ final class rd {
 
     static {
         field_b = "Mega laser";
-        field_a = new pb[8][32];
+        field_a = new Sprite[8][32];
     }
 }

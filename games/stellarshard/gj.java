@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gj extends ah {
+abstract class gj extends DualLinkNode {
     static int field_v;
     int field_u;
-    static gd field_r;
+    static PcmSampleStream field_r;
     static int[] field_w;
     static String field_s;
     static int field_t;
@@ -48,7 +48,7 @@ abstract class gj extends ah {
         }
     }
 
-    final static boolean a(qe param0, int param1, boolean param2, qe param3) {
+    final static boolean a(GameEntity param0, int param1, boolean param2, GameEntity param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -64,14 +64,14 @@ abstract class gj extends ah {
             gj.d((byte) -22);
           }
           var5 = param0.c((byte) 39);
-          if (param0.field_a + (double)var5 > param3.field_a - (double)var4_int &&
-            param3.field_a + (double)var4_int > param0.field_a - (double)var5 &&
-            param3.field_l - (double)var4_int < (double)var5 + param0.field_l &&
-            param0.field_l - (double)var5 < param3.field_l + (double)var4_int) {
+          if (param0.x + (double)var5 > param3.x - (double)var4_int &&
+            param3.x + (double)var4_int > param0.x - (double)var5 &&
+            param3.y - (double)var4_int < (double)var5 + param0.y &&
+            param0.y - (double)var5 < param3.y + (double)var4_int) {
             if (param2) {
               return true;
             }
-            if (dk.a(param3.b(640), (int)param3.field_a, (int)param3.field_l, param0.b(640), (int)param0.field_a, (int)param0.field_l)) {
+            if (dk.a(param3.currentSprite(640), (int)param3.x, (int)param3.y, param0.currentSprite(640), (int)param0.x, (int)param0.y)) {
               return true;
             }
           }

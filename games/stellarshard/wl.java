@@ -10,13 +10,13 @@ abstract class wl extends tb {
     private int field_U;
     private int field_V;
     private int field_Z;
-    private rj field_Y;
+    private UiWidget field_Y;
     static String field_W;
     private int field_S;
     static String field_T;
     static int[] field_P;
 
-    boolean a(int param0, int param1, char param2, rj param3) {
+    boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -93,7 +93,7 @@ abstract class wl extends tb {
     final static void a(int param0, int param1, String param2) {
         int var3_int = 0;
         try {
-          ie.field_r = false;
+          SpriteState.field_r = false;
           ck.field_db = false;
           if (param1 != -8440) {
             String var4 = (String) null;
@@ -114,10 +114,10 @@ abstract class wl extends tb {
             }
             if (param0 == 10) {
               var3_int = 0;
-              pi.a(false);
+              Quaternion.a(false);
             }
             if (var3_int != 0) {
-              if (ie.field_r) {
+              if (SpriteState.field_r) {
                 param2 = h.a(oa.field_F, 0, new String[]{param2});
               }
               if (ak.field_a) {
@@ -211,13 +211,13 @@ abstract class wl extends tb {
         field_P = null;
     }
 
-    void b(rj param0, int param1) {
+    void b(UiWidget param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         try {
           this.field_Y = param0;
           if (fj.field_i == this.field_X) {
@@ -232,8 +232,8 @@ abstract class wl extends tb {
           if (param1 == 23143) {
             return;
           }
-          var4 = (rj) null;
-          this.b((rj) null, 17);
+          var4 = (UiWidget) null;
+          this.b((UiWidget) null, 17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -249,7 +249,7 @@ abstract class wl extends tb {
         }
     }
 
-    wl(ei param0, rj param1, int param2, int param3, int param4) {
+    wl(ei param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_p + 12, 12 + param2 + param1.field_t);
         try {
           this.field_S = param4;
@@ -271,11 +271,11 @@ abstract class wl extends tb {
         return super.h(106);
     }
 
-    private final void c(int param0, rj param1) {
+    private final void c(int param0, UiWidget param1) {
         try {
           int var3_int = -55 % ((param0 + 47) / 47);
           if (this.field_Q != null) {
-            this.field_Q.c(20);
+            this.field_Q.unlink(20);
           }
           if (param1 == null) {
             this.field_Q = new oa();

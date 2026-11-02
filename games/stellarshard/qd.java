@@ -32,7 +32,7 @@ final class qd {
         if (this.field_d != 0 &&
           fb.field_n != 0) {
           if (this.field_a <= 0) {
-            this.field_a = rc.field_m;
+            this.field_a = NanoFrameTimer.field_m;
           }
           this.field_a = this.field_a - 1;
         }
@@ -104,12 +104,12 @@ final class qd {
         int var1 = 114 / ((param0 + 85) / 39);
     }
 
-    final static pb a(pf param0, String param1, String param2, byte param3) {
+    final static Sprite a(pf param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         java.applet.Applet var6 = null;
-        pb stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -199,14 +199,14 @@ final class qd {
         return stackIn_8_0;
     }
 
-    final static pb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        pb[] var10;
-        pb[] var11_ref_pb__;
+        Sprite[] var10;
+        Sprite[] var11_ref_pb__;
         int var11;
         int var12;
-        pb var13;
+        Sprite var13;
         int var15;
         String var16;
         int var11Lifetime1;
@@ -218,7 +218,7 @@ final class qd {
         int var12Lifetime4;
         var15 = stellarshard.field_B;
         var9 = param1 + param5 + param7;
-        var10 = new pb[]{new pb(var9, var9), new pb(param8, var9), new pb(var9, var9), new pb(var9, param8), new pb(64, 64), new pb(var9, param8), new pb(var9, var9), new pb(param8, var9), new pb(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param8, var9), new Sprite(var9, var9), new Sprite(var9, param8), new Sprite(64, 64), new Sprite(var9, param8), new Sprite(var9, var9), new Sprite(param8, var9), new Sprite(var9, var9)};
         var11_ref_pb__ = var10;
         for (var12 = 0; var12 < var11_ref_pb__.length; var12++) {
           var13 = var11_ref_pb__[var12];

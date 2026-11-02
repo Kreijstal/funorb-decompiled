@@ -7,7 +7,7 @@ final class kf implements uk {
     static String field_d;
     static int[] field_b;
 
-    final static void a(java.awt.Frame param0, int param1, ej param2) {
+    final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
         re var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -277,7 +277,7 @@ final class kf implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -285,12 +285,12 @@ final class kf implements uk {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        pb var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param1 + param3.field_w;
           var7 = param2 + param3.field_k;
           nd.a(param3.field_p, var7, param3.field_t, var6_int, (byte) -103);
-          var8 = ah.field_p[1];
+          var8 = DualLinkNode.field_p[1];
           if (param3 instanceof ig &&
             ((ig) (param3)).field_z) {
             var8.d(1 + (var6_int + (-var8.field_w + param3.field_p >> 1)), (-var8.field_x + param3.field_t >> 1) + 1 + var7, 256);

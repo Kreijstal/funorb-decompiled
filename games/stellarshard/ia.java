@@ -13,7 +13,7 @@ final class ia extends tb implements oi {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == ke.field_c) {
@@ -22,7 +22,7 @@ final class ia extends tb implements oi {
             if (param1 == nb.field_K) {
               this.field_t = this.field_t + 10;
               var3 = wh.field_d;
-              if (ac.b((byte) 124)) {
+              if (GameApplet.b((byte) 124)) {
                 this.field_t = this.field_t + 20;
                 var3 = dl.field_B;
               }
@@ -33,7 +33,7 @@ final class ia extends tb implements oi {
               }
             }
           }
-          var4 = new rj((String) (var3), (lf) null);
+          var4 = new UiWidget((String) (var3), (lf) null);
           var4.field_p = this.field_p;
           var4.field_k = 50;
           var4.field_t = 80;

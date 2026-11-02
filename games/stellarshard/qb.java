@@ -9,12 +9,12 @@ final class qb extends lk {
         super(param0);
     }
 
-    final static ci f(int param0) {
+    final static FrameTimer f(int param0) {
         if (param0 != -17887) {
           field_l = (String) null;
-          return (ci) ((Object) new rc());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (ci) ((Object) new rc());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final cg a(byte param0, String param1) {
@@ -66,7 +66,7 @@ final class qb extends lk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a((byte) 115, param1) == qj.field_c) {
-            stackIn_2_0 = s.field_g;
+            stackIn_2_0 = DualLinkDequeIterator.field_g;
             return stackIn_2_0;
           }
           var3_int = -30 % ((20 - param0) / 40);

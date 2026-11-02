@@ -7,7 +7,7 @@ abstract class o {
     static String field_c;
     int field_d;
     int field_i;
-    static bd field_h;
+    static BitmapFont field_h;
     int field_k;
     static String[] field_g;
     int field_a;
@@ -29,16 +29,16 @@ abstract class o {
         var3 = stellarshard.field_B;
         try {
           if (param0 != -10834) {
-            field_h = (bd) null;
+            field_h = (BitmapFont) null;
           }
           var1 = pg.field_fb;
           while (wk.b(1816)) {
             var1.f(8, param0 + 11784);
-            fieldTemp$0 = var1.field_k + 1;
-            var1.field_k = var1.field_k + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             qh.a(124, var1);
-            pg.field_fb.a(var1.field_k - var2, (byte) -75);
+            pg.field_fb.a(var1.position - var2, (byte) -75);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ abstract class o {
         String var11;
         int var12;
         int var13;
-        wg var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -105,10 +105,10 @@ abstract class o {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = stellarshard.field_B;
-        if (param1 instanceof wg) {
-          var14 = (wg) ((Object) param1);
-          param1 = var14.field_a;
-          var2 = var14.field_f + " | ";
+        if (param1 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param1);
+          param1 = var14.cause;
+          var2 = var14.context + " | ";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
@@ -178,7 +178,7 @@ abstract class o {
 
     abstract void a(int param0, int param1);
 
-    final static void a(qe param0, boolean param1) {
+    final static void a(GameEntity param0, boolean param1) {
         int var4 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -188,7 +188,7 @@ abstract class o {
         RuntimeException var2 = null;
         int var5 = 0;
         vl var6 = null;
-        sd var7 = null;
+        ScorePopup var7 = null;
         vl var8 = null;
         var5 = stellarshard.field_B;
         try {
@@ -196,14 +196,14 @@ abstract class o {
           if ((param0.field_c >= 0 &&
             7 >= param0.field_c ||
             !(param0.field_c < 13) &&
-            !(param0.field_c >= 16)) && fe.field_e) {
+            !(param0.field_c >= 16)) && MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[32], 100, 2 * pk.field_h);
           }
           b.a(param0.field_c, 6);
           if (0 <= e.field_e &&
-            qe.field_e < 2047) {
-            qe.field_e = qe.field_e | 1 << e.field_e;
-            if (qe.field_e == 2047) {
+            GameEntity.field_e < 2047) {
+            GameEntity.field_e = GameEntity.field_e | 1 << e.field_e;
+            if (GameEntity.field_e == 2047) {
               hj.a(250, 5, 1);
             }
           }
@@ -217,24 +217,24 @@ abstract class o {
             }
             nc.field_H = 1;
             stellarshard.field_U[10] = stellarshard.field_U[10] + 1;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[31], 100, pk.field_h * 2);
             }
           }
           if (9 == param0.field_c) {
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[28], 100, 2 * pk.field_h);
             }
             ig.field_D = 255;
             for (var4 = 0; var4 < 256; var4++) {
-              var6 = new vl(0, a.field_h[0]);
+              var6 = new vl(0, a.entities[0]);
               var8 = var6;
-              var8.field_j = var8.field_j - 8.0 * Math.sin(2.0 * ((double)(var4 + a.field_h[0].field_h) * 3.141592653589793) / 256.0);
-              var8.field_a = var8.field_a - Math.cos(2.0 * ((double)(var4 + a.field_h[0].field_h) * 3.141592653589793) / 256.0) * 8.0;
-              var6.field_c = a.field_h[0].field_a + var8.field_j * 4.0;
-              var8.field_k = var6.field_a * 4.0 + a.field_h[0].field_l;
-              var6.field_j = var6.field_j + a.field_h[0].field_d;
-              var6.field_a = var6.field_a + a.field_h[0].field_k;
+              var8.field_j = var8.field_j - 8.0 * Math.sin(2.0 * ((double)(var4 + a.entities[0].heading) * 3.141592653589793) / 256.0);
+              var8.field_a = var8.field_a - Math.cos(2.0 * ((double)(var4 + a.entities[0].heading) * 3.141592653589793) / 256.0) * 8.0;
+              var6.field_c = a.entities[0].x + var8.field_j * 4.0;
+              var8.field_k = var6.field_a * 4.0 + a.entities[0].y;
+              var6.field_j = var6.field_j + a.entities[0].velocityX;
+              var6.field_a = var6.field_a + a.entities[0].velocityY;
               var8.field_p = 10;
               var8.field_n = -3;
               var8.field_q = 16777215;
@@ -251,7 +251,7 @@ abstract class o {
             nf.field_r = false;
             nc.field_H = 2;
             stellarshard.field_U[11] = stellarshard.field_U[11] + 1;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[30], 100, pk.field_h * 2);
             }
           }
@@ -259,7 +259,7 @@ abstract class o {
             nf.field_r = false;
             gh.field_b = 1500;
             nc.field_H = 3;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[29], 100, 2 * pk.field_h);
             }
           }
@@ -268,7 +268,7 @@ abstract class o {
             nf.field_r = false;
             nc.field_H = 4;
             stellarshard.field_U[13] = stellarshard.field_U[13] + 1;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[0], 100, pk.field_h * 2);
             }
           }
@@ -290,11 +290,11 @@ abstract class o {
               pk.a(-12663, 0)) {
               hj.a(242, 13, 1);
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[41], 100, 3 * pk.field_h);
             }
           }
-          var7 = new sd(-var2_int, param0, 16777215);
+          var7 = new ScorePopup(-var2_int, param0, 16777215);
           hf.field_e[ha.k(-1001)] = var7;
           param0.field_g = 0;
           return;

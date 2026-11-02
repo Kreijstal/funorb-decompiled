@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends gg {
+final class fk extends IntrusiveNode {
     static int[] field_k;
     int field_p;
     int field_l;
@@ -66,7 +66,7 @@ final class fk extends gg {
             if (param3 < 71) {
               return;
             }
-            if (ej.field_k.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_k.startsWith("win") &&
               li.a(param2, (byte) -5)) {
               return;
             }
@@ -76,7 +76,7 @@ final class fk extends gg {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              qe.a(12, "MGR1: " + param2, (Throwable) null);
+              GameEntity.a(12, "MGR1: " + param2, (Throwable) null);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

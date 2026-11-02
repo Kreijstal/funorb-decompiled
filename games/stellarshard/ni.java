@@ -14,7 +14,7 @@ final class ni {
         field_b = null;
         if (param0 >= -39) {
           Object var2 = (Object) null;
-          ni.a((ej) null, (Object) null, 118);
+          ni.a((PlatformTaskDispatcher) null, (Object) null, 118);
         }
         field_c = null;
     }
@@ -73,7 +73,7 @@ final class ni {
         }
     }
 
-    final static String a(boolean param0, int param1, ka param2) {
+    final static String a(boolean param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -97,7 +97,7 @@ final class ni {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param2.field_k = param2.field_k + fl.field_b.a(param2.field_r, param2.field_k, 0, var4, var3_int, true);
+            param2.position = param2.position + fl.field_b.a(param2.payload, param2.position, 0, var4, var3_int, true);
             var5 = kk.a(var3_int, (byte) 122, 0, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;
@@ -121,7 +121,7 @@ final class ni {
         }
     }
 
-    final static void a(ej param0, Object param1, int param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

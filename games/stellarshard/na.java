@@ -5,9 +5,9 @@ import java.io.*;
 
 final class na {
     private int field_f;
-    static pb field_e;
+    static Sprite field_e;
     static int field_a;
-    static ij field_j;
+    static LevelScreen field_j;
     private int field_c;
     private int field_b;
     private int field_i;
@@ -15,14 +15,14 @@ final class na {
     static ei field_d;
     private int[] field_g;
 
-    final static void a(int param0, int param1, int param2, pb[] param3) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3) {
         try {
           eh.field_a = new qc(param3);
           sa.field_h = param2;
           if (param1 != 256) {
             na.a(67, 84, 117, false, true, true);
           }
-          ka.field_q = param0;
+          PacketBuffer.field_q = param0;
           tf.a(0);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "na.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -226,7 +226,7 @@ final class na {
               var7 = new gi(param2, ma.field_s, df.field_d[param2], 2097152);
             }
             if (param1 != 255) {
-              field_e = (pb) null;
+              field_e = (Sprite) null;
             }
             var8 = mc.field_c.a(64, (gi) (var7), (gi) (var6), param4, param2);
             if (param3) {

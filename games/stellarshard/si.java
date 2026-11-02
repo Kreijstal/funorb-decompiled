@@ -5,24 +5,24 @@ class si extends bi {
     private int field_bb;
     private int field_W;
     static String field_I;
-    static bd field_V;
+    static BitmapFont field_V;
     private boolean field_x;
     private int field_fb;
     private boolean field_A;
-    private pb[] field_Q;
+    private Sprite[] field_Q;
     private int field_J;
-    private pb[] field_R;
+    private Sprite[] field_R;
     private boolean field_Y;
     private int field_E;
     private int field_lb;
-    private pb[] field_ib;
+    private Sprite[] field_ib;
     private int field_eb;
-    private pb[] field_hb;
-    private pb field_O;
+    private Sprite[] field_hb;
+    private Sprite field_O;
     static int field_gb;
     static boolean[] field_jb;
     private boolean field_z;
-    private pb field_U;
+    private Sprite field_U;
     private int field_L;
     private int field_H;
     private int field_N;
@@ -31,19 +31,19 @@ class si extends bi {
     private int field_db;
     static String field_B;
     private String field_G;
-    private pb field_w;
+    private Sprite field_w;
     private boolean field_kb;
     private int field_F;
     private boolean field_P;
     private int field_Z;
-    private pb field_cb;
+    private Sprite field_cb;
     private int field_T;
-    private pb field_y;
-    private pb[] field_S;
+    private Sprite field_y;
+    private Sprite[] field_S;
     private int field_C;
     private String field_D;
     private int field_M;
-    private bd field_v;
+    private BitmapFont field_v;
     static int field_X;
 
     public static void f(int param0) {
@@ -213,7 +213,7 @@ class si extends bi {
         this.field_db = -2147483648;
         this.field_C = -1;
         try {
-          this.field_j = param0;
+          this.key = param0;
           this.a((byte) -62, param1);
           if (param6 != null) {
             this.field_G = param6;

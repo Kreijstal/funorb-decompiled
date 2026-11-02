@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qf implements Runnable {
-    volatile ba[] field_e;
+    volatile AudioMixer[] field_e;
     volatile boolean field_b;
     static ql field_d;
-    ej field_h;
+    PlatformTaskDispatcher field_h;
     static java.awt.Color field_a;
     volatile boolean field_c;
     static int[] field_g;
@@ -24,7 +24,7 @@ final class qf implements Runnable {
           if (param0 != -125) {
             qf.a((byte) 102);
           }
-          gg.field_f = ee.a(5, 0, (byte) -124, 1);
+          IntrusiveNode.field_f = ee.a(5, 0, (byte) -124, 1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ')');
         }
@@ -32,7 +32,7 @@ final class qf implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        ba var2 = null;
+        AudioMixer var2 = null;
         int var4 = stellarshard.field_B;
         this.field_c = true;
         try {
@@ -50,14 +50,14 @@ final class qf implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          qe.a(68, (String) null, (Throwable) ((Object) exception));
+          GameEntity.a(68, (String) null, (Throwable) ((Object) exception));
         } finally {
           this.field_c = false;
         }
     }
 
     qf() {
-        this.field_e = new ba[2];
+        this.field_e = new AudioMixer[2];
         this.field_b = false;
         this.field_c = false;
     }

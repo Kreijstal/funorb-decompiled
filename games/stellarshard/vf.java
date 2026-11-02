@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends g implements oi {
+final class vf extends WidgetContainer implements oi {
     private String field_C;
     private int[] field_K;
     static pf field_E;
@@ -9,7 +9,7 @@ final class vf extends g implements oi {
     static String field_D;
     private ck field_I;
     static int field_F;
-    private bd field_G;
+    private BitmapFont field_G;
     private int field_B;
     private ig[] field_J;
 
@@ -34,16 +34,16 @@ final class vf extends g implements oi {
         this.field_J = var3;
     }
 
-    final static pb[] a(pf param0, byte param1, int param2, int param3) {
+    final static Sprite[] a(pf param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
-        pb[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -78) {
-            stackIn_2_0 = (pb[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (tl.a(param0, (byte) -5, param3, param2)) {
@@ -69,7 +69,7 @@ final class vf extends g implements oi {
         this.field_G.a(this.field_C, 14 + (param3 + this.field_w), 10 + param2 + this.field_k, this.field_p - 28, this.field_t, 16777215, -1, 0, 0, this.field_G.field_N);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, pb[] param4, int param5, bd param6, int param7, pb[] param8, int param9, int param10, int param11, int param12, boolean param13, int param14, bd param15) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, BitmapFont param6, int param7, Sprite[] param8, int param9, int param10, int param11, int param12, boolean param13, int param14, BitmapFont param15) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -82,7 +82,7 @@ final class vf extends g implements oi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
         try {
-          cg.a(param5, eh.field_a, param1, param14, param2, param11, sa.field_h, new qc(param4), param15, (byte) 45, param10, param9, param0, new qc(param8), kl.field_k, lg.field_b, ka.field_q, 480, ul.field_G, param6, param7);
+          cg.a(param5, eh.field_a, param1, param14, param2, param11, sa.field_h, new qc(param4), param15, (byte) 45, param10, param9, param0, new qc(param8), kl.field_k, lg.field_b, PacketBuffer.field_q, 480, ul.field_G, param6, param7);
           qc.a(param3, param13, 0);
           if (param12 != 260) {
             field_F = -126;
@@ -235,7 +235,7 @@ final class vf extends g implements oi {
         return mk.field_l;
     }
 
-    vf(ck param0, bd param1, String param2) {
+    vf(ck param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (uk) null);
         int var4_int = 0;
         this.field_B = 0;

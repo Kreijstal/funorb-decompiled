@@ -3,10 +3,10 @@
  */
 final class wh {
     static int field_c;
-    static pb[] field_e;
+    static Sprite[] field_e;
     int field_b;
     static String field_d;
-    static pb field_a;
+    static Sprite field_a;
 
     final static byte[] a(int param0, ha param1, byte[] param2, byte param3) {
         int var4_int = 0;
@@ -92,7 +92,7 @@ final class wh {
         if (param0 > -31) {
           return;
         }
-        gg.field_f = ee.a(5, 0, (byte) -119, 1);
+        IntrusiveNode.field_f = ee.a(5, 0, (byte) -119, 1);
     }
 
     static {

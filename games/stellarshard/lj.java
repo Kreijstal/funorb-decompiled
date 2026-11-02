@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends g implements rf, oi {
+final class lj extends WidgetContainer implements rf, oi {
     static String field_C;
     private pl field_E;
     private ig field_G;
@@ -44,7 +44,7 @@ final class lj extends g implements rf, oi {
         }
     }
 
-    private final int a(int param0, byte param1, rj param2, String param3, String param4, int param5) {
+    private final int a(int param0, byte param1, UiWidget param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -98,7 +98,7 @@ final class lj extends g implements rf, oi {
         super(0, 0, 496, 0, (uk) null);
         this.field_E = new pl("", (lf) null, 12);
         id var1 = new id(de.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, si.field_V.field_N, -1, 2147483647, true);
-        rj var2 = new rj(l.field_d, var1, (lf) null);
+        UiWidget var2 = new UiWidget(l.field_d, var1, (lf) null);
         this.field_H = new ig(sf.field_e, (lf) null);
         this.field_G = new ig(bb.field_l, (lf) null);
         this.field_E.field_x = fc.field_d;
@@ -135,7 +135,7 @@ final class lj extends g implements rf, oi {
         field_D = (byte[][]) null;
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_H.field_E = this.e((byte) 34);
@@ -147,7 +147,7 @@ final class lj extends g implements rf, oi {
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, String param4, byte param5, rj param6) {
+    private final int a(String param0, int param1, int param2, int param3, String param4, byte param5, UiWidget param6) {
         RuntimeException var8 = null;
         cd var9 = null;
         int var10 = 0;
@@ -242,7 +242,7 @@ final class lj extends g implements rf, oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -284,7 +284,7 @@ final class lj extends g implements rf, oi {
         if (!this.e((byte) 34)) {
           return;
         }
-        gg.a(this.field_E.field_m, 97);
+        IntrusiveNode.a(this.field_E.field_m, 97);
         int var2 = 72 / ((59 - param0) / 49);
     }
 

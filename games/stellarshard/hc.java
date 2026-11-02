@@ -19,7 +19,7 @@ final class hc {
     int field_o;
     static int[] field_f;
     int field_p;
-    bd field_g;
+    BitmapFont field_g;
     static String[] field_t;
     static String field_h;
     int field_q;
@@ -116,8 +116,8 @@ final class hc {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         ti.a(param4, param1, param3, param5, param0);
         if (param2 != 10066329) {
-          bd var8 = (bd) null;
-          this.a(-79, (bd) null);
+          BitmapFont var8 = (BitmapFont) null;
+          this.a(-79, (BitmapFont) null);
         }
     }
 
@@ -167,7 +167,7 @@ final class hc {
         try {
           al.field_f = de.a("", -47);
           al.field_f.a(false, true);
-          fh.a(param0, param2, param1, (byte) -108);
+          BufferedSocket.a(param0, param2, param1, (byte) -108);
           int var5_int = 37 % ((param4 + 36) / 42);
           pe.b(4);
           el.field_E = ok.field_a;
@@ -209,10 +209,10 @@ final class hc {
         }
     }
 
-    final void a(int param0, bd param1) {
+    final void a(int param0, BitmapFont param1) {
         id var17 = null;
         tc var4 = null;
-        pb[] var5 = null;
+        Sprite[] var5 = null;
         jc var16 = null;
         jc var18 = null;
         int var7_int = 0;
@@ -221,12 +221,12 @@ final class hc {
         hh discarded$0 = null;
         df discarded$1 = null;
         tc var8 = null;
-        pb[] var9 = null;
-        pb[] var10 = null;
-        pb dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         tc var11 = null;
         tc var12 = null;
-        pb var13 = null;
+        Sprite var13 = null;
         tc var14 = null;
         tc var19 = null;
         int var15 = stellarshard.field_B;
@@ -252,13 +252,13 @@ final class hc {
           var4.a((byte) 119, 0).a(param0 ^ -2, 15658734).a((byte) 102, cj.a(7829367, 10066329, 8947848, -17768));
           var4.a((byte) 10, 1).a((byte) 104, cj.a(13421772, 10066329, 11184810, -17768));
           var4.a((byte) 115, 3).a((byte) 100, cj.a(10066329, 7829367, 8947848, -17768)).a(1, false).b(-2147483648, 1);
-          var5 = new pb[9];
+          var5 = new Sprite[9];
           var16 = new jc(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_z.length > var7_int; var7_int++) {
             var16.field_z[var7_int] = 1077952576;
           }
-          var5[4] = (pb) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
           var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
           this.field_b = (uk) ((Object) var4);
@@ -276,10 +276,10 @@ final class hc {
           var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734, -17768)).a(-1, 1118481).a(false, -1);
           var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
           this.field_d = (uk) ((Object) var8);
-          var9 = new pb[9];
-          var9[4] = new pb(2, 1);
-          var10 = new pb[9];
-          var10[4] = new pb(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
@@ -287,7 +287,7 @@ final class hc {
           var12 = new tc();
           var11.a(0, -72, var9);
           var12.a(0, param0 - 56, var10);
-          var13 = new pb(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new tc(var4, true);
           var14.a(true, var13.a());

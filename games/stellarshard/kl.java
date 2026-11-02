@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends gg {
+final class kl extends IntrusiveNode {
     int field_q;
     int field_m;
     int field_p;
-    static ka field_r;
+    static PacketBuffer field_r;
     int field_n;
     static int field_k;
     int field_s;
@@ -49,7 +49,7 @@ final class kl extends gg {
           var1_int = rg.field_F;
           var2 = 0;
           if (!param0) {
-            field_r = (ka) null;
+            field_r = (PacketBuffer) null;
           }
           if (rb.field_s == 2) {
             var3_long = -jj.field_p + ih.a((byte) -98);
@@ -109,8 +109,8 @@ final class kl extends gg {
             stackIn_40_0 = -112;
             stackIn_40_1 = var6;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(stackIn_40_0, stackIn_40_1, stackIn_41_2);
-            var8Lifetime1 = s.field_b - (var7Lifetime1 >> 1);
+            var7Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var8Lifetime1 = DualLinkDequeIterator.field_b - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == ua.field_i.field_f) {
                 stackIn_46_0 = ld.field_y;

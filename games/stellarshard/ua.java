@@ -32,7 +32,7 @@ final class ua {
         this.field_h = param0;
     }
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;

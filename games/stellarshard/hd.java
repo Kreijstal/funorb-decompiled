@@ -16,16 +16,16 @@ final class hd {
           param0 = param0 & 8191;
           if (param0 < 4096) {
             if (param0 >= 2048) {
-              stackIn_19_0 = fh.field_h[4096 - param0];
+              stackIn_19_0 = BufferedSocket.field_h[4096 - param0];
             } else {
-              stackIn_19_0 = fh.field_h[param0];
+              stackIn_19_0 = BufferedSocket.field_h[param0];
             }
             return stackIn_19_0;
           }
           if (param0 >= 6144) {
-            stackIn_15_0 = -fh.field_h[-param0 + 8192];
+            stackIn_15_0 = -BufferedSocket.field_h[-param0 + 8192];
           } else {
-            stackIn_15_0 = -fh.field_h[-4096 + param0];
+            stackIn_15_0 = -BufferedSocket.field_h[-4096 + param0];
           }
           return stackIn_15_0;
         }
@@ -33,16 +33,16 @@ final class hd {
         param0 = param0 & 8191;
         if (param0 < 4096) {
           if (param0 >= 2048) {
-            stackIn_9_0 = fh.field_h[4096 - param0];
+            stackIn_9_0 = BufferedSocket.field_h[4096 - param0];
           } else {
-            stackIn_9_0 = fh.field_h[param0];
+            stackIn_9_0 = BufferedSocket.field_h[param0];
           }
           return stackIn_9_0;
         }
         if (param0 >= 6144) {
-          stackIn_5_0 = -fh.field_h[-param0 + 8192];
+          stackIn_5_0 = -BufferedSocket.field_h[-param0 + 8192];
         } else {
-          stackIn_5_0 = -fh.field_h[-4096 + param0];
+          stackIn_5_0 = -BufferedSocket.field_h[-4096 + param0];
         }
         return stackIn_5_0;
     }

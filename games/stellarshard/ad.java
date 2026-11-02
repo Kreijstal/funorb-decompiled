@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ad extends gg {
+final class ad extends IntrusiveNode {
     private int field_F;
     private static float[] field_s;
     private static int[] field_u;
@@ -131,9 +131,9 @@ final class ad extends gg {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = ug.a(var5 - 1, 4);
+          var10 = IntrusiveDequeCursor.a(var5 - 1, 4);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = hi.a(var10, (byte) 109, var11);
+            var9[var11] = DelegatingCanvas.a(var10, (byte) 109, var11);
           }
           if (var1 == 0) {
             field_L = var6_ref_float__;
@@ -310,7 +310,7 @@ final class ad extends gg {
         int var18_intLifetime2;
         ad.a(this.field_M[param0], 0);
         ad.a();
-        var2 = ad.d(ug.a(field_u.length - 1, 4));
+        var2 = ad.d(IntrusiveDequeCursor.a(field_u.length - 1, 4));
         var3 = field_n[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_R;
@@ -429,7 +429,7 @@ final class ad extends gg {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = ug.a(var4 - 1, 4);
+          var25Lifetime2 = IntrusiveDequeCursor.a(var4 - 1, 4);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -635,7 +635,7 @@ final class ad extends gg {
         return true;
     }
 
-    final ud b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -667,7 +667,7 @@ final class ad extends gg {
           }
         }
         this.field_E = null;
-        return new ud(this.field_v, var1, this.field_F, this.field_q, this.field_l);
+        return new PcmSample(this.field_v, var1, this.field_F, this.field_q, this.field_l);
     }
 
     private final void b(byte[] param0) throws IOException {
@@ -675,16 +675,16 @@ final class ad extends gg {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        ka var2 = new ka(param0);
-        this.field_v = var2.b(false);
-        this.field_I = var2.b(false);
-        this.field_F = var2.b(false);
-        this.field_q = var2.b(false);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_v = var2.readInt(false);
+        this.field_I = var2.readInt(false);
+        this.field_F = var2.readInt(false);
+        this.field_q = var2.readInt(false);
         if (this.field_q < 0) {
           this.field_q = ~this.field_q;
           this.field_l = true;
         }
-        int var3 = var2.b(false);
+        int var3 = var2.readInt(false);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -692,7 +692,7 @@ final class ad extends gg {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.f(4);
+            var6_int = var2.readUnsignedByte(4);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -701,7 +701,7 @@ final class ad extends gg {
         }
     }
 
-    final ud a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -751,7 +751,7 @@ final class ad extends gg {
         this.field_E = null;
         var12 = this.field_O;
         this.field_O = null;
-        return new ud(this.field_v, var12, this.field_F, this.field_q, this.field_l);
+        return new PcmSample(this.field_v, var12, this.field_F, this.field_q, this.field_l);
     }
 
     private ad(byte[] param0) throws IOException {

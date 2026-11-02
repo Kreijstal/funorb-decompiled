@@ -3,7 +3,7 @@
  */
 final class mb {
     static String field_c;
-    static oj field_b;
+    static IntrusiveDeque field_b;
     static String field_a;
 
     final static void a(int param0, byte[] param1) {
@@ -33,8 +33,8 @@ final class mb {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ka var16 = null;
-        ka var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -46,34 +46,34 @@ final class mb {
         int var4Lifetime5;
         var15 = stellarshard.field_B;
         try {
-          var16 = new ka(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_k = -2 + param1.length;
-          sb.field_b = var17.c((byte) 40);
+          var17.position = -2 + param1.length;
+          sb.field_b = var17.readUnsignedShort((byte) 40);
           ih.field_d = new int[sb.field_b];
           ih.field_b = new byte[sb.field_b][];
           vc.field_b = new int[sb.field_b];
           lj.field_D = new byte[sb.field_b][];
           ak.field_c = new int[sb.field_b];
           sk.field_c = new boolean[sb.field_b];
-          vi.field_c = new int[sb.field_b];
-          var17.field_k = param1.length + (-7 - sb.field_b * 8);
-          nc.field_G = var17.c((byte) 86);
-          wd.field_b = var17.c((byte) 39);
-          var3 = 1 + (var17.f(4) & 255);
+          RasterBuffer.field_c = new int[sb.field_b];
+          var17.position = param1.length + (-7 - sb.field_b * 8);
+          nc.field_G = var17.readUnsignedShort((byte) 86);
+          wd.field_b = var17.readUnsignedShort((byte) 39);
+          var3 = 1 + (var17.readUnsignedByte(4) & 255);
           for (var4 = 0; sb.field_b > var4; var4++) {
-            ak.field_c[var4] = var16.c((byte) 30);
+            ak.field_c[var4] = var16.readUnsignedShort((byte) 30);
           }
           for (var4Lifetime1 = 0; sb.field_b > var4Lifetime1; var4Lifetime1++) {
-            vi.field_c[var4Lifetime1] = var17.c((byte) 95);
+            RasterBuffer.field_c[var4Lifetime1] = var17.readUnsignedShort((byte) 95);
           }
           for (var4Lifetime2 = 0; sb.field_b > var4Lifetime2; var4Lifetime2++) {
-            vc.field_b[var4Lifetime2] = var17.c((byte) 30);
+            vc.field_b[var4Lifetime2] = var17.readUnsignedShort((byte) 30);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < sb.field_b; var4Lifetime3++) {
-            ih.field_d[var4Lifetime3] = var17.c((byte) 83);
+            ih.field_d[var4Lifetime3] = var17.readUnsignedShort((byte) 83);
           }
-          var17.field_k = -(3 * (-1 + var3)) + param1.length + (-7 - sb.field_b * 8);
+          var17.position = -(3 * (-1 + var3)) + param1.length + (-7 - sb.field_b * 8);
           gj.field_w = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             gj.field_w[var4Lifetime4] = var17.c(true);
@@ -81,7 +81,7 @@ final class mb {
               gj.field_w[var4Lifetime4] = 1;
             }
           }
-          var17.field_k = param0;
+          var17.position = param0;
           for (var4Lifetime5 = 0; sb.field_b > var4Lifetime5; var4Lifetime5++) {
             var5 = vc.field_b[var4Lifetime5];
             var6 = ih.field_d[var4Lifetime5];
@@ -95,16 +95,16 @@ final class mb {
             var9 = var19;
             lj.field_D[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.f(4);
+            var11 = var17.readUnsignedByte(4);
             stackIn_22_0 = 0;
             stackIn_22_1 = 1 & var11;
             if (stackIn_22_0 == stackIn_22_1) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.g(110);
+                var8[var12] = var17.readByte(110);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$0 = var17.g(-81);
+                  dupTemp$0 = var17.readByte(-81);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_49_0 = var10;
@@ -119,13 +119,13 @@ final class mb {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5 + var12] = var17.g(-62);
+                  var8[var13 * var5 + var12] = var17.readByte(-62);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$1 = var17.g(ih.a(param0, 102));
+                    dupTemp$1 = var17.readByte(ih.a(param0, 102));
                     var9[var12 + var13 * var5] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_37_0 = var10;
@@ -179,7 +179,7 @@ final class mb {
           if (param1 < 108) {
             field_a = (String) null;
           }
-          param2 = ci.a(param2, '_', "", 2619);
+          param2 = FrameTimer.a(param2, '_', "", 2619);
           var3 = la.a(param2, (byte) 79);
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (-1 != param0.indexOf(var3));
           return stackIn_7_0;
@@ -205,7 +205,7 @@ final class mb {
 
     static {
         field_c = "Waiting for fonts";
-        field_b = new oj();
+        field_b = new IntrusiveDeque();
         field_a = "Account created successfully!";
     }
 }

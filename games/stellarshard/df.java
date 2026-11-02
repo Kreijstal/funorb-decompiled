@@ -11,7 +11,7 @@ final class df implements uk {
     static String field_k;
     private int field_a;
     static pc[] field_d;
-    private bd field_f;
+    private BitmapFont field_f;
     static String field_j;
 
     final static void a(int param0) {
@@ -22,9 +22,9 @@ final class df implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int var10 = 0;
-        rj stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -38,7 +38,7 @@ final class df implements uk {
         var11 = stellarshard.field_B;
         try {
           if (param3 instanceof nb) {
-            stackIn_4_0 = (rj) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           } else {
             stackIn_4_0 = null;
           }
@@ -145,7 +145,7 @@ final class df implements uk {
           }
           var14 = ae.field_N;
           var16 = var14;
-          var2 = var16.f(4);
+          var2 = var16.readUnsignedByte(4);
           var3 = (ta) (eg.field_b.b(-97));
           while (var3 != null) {
             if (var2 != var3.field_o) {
@@ -155,29 +155,29 @@ final class df implements uk {
             break;
           }
           if (var3 == null) {
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             return;
           }
-          var4 = var16.f(4);
+          var4 = var16.readUnsignedByte(4);
           if (var4 != 0) {
             wj.field_t[0] = wf.field_b;
             var5 = var3.field_t;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               wj.field_t[var6_int] = var14.e((byte) 93);
             }
-            rj.a((byte) -26, var4, var5);
+            UiWidget.a((byte) -26, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              fe.a(var16, 12726);
+              MouseWheelInput.a(var16, 12726);
               if (var6_intLifetime1 != 0) {
-                bg.a((byte) 79, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_intLifetime1);
+                DualLinkDeque.a((byte) 79, rb.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
               } else {
-                bg.a((byte) 78, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_intLifetime1);
+                DualLinkDeque.a((byte) 78, rb.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
               }
             }
             kb.a(var5, (byte) 47);
             var6 = new String[2][var5];
             var20 = new int[2][4 * var5];
-            var8 = fh.field_b;
+            var8 = BufferedSocket.field_b;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
@@ -213,10 +213,10 @@ final class df implements uk {
               var15++;
               var9Lifetime1++;
             }
-            var3.c(20);
+            var3.unlink(20);
             return;
           }
-          var3.c(20);
+          var3.unlink(20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ final class df implements uk {
         }
     }
 
-    df(bd param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    df(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_i = param1;
           this.field_a = param3;

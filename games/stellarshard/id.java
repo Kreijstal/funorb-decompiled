@@ -7,8 +7,8 @@ class id implements uk, pj {
     int field_c;
     int field_h;
     int field_i;
-    static oj field_g;
-    bd field_a;
+    static IntrusiveDeque field_g;
+    BitmapFont field_a;
     private boolean field_b;
     int field_d;
     int field_j;
@@ -20,7 +20,7 @@ class id implements uk, pj {
     private int field_e;
     int field_n;
 
-    public final void a(rj param0, int param1, int param2, int param3, int param4, int param5) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -58,7 +58,7 @@ class id implements uk, pj {
           }
           var10 = var18.a(111, var8);
           var11 = var18.a(62, var9);
-          gg.a(23, param4 + (param0.field_w + param0.field_p), param2 + param0.field_k, param0.field_t + param0.field_k + param2, param0.field_w + param4);
+          IntrusiveNode.a(23, param4 + (param0.field_w + param0.field_p), param2 + param0.field_k, param0.field_t + param0.field_k + param2, param0.field_w + param4);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_a[var12];
             if (var10 != var12) {
@@ -95,7 +95,7 @@ class id implements uk, pj {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, rj param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         uj var8 = null;
@@ -131,7 +131,7 @@ class id implements uk, pj {
               stackIn_5_3 = var13.field_a[1 + var7].field_b;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            gg.a(61, param4 - (-param3.field_w - param3.field_p), param3.field_k + param2, param2 - (-param3.field_k - param3.field_t), param3.field_w + param4);
+            IntrusiveNode.a(61, param4 - (-param3.field_w - param3.field_p), param3.field_k + param2, param2 - (-param3.field_k - param3.field_t), param3.field_w + param4);
             n.field_i.a(this.field_n, var11, 10066329, var10, var10, var12);
             id.b((byte) -58);
           }
@@ -154,7 +154,7 @@ class id implements uk, pj {
         }
     }
 
-    public final int a(int param0, rj param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -183,7 +183,7 @@ class id implements uk, pj {
         }
     }
 
-    public final int a(rj param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -230,9 +230,9 @@ class id implements uk, pj {
         return eg.field_d == 11 ? true : false;
     }
 
-    public final int a(rj param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -240,8 +240,8 @@ class id implements uk, pj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 25) {
-            var4 = (rj) null;
-            this.a(-8, -64, -12, -116, -119, -62, (rj) null, 87);
+            var4 = (UiWidget) null;
+            this.a(-8, -64, -12, -116, -119, -62, (UiWidget) null, 87);
           }
           this.b(param0, (byte) 111);
           stackIn_3_0 = param0.field_r.a(false) - (-this.field_m - this.field_f);
@@ -260,7 +260,7 @@ class id implements uk, pj {
         }
     }
 
-    private final int a(int param0, rj param1, byte param2, int param3) {
+    private final int a(int param0, UiWidget param1, byte param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -292,14 +292,14 @@ class id implements uk, pj {
     public static void a(int param0) {
         field_g = null;
         if (param0 != 1392322465) {
-          field_g = (oj) null;
+          field_g = (IntrusiveDeque) null;
           field_l = null;
           return;
         }
         field_l = null;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, rj param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6, int param7) {
         int discarded$0 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -311,12 +311,12 @@ class id implements uk, pj {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        rj var14 = null;
+        UiWidget var14 = null;
         int var12Lifetime1;
         var13 = stellarshard.field_B;
         try {
           boolean decompiledFrameRemainder0 = true;
-          gg.a(83, param3 + (param6.field_w + param6.field_p), param2 + param6.field_k, param6.field_k + param2 + param6.field_t, param6.field_w + param3);
+          IntrusiveNode.a(83, param3 + (param6.field_w + param6.field_p), param2 + param6.field_k, param6.field_k + param2 + param6.field_t, param6.field_w + param3);
           var9_int = this.a(param0 - 27246, param6);
           var10 = this.a((byte) -89, param6);
           if (!this.field_b) {
@@ -355,8 +355,8 @@ class id implements uk, pj {
           if (param0 == 0) {
             return;
           }
-          var14 = (rj) null;
-          discarded$0 = this.a((byte) 2, (rj) null);
+          var14 = (UiWidget) null;
+          discarded$0 = this.a((byte) 2, (UiWidget) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -372,7 +372,7 @@ class id implements uk, pj {
         }
     }
 
-    public void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         if (null == this.field_a) {
           return;
         }
@@ -386,7 +386,7 @@ class id implements uk, pj {
         }
     }
 
-    private final void b(byte param0, rj param1) {
+    private final void b(byte param0, UiWidget param1) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -512,9 +512,9 @@ class id implements uk, pj {
         }
     }
 
-    private final int a(rj param0, int param1, int param2, boolean param3) {
+    private final int a(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -522,8 +522,8 @@ class id implements uk, pj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            var6 = (rj) null;
-            this.b((rj) null, 81);
+            var6 = (UiWidget) null;
+            this.b((UiWidget) null, 81);
           }
           stackIn_3_0 = param0.field_l + (param2 + param0.field_w + this.field_m) + param1;
           return stackIn_3_0;
@@ -541,7 +541,7 @@ class id implements uk, pj {
         }
     }
 
-    public final vk b(rj param0, byte param1) {
+    public final vk b(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         vk stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -576,7 +576,7 @@ class id implements uk, pj {
         }
     }
 
-    public final int a(int param0, rj param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -603,10 +603,10 @@ class id implements uk, pj {
         }
     }
 
-    String b(rj param0, int param1) {
+    String b(UiWidget param0, int param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -614,8 +614,8 @@ class id implements uk, pj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (rj) null;
-            discarded$1 = this.a((byte) -122, (rj) null);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((byte) -122, (UiWidget) null);
           }
           stackIn_3_0 = param0.field_m;
           return stackIn_3_0;
@@ -633,11 +633,11 @@ class id implements uk, pj {
         }
     }
 
-    id(bd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    id(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(int param0, rj param1, int param2, int param3, int param4, int param5) {
+    public final int a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -664,7 +664,7 @@ class id implements uk, pj {
         }
     }
 
-    public final int a(byte param0, rj param1, int param2) {
+    public final int a(byte param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -690,7 +690,7 @@ class id implements uk, pj {
         }
     }
 
-    private final int a(byte param0, rj param1) {
+    private final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -723,27 +723,27 @@ class id implements uk, pj {
         ma var1_refLifetime1;
         if (param0 != -58) {
           id.b(46);
-          var1_ref = (ma) (dd.field_g.c((byte) -111));
+          var1_ref = (ma) (dd.field_g.removeLast((byte) -111));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
           ti.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_r);
           ti.d(var1_ref.field_t, var1_ref.field_u, var1_ref.field_n, var1_ref.field_l);
           var1_ref.field_p = null;
-          mb.field_b.b(param0 - 61, var1_ref);
+          mb.field_b.addLast(param0 - 61, var1_ref);
           return;
         }
-        var1_refLifetime1 = (ma) (dd.field_g.c((byte) -111));
+        var1_refLifetime1 = (ma) (dd.field_g.removeLast((byte) -111));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
         ti.a(var1_refLifetime1.field_p, var1_refLifetime1.field_q, var1_refLifetime1.field_r);
         ti.d(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_n, var1_refLifetime1.field_l);
         var1_refLifetime1.field_p = null;
-        mb.field_b.b(param0 - 61, var1_refLifetime1);
+        mb.field_b.addLast(param0 - 61, var1_refLifetime1);
     }
 
-    private final void a(rj param0, int param1, int param2, int param3) {
+    private final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.a(param2, this.field_e, param3, param1, 0, 0, param0, this.field_i);
         } catch (RuntimeException runtimeException) {
@@ -777,7 +777,7 @@ class id implements uk, pj {
         }
     }
 
-    id(bd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    id(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_h = param7;
           this.field_c = param3;
@@ -798,7 +798,7 @@ class id implements uk, pj {
     }
 
     static {
-        field_g = new oj();
+        field_g = new IntrusiveDeque();
         field_l = "Mouse over an icon for details";
     }
 }

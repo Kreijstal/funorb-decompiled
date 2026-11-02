@@ -4,8 +4,8 @@
 final class wa {
     private int field_d;
     static String field_b;
-    private ai field_a;
-    private bg field_f;
+    private IterableNodeHashTable field_a;
+    private DualLinkDeque field_f;
     static String[] field_e;
     private int field_c;
 
@@ -107,20 +107,20 @@ final class wa {
         }
         Object var5 = var7.e(-118);
         if (var5 == null) {
-          var7.c(20);
+          var7.unlink(20);
           var7.c((byte) 36);
           this.field_d = this.field_d + var7.field_u;
           return null;
         }
         if (var7.f(0)) {
           var6 = new ld(var5, var7.field_u);
-          this.field_a.a((byte) 81, var6, var7.field_j);
+          this.field_a.a((byte) 81, var6, var7.key);
           this.field_f.a(true, var6);
           ((gj) ((Object) var6)).field_o = 0L;
-          var7.c(20);
+          var7.unlink(20);
           var7.c((byte) 36);
           if (param1 != 58) {
-            this.field_a = (ai) null;
+            this.field_a = (IterableNodeHashTable) null;
             return var5;
           }
           return var5;
@@ -128,7 +128,7 @@ final class wa {
         this.field_f.a(true, var7);
         var7.field_o = 0L;
         if (param1 != 58) {
-          this.field_a = (ai) null;
+          this.field_a = (IterableNodeHashTable) null;
           return var5;
         }
         return var5;
@@ -140,7 +140,7 @@ final class wa {
         }
         try {
           if (param0 != null) {
-            param0.c(20);
+            param0.unlink(20);
             param0.c((byte) 36);
             this.field_d = this.field_d + param0.field_u;
           }

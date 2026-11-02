@@ -3,17 +3,17 @@
  */
 final class db {
     private int field_e;
-    pb field_b;
+    Sprite field_b;
     private int field_h;
     static int field_g;
     private boolean field_j;
     private int field_i;
     private int field_a;
     static int field_c;
-    pb[] field_d;
+    Sprite[] field_d;
     private int field_f;
 
-    final db a(byte param0, pb[] param1) {
+    final db a(byte param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -47,7 +47,7 @@ final class db {
         return this;
     }
 
-    final void a(tc param0, db param1, int param2, int param3, rj param4, int param5) {
+    final void a(tc param0, db param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -158,9 +158,9 @@ final class db {
             if (var2 == 1) {
               ii.field_F = lj.field_C;
             } else {
-              ii.field_F = h.a(be.field_e, 0, new String[]{Integer.toString(var2)});
+              ii.field_F = h.a(MouseHandler.field_e, 0, new String[]{Integer.toString(var2)});
             }
-            ii.field_F = ei.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) nl.field_a)}, (byte) 127);
+            ii.field_F = ei.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
           }
           ei.field_G.o(3);
           qh.b(-21923);
@@ -236,7 +236,7 @@ final class db {
 
     final db b(int param0, int param1) {
         if (param0 != -2147483648) {
-          this.field_b = (pb) null;
+          this.field_b = (Sprite) null;
           this.field_a = param1;
           return this;
         }
@@ -255,8 +255,8 @@ final class db {
         this.field_f = -2147483648;
     }
 
-    final void a(int param0, tc param1, rj param2, int param3, int param4) {
-        bd stackIn_19_0 = null;
+    final void a(int param0, tc param1, UiWidget param2, int param3, int param4) {
+        BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_20_2 = 0;
         int stackIn_22_2 = 0;
@@ -297,7 +297,7 @@ final class db {
             this.field_b.e(var6_int, var7);
           }
           if (param3 != 2) {
-            this.field_d = (pb[]) null;
+            this.field_d = (Sprite[]) null;
           }
           var6 = param1.b(param2, 0);
           if (var6 != null &&
@@ -328,7 +328,7 @@ final class db {
             } else {
               stackIn_26_8 = this.field_f;
             }
-            ((bd) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_h, param1.field_d, param1.field_j);
+            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_h, param1.field_d, param1.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,15 +5,15 @@ final class al {
     static String field_a;
     static int field_c;
     static long field_b;
-    private ah field_d;
+    private DualLinkNode field_d;
     static bk field_f;
-    private ah field_g;
+    private DualLinkNode field_g;
     static String field_e;
 
     final int b(byte param0) {
         int var4 = stellarshard.field_B;
         int var2 = 0;
-        ah var3 = this.field_d.field_m;
+        DualLinkNode var3 = this.field_d.field_m;
         if (param0 != -7) {
           field_c = -85;
           while (this.field_d != var3) {
@@ -29,8 +29,8 @@ final class al {
         return var2;
     }
 
-    final ah a(byte param0) {
-        ah var2 = this.field_d.field_m;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_d.field_m;
         if (param0 < 57) {
           field_e = (String) null;
           if (var2 != this.field_d) {
@@ -46,7 +46,7 @@ final class al {
         return null;
     }
 
-    final void a(byte param0, ah param1) {
+    final void a(byte param0, DualLinkNode param1) {
         try {
           if (param1.field_l != null) {
             param1.c((byte) 36);
@@ -72,11 +72,11 @@ final class al {
         field_e = null;
     }
 
-    final ah a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 > -94) {
-          return (ah) null;
+          return (DualLinkNode) null;
         }
-        ah var2 = this.field_g;
+        DualLinkNode var2 = this.field_g;
         if (var2 != this.field_d) {
           this.field_g = var2.field_m;
           return var2;
@@ -95,7 +95,7 @@ final class al {
         RuntimeException var1_ref = null;
         var4 = stellarshard.field_B;
         try {
-          var5 = gg.field_h;
+          var5 = IntrusiveNode.field_h;
           var1 = var5;
           var2 = 0;
           if (param0) {
@@ -120,8 +120,8 @@ final class al {
         }
     }
 
-    final ah a(boolean param0) {
-        ah var2 = this.field_d.field_m;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_d.field_m;
         if (var2 == this.field_d) {
           this.field_g = null;
           return null;
@@ -130,11 +130,11 @@ final class al {
           this.field_g = var2.field_m;
           return var2;
         }
-        return (ah) null;
+        return (DualLinkNode) null;
     }
 
     public al() {
-        this.field_d = new ah();
+        this.field_d = new DualLinkNode();
         this.field_d.field_l = this.field_d;
         this.field_d.field_m = this.field_d;
     }

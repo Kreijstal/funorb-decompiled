@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc extends rj {
+final class nc extends UiWidget {
     private int field_O;
-    private pb[] field_C;
+    private Sprite[] field_C;
     private int field_N;
-    private pb field_I;
+    private Sprite field_I;
     int field_K;
     private int field_M;
     static ek[] field_F;
-    private pb field_P;
+    private Sprite field_P;
     private int field_L;
     private int field_D;
     static int field_G;
@@ -18,17 +18,17 @@ final class nc extends rj {
     private int field_z;
     static pf field_y;
     static int field_H;
-    private pb field_E;
+    private Sprite field_E;
 
-    private final pb d(boolean param0) {
-        pb discarded$0 = null;
+    private final Sprite d(boolean param0) {
+        Sprite discarded$0 = null;
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = stellarshard.field_B;
         int var2 = this.field_t >> 1;
-        pb var3 = new pb(var2, this.field_t);
+        Sprite var3 = new Sprite(var2, this.field_t);
         if (param0) {
           discarded$0 = this.b(-65, -14, 113);
         }
@@ -70,7 +70,7 @@ final class nc extends rj {
         int var6 = param2 + this.field_k;
         this.a(var5, (byte) 46, var6, this.field_C[0]);
         if (this.field_K < 65536) {
-          gg.a(20, this.field_p + var5, var6, var6 + this.field_t, (this.field_K * this.field_p >> 16) + var5);
+          IntrusiveNode.a(20, this.field_p + var5, var6, var6 + this.field_t, (this.field_K * this.field_p >> 16) + var5);
           this.a(var5, (byte) 46, var6, this.field_C[1]);
           id.b((byte) -58);
         }
@@ -93,24 +93,24 @@ final class nc extends rj {
     }
 
     private final void a(int param0) {
-        this.field_C = new pb[]{this.b(this.field_L, this.field_D, 0), this.b(this.field_N, this.field_O, 0)};
+        this.field_C = new Sprite[]{this.b(this.field_L, this.field_D, 0), this.b(this.field_N, this.field_O, 0)};
         this.field_P = this.d(false);
         if (param0 != 15035) {
           return;
         }
         this.field_E = this.field_P.f();
-        this.field_I = new pb(this.field_t >> 1, this.field_t);
+        this.field_I = new Sprite(this.field_t >> 1, this.field_t);
     }
 
     final static void b(byte param0, int param1, int param2) {
-        wg.field_c = param2;
+        ClientException.field_c = param2;
         if (param0 != 98) {
           field_H = -55;
         }
         vk.field_b = param1;
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -176,7 +176,7 @@ final class nc extends rj {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, pb param3) {
+    private final void a(int param0, byte param1, int param2, Sprite param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -189,10 +189,10 @@ final class nc extends rj {
         var8 = stellarshard.field_B;
         try {
           if (param1 != 46) {
-            this.field_C = (pb[]) null;
+            this.field_C = (Sprite[]) null;
           }
           var5_int = param0 + this.field_p;
-          gg.a(42, var5_int - this.field_P.field_v, param2, this.field_t + param2, this.field_P.field_v + param0);
+          IntrusiveNode.a(42, var5_int - this.field_P.field_v, param2, this.field_t + param2, this.field_P.field_v + param0);
           for (var6 = -this.field_z + param0; var6 < var5_int; var6 = var6 + param3.field_v) {
             param3.e(var6, param2);
           }
@@ -231,7 +231,7 @@ final class nc extends rj {
         }
     }
 
-    private final pb b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -240,7 +240,7 @@ final class nc extends rj {
         int var11 = 0;
         int var12 = 0;
         int var13 = stellarshard.field_B;
-        pb var14 = new pb(this.field_M * 2, this.field_t);
+        Sprite var14 = new Sprite(this.field_M * 2, this.field_t);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;

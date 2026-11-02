@@ -242,7 +242,7 @@ final class of extends dg {
         return wf.field_b;
     }
 
-    final void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         int var8 = 0;
         dl var9 = null;
         RuntimeException stackIn_10_0 = null;
@@ -285,7 +285,7 @@ final class of extends dg {
         }
     }
 
-    private of(int param0, int param1, int param2, int param3, uk param4, lf param5, rj param6) {
+    private of(int param0, int param1, int param2, int param3, uk param4, lf param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_y = param6;
@@ -305,7 +305,7 @@ final class of extends dg {
           if (param1 != 113) {
             field_A = 45;
           }
-          stackIn_3_0 = rc.a(false, 10, param0);
+          stackIn_3_0 = NanoFrameTimer.a(false, 10, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

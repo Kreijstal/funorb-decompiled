@@ -26,11 +26,11 @@ final class wd {
             return false;
           }
           var8 = new jg(na.field_d, param6);
-          na.field_d.a((byte) 84, (rj) (var8));
+          na.field_d.a((byte) 84, (UiWidget) (var8));
           if (param2 != 5) {
             field_d = -43;
           }
-          if (ah.d(-12171)) {
+          if (DualLinkNode.d(-12171)) {
             var8.p(87);
             return true;
           }
@@ -38,8 +38,8 @@ final class wd {
           o.field_l = dj.field_a;
           u.field_k = param0;
           lc.field_p = param5;
-          hi.field_d = null;
-          qe.field_o = param1;
+          DelegatingCanvas.field_d = null;
+          GameEntity.field_o = param1;
           kc.field_c = param4;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

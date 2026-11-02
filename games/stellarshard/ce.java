@@ -8,7 +8,7 @@ final class ce {
     static int field_b;
     static int field_d;
     static String field_g;
-    static pb field_a;
+    static Sprite field_a;
     private static String field_z;
 
     public static void a(byte param0) {

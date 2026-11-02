@@ -4,12 +4,12 @@
 final class cl {
     static int field_a;
 
-    final static pb a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = stellarshard.field_B;
         int var4 = -71 % ((param1 - 61) / 52);
-        pb var7 = new pb(param2, param2);
-        pb var3 = var7;
+        Sprite var7 = new Sprite(param2, param2);
+        Sprite var3 = var7;
         for (var5 = 0; var3.field_z.length > var5; var5++) {
           var7.field_z[var5] = param0;
         }
@@ -33,8 +33,8 @@ final class cl {
         try {
           ki.field_v = ki.field_v + 1;
           if (vk.field_b == -1 &&
-            -1 == wg.field_c) {
-            wg.field_c = eb.field_a;
+            -1 == ClientException.field_c) {
+            ClientException.field_c = KeyHandler.field_a;
             vk.field_b = ni.field_e;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -75,14 +75,14 @@ final class cl {
             } else {
               wk.field_c = false;
             }
-            h.field_c = wg.field_c;
+            h.field_c = ClientException.field_c;
           }
           if (!wk.field_c &&
             pc.field_g > ki.field_v &&
             qc.field_a) {
             am.field_f = vk.field_b;
             ki.field_v = 0;
-            h.field_c = wg.field_c;
+            h.field_c = ClientException.field_c;
           }
           hk.field_m = param0;
           if (wk.field_c &&
@@ -91,7 +91,7 @@ final class cl {
             wk.field_c = false;
           }
           vk.field_b = -1;
-          wg.field_c = -1;
+          ClientException.field_c = -1;
           if (param1 > 79) {
             return;
           }

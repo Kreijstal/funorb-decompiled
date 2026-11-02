@@ -13,7 +13,7 @@ final class bb implements uk {
     static String field_h;
     private int field_q;
     private int field_b;
-    private bd field_g;
+    private BitmapFont field_g;
     static li field_m;
     private int field_n;
     private int field_i;
@@ -34,8 +34,8 @@ final class bb implements uk {
         field_m = null;
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
-        rj stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -50,7 +50,7 @@ final class bb implements uk {
           if (!(param3 instanceof nd)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (rj) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var11 = (nd) (stackIn_3_0);
           if (var11 != null) {
@@ -102,7 +102,7 @@ final class bb implements uk {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new nf(param0, param6, param3, param1, param8, param2, param5);
-          wb.field_f.b(-113, var9);
+          wb.field_f.addLast(-113, var9);
           if (param7 != 0) {
             stackIn_2_0 = (nf) null;
             return stackIn_2_0;
@@ -124,7 +124,7 @@ final class bb implements uk {
         }
     }
 
-    bb(bd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    bb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_p = 1;
         this.field_n = 1;
         try {
