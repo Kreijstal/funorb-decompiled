@@ -5,10 +5,10 @@ import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
     static hl field_f;
-    IntrusiveNode[] field_d;
+    IntrusiveNode[] buckets;
     private IntrusiveNode field_g;
     static java.awt.Frame field_h;
-    int field_i;
+    int bucketCount;
     static String field_c;
     static int field_e;
     static volatile int field_a;
@@ -33,7 +33,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param2) {
             this.field_g = (IntrusiveNode) null;
           }
-          var5 = this.field_d[(int)(param0 & (long)(-1 + this.field_i))];
+          var5 = this.buckets[(int)(param0 & (long)(-1 + this.bucketCount))];
           param1.next = var5;
           param1.previous = var5.previous;
           param1.previous.next = param1;
@@ -47,7 +47,7 @@ final class IterableNodeHashTable implements Iterable {
     final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var6 = null;
         int var7 = TetraLink.field_J;
-        IntrusiveNode var4 = this.field_d[(int)((long)(-1 + this.field_i) & param0)];
+        IntrusiveNode var4 = this.buckets[(int)((long)(-1 + this.bucketCount) & param0)];
         int var5 = -105 % ((param1 - 41) / 63);
         this.field_g = var4.next;
         while (var4 != this.field_g) {
@@ -70,12 +70,12 @@ final class IterableNodeHashTable implements Iterable {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
-        this.field_i = param0;
-        this.field_d = new IntrusiveNode[param0];
+        this.bucketCount = param0;
+        this.buckets = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
-          this.field_d[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.next = var3;
           var3.previous = var3;
         }

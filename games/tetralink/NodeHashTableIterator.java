@@ -98,20 +98,20 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = TetraLink.field_J;
-        if (this.field_e.field_d[-1 + this.field_g] != this.field_f) {
+        if (this.field_e.buckets[-1 + this.field_g] != this.field_f) {
           var1 = this.field_f;
           this.field_f = var1.next;
           this.field_d = var1;
           return var1;
         }
         do {
-          if (this.field_g >= this.field_e.field_i) {
+          if (this.field_g >= this.field_e.bucketCount) {
             return null;
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          var1 = this.field_e.field_d[fieldTemp$0].next;
-        } while (this.field_e.field_d[this.field_g - 1] == var1);
+          var1 = this.field_e.buckets[fieldTemp$0].next;
+        } while (this.field_e.buckets[this.field_g - 1] == var1);
         this.field_f = var1.next;
         this.field_d = var1;
         return var1;
@@ -121,17 +121,17 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = TetraLink.field_J;
-        if (this.field_e.field_d[this.field_g - 1] != this.field_f) {
+        if (this.field_e.buckets[this.field_g - 1] != this.field_f) {
           return true;
         }
-        while (this.field_e.field_i > this.field_g) {
+        while (this.field_e.bucketCount > this.field_g) {
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          if (this.field_e.field_d[fieldTemp$0].next != this.field_e.field_d[-1 + this.field_g]) {
-            this.field_f = this.field_e.field_d[this.field_g - 1].next;
+          if (this.field_e.buckets[fieldTemp$0].next != this.field_e.buckets[-1 + this.field_g]) {
+            this.field_f = this.field_e.buckets[this.field_g - 1].next;
             return true;
           }
-          this.field_f = this.field_e.field_d[-1 + this.field_g];
+          this.field_f = this.field_e.buckets[-1 + this.field_g];
         }
         return false;
     }
@@ -146,7 +146,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     private final void a(int param0) {
-        this.field_f = this.field_e.field_d[0].next;
+        this.field_f = this.field_e.buckets[0].next;
         this.field_g = 1;
         this.field_d = null;
         if (param0 != -1) {

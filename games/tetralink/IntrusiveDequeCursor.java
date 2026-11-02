@@ -4,28 +4,28 @@
 final class IntrusiveDequeCursor {
     static long field_a;
     static String field_d;
-    private IntrusiveDeque field_e;
-    private IntrusiveNode field_b;
+    private IntrusiveDeque deque;
+    private IntrusiveNode current;
     static volatile int field_f;
     static String field_c;
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode previous(byte param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
         IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_b;
-          if (this.field_e.field_c == var2) {
-            this.field_b = null;
+          var2 = this.current;
+          if (this.deque.sentinel == var2) {
+            this.current = null;
             stackIn_2_0 = null;
             return (IntrusiveNode) (stackIn_2_0);
           }
           if (param0 != -66) {
             field_c = (String) null;
           }
-          this.field_b = var2.previous;
+          this.current = var2.previous;
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -35,23 +35,23 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode first(boolean param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
         IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_c.next;
-          if (var2 == this.field_e.field_c) {
-            this.field_b = null;
+          var2 = this.deque.sentinel.next;
+          if (var2 == this.deque.sentinel) {
+            this.current = null;
             stackIn_4_0 = null;
             return (IntrusiveNode) (stackIn_4_0);
           }
           if (!param0) {
-            this.b(63);
+            this.last(63);
           }
-          this.field_b = var2.next;
+          this.current = var2.next;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,20 +74,20 @@ final class IntrusiveDequeCursor {
           if (param1 != null) {
             var3 = param1;
             if (TetraLink.field_J != 0) {
-              var3 = this.field_e.field_c.previous;
+              var3 = this.deque.sentinel.previous;
             }
           } else {
-            var3 = this.field_e.field_c.previous;
+            var3 = this.deque.sentinel.previous;
           }
-          if (this.field_e.field_c == var3) {
-            this.field_b = null;
+          if (this.deque.sentinel == var3) {
+            this.current = null;
             stackIn_7_0 = null;
             return (IntrusiveNode) (stackIn_7_0);
           }
           if (!param0) {
             field_c = (String) null;
           }
-          this.field_b = var3.previous;
+          this.current = var3.previous;
           stackIn_12_0 = var3;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,15 +116,15 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == param1) {
-            var3 = this.field_e.field_c.next;
+            var3 = this.deque.sentinel.next;
             if (TetraLink.field_J != 0) {
               var3 = param1;
             }
           } else {
             var3 = param1;
           }
-          if (var3 == this.field_e.field_c) {
-            this.field_b = null;
+          if (var3 == this.deque.sentinel) {
+            this.current = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
           }
@@ -132,7 +132,7 @@ final class IntrusiveDequeCursor {
             stackIn_8_0 = (IntrusiveNode) null;
             return stackIn_8_0;
           }
-          this.field_b = var3.next;
+          this.current = var3.next;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -149,23 +149,23 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode next(byte param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_7_0 = null;
         IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_b;
+          var2 = this.current;
           if (param0 != -58) {
             IntrusiveDequeCursor.a(87);
           }
-          if (this.field_e.field_c == var2) {
-            this.field_b = null;
+          if (this.deque.sentinel == var2) {
+            this.current = null;
             stackIn_7_0 = null;
             return (IntrusiveNode) (stackIn_7_0);
           }
-          this.field_b = var2.next;
+          this.current = var2.next;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -183,13 +183,13 @@ final class IntrusiveDequeCursor {
         IntrusiveNode stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_c.previous;
-          if (var2 == this.field_e.field_c) {
-            this.field_b = null;
+          var2 = this.deque.sentinel.previous;
+          if (var2 == this.deque.sentinel) {
+            this.current = null;
             stackIn_2_0 = null;
             return (IntrusiveNode) (stackIn_2_0);
           }
-          this.field_b = var2.previous;
+          this.current = var2.previous;
           var3 = -100 / ((param0 - 40) / 42);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -207,7 +207,7 @@ final class IntrusiveDequeCursor {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = param0;
+          this.deque = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

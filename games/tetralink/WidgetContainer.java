@@ -8,13 +8,13 @@ final class WidgetContainer extends en {
     final void i(int param0) {
         int var4 = TetraLink.field_J;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
-        ld var3 = (ld) (var2.a(true));
+        ld var3 = (ld) (var2.first(true));
         if (param0 != 0) {
           return;
         }
         while (var3 != null) {
           var3.field_K = false;
-          var3 = (ld) (var2.b((byte) -58));
+          var3 = (ld) (var2.next((byte) -58));
         }
         this.field_J = null;
     }
@@ -43,12 +43,12 @@ final class WidgetContainer extends en {
         if (param0 != 0) {
           return;
         }
-        ld var3 = (ld) (var2.a(true));
+        ld var3 = (ld) (var2.first(true));
         while (var3 != null) {
           if (var3.l(~param0)) {
             var3.unlink(false);
           }
-          var3 = (ld) (var2.b((byte) -58));
+          var3 = (ld) (var2.next((byte) -58));
         }
         this.field_J = (UiWidget) ((Object) this.a(false));
     }
@@ -59,7 +59,7 @@ final class WidgetContainer extends en {
         int var4;
         var4 = TetraLink.field_J;
         var2 = new IntrusiveDequeCursor(this.field_N);
-        var3 = (ld) (var2.a(true));
+        var3 = (ld) (var2.first(true));
         if (param0) {
           this.i(85);
         }
@@ -67,7 +67,7 @@ final class WidgetContainer extends en {
           if (var3.field_K) {
             return var3;
           }
-          var3 = (ld) (var2.b((byte) -58));
+          var3 = (ld) (var2.next((byte) -58));
         }
         return null;
     }
@@ -200,7 +200,7 @@ final class WidgetContainer extends en {
         UiWidget var5;
         var4 = TetraLink.field_J;
         var2 = new IntrusiveDequeCursor(this.field_N);
-        var3 = (ld) (var2.a(true));
+        var3 = (ld) (var2.first(true));
         if (param0 != 9) {
           var5 = (UiWidget) null;
           this.a((UiWidget) null, true);
@@ -209,7 +209,7 @@ final class WidgetContainer extends en {
           if (var3.field_K) {
             return var3.d((byte) 5);
           }
-          var3 = (ld) (var2.b((byte) -58));
+          var3 = (ld) (var2.next((byte) -58));
         }
         return null;
     }
@@ -223,10 +223,10 @@ final class WidgetContainer extends en {
         if (param0 != 0) {
           return;
         }
-        UiWidget var6 = (UiWidget) (var5.b(param0 ^ -115));
+        UiWidget var6 = (UiWidget) (var5.last(param0 ^ -115));
         while (var6 != null) {
           var6.a(0, param1 + this.field_t, param2 + this.field_w, param3);
-          var6 = (UiWidget) (var5.a((byte) -66));
+          var6 = (UiWidget) (var5.previous((byte) -66));
         }
     }
 
@@ -236,12 +236,12 @@ final class WidgetContainer extends en {
         if (param0 != -110) {
           this.a(18, -69, -122, 50);
         }
-        ld var3 = (ld) (var2.a(true));
+        ld var3 = (ld) (var2.first(true));
         while (var3 != null) {
           if (var3.h(param0 ^ -652390206)) {
             var3.unlink(false);
           }
-          var3 = (ld) (var2.b((byte) -58));
+          var3 = (ld) (var2.next((byte) -58));
         }
     }
 

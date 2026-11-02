@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DualLinkDeque {
-    private DualLinkNode field_d;
+    private DualLinkNode sentinel;
     static boolean field_a;
     static Archive field_f;
     private DualLinkNode field_c;
@@ -12,8 +12,8 @@ final class DualLinkDeque {
     final int size(int param0) {
         int var4 = TetraLink.field_J;
         int var2 = param0;
-        DualLinkNode var3 = this.field_d.secondaryNext;
-        while (var3 != this.field_d) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        while (var3 != this.sentinel) {
           var3 = var3.secondaryNext;
           var2++;
         }
@@ -43,7 +43,7 @@ final class DualLinkDeque {
 
     final DualLinkNode a(boolean param0) {
         DualLinkNode var2 = this.field_c;
-        if (this.field_d == var2) {
+        if (this.sentinel == var2) {
           this.field_c = null;
           return null;
         }
@@ -58,8 +58,8 @@ final class DualLinkDeque {
 
     final DualLinkNode a(byte param0) {
         int var2 = 15 % ((param0 - 20) / 62);
-        DualLinkNode var3 = this.field_d.secondaryNext;
-        if (var3 != this.field_d) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        if (var3 != this.sentinel) {
           this.field_c = var3.secondaryNext;
           return var3;
         }
@@ -71,8 +71,8 @@ final class DualLinkDeque {
         if (param0 != -15464) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_d.secondaryNext;
-        if (var2 != this.field_d) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (var2 != this.sentinel) {
           var2.unlinkSecondary(0);
           return var2;
         }
@@ -92,9 +92,9 @@ final class DualLinkDeque {
     }
 
     public DualLinkDeque() {
-        this.field_d = new DualLinkNode();
-        this.field_d.secondaryNext = this.field_d;
-        this.field_d.secondaryPrevious = this.field_d;
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryNext = this.sentinel;
+        this.sentinel.secondaryPrevious = this.sentinel;
     }
 
     final void addLast(DualLinkNode param0, int param1) {
@@ -107,8 +107,8 @@ final class DualLinkDeque {
           if (null != param0.secondaryPrevious) {
             param0.unlinkSecondary(param1 + 0);
           }
-          param0.secondaryPrevious = this.field_d.secondaryPrevious;
-          param0.secondaryNext = this.field_d;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
           if (param1 == 0) {

@@ -31,7 +31,7 @@ class gn extends UiWidget implements nf {
         var10 = TetraLink.field_J;
         try {
           var8 = new IntrusiveDequeCursor(this.field_J);
-          var9 = (UiWidget) (var8.a(true));
+          var9 = (UiWidget) (var8.first(true));
           if (param0 != -19137) {
             return false;
           }
@@ -41,7 +41,7 @@ class gn extends UiWidget implements nf {
                 var9.a(-19137, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.b((byte) -58));
+              var9 = (UiWidget) (var8.next((byte) -58));
               continue;
             }
             break;
@@ -74,11 +74,11 @@ class gn extends UiWidget implements nf {
         try {
           super.a(param0, param1, param2, true);
           var5 = new IntrusiveDequeCursor(this.field_J);
-          var6 = (UiWidget) (var5.a(param3));
+          var6 = (UiWidget) (var5.first(param3));
           while (var6 != null) {
             if (var6.isLinked((byte) 95)) {
               var6.a(param0, this.field_t + param1, param2 + this.field_w, true);
-              var6 = (UiWidget) (var5.b((byte) -58));
+              var6 = (UiWidget) (var5.next((byte) -58));
               continue;
             }
             break;
@@ -118,14 +118,14 @@ class gn extends UiWidget implements nf {
             gn.d(true);
           }
           var5 = new IntrusiveDequeCursor(this.field_J);
-          var6 = (UiWidget) (var5.a(true));
+          var6 = (UiWidget) (var5.first(true));
           while (var6 != null) {
             discarded$3 = param1.append('\n');
             for (var7 = 0; param2 >= var7; var7++) {
               discarded$4 = param1.append(' ');
             }
             var6.a(param3, param1, 1 + param2, -372494750);
-            var6 = (UiWidget) (var5.b((byte) -58));
+            var6 = (UiWidget) (var5.next((byte) -58));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,13 +170,13 @@ class gn extends UiWidget implements nf {
           if (param1 != -384169950) {
             return true;
           }
-          var4 = (UiWidget) (var3.a(true));
+          var4 = (UiWidget) (var3.first(true));
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.a(param0, -384169950)) {
-              var4 = (UiWidget) (var3.b((byte) -58));
+              var4 = (UiWidget) (var3.next((byte) -58));
               continue;
             }
             break;
@@ -216,20 +216,20 @@ class gn extends UiWidget implements nf {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.field_J);
-          var4 = (UiWidget) (var3.a(true));
+          var4 = (UiWidget) (var3.first(true));
           while (var4 != null) {
             if (var4.c(3)) {
               var5 = new IntrusiveDequeCursor(this.field_J);
               var5.a(-106, var4);
-              var6 = (UiWidget) (var5.b((byte) -58));
+              var6 = (UiWidget) (var5.next((byte) -58));
               while (var6 != null) {
                 if (var6.a(param0, -384169950)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.b((byte) -58));
+                var6 = (UiWidget) (var5.next((byte) -58));
               }
             }
-            var4 = (UiWidget) (var3.b((byte) -58));
+            var4 = (UiWidget) (var3.next((byte) -58));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -249,10 +249,10 @@ class gn extends UiWidget implements nf {
     private final void g(int param0) {
         int var4 = TetraLink.field_J;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
-        UiWidget var3 = (UiWidget) (var2.a(true));
+        UiWidget var3 = (UiWidget) (var2.first(true));
         while (var3 != null) {
           var3.b((byte) 123);
-          var3 = (UiWidget) (var2.b((byte) -58));
+          var3 = (UiWidget) (var2.next((byte) -58));
         }
         if (param0 <= 39) {
           this.field_J = (IntrusiveDeque) null;
@@ -266,7 +266,7 @@ class gn extends UiWidget implements nf {
         int var5;
         var5 = TetraLink.field_J;
         var2 = new IntrusiveDequeCursor(this.field_J);
-        var3 = (UiWidget) (var2.a(true));
+        var3 = (UiWidget) (var2.first(true));
         if (param0 != 0) {
           this.field_J = (IntrusiveDeque) null;
         }
@@ -275,7 +275,7 @@ class gn extends UiWidget implements nf {
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiWidget) (var2.b((byte) -58));
+          var3 = (UiWidget) (var2.next((byte) -58));
         }
         return null;
     }
@@ -296,10 +296,10 @@ class gn extends UiWidget implements nf {
           this.field_H.a((UiWidget) (this), param1, param2, true, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_J);
-        UiWidget var6 = (UiWidget) (var5.b(param0 + 90));
+        UiWidget var6 = (UiWidget) (var5.last(param0 + 90));
         while (var6 != null) {
           var6.a(0, this.field_t + param1, param2 + this.field_w, param3);
-          var6 = (UiWidget) (var5.a((byte) -66));
+          var6 = (UiWidget) (var5.previous((byte) -66));
         }
     }
 
@@ -312,13 +312,13 @@ class gn extends UiWidget implements nf {
         var6 = TetraLink.field_J;
         var2 = 0;
         var3 = new IntrusiveDequeCursor(this.field_J);
-        var4 = (UiWidget) (var3.a(true));
+        var4 = (UiWidget) (var3.first(true));
         while (var4 != null) {
           var5 = var4.d(-128);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (UiWidget) (var3.b((byte) -58));
+          var4 = (UiWidget) (var3.next((byte) -58));
         }
         if (param0 > -114) {
           field_I = (hl) null;
@@ -335,12 +335,12 @@ class gn extends UiWidget implements nf {
           this.field_J = (IntrusiveDeque) null;
         }
         var2 = new IntrusiveDequeCursor(this.field_J);
-        var3 = (UiWidget) (var2.a(true));
+        var3 = (UiWidget) (var2.first(true));
         while (var3 != null) {
           if (var3.c(3)) {
             return var3;
           }
-          var3 = (UiWidget) (var2.b((byte) -58));
+          var3 = (UiWidget) (var2.next((byte) -58));
         }
         return null;
     }
@@ -429,20 +429,20 @@ class gn extends UiWidget implements nf {
           }
           var9 = new IntrusiveDequeCursor(this.field_J);
           var4 = 71 % ((-40 - param1) / 53);
-          var5 = (UiWidget) (var9.b(-55));
+          var5 = (UiWidget) (var9.last(-55));
           while (var5 != null) {
             if (var5.c(3)) {
               var6 = new IntrusiveDequeCursor(this.field_J);
               var6.a(true, var5);
-              var7 = (UiWidget) (var6.a((byte) -66));
+              var7 = (UiWidget) (var6.previous((byte) -66));
               while (var7 != null) {
                 if (var7.a(param0, -384169950)) {
                   return true;
                 }
-                var7 = (UiWidget) (var6.a((byte) -66));
+                var7 = (UiWidget) (var6.previous((byte) -66));
               }
             }
-            var5 = (UiWidget) (var9.a((byte) -66));
+            var5 = (UiWidget) (var9.previous((byte) -66));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -476,13 +476,13 @@ class gn extends UiWidget implements nf {
             var11 = (UiWidget) null;
             this.b((UiWidget) null, 58);
           }
-          var9 = (UiWidget) (var12.a(true));
+          var9 = (UiWidget) (var12.first(true));
           while (var9 != null) {
             if (var9.isLinked((byte) 95)) {
               if (var9.a(param0, param1 + this.field_t, param2, param3 + this.field_w, -32738, param5, param6)) {
                 return true;
               }
-              var9 = (UiWidget) (var12.b((byte) -58));
+              var9 = (UiWidget) (var12.next((byte) -58));
               continue;
             }
             break;
@@ -546,10 +546,10 @@ class gn extends UiWidget implements nf {
     final void f(int param0) {
         int var4 = TetraLink.field_J;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
-        UiWidget var3 = (UiWidget) (var2.a(true));
+        UiWidget var3 = (UiWidget) (var2.first(true));
         while (var3 != null) {
           var3.f(-126);
-          var3 = (UiWidget) (var2.b((byte) -58));
+          var3 = (UiWidget) (var2.next((byte) -58));
         }
         if (param0 >= -63) {
           this.field_J = (IntrusiveDeque) null;
@@ -580,11 +580,11 @@ class gn extends UiWidget implements nf {
             var10 = (UiWidget) null;
             this.a((UiWidget) null, 63, -119, false);
           }
-          var8 = (UiWidget) (var7.a(true));
+          var8 = (UiWidget) (var7.first(true));
           while (var8 != null) {
             if (var8.isLinked((byte) 95)) {
               var8.a(param0, false, param2, param3 + this.field_w, param4, param5 + this.field_t);
-              var8 = (UiWidget) (var7.b((byte) -58));
+              var8 = (UiWidget) (var7.next((byte) -58));
               continue;
             }
             break;
@@ -621,14 +621,14 @@ class gn extends UiWidget implements nf {
             return false;
           }
           var9 = new IntrusiveDequeCursor(this.field_J);
-          var8 = (UiWidget) (var9.a(true));
+          var8 = (UiWidget) (var9.first(true));
           while (var8 != null) {
             if (var8.isLinked((byte) 95)) {
               if (var8.c(3) &&
                 var8.a(param0, param1, 1, param3)) {
                 return true;
               }
-              var8 = (UiWidget) (var9.b((byte) -58));
+              var8 = (UiWidget) (var9.next((byte) -58));
               continue;
             }
             break;
