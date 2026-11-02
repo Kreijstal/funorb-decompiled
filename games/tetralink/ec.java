@@ -30,8 +30,8 @@ final class ec {
           if (param0 == null) {
             return;
           }
-          param0.b(false);
-          param0.e(0);
+          param0.unlink(false);
+          param0.unlinkSecondary(0);
           this.field_c = this.field_c + param0.field_t;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class ec {
     }
 
     private final void a(int param0, long param1) {
-        mb var4 = (mb) (this.field_m.a(param1, 111));
+        mb var4 = (mb) (this.field_m.get(param1, 111));
         if (param0 < 22) {
           return;
         }
@@ -116,15 +116,15 @@ final class ec {
 
     final Object a(byte param0, long param1) {
         wc var6 = null;
-        mb var7 = (mb) (this.field_m.a(param1, 116));
+        mb var7 = (mb) (this.field_m.get(param1, 116));
         wc var6Lifetime1;
         if (var7 == null) {
           return null;
         }
         Object var5 = var7.g(22850);
         if (var5 == null) {
-          var7.b(false);
-          var7.e(0);
+          var7.unlink(false);
+          var7.unlinkSecondary(0);
           this.field_c = this.field_c + var7.field_t;
           return null;
         }
@@ -136,11 +136,11 @@ final class ec {
             return var5;
           }
           var6 = new wc(var5, var7.field_t);
-          this.field_m.a(var7.key, var6, false);
+          this.field_m.put(var7.key, var6, false);
           this.field_o.a((byte) -85, var6);
           ((mb) ((Object) var6)).secondaryKey = 0L;
-          var7.b(false);
-          var7.e(0);
+          var7.unlink(false);
+          var7.unlinkSecondary(0);
           return var5;
         }
         if (!var7.f(105)) {
@@ -149,11 +149,11 @@ final class ec {
           return var5;
         }
         var6Lifetime1 = new wc(var5, var7.field_t);
-        this.field_m.a(var7.key, var6Lifetime1, false);
+        this.field_m.put(var7.key, var6Lifetime1, false);
         this.field_o.a((byte) -85, var6Lifetime1);
         ((mb) ((Object) var6Lifetime1)).secondaryKey = 0L;
-        var7.b(false);
-        var7.e(0);
+        var7.unlink(false);
+        var7.unlinkSecondary(0);
         return var5;
     }
 
@@ -189,7 +189,7 @@ final class ec {
             this.a(var6, param0 ^ -122);
           }
           var6_ref = new wc(param1, param3);
-          this.field_m.a(param2, var6_ref, false);
+          this.field_m.put(param2, var6_ref, false);
           this.field_o.a((byte) -14, var6_ref);
           ((mb) ((Object) var6_ref)).secondaryKey = (long)param0;
         } catch (RuntimeException runtimeException) {

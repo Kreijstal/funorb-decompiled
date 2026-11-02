@@ -460,7 +460,7 @@ final class r extends PcmStream {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = TetraLink.field_J;
-        id.field_M.field_Pb.field_fb.b(1);
+        id.field_M.field_Pb.field_fb.clear(1);
         var4 = null;
         var5 = 0;
         var6 = 0;

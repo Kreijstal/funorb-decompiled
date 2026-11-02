@@ -64,14 +64,14 @@ final class ge {
         int var3;
         this.field_a = new ql[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.d((byte) -99);
+          var3 = param0.readUnsignedByte((byte) -99);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_a[var2] = new ql();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.e(127);
-        this.field_b = param0.e(127);
+        this.field_c = param0.readUnsignedShort(127);
+        this.field_b = param0.readUnsignedShort(127);
     }
 }

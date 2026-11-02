@@ -308,24 +308,24 @@ final class kc extends vh {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var2.position = param0.length - 23;
-        var9 = var2.e(127);
-        var10 = var2.e(127);
-        var11 = var2.d((byte) -99);
-        var12 = var2.d((byte) -99);
+        var9 = var2.readUnsignedShort(127);
+        var10 = var2.readUnsignedShort(127);
+        var11 = var2.readUnsignedByte((byte) -99);
+        var12 = var2.readUnsignedByte((byte) -99);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
         var13 = stackIn_3_0;
         stackIn_6_0 = ((var12 & 2) != 2) ? 0 : 1;
         var14 = stackIn_6_0;
-        var15 = var2.d((byte) -99);
-        var16 = var2.d((byte) -99);
-        var17 = var2.d((byte) -99);
-        var18 = var2.d((byte) -99);
-        var19 = var2.d((byte) -99);
-        var20 = var2.e(127);
-        var21 = var2.e(127);
-        var22 = var2.e(127);
-        var23 = var2.e(127);
-        var24 = var2.e(127);
+        var15 = var2.readUnsignedByte((byte) -99);
+        var16 = var2.readUnsignedByte((byte) -99);
+        var17 = var2.readUnsignedByte((byte) -99);
+        var18 = var2.readUnsignedByte((byte) -99);
+        var19 = var2.readUnsignedByte((byte) -99);
+        var20 = var2.readUnsignedShort(127);
+        var21 = var2.readUnsignedShort(127);
+        var22 = var2.readUnsignedShort(127);
+        var23 = var2.readUnsignedShort(127);
+        var24 = var2.readUnsignedShort(127);
         var25 = 0;
         var26 = 0;
         var27 = 0;
@@ -333,7 +333,7 @@ final class kc extends vh {
           this.field_v = new byte[var11];
           var2.position = 0;
           for (var28 = 0; var28 < var11; var28++) {
-            dupTemp$0 = var2.g(-1772093437);
+            dupTemp$0 = var2.readSignedByte(-1772093437);
             this.field_v[var28] = dupTemp$0;
             var29 = dupTemp$0;
             if (var29 == 0) {
@@ -462,7 +462,7 @@ final class kc extends vh {
         var51 = 0;
         var52 = 0;
         for (var53 = 0; var53 < var9; var53++) {
-          var54 = var2.d((byte) -99);
+          var54 = var2.readUnsignedByte((byte) -99);
           var55 = 0;
           if ((var54 & 1) != 0) {
             var55 = var3.e((byte) 82);
@@ -482,7 +482,7 @@ final class kc extends vh {
           var51 = this.field_h[var53];
           var52 = this.field_g[var53];
           if (var19 == 1) {
-            this.field_G[var53] = var6.d((byte) -99);
+            this.field_G[var53] = var6.readUnsignedByte((byte) -99);
           }
         }
         var2.position = var39;
@@ -493,27 +493,27 @@ final class kc extends vh {
         var7.position = var37;
         var8.position = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
-          this.field_H[var53Lifetime1] = (short)var2.e(127);
+          this.field_H[var53Lifetime1] = (short)var2.readUnsignedShort(127);
           if (var13 != 0) {
-            this.field_J[var53Lifetime1] = var3.g(-1772093437);
+            this.field_J[var53Lifetime1] = var3.readSignedByte(-1772093437);
           }
           if (var15 == 255) {
-            this.field_z[var53Lifetime1] = var4.g(-1772093437);
+            this.field_z[var53Lifetime1] = var4.readSignedByte(-1772093437);
           }
           if (var16 == 1) {
-            this.field_m[var53Lifetime1] = var5.g(-1772093437);
+            this.field_m[var53Lifetime1] = var5.readSignedByte(-1772093437);
           }
           if (var17 == 1) {
-            this.field_p[var53Lifetime1] = var6.d((byte) -99);
+            this.field_p[var53Lifetime1] = var6.readUnsignedByte((byte) -99);
           }
           if (var18 == 1) {
-            this.field_u[var53Lifetime1] = (short)(var7.e(127) - 1);
+            this.field_u[var53Lifetime1] = (short)(var7.readUnsignedShort(127) - 1);
           }
           if (this.field_q != null) {
             if (this.field_u[var53Lifetime1] == -1) {
               this.field_q[var53Lifetime1] = (byte)-1;
             } else {
-              this.field_q[var53Lifetime1] = (byte)(var8.d((byte) -99) - 1);
+              this.field_q[var53Lifetime1] = (byte)(var8.readUnsignedByte((byte) -99) - 1);
             }
           }
         }
@@ -525,7 +525,7 @@ final class kc extends vh {
         var55Lifetime1 = 0;
         var56Lifetime1 = 0;
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
-          var58 = var3.d((byte) -99);
+          var58 = var3.readUnsignedByte((byte) -99);
           if (var58 == 1) {
             var53Lifetime2 = var2.e((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
@@ -592,53 +592,53 @@ final class kc extends vh {
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_v[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
-            this.field_k[var57Lifetime2] = (short)var2.e(127);
-            this.field_N[var57Lifetime2] = (short)var2.e(127);
-            this.field_Q[var57Lifetime2] = (short)var2.e(127);
+            this.field_k[var57Lifetime2] = (short)var2.readUnsignedShort(127);
+            this.field_N[var57Lifetime2] = (short)var2.readUnsignedShort(127);
+            this.field_Q[var57Lifetime2] = (short)var2.readUnsignedShort(127);
           }
           if (var58Lifetime1 == 1) {
-            this.field_k[var57Lifetime2] = (short)var3.e(127);
-            this.field_N[var57Lifetime2] = (short)var3.e(127);
-            this.field_Q[var57Lifetime2] = (short)var3.e(127);
-            this.field_L[var57Lifetime2] = (short)var4.e(127);
-            this.field_D[var57Lifetime2] = (short)var4.e(127);
-            this.field_l[var57Lifetime2] = (short)var4.e(127);
-            this.field_S[var57Lifetime2] = var5.g(-1772093437);
-            this.field_x[var57Lifetime2] = var6.g(-1772093437);
-            this.field_n[var57Lifetime2] = var7.g(-1772093437);
+            this.field_k[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_N[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_Q[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_L[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_D[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_l[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_S[var57Lifetime2] = var5.readSignedByte(-1772093437);
+            this.field_x[var57Lifetime2] = var6.readSignedByte(-1772093437);
+            this.field_n[var57Lifetime2] = var7.readSignedByte(-1772093437);
           }
           if (var58Lifetime1 == 2) {
-            this.field_k[var57Lifetime2] = (short)var3.e(127);
-            this.field_N[var57Lifetime2] = (short)var3.e(127);
-            this.field_Q[var57Lifetime2] = (short)var3.e(127);
-            this.field_L[var57Lifetime2] = (short)var4.e(127);
-            this.field_D[var57Lifetime2] = (short)var4.e(127);
-            this.field_l[var57Lifetime2] = (short)var4.e(127);
-            this.field_S[var57Lifetime2] = var5.g(-1772093437);
-            this.field_x[var57Lifetime2] = var6.g(-1772093437);
-            this.field_n[var57Lifetime2] = var7.g(-1772093437);
-            this.field_M[var57Lifetime2] = var7.g(-1772093437);
-            this.field_F[var57Lifetime2] = var7.g(-1772093437);
+            this.field_k[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_N[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_Q[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_L[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_D[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_l[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_S[var57Lifetime2] = var5.readSignedByte(-1772093437);
+            this.field_x[var57Lifetime2] = var6.readSignedByte(-1772093437);
+            this.field_n[var57Lifetime2] = var7.readSignedByte(-1772093437);
+            this.field_M[var57Lifetime2] = var7.readSignedByte(-1772093437);
+            this.field_F[var57Lifetime2] = var7.readSignedByte(-1772093437);
           }
           if (var58Lifetime1 == 3) {
-            this.field_k[var57Lifetime2] = (short)var3.e(127);
-            this.field_N[var57Lifetime2] = (short)var3.e(127);
-            this.field_Q[var57Lifetime2] = (short)var3.e(127);
-            this.field_L[var57Lifetime2] = (short)var4.e(127);
-            this.field_D[var57Lifetime2] = (short)var4.e(127);
-            this.field_l[var57Lifetime2] = (short)var4.e(127);
-            this.field_S[var57Lifetime2] = var5.g(-1772093437);
-            this.field_x[var57Lifetime2] = var6.g(-1772093437);
-            this.field_n[var57Lifetime2] = var7.g(-1772093437);
+            this.field_k[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_N[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_Q[var57Lifetime2] = (short)var3.readUnsignedShort(127);
+            this.field_L[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_D[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_l[var57Lifetime2] = (short)var4.readUnsignedShort(127);
+            this.field_S[var57Lifetime2] = var5.readSignedByte(-1772093437);
+            this.field_x[var57Lifetime2] = var6.readSignedByte(-1772093437);
+            this.field_n[var57Lifetime2] = var7.readSignedByte(-1772093437);
           }
         }
         if (var14 != 0) {
           var2.position = var49;
-          var57Lifetime3 = var2.d((byte) -99);
+          var57Lifetime3 = var2.readUnsignedByte((byte) -99);
           if (var57Lifetime3 > 0) {
             var2.position = var2.position + 4 * var57Lifetime3;
           }
-          var58Lifetime2 = var2.d((byte) -99);
+          var58Lifetime2 = var2.readUnsignedByte((byte) -99);
           if (var58Lifetime2 > 0) {
             var2.position = var2.position + 4 * var58Lifetime2;
           }
@@ -709,18 +709,18 @@ final class kc extends vh {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var4.position = param0.length - 18;
-        var9 = var4.e(127);
-        var10 = var4.e(127);
-        var11 = var4.d((byte) -99);
-        var12 = var4.d((byte) -99);
-        var13 = var4.d((byte) -99);
-        var14 = var4.d((byte) -99);
-        var15 = var4.d((byte) -99);
-        var16 = var4.d((byte) -99);
-        var17 = var4.e(127);
-        var18 = var4.e(127);
-        var19 = var4.e(127);
-        var20 = var4.e(127);
+        var9 = var4.readUnsignedShort(127);
+        var10 = var4.readUnsignedShort(127);
+        var11 = var4.readUnsignedByte((byte) -99);
+        var12 = var4.readUnsignedByte((byte) -99);
+        var13 = var4.readUnsignedByte((byte) -99);
+        var14 = var4.readUnsignedByte((byte) -99);
+        var15 = var4.readUnsignedByte((byte) -99);
+        var16 = var4.readUnsignedByte((byte) -99);
+        var17 = var4.readUnsignedShort(127);
+        var18 = var4.readUnsignedShort(127);
+        var19 = var4.readUnsignedShort(127);
+        var20 = var4.readUnsignedShort(127);
         var21 = 0;
         var22 = var21;
         var21 = var21 + var9;
@@ -802,7 +802,7 @@ final class kc extends vh {
         var36 = 0;
         var37 = 0;
         for (var38 = 0; var38 < var9; var38++) {
-          var39 = var4.d((byte) -99);
+          var39 = var4.readUnsignedByte((byte) -99);
           var40 = 0;
           if ((var39 & 1) != 0) {
             var40 = var5.e((byte) 82);
@@ -822,7 +822,7 @@ final class kc extends vh {
           var36 = this.field_h[var38];
           var37 = this.field_g[var38];
           if (var16 == 1) {
-            this.field_G[var38] = var8.d((byte) -99);
+            this.field_G[var38] = var8.readUnsignedByte((byte) -99);
           }
         }
         var4.position = var30;
@@ -831,9 +831,9 @@ final class kc extends vh {
         var7.position = var28;
         var8.position = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
-          this.field_H[var38Lifetime1] = (short)var4.e(127);
+          this.field_H[var38Lifetime1] = (short)var4.readUnsignedShort(127);
           if (var12 == 1) {
-            var39Lifetime1 = var5.d((byte) -99);
+            var39Lifetime1 = var5.readUnsignedByte((byte) -99);
             if ((var39Lifetime1 & 1) != 1) {
               this.field_J[var38Lifetime1] = (byte) 0;
             } else {
@@ -853,13 +853,13 @@ final class kc extends vh {
             }
           }
           if (var13 == 255) {
-            this.field_z[var38Lifetime1] = var6.g(-1772093437);
+            this.field_z[var38Lifetime1] = var6.readSignedByte(-1772093437);
           }
           if (var14 == 1) {
-            this.field_m[var38Lifetime1] = var7.g(-1772093437);
+            this.field_m[var38Lifetime1] = var7.readSignedByte(-1772093437);
           }
           if (var15 == 1) {
-            this.field_p[var38Lifetime1] = var8.d((byte) -99);
+            this.field_p[var38Lifetime1] = var8.readUnsignedByte((byte) -99);
           }
         }
         this.field_E = -1;
@@ -870,7 +870,7 @@ final class kc extends vh {
         var40Lifetime1 = 0;
         var41Lifetime1 = 0;
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
-          var43 = var5.d((byte) -99);
+          var43 = var5.readUnsignedByte((byte) -99);
           if (var43 == 1) {
             var38Lifetime2 = var4.e((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
@@ -931,9 +931,9 @@ final class kc extends vh {
         var4.position = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_v[var42Lifetime2] = (byte) 0;
-          this.field_k[var42Lifetime2] = (short)var4.e(127);
-          this.field_N[var42Lifetime2] = (short)var4.e(127);
-          this.field_Q[var42Lifetime2] = (short)var4.e(127);
+          this.field_k[var42Lifetime2] = (short)var4.readUnsignedShort(127);
+          this.field_N[var42Lifetime2] = (short)var4.readUnsignedShort(127);
+          this.field_Q[var42Lifetime2] = (short)var4.readUnsignedShort(127);
         }
         if (this.field_q != null) {
           var42Lifetime3 = 0;

@@ -16,17 +16,17 @@ final class td {
 
     final void b(PacketBuffer param0) {
         int var2 = 0;
-        this.field_f = param0.d((byte) -99);
+        this.field_f = param0.readUnsignedByte((byte) -99);
         this.field_c = new int[this.field_f];
         this.field_d = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
-          this.field_c[var2] = param0.e(127);
-          this.field_d[var2] = param0.e(127);
+          this.field_c[var2] = param0.readUnsignedShort(127);
+          this.field_d[var2] = param0.readUnsignedShort(127);
         }
     }
 
     final void a(PacketBuffer param0) {
-        this.field_b = param0.d((byte) -99);
+        this.field_b = param0.readUnsignedByte((byte) -99);
         this.field_i = param0.f(97);
         this.field_j = param0.f(-108);
         this.b(param0);

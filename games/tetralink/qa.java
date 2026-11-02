@@ -50,15 +50,15 @@ final class qa extends DualLinkNode {
             this.g(-10);
           }
           if (param1 == 1) {
-            this.field_y = param0.g((byte) 81);
+            this.field_y = param0.readString((byte) 81);
           } else {
             if (param1 == 2) {
-              var4_int = param0.d((byte) -99);
+              var4_int = param0.readUnsignedByte((byte) -99);
               this.field_D = new char[var4_int];
               this.field_z = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_z[var5] = param0.e(param2 + 127);
-                var6 = param0.g(-1772093437);
+                this.field_z[var5] = param0.readUnsignedShort(param2 + 127);
+                var6 = param0.readSignedByte(-1772093437);
                 stackIn_9_0 = this.field_D;
                 stackIn_9_1 = var5;
                 if (var6 != 0) {
@@ -76,12 +76,12 @@ final class qa extends DualLinkNode {
                 this.field_w = true;
                 return;
               }
-              var4_int = param0.d((byte) -99);
+              var4_int = param0.readUnsignedByte((byte) -99);
               this.field_t = new int[var4_int];
               this.field_u = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_t[var5] = param0.e(127);
-                var6 = param0.g(-1772093437);
+                this.field_t[var5] = param0.readUnsignedShort(127);
+                var6 = param0.readSignedByte(-1772093437);
                 stackIn_16_0 = this.field_u;
                 stackIn_16_1 = var5;
                 if (0 == var6) {
@@ -240,7 +240,7 @@ final class qa extends DualLinkNode {
         var4 = TetraLink.field_J;
         try {
           while (true) {
-            var3_int = param0.d((byte) -99);
+            var3_int = param0.readUnsignedByte((byte) -99);
             if (var3_int != 0) {
               this.a(param0, var3_int, param1 ^ 0);
               continue;

@@ -13,7 +13,7 @@ final class SecondaryNodeDeque implements Iterable {
     final void a(byte param0, DualLinkNode param1) {
         try {
           if (param1.secondaryPrevious != null) {
-            param1.e(0);
+            param1.unlinkSecondary(0);
           }
           param1.secondaryPrevious = this.field_e.secondaryPrevious;
           int var3_int = -118 % ((31 - param0) / 42);
@@ -37,7 +37,7 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 > -70) {
           return (DualLinkNode) null;
         }
-        var2.e(0);
+        var2.unlinkSecondary(0);
         return var2;
     }
 

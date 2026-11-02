@@ -369,7 +369,7 @@ final class le extends hl {
         }
         if (null != this.field_Yb) {
           this.field_Yb.i(20424);
-          this.field_Yb.b(false);
+          this.field_Yb.unlink(false);
         }
         this.field_Yb = null;
         this.field_Zb = -1;

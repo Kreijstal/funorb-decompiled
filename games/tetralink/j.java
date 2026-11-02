@@ -38,24 +38,24 @@ final class j extends DualLinkNode {
           }
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               this.field_v = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_v[var5] = param2.e(127);
+                this.field_v[var5] = param2.readUnsignedShort(127);
               }
             } else if (param0 == 3) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               this.field_y = new int[var4_int];
               this.field_z = new int[var4_int][];
               for (var5 = 0; var5 < var4_int; var5++) {
-                var6 = param2.e(127);
+                var6 = param2.readUnsignedShort(127);
                 var7 = bj.a(0, var6);
                 if (var7 != null) {
                   this.field_y[var5] = var6;
                   array$0 = new int[var7.field_c];
                   this.field_z[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_c; var8++) {
-                    this.field_z[var5][var8] = param2.e(127);
+                    this.field_z[var5][var8] = param2.readUnsignedShort(127);
                   }
                 }
               }
@@ -65,7 +65,7 @@ final class j extends DualLinkNode {
               }
             }
           } else {
-            this.field_w = hi.a(param2.g((byte) 81), '<', 783);
+            this.field_w = hi.a(param2.readString((byte) 81), '<', 783);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ final class j extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.d((byte) -99);
+            var3_int = param0.readUnsignedByte((byte) -99);
             if (var3_int == 0) {
               return;
             }

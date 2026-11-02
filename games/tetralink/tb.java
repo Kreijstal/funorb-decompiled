@@ -49,7 +49,7 @@ final class tb {
             this.a(-64, (byte) 59, (PacketBuffer) null);
           }
           while (true) {
-            var3_int = param1.d((byte) -99);
+            var3_int = param1.readUnsignedByte((byte) -99);
             if (0 == var3_int) {
               return;
             }
@@ -114,80 +114,80 @@ final class tb {
             return;
           }
           if (param0 == 1) {
-            var4_int = param2.e(param1 + 132);
+            var4_int = param2.readUnsignedShort(param1 + 132);
             this.field_l = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_l[var5] = param2.e(127);
+              this.field_l[var5] = param2.readUnsignedShort(127);
             }
             this.field_f = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_f[var5] = param2.e(127);
+              this.field_f[var5] = param2.readUnsignedShort(127);
             }
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_f[var5] = (param2.e(127) << 16) + this.field_f[var5];
+              this.field_f[var5] = (param2.readUnsignedShort(127) << 16) + this.field_f[var5];
             }
           } else {
             if (param0 == 2) {
-              this.field_k = param2.e(127);
+              this.field_k = param2.readUnsignedShort(127);
               return;
             }
             if (param0 == 3) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               this.field_c = new int[var4_int + 1];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_c[var5] = param2.d((byte) -99);
+                this.field_c[var5] = param2.readUnsignedByte((byte) -99);
               }
               this.field_c[var4_int] = 9999999;
               return;
             }
             if (param0 == 5) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (param0 == 6) {
-              param2.e(127);
+              param2.readUnsignedShort(127);
               return;
             }
             if (param0 == 7) {
-              param2.e(127);
+              param2.readUnsignedShort(127);
               return;
             }
             if (8 == param0) {
-              this.field_b = param2.d((byte) -99);
+              this.field_b = param2.readUnsignedByte((byte) -99);
               this.field_i = false;
               return;
             }
             if (param0 == 9) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (param0 == 10) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (param0 == 11) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (12 == param0) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               for (var5 = 0; var5 < var4_int; var5++) {
-                param2.e(127);
+                param2.readUnsignedShort(127);
               }
               for (var5 = 0; var5 < var4_int; var5++) {
-                param2.e(param1 ^ -124);
+                param2.readUnsignedShort(param1 ^ -124);
               }
             } else if (13 == param0) {
-              var4_int = param2.e(127);
+              var4_int = param2.readUnsignedShort(127);
               this.field_a = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param2.d((byte) -99);
+                var6 = param2.readUnsignedByte((byte) -99);
                 if (var6 > 0) {
                   array$0 = new int[var6];
                   this.field_a[var5] = array$0;
-                  this.field_a[var5][0] = param2.d(-1);
+                  this.field_a[var5][0] = param2.readMedium(-1);
                   for (var7 = 1; var6 > var7; var7++) {
-                    this.field_a[var5][var7] = param2.e(127);
+                    this.field_a[var5][var7] = param2.readUnsignedShort(127);
                   }
                 }
               }

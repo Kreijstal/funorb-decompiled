@@ -583,7 +583,7 @@ class hl extends uk {
           if (this.field_fb == null) {
             this.field_fb = new IntrusiveDeque();
           }
-          this.field_fb.a(param1, false);
+          this.field_fb.addLast(param1, false);
           int var3_int = 56 % ((param0 + 38) / 47);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "hl.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

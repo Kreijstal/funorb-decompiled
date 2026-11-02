@@ -22,7 +22,7 @@ final class pl {
 
     final static cf a(int param0, byte param1) {
         cf var2 = new cf();
-        SecondaryNodeDequeIterator.field_a.a(var2, false);
+        SecondaryNodeDequeIterator.field_a.addLast(var2, false);
         int var3 = -10 % ((42 - param1) / 44);
         ei.a((byte) 53, param0);
         return var2;

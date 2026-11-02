@@ -29,7 +29,7 @@ final class WidgetContainer extends en {
             field_O = (RasterBuffer) null;
           }
           var3 = (ld) (param0);
-          this.field_N.a(var3, -25);
+          this.field_N.addFirst(var3, -25);
           var3.field_K = true;
           var3.a((UiWidget) (this), -384169950);
         } catch (RuntimeException runtimeException) {
@@ -46,7 +46,7 @@ final class WidgetContainer extends en {
         ld var3 = (ld) (var2.a(true));
         while (var3 != null) {
           if (var3.l(~param0)) {
-            var3.b(false);
+            var3.unlink(false);
           }
           var3 = (ld) (var2.b((byte) -58));
         }
@@ -98,7 +98,7 @@ final class WidgetContainer extends en {
             return stackIn_2_0;
           }
           var9 = new PacketBuffer(param0);
-          var3 = var9.d((byte) -99);
+          var3 = var9.readUnsignedByte((byte) -99);
           var4 = var9.f(-123);
           if (0 <= var4 && (0 == rj.field_g ||
             !(rj.field_g < var4))) {
@@ -239,7 +239,7 @@ final class WidgetContainer extends en {
         ld var3 = (ld) (var2.a(true));
         while (var3 != null) {
           if (var3.h(param0 ^ -652390206)) {
-            var3.b(false);
+            var3.unlink(false);
           }
           var3 = (ld) (var2.b((byte) -58));
         }

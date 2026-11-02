@@ -70,7 +70,7 @@ final class ul implements kg {
         var4 = TetraLink.field_J;
         try {
           var3 = 114 / ((param0 - 0) / 52);
-          param1.b(false);
+          param1.unlink(false);
           var2 = (gd) (gl.field_p.c(false));
           while (var2 != null) {
             if (var2.a((byte) -115, param1)) {
@@ -83,7 +83,7 @@ final class ul implements kg {
             cl.a(var2, -94, param1);
             return;
           }
-          gl.field_p.a(param1, false);
+          gl.field_p.addLast(param1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

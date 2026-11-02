@@ -277,8 +277,8 @@ final class ma {
             }
             break;
           }
-          var8.b(false);
-          var8.e(0);
+          var8.unlink(false);
+          var8.unlinkSecondary(0);
           qi.field_q = qi.field_q - 1;
           var9 = nd.field_Lb;
           var9.f(param2, (byte) -92);

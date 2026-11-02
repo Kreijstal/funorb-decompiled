@@ -113,7 +113,7 @@ final class af {
         var4Lifetime1 = new v();
         var4Lifetime1.field_n = param0;
         var4Lifetime1.field_q = param3;
-        tc.field_p.a(var4Lifetime1, false);
+        tc.field_p.addLast(var4Lifetime1, false);
         fd.a(-68, param2, var4Lifetime1);
         return var4Lifetime1;
     }

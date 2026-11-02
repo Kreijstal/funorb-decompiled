@@ -95,10 +95,10 @@ final class gd extends hl {
 
     final boolean d(byte param0) {
         if (param0 == -1) {
-          return !this.a(2) ? true : false;
+          return !this.isSecondaryLinked(2) ? true : false;
         }
         this.field_Xb = -80;
-        return !this.a(2) ? true : false;
+        return !this.isSecondaryLinked(2) ? true : false;
     }
 
     final static Sprite[] e(byte param0) {

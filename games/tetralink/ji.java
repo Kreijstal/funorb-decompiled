@@ -133,7 +133,7 @@ final class ji extends hl {
         try {
           var8 = new BitPacketBuffer(param0.a("logo.fo3d", "", true));
           var10 = var8;
-          var3 = var10.d((byte) -99);
+          var3 = var10.readUnsignedByte((byte) -99);
           var10.e(true);
           dh.field_n = NodeHashTableIterator.a(var10, 0);
           wa.field_f = new id[var3];
@@ -212,16 +212,16 @@ final class ji extends hl {
           ul.field_e = null;
           qi.field_q = 0;
           SocketConnector.field_c = param0;
-          og.field_j.b(1);
-          mm.field_s.b(1);
+          og.field_j.clear(1);
+          mm.field_s.clear(1);
           var1 = DelegatingCanvas.field_f.b(107);
           while (var1 != null) {
-            var1.e(param0 ^ 0);
+            var1.unlinkSecondary(param0 ^ 0);
             var1 = DelegatingCanvas.field_f.d(-1);
           }
           var1Lifetime1 = sd.field_nb.b(-127);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.e(param0 + 0);
+            var1Lifetime1.unlinkSecondary(param0 + 0);
             var1Lifetime1 = sd.field_nb.d(-1);
           }
           field_Tb = 0;

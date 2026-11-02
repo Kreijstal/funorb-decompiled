@@ -47,16 +47,16 @@ final class gg extends hm {
             ok.field_a = 200;
             var1 = (bf) (MouseInputHandler.field_b.c(false));
             while (var1 != null) {
-              if (!var1.field_q.a((byte) 95)) {
-                var1.b(false);
+              if (!var1.field_q.isLinked((byte) 95)) {
+                var1.unlink(false);
               }
               var1 = (bf) (MouseInputHandler.field_b.a((byte) -70));
             }
             if (gi.field_d != null) {
               var1Lifetime1 = (bf) (gi.field_d.c(false));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_q.a((byte) 95)) {
-                  var1Lifetime1.b(false);
+                if (!var1Lifetime1.field_q.isLinked((byte) 95)) {
+                  var1Lifetime1.unlink(false);
                 }
                 var1Lifetime1 = (bf) (gi.field_d.a((byte) -70));
               }

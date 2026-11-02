@@ -9,7 +9,7 @@ final class DualLinkDeque {
     static String field_b;
     static boolean field_e;
 
-    final int d(int param0) {
+    final int size(int param0) {
         int var4 = TetraLink.field_J;
         int var2 = param0;
         DualLinkNode var3 = this.field_d.secondaryNext;
@@ -67,13 +67,13 @@ final class DualLinkDeque {
         return null;
     }
 
-    final DualLinkNode c(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         if (param0 != -15464) {
           return (DualLinkNode) null;
         }
         DualLinkNode var2 = this.field_d.secondaryNext;
         if (var2 != this.field_d) {
-          var2.e(0);
+          var2.unlinkSecondary(0);
           return var2;
         }
         return null;
@@ -97,7 +97,7 @@ final class DualLinkDeque {
         this.field_d.secondaryPrevious = this.field_d;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -105,7 +105,7 @@ final class DualLinkDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param0.secondaryPrevious) {
-            param0.e(param1 + 0);
+            param0.unlinkSecondary(param1 + 0);
           }
           param0.secondaryPrevious = this.field_d.secondaryPrevious;
           param0.secondaryNext = this.field_d;

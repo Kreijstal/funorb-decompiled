@@ -84,7 +84,7 @@ final class pd extends th {
               this.field_b.a(1, false);
               this.field_b.a(var2.secondaryKey, true);
               this.field_s.a(true, this.field_b.payload.length, this.field_b.payload, 0);
-              this.field_j.a(var2, 0);
+              this.field_j.addLast(var2, 0);
               var2 = (rh) (this.field_k.a(false));
             }
             var2Lifetime1 = (rh) (this.field_o.a((byte) -95));
@@ -93,7 +93,7 @@ final class pd extends th {
               this.field_b.a(0, false);
               this.field_b.a(var2Lifetime1.secondaryKey, true);
               this.field_s.a(true, this.field_b.payload.length, this.field_b.payload, 0);
-              this.field_c.a(var2Lifetime1, 0);
+              this.field_c.addLast(var2Lifetime1, 0);
               var2Lifetime1 = (rh) (this.field_o.a(false));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
@@ -133,7 +133,7 @@ final class pd extends th {
                       this.field_q.field_I = 0;
                     }
                   } else {
-                    this.field_q.e(0);
+                    this.field_q.unlinkSecondary(0);
                     this.field_q.field_v = false;
                     this.field_q = null;
                   }
@@ -162,9 +162,9 @@ final class pd extends th {
                       }
                     } else {
                       this.field_m.position = 0;
-                      var6 = this.field_m.d((byte) -99);
+                      var6 = this.field_m.readUnsignedByte((byte) -99);
                       var7 = this.field_m.f(104);
-                      var8 = this.field_m.d((byte) -99);
+                      var8 = this.field_m.readUnsignedByte((byte) -99);
                       var9 = this.field_m.f(-125);
                       var10 = 127 & var8;
                       stackIn_44_0 = (0 == (128 & var8)) ? 0 : 1;
@@ -295,17 +295,17 @@ final class pd extends th {
             this.field_m.position = 0;
             this.field_q = null;
             while (true) {
-              var4_ref = (rh) (this.field_j.c(-15464));
+              var4_ref = (rh) (this.field_j.removeFirst(-15464));
               if (var4_ref != null) {
-                this.field_k.a(var4_ref, 0);
+                this.field_k.addLast(var4_ref, 0);
                 continue;
               }
               break;
             }
             while (true) {
-              var4_refLifetime1 = (rh) (this.field_c.c(-15464));
+              var4_refLifetime1 = (rh) (this.field_c.removeFirst(-15464));
               if (var4_refLifetime1 != null) {
-                this.field_o.a(var4_refLifetime1, 0);
+                this.field_o.addLast(var4_refLifetime1, 0);
                 continue;
               }
               break;

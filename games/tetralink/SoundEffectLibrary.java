@@ -278,7 +278,7 @@ final class SoundEffectLibrary {
             stackIn_18_0 = null;
             return (PcmSample) (stackIn_18_0);
           }
-          var9.b(false);
+          var9.unlink(false);
           this.field_f.a(var6, -112, var8Lifetime1);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;

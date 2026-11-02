@@ -195,7 +195,7 @@ final class oj {
         try {
           var13 = kb.field_q;
           var15 = var13;
-          var2 = var15.d((byte) -99);
+          var2 = var15.readUnsignedByte((byte) -99);
           if (param0 > -95) {
             oj.b((byte) -78);
           }
@@ -211,12 +211,12 @@ final class oj {
             mk.a(false);
             return;
           }
-          var4 = var15.d((byte) -99);
+          var4 = var15.readUnsignedByte((byte) -99);
           if (var4 != 0) {
             nj.field_a[0] = ph.field_w;
             var5 = var3.field_q;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              nj.field_a[var6_int] = var13.g((byte) 81);
+              nj.field_a[var6_int] = var13.readString((byte) 81);
             }
             lm.a(var5, var4, (byte) 71);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -276,7 +276,7 @@ final class oj {
             }
           }
           var3.field_u = true;
-          var3.b(false);
+          var3.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

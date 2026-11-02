@@ -136,7 +136,7 @@ final class qf {
           var14 = TetraLink.field_J;
           try {
             var18 = new nm();
-            var18.field_r = param2.d((byte) -99);
+            var18.field_r = param2.readUnsignedByte((byte) -99);
             var18.field_s = param2.f(-118);
             var18.field_u = new AsyncRequest[var18.field_r];
             var18.field_x = new AsyncRequest[var18.field_r];
@@ -149,18 +149,18 @@ final class qf {
             var18.field_t = new byte[var18.field_r][][];
             for (var5 = 0; var18.field_r > var5; var5++) {
               try {
-                var6_int = param2.d((byte) -99);
+                var6_int = param2.readUnsignedByte((byte) -99);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.g((byte) 81);
-                    var21 = param2.g((byte) 81);
-                    var9 = param2.d((byte) -99);
+                    var20 = param2.readString((byte) 81);
+                    var21 = param2.readString((byte) 81);
+                    var9 = param2.readUnsignedByte((byte) -99);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param2.g((byte) 81);
+                      var10[var11_int] = param2.readString((byte) 81);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -185,9 +185,9 @@ final class qf {
                     var18.field_t[var5] = var22;
                   }
                 } else {
-                  var16 = param2.g((byte) 81);
+                  var16 = param2.readString((byte) 81);
                   var7 = var16;
-                  var15 = param2.g((byte) 81);
+                  var15 = param2.readString((byte) 81);
                   var8 = var15;
                   var9 = 0;
                   if (1 == var6_int) {
@@ -219,7 +219,7 @@ final class qf {
                 var18.field_w[var5] = -5;
               }
             }
-            bo.field_C.a(var18, false);
+            bo.field_C.addLast(var18, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

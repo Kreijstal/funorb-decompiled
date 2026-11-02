@@ -93,7 +93,7 @@ abstract class ph extends GameApplet {
     }
 
     private final void b(boolean param0) {
-        int var2 = kb.field_q.d((byte) -99);
+        int var2 = kb.field_q.readUnsignedByte((byte) -99);
         if (param0) {
           this.field_o = true;
         }

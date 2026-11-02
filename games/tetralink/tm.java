@@ -176,7 +176,7 @@ final class tm extends um {
             tm.g(71);
           }
           gl.field_p = param5.field_fb;
-          gl.field_p.b(1);
+          gl.field_p.clear(1);
           db.field_a = new kd(param9);
           aa.field_Pb = -1;
           nd.field_Nb = 0;
@@ -186,13 +186,13 @@ final class tm extends um {
             param7.field_fb = new IntrusiveDeque();
           }
           jl.field_a = param7.field_fb;
-          jl.field_a.b(1);
+          jl.field_a.clear(1);
           db.field_e = new kd(param1);
           if (null == param2.field_fb) {
             param2.field_fb = new IntrusiveDeque();
           }
           ui.field_d = param2.field_fb;
-          ui.field_d.b(1);
+          ui.field_d.clear(1);
           dg.field_g = new kd(param3);
           un.field_f = 0L;
           u.field_a = param8;

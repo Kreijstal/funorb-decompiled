@@ -26,7 +26,7 @@ final class fn extends gn implements sh, dm {
           var2.f(40);
           var2.f(-110);
           var2.f(-119);
-          var1.b(false);
+          var1.unlink(false);
           return;
         }
     }

@@ -114,7 +114,7 @@ final class ag extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.d((byte) -99);
+            var6_int = var2.readUnsignedByte((byte) -99);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];

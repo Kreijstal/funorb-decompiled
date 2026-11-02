@@ -102,7 +102,7 @@ final class ni {
         }
         var10 = new PacketBuffer(this.field_g.c(true));
         var10.position = 5;
-        var3 = var10.d((byte) -99);
+        var3 = var10.readUnsignedByte((byte) -99);
         if (param0 != 9) {
           ni.c((byte) 110);
         }

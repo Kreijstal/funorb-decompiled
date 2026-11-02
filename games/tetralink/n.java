@@ -108,7 +108,7 @@ final class n extends gn implements dm {
         int var6 = 0;
         var6 = TetraLink.field_J;
         try {
-          this.field_J.b(1);
+          this.field_J.clear(1);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

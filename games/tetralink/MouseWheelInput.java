@@ -26,14 +26,14 @@ abstract class MouseWheelInput {
             field_c = (PcmSample) null;
           }
           var9 = kb.field_q;
-          var2 = var9.d((byte) -99);
+          var2 = var9.readUnsignedByte((byte) -99);
           if (0 == var2) {
             var8 = (km) (ph.field_F.c(false));
             if (var8 == null) {
               mk.a(false);
               return;
             }
-            var4 = var9.d((byte) -99);
+            var4 = var9.readUnsignedByte((byte) -99);
             if (0 == var4) {
               var5 = null;
             } else {
@@ -45,7 +45,7 @@ abstract class MouseWheelInput {
               mk.a(param0);
               return;
             }
-            var8.b(false);
+            var8.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -66,7 +66,7 @@ abstract class MouseWheelInput {
             mk.a(false);
             return;
           }
-          var4_ref_hc.b(param0);
+          var4_ref_hc.unlink(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

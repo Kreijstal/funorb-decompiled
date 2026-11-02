@@ -100,7 +100,7 @@ final class we extends hi {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new bf(param1, param1);
-          MouseInputHandler.field_b.a(var2, false);
+          MouseInputHandler.field_b.addLast(var2, false);
           u.field_g.a(param1);
           if (param0 != -11040) {
             field_e = (mk) null;

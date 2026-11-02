@@ -211,11 +211,11 @@ final class vg extends hl {
         var8 = TetraLink.field_J;
         try {
           var9 = kb.field_q;
-          var2 = var9.d((byte) -99);
+          var2 = var9.readUnsignedByte((byte) -99);
           if (param0 < 33) {
             return;
           }
-          var3 = var9.d((byte) -99);
+          var3 = var9.readUnsignedByte((byte) -99);
           if (var2 == 0) {
             var4 = (vj) (bd.field_c.c(false));
             if (var4 == null) {
@@ -230,9 +230,9 @@ final class vg extends hl {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) -99) << (pl.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -99) << (pl.a(var7, 3) << 8));
             }
-            var4.b(false);
+            var4.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -247,7 +247,7 @@ final class vg extends hl {
               break;
             }
             if (var5_ref_bm != null) {
-              var5_ref_bm.b(false);
+              var5_ref_bm.unlink(false);
               return;
             }
             mk.a(false);

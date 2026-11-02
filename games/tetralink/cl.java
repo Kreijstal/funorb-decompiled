@@ -666,7 +666,7 @@ final class cl {
     final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
-            param2.b(false);
+            param2.unlink(false);
           }
           param2.next = param0;
           int var3_int = -58 / ((-38 - param1) / 33);

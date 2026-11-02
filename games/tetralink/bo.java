@@ -49,7 +49,7 @@ final class bo extends hk {
           if (var4 >= 0) {
             if (this.field_q.field_i > var4) {
               if (this.field_q.field_m[var4] == 0) {
-                var2.b(false);
+                var2.unlink(false);
               } else {
                 if (0 == this.field_f[var4]) {
                   discarded$0 = this.a(1, var4, 121);
@@ -58,14 +58,14 @@ final class bo extends hk {
                   discarded$1 = this.a(2, var4, 120);
                 }
                 if (1 == this.field_f[var4]) {
-                  var2.b(false);
+                  var2.unlink(false);
                 }
               }
             } else {
-              var2.b(false);
+              var2.unlink(false);
             }
           } else {
-            var2.b(false);
+            var2.unlink(false);
           }
           var2 = this.field_w.a((byte) -70);
         }
@@ -145,7 +145,7 @@ final class bo extends hk {
               if (this.field_f[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b(false);
+                var3.unlink(false);
               }
               var3 = this.field_v.a((byte) -70);
             }
@@ -163,7 +163,7 @@ final class bo extends hk {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_o;
                     var2_int = 0;
-                    this.field_v.a(var6, false);
+                    this.field_v.addLast(var6, false);
                   }
                 }
                 this.field_o = this.field_o + 1;
@@ -189,7 +189,7 @@ final class bo extends hk {
                 if (this.field_f[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(false);
+                  var3Lifetime1.unlink(false);
                 }
                 var3Lifetime1 = this.field_v.a((byte) -70);
               }
@@ -206,7 +206,7 @@ final class bo extends hk {
                     if (this.field_f[this.field_o] != 1) {
                       var7 = new IntrusiveNode();
                       var7.key = (long)this.field_o;
-                      this.field_v.a(var7, false);
+                      this.field_v.addLast(var7, false);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -244,7 +244,7 @@ final class bo extends hk {
               if (!var2.field_D) {
                 throw new RuntimeException();
               }
-              var2.b(false);
+              var2.unlink(false);
             }
           }
           var2 = (ll) (this.field_m.a(param0 - 3));
@@ -262,7 +262,7 @@ final class bo extends hk {
         }
         if (var3 != null) {
           var4 = var3.c(true);
-          var3.b(false);
+          var3.unlink(false);
           return var4;
         }
         return null;
@@ -471,7 +471,7 @@ final class bo extends hk {
           param0 == 0 &&
           !var12.field_D &&
           var12.field_v) {
-          var12.b(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -551,7 +551,7 @@ final class bo extends hk {
                 this.field_f[param1] = (byte) 1;
               }
               if (!((ll) (var4)).field_D) {
-                ((ll) (var4)).b(false);
+                ((ll) (var4)).unlink(false);
               }
               stackIn_90_0 = var4;
               return (ll) (stackIn_90_0);
@@ -561,7 +561,7 @@ final class bo extends hk {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_f[param1] = (byte)-1;
-            ((ll) (var4)).b(false);
+            ((ll) (var4)).unlink(false);
             if (!((ll) (var4)).field_D) {
               return null;
             }
@@ -601,7 +601,7 @@ final class bo extends hk {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_u.b(0);
-          ((ll) (var4)).b(false);
+          ((ll) (var4)).unlink(false);
           if (!((ll) (var4)).field_D) {
             return null;
           }
@@ -621,7 +621,7 @@ final class bo extends hk {
           }
         }
         if (!((ll) (var4)).field_D) {
-          ((ll) (var4)).b(false);
+          ((ll) (var4)).unlink(false);
         }
         return (ll) (var4);
     }

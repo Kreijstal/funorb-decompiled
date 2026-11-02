@@ -407,7 +407,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.d((byte) -99);
+          var2_int = param0.readUnsignedByte((byte) -99);
           stackIn_4_0 = (1 == var2_int) ? 1 : 0;
           var3 = stackIn_4_0;
           var4 = 46 % ((param1 - 2) / 45);

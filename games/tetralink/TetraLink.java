@@ -396,7 +396,7 @@ public final class TetraLink extends ph {
         } else {
           if (!ai.a((byte) 105)) {
             if (!dg.c(115)) {
-              if (!this.field_L.b(true)) {
+              if (!this.field_L.isEmpty(true)) {
                 var4_ref_ek = (ek) (this.field_L.c(false));
                 var6 = this.field_K;
                 if (var6 < 80) {
@@ -846,7 +846,7 @@ public final class TetraLink extends ph {
             cl.field_g = 2;
             ok.field_d = 128.0f;
             im.field_e = 3.1415927410125732f;
-            n.field_R = kb.field_q.g((byte) 81);
+            n.field_R = kb.field_q.readString((byte) 81);
             continue;
           }
           if (ua.field_c == 14) {
@@ -896,10 +896,10 @@ public final class TetraLink extends ph {
             continue;
           }
           if (67 == ua.field_c) {
-            var2Lifetime1 = kb.field_q.d((byte) -99);
+            var2Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
             var3 = 1 << var2Lifetime1;
             hj.field_a = hj.field_a | var3;
-            this.field_L.a(new ek(var2Lifetime1), false);
+            this.field_L.addLast(new ek(var2Lifetime1), false);
             continue;
           }
           if (ua.field_c != 57 &&
@@ -933,9 +933,9 @@ public final class TetraLink extends ph {
             }
             if (var2_ref != null) {
               if (ua.field_c == 60) {
-                var3Lifetime2 = kb.field_q.d((byte) -99);
-                var4_int = kb.field_q.d((byte) -99);
-                var5 = kb.field_q.e(127);
+                var3Lifetime2 = kb.field_q.readUnsignedByte((byte) -99);
+                var4_int = kb.field_q.readUnsignedByte((byte) -99);
+                var5 = kb.field_q.readUnsignedShort(127);
                 ((ei) (var2_ref)).field_a.a(var4_int, 18936, var3Lifetime2);
                 ((ei) (var2_ref)).field_d = var5 - 50;
                 if (((ei) (var2_ref)).field_a.field_g == -1) {
@@ -948,14 +948,14 @@ public final class TetraLink extends ph {
                 continue;
               }
               if (ua.field_c == 61) {
-                var3Lifetime2Lifetime1 = kb.field_q.d((byte) -99);
-                var4_intLifetime1 = kb.field_q.d((byte) -99);
+                var3Lifetime2Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
+                var4_intLifetime1 = kb.field_q.readUnsignedByte((byte) -99);
                 ((ei) (var2_ref)).field_a.a(var4_intLifetime1 >> 3, var4_intLifetime1 & 7, var3Lifetime2Lifetime1, -28067);
                 ((ei) (var2_ref)).field_g.a((byte) 56);
                 continue;
               }
               if (ua.field_c == 62) {
-                var3Lifetime2Lifetime2 = kb.field_q.g(-1772093437);
+                var3Lifetime2Lifetime2 = kb.field_q.readSignedByte(-1772093437);
                 ((ei) (var2_ref)).field_a.a(var3Lifetime2Lifetime2, 4);
                 var15 = var2_ref;
                 var4 = var15;
@@ -966,7 +966,7 @@ public final class TetraLink extends ph {
                 continue;
               }
               if (ua.field_c == 63) {
-                ((ei) (var2_ref)).field_a.field_h = kb.field_q.d((byte) -99);
+                ((ei) (var2_ref)).field_a.field_h = kb.field_q.readUnsignedByte((byte) -99);
                 if (aa.field_bc == null) {
                   continue;
                 }
@@ -974,11 +974,11 @@ public final class TetraLink extends ph {
                 continue;
               }
               if (ua.field_c == 64) {
-                ((ei) (var2_ref)).field_a.field_j = kb.field_q.d((byte) -99);
+                ((ei) (var2_ref)).field_a.field_j = kb.field_q.readUnsignedByte((byte) -99);
                 continue;
               }
               if (ua.field_c == 65) {
-                ((ei) (var2_ref)).field_a.field_n = kb.field_q.d((byte) -99);
+                ((ei) (var2_ref)).field_a.field_n = kb.field_q.readUnsignedByte((byte) -99);
                 if (null == aa.field_bc) {
                   continue;
                 }
@@ -986,7 +986,7 @@ public final class TetraLink extends ph {
                 continue;
               }
               if (ua.field_c == 66) {
-                ((ei) (var2_ref)).field_m = kb.field_q.d((byte) -99);
+                ((ei) (var2_ref)).field_m = kb.field_q.readUnsignedByte((byte) -99);
                 if (aa.field_bc == null) {
                   continue;
                 }
@@ -998,8 +998,8 @@ public final class TetraLink extends ph {
             continue;
           }
           q.b(0);
-          var2Lifetime1Lifetime1 = kb.field_q.d((byte) -99);
-          stackIn_87_0 = (0 == kb.field_q.d((byte) -99)) ? 0 : 1;
+          var2Lifetime1Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
+          stackIn_87_0 = (0 == kb.field_q.readUnsignedByte((byte) -99)) ? 0 : 1;
           var3Lifetime3 = stackIn_87_0;
           var11 = new String[2];
           var4_array = var11;
@@ -1818,7 +1818,7 @@ public final class TetraLink extends ph {
             this.field_K = this.field_K + 1;
             if (fieldTemp$0 == 335) {
               this.field_K = 0;
-              this.field_L.a(false);
+              this.field_L.removeFirst(false);
             }
           }
           if (!param1) {

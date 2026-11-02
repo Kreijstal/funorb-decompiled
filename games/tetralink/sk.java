@@ -558,7 +558,7 @@ final class sk {
               if (var1.field_Sb == 0) {
                 var1.field_Xb = 0;
                 if (var1.d((byte) -1)) {
-                  var1.b(false);
+                  var1.unlink(false);
                 }
               }
             }
@@ -571,7 +571,7 @@ final class sk {
               if (var1_ref.field_Ub == 0) {
                 var1_ref.field_gc = 0;
                 if (var1_ref.h(-597)) {
-                  var1_ref.b(false);
+                  var1_ref.unlink(false);
                 }
               }
             }
@@ -587,7 +587,7 @@ final class sk {
               }
               var1Lifetime1.field_Xb = 0;
               if (var1Lifetime1.d((byte) -1)) {
-                var1Lifetime1.b(false);
+                var1Lifetime1.unlink(false);
               }
             }
             var1Lifetime1 = (gd) (ui.field_d.a((byte) -70));

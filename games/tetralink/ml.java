@@ -124,7 +124,7 @@ abstract class ml extends nb {
     private final void a(byte param0, UiWidget param1) {
         try {
           if (this.field_bb != null) {
-            this.field_bb.b(false);
+            this.field_bb.unlink(false);
           }
           int var3_int = -11 % ((-4 - param0) / 48);
           if (param1 == null) {

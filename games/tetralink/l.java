@@ -225,7 +225,7 @@ final class l {
           this.field_k[var2] = this.field_b.field_e[var2];
         }
         this.field_d = null;
-        this.field_g.b(1);
+        this.field_g.clear(1);
         this.d(115);
         this.a(this.field_l, (byte) -96);
         if (param0 <= 12) {
@@ -261,7 +261,7 @@ final class l {
                   } else {
                     this.field_k[var2.field_n] = (byte)IntrusiveNode.a((int) this.field_k[var2.field_n], var3);
                   }
-                  var2.b(false);
+                  var2.unlink(false);
                   this.d(-85);
                 }
                 if (var2.field_y < 0) {
@@ -330,10 +330,10 @@ final class l {
                   !this.a(true, var4, var2, -14933)) {
                   if (this.field_a == 0 &&
                     this.a((byte) -75, var4, var2)) {
-                    this.field_g.a(new ej(this.field_d, true), false);
+                    this.field_g.addLast(new ej(this.field_d, true), false);
                     this.field_d = null;
                   } else {
-                    this.field_g.a(new ej(var2, var4, true), false);
+                    this.field_g.addLast(new ej(var2, var4, true), false);
                     lb.a(s.field_a[ui.a(5, 1692)], 573509761);
                   }
                 }
@@ -350,10 +350,10 @@ final class l {
                     !this.a(false, var5Lifetime1, var2, param0 ^ -14957)) {
                     if (this.field_a == 1 &&
                       this.a((byte) -75, var5Lifetime1, var2)) {
-                      this.field_g.a(new ej(this.field_d, false), false);
+                      this.field_g.addLast(new ej(this.field_d, false), false);
                       this.field_d = null;
                     } else {
-                      this.field_g.a(new ej(var2, var5Lifetime1, false), false);
+                      this.field_g.addLast(new ej(var2, var5Lifetime1, false), false);
                       lb.a(s.field_a[ui.a(5, 1692)], param0 ^ 573509817);
                     }
                   }

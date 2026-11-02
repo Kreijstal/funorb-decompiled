@@ -47,9 +47,9 @@ final class pc {
         try {
           var14 = new PacketBuffer(param0);
           var4 = new PacketBuffer(param0);
-          var14.d((byte) -99);
+          var14.readUnsignedByte((byte) -99);
           var14.position = var14.position + 2;
-          var5 = var14.d((byte) -99);
+          var5 = var14.readUnsignedByte((byte) -99);
           var6 = 0;
           var7 = -1;
           var8 = -1;
@@ -59,7 +59,7 @@ final class pc {
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.d((byte) -99);
+            var11 = var14.readUnsignedByte((byte) -99);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;

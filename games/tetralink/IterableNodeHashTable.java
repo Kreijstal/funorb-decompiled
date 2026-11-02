@@ -24,11 +24,11 @@ final class IterableNodeHashTable implements Iterable {
         field_f = null;
     }
 
-    final void a(long param0, IntrusiveNode param1, boolean param2) {
+    final void put(long param0, IntrusiveNode param1, boolean param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param1.previous) {
-            param1.b(false);
+            param1.unlink(false);
           }
           if (param2) {
             this.field_g = (IntrusiveNode) null;
@@ -44,7 +44,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var6 = null;
         int var7 = TetraLink.field_J;
         IntrusiveNode var4 = this.field_d[(int)((long)(-1 + this.field_i) & param0)];

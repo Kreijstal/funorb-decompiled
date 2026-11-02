@@ -457,11 +457,11 @@ final class MatchSetup {
           if (param1 != -7) {
             this.field_e = (byte[]) null;
           }
-          var3_int = param0.d((byte) -99);
+          var3_int = param0.readUnsignedByte((byte) -99);
           if ((var3_int & 2) != 0) {
             for (var4 = 0; 6 > var4; var4++) {
-              this.field_p[var4] = param0.g(-1772093437);
-              this.field_e[var4] = param0.g(-1772093437);
+              this.field_p[var4] = param0.readSignedByte(-1772093437);
+              this.field_e[var4] = param0.readSignedByte(-1772093437);
             }
           }
         } catch (RuntimeException runtimeException) {

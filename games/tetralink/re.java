@@ -81,25 +81,25 @@ final class re extends ae {
           GameKeyHandler.field_a = null;
           qb.field_N = null;
           if (gl.field_p != null) {
-            gl.field_p.b(1);
+            gl.field_p.clear(1);
             gl.field_p = null;
           }
           db.field_a = null;
           if (null != jl.field_a) {
-            jl.field_a.b(1);
+            jl.field_a.clear(1);
             jl.field_a = null;
           }
           db.field_e = null;
           int var1_int = 39 / ((param0 - 14) / 42);
           if (ui.field_d != null) {
-            ui.field_d.b(1);
+            ui.field_d.clear(1);
             ui.field_d = null;
           }
           dg.field_g = null;
           if (null != db.field_a) {
             var2 = (gd) (db.field_a.b(-104));
             while (var2 != null) {
-              var2.e(0);
+              var2.unlinkSecondary(0);
               var2 = (gd) (db.field_a.d(-1));
             }
             db.field_a = null;

@@ -341,7 +341,7 @@ final class od extends hn {
           }
           if (MouseInputHandler.field_a == qi.field_p &&
             en.b(99, 1)) {
-            var9Lifetime1 = kb.field_q.d((byte) -99);
+            var9Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
             kb.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -370,7 +370,7 @@ final class od extends hn {
           if (qi.field_p == oa.field_v) {
             var9Lifetime2 = 2;
             if (en.b(param0 ^ 23, var9Lifetime2)) {
-              var10Lifetime1 = kb.field_q.e(127);
+              var10Lifetime1 = kb.field_q.readUnsignedShort(127);
               kb.field_q.position = 0;
               if (en.b(108, var10Lifetime1)) {
                 var11 = og.field_h.length;
@@ -392,7 +392,7 @@ final class od extends hn {
                 qi.a(var9_ref_String, -7011, lk.q(13));
               }
             } else {
-              IntrusiveDequeCursor.field_d = kb.field_q.g((byte) 81);
+              IntrusiveDequeCursor.field_d = kb.field_q.readString((byte) 81);
             }
             mk.a(false);
             ProxySocketConnector.field_j = false;

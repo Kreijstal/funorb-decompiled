@@ -36,7 +36,7 @@ final class bn extends IOException {
             var4_ref_tc = (tc) (v.field_z.c(false));
             if (null != var4_ref_tc &&
               var4_ref_tc.field_r < var2_long) {
-              var4_ref_tc.b(false);
+              var4_ref_tc.unlink(false);
               rl.field_d = var4_ref_tc.field_o.length;
               kb.field_q.position = 0;
               var5_int = 0;
@@ -93,7 +93,7 @@ final class bn extends IOException {
                     continue;
                   }
                 } else {
-                  v.field_z.a(var5, false);
+                  v.field_z.addLast(var5, false);
                   ti.field_e = -1;
                 }
                 break;

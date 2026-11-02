@@ -197,7 +197,7 @@ final class dg {
         var8 = TetraLink.field_J;
         try {
           var12 = kb.field_q;
-          var2 = var12.d((byte) -99);
+          var2 = var12.readUnsignedByte((byte) -99);
           if (param0 == ~var2) {
             var10 = lh.h(-7990);
             var16 = var10;
@@ -206,7 +206,7 @@ final class dg {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).d((byte) -99);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -99);
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).f(122);
             }
@@ -218,7 +218,7 @@ final class dg {
             var14.field_u = var3;
             var14.field_s = true;
             var14.field_t = var16[0];
-            var14.b(false);
+            var14.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -234,7 +234,7 @@ final class dg {
               var15.field_u = lh.h(param0 - 7989);
               var15.field_t = var15.field_u[0];
               var15.field_s = true;
-              var15.b(false);
+              var15.unlink(false);
             }
           } else {
             var11 = (eh) (qn.field_t.c(false));
@@ -242,7 +242,7 @@ final class dg {
               mk.a(false);
               return;
             }
-            var11.b(false);
+            var11.unlink(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

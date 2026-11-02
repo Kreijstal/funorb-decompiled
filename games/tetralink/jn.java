@@ -32,13 +32,13 @@ final class jn {
     jn(PacketBuffer param0) {
         int var2_int = 0;
         try {
-          this.field_b = param0.e(127);
-          param0.d((byte) -99);
-          var2_int = param0.d((byte) -99);
+          this.field_b = param0.readUnsignedShort(127);
+          param0.readUnsignedByte((byte) -99);
+          var2_int = param0.readUnsignedByte((byte) -99);
           if (var2_int != 1) {
             throw new RuntimeException();
           }
-          this.field_e = param0.e(127);
+          this.field_e = param0.readUnsignedShort(127);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

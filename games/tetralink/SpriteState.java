@@ -783,7 +783,7 @@ abstract class SpriteState extends DualLinkNode {
               }
             }
             param1.c(var4, param0 - 17);
-            var17.b(false);
+            var17.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

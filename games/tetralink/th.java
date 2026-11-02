@@ -24,7 +24,7 @@ abstract class th {
         if (param0 >= -33) {
           return -43;
         }
-        return this.field_k.d(0) + this.field_j.d(0);
+        return this.field_k.size(0) + this.field_j.size(0);
     }
 
     abstract void b(int param0);
@@ -33,7 +33,7 @@ abstract class th {
         if (param0 != 20) {
           return 22;
         }
-        return this.field_o.d(param0 ^ 20) + this.field_c.d(0);
+        return this.field_o.size(param0 ^ 20) + this.field_c.size(0);
     }
 
     abstract boolean a(boolean param0);
@@ -134,12 +134,12 @@ abstract class th {
             if (!(this.d(20) < 20)) {
               throw new RuntimeException();
             }
-            this.field_o.a(var8, 0);
+            this.field_o.addLast(var8, 0);
           } else {
             if (!(this.c((byte) -100) < 20)) {
               throw new RuntimeException();
             }
-            this.field_k.a(var8, 0);
+            this.field_k.addLast(var8, 0);
           }
           return var8;
         }
@@ -151,12 +151,12 @@ abstract class th {
           if (!(this.d(20) < 20)) {
             throw new RuntimeException();
           }
-          this.field_o.a(var8Lifetime1, 0);
+          this.field_o.addLast(var8Lifetime1, 0);
         } else {
           if (!(this.c((byte) -100) < 20)) {
             throw new RuntimeException();
           }
-          this.field_k.a(var8Lifetime1, 0);
+          this.field_k.addLast(var8Lifetime1, 0);
         }
         return var8Lifetime1;
     }

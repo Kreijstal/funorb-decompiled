@@ -34,12 +34,12 @@ final class nm extends IntrusiveNode {
     final static void b(byte param0) {
         dl var1 = null;
         if (param0 > 27) {
-          var1 = (dl) (fm.field_a.c((byte) 125));
+          var1 = (dl) (fm.field_a.removeLast((byte) 125));
           if (var1 == null) {
             var1 = new dl();
           }
           var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_i, SoftwareRasterizer.field_e);
-          oa.field_u.a(var1, false);
+          oa.field_u.addLast(var1, false);
           return;
         }
     }

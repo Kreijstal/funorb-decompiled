@@ -155,12 +155,12 @@ final class i {
         var26 = TetraLink.field_J;
         try {
           var27 = kb.field_q;
-          var2 = var27.d((byte) -99);
+          var2 = var27.readUnsignedByte((byte) -99);
           if (param0 != 1) {
             field_n = 56;
           }
           if (var2 == 0) {
-            var3 = var27.e(127);
+            var3 = var27.readUnsignedShort(127);
             var4_ref = (oa) (wc.field_E.c(false));
             while (var4_ref != null) {
               if (var4_ref.field_C != var3) {
@@ -173,9 +173,9 @@ final class i {
               mk.a(false);
               return;
             }
-            var5 = var27.d((byte) -99);
+            var5 = var27.readUnsignedByte((byte) -99);
             if (var5 == 0) {
-              var4_ref.b(false);
+              var4_ref.unlink(false);
               return;
             }
             var6 = var4_ref.field_z;
@@ -184,12 +184,12 @@ final class i {
             lh.field_v[0].field_a = false;
             lh.field_v[0].field_g = null;
             for (var8_int = 1; var8_int < var5; var8_int++) {
-              lh.field_v[var8_int].field_e = var27.g((byte) 81);
+              lh.field_v[var8_int].field_e = var27.readString((byte) 81);
               lh.field_v[var8_int].field_a = false;
-              if (var27.d((byte) -99) != 1) {
+              if (var27.readUnsignedByte((byte) -99) != 1) {
                 lh.field_v[var8_int].field_g = null;
               } else {
-                lh.field_v[var8_int].field_g = var27.g((byte) 81);
+                lh.field_v[var8_int].field_g = var27.readString((byte) 81);
               }
             }
             var8 = new String[3][var6];
@@ -202,15 +202,15 @@ final class i {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var27.d((byte) -99);
+            var18 = var27.readUnsignedByte((byte) -99);
             if (var18 <= 0) {
-              var4_ref.b(false);
+              var4_ref.unlink(false);
               return;
             }
             for (var19 = 0; var19 < var18; var19++) {
-              var20 = var27.d((byte) -99);
+              var20 = var27.readUnsignedByte((byte) -99);
               var21 = lh.field_v[var20].field_e;
-              var22 = var27.c(255);
+              var22 = var27.readLong(255);
               var24 = var27.position;
               if (var19 < var6) {
                 var8[0][var12] = var21;
@@ -251,12 +251,12 @@ final class i {
                 }
               }
             }
-            var4_ref.b(false);
+            var4_ref.unlink(false);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.e(param0 ^ 126);
-            var27.c(255);
+            var3Lifetime1 = var27.readUnsignedShort(param0 ^ 126);
+            var27.readLong(255);
             var4 = (o) (pb.field_f.c(false));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_q) {
@@ -269,7 +269,7 @@ final class i {
               mk.a(false);
               return;
             }
-            var4.b(false);
+            var4.unlink(false);
             return;
           }
           fk.a(-104, (Throwable) null, "HS1: " + hc.a(false));

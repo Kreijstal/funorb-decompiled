@@ -690,7 +690,7 @@ final class rh extends ll {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param1.f((byte) 110);
+            var3_int = param1.readSmart((byte) 110);
             if (var3_int > param2) {
               var3_int = param2;
             }

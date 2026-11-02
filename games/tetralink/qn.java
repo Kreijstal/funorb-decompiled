@@ -335,19 +335,19 @@ final class qn extends al {
           }
           var2 = (bf) (MouseInputHandler.field_b.c(false));
           while (var2 != null) {
-            if (var2.field_q.a((byte) 95)) {
+            if (var2.field_q.isLinked((byte) 95)) {
               var2.field_t.f(128 + var2.field_u * DelegatingCanvas.field_c >> 8);
             } else {
-              var2.b(false);
+              var2.unlink(false);
             }
             var2 = (bf) (MouseInputHandler.field_b.a((byte) -70));
           }
           if (gi.field_d != null) {
             var2Lifetime1 = (bf) (gi.field_d.c(false));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_q.a((byte) 95);
+              stackIn_14_0 = var2Lifetime1.field_q.isLinked((byte) 95);
               if (!stackIn_14_0) {
-                var2Lifetime1.b(false);
+                var2Lifetime1.unlink(false);
               } else {
                 var2Lifetime1.field_t.f(128 + DelegatingCanvas.field_c * var2Lifetime1.field_u >> 8);
               }

@@ -21,7 +21,7 @@ final class dh implements m {
     private int field_a;
 
     final static void a(int param0) {
-        dl var1 = (dl) (oa.field_u.c((byte) 125));
+        dl var1 = (dl) (oa.field_u.removeLast((byte) 125));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -31,7 +31,7 @@ final class dh implements m {
         }
         SoftwareRasterizer.a(var1.field_r, var1.field_q, var1.field_u, var1.field_s);
         var1.field_t = null;
-        fm.field_a.a(var1, false);
+        fm.field_a.addLast(var1, false);
     }
 
     public final int b(int param0, int param1) {
@@ -67,10 +67,10 @@ final class dh implements m {
         } else {
           if (var7.field_u != null) {
             if (var7.field_n == param0) {
-              this.field_b.a(var7, 124);
+              this.field_b.addFirst(var7, 124);
               return var7.field_u;
             }
-            var7.b(false);
+            var7.unlink(false);
             var7.a();
             this.field_a = this.field_a + 1;
           }
@@ -80,10 +80,10 @@ final class dh implements m {
           if (this.field_a != 0) {
             this.field_a = this.field_a - 1;
           } else {
-            var8 = (gf) (this.field_b.c((byte) 126));
+            var8 = (gf) (this.field_b.removeLast((byte) 126));
             var8.a();
           }
-          this.field_b.a(var7, 127);
+          this.field_b.addFirst(var7, 127);
           return var7.field_u;
         }
         return null;
@@ -120,14 +120,14 @@ final class dh implements m {
         var9 = TetraLink.field_J;
         try {
           if (param0) {
-            param2.field_jc = param3.d((byte) -99);
+            param2.field_jc = param3.readUnsignedByte((byte) -99);
           }
-          param2.field_rc = param3.d((byte) -99);
-          param2.field_ic = param3.d((byte) -99);
+          param2.field_rc = param3.readUnsignedByte((byte) -99);
+          param2.field_ic = param3.readUnsignedByte((byte) -99);
           if (!param1) {
             field_l = -120;
           }
-          var4_int = param3.d((byte) -99);
+          var4_int = param3.readUnsignedByte((byte) -99);
           stackIn_8_0 = (el) (param2);
           stackIn_9_1 = ((128 & var4_int) != 0);
           stackIn_8_0.field_uc = stackIn_9_1;
@@ -155,21 +155,21 @@ final class dh implements m {
           stackIn_31_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param3.b(param2.field_sc.length, 0, param2.field_sc, 126);
-          param2.field_Qb = param3.e(127);
+          param2.field_Qb = param3.readUnsignedShort(127);
           param2.field_Ac = k.a(0) - (long)param3.f(123);
           if (var5 == 0) {
             param2.field_bc = -1;
           } else {
             param2.field_bc = param3.f(-122);
           }
-          param2.field_cc = param3.c(255);
+          param2.field_cc = param3.readLong(255);
           var7 = param3.position;
-          param2.field_ec = param3.g((byte) 81);
+          param2.field_ec = param3.readString((byte) 81);
           if (var6 != 0) {
             param2.field_fc = new String[param2.field_jc];
             param3.position = var7;
             for (var8 = 0; var8 < param2.field_jc; var8++) {
-              param2.field_fc[var8] = param3.g((byte) 81);
+              param2.field_fc[var8] = param3.readString((byte) 81);
             }
             return;
           }

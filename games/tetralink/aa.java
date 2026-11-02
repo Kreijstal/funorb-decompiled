@@ -236,8 +236,8 @@ final class aa extends hl {
             stackIn_9_0 = sk.a(new String[]{param3}, am.field_e, 121);
             return stackIn_9_0;
           }
-          var7.b(false);
-          var7.e(0);
+          var7.unlink(false);
+          var7.unlinkSecondary(0);
           SocketConnector.field_c = SocketConnector.field_c - 1;
           var5 = nd.field_Lb;
           var5.f(param1, (byte) -92);

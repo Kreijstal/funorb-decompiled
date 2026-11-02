@@ -64,7 +64,7 @@ abstract class hk {
           var17 = new PacketBuffer(param0);
           var18 = var17;
           var18.position = -2 + param0.length;
-          vj.field_n = var18.e(127);
+          vj.field_n = var18.readUnsignedShort(127);
           gm.field_g = new boolean[vj.field_n];
           ga.field_a = new byte[vj.field_n][];
           sn.field_e = new int[vj.field_n];
@@ -73,25 +73,25 @@ abstract class hk {
           i.field_t = new int[vj.field_n];
           jg.field_i = new byte[vj.field_n][];
           var18.position = -(vj.field_n * 8) - 7 + param0.length;
-          ImageProducerRasterBuffer.field_l = var18.e(127);
-          mm.field_w = var18.e(127);
-          var3 = 1 + (255 & var18.d((byte) -99));
+          ImageProducerRasterBuffer.field_l = var18.readUnsignedShort(127);
+          mm.field_w = var18.readUnsignedShort(127);
+          var3 = 1 + (255 & var18.readUnsignedByte((byte) -99));
           for (var4 = 0; var4 < vj.field_n; var4++) {
-            qa.field_x[var4] = var17.e(127);
+            qa.field_x[var4] = var17.readUnsignedShort(127);
           }
           for (var4Lifetime1 = 0; vj.field_n > var4Lifetime1; var4Lifetime1++) {
-            i.field_t[var4Lifetime1] = var18.e(127);
+            i.field_t[var4Lifetime1] = var18.readUnsignedShort(127);
           }
           for (var4Lifetime2 = 0; vj.field_n > var4Lifetime2; var4Lifetime2++) {
-            IntrusiveDeque.field_h[var4Lifetime2] = var18.e(127);
+            IntrusiveDeque.field_h[var4Lifetime2] = var18.readUnsignedShort(127);
           }
           for (var4Lifetime3 = 0; vj.field_n > var4Lifetime3; var4Lifetime3++) {
-            sn.field_e[var4Lifetime3] = var18.e(127);
+            sn.field_e[var4Lifetime3] = var18.readUnsignedShort(127);
           }
           var18.position = 3 - 3 * var3 + (param0.length - (7 + vj.field_n * 8));
           ti.field_c = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            ti.field_c[var4Lifetime4] = var18.d(-1);
+            ti.field_c[var4Lifetime4] = var18.readMedium(-1);
             if (ti.field_c[var4Lifetime4] == 0) {
               ti.field_c[var4Lifetime4] = 1;
             }
@@ -110,14 +110,14 @@ abstract class hk {
             var9 = var20;
             jg.field_i[var4Lifetime5] = var22;
             var10 = 0;
-            var11 = var18.d((byte) -99);
+            var11 = var18.readUnsignedByte((byte) -99);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var18.g(-1772093437);
+                var8[var12] = var18.readSignedByte(-1772093437);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$0 = var18.g(-1772093437);
+                  dupTemp$0 = var18.readSignedByte(-1772093437);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_48_0 = var10;
@@ -132,13 +132,13 @@ abstract class hk {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var13 * var5 + var12] = var18.g(-1772093437);
+                  var8[var13 * var5 + var12] = var18.readSignedByte(-1772093437);
                 }
               }
               if (0 != (2 & var11)) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var18.g(-1772093437);
+                    dupTemp$1 = var18.readSignedByte(-1772093437);
                     var9[var5 * var13 + var12] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_37_0 = var10;

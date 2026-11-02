@@ -72,7 +72,7 @@ final class ke implements Runnable {
 
     private final void a(fd param0, int param1) {
         synchronized (this.field_f) {
-          this.field_f.a(param0, 0);
+          this.field_f.addLast(param0, 0);
           if (param1 > -49) {
             ke.a(21);
           }
@@ -205,7 +205,7 @@ final class ke implements Runnable {
           while (!this.field_a) {
             var2 = this.field_f;
             synchronized (var2) {
-              var7 = (fd) (this.field_f.c(-15464));
+              var7 = (fd) (this.field_f.removeFirst(-15464));
               if (var7 != null) {
                 this.field_d = this.field_d - 1;
                 decompiledRegionSelector0 = 1;

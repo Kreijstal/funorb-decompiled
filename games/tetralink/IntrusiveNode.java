@@ -20,7 +20,7 @@ class IntrusiveNode {
         return param0 | param1;
     }
 
-    final void b(boolean param0) {
+    final void unlink(boolean param0) {
         if (this.previous == null) {
           return;
         }
@@ -31,11 +31,11 @@ class IntrusiveNode {
           this.previous = null;
           return;
         }
-        this.b(false);
+        this.unlink(false);
         this.previous = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean isLinked(byte param0) {
         if (param0 != 95) {
           return true;
         }

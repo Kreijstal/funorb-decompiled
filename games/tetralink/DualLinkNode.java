@@ -24,7 +24,7 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryKey = param0;
     }
 
-    final boolean a(int param0) {
+    final boolean isSecondaryLinked(int param0) {
         if (null == this.secondaryPrevious) {
           return false;
         }
@@ -113,7 +113,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final void e(int param0) {
+    final void unlinkSecondary(int param0) {
         if (null == this.secondaryPrevious) {
           return;
         }

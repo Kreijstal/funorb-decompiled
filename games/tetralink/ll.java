@@ -46,7 +46,7 @@ abstract class ll extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var4 = TetraLink.field_J;
         try {
-          param0.b(false);
+          param0.unlink(false);
           var2 = (el) (jl.field_a.c(false));
           while (var2 != null) {
             if (var2.a(-24, param0)) {
@@ -57,7 +57,7 @@ abstract class ll extends DualLinkNode {
           }
           var3 = 107 % ((38 - param1) / 61);
           if (var2 == null) {
-            jl.field_a.a(param0, false);
+            jl.field_a.addLast(param0, false);
             return;
           }
           cl.a(var2, 99, param0);
@@ -80,7 +80,7 @@ abstract class ll extends DualLinkNode {
         if (param0 != 0) {
           return (String) null;
         }
-        return kb.field_q.g((byte) 81);
+        return kb.field_q.readString((byte) 81);
     }
 
     final static void a(int param0, String param1) {

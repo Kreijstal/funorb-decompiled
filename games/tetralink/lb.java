@@ -50,23 +50,23 @@ final class lb extends eg implements dm {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          tl.field_X = param0.e(127) << 5;
-          var2_int = param0.d((byte) -99);
+          tl.field_X = param0.readUnsignedShort(127) << 5;
+          var2_int = param0.readUnsignedByte((byte) -99);
           l.field_j = (7 & var2_int) << 18;
           tl.field_X = tl.field_X + (var2_int >> 3);
-          l.field_j = l.field_j + (param0.e(127) << 2);
-          var2_intLifetime1 = param0.d((byte) -99);
+          l.field_j = l.field_j + (param0.readUnsignedShort(127) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte((byte) -99);
           fd.field_F = var2_intLifetime1 << 15 & 2064384;
           l.field_j = l.field_j + (var2_intLifetime1 >> 6);
-          fd.field_F = fd.field_F + (param0.d((byte) -99) << 7);
+          fd.field_F = fd.field_F + (param0.readUnsignedByte((byte) -99) << 7);
           if (param1) {
             PcmSample var3 = (PcmSample) null;
             lb.a((PcmSample) null, 38);
           }
-          var2_intLifetime2 = param0.d((byte) -99);
+          var2_intLifetime2 = param0.readUnsignedByte((byte) -99);
           om.field_Nb = (var2_intLifetime2 & 1) << 16;
           fd.field_F = fd.field_F + (var2_intLifetime2 >> 1);
-          om.field_Nb = om.field_Nb + param0.e(127);
+          om.field_Nb = om.field_Nb + param0.readUnsignedShort(127);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "lb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

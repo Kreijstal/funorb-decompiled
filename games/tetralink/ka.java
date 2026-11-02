@@ -180,7 +180,7 @@ class ka extends hm {
               var4Lifetime1 < 530.0 &&
               0.0 < var6Lifetime1 &&
               400.0 > var6Lifetime1) {
-              eg.field_J.a(new ko((int)(16.0 * var4Lifetime1), (int)(var6Lifetime1 * 16.0), Math.min(wk.field_i.field_h, wk.field_i.field_i + var3 * wk.field_i.field_p)), false);
+              eg.field_J.addLast(new ko((int)(16.0 * var4Lifetime1), (int)(var6Lifetime1 * 16.0), Math.min(wk.field_i.field_h, wk.field_i.field_i + var3 * wk.field_i.field_p)), false);
             }
           }
           ab.field_T = aa.field_Nb;

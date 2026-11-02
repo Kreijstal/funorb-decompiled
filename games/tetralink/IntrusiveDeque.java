@@ -11,14 +11,14 @@ final class IntrusiveDeque {
     static String field_g;
     static int[] field_h;
 
-    final void b(int param0) {
+    final void clear(int param0) {
         IntrusiveNode var2;
         int var3;
         var3 = TetraLink.field_J;
         while (true) {
           var2 = this.field_c.next;
           if (var2 != this.field_c) {
-            var2.b(false);
+            var2.unlink(false);
             continue;
           }
           break;
@@ -79,7 +79,7 @@ final class IntrusiveDeque {
         this.field_a = var2.next;
         if (param0 != -70) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.a((IntrusiveNode) null, -40);
+          this.addFirst((IntrusiveNode) null, -40);
         }
         return var2;
     }
@@ -97,7 +97,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode removeLast(byte param0) {
         if (param0 < 123) {
           field_g = (String) null;
         }
@@ -105,14 +105,14 @@ final class IntrusiveDeque {
         if (var2 == this.field_c) {
           return null;
         }
-        var2.b(false);
+        var2.unlink(false);
         return var2;
     }
 
     final IntrusiveNode c(boolean param0) {
         if (param0) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.a((IntrusiveNode) null, 0);
+          this.addFirst((IntrusiveNode) null, 0);
         }
         IntrusiveNode var2 = this.field_c.next;
         if (this.field_c == var2) {
@@ -123,7 +123,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final boolean b(boolean param0) {
+    final boolean isEmpty(boolean param0) {
         if (!param0) {
           IntrusiveDeque.a(-87);
         }
@@ -162,7 +162,7 @@ final class IntrusiveDeque {
         }
         this.field_a = var2.previous;
         if (param0 != 14) {
-          this.b(true);
+          this.isEmpty(true);
         }
         return var2;
     }
@@ -214,10 +214,10 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(IntrusiveNode param0, boolean param1) {
+    final void addLast(IntrusiveNode param0, boolean param1) {
         try {
           if (null != param0.previous) {
-            param0.b(false);
+            param0.unlink(false);
           }
           if (param1) {
             this.d((byte) 106);
@@ -231,12 +231,12 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode removeFirst(boolean param0) {
         IntrusiveNode var2 = this.field_c.next;
         if (var2 == this.field_c) {
           return null;
         }
-        var2.b(param0);
+        var2.unlink(param0);
         return var2;
     }
 
@@ -354,10 +354,10 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addFirst(IntrusiveNode param0, int param1) {
         try {
           if (null != param0.previous) {
-            param0.b(false);
+            param0.unlink(false);
           }
           param0.previous = this.field_c;
           param0.next = this.field_c.next;

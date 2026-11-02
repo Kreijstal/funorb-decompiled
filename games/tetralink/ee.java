@@ -144,7 +144,7 @@ final class ee extends PcmStream {
           this.field_G = 0;
           this.field_E = 0;
           this.field_r = 0;
-          this.b(false);
+          this.unlink(false);
           return true;
         }
         if (this.field_r >= var1) {
@@ -624,7 +624,7 @@ final class ee extends PcmStream {
         if (this.field_x < 0) {
           if (this.field_A <= 0) {
             this.h();
-            this.b(false);
+            this.unlink(false);
             return;
           }
           this.field_x = 0;
@@ -632,7 +632,7 @@ final class ee extends PcmStream {
         if (this.field_x >= var7) {
           if (this.field_A >= 0) {
             this.h();
-            this.b(false);
+            this.unlink(false);
             return;
           }
           this.field_x = var7 - 1;
@@ -759,7 +759,7 @@ final class ee extends PcmStream {
           if (this.field_x >= var7) {
             this.field_x = var7;
             this.h();
-            this.b(false);
+            this.unlink(false);
           }
           return;
         }
@@ -769,7 +769,7 @@ final class ee extends PcmStream {
         }
         this.field_x = -1;
         this.h();
-        this.b(false);
+        this.unlink(false);
         return;
     }
 
@@ -963,7 +963,7 @@ final class ee extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.b(false);
+          this.unlink(false);
           return;
         }
         if (this.field_E != 0) {
@@ -1023,7 +1023,7 @@ final class ee extends PcmStream {
         this.field_v = 0;
         this.field_z = 0;
         this.field_r = 0;
-        this.b(false);
+        this.unlink(false);
     }
 
     private final void f() {
@@ -1226,7 +1226,7 @@ final class ee extends PcmStream {
               this.field_G = 0;
               this.field_E = 0;
               this.field_r = 0;
-              this.b(false);
+              this.unlink(false);
               param0 = this.field_v;
             }
             this.field_v = 0;
@@ -1244,7 +1244,7 @@ final class ee extends PcmStream {
         if (this.field_x < 0) {
           if (this.field_A <= 0) {
             this.h();
-            this.b(false);
+            this.unlink(false);
             return;
           }
           this.field_x = 0;
@@ -1252,7 +1252,7 @@ final class ee extends PcmStream {
         if (this.field_x >= var5) {
           if (this.field_A >= 0) {
             this.h();
-            this.b(false);
+            this.unlink(false);
             return;
           }
           this.field_x = var5 - 1;
@@ -1365,7 +1365,7 @@ final class ee extends PcmStream {
           if (this.field_x >= var5) {
             this.field_x = var5;
             this.h();
-            this.b(false);
+            this.unlink(false);
           }
           return;
         }
@@ -1374,7 +1374,7 @@ final class ee extends PcmStream {
         }
         this.field_x = -1;
         this.h();
-        this.b(false);
+        this.unlink(false);
     }
 
     final synchronized void d(int param0) {

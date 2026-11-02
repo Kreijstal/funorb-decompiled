@@ -219,7 +219,7 @@ final class pe {
     }
 
     final static void a(byte param0) {
-        ph.field_w = kb.field_q.g((byte) 81);
+        ph.field_w = kb.field_q.readString((byte) 81);
         if (param0 < 18) {
           return;
         }

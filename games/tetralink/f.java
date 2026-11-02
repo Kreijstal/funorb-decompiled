@@ -61,7 +61,7 @@ final class f extends DualLinkNode {
           var28 = this.field_v[var13];
           var16 = new PacketBuffer(var28);
           var16.position = 1;
-          var6 = var16.e(param0 ^ -23);
+          var6 = var16.readUnsignedShort(param0 ^ -23);
           var2 = var2 != 0 & nn.field_T.f(var6, 88) ? 1 : 0;
           var13++;
         }
@@ -79,7 +79,7 @@ final class f extends DualLinkNode {
           var30 = this.field_v[var6Lifetime1];
           var8 = new PacketBuffer(var30);
           var8.position = 1;
-          var9 = var8.e(127);
+          var9 = var8.readUnsignedShort(127);
           var10 = null;
           var11 = (oe) (var3.c(false));
           while (var11 != null) {
@@ -92,7 +92,7 @@ final class f extends DualLinkNode {
           }
           if (var10 == null) {
             var10 = new oe(var9, nn.field_T.a(0, var9));
-            var3.a((IntrusiveNode) (var10), false);
+            var3.addLast((IntrusiveNode) (var10), false);
           }
           this.field_u[var29[var6Lifetime1]] = new pc(var30, (oe) (var10));
         }

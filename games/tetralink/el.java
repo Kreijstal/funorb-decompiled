@@ -325,10 +325,10 @@ final class el extends hl {
 
     final boolean h(int param0) {
         if (param0 == -597) {
-          return !this.a(2) ? true : false;
+          return !this.isSecondaryLinked(2) ? true : false;
         }
         this.field_kc = false;
-        return !this.a(2) ? true : false;
+        return !this.isSecondaryLinked(2) ? true : false;
     }
 
     static {

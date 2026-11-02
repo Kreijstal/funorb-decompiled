@@ -102,7 +102,7 @@ class fk extends ae {
             if (var10 != null) {
               ((va) (var10)).field_v = var15;
             }
-            this.field_T.a(var15, false);
+            this.field_T.addLast(var15, false);
             var10 = var15;
           }
         }

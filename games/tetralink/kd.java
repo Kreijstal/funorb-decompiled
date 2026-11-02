@@ -42,7 +42,7 @@ final class kd {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryPrevious != null) {
-            param1.e(0);
+            param1.unlinkSecondary(0);
           }
           if (param2 < 94) {
             kd.a(-121, 28, (byte) -36);

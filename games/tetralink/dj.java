@@ -90,7 +90,7 @@ final class dj {
         IntrusiveNode var5 = null;
         try {
           if (param2.previous != null) {
-            param2.b(false);
+            param2.unlink(false);
           }
           var5 = this.field_e[(int)((long)(this.field_f - 1) & param0)];
           if (param1 > -48) {

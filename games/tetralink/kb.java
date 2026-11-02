@@ -16,7 +16,7 @@ final class kb extends IntrusiveNode {
         }
         try {
           gl.field_o = param1;
-          ck.field_bb.field_fb.b(1);
+          ck.field_bb.field_fb.clear(1);
           if (param0) {
             field_t = -13;
           }

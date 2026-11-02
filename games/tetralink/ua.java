@@ -18,14 +18,14 @@ final class ua {
           if (!en.b(117, 1)) {
             return false;
           }
-          rl.field_d = kb.field_q.d((byte) -99);
+          rl.field_d = kb.field_q.readUnsignedByte((byte) -99);
           kb.field_q.position = 0;
         }
         if (rl.field_d == -2) {
           if (!en.b(125, 2)) {
             return false;
           }
-          rl.field_d = kb.field_q.e(127);
+          rl.field_d = kb.field_q.readUnsignedShort(127);
           kb.field_q.position = 0;
         }
         return en.b(115, rl.field_d);
@@ -127,7 +127,7 @@ final class ua {
 
     final static void a(int param0) {
         cd.field_a = false;
-        fn.field_K = param0 == ~kb.field_q.d((byte) -99) ? true : false;
+        fn.field_K = param0 == ~kb.field_q.readUnsignedByte((byte) -99) ? true : false;
     }
 
     final static void a(int param0, String param1) {

@@ -18,8 +18,8 @@ final class wj {
         int var3Lifetime1;
         this.field_h.payload = param0;
         this.field_h.position = 10;
-        int var2 = this.field_h.e(127);
-        this.field_f = this.field_h.e(127);
+        int var2 = this.field_h.readUnsignedShort(127);
+        this.field_f = this.field_h.readUnsignedShort(127);
         this.field_d = 500000;
         this.field_a = new int[var2];
         int var3 = 0;
@@ -64,7 +64,7 @@ final class wj {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_h.b((byte) 120);
+        var3 = this.field_h.readVarInt((byte) 120);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_h.payload[this.field_h.position] & 255;
@@ -89,14 +89,14 @@ final class wj {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_h.d((byte) -99);
-          var4 = this.field_h.b((byte) 120);
+          var3 = this.field_h.readUnsignedByte((byte) -99);
+          var4 = this.field_h.readVarInt((byte) 120);
           if (var3 == 47) {
             this.field_h.position = this.field_h.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_h.d(-1);
+            var5 = this.field_h.readMedium(-1);
             var4 -= 3;
             var6 = this.field_g[param0];
             this.field_c = this.field_c + (long)var6 * (long)(this.field_d - var5);
@@ -110,10 +110,10 @@ final class wj {
         var3Lifetime1 = field_i[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_h.d((byte) -99) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_h.readUnsignedByte((byte) -99) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_h.d((byte) -99) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_h.readUnsignedByte((byte) -99) << 16;
         }
         return var4Lifetime1;
     }
@@ -178,7 +178,7 @@ final class wj {
     }
 
     final void e(int param0) {
-        int var2 = this.field_h.b((byte) 120);
+        int var2 = this.field_h.readVarInt((byte) 120);
         this.field_g[param0] = this.field_g[param0] + var2;
     }
 

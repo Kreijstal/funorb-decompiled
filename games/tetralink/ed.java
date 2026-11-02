@@ -454,7 +454,7 @@ final class ed extends en {
             fieldTemp$4 = var1.field_n - 1;
             var1.field_n = var1.field_n - 1;
             if (0 == fieldTemp$4) {
-              var1.b(false);
+              var1.unlink(false);
             }
             var1 = (ko) (eg.field_J.a((byte) -70));
           }
@@ -463,7 +463,7 @@ final class ed extends en {
             fieldTemp$3 = var2.field_r + 1;
             var2.field_r = var2.field_r + 1;
             if (83 < fieldTemp$3) {
-              var2.b(false);
+              var2.unlink(false);
             }
             var2 = (kb) (tb.field_d.a((byte) -70));
           }
@@ -490,7 +490,7 @@ final class ed extends en {
               break;
             }
             if (var3 == null) {
-              tb.field_d.a(var7, false);
+              tb.field_d.addLast(var7, false);
             } else {
               cl.a(var3, 98, var7);
             }
@@ -536,7 +536,7 @@ final class ed extends en {
             fieldTemp$2 = var3_ref.field_s - 1;
             var3_ref.field_s = var3_ref.field_s - 1;
             if (fieldTemp$2 <= 0) {
-              var3_ref.b(false);
+              var3_ref.unlink(false);
             } else {
               var3_ref.field_v = var3_ref.field_v + var3_ref.field_r;
               var3_ref.field_t = var3_ref.field_t + var3_ref.field_x;
@@ -556,7 +556,7 @@ final class ed extends en {
               break;
             }
             var3_refLifetime1 = new qi(0, 1638400, 0, var4, -8192, var5, 150);
-            nd.field_Sb.a(var3_refLifetime1, false);
+            nd.field_Sb.addLast(var3_refLifetime1, false);
           }
           if (field_O != -4 &&
             field_O != -2) {
