@@ -49,7 +49,7 @@ final class cn {
           var11_ref_String = var14;
           var8 = param4.a(-30491);
           var11_ref_StringLifetime1 = var8;
-          if (null == sh.field_e &&
+          if (null == NodeHashTableIterator.field_e &&
             !wb.a(0, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
@@ -174,7 +174,7 @@ final class cn {
             stackIn_56_0 = mn.field_e;
             return stackIn_56_0;
           }
-          if (sh.field_e == null) {
+          if (NodeHashTableIterator.field_e == null) {
             if (qj.field_b) {
               if (no.d(8) > 30000L) {
                 gi.field_b = vc.field_N;

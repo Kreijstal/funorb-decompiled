@@ -23,7 +23,7 @@ class jj {
         int var5;
         int var6;
         int var8;
-        fa var9;
+        IntrusiveNode var9;
         var8 = Pixelate.field_H ? 1 : 0;
         if (0 < this.field_d) {
           var2 = -(kb.field_L.c(this.field_l) / 2) + 320 - 20;
@@ -51,8 +51,8 @@ class jj {
           }
         }
         if (param0 > -87) {
-          var9 = (fa) null;
-          jj.$cfr$intArgs$a$2d0b7bdf67eb(106, (fa) null, (fa) null);
+          var9 = (IntrusiveNode) null;
+          jj.$cfr$intArgs$a$2d0b7bdf67eb(106, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
@@ -147,7 +147,7 @@ class jj {
         field_h = null;
     }
 
-    final static void a(byte param0, fa param1, fa param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.field_h != null) {
             param2.c(2779);
@@ -164,7 +164,7 @@ class jj {
 
     final static void a(int param0) {
         r.b(-93);
-        eh.a(3, v.field_c, fq.field_q, r.field_c, h.field_V[param0].field_A, hk.field_b);
+        eh.a(3, v.field_c, fq.field_q, r.field_c, h.field_V[param0].field_A, DelegatingCanvas.field_b);
     }
 
     void a(boolean param0) {
@@ -230,7 +230,7 @@ class jj {
           kb.field_L.b(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
           t.c(pd.field_Jb, pd.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
           kb.field_L.b(this.field_l, var5Lifetime1, var6, 0, -1);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           this.field_g = new int[2][];
           for (var7 = 0; this.field_k.length > var7; var7++) {
             var8_int = 0;
@@ -315,7 +315,7 @@ class jj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$2d0b7bdf67eb(int param0, fa param1, fa param2) {
+    final static void $cfr$intArgs$a$2d0b7bdf67eb(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.field_h != null) {
             param2.c(2779);

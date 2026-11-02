@@ -136,7 +136,7 @@ final class re {
     }
 
     final static void b(int param0) {
-        fa.field_b = null;
+        IntrusiveNode.field_b = null;
         if (param0 != 140) {
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class tn extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String[] field_k;
     static String field_m;
     static String[] field_n;
@@ -136,7 +136,7 @@ public abstract class tn extends java.applet.Applet implements Runnable, java.aw
                 }
                 gh.a((byte) 90);
                 this.a(-27106);
-                qa.field_f = vk.a(wp.field_c, -88, (java.awt.Component) ((Object) ec.field_u), uo.field_i);
+                ClientException.field_f = vk.a(wp.field_c, -88, (java.awt.Component) ((Object) ec.field_u), uo.field_i);
                 this.a((byte) -15);
                 gn.field_y = rj.j(-30272);
                 do {
@@ -666,7 +666,7 @@ public abstract class tn extends java.applet.Applet implements Runnable, java.aw
             var2 = eg.field_i;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ec.field_u = (java.awt.Canvas) ((Object) new hk((java.awt.Component) (this)));
+          ec.field_u = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ec.field_u));
           ec.field_u.setSize(uo.field_i, wp.field_c);
           ec.field_u.setVisible(true);
@@ -846,7 +846,7 @@ public abstract class tn extends java.applet.Applet implements Runnable, java.aw
             return (java.awt.Container) ((Object) stackIn_4_0);
           }
           if (param0 <= 41) {
-            tn.b(false);
+            GameApplet.b(false);
           }
           stackIn_9_0 = ao.a(13867);
           return (java.awt.Container) ((Object) stackIn_9_0);
@@ -880,7 +880,7 @@ public abstract class tn extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected tn() {
+    protected GameApplet() {
         this.field_c = false;
     }
 

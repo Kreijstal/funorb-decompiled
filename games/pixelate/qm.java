@@ -158,11 +158,11 @@ class qm extends ng {
           super.a(param0, param1, param2, param3);
           if (this.field_k != 0 &&
             this.field_k != ef.field_b) {
-            if (this.a(78, param2, param1, bg.field_k, uf.field_d) &&
+            if (this.a(78, param2, param1, bg.field_k, ProxyAuthenticationException.field_d) &&
               ef.field_b == 0) {
-              this.a(true, -param1 + bg.field_k, this.field_k, -param2 + uf.field_d);
+              this.a(true, -param1 + bg.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
             }
-            this.a(bg.field_k, param2, param3, 0, param1, uf.field_d);
+            this.a(bg.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,7 +298,7 @@ class qm extends ng {
           var21Lifetime2 = ja.field_b;
           var22Lifetime2 = ja.field_i;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param0.field_A) {
               var24Lifetime1 = param0.field_k[var23Lifetime2];
@@ -312,7 +312,7 @@ class qm extends ng {
               if (var30 != 0) {
                 if (stackIn_67_0 < stackIn_67_1) {
                   stackIn_76_0 = var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -399,7 +399,7 @@ class qm extends ng {
                   }
                   stackIn_76_0 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_76_0 >= wd.field_i.length) {
                     break;
@@ -478,9 +478,9 @@ class qm extends ng {
         RuntimeException var20 = null;
         try {
           ie.field_G = param11;
-          lm.field_o = param14;
+          DualLinkNode.field_o = param14;
           el.a(param10, param13, param9, 93, param3);
-          nb.a(param5, param6, 7, param1);
+          SecondaryNodeDequeIterator.a(param5, param6, 7, param1);
           mj.a(param2, param4, param0, 300, param12, param8);
           ug.a(param15, param19, -26104);
           k.a(param7, param18, -14129, param16);

@@ -140,7 +140,7 @@ final class ff {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = fl.field_g[cm.a((int) var4[var6], 255)];
           }
-          var1[var2] = new tf(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
+          var1[var2] = new tf(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
         }
         re.b(140);
         return var1;

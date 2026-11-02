@@ -39,7 +39,7 @@ final class wa {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = fl.field_g[cm.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new tf(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var21);
+            var1[var2] = new tf(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var21);
           } else {
             var22 = gd.field_k[var2];
             var16 = new int[var3];
@@ -48,7 +48,7 @@ final class wa {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var20[var7])], cm.a(var22[var7] << 24, -16777216));
             }
-            var1[var2] = (tf) ((Object) new sa(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var16));
+            var1[var2] = (tf) ((Object) new sa(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var16));
           }
         }
         if (param0 >= -116) {

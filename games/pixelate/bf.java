@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends fa {
+final class bf extends IntrusiveNode {
     static String[][] field_q;
     static String field_t;
     private int field_n;
@@ -161,7 +161,7 @@ final class bf extends fa {
           this.field_l.c();
           t.d();
           this.a(0, 0, (byte) 98);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           t.b(a.field_N);
           fi.a(this.field_l, param1, param3, param4, param2);
         }

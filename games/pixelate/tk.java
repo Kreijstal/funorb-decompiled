@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends fa {
+final class tk extends IntrusiveNode {
     private int field_k;
     private int field_l;
     private int field_r;

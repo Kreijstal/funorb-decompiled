@@ -528,7 +528,7 @@ final class pf {
     final static void b(int param0, int param1) {
         td.field_d = gn.field_w[param0];
         hm.field_a = un.field_k[param0];
-        wa.field_a = uf.field_c[param0];
+        wa.field_a = ProxyAuthenticationException.field_c[param0];
         if (param1 != -31383) {
           pf.b(63, 96);
         }

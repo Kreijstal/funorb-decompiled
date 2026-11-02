@@ -101,7 +101,7 @@ final class up {
             var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
           }
         }
-        qa.field_f.a(param0 + 19676);
+        ClientException.field_f.a(param0 + 19676);
     }
 
     up(int param0) {

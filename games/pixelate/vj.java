@@ -119,7 +119,7 @@ final class vj extends sj {
         return 0;
     }
 
-    private final void a(fa param0, hl param1) {
+    private final void a(IntrusiveNode param0, hl param1) {
         while (true) {
           if (param0 == this.field_p.field_f) {
             jj.$cfr$intArgs$a$2d0b7bdf67eb(98, param0, param1);
@@ -140,7 +140,7 @@ final class vj extends sj {
     private final void a(hl param0) {
         param0.c(2779);
         param0.a();
-        fa var2 = this.field_p.field_f.field_a;
+        IntrusiveNode var2 = this.field_p.field_f.field_a;
         if (var2 == this.field_p.field_f) {
           this.field_q = -1;
         } else {

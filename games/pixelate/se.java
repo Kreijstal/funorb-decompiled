@@ -11,7 +11,7 @@ final class se extends jj {
         if (!param0) {
           return false;
         }
-        stackIn_6_0 = (null != sh.field_e) && (uk.field_s.b(-21));
+        stackIn_6_0 = (null != NodeHashTableIterator.field_e) && (uk.field_s.b(-21));
         return stackIn_6_0;
     }
 

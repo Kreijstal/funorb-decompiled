@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends fa {
+final class sn extends IntrusiveNode {
     private int[] field_r;
     byte[] field_o;
     byte[] field_p;

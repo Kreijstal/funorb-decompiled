@@ -93,12 +93,12 @@ final class jh extends ch implements vo {
         }
         if (0 != in.field_p.field_P) {
           if (1 == ia.field_a.length &&
-            tn.field_o != ia.field_a[0]) {
-            tn.field_o = ia.field_a[0];
+            GameApplet.field_o != ia.field_a[0]) {
+            GameApplet.field_o = ia.field_a[0];
           }
-          si.a(param1, bg.field_d, tn.field_o, 0, true, (byte) -76);
+          si.a(param1, bg.field_d, GameApplet.field_o, 0, true, (byte) -76);
         }
-        if (hk.field_h.field_P != 0) {
+        if (DelegatingCanvas.field_h.field_P != 0) {
           uj.field_Wb = false;
         }
     }

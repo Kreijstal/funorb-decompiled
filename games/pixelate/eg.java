@@ -81,11 +81,11 @@ final class eg extends eh {
                   if (var11 != -1) {
                     var8Lifetime2Lifetime2 = var15.substring(0, var11);
                   }
-                  throw new uf(var8Lifetime2Lifetime2);
+                  throw new ProxyAuthenticationException(var8Lifetime2Lifetime2);
                 }
                 break;
               }
-              throw new uf("");
+              throw new ProxyAuthenticationException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_11_0 = var13;
@@ -268,7 +268,7 @@ final class eg extends eh {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        uf var12_ref = null;
+        ProxyAuthenticationException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
@@ -319,15 +319,15 @@ final class eg extends eh {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (uf) null;
+            if (false) throw (ProxyAuthenticationException) null;
             var12 = this.a(var11, 26251);
             if (var12 != null) {
               stackIn_22_0 = var12;
               return stackIn_22_0;
             }
-          } catch (uf decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (uf) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

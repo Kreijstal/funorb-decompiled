@@ -125,7 +125,7 @@ final class pj {
           this.field_e.c();
           t.d();
           rk.field_e.b(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

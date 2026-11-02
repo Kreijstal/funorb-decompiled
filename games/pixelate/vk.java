@@ -166,7 +166,7 @@ class vk extends hb implements vo {
           }
           if (5 == param0) {
             var6.a(11, -1, jj.field_c);
-            var6.a(17, -1, mk.field_e);
+            var6.a(17, -1, FullscreenFocusCanvas.field_e);
           } else {
             if (param0 != 256) {
               stackIn_14_0 = var6;

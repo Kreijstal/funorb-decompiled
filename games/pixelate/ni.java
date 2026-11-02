@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends fa {
+final class ni extends IntrusiveNode {
     static ak field_s;
     static tf field_m;
     int field_r;
@@ -36,7 +36,7 @@ final class ni extends fa {
         try {
           cl.field_d = param2;
           bl.field_c = param3;
-          mk.field_d = param0;
+          FullscreenFocusCanvas.field_d = param0;
           i.field_l = param1;
           r.field_a = param7;
           vp.field_Lb = param9;
@@ -52,7 +52,7 @@ final class ni extends fa {
 
     final static void a(int param0) {
         oc.field_H[5].a(ug.field_n, (byte) -24);
-        oc.field_H[6].a(lm.field_s, (byte) -24);
+        oc.field_H[6].a(DualLinkNode.field_s, (byte) -24);
         oc.field_H[8].a(db.field_T, (byte) -24);
         if (!gq.d(121)) {
           oc.field_H[1].a(oj.field_N, (byte) -24);

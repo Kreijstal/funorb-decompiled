@@ -388,7 +388,7 @@ class db extends qm {
           super.a(param0, param1, param2, param3);
           this.field_P = null;
           if (this.field_D) {
-            var5_int = uf.field_d - (param2 + this.field_z);
+            var5_int = ProxyAuthenticationException.field_d - (param2 + this.field_z);
             var6 = -param1 + (bg.field_k - this.field_p);
             this.field_P = this.b(var5_int, -22562, var6);
           }

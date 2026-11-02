@@ -29,12 +29,12 @@ final class pk {
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           var5_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (kb.field_N.length > var5_int) {
               param1 = kb.field_N[var5_int];
               stackIn_13_0 = var5_int << 4;
               if (var7 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var6 = stackIn_13_0;
               while (true) {
@@ -53,7 +53,7 @@ final class pk {
                 break;
               }
               var5_int++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = param3;
             break;
@@ -269,7 +269,7 @@ final class pk {
           if (ce.field_d == 2 &&
             !ra.a((byte) -99)) {
             if (ha.a(fp.field_d, (byte) 37)) {
-              var2 = sd.a(tn.field_m, 34, new String[]{jo.field_k});
+              var2 = sd.a(GameApplet.field_m, 34, new String[]{jo.field_k});
               if (var10 != 0) {
                 var2 = sd.a(fg.field_d, 34, new String[]{jo.field_k});
               }
@@ -348,7 +348,7 @@ final class pk {
               var9 = vl.field_Q.c(var4);
               if (!ue.a((byte) 124)) {
                 if (nf.field_d.field_W &&
-                  (-nf.field_d.field_tb + uf.field_d) < var9) {
+                  (-nf.field_d.field_tb + ProxyAuthenticationException.field_d) < var9) {
                   if (!ln.field_q) {
                     var1 = ll.field_i;
                   } else {

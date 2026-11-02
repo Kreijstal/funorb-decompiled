@@ -64,7 +64,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             uk.field_s = jm.field_q;
           } else {
             try {
-              sh.field_e = new mo((java.net.Socket) (ra.field_b.field_e), op.field_p);
+              NodeHashTableIterator.field_e = new mo((java.net.Socket) (ra.field_b.field_e), op.field_p);
               aa.field_f.field_m = 0;
               var4 = vi.field_o;
               var5 = var4;
@@ -168,7 +168,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null != fj.field_c) {
             oi.field_c = 0;
             c.field_X = param0.getX();
-            fa.field_j = param0.getY();
+            IntrusiveNode.field_j = param0.getY();
             hm.a(64);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               tl.field_a = 2;
@@ -374,7 +374,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
           }
         } else {
-          if (tn.field_i == w.field_v.field_d.field_d) {
+          if (GameApplet.field_i == w.field_v.field_d.field_d) {
             if (param0 == 5) {
               if (of.field_d == ql.field_m) {
                 if (lb.field_D > 0) {
@@ -414,7 +414,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               }
             }
           } else {
-            tn.field_i = w.field_v.field_d.field_d;
+            GameApplet.field_i = w.field_v.field_d.field_d;
             if (w.field_v.field_r == 0) {
               ql.field_m = w.field_v.field_d.field_d;
               if (param0 != 5) {

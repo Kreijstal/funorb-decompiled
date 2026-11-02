@@ -519,7 +519,7 @@ final class ii {
             pe.field_b.c();
             t.d();
             fq.field_o.a(false);
-            qa.field_f.a(19692);
+            ClientException.field_f.a(19692);
             pe.field_b.a(0, 0, hn.field_d);
           }
           if (pm.field_u) {
@@ -1162,7 +1162,7 @@ final class ii {
           if (50 == var3.field_f) {
             var8.a(-20791, var3.field_f, true);
             gb.field_f[2] = gb.field_f[2] + 1;
-            kl.a((byte) -117);
+            IterableNodeHashTable.a((byte) -117);
           }
           var5 = var3.field_f;
           f.field_o = f.field_o + (var5 << 7);

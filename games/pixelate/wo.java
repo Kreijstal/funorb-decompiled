@@ -84,10 +84,10 @@ final class wo {
         int var7 = param4;
         this.field_g.a(-19360, param2, var7, param0, param1, var6, param3);
         ak.field_E.a(0, fq.field_q, 0, param4 ^ 261, wa.field_f.field_K);
-        kc.field_u.a(fq.field_q + 2, 18, 0, 256, -2 + (-hk.field_b + (wa.field_f.field_K - 2) - 80));
-        ae.field_e.a(fq.field_q + 2, 18, -80 + (-2 + (-hk.field_b + wa.field_f.field_K)), 256, 82 + hk.field_b);
-        ma.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, hk.field_b, 2, -fq.field_q + wa.field_f.field_nb - 22);
-        v.field_e.a(20, true, 2, hk.field_b);
+        kc.field_u.a(fq.field_q + 2, 18, 0, 256, -2 + (-DelegatingCanvas.field_b + (wa.field_f.field_K - 2) - 80));
+        ae.field_e.a(fq.field_q + 2, 18, -80 + (-2 + (-DelegatingCanvas.field_b + wa.field_f.field_K)), 256, 82 + DelegatingCanvas.field_b);
+        ma.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, DelegatingCanvas.field_b, 2, -fq.field_q + wa.field_f.field_nb - 22);
+        v.field_e.a(20, true, 2, DelegatingCanvas.field_b);
     }
 
     public static void a(boolean param0) {
@@ -136,7 +136,7 @@ final class wo {
             pm.field_l[3 - var2].c();
             var1.d(0, 0, t.field_j, t.field_d);
           }
-          qa.field_f.a(param0 ^ 19695);
+          ClientException.field_f.a(param0 ^ 19695);
           jg.field_J = rk.field_e.c(bb.field_e);
           rf.field_n = rk.field_e.c(po.field_j);
         } catch (RuntimeException runtimeException) {
@@ -144,13 +144,13 @@ final class wo {
         }
     }
 
-    final static mk a(cb param0, int param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(cb param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        mk var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        mk stackIn_2_0 = null;
-        mk stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_2_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -159,13 +159,13 @@ final class wo {
           var8 = uc.a(param0, param5, param4, param2, param3, true);
           var6 = var8;
           if (param1 != 150) {
-            stackIn_2_0 = (mk) null;
+            stackIn_2_0 = (FullscreenFocusCanvas) null;
             return stackIn_2_0;
           }
           if (var8 == null) {
             return null;
           }
-          var7 = new mk();
+          var7 = new FullscreenFocusCanvas();
           var7.field_f = var8;
           var7.field_f.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param4, param2);

@@ -48,13 +48,13 @@ final class md extends db {
               t.field_k[var5] = bq.a(bq.a(var7 << 8, var7 << 16), var7 >> 1);
             }
           }
-          qa.field_g = new tf(640, 480);
-          qa.field_g.c();
+          ClientException.field_g = new tf(640, 480);
+          ClientException.field_g.c();
           param0.c(0, 0, 255, 80);
           param0.c(320, 0, 255, 80);
           param0.c(0, 240, 80, 0);
           param0.c(320, 240, param2, 0);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -368,7 +368,7 @@ final class te extends ak {
                 io.field_c != null) {
                 var6 = 1;
               }
-              if (kl.a(var6, 0) == 2) {
+              if (IterableNodeHashTable.a(var6, 0) == 2) {
                 am.a(1, -26931, var6, param1);
               }
               var8 = (String) null;

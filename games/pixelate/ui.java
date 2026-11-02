@@ -122,18 +122,18 @@ final class ui {
         int stackIn_9_0 = 0;
         int var6;
         int var7;
-        ca.field_a[pg.field_e] = param4;
-        gn.field_A[pg.field_e] = pg.field_e;
-        ep.field_c[pg.field_e] = param3;
+        ca.field_a[SecondaryNodeDeque.field_e] = param4;
+        gn.field_A[SecondaryNodeDeque.field_e] = SecondaryNodeDeque.field_e;
+        ep.field_c[SecondaryNodeDeque.field_e] = param3;
         if (w.field_s > param3) {
           ro.field_a = param3;
         }
         if (param3 > aa.field_o) {
           qn.field_k = param3;
         }
-        uc.field_b[pg.field_e] = param0;
-        vp.field_Fb[pg.field_e] = param5;
-        gh.field_q[pg.field_e] = param2;
+        uc.field_b[SecondaryNodeDeque.field_e] = param0;
+        vp.field_Fb[SecondaryNodeDeque.field_e] = param5;
+        gh.field_q[SecondaryNodeDeque.field_e] = param2;
         var6 = param2 + (param5 + param0);
         if (param1 != var6) {
           stackIn_9_0 = 1000 * param0 / var6;
@@ -141,14 +141,14 @@ final class ui {
           stackIn_9_0 = 0;
         }
         var7 = stackIn_9_0;
-        nb.field_c[pg.field_e] = var7;
+        SecondaryNodeDequeIterator.field_c[SecondaryNodeDeque.field_e] = var7;
         if (qn.field_k < var7) {
           qn.field_k = var7;
         }
         if (var7 < ro.field_a) {
           ro.field_a = var7;
         }
-        pg.field_e = pg.field_e + 1;
+        SecondaryNodeDeque.field_e = SecondaryNodeDeque.field_e + 1;
     }
 
     static {

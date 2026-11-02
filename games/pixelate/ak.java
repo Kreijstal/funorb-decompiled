@@ -499,7 +499,7 @@ class ak extends tp {
           }
           this.field_P = 0;
         }
-        stackIn_31_1 = (!bm.field_q) && (t.field_e <= uf.field_d) && (uf.field_d < t.field_h) && (bg.field_k >= t.field_f) && (t.field_a > bg.field_k);
+        stackIn_31_1 = (!bm.field_q) && (t.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < t.field_h) && (bg.field_k >= t.field_f) && (t.field_a > bg.field_k);
         this.field_R = stackIn_31_1;
         if (0 == ef.field_b) {
           this.field_J = 0;
@@ -522,7 +522,7 @@ class ak extends tp {
         t.f(var9, var10, var11, var12);
         if (this.field_J != 0 &&
           this.field_vb) {
-          this.field_D = -this.field_ub + (uf.field_d - param1);
+          this.field_D = -this.field_ub + (ProxyAuthenticationException.field_d - param1);
           this.field_S = bg.field_k - this.field_Ab - param4;
           if (this.field_D < 0) {
             this.field_D = 0;

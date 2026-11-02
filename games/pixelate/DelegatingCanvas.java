@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static ak[] field_e;
     private java.awt.Component field_c;
     static String field_f;
@@ -43,11 +43,11 @@ final class hk extends java.awt.Canvas {
         if (param0 < -61) {
           return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
         }
-        hk.a(54);
+        DelegatingCanvas.a(54);
         return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
     }
 
-    hk(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

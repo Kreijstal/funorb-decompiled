@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class pg implements Iterable {
-    lm field_a;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode field_a;
     static long[] field_c;
     static int field_e;
     static long[][] field_b;
     static String field_d;
     static sp[] field_f;
 
-    final lm a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 < 57) {
-          return (lm) null;
+          return (DualLinkNode) null;
         }
-        lm var2 = this.field_a.field_p;
+        DualLinkNode var2 = this.field_a.field_p;
         if (this.field_a == var2) {
           return null;
         }
@@ -123,7 +123,7 @@ final class pg implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new nb(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final static tf[] a(int param0, byte param1) {
@@ -134,7 +134,7 @@ final class pg implements Iterable {
         return var2;
     }
 
-    final void a(byte param0, lm param1) {
+    final void a(byte param0, DualLinkNode param1) {
         if (param1.field_r != null) {
           param1.e(17);
         }
@@ -154,13 +154,13 @@ final class pg implements Iterable {
     final static boolean b(int param0) {
         if (param0 != 916440577) {
           byte[] var2 = (byte[]) null;
-          pg.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (we) null, (byte[]) null);
+          SecondaryNodeDeque.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (we) null, (byte[]) null);
         }
         return ck.field_j.c(32059);
     }
 
-    pg() {
-        this.field_a = new lm();
+    SecondaryNodeDeque() {
+        this.field_a = new DualLinkNode();
         this.field_a.field_p = this.field_a;
         this.field_a.field_r = this.field_a;
     }
@@ -203,7 +203,7 @@ final class pg implements Iterable {
         field_c[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_c[var0] = fp.a(fp.a(fp.a(fp.a(mk.a(4278190080L, field_b[4][4 + var1]), fp.a(mk.a(1095216660480L, field_b[3][var1 + 3]), fp.a(mk.a(field_b[2][var1 + 2], 280375465082880L), fp.a(mk.a(-72057594037927936L, field_b[0][var1]), mk.a(field_b[1][var1 + 1], 71776119061217280L))))), mk.a(field_b[5][5 + var1], 16711680L)), mk.a(65280L, field_b[6][var1 + 6])), mk.a(field_b[7][var1 + 7], 255L));
+            field_c[var0] = fp.a(fp.a(fp.a(fp.a(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.a(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.a(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.a(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
         }
         field_f = new sp[132];
         field_d = "Achievements";

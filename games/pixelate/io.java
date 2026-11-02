@@ -101,7 +101,7 @@ final class io {
             dupTemp$1 = new int[2][var6 * 4];
             var3.field_r = dupTemp$1;
             var8 = dupTemp$1;
-            var9 = pg.field_e;
+            var9 = SecondaryNodeDeque.field_e;
             var10 = 0;
             var11 = 0;
             while (var9 > var10) {
@@ -456,8 +456,8 @@ final class io {
 
     final static void a(tc param0, byte param1) {
         try {
-          hk.field_d = param0;
-          pe.field_c = hk.field_d.field_z + hk.field_d.field_w;
+          DelegatingCanvas.field_d = param0;
+          pe.field_c = DelegatingCanvas.field_d.field_z + DelegatingCanvas.field_d.field_w;
           int var2_int = -116 / ((70 - param1) / 48);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

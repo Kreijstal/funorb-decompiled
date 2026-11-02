@@ -90,11 +90,11 @@ final class ma extends bg {
           var7Lifetime1 = 0;
           var8Lifetime1 = mi.d(-4096, var6Lifetime1) >> 8;
           var9Lifetime1 = th.a(var6Lifetime1, param0 + 8085) >> 8;
-          if (uf.field_d != -1 &&
+          if (ProxyAuthenticationException.field_d != -1 &&
             -1 != bg.field_k) {
             var9Lifetime1 = -128;
             var8Lifetime1 = -bg.field_k + 240;
-            var7Lifetime1 = -320 + uf.field_d;
+            var7Lifetime1 = -320 + ProxyAuthenticationException.field_d;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1));
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);

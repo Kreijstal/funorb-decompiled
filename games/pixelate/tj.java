@@ -73,7 +73,7 @@ final class tj extends ah {
     }
 
     final static hh b(byte param0) {
-        hh var1 = new hh(field_y, jb.field_a, fa.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
+        hh var1 = new hh(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
         if (param0 >= -78) {
           return (hh) null;
         }
@@ -89,7 +89,7 @@ final class tj extends ah {
           field_w = (String) null;
         }
         wa.field_c.e((byte) 54);
-        ko.a(false, nb.field_b, param0 ^ -26047);
+        ko.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, jl param4, tf[] param5, int param6, int param7, tf[] param8, int param9, jl param10, byte param11, int param12, int param13, int param14) {
@@ -206,17 +206,17 @@ final class tj extends ah {
           if (ep.field_c[param2] > ep.field_c[param3]) {
             return false;
           }
-          if (nb.field_c[param2] < nb.field_c[param3]) {
+          if (SecondaryNodeDequeIterator.field_c[param2] < SecondaryNodeDequeIterator.field_c[param3]) {
             return true;
           }
-          if (nb.field_c[param3] < nb.field_c[param2]) {
+          if (SecondaryNodeDequeIterator.field_c[param3] < SecondaryNodeDequeIterator.field_c[param2]) {
             return false;
           }
         } else {
-          if (nb.field_c[param3] > nb.field_c[param2]) {
+          if (SecondaryNodeDequeIterator.field_c[param3] > SecondaryNodeDequeIterator.field_c[param2]) {
             return true;
           }
-          if (nb.field_c[param2] > nb.field_c[param3]) {
+          if (SecondaryNodeDequeIterator.field_c[param2] > SecondaryNodeDequeIterator.field_c[param3]) {
             return false;
           }
           if (ep.field_c[param2] < ep.field_c[param3]) {

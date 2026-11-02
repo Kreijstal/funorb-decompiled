@@ -93,12 +93,12 @@ final class ec extends mg {
           var3_int = 0;
           var4 = ce.field_c;
           while (var3_int < pl.field_J.length) {
-            var5 = uf.field_e[var3_int];
+            var5 = ProxyAuthenticationException.field_e[var3_int];
             if (var5 >= 0) {
               var6 = jp.a(pl.field_J[var3_int], 8192, true);
               var4 = var4 + ki.field_e;
               var7 = bq.field_d - (var6 >> 1);
-              if (mn.a(param1, var4, 59, (lf.field_b << 1) + dk.field_d, -uf.field_a + var7, param2, (uf.field_a << 1) + var6)) {
+              if (mn.a(param1, var4, 59, (lf.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

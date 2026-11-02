@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends RuntimeException {
+final class ClientException extends RuntimeException {
     static int field_e;
     Throwable field_c;
     static ha field_f;
@@ -17,7 +17,7 @@ final class qa extends RuntimeException {
         field_b = null;
         field_g = null;
         if (!param0) {
-          qa.a(62, -2, 14, -125);
+          ClientException.a(62, -2, 14, -125);
         }
     }
 
@@ -25,11 +25,11 @@ final class qa extends RuntimeException {
         if (param3 == 3) {
           return ap.a(param1, param0, 5, param2, 1);
         }
-        qa.a(-72, -103, -103, -51);
+        ClientException.a(-72, -103, -103, -51);
         return ap.a(param1, param0, 5, param2, 1);
     }
 
-    qa(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_d = param1;
         this.field_c = param0;
     }

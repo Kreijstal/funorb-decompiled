@@ -127,7 +127,7 @@ final class oe extends ak {
             this.field_Nb.field_qb = "|";
             if (!(rj.field_I < 5) ||
               !(wo.field_h < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -141,7 +141,7 @@ final class oe extends ak {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = wi.field_c;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;

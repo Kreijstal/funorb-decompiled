@@ -70,7 +70,7 @@ final class bl {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 >= 27) {
-              stackIn_4_0 = (v) (Class.forName("wj").newInstance());
+              stackIn_4_0 = (v) (Class.forName("MouseWheelInput").newInstance());
               return stackIn_4_0;
             }
             stackIn_2_0 = (v) null;
@@ -93,7 +93,7 @@ final class bl {
             field_g = (String) null;
           }
           qf.field_c = param1;
-          fa.field_i = param2;
+          IntrusiveNode.field_i = param2;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class mc extends fa {
+final class mc extends IntrusiveNode {
     boolean field_p;
     int field_s;
     int[] field_l;
@@ -176,7 +176,7 @@ final class mc extends fa {
           if (qf.field_c == null) {
             return;
           }
-          if (null != mk.field_d &&
+          if (null != FullscreenFocusCanvas.field_d &&
             null != kc.field_r) {
             var29 = t.field_k;
             var2Lifetime1 = t.field_j;
@@ -192,19 +192,19 @@ final class mc extends fa {
             if (0 > var7Lifetime1) {
               var9_int = -var7Lifetime1;
               var5 = var5 + var9_int * 2;
-              mk.field_d.field_D = mk.field_d.field_D + var9_int;
+              FullscreenFocusCanvas.field_d.field_D = FullscreenFocusCanvas.field_d.field_D + var9_int;
               r.field_a = r.field_a - var9_int;
               bl.field_c = bl.field_c + var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
-              mk.field_d.field_A = mk.field_d.field_A + var9_int * 2;
+              FullscreenFocusCanvas.field_d.field_A = FullscreenFocusCanvas.field_d.field_A + var9_int * 2;
             }
             var6Lifetime1 += 6;
             var8 -= 3;
-            if (var7Lifetime1 + var5 > mk.field_d.field_A) {
-              var9_intLifetime1 = -mk.field_d.field_A + (var7Lifetime1 + var5);
+            if (var7Lifetime1 + var5 > FullscreenFocusCanvas.field_d.field_A) {
+              var9_intLifetime1 = -FullscreenFocusCanvas.field_d.field_A + (var7Lifetime1 + var5);
               bl.field_c = bl.field_c + var9_intLifetime1;
-              mk.field_d.field_A = mk.field_d.field_A + 2 * var9_intLifetime1;
-              mk.field_d.field_D = mk.field_d.field_D + var9_intLifetime1;
+              FullscreenFocusCanvas.field_d.field_A = FullscreenFocusCanvas.field_d.field_A + 2 * var9_intLifetime1;
+              FullscreenFocusCanvas.field_d.field_D = FullscreenFocusCanvas.field_d.field_D + var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               r.field_a = r.field_a - var9_intLifetime1;
@@ -215,42 +215,42 @@ final class mc extends fa {
               i.field_l = i.field_l - var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
               cl.field_d = cl.field_d + var9_intLifetime2;
-              mk.field_d.field_y = mk.field_d.field_y + var9_intLifetime2;
-              mk.field_d.field_B = mk.field_d.field_B + var9_intLifetime2 * 2;
+              FullscreenFocusCanvas.field_d.field_y = FullscreenFocusCanvas.field_d.field_y + var9_intLifetime2;
+              FullscreenFocusCanvas.field_d.field_B = FullscreenFocusCanvas.field_d.field_B + var9_intLifetime2 * 2;
             }
-            if (mk.field_d.field_B < var8 + var6Lifetime1) {
-              var9_intLifetime3 = -mk.field_d.field_B + var8 + var6Lifetime1;
+            if (FullscreenFocusCanvas.field_d.field_B < var8 + var6Lifetime1) {
+              var9_intLifetime3 = -FullscreenFocusCanvas.field_d.field_B + var8 + var6Lifetime1;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
               cl.field_d = cl.field_d + var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
-              mk.field_d.field_B = mk.field_d.field_B + var9_intLifetime3 * 2;
+              FullscreenFocusCanvas.field_d.field_B = FullscreenFocusCanvas.field_d.field_B + var9_intLifetime3 * 2;
               i.field_l = i.field_l - var9_intLifetime3;
-              mk.field_d.field_y = mk.field_d.field_y + var9_intLifetime3;
+              FullscreenFocusCanvas.field_d.field_y = FullscreenFocusCanvas.field_d.field_y + var9_intLifetime3;
             }
-            mk.field_d.d();
-            var9 = new tf(mk.field_d.field_A, mk.field_d.field_B);
+            FullscreenFocusCanvas.field_d.d();
+            var9 = new tf(FullscreenFocusCanvas.field_d.field_A, FullscreenFocusCanvas.field_d.field_B);
             var9.c();
             kc.field_r.a(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w + kc.field_r.field_z);
             de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
-            mk.field_d.c();
+            FullscreenFocusCanvas.field_d.c();
             var9.b(0, 0);
             ni.field_m = new tf(640, 480);
             ni.field_m.c();
-            mk.field_d.b((mk.field_d.field_A >> 1) + r.field_a, i.field_l + (mk.field_d.field_B >> 1), aq.field_a, 4096);
-            mk.field_d = null;
+            FullscreenFocusCanvas.field_d.b((FullscreenFocusCanvas.field_d.field_A >> 1) + r.field_a, i.field_l + (FullscreenFocusCanvas.field_d.field_B >> 1), aq.field_a, 4096);
+            FullscreenFocusCanvas.field_d = null;
             ni.field_m.f();
             t.a(var29, var2Lifetime1, var3Lifetime1);
             t.b(wi.field_f);
           }
-          if (fa.field_i != null &&
+          if (IntrusiveNode.field_i != null &&
             qe.field_A != null) {
             var30 = t.field_k;
             var2Lifetime2 = t.field_j;
             var3Lifetime2 = t.field_d;
             t.a(wi.field_f);
             var17 = new tf(412, 43);
-            var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{fa.field_i});
-            fa.field_i = null;
+            var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
+            IntrusiveNode.field_i = null;
             var17.c();
             qe.field_A.a(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.field_w + qe.field_A.field_z);
             de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
@@ -346,15 +346,15 @@ final class mc extends fa {
               gp.field_Kb.field_E + var1_int > bg.field_k) {
               var2Lifetime5 = (40 * wd.b(qk.field_e << 4, 0) >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (uf.field_d > -gp.field_Kb.field_F + 269 &&
-                  uf.field_d < 269) {
+                if (ProxyAuthenticationException.field_d > -gp.field_Kb.field_F + 269 &&
+                  ProxyAuthenticationException.field_d < 269) {
                   gp.field_Kb.b(269 - (gp.field_Kb.field_A + 1), var1_int - 1, var2Lifetime5);
                   gp.field_Kb.b(269 + (-gp.field_Kb.field_A + 1), var1_int - 1, var2Lifetime5);
                   gp.field_Kb.b(268 - gp.field_Kb.field_A, var1_int + 1, var2Lifetime5);
                   gp.field_Kb.b(1 + (-gp.field_Kb.field_A + 269), 1 + var1_int, var2Lifetime5);
                 } else {
-                  if (uf.field_d > 586) {
-                    if (gp.field_Kb.field_F + 586 <= uf.field_d) {
+                  if (ProxyAuthenticationException.field_d > 586) {
+                    if (gp.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
                       no.e(param0 - 19320);
                       li.field_a[ae.field_b].b(269, 340);
                       return;

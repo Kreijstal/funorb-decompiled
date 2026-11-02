@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends fa {
+final class og extends IntrusiveNode {
     int field_m;
     static boolean field_l;
     byte[] field_k;

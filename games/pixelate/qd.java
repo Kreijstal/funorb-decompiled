@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qd extends fa {
+final class qd extends IntrusiveNode {
     private boolean field_K;
     private byte[][] field_Q;
     private static kg[] field_A;

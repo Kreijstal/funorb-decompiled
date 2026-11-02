@@ -148,12 +148,12 @@ final class co {
         }
     }
 
-    final mk b(boolean param0) {
+    final FullscreenFocusCanvas b(boolean param0) {
         this.field_b = uo.field_i;
         this.field_l = wp.field_c;
         this.field_s.a(this.field_q, 126, this.field_x);
         wl.field_i = param0 ? true : false;
-        mk var2 = wo.a(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
+        FullscreenFocusCanvas var2 = wo.a(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
         if (var2 == null) {
           this.b(89);
         }

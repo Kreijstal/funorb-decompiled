@@ -43,7 +43,7 @@ final class wl {
         }
         var2 = 1;
         var3 = -1 + this.field_h.length;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var3 >= 0) {
             stackIn_7_0 = var2;
             stackIn_7_1 = $cfr$dcmpg(0.0, this.field_h[var3]);
@@ -62,7 +62,7 @@ final class wl {
           if (var2 == 0 &&
             this.field_a > 0) {
             stackIn_19_0 = false;
-            break L2;
+            break scanLoop1;
           }
           stackIn_19_0 = true;
           break;

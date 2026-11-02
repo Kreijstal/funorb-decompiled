@@ -49,7 +49,7 @@ final class hq extends de {
               this.field_I = 0;
             }
           } else {
-            this.field_A = pg.field_d;
+            this.field_A = SecondaryNodeDeque.field_d;
             this.field_I = 9;
           }
         } else {
@@ -231,10 +231,10 @@ final class hq extends de {
         }
         if (!param0) {
           this.field_I = 17;
-          this.field_A = tn.field_f;
+          this.field_A = GameApplet.field_f;
         } else {
           this.field_I = 9;
-          this.field_A = pg.field_d;
+          this.field_A = SecondaryNodeDeque.field_d;
         }
     }
 
@@ -382,12 +382,12 @@ final class hq extends de {
         if (c.field_R == null) {
           c.field_R = vk.a(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
-        ha var6 = qa.field_f;
-        qa.field_f = c.field_R;
-        qa.field_f.a(19692);
+        ha var6 = ClientException.field_f;
+        ClientException.field_f = c.field_R;
+        ClientException.field_f.a(19692);
         this.c(0);
-        qa.field_f = var6;
-        qa.field_f.a(19692);
+        ClientException.field_f = var6;
+        ClientException.field_f.a(19692);
         fi.a(c.field_R.field_e, var4, var5);
     }
 

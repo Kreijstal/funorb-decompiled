@@ -129,7 +129,7 @@ final class vf {
           var4 = v.field_e.field_Fb.field_L;
           if (2 != gk.field_db &&
             1 != gk.field_db) {
-            v.field_e.field_Gb.field_Ib.field_cb = mk.field_c;
+            v.field_e.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
             v.field_e.field_rb = false;
             wd.a(v.field_e.field_Fb, false);
             return;
@@ -209,7 +209,7 @@ final class vf {
           if (v.field_e.field_Hb.field_P == 0) {
             return;
           }
-          he.field_f = new ve(v.field_e.field_Hb.field_tb, v.field_e.field_Hb.field_gb, v.field_e.field_Hb.field_K, v.field_e.field_Hb.field_nb, uf.field_f, po.field_c, mg.field_h, mg.field_h);
+          he.field_f = new ve(v.field_e.field_Hb.field_tb, v.field_e.field_Hb.field_gb, v.field_e.field_Hb.field_K, v.field_e.field_Hb.field_nb, ProxyAuthenticationException.field_f, po.field_c, mg.field_h, mg.field_h);
           il.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

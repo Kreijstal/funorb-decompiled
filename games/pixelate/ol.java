@@ -99,7 +99,7 @@ final class ol extends de {
         if (!param0) {
           field_p = (String[]) null;
         }
-        stackIn_6_0 = (null != sh.field_e) && (Pixelate.field_G == uk.field_s);
+        stackIn_6_0 = (null != NodeHashTableIterator.field_e) && (Pixelate.field_G == uk.field_s);
         return stackIn_6_0;
     }
 

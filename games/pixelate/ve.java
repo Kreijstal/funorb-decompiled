@@ -458,7 +458,7 @@ final class ve extends ak {
     final static void j(int param0) {
         cd.field_e = new String[d.field_b];
         cd.field_e[17] = ap.field_i;
-        cd.field_e[20] = sh.field_c;
+        cd.field_e[20] = NodeHashTableIterator.field_c;
         cd.field_e[21] = nk.field_g;
         cd.field_e[5] = wf.field_a;
         cd.field_e[18] = gp.field_Eb;

@@ -49,7 +49,7 @@ final class kk {
           pl.field_S = 0;
           of.field_d = -1;
           le.field_j = 45;
-          tn.field_i = -1;
+          GameApplet.field_i = -1;
           sd.field_N = true;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "kk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -179,7 +179,7 @@ final class kk {
         this.field_c.c();
         t.d();
         this.a(-20, 0, 0);
-        qa.field_f.a(19692);
+        ClientException.field_f.a(19692);
         for (var2Lifetime1 = 1; -1 + this.field_h > var2Lifetime1; var2Lifetime1++) {
           var6 = 1;
           var3Lifetime1 = var6;

@@ -465,8 +465,8 @@ public final class Pixelate extends lb {
         qh.a(param0 - 22862);
         r.a(-31558);
         lb.c(true);
-        qa.a(true);
-        tn.b(true);
+        ClientException.a(true);
+        GameApplet.b(true);
         ll.a((byte) -57);
         wb.a(-116);
         v.a(false);
@@ -489,7 +489,7 @@ public final class Pixelate extends lb {
         nc.b(false);
         ha.a(true);
         re.a(true);
-        mk.a((byte) -85);
+        FullscreenFocusCanvas.a((byte) -85);
         co.a(true);
         ii.b((byte) -101);
         dg.a(1048576);
@@ -499,9 +499,9 @@ public final class Pixelate extends lb {
         am.a((byte) -125);
         uo.b(127);
         mo.a((byte) -84);
-        fa.d(-3);
+        IntrusiveNode.d(-3);
         cf.a((byte) -114);
-        lm.a(-2575);
+        DualLinkNode.a(-2575);
         nk.a(true);
         dh.a(true);
         sc.a((byte) -108);
@@ -635,7 +635,7 @@ public final class Pixelate extends lb {
         bq.a((byte) 124);
         cd.a(false);
         oi.a(param0 ^ param0);
-        hk.a(param0 - 23207);
+        DelegatingCanvas.a(param0 - 23207);
         ri.b(10);
         ap.a(11924);
         gf.c(param0 - 31989);
@@ -668,7 +668,7 @@ public final class Pixelate extends lb {
         kp.d((byte) -58);
         le.a(1);
         eh.d(29731);
-        uf.a((byte) 73);
+        ProxyAuthenticationException.a((byte) 73);
         k.d(false);
         i.c(-56);
         vm.a(116);
@@ -709,8 +709,8 @@ public final class Pixelate extends lb {
         bh.a((byte) 94);
         wd.a(1);
         bn.m(param0 ^ -23082);
-        kl.b((byte) -105);
-        pg.a(true);
+        IterableNodeHashTable.b((byte) -105);
+        SecondaryNodeDeque.a(true);
         ah.g(-520925311);
         wm.a(false);
         tj.j(109);
@@ -718,8 +718,8 @@ public final class Pixelate extends lb {
         p.a();
         na.a((byte) 4);
         kb.a((byte) 125);
-        sh.a(true);
-        nb.a(param0 ^ -23078);
+        NodeHashTableIterator.a(true);
+        SecondaryNodeDequeIterator.a(param0 ^ -23078);
         ue.a(30);
         rh.a((byte) 64);
         gi.a(-112);
@@ -985,7 +985,7 @@ public final class Pixelate extends lb {
                 var12.field_Zb.a(var12.field_Fb, (byte) 26);
               }
               var12.field_Vb = new ak(0L, (ak) null);
-              if (0 != (1 << qa.field_e & var14)) {
+              if (0 != (1 << ClientException.field_e & var14)) {
                 var12.field_Zb.a(var12.field_Vb, (byte) 26);
               }
               var45 = var12.field_ic;
@@ -1197,7 +1197,7 @@ public final class Pixelate extends lb {
                 var12.field_Fb.a(0, var12.field_Zb.field_nb, var34_int, 256, var52_ref.field_A);
                 var34_int = var34_int + (hd.field_q + var52_ref.field_A);
               }
-              if ((var14Lifetime1 & 1 << qa.field_e) != 0) {
+              if ((var14Lifetime1 & 1 << ClientException.field_e) != 0) {
                 stackIn_88_0 = fd.field_c;
                 if (!var12.field_oc) {
                   stackIn_89_1 = 0;
@@ -1328,7 +1328,7 @@ public final class Pixelate extends lb {
               if (!var12.field_hc &&
                 !var12.field_cc) {
                 if (!var12.field_Mb) {
-                  stackIn_165_0 = qa.field_b;
+                  stackIn_165_0 = ClientException.field_b;
                 } else {
                   stackIn_165_0 = he.field_e;
                 }
@@ -1341,7 +1341,7 @@ public final class Pixelate extends lb {
               if (var12.field_Tb != 2) {
                 stackIn_170_0 = f.field_i;
               } else {
-                stackIn_170_0 = nb.field_a;
+                stackIn_170_0 = SecondaryNodeDequeIterator.field_a;
               }
               up.field_o = stackIn_170_0;
             }
@@ -1685,14 +1685,14 @@ public final class Pixelate extends lb {
         var4 = bi.a("basic", "background_fireworks", pf.field_d, (byte) -38);
         var5 = bi.a("basic", "sprite_fireworks", pf.field_d, (byte) -95);
         md.a(var4, var5, 80);
-        nb.a(0, eh.a("tiles0", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(1, eh.a("tiles1", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(2, eh.a("tiles2", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(3, eh.a("tiles3", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(4, eh.a("tiles4", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(5, eh.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(6, eh.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
-        nb.a(7, eh.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(0, eh.a("tiles0", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(1, eh.a("tiles1", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(2, eh.a("tiles2", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(3, eh.a("tiles3", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(4, eh.a("tiles4", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(5, eh.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(6, eh.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(7, eh.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
         oo.field_c = new tf[22];
         oo.field_c[0] = bi.a("basic", "achievement0", pf.field_d, (byte) -75);
         oo.field_c[1] = bi.a("basic", "achievement1", pf.field_d, (byte) -57);
@@ -1729,7 +1729,7 @@ public final class Pixelate extends lb {
         t.d(-22, 0, 42, 48, 20, 65793);
         de.field_c.c();
         ha.field_b.a(0, 0);
-        qa.field_f.a(19692);
+        ClientException.field_f.a(19692);
         var7 = new tf[fo.field_u.length][];
         for (var8 = 0; fo.field_u.length > var8; var8++) {
           if (null != fo.field_u[var8]) {

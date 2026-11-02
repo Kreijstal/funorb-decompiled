@@ -63,7 +63,7 @@ final class id {
             im.field_Hb[var1_int] = new tf(64, 64);
           }
           eg.a((byte) 99);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           ii.field_p = new hh[10];
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ii.field_p.length; var1_intLifetime1++) {
             ii.field_p[var1_intLifetime1] = new hh(64, 64, 2);
@@ -93,7 +93,7 @@ final class id {
         oe.field_Sb = 0;
         jn.field_q = ui.field_k;
         a.field_I = new pf(2);
-        a.field_I.a(param0, el.a(bg.field_k, (byte) -106, uf.field_d), 17068, -1);
+        a.field_I.a(param0, el.a(bg.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
     }
 
     id(boolean param0) {

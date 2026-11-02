@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_e;
     java.awt.Frame field_f;
     static tf field_d;
@@ -14,7 +14,7 @@ final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           dc.a((byte) -124, this.field_f, param1);
           if (param0 != 6511) {
-            mk.a((byte) 114);
+            FullscreenFocusCanvas.a((byte) 114);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -56,7 +56,7 @@ final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    mk() {
+    FullscreenFocusCanvas() {
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

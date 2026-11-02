@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends lm {
+final class qe extends DualLinkNode {
     int[] field_D;
     static int[] field_v;
     String field_C;

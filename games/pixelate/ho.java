@@ -42,12 +42,12 @@ final class ho {
           we.field_o[17] = dg.field_c[0];
           we.field_o[15] = re.field_k[1];
           we.field_o[24] = mj.field_i;
-          we.field_o[22] = pg.field_d;
+          we.field_o[22] = SecondaryNodeDeque.field_d;
           we.field_o[20] = fk.field_p;
           we.field_o[26] = qh.field_f;
           we.field_o[16] = re.field_k[2];
           we.field_o[23] = td.field_a;
-          we.field_o[27] = kl.field_d;
+          we.field_o[27] = IterableNodeHashTable.field_d;
           we.field_o[21] = mj.field_e;
           we.field_o[25] = ip.field_z;
           we.field_o[18] = dg.field_c[1];
@@ -59,7 +59,7 @@ final class ho {
           wc.field_m[1] = ro.field_f;
           wc.field_m[7] = qf.field_d;
           dn.field_a = new String[][]{hm.field_f, qo.field_t, um.field_l, ol.field_p, ui.field_h, qg.field_d};
-          ln.field_m = new String[][]{up.field_a, gp.field_Hb, qh.field_d, wk.field_i, tn.field_k, gj.field_R, uk.field_q, vd.field_d};
+          ln.field_m = new String[][]{up.field_a, gp.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, gj.field_R, uk.field_q, vd.field_d};
           wc.field_m[0] = bn.field_L;
           wc.field_m[5] = wa.field_e;
           for (var1_int = 0; var1_int < wc.field_m.length; var1_int++) {

@@ -95,7 +95,7 @@ final class ql extends jj {
             } else {
               wp.field_a = sd.a(cf.field_v, 63, new String[]{Integer.toString(var2)});
             }
-            wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tn.field_d)});
+            wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
           }
           to.field_r.p(-100);
           fl.a((byte) 81);

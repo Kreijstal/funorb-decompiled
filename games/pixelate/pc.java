@@ -121,7 +121,7 @@ final class pc extends we {
             wa.field_f.field_rb = false;
             ak.field_E.field_cb = wd.field_b;
             if (gk.field_db != 1) {
-              ma.field_z.field_Gb.field_Ib.field_cb = mk.field_c;
+              ma.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
               if (var19 != 0) {
                 ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
               }
@@ -405,7 +405,7 @@ final class pc extends we {
           var4 = 8 - (7 & this.field_r);
           var5 = 0;
           this.field_r = this.field_r + param0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var4 < param0) {
               incrementValue$1 = var3_int;
               var3_int++;
@@ -419,7 +419,7 @@ final class pc extends we {
               if (~param0 != ~var4) {
                 var5 = var5 + (this.field_k[var3_int] >> -param0 + var4 & pk.field_a[param0]);
                 if (var6 == 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
             }

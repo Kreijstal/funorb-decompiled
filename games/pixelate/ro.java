@@ -15,11 +15,11 @@ final class ro {
         var2.e(160, 2);
         var2.e(160, 4);
         if (param1) {
-          var2.e(160, hk.a((byte) -102));
+          var2.e(160, DelegatingCanvas.a((byte) -102));
           return;
         }
         ro.b(16, true);
-        var2.e(160, hk.a((byte) -102));
+        var2.e(160, DelegatingCanvas.a((byte) -102));
     }
 
     public static void a(boolean param0) {
@@ -291,18 +291,18 @@ final class ro {
               jn.field_q > ui.field_k &&
               bg.field_k > var3 &&
               var3 + gp.field_Kb.field_E > bg.field_k) {
-              if (uf.field_d > -gp.field_Kb.field_F + 269 &&
-                269 > uf.field_d) {
+              if (ProxyAuthenticationException.field_d > -gp.field_Kb.field_F + 269 &&
+                269 > ProxyAuthenticationException.field_d) {
                 jn.field_q = ui.field_k;
               }
-              if (uf.field_d > 586 &&
-                uf.field_d < gp.field_Kb.field_F + 586) {
+              if (ProxyAuthenticationException.field_d > 586 &&
+                ProxyAuthenticationException.field_d < gp.field_Kb.field_F + 586) {
                 jn.field_q = ui.field_k;
               }
             }
           }
           if (param1) {
-            a.field_I.a(el.a(ji.field_c, (byte) 126, uo.field_a), el.a(bg.field_k, (byte) -77, uf.field_d), -1);
+            a.field_I.a(el.a(ji.field_c, (byte) 126, uo.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
             if (a.field_I.a(19)) {
               if (a.field_I.field_j == 0) {
                 stackIn_63_0 = 3;

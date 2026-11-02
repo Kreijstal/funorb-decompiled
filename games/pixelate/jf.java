@@ -205,7 +205,7 @@ final class jf {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = mk.field_a;
+            stackIn_7_0 = FullscreenFocusCanvas.field_a;
             return stackIn_7_0;
           }
           var3 = dd.a(param0, (byte) -96, '.');

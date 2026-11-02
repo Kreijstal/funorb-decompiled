@@ -164,7 +164,7 @@ final class pb {
         int var11;
         var11 = Pixelate.field_H ? 1 : 0;
         var2 = jc.field_d ? 1 : 0;
-        t.a(uf.field_b);
+        t.a(ProxyAuthenticationException.field_b);
         if (var2 == 0) {
           t.f(0, -100 + this.field_o, 640, this.field_o + 100);
         }
@@ -216,7 +216,7 @@ final class pb {
         if (param0 <= 43) {
           this.field_h = -119;
         }
-        t.b(uf.field_b);
+        t.b(ProxyAuthenticationException.field_b);
     }
 
     final void d(int param0) {

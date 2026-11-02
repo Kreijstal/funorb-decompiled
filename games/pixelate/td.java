@@ -134,7 +134,7 @@ final class td {
           }
           t.d(8, 8, 32, 32, 6, 16777215);
           t.c(2, 2, 0, 0, t.field_j, t.field_d);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

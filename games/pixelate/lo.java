@@ -193,8 +193,8 @@ final class lo extends ak {
             !(gh.field_q.length >= param2)) {
             gh.field_q = new int[2 * param2];
           }
-          if (nb.field_c == null) {
-            nb.field_c = new int[2 * param2];
+          if (SecondaryNodeDequeIterator.field_c == null) {
+            SecondaryNodeDequeIterator.field_c = new int[2 * param2];
             if (null == gn.field_A ||
               !(param1 + param2 <= gn.field_A.length)) {
               gn.field_A = new int[2 * (param1 + param2)];
@@ -204,7 +204,7 @@ final class lo extends ak {
               dp.field_o = new boolean[2 * param2];
             }
           } else {
-            if (param2 <= nb.field_c.length) {
+            if (param2 <= SecondaryNodeDequeIterator.field_c.length) {
               if (null == gn.field_A ||
                 !(param1 + param2 <= gn.field_A.length)) {
                 gn.field_A = new int[2 * (param1 + param2)];
@@ -214,7 +214,7 @@ final class lo extends ak {
                 dp.field_o = new boolean[2 * param2];
               }
             } else {
-              nb.field_c = new int[2 * param2];
+              SecondaryNodeDequeIterator.field_c = new int[2 * param2];
               if (null == gn.field_A ||
                 !(param1 + param2 <= gn.field_A.length)) {
                 gn.field_A = new int[2 * (param1 + param2)];
@@ -244,9 +244,9 @@ final class lo extends ak {
               !(gh.field_q.length >= param2)) {
               gh.field_q = new int[2 * param2];
             }
-            if (nb.field_c == null ||
-              !(param2 <= nb.field_c.length)) {
-              nb.field_c = new int[2 * param2];
+            if (SecondaryNodeDequeIterator.field_c == null ||
+              !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
+              SecondaryNodeDequeIterator.field_c = new int[2 * param2];
             }
             if (null == gn.field_A) {
               gn.field_A = new int[2 * (param1 + param2)];
@@ -283,9 +283,9 @@ final class lo extends ak {
             }
             if (gh.field_q == null) {
               gh.field_q = new int[2 * param2];
-              if (nb.field_c == null ||
-                !(param2 <= nb.field_c.length)) {
-                nb.field_c = new int[2 * param2];
+              if (SecondaryNodeDequeIterator.field_c == null ||
+                !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
+                SecondaryNodeDequeIterator.field_c = new int[2 * param2];
               }
               if (null == gn.field_A) {
                 gn.field_A = new int[2 * (param1 + param2)];
@@ -309,9 +309,9 @@ final class lo extends ak {
               }
             } else {
               if (gh.field_q.length >= param2) {
-                if (nb.field_c == null ||
-                  !(param2 <= nb.field_c.length)) {
-                  nb.field_c = new int[2 * param2];
+                if (SecondaryNodeDequeIterator.field_c == null ||
+                  !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
+                  SecondaryNodeDequeIterator.field_c = new int[2 * param2];
                 }
                 if (null == gn.field_A) {
                   gn.field_A = new int[2 * (param1 + param2)];
@@ -335,9 +335,9 @@ final class lo extends ak {
                 }
               } else {
                 gh.field_q = new int[2 * param2];
-                if (nb.field_c == null ||
-                  !(param2 <= nb.field_c.length)) {
-                  nb.field_c = new int[2 * param2];
+                if (SecondaryNodeDequeIterator.field_c == null ||
+                  !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
+                  SecondaryNodeDequeIterator.field_c = new int[2 * param2];
                 }
                 if (null == gn.field_A) {
                   gn.field_A = new int[2 * (param1 + param2)];
@@ -366,7 +366,7 @@ final class lo extends ak {
         aa.field_o = -2147483648;
         w.field_s = param0;
         qn.field_k = -2147483648;
-        pg.field_e = 0;
+        SecondaryNodeDeque.field_e = 0;
         ro.field_a = 2147483647;
     }
 

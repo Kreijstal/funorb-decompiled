@@ -73,7 +73,7 @@ abstract class jp {
             field_d = (String) null;
           }
           if (!param2) {
-            stackIn_6_0 = lm.field_o.c(param0);
+            stackIn_6_0 = DualLinkNode.field_o.c(param0);
             return stackIn_6_0;
           }
           stackIn_4_0 = ie.field_G.c(param0);

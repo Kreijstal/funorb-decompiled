@@ -35,7 +35,7 @@ final class r {
             var4 = jh.field_O.field_F - 40;
           }
         }
-        uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
+        ProxyAuthenticationException.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
     }
 
     public static void a(int param0) {

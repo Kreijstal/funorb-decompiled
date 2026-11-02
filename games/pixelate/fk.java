@@ -251,8 +251,8 @@ final class fk extends de {
                         jf.field_c.a((byte) -8);
                         var4.a(ln.field_m[this.field_r][1], var8_int, 314, 0, -1);
                         var9_int = 2;
-                        if (640 - var8_int > uf.field_d &&
-                          -var8_int + 640 - 170 < uf.field_d &&
+                        if (640 - var8_int > ProxyAuthenticationException.field_d &&
+                          -var8_int + 640 - 170 < ProxyAuthenticationException.field_d &&
                           314 > bg.field_k &&
                           bg.field_k > 290) {
                           var9_int++;

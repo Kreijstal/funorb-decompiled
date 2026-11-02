@@ -39,7 +39,7 @@ final class mi extends de {
           if (var3 != null) {
             ii.field_q = var3.field_k;
             ki.field_f = 300;
-            nn.field_a = qj.field_e.c(tn.field_n[ii.field_q]) + 56;
+            nn.field_a = qj.field_e.c(GameApplet.field_n[ii.field_q]) + 56;
             gk.field_bb = 50 + nn.field_a;
           }
         } else {
@@ -143,7 +143,7 @@ final class mi extends de {
           int var8Lifetime1;
           var9 = Pixelate.field_H ? 1 : 0;
           try {
-            if (null == sh.field_e &&
+            if (null == NodeHashTableIterator.field_e &&
               !wb.a(0, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
@@ -302,7 +302,7 @@ final class mi extends de {
               return stackIn_90_0;
             }
             var6_intLifetime2 = 51 % ((-18 - param1) / 46);
-            if (null == sh.field_e) {
+            if (null == NodeHashTableIterator.field_e) {
               if (qj.field_b) {
                 if (no.d(8) <= 30000L) {
                   gi.field_b = ho.field_b;
@@ -406,12 +406,12 @@ final class mi extends de {
     }
 
     final static void b(boolean param0) {
-        ho.field_g.a(0, 18, 0, 256, -(!f.field_n ? 0 : 40 + hk.field_b + 4) + oc.field_O.field_K);
+        ho.field_g.a(0, 18, 0, 256, -(!f.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + oc.field_O.field_K);
         if (param0) {
           field_o = false;
         }
-        l.field_s.a(0, 18, -40 + (-hk.field_b + (oc.field_O.field_K - 2)), 256, 42 + hk.field_b);
-        jm.field_b.a(0, 2, (byte) 102, oc.field_O.field_K, 20, oc.field_O.field_nb - 20, hk.field_b);
+        l.field_s.a(0, 18, -40 + (-DelegatingCanvas.field_b + (oc.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
+        jm.field_b.a(0, 2, (byte) 102, oc.field_O.field_K, 20, oc.field_O.field_nb - 20, DelegatingCanvas.field_b);
     }
 
     static {

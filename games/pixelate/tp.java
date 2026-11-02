@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class tp extends lm {
+class tp extends DualLinkNode {
     static Random field_v;
     static java.math.BigInteger field_t;
     static String field_u;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ph extends fa {
+final class ph extends IntrusiveNode {
     static on field_l;
     static String field_m;
     int field_k;

@@ -186,7 +186,7 @@ final class cb implements Runnable {
           int var3 = 0;
           Exception var3_ref_Exception = null;
           lj var3_ref_lj = null;
-          uf var3_ref_uf = null;
+          ProxyAuthenticationException var3_ref_uf = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -384,11 +384,11 @@ final class cb implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (uf) null;
+                      if (false) throw (ProxyAuthenticationException) null;
                       var8.field_e = qe.a((String) (var8.field_g), var8.field_a, (byte) 126).a(116);
-                    } catch (uf decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref_uf = (uf) (Object) decompiledCaughtException;
+                      var3_ref_uf = (ProxyAuthenticationException) (Object) decompiledCaughtException;
                       var8.field_e = var3_ref_uf.getMessage();
                       throw var3_ref_uf;
                     }

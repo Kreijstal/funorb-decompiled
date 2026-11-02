@@ -118,7 +118,7 @@ final class dm extends vk implements vo {
                 var5.a(-1, -1, bo.field_f);
               } else {
                 var5.a(11, -1, jj.field_c);
-                var5.a(17, -1, mk.field_e);
+                var5.a(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {
               var5.a(1707, (fn) (this), vi.field_J);

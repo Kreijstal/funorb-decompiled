@@ -96,7 +96,7 @@ final class wi {
               this.field_b.a(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
             }
             if (var6 != 0) {
-              this.field_b.a(sd.a(hk.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
+              this.field_b.a(sd.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
               return;
             }
           }
@@ -478,7 +478,7 @@ final class wi {
                   am.a(2, -26931, this.field_k, param2);
                 } else {
                   if (param0 == 14) {
-                    kl.a(7500);
+                    IterableNodeHashTable.a(7500);
                   } else {
                     if (20 == param0) {
                       ak.c(true);

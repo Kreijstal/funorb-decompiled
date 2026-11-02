@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ln extends fa {
+final class ln extends IntrusiveNode {
     static boolean field_q;
     static int field_n;
     static String field_l;
@@ -83,7 +83,7 @@ final class ln extends fa {
     }
 
     ln(int param0) {
-        this.field_o = pp.a(pg.field_f[param0], 100, ci.field_m[param0]);
+        this.field_o = pp.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
         mn.a(-21317, this.field_o);
     }
 

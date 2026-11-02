@@ -290,14 +290,14 @@ final class wh extends de {
                 var21.b(db.field_N, aj.field_o[1], var7, var8, var9);
                 var21.b(wa.field_d, aj.field_o[2], var7, var8, var9);
                 var21.b(ab.field_e, aj.field_o[3], var7, var8, var9);
-                var21.b(fa.field_d, aj.field_o[4], var7, var8, var9);
+                var21.b(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
                 var4 = cf.field_z;
                 var7 = var7 + (var6 + 4);
                 var22 = ca.field_f.field_o[d.field_c];
                 var11 = ca.field_f.field_r[d.field_c];
                 var12 = 0;
                 var13 = 0;
-                L45: while (true) {
+                scanLoop1: while (true) {
                   if (10 > var13) {
                     if (var15 == 0) {
                       if (null != var22[var13]) {
@@ -316,7 +316,7 @@ final class wh extends de {
                     }
                   } else {
                     if (var12 != 0) {
-                      break L45;
+                      break scanLoop1;
                     }
                     var7 += 4;
                     var8 = 16711680;
@@ -350,17 +350,17 @@ final class wh extends de {
                 var21.b(db.field_N, aj.field_o[1], var7, var8, var9);
                 var21.b(wa.field_d, aj.field_o[2], var7, var8, var9);
                 var21.b(ab.field_e, aj.field_o[3], var7, var8, var9);
-                var21.b(fa.field_d, aj.field_o[4], var7, var8, var9);
+                var21.b(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
                 var4 = cf.field_z;
                 var7 = var7 + (var6 + 4);
                 var22 = ca.field_f.field_o[d.field_c];
                 var11 = ca.field_f.field_r[d.field_c];
                 var12 = 0;
                 var13 = 0;
-                L37: while (true) {
+                scanLoop2: while (true) {
                   if (10 <= var13) {
                     if (var12 != 0) {
-                      break L37;
+                      break scanLoop2;
                     }
                     var7 += 4;
                     var8 = 16711680;
@@ -397,7 +397,7 @@ final class wh extends de {
                   var25.b(db.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.b(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.b(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.b(fa.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var4Lifetime1 = cf.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
                   var26 = ca.field_f.field_o[d.field_c];
@@ -405,7 +405,7 @@ final class wh extends de {
                   var11Lifetime1 = ca.field_f.field_r[d.field_c];
                   var12Lifetime1 = 0;
                   var13Lifetime1 = 0;
-                  L12: while (true) {
+                  scanLoop3: while (true) {
                     if (10 > var13Lifetime1) {
                       if (var15 == 0) {
                         if (null != var26[var13Lifetime1]) {
@@ -424,7 +424,7 @@ final class wh extends de {
                       }
                     } else {
                       if (var12Lifetime1 != 0) {
-                        break L12;
+                        break scanLoop3;
                       }
                       var7Lifetime1 += 4;
                       var8Lifetime1 = 16711680;
@@ -459,7 +459,7 @@ final class wh extends de {
                   var29.b(db.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.b(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.b(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.b(fa.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var4Lifetime1 = cf.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
                   var30 = ca.field_f.field_o[d.field_c];
@@ -467,10 +467,10 @@ final class wh extends de {
                   var11Lifetime1 = ca.field_f.field_r[d.field_c];
                   var12Lifetime1 = 0;
                   var13Lifetime1 = 0;
-                  L4: while (true) {
+                  scanLoop4: while (true) {
                     if (10 <= var13Lifetime1) {
                       if (var12Lifetime1 != 0) {
-                        break L4;
+                        break scanLoop4;
                       }
                       var7Lifetime1 += 4;
                       var8Lifetime1 = 16711680;
@@ -502,14 +502,14 @@ final class wh extends de {
               var37.b(db.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.b(fa.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var4Lifetime2 = cf.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
               var38 = ca.field_f.field_o[d.field_c];
               var11Lifetime2 = ca.field_f.field_r[d.field_c];
               var12Lifetime2 = 0;
               var13Lifetime2 = 0;
-              L28: while (true) {
+              scanLoop5: while (true) {
                 if (10 > var13Lifetime2) {
                   if (var15 == 0) {
                     if (null != var38[var13Lifetime2]) {
@@ -528,7 +528,7 @@ final class wh extends de {
                   }
                 } else {
                   if (var12Lifetime2 != 0) {
-                    break L28;
+                    break scanLoop5;
                   }
                   var7Lifetime2 += 4;
                   var8Lifetime2 = 16711680;
@@ -562,17 +562,17 @@ final class wh extends de {
               var37.b(db.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.b(fa.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var4Lifetime2 = cf.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
               var38 = ca.field_f.field_o[d.field_c];
               var11Lifetime2 = ca.field_f.field_r[d.field_c];
               var12Lifetime2 = 0;
               var13Lifetime2 = 0;
-              L20: while (true) {
+              scanLoop6: while (true) {
                 if (10 <= var13Lifetime2) {
                   if (var12Lifetime2 != 0) {
-                    break L20;
+                    break scanLoop6;
                   }
                   var7Lifetime2 += 4;
                   var8Lifetime2 = 16711680;
@@ -658,7 +658,7 @@ final class wh extends de {
 
     final static void a(java.math.BigInteger param0, we param1, java.math.BigInteger param2, we param3, int param4) {
         try {
-          pg.a(param0, true, 0, param3.field_m, param2, param1, param3.field_k);
+          SecondaryNodeDeque.a(param0, true, 0, param3.field_m, param2, param1, param3.field_k);
           if (param4 != 12556) {
             field_s = (String) null;
           }

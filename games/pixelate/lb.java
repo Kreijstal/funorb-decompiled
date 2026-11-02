@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lb extends tn {
+abstract class lb extends GameApplet {
     private boolean field_A;
     private long field_s;
     private int field_u;
@@ -188,7 +188,7 @@ abstract class lb extends tn {
         var5 = Pixelate.field_H ? 1 : 0;
         if (null != vh.field_c) {
           if (null == ib.field_f) {
-            var6 = tn.b((byte) 99);
+            var6 = GameApplet.b((byte) 99);
             var4 = var6.getSize();
             vh.field_c.a(var4.width, 13756, var4.height);
           }
@@ -293,7 +293,7 @@ abstract class lb extends tn {
           go.field_f = false;
         }
         if (hf.field_q == 0 &&
-          pg.b(param0 ^ 916440577)) {
+          SecondaryNodeDeque.b(param0 ^ 916440577)) {
           hf.field_q = 1;
         }
         if (hf.field_q == 1) {
@@ -329,7 +329,7 @@ abstract class lb extends tn {
           pe.a(qo.field_u, (byte) -91)) {
           gg.c((byte) 24);
           rn.a((byte) 119);
-          ad.field_r = mk.field_c;
+          ad.field_r = FullscreenFocusCanvas.field_c;
           sd.field_I = false;
           hn.a(io.field_g, param0 + 27848, wk.field_j, qo.field_u, uj.field_Lb);
           if (ri.field_b ||

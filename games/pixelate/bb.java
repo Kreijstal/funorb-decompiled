@@ -4,17 +4,17 @@
 final class bb {
     static String field_e;
     static String field_a;
-    fa field_f;
+    IntrusiveNode field_f;
     static String field_d;
-    private fa field_c;
+    private IntrusiveNode field_c;
     static int field_b;
 
-    final fa g(int param0) {
-        fa var2 = null;
-        fa var2Lifetime1;
+    final IntrusiveNode g(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 1504642273) {
-          fa var3 = (fa) null;
-          this.a(46, (fa) null);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a(46, (IntrusiveNode) null);
           var2 = this.field_f.field_h;
           if (this.field_f == var2) {
             this.field_c = null;
@@ -32,11 +32,11 @@ final class bb {
         return var2Lifetime1;
     }
 
-    final fa d(int param0) {
-        fa var2 = null;
-        fa var2Lifetime1;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -28918) {
-          this.field_c = (fa) null;
+          this.field_c = (IntrusiveNode) null;
           var2 = this.field_f.field_a;
           if (var2 != this.field_f) {
             var2.c(param0 + 31697);
@@ -52,11 +52,11 @@ final class bb {
         return null;
     }
 
-    final fa a(fa param0, int param1) {
-        fa var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        fa stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -70,10 +70,10 @@ final class bb {
           if (var3 == this.field_f) {
             this.field_c = null;
             stackIn_5_0 = null;
-            return (fa) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           if (param1 != 1504642273) {
-            this.field_f = (fa) null;
+            this.field_f = (IntrusiveNode) null;
           }
           this.field_c = var3.field_a;
           stackIn_9_0 = var3;
@@ -93,7 +93,7 @@ final class bb {
     }
 
     final void e(int param0) {
-        fa var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = -12 / ((param0 + 36) / 63);
         while (true) {
@@ -114,8 +114,8 @@ final class bb {
         return this.field_f == this.field_f.field_a ? true : false;
     }
 
-    final fa c(int param0) {
-        fa var2 = this.field_f.field_a;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_f.field_a;
         if (param0 != 1504642273) {
           this.e(44);
           if (this.field_f == var2) {
@@ -133,8 +133,8 @@ final class bb {
         return var2;
     }
 
-    final fa f(int param0) {
-        fa var2 = this.field_c;
+    final IntrusiveNode f(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_f) {
           this.field_c = null;
           return null;
@@ -143,7 +143,7 @@ final class bb {
         if (param0 == 1504642273) {
           return var2;
         }
-        return (fa) null;
+        return (IntrusiveNode) null;
     }
 
     final static void h(int param0) {
@@ -158,9 +158,9 @@ final class bb {
         }
     }
 
-    final fa b(int param0) {
+    final IntrusiveNode b(int param0) {
         int var2 = -96 % ((-6 - param0) / 48);
-        fa var3 = this.field_f.field_h;
+        IntrusiveNode var3 = this.field_f.field_h;
         if (var3 != this.field_f) {
           var3.c(2779);
           return var3;
@@ -180,8 +180,8 @@ final class bb {
         field_d = null;
     }
 
-    final fa j(int param0) {
-        fa var2 = this.field_c;
+    final IntrusiveNode j(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_f) {
           this.field_c = null;
           return null;
@@ -190,11 +190,11 @@ final class bb {
         if (param0 == 0) {
           return var2;
         }
-        this.field_c = (fa) null;
+        this.field_c = (IntrusiveNode) null;
         return var2;
     }
 
-    final void b(int param0, fa param1) {
+    final void b(int param0, IntrusiveNode param1) {
         try {
           if (param1.field_h != null) {
             param1.c(2779);
@@ -214,7 +214,7 @@ final class bb {
     final int i(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = param0;
-        fa var3 = this.field_f.field_a;
+        IntrusiveNode var3 = this.field_f.field_a;
         while (this.field_f != var3) {
           var2++;
           var3 = var3.field_a;
@@ -222,7 +222,7 @@ final class bb {
         return var2;
     }
 
-    final void a(int param0, fa param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
           if (param1.field_h != null) {
             param1.c(2779);
@@ -240,7 +240,7 @@ final class bb {
     }
 
     public bb() {
-        this.field_f = new fa();
+        this.field_f = new IntrusiveNode();
         this.field_f.field_a = this.field_f;
         this.field_f.field_h = this.field_f;
     }

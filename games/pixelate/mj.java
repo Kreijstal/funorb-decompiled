@@ -68,7 +68,7 @@ final class mj {
     final static void a(int param0, sb param1, int param2, int param3, int param4, sb param5) {
         try {
           uo.field_m = param1;
-          uf.field_a = param2;
+          ProxyAuthenticationException.field_a = param2;
           lf.field_b = param4;
           wg.field_d = param5;
           if (param3 != 300) {

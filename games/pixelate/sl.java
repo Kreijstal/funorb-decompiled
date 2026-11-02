@@ -66,7 +66,7 @@ abstract class sl {
             return stackIn_3_0;
           }
           if (var2_int > 63) {
-            stackIn_6_0 = mk.field_a;
+            stackIn_6_0 = FullscreenFocusCanvas.field_a;
             return stackIn_6_0;
           }
           var3 = 0;

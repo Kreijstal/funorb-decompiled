@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nl {
-    private fa field_f;
-    private fa field_i;
-    private fa[] field_g;
+    private IntrusiveNode field_f;
+    private IntrusiveNode field_i;
+    private IntrusiveNode[] field_g;
     static String field_d;
     static sb field_c;
     private int field_e;
@@ -12,14 +12,14 @@ final class nl {
     private int field_a;
     static String field_b;
 
-    final fa a(int param0, long param1) {
-        fa var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param0 != -25484) {
           byte[] var7 = (byte[]) null;
           nl.a((pc) null, (byte[]) null, -80, 17);
         }
-        fa var4 = this.field_g[(int)(param1 & (long)(this.field_a - 1))];
+        IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_a - 1))];
         this.field_i = var4.field_a;
         while (var4 != this.field_i) {
           if (~this.field_i.field_e == ~param1) {
@@ -33,9 +33,9 @@ final class nl {
         return null;
     }
 
-    final fa a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 > -95) {
-          return (fa) null;
+          return (IntrusiveNode) null;
         }
         this.field_e = 0;
         return this.a(54);
@@ -122,8 +122,8 @@ final class nl {
         }
     }
 
-    final void a(long param0, int param1, fa param2) {
-        fa var5 = null;
+    final void a(long param0, int param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param1 <= 120) {
             this.a(-40);
@@ -211,13 +211,13 @@ final class nl {
 
     nl(int param0) {
         int var2 = 0;
-        fa dupTemp$0 = null;
-        fa var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_e = 0;
-        this.field_g = new fa[param0];
+        this.field_g = new IntrusiveNode[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new fa();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_g[var2] = dupTemp$0;
           var3.field_h = var3;
@@ -225,12 +225,12 @@ final class nl {
         }
     }
 
-    final fa a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
-        fa var2_ref_fa;
+        IntrusiveNode var2_ref_fa;
         int var2;
         int var3;
-        fa var4;
+        IntrusiveNode var4;
         var3 = Pixelate.field_H ? 1 : 0;
         if (this.field_e > 0 &&
           this.field_g[-1 + this.field_e] != this.field_f) {

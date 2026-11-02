@@ -61,7 +61,7 @@ final class rb extends de {
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
-        for (var3 = param0; var3 < tn.field_n.length; var3++) {
+        for (var3 = param0; var3 < GameApplet.field_n.length; var3++) {
           if ((1 << var3 & this.f(-111)) > 0) {
             var2++;
           }
@@ -99,7 +99,7 @@ final class rb extends de {
         var4 = qj.field_e;
         gj.field_W[6].b(0, 45);
         this.b((byte) -71);
-        for (var5 = 0; var5 < tn.field_n.length; var5++) {
+        for (var5 = 0; var5 < GameApplet.field_n.length; var5++) {
           var6_ref_tf = this.b((byte) 37, var5);
           if ((this.a((byte) 66, var5) ||
             var2 == 0) && this.c(var5, (byte) 97)) {
@@ -123,7 +123,7 @@ final class rb extends de {
         if (-1 != var5Lifetime1) {
           var6 = var3.field_z + var3.field_D;
           var7Lifetime1 = var4.field_D + (var4.field_z + 3);
-          var3.b(tn.field_n[var5Lifetime1], 320, 280, 0, -1);
+          var3.b(GameApplet.field_n[var5Lifetime1], 320, 280, 0, -1);
           if (this.a((byte) 66, var5Lifetime1)) {
             var3.b(co.field_d, 320, 280 + var6, 0, -1);
           } else {
@@ -160,7 +160,7 @@ final class rb extends de {
         if (param0 != 4) {
           return 126;
         }
-        while (tn.field_n.length > var4) {
+        while (GameApplet.field_n.length > var4) {
           if (this.c(var4, (byte) 95)) {
             var5 = this.d(var4, (byte) -89);
             var6 = this.f(124, var4);
@@ -204,7 +204,7 @@ final class rb extends de {
           !this.a((byte) 66, param1)) {
           return dq.field_a;
         }
-        return qa.field_a[param1];
+        return ClientException.field_a[param1];
     }
 
     final void c(byte param0) {
@@ -271,7 +271,7 @@ final class rb extends de {
         if (param0 > -64) {
           field_q = 92;
         }
-        jn.field_v = this.b(4, uf.field_d, bg.field_k);
+        jn.field_v = this.b(4, ProxyAuthenticationException.field_d, bg.field_k);
         if (jn.field_v != -1 &&
           nm.field_c == 1) {
           mc.a(128, -126);

@@ -81,7 +81,7 @@ final class rj extends gn {
           of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
           of.field_h.c();
           wh.field_q.c(0, 0);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         }
         field_C = (jj[]) null;
@@ -97,7 +97,7 @@ final class rj extends gn {
         of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
         of.field_h.c();
         wh.field_q.c(0, 0);
-        qa.field_f.a(19692);
+        ClientException.field_f.a(19692);
     }
 
     public static void c(byte param0) {

@@ -167,7 +167,7 @@ abstract class ie extends ng implements j {
             for (var11 = param4; var11 < param0; var11++) {
               var12 = gn.field_A[var11];
               if (!param2) {
-                stackIn_24_0 = nb.field_c[var12];
+                stackIn_24_0 = SecondaryNodeDequeIterator.field_c[var12];
               } else {
                 stackIn_24_0 = ep.field_c[var12];
               }

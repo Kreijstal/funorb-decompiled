@@ -81,7 +81,7 @@ final class pl extends ch implements om, vo, pn {
         ip dupTemp$1 = new ip(10000536);
         this.field_X.field_y = (eb) ((Object) dupTemp$1);
         this.field_V.field_y = (eb) ((Object) dupTemp$1);
-        String var2 = sd.a(hk.field_f, 27, new String[]{this.n(3), this.l(0)});
+        String var2 = sd.a(DelegatingCanvas.field_f, 27, new String[]{this.n(3), this.l(0)});
         int var3 = 20;
         var3 = var3 + this.a(si.field_S, -21, this.field_P, 170, var3);
         var3 = var3 + (5 + this.a(mp.field_d, this.field_L, 20, 170, var3, 126, ""));
@@ -95,8 +95,8 @@ final class pl extends ch implements om, vo, pn {
         uc var5 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, he.field_d.field_w, -1, 2147483647, true);
         this.field_M = new db(var2, var5);
         this.field_M.field_l = "";
-        this.field_M.a(fa.field_g, 0, 0);
-        this.field_M.a(fa.field_g, 0, 1);
+        this.field_M.a(IntrusiveNode.field_g, 0, 0);
+        this.field_M.a(IntrusiveNode.field_g, 0, 1);
         this.field_M.field_n = (fn) (this);
         this.field_M.a(46, -90 + this.field_E, var3, -93);
         var3 = var3 + (15 + this.field_M.field_C);

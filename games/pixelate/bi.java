@@ -21,22 +21,22 @@ final class bi {
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
-            hk.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
+            DelegatingCanvas.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
             var2 = var2 + (8 + pe.field_c);
           }
           for (var3 = 0; var3 < this.field_b.length; var3++) {
-            var2 = var2 + pe.field_c * hk.field_d.a(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+            var2 = var2 + pe.field_c * DelegatingCanvas.field_d.a(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
             var2 += 8;
           }
           return;
         }
         bi.a(1);
         if (null != this.field_a) {
-          hk.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
+          DelegatingCanvas.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
           var2 = var2 + (8 + pe.field_c);
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < this.field_b.length; var3Lifetime1++) {
-          var2 = var2 + pe.field_c * hk.field_d.a(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+          var2 = var2 + pe.field_c * DelegatingCanvas.field_d.a(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
           var2 += 8;
         }
     }
@@ -147,7 +147,7 @@ final class bi {
             this.field_c = this.field_c + (pe.field_c + 8);
           }
           for (var4_int = 0; this.field_b.length > var4_int; var4_int++) {
-            this.field_c = this.field_c + pe.field_c * hk.field_d.b(this.field_b[var4_int], 234);
+            this.field_c = this.field_c + pe.field_c * DelegatingCanvas.field_d.b(this.field_b[var4_int], 234);
             this.field_c = this.field_c + 8;
           }
           this.field_e = 20;

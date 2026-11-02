@@ -207,7 +207,7 @@ abstract class de {
     }
 
     void a(int param0, int param1, boolean param2) {
-        this.field_g.a(param2, this.a(uf.field_d, bg.field_k, -119), 17068, param1);
+        this.field_g.a(param2, this.a(ProxyAuthenticationException.field_d, bg.field_k, -119), 17068, param1);
         nk.field_i = pa.field_b;
         if (param0 != 2) {
           field_h = -13;
@@ -419,7 +419,7 @@ abstract class de {
                   param0 = mg.field_k;
                 }
               } else {
-                param0 = mk.field_b;
+                param0 = FullscreenFocusCanvas.field_b;
               }
               decompiledFrameRemainder0 = false;
             }
@@ -528,7 +528,7 @@ abstract class de {
         }
         pe.field_b.c();
         this.c(0);
-        qa.field_f.a(19692);
+        ClientException.field_f.a(19692);
         fi.a(pe.field_b.field_G, var4, var5);
     }
 
@@ -555,7 +555,7 @@ abstract class de {
             }
             this.a(this.field_g.field_j, (byte) -114, false);
           }
-          this.field_g.a(this.a(uo.field_a, ji.field_c, -125), this.a(uf.field_d, bg.field_k, -115), -1);
+          this.field_g.a(this.a(uo.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, bg.field_k, -115), -1);
           if (-1 != this.field_g.field_j) {
             this.a(this.field_g.field_j, (byte) -128, true);
           }
@@ -589,7 +589,7 @@ abstract class de {
         if (param1 > -103) {
           return;
         }
-        L1: {
+        regionExit1: {
           var6 = var4;
           if (var6 != 0) {
             if (29 != var6) {
@@ -609,7 +609,7 @@ abstract class de {
                         la.a(ti.field_t, -4, var6 != 0, -25528);
                       }
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var6 == 2) {
                     if (!(!this.field_g.a(86))) {
@@ -617,14 +617,14 @@ abstract class de {
                       stackIn_74_0 = (!gq.d(107)) ? 0 : 12;
                       la.a(stackIn_74_0, -1, var6 != 0, -25528);
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var6 == 7) {
                     if (!(!this.field_g.a(91))) {
                       var6 = param2 ? 1 : 0;
                       la.a(ti.field_t, 0, var6 != 0, -25528);
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (24 == var6) {
                     if (!(!this.field_g.a(84))) {
@@ -632,7 +632,7 @@ abstract class de {
                       la.a(ti.field_t, 12, var6 != 0, -25528);
                       ce.field_a = true;
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var6 == 25) {
                     if (this.field_g.a(74) &&
@@ -658,7 +658,7 @@ abstract class de {
                             var6 = param2 ? 1 : 0;
                             la.a(ti.field_t, 7, var6 != 0, -25528);
                           }
-                          break L1;
+                          break regionExit1;
                         }
                         if (8 != var6) {
                           if (var6 == 4) {
@@ -666,7 +666,7 @@ abstract class de {
                               var6 = param2 ? 1 : 0;
                               la.a(ti.field_t, 6, var6 != 0, -25528);
                             }
-                            break L1;
+                            break regionExit1;
                           }
                           if (3 == var6) {
                             if (!(!this.field_g.a(62))) {
@@ -679,7 +679,7 @@ abstract class de {
                                 la.a(stackIn_105_0, 5, var6 != 0, -25528);
                               }
                             }
-                            break L1;
+                            break regionExit1;
                           }
                           if (20 == var6) {
                             var5 = 0;
@@ -695,7 +695,7 @@ abstract class de {
                             }
                             if (this.field_g.c((byte) 35)) {
                               var6 = this.a(param0, (byte) 90) + this.a(param0, false) + (h.field_T - 120) >> 1;
-                              var7_int = -var6 + uf.field_d;
+                              var7_int = -var6 + ProxyAuthenticationException.field_d;
                               var8 = 256 * var7_int / 120;
                               var5 = 1;
                               if (var8 <= 0) {
@@ -733,7 +733,7 @@ abstract class de {
                               }
                               if (this.field_g.c((byte) 35)) {
                                 var6 = -120 + (this.a(param0, (byte) 90) + (this.a(param0, false) + h.field_T)) >> 1;
-                                var7_int = uf.field_d - var6;
+                                var7_int = ProxyAuthenticationException.field_d - var6;
                                 var8 = var7_int * 256 / 120;
                                 if (var8 <= 0) {
                                   jg.a(0, -50);
@@ -751,7 +751,7 @@ abstract class de {
                               if (!(!this.field_g.c(102))) {
                                 eg.e(-4767);
                               }
-                              break L1;
+                              break regionExit1;
                             }
                             if (var6 == 6) {
                               if (this.field_g.a(68)) {
@@ -773,7 +773,7 @@ abstract class de {
                                     stackIn_162_0 = (!gq.d(71)) ? 0 : 12;
                                     la.a(stackIn_162_0, -1, var6 != 0, -25528);
                                   }
-                                  break L1;
+                                  break regionExit1;
                                 }
                                 if (var6 == 13) {
                                   if (!(!this.field_g.a(117))) {
@@ -785,7 +785,7 @@ abstract class de {
                                       qj.a(false, 0, 11);
                                     }
                                   }
-                                  break L1;
+                                  break regionExit1;
                                 }
                                 switch (var6) {
                                   case 14:
@@ -855,7 +855,7 @@ abstract class de {
                                       we.field_o[27] = ef.field_c;
                                       break;
                                     }
-                                    we.field_o[27] = kl.field_d;
+                                    we.field_o[27] = IterableNodeHashTable.field_d;
                                     break;
                                   case 19:
                                     if (this.field_g.a(77)) {

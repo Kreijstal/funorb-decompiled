@@ -26,9 +26,9 @@ final class bd {
         aa var9 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (qo.field_o != qa.field_f.field_i) {
-            wa.field_i = wa.field_i + (qa.field_f.field_i - qo.field_o);
-            qo.field_o = qa.field_f.field_i;
+          if (qo.field_o != ClientException.field_f.field_i) {
+            wa.field_i = wa.field_i + (ClientException.field_f.field_i - qo.field_o);
+            qo.field_o = ClientException.field_f.field_i;
           }
           if (param0 > -50) {
             return;
@@ -54,9 +54,9 @@ final class bd {
               if (var5.field_P != 0) {
                 cg.a((byte) -13, var5, var4_int);
               }
-              var6 = kl.a(var4_int, 0);
+              var6 = IterableNodeHashTable.a(var4_int, 0);
               fm.field_h[var4_int].field_H = h.field_V[var6];
-              hk.field_e[var4_int].field_cb = rg.field_a[var6];
+              DelegatingCanvas.field_e[var4_int].field_cb = rg.field_a[var6];
             }
           }
           if (0 != gh.field_u.field_P) {
@@ -128,9 +128,9 @@ final class bd {
     }
 
     final static void a(byte param0) {
-        lm var1 = null;
+        DualLinkNode var1 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
-        lm var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           aj.field_t = 0;
           f.field_q = 0;

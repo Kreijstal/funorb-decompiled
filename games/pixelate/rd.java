@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class rd extends fa {
+final class rd extends IntrusiveNode {
     static byte[] field_l;
     int field_k;
     int field_m;
@@ -159,15 +159,15 @@ final class rd extends fa {
           if (!(param0 > vi.field_o.field_m)) {
             return true;
           }
-          if (null == sh.field_e) {
+          if (null == NodeHashTableIterator.field_e) {
             return false;
           }
-          int var2_int = sh.field_e.a(-70);
+          int var2_int = NodeHashTableIterator.field_e.a(-70);
           if (var2_int > 0) {
             if (!(-vi.field_o.field_m + param0 >= var2_int)) {
               var2_int = param0 - vi.field_o.field_m;
             }
-            sh.field_e.a(vi.field_o.field_k, vi.field_o.field_m, (byte) 119, var2_int);
+            NodeHashTableIterator.field_e.a(vi.field_o.field_k, vi.field_o.field_m, (byte) 119, var2_int);
             jc.field_c = hm.a(64);
             vi.field_o.field_m = vi.field_o.field_m + var2_int;
             if (param0 > vi.field_o.field_m) {

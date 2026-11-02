@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp extends lm {
+final class kp extends DualLinkNode {
     int[] field_u;
     static int[] field_w;
     private int[][] field_B;

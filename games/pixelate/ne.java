@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ne extends ie {
-    static tn field_I;
+    static GameApplet field_I;
 
     private ne(int param0, int param1, int param2, int param3, eb param4, fn param5, ng param6) {
         super(param0, param1, param2, param3, param4, param5);
@@ -60,7 +60,7 @@ final class ne extends ie {
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
         if (param0 != -1879863704) {
-          field_I = (tn) null;
+          field_I = (GameApplet) null;
         }
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;

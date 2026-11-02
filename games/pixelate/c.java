@@ -421,7 +421,7 @@ class c extends qm {
           if (!(this.field_y instanceof af)) {
             return false;
           }
-          var8_int = ((af) ((Object) this.field_y)).a(param3, param5, 0, uf.field_d, bg.field_k, (ng) (this));
+          var8_int = ((af) ((Object) this.field_y)).a(param3, param5, 0, ProxyAuthenticationException.field_d, bg.field_k, (ng) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -522,7 +522,7 @@ class c extends qm {
           if (this.field_k == 1) {
             if (this.field_y instanceof af) {
               var5 = (af) ((Object) this.field_y);
-              var6 = var5.a(param1, param2, param0 ^ 40, uf.field_d, bg.field_k, (ng) (this));
+              var6 = var5.a(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, bg.field_k, (ng) (this));
               if (var6 != -1) {
                 if (this.field_P &&
                   var6 < this.field_V &&

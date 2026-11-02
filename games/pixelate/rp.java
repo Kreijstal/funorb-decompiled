@@ -17,8 +17,8 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ia.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < tn.field_j.length) {
-              var2_int = tn.field_j[var2_int] & -129;
+              var2_int < GameApplet.field_j.length) {
+              var2_int = GameApplet.field_j[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -185,8 +185,8 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ia.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              tn.field_j.length > var2_int) {
-              var2_int = tn.field_j[var2_int];
+              GameApplet.field_j.length > var2_int) {
+              var2_int = GameApplet.field_j[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }

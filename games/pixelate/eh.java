@@ -54,7 +54,7 @@ abstract class eh {
                 fm.field_f[var12].a(var13, var7Lifetime1, var6_int, 256, var8);
                 jo.field_n[var12].a(0, var7Lifetime1, param1, 256, -param1 + var9);
                 fm.field_h[var12].a(param3, var7Lifetime1 + (-param3 - param3), var9, 256, param4);
-                hk.field_e[var12].a(param3, -param3 + (-param3 + var7Lifetime1), var10, param0 + 253, var8 - (param1 + var10));
+                DelegatingCanvas.field_e[var12].a(param3, -param3 + (-param3 + var7Lifetime1), var10, param0 + 253, var8 - (param1 + var10));
               }
             }
           }

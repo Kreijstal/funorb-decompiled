@@ -166,7 +166,7 @@ final class bn extends ie {
           if ((!(this.field_H instanceof qm) ||
             ((qm) (this.field_H)).field_H) &&
             1 == this.field_k) {
-            var5_int = -this.field_N + uf.field_d - param2;
+            var5_int = -this.field_N + ProxyAuthenticationException.field_d - param2;
             var6 = -param1 - this.field_K + bg.field_k;
             if ((var5_int != this.field_z ||
               var6 != this.field_p)) {

@@ -31,22 +31,22 @@ final class dp extends de {
           c.field_R = vk.a(480, 2, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
         if (param1) {
-          var6 = qa.field_f;
-          qa.field_f = c.field_R;
-          qa.field_f.a(19692);
+          var6 = ClientException.field_f;
+          ClientException.field_f = c.field_R;
+          ClientException.field_f.a(19692);
           this.c(0);
-          qa.field_f = var6;
-          qa.field_f.a(19692);
+          ClientException.field_f = var6;
+          ClientException.field_f.a(19692);
           fi.a(c.field_R.field_e, var4, var5);
           return;
         }
         field_p = (String) null;
-        var6Lifetime1 = qa.field_f;
-        qa.field_f = c.field_R;
-        qa.field_f.a(19692);
+        var6Lifetime1 = ClientException.field_f;
+        ClientException.field_f = c.field_R;
+        ClientException.field_f.a(19692);
         this.c(0);
-        qa.field_f = var6Lifetime1;
-        qa.field_f.a(19692);
+        ClientException.field_f = var6Lifetime1;
+        ClientException.field_f.a(19692);
         fi.a(c.field_R.field_e, var4, var5);
     }
 
@@ -145,7 +145,7 @@ final class dp extends de {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = uf.field_d;
+          var2_int = ProxyAuthenticationException.field_d;
           var3 = bg.field_k;
           var4 = mg.field_h.field_Db.b(param0, 500);
           var5 = mg.field_h.field_Db.a(param0, 500) + 6;

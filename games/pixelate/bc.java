@@ -127,17 +127,17 @@ final class bc extends mg {
     final static void a(int param0, byte param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        ie.a(pg.field_e, w.field_s, true, aa.field_o, 0, 127, param0);
-        for (var2_int = 0; var2_int < pg.field_e; var2_int++) {
+        ie.a(SecondaryNodeDeque.field_e, w.field_s, true, aa.field_o, 0, 127, param0);
+        for (var2_int = 0; var2_int < SecondaryNodeDeque.field_e; var2_int++) {
           gn.field_A[param0 + var2_int] = var2_int;
         }
-        ie.a(param0 + pg.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
+        ie.a(param0 + SecondaryNodeDeque.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
         if (param1 < 1) {
           return;
         }
         try {
-          if (pg.field_e > param0) {
-            pg.field_e = param0;
+          if (SecondaryNodeDeque.field_e > param0) {
+            SecondaryNodeDeque.field_e = param0;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');

@@ -152,7 +152,7 @@ final class bq {
               jj.field_h[1] = 5;
             }
           } else {
-            var3_int = qn.a(sd.a(lm.field_n, 84, new String[]{"<br><%0><br>"}), wb.field_c, kc.field_p, -128, bg.field_j);
+            var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), wb.field_c, kc.field_p, -128, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(kc.field_p[var5])) {
@@ -306,7 +306,7 @@ final class bq {
             var4Lifetime3++;
           }
           if (ha.field_h != 2) {
-            mj.field_c.a(param0, mi.a(uf.field_d, bg.field_k, (byte) -97), 17068, 0);
+            mj.field_c.a(param0, mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -97), 17068, 0);
           } else {
             mj.field_c.a(param0, -1, 17068, -1);
           }

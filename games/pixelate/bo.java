@@ -16,7 +16,7 @@ final class bo {
     static long field_e;
 
     final static void a(int param0, int param1) {
-        fa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         og var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -60,14 +60,14 @@ final class bo {
     final static byte[] a(int param0) {
         byte[] var2 = new byte[8];
         byte[] var1 = var2;
-        var2[6] = (byte)(int)mk.a(255L, jo.field_h >> 48);
-        var2[2] = (byte)(int)mk.a((long)param0, jo.field_h >> 16);
-        var2[3] = (byte)(int)mk.a(jo.field_h >> 24, 255L);
-        var2[5] = (byte)(int)mk.a(jo.field_h >> 40, 255L);
-        var2[1] = (byte)(int)mk.a(255L, jo.field_h >> 8);
-        var2[0] = (byte)(int)mk.a(jo.field_h >> 0, 255L);
-        var2[4] = (byte)(int)mk.a(255L, jo.field_h >> 32);
-        var2[7] = (byte)(int)mk.a(255L, jo.field_h >> 56);
+        var2[6] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 48);
+        var2[2] = (byte)(int)FullscreenFocusCanvas.a((long)param0, jo.field_h >> 16);
+        var2[3] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 24, 255L);
+        var2[5] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 40, 255L);
+        var2[1] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 8);
+        var2[0] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 0, 255L);
+        var2[4] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 32);
+        var2[7] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 56);
         return var2;
     }
 
@@ -78,7 +78,7 @@ final class bo {
           var3 = 54 / ((43 - param0) / 45);
           return gb.field_e[param2];
         }
-        if (sh.a(false, param1)) {
+        if (NodeHashTableIterator.a(false, param1)) {
           return 29;
         }
         var3Lifetime1 = 54 / ((43 - param0) / 45);

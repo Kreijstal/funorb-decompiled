@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends fa {
+final class jn extends IntrusiveNode {
     static ak field_p;
     ae field_o;
     boolean field_k;

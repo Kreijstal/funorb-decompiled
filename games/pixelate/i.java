@@ -333,8 +333,8 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         } else {
           if (ni.field_q == t.field_j) {
             if (t.field_d != wg.field_b &&
-              qa.field_f.field_i == t.field_d &&
-              qa.field_f.field_a == t.field_j) {
+              ClientException.field_f.field_i == t.field_d &&
+              ClientException.field_f.field_a == t.field_j) {
               if (io.field_c != null) {
                 hn.a((byte) 32, false);
               } else {
@@ -442,8 +442,8 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               }
             }
           } else {
-            if (qa.field_f.field_i == t.field_d &&
-              qa.field_f.field_a == t.field_j) {
+            if (ClientException.field_f.field_i == t.field_d &&
+              ClientException.field_f.field_a == t.field_j) {
               if (io.field_c != null) {
                 hn.a((byte) 32, false);
               } else {

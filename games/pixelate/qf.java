@@ -24,29 +24,29 @@ final class qf {
     }
 
     final static void a(int param0) {
-        tn.field_j[59] = 57;
-        tn.field_j[92] = 74;
-        tn.field_j[61] = 27;
-        tn.field_j[520] = 59;
-        tn.field_j[192] = 28;
+        GameApplet.field_j[59] = 57;
+        GameApplet.field_j[92] = 74;
+        GameApplet.field_j[61] = 27;
+        GameApplet.field_j[520] = 59;
+        GameApplet.field_j[192] = 28;
         if (param0 == 31171) {
-          tn.field_j[222] = 58;
-          tn.field_j[93] = 43;
-          tn.field_j[47] = 73;
-          tn.field_j[46] = 72;
-          tn.field_j[45] = 26;
-          tn.field_j[44] = 71;
-          tn.field_j[91] = 42;
+          GameApplet.field_j[222] = 58;
+          GameApplet.field_j[93] = 43;
+          GameApplet.field_j[47] = 73;
+          GameApplet.field_j[46] = 72;
+          GameApplet.field_j[45] = 26;
+          GameApplet.field_j[44] = 71;
+          GameApplet.field_j[91] = 42;
           return;
         }
         field_c = (tf) null;
-        tn.field_j[222] = 58;
-        tn.field_j[93] = 43;
-        tn.field_j[47] = 73;
-        tn.field_j[46] = 72;
-        tn.field_j[45] = 26;
-        tn.field_j[44] = 71;
-        tn.field_j[91] = 42;
+        GameApplet.field_j[222] = 58;
+        GameApplet.field_j[93] = 43;
+        GameApplet.field_j[47] = 73;
+        GameApplet.field_j[46] = 72;
+        GameApplet.field_j[45] = 26;
+        GameApplet.field_j[44] = 71;
+        GameApplet.field_j[91] = 42;
     }
 
     static {

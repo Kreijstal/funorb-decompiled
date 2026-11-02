@@ -153,9 +153,9 @@ final class l extends de {
     }
 
     final static void b(boolean param0) {
-        if (qo.field_o != qa.field_f.field_i) {
-          wa.field_i = wa.field_i + (qa.field_f.field_i - qo.field_o);
-          qo.field_o = qa.field_f.field_i;
+        if (qo.field_o != ClientException.field_f.field_i) {
+          wa.field_i = wa.field_i + (ClientException.field_f.field_i - qo.field_o);
+          qo.field_o = ClientException.field_f.field_i;
           if (!(oh.field_b <= 0)) {
             oh.field_b = oh.field_b - 1;
           }

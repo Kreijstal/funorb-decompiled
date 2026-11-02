@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends fa {
+final class cm extends IntrusiveNode {
     static boolean field_m;
     int field_p;
     static String field_l;
-    fa field_k;
+    IntrusiveNode field_k;
     static ak field_o;
     pp field_n;
 
@@ -151,18 +151,18 @@ final class cm extends fa {
         synchronized (var1) {
           oi.field_c = oi.field_c + 1;
           ef.field_b = jm.field_o;
-          uf.field_d = u.field_b;
+          ProxyAuthenticationException.field_d = u.field_b;
           bg.field_k = ra.field_d;
           im.field_Jb = u.field_j;
           u.field_j = false;
           nm.field_c = tl.field_a;
           uo.field_a = c.field_X;
-          ji.field_c = fa.field_j;
+          ji.field_c = IntrusiveNode.field_j;
           tl.field_a = 0;
         }
     }
 
-    cm(pp param0, fa param1) {
+    cm(pp param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_p = param0.e();

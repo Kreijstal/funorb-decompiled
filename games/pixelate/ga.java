@@ -21,7 +21,7 @@ final class ga {
         }
         try {
           var3_int = this.field_b != 0 ? 65280 : 16762115;
-          if (sh.field_f <= this.field_c) {
+          if (NodeHashTableIterator.field_f <= this.field_c) {
             fi.a(320, 332, 35, oc.field_S, var3_int);
           } else {
             var4 = this.field_c * 35 / 1000;
@@ -41,14 +41,14 @@ final class ga {
           return;
         }
         if (param1) {
-          if (this.field_c >= sh.field_f) {
+          if (this.field_c >= NodeHashTableIterator.field_f) {
             return;
           }
           this.field_c = this.field_c + ap.field_a;
-          if (sh.field_f >= this.field_c) {
+          if (NodeHashTableIterator.field_f >= this.field_c) {
             return;
           }
-          this.field_c = sh.field_f;
+          this.field_c = NodeHashTableIterator.field_f;
           return;
         }
         if (this.field_c <= 0) {
@@ -89,35 +89,35 @@ final class ga {
         if (param0) {
           this.field_c = -4;
           if (this.field_c <= 0) {
-            if (this.field_c >= sh.field_f) {
+            if (this.field_c >= NodeHashTableIterator.field_f) {
               lg.field_d[this.field_b].b(this.field_g, 170);
               return;
             }
-            lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - sh.field_f);
+            lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
             return;
           }
           t.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
-          if (this.field_c >= sh.field_f) {
+          if (this.field_c >= NodeHashTableIterator.field_f) {
             lg.field_d[this.field_b].b(this.field_g, 170);
             return;
           }
-          lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - sh.field_f);
+          lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
           return;
         }
         if (this.field_c > 0) {
           t.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
-          if (this.field_c >= sh.field_f) {
+          if (this.field_c >= NodeHashTableIterator.field_f) {
             lg.field_d[this.field_b].b(this.field_g, 170);
             return;
           }
-          lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - sh.field_f);
+          lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
           return;
         }
-        if (this.field_c >= sh.field_f) {
+        if (this.field_c >= NodeHashTableIterator.field_f) {
           lg.field_d[this.field_b].b(this.field_g, 170);
           return;
         }
-        lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - sh.field_f);
+        lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
     }
 
     final static rk a(int param0, int param1) {

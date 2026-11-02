@@ -106,7 +106,7 @@ final class wf {
             return stackIn_3_0;
           }
           if (var2_int > 64) {
-            stackIn_6_0 = mk.field_a;
+            stackIn_6_0 = FullscreenFocusCanvas.field_a;
             return stackIn_6_0;
           }
           if (param1.charAt(0) == 34) {

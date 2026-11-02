@@ -20,7 +20,7 @@ final class ci extends jj {
     }
 
     final void a(boolean param0) {
-        qa.field_g.f(0, 0);
+        ClientException.field_g.f(0, 0);
         int var2 = lg.field_a >> 3;
         t.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
         this.field_p.b((byte) -123);

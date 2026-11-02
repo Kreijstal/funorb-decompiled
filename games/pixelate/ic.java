@@ -317,7 +317,7 @@ final class ic extends ka implements vo {
                 var9 = (String) (var9) + "...";
               }
               nk.field_e.field_cb = (String) (var9);
-              ep.field_a.field_cb = fa.field_f.toUpperCase();
+              ep.field_a.field_cb = IntrusiveNode.field_f.toUpperCase();
             }
           }
           stackIn_69_0 = ff.field_h;

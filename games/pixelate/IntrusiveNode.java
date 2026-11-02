@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fa {
+class IntrusiveNode {
     static volatile int field_j;
     static String field_f;
-    fa field_a;
+    IntrusiveNode field_a;
     static int field_c;
     long field_e;
     static int[] field_b;
     static String field_g;
     static String field_d;
     static String field_i;
-    fa field_h;
+    IntrusiveNode field_h;
 
     final static void a(String[] args, fm param1, int[] param2, byte param3, tf[][] param4, int param5, byte[] param6, tf[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
         lo[] array$0 = null;
@@ -75,7 +75,7 @@ class fa {
           ff.field_i = param5;
           g.field_s = param6;
           ig.field_a = param7;
-          tn.field_o = param13;
+          GameApplet.field_o = param13;
           bg.field_d = param14;
           bf.field_q = param10;
           dk.field_a = param4;
@@ -110,7 +110,7 @@ class fa {
           gm.field_a = new ak(0L, ff.field_a);
           wc.field_n = new ak(0L, u.field_l, op.field_w);
           if (param3 < 108) {
-            fa.d(41);
+            IntrusiveNode.d(41);
           }
           lh.field_b = new ak(0L, vk.field_mb, co.field_u);
           on.field_pb = new ak(0L, vk.field_mb, nk.field_c);
@@ -118,7 +118,7 @@ class fa {
           g.field_o = new ak(0L, vk.field_mb, ii.field_b);
           wn.field_t = new ak(0L, ni.field_s, df.field_m);
           aj.field_k = new gp(0L, new ak(0L, (ak) null), ff.field_g, ug.field_s);
-          lg.field_c = new ak(0L, bf.field_k, lm.field_m.toUpperCase());
+          lg.field_c = new ak(0L, bf.field_k, DualLinkNode.field_m.toUpperCase());
           lg.field_c.field_rb = f.field_n;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
@@ -153,10 +153,10 @@ class fa {
           jm.field_h = new ak(0L, mg.field_h);
           jm.field_h.field_kb = 0;
           jm.field_h.field_Bb = 1;
-          hk.field_h = new ak(0L, nk.field_f, ig.field_c.toUpperCase());
+          DelegatingCanvas.field_h = new ak(0L, nk.field_f, ig.field_c.toUpperCase());
           nc.field_e = new ak(0L, cm.field_o);
           nc.field_e.a(jm.field_h, (byte) 26);
-          nc.field_e.a(hk.field_h, (byte) 26);
+          nc.field_e.a(DelegatingCanvas.field_h, (byte) 26);
           an.field_a = new ak(0L, ff.field_g);
           an.field_a.a(-27813, mg.field_h);
           var16 = an.field_a;

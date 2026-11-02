@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class uf extends IOException {
+final class ProxyAuthenticationException extends IOException {
     static String field_f;
     static int[] field_b;
     static int field_g;
@@ -12,7 +12,7 @@ final class uf extends IOException {
     static int field_a;
     static int[] field_e;
 
-    uf(String param0) {
+    ProxyAuthenticationException(String param0) {
         super(param0);
     }
 

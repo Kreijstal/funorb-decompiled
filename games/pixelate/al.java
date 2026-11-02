@@ -279,7 +279,7 @@ final class al {
             var24.c();
             rg.field_e.field_f[1].f(0, 0);
             fq.field_o.field_f[1].a(0, 0, var21);
-            qa.field_f.a(param2 ^ 19692);
+            ClientException.field_f.a(param2 ^ 19692);
           }
         }
         if (param2 < var8) {

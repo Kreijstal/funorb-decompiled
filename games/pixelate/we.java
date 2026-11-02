@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class we extends fa {
+class we extends IntrusiveNode {
     static int field_n;
     static String[] field_o;
     int field_m;
@@ -615,7 +615,7 @@ class we extends fa {
         int var2 = f.field_n ? 250 : 200;
         g.field_o.a(5, 30, var2 + 5, 256, 363 - var2);
         wn.field_t.a(5, 30, 370, 256, -375 + ti.field_E.field_K);
-        aj.field_k.a(5, 2, (byte) 52, -5 + gm.field_a.field_K - 5, 37, -10 + gm.field_a.field_nb - 32, hk.field_b);
+        aj.field_k.a(5, 2, (byte) 52, -5 + gm.field_a.field_K - 5, 37, -10 + gm.field_a.field_nb - 32, DelegatingCanvas.field_b);
         int var3 = (2 + ti.field_E.field_K) / 2;
         lg.field_c.a(-40 + ti.field_E.field_nb, 40, 0, 256, var3 - 2);
         if (!f.field_n) {

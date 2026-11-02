@@ -129,7 +129,7 @@ final class on extends hb {
             stackIn_2_0 = null;
             return (ld) (stackIn_2_0);
           }
-          var2 = new ld(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
+          var2 = new ld(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
           re.b(140);
           if (param1 <= 25) {
             var3 = (byte[]) null;

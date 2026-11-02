@@ -38,7 +38,7 @@ final class lp {
             }
             var1_int = 1;
           }
-          vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, uf.field_d, bg.field_k), -1);
+          vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, ProxyAuthenticationException.field_d, bg.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }

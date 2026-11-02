@@ -213,11 +213,11 @@ final class op extends de {
         if (param0 >= -35) {
           discarded$0 = this.a(true, 60);
         }
-        L1: {
+        regionExit1: {
           if (ke.field_a != 98) {
             if (ke.field_a != 99) {
               super.b(-72);
-              break L1;
+              break regionExit1;
             }
             stackIn_12_0 = (98 != ke.field_a) ? 0 : 1;
             var2 = stackIn_12_0;
@@ -249,7 +249,7 @@ final class op extends de {
                     this.field_o = this.field_o - ip.field_A;
                   }
                   if (0 <= this.field_o) {
-                    break L1;
+                    break regionExit1;
                   }
                   this.field_o = 0;
                 } else {
@@ -259,14 +259,14 @@ final class op extends de {
                   }
                   if (this.field_o > bh.field_k) {
                     this.field_o = bh.field_k;
-                    break L1;
+                    break regionExit1;
                   }
                 }
               } else {
                 this.field_g.a(false, 0);
               }
             }
-            break L1;
+            break regionExit1;
           }
           this.field_g.a(false, 0);
         }

@@ -225,13 +225,13 @@ abstract class hn implements ml {
           stackIn_8_3 = 0;
           stackIn_8_4 = 256;
           if (f.field_n) {
-            stackIn_9_5 = 40 + hk.field_b + 4;
+            stackIn_9_5 = 40 + DelegatingCanvas.field_b + 4;
           } else {
             stackIn_9_5 = 0;
           }
           ((ak) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + vd.field_a.field_K);
-          wa.field_g.a(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (hk.field_b + 2), 256, 42 + hk.field_b);
-          ae.field_c.a(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.field_nb), hk.field_b);
+          wa.field_g.a(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
+          ae.field_c.a(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.field_nb), DelegatingCanvas.field_b);
           gk.field_kb.a(ff.field_h.field_nb - 40, 40, 0, 256, ff.field_h.field_K);
           vp.field_Qb.a(0, 30, 0, 256, ai.field_A.field_K);
           dc.field_a.a(30, -40 + (ai.field_A.field_nb - 2 - 30), 0, 256, ai.field_A.field_K);

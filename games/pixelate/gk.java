@@ -21,7 +21,7 @@ final class gk extends c implements bp {
     final void a(int param0, int param1, int param2, ng param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_hb = uf.field_d - (this.field_z + param2);
+          this.field_hb = ProxyAuthenticationException.field_d - (this.field_z + param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -179,7 +179,7 @@ final class gk extends c implements bp {
         if (param0 <= 16) {
           field_cb = (ak) null;
         }
-        nk.a(bg.field_k, this.field_E - this.field_hb + uf.field_d, 5818);
+        nk.a(bg.field_k, this.field_E - this.field_hb + ProxyAuthenticationException.field_d, 5818);
         return this.field_l;
     }
 

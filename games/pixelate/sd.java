@@ -256,7 +256,7 @@ final class sd extends ie {
           rl.field_m = new boolean[im.field_Qb];
           gf.field_g = new int[im.field_Qb];
           ge.field_c = new int[im.field_Qb];
-          fa.field_b = new int[im.field_Qb];
+          IntrusiveNode.field_b = new int[im.field_Qb];
           e.field_b = new int[im.field_Qb];
           wo.field_f = new byte[im.field_Qb][];
           var18.field_m = -7 + (param1.length - 8 * im.field_Qb);
@@ -264,7 +264,7 @@ final class sd extends ie {
           jb.field_a = var18.a((byte) 46);
           var3 = 1 + (var18.f(255) & 255);
           for (var4 = 0; var4 < im.field_Qb; var4++) {
-            fa.field_b[var4] = var17.a((byte) 88);
+            IntrusiveNode.field_b[var4] = var17.a((byte) 88);
           }
           if (param0 != -95) {
             var16 = (String[]) null;
