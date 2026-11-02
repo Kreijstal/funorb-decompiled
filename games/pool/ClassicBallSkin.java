@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf extends tm {
+final class ClassicBallSkin extends BallSkin {
     static Sprite field_n;
     static int field_l;
     static boolean field_o;
@@ -76,21 +76,21 @@ final class mf extends tm {
     public static void i(int param0) {
         field_n = null;
         if (param0 != 1) {
-          mf.j(26);
+          ClassicBallSkin.j(26);
         }
     }
 
     final static void j(int param0) {
         if (param0 != 1) {
           nm var2 = (nm) null;
-          mf.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
+          ClassicBallSkin.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
           sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
           return;
         }
         sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
     }
 
-    mf() {
+    ClassicBallSkin() {
         this.field_g = false;
     }
 
@@ -98,13 +98,13 @@ final class mf extends tm {
         if (param0 <= 9) {
           return (String) null;
         }
-        return 0 == param1 ? me.field_w : vf.field_Q;
+        return 0 == param1 ? me.ballsetUsa8Group0 : PolarTableScene.ballsetUsa8Group1;
     }
 
     final static void a(byte param0, int param1, nm param2, nm param3, int param4, int param5) {
         td.field_e = param2;
         qi.field_e = param1;
-        fj.field_h = param5;
+        NineBallRules.field_h = param5;
         if (param0 > -24) {
           return;
         }

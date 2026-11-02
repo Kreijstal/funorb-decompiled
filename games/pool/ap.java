@@ -11,7 +11,7 @@ final class ap extends DualLinkNode {
     static kf[] field_D;
     static int field_E;
     static int field_G;
-    static String field_F;
+    static String retry;
     static boolean[] field_w;
 
     final String e(int param0) {
@@ -46,7 +46,7 @@ final class ap extends DualLinkNode {
     }
 
     final static void a(int param0, int param1) {
-        nk.field_h = param0;
+        TranslatedUiText.field_h = param0;
         if (param1 != 3815994) {
           return;
         }
@@ -128,7 +128,7 @@ final class ap extends DualLinkNode {
           short[] var2 = (short[]) null;
           ap.a((short[]) null, (byte) -77, 7);
         }
-        field_F = null;
+        retry = null;
         field_w = null;
         field_D = null;
     }
@@ -282,8 +282,8 @@ final class ap extends DualLinkNode {
           GameApplet.field_a = new vh(0L, uo.field_Lb);
           GameApplet.field_a.field_F = qi.a(1513239, 1513239, false, 16, -97, false);
           GameApplet.field_a.field_tb = 2;
-          tm.field_d = new vh(0L, pa.field_M);
-          tm.field_d.a((byte) -87, ei.field_A);
+          BallSkin.field_d = new vh(0L, pa.field_M);
+          BallSkin.field_d.a((byte) -87, ei.field_A);
           PacketBuffer.field_s = new vh(0L, GameApplet.field_a);
           PacketBuffer.field_s.a((byte) -87, ei.field_A);
           var16 = aj.a(0, "lobby", param4, "button_mouseover");
@@ -442,7 +442,7 @@ final class ap extends DualLinkNode {
         var9 = Pool.field_O;
         try {
           if (param2 >= -16) {
-            field_F = (String) null;
+            retry = (String) null;
           }
           if (param0 != 1) {
             if (param0 == 2) {
@@ -457,7 +457,7 @@ final class ap extends DualLinkNode {
               this.field_z = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
                 var6 = param1.readUnsignedShort(-1034);
-                var7 = tm.a(var6, -124);
+                var7 = BallSkin.a(var6, -124);
                 if (var7 != null) {
                   this.field_z[var5] = var6;
                   array$0 = new int[var7.field_b];
@@ -492,7 +492,7 @@ final class ap extends DualLinkNode {
 
     static {
         field_B = new int[8192];
-        field_F = "Retry";
+        retry = "Retry";
         field_G = 320;
         field_w = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
     }

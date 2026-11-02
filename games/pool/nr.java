@@ -11,7 +11,7 @@ final class nr extends ch implements tb {
     static String field_X;
     static int field_Q;
     static int field_V;
-    static String field_db;
+    static String gameoptYounotmember;
     static boolean field_T;
     static int field_Y;
     private fe field_W;
@@ -136,7 +136,7 @@ final class nr extends ch implements tb {
         int var6 = 83 / ((param1 + 42) / 53);
         int var5 = this.field_C + param2;
         int var7 = this.field_D + param3;
-        lc.field_O.drawParagraph(vm.field_m, 20 + var5, 20 + var7, this.field_l - 40, this.field_y - 50, 16777215, -1, 1, 0, lc.field_O.maxAscent);
+        lc.field_O.drawParagraph(vm.createWelcome, 20 + var5, 20 + var7, this.field_l - 40, this.field_y - 50, 16777215, -1, 1, 0, lc.field_O.maxAscent);
         super.a(param0, (byte) 92, param2, param3);
     }
 
@@ -155,7 +155,7 @@ final class nr extends ch implements tb {
               br.f(35);
             } else {
               if (this.field_Z == param3) {
-                al.m(4);
+                PoolGameModel.m(4);
               }
             }
           } else {
@@ -182,9 +182,9 @@ final class nr extends ch implements tb {
 
     public nr() {
         super(0, 0, 476, 225, (fp) null);
-        this.field_W = new fe(ad.field_t, (cc) null);
-        this.field_U = new fe(lc.field_Q, (cc) null);
-        this.field_Z = new fe(va.field_O, (cc) null);
+        this.field_W = new fe(ad.createCreateanaccount, (cc) null);
+        this.field_U = new fe(lc.goback, (cc) null);
+        this.field_Z = new fe(va.justplay, (cc) null);
         ng var1 = new ng();
         this.field_W.field_z = (fp) ((Object) var1);
         this.field_U.field_z = (fp) ((Object) var1);
@@ -197,9 +197,9 @@ final class nr extends ch implements tb {
         this.field_W.a(var3, this.field_l - var3 >> 1, 30, false, -78 + (this.field_y - 2 * var2));
         this.field_U.field_t = (cc) (this);
         this.field_W.field_t = (cc) (this);
-        this.field_W.field_p = fc.field_d;
+        this.field_W.field_p = fc.loginCreateTooltip;
         this.field_Z.field_t = (cc) (this);
-        this.field_Z.field_p = lh.field_h;
+        this.field_Z.field_p = lh.loginJustplayTooltip;
         this.a(true, this.field_U);
         this.a(true, this.field_W);
         this.a(true, this.field_Z);
@@ -248,7 +248,7 @@ final class nr extends ch implements tb {
           nr.a((String[]) null, 118, (String) null);
         }
         field_P = null;
-        field_db = null;
+        gameoptYounotmember = null;
     }
 
     static {
@@ -259,7 +259,7 @@ final class nr extends ch implements tb {
         field_R = 1 << field_cb;
         field_V = 1 << field_O;
         field_Q = 1 << field_ab;
-        field_db = "You must be a member to play with the current options.";
+        gameoptYounotmember = "You must be a member to play with the current options.";
         field_Y = field_Q | field_R | field_V;
     }
 }

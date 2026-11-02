@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends vc {
+final class ModernTableScene extends ModelTableScene {
     private PcmSample field_W;
     private so field_bb;
     private PcmSampleStream field_ab;
@@ -18,7 +18,7 @@ final class ni extends vc {
     static GameApplet field_ib;
     private PcmSample field_X;
     private PcmSampleStream field_hb;
-    static String field_S;
+    static String noHighscores;
     private so field_U;
     private PcmSample field_db;
     private PcmSample field_V;
@@ -146,14 +146,14 @@ final class ni extends vc {
         int[] stackIn_136_1;
         int stackIn_136_2;
         boolean stackIn_136_3;
-        pq[] stackIn_136_4;
+        Ball[] stackIn_136_4;
         Object stackIn_137_0;
         boolean stackIn_137_5;
         RuntimeException stackIn_147_0 = null;
         StringBuilder stackIn_147_1 = null;
         String stackIn_148_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pq[] var3 = null;
+        Ball[] var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int[] var5_ref_int__ = null;
@@ -172,7 +172,7 @@ final class ni extends vc {
         int[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        pq[] var20 = null;
+        Ball[] var20 = null;
         so var21 = null;
         int[] var23 = null;
         so var24 = null;
@@ -203,7 +203,7 @@ final class ni extends vc {
         int var13Lifetime2;
         var14 = Pool.field_O;
         try {
-          var20 = param1.field_I.field_l;
+          var20 = param1.field_I.balls;
           var3 = var20;
           var36 = f.a((byte) -56, param1.field_ab);
           var19 = var36;
@@ -233,7 +233,7 @@ final class ni extends vc {
           this.a(false, var36, var20);
           kf.a(ag.field_c, (byte) -104, pa.field_L, ph.field_g, lk.field_m);
           kf.a(ol.field_a, (byte) -104, pa.field_L, ph.field_g, w.field_h);
-          kf.a(bf.field_k, (byte) -104, pa.field_L, ph.field_g, hb.field_l);
+          kf.a(CushionSegment.field_k, (byte) -104, pa.field_L, ph.field_g, hb.field_l);
           var21 = this.field_bb;
           var54 = oh.field_d;
           var21.b((byte) -123, 0, var21.field_j.length, var54);
@@ -276,14 +276,14 @@ final class ni extends vc {
           en.b(param0 + 55);
           this.a(false, param1);
           var56 = new int[3];
-          hr.a(th.field_l[vf.field_lb].field_l[0], var56, oh.field_d, th.field_l[vf.field_lb].field_l[1], th.field_l[vf.field_lb].field_l[2], (byte) 9);
+          hr.a(th.field_l[PolarTableScene.field_lb].field_l[0], var56, oh.field_d, th.field_l[PolarTableScene.field_lb].field_l[1], th.field_l[PolarTableScene.field_lb].field_l[2], (byte) 9);
           dupTemp$0 = var56[1];
           var9 = dupTemp$0;
           var8Lifetime1 = dupTemp$0;
           dupTemp$1 = var56[0];
           var7Lifetime1 = dupTemp$1;
           var6 = dupTemp$1;
-          for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= vf.field_lb; var5Lifetime1--) {
+          for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= PolarTableScene.field_lb; var5Lifetime1--) {
             th.field_l[var5Lifetime1].c(6710886, oh.field_d);
             hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 <= var56[0]) {
@@ -442,7 +442,7 @@ final class ni extends vc {
             this.a(var36, (byte) 65, false, var20, false);
           }
           var11Lifetime2 = hb.field_l;
-          var12Lifetime2 = bf.field_k;
+          var12Lifetime2 = CushionSegment.field_k;
           for (var13Lifetime2 = var12Lifetime2 - 1; var13Lifetime2 >= var11Lifetime2; var13Lifetime2--) {
             th.field_l[ph.field_g[var13Lifetime2]].c(param0 ^ -6710865, oh.field_d);
           }
@@ -451,7 +451,7 @@ final class ni extends vc {
           }
           if ((1073741824L & pd.field_i) == 0L) {
             for (var11Lifetime3 = 0; var20.length > var11Lifetime3; var11Lifetime3++) {
-              if (var20[var11Lifetime3].field_s) {
+              if (var20[var11Lifetime3].inPlay) {
                 this.a(var36, var20[var11Lifetime3]);
               }
             }
@@ -466,7 +466,7 @@ final class ni extends vc {
             stackIn_136_2 = 115;
             stackIn_136_3 = true;
             stackIn_136_4 = var3;
-            if (param1.field_I.j(param0 ^ -45).field_q != 0) {
+            if (param1.field_I.currentShot(param0 ^ -45).field_q != 0) {
               stackIn_137_0 = this;
               stackIn_137_5 = false;
             } else {
@@ -646,9 +646,9 @@ final class ni extends vc {
             nd.a(var8[var11Lifetime1][var12_intLifetime1], (byte) -37);
           }
         }
-        th.field_l = new p[-1 * (-ch.field_G + af.field_e) + -1 * (pf.field_k - fc.field_c) + (oo.field_I - uk.field_l) * 3 + (dp.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-rb.field_a + DualLinkNode.field_u))))];
+        th.field_l = new p[-1 * (-ch.field_G + EightBallRules.field_e) + -1 * (pf.field_k - fc.field_c) + (TableScene.field_I - uk.field_l) * 3 + (dp.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-rb.field_a + DualLinkNode.field_u))))];
         var11Lifetime2 = 0;
-        vf.field_lb = var11Lifetime2;
+        PolarTableScene.field_lb = var11Lifetime2;
         for (var2 = kj.field_b; var2 < eh.field_t; var2++) {
           var12_intLifetime2 = var11Lifetime2;
           var23 = var4[var2 - kj.field_b];
@@ -687,7 +687,7 @@ final class ni extends vc {
         }
         ag.field_c = var11Lifetime2;
         hb.field_l = var11Lifetime2;
-        for (var2Lifetime3 = uk.field_l; oo.field_I > var2Lifetime3; var2Lifetime3++) {
+        for (var2Lifetime3 = uk.field_l; TableScene.field_I > var2Lifetime3; var2Lifetime3++) {
           var12_intLifetime5 = var2Lifetime3;
           var13_array = th.field_l;
           var14_intLifetime1 = var11Lifetime2;
@@ -705,12 +705,12 @@ final class ni extends vc {
           this.a(stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_35_4, this.field_O[var12_intLifetime5], var14_intLifetime1, this.field_M[var12_intLifetime5], 0);
           var11Lifetime2 += 4;
         }
-        bf.field_k = var11Lifetime2;
-        dupTemp$0 = new so(4 * (af.field_e - ch.field_G));
+        CushionSegment.field_k = var11Lifetime2;
+        dupTemp$0 = new so(4 * (EightBallRules.field_e - ch.field_G));
         this.field_jb = dupTemp$0;
         dupTemp$1 = new so(new so[]{dupTemp$0});
         this.field_bb = dupTemp$1;
-        dupTemp$2 = new so(4 * (af.field_e - ch.field_G));
+        dupTemp$2 = new so(4 * (EightBallRules.field_e - ch.field_G));
         this.field_U = dupTemp$2;
         dupTemp$3 = new so(4 * (-fc.field_c + pf.field_k) + (DualLinkNode.field_u - rb.field_a) * 2);
         this.field_gb = dupTemp$3;
@@ -718,8 +718,8 @@ final class ni extends vc {
         this.field_R = dupTemp$4;
         var12 = new so(new so[]{dupTemp$1, dupTemp$4});
         var13 = new so(new so[]{this.field_jb, this.field_U});
-        var14 = new eg[af.field_e - ch.field_G][2];
-        for (var2Lifetime4 = ch.field_G; var2Lifetime4 < af.field_e; var2Lifetime4++) {
+        var14 = new eg[EightBallRules.field_e - ch.field_G][2];
+        for (var2Lifetime4 = ch.field_G; var2Lifetime4 < EightBallRules.field_e; var2Lifetime4++) {
           dupTemp$5 = var14[var2Lifetime4 - ch.field_G];
           dupTemp$6 = hq.b((byte) 125);
           dupTemp$5[0] = dupTemp$6;
@@ -731,7 +731,7 @@ final class ni extends vc {
           ej.a(0, var15_ref_eg, 0, false, -this.field_M[var2Lifetime4][2], 0, 0, 1, var28, this.field_O[var2Lifetime4]);
         }
         var15 = 0;
-        for (var2Lifetime5 = ch.field_G; af.field_e > var2Lifetime5; var2Lifetime5++) {
+        for (var2Lifetime5 = ch.field_G; EightBallRules.field_e > var2Lifetime5; var2Lifetime5++) {
           var31 = var14[var2Lifetime5 - ch.field_G][1];
           var46 = this.field_M[var2Lifetime5];
           var29 = this.field_U.field_b;
@@ -740,7 +740,7 @@ final class ni extends vc {
           var15 += 4;
         }
         var15 = 0;
-        for (var2Lifetime6 = ch.field_G; var2Lifetime6 < af.field_e; var2Lifetime6++) {
+        for (var2Lifetime6 = ch.field_G; var2Lifetime6 < EightBallRules.field_e; var2Lifetime6++) {
           var34 = var14[var2Lifetime6 - ch.field_G][0];
           var47 = this.field_M[var2Lifetime6];
           var32 = this.field_jb.field_b;
@@ -794,9 +794,9 @@ final class ni extends vc {
 
     public static void e(byte param0) {
         field_Z = null;
-        field_S = null;
+        noHighscores = null;
         if (param0 != 71) {
-          field_S = (String) null;
+          noHighscores = (String) null;
         }
         field_eb = null;
     }
@@ -988,7 +988,7 @@ final class ni extends vc {
           incrementValue$19 = var3_int;
           var3_int++;
           this.field_O[incrementValue$19] = eg.a(param0, "", "new_classic_table/class_side_c");
-          af.field_e = var3_int;
+          EightBallRules.field_e = var3_int;
           uk.field_l = var3_int;
           incrementValue$20 = var3_int;
           var3_int++;
@@ -996,7 +996,7 @@ final class ni extends vc {
           incrementValue$21 = var3_int;
           var3_int++;
           this.field_O[incrementValue$21] = eg.a(param0, "", "new_classic_table/classic_top_b");
-          oo.field_I = var3_int;
+          TableScene.field_I = var3_int;
           this.field_A = new jk();
           this.field_A.a(eg.a(param0, "", "cues/classic_cue"), (byte) -121);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
@@ -1008,7 +1008,7 @@ final class ni extends vc {
           var8 = -2147483648;
           var9 = 2147483647;
           var10 = -2147483648;
-          for (var4Lifetime1 = uk.field_l; var4Lifetime1 < oo.field_I; var4Lifetime1++) {
+          for (var4Lifetime1 = uk.field_l; var4Lifetime1 < TableScene.field_I; var4Lifetime1++) {
             d.a(this.field_O[var4Lifetime1], -23109);
             if (var5 > this.field_O[var4Lifetime1].field_D) {
               var5 = this.field_O[var4Lifetime1].field_D;
@@ -1170,15 +1170,15 @@ final class ni extends vc {
           field_eb = (he) null;
         }
         if ((ba.field_ub.field_I.field_b & 1 << ba.field_ub.field_db) != 0) {
-          nk.field_f[12] = ba.field_ub.field_r ? w.field_l : df.field_m;
+          TranslatedUiText.field_f[12] = ba.field_ub.field_r ? w.mpCancelrematchUnrated : df.mpCancelrematch;
         } else {
           if (ba.field_ub.field_I.field_b != 0) {
-            nk.field_f[12] = ba.field_ub.field_r ? hb.field_n : er.field_N;
+            TranslatedUiText.field_f[12] = ba.field_ub.field_r ? hb.mpAcceptrematchUnrated : er.mpAcceptrematch;
           } else {
-            if (-1 + (1 << ba.field_ub.field_I.field_n) == (ba.field_ub.field_cb | 1 << ba.field_ub.field_db)) {
-              nk.field_f[12] = ba.field_ub.field_r ? e.field_b : fq.field_Bb;
+            if (-1 + (1 << ba.field_ub.field_I.playerCount) == (ba.field_ub.field_cb | 1 << ba.field_ub.field_db)) {
+              TranslatedUiText.field_f[12] = ba.field_ub.field_r ? e.mpRematchnewgameUnrated : fq.mpRematchnewgame;
             } else {
-              nk.field_f[12] = !ba.field_ub.field_r ? ia.field_j : og.field_H;
+              TranslatedUiText.field_f[12] = !ba.field_ub.field_r ? ia.mpOfferrematch : og.mpOfferrematchUnrated;
             }
           }
         }
@@ -1187,7 +1187,7 @@ final class ni extends vc {
         }
     }
 
-    ni() {
+    ModernTableScene() {
         this.field_E = 1508.0;
         this.field_p = 1.5707963705062866;
         this.field_d = 64;
@@ -1201,6 +1201,6 @@ final class ni extends vc {
     static {
         field_eb = new he();
         field_ib = null;
-        field_S = "No highscores";
+        noHighscores = "No highscores";
     }
 }

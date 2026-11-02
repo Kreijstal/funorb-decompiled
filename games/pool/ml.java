@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ml {
-    static String field_f;
+    static String muGamelistElapsedTime;
     static int field_d;
-    static String[] field_c;
+    static String[] mustloginAlternate;
     static vh field_e;
-    static String field_g;
+    static String wouldYouLikeToPlayOrPass;
     private String field_i;
     static int[] field_l;
     static char field_b;
     static int[] field_k;
     static int field_j;
-    static String field_a;
+    static String tutorialShow;
     static int[][] field_h;
 
     final static int b(int param0) {
         if (param0 < 6) {
-          field_a = (String) null;
+          tutorialShow = (String) null;
         }
         return -kk.field_z + gp.field_c;
     }
@@ -52,7 +52,7 @@ final class ml {
     final void a(java.applet.Applet param0, boolean param1) {
         try {
           if (!param1) {
-            field_a = (String) null;
+            tutorialShow = (String) null;
           }
           nn.a(31536000L, (byte) -120, param0, this.field_i, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
@@ -61,16 +61,16 @@ final class ml {
     }
 
     public static void a(int param0) {
-        field_c = null;
-        field_a = null;
+        mustloginAlternate = null;
+        tutorialShow = null;
         if (param0 != -26458) {
           ml.b(65);
         }
         field_k = null;
-        field_g = null;
+        wouldYouLikeToPlayOrPass = null;
         field_e = null;
         field_h = (int[][]) null;
-        field_f = null;
+        muGamelistElapsedTime = null;
         field_l = null;
     }
 
@@ -214,12 +214,12 @@ final class ml {
     }
 
     static {
-        field_f = "Elapsed time";
-        field_c = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
-        field_g = "<%0>, would you like to <u>play</u> the next shot or <u>pass</u> and make your opponent play?";
+        muGamelistElapsedTime = "Elapsed time";
+        mustloginAlternate = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
+        wouldYouLikeToPlayOrPass = "<%0>, would you like to <u>play</u> the next shot or <u>pass</u> and make your opponent play?";
         field_l = new int[12];
         field_k = new int[]{8};
-        field_a = "Show";
+        tutorialShow = "Show";
         field_h = new int[][]{new int[]{1, 1, 2, 1}, new int[]{1, 1, 2, 2}, new int[]{1, 1, 2, 3}, new int[]{1, 1, 2, 4}, new int[]{1, 1, 2, 5}, new int[]{-1, 3, 1, 0}, new int[]{-1, 5, 1, 0}, new int[]{-1, 6, 1, 0}, new int[]{-1, 7, 1, 0}, new int[]{-1, 8, 1, 0}, new int[]{-1, 3, 1, 1}, new int[]{-1, 4, 1, 1}, new int[]{-1, 5, 1, 1}, new int[]{-1, 6, 1, 1}, new int[]{-1, 7, 1, 1}, new int[]{-1, 8, 1, 1}};
     }
 }

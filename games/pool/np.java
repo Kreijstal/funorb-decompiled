@@ -8,16 +8,16 @@ final class np {
     private ir field_i;
     static String field_a;
     static int field_d;
-    static String field_c;
+    static String muXDroppedOut;
     private ir field_f;
-    static String field_g;
+    static String noOptionsAvailable;
     private int field_b;
-    static String field_e;
+    static String achieved;
 
     public static void a(boolean param0) {
-        field_c = null;
-        field_e = null;
-        field_g = null;
+        muXDroppedOut = null;
+        achieved = null;
+        noOptionsAvailable = null;
         field_a = null;
         if (!param0) {
           String var2 = (String) null;
@@ -471,7 +471,7 @@ final class np {
                 hn.field_c = kb.a(false, param1, -5790, param5);
               } else {
                 var11 = (String) null;
-                hn.field_c = bi.a(hm.field_a, -16595, param5, false, (String) null);
+                hn.field_c = bi.a(Quaternion.field_a, -16595, param5, false, (String) null);
               }
               ej.field_j.position = 0;
               ej.field_j.a(14, false);
@@ -487,7 +487,7 @@ final class np {
               } else {
                 uq.field_c = var6_int;
                 of.field_Pb = -1;
-                tl.field_J = hm.field_k;
+                tl.field_J = Quaternion.field_k;
               }
               kn.field_e.position = 0;
             }
@@ -508,7 +508,7 @@ final class np {
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
-                  tl.field_J = hm.field_k;
+                  tl.field_J = Quaternion.field_k;
                   of.field_Pb = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -526,7 +526,7 @@ final class np {
             }
             if (ff.field_b == tl.field_J &&
               wf.a((byte) 39)) {
-              hm.field_a = kn.field_e.readLong(-412303328);
+              Quaternion.field_a = kn.field_e.readLong(-412303328);
               ei.field_E = param5;
               hq.field_i = kn.field_e.readUnsignedByte(-68);
               ta.field_f = kn.field_e.readUnsignedByte(-105);
@@ -588,14 +588,14 @@ final class np {
                 }
               } else {
                 try {
-                  mo.a("zap", new Object[]{sl.a(false, hm.field_a)}, 105, hk.d(107));
+                  mo.a("zap", new Object[]{sl.a(false, Quaternion.field_a)}, 105, hk.d(107));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
               if (mp.field_V > 0) {
-                bf.field_g = true;
+                CushionSegment.field_g = true;
               }
               ej.field_j.b(32, Pool.field_L);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -609,7 +609,7 @@ final class np {
               var10 = (String) null;
               np.a(true, (String) null, false, false, 59, (String) null);
             }
-            if (tl.field_J == hm.field_k &&
+            if (tl.field_J == Quaternion.field_k &&
               wf.a((byte) 39)) {
               dn.c(-64);
               if (uq.field_c == 7 &&
@@ -628,10 +628,10 @@ final class np {
             }
             if (null == jd.field_c) {
               if (we.field_e) {
-                if (30000L >= bf.d((byte) 118)) {
-                  ke.field_g = er.field_Q;
+                if (30000L >= CushionSegment.d((byte) 118)) {
+                  ke.field_g = er.loginm2;
                 } else {
-                  ke.field_g = wd.field_Rb;
+                  ke.field_g = wd.loginm3;
                 }
                 we.field_e = false;
                 stackIn_107_0 = 3;
@@ -688,8 +688,8 @@ final class np {
     }
 
     static {
-        field_c = "<%0> has dropped out.";
-        field_g = "No options available";
-        field_e = "Achieved";
+        muXDroppedOut = "<%0> has dropped out.";
+        noOptionsAvailable = "No options available";
+        achieved = "Achieved";
     }
 }

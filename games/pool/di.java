@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class di {
-    static int field_b;
+    static int keycodeDefaultRight2;
     private Object[][] field_c;
     static int field_h;
     private lh field_d;
@@ -253,8 +253,8 @@ final class di {
           }
           var3 = param0;
           var1_intLifetime1 = var3;
-          while (al.field_B.length > var3) {
-            al.field_B[var3].a(7096);
+          while (PoolGameModel.field_B.length > var3) {
+            PoolGameModel.field_B[var3].a(7096);
             var3++;
           }
           return;
@@ -478,7 +478,7 @@ final class di {
         } else {
           SoftwareRasterizer.clear();
         }
-        to.a((byte) -39, param2);
+        PolarBallSkin.a((byte) -39, param2);
         if (param1 <= 84) {
           field_j = (String) null;
         }
@@ -1031,7 +1031,7 @@ final class di {
     }
 
     static {
-        field_b = 97;
+        keycodeDefaultRight2 = 97;
         field_e = 2;
         field_g = 0;
     }

@@ -6,8 +6,8 @@ final class rc {
     static int[] field_e;
     static boolean field_d;
     static IntrusiveDeque field_c;
-    static String field_g;
-    static String field_a;
+    static String playerColonFr;
+    static String tutorialNineBallFinal;
     static vh field_b;
 
     final static String b(boolean param0) {
@@ -20,8 +20,8 @@ final class rc {
     public static void a(boolean param0) {
         field_c = null;
         field_b = null;
-        field_g = null;
-        field_a = null;
+        playerColonFr = null;
+        tutorialNineBallFinal = null;
         field_e = null;
         if (param0) {
           field_f = null;
@@ -33,8 +33,8 @@ final class rc {
 
     static {
         field_e = new int[]{16777215, 16777062, 6711039, 16737894, 10040268, 16764006, 6750054, 10053171, 3355443, 16777062, 6711039, 16737894, 10040268, 16764006, 6750054, 10053171};
-        field_g = "<%0> : ";
+        playerColonFr = "<%0> : ";
         field_c = new IntrusiveDeque();
-        field_a = "That concludes the Nine-ball Tutorial! Simple, eh? Press <img=3> to go to the options menu to end the tutorial.";
+        tutorialNineBallFinal = "That concludes the Nine-ball Tutorial! Simple, eh? Press <img=3> to go to the options menu to end the tutorial.";
     }
 }

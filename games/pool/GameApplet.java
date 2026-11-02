@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static String[] field_g;
+    static String[] ratingModeLongName;
     boolean field_n;
     static di field_m;
     static Sprite field_h;
@@ -142,7 +142,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (decompiledFrameRemainder0) {
             if (null == op.field_e) {
               if (null == oc.field_t) {
-                var2 = ni.field_ib;
+                var2 = ModernTableScene.field_ib;
                 if (var4 != 0) {
                   var2 = oc.field_t;
                   var2 = op.field_e;
@@ -176,7 +176,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 < 40) {
             return;
           }
-          vl.field_q = true;
+          PlasmaBallSkin.field_q = true;
           um.field_e = true;
           he.field_c = true;
           wd.field_Sb = false;
@@ -196,7 +196,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ni.field_ib == this &&
+          if (ModernTableScene.field_ib == this &&
             !ka.field_p) {
             rm.field_c = 0L;
             return;
@@ -316,7 +316,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vl.field_q = false;
+          PlasmaBallSkin.field_q = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -407,7 +407,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ni.field_ib == this &&
+          if (ModernTableScene.field_ib == this &&
             !ka.field_p) {
             rm.field_c = rl.a((byte) -113) + 4000L;
             return;
@@ -439,7 +439,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           kb.field_e = 31 & 1 + kb.field_e;
           var6 = this;
           synchronized (var6) {
-            um.field_e = vl.field_q;
+            um.field_e = PlasmaBallSkin.field_q;
           }
           this.e((byte) -99);
           return;
@@ -552,7 +552,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = ni.field_ib;
+                var1 = ModernTableScene.field_ib;
                 if (null != oc.field_t) {
                   var1 = oc.field_t;
                 }
@@ -626,7 +626,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             field_c = 127;
           }
           field_l = null;
-          field_g = null;
+          ratingModeLongName = null;
           field_a = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -725,7 +725,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void destroy() {
-        if (this != ni.field_ib ||
+        if (this != ModernTableScene.field_ib ||
           ka.field_p) {
           return;
         }
@@ -755,7 +755,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var9 = Pool.field_O;
           try {
             try {
-              if (null != ni.field_ib) {
+              if (null != ModernTableScene.field_ib) {
                 oe.field_V = oe.field_V + 1;
                 if (oe.field_V >= 3) {
                   this.a((byte) -46, "alreadyloaded");
@@ -766,12 +766,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               ok.field_rb = param0;
               cl.field_e = 0;
-              ni.field_ib = this;
+              ModernTableScene.field_ib = this;
               ad.field_c = param1;
               rb.field_f = param1;
               ua.field_v = 0;
               ml.field_d = param6;
-              dl.field_b = param6;
+              Pocket.field_b = param6;
               gj.field_W = hk.d(77);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param2, param5, true);
               lg.field_s = dupTemp$0;
@@ -823,14 +823,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (ni.field_ib == this &&
+          if (ModernTableScene.field_ib == this &&
             !ka.field_p) {
             he.field_c = true;
             if (bq.field_o &&
               -ph.field_b + rl.a((byte) -128) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (dl.field_b > var2.width) {
+                if (Pocket.field_b > var2.width) {
                   return;
                 }
                 if (rb.field_f > var2.height) {
@@ -878,7 +878,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vl.field_q = true;
+          PlasmaBallSkin.field_q = true;
           he.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -931,7 +931,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     abstract void c(byte param0);
 
     static {
-        field_g = new String[]{"Showing by rating", "Showing by win percentage"};
+        ratingModeLongName = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = 20;
     }
 

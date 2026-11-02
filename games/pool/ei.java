@@ -23,7 +23,7 @@ class ei extends IntrusiveNode {
     static int field_B;
     cc field_t;
     static String field_E;
-    static String field_w;
+    static String youAreOnXServer;
 
     ei(String param0, cc param1) {
         this(param0, db.field_Sb.field_c, param1);
@@ -74,7 +74,7 @@ class ei extends IntrusiveNode {
           return;
         }
         field_E = null;
-        field_w = null;
+        youAreOnXServer = null;
     }
 
     boolean a(ei param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
@@ -838,6 +838,6 @@ class ei extends IntrusiveNode {
         field_o = 500;
         field_u = 0;
         field_q = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
-        field_w = "You are on <%0>";
+        youAreOnXServer = "You are on <%0>";
     }
 }

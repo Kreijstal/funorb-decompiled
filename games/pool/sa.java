@@ -7,27 +7,27 @@ final class sa {
     static int[] field_m;
     byte field_x;
     static BinaryBitmapFont field_h;
-    static String field_y;
+    static String login;
     int field_u;
     static boolean field_k;
     static boolean field_c;
     byte field_i;
-    static String field_g;
+    static String progressJungleBulk;
     static String field_o;
     static int[] field_q;
-    static String field_d;
+    static String ticketingXunread;
     static String field_v;
     byte field_a;
     static int field_p;
-    static String field_b;
-    static String field_j;
+    static String tutorial;
+    static String muChatLobbyFriends;
     static so field_s;
     static fn field_f;
     static int field_t;
     static int[] field_r;
     static String[] field_e;
     byte field_n;
-    static String field_l;
+    static String tickerHintAim;
     static int[] field_w;
 
     final static String a(boolean param0) {
@@ -113,19 +113,19 @@ final class sa {
         field_s = null;
         field_m = null;
         field_v = null;
-        field_d = null;
+        ticketingXunread = null;
         field_h = null;
-        field_j = null;
-        field_l = null;
-        field_b = null;
-        field_y = null;
+        muChatLobbyFriends = null;
+        tickerHintAim = null;
+        tutorial = null;
+        login = null;
         field_e = null;
         if (param0 == -13265) {
           field_q = null;
           field_f = null;
           field_o = null;
           field_r = null;
-          field_g = null;
+          progressJungleBulk = null;
           field_w = null;
           return;
         }
@@ -134,20 +134,20 @@ final class sa {
         field_f = null;
         field_o = null;
         field_r = null;
-        field_g = null;
+        progressJungleBulk = null;
         field_w = null;
     }
 
     static {
         field_m = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-        field_d = "You have <%0> unread messages!";
-        field_g = "Climbing out of the jungle into the mountains...";
+        ticketingXunread = "You have <%0> unread messages!";
+        progressJungleBulk = "Climbing out of the jungle into the mountains...";
         field_c = false;
-        field_j = "Show lobby chat from my friends";
-        field_b = "Tutorial";
-        field_y = "Log in";
+        muChatLobbyFriends = "Show lobby chat from my friends";
+        tutorial = "Tutorial";
+        login = "Log in";
         field_t = 0;
         field_e = new String[255];
-        field_l = "Use <img=5>/<img=6>, or <img=13>/<img=15> to aim the cue.";
+        tickerHintAim = "Use <img=5>/<img=6>, or <img=13>/<img=15> to aim the cue.";
     }
 }

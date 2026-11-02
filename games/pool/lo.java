@@ -5,8 +5,8 @@ import java.io.*;
 
 final class lo extends IOException {
     static String[] field_c;
-    static String field_b;
-    static String field_d;
+    static String joinRequestsOne;
+    static String createEmailConfirm;
     static boolean field_a;
 
     final static nq b(int param0) {
@@ -15,7 +15,7 @@ final class lo extends IOException {
           ae.field_c.a(lc.field_O, -76);
           ae.field_c.field_m = 6;
           ae.field_c.field_b = 4;
-          ae.field_c.field_i = qk.field_a;
+          ae.field_c.field_i = PoolUiText.field_a;
           ae.field_c.field_a = 2763306;
           ae.field_c.field_e = 7697781;
           ae.field_c.field_h = 0;
@@ -36,13 +36,13 @@ final class lo extends IOException {
 
     public static void c(int param0) {
         field_c = null;
-        field_b = null;
+        joinRequestsOne = null;
         if (param0 < 110) {
-          field_d = (String) null;
-          field_d = null;
+          createEmailConfirm = (String) null;
+          createEmailConfirm = null;
           return;
         }
-        field_d = null;
+        createEmailConfirm = null;
     }
 
     final static String a(long param0, int param1) {
@@ -106,7 +106,7 @@ final class lo extends IOException {
     }
 
     static {
-        field_b = "(1 player wants to join)";
-        field_d = "Confirm Email:";
+        joinRequestsOne = "(1 player wants to join)";
+        createEmailConfirm = "Confirm Email:";
     }
 }

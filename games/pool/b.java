@@ -20,26 +20,26 @@ final class b extends ob {
         super.c(127);
         var2 = 480;
         if (param0 >= 36) {
-          var3 = rj.field_h;
-          if (rn.field_a[this.field_I] == pl.field_f) {
-            pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3);
+          var3 = KillerRules.field_h;
+          if (rn.instructionsTitles[this.field_I] == pl.field_f) {
+            pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3);
             var3 += 5;
             if (bq.field_p != this.field_I ||
               null == cm.field_K) {
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-              cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+              cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = this.field_I;
             }
           } else {
-            dupTemp$2 = rn.field_a[this.field_I];
+            dupTemp$2 = rn.instructionsTitles[this.field_I];
             pl.field_f = dupTemp$2;
             pl.field_a = dq.a(4, 0, dupTemp$2);
-            pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3);
+            pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3);
             var3 += 5;
             if (bq.field_p != this.field_I ||
               null == cm.field_K) {
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-              cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+              cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = this.field_I;
             }
           }
@@ -51,7 +51,7 @@ final class b extends ob {
             qd.field_k = this.field_I;
             GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4 = dp.a(104);
           if (var4 == -1) {
             return;
@@ -64,14 +64,14 @@ final class b extends ob {
           return;
         }
         this.b((byte) -57, -26);
-        var3Lifetime1 = rj.field_h;
-        if (rn.field_a[this.field_I] == pl.field_f) {
-          pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3Lifetime1);
+        var3Lifetime1 = KillerRules.field_h;
+        if (rn.instructionsTitles[this.field_I] == pl.field_f) {
+          pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3Lifetime1);
           var3Lifetime1 += 5;
           if (bq.field_p != this.field_I ||
             null == cm.field_K) {
-            ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-            cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
+            ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+            cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
             bq.field_p = this.field_I;
           }
           sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
@@ -82,7 +82,7 @@ final class b extends ob {
             qd.field_k = this.field_I;
             GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4Lifetime1 = dp.a(104);
           if (var4Lifetime1 != -1) {
             qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime1], 15658734, 4144959);
@@ -92,14 +92,14 @@ final class b extends ob {
           }
           return;
         }
-        dupTemp$3 = rn.field_a[this.field_I];
+        dupTemp$3 = rn.instructionsTitles[this.field_I];
         pl.field_f = dupTemp$3;
         pl.field_a = dq.a(4, 0, dupTemp$3);
-        pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3Lifetime1);
+        pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3Lifetime1);
         var3Lifetime1 += 5;
         if (bq.field_p != this.field_I) {
-          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-          cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
+          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+          cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
           bq.field_p = this.field_I;
           sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
           this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
@@ -109,7 +109,7 @@ final class b extends ob {
             qd.field_k = this.field_I;
             GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4Lifetime2 = dp.a(104);
           if (var4Lifetime2 != -1) {
             qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime2], 15658734, 4144959);
@@ -120,8 +120,8 @@ final class b extends ob {
           return;
         }
         if (null == cm.field_K) {
-          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-          cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
+          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+          cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
           bq.field_p = this.field_I;
         }
         sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
@@ -132,7 +132,7 @@ final class b extends ob {
           qd.field_k = this.field_I;
           GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
         }
-        GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
+        GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
         var4Lifetime3 = dp.a(104);
         if (var4Lifetime3 == -1) {
           return;
@@ -271,7 +271,7 @@ final class b extends ob {
             var3 = -55 % ((param1 + 42) / 49);
             return true;
           }
-          if (rb.field_n.length - 1 == this.field_I) {
+          if (rb.instructionsPages.length - 1 == this.field_I) {
             return false;
           }
           var3Lifetime3 = -55 % ((param1 + 42) / 49);
@@ -281,7 +281,7 @@ final class b extends ob {
           var3Lifetime1 = -55 % ((param1 + 42) / 49);
           return true;
         }
-        if (rb.field_n.length - 1 == this.field_I) {
+        if (rb.instructionsPages.length - 1 == this.field_I) {
           return false;
         }
         var3Lifetime2 = -55 % ((param1 + 42) / 49);

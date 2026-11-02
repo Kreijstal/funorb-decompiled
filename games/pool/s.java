@@ -3,12 +3,12 @@
  */
 final class s {
     static int[][] field_b;
-    static String field_g;
+    static String muXLeftLobby;
     static int[] field_e;
     static di field_a;
     static int[] field_f;
     static ob[] field_c;
-    static String[] field_d;
+    static String[] gameoptlabels;
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
@@ -21,7 +21,7 @@ final class s {
           Throwable decompiledCaughtException = null;
           try {
             if (param1 != 2056898529) {
-              field_g = (String) null;
+              muXLeftLobby = (String) null;
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
@@ -204,11 +204,11 @@ final class s {
 
     public static void a(int param0) {
         field_c = null;
-        field_g = null;
+        muXLeftLobby = null;
         field_e = null;
         field_a = null;
         field_f = null;
-        field_d = null;
+        gameoptlabels = null;
         field_b = (int[][]) null;
         if (param0 != -1) {
           field_b = (int[][]) null;
@@ -225,9 +225,9 @@ final class s {
     }
 
     static {
-        field_g = "<%0> has left the lobby.";
+        muXLeftLobby = "<%0> has left the lobby.";
         field_c = new ob[25];
         field_e = new int[12];
-        field_d = new String[]{"Turn time (seconds)", "Game", "Theme", "Guide"};
+        gameoptlabels = new String[]{"Turn time (seconds)", "Game", "Theme", "Guide"};
     }
 }

@@ -9,7 +9,7 @@ final class ve extends op {
     static int field_j;
     static int[] field_w;
     static String[][] field_q;
-    static String field_o;
+    static String muOptionsAllowSpectate;
     private BitmapFont field_i;
     static ml field_l;
     private int field_r;
@@ -178,7 +178,7 @@ final class ve extends op {
             var1 = rf.a((byte) -119);
           }
           if (var1.length() == 0) {
-            var1 = tf.field_b;
+            var1 = tf.dEFAULTPLAYERNAME;
           }
           stackIn_14_0 = var1;
           return stackIn_14_0;
@@ -593,7 +593,7 @@ final class ve extends op {
               var25Lifetime2Lifetime1 = param6.field_M[var23Lifetime3];
               var26Lifetime2Lifetime1 = param6.field_c[var23Lifetime3];
               hp.field_d[var23Lifetime3] = (var18 * var26Lifetime2Lifetime1 + (var24Lifetime2Lifetime1 * var12 + var15 * var25Lifetime2Lifetime1) >> 16) + var9;
-              fj.field_g[var23Lifetime3] = (var26Lifetime2Lifetime1 * var19 + (var16 * var25Lifetime2Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16) + var10;
+              NineBallRules.field_g[var23Lifetime3] = (var26Lifetime2Lifetime1 * var19 + (var16 * var25Lifetime2Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16) + var10;
               kn.field_c[var23Lifetime3] = (var24Lifetime2Lifetime1 * var14 + (var25Lifetime2Lifetime1 * var17 + var20 * var26Lifetime2Lifetime1) >> 16) + var11;
               var24Lifetime2Lifetime2 = param6.field_J[var23Lifetime3];
               var25Lifetime2Lifetime2 = param6.field_A[var23Lifetime3];
@@ -622,7 +622,7 @@ final class ve extends op {
               var21Lifetime3 = param6.field_j[var18Lifetime1];
               oj.field_r[var18Lifetime1] = var15Lifetime1 * var21Lifetime3 + (var12Lifetime1 * var20Lifetime1 + var19Lifetime1 * var9Lifetime1) >> 16;
               wa.field_mb[var18Lifetime1] = var16Lifetime1 * var21Lifetime3 + var20Lifetime1 * var13Lifetime1 + var10Lifetime1 * var19Lifetime1 >> 16;
-              al.field_g[var18Lifetime1] = var21Lifetime3 * var17Lifetime1 + var19Lifetime1 * var11Lifetime1 + var20Lifetime1 * var14Lifetime1 >> 16;
+              PoolGameModel.field_g[var18Lifetime1] = var21Lifetime3 * var17Lifetime1 + var19Lifetime1 * var11Lifetime1 + var20Lifetime1 * var14Lifetime1 >> 16;
             }
           }
           ej.a(param3, var8, var7_int, (byte) 48, param6);
@@ -663,7 +663,7 @@ final class ve extends op {
           if (param0 != -13268) {
             field_p = 75;
           }
-          field_o = null;
+          muOptionsAllowSpectate = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -674,7 +674,7 @@ final class ve extends op {
 
     static {
         field_q = new String[][]{new String[]{"60", "45", "30", "20", "15", "10"}, null, null, null};
-        field_o = "Allow spectators?";
+        muOptionsAllowSpectate = "Allow spectators?";
         field_p = 16;
         field_j = 1 << field_p;
         field_l = new ml("");

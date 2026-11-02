@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class je {
-    static String field_c;
-    static String field_a;
-    static String field_b;
+    static String clickToQuickchat;
+    static String tutorialShotModeEnter;
+    static String muChatTips;
 
     final static void a(PlatformTaskDispatcher param0, int param1, int param2, int param3, String param4, byte param5, int param6, int param7, int param8) {
         try {
@@ -17,11 +17,11 @@ final class je {
           fe.field_M = param0;
           wn.field_h = param3;
           if (param5 >= -61) {
-            field_b = (String) null;
+            muChatTips = (String) null;
           }
-          sq.field_c = (no) ((Object) new ug());
+          GameRules.field_c = (no) ((Object) new ug());
           ri.field_U = new rn(param0);
-          nk.field_m = new qd(sq.field_c, ri.field_U);
+          TranslatedUiText.field_m = new qd(GameRules.field_c, ri.field_U);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "je.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -30,29 +30,29 @@ final class je {
     final static boolean b(byte param0) {
         if (param0 < 95) {
           je.a((byte) -44);
-          if (fk.field_gb == null) {
+          if (PlasmaTableScene.field_gb == null) {
             return false;
           }
-          if (fk.field_gb.e(100)) {
+          if (PlasmaTableScene.field_gb.e(100)) {
             return true;
           }
           return false;
         }
-        if (fk.field_gb == null) {
+        if (PlasmaTableScene.field_gb == null) {
           return false;
         }
-        if (fk.field_gb.e(100)) {
+        if (PlasmaTableScene.field_gb.e(100)) {
           return true;
         }
         return false;
     }
 
     public static void a(byte param0) {
-        field_c = null;
-        field_a = null;
-        field_b = null;
+        clickToQuickchat = null;
+        tutorialShotModeEnter = null;
+        muChatTips = null;
         if (param0 > -122) {
-          field_c = (String) null;
+          clickToQuickchat = (String) null;
         }
     }
 
@@ -80,8 +80,8 @@ final class je {
     }
 
     static {
-        field_c = "Click or press F10 to open Quick Chat";
-        field_b = "Tips";
-        field_a = "To enter <u=ffffff>shot mode</u>: <col=99ff99>Press</col> <img=4>, or <img=0> click on the cue ball once.";
+        clickToQuickchat = "Click or press F10 to open Quick Chat";
+        muChatTips = "Tips";
+        tutorialShotModeEnter = "To enter <u=ffffff>shot mode</u>: <col=99ff99>Press</col> <img=4>, or <img=0> click on the cue ball once.";
     }
 }

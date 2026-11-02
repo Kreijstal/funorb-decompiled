@@ -7,10 +7,10 @@ final class aj extends vh {
     private StringBuilder field_Nb;
     private vh field_Pb;
     static int[][][] field_Ob;
-    static String field_Tb;
-    static String field_Rb;
+    static String tutorialNext;
+    static String gameoptBadnumplayers;
     static ao field_Mb;
-    static String field_Sb;
+    static String waitingforMusic;
 
     final static Sprite f(byte param0) {
         int var4_int = 0;
@@ -102,10 +102,10 @@ final class aj extends vh {
           return;
         }
         field_Ob = (int[][][]) null;
-        field_Sb = null;
+        waitingforMusic = null;
         field_Mb = null;
-        field_Rb = null;
-        field_Tb = null;
+        gameoptBadnumplayers = null;
+        tutorialNext = null;
     }
 
     final static int a(boolean param0, int param1, int param2) {
@@ -173,7 +173,7 @@ final class aj extends vh {
             om.field_y = param2;
             try {
               if (param1 != -18788) {
-                field_Sb = (String) null;
+                waitingforMusic = (String) null;
               }
               var3 = param0.getParameter("cookieprefix");
               var5 = var3;
@@ -212,7 +212,7 @@ final class aj extends vh {
         }
         if (85 == qi.field_a &&
           !(this.field_Nb.length() <= 0)) {
-          cj.a(' ', this.field_Nb.length() - 1, -2790, this.field_Nb);
+          TikiTableScene.a(' ', this.field_Nb.length() - 1, -2790, this.field_Nb);
         }
         if (this.field_Nb.length() < 12) {
           var2 = Character.toLowerCase(ml.field_b);
@@ -265,7 +265,7 @@ final class aj extends vh {
             stackIn_4_0 = ve.field_l;
             return stackIn_4_0;
           }
-          var3 = to.a((byte) -66);
+          var3 = PolarBallSkin.a((byte) -66);
           var4 = 0;
           while (true) {
             if (var3.length <= var4) {
@@ -312,18 +312,18 @@ final class aj extends vh {
         if (0 > param2 &&
           0 > param0 &&
           var3 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param2 + "[" + pf.b(126, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + pf.b(126, param0) + ", " + Integer.toString(param0, 16) + "]) and got a negative number: " + var3 + "[" + cr.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param2 + "[" + pf.b(126, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + pf.b(126, param0) + ", " + Integer.toString(param0, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         if ((0 < param2 &&
           0 > param0 ||
           param2 < 0 &&
           param0 > 0) && var3 > 0L) {
-          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param2 + "[" + pf.b(127, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + pf.b(126, param0) + ", " + Integer.toString(param0, 16) + "]) and got a positive number: " + var3 + "[" + cr.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param2 + "[" + pf.b(127, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + pf.b(126, param0) + ", " + Integer.toString(param0, 16) + "]) and got a positive number: " + var3 + "[" + PotEvent.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         if (param2 > 0 &&
           0 < param0 &&
           var3 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param2 + "[" + pf.b(126, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + pf.b(127, param0) + ", " + Integer.toString(param0, 16) + "]) and got a negative number: " + var3 + "[" + cr.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param2 + "[" + pf.b(126, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + pf.b(127, param0) + ", " + Integer.toString(param0, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         return (int)var3;
     }
@@ -340,7 +340,7 @@ final class aj extends vh {
           while (n.h(127)) {
             if (85 == qi.field_a &&
               this.field_Nb.length() > 0) {
-              cj.a(' ', -1 + this.field_Nb.length(), -2790, this.field_Nb);
+              TikiTableScene.a(' ', -1 + this.field_Nb.length(), -2790, this.field_Nb);
             }
             if (he.a(ml.field_b, (CharSequence) ((Object) this.field_Nb), 15692) ||
               (this.field_Nb.length() == 0 &&
@@ -374,8 +374,8 @@ final class aj extends vh {
 
     static {
         int var0 = 0;
-        field_Tb = "Next";
-        field_Rb = "You do not have a suitable number of players for the current options.";
+        tutorialNext = "Next";
+        gameoptBadnumplayers = "You do not have a suitable number of players for the current options.";
         field_Ob = new int[5][][];
         field_Ob[0] = new int[][]{new int[]{16}, new int[]{23}, new int[]{16, 16, 16, 16, 23, 16, 16, 16, 16}, new int[]{16}, new int[]{16}, new int[]{16, 16, 16, 23, 16, 16, 16, 23, 16}, new int[]{23, 23, 16, 16, 23, 23, 23, 23, 23}, new int[]{23, 23, 16, 16, 23, 23, 23, 23, 23}, new int[]{23, 16}, new int[]{16, 23, 16, 23, 16, 23, 23, 23}};
         field_Ob[1] = new int[][]{new int[]{16}, new int[]{23, 23, 16, 23, 23, 23, 23, 23, 23}, new int[]{16, 16, 16, 16, 23, 16, 16, 16, 16}, new int[]{16}, new int[]{16}, new int[]{16, 16, 16, 23, 16, 16, 16, 23, 16}, new int[]{23, 23, 16, 16, 23, 23, 23, 23, 23}, new int[]{23, 23, 16, 16, 23, 23, 23, 23, 23}, new int[]{23, 16}, new int[]{16, 23, 16, 23, 16, 23, 23, 23}};
@@ -386,6 +386,6 @@ final class aj extends vh {
             field_Ob[var0] = field_Ob[0];
           }
         }
-        field_Sb = "Waiting for music";
+        waitingforMusic = "Waiting for music";
     }
 }

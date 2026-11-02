@@ -129,30 +129,30 @@ class fe extends ei {
             gi.field_o.field_Db = 0;
             var7 = gi.field_o;
             var7.field_gb = 0;
-            if (cj.e((byte) 85)) {
-              ii.field_e.field_nb = rf.field_b.toUpperCase();
+            if (TikiTableScene.e((byte) 85)) {
+              ii.field_e.field_nb = rf.yourGame.toUpperCase();
               var9 = (2 + uq.field_f.field_gb) / 2;
               kc.field_b.b(uq.field_f.field_Db - 40, 2147483647, 0, var9 - 2, 40);
               if (em.field_L.field_mc < em.field_L.field_Nb) {
-                kc.field_b.field_nb = v.field_d.toUpperCase();
+                kc.field_b.field_nb = v.muInvitePlayers.toUpperCase();
                 kc.field_b.field_pb = true;
                 if (var19 != 0) {
-                  kc.field_b.field_nb = ro.field_p.toUpperCase();
+                  kc.field_b.field_nb = ro.gameFull.toUpperCase();
                   kc.field_b.field_pb = false;
                 }
               } else {
-                kc.field_b.field_nb = ro.field_p.toUpperCase();
+                kc.field_b.field_nb = ro.gameFull.toUpperCase();
                 kc.field_b.field_pb = false;
               }
               kc.field_b.field_F = mg.field_c.field_F;
               if (PoolMatchController.field_jb > 0) {
                 boolean decompiledSharedTail1 = (PoolMatchController.field_jb != 1);
                 if (!decompiledSharedTail1) {
-                  var10_ref_String = lo.field_b;
+                  var10_ref_String = lo.joinRequestsOne;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = nr.a(new String[]{Integer.toString(PoolMatchController.field_jb)}, -1, hq.field_f);
+                  var10_ref_String = nr.a(new String[]{Integer.toString(PoolMatchController.field_jb)}, -1, hq.joinRequestsMany);
                 }
                 if ((va.field_V & 16) == 0 &&
                   !nr.field_bb) {
@@ -161,7 +161,7 @@ class fe extends ei {
                 kc.field_b.field_nb = kc.field_b.field_nb + "<br>" + var10_ref_String;
               }
               d.field_c.b(uq.field_f.field_Db - 40, 2147483647, var9, -var9 + uq.field_f.field_gb, 40);
-              d.field_c.field_nb = ua.field_s.toUpperCase();
+              d.field_c.field_nb = ua.startgame.toUpperCase();
               var8 = d.field_c;
               stackIn_20_0 = d.field_c;
               stackIn_21_1 = (param0) && (fd.field_K == 0L);
@@ -289,30 +289,30 @@ class fe extends ei {
                     break;
                   }
                   if (stackIn_83_0 != ~var10) {
-                    var13_ref_String = aj.field_Rb;
+                    var13_ref_String = aj.gameoptBadnumplayers;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
-                      var14_ref_String = ab.field_d + (String) (var11_ref);
+                      var14_ref_String = ab.gameoptInviteplayersOrTrychanging2 + (String) (var11_ref);
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      var14_ref_String = nr.a(new String[]{(String) (var11_ref)}, -1, me.field_u);
+                      var14_ref_String = nr.a(new String[]{(String) (var11_ref)}, -1, me.gameoptInviteplayersOrTrychanging1);
                     }
                   } else {
-                    var13_ref_String = ah.field_g;
+                    var13_ref_String = ah.gameoptUnselectedoptions;
                     if (var12 == 0) {
-                      var14_ref_String = nr.a(new String[]{(String) (var11_ref)}, -1, fm.field_J);
+                      var14_ref_String = nr.a(new String[]{(String) (var11_ref)}, -1, fm.gameoptPleaseselectoption1);
                       if (var19 != 0) {
-                        var14_ref_String = ud.field_M + (String) (var11_ref);
+                        var14_ref_String = ud.gameoptPleaseselectoption2 + (String) (var11_ref);
                       }
                     } else {
-                      var14_ref_String = ud.field_M + (String) (var11_ref);
+                      var14_ref_String = ud.gameoptPleaseselectoption2 + (String) (var11_ref);
                     }
                   }
                   kk.field_B = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
-              if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != dl.field_j ||
+              if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != Pocket.field_j ||
                 null != ci.field_d ||
                 w.field_j != null ||
                 null != op.field_a)) {
@@ -326,9 +326,9 @@ class fe extends ei {
                 while (!(decompiledNaturalLoopExit0 = (!(dr.field_c > var16)))) {
                   var17_int = em.field_L.field_tc[var16] & 255;
                   if (var19 == 0) {
-                    if (dl.field_j != null &&
-                      null != dl.field_j[var16] &&
-                      dl.field_j[var16][var17_int]) {
+                    if (Pocket.field_j != null &&
+                      null != Pocket.field_j[var16] &&
+                      Pocket.field_j[var16][var17_int]) {
                       var11 = 1;
                     }
                     if (ci.field_d != null &&
@@ -424,28 +424,28 @@ class fe extends ei {
                   d.field_c.field_pb = false;
                   if (d.field_c.field_db) {
                     if (na.field_e.field_i.field_Mb != 0) {
-                      kk.field_B = nr.a(new String[]{mm.field_l}, -1, t.field_c);
+                      kk.field_B = nr.a(new String[]{mm.muChatGame}, -1, t.gameoptPlayersdontqualifySelectgametab);
                       if (var19 != 0) {
-                        kk.field_B = fn.field_Mb;
+                        kk.field_B = fn.gameoptPlayersdontqualify;
                       }
                     } else {
-                      kk.field_B = fn.field_Mb;
+                      kk.field_B = fn.gameoptPlayersdontqualify;
                     }
                   }
                 }
               }
               if (var19 != 0) {
                 var9_ref_String = em.field_L.field_Ob;
-                ii.field_e.field_nb = nr.a(new String[]{var9_ref_String}, -1, th.field_c).toUpperCase();
+                ii.field_e.field_nb = nr.a(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
                 gi.field_o.b(-40 + uq.field_f.field_Db, 2147483647, 0, uq.field_f.field_gb, 40);
-                gi.field_o.field_nb = nr.a(new String[]{var9_ref_String}, -1, uh.field_s);
+                gi.field_o.field_nb = nr.a(new String[]{var9_ref_String}, -1, uh.waitingForXToStartGame);
                 var8 = gi.field_o;
               }
             } else {
               var9_ref_String = em.field_L.field_Ob;
-              ii.field_e.field_nb = nr.a(new String[]{var9_ref_String}, -1, th.field_c).toUpperCase();
+              ii.field_e.field_nb = nr.a(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
               gi.field_o.b(-40 + uq.field_f.field_Db, 2147483647, 0, uq.field_f.field_gb, 40);
-              gi.field_o.field_nb = nr.a(new String[]{var9_ref_String}, -1, uh.field_s);
+              gi.field_o.field_nb = nr.a(new String[]{var9_ref_String}, -1, uh.waitingForXToStartGame);
               var8 = gi.field_o;
             }
             if (fd.field_K != 0L) {
@@ -454,9 +454,9 @@ class fe extends ei {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_nb = nr.a(new String[]{Integer.toString(var9)}, -1, bl.field_v);
+              var8.field_nb = nr.a(new String[]{Integer.toString(var9)}, -1, bl.gameOptionsChanged);
             }
-            nd.field_c.field_nb = nr.a(new String[]{Integer.toString(em.field_L.field_mc), Integer.toString(em.field_L.field_Nb)}, -1, qa.field_o);
+            nd.field_c.field_nb = nr.a(new String[]{Integer.toString(em.field_L.field_mc), Integer.toString(em.field_L.field_Nb)}, -1, qa.playersXOfY);
           }
           stackIn_173_0 = so.field_k;
           stackIn_174_1 = (param2) && (!param1) && (!nr.field_bb);
@@ -668,7 +668,7 @@ class fe extends ei {
             stackIn_8_0 = stackOut_7_0;
             if (var5 == 0) {
               if (!stackIn_8_0) {
-                stackIn_11_0 = iq.field_g;
+                stackIn_11_0 = iq.createAlertNamechars;
                 return stackIn_11_0;
               }
               var4++;

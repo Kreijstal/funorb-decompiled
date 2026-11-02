@@ -5,17 +5,17 @@ final class sm extends om {
     static aj field_C;
     static Sprite field_z;
     static int field_D;
-    static String field_B;
-    static String field_E;
-    static String field_A;
+    static String tickerHintZoom;
+    static String gameoptNeedrating;
+    static String gameoptPlayerneedsratedgames;
 
     public static void c(int param0) {
         field_z = null;
-        field_B = null;
-        field_A = null;
-        field_E = null;
+        tickerHintZoom = null;
+        gameoptPlayerneedsratedgames = null;
+        gameoptNeedrating = null;
         if (param0 != 2) {
-          field_A = (String) null;
+          gameoptPlayerneedsratedgames = (String) null;
         }
         field_C = null;
     }
@@ -122,7 +122,7 @@ final class sm extends om {
         }
     }
 
-    final static void a(int param0, bf param1, int param2, pq param3) {
+    final static void a(int param0, CushionSegment param1, int param2, Ball param3) {
         int fieldTemp$0 = 0;
         int[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
@@ -148,35 +148,35 @@ final class sm extends om {
           if (param2 <= 111) {
             return;
           }
-          param3.a(param0 - 1, 118);
-          var4_int = -param1.field_j + param1.field_l >> 8;
-          var5 = param1.field_a - param1.field_f >> 8;
+          param3.advanceTo(param0 - 1, 118);
+          var4_int = -param1.startY + param1.endY >> 8;
+          var5 = param1.startX - param1.endX >> 8;
           var6 = rf.a(aj.a(var4_int, false, var4_int) + aj.a(var5, false, var5), -123);
           var4_int = lh.a(var6, (byte) -101, (long)var4_int);
           var5 = lh.a(var6, (byte) -61, (long)var5);
-          var7 = param3.e(-14770);
-          if (param1.field_f != param1.field_a) {
-            if (param1.field_l != param1.field_j) {
-              var9 = (long)(aj.a(param3.field_I, false, var4_int) + aj.a(param3.field_t, false, var5));
-              param3.field_I = (int)((long)param3.field_I - (od.a((long)var4_int, var9, false) * (long)(256 + dj.field_g) >> 8));
-              param3.field_t = (int)((long)param3.field_t - (od.a((long)var5, var9, false) * (long)(256 + dj.field_g) >> 8));
-              param3.field_b = 0;
-              param3.field_n = 0;
+          var7 = param3.horizontalSpeedSquared(-14770);
+          if (param1.endX != param1.startX) {
+            if (param1.endY != param1.startY) {
+              var9 = (long)(aj.a(param3.velocityX, false, var4_int) + aj.a(param3.velocityY, false, var5));
+              param3.velocityX = (int)((long)param3.velocityX - (od.a((long)var4_int, var9, false) * (long)(256 + dj.field_g) >> 8));
+              param3.velocityY = (int)((long)param3.velocityY - (od.a((long)var5, var9, false) * (long)(256 + dj.field_g) >> 8));
+              param3.angularVelocityY = 0;
+              param3.angularVelocityX = 0;
               if (td.field_b < nn.field_e.length) {
-                nn.field_e[td.field_b][0] = -(524288 * var4_int) + param3.field_g;
-                nn.field_e[td.field_b][1] = param3.field_k - var5 * 524288;
+                nn.field_e[td.field_b][0] = -(524288 * var4_int) + param3.positionX;
+                nn.field_e[td.field_b][1] = param3.positionY - var5 * 524288;
                 nn.field_e[td.field_b][2] = -524288;
               }
             } else {
-              param3.field_n = -(param3.field_n * kp.field_m) >> 8;
-              param3.field_b = param3.field_b * kp.field_m >> 8;
-              param3.field_t = -(dj.field_g * param3.field_t) >> 8;
+              param3.angularVelocityX = -(param3.angularVelocityX * kp.field_m) >> 8;
+              param3.angularVelocityY = param3.angularVelocityY * kp.field_m >> 8;
+              param3.velocityY = -(dj.field_g * param3.velocityY) >> 8;
               if (td.field_b < nn.field_e.length) {
-                nn.field_e[td.field_b][0] = param3.field_g;
+                nn.field_e[td.field_b][0] = param3.positionX;
                 stackIn_12_0 = nn.field_e[td.field_b];
                 stackIn_12_1 = 1;
-                stackIn_12_2 = param3.field_k;
-                if (param3.field_k > param1.field_j) {
+                stackIn_12_2 = param3.positionY;
+                if (param3.positionY > param1.startY) {
                   stackIn_13_3 = 524288;
                 } else {
                   stackIn_13_3 = -524288;
@@ -186,25 +186,25 @@ final class sm extends om {
               }
             }
           } else {
-            param3.field_n = param3.field_n * kp.field_m >> 8;
-            param3.field_I = -(param3.field_I * dj.field_g) >> 8;
-            param3.field_b = -(kp.field_m * param3.field_b) >> 8;
+            param3.angularVelocityX = param3.angularVelocityX * kp.field_m >> 8;
+            param3.velocityX = -(param3.velocityX * dj.field_g) >> 8;
+            param3.angularVelocityY = -(kp.field_m * param3.angularVelocityY) >> 8;
             if (td.field_b < nn.field_e.length) {
               stackIn_6_0 = nn.field_e[td.field_b];
               stackIn_6_1 = 0;
-              if (param3.field_g > param1.field_a) {
+              if (param3.positionX > param1.startX) {
                 stackIn_7_2 = 524288;
               } else {
                 stackIn_7_2 = -524288;
               }
-              stackIn_6_0[stackIn_6_1] = stackIn_7_2 + param3.field_g;
-              nn.field_e[td.field_b][1] = param3.field_k;
+              stackIn_6_0[stackIn_6_1] = stackIn_7_2 + param3.positionX;
+              nn.field_e[td.field_b][1] = param3.positionY;
               nn.field_e[td.field_b][2] = -524288;
             }
           }
-          param3.field_K = kp.field_m * param3.field_K >> 8;
-          param3.field_v = 1;
-          var9Lifetime1 = param3.e(-14770);
+          param3.angularVelocityZ = kp.field_m * param3.angularVelocityZ >> 8;
+          param3.motionState = 1;
+          var9Lifetime1 = param3.horizontalSpeedSquared(-14770);
           if (td.field_b < cf.field_g.length) {
             fieldTemp$0 = td.field_b;
             td.field_b = td.field_b + 1;
@@ -273,8 +273,8 @@ final class sm extends om {
     }
 
     static {
-        field_B = "Use the mouse wheel <img=1> or drag <img=11><img=0> to zoom in and out.";
-        field_E = "This option is restricted. Your rating is currently <%0>.<br>Can you achieve the qualifying rating of <%1>?";
-        field_A = "<%0> must play <%1> more rated games before playing with the current options.";
+        tickerHintZoom = "Use the mouse wheel <img=1> or drag <img=11><img=0> to zoom in and out.";
+        gameoptNeedrating = "This option is restricted. Your rating is currently <%0>.<br>Can you achieve the qualifying rating of <%1>?";
+        gameoptPlayerneedsratedgames = "<%0> must play <%1> more rated games before playing with the current options.";
     }
 }

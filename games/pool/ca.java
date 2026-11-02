@@ -5,7 +5,7 @@ final class ca extends re {
     static int field_h;
     static boolean[][] field_j;
     static int field_l;
-    static String field_m;
+    static String tutorialNineBallStartPlaceCueball;
     static kf[] field_g;
     private String field_k;
     static int field_i;
@@ -14,13 +14,13 @@ final class ca extends re {
     public static void b(int param0) {
         if (param0 == 17518) {
           field_j = (boolean[][]) null;
-          field_m = null;
+          tutorialNineBallStartPlaceCueball = null;
           field_g = null;
           return;
         }
         ca.b(8);
         field_j = (boolean[][]) null;
-        field_m = null;
+        tutorialNineBallStartPlaceCueball = null;
         field_g = null;
     }
 
@@ -50,7 +50,7 @@ final class ca extends re {
 
     static {
         field_l = 128;
-        field_m = "The objective of nine-ball pool is to legally \"pot\" the 9 ball. Before we get to that, we \"break\", but the first thing you might want to do is <u=ffffff>move the cue ball</u>. <col=99ff99>Hold</col> down the <img=0> <col=99ff99>left mouse button over the cue ball and drag</col> it to where you would like to place it.";
+        tutorialNineBallStartPlaceCueball = "The objective of nine-ball pool is to legally \"pot\" the 9 ball. Before we get to that, we \"break\", but the first thing you might want to do is <u=ffffff>move the cue ball</u>. <col=99ff99>Hold</col> down the <img=0> <col=99ff99>left mouse button over the cue ball and drag</col> it to where you would like to place it.";
         field_i = -1;
         field_g = new kf[2];
     }

@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class e {
-    static String[] field_h;
+    static String[] shotMessages;
     static vh field_a;
-    static String field_g;
+    static String createPasswordConfirm;
     static wg field_e;
     static int[] field_c;
     static int[] field_d;
-    static String field_b;
-    static String field_f;
+    static String mpRematchnewgameUnrated;
+    static String tocustomersupport;
 
     public static void a(boolean param0) {
         field_d = null;
-        field_b = null;
+        mpRematchnewgameUnrated = null;
         field_a = null;
         field_e = null;
         if (param0) {
-          field_f = null;
-          field_g = null;
+          tocustomersupport = null;
+          createPasswordConfirm = null;
           field_c = null;
-          field_h = null;
+          shotMessages = null;
           return;
         }
     }
@@ -66,7 +66,7 @@ final class e {
           while (dq.field_j.length > var3) {
             var4 = IterableNodeHashTable.field_c[var3];
             if (var4 < 0) {
-              var5 = tm.field_f;
+              var5 = BallSkin.field_f;
             } else {
               if (var4 != n.field_W.field_h) {
                 var5 = vn.field_c;
@@ -124,16 +124,16 @@ final class e {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (rm.field_b << 1), var1_int, -6316, var8Lifetime1 - rm.field_b, (fj.field_h << 1) + ch.field_I);
+                var9.a(var7Lifetime1 + (rm.field_b << 1), var1_int, -6316, var8Lifetime1 - rm.field_b, (NineBallRules.field_h << 1) + ch.field_I);
               }
-              var1_int = var1_int + fj.field_h;
+              var1_int = var1_int + NineBallRules.field_h;
             }
             if (var4 < 0) {
-              dq.field_f.d(var6, var8Lifetime1, vc.field_K + var1_int, var5, -1);
-              var1_int = var1_int + qe.field_y;
+              dq.field_f.d(var6, var8Lifetime1, ModelTableScene.field_K + var1_int, var5, -1);
+              var1_int = var1_int + ShotRecord.field_y;
             } else {
               gj.field_R.d(var6, var8Lifetime1, var1_int + mm.field_b, var5, -1);
-              var1_int = var1_int + (ch.field_I + qi.field_e + fj.field_h);
+              var1_int = var1_int + (ch.field_I + qi.field_e + NineBallRules.field_h);
             }
             var3++;
           }
@@ -146,7 +146,7 @@ final class e {
     }
 
     final static boolean a(int param0, PoolMatchController param1) {
-        qe var2 = null;
+        ShotRecord var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -154,7 +154,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (oh.field_h) {
-            var2 = param1.field_I.j(60);
+            var2 = param1.field_I.currentShot(60);
             kh.field_Vb.a(true, false);
             if (hk.field_t.field_R == 1) {
               var2.a(ag.field_a, true);
@@ -172,7 +172,7 @@ final class e {
           if (param0 == -19839) {
             return false;
           }
-          field_h = (String[]) null;
+          shotMessages = (String[]) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,11 +189,11 @@ final class e {
     }
 
     static {
-        field_g = "Confirm Password: ";
+        createPasswordConfirm = "Confirm Password: ";
         field_c = new int[5];
         field_d = new int[]{2, 20, 21, 49, 5, 9};
-        field_h = new String[]{"<%0> wins!", "Foul! <%0> hit an opponent's ball first!", "Foul! <%0> hit the 8 ball first!", "Foul! <%0> potted the cue ball!", "Foul! <%0> potted opponent's ball!", "<%0> potted the 8 ball!", "Foul! Not enough balls touched the cushion!", "Foul! Didn't hit any balls!", "Foul! Hit wrong ball first!", "<%0> loses! Fouled and potted the 9 ball!", "<%0> wins! Potted the 9 ball!", "Foul snooker!", "Foul! No balls touched any cushions!", "Foul! No object balls touched any cushions!", "Foul! Not enough object balls touched the cushion!", "Foul! No target balls touched any cushions!", "Foul! Not enough target balls touched the cushion!", "Foul! <%0> ran out of time!", "<%0>: Didn't pot anything! Lose a life!", "<%0>: Foul! Lose a life!", "<%0>: Potted the black! Gain a life!", "<%0>: Out of time! Lose a life!", "<%0>: Foul break! Lose a life!"};
-        field_b = "Set up new unrated game";
-        field_f = "To Customer Support";
+        shotMessages = new String[]{"<%0> wins!", "Foul! <%0> hit an opponent's ball first!", "Foul! <%0> hit the 8 ball first!", "Foul! <%0> potted the cue ball!", "Foul! <%0> potted opponent's ball!", "<%0> potted the 8 ball!", "Foul! Not enough balls touched the cushion!", "Foul! Didn't hit any balls!", "Foul! Hit wrong ball first!", "<%0> loses! Fouled and potted the 9 ball!", "<%0> wins! Potted the 9 ball!", "Foul snooker!", "Foul! No balls touched any cushions!", "Foul! No object balls touched any cushions!", "Foul! Not enough object balls touched the cushion!", "Foul! No target balls touched any cushions!", "Foul! Not enough target balls touched the cushion!", "Foul! <%0> ran out of time!", "<%0>: Didn't pot anything! Lose a life!", "<%0>: Foul! Lose a life!", "<%0>: Potted the black! Gain a life!", "<%0>: Out of time! Lose a life!", "<%0>: Foul break! Lose a life!"};
+        mpRematchnewgameUnrated = "Set up new unrated game";
+        tocustomersupport = "To Customer Support";
     }
 }

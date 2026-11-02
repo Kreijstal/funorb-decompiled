@@ -3,21 +3,21 @@
  */
 final class nn {
     static boolean field_d;
-    static oo[] field_b;
+    static TableScene[] field_b;
     static int field_c;
     static Sprite[][] field_a;
     static int[][] field_e;
 
     final static void a(boolean param0, int param1, int param2) {
         of.a(param1, (byte) 0, param2);
-        jc.field_e.a(tp.field_h, -59);
+        jc.field_e.toRotationMatrix(tp.field_h, -59);
         if (!param0) {
           return;
         }
         if (null != tf.field_a.field_a) {
           tf.field_a.field_j[vn.field_e] = (nc) (tf.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
-        tf.field_a.a(tp.field_h, bf.field_i, vn.field_e, -3637);
+        tf.field_a.a(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
         PoolMatchController var3 = ba.field_ub;
         if (var3 == null) {
           var3 = am.field_e;
@@ -25,8 +25,8 @@ final class nn {
         if (var3 == null) {
           return;
         }
-        if (vn.field_e < var3.field_I.field_l.length) {
-          var3.field_I.field_l[vn.field_e].field_p = true;
+        if (vn.field_e < var3.field_I.balls.length) {
+          var3.field_I.balls[vn.field_e].transformDirty = true;
           return;
         }
     }

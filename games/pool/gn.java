@@ -3,10 +3,10 @@
  */
 final class gn {
     static boolean field_f;
-    static String field_a;
+    static String tutorialEightBallAfterfirstpot;
     static int field_b;
     static int field_d;
-    static int field_c;
+    static int keycodeDefaultRight1;
     static eg field_e;
 
     final static Sprite[] a(Sprite[] param0, byte param1) {
@@ -19,7 +19,7 @@ final class gn {
         try {
           param0[3].field_y = param0[3].field_A;
           if (param1 != -29) {
-            field_a = (String) null;
+            tutorialEightBallAfterfirstpot = (String) null;
           }
           param0[1].field_w = param0[1].field_z;
           param0[5].field_y = param0[5].field_A;
@@ -67,9 +67,9 @@ final class gn {
                 !(ah.field_c.length >= param0)) {
                 ah.field_c = new int[param0 * 2];
               }
-              if (ep.field_H == null ||
-                !(param1 + param0 <= ep.field_H.length)) {
-                ep.field_H = new int[2 * (param1 + param0)];
+              if (NetworkGameClient.field_H == null ||
+                !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                NetworkGameClient.field_H = new int[2 * (param1 + param0)];
               }
               if (im.field_cc == null ||
                 !(im.field_cc.length >= param0)) {
@@ -85,9 +85,9 @@ final class gn {
           }
           if (ah.field_c == null) {
             ah.field_c = new int[param0 * 2];
-            if (ep.field_H == null ||
-              !(param1 + param0 <= ep.field_H.length)) {
-              ep.field_H = new int[2 * (param1 + param0)];
+            if (NetworkGameClient.field_H == null ||
+              !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+              NetworkGameClient.field_H = new int[2 * (param1 + param0)];
             }
             if (im.field_cc == null ||
               !(im.field_cc.length >= param0)) {
@@ -96,24 +96,24 @@ final class gn {
           } else {
             if (ah.field_c.length < param0) {
               ah.field_c = new int[param0 * 2];
-              if (ep.field_H == null ||
-                !(param1 + param0 <= ep.field_H.length)) {
-                ep.field_H = new int[2 * (param1 + param0)];
+              if (NetworkGameClient.field_H == null ||
+                !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                NetworkGameClient.field_H = new int[2 * (param1 + param0)];
               }
               if (im.field_cc == null ||
                 !(im.field_cc.length >= param0)) {
                 im.field_cc = new boolean[2 * param0];
               }
             } else {
-              if (ep.field_H == null) {
-                ep.field_H = new int[2 * (param1 + param0)];
+              if (NetworkGameClient.field_H == null) {
+                NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 if (im.field_cc == null ||
                   !(im.field_cc.length >= param0)) {
                   im.field_cc = new boolean[2 * param0];
                 }
               } else {
-                if (param1 + param0 > ep.field_H.length) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (param1 + param0 > NetworkGameClient.field_H.length) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                   if (im.field_cc == null ||
                     !(im.field_cc.length >= param0)) {
                     im.field_cc = new boolean[2 * param0];
@@ -156,9 +156,9 @@ final class gn {
                   !(ah.field_c.length >= param0)) {
                   ah.field_c = new int[param0 * 2];
                 }
-                if (ep.field_H == null ||
-                  !(param1 + param0 <= ep.field_H.length)) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (NetworkGameClient.field_H == null ||
+                  !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 }
                 if (im.field_cc == null ||
                   !(im.field_cc.length >= param0)) {
@@ -174,9 +174,9 @@ final class gn {
             }
             if (ah.field_c == null) {
               ah.field_c = new int[param0 * 2];
-              if (ep.field_H == null ||
-                !(param1 + param0 <= ep.field_H.length)) {
-                ep.field_H = new int[2 * (param1 + param0)];
+              if (NetworkGameClient.field_H == null ||
+                !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                NetworkGameClient.field_H = new int[2 * (param1 + param0)];
               }
               if (im.field_cc == null ||
                 !(im.field_cc.length >= param0)) {
@@ -185,24 +185,24 @@ final class gn {
             } else {
               if (ah.field_c.length < param0) {
                 ah.field_c = new int[param0 * 2];
-                if (ep.field_H == null ||
-                  !(param1 + param0 <= ep.field_H.length)) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (NetworkGameClient.field_H == null ||
+                  !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 }
                 if (im.field_cc == null ||
                   !(im.field_cc.length >= param0)) {
                   im.field_cc = new boolean[2 * param0];
                 }
               } else {
-                if (ep.field_H == null) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (NetworkGameClient.field_H == null) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                   if (im.field_cc == null ||
                     !(im.field_cc.length >= param0)) {
                     im.field_cc = new boolean[2 * param0];
                   }
                 } else {
-                  if (param1 + param0 > ep.field_H.length) {
-                    ep.field_H = new int[2 * (param1 + param0)];
+                  if (param1 + param0 > NetworkGameClient.field_H.length) {
+                    NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                     if (im.field_cc == null ||
                       !(im.field_cc.length >= param0)) {
                       im.field_cc = new boolean[2 * param0];
@@ -245,9 +245,9 @@ final class gn {
                   !(ah.field_c.length >= param0)) {
                   ah.field_c = new int[param0 * 2];
                 }
-                if (ep.field_H == null ||
-                  !(param1 + param0 <= ep.field_H.length)) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (NetworkGameClient.field_H == null ||
+                  !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 }
                 if (im.field_cc == null ||
                   !(im.field_cc.length >= param0)) {
@@ -263,15 +263,15 @@ final class gn {
             }
             if (ah.field_c == null) {
               ah.field_c = new int[param0 * 2];
-              if (ep.field_H == null) {
-                ep.field_H = new int[2 * (param1 + param0)];
+              if (NetworkGameClient.field_H == null) {
+                NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 if (im.field_cc == null ||
                   !(im.field_cc.length >= param0)) {
                   im.field_cc = new boolean[2 * param0];
                 }
               } else {
-                if (param1 + param0 > ep.field_H.length) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (param1 + param0 > NetworkGameClient.field_H.length) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                   if (im.field_cc == null ||
                     !(im.field_cc.length >= param0)) {
                     im.field_cc = new boolean[2 * param0];
@@ -289,16 +289,16 @@ final class gn {
             } else {
               if (ah.field_c.length < param0) {
                 ah.field_c = new int[param0 * 2];
-                if (ep.field_H == null ||
-                  !(param1 + param0 <= ep.field_H.length)) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (NetworkGameClient.field_H == null ||
+                  !(param1 + param0 <= NetworkGameClient.field_H.length)) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 }
               } else {
-                if (ep.field_H == null) {
-                  ep.field_H = new int[2 * (param1 + param0)];
+                if (NetworkGameClient.field_H == null) {
+                  NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 } else {
-                  if (param1 + param0 > ep.field_H.length) {
-                    ep.field_H = new int[2 * (param1 + param0)];
+                  if (param1 + param0 > NetworkGameClient.field_H.length) {
+                    NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                   }
                 }
               }
@@ -361,11 +361,11 @@ final class gn {
           return;
         }
         field_e = null;
-        field_a = null;
+        tutorialEightBallAfterfirstpot = null;
     }
 
     static {
-        field_a = "Now you have potted a ball, that group - either spots (balls 1-7) or stripes (balls 9-15) - becomes yours. Your objective is now to pot the rest of the balls of your group, then the black ball. You must always hit one of your balls first!";
-        field_c = 50;
+        tutorialEightBallAfterfirstpot = "Now you have potted a ball, that group - either spots (balls 1-7) or stripes (balls 9-15) - becomes yours. Your objective is now to pot the rest of the balls of your group, then the black ball. You must always hit one of your balls first!";
+        keycodeDefaultRight1 = 50;
     }
 }

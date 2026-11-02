@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class th {
-    static String field_d;
+    static String raIntroNoName;
     static byte[][] field_j;
-    static String field_e;
+    static String runescapeclan;
     static int field_a;
-    static String field_k;
-    static String field_i;
+    static String muXEnteredGame;
+    static String muGameoptKickXFromThisGame;
     static boolean field_h;
     static String field_g;
-    static String field_f;
+    static String close;
     static p[] field_l;
     static int field_b;
-    static String field_c;
+    static String xsGame;
 
     final static void a(byte param0, int param1) {
         kg.field_q = kc.field_g[param1];
@@ -97,10 +97,10 @@ final class th {
               if (ei.a((byte) -71, var5_ref_String)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                jh.a(0, hj.field_h, (String) null, 2, (String) null, true);
+                jh.a(0, hj.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
                 var15 = (String) null;
                 var14 = (String) null;
-                jh.a(0, ci.field_m, (String) null, 2, (String) null, true);
+                jh.a(0, ci.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
               } else {
                 var6 = hn.field_b;
                 if (var6 == 0 &&
@@ -120,7 +120,7 @@ final class th {
         if (qi.field_a == 85) {
           if (var4 != 0 &&
             td.field_c.length() > 0) {
-            cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+            TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
             return true;
           }
           return true;
@@ -150,14 +150,14 @@ final class th {
                   boolean decompiledFrameRemainder0 = true;
                   if (em.field_L != null) {
                     if (!sa.field_c) {
-                      var70 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                      var70 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                       var71 = var70 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var71);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
                       if (kn.field_g == null) {
-                        var68 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                        var68 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                         var69 = var68 + var66 + ": ";
                         var6Lifetime1 = var6Lifetime1 - m.field_c.b(var69);
                         decompiledFrameRemainder0 = false;
@@ -174,20 +174,20 @@ final class th {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var8Lifetime1 = "[" + sn.field_l + "] ";
+                  var8Lifetime1 = "[" + sn.muChatLobby + "] ";
                 }
               }
               if (decompiledFrameRemainder1) {
                 if (em.field_L != null) {
                   if (!sa.field_c) {
-                    var75 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                    var75 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                     var76 = var75 + var66 + ": ";
                     var6Lifetime1 = var6Lifetime1 - m.field_c.b(var76);
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (kn.field_g == null) {
-                      var73 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                      var73 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                       var74 = var73 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var74);
                       decompiledFrameRemainder1 = false;
@@ -204,19 +204,19 @@ final class th {
               }
             }
             if (m.field_c.b(td.field_c.toString()) > var6Lifetime1) {
-              cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+              TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
             }
             return true;
           }
           var89 = (CharSequence) ((Object) fm.field_I);
-          var78 = nr.a(new String[]{ch.a(false, var89)}, -1, jl.field_a);
-          var79 = nr.a(new String[]{var16}, -1, vh.field_S);
+          var78 = nr.a(new String[]{ch.a(false, var89)}, -1, jl.privatequickchatToX);
+          var79 = nr.a(new String[]{var16}, -1, vh.privatequickchatFromX);
           var10 = m.field_c.b(var78);
           var11 = m.field_c.b(var79);
           if (var10 <= var11) {
             var6Lifetime1 = var6Lifetime1 - var11;
             if (m.field_c.b(td.field_c.toString()) > var6Lifetime1) {
-              cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+              TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
             }
             return true;
           }
@@ -224,29 +224,29 @@ final class th {
           if (m.field_c.b(td.field_c.toString()) <= var6Lifetime1) {
             return true;
           }
-          cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+          TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
         }
         return true;
     }
 
     public static void a(int param0) {
-        field_k = null;
+        muXEnteredGame = null;
         field_j = (byte[][]) null;
         field_g = null;
-        field_e = null;
+        runescapeclan = null;
         field_l = null;
         if (param0 == 15059) {
-          field_i = null;
-          field_f = null;
-          field_d = null;
-          field_c = null;
+          muGameoptKickXFromThisGame = null;
+          close = null;
+          raIntroNoName = null;
+          xsGame = null;
           return;
         }
-        field_c = (String) null;
-        field_i = null;
-        field_f = null;
-        field_d = null;
-        field_c = null;
+        xsGame = (String) null;
+        muGameoptKickXFromThisGame = null;
+        close = null;
+        raIntroNoName = null;
+        xsGame = null;
     }
 
     final static void a(int param0, int param1, int[] param2, int[] param3, int param4) {
@@ -333,15 +333,15 @@ final class th {
     }
 
     static {
-        field_i = "Kick <%0> from this game";
+        muGameoptKickXFromThisGame = "Kick <%0> from this game";
         field_j = new byte[250][];
-        field_d = "To report a player, right-click on their name and select the option to report abuse.";
-        field_e = "RuneScape clan";
+        raIntroNoName = "To report a player, right-click on their name and select the option to report abuse.";
+        runescapeclan = "RuneScape clan";
         field_b = 1;
-        field_f = "Close";
-        field_k = "<%0> has entered a game.";
+        close = "Close";
+        muXEnteredGame = "<%0> has entered a game.";
         field_h = false;
         field_g = null;
-        field_c = "<%0>'s game";
+        xsGame = "<%0>'s game";
     }
 }

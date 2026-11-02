@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rk {
-    static String field_e;
+    static String playerYouFirstListAreOut;
     private byte[] field_a;
     static int field_d;
-    static String field_h;
-    static String field_i;
-    static String field_f;
+    static String waitingforSoundeffects;
+    static String createAlertMismatch;
+    static String reportabuse;
     private int[] field_c;
     private int[] field_b;
-    static String field_g;
+    static String fsFocusOrResolution;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6) {
         int var22 = 0;
@@ -274,15 +274,15 @@ final class rk {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != em.field_L && (null != dl.field_j ||
+          if (null != em.field_L && (null != Pocket.field_j ||
             null != ci.field_d ||
             w.field_j != null ||
             null != op.field_a)) {
             for (var9 = 0; dr.field_c > var9; var9++) {
               var10_int = 255 & em.field_L.field_tc[var9];
-              if (null != dl.field_j &&
-                dl.field_j[var9] != null &&
-                dl.field_j[var9][var10_int]) {
+              if (null != Pocket.field_j &&
+                Pocket.field_j[var9] != null &&
+                Pocket.field_j[var9][var10_int]) {
                 var5_int = 1;
               }
               if (null != ci.field_d &&
@@ -330,7 +330,7 @@ final class rk {
             if (null == var12.field_T) {
               var12.field_ac = new vh(0L, PacketBuffer.field_s);
               var12.a(-106, var12.field_ac);
-              var12.field_Tb = new vh(0L, tm.field_d);
+              var12.field_Tb = new vh(0L, BallSkin.field_d);
               if (tq.field_p) {
                 var12.a(param4 + 165, var12.field_Tb);
               }
@@ -408,25 +408,25 @@ final class rk {
               var12.field_lc.field_K = var24_int;
               if (DualLinkDeque.field_f != param2) {
                 if (var12.field_mc) {
-                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, IntrusiveNode.field_f);
-                  var12.field_Zb.field_nb = be.field_K;
+                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, IntrusiveNode.invitingX);
+                  var12.field_Zb.field_nb = be.cancel;
                 } else {
                   if (var12.field_Yb) {
-                    var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, dj.field_j);
-                    var12.field_lc.field_nb = ie.field_b;
-                    var12.field_Zb.field_nb = qa.field_u;
+                    var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, dj.xWantsToJoin);
+                    var12.field_lc.field_nb = ie.accept;
+                    var12.field_Zb.field_nb = qa.reject;
                   } else {
-                    var12.field_lc.field_nb = kn.field_k;
+                    var12.field_lc.field_nb = kn.invite;
                   }
                 }
               } else {
                 if (!em.field_L.field_ec) {
-                  var12.field_Zb.field_nb = bl.field_e;
+                  var12.field_Zb.field_nb = bl.kick;
                 }
               }
               var25_int = 0;
               if (null != em.field_L &&
-                cj.e((byte) 85) &&
+                TikiTableScene.e((byte) 85) &&
                 var12.field_Sb != ve.field_m) {
                 if (null != var12.field_lc.field_nb) {
                   var26 = var12.field_lc.b(true) + kj.field_j * 2;
@@ -511,7 +511,7 @@ final class rk {
               if (var12.field_Sb == ve.field_m) {
                 if (var5_int != 0 &&
                   !var12.field_Pb) {
-                  var24Lifetime2 = nr.field_db;
+                  var24Lifetime2 = nr.gameoptYounotmember;
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -521,16 +521,16 @@ final class rk {
                   if (var7 > var12.field_Xb) {
                     var25_int = var7 - var12.field_Xb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = rf.field_f;
+                      var24Lifetime2 = rf.gameoptYouneed1ratedgame;
                     }
-                    var24Lifetime2 = nr.a(new String[]{null, Integer.toString(var25_int)}, -1, vm.field_n);
+                    var24Lifetime2 = nr.a(new String[]{null, Integer.toString(var25_int)}, -1, vm.gameoptYouneedratedgames);
                   } else {
                     if (var12.field_Rb < var6) {
-                      var24Lifetime2 = nr.a(new String[]{null, Integer.toString(var6)}, -1, ld.field_i);
+                      var24Lifetime2 = nr.a(new String[]{null, Integer.toString(var6)}, -1, ld.gameoptYouneedrating);
                     } else {
                       if ((var8 & ~var12.field_Nb) != 0) {
                         var25_int = s.a(~var12.field_Nb & var8, (byte) 111);
-                        var24Lifetime2 = dl.field_a;
+                        var24Lifetime2 = Pocket.gameoptYouhaventunlocked;
                         if (var25_int > 0 &&
                           null != fg.field_f &&
                           fg.field_f.length >= var25_int &&
@@ -544,13 +544,13 @@ final class rk {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Pb) {
-                  var24Lifetime2 = nr.a(new String[]{var20}, -1, dq.field_c);
+                  var24Lifetime2 = nr.a(new String[]{var20}, -1, dq.gameoptPlayernotmember);
                 } else {
                   if (var7 <= var12.field_Xb) {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Nb) != 0) {
                         var25_int = s.a(~var12.field_Nb & var8, (byte) 100);
-                        var24Lifetime2 = nr.a(new String[]{var20}, -1, en.field_a);
+                        var24Lifetime2 = nr.a(new String[]{var20}, -1, en.gameoptPlayerhasntunlocked);
                         if (var25_int > 0 &&
                           fg.field_f != null &&
                           var25_int <= fg.field_f.length &&
@@ -559,14 +559,14 @@ final class rk {
                         }
                       }
                     } else {
-                      var24Lifetime2 = nr.a(new String[]{var20, Integer.toString(var6)}, -1, jq.field_a);
+                      var24Lifetime2 = nr.a(new String[]{var20, Integer.toString(var6)}, -1, jq.gameoptPlayerneedsrating);
                     }
                   } else {
                     var25_int = -var12.field_Xb + var7;
                     if (1 == var25_int) {
-                      var24Lifetime2 = nr.a(new String[]{var20}, -1, jd.field_i);
+                      var24Lifetime2 = nr.a(new String[]{var20}, -1, jd.gameoptPlayerneeds1ratedgame);
                     }
-                    var24Lifetime2 = nr.a(new String[]{var20, Integer.toString(var25_int)}, -1, sm.field_A);
+                    var24Lifetime2 = nr.a(new String[]{var20, Integer.toString(var25_int)}, -1, sm.gameoptPlayerneedsratedgames);
                   }
                 }
               }
@@ -582,9 +582,9 @@ final class rk {
                 for (var27_int = 0; dr.field_c > var27_int; var27_int++) {
                   var28 = 255 & em.field_L.field_tc[var27_int];
                   var29 = 0;
-                  if (dl.field_j != null &&
-                    dl.field_j[var27_int] != null &&
-                    dl.field_j[var27_int][var28] &&
+                  if (Pocket.field_j != null &&
+                    Pocket.field_j[var27_int] != null &&
+                    Pocket.field_j[var27_int][var28] &&
                     !var12.field_Pb) {
                     var29 = 1;
                   }
@@ -633,23 +633,23 @@ final class rk {
                   }
                 }
                 if (param2 == DualLinkDeque.field_f &&
-                  cj.e((byte) 85)) {
+                  TikiTableScene.e((byte) 85)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, ii.field_c);
+                    var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, ii.gameoptTrychanging1);
                   } else {
-                    var24Lifetime2 = var35 + "<br>" + hm.field_g + (String) (var25);
+                    var24Lifetime2 = var35 + "<br>" + Quaternion.gameoptTrychanging2 + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, sf.field_x);
+                    var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, sf.gameoptNeedchanging1);
                   } else {
-                    var24Lifetime2 = var35 + "<br>" + tp.field_d + (String) (var25);
+                    var24Lifetime2 = var35 + "<br>" + tp.gameoptNeedchanging2 + (String) (var25);
                   }
                 }
                 if (param2 == DualLinkDeque.field_f &&
-                  !cj.e((byte) 85)) {
+                  !TikiTableScene.e((byte) 85)) {
                   var27 = em.field_L.field_Ob;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + nr.a(new String[]{var27}, param4 ^ 82, ke.field_b);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + nr.a(new String[]{var27}, param4 ^ 82, ke.gameoptMightchange);
                 }
                 kk.field_B = (String) (var24Lifetime2);
               }
@@ -854,7 +854,7 @@ final class rk {
 
           }
           if (param0 != 36) {
-            field_h = (String) null;
+            waitingforSoundeffects = (String) null;
           }
           stackIn_65_0 = -param2 + 1 + var8;
           return stackIn_65_0;
@@ -1080,14 +1080,14 @@ final class rk {
     }
 
     public static void a(boolean param0) {
-        field_e = null;
-        field_g = null;
-        field_h = null;
+        playerYouFirstListAreOut = null;
+        fsFocusOrResolution = null;
+        waitingforSoundeffects = null;
         if (param0) {
-          field_e = (String) null;
+          playerYouFirstListAreOut = (String) null;
         }
-        field_i = null;
-        field_f = null;
+        createAlertMismatch = null;
+        reportabuse = null;
     }
 
     rk(byte[] param0) {
@@ -1208,10 +1208,10 @@ final class rk {
     }
 
     static {
-        field_e = "You<%0> are all out of lives!";
-        field_h = "Waiting for sound effects";
-        field_i = "This entry doesn't match";
-        field_f = "Report abuse";
-        field_g = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
+        playerYouFirstListAreOut = "You<%0> are all out of lives!";
+        waitingforSoundeffects = "Waiting for sound effects";
+        createAlertMismatch = "This entry doesn't match";
+        reportabuse = "Report abuse";
+        fsFocusOrResolution = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
     }
 }

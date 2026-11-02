@@ -248,9 +248,9 @@ final class co extends eq {
         param3 = param3 + this.field_D;
         param2 = param2 + this.field_C;
         int var5 = 30 % ((-42 - param1) / 53);
-        this.a(param2, param3, 75, this.field_Z, dp.field_h);
-        this.a(param2, param3, 114, this.field_bb, pc.field_c);
-        this.a(param2, param3, 91, this.field_eb, bb.field_a);
+        this.a(param2, param3, 75, this.field_Z, dp.day);
+        this.a(param2, param3, 114, this.field_bb, pc.month);
+        this.a(param2, param3, 91, this.field_eb, bb.year);
     }
 
     private final void a(int param0, int param1, int param2, ei param3, String param4) {
@@ -258,7 +258,7 @@ final class co extends eq {
           return;
         }
         try {
-          qk.field_a.drawCentered(param4, (param3.field_l >> 1) + param0 + param3.field_C, -5 + (param3.field_D + param1), 16777215, -1);
+          PoolUiText.field_a.drawCentered(param4, (param3.field_l >> 1) + param0 + param3.field_C, -5 + (param3.field_D + param1), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

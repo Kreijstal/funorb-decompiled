@@ -5,7 +5,7 @@ final class tg {
     static vh field_d;
     String field_b;
     String field_f;
-    static String field_e;
+    static String hotseatmultiplayer;
     static int field_g;
     static jp field_a;
     boolean field_c;
@@ -24,7 +24,7 @@ final class tg {
     }
 
     public static void a(int param0) {
-        field_e = null;
+        hotseatmultiplayer = null;
         field_d = null;
         if (param0 != -10562) {
           field_a = (jp) null;
@@ -35,6 +35,6 @@ final class tg {
     }
 
     static {
-        field_e = "Hotseat multiplayer game";
+        hotseatmultiplayer = "Hotseat multiplayer game";
     }
 }

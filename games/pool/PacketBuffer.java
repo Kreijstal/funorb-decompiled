@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class PacketBuffer extends IntrusiveNode {
-    static String field_o;
-    static String field_n;
+    static String achievements;
+    static String statusWantsARematch;
     static PcmSample field_q;
-    static String field_m;
+    static String muLobbyFriendRm;
     static int[] field_p;
-    static String field_r;
+    static String mpXHaswon;
     static AsyncRequest field_u;
     int position;
     static vh field_s;
-    static String field_w;
-    static String field_x;
+    static String spectateXsGame;
+    static String muAllPlayersHaveLeft;
     byte[] payload;
     static int field_l;
 
@@ -66,7 +66,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException var5 = null;
         try {
           if (param1 != 0) {
-            field_n = (String) null;
+            statusWantsARematch = (String) null;
           }
           for (var5_int = param2; var5_int < param3 + param2; var5_int++) {
             fieldTemp$0 = this.position;
@@ -388,18 +388,18 @@ class PacketBuffer extends IntrusiveNode {
 
     public static void e(int param0) {
         if (param0 != 4109) {
-          field_m = (String) null;
+          muLobbyFriendRm = (String) null;
         }
-        field_o = null;
-        field_m = null;
+        achievements = null;
+        muLobbyFriendRm = null;
         field_s = null;
-        field_r = null;
-        field_n = null;
+        mpXHaswon = null;
+        statusWantsARematch = null;
         field_u = null;
-        field_x = null;
+        muAllPlayersHaveLeft = null;
         field_p = null;
         field_q = null;
-        field_w = null;
+        spectateXsGame = null;
     }
 
     final int readInt(boolean obfuscationGuard) {
@@ -609,7 +609,7 @@ class PacketBuffer extends IntrusiveNode {
           return;
         }
         if (param0 != -49) {
-          field_x = (String) null;
+          muAllPlayersHaveLeft = (String) null;
         }
         if (0 <= param1 &&
           param1 < 32768) {
@@ -789,18 +789,18 @@ class PacketBuffer extends IntrusiveNode {
             if (!param1.field_g) {
               if (param1.field_m == 0 &&
                 param1.field_e == 0) {
-                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, jl.field_a);
+                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, jl.privatequickchatToX);
               } else {
-                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, vh.field_S);
+                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, vh.privatequickchatFromX);
               }
             }
           } else {
             if (param1.field_p == 0 &&
               ej.field_l) {
-              var3Lifetime1 = "[" + sn.field_l + "] ";
+              var3Lifetime1 = "[" + sn.muChatLobby + "] ";
             }
             if (param1.field_p == 1) {
-              var3Lifetime1 = "[" + nr.a(new String[]{param1.field_n}, -1, th.field_c) + "] ";
+              var3Lifetime1 = "[" + nr.a(new String[]{param1.field_n}, -1, th.xsGame) + "] ";
             }
             if (param1.field_p == 4 &&
               null != kn.field_g) {
@@ -895,7 +895,7 @@ class PacketBuffer extends IntrusiveNode {
     final void b(int param0, boolean param1) {
         this.payload[-1 - param0 + this.position] = (byte)param0;
         if (!param1) {
-          field_o = (String) null;
+          achievements = (String) null;
         }
     }
 
@@ -909,12 +909,12 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     static {
-        field_o = "Achievements";
-        field_m = "Remove friend";
-        field_r = "<%0> has won!";
-        field_w = "Spectate <%0>'s game";
-        field_x = "All players have left <%0>'s game.";
-        field_n = "Wants a rematch.";
+        achievements = "Achievements";
+        muLobbyFriendRm = "Remove friend";
+        mpXHaswon = "<%0> has won!";
+        spectateXsGame = "Spectate <%0>'s game";
+        muAllPlayersHaveLeft = "All players have left <%0>'s game.";
+        statusWantsARematch = "Wants a rematch.";
         field_p = new int[8192];
     }
 }

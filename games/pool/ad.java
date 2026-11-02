@@ -19,14 +19,14 @@ final class ad {
     int[][] field_k;
     static IntrusiveDeque field_l;
     wi[] field_n;
-    static String field_e;
+    static String fsButtonCancel;
     static int field_x;
     static int[] field_o;
-    static String field_b;
+    static String playerXGainedALife;
     static Sprite field_y;
     static int field_r;
     static int field_c;
-    static String field_t;
+    static String createCreateanaccount;
     static int field_u;
 
     final static void a(byte param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
@@ -45,10 +45,10 @@ final class ad {
         if (param0 != 20592) {
           return;
         }
-        field_t = null;
+        createCreateanaccount = null;
         field_y = null;
-        field_b = null;
-        field_e = null;
+        playerXGainedALife = null;
+        fsButtonCancel = null;
         field_l = null;
     }
 
@@ -276,7 +276,7 @@ final class ad {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_q = jr.a(param0.length, (byte) -51, param0, 0);
+            this.field_q = TikiBallSkin.a(param0.length, (byte) -51, param0, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (param2[var4_int] != this.field_q[var4_int]) {
                 throw new RuntimeException();
@@ -304,9 +304,9 @@ final class ad {
 
     static {
         field_l = new IntrusiveDeque();
-        field_e = "Cancel";
+        fsButtonCancel = "Cancel";
         field_o = new int[]{2, 20, 21, 49, 5, 3, 9};
-        field_b = "<%0> gained 1 life!";
-        field_t = "Create a free Account";
+        playerXGainedALife = "<%0> gained 1 life!";
+        createCreateanaccount = "Create a free Account";
     }
 }

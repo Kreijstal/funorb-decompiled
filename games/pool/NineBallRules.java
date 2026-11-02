@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends sq {
+final class NineBallRules extends GameRules {
     static int[] field_g;
     static vh field_j;
     static int field_h;
     private int field_f;
-    static String field_e;
-    static String field_i;
+    static String unpackingGraphics;
+    static String chatviewscrolledup;
 
     final int h(int param0) {
-        qe var2;
+        ShotRecord var2;
         int var3;
         int var4;
         var4 = Pool.field_O;
-        var2 = this.field_d.j(75);
+        var2 = this.field_d.currentShot(75);
         var2.field_t = true;
         if (param0 != -1) {
           return -103;
@@ -41,12 +41,12 @@ final class fj extends sq {
         }
     }
 
-    fj(al param0) {
+    NineBallRules(PoolGameModel param0) {
         super(param0);
         this.field_f = 1;
     }
 
-    final int a(qe param0, int param1) {
+    final int a(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -81,20 +81,20 @@ final class fj extends sq {
     }
 
     public static void b(boolean param0) {
-        field_e = null;
+        unpackingGraphics = null;
         if (param0) {
           field_j = (vh) null;
         }
         field_j = null;
         field_g = null;
-        field_i = null;
+        chatviewscrolledup = null;
     }
 
     final static int c(byte param0) {
         if (param0 >= -6) {
-          fj.c((byte) -21);
+          NineBallRules.c((byte) -21);
         }
-        return !pp.a(true) ? -1 + md.field_a.length : md.field_a.length;
+        return !pp.a(true) ? -1 + md.achievementNames.length : md.achievementNames.length;
     }
 
     private final int q(int param0) {
@@ -104,7 +104,7 @@ final class fj extends sq {
         return nr.field_Q | ll.field_f;
     }
 
-    final boolean a(int param0, byte param1, qe param2) {
+    final boolean a(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -112,7 +112,7 @@ final class fj extends sq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 9) {
-            field_e = (String) null;
+            unpackingGraphics = (String) null;
           }
           return !(param0 <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,9 +132,9 @@ final class fj extends sq {
     final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           String var5 = (String) null;
-          fj.a((String) null, (byte) 90);
+          NineBallRules.a((String) null, (byte) 90);
         }
-        return af.a(param0, 64, param2, param1, 1);
+        return EightBallRules.a(param0, 64, param2, param1, 1);
     }
 
     final static boolean a(String param0, byte param1) {
@@ -179,7 +179,7 @@ final class fj extends sq {
         return 1;
     }
 
-    final boolean c(qe param0, int param1) {
+    final boolean c(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -188,7 +188,7 @@ final class fj extends sq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -33) {
-            fj.a(67, 8, 86, true);
+            NineBallRules.a(67, 8, 86, true);
           }
           stackIn_5_0 = (param0.field_n == param0.field_z);
           return stackIn_5_0;
@@ -206,7 +206,7 @@ final class fj extends sq {
         }
     }
 
-    final Sprite b(qe param0, int param1) {
+    final Sprite b(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;
@@ -224,7 +224,7 @@ final class fj extends sq {
             stackIn_7_0 = d.field_a[param0.field_z];
             return stackIn_7_0;
           }
-          stackIn_5_0 = mf.field_n;
+          stackIn_5_0 = ClassicBallSkin.field_n;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,10 +245,10 @@ final class fj extends sq {
         int var3 = Pool.field_O;
         if (param0 != -1) {
           String var4 = (String) null;
-          fj.a((String) null, (byte) 119);
+          NineBallRules.a((String) null, (byte) 119);
         }
         for (var2 = 1; var2 < 9; var2++) {
-          if (this.field_d.field_l[var2].field_s) {
+          if (this.field_d.balls[var2].inPlay) {
             return var2;
           }
         }
@@ -264,7 +264,7 @@ final class fj extends sq {
 
     final boolean f(int param0) {
         if (param0 < 113) {
-          fj.b(false);
+          NineBallRules.b(false);
         }
         return true;
     }
@@ -273,15 +273,15 @@ final class fj extends sq {
         int var3;
         int var4;
         Object var6;
-        cr var6_ref;
+        PotEvent var6_ref;
         int var7;
-        qe var8;
-        qe var9;
+        ShotRecord var8;
+        ShotRecord var9;
         aa var10;
         aa var11;
         var6 = null;
         var7 = Pool.field_O;
-        var8 = this.field_d.j(123);
+        var8 = this.field_d.currentShot(123);
         var9 = var8;
         if (var9 == null) {
           throw new IllegalStateException("Couldn't get the last shot to examine!");
@@ -310,37 +310,37 @@ final class fj extends sq {
         if (var3 != 0) {
           if (!var9.field_m.c(0)) {
             var11 = new aa(var9.field_m);
-            var6_ref = (cr) (var11.b((byte) -92));
+            var6_ref = (PotEvent) (var11.b((byte) -92));
             while (var6_ref != null) {
-              if (9 != var6_ref.field_n) {
-                var6_ref = (cr) (var11.b(-86));
+              if (9 != var6_ref.ballIndex) {
+                var6_ref = (PotEvent) (var11.b(-86));
                 continue;
               }
               var9.a(9, -14, new int[]{this.field_d.field_A});
               var9.field_t = true;
-              return hm.field_e;
+              return Quaternion.field_e;
             }
           }
         } else {
           if (!var9.field_m.c(0)) {
             var10 = new aa(var9.field_m);
-            var6_ref = (cr) (var10.b((byte) -92));
+            var6_ref = (PotEvent) (var10.b((byte) -92));
             while (var6_ref != null) {
-              if (var6_ref.field_n == 9) {
+              if (var6_ref.ballIndex == 9) {
                 var9.a(10, -14, new int[]{this.field_d.field_A});
                 return ag.field_e;
               }
               var3 = var3 | nd.field_j;
               var9.field_w = (byte)(var9.field_w + 1);
-              var6_ref = (cr) (var10.b(-126));
+              var6_ref = (PotEvent) (var10.b(-126));
             }
           }
           if (this.field_d.a(false, (byte) 81, var9)) {
-            if (this.a((var9.field_L + 1) % this.field_d.field_n, -102)) {
+            if (this.a((var9.field_L + 1) % this.field_d.playerCount, -102)) {
               var9.field_w = (byte)(var9.field_w + 1);
             }
           } else {
-            if (this.a(var9.field_L % this.field_d.field_n, -41)) {
+            if (this.a(var9.field_L % this.field_d.playerCount, -41)) {
               var9.field_w = (byte)(var9.field_w - 1);
             }
           }
@@ -458,7 +458,7 @@ final class fj extends sq {
 
     private final int p(int param0) {
         if (param0 < 8) {
-          fj.c((byte) -24);
+          NineBallRules.c((byte) -24);
         }
         return this.q(10);
     }
@@ -473,7 +473,7 @@ final class fj extends sq {
 
     static {
         field_g = new int[8192];
-        field_i = "Chat view has been scrolled up. Scroll down to chat.";
-        field_e = "Unpacking graphics";
+        chatviewscrolledup = "Chat view has been scrolled up. Scroll down to chat.";
+        unpackingGraphics = "Unpacking graphics";
     }
 }

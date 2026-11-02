@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vi {
-    static String field_d;
+    static String loginUsernameEmail;
     static vh field_c;
-    static String field_a;
-    static String field_b;
+    static String searchingForOpponentsPlural;
+    static String highscoreHeaderTime;
 
     final static void a(int param0) {
         kg.field_m = -1;
@@ -426,10 +426,10 @@ final class vi {
     }
 
     public static void b(int param0) {
-        field_d = null;
-        field_b = null;
+        loginUsernameEmail = null;
+        highscoreHeaderTime = null;
         field_c = null;
-        field_a = null;
+        searchingForOpponentsPlural = null;
         if (param0 > -14) {
           vi.b(-20);
         }
@@ -443,8 +443,8 @@ final class vi {
     }
 
     static {
-        field_a = "Searching for opponents";
-        field_d = "Login: ";
-        field_b = "Time";
+        searchingForOpponentsPlural = "Searching for opponents";
+        loginUsernameEmail = "Login: ";
+        highscoreHeaderTime = "Time";
     }
 }

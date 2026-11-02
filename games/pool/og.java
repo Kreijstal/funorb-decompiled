@@ -3,7 +3,7 @@
  */
 final class og extends ob {
     static nl field_L;
-    static String field_H;
+    static String mpOfferrematchUnrated;
     static int[] field_J;
     static Sprite[] field_K;
     static int field_I;
@@ -17,14 +17,14 @@ final class og extends ob {
           field_K = null;
           field_L = null;
           field_J = null;
-          field_H = null;
+          mpOfferrematchUnrated = null;
           return;
         }
         og.f((byte) -111);
         field_K = null;
         field_L = null;
         field_J = null;
-        field_H = null;
+        mpOfferrematchUnrated = null;
     }
 
     final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, int param2) {
@@ -78,7 +78,7 @@ final class og extends ob {
 
     final int b(byte param0, int param1) {
         if (param0 != 6) {
-          field_H = (String) null;
+          mpOfferrematchUnrated = (String) null;
           if (this.field_h.length - 1 > param1) {
             return this.field_x + param1 * (-8 + this.field_s);
           }
@@ -91,7 +91,7 @@ final class og extends ob {
     }
 
     static {
-        field_H = "Offer unrated rematch";
+        mpOfferrematchUnrated = "Offer unrated rematch";
         field_J = new int[]{62, 20, 21, 49, 5, 3, 61};
         field_L = new nl();
     }

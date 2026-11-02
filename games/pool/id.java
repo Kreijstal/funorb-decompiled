@@ -4,7 +4,7 @@
 abstract class id {
     static jk field_c;
     static int field_b;
-    static String field_d;
+    static String menuOptionReturnToTutorial;
     static Sprite[] field_a;
 
     abstract void a(java.awt.Component param0, int param1);
@@ -19,11 +19,11 @@ abstract class id {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new vh((long)param1, (vh) null);
-          var13.field_F = jr.a(param12, (byte) 20, param4);
-          var13.field_Gb = jr.a(param7, (byte) 20, param10);
-          var13.field_X = jr.a(param0, (byte) 20, param11);
-          var13.field_Kb = jr.a(param3, (byte) 20, param6);
-          var13.field_Y = jr.a(param5, (byte) 20, param8);
+          var13.field_F = TikiBallSkin.a(param12, (byte) 20, param4);
+          var13.field_Gb = TikiBallSkin.a(param7, (byte) 20, param10);
+          var13.field_X = TikiBallSkin.a(param0, (byte) 20, param11);
+          var13.field_Kb = TikiBallSkin.a(param3, (byte) 20, param6);
+          var13.field_Y = TikiBallSkin.a(param5, (byte) 20, param8);
           var13.field_N = param2;
           var13.field_I = param9;
           stackIn_1_0 = var13;
@@ -98,7 +98,7 @@ abstract class id {
         }
         ug.field_u = hj.field_l;
         PoolMatchController.field_X = 0;
-        rj.field_f = 0;
+        KillerRules.field_f = 0;
         IsaacCipher.field_d = 0;
         jc.field_j = new ia(2);
         jc.field_j.a(param1, -1, ho.a((byte) -84, wn.field_i, gg.field_f), true);
@@ -347,14 +347,14 @@ abstract class id {
             }
             param2[0].c(param3, param0);
             param2[2].c(-var6 + (param1 + param3), param0);
-            SoftwareRasterizer.saveClip(sq.field_a);
+            SoftwareRasterizer.saveClip(GameRules.field_a);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param1), param0 + param2[1].field_y);
             var8 = param3 + var5_int;
             var9 = param1 + param3 - var6;
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
               param2[1].c(param3, param0);
             }
-            SoftwareRasterizer.restoreClip(sq.field_a);
+            SoftwareRasterizer.restoreClip(GameRules.field_a);
             return;
           }
           return;
@@ -380,11 +380,11 @@ abstract class id {
         if (param0 != 35) {
           id.c(109);
         }
-        field_d = null;
+        menuOptionReturnToTutorial = null;
     }
 
     static {
         field_b = -1;
-        field_d = "Return to tutorial";
+        menuOptionReturnToTutorial = "Return to tutorial";
     }
 }

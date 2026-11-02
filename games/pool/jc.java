@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jc {
-    static hm field_e;
+    static Quaternion field_e;
     static int field_h;
-    static String field_f;
-    static String field_d;
-    static String field_g;
+    static String on;
+    static String pleaseloginMember;
+    static String fsButtonAccept;
     static boolean field_c;
     static ia field_j;
     static int[] field_i;
-    static String field_b;
+    static String youAreInvitedToXsGame;
     static di field_a;
 
     public static void a(int param0) {
         field_a = null;
-        field_f = null;
+        on = null;
         field_e = null;
         if (param0 == 0) {
-          field_g = null;
+          fsButtonAccept = null;
           field_j = null;
-          field_d = null;
-          field_b = null;
+          pleaseloginMember = null;
+          youAreInvitedToXsGame = null;
           field_i = null;
           return;
         }
@@ -150,9 +150,9 @@ final class jc {
     }
 
     static {
-        field_g = "Accept";
-        field_f = "ON";
-        field_b = "You are invited to <%0>'s game.";
-        field_d = "Please log in as a subscribing member to access this feature.";
+        fsButtonAccept = "Accept";
+        on = "ON";
+        youAreInvitedToXsGame = "You are invited to <%0>'s game.";
+        pleaseloginMember = "Please log in as a subscribing member to access this feature.";
     }
 }

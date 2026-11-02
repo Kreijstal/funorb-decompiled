@@ -5,8 +5,8 @@ final class hh {
     static int field_a;
     static Sprite[] field_f;
     static boolean field_c;
-    static String field_d;
-    static String field_b;
+    static String unratedGame;
+    static String errorJs5connectFull;
     static int field_e;
 
     final static vh a(byte param0) {
@@ -19,14 +19,14 @@ final class hh {
 
     public static void a(int param0) {
         if (param0 == 28882) {
-          field_b = null;
-          field_d = null;
+          errorJs5connectFull = null;
+          unratedGame = null;
           field_f = null;
           return;
         }
         hh.a((byte) -23, -113);
-        field_b = null;
-        field_d = null;
+        errorJs5connectFull = null;
+        unratedGame = null;
         field_f = null;
     }
 
@@ -111,7 +111,7 @@ final class hh {
     static {
         field_c = true;
         field_a = 0;
-        field_b = "Data server full or too many connections from your address. Please try again in a few minutes.";
-        field_d = "Unrated game";
+        errorJs5connectFull = "Data server full or too many connections from your address. Please try again in a few minutes.";
+        unratedGame = "Unrated game";
     }
 }

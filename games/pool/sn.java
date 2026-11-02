@@ -3,10 +3,10 @@
  */
 final class sn extends gg implements pe, ha {
     static IndexedSprite[] field_h;
-    static String field_l;
-    static String field_j;
+    static String muChatLobby;
+    static String ballsetSpaceGroup0;
     eq field_i;
-    static String field_k;
+    static String themeRandom;
     static vh field_m;
     static byte[] field_n;
 
@@ -22,16 +22,16 @@ final class sn extends gg implements pe, ha {
     public static void a(byte param0) {
         field_n = null;
         field_m = null;
-        field_l = null;
+        muChatLobby = null;
         field_h = null;
         if (param0 == -119) {
-          field_k = null;
-          field_j = null;
+          themeRandom = null;
+          ballsetSpaceGroup0 = null;
           return;
         }
         sn.a((byte) -90);
-        field_k = null;
-        field_j = null;
+        themeRandom = null;
+        ballsetSpaceGroup0 = null;
     }
 
     final String f(int param0) {
@@ -55,14 +55,14 @@ final class sn extends gg implements pe, ha {
               return null;
             }
           } else {
-            stackIn_4_0 = nr.a(new String[]{"1890", Integer.toString(-3 + var6)}, -1, ej.field_c);
+            stackIn_4_0 = nr.a(new String[]{"1890", Integer.toString(-3 + var6)}, -1, ej.createAlertYearrange);
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return ij.field_n;
+        return ij.createAlertInvaliddate;
     }
 
     final static boolean h(int param0) {
@@ -90,7 +90,7 @@ final class sn extends gg implements pe, ha {
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != -14836) {
-            field_k = (String) null;
+            themeRandom = (String) null;
           }
           var2_int = this.field_i.h((byte) -119);
           var3 = this.field_i.j(param0 ^ -14827);
@@ -139,8 +139,8 @@ final class sn extends gg implements pe, ha {
     }
 
     static {
-        field_j = "Spots";
-        field_l = "Lobby";
-        field_k = "Random";
+        ballsetSpaceGroup0 = "Spots";
+        muChatLobby = "Lobby";
+        themeRandom = "Random";
     }
 }

@@ -7,11 +7,11 @@ final class tq extends IntrusiveNode {
     static boolean field_p;
     boolean field_s;
     static int field_r;
-    static String field_w;
-    static String field_v;
+    static String raSuggestmute;
+    static String tooltipSnookered;
     static int field_t;
     static vh field_m;
-    static String field_x;
+    static String ratedMembersonly;
     static so field_o;
     int[] field_l;
     static int field_q;
@@ -47,10 +47,10 @@ final class tq extends IntrusiveNode {
 
     public static void a(int param0) {
         field_n = null;
-        field_w = null;
+        raSuggestmute = null;
         field_m = null;
-        field_v = null;
-        field_x = null;
+        tooltipSnookered = null;
+        ratedMembersonly = null;
         if (param0 != 0) {
           tq.a(-16, 85, false);
         }
@@ -99,7 +99,7 @@ final class tq extends IntrusiveNode {
           hn.field_b = 2;
           fm.field_I = param2;
           if (param1 != -104) {
-            field_v = (String) null;
+            tooltipSnookered = (String) null;
           }
           var5 = (CharSequence) ((Object) param2);
           di.field_a = hq.a(117, var5);
@@ -120,8 +120,8 @@ final class tq extends IntrusiveNode {
         }
         ne.field_u.a(lg.field_s, -1);
         ne.field_u = null;
-        if (null != fk.field_gb) {
-          fk.field_gb.d(22472);
+        if (null != PlasmaTableScene.field_gb) {
+          PlasmaTableScene.field_gb.d(22472);
         }
         pa.field_K.requestFocus();
     }
@@ -140,7 +140,7 @@ final class tq extends IntrusiveNode {
           var5 = new int[param2.length];
           var3 = var5;
           if (param1 != -20607) {
-            field_x = (String) null;
+            ratedMembersonly = (String) null;
           }
           for (var4 = 0; var4 < var5.length; var4++) {
             var5[var4] = ud.a(param2[var4], param0, 1);
@@ -166,9 +166,9 @@ final class tq extends IntrusiveNode {
     }
 
     static {
-        field_v = "Snookered";
-        field_w = "Suggest muting this player";
+        tooltipSnookered = "Snookered";
+        raSuggestmute = "Suggest muting this player";
         field_p = true;
-        field_x = "Rated games are available to members only. To become a member, please visit the 'Account' section of the website.";
+        ratedMembersonly = "Rated games are available to members only. To become a member, please visit the 'Account' section of the website.";
     }
 }

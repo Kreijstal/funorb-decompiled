@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tf {
-    static tm field_a;
+    static BallSkin field_a;
     static boolean field_d;
     int field_c;
-    static String field_b;
+    static String dEFAULTPLAYERNAME;
 
     final static Sprite a(int param0, int param1) {
         if (param0 != -17104) {
-          field_a = (tm) null;
+          field_a = (BallSkin) null;
           if (mp.field_V > 0) {
             return ua.field_r;
           }
@@ -54,7 +54,7 @@ final class tf {
 
     public static void a(int param0) {
         field_a = null;
-        field_b = null;
+        dEFAULTPLAYERNAME = null;
         int var1 = -29 / ((param0 - 26) / 35);
     }
 
@@ -63,6 +63,6 @@ final class tf {
     }
 
     static {
-        field_b = "Player";
+        dEFAULTPLAYERNAME = "Player";
     }
 }

@@ -3,10 +3,10 @@
  */
 final class p implements eb {
     short field_o;
-    static String field_k;
+    static String mpXOffersrematch;
     short field_p;
-    static String field_n;
-    static String field_b;
+    static String mpTimeremaining;
+    static String rule14;
     static int[] field_c;
     private nc field_j;
     short field_f;
@@ -16,7 +16,7 @@ final class p implements eb {
     static vh field_i;
     private byte field_e;
     int[] field_l;
-    static String field_g;
+    static String invalidName;
     private byte field_d;
 
     public final int b(int[] param0, int param1) {
@@ -90,7 +90,7 @@ final class p implements eb {
         char[] var9;
         int var5Lifetime1;
         int var5Lifetime2;
-        var7 = new String(jk.field_k);
+        var7 = new String(jk.timerHoursMinutesSeconds);
         if (param2 != 45) {
           return (String) null;
         }
@@ -316,15 +316,15 @@ final class p implements eb {
     }
 
     public static void b(int param0) {
-        field_k = null;
+        mpXOffersrematch = null;
         field_c = null;
         if (param0 < 20) {
           field_c = (int[]) null;
         }
-        field_n = null;
-        field_g = null;
+        mpTimeremaining = null;
+        invalidName = null;
         field_i = null;
-        field_b = null;
+        rule14 = null;
     }
 
     final static boolean a(CharSequence param0, byte param1, boolean param2) {
@@ -368,7 +368,7 @@ final class p implements eb {
                 }
               }
               if (param1 != -113) {
-                field_n = (String) null;
+                mpTimeremaining = (String) null;
               }
               if (var5 <= 0) {
                 return true;
@@ -406,7 +406,7 @@ final class p implements eb {
             this.field_j.a(param1, this.field_l);
           }
           if (param0 != 6710886) {
-            field_k = (String) null;
+            mpXOffersrematch = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -537,9 +537,9 @@ final class p implements eb {
     }
 
     static {
-        field_k = "<%0> is offering a rematch.";
-        field_b = "Real-life threats";
-        field_n = "Time: <%0>";
-        field_g = "Invalid name";
+        mpXOffersrematch = "<%0> is offering a rematch.";
+        rule14 = "Real-life threats";
+        mpTimeremaining = "Time: <%0>";
+        invalidName = "Invalid name";
     }
 }

@@ -5,7 +5,7 @@ final class la {
     static ie field_h;
     static int[] field_d;
     static int field_a;
-    static String field_g;
+    static String waitingToStartHint;
     static IndexedSprite[] field_c;
     static int field_b;
     static int field_e;
@@ -64,7 +64,7 @@ final class la {
           }
           int var8_int = -106 % ((param0 + 1) / 55);
           if (DualLinkNode.field_p) {
-            lm.a(param1, param6, 20, 4, param2, param7, param4, param3, param3);
+            SpaceBallSkin.a(param1, param6, 20, 4, param2, param7, param4, param3, param3);
             uq.field_D.a(param5, false);
             if (!param5) {
               return;
@@ -88,13 +88,13 @@ final class la {
         field_h = null;
         int var1 = 64 % ((53 - param0) / 52);
         field_d = null;
-        field_g = null;
+        waitingToStartHint = null;
     }
 
     static {
         field_h = new ie();
         field_b = 0;
-        field_g = "Hint: to start quickly, choose 'Don't mind' for as many options as you can!";
+        waitingToStartHint = "Hint: to start quickly, choose 'Don't mind' for as many options as you can!";
         field_e = 10;
     }
 }

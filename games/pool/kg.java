@@ -57,15 +57,15 @@ final class kg extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
-        qe.field_y = param2;
+        ShotRecord.field_y = param2;
         if (param1) {
-          vc.field_K = param4;
+          ModelTableScene.field_K = param4;
           ch.field_I = param3;
           mm.field_b = param0;
           return;
         }
         kg.a(-104, true, -107, 21, 17);
-        vc.field_K = param4;
+        ModelTableScene.field_K = param4;
         ch.field_I = param3;
         mm.field_b = param0;
     }

@@ -7,7 +7,7 @@ final class eh extends IntrusiveNode {
     String[][] field_m;
     long[][] field_q;
     static int[] field_s;
-    static String field_n;
+    static String invaliduserorpass;
     static int field_o;
     int field_r;
     static int field_t;
@@ -65,7 +65,7 @@ final class eh extends IntrusiveNode {
         if (param0 > 69) {
           field_p = null;
           field_s = null;
-          field_n = null;
+          invaliduserorpass = null;
           field_w = null;
           field_y = null;
           field_l = null;
@@ -75,7 +75,7 @@ final class eh extends IntrusiveNode {
         eh.a(-96, 113, (Sprite[]) null, (BitmapFont) null, -106, (Sprite[]) null, 56, -114, -28, 47, (Sprite[]) null, -80, -127, (BitmapFont) null, -116, -112, -82, 45, -61, -51);
         field_p = null;
         field_s = null;
-        field_n = null;
+        invaliduserorpass = null;
         field_w = null;
         field_y = null;
         field_l = null;
@@ -148,6 +148,6 @@ final class eh extends IntrusiveNode {
         field_o = 2;
         field_p = new int[12];
         field_x = 0;
-        field_n = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
+        invaliduserorpass = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
     }
 }

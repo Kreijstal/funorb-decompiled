@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bo {
-    static String field_b;
+    static String tooltipBreak;
     static Sprite[] field_a;
 
     final static int b(int param0, int param1) {
@@ -36,7 +36,7 @@ final class bo {
         if (param0 != 45) {
           return;
         }
-        field_b = null;
+        tooltipBreak = null;
     }
 
     final static tq a(int param0, int param1) {
@@ -147,13 +147,13 @@ final class bo {
         var1 = wp.field_g;
         synchronized (var1) {
           cd.field_b = ho.field_v;
-          qk.field_g = qk.field_g + 1;
+          PoolUiText.field_g = PoolUiText.field_g + 1;
           wn.field_i = we.field_l;
           gg.field_f = wn.field_k;
           re.field_c = m.field_d;
           m.field_d = false;
           ne.field_s = kj.field_c;
-          lq.field_W = pq.field_f;
+          lq.field_W = Ball.field_f;
           ua.field_o = ne.field_o;
           kj.field_c = 0;
         }
@@ -234,7 +234,7 @@ final class bo {
     }
 
     static {
-        field_b = "Break";
+        tooltipBreak = "Break";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

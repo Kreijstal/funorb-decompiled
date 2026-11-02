@@ -8,12 +8,12 @@ final class bq extends IntrusiveNode {
     static Boolean field_q;
     static Sprite field_n;
     static int field_m;
-    static String field_s;
+    static String foulExclamation;
     static boolean field_o;
 
     final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
-          pq.field_m = param4;
+          Ball.field_m = param4;
           jc.field_h = param3;
           ad.field_r = param6;
           ej.field_g = param5;
@@ -162,7 +162,7 @@ final class bq extends IntrusiveNode {
 
     public static void c(byte param0) {
         field_n = null;
-        field_s = null;
+        foulExclamation = null;
         field_q = null;
         field_r = null;
         if (param0 > -16) {
@@ -173,7 +173,7 @@ final class bq extends IntrusiveNode {
     static {
         field_p = -1;
         field_r = new hj(14, 0, 4, 1);
-        field_s = "Foul!";
+        foulExclamation = "Foul!";
         field_o = false;
     }
 }

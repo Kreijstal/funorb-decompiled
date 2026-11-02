@@ -9,7 +9,7 @@ final class mn implements Iterator {
     private DualLinkNode field_b;
     static int field_g;
     private DualLinkNode field_c;
-    static String field_d;
+    static String progressJungleFinishing;
     private qi field_f;
 
     final static kf a(int param0, PcmSampleStream param1) {
@@ -79,11 +79,11 @@ final class mn implements Iterator {
         if (param0 != 19000) {
           field_g = 83;
           field_e = null;
-          field_d = null;
+          progressJungleFinishing = null;
           return;
         }
         field_e = null;
-        field_d = null;
+        progressJungleFinishing = null;
     }
 
     mn(qi param0) {
@@ -98,6 +98,6 @@ final class mn implements Iterator {
     }
 
     static {
-        field_d = "Catching breath!";
+        progressJungleFinishing = "Catching breath!";
     }
 }

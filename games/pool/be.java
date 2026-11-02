@@ -4,8 +4,8 @@
 import java.io.*;
 
 final class be extends ob {
-    static String field_K;
-    static String field_J;
+    static String cancel;
+    static String createMoreSuggestions;
     static int field_I;
     private static int field_H;
     static vh field_L;
@@ -77,16 +77,16 @@ final class be extends ob {
     }
 
     public static void f(byte param0) {
-        field_J = null;
+        createMoreSuggestions = null;
         if (param0 != -89) {
           field_H = -35;
         }
         field_L = null;
-        field_K = null;
+        cancel = null;
     }
 
     final static void f(int param0) {
-        ep.field_z = false;
+        NetworkGameClient.field_z = false;
         ro.field_e = false;
         lf.a(param0, (byte) 111);
         pa.field_I = aa.field_c;
@@ -128,20 +128,20 @@ final class be extends ob {
     }
 
     be(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super(mc.field_k, param0, param1, param2, param3, param4, param5);
+        super(FreePlayRules.field_k, param0, param1, param2, param3, param4, param5);
     }
 
     final void c(int param0) {
         if (param0 <= 36) {
-          field_K = (String) null;
+          cancel = (String) null;
         }
         super.c(92);
     }
 
     static {
-        field_K = "Cancel";
+        cancel = "Cancel";
         field_H = 3;
-        field_J = "More suggestions";
+        createMoreSuggestions = "More suggestions";
         field_I = 1 << field_H;
     }
 }

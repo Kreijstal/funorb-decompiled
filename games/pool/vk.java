@@ -27,7 +27,7 @@ final class vk extends PcmStream {
     private pr[][] field_I;
     private int[] field_J;
     static int field_bb;
-    static String field_O;
+    static String enterfriendDel;
     private boolean field_M;
     private int field_t;
     private ib field_u;
@@ -35,11 +35,11 @@ final class vk extends PcmStream {
     private long field_ab;
     private int field_X;
     static int field_H;
-    static String field_P;
+    static String muChatPrivate;
     private boolean field_W;
     static nl field_V;
     private cg field_C;
-    static String field_x;
+    static String statusJoin;
     private int field_S;
 
     final synchronized int d() {
@@ -135,9 +135,9 @@ final class vk extends PcmStream {
         if (param0 != -819201) {
           return;
         }
-        field_x = null;
-        field_P = null;
-        field_O = null;
+        statusJoin = null;
+        muChatPrivate = null;
+        enterfriendDel = null;
         field_y = null;
         field_db = null;
     }
@@ -262,50 +262,50 @@ final class vk extends PcmStream {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = nr.a(new String[]{param0}, -1, th.field_k);
+            stackIn_3_0 = nr.a(new String[]{param0}, -1, th.muXEnteredGame);
             return stackIn_3_0;
           }
           var3_int = 23 / ((param2 + 71) / 45);
           if (param1 == 2) {
-            stackIn_7_0 = nr.a(new String[]{param0}, -1, up.field_I);
+            stackIn_7_0 = nr.a(new String[]{param0}, -1, up.muXJoinedYourGame);
             return stackIn_7_0;
           }
           if (3 == param1) {
-            stackIn_11_0 = nr.a(new String[]{param0}, -1, da.field_a);
+            stackIn_11_0 = nr.a(new String[]{param0}, -1, da.muXEnteredOtherGame);
             return stackIn_11_0;
           }
           if (param1 == 4) {
-            stackIn_15_0 = nr.a(new String[]{param0}, -1, s.field_g);
+            stackIn_15_0 = nr.a(new String[]{param0}, -1, s.muXLeftLobby);
             return stackIn_15_0;
           }
           if (param1 == 5) {
-            stackIn_18_0 = nr.a(new String[]{param0}, -1, lh.field_a);
+            stackIn_18_0 = nr.a(new String[]{param0}, -1, lh.muXLostCon);
             return stackIn_18_0;
           }
           if (param1 == 6) {
-            stackIn_22_0 = nr.a(new String[]{param0}, -1, hr.field_w);
+            stackIn_22_0 = nr.a(new String[]{param0}, -1, hr.muXCannotJoinFull);
             return stackIn_22_0;
           }
           if (param1 == 7) {
-            stackIn_25_0 = nr.a(new String[]{param0}, -1, ii.field_f);
+            stackIn_25_0 = nr.a(new String[]{param0}, -1, ii.muXCannotJoinInprogress);
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_29_0 = nr.a(new String[]{param0}, -1, fd.field_M);
+            stackIn_29_0 = nr.a(new String[]{param0}, -1, fd.muXDeclinedInvite);
             return stackIn_29_0;
           }
           if (param1 == 11) {
-            stackIn_33_0 = nr.a(new String[]{param0}, -1, sg.field_I);
+            stackIn_33_0 = nr.a(new String[]{param0}, -1, sg.muXWithdrewRequest);
             return stackIn_33_0;
           }
           if (param1 == 12) {
-            stackIn_36_0 = nr.a(new String[]{param0}, -1, sd.field_U);
+            stackIn_36_0 = nr.a(new String[]{param0}, -1, sd.muXRemoved);
             return stackIn_36_0;
           }
           if (param1 != 13) {
             return null;
           }
-          stackIn_40_0 = nr.a(new String[]{param0}, -1, np.field_c);
+          stackIn_40_0 = nr.a(new String[]{param0}, -1, np.muXDroppedOut);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1332,10 +1332,10 @@ final class vk extends PcmStream {
     }
 
     static {
-        field_O = "Enter name of friend to delete from list";
+        enterfriendDel = "Enter name of friend to delete from list";
         field_db = new tf(0);
-        field_P = "Private";
+        muChatPrivate = "Private";
         field_V = new nl();
-        field_x = "Join";
+        statusJoin = "Join";
     }
 }

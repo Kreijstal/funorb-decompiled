@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ef {
-    static String field_e;
+    static String rmXFromFriends;
     int field_d;
     int field_a;
     int field_b;
@@ -132,24 +132,24 @@ final class ef {
 
     final static void a(int param0) {
         cm.field_L = new String[cd.field_a];
-        cm.field_L[11] = wc.field_d;
-        cm.field_L[18] = vq.field_bc;
-        cm.field_L[15] = jd.field_e;
-        cm.field_L[9] = ab.field_e;
-        cm.field_L[20] = p.field_b;
-        cm.field_L[4] = kf.field_l;
+        cm.field_L[11] = wc.rule22;
+        cm.field_L[18] = vq.rule12;
+        cm.field_L[15] = jd.rule04;
+        cm.field_L[9] = ab.rule01;
+        cm.field_L[20] = p.rule14;
+        cm.field_L[4] = kf.rule05;
         if (param0 >= -12) {
           String var2 = (String) null;
           ef.a(20, (Sprite) null, (String) null);
         }
-        cm.field_L[6] = eq.field_P;
-        cm.field_L[21] = il.field_d;
-        cm.field_L[7] = ri.field_O;
-        cm.field_L[13] = nm.field_g;
-        cm.field_L[16] = MouseHandler.field_c;
-        cm.field_L[19] = sd.field_N;
-        cm.field_L[5] = o.field_z;
-        cm.field_L[17] = hk.field_u;
+        cm.field_L[6] = eq.rule00;
+        cm.field_L[21] = il.rule21;
+        cm.field_L[7] = ri.rule03;
+        cm.field_L[13] = nm.rule20;
+        cm.field_L[16] = MouseHandler.rule10;
+        cm.field_L[19] = sd.rule13;
+        cm.field_L[5] = o.rule02;
+        cm.field_L[17] = hk.rule11;
     }
 
     final static void a(int param0, Sprite param1, String param2) {
@@ -175,12 +175,12 @@ final class ef {
     public static void b(int param0) {
         field_c = null;
         if (param0 != 1) {
-          field_e = (String) null;
+          rmXFromFriends = (String) null;
         }
-        field_e = null;
+        rmXFromFriends = null;
     }
 
     static {
-        field_e = "Remove <%0> from friend list";
+        rmXFromFriends = "Remove <%0> from friend list";
     }
 }

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ag {
-    static String field_g;
+    static String connectionrestored;
     private static int field_h;
     static Sprite field_b;
     static vh field_f;
     static int field_e;
     static int field_a;
-    static String field_d;
+    static String muLobbyNameAdd;
     static int field_c;
 
     public static void a(int param0) {
@@ -17,8 +17,8 @@ final class ag {
           IntrusiveDeque var2 = (IntrusiveDeque) null;
           ag.a(105, (IntrusiveDeque) null, -112, 90);
         }
-        field_g = null;
-        field_d = null;
+        connectionrestored = null;
+        muLobbyNameAdd = null;
         field_f = null;
     }
 
@@ -107,7 +107,7 @@ final class ag {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new Sprite(4 + ni.field_Z.b(param2), 4 + ni.field_Z.maxAscent + ni.field_Z.maxDescent);
+          var10 = new Sprite(4 + ModernTableScene.field_Z.b(param2), 4 + ModernTableScene.field_Z.maxAscent + ModernTableScene.field_Z.maxDescent);
           var10.field_G = -2;
           var10.field_B = -2;
           var16 = new int[4];
@@ -116,7 +116,7 @@ final class ag {
           var7 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var16);
           var10.e();
-          ni.field_Z.d(param2, 2, 2 + ni.field_Z.maxAscent, param1, -1);
+          ModernTableScene.field_Z.d(param2, 2, 2 + ModernTableScene.field_Z.maxAscent, param1, -1);
           var10.e(4144959);
           SoftwareRasterizer.setTarget(var17, var6, var7);
           SoftwareRasterizer.restoreClip(var16);
@@ -147,7 +147,7 @@ final class ag {
     static {
         field_h = 7;
         field_e = 1 << field_h;
-        field_g = "Connection restored.";
-        field_d = "Add name";
+        connectionrestored = "Connection restored.";
+        muLobbyNameAdd = "Add name";
     }
 }

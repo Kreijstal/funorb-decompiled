@@ -5,15 +5,15 @@ import java.util.*;
 
 final class hq {
     static String field_m;
-    static String field_o;
+    static String findOpponentsPlural;
     bk field_h;
     private bk field_l;
     IntrusiveDeque field_d;
     static int field_i;
     int field_n;
-    static String field_f;
+    static String joinRequestsMany;
     private int field_k;
-    static String field_e;
+    static String sendQcToX;
     private String field_g;
     hq field_j;
     private boolean field_b;
@@ -21,22 +21,22 @@ final class hq {
     static int field_c;
 
     private final void a(int param0, int param1) {
-        int var3 = al.field_k.field_qb;
-        int var4 = al.field_k.field_eb;
-        int var5 = SoftwareRasterizer.width - ep.field_s.field_z >> 1;
-        al.field_k.field_qb = al.field_k.field_qb - var5;
-        int var6 = -ep.field_s.field_A + SoftwareRasterizer.height;
-        al.field_k.field_eb = al.field_k.field_eb - var6;
-        ep.field_s.e();
+        int var3 = PoolGameModel.field_k.field_qb;
+        int var4 = PoolGameModel.field_k.field_eb;
+        int var5 = SoftwareRasterizer.width - NetworkGameClient.field_s.field_z >> 1;
+        PoolGameModel.field_k.field_qb = PoolGameModel.field_k.field_qb - var5;
+        int var6 = -NetworkGameClient.field_s.field_A + SoftwareRasterizer.height;
+        PoolGameModel.field_k.field_eb = PoolGameModel.field_k.field_eb - var6;
+        NetworkGameClient.field_s.e();
         SoftwareRasterizer.clear();
         this.c((byte) -109);
-        al.field_k.a((byte) -79, false);
+        PoolGameModel.field_k.a((byte) -79, false);
         this.field_h.a(false);
-        al.field_k.field_qb = var3;
-        al.field_k.field_eb = var4;
+        PoolGameModel.field_k.field_qb = var3;
+        PoolGameModel.field_k.field_eb = var4;
         sh.field_P.b(15100);
-        SoftwareRasterizer.fillRectangleAlpha(5 + al.field_k.field_qb, 5 + al.field_k.field_eb, -10 + al.field_k.field_gb, al.field_k.field_Db - param0, 0, 128 * param1 >> 8);
-        ep.field_s.d(var5, var6, param1, param1);
+        SoftwareRasterizer.fillRectangleAlpha(5 + PoolGameModel.field_k.field_qb, 5 + PoolGameModel.field_k.field_eb, -10 + PoolGameModel.field_k.field_gb, PoolGameModel.field_k.field_Db - param0, 0, 128 * param1 >> 8);
+        NetworkGameClient.field_s.d(var5, var6, param1, param1);
     }
 
     final static void a(int param0, int[] param1, int[] param2, int param3, byte param4) {
@@ -58,7 +58,7 @@ final class hq {
         int var12 = 0;
         try {
           if (param4 != 80) {
-            field_f = (String) null;
+            joinRequestsMany = (String) null;
           }
           if (param3 > param0) {
             var5_int = (param0 + param3) / 2;
@@ -130,7 +130,7 @@ final class hq {
           var3 = 1;
           this.a((byte) -87);
         }
-        if (al.field_k.field_R != 0) {
+        if (PoolGameModel.field_k.field_R != 0) {
           var3 = 1;
         }
         return var3 != 0;
@@ -147,10 +147,10 @@ final class hq {
         int var2;
         int var3;
         if (param0 != 25) {
-          field_o = (String) null;
+          findOpponentsPlural = (String) null;
         }
         if (this.field_b) {
-          al.field_k.a(true, false);
+          PoolGameModel.field_k.a(true, false);
         }
         if (!qa.field_v.b(param0 - 142)) {
           qa.field_v.a(true, false);
@@ -158,8 +158,8 @@ final class hq {
         if (ng.field_s >= 0) {
           var2 = this.field_l.c((byte) -111);
           var3 = this.field_h.c((byte) -122);
-          al.field_k.field_Db = (var2 * (25 - ng.field_s) + ng.field_s * var3) / 25;
-          al.field_k.field_eb = -al.field_k.field_Db + SoftwareRasterizer.height - 5;
+          PoolGameModel.field_k.field_Db = (var2 * (25 - ng.field_s) + ng.field_s * var3) / 25;
+          PoolGameModel.field_k.field_eb = -PoolGameModel.field_k.field_Db + SoftwareRasterizer.height - 5;
           this.e(1);
           ng.field_s = ng.field_s + 1;
           if (ng.field_s > 25) {
@@ -176,12 +176,12 @@ final class hq {
           }
         }
         if (!(oj.field_q < 0) ||
-          nk.field_e) {
+          TranslatedUiText.field_e) {
           oj.field_q = oj.field_q + 1;
           nj.field_c = hc.a(2047, oj.field_q * 2048 / 25) + 163840 >> 10;
           if (oj.field_q >= 25) {
-            if (nk.field_e) {
-              nk.field_e = false;
+            if (TranslatedUiText.field_e) {
+              TranslatedUiText.field_e = false;
               oj.field_q = 0;
             } else {
               oj.field_q = -1;
@@ -215,27 +215,27 @@ final class hq {
           }
         } else {
           if (ng.field_s >= 0) {
-            SoftwareRasterizer.fillRectangleAlpha(al.field_k.field_qb + 5, 5 + al.field_k.field_eb, al.field_k.field_gb - 10, -10 + al.field_k.field_Db, 0, 128);
+            SoftwareRasterizer.fillRectangleAlpha(PoolGameModel.field_k.field_qb + 5, 5 + PoolGameModel.field_k.field_eb, PoolGameModel.field_k.field_gb - 10, -10 + PoolGameModel.field_k.field_Db, 0, 128);
             this.c((byte) -109);
-            var2 = al.field_k.field_qb;
-            al.field_k.field_qb = al.field_k.field_qb - 160;
-            var3 = al.field_k.field_eb;
-            al.field_k.field_eb = al.field_k.field_eb - 240;
-            ep.field_s.e();
+            var2 = PoolGameModel.field_k.field_qb;
+            PoolGameModel.field_k.field_qb = PoolGameModel.field_k.field_qb - 160;
+            var3 = PoolGameModel.field_k.field_eb;
+            PoolGameModel.field_k.field_eb = PoolGameModel.field_k.field_eb - 240;
+            NetworkGameClient.field_s.e();
             SoftwareRasterizer.clear();
             this.field_l.a(false);
             hk.field_r.e();
             SoftwareRasterizer.clear();
             this.c((byte) -109);
             this.field_h.a(false);
-            var4 = -5 + (-qa.field_v.field_Db + (al.field_k.field_Db + al.field_k.field_eb));
-            var5 = al.field_k.field_eb;
-            var6 = al.field_k.field_qb + 5;
-            var7 = al.field_k.field_gb + al.field_k.field_qb - 10;
-            al.field_k.field_qb = var2;
-            al.field_k.field_eb = var3;
+            var4 = -5 + (-qa.field_v.field_Db + (PoolGameModel.field_k.field_Db + PoolGameModel.field_k.field_eb));
+            var5 = PoolGameModel.field_k.field_eb;
+            var6 = PoolGameModel.field_k.field_qb + 5;
+            var7 = PoolGameModel.field_k.field_gb + PoolGameModel.field_k.field_qb - 10;
+            PoolGameModel.field_k.field_qb = var2;
+            PoolGameModel.field_k.field_eb = var3;
             sh.field_P.b(15100);
-            al.field_k.a((byte) -79, false);
+            PoolGameModel.field_k.a((byte) -79, false);
             qa.field_v.a((byte) -79, false);
             if (SoftwareRasterizer.clipLeft > var6) {
               var6 = SoftwareRasterizer.clipLeft;
@@ -255,9 +255,9 @@ final class hq {
                 if (ng.field_s + ga.a(5, true, ea.field_r) - 3 >= 25 * (-var6 + (var10 - var5) + var9) / var8) {
                   stackIn_21_0 = hk.field_r;
                 } else {
-                  stackIn_21_0 = ep.field_s;
+                  stackIn_21_0 = NetworkGameClient.field_s;
                 }
-                var11 = stackIn_21_0.field_D[ep.field_s.field_z * var9 + var10];
+                var11 = stackIn_21_0.field_D[NetworkGameClient.field_s.field_z * var9 + var10];
                 if (var11 != 0) {
                   SoftwareRasterizer.setPixel(var10 + 160, 240 + var9, var11);
                 }
@@ -265,9 +265,9 @@ final class hq {
             }
           } else {
             if (ca.field_i < 0) {
-              SoftwareRasterizer.fillRectangleAlpha(5 + al.field_k.field_qb, al.field_k.field_eb + 5, -10 + al.field_k.field_gb, al.field_k.field_Db - 10, 0, 128);
+              SoftwareRasterizer.fillRectangleAlpha(5 + PoolGameModel.field_k.field_qb, PoolGameModel.field_k.field_eb + 5, -10 + PoolGameModel.field_k.field_gb, PoolGameModel.field_k.field_Db - 10, 0, 128);
               this.c((byte) -109);
-              al.field_k.a((byte) -79, false);
+              PoolGameModel.field_k.a((byte) -79, false);
               qa.field_v.a((byte) -79, false);
               this.field_h.a(false);
             } else {
@@ -359,23 +359,23 @@ final class hq {
 
     private final void e(byte param0) {
         boolean stackIn_27_0 = false;
-        pq[] var2;
+        Ball[] var2;
         int var3;
         int var4_int;
-        qe var4;
+        ShotRecord var4;
         Object var5;
         int var5_int;
         int var6;
         int var8;
-        pq var8_ref_pq;
+        Ball var8_ref_pq;
         int var10;
         String var12;
-        pq[] var13;
+        Ball[] var13;
         int var14;
-        qe var15;
-        dl var16;
-        pq var17;
-        dl var18;
+        ShotRecord var15;
+        Pocket var16;
+        Ball var17;
+        Pocket var18;
         var10 = Pool.field_O;
         if (param0 < 85) {
           return;
@@ -384,38 +384,38 @@ final class hq {
         if (var4_int != 512) {
           if (var4_int == 2048) {
             var12 = (String) null;
-            gj.a(true, 0, kj.field_l, (String) null);
-            var13 = this.field_a.field_I.field_l;
+            gj.a(true, 0, kj.pottingTheRestOfYourGroup, (String) null);
+            var13 = this.field_a.field_I.balls;
             var2 = var13;
-            var3 = this.field_a.field_I.field_f.a(-1);
+            var3 = this.field_a.field_I.rules.a(-1);
             if (0 == var3 ||
               var3 == 1) {
-              var4 = this.field_a.field_I.j(105);
+              var4 = this.field_a.field_I.currentShot(105);
               var5 = null;
               var14 = 0;
               var6 = var14;
               while (var13.length > var14) {
                 var17 = var13[var14];
-                if (var17.field_s &&
-                  var3 == this.field_a.field_I.field_f.b(var14, 30554)) {
-                  var8 = this.field_a.field_I.a(17897, var14);
-                  var18 = this.field_a.field_I.field_w[var8];
-                  var17.field_g = var18.field_g;
-                  var17.field_s = false;
-                  var17.field_k = var18.field_f;
-                  var17.field_p = true;
-                  var18.a(var14, -106);
+                if (var17.inPlay &&
+                  var3 == this.field_a.field_I.rules.b(var14, 30554)) {
+                  var8 = this.field_a.field_I.nearestPocketIndex(17897, var14);
+                  var18 = this.field_a.field_I.pockets[var8];
+                  var17.positionX = var18.centerX;
+                  var17.inPlay = false;
+                  var17.positionY = var18.centerY;
+                  var17.transformDirty = true;
+                  var18.addBall(var14, -106);
                   if (var5 == null) {
                     var5 = new IntrusiveDeque();
                   }
-                  ((IntrusiveDeque) (var5)).b((byte) -43, new cr(var14, var8));
+                  ((IntrusiveDeque) (var5)).b((byte) -43, new PotEvent(var14, var8));
                 }
                 var14++;
               }
               if (var5 != null) {
-                this.field_a.field_I.e(-54);
+                this.field_a.field_I.stopAllBalls(-54);
                 var4.field_s = nd.field_j;
-                var4.field_n = ((cr) (((IntrusiveDeque) (var5)).c((byte) -64))).field_n;
+                var4.field_n = ((PotEvent) (((IntrusiveDeque) (var5)).c((byte) -64))).ballIndex;
                 var4.field_m = (IntrusiveDeque) (var5);
                 var4.field_q = 2;
                 stackIn_27_0 = this.field_a.field_I.f((byte) 117);
@@ -424,34 +424,34 @@ final class hq {
             }
           }
         } else {
-          if (this.field_a.field_I.field_f.a(-1) == -1) {
+          if (this.field_a.field_I.rules.a(-1) == -1) {
             var4_int = ga.a(2, true, ea.field_r);
             var5_int = ga.a(7, true, ea.field_r) - (-(var4_int << 3) - 1);
-            var6 = ga.a(this.field_a.field_I.field_w.length, true, ea.field_r);
-            var16 = this.field_a.field_I.field_w[var6];
+            var6 = ga.a(this.field_a.field_I.pockets.length, true, ea.field_r);
+            var16 = this.field_a.field_I.pockets[var6];
             var18 = var16;
             var18 = var16;
-            var8_ref_pq = this.field_a.field_I.field_l[var5_int];
-            var15 = this.field_a.field_I.j(75);
-            gj.a(true, 0, nr.a(new String[]{dq.field_a.a((byte) 92, var4_int)}, -1, vc.field_P), (String) null);
-            this.field_a.field_I.e(-95);
-            this.field_a.field_I.field_f.a(var4_int, -1, 0);
+            var8_ref_pq = this.field_a.field_I.balls[var5_int];
+            var15 = this.field_a.field_I.currentShot(75);
+            gj.a(true, 0, nr.a(new String[]{dq.field_a.a((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
+            this.field_a.field_I.stopAllBalls(-95);
+            this.field_a.field_I.rules.a(var4_int, -1, 0);
             var15.field_s = i.field_m | nd.field_j;
             var15.field_q = 2;
             var15.field_m = new IntrusiveDeque();
-            var15.field_m.b((byte) 105, new cr(var5_int, var6));
+            var15.field_m.b((byte) 105, new PotEvent(var5_int, var6));
             var15.field_n = var5_int;
             this.field_a.field_I.f((byte) 53);
             this.field_a.s((byte) -36);
-            var16.a(var5_int, 69);
-            var8_ref_pq.field_s = false;
-            var8_ref_pq.field_k = var16.field_f;
-            var8_ref_pq.field_g = var16.field_g;
+            var16.addBall(var5_int, 69);
+            var8_ref_pq.inPlay = false;
+            var8_ref_pq.positionY = var16.centerY;
+            var8_ref_pq.positionX = var16.centerX;
           }
         }
     }
 
-    final void a(boolean param0, qe param1) {
+    final void a(boolean param0, ShotRecord param1) {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -459,24 +459,24 @@ final class hq {
         RuntimeException var3 = null;
         int var4 = 0;
         Object var5 = null;
-        cr var5_ref = null;
+        PotEvent var5_ref = null;
         String var6 = null;
-        af var7 = null;
+        EightBallRules var7 = null;
         IntrusiveDeque var8 = null;
         aa var9 = null;
         IntrusiveDeque var10 = null;
         aa var11 = null;
-        cr var5_refLifetime1;
+        PotEvent var5_refLifetime1;
         var5 = null;
         try {
           if (this.field_h.field_s == 256) {
             if (param1.field_M >= 0 &&
-              2 < pq.field_i.a((byte) 2)) {
+              2 < Ball.field_i.a((byte) 2)) {
               this.b(1, 8, -28186);
             } else {
               this.field_a.n(0);
               var6 = (String) null;
-              gj.a(true, 0, ec.field_k, (String) null);
+              gj.a(true, 0, ec.tutorialBreakTryAgain, (String) null);
             }
           }
           if (this.field_h.field_s == 512 &&
@@ -484,8 +484,8 @@ final class hq {
             this.b(1, 9, -28186);
           }
           if (2048 == this.field_h.field_s &&
-            this.field_a.field_I.field_f instanceof af) {
-            var7 = (af) (this.field_a.field_I.field_f);
+            this.field_a.field_I.rules instanceof EightBallRules) {
+            var7 = (EightBallRules) (this.field_a.field_I.rules);
             var4 = var7.f(22533, 0);
             if (var4 == 0 ||
               var4 == 1) {
@@ -506,16 +506,16 @@ final class hq {
             var8 = param1.field_m;
             if (var8 != null) {
               var9 = new aa(var8);
-              var5_ref = (cr) (var9.b((byte) -92));
+              var5_ref = (PotEvent) (var9.b((byte) -92));
               while (var5_ref != null) {
-                if (0 != var5_ref.field_n) {
+                if (0 != var5_ref.ballIndex) {
                   this.b(1, 15, -28186);
                 }
-                if (var5_ref.field_n == 9) {
+                if (var5_ref.ballIndex == 9) {
                   this.b(1, 16, -28186);
                   break;
                 }
-                var5_ref = (cr) (var9.b(-121));
+                var5_ref = (PotEvent) (var9.b(-121));
               }
             }
           }
@@ -523,18 +523,18 @@ final class hq {
             var10 = param1.field_m;
             if (var10 != null) {
               var11 = new aa(var10);
-              var5_refLifetime1 = (cr) (var11.b((byte) -92));
+              var5_refLifetime1 = (PotEvent) (var11.b((byte) -92));
               while (var5_refLifetime1 != null) {
-                if (9 == var5_refLifetime1.field_n) {
+                if (9 == var5_refLifetime1.ballIndex) {
                   this.b(1, 16, -28186);
                   break;
                 }
-                var5_refLifetime1 = (cr) (var11.b(-114));
+                var5_refLifetime1 = (PotEvent) (var11.b(-114));
               }
             }
           }
           if (this.field_h.field_s == 16384 &&
-            param1.field_z == this.field_a.field_I.field_f.b(param1.field_n, 30554)) {
+            param1.field_z == this.field_a.field_I.rules.b(param1.field_n, 30554)) {
             this.b(1, 14, -28186);
             return;
           }
@@ -583,12 +583,12 @@ final class hq {
         int var20Lifetime2;
         var23 = new aa(this.field_d);
         var3 = 0;
-        var4 = al.field_k.field_qb + qg.field_b.field_G;
-        var5 = al.field_k.field_Db + (al.field_k.field_eb + (-al.field_k.field_F[7].field_A - al.field_k.field_F[4].field_A) + (-al.field_k.field_F[1].field_A + qg.field_b.field_B));
+        var4 = PoolGameModel.field_k.field_qb + qg.field_b.field_G;
+        var5 = PoolGameModel.field_k.field_Db + (PoolGameModel.field_k.field_eb + (-PoolGameModel.field_k.field_F[7].field_A - PoolGameModel.field_k.field_F[4].field_A) + (-PoolGameModel.field_k.field_F[1].field_A + qg.field_b.field_B));
         var6 = var5 + qg.field_b.field_A;
         var7 = (bk) (var23.b((byte) -92));
         while (this.field_d.field_e != var7.previous) {
-          var8 = (var3 + 1) * (-qg.field_b.field_G + qg.field_b.field_w) / (this.field_k - 1) + qg.field_b.field_G + al.field_k.field_qb;
+          var8 = (var3 + 1) * (-qg.field_b.field_G + qg.field_b.field_w) / (this.field_k - 1) + qg.field_b.field_G + PoolGameModel.field_k.field_qb;
           var9 = var4;
           if (var9 < SoftwareRasterizer.clipLeft) {
             var9 = SoftwareRasterizer.clipLeft;
@@ -701,17 +701,17 @@ final class hq {
         }
         this.a((bk) (this.field_d.c((byte) 109)), 1);
         this.g(-94);
-        al.field_k.field_Db = null == this.field_h ? 10 : this.field_h.c((byte) -112);
-        al.field_k.field_eb = -5 - al.field_k.field_Db + SoftwareRasterizer.height;
+        PoolGameModel.field_k.field_Db = null == this.field_h ? 10 : this.field_h.c((byte) -112);
+        PoolGameModel.field_k.field_eb = -5 - PoolGameModel.field_k.field_Db + SoftwareRasterizer.height;
         this.e(1);
         this.field_a.n(0);
         if (param0 != -1) {
           this.c(127);
         }
-        this.field_a.field_I.a(this.field_n, (byte) -118);
+        this.field_a.field_I.setGameType(this.field_n, (byte) -118);
         this.field_a.field_G.field_h = 0;
         this.field_a.E(-24070);
-        gj.a(true, 0, this.field_g, ke.field_a);
+        gj.a(true, 0, this.field_g, ke.pressEscapeForOptionsMenu);
     }
 
     final static void h(int param0) {
@@ -720,7 +720,7 @@ final class hq {
         }
         int var1 = ee.b((byte) -62);
         int var2 = hl.a(23467);
-        Pool.field_I.a(var1 + (bk.field_v << 1), -ld.field_b + uh.field_n, -6316, -bk.field_v + fk.field_Z, (ld.field_b << 1) + var2);
+        Pool.field_I.a(var1 + (bk.field_v << 1), -ld.field_b + uh.field_n, -6316, -bk.field_v + PlasmaTableScene.field_Z, (ld.field_b << 1) + var2);
         e.a(param0 ^ 29411);
     }
 
@@ -854,7 +854,7 @@ final class hq {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (ul.a((char) var7, (byte) 125)) {
+            if (HalloweenBallSkin.a((char) var7, (byte) 125)) {
               var8 = wi.a(true, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
@@ -887,25 +887,25 @@ final class hq {
         }
         if (1 << param1 == this.field_h.field_s) {
           if (!this.field_h.a(param0, (byte) 127)) {
-            nk.field_e = true;
+            TranslatedUiText.field_e = true;
             this.g(20);
           } else {
             this.c(param2 ^ -28391);
-            nk.field_e = false;
+            TranslatedUiText.field_e = false;
           }
         }
     }
 
     private final void e(int param0) {
         int var2 = 0;
-        pl.field_b.field_eb = -3 + al.field_k.field_Db - pl.field_b.field_Db;
+        pl.field_b.field_eb = -3 + PoolGameModel.field_k.field_Db - pl.field_b.field_Db;
         pl.field_b.field_qb = 277;
         if (param0 != 1) {
           return;
         }
-        qa.field_v.field_qb = 297 + al.field_k.field_qb;
-        qa.field_v.field_eb = -qa.field_v.field_Db + al.field_k.field_eb - (-al.field_k.field_Db + 3);
-        jq.field_d.field_eb = -3 + (al.field_k.field_Db - jq.field_d.field_Db);
+        qa.field_v.field_qb = 297 + PoolGameModel.field_k.field_qb;
+        qa.field_v.field_eb = -qa.field_v.field_Db + PoolGameModel.field_k.field_eb - (-PoolGameModel.field_k.field_Db + 3);
+        jq.field_d.field_eb = -3 + (PoolGameModel.field_k.field_Db - jq.field_d.field_Db);
         jq.field_d.field_qb = 317;
         for (var2 = 0; var2 < this.field_k; var2++) {
         }
@@ -985,9 +985,9 @@ final class hq {
     }
 
     public static void i(int param0) {
-        field_f = null;
-        field_o = null;
-        field_e = null;
+        joinRequestsMany = null;
+        findOpponentsPlural = null;
+        sendQcToX = null;
         field_m = null;
         if (param0 != 5) {
           hq.b((byte) 8);
@@ -995,9 +995,9 @@ final class hq {
     }
 
     static {
-        field_o = "Find opponents";
-        field_e = "Send private Quick Chat to <%0>";
-        field_f = "(<%0> players want to join)";
+        findOpponentsPlural = "Find opponents";
+        sendQcToX = "Send private Quick Chat to <%0>";
+        joinRequestsMany = "(<%0> players want to join)";
         field_c = 2;
     }
 }

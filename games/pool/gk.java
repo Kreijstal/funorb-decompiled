@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gk extends tj implements tb {
-    static String field_jb;
-    static String field_lb;
+    static String playerX2HaveWon;
+    static String tickerHintSetPower;
     static int field_ib;
     static int field_hb;
     private fe field_gb;
@@ -15,7 +15,7 @@ final class gk extends tj implements tb {
         }
         this.field_R = false;
         if (param0 != -59) {
-          field_jb = (String) null;
+          playerX2HaveWon = (String) null;
         }
     }
 
@@ -60,29 +60,29 @@ final class gk extends tj implements tb {
           var3 = null;
           if (param1 != ic.field_c) {
             if (el.field_K == param1) {
-              var3 = wh.field_i;
+              var3 = wh.fsFocus;
               this.field_y = this.field_y + 10;
               if (je.b((byte) 124)) {
                 this.field_y = this.field_y + 20;
-                var3 = rk.field_g;
+                var3 = rk.fsFocusOrResolution;
               }
             } else {
-              if (param1 == ni.field_eb) {
-                var3 = de.field_c;
+              if (param1 == ModernTableScene.field_eb) {
+                var3 = de.fsTimeout;
                 this.field_y = this.field_y + 30;
               }
             }
           } else {
-            var3 = lc.field_T;
+            var3 = lc.fsUnavailableTrySignedApplet;
           }
           var4 = new ei((String) (var3), (cc) null);
           var4.field_y = 80;
           var4.field_C = 0;
           var4.field_D = 50;
           var4.field_l = this.field_l;
-          var4.field_z = (fp) ((Object) new am(qk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_z = (fp) ((Object) new am(PoolUiText.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(true, var4);
-          this.field_gb = this.a(2391, hi.field_i, (cc) (this));
+          this.field_gb = this.a(2391, hi.fsButtonClose, (cc) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,12 +107,12 @@ final class gk extends tj implements tb {
     public static void i(byte param0) {
         if (param0 >= -44) {
           gk.i((byte) -8);
-          field_jb = null;
-          field_lb = null;
+          playerX2HaveWon = null;
+          tickerHintSetPower = null;
           return;
         }
-        field_jb = null;
-        field_lb = null;
+        playerX2HaveWon = null;
+        tickerHintSetPower = null;
     }
 
     private final fe a(int param0, String param1, cc param2) {
@@ -174,7 +174,7 @@ final class gk extends tj implements tb {
           if (param0) {
             return;
           }
-          field_lb = (String) null;
+          tickerHintSetPower = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,8 +191,8 @@ final class gk extends tj implements tb {
     }
 
     static {
-        field_lb = "Use the mouse wheel <img=1>, drag <img=11><img=0>, or <img=7>/<img=8>, or <img=12>/<img=14> to set the power.";
-        field_jb = "<%0> and <%1> have won!";
+        tickerHintSetPower = "Use the mouse wheel <img=1>, drag <img=11><img=0>, or <img=7>/<img=8>, or <img=12>/<img=14> to set the power.";
+        playerX2HaveWon = "<%0> and <%1> have won!";
         field_kb = true;
     }
 }

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends sq {
-    static String field_h;
+final class EightBallRules extends GameRules {
+    static String muYouDeclinedInvite;
     int[] field_g;
     static int field_e;
     private int[] field_f;
 
-    final boolean a(int param0, byte param1, qe param2) {
+    final boolean a(int param0, byte param1, ShotRecord param2) {
         int var4_int = 0;
         boolean stackIn_13_0 = false;
         boolean stackIn_17_0 = false;
@@ -18,7 +18,7 @@ final class af extends sq {
         RuntimeException var4 = null;
         try {
           if (param1 != 9) {
-            field_h = (String) null;
+            muYouDeclinedInvite = (String) null;
           }
           if (param0 == 0) {
             return false;
@@ -68,8 +68,8 @@ final class af extends sq {
           wa.field_hb.b(3, 2147483647, 3, var6_int - 6, fl.field_q.field_Db - 6);
           var7 = -5 + wa.field_hb.field_Db;
           ph.field_d.b(-param2 + var7, 2147483647, 5, param3 + 2 + 485 + param1, param2);
-          pa.field_J.b(0, 2147483647, param1, -param1 + (ph.field_d.field_gb - fj.field_j.field_gb), param2);
-          fj.field_j.b(0, 2147483647, param1 + pa.field_J.field_gb, fj.field_j.field_gb, param2);
+          pa.field_J.b(0, 2147483647, param1, -param1 + (ph.field_d.field_gb - NineBallRules.field_j.field_gb), param2);
+          NineBallRules.field_j.b(0, 2147483647, param1 + pa.field_J.field_gb, NineBallRules.field_j.field_gb, param2);
           var7 = var7 - (2 + param2);
           qd.field_b.a(param3, -5 + var7, (byte) -112, 2, param3 + 2 + (485 + param1), 5, 5);
           if (sg.field_J != null) {
@@ -78,7 +78,7 @@ final class af extends sq {
           var8 = fl.field_q.field_gb + (-param1 - var6_int);
           var9 = var8 / 2;
           if (param4 != 36) {
-            field_h = (String) null;
+            muYouDeclinedInvite = (String) null;
           }
           var10 = var9 + param0 + param1;
           var11 = 0;
@@ -106,10 +106,10 @@ final class af extends sq {
         }
     }
 
-    af(al param0) {
+    EightBallRules(PoolGameModel param0) {
         super(param0);
         try {
-          if (param0.field_n >= 2) {
+          if (param0.playerCount >= 2) {
             this.field_f = new int[]{-1, -1};
           }
           this.field_g = new int[]{-1, -1};
@@ -119,13 +119,13 @@ final class af extends sq {
     }
 
     public static void h(byte param0) {
-        field_h = null;
+        muYouDeclinedInvite = null;
         if (param0 >= -2) {
-          af.a(-47, 110, -56, 55, 78);
+          EightBallRules.a(-47, 110, -56, 55, 78);
         }
     }
 
-    final int a(qe param0, byte param1) {
+    final int a(ShotRecord param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -144,13 +144,13 @@ final class af extends sq {
         var9 = Pool.field_O;
         try {
           if (param1 <= 82) {
-            af.a(66, 112, 38, -91, 125);
+            EightBallRules.a(66, 112, 38, -91, 125);
           }
           if (this.field_f == null) {
-            stackIn_13_0 = (1 + param0.field_L) % this.field_d.field_n;
+            stackIn_13_0 = (1 + param0.field_L) % this.field_d.playerCount;
             return stackIn_13_0;
           }
-          var3_int = this.field_d.field_n / 2;
+          var3_int = this.field_d.playerCount / 2;
           var4 = param0.field_L / var3_int;
           var5 = (var4 + 1) % 2;
           var7 = 1;
@@ -215,7 +215,7 @@ final class af extends sq {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         if (param1 != 64) {
-          af.a(-37, true);
+          EightBallRules.a(-37, true);
         }
         Sprite dupTemp$0 = ad.a(param3, param4, 7);
         var6[6] = dupTemp$0;
@@ -247,23 +247,23 @@ final class af extends sq {
         int var6;
         aa var6_ref_aa;
         int var7;
-        cr var7_ref_cr;
+        PotEvent var7_ref_cr;
         int var8;
         int var9_int;
         aa var9;
-        cr var10_ref_cr;
+        PotEvent var10_ref_cr;
         int var10;
         int var11;
         int var12;
-        qe var13;
-        qe var14;
+        ShotRecord var13;
+        ShotRecord var14;
         int var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
         int var5Lifetime2;
         var12 = Pool.field_O;
-        var13 = this.field_d.j(76);
+        var13 = this.field_d.currentShot(76);
         var14 = var13;
         if (var14 == null) {
           throw new IllegalStateException("Couldn't get the last shot to examine!");
@@ -308,34 +308,34 @@ final class af extends sq {
           var5 = var14.field_m.a(45);
           if (0 == var4 &&
             var5 == 1 &&
-            8 == ((cr) (var14.field_m.c((byte) -25))).field_n &&
+            8 == ((PotEvent) (var14.field_m.c((byte) -25))).ballIndex &&
             var3 == 2) {
             return ag.field_e;
           }
           var6_ref_aa = new aa(var14.field_m);
-          var7_ref_cr = (cr) (var6_ref_aa.b((byte) -92));
+          var7_ref_cr = (PotEvent) (var6_ref_aa.b((byte) -92));
           while (true) {
             if (var7_ref_cr == null) {
               decompiledFrameCompleted0 = false;
               break;
             }
-            if (var7_ref_cr.field_n != 8) {
-              var7_ref_cr = (cr) (var6_ref_aa.b(-97));
+            if (var7_ref_cr.ballIndex != 8) {
+              var7_ref_cr = (PotEvent) (var6_ref_aa.b(-97));
               continue;
             }
             break;
           }
           if (decompiledFrameCompleted0) {
             var14.a(5, -14, new int[]{this.field_d.field_A});
-            return hm.field_e;
+            return Quaternion.field_e;
           }
         }
         if (decompiledFrameCompleted0) {
           var5Lifetime2 = 0;
           var6 = 0;
           var7 = 0;
-          for (var8 = 0; var8 < this.field_d.field_l.length; var8++) {
-            if (0 < this.field_d.field_l[var8].field_c) {
+          for (var8 = 0; var8 < this.field_d.balls.length; var8++) {
+            if (0 < this.field_d.balls[var8].field_c) {
               var5Lifetime2++;
               var9_int = this.b(var8, 30554);
               if (var9_int == var3) {
@@ -389,7 +389,7 @@ final class af extends sq {
         var5Lifetime1 = -52 % ((param0 + 37) / 60);
         if (var14.field_t &&
           0 == (nr.field_Y & var4) &&
-          this.a((1 + this.field_d.field_A) % this.field_d.field_n, -119)) {
+          this.a((1 + this.field_d.field_A) % this.field_d.playerCount, -119)) {
           var14.a(11, -14, new int[]{});
           var4 = this.f((byte) -30);
         }
@@ -397,13 +397,13 @@ final class af extends sq {
         if (!var14.field_m.c(0)) {
           var6Lifetime1 = 0;
           var7Lifetime1 = 0;
-          var8Lifetime1 = ((cr) (var14.field_m.c((byte) 109))).field_n;
+          var8Lifetime1 = ((PotEvent) (var14.field_m.c((byte) 109))).ballIndex;
           var9 = new aa(var14.field_m);
-          var10_ref_cr = (cr) (var9.b((byte) -92));
+          var10_ref_cr = (PotEvent) (var9.b((byte) -92));
           while (var10_ref_cr != null) {
-            if (0 != (var10_ref_cr.field_n & 7)) {
+            if (0 != (var10_ref_cr.ballIndex & 7)) {
               if (var3 != -1) {
-                if (this.b(var10_ref_cr.field_n, 30554) == var3) {
+                if (this.b(var10_ref_cr.ballIndex, 30554) == var3) {
                   var14.field_w = (byte)(var14.field_w + 1);
                   var6Lifetime1++;
                 } else {
@@ -411,7 +411,7 @@ final class af extends sq {
                   var7Lifetime1++;
                 }
               } else {
-                if (this.a(var8Lifetime1, var10_ref_cr.field_n, (byte) 35)) {
+                if (this.a(var8Lifetime1, var10_ref_cr.ballIndex, (byte) 35)) {
                   var14.field_w = (byte)(var14.field_w + 1);
                   var6Lifetime1++;
                 } else {
@@ -420,7 +420,7 @@ final class af extends sq {
                 }
               }
             }
-            var10_ref_cr = (cr) (var9.b(-108));
+            var10_ref_cr = (PotEvent) (var9.b(-108));
           }
           if (var4 == 0 &&
             var3 == -1) {
@@ -467,11 +467,11 @@ final class af extends sq {
           }
         }
         if (!this.field_d.a(false, (byte) 69, var14)) {
-          if (this.a(var14.field_L % this.field_d.field_n, -57)) {
+          if (this.a(var14.field_L % this.field_d.playerCount, -57)) {
             var14.field_w = (byte)(var14.field_w - 1);
           }
         } else {
-          if (this.a((1 + var14.field_L) % this.field_d.field_n, -122)) {
+          if (this.a((1 + var14.field_L) % this.field_d.playerCount, -122)) {
             var14.field_w = (byte)(var14.field_w + 1);
           }
         }
@@ -508,7 +508,7 @@ final class af extends sq {
         if (param0 >= -113) {
           return -16;
         }
-        var3 = this.field_d.field_n / 2;
+        var3 = this.field_d.playerCount / 2;
         param1 = param1 % 2;
         var4 = 0;
         for (var5 = 0; var3 > var5; var5++) {
@@ -538,14 +538,14 @@ final class af extends sq {
         var3 = 1;
         var4 = 1;
         stackIn_2_0 = this.field_g;
-        if (this.field_d.field_n == 1) {
+        if (this.field_d.playerCount == 1) {
           stackIn_3_1 = 0;
         } else {
-          stackIn_3_1 = param0 / (this.field_d.field_n >> 1);
+          stackIn_3_1 = param0 / (this.field_d.playerCount >> 1);
         }
         var5 = stackIn_2_0[stackIn_3_1];
         if (param1 > -28) {
-          field_h = (String) null;
+          muYouDeclinedInvite = (String) null;
         }
         {
           if (var5 == -1) {
@@ -566,7 +566,7 @@ final class af extends sq {
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var7 > var8) {
-                if (this.field_d.field_l[var8].field_s) {
+                if (this.field_d.balls[var8].inPlay) {
                   var4 = 0;
                   if (this.field_d.field_r[var8].field_j) {
                     var3 = 0;
@@ -601,16 +601,16 @@ final class af extends sq {
 
     private final int u(int param0) {
         if (param0 != 4) {
-          qe var3 = (qe) null;
-          this.a((qe) null, (byte) 56);
+          ShotRecord var3 = (ShotRecord) null;
+          this.a((ShotRecord) null, (byte) 56);
         }
         return sg.field_O | ll.field_f;
     }
 
     private final int p(int param0) {
         if (param0 <= 46) {
-          qe var3 = (qe) null;
-          this.b((qe) null, -66);
+          ShotRecord var3 = (ShotRecord) null;
+          this.b((ShotRecord) null, -66);
           return 0;
         }
         return 0;
@@ -660,12 +660,12 @@ final class af extends sq {
         return (byte)((param0 & 9) >> 3);
     }
 
-    final void a(qe param0, boolean param1) {
+    final void a(ShotRecord param0, boolean param1) {
         int var3_int = 0;
         try {
           super.a(param0, param1);
           if (null != this.field_f) {
-            var3_int = this.field_d.field_n / 2;
+            var3_int = this.field_d.playerCount / 2;
             this.field_f[this.c(-125, param0.field_L)] = param0.field_L % var3_int;
           }
         } catch (RuntimeException runtimeException) {
@@ -673,7 +673,7 @@ final class af extends sq {
         }
     }
 
-    final int a(qe param0, int param1) {
+    final int a(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -723,7 +723,7 @@ final class af extends sq {
         if (param0 != 0) {
           this.field_f = (int[]) null;
         }
-        return this.field_d.j(46).field_M < 0 ? this.u(4) : ob.field_F | sg.field_O;
+        return this.field_d.currentShot(46).field_M < 0 ? this.u(4) : ob.field_F | sg.field_O;
     }
 
     private final int b(boolean param0) {
@@ -733,7 +733,7 @@ final class af extends sq {
         return this.u(4);
     }
 
-    final Sprite b(qe param0, int param1) {
+    final Sprite b(ShotRecord param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         Sprite stackIn_6_0 = null;
@@ -752,10 +752,10 @@ final class af extends sq {
             this.field_f = (int[]) null;
           }
           if (param0.field_z == -1) {
-            stackIn_6_0 = mf.field_n;
+            stackIn_6_0 = ClassicBallSkin.field_n;
             return stackIn_6_0;
           }
-          if (dq.field_a instanceof mf) {
+          if (dq.field_a instanceof ClassicBallSkin) {
             var3_int = param0.field_z;
             if (0 == var3_int) {
               stackIn_15_0 = dq.field_a.field_e[1];
@@ -809,7 +809,7 @@ final class af extends sq {
 
     private final int t(int param0) {
         int var2 = -15 % ((-49 - param0) / 40);
-        return this.field_d.j(106).field_M < 0 ? 0 : 1;
+        return this.field_d.currentShot(106).field_M < 0 ? 0 : 1;
     }
 
     final int e(int param0) {
@@ -845,7 +845,7 @@ final class af extends sq {
 
     final int m(int param0) {
         if (param0 != 0) {
-          af.a(108, false);
+          EightBallRules.a(108, false);
         }
         return 1;
     }
@@ -857,7 +857,7 @@ final class af extends sq {
           return false;
         }
         for (var3 = 1 + (param1 << 3); (param1 << 3) + 8 > var3; var3++) {
-          if (this.field_d.field_l[var3].field_s) {
+          if (this.field_d.balls[var3].inPlay) {
             return false;
           }
         }
@@ -866,7 +866,7 @@ final class af extends sq {
 
     final void a(int param0, int param1, int param2) {
         int discarded$0 = 0;
-        int var4 = this.field_d.field_n != 1 ? param2 / (this.field_d.field_n >> 1) : 0;
+        int var4 = this.field_d.playerCount != 1 ? param2 / (this.field_d.playerCount >> 1) : 0;
         this.field_g[var4] = param0;
         if (param1 != -1) {
           discarded$0 = this.c((byte) 2);
@@ -888,7 +888,7 @@ final class af extends sq {
         return 1;
     }
 
-    final boolean c(qe param0, int param1) {
+    final boolean c(ShotRecord param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         boolean stackIn_12_0 = false;
@@ -947,12 +947,12 @@ final class af extends sq {
         int var7 = 0;
         var7 = Pool.field_O;
         try {
-          if (this.field_d.field_n <= param0) {
+          if (this.field_d.playerCount <= param0) {
             stackIn_3_0 = null;
             return (String) (stackIn_3_0);
           }
-          if (2 == this.field_d.field_n) {
-            stackIn_16_0 = nr.a(param1, param0 ^ -2, w.field_g);
+          if (2 == this.field_d.playerCount) {
+            stackIn_16_0 = nr.a(param1, param0 ^ -2, w.playerVsPlayer);
             return stackIn_16_0;
           }
           var3_int = param1.length >> 1;
@@ -961,15 +961,15 @@ final class af extends sq {
             var6 = var5 % var3_int;
             if (var6 != 0) {
               if (var3_int - 1 != var6) {
-                var4[var5 / var3_int][var6] = nr.a(new String[]{param1[var5]}, param0 - 2, bc.field_h);
+                var4[var5 / var3_int][var6] = nr.a(new String[]{param1[var5]}, param0 - 2, bc.playerListMiddle);
               } else {
-                var4[var5 / var3_int][var6] = nr.a(new String[]{param1[var5]}, param0 - 2, lq.field_N);
+                var4[var5 / var3_int][var6] = nr.a(new String[]{param1[var5]}, param0 - 2, lq.playerListLast);
               }
             } else {
-              var4[var5 / var3_int][var6] = nr.a(new String[]{param1[var5]}, -1, en.field_e);
+              var4[var5 / var3_int][var6] = nr.a(new String[]{param1[var5]}, -1, en.playerListFirst);
             }
           }
-          stackIn_14_0 = nr.a(new String[]{aq.a(-107, (CharSequence[]) ((Object) var4[0])), aq.a(-86, (CharSequence[]) ((Object) var4[1]))}, -1, ub.field_o);
+          stackIn_14_0 = nr.a(new String[]{aq.a(-107, (CharSequence[]) ((Object) var4[0])), aq.a(-86, (CharSequence[]) ((Object) var4[1]))}, -1, ub.playerListVsPlayerList);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1000,7 +1000,7 @@ final class af extends sq {
         }
         var3 = 0;
         for (var4 = 1 + (param0 << 3); var4 < (param0 << 3) + 8; var4++) {
-          if (!this.field_d.field_l[var4].field_s) {
+          if (!this.field_d.balls[var4].inPlay) {
             var3++;
           }
         }
@@ -1064,9 +1064,9 @@ final class af extends sq {
 
     final int f(int param0, int param1) {
         if (param0 != 22533) {
-          af.a(115, -64, -57, 83, -73);
+          EightBallRules.a(115, -64, -57, 83, -73);
         }
-        return this.field_g[1 == this.field_d.field_n ? 0 : param1 / (this.field_d.field_n >> 1)];
+        return this.field_g[1 == this.field_d.playerCount ? 0 : param1 / (this.field_d.playerCount >> 1)];
     }
 
     private final int g(byte param0) {
@@ -1088,10 +1088,10 @@ final class af extends sq {
         int var3;
         int var4;
         int var5;
-        qe var6;
+        ShotRecord var6;
         int var3Lifetime1;
         var5 = Pool.field_O;
-        var6 = this.field_d.j(param0 + 118);
+        var6 = this.field_d.currentShot(param0 + 118);
         var3 = 0;
         var4 = var6.field_u;
         if (2 != var4) {
@@ -1108,7 +1108,7 @@ final class af extends sq {
           var3Lifetime1 = this.u(4) | nr.field_Q;
         }
         var6.a(17, param0 - 13, new int[]{var6.field_L});
-        if (this.a((var6.field_L - param0) % this.field_d.field_n, -112)) {
+        if (this.a((var6.field_L - param0) % this.field_d.playerCount, -112)) {
           var6.a(11, -14, new int[]{});
           var3Lifetime1 = this.f((byte) -30);
         }
@@ -1120,13 +1120,13 @@ final class af extends sq {
         if (param0 > -36) {
           this.field_f = (int[]) null;
         }
-        return 1 != this.field_d.field_n ? param1 / (this.field_d.field_n >> 1) : 0;
+        return 1 != this.field_d.playerCount ? param1 / (this.field_d.playerCount >> 1) : 0;
     }
 
     final int a(int param0) {
         int var2 = this.f(22533, this.field_d.field_A);
         if (param0 != -1) {
-          field_h = (String) null;
+          muYouDeclinedInvite = (String) null;
         }
         if ((var2 == 0 || var2 == 1) &&
           this.d(85884769, var2)) {
@@ -1136,6 +1136,6 @@ final class af extends sq {
     }
 
     static {
-        field_h = "You have declined the invitation.";
+        muYouDeclinedInvite = "You have declined the invitation.";
     }
 }

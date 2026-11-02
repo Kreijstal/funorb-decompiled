@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class rj extends sq {
-    static String field_g;
-    static String field_i;
+final class KillerRules extends GameRules {
+    static String youAreGroupName;
+    static String statusSpectate;
     static int field_f;
-    static String field_j;
+    static String muChatOff;
     int[] field_e;
     static int field_h;
 
@@ -15,7 +15,7 @@ final class rj extends sq {
         int var4;
         int stackIn_22_0 = 0;
         if (param2 != -1) {
-          rj.a(56, -99, 1, -23);
+          KillerRules.a(56, -99, 1, -23);
         }
         if (sa.field_f != null &&
           qi.field_a == 13) {
@@ -61,8 +61,8 @@ final class rj extends sq {
           this.field_e[param0] = this.field_e[param0] - 1;
         }
         if (param1 != 8640) {
-          qe var4 = (qe) null;
-          this.b((qe) null, -71);
+          ShotRecord var4 = (ShotRecord) null;
+          this.b((ShotRecord) null, -71);
         }
     }
 
@@ -73,12 +73,12 @@ final class rj extends sq {
         int var5;
         aa var6_ref_aa;
         int var6;
-        cr var7_ref_cr;
+        PotEvent var7_ref_cr;
         int var8;
-        qe var9;
-        qe var10;
+        ShotRecord var9;
+        ShotRecord var10;
         var8 = Pool.field_O;
-        var9 = this.field_d.j(96);
+        var9 = this.field_d.currentShot(96);
         var10 = var9;
         if (var10 == null) {
           throw new IllegalStateException("Couldn't get the last shot to examine!");
@@ -101,19 +101,19 @@ final class rj extends sq {
         }
         var5 = 0;
         var6_ref_aa = new aa(var10.field_m);
-        var7_ref_cr = (cr) (var6_ref_aa.b((byte) -92));
+        var7_ref_cr = (PotEvent) (var6_ref_aa.b((byte) -92));
         while (var7_ref_cr != null) {
-          if (0 == var7_ref_cr.field_n) {
+          if (0 == var7_ref_cr.ballIndex) {
             var10.field_w = (byte)(var10.field_w - 1);
           } else {
-            if (var7_ref_cr.field_n == 8 &&
+            if (var7_ref_cr.ballIndex == 8 &&
               !var10.field_t) {
               var10.a(20, -14, new int[]{var9.field_L});
               this.d(var10.field_L, 165);
             }
             var5++;
           }
-          var7_ref_cr = (cr) (var6_ref_aa.b(-95));
+          var7_ref_cr = (PotEvent) (var6_ref_aa.b(-95));
         }
         if (var10.field_M < 0) {
           if (var5 == 0) {
@@ -139,8 +139,8 @@ final class rj extends sq {
         }
         if (this.e((byte) -91) > 1) {
           var6 = 0;
-          for (var7 = 1; this.field_d.field_l.length > var7; var7++) {
-            if (!this.field_d.field_l[var7].field_s) {
+          for (var7 = 1; this.field_d.balls.length > var7; var7++) {
+            if (!this.field_d.balls[var7].inPlay) {
               continue;
             }
             var6 = 1;
@@ -153,7 +153,7 @@ final class rj extends sq {
           if (this.a((byte) 36, var10.field_L)) {
             var4 = var4 | ag.field_e;
           } else {
-            var4 = var4 | hm.field_e;
+            var4 = var4 | Quaternion.field_e;
           }
         }
         return var4;
@@ -188,7 +188,7 @@ final class rj extends sq {
             break;
           }
           if (!param1) {
-            field_j = (String) null;
+            muChatOff = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class rj extends sq {
         }
     }
 
-    final void a(qe param0, boolean param1) {
+    final void a(ShotRecord param0, boolean param1) {
         try {
           super.a(param0, param1);
           param0.field_N = this.field_e[param0.field_L];
@@ -217,29 +217,29 @@ final class rj extends sq {
     final static long a(long param0, byte param1, long param2) {
         long var5;
         if (param1 != -48) {
-          field_g = (String) null;
+          youAreGroupName = (String) null;
         }
         var5 = param0 * param2;
         if (param0 < 0L &&
           param2 < 0L &&
           var5 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + cr.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + cr.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + cr.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         if ((0L < param0 &&
           0L > param2 ||
           param0 < 0L &&
           param2 > 0L) && var5 > 0L) {
-          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + cr.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + cr.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a positive number: " + var5 + "[" + cr.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         if (param0 > 0L &&
           param2 > 0L &&
           0L > var5) {
-          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + cr.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + cr.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + cr.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         return var5;
     }
 
-    rj(al param0) {
+    KillerRules(PoolGameModel param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -306,9 +306,9 @@ final class rj extends sq {
         return 1;
     }
 
-    final Sprite b(qe param0, int param1) {
+    final Sprite b(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
-        qe var4 = null;
+        ShotRecord var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -318,8 +318,8 @@ final class rj extends sq {
           if (param1 == 1) {
             return null;
           }
-          var4 = (qe) null;
-          this.a(40, (byte) -54, (qe) null);
+          var4 = (ShotRecord) null;
+          this.a(40, (byte) -54, (ShotRecord) null);
           stackIn_3_0 = null;
           return (Sprite) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -353,7 +353,7 @@ final class rj extends sq {
 
     final int m(int param0) {
         if (param0 != 0) {
-          field_i = (String) null;
+          statusSpectate = (String) null;
         }
         return 1 + this.field_d.field_h.length >> 1;
     }
@@ -362,10 +362,10 @@ final class rj extends sq {
         int var3;
         int var4;
         int var5;
-        qe var6;
+        ShotRecord var6;
         int var3Lifetime1;
         var5 = Pool.field_O;
-        var6 = this.field_d.j(45);
+        var6 = this.field_d.currentShot(45);
         var3 = 0;
         var4 = var6.field_u;
         if (var4 != 2) {
@@ -390,7 +390,7 @@ final class rj extends sq {
           if (this.a((byte) -99, var6.field_L)) {
             var3Lifetime1 = var3Lifetime1 | ag.field_e;
           } else {
-            var3Lifetime1 = var3Lifetime1 | hm.field_e;
+            var3Lifetime1 = var3Lifetime1 | Quaternion.field_e;
           }
         }
         return var3Lifetime1;
@@ -434,18 +434,18 @@ final class rj extends sq {
     }
 
     final static void c(byte param0) {
-        qk.field_f.field_hb = dq.a(1, param0 ^ -45, Integer.toString(fr.field_n));
-        dk.a(qk.field_f, (byte) 93);
+        PoolUiText.field_f.field_hb = dq.a(1, param0 ^ -45, Integer.toString(fr.field_n));
+        dk.a(PoolUiText.field_f, (byte) 93);
         tn.field_w.field_pb = 2 < fr.field_n ? true : false;
         ih.field_e.field_pb = fr.field_n < 8 ? true : false;
         if (param0 != -45) {
-          rj.c((byte) -61);
+          KillerRules.c((byte) -61);
         }
     }
 
     final boolean a(int param0, int param1) {
         if (param1 >= -28) {
-          field_g = (String) null;
+          youAreGroupName = (String) null;
           return false;
         }
         return false;
@@ -460,8 +460,8 @@ final class rj extends sq {
 
     final byte b(int param0, int param1) {
         if (param1 != 30554) {
-          qe var4 = (qe) null;
-          this.a((qe) null, 32);
+          ShotRecord var4 = (ShotRecord) null;
+          this.a((ShotRecord) null, 32);
         }
         if (param0 != 0) {
           return (byte) 0;
@@ -469,7 +469,7 @@ final class rj extends sq {
         return (byte) -1;
     }
 
-    final int a(qe param0, int param1) {
+    final int a(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -496,15 +496,15 @@ final class rj extends sq {
     }
 
     public static void d(byte param0) {
-        field_j = null;
+        muChatOff = null;
         if (param0 >= -61) {
-          field_i = (String) null;
+          statusSpectate = (String) null;
         }
-        field_g = null;
-        field_i = null;
+        youAreGroupName = null;
+        statusSpectate = null;
     }
 
-    final boolean a(int param0, byte param1, qe param2) {
+    final boolean a(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -529,7 +529,7 @@ final class rj extends sq {
         }
     }
 
-    final boolean c(qe param0, int param1) {
+    final boolean c(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -564,9 +564,9 @@ final class rj extends sq {
     }
 
     static {
-        field_i = "Spectate";
-        field_g = "You are <%2>!";
-        field_j = "Off";
+        statusSpectate = "Spectate";
+        youAreGroupName = "You are <%2>!";
+        muChatOff = "Off";
         field_h = 165;
     }
 }

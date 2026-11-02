@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jp extends ch implements jn, tb {
-    static String field_W;
+    static String fsAcceptAfteraccept;
     private fe field_Q;
     private ga field_O;
     static int field_V;
@@ -11,7 +11,7 @@ final class jp extends ch implements jn, tb {
     private fe field_U;
     static eg field_P;
     mp field_S;
-    static String field_R;
+    static String removeignorefirst;
 
     public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
         RuntimeException var6 = null;
@@ -59,7 +59,7 @@ final class jp extends ch implements jn, tb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 != -17870) {
-            field_R = (String) null;
+            removeignorefirst = (String) null;
           }
           stackIn_3_0 = this.a(param3, param1, param4, 35, param0, 101, param2);
           return stackIn_3_0;
@@ -107,14 +107,14 @@ final class jp extends ch implements jn, tb {
     public static void a(boolean param0) {
         field_N = null;
         field_T = null;
-        field_R = null;
+        removeignorefirst = null;
         if (!param0) {
-          field_W = null;
+          fsAcceptAfteraccept = null;
           field_P = null;
           return;
         }
         field_V = 80;
-        field_W = null;
+        fsAcceptAfteraccept = null;
         field_P = null;
     }
 
@@ -211,11 +211,11 @@ final class jp extends ch implements jn, tb {
     public jp() {
         super(0, 0, 496, 0, (fp) null);
         this.field_O = new ga("", (cc) null, 12);
-        am var1 = new am(qk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.maxAscent, -1, 2147483647, true);
-        ei var2 = new ei(ij.field_s, var1, (cc) null);
-        this.field_Q = new fe(wn.field_c, (cc) null);
-        this.field_U = new fe(be.field_K, (cc) null);
-        this.field_O.field_p = sg.field_H;
+        am var1 = new am(PoolUiText.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.maxAscent, -1, 2147483647, true);
+        ei var2 = new ei(ij.loginNoDisplayname, var1, (cc) null);
+        this.field_Q = new fe(wn.ok, (cc) null);
+        this.field_U = new fe(be.cancel, (cc) null);
+        this.field_O.field_p = sg.createDisplaynameTooltip;
         this.field_O.a((byte) -111, new ua(this.field_O));
         this.field_Q.field_I = false;
         this.field_Q.field_z = (fp) ((Object) new ng());
@@ -227,7 +227,7 @@ final class jp extends ch implements jn, tb {
         var2.a(270, 20, 50, false, var3);
         this.a(true, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(ac.field_l, se.field_k, 170, var3, this.field_O, -17870));
+        var3 = var3 + (5 + this.a(KillerBallSkin.createDisplayname, se.createDisplaynameHint, 170, var3, this.field_O, -17870));
         this.field_Q.a(var5, -var5 + 496 >> 1, 40, false, var3);
         this.field_U.a(60, 3 + var4, 40, false, var3 + 15);
         this.field_U.field_t = (cc) (this);
@@ -314,7 +314,7 @@ final class jp extends ch implements jn, tb {
           var9.field_t = (cc) (this);
           this.a(true, var9);
           if (param5 <= 67) {
-            field_R = (String) null;
+            removeignorefirst = (String) null;
           }
           stackIn_3_0 = var10.field_y + var9.field_y;
           return stackIn_3_0;
@@ -345,7 +345,7 @@ final class jp extends ch implements jn, tb {
     }
 
     static {
-        field_W = "to keep fullscreen or";
-        field_R = "Please remove <%0> from your ignore list first.";
+        fsAcceptAfteraccept = "to keep fullscreen or";
+        removeignorefirst = "Please remove <%0> from your ignore list first.";
     }
 }

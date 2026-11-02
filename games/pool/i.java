@@ -58,7 +58,7 @@ final class i extends IntrusiveNode {
         int stackIn_53_9;
         boolean stackIn_54_10 = false;
         int var2;
-        jr.j(-8);
+        TikiBallSkin.j(-8);
         if (em.field_L == null) {
           var2 = 0;
           stackIn_4_0 = var2;
@@ -113,7 +113,7 @@ final class i extends IntrusiveNode {
           jo.field_H = false;
         }
         if (gn.field_f) {
-          pn.a((byte) 75, tq.field_x);
+          pn.a((byte) 75, tq.ratedMembersonly);
           gn.field_f = false;
         }
         if (param0 >= 7) {

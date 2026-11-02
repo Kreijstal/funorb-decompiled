@@ -5,24 +5,24 @@ final class dq {
     static String[] field_j;
     static int[] field_i;
     static Sprite[] field_e;
-    static String field_c;
-    static tm field_a;
+    static String gameoptPlayernotmember;
+    static BallSkin field_a;
     static long[] field_d;
     static BitmapFont field_f;
     static Sprite field_k;
-    static String field_b;
+    static String raIntro;
     static String field_g;
     static BufferedSocket field_h;
 
     public static void a(byte param0) {
         field_k = null;
         field_f = null;
-        field_b = null;
+        raIntro = null;
         field_g = null;
         field_h = null;
         if (param0 == 80) {
           field_d = null;
-          field_c = null;
+          gameoptPlayernotmember = null;
           field_j = null;
           field_a = null;
           field_i = null;
@@ -32,7 +32,7 @@ final class dq {
         int[] var2 = (int[]) null;
         dq.a((byte) 23, (int[]) null);
         field_d = null;
-        field_c = null;
+        gameoptPlayernotmember = null;
         field_j = null;
         field_a = null;
         field_i = null;
@@ -87,14 +87,14 @@ final class dq {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new Sprite(4 + mc.field_e.b(param2), mc.field_e.maxAscent - (-mc.field_e.maxDescent - 4));
+          var3 = new Sprite(4 + FreePlayRules.field_e.b(param2), FreePlayRules.field_e.maxAscent - (-FreePlayRules.field_e.maxDescent - 4));
           var4 = new int[4];
           var5 = SoftwareRasterizer.pixels;
           var6 = SoftwareRasterizer.width;
           var7 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var4);
           var3.e();
-          mc.field_e.d(param2, 2, mc.field_e.maxAscent + 2, param0, -1);
+          FreePlayRules.field_e.d(param2, 2, FreePlayRules.field_e.maxAscent + 2, param0, -1);
           var3.e(4144959);
           var3.e(65793);
           SoftwareRasterizer.setTarget(var5, var6, var7);
@@ -122,8 +122,8 @@ final class dq {
 
     static {
         field_d = new long[1000];
-        field_b = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
-        field_c = "<%0> is not a member, and cannot play with the current options.";
+        raIntro = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
+        gameoptPlayernotmember = "<%0> is not a member, and cannot play with the current options.";
         field_g = "Stripes";
     }
 }

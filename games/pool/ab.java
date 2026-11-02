@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ab {
-    static String field_b;
-    static String field_d;
-    static String field_c;
-    static String field_i;
-    static String field_a;
+    static String createOptinNews;
+    static String gameoptInviteplayersOrTrychanging2;
+    static String multiconstInviteOnly;
+    static String createSelectAlternative;
+    static String achievementsOnlyInRated;
     private static int field_f;
     static int field_g;
-    static String field_h;
-    static String field_e;
+    static String muOptionsPlayers;
+    static String rule01;
 
     final static boolean a(di param0, boolean param1) {
         RuntimeException var2 = null;
@@ -40,22 +40,22 @@ final class ab {
     }
 
     public static void b(int param0) {
-        field_e = null;
-        field_a = null;
+        rule01 = null;
+        achievementsOnlyInRated = null;
         if (param0 <= -46) {
-          field_i = null;
-          field_b = null;
-          field_d = null;
-          field_h = null;
-          field_c = null;
+          createSelectAlternative = null;
+          createOptinNews = null;
+          gameoptInviteplayersOrTrychanging2 = null;
+          muOptionsPlayers = null;
+          multiconstInviteOnly = null;
           return;
         }
-        field_a = (String) null;
-        field_i = null;
-        field_b = null;
-        field_d = null;
-        field_h = null;
-        field_c = null;
+        achievementsOnlyInRated = (String) null;
+        createSelectAlternative = null;
+        createOptinNews = null;
+        gameoptInviteplayersOrTrychanging2 = null;
+        muOptionsPlayers = null;
+        multiconstInviteOnly = null;
     }
 
     final static void a(int param0, int param1) {
@@ -63,7 +63,7 @@ final class ab {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           if (param0 != 25692) {
-            field_d = (String) null;
+            gameoptInviteplayersOrTrychanging2 = (String) null;
           }
           try {
             mo.a("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, hk.d(116));
@@ -82,9 +82,9 @@ final class ab {
         if (!gk.field_kb) {
           throw new IllegalStateException();
         }
-        mf.field_o = true;
+        ClassicBallSkin.field_o = true;
         ii.a(false, param0 ^ param0);
-        fk.field_ab = 0;
+        PlasmaTableScene.field_ab = 0;
     }
 
     final static String a(int param0, byte param1) {
@@ -158,7 +158,7 @@ final class ab {
           stackIn_23_1 = "";
         }
         stackIn_25_0 = ((StringBuilder) (Object) stackIn_22_0).append(stackIn_23_1);
-        if (0 == (param0 & hm.field_e)) {
+        if (0 == (param0 & Quaternion.field_e)) {
           stackIn_26_1 = "";
         } else {
           stackIn_26_1 = "loses|";
@@ -192,13 +192,13 @@ final class ab {
 
     static {
         field_f = 14;
-        field_i = "Use this alternative as your account name";
-        field_b = "Please send me news and updates (I can unsubscribe at any time)";
-        field_d = "Invite more players, or alternatively try changing the following settings:  ";
+        createSelectAlternative = "Use this alternative as your account name";
+        createOptinNews = "Please send me news and updates (I can unsubscribe at any time)";
+        gameoptInviteplayersOrTrychanging2 = "Invite more players, or alternatively try changing the following settings:  ";
         field_g = 1 << field_f;
-        field_h = "Players";
-        field_c = "Invite only";
-        field_a = "Achievements are only awarded in Rated games,<br>unless stated otherwise.";
-        field_e = "Encouraging rule breaking";
+        muOptionsPlayers = "Players";
+        multiconstInviteOnly = "Invite only";
+        achievementsOnlyInRated = "Achievements are only awarded in Rated games,<br>unless stated otherwise.";
+        rule01 = "Encouraging rule breaking";
     }
 }

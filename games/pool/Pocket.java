@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl {
-    tc field_c;
-    int field_f;
+final class Pocket {
+    tc pottedBalls;
+    int centerY;
     static boolean[][] field_j;
     static Sprite field_h;
-    static String field_i;
-    static String field_a;
-    static String field_d;
+    static String playerListHaveResigned;
+    static String gameoptYouhaventunlocked;
+    static String statusFull;
     static int field_b;
     static String[][] field_e;
-    int field_g;
+    int centerX;
 
-    final boolean b(int param0, int param1) {
+    final boolean containsBall(int param0, int param1) {
         int var3 = 0;
-        if (null == this.field_c) {
+        if (null == this.pottedBalls) {
           return false;
         }
-        for (var3 = 0; var3 < this.field_c.a((byte) 88); var3++) {
-          if (this.field_c.a(var3, 2229) == param0) {
+        for (var3 = 0; var3 < this.pottedBalls.a((byte) 88); var3++) {
+          if (this.pottedBalls.a(var3, 2229) == param0) {
             return true;
           }
         }
@@ -59,31 +59,31 @@ final class dl {
         }
         field_j = (boolean[][]) null;
         field_e = (String[][]) null;
-        field_i = null;
-        field_a = null;
-        field_d = null;
+        playerListHaveResigned = null;
+        gameoptYouhaventunlocked = null;
+        statusFull = null;
     }
 
     final int a(byte param0) {
         int var2 = 67 / ((-51 - param0) / 62);
-        return (this.field_c == null ? 0 : this.field_c.a((byte) 99)) + 1;
+        return (this.pottedBalls == null ? 0 : this.pottedBalls.a((byte) 99)) + 1;
     }
 
-    final void a(boolean param0) {
+    final void print(boolean param0) {
         int var2 = 0;
         String var3;
         if (!param0) {
           var3 = (String) null;
-          dl.a(29, (String) null);
+          Pocket.a(29, (String) null);
         }
-        if (this.field_c != null &&
-          this.field_c.a((byte) 123) != 0) {
+        if (this.pottedBalls != null &&
+          this.pottedBalls.a((byte) 123) != 0) {
           System.out.print("{");
-          for (var2 = 0; var2 < this.field_c.a((byte) 113); var2++) {
+          for (var2 = 0; var2 < this.pottedBalls.a((byte) 113); var2++) {
             if (0 != var2) {
               System.out.print(",");
             }
-            System.out.print(Integer.toString(this.field_c.a(var2, 2229)));
+            System.out.print(Integer.toString(this.pottedBalls.a(var2, 2229)));
           }
           System.out.print("}");
         } else {
@@ -91,7 +91,7 @@ final class dl {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void read(byte param0, PacketBuffer param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -103,17 +103,17 @@ final class dl {
         var5 = Pool.field_O;
         try {
           if (param0 != 113) {
-            this.field_f = -35;
+            this.centerY = -35;
           }
           var3_int = param1.readUnsignedByte(-101);
           if (var3_int > 0) {
-            this.field_c = cj.a(var3_int, 1, 0);
+            this.pottedBalls = TikiTableScene.a(var3_int, 1, 0);
             for (var4 = 0; var4 < var3_int; var4++) {
-              this.field_c.a(10499, param1.readUnsignedByte(param0 - 222), var4);
+              this.pottedBalls.a(10499, param1.readUnsignedByte(param0 - 222), var4);
             }
             return;
           }
-          this.field_c = null;
+          this.pottedBalls = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,15 +129,15 @@ final class dl {
         }
     }
 
-    final void a(int param0, int param1) {
-        if (this.field_c == null) {
-          this.field_c = qe.b(true);
+    final void addBall(int param0, int param1) {
+        if (this.pottedBalls == null) {
+          this.pottedBalls = ShotRecord.b(true);
         }
         int var3 = 126 / ((param1 - 0) / 51);
-        this.field_c.a((byte) -2, param0);
+        this.pottedBalls.a((byte) -2, param0);
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -146,12 +146,12 @@ final class dl {
         RuntimeException var3 = null;
         try {
           if (param1 != 0) {
-            this.b(-87, 43);
+            this.containsBall(-87, 43);
           }
-          if (null != this.field_c) {
-            param0.a(this.field_c.a((byte) 120), false);
-            for (var3_int = 0; this.field_c.a((byte) 108) > var3_int; var3_int++) {
-              param0.a(this.field_c.a(var3_int, 2229), false);
+          if (null != this.pottedBalls) {
+            param0.a(this.pottedBalls.a((byte) 120), false);
+            for (var3_int = 0; this.pottedBalls.a((byte) 108) > var3_int; var3_int++) {
+              param0.a(this.pottedBalls.a(var3_int, 2229), false);
             }
             return;
           }
@@ -229,47 +229,47 @@ final class dl {
         }
     }
 
-    final void a(pq[] param0, int param1) {
+    final void keepOnlyPottedBalls(Ball[] param0, int param1) {
         tc var3 = null;
         int var4 = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
-        if (null == this.field_c) {
+        if (null == this.pottedBalls) {
           return;
         }
         try {
-          var3 = qe.b(true);
+          var3 = ShotRecord.b(true);
           var4 = 0;
-          for (var5 = 0; var5 < this.field_c.a((byte) 110); var5++) {
-            if (!param0[this.field_c.a(var5, 2229)].field_s) {
+          for (var5 = 0; var5 < this.pottedBalls.a((byte) 110); var5++) {
+            if (!param0[this.pottedBalls.a(var5, 2229)].inPlay) {
               incrementValue$0 = var4;
               var4++;
-              var3.a(10499, this.field_c.a(var5, 2229), incrementValue$0);
+              var3.a(10499, this.pottedBalls.a(var5, 2229), incrementValue$0);
             }
           }
           if (param1 >= -36) {
             this.a((byte) -111);
           }
-          this.field_c = var3.a((byte) 98) == 0 ? null : var3;
+          this.pottedBalls = var3.a((byte) 98) == 0 ? null : var3;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "dl.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    dl(bf param0) {
-        this.field_c = null;
+    Pocket(CushionSegment param0) {
+        this.pottedBalls = null;
         try {
-          this.field_g = (param0.field_f + param0.field_a) / 2;
-          this.field_f = (param0.field_j + param0.field_l) / 2;
+          this.centerX = (param0.endX + param0.startX) / 2;
+          this.centerY = (param0.startY + param0.endY) / 2;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_d = "Full";
-        field_a = "You have not yet unlocked this option for use.";
+        statusFull = "Full";
+        gameoptYouhaventunlocked = "You have not yet unlocked this option for use.";
         field_e = new String[][]{new String[]{"Visit"}, new String[]{"Perfect break"}, new String[]{"Cover", "Covering"}, new String[]{"Snooker", "Snookered", "Snookering"}, new String[]{"Plant", "Planting"}, new String[]{"Head string", "head-string"}, new String[]{"Pot", "Potting", "Potted"}, new String[]{"Break", "Breaking"}, new String[]{"Shot", "Shots"}, new String[]{"Pocket", "Pockets"}, new String[]{"Re-racked", "re-rack"}, new String[]{"Rack"}, new String[]{"Cue ball", "cue-ball"}, new String[]{"Foul", "Fouls", "Fouling", "Fouled"}, new String[]{"Cushion", "Cushions"}, new String[]{"Group", "Groups"}, new String[]{"Ball-in-hand", "ball in hand"}};
-        field_i = "<%0> have all resigned!";
+        playerListHaveResigned = "<%0> have all resigned!";
     }
 }

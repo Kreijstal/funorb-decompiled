@@ -5,7 +5,7 @@ final class hp {
     static long field_a;
     static int[] field_c;
     static Sprite field_b;
-    static String field_e;
+    static String playerX2AreOfferingRematch;
     static int[] field_d;
 
     final static boolean a(boolean param0) {
@@ -147,7 +147,7 @@ final class hp {
     public static void a(byte param0) {
         field_d = null;
         field_c = null;
-        field_e = null;
+        playerX2AreOfferingRematch = null;
         if (param0 > -31) {
           return;
         }
@@ -187,7 +187,7 @@ final class hp {
     }
 
     static {
-        field_e = "<%0> and <%1> are offering a rematch.";
+        playerX2AreOfferingRematch = "<%0> and <%1> are offering a rematch.";
         field_d = new int[8192];
     }
 }

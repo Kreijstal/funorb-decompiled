@@ -9,7 +9,7 @@ final class ro {
     private int field_n;
     int field_k;
     private int field_a;
-    static String field_p;
+    static String gameFull;
     static boolean field_e;
     static String field_s;
     int field_m;
@@ -21,7 +21,7 @@ final class ro {
     int[] field_h;
     byte field_r;
     int field_i;
-    static String field_g;
+    static String muGameoptRejectXFromGame;
     static int[][][] field_v;
     private int[] field_c;
 
@@ -140,7 +140,7 @@ final class ro {
                 s.field_c[18].a(0, 0, false);
               } else {
                 ne.field_w = 16;
-                fq.a(-3405, 16, sq.field_b, false);
+                fq.a(-3405, 16, GameRules.field_b, false);
               }
             }
           }
@@ -248,10 +248,10 @@ final class ro {
         if (param0 != 240) {
           ro.b(-41);
         }
-        field_g = null;
+        muGameoptRejectXFromGame = null;
         field_v = (int[][][]) null;
         field_s = null;
-        field_p = null;
+        gameFull = null;
     }
 
     final void a(byte param0, ro param1) {
@@ -326,7 +326,7 @@ final class ro {
     }
 
     static {
-        field_p = "Game full";
-        field_g = "Reject <%0> from this game";
+        gameFull = "Game full";
+        muGameoptRejectXFromGame = "Reject <%0> from this game";
     }
 }

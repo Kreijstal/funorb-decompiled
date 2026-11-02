@@ -34,7 +34,7 @@ final class uq {
     int field_t;
     int field_l;
     boolean[] field_m;
-    static String field_K;
+    static String createAlertPasslength;
     byte field_C;
     int field_E;
     byte[] field_r;
@@ -69,7 +69,7 @@ final class uq {
           ib.field_s.d();
           kk.field_D.d();
           if (param0 >= -79) {
-            field_K = (String) null;
+            createAlertPasslength = (String) null;
           }
           kh.field_Pb = kh.field_Pb - 1;
           if (kh.field_Pb == 0) {
@@ -105,7 +105,7 @@ final class uq {
         if (param0 != -8090) {
           return;
         }
-        field_K = null;
+        createAlertPasslength = null;
         field_D = null;
     }
 
@@ -145,6 +145,6 @@ final class uq {
 
     static {
         field_c = -1;
-        field_K = "Passwords must be between 5 and 20 characters long";
+        createAlertPasslength = "Passwords must be between 5 and 20 characters long";
     }
 }

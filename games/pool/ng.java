@@ -7,10 +7,10 @@ final class ng extends am {
     static int field_w;
     private Sprite[] field_y;
     static int field_s;
-    static String field_v;
+    static String invalidpass;
     private int field_r;
     static Sprite[] field_t;
-    static String field_x;
+    static String createEmail;
     static int[] field_A;
     private int field_u;
 
@@ -128,10 +128,10 @@ final class ng extends am {
         if (param0 != -1) {
           return;
         }
-        field_v = null;
+        invalidpass = null;
         field_A = null;
         field_t = null;
-        field_x = null;
+        createEmail = null;
     }
 
     public ng() {
@@ -146,7 +146,7 @@ final class ng extends am {
         if (param1 == 0) {
           return (var4 * var6 >> 16) + (var4 * var5 + param0 * var3);
         }
-        field_x = (String) null;
+        createEmail = (String) null;
         return (var4 * var6 >> 16) + (var4 * var5 + param0 * var3);
     }
 
@@ -159,9 +159,9 @@ final class ng extends am {
     }
 
     static {
-        field_v = "Invalid password.";
+        invalidpass = "Invalid password.";
         field_s = -1;
         field_A = new int[5];
-        field_x = "Email (Login):";
+        createEmail = "Email (Login):";
     }
 }

@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ra {
-    static String field_d;
+    static String tabHidechattemporarily;
     static qf[] field_f;
-    static String field_c;
-    static String field_a;
+    static String muChatGameShowAll;
+    static String createtouse;
     static ph field_e;
     static int[][] field_b;
 
     public static void a(boolean param0) {
         field_e = null;
-        field_c = null;
+        muChatGameShowAll = null;
         if (!param0) {
-          field_d = null;
-          field_a = null;
+          tabHidechattemporarily = null;
+          createtouse = null;
           field_b = (int[][]) null;
           field_f = null;
           return;
         }
         ra.a(false);
-        field_d = null;
-        field_a = null;
+        tabHidechattemporarily = null;
+        createtouse = null;
         field_b = (int[][]) null;
         field_f = null;
     }
@@ -57,9 +57,9 @@ final class ra {
     }
 
     static {
-        field_c = "Show all game chat";
-        field_d = "TAB - hide chat temporarily";
-        field_a = "Create a free account to start using this feature";
+        muChatGameShowAll = "Show all game chat";
+        tabHidechattemporarily = "TAB - hide chat temporarily";
+        createtouse = "Create a free account to start using this feature";
         field_e = new ph();
     }
 }

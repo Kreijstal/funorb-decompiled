@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kn {
-    static String field_f;
+    static String playerXIsOnTheirLastLife;
     static long field_j;
     static oq field_e;
     static String field_g;
     private long field_l;
     private int field_a;
-    static String field_k;
+    static String invite;
     private String field_d;
     vh field_i;
     String field_m;
@@ -28,21 +28,21 @@ final class kn {
           }
           if (param0.field_p == 0) {
             if (ec.field_i == 0) {
-              this.field_n.a(cl.field_a, 17130, 12);
+              this.field_n.a(cl.muChatLobbyFriendsOnly, 17130, 12);
             }
-            this.field_n.a(Pool.field_K, 17130, 13);
+            this.field_n.a(Pool.muChatLobbyHide, 17130, 13);
           }
           if (param0.field_p == 1) {
             if (ol.field_e == 0) {
-              this.field_n.a(wi.field_e, 17130, 12);
+              this.field_n.a(wi.muChatGameFriendsOnly, 17130, 12);
             }
-            this.field_n.a(op.field_c, 17130, 13);
+            this.field_n.a(op.muChatGameHide, 17130, 13);
           }
           if (param0.field_p == 2) {
             if (di.field_e == 0) {
-              this.field_n.a(mc.field_i, 17130, 12);
+              this.field_n.a(FreePlayRules.muChatPmFriendsOnly, 17130, 12);
             }
-            this.field_n.a(me.field_v, 17130, 13);
+            this.field_n.a(me.muChatInvisibleAndSilentMode, 17130, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -113,31 +113,31 @@ final class kn {
             var6 = ia.a(this.field_m, 24552) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_n.a(nr.a(new String[]{var7}, -1, fn.field_Lb), 17130, 4);
-              this.field_n.a(nr.a(new String[]{var7}, -1, jh.field_f), 17130, 6);
+              this.field_n.a(nr.a(new String[]{var7}, -1, fn.addXToFriends), 17130, 4);
+              this.field_n.a(nr.a(new String[]{var7}, -1, jh.addXToIgnore), 17130, 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !ea.field_z) {
                 this.field_h = param1;
-                this.field_n.a(nr.a(new String[]{var7}, -1, nk.field_k), 17130, 19);
+                this.field_n.a(nr.a(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
               }
             }
             if (var5 != null) {
-              if (!fj.a(this.field_m, (byte) -101) &&
+              if (!NineBallRules.a(this.field_m, (byte) -101) &&
                 !ea.field_z) {
                 if (!hr.field_y) {
-                  this.field_n.a(nr.a(new String[]{var7}, -1, rp.field_a), 17130, 8);
+                  this.field_n.a(nr.a(new String[]{var7}, -1, rp.sendPmToX), 17130, 8);
                 }
-                this.field_n.a(nr.a(new String[]{var7}, -1, hq.field_e), 17130, 18);
+                this.field_n.a(nr.a(new String[]{var7}, -1, hq.sendQcToX), 17130, 18);
                 if (param1 != null) {
                   this.field_h = param1;
-                  this.field_n.a(nr.a(new String[]{var7}, -1, nk.field_k), 17130, 19);
+                  this.field_n.a(nr.a(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
                 }
               }
-              this.field_n.a(nr.a(new String[]{var7}, -1, ef.field_e), 17130, 5);
+              this.field_n.a(nr.a(new String[]{var7}, -1, ef.rmXFromFriends), 17130, 5);
             }
             if (var6 != 0) {
-              this.field_n.a(nr.a(new String[]{var7}, -1, ph.field_c), 17130, 7);
+              this.field_n.a(nr.a(new String[]{var7}, -1, ph.rmXFromIgnore), 17130, 7);
             }
           }
           if (param2 < 43) {
@@ -165,7 +165,7 @@ final class kn {
           this.field_l != ve.field_m) {
           var3 = this.a(3);
           String var2 = var3;
-          this.field_n.a(nr.a(new String[]{var3}, -1, ep.field_p), 17130, 17);
+          this.field_n.a(nr.a(new String[]{var3}, -1, NetworkGameClient.reportXForAbuse), 17130, 17);
         }
         if (param0 < 8) {
           discarded$0 = this.b((byte) -22, -119, 104);
@@ -250,7 +250,7 @@ final class kn {
     }
 
     final static void c(int param0) {
-        db.field_Nb.field_hb = dq.a(1, 0, nr.a(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, vm.field_b));
+        db.field_Nb.field_hb = dq.a(1, 0, nr.a(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, vm.timerSecs));
         if (param0 != 13) {
           kn.c(-82);
         }
@@ -267,7 +267,7 @@ final class kn {
           var4_ref = va.a(this.field_m, param1, 88);
         } else {
           if (param0 == 5) {
-            var4_ref = ul.a((byte) 91, this.field_m, param1);
+            var4_ref = HalloweenBallSkin.a((byte) 91, this.field_m, param1);
           } else {
             if (param0 == 6) {
               var4_ref = jd.a(param1, this.field_m, param2 ^ 4);
@@ -296,14 +296,14 @@ final class kn {
         if (null != this.field_m &&
           this.field_l != ve.field_m &&
           null != em.field_L &&
-          cj.e((byte) 85)) {
+          TikiTableScene.e((byte) 85)) {
           var6 = mg.a(param0 ^ 124, this.field_l);
           var4 = fn.b(this.field_l, 0);
           var5 = this.a(3);
           if (var4 != null) {
             if (!em.field_L.field_ec ||
               !(em.field_L.field_qc < 0)) {
-              this.field_n.a(nr.a(new String[]{var5}, -1, th.field_i), 17130, 1);
+              this.field_n.a(nr.a(new String[]{var5}, -1, th.muGameoptKickXFromThisGame), 17130, 1);
             }
           } else {
             if (var6 != null &&
@@ -312,13 +312,13 @@ final class kn {
               if (!var6.field_mc) {
                 if (param1 &&
                   var6.field_Yb) {
-                  this.field_n.a(nr.a(new String[]{var5}, -1, gf.field_c), param0 + 17006, 0);
-                  this.field_n.a(nr.a(new String[]{var5}, param0 - 125, ro.field_g), 17130, 1);
+                  this.field_n.a(nr.a(new String[]{var5}, -1, gf.muGameoptAcceptXIntoGame), param0 + 17006, 0);
+                  this.field_n.a(nr.a(new String[]{var5}, param0 - 125, ro.muGameoptRejectXFromGame), 17130, 1);
                 } else {
-                  this.field_n.a(nr.a(new String[]{var5}, -1, qi.field_h), 17130, 0);
+                  this.field_n.a(nr.a(new String[]{var5}, -1, qi.muGameoptInviteXToGame), 17130, 0);
                 }
               } else {
-                this.field_n.a(nr.a(new String[]{var5}, -1, jh.field_b), param0 + 17006, 1);
+                this.field_n.a(nr.a(new String[]{var5}, -1, jh.muGameoptWithdrawInviteToX), param0 + 17006, 1);
               }
             }
           }
@@ -336,7 +336,7 @@ final class kn {
           var2 = this.field_m;
         }
         if (param0 != 3) {
-          field_k = (String) null;
+          invite = (String) null;
         }
         return var2;
     }
@@ -402,20 +402,20 @@ final class kn {
           if (var4 != null) {
             var3 = var4.field_Ob;
             if (var4.field_Xb) {
-              this.field_n.a(nr.a(new String[]{var3}, -1, or.field_m), param0 ^ 18642, 2);
-              this.field_n.a(nr.a(new String[]{var3}, -1, hj.field_k), 17130, 3);
+              this.field_n.a(nr.a(new String[]{var3}, -1, or.inviteAcceptXsGame), param0 ^ 18642, 2);
+              this.field_n.a(nr.a(new String[]{var3}, -1, hj.inviteDeclineXsGame), 17130, 3);
             } else {
               if (var4.field_ic) {
-                this.field_n.a(nr.a(new String[]{var3}, param0 ^ -2617, se.field_m), param0 ^ 18642, 2);
+                this.field_n.a(nr.a(new String[]{var3}, param0 ^ -2617, se.joinXsGame), param0 ^ 18642, 2);
               } else {
                 if (!var4.field_fc &&
                   var4.field_Dc && (!var4.field_ec ||
                   var4.field_ic)) {
-                  this.field_n.a(nr.a(new String[]{var3}, -1, dn.field_p), param0 ^ 18642, 2);
+                  this.field_n.a(nr.a(new String[]{var3}, -1, dn.joinRequestXsGame), param0 ^ 18642, 2);
                 }
               }
               if (var4.field_fc) {
-                this.field_n.a(nr.a(new String[]{var3}, -1, nd.field_b), 17130, 3);
+                this.field_n.a(nr.a(new String[]{var3}, -1, nd.joinWithdrawRequestXsGame), 17130, 3);
               }
             }
           }
@@ -428,17 +428,17 @@ final class kn {
     public static void c(byte param0) {
         field_e = null;
         field_g = null;
-        field_k = null;
+        invite = null;
         if (param0 > -74) {
           return;
         }
         field_c = null;
-        field_f = null;
+        playerXIsOnTheirLastLife = null;
     }
 
     static {
-        field_f = "<%0> is on their last life!";
-        field_k = "Invite";
+        playerXIsOnTheirLastLife = "<%0> is on their last life!";
+        invite = "Invite";
         field_c = new int[8192];
     }
 }

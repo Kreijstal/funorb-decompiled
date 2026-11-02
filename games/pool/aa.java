@@ -8,7 +8,7 @@ final class aa {
     private IntrusiveDeque field_a;
     static int field_e;
     private IntrusiveNode field_g;
-    static String field_f;
+    static String friendnotfound;
     static vh field_b;
 
     final IntrusiveNode b(int param0) {
@@ -34,7 +34,7 @@ final class aa {
     }
 
     public static void a(byte param0) {
-        field_f = null;
+        friendnotfound = null;
         if (param0 == -5) {
           field_b = null;
           field_c = null;
@@ -211,7 +211,7 @@ final class aa {
     static {
         field_h = 0;
         field_d = 3;
-        field_f = "<%0> is not on your friend list.";
+        friendnotfound = "<%0> is not on your friend list.";
         field_c = new ph();
     }
 }

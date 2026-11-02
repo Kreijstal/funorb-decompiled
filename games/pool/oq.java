@@ -5,10 +5,10 @@ import java.util.*;
 
 final class oq extends PacketBuffer {
     static java.util.zip.CRC32 field_B;
-    static String field_C;
+    static String targetBlackBall;
     private IsaacCipher field_A;
     private int field_y;
-    static String field_D;
+    static String multiconstOpen;
     static vh field_z;
 
     final static di a(boolean param0, int param1, int param2, int param3, boolean param4) {
@@ -76,11 +76,11 @@ final class oq extends PacketBuffer {
 
     final static void n(int param0) {
         int var1 = 0;
-        if (nk.field_h >= 224) {
+        if (TranslatedUiText.field_h >= 224) {
           ap.a(256, 3815994);
         } else {
-          var1 = nk.field_h % 32;
-          ap.a(32 + (nk.field_h - var1), param0 ^ -3807027);
+          var1 = TranslatedUiText.field_h % 32;
+          ap.a(32 + (TranslatedUiText.field_h - var1), param0 ^ -3807027);
         }
         if (param0 != -11529) {
           oq.a(true, -4, 116, -60, false);
@@ -113,7 +113,7 @@ final class oq extends PacketBuffer {
           var5 = var5 + (this.payload[var3] >> -param0 + var4 & co.field_ab[param0]);
         }
         if (param1 <= 15) {
-          field_C = (String) null;
+          targetBlackBall = (String) null;
         }
         return var5;
     }
@@ -134,18 +134,18 @@ final class oq extends PacketBuffer {
     }
 
     public static void c(boolean param0) {
-        field_C = null;
+        targetBlackBall = null;
         if (!param0) {
-          field_C = (String) null;
+          targetBlackBall = (String) null;
         }
         field_B = null;
         field_z = null;
-        field_D = null;
+        multiconstOpen = null;
     }
 
     static {
         field_B = new java.util.zip.CRC32();
-        field_C = "Black ball";
-        field_D = "Open";
+        targetBlackBall = "Black ball";
+        multiconstOpen = "Open";
     }
 }

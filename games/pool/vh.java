@@ -16,7 +16,7 @@ class vh extends o {
     private int field_wb;
     private int field_rb;
     boolean field_pb;
-    static String field_S;
+    static String privatequickchatFromX;
     boolean field_Jb;
     Sprite[] field_Y;
     Sprite field_ab;
@@ -510,7 +510,7 @@ class vh extends o {
         if (param0 != 8) {
           field_L = -59;
         }
-        field_S = null;
+        privatequickchatFromX = null;
         field_Ab = null;
     }
 
@@ -814,6 +814,6 @@ class vh extends o {
     }
 
     static {
-        field_S = "From <%0>: ";
+        privatequickchatFromX = "From <%0>: ";
     }
 }

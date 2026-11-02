@@ -3,11 +3,11 @@
  */
 final class IntrusiveDeque {
     static vq field_c;
-    static String field_b;
+    static String resign;
     IntrusiveNode field_e;
     private IntrusiveNode field_f;
-    static String field_a;
-    static String field_d;
+    static String menuSettings;
+    static String muChatLobbyShowAll;
 
     final IntrusiveNode b(int param0) {
         IntrusiveNode var2 = this.field_e.next;
@@ -71,11 +71,11 @@ final class IntrusiveDeque {
     }
 
     public static void d(int param0) {
-        field_a = null;
-        field_b = null;
-        field_d = null;
+        menuSettings = null;
+        resign = null;
+        muChatLobbyShowAll = null;
         if (param0 >= -63) {
-          field_a = (String) null;
+          menuSettings = (String) null;
         }
         field_c = null;
     }
@@ -87,7 +87,7 @@ final class IntrusiveDeque {
           return null;
         }
         if (param0 != -46) {
-          field_a = (String) null;
+          menuSettings = (String) null;
         }
         this.field_f = var2.next;
         return var2;
@@ -118,7 +118,7 @@ final class IntrusiveDeque {
         try {
           var1_int = 0;
           if (param0 < 73) {
-            field_d = (String) null;
+            muChatLobbyShowAll = (String) null;
           }
           while (aa.field_e > var1_int) {
             wb.field_e[var1_int] = null;
@@ -151,7 +151,7 @@ final class IntrusiveDeque {
         int var2 = 0;
         IntrusiveNode var3 = this.field_e.previous;
         if (param0 < 15) {
-          field_d = (String) null;
+          muChatLobbyShowAll = (String) null;
         }
         while (var3 != this.field_e) {
           var2++;
@@ -298,8 +298,8 @@ final class IntrusiveDeque {
     }
 
     static {
-        field_b = "Resign";
-        field_a = "Options";
-        field_d = "Show all lobby chat";
+        resign = "Resign";
+        menuSettings = "Options";
+        muChatLobbyShowAll = "Show all lobby chat";
     }
 }

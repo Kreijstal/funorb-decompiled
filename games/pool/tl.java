@@ -8,7 +8,7 @@ final class tl extends ob {
     static int[] field_L;
     static nl field_J;
     static int[] field_I;
-    static String field_H;
+    static String friendlistdupe;
 
     final void e(int param0) {
         int var3;
@@ -482,12 +482,12 @@ final class tl extends ob {
 
     public static void g(int param0) {
         if (param0 != 0) {
-          field_H = (String) null;
+          friendlistdupe = (String) null;
         }
         field_N = null;
         field_I = null;
         field_L = null;
-        field_H = null;
+        friendlistdupe = null;
         field_J = null;
     }
 
@@ -600,7 +600,7 @@ final class tl extends ob {
             stackIn_12_0 = (kh.field_Ac) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (cj.e((byte) 85)) {
+            if (TikiTableScene.e((byte) 85)) {
               stackIn_8_0 = (!param1.field_ec) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -611,27 +611,27 @@ final class tl extends ob {
           if (!param3) {
             for (var6 = 0; 5 > var6; var6++) {
               if (var4_int != 0 &&
-                mc.field_f[0][var6 + 1].field_R != 0 &&
+                FreePlayRules.field_f[0][var6 + 1].field_R != 0 &&
                 var6 != param1.field_ac) {
                 param1.field_ac = var6;
                 var5 = 1;
               }
-              stackIn_22_0 = mc.field_f[0][var6 + 1];
+              stackIn_22_0 = FreePlayRules.field_f[0][var6 + 1];
               stackIn_23_1 = (var4_int != 0);
               stackIn_22_0.field_pb = stackIn_23_1;
               if (!tq.field_p &&
                 3 == var6) {
-                mc.field_f[0][var6 + 1].field_pb = false;
+                FreePlayRules.field_f[0][var6 + 1].field_pb = false;
               }
-              stackIn_29_0 = mc.field_f[0][var6 + 1];
+              stackIn_29_0 = FreePlayRules.field_f[0][var6 + 1];
               stackIn_30_1 = (param1.field_ac == var6);
               stackIn_29_0.field_Ib = stackIn_30_1;
             }
-            if (mc.field_f[0][2].field_db) {
-              if (cj.e((byte) 85)) {
-                kk.field_B = rq.field_r;
+            if (FreePlayRules.field_f[0][2].field_db) {
+              if (TikiTableScene.e((byte) 85)) {
+                kk.field_B = rq.thisisrunescapeclan;
               } else {
-                kk.field_B = nr.a(new String[]{em.field_L.field_Ob}, -1, ep.field_v);
+                kk.field_B = nr.a(new String[]{em.field_L.field_Ob}, -1, NetworkGameClient.thisisrunescapeclanNotowner);
               }
             }
           }
@@ -658,7 +658,7 @@ final class tl extends ob {
               }
               var8_intLifetime1 = stackIn_59_0;
               if (var4_int != 0 &&
-                mc.field_f[1][var7 + 1].field_R != 0) {
+                FreePlayRules.field_f[1][var7 + 1].field_R != 0) {
                 if (!param3) {
                   var9 = dg.field_T[var7];
                   if (var9 != param1.field_Nb) {
@@ -679,16 +679,16 @@ final class tl extends ob {
               }
               if (param3) {
                 if (var7 == -1) {
-                  mc.field_f[1][var7 + 1].field_Ib = true;
+                  FreePlayRules.field_f[1][var7 + 1].field_Ib = true;
                   for (var9 = 0; var9 < dg.field_T.length; var9++) {
-                    dupTemp$0 = mc.field_f[1][1 + var7];
+                    dupTemp$0 = FreePlayRules.field_f[1][1 + var7];
                     stackIn_87_0 = dupTemp$0;
                     stackIn_87_1 = dupTemp$0.field_Ib;
                     stackIn_88_2 = ((md.field_c[var9 / 8] & 1 << (7 & var9)) == 0);
                     stackIn_87_0.field_Ib = stackIn_87_1 & stackIn_88_2;
                   }
                 } else {
-                  stackIn_79_0 = mc.field_f[1][1 + var7];
+                  stackIn_79_0 = FreePlayRules.field_f[1][1 + var7];
                   stackIn_79_1 = md.field_c[var7 / 8];
                   stackIn_79_2 = 1 << (7 & var7);
                   stackIn_82_1 = ((stackIn_79_1 & stackIn_79_2) != 0);
@@ -696,18 +696,18 @@ final class tl extends ob {
                 }
               } else {
                 var9 = dg.field_T[var7];
-                stackIn_74_0 = mc.field_f[1][var7 + 1];
+                stackIn_74_0 = FreePlayRules.field_f[1][var7 + 1];
                 stackIn_75_1 = (var9 == param1.field_Nb);
                 stackIn_74_0.field_Ib = stackIn_75_1;
               }
-              stackIn_92_0 = mc.field_f[1][1 + var7];
+              stackIn_92_0 = FreePlayRules.field_f[1][1 + var7];
               stackIn_93_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_92_0.field_pb = stackIn_93_1;
             }
           }
           stackIn_97_0 = (!param3) ? 1 : 0;
           for (var6Lifetime2 = stackIn_97_0; var6Lifetime2 < 3; var6Lifetime2++) {
-            var28 = mc.field_f[2][var6Lifetime2];
+            var28 = FreePlayRules.field_f[2][var6Lifetime2];
             if (var4_int != 0 &&
               var28.field_R != 0) {
               if (!param3) {
@@ -717,9 +717,9 @@ final class tl extends ob {
                 }
               } else {
                 if (var6Lifetime2 == 0) {
-                  mc.field_l = 0;
+                  FreePlayRules.field_l = 0;
                 } else {
-                  mc.field_l = mc.field_l ^ var6Lifetime2;
+                  FreePlayRules.field_l = FreePlayRules.field_l ^ var6Lifetime2;
                 }
               }
             }
@@ -730,11 +730,11 @@ final class tl extends ob {
             } else {
               if (0 == var6Lifetime2) {
                 stackIn_116_0 = var28;
-                stackIn_117_1 = (0 == mc.field_l);
+                stackIn_117_1 = (0 == FreePlayRules.field_l);
                 stackIn_116_0.field_Ib = stackIn_117_1;
               } else {
                 stackIn_112_0 = var28;
-                stackIn_113_1 = ((mc.field_l & var6Lifetime2) != 0);
+                stackIn_113_1 = ((FreePlayRules.field_l & var6Lifetime2) != 0);
                 stackIn_112_0.field_Ib = stackIn_113_1;
               }
             }
@@ -745,7 +745,7 @@ final class tl extends ob {
           if (param3 &&
             1 < ji.field_g) {
             for (var6Lifetime3 = 0; ji.field_g + 1 > var6Lifetime3; var6Lifetime3++) {
-              var29 = mc.field_f[3][var6Lifetime3];
+              var29 = FreePlayRules.field_f[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_R != 0) {
                 pm.field_l = var6Lifetime3;
@@ -772,7 +772,7 @@ final class tl extends ob {
           }
           var6Lifetime4 = 0;
           for (var7 = param2; var7 < dr.field_c; var7++) {
-            var30 = mc.field_f[4 + var7];
+            var30 = FreePlayRules.field_f[4 + var7];
             var8_array = var30;
             stackIn_156_0 = (param3) ? -1 : 0;
             for (var9 = stackIn_156_0; -1 + var30.length > var9; var9++) {
@@ -790,10 +790,10 @@ final class tl extends ob {
                   var14 = 1;
                   var15 = s.a(op.field_a[var7][var9] & ~eq.field_S, (byte) 87);
                 }
-                if (dl.field_j != null &&
-                  null != dl.field_j[var7] &&
+                if (Pocket.field_j != null &&
+                  null != Pocket.field_j[var7] &&
                   mp.field_V <= 0 &&
-                  dl.field_j[var7][var9]) {
+                  Pocket.field_j[var7][var9]) {
                   var10 = 1;
                 }
                 if (ci.field_d != null &&
@@ -845,7 +845,7 @@ final class tl extends ob {
                 var13 = 0;
                 var10 = 0;
               }
-              qk.field_b = true;
+              PoolUiText.field_b = true;
               if (var10 == 0 &&
                 var11 == 0 &&
                 var12 == 0 &&
@@ -863,7 +863,7 @@ final class tl extends ob {
                 0 <= var9 &&
                 we.field_m != null && (!param3 ||
                 !kh.field_Ac)) {
-                qk.field_b = false;
+                PoolUiText.field_b = false;
                 if (dk.field_j == null) {
                   dk.field_j = new byte[dr.field_c];
                   gf.field_b = new boolean[dr.field_c];
@@ -875,9 +875,9 @@ final class tl extends ob {
                 sh.a(0, var7, var9, false, param1, -1, -1, param3);
                 if (2 <= hq.field_i &&
                   vj.field_c[12]) {
-                  qk.field_b = true;
+                  PoolUiText.field_b = true;
                 }
-                if (!qk.field_b) {
+                if (!PoolUiText.field_b) {
                   var16Lifetime1 = 1;
                 }
               }
@@ -931,7 +931,7 @@ final class tl extends ob {
                 }
                 var21 = null;
                 if (var13 != 0) {
-                  var21 = he.field_a;
+                  var21 = he.gameoptUnratedonly;
                   var22 = var21;
                   var25 = var22;
                   var22 = var25;
@@ -947,13 +947,13 @@ final class tl extends ob {
                     if (var11 != 0) {
                       var22_int = -og.field_I + w.field_j[var7][var9];
                       if (var22_int == 1) {
-                        var21 = kb.field_b;
+                        var21 = kb.gameopt1moreratedgame;
                       } else {
-                        var21 = nr.a(new String[]{Integer.toString(var22_int)}, -1, cr.field_s);
+                        var21 = nr.a(new String[]{Integer.toString(var22_int)}, -1, PotEvent.gameoptMoreratedgames);
                       }
                     }
                     if (var12 != 0) {
-                      var31 = nr.a(new String[]{Integer.toString(mg.field_d), Integer.toString(ci.field_d[var7][var9])}, -1, sm.field_E);
+                      var31 = nr.a(new String[]{Integer.toString(mg.field_d), Integer.toString(ci.field_d[var7][var9])}, -1, sm.gameoptNeedrating);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -967,7 +967,7 @@ final class tl extends ob {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = dk.field_a;
+                      var22 = dk.gameoptNotunlocked;
                       if (0 < var15 &&
                         null != fg.field_f &&
                         var15 <= fg.field_f.length &&
@@ -981,14 +981,14 @@ final class tl extends ob {
                       }
                     }
                   } else {
-                    var21 = lk.field_t;
+                    var21 = lk.gameoptMembersonly;
                   }
                 }
                 if (var4_int != 0 &&
-                  !qk.field_b) {
+                  !PoolUiText.field_b) {
                   var22 = null;
                   if (ln.field_p) {
-                    var22 = "</col>" + ab.field_h + "<col=A00000>";
+                    var22 = "</col>" + ab.muOptionsPlayers + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
                     var25Lifetime1Lifetime1 = var22;
@@ -1013,9 +1013,9 @@ final class tl extends ob {
                     }
                   }
                   if (var23 != 0) {
-                    var21 = SocketConnector.field_b + (String) (var22);
+                    var21 = SocketConnector.gameoptCannotbecombined2 + (String) (var22);
                   } else {
-                    var21 = nr.a(new String[]{(String) (var22)}, ~param2, ka.field_t);
+                    var21 = nr.a(new String[]{(String) (var22)}, ~param2, ka.gameoptCannotbecombined1);
                   }
                 }
                 if (var21 != null) {
@@ -1034,7 +1034,7 @@ final class tl extends ob {
               if (!param3) {
                 boolean decompiledFrameRemainder0 = true;
                 stackIn_330_0 = var17;
-                if (qk.field_b) {
+                if (PoolUiText.field_b) {
                   stackIn_328_1 = ~param1.field_tc[var7];
                   stackIn_328_2 = (byte)var9;
                   stackIn_328_3 = -1;
@@ -1073,7 +1073,7 @@ final class tl extends ob {
           }
           if (var5 != 0 &&
             !param3) {
-            lm.c(5, param0);
+            SpaceBallSkin.c(5, param0);
             return;
           }
           return;
@@ -1107,7 +1107,7 @@ final class tl extends ob {
         try {
           var4_int = param0.b(param3, -1);
           if (param1 != 3812) {
-            field_H = (String) null;
+            friendlistdupe = (String) null;
           }
           var5 = param0.a(var4_int, 0, param2);
           stackIn_3_0 = kh.a(var5, var4_int, (byte) -97, param0);
@@ -1156,7 +1156,7 @@ final class tl extends ob {
           }
           if (!hk.b(96) &&
             param3 < 2) {
-            var7 = mc.field_e.field_U[param1];
+            var7 = FreePlayRules.field_e.field_U[param1];
             var5 = var7;
             stackIn_8_0 = ag.a((byte) 89, var7[var7.length >> 1], param0);
             return stackIn_8_0;
@@ -1182,7 +1182,7 @@ final class tl extends ob {
           return param1 < 2 ? param1 * 240 + 300 : 380;
         }
         if (param0) {
-          field_H = (String) null;
+          friendlistdupe = (String) null;
         }
         if (param1 == 0) {
           return 340 + this.d(0, param1);
@@ -1203,7 +1203,7 @@ final class tl extends ob {
           super.b(param0 + 0, param1, param2);
         } else {
           if (this.field_B.b((byte) 75)) {
-            nk.a(pl.field_d, this.field_E, (byte) 101);
+            TranslatedUiText.a(pl.pleaselogin, this.field_E, (byte) 101);
           }
         }
     }
@@ -1242,30 +1242,30 @@ final class tl extends ob {
           this.f(320);
           return;
         }
-        if (tm.field_b == null) {
-          tm.field_b = wp.a(0, 10, (byte) 68, 7);
+        if (BallSkin.field_b == null) {
+          BallSkin.field_b = wp.a(0, 10, (byte) 68, 7);
         }
         var2 = 170;
-        nj.a(vk.field_y, (byte) 65, 520, 60, 150, ni.field_Z.baselineHeight + 176 + 16);
+        nj.a(vk.field_y, (byte) 65, 520, 60, 150, ModernTableScene.field_Z.baselineHeight + 176 + 16);
         var3 = 2;
         var3Lifetime1 = 15658734;
-        ni.field_Z.drawCentered(eq.field_T, se.field_i[0], var2, var3Lifetime1, -1);
-        ni.field_Z.drawCentered(jf.field_n, se.field_i[1], var2, var3Lifetime1, -1);
-        ni.field_Z.drawCentered(vj.field_b, se.field_i[2], var2, var3Lifetime1, -1);
-        ni.field_Z.drawCentered(qe.field_G, se.field_i[3], var2, var3Lifetime1, -1);
-        ni.field_Z.drawCentered(um.field_a, se.field_i[4], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(eq.ratingRating, se.field_i[0], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(jf.ratingPlayed, se.field_i[1], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(vj.ratingWon, se.field_i[2], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(ShotRecord.ratingLost, se.field_i[3], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(um.ratingDrawn, se.field_i[4], var2, var3Lifetime1, -1);
         if (param0 <= 36) {
           return;
         }
         regionExit1: {
-          var2 = var2 + (8 + (ni.field_Z.maxDescent + sa.field_h.maxAscent));
-          if (!tm.field_b.field_v) {
-            var4 = cl.field_j;
+          var2 = var2 + (8 + (ModernTableScene.field_Z.maxDescent + sa.field_h.maxAscent));
+          if (!BallSkin.field_b.field_v) {
+            var4 = cl.pleasewaitDotdotdot;
           } else {
-            if (tm.field_b.field_n != null) {
-              var4 = mm.field_e;
-              var5 = tm.field_b.field_n[eo.field_Lb];
-              var6 = tm.field_b.field_q[eo.field_Lb];
+            if (BallSkin.field_b.field_n != null) {
+              var4 = mm.ratingNoratings;
+              var5 = BallSkin.field_b.field_n[eo.field_Lb];
+              var6 = BallSkin.field_b.field_q[eo.field_Lb];
               var7 = 0;
               for (var8 = 0; var8 < 10; var8++) {
                 if (var5 != null) {
@@ -1292,11 +1292,11 @@ final class tl extends ob {
               }
               if ((var7 == 0)) {
                 var3Lifetime2Lifetime1 = 4;
-                this.a(-1, tm.field_b.field_y, tm.field_b.field_x, tm.field_b.field_w, tm.field_b.field_t, 100, 16777215, var2, di.field_j);
+                this.a(-1, BallSkin.field_b.field_y, BallSkin.field_b.field_x, BallSkin.field_b.field_w, BallSkin.field_b.field_t, 100, 16777215, var2, di.field_j);
               }
               break regionExit1;
             }
-            var4 = fh.field_a;
+            var4 = fh.serviceunavailable;
           }
         }
         if (var4 != null) {
@@ -1306,7 +1306,7 @@ final class tl extends ob {
     }
 
     private final void f(int param0) {
-        sa.field_h.drawCentered(ra.field_a, param0, 380, 15658734, -1);
+        sa.field_h.drawCentered(ra.createtouse, param0, 380, 15658734, -1);
     }
 
     final static String a(int param0, int param1, byte[] param2, int param3) {
@@ -1377,7 +1377,7 @@ final class tl extends ob {
     }
 
     final void e(byte param0) {
-        tm.field_b = null;
+        BallSkin.field_b = null;
         if (param0 != -6) {
           field_K = -93;
         }
@@ -1410,7 +1410,7 @@ final class tl extends ob {
     static {
         field_L = new int[]{2, 20, 21, 49, 5, 12, 13};
         field_I = new int[16384];
-        field_H = "<%0> is already on your friend list.";
+        friendlistdupe = "<%0> is already on your friend list.";
         field_K = 236;
     }
 }

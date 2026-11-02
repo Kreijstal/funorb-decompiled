@@ -5,13 +5,13 @@ import java.io.*;
 
 final class lq extends ud {
     private IntrusiveDeque field_P;
-    static String field_O;
+    static String multiconstFriends;
     static so field_R;
     static int[] field_T;
-    static String field_S;
+    static String timerMinutesSeconds;
     static Sprite field_Q;
-    static String field_U;
-    static String field_N;
+    static String connectionlostWithreason;
+    static String playerListLast;
     static int field_V;
     static int field_W;
 
@@ -29,7 +29,7 @@ final class lq extends ud {
           try {
             var2_int = jd.field_c.d(107);
             if (param0 < 27) {
-              field_U = (String) null;
+              connectionlostWithreason = (String) null;
             }
             if (0 < var2_int) {
               if (var2_int > param1 - kn.field_e.position) {
@@ -47,7 +47,7 @@ final class lq extends ud {
             if (var2_int < 0) {
               dn.c(64);
             } else {
-              if (bf.d((byte) 127) <= 30000L) {
+              if (CushionSegment.d((byte) 127) <= 30000L) {
                 return false;
               }
               dn.c(64);
@@ -66,7 +66,7 @@ final class lq extends ud {
     }
 
     public lq() {
-        super(0, 0, nk.field_j, md.field_b, (fp) null, (cc) null);
+        super(0, 0, TranslatedUiText.field_j, md.field_b, (fp) null, (cc) null);
         this.field_P = new IntrusiveDeque();
     }
 
@@ -122,7 +122,7 @@ final class lq extends ud {
               }
               var6 = f.a(param2 ^ 5, var4_int);
               uo.field_Mb[var4_int].field_hb = sg.field_M[var6];
-              ta.field_b[var4_int].field_nb = nk.field_i[var6];
+              ta.field_b[var4_int].field_nb = TranslatedUiText.field_i[var6];
             }
           }
           if (param2 != d.field_e.field_R) {
@@ -234,7 +234,7 @@ final class lq extends ud {
 
     final static void a(boolean param0) {
         wa.m(8421504);
-        nk.b(-31384);
+        TranslatedUiText.b(-31384);
         fc.field_b = null;
         if (!param0) {
           lq.i(114);
@@ -243,11 +243,11 @@ final class lq extends ud {
     }
 
     public static void g(byte param0) {
-        field_U = null;
-        field_N = null;
+        connectionlostWithreason = null;
+        playerListLast = null;
         field_T = null;
-        field_O = null;
-        field_S = null;
+        multiconstFriends = null;
+        timerMinutesSeconds = null;
         if (param0 != -47) {
           return;
         }
@@ -258,7 +258,7 @@ final class lq extends ud {
     final static void i(int param0) {
         fm.field_H = false;
         if (param0 != 15975) {
-          field_U = (String) null;
+          connectionlostWithreason = (String) null;
         }
         if (null != im.field_Ub) {
           im.field_Ub.f(17517);
@@ -273,7 +273,7 @@ final class lq extends ud {
         aa var2;
         oe var3;
         if (param0 < 101) {
-          field_S = (String) null;
+          timerMinutesSeconds = (String) null;
         }
         var2 = new aa(this.field_P);
         var3 = (oe) (var2.b((byte) -92));
@@ -333,10 +333,10 @@ final class lq extends ud {
 
     static {
         field_T = new int[1024];
-        field_O = "Friends";
-        field_U = "Connection lost. <%0>";
-        field_S = "mm:ss";
+        multiconstFriends = "Friends";
+        connectionlostWithreason = "Connection lost. <%0>";
+        timerMinutesSeconds = "mm:ss";
         field_W = 0;
-        field_N = " and <%0>";
+        playerListLast = " and <%0>";
     }
 }

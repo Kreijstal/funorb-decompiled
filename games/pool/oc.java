@@ -32,7 +32,7 @@ final class oc {
     static java.applet.Applet field_t;
     short[] field_w;
     int field_n;
-    static String field_h;
+    static String createSuggestions;
     private boolean field_G;
     short field_o;
     short[] field_m;
@@ -62,15 +62,15 @@ final class oc {
     }
 
     final static void d(int param0) {
-        nn.field_b = new oo[5];
-        nn.field_b[0] = (oo) ((Object) new ni());
-        nn.field_b[1] = (oo) ((Object) new fk());
-        nn.field_b[2] = (oo) ((Object) new cj());
-        nn.field_b[3] = (oo) ((Object) new vf());
+        nn.field_b = new TableScene[5];
+        nn.field_b[0] = (TableScene) ((Object) new ModernTableScene());
+        nn.field_b[1] = (TableScene) ((Object) new PlasmaTableScene());
+        nn.field_b[2] = (TableScene) ((Object) new TikiTableScene());
+        nn.field_b[3] = (TableScene) ((Object) new PolarTableScene());
         if (param0 >= -75) {
           return;
         }
-        nn.field_b[4] = (oo) ((Object) new gh());
+        nn.field_b[4] = (TableScene) ((Object) new SpaceTableScene());
     }
 
     final static void a(int param0) {
@@ -92,7 +92,7 @@ final class oc {
           oc.b((byte) 45);
         }
         field_t = null;
-        field_h = null;
+        createSuggestions = null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -179,6 +179,6 @@ final class oc {
     }
 
     static {
-        field_h = "Suggested names: ";
+        createSuggestions = "Suggested names: ";
     }
 }

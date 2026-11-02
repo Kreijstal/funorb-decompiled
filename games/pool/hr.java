@@ -6,7 +6,7 @@ final class hr {
     private int field_l;
     static ro[] field_c;
     private int field_f;
-    static String field_w;
+    static String muXCannotJoinFull;
     private int field_u;
     private int field_a;
     private int field_i;
@@ -18,7 +18,7 @@ final class hr {
     private int field_v;
     private int field_h;
     private boolean field_e;
-    static String field_s;
+    static String muRequestDeclined;
     private int field_p;
     private float field_m;
     private int field_j;
@@ -32,7 +32,7 @@ final class hr {
     final static void a(di param0, int param1) {
         Object var2 = null;
         int var3 = 0;
-        oo var4 = null;
+        TableScene var4 = null;
         int var5 = 0;
         Object stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -56,8 +56,8 @@ final class hr {
               nn.field_b[var3Lifetime1].field_A = (jk) (var2);
             }
           }
-          for (var3Lifetime2 = 0; al.field_B.length > var3Lifetime2; var3Lifetime2++) {
-            al.field_B[var3Lifetime2].a(param0, (byte) 117);
+          for (var3Lifetime2 = 0; PoolGameModel.field_B.length > var3Lifetime2; var3Lifetime2++) {
+            PoolGameModel.field_B[var3Lifetime2].a(param0, (byte) 117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,8 +116,8 @@ final class hr {
     public static void c(int param0) {
         field_c = null;
         field_n = null;
-        field_s = null;
-        field_w = null;
+        muRequestDeclined = null;
+        muXCannotJoinFull = null;
         if (param0 > -25) {
           return;
         }
@@ -136,11 +136,11 @@ final class hr {
           hr.a((float[]) null, -27, -27, (int[]) null);
         }
         if (var3 != null) {
-          vl.field_m.a((byte) 124, false);
-          var4 = vl.field_m;
-          var5_ref_String = PacketBuffer.field_m;
+          PlasmaBallSkin.field_m.a((byte) 124, false);
+          var4 = PlasmaBallSkin.field_m;
+          var5_ref_String = PacketBuffer.muLobbyFriendRm;
           var4.field_n.a(var5_ref_String, 17130, 5);
-          var4Lifetime1 = vl.field_m;
+          var4Lifetime1 = PlasmaBallSkin.field_m;
           var5 = lq.field_W;
           var6 = ua.field_o;
           var4Lifetime1.field_n.c(0, 0, var5, 0, var6);
@@ -168,7 +168,7 @@ final class hr {
     final void d(int param0) {
         this.field_o.a(this.field_i, this.field_u, param0 ^ 22433);
         if (param0 != 22472) {
-          field_s = (String) null;
+          muRequestDeclined = (String) null;
         }
     }
 
@@ -184,14 +184,14 @@ final class hr {
           }
           param0 = param0 - param2[0];
           param4 = param4 - param2[2];
-          var6_long = rj.a((long)param2[3], (byte) -48, (long)param0) - (-rj.a((long)param2[4], (byte) -48, (long)param3) - rj.a((long)param2[5], (byte) -48, (long)param4));
-          var8 = rj.a((long)param2[6], (byte) -48, (long)param0) + rj.a((long)param2[7], (byte) -48, (long)param3) + rj.a((long)param2[8], (byte) -48, (long)param4);
-          var10 = rj.a((long)param2[9], (byte) -48, (long)param0) + (rj.a((long)param2[10], (byte) -48, (long)param3) + rj.a((long)param2[11], (byte) -48, (long)param4));
+          var6_long = KillerRules.a((long)param2[3], (byte) -48, (long)param0) - (-KillerRules.a((long)param2[4], (byte) -48, (long)param3) - KillerRules.a((long)param2[5], (byte) -48, (long)param4));
+          var8 = KillerRules.a((long)param2[6], (byte) -48, (long)param0) + KillerRules.a((long)param2[7], (byte) -48, (long)param3) + KillerRules.a((long)param2[8], (byte) -48, (long)param4);
+          var10 = KillerRules.a((long)param2[9], (byte) -48, (long)param0) + (KillerRules.a((long)param2[10], (byte) -48, (long)param3) + KillerRules.a((long)param2[11], (byte) -48, (long)param4));
           if (var10 == 0L) {
             var10 = 1L;
           }
-          param1[0] = (int)((long)TriangleRasterizer.projectionCenterX + rj.a(512L, (byte) -48, var6_long) / var10);
-          param1[1] = (int)((long)TriangleRasterizer.projectionCenterY + rj.a(512L, (byte) -48, var8) / var10);
+          param1[0] = (int)((long)TriangleRasterizer.projectionCenterX + KillerRules.a(512L, (byte) -48, var6_long) / var10);
+          param1[1] = (int)((long)TriangleRasterizer.projectionCenterY + KillerRules.a(512L, (byte) -48, var8) / var10);
           param1[2] = (int)var10;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hr.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -288,7 +288,7 @@ final class hr {
 
     static {
         field_b = 6;
-        field_w = "<%0> cannot join; the game is full.";
-        field_s = "Your request to join has been declined.";
+        muXCannotJoinFull = "<%0> cannot join; the game is full.";
+        muRequestDeclined = "Your request to join has been declined.";
     }
 }

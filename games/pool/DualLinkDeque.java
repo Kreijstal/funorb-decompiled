@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DualLinkDeque {
-    static String[] field_b;
+    static String[] doubleplusgoodShot;
     static boolean field_c;
     private DualLinkNode field_d;
     private DualLinkNode field_e;
@@ -55,16 +55,16 @@ final class DualLinkDeque {
         vh var3 = null;
         try {
           oi.field_o = pf.a("basic", (byte) 54, "display_name_changed", param1);
-          aj.field_Mb = new ao(0L, em.field_J, wg.field_Rb, PacketBuffer.field_m);
-          cp.field_c = new ao(0L, em.field_J, ag.field_d, tp.field_f);
+          aj.field_Mb = new ao(0L, em.field_J, wg.muLobbyFriendAdd, PacketBuffer.muLobbyFriendRm);
+          cp.field_c = new ao(0L, em.field_J, ag.muLobbyNameAdd, tp.muLobbyNameRm);
           ud.field_J = new vh(0L, (vh) null);
           ba.field_sb = new vh(0L, uo.field_Lb);
           ba.field_sb.field_Fb = param0;
-          qk.field_e = new vh(0L, lf.field_d, jh.field_g);
-          mb.field_f = new vh(0L, sd.field_Q, f.field_d);
+          PoolUiText.field_e = new vh(0L, lf.field_d, jh.muLobbyName);
+          mb.field_f = new vh(0L, sd.field_Q, f.muLobbyLocation);
           rc.field_b = new vh(0L, ei.field_A);
           ud.field_J.a(param0 - 103, ba.field_sb);
-          ud.field_J.a(92, qk.field_e);
+          ud.field_J.a(92, PoolUiText.field_e);
           ud.field_J.a(14, mb.field_f);
           ud.field_J.a(127, aj.field_Mb);
           ud.field_J.a(param0 ^ -107, rc.field_b);
@@ -115,7 +115,7 @@ final class DualLinkDeque {
     }
 
     public static void a(boolean param0) {
-        field_b = null;
+        doubleplusgoodShot = null;
         if (!param0) {
           return;
         }
@@ -124,7 +124,7 @@ final class DualLinkDeque {
     }
 
     static {
-        field_b = new String[]{"Awesome shot!", "Pure skill!"};
+        doubleplusgoodShot = new String[]{"Awesome shot!", "Pure skill!"};
         field_a = 5;
         field_g = new nl();
     }

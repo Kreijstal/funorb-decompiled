@@ -5,7 +5,7 @@ final class uh extends ig {
     static Sprite field_p;
     static int field_x;
     static int field_q;
-    static String field_s;
+    static String waitingForXToStartGame;
     static wj field_u;
     static boolean field_o;
     private sl field_m;
@@ -36,20 +36,20 @@ final class uh extends ig {
           }
           DualLinkNode.field_p = false;
           if (ea.field_z) {
-            var5 = fg.field_e;
+            var5 = fg.dobChatdisabled;
           } else {
             if (!hr.field_y) {
-              var5 = vc.field_J;
+              var5 = ModelTableScene.presstabtochat;
             } else {
-              var5 = sk.field_c;
+              var5 = sk.pressf10toquickchat;
             }
           }
           var7 = (String) null;
-          dr.a((String) null, 11468, mc.field_g, 0, var5);
-          pa.field_J.field_P = (8355711 & kb.field_h.field_P >> 1) + (mc.field_g - (8355711 & mc.field_g >> 1));
-          lh.field_i = fj.field_j;
-          pa.field_J.field_K = ((kb.field_h.field_K & 16711423) >> 1) + (-((16711423 & mc.field_g) >> 1) + mc.field_g);
-          pa.field_J.field_Bb = -((mc.field_g & 16711422) >> 1) + (mc.field_g + (8355711 & kb.field_h.field_Bb >> 1));
+          dr.a((String) null, 11468, FreePlayRules.field_g, 0, var5);
+          pa.field_J.field_P = (8355711 & kb.field_h.field_P >> 1) + (FreePlayRules.field_g - (8355711 & FreePlayRules.field_g >> 1));
+          lh.field_i = NineBallRules.field_j;
+          pa.field_J.field_K = ((kb.field_h.field_K & 16711423) >> 1) + (-((16711423 & FreePlayRules.field_g) >> 1) + FreePlayRules.field_g);
+          pa.field_J.field_Bb = -((FreePlayRules.field_g & 16711422) >> 1) + (FreePlayRules.field_g + (8355711 & kb.field_h.field_Bb >> 1));
           oq.field_z = pa.field_J;
           uq.field_D = new vh(0L, param4);
           IntrusiveNode.field_e = new vh(0L, param3);
@@ -58,9 +58,9 @@ final class uh extends ig {
           pa.field_J = new vh(0L, param2);
           pa.field_J.field_I = m.field_c;
           vi.field_c.a(78, pa.field_J);
-          fj.field_j = new vh(0L, lh.field_i);
-          vi.field_c.a(113, fj.field_j);
-          be.field_L = new vh(0L, kb.field_h, ra.field_d);
+          NineBallRules.field_j = new vh(0L, lh.field_i);
+          vi.field_c.a(113, NineBallRules.field_j);
+          be.field_L = new vh(0L, kb.field_h, ra.tabHidechattemporarily);
           wn.field_g = new vh(0L, kb.field_h);
           var6 = 43 % ((-44 - param0) / 45);
           uq.field_D.a(14, IntrusiveNode.field_e);
@@ -148,7 +148,7 @@ final class uh extends ig {
     public static void b(boolean param0) {
         field_t = null;
         field_u = null;
-        field_s = null;
+        waitingForXToStartGame = null;
         field_p = null;
         field_r = null;
         if (!param0) {
@@ -242,8 +242,8 @@ final class uh extends ig {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (gh.a(var5, 28350)) {
-            stackIn_5_0 = uq.field_K;
+          if (SpaceTableScene.a(var5, 28350)) {
+            stackIn_5_0 = uq.createAlertPasslength;
             return stackIn_5_0;
           }
           if (param1 != 0) {
@@ -251,33 +251,33 @@ final class uh extends ig {
             this.a((String) null, -37);
           }
           if (qa.a(1, var5)) {
-            stackIn_10_0 = IterableNodeHashTable.field_a;
+            stackIn_10_0 = IterableNodeHashTable.createAlertPasschars;
             return stackIn_10_0;
           }
           if (IterableNodeHashTable.a(var5, -113)) {
-            stackIn_14_0 = lh.field_b;
+            stackIn_14_0 = lh.createAlertPassrepeated;
             return stackIn_14_0;
           }
           if (this.a(-31894, param0)) {
-            stackIn_18_0 = l.field_b;
+            stackIn_18_0 = l.createAlertPasscontainsemail;
             return stackIn_18_0;
           }
           if (var7.length() <= 0) {
-            stackIn_21_0 = hb.field_r;
+            stackIn_21_0 = hb.createPasswordvalid;
             return stackIn_21_0;
           }
           if (hq.a(var5, var7, 17924)) {
-            stackIn_24_0 = nk.field_o;
+            stackIn_24_0 = TranslatedUiText.field_o;
             return stackIn_24_0;
           }
           if (co.a(var7, (byte) -112, var5)) {
-            stackIn_28_0 = ka.field_m;
+            stackIn_28_0 = ka.createAlertPasscontainsnamePartial;
             return stackIn_28_0;
           }
           if (!wg.a(23138, var7, var5)) {
-            return uq.field_K;
+            return uq.createAlertPasslength;
           }
-          stackIn_32_0 = nk.field_o;
+          stackIn_32_0 = TranslatedUiText.field_o;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -295,7 +295,7 @@ final class uh extends ig {
 
     static {
         field_q = 10485;
-        field_s = "Waiting for <%0> to start the game...";
+        waitingForXToStartGame = "Waiting for <%0> to start the game...";
         field_t = new int[3];
         field_w = 128 * field_q / 5;
     }

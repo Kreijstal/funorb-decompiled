@@ -69,13 +69,13 @@ final class r extends ig {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param0, true) == gp.field_d) {
-            stackIn_3_0 = fr.field_m;
+            stackIn_3_0 = fr.createAlertInvalidemail;
             return stackIn_3_0;
           }
           if (param1 != 0) {
             r.c((byte) 12);
           }
-          stackIn_7_0 = hb.field_d;
+          stackIn_7_0 = hb.createEmailvalid;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

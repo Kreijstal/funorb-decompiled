@@ -11,10 +11,10 @@ final class ui extends ch implements pe, tb {
     private boolean field_O;
     private fe field_X;
     private boolean field_P;
-    static String field_ab;
-    static String field_N;
+    static String createOptinNewsTooltip;
+    static String tutorialNineBallPottingNine;
     private sl field_Q;
-    static String field_Z;
+    static String textRemovedFromGame;
     static int[] field_V;
 
     public final void a(sl param0, boolean param1) {
@@ -50,7 +50,7 @@ final class ui extends ch implements pe, tb {
 
     final String h(int param0) {
         if (param0 >= -99) {
-          field_ab = (String) null;
+          createOptinNewsTooltip = (String) null;
         }
         if (null == this.field_R.field_m) {
           return "";
@@ -115,25 +115,25 @@ final class ui extends ch implements pe, tb {
           this.field_R = (sl) ((Object) new ga(param0, (cc) (this), 100));
           this.field_Q = (sl) ((Object) new ga("", (cc) (this), 20));
           if (!this.field_P) {
-            this.field_S = new fe(sa.field_y, (cc) null);
+            this.field_S = new fe(sa.login, (cc) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_O) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = va.field_O;
+              stackIn_19_3 = va.justplay;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = jk.field_a;
+              stackIn_19_3 = jk.back;
             }
             this.field_X = new fe(stackIn_19_3, (cc) null);
             if (this.field_Y) {
-              this.field_W = new fe(ad.field_t, (cc) (this));
+              this.field_W = new fe(ad.createCreateanaccount, (cc) (this));
             }
           } else {
-            this.field_S = new fe(ap.field_F, (cc) null);
-            this.field_X = new fe(dj.field_e, (cc) null);
+            this.field_S = new fe(ap.retry, (cc) null);
+            this.field_X = new fe(dj.quittowebsite, (cc) null);
             this.field_R.field_I = false;
           }
           this.field_R.field_z = (fp) ((Object) new om(10000536));
@@ -143,42 +143,42 @@ final class ui extends ch implements pe, tb {
           if (this.field_X != null) {
             this.field_X.field_z = (fp) ((Object) var6);
           }
-          this.field_R.field_p = pn.field_a;
+          this.field_R.field_p = pn.loginUsernameTooltip;
           if (null != this.field_W) {
             this.field_W.field_z = (fp) ((Object) var6);
           }
           if (this.field_W != null) {
-            this.field_W.field_p = fc.field_d;
+            this.field_W.field_p = fc.loginCreateTooltip;
           }
           if (!this.field_P) {
             if (this.field_O) {
-              this.field_X.field_p = lh.field_h;
+              this.field_X.field_p = lh.loginJustplayTooltip;
               this.field_X.field_z = (fp) ((Object) new pd());
             } else {
               this.field_X.field_z = (fp) ((Object) new pd());
             }
           } else {
-            this.field_X.field_p = wg.field_Ob;
+            this.field_X.field_p = wg.warningIfyouquit;
           }
           this.field_D = 15;
           var7 = lc.field_O;
           if (this.field_T != null) {
             this.field_D = this.field_D + (5 + var7.measureWrappedHeight(this.field_T, -40 + this.field_l, var7.maxAscent));
           }
-          var8 = vi.field_d;
+          var8 = vi.loginUsernameEmail;
           var9 = aj.a(hk.d(76), 5137);
           if (var9 == eo.field_Xb) {
-            var8 = wm.field_Qb;
+            var8 = wm.loginEmail;
           } else {
             if (var9 == ug.field_v) {
-              var8 = qp.field_Ob;
+              var8 = qp.loginUsername;
             }
           }
           dupTemp$0 = new n(10, this.field_D, -20 + this.field_l, 25, this.field_R, false, 80, 3, var7, 16777215, var8);
           var11 = dupTemp$0;
           this.a(true, dupTemp$0);
           this.field_D = this.field_D + (((ei) ((Object) var11)).field_y + 5);
-          dupTemp$1 = new n(10, this.field_D, -20 + this.field_l, 25, this.field_Q, false, 80, 3, var7, 16777215, to.field_n);
+          dupTemp$1 = new n(10, this.field_D, -20 + this.field_l, 25, this.field_Q, false, 80, 3, var7, 16777215, PolarBallSkin.createPassword);
           var12 = dupTemp$1;
           this.a(true, dupTemp$1);
           this.field_D = this.field_D + (5 + ((ei) ((Object) var12)).field_y);
@@ -350,7 +350,7 @@ final class ui extends ch implements pe, tb {
             if (var6 == null) {
               n.a(8, param0, param1, param3, param4);
               if (param2 != -6) {
-                field_ab = (String) null;
+                createOptinNewsTooltip = (String) null;
               }
               return;
             }
@@ -377,14 +377,14 @@ final class ui extends ch implements pe, tb {
     }
 
     public static void a(int param0) {
-        field_ab = null;
+        createOptinNewsTooltip = null;
         field_V = null;
-        field_Z = null;
+        textRemovedFromGame = null;
         field_U = null;
         if (param0 != -31360) {
           return;
         }
-        field_N = null;
+        tutorialNineBallPottingNine = null;
     }
 
     public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
@@ -416,7 +416,7 @@ final class ui extends ch implements pe, tb {
             this.i(-1);
           }
           if (!param0) {
-            field_N = (String) null;
+            tutorialNineBallPottingNine = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -487,8 +487,8 @@ final class ui extends ch implements pe, tb {
 
     static {
         field_U = new IntrusiveDeque();
-        field_ab = "Updates will sent to the email address you've given";
-        field_N = "To win nine-ball pool, pot the 9 ball without fouling.";
-        field_Z = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";
+        createOptinNewsTooltip = "Updates will sent to the email address you've given";
+        tutorialNineBallPottingNine = "To win nine-ball pool, pot the 9 ball without fouling.";
+        textRemovedFromGame = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";
     }
 }

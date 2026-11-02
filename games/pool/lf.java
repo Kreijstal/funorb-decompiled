@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lf {
-    static String field_e;
+    static String youHaveBeenRemovedFromXsGame;
     static int field_b;
     static tk field_a;
     static vh field_d;
@@ -138,7 +138,7 @@ final class lf {
     }
 
     public static void a(byte param0) {
-        field_e = null;
+        youHaveBeenRemovedFromXsGame = null;
         field_a = null;
         if (param0 != 112) {
           return;
@@ -147,7 +147,7 @@ final class lf {
     }
 
     static {
-        field_e = "You have been removed from <%0>'s game.";
+        youHaveBeenRemovedFromXsGame = "You have been removed from <%0>'s game.";
         field_c = true;
     }
 }

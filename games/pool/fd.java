@@ -2,29 +2,29 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fd extends kk {
-    static String field_Q;
-    static String field_M;
-    static String field_L;
+    static String tutorialOptionEightBall;
+    static String muXDeclinedInvite;
+    static String mouseoveranicon;
     static long field_K;
     static int field_J;
     static int field_O;
-    static String field_H;
+    static String playerListAreOfferingDraw;
     private Object field_N;
     static int field_I;
 
     public static void i(int param0) {
         if (param0 == 0) {
-          field_Q = null;
-          field_M = null;
-          field_H = null;
-          field_L = null;
+          tutorialOptionEightBall = null;
+          muXDeclinedInvite = null;
+          playerListAreOfferingDraw = null;
+          mouseoveranicon = null;
           return;
         }
-        field_H = (String) null;
-        field_Q = null;
-        field_M = null;
-        field_H = null;
-        field_L = null;
+        playerListAreOfferingDraw = (String) null;
+        tutorialOptionEightBall = null;
+        muXDeclinedInvite = null;
+        playerListAreOfferingDraw = null;
+        mouseoveranicon = null;
     }
 
     final static int a(boolean param0, byte param1) {
@@ -49,8 +49,8 @@ final class fd extends kk {
           }
           var2_int = -1;
           if (nf.field_V == null) {
-            if (jr.field_m != null) {
-              var2_int = jr.field_m.length;
+            if (TikiBallSkin.field_m != null) {
+              var2_int = TikiBallSkin.field_m.length;
             }
           } else {
             var2_int = nf.field_V.length;
@@ -63,29 +63,29 @@ final class fd extends kk {
             if (hj.field_g > ug.field_u) {
               ug.field_u = ug.field_u + 1;
               if (ug.field_u > hj.field_l && (nf.field_V == null ||
-                nf.field_V[rj.field_f] == null)) {
+                nf.field_V[KillerRules.field_f] == null)) {
                 ug.field_u = ug.field_u - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (ug.field_u >= hj.field_g &&
-                  null == nf.field_V[(1 + rj.field_f) % var2_int]) {
+                  null == nf.field_V[(1 + KillerRules.field_f) % var2_int]) {
                   ug.field_u = ug.field_u - 1;
                 }
               }
             }
             if (ug.field_u >= hj.field_g) {
-              cf.field_b = rj.field_f;
+              cf.field_b = KillerRules.field_f;
               ug.field_u = ug.field_u - hj.field_g;
               if (!b.field_K) {
-                rj.field_f = rj.field_f - 1;
-                if (rj.field_f < 0) {
-                  rj.field_f = rj.field_f + var2_int;
+                KillerRules.field_f = KillerRules.field_f - 1;
+                if (KillerRules.field_f < 0) {
+                  KillerRules.field_f = KillerRules.field_f + var2_int;
                 }
               } else {
-                rj.field_f = rj.field_f + 1;
-                if (rj.field_f >= var2_int) {
-                  rj.field_f = rj.field_f - var2_int;
+                KillerRules.field_f = KillerRules.field_f + 1;
+                if (KillerRules.field_f >= var2_int) {
+                  KillerRules.field_f = KillerRules.field_f - var2_int;
                 }
               }
             }
@@ -277,12 +277,12 @@ final class fd extends kk {
     }
 
     static {
-        field_M = "<%0> has declined the invitation.";
+        muXDeclinedInvite = "<%0> has declined the invitation.";
         field_O = 0;
-        field_Q = "Eight-ball";
+        tutorialOptionEightBall = "Eight-ball";
         field_J = 360;
-        field_H = "<%0> all want to draw.";
-        field_L = "Mouse over an icon for details";
+        playerListAreOfferingDraw = "<%0> all want to draw.";
+        mouseoveranicon = "Mouse over an icon for details";
         field_I = 0;
     }
 }

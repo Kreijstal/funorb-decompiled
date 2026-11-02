@@ -5,7 +5,7 @@ final class ol {
     static int field_d;
     static int field_a;
     static int field_e;
-    static String field_b;
+    static String muGamelistAvgRating;
     static BinaryBitmapFont field_c;
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -230,7 +230,7 @@ final class ol {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        muGamelistAvgRating = null;
         if (param0 != 1430775248) {
           return;
         }
@@ -238,6 +238,6 @@ final class ol {
     }
 
     static {
-        field_b = "Average rating";
+        muGamelistAvgRating = "Average rating";
     }
 }

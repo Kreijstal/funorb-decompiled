@@ -46,9 +46,9 @@ final class wf {
 
     final static void a(boolean param0, String param1, int param2) {
         try {
-          ep.field_z = true;
-          to.field_q = param0 ? true : false;
-          d.field_d = new qq(wd.field_Ub, bi.field_e, param1, ro.field_e, to.field_q);
+          NetworkGameClient.field_z = true;
+          PolarBallSkin.field_q = param0 ? true : false;
+          d.field_d = new qq(wd.field_Ub, bi.field_e, param1, ro.field_e, PolarBallSkin.field_q);
           wd.field_Ub.b(d.field_d, 30000);
           if (param2 > -122) {
             field_a = (Sprite) null;
@@ -110,23 +110,23 @@ final class wf {
           dr.a((String) null, -1, 0L, param2.g(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
           if (param2.field_ec && (param2.field_Yb == 2 ||
             !(hq.field_i < 2))) {
-            var9 = vl.field_m;
-            var10 = nr.a(new String[]{param3}, param0 + 109, PacketBuffer.field_w);
+            var9 = PlasmaBallSkin.field_m;
+            var10 = nr.a(new String[]{param3}, param0 + 109, PacketBuffer.spectateXsGame);
             var9.field_n.a(var10, 17130, 10);
           }
-          vl.field_m.b(2616);
+          PlasmaBallSkin.field_m.b(2616);
           if (param1) {
-            if (ka.field_r != vl.field_m.field_b) {
-              var13 = vl.field_m;
-              var14 = nr.a(new String[]{param3}, param0 + 109, bi.field_c);
+            if (ka.field_r != PlasmaBallSkin.field_m.field_b) {
+              var13 = PlasmaBallSkin.field_m;
+              var14 = nr.a(new String[]{param3}, param0 + 109, bi.showPlayersInXsGame);
               var13.field_n.a(var14, param0 + 17240, 15);
             } else {
-              var11 = vl.field_m;
-              var12 = nr.a(new String[]{param3}, -1, jj.field_P);
+              var11 = PlasmaBallSkin.field_m;
+              var12 = nr.a(new String[]{param3}, -1, jj.hidePlayersInXsGame);
               var11.field_n.a(var12, 17130, 16);
             }
           }
-          var15 = vl.field_m;
+          var15 = PlasmaBallSkin.field_m;
           if (param0 != -110) {
             field_a = (Sprite) null;
           }

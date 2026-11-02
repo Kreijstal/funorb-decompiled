@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vq extends vh {
-    static String field_bc;
+    static String rule12;
     private Sprite[] field_Pb;
     static Sprite field_Yb;
     private int field_cc;
     private int field_Nb;
     static int[] field_Ub;
     private vh field_Wb;
-    static String field_Zb;
+    static String youPlayer;
     static String field_Xb;
     private int field_Qb;
     static boolean field_Sb;
@@ -23,11 +23,11 @@ final class vq extends vh {
     private int field_Vb;
 
     public static void f(int param0) {
-        field_bc = null;
+        rule12 = null;
         if (param0 < 109) {
           field_Yb = (Sprite) null;
         }
-        field_Zb = null;
+        youPlayer = null;
         field_Ub = null;
         field_Xb = null;
         field_Yb = null;
@@ -83,7 +83,7 @@ final class vq extends vh {
         int var7Lifetime1;
         int var8Lifetime1;
         if (this.field_Nb == 0) {
-          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Wb, (Sprite) null, np.field_g);
+          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Wb, (Sprite) null, np.noOptionsAvailable);
           this.field_Rb[this.field_Nb].field_cb = 1;
           this.a(76, this.field_Rb[this.field_Nb]);
           this.field_dc[this.field_Nb] = -1;
@@ -166,8 +166,8 @@ final class vq extends vh {
     }
 
     static {
-        field_Zb = "You";
+        youPlayer = "You";
         field_Ub = new int[3];
-        field_bc = "Disruptive behaviour";
+        rule12 = "Disruptive behaviour";
     }
 }

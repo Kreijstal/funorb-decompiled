@@ -5,13 +5,13 @@ import java.util.*;
 
 final class oh {
     static int[] field_d;
-    static String field_f;
+    static String playerXLostTwoLives;
     static long field_e;
-    static String field_g;
+    static String createAlertDoublespace;
     static boolean field_h;
     private java.util.zip.Inflater field_b;
     static ai field_c;
-    static String field_a;
+    static String raTitle;
 
     final static qr a(int param0, String param1) {
         int var2_int = 0;
@@ -104,22 +104,22 @@ final class oh {
     }
 
     public static void a(byte param0) {
-        field_f = null;
+        playerXLostTwoLives = null;
         if (param0 >= -82) {
           return;
         }
         field_d = null;
-        field_a = null;
+        raTitle = null;
         field_c = null;
-        field_g = null;
+        createAlertDoublespace = null;
     }
 
     static {
         field_d = new int[12];
-        field_g = "Names cannot contain consecutive spaces";
+        createAlertDoublespace = "Names cannot contain consecutive spaces";
         field_e = 20000000L;
         field_h = false;
-        field_f = "<%0> lost 2 lives!";
-        field_a = "Report abuse";
+        playerXLostTwoLives = "<%0> lost 2 lives!";
+        raTitle = "Report abuse";
     }
 }

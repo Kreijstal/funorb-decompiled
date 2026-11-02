@@ -3,14 +3,14 @@
  */
 abstract class tj extends oe {
     private int field_cb;
-    static String field_eb;
+    static String tutorialCameraZoom;
     private int field_X;
     private int field_Y;
     static int field_fb;
     static int[][] field_ab;
     private int field_Z;
     private int field_db;
-    static String field_W;
+    static String playersInGame;
     private int field_bb;
 
     boolean g(byte param0) {
@@ -113,10 +113,10 @@ abstract class tj extends oe {
           if (!uj.field_d.a("commonui", param0 - 19535)) {
             return 57;
           }
-          if (!vf.field_nb.d(-96)) {
+          if (!PolarTableScene.field_nb.d(-96)) {
             return 71;
           }
-          if (!vf.field_nb.a("commonui", 0)) {
+          if (!PolarTableScene.field_nb.a("commonui", 0)) {
             return 80;
           }
           if (!DualLinkNode.field_r.d(47)) {
@@ -132,10 +132,10 @@ abstract class tj extends oe {
           if (!uj.field_d.a("commonui", 0)) {
             return 40;
           }
-          if (!vf.field_nb.d(104)) {
+          if (!PolarTableScene.field_nb.d(104)) {
             return 50;
           }
-          if (!vf.field_nb.a("commonui", param0 ^ 19535)) {
+          if (!PolarTableScene.field_nb.a("commonui", param0 ^ 19535)) {
             return 60;
           }
           if (!DualLinkNode.field_r.d(114)) {
@@ -156,8 +156,8 @@ abstract class tj extends oe {
           tj.i(83);
         }
         field_ab = (int[][]) null;
-        field_W = null;
-        field_eb = null;
+        playersInGame = null;
+        tutorialCameraZoom = null;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -311,7 +311,7 @@ abstract class tj extends oe {
     }
 
     static {
-        field_W = "Players: ";
-        field_eb = "To <u=ffffff>zoom</u> in and out: Use the <img=1> <col=99ff99>mouse wheel</col>, or hold <img=11>+<img=0> left mouse button and drag.";
+        playersInGame = "Players: ";
+        tutorialCameraZoom = "To <u=ffffff>zoom</u> in and out: Use the <img=1> <col=99ff99>mouse wheel</col>, or hold <img=11>+<img=0> left mouse button and drag.";
     }
 }

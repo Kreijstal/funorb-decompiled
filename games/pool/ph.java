@@ -4,11 +4,11 @@
 final class ph {
     static int[] field_g;
     static vh field_d;
-    static String field_a;
+    static String tutorialLose;
     static volatile long field_b;
     static Sprite field_f;
     static int field_e;
-    static String field_c;
+    static String rmXFromIgnore;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -39,7 +39,7 @@ final class ph {
             stackIn_6_0 = var2;
             return stackIn_6_0;
           }
-          if (ep.field_z) {
+          if (NetworkGameClient.field_z) {
             stackIn_9_0 = 3;
             return stackIn_9_0;
           }
@@ -65,20 +65,20 @@ final class ph {
 
     public static void a(boolean param0) {
         field_g = null;
-        field_a = null;
-        field_c = null;
+        tutorialLose = null;
+        rmXFromIgnore = null;
         field_d = null;
         if (!param0) {
           field_f = null;
           return;
         }
-        field_a = (String) null;
+        tutorialLose = (String) null;
         field_f = null;
     }
 
     static {
-        field_c = "Remove <%0> from ignore list";
+        rmXFromIgnore = "Remove <%0> from ignore list";
         field_b = 0L;
-        field_a = "You would have lost!";
+        tutorialLose = "You would have lost!";
     }
 }

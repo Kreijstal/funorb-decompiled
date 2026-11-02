@@ -7,7 +7,7 @@ final class oi extends IntrusiveNode {
     int field_m;
     static Sprite field_o;
     int field_u;
-    static String field_r;
+    static String checking;
     int field_l;
     static vh field_q;
     int field_p;
@@ -22,11 +22,11 @@ final class oi extends IntrusiveNode {
         field_q = null;
         field_n = null;
         if (param0 <= -92) {
-          field_r = null;
+          checking = null;
           return;
         }
         oi.c((byte) 126);
-        field_r = null;
+        checking = null;
     }
 
     private oi() throws Throwable {
@@ -35,6 +35,6 @@ final class oi extends IntrusiveNode {
 
     static {
         field_w = new int[8192];
-        field_r = "Checking";
+        checking = "Checking";
     }
 }

@@ -3,13 +3,13 @@
  */
 final class hk extends kb {
     private long field_k;
-    static String field_u;
+    static String rule11;
     private long[] field_o;
     static String[] field_n;
     private long field_m;
     private long field_p;
     static Sprite field_r;
-    static String field_q;
+    static String youNowHaveNLives;
     private int field_l;
     private int field_j;
     static vh field_t;
@@ -127,7 +127,7 @@ final class hk extends kb {
                 }
                 var10[var12Lifetime1 + var14] = param2.field_D[var14];
               } else {
-                var8[var12Lifetime1 + var14] = w.field_m;
+                var8[var12Lifetime1 + var14] = w.quickchatHelp;
                 var9[var14 + var12Lifetime1] = param2.field_A[var14];
                 var10[var12Lifetime1 + var14] = param2.field_D[var14];
               }
@@ -183,8 +183,8 @@ final class hk extends kb {
 
     public static void c(byte param0) {
         field_n = null;
-        field_u = null;
-        field_q = null;
+        rule11 = null;
+        youNowHaveNLives = null;
         field_r = null;
         if (param0 != 122) {
           hk.c(-66);
@@ -210,7 +210,7 @@ final class hk extends kb {
         if (oc.field_t != null) {
           return oc.field_t;
         }
-        return (java.applet.Applet) ((Object) ni.field_ib);
+        return (java.applet.Applet) ((Object) ModernTableScene.field_ib);
     }
 
     final static void c(int param0) {
@@ -219,7 +219,7 @@ final class hk extends kb {
           return;
         }
         int var2 = ok.k((byte) 59);
-        db.field_Vb.a((kp.field_d << 1) + var1, ba.field_wb - qe.field_o, -6316, kk.field_z - kp.field_d, (qe.field_o << 1) + var2);
+        db.field_Vb.a((kp.field_d << 1) + var1, ba.field_wb - ShotRecord.field_o, -6316, kk.field_z - kp.field_d, (ShotRecord.field_o << 1) + var2);
         jj.h(-9395);
     }
 
@@ -331,8 +331,8 @@ final class hk extends kb {
     }
 
     static {
-        field_u = "Solicitation";
-        field_q = "You now have <%0> lives";
+        rule11 = "Solicitation";
+        youNowHaveNLives = "You now have <%0> lives";
         field_r = new Sprite(360, 240);
     }
 }

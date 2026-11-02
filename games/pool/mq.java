@@ -5,11 +5,11 @@ final class mq implements Runnable {
     volatile AudioOutput[] field_e;
     PlatformTaskDispatcher field_i;
     volatile boolean field_h;
-    static String field_b;
+    static String muOptionsDontmind;
     static int field_f;
     static AsyncRequest field_c;
     static Sprite field_a;
-    static String field_g;
+    static String loadingSoundeffects;
     volatile boolean field_d;
 
     final static void a(vh param0, byte param1) {
@@ -43,8 +43,8 @@ final class mq implements Runnable {
         if (null != kk.field_B) {
           pp.a(kk.field_B, 1259627265);
         }
-        if (vl.field_m != null) {
-          vl.field_m.a(param1, 12887);
+        if (PlasmaBallSkin.field_m != null) {
+          PlasmaBallSkin.field_m.a(param1, 12887);
         }
         re.a(-113, param1);
         if (param0 != 0) {
@@ -87,17 +87,17 @@ final class mq implements Runnable {
     }
 
     public static void a(boolean param0) {
-        field_g = null;
+        loadingSoundeffects = null;
         if (param0) {
           return;
         }
-        field_b = null;
+        muOptionsDontmind = null;
         field_a = null;
         field_c = null;
     }
 
     static {
-        field_b = "Don't mind";
-        field_g = "Loading sound effects";
+        muOptionsDontmind = "Don't mind";
+        loadingSoundeffects = "Loading sound effects";
     }
 }

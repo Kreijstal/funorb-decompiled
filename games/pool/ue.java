@@ -3,7 +3,7 @@
  */
 final class ue {
     static Sprite field_c;
-    static String field_d;
+    static String next;
     static IntrusiveDeque field_b;
     static int field_a;
     static int field_e;
@@ -115,14 +115,14 @@ final class ue {
         if (param0 == 11) {
           bi.field_f = true;
           ia.field_k = rl.a((byte) -110) + 15000L;
-          return 11 == fk.field_ab ? true : false;
+          return 11 == PlasmaTableScene.field_ab ? true : false;
         }
         return false;
     }
 
     public static void b(boolean param0) {
         field_c = null;
-        field_d = null;
+        next = null;
         field_b = null;
         if (param0) {
           String var2 = (String) null;
@@ -163,7 +163,7 @@ final class ue {
     }
 
     static {
-        field_d = "Next";
+        next = "Next";
         field_e = 2048;
         field_b = new IntrusiveDeque();
     }

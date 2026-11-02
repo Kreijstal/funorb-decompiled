@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr extends IntrusiveNode {
-    static String field_q;
+final class PotEvent extends IntrusiveNode {
+    static String tutorialLoseNineBallGame;
     static int[] field_p;
     static int field_l;
-    static String field_s;
-    int field_r;
+    static String gameoptMoreratedgames;
+    int pocketIndex;
     static Sprite field_m;
-    int field_n;
+    int ballIndex;
     static PcmSample field_o;
-    static String field_t;
+    static String mbAchievementCount2;
 
     final static int a(int param0, double param1) {
         if (param0 != 4885) {
-          cr.a((byte) -24, 59L);
+          PotEvent.a((byte) -24, 59L);
           return ud.a(param1, 3, 1);
         }
         return ud.a(param1, 3, 1);
@@ -42,35 +42,35 @@ final class cr extends IntrusiveNode {
         field_o = null;
         field_p = null;
         if (param0 >= 45) {
-          field_t = null;
+          mbAchievementCount2 = null;
           field_m = null;
-          field_q = null;
-          field_s = null;
+          tutorialLoseNineBallGame = null;
+          gameoptMoreratedgames = null;
           return;
         }
         field_o = (PcmSample) null;
-        field_t = null;
+        mbAchievementCount2 = null;
         field_m = null;
-        field_q = null;
-        field_s = null;
+        tutorialLoseNineBallGame = null;
+        gameoptMoreratedgames = null;
     }
 
     final static double a(byte param0, long param1) {
         if (param0 != 89) {
-          cr.a(-26, 0.6233354276237926);
+          PotEvent.a(-26, 0.6233354276237926);
           return bb.a((byte) -107, 16, param1);
         }
         return bb.a((byte) -107, 16, param1);
     }
 
-    cr(int param0, int param1) {
-        this.field_r = param1;
-        this.field_n = param0;
+    PotEvent(int param0, int param1) {
+        this.pocketIndex = param1;
+        this.ballIndex = param0;
     }
 
     static {
-        field_s = "You need to play <%0> more rated games to unlock this option.";
-        field_q = "You potted the 9 ball illegally. I will re-spot it for you so you can continue.";
-        field_t = "achievements to collect";
+        gameoptMoreratedgames = "You need to play <%0> more rated games to unlock this option.";
+        tutorialLoseNineBallGame = "You potted the 9 ball illegally. I will re-spot it for you so you can continue.";
+        mbAchievementCount2 = "achievements to collect";
     }
 }

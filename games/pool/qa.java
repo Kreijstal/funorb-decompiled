@@ -3,25 +3,25 @@
  */
 final class qa extends IntrusiveNode {
     int field_s;
-    static String field_u;
+    static String reject;
     qa field_l;
     static BitmapFont field_t;
     int field_p;
-    static String field_m;
+    static String rulePillar1;
     int field_q;
     static vh field_v;
     int field_n;
     int field_w;
     static int field_r;
-    static String field_o;
+    static String playersXOfY;
 
-    final static void a(int[][] param0, bf[] param1, pq[] param2, int param3) {
+    final static void a(int[][] param0, CushionSegment[] param1, Ball[] param2, int param3) {
         int dupTemp$1 = 0;
-        pq[] var4 = null;
+        Ball[] var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        pq[] var6 = null;
-        pq[] var7 = null;
+        Ball[] var6 = null;
+        Ball[] var7 = null;
         int var8 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -32,7 +32,7 @@ final class qa extends IntrusiveNode {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        pq[] var4Lifetime1;
+        Ball[] var4Lifetime1;
         int var5Lifetime1;
         try {
           hb.field_s = -1;
@@ -41,7 +41,7 @@ final class qa extends IntrusiveNode {
           var6 = param2;
           var4 = var6;
           for (var5 = 0; var6.length > var5; var5++) {
-            var6[var5].field_w = 0;
+            var6[var5].lastAdvanceTime = 0;
           }
           var4_int = 0;
           do {
@@ -53,7 +53,7 @@ final class qa extends IntrusiveNode {
           var8 = param3;
           var5Lifetime1 = var8;
           while (var8 < var7.length) {
-            if (var7[var8].field_s) {
+            if (var7[var8].inPlay) {
               var7[var8].a(false);
             }
             var8++;
@@ -86,13 +86,13 @@ final class qa extends IntrusiveNode {
     }
 
     public static void c(byte param0) {
-        field_o = null;
+        playersXOfY = null;
         field_t = null;
-        field_m = null;
-        field_u = null;
+        rulePillar1 = null;
+        reject = null;
         field_v = null;
         if (param0 < 4) {
-          field_u = (String) null;
+          reject = (String) null;
         }
     }
 
@@ -100,7 +100,7 @@ final class qa extends IntrusiveNode {
         try {
           SpriteState.field_x = param1;
           qg.field_a = param3;
-          wf.a(param0, gg.field_a, -126);
+          wf.a(param0, gg.loggingIn, -126);
           int var4_int = -110 % ((param2 + 30) / 57);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -149,7 +149,7 @@ final class qa extends IntrusiveNode {
           String var3 = (String) null;
           qa.a((String) null, 95);
         }
-        hm.a(param1, param0 - 19268);
+        Quaternion.a(param1, param0 - 19268);
     }
 
     final static String a(String param0, int param1) {
@@ -267,8 +267,8 @@ final class qa extends IntrusiveNode {
     }
 
     static {
-        field_u = "Reject";
-        field_m = "Respect";
-        field_o = "Players: <%0>/<%1>";
+        reject = "Reject";
+        rulePillar1 = "Respect";
+        playersXOfY = "Players: <%0>/<%1>";
     }
 }

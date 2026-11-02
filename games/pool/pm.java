@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pm extends IntrusiveNode {
-    static String field_o;
+    static String tickerHintRotate;
     static int field_p;
     so field_n;
     static vh field_m;
@@ -198,7 +198,7 @@ final class pm extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        field_o = null;
+        tickerHintRotate = null;
         field_m = null;
     }
 
@@ -212,6 +212,6 @@ final class pm extends IntrusiveNode {
 
     static {
         field_p = -1;
-        field_o = "Drag <img=2> or <img=9><img=0> to rotate.";
+        tickerHintRotate = "Drag <img=2> or <img=9><img=0> to rotate.";
     }
 }

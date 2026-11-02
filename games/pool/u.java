@@ -201,7 +201,7 @@ final class u {
             u.a((byte) 100, -4, 66, true, 88);
           }
           var27 = hr.field_n;
-          nk.field_a = 0;
+          TranslatedUiText.field_a = 0;
           PoolMatchController.field_W = 0;
           de.field_a = 0;
           var28 = gr.field_B;
@@ -232,7 +232,7 @@ final class u {
           }
           if (wn.field_d == null ||
             !(wn.field_d.length >= param12)) {
-            nk.field_b = new int[100 + param12];
+            TranslatedUiText.field_b = new int[100 + param12];
             wn.field_d = new int[param12 + 100];
             f.field_b = new int[param12 + 100];
           }
@@ -292,13 +292,13 @@ final class u {
                 if ((-var53 | (-var52 | -var51)) < 0) {
                   if (4 + var29 + param22 > qp.field_Yb.length) {
                     var54 = new int[var29 + (param22 + 104)];
-                    ArrayOperations.copy(qp.field_Yb, 0, var54, 0, nk.field_a);
+                    ArrayOperations.copy(qp.field_Yb, 0, var54, 0, TranslatedUiText.field_a);
                     qp.field_Yb = var54;
                     var54Lifetime4 = new int[104 + param22 + var29];
-                    ArrayOperations.copy(sa.field_r, 0, var54Lifetime4, 0, nk.field_a);
+                    ArrayOperations.copy(sa.field_r, 0, var54Lifetime4, 0, TranslatedUiText.field_a);
                     sa.field_r = var54Lifetime4;
                     var54Lifetime5 = new int[param22 - (-var29 - 104)];
-                    ArrayOperations.copy(ro.field_d, 0, var54Lifetime5, 0, nk.field_a);
+                    ArrayOperations.copy(ro.field_d, 0, var54Lifetime5, 0, TranslatedUiText.field_a);
                     ro.field_d = var54Lifetime5;
                   }
                   if ((4 + (var31 + param22)) > eh.field_w.length) {
@@ -312,7 +312,7 @@ final class u {
                     ArrayOperations.copy(sa.field_w, 0, var54Lifetime1Lifetime2, 0, de.field_a);
                     sa.field_w = var54Lifetime1Lifetime2;
                   }
-                  var55 = nk.field_a;
+                  var55 = TranslatedUiText.field_a;
                   var56 = de.field_a;
                   var57 = 0;
                   var58 = 0;
@@ -513,9 +513,9 @@ final class u {
                     var26[var58 + 12] = var62Lifetime2;
                     var58++;
                   }
-                  var29 = var29 + (var55 - nk.field_a);
+                  var29 = var29 + (var55 - TranslatedUiText.field_a);
                   var33Lifetime2 = PoolMatchController.field_W;
-                  nk.field_a = var55;
+                  TranslatedUiText.field_a = var55;
                   if (hi.field_k.length < (-2 + (var30 + param12 + var57))) {
                     var54Lifetime2 = new int[98 + param12 - (-var30 - var57)];
                     ArrayOperations.copy(hi.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
@@ -581,8 +581,8 @@ final class u {
                     ArrayOperations.copy(f.field_b, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
                     f.field_b = var54Lifetime3Lifetime1;
                     var54Lifetime3Lifetime2 = new int[98 + (var58 + (var32 + param12))];
-                    ArrayOperations.copy(nk.field_b, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
-                    nk.field_b = var54Lifetime3Lifetime2;
+                    ArrayOperations.copy(TranslatedUiText.field_b, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
+                    TranslatedUiText.field_b = var54Lifetime3Lifetime2;
                     if (param5 != null) {
                       var54Lifetime3Lifetime3 = new int[98 + (var32 + param12) + var58];
                       ArrayOperations.copy(la.field_d, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
@@ -597,7 +597,7 @@ final class u {
                   }
                   wn.field_d[var33Lifetime2] = var26[4];
                   f.field_b[var33Lifetime2] = var26[5];
-                  nk.field_b[var33Lifetime2] = var26[6];
+                  TranslatedUiText.field_b[var33Lifetime2] = var26[6];
                   if (null != param5) {
                     if (var64 != 0) {
                       la.field_d[var33Lifetime2] = var26[12];
@@ -612,7 +612,7 @@ final class u {
                   if (var58 == 4) {
                     wn.field_d[var33Lifetime2] = var26[6];
                     f.field_b[var33Lifetime2] = var26[7];
-                    nk.field_b[var33Lifetime2] = var26[4];
+                    TranslatedUiText.field_b[var33Lifetime2] = var26[4];
                     if (param5 != null) {
                       if (var64 == 0) {
                         la.field_d[var33Lifetime2] = var35;
@@ -663,7 +663,7 @@ final class u {
                     mj.field_a[var34] = var49;
                     sa.field_w[var34] = var50;
                   }
-                  nk.field_b[var33Lifetime2] = var34;
+                  TranslatedUiText.field_b[var33Lifetime2] = var34;
                   if (null != param5) {
                     la.field_d[var33Lifetime2] = param5[var38];
                     sl.field_V[var33Lifetime2] = param23[var38];
@@ -677,8 +677,8 @@ final class u {
                 var33Lifetime2 = fieldTemp$20;
                 var34 = var24[var39];
                 if (var34 < 0) {
-                  fieldTemp$21 = nk.field_a;
-                  nk.field_a = nk.field_a + 1;
+                  fieldTemp$21 = TranslatedUiText.field_a;
+                  TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                   var34 = fieldTemp$21;
                   var24[var39] = fieldTemp$21;
                   qp.field_Yb[var34] = var42;
@@ -688,8 +688,8 @@ final class u {
                 hi.field_k[var33Lifetime2] = var34;
                 var34 = var24[var40];
                 if (var34 < 0) {
-                  fieldTemp$22 = nk.field_a;
-                  nk.field_a = nk.field_a + 1;
+                  fieldTemp$22 = TranslatedUiText.field_a;
+                  TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                   var34 = fieldTemp$22;
                   var24[var40] = fieldTemp$22;
                   qp.field_Yb[var34] = var45;
@@ -699,8 +699,8 @@ final class u {
                 vn.field_h[var33Lifetime2] = var34;
                 var34 = var24[var41];
                 if (0 > var34) {
-                  fieldTemp$23 = nk.field_a;
-                  nk.field_a = nk.field_a + 1;
+                  fieldTemp$23 = TranslatedUiText.field_a;
+                  TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                   var34 = fieldTemp$23;
                   var24[var41] = fieldTemp$23;
                   qp.field_Yb[var34] = var48;
@@ -724,7 +724,7 @@ final class u {
             ja.field_a = param19;
             ld.field_g = param19;
             vk.field_bb = de.field_a;
-            nj.field_d = nk.field_a;
+            nj.field_d = TranslatedUiText.field_a;
             stackIn_266_0 = -1;
             stackIn_266_1 = ~param19;
           }
@@ -753,8 +753,8 @@ final class u {
                       var33Lifetime3 = param21.field_p[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$25 = nk.field_a;
-                        nk.field_a = nk.field_a + 1;
+                        fieldTemp$25 = TranslatedUiText.field_a;
+                        TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                         var34Lifetime1 = fieldTemp$25;
                         var24[var33Lifetime3] = fieldTemp$25;
                         qp.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
@@ -776,8 +776,8 @@ final class u {
                       var33Lifetime3 = param21.field_H[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$27 = nk.field_a;
-                        nk.field_a = nk.field_a + 1;
+                        fieldTemp$27 = TranslatedUiText.field_a;
+                        TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                         var34Lifetime1 = fieldTemp$27;
                         var24[var33Lifetime3] = fieldTemp$27;
                         qp.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
@@ -799,8 +799,8 @@ final class u {
                       var33Lifetime3 = param21.field_C[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$29 = nk.field_a;
-                        nk.field_a = nk.field_a + 1;
+                        fieldTemp$29 = TranslatedUiText.field_a;
+                        TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                         var34Lifetime1 = fieldTemp$29;
                         var24[var33Lifetime3] = fieldTemp$29;
                         qp.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
@@ -885,8 +885,8 @@ final class u {
                 return;
               }
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$42 = nk.field_a;
-                nk.field_a = nk.field_a + 1;
+                fieldTemp$42 = TranslatedUiText.field_a;
+                TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$42;
                 var24[var33Lifetime3Lifetime1] = fieldTemp$42;
                 qp.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
@@ -908,8 +908,8 @@ final class u {
               var33Lifetime3Lifetime1 = param4[var38Lifetime1Lifetime1];
               var34Lifetime1Lifetime1 = var24[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$44 = nk.field_a;
-                nk.field_a = nk.field_a + 1;
+                fieldTemp$44 = TranslatedUiText.field_a;
+                TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$44;
                 var24[var33Lifetime3Lifetime1] = fieldTemp$44;
                 qp.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
@@ -931,8 +931,8 @@ final class u {
               var33Lifetime3Lifetime1 = param16[var38Lifetime1Lifetime1];
               var34Lifetime1Lifetime1 = var24[var33Lifetime3Lifetime1];
               if (0 > var34Lifetime1Lifetime1) {
-                fieldTemp$46 = nk.field_a;
-                nk.field_a = nk.field_a + 1;
+                fieldTemp$46 = TranslatedUiText.field_a;
+                TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$46;
                 var24[var33Lifetime3Lifetime1] = fieldTemp$46;
                 qp.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
@@ -1063,7 +1063,7 @@ final class u {
             u.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (eg) null, 89, (int[]) null);
           }
           if (param3) {
-            stackIn_7_0 = bf.field_h;
+            stackIn_7_0 = CushionSegment.field_h;
           } else {
             stackIn_7_0 = hp.field_b;
           }

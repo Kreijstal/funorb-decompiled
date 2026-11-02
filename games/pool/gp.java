@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gp {
-    static int field_b;
+    static int keycodeDefaultUp1;
     static na field_d;
     static int field_c;
-    static String field_a;
+    static String createAlertNamelength;
     static int[] field_e;
 
     public static void a(int param0) {
-        field_a = null;
+        createAlertNamelength = null;
         field_e = null;
         if (param0 != 63) {
           return;
@@ -56,8 +56,8 @@ final class gp {
     }
 
     static {
-        field_b = 33;
-        field_a = "Names should contain a maximum of 12 characters";
+        keycodeDefaultUp1 = 33;
+        createAlertNamelength = "Names should contain a maximum of 12 characters";
         field_d = new na();
     }
 }

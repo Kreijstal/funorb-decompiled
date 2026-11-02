@@ -4,11 +4,11 @@
 final class jj extends fm implements tb {
     private fe field_O;
     private co field_N;
-    static String field_P;
+    static String hidePlayersInXsGame;
     static Sprite[] field_S;
-    static String field_R;
+    static String enterignoreDel;
     static int field_F;
-    static String field_Q;
+    static String tutorialTitleBasics;
 
     final static ie a(int param0, String param1) {
         int var2_int = 0;
@@ -54,7 +54,7 @@ final class jj extends fm implements tb {
               return stackIn_20_0;
             }
             var7 = var5[var6];
-            var8 = dl.a(105, var7);
+            var8 = Pocket.a(105, var7);
             if (var8 == null) {
               var6++;
               continue;
@@ -81,7 +81,7 @@ final class jj extends fm implements tb {
         super(param0, param1, param2, param3, (fp) null);
         this.field_N = new co(new om(10000536), nm.field_b, 0, 0, 140, 25);
         this.field_N.a(-15309, new sn());
-        this.field_O = new fe(fg.field_c, (cc) (this));
+        this.field_O = new fe(fg.cont, (cc) (this));
         this.field_L = new ei[]{(ei) ((Object) this.field_N), (ei) ((Object) this.field_O)};
         this.field_O.field_z = (fp) ((Object) new ng());
         this.e((byte) -72);
@@ -167,9 +167,9 @@ final class jj extends fm implements tb {
 
     public static void i(int param0) {
         field_S = null;
-        field_R = null;
-        field_P = null;
-        field_Q = null;
+        enterignoreDel = null;
+        hidePlayersInXsGame = null;
+        tutorialTitleBasics = null;
         if (param0 != 100) {
           field_S = (Sprite[]) null;
         }
@@ -224,7 +224,7 @@ final class jj extends fm implements tb {
     final void a(int param0, byte param1, int param2, int param3) {
         int var5 = 17 % ((-42 - param1) / 53);
         super.a(param0, (byte) 110, param2, param3);
-        qk.field_a.d(bl.field_t, this.field_C + (param2 + 4), 4 + (param3 + this.field_D) + qk.field_a.maxAscent, 16777215, -1);
+        PoolUiText.field_a.d(bl.dobEnterforchat, this.field_C + (param2 + 4), 4 + (param3 + this.field_D) + PoolUiText.field_a.maxAscent, 16777215, -1);
     }
 
     final void f(byte param0) {
@@ -238,8 +238,8 @@ final class jj extends fm implements tb {
     }
 
     static {
-        field_R = "Enter name of player to delete from list";
-        field_P = "Hide players in <%0>'s game";
-        field_Q = "Basics Tutorial";
+        enterignoreDel = "Enter name of player to delete from list";
+        hidePlayersInXsGame = "Hide players in <%0>'s game";
+        tutorialTitleBasics = "Basics Tutorial";
     }
 }

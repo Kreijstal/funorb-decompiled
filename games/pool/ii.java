@@ -3,20 +3,20 @@
  */
 final class ii {
     static vh field_e;
-    static String field_b;
+    static String createPasswordConfirmTooltip;
     static int field_d;
     static int field_a;
-    static String field_f;
-    static String field_c;
+    static String muXCannotJoinInprogress;
+    static String gameoptTrychanging1;
 
     public static void a(int param0) {
-        field_b = null;
+        createPasswordConfirmTooltip = null;
         if (param0 <= 126) {
           return;
         }
-        field_f = null;
+        muXCannotJoinInprogress = null;
         field_e = null;
-        field_c = null;
+        gameoptTrychanging1 = null;
     }
 
     final static Sprite a(int param0, IndexedSprite param1) {
@@ -162,7 +162,7 @@ final class ii {
                 var5 = va.a(var4, param1, 51);
               }
               if (ne.field_m == 1) {
-                var5 = ul.a((byte) 83, var4, param1);
+                var5 = HalloweenBallSkin.a((byte) 83, var4, param1);
               }
               if (ne.field_m == 2) {
                 var5 = jd.a(param1, var4, param0 ^ -31666);
@@ -199,9 +199,9 @@ final class ii {
 
     static {
         field_d = 0;
-        field_b = "Type your password again to make sure it's correct";
-        field_f = "<%0> cannot join; the game has started.";
-        field_c = "Try changing the '<%0>' setting.";
+        createPasswordConfirmTooltip = "Type your password again to make sure it's correct";
+        muXCannotJoinInprogress = "<%0> cannot join; the game has started.";
+        gameoptTrychanging1 = "Try changing the '<%0>' setting.";
         field_a = 0;
     }
 }

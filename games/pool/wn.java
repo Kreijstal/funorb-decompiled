@@ -9,7 +9,7 @@ final class wn {
     static fo field_a;
     static int field_h;
     static int field_j;
-    static String field_c;
+    static String ok;
     static int field_l;
     static PcmSample field_b;
     static Sprite field_e;
@@ -235,7 +235,7 @@ final class wn {
         field_g = null;
         field_f = null;
         field_e = null;
-        field_c = null;
+        ok = null;
         field_a = null;
         field_d = null;
         field_b = null;
@@ -367,7 +367,7 @@ final class wn {
 
     static {
         field_k = -1;
-        field_c = "OK";
+        ok = "OK";
         field_l = 62259;
         field_a = new fo();
         field_i = 0;

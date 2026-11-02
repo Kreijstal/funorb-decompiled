@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class gh extends vc {
-    static String field_Q;
+final class SpaceTableScene extends ModelTableScene {
+    static String waitingforFonts;
 
     final void a(byte param0, int[] param1) {
         int[] var3 = null;
@@ -73,7 +73,7 @@ final class gh extends vc {
             }
             break;
           }
-          bf.b((byte) 98);
+          CushionSegment.b((byte) 98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,12 +97,12 @@ final class gh extends vc {
           int var3_int = -40 / ((39 - param1) / 38);
           hj.field_j = param0.a("space_ball_4", true, "");
           wn.field_b = param0.a("space_ball_cushion1", true, "");
-          cr.field_o = param0.a("space_ball_cushion2", true, "");
+          PotEvent.field_o = param0.a("space_ball_cushion2", true, "");
           PacketBuffer.field_q = param0.a("space_ball_cushion3", true, "");
           qi.field_f = param0.a("space_ball_cushion4", true, "");
-          to.field_l = param0.a("space_respot_the_white", true, "");
+          PolarBallSkin.field_l = param0.a("space_respot_the_white", true, "");
           bh.field_a = param0.a("", "space_ball_pot", (byte) 125);
-          pq.field_L = param0.a("", "space_cue_hard", (byte) 126);
+          Ball.field_L = param0.a("", "space_cue_hard", (byte) 126);
           IsaacCipher.field_l = param0.a("", "space_cue_soft", (byte) 126);
           param0.a("", "cueball_rolling_loop", (byte) 125);
         } catch (RuntimeException runtimeException) {
@@ -135,7 +135,7 @@ final class gh extends vc {
             param1.field_m = 0.0;
           }
           if (param0) {
-            field_Q = (String) null;
+            waitingforFonts = (String) null;
           }
           var3_double = param1.d(8);
           if (var3_double > 2048.0) {
@@ -170,7 +170,7 @@ final class gh extends vc {
         try {
           var3_int = param0.field_eb.b(-127) + (this.field_B.field_A >> 1);
           if (param1 != 10) {
-            field_Q = (String) null;
+            waitingforFonts = (String) null;
           }
           if (var3_int > 0) {
             var4 = (int)(-param0.field_eb.a(true) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
@@ -208,14 +208,14 @@ final class gh extends vc {
         try {
           this.field_B = new Sprite(param1.a(false, "nebula.jpg", ""), (java.awt.Component) ((Object) vj.a((byte) -73)));
           if (param0 != 5) {
-            field_Q = (String) null;
+            waitingforFonts = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "gh.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(al param0, int param1) {
+    final void a(PoolGameModel param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -296,10 +296,10 @@ final class gh extends vc {
     }
 
     public static void e(byte param0) {
-        field_Q = null;
+        waitingforFonts = null;
         if (param0 != -116) {
           String var2 = (String) null;
-          gh.a((String) null, 16);
+          SpaceTableScene.a((String) null, 16);
         }
     }
 
@@ -333,13 +333,13 @@ final class gh extends vc {
               }
             } else {
               if (var6 == 7) {
-                kp.a(100, pq.field_L, param3, param1);
+                kp.a(100, Ball.field_L, param3, param1);
               } else {
                 if (var6 == 8) {
                   kp.a(100, IsaacCipher.field_l, param3, param1);
                 } else {
                   if (var6 == 6) {
-                    kp.a(100, to.field_l, param3, param1);
+                    kp.a(100, PolarBallSkin.field_l, param3, param1);
                   } else {
                     if (var6 == 4) {
                       kp.a(100, bh.field_a, param3, param1);
@@ -363,7 +363,7 @@ final class gh extends vc {
                 }
               }
             } else {
-              kp.a(100, cr.field_o, param3, param1);
+              kp.a(100, PotEvent.field_o, param3, param1);
             }
           }
         }
@@ -381,14 +381,14 @@ final class gh extends vc {
         int[] stackIn_47_1;
         int stackIn_47_2;
         boolean stackIn_47_3;
-        pq[] stackIn_47_4;
+        Ball[] stackIn_47_4;
         Object stackIn_48_0;
         boolean stackIn_48_5;
         RuntimeException stackIn_58_0 = null;
         StringBuilder stackIn_58_1 = null;
         String stackIn_59_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pq[] var3 = null;
+        Ball[] var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int[] var5_ref_int__ = null;
@@ -411,7 +411,7 @@ final class gh extends vc {
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
-        pq[] var25 = null;
+        Ball[] var25 = null;
         so var26 = null;
         so var28 = null;
         so var30 = null;
@@ -450,7 +450,7 @@ final class gh extends vc {
         int var5Lifetime2;
         var10 = Pool.field_O;
         try {
-          var25 = param1.field_I.field_l;
+          var25 = param1.field_I.balls;
           var3 = var25;
           var57 = f.a((byte) 109, param1.field_ab);
           var24 = var57;
@@ -534,7 +534,7 @@ final class gh extends vc {
           var26 = ig.field_h;
           var88 = oh.field_d;
           if (param0 != -55) {
-            field_Q = (String) null;
+            waitingforFonts = (String) null;
           }
           var26.b((byte) -108, 0, var26.field_j.length, var88);
           var28 = ff.field_d;
@@ -585,7 +585,7 @@ final class gh extends vc {
               SoftwareRasterizer.a(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ng.field_t.length + 2 << 3, 255, dg.field_K);
             }
           }
-          hb.field_k.a(qk.field_d, uh.field_t[1], 4096, (byte) 113, uh.field_t[0]);
+          hb.field_k.a(PoolUiText.field_d, uh.field_t[1], 4096, (byte) 113, uh.field_t[0]);
           var16 = f.a((byte) -68, var57);
           var94 = var16;
           var16[0] = var16[0] - 2304;
@@ -622,7 +622,7 @@ final class gh extends vc {
             stackIn_47_2 = 73;
             stackIn_47_3 = true;
             stackIn_47_4 = var3;
-            if (param1.field_I.j(76).field_q != 0) {
+            if (param1.field_I.currentShot(76).field_q != 0) {
               stackIn_48_0 = this;
               stackIn_48_5 = false;
             } else {
@@ -687,7 +687,7 @@ final class gh extends vc {
               return true;
             }
             if (param1 != 28350) {
-              field_Q = (String) null;
+              waitingforFonts = (String) null;
             }
             return false;
           }
@@ -770,8 +770,8 @@ final class gh extends vc {
           incrementValue$18 = var3_int;
           var3_int++;
           this.field_O[incrementValue$18] = eg.a(param0, "", "space_table/space_hole_a");
-          qe.field_J = var3_int;
-          vp.field_f = var3_int;
+          ShotRecord.field_J = var3_int;
+          TimeTrialRules.field_f = var3_int;
           incrementValue$19 = var3_int;
           var3_int++;
           this.field_O[incrementValue$19] = eg.a(param0, "", "space_table/space_hole_b");
@@ -789,7 +789,7 @@ final class gh extends vc {
           incrementValue$23 = var3_int;
           var3_int++;
           this.field_O[incrementValue$23] = eg.a(param0, "", "space_table/space_side_c");
-          to.field_o = var3_int;
+          PolarBallSkin.field_o = var3_int;
           rk.field_d = var3_int;
           incrementValue$24 = var3_int;
           var3_int++;
@@ -870,7 +870,7 @@ final class gh extends vc {
 
     private final void m(int param0) {
         if (param0 != 0) {
-          gh.f(false);
+          SpaceTableScene.f(false);
         }
     }
 
@@ -892,7 +892,7 @@ final class gh extends vc {
         int var8 = 0;
         int var11 = Pool.field_O;
         int var3 = 0;
-        so dupTemp$0 = new so((vp.field_f - nr.field_eb) * 4 + 2 * (-qe.field_J + up.field_l));
+        so dupTemp$0 = new so((TimeTrialRules.field_f - nr.field_eb) * 4 + 2 * (-ShotRecord.field_J + up.field_l));
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -901,13 +901,13 @@ final class gh extends vc {
         wb.field_c = dupTemp$0;
         so dupTemp$1 = new so(4 * (-rk.field_d + pc.field_b));
         ff.field_d = dupTemp$1;
-        so dupTemp$2 = new so(4 * (-vn.field_f + to.field_o));
+        so dupTemp$2 = new so(4 * (-vn.field_f + PolarBallSkin.field_o));
         tq.field_o = dupTemp$2;
         so dupTemp$3 = hc.a(this.field_O[ph.field_e], this.field_M[ph.field_e], (byte) 101);
         ij.field_o = dupTemp$3;
         lq.field_R = new so(new so[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
         var3 = 0;
-        for (var2 = nr.field_eb; var2 < vp.field_f; var2++) {
+        for (var2 = nr.field_eb; var2 < TimeTrialRules.field_f; var2++) {
           var4 = var2;
           var12 = wb.field_c.field_b;
           var6 = var3;
@@ -915,7 +915,7 @@ final class gh extends vc {
           bh.a(var12, false, var25[1], var25[2], this.field_O[var4], var25[0], var6);
           var3 += 4;
         }
-        for (var2Lifetime1 = qe.field_J; up.field_l > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = ShotRecord.field_J; up.field_l > var2Lifetime1; var2Lifetime1++) {
           var4 = var2Lifetime1;
           var14 = wb.field_c.field_b;
           var6 = var3;
@@ -923,7 +923,7 @@ final class gh extends vc {
           var3 += 2;
         }
         if (!param0) {
-          field_Q = (String) null;
+          waitingforFonts = (String) null;
         }
         var3Lifetime1 = 0;
         for (var2Lifetime2 = rk.field_d; var2Lifetime2 < pc.field_b; var2Lifetime2++) {
@@ -935,7 +935,7 @@ final class gh extends vc {
           var3Lifetime1 += 4;
         }
         var3Lifetime2 = 0;
-        for (var2Lifetime3 = vn.field_f; var2Lifetime3 < to.field_o; var2Lifetime3++) {
+        for (var2Lifetime3 = vn.field_f; var2Lifetime3 < PolarBallSkin.field_o; var2Lifetime3++) {
           var4 = var2Lifetime3;
           var17 = tq.field_o.field_b;
           var6 = var3Lifetime2;
@@ -1082,10 +1082,10 @@ final class gh extends vc {
         }
     }
 
-    gh() {
+    SpaceTableScene() {
     }
 
     static {
-        field_Q = "Waiting for fonts";
+        waitingforFonts = "Waiting for fonts";
     }
 }

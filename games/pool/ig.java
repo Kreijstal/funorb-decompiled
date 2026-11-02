@@ -3,7 +3,7 @@
  */
 abstract class ig extends gg implements pe {
     private sl field_l;
-    static String field_k;
+    static String unableToDeleteIgnore;
     static Sprite field_i;
     static so field_h;
     static qr field_j;
@@ -45,7 +45,7 @@ abstract class ig extends gg implements pe {
     public final void a(sl param0, boolean param1) {
         try {
           if (param1) {
-            field_k = (String) null;
+            unableToDeleteIgnore = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ig.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -125,7 +125,7 @@ abstract class ig extends gg implements pe {
 
     public static void a(byte param0) {
         field_i = null;
-        field_k = null;
+        unableToDeleteIgnore = null;
         field_j = null;
         if (param0 < 85) {
           return;
@@ -143,6 +143,6 @@ abstract class ig extends gg implements pe {
     }
 
     static {
-        field_k = "Unable to delete name - system busy";
+        unableToDeleteIgnore = "Unable to delete name - system busy";
     }
 }

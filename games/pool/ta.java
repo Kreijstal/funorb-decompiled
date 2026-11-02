@@ -13,7 +13,7 @@ final class ta {
     static tq field_g;
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        tm.field_f = param3;
+        BallSkin.field_f = param3;
         vn.field_c = param2;
         ch.field_H = param1;
         int var4 = 5 / ((param0 + 30) / 63);

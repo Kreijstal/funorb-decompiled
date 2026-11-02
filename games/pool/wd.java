@@ -8,8 +8,8 @@ final class wd extends vh {
     private vh[] field_Nb;
     private vh[] field_Pb;
     static ph field_Lb;
-    static String field_Rb;
-    static String field_Ob;
+    static String loginm3;
+    static String fullscreen;
     private vh field_Tb;
     static lq field_Ub;
 
@@ -32,7 +32,7 @@ final class wd extends vh {
         }
         this.field_Tb.b(param2, 2147483647, 0, this.field_gb, this.field_Db - param2);
         if (param0 > -99) {
-          field_Rb = (String) null;
+          loginm3 = (String) null;
         }
         var8 = 0;
         var4Lifetime1 = var8;
@@ -48,10 +48,10 @@ final class wd extends vh {
 
     public static void f(int param0) {
         field_Lb = null;
-        field_Ob = null;
-        field_Rb = null;
+        fullscreen = null;
+        loginm3 = null;
         if (param0 != -1) {
-          field_Rb = (String) null;
+          loginm3 = (String) null;
         }
         field_Qb = null;
         field_Ub = null;
@@ -61,7 +61,7 @@ final class wd extends vh {
         if (param1 <= 51) {
           return (String) null;
         }
-        return ((param0 & nd.field_j) == 0 ? "" : "cont vis|") + ((sg.field_O & param0) == 0 ? "" : "gv visit+1|") + ((be.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & nr.field_Q) ? "" : "gv BiH anywhere|") + (0 != (nr.field_R & param0) ? "gv BiH kitchen|" : "") + ((nr.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ag.field_e & param0) != 0 ? "wins|" : "") + ((hm.field_e & param0) == 0 ? "" : "loses|") + ((param0 & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & um.field_c) ? "respot white|" : "") + ((param0 & ob.field_F) == 0 ? "" : "rerack|") + (0 != (ll.field_f & param0) ? "ends turn|" : "");
+        return ((param0 & nd.field_j) == 0 ? "" : "cont vis|") + ((sg.field_O & param0) == 0 ? "" : "gv visit+1|") + ((be.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & nr.field_Q) ? "" : "gv BiH anywhere|") + (0 != (nr.field_R & param0) ? "gv BiH kitchen|" : "") + ((nr.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ag.field_e & param0) != 0 ? "wins|" : "") + ((Quaternion.field_e & param0) == 0 ? "" : "loses|") + ((param0 & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & um.field_c) ? "respot white|" : "") + ((param0 & ob.field_F) == 0 ? "" : "rerack|") + (0 != (ll.field_f & param0) ? "ends turn|" : "");
     }
 
     wd(long param0, vh param1, String[] param2, vh param3, vh[] param4, int param5) {
@@ -166,7 +166,7 @@ final class wd extends vh {
     static {
         field_Qb = new int[64];
         field_Sb = false;
-        field_Rb = "Connection timed out. Please try using a different server.";
-        field_Ob = "Fullscreen";
+        loginm3 = "Connection timed out. Please try using a different server.";
+        fullscreen = "Fullscreen";
     }
 }

@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class eq extends ch implements sc {
-    static String field_O;
+    static String offerdraw;
     static int field_W;
     static int field_R;
-    static String field_T;
+    static String ratingRating;
     static eh field_V;
     static Sprite[] field_Q;
-    static String field_N;
+    static String tutorialNineBallAfterbreak;
     static int field_Y;
     static int field_U;
     static int field_S;
     private sn field_X;
-    static String field_P;
+    static String rule00;
 
     abstract int h(int param0);
 
@@ -61,11 +61,11 @@ abstract class eq extends ch implements sc {
 
     public static void i(int param0) {
         field_V = null;
-        field_O = null;
-        field_N = null;
-        field_T = null;
+        offerdraw = null;
+        tutorialNineBallAfterbreak = null;
+        ratingRating = null;
         field_Q = null;
-        field_P = null;
+        rule00 = null;
         if (param0 != -12253) {
           field_Q = (Sprite[]) null;
         }
@@ -101,10 +101,10 @@ abstract class eq extends ch implements sc {
         cm discarded$20 = new cm(6, 180, 460, 160, 24, new int[]{28, 27, 64, 63, 45, 44, 46, 8, 65});
         sg discarded$21 = new sg(7, 180, 460, 160, 24, new int[]{29, 30, 31, 32, 33, 8});
         og discarded$22 = new og(df.field_i, 1, 180, 460, 160, 24, new int[]{40, 41, 42, 8});
-        pq.field_H = mc.field_e.b(nk.field_f[20]) + 10;
-        var1 = 10 + mc.field_e.b(nk.field_f[21]);
-        if (!(pq.field_H >= var1)) {
-          pq.field_H = var1;
+        Ball.field_H = FreePlayRules.field_e.b(TranslatedUiText.field_f[20]) + 10;
+        var1 = 10 + FreePlayRules.field_e.b(TranslatedUiText.field_f[21]);
+        if (!(Ball.field_H >= var1)) {
+          Ball.field_H = var1;
         }
         jo.f((byte) -104);
     }
@@ -171,11 +171,11 @@ abstract class eq extends ch implements sc {
     }
 
     static {
-        field_O = "Offer draw";
+        offerdraw = "Offer draw";
         field_V = null;
         field_W = -1;
-        field_N = "The key rule of nine-ball pool is that you must always hit the lowest numbered ball on the table first. Try this now, the ball you should be aiming for is indicated in the top-left corner.";
-        field_T = "Rating";
-        field_P = "Buying or selling an account";
+        tutorialNineBallAfterbreak = "The key rule of nine-ball pool is that you must always hit the lowest numbered ball on the table first. Try this now, the ball you should be aiming for is indicated in the top-left corner.";
+        ratingRating = "Rating";
+        rule00 = "Buying or selling an account";
     }
 }

@@ -6,8 +6,8 @@ import java.io.*;
 final class v {
     private RandomAccessFile field_l;
     private long field_e;
-    static String field_d;
-    static String[] field_k;
+    static String muInvitePlayers;
+    static String[] goodShot;
     static int[] field_a;
     static int[] field_f;
     static byte[][] field_b;
@@ -92,12 +92,12 @@ final class v {
 
     public static void a(byte param0) {
         field_c = null;
-        field_d = null;
+        muInvitePlayers = null;
         if (param0 <= 125) {
           return;
         }
         field_b = (byte[][]) null;
-        field_k = null;
+        goodShot = null;
         field_i = null;
         field_g = null;
         field_f = null;
@@ -120,7 +120,7 @@ final class v {
         uq.field_D = null;
         if (oq.field_z != null) {
           pa.field_J = oq.field_z;
-          fj.field_j = lh.field_i;
+          NineBallRules.field_j = lh.field_i;
           pa.field_J.field_K = -1;
           oq.field_z = null;
           pa.field_J.field_P = -1;
@@ -184,8 +184,8 @@ final class v {
     }
 
     static {
-        field_d = "Invite players";
+        muInvitePlayers = "Invite players";
         field_f = new int[]{12, 20, 21, 49, 5, 7};
-        field_k = new String[]{"Nice shot!", "Well played!", "Good shot!"};
+        goodShot = new String[]{"Nice shot!", "Well played!", "Good shot!"};
     }
 }

@@ -8,7 +8,7 @@ final class IsaacCipher {
     static int field_e;
     static PcmSample field_l;
     static int field_d;
-    static String field_g;
+    static String escCancelprivatemessage;
     static int[] field_h;
     private int[] field_j;
     private int[] field_a;
@@ -18,13 +18,13 @@ final class IsaacCipher {
 
     public static void a(int param0) {
         field_f = null;
-        field_g = null;
+        escCancelprivatemessage = null;
         field_l = null;
         field_h = null;
         field_b = null;
         if (param0 >= 0) {
-          al var2 = (al) null;
-          IsaacCipher.a(57, (al) null);
+          PoolGameModel var2 = (PoolGameModel) null;
+          IsaacCipher.a(57, (PoolGameModel) null);
         }
     }
 
@@ -35,8 +35,8 @@ final class IsaacCipher {
         }
         int var3 = 2147483647 - (int)(4294967296L % (long)param1);
         if (param0 != 23165) {
-          al var5 = (al) null;
-          IsaacCipher.a(73, (al) null);
+          PoolGameModel var5 = (PoolGameModel) null;
+          IsaacCipher.a(73, (PoolGameModel) null);
         }
         do {
           var4 = this.a((byte) 7);
@@ -346,30 +346,30 @@ final class IsaacCipher {
         return this.field_j[fieldTemp$0];
     }
 
-    final static void a(int param0, al param1) {
+    final static void a(int param0, PoolGameModel param1) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         aa var3 = null;
-        qe var4 = null;
+        ShotRecord var4 = null;
         oq var5 = null;
         try {
           if (param0 != 2243) {
             field_d = 116;
           }
           var5 = new oq(4096);
-          var3 = new aa(param1.field_u);
-          if (param1.field_f instanceof af) {
+          var3 = new aa(param1.shots);
+          if (param1.rules instanceof EightBallRules) {
             var5.a(0, false);
           } else {
-            if (!(param1.field_f instanceof fj)) {
-              if (param1.field_f instanceof rj) {
+            if (!(param1.rules instanceof NineBallRules)) {
+              if (param1.rules instanceof KillerRules) {
                 var5.a(2, false);
               } else {
-                if (!(param1.field_f instanceof mc)) {
-                  if (param1.field_f instanceof vp) {
+                if (!(param1.rules instanceof FreePlayRules)) {
+                  if (param1.rules instanceof TimeTrialRules) {
                     var5.a(4, false);
                   } else {
                     var5.a(-1, false);
@@ -382,7 +382,7 @@ final class IsaacCipher {
               var5.a(1, false);
             }
           }
-          var4 = (qe) (var3.b((byte) -92));
+          var4 = (ShotRecord) (var3.b((byte) -92));
           while (var4 != null) {
             var5.a(true, var4.field_v);
             var5.a(var4.field_L, false);
@@ -402,7 +402,7 @@ final class IsaacCipher {
             if (var4.field_q >= 3) {
               var4.a(var5, (byte) 0);
             }
-            var4 = (qe) (var3.b(-126));
+            var4 = (ShotRecord) (var3.b(-126));
           }
           var5.a(true, -1);
           System.out.println("pool2:" + np.a(false, var5));
@@ -422,7 +422,7 @@ final class IsaacCipher {
     }
 
     static {
-        field_g = "ESC - cancel private message";
+        escCancelprivatemessage = "ESC - cancel private message";
         field_d = 0;
         field_h = new int[8192];
     }

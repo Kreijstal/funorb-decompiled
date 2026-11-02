@@ -3,22 +3,22 @@
  */
 final class fl extends IntrusiveNode {
     static vh field_q;
-    static int field_p;
+    static int keycodeDefaultUp2;
     int[] field_r;
-    static String field_m;
+    static String endOfGamePressEscapeToContinue;
     int field_o;
     static int field_l;
-    static String field_n;
+    static String quickchatLobby;
 
     public static void a(int param0) {
-        field_m = null;
+        endOfGamePressEscapeToContinue = null;
         field_q = null;
         if (param0 != 59) {
           fl.a(-121);
-          field_n = null;
+          quickchatLobby = null;
           return;
         }
-        field_n = null;
+        quickchatLobby = null;
     }
 
     final static void a(boolean param0) {
@@ -50,9 +50,9 @@ final class fl extends IntrusiveNode {
     }
 
     static {
-        field_p = 98;
-        field_m = "Press <img=3> to continue.";
-        field_n = "Quick Chat lobby";
+        keycodeDefaultUp2 = 98;
+        endOfGamePressEscapeToContinue = "Press <img=3> to continue.";
+        quickchatLobby = "Quick Chat lobby";
         field_l = 2000;
     }
 }

@@ -3,9 +3,9 @@
  */
 final class bh {
     static vh field_b;
-    static String field_c;
+    static String youCanNotSpectate;
     static PcmSample field_a;
-    static String field_d;
+    static String youAreOnYourLastLife;
 
     final static void a(so[] param0, boolean param1, int param2, int param3, eg param4, int param5, int param6) {
         eg var8 = null;
@@ -61,17 +61,17 @@ final class bh {
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
-        field_d = null;
+        youAreOnYourLastLife = null;
         if (param0) {
           bh.a(true);
-          field_c = null;
+          youCanNotSpectate = null;
           return;
         }
-        field_c = null;
+        youCanNotSpectate = null;
     }
 
     static {
-        field_d = "You are on your last life!";
-        field_c = "No spectators";
+        youAreOnYourLastLife = "You are on your last life!";
+        youCanNotSpectate = "No spectators";
     }
 }

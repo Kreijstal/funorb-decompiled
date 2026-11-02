@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi {
-    static String field_b;
+    static String muGamelistStatus;
     static int field_a;
-    static String field_c;
+    static String muLobbyRating;
     private int[] field_d;
-    static String field_e;
+    static String muChatGameFriendsOnly;
 
     final static char a(boolean param0, char param1) {
         int var2;
@@ -100,14 +100,14 @@ final class wi {
           wi.b(-79);
         }
         if (oj.c(-86)) {
-          qe.a(param6, param3, -40960, param4);
-          if (vl.field_m != null &&
-            vl.field_m.a(param2, param1, param4, 25427, param3)) {
+          ShotRecord.a(param6, param3, -40960, param4);
+          if (PlasmaBallSkin.field_m != null &&
+            PlasmaBallSkin.field_m.a(param2, param1, param4, 25427, param3)) {
             param4 = false;
             wa.m(8421504);
           }
           ii.a(-31668, param3, param4);
-          vl.a(true, param0, param4);
+          PlasmaBallSkin.a(true, param0, param4);
           param4 = false;
         }
         return param4;
@@ -115,19 +115,19 @@ final class wi {
 
     final static void a(boolean param0) {
         oc.d(-97);
-        sq.b((byte) 118);
+        GameRules.b((byte) 118);
         if (!param0) {
-          field_e = (String) null;
+          muChatGameFriendsOnly = (String) null;
         }
     }
 
     public static void b(int param0) {
-        field_b = null;
+        muGamelistStatus = null;
         if (param0 != -30521) {
           field_a = 23;
         }
-        field_e = null;
-        field_c = null;
+        muChatGameFriendsOnly = null;
+        muLobbyRating = null;
     }
 
     final int a(int param0, byte param1) {
@@ -210,7 +210,7 @@ final class wi {
         var8 = Pool.field_O;
         try {
           if (param0 != 199) {
-            field_b = (String) null;
+            muGamelistStatus = (String) null;
           }
           var9 = kn.field_e;
           var2 = var9.readUnsignedByte(-125);
@@ -263,8 +263,8 @@ final class wi {
     }
 
     static {
-        field_c = "Rating";
-        field_e = "Only show game chat from my friends";
-        field_b = "Status";
+        muLobbyRating = "Rating";
+        muChatGameFriendsOnly = "Only show game chat from my friends";
+        muGamelistStatus = "Status";
     }
 }

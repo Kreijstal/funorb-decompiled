@@ -4,20 +4,20 @@
 final class sf extends DualLinkNode {
     static int field_y;
     char[] field_w;
-    static String field_z;
+    static String tickerHintShoot;
     static eg field_E;
     int[] field_D;
     char[] field_A;
     boolean field_C;
-    static String field_x;
+    static String gameoptNeedchanging1;
     static wc field_B;
     int[] field_F;
     String field_G;
 
     public static void e(int param0) {
         field_E = null;
-        field_z = null;
-        field_x = null;
+        tickerHintShoot = null;
+        gameoptNeedchanging1 = null;
         if (param0 > -73) {
           field_E = (eg) null;
         }
@@ -86,7 +86,7 @@ final class sf extends DualLinkNode {
             this.field_G = param1.j(-119);
           }
           if (param0 >= -109) {
-            field_x = (String) null;
+            gameoptNeedchanging1 = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class sf extends DualLinkNode {
           vd.field_n = (63 & var2_intLifetime1) << 15;
           jj.field_F = jj.field_F + (var2_intLifetime1 >> 6);
           if (param0 <= 112) {
-            field_x = (String) null;
+            gameoptNeedchanging1 = (String) null;
           }
           vd.field_n = vd.field_n + (param1.readUnsignedByte(-75) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(-61);
@@ -194,7 +194,7 @@ final class sf extends DualLinkNode {
     }
 
     static {
-        field_x = "The '<%0>' setting needs to be changed.";
-        field_z = "<img=0> Click on the cue ball to take your shot.";
+        gameoptNeedchanging1 = "The '<%0>' setting needs to be changed.";
+        tickerHintShoot = "<img=0> Click on the cue ball to take your shot.";
     }
 }

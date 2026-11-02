@@ -10,20 +10,20 @@ final class or {
     boolean field_c;
     or field_f;
     private byte field_e;
-    static String field_j;
+    static String searchingForOpponentSingular;
     or field_i;
-    static String field_m;
+    static String inviteAcceptXsGame;
     static int field_a;
     static int field_h;
-    static String[] field_k;
+    static String[] nineBallNumbers;
 
     public static void a(boolean param0) {
-        field_m = null;
+        inviteAcceptXsGame = null;
         if (param0) {
           return;
         }
-        field_k = null;
-        field_j = null;
+        nineBallNumbers = null;
+        searchingForOpponentSingular = null;
     }
 
     final static byte[] a(Object param0, int param1, boolean param2) {
@@ -40,7 +40,7 @@ final class or {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -19261) {
-            field_j = (String) null;
+            searchingForOpponentSingular = (String) null;
           }
           if (param0 == null) {
             stackIn_4_0 = null;
@@ -101,18 +101,18 @@ final class or {
         return "stop";
     }
 
-    final void a(boolean param0, pq param1) {
+    final void a(boolean param0, Ball param1) {
         try {
           this.field_n = (byte) 1;
           if (param0) {
-            field_m = (String) null;
+            inviteAcceptXsGame = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "or.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, pq param2) {
+    final void a(int param0, int param1, Ball param2) {
         this.field_n = (byte) 3;
         this.field_e = (byte)param0;
         this.field_i = new or((int) this.field_g, this);
@@ -126,10 +126,10 @@ final class or {
         }
     }
 
-    final void a(pq[] param0, int param1, int param2) {
-        pq var6 = param0[param1];
-        pq var4 = var6;
-        pq var5 = param0[this.field_g];
+    final void a(Ball[] param0, int param1, int param2) {
+        Ball var6 = param0[param1];
+        Ball var4 = var6;
+        Ball var5 = param0[this.field_g];
         this.field_i = new or((int) this.field_g, this);
         if (param2 != -5) {
           return;
@@ -151,7 +151,7 @@ final class or {
         }
     }
 
-    final void a(pq param0, int param1, byte param2) {
+    final void a(Ball param0, int param1, byte param2) {
         this.field_e = (byte)param1;
         this.field_n = (byte) 4;
         this.field_i = new or((int) this.field_g, this);
@@ -209,8 +209,8 @@ final class or {
         return var2;
     }
 
-    final boolean a(int param0, bf[] param1) {
-        bf var3 = null;
+    final boolean a(int param0, CushionSegment[] param1) {
+        CushionSegment var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -228,7 +228,7 @@ final class or {
             return false;
           }
           var3 = param1[this.field_e];
-          stackIn_8_0 = (1 == var3.field_b) || (var3.field_d == 1);
+          stackIn_8_0 = (1 == var3.startKind) || (var3.endKind == 1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -249,20 +249,20 @@ final class or {
         if (null != nl.field_d) {
           var2 = nl.field_d;
           String var1 = var2;
-          pn.a((byte) 75, nr.a(new String[]{var2}, -1, lf.field_e));
+          pn.a((byte) 75, nr.a(new String[]{var2}, -1, lf.youHaveBeenRemovedFromXsGame));
           nl.field_d = null;
         }
         if (param0 == 4) {
           return;
         }
-        field_m = (String) null;
+        inviteAcceptXsGame = (String) null;
     }
 
-    final void a(int param0, pq param1, int param2) {
+    final void a(int param0, Ball param1, int param2) {
         try {
           if (param0 != 23655) {
-            pq var5 = (pq) null;
-            this.a((pq) null, 49, (byte) -122);
+            Ball var5 = (Ball) null;
+            this.a((Ball) null, 49, (byte) -122);
           }
           this.field_n = (byte) 5;
           this.field_e = (byte)param2;
@@ -286,8 +286,8 @@ final class or {
     }
 
     static {
-        field_m = "Accept invitation to <%0>'s game";
-        field_j = "Searching for an opponent";
-        field_k = new String[]{"<col=ffffff>Cue ball</col>", "<col=ffff99>1 One</col>", "<col=9999ff>2 Two</col>", "<col=ff9999>3 Three</col>", "<col=cc99ff>4 Four</col>", "<col=ffcc99>5 Five</col>", "<col=99ff99>6 Six</col>", "<col=cc9966>7 Seven</col>", "<col=999999>8 Eight</col>", "<col=ffff99>9 Nine!</col>"};
+        inviteAcceptXsGame = "Accept invitation to <%0>'s game";
+        searchingForOpponentSingular = "Searching for an opponent";
+        nineBallNumbers = new String[]{"<col=ffffff>Cue ball</col>", "<col=ffff99>1 One</col>", "<col=9999ff>2 Two</col>", "<col=ff9999>3 Three</col>", "<col=cc99ff>4 Four</col>", "<col=ffcc99>5 Five</col>", "<col=99ff99>6 Six</col>", "<col=cc9966>7 Seven</col>", "<col=999999>8 Eight</col>", "<col=ffff99>9 Nine!</col>"};
     }
 }

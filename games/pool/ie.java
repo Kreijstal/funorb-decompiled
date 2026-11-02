@@ -5,9 +5,9 @@ final class ie {
     static String field_c;
     static int[] field_d;
     static int field_g;
-    static String field_i;
+    static String tutorialCameraRecentre;
     static String field_e;
-    static String field_b;
+    static String accept;
     static int field_h;
     static int[][] field_a;
     static PcmSample field_f;
@@ -195,9 +195,9 @@ final class ie {
         if (param0 != -13) {
           return;
         }
-        field_i = null;
+        tutorialCameraRecentre = null;
         field_c = null;
-        field_b = null;
+        accept = null;
         field_a = (int[][]) null;
         field_f = null;
         field_e = null;
@@ -207,7 +207,7 @@ final class ie {
     final static void a(int param0, boolean param1, int param2, int param3) {
         DualLinkNode.a(tk.field_i, kj.field_j, param0, param1, param2 + 21166, ad.field_x, param3);
         if (param2 != -17156) {
-          field_b = (String) null;
+          accept = (String) null;
         }
     }
 
@@ -220,7 +220,7 @@ final class ie {
         boolean stackIn_22_1 = false;
         qi.a((byte) -100);
         if (mg.field_d >= 0) {
-          pm.field_m.field_nb = nr.a(new String[]{Integer.toString(mg.field_d)}, -1, m.field_a);
+          pm.field_m.field_nb = nr.a(new String[]{Integer.toString(mg.field_d)}, -1, m.yourRatingIsX);
         } else {
           pm.field_m.field_nb = null;
         }
@@ -251,10 +251,10 @@ final class ie {
         }
         if (uc.field_b.field_R != 0) {
           if (dg.field_T.length == 1 &&
-            cr.field_l != dg.field_T[0]) {
-            cr.field_l = dg.field_T[0];
+            PotEvent.field_l != dg.field_T[0]) {
+            PotEvent.field_l = dg.field_T[0];
           }
-          je.a(param3, cr.field_l, true, tq.field_u, 0, false);
+          je.a(param3, PotEvent.field_l, true, tq.field_u, 0, false);
         }
         if (param2 > -126) {
           ie.a(true, -43, -89);
@@ -265,10 +265,10 @@ final class ie {
     }
 
     static {
-        field_i = "To <u=ffffff>look at</u> a different part of the table: <img=0> <col=99ff99>Click on</col> that <col=99ff99>part of the table</col>, as long as it's not the cue ball.";
+        tutorialCameraRecentre = "To <u=ffffff>look at</u> a different part of the table: <img=0> <col=99ff99>Click on</col> that <col=99ff99>part of the table</col>, as long as it's not the cue ball.";
         field_d = new int[8192];
         field_h = 0;
         field_c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        field_b = "Accept";
+        accept = "Accept";
     }
 }

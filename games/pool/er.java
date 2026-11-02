@@ -3,23 +3,23 @@
  */
 final class er extends fe {
     static int field_W;
-    static String field_N;
+    static String mpAcceptrematch;
     int field_P;
     int field_Y;
     int field_V;
     int field_U;
     int field_O;
-    static String field_Q;
+    static String loginm2;
     static int field_X;
     int field_Z;
     static int field_S;
-    static String field_T;
+    static String raMutethisplayer;
     static int field_R;
 
     public static void g(byte param0) {
-        field_T = null;
-        field_N = null;
-        field_Q = null;
+        raMutethisplayer = null;
+        mpAcceptrematch = null;
+        loginm2 = null;
         int var1 = -61 % ((param0 - 69) / 52);
     }
 
@@ -355,8 +355,8 @@ final class er extends fe {
     }
 
     static {
-        field_N = "Accept rematch";
-        field_Q = "Error connecting to server. Please try using a different server.";
-        field_T = "Mute this player for 48 hours";
+        mpAcceptrematch = "Accept rematch";
+        loginm2 = "Error connecting to server. Please try using a different server.";
+        raMutethisplayer = "Mute this player for 48 hours";
     }
 }

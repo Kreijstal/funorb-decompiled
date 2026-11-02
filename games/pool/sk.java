@@ -4,26 +4,26 @@
 final class sk {
     static int field_a;
     static Sprite field_b;
-    static String field_e;
-    static String field_c;
+    static String playerListHaveWon;
+    static String pressf10toquickchat;
     static int field_d;
 
     final static int a(byte param0) {
         if (param0 < 33) {
           return 3;
         }
-        return qk.field_g;
+        return PoolUiText.field_g;
     }
 
     public static void a(int param0) {
         field_b = null;
-        field_c = null;
+        pressf10toquickchat = null;
         if (param0 != 1) {
           field_b = (Sprite) null;
-          field_e = null;
+          playerListHaveWon = null;
           return;
         }
-        field_e = null;
+        playerListHaveWon = null;
     }
 
     final static PaletteBitmapFont a(di param0, int param1, String param2, String param3, di param4) {
@@ -123,8 +123,8 @@ final class sk {
     }
 
     static {
-        field_c = "Press F10 to open Quick Chat.";
+        pressf10toquickchat = "Press F10 to open Quick Chat.";
         field_d = 1;
-        field_e = "<%0> have won!";
+        playerListHaveWon = "<%0> have won!";
     }
 }

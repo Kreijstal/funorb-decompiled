@@ -22,7 +22,7 @@ final class sp extends gr {
         try {
           bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
           for (var2_int = 0; var2_int < jh.field_c; var2_int++) {
-            ep.field_H[var2_int + param1] = var2_int;
+            NetworkGameClient.field_H[var2_int + param1] = var2_int;
           }
           bb.a(rn.field_d, jh.field_c + param1, param1, jl.field_c, param1 + param1, (byte) -74, false);
           if (jh.field_c > param1) {

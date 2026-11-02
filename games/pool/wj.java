@@ -9,7 +9,7 @@ final class wj extends ud {
     private int field_P;
     static int field_T;
     private int field_Q;
-    static String field_U;
+    static String playerYouFirstListHaveResigned;
     static int field_V;
     private int field_R;
     private boolean field_N;
@@ -69,7 +69,7 @@ final class wj extends ud {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 13) {
-            field_U = (String) null;
+            playerYouFirstListHaveResigned = (String) null;
           }
           if (this.b(param1, param2, param0, -1)) {
             this.a(1, param2, param0, param1);
@@ -104,7 +104,7 @@ final class wj extends ud {
 
     public static void h(int param0) {
         field_S = null;
-        field_U = null;
+        playerYouFirstListHaveResigned = null;
         if (param0 >= -33) {
           ai var2 = (ai) null;
           wj.a((di) null, 96, false, (ai) null);
@@ -146,7 +146,7 @@ final class wj extends ud {
           oj.a(param0, (byte) -106);
           dr.a((byte) -65, param0);
           wk.a(-257);
-          lm.i(23);
+          SpaceBallSkin.i(23);
           im.field_fc = 0 - cl.field_h;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -288,6 +288,6 @@ final class wj extends ud {
     }
 
     static {
-        field_U = "You<%0> have all resigned!";
+        playerYouFirstListHaveResigned = "You<%0> have all resigned!";
     }
 }

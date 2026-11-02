@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class br extends ob {
-    static String field_L;
+    static String errorJs5crc;
     static boolean field_H;
-    static String field_K;
+    static String quickchatGame;
     static vh field_M;
     static vh field_J;
     static int field_I;
@@ -23,7 +23,7 @@ final class br extends ob {
           super.b(param0, param1, param2);
           return;
         }
-        nk.a((String) null, oe.a(false, hp.field_c) ? 18 : 16, (byte) 121);
+        TranslatedUiText.a((String) null, oe.a(false, hp.field_c) ? 18 : 16, (byte) 121);
     }
 
     final static void f(int param0) {
@@ -42,17 +42,17 @@ final class br extends ob {
 
     public static void b(boolean param0) {
         if (!param0) {
-          field_K = null;
+          quickchatGame = null;
           field_J = null;
           field_M = null;
-          field_L = null;
+          errorJs5crc = null;
           return;
         }
         field_J = (vh) null;
-        field_K = null;
+        quickchatGame = null;
         field_J = null;
         field_M = null;
-        field_L = null;
+        errorJs5crc = null;
     }
 
     final void c(int param0) {
@@ -61,8 +61,8 @@ final class br extends ob {
         int var2 = oe.a(false, hp.field_c) ? 1 : 0;
         int var3 = ti.field_d != null ? 1 : 0;
         if (param0 > 36) {
-          var4 = oe.field_O;
-          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[]{de.field_f}, -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
+          var4 = oe.mustloginNotloggedin;
+          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[]{de.discard}, -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
           this.a(sa.field_h, new int[]{sa.field_h.baselineHeight}, 140, -16097, var4, 280, 15658734);
           this.b(140, false);
           return;
@@ -70,7 +70,7 @@ final class br extends ob {
     }
 
     static {
-        field_L = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
-        field_K = "Quick Chat game";
+        errorJs5crc = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
+        quickchatGame = "Quick Chat game";
     }
 }

@@ -11,13 +11,13 @@ final class qf {
     private int[] field_g;
     private eg field_n;
     private int field_q;
-    private hm field_e;
+    private Quaternion field_e;
     private nc field_o;
-    static String field_l;
+    static String enterignoreAdd;
     private int field_c;
     private int field_b;
     private int field_a;
-    private hm field_p;
+    private Quaternion field_p;
     static Sprite field_k;
     private int field_h;
     static ai field_d;
@@ -32,7 +32,7 @@ final class qf {
           this.field_g[1] = this.field_m >> 13;
           this.field_g[2] = this.field_a >> 13;
           if (param0 == 2115785453) {
-            this.field_p.a(3, this.field_e);
+            this.field_p.multiplyBy(3, this.field_e);
             this.field_o = null;
             return;
           }
@@ -43,7 +43,7 @@ final class qf {
           this.field_g[1] = this.field_m >> 13;
           this.field_g[2] = this.field_a >> 13;
           if (param0 == 2115785453) {
-            this.field_p.a(3, this.field_e);
+            this.field_p.multiplyBy(3, this.field_e);
             this.field_o = null;
             return;
           }
@@ -54,13 +54,13 @@ final class qf {
         this.field_g[1] = this.field_m >> 13;
         this.field_g[2] = this.field_a >> 13;
         if (param0 == 2115785453) {
-          this.field_p.a(3, this.field_e);
+          this.field_p.multiplyBy(3, this.field_e);
           this.field_o = null;
           return;
         }
     }
 
-    final void a(int[] param0, gh param1, int param2) {
+    final void a(int[] param0, SpaceTableScene param1, int param2) {
         int var5 = 0;
         Sprite[] var6 = null;
         RuntimeException stackIn_14_0 = null;
@@ -77,7 +77,7 @@ final class qf {
             qf.a(48, -85, 56, (byte) 112, -17, (Sprite[]) null);
           }
           if (null == this.field_o) {
-            this.field_p.a(this.field_g, -125);
+            this.field_p.toRotationMatrix(this.field_g, -125);
             if (this.field_q > 134217728) {
               this.field_n.field_f = hi.field_h[this.field_q - 134217728 >> 20];
             } else {
@@ -116,13 +116,13 @@ final class qf {
         if (param0) {
           field_d = null;
           field_j = null;
-          field_l = null;
+          enterignoreAdd = null;
           return;
         }
-        field_l = (String) null;
+        enterignoreAdd = (String) null;
         field_d = null;
         field_j = null;
-        field_l = null;
+        enterignoreAdd = null;
     }
 
     final int a(int[] param0, byte param1) {
@@ -173,7 +173,7 @@ final class qf {
             var8 = param5[1].field_w;
             param5[0].e(param2, param0, param1);
             param5[2].e(-var7 + (param2 + param4), param0, param1);
-            SoftwareRasterizer.saveClip(sq.field_a);
+            SoftwareRasterizer.saveClip(GameRules.field_a);
             SoftwareRasterizer.intersectClip(var6_int + param2, param0, param4 + (param2 - var7), param0 + param5[1].field_y);
             var9 = param2 + var6_int;
             var10 = param2 + param4 - var7;
@@ -184,7 +184,7 @@ final class qf {
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param5[1].e(param2, param0, param1);
             }
-            SoftwareRasterizer.restoreClip(sq.field_a);
+            SoftwareRasterizer.restoreClip(GameRules.field_a);
             return;
           }
           return;
@@ -216,7 +216,7 @@ final class qf {
           var3 = 1024;
           dupTemp$0 = -134217728 + ga.a(268435456, true, ea.field_r);
           this.field_q = dupTemp$0;
-          dupTemp$1 = af.c((byte) -128, var2_int) * var3;
+          dupTemp$1 = EightBallRules.c((byte) -128, var2_int) * var3;
           this.field_m = dupTemp$1;
           dupTemp$2 = o.a(var2_int, (byte) 77) * var3;
           this.field_a = dupTemp$2;
@@ -224,17 +224,17 @@ final class qf {
           this.field_b = -(65536 + ga.a(131072, true, ea.field_r));
           this.field_c = ga.a(9, true, ea.field_r) - 5;
           this.field_h = -5 + ga.a(9, true, ea.field_r);
-          this.field_p = new hm(ga.a(32768, true, ea.field_r) - 16384, ga.a(32768, true, ea.field_r) - 16384, ga.a(32768, true, ea.field_r) - 16384, -16384 + ga.a(32768, true, ea.field_r));
-          this.field_p.b(true);
-          this.field_e = new hm();
-          this.field_e.a(60, ga.a(32768, true, ea.field_r) - 16384, -16384 + ga.a(32768, true, ea.field_r), -16384 + ga.a(32768, true, ea.field_r), 1 + ga.a(8, true, ea.field_r));
-          this.field_e.b(true);
+          this.field_p = new Quaternion(ga.a(32768, true, ea.field_r) - 16384, ga.a(32768, true, ea.field_r) - 16384, ga.a(32768, true, ea.field_r) - 16384, -16384 + ga.a(32768, true, ea.field_r));
+          this.field_p.normalise(true);
+          this.field_e = new Quaternion();
+          this.field_e.setFromAxisAngle(60, ga.a(32768, true, ea.field_r) - 16384, -16384 + ga.a(32768, true, ea.field_r), -16384 + ga.a(32768, true, ea.field_r), 1 + ga.a(8, true, ea.field_r));
+          this.field_e.normalise(true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_l = "Enter name of player to add to list";
+        enterignoreAdd = "Enter name of player to add to list";
     }
 }

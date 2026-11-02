@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dp implements in {
-    static String field_h;
+    static String day;
     static int[] field_e;
     private dh[] field_f;
     static char[] field_d;
@@ -108,7 +108,7 @@ final class dp implements in {
             return -1;
           }
           if (!(oe.field_Q + se.field_l <= hh.field_a)) {
-            return ac.field_m;
+            return KillerBallSkin.field_m;
           }
           return -1;
         }
@@ -121,7 +121,7 @@ final class dp implements in {
         if (oe.field_Q + se.field_l <= hh.field_a) {
           return -1;
         }
-        return ac.field_m;
+        return KillerBallSkin.field_m;
     }
 
     public final int a(int param0, byte param1) {
@@ -157,10 +157,10 @@ final class dp implements in {
         RuntimeException var2_ref = null;
         try {
           param1.unlink((byte) -117);
-          var2 = (kh) (ep.field_A.c((byte) -72));
+          var2 = (kh) (NetworkGameClient.field_A.c((byte) -72));
           while (var2 != null) {
             if (var2.a(param1, false)) {
-              var2 = (kh) (ep.field_A.f((byte) -5));
+              var2 = (kh) (NetworkGameClient.field_A.f((byte) -5));
               continue;
             }
             break;
@@ -168,7 +168,7 @@ final class dp implements in {
           if (var2 != null) {
             vj.a(param1, (byte) -119, var2);
           } else {
-            ep.field_A.b((byte) -108, param1);
+            NetworkGameClient.field_A.b((byte) -108, param1);
           }
           if (param0 > -73) {
             field_c = (vh) null;
@@ -216,9 +216,9 @@ final class dp implements in {
     }
 
     final static int b(int param0) {
-        nk.field_m.b((byte) -46);
+        TranslatedUiText.field_m.b((byte) -46);
         int var1 = 55 / ((25 - param0) / 40);
-        if (!sq.field_c.d(-2147483648)) {
+        if (!GameRules.field_c.d(-2147483648)) {
           return ug.g(-27108);
         }
         return 0;
@@ -235,7 +235,7 @@ final class dp implements in {
     }
 
     public static void c(int param0) {
-        field_h = null;
+        day = null;
         field_d = null;
         field_e = null;
         field_k = null;
@@ -301,7 +301,7 @@ final class dp implements in {
 
     static {
         field_d = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
-        field_h = "Day";
+        day = "Day";
         field_k = new int[]{0, 1, 3, 9, 10, 8, 7, 5, 15, 2, 12, 14, 4, 13, 11, 6};
     }
 }

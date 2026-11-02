@@ -5,7 +5,7 @@ final class bk extends IntrusiveNode {
     int field_s;
     private int field_n;
     private Sprite field_z;
-    static String field_x;
+    static String ratedGameTipsSetupSingular;
     private IntrusiveDeque field_r;
     int field_l;
     gi field_q;
@@ -39,7 +39,7 @@ final class bk extends IntrusiveNode {
 
     final void c(int param0) {
         try {
-          this.field_q = ag.a(-al.field_k.field_eb + gg.field_f, this.field_r, wn.field_i - al.field_k.field_qb, 15395);
+          this.field_q = ag.a(-PoolGameModel.field_k.field_eb + gg.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.field_qb, 15395);
           int var2_int = 25 % ((param0 - 39) / 62);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
@@ -48,7 +48,7 @@ final class bk extends IntrusiveNode {
 
     final void a(int param0, int param1, int param2) {
         try {
-          this.field_q.a(param0, al.field_k.field_qb, param1, -1, true, al.field_k.field_eb);
+          this.field_q.a(param0, PoolGameModel.field_k.field_qb, param1, -1, true, PoolGameModel.field_k.field_eb);
           if (param2 != 9750) {
             this.field_u = -125;
           }
@@ -64,7 +64,7 @@ final class bk extends IntrusiveNode {
           if (param0) {
             field_w = (int[]) null;
           }
-          this.field_z.c(al.field_k.field_qb, al.field_k.field_eb);
+          this.field_z.c(PoolGameModel.field_k.field_qb, PoolGameModel.field_k.field_eb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class bk extends IntrusiveNode {
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          this.field_n = -20 + al.field_k.field_gb;
+          this.field_n = -20 + PoolGameModel.field_k.field_gb;
           if (param1 <= 36) {
             this.field_l = 75;
           }
@@ -124,7 +124,7 @@ final class bk extends IntrusiveNode {
               param0.field_a.a(false, (byte) -122);
             }
           }
-          this.field_z = new Sprite(al.field_k.field_gb, this.field_t + 10);
+          this.field_z = new Sprite(PoolGameModel.field_k.field_gb, this.field_t + 10);
           this.field_z.e();
           sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
           sa.field_h.drawParagraph(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
@@ -165,7 +165,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final static boolean a(pq[] param0, byte param1) {
+    final static boolean a(Ball[] param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_15_0 = 0;
@@ -177,12 +177,12 @@ final class bk extends IntrusiveNode {
         var3 = Pool.field_O;
         try {
           if (param1 != 57) {
-            field_x = (String) null;
+            ratedGameTipsSetupSingular = (String) null;
           }
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= param0.length))) {
-            stackIn_15_0 = param0[var2_int].field_v;
+            stackIn_15_0 = param0[var2_int].motionState;
             if (var3 == 0) {
               if (stackIn_15_0 != 0) {
                 return true;
@@ -219,7 +219,7 @@ final class bk extends IntrusiveNode {
           }
           field_w = null;
           field_m = null;
-          field_x = null;
+          ratedGameTipsSetupSingular = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -344,6 +344,6 @@ final class bk extends IntrusiveNode {
 
     static {
         field_w = new int[4];
-        field_x = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find a suitable opponent in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
+        ratedGameTipsSetupSingular = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find a suitable opponent in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
     }
 }

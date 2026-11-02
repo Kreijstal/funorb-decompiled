@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class en {
-    private hm field_b;
-    static String field_a;
-    static String field_d;
+    private Quaternion field_b;
+    static String gameoptPlayerhasntunlocked;
+    static String tutorialShotModeRotate;
     static hj field_c;
-    static String field_e;
+    static String playerListFirst;
 
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_5_0 = false;
@@ -76,7 +76,7 @@ final class en {
         if (param0 != 0) {
           return;
         }
-        if (ne.field_w != sq.field_b) {
+        if (ne.field_w != GameRules.field_b) {
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
           return;
         }
@@ -88,33 +88,33 @@ final class en {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        hm var4 = new hm();
+        Quaternion var4 = new Quaternion();
         if (!param0) {
-          var4.a(66, 0, 0, 65536, 64);
-          var4.b(true);
-          this.field_b.a(3, var4);
+          var4.setFromAxisAngle(66, 0, 0, 65536, 64);
+          var4.normalise(true);
+          this.field_b.multiplyBy(3, var4);
           return;
         }
     }
 
     public static void a(int param0) {
-        field_d = null;
+        tutorialShotModeRotate = null;
         if (param0 == 8352) {
           field_c = null;
-          field_a = null;
-          field_e = null;
+          gameoptPlayerhasntunlocked = null;
+          playerListFirst = null;
           return;
         }
-        field_a = (String) null;
+        gameoptPlayerhasntunlocked = (String) null;
         field_c = null;
-        field_a = null;
-        field_e = null;
+        gameoptPlayerhasntunlocked = null;
+        playerListFirst = null;
     }
 
     static {
-        field_e = "<%0>";
-        field_a = "<%0> has not yet unlocked this option for use.";
-        field_d = "When in shot mode, the power bar will appear on the right. <u=ffffff>Rotating the cue</u> is the same as rotating around the table: <col=99ff99>Hold</col> the <img=2> <col=99ff99>right mouse button</col> (or <img=9>+<img=0> left mouse button) and <col=99ff99>drag the mouse</col>. Alternatively, you can use <img=6> and <img=5>, or <img=13> and <img=15>.";
+        playerListFirst = "<%0>";
+        gameoptPlayerhasntunlocked = "<%0> has not yet unlocked this option for use.";
+        tutorialShotModeRotate = "When in shot mode, the power bar will appear on the right. <u=ffffff>Rotating the cue</u> is the same as rotating around the table: <col=99ff99>Hold</col> the <img=2> <col=99ff99>right mouse button</col> (or <img=9>+<img=0> left mouse button) and <col=99ff99>drag the mouse</col>. Alternatively, you can use <img=6> and <img=5>, or <img=13> and <img=15>.";
         field_c = new hj(6, 0, 4, 2);
     }
 }

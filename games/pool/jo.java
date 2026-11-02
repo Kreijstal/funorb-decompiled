@@ -3,10 +3,10 @@
  */
 class jo extends ob {
     static boolean field_H;
-    static String field_L;
+    static String messageLobby;
     static int field_J;
     private Sprite field_K;
-    static String[] field_I;
+    static String[] playerNs;
 
     final void c(int param0) {
         super.c(92);
@@ -151,16 +151,16 @@ class jo extends ob {
 
     final static void a(float param0, float param1, float param2, float param3, int param4) {
         if (param4 == -31792) {
-          pq.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
+          Ball.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
           return;
         }
         jo.a(0.2009153664112091f, 0.45015275478363037f, 2.6406524181365967f, -0.13969022035598755f, 60);
-        pq.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
+        Ball.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
     }
 
     final static int c(int param0, int param1, int param2) {
         if (param1 != -54264319) {
-          field_I = (String[]) null;
+          playerNs = (String[]) null;
           return param2 << param0;
         }
         return param2 << param0;
@@ -173,8 +173,8 @@ class jo extends ob {
         int var2Lifetime1;
         hh.field_a = hh.field_a + 1;
         if (param0 != 0) {
-          field_I = (String[]) null;
-          if (ac.field_m == param1) {
+          playerNs = (String[]) null;
+          if (KillerBallSkin.field_m == param1) {
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
@@ -272,7 +272,7 @@ class jo extends ob {
               hh.field_a = 0;
             }
           }
-          ac.field_m = param1;
+          KillerBallSkin.field_m = param1;
           if (ClientException.field_j &&
             eo.field_Vb == hh.field_a) {
             hh.field_a = 0;
@@ -280,7 +280,7 @@ class jo extends ob {
           }
           return;
         }
-        if (ac.field_m == param1) {
+        if (KillerBallSkin.field_m == param1) {
           if (!ClientException.field_j &&
             hh.field_a < se.field_l &&
             re.field_c) {
@@ -288,7 +288,7 @@ class jo extends ob {
             pa.field_H = wn.field_i;
             hh.field_a = 0;
           }
-          ac.field_m = param1;
+          KillerBallSkin.field_m = param1;
           if (ClientException.field_j &&
             eo.field_Vb == hh.field_a) {
             hh.field_a = 0;
@@ -319,7 +319,7 @@ class jo extends ob {
               pm.field_p = gg.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
-              ac.field_m = param1;
+              KillerBallSkin.field_m = param1;
               if (ClientException.field_j &&
                 eo.field_Vb == hh.field_a) {
                 hh.field_a = 0;
@@ -337,7 +337,7 @@ class jo extends ob {
                 pm.field_p = gg.field_f;
                 pa.field_H = wn.field_i;
                 hh.field_a = 0;
-                ac.field_m = param1;
+                KillerBallSkin.field_m = param1;
                 if (ClientException.field_j &&
                   eo.field_Vb == hh.field_a) {
                   hh.field_a = 0;
@@ -375,7 +375,7 @@ class jo extends ob {
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
-            ac.field_m = param1;
+            KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
@@ -399,7 +399,7 @@ class jo extends ob {
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
-            ac.field_m = param1;
+            KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
@@ -421,7 +421,7 @@ class jo extends ob {
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
-            ac.field_m = param1;
+            KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
@@ -437,7 +437,7 @@ class jo extends ob {
             pm.field_p = gg.field_f;
             pa.field_H = wn.field_i;
             hh.field_a = 0;
-            ac.field_m = param1;
+            KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
@@ -446,7 +446,7 @@ class jo extends ob {
             return;
           }
         }
-        ac.field_m = param1;
+        KillerBallSkin.field_m = param1;
         if (!ClientException.field_j) {
           return;
         }
@@ -462,8 +462,8 @@ class jo extends ob {
         if (param0 != 8) {
           return;
         }
-        field_I = null;
-        field_L = null;
+        playerNs = null;
+        messageLobby = null;
     }
 
     jo(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -482,27 +482,27 @@ class jo extends ob {
         var4 = this.field_h[param2];
         if (var4 == 54) {
           if (this.field_B.b((byte) 54)) {
-            ac.a(param0 ^ -16726, true, true, nn.field_b[0].field_b);
+            KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[0].field_b);
           }
         } else {
           if (var4 == 55) {
             if (this.field_B.b((byte) 115)) {
-              ac.a(256, true, true, nn.field_b[1].field_b);
+              KillerBallSkin.a(256, true, true, nn.field_b[1].field_b);
             }
           } else {
             if (56 == var4) {
               if (this.field_B.b((byte) 54)) {
-                ac.a(param0 ^ -16726, true, true, nn.field_b[2].field_b);
+                KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[2].field_b);
               }
             } else {
               if (var4 == 57) {
                 if (this.field_B.b((byte) 56)) {
-                  ac.a(param0 ^ -16726, true, true, nn.field_b[3].field_b);
+                  KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[3].field_b);
                 }
               } else {
                 if (58 == var4) {
                   if (this.field_B.b((byte) 62)) {
-                    ac.a(param0 + 16726, true, true, nn.field_b[4].field_b);
+                    KillerBallSkin.a(param0 + 16726, true, true, nn.field_b[4].field_b);
                   }
                 } else {
                   if (59 != var4) {
@@ -510,12 +510,12 @@ class jo extends ob {
                       super.b(-16470, param1, param2);
                     } else {
                       if (this.field_B.b((byte) 125)) {
-                        ac.a(256, true, true, jh.field_d);
+                        KillerBallSkin.a(256, true, true, jh.field_d);
                       }
                     }
                   } else {
                     if (this.field_B.b((byte) 73)) {
-                      ac.a(256, true, true, ul.field_m);
+                      KillerBallSkin.a(256, true, true, HalloweenBallSkin.field_m);
                     }
                   }
                 }
@@ -530,8 +530,8 @@ class jo extends ob {
     }
 
     static {
-        field_L = "Message lobby";
+        messageLobby = "Message lobby";
         field_J = 0;
-        field_I = new String[]{"Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", "Player 8"};
+        playerNs = new String[]{"Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", "Player 8"};
     }
 }

@@ -5,14 +5,14 @@ final class uj {
     static ie field_e;
     static di field_d;
     static Sprite field_c;
-    static String field_b;
+    static String rankings;
     static int[] field_a;
 
     public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_a = null;
-        field_b = null;
+        rankings = null;
         if (param0 > 13) {
           field_c = null;
           return;
@@ -117,7 +117,7 @@ final class uj {
 
     static {
         field_e = new ie();
-        field_b = "Rankings";
+        rankings = "Rankings";
         field_a = new int[]{0, 1, 3, 9, 10, 8, 7, 5, 15, 2, 12, 14, 4, 13, 11, 6};
     }
 }

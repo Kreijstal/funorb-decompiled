@@ -2,34 +2,34 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class lh {
-    static String field_b;
+    static String createAlertPassrepeated;
     static vh field_g;
     static vh field_i;
-    static String field_a;
-    static String field_h;
-    static String field_d;
+    static String muXLostCon;
+    static String loginJustplayTooltip;
+    static String createAgreeterms;
     static nf field_c;
-    static String field_e;
+    static String muCreateUnrated;
     static String field_f;
 
     abstract int a(int param0, int param1);
 
     public static void a(byte param0) {
-        field_b = null;
+        createAlertPassrepeated = null;
         field_c = null;
-        field_d = null;
+        createAgreeterms = null;
         field_i = null;
         field_g = null;
-        field_h = null;
-        field_a = null;
+        loginJustplayTooltip = null;
+        muXLostCon = null;
         if (param0 == -41) {
           field_f = null;
-          field_e = null;
+          muCreateUnrated = null;
           return;
         }
         lh.a((byte) -14);
         field_f = null;
-        field_e = null;
+        muCreateUnrated = null;
     }
 
     abstract ad b(byte param0);
@@ -258,12 +258,12 @@ abstract class lh {
           var4 = var4 % 60;
           if (var5 <= 0) {
             if (var4 <= 0) {
-              var6 = mp.field_Q;
+              var6 = mp.timerSecondsFractions;
             } else {
-              var6 = qe.field_r;
+              var6 = ShotRecord.timerMinutesSecondsFractions;
             }
           } else {
-            var6 = vf.field_gb;
+            var6 = PolarTableScene.timerHoursMinutesSecondsFractions;
           }
           var10 = var6.toCharArray();
           var9 = var10;
@@ -367,7 +367,7 @@ abstract class lh {
         var5Lifetime1 = var4 / 60;
         var4 = var4 % 60;
         if (var5Lifetime1 > 0) {
-          var11 = vf.field_gb;
+          var11 = PolarTableScene.timerHoursMinutesSecondsFractions;
           var10Lifetime1 = var11.toCharArray();
           var9Lifetime1 = var10Lifetime1;
           var7Lifetime1 = var9Lifetime1;
@@ -467,7 +467,7 @@ abstract class lh {
           return new String(var10Lifetime1);
         }
         if (var4 <= 0) {
-          var13 = mp.field_Q;
+          var13 = mp.timerSecondsFractions;
           var10Lifetime2 = var13.toCharArray();
           var9Lifetime2 = var10Lifetime2;
           var7Lifetime2 = var9Lifetime2;
@@ -566,7 +566,7 @@ abstract class lh {
           }
           return new String(var10Lifetime2);
         }
-        var12 = qe.field_r;
+        var12 = ShotRecord.timerMinutesSecondsFractions;
         var6Lifetime1 = var12;
         var10Lifetime3 = var12.toCharArray();
         var9Lifetime3 = var10Lifetime3;
@@ -792,10 +792,10 @@ abstract class lh {
     }
 
     static {
-        field_b = "This password contains repeated characters, and would be easy to guess";
-        field_a = "<%0> has lost connection.";
-        field_d = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_e = "Create unrated game";
-        field_h = "Play the game without logging in just yet";
+        createAlertPassrepeated = "This password contains repeated characters, and would be easy to guess";
+        muXLostCon = "<%0> has lost connection.";
+        createAgreeterms = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        muCreateUnrated = "Create unrated game";
+        loginJustplayTooltip = "Play the game without logging in just yet";
     }
 }

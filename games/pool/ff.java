@@ -4,13 +4,13 @@
 final class ff {
     static int[] field_i;
     static int[] field_a;
-    static String field_g;
+    static String acceptdraw;
     static Sprite[][] field_f;
     static int[] field_h;
     static Sprite[] field_e;
     static so field_d;
     static nl field_b;
-    static String field_j;
+    static String escCancelthisline;
     static boolean field_c;
 
     final static void a(int param0, boolean param1) {
@@ -30,8 +30,8 @@ final class ff {
         field_e = null;
         if (param0 > 56) {
           field_a = null;
-          field_g = null;
-          field_j = null;
+          acceptdraw = null;
+          escCancelthisline = null;
           field_f = (Sprite[][]) null;
           return;
         }
@@ -52,12 +52,12 @@ final class ff {
 
     static {
         field_f = new Sprite[][]{null, null, null, null};
-        field_g = "Accept draw";
+        acceptdraw = "Accept draw";
         field_h = ta.a(new int[]{0, 0, 8, 16777215, 32, 0, 65, 0}, -120);
         field_i = ta.a(new int[]{0, 0, 8, 16724753, 32, 0, 65, 0}, -120);
         field_a = new int[field_h.length];
         field_b = new nl();
-        field_j = "ESC - cancel this line";
+        escCancelthisline = "ESC - cancel this line";
         field_c = true;
     }
 }

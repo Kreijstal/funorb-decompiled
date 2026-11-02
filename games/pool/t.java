@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class t {
-    static String field_c;
+    static String gameoptPlayersdontqualifySelectgametab;
     static int field_d;
     static vh field_b;
     static int field_e;
@@ -121,7 +121,7 @@ final class t {
           var2_int = param1.length();
           var3 = 0;
           if (param0 != 29050) {
-            field_c = (String) null;
+            gameoptPlayersdontqualifySelectgametab = (String) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var3 = (var3 << 5) + (-var3 + vi.a(param1.charAt(var4), true));
@@ -150,17 +150,17 @@ final class t {
             if (ne.field_u != null &&
               ne.field_u.field_e) {
               tq.d((byte) -124);
-              fk.field_cb.b(new gk(fk.field_cb, el.field_K), 30000);
+              PlasmaTableScene.field_cb.b(new gk(PlasmaTableScene.field_cb, el.field_K), 30000);
             }
             return;
           }
           if (param0 != -11) {
             t.b(-62);
           }
-          fk.field_cb.a(-122, sa.field_p, true, tl.field_M);
-          fk.field_cb.h((byte) 122);
+          PlasmaTableScene.field_cb.a(-122, sa.field_p, true, tl.field_M);
+          PlasmaTableScene.field_cb.h((byte) 122);
           while (n.h(127)) {
-            fk.field_cb.a(-81, qi.field_a, ml.field_b);
+            PlasmaTableScene.field_cb.a(-81, qi.field_a, ml.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,7 +172,7 @@ final class t {
 
     public static void c(int param0) {
         field_a = (int[][][]) null;
-        field_c = null;
+        gameoptPlayersdontqualifySelectgametab = null;
         field_b = null;
         if (param0 > -16) {
           field_a = (int[][][]) null;
@@ -197,7 +197,7 @@ final class t {
     }
 
     static {
-        field_c = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
+        gameoptPlayersdontqualifySelectgametab = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
         field_e = 0;
     }
 }

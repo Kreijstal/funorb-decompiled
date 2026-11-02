@@ -14,12 +14,12 @@ final class pd implements fp {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (nk.field_h > 32) {
-          var1 = nk.field_h % 32;
+        if (TranslatedUiText.field_h > 32) {
+          var1 = TranslatedUiText.field_h % 32;
           if (0 == var1) {
             var1 = 32;
           }
-          ap.a(nk.field_h - var1, 3815994);
+          ap.a(TranslatedUiText.field_h - var1, 3815994);
           if (param0 != 0) {
             pd.a(false);
             return;

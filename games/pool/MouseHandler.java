@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static String field_b;
-    static String field_c;
-    static String field_a;
+    static String timeTrialFailed;
+    static String rule10;
+    static String muGameIsFull;
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         RuntimeException var2 = null;
@@ -16,7 +16,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           if (wp.field_g == null) {
             return;
           }
-          qk.field_g = 0;
+          PoolUiText.field_g = 0;
           we.field_l = param0.getX();
           wn.field_k = param0.getY();
           m.field_d = true;
@@ -45,7 +45,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           if (null == wp.field_g) {
             return;
           }
-          qk.field_g = 0;
+          PoolUiText.field_g = 0;
           we.field_l = param0.getX();
           wn.field_k = param0.getY();
           m.field_d = true;
@@ -65,16 +65,16 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
     }
 
     public static void a(byte param0) {
-        field_c = null;
-        field_b = null;
-        field_a = null;
+        rule10 = null;
+        timeTrialFailed = null;
+        muGameIsFull = null;
         int var1 = 123 / ((param0 + 15) / 48);
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (wp.field_g != null) {
-            qk.field_g = 0;
+            PoolUiText.field_g = 0;
             we.field_l = -1;
             wn.field_k = -1;
             m.field_d = true;
@@ -122,7 +122,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         try {
           if (wp.field_g != null) {
-            qk.field_g = 0;
+            PoolUiText.field_g = 0;
             ho.field_v = 0;
             m.field_d = true;
             var2_int = param0.getModifiers();
@@ -195,7 +195,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           if (null == wp.field_g) {
             return;
           }
-          qk.field_g = 0;
+          PoolUiText.field_g = 0;
           we.field_l = param0.getX();
           wn.field_k = param0.getY();
           m.field_d = true;
@@ -218,10 +218,10 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         if (param0 != -6720) {
           return false;
         }
-        if (null == fk.field_cb) {
+        if (null == PlasmaTableScene.field_cb) {
           return false;
         }
-        if (fk.field_cb.j(103) == null) {
+        if (PlasmaTableScene.field_cb.j(103) == null) {
           return false;
         }
         return true;
@@ -236,8 +236,8 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != wp.field_g) {
-            qk.field_g = 0;
-            pq.field_f = param0.getX();
+            PoolUiText.field_g = 0;
+            Ball.field_f = param0.getX();
             ne.field_o = param0.getY();
             rl.a((byte) -115);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
@@ -276,8 +276,8 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
     }
 
     static {
-        field_b = "Time trial failed!";
-        field_c = "Seriously offensive language";
-        field_a = "This game is full.";
+        timeTrialFailed = "Time trial failed!";
+        rule10 = "Seriously offensive language";
+        muGameIsFull = "This game is full.";
     }
 }

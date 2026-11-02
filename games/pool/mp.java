@@ -3,7 +3,7 @@
  */
 final class mp extends ch implements tb {
     static int[] field_P;
-    static String field_Q;
+    static String timerSecondsFractions;
     static String field_X;
     private String[] field_T;
     static IntrusiveDeque field_R;
@@ -23,7 +23,7 @@ final class mp extends ch implements tb {
         }
         BitmapFont var6 = lc.field_O;
         if (this.field_T != null) {
-          var6.drawParagraph(oc.field_h, this.field_C + param2, this.field_D + param3, this.field_l, 20, 16777215, -1, 0, 0, var6.maxDescent + var6.maxAscent);
+          var6.drawParagraph(oc.createSuggestions, this.field_C + param2, this.field_D + param3, this.field_l, 20, 16777215, -1, 0, 0, var6.maxDescent + var6.maxAscent);
         }
     }
 
@@ -60,11 +60,11 @@ final class mp extends ch implements tb {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_U[var5] = new fe(this.field_T[var5], (cc) (this));
               this.field_U[var5].field_z = (fp) ((Object) var4);
-              this.field_U[var5].field_p = ab.field_i;
+              this.field_U[var5].field_p = ab.createSelectAlternative;
               this.field_U[var5].a(80, 0, 15, false, 20 + 16 * var5);
               this.a(true, this.field_U[var5]);
             }
-            this.field_U[var3_int] = new fe(be.field_J, (cc) (this));
+            this.field_U[var3_int] = new fe(be.createMoreSuggestions, (cc) (this));
             this.field_U[var3_int].field_z = (fp) ((Object) var4);
             this.field_U[var3_int].a(100, 0, 15, param0, 20 - (-(16 * var3_int) - 16));
             this.a(true, this.field_U[var3_int]);
@@ -141,10 +141,10 @@ final class mp extends ch implements tb {
             if (tp.field_e == null) {
               f.a(48);
             } else {
-              al.a(true, 0);
+              PoolGameModel.a(true, 0);
             }
           } else {
-            al.a(false, 0);
+            PoolGameModel.a(false, 0);
           }
         }
         if (!param4) {
@@ -166,7 +166,7 @@ final class mp extends ch implements tb {
         }
         if (nr.field_bb &&
           em.field_L.field_Nb <= em.field_L.field_mc) {
-          ci.field_c.field_Sb.field_nb = ro.field_p;
+          ci.field_c.field_Sb.field_nb = ro.gameFull;
           c.field_e.field_pb = false;
           mq.a(ci.field_c.field_Rb, (byte) 109);
         } else {
@@ -181,7 +181,7 @@ final class mp extends ch implements tb {
 
     public static void a(int param0) {
         field_N = null;
-        field_Q = null;
+        timerSecondsFractions = null;
         if (param0 != 160) {
           return;
         }
@@ -230,7 +230,7 @@ final class mp extends ch implements tb {
     final static void a(int param0, int param1, nm param2, int param3) {
         try {
           kp.field_d = param1;
-          qe.field_o = param0;
+          ShotRecord.field_o = param0;
           int var4_int = 87 % ((40 - param3) / 48);
           db.field_Vb = param2;
         } catch (RuntimeException runtimeException) {
@@ -240,7 +240,7 @@ final class mp extends ch implements tb {
 
     static {
         field_P = new int[8192];
-        field_Q = "ss.ff";
+        timerSecondsFractions = "ss.ff";
         field_R = null;
         field_X = "EXCLUSIVE";
     }

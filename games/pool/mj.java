@@ -56,9 +56,9 @@ final class mj {
             IntrusiveNode.field_i = null;
           }
           ln.field_n = null;
-          if (ep.field_A != null) {
-            ep.field_A.d((byte) 117);
-            ep.field_A = null;
+          if (NetworkGameClient.field_A != null) {
+            NetworkGameClient.field_A.d((byte) 117);
+            NetworkGameClient.field_A = null;
           }
           lf.field_a = null;
           if (ck.field_W != null) {

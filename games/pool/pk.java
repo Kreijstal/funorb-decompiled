@@ -3,7 +3,7 @@
  */
 final class pk {
     static vh field_a;
-    static String field_c;
+    static String muOptionsRatedgametype;
     static Sprite field_b;
 
     final static String a(CharSequence param0, int param1) {
@@ -34,7 +34,7 @@ final class pk {
 
     public static void a(byte param0) {
         field_b = null;
-        field_c = null;
+        muOptionsRatedgametype = null;
         int var1 = 77 % ((1 - param0) / 46);
         field_a = null;
     }
@@ -42,7 +42,7 @@ final class pk {
     final static boolean b(byte param0) {
         if (param0 != 109) {
           field_a = (vh) null;
-          if (fk.field_ab < 10) {
+          if (PlasmaTableScene.field_ab < 10) {
             return false;
           }
           if (!gk.field_kb) {
@@ -50,7 +50,7 @@ final class pk {
           }
           return false;
         }
-        if (fk.field_ab < 10) {
+        if (PlasmaTableScene.field_ab < 10) {
           return false;
         }
         if (!gk.field_kb) {
@@ -60,6 +60,6 @@ final class pk {
     }
 
     static {
-        field_c = "Match by...";
+        muOptionsRatedgametype = "Match by...";
     }
 }

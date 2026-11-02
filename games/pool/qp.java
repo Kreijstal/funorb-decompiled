@@ -11,9 +11,9 @@ final class qp extends vh {
     private uo[] field_Vb;
     private int field_Lb;
     static Sprite field_Rb;
-    static String field_bc;
+    static String playerYouX2AreOfferingDraw;
     private int field_Wb;
-    static String[] field_fc;
+    static String[] ungoodShot;
     private int field_Mb;
     static int[] field_Yb;
     static int[][] field_gc;
@@ -22,7 +22,7 @@ final class qp extends vh {
     private int field_ac;
     private qp field_Qb;
     private int field_Pb;
-    static String field_Ob;
+    static String loginUsername;
     static BitmapFont field_ec;
 
     final void a(byte param0, int param1, int param2) {
@@ -95,7 +95,7 @@ final class qp extends vh {
         if (param3 >= 1 &&
           hq.a(param2, param1, 1) >= param3) {
           if (param0 <= 103) {
-            field_bc = (String) null;
+            playerYouX2AreOfferingDraw = (String) null;
           }
           return true;
         }
@@ -122,7 +122,7 @@ final class qp extends vh {
         }
         int var5 = ml.field_b;
         if (var5 > 0) {
-          if (var5 == we.field_d) {
+          if (var5 == we.keycharTheCharacterUnderQuestionmark) {
             var5 = 63;
           }
           for (var6 = 0; var6 < this.field_Tb.length; var6++) {
@@ -212,7 +212,7 @@ final class qp extends vh {
               lq.i(15975);
               cp.a(false);
             } else {
-              mf.j(1);
+              ClassicBallSkin.j(1);
               lq.i(15975);
             }
           }
@@ -225,15 +225,15 @@ final class qp extends vh {
     public static void h(int param0) {
         field_Sb = null;
         field_Yb = null;
-        field_bc = null;
-        field_Ob = null;
+        playerYouX2AreOfferingDraw = null;
+        loginUsername = null;
         field_Zb = null;
         if (param0 >= -103) {
           qp.h(78);
         }
         field_Rb = null;
         field_gc = (int[][]) null;
-        field_fc = null;
+        ungoodShot = null;
         field_ec = null;
     }
 
@@ -298,7 +298,7 @@ final class qp extends vh {
           var12 = "</col>";
           for (var13 = 0; this.field_cc > var13; var13++) {
             if (this.field_Tb[var13] > 0) {
-              param6[var13] = var11 + qe.a(false, this.field_Tb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + ShotRecord.a(false, this.field_Tb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_dc[var13] != null ||
@@ -366,8 +366,8 @@ final class qp extends vh {
     }
 
     static {
-        field_bc = "You and <%0> want to draw.";
-        field_fc = new String[]{"Uh-oh!", "Too bad!", "Whoops!"};
-        field_Ob = "Username: ";
+        playerYouX2AreOfferingDraw = "You and <%0> want to draw.";
+        ungoodShot = new String[]{"Uh-oh!", "Too bad!", "Whoops!"};
+        loginUsername = "Username: ";
     }
 }

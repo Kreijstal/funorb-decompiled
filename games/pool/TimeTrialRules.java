@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class vp extends sq {
+final class TimeTrialRules extends GameRules {
     static int field_f;
-    static String field_e;
+    static String playerNameYouHaveAnExtraShot;
 
     final boolean f(int param0) {
         if (param0 <= 113) {
@@ -14,7 +14,7 @@ final class vp extends sq {
         return false;
     }
 
-    final boolean a(int param0, byte param1, qe param2) {
+    final boolean a(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -41,7 +41,7 @@ final class vp extends sq {
         }
     }
 
-    vp(al param0) {
+    TimeTrialRules(PoolGameModel param0) {
         super(param0);
     }
 
@@ -69,9 +69,9 @@ final class vp extends sq {
         int var2 = 0;
         int var3;
         var3 = Pool.field_O;
-        for (var2 = 1; this.field_d.field_l.length > var2; var2++) {
+        for (var2 = 1; this.field_d.balls.length > var2; var2++) {
           if (var2 != 8 &&
-            this.field_d.field_l[var2].field_s) {
+            this.field_d.balls[var2].inPlay) {
             return false;
           }
         }
@@ -80,7 +80,7 @@ final class vp extends sq {
         return true;
     }
 
-    final boolean c(qe param0, int param1) {
+    final boolean c(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -121,7 +121,7 @@ final class vp extends sq {
         return this.o(24812) ? 2 : 0;
     }
 
-    final int a(qe param0, int param1) {
+    final int a(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -155,8 +155,8 @@ final class vp extends sq {
 
     final int i(int param0) {
         if (param0 != 26840) {
-          qe var3 = (qe) null;
-          this.a((qe) null, 33);
+          ShotRecord var3 = (ShotRecord) null;
+          this.a((ShotRecord) null, 33);
         }
         return 16;
     }
@@ -200,7 +200,7 @@ final class vp extends sq {
             hk.field_s = param6;
             kn.field_j = param13;
             mp.field_S = param7;
-            bf.field_g = param3;
+            CushionSegment.field_g = param3;
             lf.field_b = param10;
             im.field_ec = param1;
             if (nd.field_a.field_b != null) {
@@ -239,13 +239,13 @@ final class vp extends sq {
     }
 
     public static void p(int param0) {
-        field_e = null;
+        playerNameYouHaveAnExtraShot = null;
         if (param0 != -9) {
-          vp.a(89, 15, (byte) -50, true, -63, 93, true, (String) null, (PlatformTaskDispatcher) null, -10, -14, -81, -56, -98L);
+          TimeTrialRules.a(89, 15, (byte) -50, true, -63, 93, true, (String) null, (PlatformTaskDispatcher) null, -10, -14, -81, -56, -98L);
         }
     }
 
-    final Sprite b(qe param0, int param1) {
+    final Sprite b(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_6_0 = null;
@@ -305,12 +305,12 @@ final class vp extends sq {
         int var5;
         int var6;
         aa var7;
-        cr var8;
+        PotEvent var8;
         int var9;
-        qe var10;
-        qe var11;
+        ShotRecord var10;
+        ShotRecord var11;
         var9 = Pool.field_O;
-        var10 = this.field_d.j(90);
+        var10 = this.field_d.currentShot(90);
         var11 = var10;
         var3 = -60 / ((-37 - param0) / 60);
         if (var11 == null) {
@@ -344,26 +344,26 @@ final class vp extends sq {
         var6 = var11.field_m.a(30);
         if (var5 == 0 &&
           var6 == 1 &&
-          ((cr) (var11.field_m.c((byte) 62))).field_n == 8 &&
+          ((PotEvent) (var11.field_m.c((byte) 62))).ballIndex == 8 &&
           var4 == 2) {
           return ag.field_e;
         }
         var7 = new aa(var11.field_m);
-        var8 = (cr) (var7.b((byte) -92));
+        var8 = (PotEvent) (var7.b((byte) -92));
         while (var8 != null) {
-          if (var8.field_n == 8) {
+          if (var8.ballIndex == 8) {
             var11.a(5, -14, new int[]{this.field_d.field_A});
-            return hm.field_e;
+            return Quaternion.field_e;
           }
-          if (0 != var8.field_n) {
+          if (0 != var8.ballIndex) {
             var11.field_w = (byte)(var11.field_w + 1);
           }
-          var8 = (cr) (var7.b(-101));
+          var8 = (PotEvent) (var7.b(-101));
         }
         return var5;
     }
 
     static {
-        field_e = "<%0>: You have an extra shot!";
+        playerNameYouHaveAnExtraShot = "<%0>: You have an extra shot!";
     }
 }

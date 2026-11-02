@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj extends IntrusiveNode {
-    static String field_u;
+    static String youGainedALife;
     int field_p;
     static int field_m;
     int field_l;
@@ -14,19 +14,19 @@ final class oj extends IntrusiveNode {
     int field_n;
     int field_B;
     static int field_s;
-    static String field_t;
+    static String loadingGraphics;
     static int field_q;
     static IntrusiveDeque field_o;
     static String field_y;
     static int[] field_r;
 
     public static void a(int param0) {
-        field_u = null;
+        youGainedALife = null;
         if (param0 != -19382) {
           return;
         }
         field_y = null;
-        field_t = null;
+        loadingGraphics = null;
         field_o = null;
         field_r = null;
     }
@@ -51,19 +51,19 @@ final class oj extends IntrusiveNode {
           var3 = var9.readUnsignedByte(-123);
           var9.p(8);
           cf.field_a = ro.a(24, var9);
-          qe.field_S = new oc[var3];
+          ShotRecord.field_S = new oc[var3];
           qp.field_gc = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            qe.field_S[var4] = fm.a(-16336, var7);
+            ShotRecord.field_S[var4] = fm.a(-16336, var7);
           }
           if (param1 >= -104) {
-            field_t = (String) null;
+            loadingGraphics = (String) null;
           }
           var9.o(8);
           var8 = 0;
           var4Lifetime1 = var8;
           while (var3 > var8) {
-            var5 = qe.field_S[var8];
+            var5 = ShotRecord.field_S[var8];
             var5.a(6, 1, 6, 6, 1);
             var5.a((byte) 103);
             var6 = new int[]{var5.field_n + var5.field_q >> 1, var5.field_N + var5.field_b >> 1, var5.field_F + var5.field_f >> 1};
@@ -90,14 +90,14 @@ final class oj extends IntrusiveNode {
         int var1;
         boolean stackIn_7_0 = false;
         var1 = 38 / ((param0 - 45) / 37);
-        stackIn_7_0 = (null != vl.field_m) || (sh.h((byte) 86)) || (fc.field_b != null) || (wj.i(-1));
+        stackIn_7_0 = (null != PlasmaBallSkin.field_m) || (sh.h((byte) 86)) || (fc.field_b != null) || (wj.i(-1));
         return stackIn_7_0;
     }
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = tp.field_e != null ? 1 : 0;
         if (~qi.field_a == param2 &&
-          fj.a(ro.field_s, rn.field_g, 17, hg.field_a, hp.field_a)) {
+          NineBallRules.a(ro.field_s, rn.field_g, 17, hg.field_a, hp.field_a)) {
           if (hg.field_a != 2 &&
             var3 != 0) {
             return false;
@@ -123,7 +123,7 @@ final class oj extends IntrusiveNode {
             var3 != 0) {
             return false;
           }
-          if (vl.j(param2 + 12010)) {
+          if (PlasmaBallSkin.j(param2 + 12010)) {
             String var4 = (String) null;
             ub.a((byte) -127, (String) null, param1, ie.field_e, tq.field_t, uh.field_x);
           }
@@ -151,9 +151,9 @@ final class oj extends IntrusiveNode {
     }
 
     static {
-        field_u = "You gained 1 life!";
+        youGainedALife = "You gained 1 life!";
         field_m = 4;
-        field_t = "Loading graphics";
+        loadingGraphics = "Loading graphics";
         field_q = -1;
         field_o = new IntrusiveDeque();
         field_r = new int[8192];

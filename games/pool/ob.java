@@ -88,15 +88,15 @@ class ob extends jh {
         boolean decompiledFrameRemainder0 = true;
         var15 = Pool.field_O;
         var3 = this.field_h[param1];
-        var4 = nk.field_f[var3];
+        var4 = TranslatedUiText.field_f[var3];
         if (var3 == 8) {
           if (this.field_w != 0 &&
             this.field_w != 21) {
             if (7 == this.field_w) {
-              var4 = nk.field_f[37];
+              var4 = TranslatedUiText.field_f[37];
             } else {
               if (this.field_w == 6) {
-                var4 = nk.field_f[38];
+                var4 = TranslatedUiText.field_f[38];
               } else {
                 if (8 != this.field_w &&
                   this.field_w != 3 &&
@@ -105,17 +105,17 @@ class ob extends jh {
                     11 == this.field_w ||
                     this.field_w == 12 ||
                     this.field_w == 9)) {
-                    var4 = vc.field_N;
+                    var4 = ModelTableScene.optionsmenuNotpaused;
                   }
                 } else {
-                  var4 = ld.field_f;
+                  var4 = ld.pausemenu;
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            var4 = nk.field_f[7];
+            var4 = TranslatedUiText.field_f[7];
           }
         }
         var5 = this.d(0, param1);
@@ -133,16 +133,16 @@ class ob extends jh {
         }
         var9Lifetime1 = this.c(param1, -4);
         if (jq.field_e[param1] != var4 ||
-          var9Lifetime1 != mc.field_h[param1]) {
+          var9Lifetime1 != FreePlayRules.field_h[param1]) {
           var10_ref_dd = this.a(var4, var9Lifetime1, 0, param1);
           fm.field_G[param1] = var10_ref_dd;
           jq.field_e[param1] = var4;
-          mc.field_h[param1] = var9Lifetime1;
+          FreePlayRules.field_h[param1] = var9Lifetime1;
         }
         var10Lifetime1 = fm.field_G[param1].field_z;
         if (20 == var3 ||
           var3 == 21) {
-          var10Lifetime1 = pq.field_H + 120;
+          var10Lifetime1 = Ball.field_H + 120;
         }
         var11 = -var10Lifetime1 + (var6 + var5) >> 1;
         var12 = this.a((byte) 69, param1);
@@ -152,15 +152,15 @@ class ob extends jh {
           var3 != 21) {
           return;
         }
-        var11 = var11 + pq.field_H;
-        var20 = al.field_B[0].b(0, 0);
+        var11 = var11 + Ball.field_H;
+        var20 = PoolGameModel.field_B[0].b(0, 0);
         for (var14 = var11; var14 <= 120 + var11; var14 += 20) {
           SoftwareRasterizer.a(var14 << 4, -2 + var12 / 2 + var7 << 4, 16 - var11 + var14, var20.length - 1, var20);
         }
         if (20 == var3) {
           stackIn_39_0 = ec.field_b * 120 / 256;
         } else {
-          stackIn_39_0 = 120 * nk.field_h / 256;
+          stackIn_39_0 = 120 * TranslatedUiText.field_h / 256;
         }
         var14Lifetime1 = stackIn_39_0;
         wp.field_a.c(-(wp.field_a.field_z >> 1) + (var14Lifetime1 + var11), -4 + ((wp.field_a.field_A >> 1) + var7));
@@ -281,7 +281,7 @@ class ob extends jh {
         if (param2 != 0) {
           return;
         }
-        sq.field_b = -3;
+        GameRules.field_b = -3;
         re.field_f = param0;
     }
 
@@ -401,12 +401,12 @@ class ob extends jh {
                     }
                     stackIn_82_0 = !(th.field_h);
                     th.field_h = stackIn_82_0;
-                    stackIn_84_0 = nk.field_f;
+                    stackIn_84_0 = TranslatedUiText.field_f;
                     stackIn_84_1 = 49;
                     if (th.field_h) {
-                      stackIn_85_2 = hb.field_q;
+                      stackIn_85_2 = hb.mouseYAxisInverted;
                     } else {
-                      stackIn_85_2 = PoolMatchController.field_K;
+                      stackIn_85_2 = PoolMatchController.mouseYAxisNormal;
                     }
                     stackIn_84_0[stackIn_84_1] = stackIn_85_2;
                   } else {
@@ -459,28 +459,28 @@ class ob extends jh {
                                       if (!(!this.field_B.b((byte) 99))) {
                                         vh.field_Ab = so.field_g[0];
                                         er.field_W = 3;
-                                        sq.field_b = -6;
+                                        GameRules.field_b = -6;
                                       }
                                     } else {
                                       if (var6 == 41) {
                                         if (!(!this.field_B.b((byte) 101))) {
                                           er.field_W = 3;
                                           vh.field_Ab = so.field_g[1];
-                                          sq.field_b = -6;
+                                          GameRules.field_b = -6;
                                         }
                                       } else {
                                         if (var6 == 42) {
                                           if (!this.field_B.b((byte) 84)) {
                                             break regionExit2;
                                           }
-                                          sq.field_b = -6;
+                                          GameRules.field_b = -6;
                                           vh.field_Ab = so.field_g[2];
                                           er.field_W = 3;
                                         } else {
                                           if (43 == var6) {
                                             if (!(!this.field_B.b((byte) 81))) {
                                               var6 = param1 ? 1 : 0;
-                                              fq.a(param0 ^ 19737, 2, sq.field_b, var6 != 0);
+                                              fq.a(param0 ^ 19737, 2, GameRules.field_b, var6 != 0);
                                             }
                                           } else {
                                             if (var6 == 50) {
@@ -488,12 +488,12 @@ class ob extends jh {
                                                 break regionExit2;
                                               }
                                               un.field_e = 0;
-                                              sq.field_b = -8;
+                                              GameRules.field_b = -8;
                                             } else {
                                               if (var6 == 51) {
                                                 if (!(!this.field_B.b((byte) 83))) {
                                                   un.field_e = 1;
-                                                  sq.field_b = -8;
+                                                  GameRules.field_b = -8;
                                                 }
                                               } else {
                                                 if (1 == var6) {
@@ -502,10 +502,10 @@ class ob extends jh {
                                                   }
                                                   if (hk.b(107)) {
                                                     bl.field_x = true;
-                                                    nk.a(pl.field_d, -4, (byte) 82);
+                                                    TranslatedUiText.a(pl.pleaselogin, -4, (byte) 82);
                                                   } else {
                                                     var6 = param1 ? 1 : 0;
-                                                    fq.a(-3405, -4, sq.field_b, var6 != 0);
+                                                    fq.a(-3405, -4, GameRules.field_b, var6 != 0);
                                                   }
                                                 } else {
                                                   if (var6 != 62 &&
@@ -513,40 +513,40 @@ class ob extends jh {
                                                     if (var6 == 7) {
                                                       if (!(!this.field_B.b((byte) 50))) {
                                                         var6 = param1 ? 1 : 0;
-                                                        fq.a(-3405, 0, sq.field_b, var6 != 0);
+                                                        fq.a(-3405, 0, GameRules.field_b, var6 != 0);
                                                         jc.field_c = false;
                                                       }
                                                     } else {
                                                       if (var6 == 24) {
                                                         if (!(!this.field_B.b((byte) 95))) {
                                                           var6 = param1 ? 1 : 0;
-                                                          fq.a(-3405, 21, sq.field_b, var6 != 0);
+                                                          fq.a(-3405, 21, GameRules.field_b, var6 != 0);
                                                           lo.field_a = true;
                                                         }
                                                       } else {
                                                         if (var6 == 22) {
                                                           if (!(!this.field_B.b((byte) 109))) {
                                                             var6 = param1 ? 1 : 0;
-                                                            fq.a(-3405, 17, sq.field_b, var6 != 0);
+                                                            fq.a(-3405, 17, GameRules.field_b, var6 != 0);
                                                           }
                                                         } else {
                                                           if (var6 == 5) {
                                                             if (!(!this.field_B.b((byte) 67))) {
                                                               var6 = param1 ? 1 : 0;
-                                                              fq.a(-3405, 13, sq.field_b, var6 != 0);
+                                                              fq.a(-3405, 13, GameRules.field_b, var6 != 0);
                                                             }
                                                           } else {
                                                             if (47 == var6) {
                                                               if (!(!this.field_B.b((byte) 81))) {
                                                                 var6 = param1 ? 1 : 0;
-                                                                fq.a(-3405, 14, sq.field_b, var6 != 0);
+                                                                fq.a(-3405, 14, GameRules.field_b, var6 != 0);
                                                               }
                                                             } else {
                                                               if (8 == var6) {
                                                                 if (!this.field_B.b((byte) 89)) {
                                                                   break regionExit2;
                                                                 }
-                                                                if ((sq.field_b != this.field_w)) {
+                                                                if ((GameRules.field_b != this.field_w)) {
                                                                   stackIn_151_0 = -3405;
                                                                   stackIn_151_1 = this.field_w;
                                                                   stackIn_151_2 = s.field_c;
@@ -561,7 +561,7 @@ class ob extends jh {
                                                                 if (var6 == 4) {
                                                                   if (!(!this.field_B.b((byte) 52))) {
                                                                     var6 = param1 ? 1 : 0;
-                                                                    fq.a(-3405, 15, sq.field_b, var6 != 0);
+                                                                    fq.a(-3405, 15, GameRules.field_b, var6 != 0);
                                                                   }
                                                                 } else {
                                                                   if (var6 == 48) {
@@ -569,7 +569,7 @@ class ob extends jh {
                                                                       break regionExit2;
                                                                     }
                                                                     var6 = param1 ? 1 : 0;
-                                                                    fq.a(-3405, 16, sq.field_b, var6 != 0);
+                                                                    fq.a(-3405, 16, GameRules.field_b, var6 != 0);
                                                                   } else {
                                                                     if (var6 == 20) {
                                                                       var5 = 0;
@@ -584,7 +584,7 @@ class ob extends jh {
                                                                         ka.a(true, 256);
                                                                       }
                                                                       if (this.field_B.c((byte) 111)) {
-                                                                        var6 = this.d(0, param2) + (this.a(false, param2) + pq.field_H) - 120 >> 1;
+                                                                        var6 = this.d(0, param2) + (this.a(false, param2) + Ball.field_H) - 120 >> 1;
                                                                         var7 = -var6 + wn.field_i;
                                                                         var8 = 256 * var7 / 120;
                                                                         if (0 >= var8) {
@@ -625,7 +625,7 @@ class ob extends jh {
                                                                           ap.a(256, 3815994);
                                                                         }
                                                                         if (this.field_B.c((byte) 105)) {
-                                                                          var6 = this.d(0, param2) + this.a(false, param2) + pq.field_H - 120 >> 1;
+                                                                          var6 = this.d(0, param2) + this.a(false, param2) + Ball.field_H - 120 >> 1;
                                                                           var7 = wn.field_i - var6;
                                                                           var8 = 256 * var7 / 120;
                                                                           if (var8 > 0) {
@@ -711,7 +711,7 @@ class ob extends jh {
                                                                                         if (ib.field_v) {
                                                                                           ba.field_ub.F(1791);
                                                                                           var6 = param1 ? 1 : 0;
-                                                                                          fq.a(param0 ^ 19737, -5, sq.field_b, var6 != 0);
+                                                                                          fq.a(param0 ^ 19737, -5, GameRules.field_b, var6 != 0);
                                                                                         }
                                                                                         if (!(!mj.field_e)) {
                                                                                           ef.a(0, 3, 11);
@@ -1028,7 +1028,7 @@ class ob extends jh {
         if (fm.field_G == null ||
           !(fm.field_G.length >= this.field_B.field_e)) {
           fm.field_G = new Sprite[this.field_B.field_e];
-          mc.field_h = new int[this.field_B.field_e];
+          FreePlayRules.field_h = new int[this.field_B.field_e];
           jq.field_e = new String[this.field_B.field_e];
         }
         if (param0 < 36) {
@@ -1060,10 +1060,10 @@ class ob extends jh {
         RuntimeException var7 = null;
         try {
           dr.a(param6.field_jc, -1, param6.field_Sb, -1, param1, param6.field_dc, 32540, param6, (int[]) null);
-          vl.field_m.a((byte) 124, true);
-          vl.field_m.a(0, (int[]) null, (byte) 75);
-          vl.field_m.a((byte) 65);
-          var13 = vl.field_m;
+          PlasmaBallSkin.field_m.a((byte) 124, true);
+          PlasmaBallSkin.field_m.a(0, (int[]) null, (byte) 75);
+          PlasmaBallSkin.field_m.a((byte) 65);
+          var13 = PlasmaBallSkin.field_m;
           var8 = param5;
           var9 = param4;
           var10 = param2;

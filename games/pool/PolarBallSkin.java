@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to extends tm {
+final class PolarBallSkin extends BallSkin {
     static boolean field_q;
     static PcmSample field_l;
     static int field_p;
-    static String field_n;
+    static String createPassword;
     static int field_o;
     static boolean[][] field_m;
 
@@ -67,7 +67,7 @@ final class to extends tm {
         return 6715289;
     }
 
-    to() {
+    PolarBallSkin() {
     }
 
     final boolean c(int param0) {
@@ -80,9 +80,9 @@ final class to extends tm {
 
     public static void i(int param0) {
         field_l = null;
-        field_n = null;
+        createPassword = null;
         if (param0 != 8) {
-          to.a((byte) 80, true);
+          PolarBallSkin.a((byte) 80, true);
           field_m = (boolean[][]) null;
           return;
         }
@@ -167,10 +167,10 @@ final class to extends tm {
 
     final String a(byte param0, int param1) {
         if (param0 >= 9) {
-          return param1 == 0 ? ij.field_t : ld.field_h;
+          return param1 == 0 ? ij.ballsetPolarGroup0 : ld.ballsetPolarGroup1;
         }
         field_l = (PcmSample) null;
-        return param1 == 0 ? ij.field_t : ld.field_h;
+        return param1 == 0 ? ij.ballsetPolarGroup0 : ld.ballsetPolarGroup1;
     }
 
     final static ml[] a(byte param0) {
@@ -184,7 +184,7 @@ final class to extends tm {
     static {
         field_p = 0;
         field_q = false;
-        field_n = "Password: ";
+        createPassword = "Password: ";
         field_m = new boolean[][]{new boolean[]{false, false, false, false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false, false, false, false}, new boolean[]{false, false}};
     }
 }

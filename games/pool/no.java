@@ -15,7 +15,7 @@ abstract class no {
     PacketBuffer field_r;
     long field_d;
     int field_m;
-    static String field_b;
+    static String mpGamedrawn;
     static int field_l;
     PacketBuffer field_p;
     volatile int field_a;
@@ -253,7 +253,7 @@ abstract class no {
 
     public static void b(int param0) {
         field_s = null;
-        field_b = null;
+        mpGamedrawn = null;
         field_k = null;
         field_q = null;
         field_n = null;
@@ -314,6 +314,6 @@ abstract class no {
         field_h = new nl();
         field_n = new int[16];
         field_g = new hj(8, 0, 4, 1);
-        field_b = "Game drawn";
+        mpGamedrawn = "Game drawn";
     }
 }

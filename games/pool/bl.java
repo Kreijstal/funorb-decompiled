@@ -22,18 +22,18 @@ final class bl {
     private int field_G;
     private int field_n;
     private int field_q;
-    static String field_j;
+    static String playerYouX2HaveResigned;
     private int field_C;
     private int field_a;
     private int field_o;
     private int field_l;
     static int field_g;
-    static String field_v;
+    static String gameOptionsChanged;
     private int field_I;
-    static String field_e;
+    static String kick;
     private int field_w;
     private int field_A;
-    static String field_t;
+    static String dobEnterforchat;
     private int field_B;
     private int field_J;
     static boolean field_x;
@@ -201,14 +201,14 @@ final class bl {
     }
 
     public static void a(int param0) {
-        field_v = null;
+        gameOptionsChanged = null;
         if (param0 <= 116) {
           field_r = (int[]) null;
         }
-        field_j = null;
-        field_e = null;
+        playerYouX2HaveResigned = null;
+        kick = null;
         field_r = null;
-        field_t = null;
+        dobEnterforchat = null;
     }
 
     bl(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -228,11 +228,11 @@ final class bl {
 
     static {
         field_s = 0;
-        field_j = "You and <%0> have resigned!";
+        playerYouX2HaveResigned = "You and <%0> have resigned!";
         field_r = new int[]{2, 20, 21, 49, 5, 10, 11, 13};
-        field_v = "Game options changed (<%0>)";
+        gameOptionsChanged = "Game options changed (<%0>)";
         field_g = 65536;
-        field_t = "Please enter your date of birth to enable chat:";
-        field_e = "Kick";
+        dobEnterforchat = "Please enter your date of birth to enable chat:";
+        kick = "Kick";
     }
 }

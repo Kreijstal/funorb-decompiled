@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc extends sq {
+final class FreePlayRules extends GameRules {
     static int[] field_h;
     static int field_l;
     static kf[] field_j;
     static Sprite field_k;
     static PaletteBitmapFont field_e;
-    static String field_i;
+    static String muChatPmFriendsOnly;
     static int field_g;
     static uo[][] field_f;
 
@@ -36,7 +36,7 @@ final class mc extends sq {
         }
     }
 
-    final boolean a(int param0, byte param1, qe param2) {
+    final boolean a(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -61,7 +61,7 @@ final class mc extends sq {
         }
     }
 
-    mc(al param0) {
+    FreePlayRules(PoolGameModel param0) {
         super(param0);
     }
 
@@ -86,7 +86,7 @@ final class mc extends sq {
         return 1;
     }
 
-    final int a(qe param0, int param1) {
+    final int a(ShotRecord param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -114,14 +114,14 @@ final class mc extends sq {
 
     final int[] a(int param0, byte param1) {
         if (param1 != -32) {
-          qe var4 = (qe) null;
-          this.a(-52, (byte) -33, (qe) null);
+          ShotRecord var4 = (ShotRecord) null;
+          this.a(-52, (byte) -33, (ShotRecord) null);
           return dp.field_k;
         }
         return dp.field_k;
     }
 
-    final boolean c(qe param0, int param1) {
+    final boolean c(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -160,7 +160,7 @@ final class mc extends sq {
         field_j = null;
         field_k = null;
         field_f = (uo[][]) null;
-        field_i = null;
+        muChatPmFriendsOnly = null;
         if (param0 > -94) {
           return;
         }
@@ -186,7 +186,7 @@ final class mc extends sq {
     }
 
     final int h(int param0) {
-        this.field_d.j(96).field_t = true;
+        this.field_d.currentShot(96).field_t = true;
         if (param0 != -1) {
           return 77;
         }
@@ -206,7 +206,7 @@ final class mc extends sq {
         }
     }
 
-    final Sprite b(qe param0, int param1) {
+    final Sprite b(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_4_0 = null;
@@ -216,7 +216,7 @@ final class mc extends sq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            stackIn_4_0 = mf.field_n;
+            stackIn_4_0 = ClassicBallSkin.field_n;
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite) null;
@@ -253,6 +253,6 @@ final class mc extends sq {
 
     static {
         field_j = new kf[5];
-        field_i = "Only show private chat from my friends and opponents";
+        muChatPmFriendsOnly = "Only show private chat from my friends and opponents";
     }
 }

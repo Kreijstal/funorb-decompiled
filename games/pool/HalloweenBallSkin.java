@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends tm {
+final class HalloweenBallSkin extends BallSkin {
     static cg field_m;
-    static String field_l;
+    static String mbFullAccess1;
 
     public static void a(byte param0) {
         field_m = null;
         if (param0 >= -5) {
           return;
         }
-        field_l = null;
+        mbFullAccess1 = null;
     }
 
     final static void i(int param0) {
@@ -78,7 +78,7 @@ final class ul extends tm {
           if (param1 > 123) {
             return false;
           }
-          ul.a('￉', (byte) 82);
+          HalloweenBallSkin.a('￉', (byte) 82);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,10 +91,10 @@ final class ul extends tm {
         if (param0 < 9) {
           return (String) null;
         }
-        return ae.field_b;
+        return ae.ballsetEnglishGroup0;
     }
 
-    final void a(int param0, byte param1, pq[] param2) {
+    final void a(int param0, byte param1, Ball[] param2) {
         int var4_int = 0;
         int var5 = 0;
         eg var6 = null;
@@ -106,7 +106,7 @@ final class ul extends tm {
         RuntimeException var4 = null;
         try {
           if (param1 != -37) {
-            ul.a((byte) 26);
+            HalloweenBallSkin.a((byte) 26);
           }
           for (var4_int = 0; var4_int < 14; var4_int++) {
             var5 = 1 - (-var4_int - var4_int / 7);
@@ -118,7 +118,7 @@ final class ul extends tm {
             var6 = stackIn_7_0;
             if (this.field_a[var5] != var6) {
               this.field_a[var5] = var6;
-              this.a(false, param2[var5].field_G, var5);
+              this.a(false, param2[var5].renderTransform, var5);
             }
           }
           return;
@@ -155,16 +155,16 @@ final class ul extends tm {
         try {
           var10 = (CharSequence) ((Object) param1);
           if (!gj.a(-25908, var10)) {
-            stackIn_3_0 = p.field_g;
+            stackIn_3_0 = p.invalidName;
             return stackIn_3_0;
           }
           if (2 != th.field_a) {
-            stackIn_6_0 = qe.field_K;
+            stackIn_6_0 = ShotRecord.unableToDeleteFriend;
             return stackIn_6_0;
           }
           var8 = gf.a(-83, param1);
           if (var8 == null) {
-            stackIn_10_0 = nr.a(new String[]{param1}, -1, aa.field_f);
+            stackIn_10_0 = nr.a(new String[]{param1}, -1, aa.friendnotfound);
             return stackIn_10_0;
           }
           cf.field_k.a(var8, 0);
@@ -213,7 +213,7 @@ final class ul extends tm {
     final void a(int param0, di param1) {
         try {
           if (param0 != 198123656) {
-            field_l = (String) null;
+            mbFullAccess1 = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ul.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -222,8 +222,8 @@ final class ul extends tm {
 
     final void a(di param0, byte param1) {
         if (param1 != 117) {
-          pq[] var4 = (pq[]) null;
-          this.a(-110, (byte) 38, (pq[]) null);
+          Ball[] var4 = (Ball[]) null;
+          this.a(-110, (byte) 38, (Ball[]) null);
         }
         if (this.field_a != null) {
           return;
@@ -234,7 +234,7 @@ final class ul extends tm {
           jp.field_P.a(8, 8, 8, 8);
           sf.field_E.a(8, 8, 8, 8);
           this.field_a = new eg[16];
-          this.field_a[0] = al.field_B[2].field_a[0];
+          this.field_a[0] = PoolGameModel.field_B[2].field_a[0];
           this.field_a[15] = jp.field_P;
           this.field_a[14] = jp.field_P;
           this.field_a[13] = jp.field_P;
@@ -249,17 +249,17 @@ final class ul extends tm {
           this.field_a[3] = jp.field_P;
           this.field_a[2] = jp.field_P;
           this.field_a[1] = jp.field_P;
-          this.field_a[8] = al.field_B[2].field_a[8];
+          this.field_a[8] = PoolGameModel.field_B[2].field_a[8];
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ul.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    ul() {
+    HalloweenBallSkin() {
         this.field_g = false;
     }
 
     static {
-        field_l = "FULL ACCESS";
+        mbFullAccess1 = "FULL ACCESS";
     }
 }

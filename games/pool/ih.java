@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih {
-    static String field_b;
+    static String fsUnavailable;
     static vh field_e;
-    static String[] field_f;
+    static String[] hsModeName;
     static int[] field_d;
     static ir field_a;
     static String[] field_c;
 
     public static void a(int param0) {
-        field_f = null;
+        hsModeName = null;
         field_d = null;
-        field_b = null;
+        fsUnavailable = null;
         field_e = null;
         if (param0 <= 98) {
           return;
@@ -131,8 +131,8 @@ final class ih {
               tl.field_J = og.field_L;
             } else {
               if (var9Lifetime1 == 248) {
-                cr.a(16, hk.d(71));
-                ke.field_g = oe.field_N;
+                PotEvent.a(16, hk.d(71));
+                ke.field_g = oe.createUnable;
                 dn.c(-70);
                 we.field_e = false;
                 stackIn_33_0 = var9Lifetime1;
@@ -186,10 +186,10 @@ final class ih {
           }
           if (null == jd.field_c) {
             if (we.field_e) {
-              if (bf.d((byte) 123) <= 30000L) {
-                ke.field_g = er.field_Q;
+              if (CushionSegment.d((byte) 123) <= 30000L) {
+                ke.field_g = er.loginm2;
               } else {
-                ke.field_g = wd.field_Rb;
+                ke.field_g = wd.loginm3;
               }
               we.field_e = false;
               stackIn_62_0 = 249;
@@ -229,19 +229,19 @@ final class ih {
     }
 
     final static void a(byte param0) {
-        hm var1 = new hm();
-        var1.a(86, 0, 0, 65536, 64);
+        Quaternion var1 = new Quaternion();
+        var1.setFromAxisAngle(86, 0, 0, 65536, 64);
         if (param0 != 46) {
           ke var2 = (ke) null;
           ih.a((String) null, (byte) -72, 28, true, (ke) null, (ke) null, 104);
         }
-        var1.b(true);
-        jc.field_e.a(param0 ^ 45, var1);
+        var1.normalise(true);
+        jc.field_e.multiplyBy(param0 ^ 45, var1);
     }
 
     static {
-        field_b = "Unfortunately your configuration doesn't support fullscreen mode.";
-        field_f = new String[]{"All scores", "My scores", "Best each"};
+        fsUnavailable = "Unfortunately your configuration doesn't support fullscreen mode.";
+        hsModeName = new String[]{"All scores", "My scores", "Best each"};
         field_c = new String[16];
     }
 }

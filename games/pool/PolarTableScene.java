@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class vf extends vc {
+final class PolarTableScene extends ModelTableScene {
     static int field_lb;
-    static String field_Q;
+    static String ballsetUsa8Group1;
     private PcmSample field_fb;
     private vm[] field_U;
     PcmSample field_X;
     private PcmSample field_Z;
     private PcmSample field_ib;
-    static String field_gb;
+    static String timerHoursMinutesSecondsFractions;
     private PcmSample field_ab;
     private PcmSample field_cb;
     private PcmSample field_W;
@@ -63,7 +63,7 @@ final class vf extends vc {
         int[] stackIn_37_1;
         int stackIn_37_2;
         boolean stackIn_37_3;
-        pq[] stackIn_37_4;
+        Ball[] stackIn_37_4;
         Object stackIn_38_0;
         boolean stackIn_38_5;
         RuntimeException stackIn_48_0 = null;
@@ -71,13 +71,13 @@ final class vf extends vc {
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        pq[] var4 = null;
+        Ball[] var4 = null;
         int[] var5 = null;
         int[] var6_ref_int__ = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        al var10 = null;
+        PoolGameModel var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
@@ -109,7 +109,7 @@ final class vf extends vc {
         int[] var6_ref_int__Lifetime1;
         var9 = Pool.field_O;
         try {
-          var4 = param1.field_I.field_l;
+          var4 = param1.field_I.balls;
           var37 = f.a((byte) 53, param1.field_ab);
           var14 = var37;
           var5 = var14;
@@ -118,8 +118,8 @@ final class vf extends vc {
           var11 = var13;
           var6_ref_int__ = var11;
           if (param0 != -55) {
-            var10 = (al) null;
-            this.a((al) null, 25);
+            var10 = (PoolGameModel) null;
+            this.a((PoolGameModel) null, 25);
           }
           oh.field_d[0] = var36[0] - sb.a(288.0f, true) >> 2;
           oh.field_d[1] = var36[1] - sb.a(144.0f, true) >> 2;
@@ -202,7 +202,7 @@ final class vf extends vc {
           var28.a((byte) -113, 0, var28.field_j.length, var67);
           if ((pd.field_i & 1073741824L) == 0L) {
             for (var6 = 0; var6 < var4.length; var6++) {
-              if (var4[var6].field_s) {
+              if (var4[var6].inPlay) {
                 this.a(var37, var4[var6]);
               }
             }
@@ -217,7 +217,7 @@ final class vf extends vc {
             stackIn_37_2 = 112;
             stackIn_37_3 = true;
             stackIn_37_4 = var4;
-            if (param1.field_I.j(83).field_q != 0) {
+            if (param1.field_I.currentShot(83).field_q != 0) {
               stackIn_38_0 = this;
               stackIn_38_5 = false;
             } else {
@@ -254,9 +254,9 @@ final class vf extends vc {
     }
 
     public static void e(byte param0) {
-        field_Q = null;
+        ballsetUsa8Group1 = null;
         int var1 = 104 / ((param0 + 10) / 36);
-        field_gb = null;
+        timerHoursMinutesSecondsFractions = null;
         field_nb = null;
     }
 
@@ -327,7 +327,7 @@ final class vf extends vc {
         int var18Lifetime2;
         var20 = Pool.field_O;
         var2 = 0;
-        this.field_U = new vm[-gk.field_hb + mf.field_m];
+        this.field_U = new vm[-gk.field_hb + ClassicBallSkin.field_m];
         var3 = new IntrusiveDeque();
         var4 = new IntrusiveDeque();
         var5 = new IntrusiveDeque();
@@ -365,7 +365,7 @@ final class vf extends vc {
         for (var2Lifetime2 = vq.field_Ob; hj.field_a > var2Lifetime2; var2Lifetime2++) {
           var9.field_b[-vq.field_Ob + var2Lifetime2] = hc.a(this.field_O[var2Lifetime2], this.field_M[var2Lifetime2], (byte) 101);
         }
-        for (var2Lifetime3 = gk.field_hb; mf.field_m > var2Lifetime3; var2Lifetime3++) {
+        for (var2Lifetime3 = gk.field_hb; ClassicBallSkin.field_m > var2Lifetime3; var2Lifetime3++) {
           var24 = this.field_O[var2Lifetime3];
           var33 = new IntrusiveDeque();
           var24.e();
@@ -708,7 +708,7 @@ final class vf extends vc {
           var3_int++;
           this.field_O[incrementValue$80] = eg.a(param0, "", "polar_table/ice_isle_j");
           vq.field_Ob = var3_int;
-          mf.field_m = var3_int;
+          ClassicBallSkin.field_m = var3_int;
           incrementValue$81 = var3_int;
           var3_int++;
           this.field_O[incrementValue$81] = eg.a(param0, "", "polar_table/ice_main_us_a");
@@ -907,7 +907,7 @@ final class vf extends vc {
 
     final void d(boolean param0) {
         pi.a();
-        oo.field_w = null;
+        TableScene.field_w = null;
         BufferedSocket.field_p = null;
         p.field_c = null;
         if (!param0) {
@@ -917,7 +917,7 @@ final class vf extends vc {
         this.a((byte) 119);
     }
 
-    final void a(al param0, int param1) {
+    final void a(PoolGameModel param0, int param1) {
         int[] var6 = null;
         int[] var5 = null;
         int[] var4 = null;
@@ -930,9 +930,9 @@ final class vf extends vc {
           var5 = var6;
           var4 = var5;
           int[] var3 = var4;
-          oo.field_w = ta.a(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
+          TableScene.field_w = ta.a(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
           pi.c();
-          this.a(86, param0.field_l.length);
+          this.a(86, param0.balls.length);
           BufferedSocket.field_p = new int[65536];
           we.field_g = new int[65536];
           p.field_c = new int[65536];
@@ -1036,7 +1036,7 @@ final class vf extends vc {
         try {
           var3_int = param1.field_eb.b(-128);
           if (!param0) {
-            vf.e((byte) -126);
+            PolarTableScene.e((byte) -126);
           }
           var4 = this.field_B.field_z << 1;
           var5 = this.field_B.field_A << 1;
@@ -1075,7 +1075,7 @@ final class vf extends vc {
           for (var4 = 0; var4 < 256; var4++) {
             incrementValue$0 = var3;
             var3++;
-            BufferedSocket.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
+            BufferedSocket.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, TableScene.field_w, 128, 6);
           }
         }
         if (var1 >= 256) {
@@ -1137,13 +1137,13 @@ final class vf extends vc {
         }
     }
 
-    vf() {
+    PolarTableScene() {
         this.field_v = 8559779;
         this.b(112);
     }
 
     static {
-        field_Q = "Stripes";
-        field_gb = "hh:mm:ss.ff";
+        ballsetUsa8Group1 = "Stripes";
+        timerHoursMinutesSecondsFractions = "hh:mm:ss.ff";
     }
 }

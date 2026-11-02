@@ -7,7 +7,7 @@ import java.util.*;
 final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_f;
     static na field_e;
-    static int field_h;
+    static int keycodeDefaultDown2;
     static long field_g;
 
     public static void c(int param0) {
@@ -351,7 +351,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     static {
-        field_h = 99;
+        keycodeDefaultDown2 = 99;
         field_e = new na();
     }
 

@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ri extends fe {
-    static String field_T;
+    static String createEmailTooltip;
     static long field_S;
-    static String field_Q;
+    static String connectingToFriendServerTwoline;
     static vh field_P;
-    static String field_R;
+    static String orbcoinsColon;
     static rn field_U;
     static String field_N;
-    static String field_O;
+    static String rule03;
 
     public static void a(int param0) {
         if (param0 > 65) {
           field_U = null;
-          field_Q = null;
-          field_R = null;
-          field_O = null;
+          connectingToFriendServerTwoline = null;
+          orbcoinsColon = null;
+          rule03 = null;
           field_P = null;
-          field_T = null;
+          createEmailTooltip = null;
           field_N = null;
           return;
         }
@@ -63,9 +63,9 @@ final class ri extends fe {
     }
 
     static {
-        field_T = "Your email address is used to identify this account";
-        field_Q = "Connecting to<br>friend server...";
-        field_R = "Orb coins: ";
-        field_O = "Macroing or use of bots";
+        createEmailTooltip = "Your email address is used to identify this account";
+        connectingToFriendServerTwoline = "Connecting to<br>friend server...";
+        orbcoinsColon = "Orb coins: ";
+        rule03 = "Macroing or use of bots";
     }
 }

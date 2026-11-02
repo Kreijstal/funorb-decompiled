@@ -18,10 +18,10 @@ final class im extends vh {
     static Sprite field_Lb;
     int field_hc;
     long field_Mb;
-    static String field_Ob;
+    static String youCanAskToJoin;
     vh field_ac;
     int field_gc;
-    static String[] field_ic;
+    static String[] rulesetNames;
     vh field_Zb;
     static Sprite field_Vb;
     int field_bc;
@@ -146,9 +146,9 @@ final class im extends vh {
         field_Ub = null;
         field_cc = null;
         field_Lb = null;
-        field_ic = null;
+        rulesetNames = null;
         field_Qb = null;
-        field_Ob = null;
+        youCanAskToJoin = null;
         if (param0 != -48) {
           String var2 = (String) null;
           im.a((PacketBuffer) null, (byte) 100, (String) null);
@@ -213,7 +213,7 @@ final class im extends vh {
     }
 
     static {
-        field_Ob = "You can ask to join this game";
-        field_ic = new String[]{"Eight-ball", "Nine-ball", "Killer", "Free play"};
+        youCanAskToJoin = "You can ask to join this game";
+        rulesetNames = new String[]{"Eight-ball", "Nine-ball", "Killer", "Free play"};
     }
 }

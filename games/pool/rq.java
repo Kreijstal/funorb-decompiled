@@ -11,7 +11,7 @@ final class rq extends PcmStream {
     private boolean field_A;
     static tg[] field_y;
     private vk field_z;
-    static String field_r;
+    static String thisisrunescapeclan;
     private int[] field_C;
     private boolean field_G;
     private cg field_v;
@@ -265,7 +265,7 @@ final class rq extends PcmStream {
         field_H = null;
         field_q = null;
         field_y = null;
-        field_r = null;
+        thisisrunescapeclan = null;
         if (param0 < 42) {
           return;
         }
@@ -274,7 +274,7 @@ final class rq extends PcmStream {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         wg.field_Nb[jh.field_c] = param1;
-        ep.field_H[jh.field_c] = jh.field_c;
+        NetworkGameClient.field_H[jh.field_c] = jh.field_c;
         kb.field_g[jh.field_c] = param3;
         if (q.field_a < param3) {
           jl.field_c = param3;
@@ -560,7 +560,7 @@ final class rq extends PcmStream {
     static {
         int var0 = 0;
         field_y = new tg[255];
-        field_r = "This is your RuneScape clan if you have one.";
+        thisisrunescapeclan = "This is your RuneScape clan if you have one.";
         for (var0 = 0; var0 < field_y.length; var0++) {
           field_y[var0] = new tg();
         }

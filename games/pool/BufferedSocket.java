@@ -6,7 +6,7 @@ import java.io.*;
 final class BufferedSocket implements Runnable {
     private InputStream field_l;
     private int field_i;
-    static String field_c;
+    static String mbFullAccess2;
     static int field_f;
     private java.net.Socket field_n;
     private AsyncRequest field_d;
@@ -64,7 +64,7 @@ final class BufferedSocket implements Runnable {
     }
 
     public static void a(boolean param0) {
-        field_c = null;
+        mbFullAccess2 = null;
         field_p = null;
         field_m = null;
         field_b = null;
@@ -219,7 +219,7 @@ final class BufferedSocket implements Runnable {
           var9 = new fq(wd.field_Ub, param3);
           var8 = 91 / ((48 - param2) / 53);
           wd.field_Ub.b(var9, 30000);
-          if (sq.k(0)) {
+          if (GameRules.k(0)) {
             var9.p((byte) -52);
             return true;
           }
@@ -323,7 +323,7 @@ final class BufferedSocket implements Runnable {
         this.c(-119);
     }
 
-    final static or a(int param0, pq param1) {
+    final static or a(int param0, Ball param1) {
         or dupTemp$1 = null;
         RuntimeException var2 = null;
         String var3 = null;
@@ -424,6 +424,6 @@ final class BufferedSocket implements Runnable {
     }
 
     static {
-        field_c = "to over <%0> great games";
+        mbFullAccess2 = "to over <%0> great games";
     }
 }

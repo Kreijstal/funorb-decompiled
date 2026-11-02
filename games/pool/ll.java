@@ -5,18 +5,18 @@ final class ll {
     static int field_f;
     static vh field_d;
     static int[] field_a;
-    static String field_g;
+    static String tutorialPrev;
     static int field_c;
-    static String field_e;
+    static String muChatIgnore;
     private static int field_b;
 
     public static void a(int param0) {
-        field_e = null;
-        field_g = null;
+        muChatIgnore = null;
+        tutorialPrev = null;
         field_d = null;
         field_a = null;
         if (param0 > -64) {
-          field_e = (String) null;
+          muChatIgnore = (String) null;
         }
     }
 
@@ -69,8 +69,8 @@ final class ll {
     }
 
     static {
-        field_e = "Ignore";
-        field_g = "Previous";
+        muChatIgnore = "Ignore";
+        tutorialPrev = "Previous";
         field_b = 12;
         field_f = 1 << field_b;
     }

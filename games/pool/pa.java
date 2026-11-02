@@ -10,8 +10,8 @@ final class pa extends ob {
     static int[] field_L;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
-        if (null != vl.field_m) {
-          if (vl.field_m.b((byte) 111)) {
+        if (null != PlasmaBallSkin.field_m) {
+          if (PlasmaBallSkin.field_m.b((byte) 111)) {
             wa.m(8421504);
             return true;
           }
@@ -77,10 +77,10 @@ final class pa extends ob {
 
     final static int f(int param0) {
         if (param0 == -1) {
-          return pq.field_B != null ? pq.field_B.length : 0;
+          return Ball.field_B != null ? Ball.field_B.length : 0;
         }
         pa.a(false, 38, 98, -101);
-        return pq.field_B != null ? pq.field_B.length : 0;
+        return Ball.field_B != null ? Ball.field_B.length : 0;
     }
 
     public static void g(int param0) {

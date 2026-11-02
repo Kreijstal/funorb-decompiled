@@ -7,7 +7,7 @@ final class ck extends mh {
     private String field_X;
     private int field_V;
     static String[] field_R;
-    static String[] field_T;
+    static String[] quickchatShortcutKeys;
     private ip field_S;
     static IntrusiveDeque[] field_Y;
 
@@ -107,7 +107,7 @@ final class ck extends mh {
         var14 = Pool.field_O;
         var6 = this.field_S.c(-31873);
         if (var6 == ji.field_h) {
-          var18 = oi.field_r;
+          var18 = oi.checking;
           if (!var18.equals(this.field_m)) {
             this.field_m = var18;
             this.g((byte) 33);
@@ -175,7 +175,7 @@ final class ck extends mh {
           return;
         }
         if (var6 == no.field_k) {
-          var24 = oi.field_r;
+          var24 = oi.checking;
           if (!var24.equals(this.field_m)) {
             this.field_m = var24;
             this.g((byte) 33);
@@ -314,7 +314,7 @@ final class ck extends mh {
 
     public static void a(int param0) {
         field_Y = null;
-        field_T = null;
+        quickchatShortcutKeys = null;
         if (param0 > -52) {
           return;
         }
@@ -340,6 +340,6 @@ final class ck extends mh {
     }
 
     static {
-        field_T = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
+        quickchatShortcutKeys = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
     }
 }

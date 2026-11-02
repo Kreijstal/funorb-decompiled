@@ -7,14 +7,14 @@ final class jk {
     boolean field_g;
     static hj field_i;
     private double[] field_e;
-    static String field_k;
-    static String field_j;
+    static String timerHoursMinutesSeconds;
+    static String youLostTwoLives;
     int[] field_l;
-    static String field_f;
+    static String playerYouFirstListAreOfferingDraw;
     private int[][] field_d;
-    static String field_a;
+    static String back;
     static int[] field_h;
-    static String field_c;
+    static String playerXLostALife;
 
     final static void a(boolean param0, boolean param1, di param2, di param3) {
         try {
@@ -24,9 +24,9 @@ final class jk {
             jk.a(true, true, (di) null, (di) null);
           }
           sg.field_M = aj.a(0, "lobby", param2, "chatfilter");
-          nk.field_i[1] = cl.field_i;
-          nk.field_i[2] = rj.field_j;
-          nk.field_i[0] = fq.field_Db;
+          TranslatedUiText.field_i[1] = cl.muChatFriends;
+          TranslatedUiText.field_i[2] = KillerRules.muChatOff;
+          TranslatedUiText.field_i[0] = fq.muChatOn;
           c.a(ae.field_a, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -94,7 +94,7 @@ final class jk {
               var6.field_q[var7_int] = var6.field_q[var7_int] - var5;
             }
             var6.a();
-            this.field_e[var4] = (double)rj.e(-this.field_b[0].field_V + var5, 3);
+            this.field_e[var4] = (double)KillerRules.e(-this.field_b[0].field_V + var5, 3);
             if (var4 > 0) {
               var7 = this.field_b[var4 - 1];
               var7.d();
@@ -122,7 +122,7 @@ final class jk {
         var4.b(false, param1);
         var4.position = var4.position + 1;
         if (param2 != 0) {
-          field_c = (String) null;
+          playerXLostALife = (String) null;
         }
         int var5 = var4.position;
         var4.a(7, false);
@@ -145,7 +145,7 @@ final class jk {
         int var17 = 0;
         int var18 = 0;
         int var19 = Pool.field_O;
-        int var2 = (int)Math.ceil((double)((float)cr.a(4885, 688.5) / (float)nc.field_Y.length));
+        int var2 = (int)Math.ceil((double)((float)PotEvent.a(4885, 688.5) / (float)nc.field_Y.length));
         this.field_b = new eg[var2];
         if (param0 != 2) {
           return;
@@ -162,10 +162,10 @@ final class jk {
           var12 = (float)var4 * 3.0f / (float)var2 + ((float)var2 - (float)var4) * 1.0f / (float)var2;
           for (var13 = 0; var13 < 8; var13++) {
             var14 = 1 + var13;
-            var15 = this.field_b[var3].a(cr.a(param0 ^ 4887, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), cr.a(4885, (double)var11 * Math.sin(3.141592653589793 * (double)var13 * 2.0 / 8.0)), cr.a(4885, var5 - var9));
-            var16 = this.field_b[var3].a(cr.a(param0 ^ 4887, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), cr.a(4885, Math.sin(3.141592653589793 * (double)var14 * 2.0 / 8.0) * (double)var11), cr.a(4885, var5 - var9));
-            var17 = this.field_b[var3].a(cr.a(4885, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), cr.a(param0 ^ 4887, Math.sin(2.0 * ((double)var13 * 3.141592653589793) / 8.0) * (double)var12 * 1.03125), cr.a(4885, var7 - var9));
-            var18 = this.field_b[var3].a(cr.a(4885, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), cr.a(4885, Math.sin(2.0 * (3.141592653589793 * (double)var14) / 8.0) * (double)var12 * 1.03125), cr.a(4885, var7 - var9));
+            var15 = this.field_b[var3].a(PotEvent.a(param0 ^ 4887, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, (double)var11 * Math.sin(3.141592653589793 * (double)var13 * 2.0 / 8.0)), PotEvent.a(4885, var5 - var9));
+            var16 = this.field_b[var3].a(PotEvent.a(param0 ^ 4887, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, Math.sin(3.141592653589793 * (double)var14 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, var5 - var9));
+            var17 = this.field_b[var3].a(PotEvent.a(4885, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.a(param0 ^ 4887, Math.sin(2.0 * ((double)var13 * 3.141592653589793) / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, var7 - var9));
+            var18 = this.field_b[var3].a(PotEvent.a(4885, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, Math.sin(2.0 * (3.141592653589793 * (double)var14) / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, var7 - var9));
             this.field_b[var3].a(var15, var16, var17, (byte) 1, hh.a((byte) 95, 10053171), (byte) 0);
             this.field_b[var3].a(var18, var17, var16, (byte) 1, hh.a((byte) -1, 10053171), (byte) 0);
           }
@@ -227,8 +227,8 @@ final class jk {
           return;
         }
         if (hb.field_a > 0) {
-          if (null != ac.field_n) {
-            ac.field_n.a(ir.field_a.field_qb, 0);
+          if (null != KillerBallSkin.field_n) {
+            KillerBallSkin.field_n.a(ir.field_a.field_qb, 0);
           }
           stackIn_9_0 = ir.field_a;
           stackIn_9_1 = -79;
@@ -241,8 +241,8 @@ final class jk {
         }
         if (!(PoolMatchController.field_z <= 0) ||
           !(nj.field_b <= 0)) {
-          if (null != ac.field_n) {
-            ac.field_n.a(so.field_k.field_qb, 0);
+          if (null != KillerBallSkin.field_n) {
+            KillerBallSkin.field_n.a(so.field_k.field_qb, 0);
           }
           stackIn_24_0 = so.field_k;
           stackIn_24_1 = -79;
@@ -258,13 +258,13 @@ final class jk {
 
     public static void b(byte param0) {
         field_i = null;
-        field_c = null;
-        field_k = null;
-        field_f = null;
-        field_a = null;
-        field_j = null;
+        playerXLostALife = null;
+        timerHoursMinutesSeconds = null;
+        playerYouFirstListAreOfferingDraw = null;
+        back = null;
+        youLostTwoLives = null;
         if (param0 > -60) {
-          field_j = (String) null;
+          youLostTwoLives = (String) null;
         }
         field_h = null;
     }
@@ -322,9 +322,9 @@ final class jk {
           param0.field_I.a(this.field_l, param0.field_G.field_k, (byte) 49, param0.field_G.field_h, param0.field_G.field_e, param0.field_G.field_d);
           for (var11 = 0; var11 < this.field_e.length; var11++) {
             var12 = this.field_e[var11] + (double)param0.field_f;
-            this.field_d[var11][0] = (this.field_l[0] >> 13) + cr.a(4885, var9 * (var3_double * var12));
-            this.field_d[var11][1] = (this.field_l[1] >> 13) + cr.a(4885, var12 * var3_double * var7);
-            this.field_d[var11][2] = (this.field_l[2] >> 13) + cr.a(4885, var12 * var5);
+            this.field_d[var11][0] = (this.field_l[0] >> 13) + PotEvent.a(4885, var9 * (var3_double * var12));
+            this.field_d[var11][1] = (this.field_l[1] >> 13) + PotEvent.a(4885, var12 * var3_double * var7);
+            this.field_d[var11][2] = (this.field_l[2] >> 13) + PotEvent.a(4885, var12 * var5);
           }
           if (param1 < 11) {
             this.a((byte) 65);
@@ -361,11 +361,11 @@ final class jk {
     }
 
     static {
-        field_k = "hh:mm:ss";
-        field_f = "You<%0> all want to draw.";
-        field_j = "You lost 2 lives!";
+        timerHoursMinutesSeconds = "hh:mm:ss";
+        playerYouFirstListAreOfferingDraw = "You<%0> all want to draw.";
+        youLostTwoLives = "You lost 2 lives!";
         field_i = new hj(7, 0, 1, 1);
-        field_a = "Back";
-        field_c = "<%0> lost 1 life!";
+        back = "Back";
+        playerXLostALife = "<%0> lost 1 life!";
     }
 }

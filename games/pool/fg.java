@@ -6,10 +6,10 @@ final class fg {
     static di field_d;
     private int field_b;
     static String[][] field_f;
-    static String field_c;
+    static String cont;
     private qi field_h;
     private int field_a;
-    static String field_e;
+    static String dobChatdisabled;
 
     private final void a(long param0, int param1) {
         kk var4 = (kk) (this.field_g.a(-28010, param0));
@@ -165,7 +165,7 @@ final class fg {
             ar.field_g = param2;
             try {
               if (param1 > -103) {
-                field_c = (String) null;
+                cont = (String) null;
               }
               var6 = param0.getParameter("cookieprefix");
               var5 = var6;
@@ -235,21 +235,21 @@ final class fg {
     }
 
     public static void a(byte param0) {
-        field_e = null;
+        dobChatdisabled = null;
         if (param0 == 0) {
           field_d = null;
           field_f = (String[][]) null;
-          field_c = null;
+          cont = null;
           return;
         }
         field_d = (di) null;
         field_d = null;
         field_f = (String[][]) null;
-        field_c = null;
+        cont = null;
     }
 
     static {
-        field_c = "Continue";
-        field_e = "Chat is currently disabled.";
+        cont = "Continue";
+        dobChatdisabled = "Chat is currently disabled.";
     }
 }

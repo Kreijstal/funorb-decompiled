@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sh extends ud {
-    static String field_N;
+    static String youCanSpectate;
     static boolean[] field_Q;
     static int[] field_O;
     int field_T;
     static iq field_P;
-    static String field_S;
-    static String field_R;
+    static String benefitsPrice;
+    static String statusWantsToDraw;
 
     final static void h(int param0) {
         IntrusiveNode.field_h = null;
         if (param0 != -1) {
-          field_S = (String) null;
+          benefitsPrice = (String) null;
         }
         v.field_b = (byte[][]) null;
         rc.field_f = null;
@@ -64,7 +64,7 @@ final class sh extends ud {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
-                qk.field_b = true;
+                PoolUiText.field_b = true;
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -120,7 +120,7 @@ final class sh extends ud {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            stackIn_4_0 = mc.field_f;
+            stackIn_4_0 = FreePlayRules.field_f;
             if (param5 == -1) {
               stackIn_5_1 = 1;
             } else {
@@ -174,7 +174,7 @@ final class sh extends ud {
                     param6 = var11;
                   }
                   sh.a(param0, param1, param2, false, param4, 1 + param5, param6, param7);
-                  if (qk.field_b) {
+                  if (PoolUiText.field_b) {
                     return;
                   }
                 }
@@ -214,7 +214,7 @@ final class sh extends ud {
                 var10_intLifetime1 = 1;
                 sh.a(param0, param1, param2, false, param4, param5 + 1, param6, param7);
               }
-              if (qk.field_b) {
+              if (PoolUiText.field_b) {
                 return;
               }
               var11++;
@@ -244,15 +244,15 @@ final class sh extends ud {
     }
 
     public static void g(byte param0) {
-        field_R = null;
+        statusWantsToDraw = null;
         field_P = null;
         field_O = null;
-        field_N = null;
+        youCanSpectate = null;
         if (param0 != 118) {
           byte[] var2 = (byte[]) null;
           sh.a((byte) 52, (byte[]) null, -94);
         }
-        field_S = null;
+        benefitsPrice = null;
         field_Q = null;
     }
 
@@ -309,7 +309,7 @@ final class sh extends ud {
           rl.field_c = param2;
           IterableNodeHashTable.field_k = param0;
           if (param1 != -32) {
-            field_N = (String) null;
+            youCanSpectate = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "sh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -352,10 +352,10 @@ final class sh extends ud {
     }
 
     static {
-        field_N = "You can spectate this game";
+        youCanSpectate = "You can spectate this game";
         field_O = new int[]{2, 20, 21, 49, 6, 5, 3, 9};
-        field_S = "From only <%0>/month";
-        field_R = "Wants to draw.";
+        benefitsPrice = "From only <%0>/month";
+        statusWantsToDraw = "Wants to draw.";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

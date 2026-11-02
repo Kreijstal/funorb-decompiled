@@ -3,7 +3,7 @@
  */
 final class qd {
     private rn field_j;
-    static String[] field_h;
+    static String[] mustlogin3;
     private java.math.BigInteger field_c;
     private no field_i;
     static int field_k;
@@ -11,7 +11,7 @@ final class qd {
     private PacketBuffer field_a;
     static int field_g;
     private sp field_d;
-    static String field_e;
+    static String quit;
     private up[] field_f;
     static of field_b;
 
@@ -109,9 +109,9 @@ final class qd {
 
     public static void a(byte param0) {
         field_b = null;
-        field_h = null;
+        mustlogin3 = null;
         int var1 = 127 % ((param0 - 15) / 58);
-        field_e = null;
+        quit = null;
     }
 
     qd(no param0, rn param1) {
@@ -183,7 +183,7 @@ final class qd {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = jr.a(var10.position + (-var13.length - 5), (byte) -121, var10.payload, 5);
+        var15 = TikiBallSkin.a(var10.position + (-var13.length - 5), (byte) -121, var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -203,7 +203,7 @@ final class qd {
         var2.a(2, false);
         var2.a(md.field_c, (byte) 0, 0, md.field_c.length);
         var2.a(pm.field_l, false);
-        var2.a(mc.field_l, false);
+        var2.a(FreePlayRules.field_l, false);
         var2.a(ka.field_s, (byte) 0, 0, ka.field_s.length);
         var2.b(var2.position - var4, true);
     }
@@ -223,9 +223,9 @@ final class qd {
     }
 
     static {
-        field_e = "Quit";
+        quit = "Quit";
         field_g = 0;
         field_k = -1;
-        field_h = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
+        mustlogin3 = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
     }
 }

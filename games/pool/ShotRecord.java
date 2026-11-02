@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends IntrusiveNode {
+final class ShotRecord extends IntrusiveNode {
     byte field_H;
     int field_P;
     int field_M;
     int field_N;
-    static String field_r;
+    static String timerMinutesSecondsFractions;
     byte field_D;
-    static String field_F;
-    static String field_K;
+    static String playerIsOut;
+    static String unableToDeleteFriend;
     static int field_y;
     int field_n;
     PacketBuffer field_T;
-    static String field_p;
-    static String field_B;
+    static String menu;
+    static String rulePillar0;
     int field_u;
     short field_C;
     int field_I;
     IntrusiveDeque field_m;
     byte field_w;
     int[] field_U;
-    static String field_G;
-    static String field_O;
+    static String ratingLost;
+    static String menuTimeTrialWithGuides;
     int field_v;
     boolean field_t;
     int field_L;
@@ -43,28 +43,28 @@ final class qe extends IntrusiveNode {
     final boolean a(byte param0, int param1) {
         aa var3;
         int var4;
-        cr var5;
+        PotEvent var5;
         var3 = new aa(this.field_m);
         var4 = 105 / ((param0 + 53) / 59);
-        var5 = (cr) (var3.b((byte) -92));
+        var5 = (PotEvent) (var3.b((byte) -92));
         while (var5 != null) {
-          if (var5.field_n == param1) {
+          if (var5.ballIndex == param1) {
             return true;
           }
-          var5 = (cr) (var3.b(-108));
+          var5 = (PotEvent) (var3.b(-108));
         }
         return false;
     }
 
     final static tc b(boolean param0) {
         if (!param0) {
-          field_K = (String) null;
+          unableToDeleteFriend = (String) null;
           return w.a(false, 1);
         }
         return w.a(false, 1);
     }
 
-    final String a(int param0, al param1) {
+    final String a(int param0, PoolGameModel param1) {
         String stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -80,7 +80,7 @@ final class qe extends IntrusiveNode {
         String var3Lifetime3;
         try {
           if (param0 != 1) {
-            qe.b(false);
+            ShotRecord.b(false);
           }
           var5 = "Shot " + this.field_v + " " + am.a(8, this.field_q) + " player " + param1.field_h[this.field_L];
           var3 = var5;
@@ -147,14 +147,14 @@ final class qe extends IntrusiveNode {
     }
 
     public static void d(byte param0) {
-        field_K = null;
-        field_B = null;
-        field_r = null;
-        field_F = null;
-        field_G = null;
+        unableToDeleteFriend = null;
+        rulePillar0 = null;
+        timerMinutesSecondsFractions = null;
+        playerIsOut = null;
+        ratingLost = null;
         if (param0 >= 100) {
-          field_p = null;
-          field_O = null;
+          menu = null;
+          menuTimeTrialWithGuides = null;
           field_S = null;
           return;
         }
@@ -193,7 +193,7 @@ final class qe extends IntrusiveNode {
         p.a(param3, param2 ^ 40844);
         hp.a(param1, param3, param0, 30);
         if (param2 != -40960) {
-          qe.b(false);
+          ShotRecord.b(false);
         }
     }
 
@@ -538,7 +538,7 @@ final class qe extends IntrusiveNode {
           }
           param0.b(this.field_s, 66);
           if (param1 >= -65) {
-            qe.a(false, 'ﾨ');
+            ShotRecord.a(false, 'ﾨ');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -581,7 +581,7 @@ final class qe extends IntrusiveNode {
           }
           return var2;
         }
-        qe.a(82, -62, 92, 61, (byte) 96, -63);
+        ShotRecord.a(82, -62, 92, 61, (byte) 96, -63);
         if ((8 & this.field_l) != 0) {
           var2 = var2 + "; play";
         }
@@ -594,16 +594,16 @@ final class qe extends IntrusiveNode {
         return var2;
     }
 
-    final void a(al param0, PacketBuffer param1, int param2) {
-        al var6 = null;
-        pq var5 = null;
+    final void a(PoolGameModel param0, PacketBuffer param1, int param2) {
+        PoolGameModel var6 = null;
+        Ball var5 = null;
         PacketBuffer var4_ref = null;
         try {
           var6 = param0;
-          al var4 = var6;
-          var5 = var6.field_l[0];
-          this.field_Q = var5.field_k;
-          this.field_P = var5.field_g;
+          PoolGameModel var4 = var6;
+          var5 = var6.balls[0];
+          this.field_Q = var5.positionY;
+          this.field_P = var5.positionX;
           if (param2 != -7478) {
             this.field_t = false;
           }
@@ -619,7 +619,7 @@ final class qe extends IntrusiveNode {
         if (param0 == 26859) {
           return "firstcontactid: " + this.field_n + ", pottings: " + this.field_m.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.field_s, (byte) 10);
         }
-        field_p = (String) null;
+        menu = (String) null;
         return "firstcontactid: " + this.field_n + ", pottings: " + this.field_m.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.field_s, (byte) 10);
     }
 
@@ -1004,7 +1004,7 @@ final class qe extends IntrusiveNode {
         return false;
     }
 
-    qe() {
+    ShotRecord() {
         this.field_N = -1;
         this.field_P = -1;
         this.field_w = (byte) 0;
@@ -1024,7 +1024,7 @@ final class qe extends IntrusiveNode {
         this.field_s = uk.field_a;
     }
 
-    qe(int param0, int param1) {
+    ShotRecord(int param0, int param1) {
         this.field_N = -1;
         this.field_P = -1;
         this.field_w = (byte) 0;
@@ -1047,12 +1047,12 @@ final class qe extends IntrusiveNode {
     }
 
     static {
-        field_r = "mm:ss.ff";
-        field_B = "Honour";
-        field_G = "Lost";
-        field_K = "Unable to delete friend - system busy";
-        field_F = "<%0> is out of lives!";
-        field_p = "Menu";
-        field_O = "With Guides";
+        timerMinutesSecondsFractions = "mm:ss.ff";
+        rulePillar0 = "Honour";
+        ratingLost = "Lost";
+        unableToDeleteFriend = "Unable to delete friend - system busy";
+        playerIsOut = "<%0> is out of lives!";
+        menu = "Menu";
+        menuTimeTrialWithGuides = "With Guides";
     }
 }

@@ -34,7 +34,7 @@ final class kh extends vh {
     vh field_Tb;
     vh field_Ec;
     vh field_zc;
-    static oo field_gc;
+    static TableScene field_gc;
     static boolean[] field_rc;
     boolean field_Qb;
     vh field_lc;
@@ -116,18 +116,18 @@ final class kh extends vh {
         int var2;
         int var3;
         var3 = Pool.field_O;
-        ep.field_z = false;
+        NetworkGameClient.field_z = false;
         ClientException.field_d = null;
         var1 = -42 % ((-1 - param0) / 38);
         if (!ro.field_e) {
           var2 = no.field_l;
           if (var2 > 0) {
             if (1 == var2) {
-              ClientException.field_d = vd.field_m;
+              ClientException.field_d = vd.ticketingOneunread;
             } else {
-              ClientException.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.field_d);
+              ClientException.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.ticketingXunread);
             }
-            ClientException.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.field_E)});
+            ClientException.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.ticketingGotowebsite)});
           }
           d.field_d.k(17);
           ci.d((byte) -126);

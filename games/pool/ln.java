@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ln extends IntrusiveNode {
-    static String field_l;
+    static String tutorialHide;
     static vh field_q;
     static String[] field_r;
     static tk field_n;
@@ -110,7 +110,7 @@ final class ln extends IntrusiveNode {
         field_v = null;
         field_s = null;
         field_n = null;
-        field_l = null;
+        tutorialHide = null;
         if (param0 != 27817) {
           field_m = (int[]) null;
         }
@@ -118,13 +118,13 @@ final class ln extends IntrusiveNode {
 
     final static void a(int param0, int param1) {
         if (param0 != 0) {
-          field_l = (String) null;
+          tutorialHide = (String) null;
         }
         ph.a((byte) 118);
     }
 
     static {
-        field_l = "Hide";
+        tutorialHide = "Hide";
         field_m = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         field_t = 0;
     }

@@ -7,11 +7,11 @@ abstract class kk extends DualLinkNode {
     static int[][] field_C;
     static AudioOutput field_D;
     static String field_B;
-    static String field_E;
+    static String ticketingGotowebsite;
     static float field_w;
     static int field_z;
     static int field_F;
-    static String field_G;
+    static String ballsetPlasmaGroup0;
     static vh field_x;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -86,7 +86,7 @@ abstract class kk extends DualLinkNode {
           s.field_c[10].a(kc.field_h, true);
           s.field_c[11].a(fq.field_Hb, true);
           s.field_c[12].a(ao.field_Nb, true);
-          s.field_c[8].a(ac.field_r, true);
+          s.field_c[8].a(KillerBallSkin.field_r, true);
           s.field_c[24].a(ud.field_G, true);
           s.field_c[9].a(w.field_d, true);
         }
@@ -141,7 +141,7 @@ abstract class kk extends DualLinkNode {
           lk.field_o = true;
           ClientException.field_h = param2;
           if (ClientException.field_h == 0) {
-            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lg.fsNonmember, dq.field_f, 0);
             var4 = 3 + var3_int;
             IterableNodeHashTable.field_c = new int[var4];
             dq.field_j = new String[var4];
@@ -153,14 +153,14 @@ abstract class kk extends DualLinkNode {
               dq.field_j[var5] = ih.field_c[var5];
             }
             dq.field_j[var4 - 3] = "";
-            dq.field_j[var4 - 2] = wp.field_h;
+            dq.field_j[var4 - 2] = wp.fsButtonMembers;
             IterableNodeHashTable.field_c[-2 + var4] = 0;
             mb.field_c[0] = 4;
-            dq.field_j[-1 + var4] = hi.field_i;
+            dq.field_j[-1 + var4] = hi.fsButtonClose;
             IterableNodeHashTable.field_c[var4 - 1] = 1;
             mb.field_c[1] = 5;
           } else if (ClientException.field_h == 1) {
-            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lg.fsNonmember, dq.field_f, 0);
             var4 = 2 + var3_int;
             dq.field_j = new String[var4];
             IterableNodeHashTable.field_c = new int[var4];
@@ -172,15 +172,15 @@ abstract class kk extends DualLinkNode {
               dq.field_j[var5] = ih.field_c[var5];
             }
             dq.field_j[-2 + var4] = "";
-            dq.field_j[var4 - 1] = hi.field_i;
+            dq.field_j[var4 - 1] = hi.fsButtonClose;
             IterableNodeHashTable.field_c[var4 - 1] = 0;
             mb.field_c[0] = 5;
           } else if (ClientException.field_h != 2) {
             if (ClientException.field_h == 3) {
               if (lg.field_s.field_k) {
-                var3_int = DualLinkNode.a(wj.field_T, ih.field_c, ih.field_b, dq.field_f, param1 ^ 4);
+                var3_int = DualLinkNode.a(wj.field_T, ih.field_c, ih.fsUnavailable, dq.field_f, param1 ^ 4);
               } else {
-                var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lc.field_T, dq.field_f, 0);
+                var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lc.fsUnavailableTrySignedApplet, dq.field_f, 0);
               }
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
@@ -193,11 +193,11 @@ abstract class kk extends DualLinkNode {
                 dq.field_j[var5] = ih.field_c[var5];
               }
               dq.field_j[-2 + var4] = "";
-              dq.field_j[-1 + var4] = hi.field_i;
+              dq.field_j[-1 + var4] = hi.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
             } else if (4 == ClientException.field_h) {
-              var3_int = DualLinkNode.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f, 0);
+              var3_int = DualLinkNode.a(wj.field_T, ih.field_c, wh.fsFocus, dq.field_f, 0);
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
@@ -209,14 +209,14 @@ abstract class kk extends DualLinkNode {
                 dq.field_j[var5] = ih.field_c[var5];
               }
               dq.field_j[-2 + var4] = "";
-              dq.field_j[var4 - 1] = hi.field_i;
+              dq.field_j[var4 - 1] = hi.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
             } else {
               if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkNode.a(wj.field_T, ih.field_c, de.field_c, dq.field_f, param1 ^ 4);
+              var3_int = DualLinkNode.a(wj.field_T, ih.field_c, de.fsTimeout, dq.field_f, param1 ^ 4);
               var4 = 3 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
@@ -228,15 +228,15 @@ abstract class kk extends DualLinkNode {
                 dq.field_j[var5] = ih.field_c[var5];
               }
               dq.field_j[var4 - 3] = "";
-              dq.field_j[var4 - 2] = hg.field_b;
+              dq.field_j[var4 - 2] = hg.fsButtonTryagain;
               IterableNodeHashTable.field_c[var4 - 2] = 0;
               mb.field_c[0] = 3;
-              dq.field_j[var4 - 1] = hi.field_i;
+              dq.field_j[var4 - 1] = hi.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 1;
               mb.field_c[1] = 5;
             }
           } else {
-            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, param1 - 5, rl.field_g), dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, param1 - 5, rl.fsAcceptCountdownSing), dq.field_f, 0);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ih.field_c[var5])) {
@@ -253,7 +253,7 @@ abstract class kk extends DualLinkNode {
             rq.field_H = new String[-1 + var3_int - var4];
             ArrayOperations.copy(ih.field_c, 1 + var4, rq.field_H, 0, -var4 + var3_int - 1);
             var4 = -1;
-            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, -1, cf.field_j), dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, -1, cf.fsAcceptCountdownPl), dq.field_f, 0);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ih.field_c[var5])) {
                 continue;
@@ -286,16 +286,16 @@ abstract class kk extends DualLinkNode {
             for (var8 = 0; var8 < var7; var8++) {
               IterableNodeHashTable.field_c[var8] = -1;
             }
-            dq.field_j[1] = jc.field_g;
+            dq.field_j[1] = jc.fsButtonAccept;
             mb.field_c = new int[2];
             IterableNodeHashTable.field_c[1] = 0;
-            dq.field_j[0] = cl.field_b;
+            dq.field_j[0] = cl.fsAcceptBeforeaccept;
             IterableNodeHashTable.field_c[3] = 1;
-            dq.field_j[3] = ad.field_e;
+            dq.field_j[3] = ad.fsButtonCancel;
             mb.field_c[1] = 2;
-            dq.field_j[2] = jp.field_W;
+            dq.field_j[2] = jp.fsAcceptAfteraccept;
             dq.field_j[5] = "";
-            dq.field_j[4] = nk.field_c;
+            dq.field_j[4] = TranslatedUiText.field_c;
             mb.field_c[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_62_0 = dq.field_j;
@@ -352,13 +352,13 @@ abstract class kk extends DualLinkNode {
               }
             }
           }
-          fk.field_Z = nn.field_c - (var3_intLifetime1 >> 1);
-          rl.field_a = (qi.field_e + fj.field_h << 1) * n.field_W.field_e;
+          PlasmaTableScene.field_Z = nn.field_c - (var3_intLifetime1 >> 1);
+          rl.field_a = (qi.field_e + NineBallRules.field_h << 1) * n.field_W.field_e;
           ah.field_i = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + nn.field_c);
           for (var4Lifetime2 = 0; var4Lifetime2 < dq.field_j.length; var4Lifetime2++) {
             stackIn_114_0 = rl.field_a;
             if (0 > IterableNodeHashTable.field_c[var4Lifetime2]) {
-              stackIn_115_1 = qe.field_y;
+              stackIn_115_1 = ShotRecord.field_y;
             } else {
               stackIn_115_1 = ch.field_I;
             }
@@ -381,10 +381,10 @@ abstract class kk extends DualLinkNode {
               ra.field_b[var4Lifetime3][0] = var8Lifetime1 - rm.field_b;
               ra.field_b[var4Lifetime3][1] = var5Lifetime3;
               ra.field_b[var4Lifetime3][2] = var7Lifetime2 + (rm.field_b << 1);
-              ra.field_b[var4Lifetime3][3] = (fj.field_h << 1) + ch.field_I;
-              var5Lifetime3 = var5Lifetime3 + (qi.field_e + ((fj.field_h << 1) + ch.field_I));
+              ra.field_b[var4Lifetime3][3] = (NineBallRules.field_h << 1) + ch.field_I;
+              var5Lifetime3 = var5Lifetime3 + (qi.field_e + ((NineBallRules.field_h << 1) + ch.field_I));
             } else {
-              var5Lifetime3 = var5Lifetime3 + qe.field_y;
+              var5Lifetime3 = var5Lifetime3 + ShotRecord.field_y;
             }
             var4Lifetime3++;
           }
@@ -413,19 +413,19 @@ abstract class kk extends DualLinkNode {
         field_x = null;
         field_B = null;
         field_A = null;
-        field_E = null;
+        ticketingGotowebsite = null;
         field_C = (int[][]) null;
         field_D = null;
         if (param0 != 1) {
           kk.a(-127, 17, -14, 121, -101, -122, -96);
         }
-        field_G = null;
+        ballsetPlasmaGroup0 = null;
     }
 
     static {
-        field_E = "Visit the Account Management section on the main site to view.";
+        ticketingGotowebsite = "Visit the Account Management section on the main site to view.";
         field_A = new hj(4, 1, 1, 1);
         field_F = 1;
-        field_G = "<col=ff9999>Reds</col>";
+        ballsetPlasmaGroup0 = "<col=ff9999>Reds</col>";
     }
 }

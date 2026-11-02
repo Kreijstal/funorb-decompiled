@@ -4,7 +4,7 @@
 final class wm extends vh {
     static ai field_Xb;
     private vh[] field_Vb;
-    static String field_cc;
+    static String mbIncludingGamename;
     private StringBuilder field_ec;
     private vh field_Zb;
     long field_Lb;
@@ -16,9 +16,9 @@ final class wm extends vh {
     private vh field_Sb;
     private vh field_Tb;
     private int field_bc;
-    static String field_Qb;
+    static String loginEmail;
     static char[] field_Wb;
-    static String field_Yb;
+    static String textGameName;
     static int[][] field_ac;
     static int[] field_Ub;
     static int field_Nb;
@@ -199,7 +199,7 @@ final class wm extends vh {
         this.field_bc = -2;
         try {
           this.field_Lb = param12;
-          this.field_Ob = new vh(0L, param6, oh.field_a.toUpperCase());
+          this.field_Ob = new vh(0L, param6, oh.raTitle.toUpperCase());
           this.field_Ob.field_Fb = 1;
           this.a(66, this.field_Ob);
           this.field_Zb = new vh(0L, param7);
@@ -207,11 +207,11 @@ final class wm extends vh {
           this.field_Tb = new vh(0L, (vh) null);
           this.a(-107, this.field_Tb);
           if (param11 != null) {
-            this.field_Mb = new vh(0L, param8, dq.field_b);
+            this.field_Mb = new vh(0L, param8, dq.raIntro);
             this.field_Mb.field_N = 11184810;
             this.field_Mb.field_Fb = 1;
             this.field_Tb.a(11, this.field_Mb);
-            this.field_Sb = new vh(0L, param8, pq.field_r);
+            this.field_Sb = new vh(0L, param8, Ball.raExplanation);
             this.field_Sb.field_N = 11184810;
             this.field_Sb.field_Fb = 1;
             this.field_Tb.a(-101, this.field_Sb);
@@ -234,14 +234,14 @@ final class wm extends vh {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = tq.field_w;
+                    stackIn_8_5 = tq.raSuggestmute;
                     break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = er.field_T;
+                stackIn_8_5 = er.raMutethisplayer;
               }
               this.field_dc = new wg(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Tb.a(-121, this.field_dc);
@@ -270,15 +270,15 @@ final class wm extends vh {
               discarded$0 = this.field_ec.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_I.b(qe.field_B);
+            var17 = param6.field_I.b(ShotRecord.rulePillar0);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_I.b(qa.field_m);
+            var17Lifetime2 = param6.field_I.b(qa.rulePillar1);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_I.b(hd.field_K);
+            var17Lifetime3 = param6.field_I.b(hd.rulePillar2);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -296,7 +296,7 @@ final class wm extends vh {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(qe.field_B, var18Lifetime3, var27[0], (byte) -124, param6, var16Lifetime2);
+            var18Lifetime3 = this.a(ShotRecord.rulePillar0, var18Lifetime3, var27[0], (byte) -124, param6, var16Lifetime2);
             var18Lifetime3 = this.a(this.field_Vb[6], -126, var18Lifetime3, var27[0], var16Lifetime2);
             var18Lifetime3 = this.a(this.field_Vb[9], -128, var18Lifetime3, var27[0], var16Lifetime2);
             var18Lifetime3 = this.a(this.field_Vb[5], -128, var18Lifetime3, var27[0], var16Lifetime2);
@@ -307,7 +307,7 @@ final class wm extends vh {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(qa.field_m, var18Lifetime4, var27[1], (byte) -114, param6, var16Lifetime2);
+            var18Lifetime4 = this.a(qa.rulePillar1, var18Lifetime4, var27[1], (byte) -114, param6, var16Lifetime2);
             var18Lifetime4 = this.a(this.field_Vb[16], -126, var18Lifetime4, var27[1], var16Lifetime2);
             var18Lifetime4 = this.a(this.field_Vb[17], -126, var18Lifetime4, var27[1], var16Lifetime2);
             var18Lifetime4 = this.a(this.field_Vb[18], -128, var18Lifetime4, var27[1], var16Lifetime2);
@@ -317,7 +317,7 @@ final class wm extends vh {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(hd.field_K, var18Lifetime5, var27[2], (byte) -124, param6, var16Lifetime2);
+            var18Lifetime5 = this.a(hd.rulePillar2, var18Lifetime5, var27[2], (byte) -124, param6, var16Lifetime2);
             var18Lifetime5 = this.a(this.field_Vb[13], -128, var18Lifetime5, var27[2], var16Lifetime2);
             var18Lifetime5 = this.a(this.field_Vb[21], -127, var18Lifetime5, var27[2], var16Lifetime2);
             var18Lifetime5 = this.a(this.field_Vb[11], -127, var18Lifetime5, var27[2], var16Lifetime2);
@@ -362,7 +362,7 @@ final class wm extends vh {
             this.b(var26, 2147483647, var25, var23, var24);
             return;
           }
-          this.field_Mb = new vh(0L, param8, th.field_d);
+          this.field_Mb = new vh(0L, param8, th.raIntroNoName);
           this.field_Mb.field_Fb = 1;
           this.field_Mb.field_N = 11184810;
           this.field_Tb.a(123, this.field_Mb);
@@ -461,13 +461,13 @@ final class wm extends vh {
     }
 
     public static void f(byte param0) {
-        field_cc = null;
-        field_Qb = null;
+        mbIncludingGamename = null;
+        loginEmail = null;
         field_Wb = null;
         field_Ub = null;
         int var1 = 74 % ((param0 - 12) / 52);
         field_Pb = null;
-        field_Yb = null;
+        textGameName = null;
         field_Xb = null;
         field_ac = (int[][]) null;
     }
@@ -563,11 +563,11 @@ final class wm extends vh {
 
     static {
         field_Xb = null;
-        field_cc = "(Including <%0>)";
-        field_Qb = "Email: ";
+        mbIncludingGamename = "(Including <%0>)";
+        loginEmail = "Email: ";
         field_Pb = new na();
         field_Wb = new char[]{(char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122};
         field_ac = new int[64][3];
-        field_Yb = "Funorb Pool";
+        textGameName = "Funorb Pool";
     }
 }

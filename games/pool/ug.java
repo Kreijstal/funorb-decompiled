@@ -688,11 +688,11 @@ final class ug extends no {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (sq.field_c.field_e >= 4) {
-            if (-1 == sq.field_c.field_a) {
+          if (GameRules.field_c.field_e >= 4) {
+            if (-1 == GameRules.field_c.field_a) {
               return 3;
             }
-            if (-2 != sq.field_c.field_a) {
+            if (-2 != GameRules.field_c.field_a) {
               return 1;
             }
             return 4;
@@ -744,7 +744,7 @@ final class ug extends no {
               stackIn_34_0 = -29;
               return stackIn_34_0;
             }
-            sq.field_c.a(101, sa.field_k, dq.field_h);
+            GameRules.field_c.a(101, sa.field_k, dq.field_h);
             mq.field_c = null;
             rl.field_e = 0;
             dq.field_h = null;

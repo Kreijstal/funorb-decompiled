@@ -7,21 +7,21 @@ final class g extends IntrusiveNode {
     kp[] field_t;
     byte[] field_n;
     static char[] field_o;
-    static String field_w;
+    static String tutorialEightBallComplete;
     byte[] field_v;
     PcmSample[] field_u;
     byte[] field_p;
     int field_q;
     static int[] field_l;
-    static String field_m;
+    static String createAge;
 
     public static void a(int param0) {
         field_l = null;
-        field_w = null;
+        tutorialEightBallComplete = null;
         field_o = null;
-        field_m = null;
+        createAge = null;
         if (param0 != 5893) {
-          field_w = (String) null;
+          tutorialEightBallComplete = (String) null;
         }
     }
 
@@ -622,8 +622,8 @@ final class g extends IntrusiveNode {
     }
 
     static {
-        field_w = "That concludes the Eight-ball Tutorial! Press <img=3> to go to the options menu to end the tutorial.";
+        tutorialEightBallComplete = "That concludes the Eight-ball Tutorial! Press <img=3> to go to the options menu to end the tutorial.";
         field_o = new char[]{(char)91, (char)93, (char)35};
-        field_m = "Age:";
+        createAge = "Age:";
     }
 }

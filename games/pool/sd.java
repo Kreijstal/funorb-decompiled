@@ -4,13 +4,13 @@
 final class sd extends ch implements jb, tb {
     private fe field_P;
     static boolean field_T;
-    static String field_N;
+    static String rule13;
     static vh field_Q;
     private fq field_V;
-    static String field_O;
-    static String field_W;
+    static String playerIsGroupName;
+    static String orbpointsColon;
     static di field_R;
-    static String field_U;
+    static String muXRemoved;
     private mh field_S;
 
     public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
@@ -27,7 +27,7 @@ final class sd extends ch implements jb, tb {
           if (param0) {
             return;
           }
-          field_W = (String) null;
+          orbpointsColon = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,28 +53,28 @@ final class sd extends ch implements jb, tb {
         var2 = na.field_a;
         na.field_a = wn.field_h;
         if (param1 == 51) {
-          sq.field_c.field_a = 2;
+          GameRules.field_c.field_a = 2;
         } else {
           if (param1 != 50) {
-            sq.field_c.field_a = 1;
+            GameRules.field_c.field_a = 1;
           } else {
-            sq.field_c.field_a = 5;
+            GameRules.field_c.field_a = 5;
           }
         }
         wn.field_h = var2;
-        sq.field_c.field_e = sq.field_c.field_e + 1;
-        if (sq.field_c.field_e >= 2 &&
+        GameRules.field_c.field_e = GameRules.field_c.field_e + 1;
+        if (GameRules.field_c.field_e >= 2 &&
           param1 == 51) {
           return 2;
         }
-        if (sq.field_c.field_e >= 2 &&
+        if (GameRules.field_c.field_e >= 2 &&
           param1 == 50) {
           return 5;
         }
         if (param0) {
           sd.a(true, 78);
         }
-        if (sq.field_c.field_e >= 4) {
+        if (GameRules.field_c.field_e >= 4) {
           return 1;
         }
         return -1;
@@ -90,13 +90,13 @@ final class sd extends ch implements jb, tb {
     }
 
     public static void a(int param0) {
-        field_W = null;
-        field_O = null;
-        field_N = null;
+        orbpointsColon = null;
+        playerIsGroupName = null;
+        rule13 = null;
         int var1 = 6 % ((param0 - 67) / 52);
         field_Q = null;
         field_R = null;
-        field_U = null;
+        muXRemoved = null;
     }
 
     sd(fq param0) {
@@ -108,15 +108,15 @@ final class sd extends ch implements jb, tb {
         int var6 = 0;
         try {
           this.field_V = param0;
-          this.field_P = new fe(fg.field_c, (cc) null);
+          this.field_P = new fe(fg.cont, (cc) null);
           this.field_P.field_z = (fp) ((Object) new ng());
-          var7 = nr.a(new String[]{this.h((byte) 44), this.g((byte) 99)}, -1, hb.field_g);
+          var7 = nr.a(new String[]{this.h((byte) 44), this.g((byte) 99)}, -1, hb.createU13terms);
           var3 = 20;
           var4 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.maxAscent, -1, 2147483647, true);
           this.field_S = new mh(var7, var4);
           this.field_S.field_p = "";
-          this.field_S.a((byte) 68, cn.field_b, 0);
-          this.field_S.a((byte) 66, cn.field_b, 1);
+          this.field_S.a((byte) 68, cn.openinpopupwindow, 0);
+          this.field_S.a((byte) 66, cn.openinpopupwindow, 1);
           this.field_S.field_l = -40 + this.field_l;
           this.field_S.field_t = (cc) (this);
           this.field_S.b(26, var3, this.field_l - 40, -119);
@@ -213,9 +213,9 @@ final class sd extends ch implements jb, tb {
     }
 
     static {
-        field_U = "<%0> has been removed.";
-        field_O = "<%0> is <%2>!";
-        field_W = "Orb points: ";
-        field_N = "Offensive account name";
+        muXRemoved = "<%0> has been removed.";
+        playerIsGroupName = "<%0> is <%2>!";
+        orbpointsColon = "Orb points: ";
+        rule13 = "Offensive account name";
     }
 }

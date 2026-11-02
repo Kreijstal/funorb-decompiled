@@ -6,9 +6,9 @@ import java.io.*;
 final class de {
     static vh field_b;
     static BitmapFont field_d;
-    static String field_f;
-    static String field_c;
-    static String field_e;
+    static String discard;
+    static String fsTimeout;
+    static String waitingforExtradata;
     static boolean field_g;
     static int field_a;
 
@@ -20,24 +20,24 @@ final class de {
     }
 
     public static void b(int param0) {
-        field_f = null;
+        discard = null;
         field_d = null;
-        field_e = null;
+        waitingforExtradata = null;
         field_b = null;
-        field_c = null;
+        fsTimeout = null;
         if (param0 != -1) {
           de.b(73);
         }
     }
 
     final static void c(int param0) {
-        if (fk.field_ab == 10) {
+        if (PlasmaTableScene.field_ab == 10) {
           ga.b(false);
-          fk.field_ab = 11;
+          PlasmaTableScene.field_ab = 11;
         } else {
           if (!uc.a(-114)) {
             ga.b(false);
-            fk.field_ab = 11;
+            PlasmaTableScene.field_ab = 11;
           }
         }
         if (param0 != 11) {
@@ -187,14 +187,14 @@ final class de {
         if (param3 == 0) {
           return SoftwareRasterizer.width - param0;
         }
-        field_f = (String) null;
+        discard = (String) null;
         return SoftwareRasterizer.width - param0;
     }
 
     static {
-        field_e = "Waiting for extra data";
-        field_c = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
-        field_f = "Discard";
+        waitingforExtradata = "Waiting for extra data";
+        fsTimeout = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
+        discard = "Discard";
         field_g = false;
     }
 }

@@ -4,16 +4,16 @@
 abstract class gr extends DualLinkNode {
     static hj field_G;
     static vh field_y;
-    static String field_A;
+    static String playerNameTwoShots;
     static int field_z;
     static Sprite[] field_I;
     static int[] field_w;
     volatile boolean field_F;
     static int[] field_B;
     boolean field_C;
-    static String field_H;
+    static String entermultiplayerlobby;
     boolean field_x;
-    static String field_D;
+    static String muOptions;
     static byte[] field_E;
 
     final static void g(int param0) {
@@ -40,21 +40,21 @@ abstract class gr extends DualLinkNode {
         field_y = null;
         field_E = null;
         if (param0 < -119) {
-          field_D = null;
-          field_A = null;
+          muOptions = null;
+          playerNameTwoShots = null;
           field_I = null;
           field_B = null;
           field_w = null;
-          field_H = null;
+          entermultiplayerlobby = null;
           return;
         }
         field_B = (int[]) null;
-        field_D = null;
-        field_A = null;
+        muOptions = null;
+        playerNameTwoShots = null;
         field_I = null;
         field_B = null;
         field_w = null;
-        field_H = null;
+        entermultiplayerlobby = null;
     }
 
     final static IndexedSprite[] a(di param0, String param1, int param2, String param3) {
@@ -113,10 +113,10 @@ abstract class gr extends DualLinkNode {
     }
 
     static {
-        field_H = "Enter multiplayer lobby";
-        field_D = "Game options";
+        entermultiplayerlobby = "Enter multiplayer lobby";
+        muOptions = "Game options";
         field_w = new int[12];
-        field_A = "<%0>: Two shots!";
+        playerNameTwoShots = "<%0>: Two shots!";
         field_G = new hj(0, 2, 2, 1);
     }
 }

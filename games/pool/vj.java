@@ -6,12 +6,12 @@ final class vj {
     int field_e;
     static ui field_j;
     static int[] field_a;
-    static String field_b;
+    static String ratingWon;
     static int field_d;
     static boolean[] field_c;
-    static String field_g;
+    static String playerYouAreOut;
     int[] field_h;
-    static String field_f;
+    static String tutorialBasicComplete;
 
     final int a(int param0, int param1) {
         int var3;
@@ -57,7 +57,7 @@ final class vj {
           }
           param0.next = param2.next;
           if (param1 != -119) {
-            field_g = (String) null;
+            playerYouAreOut = (String) null;
           }
           param0.previous = param2;
           param0.next.previous = param0;
@@ -132,7 +132,7 @@ final class vj {
           if (param3 == 121) {
             return true;
           }
-          field_b = (String) null;
+          ratingWon = (String) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class vj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -27) {
-            field_b = (String) null;
+            ratingWon = (String) null;
           }
           stackIn_3_0 = mn.a(param0 ^ 24317, PcmSampleStream.b(param1, 100, 96));
           return stackIn_3_0;
@@ -195,10 +195,10 @@ final class vj {
 
     public static void b(int param0) {
         field_j = null;
-        field_g = null;
-        field_f = null;
+        playerYouAreOut = null;
+        tutorialBasicComplete = null;
         field_a = null;
-        field_b = null;
+        ratingWon = null;
         field_c = null;
         if (param0 != -27731) {
           vj.b(-11);
@@ -213,9 +213,9 @@ final class vj {
 
     static {
         field_a = new int[8192];
-        field_b = "Won";
-        field_g = "You are out of lives!";
+        ratingWon = "Won";
+        playerYouAreOut = "You are out of lives!";
         field_c = new boolean[112];
-        field_f = "That concludes the Basics Tutorial. You can now experiment freely some more on your own, click >> to go to the Eight-ball Tutorial, or press <img=3> to go to the options menu to end the tutorial.";
+        tutorialBasicComplete = "That concludes the Basics Tutorial. You can now experiment freely some more on your own, click >> to go to the Eight-ball Tutorial, or press <img=3> to go to the options menu to end the tutorial.";
     }
 }

@@ -4,7 +4,7 @@
 abstract class iq {
     int[] field_h;
     static boolean field_i;
-    static String field_b;
+    static String nSecondTimePenalty;
     static db field_f;
     static boolean field_j;
     int field_e;
@@ -12,7 +12,7 @@ abstract class iq {
     static java.awt.Frame field_l;
     static Sprite[] field_a;
     int field_k;
-    static String field_g;
+    static String createAlertNamechars;
     static Sprite field_d;
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
@@ -22,14 +22,14 @@ abstract class iq {
         field_d = null;
         field_l = null;
         if (param0 == -26830) {
-          field_g = null;
-          field_b = null;
+          createAlertNamechars = null;
+          nSecondTimePenalty = null;
           field_f = null;
           return;
         }
-        field_g = (String) null;
-        field_g = null;
-        field_b = null;
+        createAlertNamechars = (String) null;
+        createAlertNamechars = null;
+        nSecondTimePenalty = null;
         field_f = null;
     }
 
@@ -43,8 +43,8 @@ abstract class iq {
     abstract void a(int param0, int param1, int param2, java.awt.Component param3);
 
     static {
-        field_b = "Foul! <%0>-second time penalty incurred!";
+        nSecondTimePenalty = "Foul! <%0>-second time penalty incurred!";
         field_i = false;
-        field_g = "Names can only contain letters, numbers, spaces and underscores";
+        createAlertNamechars = "Names can only contain letters, numbers, spaces and underscores";
     }
 }

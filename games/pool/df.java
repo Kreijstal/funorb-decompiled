@@ -4,10 +4,10 @@
 final class df {
     int field_l;
     int field_k;
-    static String field_c;
+    static String createPasswordHint;
     static tk field_b;
     static vh field_f;
-    static String field_m;
+    static String mpCancelrematch;
     static String[] field_a;
     private int field_g;
     static int field_e;
@@ -16,7 +16,7 @@ final class df {
     int field_d;
     static Sprite field_i;
 
-    final boolean a(byte param0, int param1, al param2) {
+    final boolean a(byte param0, int param1, PoolGameModel param2) {
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -28,7 +28,7 @@ final class df {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_h && (!param2.field_l[this.field_g].field_s ||
+          if (this.field_h && (!param2.balls[this.field_g].inPlay ||
             param1 == this.field_g)) {
             stackIn_9_0 = false;
             decompiledFrameRemainder0 = false;
@@ -62,30 +62,30 @@ final class df {
           return ud.field_F;
         }
         if (!uj.field_d.d(101)) {
-          return rp.field_c;
+          return rp.waitingforGraphics;
         }
         if (!uj.field_d.a("commonui", 0)) {
-          return oj.field_t + " - " + uj.field_d.a(100, "commonui") + "%";
+          return oj.loadingGraphics + " - " + uj.field_d.a(100, "commonui") + "%";
         }
-        if (!vf.field_nb.d(-127)) {
-          return gh.field_Q;
+        if (!PolarTableScene.field_nb.d(-127)) {
+          return SpaceTableScene.waitingforFonts;
         }
         if (param0 != 84) {
           return (String) null;
         }
-        if (!vf.field_nb.a("commonui", 0)) {
-          return kb.field_a + " - " + vf.field_nb.a(100, "commonui") + "%";
+        if (!PolarTableScene.field_nb.a("commonui", 0)) {
+          return kb.loadingFonts + " - " + PolarTableScene.field_nb.a(100, "commonui") + "%";
         }
         if (!DualLinkNode.field_r.d(66)) {
-          return de.field_e;
+          return de.waitingforExtradata;
         }
         if (!DualLinkNode.field_r.c(-63)) {
-          return cf.field_c + " - " + DualLinkNode.field_r.b(0) + "%";
+          return cf.loadingExtradata + " - " + DualLinkNode.field_r.b(0) + "%";
         }
-        return cl.field_j;
+        return cl.pleasewaitDotdotdot;
     }
 
-    final void a(int param0, pq param1, al param2) {
+    final void a(int param0, Ball param1, PoolGameModel param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -98,20 +98,20 @@ final class df {
         int[] var8_ref_int__ = null;
         long var8 = 0L;
         int[] var10 = null;
-        pq var11 = null;
+        Ball var11 = null;
         try {
           if (this.field_h) {
-            var11 = param2.field_l[this.field_g];
-            var4_long = (long)param1.field_g - (long)var11.field_g;
-            var6 = -(long)var11.field_k + (long)param1.field_k;
+            var11 = param2.balls[this.field_g];
+            var4_long = (long)param1.positionX - (long)var11.positionX;
+            var6 = -(long)var11.positionY + (long)param1.positionY;
             var4_long = var4_long >> 8;
             var6 = var6 >> 8;
           } else {
             var10 = param2.field_e[this.field_g];
             var8_ref_int__ = var10;
-            var4_long = -(long)var10[0] + (long)param1.field_g;
+            var4_long = -(long)var10[0] + (long)param1.positionX;
             var4_long = var4_long >> 8;
-            var6 = (long)param1.field_k - (long)var10[1];
+            var6 = (long)param1.positionY - (long)var10[1];
             var6 = var6 >> 8;
           }
           var8 = IterableNodeHashTable.a(-119, var4_long * var4_long + var6 * var6);
@@ -148,18 +148,18 @@ final class df {
         field_b = null;
         if (param0 >= 82) {
           field_a = null;
-          field_c = null;
+          createPasswordHint = null;
           field_i = null;
           field_f = null;
-          field_m = null;
+          mpCancelrematch = null;
           return;
         }
         df.a((byte) -85);
         field_a = null;
-        field_c = null;
+        createPasswordHint = null;
         field_i = null;
         field_f = null;
-        field_m = null;
+        mpCancelrematch = null;
     }
 
     final void a(int param0, boolean param1, boolean param2) {
@@ -172,11 +172,11 @@ final class df {
         this.field_g = param0;
     }
 
-    final int a(al param0, pq param1, int param2) {
+    final int a(PoolGameModel param0, Ball param1, int param2) {
         int[] var4 = null;
         RuntimeException var4_ref = null;
         int[] var5 = null;
-        pq var6 = null;
+        Ball var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -190,13 +190,13 @@ final class df {
             field_i = (Sprite) null;
           }
           if (this.field_h) {
-            var6 = param0.field_l[this.field_g];
-            stackIn_4_0 = 8191 & tj.c(var6.field_g - param1.field_g >> 10, var6.field_k - param1.field_k >> 10, 4096);
+            var6 = param0.balls[this.field_g];
+            stackIn_4_0 = 8191 & tj.c(var6.positionX - param1.positionX >> 10, var6.positionY - param1.positionY >> 10, 4096);
             return stackIn_4_0;
           }
           var5 = param0.field_e[this.field_g];
           var4 = var5;
-          stackIn_6_0 = 8191 & tj.c(var5[0] - param1.field_g >> 10, -param1.field_k + var5[1] >> 10, 4096);
+          stackIn_6_0 = 8191 & tj.c(var5[0] - param1.positionX >> 10, -param1.positionY + var5[1] >> 10, 4096);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class df {
 
     static {
         field_a = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-        field_c = "Passwords must be between 5 and 20 letters and numbers";
-        field_m = "Cancel rematch";
+        createPasswordHint = "Passwords must be between 5 and 20 letters and numbers";
+        mpCancelrematch = "Cancel rematch";
     }
 }

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm extends tm {
-    lm() {
+final class SpaceBallSkin extends BallSkin {
+    SpaceBallSkin() {
     }
 
     final static void i(int param0) {
@@ -94,11 +94,11 @@ final class lm extends tm {
 
     final String a(byte param0, int param1) {
         if (param0 >= 9) {
-          return param1 == 0 ? sn.field_j : dq.field_g;
+          return param1 == 0 ? sn.ballsetSpaceGroup0 : dq.field_g;
         }
         String var4 = (String) null;
-        lm.a(-24, 10, -99, 68, -80, 113, (String) null, 109, 92);
-        return param1 == 0 ? sn.field_j : dq.field_g;
+        SpaceBallSkin.a(-24, 10, -99, 68, -80, 113, (String) null, 109, 92);
+        return param1 == 0 ? sn.ballsetSpaceGroup0 : dq.field_g;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
@@ -108,9 +108,9 @@ final class lm extends tm {
         int var12 = 0;
         IntrusiveNode.field_e.field_nb = param6;
         if (hn.field_b != 2) {
-          wn.field_g.field_nb = ff.field_j;
+          wn.field_g.field_nb = ff.escCancelthisline;
         } else {
-          wn.field_g.field_nb = IsaacCipher.field_g;
+          wn.field_g.field_nb = IsaacCipher.escCancelprivatemessage;
         }
         if (param3 != 4) {
           return;
@@ -119,9 +119,9 @@ final class lm extends tm {
           var9_int = 495;
           var10 = 5;
           vi.field_c.b(var10, param3 ^ 2147483643, 5, var9_int - 10, param7);
-          pa.field_J.b(0, param3 + 2147483643, 0, -fj.field_j.field_gb + vi.field_c.field_gb, param7);
+          pa.field_J.b(0, param3 + 2147483643, 0, -NineBallRules.field_j.field_gb + vi.field_c.field_gb, param7);
           var10 = var10 + (param1 + param7);
-          fj.field_j.b(0, 2147483647, pa.field_J.field_gb, fj.field_j.field_gb, param7);
+          NineBallRules.field_j.b(0, 2147483647, pa.field_J.field_gb, NineBallRules.field_j.field_gb, param7);
           be.field_L.b(var10, 2147483647, 5, be.field_L.b(true), param8);
           var11 = wn.field_g.b(true);
           wn.field_g.b(var10, 2147483647, -var11 + var9_int - 5, var11, param8);
@@ -138,7 +138,7 @@ final class lm extends tm {
 
     final static hj[] a(byte param0) {
         if (param0 == -32) {
-          return new hj[]{gr.field_G, lb.field_N, nk.field_g, kk.field_A, en.field_c, jk.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, pq.field_J, ch.field_K, bq.field_r, pn.field_k};
+          return new hj[]{gr.field_G, lb.field_N, TranslatedUiText.field_g, kk.field_A, en.field_c, jk.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, Ball.field_J, ch.field_K, bq.field_r, pn.field_k};
         }
         return (hj[]) null;
     }

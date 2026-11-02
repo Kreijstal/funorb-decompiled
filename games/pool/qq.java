@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class qq extends ok implements tb {
-    static String field_yb;
+    static String tutorialEightBallStartPlaceCueball;
     private boolean field_tb;
-    static String field_zb;
+    static String playerYouX2AreGroupName;
     private gj field_Ab;
     private boolean field_sb;
     private BitmapFont field_wb;
@@ -85,26 +85,26 @@ class qq extends ok implements tb {
         wk var2Lifetime1;
         this.field_Ab.a(4210752, 19365, 2121792);
         if (param0 == -33) {
-          var2 = new wk(this, this.field_wb, ag.field_g);
-          var2.a(15, ti.field_c, param0 + 34);
+          var2 = new wk(this, this.field_wb, ag.connectionrestored);
+          var2.a(15, ti.returntogame, param0 + 34);
           this.d(var2, param0 + 63);
           return;
         }
         this.field_tb = false;
-        var2Lifetime1 = new wk(this, this.field_wb, ag.field_g);
-        var2Lifetime1.a(15, ti.field_c, param0 + 34);
+        var2Lifetime1 = new wk(this, this.field_wb, ag.connectionrestored);
+        var2Lifetime1.a(15, ti.returntogame, param0 + 34);
         this.d(var2Lifetime1, param0 + 63);
     }
 
     public static void n(byte param0) {
         if (param0 >= -62) {
-          field_zb = (String) null;
-          field_yb = null;
-          field_zb = null;
+          playerYouX2AreGroupName = (String) null;
+          tutorialEightBallStartPlaceCueball = null;
+          playerYouX2AreGroupName = null;
           return;
         }
-        field_yb = null;
-        field_zb = null;
+        tutorialEightBallStartPlaceCueball = null;
+        playerYouX2AreGroupName = null;
     }
 
     final void a(String param0, int param1, int param2) {
@@ -128,38 +128,38 @@ class qq extends ok implements tb {
           this.field_Ab.a(4210752, param2 ^ -19110, 8405024);
           var5 = new wk(this, this.field_wb, param0);
           if (param1 == 5) {
-            var5.a(11, hb.field_c, 1);
-            var5.a(17, dj.field_e, 1);
+            var5.a(11, hb.reloadgame, 1);
+            var5.a(17, dj.quittowebsite, 1);
           } else {
             if (param1 != 256) {
               stackIn_10_0 = var5;
               stackIn_10_1 = -1;
               if (!this.field_sb) {
-                stackIn_11_2 = jk.field_a;
+                stackIn_11_2 = jk.back;
               } else {
-                stackIn_11_2 = ap.field_F;
+                stackIn_11_2 = ap.retry;
               }
               ((wk) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2, 1);
             } else {
-              var5.a(ap.field_F, -101, (cc) (this));
+              var5.a(ap.retry, -101, (cc) (this));
             }
           }
           if (param1 != 3) {
             if (4 == param1) {
-              var5.a(8, lg.field_w, 1);
+              var5.a(8, lg.playfreeversion, 1);
             } else {
               if (param1 == 6) {
-                var5.a(9, e.field_f, 1);
+                var5.a(9, e.tocustomersupport, 1);
               } else {
                 if (param1 != 9) {
                   this.d(var5, 30);
                   return;
                 }
-                var5.a(lg.field_y, -94, (cc) (this));
+                var5.a(lg.changedisplayname, -94, (cc) (this));
               }
             }
           } else {
-            var5.a(7, o.field_w, 1);
+            var5.a(7, o.toserverlist, 1);
           }
           this.d(var5, 30);
           return;
@@ -226,8 +226,8 @@ class qq extends ok implements tb {
     }
 
     static {
-        field_yb = "The objective of eight-ball pool is to \"pot\" all of your group of balls and then the black ball (number 8). Before we get to that, we \"break\", and the first thing you might want to do is <u=ffffff>move the cue ball</u>. <col=99ff99>Hold</col> down the <img=0> <col=99ff99>left mouse button over the cue ball and drag</col> it to where you would like to place it.";
+        tutorialEightBallStartPlaceCueball = "The objective of eight-ball pool is to \"pot\" all of your group of balls and then the black ball (number 8). Before we get to that, we \"break\", and the first thing you might want to do is <u=ffffff>move the cue ball</u>. <col=99ff99>Hold</col> down the <img=0> <col=99ff99>left mouse button over the cue ball and drag</col> it to where you would like to place it.";
         field_xb = 0;
-        field_zb = "You and <%0> are <%2>.";
+        playerYouX2AreGroupName = "You and <%0> are <%2>.";
     }
 }

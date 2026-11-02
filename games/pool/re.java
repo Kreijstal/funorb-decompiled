@@ -239,14 +239,14 @@ abstract class re {
             return;
           }
           DualLinkDeque.field_c = false;
-          ep.field_z = false;
+          NetworkGameClient.field_z = false;
           if (null != d.field_d &&
             d.field_d.field_R) {
             if (8 == param2) {
               if (ro.field_e) {
-                param1 = ng.field_v;
+                param1 = ng.invalidpass;
               } else {
-                param1 = eh.field_n;
+                param1 = eh.invaliduserorpass;
               }
               param2 = 2;
               vj.field_j.a(8, SpriteState.field_x);
@@ -258,10 +258,10 @@ abstract class re {
             }
             if (var3_int != 0) {
               if (DualLinkDeque.field_c) {
-                param1 = nr.a(new String[]{param1}, -1, lq.field_U);
+                param1 = nr.a(new String[]{param1}, -1, lq.connectionlostWithreason);
               }
-              if (to.field_q) {
-                param1 = ir.field_i;
+              if (PolarBallSkin.field_q) {
+                param1 = ir.pleasetryagain;
               }
               d.field_d.a(param1, param2, -257);
             }

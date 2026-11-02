@@ -5,20 +5,20 @@ import java.io.*;
 
 final class ee {
     private di field_e;
-    static String field_a;
+    static String playerListAreOfferingRematch;
     private di field_c;
     static int[] field_b;
     private fg field_d;
 
     final static void a(int param0, int param1) {
         if (param1 > -37) {
-          field_a = (String) null;
+          playerListAreOfferingRematch = (String) null;
         }
         oh.field_e = 1000000000L / (long)param0;
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        playerListAreOfferingRematch = null;
         if (param0 > -66) {
           field_b = (int[]) null;
         }
@@ -132,7 +132,7 @@ final class ee {
         if (param0 >= -51) {
           field_b = (int[]) null;
         }
-        return -fk.field_Z + ah.field_i;
+        return -PlasmaTableScene.field_Z + ah.field_i;
     }
 
     final static void a(pn param0, int param1) {
@@ -327,7 +327,7 @@ final class ee {
     }
 
     static {
-        field_a = "<%0> are all offering a rematch.";
+        playerListAreOfferingRematch = "<%0> are all offering a rematch.";
         field_b = new int[128];
     }
 

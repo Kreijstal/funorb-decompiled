@@ -6,7 +6,7 @@ final class uo extends vh {
     static vh field_Lb;
     vh field_Pb;
     static int field_Qb;
-    static String field_Ob;
+    static String playerNameBallInHand;
     static vh[] field_Mb;
 
     final int a(int param0, int param1, int param2) {
@@ -165,7 +165,7 @@ final class uo extends vh {
     }
 
     public static void f(byte param0) {
-        field_Ob = null;
+        playerNameBallInHand = null;
         if (param0 != -102) {
           uo.c(true);
         }
@@ -255,7 +255,7 @@ final class uo extends vh {
     }
 
     static {
-        field_Ob = "<%0>: Ball-in-hand!";
+        playerNameBallInHand = "<%0>: Ball-in-hand!";
         field_Qb = -1;
     }
 }

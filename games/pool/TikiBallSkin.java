@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jr extends tm {
+final class TikiBallSkin extends BallSkin {
     static int[][] field_o;
-    static String[] field_l;
+    static String[] doubleplusungoodShot;
     static int field_n;
     static Sprite[] field_m;
 
@@ -46,7 +46,7 @@ final class jr extends tm {
 
     private final int b(byte param0, int param1) {
         if (param0 >= -110) {
-          jr.j(-76);
+          TikiBallSkin.j(-76);
         }
         if (param1 != 0) {
           if (param1 == 1) {
@@ -132,7 +132,7 @@ final class jr extends tm {
           var5.a(var4, 0, (long)(8 * param0));
           var6 = new byte[64];
           if (param1 >= -42) {
-            jr.i(-82);
+            TikiBallSkin.i(-82);
           }
           var5.a(var6, (byte) 105, 0);
           stackIn_9_0 = var6;
@@ -155,7 +155,7 @@ final class jr extends tm {
         if (param0 < 9) {
           this.c(-109);
         }
-        return 0 == param1 ? sn.field_j : dq.field_g;
+        return 0 == param1 ? sn.ballsetSpaceGroup0 : dq.field_g;
     }
 
     final void a(int param0, di param1) {
@@ -168,7 +168,7 @@ final class jr extends tm {
 
     public static void i(int param0) {
         field_m = null;
-        field_l = null;
+        doubleplusungoodShot = null;
         field_o = (int[][]) null;
         if (param0 != 10860) {
           field_o = (int[][]) null;
@@ -198,7 +198,7 @@ final class jr extends tm {
             }
             var1 = (im) (IntrusiveNode.field_i.f((byte) -5));
           }
-          var1_ref = (kh) (ep.field_A.c((byte) 123));
+          var1_ref = (kh) (NetworkGameClient.field_A.c((byte) 123));
           while (var1_ref != null) {
             if (var1_ref.field_Mb > 0) {
               var1_ref.field_Mb = var1_ref.field_Mb - 1;
@@ -209,7 +209,7 @@ final class jr extends tm {
                 }
               }
             }
-            var1_ref = (kh) (ep.field_A.f((byte) -5));
+            var1_ref = (kh) (NetworkGameClient.field_A.f((byte) -5));
           }
           if (param0 != -8) {
             return;
@@ -245,11 +245,11 @@ final class jr extends tm {
         return cq.a(1, 4578, param0, param2);
     }
 
-    jr() {
+    TikiBallSkin() {
     }
 
     static {
-        field_l = new String[]{"Horrendous!", "Horrific!", "How disappointing..."};
+        doubleplusungoodShot = new String[]{"Horrendous!", "Horrific!", "How disappointing..."};
         field_n = 0;
     }
 }

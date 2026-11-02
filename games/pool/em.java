@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class em extends ob {
-    static String field_O;
+    static String tickerHintShotModeAim;
     static int field_I;
     static boolean field_K;
     static kh field_L;
@@ -70,13 +70,13 @@ final class em extends ob {
         regionExit1: {
           if (eq.field_V.field_u) {
             if (null != eq.field_V.field_m) {
-              nj.a(vk.field_y, (byte) -87, 320, 160, 160, 165 + ni.field_Z.baselineHeight + 16);
-              var2 = ni.field_S;
+              nj.a(vk.field_y, (byte) -87, 320, 160, 160, 165 + ModernTableScene.field_Z.baselineHeight + 16);
+              var2 = ModernTableScene.noHighscores;
               var3 = eq.field_V.field_m[hd.field_J];
               var15 = eq.field_V.field_z[hd.field_J];
               var5 = 180;
-              ni.field_Z.drawCentered(vi.field_b, 438, var5, 15658734, -1);
-              var5 = var5 + (ni.field_Z.maxAscent + 8);
+              ModernTableScene.field_Z.drawCentered(vi.highscoreHeaderTime, 438, var5, 15658734, -1);
+              var5 = var5 + (ModernTableScene.field_Z.maxAscent + 8);
               var6 = lc.a(hd.field_J, param0 ^ -3, eq.field_V, ti.field_d);
               for (var7 = 0; var7 < 10; var7++) {
                 if (null != var3[var7]) {
@@ -112,9 +112,9 @@ final class em extends ob {
               }
               break regionExit1;
             }
-            var2 = fh.field_a;
+            var2 = fh.serviceunavailable;
           } else {
-            var2 = cl.field_j;
+            var2 = cl.pleasewaitDotdotdot;
           }
         }
         sa.field_h.drawCentered(var2, SoftwareRasterizer.width >> 1, 202, 16777215, -1);
@@ -267,7 +267,7 @@ final class em extends ob {
           }
           if (!hk.b(36) &&
             3 > param3) {
-            var6 = mc.field_e.field_U[param1];
+            var6 = FreePlayRules.field_e.field_U[param1];
             var5 = var6;
             stackIn_5_0 = ag.a((byte) 89, var6[var6.length >> 1], param0);
             return stackIn_5_0;
@@ -344,7 +344,7 @@ final class em extends ob {
         if (param0 <= 36) {
           field_P = -120;
         }
-        String var2 = !hk.b(66) ? va.field_P : ra.field_a;
+        String var2 = !hk.b(66) ? va.hsFriendTip : ra.createtouse;
         sa.field_h.drawCentered(var2, 320, 380, 15658734, -1);
     }
 
@@ -384,7 +384,7 @@ final class em extends ob {
                     super.b(-16470, param1, param2);
                   } else {
                     if (this.field_B.b((byte) 93)) {
-                      nk.a(pl.field_d, this.field_E, (byte) 83);
+                      TranslatedUiText.a(pl.pleaselogin, this.field_E, (byte) 83);
                     }
                   }
                 }
@@ -393,7 +393,7 @@ final class em extends ob {
           }
         }
         if (param0 != -16470) {
-          field_O = (String) null;
+          tickerHintShotModeAim = (String) null;
         }
     }
 
@@ -552,12 +552,12 @@ final class em extends ob {
         field_M = null;
         field_J = null;
         field_L = null;
-        field_O = null;
+        tickerHintShotModeAim = null;
     }
 
     static {
         field_I = 0;
-        field_O = "To aim, drag <img=2> or <img=9><img=0>, or use <img=5>/<img=6>, or <img=13>/<img=15>.";
+        tickerHintShotModeAim = "To aim, drag <img=2> or <img=9><img=0>, or use <img=5>/<img=6>, or <img=13>/<img=15>.";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

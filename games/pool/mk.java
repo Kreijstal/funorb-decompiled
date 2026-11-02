@@ -133,15 +133,15 @@ final class mk {
               stackIn_10_0 = param0;
               stackIn_10_1 = param5;
               var14 = stackIn_10_0 | stackIn_10_1;
-              var12.field_xc = new vh(0L, tm.field_d);
+              var12.field_xc = new vh(0L, BallSkin.field_d);
               var12.a(-108, var12.field_xc);
               var12.field_xc.field_Fb = 1;
               var12.field_cc = new vh(0L, PacketBuffer.field_s);
               var12.a(119, var12.field_cc);
-              var12.field_Lb = new vh(0L, tm.field_d);
+              var12.field_Lb = new vh(0L, BallSkin.field_d);
               var12.a(-111, var12.field_Lb);
               var12.field_Lb.field_tb = 0;
-              var12.field_nc = new vh(0L, tm.field_d);
+              var12.field_nc = new vh(0L, BallSkin.field_d);
               var12.a(-123, var12.field_nc);
               var12.field_nc.field_tb = 0;
               var12.field_Bc = new vh(0L, PacketBuffer.field_s);
@@ -154,7 +154,7 @@ final class mk {
               if (tq.field_p) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = tm.field_d;
+                stackIn_13_4 = BallSkin.field_d;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
@@ -164,7 +164,7 @@ final class mk {
               var12.a(94, var12.field_Sb);
               var12.field_Ub = new vh[dr.field_c];
               var12.field_Ec = new vh(0L, (vh) null);
-              if ((var14 & 1 << jr.field_n) != 0) {
+              if ((var14 & 1 << TikiBallSkin.field_n) != 0) {
                 var12.field_Sb.a(73, var12.field_Ec);
               }
               var12.field_hc = new vh(0L, (vh) null);
@@ -200,7 +200,7 @@ final class mk {
               if (!tq.field_p) {
                 stackIn_33_1 = null;
                 stackIn_33_2 = null;
-                stackIn_33_4 = tm.field_d;
+                stackIn_33_4 = BallSkin.field_d;
               } else {
                 stackIn_33_1 = null;
                 stackIn_33_2 = null;
@@ -303,31 +303,31 @@ final class mk {
                 if (!var12.field_ic &&
                   !var12.field_Xb) {
                   if (var12.field_Qb) {
-                    var12.field_xc.field_nb = dl.field_d;
+                    var12.field_xc.field_nb = Pocket.statusFull;
                   } else {
-                    var12.field_xc.field_nb = sg.field_N;
+                    var12.field_xc.field_nb = sg.statusPrivate;
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Tb.field_nb = vk.field_x;
+                  var12.field_Tb.field_nb = vk.statusJoin;
                 }
               } else {
                 if (0 > var12.field_qc) {
                   if (var12.field_Dc && (var12.field_ic ||
                     var12.field_Xb)) {
-                    var12.field_Tb.field_nb = vk.field_x;
+                    var12.field_Tb.field_nb = vk.statusJoin;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var12.field_Yb == 2) {
-                      var12.field_Tb.field_nb = rj.field_i;
+                      var12.field_Tb.field_nb = KillerRules.statusSpectate;
                     } else {
-                      var12.field_xc.field_nb = dg.field_P;
+                      var12.field_xc.field_nb = dg.statusPlaying;
                     }
                   }
                 } else {
-                  var12.field_xc.field_nb = pn.field_c;
+                  var12.field_xc.field_nb = pn.statusConcluded;
                 }
               }
               if (null == var12.field_Tb.field_nb) {
@@ -358,7 +358,7 @@ final class mk {
               var33_intLifetime1 = stackIn_70_0;
               var12.field_Sb.b(var31, 2147483647, var33_intLifetime1, -2 - var33_intLifetime1 + 365, ad.field_x);
               var34_int = ja.field_b;
-              if ((1 << jr.field_n & var14Lifetime1) != 0) {
+              if ((1 << TikiBallSkin.field_n & var14Lifetime1) != 0) {
                 var51_ref = uk.field_i[var12.field_ac];
                 var12.field_Ec.field_hb = var51_ref;
                 var12.field_Ec.b(0, 2147483647, var34_int, var51_ref.field_w, var12.field_Sb.field_Db);
@@ -444,7 +444,7 @@ final class mk {
               if (var12.field_bc != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(tj.field_W);
+                discarded$1 = var37.append(tj.playersInGame);
                 discarded$2 = var37.append(var12.field_bc[0]);
                 for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_mc; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -457,12 +457,12 @@ final class mk {
                 var31 = var31 + var39Lifetime1 * ad.field_x;
               }
               if (var12.field_Xb) {
-                var12.field_Rb.field_nb = nr.a(new String[]{var32}, -1, jc.field_b);
+                var12.field_Rb.field_nb = nr.a(new String[]{var32}, -1, jc.youAreInvitedToXsGame);
                 var12.field_Rb.b(var31, param1 ^ 2147483647, kj.field_j, var12.field_gb - kj.field_j * 2, ad.field_x);
                 var31 = var31 + ad.field_x;
               }
               if (var12.field_fc) {
-                var12.field_zc.field_nb = nr.a(new String[]{var32}, ~param1, op.field_g);
+                var12.field_zc.field_nb = nr.a(new String[]{var32}, ~param1, op.askingToJoinXsGame);
                 var12.field_zc.b(var31, param1 + 2147483647, kj.field_j, -(kj.field_j * 2) + var12.field_gb, ad.field_x);
                 var31 = var31 + ad.field_x;
               }
@@ -505,15 +505,15 @@ final class mk {
               if (var12.field_ac != 1) {
                 var34Lifetime2 = pn.field_i[var12.field_ac];
               } else {
-                var34Lifetime2 = th.field_e;
+                var34Lifetime2 = th.runescapeclan;
               }
-              kk.field_B = ic.field_b + " - " + var34Lifetime2;
+              kk.field_B = ic.whoCanJoin + " - " + var34Lifetime2;
             }
             if (var12.field_kc.field_W) {
               if (!var12.field_wc) {
-                stackIn_157_0 = hh.field_d;
+                stackIn_157_0 = hh.unratedGame;
               } else {
-                stackIn_157_0 = of.field_Ub;
+                stackIn_157_0 = of.ratedGame;
               }
               kk.field_B = stackIn_157_0;
             }
@@ -521,20 +521,20 @@ final class mk {
               if (!var12.field_ic &&
                 !var12.field_Xb) {
                 if (!var12.field_Dc) {
-                  stackIn_166_0 = a.field_b;
+                  stackIn_166_0 = a.youCannotJoinInProgress;
                 } else {
-                  stackIn_166_0 = im.field_Ob;
+                  stackIn_166_0 = im.youCanAskToJoin;
                 }
               } else {
-                stackIn_166_0 = gg.field_c;
+                stackIn_166_0 = gg.youCanJoin;
               }
               kk.field_B = stackIn_166_0;
             }
             if (var12.field_lc.field_W) {
               if (2 != var12.field_Yb) {
-                stackIn_172_0 = bh.field_c;
+                stackIn_172_0 = bh.youCanNotSpectate;
               } else {
-                stackIn_172_0 = sh.field_N;
+                stackIn_172_0 = sh.youCanSpectate;
               }
               kk.field_B = stackIn_172_0;
             }
@@ -615,8 +615,8 @@ final class mk {
           if (param0.field_T == null) {
             param0.field_T = new IntrusiveDeque();
           }
-          ep.field_A = param0.field_T;
-          ep.field_A.d((byte) 123);
+          NetworkGameClient.field_A = param0.field_T;
+          NetworkGameClient.field_A.d((byte) 123);
           lf.field_a = new tk(param1);
           if (null == param2.field_T) {
             param2.field_T = new IntrusiveDeque();

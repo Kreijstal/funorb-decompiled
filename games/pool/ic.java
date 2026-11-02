@@ -4,7 +4,7 @@
 final class ic {
     static he field_c;
     static int field_a;
-    static String field_b;
+    static String whoCanJoin;
 
     final static void a(byte param0, int param1) {
         hj.field_g = 400 * param1 / 150;
@@ -17,7 +17,7 @@ final class ic {
         if (param0 != -512) {
           return;
         }
-        field_b = null;
+        whoCanJoin = null;
         field_c = null;
     }
 
@@ -228,8 +228,8 @@ final class ic {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = mc.field_e.countWrappedLines(param3, param2);
-          var6 = var5_int * mc.field_e.baselineHeight + mc.field_e.maxDescent;
+          var5_int = FreePlayRules.field_e.countWrappedLines(param3, param2);
+          var6 = var5_int * FreePlayRules.field_e.baselineHeight + FreePlayRules.field_e.maxDescent;
           if (!param1) {
             ic.a(-50);
           }
@@ -242,7 +242,7 @@ final class ic {
           var11 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var19);
           var7.e();
-          mc.field_e.drawParagraph(param3, 2, 2, param2, var6, param4, -1, param0, 0, mc.field_e.baselineHeight * 3 / 4);
+          FreePlayRules.field_e.drawParagraph(param3, 2, 2, param2, var6, param4, -1, param0, 0, FreePlayRules.field_e.baselineHeight * 3 / 4);
           var7.e(4144959);
           var7.e(65793);
           SoftwareRasterizer.setTarget(var20, var10, var11);
@@ -271,6 +271,6 @@ final class ic {
 
     static {
         field_c = new he();
-        field_b = "Who can join";
+        whoCanJoin = "Who can join";
     }
 }

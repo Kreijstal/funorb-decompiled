@@ -3,23 +3,23 @@
  */
 final class il {
     static PacketBuffer field_b;
-    static String field_d;
-    static String field_h;
+    static String rule21;
+    static String mpYouhavewon;
     static Sprite field_a;
     static PcmSample[] field_c;
-    static String field_e;
+    static String off;
     static vh[] field_g;
     static Sprite field_f;
 
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        field_d = null;
-        field_h = null;
+        rule21 = null;
+        mpYouhavewon = null;
         field_f = null;
         int var1 = -94 % ((param0 - 54) / 32);
         field_g = null;
-        field_e = null;
+        off = null;
         field_b = null;
     }
 
@@ -147,8 +147,8 @@ final class il {
 
     static {
         field_c = new PcmSample[4];
-        field_h = "You have won!";
-        field_e = "OFF";
-        field_d = "Breaking real-world laws";
+        mpYouhavewon = "You have won!";
+        off = "OFF";
+        rule21 = "Breaking real-world laws";
     }
 }

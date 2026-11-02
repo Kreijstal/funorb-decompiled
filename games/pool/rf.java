@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rf {
-    static String[] field_h;
-    static String field_f;
+    static String[] reconnectLostSeq;
+    static String gameoptYouneed1ratedgame;
     static char[] field_a;
-    static String field_b;
+    static String yourGame;
     static int field_d;
     static Sprite field_g;
     static Sprite field_e;
@@ -25,13 +25,13 @@ final class rf {
     public static void a(boolean param0) {
         field_a = null;
         field_e = null;
-        field_b = null;
-        field_f = null;
+        yourGame = null;
+        gameoptYouneed1ratedgame = null;
         field_g = null;
         if (param0) {
           return;
         }
-        field_h = null;
+        reconnectLostSeq = null;
     }
 
     final static int a(int param0, int param1) {
@@ -61,14 +61,14 @@ final class rf {
             }
           }
           param0 = param0 << (var2 << 1);
-          return ac.field_o[param0 - 32768] >> var2;
+          return KillerBallSkin.field_o[param0 - 32768] >> var2;
         }
         if (param0 < 131072) {
           if (param1 <= -119) {
-            return ac.field_o[-32768 + param0];
+            return KillerBallSkin.field_o[-32768 + param0];
           }
-          field_f = (String) null;
-          return ac.field_o[-32768 + param0];
+          gameoptYouneed1ratedgame = (String) null;
+          return KillerBallSkin.field_o[-32768 + param0];
         }
         if (param0 >= 33554432) {
           if (param0 >= 536870912) {
@@ -84,7 +84,7 @@ final class rf {
           }
         }
         param0 = param0 >> (var2Lifetime1 << 1);
-        return ac.field_o[param0 - 32768] << var2Lifetime1;
+        return KillerBallSkin.field_o[param0 - 32768] << var2Lifetime1;
     }
 
     final static void a(String param0, int param1, String param2) {
@@ -103,10 +103,10 @@ final class rf {
     }
 
     static {
-        field_h = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
+        reconnectLostSeq = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_a = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
-        field_f = "You must play 1 more rated game before playing with the current options.";
+        gameoptYouneed1ratedgame = "You must play 1 more rated game before playing with the current options.";
         field_d = 64;
-        field_b = "Your game";
+        yourGame = "Your game";
     }
 }

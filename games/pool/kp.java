@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kp {
-    static String field_c;
+    static String muChatPmShowAll;
     byte[] field_l;
     static int[][] field_i;
     int field_g;
@@ -28,7 +28,7 @@ final class kp {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        muChatPmShowAll = null;
         field_i = (int[][]) null;
         int var1 = 9 % ((-61 - param0) / 35);
         field_h = null;
@@ -71,7 +71,7 @@ final class kp {
     }
 
     static {
-        field_c = "Show all private chat";
+        muChatPmShowAll = "Show all private chat";
         field_m = 128;
     }
 }

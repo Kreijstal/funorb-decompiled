@@ -3,7 +3,7 @@
  */
 final class lb extends jo {
     static hj field_N;
-    static String field_M;
+    static String createUsernameAvailable;
     static Sprite[] field_O;
     static String[][] field_P;
 
@@ -14,7 +14,7 @@ final class lb extends jo {
     }
 
     public static void g(int param0) {
-        field_M = null;
+        createUsernameAvailable = null;
         field_O = null;
         field_N = null;
         field_P = (String[][]) null;
@@ -76,6 +76,6 @@ final class lb extends jo {
 
     static {
         field_N = new hj(1, 2, 2, 0);
-        field_M = "Name is available";
+        createUsernameAvailable = "Name is available";
     }
 }

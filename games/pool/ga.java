@@ -81,7 +81,7 @@ final class ga extends sl implements sc {
           DualLinkDeque.field_c = true;
           ro.field_e = true;
           wd.field_Ub.k(-22216);
-          wf.a(param0, na.field_d, -127);
+          wf.a(param0, na.connectionlostReconnecting, -127);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ga.LA(" + param0 + ')');
         }
@@ -367,16 +367,16 @@ final class ga extends sl implements sc {
     }
 
     final static void m(int param0) {
-        jc.field_e = new hm(ga.a(262144, true, ea.field_r) - 131072, -131072 + ga.a(262144, true, ea.field_r), -131072 + ga.a(262144, true, ea.field_r), -131072 + ga.a(262144, true, ea.field_r));
-        jc.field_e.b(true);
+        jc.field_e = new Quaternion(ga.a(262144, true, ea.field_r) - 131072, -131072 + ga.a(262144, true, ea.field_r), -131072 + ga.a(262144, true, ea.field_r), -131072 + ga.a(262144, true, ea.field_r));
+        jc.field_e.normalise(true);
         tf.field_a = dq.field_a;
         if (tf.field_a == null) {
-          tf.field_a = al.field_B[0];
+          tf.field_a = PoolGameModel.field_B[0];
         }
         vn.field_e = ga.a(tf.field_a.b(param0 + 23883), true, ea.field_r);
         tp.field_h[1] = 0;
         tp.field_h[0] = -140;
-        bf.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+        CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         if (param0 != -23499) {
           return;
         }

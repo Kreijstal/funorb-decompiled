@@ -7,25 +7,25 @@ final class wg extends vh {
     private vh field_Pb;
     static int[] field_Nb;
     static String[] field_Mb;
-    static String field_Rb;
+    static String muLobbyFriendAdd;
     static byte[][] field_Sb;
-    static String field_Ob;
+    static String warningIfyouquit;
 
     public static void f(int param0) {
         if (param0 != -1) {
           wg.f(82);
           field_Nb = null;
           field_Mb = null;
-          field_Ob = null;
-          field_Rb = null;
+          warningIfyouquit = null;
+          muLobbyFriendAdd = null;
           field_Sb = (byte[][]) null;
           field_Lb = null;
           return;
         }
         field_Nb = null;
         field_Mb = null;
-        field_Ob = null;
-        field_Rb = null;
+        warningIfyouquit = null;
+        muLobbyFriendAdd = null;
         field_Sb = (byte[][]) null;
         field_Lb = null;
     }
@@ -129,7 +129,7 @@ final class wg extends vh {
 
     static {
         field_Lb = new IntrusiveDeque();
-        field_Ob = "Warning: if you quit, you will lose any game you are in the middle of!";
-        field_Rb = "Add friend";
+        warningIfyouquit = "Warning: if you quit, you will lose any game you are in the middle of!";
+        muLobbyFriendAdd = "Add friend";
     }
 }

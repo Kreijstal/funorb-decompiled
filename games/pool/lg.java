@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg extends am {
-    static String field_v;
-    static String field_y;
+    static String fsNonmember;
+    static String changedisplayname;
     static PlatformTaskDispatcher field_s;
     private pf field_t;
     static int field_x;
-    static String field_w;
+    static String playfreeversion;
     private pf[] field_u;
-    static String field_r;
+    static String createAlertNameleadingspace;
 
     private final void a(boolean param0, lg param1, byte param2) {
         int var4_int = 0;
@@ -142,13 +142,13 @@ final class lg extends am {
     }
 
     public static void a(boolean param0) {
-        field_v = null;
+        fsNonmember = null;
         if (!param0) {
-          field_w = (String) null;
+          playfreeversion = (String) null;
         }
-        field_w = null;
-        field_r = null;
-        field_y = null;
+        playfreeversion = null;
+        createAlertNameleadingspace = null;
+        changedisplayname = null;
         field_s = null;
     }
 
@@ -287,9 +287,9 @@ final class lg extends am {
     }
 
     static {
-        field_y = "Change display name";
-        field_v = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
-        field_w = "Play free version";
-        field_r = "Names cannot start or end with space or underscore";
+        changedisplayname = "Change display name";
+        fsNonmember = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+        playfreeversion = "Play free version";
+        createAlertNameleadingspace = "Names cannot start or end with space or underscore";
     }
 }

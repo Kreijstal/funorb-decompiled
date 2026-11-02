@@ -8,7 +8,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_B;
     int field_A;
     int field_y;
-    static String field_E;
+    static String create;
     static rq field_C;
     static vh field_F;
     int field_G;
@@ -29,7 +29,7 @@ abstract class SpriteState extends DualLinkNode {
         if (param0 != 11) {
           field_F = (vh) null;
         }
-        field_E = null;
+        create = null;
         field_x = null;
         field_F = null;
     }
@@ -219,6 +219,6 @@ abstract class SpriteState extends DualLinkNode {
     }
 
     static {
-        field_E = "Create";
+        create = "Create";
     }
 }

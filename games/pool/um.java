@@ -4,7 +4,7 @@
 abstract class um {
     static int field_c;
     static int field_d;
-    static String field_a;
+    static String ratingDrawn;
     private static int field_b;
     static boolean field_e;
 
@@ -38,7 +38,7 @@ abstract class um {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        ratingDrawn = null;
         if (param0 <= 107) {
           um.a(-2);
         }
@@ -47,6 +47,6 @@ abstract class um {
     static {
         field_b = 10;
         field_c = 1 << field_b;
-        field_a = "Drawn";
+        ratingDrawn = "Drawn";
     }
 }

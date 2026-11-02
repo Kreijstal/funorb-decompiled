@@ -4,13 +4,13 @@
 import java.util.*;
 
 abstract class ud extends ei implements lj {
-    static String field_H;
+    static String createAccountSuccess;
     ei field_L;
     static String field_F;
     static int[] field_I;
     static int[] field_G;
-    static String field_M;
-    static String field_K;
+    static String gameoptPleaseselectoption2;
+    static String muChatPublic;
     static vh field_J;
 
     ud(int param0, int param1, int param2, int param3, fp param4, cc param5) {
@@ -19,17 +19,17 @@ abstract class ud extends ei implements lj {
 
     public static void a(int param0) {
         field_J = null;
-        field_M = null;
+        gameoptPleaseselectoption2 = null;
         field_F = null;
         field_G = null;
         field_I = null;
-        field_H = null;
+        createAccountSuccess = null;
         if (param0 >= 45) {
-          field_K = null;
+          muChatPublic = null;
           return;
         }
         ud.a(0.4757129525911979, 55, -32);
-        field_K = null;
+        muChatPublic = null;
     }
 
     void a(int param0, int param1, int param2, int param3, byte param4, ei param5) {
@@ -177,7 +177,7 @@ abstract class ud extends ei implements lj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            field_H = (String) null;
+            createAccountSuccess = (String) null;
           }
           stackIn_6_0 = (null != this.field_L) && (this.field_L.a(param0, param1 + this.field_C, true, param3, param4, this.field_D + param5, param6));
           return stackIn_6_0;
@@ -506,10 +506,10 @@ abstract class ud extends ei implements lj {
     }
 
     static {
-        field_H = "Account created successfully!";
-        field_K = "Public";
+        createAccountSuccess = "Account created successfully!";
+        muChatPublic = "Public";
         field_I = new int[3];
-        field_M = "Please select options in the following rows:  ";
+        gameoptPleaseselectoption2 = "Please select options in the following rows:  ";
         field_G = new int[]{62, 20, 21, 49, 6, 5, 3, 61};
     }
 }

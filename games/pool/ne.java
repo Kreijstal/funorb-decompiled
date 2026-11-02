@@ -88,7 +88,7 @@ final class ne extends ig {
             if (var3 != null) {
               if (var3.c(-31873) == ProxySocketConnector.field_e &&
                 !param0.equals(this.field_p.field_m)) {
-                stackIn_10_0 = rk.field_i;
+                stackIn_10_0 = rk.createAlertMismatch;
                 return stackIn_10_0;
               }
               stackIn_12_0 = var3.a(73);
@@ -98,7 +98,7 @@ final class ne extends ig {
           if (param0.equals(this.field_p.field_m)) {
             return null;
           }
-          stackIn_16_0 = rk.field_i;
+          stackIn_16_0 = rk.createAlertMismatch;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

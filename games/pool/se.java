@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class se extends re {
-    static String field_k;
+    static String createDisplaynameHint;
     static int field_l;
     private long field_j;
     private String field_g;
     static int[] field_i;
-    static String field_m;
+    static String joinXsGame;
     static int field_h;
 
     tf b(byte param0) {
@@ -16,15 +16,15 @@ class se extends re {
     }
 
     public static void b(int param0) {
-        field_m = null;
+        joinXsGame = null;
         if (param0 != -1431655766) {
           field_h = -108;
           field_i = null;
-          field_k = null;
+          createDisplaynameHint = null;
           return;
         }
         field_i = null;
-        field_k = null;
+        createDisplaynameHint = null;
     }
 
     final void a(byte param0, PacketBuffer param1) {
@@ -46,7 +46,7 @@ class se extends re {
         if (!param0) {
           return 255 & param1;
         }
-        field_k = (String) null;
+        createDisplaynameHint = (String) null;
         return 255 & param1;
     }
 
@@ -61,8 +61,8 @@ class se extends re {
 
     static {
         field_l = 50;
-        field_k = "Player names can be up to 12 letters, numbers and underscores";
+        createDisplaynameHint = "Player names can be up to 12 letters, numbers and underscores";
         field_i = new int[]{291, 363, 428, 486, 548};
-        field_m = "Join <%0>'s game";
+        joinXsGame = "Join <%0>'s game";
     }
 }

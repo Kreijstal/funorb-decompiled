@@ -83,7 +83,7 @@ final class pj extends ob {
           ej.field_j.a(true, im.field_ec);
           ej.field_j.writeLong(kn.field_j, (byte) -80);
           var6 = 0;
-          if (bf.field_g) {
+          if (CushionSegment.field_g) {
             var6 = var6 | 1;
           }
           if (hk.field_s) {
@@ -134,7 +134,7 @@ final class pj extends ob {
         if (param0 <= 36) {
           return;
         }
-        this.a(mc.field_e, new int[]{mc.field_e.baselineHeight}, 100, -16097, ng.field_B, 320, 4);
+        this.a(FreePlayRules.field_e, new int[]{FreePlayRules.field_e.baselineHeight}, 100, -16097, ng.field_B, 320, 4);
         this.b(100, false);
     }
 
@@ -166,11 +166,11 @@ final class pj extends ob {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (nf.field_V == null) {
             if (null != so.field_h) {
-              so.field_h.drawParagraph(o.field_A, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              so.field_h.drawParagraph(o.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = nf.field_V[rj.field_f];
+          var6 = nf.field_V[KillerRules.field_f];
           if (param0 != -1) {
             field_K = (ie) null;
           }
@@ -178,7 +178,7 @@ final class pj extends ob {
             var6.c(245, 199);
           } else {
             if (so.field_h != null) {
-              so.field_h.drawParagraph(o.field_A, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              so.field_h.drawParagraph(o.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (ug.field_u < hj.field_l) {

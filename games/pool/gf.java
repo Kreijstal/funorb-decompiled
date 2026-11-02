@@ -3,9 +3,9 @@
  */
 final class gf {
     static int field_d;
-    static String field_f;
+    static String removefriendfirst;
     static int field_a;
-    static String field_c;
+    static String muGameoptAcceptXIntoGame;
     static so field_e;
     static di field_g;
     static boolean[] field_b;
@@ -41,15 +41,15 @@ final class gf {
         field_e = null;
         if (param0) {
           field_b = null;
-          field_f = null;
-          field_c = null;
+          removefriendfirst = null;
+          muGameoptAcceptXIntoGame = null;
           return;
         }
         qp var2 = (qp) null;
         gf.a((qp) null, 34);
         field_b = null;
-        field_f = null;
-        field_c = null;
+        removefriendfirst = null;
+        muGameoptAcceptXIntoGame = null;
     }
 
     final static eo a(int param0, String param1) {
@@ -111,7 +111,7 @@ final class gf {
     }
 
     static {
-        field_f = "Please remove <%0> from your friend list first.";
-        field_c = "Accept <%0> into this game";
+        removefriendfirst = "Please remove <%0> from your friend list first.";
+        muGameoptAcceptXIntoGame = "Accept <%0> into this game";
     }
 }

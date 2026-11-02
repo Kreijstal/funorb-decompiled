@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class SocketConnector {
-    static String field_b;
+    static String gameoptCannotbecombined2;
     int field_a;
     String field_c;
     static int field_d;
@@ -22,13 +22,13 @@ abstract class SocketConnector {
     public static void a(int param0) {
         if (param0 != 16857) {
           field_d = 93;
-          field_b = null;
+          gameoptCannotbecombined2 = null;
           return;
         }
-        field_b = null;
+        gameoptCannotbecombined2 = null;
     }
 
     static {
-        field_b = "This option cannot be combined with the current settings for:  ";
+        gameoptCannotbecombined2 = "This option cannot be combined with the current settings for:  ";
     }
 }

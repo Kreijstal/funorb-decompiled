@@ -12,39 +12,39 @@ final class ij extends IntrusiveNode {
     int field_w;
     static int field_G;
     int field_m;
-    static String field_n;
+    static String createAlertInvaliddate;
     int[] field_D;
     vh field_I;
     int[] field_F;
     int[] field_z;
     Sprite field_K;
     int field_r;
-    static String field_A;
+    static String playerYouFirstListAreGroupName;
     int field_C;
     int field_y;
     vh field_l;
-    static String field_s;
+    static String loginNoDisplayname;
     static cg field_u;
     static so field_o;
     int field_v;
-    static String field_t;
+    static String ballsetPolarGroup0;
     int field_J;
 
     public static void a(int param0) {
         field_u = null;
-        field_A = null;
+        playerYouFirstListAreGroupName = null;
         if (param0 == -273542815) {
-          field_t = null;
+          ballsetPolarGroup0 = null;
           field_o = null;
-          field_s = null;
-          field_n = null;
+          loginNoDisplayname = null;
+          createAlertInvaliddate = null;
           return;
         }
         ij.a(118);
-        field_t = null;
+        ballsetPolarGroup0 = null;
         field_o = null;
-        field_s = null;
-        field_n = null;
+        loginNoDisplayname = null;
+        createAlertInvaliddate = null;
     }
 
     ij(int param0) {
@@ -107,7 +107,7 @@ final class ij extends IntrusiveNode {
           }
           this.field_B = 25 * param2.length() / 16;
           var6 = sa.field_h.measureWrappedHeight(param2, 320, sa.field_h.baselineHeight + 3);
-          var7 = 5 + mc.field_e.maxAscent + (mc.field_e.maxDescent + var6);
+          var7 = 5 + FreePlayRules.field_e.maxAscent + (FreePlayRules.field_e.maxDescent + var6);
           stackIn_7_0 = (var5 >= 320) ? var5 : 320;
           var8 = stackIn_7_0;
           this.field_K = new Sprite(var8, var7);
@@ -125,7 +125,7 @@ final class ij extends IntrusiveNode {
           stackIn_15_0 = sa.field_h;
           stackIn_15_1 = (String) (param2);
           stackIn_15_2 = (-320 + var8) / 2;
-          stackIn_15_3 = mc.field_e.maxDescent + (mc.field_e.maxAscent + 5);
+          stackIn_15_3 = FreePlayRules.field_e.maxDescent + (FreePlayRules.field_e.maxAscent + 5);
           stackIn_15_4 = 320;
           stackIn_15_5 = var6;
           stackIn_15_6 = 16777215;
@@ -160,10 +160,10 @@ final class ij extends IntrusiveNode {
 
     static {
         field_G = 0;
-        field_n = "Invalid date";
-        field_A = "You<%0> are <%2>.";
+        createAlertInvaliddate = "Invalid date";
+        playerYouFirstListAreGroupName = "You<%0> are <%2>.";
         field_u = null;
-        field_t = "Spots";
-        field_s = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
+        ballsetPolarGroup0 = "Spots";
+        loginNoDisplayname = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
     }
 }

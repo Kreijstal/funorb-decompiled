@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fk extends oo {
+final class PlasmaTableScene extends TableScene {
     private PcmSample field_db;
     static int field_Z;
     private PcmSample field_W;
@@ -22,7 +22,7 @@ final class fk extends oo {
     static int field_V;
     private PcmSample field_N;
     private int[] field_R;
-    static String field_eb;
+    static String mbCaptionTitle;
     private int[] field_X;
     private int[] field_M;
     static hr field_gb;
@@ -30,14 +30,14 @@ final class fk extends oo {
     private PcmSample field_U;
     private PcmSample field_P;
 
-    final void a(al param0, int param1) {
+    final void a(PoolGameModel param0, int param1) {
         int var5_int = 0;
         int var3_int = 0;
         int var4_int = 0;
-        bf var4 = null;
-        bf var5 = null;
-        bf var6 = null;
-        bf var7 = null;
+        CushionSegment var4 = null;
+        CushionSegment var5 = null;
+        CushionSegment var6 = null;
+        CushionSegment var7 = null;
         int var8 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -72,12 +72,12 @@ final class fk extends oo {
           this.o(10);
           this.field_K = new ji[12];
           for (var3_intLifetime2 = 0; var3_intLifetime2 < 6; var3_intLifetime2++) {
-            var4 = param0.field_c[(var3_intLifetime2 * 4 + 3) % param0.field_c.length];
-            var5 = param0.field_c[(var3_intLifetime2 * 4 + 4) % param0.field_c.length];
-            var6 = param0.field_c[(5 + 4 * var3_intLifetime2) % param0.field_c.length];
-            var7 = param0.field_c[(6 + 4 * var3_intLifetime2) % param0.field_c.length];
-            this.field_K[2 * var3_intLifetime2] = new ji(new int[]{var5.field_a + var5.field_f >> 14, var5.field_j + var5.field_l >> 14, var6.field_a >> 13, var6.field_j >> 13, var7.field_a >> 13, var7.field_j >> 13});
-            this.field_K[1 + var3_intLifetime2 * 2] = new ji(new int[]{var5.field_a + var5.field_f >> 14, var5.field_j + var5.field_l >> 14, var5.field_a >> 13, var5.field_j >> 13, var4.field_a >> 13, var4.field_j >> 13});
+            var4 = param0.cushionSegments[(var3_intLifetime2 * 4 + 3) % param0.cushionSegments.length];
+            var5 = param0.cushionSegments[(var3_intLifetime2 * 4 + 4) % param0.cushionSegments.length];
+            var6 = param0.cushionSegments[(5 + 4 * var3_intLifetime2) % param0.cushionSegments.length];
+            var7 = param0.cushionSegments[(6 + 4 * var3_intLifetime2) % param0.cushionSegments.length];
+            this.field_K[2 * var3_intLifetime2] = new ji(new int[]{var5.startX + var5.endX >> 14, var5.startY + var5.endY >> 14, var6.startX >> 13, var6.startY >> 13, var7.startX >> 13, var7.startY >> 13});
+            this.field_K[1 + var3_intLifetime2 * 2] = new ji(new int[]{var5.startX + var5.endX >> 14, var5.startY + var5.endY >> 14, var5.startX >> 13, var5.startY >> 13, var4.startX >> 13, var4.startY >> 13});
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,25 +209,25 @@ final class fk extends oo {
         param0[1] = param0[1] >> 8;
         param0[2] = param0[2] >> 8;
         var1 = 65536 / SoftwareRasterizer.width;
-        mf.field_l = mf.field_l & 127;
-        me.field_x = -64 + mf.field_l;
-        gn.field_b = 0 + mf.field_l;
+        ClassicBallSkin.field_l = ClassicBallSkin.field_l & 127;
+        me.field_x = -64 + ClassicBallSkin.field_l;
+        gn.field_b = 0 + ClassicBallSkin.field_l;
         stackIn_2_0 = v.field_i;
-        if (mf.field_l >= 16) {
-          stackIn_3_1 = mf.field_l >> 1;
+        if (ClassicBallSkin.field_l >= 16) {
+          stackIn_3_1 = ClassicBallSkin.field_l >> 1;
         } else {
-          stackIn_3_1 = (16 - mf.field_l) * (v.field_i.length - 1) >> 4;
+          stackIn_3_1 = (16 - ClassicBallSkin.field_l) * (v.field_i.length - 1) >> 4;
         }
         ba.field_tb = stackIn_2_0[stackIn_3_1];
-        IterableNodeHashTable.field_h = 64 + mf.field_l;
-        rb.field_g = 128 + mf.field_l;
-        cl.field_g = v.field_i[64 + (mf.field_l >> 1)];
-        eq.field_Y = 192 + mf.field_l;
-        gn.field_d = 256 + mf.field_l;
-        pn.field_s = v.field_i[128 + (mf.field_l >> 1)];
-        mp.field_O = 320 + mf.field_l;
-        ll.field_c = 384 + mf.field_l;
-        nm.field_f = v.field_i[192 + (mf.field_l >> 1)];
+        IterableNodeHashTable.field_h = 64 + ClassicBallSkin.field_l;
+        rb.field_g = 128 + ClassicBallSkin.field_l;
+        cl.field_g = v.field_i[64 + (ClassicBallSkin.field_l >> 1)];
+        eq.field_Y = 192 + ClassicBallSkin.field_l;
+        gn.field_d = 256 + ClassicBallSkin.field_l;
+        pn.field_s = v.field_i[128 + (ClassicBallSkin.field_l >> 1)];
+        mp.field_O = 320 + ClassicBallSkin.field_l;
+        ll.field_c = 384 + ClassicBallSkin.field_l;
+        nm.field_f = v.field_i[192 + (ClassicBallSkin.field_l >> 1)];
         jp.field_V = ll.field_c * ll.field_c;
         var2 = SoftwareRasterizer.clipTop;
         var3 = 256 - var16[2];
@@ -306,7 +306,7 @@ final class fk extends oo {
                   var11 = (var7Lifetime4 - var6Lifetime4) * var1;
                   var12 = (var8Lifetime4 << 16) + SoftwareRasterizer.clipLeft * var10;
                   var13 = (var6Lifetime4 << 16) + SoftwareRasterizer.clipLeft * var11;
-                  fk.a(0, 0, 0, 0, var12, var13, var10, var11, var3Lifetime1);
+                  PlasmaTableScene.a(0, 0, 0, 0, var12, var13, var10, var11, var3Lifetime1);
                   var3Lifetime1 = var3Lifetime1 + SoftwareRasterizer.width;
                 }
               }
@@ -449,7 +449,7 @@ final class fk extends oo {
         return (byte) -128;
     }
 
-    private final void a(pq[] param0, byte param1) {
+    private final void a(Ball[] param0, byte param1) {
         int var3_int = 0;
         jd dupTemp$0 = null;
         int var16 = 0;
@@ -479,9 +479,9 @@ final class fk extends oo {
         var18 = Pool.field_O;
         try {
           for (var3_int = 0; param0.length > var3_int; var3_int++) {
-            if (param0[var3_int].field_s) {
-              var4_int = (param0[var3_int].field_g >> 13) * 32 / 4608;
-              var5_int = 16 * (param0[var3_int].field_k >> 13) / 2304;
+            if (param0[var3_int].inPlay) {
+              var4_int = (param0[var3_int].positionX >> 13) * 32 / 4608;
+              var5_int = 16 * (param0[var3_int].positionY >> 13) / 2304;
               if (var4_int >= 0) {
                 if (var4_int >= 32) {
                   var4_int = 31;
@@ -619,7 +619,7 @@ final class fk extends oo {
     }
 
     public static void m(int param0) {
-        field_eb = null;
+        mbCaptionTitle = null;
         field_cb = null;
         field_gb = null;
         int var1 = -122 / ((param0 + 65) / 38);
@@ -688,8 +688,8 @@ final class fk extends oo {
                 var10++;
               }
               var5 = bc.field_c;
-              if (param2.field_I.field_f instanceof af) {
-                var6Lifetime1 = ((af) (param2.field_I.field_f)).a(-1);
+              if (param2.field_I.rules instanceof EightBallRules) {
+                var6Lifetime1 = ((EightBallRules) (param2.field_I.rules)).a(-1);
                 if (-1 != var6Lifetime1) {
                   var5 = hf.a(var6Lifetime1, (byte) 73);
                 }
@@ -735,8 +735,8 @@ final class fk extends oo {
             this.field_K[var3_int].a((byte) -43);
           }
           this.n(2);
-          this.a(param1.field_I.field_l, (byte) -122);
-          mf.field_l = mf.field_l - 1;
+          this.a(param1.field_I.balls, (byte) -122);
+          ClassicBallSkin.field_l = ClassicBallSkin.field_l - 1;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "fk.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -958,14 +958,14 @@ final class fk extends oo {
         int[] stackIn_28_1;
         int stackIn_28_2;
         boolean stackIn_28_3;
-        pq[] stackIn_28_4;
+        Ball[] stackIn_28_4;
         Object stackIn_29_0;
         boolean stackIn_29_5;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pq[] var3 = null;
+        Ball[] var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int[] var5_ref_int__ = null;
@@ -978,7 +978,7 @@ final class fk extends oo {
         int[] var11 = null;
         int var12 = 0;
         int[] var13 = null;
-        pq[] var14 = null;
+        Ball[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
         int[] var17 = null;
@@ -986,14 +986,14 @@ final class fk extends oo {
         int var7Lifetime1;
         var10 = Pool.field_O;
         try {
-          var14 = param1.field_I.field_l;
+          var14 = param1.field_I.balls;
           var3 = var14;
           var16 = param1.field_ab;
           var13 = var16;
           var4 = var13;
           this.a(false, var16, var14);
           en.b(0);
-          fk.a(var16);
+          PlasmaTableScene.a(var16);
           var17 = f.a((byte) 77, var16);
           var15 = var17;
           var5_ref_int__ = var15;
@@ -1030,8 +1030,8 @@ final class fk extends oo {
               var12++;
             }
             var6 = bc.field_c;
-            if (param1.field_I.field_f instanceof af) {
-              var7Lifetime1 = ((af) (param1.field_I.field_f)).a(-1);
+            if (param1.field_I.rules instanceof EightBallRules) {
+              var7Lifetime1 = ((EightBallRules) (param1.field_I.rules)).a(-1);
               if (var7Lifetime1 != -1) {
                 var6 = hf.a(var7Lifetime1, (byte) 96);
               }
@@ -1057,7 +1057,7 @@ final class fk extends oo {
             stackIn_28_2 = 122;
             stackIn_28_3 = true;
             stackIn_28_4 = var3;
-            if (param1.field_I.j(20).field_q != 0) {
+            if (param1.field_I.currentShot(20).field_q != 0) {
               stackIn_29_0 = this;
               stackIn_29_5 = false;
             } else {
@@ -1222,7 +1222,7 @@ final class fk extends oo {
         var6 = Pool.field_O;
         try {
           if (param0 != 44) {
-            field_eb = (String) null;
+            mbCaptionTitle = (String) null;
           }
           for (var3_int = 0; IntrusiveNode.field_b.length > var3_int; var3_int++) {
             for (var4 = 0; IntrusiveNode.field_b[var3_int].length > var4; var4++) {
@@ -1246,7 +1246,7 @@ final class fk extends oo {
         }
     }
 
-    fk() {
+    PlasmaTableScene() {
         this.field_L = new int[2];
         this.field_R = new int[2];
         this.field_X = new int[2];
@@ -1305,7 +1305,7 @@ final class fk extends oo {
     }
 
     static {
-        field_eb = "Members' Benefits";
+        mbCaptionTitle = "Members' Benefits";
         field_gb = null;
         field_V = 2;
     }

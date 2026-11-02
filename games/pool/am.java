@@ -442,8 +442,8 @@ class am implements fp, io {
         try {
           int var1_int = 0;
           int var3 = Pool.field_O;
-          if (sq.field_c != null) {
-            sq.field_c.c((byte) -80);
+          if (GameRules.field_c != null) {
+            GameRules.field_c.c((byte) -80);
           }
           if (null != ri.field_U) {
             ri.field_U.a(-11307);

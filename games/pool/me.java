@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class me extends ig {
-    static String field_w;
+    static String ballsetUsa8Group0;
     private boolean field_m;
-    static String field_v;
+    static String muChatInvisibleAndSilentMode;
     private String field_t;
     static di field_r;
     static int field_o;
     static int field_s;
     static Sprite field_p;
     static so field_y;
-    static String field_u;
+    static String gameoptInviteplayersOrTrychanging1;
     static int field_x;
     private ne field_q;
     static int field_n;
@@ -91,14 +91,14 @@ final class me extends ig {
         field_r = null;
         field_p = null;
         field_y = null;
-        field_w = null;
-        field_v = null;
+        ballsetUsa8Group0 = null;
+        muChatInvisibleAndSilentMode = null;
         if (param0) {
-          field_u = null;
+          gameoptInviteplayersOrTrychanging1 = null;
           return;
         }
         field_r = (di) null;
-        field_u = null;
+        gameoptInviteplayersOrTrychanging1 = null;
     }
 
     me(sl param0, sl param1) {
@@ -171,13 +171,13 @@ final class me extends ig {
             return stackIn_2_0;
           }
           if (this.a(param0, true) == gp.field_d) {
-            stackIn_5_0 = hm.field_d;
+            stackIn_5_0 = Quaternion.createAlertEmailUnavailable;
             return stackIn_5_0;
           }
           if (param1 != 0) {
             me.a(-101, -109);
           }
-          stackIn_9_0 = hb.field_d;
+          stackIn_9_0 = hb.createEmailvalid;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,9 +194,9 @@ final class me extends ig {
     }
 
     static {
-        field_w = "Spots";
-        field_v = "Hide private chat and appear offline to friends";
-        field_u = "Invite more players, or alternatively try changing the '<%0>' setting.";
+        ballsetUsa8Group0 = "Spots";
+        muChatInvisibleAndSilentMode = "Hide private chat and appear offline to friends";
+        gameoptInviteplayersOrTrychanging1 = "Invite more players, or alternatively try changing the '<%0>' setting.";
         field_o = 0;
         field_s = field_o;
     }

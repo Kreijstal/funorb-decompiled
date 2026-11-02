@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf {
+final class CushionSegment {
     static int field_k;
-    int field_d;
-    int field_b;
+    int endKind;
+    int startKind;
     static int[] field_i;
-    int field_j;
-    static String field_e;
-    int field_f;
+    int startY;
+    static String timer;
+    int endX;
     static boolean field_g;
     static Sprite field_h;
-    int field_a;
-    int field_l;
+    int startX;
+    int endY;
     static vh field_c;
 
     final static long d(byte param0) {
         if (param0 < 117) {
-          bf.c((byte) 7);
+          CushionSegment.c((byte) 7);
           return rl.a((byte) -104) - ob.field_v;
         }
         return rl.a((byte) -104) - ob.field_v;
@@ -65,7 +65,7 @@ final class bf {
             uh.field_t[0] = 320 + var6 / uh.field_t[2];
             uh.field_t[1] = var7 / uh.field_t[2] + 240;
             if (uh.field_t[2] > 0) {
-              qk.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
+              PoolUiText.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
               return;
             }
             return;
@@ -74,7 +74,7 @@ final class bf {
           uh.field_t[0] = 320 + var6 / uh.field_t[2];
           uh.field_t[1] = var7 / uh.field_t[2] + 240;
           if (uh.field_t[2] > 0) {
-            qk.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
+            PoolUiText.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
             return;
           }
           return;
@@ -98,7 +98,7 @@ final class bf {
             uh.field_t[0] = 320 + var6Lifetime1 / uh.field_t[2];
             uh.field_t[1] = var7Lifetime1 / uh.field_t[2] + 240;
             if (uh.field_t[2] > 0) {
-              qk.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
+              PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
               return;
             }
             return;
@@ -107,7 +107,7 @@ final class bf {
           uh.field_t[0] = 320 + var6Lifetime1 / uh.field_t[2];
           uh.field_t[1] = var7Lifetime1 / uh.field_t[2] + 240;
           if (uh.field_t[2] > 0) {
-            qk.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
+            PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
             return;
           }
           return;
@@ -129,7 +129,7 @@ final class bf {
           uh.field_t[0] = 320 + var6Lifetime2 / uh.field_t[2];
           uh.field_t[1] = var7Lifetime2 / uh.field_t[2] + 240;
           if (uh.field_t[2] > 0) {
-            qk.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
+            PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
             return;
           }
           return;
@@ -137,53 +137,53 @@ final class bf {
         uh.field_t[0] = 320 + var6Lifetime2 / uh.field_t[2];
         uh.field_t[1] = var7Lifetime2 / uh.field_t[2] + 240;
         if (uh.field_t[2] > 0) {
-          qk.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
+          PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
           return;
         }
     }
 
-    final int a(int param0) {
+    final int centerX(int param0) {
         if (param0 > 82) {
-          return (this.field_f + this.field_a) / 2;
+          return (this.endX + this.startX) / 2;
         }
-        this.a((byte) -110);
-        return (this.field_f + this.field_a) / 2;
+        this.centerY((byte) -110);
+        return (this.endX + this.startX) / 2;
     }
 
     public static void c(byte param0) {
         if (param0 >= 28) {
-          field_e = null;
+          timer = null;
           field_c = null;
           field_i = null;
           field_h = null;
           return;
         }
         field_k = -55;
-        field_e = null;
+        timer = null;
         field_c = null;
         field_i = null;
         field_h = null;
     }
 
-    bf(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_l = param3;
-        this.field_f = param2;
-        this.field_a = param0;
-        this.field_b = param4;
-        this.field_j = param1;
-        this.field_d = param5;
+    CushionSegment(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.endY = param3;
+        this.endX = param2;
+        this.startX = param0;
+        this.startKind = param4;
+        this.startY = param1;
+        this.endKind = param5;
     }
 
-    final int a(byte param0) {
+    final int centerY(byte param0) {
         if (param0 == -127) {
-          return (this.field_l + this.field_j) / 2;
+          return (this.endY + this.startY) / 2;
         }
-        this.field_j = 107;
-        return (this.field_l + this.field_j) / 2;
+        this.startY = 107;
+        return (this.endY + this.startY) / 2;
     }
 
     static {
-        field_e = "Timer";
+        timer = "Timer";
         field_i = new int[12];
     }
 }

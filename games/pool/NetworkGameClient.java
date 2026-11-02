@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ep extends GameApplet {
+abstract class NetworkGameClient extends GameApplet {
     private int field_q;
     static IntrusiveDeque field_A;
     private int field_E;
     static di field_F;
-    static String field_v;
+    static String thisisrunescapeclanNotowner;
     private int field_B;
-    static String field_G;
+    static String tutorialTitleNineBall;
     String field_t;
     private long field_o;
     private int field_w;
@@ -19,9 +19,9 @@ abstract class ep extends GameApplet {
     static boolean field_z;
     private boolean field_C;
     private int field_D;
-    static String field_p;
+    static String reportXForAbuse;
     static int[] field_H;
-    static String field_y;
+    static String loginCreateaccount;
 
     private final void c(int param0) {
         int var2 = -25 / ((param0 - 25) / 53);
@@ -148,7 +148,7 @@ abstract class ep extends GameApplet {
           if (var4 == 1) {
             var5_int = kb.a(9539, lg.c(5), eh.c(8388));
             if (-1 != var5_int) {
-              sq.a(bi.field_b, false, var5_int, ke.field_g);
+              GameRules.a(bi.field_b, false, var5_int, ke.field_g);
               bi.field_b = null;
               ke.field_g = null;
             }
@@ -175,10 +175,10 @@ abstract class ep extends GameApplet {
               var5_intLifetime2 = np.a(false, sa.a(false), false, this.field_x, this.field_w, kg.c((byte) 54));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
-                  hf.field_e = hm.field_a;
+                  hf.field_e = Quaternion.field_a;
                   kh.f((byte) 121);
                   gk.field_kb = false;
-                  fk.field_ab = 10;
+                  PlasmaTableScene.field_ab = 10;
                 } else {
                   re.a(true, ke.field_g, var5_intLifetime2);
                   ke.field_g = null;
@@ -189,10 +189,10 @@ abstract class ep extends GameApplet {
             }
           }
           if (4 == var4) {
-            if (bf.field_g) {
+            if (CushionSegment.field_g) {
               wb.a(false, hk.d(76));
             } else {
-              fk.field_ab = 10;
+              PlasmaTableScene.field_ab = 10;
               gk.field_kb = true;
             }
           }
@@ -200,8 +200,8 @@ abstract class ep extends GameApplet {
             tk.a(-1, hk.d(79));
           }
           if (var4 == 6 &&
-            mf.field_o) {
-            fk.field_ab = 10;
+            ClassicBallSkin.field_o) {
+            PlasmaTableScene.field_ab = 10;
           }
           if (var4 == 7) {
             nl.a((byte) 112, hk.d(99));
@@ -250,7 +250,7 @@ abstract class ep extends GameApplet {
             }
           }
           if (var4 == 15) {
-            fk.field_ab = 10;
+            PlasmaTableScene.field_ab = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -268,15 +268,15 @@ abstract class ep extends GameApplet {
 
     public static void a(boolean param0) {
         if (!param0) {
-          ep.a(false);
+          NetworkGameClient.a(false);
         }
-        field_p = null;
+        reportXForAbuse = null;
         field_H = null;
-        field_v = null;
+        thisisrunescapeclanNotowner = null;
         field_F = null;
-        field_y = null;
+        loginCreateaccount = null;
         field_A = null;
-        field_G = null;
+        tutorialTitleNineBall = null;
         field_s = null;
     }
 
@@ -328,7 +328,7 @@ abstract class ep extends GameApplet {
                       this.d(70);
                       break regionExit1;
                     case 18:
-                      ul.i(3);
+                      HalloweenBallSkin.i(3);
                       break regionExit1;
                     default:
                       tc.a((Throwable) null, "MGS1: " + t.a(127), param0 - 23555);
@@ -348,7 +348,7 @@ abstract class ep extends GameApplet {
                 this.h(6);
                 break;
               case 5:
-                nk.a(param0 - 14874);
+                TranslatedUiText.a(param0 - 14874);
                 break;
               case 3:
                 uo.f(-104);
@@ -378,7 +378,7 @@ abstract class ep extends GameApplet {
         this.setBackground(java.awt.Color.black);
         gj.field_S = this.field_E;
         th.a((byte) -94, gj.field_S);
-        vp.a(this.field_u, this.field_D, (byte) 86, this.field_r, gj.field_S, this.field_B, param5, this.field_t, lg.field_s, 5000, this.field_q, 5000, param6, this.field_o);
+        TimeTrialRules.a(this.field_u, this.field_D, (byte) 86, this.field_r, gj.field_S, this.field_B, param5, this.field_t, lg.field_s, 5000, this.field_q, 5000, param6, this.field_o);
         je.a(lg.field_s, param6, this.field_D, this.field_B, this.field_t, (byte) -96, this.field_u, gj.field_S, this.field_q);
         fl.a(true);
         ClientException.field_a = nn.b(96);
@@ -386,7 +386,7 @@ abstract class ep extends GameApplet {
         jd.field_d = param2;
         mk.field_c = param0;
         pp.field_a = param7;
-        cj.field_eb = param1;
+        TikiTableScene.field_eb = param1;
         ie.field_g = param3;
         this.i((byte) -81);
         ao.c(false);
@@ -509,7 +509,7 @@ abstract class ep extends GameApplet {
           }
           if (param0 != -73) {
             var5 = (PoolMatchController) null;
-            ep.a((byte) -7, (PoolMatchController) null);
+            NetworkGameClient.a((byte) -7, (PoolMatchController) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -552,7 +552,7 @@ abstract class ep extends GameApplet {
             if (!u.a(77)) {
               un.b(121);
             } else {
-              if (fk.field_ab != 0) {
+              if (PlasmaTableScene.field_ab != 0) {
                 ln.a(0, wp.field_d);
               } else {
                 discarded$43 = this.a(false, false, -124);
@@ -603,13 +603,13 @@ abstract class ep extends GameApplet {
           return -1;
         }
         if (var2 == 0) {
-          if (fk.field_ab == 11 &&
+          if (PlasmaTableScene.field_ab == 11 &&
             0 == sk.field_a) {
             kh.f((byte) -50);
           }
         } else {
           if (1 == var2) {
-            if (fk.field_ab == 11 &&
+            if (PlasmaTableScene.field_ab == 11 &&
               0 == sk.field_a) {
               kh.f((byte) -50);
             }
@@ -646,18 +646,18 @@ abstract class ep extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = Pool.field_O;
-        if (fk.field_gb != null) {
+        if (PlasmaTableScene.field_gb != null) {
           if (ne.field_u == null) {
             var6 = hg.a(false);
             var4 = var6.getSize();
-            fk.field_gb.a(var4.width, 51, var4.height);
+            PlasmaTableScene.field_gb.a(var4.width, 51, var4.height);
           }
-          fk.field_gb.a(true);
+          PlasmaTableScene.field_gb.a(true);
         }
         id.a(127);
         bo.a((byte) 123);
         if (!ue.a((byte) -124) &&
-          fk.field_ab != 11) {
+          PlasmaTableScene.field_ab != 11) {
           t.b(-11);
         }
         if (null != ClientException.field_a) {
@@ -671,7 +671,7 @@ abstract class ep extends GameApplet {
             this.field_C = false;
             dn.c(-80);
             de.c(param0 + 15);
-            re.a(true, IterableNodeHashTable.field_l, 2);
+            re.a(true, IterableNodeHashTable.idlemessage20min, 2);
             qr.c(640);
             DualLinkNode.field_v = true;
             ia.field_k = 15000L + rl.a((byte) -101);
@@ -687,7 +687,7 @@ abstract class ep extends GameApplet {
           sk.field_a = dp.b(-69);
           if (var3Lifetime1 != 0 &&
             sk.field_a == 0 &&
-            11 == fk.field_ab &&
+            11 == PlasmaTableScene.field_ab &&
             !pk.b((byte) 109)) {
             kh.f((byte) 124);
           }
@@ -699,24 +699,24 @@ abstract class ep extends GameApplet {
         if (sk.field_a != -1 &&
           sk.field_a != 0) {
           if (10 <= sf.field_y) {
-            if (fk.field_ab >= 10) {
+            if (PlasmaTableScene.field_ab >= 10) {
               de.c(11);
               if (3 != sk.field_a) {
                 if (sk.field_a != 4) {
                   if (sk.field_a == 2) {
-                    re.a(true, hh.field_b, 256);
+                    re.a(true, hh.errorJs5connectFull, 256);
                   } else {
                     if (sk.field_a == 5) {
-                      re.a(true, dk.field_h, 5);
+                      re.a(true, dk.loginGameupdated, 5);
                     } else {
-                      re.a(true, bc.field_e, 256);
+                      re.a(true, bc.errorJs5connect, 256);
                     }
                   }
                 } else {
-                  re.a(true, cm.field_I, 256);
+                  re.a(true, cm.errorJs5io, 256);
                 }
               } else {
-                re.a(true, br.field_L, 256);
+                re.a(true, br.errorJs5crc, 256);
               }
               DualLinkNode.field_v = true;
             }
@@ -764,9 +764,9 @@ abstract class ep extends GameApplet {
             wh.field_a = fh.a(jd.field_d, (byte) 103);
           }
           uj.field_d = oq.a(false, -4, 1, pp.field_a, true);
-          vf.field_nb = oq.a(false, -49, 1, ie.field_g, true);
-          DualLinkNode.field_r = oq.a(false, -40, 1, cj.field_eb, true);
-          qp.field_Zb = vf.field_nb;
+          PolarTableScene.field_nb = oq.a(false, -49, 1, ie.field_g, true);
+          DualLinkNode.field_r = oq.a(false, -40, 1, TikiTableScene.field_eb, true);
+          qp.field_Zb = PolarTableScene.field_nb;
           sf.field_y = 2;
           sd.field_R = uj.field_d;
         }
@@ -777,7 +777,7 @@ abstract class ep extends GameApplet {
               wh.field_a = null;
             } else {
               if (wh.field_a.a("", param0 ^ -4)) {
-                nk.a(wh.field_a, -21013);
+                TranslatedUiText.a(wh.field_a, -21013);
                 wh.field_a = null;
                 fm.a(0);
               }
@@ -788,13 +788,13 @@ abstract class ep extends GameApplet {
           }
         }
         if (sf.field_y == 3 &&
-          k.a(uj.field_d, vf.field_nb, DualLinkNode.field_r, true) &&
+          k.a(uj.field_d, PolarTableScene.field_nb, DualLinkNode.field_r, true) &&
           ab.a(DualLinkNode.field_r, true)) {
           dn.d(8192);
           ia.a((byte) 98);
-          am.field_n = o.field_A;
-          mf.field_o = false;
-          PoolMatchController.a(param0 ^ 11934, bf.field_g, uj.field_d, DualLinkNode.field_r, vf.field_nb);
+          am.field_n = o.loading;
+          ClassicBallSkin.field_o = false;
+          PoolMatchController.a(param0 ^ 11934, CushionSegment.field_g, uj.field_d, DualLinkNode.field_r, PolarTableScene.field_nb);
           if (pd.field_g ||
             null != b.field_J) {
             stackIn_102_0 = -122;
@@ -803,15 +803,15 @@ abstract class ep extends GameApplet {
             tg.a(stackIn_102_0, stackIn_103_1, stackIn_106_2, b.field_J);
           }
           if (sd.field_T) {
-            al.m(4);
+            PoolGameModel.m(4);
           }
           if (null == oh.field_c) {
             oh.field_c = BufferedSocket.b(105);
-            u.field_a = sq.g(108);
+            u.field_a = GameRules.g(108);
           }
           wj.a(DualLinkNode.field_r, u.field_a, false, oh.field_c);
           DualLinkNode.field_r = null;
-          vf.field_nb = null;
+          PolarTableScene.field_nb = null;
           uj.field_d = null;
           pr.a(-23989, (java.applet.Applet) (this));
           fm.a(0);
@@ -910,7 +910,7 @@ abstract class ep extends GameApplet {
         try {
           if (param0 < 36) {
             var6 = (PoolMatchController) null;
-            ep.a((byte) -107, (PoolMatchController) null);
+            NetworkGameClient.a((byte) -107, (PoolMatchController) null);
           }
           var4_int = param1.b(param3, -1);
           var5 = param1.a(var4_int, 0, param2);
@@ -942,7 +942,7 @@ abstract class ep extends GameApplet {
         }
     }
 
-    protected ep() {
+    protected NetworkGameClient() {
     }
 
     final int k(byte param0) {
@@ -962,13 +962,13 @@ abstract class ep extends GameApplet {
             db.a((byte) 58, 4);
           }
           if (fe.field_H[4]) {
-            af.a(5, true);
+            EightBallRules.a(5, true);
           }
           if (fe.field_H[5]) {
             um.a(10, 6);
           }
           if (fe.field_H[6]) {
-            nk.a(7, (byte) -91);
+            TranslatedUiText.a(7, (byte) -91);
           }
           if (fe.field_H[8]) {
             rq.c(946);
@@ -978,11 +978,11 @@ abstract class ep extends GameApplet {
     }
 
     static {
-        field_G = "Nine-ball Tutorial";
-        field_v = "This is <%0>'s RuneScape clan if they have one.";
+        tutorialTitleNineBall = "Nine-ball Tutorial";
+        thisisrunescapeclanNotowner = "This is <%0>'s RuneScape clan if they have one.";
         field_z = false;
-        field_p = "Report <%0> for abuse";
+        reportXForAbuse = "Report <%0> for abuse";
         field_s = new Sprite(360, 240);
-        field_y = "Log in / Create account";
+        loginCreateaccount = "Log in / Create account";
     }
 }

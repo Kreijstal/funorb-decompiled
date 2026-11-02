@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nd implements fp {
-    static String field_g;
+    static String youhavelost;
     private int field_o;
     private int field_n;
     private static int field_e;
@@ -15,7 +15,7 @@ final class nd implements fp {
     static int field_m;
     static int field_l;
     static PlatformTaskDispatcher field_a;
-    static String field_b;
+    static String joinWithdrawRequestXsGame;
     private BitmapFont field_h;
     static vh field_c;
 
@@ -64,8 +64,8 @@ final class nd implements fp {
     public static void a(byte param0) {
         field_c = null;
         int var1 = 122 % ((-31 - param0) / 53);
-        field_g = null;
-        field_b = null;
+        youhavelost = null;
+        joinWithdrawRequestXsGame = null;
         field_i = null;
         field_a = null;
     }
@@ -250,9 +250,9 @@ final class nd implements fp {
 
     static {
         field_e = 1;
-        field_g = "You have lost!";
+        youhavelost = "You have lost!";
         field_j = 1 << field_e;
-        field_b = "Withdraw request to join <%0>'s game";
+        joinWithdrawRequestXsGame = "Withdraw request to join <%0>'s game";
         field_i = new IntrusiveDeque();
     }
 }

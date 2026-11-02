@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn extends vh {
-    static String field_Mb;
-    static String field_Lb;
-    static String field_Ob;
-    static String field_Nb;
-    static String field_Qb;
+    static String gameoptPlayersdontqualify;
+    static String addXToFriends;
+    static String tutorialCameraRotate;
+    static String musicColon;
+    static String cannotAddYourself;
     private vh field_Pb;
 
     final static boolean f(int param0) {
@@ -20,13 +20,13 @@ final class fn extends vh {
             fn.f(89);
           }
           o.field_y = o.field_y + 1;
-          if (pq.field_B.length <= o.field_y) {
+          if (Ball.field_B.length <= o.field_y) {
             return false;
           }
           for (var1_int = 0; pc.field_a.length > var1_int; var1_int++) {
-            pq.field_B[o.field_y][var1_int].a(pc.field_a[var1_int], (byte) -12);
+            Ball.field_B[o.field_y][var1_int].copyFrom(pc.field_a[var1_int], (byte) -12);
           }
-          pc.field_a = pq.field_B[o.field_y];
+          pc.field_a = Ball.field_B[o.field_y];
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,14 +109,14 @@ final class fn extends vh {
         int var2_intLifetime1;
         var3 = Pool.field_O;
         try {
-          var2_int = mc.field_g;
+          var2_int = FreePlayRules.field_g;
           if (param0.field_p == 2) {
             if (param0.field_g) {
-              var2_intLifetime1 = mc.field_g;
+              var2_intLifetime1 = FreePlayRules.field_g;
             } else {
               if (param0.field_m == 0 &&
                 param0.field_e == 0) {
-                var2_intLifetime1 = pq.field_F[param0.field_p];
+                var2_intLifetime1 = Ball.field_F[param0.field_p];
               } else {
                 var2_intLifetime1 = ng.field_A[param0.field_p];
               }
@@ -124,7 +124,7 @@ final class fn extends vh {
           } else {
             if (param0.field_p != 4) {
               if (~ve.field_m == ~param0.field_b) {
-                var2_intLifetime1 = pq.field_F[param0.field_p];
+                var2_intLifetime1 = Ball.field_F[param0.field_p];
               } else {
                 var2_intLifetime1 = ng.field_A[param0.field_p];
               }
@@ -159,24 +159,24 @@ final class fn extends vh {
         if (param0 == 5938) {
           return;
         }
-        field_Nb = (String) null;
+        musicColon = (String) null;
     }
 
     public static void g(int param0) {
-        field_Nb = null;
+        musicColon = null;
         if (param0 <= 12) {
           String var2 = (String) null;
           fn.a((String) null, -57, (String) null, 61, false, (String) null, 44);
-          field_Mb = null;
-          field_Qb = null;
-          field_Ob = null;
-          field_Lb = null;
+          gameoptPlayersdontqualify = null;
+          cannotAddYourself = null;
+          tutorialCameraRotate = null;
+          addXToFriends = null;
           return;
         }
-        field_Mb = null;
-        field_Qb = null;
-        field_Ob = null;
-        field_Lb = null;
+        gameoptPlayersdontqualify = null;
+        cannotAddYourself = null;
+        tutorialCameraRotate = null;
+        addXToFriends = null;
     }
 
     final static int a(String param0, int param1, String param2, int param3, boolean param4, String param5, int param6) {
@@ -194,7 +194,7 @@ final class fn extends vh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 50) {
-            field_Lb = (String) null;
+            addXToFriends = (String) null;
           }
           var7 = new ke(param2);
           var8 = new ke(param0);
@@ -253,18 +253,18 @@ final class fn extends vh {
         vh var16 = null;
         int var10Lifetime1;
         try {
-          var16 = new vh(0L, param1, w.field_m.toUpperCase());
+          var16 = new vh(0L, param1, w.quickchatHelp.toUpperCase());
           var16.field_Fb = 1;
           this.field_Pb = new vh(0L, param2);
           var8 = new vh(0L, param3);
-          var9 = new vh(0L, param3, jd.field_j);
+          var9 = new vh(0L, param3, jd.quickchatHelpTitle);
           var9.field_Fb = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; bj.field_o.length > var12; var12++) {
-            var13 = new vh(0L, param3, ck.field_T[var12]);
-            var14 = new vh(0L, param3, bj.field_o[var12]);
-            var15 = param3.field_I.b(bj.field_o[var12]);
+          for (var12 = 0; bj.quickchatShortcutHelp.length > var12; var12++) {
+            var13 = new vh(0L, param3, ck.quickchatShortcutKeys[var12]);
+            var14 = new vh(0L, param3, bj.quickchatShortcutHelp[var12]);
+            var15 = param3.field_I.b(bj.quickchatShortcutHelp[var12]);
             var13.b(var10, 2147483647, 20, 65, 15);
             if (var11 < var15) {
               var11 = var15;
@@ -333,10 +333,10 @@ final class fn extends vh {
     }
 
     static {
-        field_Mb = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
-        field_Lb = "Add <%0> to friend list";
-        field_Ob = "To <u=ffffff>rotate</u> around the table: <col=99ff99>Hold</col> the <img=2> <col=99ff99>right mouse button</col> (or <img=9>+<img=0> left mouse button) and move the mouse. Try it now to move on.";
-        field_Nb = "Music: ";
-        field_Qb = "You cannot add yourself!";
+        gameoptPlayersdontqualify = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
+        addXToFriends = "Add <%0> to friend list";
+        tutorialCameraRotate = "To <u=ffffff>rotate</u> around the table: <col=99ff99>Hold</col> the <img=2> <col=99ff99>right mouse button</col> (or <img=9>+<img=0> left mouse button) and move the mouse. Try it now to move on.";
+        musicColon = "Music: ";
+        cannotAddYourself = "You cannot add yourself!";
     }
 }

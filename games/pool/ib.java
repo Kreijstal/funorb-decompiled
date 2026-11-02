@@ -8,7 +8,7 @@ final class ib extends PcmStream {
     static int field_r;
     private vk field_w;
     static di field_u;
-    static String[] field_q;
+    static String[] mustlogin2;
     ai field_p;
 
     final PcmStream b() {
@@ -240,13 +240,13 @@ final class ib extends PcmStream {
     public static void d(int param0) {
         field_s = null;
         if (param0 != -1) {
-          field_q = (String[]) null;
+          mustlogin2 = (String[]) null;
           field_u = null;
-          field_q = null;
+          mustlogin2 = null;
           return;
         }
         field_u = null;
-        field_q = null;
+        mustlogin2 = null;
     }
 
     final static int[] a(double[] param0, int param1) {
@@ -317,6 +317,6 @@ final class ib extends PcmStream {
     }
 
     static {
-        field_q = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
+        mustlogin2 = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
     }
 }

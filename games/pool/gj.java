@@ -70,7 +70,7 @@ final class gj extends ei {
             return false;
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
-            if (!ul.a(param1.charAt(var2_int), (byte) 124)) {
+            if (!HalloweenBallSkin.a(param1.charAt(var2_int), (byte) 124)) {
               return false;
             }
           }

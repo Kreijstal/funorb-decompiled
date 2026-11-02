@@ -40,11 +40,11 @@ final class ja {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (100 == param0 &&
-          to.field_p > 0) {
-          fieldTemp$0 = to.field_p - 1;
-          to.field_p = to.field_p - 1;
+          PolarBallSkin.field_p > 0) {
+          fieldTemp$0 = PolarBallSkin.field_p - 1;
+          PolarBallSkin.field_p = PolarBallSkin.field_p - 1;
           var2_ref_byte__ = PoolMatchController.field_y[fieldTemp$0];
-          PoolMatchController.field_y[to.field_p] = null;
+          PoolMatchController.field_y[PolarBallSkin.field_p] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
@@ -66,15 +66,15 @@ final class ja {
         if (param1 != -1) {
           field_c = 109;
         }
-        if (null != nk.field_l) {
+        if (null != TranslatedUiText.field_l) {
           for (var2 = 0; var2 < s.field_f.length; var2++) {
             if (s.field_f[var2] == param0 &&
               ho.field_l[var2] > 0) {
               dupTemp$3 = ho.field_l[var2] - 1;
-              arrayValue$4 = nk.field_l[var2];
+              arrayValue$4 = TranslatedUiText.field_l[var2];
               ho.field_l[var2] = dupTemp$3;
               var3 = arrayValue$4[dupTemp$3];
-              nk.field_l[var2][ho.field_l[var2]] = null;
+              TranslatedUiText.field_l[var2][ho.field_l[var2]] = null;
               return var3;
             }
           }

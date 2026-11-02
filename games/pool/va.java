@@ -5,9 +5,9 @@ final class va extends fe {
     static int[] field_T;
     private tc field_S;
     static int[] field_N;
-    static String field_O;
+    static String justplay;
     static int field_V;
-    static String field_P;
+    static String hsFriendTip;
     private int field_U;
     static int field_X;
     int field_R;
@@ -86,10 +86,10 @@ final class va extends fe {
     }
 
     public static void a(int param0) {
-        field_P = null;
+        hsFriendTip = null;
         field_W = null;
         field_N = null;
-        field_O = null;
+        justplay = null;
         if (param0 == 2) {
           field_T = null;
           return;
@@ -126,32 +126,32 @@ final class va extends fe {
         try {
           var7 = (CharSequence) ((Object) param0);
           if (!gj.a(-25908, var7)) {
-            stackIn_2_0 = p.field_g;
+            stackIn_2_0 = p.invalidName;
             return stackIn_2_0;
           }
           if (2 != th.field_a) {
-            stackIn_6_0 = ka.field_n;
+            stackIn_6_0 = ka.unableToAddFriend;
             return stackIn_6_0;
           }
           if (or.a((byte) 3, param0)) {
-            stackIn_10_0 = fn.field_Qb;
+            stackIn_10_0 = fn.cannotAddYourself;
             return stackIn_10_0;
           }
           if (lq.a(param0, -1)) {
-            stackIn_13_0 = nr.a(new String[]{param0}, -1, tl.field_H);
+            stackIn_13_0 = nr.a(new String[]{param0}, -1, tl.friendlistdupe);
             return stackIn_13_0;
           }
           if (nr.field_S >= 100 &&
             mp.field_V <= 0) {
-            stackIn_18_0 = wk.field_V;
+            stackIn_18_0 = wk.friendlistfull;
             return stackIn_18_0;
           }
           if (nr.field_S >= 200) {
-            stackIn_22_0 = wk.field_V;
+            stackIn_22_0 = wk.friendlistfull;
             return stackIn_22_0;
           }
           if (ia.a(param0, 24552)) {
-            stackIn_26_0 = nr.a(new String[]{param0}, -1, jp.field_R);
+            stackIn_26_0 = nr.a(new String[]{param0}, -1, jp.removeignorefirst);
             return stackIn_26_0;
           }
           var6 = ej.field_j;
@@ -251,7 +251,7 @@ final class va extends fe {
     }
 
     static {
-        field_P = "Friends can be added in multiplayer<nbsp>games";
-        field_O = "Just play";
+        hsFriendTip = "Friends can be added in multiplayer<nbsp>games";
+        justplay = "Just play";
     }
 }

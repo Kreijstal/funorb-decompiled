@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm {
-    static String field_o;
+    static String loadingMusic;
     double field_a;
     static vh field_g;
     double field_f;
     double field_d;
     static int field_i;
-    static String field_l;
-    static String field_e;
+    static String muChatGame;
+    static String ratingNoratings;
     double field_m;
-    static String[] field_n;
+    static String[] ratingModeName;
     static Sprite field_c;
     double field_h;
     static int field_b;
@@ -31,9 +31,9 @@ final class mm {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0[0] = cr.a(4885, this.field_d);
-          param0[1] = cr.a(4885, this.field_a);
-          param0[2] = cr.a(4885, this.field_h);
+          param0[0] = PotEvent.a(4885, this.field_d);
+          param0[1] = PotEvent.a(4885, this.field_a);
+          param0[2] = PotEvent.a(4885, this.field_h);
           var8 = new double[]{-this.field_d + this.field_f, this.field_m - this.field_a, -this.field_h + this.field_k};
           var4 = Math.atan2(Math.sqrt(var8[1] * var8[1] + var8[0] * var8[0]), var8[2]);
           if (!param1) {
@@ -54,15 +54,15 @@ final class mm {
           }
           var16 = n.a(-128, lf.a(2, var8, var9));
           var17 = n.a(-126, lf.a(2, var16, var8));
-          param0[3] = mf.a(16, var16[0]);
-          param0[4] = mf.a(16, var16[1]);
-          param0[5] = mf.a(16, var16[2]);
-          param0[6] = mf.a(16, var17[0]);
-          param0[7] = mf.a(16, var17[1]);
-          param0[8] = mf.a(16, var17[2]);
-          param0[9] = mf.a(16, var8[0]);
-          param0[10] = mf.a(16, var8[1]);
-          param0[11] = mf.a(16, var8[2]);
+          param0[3] = ClassicBallSkin.a(16, var16[0]);
+          param0[4] = ClassicBallSkin.a(16, var16[1]);
+          param0[5] = ClassicBallSkin.a(16, var16[2]);
+          param0[6] = ClassicBallSkin.a(16, var17[0]);
+          param0[7] = ClassicBallSkin.a(16, var17[1]);
+          param0[8] = ClassicBallSkin.a(16, var17[2]);
+          param0[9] = ClassicBallSkin.a(16, var8[0]);
+          param0[10] = ClassicBallSkin.a(16, var8[1]);
+          param0[11] = ClassicBallSkin.a(16, var8[2]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,15 +80,15 @@ final class mm {
 
     public static void c(int param0) {
         field_j = null;
-        field_o = null;
-        field_l = null;
+        loadingMusic = null;
+        muChatGame = null;
         field_c = null;
         field_g = null;
         if (param0 != -13569) {
           field_b = -71;
         }
-        field_n = null;
-        field_e = null;
+        ratingModeName = null;
+        ratingNoratings = null;
     }
 
     final void a(double param0, int param1, double param2) {
@@ -132,7 +132,7 @@ final class mm {
           this.field_a = 0.0;
         }
         if (param0 <= 81) {
-          field_n = (String[]) null;
+          ratingModeName = (String[]) null;
         }
         if (Double.isNaN(this.field_h)) {
           this.field_h = 0.0;
@@ -167,11 +167,11 @@ final class mm {
 
     final void a(PoolMatchController param0, int param1) {
         try {
-          this.field_f = (double)pf.b(126, param0.field_I.field_l[0].field_g);
+          this.field_f = (double)pf.b(126, param0.field_I.balls[0].positionX);
           if (param1 != 1) {
             field_j = (Sprite) null;
           }
-          this.field_m = (double)pf.b(param1 ^ 126, param0.field_I.field_l[0].field_k);
+          this.field_m = (double)pf.b(param1 ^ 126, param0.field_I.balls[0].positionY);
           this.b(3.141592653589793 * (double)param0.field_G.field_h / 1024.0, 3.141592653589793 * (double)(param0.field_G.field_k + 32) / 1024.0, 192.0, -6861);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "mm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -212,7 +212,7 @@ final class mm {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
-            var5 = vl.a(7, var3);
+            var5 = PlasmaBallSkin.a(7, var3);
             if (var5 == null) {
               stackIn_13_0 = jj.a(102, var4);
               return stackIn_13_0;
@@ -240,7 +240,7 @@ final class mm {
         try {
           this.field_h = param1.field_h;
           if (param0 != 144) {
-            field_n = (String[]) null;
+            ratingModeName = (String[]) null;
           }
           this.field_f = param1.field_f;
           this.field_k = param1.field_k;
@@ -556,9 +556,9 @@ final class mm {
     }
 
     static {
-        field_e = "No players";
-        field_l = "Game";
-        field_o = "Loading music";
-        field_n = new String[]{"By rating", "By win percentage"};
+        ratingNoratings = "No players";
+        muChatGame = "Game";
+        loadingMusic = "Loading music";
+        ratingModeName = new String[]{"By rating", "By win percentage"};
     }
 }

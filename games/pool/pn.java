@@ -13,13 +13,13 @@ final class pn {
     String field_n;
     static String[] field_i;
     String field_f;
-    static String field_t;
+    static String ballsetPlasmaGroup0Nocolour;
     long field_b;
     int field_m;
-    static String field_c;
+    static String statusConcluded;
     String field_j;
     static hj field_k;
-    static String field_a;
+    static String loginUsernameTooltip;
     static Sprite field_l;
     static int field_s;
     static int[] field_r;
@@ -28,18 +28,18 @@ final class pn {
         field_k = null;
         field_l = null;
         if (param0 == 0) {
-          field_c = null;
-          field_a = null;
-          field_t = null;
+          statusConcluded = null;
+          loginUsernameTooltip = null;
+          ballsetPlasmaGroup0Nocolour = null;
           field_r = null;
           field_i = null;
           return;
         }
         String var2 = (String) null;
         pn.a((byte) -13, (String) null);
-        field_c = null;
-        field_a = null;
-        field_t = null;
+        statusConcluded = null;
+        loginUsernameTooltip = null;
+        ballsetPlasmaGroup0Nocolour = null;
         field_r = null;
         field_i = null;
     }
@@ -176,10 +176,10 @@ final class pn {
     }
 
     static {
-        field_c = "Concluded";
-        field_t = "Reds";
+        statusConcluded = "Concluded";
+        ballsetPlasmaGroup0Nocolour = "Reds";
         field_k = new hj(15, 0, 1, 0);
-        field_a = "The account name you use to access RuneScape and other Jagex.com games";
+        loginUsernameTooltip = "The account name you use to access RuneScape and other Jagex.com games";
         field_r = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
     }
 }

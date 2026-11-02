@@ -6,10 +6,10 @@ final class of extends vh {
     vh field_Sb;
     db field_Mb;
     static hj field_Tb;
-    static String field_Qb;
+    static String playerX2AreGroupName;
     static wa field_Nb;
     static int field_Pb;
-    static String field_Ub;
+    static String ratedGame;
     static int field_Ob;
     static byte[] field_Lb;
 
@@ -42,8 +42,8 @@ final class of extends vh {
     public static void f(int param0) {
         field_Nb = null;
         field_Tb = null;
-        field_Qb = null;
-        field_Ub = null;
+        playerX2AreGroupName = null;
+        ratedGame = null;
         if (param0 != 0) {
           of.a(65, (byte) -5, -15);
         }
@@ -211,9 +211,9 @@ final class of extends vh {
     }
 
     static {
-        field_Qb = "<%0> and <%1> are <%2>.";
+        playerX2AreGroupName = "<%0> and <%1> are <%2>.";
         field_Tb = new hj(9, 0, 4, 1);
         field_Lb = new byte[]{(byte)2, (byte) 0, (byte) 0, (byte) 0};
-        field_Ub = "Rated game";
+        ratedGame = "Rated game";
     }
 }

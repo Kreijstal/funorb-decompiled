@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class vm {
-    static String field_n;
+    static String gameoptYouneedratedgames;
     private float field_j;
-    static String field_b;
+    static String timerSecs;
     static int field_f;
-    static String field_m;
+    static String createWelcome;
     private float field_a;
-    private hm field_e;
+    private Quaternion field_e;
     private float field_i;
     private float field_o;
     private int[][] field_k;
@@ -20,7 +20,7 @@ final class vm {
     private so field_h;
     static String field_g;
 
-    final void a(vf param0, int param1) {
+    final void a(PolarTableScene param0, int param1) {
         int var5 = 0;
         float stackIn_20_1 = 0.0f;
         float stackIn_21_2 = 0.0f;
@@ -33,7 +33,7 @@ final class vm {
         float var3_float = 0.0f;
         RuntimeException var3 = null;
         int var4 = 0;
-        hm var4_ref_hm = null;
+        Quaternion var4_ref_hm = null;
         int var6 = 0;
         int var7 = 0;
         int var4Lifetime1;
@@ -52,10 +52,10 @@ final class vm {
               }
             }
             if (this.field_c != 0.0f) {
-              var4_ref_hm = new hm();
-              var4_ref_hm.a(66, 0, 0, 1, (int)this.field_c);
-              this.field_e.a(param1 ^ 9, var4_ref_hm);
-              this.field_e.a(ek.field_b, -96);
+              var4_ref_hm = new Quaternion();
+              var4_ref_hm.setFromAxisAngle(66, 0, 0, 1, (int)this.field_c);
+              this.field_e.multiplyBy(param1 ^ 9, var4_ref_hm);
+              this.field_e.toRotationMatrix(ek.field_b, -96);
               for (var5 = 0; var5 < this.field_h.field_b.length; var5++) {
                 this.field_h.field_b[var5].field_d[3] = ek.field_b[3];
                 this.field_h.field_b[var5].field_d[4] = ek.field_b[4];
@@ -204,20 +204,20 @@ final class vm {
 
     public static void a(boolean param0) {
         field_g = null;
-        field_b = null;
+        timerSecs = null;
         field_d = null;
-        field_n = null;
+        gameoptYouneedratedgames = null;
         if (param0) {
           field_g = (String) null;
         }
-        field_m = null;
+        createWelcome = null;
     }
 
     vm(so param0) {
         int var2_int = 0;
         try {
           this.field_h = param0;
-          this.field_e = new hm();
+          this.field_e = new Quaternion();
           this.field_k = new int[param0.field_b.length][];
           for (var2_int = 0; param0.field_b.length > var2_int; var2_int++) {
             this.field_k[var2_int] = new int[]{param0.field_b[var2_int].field_d[0], param0.field_b[var2_int].field_d[1], param0.field_b[var2_int].field_d[2]};
@@ -229,10 +229,10 @@ final class vm {
     }
 
     static {
-        field_b = "<%0> secs";
-        field_n = "You must play <%1> more rated games before playing with the current options.";
+        timerSecs = "<%0> secs";
+        gameoptYouneedratedgames = "You must play <%1> more rated games before playing with the current options.";
         field_f = 0;
-        field_m = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
+        createWelcome = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_g = null;
     }
 }

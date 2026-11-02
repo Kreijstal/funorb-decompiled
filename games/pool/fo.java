@@ -4,7 +4,7 @@
 final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String[] field_a;
     static int[][][] field_c;
-    static String field_d;
+    static String findOpponentSingular;
     static int[] field_e;
     static int[] field_b;
 
@@ -85,14 +85,14 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
               he.field_c = false;
               var3_int = 1;
             }
-            vc.a(var3_int != 0, 30, df.a((byte) 84), cm.field_H, tj.i(19535));
+            ModelTableScene.a(var3_int != 0, 30, df.a((byte) 84), cm.field_H, tj.i(19535));
           } else {
             if (u.a(108)) {
-              if (fk.field_ab == 0) {
+              if (PlasmaTableScene.field_ab == 0) {
                 di.a(param1, (byte) 109, false);
                 fe.a(0, 0, (byte) -65, param2);
               } else {
-                vc.a(true, param2);
+                ModelTableScene.a(true, param2);
               }
             } else {
               SoftwareRasterizer.clear();
@@ -101,7 +101,7 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           if (param0 != -55) {
-            field_d = (String) null;
+            findOpponentSingular = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
         if (param0 != -1) {
           return;
         }
-        field_d = null;
+        findOpponentSingular = null;
         field_b = null;
         field_c = (int[][][]) null;
         field_e = null;
@@ -229,7 +229,7 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var1 = 0;
         int var2 = 0;
         int var0;
-        field_d = "Find opponent";
+        findOpponentSingular = "Find opponent";
         field_e = new int[256];
         field_b = new int[128];
         for (var1 = 0; var1 < 256; var1++) {

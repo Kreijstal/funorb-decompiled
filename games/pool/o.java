@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class o extends DualLinkNode {
-    static String field_D;
-    static String field_z;
+    static String youLostALife;
+    static String rule02;
     static Sprite field_C;
     static wh field_x;
     static int field_y;
-    static String field_A;
-    static String field_B;
-    static String field_w;
+    static String loading;
+    static String playerYouFirstListAreOfferingRematch;
+    static String toserverlist;
 
     o() {
     }
@@ -100,25 +100,25 @@ class o extends DualLinkNode {
     }
 
     public static void e(int param0) {
-        field_B = null;
-        field_D = null;
+        playerYouFirstListAreOfferingRematch = null;
+        youLostALife = null;
         if (param0 > 89) {
           field_C = null;
           field_x = null;
-          field_z = null;
-          field_A = null;
-          field_w = null;
+          rule02 = null;
+          loading = null;
+          toserverlist = null;
           return;
         }
     }
 
     final static void c(byte param0) {
         if (gk.field_kb) {
-          mf.field_o = true;
+          ClassicBallSkin.field_o = true;
           ii.a(true, 0);
-          fk.field_ab = 0;
+          PlasmaTableScene.field_ab = 0;
           if (param0 <= 18) {
-            field_z = (String) null;
+            rule02 = (String) null;
           }
           return;
         }
@@ -262,11 +262,11 @@ class o extends DualLinkNode {
     }
 
     static {
-        field_z = "Staff impersonation";
-        field_D = "You lost 1 life!";
+        rule02 = "Staff impersonation";
+        youLostALife = "You lost 1 life!";
         field_y = 0;
-        field_B = "You<%0> are all offering a rematch.";
-        field_w = "To server list";
-        field_A = "Loading...";
+        playerYouFirstListAreOfferingRematch = "You<%0> are all offering a rematch.";
+        toserverlist = "To server list";
+        loading = "Loading...";
     }
 }

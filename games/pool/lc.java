@@ -7,11 +7,11 @@ final class lc extends fe {
     private int field_S;
     static Random field_P;
     private ip field_N;
-    static String field_Q;
+    static String goback;
     static vh field_U;
     static int field_V;
-    static String field_T;
-    static String field_R;
+    static String fsUnavailableTrySignedApplet;
+    static String unpackingModels;
     static BitmapFont field_O;
 
     final static void a(boolean param0, String param1, int param2, int param3, long param4, int param5) {
@@ -43,12 +43,12 @@ final class lc extends fe {
 
     public static void g(byte param0) {
         field_P = null;
-        field_Q = null;
-        field_T = null;
+        goback = null;
+        fsUnavailableTrySignedApplet = null;
         int var1 = -32 / ((29 - param0) / 48);
         field_U = null;
         field_O = null;
-        field_R = null;
+        unpackingModels = null;
     }
 
     lc(ip param0) {
@@ -208,8 +208,8 @@ final class lc extends fe {
     static {
         field_P = new Random();
         field_V = 20;
-        field_Q = "Go Back";
-        field_T = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
-        field_R = "Unpacking models";
+        goback = "Go Back";
+        fsUnavailableTrySignedApplet = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
+        unpackingModels = "Unpacking models";
     }
 }

@@ -5,17 +5,17 @@ final class vd implements fp {
     static int field_c;
     static int field_g;
     private int field_e;
-    static String[] field_l;
+    static String[] textBenefits;
     private int field_b;
     private BitmapFont field_h;
     private int field_i;
     private int field_a;
     private int field_j;
     private int field_k;
-    static String field_m;
+    static String ticketingOneunread;
     static int field_n;
     private int field_d;
-    static String field_f;
+    static String messageGame;
 
     final static void a(byte param0, int param1) {
         ec.field_i = param1 >> 4 & 3;
@@ -85,14 +85,14 @@ final class vd implements fp {
         if (param1 > 65) {
           return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
         }
-        field_f = (String) null;
+        messageGame = (String) null;
         return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
     }
 
     public static void a(int param0) {
-        field_l = null;
-        field_f = null;
-        field_m = null;
+        textBenefits = null;
+        messageGame = null;
+        ticketingOneunread = null;
         if (param0 != -1) {
           field_g = 72;
         }
@@ -114,9 +114,9 @@ final class vd implements fp {
     }
 
     static {
-        field_l = new String[]{"Three more tables: cool polar pool...", "...an ancient table in the mountains...", "...or space out in our orbital shuttle."};
+        textBenefits = new String[]{"Three more tables: cool polar pool...", "...an ancient table in the mountains...", "...or space out in our orbital shuttle."};
         field_g = -1;
-        field_m = "You have 1 unread message!";
-        field_f = "Message game";
+        ticketingOneunread = "You have 1 unread message!";
+        messageGame = "Message game";
     }
 }

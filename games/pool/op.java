@@ -4,11 +4,11 @@
 abstract class op {
     static int field_h;
     static int[][] field_a;
-    static String field_g;
+    static String askingToJoinXsGame;
     static java.awt.Frame field_e;
     static int[] field_d;
     vj[] field_b;
-    static String field_c;
+    static String muChatGameHide;
     static int field_f;
 
     final int a(int param0) {
@@ -369,18 +369,18 @@ abstract class op {
 
     public static void b(int param0) {
         field_d = null;
-        field_c = null;
+        muChatGameHide = null;
         if (param0 != 0) {
-          field_c = (String) null;
+          muChatGameHide = (String) null;
         }
-        field_g = null;
+        askingToJoinXsGame = null;
         field_a = (int[][]) null;
         field_e = null;
     }
 
     static {
-        field_c = "Hide game chat";
-        field_g = "Asking to join <%0>'s game...";
+        muChatGameHide = "Hide game chat";
+        askingToJoinXsGame = "Asking to join <%0>'s game...";
         field_h = 0;
         field_d = new int[]{3456, 3456};
     }

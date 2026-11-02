@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class vl extends tm {
+final class PlasmaBallSkin extends BallSkin {
     static boolean[] field_p;
-    static String field_o;
-    static String field_r;
+    static String muRequestWithdrawn;
+    static String playerColon;
     static volatile boolean field_q;
     static kn field_m;
     private static int[][] field_n;
     static IndexedSprite[] field_l;
-    static String field_s;
+    static String muGamelistAllGames;
 
     final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, BitmapFont param7, int param8, int param9, Sprite[] param10, int param11, int param12, int param13, int param14) {
         RuntimeException runtimeException = null;
@@ -76,7 +76,7 @@ final class vl extends tm {
         try {
           sa.field_q = pf.a("", (byte) 101, "grad_ball_purple", param1).field_D;
           om.field_r = pf.a("", (byte) 113, "grad_ball_blue", param1).field_D;
-          cr.field_p = pf.a("", (byte) 126, "grad_ball_red", param1).field_D;
+          PotEvent.field_p = pf.a("", (byte) 126, "grad_ball_red", param1).field_D;
           ae.field_e = pf.a("", (byte) 86, "grad_ball_white", param1).field_D;
           bc.field_c = pf.a("", (byte) 68, "grad_lightning_purple", param1).field_D;
           if (param0 != 198123656) {
@@ -395,7 +395,7 @@ final class vl extends tm {
                 if (stackIn_27_0 < stackIn_27_1) {
                   kp.field_i[param2][var19Lifetime2] = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (kp.field_i[param2][var19Lifetime2] << 11) / var20Lifetime2;
                   field_n[param2][var19Lifetime2] = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 2) + (field_n[param2][var19Lifetime2] << 11) / var20Lifetime2;
-                  stackIn_15_0 = jr.field_o[param2];
+                  stackIn_15_0 = TikiBallSkin.field_o[param2];
                   stackIn_15_1 = var19Lifetime2;
                   if (0 != var19Lifetime2 &&
                     var18Lifetime2 == 0) {
@@ -419,7 +419,7 @@ final class vl extends tm {
             stackIn_27_1 = 0;
             break;
           }
-          wn.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, s.a(param2, 115), field_n[param2], 32512 - param4 * 127 >> 8, 0, kp.field_i[param2], jr.field_o[param2]);
+          wn.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, s.a(param2, 115), field_n[param2], 32512 - param4 * 127 >> 8, 0, kp.field_i[param2], TikiBallSkin.field_o[param2]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -513,20 +513,20 @@ final class vl extends tm {
 
     public static void i(int param0) {
         try {
-          field_o = null;
+          muRequestWithdrawn = null;
           int var1_int = -50 % ((40 - param0) / 58);
           field_n = (int[][]) null;
-          field_r = null;
+          playerColon = null;
           field_p = null;
           field_l = null;
-          field_s = null;
+          muGamelistAllGames = null;
           field_m = null;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vl.E(" + param0 + ')');
         }
     }
 
-    final void a(int param0, al param1) {
+    final void a(int param0, PoolGameModel param1) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -538,12 +538,12 @@ final class vl extends tm {
         int var5 = 0;
         var5 = Pool.field_O;
         try {
-          hj.field_d = new int[param1.field_l.length][12];
-          tj.field_ab = new int[param1.field_l.length][12];
-          ie.field_a = new int[param1.field_l.length][12];
+          hj.field_d = new int[param1.balls.length][12];
+          tj.field_ab = new int[param1.balls.length][12];
+          ie.field_a = new int[param1.balls.length][12];
           kp.field_i = new int[hj.field_d.length][hj.field_d[0].length];
           field_n = new int[hj.field_d.length][hj.field_d[0].length];
-          jr.field_o = new int[hj.field_d.length][hj.field_d[0].length];
+          TikiBallSkin.field_o = new int[hj.field_d.length][hj.field_d[0].length];
           var3_int = 0;
           scanLoop1: while (true) {
             if (hj.field_d.length > var3_int) {
@@ -567,7 +567,7 @@ final class vl extends tm {
             break;
           }
           if (stackIn_13_0 != 2147483647) {
-            vl.a(106, (String) null);
+            PlasmaBallSkin.a(106, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -591,16 +591,16 @@ final class vl extends tm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 108) {
-            vl.a(7, (String) null);
+            PlasmaBallSkin.a(7, (String) null);
           }
           if (param0 == 0) {
-            stackIn_7_0 = pn.field_t;
+            stackIn_7_0 = pn.ballsetPlasmaGroup0Nocolour;
             return stackIn_7_0;
           }
           if (param0 != 1) {
             throw new IllegalStateException("Invalid group number");
           }
-          stackIn_12_0 = oe.field_S;
+          stackIn_12_0 = oe.ballsetPlasmaGroup1Nocolour;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -690,7 +690,7 @@ final class vl extends tm {
         }
     }
 
-    vl() {
+    PlasmaBallSkin() {
     }
 
     final int a(int param0, boolean param1) {
@@ -727,7 +727,7 @@ final class vl extends tm {
                 var4 != 0)) {
                 if (15 != var3_int) {
                   if (!param1) {
-                    field_r = (String) null;
+                    playerColon = (String) null;
                   }
                   stackIn_95_0 = 16711935;
                   return stackIn_95_0;
@@ -822,7 +822,7 @@ final class vl extends tm {
         try {
           var1_long = rl.a((byte) -101);
           if (param0 != 12000) {
-            vl.i(32);
+            PlasmaBallSkin.i(32);
           }
           var3 = var1_long - db.field_Pb;
           if (var3 <= 30000L) {
@@ -963,7 +963,7 @@ final class vl extends tm {
         var4 = Pool.field_O;
         try {
           if (param1 != 0) {
-            field_s = (String) null;
+            muGamelistAllGames = (String) null;
           }
           boolean decompiledFrameRemainder0 = true;
           var3_int = param0;
@@ -1017,7 +1017,7 @@ final class vl extends tm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = kk.field_G;
+            stackIn_4_0 = kk.ballsetPlasmaGroup0;
             return stackIn_4_0;
           }
           if (param0 <= 9) {
@@ -1027,7 +1027,7 @@ final class vl extends tm {
           if (1 != param1) {
             throw new IllegalStateException("Invalid group number");
           }
-          stackIn_12_0 = hi.field_j;
+          stackIn_12_0 = hi.ballsetPlasmaGroup1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1037,9 +1037,9 @@ final class vl extends tm {
     }
 
     static {
-        field_r = "<%0>: ";
+        playerColon = "<%0>: ";
         field_q = true;
-        field_o = "You have withdrawn your request to join.";
-        field_s = "All games";
+        muRequestWithdrawn = "You have withdrawn your request to join.";
+        muGamelistAllGames = "All games";
     }
 }

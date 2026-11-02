@@ -258,9 +258,9 @@ final class nq {
         var4.field_k = 15658734;
         this.field_e = 15658734;
         this.field_g = -1;
-        var4.b(0, 0).c(15658734, 57).a(fj.a(8947848, 10066329, 7829367, false), (byte) 67);
-        var4.b(1, 0).a(fj.a(11184810, 10066329, 13421772, false), (byte) 76);
-        var4.b(3, 0).a(fj.a(8947848, 7829367, 10066329, false), (byte) 64).a(1, -1).a(1, (byte) 90);
+        var4.b(0, 0).c(15658734, 57).a(NineBallRules.a(8947848, 10066329, 7829367, false), (byte) 67);
+        var4.b(1, 0).a(NineBallRules.a(11184810, 10066329, 13421772, false), (byte) 76);
+        var4.b(3, 0).a(NineBallRules.a(8947848, 7829367, 10066329, false), (byte) 64).a(1, -1).a(1, (byte) 90);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -282,7 +282,7 @@ final class nq {
         nd discarded$1 = new nd(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
         lg var8 = new lg();
         var17.a(-1177150015, var8);
-        var8.b(0, 0).a(fj.a(15658734, 7829367, 10066329, false), (byte) 74).c(1118481, 72).b(true, -1);
+        var8.b(0, 0).a(NineBallRules.a(15658734, 7829367, 10066329, false), (byte) 74).c(1118481, 72).b(true, -1);
         var8.b(4, 0).a(-15359, true).a(var5, (byte) 77);
         this.field_j = (fp) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
@@ -327,7 +327,7 @@ final class nq {
           or.field_b = param5 * 1000 / param7;
           kk.field_D.a(qf.field_d);
           tl.field_N = param0;
-          tl.field_N.a(nk.field_h, (byte) -26);
+          tl.field_N.a(TranslatedUiText.field_h, (byte) -26);
           ib.field_s.a(tl.field_N);
           if (param4) {
             nq.a('`', (byte) -1);

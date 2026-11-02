@@ -3,17 +3,17 @@
  */
 final class kf extends IntrusiveNode {
     PcmSampleStream field_o;
-    static String field_l;
+    static String rule05;
     int field_n;
     IntrusiveNode field_m;
 
     public static void a(int param0) {
         if (param0 != -1) {
-          field_l = (String) null;
-          field_l = null;
+          rule05 = (String) null;
+          rule05 = null;
           return;
         }
-        field_l = null;
+        rule05 = null;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -308,7 +308,7 @@ final class kf extends IntrusiveNode {
     }
 
     static {
-        field_l = "Exploiting a bug";
+        rule05 = "Exploiting a bug";
     }
 
     @SuppressWarnings("unchecked")

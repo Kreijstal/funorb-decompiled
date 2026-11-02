@@ -6,7 +6,7 @@ final class wc {
     int field_g;
     boolean field_f;
     static String field_a;
-    static String field_d;
+    static String rule22;
     boolean field_e;
     String[] field_c;
 
@@ -52,9 +52,9 @@ final class wc {
 
     public static void a(int param0) {
         field_a = null;
-        field_d = null;
+        rule22 = null;
         if (param0 <= 65) {
-          field_d = (String) null;
+          rule22 = (String) null;
         }
     }
 
@@ -99,7 +99,7 @@ final class wc {
     }
 
     static {
-        field_d = "Advertising websites";
+        rule22 = "Advertising websites";
         field_a = "There are no valid types of game that match your preferences.";
     }
 }

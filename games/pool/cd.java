@@ -4,7 +4,7 @@
 final class cd {
     static int[] field_d;
     static int field_a;
-    static String field_c;
+    static String mpYouresigned;
     static int field_e;
     static int field_b;
 
@@ -57,15 +57,15 @@ final class cd {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        mpYouresigned = null;
         field_d = null;
         if (param0 <= 35) {
-          field_c = (String) null;
+          mpYouresigned = (String) null;
         }
     }
 
     static {
-        field_c = "You have resigned.";
+        mpYouresigned = "You have resigned.";
         field_a = 22;
         field_b = 0;
     }

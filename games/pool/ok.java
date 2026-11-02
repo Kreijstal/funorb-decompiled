@@ -56,7 +56,7 @@ abstract class ok extends tj {
         }
     }
 
-    final static void a(int param0, pq param1, pq param2, byte param3) {
+    final static void a(int param0, Ball param1, Ball param2, byte param3) {
         int fieldTemp$1 = 0;
         long var4_long = 0L;
         int var6 = 0;
@@ -78,12 +78,12 @@ abstract class ok extends tj {
           if (0 > param0) {
             param0 = 0;
           }
-          param1.a(param0, 127);
-          param2.a(param0, 122);
-          var4_long = param1.e(-14770) + param2.e(-14770);
-          var6 = param2.field_g - param1.field_g;
-          var7 = param2.field_k - param1.field_k;
-          var8 = rj.a((long)var6, (byte) -48, (long)var6) + rj.a((long)var7, (byte) -48, (long)var7);
+          param1.advanceTo(param0, 127);
+          param2.advanceTo(param0, 122);
+          var4_long = param1.horizontalSpeedSquared(-14770) + param2.horizontalSpeedSquared(-14770);
+          var6 = param2.positionX - param1.positionX;
+          var7 = param2.positionY - param1.positionY;
+          var8 = KillerRules.a((long)var6, (byte) -48, (long)var6) + KillerRules.a((long)var7, (byte) -48, (long)var7);
           if (var8 < 0L) {
             throw new IllegalStateException("dnorm2_32 overflow " + var8);
           }
@@ -92,29 +92,29 @@ abstract class ok extends tj {
             var10 <= 2147483647L) {
             var6 = lh.a((int)var10, (byte) -83, (long)var6);
             var7 = lh.a((int)var10, (byte) -112, (long)var7);
-            var12 = rj.a((long)param1.field_I, (byte) -48, (long)var6) + rj.a((long)param1.field_t, (byte) -48, (long)var7) >> 16;
-            var14 = rj.a((long)param2.field_I, (byte) -48, (long)var6) + rj.a((long)param2.field_t, (byte) -48, (long)var7) >> 16;
-            param1.field_I = (int)((long)param1.field_I - od.a((long)var6, var12, false));
-            param1.field_t = (int)((long)param1.field_t - od.a((long)var7, var12, false));
-            param2.field_I = (int)((long)param2.field_I - od.a((long)var6, var14, false));
-            param2.field_t = (int)((long)param2.field_t - od.a((long)var7, var14, false));
-            param1.field_I = (int)((long)param1.field_I + (od.a((long)(tl.field_K * var6), var14, false) >> 8));
-            param1.field_t = (int)((long)param1.field_t + (od.a((long)(tl.field_K * var7), var14, false) >> 8));
-            param2.field_I = (int)((long)param2.field_I + (od.a((long)(tl.field_K * var6), var12, false) >> 8));
-            param2.field_t = (int)((long)param2.field_t + (od.a((long)(tl.field_K * var7), var12, false) >> 8));
-            param1.field_b = ca.field_l * param1.field_b >> 8;
-            param1.field_K = ca.field_l * param1.field_K >> 8;
-            param1.field_n = ca.field_l * param1.field_n >> 8;
-            param2.field_b = param2.field_b * ca.field_l >> 8;
-            param2.field_K = param2.field_K * ca.field_l >> 8;
-            param2.field_n = param2.field_n * ca.field_l >> 8;
-            param1.field_v = 1;
-            param2.field_v = 1;
+            var12 = KillerRules.a((long)param1.velocityX, (byte) -48, (long)var6) + KillerRules.a((long)param1.velocityY, (byte) -48, (long)var7) >> 16;
+            var14 = KillerRules.a((long)param2.velocityX, (byte) -48, (long)var6) + KillerRules.a((long)param2.velocityY, (byte) -48, (long)var7) >> 16;
+            param1.velocityX = (int)((long)param1.velocityX - od.a((long)var6, var12, false));
+            param1.velocityY = (int)((long)param1.velocityY - od.a((long)var7, var12, false));
+            param2.velocityX = (int)((long)param2.velocityX - od.a((long)var6, var14, false));
+            param2.velocityY = (int)((long)param2.velocityY - od.a((long)var7, var14, false));
+            param1.velocityX = (int)((long)param1.velocityX + (od.a((long)(tl.field_K * var6), var14, false) >> 8));
+            param1.velocityY = (int)((long)param1.velocityY + (od.a((long)(tl.field_K * var7), var14, false) >> 8));
+            param2.velocityX = (int)((long)param2.velocityX + (od.a((long)(tl.field_K * var6), var12, false) >> 8));
+            param2.velocityY = (int)((long)param2.velocityY + (od.a((long)(tl.field_K * var7), var12, false) >> 8));
+            param1.angularVelocityY = ca.field_l * param1.angularVelocityY >> 8;
+            param1.angularVelocityZ = ca.field_l * param1.angularVelocityZ >> 8;
+            param1.angularVelocityX = ca.field_l * param1.angularVelocityX >> 8;
+            param2.angularVelocityY = param2.angularVelocityY * ca.field_l >> 8;
+            param2.angularVelocityZ = param2.angularVelocityZ * ca.field_l >> 8;
+            param2.angularVelocityX = param2.angularVelocityX * ca.field_l >> 8;
+            param1.motionState = 1;
+            param2.motionState = 1;
             var18 = -53 / ((param3 - 62) / 39);
-            var16 = param1.e(-14770) + param2.e(-14770);
+            var16 = param1.horizontalSpeedSquared(-14770) + param2.horizontalSpeedSquared(-14770);
             if (wm.field_ac.length > or.field_l) {
-              wm.field_ac[or.field_l][0] = param1.field_g + param2.field_g >> 1;
-              wm.field_ac[or.field_l][1] = param2.field_k + param1.field_k >> 1;
+              wm.field_ac[or.field_l][0] = param1.positionX + param2.positionX >> 1;
+              wm.field_ac[or.field_l][1] = param2.positionY + param1.positionY >> 1;
               wm.field_ac[or.field_l][2] = -524288;
             }
             if (or.field_l < wd.field_Qb.length) {
@@ -175,7 +175,7 @@ abstract class ok extends tj {
 
     final void b(boolean param0) {
         if (null != this.field_gb) {
-          if (this.field_gb != tm.field_h) {
+          if (this.field_gb != BallSkin.field_h) {
             this.b(12 + this.field_jb + this.field_lb.field_y, 31936, 12 + this.field_lb.field_l);
             this.c(this.field_lb, -111052767);
           }
@@ -203,7 +203,7 @@ abstract class ok extends tj {
               this.field_hb = 0;
             }
           } else {
-            if (this.field_gb == tm.field_h) {
+            if (this.field_gb == BallSkin.field_h) {
               fieldTemp$5 = this.field_hb + 1;
               this.field_hb = this.field_hb + 1;
               if (this.field_qb == fieldTemp$5) {
@@ -225,7 +225,7 @@ abstract class ok extends tj {
         if (this.field_gb == dj.field_c) {
           return;
         }
-        this.field_gb = tm.field_h;
+        this.field_gb = BallSkin.field_h;
         this.field_hb = 0;
         this.c(this.field_lb, -111052767);
         this.field_ib.field_T = 0;
@@ -247,7 +247,7 @@ abstract class ok extends tj {
         Object var3;
         int[] var5;
         int var7;
-        pq var8;
+        Ball var8;
         int[] var9;
         int[] var12;
         int[] var14;
@@ -255,8 +255,8 @@ abstract class ok extends tj {
         byte[] var18;
         var7 = Pool.field_O;
         if (param0 >= -63) {
-          var8 = (pq) null;
-          ok.a(101, (pq) null, (pq) null, (byte) 35);
+          var8 = (Ball) null;
+          ok.a(101, (Ball) null, (Ball) null, (byte) 35);
         }
         var1 = pd.field_a[0] * rc.field_f[0];
         var17 = v.field_b[0];

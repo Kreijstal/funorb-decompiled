@@ -16,7 +16,7 @@ final class ir {
     static int field_h;
     static String field_b;
     private long field_g;
-    static String field_i;
+    static String pleasetryagain;
     static vh field_a;
     private v field_l;
     private byte[] field_c;
@@ -348,7 +348,7 @@ final class ir {
     }
 
     public static void a(byte param0) {
-        field_i = null;
+        pleasetryagain = null;
         field_a = null;
         int var1 = -55 / ((62 - param0) / 40);
         field_p = (String[][]) null;
@@ -443,6 +443,6 @@ final class ir {
 
     static {
         field_h = 20;
-        field_i = "Please try again in a few minutes.";
+        pleasetryagain = "Please try again in a few minutes.";
     }
 }

@@ -11,14 +11,14 @@ final class kj {
     static int field_j;
     int field_e;
     int field_h;
-    static String field_l;
+    static String pottingTheRestOfYourGroup;
     static String[] field_i;
     static vh field_a;
     static volatile int field_c;
     static int field_f;
 
     public static void b(int param0) {
-        field_l = null;
+        pottingTheRestOfYourGroup = null;
         field_a = null;
         field_g = null;
         field_i = null;
@@ -34,14 +34,14 @@ final class kj {
         return new kj(this.field_n, this.field_h, this.field_k, this.field_d, this.field_e);
     }
 
-    final void a(mm param0, pq param1, byte param2) {
+    final void a(mm param0, Ball param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         try {
-          var4_int = param1.field_g >> 13;
-          var5 = param1.field_k >> 13;
+          var4_int = param1.positionX >> 13;
+          var5 = param1.positionY >> 13;
           var6 = (int)(8.0 * param0.field_a + 0.5);
           var7 = (int)(0.5 + param0.field_d * 8.0);
           this.field_h = tj.c(-var4_int + var7, var6 - var5, 4096) >> 2;
@@ -60,8 +60,8 @@ final class kj {
 
     final boolean a(boolean param0) {
         if (param0) {
-          pq var3 = (pq) null;
-          this.a((mm) null, (pq) null, (byte) 16);
+          Ball var3 = (Ball) null;
+          this.a((mm) null, (Ball) null, (byte) 16);
         }
         return 0 <= this.field_n ? true : false;
     }
@@ -155,7 +155,7 @@ final class kj {
           var64 = new int[param2.field_o];
           var61 = oj.field_r;
           var62 = wa.field_mb;
-          var63 = al.field_g;
+          var63 = PoolGameModel.field_g;
           for (var13 = 0; param2.field_o > var13; var13++) {
             var14 = var61[var13] * param7 + (param3 * var62[var13] + param5 * var63[var13]) >> 8;
             if (0 > var14) {
@@ -464,7 +464,7 @@ final class kj {
     static {
         int var0 = 0;
         field_g = new sa[512];
-        field_l = "Potting the rest of your group for you.";
+        pottingTheRestOfYourGroup = "Potting the rest of your group for you.";
         field_i = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         for (var0 = 0; field_g.length > var0; var0++) {
           field_g[var0] = new sa();

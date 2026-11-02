@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld {
-    static String field_f;
+    static String pausemenu;
     private byte[] field_a;
     private long[] field_o;
     static int field_c;
-    static String field_h;
+    static String ballsetPolarGroup1;
     static int field_g;
     private long[] field_e;
     private int field_k;
     private int field_j;
-    static String field_i;
+    static String gameoptYouneedrating;
     private long[] field_l;
     private long[] field_m;
     private long[] field_n;
@@ -133,7 +133,7 @@ final class ld {
           var9 = 49;
           try {
             if (param0 != 92) {
-              field_f = (String) null;
+              pausemenu = (String) null;
             }
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
               var11 = o.field_x.a(127, param2[var10_int]);
@@ -373,9 +373,9 @@ final class ld {
         if (param0 != 8) {
           field_b = 119;
         }
-        field_i = null;
-        field_f = null;
-        field_h = null;
+        gameoptYouneedrating = null;
+        pausemenu = null;
+        ballsetPolarGroup1 = null;
     }
 
     ld() {
@@ -391,9 +391,9 @@ final class ld {
     }
 
     static {
-        field_h = "Stripes";
-        field_i = "You need a rating of <%1> to play with the current options.";
+        ballsetPolarGroup1 = "Stripes";
+        gameoptYouneedrating = "You need a rating of <%1> to play with the current options.";
         field_c = 0;
-        field_f = "Pause Menu";
+        pausemenu = "Pause Menu";
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tm {
+abstract class BallSkin {
     static vh field_d;
     eg[] field_a;
     static int field_f;
@@ -65,7 +65,7 @@ abstract class tm {
         int var5;
         hj[] var6;
         var5 = Pool.field_O;
-        var6 = lm.a((byte) -32);
+        var6 = SpaceBallSkin.a((byte) -32);
         var2 = var6;
         var3 = 0;
         var4 = -81 / ((param1 + 69) / 37);
@@ -192,10 +192,10 @@ abstract class tm {
             var18 = Math.sin(3.141592653589793 * (double)(var15 * 2) / (double)ne.field_v);
             var20 = Math.cos(3.141592653589793 * (double)(2 + var15 * 2) / (double)ne.field_v);
             var22 = Math.sin((double)(2 * (var15 + 1)) * 3.141592653589793 / (double)ne.field_v);
-            var24 = var29.a(cr.a(4885, var16 * var9), cr.a(4885, var9 * var18), cr.a(4885, var7));
-            var25 = var29.a(cr.a(4885, var20 * var9), cr.a(param0 + 930310737, var9 * var22), cr.a(param0 ^ -930300975, var7));
-            var26 = var29.a(cr.a(4885, var13 * var16), cr.a(4885, var13 * var18), cr.a(4885, var11));
-            var27 = var29.a(cr.a(4885, var20 * var13), cr.a(4885, var13 * var22), cr.a(4885, var11));
+            var24 = var29.a(PotEvent.a(4885, var16 * var9), PotEvent.a(4885, var9 * var18), PotEvent.a(4885, var7));
+            var25 = var29.a(PotEvent.a(4885, var20 * var9), PotEvent.a(param0 + 930310737, var9 * var22), PotEvent.a(param0 ^ -930300975, var7));
+            var26 = var29.a(PotEvent.a(4885, var13 * var16), PotEvent.a(4885, var13 * var18), PotEvent.a(4885, var11));
+            var27 = var29.a(PotEvent.a(4885, var20 * var13), PotEvent.a(4885, var13 * var22), PotEvent.a(4885, var11));
             if (var24 != var25) {
               var29.a(var24, var26, var25, (byte) 0, (short) 96, this.a(true));
             }
@@ -263,7 +263,7 @@ abstract class tm {
         }
     }
 
-    final String a(int param0, sq param1, byte param2) {
+    final String a(int param0, GameRules param1, byte param2) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
@@ -277,12 +277,12 @@ abstract class tm {
           if (param2 != -111) {
             this.field_k = (int[][]) null;
           }
-          if (param1 instanceof fj) {
-            stackIn_4_0 = or.field_k[param0];
+          if (param1 instanceof NineBallRules) {
+            stackIn_4_0 = or.nineBallNumbers[param0];
             return stackIn_4_0;
           }
           if (this.c(2)) {
-            stackIn_7_0 = ho.field_u[param0];
+            stackIn_7_0 = ho.eightBallNumbers[param0];
             return stackIn_7_0;
           }
           if (0 != param0 &&
@@ -290,7 +290,7 @@ abstract class tm {
             stackIn_14_0 = this.a((byte) 33, param0 >> 3 & 1);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ho.field_u[param0];
+          stackIn_12_0 = ho.eightBallNumbers[param0];
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -358,7 +358,7 @@ abstract class tm {
         return (byte) 0;
     }
 
-    void a(int param0, al param1) {
+    void a(int param0, PoolGameModel param1) {
         try {
           if (param0 != 2147483647) {
             this.field_j = (nc[]) null;
@@ -368,7 +368,7 @@ abstract class tm {
         }
     }
 
-    tm() {
+    BallSkin() {
         this.field_g = true;
     }
 

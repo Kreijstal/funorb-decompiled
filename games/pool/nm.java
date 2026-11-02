@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nm {
-    static String field_g;
+    static String rule20;
     static int field_e;
     static int field_f;
     static Sprite field_d;
@@ -16,7 +16,7 @@ final class nm {
           return;
         }
         qa.a(true, re.field_d, -104, eo.field_Rb);
-        to.field_q = true;
+        PolarBallSkin.field_q = true;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -30,12 +30,12 @@ final class nm {
         if (param0) {
           nm.a(true);
           field_a = null;
-          field_g = null;
+          rule20 = null;
           field_d = null;
           return;
         }
         field_a = null;
-        field_g = null;
+        rule20 = null;
         field_d = null;
     }
 
@@ -48,6 +48,6 @@ final class nm {
     }
 
     static {
-        field_g = "Asking for or providing contact information";
+        rule20 = "Asking for or providing contact information";
     }
 }

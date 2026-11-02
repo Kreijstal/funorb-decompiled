@@ -3,7 +3,7 @@
  */
 final class wk extends ch implements tb {
     private qq field_W;
-    static String field_V;
+    static String friendlistfull;
     static int field_P;
     private BitmapFont field_Q;
     static Sprite field_T;
@@ -110,7 +110,7 @@ final class wk extends ch implements tb {
           wk.a(true, -59, false, -90);
         }
         field_N = null;
-        field_V = null;
+        friendlistfull = null;
         field_T = null;
     }
 
@@ -221,7 +221,7 @@ final class wk extends ch implements tb {
             gi.field_o.field_Db = 0;
             var6 = gi.field_o;
             var6.field_gb = 0;
-            ii.field_e.field_nb = of.field_Ub.toUpperCase();
+            ii.field_e.field_nb = of.ratedGame.toUpperCase();
             var7 = (uq.field_f.field_gb + 2) / 2;
             gi.field_o.b(uq.field_f.field_Db - 40, 2147483647, 0, var7 - 2, 40);
             d.field_c.b(-40 + uq.field_f.field_Db, 2147483647, var7, -var7 + uq.field_f.field_gb, 40);
@@ -258,29 +258,29 @@ final class wk extends ch implements tb {
             if (!kh.field_Ac) {
               stackIn_36_0 = d.field_c;
               if (var8 != 0) {
-                stackIn_37_1 = hq.field_o;
+                stackIn_37_1 = hq.findOpponentsPlural;
               } else {
-                stackIn_37_1 = fo.field_d;
+                stackIn_37_1 = fo.findOpponentSingular;
               }
               stackIn_36_0.field_nb = ((String) (Object) stackIn_37_1).toUpperCase();
               stackIn_39_0 = v.field_j;
               stackIn_39_1 = new String[]{d.field_c.field_nb};
               stackIn_39_2 = -1;
               if (var8 != 0) {
-                stackIn_40_3 = n.field_Y;
+                stackIn_40_3 = n.ratedGameTipsSetupPlural;
               } else {
-                stackIn_40_3 = bk.field_x;
+                stackIn_40_3 = bk.ratedGameTipsSetupSingular;
               }
               stackIn_39_0.field_nb = nr.a(stackIn_39_1, stackIn_39_2, stackIn_40_3);
-              gi.field_o.field_nb = la.field_g;
+              gi.field_o.field_nb = la.waitingToStartHint;
               ok.field_ob.field_pb = true;
-              qk.field_b = true;
+              PoolUiText.field_b = true;
               if (we.field_m != null) {
                 if (null == dk.field_j) {
                   gf.field_b = new boolean[dr.field_c];
                   dk.field_j = new byte[dr.field_c];
                 }
-                qk.field_b = false;
+                PoolUiText.field_b = false;
                 ln.field_p = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
@@ -291,15 +291,15 @@ final class wk extends ch implements tb {
                 sh.a(0, dr.field_c, -1, false, tp.field_e, -1, -1, true);
                 if (!(2 > hq.field_i) &&
                   vj.field_c[12]) {
-                  qk.field_b = true;
+                  PoolUiText.field_b = true;
                 }
               }
-              if (!qk.field_b) {
+              if (!PoolUiText.field_b) {
                 d.field_c.field_pb = false;
                 if (d.field_c.field_db) {
                   var9 = null;
                   if (ln.field_p) {
-                    var9 = "<col=A00000>" + ab.field_h + "</col>";
+                    var9 = "<col=A00000>" + ab.muOptionsPlayers + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
@@ -317,16 +317,16 @@ final class wk extends ch implements tb {
                       }
                     }
                   }
-                  kk.field_B = "<col=A00000>" + wc.field_a + "<br>" + m.field_b + (String) (var9);
+                  kk.field_B = "<col=A00000>" + wc.field_a + "<br>" + m.gameoptPleasetrychanging + (String) (var9);
                 }
               }
             } else {
               ok.field_ob.field_pb = false;
-              v.field_j.field_nb = hl.field_c;
+              v.field_j.field_nb = hl.ratedGameTips;
               if (var8 != 0) {
-                stackIn_25_0 = vi.field_a;
+                stackIn_25_0 = vi.searchingForOpponentsPlural;
               } else {
-                stackIn_25_0 = or.field_j;
+                stackIn_25_0 = or.searchingForOpponentSingular;
               }
               var14 = stackIn_25_0;
               var9 = var14;
@@ -345,7 +345,7 @@ final class wk extends ch implements tb {
                 var9 = (String) (var9) + "...";
               }
               gi.field_o.field_nb = (String) (var9);
-              d.field_c.field_nb = be.field_K.toUpperCase();
+              d.field_c.field_nb = be.cancel.toUpperCase();
             }
           }
           stackIn_68_0 = so.field_k;
@@ -450,7 +450,7 @@ final class wk extends ch implements tb {
           if (param16 != 255) {
             field_P = 121;
           }
-          mf.a((byte) -91, param1, param10, param7, param3, param14);
+          ClassicBallSkin.a((byte) -91, param1, param10, param7, param3, param14);
           ve.a(111, param15, param17, param18);
           ta.a((byte) -96, param11, param20, param6);
           return;
@@ -514,6 +514,6 @@ final class wk extends ch implements tb {
     }
 
     static {
-        field_V = "Your friend list is full. Max of 100 for free users, and 200 for members.";
+        friendlistfull = "Your friend list is full. Max of 100 for free users, and 200 for members.";
     }
 }

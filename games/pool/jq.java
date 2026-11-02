@@ -4,12 +4,12 @@
 final class jq {
     static vh field_d;
     static IntrusiveDeque field_c;
-    static String field_b;
-    static String field_a;
+    static String tooltipBallInHand;
+    static String gameoptPlayerneedsrating;
     static int field_g;
     static vh field_f;
     static String[] field_e;
-    static String field_h;
+    static String playerYouFirstListHaveWon;
 
     final static void a(byte param0) {
         int var1 = -75 / ((-64 - param0) / 62);
@@ -17,8 +17,8 @@ final class jq {
     }
 
     public static void a(boolean param0) {
-        field_h = null;
-        field_b = null;
+        playerYouFirstListHaveWon = null;
+        tooltipBallInHand = null;
         field_f = null;
         field_c = null;
         field_d = null;
@@ -26,13 +26,13 @@ final class jq {
         if (param0) {
           return;
         }
-        field_a = null;
+        gameoptPlayerneedsrating = null;
     }
 
     static {
-        field_a = "<%0> would need a rating of <%1> to play with the current options.";
-        field_b = "Ball-in-hand";
+        gameoptPlayerneedsrating = "<%0> would need a rating of <%1> to play with the current options.";
+        tooltipBallInHand = "Ball-in-hand";
         field_g = 0;
-        field_h = "You<%0> have won!";
+        playerYouFirstListHaveWon = "You<%0> have won!";
     }
 }

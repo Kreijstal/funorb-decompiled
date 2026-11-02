@@ -4,14 +4,14 @@
 final class sg extends ob {
     static jj field_J;
     static Sprite[] field_M;
-    static String field_N;
+    static String statusPrivate;
     static int field_P;
-    static String field_Q;
+    static String ignorenotfound;
     static int field_O;
     static int field_K;
-    static String field_H;
-    static String field_L;
-    static String field_I;
+    static String createDisplaynameTooltip;
+    static String createAlertInvalidage;
+    static String muXWithdrewRequest;
     static int field_S;
     private static int field_R;
 
@@ -86,12 +86,12 @@ final class sg extends ob {
     }
 
     public static void f(int param0) {
-        field_H = null;
-        field_L = null;
-        field_I = null;
-        field_Q = null;
+        createDisplaynameTooltip = null;
+        createAlertInvalidage = null;
+        muXWithdrewRequest = null;
+        ignorenotfound = null;
         field_J = null;
-        field_N = null;
+        statusPrivate = null;
         field_M = null;
         if (param0 != 506724193) {
           sg.h(89);
@@ -202,11 +202,11 @@ final class sg extends ob {
     }
 
     static {
-        field_N = "Private";
-        field_Q = "<%0> is not on your ignore list.";
-        field_H = "Enter the name you'd prefer. This is the name displayed to other players.";
-        field_I = "<%0> has withdrawn the request to join.";
-        field_L = "Please enter your age in years";
+        statusPrivate = "Private";
+        ignorenotfound = "<%0> is not on your ignore list.";
+        createDisplaynameTooltip = "Enter the name you'd prefer. This is the name displayed to other players.";
+        muXWithdrewRequest = "<%0> has withdrawn the request to join.";
+        createAlertInvalidage = "Please enter your age in years";
         field_R = 2;
         field_O = 1 << field_R;
     }

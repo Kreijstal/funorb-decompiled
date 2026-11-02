@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wa extends tj {
-    static String field_ob;
+    static String tooltipExtraVisit;
     static Sprite field_gb;
     static vh field_hb;
     static int[] field_ib;
@@ -60,7 +60,7 @@ final class wa extends tj {
     }
 
     public static void n(int param0) {
-        field_ob = null;
+        tooltipExtraVisit = null;
         field_qb = null;
         field_ib = null;
         if (param0 == 7585) {
@@ -121,42 +121,42 @@ final class wa extends tj {
 
     final static void i(byte param0) {
         if (param0 == 72) {
-          sq.field_c.field_e = 0;
-          sq.field_c.field_a = 0;
+          GameRules.field_c.field_e = 0;
+          GameRules.field_c.field_a = 0;
           return;
         }
         field_ib = (int[]) null;
-        sq.field_c.field_e = 0;
-        sq.field_c.field_a = 0;
+        GameRules.field_c.field_e = 0;
+        GameRules.field_c.field_a = 0;
     }
 
     final static void m(int param0) {
         if (param0 != 8421504) {
           field_gb = (Sprite) null;
-          if (null != vl.field_m) {
-            if (vl.field_m.field_i != null) {
-              vl.field_m.field_i.field_Ib = false;
+          if (null != PlasmaBallSkin.field_m) {
+            if (PlasmaBallSkin.field_m.field_i != null) {
+              PlasmaBallSkin.field_m.field_i.field_Ib = false;
             }
-            vl.field_m = null;
+            PlasmaBallSkin.field_m = null;
             pf.field_c = null;
             return;
           }
-          vl.field_m = null;
+          PlasmaBallSkin.field_m = null;
           pf.field_c = null;
           return;
         }
-        if (null == vl.field_m) {
-          vl.field_m = null;
+        if (null == PlasmaBallSkin.field_m) {
+          PlasmaBallSkin.field_m = null;
           pf.field_c = null;
           return;
         }
-        if (vl.field_m.field_i != null) {
-          vl.field_m.field_i.field_Ib = false;
-          vl.field_m = null;
+        if (PlasmaBallSkin.field_m.field_i != null) {
+          PlasmaBallSkin.field_m.field_i.field_Ib = false;
+          PlasmaBallSkin.field_m = null;
           pf.field_c = null;
           return;
         }
-        vl.field_m = null;
+        PlasmaBallSkin.field_m = null;
         pf.field_c = null;
     }
 
@@ -171,7 +171,7 @@ final class wa extends tj {
     }
 
     static {
-        field_ob = "Extra visit";
+        tooltipExtraVisit = "Extra visit";
         field_ib = new int[128];
         field_mb = new int[8192];
     }

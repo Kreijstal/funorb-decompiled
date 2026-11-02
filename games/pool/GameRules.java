@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sq {
+abstract class GameRules {
     static int[] field_a;
     static int field_b;
-    al field_d;
+    PoolGameModel field_d;
     static no field_c;
 
     abstract int a(boolean param0);
 
     int e(int param0) {
         if (param0 <= 64) {
-          this.field_d = (al) null;
+          this.field_d = (PoolGameModel) null;
         }
-        return this.field_d.field_n;
+        return this.field_d.playerCount;
     }
 
     final static boolean k(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          sq.a((String[]) null, false, -52, (String) null);
+          GameRules.a((String[]) null, false, -52, (String) null);
         }
         return ie.a((byte) 28, hk.d(71));
     }
 
-    void a(qe param0, boolean param1) {
+    void a(ShotRecord param0, boolean param1) {
         RuntimeException runtimeException = null;
-        qe stackIn_3_0 = null;
+        ShotRecord stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -34,11 +34,11 @@ abstract class sq {
         RuntimeException decompiledCaughtException = null;
         try {
           param0.field_z = this.a(-1);
-          stackIn_3_0 = (qe) (param0);
+          stackIn_3_0 = (ShotRecord) (param0);
           stackIn_4_1 = (0 == param0.field_u) && (this.a(param0.field_L, -35));
           stackIn_3_0.field_E = stackIn_4_1;
           if (param1) {
-            this.field_d = (al) null;
+            this.field_d = (PoolGameModel) null;
           }
           param0.field_I = this.j(0);
           return;
@@ -60,7 +60,7 @@ abstract class sq {
 
     abstract int[] a(int param0, byte param1);
 
-    abstract boolean a(int param0, byte param1, qe param2);
+    abstract boolean a(int param0, byte param1, ShotRecord param2);
 
     abstract int i(int param0);
 
@@ -68,14 +68,14 @@ abstract class sq {
 
     void n(int param0) {
         if (param0 != 11828) {
-          this.field_d = (al) null;
+          this.field_d = (PoolGameModel) null;
         }
     }
 
     abstract int h(int param0);
 
     final void l(int param0) {
-        qe var2 = this.field_d.j(45);
+        ShotRecord var2 = this.field_d.currentShot(45);
         var2.field_u = this.b(-120);
         int var3 = -67 % ((param0 + 14) / 58);
         if (!(0 > var2.field_L)) {
@@ -83,11 +83,11 @@ abstract class sq {
         }
     }
 
-    abstract boolean c(qe param0, int param1);
+    abstract boolean c(ShotRecord param0, int param1);
 
     int c(int param0, int param1) {
         if (param0 >= -36) {
-          sq.k(73);
+          GameRules.k(73);
         }
         return param1;
     }
@@ -100,12 +100,12 @@ abstract class sq {
         field_a = null;
         if (param0 != 13) {
           String var2 = (String) null;
-          sq.a((String[]) null, false, 81, (String) null);
+          GameRules.a((String[]) null, false, 81, (String) null);
         }
         field_c = null;
     }
 
-    abstract Sprite b(qe param0, int param1);
+    abstract Sprite b(ShotRecord param0, int param1);
 
     int m(int param0) {
         if (param0 != 0) {
@@ -116,20 +116,20 @@ abstract class sq {
     }
 
     final static void b(byte param0) {
-        al.field_B = new tm[7];
-        al.field_B[0] = (tm) ((Object) new mf());
-        al.field_B[1] = (tm) ((Object) new vl());
-        al.field_B[2] = (tm) ((Object) new jr());
-        al.field_B[3] = (tm) ((Object) new to());
+        PoolGameModel.field_B = new BallSkin[7];
+        PoolGameModel.field_B[0] = (BallSkin) ((Object) new ClassicBallSkin());
+        PoolGameModel.field_B[1] = (BallSkin) ((Object) new PlasmaBallSkin());
+        PoolGameModel.field_B[2] = (BallSkin) ((Object) new TikiBallSkin());
+        PoolGameModel.field_B[3] = (BallSkin) ((Object) new PolarBallSkin());
         if (param0 != 118) {
-          sq.k(35);
+          GameRules.k(35);
         }
-        al.field_B[4] = (tm) ((Object) new lm());
-        al.field_B[5] = (tm) ((Object) new ac());
-        al.field_B[6] = (tm) ((Object) new ul());
+        PoolGameModel.field_B[4] = (BallSkin) ((Object) new SpaceBallSkin());
+        PoolGameModel.field_B[5] = (BallSkin) ((Object) new KillerBallSkin());
+        PoolGameModel.field_B[6] = (BallSkin) ((Object) new HalloweenBallSkin());
     }
 
-    int a(qe param0, byte param1) {
+    int a(ShotRecord param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -139,10 +139,10 @@ abstract class sq {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = (1 + param0.field_L) % this.field_d.field_n;
+          var3_int = (1 + param0.field_L) % this.field_d.playerCount;
           var4 = 1;
-          while (var4 <= this.field_d.field_n) {
-            var3_int = (var4 + param0.field_L) % this.field_d.field_n;
+          while (var4 <= this.field_d.playerCount) {
+            var3_int = (var4 + param0.field_L) % this.field_d.playerCount;
             if (!this.a((byte) -112, var3_int) ||
               (this.field_d.field_p & 1 << var3_int) != 0) {
               var4++;
@@ -173,7 +173,7 @@ abstract class sq {
 
     final static int g(int param0) {
         if (param0 <= 107) {
-          sq.k(-99);
+          GameRules.k(-99);
         }
         return or.field_b;
     }
@@ -232,7 +232,7 @@ abstract class sq {
 
     abstract void c(int param0);
 
-    sq(al param0) {
+    GameRules(PoolGameModel param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -272,11 +272,11 @@ abstract class sq {
         RuntimeException decompiledCaughtException = null;
         var6 = Pool.field_O;
         try {
-          if (param0 >= this.field_d.field_n) {
+          if (param0 >= this.field_d.playerCount) {
             return null;
           }
-          if (this.field_d.field_n == 2) {
-            stackIn_6_0 = nr.a(param1, param0 ^ -2, w.field_g);
+          if (this.field_d.playerCount == 2) {
+            stackIn_6_0 = nr.a(param1, param0 ^ -2, w.playerVsPlayer);
             return stackIn_6_0;
           }
           var3_int = 0;
@@ -333,7 +333,7 @@ abstract class sq {
 
     abstract boolean a(int param0, byte param1, int param2);
 
-    abstract int a(qe param0, int param1);
+    abstract int a(ShotRecord param0, int param1);
 
     static {
         field_a = new int[4];

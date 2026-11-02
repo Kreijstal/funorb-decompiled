@@ -5,19 +5,19 @@ final class pl {
     static String field_f;
     static vh field_b;
     static Sprite field_a;
-    static String field_d;
-    static String field_c;
-    static String field_e;
+    static String pleaselogin;
+    static String tutorialNineBallPottingABall;
+    static String menuTimeTrialWithoutGuides;
 
     public static void a(int param0) {
         field_b = null;
-        field_c = null;
+        tutorialNineBallPottingABall = null;
         if (param0 != -23334) {
           CharSequence var2 = (CharSequence) null;
           pl.a((CharSequence) null, -41, ';');
         }
-        field_d = null;
-        field_e = null;
+        pleaselogin = null;
+        menuTimeTrialWithoutGuides = null;
         field_f = null;
         field_a = null;
     }
@@ -168,8 +168,8 @@ final class pl {
     }
 
     static {
-        field_c = "You may pot (hit into a pocket) any ball on the table to continue your visit, save for the cue ball, as long as you have first hit the lowest numbered ball!";
-        field_e = "Without Guides";
-        field_d = "Please log in to access this feature.";
+        tutorialNineBallPottingABall = "You may pot (hit into a pocket) any ball on the table to continue your visit, save for the cue ball, as long as you have first hit the lowest numbered ball!";
+        menuTimeTrialWithoutGuides = "Without Guides";
+        pleaselogin = "Please log in to access this feature.";
     }
 }

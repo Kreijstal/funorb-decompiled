@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class cj extends vc {
+final class TikiTableScene extends ModelTableScene {
     private PcmSample field_Z;
     private PcmSample field_hb;
     private PcmSample field_lb;
     private PcmSample field_gb;
     static vh field_V;
     private PcmSample field_kb;
-    static String field_U;
+    static String playerXNowHasNLives;
     private PcmSample field_db;
     private PcmSample field_W;
     PcmSample field_mb;
@@ -26,7 +26,7 @@ final class cj extends vc {
     private PcmSample field_R;
     private PcmSample field_X;
     private PcmSample field_T;
-    static String[] field_ob;
+    static String[] monthnames;
     PcmSample field_S;
     private PcmSample field_pb;
     private PcmSample field_sb;
@@ -35,7 +35,7 @@ final class cj extends vc {
     private PcmSample field_Q;
 
     final void c(boolean param0) {
-        this.field_l = sa.field_g;
+        this.field_l = sa.progressJungleBulk;
         this.field_G = 17;
         this.field_H = 0;
         de.field_g = param0 ? true : false;
@@ -103,7 +103,7 @@ final class cj extends vc {
             tl.field_N.a(true, -1);
           }
           if (500 > ln.field_t) {
-            this.a(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+            this.a(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
             if (ga.a(400, true, ea.field_r) == 0) {
               this.c(-4577, 32);
             }
@@ -111,14 +111,14 @@ final class cj extends vc {
             if (ln.field_t != 500) {
               if (ln.field_t < 2000) {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
-                this.a(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+                this.a(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                 if (ga.a(800, true, ea.field_r) == 0) {
                   this.c(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 tl.field_N.a((byte) 77, -1, var3_int);
               } else {
                 if (ln.field_t < 11200) {
-                  this.a(8, 50, (byte) -101, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+                  this.a(8, 50, (byte) -101, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                 } else {
                   if (ln.field_t >= 12200) {
                     if (ln.field_t == 12200) {
@@ -128,7 +128,7 @@ final class cj extends vc {
                     }
                   } else {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
-                    this.a(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+                    this.a(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                     if (ga.a(800, true, ea.field_r) == 0) {
                       this.c(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
@@ -694,7 +694,7 @@ final class cj extends vc {
                                     fieldTemp$6 = kj.field_m - 125;
                                     kj.field_m = kj.field_m - 125;
                                     this.a(ck.field_Y, fieldTemp$6, (byte) 98, this.field_O[var6], 0, hf.field_a);
-                                    this.field_l = mn.field_d;
+                                    this.field_l = mn.progressJungleFinishing;
                                   } else {
                                     if (15 == var9) {
                                       this.n(param0 + 6);
@@ -741,7 +741,7 @@ final class cj extends vc {
         }
         if (param0 != 2) {
           var11 = (StringBuilder) null;
-          cj.a('\023', -105, -71, (StringBuilder) null);
+          TikiTableScene.a('\023', -105, -71, (StringBuilder) null);
         }
         this.field_H = this.field_H + 1;
     }
@@ -749,7 +749,7 @@ final class cj extends vc {
     final static tc a(int param0, int param1, int param2) {
         tc var3 = w.a(false, param1);
         if (param2 != 0) {
-          field_U = (String) null;
+          playerXNowHasNLives = (String) null;
         }
         var3.field_e = new int[param0];
         return var3;
@@ -758,7 +758,7 @@ final class cj extends vc {
     final static boolean e(byte param0) {
         if (param0 != 85) {
           StringBuilder var2 = (StringBuilder) null;
-          cj.a('ￅ', -57, 7, (StringBuilder) null);
+          TikiTableScene.a('ￅ', -57, 7, (StringBuilder) null);
         }
         return ~ve.field_m == ~em.field_L.field_Zb ? true : false;
     }
@@ -783,12 +783,12 @@ final class cj extends vc {
     }
 
     public static void m(int param0) {
-        field_U = null;
+        playerXNowHasNLives = null;
         field_fb = null;
-        field_ob = null;
+        monthnames = null;
         field_V = null;
         if (param0 <= 90) {
-          cj.a(88, 124, 23, -78, -57);
+          TikiTableScene.a(88, 124, 23, -78, -57);
         }
     }
 
@@ -797,14 +797,14 @@ final class cj extends vc {
         int[] stackIn_53_1;
         int stackIn_53_2;
         boolean stackIn_53_3;
-        pq[] stackIn_53_4;
+        Ball[] stackIn_53_4;
         Object stackIn_54_0;
         boolean stackIn_54_5;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pq[] var3 = null;
+        Ball[] var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int[] var5_ref_int__ = null;
@@ -823,7 +823,7 @@ final class cj extends vc {
         int[] var17 = null;
         int[] var18 = null;
         so var19 = null;
-        pq[] var21 = null;
+        Ball[] var21 = null;
         so var22 = null;
         so var24 = null;
         so var26 = null;
@@ -848,7 +848,7 @@ final class cj extends vc {
         int var10Lifetime1;
         var11 = Pool.field_O;
         try {
-          var21 = param1.field_I.field_l;
+          var21 = param1.field_I.balls;
           var3 = var21;
           var30 = f.a((byte) -119, param1.field_ab);
           var18 = var30;
@@ -955,7 +955,7 @@ final class cj extends vc {
           }
           if ((pd.field_i & 1073741824L) == 0L) {
             for (var5Lifetime6 = 0; var21.length > var5Lifetime6; var5Lifetime6++) {
-              if (var21[var5Lifetime6].field_s) {
+              if (var21[var5Lifetime6].inPlay) {
                 this.a(var30, var21[var5Lifetime6]);
               }
             }
@@ -974,7 +974,7 @@ final class cj extends vc {
             stackIn_53_2 = 102;
             stackIn_53_3 = true;
             stackIn_53_4 = var3;
-            if (param1.field_I.j(29).field_q != 0) {
+            if (param1.field_I.currentShot(29).field_q != 0) {
               stackIn_54_0 = this;
               stackIn_54_5 = false;
             } else {
@@ -1022,11 +1022,11 @@ final class cj extends vc {
 
     private final void a(int param0, int param1, int param2, byte param3) {
         if (fo.field_c[param1][0][0] != fo.field_c[param1][1][1]) {
-          cj.a(fo.field_c[param1][0][1], fo.field_c[param1][1][1], 13421772, 0, param0);
+          TikiTableScene.a(fo.field_c[param1][0][1], fo.field_c[param1][1][1], 13421772, 0, param0);
         }
         int var5 = 64 % ((-24 - param3) / 59);
         if (fo.field_c[param1][1][0] != fo.field_c[param1][2][1]) {
-          cj.a(fo.field_c[param1][1][1], fo.field_c[param1][2][1], 13421772, param0, param2);
+          TikiTableScene.a(fo.field_c[param1][1][1], fo.field_c[param1][2][1], 13421772, param0, param2);
         }
         if (fo.field_c[param1][3][1] != fo.field_c[param1][2][0]) {
           SoftwareRasterizer.fillRectangleAlpha(0, fo.field_c[param1][2][1], SoftwareRasterizer.width, fo.field_c[param1][3][1] - fo.field_c[param1][2][1], 13421772, param2);
@@ -1046,8 +1046,8 @@ final class cj extends vc {
     final void a(int param0, di param1) {
         try {
           if (param0 != 1) {
-            al var4 = (al) null;
-            this.a((al) null, 126);
+            PoolGameModel var4 = (PoolGameModel) null;
+            this.a((PoolGameModel) null, 126);
           }
           this.field_b = cg.a(param1, "", "pool_jungle");
           this.field_i = cg.a(param1, "", "pool_jungle_win_jingle");
@@ -1217,66 +1217,66 @@ final class cj extends vc {
         int var7;
         var7 = Pool.field_O;
         if (param0 != -4577) {
-          cj.a(-42, 63, -74, 109, -107);
+          TikiTableScene.a(-42, 63, -74, 109, -107);
         }
-        for (var3 = 2; var3 < mc.field_j.length; var3++) {
-          if (null == mc.field_j[var3] ||
-            mc.field_j[var3].field_o.i() ||
-            !mc.field_j[var3].field_o.b(param0 ^ 4492)) {
-            stackIn_11_0 = (mc.field_j[var3] == null) ? 11 : 22;
+        for (var3 = 2; var3 < FreePlayRules.field_j.length; var3++) {
+          if (null == FreePlayRules.field_j[var3] ||
+            FreePlayRules.field_j[var3].field_o.i() ||
+            !FreePlayRules.field_j[var3].field_o.b(param0 ^ 4492)) {
+            stackIn_11_0 = (FreePlayRules.field_j[var3] == null) ? 11 : 22;
             var4 = ga.a(stackIn_11_0, true, ea.field_r);
             var6 = var4;
             if (var6 == 0) {
-              mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.a(128, true, ea.field_r)));
+              FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.a(128, true, ea.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.a(128, true, ea.field_r)));
+                  FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.a(128, true, ea.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.a(128, true, ea.field_r)));
+                        FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.a(128, true, ea.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  mc.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.a(128, true, ea.field_r)));
+                                  FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.a(128, true, ea.field_r)));
                                 } else {
-                                  var5 = (PcmSample) (mc.field_j[var3].field_o.field_n);
+                                  var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
                                   } else {
-                                    mc.field_j[var3] = rq.a(126, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
                                   }
                                 }
                               } else {
-                                mc.field_j[var3] = rq.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.a(128, true, ea.field_r)));
+                                FreePlayRules.field_j[var3] = rq.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.a(128, true, ea.field_r)));
                               }
                             } else {
-                              mc.field_j[var3] = rq.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.a(128, true, ea.field_r)));
+                              FreePlayRules.field_j[var3] = rq.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.a(128, true, ea.field_r)));
                             }
                           } else {
-                            mc.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.a(128, true, ea.field_r)));
+                            FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.a(128, true, ea.field_r)));
                           }
                         } else {
-                          mc.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.a(128, true, ea.field_r)));
+                          FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.a(128, true, ea.field_r)));
                         }
                       }
                     } else {
-                      mc.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.a(128, true, ea.field_r)));
+                      FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.a(128, true, ea.field_r)));
                     }
                   } else {
-                    mc.field_j[var3] = mn.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.a(128, true, ea.field_r)));
+                    FreePlayRules.field_j[var3] = mn.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.a(128, true, ea.field_r)));
                   }
                 }
               } else {
-                mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.a(128, true, ea.field_r)));
+                FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.a(128, true, ea.field_r)));
               }
             }
           }
@@ -1293,7 +1293,7 @@ final class cj extends vc {
         RuntimeException var3 = null;
         double var5 = 0.0;
         int var7 = 0;
-        al var8 = null;
+        PoolGameModel var8 = null;
         var7 = Pool.field_O;
         try {
           if (param1.field_m < 0.0) {
@@ -1311,8 +1311,8 @@ final class cj extends vc {
             }
           }
           if (param0) {
-            var8 = (al) null;
-            this.a((al) null, 35);
+            var8 = (PoolGameModel) null;
+            this.a((PoolGameModel) null, 35);
           }
           var3_double = param1.d(8);
           stackIn_14_0 = ((4194304L & pd.field_i) != 0L) ? 12000.0 : 2048.0;
@@ -1337,7 +1337,7 @@ final class cj extends vc {
         }
     }
 
-    final void a(al param0, int param1) {
+    final void a(PoolGameModel param0, int param1) {
         try {
           super.a(param0, param1);
           jo.a(0.8999999761581421f, 1.0f, 0.8999999761581421f, 0.0833333358168602f, -31792);
@@ -1444,7 +1444,7 @@ final class cj extends vc {
         }
     }
 
-    cj() {
+    TikiTableScene() {
         this.field_m = 96;
         this.field_d = 32;
         this.field_z = 0.8009999990463257f;
@@ -1457,8 +1457,8 @@ final class cj extends vc {
     }
 
     static {
-        field_U = "<%0> now has <%1> lives.";
+        playerXNowHasNLives = "<%0> now has <%1> lives.";
         field_fb = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, true, true, false, true, false, false, false, false, false, false, true};
-        field_ob = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        monthnames = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

@@ -3,12 +3,12 @@
  */
 abstract class kb {
     static int[] field_d;
-    static String field_f;
-    static String field_b;
+    static String mpYouofferrematch;
+    static String gameopt1moreratedgame;
     static vh field_h;
-    static String field_a;
+    static String loadingFonts;
     static int field_e;
-    static String field_c;
+    static String secretachievement;
     static vh field_i;
     static int[] field_g;
 
@@ -79,13 +79,13 @@ abstract class kb {
     }
 
     public static void a(byte param0) {
-        field_f = null;
-        field_a = null;
+        mpYouofferrematch = null;
+        loadingFonts = null;
         field_d = null;
         field_h = null;
-        field_c = null;
+        secretachievement = null;
         field_g = null;
-        field_b = null;
+        gameopt1moreratedgame = null;
         field_i = null;
         if (param0 != 111) {
           ke var2 = (ke) null;
@@ -110,7 +110,7 @@ abstract class kb {
         try {
           var4_long = 0L;
           if (param2 != -5790) {
-            field_f = (String) null;
+            mpYouofferrematch = (String) null;
           }
           var6 = null;
           if (param1.indexOf('@') != -1) {
@@ -144,10 +144,10 @@ abstract class kb {
     abstract int b(long param0, byte param1);
 
     static {
-        field_f = "You are offering a rematch.";
+        mpYouofferrematch = "You are offering a rematch.";
         field_d = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        field_a = "Loading fonts";
-        field_b = "You need to play 1 more rated game to unlock this option.";
-        field_c = "Secret achievement";
+        loadingFonts = "Loading fonts";
+        gameopt1moreratedgame = "You need to play 1 more rated game to unlock this option.";
+        secretachievement = "Secret achievement";
     }
 }

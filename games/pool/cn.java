@@ -4,7 +4,7 @@
 final class cn extends java.awt.Canvas {
     static int field_d;
     static jd[][] field_a;
-    static String field_b;
+    static String openinpopupwindow;
     private java.awt.Component field_c;
 
     final static AlphaFont a(di param0, int param1, int param2, di param3, int param4) {
@@ -19,7 +19,7 @@ final class cn extends java.awt.Canvas {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 24888) {
-            field_b = (String) null;
+            openinpopupwindow = (String) null;
           }
           if (vj.a(param2, param0, param1, (byte) 121)) {
             stackIn_6_0 = cl.a(param3.a(param4 - 24766, param1, param2), true);
@@ -53,7 +53,7 @@ final class cn extends java.awt.Canvas {
           sn.field_m.a(21, pm.field_m);
         }
         sn.field_m.a(39, c.field_e);
-        kg.field_l = new vn(sn.field_l, sn.field_m);
+        kg.field_l = new vn(sn.muChatLobby, sn.field_m);
         ir.field_a = new vh(0L, (vh) null);
         ir.field_a.a(-117, kg.field_l.field_i);
         ir.field_a.a(-120, gj.field_K);
@@ -80,9 +80,9 @@ final class cn extends java.awt.Canvas {
     public static void b(byte param0) {
         field_a = (jd[][]) null;
         if (param0 != 38) {
-          field_b = (String) null;
+          openinpopupwindow = (String) null;
         }
-        field_b = null;
+        openinpopupwindow = null;
     }
 
     public final void update(java.awt.Graphics param0) {
@@ -151,6 +151,6 @@ final class cn extends java.awt.Canvas {
     }
 
     static {
-        field_b = "Open in popup window";
+        openinpopupwindow = "Open in popup window";
     }
 }

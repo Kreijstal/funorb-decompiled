@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class oo {
+abstract class TableScene {
     static int[] field_w;
     static int field_I;
     cg field_n;
@@ -28,7 +28,7 @@ abstract class oo {
     int field_x;
     int field_C;
     private eg[][] field_f;
-    static String field_c;
+    static String timeTrial;
     cg field_i;
     static Sprite field_D;
     double field_E;
@@ -42,7 +42,7 @@ abstract class oo {
 
     void d(boolean param0) {
         if (!param0) {
-          oo.l(-87);
+          TableScene.l(-87);
         }
         this.field_s = null;
         this.field_g = (int[][]) null;
@@ -122,7 +122,7 @@ abstract class oo {
         }
     }
 
-    private final void a(dl param0, int param1, PoolMatchController param2, int param3) {
+    private final void a(Pocket param0, int param1, PoolMatchController param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -134,19 +134,19 @@ abstract class oo {
         long var8 = 0L;
         long var10 = 0L;
         int var12 = 0;
-        pq var13 = null;
+        Ball var13 = null;
         try {
-          var13 = param2.field_I.field_l[param3];
-          var6 = (long)(-param0.field_g + var13.field_g);
-          var8 = (long)(var13.field_k - param0.field_f);
+          var13 = param2.field_I.balls[param3];
+          var6 = (long)(-param0.centerX + var13.positionX);
+          var8 = (long)(var13.positionY - param0.centerY);
           var10 = IterableNodeHashTable.a(param1 ^ -24621, od.a(var6, var6, false) + od.a(var8, var8, false));
           var13.b(true);
-          if (var13.field_j > 4194304) {
+          if (var13.positionZ > 4194304) {
             param2.a(0, param3);
             return;
           }
-          if (var13.field_j < 0) {
-            var12 = 1179648 - rf.a(4194304 - (var13.field_j * var13.field_j >> 16), param1 ^ -24622);
+          if (var13.positionZ < 0) {
+            var12 = 1179648 - rf.a(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
           } else {
             var12 = 655360;
           }
@@ -157,18 +157,18 @@ abstract class oo {
             var8 = (long)var12 * var8 / var10;
             var6 = var6 * (long)var12 / var10;
           }
-          var13.field_k = (int)var8 + param0.field_f;
-          var13.field_p = true;
-          var13.field_I = var13.field_I * 63 >> 6;
-          var13.field_g = (int)var6 + param0.field_g;
-          var13.field_t = 63 * var13.field_t >> 6;
-          if (var13.field_j > 2359296) {
-            var13.field_j = 2359296;
+          var13.positionY = (int)var8 + param0.centerY;
+          var13.transformDirty = true;
+          var13.velocityX = var13.velocityX * 63 >> 6;
+          var13.positionX = (int)var6 + param0.centerX;
+          var13.velocityY = 63 * var13.velocityY >> 6;
+          if (var13.positionZ > 2359296) {
+            var13.positionZ = 2359296;
           }
-          var13.field_n = 15 * var13.field_n / 16;
-          var13.field_b = 15 * var13.field_b / 16;
-          var13.field_K = 15 * var13.field_K / 16;
-          var13.field_e = var13.field_e + 131072;
+          var13.angularVelocityX = 15 * var13.angularVelocityX / 16;
+          var13.angularVelocityY = 15 * var13.angularVelocityY / 16;
+          var13.angularVelocityZ = 15 * var13.angularVelocityZ / 16;
+          var13.velocityZ = var13.velocityZ + 131072;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -262,7 +262,7 @@ abstract class oo {
         }
     }
 
-    final void a(int[] param0, pq param1) {
+    final void a(int[] param0, Ball param1) {
         int var52 = 0;
         int var3;
         int var4;
@@ -355,21 +355,21 @@ abstract class oo {
         int var47Lifetime2;
         int var47Lifetime3;
         int var47Lifetime4;
-        if (param1.field_j > -524288) {
+        if (param1.positionZ > -524288) {
           return;
         }
         if (dq.field_a.field_g) {
-          var3 = this.field_q + (param1.field_g >> 13);
-          var4 = this.field_e + (param1.field_k >> 13);
-          var5 = this.field_u + (param1.field_j >> 13);
+          var3 = this.field_q + (param1.positionX >> 13);
+          var4 = this.field_e + (param1.positionY >> 13);
+          var5 = this.field_u + (param1.positionZ >> 13);
         } else {
           var3 = this.field_q + 2304;
           var4 = this.field_e + 1152;
           var5 = this.field_u;
         }
-        var6 = (param1.field_g >> 13) - var3;
-        var7 = (param1.field_k >> 13) - var4;
-        var8 = (param1.field_j >> 13) - var5;
+        var6 = (param1.positionX >> 13) - var3;
+        var7 = (param1.positionY >> 13) - var4;
+        var8 = (param1.positionZ >> 13) - var5;
         var9 = var7;
         var10 = -var6;
         var11 = var9 * var9 + var10 * var10;
@@ -388,28 +388,28 @@ abstract class oo {
           var12 = (var12 << 8) / var14;
           var13 = (var13 << 8) / var14;
         }
-        var14Lifetime1 = (param1.field_g >> 8) + 8 * var9;
-        var15 = (param1.field_k >> 8) + 8 * var10;
-        var16 = (param1.field_g >> 8) - 8 * var9;
-        var17 = (param1.field_k >> 8) - 8 * var10;
-        var18 = (param1.field_g >> 8) + 8 * var11Lifetime1;
-        var19 = (param1.field_k >> 8) + 8 * var12;
-        var20 = (param1.field_j >> 8) + 8 * var13;
-        var21 = (param1.field_g >> 8) - 8 * var11Lifetime1;
-        var22 = (param1.field_k >> 8) - 8 * var12;
-        var23 = (param1.field_j >> 8) - 8 * var13;
+        var14Lifetime1 = (param1.positionX >> 8) + 8 * var9;
+        var15 = (param1.positionY >> 8) + 8 * var10;
+        var16 = (param1.positionX >> 8) - 8 * var9;
+        var17 = (param1.positionY >> 8) - 8 * var10;
+        var18 = (param1.positionX >> 8) + 8 * var11Lifetime1;
+        var19 = (param1.positionY >> 8) + 8 * var12;
+        var20 = (param1.positionZ >> 8) + 8 * var13;
+        var21 = (param1.positionX >> 8) - 8 * var11Lifetime1;
+        var22 = (param1.positionY >> 8) - 8 * var12;
+        var23 = (param1.positionZ >> 8) - 8 * var13;
         var24 = -2048 - (var5 << 5);
         if (var24 == 0) {
           return;
         }
-        var14Lifetime1 = var14Lifetime1 + (param1.field_j >> 8) * -(var14Lifetime1 - (var3 << 5)) / var24;
-        var15 = var15 + (param1.field_j >> 8) * -(var15 - (var4 << 5)) / var24;
+        var14Lifetime1 = var14Lifetime1 + (param1.positionZ >> 8) * -(var14Lifetime1 - (var3 << 5)) / var24;
+        var15 = var15 + (param1.positionZ >> 8) * -(var15 - (var4 << 5)) / var24;
         var24Lifetime1 = -2048 - (var5 << 5);
         if (var24Lifetime1 == 0) {
           return;
         }
-        var16 = var16 + (param1.field_j >> 8) * -(var16 - (var3 << 5)) / var24Lifetime1;
-        var17 = var17 + (param1.field_j >> 8) * -(var17 - (var4 << 5)) / var24Lifetime1;
+        var16 = var16 + (param1.positionZ >> 8) * -(var16 - (var3 << 5)) / var24Lifetime1;
+        var17 = var17 + (param1.positionZ >> 8) * -(var17 - (var4 << 5)) / var24Lifetime1;
         var24Lifetime2 = var23 - (var5 << 5);
         if (var24Lifetime2 == 0) {
           return;
@@ -744,7 +744,7 @@ abstract class oo {
         if (param0 != -15631) {
           return;
         }
-        field_c = null;
+        timeTrial = null;
         field_w = null;
         field_D = null;
     }
@@ -776,7 +776,7 @@ abstract class oo {
 
     final fa a(int[] param0, eg param1, int param2) {
         RuntimeException var4 = null;
-        pq[] var5 = null;
+        Ball[] var5 = null;
         fa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -786,8 +786,8 @@ abstract class oo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -52) {
-            var5 = (pq[]) null;
-            this.a(true, (int[]) null, (pq[]) null);
+            var5 = (Ball[]) null;
+            this.a(true, (int[]) null, (Ball[]) null);
           }
           stackIn_3_0 = param1.a(this.field_C, this.field_F, this.field_q, this.field_e, this.field_u, param0);
           return stackIn_3_0;
@@ -831,7 +831,7 @@ abstract class oo {
         return stackIn_4_0;
     }
 
-    private final void a(dl[] param0, int param1) {
+    private final void a(Pocket[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         nc var3 = null;
@@ -852,7 +852,7 @@ abstract class oo {
             var6 = Math.cos(3.141592653589793 * (double)var3_int * 2.0 / 16.0);
             var8 = Math.sin(2.0 * (3.141592653589793 * (double)(var3_int + 1)) / 16.0);
             var10 = Math.cos(3.141592653589793 * (double)(var3_int + 1) * 2.0 / 16.0);
-            d.field_b.a(d.field_b.a(0, 0, 0), d.field_b.a(cr.a(4885, 18.0 * var10), cr.a(4885, var8 * 18.0), 0), d.field_b.a(cr.a(4885, 18.0 * var6), cr.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
+            d.field_b.a(d.field_b.a(0, 0, 0), d.field_b.a(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), d.field_b.a(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
           }
           var12 = (nc) (this.a(-113, d.field_b));
           var3 = var12;
@@ -861,7 +861,7 @@ abstract class oo {
             return;
           }
           for (var4 = 0; v.field_g.length > var4; var4++) {
-            v.field_g[var4] = new p(var12, new int[]{param0[var4].field_g >> 13, param0[var4].field_f >> 13, 0});
+            v.field_g[var4] = new p(var12, new int[]{param0[var4].centerX >> 13, param0[var4].centerY >> 13, 0});
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -878,7 +878,7 @@ abstract class oo {
         }
     }
 
-    private final void a(byte param0, bf[] param1) {
+    private final void a(byte param0, CushionSegment[] param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -892,7 +892,7 @@ abstract class oo {
             return;
           }
           for (var3_int = 0; var3_int < this.field_f.length; var3_int++) {
-            this.a(param1[var3_int].field_a >> 13, param1[var3_int].field_l >> 13, param1[var3_int].field_j >> 13, param1[var3_int].field_f >> 13, (byte) -57, var3_int);
+            this.a(param1[var3_int].startX >> 13, param1[var3_int].endY >> 13, param1[var3_int].startY >> 13, param1[var3_int].endX >> 13, (byte) -57, var3_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1010,8 +1010,8 @@ abstract class oo {
         }
     }
 
-    void a(al param0, int param1) {
-        bf[] var4 = null;
+    void a(PoolGameModel param0, int param1) {
+        CushionSegment[] var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -1019,13 +1019,13 @@ abstract class oo {
         RuntimeException var3 = null;
         try {
           this.f(2);
-          this.a(param0.field_w, -33);
-          this.a((byte) -92, param0.field_c);
-          this.a(param0.field_c, 16);
+          this.a(param0.pockets, -33);
+          this.a((byte) -92, param0.cushionSegments);
+          this.a(param0.cushionSegments, 16);
           this.k(0);
           if (param1 != 21894) {
-            var4 = (bf[]) null;
-            this.a((byte) 111, (bf[]) null);
+            var4 = (CushionSegment[]) null;
+            this.a((byte) 111, (CushionSegment[]) null);
             this.b(120);
           } else {
             this.b(120);
@@ -1124,10 +1124,10 @@ abstract class oo {
         }
     }
 
-    final void a(int[] param0, byte param1, boolean param2, pq[] param3, boolean param4) {
+    final void a(int[] param0, byte param1, boolean param2, Ball[] param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
-        pq var8 = null;
+        Ball var8 = null;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1148,8 +1148,8 @@ abstract class oo {
               }
             } else {
               var8 = param3[var7];
-              if (!var8.field_s &&
-                var8.field_j >= 0) {
+              if (!var8.inPlay &&
+                var8.positionZ >= 0) {
                 stackIn_9_0 = 1;
               } else {
                 stackIn_9_0 = 0;
@@ -1181,7 +1181,7 @@ abstract class oo {
         }
     }
 
-    final void a(boolean param0, int[] param1, pq[] param2) {
+    final void a(boolean param0, int[] param1, Ball[] param2) {
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1198,9 +1198,9 @@ abstract class oo {
             this.field_C = 46;
           }
           for (var4_int = 0; var4_int < param2.length; var4_int++) {
-            if (param2[var4_int].field_p) {
-              param2[var4_int].i(2);
-              dq.field_a.a(false, param2[var4_int].field_G, var4_int);
+            if (param2[var4_int].transformDirty) {
+              param2[var4_int].updateRenderTransform(2);
+              dq.field_a.a(false, param2[var4_int].renderTransform, var4_int);
             }
             w.field_a[var4_int] = (eb) ((Object) k.field_O[var4_int]);
             pd.field_f[var4_int] = var4_int;
@@ -1252,20 +1252,20 @@ abstract class oo {
               if (var6 != 17) {
                 if (var6 == 18) {
                   if (null != this.field_n) {
-                    ac.a(256, false, false, this.field_n);
+                    KillerBallSkin.a(256, false, false, this.field_n);
                   } else {
                     if (null != this.field_i) {
-                      ac.a(256, false, false, this.field_i);
+                      KillerBallSkin.a(256, false, false, this.field_i);
                     }
                   }
                 }
               } else {
                 if (this.field_i != null) {
-                  ac.a(256, false, false, this.field_i);
+                  KillerBallSkin.a(256, false, false, this.field_i);
                 }
               }
             } else {
-              ac.a(256, true, true, this.field_b);
+              KillerBallSkin.a(256, true, true, this.field_b);
             }
           } else {
             this.a(3, param1, (byte) -117, param3);
@@ -1277,29 +1277,29 @@ abstract class oo {
 
     void a(boolean param0) {
         if (param0) {
-          dl[] var3 = (dl[]) null;
-          this.a((dl[]) null, 70);
+          Pocket[] var3 = (Pocket[]) null;
+          this.a((Pocket[]) null, 70);
         }
     }
 
     void c(int param0, di param1) {
         try {
           if (param0 != -23569) {
-            oo.l(-78);
+            TableScene.l(-78);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "oo.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(al param0, int param1) {
+    final void b(PoolGameModel param0, int param1) {
         int var3_int = 0;
         int var3_intLifetime1;
         try {
-          k.field_O = new ec[param0.field_l.length];
-          w.field_a = new eb[rb.field_e.length + param0.field_l.length];
+          k.field_O = new ec[param0.balls.length];
+          w.field_a = new eb[rb.field_e.length + param0.balls.length];
           var3_int = param1;
-          for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.field_l.length; var3_intLifetime1++) {
+          for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.balls.length; var3_intLifetime1++) {
             k.field_O[var3_intLifetime1] = new ec(var3_intLifetime1, param0);
           }
           tc.field_d = new int[w.field_a.length];
@@ -1352,7 +1352,7 @@ abstract class oo {
         TriangleRasterizer.b(this.field_z);
     }
 
-    private final void a(bf[] param0, int param1) {
+    private final void a(CushionSegment[] param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         long var3_long = 0L;
@@ -1381,8 +1381,8 @@ abstract class oo {
           var6 = 0;
           for (var7 = 0; param0.length > var7; var7++) {
             for (var8 = 1 + var7; param0.length > var8; var8++) {
-              var9_long = (long)(param0[var7].a(param1 + 83) - param0[var8].a(param1 ^ 101));
-              var11 = (long)(param0[var7].a((byte) -127) - param0[var8].a((byte) -127));
+              var9_long = (long)(param0[var7].centerX(param1 + 83) - param0[var8].centerX(param1 ^ 101));
+              var11 = (long)(param0[var7].centerY((byte) -127) - param0[var8].centerY((byte) -127));
               var13 = od.a(var9_long, var9_long, false) + od.a(var11, var11, false);
               if (var3_long < var13) {
                 var3_long = var13;
@@ -1407,8 +1407,8 @@ abstract class oo {
             if (var15 >= this.field_a.length) {
               return;
             }
-            var8 = param0[var17[var15][1]].a(123) - param0[var17[var15][0]].a(109);
-            var9 = param0[var17[var15][1]].a((byte) -127) - param0[var17[var15][0]].a((byte) -127);
+            var8 = param0[var17[var15][1]].centerX(123) - param0[var17[var15][0]].centerX(109);
+            var9 = param0[var17[var15][1]].centerY((byte) -127) - param0[var17[var15][0]].centerY((byte) -127);
             this.field_a[var15][0] = -var9 >> 13;
             this.field_a[var15][1] = var8 >> 13;
             var10 = IterableNodeHashTable.a(-111, od.a((long)var8, (long)var8, false) + od.a((long)var9, (long)var9, false));
@@ -1445,7 +1445,7 @@ abstract class oo {
         RuntimeException decompiledCaughtException = null;
         double var3_double = 0.0;
         RuntimeException var3 = null;
-        pq[] var5 = null;
+        Ball[] var5 = null;
         try {
           if (!(param1.field_m < 0.0)) {
             if (param1.field_m > 288.0) {
@@ -1462,8 +1462,8 @@ abstract class oo {
             }
           }
           if (param0) {
-            var5 = (pq[]) null;
-            this.a((int[]) null, (byte) -29, true, (pq[]) null, false);
+            var5 = (Ball[]) null;
+            this.a((int[]) null, (byte) -29, true, (Ball[]) null, false);
           }
           var3_double = param1.d(8);
           if (var3_double > 768.0) {
@@ -1491,14 +1491,14 @@ abstract class oo {
         double var17 = 0.0;
         int var19 = 0;
         double var20 = 0.0;
-        float var2 = (float)cr.a(4885, Math.sqrt(414720.0));
+        float var2 = (float)PotEvent.a(4885, Math.sqrt(414720.0));
         int var3 = (int)Math.ceil((double)(var2 / (float)nc.field_Y.length));
         int var4 = (int)Math.ceil((double)(var2 / (float)nc.field_Y.length));
         this.field_y = new p[var3 * var4];
         double var5 = 576.0 / (double)var3;
         double var7 = 288.0 / (double)var4;
-        int var9 = (cr.a(4885, var5) >> 1) * 16 / 16;
-        int var10 = (cr.a(param0 + 4883, var7) >> 1) * 16 / 16;
+        int var9 = (PotEvent.a(4885, var5) >> 1) * 16 / 16;
+        int var10 = (PotEvent.a(param0 + 4883, var7) >> 1) * 16 / 16;
         this.field_s = new eg(4, param0, 1);
         int var11 = this.field_s.a(-var9, -var10, 0);
         int var12 = this.field_s.a(var9, -var10, 0);
@@ -1537,7 +1537,7 @@ abstract class oo {
         return 6723942;
     }
 
-    oo() {
+    TableScene() {
         this.field_q = -1024;
         this.field_u = -10240;
         this.field_p = 0.7853981633974483;
@@ -1560,12 +1560,12 @@ abstract class oo {
     void a(int param0, PoolMatchController param1) {
         int var4 = 0;
         int var6 = 0;
-        dl[] var3 = null;
+        Pocket[] var3 = null;
         tc var5 = null;
         int var7 = 0;
-        pq var8 = null;
+        Ball var8 = null;
         int var9 = 0;
-        dl[] var10 = null;
+        Pocket[] var10 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -1580,15 +1580,15 @@ abstract class oo {
             this.field_r.i()) {
             this.field_r = null;
           }
-          var10 = param1.field_I.field_w;
+          var10 = param1.field_I.pockets;
           var3 = var10;
           for (var4 = 0; var4 < var10.length; var4++) {
-            var5 = var10[var4].field_c;
+            var5 = var10[var4].pottedBalls;
             if (var5 != null) {
               for (var6 = 0; var6 < var5.a((byte) 127); var6++) {
                 var7 = var5.a(var6, 2229);
-                var8 = param1.field_I.field_l[var7];
-                if (var8.field_s) {
+                var8 = param1.field_I.balls[var7];
+                if (var8.inPlay) {
                   throw new IllegalStateException("Ball in play cannot be potted!");
                 }
                 if (!var8.field_o) {
@@ -1613,6 +1613,6 @@ abstract class oo {
     }
 
     static {
-        field_c = "Time trial";
+        timeTrial = "Time trial";
     }
 }

@@ -4,21 +4,21 @@
 class jh {
     static vh field_a;
     static cg field_d;
-    static String field_g;
-    static String field_b;
+    static String muLobbyName;
+    static String muGameoptWithdrawInviteToX;
     static Sprite field_e;
     static int field_c;
-    static String field_f;
+    static String addXToIgnore;
 
     public static void a(int param0) {
-        field_b = null;
-        field_g = null;
+        muGameoptWithdrawInviteToX = null;
+        muLobbyName = null;
         field_d = null;
         if (param0 != 21546) {
           return;
         }
         field_e = null;
-        field_f = null;
+        addXToIgnore = null;
         field_a = null;
     }
 
@@ -95,8 +95,8 @@ class jh {
     }
 
     static {
-        field_b = "Withdraw invitation to <%0> to join this game";
-        field_g = "Name";
-        field_f = "Add <%0> to ignore list";
+        muGameoptWithdrawInviteToX = "Withdraw invitation to <%0> to join this game";
+        muLobbyName = "Name";
+        addXToIgnore = "Add <%0> to ignore list";
     }
 }

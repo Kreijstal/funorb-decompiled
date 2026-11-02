@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac extends tm {
-    static String field_l;
+final class KillerBallSkin extends BallSkin {
+    static String createDisplayname;
     static Sprite field_n;
     static vh field_p;
     static int[] field_r;
-    static String field_q;
+    static String unpackingMusic;
     static int[] field_o;
     static int field_m;
 
@@ -161,14 +161,14 @@ final class ac extends tm {
           return (String) null;
         }
         if (param1 == 0) {
-          return ae.field_b;
+          return ae.ballsetEnglishGroup0;
         }
-        return ae.field_b;
+        return ae.ballsetEnglishGroup0;
     }
 
     final boolean c(int param0) {
         if (param0 != 2) {
-          field_q = (String) null;
+          unpackingMusic = (String) null;
           return false;
         }
         return false;
@@ -176,18 +176,18 @@ final class ac extends tm {
 
     public static void i(int param0) {
         if (param0 >= 78) {
-          field_l = null;
+          createDisplayname = null;
           field_n = null;
-          field_q = null;
+          unpackingMusic = null;
           field_p = null;
           field_o = null;
           field_r = null;
           return;
         }
-        ac.i(94);
-        field_l = null;
+        KillerBallSkin.i(94);
+        createDisplayname = null;
         field_n = null;
-        field_q = null;
+        unpackingMusic = null;
         field_p = null;
         field_o = null;
         field_r = null;
@@ -195,7 +195,7 @@ final class ac extends tm {
 
     private final int c(int param0, int param1) {
         if (param0 <= 75) {
-          ac.i(-122);
+          KillerBallSkin.i(-122);
           if (param1 == 0) {
             return 13158;
           }
@@ -265,7 +265,7 @@ final class ac extends tm {
         }
     }
 
-    ac() {
+    KillerBallSkin() {
         this.field_g = false;
     }
 
@@ -276,8 +276,8 @@ final class ac extends tm {
         int var2 = 0;
         int var3 = 0;
         int var1 = 0;
-        field_l = "Player Name: ";
-        field_q = "Unpacking music";
+        createDisplayname = "Player Name: ";
+        unpackingMusic = "Unpacking music";
         field_r = new int[]{2, 20, 21, 49, 6, 5, 9};
         field_o = new int[98304];
         for (var0 = 92682; 46341 <= var0; var0--) {

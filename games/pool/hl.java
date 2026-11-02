@@ -4,7 +4,7 @@
 final class hl implements fp {
     private int field_b;
     private int field_i;
-    static String field_c;
+    static String ratedGameTips;
     private BitmapFont field_e;
     private int field_j;
     private int field_g;
@@ -136,7 +136,7 @@ final class hl implements fp {
     }
 
     public static void a(boolean param0) {
-        field_c = null;
+        ratedGameTips = null;
         if (param0) {
           field_n = -28;
           field_a = null;
@@ -181,7 +181,7 @@ final class hl implements fp {
     }
 
     static {
-        field_c = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
+        ratedGameTips = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
         field_a = new ie();
     }
 }

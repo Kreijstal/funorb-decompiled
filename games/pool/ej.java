@@ -11,7 +11,7 @@ final class ej implements Runnable {
     static oq field_j;
     private AsyncRequest field_a;
     private PacketBuffer field_d;
-    static String field_c;
+    static String createAlertYearrange;
     private DataInputStream field_h;
     static int field_g;
     private AsyncRequest field_k;
@@ -122,7 +122,7 @@ final class ej implements Runnable {
           sa.field_r = param8.field_Y;
           eh.field_w = param1.field_g;
           gn.field_e = param8;
-          nk.field_b = param1.field_X;
+          TranslatedUiText.field_b = param1.field_X;
           wn.field_d = param1.field_N;
           qp.field_Yb = param8.field_g;
           sa.field_w = param1.field_q;
@@ -135,7 +135,7 @@ final class ej implements Runnable {
           param1.field_Z = null;
           param8.field_X = nr.field_P;
           param8.field_g = qp.field_Yb;
-          param8.field_B = nk.field_a;
+          param8.field_B = TranslatedUiText.field_a;
           param8.field_Y = sa.field_r;
           param8.field_q = ro.field_d;
           param8.field_l = ld.field_g;
@@ -152,7 +152,7 @@ final class ej implements Runnable {
           param1.field_M = vk.field_bb;
           param1.field_B = de.field_a;
           param1.field_K = eq.field_R;
-          param1.field_X = nk.field_b;
+          param1.field_X = TranslatedUiText.field_b;
           param1.field_l = ja.field_a;
           if (param9.field_Q != null) {
             if (null == param8.field_Q ||
@@ -702,7 +702,7 @@ final class ej implements Runnable {
 
     public static void a(boolean param0) {
         try {
-          field_c = null;
+          createAlertYearrange = null;
           field_j = null;
           if (!param0) {
             field_l = false;
@@ -713,7 +713,7 @@ final class ej implements Runnable {
     }
 
     static {
-        field_c = "Please enter a year between <%0> and <%1>";
+        createAlertYearrange = "Please enter a year between <%0> and <%1>";
     }
 
     @SuppressWarnings("unchecked")

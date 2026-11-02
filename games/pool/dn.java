@@ -3,7 +3,7 @@
  */
 final class dn extends IntrusiveNode {
     int[] field_l;
-    static String field_p;
+    static String joinRequestXsGame;
     static int[][] field_m;
     static int[] field_n;
     static Sprite[] field_o;
@@ -15,7 +15,7 @@ final class dn extends IntrusiveNode {
         }
         field_o = null;
         field_m = (int[][]) null;
-        field_p = null;
+        joinRequestXsGame = null;
         field_n = null;
     }
 
@@ -143,7 +143,7 @@ final class dn extends IntrusiveNode {
 
     final static boolean a(boolean param0, int param1) {
         if (!param0) {
-          field_p = (String) null;
+          joinRequestXsGame = (String) null;
         }
         return param1 >= 0 ? true : false;
     }
@@ -159,6 +159,6 @@ final class dn extends IntrusiveNode {
 
     static {
         field_n = new int[8192];
-        field_p = "Ask to join <%0>'s game";
+        joinRequestXsGame = "Ask to join <%0>'s game";
     }
 }

@@ -5,13 +5,13 @@ final class ua extends ig {
     static int field_v;
     private boolean field_q;
     static Sprite field_u;
-    static String field_m;
+    static String multiconstClan;
     static Sprite field_r;
     static int[] field_t;
     static int field_o;
-    static String field_n;
+    static String chatButton;
     private String field_p;
-    static String field_s;
+    static String startgame;
 
     final String a(String param0, int param1) {
         String var3 = null;
@@ -49,10 +49,10 @@ final class ua extends ig {
             this.field_q = var4.field_f;
           }
           if (this.field_q) {
-            stackIn_17_0 = lb.field_M;
+            stackIn_17_0 = lb.createUsernameAvailable;
             return stackIn_17_0;
           }
-          stackIn_15_0 = gi.field_n;
+          stackIn_15_0 = gi.createUsernameUnavailable;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,24 +134,24 @@ final class ua extends ig {
     }
 
     public static void h(int param0) {
-        field_m = null;
+        multiconstClan = null;
         field_r = null;
         field_u = null;
         if (param0 < -51) {
-          field_n = null;
+          chatButton = null;
           field_t = null;
-          field_s = null;
+          startgame = null;
           return;
         }
-        field_m = (String) null;
-        field_n = null;
+        multiconstClan = (String) null;
+        chatButton = null;
         field_t = null;
-        field_s = null;
+        startgame = null;
     }
 
     final static void b(boolean param0) {
         if (!param0) {
-          field_s = (String) null;
+          startgame = (String) null;
           if (oh.field_h) {
             kh.field_Vb.a((byte) -79, false);
             return;
@@ -165,11 +165,11 @@ final class ua extends ig {
     }
 
     static {
-        field_m = "Clan";
+        multiconstClan = "Clan";
         field_v = 0;
         field_t = new int[]{17, 18, 8};
-        field_n = "Chat";
+        chatButton = "Chat";
         field_o = 0;
-        field_s = "Start Game";
+        startgame = "Start Game";
     }
 }

@@ -13,8 +13,8 @@ class sl extends fe {
     private int field_N;
     private boolean field_S;
     private boolean field_Q;
-    static String field_W;
-    static String field_U;
+    static String playerYouX2AreOut;
+    static String tutorialOptionBasics;
 
     private final void j(byte param0) {
         if (this.field_t instanceof pe) {
@@ -60,7 +60,7 @@ class sl extends fe {
         var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         if (param0) {
-          field_U = (String) null;
+          tutorialOptionBasics = (String) null;
         }
         return var6.toString();
     }
@@ -287,8 +287,8 @@ class sl extends fe {
     public static void i(byte param0) {
         field_Y = null;
         field_V = null;
-        field_U = null;
-        field_W = null;
+        tutorialOptionBasics = null;
+        playerYouX2AreOut = null;
         if (param0 != 23) {
           return;
         }
@@ -586,7 +586,7 @@ class sl extends fe {
     static {
         field_Y = new byte[]{(byte)2, (byte)3, (byte)4, (byte)5};
         field_P = new int[8192];
-        field_U = "Basics";
-        field_W = "You and <%0> are out of lives!";
+        tutorialOptionBasics = "Basics";
+        playerYouX2AreOut = "You and <%0> are out of lives!";
     }
 }

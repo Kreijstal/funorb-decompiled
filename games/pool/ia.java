@@ -9,14 +9,14 @@ final class ia {
     int field_h;
     int field_e;
     private boolean field_g;
-    static String field_j;
+    static String mpOfferrematch;
     private int field_i;
     private int field_f;
     boolean field_a;
     static int field_l;
 
     public static void g(int param0) {
-        field_j = null;
+        mpOfferrematch = null;
         int var1 = 98 / ((param0 + 72) / 33);
         field_d = null;
     }
@@ -666,7 +666,7 @@ final class ia {
     }
 
     static {
-        field_j = "Offer rematch";
+        mpOfferrematch = "Offer rematch";
         field_l = -1;
     }
 }

@@ -3,7 +3,7 @@
  */
 final class c {
     static int field_b;
-    static String field_a;
+    static String tutorialLoseEightBallGame;
     static Sprite[] field_c;
     static vh field_e;
     static long field_d;
@@ -43,7 +43,7 @@ final class c {
           param2.field_k = 0;
           jp.field_N = new ee(var3_int, param2, param2);
           o.field_x = new wh(var3_int, param2, param2, new wp());
-          var4 = nk.c(2);
+          var4 = TranslatedUiText.c(2);
           if (var4 == null) {
             var11 = (Throwable) null;
             tc.a((Throwable) null, "QC2", -8555);
@@ -52,7 +52,7 @@ final class c {
           gp.a((byte) 58, var4);
           var12 = (BitmapFont) null;
           tp.field_i = id.a(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
-          bf.field_c = id.a(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
+          CushionSegment.field_c = id.a(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           br.field_J = id.a(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
@@ -63,7 +63,7 @@ final class c {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          w.field_b = hk.a(br.field_J, bf.field_c, var4, tp.field_i, (byte) 112);
+          w.field_b = hk.a(br.field_J, CushionSegment.field_c, var4, tp.field_i, (byte) 112);
           e.field_a.field_T = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class c {
 
     public static void a(int param0) {
         field_e = null;
-        field_a = null;
+        tutorialLoseEightBallGame = null;
         if (param0 != -13679) {
           return;
         }
@@ -169,6 +169,6 @@ final class c {
     }
 
     static {
-        field_a = "You potted the 8 ball illegally. I will re-spot it for you so you can continue.";
+        tutorialLoseEightBallGame = "You potted the 8 ball illegally. I will re-spot it for you so you can continue.";
     }
 }

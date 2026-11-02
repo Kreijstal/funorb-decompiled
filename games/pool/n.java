@@ -9,11 +9,11 @@ final class n extends ud {
     private int field_P;
     private int field_O;
     private int field_ab;
-    static String field_Q;
-    static String field_T;
+    static String statusResigned;
+    static String muGamelistOptions;
     static long[][] field_N;
     static long[] field_Z;
-    static String field_Y;
+    static String ratedGameTipsSetupPlural;
     static vh field_R;
     static String field_S;
 
@@ -135,7 +135,7 @@ final class n extends ud {
         if (param2) {
           var4++;
         }
-        return ml.field_c[var4];
+        return ml.mustloginAlternate[var4];
     }
 
     n(int param0, int param1, int param2, int param3, ei param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
@@ -206,9 +206,9 @@ final class n extends ud {
 
     public static void g(byte param0) {
         field_Z = null;
-        field_Y = null;
-        field_Q = null;
-        field_T = null;
+        ratedGameTipsSetupPlural = null;
+        statusResigned = null;
+        muGamelistOptions = null;
         if (param0 > -48) {
           field_Z = (long[]) null;
         }
@@ -228,10 +228,10 @@ final class n extends ud {
         long var12 = 0L;
         int var14 = 0;
         field_W = new ia(1);
-        field_Q = "Resigned.";
-        field_T = "Options";
+        statusResigned = "Resigned.";
+        muGamelistOptions = "Options";
         field_N = new long[8][256];
-        field_Y = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find suitable opponents in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
+        ratedGameTipsSetupPlural = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find suitable opponents in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
         field_Z = new long[11];
         int var0 = 0;
         while (var0 < 256) {

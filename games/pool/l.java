@@ -4,7 +4,7 @@
 final class l {
     static String field_c;
     static vh field_f;
-    static String field_b;
+    static String createAlertPasscontainsemail;
     static int field_g;
     static boolean field_a;
     static int field_e;
@@ -16,19 +16,19 @@ final class l {
           field_d = null;
           field_f = null;
           field_c = null;
-          field_b = null;
+          createAlertPasscontainsemail = null;
           return;
         }
-        field_b = (String) null;
+        createAlertPasscontainsemail = (String) null;
         field_d = null;
         field_f = null;
         field_c = null;
-        field_b = null;
+        createAlertPasscontainsemail = null;
     }
 
     static {
         field_z = "l.A(";
-        field_b = "This password contains your email address, and would be easy to guess";
+        createAlertPasscontainsemail = "This password contains your email address, and would be easy to guess";
         field_e = 204;
         field_g = aj.a(6429081, false, field_e);
     }

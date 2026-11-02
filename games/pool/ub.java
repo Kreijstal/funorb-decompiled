@@ -3,7 +3,7 @@
  */
 final class ub extends se {
     static vh field_q;
-    static String field_o;
+    static String playerListVsPlayerList;
     static vh field_n;
     static boolean field_p;
 
@@ -13,7 +13,7 @@ final class ub extends se {
           return;
         }
         try {
-          field_o = null;
+          playerListVsPlayerList = null;
           field_q = null;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ub.J(" + param0 + ')');
@@ -87,23 +87,23 @@ final class ub extends se {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 3) {
-            stackIn_4_0 = ti.field_a;
+            stackIn_4_0 = ti.muEnteredOtherGame;
             return stackIn_4_0;
           }
           if (param1 == 6) {
-            stackIn_9_0 = MouseHandler.field_a;
+            stackIn_9_0 = MouseHandler.muGameIsFull;
             return stackIn_9_0;
           }
           if (param1 == 7) {
-            stackIn_12_0 = wb.field_d;
+            stackIn_12_0 = wb.muGameHasStarted;
             return stackIn_12_0;
           }
           if (param1 == 8) {
-            stackIn_15_0 = af.field_h;
+            stackIn_15_0 = EightBallRules.muYouDeclinedInvite;
             return stackIn_15_0;
           }
           if (param1 == 9) {
-            stackIn_20_0 = up.field_K;
+            stackIn_20_0 = up.muInviteWithdrawn;
             return stackIn_20_0;
           }
           if (!param2) {
@@ -111,18 +111,18 @@ final class ub extends se {
             return stackIn_23_0;
           }
           if (param1 == 10) {
-            stackIn_28_0 = hr.field_s;
+            stackIn_28_0 = hr.muRequestDeclined;
             return stackIn_28_0;
           }
           if (param1 == 11) {
-            stackIn_33_0 = vl.field_o;
+            stackIn_33_0 = PlasmaBallSkin.muRequestWithdrawn;
             return stackIn_33_0;
           }
           if (param1 != 14) {
             stackIn_38_0 = null;
             return (String) (stackIn_38_0);
           }
-          stackIn_36_0 = nr.a(new String[]{param0}, -1, PacketBuffer.field_x);
+          stackIn_36_0 = nr.a(new String[]{param0}, -1, PacketBuffer.muAllPlayersHaveLeft);
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,7 +195,7 @@ final class ub extends se {
             field_p = false;
           }
           if (ok.field_mb == null) {
-            ok.field_mb = new am(qk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, qk.field_a.maxAscent, -1, 2147483647, true);
+            ok.field_mb = new am(PoolUiText.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, PoolUiText.field_a.maxAscent, -1, 2147483647, true);
           }
           stackIn_8_0 = ok.field_mb;
           return stackIn_8_0;
@@ -227,16 +227,16 @@ final class ub extends se {
             stackIn_16_0 = ~var5;
             if (var8 == 0) {
               if (stackIn_16_0 > -1) {
-                var4 = var4 + qe.field_y;
+                var4 = var4 + ShotRecord.field_y;
               } else {
                 var6 = ch.a(dq.field_j[var3_int], true, false);
                 var7 = nn.field_c - (var6 >> 1);
                 var4 = var4 + qi.field_e;
-                if (tj.a(param0, -23, (fj.field_h << 1) + ch.field_I, param1, (rm.field_b << 1) + var6, var4, var7 - rm.field_b)) {
+                if (tj.a(param0, -23, (NineBallRules.field_h << 1) + ch.field_I, param1, (rm.field_b << 1) + var6, var4, var7 - rm.field_b)) {
                   stackIn_12_0 = var5;
                   return stackIn_12_0;
                 }
-                var4 = var4 + ((fj.field_h << 1) + qi.field_e + ch.field_I);
+                var4 = var4 + ((NineBallRules.field_h << 1) + qi.field_e + ch.field_I);
               }
               var3_int++;
               continue;
@@ -293,19 +293,19 @@ final class ub extends se {
         int var18Lifetime1;
         var20 = Pool.field_O;
         try {
-          pq.field_F[0] = 16764000;
+          Ball.field_F[0] = 16764000;
           m.field_c = param1;
           kb.field_h = param5;
-          pq.field_F[2] = 9474303;
-          pq.field_F[3] = 16736511;
+          Ball.field_F[2] = 9474303;
+          Ball.field_F[3] = 16736511;
           ej.field_l = param8;
-          pq.field_F[4] = 16711935;
-          pq.field_F[1] = 6356832;
+          Ball.field_F[4] = 16711935;
+          Ball.field_F[1] = 6356832;
           ng.field_A[2] = 16736352;
-          pq.field_F[4] = 16711935;
+          Ball.field_F[4] = 16711935;
           ng.field_A[0] = 16764000;
           ng.field_A[1] = 6356832;
-          mc.field_g = 8421504;
+          FreePlayRules.field_g = 8421504;
           ng.field_A[3] = 16736511;
           var12 = new Sprite(4, 4);
           var13 = var12.field_D;
@@ -330,9 +330,9 @@ final class ub extends se {
           pa.field_J.field_I = m.field_c;
           ph.field_d.a(-125, pa.field_J);
           ph.field_d.d((byte) -128);
-          fj.field_j = new vh(0L, (vh) null);
-          fj.field_j.field_F = var16;
-          ph.field_d.a(17, fj.field_j);
+          NineBallRules.field_j = new vh(0L, (vh) null);
+          NineBallRules.field_j.field_F = var16;
+          ph.field_d.a(17, NineBallRules.field_j);
           uo.field_Mb = new vh[5];
           il.field_g = new vh[5];
           ln.field_v = new vh[5];
@@ -346,18 +346,18 @@ final class ub extends se {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_35_0 == stackIn_35_1) {
                 if (ej.field_l) {
-                  stackIn_13_0 = sn.field_l;
+                  stackIn_13_0 = sn.muChatLobby;
                 } else {
-                  stackIn_13_0 = ud.field_K;
+                  stackIn_13_0 = ud.muChatPublic;
                 }
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
                 ej.field_l) {
-                var19 = mm.field_l;
+                var19 = mm.muChatGame;
               } else {
                 decompiledFrameRemainder0 = (var18 == 2);
                 if (decompiledFrameRemainder0) {
-                  var19 = vk.field_P;
+                  var19 = vk.muChatPrivate;
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -381,7 +381,7 @@ final class ub extends se {
           }
           if (decompiledNaturalLoopExit0) {
             d.field_e = new vh(0L, param7);
-            d.field_e.field_nb = rk.field_f;
+            d.field_e.field_nb = rk.reportabuse;
             fl.field_q.a(25, d.field_e);
             if (!mg.a(61) ||
               ea.field_z) {
@@ -465,6 +465,6 @@ final class ub extends se {
     }
 
     static {
-        field_o = "<%0><br>versus<br><%1>";
+        playerListVsPlayerList = "<%0><br>versus<br><%1>";
     }
 }

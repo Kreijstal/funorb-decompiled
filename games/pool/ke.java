@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke {
-    static String field_a;
+    static String pressEscapeForOptionsMenu;
     static String field_g;
-    static String[] field_c;
+    static String[] guideNames;
     static IntrusiveDeque field_f;
     private String field_e;
     private boolean field_d;
-    static String field_b;
+    static String gameoptMightchange;
 
     final static void a(String param0, int param1, String[] param2, byte param3) {
         RuntimeException var4 = null;
@@ -191,20 +191,20 @@ final class ke {
     }
 
     public static void a(boolean param0) {
-        field_b = null;
+        gameoptMightchange = null;
         field_f = null;
         if (param0) {
           return;
         }
-        field_a = null;
-        field_c = null;
+        pressEscapeForOptionsMenu = null;
+        guideNames = null;
         field_g = null;
     }
 
     static {
-        field_a = "Press <img=3> for the options menu. Hover your mouse over <col=ccccff>blue text</col> for an explanation.";
-        field_b = "<%0> might change the options - wait and see.";
-        field_c = new String[]{"On", "Off"};
+        pressEscapeForOptionsMenu = "Press <img=3> for the options menu. Hover your mouse over <col=ccccff>blue text</col> for an explanation.";
+        gameoptMightchange = "<%0> might change the options - wait and see.";
+        guideNames = new String[]{"On", "Off"};
         field_f = new IntrusiveDeque();
     }
 }

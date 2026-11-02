@@ -17,7 +17,7 @@ final class nf extends ch implements jb, tb, jn {
     static IndexedSprite[] field_Z;
     static int field_T;
     static long field_Q;
-    static String field_db;
+    static String playerYouX2HaveWon;
     static Sprite[] field_V;
 
     private final int a(String param0, ei param1, int param2, int param3, String param4, int param5, byte param6) {
@@ -422,7 +422,7 @@ final class nf extends ch implements jb, tb, jn {
         field_S = null;
         field_Z = null;
         field_V = null;
-        field_db = null;
+        playerYouX2HaveWon = null;
     }
 
     public nf() {
@@ -435,15 +435,15 @@ final class nf extends ch implements jb, tb, jn {
         this.field_ab = new ga("", (cc) null, 3);
         int var1 = 1;
         this.field_W = new ri("", (cc) null, var1 != 0);
-        this.field_U = new fe(SpriteState.field_E, (cc) null);
-        this.field_Y = new fe(lc.field_Q, (cc) null);
-        this.field_bb.field_p = sg.field_H;
-        this.field_cb.field_p = ri.field_T;
-        this.field_O.field_p = wp.field_e;
-        this.field_X.field_p = kc.field_f;
-        this.field_R.field_p = ii.field_b;
-        this.field_ab.field_p = PoolMatchController.field_J;
-        this.field_W.field_p = ui.field_ab;
+        this.field_U = new fe(SpriteState.create, (cc) null);
+        this.field_Y = new fe(lc.goback, (cc) null);
+        this.field_bb.field_p = sg.createDisplaynameTooltip;
+        this.field_cb.field_p = ri.createEmailTooltip;
+        this.field_O.field_p = wp.createEmailConfirmTooltip;
+        this.field_X.field_p = kc.createPasswordTooltip;
+        this.field_R.field_p = ii.createPasswordConfirmTooltip;
+        this.field_ab.field_p = PoolMatchController.createAgeTooltip;
+        this.field_W.field_p = ui.createOptinNewsTooltip;
         this.field_bb.a((byte) -111, new ua(this.field_bb));
         this.field_cb.a((byte) -111, new r(this.field_cb));
         this.field_O.a((byte) -111, new me(this.field_O, this.field_cb));
@@ -462,22 +462,22 @@ final class nf extends ch implements jb, tb, jn {
         sm dupTemp$1 = new sm(10000536);
         this.field_R.field_z = (fp) ((Object) dupTemp$1);
         this.field_X.field_z = (fp) ((Object) dupTemp$1);
-        String var2 = nr.a(new String[]{this.j(0), this.i(11579568)}, -1, lh.field_d);
+        String var2 = nr.a(new String[]{this.j(0), this.i(11579568)}, -1, lh.createAgreeterms);
         int var3 = 20;
-        var3 = var3 + this.a((byte) 44, this.field_cb, var3, 170, ng.field_x);
-        var3 = var3 + (5 + this.a(lo.field_d, this.field_O, 20, 170, "", var3, (byte) -76));
-        var3 = var3 + this.a((byte) 44, this.field_X, var3, 170, to.field_n);
-        var3 = var3 + (5 + this.a(35, e.field_g, this.field_R, df.field_c, 170, var3));
-        var3 = var3 + (5 + this.a(35, ac.field_l, this.field_bb, se.field_k, 170, var3));
-        var3 = var3 + this.a(g.field_m, (byte) -114, 170, var3, this.field_ab);
-        n var4 = new n(46, var3, -90 + this.field_l, 25, this.field_W, true, -120 + this.field_l, 5, qk.field_a, 11579568, ab.field_b);
+        var3 = var3 + this.a((byte) 44, this.field_cb, var3, 170, ng.createEmail);
+        var3 = var3 + (5 + this.a(lo.createEmailConfirm, this.field_O, 20, 170, "", var3, (byte) -76));
+        var3 = var3 + this.a((byte) 44, this.field_X, var3, 170, PolarBallSkin.createPassword);
+        var3 = var3 + (5 + this.a(35, e.createPasswordConfirm, this.field_R, df.createPasswordHint, 170, var3));
+        var3 = var3 + (5 + this.a(35, KillerBallSkin.createDisplayname, this.field_bb, se.createDisplaynameHint, 170, var3));
+        var3 = var3 + this.a(g.createAge, (byte) -114, 170, var3, this.field_ab);
+        n var4 = new n(46, var3, -90 + this.field_l, 25, this.field_W, true, -120 + this.field_l, 5, PoolUiText.field_a, 11579568, ab.createOptinNews);
         this.a(true, var4);
         var3 = var3 + var4.field_y;
         am var5 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 0, 0, lc.field_O.maxAscent, -1, 2147483647, true);
         this.field_N = new mh(var2, var5);
         this.field_N.field_p = "";
-        this.field_N.a((byte) 73, cn.field_b, 0);
-        this.field_N.a((byte) 117, cn.field_b, 1);
+        this.field_N.a((byte) 73, cn.openinpopupwindow, 0);
+        this.field_N.a((byte) 117, cn.openinpopupwindow, 1);
         this.field_N.field_t = (cc) (this);
         this.field_N.b(46, var3, -90 + this.field_l, -15);
         var3 = var3 + (this.field_N.field_y + 15);
@@ -579,6 +579,6 @@ final class nf extends ch implements jb, tb, jn {
 
     static {
         field_S = new IntrusiveDeque();
-        field_db = "You and <%0> have won!";
+        playerYouX2HaveWon = "You and <%0> have won!";
     }
 }

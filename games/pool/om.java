@@ -7,7 +7,7 @@ class om extends am {
     static int field_w;
     static int field_x;
     static int field_v;
-    static String field_t;
+    static String tutorialShotModeLeave;
     static int[] field_s;
     static int[] field_r;
 
@@ -119,7 +119,7 @@ class om extends am {
     }
 
     public static void c(byte param0) {
-        field_t = null;
+        tutorialShotModeLeave = null;
         int var1 = 111 / ((param0 - 40) / 61);
         field_y = null;
         field_u = null;
@@ -145,7 +145,7 @@ class om extends am {
         }
         var2 = 36 / ((param0 - 1) / 45);
         if (am.field_e == null) {
-          if (nk.field_d &&
+          if (TranslatedUiText.field_d &&
             jc.field_c) {
             if (ib.field_v &&
               DualLinkNode.field_p) {
@@ -166,7 +166,7 @@ class om extends am {
           }
         } else {
           am.field_e.a(param1, -29423);
-          if (!nk.field_d) {
+          if (!TranslatedUiText.field_d) {
             if (null == ba.field_ub) {
               if (null == am.field_e) {
                 return;
@@ -283,6 +283,6 @@ class om extends am {
     }
 
     static {
-        field_t = "To <u=ffffff>leave shot mode</u>, press <img=4> <col=99ff99>'SPACE'</col>, or <img=0> click away from the cue ball.";
+        tutorialShotModeLeave = "To <u=ffffff>leave shot mode</u>, press <img=4> <col=99ff99>'SPACE'</col>, or <img=0> click away from the cue ball.";
     }
 }

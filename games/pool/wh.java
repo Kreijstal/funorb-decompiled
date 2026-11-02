@@ -3,7 +3,7 @@
  */
 final class wh {
     private fg field_d;
-    static String field_i;
+    static String fsFocus;
     private di field_h;
     static PlatformTaskDispatcher field_c;
     static int field_b;
@@ -265,7 +265,7 @@ final class wh {
         }
         field_c = null;
         field_a = null;
-        field_i = null;
+        fsFocus = null;
         field_j = null;
     }
 
@@ -317,7 +317,7 @@ final class wh {
     }
 
     static {
-        field_i = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
+        fsFocus = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_g = 0;
     }
 }

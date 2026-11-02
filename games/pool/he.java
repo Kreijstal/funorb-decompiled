@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class he {
-    static String field_a;
+    static String gameoptUnratedonly;
     static volatile boolean field_c;
     static di field_b;
-    static String[] field_d;
+    static String[] plusungoodShot;
 
     final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
@@ -99,8 +99,8 @@ final class he {
     }
 
     public static void a(int param0) {
-        field_d = null;
-        field_a = null;
+        plusungoodShot = null;
+        gameoptUnratedonly = null;
         field_b = null;
         if (param0 != -13) {
           field_c = false;
@@ -115,7 +115,7 @@ final class he {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ul.a(param0, (byte) 125)) {
+          if (!HalloweenBallSkin.a(param0, (byte) 125)) {
             return false;
           }
           if (param1 == null) {
@@ -203,7 +203,7 @@ final class he {
 
     static {
         field_c = true;
-        field_a = "This game option is not available in rated games.";
-        field_d = new String[]{"Terrible!", "Awful!", "Egad!"};
+        gameoptUnratedonly = "This game option is not available in rated games.";
+        plusungoodShot = new String[]{"Terrible!", "Awful!", "Egad!"};
     }
 }

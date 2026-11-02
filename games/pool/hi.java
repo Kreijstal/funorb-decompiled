@@ -4,18 +4,18 @@
 final class hi extends mb {
     static byte[][] field_h;
     static int[] field_k;
-    static String field_j;
-    static String field_i;
+    static String ballsetPlasmaGroup1;
+    static String fsButtonClose;
     private java.nio.ByteBuffer field_l;
 
     public static void f(int param0) {
         field_k = null;
         if (param0 < 117) {
-          field_j = (String) null;
+          ballsetPlasmaGroup1 = (String) null;
         }
-        field_j = null;
+        ballsetPlasmaGroup1 = null;
         field_h = (byte[][]) null;
-        field_i = null;
+        fsButtonClose = null;
     }
 
     final static byte[] a(int param0, CharSequence param1) {
@@ -154,7 +154,7 @@ final class hi extends mb {
         f.field_c = uc.a(true, new double[][][]{new double[][]{om.a(-93, new double[]{0.5, 0.5, -1.0, 0.5, 0.5, 0.0})}, ir.a(-122, om.a(-100, new double[]{1.22, 0.5, -0.45, 0.73, 0.5, 0.0})), rm.a(om.a(-84, new double[]{1.22, 1.323, -0.402, 0.83, 0.72, 0.0}), 123), rm.a(om.a(-77, new double[]{0.79, 1.6, -0.804, 0.55, 0.67, 0.0}), 126)});
         f.field_a = uc.a(true, new double[][][]{new double[][]{om.a(-92, new double[]{0.5, 0.65, -1.0, 0.5, 0.65, 0.0})}, ir.a(-101, om.a(-62, new double[]{1.41, 0.5, -0.6, 0.81, 0.5, 0.0})), rm.a(om.a(-107, new double[]{1.28, 1.48, -0.478, 0.85, 0.81, 0.0}), 126), rm.a(om.a(-83, new double[]{0.761, 1.846, -0.865, 0.593, 0.831, 0.0}), -115)});
         if (param0 >= -127) {
-          field_j = (String) null;
+          ballsetPlasmaGroup1 = (String) null;
         }
     }
 
@@ -162,7 +162,7 @@ final class hi extends mb {
         if (param0 != -11071) {
           field_k = (int[]) null;
         }
-        return nk.field_m.a(true);
+        return TranslatedUiText.field_m.a(true);
     }
 
     final static void a(java.awt.Component param0, int param1) {
@@ -266,7 +266,7 @@ final class hi extends mb {
     }
 
     static {
-        field_j = "<col=9999ff>Blues</col>";
-        field_i = "Close";
+        ballsetPlasmaGroup1 = "<col=9999ff>Blues</col>";
+        fsButtonClose = "Close";
     }
 }

@@ -4,7 +4,7 @@
 final class hf {
     static int field_c;
     static long field_e;
-    static String field_b;
+    static String multiconstSimilarRating;
     static int[] field_d;
     static int field_a;
 
@@ -23,7 +23,7 @@ final class hf {
             }
           }
           if (param2 != -96) {
-            field_b = (String) null;
+            multiconstSimilarRating = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -55,11 +55,11 @@ final class hf {
           field_d = (int[]) null;
         }
         field_d = null;
-        field_b = null;
+        multiconstSimilarRating = null;
     }
 
     static {
-        field_b = "Similar rating";
+        multiconstSimilarRating = "Similar rating";
         field_a = 4800;
     }
 }

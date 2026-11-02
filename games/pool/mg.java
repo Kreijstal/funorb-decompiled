@@ -3,8 +3,8 @@
  */
 final class mg {
     static int field_d;
-    static String field_b;
-    static String field_a;
+    static String ignorelistdupe;
+    static String playerX2AreOut;
     static vh field_c;
 
     final static im a(int param0, long param1) {
@@ -27,9 +27,9 @@ final class mg {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        playerX2AreOut = null;
         field_c = null;
-        field_b = null;
+        ignorelistdupe = null;
         if (param0 >= -40) {
           mg.a(true);
         }
@@ -52,7 +52,7 @@ final class mg {
     }
 
     static {
-        field_b = "<%0> is already on your ignore list.";
-        field_a = "<%0> and <%1> are out of lives!";
+        ignorelistdupe = "<%0> is already on your ignore list.";
+        playerX2AreOut = "<%0> and <%1> are out of lives!";
     }
 }

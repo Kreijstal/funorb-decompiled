@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vc extends oo {
-    static String field_N;
-    static String field_J;
+abstract class ModelTableScene extends TableScene {
+    static String optionsmenuNotpaused;
+    static String presstabtochat;
     static int field_K;
     int[][] field_M;
-    static String field_P;
+    static String pottingBallForYou;
     static int field_L;
     eg[] field_O;
 
@@ -84,7 +84,7 @@ abstract class vc extends oo {
         }
         if (!param0) {
           var4 = (java.awt.Canvas) null;
-          vc.a(true, (java.awt.Canvas) null);
+          ModelTableScene.a(true, (java.awt.Canvas) null);
         }
     }
 
@@ -144,12 +144,12 @@ abstract class vc extends oo {
 
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
-          if (fk.field_ab == 11) {
+          if (PlasmaTableScene.field_ab == 11) {
             bi.b(-125);
           }
           a.a(am.field_n, param0, uh.field_o, kk.field_w);
           if (!param0) {
-            field_N = (String) null;
+            optionsmenuNotpaused = (String) null;
           }
           fe.a(0, 0, (byte) -118, param1);
         } catch (RuntimeException runtimeException) {
@@ -299,17 +299,17 @@ abstract class vc extends oo {
     public static void d(byte param0) {
         if (param0 < 95) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          vc.a(false, (java.awt.Canvas) null);
+          ModelTableScene.a(false, (java.awt.Canvas) null);
         }
-        field_J = null;
-        field_P = null;
-        field_N = null;
+        presstabtochat = null;
+        pottingBallForYou = null;
+        optionsmenuNotpaused = null;
     }
 
-    vc() {
+    ModelTableScene() {
     }
 
-    void a(al param0, int param1) {
+    void a(PoolGameModel param0, int param1) {
         try {
           super.a(param0, param1 ^ 0);
           this.c(true);
@@ -324,9 +324,9 @@ abstract class vc extends oo {
     }
 
     static {
-        field_J = "Press TAB to chat or F10 to open Quick Chat.";
-        field_N = "Options Menu";
+        presstabtochat = "Press TAB to chat or F10 to open Quick Chat.";
+        optionsmenuNotpaused = "Options Menu";
         field_L = 100;
-        field_P = "Potting a ball for you: you are now <%0>";
+        pottingBallForYou = "Potting a ball for you: you are now <%0>";
     }
 }

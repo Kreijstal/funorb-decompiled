@@ -4,21 +4,21 @@
 final class rp {
     static vh field_d;
     static tf field_b;
-    static String field_a;
-    static String field_c;
+    static String sendPmToX;
+    static String waitingforGraphics;
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 == 13) {
           field_d = null;
-          field_a = null;
-          field_c = null;
+          sendPmToX = null;
+          waitingforGraphics = null;
           return;
         }
-        field_c = (String) null;
+        waitingforGraphics = (String) null;
         field_d = null;
-        field_a = null;
-        field_c = null;
+        sendPmToX = null;
+        waitingforGraphics = null;
     }
 
     final static void a(vh param0, vh param1, int param2) {
@@ -116,8 +116,8 @@ final class rp {
     }
 
     static {
-        field_a = "Send private message to <%0>";
+        sendPmToX = "Send private message to <%0>";
         field_b = new tf(2);
-        field_c = "Waiting for graphics";
+        waitingforGraphics = "Waiting for graphics";
     }
 }

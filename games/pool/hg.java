@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hg {
-    static String field_b;
+    static String fsButtonTryagain;
     static vh field_c;
     static int field_a;
 
@@ -38,7 +38,7 @@ final class hg {
           wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
           return;
         }
-        field_b = (String) null;
+        fsButtonTryagain = (String) null;
         o.field_C.c(param1, param3);
         if (!param2) {
           return;
@@ -74,13 +74,13 @@ final class hg {
 
     public static void b(boolean param0) {
         field_c = null;
-        field_b = null;
+        fsButtonTryagain = null;
         if (param0) {
           field_c = (vh) null;
         }
     }
 
     static {
-        field_b = "Try again";
+        fsButtonTryagain = "Try again";
     }
 }

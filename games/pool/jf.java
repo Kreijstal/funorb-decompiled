@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class jf extends iq implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static String field_q;
-    static String field_n;
+    static String decisionButtonPlay;
+    static String ratingPlayed;
     static String field_o;
     private java.awt.image.ImageConsumer field_p;
     private java.awt.image.ColorModel field_m;
@@ -17,7 +17,7 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
           int[] var2 = var3;
           param0.field_v = param0.field_X;
           if (param1 != 38) {
-            field_n = (String) null;
+            ratingPlayed = (String) null;
           }
           param0.field_X = var3;
         } catch (RuntimeException runtimeException) {
@@ -30,7 +30,7 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
           this.field_p.setPixels(0, 0, this.field_e, this.field_k, this.field_m, this.field_h, 0, this.field_e);
           this.field_p.imageComplete(2);
           if (param0 <= 59) {
-            field_n = (String) null;
+            ratingPlayed = (String) null;
           }
           return;
         }
@@ -68,14 +68,14 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
 
     public static void c(int param0) {
         if (param0 == 2) {
-          field_n = null;
-          field_q = null;
+          ratingPlayed = null;
+          decisionButtonPlay = null;
           field_o = null;
           return;
         }
         jf.c(-27);
-        field_n = null;
-        field_q = null;
+        ratingPlayed = null;
+        decisionButtonPlay = null;
         field_o = null;
     }
 
@@ -182,8 +182,8 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     static {
-        field_q = "Play";
+        decisionButtonPlay = "Play";
         field_o = null;
-        field_n = "Played";
+        ratingPlayed = "Played";
     }
 }

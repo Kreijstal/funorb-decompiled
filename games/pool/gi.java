@@ -8,7 +8,7 @@ final class gi extends IntrusiveNode {
     int field_l;
     int field_q;
     gi field_s;
-    static String field_n;
+    static String createUsernameUnavailable;
     int field_m;
     static int field_t;
 
@@ -90,14 +90,14 @@ final class gi extends IntrusiveNode {
         int var13Lifetime1;
         try {
           eh.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = qe.field_S.length;
+          var1_int = ShotRecord.field_S.length;
           var20 = new int[var1_int];
           var19 = var20;
           var2 = var19;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_oc = qe.field_S[var3];
+            var4_ref_oc = ShotRecord.field_S[var3];
             var4_ref_oc.a((byte) 87);
-            qe.b(0, var3);
+            ShotRecord.b(0, var3);
             var5 = var4_ref_oc.field_n + var4_ref_oc.field_q >> 1;
             var6 = var4_ref_oc.field_b + var4_ref_oc.field_N >> 1;
             var7 = var4_ref_oc.field_f + var4_ref_oc.field_F >> 1;
@@ -114,7 +114,7 @@ final class gi extends IntrusiveNode {
           var5Lifetime1 = eh.field_p[11] >> 8;
           var6Lifetime1 = im.field_fc << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = af.c((byte) -123, var6Lifetime1) >> 8;
+          var8Lifetime1 = EightBallRules.c((byte) -123, var6Lifetime1) >> 8;
           var9Lifetime1 = o.a(var6Lifetime1, (byte) 83) >> 8;
           if (wn.field_i != -1 &&
             gg.field_f != -1) {
@@ -136,16 +136,16 @@ final class gi extends IntrusiveNode {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; qe.field_S.length > var15; var15++) {
+          for (var15 = 0; ShotRecord.field_S.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < qe.field_S.length; var17_int++) {
+            for (var17_int = 1; var17_int < ShotRecord.field_S.length; var17_int++) {
               if (var20[var17_int] > var20[var16]) {
                 var16 = var17_int;
               }
             }
             var20[var16] = -2147483648;
-            var17 = qe.field_S[var16];
-            qe.b(0, var16);
+            var17 = ShotRecord.field_S[var16];
+            ShotRecord.b(0, var16);
             for (var18 = 0; var18 < 3; var18++) {
               IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + qp.field_gc[var15][var18];
             }
@@ -161,7 +161,7 @@ final class gi extends IntrusiveNode {
     }
 
     public static void a(boolean param0) {
-        field_n = null;
+        createUsernameUnavailable = null;
         if (!param0) {
           field_o = (vh) null;
         }
@@ -218,6 +218,6 @@ final class gi extends IntrusiveNode {
     }
 
     static {
-        field_n = "That name is not available";
+        createUsernameUnavailable = "That name is not available";
     }
 }

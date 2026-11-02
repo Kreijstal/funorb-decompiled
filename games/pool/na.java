@@ -3,8 +3,8 @@
  */
 final class na {
     static int field_c;
-    static String field_b;
-    static String field_d;
+    static String tutorialShotModePower;
+    static String connectionlostReconnecting;
     static vn field_e;
     static int field_a;
     static int field_f;
@@ -49,12 +49,12 @@ final class na {
             em.field_L == null &&
             tp.field_e == null) {
             if (!hr.field_y) {
-              var6 = vl.field_m;
-              var7 = jo.field_L;
+              var6 = PlasmaBallSkin.field_m;
+              var7 = jo.messageLobby;
               var6.field_n.a(var7, 17130, 14);
             }
-            var8 = vl.field_m;
-            var9 = fl.field_n;
+            var8 = PlasmaBallSkin.field_m;
+            var9 = fl.quickchatLobby;
             var8.field_n.a(var9, 17130, 20);
           }
           if (1 == param0.field_p &&
@@ -62,23 +62,23 @@ final class na {
             em.field_L != null &&
             param0.field_o == em.field_L.g(20872)) {
             if (!hr.field_y) {
-              var10 = vl.field_m;
-              var11 = vd.field_f;
+              var10 = PlasmaBallSkin.field_m;
+              var11 = vd.messageGame;
               var10.field_n.a(var11, 17130, 14);
             }
-            var12 = vl.field_m;
-            var13 = br.field_K;
+            var12 = PlasmaBallSkin.field_m;
+            var13 = br.quickchatGame;
             var12.field_n.a(var13, 17130, 20);
           }
-          vl.field_m.b(2616);
-          vl.field_m.a((byte) 124, false);
+          PlasmaBallSkin.field_m.b(2616);
+          PlasmaBallSkin.field_m.a((byte) 124, false);
           if (param1 != 122) {
             na.a((byte) -50);
           }
-          vl.field_m.a(param0.field_p, param0.field_d, (byte) 64);
-          vl.field_m.a((byte) 95);
-          vl.field_m.a(param0, false);
-          var14 = vl.field_m;
+          PlasmaBallSkin.field_m.a(param0.field_p, param0.field_d, (byte) 64);
+          PlasmaBallSkin.field_m.a((byte) 95);
+          PlasmaBallSkin.field_m.a(param0, false);
+          var14 = PlasmaBallSkin.field_m;
           var3 = lq.field_W;
           var4 = ua.field_o;
           var14.field_n.c(0, 0, var3, param1 - 122, var4);
@@ -193,8 +193,8 @@ final class na {
 
     public static void a(byte param0) {
         field_e = null;
-        field_b = null;
-        field_d = null;
+        tutorialShotModePower = null;
+        connectionlostReconnecting = null;
         if (param0 != 43) {
           String var2 = (String) null;
           na.a(-87, (String) null);
@@ -202,7 +202,7 @@ final class na {
     }
 
     static {
-        field_b = "To set the <u=ffffff>power</u>, use the <img=1> <col=99ff99>mouse wheel</col>, or the <img=7> and <img=8> cursor keys, or <img=12> and <img=14>.";
-        field_d = "Connection lost - attempting to reconnect";
+        tutorialShotModePower = "To set the <u=ffffff>power</u>, use the <img=1> <col=99ff99>mouse wheel</col>, or the <img=7> and <img=8> cursor keys, or <img=12> and <img=14>.";
+        connectionlostReconnecting = "Connection lost - attempting to reconnect";
     }
 }

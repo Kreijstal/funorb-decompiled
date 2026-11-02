@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static String field_a;
-    static String field_b;
+    static String privatequickchatToX;
+    static String playerListAreOut;
     static Sprite[][] field_d;
     static rb field_e;
     static int field_c;
 
     public static void a(byte param0) {
-        field_b = null;
-        field_a = null;
+        playerListAreOut = null;
+        privatequickchatToX = null;
         field_e = null;
         if (param0 > 31) {
           field_d = (Sprite[][]) null;
@@ -56,7 +56,7 @@ final class jl {
     }
 
     static {
-        field_b = "<%0> are all out of lives!";
-        field_a = "To <%0>: ";
+        playerListAreOut = "<%0> are all out of lives!";
+        privatequickchatToX = "To <%0>: ";
     }
 }

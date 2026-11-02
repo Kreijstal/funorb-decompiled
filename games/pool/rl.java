@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rl {
-    static String field_i;
+    static String decisionButtonPass;
     static int field_e;
-    static String field_j;
+    static String unableToAddIgnore;
     static di field_h;
     static di field_c;
     static vh field_b;
-    static String field_g;
+    static String fsAcceptCountdownSing;
     static int field_a;
     static int field_f;
     static vh field_d;
@@ -176,11 +176,11 @@ final class rl {
               return;
             }
             if (var2 == 10) {
-              var35 = (kh) (ep.field_A.c((byte) 83));
+              var35 = (kh) (NetworkGameClient.field_A.c((byte) 83));
               while (var35 != null) {
                 var35.unlink((byte) -117);
                 var35.a(false);
-                var35 = (kh) (ep.field_A.f((byte) -5));
+                var35 = (kh) (NetworkGameClient.field_A.f((byte) -5));
               }
               return;
             }
@@ -371,7 +371,7 @@ final class rl {
             md.field_c[var4Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) 105);
           }
           pm.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-67);
-          mc.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-108);
+          FreePlayRules.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-108);
           for (var4Lifetime3 = 0; ka.field_s.length > var4Lifetime3; var4Lifetime3++) {
             ka.field_s[var4Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 105);
           }
@@ -401,16 +401,16 @@ final class rl {
           field_b = (vh) null;
         }
         field_b = null;
-        field_i = null;
+        decisionButtonPass = null;
         field_h = null;
-        field_g = null;
+        fsAcceptCountdownSing = null;
         field_c = null;
-        field_j = null;
+        unableToAddIgnore = null;
     }
 
     static {
-        field_j = "Unable to add name - system busy";
-        field_i = "Pass";
-        field_g = "If you do nothing the game will revert to normal view in <%0> second.";
+        unableToAddIgnore = "Unable to add name - system busy";
+        decisionButtonPass = "Pass";
+        fsAcceptCountdownSing = "If you do nothing the game will revert to normal view in <%0> second.";
     }
 }

@@ -13,7 +13,7 @@ final class pf {
     private int field_l;
     static hj field_e;
     static int field_k;
-    static String field_a;
+    static String tutorialOptionNineBall;
 
     final void a(int param0, pf param1) {
         RuntimeException runtimeException = null;
@@ -463,7 +463,7 @@ final class pf {
           return;
         }
         try {
-          field_a = null;
+          tutorialOptionNineBall = null;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "pf.G(" + param0 + ')');
         }
@@ -630,6 +630,6 @@ final class pf {
 
     static {
         field_e = new hj(11, 0, 1, 2);
-        field_a = "Nine-ball";
+        tutorialOptionNineBall = "Nine-ball";
     }
 }

@@ -4,13 +4,13 @@
 class DualLinkNode extends IntrusiveNode {
     long field_m;
     static di field_r;
-    static String field_l;
-    static String field_t;
+    static String statusOutOfLives;
+    static String targetOpenTable;
     DualLinkNode field_q;
     static boolean field_s;
     DualLinkNode field_n;
     static boolean field_p;
-    static String field_o;
+    static String playerX2AreOfferingDraw;
     static boolean field_v;
     static int field_u;
 
@@ -21,7 +21,7 @@ class DualLinkNode extends IntrusiveNode {
 
     final void a(long param0, int param1) {
         if (param1 != 45) {
-          field_o = (String) null;
+          playerX2AreOfferingDraw = (String) null;
         }
         if (null != this.field_n) {
           throw new RuntimeException();
@@ -30,14 +30,14 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     public static void c(int param0) {
-        field_o = null;
-        field_l = null;
+        playerX2AreOfferingDraw = null;
+        statusOutOfLives = null;
         field_r = null;
         if (param0 != -3604) {
           BitmapFont var2 = (BitmapFont) null;
           DualLinkNode.a(-30, (String[]) null, (String) null, (BitmapFont) null, -45);
         }
-        field_t = null;
+        targetOpenTable = null;
     }
 
     final boolean d(int param0) {
@@ -79,9 +79,9 @@ class DualLinkNode extends IntrusiveNode {
           DualLinkNode.a(33, -109, 29, false, 1, 26, 48);
         }
         if (hn.field_b != 2) {
-          var7 = vd.field_f;
+          var7 = vd.messageGame;
         } else {
-          var7 = wb.field_f;
+          var7 = wb.sendPm;
         }
         la.a(-57, param1, param2, param5, var7, param3, param0, param6);
     }
@@ -180,10 +180,10 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     static {
-        field_l = "Out of lives.";
-        field_t = "Open table";
+        statusOutOfLives = "Out of lives.";
+        targetOpenTable = "Open table";
         field_p = true;
         field_s = true;
-        field_o = "<%0> and <%1> want to draw.";
+        playerX2AreOfferingDraw = "<%0> and <%1> want to draw.";
     }
 }

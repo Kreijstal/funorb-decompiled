@@ -5,10 +5,10 @@ final class cb {
     static String[] field_f;
     static int field_d;
     static IntrusiveDeque field_e;
-    static String field_c;
+    static String previous;
     static java.security.SecureRandom field_a;
     static int field_g;
-    static String[] field_b;
+    static String[] themeNames;
 
     final static void a(Object param0, PlatformTaskDispatcher param1, int param2) {
         int var3_int = 0;
@@ -128,20 +128,20 @@ final class cb {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 28555) {
-          field_c = (String) null;
+          previous = (String) null;
         }
         field_a = null;
         field_e = null;
-        field_b = null;
-        field_c = null;
+        themeNames = null;
+        previous = null;
     }
 
     static {
         field_f = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
-        field_c = "Previous";
+        previous = "Previous";
         field_g = 480;
         field_d = 0;
         field_e = new IntrusiveDeque();
-        field_b = new String[]{"Modern", "Plasma", "Aztec", "Polar", "Space"};
+        themeNames = new String[]{"Modern", "Plasma", "Aztec", "Polar", "Space"};
     }
 }

@@ -6,23 +6,23 @@ final class up extends lh {
     private int field_u;
     static int[] field_M;
     private int field_k;
-    static String field_w;
+    static String mbAchievementCount1;
     static int field_j;
     static int field_l;
     private ad field_z;
-    static String field_L;
+    static String tickerHintMoveCueball;
     private IterableNodeHashTable field_G;
-    static String field_K;
+    static String muInviteWithdrawn;
     private byte[] field_E;
     private int field_y;
-    static String field_I;
-    static String field_v;
+    static String muXJoinedYourGame;
+    static String soundColon;
     private np field_t;
     static int field_m;
     private no field_r;
     private np field_n;
     private rn field_D;
-    static String field_J;
+    static String menuRematchGame;
     private gr field_H;
     private byte[] field_o;
     private int field_x;
@@ -79,7 +79,7 @@ final class up extends lh {
     final void b(int param0) {
         if (null != this.field_t) {
           if (param0 < 78) {
-            field_J = (String) null;
+            menuRematchGame = (String) null;
           }
           this.field_B = true;
           if (null == this.field_s) {
@@ -121,7 +121,7 @@ final class up extends lh {
         var8 = Pool.field_O;
         try {
           if (param1 == null) {
-            stackIn_3_0 = gp.field_a;
+            stackIn_3_0 = gp.createAlertNamelength;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -145,23 +145,23 @@ final class up extends lh {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_30_0 = oh.field_g;
+                    stackIn_30_0 = oh.createAlertDoublespace;
                     return stackIn_30_0;
                   }
                 }
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_35_0 = lg.field_r;
+                stackIn_35_0 = lg.createAlertNameleadingspace;
                 return stackIn_35_0;
               }
-              stackIn_18_0 = lg.field_r;
+              stackIn_18_0 = lg.createAlertNameleadingspace;
               return stackIn_18_0;
             }
-            stackIn_13_0 = gp.field_a;
+            stackIn_13_0 = gp.createAlertNamelength;
             return stackIn_13_0;
           }
-          stackIn_8_0 = gp.field_a;
+          stackIn_8_0 = gp.createAlertNamelength;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -302,16 +302,16 @@ final class up extends lh {
     }
 
     public static void a(boolean param0) {
-        field_J = null;
+        menuRematchGame = null;
         field_M = null;
-        field_I = null;
-        field_w = null;
-        field_L = null;
+        muXJoinedYourGame = null;
+        mbAchievementCount1 = null;
+        tickerHintMoveCueball = null;
         field_p = null;
-        field_v = null;
-        field_K = null;
+        soundColon = null;
+        muInviteWithdrawn = null;
         if (!param0) {
-          field_w = (String) null;
+          mbAchievementCount1 = (String) null;
         }
     }
 
@@ -401,7 +401,7 @@ final class up extends lh {
               if (null != this.field_z.field_a &&
                 null != this.field_z.field_a[param0]) {
                 var29 = this.field_z.field_a[param0];
-                var30 = jr.a(-2 + var18.length, (byte) -83, var18, 0);
+                var30 = TikiBallSkin.a(-2 + var18.length, (byte) -83, var18, 0);
                 var11 = 0;
                 var9 = var11;
                 while (64 > var11) {
@@ -454,7 +454,7 @@ final class up extends lh {
             if (this.field_z.field_a != null &&
               null != this.field_z.field_a[param0]) {
               var27 = this.field_z.field_a[param0];
-              var28 = jr.a(var18.length - 2, (byte) -76, var18, 0);
+              var28 = TikiBallSkin.a(var18.length - 2, (byte) -76, var18, 0);
               for (var9 = 0; 64 > var9; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();
@@ -731,12 +731,12 @@ final class up extends lh {
 
     static {
         field_M = new int[7];
-        field_K = "The invitation has been withdrawn.";
-        field_v = "Sound: ";
-        field_I = "<%0> has joined your game.";
-        field_L = "Press and hold the <img=0> on the cue ball to move it.";
+        muInviteWithdrawn = "The invitation has been withdrawn.";
+        soundColon = "Sound: ";
+        muXJoinedYourGame = "<%0> has joined your game.";
+        tickerHintMoveCueball = "Press and hold the <img=0> on the cue ball to move it.";
         field_m = -1;
-        field_w = "OVER <%0>";
-        field_J = "Rematch";
+        mbAchievementCount1 = "OVER <%0>";
+        menuRematchGame = "Rematch";
     }
 }

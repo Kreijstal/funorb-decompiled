@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-public final class Pool extends ep {
+public final class Pool extends NetworkGameClient {
     static kf[] field_N;
     static long field_Q;
     static nm field_I;
-    static String field_M;
+    static String potBallsInAnyOrderFinishOnBlack;
     static int[] field_L;
     static vh field_P;
-    static String field_K;
+    static String muChatLobbyHide;
     static rk field_J;
     public static int field_O;
 
@@ -90,10 +90,10 @@ public final class Pool extends ep {
               } else {
                 o.c((byte) 60);
               }
-              me.field_s = fk.field_V;
+              me.field_s = PlasmaTableScene.field_V;
             }
           } else {
-            if (fk.field_V != me.field_s) {
+            if (PlasmaTableScene.field_V != me.field_s) {
               uk.field_m = uk.field_m - 1;
               if (uk.field_m == 0) {
                 me.field_s = me.field_o;
@@ -104,17 +104,17 @@ public final class Pool extends ep {
                   ml.a(25756, ti.field_d, 3);
                 }
                 ra.a((byte) -108);
-                sq.field_b = eo.field_Ub;
+                GameRules.field_b = eo.field_Ub;
                 if (nm.field_c) {
                   nm.field_c = false;
                   qr.a(-28038, false);
                 }
                 if (bl.field_x) {
-                  fq.a(-3405, -4, sq.field_b, false);
+                  fq.a(-3405, -4, GameRules.field_b, false);
                   bl.field_x = false;
                 }
-                if (dn.a(true, sq.field_b)) {
-                  al.l(41);
+                if (dn.a(true, GameRules.field_b)) {
+                  PoolGameModel.l(41);
                 }
               }
               me.field_s = aa.field_d;
@@ -124,11 +124,11 @@ public final class Pool extends ep {
           var3_int = 0;
           var4 = 0;
           if (!param0) {
-            if (sq.field_b != ne.field_w) {
+            if (GameRules.field_b != ne.field_w) {
               sg.field_P = sg.field_P + 1;
               ih.a((byte) 46);
               if (sg.field_P == 32) {
-                al.l(param1 - 128);
+                PoolGameModel.l(param1 - 128);
               }
             } else {
               if (ne.field_w != -1) {
@@ -174,7 +174,7 @@ public final class Pool extends ep {
             while (n.h(127)) {
               if (un.field_b) {
                 if (ib.field_v) {
-                  if (rj.a(15, 12, -1, 13)) {
+                  if (KillerRules.a(15, 12, -1, 13)) {
                     continue;
                   }
                 } else {
@@ -212,12 +212,12 @@ public final class Pool extends ep {
             }
           }
         }
-        if (-3 == sq.field_b) {
+        if (-3 == GameRules.field_b) {
           ti.field_d = null;
           var7 = new String[fr.field_n];
           var9 = var7;
           for (var4Lifetime1 = 0; var4Lifetime1 < fr.field_n; var4Lifetime1++) {
-            var7[var4Lifetime1] = jo.field_I[var4Lifetime1];
+            var7[var4Lifetime1] = jo.playerNs[var4Lifetime1];
           }
           stackIn_91_0 = null;
           stackIn_91_1 = null;
@@ -248,12 +248,12 @@ public final class Pool extends ep {
           fq.a(stackIn_97_0, stackIn_97_1, stackIn_98_2, var4Lifetime1Lifetime1 != 0);
           jc.field_c = true;
         }
-        if (sq.field_b == -7) {
+        if (GameRules.field_b == -7) {
           ti.field_d = null;
           var8 = new String[fr.field_n];
           var10 = var8;
           for (var4Lifetime2 = 0; var4Lifetime2 < fr.field_n; var4Lifetime2++) {
-            var8[var4Lifetime2] = jo.field_I[var4Lifetime2];
+            var8[var4Lifetime2] = jo.playerNs[var4Lifetime2];
           }
           stackIn_105_0 = null;
           stackIn_105_1 = null;
@@ -285,11 +285,11 @@ public final class Pool extends ep {
           fq.a(stackIn_108_0, stackIn_108_1, stackIn_109_2, var5 != 0);
           jc.field_c = true;
         }
-        if (sq.field_b == -6) {
+        if (GameRules.field_b == -6) {
           ti.field_d = null;
           var3 = di.field_j;
           if (var3 == null) {
-            var3 = vq.field_Zb;
+            var3 = vq.youPlayer;
           }
           ba.field_ub = new PoolMatchController(vh.field_Ab, new String[]{var3});
           stackIn_117_0 = (!jd.field_a) ? 0 : 1;
@@ -300,11 +300,11 @@ public final class Pool extends ep {
           fq.a(stackIn_119_0, stackIn_119_1, stackIn_120_2, var4Lifetime3 != 0);
           jc.field_c = true;
         }
-        if (sq.field_b == -8) {
+        if (GameRules.field_b == -8) {
           ti.field_d = null;
           var3 = di.field_j;
           if (var3 == null) {
-            var3 = vq.field_Zb;
+            var3 = vq.youPlayer;
           }
           stackIn_127_0 = null;
           stackIn_127_1 = null;
@@ -331,15 +331,15 @@ public final class Pool extends ep {
           fq.a(stackIn_133_0, stackIn_133_1, stackIn_134_2, var4Lifetime4 != 0);
           jc.field_c = true;
         }
-        if (sq.field_b == -4) {
+        if (GameRules.field_b == -4) {
           ej.field_j.b(false, 9);
           ub.field_p = true;
-          sq.field_b = ne.field_w;
+          GameRules.field_b = ne.field_w;
           eq.field_U = ir.field_h;
         }
-        if (sq.field_b == -5) {
+        if (GameRules.field_b == -5) {
           nf.a(em.field_L.g(20872), true, 11);
-          sq.field_b = ne.field_w;
+          GameRules.field_b = ne.field_w;
           br.field_H = true;
         }
         if (param1 != 0) {
@@ -350,14 +350,14 @@ public final class Pool extends ep {
     public static void c(boolean param0) {
         field_L = null;
         field_P = null;
-        field_K = null;
+        muChatLobbyHide = null;
         field_J = null;
         field_N = null;
         field_I = null;
         if (param0) {
-          field_K = (String) null;
+          muChatLobbyHide = (String) null;
         }
-        field_M = null;
+        potBallsInAnyOrderFinishOnBlack = null;
     }
 
     final void a(byte param0) {
@@ -383,46 +383,46 @@ public final class Pool extends ep {
           return;
         }
         if (!rm.field_d) {
-          vc.a(true, var11);
+          ModelTableScene.a(true, var11);
           return;
         }
         if (param0 != 120) {
           return;
         }
         if (!PoolMatchController.d(false)) {
-          fo.a(cf.field_c, 100.0f, false);
-          vc.a(true, var11);
+          fo.a(cf.loadingExtradata, 100.0f, false);
+          ModelTableScene.a(true, var11);
           return;
         }
         if (!de.field_g &&
-          ne.field_w != sq.field_b) {
+          ne.field_w != GameRules.field_b) {
           if (ne.field_w == -2) {
-            vl.a(sq.field_b, -21972, false, jc.field_c);
+            PlasmaBallSkin.a(GameRules.field_b, -21972, false, jc.field_c);
             var3_int = 32 - sg.field_P;
             pn.field_l.a(0, 0, (var3_int << 8) / 32);
-          } else if (-2 == sq.field_b) {
-            vl.a(ne.field_w, -21972, false, nk.field_d);
+          } else if (-2 == GameRules.field_b) {
+            PlasmaBallSkin.a(ne.field_w, -21972, false, TranslatedUiText.field_d);
             pn.field_l.a(0, 0, (sg.field_P << 8) / 32);
           } else {
             var3_int = dp.a(sg.field_P, 32, 108);
             SoftwareRasterizer.setClip(0, 0, var3_int, SoftwareRasterizer.height);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(320, 240);
-            vl.a(sq.field_b, -21972, false, jc.field_c);
+            PlasmaBallSkin.a(GameRules.field_b, -21972, false, jc.field_c);
             SoftwareRasterizer.setClip(var3_int, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(320, 240);
-            vl.a(ne.field_w, -21972, false, nk.field_d);
+            PlasmaBallSkin.a(ne.field_w, -21972, false, TranslatedUiText.field_d);
             SoftwareRasterizer.resetClip();
             TriangleRasterizer.useRasterClip();
             nn.a(true, 32, sg.field_P);
           }
         } else {
-          vl.a(ne.field_w, -21972, true, nk.field_d);
+          PlasmaBallSkin.a(ne.field_w, -21972, true, TranslatedUiText.field_d);
         }
-        if (!nk.field_d ||
+        if (!TranslatedUiText.field_d ||
           !jc.field_c) {
-          if (sq.field_b == ne.field_w &&
+          if (GameRules.field_b == ne.field_w &&
             ne.field_w == -2) {
             pn.field_l.a(0, 0);
           }
@@ -438,7 +438,7 @@ public final class Pool extends ep {
           var3_intLifetime1 = SoftwareRasterizer.width - 400 >> 1;
           var4_int = SoftwareRasterizer.height - 140 >> 1;
           nj.a(rm.field_g, (byte) 14, 400, var3_intLifetime1, var4_int, 140);
-          mc.field_e.drawParagraph(kh.field_gc.field_l, 20 + var3_intLifetime1, 20 + var4_int, 360, 64, 1, -1, 1, 1, 0);
+          FreePlayRules.field_e.drawParagraph(kh.field_gc.field_l, 20 + var3_intLifetime1, 20 + var4_int, 360, 64, 1, -1, 1, 1, 0);
           SoftwareRasterizer.fillRectangle(20 + var3_intLifetime1, -20 + (140 + (var4_int - 20)), 360, 20, 0);
           SoftwareRasterizer.fillRectangle(20 + (var3_intLifetime1 + 2), -20 + (140 + var4_int) - 18, kh.field_gc.field_H * 356 / (kh.field_gc.field_G - 1), 16, 16615680);
         }
@@ -455,7 +455,7 @@ public final class Pool extends ep {
             }
           }
           IsaacCipher.field_f[var3.field_l].drawScaled(8, var4_intLifetime1, 32, 32);
-          mc.field_e.d(md.field_a[var3.field_l], 48, var4_intLifetime1 + mc.field_e.maxAscent, 4, 1);
+          FreePlayRules.field_e.d(md.achievementNames[var3.field_l], 48, var4_intLifetime1 + FreePlayRules.field_e.maxAscent, 4, 1);
         }
         if (bj.c(1)) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -508,19 +508,19 @@ public final class Pool extends ep {
         o.e(116);
         md.a(true);
         hp.a((byte) -71);
-        tm.d(-22799);
+        BallSkin.d(-22799);
         jk.b((byte) -93);
         ag.a(0);
-        oo.l(-15631);
-        cj.m(112);
-        vf.e((byte) 76);
+        TableScene.l(-15631);
+        TikiTableScene.m(112);
+        PolarTableScene.e((byte) 76);
         ob.d((byte) 107);
         pj.b(false);
         fo.a(-1);
         ra.a(false);
         ta.b(24470);
         pk.a((byte) 101);
-        ep.a(true);
+        NetworkGameClient.a(true);
         ClientException.a(param0 ^ -28);
         GameApplet.g((byte) -77);
         ej.a(true);
@@ -563,7 +563,7 @@ public final class Pool extends ep {
         BitmapFont.a();
         cf.a(param0 + 28774);
         PoolMatchController.c(true);
-        nk.d(param0 + 28);
+        TranslatedUiText.d(param0 + 28);
         IntrusiveNode.b((byte) 115);
         vk.c(-819201);
         IterableNodeHashTable.a((byte) 91);
@@ -585,22 +585,22 @@ public final class Pool extends ep {
         uc.b((byte) 112);
         aq.a(false);
         pl.a(param0 - 23306);
-        qe.d((byte) 114);
-        ul.a((byte) -27);
+        ShotRecord.d((byte) 114);
+        HalloweenBallSkin.a((byte) -27);
         gf.a(true);
         lk.a(-24061);
         gp.a(63);
         hq.i(5);
-        al.b(10);
+        PoolGameModel.b(10);
         kj.b(param0 ^ 9401);
         oq.c(true);
         mm.c(-13569);
         or.a(false);
         IsaacCipher.a(param0 ^ 81);
-        pq.b((byte) -66);
-        bf.c((byte) 77);
-        dl.b(false);
-        sq.d(13);
+        Ball.b((byte) -66);
+        CushionSegment.c((byte) 77);
+        Pocket.b(false);
+        GameRules.d(13);
         jq.a(false);
         ia.g(80);
         ad.a(20592);
@@ -623,8 +623,8 @@ public final class Pool extends ep {
         p.b(75);
         ec.a((byte) 116);
         mk.a(0);
-        hm.a(param0 + 144);
-        vc.d((byte) 117);
+        Quaternion.a(param0 + 144);
+        ModelTableScene.d((byte) 117);
         so.c(param0 ^ -9943);
         SpriteState.c((byte) 11);
         DualLinkNode.c(-3604);
@@ -670,20 +670,20 @@ public final class Pool extends ep {
         dr.a(11468);
         t.c(param0 ^ 88);
         mq.a(false);
-        fj.b(false);
+        NineBallRules.b(false);
         um.a(116);
         ef.b(1);
         ah.a(false);
         un.a((byte) -101);
-        ni.e((byte) 71);
-        fk.m(param0 - 100);
-        gh.e((byte) -116);
-        mf.i(1);
+        ModernTableScene.e((byte) 71);
+        PlasmaTableScene.m(param0 - 100);
+        SpaceTableScene.e((byte) -116);
+        ClassicBallSkin.i(1);
         nn.a(param0 + 16034);
-        vl.i(120);
-        jr.i(10860);
-        to.i(param0 ^ -20);
-        ac.i(85);
+        PlasmaBallSkin.i(120);
+        TikiBallSkin.i(10860);
+        PolarBallSkin.i(param0 ^ -20);
+        KillerBallSkin.i(85);
         pi.b();
         be.f((byte) -89);
         pa.g(param0 - 73);
@@ -722,7 +722,7 @@ public final class Pool extends ep {
         Bzip2Decoder.a();
         uq.a(-8090);
         ja.a(726237729);
-        qk.a(param0 ^ 32);
+        PoolUiText.a(param0 ^ 32);
         hl.a(false);
         lg.a(true);
         vd.a(-1);
@@ -762,12 +762,12 @@ public final class Pool extends ep {
         q.a(101);
         ci.a((byte) 8);
         ti.a(param0 ^ 20983);
-        af.h((byte) -75);
-        rj.d((byte) -104);
+        EightBallRules.h((byte) -75);
+        KillerRules.d((byte) -104);
         g.a(5893);
         kp.a(104);
-        mc.d((byte) -105);
-        vp.p(-9);
+        FreePlayRules.d((byte) -105);
+        TimeTrialRules.p(-9);
         sn.a((byte) -119);
         co.a(true);
         fm.g(16);
@@ -823,7 +823,7 @@ public final class Pool extends ep {
         qr.a((byte) 83);
         nl.a(-54);
         fr.c((byte) 69);
-        cr.c((byte) 90);
+        PotEvent.c((byte) 90);
         dn.a(param0 - 2020);
         ro.a(240);
         bk.a(-5917);
@@ -901,7 +901,7 @@ public final class Pool extends ep {
 
     private final void m(byte param0) {
         if (GameApplet.field_m != null) {
-          qk.a(GameApplet.field_m, -8);
+          PoolUiText.a(GameApplet.field_m, -8);
           GameApplet.field_m = null;
           fm.a(0);
         }
@@ -911,13 +911,13 @@ public final class Pool extends ep {
         fh.field_b = fh.a(3, (byte) 103);
         cp.field_a = fh.a(4, (byte) 103);
         hr.field_q = fh.a(6, (byte) 103);
-        pq.field_z = fh.a(7, (byte) 103);
+        Ball.field_z = fh.a(7, (byte) 103);
         fg.field_d = fh.a(8, (byte) 103);
         he.field_b = fh.a(9, (byte) 103);
         gf.field_g = fh.a(10, (byte) 103);
         jc.field_a = fh.a(11, (byte) 103);
         s.field_a = fh.a(12, (byte) 103);
-        ep.field_F = fh.a(13, (byte) 103);
+        NetworkGameClient.field_F = fh.a(13, (byte) 103);
         rl.field_h = fh.a(18, (byte) 103);
         sh.a(sd.field_R, (byte) -32, qp.field_Zb);
     }
@@ -985,29 +985,29 @@ public final class Pool extends ep {
             return;
           }
           if (uq.field_c == 9) {
-            al.l(-124);
+            PoolGameModel.l(-124);
             ub.field_p = false;
-            sq.field_b = 20;
+            GameRules.field_b = 20;
             ng.field_B = kn.field_e.j(-49);
             continue;
           }
           if (uq.field_c == 14) {
-            al.l(-124);
-            mk.a(hh.a((byte) 1), 1024, nf.g((byte) 103), 150, te.field_p, te.a(-17931, 8), te.a(-17931, 2000), gh.f(true), 4, 13162);
+            PoolGameModel.l(-124);
+            mk.a(hh.a((byte) 1), 1024, nf.g((byte) 103), 150, te.field_p, te.a(-17931, 8), te.a(-17931, 2000), SpaceTableScene.f(true), 4, 13162);
             rp.a(im.f(0), db.f((byte) 13), -36);
             ub.field_p = false;
             un.field_b = true;
             td.field_d = true;
-            sq.field_b = -2;
+            GameRules.field_b = -2;
             ib.field_r = 0;
             continue;
           }
           if (15 == uq.field_c) {
             if (td.field_d) {
-              al.l(param0 - 127);
+              PoolGameModel.l(param0 - 127);
               lq.a(true);
               IntrusiveDeque.g((byte) 74);
-              sq.field_b = 0;
+              GameRules.field_b = 0;
               mj.field_e = false;
               vq.field_Sb = true;
               td.field_d = false;
@@ -1044,7 +1044,7 @@ public final class Pool extends ep {
               var10[var5Lifetime2] = rb.b(var10[var5Lifetime2], ~var21[var5Lifetime2]);
             }
             if (em.field_K) {
-              for (var3 = 0; var3 < md.field_a.length; var3++) {
+              for (var3 = 0; var3 < md.achievementNames.length; var3++) {
                 if (fe.a(var22, param0 ^ -13670, var3)) {
                   ui.field_U.b((byte) -3, new bq(var3));
                 }
@@ -1073,12 +1073,12 @@ public final class Pool extends ep {
             if (uq.field_c == 66) {
               if (ib.field_v ||
                 mj.field_e) {
-                al.l(param0 + 108);
+                PoolGameModel.l(param0 + 108);
                 if (ib.field_v) {
                   ba.field_ub.c(param0 ^ 259, false);
                 }
                 mj.field_e = false;
-                sq.field_b = -2;
+                GameRules.field_b = -2;
                 ib.field_r = 0;
                 jc.field_c = false;
                 ib.field_v = false;
@@ -1148,7 +1148,7 @@ public final class Pool extends ep {
                   continue;
                 }
                 ne.field_w = 23;
-                sq.field_b = 23;
+                GameRules.field_b = 23;
                 continue;
               }
               if (uq.field_c == 70) {
@@ -1169,7 +1169,7 @@ public final class Pool extends ep {
                 if (ba.field_ub == null) {
                   continue;
                 }
-                ni.f((byte) -119);
+                ModernTableScene.f((byte) -119);
                 continue;
               }
               if (73 == uq.field_c) {
@@ -1178,14 +1178,14 @@ public final class Pool extends ep {
                 if (null == ba.field_ub) {
                   continue;
                 }
-                ni.f((byte) -119);
+                ModernTableScene.f((byte) -119);
                 continue;
               }
             }
             this.f(15000);
             continue;
           }
-          al.l(param0 ^ -126);
+          PoolGameModel.l(param0 ^ -126);
           kn.field_e.p(8);
           var2_int = kn.field_e.e(4, 52);
           if (var2_int == 15) {
@@ -1231,7 +1231,7 @@ public final class Pool extends ep {
             ib.field_v = true;
             ba.field_ub = var7;
             IterableNodeHashTable.a(false);
-            ni.f((byte) -119);
+            ModernTableScene.f((byte) -119);
             kj.a((byte) -109);
           }
           br.field_H = false;
@@ -1239,7 +1239,7 @@ public final class Pool extends ep {
             var7.field_S = -1;
           }
           jc.field_c = true;
-          sq.field_b = -1;
+          GameRules.field_b = -1;
         }
     }
 
@@ -1339,7 +1339,7 @@ public final class Pool extends ep {
                     var3 = tl.h(8);
                     if (var3 == 1) {
                       bl.field_x = true;
-                      nk.a(pl.field_d, 0, (byte) 88);
+                      TranslatedUiText.a(pl.pleaselogin, 0, (byte) 88);
                     }
                     this.a(true, 0);
                   }
@@ -1364,12 +1364,12 @@ public final class Pool extends ep {
               }
             } else {
               if (me.field_s == me.field_o) {
-                var3 = gh.n(-1);
+                var3 = SpaceTableScene.n(-1);
                 if (2 != var3) {
                   if (var3 != 3) {
                     if (var3 == 4) {
                       nm.field_c = true;
-                      nk.a(jc.field_d, 0, (byte) 78);
+                      TranslatedUiText.a(jc.pleaseloginMember, 0, (byte) 78);
                     }
                     this.a(true, 0);
                   } else {
@@ -1420,7 +1420,7 @@ public final class Pool extends ep {
                   }
                   fq.a(stackIn_75_0, stackIn_75_1, stackIn_76_2, false);
                 } else {
-                  ng.field_B = ui.field_Z;
+                  ng.field_B = ui.textRemovedFromGame;
                   stackIn_71_0 = -3405;
                   stackIn_71_1 = 20;
                   if (!mg.a(true)) {
@@ -1430,7 +1430,7 @@ public final class Pool extends ep {
                   }
                   fq.a(stackIn_71_0, stackIn_71_1, stackIn_72_2, false);
                 }
-                al.l(-127);
+                PoolGameModel.l(-127);
                 s.field_c[ne.field_w].a(0, 0, false);
                 td.field_d = false;
                 ib.field_v = false;
@@ -1479,7 +1479,7 @@ public final class Pool extends ep {
 
     private final boolean d(int param0, boolean param1) {
         int var3;
-        vf var4;
+        PolarTableScene var4;
         int var6;
         di var7;
         String var8;
@@ -1540,7 +1540,7 @@ public final class Pool extends ep {
         String var63;
         String var64;
         Object var65;
-        cj var65_ref;
+        TikiTableScene var65_ref;
         String var66;
         String var67;
         String var68;
@@ -1553,7 +1553,7 @@ public final class Pool extends ep {
         da.a(-99);
         if (fg.field_d == null) {
           if (he.field_b != null) {
-            var66 = cq.field_e;
+            var66 = cq.unpackingSoundeffects;
             fo.a(var66, (float)w.field_i[20], false);
             this.a((byte) 120);
             he.field_b = null;
@@ -1561,10 +1561,10 @@ public final class Pool extends ep {
             return false;
           }
           if (jc.field_a != null) {
-            var67 = ac.field_q;
+            var67 = KillerBallSkin.unpackingMusic;
             fo.a(var67, (float)w.field_i[21], false);
             this.a((byte) 120);
-            ul.field_m = cg.a(jc.field_a, "", "title");
+            HalloweenBallSkin.field_m = cg.a(jc.field_a, "", "title");
             jh.field_d = cg.a(jc.field_a, "", "title_next_door");
             for (var3 = 0; var3 < nn.field_b.length; var3++) {
               nn.field_b[var3].a(1, jc.field_a);
@@ -1574,10 +1574,10 @@ public final class Pool extends ep {
             return false;
           }
           if (null != gf.field_g) {
-            var68 = ac.field_q;
+            var68 = KillerBallSkin.unpackingMusic;
             fo.a(var68, (float)w.field_i[22], false);
             this.a((byte) 120);
-            tl.field_N.a(qg.field_g, gf.field_g, ul.field_m, 75, 0);
+            tl.field_N.a(qg.field_g, gf.field_g, HalloweenBallSkin.field_m, 75, 0);
             tl.field_N.a(qg.field_g, gf.field_g, jh.field_d, 95, 0);
             for (var3Lifetime2 = 0; var3Lifetime2 < nn.field_b.length; var3Lifetime2++) {
               nn.field_b[var3Lifetime2].a(3, qg.field_g, gf.field_g);
@@ -1589,12 +1589,12 @@ public final class Pool extends ep {
             return false;
           }
           if (qp.field_Zb != null) {
-            var69 = fj.field_e;
+            var69 = NineBallRules.unpackingGraphics;
             fo.a(var69, (float)w.field_i[23], false);
             this.a((byte) 120);
-            mc.field_e = sk.a(pq.field_z, 32362, "", "font", hr.field_q);
+            FreePlayRules.field_e = sk.a(Ball.field_z, 32362, "", "font", hr.field_q);
             sa.field_h = he.a(sd.field_R, "", 0, qp.field_Zb, "arialish12");
-            ni.field_Z = he.a(sd.field_R, "", 0, qp.field_Zb, "arialbold14");
+            ModernTableScene.field_Z = he.a(sd.field_R, "", 0, qp.field_Zb, "arialbold14");
             id.field_c = new jk();
             id.field_c.a(2);
             cf.a(0, hr.field_q);
@@ -1609,15 +1609,15 @@ public final class Pool extends ep {
             om.field_u.a(0, 0, 32, 32);
             sh.field_P.b(15100);
             om.field_u = null;
-            SpriteState.a((byte) -72, true, of.field_Lb, sd.field_R, cp.field_a, 2, qk.field_c, 4, qp.field_Zb, s.field_d, nn.field_a, ve.field_q, r.field_n, te.field_p, ff.field_f);
-            ac.field_n = pf.a("", (byte) 121, "lobby_game_logo", hr.field_q);
+            SpriteState.a((byte) -72, true, of.field_Lb, sd.field_R, cp.field_a, 2, PoolUiText.field_c, 4, qp.field_Zb, s.gameoptlabels, nn.field_a, ve.field_q, r.field_n, te.field_p, ff.field_f);
+            KillerBallSkin.field_n = pf.a("", (byte) 121, "lobby_game_logo", hr.field_q);
             we.field_m = ml.field_h;
             DualLinkNode.field_s = true;
-            dl.field_j = to.field_m;
+            Pocket.field_j = PolarBallSkin.field_m;
             wj.a(200, -77);
-            ec.a(0, 0, 37, vd.field_l, (java.applet.Applet) (this), 16777215);
+            ec.a(0, 0, 37, vd.textBenefits, (java.applet.Applet) (this), 16777215);
             qp.field_Zb = null;
-            pq.field_z = null;
+            Ball.field_z = null;
             fm.a(0);
             return false;
           }
@@ -1631,7 +1631,7 @@ public final class Pool extends ep {
             return false;
           }
           if (null != s.field_a) {
-            var70 = lc.field_R;
+            var70 = lc.unpackingModels;
             fo.a(var70, (float)w.field_i[24], false);
             this.a((byte) 120);
             hr.a(s.field_a, 0);
@@ -1642,14 +1642,14 @@ public final class Pool extends ep {
           md.a(32);
           eq.i((byte) 124);
           ne.field_w = 0;
-          sq.field_b = 0;
+          GameRules.field_b = 0;
           cq.a(4313);
           ee.a(50, -74);
           tl.field_N.a((byte) -125, -1, 256);
-          ij.field_u = ul.field_m;
-          tl.field_N.a(ul.field_m, 8821, true);
-          uk.a(mc.field_e.field_L, 8, sa.field_h.maxDescent + sa.field_h.field_L, 240, mc.field_e.field_L + mc.field_e.maxDescent, 2, vk.field_y[0].field_z + 5, 5 + vk.field_y[0].field_A, 8, 480, 3, rm.field_g, -23994, sa.field_h, 4, 13421772, sa.field_h.field_L, 320, vk.field_y, rm.field_g, mc.field_e);
-          vl.a(240, vk.field_y[0].field_A + 5, rm.field_g, 8, rm.field_g, 4, 8, mc.field_e, 5 + vk.field_y[0].field_z, 2, vk.field_y, -1373633266, 2, 3, 320);
+          ij.field_u = HalloweenBallSkin.field_m;
+          tl.field_N.a(HalloweenBallSkin.field_m, 8821, true);
+          uk.a(FreePlayRules.field_e.field_L, 8, sa.field_h.maxDescent + sa.field_h.field_L, 240, FreePlayRules.field_e.field_L + FreePlayRules.field_e.maxDescent, 2, vk.field_y[0].field_z + 5, 5 + vk.field_y[0].field_A, 8, 480, 3, rm.field_g, -23994, sa.field_h, 4, 13421772, sa.field_h.field_L, 320, vk.field_y, rm.field_g, FreePlayRules.field_e);
+          PlasmaBallSkin.a(240, vk.field_y[0].field_A + 5, rm.field_g, 8, rm.field_g, 4, 8, FreePlayRules.field_e, 5 + vk.field_y[0].field_z, 2, vk.field_y, -1373633266, 2, 3, 320);
           fm.a(0);
           return true;
         }
@@ -1679,25 +1679,25 @@ public final class Pool extends ep {
                                 hr.field_q.a("", 0)) {
                                 if (rl.field_h.d(-90) &&
                                   rl.field_h.a("", 0)) {
-                                  if (pq.field_z.d(120) &&
-                                    pq.field_z.a("", 0)) {
+                                  if (Ball.field_z.d(120) &&
+                                    Ball.field_z.a("", 0)) {
                                     if (fh.field_b.d(-76) &&
                                       fh.field_b.c(-63)) {
                                       if (cp.field_a.d(-90) &&
                                         cp.field_a.c(-63)) {
                                         if (s.field_a.d(-116) &&
                                           s.field_a.c(-63)) {
-                                          if (ep.field_F.d(-118) &&
-                                            ep.field_F.c(-63)) {
+                                          if (NetworkGameClient.field_F.d(-118) &&
+                                            NetworkGameClient.field_F.c(-63)) {
                                             if (!param1) {
-                                              var61 = ep.field_F;
-                                              var62 = de.field_e;
-                                              var63 = cf.field_c;
+                                              var61 = NetworkGameClient.field_F;
+                                              var62 = de.waitingforExtradata;
+                                              var63 = cf.loadingExtradata;
                                               fo.a(hp.a(var61, var62, -641, var63), (float)(w.field_i[18] + (w.field_i[19] - w.field_i[18]) * var61.b(0) / 100), false);
                                               return false;
                                             }
                                             ue.a(true);
-                                            var64 = cq.field_e;
+                                            var64 = cq.unpackingSoundeffects;
                                             fo.a(var64, (float)w.field_i[19], false);
                                             this.a((byte) 120);
                                             wi.a(true);
@@ -1710,8 +1710,8 @@ public final class Pool extends ep {
                                               nn.field_b[var3Lifetime1].a(qg.field_g, 124);
                                             }
                                             if (2 < nn.field_b.length) {
-                                              var65_ref = (cj) (nn.field_b[2]);
-                                              var4 = (vf) (nn.field_b[3]);
+                                              var65_ref = (TikiTableScene) (nn.field_b[2]);
+                                              var4 = (PolarTableScene) (nn.field_b[3]);
                                               var4.field_X = var65_ref.field_mb;
                                               var4.field_bb = var65_ref.field_bb;
                                               var4.field_hb = var65_ref.field_S;
@@ -1721,119 +1721,119 @@ public final class Pool extends ep {
                                             fm.a(0);
                                             return false;
                                           }
-                                          var58 = ep.field_F;
-                                          var59 = de.field_e;
-                                          var60 = cf.field_c;
+                                          var58 = NetworkGameClient.field_F;
+                                          var59 = de.waitingforExtradata;
+                                          var60 = cf.loadingExtradata;
                                           fo.a(hp.a(var58, var59, -641, var60), (float)(w.field_i[18] + (-w.field_i[18] + w.field_i[19]) * var58.b(0) / 100), false);
                                           return false;
                                         }
                                         var55 = s.field_a;
-                                        var56 = de.field_e;
-                                        var57 = cf.field_c;
+                                        var56 = de.waitingforExtradata;
+                                        var57 = cf.loadingExtradata;
                                         fo.a(hp.a(var55, var56, -641, var57), (float)(w.field_i[17] + (w.field_i[18] - w.field_i[17]) * var55.b(0) / 100), false);
                                         return false;
                                       }
                                       var52 = cp.field_a;
-                                      var53 = de.field_e;
-                                      var54 = cf.field_c;
+                                      var53 = de.waitingforExtradata;
+                                      var54 = cf.loadingExtradata;
                                       fo.a(hp.a(var52, var53, -641, var54), (float)(w.field_i[16] + (-w.field_i[16] + w.field_i[17]) * var52.b(0) / 100), false);
                                       return false;
                                     }
                                     var49 = fh.field_b;
-                                    var50 = de.field_e;
-                                    var51 = cf.field_c;
+                                    var50 = de.waitingforExtradata;
+                                    var51 = cf.loadingExtradata;
                                     fo.a(hp.a(var49, var50, -641, var51), (float)(w.field_i[15] + (w.field_i[16] - w.field_i[15]) * var49.b(0) / 100), false);
                                     return false;
                                   }
-                                  var46 = pq.field_z;
-                                  var48 = gh.field_Q;
-                                  var47 = kb.field_a;
+                                  var46 = Ball.field_z;
+                                  var48 = SpaceTableScene.waitingforFonts;
+                                  var47 = kb.loadingFonts;
                                   fo.a(dk.a((byte) -21, "", var46, var47, var48), (float)(w.field_i[14] + (w.field_i[15] - w.field_i[14]) * var46.a(100, "") / 100), false);
                                   return false;
                                 }
                                 var43 = rl.field_h;
-                                var45 = rp.field_c;
-                                var44 = oj.field_t;
+                                var45 = rp.waitingforGraphics;
+                                var44 = oj.loadingGraphics;
                                 fo.a(dk.a((byte) -1, "", var43, var44, var45), (float)(w.field_i[13] + (w.field_i[14] - w.field_i[13]) * var43.a(100, "") / 100), false);
                                 return false;
                               }
                               var40 = hr.field_q;
-                              var42 = rp.field_c;
-                              var41 = oj.field_t;
+                              var42 = rp.waitingforGraphics;
+                              var41 = oj.loadingGraphics;
                               fo.a(dk.a((byte) 119, "", var40, var41, var42), (float)(w.field_i[12] + (w.field_i[13] - w.field_i[12]) * var40.a(100, "") / 100), false);
                               return false;
                             }
                             var37 = jc.field_a;
-                            var38 = aj.field_Sb;
-                            var39 = mm.field_o;
+                            var38 = aj.waitingforMusic;
+                            var39 = mm.loadingMusic;
                             fo.a(hp.a(var37, var38, -641, var39), (float)(w.field_i[11] + (w.field_i[12] - w.field_i[11]) * var37.b(0) / 100), false);
                             return false;
                           }
                           var34 = gf.field_g;
-                          var35 = aj.field_Sb;
-                          var36 = mm.field_o;
+                          var35 = aj.waitingforMusic;
+                          var36 = mm.loadingMusic;
                           fo.a(hp.a(var34, var35, -641, var36), (float)(w.field_i[10] + (-w.field_i[10] + w.field_i[11]) * var34.b(0) / 100), false);
                           return false;
                         }
                         var31 = he.field_b;
-                        var32 = rk.field_h;
-                        var33 = mq.field_g;
+                        var32 = rk.waitingforSoundeffects;
+                        var33 = mq.loadingSoundeffects;
                         fo.a(hp.a(var31, var32, -641, var33), (float)(w.field_i[9] + (-w.field_i[9] + w.field_i[10]) * var31.b(0) / 100), false);
                         return false;
                       }
                       var28 = fg.field_d;
-                      var29 = rk.field_h;
-                      var30 = mq.field_g;
+                      var29 = rk.waitingforSoundeffects;
+                      var30 = mq.loadingSoundeffects;
                       fo.a(hp.a(var28, var29, -641, var30), (float)(w.field_i[8] + (w.field_i[9] - w.field_i[8]) * var28.b(0) / 100), false);
                       return false;
                     }
                     var25 = qp.field_Zb;
-                    var27 = gh.field_Q;
-                    var26 = kb.field_a;
+                    var27 = SpaceTableScene.waitingforFonts;
+                    var26 = kb.loadingFonts;
                     fo.a(dk.a((byte) 118, "lobby", var25, var26, var27), (float)(w.field_i[7] + (-w.field_i[7] + w.field_i[8]) * var25.a(100, "lobby") / 100), false);
                     return false;
                   }
                   var22 = sd.field_R;
-                  var24 = rp.field_c;
-                  var23 = oj.field_t;
+                  var24 = rp.waitingforGraphics;
+                  var23 = oj.loadingGraphics;
                   fo.a(dk.a((byte) 122, "lobby", var22, var23, var24), (float)(w.field_i[6] + (-w.field_i[6] + w.field_i[7]) * var22.a(100, "lobby") / 100), false);
                   return false;
                 }
                 var19 = sd.field_R;
-                var21 = rp.field_c;
-                var20 = oj.field_t;
+                var21 = rp.waitingforGraphics;
+                var20 = oj.loadingGraphics;
                 fo.a(dk.a((byte) 101, "basic", var19, var20, var21), (float)(w.field_i[5] + (w.field_i[6] - w.field_i[5]) * var19.a(100, "basic") / 100), false);
                 return false;
               }
               var16 = qp.field_Zb;
-              var18 = gh.field_Q;
-              var17 = kb.field_a;
+              var18 = SpaceTableScene.waitingforFonts;
+              var17 = kb.loadingFonts;
               fo.a(dk.a((byte) -116, "arialish12", var16, var17, var18), (float)(w.field_i[4] + (-w.field_i[4] + w.field_i[5]) * var16.a(100, "arialish12") / 100), false);
               return false;
             }
             var13 = qp.field_Zb;
-            var15 = gh.field_Q;
-            var14 = kb.field_a;
+            var15 = SpaceTableScene.waitingforFonts;
+            var14 = kb.loadingFonts;
             fo.a(dk.a((byte) -61, "arialbold14", var13, var14, var15), (float)(w.field_i[3] + (-w.field_i[3] + w.field_i[4]) * var13.a(100, "arialbold14") / 100), false);
             return false;
           }
           var10 = sd.field_R;
-          var12 = rp.field_c;
-          var11 = oj.field_t;
+          var12 = rp.waitingforGraphics;
+          var11 = oj.loadingGraphics;
           fo.a(dk.a((byte) -17, "arialish12", var10, var11, var12), (float)(w.field_i[2] + (-w.field_i[2] + w.field_i[3]) * var10.a(100, "arialish12") / 100), false);
           return false;
         }
         var7 = sd.field_R;
-        var9 = rp.field_c;
-        var8 = oj.field_t;
+        var9 = rp.waitingforGraphics;
+        var8 = oj.loadingGraphics;
         fo.a(dk.a((byte) -22, "arialbold14", var7, var8, var9), (float)(w.field_i[1] + (w.field_i[2] - w.field_i[1]) * var7.a(100, "arialbold14") / 100), false);
         return false;
     }
 
     static {
         field_N = new kf[2];
-        field_M = "Pot the balls in any order and finish on the black.";
-        field_K = "Hide lobby chat";
+        potBallsInAnyOrderFinishOnBlack = "Pot the balls in any order and finish on the black.";
+        muChatLobbyHide = "Hide lobby chat";
         field_L = new int[4];
     }
 }

@@ -5,10 +5,10 @@ final class jd {
     static boolean field_a;
     static int[] field_h;
     static int field_b;
-    static String field_i;
-    static String field_j;
-    static String field_f;
-    static String field_e;
+    static String gameoptPlayerneeds1ratedgame;
+    static String quickchatHelpTitle;
+    static String cueCantGoThere;
+    static String rule04;
     static int field_d;
     static BufferedSocket field_c;
     int field_g;
@@ -32,27 +32,27 @@ final class jd {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!gj.a(param2 ^ -25906, var6)) {
-            stackIn_2_0 = p.field_g;
+            stackIn_2_0 = p.invalidName;
             return stackIn_2_0;
           }
           if (or.a((byte) 3, param1)) {
-            stackIn_6_0 = fn.field_Qb;
+            stackIn_6_0 = fn.cannotAddYourself;
             return stackIn_6_0;
           }
           if (th.field_a != 2) {
-            stackIn_10_0 = rl.field_j;
+            stackIn_10_0 = rl.unableToAddIgnore;
             return stackIn_10_0;
           }
           if (ia.a(param1, 24552)) {
-            stackIn_13_0 = nr.a(new String[]{param1}, -1, mg.field_b);
+            stackIn_13_0 = nr.a(new String[]{param1}, -1, mg.ignorelistdupe);
             return stackIn_13_0;
           }
           if (gi.field_t >= 100) {
-            stackIn_17_0 = ci.field_a;
+            stackIn_17_0 = ci.ignorelistfull;
             return stackIn_17_0;
           }
           if (lq.a(param1, -1)) {
-            stackIn_21_0 = nr.a(new String[]{param1}, -1, gf.field_f);
+            stackIn_21_0 = nr.a(new String[]{param1}, -1, gf.removefriendfirst);
             return stackIn_21_0;
           }
           var5 = ej.field_j;
@@ -79,12 +79,12 @@ final class jd {
     }
 
     public static void a(byte param0) {
-        field_e = null;
-        field_i = null;
-        field_j = null;
+        rule04 = null;
+        gameoptPlayerneeds1ratedgame = null;
+        quickchatHelpTitle = null;
         field_c = null;
         field_h = null;
-        field_f = null;
+        cueCantGoThere = null;
         if (param0 < 47) {
           String var2 = (String) null;
           jd.a((byte) 35, (String) null, (String) null);
@@ -132,7 +132,7 @@ final class jd {
           if (IterableNodeHashTable.a(param2, -106)) {
             return false;
           }
-          if (gh.a(param2, 28350)) {
+          if (SpaceTableScene.a(param2, 28350)) {
             return false;
           }
           if (param0 >= -24) {
@@ -219,10 +219,10 @@ final class jd {
 
     static {
         field_h = new int[]{1000, 1100};
-        field_i = "<%0> must play 1 more rated game before playing with the current options.";
-        field_j = "Shortcut Reference";
-        field_f = "Cue can't go there!";
+        gameoptPlayerneeds1ratedgame = "<%0> must play 1 more rated game before playing with the current options.";
+        quickchatHelpTitle = "Shortcut Reference";
+        cueCantGoThere = "Cue can't go there!";
         field_b = -1;
-        field_e = "Scamming";
+        rule04 = "Scamming";
     }
 }

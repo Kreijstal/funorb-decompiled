@@ -9,10 +9,10 @@ final class aq {
 
     final static String a(int param0, int param1) {
         if (param1 >= 79) {
-          return param0 + 1 + "/" + rb.field_n.length;
+          return param0 + 1 + "/" + rb.instructionsPages.length;
         }
         field_b = (Calendar) null;
-        return param0 + 1 + "/" + rb.field_n.length;
+        return param0 + 1 + "/" + rb.instructionsPages.length;
     }
 
     public static void a(boolean param0) {
@@ -74,7 +74,7 @@ final class aq {
         of.field_Ob = -no.field_q.field_w + SoftwareRasterizer.width >> 1;
         fm.field_M = -no.field_q.field_A;
         vk.field_H = of.field_Ob + 224;
-        ac.b(param0, (byte) -94);
+        KillerBallSkin.b(param0, (byte) -94);
     }
 
     static {

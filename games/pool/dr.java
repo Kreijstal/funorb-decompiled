@@ -7,7 +7,7 @@ final class dr {
     static int field_c;
     static nl field_a;
     static Sprite field_d;
-    static String field_e;
+    static String tutorialEightBallBreak;
 
     final static void a(byte param0, di param1) {
         Sprite var2 = null;
@@ -34,7 +34,7 @@ final class dr {
           if (param0 <= -48) {
             return;
           }
-          field_e = (String) null;
+          tutorialEightBallBreak = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,16 +54,16 @@ final class dr {
         try {
           pf.field_c = param4;
           if (param6 != 32540) {
-            field_e = (String) null;
+            tutorialEightBallBreak = (String) null;
           }
-          vl.field_m = new kn(param7, param2, param5, param0, param3, param1, param8);
+          PlasmaBallSkin.field_m = new kn(param7, param2, param5, param0, param3, param1, param8);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "dr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, int param1, int param2, int param3, String param4) {
-        pa.field_J.field_gb = pa.field_J.field_gb + fj.field_j.field_gb;
+        pa.field_J.field_gb = pa.field_J.field_gb + NineBallRules.field_j.field_gb;
         if (param1 != 11468) {
           return;
         }
@@ -71,10 +71,10 @@ final class dr {
           pa.field_J.field_N = param2;
           pa.field_J.field_nb = param4;
           pa.field_J.field_kb = param0;
-          fj.field_j.field_qb = fj.field_j.field_qb + fj.field_j.field_gb;
-          fj.field_j.field_gb = param3;
-          pa.field_J.field_gb = pa.field_J.field_gb - fj.field_j.field_gb;
-          fj.field_j.field_qb = fj.field_j.field_qb - fj.field_j.field_gb;
+          NineBallRules.field_j.field_qb = NineBallRules.field_j.field_qb + NineBallRules.field_j.field_gb;
+          NineBallRules.field_j.field_gb = param3;
+          pa.field_J.field_gb = pa.field_J.field_gb - NineBallRules.field_j.field_gb;
+          NineBallRules.field_j.field_qb = NineBallRules.field_j.field_qb - NineBallRules.field_j.field_gb;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "dr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -86,13 +86,13 @@ final class dr {
         }
         field_d = null;
         field_a = null;
-        field_e = null;
+        tutorialEightBallBreak = null;
     }
 
     static {
         field_b = 11468;
         field_f = aj.a(6429081, false, field_b);
         field_a = new nl();
-        field_e = "Now let's \"break\": Shoot the cue ball at the rack (the triangle of balls) now.";
+        tutorialEightBallBreak = "Now let's \"break\": Shoot the cue ball at the rack (the triangle of balls) now.";
     }
 }

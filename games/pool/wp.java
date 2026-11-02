@@ -3,13 +3,13 @@
  */
 final class wp implements si {
     static MouseHandler field_g;
-    static String field_h;
+    static String fsButtonMembers;
     static String[] field_f;
-    static String field_b;
+    static String returntomainmenu;
     static int field_d;
     static int field_c;
     static Sprite field_a;
-    static String field_e;
+    static String createEmailConfirmTooltip;
 
     final static byte[] a(int param0, byte[] param1) {
         PacketBuffer var2 = null;
@@ -110,7 +110,7 @@ final class wp implements si {
           var5 = null;
           if (2 == th.field_a) {
             ud.field_J.field_pb = true;
-            ba.field_sb.field_nb = nr.a(new String[]{cm.field_J}, -1, ei.field_w);
+            ba.field_sb.field_nb = nr.a(new String[]{cm.field_J}, -1, ei.youAreOnXServer);
             aj.field_Mb.field_Sb.field_Sb.field_nb = null;
             var6_ref = null;
             var7 = (eo) (var4.c((byte) 60));
@@ -119,7 +119,7 @@ final class wp implements si {
               if (var7.field_T == null) {
                 var7.field_Pb = new vh(0L, PacketBuffer.field_s);
                 var7.a(94, var7.field_Pb);
-                var7.field_Nb = new vh(0L, tm.field_d);
+                var7.field_Nb = new vh(0L, BallSkin.field_d);
                 var7.a(-103, var7.field_Nb);
                 var7.field_Ob = new vh(0L, PacketBuffer.field_s);
                 var7.a(-120, var7.field_Ob);
@@ -175,7 +175,7 @@ final class wp implements si {
               if (null != var7.field_Wb) {
                 stackIn_35_1 = var7.field_Wb;
               } else {
-                stackIn_35_1 = we.field_j;
+                stackIn_35_1 = we.offline;
               }
               stackIn_34_0.field_nb = stackIn_35_1;
               var7.field_Nb.b(var9, 2147483647, var7.field_gb - 80, 80, ad.field_x);
@@ -198,15 +198,15 @@ final class wp implements si {
                   dr.a((String) null, -1, 0L, -1, aj.field_Mb.field_Sb, var16, 32540, var7, (int[]) null);
                   var5 = var7;
                   if (var7.field_Wb != null &&
-                    !fj.a(vl.field_m.field_m, (byte) -101) &&
+                    !NineBallRules.a(PlasmaBallSkin.field_m.field_m, (byte) -101) &&
                     !ea.field_z) {
                     if (!hr.field_y) {
-                      var17 = vl.field_m;
-                      var18 = nr.a(new String[]{var16}, -1, rp.field_a);
+                      var17 = PlasmaBallSkin.field_m;
+                      var18 = nr.a(new String[]{var16}, -1, rp.sendPmToX);
                       var17.field_n.a(var18, 17130, 8);
                     }
-                    var17Lifetime1 = vl.field_m;
-                    var18Lifetime1 = nr.a(new String[]{var16}, -1, hq.field_e);
+                    var17Lifetime1 = PlasmaBallSkin.field_m;
+                    var18Lifetime1 = nr.a(new String[]{var16}, -1, hq.sendQcToX);
                     var17Lifetime1.field_n.a(var18Lifetime1, 17130, 18);
                   }
                 } else {
@@ -219,20 +219,20 @@ final class wp implements si {
               var7 = (eo) (var4.f((byte) -5));
             }
             if (0 != aj.field_Mb.field_Ob.field_R) {
-              sm.field_C = new aj(aj.field_Mb.field_Ob.field_sb, aj.field_Mb.field_Ob.field_ib, aj.field_Mb.field_Ob.field_gb, aj.field_Mb.field_Ob.field_Db, cq.field_f, wa.field_qb, uo.field_Lb, uo.field_Lb);
+              sm.field_C = new aj(aj.field_Mb.field_Ob.field_sb, aj.field_Mb.field_Ob.field_ib, aj.field_Mb.field_Ob.field_gb, aj.field_Mb.field_Ob.field_Db, cq.enterfriendAdd, wa.field_qb, uo.field_Lb, uo.field_Lb);
               ne.field_m = 0;
             }
             if (aj.field_Mb.field_Qb.field_R != 0) {
-              sm.field_C = new aj(aj.field_Mb.field_Qb.field_sb, aj.field_Mb.field_Qb.field_ib, aj.field_Mb.field_Qb.field_gb, aj.field_Mb.field_Qb.field_Db, vk.field_O, wa.field_qb, uo.field_Lb, uo.field_Lb);
+              sm.field_C = new aj(aj.field_Mb.field_Qb.field_sb, aj.field_Mb.field_Qb.field_ib, aj.field_Mb.field_Qb.field_gb, aj.field_Mb.field_Qb.field_Db, vk.enterfriendDel, wa.field_qb, uo.field_Lb, uo.field_Lb);
               ne.field_m = 1;
             }
           } else {
             ud.field_J.field_pb = false;
-            ba.field_sb.field_nb = cl.field_j;
+            ba.field_sb.field_nb = cl.pleasewaitDotdotdot;
             if (th.field_a == 1) {
-              aj.field_Mb.field_Sb.field_Sb.field_nb = ri.field_Q;
+              aj.field_Mb.field_Sb.field_Sb.field_nb = ri.connectingToFriendServerTwoline;
             } else {
-              aj.field_Mb.field_Sb.field_Sb.field_nb = o.field_A;
+              aj.field_Mb.field_Sb.field_Sb.field_nb = o.loading;
             }
             mq.a(aj.field_Mb.field_Mb, (byte) 109);
           }
@@ -332,10 +332,10 @@ final class wp implements si {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          field_h = null;
-          field_e = null;
+          fsButtonMembers = null;
+          createEmailConfirmTooltip = null;
           field_g = null;
-          field_b = null;
+          returntomainmenu = null;
           if (param0 != 0) {
             field_a = (Sprite) null;
           }
@@ -350,10 +350,10 @@ final class wp implements si {
     }
 
     static {
-        field_h = "Members";
-        field_b = "Return to Main Menu";
+        fsButtonMembers = "Members";
+        returntomainmenu = "Return to Main Menu";
         field_g = new MouseHandler();
         field_c = 50;
-        field_e = "Type your email address again to make sure it's correct";
+        createEmailConfirmTooltip = "Type your email address again to make sure it's correct";
     }
 }

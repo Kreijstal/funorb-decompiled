@@ -3,7 +3,7 @@
  */
 final class tn extends IntrusiveNode {
     static int field_u;
-    static String field_p;
+    static String cannotPositionCueThere;
     static ba field_n;
     int field_s;
     int field_v;
@@ -26,10 +26,10 @@ final class tn extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        qe var6 = null;
-        qe var7 = null;
+        ShotRecord var6 = null;
+        ShotRecord var7 = null;
         try {
-          var6 = param0.field_I.j(param1 + 16848);
+          var6 = param0.field_I.currentShot(param1 + 16848);
           var7 = var6;
           if (param1 != -16813) {
             field_w = (vh) null;
@@ -49,19 +49,19 @@ final class tn extends IntrusiveNode {
           var5 = stackIn_14_0;
           if (var4 != 0 &&
             var7.c(true)) {
-            rb.a(nr.a(new String[]{param0.field_I.field_h[var6.field_L]}, -1, ka.field_u), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
+            rb.a(nr.a(new String[]{param0.field_I.field_h[var6.field_L]}, -1, ka.whichGroupDoYouWant), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
             return;
           }
           if (var4 != 0 &&
             var7.a(-110)) {
-            rb.a(nr.a(new String[]{param0.field_I.field_h[var6.field_L]}, -1, ml.field_g), rl.field_i, jf.field_q, param1 + 16877, 16, 8);
+            rb.a(nr.a(new String[]{param0.field_I.field_h[var6.field_L]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, jf.decisionButtonPlay, param1 + 16877, 16, 8);
             return;
           }
           if (var5 != 0) {
             if (!var7.c((byte) 91)) {
               return;
             }
-            rb.a(nr.a(new String[]{param0.field_I.field_h[(1 + var7.field_L) % param0.field_I.field_n]}, -1, ml.field_g), rl.field_i, jf.field_q, -122, 64, 32);
+            rb.a(nr.a(new String[]{param0.field_I.field_h[(1 + var7.field_L) % param0.field_I.playerCount]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, jf.decisionButtonPlay, -122, 64, 32);
             return;
           }
           return;
@@ -98,7 +98,7 @@ final class tn extends IntrusiveNode {
     }
 
     public static void c(byte param0) {
-        field_p = null;
+        cannotPositionCueThere = null;
         field_w = null;
         if (param0 <= 4) {
           return;
@@ -110,7 +110,7 @@ final class tn extends IntrusiveNode {
     }
 
     static {
-        field_p = "Cannot put the cue there! Try raising it.";
+        cannotPositionCueThere = "Cannot put the cue there! Try raising it.";
         field_u = 0;
     }
 }

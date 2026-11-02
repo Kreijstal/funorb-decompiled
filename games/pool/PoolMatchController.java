@@ -12,7 +12,7 @@ final class PoolMatchController {
     private hq field_c;
     static int field_X;
     private boolean field_Y;
-    static String field_K;
+    static String mouseYAxisNormal;
     private boolean field_kb;
     private int[] field_F;
     int field_L;
@@ -28,14 +28,14 @@ final class PoolMatchController {
     private int field_Q;
     private boolean field_T;
     private int field_m;
-    al field_I;
-    static String field_s;
+    PoolGameModel field_I;
+    static String tickerHintLeaveShotMode;
     private boolean field_j;
     int field_S;
     private int field_l;
     private int field_e;
     mm field_eb;
-    static String field_J;
+    static String createAgeTooltip;
     private int field_g;
     static int field_hb;
     private int field_t;
@@ -72,8 +72,8 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_ib = new int[this.field_I.field_l.length];
-          this.field_E = 16 * (-1 + this.field_I.field_l.length);
+          this.field_ib = new int[this.field_I.balls.length];
+          this.field_E = 16 * (-1 + this.field_I.balls.length);
           if (param0 != 4476) {
             this.field_c = (hq) null;
           }
@@ -131,10 +131,10 @@ final class PoolMatchController {
             stackIn_7_0 = 0;
           }
           var9_int = stackIn_7_0;
-          var10 = new int[this.field_I.field_n];
+          var10 = new int[this.field_I.playerCount];
           var11 = 0;
           var12_int = 0;
-          for (var13 = 0; var13 < this.field_I.field_n; var13++) {
+          for (var13 = 0; var13 < this.field_I.playerCount; var13++) {
             if ((param5 & 1 << var13) != 0) {
               if (this.field_db != var13 ||
                 (this.field_L & hq.field_c) == 0) {
@@ -173,12 +173,12 @@ final class PoolMatchController {
           for (var13 = 0; var11 > var13; var13++) {
             if (0 == var13 &&
               var9_int == 0) {
-              discarded$0 = var12.append(nr.a(new String[]{this.e(param4 ^ -30379, var10[var13]), "<%1>", "<%2>"}, param4 - 62, en.field_e));
+              discarded$0 = var12.append(nr.a(new String[]{this.e(param4 ^ -30379, var10[var13]), "<%1>", "<%2>"}, param4 - 62, en.playerListFirst));
             } else {
               if (~var13 == ~(-1 + var11)) {
-                discarded$1 = var12.append(nr.a(new String[]{this.e(-30360, var10[var13]), "<%1>", "<%2>"}, -1, lq.field_N));
+                discarded$1 = var12.append(nr.a(new String[]{this.e(-30360, var10[var13]), "<%1>", "<%2>"}, -1, lq.playerListLast));
               } else {
-                discarded$2 = var12.append(nr.a(new String[]{this.e(-30360, var10[var13]), "<%1>", "<%2>"}, -1, bc.field_h));
+                discarded$2 = var12.append(nr.a(new String[]{this.e(-30360, var10[var13]), "<%1>", "<%2>"}, -1, bc.playerListMiddle));
               }
             }
           }
@@ -264,7 +264,7 @@ final class PoolMatchController {
         RuntimeException var3_ref = null;
         try {
           if (!param1) {
-            field_s = (String) null;
+            tickerHintLeaveShotMode = (String) null;
           }
           if (param0 < 0) {
             param0 = 0;
@@ -295,11 +295,11 @@ final class PoolMatchController {
     private final void j(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        qe var3 = null;
+        ShotRecord var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -122 % ((-69 - param0) / 45);
-          var3 = this.field_I.j(92);
+          var3 = this.field_I.currentShot(92);
           if (var3.field_u != 0 &&
             this.field_Y) {
             ej.field_j.b(false, 72);
@@ -319,7 +319,7 @@ final class PoolMatchController {
     }
 
     private final boolean x(byte param0) {
-        qe var2 = null;
+        ShotRecord var2 = null;
         RuntimeException var2_ref = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -327,7 +327,7 @@ final class PoolMatchController {
           if (param0 != -102) {
             this.c(5, true);
           }
-          var2 = this.field_I.j(52);
+          var2 = this.field_I.currentShot(52);
           stackIn_16_0 = !(0 > var2.field_M) || !(this.field_I.field_y <= 0) || (var2.field_u != 0) || (var2.field_E);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -356,9 +356,9 @@ final class PoolMatchController {
 
     private final void v(int param0) {
         try {
-          this.field_I.j(109).field_V = (short)param0;
+          this.field_I.currentShot(109).field_V = (short)param0;
           this.field_I.e((byte) -124);
-          this.a(this.field_I.j(param0 + 126), 1);
+          this.a(this.field_I.currentShot(param0 + 126), 1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "uf.KD(" + param0 + ')');
         }
@@ -455,12 +455,12 @@ final class PoolMatchController {
           var2_int = -121 % ((48 - param0) / 36);
           if (this.field_S < 0 &&
             this.i(-1) &&
-            this.field_I.field_l[this.field_e].field_s) {
+            this.field_I.balls[this.field_e].inPlay) {
             if ((524288L & pd.field_i) == 0L) {
-              if (this.field_I.j(70).field_q != 0) {
+              if (this.field_I.currentShot(70).field_q != 0) {
                 return;
               }
-              if (this.field_I.j(55).field_u == 0) {
+              if (this.field_I.currentShot(55).field_u == 0) {
                 return;
               }
               if (0 != this.field_e) {
@@ -545,21 +545,21 @@ final class PoolMatchController {
               (!vj.field_c[81])) {
               var4_int = 1;
               if (Pool.field_O != 0) {
-                if (0 == this.field_I.j(102).field_q &&
+                if (0 == this.field_I.currentShot(102).field_q &&
                   param1 == 1 &&
                   !vj.field_c[82] &&
                   !vj.field_c[86] &&
                   vj.field_c[81]) {
                   var4_int = 4;
                 }
-                if (this.field_I.j(74).field_q == 0 &&
+                if (this.field_I.currentShot(74).field_q == 0 &&
                   param1 == 2 &&
                   !vj.field_c[82] &&
                   !vj.field_c[86] &&
                   !vj.field_c[81]) {
                   var4_int = 3;
                 }
-                if (0 == this.field_I.j(75).field_q &&
+                if (0 == this.field_I.currentShot(75).field_q &&
                   param1 == 1 &&
                   vj.field_c[82] &&
                   !vj.field_c[86] &&
@@ -569,21 +569,21 @@ final class PoolMatchController {
               }
             }
           } else {
-            if (0 == this.field_I.j(102).field_q &&
+            if (0 == this.field_I.currentShot(102).field_q &&
               param1 == 1 &&
               !vj.field_c[82] &&
               !vj.field_c[86] &&
               vj.field_c[81]) {
               var4_int = 4;
             }
-            if (this.field_I.j(74).field_q == 0 &&
+            if (this.field_I.currentShot(74).field_q == 0 &&
               param1 == 2 &&
               !vj.field_c[82] &&
               !vj.field_c[86] &&
               !vj.field_c[81]) {
               var4_int = 3;
             }
-            if (0 == this.field_I.j(75).field_q &&
+            if (0 == this.field_I.currentShot(75).field_q &&
               param1 == 1 &&
               vj.field_c[82] &&
               !vj.field_c[86] &&
@@ -664,17 +664,17 @@ final class PoolMatchController {
           rb.field_d = aj.a(0, "commonui", param2, "frame_bottom");
           me.field_p = pf.a("commonui", (byte) 124, "jagex_logo_grey", param2);
           jj.field_S = aj.a(0, "commonui", param2, "button");
-          bo.field_a = ep.a(param1 ^ -22692, param2, "validation", "commonui");
-          qk.field_a = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo12", -25154, param2));
+          bo.field_a = NetworkGameClient.a(param1 ^ -22692, param2, "validation", "commonui");
+          PoolUiText.field_a = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo12", -25154, param2));
           lc.field_O = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo14", -25154, param2));
           bi.field_e = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo14bold", -25154, param2));
           var4 = new Sprite(param0.a(false, "", "button.gif"), (java.awt.Component) ((Object) pa.field_K));
           tl.a(param2, 3812, "dropdown", "commonui");
           var5 = gr.a(param2, "commonui", -24155, "screen_options");
-          vl.field_l = new IndexedSprite[4];
+          PlasmaBallSkin.field_l = new IndexedSprite[4];
           la.field_c = new IndexedSprite[4];
           sn.field_h = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{vl.field_l, sn.field_h, la.field_c};
+          var6 = new IndexedSprite[][]{PlasmaBallSkin.field_l, sn.field_h, la.field_c};
           var7 = new int[4][];
           var7[0] = var5[0].field_i;
           var8 = 1;
@@ -774,7 +774,7 @@ final class PoolMatchController {
             this.field_a = 100;
           }
           ui.field_U.b((byte) 115, new bq(param1));
-          gj.a(true, 0, md.field_a[param1], ef.a((String) null, kc.field_d[param1], (byte) 4, (String) null));
+          gj.a(true, 0, md.achievementNames[param1], ef.a((String) null, kc.achievementCriteria[param1], (byte) 4, (String) null));
           if (!this.field_q) {
             ad.field_l.b((byte) 84, new i(param1, param2, vm.field_f, wq.field_c, field_fb, dk.field_f + this.field_o));
           }
@@ -846,7 +846,7 @@ final class PoolMatchController {
         try {
           if (this.i(-1) &&
             !this.field_I.field_o &&
-            this.field_I.j(36).field_q == 0) {
+            this.field_I.currentShot(36).field_q == 0) {
             var2_int = -36 % ((param0 + 15) / 63);
             if (this.b(0, 3, false)) {
               this.u((byte) 117);
@@ -863,7 +863,7 @@ final class PoolMatchController {
 
     private final void C(int param0) {
         hh.field_c = true;
-        this.field_G = this.field_x[this.field_I.j(57).field_L];
+        this.field_G = this.field_x[this.field_I.currentShot(57).field_L];
         if (param0 < 15) {
           return;
         }
@@ -899,7 +899,7 @@ final class PoolMatchController {
         boolean stackOut_294_0;
         long var4_long = 0L;
         int var4_int = 0;
-        qe var4 = null;
+        ShotRecord var4 = null;
         int[] var4_array = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -1004,7 +1004,7 @@ final class PoolMatchController {
               param0 = true;
             }
             if (e.a(-19839, this)) {
-              var4 = this.field_I.j(70);
+              var4 = this.field_I.currentShot(70);
               if ((hq.field_c & this.field_L) != 0) {
                 ej.field_j.b(false, 71);
                 var4.a(ej.field_j, (byte) 0);
@@ -1141,7 +1141,7 @@ final class PoolMatchController {
               }
             }
             if (this.i(-1) &&
-              this.field_I.j(65).field_q == 0) {
+              this.field_I.currentShot(65).field_q == 0) {
               if (!this.field_I.a(this.field_G.field_e, this.field_G.field_h, this.field_G.field_k, 359, this.field_Q, this.field_G.field_d)) {
                 var4_array = this.a(this.field_G.field_e, this.field_G.field_d, this.field_G.field_k, this.field_Q, (byte) 95, this.field_G.field_h);
                 boolean decompiledSharedTail1 = (var4_array != null);
@@ -1192,14 +1192,14 @@ final class PoolMatchController {
           }
           regionExit1: {
             regionExit2: {
-              var4 = this.field_I.j(71);
+              var4 = this.field_I.currentShot(71);
               if (ne.field_r.c(0) &&
                 (this.field_L & sk.field_d) == 0) {
                 if (!this.field_I.field_o) {
                   var6 = 0;
                   var7 = 0;
-                  while (this.field_I.field_n > var7) {
-                    stackOut_294_0 = this.field_I.field_f.a((byte) 94, var7);
+                  while (this.field_I.playerCount > var7) {
+                    stackOut_294_0 = this.field_I.rules.a((byte) 94, var7);
                     stackIn_396_0 = stackOut_294_0 ? 1 : 0;
                     stackIn_295_0 = stackOut_294_0;
                     if (var9 != 0) {
@@ -1210,20 +1210,20 @@ final class PoolMatchController {
                     }
                     var7++;
                   }
-                  var5_ref_String = this.a(rk.field_e, qe.field_F, mg.field_a, sl.field_W, (byte) 61, var6, jl.field_b, vj.field_g);
+                  var5_ref_String = this.a(rk.playerYouFirstListAreOut, ShotRecord.playerIsOut, mg.playerX2AreOut, sl.playerYouX2AreOut, (byte) 61, var6, jl.playerListAreOut, vj.playerYouAreOut);
                   if (var5_ref_String != null) {
                     em.$cfr$intArgs$a$c9c3307e6488(127, false, 1, var5_ref_String);
                   }
-                  var5_ref_String = this.a(wj.field_U, ah.field_b, w.field_e, bl.field_j, (byte) 61, this.field_I.field_p & ~var6, dl.field_i, cd.field_c);
+                  var5_ref_String = this.a(wj.playerYouFirstListHaveResigned, ah.mpXHasresigned, w.playerX2HaveResigned, bl.playerYouX2HaveResigned, (byte) 61, this.field_I.field_p & ~var6, Pocket.playerListHaveResigned, cd.mpYouresigned);
                   if (var5_ref_String != null) {
                     em.$cfr$intArgs$a$c9c3307e6488(124, false, 1, var5_ref_String);
                   }
-                  var5_ref_String = this.a(jk.field_f, rn.field_h, DualLinkNode.field_o, qp.field_bc, (byte) 61, this.field_I.field_x, fd.field_H, ae.field_f);
+                  var5_ref_String = this.a(jk.playerYouFirstListAreOfferingDraw, rn.mpXWantstodraw, DualLinkNode.playerX2AreOfferingDraw, qp.playerYouX2AreOfferingDraw, (byte) 61, this.field_I.field_x, fd.playerListAreOfferingDraw, ae.mpYouofferdraw);
                   if (var5_ref_String != null) {
                     em.$cfr$intArgs$a$c9c3307e6488(119, false, 1, var5_ref_String);
                   }
                 } else {
-                  var5_ref_String = this.a(o.field_B, p.field_k, hp.field_e, pq.field_D, (byte) 61, this.field_I.field_b, ee.field_a, kb.field_f);
+                  var5_ref_String = this.a(o.playerYouFirstListAreOfferingRematch, p.mpXOffersrematch, hp.playerX2AreOfferingRematch, Ball.playerYouX2AreOfferingRematch, (byte) 61, this.field_I.field_b, ee.playerListAreOfferingRematch, kb.mpYouofferrematch);
                   if (var5_ref_String != null) {
                     em.$cfr$intArgs$a$c9c3307e6488(122, false, 1, var5_ref_String);
                   }
@@ -1235,14 +1235,14 @@ final class PoolMatchController {
                     var6 = fieldTemp$2;
                     if (var6 == 0 &&
                       var9 == 0) {
-                      em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sm.field_B);
+                      em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sm.tickerHintZoom);
                       break regionExit2;
                     } else {
                       if (1 != var6) {
                         break regionExit2;
                       }
                     }
-                    em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, pm.field_o);
+                    em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, pm.tickerHintRotate);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1273,22 +1273,22 @@ final class PoolMatchController {
                                   break;
                               }
                             }
-                            em.$cfr$intArgs$a$c9c3307e6488(118, true, 1, field_s);
+                            em.$cfr$intArgs$a$c9c3307e6488(118, true, 1, tickerHintLeaveShotMode);
                             if (var9 == 0) {
                               break regionExit2;
                             }
                           }
-                          em.$cfr$intArgs$a$c9c3307e6488(126, true, 1, gk.field_lb);
+                          em.$cfr$intArgs$a$c9c3307e6488(126, true, 1, gk.tickerHintSetPower);
                           if (var9 == 0) {
                             break regionExit2;
                           }
                         }
-                        em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sf.field_z);
+                        em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sf.tickerHintShoot);
                         if (var9 == 0) {
                           break regionExit2;
                         }
                       }
-                      em.$cfr$intArgs$a$c9c3307e6488(117, true, 1, em.field_O);
+                      em.$cfr$intArgs$a$c9c3307e6488(117, true, 1, em.tickerHintShotModeAim);
                       if (var9 == 0) {
                         break regionExit2;
                       }
@@ -1296,7 +1296,7 @@ final class PoolMatchController {
                     if (var4.field_u == 0) {
                       break regionExit2;
                     }
-                    em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, up.field_L);
+                    em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, up.tickerHintMoveCueball);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1308,7 +1308,7 @@ final class PoolMatchController {
                   var6 = fieldTemp$4;
                   if (var6 == 0 &&
                     var9 == 0) {
-                    em.$cfr$intArgs$a$c9c3307e6488(127, true, 1, ah.field_h);
+                    em.$cfr$intArgs$a$c9c3307e6488(127, true, 1, ah.tickerHintEnterShotMode);
                     break regionExit2;
                   } else if (var6 != 1 ||
                     var9 != 0) {
@@ -1320,16 +1320,16 @@ final class PoolMatchController {
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1)) {
-                    em.$cfr$intArgs$a$c9c3307e6488(117, true, 1, sm.field_B);
+                    em.$cfr$intArgs$a$c9c3307e6488(117, true, 1, sm.tickerHintZoom);
                     break regionExit2;
                   }
                   if (decompiledFrameRemainder2) {
-                    em.$cfr$intArgs$a$c9c3307e6488(127, true, 1, pm.field_o);
+                    em.$cfr$intArgs$a$c9c3307e6488(127, true, 1, pm.tickerHintRotate);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   }
-                  em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sa.field_l);
+                  em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sa.tickerHintAim);
                 }
               }
             }
@@ -1374,7 +1374,7 @@ final class PoolMatchController {
             if (this.field_Q != 0 &&
               this.field_t != 5 &&
               this.field_t != 4) {
-              if (this.field_I.j(112).field_q == 0) {
+              if (this.field_I.currentShot(112).field_q == 0) {
                 this.b(this.field_G.field_n + (int)(0.5 + 192.0 * Math.sin(3.141592653589793 * (double)this.field_h * 2.0 / 150.0)), true);
               }
               if (0L != (pd.field_i & 1024L)) {
@@ -1450,7 +1450,7 @@ final class PoolMatchController {
           this.m((byte) 127);
           kh.field_gc.a(10, this);
           dq.field_a.h(-56);
-          ep.a((byte) -73, this);
+          NetworkGameClient.a((byte) -73, this);
           this.w(87);
           if (eo.field_Tb % 100 == 0) {
             this.d(0);
@@ -1497,7 +1497,7 @@ final class PoolMatchController {
         }
     }
 
-    private final void a(qe param0, byte param1) {
+    private final void a(ShotRecord param0, byte param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -1505,7 +1505,7 @@ final class PoolMatchController {
         RuntimeException var3 = null;
         try {
           if ((param0.field_s & ag.field_e) == 0) {
-            if (0 != (param0.field_s & hm.field_e)) {
+            if (0 != (param0.field_s & Quaternion.field_e)) {
               kh.field_gc.a(11, 128, (byte) 96, 128);
             }
           } else {
@@ -1535,15 +1535,15 @@ final class PoolMatchController {
           StringBuilder stackIn_45_1 = null;
           String stackIn_46_2 = null;
           RuntimeException decompiledCaughtException = null;
-          qe var3 = null;
+          ShotRecord var3 = null;
           RuntimeException var3_ref = null;
           int var4 = 0;
           int var5 = 0;
           var5 = Pool.field_O;
           try {
-            var3 = this.field_I.j(62);
+            var3 = this.field_I.currentShot(62);
             if (param1 != 0) {
-              this.field_I = (al) null;
+              this.field_I = (PoolGameModel) null;
             }
             regionExit1: {
               regionExit2: {
@@ -1631,7 +1631,7 @@ final class PoolMatchController {
         }
     }
 
-    private final void c(qe param0, int param1) {
+    private final void c(ShotRecord param0, int param1) {
         PacketBuffer stackIn_13_0 = null;
         boolean stackIn_13_1 = false;
         int stackIn_14_2 = 0;
@@ -1641,7 +1641,7 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
-        al var4 = null;
+        PoolGameModel var4 = null;
         PacketBuffer var5 = null;
         int var6 = 0;
         int var6Lifetime1;
@@ -1651,20 +1651,20 @@ final class PoolMatchController {
           var3.a(true, f.field_g);
           var4 = this.field_I;
           var5 = var3;
-          var5.a(var4.field_l.length, false);
-          for (var6 = 0; var4.field_l.length > var6; var6++) {
-            var4.field_l[var6].a(0, var5);
+          var5.a(var4.balls.length, false);
+          for (var6 = 0; var4.balls.length > var6; var6++) {
+            var4.balls[var6].writeState(0, var5);
           }
           if (param1 >= -124) {
             return;
           }
-          for (var6Lifetime1 = 0; var6Lifetime1 < var4.field_w.length; var6Lifetime1++) {
-            var4.field_w[var6Lifetime1].a(var5, 0);
+          for (var6Lifetime1 = 0; var6Lifetime1 < var4.pockets.length; var6Lifetime1++) {
+            var4.pockets[var6Lifetime1].write(var5, 0);
           }
           stackIn_13_0 = var3;
           stackIn_13_1 = true;
-          if (pq.field_B != null) {
-            stackIn_14_2 = pq.field_B.length;
+          if (Ball.field_B != null) {
+            stackIn_14_2 = Ball.field_B.length;
           } else {
             stackIn_14_2 = 0;
           }
@@ -1708,7 +1708,7 @@ final class PoolMatchController {
         try {
           hp.field_c = ek.a(120);
           var5_int = -61 / ((-59 - param2) / 38);
-          this.field_I = new al(param3, param1, param0, -1);
+          this.field_I = new PoolGameModel(param3, param1, param0, -1);
           this.field_F = new int[this.field_I.field_h.length];
           this.field_i = new String[this.field_I.field_h.length];
           this.field_x = new kj[param0.length];
@@ -1770,7 +1770,7 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         int var3 = 0;
-        pq var4 = null;
+        Ball var4 = null;
         int var3Lifetime1;
         try {
           SoftwareRasterizer.saveClip(bk.field_w);
@@ -1779,12 +1779,12 @@ final class PoolMatchController {
           TriangleRasterizer.setProjectionCenter(320 + t.field_e, fl.field_q.field_ib >> 1);
           for (var2_int = 0; this.field_C > var2_int; var2_int++) {
             var3 = this.field_ib[var2_int];
-            var4 = this.field_I.field_l[var3];
-            if (var4.field_p) {
-              var4.i(param0 ^ 34);
-              dq.field_a.a(false, var4.field_G, var3);
+            var4 = this.field_I.balls[var3];
+            if (var4.transformDirty) {
+              var4.updateRenderTransform(param0 ^ 34);
+              dq.field_a.a(false, var4.renderTransform, var3);
             }
-            dq.field_a.a(param0 - 1912602401, var3, var4.field_G, sa.field_m, false);
+            dq.field_a.a(param0 - 1912602401, var3, var4.renderTransform, sa.field_m, false);
           }
           if (param0 != 32) {
             this.field_G = (kj) null;
@@ -1817,7 +1817,7 @@ final class PoolMatchController {
     }
 
     final void d(int param0, PacketBuffer param1) {
-        qe var3 = null;
+        ShotRecord var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -1827,7 +1827,7 @@ final class PoolMatchController {
           if (param0 != 4096) {
             this.e(false);
           }
-          var3 = this.field_I.j(param0 - 4029);
+          var3 = this.field_I.currentShot(param0 - 4029);
           var3.b((byte) 111, param1);
           if (!var3.d(param0 - 3985)) {
             this.field_I.f((byte) 78);
@@ -1857,8 +1857,8 @@ final class PoolMatchController {
         try {
           this.r(-14034);
           this.y((byte) -99);
-          if (dq.field_a instanceof ul) {
-            ((ul) (dq.field_a)).a(this.field_I.j(108).field_I, (byte) -37, this.field_I.field_l);
+          if (dq.field_a instanceof HalloweenBallSkin) {
+            ((HalloweenBallSkin) (dq.field_a)).a(this.field_I.currentShot(108).field_I, (byte) -37, this.field_I.balls);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "uf.P(" + param0 + ')');
@@ -1932,7 +1932,7 @@ final class PoolMatchController {
         double var28 = 0.0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_I.j(31).field_q != 0) {
+          if (this.field_I.currentShot(31).field_q != 0) {
             return;
           }
           this.field_p = param2;
@@ -1946,14 +1946,14 @@ final class PoolMatchController {
             return;
           }
           var12 = (double)this.field_ab[8] * 0.0000152587890625 * (double)var5 * -var6 / 512.0 + (-var6 * (0.0000152587890625 * (double)this.field_ab[11]) + (double)var4_int * ((double)this.field_ab[5] * 0.0000152587890625) * -var6 / 512.0);
-          var14 = (double)(-((float)this.field_I.field_l[0].field_g / 8192.0f * (float)id.field_c.field_l[9] + (float)id.field_c.field_l[10] * ((float)this.field_I.field_l[0].field_k / 8192.0f) + (float)id.field_c.field_l[11] * ((float)this.field_I.field_l[0].field_j / 8192.0f))) * 0.0000152587890625;
+          var14 = (double)(-((float)this.field_I.balls[0].positionX / 8192.0f * (float)id.field_c.field_l[9] + (float)id.field_c.field_l[10] * ((float)this.field_I.balls[0].positionY / 8192.0f) + (float)id.field_c.field_l[11] * ((float)this.field_I.balls[0].positionZ / 8192.0f))) * 0.0000152587890625;
           var16 = -((double)(id.field_c.field_l[11] * this.field_ab[2]) * 0.0000152587890625 + (0.0000152587890625 * (double)(this.field_ab[0] * id.field_c.field_l[9]) + var14 + 0.0000152587890625 * (double)(this.field_ab[1] * id.field_c.field_l[10]))) / (0.0000152587890625 * ((double)id.field_c.field_l[10] * var10 + (double)id.field_c.field_l[9] * var8 + (double)id.field_c.field_l[11] * var12));
           var18 = var8 * var16 + (double)this.field_ab[0];
           var20 = var10 * var16 + (double)this.field_ab[1];
           var22 = (double)this.field_ab[2] + var12 * var16;
-          var18 = var18 - (double)this.field_I.field_l[0].field_g / 8192.0;
-          var20 = -((double)this.field_I.field_l[0].field_k / 8192.0) + var20;
-          var22 = -((double)this.field_I.field_l[0].field_j / 8192.0) + var22;
+          var18 = var18 - (double)this.field_I.balls[0].positionX / 8192.0;
+          var20 = -((double)this.field_I.balls[0].positionY / 8192.0) + var20;
+          var22 = -((double)this.field_I.balls[0].positionZ / 8192.0) + var22;
           var24 = var22 * ((double)id.field_c.field_l[5] / 65536.0) + (var20 * ((double)id.field_c.field_l[4] / 65536.0) + var18 * ((double)id.field_c.field_l[3] / 65536.0));
           var26 = var22 * ((double)id.field_c.field_l[8] / 65536.0) + ((double)id.field_c.field_l[7] / 65536.0 * var20 + var18 * ((double)id.field_c.field_l[6] / 65536.0));
           var24 = var24 * 2.0;
@@ -2099,7 +2099,7 @@ final class PoolMatchController {
             return;
           }
           kh.field_gc.a((byte) -55, this);
-          if (this.field_I.j(param1 + 29476).field_q == 0 &&
+          if (this.field_I.currentShot(param1 + 29476).field_q == 0 &&
             0 == this.field_e) {
             this.a(false);
           }
@@ -2111,7 +2111,7 @@ final class PoolMatchController {
             re.a((byte) 121);
           }
           ua.b(true);
-          if (this.field_I.field_n > 1) {
+          if (this.field_I.playerCount > 1) {
             boolean decompiledFrameRemainder0 = true;
             var3_int = 60;
             var4 = 55;
@@ -2192,7 +2192,7 @@ final class PoolMatchController {
           if (param0 <= 38) {
             this.n(48);
           }
-          if (0 != this.field_I.j(117).field_q) {
+          if (0 != this.field_I.currentShot(117).field_q) {
             return;
           }
           if (this.b(1, 5, false)) {
@@ -2227,7 +2227,7 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -16439) {
-            this.c((qe) null, 120);
+            this.c((ShotRecord) null, 120);
           }
           stackIn_4_0 = SoftwareRasterizer.width - ((65536 - hc.a(2047, this.field_l)) * (1 + il.field_f.field_w) >> 17);
           return stackIn_4_0;
@@ -2240,8 +2240,8 @@ final class PoolMatchController {
 
     private final void B(byte param0) {
         RuntimeException runtimeException = null;
-        qe var2 = null;
-        oo stackIn_3_0;
+        ShotRecord var2 = null;
+        TableScene stackIn_3_0;
         int stackIn_3_1;
         int[] stackIn_3_2;
         int stackIn_3_3;
@@ -2249,7 +2249,7 @@ final class PoolMatchController {
         int stackIn_4_5 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_I.j(69);
+          var2 = this.field_I.currentShot(69);
           hh.field_c = true;
           var2.field_q = 1;
           stackIn_3_0 = kh.field_gc;
@@ -2262,7 +2262,7 @@ final class PoolMatchController {
           } else {
             stackIn_4_5 = 8;
           }
-          ((oo) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5);
+          ((TableScene) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5);
           this.field_B = -37;
           this.a(true, (byte) -114);
           if (!this.i(-1)) {
@@ -2349,7 +2349,7 @@ final class PoolMatchController {
         int stackIn_28_0 = 0;
         int stackIn_36_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pq var28 = null;
+        Ball var28 = null;
         double var29 = 0.0;
         double var31 = 0.0;
         double var33 = 0.0;
@@ -2388,17 +2388,17 @@ final class PoolMatchController {
           var25 = -1;
           for (var26 = 0; pd.field_f.length > var26; var26++) {
             var27 = pd.field_f[var26];
-            if (var27 < this.field_I.field_l.length) {
-              var28 = this.field_I.field_l[var27];
+            if (var27 < this.field_I.balls.length) {
+              var28 = this.field_I.balls[var27];
               if (!var28.field_o) {
                 stackIn_12_0 = this.field_ab;
               } else {
                 stackIn_12_0 = sa.field_m;
               }
               var6Lifetime2 = stackIn_12_0;
-              var29 = (double)rj.e(-(var28.field_g >> 13) + var6Lifetime2[0], 3);
-              var31 = (double)rj.e(var6Lifetime2[1] - (var28.field_k >> 13), 3);
-              var33 = (double)rj.e(-(var28.field_j >> 13) + var6Lifetime2[2], 3);
+              var29 = (double)KillerRules.e(-(var28.positionX >> 13) + var6Lifetime2[0], 3);
+              var31 = (double)KillerRules.e(var6Lifetime2[1] - (var28.positionY >> 13), 3);
+              var33 = (double)KillerRules.e(-(var28.positionZ >> 13) + var6Lifetime2[2], 3);
               var35 = var31 * var17 + var15 * var29 + var19 * var33;
               var37 = var9 * var31 + var7 * var29 + var33 * var11;
               if (var28.field_o) {
@@ -2449,12 +2449,12 @@ final class PoolMatchController {
           boolean decompiledSharedTail0 = (!(wb.field_a) ||
             !(fm.field_M < 10));
           if (!decompiledSharedTail0) {
-            ac.b(1, (byte) 103);
+            KillerBallSkin.b(1, (byte) 103);
             decompiledSharedTail0 = (Pool.field_O != 0);
           }
           if ((decompiledSharedTail0) && (!wb.field_a &&
             -no.field_q.field_A < fm.field_M)) {
-            ac.b(-1, (byte) 69);
+            KillerBallSkin.b(-1, (byte) 69);
           }
           tq.field_q = (sa.field_h.maxAscent + no.field_q.field_y >> 1) + fm.field_M;
           return;
@@ -2467,12 +2467,12 @@ final class PoolMatchController {
 
     private final void A(int param0) {
         RuntimeException decompiledCaughtException = null;
-        qe var2 = null;
+        ShotRecord var2 = null;
         RuntimeException var2_ref = null;
-        qe var3 = null;
+        ShotRecord var3 = null;
         kj var4 = null;
         oq var4_ref = null;
-        qe var3Lifetime1;
+        ShotRecord var3Lifetime1;
         try {
           if (this.field_I.field_o) {
             return;
@@ -2485,7 +2485,7 @@ final class PoolMatchController {
           }
           if (this.i(-1) &&
             this.b(1, 7, false)) {
-            var2 = this.field_I.j(96);
+            var2 = this.field_I.currentShot(96);
             if (var2.field_q >= 1) {
               return;
             }
@@ -2524,7 +2524,7 @@ final class PoolMatchController {
 
     final static void r(byte param0) {
         try {
-          cr.a(16, hk.d(122));
+          PotEvent.a(16, hk.d(122));
           if (param0 != -80) {
             field_gb = (wc) null;
           }
@@ -2551,14 +2551,14 @@ final class PoolMatchController {
           var2_double = 0.0;
           var4 = 0.0;
           var6 = 0L;
-          for (var8 = 0; this.field_I.field_l.length > var8; var8++) {
-            if (this.field_I.field_l[var8].field_s &&
-              this.field_I.field_l[var8].field_v != 0) {
-              var9 = Math.sqrt((double)(this.field_I.field_l[0].field_I * this.field_I.field_l[0].field_I + this.field_I.field_l[0].field_t * this.field_I.field_l[0].field_t) / 65536.0 / 65536.0);
+          for (var8 = 0; this.field_I.balls.length > var8; var8++) {
+            if (this.field_I.balls[var8].inPlay &&
+              this.field_I.balls[var8].motionState != 0) {
+              var9 = Math.sqrt((double)(this.field_I.balls[0].velocityX * this.field_I.balls[0].velocityX + this.field_I.balls[0].velocityY * this.field_I.balls[0].velocityY) / 65536.0 / 65536.0);
               var11 = -1;
-              for (var12_int = 0; this.field_I.field_w.length > var12_int; var12_int++) {
-                var13 = -this.field_I.field_l[var8].field_g + this.field_I.field_w[var12_int].field_g;
-                var14 = this.field_I.field_w[var12_int].field_f - this.field_I.field_l[var8].field_k;
+              for (var12_int = 0; this.field_I.pockets.length > var12_int; var12_int++) {
+                var13 = -this.field_I.balls[var8].positionX + this.field_I.pockets[var12_int].centerX;
+                var14 = this.field_I.pockets[var12_int].centerY - this.field_I.balls[var8].positionY;
                 var15 = aj.a(var13, false, var13) + aj.a(var14, false, var14);
                 if (var11 < 0 ||
                   var11 > var15) {
@@ -2566,8 +2566,8 @@ final class PoolMatchController {
                 }
               }
               var12 = Math.sqrt((double)var11 / 65536.0) * Math.max(0.0, -0.04998779296875 + var9);
-              var2_double = var2_double + var12 * ((double)this.field_I.field_l[var8].field_g / 65536.0);
-              var4 = var4 + var12 * ((double)this.field_I.field_l[var8].field_k / 65536.0);
+              var2_double = var2_double + var12 * ((double)this.field_I.balls[var8].positionX / 65536.0);
+              var4 = var4 + var12 * ((double)this.field_I.balls[var8].positionY / 65536.0);
               var6 = (long)((double)var6 + var12);
             }
           }
@@ -2601,7 +2601,7 @@ final class PoolMatchController {
           kh.field_gc.b(this.field_I, 0);
           this.f((byte) 93);
           if ((hq.field_c & this.field_L) == 0 &&
-            this.field_I.j(72).field_q == 0) {
+            this.field_I.currentShot(72).field_q == 0) {
             this.s((byte) -74);
           }
           return;
@@ -2627,14 +2627,14 @@ final class PoolMatchController {
         int var4_int = 0;
         RuntimeException var4 = null;
         aa var5 = null;
-        qe var6 = null;
+        ShotRecord var6 = null;
         try {
           if (param2 != 27) {
             this.field_T = false;
           }
           var4_int = -sa.field_h.maxDescent + SoftwareRasterizer.height;
           var5 = new aa(param1);
-          var6 = (qe) (var5.a(0));
+          var6 = (ShotRecord) (var5.a(0));
           while (var6 != null) {
             if (var6.field_q >= 3) {
               sa.field_h.d(var6.a(true), param0, var4_int, 16724787, 1);
@@ -2669,7 +2669,7 @@ final class PoolMatchController {
                 return;
               }
             }
-            var6 = (qe) (var5.c((byte) -71));
+            var6 = (ShotRecord) (var5.c((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2709,7 +2709,7 @@ final class PoolMatchController {
         }
     }
 
-    private final void b(qe param0, byte param1) {
+    private final void b(ShotRecord param0, byte param1) {
         int discarded$1 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -2723,7 +2723,7 @@ final class PoolMatchController {
             !param0.field_R.c(0)) {
             var3 = (dn) (param0.field_R.c((byte) -54));
             while (var3 != null) {
-              var4 = nr.a(new String[]{this.field_I.field_h[param0.field_L]}, -1, e.field_h[var3.field_q]);
+              var4 = nr.a(new String[]{this.field_I.field_h[param0.field_L]}, -1, e.shotMessages[var3.field_q]);
               em.$cfr$intArgs$a$c9c3307e6488(120, false, 1, var4);
               var3 = (dn) (param0.field_R.f((byte) -5));
             }
@@ -2759,14 +2759,14 @@ final class PoolMatchController {
         int var3 = 0;
         int var4 = 0;
         try {
-          if (!vj.field_c[bc.field_f] &&
-            !vj.field_c[mb.field_a]) {
+          if (!vj.field_c[bc.keycodeDefaultLeft1] &&
+            !vj.field_c[mb.keycodeDefaultLeft2]) {
             stackIn_7_0 = 0;
           } else {
             stackIn_7_0 = -1;
           }
-          if (!vj.field_c[gn.field_c] &&
-            !vj.field_c[di.field_b]) {
+          if (!vj.field_c[gn.keycodeDefaultRight1] &&
+            !vj.field_c[di.keycodeDefaultRight2]) {
             stackIn_14_1 = 0;
           } else {
             stackIn_14_1 = 1;
@@ -2779,20 +2779,20 @@ final class PoolMatchController {
             stackIn_22_1 = 0;
           }
           var3 = stackIn_18_0 + stackIn_22_1;
-          if (!vj.field_c[gp.field_b] &&
-            !vj.field_c[fl.field_p]) {
+          if (!vj.field_c[gp.keycodeDefaultUp1] &&
+            !vj.field_c[fl.keycodeDefaultUp2]) {
             stackIn_29_0 = 0;
           } else {
             stackIn_29_0 = -1;
           }
-          if (!vj.field_c[hm.field_j] &&
-            !vj.field_c[ProxySocketConnector.field_h]) {
+          if (!vj.field_c[Quaternion.keycodeDefaultDown1] &&
+            !vj.field_c[ProxySocketConnector.keycodeDefaultDown2]) {
             stackIn_36_1 = 0;
           } else {
             stackIn_36_1 = 1;
           }
           var4 = stackIn_29_0 + stackIn_36_1;
-          if (param0 == this.field_I.j(72).field_q &&
+          if (param0 == this.field_I.currentShot(72).field_q &&
             0 != var2_int) {
             if (this.b(1, 4, false)) {
               this.field_A = this.field_A - var2_int;
@@ -2805,13 +2805,13 @@ final class PoolMatchController {
               this.field_A = 0;
             }
           }
-          if (0 == this.field_I.j(28).field_q &&
+          if (0 == this.field_I.currentShot(28).field_q &&
             var3 != 0) {
             this.f(512, var3 * 8);
             hh.field_c = true;
             id.field_c.field_g = true;
           }
-          if (this.field_I.j(77).field_q == 0 &&
+          if (this.field_I.currentShot(77).field_q == 0 &&
             var4 != 0) {
             if (!this.b(1, 5, false)) {
               return;
@@ -2863,10 +2863,10 @@ final class PoolMatchController {
         }
     }
 
-    private final void a(int param0, qe param1) {
-        oo stackIn_34_0 = null;
+    private final void a(int param0, ShotRecord param1) {
+        TableScene stackIn_34_0 = null;
         int stackIn_35_1 = 0;
-        oo stackIn_41_0;
+        TableScene stackIn_41_0;
         int stackIn_41_1;
         int[] stackIn_41_2;
         int stackIn_41_3;
@@ -2888,14 +2888,14 @@ final class PoolMatchController {
         ij var5 = null;
         aa var5_ref = null;
         int[] var6 = null;
-        cr var6_ref = null;
+        PotEvent var6_ref = null;
         ij var7_ref_ij = null;
         int var7 = 0;
-        dl var8 = null;
+        Pocket var8 = null;
         int var9 = 0;
         ij var5Lifetime1;
         aa var5_refLifetime1;
-        cr var6_refLifetime1;
+        PotEvent var6_refLifetime1;
         int var3_intLifetime1;
         var9 = Pool.field_O;
         try {
@@ -2928,7 +2928,7 @@ final class PoolMatchController {
                   } else {
                     stackIn_35_1 = 1;
                   }
-                  ((oo) (Object) stackIn_34_0).a(stackIn_35_1, this.field_G.field_n * 128 / 4096 + 32, (byte) -115, 128);
+                  ((TableScene) (Object) stackIn_34_0).a(stackIn_35_1, this.field_G.field_n * 128 / 4096 + 32, (byte) -115, 128);
                   if (var9 != 0) {
                     stackIn_41_0 = kh.field_gc;
                     stackIn_41_1 = 1336449640;
@@ -2940,7 +2940,7 @@ final class PoolMatchController {
                     } else {
                       stackIn_42_5 = 1;
                     }
-                    ((oo) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
+                    ((TableScene) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
                   }
                 } else {
                   stackIn_41_0 = kh.field_gc;
@@ -2953,7 +2953,7 @@ final class PoolMatchController {
                   } else {
                     stackIn_42_5 = 1;
                   }
-                  ((oo) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
+                  ((TableScene) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
                 }
                 this.field_I.i((byte) -51);
                 if (this.i(-1)) {
@@ -2976,9 +2976,9 @@ final class PoolMatchController {
                 if (var4 == 0) {
                   if (var3_int == 0 &&
                     param1.field_n != -1 &&
-                    !this.field_I.field_f.c(param1, -110) &&
+                    !this.field_I.rules.c(param1, -110) &&
                     !nq.a((byte) 49, 4)) {
-                    var5 = gj.a(true, 4, bq.field_s, (String) null);
+                    var5 = gj.a(true, 4, bq.foulExclamation, (String) null);
                     var6 = wm.field_ac[0];
                     param1.field_t = true;
                     var5.field_D = new int[]{var6[0] >> 13, var6[1] >> 13, var6[2] >> 13};
@@ -2992,9 +2992,9 @@ final class PoolMatchController {
                   boolean decompiledFrameCompleted1 = true;
                   if (this.field_I.field_j > 0) {
                     var5_ref = new aa(param1.field_m);
-                    var6_ref = (cr) (var5_ref.b((byte) -92));
+                    var6_ref = (PotEvent) (var5_ref.b((byte) -92));
                     while (null != var6_ref) {
-                      stackOut_84_0 = this.field_I.field_f.a(var6_ref.field_n, (byte) 9, param1);
+                      stackOut_84_0 = this.field_I.rules.a(var6_ref.ballIndex, (byte) 9, param1);
                       stackIn_98_0 = stackOut_84_0 ? 1 : 0;
                       stackIn_85_0 = stackOut_84_0;
                       if (var9 != 0) {
@@ -3003,19 +3003,19 @@ final class PoolMatchController {
                       }
                       if (!stackIn_85_0 &&
                         !nq.a((byte) 95, 4)) {
-                        var7_ref_ij = gj.a(true, 4, bq.field_s, (String) null);
-                        var8 = this.field_I.field_w[var6_ref.field_r];
+                        var7_ref_ij = gj.a(true, 4, bq.foulExclamation, (String) null);
+                        var8 = this.field_I.pockets[var6_ref.pocketIndex];
                         if ((16711680 & wq.field_c) != 16711680) {
                           wq.field_c = wq.field_c + 65536;
                         }
                         param1.field_t = true;
                         var7_ref_ij.field_v = 5;
-                        var7_ref_ij.field_D = new int[]{var8.field_g >> 13, var8.field_f >> 13, 0};
-                        var7_ref_ij.field_F = new int[]{var8.field_g >> 13, var8.field_f >> 13, 0};
-                        var7_ref_ij.field_p = new int[]{var8.field_g >> 13, var8.field_f >> 13, 0};
+                        var7_ref_ij.field_D = new int[]{var8.centerX >> 13, var8.centerY >> 13, 0};
+                        var7_ref_ij.field_F = new int[]{var8.centerX >> 13, var8.centerY >> 13, 0};
+                        var7_ref_ij.field_p = new int[]{var8.centerX >> 13, var8.centerY >> 13, 0};
                         break;
                       }
-                      var6_ref = (cr) (var5_ref.b(-126));
+                      var6_ref = (PotEvent) (var5_ref.b(-126));
                     }
                   }
                   if (decompiledFrameCompleted1) {
@@ -3024,21 +3024,21 @@ final class PoolMatchController {
                   if (stackIn_98_0 == 2 &&
                     param1.field_n == -1 &&
                     param1.field_t) {
-                    var5Lifetime1 = gj.a(true, 4, bq.field_s, (String) null);
+                    var5Lifetime1 = gj.a(true, 4, bq.foulExclamation, (String) null);
                     var5Lifetime1.field_v = 5;
-                    var5Lifetime1.field_D = new int[]{this.field_I.field_l[0].field_g >> 13, this.field_I.field_l[0].field_k >> 13, this.field_I.field_l[0].field_j >> 13};
-                    var5Lifetime1.field_F = new int[]{this.field_I.field_l[0].field_g >> 13, this.field_I.field_l[0].field_k >> 13, this.field_I.field_l[0].field_j >> 13};
-                    var5Lifetime1.field_p = new int[]{this.field_I.field_l[0].field_g >> 13, this.field_I.field_l[0].field_k >> 13, this.field_I.field_l[0].field_j >> 13};
+                    var5Lifetime1.field_D = new int[]{this.field_I.balls[0].positionX >> 13, this.field_I.balls[0].positionY >> 13, this.field_I.balls[0].positionZ >> 13};
+                    var5Lifetime1.field_F = new int[]{this.field_I.balls[0].positionX >> 13, this.field_I.balls[0].positionY >> 13, this.field_I.balls[0].positionZ >> 13};
+                    var5Lifetime1.field_p = new int[]{this.field_I.balls[0].positionX >> 13, this.field_I.balls[0].positionY >> 13, this.field_I.balls[0].positionZ >> 13};
                   }
                 }
                 boolean decompiledFrameCompleted0 = true;
                 if (this.field_I.field_j > 0) {
                   var5_refLifetime1 = new aa(param1.field_m);
-                  var6_refLifetime1 = (cr) (var5_refLifetime1.a(0));
+                  var6_refLifetime1 = (PotEvent) (var5_refLifetime1.a(0));
                   var7 = 0;
                   while (!(var7 >= this.field_I.field_j)) {
                     stackIn_121_0 = -1;
-                    stackIn_121_1 = ~var6_refLifetime1.field_n;
+                    stackIn_121_1 = ~var6_refLifetime1.ballIndex;
                     if (var9 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -3046,7 +3046,7 @@ final class PoolMatchController {
                     if (stackIn_121_0 != stackIn_121_1) {
                       vm.field_f = vm.field_f + 65536;
                     }
-                    var6_refLifetime1 = (cr) (var5_refLifetime1.c((byte) -71));
+                    var6_refLifetime1 = (PotEvent) (var5_refLifetime1.c((byte) -71));
                     var7++;
                   }
                 }
@@ -3101,33 +3101,33 @@ final class PoolMatchController {
         }
     }
 
-    private final void b(int param0, qe param1) {
+    private final void b(int param0, ShotRecord param1) {
         int var6_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        af var3 = null;
+        EightBallRules var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         int var5 = 0;
         ij var6 = null;
         try {
-          if (!(this.field_I.field_f instanceof af)) {
+          if (!(this.field_I.rules instanceof EightBallRules)) {
             return;
           }
-          var3 = (af) (this.field_I.field_f);
+          var3 = (EightBallRules) (this.field_I.rules);
           var4 = dq.field_a.a(var3.f(22533, param1.field_L), (byte) 116);
           var5 = 0;
-          for (var6_int = 0; var6_int < this.field_I.field_n; var6_int++) {
-            if (~this.field_I.field_f.c(-107, var6_int) == ~this.field_I.field_f.c(-64, param1.field_L)) {
+          for (var6_int = 0; var6_int < this.field_I.playerCount; var6_int++) {
+            if (~this.field_I.rules.c(-107, var6_int) == ~this.field_I.rules.c(-64, param1.field_L)) {
               var5 = var5 | 1 << var6_int;
             }
           }
           if (param0 <= 114) {
             this.field_f = 23;
           }
-          var6 = gj.a(true, 10, nr.a(new String[]{null, null, var4}, -1, this.a(ij.field_A, sd.field_O, of.field_Qb, qq.field_zb, (byte) 61, var5, w.field_c, rj.field_g)), (String) null);
+          var6 = gj.a(true, 10, nr.a(new String[]{null, null, var4}, -1, this.a(ij.playerYouFirstListAreGroupName, sd.playerIsGroupName, of.playerX2AreGroupName, qq.playerYouX2AreGroupName, (byte) 61, var5, w.playerListAreGroupName, KillerRules.youAreGroupName)), (String) null);
           var6.field_q = q.field_b;
           var6.field_r = 5;
           return;
@@ -3166,9 +3166,9 @@ final class PoolMatchController {
 
     private final void s(int param0) {
         RuntimeException decompiledCaughtException = null;
-        qe var2 = null;
+        ShotRecord var2 = null;
         RuntimeException var2_ref = null;
-        pq var3 = null;
+        Ball var3 = null;
         try {
           if (0 != (hq.field_c & this.field_L)) {
             if (this.field_q | false) {
@@ -3180,7 +3180,7 @@ final class PoolMatchController {
             System.out.println("Can't redo: Game is finished.");
             return;
           }
-          var2 = this.field_I.j(29);
+          var2 = this.field_I.currentShot(29);
           if (param0 <= 62) {
             this.b(8, true);
           }
@@ -3198,10 +3198,10 @@ final class PoolMatchController {
           }
           if (-1 != var2.field_P &&
             var2.field_Q != -1) {
-            var3 = this.field_I.field_l[0];
-            var3.field_p = true;
-            var3.field_g = var2.field_P;
-            var3.field_k = var2.field_Q;
+            var3 = this.field_I.balls[0];
+            var3.transformDirty = true;
+            var3.positionX = var2.field_P;
+            var3.positionY = var2.field_Q;
             System.out.println("moved cueball to " + var2.field_P + "," + var2.field_Q);
           }
           this.field_G.field_d = var2.field_D;
@@ -3222,14 +3222,14 @@ final class PoolMatchController {
 
     private final void d(int param0) {
         RuntimeException runtimeException = null;
-        qe var2 = null;
+        ShotRecord var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          var2 = this.field_I.j(58);
+          var2 = this.field_I.currentShot(58);
           if (var2 == null) {
             return;
           }
@@ -3238,11 +3238,11 @@ final class PoolMatchController {
             return;
           }
           var4 = 0;
-          while (this.field_I.field_l.length > var4) {
+          while (this.field_I.balls.length > var4) {
             if (var5 != 0) {
               return;
             }
-            if (this.field_I.field_l[var4].field_s) {
+            if (this.field_I.balls[var4].inPlay) {
               if (~var4 == ~var3) {
                 ji.field_b[var4] = 32;
               }
@@ -3305,7 +3305,7 @@ final class PoolMatchController {
               decompiledFrameRemainder0 = !(var2_int <= 0);
             }
             if (decompiledFrameRemainder0) {
-              var3 = dq.field_a.a(var2_int, this.field_I.field_f, (byte) -111);
+              var3 = dq.field_a.a(var2_int, this.field_I.rules, (byte) -111);
               er.a(gg.field_f, var3, wn.field_i, 3355443, sa.field_h, true, dq.field_a.a(var2_int, true));
             }
           }
@@ -3323,14 +3323,14 @@ final class PoolMatchController {
     final void a(int param0, PacketBuffer param1) {
         try {
           RuntimeException runtimeException = null;
-          qe var3 = null;
+          ShotRecord var3 = null;
           PacketBuffer var4 = null;
           RuntimeException stackIn_18_0 = null;
           StringBuilder stackIn_18_1 = null;
           String stackIn_19_2 = null;
           RuntimeException decompiledCaughtException = null;
           try {
-            var3 = this.field_I.j(31);
+            var3 = this.field_I.currentShot(31);
             if (var3.field_q != 2) {
               if (this.i(-1) &&
                 !this.field_j) {
@@ -3477,8 +3477,8 @@ final class PoolMatchController {
               }
             }
           }
-          if (null != pq.field_B) {
-            stackIn_39_0 = pq.field_B.length + 3;
+          if (null != Ball.field_B) {
+            stackIn_39_0 = Ball.field_B.length + 3;
           } else {
             stackIn_39_0 = 3;
           }
@@ -3562,7 +3562,7 @@ final class PoolMatchController {
               if (var2_intLifetime3 == 83 &&
                 var7 == 0) {
                 if (!this.field_T) {
-                  if (this.field_I.j(101).field_q == 1) {
+                  if (this.field_I.currentShot(101).field_q == 1) {
                     return;
                   }
                   if (!this.b(1, 3, false)) {
@@ -3621,22 +3621,22 @@ final class PoolMatchController {
         int stackIn_13_1 = 0;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qe var2 = null;
+        ShotRecord var2 = null;
         RuntimeException var2_ref = null;
         ij var3 = null;
         ij var3Lifetime1;
         try {
-          if (this.field_I.field_n > 1) {
-            if (this.field_I.j(param0 + 14107).next != this.field_I.field_u.field_e) {
-              if (((qe) (this.field_I.j(85).next)).field_L != this.field_I.field_A) {
-                var2 = (qe) (this.field_I.j(53).next);
+          if (this.field_I.playerCount > 1) {
+            if (this.field_I.currentShot(param0 + 14107).next != this.field_I.shots.field_e) {
+              if (((ShotRecord) (this.field_I.currentShot(85).next)).field_L != this.field_I.field_A) {
+                var2 = (ShotRecord) (this.field_I.currentShot(53).next);
                 if ((sg.field_O & var2.field_s) != 0) {
-                  var3 = gj.a(true, 3, nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, gr.field_A), (String) null);
+                  var3 = gj.a(true, 3, nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, gr.playerNameTwoShots), (String) null);
                   var3.field_q = SpriteState.field_F;
                   var3.field_r = 5;
                 }
                 if (0 != (var2.field_s & nr.field_Y)) {
-                  var3Lifetime1 = gj.a(true, 8, nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, uo.field_Ob), (String) null);
+                  var3Lifetime1 = gj.a(true, 8, nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, uo.playerNameBallInHand), (String) null);
                   var3Lifetime1.field_q = df.field_f;
                   var3Lifetime1.field_r = 5;
                 }
@@ -3647,7 +3647,7 @@ final class PoolMatchController {
                   0 >= this.field_I.field_y) {
                   stackIn_16_2 = this.e(-30360, this.field_I.field_A);
                 } else {
-                  stackIn_16_2 = nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, vp.field_e);
+                  stackIn_16_2 = nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, TimeTrialRules.playerNameYouHaveAnExtraShot);
                 }
                 gj.a(stackIn_13_0, stackIn_13_1, stackIn_16_2, (String) null);
               }
@@ -3674,13 +3674,13 @@ final class PoolMatchController {
         RuntimeException var2 = null;
         try {
           var3 = 50 / ((18 - param0) / 54);
-          var2_int = this.field_I.field_f.a(-1);
+          var2_int = this.field_I.rules.a(-1);
           if (var2_int == -1) {
             return;
           }
-          for (var4 = 0; this.field_I.field_l.length > var4; var4++) {
-            if (this.field_I.field_l[var4].field_s) {
-              if (~var2_int == ~this.field_I.field_f.b(var4, 30554)) {
+          for (var4 = 0; this.field_I.balls.length > var4; var4++) {
+            if (this.field_I.balls[var4].inPlay) {
+              if (~var2_int == ~this.field_I.rules.b(var4, 30554)) {
                 ji.field_b[var4] = 32;
               }
             } else {
@@ -3749,7 +3749,7 @@ final class PoolMatchController {
         int stackIn_5_0 = 0;
         int stackIn_81_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        qe var3 = null;
+        ShotRecord var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         String var5 = null;
@@ -3768,7 +3768,7 @@ final class PoolMatchController {
           if (-no.field_q.field_A < fm.field_M) {
             bq.field_n.a(of.field_Ob, fm.field_M, 128);
             no.field_q.c(of.field_Ob, fm.field_M);
-            var3 = this.field_I.j(109);
+            var3 = this.field_I.currentShot(109);
             if (0 > this.field_I.field_A) {
               stackIn_5_0 = var3.field_L;
             } else {
@@ -3777,14 +3777,14 @@ final class PoolMatchController {
             var4 = stackIn_5_0;
             var5 = this.e(-30360, var4);
             var6 = 16 + of.field_Ob;
-            if (this.field_I.field_n <= 1) {
+            if (this.field_I.playerCount <= 1) {
               tk.field_k.field_pb = false;
             } else {
               var6 = this.a(-30818, var6, no.field_q.field_y / 2 + fm.field_M, tk.field_k);
             }
             if (!this.x((byte) -102) &&
-              !this.field_I.field_f.f(114) &&
-              !(this.field_I.field_f instanceof rj)) {
+              !this.field_I.rules.f(114) &&
+              !(this.field_I.rules instanceof KillerRules)) {
               sa.field_h.d(var5, var6, tq.field_q, 16777215, 0);
               var6 = var6 + this.field_F[var4];
             } else {
@@ -3792,12 +3792,12 @@ final class PoolMatchController {
               sa.field_h.d(var7_ref_String, var6, tq.field_q, 16777215, 0);
               var6 = var6 + sa.field_h.b(var7_ref_String);
             }
-            if (this.field_I.field_f.f(119)) {
-              q.field_b.field_hb = this.field_I.field_f.b(var3, 1);
+            if (this.field_I.rules.f(119)) {
+              q.field_b.field_hb = this.field_I.rules.b(var3, 1);
               var6 = this.a(-30818, var6, fm.field_M + no.field_q.field_y / 2, q.field_b);
             }
-            if (this.field_I.field_f instanceof rj) {
-              var7_ref_StringLifetime1 = Integer.toString(((rj) (this.field_I.field_f)).field_e[var4]);
+            if (this.field_I.rules instanceof KillerRules) {
+              var7_ref_StringLifetime1 = Integer.toString(((KillerRules) (this.field_I.rules)).field_e[var4]);
               sa.field_h.d(var7_ref_StringLifetime1, var6, tq.field_q, 16777215, 0);
               var6 = var6 + sa.field_h.b(var7_ref_StringLifetime1);
             }
@@ -3805,34 +3805,34 @@ final class PoolMatchController {
               if (param1 ||
                 23 == ne.field_w) {
                 if (0 > this.field_I.field_A) {
-                  var7_ref_StringLifetime2 = no.field_b;
+                  var7_ref_StringLifetime2 = no.mpGamedrawn;
                 } else {
                   if ((hq.field_c & this.field_L) != 0) {
-                    var8_int = this.field_I.field_f.b((byte) -121, this.field_I.field_f.c(-59, this.field_I.field_A));
+                    var8_int = this.field_I.rules.b((byte) -121, this.field_I.rules.c(-59, this.field_I.field_A));
                     if (se.a(false, var8_int) <= 1) {
                       if (this.field_I.field_A != this.field_db) {
-                        var7_ref_StringLifetime2 = nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, PacketBuffer.field_r);
+                        var7_ref_StringLifetime2 = nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, PacketBuffer.mpXHaswon);
                       } else {
-                        var7_ref_StringLifetime2 = il.field_h;
+                        var7_ref_StringLifetime2 = il.mpYouhavewon;
                       }
                     } else {
-                      var7_ref_StringLifetime2 = this.a(jq.field_h, PacketBuffer.field_r, gk.field_jb, nf.field_db, (byte) 61, var8_int, sk.field_e, il.field_h);
+                      var7_ref_StringLifetime2 = this.a(jq.playerYouFirstListHaveWon, PacketBuffer.mpXHaswon, gk.playerX2HaveWon, nf.playerYouX2HaveWon, (byte) 61, var8_int, sk.playerListHaveWon, il.mpYouhavewon);
                     }
                   } else {
                     if ((f.field_f & this.field_L) != 0) {
                       if (this.field_I.field_m) {
-                        var7_ref_StringLifetime2 = bc.field_a + "<br>" + lh.b(this.field_o, (byte) -80);
+                        var7_ref_StringLifetime2 = bc.timeTrialCompleted + "<br>" + lh.b(this.field_o, (byte) -80);
                       } else {
-                        var7_ref_StringLifetime2 = MouseHandler.field_b;
+                        var7_ref_StringLifetime2 = MouseHandler.timeTrialFailed;
                       }
                     } else {
                       if ((sk.field_d & this.field_L) == 0) {
-                        var7_ref_StringLifetime2 = nr.a(new String[]{this.field_I.field_h[this.field_I.field_A]}, -1, PacketBuffer.field_r);
+                        var7_ref_StringLifetime2 = nr.a(new String[]{this.field_I.field_h[this.field_I.field_A]}, -1, PacketBuffer.mpXHaswon);
                       } else {
                         if ((var3.field_s & ag.field_e) == 0) {
-                          var7_ref_StringLifetime2 = nd.field_g;
+                          var7_ref_StringLifetime2 = nd.youhavelost;
                         } else {
-                          var7_ref_StringLifetime2 = il.field_h;
+                          var7_ref_StringLifetime2 = il.mpYouhavewon;
                         }
                       }
                     }
@@ -3846,7 +3846,7 @@ final class PoolMatchController {
                 ig.field_i.c(SoftwareRasterizer.width - ig.field_i.field_z >> 1, 80);
                 if ((f.field_f & this.field_L) == 0) {
                   sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
-                  sa.field_h.drawCentered(fl.field_m, SoftwareRasterizer.width >> 1, 150, 16777215, 0);
+                  sa.field_h.drawCentered(fl.endOfGamePressEscapeToContinue, SoftwareRasterizer.width >> 1, 150, 16777215, 0);
                 }
               }
             } else {
@@ -3863,7 +3863,7 @@ final class PoolMatchController {
                 var8 = Integer.toString(var7);
                 if (this.field_o > 1 &&
                   this.field_o < 250 &&
-                  this.field_I.j(72).field_q == 0) {
+                  this.field_I.currentShot(72).field_q == 0) {
                   var9 = (-250 + this.field_o << 14) / 50;
                 }
               } else {
@@ -3881,7 +3881,7 @@ final class PoolMatchController {
                   var8 = p.a(var7 / 60 % 60, var7 % 60, 45, var7 / 60 / 60);
                 }
               }
-              var8 = nr.a(new String[]{var8}, -1, p.field_n);
+              var8 = nr.a(new String[]{var8}, -1, p.mpTimeremaining);
               if (var9 == -1) {
                 sa.field_h.d(var8, vk.field_H + 4, tq.field_q, 16777215, 0);
               } else {
@@ -3959,9 +3959,9 @@ final class PoolMatchController {
           if (param1 != -43) {
             this.field_S = 64;
           }
-          if (al.field_B[param0] != dq.field_a) {
+          if (PoolGameModel.field_B[param0] != dq.field_a) {
             dq.field_a.e(-26707);
-            dq.field_a = al.field_B[param0];
+            dq.field_a = PoolGameModel.field_B[param0];
             dq.field_a.a(2147483647, this.field_I);
             this.K(0);
           }
@@ -4013,9 +4013,9 @@ final class PoolMatchController {
             return stackIn_2_0;
           }
           if (gj.field_S != 2) {
-            stackIn_7_0 = vl.field_r;
+            stackIn_7_0 = PlasmaBallSkin.playerColon;
           } else {
-            stackIn_7_0 = rc.field_g;
+            stackIn_7_0 = rc.playerColonFr;
           }
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4243,14 +4243,14 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        pq var3 = null;
+        Ball var3 = null;
         or var4 = null;
         int var5 = 0;
-        qe var5_ref_qe = null;
+        ShotRecord var5_ref_qe = null;
         int var6_int = 0;
         long var6 = 0L;
         aa var7 = null;
-        cr var8_ref_cr = null;
+        PotEvent var8_ref_cr = null;
         long var8 = 0L;
         long var10 = 0L;
         int var12 = 0;
@@ -4263,8 +4263,8 @@ final class PoolMatchController {
           while (true) {
             stackIn_3_0 = var2_int;
             boolean decompiledFrameRemainder2 = true;
-            if (stackIn_3_0 < this.field_I.field_l.length) {
-              var3 = this.field_I.field_l[var2_int];
+            if (stackIn_3_0 < this.field_I.balls.length) {
+              var3 = this.field_I.balls[var2_int];
               var4 = var3.field_q;
               if (var12 != 0) {
                 return;
@@ -4286,7 +4286,7 @@ final class PoolMatchController {
                         }
                         stackIn_26_0 = var4.field_c ? 1 : 0;
                         while (true) {
-                          if (stackIn_26_0 == 0 && (var4.a(-5877, this.field_I.field_c) ||
+                          if (stackIn_26_0 == 0 && (var4.a(-5877, this.field_I.cushionSegments) ||
                             var12 != 0)) {
                             var5--;
                             if (var5 > 0) {
@@ -4312,22 +4312,22 @@ final class PoolMatchController {
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1)) {
-                    var5_ref_qe = this.field_I.j(param0 ^ -704);
-                    if (!this.field_I.field_f.a(var5_ref_qe.field_z, (byte) 125, var2_int)) {
+                    var5_ref_qe = this.field_I.currentShot(param0 ^ -704);
+                    if (!this.field_I.rules.a(var5_ref_qe.field_z, (byte) 125, var2_int)) {
                       kh.field_gc.a(14, 128, (byte) 99, 128);
                       var3.field_q.field_c = true;
                     } else {
                       var6_int = 0;
                       var7 = new aa(var5_ref_qe.field_m);
-                      var8_ref_cr = (cr) (var7.b((byte) -92));
+                      var8_ref_cr = (PotEvent) (var7.b((byte) -92));
                       while (null != var8_ref_cr) {
                         stackIn_87_0 = var2_int;
-                        stackIn_87_1 = var8_ref_cr.field_n;
+                        stackIn_87_1 = var8_ref_cr.ballIndex;
                         if (stackIn_87_0 != stackIn_87_1 &&
-                          this.field_I.field_f.a(var5_ref_qe.field_z, (byte) 124, var8_ref_cr.field_n)) {
+                          this.field_I.rules.a(var5_ref_qe.field_z, (byte) 124, var8_ref_cr.ballIndex)) {
                           var6_int = 1;
                         } else {
-                          var8_ref_cr = (cr) (var7.b(param0 ^ 697));
+                          var8_ref_cr = (PotEvent) (var7.b(param0 ^ 697));
                           continue;
                         }
                         break;
@@ -4352,9 +4352,9 @@ final class PoolMatchController {
                 if ((decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1)) {
                   var5Lifetime1 = 0;
-                  while (!(this.field_I.field_w.length <= var5Lifetime1)) {
-                    var6 = (long)(-this.field_I.field_w[var5Lifetime1].field_g + var3.field_g);
-                    var8 = (long)(-this.field_I.field_w[var5Lifetime1].field_f + var3.field_k);
+                  while (!(this.field_I.pockets.length <= var5Lifetime1)) {
+                    var6 = (long)(-this.field_I.pockets[var5Lifetime1].centerX + var3.positionX);
+                    var8 = (long)(-this.field_I.pockets[var5Lifetime1].centerY + var3.positionY);
                     var10 = var6 * var6 + var8 * var8 >> 16;
                     stackIn_3_0 = $cfr$lcmp(~var10, -75759617L);
                     if (stackIn_3_0 > 0) {
@@ -4414,15 +4414,15 @@ final class PoolMatchController {
         aa var3_ref2 = null;
         RuntimeException var3_ref3 = null;
         int[] var4_ref_int__ = null;
-        bf var4_ref_bf = null;
+        CushionSegment var4_ref_bf = null;
         int var4 = 0;
-        qe var4_ref_qe = null;
-        af var4_ref_af = null;
+        ShotRecord var4_ref_qe = null;
+        EightBallRules var4_ref_af = null;
         int var5 = 0;
-        qe var5_ref_qe = null;
+        ShotRecord var5_ref_qe = null;
         String var5_ref_String = null;
         int var6 = 0;
-        pq var6_ref_pq = null;
+        Ball var6_ref_pq = null;
         kj var6_ref_kj = null;
         tc var6_ref_tc = null;
         df var6_ref_df = null;
@@ -4434,7 +4434,7 @@ final class PoolMatchController {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        qe var4_ref_qeLifetime1;
+        ShotRecord var4_ref_qeLifetime1;
         int var3_intLifetime1;
         int var3_intLifetime2;
         int var3_intLifetime3;
@@ -4488,10 +4488,10 @@ final class PoolMatchController {
             sa.field_h.drawCentered("cue intersects something!", 320, 240, 16764142, 1);
           }
           if ((8192L & pd.field_i) != 0L) {
-            for (var3_int = 0; var3_int < this.field_I.field_c.length; var3_int++) {
-              var4_ref_bf = this.field_I.field_c[var3_int];
-              var5 = -this.field_ab[0] + (var4_ref_bf.field_a + var4_ref_bf.field_f >> 14);
-              var6 = (var4_ref_bf.field_l + var4_ref_bf.field_j >> 14) - this.field_ab[1];
+            for (var3_int = 0; var3_int < this.field_I.cushionSegments.length; var3_int++) {
+              var4_ref_bf = this.field_I.cushionSegments[var3_int];
+              var5 = -this.field_ab[0] + (var4_ref_bf.startX + var4_ref_bf.endX >> 14);
+              var6 = (var4_ref_bf.endY + var4_ref_bf.startY >> 14) - this.field_ab[1];
               var7 = -64 - this.field_ab[2];
               var8 = var6 * this.field_ab[10] + var5 * this.field_ab[9] + var7 * this.field_ab[11] >> 16;
               if (var8 > 0) {
@@ -4531,29 +4531,29 @@ final class PoolMatchController {
             var3 = new float[3];
             for (var4 = -1 + pd.field_f.length; var4 >= 0; var4--) {
               var5Lifetime1 = pd.field_f[var4];
-              if (var5Lifetime1 < this.field_I.field_l.length) {
-                var6_ref_pq = this.field_I.field_l[var5Lifetime1];
-                var3[0] = (float)(var6_ref_pq.field_g / 8192);
-                var3[2] = (float)(var6_ref_pq.field_j / 8192);
-                var3[1] = (float)(var6_ref_pq.field_k / 8192);
+              if (var5Lifetime1 < this.field_I.balls.length) {
+                var6_ref_pq = this.field_I.balls[var5Lifetime1];
+                var3[0] = (float)(var6_ref_pq.positionX / 8192);
+                var3[2] = (float)(var6_ref_pq.positionZ / 8192);
+                var3[1] = (float)(var6_ref_pq.positionY / 8192);
                 ag.a(this.field_ab, var3, param0 ^ 293);
                 var7Lifetime1 = (int)(0.5f + var3[0]);
                 var8Lifetime1 = (int)(0.5f + var3[1]);
                 stackIn_53_0 = var8Lifetime1;
                 stackIn_53_1 = new StringBuilder();
-                if (var6_ref_pq.field_s) {
+                if (var6_ref_pq.inPlay) {
                   stackIn_54_2 = "in play: ";
                 } else {
                   stackIn_54_2 = "potted: ";
                 }
-                er.a(stackIn_53_0, ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(var6_ref_pq.b(param0 - 12350)).toString(), var7Lifetime1, 1, sa.field_h, true, 11193599);
+                er.a(stackIn_53_0, ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(var6_ref_pq.describeMotionState(param0 - 12350)).toString(), var7Lifetime1, 1, sa.field_h, true, 11193599);
                 var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxDescent + sa.field_h.maxAscent);
                 if (ap.field_D != null &&
                   ap.field_D[var5Lifetime1] != null) {
                   er.a(var8Lifetime1, "finished: " + ap.field_D[var5Lifetime1].field_o.i(), var7Lifetime1, 1, sa.field_h, true, 11193599);
                   var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxAscent + sa.field_h.maxDescent);
                 }
-                er.a(var8Lifetime1, "@" + var6_ref_pq.field_g + "," + var6_ref_pq.field_k, var7Lifetime1, 1, sa.field_h, true, 65535);
+                er.a(var8Lifetime1, "@" + var6_ref_pq.positionX + "," + var6_ref_pq.positionY, var7Lifetime1, 1, sa.field_h, true, 65535);
                 var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxAscent + sa.field_h.maxDescent);
                 er.a(var8Lifetime1, Integer.toString(var5Lifetime1), var7Lifetime1, 1, sa.field_h, true, 11193599);
                 var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxDescent + sa.field_h.maxAscent);
@@ -4563,7 +4563,7 @@ final class PoolMatchController {
           if (0L != (32768L & pd.field_i)) {
             sa.field_h.d(kh.field_gc.b((byte) 123), 10, 50, 16772795, 1);
             sa.field_h.d(kh.field_gc.c((byte) 32), 10, 70, 16772795, 1);
-            cl.a(16772795, 1, this.field_ab, new float[]{rj.e(2304, 3), rj.e(1152, param0 - 297), 0.0f}, new float[]{rj.e(kh.field_gc.field_q + 2304, 3), rj.e(1152 + kh.field_gc.field_e, 3), rj.e(0 + kh.field_gc.field_u, 3)});
+            cl.a(16772795, 1, this.field_ab, new float[]{KillerRules.e(2304, 3), KillerRules.e(1152, param0 - 297), 0.0f}, new float[]{KillerRules.e(kh.field_gc.field_q + 2304, 3), KillerRules.e(1152 + kh.field_gc.field_e, 3), KillerRules.e(0 + kh.field_gc.field_u, 3)});
           }
           if ((pd.field_i & 4194304L) != 0L) {
             var3_ref = "extra_model_dist=" + hf.field_a + "; extra_model_dist_scatter=" + fl.field_l + "; extra_model_z=" + kh.field_vc + "; num_extra_models=" + ek.field_a;
@@ -4598,7 +4598,7 @@ final class PoolMatchController {
             var3_intLifetime3 = var3_intLifetime3 - sa.field_h.maxAscent * 3 / 2;
             sa.field_h.d("cur pos " + this.field_eb.field_d / 576.0 + ", " + this.field_eb.field_a / 288.0 + ", " + this.field_eb.field_h / 512.0, 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.maxAscent / 2;
-            var4_ref_qe = new qe();
+            var4_ref_qe = new ShotRecord();
             var5_ref_qe = var4_ref_qe;
             var6_ref_kj = this.field_G;
             var5_ref_qe.field_V = (short)var6_ref_kj.field_n;
@@ -4652,8 +4652,8 @@ final class PoolMatchController {
           if ((1048576L & pd.field_i) != 0L) {
             var3_intLifetime4 = 320;
             var4Lifetime2 = 40;
-            for (var5Lifetime3 = 0; this.field_I.field_w.length > var5Lifetime3; var5Lifetime3++) {
-              var6_ref_tc = this.field_I.field_w[var5Lifetime3].field_c;
+            for (var5Lifetime3 = 0; this.field_I.pockets.length > var5Lifetime3; var5Lifetime3++) {
+              var6_ref_tc = this.field_I.pockets[var5Lifetime3].pottedBalls;
               if (null != var6_ref_tc &&
                 var6_ref_tc.a((byte) 122) > 0) {
                 var7_ref_String = "pocket " + var5Lifetime3 + ": " + var6_ref_tc.a(0, 2229);
@@ -4669,17 +4669,17 @@ final class PoolMatchController {
             var3_intLifetime5 = 60;
             var4Lifetime3 = 0;
             while (!(SoftwareRasterizer.height <= var3_intLifetime5)) {
-              if (md.field_a.length <= var4Lifetime3) {
+              if (md.achievementNames.length <= var4Lifetime3) {
                 break;
               }
-              var5_ref_String = md.field_a[var4Lifetime3];
+              var5_ref_String = md.achievementNames[var4Lifetime3];
               if (fe.a(ClientException.field_g, -13671, var4Lifetime3)) {
                 var5_ref_String = var5_ref_String + " [all]";
               }
               if (fe.a(hp.field_c, -13671, var4Lifetime3)) {
                 var5_ref_String = var5_ref_String + " [this game]";
               }
-              if (md.field_a[var4Lifetime3] != var5_ref_String) {
+              if (md.achievementNames[var4Lifetime3] != var5_ref_String) {
                 sa.field_h.d(var5_ref_String, 40, var3_intLifetime5, 16764074, 1);
                 var3_intLifetime5 = var3_intLifetime5 + sa.field_h.baselineHeight;
               }
@@ -4687,8 +4687,8 @@ final class PoolMatchController {
             }
           }
           if ((134217728L & pd.field_i) != 0L) {
-            var3_ref2 = new aa(this.field_I.field_u);
-            var4_ref_qeLifetime1 = (qe) (var3_ref2.b((byte) -92));
+            var3_ref2 = new aa(this.field_I.shots);
+            var4_ref_qeLifetime1 = (ShotRecord) (var3_ref2.b((byte) -92));
             var5Lifetime4 = 0;
             var6Lifetime2 = 0;
             var7Lifetime3 = 60;
@@ -4714,7 +4714,7 @@ final class PoolMatchController {
                   }
                   var7Lifetime3 = var7Lifetime3 + sa.field_h.baselineHeight;
                 }
-                var4_ref_qeLifetime1 = (qe) (var3_ref2.b(-96));
+                var4_ref_qeLifetime1 = (ShotRecord) (var3_ref2.b(-96));
                 continue;
               }
               break;
@@ -4724,16 +4724,16 @@ final class PoolMatchController {
             var7Lifetime3 = var7Lifetime3 + sa.field_h.baselineHeight;
           }
           if ((pd.field_i & 262144L) != 0L &&
-            pq.field_i != null) {
-            dn.a(0, param0 + 30109, 3, pq.field_i);
+            Ball.field_i != null) {
+            dn.a(0, param0 + 30109, 3, Ball.field_i);
           }
           if ((pd.field_i & 16777216L) != 0L) {
             this.A((byte) 95);
           }
           if ((8388608L & pd.field_i) != 0L) {
             this.field_I.e(12226, 0);
-            var3_intLifetime6 = this.field_I.field_l[0].field_g >> 13;
-            var4Lifetime4 = this.field_I.field_l[0].field_k >> 13;
+            var3_intLifetime6 = this.field_I.balls[0].positionX >> 13;
+            var4Lifetime4 = this.field_I.balls[0].positionY >> 13;
             for (var5Lifetime5 = 1; this.field_I.field_r.length > var5Lifetime5; var5Lifetime5++) {
               var6_ref_df = this.field_I.field_r[var5Lifetime5];
               if (var6_ref_df.a((byte) -8, 0, this.field_I)) {
@@ -4750,7 +4750,7 @@ final class PoolMatchController {
                 } else {
                   stackIn_187_4 = 4145151;
                 }
-                co.a(stackIn_182_0, stackIn_182_1, stackIn_182_2, stackIn_183_3, stackIn_187_4, this.field_ab, var3_intLifetime6 + (o.a(var6_ref_df.field_k, (byte) -120) * (var6_ref_df.field_l >> 13) >> 16), -64, (af.c((byte) -128, var6_ref_df.field_k) * (var6_ref_df.field_l >> 13) >> 16) + var4Lifetime4, var3_intLifetime6);
+                co.a(stackIn_182_0, stackIn_182_1, stackIn_182_2, stackIn_183_3, stackIn_187_4, this.field_ab, var3_intLifetime6 + (o.a(var6_ref_df.field_k, (byte) -120) * (var6_ref_df.field_l >> 13) >> 16), -64, (EightBallRules.c((byte) -128, var6_ref_df.field_k) * (var6_ref_df.field_l >> 13) >> 16) + var4Lifetime4, var3_intLifetime6);
                 stackIn_190_0 = 7;
                 stackIn_190_1 = var4Lifetime4;
                 stackIn_190_2 = -64;
@@ -4764,20 +4764,20 @@ final class PoolMatchController {
                 } else {
                   stackIn_195_4 = 4161535;
                 }
-                co.a(stackIn_190_0, stackIn_190_1, stackIn_190_2, stackIn_191_3, stackIn_195_4, this.field_ab, (o.a(var6_ref_df.field_d, (byte) 92) * (var6_ref_df.field_l >> 13) >> 16) + var3_intLifetime6, -64, var4Lifetime4 + (af.c((byte) -128, var6_ref_df.field_d) * (var6_ref_df.field_l >> 13) >> 16), var3_intLifetime6);
+                co.a(stackIn_190_0, stackIn_190_1, stackIn_190_2, stackIn_191_3, stackIn_195_4, this.field_ab, (o.a(var6_ref_df.field_d, (byte) 92) * (var6_ref_df.field_l >> 13) >> 16) + var3_intLifetime6, -64, var4Lifetime4 + (EightBallRules.c((byte) -128, var6_ref_df.field_d) * (var6_ref_df.field_l >> 13) >> 16), var3_intLifetime6);
               }
             }
           }
           if ((pd.field_i & 536870912L) != 0L) {
             var3_intLifetime7 = 480 - sa.field_h.maxDescent - 4;
-            if (this.field_I.field_f instanceof af) {
-              var4_ref_af = (af) (this.field_I.field_f);
+            if (this.field_I.rules instanceof EightBallRules) {
+              var4_ref_af = (EightBallRules) (this.field_I.rules);
               sa.field_h.d("groups allocations: {" + var4_ref_af.field_g[0] + ", " + var4_ref_af.field_g[1] + "}", 300, var3_intLifetime7, 16772829, 0);
               var3_intLifetime7 = var3_intLifetime7 - sa.field_h.maxAscent * 3 / 2;
             }
             sa.field_h.d("shot mode: " + this.field_T, 300, var3_intLifetime7, 16772829, 0);
             var3_intLifetime7 = var3_intLifetime7 - 3 * sa.field_h.maxAscent / 2;
-            sa.field_h.d("ruleset: " + this.field_I.field_f.getClass().getName(), 300, var3_intLifetime7, 16772829, 0);
+            sa.field_h.d("ruleset: " + this.field_I.rules.getClass().getName(), 300, var3_intLifetime7, 16772829, 0);
             var3_intLifetime7 = var3_intLifetime7 - sa.field_h.maxAscent * 3 / 2;
             sa.field_h.d("cg.currentplayer: " + this.field_I.field_A, 300, var3_intLifetime7, 16772829, 0);
             var3_intLifetime7 = var3_intLifetime7 - 3 * sa.field_h.maxAscent / 2;
@@ -4793,7 +4793,7 @@ final class PoolMatchController {
                 var5Lifetime6 += 256;
               }
               var5Lifetime6 = var5Lifetime6 % 4096;
-              var9Lifetime2 = (af.c((byte) -123, var5Lifetime6) >> 4) * (var4Lifetime5 >> 12);
+              var9Lifetime2 = (EightBallRules.c((byte) -123, var5Lifetime6) >> 4) * (var4Lifetime5 >> 12);
               var10Lifetime2 = (o.a(var5Lifetime6, (byte) -67) >> 4) * (var4Lifetime5 >> 12);
               var11Lifetime1 = 3456 + (var9Lifetime2 >> 13);
               var12Lifetime1 = 1152 + (var10Lifetime2 >> 13);
@@ -4839,7 +4839,7 @@ final class PoolMatchController {
     }
 
     final void a(int param0, String[] param1, hq param2) {
-        pq[] array$0 = null;
+        Ball[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -4847,9 +4847,9 @@ final class PoolMatchController {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        al var4 = null;
+        PoolGameModel var4 = null;
         RuntimeException var4_ref = null;
-        al var5 = null;
+        PoolGameModel var5 = null;
         int var6 = 0;
         int var6Lifetime1;
         try {
@@ -4863,15 +4863,15 @@ final class PoolMatchController {
           var4 = this.field_I;
           f.field_g = 12;
           var5 = var4;
-          pq.field_B = new pq[12][];
-          for (var6 = 0; var6 < pq.field_B.length; var6++) {
-            array$0 = new pq[var5.field_l.length];
-            pq.field_B[var6] = array$0;
-            for (var7 = 0; var7 < pq.field_B[var6].length; var7++) {
-              pq.field_B[var6][var7] = new pq();
+          Ball.field_B = new Ball[12][];
+          for (var6 = 0; var6 < Ball.field_B.length; var6++) {
+            array$0 = new Ball[var5.balls.length];
+            Ball.field_B[var6] = array$0;
+            for (var7 = 0; var7 < Ball.field_B[var6].length; var7++) {
+              Ball.field_B[var6][var7] = new Ball();
             }
           }
-          rb.field_e = new ar[pq.field_B.length * 12];
+          rb.field_e = new ar[Ball.field_B.length * 12];
           if (param0 <= 25) {
             return;
           }
@@ -4914,18 +4914,18 @@ final class PoolMatchController {
           var2_long = 0L;
           var4 = 0L;
           var6 = 0;
-          for (var7 = 0; this.field_I.field_l.length > var7; var7++) {
-            if (this.field_I.field_l[var7].field_s &&
-              this.field_I.field_l[var7].field_v != 0) {
-              var2_long = var2_long + (long)this.field_I.field_l[var7].field_g;
-              var4 = var4 + (long)this.field_I.field_l[var7].field_k;
+          for (var7 = 0; this.field_I.balls.length > var7; var7++) {
+            if (this.field_I.balls[var7].inPlay &&
+              this.field_I.balls[var7].motionState != 0) {
+              var2_long = var2_long + (long)this.field_I.balls[var7].positionX;
+              var4 = var4 + (long)this.field_I.balls[var7].positionY;
               var6++;
             }
           }
           var7Lifetime1 = 45 % ((-21 - param0) / 58);
           this.field_R = -1;
-          this.field_O.field_f = cr.a((byte) 89, var2_long) / (double)var6;
-          this.field_O.field_m = cr.a((byte) 89, var4) / (double)var6;
+          this.field_O.field_f = PotEvent.a((byte) 89, var2_long) / (double)var6;
+          this.field_O.field_m = PotEvent.a((byte) 89, var4) / (double)var6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4941,8 +4941,8 @@ final class PoolMatchController {
           if (ij.field_G > 0) {
             if (ij.field_G > 25) {
               uo.c(false);
-              ui.a(tn.field_p, 16729156, -6, false, 1);
-              vj.a((String) null, (byte) 18, jd.field_f, 7);
+              ui.a(tn.cannotPositionCueThere, 16729156, -6, false, 1);
+              vj.a((String) null, (byte) 18, jd.cueCantGoThere, 7);
             }
             ij.field_G = ij.field_G - 1;
             if (ij.field_G == 0) {
@@ -5008,11 +5008,11 @@ final class PoolMatchController {
           df.field_f = new vh();
           ub.field_q = new vh();
           this.e(false);
-          q.field_b.field_hb = mf.field_n;
+          q.field_b.field_hb = ClassicBallSkin.field_n;
           b.field_H.field_hb = iq.field_d;
           SpriteState.field_F.field_hb = gd.field_e;
           df.field_f.field_hb = il.field_a;
-          ub.field_q.field_hb = oo.field_D;
+          ub.field_q.field_hb = TableScene.field_D;
           if (kh.field_gc != nn.field_b[param1]) {
             if (null != kh.field_gc) {
               kh.field_gc.d(true);
@@ -5022,25 +5022,25 @@ final class PoolMatchController {
           }
           kh.field_gc.b(this.field_I, 0);
           kh.field_gc.b(false);
-          if (al.field_B[param0] == dq.field_a) {
+          if (PoolGameModel.field_B[param0] == dq.field_a) {
             if (dq.field_a.field_j == null ||
-              dq.field_a.field_j.length != this.field_I.field_l.length) {
+              dq.field_a.field_j.length != this.field_I.balls.length) {
               dq.field_a.a(2147483647, this.field_I);
             }
           } else {
             if (dq.field_a != null) {
               dq.field_a.e(-26707);
             }
-            dq.field_a = al.field_B[param0];
+            dq.field_a = PoolGameModel.field_B[param0];
             dq.field_a.a(2147483647, this.field_I);
           }
           id.field_c = kh.field_gc.field_A;
           id.field_c.field_g = true;
           kh.field_gc.a((byte) -116, this.field_ab);
-          this.field_I.field_f.c(-83);
-          for (var4_int = 0; this.field_I.field_l.length > var4_int; var4_int++) {
-            this.field_I.field_l[var4_int].a(120);
-            this.field_I.field_l[var4_int].field_p = true;
+          this.field_I.rules.c(-83);
+          for (var4_int = 0; this.field_I.balls.length > var4_int; var4_int++) {
+            this.field_I.balls[var4_int].a(120);
+            this.field_I.balls[var4_int].transformDirty = true;
           }
           am.field_q = 150;
           ff.field_c = true;
@@ -5090,7 +5090,7 @@ final class PoolMatchController {
           }
           var3 = new StringBuilder(this.e(-30360, param0));
           var4 = 0;
-          if (!(this.field_I.field_f instanceof rj)) {
+          if (!(this.field_I.rules instanceof KillerRules)) {
             if ((this.field_I.field_p & 1 << param0) != 0) {
               if (var4 != 0) {
                 discarded$0 = var3.append(' ');
@@ -5098,10 +5098,10 @@ final class PoolMatchController {
                 var4 = 1;
                 var3 = new StringBuilder(nr.a(new String[]{var3.toString()}, -1, this.H(2)));
               }
-              discarded$1 = var3.append(n.field_Q);
+              discarded$1 = var3.append(n.statusResigned);
             }
           } else {
-            var5 = ((rj) (this.field_I.field_f)).field_e[param0];
+            var5 = ((KillerRules) (this.field_I.rules)).field_e[param0];
             if (var4 != 0) {
               discarded$2 = var3.append(' ');
             } else {
@@ -5124,14 +5124,14 @@ final class PoolMatchController {
               }
             }
             stackIn_25_0 = var3;
-            if (this.field_I.field_f.a((byte) 50, param0)) {
+            if (this.field_I.rules.a((byte) 50, param0)) {
               if ((this.field_I.field_p & 1 << param0) != 0) {
-                stackIn_29_1 = n.field_Q;
+                stackIn_29_1 = n.statusResigned;
               } else {
                 stackIn_29_1 = Integer.toString(var5);
               }
             } else {
-              stackIn_29_1 = DualLinkNode.field_l;
+              stackIn_29_1 = DualLinkNode.statusOutOfLives;
             }
             discarded$7 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_29_1);
             discarded$8 = var3.append("</col>");
@@ -5144,7 +5144,7 @@ final class PoolMatchController {
               var3 = new StringBuilder(nr.a(new String[]{var3.toString()}, param1 + 22803, this.H(2)));
               var4 = 1;
             }
-            discarded$10 = var3.append(PacketBuffer.field_n);
+            discarded$10 = var3.append(PacketBuffer.statusWantsARematch);
           } else {
             if ((this.field_I.field_x & 1 << param0) != 0) {
               if (var4 == 0) {
@@ -5153,7 +5153,7 @@ final class PoolMatchController {
               } else {
                 discarded$11 = var3.append(' ');
               }
-              discarded$12 = var3.append(sh.field_R);
+              discarded$12 = var3.append(sh.statusWantsToDraw);
             }
           }
           stackIn_56_0 = var3.toString();
@@ -5180,48 +5180,48 @@ final class PoolMatchController {
 
     private final void w(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        pq var2 = null;
+        Ball var2 = null;
         RuntimeException var2_ref = null;
         double[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        qe var6 = null;
-        al var7 = null;
-        pq var8 = null;
+        ShotRecord var6 = null;
+        PoolGameModel var7 = null;
+        Ball var8 = null;
         try {
           if (param0 < 106) {
             field_X = 61;
           }
-          var2 = this.field_I.field_l[this.field_V];
+          var2 = this.field_I.balls[this.field_V];
           if (~wn.field_i == ~vn.field_b &&
             up.field_m == gg.field_f) {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          var3 = new double[]{(double)var2.field_g / 65536.0, (double)var2.field_k / 65536.0, (double)var2.field_j / 65536.0};
+          var3 = new double[]{(double)var2.positionX / 65536.0, (double)var2.positionY / 65536.0, (double)var2.positionZ / 65536.0};
           rq.a(-64, gg.field_f, false, this.field_eb.d(8), wn.field_i, var3, this.field_ab);
-          var4 = var2.field_g;
-          var5 = var2.field_k;
+          var4 = var2.positionX;
+          var5 = var2.positionY;
           if (this.field_I.a((int)(65536.0 * var3[1] + 0.5), (int)(65536.0 * var3[0] + 0.5), -96, this.field_V, true)) {
             vm.field_f = vm.field_f | this.field_V;
             if (!this.b(1, 13, false)) {
-              var2.field_g = var4;
-              var2.field_k = var5;
+              var2.positionX = var4;
+              var2.positionY = var5;
               decompiledFrameRemainder0 = (Pool.field_O != 0);
             }
             if (decompiledFrameRemainder0) {
-              var2.field_p = true;
+              var2.transformDirty = true;
               hh.field_c = true;
-              var2.field_j = -524288;
+              var2.positionZ = -524288;
               this.field_Y = true;
               if (this.field_V == 0) {
                 id.field_c.field_g = true;
               }
-              var6 = this.field_I.j(83);
+              var6 = this.field_I.currentShot(83);
               var7 = this.field_I;
-              var8 = var7.field_l[0];
-              var6.field_Q = var8.field_k;
-              var6.field_P = var8.field_g;
+              var8 = var7.balls[0];
+              var6.field_Q = var8.positionY;
+              var6.field_P = var8.positionX;
             }
           }
           vn.field_b = wn.field_i;
@@ -5245,11 +5245,11 @@ final class PoolMatchController {
             kh.field_gc = nn.field_b[param1];
             id.field_c = kh.field_gc.field_A;
             id.field_c.field_g = true;
-            dq.field_a = al.field_B[param1];
+            dq.field_a = PoolGameModel.field_B[param1];
             dq.field_a.a(2147483647, this.field_I);
             kh.field_gc.a(this.field_I, 21894);
             kh.field_gc.a((byte) 115, this.field_ab);
-            this.field_I.field_f.c(-42);
+            this.field_I.rules.c(-42);
           }
           if (param0 != 124) {
             this.field_i = (String[]) null;
@@ -5288,9 +5288,9 @@ final class PoolMatchController {
         RuntimeException var2_ref = null;
         try {
           if (param0) {
-            this.field_I = (al) null;
+            this.field_I = (PoolGameModel) null;
           }
-          var2 = new float[]{(float)this.field_I.field_l[0].field_g / 65536.0f, (float)this.field_I.field_l[0].field_k / 65536.0f, (float)this.field_I.field_l[0].field_j / 65536.0f};
+          var2 = new float[]{(float)this.field_I.balls[0].positionX / 65536.0f, (float)this.field_I.balls[0].positionY / 65536.0f, (float)this.field_I.balls[0].positionZ / 65536.0f};
           var3 = (float)this.field_G.field_d / 128.0f;
           var4 = (float)this.field_G.field_e / 128.0f;
           var5 = (float)Math.sqrt((double)(-(var3 * var3) + 1.0f - var4 * var4));
@@ -5313,8 +5313,8 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          for (var2_int = param0; this.field_I.field_l.length > var2_int; var2_int++) {
-            this.field_I.field_l[var2_int].field_p = true;
+          for (var2_int = param0; this.field_I.balls.length > var2_int; var2_int++) {
+            this.field_I.balls[var2_int].transformDirty = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5335,7 +5335,7 @@ final class PoolMatchController {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        pq var8 = null;
+        Ball var8 = null;
         int var9 = 0;
         int var10 = 0;
         int stackIn_54_0Lifetime1;
@@ -5383,11 +5383,11 @@ final class PoolMatchController {
             if (var10 != 0) {
               return;
             }
-            var8 = this.field_I.field_l[var7];
+            var8 = this.field_I.balls[var7];
             scanLoop1: while (true) {
-              if (var8.field_s) {
+              if (var8.inPlay) {
                 var8.field_o = false;
-                var8.d((byte) 87);
+                var8.stop((byte) 87);
                 stackIn_54_0 = 1 + var6;
                 var9 = stackIn_54_0;
                 while (var9 < this.field_C) {
@@ -5399,30 +5399,30 @@ final class PoolMatchController {
                   return;
                 }
                 var7Lifetime1 = this.field_ib[var6];
-                var8 = this.field_I.field_l[var7Lifetime1];
+                var8 = this.field_I.balls[var7Lifetime1];
                 continue scanLoop1;
               }
               break;
             }
-            var8.field_p = true;
-            stackIn_54_0Lifetime1 = var8.field_v;
+            var8.transformDirty = true;
+            stackIn_54_0Lifetime1 = var8.motionState;
             if (stackIn_54_0Lifetime1 != 0 ||
-              !(var8.field_k >= var2_int)) {
-              if (var8.field_t < 262144) {
-                var8.field_t = var8.field_t + 4096;
-                if (var8.field_v == 0) {
-                  var8.field_v = 1;
+              !(var8.positionY >= var2_int)) {
+              if (var8.velocityY < 262144) {
+                var8.velocityY = var8.velocityY + 4096;
+                if (var8.motionState == 0) {
+                  var8.motionState = 1;
                 }
               }
               var8.a((byte) -124);
-              var8.field_w = 0;
+              var8.lastAdvanceTime = 0;
               var8.a(false);
             }
-            if (var2_int <= var8.field_k) {
-              var8.field_k = var2_int;
-              var8.d((byte) 102);
+            if (var2_int <= var8.positionY) {
+              var8.positionY = var2_int;
+              var8.stop((byte) 102);
             } else {
-              var2_int = var8.field_k;
+              var2_int = var8.positionY;
             }
             var2_int = var2_int - 1048576;
             var6++;
@@ -5439,14 +5439,14 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          field_J = null;
+          createAgeTooltip = null;
           field_y = (byte[][]) null;
-          field_K = null;
+          mouseYAxisNormal = null;
           field_gb = null;
           if (!param0) {
             field_y = (byte[][]) null;
           }
-          field_s = null;
+          tickerHintLeaveShotMode = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5475,11 +5475,11 @@ final class PoolMatchController {
           if (!param0) {
             this.c(-32);
           }
-          stackIn_7_0 = (~this.field_I.field_f.e(111) == ~this.field_I.field_n) ? 0 : 1;
+          stackIn_7_0 = (~this.field_I.rules.e(111) == ~this.field_I.playerCount) ? 0 : 1;
           var2_int = stackIn_7_0;
-          stackIn_10_0 = this.field_I.field_n;
+          stackIn_10_0 = this.field_I.playerCount;
           if (var2_int != 0) {
-            stackIn_11_1 = this.field_I.field_f.e(119) - 1;
+            stackIn_11_1 = this.field_I.rules.e(119) - 1;
           } else {
             stackIn_11_1 = 0;
           }
@@ -5488,14 +5488,14 @@ final class PoolMatchController {
           var6 = 0;
           var7 = 0;
           while (var6 < var3.length) {
-            if (var7 < this.field_I.field_n) {
+            if (var7 < this.field_I.playerCount) {
               if (var2_int != 0) {
-                var5 = this.field_I.field_f.c(-119, var7);
+                var5 = this.field_I.rules.c(-119, var7);
                 if (var4 != -1 &&
                   ~var5 != ~var4) {
                   incrementValue$0 = var6;
                   var6++;
-                  var3[incrementValue$0] = tp.field_a;
+                  var3[incrementValue$0] = tp.statusVersus;
                 }
                 var4 = var5;
               }
@@ -5558,7 +5558,7 @@ final class PoolMatchController {
     private final void f(byte param0) {
         int var2_int = 0;
         int var4 = 0;
-        dl var3 = null;
+        Pocket var3 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -5568,12 +5568,12 @@ final class PoolMatchController {
           }
           this.z(4476);
           this.field_C = 0;
-          for (var2_int = 0; var2_int < this.field_I.field_w.length; var2_int++) {
-            var3 = this.field_I.field_w[var2_int];
-            if (null != var3.field_c) {
-              for (var4 = 0; var3.field_c.a((byte) 117) > var4; var4++) {
-                var5 = var3.field_c.a(var4, 2229);
-                this.field_I.field_l[var5].field_o = false;
+          for (var2_int = 0; var2_int < this.field_I.pockets.length; var2_int++) {
+            var3 = this.field_I.pockets[var2_int];
+            if (null != var3.pottedBalls) {
+              for (var4 = 0; var3.pottedBalls.a((byte) 117) > var4; var4++) {
+                var5 = var3.pottedBalls.a(var4, 2229);
+                this.field_I.balls[var5].field_o = false;
                 this.a(0, var5);
               }
             }
@@ -5695,7 +5695,7 @@ final class PoolMatchController {
             this.field_G.field_k = param1;
           }
           if (param0 != 1) {
-            this.b(10, (qe) null);
+            this.b(10, (ShotRecord) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5711,7 +5711,7 @@ final class PoolMatchController {
         cg dupTemp$2 = null;
         cg dupTemp$3 = null;
         cg dupTemp$4 = null;
-        oo stackIn_618_0 = null;
+        TableScene stackIn_618_0 = null;
         boolean stackIn_619_1 = false;
         int stackIn_622_0 = 0;
         boolean stackIn_622_1 = false;
@@ -6531,7 +6531,7 @@ final class PoolMatchController {
                         return;
                       }
                     }
-                    this.field_I.e(-51);
+                    this.field_I.stopAllBalls(-51);
                     if (var8 == 0) {
                       return;
                     }
@@ -7022,12 +7022,12 @@ final class PoolMatchController {
                 return;
               }
             }
-            this.field_I.e(-54);
+            this.field_I.stopAllBalls(-54);
             this.a(1 + ga.a(512, true, ea.field_r), false);
-            if (!(this.field_I.field_f instanceof af)) {
+            if (!(this.field_I.rules instanceof EightBallRules)) {
               return;
             }
-            this.field_I.field_f = (sq) ((Object) new af(this.field_I));
+            this.field_I.rules = (GameRules) ((Object) new EightBallRules(this.field_I));
             if (var8 == 0) {
               return;
             }
@@ -7333,8 +7333,8 @@ final class PoolMatchController {
             (decompiledFrameRemainder9) &&
             (decompiledFrameRemainder8) &&
             (decompiledFrameRemainder7)) {
-            ij.field_u = ul.field_m;
-            ac.a(256, false, true, ul.field_m);
+            ij.field_u = HalloweenBallSkin.field_m;
+            KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
             if (var8 == 0) {
               return;
             }
@@ -7359,7 +7359,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder8)) {
             dupTemp$0 = nn.field_b[0].field_b;
             ij.field_u = dupTemp$0;
-            ac.a(256, false, true, dupTemp$0);
+            KillerBallSkin.a(256, false, true, dupTemp$0);
             if (var8 == 0) {
               return;
             }
@@ -7383,7 +7383,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder9)) {
             dupTemp$1 = nn.field_b[1].field_b;
             ij.field_u = dupTemp$1;
-            ac.a(256, false, true, dupTemp$1);
+            KillerBallSkin.a(256, false, true, dupTemp$1);
             if (var8 == 0) {
               return;
             }
@@ -7406,7 +7406,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder10)) {
             dupTemp$2 = nn.field_b[2].field_b;
             ij.field_u = dupTemp$2;
-            ac.a(256, false, true, dupTemp$2);
+            KillerBallSkin.a(256, false, true, dupTemp$2);
             if (var8 == 0) {
               return;
             }
@@ -7428,7 +7428,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder11)) {
             dupTemp$3 = nn.field_b[3].field_b;
             ij.field_u = dupTemp$3;
-            ac.a(256, false, true, dupTemp$3);
+            KillerBallSkin.a(256, false, true, dupTemp$3);
             if (var8 == 0) {
               return;
             }
@@ -7449,7 +7449,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder12)) {
             dupTemp$4 = nn.field_b[4].field_b;
             ij.field_u = dupTemp$4;
-            ac.a(256, false, true, dupTemp$4);
+            KillerBallSkin.a(256, false, true, dupTemp$4);
             if (var8 == 0) {
               return;
             }
@@ -7612,10 +7612,10 @@ final class PoolMatchController {
           }
           if ((decompiledFrameRemainder25) &&
             (decompiledFrameRemainder24)) {
-            var3 = ((qe) (this.field_I.field_u.c((byte) -52))).field_M;
+            var3 = ((ShotRecord) (this.field_I.shots.c((byte) -52))).field_M;
             var4 = f.field_g;
-            if (pq.field_B != null) {
-              stackIn_863_0 = pq.field_B.length;
+            if (Ball.field_B != null) {
+              stackIn_863_0 = Ball.field_B.length;
             } else {
               stackIn_863_0 = 0;
             }
@@ -7666,12 +7666,12 @@ final class PoolMatchController {
     }
 
     private final int a(int param0, int param1, byte param2) {
-        qe var4 = null;
+        ShotRecord var4 = null;
         RuntimeException var4_ref = null;
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = this.field_I.j(122);
+          var4 = this.field_I.currentShot(122);
           if (var4.field_M < 0) {
             b.field_H.field_pb = false;
           } else {
@@ -7754,7 +7754,7 @@ final class PoolMatchController {
           }
           if (q.field_b.field_pb &&
             q.field_b.field_W) {
-            stackIn_55_0 = this.field_I.field_f.a(this.field_I.j(113), param0 ^ -1223);
+            stackIn_55_0 = this.field_I.rules.a(this.field_I.currentShot(113), param0 ^ -1223);
             return stackIn_55_0;
           }
           stackIn_57_0 = -1;
@@ -7779,7 +7779,7 @@ final class PoolMatchController {
         }
     }
 
-    private final void a(qe param0, int param1) {
+    private final void a(ShotRecord param0, int param1) {
         int stackIn_60_0 = 0;
         boolean stackIn_81_0 = false;
         int stackIn_81_1 = 0;
@@ -7800,52 +7800,52 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
         int var3_int = 0;
-        cr var4_ref_cr = null;
+        PotEvent var4_ref_cr = null;
         int var4 = 0;
         aa var5_ref_aa = null;
         int var5 = 0;
         String var5_ref_String = null;
-        qe var6 = null;
+        ShotRecord var6 = null;
         aa var6_ref = null;
         int var6_int = 0;
         aa var7 = null;
-        qe var8 = null;
+        ShotRecord var8 = null;
         int var9 = 0;
-        cr var10 = null;
-        qe var8Lifetime1;
+        PotEvent var10 = null;
+        ShotRecord var8Lifetime1;
         try {
           if (param0.field_m != null &&
             !param0.field_m.c(0)) {
             var3 = new aa(param0.field_m);
-            var4_ref_cr = (cr) (((aa) (var3)).b((byte) -92));
+            var4_ref_cr = (PotEvent) (((aa) (var3)).b((byte) -92));
             while (var4_ref_cr != null) {
-              if (0 != var4_ref_cr.field_n) {
+              if (0 != var4_ref_cr.ballIndex) {
                 field_fb = field_fb + 1;
               }
-              var4_ref_cr = (cr) (((aa) (var3)).b(-100));
+              var4_ref_cr = (PotEvent) (((aa) (var3)).b(-100));
             }
           }
           field_fb = 16 + field_fb & 65535 | -65536 & field_fb;
           if (param1 != 1) {
             this.A((byte) -46);
           }
-          if (0 != (this.field_I.j(69).field_s & um.field_c)) {
+          if (0 != (this.field_I.currentShot(69).field_s & um.field_c)) {
             kh.field_gc.a(6, 256, (byte) 18, 128);
           }
           if ((sk.field_d & this.field_L) != 0 &&
-            (hm.field_e & param0.field_s) != 0) {
-            if (this.field_I.field_f instanceof af) {
-              gj.a(true, 0, ph.field_a, c.field_a);
+            (Quaternion.field_e & param0.field_s) != 0) {
+            if (this.field_I.rules instanceof EightBallRules) {
+              gj.a(true, 0, ph.tutorialLose, c.tutorialLoseEightBallGame);
               this.field_I.a(9437184, (IsaacCipher) null, (byte) -114, 9437184, 8);
-              param0.field_s = param0.field_s & ~hm.field_e;
+              param0.field_s = param0.field_s & ~Quaternion.field_e;
               if (this.field_I.d((byte) 105)) {
                 param0.field_s = param0.field_s | um.field_c;
               }
             }
-            if (this.field_I.field_f instanceof fj) {
-              gj.a(true, 0, ph.field_a, cr.field_q);
+            if (this.field_I.rules instanceof NineBallRules) {
+              gj.a(true, 0, ph.tutorialLose, PotEvent.tutorialLoseNineBallGame);
               this.field_I.a(9437184, (IsaacCipher) null, (byte) -108, 9437184, 9);
-              param0.field_s = param0.field_s & ~hm.field_e;
+              param0.field_s = param0.field_s & ~Quaternion.field_e;
               if (this.field_I.d((byte) 127)) {
                 param0.field_s = param0.field_s | um.field_c;
               }
@@ -7862,38 +7862,38 @@ final class PoolMatchController {
                   stackIn_118_0 = (9000 <= this.field_o) ? 0 : 1;
                   var3_int = stackIn_118_0;
                   var4 = 1;
-                  var5_ref_aa = new aa(this.field_I.field_u);
-                  var6 = (qe) (var5_ref_aa.b((byte) -92));
+                  var5_ref_aa = new aa(this.field_I.shots);
+                  var6 = (ShotRecord) (var5_ref_aa.b((byte) -92));
                   while (var6 != null) {
                     if (!var6.field_t &&
                       (var6.field_s & be.field_I) == 0) {
-                      var6 = (qe) (var5_ref_aa.b(param1 - 106));
+                      var6 = (ShotRecord) (var5_ref_aa.b(param1 - 106));
                       continue;
                     }
                     var4 = 0;
                     break;
                   }
                   var5 = 1;
-                  var6_ref = new aa(this.field_I.field_u);
+                  var6_ref = new aa(this.field_I.shots);
                   var7 = new aa();
-                  var8 = (qe) (var6_ref.b((byte) -92));
-                  var8Lifetime1 = (qe) (var6_ref.b(-97));
+                  var8 = (ShotRecord) (var6_ref.b((byte) -92));
+                  var8Lifetime1 = (ShotRecord) (var6_ref.b(-97));
                   while (true) {
                     if (var8Lifetime1 != null) {
                       if (var8Lifetime1.field_m != null) {
                         var7.a(var8Lifetime1.field_m, false);
                         var9 = 0;
-                        var10 = (cr) (var7.b((byte) -92));
+                        var10 = (PotEvent) (var7.b((byte) -92));
                         while (var10 != null) {
-                          if (var10.field_n == 0) {
-                            var10 = (cr) (var7.b(-113));
+                          if (var10.ballIndex == 0) {
+                            var10 = (PotEvent) (var7.b(-113));
                             continue;
                           }
                           var9 = 1;
                           break;
                         }
                         if (var9 != 0) {
-                          var8Lifetime1 = (qe) (var6_ref.b(-125));
+                          var8Lifetime1 = (ShotRecord) (var6_ref.b(-125));
                           continue;
                         }
                         var5 = 0;
@@ -7901,8 +7901,8 @@ final class PoolMatchController {
                         var5 = 0;
                       }
                     }
-                    if (pq.field_B != null &&
-                      pq.field_B.length > 0) {
+                    if (Ball.field_B != null &&
+                      Ball.field_B.length > 0) {
                       if (var4 != 0 &&
                         t.a(0, ClientException.field_g, 21)) {
                         this.a((byte) 104, 21, 234);
@@ -7940,8 +7940,8 @@ final class PoolMatchController {
                 }
                 kh.field_gc.a(17, 256, (byte) -100, 128);
               } else {
-                if ((hm.field_e & param0.field_s) != 0) {
-                  this.field_I.c(-14286, this.field_I.field_f.a(param0, (byte) 114));
+                if ((Quaternion.field_e & param0.field_s) != 0) {
+                  this.field_I.c(-14286, this.field_I.rules.a(param0, (byte) 114));
                   if (0 != (this.field_L & f.field_f)) {
                     this.field_I.field_m = false;
                   }
@@ -7962,13 +7962,13 @@ final class PoolMatchController {
               fq.a(stackIn_195_0, stackIn_195_1, stackIn_196_2, false);
               this.a(-23095);
               if ((this.field_L & f.field_f) != 0) {
-                sq.field_b = 23;
+                GameRules.field_b = 23;
                 ne.field_w = 23;
               }
             }
           } else {
-            if (this.field_I.field_f.a((byte) -83, param0.field_L)) {
-              if (this.field_I.field_f instanceof rj &&
+            if (this.field_I.rules.a((byte) -83, param0.field_L)) {
+              if (this.field_I.rules instanceof KillerRules &&
                 0 == (this.field_I.field_p & 1 << param0.field_L)) {
                 if (param0.field_L == this.field_db &&
                   (this.field_L & hq.field_c) != 0) {
@@ -7977,18 +7977,18 @@ final class PoolMatchController {
                   stackIn_60_0 = 0;
                 }
                 var3_int = stackIn_60_0;
-                var4 = ((rj) (this.field_I.field_f)).field_e[param0.field_L];
+                var4 = ((KillerRules) (this.field_I.rules)).field_e[param0.field_L];
                 if (var3_int == 0) {
                   if (var4 != 1) {
-                    var5_ref_String = nr.a(new String[]{this.e(-30360, param0.field_L), Integer.toString(var4)}, -1, cj.field_U);
+                    var5_ref_String = nr.a(new String[]{this.e(-30360, param0.field_L), Integer.toString(var4)}, -1, TikiTableScene.playerXNowHasNLives);
                   } else {
-                    var5_ref_String = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, kn.field_f);
+                    var5_ref_String = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, kn.playerXIsOnTheirLastLife);
                   }
                 } else {
                   if (1 == var4) {
-                    var5_ref_String = bh.field_d;
+                    var5_ref_String = bh.youAreOnYourLastLife;
                   } else {
-                    var5_ref_String = nr.a(new String[]{Integer.toString(var4)}, param1 ^ -2, hk.field_q);
+                    var5_ref_String = nr.a(new String[]{Integer.toString(var4)}, param1 ^ -2, hk.youNowHaveNLives);
                   }
                 }
                 var6_int = -param0.field_N + var4;
@@ -7997,9 +7997,9 @@ final class PoolMatchController {
                     stackIn_86_0 = true;
                     stackIn_86_1 = 0;
                     if (var3_int != 0) {
-                      stackIn_87_2 = o.field_D;
+                      stackIn_87_2 = o.youLostALife;
                     } else {
-                      stackIn_87_2 = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, jk.field_c);
+                      stackIn_87_2 = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, jk.playerXLostALife);
                     }
                     gj.a(stackIn_86_0, stackIn_86_1, stackIn_87_2, var5_ref_String);
                   } else {
@@ -8007,9 +8007,9 @@ final class PoolMatchController {
                       stackIn_91_0 = true;
                       stackIn_91_1 = 0;
                       if (var3_int == 0) {
-                        stackIn_92_2 = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, oh.field_f);
+                        stackIn_92_2 = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, oh.playerXLostTwoLives);
                       } else {
-                        stackIn_92_2 = jk.field_j;
+                        stackIn_92_2 = jk.youLostTwoLives;
                       }
                       gj.a(stackIn_91_0, stackIn_91_1, stackIn_92_2, var5_ref_String);
                     }
@@ -8018,15 +8018,15 @@ final class PoolMatchController {
                   stackIn_81_0 = true;
                   stackIn_81_1 = 0;
                   if (var3_int != 0) {
-                    stackIn_82_2 = oj.field_u;
+                    stackIn_82_2 = oj.youGainedALife;
                   } else {
-                    stackIn_82_2 = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, ad.field_b);
+                    stackIn_82_2 = nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, ad.playerXGainedALife);
                   }
                   gj.a(stackIn_81_0, stackIn_81_1, stackIn_82_2, var5_ref_String);
                 }
               }
             } else {
-              gj.a(true, 0, nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, qe.field_F), (String) null);
+              gj.a(true, 0, nr.a(new String[]{this.e(-30360, param0.field_L)}, -1, ShotRecord.playerIsOut), (String) null);
             }
           }
           if ((param0.field_s & i.field_m) != 0 &&
@@ -8042,22 +8042,22 @@ final class PoolMatchController {
                       if (param0.field_w < 3) {
                         var3 = null;
                       } else {
-                        var3 = DualLinkDeque.field_b;
+                        var3 = DualLinkDeque.doubleplusgoodShot;
                       }
                     } else {
-                      var3 = pq.field_C;
+                      var3 = Ball.plusgoodShot;
                     }
                   } else {
-                    var3 = v.field_k;
+                    var3 = v.goodShot;
                   }
                 } else {
-                  var3 = qp.field_fc;
+                  var3 = qp.ungoodShot;
                 }
               } else {
-                var3 = he.field_d;
+                var3 = he.plusungoodShot;
               }
             } else {
-              var3 = jr.field_l;
+              var3 = TikiBallSkin.doubleplusungoodShot;
             }
             if (null != var3) {
               gj.a(true, 5, (String) (((Object[]) (var3))[ga.a(java.lang.reflect.Array.getLength(var3), true, ea.field_r)]), (String) null);
@@ -8070,7 +8070,7 @@ final class PoolMatchController {
           }
           if ((f.field_f & this.field_L) != 0 &&
             (param0.field_s & be.field_I) != 0) {
-            gj.a(true, 6, nr.a(new String[]{Integer.toString(15)}, -1, iq.field_b), (String) null);
+            gj.a(true, 6, nr.a(new String[]{Integer.toString(15)}, -1, iq.nSecondTimePenalty), (String) null);
             this.field_v = this.field_o;
             this.field_o = this.field_o + 750;
             if ((16711680 & wq.field_c) != 16711680) {
@@ -8078,7 +8078,7 @@ final class PoolMatchController {
             }
           }
           if (0 == (this.field_L & hq.field_c) &&
-            this.field_I.j(param1 + 114) != param0) {
+            this.field_I.currentShot(param1 + 114) != param0) {
             this.s((byte) -84);
             if (this.field_I.field_q != -1) {
               this.field_o = wn.field_f[this.field_I.field_q];
@@ -8101,21 +8101,21 @@ final class PoolMatchController {
 
     final void a(int param0, int param1) {
         int fieldTemp$1 = 0;
-        pq var3 = null;
+        Ball var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
           if (param0 != 0) {
             this.field_Z = 125;
           }
-          var3 = this.field_I.field_l[param1];
+          var3 = this.field_I.balls[param1];
           if (!var3.field_o) {
-            var3.field_k = this.field_P - 264 << 16;
-            var3.field_j = 33554432;
-            var3.field_g = id.field_a[3].field_z + 9 - 320 << 16;
-            var3.d((byte) 115);
+            var3.positionY = this.field_P - 264 << 16;
+            var3.positionZ = 33554432;
+            var3.positionX = id.field_a[3].field_z + 9 - 320 << 16;
+            var3.stop((byte) 115);
             var3.field_o = true;
-            var3.field_p = true;
+            var3.transformDirty = true;
             fieldTemp$1 = this.field_C;
             this.field_C = this.field_C + 1;
             this.field_ib[fieldTemp$1] = param1;
@@ -8139,14 +8139,14 @@ final class PoolMatchController {
         try {
           var2_int = 0;
           do {
-            if (!(this.field_I.field_l.length > var2_int)) {
+            if (!(this.field_I.balls.length > var2_int)) {
               dq.field_a.a(param0 ^ 2147483630, this.field_I);
               id.field_c.field_g = true;
               hh.field_c = true;
               break;
             }
-            this.field_I.field_l[var2_int].a(118);
-            this.field_I.field_l[var2_int].field_p = true;
+            this.field_I.balls[var2_int].a(118);
+            this.field_I.balls[var2_int].transformDirty = true;
             var2_int++;
           } while (var3 == 0);
           if (param0 != 17) {
@@ -8186,13 +8186,13 @@ final class PoolMatchController {
     final void a(PacketBuffer param0, boolean param1) {
         boolean discarded$1 = false;
         RuntimeException runtimeException = null;
-        qe var3 = null;
+        ShotRecord var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_I.j(23);
+          var3 = this.field_I.currentShot(23);
           if (0 != var3.field_q) {
             param0.position = param0.position + 8;
             return;
@@ -8229,29 +8229,29 @@ final class PoolMatchController {
         int stackIn_75_1 = 0;
         int stackIn_80_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        qe var2 = null;
+        ShotRecord var2 = null;
         int[] var2_array = null;
         RuntimeException var2_ref = null;
-        qe var3_ref_qe = null;
-        al var3_ref_al = null;
+        ShotRecord var3_ref_qe = null;
+        PoolGameModel var3_ref_al = null;
         int var3 = 0;
         kj var4_ref_kj = null;
-        qe var4_ref_qe = null;
+        ShotRecord var4_ref_qe = null;
         int var4 = 0;
-        al var5_ref_al = null;
-        pq[] var5_ref_pq__ = null;
+        PoolGameModel var5_ref_al = null;
+        Ball[] var5_ref_pq__ = null;
         int var5 = 0;
-        qe var6_ref_qe = null;
+        ShotRecord var6_ref_qe = null;
         int var6 = 0;
-        pq[] var6_ref_pq__ = null;
+        Ball[] var6_ref_pq__ = null;
         int var7 = 0;
-        qe var7_ref_qe = null;
-        pq var8 = null;
+        ShotRecord var7_ref_qe = null;
+        Ball var8 = null;
         int var9 = 0;
         int var10_int = 0;
-        pq var10 = null;
+        Ball var10 = null;
         int var11_int = 0;
-        pq var11 = null;
+        Ball var11 = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -8272,11 +8272,11 @@ final class PoolMatchController {
         int var27 = 0;
         var27 = Pool.field_O;
         try {
-          if (0 != this.field_I.j(43).field_q) {
+          if (0 != this.field_I.currentShot(43).field_q) {
             return;
           }
           if (hh.field_c) {
-            var2 = new qe();
+            var2 = new ShotRecord();
             var3_ref_qe = var2;
             var4_ref_kj = this.field_G;
             var3_ref_qe.field_H = (byte)var4_ref_kj.field_e;
@@ -8288,22 +8288,22 @@ final class PoolMatchController {
             var3_ref_al = this.field_I;
             var4_ref_qe = var2;
             o.field_y = 0;
-            if (null != pq.field_B && (pq.field_B.length != 0 ||
+            if (null != Ball.field_B && (Ball.field_B.length != 0 ||
               var27 != 0) && (!(var4_ref_qe.field_D * var4_ref_qe.field_D + var4_ref_qe.field_H * var4_ref_qe.field_H > 9216) ||
               var27 != 0)) {
               var5_ref_al = var3_ref_al;
               var6_ref_qe = var4_ref_qe;
               var7 = 0;
               do {
-                if (!(var7 < var5_ref_al.field_l.length)) {
-                  pc.field_a = pq.field_B[0];
+                if (!(var7 < var5_ref_al.balls.length)) {
+                  pc.field_a = Ball.field_B[0];
                   break;
                 }
-                pq.field_B[0][var7].a(var5_ref_al.field_l[var7], (byte) -12);
+                Ball.field_B[0][var7].copyFrom(var5_ref_al.balls[var7], (byte) -12);
                 var7++;
               } while (var27 == 0);
               var7_ref_qe = var6_ref_qe;
-              var8 = pq.field_B[0][0];
+              var8 = Ball.field_B[0][0];
               var9 = var7_ref_qe.field_D * var7_ref_qe.field_D + var7_ref_qe.field_H * var7_ref_qe.field_H;
               if (var9 > 9216) {
                 throw new IllegalStateException("Strike point out of range! " + var7_ref_qe.field_D + "," + var7_ref_qe.field_H);
@@ -8324,13 +8324,13 @@ final class PoolMatchController {
               var23 = var20 * var7_ref_qe.field_H + (var15 * var7_ref_qe.field_D + var10_int * var17) >> 9;
               var24 = var16 * var7_ref_qe.field_D + (var18 * var10_int + var7_ref_qe.field_H * var21_int) >> 9;
               var25 = var10_int * var19_int + var7_ref_qe.field_D * 0 + var22 * var7_ref_qe.field_H >> 9;
-              var8.field_I = lh.a(uh.field_q, (byte) -79, (long)(int)(od.a((long)(var7_ref_qe.field_V * var17), (long)kj.field_f, false) / 4096L));
-              var8.field_t = lh.a(uh.field_q, (byte) -116, (long)(int)(od.a((long)(var7_ref_qe.field_V * var18), (long)kj.field_f, false) / 4096L));
-              var8.field_v = 1;
+              var8.velocityX = lh.a(uh.field_q, (byte) -79, (long)(int)(od.a((long)(var7_ref_qe.field_V * var17), (long)kj.field_f, false) / 4096L));
+              var8.velocityY = lh.a(uh.field_q, (byte) -116, (long)(int)(od.a((long)(var7_ref_qe.field_V * var18), (long)kj.field_f, false) / 4096L));
+              var8.motionState = 1;
               var26 = lh.a(uh.field_w, (byte) -93, (long)(int)(od.a((long)(var7_ref_qe.field_V * bl.field_g), (long)kj.field_f, false) / 4096L));
-              var8.field_n = aj.a(-aj.a(var18, false, var25), false, var26);
-              var8.field_b = aj.a(aj.a(var17, false, var25), false, var26);
-              var8.field_K = aj.a(aj.a(var18, false, var23) - aj.a(var17, false, var24), false, var26);
+              var8.angularVelocityX = aj.a(-aj.a(var18, false, var25), false, var26);
+              var8.angularVelocityY = aj.a(aj.a(var17, false, var25), false, var26);
+              var8.angularVelocityZ = aj.a(aj.a(var18, false, var23) - aj.a(var17, false, var24), false, var26);
               fn.f(-13164);
               scanLoop1: do {
                 hb.field_s = -1;
@@ -8339,7 +8339,7 @@ final class PoolMatchController {
                 var5_ref_pq__ = pc.field_a;
                 var6 = 0;
                 while (var6 < var5_ref_pq__.length) {
-                  var5_ref_pq__[var6].field_w = 0;
+                  var5_ref_pq__[var6].lastAdvanceTime = 0;
                   var6++;
                   if (var27 != 0) {
                     break scanLoop1;
@@ -8347,7 +8347,7 @@ final class PoolMatchController {
                 }
                 var5 = 0;
                 while (true) {
-                  dupTemp$0 = oe.a(var3_ref_al.field_c, var5, pc.field_a, var3_ref_al.field_e, 0);
+                  dupTemp$0 = oe.a(var3_ref_al.cushionSegments, var5, pc.field_a, var3_ref_al.field_e, 0);
                   var5 = dupTemp$0;
                   if (dupTemp$0 != -1) {
                     if (fn.f(-13164)) {
@@ -8361,7 +8361,7 @@ final class PoolMatchController {
                 var7 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (var6_ref_pq__.length <= var7))) {
-                  stackIn_52_0 = var6_ref_pq__[var7].field_s;
+                  stackIn_52_0 = var6_ref_pq__[var7].inPlay;
                   if (var27 == 0) {
                     if (stackIn_52_0) {
                       var6_ref_pq__[var7].a(false);
@@ -8372,7 +8372,7 @@ final class PoolMatchController {
                   break;
                 }
                 if (decompiledNaturalLoopExit0) {
-                  var3_ref_al.a(6582, pc.field_a, var4_ref_qe);
+                  var3_ref_al.potBallsInPockets(6582, pc.field_a, var4_ref_qe);
                   stackIn_52_0 = fn.f(-13164);
                 }
                 if (!stackIn_52_0) {
@@ -8391,8 +8391,8 @@ final class PoolMatchController {
             var27 == 0) {
             return;
           }
-          if (null != pq.field_B) {
-            if (pq.field_B.length == 0 &&
+          if (null != Ball.field_B) {
+            if (Ball.field_B.length == 0 &&
               var27 == 0) {
               return;
             }
@@ -8413,40 +8413,40 @@ final class PoolMatchController {
                 }
                 var4 = ea.field_p << 11;
                 var5 = 0;
-                var8 = pq.field_B[0][var3];
+                var8 = Ball.field_B[0][var3];
                 var9 = 1;
                 while (o.field_y > var9) {
-                  var10 = pq.field_B[-1 + var9][var3];
-                  var11 = pq.field_B[var9][var3];
-                  var6 = var5 + (var10.field_w & 65535);
+                  var10 = Ball.field_B[-1 + var9][var3];
+                  var11 = Ball.field_B[var9][var3];
+                  var6 = var5 + (var10.lastAdvanceTime & 65535);
                   stackIn_75_0 = 0;
-                  stackIn_75_1 = var11.field_w;
+                  stackIn_75_1 = var11.lastAdvanceTime;
                   if (var27 != 0) {
                     continue scanLoop2;
                   }
                   if (stackIn_75_0 == stackIn_75_1 ||
-                    !(var11.field_w < 65536)) {
+                    !(var11.lastAdvanceTime < 65536)) {
                     var7 = var5 + 65536;
                   } else {
-                    var7 = var5 + var11.field_w;
+                    var7 = var5 + var11.lastAdvanceTime;
                   }
                   boolean decompiledFrameRemainder0 = true;
-                  if (~var10.field_g == ~var11.field_g &&
-                    ~var10.field_k == ~var11.field_k) {
+                  if (~var10.positionX == ~var11.positionX &&
+                    ~var10.positionY == ~var11.positionY) {
                     var5 = var5 + 65536;
                   } else {
                     var12 = var4 + var5;
                     if (var12 >= var6 &&
-                      var7 > var12 && ((0 != var10.field_v ||
-                      0 != var11.field_v) &&
-                      (var10.field_v != 2 ||
-                      var11.field_v != 2))) {
+                      var7 > var12 && ((0 != var10.motionState ||
+                      0 != var11.motionState) &&
+                      (var10.motionState != 2 ||
+                      var11.motionState != 2))) {
                       var13 = (-var12 + (o.field_y << 16)) / o.field_y >> 8;
-                      var14 = (var11.field_g - var10.field_g >> 13) * (var12 - var6) / (var7 - var6) + (var10.field_g >> 13);
-                      var15 = (var10.field_k >> 13) + (-var10.field_k + var11.field_k >> 13) * (-var6 + var12) / (-var6 + var7);
+                      var14 = (var11.positionX - var10.positionX >> 13) * (var12 - var6) / (var7 - var6) + (var10.positionX >> 13);
+                      var15 = (var10.positionY >> 13) + (-var10.positionY + var11.positionY >> 13) * (-var6 + var12) / (-var6 + var7);
                       var16 = -64;
-                      var17 = -(var8.field_g >> 13) + var14;
-                      var18 = -(var8.field_k >> 13) + var15;
+                      var17 = -(var8.positionX >> 13) + var14;
+                      var18 = -(var8.positionY >> 13) + var15;
                       var19 = (long)(var17 * var17 + var18 * var18);
                       var21 = IterableNodeHashTable.a(-127, var19 << 10) >> 13;
                       decompiledFrameRemainder0 = (!(var21 < 48L) ||
@@ -8485,8 +8485,8 @@ final class PoolMatchController {
                         }
                       }
                     }
-                    if ((decompiledFrameRemainder0) && (var11.field_w == 0 ||
-                      !(var11.field_w < 65536))) {
+                    if ((decompiledFrameRemainder0) && (var11.lastAdvanceTime == 0 ||
+                      !(var11.lastAdvanceTime < 65536))) {
                       var5 = var5 + 65536;
                     }
                   }
@@ -8508,7 +8508,7 @@ final class PoolMatchController {
 
     private final void t(byte param0) {
         int fieldTemp$0 = 0;
-        oo stackIn_16_0;
+        TableScene stackIn_16_0;
         int stackIn_16_1;
         int[] stackIn_16_2;
         int stackIn_16_3;
@@ -8521,7 +8521,7 @@ final class PoolMatchController {
         aa var2 = null;
         RuntimeException var2_ref = null;
         int var3_int = 0;
-        cr var3 = null;
+        PotEvent var3 = null;
         int var4 = 0;
         int var3_intLifetime1;
         var4 = Pool.field_O;
@@ -8554,7 +8554,7 @@ final class PoolMatchController {
               } else {
                 stackIn_17_5 = 2;
               }
-              ((oo) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5);
+              ((TableScene) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5);
               var2_int++;
             }
           }
@@ -8590,8 +8590,8 @@ final class PoolMatchController {
             stackIn_38_0 = 0;
           }
           if (stackIn_38_0 < this.field_I.field_j) {
-            var2 = new aa(this.field_I.j(25).field_m);
-            var3 = (cr) (var2.a(0));
+            var2 = new aa(this.field_I.currentShot(25).field_m);
+            var3 = (PotEvent) (var2.a(0));
             do {
               if (var3 == null) {
                 return;
@@ -8601,8 +8601,8 @@ final class PoolMatchController {
               if (fieldTemp$0 <= 0) {
                 return;
               }
-              kh.field_gc.a(this.field_ab, 4, -94, new int[]{this.field_I.field_w[var3.field_r].field_g >> 13, this.field_I.field_w[var3.field_r].field_f >> 13, -64});
-              var3 = (cr) (var2.c((byte) -71));
+              kh.field_gc.a(this.field_ab, 4, -94, new int[]{this.field_I.pockets[var3.pocketIndex].centerX >> 13, this.field_I.pockets[var3.pocketIndex].centerY >> 13, -64});
+              var3 = (PotEvent) (var2.c((byte) -71));
             } while (var4 == 0);
             return;
           }
@@ -8642,11 +8642,11 @@ final class PoolMatchController {
           if (!this.i(-1)) {
             this.E(param0 ^ 24097);
           } else {
-            if (0 <= this.field_I.j(param0 ^ -86).field_M) {
+            if (0 <= this.field_I.currentShot(param0 ^ -86).field_M) {
               this.field_G.field_h = 0;
             } else {
               if (this.field_M != 0) {
-                this.field_G.a(this.field_eb, this.field_I.field_l[0], (byte) -106);
+                this.field_G.a(this.field_eb, this.field_I.balls[0], (byte) -106);
               }
             }
             this.a((byte) -116);
@@ -8666,10 +8666,10 @@ final class PoolMatchController {
         RuntimeException var2 = null;
         try {
           var2_int = -79 % ((param0 + 33) / 60);
-          for (var3 = 0; var3 < this.field_I.field_l.length; var3++) {
-            if (this.field_I.field_l[var3].field_s &&
-              this.field_I.field_l[var3].field_v != 0 &&
-              !this.a(this.field_I.field_l[var3].field_j, this.field_I.field_l[var3].field_g, -98, this.field_I.field_l[var3].field_k)) {
+          for (var3 = 0; var3 < this.field_I.balls.length; var3++) {
+            if (this.field_I.balls[var3].inPlay &&
+              this.field_I.balls[var3].motionState != 0 &&
+              !this.a(this.field_I.balls[var3].positionZ, this.field_I.balls[var3].positionX, -98, this.field_I.balls[var3].positionY)) {
               return false;
             }
           }
@@ -8723,7 +8723,7 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.a(sa.field_h.maxDescent, this.field_I.field_u, (byte) 27);
+          this.a(sa.field_h.maxDescent, this.field_I.shots, (byte) 27);
           if (this.field_I.field_i != null) {
             this.a(sa.field_h.maxDescent + 320, this.field_I.field_i, (byte) 27);
           }
@@ -8775,7 +8775,7 @@ final class PoolMatchController {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 != this.field_I.j(66).field_q) {
+          if (0 != this.field_I.currentShot(66).field_q) {
             return false;
           }
           var2_int = this.g((byte) 102);
@@ -8803,7 +8803,7 @@ final class PoolMatchController {
             this.o((byte) 53);
           }
           boolean decompiledFrameRemainder0 = true;
-          var2_int = this.field_I.j(52).field_q;
+          var2_int = this.field_I.currentShot(52).field_q;
           if (var2_int != 0 && (1 != var2_int ||
             this.field_B >= 37)) {
             stackIn_13_0 = false;
@@ -8820,14 +8820,14 @@ final class PoolMatchController {
         }
     }
 
-    private final void b(qe param0, int param1) {
+    private final void b(ShotRecord param0, int param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pq var3 = null;
+        Ball var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         var4 = Pool.field_O;
@@ -8883,16 +8883,16 @@ final class PoolMatchController {
             this.m(-67);
           }
           if (!this.i(-1)) {
-            var3 = this.field_I.field_l[0];
-            if (~param0.field_P == ~var3.field_g &&
-              ~param0.field_Q == ~var3.field_k) {
+            var3 = this.field_I.balls[0];
+            if (~param0.field_P == ~var3.positionX &&
+              ~param0.field_Q == ~var3.positionY) {
               return;
             }
-            var3.field_k = var3.field_k + (-var3.field_k + param0.field_Q >> 3);
+            var3.positionY = var3.positionY + (-var3.positionY + param0.field_Q >> 3);
             hh.field_c = true;
-            var3.field_g = var3.field_g + (param0.field_P - var3.field_g >> 3);
+            var3.positionX = var3.positionX + (param0.field_P - var3.positionX >> 3);
             id.field_c.field_g = true;
-            var3.field_p = true;
+            var3.transformDirty = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8911,8 +8911,8 @@ final class PoolMatchController {
 
     final void b(int param0, PacketBuffer param1) {
         RuntimeException runtimeException = null;
-        qe var3 = null;
-        qe var4 = null;
+        ShotRecord var3 = null;
+        ShotRecord var4 = null;
         PacketBuffer var5 = null;
         int var6 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -8920,7 +8920,7 @@ final class PoolMatchController {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_I.j(23);
+          var3 = this.field_I.currentShot(23);
           var6 = 62 % ((-58 - param0) / 63);
           var4 = var3;
           var5 = param1;
@@ -8953,7 +8953,7 @@ final class PoolMatchController {
         double var4 = 0.0;
         double var6 = 0.0;
         double var8 = 0.0;
-        pq var10 = null;
+        Ball var10 = null;
         float var11 = 0.0f;
         int var12 = 0;
         try {
@@ -8988,15 +8988,15 @@ final class PoolMatchController {
                     this.t(0);
                   }
                 } else {
-                  var10 = this.field_I.field_l[0];
-                  var11 = (float)var10.g(-8);
-                  if (var10.field_s) {
-                    this.field_O.field_f = (double)pf.b(127, var10.field_g);
-                    this.field_O.field_m = (double)pf.b(126, var10.field_k);
-                    this.field_O.field_k = (double)pf.b(127, var10.field_j);
-                    this.field_O.field_d = (double)(pf.b(126, var10.field_g) - 80.0f * ((float)var10.field_I / var11));
-                    this.field_O.field_a = (double)(pf.b(127, var10.field_k) - 80.0f * ((float)var10.field_t / var11));
-                    this.field_O.field_h = (double)(-24.0f + pf.b(126, var10.field_j));
+                  var10 = this.field_I.balls[0];
+                  var11 = (float)var10.horizontalSpeed(-8);
+                  if (var10.inPlay) {
+                    this.field_O.field_f = (double)pf.b(127, var10.positionX);
+                    this.field_O.field_m = (double)pf.b(126, var10.positionY);
+                    this.field_O.field_k = (double)pf.b(127, var10.positionZ);
+                    this.field_O.field_d = (double)(pf.b(126, var10.positionX) - 80.0f * ((float)var10.velocityX / var11));
+                    this.field_O.field_a = (double)(pf.b(127, var10.positionY) - 80.0f * ((float)var10.velocityY / var11));
+                    this.field_O.field_h = (double)(-24.0f + pf.b(126, var10.positionZ));
                   }
                 }
               } else {
@@ -9018,8 +9018,8 @@ final class PoolMatchController {
     }
 
     PoolMatchController(int param0, int param1, int param2, int param3, int param4, boolean param5, String[] param6, int param7, boolean param8) {
-        pq[] array$0 = null;
-        pq[] array$1 = null;
+        Ball[] array$0 = null;
+        Ball[] array$1 = null;
         boolean stackIn_4_1 = false;
         String stackIn_20_0 = null;
         int stackIn_53_0 = 0;
@@ -9032,8 +9032,8 @@ final class PoolMatchController {
         Object var10 = null;
         int var11 = 0;
         String var11_ref_String = null;
-        al var11_ref_al = null;
-        al var12_ref_al = null;
+        PoolGameModel var11_ref_al = null;
+        PoolGameModel var12_ref_al = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -9084,26 +9084,26 @@ final class PoolMatchController {
           this.a(param6, param2, -112, param1);
           var10 = null;
           if ((f.field_f & this.field_L) != 0) {
-            var10 = gj.a(true, 0, oo.field_c, Pool.field_M);
+            var10 = gj.a(true, 0, TableScene.timeTrial, Pool.potBallsInAnyOrderFinishOnBlack);
           } else {
             if (0 != (hq.field_c & this.field_L) &&
-              im.field_ic[param2] != null) {
+              im.rulesetNames[param2] != null) {
               var11 = 0;
               while (true) {
-                if (var11 < this.field_I.field_n) {
+                if (var11 < this.field_I.playerCount) {
                   stackIn_20_0 = this.e(-30360, var11);
                   if (var16 == 0) {
                     var11++;
                     continue;
                   }
                 } else {
-                  stackIn_20_0 = this.field_I.field_f.a(1, this.field_i);
+                  stackIn_20_0 = this.field_I.rules.a(1, this.field_i);
                 }
                 break;
               }
               var11_ref_String = stackIn_20_0;
               if (null != var11_ref_String) {
-                var10 = gj.a(true, 0, im.field_ic[param2], var11_ref_String);
+                var10 = gj.a(true, 0, im.rulesetNames[param2], var11_ref_String);
               }
             }
           }
@@ -9121,9 +9121,9 @@ final class PoolMatchController {
             decompiledSharedTail0 = (var16 != 0);
           }
           if (decompiledSharedTail0) {
-            lc.field_U = new vh("chat_toggle", (vh) null, 0, 440, 60, 20, ua.field_n);
+            lc.field_U = new vh("chat_toggle", (vh) null, 0, 440, 60, 20, ua.chatButton);
             lc.field_U.field_Gb = lb.field_O;
-            lc.field_U.field_F = hm.field_l;
+            lc.field_U.field_F = Quaternion.field_l;
             lc.field_U.field_hb = ta.field_e;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -9131,25 +9131,25 @@ final class PoolMatchController {
             var11_ref_al = this.field_I;
             f.field_g = 12;
             var12_ref_al = var11_ref_al;
-            pq.field_B = new pq[12][];
+            Ball.field_B = new Ball[12][];
             var13 = 0;
             scanLoop1: while (true) {
-              if (var13 < pq.field_B.length) {
-                array$0 = new pq[var12_ref_al.field_l.length];
-                pq.field_B[var13] = array$0;
+              if (var13 < Ball.field_B.length) {
+                array$0 = new Ball[var12_ref_al.balls.length];
+                Ball.field_B[var13] = array$0;
                 stackIn_53_0 = 0;
                 if (var16 != 0) {
                   break scanLoop1;
                 }
                 var14 = stackIn_53_0;
-                while (pq.field_B[var13].length > var14) {
-                  pq.field_B[var13][var14] = new pq();
+                while (Ball.field_B[var13].length > var14) {
+                  Ball.field_B[var13][var14] = new Ball();
                   var14++;
                 }
                 var13++;
                 continue;
               }
-              rb.field_e = new ar[12 * pq.field_B.length];
+              rb.field_e = new ar[12 * Ball.field_B.length];
               stackIn_53_0 = 0;
               break;
             }
@@ -9168,25 +9168,25 @@ final class PoolMatchController {
             var11_ref_al = this.field_I;
             f.field_g = 0;
             var12_ref_al = var11_ref_al;
-            pq.field_B = new pq[][]{};
+            Ball.field_B = new Ball[][]{};
             var13 = 0;
             scanLoop2: while (true) {
-              if (pq.field_B.length > var13) {
-                array$1 = new pq[var12_ref_al.field_l.length];
-                pq.field_B[var13] = array$1;
+              if (Ball.field_B.length > var13) {
+                array$1 = new Ball[var12_ref_al.balls.length];
+                Ball.field_B[var13] = array$1;
                 stackIn_73_0 = 0;
                 if (var16 != 0) {
                   break scanLoop2;
                 }
                 var14 = stackIn_73_0;
-                while (pq.field_B[var13].length > var14) {
-                  pq.field_B[var13][var14] = new pq();
+                while (Ball.field_B[var13].length > var14) {
+                  Ball.field_B[var13][var14] = new Ball();
                   var14++;
                 }
                 var13++;
                 continue;
               }
-              rb.field_e = new ar[pq.field_B.length * 0];
+              rb.field_e = new ar[Ball.field_B.length * 0];
               stackIn_73_0 = 0;
               break;
             }
@@ -9206,10 +9206,10 @@ final class PoolMatchController {
           if (decompiledFrameCompleted0) {
             this.c(param4, param3, 125);
           }
-          var11Lifetime1 = this.field_I.j(97).field_M;
+          var11Lifetime1 = this.field_I.currentShot(97).field_M;
           var12 = f.field_g;
-          if (null != pq.field_B) {
-            stackIn_85_0 = pq.field_B.length;
+          if (null != Ball.field_B) {
+            stackIn_85_0 = Ball.field_B.length;
           } else {
             stackIn_85_0 = 0;
           }
@@ -9308,10 +9308,10 @@ final class PoolMatchController {
     }
 
     static {
-        field_s = "Press <img=4> to leave shot mode for top-view.";
-        field_J = "Type your age in years";
+        tickerHintLeaveShotMode = "Press <img=4> to leave shot mode for top-view.";
+        createAgeTooltip = "Type your age in years";
         field_X = 0;
-        field_K = "Mouse Y-axis: Normal";
+        mouseYAxisNormal = "Mouse Y-axis: Normal";
         field_fb = 0;
         field_y = new byte[1000][];
     }

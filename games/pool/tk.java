@@ -12,7 +12,7 @@ final class tk {
     private int field_h;
     static vh field_k;
     private long field_b;
-    static String field_j;
+    static String creatingyouraccount;
 
     final DualLinkNode a(int param0) {
         DualLinkNode var2;
@@ -158,7 +158,7 @@ final class tk {
         field_k = null;
         field_f = null;
         int var1 = -92 / ((-40 - param0) / 46);
-        field_j = null;
+        creatingyouraccount = null;
         field_e = null;
     }
 
@@ -243,6 +243,6 @@ final class tk {
     }
 
     static {
-        field_j = "Creating your account";
+        creatingyouraccount = "Creating your account";
     }
 }

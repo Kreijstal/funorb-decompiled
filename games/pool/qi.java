@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class qi implements Iterable {
-    static String field_h;
+    static String muGameoptInviteXToGame;
     DualLinkNode field_d;
     static int field_a;
     static int field_b;
@@ -115,7 +115,7 @@ final class qi implements Iterable {
         }
         try {
           na.a(-58, param1);
-          wf.a(false, gg.field_a, -128);
+          wf.a(false, gg.loggingIn, -128);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -124,11 +124,11 @@ final class qi implements Iterable {
     public static void b(int param0) {
         field_f = null;
         if (param0 != 14676) {
-          field_h = (String) null;
-          field_h = null;
+          muGameoptInviteXToGame = (String) null;
+          muGameoptInviteXToGame = null;
           return;
         }
-        field_h = null;
+        muGameoptInviteXToGame = null;
     }
 
     public final Iterator iterator() {
@@ -206,6 +206,6 @@ final class qi implements Iterable {
     }
 
     static {
-        field_h = "Invite <%0> to this game";
+        muGameoptInviteXToGame = "Invite <%0> to this game";
     }
 }

@@ -3,12 +3,12 @@
  */
 final class fr extends IntrusiveNode {
     static nl field_o;
-    static String field_m;
+    static String createAlertInvalidemail;
     static int field_n;
     long field_p;
     byte[] field_l;
     static int field_s;
-    static String field_q;
+    static String muOptionsWhocanjoin;
     int field_r;
     static int field_u;
     static int field_t;
@@ -117,8 +117,8 @@ final class fr extends IntrusiveNode {
     }
 
     public static void c(byte param0) {
-        field_m = null;
-        field_q = null;
+        createAlertInvalidemail = null;
+        muOptionsWhocanjoin = null;
         field_o = null;
         if (param0 < 39) {
           fr.a(-16, 120);
@@ -136,9 +136,9 @@ final class fr extends IntrusiveNode {
     }
 
     static {
-        field_m = "Please check if address is correct";
+        createAlertInvalidemail = "Please check if address is correct";
         field_o = new nl();
-        field_q = "Who can join";
+        muOptionsWhocanjoin = "Who can join";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

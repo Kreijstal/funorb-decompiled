@@ -5,11 +5,11 @@ final class cp {
     static int[] field_d;
     static di field_a;
     static ao field_c;
-    static String field_b;
+    static String mbExclusive2;
 
     final static boolean a(byte param0) {
         if (param0 <= 72) {
-          field_b = (String) null;
+          mbExclusive2 = (String) null;
           if (!fq.m(0)) {
             return false;
           }
@@ -68,13 +68,13 @@ final class cp {
         field_a = null;
         field_c = null;
         field_d = null;
-        field_b = null;
+        mbExclusive2 = null;
         if (!param0) {
           field_c = (ao) null;
         }
     }
 
     static {
-        field_b = "members-only content";
+        mbExclusive2 = "members-only content";
     }
 }

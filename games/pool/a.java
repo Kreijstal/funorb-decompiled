@@ -3,13 +3,13 @@
  */
 final class a {
     static int field_d;
-    static String field_c;
+    static String muGamelistPlayers;
     private static int field_a;
-    static String field_b;
+    static String youCannotJoinInProgress;
 
     public static void a(int param0) {
-        field_c = null;
-        field_b = null;
+        muGamelistPlayers = null;
+        youCannotJoinInProgress = null;
         if (param0 != 0) {
           eg var2 = (eg) null;
           a.a(true, (eg) null);
@@ -87,7 +87,7 @@ final class a {
           }
           of.field_Nb.a(param0, 2113632, param3, param2);
           SoftwareRasterizer.clear();
-          to.a((byte) -118, param1);
+          PolarBallSkin.a((byte) -118, param1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "a.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -95,8 +95,8 @@ final class a {
 
     static {
         field_a = 15;
-        field_c = "Players";
-        field_b = "You cannot join this game - it is in progress";
+        muGamelistPlayers = "Players";
+        youCannotJoinInProgress = "You cannot join this game - it is in progress";
         field_d = 1 << field_a;
     }
 }

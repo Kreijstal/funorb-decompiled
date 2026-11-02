@@ -5,9 +5,9 @@ abstract class gg implements ip {
     static Sprite[] field_b;
     static boolean[] field_d;
     static int field_f;
-    static String field_c;
+    static String youCanJoin;
     private long field_e;
-    static String field_a;
+    static String loggingIn;
     static int field_g;
 
     abstract String f(int param0);
@@ -41,7 +41,7 @@ abstract class gg implements ip {
     final static boolean a(boolean param0) {
         if (!param0) {
           gg.e(39);
-          if (10 > fk.field_ab) {
+          if (10 > PlasmaTableScene.field_ab) {
             return false;
           }
           if (sf.field_y >= 13) {
@@ -49,7 +49,7 @@ abstract class gg implements ip {
           }
           return false;
         }
-        if (10 > fk.field_ab) {
+        if (10 > PlasmaTableScene.field_ab) {
           return false;
         }
         if (sf.field_y >= 13) {
@@ -72,9 +72,9 @@ abstract class gg implements ip {
           return;
         }
         field_b = null;
-        field_a = null;
+        loggingIn = null;
         field_d = null;
-        field_c = null;
+        youCanJoin = null;
     }
 
     final static wc a(int param0, boolean param1, String param2) {
@@ -194,14 +194,14 @@ abstract class gg implements ip {
         if (param0 > 61) {
           return this.f(-120);
         }
-        field_c = (String) null;
+        youCanJoin = (String) null;
         return this.f(-120);
     }
 
     static {
         field_f = 0;
-        field_c = "You can join this game";
-        field_a = "Logging in...";
+        youCanJoin = "You can join this game";
+        loggingIn = "Logging in...";
         field_g = -1;
     }
 }

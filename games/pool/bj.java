@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bj extends IntrusiveNode {
-    static String[] field_o;
+    static String[] quickchatShortcutHelp;
     int field_l;
     static int field_m;
     int field_n;
@@ -128,7 +128,7 @@ final class bj extends IntrusiveNode {
     }
 
     public static void a(int param0) {
-        field_o = null;
+        quickchatShortcutHelp = null;
         if (param0 != -4303) {
           bj.c(-44);
         }
@@ -139,6 +139,6 @@ final class bj extends IntrusiveNode {
     }
 
     static {
-        field_o = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
+        quickchatShortcutHelp = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
     }
 }

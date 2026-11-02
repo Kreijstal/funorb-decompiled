@@ -4,14 +4,14 @@
 final class hd extends ob {
     static int field_J;
     static int field_H;
-    static String field_K;
+    static String rulePillar2;
     static int field_I;
 
     public static void b(boolean param0) {
         if (!param0) {
           return;
         }
-        field_K = null;
+        rulePillar2 = null;
     }
 
     final void c(int param0) {
@@ -23,10 +23,10 @@ final class hd extends ob {
         if (cm.f((byte) 109)) {
           ae.a(-2);
           if (!ea.field_l) {
-            for (var2 = 0; var2 < cr.field_m.field_D.length; var2++) {
-              if ((cr.field_m.field_D[var2] & -16777216) == 0 &&
-                0 != (cr.field_m.field_D[var2] & 16777215)) {
-                cr.field_m.field_D[var2] = md.a(cr.field_m.field_D[var2], -16777216);
+            for (var2 = 0; var2 < PotEvent.field_m.field_D.length; var2++) {
+              if ((PotEvent.field_m.field_D[var2] & -16777216) == 0 &&
+                0 != (PotEvent.field_m.field_D[var2] & 16777215)) {
+                PotEvent.field_m.field_D[var2] = md.a(PotEvent.field_m.field_D[var2], -16777216);
               }
             }
             ea.field_l = true;
@@ -121,10 +121,10 @@ final class hd extends ob {
           s.a(hk.d(58), 2056898529);
         }
         if (var2 == 1) {
-          fq.a(-3405, 0, sq.field_b, false);
+          fq.a(-3405, 0, GameRules.field_b, false);
         }
         if (var2 == 2) {
-          fq.a(-3405, 0, sq.field_b, true);
+          fq.a(-3405, 0, GameRules.field_b, true);
         }
     }
 
@@ -228,6 +228,6 @@ final class hd extends ob {
     }
 
     static {
-        field_K = "Security";
+        rulePillar2 = "Security";
     }
 }

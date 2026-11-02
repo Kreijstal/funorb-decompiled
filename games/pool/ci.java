@@ -12,13 +12,13 @@ final class ci {
     private int field_l;
     static int[][] field_d;
     private int field_g;
-    static String field_a;
+    static String ignorelistfull;
     static of field_c;
     private int field_n;
     private int field_r;
     private int field_o;
     private int field_b;
-    static String field_m;
+    static String unableToSendMessagePasswordB;
     static Sprite field_h;
     static int[] field_p;
 
@@ -323,12 +323,12 @@ final class ci {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        ignorelistfull = null;
         if (param0 == 8) {
           field_s = null;
           field_p = null;
           field_h = null;
-          field_m = null;
+          unableToSendMessagePasswordB = null;
           field_c = null;
           field_d = (int[][]) null;
           return;
@@ -337,7 +337,7 @@ final class ci {
         field_s = null;
         field_p = null;
         field_h = null;
-        field_m = null;
+        unableToSendMessagePasswordB = null;
         field_c = null;
         field_d = (int[][]) null;
     }
@@ -435,8 +435,8 @@ final class ci {
         field_s = new int[]{8, 8};
         field_f = 0;
         field_i = -1;
-        field_a = "Your ignore list is full. Max of 100 hit.";
-        field_m = "If you are not, please change your password to something more obscure!";
+        ignorelistfull = "Your ignore list is full. Max of 100 hit.";
+        unableToSendMessagePasswordB = "If you are not, please change your password to something more obscure!";
         field_h = new Sprite(270, 70);
     }
 }

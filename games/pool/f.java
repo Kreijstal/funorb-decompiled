@@ -5,7 +5,7 @@ final class f {
     static int[] field_b;
     static double[][] field_a;
     static double[][] field_c;
-    static String field_d;
+    static String muLobbyLocation;
     static int field_f;
     static int field_h;
     static int field_g;
@@ -68,12 +68,12 @@ final class f {
         pk.field_a.b(30, 2147483647, 0, oi.field_n.field_gb, -70 + (oi.field_n.field_Db - 2));
         wk.field_N.b(5, 2147483647, 5, 68, 30);
         pp.field_c.b(5, param0 ^ 2147483599, 75, 78, 30);
-        ac.field_p.b(5, 2147483647, 155, 48, 30);
+        KillerBallSkin.field_p.b(5, 2147483647, 155, 48, 30);
         mm.field_g.b(5, 2147483647, 205, param0, 30);
         int var2 = tq.field_p ? 250 : 200;
         mn.field_e.b(5, 2147483647, 5 + var2, -var2 + 363, 30);
         l.field_f.b(5, param0 ^ 2147483599, 370, -10 + oi.field_n.field_gb - 365, 30);
-        BufferedSocket.field_m.a(nk.field_n, -5 + (pk.field_a.field_Db - 37), (byte) -112, 2, pk.field_a.field_gb - 10, 5, 37);
+        BufferedSocket.field_m.a(TranslatedUiText.field_n, -5 + (pk.field_a.field_Db - 37), (byte) -112, 2, pk.field_a.field_gb - 10, 5, 37);
         int var3 = (2 + oi.field_n.field_gb) / 2;
         rn.field_f.b(oi.field_n.field_Db - 40, 2147483647, 0, -2 + var3, 40);
         if (!tq.field_p) {
@@ -89,13 +89,13 @@ final class f {
           return;
         }
         field_b = null;
-        field_d = null;
+        muLobbyLocation = null;
         field_a = (double[][]) null;
     }
 
     static {
         hi.g(-128);
-        field_d = "Location";
+        muLobbyLocation = "Location";
         field_f = 8;
         field_g = 12;
     }

@@ -4,13 +4,13 @@
 final class ka extends ig {
     static int[] field_o;
     static int field_r;
-    static String field_u;
-    static String field_t;
+    static String whichGroupDoYouWant;
+    static String gameoptCannotbecombined1;
     static byte[] field_s;
-    static String field_n;
+    static String unableToAddFriend;
     static boolean field_p;
     static int field_q;
-    static String field_m;
+    static String createAlertPasscontainsnamePartial;
 
     final na a(String param0, boolean param1) {
         int var3_int = 0;
@@ -55,14 +55,14 @@ final class ka extends ig {
     }
 
     public static void b(boolean param0) {
-        field_n = null;
-        field_m = null;
-        field_t = null;
+        unableToAddFriend = null;
+        createAlertPasscontainsnamePartial = null;
+        gameoptCannotbecombined1 = null;
         field_o = null;
         field_s = null;
-        field_u = null;
+        whichGroupDoYouWant = null;
         if (!param0) {
-          field_m = (String) null;
+          createAlertPasscontainsnamePartial = (String) null;
         }
     }
 
@@ -193,7 +193,7 @@ final class ka extends ig {
           if (this.a(param0, true) != gp.field_d) {
             return null;
           }
-          stackIn_5_0 = sg.field_L;
+          stackIn_5_0 = sg.createAlertInvalidage;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,10 +211,10 @@ final class ka extends ig {
 
     static {
         field_o = new int[4];
-        field_t = "This option cannot be combined with the current '<%0>' setting.";
-        field_n = "Unable to add friend - system busy";
-        field_u = "<%0>, which group do you want to play as?";
-        field_m = "This password is part of your Player Name, and would be easy to guess";
+        gameoptCannotbecombined1 = "This option cannot be combined with the current '<%0>' setting.";
+        unableToAddFriend = "Unable to add friend - system busy";
+        whichGroupDoYouWant = "<%0>, which group do you want to play as?";
+        createAlertPasscontainsnamePartial = "This password is part of your Player Name, and would be easy to guess";
         field_p = false;
     }
 }

@@ -8,11 +8,11 @@ final class ec implements eb {
     static int field_f;
     private int field_e;
     static int field_b;
-    static String field_k;
+    static String tutorialBreakTryAgain;
     static int field_i;
-    private al field_h;
+    private PoolGameModel field_h;
     static int field_c;
-    private pq field_a;
+    private Ball field_a;
 
     final static void a(int param0, int param1, int param2, String[] param3, java.applet.Applet param4, int param5) {
         int var7 = 0;
@@ -45,12 +45,12 @@ final class ec implements eb {
           if (param2 != 37) {
             field_j = (char[]) null;
           }
-          vc.field_L = param1;
-          oo.field_k = param0;
+          ModelTableScene.field_L = param1;
+          TableScene.field_k = param0;
           er.field_X = param5;
-          jr.field_m = new Sprite[param3.length];
+          TikiBallSkin.field_m = new Sprite[param3.length];
           for (var7 = 0; var7 < param3.length; var7++) {
-            jr.field_m[var7] = new Sprite(317, 34);
+            TikiBallSkin.field_m[var7] = new Sprite(317, 34);
           }
           mk.field_a = param3;
           return;
@@ -75,7 +75,7 @@ final class ec implements eb {
     }
 
     public final void a(int[] param0, int param1) {
-        tm stackIn_2_0;
+        BallSkin stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
         int[] stackIn_2_3;
@@ -90,25 +90,25 @@ final class ec implements eb {
           stackIn_2_0 = dq.field_a;
           stackIn_2_1 = -1912602369;
           stackIn_2_2 = this.field_e;
-          stackIn_2_3 = this.field_a.field_G;
+          stackIn_2_3 = this.field_a.renderTransform;
           stackIn_2_4 = (int[]) (param0);
-          stackIn_3_5 = (this.field_e == this.field_h.j(param1 ^ -32240).field_I);
-          ((tm) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5);
+          stackIn_3_5 = (this.field_e == this.field_h.currentShot(param1 ^ -32240).field_I);
+          ((BallSkin) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5);
           if ((pd.field_i & 4L) != 0L) {
             this.field_a.f(param1 ^ 32245);
-            if (this.field_a.field_I != 0 ||
-              this.field_a.field_t != 0 ||
-              this.field_a.field_e != 0) {
-              cl.a(16711680, 1, param0, ol.a(new int[]{this.field_a.field_g, this.field_a.field_k, this.field_a.field_j}, (byte) 1), ol.a(new int[]{this.field_a.field_g + this.field_a.field_I * 40, this.field_a.field_k + this.field_a.field_t * 40, this.field_a.field_j}, (byte) 1));
+            if (this.field_a.velocityX != 0 ||
+              this.field_a.velocityY != 0 ||
+              this.field_a.velocityZ != 0) {
+              cl.a(16711680, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
             }
-            if (this.field_a.field_n != 0 ||
-              this.field_a.field_b != 0 ||
-              0 != this.field_a.field_K) {
-              cl.a(65280, 1, param0, ol.a(new int[]{this.field_a.field_g, this.field_a.field_k, this.field_a.field_j}, (byte) 1), ol.a(new int[]{40 * this.field_a.field_n + this.field_a.field_g, this.field_a.field_k + this.field_a.field_b * 40, this.field_a.field_K * 40 + this.field_a.field_j}, (byte) 1));
+            if (this.field_a.angularVelocityX != 0 ||
+              this.field_a.angularVelocityY != 0 ||
+              0 != this.field_a.angularVelocityZ) {
+              cl.a(65280, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
             }
             if (0 != this.field_a.field_l ||
               this.field_a.field_h != 0) {
-              cl.a(16776960, 1, param0, ol.a(new int[]{this.field_a.field_g, this.field_a.field_k, this.field_a.field_j}, (byte) 1), ol.a(new int[]{40 * this.field_a.field_l + this.field_a.field_g, this.field_a.field_k + this.field_a.field_h * 40, this.field_a.field_j}, (byte) 1));
+              cl.a(16776960, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
             }
           }
           if (param1 != -32215) {
@@ -149,7 +149,7 @@ final class ec implements eb {
             var4 = (int[]) null;
             this.b((int[]) null, -80);
           }
-          stackIn_3_0 = param0[11] * (-param0[2] + this.field_a.field_G[2]) + (this.field_a.field_G[1] - param0[1]) * param0[10] + (this.field_a.field_G[0] - param0[0]) * param0[9];
+          stackIn_3_0 = param0[11] * (-param0[2] + this.field_a.renderTransform[2]) + (this.field_a.renderTransform[1] - param0[1]) * param0[10] + (this.field_a.renderTransform[0] - param0[0]) * param0[9];
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,17 +205,17 @@ final class ec implements eb {
         field_g = (byte[][]) null;
         field_d = null;
         field_j = null;
-        field_k = null;
+        tutorialBreakTryAgain = null;
         if (param0 <= 77) {
           field_c = 92;
         }
     }
 
-    ec(int param0, al param1) {
+    ec(int param0, PoolGameModel param1) {
         try {
           this.field_e = param0;
           this.field_h = param1;
-          this.field_a = this.field_h.field_l[this.field_e];
+          this.field_a = this.field_h.balls[this.field_e];
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -223,7 +223,7 @@ final class ec implements eb {
 
     static {
         field_g = new byte[50][];
-        field_k = "Try again!";
+        tutorialBreakTryAgain = "Try again!";
         field_j = new char[]{(char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112};
         field_b = 256;
     }

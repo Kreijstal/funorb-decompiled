@@ -6,12 +6,12 @@ final class rn implements Runnable {
     private DualLinkDeque field_c;
     static int field_d;
     static vh field_f;
-    static String[] field_a;
+    static String[] instructionsTitles;
     static int[] field_g;
     private boolean field_j;
     private Thread field_i;
     int field_e;
-    static String field_h;
+    static String mpXWantstodraw;
 
     final dg a(byte param0, np param1, int param2) {
         dg var4 = null;
@@ -275,23 +275,23 @@ final class rn implements Runnable {
           gr.field_E = param5;
           ji.field_g = param8;
           jl.field_d = param6;
-          cr.field_l = param9;
+          PotEvent.field_l = param9;
           uk.field_i = aj.a(0, "lobby", param14, "gameprivacy");
           c.field_c = aj.a(0, "lobby", param14, "ratedgame");
           iq.field_a = aj.a(0, "lobby", param14, "opentome");
           hh.field_f = aj.a(0, "lobby", param14, "allowspectators");
           pn.field_i = new String[5];
-          pn.field_i[4] = oq.field_D;
-          pn.field_i[2] = lq.field_O;
-          pn.field_i[0] = ab.field_c;
-          pn.field_i[1] = ua.field_m;
-          pn.field_i[3] = hf.field_b;
+          pn.field_i[4] = oq.multiconstOpen;
+          pn.field_i[2] = lq.multiconstFriends;
+          pn.field_i[0] = ab.multiconstInviteOnly;
+          pn.field_i[1] = ua.multiconstClan;
+          pn.field_i[3] = hf.multiconstSimilarRating;
           c.field_e = new vh(0L, (vh) null);
-          d.field_f = new vh(0L, lf.field_d, jh.field_g);
+          d.field_f = new vh(0L, lf.field_d, jh.muLobbyName);
           if (param4 <= 59) {
             return;
           }
-          kj.field_a = new vh(0L, sd.field_Q, wi.field_c);
+          kj.field_a = new vh(0L, sd.field_Q, wi.muLobbyRating);
           ci.field_c = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
           c.field_e.a(116, d.field_f);
           if (tq.field_p) {
@@ -305,17 +305,17 @@ final class rn implements Runnable {
           var24.field_Fb = 1;
           pm.field_m = new vh(0L, uo.field_Lb);
           pm.field_m.field_Fb = 1;
-          gj.field_K = new vh(0L, tg.field_d, wp.field_b.toUpperCase());
-          ll.field_d = new vh(0L, rl.field_d, vl.field_s.toUpperCase());
+          gj.field_K = new vh(0L, tg.field_d, wp.returntomainmenu.toUpperCase());
+          ll.field_d = new vh(0L, rl.field_d, PlasmaBallSkin.muGamelistAllGames.toUpperCase());
           pk.field_a = new vh(0L, ri.field_P);
-          wk.field_N = new vh(0L, lf.field_d, wi.field_b);
-          pp.field_c = new vh(0L, f.field_e, mb.field_d);
-          ac.field_p = new vh(0L, f.field_e, a.field_c);
-          mm.field_g = new vh(0L, f.field_e, ol.field_b);
-          mn.field_e = new vh(0L, f.field_e, n.field_T);
-          l.field_f = new vh(0L, sd.field_Q, ml.field_f);
+          wk.field_N = new vh(0L, lf.field_d, wi.muGamelistStatus);
+          pp.field_c = new vh(0L, f.field_e, mb.muGamelistOwner);
+          KillerBallSkin.field_p = new vh(0L, f.field_e, a.muGamelistPlayers);
+          mm.field_g = new vh(0L, f.field_e, ol.muGamelistAvgRating);
+          mn.field_e = new vh(0L, f.field_e, n.muGamelistOptions);
+          l.field_f = new vh(0L, sd.field_Q, ml.muGamelistElapsedTime);
           BufferedSocket.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
-          field_f = new vh(0L, mg.field_c, fc.field_a.toUpperCase());
+          field_f = new vh(0L, mg.field_c, fc.muPlayRated.toUpperCase());
           field_f.field_pb = tq.field_p;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
@@ -324,11 +324,11 @@ final class rn implements Runnable {
           if (tq.field_p) {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
-            stackIn_9_4 = lh.field_e;
+            stackIn_9_4 = lh.muCreateUnrated;
           } else {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
-            stackIn_9_4 = ch.field_L;
+            stackIn_9_4 = ch.newgame;
           }
           uc.field_b = new vh(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           oi.field_n = new vh(0L, (vh) null);
@@ -336,7 +336,7 @@ final class rn implements Runnable {
           oi.field_n.a(-93, pk.field_a);
           pk.field_a.a(78, wk.field_N);
           pk.field_a.a(-106, pp.field_c);
-          pk.field_a.a(19, ac.field_p);
+          pk.field_a.a(19, KillerBallSkin.field_p);
           if (tq.field_p) {
             pk.field_a.a(119, mm.field_g);
           }
@@ -350,7 +350,7 @@ final class rn implements Runnable {
           t.field_b = new vh(0L, uo.field_Lb);
           t.field_b.field_Fb = 1;
           t.field_b.field_cb = 0;
-          sb.field_a = new vh(0L, rp.field_d, wn.field_c.toUpperCase());
+          sb.field_a = new vh(0L, rp.field_d, wn.ok.toUpperCase());
           ln.field_q = new vh(0L, tq.field_m);
           ln.field_q.a(52, t.field_b);
           ln.field_q.a(-124, sb.field_a);
@@ -362,8 +362,8 @@ final class rn implements Runnable {
           cl.field_d = new vh(0L, (vh) null);
           nd.field_c = new vh(0L, uo.field_Lb);
           nd.field_c.field_Fb = 1;
-          br.field_M = new vh(0L, lf.field_d, jh.field_g);
-          jh.field_a = new vh(0L, sd.field_Q, wi.field_c);
+          br.field_M = new vh(0L, lf.field_d, jh.muLobbyName);
+          jh.field_a = new vh(0L, sd.field_Q, wi.muLobbyRating);
           DualLinkDeque.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
           cl.field_d.a(-119, nd.field_c);
           cl.field_d.a(-104, br.field_M);
@@ -371,42 +371,42 @@ final class rn implements Runnable {
             cl.field_d.a(9, jh.field_a);
           }
           cl.field_d.a(-109, DualLinkDeque.field_f);
-          ok.field_ob = new vh(0L, tg.field_d, dk.field_g.toUpperCase());
+          ok.field_ob = new vh(0L, tg.field_d, dk.returntolobby.toUpperCase());
           ii.field_e = new vh(0L, rl.field_d);
           rq.field_x = new vh(0L, ri.field_P);
-          oi.field_q = new vh(0L, bh.field_b, gr.field_D.toUpperCase());
+          oi.field_q = new vh(0L, bh.field_b, gr.muOptions.toUpperCase());
           oi.field_v = new vh[4 + param3];
-          mc.field_f = new uo[param3 + 4][];
-          oi.field_v[0] = new vh(0L, GameApplet.field_a, fr.field_q);
-          mc.field_f[0] = new uo[6];
+          FreePlayRules.field_f = new uo[param3 + 4][];
+          oi.field_v[0] = new vh(0L, GameApplet.field_a, fr.muOptionsWhocanjoin);
+          FreePlayRules.field_f[0] = new uo[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            mc.field_f[0][1 + var17_int] = new uo(0L, ef.field_c, (vh) null, ei.field_A, uk.field_i[var17_int], pn.field_i[var17_int]);
+            FreePlayRules.field_f[0][1 + var17_int] = new uo(0L, ef.field_c, (vh) null, ei.field_A, uk.field_i[var17_int], pn.field_i[var17_int]);
           }
           if (dg.field_T.length >= 2) {
-            oi.field_v[1] = new vh(0L, GameApplet.field_a, ab.field_h);
+            oi.field_v[1] = new vh(0L, GameApplet.field_a, ab.muOptionsPlayers);
             array$0 = new uo[dg.field_T.length + 1];
-            mc.field_f[1] = array$0;
-            mc.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
+            FreePlayRules.field_f[1] = array$0;
+            FreePlayRules.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind);
             for (var17_intLifetime1 = 0; dg.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
-              mc.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
+              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
             }
           }
-          oi.field_v[2] = new vh(0L, GameApplet.field_a, ve.field_o);
-          mc.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.field_g), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.field_f)};
+          oi.field_v[2] = new vh(0L, GameApplet.field_a, ve.muOptionsAllowSpectate);
+          FreePlayRules.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.no), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.yes)};
           if (1 < ji.field_g) {
-            oi.field_v[3] = new vh(0L, GameApplet.field_a, pk.field_c);
+            oi.field_v[3] = new vh(0L, GameApplet.field_a, pk.muOptionsRatedgametype);
             array$1 = new uo[1 + ji.field_g];
-            mc.field_f[3] = array$1;
-            mc.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
+            FreePlayRules.field_f[3] = array$1;
+            FreePlayRules.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ji.field_g; var17_intLifetime2++) {
-              mc.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
+              FreePlayRules.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
             oi.field_v[var17_intLifetime3 + 4] = new vh(0L, GameApplet.field_a, ck.field_R[var17_intLifetime3]);
             array$2 = new uo[rb.b(255, (int) gr.field_E[var17_intLifetime3]) + 1];
-            mc.field_f[4 + var17_intLifetime3] = array$2;
-            mc.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
+            FreePlayRules.field_f[4 + var17_intLifetime3] = array$2;
+            FreePlayRules.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind);
             for (var18 = 0; var18 < (255 & gr.field_E[var17_intLifetime3]); var18++) {
               if (null == jl.field_d) {
                 var19_ref = null;
@@ -426,18 +426,18 @@ final class rn implements Runnable {
               } else {
                 var20 = null;
               }
-              mc.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) (var19_ref), (String) (var20));
+              FreePlayRules.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param3 > var17_intLifetime4; var17_intLifetime4++) {
             if (oi.field_v[var17_intLifetime4] != null) {
               oi.field_v[var17_intLifetime4].field_M = 11;
             }
-            if (null != mc.field_f[var17_intLifetime4]) {
-              for (var18Lifetime1 = 0; mc.field_f[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
-                if (mc.field_f[var17_intLifetime4][var18Lifetime1] != null &&
-                  mc.field_f[var17_intLifetime4][var18Lifetime1].field_Pb != null) {
-                  mc.field_f[var17_intLifetime4][var18Lifetime1].field_Pb.field_M = 11;
+            if (null != FreePlayRules.field_f[var17_intLifetime4]) {
+              for (var18Lifetime1 = 0; FreePlayRules.field_f[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
+                if (FreePlayRules.field_f[var17_intLifetime4][var18Lifetime1] != null &&
+                  FreePlayRules.field_f[var17_intLifetime4][var18Lifetime1].field_Pb != null) {
+                  FreePlayRules.field_f[var17_intLifetime4][var18Lifetime1].field_Pb.field_M = 11;
                 }
               }
             }
@@ -458,9 +458,9 @@ final class rn implements Runnable {
               !(dg.field_T.length < 2)) && (3 != var18Lifetime2 ||
               !(1 >= ji.field_g))) {
               rq.field_x.a(92, oi.field_v[var18Lifetime2]);
-              for (var19 = 0; mc.field_f[var18Lifetime2].length > var19; var19++) {
-                if (mc.field_f[var18Lifetime2][var19] != null) {
-                  rq.field_x.a(37, mc.field_f[var18Lifetime2][var19]);
+              for (var19 = 0; FreePlayRules.field_f[var18Lifetime2].length > var19; var19++) {
+                if (FreePlayRules.field_f[var18Lifetime2][var19] != null) {
+                  rq.field_x.a(37, FreePlayRules.field_f[var18Lifetime2][var19]);
                 }
               }
             }
@@ -468,8 +468,8 @@ final class rn implements Runnable {
           uq.field_f.a(-120, kc.field_b);
           uq.field_f.a(-117, d.field_c);
           uq.field_f.a(-121, gi.field_o);
-          Pool.field_P = new vh(0L, dg.field_J, v.field_d.toUpperCase());
-          ba.field_vb = new vh(0L, rp.field_d, th.field_f.toUpperCase());
+          Pool.field_P = new vh(0L, dg.field_J, v.muInvitePlayers.toUpperCase());
+          ba.field_vb = new vh(0L, rp.field_d, th.close.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -616,11 +616,11 @@ final class rn implements Runnable {
 
     public static void b(int param0) {
         if (param0 != 10) {
-          field_a = (String[]) null;
+          instructionsTitles = (String[]) null;
         }
-        field_a = null;
+        instructionsTitles = null;
         field_g = null;
-        field_h = null;
+        mpXWantstodraw = null;
         field_f = null;
     }
 
@@ -644,7 +644,7 @@ final class rn implements Runnable {
     }
 
     static {
-        field_a = new String[]{"Eight-ball Pool: Basics", "Eight-ball Pool: What is a Foul?", "Eight-ball Pool: Fouls", "Nine-ball Pool: Basics", "Time Trial Pool", "Killer Pool", "Controls: Camera", "Controls: Shot Mode", "Tips", "Glossary"};
-        field_h = "<%0> wants to draw.";
+        instructionsTitles = new String[]{"Eight-ball Pool: Basics", "Eight-ball Pool: What is a Foul?", "Eight-ball Pool: Fouls", "Nine-ball Pool: Basics", "Time Trial Pool", "Killer Pool", "Controls: Camera", "Controls: Shot Mode", "Tips", "Glossary"};
+        mpXWantstodraw = "<%0> wants to draw.";
     }
 }

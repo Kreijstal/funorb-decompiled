@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cf {
-    static String field_c;
+    static String loadingExtradata;
     private IterableNodeHashTable field_e;
-    static String field_j;
-    static String field_i;
+    static String fsAcceptCountdownPl;
+    static String tutorialNineBallBreak;
     static int field_b;
     static int[] field_g;
     private di field_d;
@@ -37,7 +37,7 @@ final class cf {
           }
           var6 = this.field_h.a(var5_int, param1 ^ 18, param3);
           if (param1 != 18) {
-            field_j = (String) null;
+            fsAcceptCountdownPl = (String) null;
           }
           if (var6 >= 0) {
             stackIn_9_0 = this.a(true, var5_int, var6, param2);
@@ -77,14 +77,14 @@ final class cf {
         if (param0 != 28746) {
           field_g = (int[]) null;
         }
-        field_i = null;
-        field_c = null;
-        field_j = null;
+        tutorialNineBallBreak = null;
+        loadingExtradata = null;
+        fsAcceptCountdownPl = null;
         field_a = null;
     }
 
     final static void a(int param0, di param1) {
-        oo var10 = null;
+        TableScene var10 = null;
         IndexedSprite var11 = null;
         int[] var25 = null;
         int[] var23 = null;
@@ -136,8 +136,8 @@ final class cf {
             var10 = nn.field_b[var2_int];
             var10.c(-23569, param1);
           }
-          for (var2_intLifetime1 = 0; al.field_B.length > var2_intLifetime1; var2_intLifetime1++) {
-            al.field_B[var2_intLifetime1].a(198123656, param1);
+          for (var2_intLifetime1 = 0; PoolGameModel.field_B.length > var2_intLifetime1; var2_intLifetime1++) {
+            PoolGameModel.field_B[var2_intLifetime1].a(198123656, param1);
           }
           uk.field_b = new Sprite[]{pf.a("", (byte) 46, "menu_background_modern", param1), pf.a("", (byte) 42, "menu_background_plasma", param1), pf.a("", (byte) 62, "menu_background_jungle", param1), pf.a("", (byte) 40, "menu_background_polar", param1), pf.a("", (byte) 76, "menu_background_shuttle", param1)};
           uj.field_c = pf.a("", (byte) 124, "select_table_thumbnail_modern", param1);
@@ -218,7 +218,7 @@ final class cf {
           var11.a();
           var11.field_i = var5;
           dupTemp$3 = ii.a(2, var11);
-          bf.field_h = dupTemp$3;
+          CushionSegment.field_h = dupTemp$3;
           var17 = dupTemp$3;
           var8Lifetime3 = var17;
           var8Lifetime3.field_G = 0;
@@ -244,7 +244,7 @@ final class cf {
           var8Lifetime5.field_G = 0;
           var8Lifetime5.field_w = var19.field_z;
           var2_intLifetime3 = 0;
-          var3 = ep.a(106, param1, "titles", "");
+          var3 = NetworkGameClient.a(106, param1, "titles", "");
           incrementValue$6 = var2_intLifetime3;
           var2_intLifetime3++;
           mq.field_a = var3[incrementValue$6];
@@ -268,7 +268,7 @@ final class cf {
           lk.field_w = var3[incrementValue$12];
           incrementValue$13 = var2_intLifetime3;
           var2_intLifetime3++;
-          mc.field_k = var3[incrementValue$13];
+          FreePlayRules.field_k = var3[incrementValue$13];
           incrementValue$14 = var2_intLifetime3;
           var2_intLifetime3++;
           lq.field_Q = var3[incrementValue$14];
@@ -276,17 +276,17 @@ final class cf {
           v.field_c = pf.a("", (byte) 94, "side_power_bar_fill", param1);
           bq.field_n = pf.a("", (byte) 102, "top_bar_inner", param1);
           no.field_q = pf.a("", (byte) 115, "top_bar", param1);
-          mf.field_n = pf.a("", (byte) 80, "top_bar_ball_open", param1);
-          hm.field_l = aj.a(0, "", param1, "hud_chat_tab_frame_empty");
+          ClassicBallSkin.field_n = pf.a("", (byte) 80, "top_bar_ball_open", param1);
+          Quaternion.field_l = aj.a(0, "", param1, "hud_chat_tab_frame_empty");
           lb.field_O = aj.a(0, "", param1, "hud_chat_tab_frame");
           dr.field_d = pf.a("", (byte) 95, "hud_chat_star", param1);
-          var2_intLifetime4 = sa.field_h.b(ua.field_n);
+          var2_intLifetime4 = sa.field_h.b(ua.chatButton);
           ta.field_e = new Sprite(var2_intLifetime4, sa.field_h.maxAscent + sa.field_h.maxDescent + 1);
           ta.field_e.e();
-          sa.field_h.d(ua.field_n, 0, sa.field_h.maxAscent, 16777215, 1);
+          sa.field_h.d(ua.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
           jh.field_e = new Sprite(dr.field_d.field_z + ta.field_e.field_z + 2, ta.field_e.field_A);
           jh.field_e.e();
-          sa.field_h.d(ua.field_n, 0, sa.field_h.maxAscent, 16777215, 1);
+          sa.field_h.d(ua.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
           dr.field_d.c(2 + var2_intLifetime4, jh.field_e.field_A - dr.field_d.field_A >> 1);
           sh.field_P.b(15100);
           wp.field_a = pf.a("", (byte) 60, "slider", param1);
@@ -299,7 +299,7 @@ final class cf {
           il.field_a = pf.a("", (byte) 73, "icon_ball_in_hand", param1);
           pf.a("", (byte) 98, "icon_extra_shot", param1);
           gd.field_e = pf.a("", (byte) 101, "icon_extra_visit", param1);
-          oo.field_D = pf.a("", (byte) 90, "icon_snookered", param1);
+          TableScene.field_D = pf.a("", (byte) 90, "icon_snookered", param1);
           sb.field_c = new Sprite[4];
           sb.field_c[0] = pf.a("", (byte) 108, "menu_eightball", param1);
           sb.field_c[1] = pf.a("", (byte) 107, "menu_nineball", param1);
@@ -576,7 +576,7 @@ final class cf {
           return;
         }
         if (param0 >= -77) {
-          field_i = (String) null;
+          tutorialNineBallBreak = (String) null;
         }
         if (0L == param1 % 10L) {
           uq.a(param1 - 1L, (byte) 104);
@@ -624,9 +624,9 @@ final class cf {
     }
 
     final static int[] a(int param0, boolean param1, int param2) {
-        int var3 = af.c((byte) -123, param2);
+        int var3 = EightBallRules.c((byte) -123, param2);
         int var4 = o.a(param2, (byte) -116);
-        int var5 = af.c((byte) -124, param0);
+        int var5 = EightBallRules.c((byte) -124, param0);
         int var6 = o.a(param0, (byte) -89);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         if (param1) {
@@ -685,9 +685,9 @@ final class cf {
     }
 
     static {
-        field_c = "Loading extra data";
-        field_i = "Now let's \"break\": Shoot the cue ball at the rack (the triangle of balls) now. Aim for the 1 ball.";
-        field_j = "If you do nothing the game will revert to normal view in <%0> seconds.";
+        loadingExtradata = "Loading extra data";
+        tutorialNineBallBreak = "Now let's \"break\": Shoot the cue ball at the rack (the triangle of balls) now. Aim for the 1 ball.";
+        fsAcceptCountdownPl = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_g = new int[64];
     }
 }

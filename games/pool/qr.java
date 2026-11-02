@@ -74,7 +74,7 @@ final class qr {
             var2 = 0;
           }
         } else {
-          if (fk.field_gb == null) {
+          if (PlasmaTableScene.field_gb == null) {
             ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);
             if (null != ne.field_u) {
               var2 = 2;
@@ -83,7 +83,7 @@ final class qr {
               var2 = 3;
             }
           } else {
-            ne.field_u = fk.field_gb.b(-71);
+            ne.field_u = PlasmaTableScene.field_gb.b(-71);
             ab.a(25692, 2);
             if (null != ne.field_u) {
               var2 = 2;
@@ -93,7 +93,7 @@ final class qr {
             }
           }
         }
-        if (fk.field_gb == null &&
+        if (PlasmaTableScene.field_gb == null &&
           fe.field_J) {
           kk.a(param1, 4, var2);
         }

@@ -3,24 +3,24 @@
  */
 final class ah {
     static int[] field_c;
-    static String field_b;
+    static String mpXHasresigned;
     static int field_i;
     int field_d;
-    static String field_g;
+    static String gameoptUnselectedoptions;
     int field_f;
-    static String field_h;
+    static String tickerHintEnterShotMode;
     int field_a;
     static so[] field_e;
     int field_j;
 
     public static void a(boolean param0) {
-        field_g = null;
+        gameoptUnselectedoptions = null;
         field_e = null;
         field_c = null;
-        field_h = null;
-        field_b = null;
+        tickerHintEnterShotMode = null;
+        mpXHasresigned = null;
         if (param0) {
-          field_g = (String) null;
+          gameoptUnselectedoptions = (String) null;
         }
     }
 
@@ -39,8 +39,8 @@ final class ah {
     }
 
     static {
-        field_g = "The game options are not all set.";
-        field_b = "<%0> has resigned.";
-        field_h = "Press <img=4> or <img=0> click on the cue ball to enter shot mode.";
+        gameoptUnselectedoptions = "The game options are not all set.";
+        mpXHasresigned = "<%0> has resigned.";
+        tickerHintEnterShotMode = "Press <img=4> or <img=0> click on the cue ball to enter shot mode.";
     }
 }

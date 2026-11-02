@@ -5,7 +5,7 @@ final class cm extends ob {
     static String field_J;
     static java.awt.Color field_H;
     static String field_K;
-    static String field_I;
+    static String errorJs5io;
     static String[] field_L;
 
     final int b(byte param0, int param1) {
@@ -129,7 +129,7 @@ final class cm extends ob {
         Sprite var5 = null;
         var4 = Pool.field_O;
         try {
-          if (cr.field_m != null) {
+          if (PotEvent.field_m != null) {
             return true;
           }
           if (!hr.field_q.a("benefits", 0)) {
@@ -138,10 +138,10 @@ final class cm extends ob {
           if (!rl.field_h.a("benefits/", 0)) {
             return false;
           }
-          cr.field_m = lb.a(hr.field_q, param0 - 29, "benefits", "members_benefits_borders");
-          for (var1_int = 0; var1_int < cr.field_m.field_D.length; var1_int++) {
-            if (0 == (-16777216 & cr.field_m.field_D[var1_int])) {
-              cr.field_m.field_D[var1_int] = 0;
+          PotEvent.field_m = lb.a(hr.field_q, param0 - 29, "benefits", "members_benefits_borders");
+          for (var1_int = 0; var1_int < PotEvent.field_m.field_D.length; var1_int++) {
+            if (0 == (-16777216 & PotEvent.field_m.field_D[var1_int])) {
+              PotEvent.field_m.field_D[var1_int] = 0;
             }
           }
           rf.field_g = pf.a("benefits", (byte) 118, "members_benefits_logo", hr.field_q);
@@ -158,7 +158,7 @@ final class cm extends ob {
             return true;
           }
           sh.field_P.b(15100);
-          ef.a(-2107, cr.field_m, wm.field_Yb);
+          ef.a(-2107, PotEvent.field_m, wm.textGameName);
           bq.a(40, qp.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
           GameApplet.a(dn.field_o, -58);
           hl.a(rf.field_g, 106);
@@ -173,7 +173,7 @@ final class cm extends ob {
     final int a(byte param0, int param1) {
         vh var3 = nm.field_a.a((long)this.field_h[param1], (byte) 31);
         if (param0 != 69) {
-          field_I = (String) null;
+          errorJs5io = (String) null;
         }
         if (var3 == null) {
           return 36;
@@ -192,7 +192,7 @@ final class cm extends ob {
               if (this.field_B.b((byte) 89) &&
                 fr.field_n < 8) {
                 fr.field_n = fr.field_n + 1;
-                rj.c((byte) -45);
+                KillerRules.c((byte) -45);
               }
             } else {
               if (27 != var4) {
@@ -238,12 +238,12 @@ final class cm extends ob {
             if (this.field_B.b((byte) 59) &&
               2 < fr.field_n) {
               fr.field_n = fr.field_n - 1;
-              rj.c((byte) -45);
+              KillerRules.c((byte) -45);
             }
           }
         } else {
           if (this.field_B.b((byte) 64) &&
-            dl.a(0)) {
+            Pocket.a(0)) {
             this.c(param0 ^ -16474, param1);
           }
         }
@@ -268,12 +268,12 @@ final class cm extends ob {
         IterableNodeHashTable.field_e.field_Kb = ln.field_s;
         nm.field_a.a(-114, IterableNodeHashTable.field_e);
         vh dupTemp$0 = u.a((byte) 68, 10, 55, false, 28);
-        cj.field_V = dupTemp$0;
+        TikiTableScene.field_V = dupTemp$0;
         IterableNodeHashTable.field_e.a(-102, dupTemp$0);
         vh dupTemp$1 = u.a((byte) 120, 210, 55, true, 27);
         we.field_f = dupTemp$1;
         IterableNodeHashTable.field_e.a(122, dupTemp$1);
-        va.a(false, IterableNodeHashTable.field_e, cj.field_V);
+        va.a(false, IterableNodeHashTable.field_e, TikiTableScene.field_V);
         va.a(false, IterableNodeHashTable.field_e, we.field_f);
         jq.field_f = new vh(-1L, (vh) null, 0, 0, 160, 150, (String) null);
         jq.field_f.field_Fb = 1;
@@ -281,35 +281,35 @@ final class cm extends ob {
         jq.field_f.field_F = mp.field_N;
         IterableNodeHashTable.field_e.a(-116, jq.field_f);
         this.g(4);
-        al.field_v = new vh(-1L, (vh) null, 290, IterableNodeHashTable.field_e.field_eb, 270, 60, (String) null);
-        al.field_v.field_hb = dq.a(4, 0, ab.field_h);
-        al.field_v.field_hb.field_G = 10;
-        al.field_v.field_F = rm.field_g;
-        dk.a(al.field_v, (byte) 93);
-        qk.field_f = new vh(-1L, (vh) null, 130, 10, 100, 40, (String) null);
-        qk.field_f.field_cb = 1;
-        qk.field_f.field_Fb = 1;
-        qk.field_f.field_F = mp.field_N;
-        al.field_v.a(-106, qk.field_f);
-        va.a(false, al.field_v, qk.field_f);
+        PoolGameModel.field_v = new vh(-1L, (vh) null, 290, IterableNodeHashTable.field_e.field_eb, 270, 60, (String) null);
+        PoolGameModel.field_v.field_hb = dq.a(4, 0, ab.muOptionsPlayers);
+        PoolGameModel.field_v.field_hb.field_G = 10;
+        PoolGameModel.field_v.field_F = rm.field_g;
+        dk.a(PoolGameModel.field_v, (byte) 93);
+        PoolUiText.field_f = new vh(-1L, (vh) null, 130, 10, 100, 40, (String) null);
+        PoolUiText.field_f.field_cb = 1;
+        PoolUiText.field_f.field_Fb = 1;
+        PoolUiText.field_f.field_F = mp.field_N;
+        PoolGameModel.field_v.a(-106, PoolUiText.field_f);
+        va.a(false, PoolGameModel.field_v, PoolUiText.field_f);
         vh dupTemp$2 = u.a((byte) 67, 100, 10, false, 64);
         tn.field_w = dupTemp$2;
-        al.field_v.a(114, dupTemp$2);
+        PoolGameModel.field_v.a(114, dupTemp$2);
         vh dupTemp$3 = u.a((byte) 112, 235, 10, true, 63);
         ih.field_e = dupTemp$3;
-        al.field_v.a(33, dupTemp$3);
-        va.a(false, al.field_v, tn.field_w);
-        va.a(false, al.field_v, ih.field_e);
-        rj.c((byte) -45);
-        nm.field_a.a(-111, al.field_v);
-        hg.field_c = new vh(0L, (vh) null, al.field_v.field_qb, al.field_v.field_eb - (-al.field_v.field_Db - 10), al.field_v.field_gb, al.field_v.field_Db, (String) null);
+        PoolGameModel.field_v.a(33, dupTemp$3);
+        va.a(false, PoolGameModel.field_v, tn.field_w);
+        va.a(false, PoolGameModel.field_v, ih.field_e);
+        KillerRules.c((byte) -45);
+        nm.field_a.a(-111, PoolGameModel.field_v);
+        hg.field_c = new vh(0L, (vh) null, PoolGameModel.field_v.field_qb, PoolGameModel.field_v.field_eb - (-PoolGameModel.field_v.field_Db - 10), PoolGameModel.field_v.field_gb, PoolGameModel.field_v.field_Db, (String) null);
         hg.field_c.field_Fb = 0;
         hg.field_c.field_F = rm.field_g;
-        hg.field_c.field_hb = dq.a(4, 0, bf.field_e);
-        hg.field_c.field_hb.field_G = al.field_v.field_hb.field_G;
+        hg.field_c.field_hb = dq.a(4, 0, CushionSegment.timer);
+        hg.field_c.field_hb.field_G = PoolGameModel.field_v.field_hb.field_G;
         dk.a(hg.field_c, (byte) 93);
         nm.field_a.a(-99, hg.field_c);
-        db.field_Nb = new vh(-1L, (vh) null, qk.field_f.field_qb, qk.field_f.field_eb, qk.field_f.field_gb, qk.field_f.field_Db, (String) null);
+        db.field_Nb = new vh(-1L, (vh) null, PoolUiText.field_f.field_qb, PoolUiText.field_f.field_eb, PoolUiText.field_f.field_gb, PoolUiText.field_f.field_Db, (String) null);
         db.field_Nb.field_Fb = 1;
         db.field_Nb.field_F = mp.field_N;
         db.field_Nb.field_cb = 1;
@@ -323,16 +323,16 @@ final class cm extends ob {
         va.a(false, hg.field_c, tk.field_f);
         va.a(false, hg.field_c, kb.field_i);
         kn.c(13);
-        kk.field_x = new vh(46L, (vh) null, al.field_v.field_qb, hg.field_c.field_eb + hg.field_c.field_Db + 10, al.field_v.field_gb, al.field_v.field_Db, (String) null);
+        kk.field_x = new vh(46L, (vh) null, PoolGameModel.field_v.field_qb, hg.field_c.field_eb + hg.field_c.field_Db + 10, PoolGameModel.field_v.field_gb, PoolGameModel.field_v.field_Db, (String) null);
         kk.field_x.field_F = rm.field_g;
         kk.field_x.field_Fb = 0;
         kk.field_x.field_Kb = ln.field_s;
-        kk.field_x.field_hb = dq.a(4, 0, s.field_d[3]);
-        kk.field_x.field_yb = dq.a(3, 0, s.field_d[3]);
-        kk.field_x.field_hb.field_G = al.field_v.field_hb.field_G;
-        kk.field_x.field_yb.field_G = al.field_v.field_hb.field_G;
+        kk.field_x.field_hb = dq.a(4, 0, s.gameoptlabels[3]);
+        kk.field_x.field_yb = dq.a(3, 0, s.gameoptlabels[3]);
+        kk.field_x.field_hb.field_G = PoolGameModel.field_v.field_hb.field_G;
+        kk.field_x.field_yb.field_G = PoolGameModel.field_v.field_hb.field_G;
         dk.a(kk.field_x, (byte) 93);
-        dp.field_c = new vh(-1L, (vh) null, qk.field_f.field_qb, qk.field_f.field_eb, qk.field_f.field_gb, qk.field_f.field_Db, (String) null);
+        dp.field_c = new vh(-1L, (vh) null, PoolUiText.field_f.field_qb, PoolUiText.field_f.field_eb, PoolUiText.field_f.field_gb, PoolUiText.field_f.field_Db, (String) null);
         dp.field_c.field_Fb = 1;
         dp.field_c.field_F = mp.field_N;
         dp.field_c.field_cb = 1;
@@ -352,11 +352,11 @@ final class cm extends ob {
         if (65 != this.field_h[param0]) {
           return true;
         }
-        return dl.a(0);
+        return Pocket.a(0);
     }
 
     private final void g(int param0) {
-        IterableNodeHashTable.field_e.field_hb = dq.a(param0, 0, im.field_ic[er.field_W]);
+        IterableNodeHashTable.field_e.field_hb = dq.a(param0, 0, im.rulesetNames[er.field_W]);
         jq.field_f.field_hb = sb.field_c[er.field_W];
         dp.a(IterableNodeHashTable.field_e, jq.field_f, -89);
     }
@@ -380,7 +380,7 @@ final class cm extends ob {
     public static void g(byte param0) {
         field_K = null;
         field_H = null;
-        field_I = null;
+        errorJs5io = null;
         field_J = null;
         if (param0 != 74) {
           field_J = (String) null;
@@ -447,7 +447,7 @@ final class cm extends ob {
     final void a(int param0, int param1, boolean param2) {
         super.a(param0, param1, param2);
         mb.d(param0 ^ -107);
-        rj.c((byte) -45);
+        KillerRules.c((byte) -45);
         this.g(4);
         kn.c(13);
     }
@@ -464,7 +464,7 @@ final class cm extends ob {
     }
 
     final static void f(int param0) {
-        bj var1 = (bj) (tm.field_i.c((byte) -105));
+        bj var1 = (bj) (BallSkin.field_i.c((byte) -105));
         int var2 = -46 / ((-18 - param0) / 38);
         if (var1 == null) {
           dn.c(-127);
@@ -488,7 +488,7 @@ final class cm extends ob {
     }
 
     static {
-        field_I = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
+        errorJs5io = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_K = null;
         field_H = new java.awt.Color(10040319);
     }

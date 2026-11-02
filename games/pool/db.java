@@ -406,7 +406,7 @@ final class db extends vh {
 
     final static void a(int param0, boolean param1) {
         if (param0 == 27194) {
-          na.field_e = !param1 ? new vn(mm.field_l, cl.field_d) : new vn(je.field_b, v.field_j);
+          na.field_e = !param1 ? new vn(mm.muChatGame, cl.field_d) : new vn(je.muChatTips, v.field_j);
           so.field_k = new vh(0L, (vh) null);
           so.field_k.a(64, na.field_e.field_i);
           so.field_k.a(-96, ok.field_ob);
@@ -416,11 +416,11 @@ final class db extends vh {
           de.field_b.a(68, aa.field_b);
           aa.field_b.a(-96, c.field_e);
           aa.field_b.a(90, ba.field_vb);
-          al.a(param1, 0);
+          PoolGameModel.a(param1, 0);
           return;
         }
         db.f((byte) 19);
-        na.field_e = !param1 ? new vn(mm.field_l, cl.field_d) : new vn(je.field_b, v.field_j);
+        na.field_e = !param1 ? new vn(mm.muChatGame, cl.field_d) : new vn(je.muChatTips, v.field_j);
         so.field_k = new vh(0L, (vh) null);
         so.field_k.a(64, na.field_e.field_i);
         so.field_k.a(-96, ok.field_ob);
@@ -430,7 +430,7 @@ final class db extends vh {
         de.field_b.a(68, aa.field_b);
         aa.field_b.a(-96, c.field_e);
         aa.field_b.a(90, ba.field_vb);
-        al.a(param1, 0);
+        PoolGameModel.a(param1, 0);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

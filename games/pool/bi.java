@@ -5,7 +5,7 @@ final class bi {
     static Sprite field_a;
     static int[] field_d;
     static BitmapFont field_e;
-    static String field_c;
+    static String showPlayersInXsGame;
     static boolean field_f;
     static String[] field_b;
 
@@ -102,12 +102,12 @@ final class bi {
         }
         field_e = null;
         field_a = null;
-        field_c = null;
+        showPlayersInXsGame = null;
         field_b = null;
         field_d = null;
     }
 
     static {
-        field_c = "Show players in <%0>'s game";
+        showPlayersInXsGame = "Show players in <%0>'s game";
     }
 }

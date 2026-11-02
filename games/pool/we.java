@@ -4,9 +4,9 @@
 final class we {
     String field_a;
     int field_n;
-    static char field_d;
+    static char keycharTheCharacterUnderQuestionmark;
     static volatile int field_l;
-    static String field_j;
+    static String offline;
     String field_i;
     static IntrusiveDeque field_c;
     String field_b;
@@ -23,7 +23,7 @@ final class we {
         field_g = null;
         field_c = null;
         field_f = null;
-        field_j = null;
+        offline = null;
         if (param0 > -78) {
           we.a((byte) -76);
         }
@@ -34,9 +34,9 @@ final class we {
     }
 
     static {
-        field_d = '/';
+        keycharTheCharacterUnderQuestionmark = '/';
         field_l = -1;
-        field_j = "Offline";
+        offline = "Offline";
         field_c = new IntrusiveDeque();
     }
 }

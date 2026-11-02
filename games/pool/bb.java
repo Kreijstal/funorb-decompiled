@@ -9,7 +9,7 @@ abstract class bb {
     int field_d;
     static vh field_c;
     int field_h;
-    static String field_a;
+    static String year;
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
@@ -83,7 +83,7 @@ abstract class bb {
               return;
             }
             for (var11 = param2; var11 < param1; var11++) {
-              var12 = ep.field_H[var11];
+              var12 = NetworkGameClient.field_H[var11];
               if (param6) {
                 stackIn_27_0 = kb.field_g[var12];
               } else {
@@ -95,10 +95,10 @@ abstract class bb {
                   var10 = var13;
                 }
               } else {
-                ep.field_H[var11] = ep.field_H[var8];
+                NetworkGameClient.field_H[var11] = NetworkGameClient.field_H[var8];
                 incrementValue$0 = var8;
                 var8++;
-                ep.field_H[incrementValue$0] = var12;
+                NetworkGameClient.field_H[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -110,11 +110,11 @@ abstract class bb {
           }
           for (var7_intLifetime1 = param1 - 1; var7_intLifetime1 > param2; var7_intLifetime1--) {
             for (var8Lifetime1 = param2; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = ep.field_H[var8Lifetime1];
-              var10Lifetime1 = ep.field_H[var8Lifetime1 + 1];
+              var9Lifetime1 = NetworkGameClient.field_H[var8Lifetime1];
+              var10Lifetime1 = NetworkGameClient.field_H[var8Lifetime1 + 1];
               if (he.a(var9Lifetime1, param6, var10Lifetime1, 0)) {
-                ep.field_H[var8Lifetime1] = var10Lifetime1;
-                ep.field_H[var8Lifetime1 + 1] = var9Lifetime1;
+                NetworkGameClient.field_H[var8Lifetime1] = var10Lifetime1;
+                NetworkGameClient.field_H[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -139,7 +139,7 @@ abstract class bb {
         if (param0 >= -43) {
           bb.a((byte) 122);
         }
-        field_a = null;
+        year = null;
         field_c = null;
     }
 
@@ -151,6 +151,6 @@ abstract class bb {
     }
 
     static {
-        field_a = "Year";
+        year = "Year";
     }
 }

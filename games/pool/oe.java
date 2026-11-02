@@ -3,24 +3,24 @@
  */
 abstract class oe extends ch {
     private int field_P;
-    static String field_S;
+    static String ballsetPlasmaGroup1Nocolour;
     boolean field_R;
     static int field_V;
     static int field_Q;
     static so field_U;
     private lq field_T;
-    static String field_O;
-    static String field_N;
+    static String mustloginNotloggedin;
+    static String createUnable;
 
     public static void h(int param0) {
-        field_N = null;
+        createUnable = null;
         if (param0 != -1) {
           int[] var2 = (int[]) null;
           oe.a(false, (int[]) null);
         }
-        field_O = null;
+        mustloginNotloggedin = null;
         field_U = null;
-        field_S = null;
+        ballsetPlasmaGroup1Nocolour = null;
     }
 
     private final int a(int param0) {
@@ -48,7 +48,7 @@ abstract class oe extends ch {
         int var3;
         boolean stackIn_11_0 = false;
         if (param0 != -20) {
-          field_N = (String) null;
+          createUnable = (String) null;
         }
         var2 = this.a(-69);
         var3 = -this.field_P + var2;
@@ -72,7 +72,7 @@ abstract class oe extends ch {
         return stackIn_6_0;
     }
 
-    final static int a(bf[] param0, int param1, pq[] param2, int[][] param3, int param4) {
+    final static int a(CushionSegment[] param0, int param1, Ball[] param2, int[][] param3, int param4) {
         int stackIn_18_0 = 0;
         int stackIn_41_0 = 0;
         int stackIn_65_0 = 0;
@@ -89,9 +89,9 @@ abstract class oe extends ch {
         int var6 = 0;
         sa var7 = null;
         int var7_int = 0;
-        pq var8 = null;
+        Ball var8 = null;
         int var8_int = 0;
-        pq var9 = null;
+        Ball var9 = null;
         int var10 = 0;
         int var6Lifetime1;
         int var7_intLifetime1;
@@ -101,16 +101,16 @@ abstract class oe extends ch {
         try {
           var5_int = 0;
           for (var6 = param4; var6 < param2.length; var6++) {
-            if (param2[var6].field_s) {
+            if (param2[var6].inPlay) {
               for (var7_int = var6 + 1; var7_int < param2.length; var7_int++) {
-                if (param2[var7_int].field_s && (param2[var6].field_v != 0 ||
-                  0 != param2[var7_int].field_v)) {
-                  var8_int = no.a(param2[var7_int].field_t, param2[var6].field_w, param2[var7_int].field_I, param2[var7_int].field_w, param2[var6].field_I, param2[var7_int].field_k, param2[var6].field_t, param2[var7_int].field_g, 8, param2[var6].field_g, param2[var6].field_k, -1);
+                if (param2[var7_int].inPlay && (param2[var6].motionState != 0 ||
+                  0 != param2[var7_int].motionState)) {
+                  var8_int = no.a(param2[var7_int].velocityY, param2[var6].lastAdvanceTime, param2[var7_int].velocityX, param2[var7_int].lastAdvanceTime, param2[var6].velocityX, param2[var7_int].positionY, param2[var6].velocityY, param2[var7_int].positionX, 8, param2[var6].positionX, param2[var6].positionY, -1);
                   if (param1 < var8_int) {
-                    if (param2[var6].field_w < param2[var7_int].field_w) {
-                      stackIn_18_0 = param2[var7_int].field_w;
+                    if (param2[var6].lastAdvanceTime < param2[var7_int].lastAdvanceTime) {
+                      stackIn_18_0 = param2[var7_int].lastAdvanceTime;
                     } else {
-                      stackIn_18_0 = param2[var6].field_w;
+                      stackIn_18_0 = param2[var6].lastAdvanceTime;
                     }
                     if (stackIn_18_0 <= var8_int) {
                       var5_int = bq.a((byte) -124, var5_int, -1, var7_int, -1, var6, var8_int);
@@ -118,15 +118,15 @@ abstract class oe extends ch {
                   }
                 }
               }
-              if (0 != param2[var6].field_v) {
+              if (0 != param2[var6].motionState) {
                 for (var7_intLifetime1 = 0; var7_intLifetime1 < param0.length; var7_intLifetime1++) {
-                  var8_intLifetime1 = c.a(param2[var6].field_w, param0[var7_intLifetime1].field_f, param2[var6].field_k, param0[var7_intLifetime1].field_j, param2[var6].field_t, param2[var6].field_g, 8, param0[var7_intLifetime1].field_l, (byte) 98, param0[var7_intLifetime1].field_a, param2[var6].field_I);
+                  var8_intLifetime1 = c.a(param2[var6].lastAdvanceTime, param0[var7_intLifetime1].endX, param2[var6].positionY, param0[var7_intLifetime1].startY, param2[var6].velocityY, param2[var6].positionX, 8, param0[var7_intLifetime1].endY, (byte) 98, param0[var7_intLifetime1].startX, param2[var6].velocityX);
                   if (param1 < var8_intLifetime1) {
                     var5_int = bq.a((byte) -128, var5_int, -1, -1, var7_intLifetime1, var6, var8_intLifetime1);
                   }
                 }
                 for (var7_intLifetime1Lifetime1 = 0; var7_intLifetime1Lifetime1 < param3.length; var7_intLifetime1Lifetime1++) {
-                  var8_intLifetime1Lifetime1 = j.a(param2[var6].field_k, param3[var7_intLifetime1Lifetime1][0], param2[var6].field_I, param2[var6].field_t, param2[var6].field_w, 8, param2[var6].field_g, (byte) -121, param3[var7_intLifetime1Lifetime1][1]);
+                  var8_intLifetime1Lifetime1 = j.a(param2[var6].positionY, param3[var7_intLifetime1Lifetime1][0], param2[var6].velocityX, param2[var6].velocityY, param2[var6].lastAdvanceTime, 8, param2[var6].positionX, (byte) -121, param3[var7_intLifetime1Lifetime1][1]);
                   if (var8_intLifetime1Lifetime1 > param1) {
                     var5_int = bq.a((byte) -123, var5_int, var7_intLifetime1Lifetime1, -1, -1, var6, var8_intLifetime1Lifetime1);
                   }
@@ -211,7 +211,7 @@ abstract class oe extends ch {
         if (param1 != 31936) {
           discarded$0 = this.a(87);
         }
-        this.a(param2, -param2 + nk.field_j >> 1, param0, false, md.field_b - param0 >> 1);
+        this.a(param2, -param2 + TranslatedUiText.field_j >> 1, param0, false, md.field_b - param0 >> 1);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -242,7 +242,7 @@ abstract class oe extends ch {
     }
 
     oe(lq param0, int param1, int param2) {
-        super(-param1 + nk.field_j >> 1, -param2 + md.field_b >> 1, param1, param2, (fp) null);
+        super(-param1 + TranslatedUiText.field_j >> 1, -param2 + md.field_b >> 1, param1, param2, (fp) null);
         try {
           this.field_T = param0;
           this.field_P = 0;
@@ -302,9 +302,9 @@ abstract class oe extends ch {
 
     static {
         field_V = 0;
-        field_O = "You are not currently logged in to the game.";
-        field_N = "Unfortunately we are unable to create an account for you at this time.";
-        field_S = "Blues";
+        mustloginNotloggedin = "You are not currently logged in to the game.";
+        createUnable = "Unfortunately we are unable to create an account for you at this time.";
+        ballsetPlasmaGroup1Nocolour = "Blues";
         field_Q = 250;
     }
 }

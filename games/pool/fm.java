@@ -10,7 +10,7 @@ abstract class fm extends ei implements lj {
     static String field_I;
     static int field_M;
     ei[] field_L;
-    static String field_J;
+    static String gameoptPleaseselectoption1;
 
     final boolean a(char param0, int param1, boolean param2, ei param3) {
         int var6 = 0;
@@ -147,7 +147,7 @@ abstract class fm extends ei implements lj {
           return;
         }
         field_G = null;
-        field_J = null;
+        gameoptPleaseselectoption1 = null;
     }
 
     private final ei f(int param0) {
@@ -861,6 +861,6 @@ abstract class fm extends ei implements lj {
 
     static {
         field_H = false;
-        field_J = "Please select an option in the '<%0>' row.";
+        gameoptPleaseselectoption1 = "Please select an option in the '<%0>' row.";
     }
 }

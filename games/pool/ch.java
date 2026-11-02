@@ -6,7 +6,7 @@ import java.util.*;
 class ch extends ei implements lj {
     static hj field_K;
     IntrusiveDeque field_F;
-    static String field_L;
+    static String newgame;
     static int field_G;
     static int[] field_J;
     static int field_H;
@@ -641,7 +641,7 @@ class ch extends ei implements lj {
 
     public static void f(int param0) {
         field_M = null;
-        field_L = null;
+        newgame = null;
         field_K = null;
         field_J = null;
         if (param0 != 2) {
@@ -697,7 +697,7 @@ class ch extends ei implements lj {
     }
 
     static {
-        field_L = "New Game";
+        newgame = "New Game";
         field_K = new hj(13, 0, 1, 0);
         field_J = new int[]{1, 1, 2, 2, 5, 3, 1, 2, 3, 2, 5, 5, 3, 2, 10, 5, 5, 3, 5, 10, 3, 2, 3, 5, 3, 5, 2};
         field_M = new int[8192];

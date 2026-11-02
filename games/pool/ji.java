@@ -99,7 +99,7 @@ final class ji {
               }
               var7 = new np(param3, ih.field_a, ia.field_d[param3], 2097152);
             }
-            var8 = nk.field_m.a(param4, (np) (var7), param3, (byte) 0, (np) (var6));
+            var8 = TranslatedUiText.field_m.a(param4, (np) (var7), param3, (byte) 0, (np) (var6));
             if (param5) {
               var8.b(117);
             }

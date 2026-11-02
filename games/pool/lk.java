@@ -6,20 +6,20 @@ final class lk extends IntrusiveNode {
     int field_l;
     String field_x;
     int field_s;
-    static String field_r;
+    static String tutorialEightBallAftergrouppot;
     static int field_m;
     Sprite field_n;
     static int field_u;
     int field_q;
     static Sprite field_w;
-    static String field_t;
+    static String gameoptMembersonly;
     static boolean field_o;
     int field_p;
 
     public static void a(int param0) {
-        field_r = null;
+        tutorialEightBallAftergrouppot = null;
         field_w = null;
-        field_t = null;
+        gameoptMembersonly = null;
         if (param0 != -24061) {
           field_u = 64;
         }
@@ -42,9 +42,9 @@ final class lk extends IntrusiveNode {
     }
 
     static {
-        field_r = "Now that you have finished potting all of your group's balls, you must pot the black ball (without fouling) to win.";
+        tutorialEightBallAftergrouppot = "Now that you have finished potting all of your group's balls, you must pot the black ball (without fouling) to win.";
         field_u = 0;
-        field_t = "This game option is only available to members.";
+        gameoptMembersonly = "This game option is only available to members.";
         field_o = false;
     }
 }

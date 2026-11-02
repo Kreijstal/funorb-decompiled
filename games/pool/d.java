@@ -137,7 +137,7 @@ final class d {
           if (th.field_a != 2 &&
             th.field_a != 1) {
             cp.field_c.field_pb = false;
-            cp.field_c.field_Sb.field_Sb.field_nb = o.field_A;
+            cp.field_c.field_Sb.field_Sb.field_nb = o.loading;
             mq.a(cp.field_c.field_Mb, (byte) 109);
           } else {
             cp.field_c.field_pb = true;
@@ -197,10 +197,10 @@ final class d {
               }
               if (0 != var6.field_R) {
                 dr.a(var6.field_Zb, -1, 0L, -1, cp.field_c.field_Sb, var6.field_Yb, 32540, var6, (int[]) null);
-                var16 = vl.field_m;
-                var13_ref_String = tp.field_f;
+                var16 = PlasmaBallSkin.field_m;
+                var13_ref_String = tp.muLobbyNameRm;
                 var16.field_n.a(var13_ref_String, 17130, 7);
-                var17 = vl.field_m;
+                var17 = PlasmaBallSkin.field_m;
                 var13 = lq.field_W;
                 var14 = ua.field_o;
                 var17.field_n.c(0, 0, var13, 0, var14);
@@ -209,11 +209,11 @@ final class d {
               var6 = (eo) (var4.f((byte) -5));
             }
             if (0 != cp.field_c.field_Ob.field_R) {
-              sm.field_C = new aj(cp.field_c.field_Ob.field_sb, cp.field_c.field_Ob.field_ib, cp.field_c.field_Ob.field_gb, cp.field_c.field_Ob.field_Db, qf.field_l, wa.field_qb, uo.field_Lb, uo.field_Lb);
+              sm.field_C = new aj(cp.field_c.field_Ob.field_sb, cp.field_c.field_Ob.field_ib, cp.field_c.field_Ob.field_gb, cp.field_c.field_Ob.field_Db, qf.enterignoreAdd, wa.field_qb, uo.field_Lb, uo.field_Lb);
               ne.field_m = 2;
             }
             if (cp.field_c.field_Qb.field_R != 0) {
-              sm.field_C = new aj(cp.field_c.field_Qb.field_sb, cp.field_c.field_Qb.field_ib, cp.field_c.field_Qb.field_gb, cp.field_c.field_Qb.field_Db, jj.field_R, wa.field_qb, uo.field_Lb, uo.field_Lb);
+              sm.field_C = new aj(cp.field_c.field_Qb.field_sb, cp.field_c.field_Qb.field_ib, cp.field_c.field_Qb.field_gb, cp.field_c.field_Qb.field_Db, jj.enterignoreDel, wa.field_qb, uo.field_Lb, uo.field_Lb);
               ne.field_m = 3;
             }
           }

@@ -6,28 +6,28 @@ final class dg extends gr {
     static int[] field_K;
     np field_R;
     byte[] field_Q;
-    static String field_M;
+    static String menuRestartGame;
     static byte[] field_S;
     static tf field_L;
     static vh field_J;
     static int[] field_T;
-    static String field_P;
+    static String statusPlaying;
 
     public static void c(byte param0) {
         field_T = null;
-        field_M = null;
+        menuRestartGame = null;
         field_L = null;
         field_K = null;
         field_S = null;
         if (param0 == -80) {
           field_J = null;
-          field_P = null;
+          statusPlaying = null;
           return;
         }
         String var2 = (String) null;
         dg.a(83, (String) null, (String) null, (String) null);
         field_J = null;
-        field_P = null;
+        statusPlaying = null;
     }
 
     final byte[] b(boolean param0) {
@@ -43,7 +43,7 @@ final class dg extends gr {
 
     final static int[] a(int param0, int param1) {
         if (param0 == -9) {
-          return param1 != 0 ? param1 == 8 ? sa.field_q : 8 <= param1 ? om.field_r : cr.field_p : ae.field_e;
+          return param1 != 0 ? param1 == 8 ? sa.field_q : 8 <= param1 ? om.field_r : PotEvent.field_p : ae.field_e;
         }
         return (int[]) null;
     }
@@ -53,7 +53,7 @@ final class dg extends gr {
         if (param0 == 44) {
           return -var3 + (param2 + var3) / param1;
         }
-        field_M = (String) null;
+        menuRestartGame = (String) null;
         return -var3 + (param2 + var3) / param1;
     }
 
@@ -82,9 +82,9 @@ final class dg extends gr {
     }
 
     static {
-        field_M = "Restart";
+        menuRestartGame = "Restart";
         field_S = new byte[520];
         field_L = new tf(3);
-        field_P = "Playing";
+        statusPlaying = "Playing";
     }
 }

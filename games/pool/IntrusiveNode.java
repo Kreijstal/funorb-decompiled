@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static String field_f;
+    static String invitingX;
     static String field_j;
     static int field_g;
     IntrusiveNode next;
@@ -15,7 +15,7 @@ class IntrusiveNode {
     IntrusiveNode previous;
 
     public static void b(byte param0) {
-        field_f = null;
+        invitingX = null;
         if (param0 >= 56) {
           field_b = (bl[][][]) null;
           field_a = null;
@@ -120,6 +120,6 @@ class IntrusiveNode {
     }
 
     static {
-        field_f = "Inviting <%0>";
+        invitingX = "Inviting <%0>";
     }
 }

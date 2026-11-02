@@ -18,7 +18,7 @@ final class ea extends IntrusiveNode {
     int field_w;
     static vh field_u;
     int field_y;
-    static String field_m;
+    static String tutorialEightBallAfterbreak;
 
     final static void c(byte param0) {
         int var1 = 27 / ((param0 - 59) / 62);
@@ -32,7 +32,7 @@ final class ea extends IntrusiveNode {
         if (param0 <= 115) {
           return;
         }
-        field_m = null;
+        tutorialEightBallAfterbreak = null;
         field_r = null;
     }
 
@@ -43,7 +43,7 @@ final class ea extends IntrusiveNode {
         field_l = false;
         field_p = 0;
         field_z = true;
-        field_m = "In a proper game, we would now take turns to try to \"pot\" balls, but for the purposes of this tutorial you're on your own. Try to \"pot\" any ball (make it go into a pocket) on the table, but don't hit the black ball first or pot it.";
+        tutorialEightBallAfterbreak = "In a proper game, we would now take turns to try to \"pot\" balls, but for the purposes of this tutorial you're on your own. Try to \"pot\" any ball (make it go into a pocket) on the table, but don't hit the black ball first or pot it.";
         field_r = new Random();
     }
 }
