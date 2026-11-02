@@ -2769,7 +2769,7 @@ final class GameSession implements AiHost {
             do {
               if (var4_ref == null) {
                 this.e(0);
-                this.field_s[this.field_h].b((byte) -98);
+                this.field_s[this.field_h].planTurn((byte) -98);
                 this.a(this.field_n, -122);
                 break;
               }
@@ -3198,7 +3198,7 @@ final class GameSession implements AiHost {
                   return;
                 }
                 if (null != this.field_s[var2_int]) {
-                  this.field_s[var2_int].a((byte) -63);
+                  this.field_s[var2_int].updateDiplomacy((byte) -63);
                 }
                 var2_int++;
               }
@@ -3595,7 +3595,7 @@ final class GameSession implements AiHost {
             if (!this.field_f &&
               null != this.field_s[this.field_h]) {
               try {
-                this.field_s[this.field_h].b((byte) -91);
+                this.field_s[this.field_h].planTurn((byte) -91);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -3608,8 +3608,8 @@ final class GameSession implements AiHost {
             if (sm.field_e &&
               !this.field_j &&
               this.field_b) {
-              this.field_s[this.field_h].a((byte) -63);
-              this.field_s[this.field_h].b((byte) -15);
+              this.field_s[this.field_h].updateDiplomacy((byte) -63);
+              this.field_s[this.field_h].planTurn((byte) -15);
               this.a(this.field_n, -70);
               var2 = this.field_P.field_g.field_e;
               var3_int = 0;
@@ -3781,9 +3781,9 @@ final class GameSession implements AiHost {
                 break;
               }
               if (null != this.field_s[var2_int]) {
-                this.field_s[var2_int].a(param0 + 7);
+                this.field_s[var2_int].broadcastChat(param0 + 7);
                 if (AchievementProgress.field_g) {
-                  var3_ref_String = "My personality is " + wk.field_a[this.field_s[var2_int].a(false)];
+                  var3_ref_String = "My personality is " + wk.field_a[this.field_s[var2_int].getPersonality(false)];
                   this.a(this.field_P.field_v[var2_int], var3_ref_String, (byte) 51);
                 }
               }
@@ -3840,7 +3840,7 @@ final class GameSession implements AiHost {
             stackIn_60_0 = null;
             if (var6 == 0) {
               if (stackIn_60_0 != this.field_s[var3]) {
-                this.field_s[var3].a((byte) -63);
+                this.field_s[var3].updateDiplomacy((byte) -63);
               }
               var3++;
               continue;
@@ -4329,7 +4329,7 @@ final class GameSession implements AiHost {
                     if (stackIn_80_0 != ~var10_intLifetime1 ||
                       var13 != 0) {
                       this.field_s[var10_intLifetime1] = (Ai) ((Object) new TaskAi(this.field_P.field_v[var10_intLifetime1], this.field_P, (AiHost) (this)));
-                      this.field_s[var10_intLifetime1].a(true, -6861);
+                      this.field_s[var10_intLifetime1].setChatEnabled(true, -6861);
                     }
                     var10_intLifetime1++;
                   }
@@ -4341,7 +4341,7 @@ final class GameSession implements AiHost {
               var10_intLifetime1Lifetime1 = 1;
               while (!(this.field_P.field_r <= var10_intLifetime1Lifetime1)) {
                 this.field_s[var10_intLifetime1Lifetime1] = og.a(2, (AiHost) (this), this.field_P.field_v[var10_intLifetime1Lifetime1], this.field_P, -114);
-                this.field_s[var10_intLifetime1Lifetime1].a(false, -6861);
+                this.field_s[var10_intLifetime1Lifetime1].setChatEnabled(false, -6861);
                 var10_intLifetime1Lifetime1++;
                 if (var13 != 0) {
                   decompiledFrameCompleted0 = false;

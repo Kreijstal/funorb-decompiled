@@ -476,7 +476,7 @@ final class GameScreen {
           if (param0.equalsIgnoreCase("startai")) {
             var2_intLifetime2 = 1;
             while (var2_intLifetime2 < oq.field_a.field_s.length) {
-              oq.field_a.field_s[var2_intLifetime2].a(true, -6861);
+              oq.field_a.field_s[var2_intLifetime2].setChatEnabled(true, -6861);
               var2_intLifetime2++;
               if (var5 == 0) {
                 continue;

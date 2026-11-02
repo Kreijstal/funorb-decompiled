@@ -7,7 +7,7 @@ final class DefensiveAi extends StandardAi {
     static Sprite field_r;
     static int field_p;
 
-    final int c(Star param0, int param1) {
+    final int starValue(Star param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -32,7 +32,7 @@ final class DefensiveAi extends StandardAi {
               var3_int++;
             }
           }
-          stackIn_9_0 = super.c(param0, -5) + var3_int * 4;
+          stackIn_9_0 = super.starValue(param0, -5) + var3_int * 4;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ final class DefensiveAi extends StandardAi {
         try {
           if (param1 != 2) {
             var4 = (Star) null;
-            this.a((byte) -71, (Star) null);
+            this.hostileNeighbourFleets((byte) -71, (Star) null);
           }
           var3_int = this.a(-5, param0) + (param0.field_x >> 1);
           stackIn_5_0 = (var3_int == 0) ? 1 : var3_int;
@@ -131,7 +131,7 @@ final class DefensiveAi extends StandardAi {
         }
     }
 
-    final int a(byte param0, Star param1) {
+    final int hostileNeighbourFleets(byte param0, Star param1) {
         int var8 = 0;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_31_0 = null;
@@ -202,7 +202,7 @@ final class DefensiveAi extends StandardAi {
         }
     }
 
-    final int[] b(int param0) {
+    final int[] broadcastPhrases(int param0) {
         int var2 = -23 / ((-48 - param0) / 61);
         return new int[]{17, 15};
     }
@@ -233,7 +233,7 @@ final class DefensiveAi extends StandardAi {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 126 / ((param0 + 44) / 62);
-          stackIn_2_0 = this.a((byte) -92, param1) * 3;
+          stackIn_2_0 = this.hostileNeighbourFleets((byte) -92, param1) * 3;
           if (param1.field_u) {
             stackIn_3_1 = 2;
           } else {

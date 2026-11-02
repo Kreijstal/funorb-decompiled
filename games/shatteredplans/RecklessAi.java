@@ -111,7 +111,7 @@ final class RecklessAi extends StandardAi {
         }
     }
 
-    final int[] b(int param0) {
+    final int[] broadcastPhrases(int param0) {
         int var2 = 24 / ((param0 + 48) / 61);
         return new int[]{16, 18};
     }

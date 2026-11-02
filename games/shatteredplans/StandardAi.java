@@ -209,16 +209,16 @@ class StandardAi implements Ai {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!this.field_g.field_o.field_i) {
-            this.c(param2 ^ 0, param0);
+            this.computeResourceWeights(param2 ^ 0, param0);
           } else {
-            this.c(0, this.field_n.field_m);
+            this.computeResourceWeights(0, this.field_n.field_m);
           }
           var11 = this.field_g.field_g.field_e;
           var4 = var11;
           for (var5 = param2; var5 < param1.length; var5++) {
             var6 = param1[var5];
             var7 = var11[var6];
-            var8 = this.c(var7, -5);
+            var8 = this.starValue(var7, -5);
             var9 = this.a(var7, (byte) -127);
             cb.field_o[var6] = var8;
             StandardMapGenerator.field_i[var6] = var9;
@@ -385,7 +385,7 @@ class StandardAi implements Ai {
         }
     }
 
-    private final void c(int param0, Territory param1) {
+    private final void computeResourceWeights(int param0, Territory param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -559,7 +559,7 @@ class StandardAi implements Ai {
         }
     }
 
-    public final void b(byte param0) {
+    public final void planTurn(byte param0) {
         int discarded$0 = 0;
         Territory var2;
         int var3;
@@ -589,24 +589,24 @@ class StandardAi implements Ai {
             if (0 > var4) {
               var4 = 0;
             }
-            this.a(var4, var2, (byte) -54);
+            this.planTerritory(var4, var2, (byte) -54);
           } else {
-            this.a(var2.field_x, var2, (byte) -54);
+            this.planTerritory(var2.field_x, var2, (byte) -54);
           }
           var2 = (Territory) (this.field_n.field_i.nextForward((byte) -71));
         }
         if (this.field_g.field_o.field_h) {
           if (this.field_n.field_u[0] >= 5) {
-            this.h(99);
+            this.deployDefensiveNet(99);
           }
           if (this.field_n.field_u[1] >= 5) {
-            this.f(26539);
+            this.deployTerraform(26539);
           }
           if (this.field_n.field_u[2] >= 5) {
-            this.b(true);
+            this.deployStellarBomb(true);
           }
           if (this.field_n.field_u[3] >= 5) {
-            this.e((byte) 101);
+            this.deployTannhauser((byte) 101);
           }
         }
         if (!this.field_g.validatePlayerOrders(lh.field_v, this.field_n, -6, lh.field_D, lh.field_G)) {
@@ -710,7 +710,7 @@ class StandardAi implements Ai {
         return var5;
     }
 
-    int c(Star param0, int param1) {
+    int starValue(Star param0, int param1) {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -745,7 +745,7 @@ class StandardAi implements Ai {
         }
     }
 
-    private final void h(int param0) {
+    private final void deployDefensiveNet(int param0) {
         int var5 = 0;
         Object var2;
         int var3;
@@ -893,7 +893,7 @@ class StandardAi implements Ai {
         }
     }
 
-    void a(int param0, Territory param1, byte param2) {
+    void planTerritory(int param0, Territory param1, byte param2) {
         int var10 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -920,9 +920,9 @@ class StandardAi implements Ai {
           mj.field_yb = param1;
           this.c(-17286);
           if (!this.field_g.field_o.field_i) {
-            this.c(0, param1);
+            this.computeResourceWeights(0, param1);
           } else {
-            this.c(0, this.field_n.field_m);
+            this.computeResourceWeights(0, this.field_n.field_m);
           }
           var13 = this.b(127, param1);
           var4 = var13;
@@ -1028,11 +1028,11 @@ class StandardAi implements Ai {
           rl.field_b[var2] = false;
         }
         if (param0 != -17286) {
-          this.a((byte) -58, (Star) null);
+          this.hostileNeighbourFleets((byte) -58, (Star) null);
         }
     }
 
-    public final void a(int param0) {
+    public final void broadcastChat(int param0) {
         int[] var2;
         Player[] var3;
         int var4;
@@ -1042,7 +1042,7 @@ class StandardAi implements Ai {
         int var6;
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        var8 = this.b(-128);
+        var8 = this.broadcastPhrases(-128);
         var2 = var8;
         if (var8 == null) {
           return;
@@ -1107,7 +1107,7 @@ class StandardAi implements Ai {
         return 3 * param0 >> 2;
     }
 
-    int[] b(int param0) {
+    int[] broadcastPhrases(int param0) {
         int var2 = 81 % ((-48 - param0) / 61);
         return new int[]{14, 15};
     }
@@ -1271,7 +1271,7 @@ class StandardAi implements Ai {
         }
     }
 
-    private final void f(int param0) {
+    private final void deployTerraform(int param0) {
         Object var2;
         int var3;
         int var4;
@@ -1305,7 +1305,7 @@ class StandardAi implements Ai {
               break;
             }
             if (var7 == 0) {
-              var9 = this.a((byte) -22, var6);
+              var9 = this.hostileNeighbourFleets((byte) -22, var6);
               if (var2 == null ||
                 var8 < var3 ||
                 var8 == var3 &&
@@ -1336,7 +1336,7 @@ class StandardAi implements Ai {
                 var6 = var5_ref.nextStar(-23410);
                 continue;
               }
-              var9 = this.a((byte) -34, var6);
+              var9 = this.hostileNeighbourFleets((byte) -34, var6);
               if (var2 == null ||
                 var8 < var3 ||
                 var8 == var3 &&
@@ -1654,7 +1654,7 @@ class StandardAi implements Ai {
         }
     }
 
-    void b(boolean param0) {
+    void deployStellarBomb(boolean param0) {
         int var4_int = 0;
         Object var2;
         int var3;
@@ -1686,7 +1686,7 @@ class StandardAi implements Ai {
         }
     }
 
-    void e(byte param0) {
+    void deployTannhauser(byte param0) {
         int var4_int = 0;
         int var7_int = 0;
         Territory stackIn_23_0 = null;
@@ -1768,7 +1768,7 @@ class StandardAi implements Ai {
               }
               var12Lifetime1 = this.a(-5, var8);
               var11Lifetime1Lifetime1 = var11Lifetime1Lifetime1 + var12Lifetime1;
-              var11Lifetime1Lifetime1 = var11Lifetime1Lifetime1 + this.a((byte) -113, var8);
+              var11Lifetime1Lifetime1 = var11Lifetime1Lifetime1 + this.hostileNeighbourFleets((byte) -113, var8);
               if (var11Lifetime1Lifetime1 < 1) {
                 var11Lifetime1Lifetime1 = 1;
               }
@@ -1787,7 +1787,7 @@ class StandardAi implements Ai {
         return;
     }
 
-    int a(byte param0, Star param1) {
+    int hostileNeighbourFleets(byte param0, Star param1) {
         int var5 = 0;
         int var3_int = 0;
         Star[] var4 = null;
@@ -1947,7 +1947,7 @@ class StandardAi implements Ai {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -18 % ((-44 - param0) / 62);
-          var4 = this.a((byte) -56, param1);
+          var4 = this.hostileNeighbourFleets((byte) -56, param1);
           if (param1.field_u) {
             var4 = var4 >> 1;
           }
@@ -2041,7 +2041,7 @@ class StandardAi implements Ai {
             var3_int = 2 * (var3_int + 5);
           }
           var3_int = var3_int + this.a(-5, param0);
-          var3_int = var3_int + this.a((byte) -23, param0);
+          var3_int = var3_int + this.hostileNeighbourFleets((byte) -23, param0);
           if (1 > var3_int) {
             var3_int = 1;
           }
@@ -2078,21 +2078,21 @@ class StandardAi implements Ai {
         }
     }
 
-    public final void a(boolean param0, int param1) {
+    public final void setChatEnabled(boolean param0, int param1) {
         this.field_l = param0 ? true : false;
         if (param1 != -6861) {
           field_e = (Archive) null;
         }
     }
 
-    public final int a(boolean param0) {
+    public final int getPersonality(boolean param0) {
         if (param0) {
           this.a(-105, (Star) null);
         }
         return this.field_h;
     }
 
-    public void a(byte param0) {
+    public void updateDiplomacy(byte param0) {
         int var4_int = 0;
         int var2;
         int var3;
@@ -2170,7 +2170,7 @@ class StandardAi implements Ai {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 41) {
-            this.f(28);
+            this.deployTerraform(28);
           }
           stackIn_3_0 = StandardMapGenerator.field_i[param0.field_p];
           return stackIn_3_0;

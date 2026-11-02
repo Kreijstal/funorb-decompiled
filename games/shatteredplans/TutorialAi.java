@@ -25,7 +25,7 @@ final class TutorialAi extends LegacyAi {
           if (param1 > -49) {
             field_v = (String) null;
           }
-          var3_int = var3_int + this.a((byte) -64, param0);
+          var3_int = var3_int + this.hostileNeighbourFleets((byte) -64, param0);
           if (var3_int < 1) {
             var3_int = 1;
           }

@@ -129,7 +129,7 @@ final class IsolationistAi extends StandardAi {
         field_s = null;
     }
 
-    final int[] b(int param0) {
+    final int[] broadcastPhrases(int param0) {
         int var2 = -114 % ((-48 - param0) / 61);
         return new int[]{17, 18};
     }
@@ -209,7 +209,7 @@ final class IsolationistAi extends StandardAi {
         }
     }
 
-    public final void a(byte param0) {
+    public final void updateDiplomacy(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -223,11 +223,11 @@ final class IsolationistAi extends StandardAi {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_g.field_o.field_i) {
           if (this.field_n.field_m.isEmpty(27650)) {
-            this.a(false, param0 ^ 6898);
+            this.setChatEnabled(false, param0 ^ 6898);
           }
         } else {
           if (this.field_n.field_i.isEmpty(param0 ^ 80)) {
-            this.a(false, -6861);
+            this.setChatEnabled(false, -6861);
           }
         }
         var2 = this.field_g.field_m[this.field_g.field_r - 1];

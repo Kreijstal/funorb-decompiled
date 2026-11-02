@@ -30,7 +30,7 @@ final class TaskAi implements Ai {
     private boolean[] field_y;
     private int field_g;
 
-    private final void d(byte param0) {
+    private final void allocateGarrisons(byte param0) {
         int var2;
         GarrisonTask var3;
         int var4;
@@ -209,7 +209,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void b(int param0) {
+    private final void allocateDefenders(int param0) {
         int var4_int = 0;
         int var5 = 0;
         int var7 = 0;
@@ -256,12 +256,12 @@ final class TaskAi implements Ai {
                     0 != q.field_Ab[var8.field_p] && (var3 != 0 ||
                     !no.field_f[var8.field_p])) {
                     if (GameScreen.field_c[var2Lifetime1] < q.field_Ab[var8.field_p]) {
-                      this.a(GameScreen.field_c[var2Lifetime1], (byte) 102, var6.field_n, var8);
+                      this.moveFleets(GameScreen.field_c[var2Lifetime1], (byte) 102, var6.field_n, var8);
                       q.field_Ab[var8.field_p] = q.field_Ab[var8.field_p] - GameScreen.field_c[var2Lifetime1];
                       GameScreen.field_c[var2Lifetime1] = 0;
                       break regionExit1;
                     }
-                    this.a(q.field_Ab[var8.field_p], (byte) 114, var6.field_n, var8);
+                    this.moveFleets(q.field_Ab[var8.field_p], (byte) 114, var6.field_n, var8);
                     GameScreen.field_c[var2Lifetime1] = GameScreen.field_c[var2Lifetime1] - q.field_Ab[var8.field_p];
                     q.field_Ab[var8.field_p] = 0;
                   }
@@ -277,12 +277,12 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void h(int param0) {
+    private final void buildGarrisonTasks(int param0) {
         Star var3 = null;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_l.clear(0);
         if (param0 != 100) {
-          this.a(62);
+          this.broadcastChat(62);
         }
         Territory var2 = (Territory) (this.field_w.field_i.startForward(0));
         while (var2 != null) {
@@ -295,7 +295,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    public final void b(byte param0) {
+    public final void planTurn(byte param0) {
         int var6 = 0;
         int var2;
         int var3;
@@ -326,15 +326,15 @@ final class TaskAi implements Ai {
           og.field_c[var2] = 0;
         }
         this.j(114);
-        this.i(15401);
+        this.markThreatenedStars(15401);
         this.d(114);
-        this.h(100);
-        this.e(0);
-        this.c(-30426);
-        this.g(115);
-        this.d((byte) 46);
+        this.buildGarrisonTasks(100);
+        this.buildDefendTasks(0);
+        this.buildAttackTasks(-30426);
+        this.scoreTasks(115);
+        this.allocateGarrisons((byte) 46);
         this.g((byte) -70);
-        this.b(true, 0);
+        this.executeTasks(true, 0);
         var2Lifetime1 = 0;
         for (var4 = 0; var4 < this.field_n.length; var4++) {
           var2Lifetime1 = var2Lifetime1 + this.field_n[var4];
@@ -344,18 +344,18 @@ final class TaskAi implements Ai {
         var3Lifetime1 = var2Lifetime1;
         while (true) {
           if (0 >= var2Lifetime1) {
-            this.b(7270);
-            this.f((byte) 127);
+            this.allocateDefenders(7270);
+            this.deployTerraform((byte) 127);
             if (param0 > -3) {
-              this.b((byte) 56);
+              this.planTurn((byte) 56);
             }
-            this.e((byte) -44);
+            this.deployTannhauser((byte) -44);
             if (this.field_m.validatePlayerOrders(MouseInputHandler.field_g, this.field_w, -6, bk.field_a, vj.field_E)) {
             }
             this.field_m.restorePendingOrders(MouseInputHandler.field_g, 0, bk.field_a, vj.field_E);
             return;
           }
-          this.b(false, 0);
+          this.executeTasks(false, 0);
           var2Lifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < this.field_n.length; var4Lifetime1++) {
             var2Lifetime1 = var2Lifetime1 + this.field_n[var4Lifetime1];
@@ -388,7 +388,7 @@ final class TaskAi implements Ai {
           var2Lifetime1 = 0;
           if (var4Lifetime1Lifetime1 != 0 &&
             this.field_m.field_o.field_i) {
-            this.c((byte) 35);
+            this.placeReservesAtBorders((byte) 35);
           }
           for (var6 = 0; this.field_n.length > var6; var6++) {
             var2Lifetime1 = var2Lifetime1 + this.field_n[var6];
@@ -400,7 +400,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void c(byte param0) {
+    private final void placeReservesAtBorders(byte param0) {
         int var7 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -434,7 +434,7 @@ final class TaskAi implements Ai {
         var2 = 0;
         var13 = this.field_m.field_g.field_e;
         if (param0 <= 4) {
-          this.i(15);
+          this.markThreatenedStars(15);
         }
         for (var4 = 0; var13.length > var4; var4++) {
           var14 = var13[var4];
@@ -452,7 +452,7 @@ final class TaskAi implements Ai {
           }
         }
         if (0 == var2) {
-          this.a(-1, this.field_w.field_m.field_q, this.field_i[0]);
+          this.queuePlacement(-1, this.field_w.field_m.field_q, this.field_i[0]);
           for (var3_int = 0; this.field_i.length > var3_int; var3_int++) {
             this.field_i[var3_int] = 0;
           }
@@ -486,7 +486,7 @@ final class TaskAi implements Ai {
           var6Lifetime1 = var12;
           while (var12 < var19.length) {
             var20 = var19[var12];
-            this.a(-1, var20, 1);
+            this.queuePlacement(-1, var20, 1);
             this.field_i[0] = this.field_i[0] - 1;
             if (this.field_i[0] == 0) {
               break;
@@ -500,7 +500,7 @@ final class TaskAi implements Ai {
         return;
     }
 
-    private final void a(DefendTask param0, boolean param1, int param2) {
+    private final void performDefendTask(DefendTask param0, boolean param1, int param2) {
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_76_2 = null;
@@ -572,7 +572,7 @@ final class TaskAi implements Ai {
                   this.field_w != var17Lifetime1.field_y &&
                   (int)((double)var9 * 0.8) <= var17Lifetime1.field_x &&
                   var17Lifetime1.field_x > 10) {
-                  this.a((byte) -82, var17Lifetime1);
+                  this.deployStellarBomb((byte) -82, var17Lifetime1);
                   param0.field_i = param0.field_i - var17Lifetime1.field_x;
                   if (param0.field_i < 0) {
                     param0.field_i = 0;
@@ -586,7 +586,7 @@ final class TaskAi implements Ai {
               !no.field_b &&
               !param0.field_n.field_u && (var9 > this.field_n[var6] ||
               var9 > 20)) {
-              this.a(param0.field_n, 31308);
+              this.deployDefensiveNet(param0.field_n, 31308);
               if (param0.field_i > 1) {
                 param0.field_i = param0.field_i / 2;
                 var9 = param0.field_i + param0.field_i * (-this.field_t + 50) / 250;
@@ -634,7 +634,7 @@ final class TaskAi implements Ai {
               }
             }
             if (var10 > 0) {
-              this.a(-1, param0.field_n, var10);
+              this.queuePlacement(-1, param0.field_n, var10);
               og.field_c[param0.field_n.field_p] = og.field_c[param0.field_n.field_p] + var10;
             }
           }
@@ -731,7 +731,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void g(int param0) {
+    private final void scoreTasks(int param0) {
         int var2;
         DefendTask var3;
         AttackTask var3_ref;
@@ -877,7 +877,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void c(int param0) {
+    private final void buildAttackTasks(int param0) {
         int var3 = 0;
         Star var4;
         int var8;
@@ -914,7 +914,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void executeTasks(boolean param0, int param1) {
         int var4 = 0;
         AiTask[] var3;
         AiTask var5;
@@ -927,21 +927,21 @@ final class TaskAi implements Ai {
             if (!(var5 instanceof AttackTask)) {
               throw new RuntimeException("prioritizedTasks contains invalid task for Star " + var5.field_n.name + ".");
             }
-            this.a((byte) -124, (AttackTask) (var5), param0);
+            this.performAttackTask((byte) -124, (AttackTask) (var5), param0);
           } else {
-            this.a((DefendTask) (var5), param0, 95);
+            this.performDefendTask((DefendTask) (var5), param0, 95);
           }
         }
     }
 
-    public final int a(boolean param0) {
+    public final int getPersonality(boolean param0) {
         if (param0) {
           this.field_c = (AiHost) null;
         }
         return 8;
     }
 
-    private final void a(int param0, byte param1, Star param2, Star param3) {
+    private final void moveFleets(int param0, byte param1, Star param2, Star param3) {
         Player stackIn_37_0 = null;
         Player stackIn_37_1 = null;
         RuntimeException stackIn_50_0 = null;
@@ -994,7 +994,7 @@ final class TaskAi implements Ai {
               param0 = param0 - var5.field_z;
             }
             if (param1 < 86) {
-              this.b(true, 49);
+              this.executeTasks(true, 49);
             }
             if (param0 == 0) {
               return;
@@ -1139,7 +1139,7 @@ final class TaskAi implements Ai {
                   if (this.field_n[var9] < var8) {
                     var8 = this.field_n[var9];
                   }
-                  this.a(var8, (byte) 115, param2, param1[var11]);
+                  this.moveFleets(var8, (byte) 115, param2, param1[var11]);
                   dupTemp$0 = param1[var11].field_p;
                   q.field_Ab[dupTemp$0] = q.field_Ab[dupTemp$0] - var8;
                   var6_int = var6_int + var8;
@@ -1219,7 +1219,7 @@ final class TaskAi implements Ai {
             this.field_c.a(0, (byte) -109, param0, this.field_w, var4);
           }
           if (param1 != -42) {
-            this.e((byte) -14);
+            this.deployTannhauser((byte) -14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1236,7 +1236,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void a(Star param0, int param1) {
+    private final void deployDefensiveNet(Star param0, int param1) {
         Object stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -1484,11 +1484,11 @@ final class TaskAi implements Ai {
           var6_ref = param2.firstStar(18229);
           while (var6_ref != null) {
             if (var6_ref != var4) {
-              this.a(var6_ref.field_x, (byte) 110, (Star) (var4), var6_ref);
+              this.moveFleets(var6_ref.field_x, (byte) 110, (Star) (var4), var6_ref);
             }
             var6_ref = param2.nextStar(-23410);
           }
-          this.a(-1, (Star) (var4), param2.field_x);
+          this.queuePlacement(-1, (Star) (var4), param2.field_x);
           this.field_i[param0] = 0;
           this.field_n[param0] = 0;
           this.field_y[param0] = true;
@@ -1507,7 +1507,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void a(int param0, Star param1, int param2) {
+    private final void queuePlacement(int param0, Star param1, int param2) {
         PlacementOrder var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -1549,7 +1549,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    public final void a(byte param0) {
+    public final void updateDiplomacy(byte param0) {
         int var4_int = 0;
         int var2;
         int var3;
@@ -1573,7 +1573,7 @@ final class TaskAi implements Ai {
         }
         if (param0 != -63) {
           var11 = (DefendTask) null;
-          this.a((DefendTask) null, false, -5);
+          this.performDefendTask((DefendTask) null, false, -5);
         }
         this.field_r = -1;
         var2 = this.field_m.field_m[-1 + this.field_m.field_r];
@@ -1762,7 +1762,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    public final void a(int param0) {
+    public final void broadcastChat(int param0) {
         int var4 = 0;
         int var2;
         Player[] var3;
@@ -1781,7 +1781,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void f(byte param0) {
+    private final void deployTerraform(byte param0) {
         int var7 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
@@ -1922,7 +1922,7 @@ final class TaskAi implements Ai {
         return;
     }
 
-    private final void e(int param0) {
+    private final void buildDefendTasks(int param0) {
         Star var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_u.clear(param0 + 0);
@@ -1988,7 +1988,7 @@ final class TaskAi implements Ai {
           if (var4_int == 0) {
             this.field_n[param1] = 0;
             if (!this.field_m.field_o.field_i) {
-              this.a(-1, param0.field_q, this.field_i[param1]);
+              this.queuePlacement(-1, param0.field_q, this.field_i[param1]);
               this.field_i[param1] = 0;
             }
             return;
@@ -2023,14 +2023,14 @@ final class TaskAi implements Ai {
             this.field_n[param1] = this.field_n[param1] - (var8 + var7Lifetime1);
             var4_int--;
           }
-          this.b(7270);
+          this.allocateDefenders(7270);
           if (!this.field_m.field_o.field_i) {
             var4_intLifetime1 = var14.length;
             var7Lifetime2 = this.field_i[param1] / var4_intLifetime1;
             for (var9Lifetime2 = 0; var9Lifetime2 < var14.length; var9Lifetime2++) {
               stackIn_40_0 = (this.field_i[param1] % var4_intLifetime1 != 0) ? 1 : 0;
               var8Lifetime1 = stackIn_40_0;
-              this.a(-1, var14[var9Lifetime2], var8Lifetime1 + var7Lifetime2);
+              this.queuePlacement(-1, var14[var9Lifetime2], var8Lifetime1 + var7Lifetime2);
               this.field_i[param1] = this.field_i[param1] - (var7Lifetime2 + var8Lifetime1);
               var4_intLifetime1--;
             }
@@ -2068,7 +2068,7 @@ final class TaskAi implements Ai {
         this.field_r = -1;
         if (!param0) {
           var8 = (AttackTask) null;
-          this.a((byte) 68, (AttackTask) null, false);
+          this.performAttackTask((byte) 68, (AttackTask) null, false);
         }
         jf.field_e = new boolean[this.field_m.field_g.field_e.length];
         for (var2 = 0; var2 < oe.field_g.length; var2++) {
@@ -2122,7 +2122,7 @@ final class TaskAi implements Ai {
         return var2;
     }
 
-    private final void i(int param0) {
+    private final void markThreatenedStars(int param0) {
         int var3 = 0;
         int var6 = 0;
         Star var4;
@@ -2153,10 +2153,10 @@ final class TaskAi implements Ai {
         }
     }
 
-    public final void a(boolean param0, int param1) {
+    public final void setChatEnabled(boolean param0, int param1) {
         this.field_p = param0 ? true : false;
         if (param1 != -6861) {
-          this.c((byte) 46);
+          this.placeReservesAtBorders((byte) 46);
         }
     }
 
@@ -2212,12 +2212,12 @@ final class TaskAi implements Ai {
                     continue;
                   }
                   if (q.field_Ab[var6.field_p] >= GameScreen.field_c[var2Lifetime1]) {
-                    this.a(GameScreen.field_c[var2Lifetime1], (byte) 102, var3Lifetime1.field_n, var6);
+                    this.moveFleets(GameScreen.field_c[var2Lifetime1], (byte) 102, var3Lifetime1.field_n, var6);
                     q.field_Ab[var6.field_p] = q.field_Ab[var6.field_p] - GameScreen.field_c[var2Lifetime1];
                     GameScreen.field_c[var2Lifetime1] = 0;
                     break scanLoop1;
                   }
-                  this.a(q.field_Ab[var6.field_p], (byte) 103, var3Lifetime1.field_n, var6);
+                  this.moveFleets(q.field_Ab[var6.field_p], (byte) 103, var3Lifetime1.field_n, var6);
                   GameScreen.field_c[var2Lifetime1] = GameScreen.field_c[var2Lifetime1] - q.field_Ab[var6.field_p];
                   q.field_Ab[var6.field_p] = 0;
                 }
@@ -2233,7 +2233,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void e(byte param0) {
+    private final void deployTannhauser(byte param0) {
         int var11 = 0;
         int var17 = 0;
         Territory stackIn_68_0 = null;
@@ -2467,7 +2467,7 @@ final class TaskAi implements Ai {
         return;
     }
 
-    private final void a(byte param0, Star param1) {
+    private final void deployStellarBomb(byte param0, Star param1) {
         Object stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -2521,7 +2521,7 @@ final class TaskAi implements Ai {
         }
     }
 
-    private final void a(byte param0, AttackTask param1, boolean param2) {
+    private final void performAttackTask(byte param0, AttackTask param1, boolean param2) {
         int var8_int = 0;
         int dupTemp$0 = 0;
         int stackIn_49_0 = 0;
@@ -2671,7 +2671,7 @@ final class TaskAi implements Ai {
               }
               var13 = var12_intLifetime1 + var12_intLifetime1 * (50 - this.field_t) / 250;
               if (var13 <= var9Lifetime1) {
-                this.a((byte) -82, param1.field_n);
+                this.deployStellarBomb((byte) -82, param1.field_n);
                 var11Lifetime1 = 1;
                 param1.field_i = param1.field_n.field_x / 2;
                 if (null != param1.field_n.field_y) {
@@ -2693,7 +2693,7 @@ final class TaskAi implements Ai {
               !DerelictMapReader.field_f &&
               this.field_w.field_u[2] >= 5 &&
               param1.field_n.field_x >= 25) {
-              this.a((byte) -82, param1.field_n);
+              this.deployStellarBomb((byte) -82, param1.field_n);
               param1.field_i = param1.field_n.field_x / 2;
               if (null != param1.field_n.field_y) {
                 var27 = var23;
@@ -2761,8 +2761,8 @@ final class TaskAi implements Ai {
                   if (var29[var16].field_y != this.field_w) {
                     continue;
                   }
-                  this.a(-1, var29[var16], var15Lifetime1Lifetime1);
-                  this.a(var15Lifetime1Lifetime1, (byte) 93, param1.field_n, var29[var16]);
+                  this.queuePlacement(-1, var29[var16], var15Lifetime1Lifetime1);
+                  this.moveFleets(var15Lifetime1Lifetime1, (byte) 93, param1.field_n, var29[var16]);
                   break;
                 }
                 var10Lifetime2 = var10Lifetime2 - var15Lifetime1Lifetime1;
@@ -2801,14 +2801,14 @@ final class TaskAi implements Ai {
                           }
                           if (var20 == var33[var16]) {
                             if (this.field_i[var20] <= var10Lifetime2) {
-                              this.a(-1, var19Lifetime1Lifetime1, this.field_i[var20]);
-                              this.a(this.field_i[var20], (byte) 100, param1.field_n, var19Lifetime1Lifetime1);
+                              this.queuePlacement(-1, var19Lifetime1Lifetime1, this.field_i[var20]);
+                              this.moveFleets(this.field_i[var20], (byte) 100, param1.field_n, var19Lifetime1Lifetime1);
                               var10Lifetime2 = var10Lifetime2 - this.field_i[var20];
                               this.field_i[var20] = 0;
                               break scanLoop1;
                             }
-                            this.a(-1, var19Lifetime1Lifetime1, var10Lifetime2);
-                            this.a(var10Lifetime2, (byte) 116, param1.field_n, var19Lifetime1Lifetime1);
+                            this.queuePlacement(-1, var19Lifetime1Lifetime1, var10Lifetime2);
+                            this.moveFleets(var10Lifetime2, (byte) 116, param1.field_n, var19Lifetime1Lifetime1);
                             this.field_i[var20] = this.field_i[var20] - var10Lifetime2;
                             var10Lifetime2 = 0;
                             break scanLoop1;

@@ -41,7 +41,7 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    public final void a(byte param0) {
+    public final void updateDiplomacy(byte param0) {
         int incrementValue$0 = 0;
         int var2;
         Star[] var3;
@@ -78,7 +78,7 @@ final class AggressiveAi extends StandardAi {
             this.field_t[incrementValue$0] = var8;
           }
         }
-        super.a(param0);
+        super.updateDiplomacy(param0);
     }
 
     final int b(Star param0, int param1) {
@@ -120,7 +120,7 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    final int c(Star param0, int param1) {
+    final int starValue(Star param0, int param1) {
         int var7 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -137,7 +137,7 @@ final class AggressiveAi extends StandardAi {
         RuntimeException var3 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3_int = super.c(param0, param1);
+          var3_int = super.starValue(param0, param1);
           var4 = param0.field_p;
           var5 = 2147483647;
           var6 = this.field_t;
@@ -846,7 +846,7 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    final int[] b(int param0) {
+    final int[] broadcastPhrases(int param0) {
         int var2 = 10 % ((param0 + 48) / 61);
         return new int[]{14, 16};
     }
@@ -857,7 +857,7 @@ final class AggressiveAi extends StandardAi {
         this.field_t = null;
     }
 
-    final void e(byte param0) {
+    final void deployTannhauser(byte param0) {
         Object var2;
         int var3;
         int var4;
@@ -956,7 +956,7 @@ final class AggressiveAi extends StandardAi {
         return;
     }
 
-    final void b(boolean param0) {
+    final void deployStellarBomb(boolean param0) {
         int var4_int = 0;
         int stackIn_7_0 = 0;
         int stackIn_8_1 = 0;
@@ -1007,7 +1007,7 @@ final class AggressiveAi extends StandardAi {
           }
         }
         if (!param0) {
-          this.a((byte) 23);
+          this.updateDiplomacy((byte) 23);
         }
         if (var2 != null) {
           var4 = new ProjectUse(2, this.field_n, (Star) (var2));
@@ -1015,7 +1015,7 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    final void a(int param0, Territory param1, byte param2) {
+    final void planTerritory(int param0, Territory param1, byte param2) {
         Star var4 = null;
         int var5 = 0;
         Star[] var6 = null;
@@ -1040,7 +1040,7 @@ final class AggressiveAi extends StandardAi {
             }
             var4 = param1.nextStar(-23410);
           }
-          super.a(param0, param1, param2);
+          super.planTerritory(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "sc.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
