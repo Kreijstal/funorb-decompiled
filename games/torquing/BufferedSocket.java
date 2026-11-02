@@ -206,7 +206,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -214,28 +214,28 @@ final class BufferedSocket implements Runnable {
         if (hj.field_b) {
           return;
         }
-        ra.field_e = of.field_l.field_r;
-        fq.field_F.field_d = fq.field_F.field_d - of.field_l.field_r;
-        fq.field_F.field_c = fq.field_F.field_c - of.field_l.field_v;
-        hb.field_s = of.field_l.field_v;
-        of.field_l.field_r = 0;
-        Sprite var4 = of.field_l;
+        ra.field_e = VertexMesh.field_l.field_r;
+        fq.field_F.field_d = fq.field_F.field_d - VertexMesh.field_l.field_r;
+        fq.field_F.field_c = fq.field_F.field_c - VertexMesh.field_l.field_v;
+        hb.field_s = VertexMesh.field_l.field_v;
+        VertexMesh.field_l.field_r = 0;
+        Sprite var4 = VertexMesh.field_l;
         Sprite var5 = var4;
-        of.field_l.field_u = of.field_l.field_t;
-        of.field_l.field_w = of.field_l.field_s;
+        VertexMesh.field_l.field_u = VertexMesh.field_l.field_t;
+        VertexMesh.field_l.field_w = VertexMesh.field_l.field_s;
         ub.field_E = -200;
         var5.field_v = 0;
         ra.field_c = (hb.field_s - ub.field_E) / 35;
-        kc.field_v = la.field_j.field_r + la.field_j.field_t / 2;
+        kc.field_v = ResourceArchive.field_j.field_r + ResourceArchive.field_j.field_t / 2;
         if (param0 > -68) {
           return;
         }
         ll.field_g = 63664;
-        je.field_a = la.field_j.field_s / 2 + la.field_j.field_v;
-        Sprite var2 = la.field_j;
-        la.field_j.field_r = 0;
-        la.field_j.field_w = la.field_j.field_s;
-        la.field_j.field_u = la.field_j.field_t;
+        je.field_a = ResourceArchive.field_j.field_s / 2 + ResourceArchive.field_j.field_v;
+        Sprite var2 = ResourceArchive.field_j;
+        ResourceArchive.field_j.field_r = 0;
+        ResourceArchive.field_j.field_w = ResourceArchive.field_j.field_s;
+        ResourceArchive.field_j.field_u = ResourceArchive.field_j.field_t;
         nn.field_e = -jb.field_b.field_c + 640;
         var2.field_v = 0;
         pp.field_a = nn.field_e / 30;
@@ -336,7 +336,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -453,7 +453,7 @@ final class BufferedSocket implements Runnable {
           this.field_e = this.field_b.getOutputStream();
           this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

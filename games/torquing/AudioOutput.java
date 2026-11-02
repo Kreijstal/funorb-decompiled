@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pi {
+class AudioOutput {
     int[] field_l;
     private int field_n;
     private long field_k;
@@ -20,7 +20,7 @@ class pi {
     private int field_e;
     private PcmStream[] field_f;
     private long field_d;
-    private static sa field_u;
+    private static AudioService field_u;
     private int field_p;
     private long field_j;
 
@@ -74,7 +74,7 @@ class pi {
         if (this.field_t != null &&
           this.field_p <= 0) {
           this.field_p = this.field_p + (field_c >> 4);
-          pi.b(this.field_t);
+          AudioOutput.b(this.field_t);
           this.a(this.field_t, this.field_t.d());
           var4 = 0;
           var5 = 255;
@@ -173,15 +173,15 @@ class pi {
     void a(int param0) throws Exception {
     }
 
-    final static pi a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          vj var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          vj var5 = null;
-          vj stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          vj stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_c == 0) {
             throw new IllegalStateException();
@@ -192,7 +192,7 @@ class pi {
               param3 = 256;
             }
             try {
-              var5 = new vj();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
@@ -201,17 +201,17 @@ class pi {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((pi) ((Object) stackIn_10_0)).field_l = new int[stackIn_10_1 * stackIn_11_2];
-              ((pi) ((Object) var4)).field_b = param3;
-              ((pi) ((Object) var4)).a(param1);
-              ((pi) ((Object) var4)).field_e = (param3 & -1024) + 1024;
-              if (((pi) ((Object) var4)).field_e > 16384) {
-                ((pi) ((Object) var4)).field_e = 16384;
+              ((AudioOutput) ((Object) stackIn_10_0)).field_l = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioOutput) ((Object) var4)).field_b = param3;
+              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).field_e = (param3 & -1024) + 1024;
+              if (((AudioOutput) ((Object) var4)).field_e > 16384) {
+                ((AudioOutput) ((Object) var4)).field_e = 16384;
               }
-              ((pi) ((Object) var4)).a(((pi) ((Object) var4)).field_e);
+              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_e);
               if (field_o > 0 &&
                 field_u == null) {
-                field_u = new sa();
+                field_u = new AudioService();
                 field_u.field_b = param0;
                 param0.a((byte) -66, field_o, (Runnable) ((Object) field_u));
               }
@@ -219,14 +219,14 @@ class pi {
                 if (field_u.field_c[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_u.field_c[param2] = (pi) ((Object) var5);
+                field_u.field_c[param2] = (AudioOutput) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (pi) ((Object) stackIn_21_0);
+              return (AudioOutput) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new pi();
+              return new AudioOutput();
             }
           }
           throw new IllegalArgumentException();
@@ -280,7 +280,7 @@ class pi {
         }
         PcmStream var1 = param0.c();
         while (var1 != null) {
-          pi.b(var1);
+          AudioOutput.b(var1);
           var1 = param0.b();
         }
     }
@@ -420,7 +420,7 @@ class pi {
     void a(java.awt.Component param0) throws Exception {
     }
 
-    pi() {
+    AudioOutput() {
         this.field_n = 32;
         this.field_g = false;
         this.field_k = km.b(-1);

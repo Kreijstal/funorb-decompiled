@@ -10,7 +10,7 @@ final class en extends d {
         try {
           this.field_u = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "en.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "en.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class en extends d {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        df var14 = null;
+        IsaacPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -72,7 +72,7 @@ final class en extends d {
                 hb.a(eg.field_w, qc.field_bb, false, bf.field_c, um.field_p, var6_intLifetime1);
               }
             }
-            ao.a(8191, var5);
+            SocketConnector.a(8191, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
             var8 = vg.field_o;
@@ -119,7 +119,7 @@ final class en extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "en.F(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "en.F(" + param0 + ')');
         }
     }
 

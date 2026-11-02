@@ -13,7 +13,7 @@ final class og extends IntrusiveNode {
           param0.removeFocusListener(ha.field_b);
           hb.field_y = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "og.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "og.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class og extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

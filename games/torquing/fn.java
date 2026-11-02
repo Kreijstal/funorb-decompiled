@@ -49,7 +49,7 @@ final class fn {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class fn {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

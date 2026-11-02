@@ -5,10 +5,10 @@ class wk implements si {
     static int field_d;
     private cf field_e;
     static IntrusiveDeque field_a;
-    private la field_f;
+    private ResourceArchive field_f;
     private int field_g;
     private un[] field_b;
-    private la field_c;
+    private ResourceArchive field_c;
     static int field_h;
 
     public final un a(int param0, byte param1) {
@@ -200,7 +200,7 @@ class wk implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var8), "wk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var8), "wk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ class wk implements si {
         try {
           Torquing.a(-49, param7);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "wk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -260,7 +260,7 @@ class wk implements si {
         return var5;
     }
 
-    wk(la param0, la param1, la param2) {
+    wk(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
         un stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         un stackIn_19_0 = null;
@@ -433,7 +433,7 @@ class wk implements si {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 

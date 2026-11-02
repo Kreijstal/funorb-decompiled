@@ -74,7 +74,7 @@ final class ld implements WidgetRenderer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class ld implements WidgetRenderer {
         int fieldTemp$1 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        df var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -154,7 +154,7 @@ final class ld implements WidgetRenderer {
               return;
             }
             if (var2 != 4) {
-              nn.a("F1: " + me.a(-1), (Throwable) null, param0 - 10081);
+              nn.a("F1: " + ArchiveSource.a(-1), (Throwable) null, param0 - 10081);
               ih.b(true);
               return;
             }
@@ -217,7 +217,7 @@ final class ld implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "ld.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "ld.C(" + param0 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class ld implements WidgetRenderer {
             ld.b((byte) 5);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ld.D(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ld.D(" + param0 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class ld implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "ld.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "ld.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class ld implements WidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

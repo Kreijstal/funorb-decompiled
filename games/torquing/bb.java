@@ -15,7 +15,7 @@ abstract class bb extends hn {
           this.field_D = false;
           this.field_B = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -121,82 +121,82 @@ abstract class bb extends hn {
           }
           return;
         }
-        if (null == ue.field_b) {
-          ue.field_b = new Sprite(this.field_p, this.field_o);
+        if (null == RandomAccessCacheFile.field_b) {
+          RandomAccessCacheFile.field_b = new Sprite(this.field_p, this.field_o);
           if (param1 <= -7) {
-            tm.a((byte) -109, ue.field_b);
+            GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
             r.a(126);
-            ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+            RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
-          tm.a((byte) -109, ue.field_b);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
-          ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
           return;
         }
-        if (this.field_p > ue.field_b.field_s) {
-          ue.field_b = new Sprite(this.field_p, this.field_o);
+        if (this.field_p > RandomAccessCacheFile.field_b.field_s) {
+          RandomAccessCacheFile.field_b = new Sprite(this.field_p, this.field_o);
           if (param1 <= -7) {
-            tm.a((byte) -109, ue.field_b);
+            GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
             r.a(126);
-            ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+            RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
-          tm.a((byte) -109, ue.field_b);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
-          ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
           return;
         }
-        if (this.field_o > ue.field_b.field_t) {
-          ue.field_b = new Sprite(this.field_p, this.field_o);
+        if (this.field_o > RandomAccessCacheFile.field_b.field_t) {
+          RandomAccessCacheFile.field_b = new Sprite(this.field_p, this.field_o);
           if (param1 <= -7) {
-            tm.a((byte) -109, ue.field_b);
+            GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
             r.a(126);
-            ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+            RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
-          tm.a((byte) -109, ue.field_b);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
-          ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
           return;
         }
         if (param1 <= -7) {
-          tm.a((byte) -109, ue.field_b);
+          GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
-          ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
           return;
         }
         this.a((byte) -26);
-        tm.a((byte) -109, ue.field_b);
+        GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
         SoftwareRasterizer.b();
         this.b(0, 0, (byte) -127);
         super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
         r.a(126);
-        ue.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+        RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
     }
 
     static {

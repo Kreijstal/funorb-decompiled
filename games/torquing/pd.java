@@ -7,7 +7,7 @@ final class pd {
     static String field_a;
 
     final static void a(cb param0, boolean param1, int param2) {
-        df var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           var3 = wa.field_d;
           var3.f(96, param2);
@@ -18,7 +18,7 @@ final class pd {
           var3.writeByte(90, param0.field_k);
           var3.a(param0.field_l, 61);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

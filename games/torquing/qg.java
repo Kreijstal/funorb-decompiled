@@ -32,11 +32,11 @@ final class qg extends am {
         vo.field_a[91] = 42;
         if (param0 > -45) {
           String var2 = (String) null;
-          qg.a((la) null, (la) null, (String) null, (String) null, 100);
+          qg.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, 100);
         }
     }
 
-    final static vn a(la param0, la param1, String param2, String param3, int param4) {
+    final static vn a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -89,7 +89,7 @@ final class qg extends am {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class qg extends am {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -405,7 +405,7 @@ final class qg extends am {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

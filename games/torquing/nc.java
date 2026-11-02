@@ -35,7 +35,7 @@ final class nc {
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "nc.B(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "nc.B(" + param0 + ',' + param1 + ')');
         }
     }
 

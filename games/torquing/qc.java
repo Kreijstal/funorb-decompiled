@@ -20,7 +20,7 @@ final class qc extends aa {
           if (param1 != -112) {
             qc.n(52);
           }
-          stackIn_3_0 = new kl(param2, pi.field_c * param0 / 1000);
+          stackIn_3_0 = new kl(param2, AudioOutput.field_c * param0 / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,7 +32,7 @@ final class qc extends aa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ final class qc extends aa {
           }
           super.c(param0, param1 + 0);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "qc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "qc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

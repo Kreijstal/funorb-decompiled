@@ -23,7 +23,7 @@ final class cl {
         field_a = null;
     }
 
-    final static void a(int param0, boolean param1, PcmStreamMixer param2, la param3) {
+    final static void a(int param0, boolean param1, PcmStreamMixer param2, ResourceArchive param3) {
         try {
           if (param1) {
             field_c = (String) null;
@@ -36,7 +36,7 @@ final class cl {
           af.a(true);
           jh.field_z = 0 - pf.field_A;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,7 +15,7 @@ final class sf {
           if (20 > b.field_x) {
             return true;
           }
-          if (!la.a(true)) {
+          if (!ResourceArchive.a(true)) {
             return true;
           }
           if (pa.field_c <= 0) {
@@ -29,7 +29,7 @@ final class sf {
         if (20 > b.field_x) {
           return true;
         }
-        if (!la.a(true)) {
+        if (!ResourceArchive.a(true)) {
           return true;
         }
         if (pa.field_c <= 0) {

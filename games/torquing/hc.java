@@ -330,7 +330,7 @@ final class hc {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -780,7 +780,7 @@ final class hc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1046,12 +1046,12 @@ final class hc {
         }
     }
 
-    final static la a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          gl var8 = null;
-          la stackIn_14_0 = null;
+          CachedArchiveSource var8 = null;
+          ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param3 != 8505) {
@@ -1078,7 +1078,7 @@ final class hc {
             if (param4) {
               var8.d(-118);
             }
-            stackIn_14_0 = new la(var8, param1, param5);
+            stackIn_14_0 = new ResourceArchive(var8, param1, param5);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -1189,7 +1189,7 @@ final class hc {
           this.field_i = param1;
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "hc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

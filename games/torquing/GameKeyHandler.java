@@ -15,17 +15,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
               fm.a((byte) 32, (char) var2_int)) {
-              var3 = 127 & 1 + gn.field_d;
+              var3 = 127 & 1 + IsaacCipher.field_d;
               if (IntrusiveNode.field_g != var3) {
-                ol.field_c[gn.field_d] = -1;
-                pe.field_H[gn.field_d] = (char)var2_int;
-                gn.field_d = var3;
+                ol.field_c[IsaacCipher.field_d] = -1;
+                pe.field_H[IsaacCipher.field_d] = (char)var2_int;
+                IsaacCipher.field_d = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ml.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ml.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -98,11 +98,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
           }
           if (0 <= var2_int) {
-            var3 = gn.field_d + 1 & 127;
+            var3 = IsaacCipher.field_d + 1 & 127;
             if (IntrusiveNode.field_g != var3) {
-              ol.field_c[gn.field_d] = var2_int;
-              pe.field_H[gn.field_d] = (char)0;
-              gn.field_d = var3;
+              ol.field_c[IsaacCipher.field_d] = var2_int;
+              pe.field_H[IsaacCipher.field_d] = (char)0;
+              IsaacCipher.field_d = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -123,7 +123,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

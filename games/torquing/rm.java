@@ -54,7 +54,7 @@ class rm extends pa {
         return fieldTemp$0;
     }
 
-    final static rm a(la param0, String param1, String param2) {
+    final static rm a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(-106, param2, param1);
         if (var3 == null) {
           return null;

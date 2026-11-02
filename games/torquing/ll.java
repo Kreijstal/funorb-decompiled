@@ -182,7 +182,7 @@ final class ll extends kj {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(')').toString());
         }
     }
 

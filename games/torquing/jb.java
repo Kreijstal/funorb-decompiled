@@ -21,7 +21,7 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jb.A(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jb.A(" + param0 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class jb {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -210,11 +210,11 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jb.B(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jb.B(" + param0 + ')');
         }
     }
 
-    final static Sprite[] a(int param0, la param1, String param2, String param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -230,7 +230,7 @@ final class jb {
         try {
           var4_int = param1.a(-1, param3);
           if (param0 != 0) {
-            jb.a(-44, (la) null, (String) null, (String) null);
+            jb.a(-44, (ResourceArchive) null, (String) null, (String) null);
           }
           var5 = param1.a(param2, -110, var4_int);
           stackIn_4_0 = gk.a(105, var4_int, param1, var5);
@@ -257,7 +257,7 @@ final class jb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

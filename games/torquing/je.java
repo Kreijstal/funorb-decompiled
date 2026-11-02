@@ -4,7 +4,7 @@
 final class je implements WidgetRenderer {
     private int field_d;
     private int field_b;
-    static la field_f;
+    static ResourceArchive field_f;
     static String field_i;
     static int field_a;
     static th field_g;
@@ -71,7 +71,7 @@ final class je implements WidgetRenderer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class je implements WidgetRenderer {
         field_f = null;
     }
 
-    final static kh a(la param0, String param1, String param2, byte param3) {
+    final static kh a(ResourceArchive param0, String param1, String param2, byte param3) {
         rm var4 = null;
         RuntimeException var4_ref = null;
         Object stackIn_4_0 = null;
@@ -129,7 +129,7 @@ final class je implements WidgetRenderer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class je implements WidgetRenderer {
             return;
           }
           var3 = (String) null;
-          je.a((la) null, (String) null, (String) null, (byte) 82);
+          je.a((ResourceArchive) null, (String) null, (String) null, (byte) 82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class je implements WidgetRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class je implements WidgetRenderer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class je implements WidgetRenderer {
           this.field_h = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

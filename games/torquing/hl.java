@@ -60,14 +60,14 @@ final class hl {
               qd.field_d != 3) {
               ap.a(param0 / (double)var19[var17], hf.field_b, var21);
               ap.a(param9, param0 / (double)var15[var17], hf.field_b, mf.field_z);
-              df.a(param3 ^ -6073, mf.field_z);
+              IsaacPacketBuffer.a(param3 ^ -6073, mf.field_z);
               continue;
             }
             ap.a(mf.field_z, param0, hf.field_b, var21);
             break;
           }
           aj.a((byte) -56, param2, param9, param7);
-          df.a(3, var21);
+          IsaacPacketBuffer.a(3, var21);
           stackIn_12_0 = var16;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class hl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

@@ -20,7 +20,7 @@ final class wd extends DualLinkNode {
         }
     }
 
-    final int[] a(boolean param0, la param1, int param2, double param3, boolean param4, int param5, si param6, int param7) {
+    final int[] a(boolean param0, ResourceArchive param1, int param2, double param3, boolean param4, int param5, si param6, int param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_40_0 = null;
@@ -55,7 +55,7 @@ final class wd extends DualLinkNode {
         int var15Lifetime1;
         var24 = Torquing.field_u;
         try {
-          ue.field_g = param6;
+          RandomAccessCacheFile.field_g = param6;
           vf.field_a = param1;
           for (var10_int = 0; this.field_t.length > var10_int; var10_int++) {
             this.field_t[var10_int].a(param7, param5 + 17749, param2);
@@ -151,7 +151,7 @@ final class wd extends DualLinkNode {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class wd extends DualLinkNode {
         }
     }
 
-    final boolean a(int param0, la param1, si param2) {
+    final boolean a(int param0, ResourceArchive param1, si param2) {
         int var4_int = 0;
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -232,7 +232,7 @@ final class wd extends DualLinkNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class wd extends DualLinkNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

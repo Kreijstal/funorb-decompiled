@@ -59,7 +59,7 @@ final class m {
             return;
           }
           this.field_o = this.field_m;
-          if (df.field_u >= this.field_d) {
+          if (IsaacPacketBuffer.field_u >= this.field_d) {
             this.a(true);
           } else {
             this.field_i = false;
@@ -84,7 +84,7 @@ final class m {
         if (param0 != -19) {
           m.c(120);
         }
-        stackIn_6_0 = (df.field_u >= this.field_d) && (wp.field_w > 0);
+        stackIn_6_0 = (IsaacPacketBuffer.field_u >= this.field_d) && (wp.field_w > 0);
         return stackIn_6_0;
     }
 
@@ -149,16 +149,16 @@ final class m {
           }
           var6 = param1.getParameter("currency");
           if (var6 == null) {
-            gj.field_j = 2;
+            ProxySocketConnector.field_j = 2;
           } else {
             if (!ip.a((byte) -42, (CharSequence) ((Object) var6))) {
-              gj.field_j = 2;
+              ProxySocketConnector.field_j = 2;
             } else {
-              gj.field_j = kc.a((byte) -84, (CharSequence) ((Object) var6));
+              ProxySocketConnector.field_j = kc.a((byte) -84, (CharSequence) ((Object) var6));
             }
           }
           fa.field_c = param0;
-          of.field_o = param2;
+          VertexMesh.field_o = param2;
           ln.field_G = param5;
           ln.field_H = new Sprite[param3.length];
           for (var7 = param4; var7 < param3.length; var7++) {
@@ -182,7 +182,7 @@ final class m {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

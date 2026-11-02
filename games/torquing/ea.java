@@ -47,10 +47,10 @@ final class ea extends am {
     }
 
     final static void b(int param0, int param1) {
-        if (param1 == of.field_m) {
+        if (param1 == VertexMesh.field_m) {
           return;
         }
-        of.field_m = param1;
+        VertexMesh.field_m = param1;
         if (vd.field_c != null) {
           vd.field_c.a(64 * param1 / 160);
           if (param0 > -11) {
@@ -124,7 +124,7 @@ final class ea extends am {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

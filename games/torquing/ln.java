@@ -17,7 +17,7 @@ final class ln extends jh {
           var4 = param2[param2.length - 1];
           var4.a(param0, param1, 86);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class ln extends jh {
           int var4 = 107 % ((param1 - 18) / 61);
           var3.a((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

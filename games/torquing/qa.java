@@ -25,7 +25,7 @@ final class qa extends IntrusiveNode {
         aq.field_c = false;
         bi.field_u = null;
         if (ff.field_a) {
-          gn.field_m.n(-20041);
+          IsaacCipher.field_m.n(-20041);
           if (param0 <= -43) {
             return;
           }
@@ -41,7 +41,7 @@ final class qa extends IntrusiveNode {
           }
           bi.field_u = ac.a(-115, new CharSequence[]{(CharSequence) ((Object) bi.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tf.field_b)});
         }
-        gn.field_m.b(true);
+        IsaacCipher.field_m.b(true);
         gp.j((byte) -34);
         if (param0 <= -43) {
           return;
@@ -142,7 +142,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param10).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param10).append(')').toString());
         }
     }
 

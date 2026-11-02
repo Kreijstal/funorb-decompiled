@@ -27,7 +27,7 @@ abstract class tg extends GameApplet {
         in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, nk.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
         mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, nk.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
-        wb.field_u = la.b(26);
+        wb.field_u = ResourceArchive.b(26);
         j.a(k.field_d, (byte) -125);
         b.field_w = param6;
         uf.field_p = param1;
@@ -66,7 +66,7 @@ abstract class tg extends GameApplet {
                 i.field_P[~var2] = false;
               }
             }
-            mj.field_d = gn.field_d;
+            mj.field_d = IsaacCipher.field_d;
           }
           if (param0 > -26) {
             tg.m(67);
@@ -75,7 +75,7 @@ abstract class tg extends GameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "tg.R(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "tg.R(" + param0 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ abstract class tg extends GameApplet {
           ki.field_D.a((byte) -110);
         }
         tg.m(param0 ^ -104);
-        gj.c(24417);
+        ProxySocketConnector.c(24417);
         if (!sf.a(param0 ^ -24) &&
           11 != op.field_i) {
           ra.a((byte) 75);
@@ -220,7 +220,7 @@ abstract class tg extends GameApplet {
               je.field_f = null;
             } else {
               if (je.field_f.a(true, "")) {
-                fh.a(7, je.field_f);
+                SocketJs5Transport.a(7, je.field_f);
                 je.field_f = null;
                 cf.a(param0 ^ 6648);
               }
@@ -237,7 +237,7 @@ abstract class tg extends GameApplet {
           mk.a(true);
           ob.field_b = vo.field_e;
           r.field_c = false;
-          fd.a(ao.field_b, lp.field_a, 0, kb.field_a, eg.field_v);
+          ArchiveIndex.a(SocketConnector.field_b, lp.field_a, 0, kb.field_a, eg.field_v);
           if (ra.field_a ||
             null != vo.field_c) {
             stackIn_100_0 = !(ra.field_a);
@@ -270,7 +270,7 @@ abstract class tg extends GameApplet {
         if (b.field_x == 11) {
           if (null != rd.field_z && (!rd.field_z.a(-12749) ||
             !rd.field_z.c(-19375))) {
-            df.a(0.0f, -84, il.a(Torquing.field_w, rd.field_z, DelegatingCanvas.field_b, (byte) 78));
+            IsaacPacketBuffer.a(0.0f, -84, il.a(Torquing.field_w, rd.field_z, DelegatingCanvas.field_b, (byte) 78));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -287,7 +287,7 @@ abstract class tg extends GameApplet {
           if (null != a.field_c) {
             stackIn_133_0 = (!a.field_c.b(param0 ^ 23)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            df.a(a.field_c.field_l, 75, a.field_c.field_h);
+            IsaacPacketBuffer.a(a.field_c.field_l, 75, a.field_c.field_h);
           }
           if (var3Lifetime2 != 0) {
             b.field_x = 20;
@@ -390,7 +390,7 @@ abstract class tg extends GameApplet {
                                 mm.a((byte) 60);
                                 return;
                               }
-                              nn.a("MGS1: " + me.a(-1), (Throwable) null, -9958);
+                              nn.a("MGS1: " + ArchiveSource.a(-1), (Throwable) null, -9958);
                               ih.b(true);
                               return;
                             }
@@ -417,7 +417,7 @@ abstract class tg extends GameApplet {
           }
           return;
         }
-        nn.a("MGS2: " + me.a(-1), (Throwable) null, -9958);
+        nn.a("MGS2: " + ArchiveSource.a(-1), (Throwable) null, -9958);
         ih.b(true);
     }
 
@@ -494,7 +494,7 @@ abstract class tg extends GameApplet {
           this.a((byte) 88, param0, 480, 640, param1);
           int var4_int = 56 % ((28 - param2) / 53);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -550,14 +550,14 @@ abstract class tg extends GameApplet {
         int var3;
         boolean stackIn_11_1 = false;
         var3 = Torquing.field_u;
-        if (la.a(true)) {
+        if (ResourceArchive.a(true)) {
           stackIn_11_1 = (dg.field_i != null);
           discarded$4 = this.a(stackIn_11_1, false, true);
         } else {
           if (b.field_x >= 10) {
             if (pl.b(-115)) {
               if (op.field_i != 0) {
-                ue.a(-16513, da.field_g);
+                RandomAccessCacheFile.a(-16513, da.field_g);
               } else {
                 discarded$5 = this.a(false, false, true);
               }
@@ -652,7 +652,7 @@ abstract class tg extends GameApplet {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -690,7 +690,7 @@ abstract class tg extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = od.a(wd.a(-19), -124, fo.i(17543), of.d((byte) -87), this.field_q, oc.a(false), ki.i(20));
+            var5_intLifetime1 = od.a(wd.a(-19), -124, fo.i(17543), VertexMesh.d((byte) -87), this.field_q, oc.a(false), ki.i(20));
             if (var5_intLifetime1 != -1) {
               gk.a(-5006, pl.field_u, kh.field_n, var5_intLifetime1);
               pl.field_u = null;
@@ -721,7 +721,7 @@ abstract class tg extends GameApplet {
             }
           }
           if (var4 == 4) {
-            if (!ao.field_b) {
+            if (!SocketConnector.field_b) {
               op.field_i = 10;
               kb.field_h = true;
             } else {

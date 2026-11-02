@@ -57,7 +57,7 @@ final class wb extends am {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class wb extends am {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -194,8 +194,8 @@ final class wb extends am {
               hb.a(0, false, ln.field_H[var7], ln.field_H[var7].field_t, ln.field_H[var7].field_s, 1, 0, 3);
             }
             ik.field_k = null;
-            ue.field_f = je.field_e.c();
-            ue.field_f.e();
+            RandomAccessCacheFile.field_f = je.field_e.c();
+            RandomAccessCacheFile.field_f.e();
             kp.a(SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_d / 3, 0, (byte) 16, 64, 0);
             SoftwareRasterizer.a(var27, var2, var3);
             SoftwareRasterizer.a(mo.field_w);
@@ -217,7 +217,7 @@ final class wb extends am {
             var2Lifetime1 = SoftwareRasterizer.field_j;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.b(mo.field_w);
-            var14 = ff.a(new String[]{rl.field_b[gj.field_j]}, 0, wc.field_t);
+            var14 = ff.a(new String[]{rl.field_b[ProxySocketConnector.field_j]}, 0, wc.field_t);
             var5 = lh.field_O.b(var14, hn.field_x);
             var6Lifetime1 = lh.field_O.a(var14, hn.field_x, lh.field_O.field_x + lh.field_O.field_t);
             var7Lifetime1 = (-var5 + hn.field_x) / 2 + up.field_d;
@@ -314,8 +314,8 @@ final class wb extends am {
             kj.field_b = null;
           }
           SoftwareRasterizer.b(mo.field_w);
-          SoftwareRasterizer.a(16, 16, 608, 112, 15, ln.field_G, of.field_o);
-          SoftwareRasterizer.a(231, 144, 393, 232, 15, ln.field_G, of.field_o);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, ln.field_G, VertexMesh.field_o);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, ln.field_G, VertexMesh.field_o);
           if (RasterBuffer.field_f != null) {
             RasterBuffer.field_f.d(0, 0);
           }
@@ -331,7 +331,7 @@ final class wb extends am {
             vk.field_s.d(231, 390);
             var1 = je.field_e;
             if (sd.field_s.field_g == 0) {
-              var1 = ue.field_f;
+              var1 = RandomAccessCacheFile.field_f;
             }
             var1.d(0, 0);
             stackIn_52_0 = -109;
@@ -406,7 +406,7 @@ final class wb extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "wb.D(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "wb.D(" + param0 + ')');
         }
     }
 
@@ -467,7 +467,7 @@ final class wb extends am {
             wb.a((String) null, 6);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "wb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

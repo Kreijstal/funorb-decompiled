@@ -15,7 +15,7 @@ final class hj {
     }
 
     final static void a(boolean param0, int param1) {
-        df var2 = wa.field_d;
+        IsaacPacketBuffer var2 = wa.field_d;
         var2.f(-40, param1);
         if (param0) {
           field_c = (sm) null;
@@ -200,7 +200,7 @@ final class hj {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param9).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param9).append(')').toString());
         }
     }
 

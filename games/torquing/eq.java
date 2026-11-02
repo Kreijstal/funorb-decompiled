@@ -48,7 +48,7 @@ abstract class eq implements sk {
 
     public final cd a(byte param0) {
         if (this.b(true)) {
-          return df.field_r;
+          return IsaacPacketBuffer.field_r;
         }
         if (this.field_e + 350L > km.b(-1)) {
           return IntrusiveNode.field_a;
@@ -89,7 +89,7 @@ abstract class eq implements sk {
           param0.a(param4 + 1, 1 + param5, param6);
           SoftwareRasterizer.a(mo.field_w);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "eq.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "eq.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

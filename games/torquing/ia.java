@@ -12,8 +12,8 @@ final class ia extends af {
 
     final static void d(int param0) {
         if (param0 >= 37) {
-          if (of.field_m < 140) {
-            ea.b(-36, of.field_m + 20);
+          if (VertexMesh.field_m < 140) {
+            ea.b(-36, VertexMesh.field_m + 20);
           } else {
             ea.b(-108, 160);
           }
@@ -118,7 +118,7 @@ final class ia extends af {
           var20 = this.field_e * var9 / (var10 + var9) + var5;
           var19 = this.field_e * var9 / (var10 + var9) + var5;
         }
-        rh.a(var4, this.field_e, (byte) 71, var5, this.field_g, ao.field_a);
+        rh.a(var4, this.field_e, (byte) 71, var5, this.field_g, SocketConnector.field_a);
         SoftwareRasterizer.d(var17, var19, var18 - var17, var20 - var19, bo.field_d);
         SoftwareRasterizer.b(tj.field_m);
         if (null != wp.field_v[0]) {

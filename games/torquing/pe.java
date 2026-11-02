@@ -49,7 +49,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class pe extends hn implements wm, ng {
           var9 = go.a(false, ip.a(9));
           if (var9 != mf.field_u) {
             if (h.field_l == var9) {
-              var8 = gj.field_g;
+              var8 = ProxySocketConnector.field_g;
             }
           } else {
             var8 = go.field_v;
@@ -221,7 +221,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class pe extends hn implements wm, ng {
             eq.field_a = param1;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class pe extends hn implements wm, ng {
           var3.a(false, var4, true);
           this.field_L.i((byte) 68);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class pe extends hn implements wm, ng {
             this.i(127);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class pe extends hn implements wm, ng {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, df param3) {
+    final static byte[] a(int param0, int param1, byte[] param2, IsaacPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -347,7 +347,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class pe extends hn implements wm, ng {
         if (vg.d(0) ||
           !(this.field_C.field_m.length() <= 0) &&
           !(0 >= this.field_L.field_m.length())) {
-          sa.a(this.field_C.field_m, 122, this.field_L.field_m);
+          AudioService.a(this.field_C.field_m, 122, this.field_L.field_m);
         }
         if (param0 < 120) {
           this.a(99, (UiWidget) null, 'ﾠ', 63);
@@ -375,7 +375,7 @@ final class pe extends hn implements wm, ng {
         super.a(param0, (byte) -98, param2, param3);
     }
 
-    final static jb[] a(byte param0, df param1) {
+    final static jb[] a(byte param0, IsaacPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -402,7 +402,7 @@ final class pe extends hn implements wm, ng {
           var3 = param1.e(12, -73);
           var4 = new jb[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (df.a(param1, -103)) {
+            if (IsaacPacketBuffer.a(param1, -103)) {
               var6 = new jb();
               param1.e(24, -59);
               param1.e(24, 55);
@@ -429,7 +429,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -489,7 +489,7 @@ final class pe extends hn implements wm, ng {
                   if (!this.field_F) {
                     ka.a((byte) -110);
                   } else {
-                    of.b((byte) 105);
+                    VertexMesh.b((byte) 105);
                   }
                 }
               }
@@ -506,7 +506,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

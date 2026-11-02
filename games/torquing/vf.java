@@ -10,7 +10,7 @@ final class vf {
     static String field_m;
     String field_h;
     private int field_k;
-    static la field_a;
+    static ResourceArchive field_a;
     static Sprite[] field_i;
     static String field_g;
     static int field_d;
@@ -43,7 +43,7 @@ final class vf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ final class vf {
           field_j = (int[][]) null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vf.F(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vf.F(" + param0 + ')');
         }
     }
 
@@ -116,11 +116,11 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2_ref), "vf.E(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "vf.E(" + param0 + ')');
         }
     }
 
-    final static void a(of param0, int param1, int param2, boolean param3, byte param4) {
+    final static void a(VertexMesh param0, int param1, int param2, boolean param3, byte param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_36_0 = 0;
@@ -265,7 +265,7 @@ final class vf {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class vf {
           var4_float = (float)param1 / 100.0f + (float)(this.field_k + 1);
           this.field_l = var4_float * (float)this.field_b / (float)(this.field_c + 1);
           if (param2 >= -18) {
-            vf.a((of) null, 80, -3, false, (byte) 99);
+            vf.a((VertexMesh) null, 80, -3, false, (byte) 99);
           }
           if (param1 == 0) {
             this.field_h = param0.field_e;
@@ -300,7 +300,7 @@ final class vf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "vf.<init>()");
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "vf.<init>()");
         }
     }
 
@@ -381,7 +381,7 @@ final class vf {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

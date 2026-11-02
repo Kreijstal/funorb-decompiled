@@ -10,7 +10,7 @@ final class uf {
     private int[] field_u;
     static int field_c;
     static int field_p;
-    static la field_l;
+    static ResourceArchive field_l;
     sm field_e;
     static String field_t;
     uc field_b;
@@ -110,7 +110,7 @@ final class uf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class uf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ final class uf {
           ih.b(true);
           return;
         }
-        df var2 = kj.field_d;
+        IsaacPacketBuffer var2 = kj.field_d;
         if (param0 >= -104) {
           uf.a(45);
         }
@@ -431,7 +431,7 @@ final class uf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -511,7 +511,7 @@ final class uf {
           this.field_f = 0;
           this.field_o = param5;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class me {
+abstract class ArchiveSource {
     static String[] field_a;
 
-    abstract fd b(byte param0);
+    abstract ArchiveIndex b(byte param0);
 
     abstract int a(int param0, int param1);
 
@@ -43,7 +43,7 @@ abstract class me {
 
     public static void a(byte param0) {
         if (param0 < 1) {
-          me.a(-64);
+          ArchiveSource.a(-64);
         }
         field_a = null;
     }

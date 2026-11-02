@@ -69,7 +69,7 @@ final class lc extends ro {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class lc extends ro {
           param3 + param5 <= qk.field_p) {
           mh.a(param0, param1, param5, param6, param3, 15783, param4);
         } else {
-          ue.a(-15788, param1, param3, param6, param5, param0, param4);
+          RandomAccessCacheFile.a(-15788, param1, param3, param6, param5, param0, param4);
         }
         var7 = 124 / ((param2 + 16) / 61);
     }
@@ -194,12 +194,12 @@ final class lc extends ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "lc.J(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "lc.J(" + param0 + ')');
         }
     }
 
     final static void b(int param0, int param1) {
-        df var2 = wa.field_d;
+        IsaacPacketBuffer var2 = wa.field_d;
         var2.f(87, param1);
         var2.writeByte(90, 1);
         var2.writeByte(90, param0);
@@ -417,7 +417,7 @@ final class lc extends ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "lc.A(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "lc.A(" + param0 + ')');
         }
     }
 

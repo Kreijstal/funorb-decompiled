@@ -98,7 +98,7 @@ final class jn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -151,25 +151,25 @@ final class jn {
             var6 = wh.field_z[var3];
             if (go.field_x == 2 &&
               var2 == 1) {
-              if (qh.field_b.length > fd.field_k.length) {
+              if (qh.field_b.length > ArchiveIndex.field_k.length) {
                 stackIn_18_0 = qh.field_b.length;
               } else {
-                stackIn_18_0 = fd.field_k.length;
+                stackIn_18_0 = ArchiveIndex.field_k.length;
               }
               var7 = stackIn_18_0;
               if (var3 >= 6 &&
                 var3 < var7 + 6) {
-                if (-var7 + (fd.field_k.length + (var3 - 6)) < 0) {
+                if (-var7 + (ArchiveIndex.field_k.length + (var3 - 6)) < 0) {
                   stackIn_24_0 = "";
                 } else {
-                  stackIn_24_0 = fd.field_k[-var7 + (-6 + var3 + fd.field_k.length)];
+                  stackIn_24_0 = ArchiveIndex.field_k[-var7 + (-6 + var3 + ArchiveIndex.field_k.length)];
                 }
                 var6 = stackIn_24_0;
               }
-              if (me.field_a.length <= ib.field_c.length) {
+              if (ArchiveSource.field_a.length <= ib.field_c.length) {
                 stackIn_28_0 = ib.field_c.length;
               } else {
-                stackIn_28_0 = me.field_a.length;
+                stackIn_28_0 = ArchiveSource.field_a.length;
               }
               var8 = stackIn_28_0;
               if (var3 >= 7 + var7 &&
@@ -212,7 +212,7 @@ final class jn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jn.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jn.C(" + param0 + ')');
         }
     }
 

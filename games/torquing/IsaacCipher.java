@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn {
+final class IsaacCipher {
     private int[] field_k;
     private int field_c;
     static cd field_h;
@@ -256,7 +256,7 @@ final class gn {
         return this.field_k[fieldTemp$3];
     }
 
-    gn(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_k = new int[256];
@@ -266,7 +266,7 @@ final class gn {
           }
           this.a(0);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

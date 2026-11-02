@@ -28,7 +28,7 @@ final class h extends IntrusiveNode {
           param0.addKeyListener(ha.field_b);
           param0.addFocusListener(ha.field_b);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "h.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "h.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

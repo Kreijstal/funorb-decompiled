@@ -83,7 +83,7 @@ final class ak extends kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "ak.B(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "ak.B(" + param0 + ')');
         }
     }
 

@@ -16,8 +16,8 @@ final class id {
         int var6 = 0;
         String var7 = null;
         try {
-          od.field_s[0] = sa.field_d.nextInt();
-          od.field_s[1] = sa.field_d.nextInt();
+          od.field_s[0] = AudioService.field_d.nextInt();
+          od.field_s[1] = AudioService.field_d.nextInt();
           jb.field_c.position = 0;
           od.field_s[2] = (int)(ij.field_l >> 32);
           od.field_s[3] = (int)ij.field_l;
@@ -42,7 +42,7 @@ final class id {
           wa.field_d.b((byte) 60, rj.field_w);
           wa.field_d.a(78, MouseInputHandler.field_f);
           var6 = 0;
-          if (ao.field_b) {
+          if (SocketConnector.field_b) {
             var6 = var6 | 1;
           }
           if (ql.field_t) {
@@ -77,7 +77,7 @@ final class id {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

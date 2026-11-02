@@ -37,14 +37,14 @@ final class qo extends am {
 
     final static void g(byte param0) {
         i.field_R = false;
-        me.field_a = null;
+        ArchiveSource.field_a = null;
         ib.field_c = null;
         qh.field_b = null;
         if (param0 != -68) {
-          la var2 = (la) null;
-          qo.a(47, -32, -37, (fi) null, (la) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          qo.a(47, -32, -37, (fi) null, (ResourceArchive) null);
         }
-        fd.field_k = null;
+        ArchiveIndex.field_k = null;
     }
 
     final int[][] a(int param0, int param1) {
@@ -166,7 +166,7 @@ final class qo extends am {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class qo extends am {
         this.field_s = 0;
     }
 
-    final static lh a(int param0, int param1, int param2, fi param3, la param4) {
+    final static lh a(int param0, int param1, int param2, fi param3, ResourceArchive param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -241,7 +241,7 @@ final class qo extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -3,10 +3,10 @@
  */
 final class bo {
     private ac field_b;
-    private jp field_g;
+    private Js5Transport field_g;
     private co field_c;
     private java.math.BigInteger field_a;
-    private gl[] field_f;
+    private CachedArchiveSource[] field_f;
     private java.math.BigInteger field_j;
     static int field_d;
     static uc field_e;
@@ -24,7 +24,7 @@ final class bo {
         field_l = null;
     }
 
-    bo(jp param0, co param1) {
+    bo(Js5Transport param0, co param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -56,14 +56,14 @@ final class bo {
         return;
     }
 
-    final gl a(pb param0, byte param1, int param2, pb param3, boolean param4) {
+    final CachedArchiveSource a(pb param0, byte param1, int param2, pb param3, boolean param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        gl var9 = null;
+        CachedArchiveSource var9 = null;
         byte[] var13 = null;
-        gl stackIn_9_0 = null;
-        gl stackIn_13_0 = null;
+        CachedArchiveSource stackIn_9_0 = null;
+        CachedArchiveSource stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -85,7 +85,7 @@ final class bo {
             var7 = this.field_h.c((byte) -49);
             var13 = new byte[64];
             this.field_h.a(48, 64, var13, 0);
-            var9 = new gl(param2, param0, param3, this.field_g, this.field_c, var6_int, var13, var7, param4);
+            var9 = new CachedArchiveSource(param2, param0, param3, this.field_g, this.field_c, var6_int, var13, var7, param4);
             this.field_f[param2] = var9;
             if (param1 != 101) {
               field_k = -42;
@@ -110,7 +110,7 @@ final class bo {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -167,12 +167,12 @@ final class bo {
             throw new RuntimeException();
           }
         }
-        this.field_f = new gl[var3];
+        this.field_f = new CachedArchiveSource[var3];
         this.field_h = var10;
         return true;
     }
 
-    private bo(jp param0, co param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private bo(Js5Transport param0, co param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_c = param1;
           this.field_a = param3;
@@ -182,7 +182,7 @@ final class bo {
             this.field_b = this.field_g.a((byte) 0, 255, true, (byte) -51, 255);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

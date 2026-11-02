@@ -35,7 +35,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           ia.field_i = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "wf.DB(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wf.DB(" + param0 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

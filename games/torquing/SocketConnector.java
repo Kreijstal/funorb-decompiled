@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-abstract class ao {
-    String field_c;
-    int field_e;
+abstract class SocketConnector {
+    String host;
+    int port;
     static boolean field_b;
     static int field_d;
     static Sprite[] field_a;
@@ -13,7 +13,7 @@ abstract class ao {
 
     final static int b(int param0, int param1) {
         if (param0 != 2048) {
-          ao.b(1, 62);
+          SocketConnector.b(1, 62);
         }
         param1 = param1 & 8191;
         if (param1 < 4096) {
@@ -26,12 +26,12 @@ abstract class ao {
         if (!param0) {
           return (java.net.Socket) null;
         }
-        return new java.net.Socket(this.field_c, this.field_e);
+        return new java.net.Socket(this.host, this.port);
     }
 
-    final static li a(int param0, int param1, int param2, la param3, la param4) {
+    final static li a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        la var6 = null;
+        ResourceArchive var6 = null;
         Object stackIn_4_0 = null;
         li stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -42,8 +42,8 @@ abstract class ao {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -75) {
-            var6 = (la) null;
-            ao.a(77, 31, 80, (la) null, (la) null);
+            var6 = (ResourceArchive) null;
+            SocketConnector.a(77, 31, 80, (ResourceArchive) null, (ResourceArchive) null);
           }
           if (nd.a(param1, param3, -1, param2)) {
             stackIn_6_0 = ee.a(param4.a(param1, 100, param2), 7028);
@@ -67,7 +67,7 @@ abstract class ao {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ abstract class ao {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "ao.F(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "ao.F(" + param0 + ',' + param1 + ')');
         }
     }
 

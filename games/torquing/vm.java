@@ -31,7 +31,7 @@ final class vm extends DualLinkNode {
         }
     }
 
-    final int[] a(si param0, la param1, float param2, boolean param3) {
+    final int[] a(si param0, ResourceArchive param1, float param2, boolean param3) {
         int[] var5;
         int[] var6;
         int[] var7;

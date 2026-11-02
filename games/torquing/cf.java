@@ -16,7 +16,7 @@ final class cf {
         int var1_int = 0;
         int var2 = Torquing.field_u;
         int var1_intLifetime1;
-        df.field_q.b(30752);
+        IsaacPacketBuffer.field_q.b(30752);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
           ui.field_l[var1_int] = 0L;
         }
@@ -29,7 +29,7 @@ final class cf {
         try {
           oi.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class cf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 

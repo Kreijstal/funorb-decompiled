@@ -18,13 +18,13 @@ abstract class pa {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        df var8 = null;
+        IsaacPacketBuffer var8 = null;
         p var9 = null;
         var7 = Torquing.field_u;
         var8 = kj.field_d;
         var3 = var8.i((byte) -101);
         stackIn_3_0 = ((var3 & 128) != 0);
-        fd.field_a = stackIn_3_0;
+        ArchiveIndex.field_a = stackIn_3_0;
         n.field_u = var3 & 127;
         hh.field_a = var8.i((byte) -101);
         pm.field_r = var8.b(9);

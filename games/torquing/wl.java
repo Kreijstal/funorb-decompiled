@@ -996,7 +996,7 @@ final class wl extends sl {
               param2 = 256;
             }
           }
-          this.field_V[param0].a(pi.field_c >> 7, param1 * this.field_R * this.field_z >> 12, param2);
+          this.field_V[param0].a(AudioOutput.field_c >> 7, param1 * this.field_R * this.field_z >> 12, param2);
         }
     }
 
@@ -1005,7 +1005,7 @@ final class wl extends sl {
           !this.field_jb) {
           return -1;
         }
-        int var3 = pi.field_c;
+        int var3 = AudioOutput.field_c;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_W * this.field_hb);
     }
@@ -1021,13 +1021,13 @@ final class wl extends sl {
 
     private final void a(int param0, int param1) {
         if (this.field_V[param0] != null) {
-          this.field_V[param0].b(param1 * 256 / pi.field_c);
+          this.field_V[param0].b(param1 * 256 / AudioOutput.field_c);
         }
     }
 
     private final void b(int param0) {
         if (this.field_V[param0] != null) {
-          this.field_V[param0].h(pi.field_c >> 7);
+          this.field_V[param0].h(AudioOutput.field_c >> 7);
           this.field_V[param0] = null;
         }
     }
@@ -1061,7 +1061,7 @@ final class wl extends sl {
             param5 = 0;
           }
           stackIn_14_0 = this.field_x.field_o[param1];
-          stackIn_14_1 = param3 * 256 / pi.field_c;
+          stackIn_14_1 = param3 * 256 / AudioOutput.field_c;
           if (param2 == 0) {
             stackIn_15_2 = param4 * this.field_R * this.field_z >> 12;
           } else {
@@ -1077,7 +1077,7 @@ final class wl extends sl {
           ((nj) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.c(param2);
-            var7.a(pi.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);
+            var7.a(AudioOutput.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);
           }
           this.field_V[param0] = var7;
           if (this.field_j != null) {

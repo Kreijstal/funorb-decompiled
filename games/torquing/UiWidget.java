@@ -31,7 +31,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "gm.CA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "gm.CA(" + param0 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "gm.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "gm.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "gm.HA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "gm.HA(" + param0 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param9).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -339,7 +339,7 @@ class UiWidget extends IntrusiveNode {
           wb.field_t = null;
           jd.field_E = false;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "gm.LA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.LA(" + param0 + ')');
         }
     }
 
@@ -353,7 +353,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "gm.toString()");
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "gm.toString()");
         }
     }
 
@@ -388,7 +388,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -487,7 +487,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -546,7 +546,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "gm.DA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "gm.DA(" + param0 + ')');
         }
     }
 
@@ -570,7 +570,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -580,7 +580,7 @@ class UiWidget extends IntrusiveNode {
             this.field_k = -96;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "gm.T(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.T(" + param0 + ')');
         }
     }
 
@@ -619,7 +619,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -631,7 +631,7 @@ class UiWidget extends IntrusiveNode {
           this.field_p = param4;
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "gm.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -665,7 +665,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) runtimeException), "gm.MA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.MA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -676,14 +676,14 @@ class UiWidget extends IntrusiveNode {
             this.a(-127, (StringBuilder) null, (Hashtable) null, 78);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "gm.FA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.FA(" + param0 + ')');
         }
     }
 
-    final static ao a(boolean param0, int param1, String param2) {
-        gj var3 = null;
+    final static SocketConnector a(boolean param0, int param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        gj stackIn_4_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -692,11 +692,11 @@ class UiWidget extends IntrusiveNode {
           if (!param0) {
             UiWidget.a(true, -41, (String) null);
           }
-          var3 = new gj();
-          ((ao) ((Object) var3)).field_c = param2;
-          ((ao) ((Object) var3)).field_e = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).host = param2;
+          ((SocketConnector) ((Object) var3)).port = param1;
           stackIn_4_0 = var3;
-          return (ao) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -707,7 +707,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -733,7 +733,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var4), "gm.EA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var4), "gm.EA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -761,7 +761,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -782,7 +782,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "gm.R(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "gm.R(" + param0 + ')');
         }
     }
 
@@ -796,7 +796,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "gm.U(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "gm.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -813,7 +813,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "gm.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "gm.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -832,7 +832,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "gm.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "gm.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -858,7 +858,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -912,7 +912,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -950,7 +950,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

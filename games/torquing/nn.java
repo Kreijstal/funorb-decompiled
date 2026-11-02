@@ -8,14 +8,14 @@ final class nn {
     static af[][] field_a;
     static int field_e;
     static byte field_b;
-    static jp field_c;
+    static Js5Transport field_c;
     static java.util.zip.CRC32 field_d;
 
     final static void a(int param0) {
         if (null != NodeHashTableIterator.field_a) {
           return;
         }
-        jp.field_n = new String[]{vk.field_x, to.field_r, mi.field_u, bq.field_b, w.field_gb, nc.field_b, un.field_f, bl.field_e};
+        Js5Transport.field_n = new String[]{vk.field_x, to.field_r, mi.field_u, bq.field_b, w.field_gb, nc.field_b, un.field_f, bl.field_e};
         if (param0 < -21) {
           NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
           hq.field_d[2] = ai.field_m;
@@ -58,7 +58,7 @@ final class nn {
           ol.field_b = ol.field_b.toUpperCase();
           return;
         }
-        field_c = (jp) null;
+        field_c = (Js5Transport) null;
         NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
         hq.field_d[2] = ai.field_m;
         hq.field_d[0] = ae.field_lb;
@@ -132,7 +132,7 @@ final class nn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class nn {
             nn.a(-46, (byte[]) null, -63, -109);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -27,7 +27,7 @@ final class ki extends hn implements fp, ng, ba {
           var4 = param1;
           ((tk) ((Object) var3)).a(false, var4, true);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class ki extends hn implements fp, ng, ba {
           if (var4 == IntrusiveNode.field_a) {
             return false;
           }
-          if (var4 != df.field_r) {
+          if (var4 != IsaacPacketBuffer.field_r) {
             return true;
           }
           return false;
@@ -68,7 +68,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class ki extends hn implements fp, ng, ba {
         this.field_G.field_n = pf.field_j;
         this.field_B.field_n = oi.field_a;
         this.field_L.field_n = ud.field_j;
-        this.field_I.field_n = df.field_p;
+        this.field_I.field_n = IsaacPacketBuffer.field_p;
         this.field_F.field_n = l.field_b;
         this.field_E.a(new il(this.field_E), 112);
         this.field_K.a(new tn(this.field_K), 99);
@@ -252,8 +252,8 @@ final class ki extends hn implements fp, ng, ba {
         pc var5 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, dg.field_e.field_x, -1, 2147483647, true);
         this.field_C = new rb(var2, var5);
         this.field_C.field_n = "";
-        this.field_C.a(0, (byte) -100, jp.field_e);
-        this.field_C.a(1, (byte) -91, jp.field_e);
+        this.field_C.a(0, (byte) -100, Js5Transport.field_e);
+        this.field_C.a(1, (byte) -91, Js5Transport.field_e);
         this.field_C.field_t = (ca) (this);
         this.field_C.a((byte) 46, 46, -90 + this.field_p, var3);
         var3 = var3 + (this.field_C.field_o + 15);
@@ -321,7 +321,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -482,7 +482,7 @@ final class ki extends hn implements fp, ng, ba {
           super.a(-84, param1, param2, param3);
           this.field_J.field_x = this.h(19545);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -541,7 +541,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -581,7 +581,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -600,7 +600,7 @@ final class ki extends hn implements fp, ng, ba {
               discarded$2 = this.l(-1);
             }
           } else {
-            of.b((byte) 105);
+            VertexMesh.b((byte) 105);
           }
           if (param0 < -85) {
             return;
@@ -618,7 +618,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

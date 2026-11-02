@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la {
+final class ResourceArchive {
     private Object[] field_f;
-    private me field_a;
-    private fd field_e;
+    private ArchiveSource field_a;
+    private ArchiveIndex field_e;
     static Sprite field_j;
     static long field_g;
     static int[] field_h;
     private Object[][] field_d;
-    static pi field_c;
+    static AudioOutput field_c;
     static String field_b;
     private int field_l;
     static wl[] field_k;
@@ -17,7 +17,7 @@ final class la {
 
     private final synchronized boolean a(boolean param0, int param1, int param2) {
         if (!param0) {
-          la.d(126);
+          ResourceArchive.d(126);
         }
         if (!this.a(-12749)) {
           return false;
@@ -48,7 +48,7 @@ final class la {
         field_j = null;
         if (param0 < 98) {
           int[] var2 = (int[]) null;
-          la.a(10, 1, (int[]) null, 117, (int[]) null, -51, -19, -100, 65, 28);
+          ResourceArchive.a(10, 1, (int[]) null, 117, (int[]) null, -51, -19, -100, 65, 28);
         }
         field_h = null;
         field_b = null;
@@ -104,7 +104,7 @@ final class la {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class la {
             stackIn_39_0 = var11_ref_RuntimeException;
             stackIn_39_1 = new StringBuilder();
             stackIn_40_2 = (param3 != null);
-            throw rb.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SpriteState.a((byte) -117, var9.length, var9)).append(" ").append(SpriteState.a((byte) -117, var9.length - 2, var9)).append(" ").append(this.field_e.field_p[param2]).append(" ").append(this.field_e.field_o).toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SpriteState.a((byte) -117, var9.length, var9)).append(" ").append(SpriteState.a((byte) -117, var9.length - 2, var9)).append(" ").append(this.field_e.field_p[param2]).append(" ").append(this.field_e.field_o).toString());
           }
           if (this.field_i) {
             this.field_f[param2] = null;
@@ -370,7 +370,7 @@ final class la {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ final class la {
           return 0;
         }
         if (!param0) {
-          la.d(38);
+          ResourceArchive.d(38);
         }
         if (null != this.field_f[param1]) {
           return 100;
@@ -408,7 +408,7 @@ final class la {
 
     final synchronized boolean a(int param0) {
         if (param0 != -12749) {
-          this.field_e = (fd) (this.field_f[10]);
+          this.field_e = (ArchiveIndex) (this.field_f[10]);
         }
         if (this.field_e == null) {
           this.field_e = this.field_a.b((byte) -126);
@@ -482,7 +482,7 @@ final class la {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) (stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) (stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -541,7 +541,7 @@ final class la {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -603,7 +603,7 @@ final class la {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -675,7 +675,7 @@ final class la {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -712,7 +712,7 @@ final class la {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -761,7 +761,7 @@ final class la {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -822,7 +822,7 @@ final class la {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -862,7 +862,7 @@ final class la {
         return true;
     }
 
-    la(me param0, boolean param1, int param2) {
+    ResourceArchive(ArchiveSource param0, boolean param1, int param2) {
         this.field_e = null;
         try {
           if (param2 < 0 ||
@@ -873,7 +873,7 @@ final class la {
           this.field_a = param0;
           this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "la.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "la.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -926,7 +926,7 @@ final class la {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -950,7 +950,7 @@ final class la {
         var17 = Torquing.field_u;
         try {
           if (param8 != 65280) {
-            la.b(123);
+            ResourceArchive.b(123);
           }
           for (var10_int = -param6; var10_int < 0; var10_int++) {
             for (var11 = -param5; var11 < 0; var11++) {
@@ -988,7 +988,7 @@ final class la {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

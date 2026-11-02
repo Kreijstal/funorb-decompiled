@@ -102,7 +102,7 @@ class ro extends am {
           return ci.field_d;
         }
         if (!kb.field_a.c(-19375)) {
-          return la.field_b + " - " + kb.field_a.a((byte) -32) + "%";
+          return ResourceArchive.field_b + " - " + kb.field_a.a((byte) -32) + "%";
         }
         return pm.field_p;
     }
@@ -156,7 +156,7 @@ class ro extends am {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ class ro extends am {
         this.field_y = -1;
     }
 
-    final static boolean a(byte param0, la param1, la param2, la param3) {
+    final static boolean a(byte param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
@@ -221,7 +221,7 @@ class ro extends am {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

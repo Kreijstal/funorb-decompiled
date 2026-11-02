@@ -7,7 +7,7 @@ abstract class dp {
 
     abstract byte[] a(int param0);
 
-    final static af a(String param0, String param1, la param2, byte param3) {
+    final static af a(String param0, String param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         af stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -46,7 +46,7 @@ abstract class dp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

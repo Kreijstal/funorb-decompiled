@@ -38,7 +38,7 @@ final class so extends am {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        of var4_ref_of = null;
+        VertexMesh var4_ref_of = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -57,7 +57,7 @@ final class so extends am {
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        of var17 = null;
+        VertexMesh var17 = null;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -76,7 +76,7 @@ final class so extends am {
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_of = db.field_a[var3];
-            var4_ref_of.a(32767);
+            var4_ref_of.computeBounds(32767);
             tn.a(-105, var3);
             var5 = var4_ref_of.field_A + var4_ref_of.field_g >> 1;
             var6 = var4_ref_of.field_H + var4_ref_of.field_x >> 1;
@@ -95,7 +95,7 @@ final class so extends am {
           var6Lifetime1 = jh.field_z << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ah.a((byte) 127, var6Lifetime1) >> 8;
-          var9Lifetime1 = ao.b(2048, var6Lifetime1) >> 8;
+          var9Lifetime1 = SocketConnector.b(2048, var6Lifetime1) >> 8;
           if (n.field_t != -1 &&
             -1 != k.field_e) {
             var9Lifetime1 = -128;
@@ -136,7 +136,7 @@ final class so extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "so.A(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "so.A(" + param0 + ')');
         }
     }
 

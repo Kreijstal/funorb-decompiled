@@ -185,7 +185,7 @@ final class bd extends am {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -196,12 +196,12 @@ final class bd extends am {
     final static void b(int param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (of.field_m <= 20) {
+        if (VertexMesh.field_m <= 20) {
           ea.b(-19, 0);
           var1 = -12 % ((40 - param0) / 47);
           return;
         }
-        ea.b(-60, of.field_m - 20);
+        ea.b(-60, VertexMesh.field_m - 20);
         var1Lifetime1 = -12 % ((40 - param0) / 47);
     }
 

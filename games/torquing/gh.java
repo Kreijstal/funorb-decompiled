@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gh {
-    private la field_d;
-    private la field_e;
+    private ResourceArchive field_d;
+    private ResourceArchive field_e;
     static String field_b;
     private al field_c;
     static co field_a;
 
     final static void b(int param0) {
-        ah.field_c = sa.a((byte) 35);
+        ah.field_c = AudioService.a((byte) 35);
         dc.field_a = new ln();
         ea.a(true, (byte) 126, true);
         if (param0 != 1) {
@@ -22,7 +22,7 @@ final class gh {
         p var3 = (p) (this.field_c.a(param1 - 32891, (long)param0));
         byte[] var4Lifetime1;
         if (param1 != 32767) {
-          this.field_e = (la) null;
+          this.field_e = (ResourceArchive) null;
           if (var3 != null) {
             return var3;
           }

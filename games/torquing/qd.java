@@ -10,7 +10,7 @@ final class qd {
     static int[][] field_a;
     static long field_e;
     static String field_i;
-    static pi field_b;
+    static AudioOutput field_b;
 
     public static void c(int param0) {
         field_c = null;
@@ -77,7 +77,7 @@ final class qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

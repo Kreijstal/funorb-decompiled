@@ -4,7 +4,7 @@
 final class vd {
     static String field_d;
     static wl field_c;
-    static la field_e;
+    static ResourceArchive field_e;
     static int field_f;
     static String field_b;
     static String field_a;
@@ -91,7 +91,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "vd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "vd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -113,13 +113,13 @@ final class vd {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        df var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         qp var11 = null;
-        df var12 = null;
+        IsaacPacketBuffer var12 = null;
         int[] var13 = null;
         nh var14 = null;
         nh var15 = null;
@@ -156,7 +156,7 @@ final class vd {
           }
           if (var2 != 1) {
             if (2 != var2) {
-              nn.a("A1: " + me.a(-1), (Throwable) null, param0 - 37870);
+              nn.a("A1: " + ArchiveSource.a(-1), (Throwable) null, param0 - 37870);
               ih.b(true);
             } else {
               var15 = (nh) (to.field_q.b(param0 - 27912));
@@ -181,7 +181,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class vd {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

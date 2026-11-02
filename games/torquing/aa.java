@@ -29,7 +29,7 @@ abstract class aa extends im {
           this.a(this.field_T, -6938);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ abstract class aa extends im {
           if (param1 != 33) {
             return;
           }
-          if (this.field_S == gn.field_b) {
+          if (this.field_S == IsaacCipher.field_b) {
             this.b(this.field_N + 12 + this.field_V.field_o, (byte) -15, this.field_O, this.field_V.field_p + 12);
             this.field_P = 0;
             return;
@@ -65,7 +65,7 @@ abstract class aa extends im {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ abstract class aa extends im {
           this.field_N = param2;
           this.b((byte) -124, param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "aa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "aa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ abstract class aa extends im {
               }
               return super.h(param0 + 0);
             }
-            this.field_S = gn.field_b;
+            this.field_S = IsaacCipher.field_b;
             this.b(this.field_V.field_o + (12 + this.field_N), (byte) -15, this.field_O, 12 + this.field_V.field_p);
             this.field_T.field_D = 0;
             this.field_P = 0;
@@ -180,7 +180,7 @@ abstract class aa extends im {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

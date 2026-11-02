@@ -84,8 +84,8 @@ final class mo extends am {
 
     final static boolean a(int param0, boolean param1) {
         try {
-          df var4 = null;
-          df var5 = null;
+          IsaacPacketBuffer var4 = null;
+          IsaacPacketBuffer var5 = null;
           if (null == rh.field_b) {
             rh.field_b = u.field_t.a(ih.field_b, ea.field_t, param0 ^ -369);
           }
@@ -111,7 +111,7 @@ final class mo extends am {
               mm.field_d = !param1 ? -1 : -2;
               eb.field_f = !param1 ? -1 : -2;
               wk.field_h = !param1 ? -1 : -2;
-              IntrusiveNode.a(vg.field_j, 107, tp.field_i, wa.field_d, ao.field_d);
+              IntrusiveNode.a(vg.field_j, 107, tp.field_i, wa.field_d, SocketConnector.field_d);
               jd.a((byte) -95, -1);
             } catch (IOException iOException) {
               ef.field_a = wj.field_i;
@@ -272,7 +272,7 @@ final class mo extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "mo.E(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "mo.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class mo extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class mo extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

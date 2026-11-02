@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd {
+final class ArchiveIndex {
     int field_o;
     int[] field_h;
     int[] field_b;
@@ -64,7 +64,7 @@ final class fd {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -73,11 +73,11 @@ final class fd {
         }
     }
 
-    final static void a(boolean param0, la param1, int param2, la param3, la param4) {
+    final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           if (param2 != 0) {
             CharSequence var6 = (CharSequence) null;
-            fd.a(-33, (CharSequence) null);
+            ArchiveIndex.a(-33, (CharSequence) null);
           }
           qk.field_q = ci.a(-121, "");
           qk.field_q.a(84, false);
@@ -86,7 +86,7 @@ final class fd {
           bh.field_a = tp.field_h;
           kh.field_o = tp.field_h;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class fd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "fd.D(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "fd.D(" + param0 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class fd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -363,11 +363,11 @@ final class fd {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 
-    fd(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_o = SpriteState.a((byte) -117, param0.length, param0);
@@ -387,7 +387,7 @@ final class fd {
           }
           this.a(false, param0);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

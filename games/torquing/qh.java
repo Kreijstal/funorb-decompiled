@@ -55,7 +55,7 @@ final class qh {
                       if (qk.field_p < param3) {
                         RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                       } else {
-                        df.a(param7, param3, 26905, param2, param5, param4, param9, param8, param6, param0);
+                        IsaacPacketBuffer.a(param7, param3, 26905, param2, param5, param4, param9, param8, param6, param0);
                       }
                     }
                   }
@@ -116,7 +116,7 @@ final class qh {
                                       if (qk.field_p < param3) {
                                         RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                       } else {
-                                        df.a(param7, param3, 26905, param2, param5, param4, param9, param8, param6, param0);
+                                        IsaacPacketBuffer.a(param7, param3, 26905, param2, param5, param4, param9, param8, param6, param0);
                                       }
                                     }
                                   }

@@ -26,7 +26,7 @@ final class IterableNodeHashTable implements Iterable {
           node.previous.next = node;
           node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + key + ',' + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vl.C(" + key + ',' + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class kb implements WidgetRenderer {
     static boolean field_h;
     static int field_b;
     static db field_g;
-    static la field_a;
+    static ResourceArchive field_a;
     static String field_c;
     static PcmStreamMixer field_d;
     static int[][] field_e;
@@ -62,13 +62,13 @@ final class kb implements WidgetRenderer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final static int[] a(byte param0) {
         if (param0 > -65) {
-          field_a = (la) null;
+          field_a = (ResourceArchive) null;
           return new int[8];
         }
         return new int[8];

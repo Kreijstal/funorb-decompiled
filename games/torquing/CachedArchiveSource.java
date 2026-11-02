@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends me {
+final class CachedArchiveSource extends ArchiveSource {
     private pb field_k;
     private nk field_i;
     private byte[] field_f;
     private byte[] field_g;
-    private fd field_v;
+    private ArchiveIndex field_v;
     private int field_r;
-    private jp field_j;
+    private Js5Transport field_j;
     private co field_u;
     private int field_c;
     static IntrusiveDeque field_d;
@@ -24,7 +24,7 @@ final class gl extends me {
     private long field_o;
     private boolean field_m;
 
-    final fd b(byte param0) {
+    final ArchiveIndex b(byte param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -61,7 +61,7 @@ final class gl extends me {
             if (var2 == null) {
               throw new RuntimeException();
             }
-            this.field_v = new fd(var9, this.field_r, this.field_g);
+            this.field_v = new ArchiveIndex(var9, this.field_r, this.field_g);
             if (this.field_p != this.field_v.field_r) {
               throw new RuntimeException();
             }
@@ -81,7 +81,7 @@ final class gl extends me {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_v = new fd(var8, this.field_r, this.field_g);
+            this.field_v = new ArchiveIndex(var8, this.field_r, this.field_g);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
@@ -138,7 +138,7 @@ final class gl extends me {
 
     final int a(int param0, int param1) {
         if (param1 != -26954) {
-          gl.c(83);
+          CachedArchiveSource.c(83);
         }
         nk var3 = (nk) (this.field_t.a((long)param0, (byte) 101));
         if (var3 != null) {
@@ -504,7 +504,7 @@ final class gl extends me {
         }
     }
 
-    gl(int param0, pb param1, pb param2, jp param3, co param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, pb param1, pb param2, Js5Transport param3, co param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -578,7 +578,7 @@ final class gl extends me {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

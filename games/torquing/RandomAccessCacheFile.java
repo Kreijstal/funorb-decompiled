@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ue {
+final class RandomAccessCacheFile {
     private long field_e;
     private long field_d;
     static Sprite[] field_c;
@@ -28,7 +28,7 @@ final class ue {
           this.field_a.write(param3, param2, param0);
           this.field_d = this.field_d + (long)param0;
           if (param1 != 2) {
-            ue.a(-61, 120);
+            RandomAccessCacheFile.a(-61, 120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -41,7 +41,7 @@ final class ue {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var7), "ue.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var7), "ue.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -271,13 +271,13 @@ final class ue {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
         if (param0 != -16513) {
-          ue.a(28, -38, 8, -108, 43, -40, 73);
+          RandomAccessCacheFile.a(28, -38, 8, -108, 43, -40, 73);
         }
         sh.b(0);
     }
@@ -295,7 +295,7 @@ final class ue {
         return this.field_a.length();
     }
 
-    ue(File param0, String param1, long param2) throws IOException {
+    RandomAccessCacheFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -315,7 +315,7 @@ final class ue {
           }
           this.field_a.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

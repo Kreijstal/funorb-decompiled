@@ -57,7 +57,7 @@ final class dq {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -118,8 +118,8 @@ final class dq {
           var6.field_f = 0;
           var7 = new se(var4, true);
           var7.field_f = 0;
-          var7.a(0, gj.a(true, 8947848));
-          var7.a(1, 4).a(-2, gj.a(true, 11184810)).a((byte) 119, 2236962);
+          var7.a(0, ProxySocketConnector.a(true, 8947848));
+          var7.a(1, 4).a(-2, ProxySocketConnector.a(true, 11184810)).a((byte) 119, 2236962);
           this.field_i = (WidgetRenderer) ((Object) new oj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ld(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new rn(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -157,7 +157,7 @@ final class dq {
           var20 = new se(var4, true);
           var20.a((byte) -57, var13);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "dq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "dq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class dq {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class dq {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

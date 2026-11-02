@@ -14,7 +14,7 @@ final class il extends gf {
         field_p = null;
         if (param0 > -111) {
           String var2 = (String) null;
-          il.a((String) null, (la) null, (String) null, (byte) 10);
+          il.a((String) null, (ResourceArchive) null, (String) null, (byte) 10);
         }
         field_o = null;
         field_m = (int[][]) null;
@@ -35,7 +35,7 @@ final class il extends gf {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = fd.a(0, var5);
+          var3 = ArchiveIndex.a(0, var5);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -70,7 +70,7 @@ final class il extends gf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class il extends gf {
         ip.field_c = hc.field_d[param1];
         if (param0 != 52) {
           String var3 = (String) null;
-          il.a((String) null, (la) null, (String) null, (byte) -45);
+          il.a((String) null, (ResourceArchive) null, (String) null, (byte) -45);
         }
         Torquing.field_w = in.field_a[param1];
         DelegatingCanvas.field_b = oc.field_a[param1];
@@ -96,7 +96,7 @@ final class il extends gf {
         this.field_n = false;
     }
 
-    final static String a(String param0, la param1, String param2, byte param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -139,7 +139,7 @@ final class il extends gf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class il extends gf {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        df var27 = null;
+        IsaacPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -192,10 +192,10 @@ final class il extends gf {
           var2 = var27.i((byte) -101);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(7088);
-            var4_ref_bm = (bm) (gl.field_d.b(0));
+            var4_ref_bm = (bm) (CachedArchiveSource.field_d.b(0));
             while (var4_ref_bm != null) {
               if (var4_ref_bm.field_s != var3) {
-                var4_ref_bm = (bm) (gl.field_d.f(-24059));
+                var4_ref_bm = (bm) (CachedArchiveSource.field_d.f(-24059));
                 continue;
               }
               break;
@@ -307,13 +307,13 @@ final class il extends gf {
             var6.unlink(0);
             return;
           }
-          nn.a("HS1: " + me.a(-1), (Throwable) null, param0 ^ 20837);
+          nn.a("HS1: " + ArchiveSource.a(-1), (Throwable) null, param0 ^ 20837);
           ih.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "il.D(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "il.D(" + param0 + ')');
         }
     }
 
@@ -346,7 +346,7 @@ final class il extends gf {
               this.field_n = var3.field_b;
               this.field_r = param1;
             } else {
-              stackIn_13_0 = gn.field_h;
+              stackIn_13_0 = IsaacCipher.field_h;
               return stackIn_13_0;
             }
           }
@@ -366,7 +366,7 @@ final class il extends gf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

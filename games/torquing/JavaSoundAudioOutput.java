@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj extends pi {
+final class JavaSoundAudioOutput extends AudioOutput {
     private javax.sound.sampled.AudioFormat field_y;
     private boolean field_x;
     private javax.sound.sampled.SourceDataLine field_v;
@@ -38,7 +38,7 @@ final class vj extends pi {
         return this.field_z - (this.field_v.available() >> (field_r ? 2 : 1));
     }
 
-    vj() {
+    JavaSoundAudioOutput() {
         this.field_x = false;
     }
 

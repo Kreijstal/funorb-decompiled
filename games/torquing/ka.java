@@ -163,8 +163,8 @@ final class ka extends IntrusiveNode {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            fd.field_k = new String[var4];
-            dk.a(dd.field_e, 0, fd.field_k, 0, var4);
+            ArchiveIndex.field_k = new String[var4];
+            dk.a(dd.field_e, 0, ArchiveIndex.field_k, 0, var4);
             ib.field_c = new String[-1 - var4 + var3_int];
             dk.a(dd.field_e, var4 + 1, ib.field_c, 0, -1 + var3_int - var4);
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 122, ff.a(new String[]{"<br><%0><br>"}, 0, k.field_f));
@@ -181,18 +181,18 @@ final class ka extends IntrusiveNode {
             }
             qh.field_b = new String[var4];
             dk.a(dd.field_e, 0, qh.field_b, 0, var4);
-            me.field_a = new String[var3_int - var4 - 1];
-            dk.a(dd.field_e, 1 + var4, me.field_a, 0, -1 + var3_int - var4);
-            if (fd.field_k.length < qh.field_b.length) {
+            ArchiveSource.field_a = new String[var3_int - var4 - 1];
+            dk.a(dd.field_e, 1 + var4, ArchiveSource.field_a, 0, -1 + var3_int - var4);
+            if (ArchiveIndex.field_k.length < qh.field_b.length) {
               stackIn_30_0 = qh.field_b.length;
             } else {
-              stackIn_30_0 = fd.field_k.length;
+              stackIn_30_0 = ArchiveIndex.field_k.length;
             }
             var5 = stackIn_30_0;
-            if (ib.field_c.length >= me.field_a.length) {
+            if (ib.field_c.length >= ArchiveSource.field_a.length) {
               stackIn_33_0 = ib.field_c.length;
             } else {
-              stackIn_33_0 = me.field_a.length;
+              stackIn_33_0 = ArchiveSource.field_a.length;
             }
             var6 = stackIn_33_0;
             var7 = var5 + (7 + var6);
@@ -208,7 +208,7 @@ final class ka extends IntrusiveNode {
             di.field_e[1] = 2;
             di.field_e[0] = 5;
             wh.field_z[5] = "";
-            wh.field_z[2] = gn.field_f;
+            wh.field_z[2] = IsaacCipher.field_f;
             mn.field_Z[3] = 1;
             wh.field_z[3] = fo.field_E;
             wh.field_z[4] = gp.field_Q;
@@ -227,8 +227,8 @@ final class ka extends IntrusiveNode {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_46_0 = wh.field_z;
               stackIn_46_1 = 7 + var5 + var8Lifetime3;
-              if (var8Lifetime3 < me.field_a.length) {
-                stackIn_47_2 = me.field_a[var8Lifetime3];
+              if (var8Lifetime3 < ArchiveSource.field_a.length) {
+                stackIn_47_2 = ArchiveSource.field_a[var8Lifetime3];
               } else {
                 stackIn_47_2 = "";
               }
@@ -249,7 +249,7 @@ final class ka extends IntrusiveNode {
             ka.a(true, '+');
           }
           if (2 == go.field_x) {
-            var10 = fd.field_k;
+            var10 = ArchiveIndex.field_k;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -309,7 +309,7 @@ final class ka extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "ka.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "ka.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -480,7 +480,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -529,7 +529,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

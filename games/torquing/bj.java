@@ -15,7 +15,7 @@ final class bj extends rb {
           int var5_int = 44 / ((-28 - param0) / 43);
           super.a(-88, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class bj extends rb {
         }
         var6 = this.field_I.a((byte) -88);
         if (IntrusiveNode.field_a != var6 &&
-          gn.field_h != var6) {
+          IsaacCipher.field_h != var6) {
           var25 = this.field_I.a(126);
           if (var25 == null) {
             var30 = this.field_J;
@@ -80,7 +80,7 @@ final class bj extends rb {
             var9 = this.field_w + param3;
             var10 = var37.a((UiWidget) (this), param2, -101) + (var37.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
             if (var6 != IntrusiveNode.field_a &&
-              var6 != gn.field_h) {
+              var6 != IsaacCipher.field_h) {
               if (var6 == so.field_u) {
                 var33 = wj.field_h[2];
                 var33.a(var9, -(var33.field_t >> 1) + var10, 256);
@@ -98,17 +98,17 @@ final class bj extends rb {
             var12 = var34.field_u << 1;
             if (this.field_G == null) {
               this.field_G = new Sprite(var11, var12);
-              tm.a((byte) 97, this.field_G);
+              GzipDecompressor.a((byte) 97, this.field_G);
             } else {
               if (var11 > this.field_G.field_s) {
                 this.field_G = new Sprite(var11, var12);
-                tm.a((byte) 97, this.field_G);
+                GzipDecompressor.a((byte) 97, this.field_G);
               } else {
                 if (var12 > this.field_G.field_t) {
                   this.field_G = new Sprite(var11, var12);
-                  tm.a((byte) 97, this.field_G);
+                  GzipDecompressor.a((byte) 97, this.field_G);
                 } else {
-                  tm.a((byte) 31, this.field_G);
+                  GzipDecompressor.a((byte) 31, this.field_G);
                   SoftwareRasterizer.b();
                 }
               }
@@ -128,7 +128,7 @@ final class bj extends rb {
           var9Lifetime2 = this.field_w + param3;
           var10Lifetime2 = var36.a((UiWidget) (this), param2, -101) + (var36.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
           if (var6 != IntrusiveNode.field_a &&
-            var6 != gn.field_h) {
+            var6 != IsaacCipher.field_h) {
             if (var6 == so.field_u) {
               var28 = wj.field_h[2];
               var28.a(var9Lifetime2, -(var28.field_t >> 1) + var10Lifetime2, 256);
@@ -147,18 +147,18 @@ final class bj extends rb {
           var12Lifetime2 = var29.field_u << 1;
           if (this.field_G == null) {
             this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
-            tm.a((byte) 97, this.field_G);
+            GzipDecompressor.a((byte) 97, this.field_G);
           } else {
             if (var11Lifetime2 > this.field_G.field_s) {
               this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
-              tm.a((byte) 97, this.field_G);
+              GzipDecompressor.a((byte) 97, this.field_G);
             } else {
               if (var12Lifetime2 <= this.field_G.field_t) {
-                tm.a((byte) 31, this.field_G);
+                GzipDecompressor.a((byte) 31, this.field_G);
                 SoftwareRasterizer.b();
               } else {
                 this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
-                tm.a((byte) 97, this.field_G);
+                GzipDecompressor.a((byte) 97, this.field_G);
               }
             }
           }
@@ -178,7 +178,7 @@ final class bj extends rb {
         var9Lifetime1 = this.field_w + param3;
         var10Lifetime1 = var35.a((UiWidget) (this), param2, -101) + (var35.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
         if (var6Lifetime1 != IntrusiveNode.field_a &&
-          var6Lifetime1 != gn.field_h) {
+          var6Lifetime1 != IsaacCipher.field_h) {
           if (var6Lifetime1 == so.field_u) {
             var21 = wj.field_h[2];
             var21.a(var9Lifetime1, -(var21.field_t >> 1) + var10Lifetime1, 256);
@@ -197,18 +197,18 @@ final class bj extends rb {
         var12Lifetime1 = var22.field_u << 1;
         if (this.field_G == null) {
           this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
-          tm.a((byte) 97, this.field_G);
+          GzipDecompressor.a((byte) 97, this.field_G);
         } else {
           if (var11Lifetime1 > this.field_G.field_s) {
             this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
-            tm.a((byte) 97, this.field_G);
+            GzipDecompressor.a((byte) 97, this.field_G);
           } else {
             if (var12Lifetime1 <= this.field_G.field_t) {
-              tm.a((byte) 31, this.field_G);
+              GzipDecompressor.a((byte) 31, this.field_G);
               SoftwareRasterizer.b();
             } else {
               this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
-              tm.a((byte) 97, this.field_G);
+              GzipDecompressor.a((byte) 97, this.field_G);
             }
           }
         }
@@ -235,7 +235,7 @@ final class bj extends rb {
           this.field_I = param0;
           this.a((byte) 125, param2, param3, param5, param4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class bj extends rb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

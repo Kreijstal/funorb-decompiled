@@ -14,7 +14,7 @@ final class fq extends jh {
           this.field_D = 256;
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class fq extends jh {
         }
         if (param1 <= -7) {
           var5 = new Sprite(this.field_C.field_p, this.field_C.field_o);
-          tm.a((byte) 34, var5);
+          GzipDecompressor.a((byte) 34, var5);
           this.field_C.a(param0, (byte) -61, 0, 0);
           r.a(122);
           var5.e(param3 + this.field_w, this.field_k + param2, this.field_D);
@@ -63,11 +63,11 @@ final class fq extends jh {
           }
           tb.field_l.a(param2, param1, on.field_c * param3 / 160);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fq.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fq.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static sm[] a(la param0, int param1, int param2, int param3) {
+    final static sm[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         sm[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -93,7 +93,7 @@ final class fq extends jh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class fq extends jh {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 

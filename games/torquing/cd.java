@@ -55,7 +55,7 @@ final class cd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class cd {
             return true;
           }
           var3_int = 89 / ((param1 - 59) / 33);
-          if (tm.a(true, param0, param2)) {
+          if (GzipDecompressor.a(true, param0, param2)) {
             return false;
           }
           if (rh.a(true, param2, param0)) {
@@ -120,7 +120,7 @@ final class cd {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

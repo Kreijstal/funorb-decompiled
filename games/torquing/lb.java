@@ -30,14 +30,14 @@ final class lb extends nk {
         Sprite[] var5 = null;
         try {
           wp.field_v = param2;
-          ao.field_a = param1;
+          SocketConnector.field_a = param1;
           wp.field_v[4] = null;
-          var5 = ao.field_a;
+          var5 = SocketConnector.field_a;
           Sprite[] var4 = var5;
           var5[param3] = null;
           bo.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "lb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "lb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

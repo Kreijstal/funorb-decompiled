@@ -405,7 +405,7 @@ final class hm extends am {
           if (0 < var6 &&
             var5 > 0) {
             var7Lifetime3 = param2 + param1 * SoftwareRasterizer.field_j;
-            la.a(0, var4_int, param3.field_y, -var6 + SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
+            ResourceArchive.a(0, var4_int, param3.field_y, -var6 + SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
             return;
           }
           return;
@@ -419,7 +419,7 @@ final class hm extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -430,7 +430,7 @@ final class hm extends am {
           }
           wk.a(param3, param2, param6, param9, param1, param8, param10, param0, 112, param11, param5, param4, param1, param10, param4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "hm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 
@@ -464,7 +464,7 @@ final class hm extends am {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -507,7 +507,7 @@ final class hm extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

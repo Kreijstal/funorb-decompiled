@@ -23,11 +23,11 @@ final class c {
             vo.field_f[1] = new mh(param0, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "c.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "c.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static String a(int param0, String param1, String param2, String param3, la param4) {
+    final static String a(int param0, String param1, String param2, String param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -81,7 +81,7 @@ final class c {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class c {
 
     final static ll a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        la var3 = null;
+        ResourceArchive var3 = null;
         ll stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -104,8 +104,8 @@ final class c {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 11) {
-            var3 = (la) null;
-            c.a(18, (String) null, (String) null, (String) null, (la) null);
+            var3 = (ResourceArchive) null;
+            c.a(18, (String) null, (String) null, (String) null, (ResourceArchive) null);
           }
           stackIn_3_0 = new ll(param1.g(65536), param1.g(65536), param1.g(param0 ^ 65547), param1.g(65536), param1.e((byte) 62), param1.e((byte) 62), param1.i((byte) -101));
           return stackIn_3_0;
@@ -119,7 +119,7 @@ final class c {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

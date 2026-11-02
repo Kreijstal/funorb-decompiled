@@ -51,7 +51,7 @@ final class kk extends PcmStream {
         int var5 = 0;
         var6 = Torquing.field_u;
         try {
-          if (!pi.field_r) {
+          if (!AudioOutput.field_r) {
             stackIn_4_0 = param2;
           } else {
             stackIn_4_0 = param2 << 1;
@@ -64,7 +64,7 @@ final class kk extends PcmStream {
             this.field_p = new int[var4_int];
           }
           this.field_r.b(this.field_p, 0, param2);
-          if (pi.field_r) {
+          if (AudioOutput.field_r) {
             param1 = param1 << 1;
           }
           var5 = 0;
@@ -86,7 +86,7 @@ final class kk extends PcmStream {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

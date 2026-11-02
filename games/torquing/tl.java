@@ -37,7 +37,7 @@ final class tl extends eh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class tl extends eh {
           if (param1 != 19) {
             return;
           }
-          var13 = gj.field_i;
+          var13 = ProxySocketConnector.field_i;
           var12 = var13;
           var11 = var12;
           var3 = var11;
@@ -237,8 +237,8 @@ final class tl extends eh {
           if (0 == var9) {
             param0.g(param1 ^ 111);
             th.a(100, th.field_F[18]);
-            la.field_k[11].a(false);
-            jh.a(la.field_k[11], 0);
+            ResourceArchive.field_k[11].a(false);
+            jh.a(ResourceArchive.field_k[11], 0);
           } else {
             if (var9 != 1) {
               if (var9 == 2) {
@@ -307,8 +307,8 @@ final class tl extends eh {
                             param0.a((byte) -68, MouseWheelInput.field_c[this.field_r], 1092, 72);
                             param0.field_i = MouseWheelInput.field_c[this.field_r];
                             param0.field_z = param0.field_z | 1 << param0.field_d.field_s;
-                            la.field_k[10].g();
-                            jh.a(la.field_k[10], 0);
+                            ResourceArchive.field_k[10].g();
+                            jh.a(ResourceArchive.field_k[10], 0);
                             return;
                           }
                           param0.field_e.a((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));
@@ -362,7 +362,7 @@ final class tl extends eh {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class tl extends eh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

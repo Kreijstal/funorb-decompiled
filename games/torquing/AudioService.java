@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class sa implements Runnable {
+final class AudioService implements Runnable {
     volatile boolean field_f;
     PlatformTaskDispatcher field_b;
-    volatile pi[] field_c;
+    volatile AudioOutput[] field_c;
     static String field_a;
     static Random field_d;
     volatile boolean field_e;
 
     public final void run() {
         int var1_int = 0;
-        pi var2 = null;
+        AudioOutput var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -51,7 +51,7 @@ final class sa implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           this.field_e = false;
-          throw sa.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw AudioService.<RuntimeException>$cfr$sneakyThrow(var3);
         }
         this.field_e = false;
     }
@@ -72,7 +72,7 @@ final class sa implements Runnable {
         if (param0 == 35) {
           return lk.field_v;
         }
-        sa.a(true);
+        AudioService.a(true);
         return lk.field_v;
     }
 
@@ -85,7 +85,7 @@ final class sa implements Runnable {
         try {
           param0.addFocusListener(ef.field_b);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -96,12 +96,12 @@ final class sa implements Runnable {
             field_d = (Random) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    sa() {
-        this.field_c = new pi[2];
+    AudioService() {
+        this.field_c = new AudioOutput[2];
         this.field_f = false;
         this.field_e = false;
     }

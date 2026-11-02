@@ -4,7 +4,7 @@
 final class wi {
     static int[] field_a;
 
-    final static Sprite a(int param0, byte param1, la param2, int param3) {
+    final static Sprite a(int param0, byte param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Sprite stackIn_4_0 = null;
@@ -29,7 +29,7 @@ final class wi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class wi {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "wi.D(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "wi.D(" + param0 + ')');
         }
     }
 

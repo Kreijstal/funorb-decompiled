@@ -47,7 +47,7 @@ final class wp extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class wp extends am {
         if (param0 >= -51) {
           return (da) null;
         }
-        return new da(of.d((byte) -77), sd.b(2));
+        return new da(VertexMesh.d((byte) -77), sd.b(2));
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, Sprite[] param5) {
@@ -105,7 +105,7 @@ final class wp extends am {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

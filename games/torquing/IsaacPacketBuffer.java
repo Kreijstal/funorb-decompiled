@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df extends PacketBuffer {
+final class IsaacPacketBuffer extends PacketBuffer {
     static int field_u;
     static ha field_q;
-    private gn field_t;
+    private IsaacCipher field_t;
     private int field_s;
     static cd field_r;
     static String field_p;
 
     final void a(byte param0, int[] param1) {
         try {
-          this.field_t = new gn(param1);
+          this.field_t = new IsaacCipher(param1);
           if (param0 >= -110) {
             byte[] var4 = (byte[]) null;
             this.b(42, -84, (byte[]) null, 89);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "df.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "df.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class df extends PacketBuffer {
         return -70;
     }
 
-    df(byte[] param0) {
+    IsaacPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -57,7 +57,7 @@ final class df extends PacketBuffer {
           ob.field_b = param2;
           int var3_int = -112 % ((-29 - param1) / 32);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "df.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "df.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,24 +78,24 @@ final class df extends PacketBuffer {
         while (var4 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((la.field_h[var4] & this.payload[incrementValue$0]) << param0 - var4);
+          var5 = var5 + ((ResourceArchive.field_h[var4] & this.payload[incrementValue$0]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         int var6 = -111 % ((param1 + 4) / 53);
         if (param0 != var4) {
-          var5 = var5 + (this.payload[var3] >> -param0 + var4 & la.field_h[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & ResourceArchive.field_h[param0]);
         } else {
-          var5 = var5 + (this.payload[var3] & la.field_h[var4]);
+          var5 = var5 + (this.payload[var3] & ResourceArchive.field_h[var4]);
         }
         return var5;
     }
 
-    df(int param0) {
+    IsaacPacketBuffer(int param0) {
         super(param0);
     }
 
-    final static boolean a(df param0, int param1) {
+    final static boolean a(IsaacPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -118,7 +118,7 @@ final class df extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class df extends PacketBuffer {
         var6 = Torquing.field_u;
         try {
           if (param1 != 8) {
-            this.field_t = (gn) null;
+            this.field_t = (IsaacCipher) null;
           }
           for (var5_int = 0; param3 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
@@ -152,7 +152,7 @@ final class df extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class df extends PacketBuffer {
         var35 = Torquing.field_u;
         try {
           if (param2 != 26905) {
-            df.a(0, -73, 61, -97, -92, -87, 106, -79, 59, 91);
+            IsaacPacketBuffer.a(0, -73, 61, -97, -92, -87, 106, -79, 59, 91);
           }
           if (param3 == param4 &&
             param5 == param8 &&
@@ -230,7 +230,7 @@ final class df extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var10), "df.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var10), "df.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class df extends PacketBuffer {
             param1[11] = param1[11] * var4;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "df.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "df.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

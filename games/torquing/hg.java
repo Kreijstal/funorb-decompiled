@@ -11,7 +11,7 @@ final class hg {
     static boolean field_c;
     static gq field_f;
 
-    final static void a(byte param0, la param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RuntimeException stackIn_354_0 = null;
         StringBuilder stackIn_354_1 = null;
         String stackIn_355_2 = null;
@@ -403,7 +403,7 @@ final class hg {
           }
           var2Lifetime70 = da.a((byte) -93, "torquing_bonus");
           if (var2Lifetime70 != null) {
-            fh.field_s = SecondaryNodeDeque.a(var2Lifetime70, false);
+            SocketJs5Transport.field_s = SecondaryNodeDeque.a(var2Lifetime70, false);
           }
           var2Lifetime71 = da.a((byte) 111, "world_level");
           if (var2Lifetime71 != null) {
@@ -533,7 +533,7 @@ final class hg {
           } else {
             stackIn_355_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
         }
     }
 
@@ -547,7 +547,7 @@ final class hg {
         try {
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ')');
         }
     }
 
@@ -601,7 +601,7 @@ final class hg {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

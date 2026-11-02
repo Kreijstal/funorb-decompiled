@@ -67,7 +67,7 @@ final class wh extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class wh extends am {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        df var10 = null;
+        IsaacPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = Torquing.field_u;
@@ -206,13 +206,13 @@ final class wh extends am {
             ih.b(true);
             return;
           }
-          nn.a("LR1: " + me.a(-1), (Throwable) null, -9958);
+          nn.a("LR1: " + ArchiveSource.a(-1), (Throwable) null, -9958);
           ih.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "wh.E(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "wh.E(" + param0 + ')');
         }
     }
 
@@ -293,7 +293,7 @@ final class wh extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "wh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "wh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ final class wh extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

@@ -31,8 +31,8 @@ final class sc extends hn implements fp, ng {
           var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
           this.field_D = new rb(var7, var4);
           this.field_D.field_n = "";
-          this.field_D.a(0, (byte) -115, jp.field_e);
-          this.field_D.a(1, (byte) -93, jp.field_e);
+          this.field_D.a(0, (byte) -115, Js5Transport.field_e);
+          this.field_D.a(1, (byte) -93, Js5Transport.field_e);
           this.field_D.field_p = -40 + this.field_p;
           this.field_D.field_t = (ca) (this);
           this.field_D.a((byte) 46, 26, this.field_p - 40, var3);
@@ -45,7 +45,7 @@ final class sc extends hn implements fp, ng {
           this.a(this.field_E, -6938);
           this.a((byte) -49, 0, 0, var3 - (-55 - var5), 300);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -77,10 +77,10 @@ final class sc extends hn implements fp, ng {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (of.field_u == null) {
-                of.field_u = k.field_d.createImage(304, 34);
+              if (VertexMesh.field_u == null) {
+                VertexMesh.field_u = k.field_d.createImage(304, 34);
               }
-              var10 = of.field_u.getGraphics();
+              var10 = VertexMesh.field_u.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param0 * 3, 30);
@@ -91,7 +91,7 @@ final class sc extends hn implements fp, ng {
               var10.setFont(vb.field_d);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(of.field_u, wk.field_d / 2 - 152, -18 + MouseInputHandler.field_a / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(VertexMesh.field_u, wk.field_d / 2 - 152, -18 + MouseInputHandler.field_a / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -136,7 +136,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
     private SecondaryNodeDeque field_a;
-    static tm field_d;
+    static GzipDecompressor field_d;
     private DualLinkNode field_c;
     private DualLinkNode field_b;
 
@@ -21,7 +21,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           param2[2 + param1] = param2[2 + param1] / var3_int;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "wo.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wo.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,8 +75,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (!ff.field_a) {
           throw new IllegalStateException();
         }
-        if (null != gn.field_m) {
-          gn.field_m.b(true);
+        if (null != IsaacCipher.field_m) {
+          IsaacCipher.field_m.b(true);
         }
         String var1 = kf.a(17241);
         un.field_k = new pe(var1, (String) null, true, false, false);
@@ -86,7 +86,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           hb.field_x.j(0);
           return;
         }
-        field_d = (tm) null;
+        field_d = (GzipDecompressor) null;
         hb.field_x.j(0);
     }
 
@@ -130,7 +130,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -141,11 +141,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_c = this.field_a.field_a.field_p;
           this.field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_d = new tm();
+        field_d = new GzipDecompressor();
     }
 }

@@ -3,7 +3,7 @@
  */
 final class ae extends w {
     int field_kb;
-    static la field_mb;
+    static ResourceArchive field_mb;
     String field_ob;
     String field_jb;
     static IntrusiveDeque field_nb;
@@ -26,7 +26,7 @@ final class ae extends w {
           ni.a((byte) 81, param0, var3, var4, var2);
           int var6 = 114 % ((param1 - 66) / 33);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ae.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ae.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

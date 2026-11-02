@@ -6,7 +6,7 @@ final class bp {
     static IntrusiveDeque field_a;
     static int field_d;
     static int[] field_b;
-    static la field_c;
+    static ResourceArchive field_c;
     static int field_e;
 
     public final String toString() {
@@ -14,8 +14,8 @@ final class bp {
     }
 
     final static void a(wc param0, int param1, int param2) {
-        df var7 = null;
-        df var8 = null;
+        IsaacPacketBuffer var7 = null;
+        IsaacPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Torquing.field_u;
@@ -40,7 +40,7 @@ final class bp {
           var8.a(var4, true);
           var8.c((byte) 48, var8.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

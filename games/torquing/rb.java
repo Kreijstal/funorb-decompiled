@@ -13,7 +13,7 @@ class rb extends lg {
         try {
           this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ class rb extends lg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ class rb extends lg {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,7 +158,7 @@ class rb extends lg {
             this.field_F = this.a(var6, false, var7);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "rb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "rb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ class rb extends lg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -313,13 +313,13 @@ class rb extends lg {
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapThrowable(Throwable cause, String context) {
         ClientException var2 = null;
-        if (!(param0 instanceof ClientException)) {
-          var2 = new ClientException(param0, param1);
+        if (!(cause instanceof ClientException)) {
+          var2 = new ClientException(cause, context);
         } else {
-          var2 = (ClientException) ((Object) param0);
-          var2.field_b = var2.field_b + ' ' + param1;
+          var2 = (ClientException) ((Object) cause);
+          var2.field_b = var2.field_b + ' ' + context;
         }
         return var2;
     }

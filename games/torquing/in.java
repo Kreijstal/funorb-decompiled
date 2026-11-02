@@ -18,19 +18,19 @@ final class in {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            kj.field_d = new df(param5);
-            wa.field_d = new df(param12);
+            kj.field_d = new IsaacPacketBuffer(param5);
+            wa.field_d = new IsaacPacketBuffer(param12);
             tp.field_i = param3;
             sf.field_a = param13;
             if (param10 != 0) {
               in.a(116, false, (String) null, -116, -96, -98, 5, (PlatformTaskDispatcher) null, false, -9, 28, 96L, 103, -78);
             }
-            ao.field_d = param0;
+            SocketConnector.field_d = param0;
             vg.field_j = param4;
             ea.field_t = param9;
             rj.field_w = param6;
             ql.field_t = param8;
-            ao.field_b = param1;
+            SocketConnector.field_b = param1;
             u.field_t = param7;
             ih.field_b = param2;
             MouseInputHandler.field_f = param11;
@@ -61,7 +61,7 @@ final class in {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

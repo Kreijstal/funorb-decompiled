@@ -218,7 +218,7 @@ final class tc {
         return var3;
     }
 
-    final static tc a(la param0, int param1, int param2) {
+    final static tc a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
@@ -271,7 +271,7 @@ final class tc {
         return var2;
     }
 
-    final static tc a(la param0, int param1) {
+    final static tc a(ResourceArchive param0, int param1) {
         byte[] var2 = param0.b(param1, (byte) 95);
         if (var2 == null) {
           return null;

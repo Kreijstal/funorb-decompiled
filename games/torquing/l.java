@@ -8,7 +8,7 @@ final class l {
     static byte[][][] field_d;
 
     final static void a(int param0, qp param1, int param2) {
-        df var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = wa.field_d;
@@ -25,7 +25,7 @@ final class l {
           var5.a(var4, true);
           var5.c((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -114,16 +114,16 @@ final class l {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     final static void a(ni param0, int param1, int param2) {
-        df var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = wa.field_d;
-          df var3 = var5;
+          IsaacPacketBuffer var3 = var5;
           var5.f(127, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -139,7 +139,7 @@ final class l {
           param0.field_k = var5.c((byte) -88);
           var5.c((byte) 48, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "l.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "l.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

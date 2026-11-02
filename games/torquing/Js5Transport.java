@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jp {
+abstract class Js5Transport {
     static String[] field_n;
     gb field_a;
     gb field_h;
@@ -100,7 +100,7 @@ abstract class jp {
 
     abstract void b(byte param0);
 
-    jp() {
+    Js5Transport() {
         this.field_a = new gb();
         this.field_h = new gb();
         this.field_m = new gb();

@@ -60,7 +60,7 @@ final class ik extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
         }
     }
 

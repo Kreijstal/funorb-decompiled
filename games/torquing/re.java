@@ -57,14 +57,14 @@ final class re {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
-        la var5 = null;
+        ResourceArchive var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -96,26 +96,26 @@ final class re {
             vp.field_I = param0 - 1;
           }
           if (param1 != 0) {
-            var5 = (la) null;
-            re.a((la) null, false, (la) null, (la) null);
+            var5 = (ResourceArchive) null;
+            re.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "re.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "re.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(la param0, boolean param1, la param2, la param3) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         int var11_int = 0;
         String stackIn_3_0 = null;
-        la stackIn_3_1 = null;
-        la stackIn_3_2 = null;
+        ResourceArchive stackIn_3_1 = null;
+        ResourceArchive stackIn_3_2 = null;
         boolean stackIn_4_3 = false;
         String stackIn_6_0 = null;
-        la stackIn_6_1 = null;
-        la stackIn_6_2 = null;
+        ResourceArchive stackIn_6_1 = null;
+        ResourceArchive stackIn_6_2 = null;
         boolean stackIn_7_3 = false;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -151,14 +151,14 @@ final class re {
           dg.field_g = pb.a("button", -1, "commonui", param3);
           wj.field_h = jb.a(0, param3, "validation", "commonui");
           stackIn_3_0 = "commonui";
-          stackIn_3_1 = (la) (param3);
-          stackIn_3_2 = (la) (param0);
+          stackIn_3_1 = (ResourceArchive) (param3);
+          stackIn_3_2 = (ResourceArchive) (param0);
           stackIn_4_3 = !(param1);
           sp.field_R = (uc) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
           dg.field_e = (uc) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
           stackIn_6_0 = "commonui";
-          stackIn_6_1 = (la) (param3);
-          stackIn_6_2 = (la) (param0);
+          stackIn_6_1 = (ResourceArchive) (param3);
+          stackIn_6_2 = (ResourceArchive) (param0);
           stackIn_7_3 = !(param1);
           pe.field_E = (uc) ((Object) dc.a(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_7_3, "arezzo14bold"));
           if (!param1) {
@@ -228,7 +228,7 @@ final class re {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class re {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class re {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

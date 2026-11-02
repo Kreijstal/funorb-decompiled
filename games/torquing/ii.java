@@ -13,7 +13,7 @@ final class ii extends IntrusiveNode {
 
     final static void a(int param0, int param1, qk param2) {
         int var4 = 0;
-        df var5 = wa.field_d;
+        IsaacPacketBuffer var5 = wa.field_d;
         var5.f(95, param1);
         if (param0 != 32) {
           return;
@@ -31,7 +31,7 @@ final class ii extends IntrusiveNode {
           var5.a(var4, true);
           var5.c((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ii extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

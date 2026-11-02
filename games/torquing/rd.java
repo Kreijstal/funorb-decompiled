@@ -11,7 +11,7 @@ final class rd extends am {
     static String field_t;
     private int field_w;
     private int field_s;
-    static la field_z;
+    static ResourceArchive field_z;
     static java.awt.Color field_A;
     static String field_v;
 
@@ -43,7 +43,7 @@ final class rd extends am {
         try {
           var5_int = 0;
           if (param1 != 10580) {
-            field_z = (la) null;
+            field_z = (ResourceArchive) null;
           }
           var6 = -1;
           for (var7 = 1; var7 < param3.length(); var7++) {
@@ -86,7 +86,7 @@ final class rd extends am {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class rd extends am {
                 var3 = Runtime.getRuntime();
                 var5 = (Object[]) null;
                 var4 = (Long) (var2.invoke((Object) (var3), (Object[]) null));
-                df.field_u = 1 + (int)(var4.longValue() / 1048576L);
+                IsaacPacketBuffer.field_u = 1 + (int)(var4.longValue() / 1048576L);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,7 +174,7 @@ final class rd extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

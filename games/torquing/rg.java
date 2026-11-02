@@ -5,7 +5,7 @@ import java.util.*;
 
 final class rg extends am {
     private int field_B;
-    static la field_v;
+    static ResourceArchive field_v;
     private int field_A;
     private int field_s;
     private int field_w;
@@ -443,7 +443,7 @@ final class rg extends am {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class rg extends am {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -545,7 +545,7 @@ final class rg extends am {
         field_v = null;
     }
 
-    final static void a(int param0, int param1, of param2, int param3, byte param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, VertexMesh param2, int param3, byte param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -591,7 +591,7 @@ final class rg extends am {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        of var45 = null;
+        VertexMesh var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -621,7 +621,7 @@ final class rg extends am {
           var65 = new int[param2.field_C];
           var63 = m.field_c;
           var62 = pm.field_s;
-          var64 = tm.field_e;
+          var64 = GzipDecompressor.field_e;
           for (var13 = 0; param2.field_C > var13; var13++) {
             var14 = var62[var13] * param7 + (var63[var13] * param0 + param3 * var64[var13]) >> 8;
             if (var14 < 0) {
@@ -650,7 +650,7 @@ final class rg extends am {
             var65[var13] = var15Lifetime2;
           }
           if (param4 < 120) {
-            field_v = (la) null;
+            field_v = (ResourceArchive) null;
           }
           var44 = 0;
           var13Lifetime1 = var44;
@@ -744,7 +744,7 @@ final class rg extends am {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

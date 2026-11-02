@@ -160,14 +160,14 @@ class tk extends lg {
                         var18 = -1 + (be.field_p - var17);
                       }
                       if (var17 >= 0) {
-                        tm.a(var18, var16Lifetime2 + var17, -98, param6, param2);
+                        GzipDecompressor.a(var18, var16Lifetime2 + var17, -98, param6, param2);
                       } else {
-                        tm.a(var18 + var17, var16Lifetime2, -114, param6, param2);
+                        GzipDecompressor.a(var18 + var17, var16Lifetime2, -114, param6, param2);
                       }
                     } else {
                       if (var17 >= 0 &&
                         var17 < be.field_p) {
-                        tm.a(var18, var17 + var16Lifetime2, -104, param6, param2);
+                        GzipDecompressor.a(var18, var17 + var16Lifetime2, -104, param6, param2);
                       }
                     }
                   }
@@ -236,16 +236,16 @@ class tk extends lg {
                 if (0 == var17Lifetime1) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < be.field_p) {
-                    tm.a(var17Lifetime1, var16Lifetime1 + var15Lifetime1, -98, param6, param2);
+                    GzipDecompressor.a(var17Lifetime1, var16Lifetime1 + var15Lifetime1, -98, param6, param2);
                   }
                 } else {
                   if (var17Lifetime1 + var16Lifetime1 >= be.field_p) {
                     var17Lifetime1 = be.field_p - var16Lifetime1 - 1;
                   }
                   if (0 <= var16Lifetime1) {
-                    tm.a(var17Lifetime1, var16Lifetime1 + var15Lifetime1, -114, param6, param2);
+                    GzipDecompressor.a(var17Lifetime1, var16Lifetime1 + var15Lifetime1, -114, param6, param2);
                   } else {
-                    tm.a(var17Lifetime1 + var16Lifetime1, var15Lifetime1, -123, param6, param2);
+                    GzipDecompressor.a(var17Lifetime1 + var16Lifetime1, var15Lifetime1, -123, param6, param2);
                   }
                 }
               }
@@ -270,7 +270,7 @@ class tk extends lg {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ class tk extends lg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ class tk extends lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "tk.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "tk.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ class tk extends lg {
           this.field_J = true;
           this.field_H = km.b(-1);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -425,7 +425,7 @@ class tk extends lg {
           }
           int var5_int = -127 / ((-28 - param0) / 43);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "tk.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tk.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -563,7 +563,7 @@ class tk extends lg {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -669,7 +669,7 @@ class tk extends lg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -735,7 +735,7 @@ class tk extends lg {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -67,7 +67,7 @@ final class cg {
         this.field_c = param0.readUnsignedShort(7088);
     }
 
-    final static cg a(la param0, String param1, String param2) {
+    final static cg a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(-113, param2, param1);
         if (var3 == null) {
           return null;
@@ -75,7 +75,7 @@ final class cg {
         return new cg(new PacketBuffer(var3));
     }
 
-    final static cg a(la param0, int param1, int param2) {
+    final static cg a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;

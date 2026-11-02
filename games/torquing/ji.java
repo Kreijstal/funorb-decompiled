@@ -52,9 +52,9 @@ final class ji {
           if (SoftwareRasterizer.field_j < 6 + var9Lifetime1 + var6_int) {
             var9Lifetime1 = SoftwareRasterizer.field_j - var6_int - 6;
           }
-          var10 = 32 - param1.field_s + ue.field_h;
+          var10 = 32 - param1.field_s + RandomAccessCacheFile.field_h;
           if (var7 + var10 + 6 > SoftwareRasterizer.field_d) {
-            var10 = ue.field_h + (-var7 - 6);
+            var10 = RandomAccessCacheFile.field_h + (-var7 - 6);
           }
           SoftwareRasterizer.c(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
           SoftwareRasterizer.d(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
@@ -76,7 +76,7 @@ final class ji {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class ji {
           param0.field_A[param0.field_g] = (short)-32768;
           param0.field_g = param0.field_g + 1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class ji {
           if (11 == op.field_i) {
             oc.a((byte) 105);
           }
-          fh.a(aj.field_E, (byte) -98, mh.field_g, ob.field_b);
+          SocketJs5Transport.a(aj.field_E, (byte) -98, mh.field_g, ob.field_b);
           ni.a(param1, 0, 0, 122);
           if (param0 != -99) {
             field_a = (int[]) null;
@@ -244,7 +244,7 @@ final class ji {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var8), "ji.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var8), "ji.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

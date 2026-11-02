@@ -11,7 +11,7 @@ final class kl extends PcmStream {
     static String field_u;
     private PcmStream field_q;
 
-    final static void a(byte param0, la param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -32,7 +32,7 @@ final class kl extends PcmStream {
           de.field_a.field_r = cl.field_a.field_t;
           r.a(126);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class kl extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class kl extends PcmStream {
           this.field_s = param1;
           this.field_m = this.field_q.field_m;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

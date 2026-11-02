@@ -24,7 +24,7 @@ class IntrusiveNode {
             IntrusiveNode.a(-127, 58, -29, (PacketBuffer) null, -68);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "q.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "q.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

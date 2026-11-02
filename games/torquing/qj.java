@@ -23,7 +23,7 @@ final class qj {
             if (param1 != -1) {
               if (wa.field_f) {
                 IntrusiveNode.field_d = dg.field_h;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
                   if (var2 != 0) {
@@ -40,7 +40,7 @@ final class qj {
                   IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
-                  ue.field_h = k.field_e;
+                  RandomAccessCacheFile.field_h = k.field_e;
                   IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
@@ -52,7 +52,7 @@ final class qj {
               }
               if (var2 != 0) {
                 IntrusiveNode.field_d = dg.field_h;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
                   wa.field_f = true;
@@ -67,7 +67,7 @@ final class qj {
                   IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
-                  ue.field_h = k.field_e;
+                  RandomAccessCacheFile.field_h = k.field_e;
                   IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
@@ -79,7 +79,7 @@ final class qj {
               }
             }
             IntrusiveNode.field_d = 0;
-            ue.field_h = k.field_e;
+            RandomAccessCacheFile.field_h = k.field_e;
             ro.field_w = n.field_t;
             if (-1 != param1) {
               wa.field_f = false;
@@ -91,7 +91,7 @@ final class qj {
                 IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
@@ -110,7 +110,7 @@ final class qj {
                 IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
@@ -129,7 +129,7 @@ final class qj {
               IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
-              ue.field_h = k.field_e;
+              RandomAccessCacheFile.field_h = k.field_e;
               IntrusiveNode.field_d = 0;
               if (wa.field_f &&
                 IntrusiveNode.field_d == p.field_u) {
@@ -153,7 +153,7 @@ final class qj {
             if (param1 != -1) {
               if (wa.field_f) {
                 IntrusiveNode.field_d = dg.field_h;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
                   if (var2Lifetime1 != 0) {
@@ -170,7 +170,7 @@ final class qj {
                   IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
-                  ue.field_h = k.field_e;
+                  RandomAccessCacheFile.field_h = k.field_e;
                   IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
@@ -182,7 +182,7 @@ final class qj {
               }
               if (var2Lifetime1 != 0) {
                 IntrusiveNode.field_d = dg.field_h;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
                   wa.field_f = true;
@@ -197,7 +197,7 @@ final class qj {
                   IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
-                  ue.field_h = k.field_e;
+                  RandomAccessCacheFile.field_h = k.field_e;
                   IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
@@ -209,7 +209,7 @@ final class qj {
               }
             }
             IntrusiveNode.field_d = 0;
-            ue.field_h = k.field_e;
+            RandomAccessCacheFile.field_h = k.field_e;
             ro.field_w = n.field_t;
             if (-1 != param1) {
               wa.field_f = false;
@@ -221,7 +221,7 @@ final class qj {
                 IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
@@ -240,7 +240,7 @@ final class qj {
                 IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
@@ -259,7 +259,7 @@ final class qj {
               IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
-              ue.field_h = k.field_e;
+              RandomAccessCacheFile.field_h = k.field_e;
               IntrusiveNode.field_d = 0;
               if (wa.field_f &&
                 IntrusiveNode.field_d == p.field_u) {
@@ -281,7 +281,7 @@ final class qj {
           if (param1 != -1) {
             if (wa.field_f) {
               IntrusiveNode.field_d = dg.field_h;
-              ue.field_h = k.field_e;
+              RandomAccessCacheFile.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
                 if (var2Lifetime2 != 0) {
@@ -298,7 +298,7 @@ final class qj {
                 IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
@@ -310,7 +310,7 @@ final class qj {
             }
             if (var2Lifetime2 != 0) {
               IntrusiveNode.field_d = dg.field_h;
-              ue.field_h = k.field_e;
+              RandomAccessCacheFile.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
                 wa.field_f = true;
@@ -325,7 +325,7 @@ final class qj {
                 IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
-                ue.field_h = k.field_e;
+                RandomAccessCacheFile.field_h = k.field_e;
                 IntrusiveNode.field_d = 0;
               }
               if (!wa.field_f) {
@@ -340,7 +340,7 @@ final class qj {
             }
           }
           IntrusiveNode.field_d = 0;
-          ue.field_h = k.field_e;
+          RandomAccessCacheFile.field_h = k.field_e;
           ro.field_w = n.field_t;
           if (-1 != param1) {
             wa.field_f = false;
@@ -352,7 +352,7 @@ final class qj {
               IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
-              ue.field_h = k.field_e;
+              RandomAccessCacheFile.field_h = k.field_e;
               IntrusiveNode.field_d = 0;
               if (wa.field_f &&
                 IntrusiveNode.field_d == p.field_u) {
@@ -378,7 +378,7 @@ final class qj {
               IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
-              ue.field_h = k.field_e;
+              RandomAccessCacheFile.field_h = k.field_e;
               IntrusiveNode.field_d = 0;
             }
             if (wa.field_f &&
@@ -399,7 +399,7 @@ final class qj {
           IntrusiveNode.field_d < dg.field_h &&
           he.field_a) {
           ro.field_w = n.field_t;
-          ue.field_h = k.field_e;
+          RandomAccessCacheFile.field_h = k.field_e;
           IntrusiveNode.field_d = 0;
         }
         if (wa.field_f &&
@@ -417,7 +417,7 @@ final class qj {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "qj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "qj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

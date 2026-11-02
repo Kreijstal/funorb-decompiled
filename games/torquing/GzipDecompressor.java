@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class tm {
+final class GzipDecompressor {
     static int field_c;
     static int[] field_e;
     static int field_b;
@@ -25,7 +25,7 @@ final class tm {
           var3 = db.a(param2, 31108);
           if (!param0) {
             var4 = (Sprite) null;
-            tm.a((byte) 108, (Sprite) null);
+            GzipDecompressor.a((byte) 108, (Sprite) null);
           }
           if (param1.indexOf(param2) != -1) {
             return true;
@@ -51,7 +51,7 @@ final class tm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class tm {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class tm {
           SoftwareRasterizer.a(param1.field_y, param1.field_w, param1.field_u);
           int var2_int = 10 % ((param0 + 52) / 47);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "tm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class tm {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -166,7 +166,7 @@ final class tm {
         }
     }
 
-    public tm() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
@@ -179,7 +179,7 @@ final class tm {
         field_e = null;
     }
 
-    private tm(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     static {

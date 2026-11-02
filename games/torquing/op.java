@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class op extends wk implements ec {
-    private la field_m;
-    private la field_p;
+    private ResourceArchive field_m;
+    private ResourceArchive field_p;
     private boolean field_o;
     static int field_k;
     private cf field_l;
@@ -16,7 +16,7 @@ final class op extends wk implements ec {
         vm var3;
         vm stackIn_4_0;
         Object stackIn_4_1;
-        la stackIn_4_2;
+        ResourceArchive stackIn_4_2;
         float stackIn_4_3;
         Object stackIn_5_1;
         boolean stackIn_6_4 = false;
@@ -134,7 +134,7 @@ final class op extends wk implements ec {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class op extends wk implements ec {
         return null;
     }
 
-    op(la param0, la param1, la param2, int param3, boolean param4) {
+    op(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
         super(param1, param0, param2);
         this.field_o = false;
         this.field_n = 50;
@@ -224,7 +224,7 @@ final class op extends wk implements ec {
           this.field_o = param4 ? true : false;
           this.field_l = new cf(this.field_n);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

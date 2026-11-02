@@ -4,7 +4,7 @@
 final class he {
     static boolean field_a;
     private String field_c;
-    static la field_b;
+    static ResourceArchive field_b;
 
     public static void a(int param0) {
         field_b = null;
@@ -36,7 +36,7 @@ final class he {
           kp.a(0.0, param3 - 16777300, param4, param2, param0);
           ee.a(false, new double[3], param2, param4, param1, 106);
           if (param3 != 16777215) {
-            field_b = (la) null;
+            field_b = (ResourceArchive) null;
           }
           var15 = ll.a(mg.field_a, vf.field_e, (byte) 121);
           var14 = var15;
@@ -73,7 +73,7 @@ final class he {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class he {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class he {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "he.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "he.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class he {
           }
           ni.a((byte) 102, param0, this.field_c, 31536000L, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "he.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "he.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

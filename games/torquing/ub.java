@@ -39,17 +39,17 @@ final class ub extends lg {
           var10 = var16.field_u << 1;
           if (dp.field_b == null) {
             dp.field_b = new Sprite(var9, var10);
-            tm.a((byte) 99, dp.field_b);
+            GzipDecompressor.a((byte) 99, dp.field_b);
           } else {
             if (dp.field_b.field_s < var9) {
               dp.field_b = new Sprite(var9, var10);
-              tm.a((byte) 99, dp.field_b);
+              GzipDecompressor.a((byte) 99, dp.field_b);
             } else {
               if (var10 > dp.field_b.field_t) {
                 dp.field_b = new Sprite(var9, var10);
-                tm.a((byte) 99, dp.field_b);
+                GzipDecompressor.a((byte) 99, dp.field_b);
               } else {
-                tm.a((byte) -105, dp.field_b);
+                GzipDecompressor.a((byte) -105, dp.field_b);
                 SoftwareRasterizer.b();
               }
             }
@@ -59,7 +59,7 @@ final class ub extends lg {
           dp.field_b.a(-var16.field_w + var5, -var16.field_u + var6, 256);
           return;
         }
-        if (gn.field_h != var8) {
+        if (IsaacCipher.field_h != var8) {
           if (var8 == so.field_u) {
             var14 = wj.field_h[2];
             var14.a(-(var14.field_s >> 1) + var5, var6 - (var14.field_t >> 1), 256);
@@ -77,17 +77,17 @@ final class ub extends lg {
         var10Lifetime1 = var15.field_u << 1;
         if (dp.field_b == null) {
           dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
-          tm.a((byte) 99, dp.field_b);
+          GzipDecompressor.a((byte) 99, dp.field_b);
         } else {
           if (dp.field_b.field_s < var9Lifetime1) {
             dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
-            tm.a((byte) 99, dp.field_b);
+            GzipDecompressor.a((byte) 99, dp.field_b);
           } else {
             if (var10Lifetime1 > dp.field_b.field_t) {
               dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
-              tm.a((byte) 99, dp.field_b);
+              GzipDecompressor.a((byte) 99, dp.field_b);
             } else {
-              tm.a((byte) -105, dp.field_b);
+              GzipDecompressor.a((byte) -105, dp.field_b);
               SoftwareRasterizer.b();
             }
           }
@@ -151,7 +151,7 @@ final class ub extends lg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class ub extends lg {
           int var5_int = -105 % ((param0 + 28) / 43);
           super.a(-84, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ub.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ub.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class ub extends lg {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

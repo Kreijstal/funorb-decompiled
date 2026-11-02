@@ -238,7 +238,7 @@ final class mh {
           (decompiledFrameRemainder0)) {
           var13 = -(var12 + 160 >> 1) + var6 + var12;
           if (var8 != 2) {
-            stackIn_19_0 = of.field_m;
+            stackIn_19_0 = VertexMesh.field_m;
           } else {
             stackIn_19_0 = on.field_c;
           }
@@ -314,7 +314,7 @@ final class mh {
             var15 = var15 + (var17_ref_t.field_s + 10);
             var16++;
           }
-          i.field_Q.c(jp.field_n[var13], 314, 123 + um.field_m.field_x, 0, -1);
+          i.field_Q.c(Js5Transport.field_n[var13], 314, 123 + um.field_m.field_x, 0, -1);
           return;
         }
         if (this.field_h == 9) {
@@ -587,10 +587,10 @@ final class mh {
         return stackIn_104_0;
     }
 
-    final static of a(int param0, df param1) {
+    final static VertexMesh a(int param0, IsaacPacketBuffer param1) {
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
-        of stackIn_24_0 = null;
+        VertexMesh stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -599,7 +599,7 @@ final class mh {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        of var5 = null;
+        VertexMesh var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -609,38 +609,38 @@ final class mh {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = df.a(param1, -47) ? 1 : 0;
-          var4 = df.a(param1, -44) ? 1 : 0;
-          var5 = new of();
-          var5.field_f = (short)param1.e(16, param0 ^ -191);
-          var5.field_B = fh.a(param1, 0, var5.field_B, 16);
-          var5.field_j = fh.a(param1, 0, var5.field_j, 16);
-          var5.field_d = fh.a(param1, 0, var5.field_d, 16);
+          var3 = IsaacPacketBuffer.a(param1, -47) ? 1 : 0;
+          var4 = IsaacPacketBuffer.a(param1, -44) ? 1 : 0;
+          var5 = new VertexMesh();
+          var5.vertexCount = (short)param1.e(16, param0 ^ -191);
+          var5.vertexX = SocketJs5Transport.a(param1, 0, var5.vertexX, 16);
+          var5.vertexY = SocketJs5Transport.a(param1, 0, var5.vertexY, 16);
+          var5.vertexZ = SocketJs5Transport.a(param1, 0, var5.vertexZ, 16);
           var5.field_R = (short)param1.e(16, -85);
-          var5.field_G = fh.a(param1, 0, var5.field_G, 16);
-          var5.field_r = fh.a(param1, param0 ^ param0, var5.field_r, 16);
-          var5.field_I = fh.a(param1, 0, var5.field_I, 16);
+          var5.field_G = SocketJs5Transport.a(param1, 0, var5.field_G, 16);
+          var5.field_r = SocketJs5Transport.a(param1, param0 ^ param0, var5.field_r, 16);
+          var5.field_I = SocketJs5Transport.a(param1, 0, var5.field_I, 16);
           if (var3 != 0) {
             var5.field_C = (short)param1.e(16, -105);
-            var5.field_q = fh.a(param1, 0, var5.field_q, 16);
-            var5.field_P = fh.a(param1, 0, var5.field_P, 16);
-            var5.field_a = fh.a(param1, param0 - 255, var5.field_a, 16);
-            var5.field_O = fh.a(param1, param0 - 255, var5.field_O, 16);
-            var5.field_J = fh.a(param1, 0, var5.field_J, 16);
-            var5.field_F = fh.a(param1, 0, var5.field_F, 16);
+            var5.field_q = SocketJs5Transport.a(param1, 0, var5.field_q, 16);
+            var5.field_P = SocketJs5Transport.a(param1, 0, var5.field_P, 16);
+            var5.field_a = SocketJs5Transport.a(param1, param0 - 255, var5.field_a, 16);
+            var5.field_O = SocketJs5Transport.a(param1, param0 - 255, var5.field_O, 16);
+            var5.field_J = SocketJs5Transport.a(param1, 0, var5.field_J, 16);
+            var5.field_F = SocketJs5Transport.a(param1, 0, var5.field_F, 16);
           }
           if (var4 != 0) {
             param1.e(16, 72);
-            var5.field_t = fh.a(param1, 0, var5.field_t, 16);
-            var5.field_s = fh.a(param1, 0, var5.field_s, 16);
-            var5.field_z = fh.a(param1, 0, var5.field_z, 16);
-            var5.field_E = fh.a(param1, 0, var5.field_E, 16);
-            var5.field_b = fh.a(param1, param0 ^ 255, var5.field_b, 16);
+            var5.field_t = SocketJs5Transport.a(param1, 0, var5.field_t, 16);
+            var5.field_s = SocketJs5Transport.a(param1, 0, var5.field_s, 16);
+            var5.field_z = SocketJs5Transport.a(param1, 0, var5.field_z, 16);
+            var5.field_E = SocketJs5Transport.a(param1, 0, var5.field_E, 16);
+            var5.field_b = SocketJs5Transport.a(param1, param0 ^ 255, var5.field_b, 16);
           }
-          if (df.a(param1, -76)) {
-            var5.field_c = fh.a(param1, 0, var5.field_c, 16);
+          if (IsaacPacketBuffer.a(param1, -76)) {
+            var5.field_c = SocketJs5Transport.a(param1, 0, var5.field_c, 16);
           }
-          if (df.a(param1, -95)) {
+          if (IsaacPacketBuffer.a(param1, -95)) {
             var5.field_i = pe.a(112, 16, var5.field_i, param1);
             var6 = 0;
             var7 = 0;
@@ -681,7 +681,7 @@ final class mh {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -1228,7 +1228,7 @@ final class mh {
         if (!param0) {
           stackIn_5_0 = fa.field_b;
         } else {
-          stackIn_5_0 = ao.field_f;
+          stackIn_5_0 = SocketConnector.field_f;
         }
         var5 = stackIn_5_0;
         var6 = 0;
@@ -1451,7 +1451,7 @@ final class mh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1595,7 +1595,7 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) runtimeException), "mh.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mh.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1816,7 +1816,7 @@ final class mh {
                             !je.a((byte) 41)) {
                             stackIn_78_0 = this.field_c;
                             stackIn_78_1 = true;
-                            if (ao.field_f != 0) {
+                            if (SocketConnector.field_f != 0) {
                               stackIn_79_2 = 8;
                             } else {
                               stackIn_79_2 = 2;
@@ -1887,7 +1887,7 @@ final class mh {
                       if (!je.a((byte) 100)) {
                         stackIn_96_0 = this.field_c;
                         stackIn_96_1 = true;
-                        if (ao.field_f != 0) {
+                        if (SocketConnector.field_f != 0) {
                           stackIn_97_2 = 8;
                         } else {
                           stackIn_97_2 = 0;
@@ -1895,7 +1895,7 @@ final class mh {
                         ((Torquing) (Object) stackIn_96_0).a(stackIn_96_1, stackIn_97_2, 1, param1);
                         if (var11 != 0) {
                           if (0 == ie.field_b.field_s &&
-                            ao.field_f == 0 &&
+                            SocketConnector.field_f == 0 &&
                             0 == ie.field_b.field_L) {
                             stackIn_104_0 = 0;
                           } else {
@@ -1913,7 +1913,7 @@ final class mh {
                         }
                       } else {
                         if (0 == ie.field_b.field_s &&
-                          ao.field_f == 0 &&
+                          SocketConnector.field_f == 0 &&
                           0 == ie.field_b.field_L) {
                           stackIn_104_0 = 0;
                         } else {
@@ -2186,7 +2186,7 @@ final class mh {
                 ie.field_b.f(1000);
                 this.field_c.a(true, -1, 10, param1);
                 th.a(100, th.field_F[23]);
-                jh.a(la.field_k[ie.field_b.field_q], 0);
+                jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                 if (var11 == 0) {
                   break regionExit2;
                 }
@@ -2388,8 +2388,8 @@ final class mh {
               this.field_c.a(true, ko.field_c[param0], 1, param1);
               th.a(100, th.field_F[23]);
               if (0 == this.field_h) {
-                if (tm.field_c != 6 &&
-                  tm.field_c != 2) {
+                if (GzipDecompressor.field_c != 6 &&
+                  GzipDecompressor.field_c != 2) {
                   break regionExit1;
                 }
                 DualLinkNode.field_n = this.field_h;
@@ -2528,7 +2528,7 @@ final class mh {
             var12 = Integer.toString(ie.field_b.field_s);
             qh.field_c.a(var12, 517, 34 + um.field_m.field_x, 2, -1);
             var4 = 135;
-            var5 = re.a(252645135, ao.field_f);
+            var5 = re.a(252645135, SocketConnector.field_f);
             if (-48 + var5 * 48 < 338) {
               stackIn_26_0 = 48;
             } else {
@@ -2548,7 +2548,7 @@ final class mh {
               }
               stackIn_43_0Lifetime1 = -1;
               if (var8 == 0) {
-                if (stackIn_43_0Lifetime1 != ~(1 << var7 & ao.field_f)) {
+                if (stackIn_43_0Lifetime1 != ~(1 << var7 & SocketConnector.field_f)) {
                   tj.field_n[var7].e(var4, 93);
                   var4 = var4 + var6_int;
                 }
@@ -2711,14 +2711,14 @@ final class mh {
             var15 = ol.field_d;
             var6 = var15;
             if (je.a((byte) 46)) {
-              var6 = var15 + " " + gn.field_i;
+              var6 = var15 + " " + IsaacCipher.field_i;
             }
             if (2 > var2Lifetime2 ||
               !(wp.field_w <= 0)) {
               var16 = bl.field_g;
               var6 = var16;
               if (je.a((byte) 81)) {
-                var6 = var16 + " " + gn.field_i;
+                var6 = var16 + " " + IsaacCipher.field_i;
               }
             }
           }
@@ -3013,8 +3013,8 @@ final class mh {
                       var12 = 0;
                       if (bn.a(var6[var11], -17310) &&
                         var9 == 0 &&
-                        null != gn.field_l &&
-                        ~var27[var11] == ~gn.field_l.field_l &&
+                        null != IsaacCipher.field_l &&
+                        ~var27[var11] == ~IsaacCipher.field_l.field_l &&
                         ~var28[var11] == ~ie.field_b.field_s) {
                         var12 = 2;
                         var9 = 1;
@@ -3073,7 +3073,7 @@ final class mh {
           this.field_h = param1;
           this.field_a = new db(rf.field_q[param1].length);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

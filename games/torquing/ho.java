@@ -58,7 +58,7 @@ final class ho extends IntrusiveNode {
         field_I = null;
     }
 
-    private final static boolean a(la param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_t) {
           var1 = param0.a(0, 100, 0);
@@ -70,7 +70,7 @@ final class ho extends IntrusiveNode {
         return true;
     }
 
-    final static ho a(la param0, String param1, String param2) {
+    final static ho a(ResourceArchive param0, String param1, String param2) {
         try {
           ho var4_ref = null;
           if (!ho.a(param0)) {
@@ -476,7 +476,7 @@ final class ho extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final static ho a(la param0, int param1, int param2) {
+    final static ho a(ResourceArchive param0, int param1, int param2) {
         try {
           ho var4_ref = null;
           if (!ho.a(param0)) {

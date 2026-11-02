@@ -54,7 +54,7 @@ final class gk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -63,9 +63,9 @@ final class gk {
         int var1 = -55 / ((53 - param0) / 58);
     }
 
-    final static Sprite[] a(int param0, int param1, la param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
-        la var5 = null;
+        ResourceArchive var5 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -76,8 +76,8 @@ final class gk {
             return null;
           }
           if (param0 != 105) {
-            var5 = (la) null;
-            gk.a(-107, 81, (la) null, 37);
+            var5 = (ResourceArchive) null;
+            gk.a(-107, 81, (ResourceArchive) null, 37);
           }
           stackIn_6_0 = tb.a(true);
           return stackIn_6_0;
@@ -91,7 +91,7 @@ final class gk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 

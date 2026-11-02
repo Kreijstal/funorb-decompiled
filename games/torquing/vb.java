@@ -192,7 +192,7 @@ final class vb {
                 }
               }
               if (wp.field_w > 0) {
-                ao.field_b = true;
+                SocketConnector.field_b = true;
               }
               wa.field_d.a((byte) -111, od.field_s);
               var8 = 0;
@@ -265,7 +265,7 @@ final class vb {
             } else {
               stackIn_163_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -328,7 +328,7 @@ final class vb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -342,11 +342,11 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var4), "vb.C(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var4), "vb.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void a(of param0, byte param1, boolean param2, int[] param3, int[] param4, boolean param5, boolean param6) {
+    final static void a(VertexMesh param0, byte param1, boolean param2, int[] param3, int[] param4, boolean param5, boolean param6) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -417,10 +417,10 @@ final class vb {
           var22 = be.field_b;
           var23 = 0;
           scanLoop1: while (true) {
-            if (param0.field_f > var23) {
-              var24 = param0.field_B[var23];
-              var25 = param0.field_j[var23];
-              var26 = param0.field_d[var23];
+            if (param0.vertexCount > var23) {
+              var24 = param0.vertexX[var23];
+              var25 = param0.vertexY[var23];
+              var26 = param0.vertexZ[var23];
               var27 = var9 + (var15 * var25 + var12 * var24 + var26 * var18 >> 16 - oe.field_b);
               var28 = var10 + (var25 * var16 + (var24 * var13 + var19 * var26) >> 16 - oe.field_b);
               var29 = (var26 * var20 + var25 * var17 + var14 * var24 >> 16) + var11;
@@ -436,7 +436,7 @@ final class vb {
                   var21 = param0.field_a[var18];
                   m.field_c[var18] = var20 * var12 + (var9 * var19 + var15 * var21) >> 16;
                   pm.field_s[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
-                  tm.field_e[var18] = var21 * var17 + var11 * var19 + var14 * var20 >> 16;
+                  GzipDecompressor.field_e[var18] = var21 * var17 + var11 * var19 + var14 * var20 >> 16;
                   var18++;
                   break scanLoop1;
                 }
@@ -529,7 +529,7 @@ final class vb {
               var21 = param0.field_a[var18];
               m.field_c[var18] = var20 * var12 + (var9 * var19 + var15 * var21) >> 16;
               pm.field_s[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
-              tm.field_e[var18] = var21 * var17 + var11 * var19 + var14 * var20 >> 16;
+              GzipDecompressor.field_e[var18] = var21 * var17 + var11 * var19 + var14 * var20 >> 16;
               var18++;
             } while (var30 == 0);
             break;
@@ -558,7 +558,7 @@ final class vb {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -694,7 +694,7 @@ final class vb {
                 }
                 case 16: {
                     var3 = (RuntimeException) ((Object) caughtException);
-                    throw rb.a((Throwable) ((Object) var3), "vb.E(" + param0 + ',' + param1 + ')');
+                    throw rb.wrapThrowable((Throwable) ((Object) var3), "vb.E(" + param0 + ',' + param1 + ')');
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -712,7 +712,7 @@ final class vb {
           dc.field_a.h(63);
           un.field_k = new pe(eo.field_a, (String) null, ff.field_a, param0, param2);
           if (param3 != 4805) {
-            vb.a((of) null, (byte) 25, false, (int[]) null, (int[]) null, false, true);
+            vb.a((VertexMesh) null, (byte) 25, false, (int[]) null, (int[]) null, false, true);
           }
           hb.field_x = new qc(dc.field_a, un.field_k);
           dc.field_a.a(hb.field_x, (byte) 113);
@@ -727,7 +727,7 @@ final class vb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -747,7 +747,7 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "vb.G(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "vb.G(" + param0 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var4), "vb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var4), "vb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -820,7 +820,7 @@ final class vb {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

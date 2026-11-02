@@ -16,7 +16,7 @@ class ih extends qf {
         field_b = null;
     }
 
-    final static lh a(int param0, String param1, fi param2, la param3, String param4) {
+    final static lh a(int param0, String param1, fi param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -35,7 +35,7 @@ class ih extends qf {
         try {
           if (param0 != 7828) {
             var7 = (String) null;
-            ih.a(-20, (String) null, (fi) null, (la) null, (String) null);
+            ih.a(-20, (String) null, (fi) null, (ResourceArchive) null, (String) null);
           }
           var5_int = param3.a(-1, param1);
           var6 = param3.a(param4, -124, var5_int);
@@ -69,7 +69,7 @@ class ih extends qf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

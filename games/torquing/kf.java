@@ -105,7 +105,7 @@ final class kf extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class kf extends UiWidget {
         int var12Lifetime1;
         var13 = Torquing.field_u;
         var14 = new Sprite(this.field_A * 2, this.field_o);
-        tm.a((byte) -116, var14);
+        GzipDecompressor.a((byte) -116, var14);
         var5 = this.field_o >> 1;
         for (var6 = 0; this.field_o > var6; var6++) {
           var7 = (var6 >> 1) * (2 * this.field_A - 1) % (2 * this.field_A);
@@ -186,7 +186,7 @@ final class kf extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "kf.F(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "kf.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class kf extends UiWidget {
         int var9 = Torquing.field_u;
         int var2 = this.field_o >> 1;
         Sprite var3 = new Sprite(var2, this.field_o);
-        tm.a((byte) 81, var3);
+        GzipDecompressor.a((byte) 81, var3);
         for (var4 = 0; var4 < this.field_o; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_o - var4));
@@ -264,7 +264,7 @@ final class kf extends UiWidget {
           }
           r.a(124);
           if (param0 + this.field_E.field_s >= SoftwareRasterizer.field_k) {
-            tm.a((byte) -119, this.field_G);
+            GzipDecompressor.a((byte) -119, this.field_G);
             param1.d(-this.field_x, 0);
             param1.d(-this.field_x + 2 * this.field_A, 0);
             this.field_H.a(0, 0);
@@ -272,7 +272,7 @@ final class kf extends UiWidget {
             this.field_G.d(param0, param3);
           }
           if (var5_int - this.field_E.field_s <= SoftwareRasterizer.field_a) {
-            tm.a((byte) 119, this.field_G);
+            GzipDecompressor.a((byte) 119, this.field_G);
             for (var7 = -this.field_E.field_s + this.field_p + this.field_x; var7 > 2 * this.field_A; var7 = var7 - 2 * this.field_A) {
             }
             param1.d(-var7, 0);
@@ -293,7 +293,7 @@ final class kf extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ final class kf extends UiWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

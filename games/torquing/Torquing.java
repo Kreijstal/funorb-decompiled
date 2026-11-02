@@ -50,7 +50,7 @@ public final class Torquing extends tg {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ public final class Torquing extends tg {
             var2_int = (!je.a((byte) 70)) ? 1 : 0;
           }
           if (null == ki.field_D) {
-            if (!tm.field_a) {
+            if (!GzipDecompressor.field_a) {
               return;
             }
             ka.a(var2_int, param1, (byte) -98);
@@ -92,7 +92,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.MA(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ public final class Torquing extends tg {
           MouseInputHandler.a(18133);
           MouseWheelInput.a(0);
           SoftwareRasterizer.c();
-          la.d(param0 + 99);
+          ResourceArchive.d(param0 + 99);
           uc.a();
           l.a((byte) 88);
           qi.a(104);
@@ -134,7 +134,7 @@ public final class Torquing extends tg {
           vf.a(param0 ^ 41);
           pp.a(4);
           m.b(8192);
-          pi.d();
+          AudioOutput.d();
           wl.d();
           fi.a(108);
           hc.a((byte) -113);
@@ -144,7 +144,7 @@ public final class Torquing extends tg {
           bi.c(-3);
           nc.a(param0 ^ 56);
           hj.a((byte) 114);
-          jp.d((byte) -77);
+          Js5Transport.d((byte) -77);
           co.a(param0 ^ 6);
           bo.a(21384);
           o.b(-1);
@@ -153,7 +153,7 @@ public final class Torquing extends tg {
           DualLinkNode.g(-93);
           IntrusiveNode.b((byte) 92);
           gk.a(-64);
-          sa.a(true);
+          AudioService.a(true);
           kk.b(160);
           oi.a(0);
           db.d(-98);
@@ -173,15 +173,15 @@ public final class Torquing extends tg {
           vg.d((byte) -97);
           eh.b((byte) -106);
           ed.b((byte) -30);
-          fd.b(76);
-          tm.a((byte) -12);
-          me.a((byte) 75);
+          ArchiveIndex.b(76);
+          GzipDecompressor.a((byte) -12);
+          ArchiveSource.a((byte) 75);
           hg.a(false);
           da.a(102);
           bh.a(-113);
           vo.a((byte) -125);
           bc.a((byte) -120);
-          df.k(3);
+          IsaacPacketBuffer.k(3);
           nn.b(-93);
           ln.h((byte) 111);
           sp.m(-7361);
@@ -218,13 +218,13 @@ public final class Torquing extends tg {
           hf.a(param0 ^ 8);
           gb.d(-89);
           am.c((byte) -123);
-          gn.a((byte) 126);
-          fh.d(param0 - 1);
+          IsaacCipher.a((byte) 126);
+          SocketJs5Transport.d(param0 - 1);
           ac.c(param0 ^ 4);
           pb.a(false);
           lb.c(0);
-          gl.c(-96);
-          ue.a(param0 - 82);
+          CachedArchiveSource.c(-96);
+          RandomAccessCacheFile.a(param0 - 82);
           pd.a(false);
           nk.a(param0 + 252);
           ra.a(376);
@@ -233,7 +233,7 @@ public final class Torquing extends tg {
           pc.a(4252);
           pg.a(47);
           jb.a((byte) -124);
-          of.a((byte) -81);
+          VertexMesh.a((byte) -81);
           qh.a((byte) 39);
           cc.a((byte) 65);
           gi.a((byte) 78);
@@ -271,7 +271,7 @@ public final class Torquing extends tg {
           ne.a(param0 + 4508);
           ef.a(param0 - 1);
           ob.a((byte) -12);
-          ao.b(23116);
+          SocketConnector.b(23116);
           ko.a((byte) -102);
           np.d(0);
           mk.a(115);
@@ -344,7 +344,7 @@ public final class Torquing extends tg {
           SecondaryNodeDeque.b(-83);
           d.a(param0 ^ -99);
           en.c(1);
-          gj.b(false);
+          ProxySocketConnector.b(false);
           lp.a(0);
           in.a((byte) -28);
           qf.a(true);
@@ -411,7 +411,7 @@ public final class Torquing extends tg {
           this.field_i = null;
           this.field_t = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.AA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.AA(" + param0 + ')');
         }
     }
 
@@ -449,7 +449,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.BB(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.BB(" + param0 + ')');
         }
     }
 
@@ -458,16 +458,16 @@ public final class Torquing extends tg {
         PcmStreamMixer var3 = null;
         try {
           this.a(11, 11, false, param0 + 477, 9, 15, 10, 0);
-          pi.a(22050, true, 10);
-          qd.field_b = pi.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
-          la.field_c = pi.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
+          AudioOutput.a(22050, true, 10);
+          qd.field_b = AudioOutput.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
+          ResourceArchive.field_c = AudioOutput.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
           var2 = new PcmStreamMixer();
-          la.field_c.a(var2);
+          ResourceArchive.field_c.a(var2);
           var3 = new PcmStreamMixer();
           qd.field_b.a(var3);
           ql.a(param0 ^ 1618865635, var3, var2);
           this.a(true, false, true, true, false);
-          tm.field_b = vi.field_a.length;
+          GzipDecompressor.field_b = vi.field_a.length;
           cc.field_c = 1;
           uf.field_c = 0;
           if (param0 != -593) {
@@ -476,7 +476,7 @@ public final class Torquing extends tg {
           qa.field_l = 9;
           sg.c();
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.DA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DA(" + param0 + ')');
         }
     }
 
@@ -505,7 +505,7 @@ public final class Torquing extends tg {
           }
           SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.PA(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -630,11 +630,11 @@ public final class Torquing extends tg {
               if (rp.field_d.a(-12749) &&
                 rp.field_d.a(true, "basic")) {
                 if (!rp.field_d.a(true, "benefits")) {
-                  df.a(1.0f, -93, c.a(param1 ^ -117, bo.field_i, "basic", db.field_d, rp.field_d));
+                  IsaacPacketBuffer.a(1.0f, -93, c.a(param1 ^ -117, bo.field_i, "basic", db.field_d, rp.field_d));
                   return false;
                 }
                 if (!rp.field_d.a(true, "kartika13")) {
-                  df.a(2.0f, 117, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
+                  IsaacPacketBuffer.a(2.0f, 117, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
                   return false;
                 }
                 if (e.field_b.a(-12749) &&
@@ -659,11 +659,11 @@ public final class Torquing extends tg {
                                     he.field_b.c(-19375)) {
                                     if (wp.field_w > 0 && (!eg.field_t.a(-12749) ||
                                       !eg.field_t.c(param1 - 19273))) {
-                                      df.a(29.0f, -63, c.a(17, pa.field_a, "", pd.field_a, eg.field_t));
+                                      IsaacPacketBuffer.a(29.0f, -63, c.a(17, pa.field_a, "", pd.field_a, eg.field_t));
                                       return false;
                                     }
                                     pm.a((byte) 80);
-                                    df.a(30.0f, param1 + 116, jn.field_d);
+                                    IsaacPacketBuffer.a(30.0f, param1 + 116, jn.field_d);
                                     this.b((byte) 73);
                                     if (!param0) {
                                       return false;
@@ -672,37 +672,37 @@ public final class Torquing extends tg {
                                     cf.a(param1 ^ -6539);
                                     return false;
                                   }
-                                  df.a(28.0f, 101, c.a(17, pa.field_a, "", pd.field_a, he.field_b));
+                                  IsaacPacketBuffer.a(28.0f, 101, c.a(17, pa.field_a, "", pd.field_a, he.field_b));
                                   return false;
                                 }
-                                df.a(27.0f, -72, c.a(17, tf.field_a, "", ac.field_A, th.field_C));
+                                IsaacPacketBuffer.a(27.0f, -72, c.a(17, tf.field_a, "", ac.field_A, th.field_C));
                                 return false;
                               }
-                              df.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", hn.field_A, vd.field_e));
+                              IsaacPacketBuffer.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", hn.field_A, vd.field_e));
                               return false;
                             }
-                            df.a(23.0f, param1 ^ 41, c.a(17, fn.field_a, "", hn.field_A, bp.field_c));
+                            IsaacPacketBuffer.a(23.0f, param1 ^ 41, c.a(17, fn.field_a, "", hn.field_A, bp.field_c));
                             return false;
                           }
-                          df.a(20.0f, param1 + 110, il.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
+                          IsaacPacketBuffer.a(20.0f, param1 + 110, il.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
                           return false;
                         }
-                        df.a(20.0f, 5, il.a(pg.field_a, vp.field_D, mb.field_c, (byte) 113));
+                        IsaacPacketBuffer.a(20.0f, 5, il.a(pg.field_a, vp.field_D, mb.field_c, (byte) 113));
                         return false;
                       }
-                      df.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, uf.field_l));
+                      IsaacPacketBuffer.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, uf.field_l));
                       return false;
                     }
-                    df.a(10.0f, -99, c.a(17, bo.field_i, "", db.field_d, rg.field_v));
+                    IsaacPacketBuffer.a(10.0f, -99, c.a(17, bo.field_i, "", db.field_d, rg.field_v));
                     return false;
                   }
-                  df.a(3.0f, -102, c.a(17, vf.field_g, "", kb.field_c, rl.field_a));
+                  IsaacPacketBuffer.a(3.0f, -102, c.a(17, vf.field_g, "", kb.field_c, rl.field_a));
                   return false;
                 }
-                df.a(2.0f, -80, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
+                IsaacPacketBuffer.a(2.0f, -80, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
                 return false;
               }
-              df.a(1.0f, 84, c.a(17, bo.field_i, "basic", db.field_d, rp.field_d));
+              IsaacPacketBuffer.a(1.0f, 84, c.a(17, bo.field_i, "basic", db.field_d, rp.field_d));
               return false;
             }
             if (MouseWheelInput.field_c == null) {
@@ -821,7 +821,7 @@ public final class Torquing extends tg {
             return false;
           }
           if (rp.field_d != null) {
-            df.a(32.0f, -66, k.field_h);
+            IsaacPacketBuffer.a(32.0f, -66, k.field_h);
             this.b((byte) 73);
             kk.field_o = mn.a(rp.field_d, "basic", "unachieved", 112);
             pe.field_J = mn.a(rp.field_d, "basic", "locked", param1 + 207);
@@ -908,10 +908,10 @@ public final class Torquing extends tg {
               var41.a();
             }
             hj.field_c = var43;
-            of.field_l = var35[2].a();
+            VertexMesh.field_l = var35[2].a();
             fq.field_F = new dg(var42[2], 0, 0, 76);
             cq.field_w = var35[4].a();
-            la.field_j = var35[0].a();
+            ResourceArchive.field_j = var35[0].a();
             jh.field_B = new dg(var42[0], 0, 0, 76);
             jb.field_b = var8_ref_ia;
             nh.field_l = var7_ref_sm;
@@ -927,7 +927,7 @@ public final class Torquing extends tg {
                 hi.field_h[var10Lifetime2] = DelegatingCanvas.a("mg" + var10Lifetime2 + "b", 31094, rg.field_v, "");
               }
             }
-            ue.field_c = pb.a("skins", param1 + 101, "", rg.field_v);
+            RandomAccessCacheFile.field_c = pb.a("skins", param1 + 101, "", rg.field_v);
             bl.field_d = 7;
             qo.field_t = 2;
             for (var10Lifetime3 = 0; var10Lifetime3 < 8; var10Lifetime3++) {
@@ -994,7 +994,7 @@ public final class Torquing extends tg {
             return false;
           }
           if (null != bp.field_c) {
-            df.a(35.0f, param1 ^ -29, jo.field_a);
+            IsaacPacketBuffer.a(35.0f, param1 ^ -29, jo.field_a);
             this.b((byte) 73);
             id.field_a = new fi(bp.field_c, vd.field_e);
             th.field_F[26] = cg.a(bp.field_c, "", "torq_bounce").b();
@@ -1026,7 +1026,7 @@ public final class Torquing extends tg {
             return false;
           }
           if (vd.field_e != null) {
-            df.a(37.0f, -88, jo.field_a);
+            IsaacPacketBuffer.a(37.0f, -88, jo.field_a);
             this.b((byte) 73);
             th.field_F[7] = ho.a(vd.field_e, "", "torq_cuckoo_clock").c();
             th.field_F[8] = ho.a(vd.field_e, "", "laura_uhoh").c();
@@ -1044,29 +1044,29 @@ public final class Torquing extends tg {
             return false;
           }
           if (th.field_C != null) {
-            df.a(39.0f, -87, pb.field_c);
+            IsaacPacketBuffer.a(39.0f, -87, pb.field_c);
             this.b((byte) 73);
-            la.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", id.field_a, th.field_C, "music/Torquing_Titlescreen"));
-            la.field_k[1] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_nursery_slopes"));
-            la.field_k[2] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_squared_away"));
-            la.field_k[3] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_next_steps"));
-            la.field_k[4] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_straight_and_narrow"));
-            la.field_k[5] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_bombing_along"));
-            la.field_k[6] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_amazing"));
-            la.field_k[7] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_circuitous_route"));
-            la.field_k[8] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_leap_of_faith"));
-            la.field_k[9] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Gamecomplete"));
-            la.field_k[10] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing Football Jingle"));
-            la.field_k[10].a(false);
-            la.field_k[11] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Levelcomplete"));
-            la.field_k[12] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Gameover"));
+            ResourceArchive.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", id.field_a, th.field_C, "music/Torquing_Titlescreen"));
+            ResourceArchive.field_k[1] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_nursery_slopes"));
+            ResourceArchive.field_k[2] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_squared_away"));
+            ResourceArchive.field_k[3] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_next_steps"));
+            ResourceArchive.field_k[4] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_straight_and_narrow"));
+            ResourceArchive.field_k[5] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_bombing_along"));
+            ResourceArchive.field_k[6] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_amazing"));
+            ResourceArchive.field_k[7] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_circuitous_route"));
+            ResourceArchive.field_k[8] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_leap_of_faith"));
+            ResourceArchive.field_k[9] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Gamecomplete"));
+            ResourceArchive.field_k[10] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing Football Jingle"));
+            ResourceArchive.field_k[10].a(false);
+            ResourceArchive.field_k[11] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Levelcomplete"));
+            ResourceArchive.field_k[12] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Gameover"));
             th.field_C = null;
             id.field_a = null;
             cf.a(6639);
             return false;
           }
           if (null != he.field_b) {
-            df.a(40.0f, 34, kf.field_D + " - 0%");
+            IsaacPacketBuffer.a(40.0f, 34, kf.field_D + " - 0%");
             var52 = new PacketBuffer(he.field_b.a(param1 - 18, "levels.tql", ""));
             var53 = var52.h((byte) 126);
             var5Lifetime1 = 0;
@@ -1129,7 +1129,7 @@ public final class Torquing extends tg {
           }
           if (wp.field_w > 0 &&
             eg.field_t != null) {
-            df.a(40.0f, 81, kf.field_D + " - 0%");
+            IsaacPacketBuffer.a(40.0f, 81, kf.field_D + " - 0%");
             if (cc.field_d == null) {
               cc.field_d = fa.a(2, 13, 27375, 0);
             }
@@ -1218,7 +1218,7 @@ public final class Torquing extends tg {
                 var4_ref = var4_ref.field_m;
                 continue;
               }
-              df.a((float)(var3_intLifetime2 * 60 / hg.field_d.length + 40), 51, kf.field_D + " - " + 100 * var3_intLifetime2 / hg.field_d.length + "%");
+              IsaacPacketBuffer.a((float)(var3_intLifetime2 * 60 / hg.field_d.length + 40), 51, kf.field_D + " - " + 100 * var3_intLifetime2 / hg.field_d.length + "%");
               return false;
             }
             ol.field_f = new hc[var3_intLifetime2];
@@ -1272,7 +1272,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3_ref), "Torquing.WA(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3_ref), "Torquing.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1319,17 +1319,17 @@ public final class Torquing extends tg {
           if (var11 != 0) {
             if (var11 == 2) {
               if (1 == oo.field_b) {
-                if (tm.field_c == 11) {
+                if (GzipDecompressor.field_c == 11) {
                   pl.a((byte) -120, true);
                 }
-                if (2 == tm.field_c) {
+                if (2 == GzipDecompressor.field_c) {
                   IterableNodeHashTable.field_c = null;
                 }
               }
-              if (oo.field_b >> 1 == tm.field_b) {
+              if (oo.field_b >> 1 == GzipDecompressor.field_b) {
                 ie.field_b.field_e.a(param0 + 108);
                 bn.field_h = -1;
-                fn.field_c = tm.field_c;
+                fn.field_c = GzipDecompressor.field_c;
                 vo.field_f[fn.field_c].field_i = 0;
               }
             } else {
@@ -1340,11 +1340,11 @@ public final class Torquing extends tg {
                       if (250 <= oo.field_b) {
                         this.a(true, ie.field_b.field_L, 5, var6 != 0);
                       } else {
-                        if (oo.field_b > 2 * tm.field_b &&
+                        if (oo.field_b > 2 * GzipDecompressor.field_b &&
                           var5 != 0) {
                           this.a(true, ie.field_b.field_L, 5, true);
                         } else {
-                          if (2 * tm.field_b < oo.field_b &&
+                          if (2 * GzipDecompressor.field_b < oo.field_b &&
                             var4 != 0) {
                             this.a(true, ie.field_b.field_L, 5, false);
                           }
@@ -1353,7 +1353,7 @@ public final class Torquing extends tg {
                     } else {
                       if (var11 == 4) {
                         var11 = 0;
-                        if (ie.field_b.field_L != tm.field_c) {
+                        if (ie.field_b.field_L != GzipDecompressor.field_c) {
                           var12 = ie.field_b.field_d.field_m;
                         } else {
                           var12 = ie.field_b.field_d;
@@ -1361,7 +1361,7 @@ public final class Torquing extends tg {
                         if (var12.field_e != null) {
                           var11 = 2 * var12.field_e.a(false);
                         }
-                        if (2 * tm.field_b < oo.field_b) {
+                        if (2 * GzipDecompressor.field_b < oo.field_b) {
                           if (var11 > oo.field_b) {
                             if (var5 != 0) {
                               this.a(true, ie.field_b.field_L, 5, true);
@@ -1379,29 +1379,29 @@ public final class Torquing extends tg {
                           if (var11 != 11) {
                             if (var11 != 12) {
                               if (var11 == 5) {
-                                if (tm.field_b <= oo.field_b / 2) {
+                                if (GzipDecompressor.field_b <= oo.field_b / 2) {
                                   bn.field_h = -1;
-                                  jh.a(la.field_k[ie.field_b.field_q], 0);
+                                  jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                                 }
                               } else {
                                 if (var11 == 8) {
                                   var9 = 0;
-                                  stackIn_176_0 = (-1 + qc.field_ab.length != tm.field_c) ? 0 : 1;
+                                  stackIn_176_0 = (-1 + qc.field_ab.length != GzipDecompressor.field_c) ? 0 : 1;
                                   var7 = stackIn_176_0;
                                   var10 = 0;
                                   if (wp.field_w <= 0) {
-                                    stackIn_182_0 = (tm.field_c == 1) ? 1 : 0;
+                                    stackIn_182_0 = (GzipDecompressor.field_c == 1) ? 1 : 0;
                                   } else {
                                     stackIn_182_0 = 0;
                                   }
                                   var8 = stackIn_182_0;
                                   if (oo.field_b < 250) {
-                                    if (tm.field_b * 2 < oo.field_b &&
+                                    if (GzipDecompressor.field_b * 2 < oo.field_b &&
                                       var5 != 0) {
                                       var9 = 1;
                                       var10 = 1;
                                     } else {
-                                      if (oo.field_b > 2 * tm.field_b &&
+                                      if (oo.field_b > 2 * GzipDecompressor.field_b &&
                                         var4 != 0) {
                                         var9 = 0;
                                         var10 = 1;
@@ -1413,7 +1413,7 @@ public final class Torquing extends tg {
                                   }
                                   if (var10 == 0) {
                                     if (var7 != 0 &&
-                                      tm.field_b * 2 == oo.field_b) {
+                                      GzipDecompressor.field_b * 2 == oo.field_b) {
                                       ie.field_b.d(1);
                                     }
                                   } else {
@@ -1422,24 +1422,24 @@ public final class Torquing extends tg {
                                       this.a(true, 10, 12, var9 != 0);
                                     } else {
                                       if (var7 != 0) {
-                                        this.a(true, tm.field_c, 11, var9 != 0);
+                                        this.a(true, GzipDecompressor.field_c, 11, var9 != 0);
                                       } else {
-                                        this.a(true, 1 + tm.field_c, 9, var9 != 0);
+                                        this.a(true, 1 + GzipDecompressor.field_c, 9, var9 != 0);
                                       }
                                     }
                                   }
                                 } else {
                                   if (9 == var11) {
-                                    if (oo.field_b == 2 * tm.field_b) {
+                                    if (oo.field_b == 2 * GzipDecompressor.field_b) {
                                       ie.field_b.d(param0 + 109);
                                       cf.a(6639);
                                     } else {
                                       if (250 > oo.field_b) {
-                                        if (tm.field_b * 2 < oo.field_b &&
+                                        if (GzipDecompressor.field_b * 2 < oo.field_b &&
                                           var5 != 0) {
                                           this.a(true, ie.field_b.field_L, 4, true);
                                         } else {
-                                          if (2 * tm.field_b < oo.field_b &&
+                                          if (2 * GzipDecompressor.field_b < oo.field_b &&
                                             var4 != 0) {
                                             this.a(true, ie.field_b.field_L, 4, false);
                                           }
@@ -1453,28 +1453,28 @@ public final class Torquing extends tg {
                               }
                             } else {
                               if (oo.field_b == 1) {
-                                if (tm.field_c == 11) {
+                                if (GzipDecompressor.field_c == 11) {
                                   pl.a((byte) -97, true);
                                 }
-                                if (2 == tm.field_c) {
+                                if (2 == GzipDecompressor.field_c) {
                                   IterableNodeHashTable.field_c = null;
                                 }
                               }
-                              if (oo.field_b >> 1 == tm.field_b) {
-                                fn.field_c = tm.field_c;
+                              if (oo.field_b >> 1 == GzipDecompressor.field_b) {
+                                fn.field_c = GzipDecompressor.field_c;
                                 bn.field_h = -1;
                                 vo.field_f[fn.field_c].field_i = 0;
                               }
                             }
                           } else {
-                            if (tm.field_b <= oo.field_b / 2) {
+                            if (GzipDecompressor.field_b <= oo.field_b / 2) {
                               bn.field_h = -1;
-                              jh.a(la.field_k[ie.field_b.field_q], 0);
+                              jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                             }
                           }
                         } else {
                           var11 = 0;
-                          if (tm.field_c == ie.field_b.field_L) {
+                          if (GzipDecompressor.field_c == ie.field_b.field_L) {
                             var12 = ie.field_b.field_d;
                           } else {
                             var12 = ie.field_b.field_d.field_m;
@@ -1482,17 +1482,17 @@ public final class Torquing extends tg {
                           if (var12.field_e != null) {
                             var11 = 2 * var12.field_e.a(false);
                           }
-                          if (tm.field_b * 2 != oo.field_b) {
-                            if (2 * tm.field_b < oo.field_b) {
-                              if (!la.field_k[11].e(17) &&
+                          if (GzipDecompressor.field_b * 2 != oo.field_b) {
+                            if (2 * GzipDecompressor.field_b < oo.field_b) {
+                              if (!ResourceArchive.field_k[11].e(17) &&
                                 var11 <= oo.field_b) {
-                                this.a(true, tm.field_c, 5, var6 != 0);
+                                this.a(true, GzipDecompressor.field_c, 5, var6 != 0);
                               } else {
                                 if (var5 != 0) {
-                                  this.a(true, tm.field_c, 5, true);
+                                  this.a(true, GzipDecompressor.field_c, 5, true);
                                 } else {
                                   if (var4 != 0) {
-                                    this.a(true, tm.field_c, 5, false);
+                                    this.a(true, GzipDecompressor.field_c, 5, false);
                                   }
                                 }
                               }
@@ -1506,12 +1506,12 @@ public final class Torquing extends tg {
                     }
                   } else {
                     if (oo.field_b < 250) {
-                      if (tm.field_b * 2 < oo.field_b &&
+                      if (GzipDecompressor.field_b * 2 < oo.field_b &&
                         var5 != 0) {
                         fn.field_c = -1;
                         this.a(true, ie.field_b.field_L, 4, true);
                       } else {
-                        if (2 * tm.field_b < oo.field_b &&
+                        if (2 * GzipDecompressor.field_b < oo.field_b &&
                           var4 != 0) {
                           fn.field_c = -1;
                           this.a(true, ie.field_b.field_L, 4, false);
@@ -1523,9 +1523,9 @@ public final class Torquing extends tg {
                     }
                   }
                 } else {
-                  if (tm.field_b == oo.field_b >> 1) {
+                  if (GzipDecompressor.field_b == oo.field_b >> 1) {
                     if (fn.field_c == 3) {
-                      gn.field_l = null;
+                      IsaacCipher.field_l = null;
                     }
                     bn.field_h = -1;
                     fn.field_c = -1;
@@ -1533,28 +1533,28 @@ public final class Torquing extends tg {
                 }
               } else {
                 if (oo.field_b == 1) {
-                  if (tm.field_c == 11) {
+                  if (GzipDecompressor.field_c == 11) {
                     pl.a((byte) -128, true);
                   }
-                  if (2 == tm.field_c) {
+                  if (2 == GzipDecompressor.field_c) {
                     IterableNodeHashTable.field_c = null;
                   }
                 }
-                if (oo.field_b >> 1 == tm.field_b) {
+                if (oo.field_b >> 1 == GzipDecompressor.field_b) {
                   if (3 == fn.field_c) {
-                    gn.field_l = null;
+                    IsaacCipher.field_l = null;
                   }
-                  if (11 == tm.field_c &&
+                  if (11 == GzipDecompressor.field_c &&
                     je.a((byte) 76)) {
                     ie.field_b = null;
                     jh.field_y.a(0);
                     nh.field_k = 0;
                     fa.field_b = 0;
-                    ao.field_f = 0;
+                    SocketConnector.field_f = 0;
                     bo.field_l.a(param0 ^ -108);
                   }
                   bn.field_h = -1;
-                  fn.field_c = tm.field_c;
+                  fn.field_c = GzipDecompressor.field_c;
                   vo.field_f[fn.field_c].field_i = 0;
                 }
               }
@@ -1578,7 +1578,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.SA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.SA(" + param0 + ')');
         }
     }
 
@@ -1594,7 +1594,7 @@ public final class Torquing extends tg {
             }
             if (param1 == 0 ||
               2 == param1) {
-              jh.a(la.field_k[0], 0);
+              jh.a(ResourceArchive.field_k[0], 0);
             }
             vo.field_f[param1].a((byte) 94, param3);
           }
@@ -1605,13 +1605,13 @@ public final class Torquing extends tg {
           oo.field_b = 0;
           bn.field_h = param2;
           this.field_t = null;
-          tm.field_c = param1;
+          GzipDecompressor.field_c = param1;
           this.f((byte) -108);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1627,8 +1627,8 @@ public final class Torquing extends tg {
           oi.a(50, (byte) 80);
           tb.a(50, -128);
           BufferedSocket.c(-101);
-          jh.a(la.field_k[0], 0);
-          var2_int = tm.field_b;
+          jh.a(ResourceArchive.field_k[0], 0);
+          var2_int = GzipDecompressor.field_b;
           MouseInputHandler.field_b = new int[var2_int];
           for (var3 = 1; var3 < var2_int; var3++) {
             MouseInputHandler.field_b[var3] = i.c(65535, vi.field_a[-var3 + var2_int]);
@@ -1641,7 +1641,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.CB(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.CB(" + param0 + ')');
         }
     }
 
@@ -1740,13 +1740,13 @@ public final class Torquing extends tg {
             ni.a((java.awt.Canvas) (var2), 0, 0, -122);
             return;
           }
-          df.a(100.0f, 11, ci.field_d);
+          IsaacPacketBuffer.a(100.0f, 11, ci.field_d);
           ji.a((byte) -99, (java.awt.Canvas) (var2));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2_ref), "Torquing.EA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "Torquing.EA(" + param0 + ')');
         }
     }
 
@@ -1788,7 +1788,7 @@ public final class Torquing extends tg {
           qh.field_c.a(kk.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
           SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1812,7 +1812,7 @@ public final class Torquing extends tg {
         int var3Lifetime2;
         var4 = field_u;
         try {
-          la.field_c.b();
+          ResourceArchive.field_c.b();
           qd.field_b.b();
           if (dg.field_i != null &&
             dg.field_i.field_b) {
@@ -1829,7 +1829,7 @@ public final class Torquing extends tg {
           var2_int = 0;
           if (!sf.a(-1)) {
             if (!ee.field_s) {
-              ue.a(-16513, da.field_g);
+              RandomAccessCacheFile.a(-16513, da.field_g);
               if (this.b(true, (byte) -102)) {
                 this.o(122);
                 ee.field_s = true;
@@ -1894,12 +1894,12 @@ public final class Torquing extends tg {
                 }
               } else {
                 if (kg.field_c.field_n) {
-                  ao.field_f = ao.field_f & ~kg.field_c.field_m;
+                  SocketConnector.field_f = SocketConnector.field_f & ~kg.field_c.field_m;
                   fa.field_b = fa.field_b | kg.field_c.field_m;
                   kg.field_c = null;
                   pm.a((byte) 102);
                   if (fn.field_c == 8 &&
-                    ao.field_f == 0) {
+                    SocketConnector.field_f == 0) {
                     fn.field_c = 2;
                   }
                   c.a(this, 9072);
@@ -1909,7 +1909,7 @@ public final class Torquing extends tg {
           } else {
             this.n(param0 + 126);
             if (sf.a(-1)) {
-              if (la.a(true) &&
+              if (ResourceArchive.a(true) &&
                 !ee.field_s) {
                 discarded$0 = this.b(false, (byte) -102);
               }
@@ -2013,7 +2013,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.HA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.HA(" + param0 + ')');
         }
     }
 
@@ -2032,7 +2032,7 @@ public final class Torquing extends tg {
           pa.field_e[param1].a(0, 0);
           SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2055,7 +2055,7 @@ public final class Torquing extends tg {
             return;
           }
           var2_int = oo.field_b >> 1;
-          if (tm.field_b > var2_int) {
+          if (GzipDecompressor.field_b > var2_int) {
             var3 = bn.field_h;
             if (1 != var3 &&
               var3 != 10 &&
@@ -2066,13 +2066,13 @@ public final class Torquing extends tg {
               } else if (6 != var3 &&
                 8 != var3) {
                 if (var3 == 4) {
-                  this.c(false, wi.field_a[tm.field_c]);
+                  this.c(false, wi.field_a[GzipDecompressor.field_c]);
                 } else if (var3 == 5) {
-                  this.a(tm.field_c, param0 + 22514);
+                  this.a(GzipDecompressor.field_c, param0 + 22514);
                 } else if (var3 == 9) {
-                  this.b(90, tm.field_c - 1);
+                  this.b(90, GzipDecompressor.field_c - 1);
                 } else if (var3 == 11) {
-                  this.b(param0 + 98, tm.field_c);
+                  this.b(param0 + 98, GzipDecompressor.field_c);
                 } else if (var3 == 12) {
                   this.b(96, 1);
                 }
@@ -2101,21 +2101,21 @@ public final class Torquing extends tg {
                     var3Lifetime1 != 6 &&
                     4 != var3Lifetime1) {
                     if (var3Lifetime1 == 8) {
-                      this.b(42, tm.field_c);
+                      this.b(42, GzipDecompressor.field_c);
                     }
                   } else {
-                    this.a(tm.field_c, 22517);
+                    this.a(GzipDecompressor.field_c, 22517);
                   }
                 } else {
-                  this.c(false, tm.field_c);
+                  this.c(false, GzipDecompressor.field_c);
                 }
               } else {
-                vo.field_f[tm.field_c].c(93);
+                vo.field_f[GzipDecompressor.field_c].c(93);
               }
             } else {
               ie.field_b.a(false);
             }
-            if (tm.field_b > var2_int) {
+            if (GzipDecompressor.field_b > var2_int) {
               mk.field_b.a(-86);
               vi.a(var2_int, gd.field_b, 0, 0, vi.field_a);
             }
@@ -2124,14 +2124,14 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.VA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.VA(" + param0 + ')');
         }
     }
 
     final void b(int param0) {
         try {
-          if (la.field_c != null) {
-            la.field_c.f();
+          if (ResourceArchive.field_c != null) {
+            ResourceArchive.field_c.f();
           }
           if (null != qd.field_b) {
             qd.field_b.f();
@@ -2142,7 +2142,7 @@ public final class Torquing extends tg {
           int var2_int = -39 % ((param0 - 75) / 50);
           nb.b(0);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.JA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.JA(" + param0 + ')');
         }
     }
 
@@ -2154,7 +2154,7 @@ public final class Torquing extends tg {
             field_x = 30;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.QA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.QA(" + param0 + ')');
         }
     }
 
@@ -2213,7 +2213,7 @@ public final class Torquing extends tg {
             stackIn_20_0 = stackIn_15_0;
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -2221,7 +2221,7 @@ public final class Torquing extends tg {
         try {
           this.a(16, "torquing", -116);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.init()");
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.init()");
         }
     }
 
@@ -2306,7 +2306,7 @@ public final class Torquing extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "Torquing.UA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.UA(" + param0 + ')');
         }
     }
 
@@ -2332,7 +2332,7 @@ public final class Torquing extends tg {
           n.field_q = vg.a(-27646, 14);
           kc.a(1, rp.field_d, e.field_b);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "Torquing.NA(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.NA(" + param0 + ')');
         }
     }
 

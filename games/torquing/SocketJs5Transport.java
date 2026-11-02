@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fh extends jp {
+final class SocketJs5Transport extends Js5Transport {
     static k field_t;
     static String field_s;
     static volatile int field_u;
@@ -60,7 +60,7 @@ final class fh extends jp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class fh extends jp {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.a((Throwable) ((Object) var2_ref2), "fh.E(" + param0 + ')');
+            throw rb.wrapThrowable((Throwable) ((Object) var2_ref2), "fh.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -407,7 +407,7 @@ final class fh extends jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2_ref), "fh.G(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "fh.G(" + param0 + ')');
         }
     }
 
@@ -503,7 +503,7 @@ final class fh extends jp {
             } else {
               stackIn_39_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -512,7 +512,7 @@ final class fh extends jp {
         }
     }
 
-    final static void a(int param0, la param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2611_0;
             StringBuilder stackIn_2611_1;
@@ -523,9 +523,9 @@ final class fh extends jp {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            la param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, la initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2611_0 = null;
@@ -1639,7 +1639,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "quittowebsite");
                 if (param0 != 7) {
-                  fh.a(0.4304375648498535f, (byte) 60, true, (String) null);
+                  SocketJs5Transport.a(0.4304375648498535f, (byte) 60, true, (String) null);
                 }
                 if (null != var2) {
                   pf.field_q = SecondaryNodeDeque.a(var2, false);
@@ -1790,7 +1790,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "openinpopupwindow");
                 if (var2 != null) {
-                  jp.field_e = SecondaryNodeDeque.a(var2, false);
+                  Js5Transport.field_e = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create");
                 if (var2 != null) {
@@ -1978,7 +1978,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "login_username");
                 if (var2 != null) {
-                  gj.field_g = SecondaryNodeDeque.a(var2, false);
+                  ProxySocketConnector.field_g = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "login_email");
                 if (var2 != null) {
@@ -2010,7 +2010,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "login_no_displayname");
                 if (var2 != null) {
-                  sa.field_a = SecondaryNodeDeque.a(var2, false);
+                  AudioService.field_a = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_username_tooltip");
                 if (var2 != null) {
@@ -2050,7 +2050,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "create_age_tooltip");
                 if (var2 != null) {
-                  df.field_p = SecondaryNodeDeque.a(var2, false);
+                  IsaacPacketBuffer.field_p = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_optin_news_tooltip");
                 if (var2 != null) {
@@ -2334,7 +2334,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "loading_extradata");
                 if (var2 != null) {
-                  la.field_b = SecondaryNodeDeque.a(var2, false);
+                  ResourceArchive.field_b = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "loading_languages");
                 if (null != var2) {
@@ -2736,7 +2736,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "memberslevel_logintip");
                 if (var2 != null) {
-                  gn.field_i = SecondaryNodeDeque.a(var2, false);
+                  IsaacCipher.field_i = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "displayname_none");
                 if (null != var2) {
@@ -3156,7 +3156,7 @@ final class fh extends jp {
                 }
                 var2 = se.a((byte) -33, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  gn.field_f = SecondaryNodeDeque.a(var2, false);
+                  IsaacCipher.field_f = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_button_cancel");
                 if (var2 != null) {
@@ -3547,7 +3547,7 @@ final class fh extends jp {
                   } else {
                     stackIn_2612_2 = "{...}";
                   }
-                  throw rb.a((Throwable) ((Object) stackIn_2611_0), ((StringBuilder) (Object) stackIn_2611_1).append(stackIn_2612_2).append(')').toString());
+                  throw rb.wrapThrowable((Throwable) ((Object) stackIn_2611_0), ((StringBuilder) (Object) stackIn_2611_1).append(stackIn_2612_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2620_0 = (!GameApplet.field_a);
@@ -3572,7 +3572,7 @@ final class fh extends jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "fh.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "fh.C(" + param0 + ')');
         }
     }
 
@@ -3589,7 +3589,7 @@ final class fh extends jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "fh.Q(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "fh.Q(" + param0 + ')');
         }
     }
 
@@ -3629,7 +3629,7 @@ final class fh extends jp {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.a((Throwable) ((Object) var2_ref), "fh.L(" + param0 + ')');
+            throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "fh.L(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3683,7 +3683,7 @@ final class fh extends jp {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.a((Throwable) ((Object) var3_ref), "fh.M(" + param0 + ',' + param1 + ')');
+            throw rb.wrapThrowable((Throwable) ((Object) var3_ref), "fh.M(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3692,10 +3692,10 @@ final class fh extends jp {
         }
     }
 
-    public fh() {
+    public SocketJs5Transport() {
     }
 
-    final static short[] a(df param0, int param1, short[] param2, int param3) {
+    final static short[] a(IsaacPacketBuffer param0, int param1, short[] param2, int param3) {
         Object stackIn_5_0 = null;
         short[] stackIn_26_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -3771,7 +3771,7 @@ final class fh extends jp {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3803,7 +3803,7 @@ final class fh extends jp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

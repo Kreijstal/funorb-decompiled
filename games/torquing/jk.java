@@ -16,10 +16,10 @@ final class jk {
         var3 = Torquing.field_u;
         try {
           hj.field_c.a(0, 0);
-          if (fh.field_r >= 35) {
-            if (fh.field_r >= 70) {
+          if (SocketJs5Transport.field_r >= 35) {
+            if (SocketJs5Transport.field_r >= 70) {
               jh.field_B.a(false, 0, 0);
-              la.field_j.d(je.field_a - la.field_j.field_s / 2, -(la.field_j.field_t / 2) + kc.field_v);
+              ResourceArchive.field_j.d(je.field_a - ResourceArchive.field_j.field_s / 2, -(ResourceArchive.field_j.field_t / 2) + kc.field_v);
               jb.field_b.a((byte) 81, 0, nn.field_e);
               nh.field_l.a(0, nn.field_e);
               var5 = vo.field_f[0];
@@ -29,18 +29,18 @@ final class jk {
                 }
               }
               fq.field_F.a(false, hb.field_s, ra.field_e);
-              of.field_l.d(hb.field_s, ra.field_e);
+              VertexMesh.field_l.d(hb.field_s, ra.field_e);
               cq.field_w.d(0, nn.field_e);
             } else {
               fq.field_F.a(false, hb.field_s, ra.field_e);
-              of.field_l.d(hb.field_s, ra.field_e);
-              var1_int = la.field_j.field_s * MouseWheelInput.field_d / 100;
-              var2 = la.field_j.field_t * MouseWheelInput.field_d / 100;
-              la.field_j.b(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
+              VertexMesh.field_l.d(hb.field_s, ra.field_e);
+              var1_int = ResourceArchive.field_j.field_s * MouseWheelInput.field_d / 100;
+              var2 = ResourceArchive.field_j.field_t * MouseWheelInput.field_d / 100;
+              ResourceArchive.field_j.b(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
             }
           } else {
             fq.field_F.a(false, ub.field_E, ra.field_e);
-            of.field_l.b(4096, 1326547364, tj.field_l, ra.field_e + of.field_l.field_t / 2, of.field_l.field_s / 2 + ub.field_E);
+            VertexMesh.field_l.b(4096, 1326547364, tj.field_l, ra.field_e + VertexMesh.field_l.field_t / 2, VertexMesh.field_l.field_s / 2 + ub.field_E);
           }
           SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
           if (param0 >= -32) {
@@ -51,7 +51,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jk.B(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jk.B(" + param0 + ')');
         }
     }
 
@@ -62,10 +62,10 @@ final class jk {
           }
           nk.field_t = param2;
           aq.field_c = true;
-          gn.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, nk.field_t);
-          dc.field_a.a(gn.field_m, (byte) 112);
+          IsaacCipher.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, nk.field_t);
+          dc.field_a.a(IsaacCipher.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

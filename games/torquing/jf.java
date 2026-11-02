@@ -42,7 +42,7 @@ final class jf {
         if (jh.field_z > 200) {
           var5 = (-jh.field_z + 250 << 8) / 50;
         }
-        tm.a((byte) -106, field_a);
+        GzipDecompressor.a((byte) -106, field_a);
         be.a();
         SoftwareRasterizer.b();
         so.b(122);

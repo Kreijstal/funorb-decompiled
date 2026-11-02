@@ -74,7 +74,7 @@ final class na extends jh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -133,8 +133,8 @@ final class na extends jh {
               if (param5) {
                 var9 = var9 | 1;
               }
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
               jb.field_c.a(var15, (byte) -72);
               jb.field_c.a(var8, (byte) -72);
               var17 = (CharSequence) ((Object) param1);
@@ -154,8 +154,8 @@ final class na extends jh {
               wa.field_d.c(-var10 + wa.field_d.position, param2 + 400395746);
             } else {
               jb.field_c.position = 0;
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
               stackIn_11_0 = jb.field_c;
               if (!param3.a((byte) 104)) {
                 stackIn_12_1 = "";
@@ -283,7 +283,7 @@ final class na extends jh {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

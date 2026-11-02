@@ -12,7 +12,7 @@ abstract class af {
         int var4 = Torquing.field_u;
         try {
           var1 = new Sprite(540, 140);
-          tm.a((byte) -121, var1);
+          GzipDecompressor.a((byte) -121, var1);
           be.a();
           SoftwareRasterizer.b();
           jh.field_z = 0;
@@ -29,7 +29,7 @@ abstract class af {
           var1.c(0, 0);
           r.a(126);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
         }
     }
 
