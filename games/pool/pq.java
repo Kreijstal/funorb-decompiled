@@ -262,7 +262,7 @@ final class pq {
           wm.field_Xb = new ai();
           ta.field_h = new gl(wm.field_Xb);
           qf.field_d.b(ta.field_h);
-          mp.field_R = new ko();
+          mp.field_R = new IntrusiveDeque();
         }
         ta.field_h.a(param1);
         ta.field_h.f(param4);
@@ -332,7 +332,7 @@ final class pq {
             this.field_p = true;
           }
         }
-        L2: {
+        regionExit1: {
           var2_intLifetime1 = this.field_v;
           if (var2_intLifetime1 != 0) {
             if (2 == var2_intLifetime1) {
@@ -377,7 +377,7 @@ final class pq {
                 this.field_l = this.field_I + -8 * this.field_b;
                 if (this.field_l != 0 ||
                   this.field_h != 0) {
-                  var2 = bm.a(-104, od.a((long)this.field_l, (long)this.field_l, false) + od.a((long)this.field_h, (long)this.field_h, false));
+                  var2 = IterableNodeHashTable.a(-104, od.a((long)this.field_l, (long)this.field_l, false) + od.a((long)this.field_h, (long)this.field_h, false));
                   if (var2 != 0L) {
                     if (-2147483648L <= var2 &&
                       var2 <= 2147483647L) {
@@ -388,8 +388,8 @@ final class pq {
                       var4 = od.a((long)this.field_A, (long)this.field_A, false) + od.a((long)this.field_u, (long)this.field_u, false);
                       var6 = this.e(-14770);
                       if (var6 < var4) {
-                        var8_long = bm.a(-104, var4);
-                        var10_long = bm.a(-99, var6);
+                        var8_long = IterableNodeHashTable.a(-104, var4);
+                        var10_long = IterableNodeHashTable.a(-99, var6);
                         this.field_A = (int)((long)this.field_A * var10_long / var8_long);
                         this.field_u = (int)(var10_long * (long)this.field_u / var8_long);
                       }
@@ -413,15 +413,15 @@ final class pq {
                       if (var12 >= 0 ||
                         var13 <= 0) {
                         if (var12 <= 0) {
-                          break L2;
+                          break regionExit1;
                         }
                         if (var13 >= 0) {
-                          break L2;
+                          break regionExit1;
                         }
                       }
                       this.a((byte) 123);
                       this.field_v = 2;
-                      break L2;
+                      break regionExit1;
                     }
                     throw new IllegalStateException("Overflow. Norm of " + pf.b(127, this.field_l) + ", " + pf.b(126, this.field_h) + " := " + cr.a((byte) 89, var2));
                   }
@@ -449,7 +449,7 @@ final class pq {
         if (param0 != -8) {
           return -16L;
         }
-        return bm.a(param0 ^ 98, this.e(-14770));
+        return IterableNodeHashTable.a(param0 ^ 98, this.e(-14770));
     }
 
     final void c(int param0) {

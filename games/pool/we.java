@@ -8,7 +8,7 @@ final class we {
     static volatile int field_l;
     static String field_j;
     String field_i;
-    static ko field_c;
+    static IntrusiveDeque field_c;
     String field_b;
     static dd field_k;
     static int[][] field_m;
@@ -37,6 +37,6 @@ final class we {
         field_d = '/';
         field_l = -1;
         field_j = "Offline";
-        field_c = new ko();
+        field_c = new IntrusiveDeque();
     }
 }

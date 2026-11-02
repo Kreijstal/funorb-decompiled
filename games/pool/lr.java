@@ -248,7 +248,7 @@ abstract class lr extends rg {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = kq.a((byte) 123, var18);
+                                    var16_int = GameApplet.a((byte) 123, var18);
                                     var4 = var4 + this.field_K[var16_int].field_h;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -532,7 +532,7 @@ abstract class lr extends rg {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = kq.a((byte) 120, var10);
+                                  var9_int = GameApplet.a((byte) 120, var10);
                                   var4 = var4 + this.field_K[var9_int].field_h;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -625,7 +625,7 @@ abstract class lr extends rg {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = kq.a((byte) 77, var13);
+                                  var10 = GameApplet.a((byte) 77, var13);
                                   var11_ref_bb = this.field_K[var10];
                                   if (this.field_Q == null) {
                                     stackIn_27_0 = var11_ref_bb.field_b;
@@ -906,7 +906,7 @@ abstract class lr extends rg {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_E = kq.a((byte) 74, var4);
+                field_E = GameApplet.a((byte) 74, var4);
               }
             } else {
               field_I = field_T;

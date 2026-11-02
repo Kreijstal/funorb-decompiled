@@ -22,14 +22,14 @@ final class al {
     int field_q;
     private int[] field_d;
     int[][] field_e;
-    ko field_u;
+    IntrusiveDeque field_u;
     int field_s;
     String[] field_h;
     static tm[] field_B;
     static int[] field_g;
     int field_b;
     private int[] field_a;
-    ko field_i;
+    IntrusiveDeque field_i;
     df[] field_r;
     private int[] field_t;
 
@@ -472,7 +472,7 @@ final class al {
         int var6Lifetime2Lifetime1;
         var12 = Pool.field_O;
         try {
-          this.field_u = new ko();
+          this.field_u = new IntrusiveDeque();
           var3_int = param1.b(true);
           for (var4_int = 0; var3_int > var4_int; var4_int++) {
             var5 = new qe();
@@ -506,7 +506,7 @@ final class al {
               var6Lifetime2 = var5.field_m.a(68);
               var6Lifetime2Lifetime1 = param1.g(-97);
               if (var6Lifetime2Lifetime1 > 0) {
-                var5.field_m = new ko();
+                var5.field_m = new IntrusiveDeque();
                 for (var7 = 0; var7 < var6Lifetime2Lifetime1; var7++) {
                   var8 = param1.g(param0 ^ -125);
                   var5.field_m.b((byte) 97, new cr(31 & var8, var8 >> 5));
@@ -514,7 +514,7 @@ final class al {
               }
               var7Lifetime1 = param1.g(-123);
               if (var7Lifetime1 > 0) {
-                var5.field_R = new ko();
+                var5.field_R = new IntrusiveDeque();
                 for (var8Lifetime1 = 0; var7Lifetime1 > var8Lifetime1; var8Lifetime1++) {
                   var9 = param1.g(param0 ^ -97);
                   var14 = new int[param1.g(-88)];
@@ -701,7 +701,7 @@ final class al {
         for (var8 = 0; this.field_c.length > var8; var8++) {
           var9 = this.field_c[var8].field_j - this.field_c[var8].field_l;
           var10 = this.field_c[var8].field_f - this.field_c[var8].field_a;
-          var11_long = bm.a(param3 ^ -314, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
+          var11_long = IterableNodeHashTable.a(param3 ^ -314, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
           if (-2147483648L > var11_long ||
             var11_long > 2147483647L) {
             System.out.println("Wall normal overflow " + lo.a(var11_long, 7697781));
@@ -718,41 +718,41 @@ final class al {
               var16 <= 2147483647L) {
               if ((!(var16 < 0L)) &&
                 (!(var16 > (long)var7))) {
-                L12: {
+                regionExit1: {
                   var18 = s.field_e[9] * (int)var16 + s.field_e[0];
                   var19_int = s.field_e[1] + s.field_e[10] * (int)var16;
                   var20 = s.field_e[2] + (int)var16 * s.field_e[11];
                   if (var10 != 0) {
                     if (this.field_c[var8].field_a >= this.field_c[var8].field_f) {
                       if (var18 < this.field_c[var8].field_f) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (var18 > this.field_c[var8].field_a) {
-                        break L12;
+                        break regionExit1;
                       }
                     } else {
                       if (this.field_c[var8].field_a > var18) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (var18 > this.field_c[var8].field_f) {
-                        break L12;
+                        break regionExit1;
                       }
                     }
                   }
                   if (var9 != 0) {
                     if (this.field_c[var8].field_l <= this.field_c[var8].field_j) {
                       if (this.field_c[var8].field_l > var19_int) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (this.field_c[var8].field_j < var19_int) {
-                        break L12;
+                        break regionExit1;
                       }
                     } else {
                       if (var19_int < this.field_c[var8].field_j) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (this.field_c[var8].field_l < var19_int) {
-                        break L12;
+                        break regionExit1;
                       }
                     }
                   }
@@ -781,7 +781,7 @@ final class al {
         }
         var8Lifetime1 = 4194304;
         for (var9Lifetime1 = 1; var9Lifetime1 < this.field_l.length; var9Lifetime1++) {
-          L3: {
+          regionExit2: {
             if (this.field_l[var9Lifetime1].field_s) {
               var10Lifetime1 = -s.field_e[0] + this.field_l[var9Lifetime1].field_g;
               var11Lifetime1 = -s.field_e[1] + this.field_l[var9Lifetime1].field_k;
@@ -791,7 +791,7 @@ final class al {
               var17 = od.a((long)var10Lifetime1, (long)var10Lifetime1, false) + od.a((long)var11Lifetime1, (long)var11Lifetime1, false) - (-od.a((long)var12, (long)var12, false) + (long)var8Lifetime1);
               var19 = od.a(var15, var15, false) - 4L * od.a(var13, var17, false);
               if (var19 >= 0L) {
-                var21 = bm.a(param3 ^ -278, var19);
+                var21 = IterableNodeHashTable.a(param3 ^ -278, var19);
                 if (var21 <= 2147483647L &&
                   -2147483648L <= var21) {
                   var23 = (-var15 + var21) / var13 / 2L;
@@ -808,10 +808,10 @@ final class al {
                   }
                   var25 = (-var15 - var21) / var13 / 2L;
                   if (0L > var25) {
-                    break L3;
+                    break regionExit2;
                   }
                   if ((long)var7 < var25) {
-                    break L3;
+                    break regionExit2;
                   }
                   var27 = (long)s.field_e[0] + var25 * (long)s.field_e[9];
                   var29 = (long)s.field_e[10] * var25 + (long)s.field_e[1];
@@ -908,14 +908,14 @@ final class al {
         if (param4 != 19063) {
           return;
         }
-        L0: {
+        regionExit1: {
           if (!this.field_u.c(param4 - 19063)) {
             dupTemp$3 = this.j(49);
             var7 = dupTemp$3;
             var6 = var7;
             if ((param2 & 255) == (dupTemp$3.field_v & 255)) {
               var7.field_L = param3;
-              break L0;
+              break regionExit1;
             }
           }
           dupTemp$4 = new qe(param2, param3);
@@ -943,7 +943,7 @@ final class al {
           var4 = param1.g(param0 ^ -113);
           var5 = param1.d((byte) -111);
           if (param0 != 2) {
-            this.field_i = (ko) null;
+            this.field_i = (IntrusiveDeque) null;
           }
           var6 = -1 + param1.g(-119);
           this.a(var5, var6, var3_int, var4, 19063);
@@ -1053,7 +1053,7 @@ final class al {
             var9 = 8191 & var6 + var7;
             var5.field_j = true;
             var10 = 0;
-            L8: while (true) {
+            scanLoop1: while (true) {
               if (var10 < var3Lifetime4) {
                 boolean decompiledFrameRemainder0 = true;
                 var11 = this.field_r[this.field_t[var10]];
@@ -1073,7 +1073,7 @@ final class al {
                       }
                       else {
                         var5.field_j = false;
-                        break L8;
+                        break scanLoop1;
                       }
                     }
                     if (decompiledFrameRemainder0) {
@@ -1082,7 +1082,7 @@ final class al {
                         var11.field_k < var9 &&
                         var11.field_d > var9) {
                         var5.field_j = false;
-                        break L8;
+                        break scanLoop1;
                       }
                       if (var11.field_k < var8 &&
                         var8 < var11.field_d) {
@@ -1107,7 +1107,7 @@ final class al {
                       if (var8 > var11.field_k &&
                         var9 < var11.field_d) {
                         var5.field_j = false;
-                        break L8;
+                        break scanLoop1;
                       }
                       if (var11.field_d >= var9) {
                         if (var11.field_k > var8) {
@@ -1223,7 +1223,7 @@ final class al {
         int var1 = -44 % ((-83 - param0) / 40);
         if (lo.field_a) {
           ti.field_d = null;
-          ad.field_l = new ko();
+          ad.field_l = new IntrusiveDeque();
           oa.field_g = ek.a(124);
           hp.field_c = ek.a(-110);
           lo.field_a = false;
@@ -1370,7 +1370,7 @@ final class al {
         var10 = hc.a(2047, 170) * 16;
         do {
           var11 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var11 < var7) {
               if (var21[var9] != -1) {
                 var12 = var6.a(23165, 65536);
@@ -1392,7 +1392,7 @@ final class al {
                 var16.d((byte) -27);
                 var8++;
                 if (var8 >= this.field_l.length) {
-                  break L3;
+                  break scanLoop1;
                 }
               }
               var9++;
@@ -1420,7 +1420,7 @@ final class al {
     }
 
     private final int o(int param0) {
-        ma stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         int var2;
         int var3;
         aa var4;
@@ -1448,7 +1448,7 @@ final class al {
           if (var5 == null) {
             stackIn_10_0 = var4.b((byte) -92);
           } else {
-            stackIn_10_0 = var4.a(var5.field_d, false);
+            stackIn_10_0 = var4.a(var5.previous, false);
           }
           var5Lifetime1 = (qe) (stackIn_10_0);
           while (var5Lifetime1 != null) {
@@ -1724,7 +1724,7 @@ final class al {
         var3.field_m.d((byte) 83);
         var3.field_s = uk.field_a;
         if (null == this.field_i) {
-          this.field_i = new ko();
+          this.field_i = new IntrusiveDeque();
         }
         this.field_i.a((byte) -84, var2);
         return;
@@ -1933,7 +1933,7 @@ final class al {
         this.field_y = 0;
         this.field_z = 0;
         this.field_m = false;
-        this.field_u = new ko();
+        this.field_u = new IntrusiveDeque();
         this.field_r = null;
         this.field_t = null;
         this.field_a = null;

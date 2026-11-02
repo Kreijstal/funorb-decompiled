@@ -8,7 +8,7 @@ final class hq {
     static String field_o;
     bk field_h;
     private bk field_l;
-    ko field_d;
+    IntrusiveDeque field_d;
     static int field_i;
     int field_n;
     static String field_f;
@@ -289,15 +289,15 @@ final class hq {
 
     private final void c(int param0) {
         if (param0 != 255) {
-          this.field_d = (ko) null;
+          this.field_d = (IntrusiveDeque) null;
         }
-        if (this.field_d.field_e != this.field_h.field_d) {
+        if (this.field_d.field_e != this.field_h.previous) {
           if (this.field_h != null &&
             this.field_d.field_e != this.field_h) {
             ng.field_s = 0;
             this.field_l = this.field_h;
           }
-          this.a((bk) (this.field_h.field_d), param0 ^ 254);
+          this.a((bk) (this.field_h.previous), param0 ^ 254);
           this.g(-120);
         } else {
           if (null != this.field_j) {
@@ -406,17 +406,17 @@ final class hq {
                   var17.field_p = true;
                   var18.a(var14, -106);
                   if (var5 == null) {
-                    var5 = new ko();
+                    var5 = new IntrusiveDeque();
                   }
-                  ((ko) (var5)).b((byte) -43, new cr(var14, var8));
+                  ((IntrusiveDeque) (var5)).b((byte) -43, new cr(var14, var8));
                 }
                 var14++;
               }
               if (var5 != null) {
                 this.field_a.field_I.e(-54);
                 var4.field_s = nd.field_j;
-                var4.field_n = ((cr) (((ko) (var5)).c((byte) -64))).field_n;
-                var4.field_m = (ko) (var5);
+                var4.field_n = ((cr) (((IntrusiveDeque) (var5)).c((byte) -64))).field_n;
+                var4.field_m = (IntrusiveDeque) (var5);
                 var4.field_q = 2;
                 stackIn_27_0 = this.field_a.field_I.f((byte) 117);
                 this.field_a.s((byte) -62);
@@ -438,7 +438,7 @@ final class hq {
             this.field_a.field_I.field_f.a(var4_int, -1, 0);
             var15.field_s = i.field_m | nd.field_j;
             var15.field_q = 2;
-            var15.field_m = new ko();
+            var15.field_m = new IntrusiveDeque();
             var15.field_m.b((byte) 105, new cr(var5_int, var6));
             var15.field_n = var5_int;
             this.field_a.field_I.f((byte) 53);
@@ -462,9 +462,9 @@ final class hq {
         cr var5_ref = null;
         String var6 = null;
         af var7 = null;
-        ko var8 = null;
+        IntrusiveDeque var8 = null;
         aa var9 = null;
-        ko var10 = null;
+        IntrusiveDeque var10 = null;
         aa var11 = null;
         cr var5_refLifetime1;
         var5 = null;
@@ -587,7 +587,7 @@ final class hq {
         var5 = al.field_k.field_Db + (al.field_k.field_eb + (-al.field_k.field_F[7].field_A - al.field_k.field_F[4].field_A) + (-al.field_k.field_F[1].field_A + qg.field_b.field_B));
         var6 = var5 + qg.field_b.field_A;
         var7 = (bk) (var23.b((byte) -92));
-        while (this.field_d.field_e != var7.field_d) {
+        while (this.field_d.field_e != var7.previous) {
           var8 = (var3 + 1) * (-qg.field_b.field_G + qg.field_b.field_w) / (this.field_k - 1) + qg.field_b.field_G + al.field_k.field_qb;
           var9 = var4;
           if (var9 < qh.field_b) {
@@ -963,13 +963,13 @@ final class hq {
         if (param0 != -87) {
           this.field_g = (String) null;
         }
-        if (this.field_h.field_k != this.field_d.field_e) {
+        if (this.field_h.next != this.field_d.field_e) {
           if (this.field_h != null &&
             this.field_h != this.field_d.field_e) {
             this.field_l = this.field_h;
             ng.field_s = 0;
           }
-          this.a((bk) (this.field_h.field_k), 1);
+          this.a((bk) (this.field_h.next), 1);
           this.g(-109);
         }
     }
@@ -977,7 +977,7 @@ final class hq {
     hq(String param0, int param1, int param2) {
         try {
           this.field_g = param0;
-          this.field_d = new ko();
+          this.field_d = new IntrusiveDeque();
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

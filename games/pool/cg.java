@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends ma {
+final class cg extends IntrusiveNode {
     byte[] field_l;
-    bm field_m;
+    IterableNodeHashTable field_m;
 
     final void b() {
         int[] var1;
@@ -33,7 +33,7 @@ final class cg extends ma {
         if (this.field_m != null) {
           return;
         }
-        this.field_m = new bm(16);
+        this.field_m = new IterableNodeHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;

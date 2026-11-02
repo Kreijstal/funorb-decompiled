@@ -375,8 +375,8 @@ final class vl extends tm {
           var6_int = var20Lifetime1 * param0[5] + (var18Lifetime1 * param0[3] + var19Lifetime1 * param0[4]) >> 16;
           var18Lifetime2 = 0;
           var19Lifetime2 = 0;
-          L2: while (true) {
-            L3: {
+          scanLoop1: while (true) {
+            regionExit2: {
               if (var19Lifetime2 < hj.field_d[param2].length) {
                 var20Lifetime2 = 2 + (128 * var19Lifetime2 / hj.field_d[param2].length - 64);
                 kp.field_i[param2][var19Lifetime2] = var20Lifetime2 * var15 + var12 * tj.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var9 >> 16;
@@ -390,7 +390,7 @@ final class vl extends tm {
                 stackIn_27_0 = 0;
                 stackIn_27_1 = var20Lifetime2;
                 if (var27 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (stackIn_27_0 < stackIn_27_1) {
                   kp.field_i[param2][var19Lifetime2] = (qh.field_b + fb.field_q << 2) + (kp.field_i[param2][var19Lifetime2] << 11) / var20Lifetime2;
@@ -406,7 +406,7 @@ final class vl extends tm {
                   stackIn_15_0[stackIn_15_1] = stackIn_18_2;
                 } else {
                   var18Lifetime2 = 1;
-                  break L3;
+                  break regionExit2;
                 }
                 var19Lifetime2++;
                 continue;
@@ -545,11 +545,11 @@ final class vl extends tm {
           field_n = new int[hj.field_d.length][hj.field_d[0].length];
           jr.field_o = new int[hj.field_d.length][hj.field_d[0].length];
           var3_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (hj.field_d.length > var3_int) {
               stackIn_13_0 = 0;
               if (var5 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var4 = stackIn_13_0;
               while (var4 < hj.field_d[var3_int].length) {
@@ -561,7 +561,7 @@ final class vl extends tm {
               ie.field_a[var3_int][0] = 0;
               ie.field_a[var3_int][-1 + ie.field_a[var3_int].length] = 0;
               var3_int++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = param0;
             break;

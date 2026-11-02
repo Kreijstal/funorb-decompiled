@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends ma {
+final class gi extends IntrusiveNode {
     static vh field_o;
     int field_r;
     int field_p;

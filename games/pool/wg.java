@@ -3,7 +3,7 @@
  */
 final class wg extends vh {
     private vh field_Qb;
-    static ko field_Lb;
+    static IntrusiveDeque field_Lb;
     private vh field_Pb;
     static int[] field_Nb;
     static String[] field_Mb;
@@ -128,7 +128,7 @@ final class wg extends vh {
     }
 
     static {
-        field_Lb = new ko();
+        field_Lb = new IntrusiveDeque();
         field_Ob = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_Rb = "Add friend";
     }

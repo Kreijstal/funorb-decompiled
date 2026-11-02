@@ -246,7 +246,7 @@ abstract class id {
               }
             }
             var4.field_u = true;
-            var4.a((byte) -117);
+            var4.unlink((byte) -117);
             return;
           }
           if (1 == var2) {
@@ -265,7 +265,7 @@ abstract class id {
               return;
             }
             var6_ref_oj.field_w = var4_long;
-            var6_ref_oj.a((byte) -117);
+            var6_ref_oj.unlink((byte) -117);
             return;
           }
           tc.a((Throwable) null, "HS1: " + t.a(112), -8555);

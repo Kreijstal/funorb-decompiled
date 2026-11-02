@@ -11,7 +11,7 @@ final class sh extends ud {
     static String field_R;
 
     final static void h(int param0) {
-        ma.field_h = null;
+        IntrusiveNode.field_h = null;
         if (param0 != -1) {
           field_S = (String) null;
         }
@@ -73,11 +73,11 @@ final class sh extends ud {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (var19.length <= var12) {
                   if (var11 == 0 &&
                     dr.field_c != param5) {
-                    break L3;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
@@ -90,7 +90,7 @@ final class sh extends ud {
                     }
                   }
                   var8_int = 0;
-                  break L3;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[var12 + 1];
@@ -100,15 +100,15 @@ final class sh extends ud {
                     var11 = 1;
                   } else {
                     if (param5 <= var13Lifetime1) {
-                      break L3;
+                      break scanLoop1;
                     }
                     if ((255 & dk.field_j[var13Lifetime1]) != var14) {
-                      break L3;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (dg.field_T[param6] != var14) {
-                    break L3;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;
@@ -307,7 +307,7 @@ final class sh extends ud {
     final static void a(di param0, byte param1, di param2) {
         try {
           rl.field_c = param2;
-          bm.field_k = param0;
+          IterableNodeHashTable.field_k = param0;
           if (param1 != -32) {
             field_N = (String) null;
           }

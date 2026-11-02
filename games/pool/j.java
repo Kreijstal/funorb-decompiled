@@ -29,8 +29,8 @@ final class j implements fp {
         if (od.a((long)var9, (long)param2, false) + od.a((long)var10, (long)param3, false) >= 0L) {
           return -1;
         }
-        var12 = bm.a(-112, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
-        var14 = bm.a(-99, od.a((long)param2, (long)param2, false) + od.a((long)param3, (long)param3, false));
+        var12 = IterableNodeHashTable.a(-112, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
+        var14 = IterableNodeHashTable.a(-99, od.a((long)param2, (long)param2, false) + od.a((long)param3, (long)param3, false));
         if (0L < -(long)(param5 << 16) + (var12 - var14)) {
           return -1;
         }
@@ -44,7 +44,7 @@ final class j implements fp {
         if (var21 < 0L) {
           return -1;
         }
-        var23 = bm.a(-113, var21);
+        var23 = IterableNodeHashTable.a(-113, var21);
         if (var23 > 2147483647L) {
           throw new IllegalStateException("Out of range: 0x" + Long.toString(var23, 16));
         }

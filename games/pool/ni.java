@@ -15,7 +15,7 @@ final class ni extends vc {
     private boolean[] field_kb;
     static an field_Z;
     private jg field_cb;
-    static kq field_ib;
+    static GameApplet field_ib;
     private jg field_X;
     private nb field_hb;
     static String field_S;
@@ -283,7 +283,7 @@ final class ni extends vc {
           dupTemp$1 = var56[0];
           var7Lifetime1 = dupTemp$1;
           var6 = dupTemp$1;
-          for (var5Lifetime1 = ma.field_g - 1; var5Lifetime1 >= vf.field_lb; var5Lifetime1--) {
+          for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= vf.field_lb; var5Lifetime1--) {
             th.field_l[var5Lifetime1].c(6710886, oh.field_d);
             hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 <= var56[0]) {
@@ -661,7 +661,7 @@ final class ni extends vc {
           var11Lifetime2 = var11Lifetime2 + var4[-kj.field_b + var2].length;
         }
         sb.field_d = var11Lifetime2;
-        ma.field_g = var11Lifetime2;
+        IntrusiveNode.field_g = var11Lifetime2;
         for (var2Lifetime1 = tj.field_fb; nd.field_m > var2Lifetime1; var2Lifetime1++) {
           var12_intLifetime3 = var11Lifetime2;
           var25 = var8[var2Lifetime1 - tj.field_fb];

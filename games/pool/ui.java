@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui extends ch implements pe, tb {
-    static ko field_U;
+    static IntrusiveDeque field_U;
     private fe field_S;
     private fe field_W;
     private String field_T;
@@ -486,7 +486,7 @@ final class ui extends ch implements pe, tb {
     }
 
     static {
-        field_U = new ko();
+        field_U = new IntrusiveDeque();
         field_ab = "Updates will sent to the email address you've given";
         field_N = "To win nine-ball pool, pot the 9 ball without fouling.";
         field_Z = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";

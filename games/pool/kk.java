@@ -143,10 +143,10 @@ abstract class kk extends rg {
           if (oa.field_h == 0) {
             var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 3 + var3_int;
-            bm.field_c = new int[var4];
+            IterableNodeHashTable.field_c = new int[var4];
             dq.field_j = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              bm.field_c[var5] = -1;
+              IterableNodeHashTable.field_c[var5] = -1;
             }
             mb.field_c = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -154,18 +154,18 @@ abstract class kk extends rg {
             }
             dq.field_j[var4 - 3] = "";
             dq.field_j[var4 - 2] = wp.field_h;
-            bm.field_c[-2 + var4] = 0;
+            IterableNodeHashTable.field_c[-2 + var4] = 0;
             mb.field_c[0] = 4;
             dq.field_j[-1 + var4] = hi.field_i;
-            bm.field_c[var4 - 1] = 1;
+            IterableNodeHashTable.field_c[var4 - 1] = 1;
             mb.field_c[1] = 5;
           } else if (oa.field_h == 1) {
             var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 2 + var3_int;
             dq.field_j = new String[var4];
-            bm.field_c = new int[var4];
+            IterableNodeHashTable.field_c = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              bm.field_c[var5] = -1;
+              IterableNodeHashTable.field_c[var5] = -1;
             }
             mb.field_c = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -173,7 +173,7 @@ abstract class kk extends rg {
             }
             dq.field_j[-2 + var4] = "";
             dq.field_j[var4 - 1] = hi.field_i;
-            bm.field_c[var4 - 1] = 0;
+            IterableNodeHashTable.field_c[var4 - 1] = 0;
             mb.field_c[0] = 5;
           } else if (oa.field_h != 2) {
             if (oa.field_h == 3) {
@@ -183,10 +183,10 @@ abstract class kk extends rg {
                 var3_int = rg.a(wj.field_T, ih.field_c, lc.field_T, dq.field_f, 0);
               }
               var4 = 2 + var3_int;
-              bm.field_c = new int[var4];
+              IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                bm.field_c[var5] = -1;
+                IterableNodeHashTable.field_c[var5] = -1;
               }
               mb.field_c = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -194,15 +194,15 @@ abstract class kk extends rg {
               }
               dq.field_j[-2 + var4] = "";
               dq.field_j[-1 + var4] = hi.field_i;
-              bm.field_c[-1 + var4] = 0;
+              IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
             } else if (4 == oa.field_h) {
               var3_int = rg.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f, 0);
               var4 = 2 + var3_int;
-              bm.field_c = new int[var4];
+              IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                bm.field_c[var5] = -1;
+                IterableNodeHashTable.field_c[var5] = -1;
               }
               mb.field_c = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -210,7 +210,7 @@ abstract class kk extends rg {
               }
               dq.field_j[-2 + var4] = "";
               dq.field_j[var4 - 1] = hi.field_i;
-              bm.field_c[-1 + var4] = 0;
+              IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
             } else {
               if (oa.field_h != 5) {
@@ -218,10 +218,10 @@ abstract class kk extends rg {
               }
               var3_int = rg.a(wj.field_T, ih.field_c, de.field_c, dq.field_f, param1 ^ 4);
               var4 = 3 + var3_int;
-              bm.field_c = new int[var4];
+              IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                bm.field_c[var5] = -1;
+                IterableNodeHashTable.field_c[var5] = -1;
               }
               mb.field_c = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -229,10 +229,10 @@ abstract class kk extends rg {
               }
               dq.field_j[var4 - 3] = "";
               dq.field_j[var4 - 2] = hg.field_b;
-              bm.field_c[var4 - 2] = 0;
+              IterableNodeHashTable.field_c[var4 - 2] = 0;
               mb.field_c[0] = 3;
               dq.field_j[var4 - 1] = hi.field_i;
-              bm.field_c[-1 + var4] = 1;
+              IterableNodeHashTable.field_c[-1 + var4] = 1;
               mb.field_c[1] = 5;
             }
           } else {
@@ -281,16 +281,16 @@ abstract class kk extends rg {
             }
             var6 = stackIn_55_0;
             var7 = var5 + (7 + var6);
-            bm.field_c = new int[var7];
+            IterableNodeHashTable.field_c = new int[var7];
             dq.field_j = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              bm.field_c[var8] = -1;
+              IterableNodeHashTable.field_c[var8] = -1;
             }
             dq.field_j[1] = jc.field_g;
             mb.field_c = new int[2];
-            bm.field_c[1] = 0;
+            IterableNodeHashTable.field_c[1] = 0;
             dq.field_j[0] = cl.field_b;
-            bm.field_c[3] = 1;
+            IterableNodeHashTable.field_c[3] = 1;
             dq.field_j[3] = ad.field_e;
             mb.field_c[1] = 2;
             dq.field_j[2] = jp.field_W;
@@ -308,7 +308,7 @@ abstract class kk extends rg {
               stackIn_62_0[stackIn_62_1] = stackIn_63_2;
             }
             dq.field_j[var5 + 6] = null;
-            bm.field_c[var5 + 6] = -2;
+            IterableNodeHashTable.field_c[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_67_0 = dq.field_j;
               stackIn_67_1 = var5 + 7 + var8Lifetime3;
@@ -327,7 +327,7 @@ abstract class kk extends rg {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < dq.field_j.length; var4Lifetime1++) {
             stackIn_90_0 = dq.field_j[var4Lifetime1];
-            stackIn_91_1 = !(bm.field_c[var4Lifetime1] < 0);
+            stackIn_91_1 = !(IterableNodeHashTable.field_c[var4Lifetime1] < 0);
             var5Lifetime1 = ch.a(stackIn_90_0, stackIn_91_1, false);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -357,7 +357,7 @@ abstract class kk extends rg {
           ah.field_i = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + nn.field_c);
           for (var4Lifetime2 = 0; var4Lifetime2 < dq.field_j.length; var4Lifetime2++) {
             stackIn_114_0 = rl.field_a;
-            if (0 > bm.field_c[var4Lifetime2]) {
+            if (0 > IterableNodeHashTable.field_c[var4Lifetime2]) {
               stackIn_115_1 = qe.field_y;
             } else {
               stackIn_115_1 = ch.field_I;
@@ -372,7 +372,7 @@ abstract class kk extends rg {
             return;
           }
           while (var4Lifetime3 < dq.field_j.length) {
-            var6Lifetime1 = bm.field_c[var4Lifetime3];
+            var6Lifetime1 = IterableNodeHashTable.field_c[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = ch.a(dq.field_j[var4Lifetime3], true, false);
               var8Lifetime1 = nn.field_c - (var7Lifetime2 >> 1);

@@ -19,7 +19,7 @@ final class aj extends vh {
         byte[] var2 = v.field_b[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = ma.field_h[rb.b((int) var2[var4_int], 255)];
+          var3[var4_int] = IntrusiveNode.field_h[rb.b((int) var2[var4_int], 255)];
         }
         dd var4 = new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var3);
         if (param0 != 89) {

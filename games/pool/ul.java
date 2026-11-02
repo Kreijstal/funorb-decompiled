@@ -176,7 +176,7 @@ final class ul extends tm {
             }
             break;
           }
-          var8.a((byte) -117);
+          var8.unlink((byte) -117);
           var8.a(false);
           nr.field_S = nr.field_S - 1;
           var9 = ej.field_j;

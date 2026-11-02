@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends ma {
+final class te extends IntrusiveNode {
     byte[] field_l;
     static byte[] field_p;
     static int[] field_o;

@@ -5,7 +5,7 @@ final class qr {
     static int field_d;
     static int field_g;
     static int field_b;
-    static ko field_a;
+    static IntrusiveDeque field_a;
     private boolean field_e;
     private String field_c;
     private boolean field_f;
@@ -41,7 +41,7 @@ final class qr {
 
     final static void c(int param0) {
         if (param0 != 640) {
-          field_a = (ko) null;
+          field_a = (IntrusiveDeque) null;
         }
     }
 
@@ -100,10 +100,10 @@ final class qr {
         if (param0 == -28038) {
           return;
         }
-        field_a = (ko) null;
+        field_a = (IntrusiveDeque) null;
     }
 
     static {
-        field_a = new ko();
+        field_a = new IntrusiveDeque();
     }
 }

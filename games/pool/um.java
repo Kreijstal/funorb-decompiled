@@ -9,7 +9,7 @@ abstract class um {
     static boolean field_e;
 
     final static void a(int param0, int param1) {
-        ma var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         kg var4 = null;
         RuntimeException decompiledCaughtException = null;

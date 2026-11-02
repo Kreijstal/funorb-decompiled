@@ -114,7 +114,7 @@ final class df {
             var6 = (long)param1.field_k - (long)var10[1];
             var6 = var6 >> 8;
           }
-          var8 = bm.a(-119, var4_long * var4_long + var6 * var6);
+          var8 = IterableNodeHashTable.a(-119, var4_long * var4_long + var6 * var6);
           if (-2147483648L <= var8 &&
             var8 <= 2147483647L) {
             if (param0 != 1763073386) {

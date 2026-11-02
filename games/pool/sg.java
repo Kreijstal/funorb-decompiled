@@ -142,7 +142,7 @@ final class sg extends ob {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = ma.field_h[rb.b((int) var10[var6], 255)];
+            var5[var6] = IntrusiveNode.field_h[rb.b((int) var10[var6], 255)];
           }
           var1[var2] = new dd(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var11);
         }

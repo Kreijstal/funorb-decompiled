@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends ma {
+final class kf extends IntrusiveNode {
     nb field_o;
     static String field_l;
     int field_n;
-    ma field_m;
+    IntrusiveNode field_m;
 
     public static void a(int param0) {
         if (param0 != -1) {
@@ -43,12 +43,12 @@ final class kf extends ma {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var8 = Pool.field_O;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
@@ -57,14 +57,14 @@ final class kf extends ma {
                         } else {
                             statePc = 2;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 2: {
@@ -73,20 +73,20 @@ final class kf extends ma {
                 case 3: {
                     param4++;
                     statePc = 5;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 4: {
                     try {
                         param4++;
                         statePc = 5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_4) {
                         statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 5: {
@@ -95,14 +95,14 @@ final class kf extends ma {
                         var7 = 1;
                         var5_int = param4;
                         statePc = 6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 6: {
@@ -115,11 +115,11 @@ final class kf extends ma {
                                     {
                                         var5_int = param0;
                                         statePc = 16;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     statePc = 14;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         } else {
@@ -136,13 +136,13 @@ final class kf extends ma {
                                         var7 = 0;
                                         param3[var5_int] = var6;
                                         statePc = 11;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 8. */
                                     {
                                         statePc = 11;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -153,21 +153,21 @@ final class kf extends ma {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 11: {
                     try {
                         var5_int++;
                         statePc = 6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 14: {
@@ -183,7 +183,7 @@ final class kf extends ma {
                                 } else {
                                     statePc = 31;
                                 }
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 17. */
@@ -199,13 +199,13 @@ final class kf extends ma {
                                         param3[var5_int] = var6;
                                         var7 = 0;
                                         statePc = 20;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 18. */
                                     {
                                         statePc = 20;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -216,21 +216,21 @@ final class kf extends ma {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 20: {
                     try {
                         var5_int--;
                         statePc = 16;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_20) {
                         statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
                             throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
                         }
                         caughtException = stateCaught_20;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 24: {
@@ -244,21 +244,21 @@ final class kf extends ma {
                     } else {
                         statePc = 25;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 25: {
                     stackIn_27_0 = stackIn_25_0;
                     stackIn_27_1 = stackIn_25_1;
                     stackIn_27_2 = "{...}";
                     statePc = 27;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 26: {
                     stackIn_27_0 = stackIn_26_0;
                     stackIn_27_1 = stackIn_26_1;
                     stackIn_27_2 = "null";
                     statePc = 27;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 27: {
                     stackIn_29_0 = stackIn_27_0;
@@ -272,7 +272,7 @@ final class kf extends ma {
                             stackIn_30_1 = stackIn_29_1;
                             stackIn_30_2 = "null";
                             statePc = 30;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 28. */
@@ -281,7 +281,7 @@ final class kf extends ma {
                             stackIn_30_1 = stackIn_28_1;
                             stackIn_30_2 = "{...}";
                             statePc = 30;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }
@@ -296,7 +296,7 @@ final class kf extends ma {
         }
     }
 
-    kf(nb param0, ma param1) {
+    kf(nb param0, IntrusiveNode param1) {
         try {
           this.field_o = param0;
           this.field_n = param0.j();

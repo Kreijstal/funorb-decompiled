@@ -690,12 +690,12 @@ final class uf {
             var8++;
           } while (var13 == 0);
           var9 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var9 < 3) {
               var10 = var6[var9];
               stackIn_20_0 = 0;
               if (var13 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var11_int = stackIn_20_0;
               while (var10.length > var11_int) {
@@ -703,7 +703,7 @@ final class uf {
                 var11_int++;
               }
               var9++;
-              continue L3;
+              continue scanLoop1;
             }
             var9 = var4.field_A;
             uc.a((byte) 125);
@@ -1190,8 +1190,8 @@ final class uf {
             }
             vm.field_f = stackIn_280_0 + stackIn_281_1;
           }
-          L47: {
-            L48: {
+          regionExit1: {
+            regionExit2: {
               var4 = this.field_I.j(71);
               if (ne.field_r.c(0) &&
                 (this.field_L & sk.field_d) == 0) {
@@ -1203,7 +1203,7 @@ final class uf {
                     stackIn_396_0 = stackOut_294_0 ? 1 : 0;
                     stackIn_295_0 = stackOut_294_0;
                     if (var9 != 0) {
-                      break L47;
+                      break regionExit1;
                     }
                     if (!stackIn_295_0) {
                       var6 = var6 | 1 << var7;
@@ -1236,22 +1236,22 @@ final class uf {
                     if (var6 == 0 &&
                       var9 == 0) {
                       em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sm.field_B);
-                      break L48;
+                      break regionExit2;
                     } else {
                       if (1 != var6) {
-                        break L48;
+                        break regionExit2;
                       }
                     }
                     em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, pm.field_o);
                     if (var9 == 0) {
-                      break L48;
+                      break regionExit2;
                     }
                   }
                   if (this.field_T) {
-                    L59: {
-                      L60: {
-                        L61: {
-                          L62: {
+                    regionExit3: {
+                      regionExit4: {
+                        regionExit5: {
+                          regionExit6: {
                             fieldTemp$3 = (mk.field_b + 1) % 5;
                             mk.field_b = (mk.field_b + 1) % 5;
                             var6 = fieldTemp$3;
@@ -1259,46 +1259,46 @@ final class uf {
                               var9 != 0) {
                               switch (var6) {
                                 case 1:
-                                  break L62;
+                                  break regionExit6;
                                 case 2:
-                                  break L61;
+                                  break regionExit5;
                                 case 3:
-                                  break L60;
+                                  break regionExit4;
                                 default:
-                                  break L48;
+                                  break regionExit2;
                                 case 4:
                                   if (var9 == 0) {
-                                    break L59;
+                                    break regionExit3;
                                   }
                                   break;
                               }
                             }
                             em.$cfr$intArgs$a$c9c3307e6488(118, true, 1, field_s);
                             if (var9 == 0) {
-                              break L48;
+                              break regionExit2;
                             }
                           }
                           em.$cfr$intArgs$a$c9c3307e6488(126, true, 1, gk.field_lb);
                           if (var9 == 0) {
-                            break L48;
+                            break regionExit2;
                           }
                         }
                         em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sf.field_z);
                         if (var9 == 0) {
-                          break L48;
+                          break regionExit2;
                         }
                       }
                       em.$cfr$intArgs$a$c9c3307e6488(117, true, 1, em.field_O);
                       if (var9 == 0) {
-                        break L48;
+                        break regionExit2;
                       }
                     }
                     if (var4.field_u == 0) {
-                      break L48;
+                      break regionExit2;
                     }
                     em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, up.field_L);
                     if (var9 == 0) {
-                      break L48;
+                      break regionExit2;
                     }
                   }
                   boolean decompiledFrameRemainder2 = true;
@@ -1309,24 +1309,24 @@ final class uf {
                   if (var6 == 0 &&
                     var9 == 0) {
                     em.$cfr$intArgs$a$c9c3307e6488(127, true, 1, ah.field_h);
-                    break L48;
+                    break regionExit2;
                   } else if (var6 != 1 ||
                     var9 != 0) {
                     decompiledFrameRemainder1 = (var6 != 2);
                     if ((decompiledFrameRemainder1) &&
                       (decompiledFrameRemainder2 = (var6 != 3))) {
-                      break L48;
+                      break regionExit2;
                     }
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1)) {
                     em.$cfr$intArgs$a$c9c3307e6488(117, true, 1, sm.field_B);
-                    break L48;
+                    break regionExit2;
                   }
                   if (decompiledFrameRemainder2) {
                     em.$cfr$intArgs$a$c9c3307e6488(127, true, 1, pm.field_o);
                     if (var9 == 0) {
-                      break L48;
+                      break regionExit2;
                     }
                   }
                   em.$cfr$intArgs$a$c9c3307e6488(119, true, 1, sa.field_l);
@@ -1545,17 +1545,17 @@ final class uf {
             if (param1 != 0) {
               this.field_I = (al) null;
             }
-            L2: {
-              L3: {
+            regionExit1: {
+              regionExit2: {
                 var4 = var3.c((byte) -28, param0);
                 switch (var4) {
                   case 1:
-                    break L3;
+                    break regionExit2;
                   default:
                     return;
                   case 2:
                     if (var5 == 0) {
-                      break L2;
+                      break regionExit1;
                     }
                   case 0:
                     if (1 > var3.field_q) {
@@ -2619,7 +2619,7 @@ final class uf {
         }
     }
 
-    private final void a(int param0, ko param1, byte param2) {
+    private final void a(int param0, IntrusiveDeque param1, byte param2) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -3493,30 +3493,30 @@ final class uf {
             this.c(61, 127, -6);
           }
           if (qi.field_a == 13) {
-            L7: {
+            regionExit1: {
               if ((hq.field_c & this.field_L) == 0) {
                 if ((oj.field_m & this.field_L) != 0 &&
                   this.field_I.field_o) {
                   var2_intLifetime2 = 9;
                   if (var7 == 0) {
-                    break L7;
+                    break regionExit1;
                   }
                 }
                 if ((this.field_L & f.field_f) != 0) {
                   var2_intLifetime2 = 3;
                   if (var7 == 0) {
-                    break L7;
+                    break regionExit1;
                   }
                 }
                 if ((this.field_L & sk.field_d) == 0) {
                   var2_intLifetime2 = 8;
                   if (var7 == 0) {
-                    break L7;
+                    break regionExit1;
                   }
                 }
                 var2_intLifetime2 = 24;
                 if (var7 == 0) {
-                  break L7;
+                  break regionExit1;
                 }
               }
               if (this.field_db >= 0) {
@@ -3627,9 +3627,9 @@ final class uf {
         ij var3Lifetime1;
         try {
           if (this.field_I.field_n > 1) {
-            if (this.field_I.j(param0 + 14107).field_k != this.field_I.field_u.field_e) {
-              if (((qe) (this.field_I.j(85).field_k)).field_L != this.field_I.field_A) {
-                var2 = (qe) (this.field_I.j(53).field_k);
+            if (this.field_I.j(param0 + 14107).next != this.field_I.field_u.field_e) {
+              if (((qe) (this.field_I.j(85).next)).field_L != this.field_I.field_A) {
+                var2 = (qe) (this.field_I.j(53).next);
                 if ((sg.field_O & var2.field_s) != 0) {
                   var3 = gj.a(true, 3, nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, gr.field_A), (String) null);
                   var3.field_q = qo.field_F;
@@ -3926,7 +3926,7 @@ final class uf {
               var2[var5_int] = 0.0f;
             }
             var3[2] = var5_int * 9216 / 640;
-            ma.a(2, var3, var4);
+            IntrusiveNode.a(2, var3, var4);
             var2[var5_int] = (float)mn.field_g;
           }
           sa.field_h.d("audio falloff start=" + re.field_a + " speed=" + k.a((long)ap.field_G, 3, true, 8) + " (" + ap.field_G + ")" + ", slope=" + ue.field_e, 10, 50, 65280, 3355443);
@@ -4276,12 +4276,12 @@ final class uf {
                   if (var4.field_n != 5) {
                     if ((0 == var4.field_n)) {
                       var5 = 2;
-                      L9: while (true) {
+                      scanLoop1: while (true) {
                         var4 = var4.field_f;
                         if (null == var4) {
                           while (true) {
                             stackIn_26_0 = var5;
-                            break L9;
+                            break scanLoop1;
                           }
                         }
                         stackIn_26_0 = var4.field_c ? 1 : 0;
@@ -4290,7 +4290,7 @@ final class uf {
                             var12 != 0)) {
                             var5--;
                             if (var5 > 0) {
-                              continue L9;
+                              continue scanLoop1;
                             }
                           }
                           stackIn_26_0 = var5;
@@ -5384,7 +5384,7 @@ final class uf {
               return;
             }
             var8 = this.field_I.field_l[var7];
-            L9: while (true) {
+            scanLoop1: while (true) {
               if (var8.field_s) {
                 var8.field_o = false;
                 var8.d((byte) 87);
@@ -5400,7 +5400,7 @@ final class uf {
                 }
                 var7Lifetime1 = this.field_ib[var6];
                 var8 = this.field_I.field_l[var7Lifetime1];
-                continue L9;
+                continue scanLoop1;
               }
               break;
             }
@@ -5741,9 +5741,9 @@ final class uf {
           }
           if (!vj.field_c[82]) {
             if (vj.field_c[86]) {
-              L4: {
-                L5: {
-                  L6: {
+              regionExit1: {
+                regionExit2: {
+                  regionExit3: {
                     boolean decompiledFrameRemainder79 = true;
                     boolean decompiledFrameRemainder78 = true;
                     boolean decompiledFrameRemainder77 = true;
@@ -5810,17 +5810,17 @@ final class uf {
                       (decompiledFrameRemainder79 = (var2_int != 69))) {
                       if (var2_int == 59 &&
                         var8 == 0) {
-                        break L6;
+                        break regionExit3;
                       }
                       if (var2_int == 87 &&
                         var8 == 0) {
-                        break L5;
+                        break regionExit2;
                       }
                       if (var2_int != 88) {
                         return;
                       }
                       if (var8 == 0) {
-                        break L4;
+                        break regionExit1;
                       }
                     }
                     if ((decompiledFrameRemainder79) &&
@@ -6373,14 +6373,14 @@ final class uf {
                 return;
               }
             }
-            L51: {
-              L52: {
-                L53: {
-                  L54: {
-                    L55: {
-                      L56: {
-                        L57: {
-                          L58: {
+            regionExit4: {
+              regionExit5: {
+                regionExit6: {
+                  regionExit7: {
+                    regionExit8: {
+                      regionExit9: {
+                        regionExit10: {
+                          regionExit11: {
                             boolean decompiledFrameRemainder54 = true;
                             boolean decompiledFrameRemainder53 = true;
                             boolean decompiledFrameRemainder52 = true;
@@ -6407,28 +6407,28 @@ final class uf {
                               var8 != 0))) {
                               switch (var4) {
                                 case 25:
-                                  break L58;
+                                  break regionExit11;
                                 case 26:
-                                  break L57;
+                                  break regionExit10;
                                 case 43:
-                                  break L56;
+                                  break regionExit9;
                                 default:
                                   if (var4 == 85 &&
                                     var8 == 0) {
-                                    break L55;
+                                    break regionExit8;
                                   }
                                   switch (var4) {
                                     case 64:
-                                      break L54;
+                                      break regionExit7;
                                     case 65:
-                                      break L53;
+                                      break regionExit6;
                                     case 66:
-                                      break L52;
+                                      break regionExit5;
                                     default:
                                       return;
                                     case 67:
                                       if (var8 == 0) {
-                                        break L51;
+                                        break regionExit4;
                                       }
                                       break;
                                   }
@@ -8332,7 +8332,7 @@ final class uf {
               var8.field_b = aj.a(aj.a(var17, false, var25), false, var26);
               var8.field_K = aj.a(aj.a(var18, false, var23) - aj.a(var17, false, var24), false, var26);
               fn.f(-13164);
-              L1: do {
+              scanLoop1: do {
                 hb.field_s = -1;
                 td.field_b = 0;
                 or.field_l = 0;
@@ -8342,7 +8342,7 @@ final class uf {
                   var5_ref_pq__[var6].field_w = 0;
                   var6++;
                   if (var27 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                 }
                 var5 = 0;
@@ -8353,7 +8353,7 @@ final class uf {
                     if (fn.f(-13164)) {
                       continue;
                     }
-                    break L1;
+                    break scanLoop1;
                   }
                   break;
                 }
@@ -8376,7 +8376,7 @@ final class uf {
                   stackIn_52_0 = fn.f(-13164);
                 }
                 if (!stackIn_52_0) {
-                  break L1;
+                  break scanLoop1;
                 }
               } while (bk.a(pc.field_a, (byte) 57));
             }
@@ -8400,7 +8400,7 @@ final class uf {
             do {
               stackIn_75_0 = var3;
               stackIn_75_1 = $cfr$lcmp(~(pd.field_i & 8589934592L), -1L);
-              L21: while (true) {
+              scanLoop2: while (true) {
                 if (stackIn_75_1 == 0) {
                   stackIn_80_1 = pc.field_a.length;
                 } else {
@@ -8422,7 +8422,7 @@ final class uf {
                   stackIn_75_0 = 0;
                   stackIn_75_1 = var11.field_w;
                   if (var27 != 0) {
-                    continue L21;
+                    continue scanLoop2;
                   }
                   if (stackIn_75_0 == stackIn_75_1 ||
                     !(var11.field_w < 65536)) {
@@ -8448,7 +8448,7 @@ final class uf {
                       var17 = -(var8.field_g >> 13) + var14;
                       var18 = -(var8.field_k >> 13) + var15;
                       var19 = (long)(var17 * var17 + var18 * var18);
-                      var21 = bm.a(-127, var19 << 10) >> 13;
+                      var21 = IterableNodeHashTable.a(-127, var19 << 10) >> 13;
                       decompiledFrameRemainder0 = (!(var21 < 48L) ||
                         var27 != 0);
                       if (decompiledFrameRemainder0) {
@@ -9133,13 +9133,13 @@ final class uf {
             var12_ref_al = var11_ref_al;
             pq.field_B = new pq[12][];
             var13 = 0;
-            L15: while (true) {
+            scanLoop1: while (true) {
               if (var13 < pq.field_B.length) {
                 array$0 = new pq[var12_ref_al.field_l.length];
                 pq.field_B[var13] = array$0;
                 stackIn_53_0 = 0;
                 if (var16 != 0) {
-                  break L15;
+                  break scanLoop1;
                 }
                 var14 = stackIn_53_0;
                 while (pq.field_B[var13].length > var14) {
@@ -9170,13 +9170,13 @@ final class uf {
             var12_ref_al = var11_ref_al;
             pq.field_B = new pq[][]{};
             var13 = 0;
-            L24: while (true) {
+            scanLoop2: while (true) {
               if (pq.field_B.length > var13) {
                 array$1 = new pq[var12_ref_al.field_l.length];
                 pq.field_B[var13] = array$1;
                 stackIn_73_0 = 0;
                 if (var16 != 0) {
-                  break L24;
+                  break scanLoop2;
                 }
                 var14 = stackIn_73_0;
                 while (pq.field_B[var13].length > var14) {

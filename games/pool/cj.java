@@ -420,7 +420,7 @@ final class cj extends vc {
         }
     }
 
-    private final void a(int[] param0, ko[] param1, eg param2, int param3) {
+    private final void a(int[] param0, IntrusiveDeque[] param1, eg param2, int param3) {
         int[] stackIn_5_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -473,7 +473,7 @@ final class cj extends vc {
         }
         stackIn_5_0 = jd.field_h;
         try {
-          L5: while (true) {
+          scanLoop1: while (true) {
             if (stackIn_5_0.length > var7) {
               Runtime.getRuntime().gc();
               if (jd.field_h[var7] <= var6) {
@@ -492,7 +492,7 @@ final class cj extends vc {
                   param2 = var11;
                   var8.e();
                   if (0 == var11.field_K) {
-                    break L5;
+                    break scanLoop1;
                   }
                 }
                 var7++;
@@ -623,7 +623,7 @@ final class cj extends vc {
         int var4;
         int var5;
         int var6;
-        ko[] var7;
+        IntrusiveDeque[] var7;
         eg var8;
         int var9;
         int var10;
@@ -635,9 +635,9 @@ final class cj extends vc {
           var2 = 500;
           jd.field_h = new int[]{var2, var2 + 50, 100 + var2, 200 + var2};
           sg.field_K = 1 + jd.field_h.length;
-          ck.field_Y = new ko[sg.field_K];
+          ck.field_Y = new IntrusiveDeque[sg.field_K];
           for (var3 = 0; sg.field_K > var3; var3++) {
-            ck.field_Y[var3] = new ko();
+            ck.field_Y[var3] = new IntrusiveDeque();
           }
           kj.field_m = 80;
           hf.field_a = 4000;
@@ -763,7 +763,7 @@ final class cj extends vc {
         return ~ve.field_m == ~em.field_L.field_Zb ? true : false;
     }
 
-    private final void a(ko[] param0, int param1, byte param2, eg param3, int param4, int param5) {
+    private final void a(IntrusiveDeque[] param0, int param1, byte param2, eg param3, int param4, int param5) {
         int var7_int = 0;
         int var8 = 0;
         try {
@@ -920,7 +920,7 @@ final class cj extends vc {
           fb.field_b = dn.field_m[0];
           if (param0 != -55) {
             var12 = (eg) null;
-            this.a((int[]) null, (ko[]) null, (eg) null, -92);
+            this.a((int[]) null, (IntrusiveDeque[]) null, (eg) null, -92);
           }
           var24 = ln.field_u[1];
           var41 = gr.field_w;
@@ -1091,7 +1091,7 @@ final class cj extends vc {
 
     private final void n(int param0) {
         int var2;
-        ko[] var3;
+        IntrusiveDeque[] var3;
         int var4;
         int var5;
         int var8;
@@ -1101,9 +1101,9 @@ final class cj extends vc {
         int var2Lifetime1;
         int var4Lifetime1;
         var8 = Pool.field_O;
-        var3 = new ko[sg.field_K];
+        var3 = new IntrusiveDeque[sg.field_K];
         for (var4 = 0; var4 < sg.field_K; var4++) {
-          var3[var4] = new ko();
+          var3[var4] = new IntrusiveDeque();
         }
         var4Lifetime1 = 0;
         var2 = ec.field_c;

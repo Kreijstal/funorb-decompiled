@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends ma {
+final class qe extends IntrusiveNode {
     byte field_H;
     int field_P;
     int field_M;
@@ -18,7 +18,7 @@ final class qe extends ma {
     int field_u;
     short field_C;
     int field_I;
-    ko field_m;
+    IntrusiveDeque field_m;
     byte field_w;
     int[] field_U;
     static String field_G;
@@ -36,7 +36,7 @@ final class qe extends ma {
     boolean field_E;
     short field_V;
     byte field_l;
-    ko field_R;
+    IntrusiveDeque field_R;
     long field_x;
     int field_s;
 
@@ -168,7 +168,7 @@ final class qe extends ma {
         RuntimeException var4 = null;
         try {
           if (null == this.field_R) {
-            this.field_R = new ko();
+            this.field_R = new IntrusiveDeque();
           }
           this.field_R.b((byte) 124, new dn(param0, param2));
           if (param1 != -14) {
@@ -1017,7 +1017,7 @@ final class qe extends ma {
         this.field_I = -1;
         this.field_n = -1;
         this.field_V = (short) -1;
-        this.field_m = new ko();
+        this.field_m = new IntrusiveDeque();
         this.field_x = 0L;
         this.field_l = (byte) 0;
         this.field_R = null;
@@ -1037,7 +1037,7 @@ final class qe extends ma {
         this.field_I = -1;
         this.field_n = -1;
         this.field_V = (short) -1;
-        this.field_m = new ko();
+        this.field_m = new IntrusiveDeque();
         this.field_x = 0L;
         this.field_l = (byte) 0;
         this.field_R = null;

@@ -5,7 +5,7 @@ final class ne extends ig {
     static int field_w;
     static int field_q;
     static int field_v;
-    static ko field_r;
+    static IntrusiveDeque field_r;
     private sl field_p;
     static int field_s;
     static volatile int field_o;
@@ -127,7 +127,7 @@ final class ne extends ig {
         field_v = 12;
         field_s = 0;
         field_o = 0;
-        field_r = new ko();
+        field_r = new IntrusiveDeque();
         field_m = -1;
         field_n = -1;
     }

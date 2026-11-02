@@ -1,36 +1,36 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm {
+final class IterableNodeHashTable {
     static String field_a;
-    private ma field_f;
+    private IntrusiveNode field_f;
     static String field_i;
     static String field_d;
-    private ma[] field_g;
+    private IntrusiveNode[] field_g;
     static String field_l;
     static di field_k;
-    private ma field_j;
+    private IntrusiveNode field_j;
     static int field_h;
     private int field_m;
     static vh field_e;
     private int field_b;
     static int[] field_c;
 
-    final void a(byte param0, ma param1, long param2) {
-        ma var5 = null;
+    final void a(byte param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_k != null) {
-            param1.a((byte) -117);
+          if (param1.next != null) {
+            param1.unlink((byte) -117);
           }
           if (param0 >= -112) {
-            bm.a(-17, 57L);
+            IterableNodeHashTable.a(-17, 57L);
           }
           var5 = this.field_g[(int)(param2 & (long)(this.field_b - 1))];
-          param1.field_d = var5;
-          param1.field_k = var5.field_k;
-          param1.field_k.field_d = param1;
-          param1.field_d.field_k = param1;
-          param1.field_c = param2;
+          param1.previous = var5;
+          param1.next = var5.next;
+          param1.next.previous = param1;
+          param1.previous.next = param1;
+          param1.key = param2;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -101,54 +101,54 @@ final class bm {
         }
     }
 
-    final ma a(boolean param0, long param1) {
-        ma var5 = null;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Pool.field_O;
-        ma var4 = this.field_g[(int)(param1 & (long)(this.field_b - 1))];
+        IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_b - 1))];
         if (param0) {
-          return (ma) null;
+          return (IntrusiveNode) null;
         }
-        this.field_j = var4.field_d;
+        this.field_j = var4.previous;
         while (this.field_j != var4) {
-          if (this.field_j.field_c == param1) {
+          if (this.field_j.key == param1) {
             var5 = this.field_j;
-            this.field_j = this.field_j.field_d;
+            this.field_j = this.field_j.previous;
             return var5;
           }
-          this.field_j = this.field_j.field_d;
+          this.field_j = this.field_j.previous;
         }
         this.field_j = null;
         return null;
     }
 
-    final ma a(int param0) {
+    final IntrusiveNode a(int param0) {
         this.field_m = param0;
         return this.b(-1);
     }
 
-    final ma b(int param0) {
+    final IntrusiveNode b(int param0) {
         int fieldTemp$0 = 0;
-        ma var2;
+        IntrusiveNode var2;
         int var3;
         var3 = Pool.field_O;
         if (0 < this.field_m &&
           this.field_g[this.field_m - 1] != this.field_f) {
           var2 = this.field_f;
-          this.field_f = var2.field_d;
+          this.field_f = var2.previous;
           return var2;
         }
         do {
           if (this.field_b <= this.field_m) {
             if (param0 != -1) {
-              return (ma) null;
+              return (IntrusiveNode) null;
             }
             return null;
           }
           fieldTemp$0 = this.field_m;
           this.field_m = this.field_m + 1;
-          var2 = this.field_g[fieldTemp$0].field_d;
+          var2 = this.field_g[fieldTemp$0].previous;
         } while (this.field_g[-1 + this.field_m] == var2);
-        this.field_f = var2.field_d;
+        this.field_f = var2.previous;
         return var2;
     }
 
@@ -202,7 +202,7 @@ final class bm {
         }
         if (param0 > -94) {
           var4 = (String) null;
-          bm.a(47, (String) null);
+          IterableNodeHashTable.a(47, (String) null);
         }
         if (0L > param1) {
           throw new IllegalArgumentException("");
@@ -295,19 +295,19 @@ final class bm {
         return (long)ac.field_o[(int)(-32768L + param1)] << var3Lifetime1;
     }
 
-    bm(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
-        ma dupTemp$0 = null;
-        ma var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_m = 0;
         this.field_b = param0;
-        this.field_g = new ma[param0];
+        this.field_g = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new ma();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_g[var2] = dupTemp$0;
-          var3.field_k = var3;
-          var3.field_d = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

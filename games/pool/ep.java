@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ep extends kq {
+abstract class ep extends GameApplet {
     private int field_q;
-    static ko field_A;
+    static IntrusiveDeque field_A;
     private int field_E;
     static di field_F;
     static String field_v;
@@ -300,7 +300,7 @@ abstract class ep extends kq {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 1:
                 cm.f(80);
@@ -323,17 +323,17 @@ abstract class ep extends kq {
                   switch (var2) {
                     case 13:
                       ga.n(29769);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.d(70);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       ul.i(3);
-                      break L1;
+                      break regionExit1;
                     default:
                       tc.a((Throwable) null, "MGS1: " + t.a(127), param0 - 23555);
                       dn.c(-75);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_29_0 = -31;
@@ -409,8 +409,8 @@ abstract class ep extends kq {
         try {
           if (!nd.field_i.c(0)) {
             kg.field_m = kg.field_m + 1;
-            if (kq.field_l != null) {
-              kq.field_l.a(false, 50, kg.field_m);
+            if (GameApplet.field_l != null) {
+              GameApplet.field_l.a(false, 50, kg.field_m);
             }
             if (null != nl.field_b) {
               nl.field_b.a(false, 50, kg.field_m);
@@ -671,7 +671,7 @@ abstract class ep extends kq {
             this.field_C = false;
             dn.c(-80);
             de.c(param0 + 15);
-            re.a(true, bm.field_l, 2);
+            re.a(true, IterableNodeHashTable.field_l, 2);
             qr.c(640);
             rg.field_v = true;
             ia.field_k = 15000L + rl.a((byte) -101);
@@ -819,15 +819,15 @@ abstract class ep extends kq {
         }
         if (sf.field_y == 10) {
           if (gj.field_S != 0) {
-            kq.field_m = fh.a(mk.field_c, (byte) 103);
+            GameApplet.field_m = fh.a(mk.field_c, (byte) 103);
           }
           sf.field_y = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (sf.field_y == 11) {
-          if (kq.field_m != null && (!kq.field_m.d(param0 ^ -52) ||
-            !kq.field_m.c(param0 ^ 61))) {
-            fo.a(hp.a(kq.field_m, ir.field_b, -641, ud.field_F), 0.0f, false);
+          if (GameApplet.field_m != null && (!GameApplet.field_m.d(param0 ^ -52) ||
+            !GameApplet.field_m.c(param0 ^ 61))) {
+            fo.a(hp.a(GameApplet.field_m, ir.field_b, -641, ud.field_F), 0.0f, false);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -196,7 +196,7 @@ final class nj {
             return false;
           }
           var4_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (param3.length <= var4_int) {
               return false;
             }
@@ -213,7 +213,7 @@ final class nj {
               }
               if (decompiledFrameRemainder0) {
                 var4_int++;
-                continue L0;
+                continue scanLoop1;
               }
               var6 += 2;
             }

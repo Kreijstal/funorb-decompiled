@@ -144,7 +144,7 @@ final class kj {
           if (var44.field_K != null &&
             var44.field_I > 1) {
             var60 = var44.field_K;
-            ko.a(wa.field_ib, 0, var60, 0, -147296924);
+            IntrusiveDeque.a(wa.field_ib, 0, var60, 0, -147296924);
           } else {
             bo.a(-94);
           }

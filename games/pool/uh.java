@@ -52,7 +52,7 @@ final class uh extends ig {
           pa.field_J.field_Bb = -((mc.field_g & 16711422) >> 1) + (mc.field_g + (8355711 & kb.field_h.field_Bb >> 1));
           oq.field_z = pa.field_J;
           uq.field_D = new vh(0L, param4);
-          ma.field_e = new vh(0L, param3);
+          IntrusiveNode.field_e = new vh(0L, param3);
           ml.field_e = new vh(0L, (vh) null);
           vi.field_c = new vh(0L, param1);
           pa.field_J = new vh(0L, param2);
@@ -63,7 +63,7 @@ final class uh extends ig {
           be.field_L = new vh(0L, kb.field_h, ra.field_d);
           wn.field_g = new vh(0L, kb.field_h);
           var6 = 43 % ((-44 - param0) / 45);
-          uq.field_D.a(14, ma.field_e);
+          uq.field_D.a(14, IntrusiveNode.field_e);
           uq.field_D.a(-121, ml.field_e);
           ml.field_e.a(-96, vi.field_c);
           ml.field_e.a(127, be.field_L);
@@ -251,10 +251,10 @@ final class uh extends ig {
             this.a((String) null, -37);
           }
           if (qa.a(1, var5)) {
-            stackIn_10_0 = bm.field_a;
+            stackIn_10_0 = IterableNodeHashTable.field_a;
             return stackIn_10_0;
           }
-          if (bm.a(var5, -113)) {
+          if (IterableNodeHashTable.a(var5, -113)) {
             stackIn_14_0 = lh.field_b;
             return stackIn_14_0;
           }

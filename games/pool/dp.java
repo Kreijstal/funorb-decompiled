@@ -8,7 +8,7 @@ final class dp implements in {
     static char[] field_d;
     static int field_l;
     static int[] field_k;
-    private ko field_a;
+    private IntrusiveDeque field_a;
     static vh field_c;
     private int field_j;
     private int field_b;
@@ -31,7 +31,7 @@ final class dp implements in {
             this.field_a.a((byte) -84, var7);
             return var7.field_r;
           }
-          var7.a((byte) -117);
+          var7.unlink((byte) -117);
           var7.a();
           this.field_j = this.field_j + 1;
         }
@@ -156,7 +156,7 @@ final class dp implements in {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          param1.a((byte) -117);
+          param1.unlink((byte) -117);
           var2 = (kh) (ep.field_A.c((byte) -72));
           while (var2 != null) {
             if (var2.a(param1, false)) {
@@ -260,7 +260,7 @@ final class dp implements in {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        this.field_a = new ko();
+        this.field_a = new IntrusiveDeque();
         this.field_b = 128;
         this.field_j = 0;
         try {

@@ -38,7 +38,7 @@ final class ec implements eb {
           var6 = param4.getParameter("currency");
           if (var6 != null &&
             ka.a(10, (CharSequence) ((Object) var6))) {
-            qg.field_e = kq.a((byte) 63, (CharSequence) ((Object) var6));
+            qg.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
           } else {
             qg.field_e = 2;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ma {
+final class oj extends IntrusiveNode {
     static String field_u;
     int field_p;
     static int field_m;
@@ -16,7 +16,7 @@ final class oj extends ma {
     static int field_s;
     static String field_t;
     static int field_q;
-    static ko field_o;
+    static IntrusiveDeque field_o;
     static String field_y;
     static int[] field_r;
 
@@ -155,7 +155,7 @@ final class oj extends ma {
         field_m = 4;
         field_t = "Loading graphics";
         field_q = -1;
-        field_o = new ko();
+        field_o = new IntrusiveDeque();
         field_r = new int[8192];
     }
 }

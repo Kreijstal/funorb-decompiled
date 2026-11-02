@@ -7,7 +7,7 @@ final class nd implements fp {
     private int field_n;
     private static int field_e;
     private int field_p;
-    static ko field_i;
+    static IntrusiveDeque field_i;
     private int field_f;
     private int field_d;
     private int field_k;
@@ -125,7 +125,7 @@ final class nd implements fp {
         db.field_Sb = lo.b(14);
         wd.field_Ub = new lq();
         if (param0 > -82) {
-          field_i = (ko) null;
+          field_i = (IntrusiveDeque) null;
         }
         t.a(110, true, true);
     }
@@ -253,6 +253,6 @@ final class nd implements fp {
         field_g = "You have lost!";
         field_j = 1 << field_e;
         field_b = "Withdraw request to join <%0>'s game";
-        field_i = new ko();
+        field_i = new IntrusiveDeque();
     }
 }

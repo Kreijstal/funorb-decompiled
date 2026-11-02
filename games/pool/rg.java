@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rg extends ma {
+class rg extends IntrusiveNode {
     long field_m;
     static di field_r;
     static String field_l;

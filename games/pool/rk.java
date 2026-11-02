@@ -224,7 +224,7 @@ final class rk {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        ko var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         im var12 = null;
@@ -408,7 +408,7 @@ final class rk {
               var12.field_lc.field_K = var24_int;
               if (wo.field_f != param2) {
                 if (var12.field_mc) {
-                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, ma.field_f);
+                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, IntrusiveNode.field_f);
                   var12.field_Zb.field_nb = be.field_K;
                 } else {
                   if (var12.field_Yb) {
@@ -719,7 +719,7 @@ final class rk {
           param5 = param5 + param1;
           var7_int = 0;
           var8 = param2;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param4[var8];
             if (0 > var9) {
               var7_int = this.field_c[var7_int];
@@ -733,7 +733,7 @@ final class rk {
               param1++;
               param3[incrementValue$1] = (byte)(~var10);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -749,7 +749,7 @@ final class rk {
               param1++;
               param3[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -765,7 +765,7 @@ final class rk {
               param1++;
               param3[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param1 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -781,7 +781,7 @@ final class rk {
               param1++;
               param3[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param1 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -797,7 +797,7 @@ final class rk {
               param1++;
               param3[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -813,7 +813,7 @@ final class rk {
               param1++;
               param3[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -829,7 +829,7 @@ final class rk {
               param1++;
               param3[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -845,7 +845,7 @@ final class rk {
               param1++;
               param3[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -994,7 +994,7 @@ final class rk {
             var4_ref_fr = (fr) (vn.field_g.c((byte) -112));
             if (var4_ref_fr != null &&
               var4_ref_fr.field_p < var2_long) {
-              var4_ref_fr.a((byte) -117);
+              var4_ref_fr.unlink((byte) -117);
               of.field_Pb = var4_ref_fr.field_l.length;
               kn.field_e.field_v = 0;
               for (var5_int = 0; var5_int < of.field_Pb; var5_int++) {

@@ -377,13 +377,13 @@ final class rn implements Runnable {
           oi.field_q = new vh(0L, bh.field_b, gr.field_D.toUpperCase());
           oi.field_v = new vh[4 + param3];
           mc.field_f = new uo[param3 + 4][];
-          oi.field_v[0] = new vh(0L, kq.field_a, fr.field_q);
+          oi.field_v[0] = new vh(0L, GameApplet.field_a, fr.field_q);
           mc.field_f[0] = new uo[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             mc.field_f[0][1 + var17_int] = new uo(0L, ef.field_c, (vh) null, ei.field_A, uk.field_i[var17_int], pn.field_i[var17_int]);
           }
           if (dg.field_T.length >= 2) {
-            oi.field_v[1] = new vh(0L, kq.field_a, ab.field_h);
+            oi.field_v[1] = new vh(0L, GameApplet.field_a, ab.field_h);
             array$0 = new uo[dg.field_T.length + 1];
             mc.field_f[1] = array$0;
             mc.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
@@ -391,10 +391,10 @@ final class rn implements Runnable {
               mc.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, Integer.toString(dg.field_T[var17_intLifetime1]));
             }
           }
-          oi.field_v[2] = new vh(0L, kq.field_a, ve.field_o);
+          oi.field_v[2] = new vh(0L, GameApplet.field_a, ve.field_o);
           mc.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.field_g), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.field_f)};
           if (1 < ji.field_g) {
-            oi.field_v[3] = new vh(0L, kq.field_a, pk.field_c);
+            oi.field_v[3] = new vh(0L, GameApplet.field_a, pk.field_c);
             array$1 = new uo[1 + ji.field_g];
             mc.field_f[3] = array$1;
             mc.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
@@ -403,7 +403,7 @@ final class rn implements Runnable {
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
-            oi.field_v[var17_intLifetime3 + 4] = new vh(0L, kq.field_a, ck.field_R[var17_intLifetime3]);
+            oi.field_v[var17_intLifetime3 + 4] = new vh(0L, GameApplet.field_a, ck.field_R[var17_intLifetime3]);
             array$2 = new uo[rb.b(255, (int) gr.field_E[var17_intLifetime3]) + 1];
             mc.field_f[4 + var17_intLifetime3] = array$2;
             mc.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);

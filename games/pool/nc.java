@@ -839,7 +839,7 @@ final class nc extends fa {
           field_S = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_P; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_J[var8Lifetime1] != -2) {
               var9 = this.field_j[var8Lifetime1];
               var10 = this.field_T[var8Lifetime1];
@@ -886,7 +886,7 @@ final class nc extends fa {
                       var28 = field_Y[var27];
                       if (var28 == 64) {
                         if (field_S == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_S;
                         field_S = field_S + 1;
@@ -901,7 +901,7 @@ final class nc extends fa {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(tp.field_b + fb.field_q, ao.field_Rb + fb.field_d, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
@@ -928,7 +928,7 @@ final class nc extends fa {
                     var16Lifetime2 = field_Y[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_S == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_S;
                       field_S = field_S + 1;

@@ -9,7 +9,7 @@ abstract class tm {
     nc[] field_j;
     dd[] field_e;
     private int[][] field_k;
-    static ko field_i;
+    static IntrusiveDeque field_i;
     static ea field_b;
     static cd field_h;
     static int[] field_c;
@@ -221,7 +221,7 @@ abstract class tm {
     public static void d(int param0) {
         field_h = null;
         if (param0 != -22799) {
-          field_i = (ko) null;
+          field_i = (IntrusiveDeque) null;
         }
         field_i = null;
         field_b = null;
@@ -373,7 +373,7 @@ abstract class tm {
     }
 
     static {
-        field_i = new ko();
+        field_i = new IntrusiveDeque();
         field_b = null;
         field_h = new cd();
     }

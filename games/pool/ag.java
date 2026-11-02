@@ -14,8 +14,8 @@ final class ag {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-          ko var2 = (ko) null;
-          ag.a(105, (ko) null, -112, 90);
+          IntrusiveDeque var2 = (IntrusiveDeque) null;
+          ag.a(105, (IntrusiveDeque) null, -112, 90);
         }
         field_g = null;
         field_d = null;
@@ -41,12 +41,12 @@ final class ag {
         }
     }
 
-    final static gi a(int param0, ko param1, int param2, int param3) {
+    final static gi a(int param0, IntrusiveDeque param1, int param2, int param3) {
         RuntimeException var4 = null;
         gi var5 = null;
         gi var6 = null;
         int var7 = 0;
-        ko var8 = null;
+        IntrusiveDeque var8 = null;
         aa var9 = null;
         gi stackIn_12_0 = null;
         Object stackIn_18_0 = null;
@@ -75,8 +75,8 @@ final class ag {
           if (param3 == 15395) {
             return null;
           }
-          var8 = (ko) null;
-          ag.a(15, (ko) null, 110, 38);
+          var8 = (IntrusiveDeque) null;
+          ag.a(15, (IntrusiveDeque) null, 110, 38);
           stackIn_18_0 = null;
           return (gi) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

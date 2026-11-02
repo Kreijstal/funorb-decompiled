@@ -221,7 +221,7 @@ final class wm extends vh {
             this.field_Rb.field_kb = "|";
             if (!(ta.field_f < 5) ||
               !(hq.field_i < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -235,7 +235,7 @@ final class wm extends vh {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = tq.field_w;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;

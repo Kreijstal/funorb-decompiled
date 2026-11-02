@@ -267,9 +267,9 @@ final class vf extends vc {
         so dupTemp$500 = null;
         so dupTemp$501 = null;
         int var2;
-        ko var3;
-        ko var4;
-        ko var5;
+        IntrusiveDeque var3;
+        IntrusiveDeque var4;
+        IntrusiveDeque var5;
         so var6;
         so var7;
         so var8;
@@ -288,7 +288,7 @@ final class vf extends vc {
         so var27;
         eg var28;
         so var29;
-        ko var33;
+        IntrusiveDeque var33;
         int stackIn_15_0 = 0;
         eg stackIn_15_1 = null;
         int stackIn_15_2 = 0;
@@ -328,9 +328,9 @@ final class vf extends vc {
         var20 = Pool.field_O;
         var2 = 0;
         this.field_U = new vm[-gk.field_hb + mf.field_m];
-        var3 = new ko();
-        var4 = new ko();
-        var5 = new ko();
+        var3 = new IntrusiveDeque();
+        var4 = new IntrusiveDeque();
+        var5 = new IntrusiveDeque();
         var6 = new so();
         var7 = new so();
         var8 = new so();
@@ -367,7 +367,7 @@ final class vf extends vc {
         }
         for (var2Lifetime3 = gk.field_hb; mf.field_m > var2Lifetime3; var2Lifetime3++) {
           var24 = this.field_O[var2Lifetime3];
-          var33 = new ko();
+          var33 = new IntrusiveDeque();
           var24.e();
           if (var24.field_V > -this.field_M[var2Lifetime3][2]) {
             dupTemp$497 = hc.a(var24, this.field_M[var2Lifetime3], (byte) 101);
@@ -958,7 +958,7 @@ final class vf extends vc {
         int var5;
         int var6;
         int var7;
-        L0: {
+        regionExit1: {
           var7 = Pool.field_O;
           var5 = -125 / ((-44 - param2) / 56);
           var6 = param0;
@@ -985,20 +985,20 @@ final class vf extends vc {
                   switch (var6) {
                     case 0:
                       kp.a(100, this.field_Y, param3, param1);
-                      break L0;
+                      break regionExit1;
                     case 1:
                       kp.a(100, this.field_X, param3, param1);
-                      break L0;
+                      break regionExit1;
                     case 6:
                       kp.a(100, this.field_S, param3, param1);
                       System.out.println("playing respot the white");
-                      break L0;
+                      break regionExit1;
                     case 4:
                       kp.a(100, this.field_jb, param3, param1);
-                      break L0;
+                      break regionExit1;
                     default:
                       super.a(param0, param1, (byte) 115, param3);
-                      break L0;
+                      break regionExit1;
                   }
                 }
                 kp.a(100, this.field_hb, param3, param1);

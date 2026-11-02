@@ -6,7 +6,7 @@ final class mp extends ch implements tb {
     static String field_Q;
     static String field_X;
     private String[] field_T;
-    static ko field_R;
+    static IntrusiveDeque field_R;
     static dd[] field_N;
     private jn field_Y;
     static String field_S;

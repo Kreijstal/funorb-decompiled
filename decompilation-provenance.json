@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "pool": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/pool"
+      },
+      "inputTreeSha256": "65ca5eebdd8552ccbd86cc55f34b6fce02c4599831c581d38731a88a55795e47",
+      "sources": {
+        "files": 429,
+        "sha256": "673fb23cdc5a272130602cee804ca576a81016fabed1af17fee07787a73af978"
+      },
+      "dictionary": {
+        "path": "decompilation/pool-naming.json",
+        "sha256": "f8940a79f353dc5da7634cf9e62a0f7139d54dc5d10c5d5075e0a8904c351618"
+      },
+      "readingGuide": {
+        "path": "games/pool/README.md",
+        "sha256": "c2dbf9a75bff4599875e5a82c1e1caf5f7a328afee4ea0d87b9a25dd3dc51f55"
+      },
+      "rulesSha256": "392ca27abe001ad89b8e42eb9f71996a2e140f38914293d1f1e5ac9715376822",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11853,6 +11877,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 429,
+          "sha256": "673fb23cdc5a272130602cee804ca576a81016fabed1af17fee07787a73af978"
         }
       },
       "shatteredplans": {

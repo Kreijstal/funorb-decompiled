@@ -179,7 +179,7 @@ final class nb extends kd {
         if (this.field_t < 0) {
           if (this.field_w <= 0) {
             this.k();
-            this.a((byte) -117);
+            this.unlink((byte) -117);
             return;
           }
           this.field_t = 0;
@@ -187,7 +187,7 @@ final class nb extends kd {
         if (this.field_t >= var7) {
           if (this.field_w >= 0) {
             this.k();
-            this.a((byte) -117);
+            this.unlink((byte) -117);
             return;
           }
           this.field_t = var7 - 1;
@@ -314,7 +314,7 @@ final class nb extends kd {
           if (this.field_t >= var7) {
             this.field_t = var7;
             this.k();
-            this.a((byte) -117);
+            this.unlink((byte) -117);
           }
           return;
         }
@@ -324,7 +324,7 @@ final class nb extends kd {
         }
         this.field_t = -1;
         this.k();
-        this.a((byte) -117);
+        this.unlink((byte) -117);
         return;
     }
 
@@ -905,7 +905,7 @@ final class nb extends kd {
         int var2Lifetime1;
         if (param0 == 0) {
           this.d(0);
-          this.a((byte) -117);
+          this.unlink((byte) -117);
           return;
         }
         if (this.field_r != 0) {
@@ -965,7 +965,7 @@ final class nb extends kd {
         this.field_A = 0;
         this.field_x = 0;
         this.field_v = 0;
-        this.a((byte) -117);
+        this.unlink((byte) -117);
     }
 
     final synchronized void a(int param0) {
@@ -990,7 +990,7 @@ final class nb extends kd {
               this.field_s = 0;
               this.field_r = 0;
               this.field_v = 0;
-              this.a((byte) -117);
+              this.unlink((byte) -117);
               param0 = this.field_A;
             }
             this.field_A = 0;
@@ -1008,7 +1008,7 @@ final class nb extends kd {
         if (this.field_t < 0) {
           if (this.field_w <= 0) {
             this.k();
-            this.a((byte) -117);
+            this.unlink((byte) -117);
             return;
           }
           this.field_t = 0;
@@ -1016,7 +1016,7 @@ final class nb extends kd {
         if (this.field_t >= var5) {
           if (this.field_w >= 0) {
             this.k();
-            this.a((byte) -117);
+            this.unlink((byte) -117);
             return;
           }
           this.field_t = var5 - 1;
@@ -1129,7 +1129,7 @@ final class nb extends kd {
           if (this.field_t >= var5) {
             this.field_t = var5;
             this.k();
-            this.a((byte) -117);
+            this.unlink((byte) -117);
           }
           return;
         }
@@ -1138,7 +1138,7 @@ final class nb extends kd {
         }
         this.field_t = -1;
         this.k();
-        this.a((byte) -117);
+        this.unlink((byte) -117);
     }
 
     final synchronized int m() {
@@ -1232,7 +1232,7 @@ final class nb extends kd {
           this.field_s = 0;
           this.field_r = 0;
           this.field_v = 0;
-          this.a((byte) -117);
+          this.unlink((byte) -117);
           return true;
         }
         if (this.field_v >= var1) {

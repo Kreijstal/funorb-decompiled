@@ -78,7 +78,7 @@ final class dk {
           var5_long = param3.e(-14770);
           var7 = param0 - param3.field_g;
           var8 = -param3.field_k + param4;
-          var9 = bm.a(-107, od.a((long)var7, (long)var7, false) + od.a((long)var8, (long)var8, false));
+          var9 = IterableNodeHashTable.a(-107, od.a((long)var7, (long)var7, false) + od.a((long)var8, (long)var8, false));
           if (var9 <= 2147483647L &&
             var9 >= -2147483648L) {
             var7 = lh.a((int)var9, (byte) -96, (long)var7);
@@ -168,7 +168,7 @@ final class dk {
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = nr.a(new String[]{fm.field_I}, -1, bm.field_d);
+              var2 = nr.a(new String[]{fm.field_I}, -1, IterableNodeHashTable.field_d);
             }
             if (fm.field_H) {
               jh.a(0, (String) (var2), (String) null, 2, (String) null, true);
@@ -184,7 +184,7 @@ final class dk {
             dr.a((String) null, param0 + 11467, mc.field_g, 0, (String) (var2));
           } else {
             var3 = di.field_j;
-            var3 = bm.a(524288, var3);
+            var3 = IterableNodeHashTable.a(524288, var3);
             var4 = "";
             var5 = "|";
             var6 = hn.field_b;

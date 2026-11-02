@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends ma {
+final class qa extends IntrusiveNode {
     int field_s;
     static String field_u;
     qa field_l;

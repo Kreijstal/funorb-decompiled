@@ -101,7 +101,7 @@ class fe extends ei {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        ko var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         im var18_ref = null;
@@ -181,12 +181,12 @@ class fe extends ei {
                   gf.field_b[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_67_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_67_0;
                     while (true) {
@@ -199,7 +199,7 @@ class fe extends ei {
                         var13_ref_int__ = var20;
                         stackIn_63_0 = 0;
                         var14 = stackIn_63_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var23.length > var14) {
                             var15 = var23[var14];
                             var16 = var20[1 + var14];
@@ -212,11 +212,11 @@ class fe extends ei {
                               }
                               var17_int = stackIn_45_0;
                               if (~var17_int != ~var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (var16 != (em.field_L.field_tc[var15] & 255)) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -367,14 +367,14 @@ class fe extends ei {
                 }
                 var17 = wo.field_f.field_Rb.field_T;
                 var18_ref = (im) (var17.c((byte) 96));
-                L54: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
                     stackOut_130_0 = var18_ref.c(true);
                     stackIn_150_0 = stackOut_130_0 ? 1 : 0;
                     stackIn_131_0 = stackOut_130_0;
                     if (var19 != 0) {
-                      break L54;
+                      break scanLoop3;
                     }
                     if (!stackIn_131_0 ||
                       var19 != 0) {

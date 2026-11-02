@@ -17,7 +17,7 @@ final class ad {
     wi field_p;
     int[] field_m;
     int[][] field_k;
-    static ko field_l;
+    static IntrusiveDeque field_l;
     wi[] field_n;
     static String field_e;
     static int field_x;
@@ -303,7 +303,7 @@ final class ad {
     }
 
     static {
-        field_l = new ko();
+        field_l = new IntrusiveDeque();
         field_e = "Cancel";
         field_o = new int[]{2, 20, 21, 49, 5, 3, 9};
         field_b = "<%0> gained 1 life!";

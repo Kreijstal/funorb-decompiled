@@ -30,7 +30,7 @@ final class ka extends ig {
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = kq.a((byte) 114, var5);
+          var3_int = GameApplet.a((byte) 114, var5);
           if (!param1) {
             field_s = (byte[]) null;
           }
@@ -106,7 +106,7 @@ final class ka extends ig {
             if (var2.field_m.b(-108)) {
               var2.field_o.d(ec.field_b * var2.field_n + 128 >> 8);
             } else {
-              var2.a((byte) -117);
+              var2.unlink((byte) -117);
             }
             var2 = (kf) (oj.field_o.f((byte) -5));
           }
@@ -114,7 +114,7 @@ final class ka extends ig {
             var2Lifetime1 = (kf) (mp.field_R.c((byte) 113));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_m.b(-113)) {
-                var2Lifetime1.a((byte) -117);
+                var2Lifetime1.unlink((byte) -117);
               } else {
                 var2Lifetime1.field_o.d(128 + var2Lifetime1.field_n * ec.field_b >> 8);
               }

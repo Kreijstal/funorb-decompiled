@@ -67,7 +67,7 @@ final class em extends ob {
         if (null == eq.field_V) {
           eq.field_V = jf.a(-112, 1, fd.field_O, 3, 10);
         }
-        L1: {
+        regionExit1: {
           if (eq.field_V.field_u) {
             if (null != eq.field_V.field_m) {
               nj.a(vk.field_y, (byte) -87, 320, 160, 160, 165 + ni.field_Z.field_G + 16);
@@ -110,7 +110,7 @@ final class em extends ob {
                 sa.field_h.d(di.field_j, 190, var5, 16764057, -1);
                 sa.field_h.b(lh.b(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
               }
-              break L1;
+              break regionExit1;
             }
             var2 = fh.field_a;
           } else {
@@ -157,7 +157,7 @@ final class em extends ob {
         if (param0 != 0) {
           return 97;
         }
-        L0: {
+        regionExit1: {
           if (!hk.b(35)) {
             var3 = param1;
             if (var3 != 0 &&
@@ -170,7 +170,7 @@ final class em extends ob {
                 case 4:
                   return 170;
                 default:
-                  break L0;
+                  break regionExit1;
                 case 5:
                   return 380;
               }

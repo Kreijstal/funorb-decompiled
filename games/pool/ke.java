@@ -5,7 +5,7 @@ final class ke {
     static String field_a;
     static String field_g;
     static String[] field_c;
-    static ko field_f;
+    static IntrusiveDeque field_f;
     private String field_e;
     private boolean field_d;
     static String field_b;
@@ -76,13 +76,13 @@ final class ke {
               if (param0 == 100) {
                 return;
               }
-              field_f = (ko) null;
+              field_f = (IntrusiveDeque) null;
               return;
             }
           }
           kn.field_e.field_v = kn.field_e.field_v + 24;
           if (param0 != 100) {
-            field_f = (ko) null;
+            field_f = (IntrusiveDeque) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -205,6 +205,6 @@ final class ke {
         field_a = "Press <img=3> for the options menu. Hover your mouse over <col=ccccff>blue text</col> for an explanation.";
         field_b = "<%0> might change the options - wait and see.";
         field_c = new String[]{"On", "Off"};
-        field_f = new ko();
+        field_f = new IntrusiveDeque();
     }
 }

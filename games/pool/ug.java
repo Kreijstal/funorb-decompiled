@@ -60,11 +60,11 @@ final class ug extends no {
         this.field_c = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    final static ko a(int[] param0, int param1, String param2, int param3, lr param4, boolean param5, int param6) {
+    final static IntrusiveDeque a(int[] param0, int param1, String param2, int param3, lr param4, boolean param5, int param6) {
         int var11 = 0;
         int var13 = 0;
-        ko stackIn_2_0 = null;
-        ko stackIn_42_0 = null;
+        IntrusiveDeque stackIn_2_0 = null;
+        IntrusiveDeque stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -90,12 +90,12 @@ final class ug extends no {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        ko var26 = null;
+        IntrusiveDeque var26 = null;
         try {
-          var26 = new ko();
+          var26 = new IntrusiveDeque();
           var8 = new String[100];
           if (!param5) {
-            stackIn_2_0 = (ko) null;
+            stackIn_2_0 = (IntrusiveDeque) null;
             return stackIn_2_0;
           }
           var9 = param4.a(param2, new int[]{param1}, var8);
@@ -126,7 +126,7 @@ final class ug extends no {
                       var20 = var19;
                       var21 = 0;
                       var22 = param3;
-                      L8: while (true) {
+                      scanLoop1: while (true) {
                         if (var21 < var9) {
                           var23 = var8[var21].length();
                           var24 = param0[(-1 + (var21 + param0.length)) % param0.length];
@@ -139,7 +139,7 @@ final class ug extends no {
                             if (var17 >= var18 &&
                               var23 + var18 >= var17) {
                               var20.field_l = param4.b(var8[var21].substring(-var18 + var16, var17 - var18));
-                              break L8;
+                              break scanLoop1;
                             }
                             var20.field_l = param4.b(var8[var21].substring(var16 - var18));
                             var20.field_s = new gi(var20.field_p);
@@ -152,7 +152,7 @@ final class ug extends no {
                               var20.field_l = var25;
                               var20.field_q = var22;
                               var20.field_r = var24;
-                              break L8;
+                              break scanLoop1;
                             }
                             if (var16 < var18 &&
                               var18 + var23 < var17) {

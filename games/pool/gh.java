@@ -93,7 +93,7 @@ final class gh extends vc {
         try {
           ie.field_f = param0.a("space_ball_1", true, "");
           uq.field_i = param0.a("space_ball_2", true, "");
-          ma.field_a = param0.a("space_ball_3", true, "");
+          IntrusiveNode.field_a = param0.a("space_ball_3", true, "");
           int var3_int = -40 / ((39 - param1) / 38);
           hj.field_j = param0.a("space_ball_4", true, "");
           wn.field_b = param0.a("space_ball_cushion1", true, "");
@@ -318,7 +318,7 @@ final class gh extends vc {
               kp.a(100, ie.field_f, param3, param1);
             } else {
               if (var6 == 1) {
-                kp.a(100, ma.field_a, param3, param1);
+                kp.a(100, IntrusiveNode.field_a, param3, param1);
               }
             }
           } else {
@@ -683,7 +683,7 @@ final class gh extends vc {
         try {
           if (param0 != null &&
             param0.length() >= wo.field_a) {
-            if (param0.length() > kq.field_c) {
+            if (param0.length() > GameApplet.field_c) {
               return true;
             }
             if (param1 != 28350) {

@@ -46,7 +46,7 @@ final class mk {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        ko var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         kh var12 = null;
@@ -603,23 +603,23 @@ final class mk {
           var10_int = (var10_int + 7) / 8;
           ka.field_s = new byte[var10_int];
           if (null == param7.field_T) {
-            param7.field_T = new ko();
+            param7.field_T = new IntrusiveDeque();
           }
-          ma.field_i = param7.field_T;
-          ma.field_i.d((byte) 106);
+          IntrusiveNode.field_i = param7.field_T;
+          IntrusiveNode.field_i.d((byte) 106);
           ln.field_n = new tk(param6);
           uf.field_jb = 0;
           og.field_I = -1;
           mg.field_d = -1;
           ka.field_r = 0;
           if (param0.field_T == null) {
-            param0.field_T = new ko();
+            param0.field_T = new IntrusiveDeque();
           }
           ep.field_A = param0.field_T;
           ep.field_A.d((byte) 123);
           lf.field_a = new tk(param1);
           if (null == param2.field_T) {
-            param2.field_T = new ko();
+            param2.field_T = new IntrusiveDeque();
           }
           ck.field_W = param2.field_T;
           ck.field_W.d((byte) 36);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq extends ma {
+final class bq extends IntrusiveNode {
     int field_l;
     static int field_p;
     static hj field_r;

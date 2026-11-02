@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends ma {
+final class ij extends IntrusiveNode {
     int field_E;
     int[] field_L;
     int field_B;

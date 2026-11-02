@@ -74,7 +74,7 @@ final class nr extends ch implements tb {
                 continue;
               }
               var5++;
-              var8 = kq.a((byte) 89, (CharSequence) ((Object) var7_ref_String));
+              var8 = GameApplet.a((byte) 89, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (-var5 + var6_int + args[var8].length());
               continue;
             }
@@ -107,7 +107,7 @@ final class nr extends ch implements tb {
               continue;
             }
             var5Lifetime1++;
-            var10 = kq.a((byte) 88, (CharSequence) ((Object) var9));
+            var10 = GameApplet.a((byte) 88, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param2.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);

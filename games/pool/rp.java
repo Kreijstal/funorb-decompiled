@@ -24,10 +24,10 @@ final class rp {
     final static void a(vh param0, vh param1, int param2) {
         try {
           if (null == param0.field_T) {
-            param0.field_T = new ko();
+            param0.field_T = new IntrusiveDeque();
           }
           if (param1.field_T == null) {
-            param1.field_T = new ko();
+            param1.field_T = new IntrusiveDeque();
           }
           if (null == df.field_b) {
             df.field_b = new tk(64);

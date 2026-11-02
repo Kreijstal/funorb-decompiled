@@ -231,7 +231,7 @@ final class wi {
             for (var7 = 0; var5_int > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.g(-100) << (rb.b(var7, 3) << 8));
             }
-            var4_ref_fl.a((byte) -117);
+            var4_ref_fl.unlink((byte) -117);
             return;
           }
           if (var2 == 1) {
@@ -249,7 +249,7 @@ final class wi {
               dn.c(118);
               return;
             }
-            var5.a((byte) -117);
+            var5.unlink((byte) -117);
             return;
           }
           tc.a((Throwable) null, "LR1: " + t.a(param0 ^ 159), param0 - 8754);

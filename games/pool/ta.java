@@ -7,7 +7,7 @@ final class ta {
     static vh[] field_b;
     static dd field_e;
     static int field_c;
-    static ko field_i;
+    static IntrusiveDeque field_i;
     static dd[][] field_d;
     static int field_f;
     static tq field_g;
@@ -144,7 +144,7 @@ final class ta {
             stackIn_2_0 = null;
             return (kl) (stackIn_2_0);
           }
-          var2 = new kl(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, ma.field_h, v.field_b);
+          var2 = new kl(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
           if (param0 != 16908) {
             field_f = -3;
           }
@@ -190,11 +190,11 @@ final class ta {
         if (param0 <= -124) {
           return;
         }
-        field_i = (ko) null;
+        field_i = (IntrusiveDeque) null;
     }
 
     static {
         field_a = new nl();
-        field_i = new ko();
+        field_i = new IntrusiveDeque();
     }
 }

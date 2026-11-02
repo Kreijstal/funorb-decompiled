@@ -9,7 +9,7 @@ final class nf extends ch implements jb, tb, jn {
     private fe field_Y;
     private fe field_U;
     private ga field_R;
-    static ko field_S;
+    static IntrusiveDeque field_S;
     private ga field_O;
     private ri field_W;
     private ga field_ab;
@@ -303,7 +303,7 @@ final class nf extends ch implements jb, tb, jn {
 
     final static vh g(byte param0) {
         if (param0 != 103) {
-          field_S = (ko) null;
+          field_S = (IntrusiveDeque) null;
           return wo.field_f.field_Rb;
         }
         return wo.field_f.field_Rb;
@@ -578,7 +578,7 @@ final class nf extends ch implements jb, tb, jn {
     }
 
     static {
-        field_S = new ko();
+        field_S = new IntrusiveDeque();
         field_db = "You and <%0> have won!";
     }
 }

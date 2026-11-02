@@ -208,7 +208,7 @@ final class ga extends sl implements sc {
           var6Lifetime1.field_Wb = (String) (var3Lifetime1);
           var6Lifetime1.field_Zb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Sb = var5Lifetime1;
-          var6Lifetime1.a((byte) -117);
+          var6Lifetime1.unlink((byte) -117);
           var7_ref = (eo) (cf.field_k.c((byte) -125));
           while (var7_ref != null) {
             if (wk.a(var6Lifetime1, var7_ref, 83)) {

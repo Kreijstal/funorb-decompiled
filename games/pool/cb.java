@@ -4,7 +4,7 @@
 final class cb {
     static String[] field_f;
     static int field_d;
-    static ko field_e;
+    static IntrusiveDeque field_e;
     static String field_c;
     static java.security.SecureRandom field_a;
     static int field_g;
@@ -141,7 +141,7 @@ final class cb {
         field_c = "Previous";
         field_g = 480;
         field_d = 0;
-        field_e = new ko();
+        field_e = new IntrusiveDeque();
         field_b = new String[]{"Modern", "Plasma", "Aztec", "Polar", "Space"};
     }
 }

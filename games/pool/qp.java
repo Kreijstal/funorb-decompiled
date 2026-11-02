@@ -71,7 +71,7 @@ final class qp extends vh {
         }
         if (null != this.field_Qb) {
           this.field_Qb.f(17517);
-          this.field_Qb.a((byte) -117);
+          this.field_Qb.unlink((byte) -117);
         }
         this.field_Qb = null;
         this.field_ac = -1;

@@ -223,7 +223,7 @@ final class ub extends se {
           var4 = uh.field_n;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3_int < dq.field_j.length)))) {
-            var5 = bm.field_c[var3_int];
+            var5 = IterableNodeHashTable.field_c[var3_int];
             stackIn_16_0 = ~var5;
             if (var8 == 0) {
               if (stackIn_16_0 > -1) {
@@ -321,7 +321,7 @@ final class ub extends se {
           wa.field_hb = new vh(0L, param10);
           fl.field_q.a(-1, wa.field_hb);
           var17 = new vh(0L, (vh) null);
-          var17.field_T = new ko();
+          var17.field_T = new IntrusiveDeque();
           qd.field_b = new of(0L, var17, param9, param3);
           wa.field_hb.a(15, qd.field_b);
           ph.field_d = new vh(0L, param6);

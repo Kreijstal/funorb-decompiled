@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ma {
+class IntrusiveNode {
     static String field_f;
     static String field_j;
     static int field_g;
-    ma field_k;
+    IntrusiveNode next;
     static bl[][][] field_b;
-    long field_c;
+    long key;
     static vh field_e;
     static int[] field_h;
     static jg field_a;
-    static ko field_i;
-    ma field_d;
+    static IntrusiveDeque field_i;
+    IntrusiveNode previous;
 
     public static void b(byte param0) {
         field_f = null;
@@ -25,7 +25,7 @@ class ma {
           field_e = null;
           return;
         }
-        ma.b((byte) -106);
+        IntrusiveNode.b((byte) -106);
         field_b = (bl[][][]) null;
         field_a = null;
         field_h = null;
@@ -34,20 +34,20 @@ class ma {
         field_e = null;
     }
 
-    final void a(byte param0) {
-        if (this.field_k == null) {
+    final void unlink(byte obfuscationGuard) {
+        if (this.next == null) {
           return;
         }
-        this.field_k.field_d = this.field_d;
-        this.field_d.field_k = this.field_k;
-        this.field_d = null;
-        if (param0 == -117) {
-          this.field_k = null;
+        this.next.previous = this.previous;
+        this.previous.next = this.next;
+        this.previous = null;
+        if (obfuscationGuard == -117) {
+          this.next = null;
           return;
         }
         int[] var3 = (int[]) null;
-        ma.a(97, (int[]) null, (int[]) null);
-        this.field_k = null;
+        IntrusiveNode.a(97, (int[]) null, (int[]) null);
+        this.next = null;
     }
 
     final static void a(int param0, int[] param1, int[] param2) {
@@ -78,7 +78,7 @@ class ma {
             var9 = -var9;
           }
           br.field_I = 128 + (tj.c(var9, var6, param0 ^ 4098) >> 4);
-          var10 = bm.a(-112, (long)var7 * (long)var7 + ((long)var6 * (long)var6 + (long)var8 * (long)var8) >> 16);
+          var10 = IterableNodeHashTable.a(-112, (long)var7 * (long)var7 + ((long)var6 * (long)var6 + (long)var8 * (long)var8) >> 16);
           if (var10 > (long)re.field_a) {
             mn.field_g = (int)((long)(256 * ue.field_e) / ((long)ue.field_e + ((long)ap.field_G * (var10 - (long)re.field_a) >> 8)));
             return;
@@ -107,13 +107,13 @@ class ma {
 
     final boolean b(int param0) {
         if (param0 > -106) {
-          this.field_c = -125L;
-          if (this.field_k != null) {
+          this.key = -125L;
+          if (this.next != null) {
             return true;
           }
           return false;
         }
-        if (this.field_k != null) {
+        if (this.next != null) {
           return true;
         }
         return false;

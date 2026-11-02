@@ -21,7 +21,7 @@ final class me extends ig {
         int var3 = Pool.field_O;
         qb[] var1 = new qb[wf.field_d];
         for (var2 = param0; wf.field_d > var2; var2++) {
-          var1[var2] = new qb(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], ma.field_h);
+          var1[var2] = new qb(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], IntrusiveNode.field_h);
         }
         sh.h(-1);
         return var1;

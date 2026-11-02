@@ -18,7 +18,7 @@ final class jk {
 
     final static void a(boolean param0, boolean param1, di param2, di param3) {
         try {
-          ub.a(md.field_d, ol.field_c, cq.field_d, iq.field_f, uo.field_Lb, ei.field_A, pa.field_M, i.field_l, param0, kq.field_a, ag.field_f, (byte) 37);
+          ub.a(md.field_d, ol.field_c, cq.field_d, iq.field_f, uo.field_Lb, ei.field_A, pa.field_M, i.field_l, param0, GameApplet.field_a, ag.field_f, (byte) 37);
           if (param1) {
             di var5 = (di) null;
             jk.a(true, true, (di) null, (di) null);

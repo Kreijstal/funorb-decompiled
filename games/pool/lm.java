@@ -106,7 +106,7 @@ final class lm extends tm {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ma.field_e.field_nb = param6;
+        IntrusiveNode.field_e.field_nb = param6;
         if (hn.field_b != 2) {
           wn.field_g.field_nb = ff.field_j;
         } else {
@@ -126,7 +126,7 @@ final class lm extends tm {
           var11 = wn.field_g.b(true);
           wn.field_g.b(var10, 2147483647, -var11 + var9_int - 5, var11, param8);
           var12 = param8 + var10 + 5;
-          ma.field_e.b(0, param3 ^ 2147483643, 0, var9_int, param2);
+          IntrusiveNode.field_e.b(0, param3 ^ 2147483643, 0, var9_int, param2);
           ml.field_e.b(param2, param3 ^ 2147483643, 0, var9_int, var12);
           var12 = var12 + param2;
           ml.field_e.field_F = rp.a(32450, 3, 2105376, ml.field_e.field_Db, 11579568, 8421504);

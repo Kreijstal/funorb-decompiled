@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ei extends ma {
+class ei extends IntrusiveNode {
     int field_D;
     int field_v;
     static vh field_A;
@@ -536,7 +536,7 @@ class ei extends ma {
           }
         } else {
           if (wp.field_d == 0) {
-            sharedTailExit_0: {
+            regionExit1: {
               if (ne.field_s != 0) {
                 if (!this.a(this, param1, true, ne.field_s, ua.field_o, param3, lq.field_W)) {
                   if (var5Lifetime1 == 0) {
@@ -565,7 +565,7 @@ class ei extends ma {
                       }
                     }
                   }
-                  break sharedTailExit_0;
+                  break regionExit1;
                 }
                 param2 = false;
               }

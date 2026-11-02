@@ -425,7 +425,7 @@ final class rj extends sq {
 
     final int j(int param0) {
         int var2 = 0;
-        if (ko.a(param0, (byte) 99) &&
+        if (IntrusiveDeque.a(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
           var2 = ga.a(14, true, ea.field_r);
           return var2 - (-1 - var2 / 7);

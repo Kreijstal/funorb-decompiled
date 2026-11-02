@@ -83,7 +83,7 @@ final class wp implements si {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ko var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6_ref = null;
         int var6 = 0;

@@ -18,7 +18,7 @@ final class rq extends kd {
     private cg field_E;
     private int field_F;
     private vk field_p;
-    private static ko field_q;
+    private static IntrusiveDeque field_q;
     static vh field_x;
     static String[] field_H;
     static int[] field_B;
@@ -27,7 +27,7 @@ final class rq extends kd {
         if (param0 != 946) {
           return;
         }
-        pj.field_H = new ko();
+        pj.field_H = new IntrusiveDeque();
     }
 
     final void a(int[] param0, int param1, int param2) {
@@ -512,7 +512,7 @@ final class rq extends kd {
             var13 = var9;
             if (var13 != null &&
               var13.field_p < var2_long) {
-              var13.a((byte) -117);
+              var13.unlink((byte) -117);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.field_r) {

@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class hb implements Iterator {
-    private ma field_i;
+    private IntrusiveNode field_i;
     private int field_o;
-    private ma field_m;
+    private IntrusiveNode field_m;
     private uk field_h;
     static long[] field_f;
-    static ko field_j;
+    static IntrusiveDeque field_j;
     static String field_c;
     static String field_n;
     static String field_q;
@@ -75,13 +75,13 @@ final class hb implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        ma var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Pool.field_O;
         if (this.field_h.field_k[-1 + this.field_o] != this.field_m) {
           var1 = this.field_m;
           this.field_i = var1;
-          this.field_m = var1.field_d;
+          this.field_m = var1.previous;
           return var1;
         }
         do {
@@ -90,9 +90,9 @@ final class hb implements Iterator {
           }
           fieldTemp$0 = this.field_o;
           this.field_o = this.field_o + 1;
-          var1 = this.field_h.field_k[fieldTemp$0].field_d;
+          var1 = this.field_h.field_k[fieldTemp$0].previous;
         } while (this.field_h.field_k[this.field_o - 1] == var1);
-        this.field_m = var1.field_d;
+        this.field_m = var1.previous;
         this.field_i = var1;
         return var1;
     }
@@ -154,7 +154,7 @@ final class hb implements Iterator {
             var12 = sg.field_M[0];
             var30 = var12;
             var30Lifetime3 = var12;
-            var13 = ko.field_d;
+            var13 = IntrusiveDeque.field_d;
             var11.field_n.a(11, (byte) 108, var12, var13);
             var14 = vl.field_m;
             var15 = sg.field_M[1];
@@ -231,7 +231,7 @@ final class hb implements Iterator {
         if (null == this.field_i) {
           throw new IllegalStateException();
         }
-        this.field_i.a((byte) -117);
+        this.field_i.unlink((byte) -117);
         this.field_i = null;
     }
 
@@ -240,7 +240,7 @@ final class hb implements Iterator {
         if (param0 != 43) {
           return;
         }
-        this.field_m = this.field_h.field_k[0].field_d;
+        this.field_m = this.field_h.field_k[0].previous;
         this.field_o = 1;
     }
 
@@ -254,8 +254,8 @@ final class hb implements Iterator {
         while (this.field_o < this.field_h.field_h) {
           fieldTemp$0 = this.field_o;
           this.field_o = this.field_o + 1;
-          if (this.field_h.field_k[fieldTemp$0].field_d != this.field_h.field_k[this.field_o - 1]) {
-            this.field_m = this.field_h.field_k[-1 + this.field_o].field_d;
+          if (this.field_h.field_k[fieldTemp$0].previous != this.field_h.field_k[this.field_o - 1]) {
+            this.field_m = this.field_h.field_k[-1 + this.field_o].previous;
             return true;
           }
           this.field_m = this.field_h.field_k[this.field_o - 1];
@@ -294,7 +294,7 @@ final class hb implements Iterator {
         field_b = "Unfortunately you are not eligible to create an account.";
         field_g = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_c = "Reload game";
-        field_j = new ko();
+        field_j = new IntrusiveDeque();
         field_d = "Email is valid";
         field_r = "Password is valid";
         field_s = -1;

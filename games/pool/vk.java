@@ -23,7 +23,7 @@ final class vk extends kd {
     int[] field_F;
     private pr[][] field_R;
     private int[] field_K;
-    private bm field_z;
+    private IterableNodeHashTable field_z;
     private pr[][] field_I;
     private int[] field_J;
     static int field_bb;
@@ -81,7 +81,7 @@ final class vk extends kd {
           var8 = (te) (param2.field_m.a(0));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_c;
+            var9 = (int)var8.key;
             var10 = (g) (this.field_z.a(false, (long)var9));
             if (var10 == null) {
               var10 = hk.a(param1, (byte) 127, var9);
@@ -412,7 +412,7 @@ final class vk extends kd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -16257) {
-            this.field_z = (bm) null;
+            this.field_z = (IterableNodeHashTable) null;
           }
           if (null != param1.field_o) {
             return false;
@@ -420,7 +420,7 @@ final class vk extends kd {
           if (param1.field_G < 0) {
             return true;
           }
-          param1.a((byte) -117);
+          param1.unlink((byte) -117);
           if (param1.field_n > 0 &&
             param1 == this.field_R[param1.field_t][param1.field_n]) {
             this.field_R[param1.field_t][param1.field_n] = null;
@@ -767,7 +767,7 @@ final class vk extends kd {
 
     private final void c(byte param0, int param1, int param2) {
         if (param0 != -62) {
-          this.field_z = (bm) null;
+          this.field_z = (IterableNodeHashTable) null;
         }
     }
 
@@ -790,7 +790,7 @@ final class vk extends kd {
             if (var3.field_G < 0) {
               this.field_I[var3.field_t][var3.field_A] = null;
             }
-            var3.a((byte) -117);
+            var3.unlink((byte) -117);
           }
           var3 = (pr) (this.field_u.field_t.f((byte) -5));
         }
@@ -1188,7 +1188,7 @@ final class vk extends kd {
           if (param4.field_G >= 0 && (param4.field_o == null ||
             param4.field_o.i())) {
             param4.a(param3 ^ 3);
-            param4.a((byte) -117);
+            param4.unlink((byte) -117);
             if (0 < param4.field_n &&
               param4 == this.field_R[param4.field_t][param4.field_n]) {
               this.field_R[param4.field_t][param4.field_n] = null;
@@ -1276,7 +1276,7 @@ final class vk extends kd {
           }
           param4.a(2);
           if (param4.field_G >= 0) {
-            param4.a((byte) -117);
+            param4.unlink((byte) -117);
             if (0 < param4.field_n &&
               this.field_R[param4.field_t][param4.field_n] == param4) {
               this.field_R[param4.field_t][param4.field_n] = null;
@@ -1326,7 +1326,7 @@ final class vk extends kd {
         this.field_A = new int[16];
         this.field_Z = new gq();
         this.field_u = new ib(this);
-        this.field_z = new bm(128);
+        this.field_z = new IterableNodeHashTable(128);
         this.a((byte) -127, -1, 256);
         this.b(true, 123);
     }

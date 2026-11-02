@@ -105,11 +105,11 @@ final class oa extends RuntimeException {
             rc.field_f[var4Lifetime3] = var16.d(-1034);
           }
           var17.field_v = -(3 * (-1 + var3)) + (-(8 * wf.field_d) + (-7 + param1.length));
-          ma.field_h = new int[var3];
+          IntrusiveNode.field_h = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            ma.field_h[var4Lifetime4] = var16.f(99);
-            if (0 == ma.field_h[var4Lifetime4]) {
-              ma.field_h[var4Lifetime4] = 1;
+            IntrusiveNode.field_h[var4Lifetime4] = var16.f(99);
+            if (0 == IntrusiveNode.field_h[var4Lifetime4]) {
+              IntrusiveNode.field_h[var4Lifetime4] = 1;
             }
           }
           var17.field_v = 0;

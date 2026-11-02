@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq extends ma {
+final class tq extends IntrusiveNode {
     static dd field_n;
     static byte[] field_u;
     static boolean field_p;

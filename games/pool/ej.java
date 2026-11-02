@@ -456,13 +456,13 @@ final class ej implements Runnable {
           var4 = Pool.field_O;
           try {
             try {
-              L2: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_d.field_t.length > this.field_d.field_v) {
                   var1_int = this.field_h.read(this.field_d.field_t, this.field_d.field_v, this.field_d.field_t.length - this.field_d.field_v);
                   stackIn_13_0 = -1;
                   stackIn_13_1 = ~var1_int;
                   if (var4 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_13_0 >= stackIn_13_1 ||
                     var4 != 0) {

@@ -3,7 +3,7 @@
  */
 final class vn {
     static nl field_d;
-    static ko field_g;
+    static IntrusiveDeque field_g;
     static int field_f;
     static dd field_j;
     static int field_c;

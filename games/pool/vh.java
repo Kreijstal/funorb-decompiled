@@ -40,7 +40,7 @@ class vh extends o {
     int field_Z;
     int field_sb;
     String field_nb;
-    ko field_T;
+    IntrusiveDeque field_T;
     dd field_yb;
     int field_Fb;
     int field_tb;
@@ -67,7 +67,7 @@ class vh extends o {
         int var6;
         vh var7;
         var6 = Pool.field_O;
-        if (param0 == this.field_c) {
+        if (param0 == this.key) {
           return this;
         }
         if (param1 != 31) {
@@ -717,7 +717,7 @@ class vh extends o {
         try {
           int var3_int = 118 / ((param0 + 50) / 43);
           if (this.field_T == null) {
-            this.field_T = new ko();
+            this.field_T = new IntrusiveDeque();
           }
           this.field_T.b((byte) -83, param1);
         } catch (RuntimeException runtimeException) {
@@ -799,7 +799,7 @@ class vh extends o {
         this.field_Q = -2147483648;
         this.field_fb = false;
         try {
-          this.field_c = param0;
+          this.key = param0;
           this.field_gb = param4;
           this.field_eb = param3;
           this.field_Db = param5;

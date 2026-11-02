@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class gm extends ma {
+final class gm extends IntrusiveNode {
     private int field_u;
     private static float[] field_z;
     private boolean field_D;

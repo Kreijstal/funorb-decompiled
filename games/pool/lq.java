@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class lq extends ud {
-    private ko field_P;
+    private IntrusiveDeque field_P;
     static String field_O;
     static so field_R;
     static int[] field_T;
@@ -67,7 +67,7 @@ final class lq extends ud {
 
     public lq() {
         super(0, 0, nk.field_j, md.field_b, (fp) null, (cc) null);
-        this.field_P = new ko();
+        this.field_P = new IntrusiveDeque();
     }
 
     final void k(int param0) {
@@ -211,7 +211,7 @@ final class lq extends ud {
         oe var3 = (oe) (var2.b((byte) -92));
         while (var3 != null) {
           if (var3.a(false)) {
-            var3.a((byte) -117);
+            var3.unlink((byte) -117);
           }
           var3 = (oe) (var2.b(-86));
         }
@@ -225,7 +225,7 @@ final class lq extends ud {
         oe var3 = (oe) (var2.b((byte) -92));
         while (var3 != null) {
           if (var3.g((byte) -20)) {
-            var3.a((byte) -117);
+            var3.unlink((byte) -117);
           }
           var3 = (oe) (var2.b(-112));
         }

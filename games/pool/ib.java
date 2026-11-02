@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ib extends kd {
-    ko field_t;
+    IntrusiveDeque field_t;
     static bp field_s;
     static boolean field_v;
     static int field_r;
@@ -307,7 +307,7 @@ final class ib extends kd {
     }
 
     ib(vk param0) {
-        this.field_t = new ko();
+        this.field_t = new IntrusiveDeque();
         this.field_p = new ai();
         try {
           this.field_w = param0;

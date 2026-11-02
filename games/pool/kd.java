@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kd extends ma {
+abstract class kd extends IntrusiveNode {
     kd field_o;
     volatile boolean field_l;
     int field_m;

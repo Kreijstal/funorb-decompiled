@@ -131,18 +131,18 @@ final class rl {
                   var26.field_gc = mq.field_f;
                   var26.field_hc = var6;
                 } else {
-                  var26.a((byte) -117);
+                  var26.unlink((byte) -117);
                 }
                 var26.a(false);
               }
               return;
             }
             if (var2 == 7) {
-              var34 = (im) (ma.field_i.c((byte) -72));
+              var34 = (im) (IntrusiveNode.field_i.c((byte) -72));
               while (var34 != null) {
-                var34.a((byte) -117);
+                var34.unlink((byte) -117);
                 var34.a(false);
-                var34 = (im) (ma.field_i.f((byte) -5));
+                var34 = (im) (IntrusiveNode.field_i.f((byte) -5));
               }
               uf.field_jb = 0;
               return;
@@ -167,7 +167,7 @@ final class rl {
                 return;
               }
               if (0 == var5_int) {
-                var33.a((byte) -117);
+                var33.unlink((byte) -117);
               } else {
                 var16_ref.field_Mb = mq.field_f;
                 var16_ref.field_Fc = var5_int;
@@ -178,7 +178,7 @@ final class rl {
             if (var2 == 10) {
               var35 = (kh) (ep.field_A.c((byte) 83));
               while (var35 != null) {
-                var35.a((byte) -117);
+                var35.unlink((byte) -117);
                 var35.a(false);
                 var35 = (kh) (ep.field_A.f((byte) -5));
               }
@@ -237,7 +237,7 @@ final class rl {
                       return;
                     }
                     if (0 == var6Lifetime1) {
-                      var27.a((byte) -117);
+                      var27.unlink((byte) -117);
                     } else {
                       var27.field_gc = mq.field_f;
                       var27.field_hc = var6Lifetime1;
@@ -324,7 +324,7 @@ final class rl {
           }
           var4_ref_im = (im) (ck.field_W.c((byte) -33));
           while (var4_ref_im != null) {
-            var4_ref_im.a((byte) -117);
+            var4_ref_im.unlink((byte) -117);
             var4_ref_im.a(false);
             var4_ref_im = (im) (ck.field_W.f((byte) -5));
           }

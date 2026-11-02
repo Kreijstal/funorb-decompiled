@@ -68,7 +68,7 @@ final class ie {
               fieldTemp$0 = var8.field_l - 1;
               var8.field_l = var8.field_l - 1;
               if (fieldTemp$0 == 0) {
-                var8.a((byte) -117);
+                var8.unlink((byte) -117);
               } else {
                 var8.field_p = var8.field_p + (4 + var8.field_n.field_z);
               }

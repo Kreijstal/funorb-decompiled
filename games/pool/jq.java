@@ -3,7 +3,7 @@
  */
 final class jq {
     static vh field_d;
-    static ko field_c;
+    static IntrusiveDeque field_c;
     static String field_b;
     static String field_a;
     static int field_g;

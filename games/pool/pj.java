@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pj extends ob {
-    static ko field_H;
+    static IntrusiveDeque field_H;
     static ie field_K;
     static kb field_J;
     static String field_I;
@@ -223,7 +223,7 @@ final class pj extends ob {
     }
 
     static {
-        field_H = new ko();
+        field_H = new IntrusiveDeque();
         field_K = new ie();
         field_I = null;
     }

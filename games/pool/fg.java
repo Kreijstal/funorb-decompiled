@@ -37,7 +37,7 @@ final class fg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null) {
-            param1.a((byte) -117);
+            param1.unlink((byte) -117);
             param1.a(false);
             this.field_b = this.field_b + param1.field_y;
           }
@@ -98,7 +98,7 @@ final class fg {
           var9 = var8.c((byte) 121);
           Object var5 = var9;
           if (var9 == null) {
-            var8.a((byte) -117);
+            var8.unlink((byte) -117);
             var8.a(false);
             this.field_b = this.field_b + var8.field_y;
             return null;
@@ -109,10 +109,10 @@ final class fg {
             return var9;
           }
           var6 = new fd(var9, var8.field_y);
-          this.field_g.a(var6, param1, var8.field_c);
+          this.field_g.a(var6, param1, var8.key);
           this.field_h.a((byte) -36, var6);
           ((kk) ((Object) var6)).field_m = 0L;
-          var8.a((byte) -117);
+          var8.unlink((byte) -117);
           var8.a(!param1 ? true : false);
           return var9;
         }
@@ -122,7 +122,7 @@ final class fg {
         }
         Object var11 = var10.c((byte) 121);
         if (var11 == null) {
-          var10.a((byte) -117);
+          var10.unlink((byte) -117);
           var10.a(false);
           this.field_b = this.field_b + var10.field_y;
           return null;
@@ -133,10 +133,10 @@ final class fg {
           return var11;
         }
         var6Lifetime1 = new fd(var11, var10.field_y);
-        this.field_g.a(var6Lifetime1, param1, var10.field_c);
+        this.field_g.a(var6Lifetime1, param1, var10.key);
         this.field_h.a((byte) -36, var6Lifetime1);
         ((kk) ((Object) var6Lifetime1)).field_m = 0L;
-        var10.a((byte) -117);
+        var10.unlink((byte) -117);
         var10.a(!param1 ? true : false);
         return var11;
     }

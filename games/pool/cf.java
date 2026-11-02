@@ -3,7 +3,7 @@
  */
 final class cf {
     static String field_c;
-    private bm field_e;
+    private IterableNodeHashTable field_e;
     static String field_j;
     static String field_i;
     static int field_b;
@@ -11,8 +11,8 @@ final class cf {
     private di field_d;
     private di field_h;
     static nj[] field_a;
-    static ko field_k;
-    private bm field_f;
+    static IntrusiveDeque field_k;
+    private IterableNodeHashTable field_f;
 
     private final jg a(String param0, byte param1, int[] param2, String param3) {
         int var5_int = 0;
@@ -372,7 +372,7 @@ final class cf {
             stackIn_14_0 = null;
             return (jg) (stackIn_14_0);
           }
-          var9.a((byte) -117);
+          var9.unlink((byte) -117);
           this.field_f.a((byte) -128, var8Lifetime1, var6);
           stackIn_16_0 = var8Lifetime1;
           return stackIn_16_0;
@@ -639,8 +639,8 @@ final class cf {
     }
 
     cf(di param0, di param1) {
-        this.field_e = new bm(256);
-        this.field_f = new bm(256);
+        this.field_e = new IterableNodeHashTable(256);
+        this.field_f = new IterableNodeHashTable(256);
         try {
           this.field_d = param1;
           this.field_h = param0;

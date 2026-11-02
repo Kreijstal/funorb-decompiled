@@ -148,7 +148,7 @@ final class so {
         }
     }
 
-    so(ko param0) {
+    so(IntrusiveDeque param0) {
         this();
         try {
           this.a((byte) -107, param0);
@@ -678,7 +678,7 @@ final class so {
         }
     }
 
-    final void a(byte param0, ko param1) {
+    final void a(byte param0, IntrusiveDeque param1) {
         int incrementValue$2 = 0;
         int var3_int = 0;
         int var4 = 0;

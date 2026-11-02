@@ -50,18 +50,18 @@ final class vj {
         return null == ne.field_u ? pa.field_K : (java.awt.Canvas) ((Object) ne.field_u);
     }
 
-    final static void a(ma param0, byte param1, ma param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
-          if (null != param0.field_k) {
-            param0.a((byte) -117);
+          if (null != param0.next) {
+            param0.unlink((byte) -117);
           }
-          param0.field_k = param2.field_k;
+          param0.next = param2.next;
           if (param1 != -119) {
             field_g = (String) null;
           }
-          param0.field_d = param2;
-          param0.field_k.field_d = param0;
-          param0.field_d.field_k = param0;
+          param0.previous = param2;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

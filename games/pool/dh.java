@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends ma {
+final class dh extends IntrusiveNode {
     private int[] field_s;
     private int[] field_m;
     int[] field_r;

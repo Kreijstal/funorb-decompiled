@@ -41,7 +41,7 @@ final class ae {
             stackIn_11_0 = nr.a(new String[]{param1}, -1, sg.field_Q);
             return stackIn_11_0;
           }
-          var8.a((byte) -117);
+          var8.unlink((byte) -117);
           var8.a(false);
           gi.field_t = gi.field_t - 1;
           if (param0 != -3266) {
@@ -141,21 +141,21 @@ final class ae {
         int var9_intLifetime3;
         var10 = Pool.field_O;
         try {
-          if (bm.field_k != null &&
-            bm.field_k.d(-86) &&
-            bm.field_k.a("benefits", 0) &&
+          if (IterableNodeHashTable.field_k != null &&
+            IterableNodeHashTable.field_k.d(-86) &&
+            IterableNodeHashTable.field_k.a("benefits", 0) &&
             null != rl.field_c &&
             rl.field_c.d(-62) &&
             rl.field_c.a("benefits", 0)) {
-            rf.field_e = pf.a("benefits", (byte) 51, "headline", bm.field_k);
-            ec.field_d = pf.a("benefits", (byte) 79, "blurbpane", bm.field_k);
-            ph.field_f = pf.a("benefits", (byte) 89, "button", bm.field_k);
-            i.field_o = pf.a("benefits", (byte) 109, "signup_text", bm.field_k);
-            dl.field_h = pf.a("benefits", (byte) 86, "menu_text", bm.field_k);
-            o.field_C = pf.a("benefits", (byte) 78, "button_frame", bm.field_k);
-            vq.field_Yb = pf.a("benefits", (byte) 75, "arrow", bm.field_k);
-            de.field_d = (lr) ((Object) he.a(bm.field_k, "large_font", 0, rl.field_c, "benefits"));
-            so.field_h = (lr) ((Object) he.a(bm.field_k, "small_font", 0, rl.field_c, "benefits"));
+            rf.field_e = pf.a("benefits", (byte) 51, "headline", IterableNodeHashTable.field_k);
+            ec.field_d = pf.a("benefits", (byte) 79, "blurbpane", IterableNodeHashTable.field_k);
+            ph.field_f = pf.a("benefits", (byte) 89, "button", IterableNodeHashTable.field_k);
+            i.field_o = pf.a("benefits", (byte) 109, "signup_text", IterableNodeHashTable.field_k);
+            dl.field_h = pf.a("benefits", (byte) 86, "menu_text", IterableNodeHashTable.field_k);
+            o.field_C = pf.a("benefits", (byte) 78, "button_frame", IterableNodeHashTable.field_k);
+            vq.field_Yb = pf.a("benefits", (byte) 75, "arrow", IterableNodeHashTable.field_k);
+            de.field_d = (lr) ((Object) he.a(IterableNodeHashTable.field_k, "large_font", 0, rl.field_c, "benefits"));
+            so.field_h = (lr) ((Object) he.a(IterableNodeHashTable.field_k, "small_font", 0, rl.field_c, "benefits"));
             var27 = qh.field_d;
             var2 = qh.field_l;
             var3 = qh.field_f;
@@ -192,7 +192,7 @@ final class ae {
             ln.field_o = 390 + (ph.field_f.field_A - o.field_C.field_A) / 2;
             tn.field_o = 434 + (ph.field_f.field_z - o.field_C.field_z) / 2;
             oj.field_s = 390 + (-o.field_C.field_A + ph.field_f.field_A) / 2;
-            bm.field_k = null;
+            IterableNodeHashTable.field_k = null;
             ir.field_n = (-o.field_C.field_z + ph.field_f.field_z) / 2 + 231;
           }
           if (null == wa.field_gb) {

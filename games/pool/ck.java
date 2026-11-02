@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck extends mh {
-    static ko field_W;
+    static IntrusiveDeque field_W;
     private dd field_U;
     private String field_X;
     private int field_V;
     static String[] field_R;
     static String[] field_T;
     private ip field_S;
-    static ko[] field_Y;
+    static IntrusiveDeque[] field_Y;
 
     final boolean a(ei param0, byte param1) {
         int var3_int = 0;

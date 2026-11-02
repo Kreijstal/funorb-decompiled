@@ -5,7 +5,7 @@ import java.util.*;
 
 class ch extends ei implements lj {
     static hj field_K;
-    ko field_F;
+    IntrusiveDeque field_F;
     static String field_L;
     static int field_G;
     static int[] field_J;
@@ -520,7 +520,7 @@ class ch extends ei implements lj {
 
     ch(int param0, int param1, int param2, int param3, fp param4) {
         super(param0, param1, param2, param3, param4, (cc) null);
-        this.field_F = new ko();
+        this.field_F = new IntrusiveDeque();
     }
 
     final static String a(boolean param0, CharSequence param1) {

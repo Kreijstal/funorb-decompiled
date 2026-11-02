@@ -64,7 +64,7 @@ final class c {
           }
           qh.a(var16, var5, var6);
           w.field_b = hk.a(br.field_J, bf.field_c, var4, tp.field_i, (byte) 112);
-          e.field_a.field_T = new ko();
+          e.field_a.field_T = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

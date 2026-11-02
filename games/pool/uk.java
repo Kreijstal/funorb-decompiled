@@ -5,7 +5,7 @@ import java.util.*;
 
 final class uk implements Iterable {
     static dd[] field_b;
-    ma[] field_k;
+    IntrusiveNode[] field_k;
     static boolean field_c;
     int field_h;
     static nm field_d;
@@ -15,7 +15,7 @@ final class uk implements Iterable {
     static int field_l;
     static int field_m;
     static dd[] field_i;
-    private ma field_e;
+    private IntrusiveNode field_e;
     static int field_j;
 
     final static void a(int[] param0, int param1, eg param2) {
@@ -161,8 +161,8 @@ final class uk implements Iterable {
         }
     }
 
-    final void a(ma param0, boolean param1, long param2) {
-        ma var5 = null;
+    final void a(IntrusiveNode param0, boolean param1, long param2) {
+        IntrusiveNode var5 = null;
         eg var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -170,15 +170,15 @@ final class uk implements Iterable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (param0.field_k != null) {
-            param0.a((byte) -117);
+          if (param0.next != null) {
+            param0.unlink((byte) -117);
           }
           var5 = this.field_k[(int)((long)(this.field_h - 1) & param2)];
-          param0.field_d = var5;
-          param0.field_k = var5.field_k;
-          param0.field_k.field_d = param0;
-          param0.field_c = param2;
-          param0.field_d.field_k = param0;
+          param0.previous = var5;
+          param0.next = var5.next;
+          param0.next.previous = param0;
+          param0.key = param2;
+          param0.previous.next = param0;
           if (!param1) {
             var6 = (eg) null;
             uk.a((int[]) null, 89, (eg) null);
@@ -309,21 +309,21 @@ final class uk implements Iterable {
         field_d = null;
     }
 
-    final ma a(int param0, long param1) {
-        ma var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Pool.field_O;
         if (param0 != -28010) {
-          return (ma) null;
+          return (IntrusiveNode) null;
         }
-        ma var4 = this.field_k[(int)(param1 & (long)(-1 + this.field_h))];
-        this.field_e = var4.field_d;
+        IntrusiveNode var4 = this.field_k[(int)(param1 & (long)(-1 + this.field_h))];
+        this.field_e = var4.previous;
         while (this.field_e != var4) {
-          if (~param1 == ~this.field_e.field_c) {
+          if (~param1 == ~this.field_e.key) {
             var5 = this.field_e;
-            this.field_e = this.field_e.field_d;
+            this.field_e = this.field_e.previous;
             return var5;
           }
-          this.field_e = this.field_e.field_d;
+          this.field_e = this.field_e.previous;
         }
         this.field_e = null;
         return null;
@@ -331,16 +331,16 @@ final class uk implements Iterable {
 
     uk(int param0) {
         int var2 = 0;
-        ma dupTemp$0 = null;
-        ma var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_h = param0;
-        this.field_k = new ma[param0];
+        this.field_k = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ma();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_k[var2] = dupTemp$0;
-          var3.field_k = var3;
-          var3.field_d = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

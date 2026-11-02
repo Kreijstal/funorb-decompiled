@@ -1257,7 +1257,7 @@ final class tl extends ob {
         if (param0 <= 36) {
           return;
         }
-        L1: {
+        regionExit1: {
           var2 = var2 + (8 + (ni.field_Z.field_w + sa.field_h.field_C));
           if (!tm.field_b.field_v) {
             var4 = cl.field_j;
@@ -1294,7 +1294,7 @@ final class tl extends ob {
                 var3Lifetime2Lifetime1 = 4;
                 this.a(-1, tm.field_b.field_y, tm.field_b.field_x, tm.field_b.field_w, tm.field_b.field_t, 100, 16777215, var2, di.field_j);
               }
-              break L1;
+              break regionExit1;
             }
             var4 = fh.field_a;
           }

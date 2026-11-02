@@ -4,7 +4,7 @@
 final class ao extends vh {
     of field_Sb;
     static int[] field_Nb;
-    static ko field_Lb;
+    static IntrusiveDeque field_Lb;
     vh field_Mb;
     vh field_Ob;
     vh field_Qb;
@@ -123,7 +123,7 @@ final class ao extends vh {
           dq.field_f = param2;
           nj.a(qh.field_f / 2, qh.field_l / 2, 97);
           if (param0 != -83) {
-            field_Lb = (ko) null;
+            field_Lb = (IntrusiveDeque) null;
           }
           kg.a(param3.field_L, true, param2.field_w + param2.field_L, param3.field_w + param3.field_L, param2.field_L);
         } catch (RuntimeException runtimeException) {

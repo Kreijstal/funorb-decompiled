@@ -132,7 +132,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 96, "idlemessage20min");
                 if (var2 != null) {
-                  bm.field_l = a.a(var2, -125);
+                  IterableNodeHashTable.field_l = a.a(var2, -125);
                 }
                 var2 = gg.a((byte) 95, "error_js5crc");
                 if (null != var2) {
@@ -496,7 +496,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -78, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  ko.field_d = a.a(var2, -2);
+                  IntrusiveDeque.field_d = a.a(var2, -2);
                 }
                 var2 = gg.a((byte) 124, "mu_chat_lobby_friends_only");
                 if (var2 != null) {
@@ -652,7 +652,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 93, "inviting_x");
                 if (null != var2) {
-                  ma.field_f = a.a(var2, param1 ^ -21100);
+                  IntrusiveNode.field_f = a.a(var2, param1 ^ -21100);
                 }
                 var2 = gg.a((byte) -80, "x_wants_to_join");
                 if (var2 != null) {
@@ -828,7 +828,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 117, "privatechat_friend_offline");
                 if (null != var2) {
-                  bm.field_d = a.a(var2, param1 ^ -21023);
+                  IterableNodeHashTable.field_d = a.a(var2, param1 ^ -21023);
                 }
                 var2 = gg.a((byte) -51, "privatechat_friend_notlisted");
                 if (null != var2) {
@@ -1685,7 +1685,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -27, "create_alert_passchars");
                 if (var2 != null) {
-                  bm.field_a = a.a(var2, param1 ^ 21092);
+                  IterableNodeHashTable.field_a = a.a(var2, param1 ^ 21092);
                 }
                 var2 = gg.a((byte) -122, "create_alert_passrepeated");
                 if (null != var2) {
@@ -2099,7 +2099,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -102, "endgame");
                 if (null != var2) {
-                  bm.field_i = a.a(var2, 11);
+                  IterableNodeHashTable.field_i = a.a(var2, 11);
                 }
                 var2 = gg.a((byte) -85, "endtutorial");
                 if (var2 != null) {
@@ -2167,7 +2167,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 126, "resign");
                 if (null != var2) {
-                  ko.field_b = a.a(var2, -62);
+                  IntrusiveDeque.field_b = a.a(var2, -62);
                 }
                 var2 = gg.a((byte) 119, "returntolobby");
                 if (null != var2) {
@@ -2861,11 +2861,11 @@ final class nk {
                 }
                 var2 = gg.a((byte) -115, "rating_mode_long_name,0");
                 if (null != var2) {
-                  kq.field_g[0] = a.a(var2, 124);
+                  GameApplet.field_g[0] = a.a(var2, 124);
                 }
                 var2 = gg.a((byte) -128, "rating_mode_long_name,1");
                 if (null != var2) {
-                  kq.field_g[1] = a.a(var2, -44);
+                  GameApplet.field_g[1] = a.a(var2, -44);
                 }
                 var2 = gg.a((byte) 109, "graphics_config_fixed_size");
                 if (var2 != null) {
@@ -3129,8 +3129,8 @@ final class nk {
                   throw wm.a((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2635_0 = (!kq.field_k);
-                  kq.field_k = stackIn_2635_0;
+                  stackIn_2635_0 = (!GameApplet.field_k);
+                  GameApplet.field_k = stackIn_2635_0;
                 }
             }
         }
@@ -3205,7 +3205,7 @@ final class nk {
               }
               if (decompiledFrameRemainder0) {
                 if (null != var4_ref_kg) {
-                  var4_ref_kg.a((byte) -117);
+                  var4_ref_kg.unlink((byte) -117);
                   if (var6 == 0) {
                     return;
                   }
@@ -3236,7 +3236,7 @@ final class nk {
             dn.c(112);
             return;
           }
-          var3.a((byte) -117);
+          var3.unlink((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -206,7 +206,7 @@ final class wn {
               }
             }
             param0.d(-1, var4);
-            var16_ref.a((byte) -117);
+            var16_ref.unlink((byte) -117);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

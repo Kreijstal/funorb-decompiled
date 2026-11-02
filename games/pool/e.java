@@ -64,7 +64,7 @@ final class e {
             field_e = (wg) null;
           }
           while (dq.field_j.length > var3) {
-            var4 = bm.field_c[var3];
+            var4 = IterableNodeHashTable.field_c[var3];
             if (var4 < 0) {
               var5 = tm.field_f;
             } else {

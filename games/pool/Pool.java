@@ -501,7 +501,7 @@ public final class Pool extends ep {
         fb.b();
         dp.c(param0 ^ -3723);
         bq.c((byte) -101);
-        ko.d(-102);
+        IntrusiveDeque.d(-102);
         ab.b(-75);
         il.a(param0 ^ 41);
         l.a(19545);
@@ -522,7 +522,7 @@ public final class Pool extends ep {
         pk.a((byte) 101);
         ep.a(true);
         oa.a(param0 ^ -28);
-        kq.g((byte) -77);
+        GameApplet.g((byte) -77);
         ej.a(true);
         ql.a((byte) -109);
         id.a((byte) 35);
@@ -564,9 +564,9 @@ public final class Pool extends ep {
         cf.a(param0 + 28774);
         uf.c(true);
         nk.d(param0 + 28);
-        ma.b((byte) 115);
+        IntrusiveNode.b((byte) 115);
         vk.c(-819201);
-        bm.a((byte) 91);
+        IterableNodeHashTable.a((byte) 91);
         gq.g();
         ib.d(-1);
         bp.c();
@@ -900,9 +900,9 @@ public final class Pool extends ep {
     }
 
     private final void m(byte param0) {
-        if (kq.field_m != null) {
-          qk.a(kq.field_m, -8);
-          kq.field_m = null;
+        if (GameApplet.field_m != null) {
+          qk.a(GameApplet.field_m, -8);
+          GameApplet.field_m = null;
           fm.a(0);
         }
         if (param0 > -103) {
@@ -1006,7 +1006,7 @@ public final class Pool extends ep {
             if (td.field_d) {
               al.l(param0 - 127);
               lq.a(true);
-              ko.g((byte) 74);
+              IntrusiveDeque.g((byte) 74);
               sq.field_b = 0;
               mj.field_e = false;
               vq.field_Sb = true;
@@ -1156,7 +1156,7 @@ public final class Pool extends ep {
                 if (ba.field_ub == null) {
                   continue;
                 }
-                bm.a(false);
+                IterableNodeHashTable.a(false);
                 continue;
               }
               if (uq.field_c == 71) {
@@ -1230,7 +1230,7 @@ public final class Pool extends ep {
           } else {
             ib.field_v = true;
             ba.field_ub = var7;
-            bm.a(false);
+            IterableNodeHashTable.a(false);
             ni.f((byte) -119);
             kj.a((byte) -109);
           }

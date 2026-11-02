@@ -1230,7 +1230,7 @@ final class qk {
                 }
                 var2 = cm.a("menu_settings", (byte) 19);
                 if (null != var2) {
-                  ko.field_a = a.a(var2, 126);
+                  IntrusiveDeque.field_a = a.a(var2, 126);
                 }
                 var2 = cm.a("foul_exclamation", (byte) 107);
                 if (null != var2) {
@@ -1753,7 +1753,7 @@ final class qk {
                   }
                   throw wm.a((Throwable) ((Object) stackIn_1506_0), ((StringBuilder) (Object) stackIn_1506_1).append(stackIn_1507_2).append(',').append(param1).append(')').toString());
                 }
-                if (kq.field_k) {
+                if (GameApplet.field_k) {
                   var4++;
                   Pool.field_O = var4;
                 }

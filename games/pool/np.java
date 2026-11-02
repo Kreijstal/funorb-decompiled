@@ -289,7 +289,7 @@ final class np {
                 this.field_f.a(6, dg.field_S, 0, -1);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -305,7 +305,7 @@ final class np {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (dg.field_S[3] & 255) + (65280 & dg.field_S[2] << 8);
                         var10 = ((255 & dg.field_S[5]) << 8) + ((16711680 & dg.field_S[4] << 16) + (255 & dg.field_S[6]));
@@ -321,7 +321,7 @@ final class np {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (dg.field_S[3] & 255) + ((65280 & dg.field_S[2] << 8) + ((dg.field_S[0] << 24 & -16777216) + (16711680 & dg.field_S[1] << 16)));
                         var12 = (65280 & dg.field_S[4] << 8) + (dg.field_S[5] & 255);

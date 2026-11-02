@@ -111,7 +111,7 @@ abstract class oo {
     }
 
     final void a(int[] param0, int param1, int param2, int[] param3) {
-        ma.a(2, param3, param0);
+        IntrusiveNode.a(2, param3, param0);
         if (param2 > -74) {
           return;
         }
@@ -139,7 +139,7 @@ abstract class oo {
           var13 = param2.field_I.field_l[param3];
           var6 = (long)(-param0.field_g + var13.field_g);
           var8 = (long)(var13.field_k - param0.field_f);
-          var10 = bm.a(param1 ^ -24621, od.a(var6, var6, false) + od.a(var8, var8, false));
+          var10 = IterableNodeHashTable.a(param1 ^ -24621, od.a(var6, var6, false) + od.a(var8, var8, false));
           var13.b(true);
           if (var13.field_j > 4194304) {
             param2.a(0, param3);
@@ -1114,7 +1114,7 @@ abstract class oo {
 
     final void a(int param0, int[] param1, int param2, int[] param3, int param4) {
         try {
-          ma.a(param0 - 1336449638, param3, param1);
+          IntrusiveNode.a(param0 - 1336449638, param3, param1);
           this.a(param4, mn.field_g * param2 >> 8, (byte) -111, br.field_I);
           if (param0 != 1336449640) {
             this.field_j = 1.1224327362689441;
@@ -1411,7 +1411,7 @@ abstract class oo {
             var9 = param0[var17[var15][1]].a((byte) -127) - param0[var17[var15][0]].a((byte) -127);
             this.field_a[var15][0] = -var9 >> 13;
             this.field_a[var15][1] = var8 >> 13;
-            var10 = bm.a(-111, od.a((long)var8, (long)var8, false) + od.a((long)var9, (long)var9, false));
+            var10 = IterableNodeHashTable.a(-111, od.a((long)var8, (long)var8, false) + od.a((long)var9, (long)var9, false));
             if (var10 <= 2147483647L &&
               var10 >= -2147483648L) {
               this.field_a[var15][0] = lh.a((int)var10, (byte) -74, (long)this.field_a[var15][0]);

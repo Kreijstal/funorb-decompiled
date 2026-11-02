@@ -123,7 +123,7 @@ final class da {
             }
           }
           var3.field_v = true;
-          var3.a((byte) -117);
+          var3.unlink((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,9 +148,9 @@ final class da {
           nk.field_f[6] = wd.field_Ob;
           nk.field_f[13] = dk.field_g;
           nk.field_f[4] = uj.field_b;
-          nk.field_f[11] = ko.field_b;
+          nk.field_f[11] = IntrusiveDeque.field_b;
           nk.field_f[0] = tg.field_e;
-          nk.field_f[9] = bm.field_i;
+          nk.field_f[9] = IterableNodeHashTable.field_i;
           nk.field_f[1] = gr.field_H;
           nk.field_f[48] = un.field_d;
           nk.field_f[5] = hb.field_p;
@@ -162,7 +162,7 @@ final class da {
           nk.field_f[21] = fn.field_Nb;
           nk.field_f[56] = cb.field_b[2];
           nk.field_f[53] = pl.field_e;
-          nk.field_f[47] = ko.field_a;
+          nk.field_f[47] = IntrusiveDeque.field_a;
           nk.field_f[24] = de.field_f;
           nk.field_f[60] = md.field_a[5];
           nk.field_f[54] = cb.field_b[0];

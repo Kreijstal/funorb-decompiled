@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends ma {
+final class lk extends IntrusiveNode {
     boolean field_v;
     int field_l;
     String field_x;

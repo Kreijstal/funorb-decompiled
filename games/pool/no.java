@@ -108,7 +108,7 @@ abstract class no {
               if (0L > var22) {
                 return -1;
               }
-              var24 = bm.a(param11 ^ 106, var22);
+              var24 = IterableNodeHashTable.a(param11 ^ 106, var22);
               if (var24 > 2147483647L) {
                 throw new IllegalStateException("Out of range: 0x" + Long.toString(var24, 16));
               }
@@ -156,7 +156,7 @@ abstract class no {
               if (0L > var22Lifetime1) {
                 return -1;
               }
-              var24Lifetime1 = bm.a(param11 ^ 106, var22Lifetime1);
+              var24Lifetime1 = IterableNodeHashTable.a(param11 ^ 106, var22Lifetime1);
               if (var24Lifetime1 <= 2147483647L &&
                 var24Lifetime1 >= -2147483648L) {
                 var26Lifetime1 = (int)((-var18Lifetime1 + var24Lifetime1 << 15) / (long)var17Lifetime1);
@@ -208,7 +208,7 @@ abstract class no {
             if (0L > var22Lifetime2) {
               return -1;
             }
-            var24Lifetime2 = bm.a(param11 ^ 106, var22Lifetime2);
+            var24Lifetime2 = IterableNodeHashTable.a(param11 ^ 106, var22Lifetime2);
             if (var24Lifetime2 > 2147483647L) {
               throw new IllegalStateException("Out of range: 0x" + Long.toString(var24Lifetime2, 16));
             }

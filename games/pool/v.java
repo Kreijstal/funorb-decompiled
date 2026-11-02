@@ -113,7 +113,7 @@ final class v {
     }
 
     final static void b(byte param0) {
-        ma.field_e = null;
+        IntrusiveNode.field_e = null;
         wn.field_g = null;
         be.field_L = null;
         vi.field_c = null;

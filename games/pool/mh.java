@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class mh extends fe {
-    private ko field_O;
+    private IntrusiveDeque field_O;
     private String[] field_N;
     private qa field_P;
 
@@ -124,7 +124,7 @@ class mh extends fe {
         qa var16;
         int var8Lifetime1;
         var2 = -46 / ((param0 + 35) / 50);
-        this.field_O = new ko();
+        this.field_O = new IntrusiveDeque();
         var3 = 0;
         var4 = (io) ((Object) this.field_z);
         var5 = var4.b(0, (ei) (this));

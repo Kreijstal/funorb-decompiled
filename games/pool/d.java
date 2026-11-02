@@ -114,7 +114,7 @@ final class d {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ko var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5_ref = null;
         int var5 = 0;
         eo var6 = null;

@@ -208,20 +208,20 @@ final class er extends fe {
         RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
-          param0.a((byte) -117);
+          param0.unlink((byte) -117);
           if (param1 >= -89) {
             return;
           }
-          var2 = (im) (ma.field_i.c((byte) 124));
+          var2 = (im) (IntrusiveNode.field_i.c((byte) 124));
           while (var2 != null) {
             if (var2.a(param0, (byte) -97)) {
-              var2 = (im) (ma.field_i.f((byte) -5));
+              var2 = (im) (IntrusiveNode.field_i.f((byte) -5));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            ma.field_i.b((byte) -11, param0);
+            IntrusiveNode.field_i.b((byte) -11, param0);
           } else {
             vj.a(param0, (byte) -119, var2);
           }

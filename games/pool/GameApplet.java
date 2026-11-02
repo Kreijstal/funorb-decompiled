@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class kq extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String[] field_g;
     boolean field_n;
     static di field_m;
@@ -509,7 +509,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (ka.a(10, (CharSequence) ((Object) var4)) &&
-                        !(kq.a((byte) 105, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(GameApplet.a((byte) 105, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a((byte) -89, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -899,7 +899,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
 
     abstract void h(byte param0);
 
-    protected kq() {
+    protected GameApplet() {
         this.field_n = false;
     }
 
