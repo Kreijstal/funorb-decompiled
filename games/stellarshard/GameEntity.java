@@ -1166,7 +1166,7 @@ final class GameEntity {
           }
           if (this.kind == 11 &&
             16 != this.field_c &&
-            qi.field_a == 1 &&
+            qi.level == 1 &&
             null == na.field_j) {
             ti.b(24 + var2 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, ki.field_s + 48, 48 + ki.field_s, 65535);
             stackIn_176_0 = qj.field_a;
@@ -1177,7 +1177,7 @@ final class GameEntity {
             ((ub) (Object) stackIn_176_0).c(stackIn_176_1, stackIn_176_2, stackIn_176_3, stackIn_177_4, 0);
           }
           if (this.kind == 13 &&
-            4 == qi.field_a &&
+            4 == qi.level &&
             na.field_j == null) {
             ti.b(24 + (var2 - ki.field_s / 2), -(ki.field_s / 2) + 24 + var3, 48 + ki.field_s, ki.field_s + 48, 16711680);
             stackIn_184_0 = qj.field_a;
@@ -1194,7 +1194,7 @@ final class GameEntity {
               var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
               ti.a(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, ml.field_c);
             }
-            if (qi.field_a == 5 &&
+            if (qi.level == 5 &&
               null == na.field_j) {
               ti.b(var2 - (-24 + ki.field_s / 2), -(ki.field_s / 2) + (24 + var3), 48 + ki.field_s, 48 + ki.field_s, 16711680);
               stackIn_197_0 = qj.field_a;
@@ -1206,7 +1206,7 @@ final class GameEntity {
             }
           }
           if (this.kind == 15 &&
-            7 == qi.field_a &&
+            7 == qi.level &&
             null == na.field_j) {
             ti.b(var2 + 24 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, 48 + ki.field_s, 48 + ki.field_s, 16711680);
             stackIn_206_0 = qj.field_a;
@@ -1217,7 +1217,7 @@ final class GameEntity {
             ((ub) (Object) stackIn_206_0).c(stackIn_206_1, stackIn_206_2, stackIn_206_3, stackIn_207_4, 0);
           }
           if (this.kind == 7 &&
-            qi.field_a == 8 &&
+            qi.level == 8 &&
             null == na.field_j) {
             ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
             stackIn_215_0 = qj.field_a;
@@ -1228,7 +1228,7 @@ final class GameEntity {
             ((ub) (Object) stackIn_215_0).c(stackIn_215_1, stackIn_215_2, stackIn_215_3, stackIn_216_4, 0);
           }
           if (this.kind == 6 &&
-            qi.field_a == 9 &&
+            qi.level == 9 &&
             na.field_j == null) {
             ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
             stackIn_223_0 = qj.field_a;
@@ -1239,7 +1239,7 @@ final class GameEntity {
             ((ub) (Object) stackIn_223_0).c(stackIn_223_1, stackIn_223_2, stackIn_223_3, stackIn_224_4, 0);
           }
           if (this.kind == 14 &&
-            qi.field_a == 10 &&
+            qi.level == 10 &&
             null == na.field_j) {
             ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, ki.field_s + 96, 96 + ki.field_s, 16711680);
             stackIn_230_0 = qj.field_a;
@@ -1968,7 +1968,7 @@ final class GameEntity {
           var7_int = dc.a(-118);
           if (var7_int <= -1) {
             if (pk.a(-12663, 0)) {
-              if ((qi.field_a < q.field_a) &&
+              if ((qi.level < q.field_a) &&
                 (decompiledFrameRemainder0 = !(ph.field_D < 2))) {
                 decompiledFrameRemainder0 = !(!si.field_jb[52]);
               }
@@ -2207,68 +2207,68 @@ final class GameEntity {
         this.velocityY = 0.0;
         var2 = 2.0 * (3.141592653589793 * Math.random());
         var4 = 100.0 * (Math.random() * 0.5 + 0.5);
-        if (qi.field_a >= 2) {
+        if (qi.level >= 2) {
           stackIn_3_1 = 2;
         } else {
-          stackIn_3_1 = qi.field_a;
+          stackIn_3_1 = qi.level;
         }
         this.field_g = stackIn_3_1;
         if (param0 == -1) {
           this.field_g = 1;
         }
         if (param0 == 0) {
-          if (qi.field_a >= 6) {
+          if (qi.level >= 6) {
             stackIn_9_1 = 6;
           } else {
-            stackIn_9_1 = qi.field_a;
+            stackIn_9_1 = qi.level;
           }
           this.field_g = stackIn_9_1;
         }
         if (2 == param0) {
-          if (qi.field_a < 8) {
-            stackIn_14_1 = qi.field_a;
+          if (qi.level < 8) {
+            stackIn_14_1 = qi.level;
           } else {
             stackIn_14_1 = 8;
           }
           this.field_g = stackIn_14_1;
         }
         if (4 == param0) {
-          if (4 > qi.field_a) {
-            stackIn_19_1 = qi.field_a;
+          if (4 > qi.level) {
+            stackIn_19_1 = qi.level;
           } else {
             stackIn_19_1 = 4;
           }
           this.field_g = stackIn_19_1;
         }
         if (param0 == 1) {
-          if (qi.field_a >= 8) {
+          if (qi.level >= 8) {
             stackIn_24_1 = 8;
           } else {
-            stackIn_24_1 = qi.field_a;
+            stackIn_24_1 = qi.level;
           }
           this.field_g = stackIn_24_1;
         }
         if (param0 == 3) {
-          if (8 <= qi.field_a) {
+          if (8 <= qi.level) {
             stackIn_29_1 = 16;
           } else {
-            stackIn_29_1 = 2 * qi.field_a;
+            stackIn_29_1 = 2 * qi.level;
           }
           this.field_g = stackIn_29_1;
         }
         if (param0 == 5) {
-          if (6 <= qi.field_a) {
+          if (6 <= qi.level) {
             stackIn_34_1 = 6;
           } else {
-            stackIn_34_1 = qi.field_a;
+            stackIn_34_1 = qi.level;
           }
           this.field_g = stackIn_34_1;
         }
         if (param0 == 9) {
-          if (qi.field_a >= 4) {
+          if (qi.level >= 4) {
             stackIn_39_1 = 4;
           } else {
-            stackIn_39_1 = qi.field_a;
+            stackIn_39_1 = qi.level;
           }
           this.field_g = stackIn_39_1;
         }
@@ -2284,26 +2284,26 @@ final class GameEntity {
         }
         if (param0 == 12) {
           this.mass = 200;
-          this.field_g = 1 + qi.field_a / 6;
+          this.field_g = 1 + qi.level / 6;
           this.heading = (int)(Math.random() * 256.0);
         }
         if (param0 == 13) {
           this.mass = 200;
-          this.field_g = qi.field_a / 6 + 1;
+          this.field_g = qi.level / 6 + 1;
           this.heading = (int)(Math.random() * 256.0);
         }
         if (param0 == 15) {
-          this.field_g = qi.field_a / 6 + 3;
+          this.field_g = qi.level / 6 + 3;
           this.mass = 100;
           this.heading = (int)(256.0 * Math.random());
         }
         if (param0 == 6) {
-          this.field_g = 10 + qi.field_a / 5;
+          this.field_g = 10 + qi.level / 5;
           this.mass = 150;
           this.heading = (int)(256.0 * Math.random());
         }
         if (param0 == 7) {
-          this.field_g = 10 + qi.field_a / 5;
+          this.field_g = 10 + qi.level / 5;
           this.mass = 150;
           this.heading = (int)(Math.random() * 256.0);
         }

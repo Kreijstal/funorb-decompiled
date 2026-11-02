@@ -110,7 +110,7 @@ public final class stellarshard extends rb implements cf {
             decompiledSharedTail0 = (field_B != 0);
           }
           if (decompiledSharedTail0) {
-            na.field_j = new ij(this);
+            na.field_j = new LevelScreen(this);
             if (!(te.field_c <= 0) ||
               !(0 >= tl.field_a) ||
               !tf.field_a.isEmpty(0)) {
@@ -667,7 +667,7 @@ public final class stellarshard extends rb implements cf {
             jg.field_pb = 512;
             ll.a(16);
             tc.field_r = 0;
-            qi.field_a = 0;
+            qi.level = 0;
             cc.a((cf) (this));
             this.a(true, -113, false, false, true);
             return;
@@ -688,7 +688,7 @@ public final class stellarshard extends rb implements cf {
           bi.field_u = null;
           cl.field_a = cl.field_a + te.field_c;
           DualLinkDequeIterator.field_i = true;
-          if (qi.field_a > 10) {
+          if (qi.level > 10) {
             e.field_e = 0;
           }
           if (param0 != 127) {
@@ -703,23 +703,23 @@ public final class stellarshard extends rb implements cf {
           sf.field_b = 0;
           ua.field_d = 0;
           this.field_R = 255;
-          mg.field_t = qi.field_a;
+          mg.field_t = qi.level;
           nc.field_A = 0;
           tb.field_K = 0;
           ScorePopup.field_b = 0;
-          if (qi.field_a > 20) {
+          if (qi.level > 20) {
             e.field_e = 2;
           }
-          if (qi.field_a > 30) {
+          if (qi.level > 30) {
             e.field_e = 1;
           }
           gf.field_c = 0;
           lh.field_d = lh.field_d - 1;
-          if (qi.field_a > 40) {
+          if (qi.level > 40) {
             e.field_e = 3;
           }
           ml.field_h = 0;
-          q.field_a = qi.field_a;
+          q.field_a = qi.level;
           ag.field_a = 0;
           hk.field_p = hk.field_p - ed.field_b;
           return;
@@ -809,7 +809,7 @@ public final class stellarshard extends rb implements cf {
         vl stackIn_1220_0 = null;
         Object stackIn_1258_0 = null;
         Object stackIn_1305_0 = null;
-        ij stackIn_1305_1 = null;
+        LevelScreen stackIn_1305_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         Quaternion var2 = null;
@@ -879,7 +879,7 @@ public final class stellarshard extends rb implements cf {
           if (10 < ki.field_s) {
             ki.field_s = 0;
           }
-          if (qi.field_a > 1 &&
+          if (qi.level > 1 &&
             this.field_J > 0) {
             this.field_J = this.field_J - 1;
           }
@@ -955,7 +955,7 @@ public final class stellarshard extends rb implements cf {
                 na.field_j.field_u = -1;
               }
             }
-            if (qi.field_a <= na.field_j.field_t) {
+            if (qi.level <= na.field_j.field_t) {
               if (4 == tl.field_c) {
                 na.field_j.field_p = na.field_j.field_p + 1;
                 if (na.field_j.field_p > 50) {
@@ -1241,7 +1241,7 @@ public final class stellarshard extends rb implements cf {
               ke.field_a = al.field_c;
             }
           }
-          al.field_c = qi.field_a % 7 * 6912 + qi.field_a % 10 * 19 + 851968 * (qi.field_a % 14);
+          al.field_c = qi.level % 7 * 6912 + qi.level % 10 * 19 + 851968 * (qi.level % 14);
           if (!DualLinkDequeIterator.field_i) {
             al.field_c = 858899;
           }
@@ -2362,7 +2362,7 @@ public final class stellarshard extends rb implements cf {
             (decompiledFrameCompleted4) &&
             (decompiledFrameCompleted3) &&
             (decompiledFrameCompleted2)) {
-            na.field_j = new ij(this);
+            na.field_j = new LevelScreen(this);
             tl.field_c = 0;
             return;
           }
@@ -2647,7 +2647,7 @@ public final class stellarshard extends rb implements cf {
                 var5++;
               }
             }
-            if (qi.field_a >= 10 &&
+            if (qi.level >= 10 &&
               mk.field_k <= 0 &&
               DualLinkDequeIterator.field_i) {
               nc.field_A = nc.field_A - 1;
@@ -2656,7 +2656,7 @@ public final class stellarshard extends rb implements cf {
                 this.k((byte) 97);
               }
             }
-            if (50 == qi.field_a &&
+            if (50 == qi.level &&
               nc.field_A > 0) {
               nc.field_A = nc.field_A - 1;
               if (nc.field_A <= 0) {
@@ -2664,7 +2664,7 @@ public final class stellarshard extends rb implements cf {
                 this.k((byte) 121);
               }
             }
-            if (qi.field_a >= var4 && (!(qi.field_a >= 10) ||
+            if (qi.level >= var4 && (!(qi.level >= 10) ||
               !(mk.field_k <= 0)) && na.field_j == null) {
               this.n(3);
             }
@@ -2679,7 +2679,7 @@ public final class stellarshard extends rb implements cf {
                 ni.field_a) {
                 return;
               }
-              na.field_j = new ij(this);
+              na.field_j = new LevelScreen(this);
               if (!ni.field_a) {
                 tl.field_c = 4;
                 na.field_j.field_l = 8;
@@ -3231,12 +3231,12 @@ public final class stellarshard extends rb implements cf {
                           wk.field_a = null;
                           mf.field_b = null;
                           if (pk.a(-12663, 0)) {
-                            oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_Halloween", PacketBuffer.field_n, "");
+                            oe.field_a = LevelScreen.a(576, var4_ref2, "music/Stellar_Shard_Halloween", PacketBuffer.field_n, "");
                             if (var11 != 0) {
-                              oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
+                              oe.field_a = LevelScreen.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
                             }
                           } else {
-                            oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
+                            oe.field_a = LevelScreen.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
                           }
                           PacketBuffer.field_n = null;
                           rg.g(-33);
@@ -3735,17 +3735,17 @@ public final class stellarshard extends rb implements cf {
               hj.a(251, 4, 1);
             }
           }
-          qi.field_a = qi.field_a + 1;
+          qi.level = qi.level + 1;
           if (e.field_e == -1) {
             field_U[0] = 5;
           }
-          if (qi.field_a > (-1 + mg.field_t)) {
+          if (qi.level > (-1 + mg.field_t)) {
             var2_int = of.field_A;
-            of.field_A = Math.max(qi.field_a, of.field_A);
+            of.field_A = Math.max(qi.level, of.field_A);
             if (of.field_A > 50) {
               of.field_A = 50;
             }
-            var3_ref_fk = new fk(0, -1 + qi.field_a, 0, 0, 0, 0);
+            var3_ref_fk = new fk(0, -1 + qi.level, 0, 0, 0, 0);
             if (!DualLinkNode.a(-1)) {
               hf.a(var3_ref_fk, 89, 5);
               if (var5 != 0) {
@@ -3757,7 +3757,7 @@ public final class stellarshard extends rb implements cf {
               of.field_A = var2_int;
             }
           }
-          if (10 <= qi.field_a &&
+          if (10 <= qi.level &&
             nc.field_A <= 0 &&
             mk.field_k <= 0 &&
             DualLinkDequeIterator.field_i) {
@@ -3766,132 +3766,132 @@ public final class stellarshard extends rb implements cf {
           if (null == this.field_F) {
             this.field_F = new Sprite(640, 480);
           }
-          if (qi.field_a > 50) {
-            qi.field_a = 50;
+          if (qi.level > 50) {
+            qi.level = 50;
             if (nc.field_A <= 0) {
               nc.field_A = 1500;
             }
           }
-          if (qi.field_a == 1) {
+          if (qi.level == 1) {
             this.field_J = 100;
           }
-          if (10 == qi.field_a &&
+          if (10 == qi.level &&
             nf.field_r) {
             hj.a(249, 6, 1);
           }
-          if (qi.field_a == 20 &&
+          if (qi.level == 20 &&
             nf.field_r) {
             hj.a(248, 7, 1);
           }
-          if (qi.field_a == 10 &&
+          if (qi.level == 10 &&
             field_K) {
             hj.a(247, 8, 1);
           }
-          if (30 == qi.field_a &&
+          if (30 == qi.level &&
             field_K) {
             hj.a(246, 9, 1);
           }
-          if (qi.field_a == 50 &&
+          if (qi.level == 50 &&
             field_K) {
             hj.a(245, 10, param0 - 2);
           }
           var2 = new int[16];
-          if (qi.field_a == 1) {
+          if (qi.level == 1) {
             var2[1] = 4;
           }
-          if (2 == qi.field_a) {
+          if (2 == qi.level) {
             var2[1] = 6;
           }
-          if (qi.field_a == param0) {
+          if (qi.level == param0) {
             var2[1] = 4;
             var2[3] = 4;
           }
-          if (qi.field_a == 6) {
+          if (qi.level == 6) {
             var2[5] = 6;
           }
-          if (qi.field_a == 4) {
+          if (qi.level == 4) {
             var2[13] = 2;
             var2[1] = 8;
           }
-          if (qi.field_a == 5) {
+          if (qi.level == 5) {
             var2[12] = 2;
             var2[3] = 8;
           }
-          if (qi.field_a == 8) {
+          if (qi.level == 8) {
             var2[5] = 8;
             var2[7] = 1;
           }
-          if (qi.field_a == 7) {
+          if (qi.level == 7) {
             var2[15] = 2;
             var2[1] = 10;
           }
-          if (qi.field_a == 9) {
+          if (qi.level == 9) {
             var2[6] = 1;
             var2[3] = 8;
           }
-          if (qi.field_a == 10) {
+          if (qi.level == 10) {
             var2[14] = 1;
             var2[1] = 5;
           }
-          if (10 < qi.field_a) {
-            if (qi.field_a % 10 == 1) {
-              var2[1] = qi.field_a / 2 + 5;
+          if (10 < qi.level) {
+            if (qi.level % 10 == 1) {
+              var2[1] = qi.level / 2 + 5;
             }
-            if (4 == qi.field_a % 10) {
-              var2[15] = qi.field_a / 10 + 1;
-              var2[5] = qi.field_a / 3 + 5;
+            if (4 == qi.level % 10) {
+              var2[15] = qi.level / 10 + 1;
+              var2[5] = qi.level / 3 + 5;
             }
-            if (3 == qi.field_a % 10) {
-              var2[12] = qi.field_a / 5;
-              var2[3] = 5 + qi.field_a / 3;
+            if (3 == qi.level % 10) {
+              var2[12] = qi.level / 5;
+              var2[3] = 5 + qi.level / 3;
             }
-            if (qi.field_a % 10 == 2) {
-              var2[1] = 5 + qi.field_a / 3;
-              var2[13] = qi.field_a / 5;
+            if (qi.level % 10 == 2) {
+              var2[1] = 5 + qi.level / 3;
+              var2[13] = qi.level / 5;
             }
-            if (qi.field_a % 10 == 5) {
-              var2[1] = qi.field_a / 4 + 3;
+            if (qi.level % 10 == 5) {
+              var2[1] = qi.level / 4 + 3;
               var2[14] = 1;
             }
-            if (qi.field_a % 10 == 7) {
-              var2[6] = qi.field_a / 10;
-              var2[5] = qi.field_a / 3 + 5;
-              var2[12] = qi.field_a / 5;
+            if (qi.level % 10 == 7) {
+              var2[6] = qi.level / 10;
+              var2[5] = qi.level / 3 + 5;
+              var2[12] = qi.level / 5;
             }
-            if (6 == qi.field_a % 10) {
-              var2[7] = qi.field_a / 10;
-              var2[13] = qi.field_a / 5;
-              var2[3] = qi.field_a / 3 + 5;
+            if (6 == qi.level % 10) {
+              var2[7] = qi.level / 10;
+              var2[13] = qi.level / 5;
+              var2[3] = qi.level / 3 + 5;
             }
-            if (8 == qi.field_a % 10) {
-              var2[15] = qi.field_a / 6;
-              var2[1] = qi.field_a / 4 + 3;
+            if (8 == qi.level % 10) {
+              var2[15] = qi.level / 6;
+              var2[1] = qi.level / 4 + 3;
             }
-            if (qi.field_a % 10 == 9) {
-              var2[3] = qi.field_a / 6;
-              var2[1] = qi.field_a / 6;
-              var2[5] = qi.field_a / 6;
+            if (qi.level % 10 == 9) {
+              var2[3] = qi.level / 6;
+              var2[1] = qi.level / 6;
+              var2[5] = qi.level / 6;
             }
-            if (qi.field_a == 20) {
+            if (qi.level == 20) {
               var2[14] = 1;
               var2[7] = 10;
             }
-            if (qi.field_a == 30) {
+            if (qi.level == 30) {
               var2[14] = 2;
               var2[6] = 10;
             }
-            if (qi.field_a == 40) {
+            if (qi.level == 40) {
               var2[14] = 4;
               var2[6] = 5;
               var2[7] = 5;
               var2[15] = 5;
             }
-            if (qi.field_a == 50) {
-              var2[14] = qi.field_a / 5;
+            if (qi.level == 50) {
+              var2[14] = qi.level / 5;
             }
-            if (qi.field_a % 10 == 0 &&
-              qi.field_a > 50) {
-              var2[14] = qi.field_a / 5;
+            if (qi.level % 10 == 0 &&
+              qi.level > 50) {
+              var2[14] = qi.level / 5;
             }
           }
           var3 = 0;
@@ -4096,7 +4096,7 @@ public final class stellarshard extends rb implements cf {
           if ((decompiledFrameCompleted6) && (null == na.field_j &&
             !DualLinkDequeIterator.field_i && (!(wh.field_c <= 1) ||
             !ni.field_a))) {
-            na.field_j = new ij(this);
+            na.field_j = new LevelScreen(this);
             if (!ni.field_a) {
               tl.field_c = 4;
               na.field_j.field_l = 8;
@@ -4435,9 +4435,9 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if (DualLinkDequeIterator.field_i) {
-              var5 = h.a(hh.field_d, 0, new String[]{"" + qi.field_a});
+              var5 = h.a(hh.field_d, 0, new String[]{"" + qi.level});
               var6_intLifetime3 = nj.field_f[0];
-              nj.field_f[0] = qi.field_a * 64 / 50;
+              nj.field_f[0] = qi.level * 64 / 50;
               if (nj.field_f[0] > 63) {
                 nj.field_f[0] = 63;
               }
@@ -4702,7 +4702,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (nc.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
-              qi.field_a >= 50) {
+              qi.level >= 50) {
               var6Lifetime2 = lk.field_g + hf.field_g + nc.field_A / 50 + ef.field_o;
               l.field_f.a(var6Lifetime2, 32, 68 - l.field_f.field_N, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 479, 0, 0, 1, 0, l.field_f.field_N);

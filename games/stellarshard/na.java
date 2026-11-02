@@ -7,7 +7,7 @@ final class na {
     private int field_f;
     static Sprite field_e;
     static int field_a;
-    static ij field_j;
+    static LevelScreen field_j;
     private int field_c;
     private int field_b;
     private int field_i;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends ib {
+final class LevelScreen extends ib {
     int field_u;
     int field_t;
     int field_s;
@@ -313,7 +313,7 @@ final class ij extends ib {
               if (100 < var7_int) {
                 var7_int = 100;
               }
-              qi.field_a = 1 + (-2 + of.field_A * var7_int) / 100;
+              qi.level = 1 + (-2 + of.field_A * var7_int) / 100;
               if (var8 == 0) {
                 return;
               }
@@ -355,10 +355,10 @@ final class ij extends ib {
             !DualLinkDequeIterator.field_i &&
             of.field_A > 1 &&
             tl.field_c == 0) {
-            qi.field_a = qi.field_a - 1;
-            decompiledFrameRemainder0 = !(1 <= qi.field_a);
+            qi.level = qi.level - 1;
+            decompiledFrameRemainder0 = !(1 <= qi.level);
             if (decompiledFrameRemainder0) {
-              qi.field_a = 1;
+              qi.level = 1;
               decompiledFrameRemainder0 = (var4 != 0);
             }
           }
@@ -577,13 +577,13 @@ final class ij extends ib {
                     na.field_j = null;
                     stellarshard.field_K = false;
                     bi.field_u = null;
-                    if (qi.field_a > 0) {
-                      qi.field_a = qi.field_a - 1;
+                    if (qi.level > 0) {
+                      qi.level = qi.level - 1;
                     }
                     nf.field_r = false;
                     DualLinkDequeIterator.field_i = true;
                     tl.field_a = 0;
-                    decompiledFrameRemainder0 = (qi.field_a == 0);
+                    decompiledFrameRemainder0 = (qi.level == 0);
                     if (decompiledFrameRemainder0) {
                       nf.field_r = true;
                       stellarshard.field_K = true;
@@ -697,8 +697,8 @@ final class ij extends ib {
                           stellarshard.field_K = true;
                           tl.field_a = 0;
                           bi.field_u = null;
-                          if (qi.field_a > 0) {
-                            qi.field_a = qi.field_a - 1;
+                          if (qi.level > 0) {
+                            qi.level = qi.level - 1;
                           }
                           na.field_j = null;
                           na.field_j = null;
@@ -794,7 +794,7 @@ final class ij extends ib {
         }
     }
 
-    ij(stellarshard param0) {
+    LevelScreen(stellarshard param0) {
         super(10, 64, 576, 196, 28);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_13_0 = null;
@@ -873,7 +873,7 @@ final class ij extends ib {
               if (1 >= of.field_A) {
                 return;
               }
-              ic.a(kf.field_c + qi.field_a, param2, -1, false, 320, var5_int, param3);
+              ic.a(kf.field_c + qi.level, param2, -1, false, 320, var5_int, param3);
               if (var6 == 0) {
                 return;
               }
@@ -890,7 +890,7 @@ final class ij extends ib {
                 ic.a(qf.field_f, param2, -1, false, 320, var5_int, param3);
                 BufferedSocket.field_k[0].e(316, param3 + 3);
                 BufferedSocket.field_k[2].e(418, 3 + param3);
-                BufferedSocket.field_k[1].e(-3 + ((100 * qi.field_a - 100) / (-1 + of.field_A) + 320), 3 + param3);
+                BufferedSocket.field_k[1].e(-3 + ((100 * qi.level - 100) / (-1 + of.field_A) + 320), 3 + param3);
                 if (var6 == 0) {
                   return;
                 }
@@ -1003,11 +1003,11 @@ final class ij extends ib {
             !DualLinkDequeIterator.field_i &&
             of.field_A > 1 &&
             tl.field_c == 0) {
-            qi.field_a = qi.field_a + 1;
-            if (qi.field_a <= of.field_A) {
+            qi.level = qi.level + 1;
+            if (qi.level <= of.field_A) {
               return;
             }
-            qi.field_a = of.field_A;
+            qi.level = of.field_A;
             if (var4 == 0) {
               return;
             }
@@ -1162,7 +1162,7 @@ final class ij extends ib {
         try {
           var5_int = param3.b(param4, (byte) -118);
           if (param0 != 576) {
-            ij.a(-91, (gk) null, (String) null, (pf) null, (String) null);
+            LevelScreen.a(-91, (gk) null, (String) null, (pf) null, (String) null);
           }
           var6 = param3.a(var5_int, param2, (byte) -11);
           stackIn_4_0 = ca.a(var5_int, 24325, var6, param3, param1);
@@ -1404,7 +1404,7 @@ final class ij extends ib {
               } else {
                 ic.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
               }
-              var3_ref_String = sg.field_d + qi.field_a + wc.field_l + ue.field_a;
+              var3_ref_String = sg.field_d + qi.level + wc.field_l + ue.field_a;
               l.field_f.a(var3_ref_String, -1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
               l.field_f.a(var3_ref_String, 1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
               l.field_f.a(var3_ref_String, 0, 259, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
@@ -1449,7 +1449,7 @@ final class ij extends ib {
               ta.a(true, 713);
               ue.field_c.clear((byte) -8);
               tf.field_a.clear((byte) -8);
-              qi.field_a = 0;
+              qi.level = 0;
               n.field_L = 255;
               tl.field_c = 8;
             }
