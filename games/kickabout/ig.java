@@ -89,7 +89,7 @@ final class ig {
             un.field_d.a("-----------", 64 + qj.field_e, -(2 * (18 - wm.field_s)) + 44 + bi.field_i, 16777215, -1);
             ta.e(param1 ^ -12506);
           }
-          var4Lifetime2 = ua.field_l;
+          var4Lifetime2 = GoalStateAgent.field_l;
           var3Lifetime3 = 0;
           if (var4Lifetime2 == 0) {
             field_a[0].c(param0 + (140 + (qj.field_e - field_a[0].field_q * var3Lifetime3)), bi.field_i + 7 + wm.field_s * 2);
@@ -138,7 +138,7 @@ final class ig {
             ig.a(127L, (String) null, (byte) 87);
           }
           var6 = (CharSequence) ((Object) param1);
-          qi.field_o = mo.a(0, var6);
+          qi.field_o = MatchAgent.a(0, var6);
           ik.field_A = param0;
           vg.field_Wb = true;
         } catch (RuntimeException runtimeException) {
@@ -234,7 +234,7 @@ final class ig {
           }
           var9 = 20 + (var4 + var8Lifetime2 + 65);
           var10Lifetime1 = rb.field_yb * (var6.length + 1) + 20;
-          var11 = -6 + (-var10Lifetime1 + (473 - rn.field_c * vt.field_c.field_I) - 22);
+          var11 = -6 + (-var10Lifetime1 + (473 - rn.field_c * vt.field_c.playerCount) - 22);
           on.a(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
           var13 = 6 + var11 + rb.field_yb;

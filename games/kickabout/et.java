@@ -6,7 +6,7 @@ final class et {
     static boolean field_b;
     static String field_e;
     static String field_a;
-    static nu field_d;
+    static CommonGame field_d;
 
     final static ut[] a(int param0, String param1, ut param2, int param3) {
         int var5 = 0;

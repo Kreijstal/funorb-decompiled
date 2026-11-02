@@ -5,16 +5,16 @@ final class ap extends js {
     private gr field_n;
     int field_h;
     boolean field_A;
-    nu field_o;
+    CommonGame field_o;
     private boolean field_D;
     boolean field_v;
     private int field_E;
     private boolean field_y;
     int[] field_z;
     private hs field_r;
-    nu field_i;
+    CommonGame field_i;
     private up[] field_k;
-    nu field_m;
+    CommonGame field_m;
     boolean field_g;
     boolean field_q;
     int field_B;
@@ -32,7 +32,7 @@ final class ap extends js {
           throw new IllegalStateException();
         }
         if (!this.e(-2) &&
-          !this.field_o.field_R[this.field_h].field_s) {
+          !this.field_o.participantStatus[this.field_h].resigned) {
           this.a(-16046, 2);
         }
         int var2 = 63 / ((33 - param0) / 49);
@@ -124,7 +124,7 @@ final class ap extends js {
 
     final boolean f(byte param0) {
         boolean stackIn_16_0 = false;
-        if (this.field_o.field_u != 4) {
+        if (this.field_o.phase != 4) {
           return false;
         }
         if (param0 != 29) {
@@ -132,7 +132,7 @@ final class ap extends js {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.e(-2) &&
-          this.field_o.field_R[this.field_h].d(3511) &&
+          this.field_o.participantStatus[this.field_h].d(3511) &&
           wt.field_x >= 0 &&
           us.field_j >= 0 &&
           wt.field_x < 640 &&
@@ -197,7 +197,7 @@ final class ap extends js {
         if (!this.field_u) {
           return;
         }
-        if (this.field_o.field_u == 4) {
+        if (this.field_o.phase == 4) {
           ((va) (this.field_r)).g(0);
         }
         this.field_o.a((byte) -87);
@@ -218,7 +218,7 @@ final class ap extends js {
             stackIn_18_0 = this.g(64);
           }
           var4 = stackIn_18_0;
-          for (var5 = 0; var5 < this.field_o.field_I; var5++) {
+          for (var5 = 0; var5 < this.field_o.playerCount; var5++) {
             this.a(var4, 20700, var5);
           }
           this.field_o.a(this.field_i, this.field_h, var4, -6);
@@ -228,7 +228,7 @@ final class ap extends js {
           this.field_E = this.field_E - 16;
         }
         if (!this.field_t) {
-          if (2 == this.field_o.field_u &&
+          if (2 == this.field_o.phase &&
             this.field_o.field_C.a((byte) 107)) {
             var7 = 0;
             var4Lifetime1 = var7;
@@ -238,7 +238,7 @@ final class ap extends js {
             }
             this.b(26415, 3);
           }
-          if (this.field_o.field_u == 3 &&
+          if (this.field_o.phase == 3 &&
             this.field_o.field_o.a(-127, 0)) {
             this.b(26415, 4);
           }
@@ -295,12 +295,12 @@ final class ap extends js {
             var21[var17] = 0;
           }
           this.field_z = new int[param2.length];
-          this.field_o = new nu(param2, param6, param7, param8, param9, this.field_A, this.field_D, this.field_y, this.field_s);
+          this.field_o = new CommonGame(param2, param6, param7, param8, param9, this.field_A, this.field_D, this.field_y, this.field_s);
           if (this.field_t) {
-            this.field_i = new nu(this.field_o);
-            this.field_m = new nu(this.field_o);
+            this.field_i = new CommonGame(this.field_o);
+            this.field_m = new CommonGame(this.field_o);
           } else {
-            this.field_o.field_p = true;
+            this.field_o.disableOpponent = true;
           }
           hv.a(rq.field_E, -448);
           nc.a(this.field_o, (byte) -85, this.field_h, this.field_t);
@@ -367,7 +367,7 @@ final class ap extends js {
           return;
         }
         if (this.field_t &&
-          this.field_o.field_u != 0) {
+          this.field_o.phase != 0) {
           this.field_r.a(150, param0 ^ 17789);
           return;
         }
@@ -394,7 +394,7 @@ final class ap extends js {
           if (param0 != -21573) {
             return;
           }
-          for (var3_int = 0; this.field_o.field_I > var3_int; var3_int++) {
+          for (var3_int = 0; this.field_o.playerCount > var3_int; var3_int++) {
             this.field_z[var3_int] = param1.a((byte) 81);
           }
           return;
@@ -413,11 +413,11 @@ final class ap extends js {
     }
 
     private final void a(int param0, int param1, int param2) {
-        gt var5;
+        ParticipantStatus var5;
         Object var6;
-        gt var7;
-        var7 = this.field_o.field_R[param2];
-        var5 = this.field_i.field_R[param2];
+        ParticipantStatus var7;
+        var7 = this.field_o.participantStatus[param2];
+        var5 = this.field_i.participantStatus[param2];
         if (var7.a(-93, var5, param0, this.field_h)) {
           return;
         }
@@ -425,20 +425,20 @@ final class ap extends js {
         if (param1 != 20700) {
           return;
         }
-        if (!var7.field_v &&
-          var5.field_v) {
-          if (!var7.field_s &&
-            var5.field_s) {
+        if (!var7.departed &&
+          var5.departed) {
+          if (!var7.resigned &&
+            var5.resigned) {
             var6 = r.field_e;
           } else {
             var6 = mr.field_F;
           }
-        } else if (!var7.field_s &&
-          var5.field_s) {
+        } else if (!var7.resigned &&
+          var5.resigned) {
           var6 = nn.field_L;
         } else {
-          if (!var7.field_q &&
-            var5.field_q) {
+          if (!var7.offerDraw &&
+            var5.offerDraw) {
             var6 = wc.field_q;
           }
         }
@@ -580,7 +580,7 @@ final class ap extends js {
         la[] var3_ref_la__Lifetime1;
         la var5Lifetime1;
         var6 = Kickabout.field_G;
-        if (param0 != ~this.field_o.field_u) {
+        if (param0 != ~this.field_o.phase) {
           ru.a(true, (byte) -114);
           ru.a(false, (byte) -114);
         }
@@ -625,22 +625,22 @@ final class ap extends js {
     }
 
     private final void d(int param0) {
-        if (0 == this.field_o.field_u) {
+        if (0 == this.field_o.phase) {
           this.field_r = (hs) ((Object) new wb(this.field_o, this.field_h, this.field_t));
         }
-        if (param0 == ~this.field_o.field_u) {
+        if (param0 == ~this.field_o.phase) {
           this.field_r = (hs) ((Object) new fk(this.field_o, this.field_h, this.field_t));
         }
-        if (this.field_o.field_u == 2) {
+        if (this.field_o.phase == 2) {
           this.field_r = (hs) ((Object) new lr(this.field_o, this.field_h, this.field_t));
         }
-        if (this.field_o.field_u == 3) {
+        if (this.field_o.phase == 3) {
           this.field_r = (hs) ((Object) new bf(this.field_o, this.field_h, this.field_t, this.field_k));
         }
-        if (this.field_o.field_u == 4) {
+        if (this.field_o.phase == 4) {
           this.field_r = (hs) ((Object) new va(this.field_o, this.field_h, this.field_i, this.field_t, this.field_s));
         }
-        if (this.field_o.field_u == 5) {
+        if (this.field_o.phase == 5) {
           this.field_r = (hs) ((Object) new ol(this.field_o, this.field_h, this.field_t));
         }
     }
@@ -694,11 +694,11 @@ final class ap extends js {
         this.h(9);
         this.field_o.a(param1, (byte) -81);
         this.d(-2);
-        this.field_o.field_v = -1;
-        if (2 == this.field_o.field_u) {
+        this.field_o.phaseTime = -1;
+        if (2 == this.field_o.phase) {
           this.field_o.a(mf.a(2, 1, (byte) 0), -127);
         }
-        if (this.field_o.field_u == 3) {
+        if (this.field_o.phase == 3) {
           for (var3 = 0; 4 > var3; var3++) {
             this.field_o.field_i[1][var3] = 1;
           }
@@ -718,8 +718,8 @@ final class ap extends js {
               var4 = 3;
             }
             if (!this.e(-2) &&
-              this.field_o.field_u != 5 &&
-              this.field_o.field_R[this.field_h].d(3511)) {
+              this.field_o.phase != 5 &&
+              this.field_o.participantStatus[this.field_h].d(3511)) {
               jm.a(var4, false, -2);
               return true;
             }
@@ -772,7 +772,7 @@ final class ap extends js {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ch var6_ref_ch = null;
+        LoggedGoal var6_ref_ch = null;
         int var7 = 0;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -785,7 +785,7 @@ final class ap extends js {
           this.h(9);
           this.field_i.a(param1, this.field_h, param0 ^ -18);
           this.field_m.a(this.field_i, (byte) 77);
-          if (this.field_i.field_u > 0) {
+          if (this.field_i.phase > 0) {
             stackIn_4_0 = 1;
             if (this.e(param0 ^ 17)) {
               stackIn_5_1 = 0;
@@ -800,13 +800,13 @@ final class ap extends js {
           if (param0 != -17) {
             this.field_n = (gr) null;
           }
-          if (this.field_o.field_u > 0 &&
-            this.field_o.field_u < 5 && (rm.field_C != this.field_o.field_m ||
-            ih.field_c != this.field_o.field_t ||
+          if (this.field_o.phase > 0 &&
+            this.field_o.phase < 5 && (rm.field_C != this.field_o.tier ||
+            ih.field_c != this.field_o.surface ||
             !vi.field_n)) {
-            sb.a(true, (byte) -125, this.field_o.field_m, this.field_o.field_t);
+            sb.a(true, (byte) -125, this.field_o.tier, this.field_o.surface);
           }
-          if (5 == this.field_o.field_u &&
+          if (5 == this.field_o.phase &&
             param1.h((byte) -113) == 1) {
             ((ol) (this.field_r)).field_u = new int[2];
             ((ol) (this.field_r)).field_u[0] = param1.h((byte) -113);
@@ -820,7 +820,7 @@ final class ap extends js {
             ((ol) (this.field_r)).field_q.b(22997);
             var4Lifetime1 = param1.a((byte) 81);
             for (var5 = 0; var4Lifetime1 > var5; var5++) {
-              var6_ref_ch = new ch();
+              var6_ref_ch = new LoggedGoal();
               var6_ref_ch.a(param1, (byte) -79);
               if (0 != var6_ref_ch.field_f) {
                 ((ol) (this.field_r)).field_q.a(var6_ref_ch, 3);
@@ -860,7 +860,7 @@ final class ap extends js {
 
     final boolean e(int param0) {
         if (param0 != -2) {
-          this.field_i = (nu) null;
+          this.field_i = (CommonGame) null;
         }
         return this.field_h == -2 ? true : false;
     }
@@ -874,7 +874,7 @@ final class ap extends js {
           throw new IllegalStateException();
         }
         if (!this.e(-2) &&
-          !this.field_o.field_R[this.field_h].field_s) {
+          !this.field_o.participantStatus[this.field_h].resigned) {
           this.a(-16046, 1);
         }
     }

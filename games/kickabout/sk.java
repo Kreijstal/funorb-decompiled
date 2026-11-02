@@ -8,7 +8,7 @@ final class sk {
     static ut[] field_a;
 
     final static void a(int param0, int param1) {
-        ea.a(vt.field_c.field_v, 5, true, 636, param1, -51);
+        ea.a(vt.field_c.phaseTime, 5, true, 636, param1, -51);
         if (param0 != 1) {
           field_d = (jj) null;
         }
@@ -29,7 +29,7 @@ final class sk {
         CipherPacketBuffer var2Lifetime1;
         if (!param0) {
           sk.a(-17, -97, 99);
-          var1 = (fa) (nl.field_f.g(24009));
+          var1 = (fa) (FootballerAgent.field_f.g(24009));
           if (var1 == null) {
             lr.b((byte) -116);
             return;
@@ -42,7 +42,7 @@ final class sk {
           var1.c((byte) -109);
           return;
         }
-        var1Lifetime1 = (fa) (nl.field_f.g(24009));
+        var1Lifetime1 = (fa) (FootballerAgent.field_f.g(24009));
         if (var1Lifetime1 == null) {
           lr.b((byte) -116);
           return;

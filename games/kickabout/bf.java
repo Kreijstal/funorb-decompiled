@@ -400,7 +400,7 @@ final class bf extends hs {
         var9 = Kickabout.field_G;
         this.c(62);
         this.a(false, k.field_h);
-        this.b(param0 ^ -2352, this.field_a.field_v);
+        this.b(param0 ^ -2352, this.field_a.phaseTime);
         this.d(126);
         this.field_q.a(120, false);
         var2 = -1;
@@ -470,7 +470,7 @@ final class bf extends hs {
           var4Lifetime5 = 263;
           var11 = 0;
           var5_intLifetime1 = var11;
-          while (var11 < this.field_a.field_I) {
+          while (var11 < this.field_a.playerCount) {
             if (this.field_h == this.field_a.field_g[var11].field_p) {
               on.a(412, var4Lifetime5, 186, 21, 7, 65793, 128);
               if (this.field_a.field_o.a(param0 - 87, var11)) {
@@ -598,7 +598,7 @@ final class bf extends hs {
         return super.a(param0, 1670, param2);
     }
 
-    bf(nu param0, int param1, boolean param2, up[] param3) {
+    bf(CommonGame param0, int param1, boolean param2, up[] param3) {
         super(param0, param1, param2, (int[]) null);
         int var6 = 0;
         int var7 = 0;
@@ -672,10 +672,10 @@ final class bf extends hs {
               this.field_q.a((byte) -125, (hd) (this.field_j[var7Lifetime1]));
             }
           }
-          for (var7Lifetime2 = 0; param0.field_I > var7Lifetime2; var7Lifetime2++) {
+          for (var7Lifetime2 = 0; param0.playerCount > var7Lifetime2; var7Lifetime2++) {
             if (this.field_h == param0.field_g[var7Lifetime2].field_p &&
               var7Lifetime2 != param1 &&
-              param0.field_R[var7Lifetime2].d(3511)) {
+              param0.participantStatus[var7Lifetime2].d(3511)) {
               this.field_v = true;
             }
           }

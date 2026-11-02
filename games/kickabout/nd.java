@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nd {
-    static nu field_d;
+    static CommonGame field_d;
     static int field_b;
     static String field_a;
     static boolean field_c;

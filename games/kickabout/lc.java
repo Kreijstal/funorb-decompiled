@@ -64,7 +64,7 @@ final class lc implements Iterator {
         }
         if (k.field_m.field_E.charAt(0) != 91) {
           var7 = (CharSequence) ((Object) k.field_m.field_E);
-          var4 = mo.a(0, var7);
+          var4 = MatchAgent.a(0, var7);
           var5 = var4;
           var5Lifetime2 = var4;
         } else {

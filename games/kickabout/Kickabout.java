@@ -45,7 +45,7 @@ public final class Kickabout extends tu {
         }
         kw.b(stackIn_17_0, (byte) -116);
         re.b(param0 ^ -105);
-        ((eh) (ma.field_t)).e(0);
+        ((eh) (NetworkGameClient.field_t)).e(0);
         if (um.field_e == null &&
           !wh.field_q &&
           !od.field_n ||
@@ -81,7 +81,7 @@ public final class Kickabout extends tu {
           var4 = -ce.field_I + 24;
           var5 = (var4 * var4 << 8) / 576;
           var6 = -var5 + 256;
-          wr.field_f = var5 * po.a(cq.field_h, -4) + po.a(ra.field_G, -4) * var6 >> 8;
+          FormationAgent.field_f = var5 * po.a(cq.field_h, -4) + po.a(ra.field_G, -4) * var6 >> 8;
           if (ce.field_I == 24) {
             cv.a((byte) 105);
           }
@@ -352,8 +352,8 @@ public final class Kickabout extends tu {
                 return true;
               }
               if (param1 == 18) {
-                stackIn_86_0 = !(wl.field_o);
-                wl.field_o = stackIn_86_0;
+                stackIn_86_0 = !(LineupAgent.field_o);
+                LineupAgent.field_o = stackIn_86_0;
                 return true;
               }
               if (param1 == 19) {
@@ -362,8 +362,8 @@ public final class Kickabout extends tu {
                 return true;
               }
               if (param1 == 20) {
-                stackIn_97_0 = !(wl.field_g);
-                wl.field_g = stackIn_97_0;
+                stackIn_97_0 = !(LineupAgent.field_g);
+                LineupAgent.field_g = stackIn_97_0;
                 return true;
               }
               decompiledFrameRemainder1 = (param1 == 21);
@@ -389,8 +389,8 @@ public final class Kickabout extends tu {
               return true;
             }
             if (param1 == 18) {
-              stackIn_49_0 = !(wl.field_o);
-              wl.field_o = stackIn_49_0;
+              stackIn_49_0 = !(LineupAgent.field_o);
+              LineupAgent.field_o = stackIn_49_0;
               return true;
             }
             if (param1 == 19) {
@@ -399,8 +399,8 @@ public final class Kickabout extends tu {
               return true;
             }
             if (param1 == 20) {
-              stackIn_60_0 = !(wl.field_g);
-              wl.field_g = stackIn_60_0;
+              stackIn_60_0 = !(LineupAgent.field_g);
+              LineupAgent.field_g = stackIn_60_0;
               return true;
             }
             decompiledFrameRemainder1 = (param1 == 21);
@@ -587,7 +587,7 @@ public final class Kickabout extends tu {
 
     public Kickabout() {
         CharSequence var2 = (CharSequence) ((Object) gw.field_b);
-        tu.field_E = new gr(jc.a(var2, false));
+        tu.field_E = new gr(LoggedPlayer.a(var2, false));
         nm.field_g = this;
     }
 
@@ -851,7 +851,7 @@ public final class Kickabout extends tu {
             this.m((byte) -8);
           }
           if (param0 == 90) {
-            ((eh) (ma.field_t)).b((byte) 115);
+            ((eh) (NetworkGameClient.field_t)).b((byte) 115);
             return true;
           }
           if (param0 == 86) {
@@ -993,7 +993,7 @@ public final class Kickabout extends tu {
             }
             if (param0 == 14) {
               cv.a((byte) 81);
-              q.a(ma.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ow.field_c.length, 1024);
+              q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ow.field_c.length, 1024);
               ln.a(64, qq.h((byte) -64), qt.f((byte) -63));
               ec.field_e = false;
               od.field_n = true;
@@ -1331,7 +1331,7 @@ public final class Kickabout extends tu {
         var6 = field_G;
         var2 = 97 % ((param0 - 50) / 45);
         var3 = 0;
-        if (0 < wr.field_f) {
+        if (0 < FormationAgent.field_f) {
           stackIn_4_0 = (po.a(cq.field_h, -4) < 640) ? 0 : 1;
           var4 = stackIn_4_0;
           if ((var4 == 0 ||
@@ -1374,7 +1374,7 @@ public final class Kickabout extends tu {
           decompiledFrameRemainder0 = false;
         }
         else {
-          if (wr.field_f < 680) {
+          if (FormationAgent.field_f < 680) {
             hr.a((byte) -48);
           }
           if (sr.field_l != null &&
@@ -1395,11 +1395,11 @@ public final class Kickabout extends tu {
             ((ap) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
           }
         }
-        pt.a(wr.field_f, -22914, 0, 480, 0);
-        var4Lifetime2 = -nn.field_B.field_o + wr.field_f;
+        pt.a(FormationAgent.field_f, -22914, 0, 480, 0);
+        var4Lifetime2 = -nn.field_B.field_o + FormationAgent.field_f;
         if (var3 > 0) {
           eo.a(po.field_h, vq.field_d, var4Lifetime2);
-          eo.a(mk.field_a, 0, 0, wr.field_f, 480, var3, 0);
+          eo.a(mk.field_a, 0, 0, FormationAgent.field_f, 480, var3, 0);
           cq.field_j.c(-36, 50, 64);
         }
         if (cq.field_h instanceof qt) {
@@ -1411,7 +1411,7 @@ public final class Kickabout extends tu {
         if (ra.field_G instanceof qt) {
           ra.field_G.a(-5, false);
         }
-        if (wr.field_f > 0) {
+        if (FormationAgent.field_f > 0) {
           po.field_h.c(var4Lifetime2, 0);
           nn.field_B.c(var4Lifetime2, 0);
         }
@@ -1490,7 +1490,7 @@ public final class Kickabout extends tu {
         de.a(param0 + 3896);
         gw.d(param0 + 92);
         qr.a(false);
-        ma.d(true);
+        NetworkGameClient.d(true);
         ClientException.a((byte) -95);
         GameAppletShell.c(1);
         u.a(param0 - 8);
@@ -1577,11 +1577,11 @@ public final class Kickabout extends tu {
         jt.h((byte) -17);
         in.a(param0 ^ 31347);
         ud.e(14513);
-        gt.a(true);
-        ch.a((byte) 119);
+        ParticipantStatus.a(true);
+        LoggedGoal.a((byte) 119);
         qn.a((byte) -124);
         hu.a();
-        nu.a(true);
+        CommonGame.a(true);
         IsaacRandom.b(1);
         vj.a((byte) 111);
         tg.a();
@@ -1594,8 +1594,8 @@ public final class Kickabout extends tu {
         cb.a((byte) -100);
         ob.i(127);
         la.a((byte) -124);
-        tj.f(0);
-        nl.e((byte) -108);
+        BallAgent.f(0);
+        FootballerAgent.e((byte) -108);
         is.b(116);
         mj.a(param0 ^ 6);
         om.b(0);
@@ -1619,14 +1619,14 @@ public final class Kickabout extends tu {
         vk.a(50);
         pi.a((byte) -116);
         h.a(false);
-        jc.a(48);
+        LoggedPlayer.a(48);
         p.a(320);
         it.c(92);
-        oe.a((byte) -90);
-        wr.a(true);
-        ua.a((byte) -30);
+        TeamSelectionAgent.a((byte) -90);
+        FormationAgent.a(true);
+        GoalStateAgent.a((byte) -30);
         ki.a(0);
-        mo.a(-3);
+        MatchAgent.a(-3);
         po.a(0);
         sc.e(130);
         rq.a(true);

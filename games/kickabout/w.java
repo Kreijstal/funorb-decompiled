@@ -216,7 +216,7 @@ final class w implements hc {
                 var12.field_zb.a((byte) -119, var12.field_Pb);
               }
               var12.field_Rb = new hd(0L, (hd) null);
-              if (0 != (1 << wr.field_j & var14)) {
+              if (0 != (1 << FormationAgent.field_j & var14)) {
                 var12.field_zb.a((byte) -126, var12.field_Rb);
               }
               var12.field_Gb = new hd(0L, (hd) null);
@@ -266,7 +266,7 @@ final class w implements hc {
               var12.field_Bb = new hd(0L, dw.field_e);
               var12.a((byte) -128, var12.field_Bb);
               var12.b(param1);
-              var12.field_Lb = new hd(0L, jc.field_r);
+              var12.field_Lb = new hd(0L, LoggedPlayer.field_r);
               var13 = 1;
               var12.a((byte) -128, var12.field_Lb);
             }
@@ -414,7 +414,7 @@ final class w implements hc {
                 var12.field_Pb.a(true, var50_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (var50_ref.field_o + mj.field_b);
               }
-              if ((1 << wr.field_j & var14Lifetime1) != 0) {
+              if ((1 << FormationAgent.field_j & var14Lifetime1) != 0) {
                 if (!var12.field_Xb) {
                   stackIn_85_0 = (var12.field_hc) ? 1 : 0;
                 } else {

@@ -162,7 +162,7 @@ final class qs extends ta {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        nl var2 = null;
+        FootballerAgent var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -175,7 +175,7 @@ final class qs extends ta {
           while (var1_int < 4) {
             var2 = sh.field_a.field_P[ae.field_G][1 + var1_int];
             if (0 < var2.field_C &&
-              var2.field_u != 4) {
+              var2.action != 4) {
               mn.field_b[var1_int] = 16;
             } else {
               if (0 < mn.field_b[var1_int]) {

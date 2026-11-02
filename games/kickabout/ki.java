@@ -37,7 +37,7 @@ final class ki extends am {
         }
         int var1 = 27 % ((param0 + 48) / 56);
         if (!bw.field_b.d(-78)) {
-          return nu.field_M;
+          return CommonGame.field_M;
         }
         if (!bw.field_b.a(false, "commonui")) {
           return bh.field_q + " - " + bw.field_b.a("commonui", -16248) + "%";
@@ -49,7 +49,7 @@ final class ki extends am {
           return lj.field_l + " - " + gs.field_c.a("commonui", -16248) + "%";
         }
         if (!up.field_k.d(-96)) {
-          return oe.field_l;
+          return TeamSelectionAgent.field_l;
         }
         if (!up.field_k.a(false)) {
           return hm.field_H + " - " + up.field_k.e(-8185) + "%";

@@ -172,14 +172,14 @@ final class ju extends lb {
         if (var6Lifetime1 != mn.field_c &&
           var6Lifetime1 != en.field_p) {
           if (jt.field_Bb == var6Lifetime1) {
-            var15 = jc.field_g[2];
+            var15 = LoggedPlayer.field_g[2];
             var15.c(var9, var10 - (var15.field_w >> 1), 256);
           } else if (var6Lifetime1 == he.field_yb) {
-            var16 = jc.field_g[1];
+            var16 = LoggedPlayer.field_g[1];
             var16.c(var9, var10 - (var16.field_w >> 1), 256);
           }
         } else {
-          var14 = jc.field_g[0];
+          var14 = LoggedPlayer.field_g[0];
           var11 = var14.field_o << 1;
           var12 = var14.field_v << 1;
           if (null != this.field_Q &&
@@ -213,7 +213,7 @@ final class ju extends lb {
           if (!cu.a(param1, param2, param0, param3 ^ -105)) {
             return null;
           }
-          stackIn_7_0 = mo.b(param3 + 9);
+          stackIn_7_0 = MatchAgent.b(param3 + 9);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

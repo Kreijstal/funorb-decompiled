@@ -99,7 +99,7 @@ final class hm extends tm {
         try {
           var2_int = -120 / ((-16 - param0) / 48);
           var3 = (CharSequence) ((Object) param1);
-          stackIn_1_0 = kd.field_w.equals(mo.a(0, var3));
+          stackIn_1_0 = kd.field_w.equals(MatchAgent.a(0, var3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

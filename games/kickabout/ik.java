@@ -19,7 +19,7 @@ final class ik extends tm {
           if (param0 != 84) {
             ik.a((byte) -8, 27, -76, -11, 111, 51, -121, -63);
           }
-          stackIn_3_0 = new li(jc.a(param1[0].b(-30368), true));
+          stackIn_3_0 = new li(LoggedPlayer.a(param1[0].b(-30368), true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,42 +40,42 @@ final class ik extends tm {
         int stackIn_34_0 = 0;
         int stackIn_40_0 = 0;
         int stackIn_40_1 = 0;
-        nl stackIn_40_2 = null;
+        FootballerAgent stackIn_40_2 = null;
         int stackIn_41_3 = 0;
         int stackIn_44_0 = 0;
         int stackIn_44_1 = 0;
-        nl stackIn_44_2 = null;
+        FootballerAgent stackIn_44_2 = null;
         int stackIn_45_3 = 0;
         int stackIn_56_0 = 0;
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
-        nl stackIn_62_2 = null;
+        FootballerAgent stackIn_62_2 = null;
         int stackIn_63_3 = 0;
         int stackIn_66_0 = 0;
         int stackIn_66_1 = 0;
-        nl stackIn_66_2 = null;
+        FootballerAgent stackIn_66_2 = null;
         int stackIn_67_3 = 0;
         int stackIn_78_0 = 0;
         int stackIn_85_0 = 0;
         int stackIn_85_1 = 0;
-        nl stackIn_85_2 = null;
+        FootballerAgent stackIn_85_2 = null;
         int stackIn_86_3 = 0;
         int stackIn_96_0 = 0;
         int stackIn_102_0 = 0;
         int stackIn_102_1 = 0;
-        nl stackIn_102_2 = null;
+        FootballerAgent stackIn_102_2 = null;
         int stackIn_103_3 = 0;
         int stackIn_106_0 = 0;
         int stackIn_106_1 = 0;
-        nl stackIn_106_2 = null;
+        FootballerAgent stackIn_106_2 = null;
         int stackIn_107_3 = 0;
-        nl var8;
+        FootballerAgent var8;
         int var9;
         int var10;
         int var11;
         int var12;
         int var13;
-        nl var14;
+        FootballerAgent var14;
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
@@ -95,24 +95,24 @@ final class ik extends tm {
           stackIn_6_0 = 0;
         }
         var11 = stackIn_6_0;
-        if (var14.field_u != 7 &&
-          var14.field_u != 8 &&
-          var14.field_u != 9) {
-          if (var14.field_u == 10) {
-            if (var14.field_u == 8) {
+        if (var14.action != 7 &&
+          var14.action != 8 &&
+          var14.action != 9) {
+          if (var14.action == 10) {
+            if (var14.action == 8) {
               var14.field_L = var14.field_L + 1;
             }
             var8.field_G = 0;
             return;
           }
-          if (var14.field_u != 3 &&
-            var14.field_u != 12) {
+          if (var14.action != 3 &&
+            var14.action != 12) {
             if (var11 == 0) {
-              if (ld.field_f.field_u != 9 &&
-                7 != ld.field_f.field_u &&
-                ld.field_f.field_u != 12 &&
-                ld.field_f.field_u != 3 &&
-                ld.field_f.field_u != 10) {
+              if (ld.field_f.action != 9 &&
+                7 != ld.field_f.action &&
+                ld.field_f.action != 12 &&
+                ld.field_f.action != 3 &&
+                ld.field_f.action != 10) {
                 stackIn_34_0 = 1;
               } else {
                 stackIn_34_0 = 0;
@@ -127,11 +127,11 @@ final class ik extends tm {
               return;
             }
             if (0 != et.field_d.field_V.field_m) {
-              if (ld.field_f.field_u != 9 &&
-                7 != ld.field_f.field_u &&
-                ld.field_f.field_u != 12 &&
-                ld.field_f.field_u != 3 &&
-                ld.field_f.field_u != 10) {
+              if (ld.field_f.action != 9 &&
+                7 != ld.field_f.action &&
+                ld.field_f.action != 12 &&
+                ld.field_f.action != 3 &&
+                ld.field_f.action != 10) {
                 stackIn_56_0 = 1;
               } else {
                 stackIn_56_0 = 0;
@@ -165,11 +165,11 @@ final class ik extends tm {
             var13Lifetime2 = param1 - var14.f(-124);
             if (var12Lifetime2 * var12Lifetime2 + var13Lifetime2 * var13Lifetime2 < 3600) {
               var14.b(0, -1);
-              if (ld.field_f.field_u != 9 &&
-                7 != ld.field_f.field_u &&
-                ld.field_f.field_u != 12 &&
-                ld.field_f.field_u != 3 &&
-                ld.field_f.field_u != 10) {
+              if (ld.field_f.action != 9 &&
+                7 != ld.field_f.action &&
+                ld.field_f.action != 12 &&
+                ld.field_f.action != 3 &&
+                ld.field_f.action != 10) {
                 stackIn_78_0 = 1;
               } else {
                 stackIn_78_0 = 0;
@@ -192,11 +192,11 @@ final class ik extends tm {
               nq.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_86_3, (byte) 69, var9);
               return;
             }
-            if (ld.field_f.field_u != 9 &&
-              7 != ld.field_f.field_u &&
-              ld.field_f.field_u != 12 &&
-              ld.field_f.field_u != 3 &&
-              ld.field_f.field_u != 10) {
+            if (ld.field_f.action != 9 &&
+              7 != ld.field_f.action &&
+              ld.field_f.action != 12 &&
+              ld.field_f.action != 3 &&
+              ld.field_f.action != 10) {
               stackIn_96_0 = 1;
             } else {
               stackIn_96_0 = 0;
@@ -234,7 +234,7 @@ final class ik extends tm {
           }
           return;
         }
-        if (var14.field_u == 8) {
+        if (var14.action == 8) {
           var14.field_L = var14.field_L + 1;
         }
         var8.field_G = 0;

@@ -46,7 +46,7 @@ final class ok {
               var4[var7] = (short)var6;
             }
           }
-          var18 = gt.field_f;
+          var18 = ParticipantStatus.field_f;
           var8 = var18[0] * t.field_o[1024] >> 16;
           var9 = t.field_f[1024] * var18[0] >> 16;
           stackIn_10_0 = var11.b(var18[2], var18[3], var8, var18[1], var9);

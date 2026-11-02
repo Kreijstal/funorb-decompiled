@@ -18,7 +18,7 @@ final class ie extends i {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        nl var4_ref_nl = null;
+        FootballerAgent var4_ref_nl = null;
         int var5_int = 0;
         boolean[] var5 = null;
         int var6 = 0;
@@ -36,7 +36,7 @@ final class ie extends i {
         var8 = Kickabout.field_G;
         try {
           if (null != et.field_d &&
-            et.field_d.field_u == 4 &&
+            et.field_d.phase == 4 &&
             ks.field_e == 14 &&
             0 < je.field_m) {
             fieldTemp$0 = je.field_m - 1;
@@ -51,7 +51,7 @@ final class ie extends i {
           if (sl.field_Eb) {
             if (bt.b(105)) {
               sl.field_Eb = false;
-              et.field_d.field_R[0].field_g = vb.field_d;
+              et.field_d.participantStatus[0].field_g = vb.field_d;
               p.a(false);
               mk.b(-1622);
               no.g(99);
@@ -113,7 +113,7 @@ final class ie extends i {
             ig.a(false, (byte) 23, 1, 0);
             var4_ref_nl = et.field_d.field_P[1][4];
             if (0 == et.field_d.field_V.field_m &&
-              var4_ref_nl.field_u == 0) {
+              var4_ref_nl.action == 0) {
               var5_int = var4_ref_nl.f(-111) - ld.field_f.f(-124);
               var6 = var4_ref_nl.a(true) - ld.field_f.a(true);
               if (!(var5_int * var5_int + var6 * var6 >= 3600)) {
@@ -124,10 +124,10 @@ final class ie extends i {
             }
             else {
               if (1 == et.field_d.field_V.field_m &&
-                var4_ref_nl.field_u == 0) {
+                var4_ref_nl.action == 0) {
                 tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                 if (sl.field_Eb &&
-                  ld.field_f.field_u == 0) {
+                  ld.field_f.action == 0) {
                   ld.field_f.field_G = 0;
                   ld.field_f.a(1, 26214);
                 }
@@ -136,7 +136,7 @@ final class ie extends i {
           }
           if (ks.field_e == 8) {
             if (!sl.field_Eb) {
-              et.field_d.field_R[1].field_g = 0;
+              et.field_d.participantStatus[1].field_g = 0;
               var4Lifetime2 = et.field_d.field_V.a(true);
               var5_intLifetime1 = et.field_d.field_V.c(879306160);
               ik.a((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
@@ -153,7 +153,7 @@ final class ie extends i {
             }
             for (var4Lifetime3Lifetime1 = 3; var4Lifetime3Lifetime1 < 5; var4Lifetime3Lifetime1++) {
               if (!sl.field_Eb &&
-                et.field_d.field_P[1][var4Lifetime3Lifetime1].field_u == 0) {
+                et.field_d.field_P[1][var4Lifetime3Lifetime1].action == 0) {
                 et.field_d.field_P[1][var4Lifetime3Lifetime1].a(1, 26214);
               }
             }
@@ -169,34 +169,34 @@ final class ie extends i {
             ig.a(false, (byte) 85, 1, 0);
           }
           if (ks.field_e == 12 &&
-            et.field_d.field_X.field_m > 25) {
-            et.field_d.field_X.field_m = 0;
+            et.field_d.field_X.goalCount > 25) {
+            et.field_d.field_X.goalCount = 0;
             if (et.field_d.field_V.e(-1) == 0) {
               jw.c(13, false);
             }
           }
           if (ks.field_e == 13) {
             if (!sl.field_Eb) {
-              if (et.field_d.field_X.field_m > 25) {
-                et.field_d.field_X.field_m = 0;
+              if (et.field_d.field_X.goalCount > 25) {
+                et.field_d.field_X.goalCount = 0;
                 if (et.field_d.field_V.e(44) == 0) {
                   jw.c(14, false);
                 }
               }
             } else {
-              et.field_d.field_X.field_m = 0;
+              et.field_d.field_X.goalCount = 0;
               if (et.field_d.field_P[1][0].field_w < 0) {
                 qg.a(2235, 2949120, 4, 29360128);
               }
               if (et.field_d.field_V.field_m == 0) {
                 et.field_d.field_V.field_m = -1;
               }
-              et.field_d.field_R[0].field_g = 0;
+              et.field_d.participantStatus[0].field_g = 0;
             }
           }
           if (ks.field_e == 14 &&
             ja.field_O &&
-            et.field_d.field_u == 4) {
+            et.field_d.phase == 4) {
             ja.field_O = false;
             var10 = tu.field_E.field_J;
             var9 = var10;
@@ -263,7 +263,7 @@ final class ie extends i {
             stackIn_7_0 = st.field_j;
             return stackIn_7_0;
           }
-          var3 = wr.a(param0, 2, '.');
+          var3 = FormationAgent.a(param0, 2, '.');
           if (var3.length < 2) {
             stackIn_10_0 = ld.field_b;
             return stackIn_10_0;

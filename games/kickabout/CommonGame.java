@@ -1,58 +1,58 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nu {
+final class CommonGame {
     private boolean field_W;
     private boolean field_w;
-    int field_I;
-    int field_v;
+    int playerCount;
+    int phaseTime;
     int field_c;
     static String field_M;
     tf field_E;
     private int field_U;
     boolean field_f;
-    int field_O;
+    int timeLimit;
     static String field_D;
     static boolean field_j;
     String[] field_S;
-    int field_u;
+    int phase;
     private boolean field_T;
     boolean field_L;
     boolean field_e;
     boolean field_l;
-    tj field_V;
+    BallAgent field_V;
     int[] field_d;
     boolean field_h;
     boolean field_y;
-    oe field_n;
+    TeamSelectionAgent field_n;
     up[][] field_b;
     la[] field_B;
-    wr field_C;
+    FormationAgent field_C;
     boolean field_A;
     it[] field_g;
     la[] field_x;
     boolean field_z;
     private p field_ab;
-    int field_Z;
+    int winner;
     private boolean[] field_F;
-    int field_t;
+    int surface;
     int[] field_r;
-    private jc[] field_q;
-    boolean field_p;
-    boolean field_s;
-    ua field_X;
-    nl[][] field_P;
+    private LoggedPlayer[] field_q;
+    boolean disableOpponent;
+    boolean disableLocal;
+    GoalStateAgent field_X;
+    FootballerAgent[][] field_P;
     int[][] field_i;
-    int field_J;
+    int aiTick;
     boolean field_Y;
     static String field_a;
-    private ch field_N;
+    private LoggedGoal field_N;
     int[] field_H;
-    gt[] field_R;
-    boolean field_G;
-    int field_m;
+    ParticipantStatus[] participantStatus;
+    boolean bigHeadMode;
+    int tier;
     int[][] field_k;
-    wl field_o;
+    LineupAgent field_o;
     int[] field_Q;
 
     final void a(CipherPacketBuffer param0, int param1) {
@@ -69,32 +69,32 @@ final class nu {
         var5 = Kickabout.field_G;
         try {
           if (param1 != -5) {
-            nu.b(false);
+            CommonGame.b(false);
           }
           param0.p(-103);
-          this.field_v = sk.a(param1 ^ -19886, 8, 0, 4, param0, 16) - 1;
+          this.phaseTime = sk.a(param1 ^ -19886, 8, 0, 4, param0, 16) - 1;
           var3_int = 0;
           do {
-            if (var3_int >= this.field_I) {
-              if (this.field_u == 0) {
+            if (var3_int >= this.playerCount) {
+              if (this.phase == 0) {
                 this.field_n.b(param0, 4);
                 this.field_n.a(param1 ^ 65, param0);
               }
               break;
             }
-            this.field_R[var3_int].b(param0, param1 + 9);
-            this.field_R[var3_int].c(param0, param1 ^ -6);
+            this.participantStatus[var3_int].b(param0, param1 + 9);
+            this.participantStatus[var3_int].c(param0, param1 ^ -6);
             var3_int++;
           } while (var5 == 0);
-          if (2 == this.field_u) {
+          if (2 == this.phase) {
             this.field_C.b(param0, ~param1);
             this.field_C.c(param0, param1 + 7);
           }
-          if (3 == this.field_u) {
+          if (3 == this.phase) {
             this.field_o.b(param0, 4);
             this.field_o.a(param0, false);
           }
-          if (this.field_u == 4) {
+          if (this.phase == 4) {
             this.field_V.b(param0, 4);
             var3_int = 0;
             scanLoop1: while (true) {
@@ -131,10 +131,10 @@ final class nu {
               }
               this.field_V.c(param0, 17);
               this.field_X.a(param0, (byte) -65);
-              this.field_J = param0.l(8, 59);
+              this.aiTick = param0.l(8, 59);
               break;
             }
-            this.field_G = mu.a(param0, (byte) -39);
+            this.bigHeadMode = mu.a(param0, (byte) -39);
           }
           param0.l((byte) 115);
           return;
@@ -153,7 +153,7 @@ final class nu {
     }
 
     private final void b(byte param0, ki param1) {
-        nl stackIn_63_0 = null;
+        FootballerAgent stackIn_63_0 = null;
         boolean stackIn_64_1 = false;
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
@@ -162,17 +162,17 @@ final class nu {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        nl var5 = null;
+        FootballerAgent var5 = null;
         try {
-          if (this.field_u != 4) {
+          if (this.phase != 4) {
             return;
           }
           if (null != this.field_X &&
-            this.field_X.field_m >= 40) {
+            this.field_X.goalCount >= 40) {
             return;
           }
-          if (this.field_O != -1 &&
-            this.field_O < this.field_v) {
+          if (this.timeLimit != -1 &&
+            this.timeLimit < this.phaseTime) {
             return;
           }
           var3_int = param1.field_u;
@@ -180,21 +180,21 @@ final class nu {
             this.a(95);
           }
           var4 = param1.field_v & 255;
-          if (!this.field_R[var3_int].d(3511)) {
+          if (!this.participantStatus[var3_int].d(3511)) {
             return;
           }
           var5 = this.a((byte) 92, var3_int);
           if (var4 >= 1 &&
             var4 <= 5 &&
             !this.field_h) {
-            this.field_R[var3_int].field_p = var4 - 1;
-            this.field_R[var3_int].a((mo) (this.field_g[var3_int]), (byte) 84);
+            this.participantStatus[var3_int].field_p = var4 - 1;
+            this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
           }
           if (0 == var4 &&
-            !this.field_A && (var5.field_N.c(var5.field_y, -73) ||
+            !this.field_A && (var5.field_N.c(var5.member, -73) ||
             !this.c(var3_int, -32)) && (0 == var5.field_C &&
-            0 == var5.field_u)) {
-            var5.a((mo) (this.field_g[var3_int]), (byte) 84);
+            0 == var5.action)) {
+            var5.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
             var5.a((byte) -31, 4);
             var5.field_C = var5.a((byte) -99);
           }
@@ -207,14 +207,14 @@ final class nu {
               return;
             }
           }
-          if (var5.field_u == 0 &&
+          if (var5.action == 0 &&
             this.c(var3_int, -126)) {
             var5.a((byte) -31, 1);
             stackIn_63_0 = var5;
             stackIn_64_1 = (var4 == 7);
             stackIn_63_0.field_O = stackIn_64_1;
             var5.field_L = var5.c((byte) -99);
-            var5.a((mo) (this.field_g[var3_int]), (byte) 84);
+            var5.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -244,7 +244,7 @@ final class nu {
         var5 = Kickabout.field_G;
         try {
           var2_int = 0;
-          if (this.field_u == 4) {
+          if (this.phase == 4) {
             var3 = 0;
             scanLoop1: while (true) {
               if (var3 < 2) {
@@ -313,7 +313,7 @@ final class nu {
               if (var13 == 0) {
                 if (stackIn_37_0 == this.field_i[var10][var9]) {
                   var11 = this.field_P[var10][1 + var9].field_N;
-                  var12 = this.field_P[var10][var9 + 1].field_y ? 1 : 0;
+                  var12 = this.field_P[var10][var9 + 1].member ? 1 : 0;
                   if (var11.a(true, param0, var12 != 0)) {
                     return true;
                   }
@@ -355,7 +355,7 @@ final class nu {
             stackIn_16_1 = param1;
             if (var5 == 0) {
               if (stackIn_16_0 == stackIn_16_1 &&
-                this.field_R[var3_int].d(3511)) {
+                this.participantStatus[var3_int].d(3511)) {
                 stackIn_13_0 = var3_int;
                 return stackIn_13_0;
               }
@@ -385,17 +385,17 @@ final class nu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (0 != this.field_u) {
+          if (0 != this.phase) {
             return;
           }
-          if (!this.field_R[param1.field_u].d(param0 + 3510)) {
+          if (!this.participantStatus[param1.field_u].d(param0 + 3510)) {
             return;
           }
           if (param0 != 1) {
-            nu.b(false);
+            CommonGame.b(false);
           }
           this.field_n.a(param1.field_u, 11678, param1.field_v);
-          this.field_n.a((mo) (this.field_g[param1.field_u]), (byte) 84);
+          this.field_n.a((MatchAgent) (this.field_g[param1.field_u]), (byte) 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -413,14 +413,14 @@ final class nu {
 
     private final void b(int param0) {
         int fieldTemp$0 = 0;
-        jc dupTemp$1 = null;
-        jc dupTemp$2 = null;
-        jc dupTemp$3 = null;
-        jc dupTemp$4 = null;
-        jc dupTemp$5 = null;
-        jc dupTemp$6 = null;
-        jc dupTemp$7 = null;
-        jc dupTemp$8 = null;
+        LoggedPlayer dupTemp$1 = null;
+        LoggedPlayer dupTemp$2 = null;
+        LoggedPlayer dupTemp$3 = null;
+        LoggedPlayer dupTemp$4 = null;
+        LoggedPlayer dupTemp$5 = null;
+        LoggedPlayer dupTemp$6 = null;
+        LoggedPlayer dupTemp$7 = null;
+        LoggedPlayer dupTemp$8 = null;
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_29_0 = 0;
@@ -440,12 +440,12 @@ final class nu {
         int stackIn_300_0 = 0;
         int stackIn_332_0 = 0;
         int stackIn_332_1 = 0;
-        tj stackIn_351_0 = null;
+        BallAgent stackIn_351_0 = null;
         int stackIn_352_1 = 0;
-        ch stackIn_355_0;
+        LoggedGoal stackIn_355_0;
         int stackIn_355_1;
         int stackIn_355_2;
-        nl stackIn_355_3;
+        FootballerAgent stackIn_355_3;
         int stackIn_355_4;
         int stackIn_355_5;
         int stackIn_356_6 = 0;
@@ -454,28 +454,28 @@ final class nu {
         int stackIn_442_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        nl var2 = null;
+        FootballerAgent var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        nl var4_ref_nl = null;
+        FootballerAgent var4_ref_nl = null;
         int var4 = 0;
         int var5_int = 0;
-        nl var5 = null;
+        FootballerAgent var5 = null;
         int var6 = 0;
-        nl var6_ref_nl = null;
+        FootballerAgent var6_ref_nl = null;
         int var7 = 0;
         int var8_int = 0;
-        nl var8 = null;
+        FootballerAgent var8 = null;
         int var9 = 0;
         long var10_long = 0L;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        nl var13 = null;
+        FootballerAgent var13 = null;
         int var14 = 0;
-        nl var4_ref_nlLifetime1;
-        nl var4_ref_nlLifetime2;
-        nl var6_ref_nlLifetime1;
+        FootballerAgent var4_ref_nlLifetime1;
+        FootballerAgent var4_ref_nlLifetime2;
+        FootballerAgent var6_ref_nlLifetime1;
         int stackIn_77_0Lifetime1;
         int stackIn_77_1Lifetime1;
         int stackIn_217_0Lifetime1;
@@ -513,14 +513,14 @@ final class nu {
         int var9Lifetime1Lifetime1;
         var14 = Kickabout.field_G;
         try {
-          if (-1 != this.field_O &&
-            this.field_O < this.field_v) {
+          if (-1 != this.timeLimit &&
+            this.timeLimit < this.phaseTime) {
             return;
           }
-          fieldTemp$0 = this.field_J - 1;
-          this.field_J = this.field_J - 1;
+          fieldTemp$0 = this.aiTick - 1;
+          this.aiTick = this.aiTick - 1;
           if (fieldTemp$0 <= 0) {
-            this.field_J = 255;
+            this.aiTick = 255;
           }
           if (param0 != 11660) {
             field_D = (String) null;
@@ -547,7 +547,7 @@ final class nu {
                   var5_int = stackIn_29_0;
                   var6 = this.a((byte) 6, var2_int, var3);
                   if (-1 != var6 &&
-                    this.field_R[var6].field_u) {
+                    this.participantStatus[var6].megamode) {
                     stackIn_36_0 = 1;
                   } else {
                     stackIn_36_0 = 0;
@@ -556,8 +556,8 @@ final class nu {
                   var7 = stackIn_36_0;
                   var4_ref_nl.a(2, this.field_x, var7 != 0, var5_int != 0);
                   if ((var2_int != 0 ||
-                    !this.field_s) && (1 != var2_int ||
-                    !this.field_p)) {
+                    !this.disableLocal) && (1 != var2_int ||
+                    !this.disableOpponent)) {
                     stackIn_49_0 = 0;
                     decompiledFrameRemainder0 = false;
                   }
@@ -578,31 +578,31 @@ final class nu {
                 continue;
               }
             } else {
-              this.field_V.a((byte) -97, this.field_t, this.field_B);
+              this.field_V.a((byte) -97, this.surface, this.field_B);
               this.field_X.a(this.field_V, -123);
               stackIn_61_0 = -41;
             }
-            if (stackIn_61_0 == ~this.field_X.field_m) {
-              this.field_X.field_j[this.field_X.field_n] = this.field_X.field_j[this.field_X.field_n] + 1;
+            if (stackIn_61_0 == ~this.field_X.goalCount) {
+              this.field_X.score[this.field_X.goalScorer] = this.field_X.score[this.field_X.goalScorer] + 1;
               this.field_V.field_m = -1;
-              this.field_V.field_r = 205;
-              this.field_P[-this.field_X.field_n + 1][0].field_o = 0;
+              this.field_V.uncatchable = 205;
+              this.field_P[-this.field_X.goalScorer + 1][0].field_o = 0;
               this.a(param0 ^ 11662);
             }
             boolean decompiledFrameCompleted6 = true;
             boolean decompiledFrameCompleted4 = true;
             regionExit1: {
               boolean decompiledFrameCompleted5 = true;
-              if (this.field_X.field_m >= 245) {
-                this.a(-this.field_X.field_n + 1, 0);
-                this.field_X.field_m = 0;
+              if (this.field_X.goalCount >= 245) {
+                this.a(-this.field_X.goalScorer + 1, 0);
+                this.field_X.goalCount = 0;
                 var2_int = 0;
-                while (!(var2_int >= this.field_X.field_j.length)) {
+                while (!(var2_int >= this.field_X.score.length)) {
                   stackIn_77_0 = -100;
-                  stackIn_77_1 = ~this.field_X.field_j[var2_int];
+                  stackIn_77_1 = ~this.field_X.score[var2_int];
                   if (var14 == 0) {
                     if (stackIn_77_0 > stackIn_77_1) {
-                      this.field_X.field_j[var2_int] = 99;
+                      this.field_X.score[var2_int] = 99;
                     }
                     var2_int++;
                     continue;
@@ -633,7 +633,7 @@ final class nu {
                   var3Lifetime1 = stackIn_192_0;
                   while (var3Lifetime1 < 5) {
                     var4_ref_nlLifetime1 = this.field_P[var2_int][var3Lifetime1];
-                    stackIn_77_0Lifetime1Lifetime1 = var4_ref_nlLifetime1.field_u;
+                    stackIn_77_0Lifetime1Lifetime1 = var4_ref_nlLifetime1.action;
                     stackIn_77_1Lifetime1Lifetime1 = 2;
                     boolean decompiledFrameRemainder3 = true;
                     if (stackIn_77_0Lifetime1Lifetime1 == stackIn_77_1Lifetime1Lifetime1 &&
@@ -644,10 +644,10 @@ final class nu {
                         this.b(-var4_ref_nlLifetime1.field_z, (byte) -72);
                       } else {
                         var5_intLifetime1 = var4_ref_nlLifetime1.a(var4_ref_nlLifetime1.field_z, (byte) -68);
-                        this.a(var5_intLifetime1, var4_ref_nlLifetime1.field_O, var4_ref_nlLifetime1.field_N.c(var4_ref_nlLifetime1.field_y, (byte) -62), var4_ref_nlLifetime1.field_x, (byte) -66, var4_ref_nlLifetime1.field_P);
-                        this.field_V.a((mo) (var4_ref_nlLifetime1), (byte) 84);
+                        this.a(var5_intLifetime1, var4_ref_nlLifetime1.field_O, var4_ref_nlLifetime1.field_N.c(var4_ref_nlLifetime1.member, (byte) -62), var4_ref_nlLifetime1.field_x, (byte) -66, var4_ref_nlLifetime1.field_P);
+                        this.field_V.a((MatchAgent) (var4_ref_nlLifetime1), (byte) 84);
                         var6_ref_nl = this.field_P[-var2_int + 1][0];
-                        this.field_N.a(this, 32, this.field_v, var2_int, var4_ref_nlLifetime1, var5_intLifetime1, var6_ref_nl, this.field_V.field_o, var3Lifetime1);
+                        this.field_N.a(this, 32, this.phaseTime, var2_int, var4_ref_nlLifetime1, var5_intLifetime1, var6_ref_nl, this.field_V.field_o, var3Lifetime1);
                         var7Lifetime1 = this.a((byte) 6, var2_int, var3Lifetime1);
                         if (var7Lifetime1 != -1) {
                           if (!var4_ref_nlLifetime1.field_O) {
@@ -668,7 +668,7 @@ final class nu {
                       }
                     }
                     boolean decompiledFrameRemainder2 = true;
-                    if (0 != var4_ref_nlLifetime1.field_u &&
+                    if (0 != var4_ref_nlLifetime1.action &&
                       var4_ref_nlLifetime1.field_L <= 0) {
                       if (var2_int == this.field_V.field_m &&
                         ~var3Lifetime1 == ~this.field_V.field_s) {
@@ -677,25 +677,25 @@ final class nu {
                         stackIn_126_0 = 0;
                       }
                       var5_intLifetime1Lifetime1 = stackIn_126_0;
-                      if (var4_ref_nlLifetime1.field_u != 2) {
-                        if (var4_ref_nlLifetime1.field_u == 1) {
+                      if (var4_ref_nlLifetime1.action != 2) {
+                        if (var4_ref_nlLifetime1.action == 1) {
                           var4_ref_nlLifetime1.field_L = var4_ref_nlLifetime1.c((byte) -99);
                         } else {
-                          if (var4_ref_nlLifetime1.field_u == 5) {
+                          if (var4_ref_nlLifetime1.action == 5) {
                             var4_ref_nlLifetime1.a((byte) -31, 6);
                           } else {
-                            if (7 == var4_ref_nlLifetime1.field_u) {
+                            if (7 == var4_ref_nlLifetime1.action) {
                               var4_ref_nlLifetime1.a((byte) -31, 8);
                             } else {
-                              if (var4_ref_nlLifetime1.field_u == 8) {
+                              if (var4_ref_nlLifetime1.action == 8) {
                                 var4_ref_nlLifetime1.a((byte) -31, 9);
                               } else {
-                                if (var4_ref_nlLifetime1.field_u != 3 ||
+                                if (var4_ref_nlLifetime1.action != 3 ||
                                   var5_intLifetime1Lifetime1 != 0) {
-                                  if (var4_ref_nlLifetime1.field_u != 12) {
-                                    if (var4_ref_nlLifetime1.field_u != 13 ||
+                                  if (var4_ref_nlLifetime1.action != 12) {
+                                    if (var4_ref_nlLifetime1.action != 13 ||
                                       0 != var4_ref_nlLifetime1.field_v) {
-                                      if (var4_ref_nlLifetime1.field_u == 14) {
+                                      if (var4_ref_nlLifetime1.action == 14) {
                                         var4_ref_nlLifetime1.field_L = 1;
                                       } else {
                                         var4_ref_nlLifetime1.a((byte) -31, 0);
@@ -734,13 +734,13 @@ final class nu {
               stackIn_192_0 = 0;
             }
             var2_int = stackIn_192_0;
-            while (this.field_I > var2_int) {
+            while (this.playerCount > var2_int) {
               if (var14 == 0) {
-                if (this.field_R[var2_int].d(3511) &&
-                  this.field_R[var2_int].field_p != 0 &&
+                if (this.participantStatus[var2_int].d(3511) &&
+                  this.participantStatus[var2_int].field_p != 0 &&
                   !this.c(var2_int, -125)) {
-                  this.a(73, this.field_R[var2_int], this.field_R[var2_int].field_p, var2_int);
-                  this.field_R[var2_int].field_p = 0;
+                  this.a(73, this.participantStatus[var2_int], this.participantStatus[var2_int].field_p, var2_int);
+                  this.participantStatus[var2_int].field_p = 0;
                 }
                 var2_int++;
                 continue;
@@ -787,16 +787,16 @@ final class nu {
                         var7Lifetime2 = var8_intLifetime1 * var8_intLifetime1;
                       }
                       if (var3Lifetime2 <= (var7Lifetime2 << 16) &&
-                        3 != var6_ref_nlLifetime1.field_u &&
-                        var6_ref_nlLifetime1.field_u != 13 &&
-                        var6_ref_nlLifetime1.field_u != 5 &&
-                        var6_ref_nlLifetime1.field_u != 7 &&
-                        var6_ref_nlLifetime1.field_u != 8 &&
-                        var6_ref_nlLifetime1.field_u != 9) {
+                        3 != var6_ref_nlLifetime1.action &&
+                        var6_ref_nlLifetime1.action != 13 &&
+                        var6_ref_nlLifetime1.action != 5 &&
+                        var6_ref_nlLifetime1.action != 7 &&
+                        var6_ref_nlLifetime1.action != 8 &&
+                        var6_ref_nlLifetime1.action != 9) {
                         var8_intLifetime1 = var6_ref_nlLifetime1.f(-127) - this.field_V.a(true);
                         var9 = var6_ref_nlLifetime1.a(true) - this.field_V.c(879306160);
                         if (var9 * var9 + var8_intLifetime1 * var8_intLifetime1 < 1600) {
-                          this.field_V.a((mo) (var6_ref_nlLifetime1), (byte) 84);
+                          this.field_V.a((MatchAgent) (var6_ref_nlLifetime1), (byte) 84);
                           this.field_V.field_s = var5_intLifetime2;
                           this.field_V.field_i = 0;
                           this.field_V.field_m = var4;
@@ -816,11 +816,11 @@ final class nu {
                   var3Lifetime2 = 0;
                   while (2 > var3Lifetime2) {
                     var4_ref_nlLifetime2 = this.field_P[var3Lifetime2][0];
-                    stackIn_294_0 = ~var4_ref_nlLifetime2.field_u;
+                    stackIn_294_0 = ~var4_ref_nlLifetime2.action;
                     stackIn_294_1 = -3;
                     if (var14 == 0) {
                       if (stackIn_294_0 != stackIn_294_1 &&
-                        var4_ref_nlLifetime2.field_u != 3) {
+                        var4_ref_nlLifetime2.action != 3) {
                         var5_intLifetime2Lifetime1 = this.field_V.a(true) - var4_ref_nlLifetime2.f(-102);
                         var6Lifetime1 = this.field_V.c(879306160) - var4_ref_nlLifetime2.a(true);
                         var7Lifetime2 = var6Lifetime1 * var6Lifetime1 + var5_intLifetime2Lifetime1 * var5_intLifetime2Lifetime1;
@@ -831,7 +831,7 @@ final class nu {
                             var9Lifetime2 -= 512;
                           }
                           var8_intLifetime1 = 8191 & var8_intLifetime1 - (-8192 - var9Lifetime2);
-                          if (var4_ref_nlLifetime2.field_u == 5) {
+                          if (var4_ref_nlLifetime2.action == 5) {
                             stackIn_278_0 = (var3Lifetime2 == 0) ? 1024 : -1024;
                             var10 = stackIn_278_0;
                             if ((var4_ref_nlLifetime2.field_G & 2) != 0) {
@@ -841,11 +841,11 @@ final class nu {
                               var8_intLifetime1 = 8191 & var10 + var8_intLifetime1 + 8192;
                             }
                           }
-                          this.field_V.a((mo) (var4_ref_nlLifetime2), (byte) 84);
+                          this.field_V.a((MatchAgent) (var4_ref_nlLifetime2), (byte) 84);
                           var10Lifetime2 = pc.a(this.field_V.e(3), -524289) >> 8;
                           this.field_V.field_q = (we.a(var8_intLifetime1, false) >> 8) * var10Lifetime2;
                           this.field_V.field_h = var10Lifetime2 * (ei.a(var8_intLifetime1, (byte) -23) >> 8);
-                          this.field_V.a((byte) -78, this.field_t, this.field_B);
+                          this.field_V.a((byte) -78, this.surface, this.field_B);
                           if (var4_ref_nlLifetime2.field_o < 15) {
                             var4_ref_nlLifetime2.field_o = var4_ref_nlLifetime2.field_o + 1;
                           }
@@ -888,30 +888,30 @@ final class nu {
                     if (stackIn_300_0 < ~var4Lifetime1) {
                       var5 = this.field_P[var3Lifetime2Lifetime1][var4Lifetime1];
                       stackIn_294_0Lifetime1Lifetime1 = -4;
-                      stackIn_294_1Lifetime1Lifetime1 = ~var5.field_u;
+                      stackIn_294_1Lifetime1Lifetime1 = ~var5.action;
                       if (stackIn_294_0Lifetime1Lifetime1 == stackIn_294_1Lifetime1Lifetime1 ||
-                        var5.field_u == 13 ||
+                        var5.action == 13 ||
                         var14 != 0) {
                         if (this.field_V.field_m == -1 &&
                           Math.abs(-var5.field_v + this.field_V.field_v) >> 16 < 30 &&
-                          this.field_V.field_r == 0) {
+                          this.field_V.uncatchable == 0) {
                           var6Lifetime1Lifetime1 = var5.f(param0 - 11776) - this.field_V.a(true);
                           var7Lifetime2Lifetime1 = var5.a(true) - this.field_V.c(879306160);
                           var8_intLifetime1Lifetime1 = var7Lifetime2Lifetime1 * var7Lifetime2Lifetime1 + var6Lifetime1Lifetime1 * var6Lifetime1Lifetime1;
                           if (var8_intLifetime1Lifetime1 < 1600) {
-                            this.field_V.a((mo) (var5), (byte) 84);
-                            var9Lifetime1 = (4 * var5.field_N.d(var5.field_y, 0) << 16) / 100 + 524288;
+                            this.field_V.a((MatchAgent) (var5), (byte) 84);
+                            var9Lifetime1 = (4 * var5.field_N.d(var5.member, 0) << 16) / 100 + 524288;
                             var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, pc.a(this.field_V.e(-127), -524289)));
-                            this.field_V.field_r = 5;
+                            this.field_V.uncatchable = 5;
                             this.field_V.field_h = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
                             this.field_V.field_q = (int)(var10_long * (long)var5.field_k / (long)var5.field_q);
                             var12 = 0;
                             while (true) {
-                              if (var12 < this.field_I) {
+                              if (var12 < this.playerCount) {
                                 stackIn_332_0 = this.field_g[var12].field_p;
                                 stackIn_332_1 = var3Lifetime2Lifetime1;
                                 if (stackIn_332_0 == stackIn_332_1 &&
-                                  ~this.field_R[var12].field_g == ~var4Lifetime1) {
+                                  ~this.participantStatus[var12].field_g == ~var4Lifetime1) {
                                   this.field_V.field_j = var12;
                                 }
                                 var12++;
@@ -919,7 +919,7 @@ final class nu {
                               }
                               var12 = this.a((byte) 6, var3Lifetime2Lifetime1, var4Lifetime1);
                               stackIn_332_0Lifetime1 = 13;
-                              stackIn_332_1Lifetime1 = var5.field_u;
+                              stackIn_332_1Lifetime1 = var5.action;
                               if (stackIn_332_0Lifetime1 == stackIn_332_1Lifetime1 &&
                                 this.field_V.field_i == 2 &&
                                 this.field_V.field_o != -1 &&
@@ -930,7 +930,7 @@ final class nu {
                                 this.field_V.field_o = var12;
                               }
                               stackIn_351_0 = this.field_V;
-                              if (var5.field_u == 13) {
+                              if (var5.action == 13) {
                                 stackIn_352_1 = 2;
                               } else {
                                 stackIn_352_1 = 1;
@@ -942,28 +942,28 @@ final class nu {
                               stackIn_355_2 = this.field_V.field_o;
                               stackIn_355_3 = var13;
                               stackIn_355_4 = var4Lifetime1;
-                              stackIn_355_5 = this.field_v;
-                              if (var5.field_u != 13) {
+                              stackIn_355_5 = this.phaseTime;
+                              if (var5.action != 13) {
                                 stackIn_356_6 = 2;
                               } else {
                                 stackIn_356_6 = 3;
                               }
-                              ((ch) (Object) stackIn_355_0).a((byte) stackIn_355_1, stackIn_355_2, stackIn_355_3, stackIn_355_4, stackIn_355_5, stackIn_356_6, var3Lifetime2Lifetime1, this, var5);
+                              ((LoggedGoal) (Object) stackIn_355_0).a((byte) stackIn_355_1, stackIn_355_2, stackIn_355_3, stackIn_355_4, stackIn_355_5, stackIn_356_6, var3Lifetime2Lifetime1, this, var5);
                               if (var5.field_F == -1) {
                                 break;
                               }
-                              if (var5.field_u == 13) {
+                              if (var5.action == 13) {
                                 dupTemp$4 = this.field_q[var5.field_F];
-                                dupTemp$4.field_h = dupTemp$4.field_h + 1;
+                                dupTemp$4.headers = dupTemp$4.headers + 1;
                                 break;
                               }
                               dupTemp$5 = this.field_q[var5.field_F];
-                              dupTemp$5.field_j = dupTemp$5.field_j + 1;
+                              dupTemp$5.crosses = dupTemp$5.crosses + 1;
                               break;
                             }
                           }
                         }
-                        if (var5.field_u == 3) {
+                        if (var5.action == 3) {
                           var6Lifetime1Lifetime1 = 0;
                           while (true) {
                             stackIn_368_0 = 2;
@@ -984,15 +984,15 @@ final class nu {
                                 if ((0 == var4Lifetime1 || (var3Lifetime2Lifetime1 != var6Lifetime1Lifetime1 ||
                                   !this.field_F[var6Lifetime1Lifetime1] ||
                                   var14 != 0)) && (0 == var4Lifetime1 || (var3Lifetime2Lifetime1 != var6Lifetime1Lifetime1 ||
-                                  var5.field_N.b(false, var5.field_y))) && (0 == var4Lifetime1 || (var6Lifetime1Lifetime1 != var3Lifetime2Lifetime1 ||
-                                  !var8.field_N.b(var8.field_y, (byte) -111)))) {
+                                  var5.field_N.b(false, var5.member))) && (0 == var4Lifetime1 || (var6Lifetime1Lifetime1 != var3Lifetime2Lifetime1 ||
+                                  !var8.field_N.b(var8.member, (byte) -111)))) {
                                   var9Lifetime1Lifetime1 = var5.f(-122) - var8.f(-94);
                                   var10Lifetime1 = var5.a(true) - var8.a(true);
                                   if (var9Lifetime1Lifetime1 * var9Lifetime1Lifetime1 + var10Lifetime1 * var10Lifetime1 < 1600 &&
-                                    4 != var8.field_J) {
+                                    4 != var8.archetype) {
                                     var8.a((byte) -31, 7);
-                                    var8.field_L = var8.field_L + var5.field_N.a(var5.field_y, false);
-                                    var8.a((mo) (var5), (byte) 84);
+                                    var8.field_L = var8.field_L + var5.field_N.a(var5.member, false);
+                                    var8.a((MatchAgent) (var5), (byte) 84);
                                     if (var4Lifetime1 != 0) {
                                       var11 = var5.field_L;
                                       var5.a((byte) -31, 12);
@@ -1063,7 +1063,7 @@ final class nu {
         }
     }
 
-    final void a(nu param0, byte param1) {
+    final void a(CommonGame param0, byte param1) {
         int stackIn_21_0 = 0;
         int stackIn_65_0 = 0;
         RuntimeException stackIn_79_0 = null;
@@ -1079,7 +1079,7 @@ final class nu {
         try {
           var3_int = 0;
           do {
-            if (this.field_I <= var3_int) {
+            if (this.playerCount <= var3_int) {
               var3_int = 0;
               break;
             }
@@ -1106,31 +1106,31 @@ final class nu {
               var3_int++;
               continue;
             }
-            this.field_m = param0.field_m;
-            this.field_Z = param0.field_Z;
-            this.field_t = param0.field_t;
-            stackIn_21_0 = this.field_u;
+            this.tier = param0.tier;
+            this.winner = param0.winner;
+            this.surface = param0.surface;
+            stackIn_21_0 = this.phase;
             break;
           }
-          if (stackIn_21_0 != param0.field_u) {
-            this.a(param0.field_u, (byte) -125);
+          if (stackIn_21_0 != param0.phase) {
+            this.a(param0.phase, (byte) -125);
           }
-          this.field_v = param0.field_v;
+          this.phaseTime = param0.phaseTime;
           var3_int = 0;
           do {
-            if (this.field_I <= var3_int) {
-              if (0 == this.field_u) {
+            if (this.playerCount <= var3_int) {
+              if (0 == this.phase) {
                 this.field_n.a(param0.field_n, false);
               }
               break;
             }
-            this.field_R[var3_int].a(param0.field_R[var3_int], false);
+            this.participantStatus[var3_int].a(param0.participantStatus[var3_int], false);
             var3_int++;
           } while (var5 == 0);
-          if (this.field_u == 2) {
+          if (this.phase == 2) {
             this.field_C.a(param0.field_C, false);
           }
-          if (this.field_u == 3) {
+          if (this.phase == 3) {
             this.field_o.a(param0.field_o, false);
           }
           if (param1 <= 42) {
@@ -1139,7 +1139,7 @@ final class nu {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
-          if (this.field_u == 4) {
+          if (this.phase == 4) {
             var3_int = 0;
             while (2 > var3_int) {
               stackIn_65_0 = 0;
@@ -1157,8 +1157,8 @@ final class nu {
             if (decompiledFrameCompleted1) {
               this.field_V.a(param0.field_V, false);
               this.field_X.a(param0.field_X, false);
-              this.field_J = param0.field_J;
-              this.field_G = param0.field_G;
+              this.aiTick = param0.aiTick;
+              this.bigHeadMode = param0.bigHeadMode;
             }
           }
           if (decompiledFrameCompleted1) {
@@ -1211,11 +1211,11 @@ final class nu {
         var4 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            nw.field_b.field_R[ek.field_G].d(3511)) {
+            nw.field_b.participantStatus[ek.field_G].d(3511)) {
             var1 = af.field_a;
             var2 = 0;
             if (param0) {
-              nu.b(false);
+              CommonGame.b(false);
             }
             while (var1.length > var2) {
               var3 = var1[var2];
@@ -1235,7 +1235,7 @@ final class nu {
         }
     }
 
-    private final void a(nl param0, byte param1) {
+    private final void a(FootballerAgent param0, byte param1) {
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -1245,7 +1245,7 @@ final class nu {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        tj var5 = null;
+        BallAgent var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1259,7 +1259,7 @@ final class nu {
         try {
           var3_int = param0.field_M;
           var4 = param0.field_w;
-          var5 = new tj();
+          var5 = new BallAgent();
           var5.a(this.field_V, false);
           var8 = -3 / ((param1 + 30) / 33);
           var6 = 2147483647;
@@ -1270,7 +1270,7 @@ final class nu {
             if (var7Lifetime1 < param0.field_L) {
               var3_int = var3_int + param0.field_k;
               var4 = var4 + param0.field_m;
-              var5.a((byte) -85, this.field_t, this.field_B);
+              var5.a((byte) -85, this.surface, this.field_B);
               stackIn_12_0 = var7Lifetime1;
               stackIn_12_1 = 10;
               if (var12 != 0) {
@@ -1329,32 +1329,32 @@ final class nu {
     private final void b(boolean param0, ki param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
-        nl var4 = null;
+        FootballerAgent var4 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_u != 4) {
+          if (this.phase != 4) {
             return;
           }
           if (this.field_X != null &&
-            40 <= this.field_X.field_m) {
+            40 <= this.field_X.goalCount) {
             return;
           }
-          if (-1 != this.field_O &&
-            this.field_v > this.field_O) {
+          if (-1 != this.timeLimit &&
+            this.phaseTime > this.timeLimit) {
             return;
           }
           if (!param0) {
             this.field_y = true;
           }
           var3_int = param1.field_u;
-          if (this.field_R[var3_int].d(3511) &&
+          if (this.participantStatus[var3_int].d(3511) &&
             !this.field_Y) {
             var4 = this.a((byte) -94, var3_int);
             var4.field_G = param1.field_v;
-            var4.a((mo) (this.field_g[var3_int]), (byte) 84);
+            var4.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
             return;
           }
           return;
@@ -1373,19 +1373,19 @@ final class nu {
     }
 
     private final void a(boolean param0, ki param1) {
-        tj stackIn_23_0 = null;
+        BallAgent stackIn_23_0 = null;
         int stackIn_24_1 = 0;
-        tj stackIn_31_0 = null;
+        BallAgent stackIn_31_0 = null;
         int stackIn_32_1 = 0;
-        tj stackIn_39_0 = null;
+        BallAgent stackIn_39_0 = null;
         int stackIn_40_1 = 0;
-        tj stackIn_47_0 = null;
+        BallAgent stackIn_47_0 = null;
         int stackIn_48_1 = 0;
-        tj stackIn_58_0 = null;
+        BallAgent stackIn_58_0 = null;
         int stackIn_59_1 = 0;
-        tj stackIn_66_0 = null;
+        BallAgent stackIn_66_0 = null;
         int stackIn_67_1 = 0;
-        gt stackIn_74_0 = null;
+        ParticipantStatus stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
         boolean stackIn_83_1 = false;
         RuntimeException stackIn_88_0 = null;
@@ -1394,13 +1394,13 @@ final class nu {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        gt var4 = null;
+        ParticipantStatus var4 = null;
         try {
-          if (this.field_u != 4) {
+          if (this.phase != 4) {
             return;
           }
           var3_int = param1.field_v;
-          var4 = this.field_R[param1.field_u];
+          var4 = this.participantStatus[param1.field_u];
           if (var3_int == 0) {
             var4.field_l = var4.field_l ^ 1;
           }
@@ -1415,69 +1415,69 @@ final class nu {
           }
           if (var3_int == 4) {
             stackIn_23_0 = this.field_V;
-            if (this.field_V.field_l != 3) {
+            if (this.field_V.modelId != 3) {
               stackIn_24_1 = 3;
             } else {
-              stackIn_24_1 = mp.field_p[this.field_t];
+              stackIn_24_1 = mp.field_p[this.surface];
             }
-            stackIn_23_0.field_l = stackIn_24_1;
+            stackIn_23_0.modelId = stackIn_24_1;
           }
           if (var3_int == 5) {
             stackIn_31_0 = this.field_V;
-            if (this.field_V.field_l != 4) {
+            if (this.field_V.modelId != 4) {
               stackIn_32_1 = 4;
             } else {
-              stackIn_32_1 = mp.field_p[this.field_t];
+              stackIn_32_1 = mp.field_p[this.surface];
             }
-            stackIn_31_0.field_l = stackIn_32_1;
+            stackIn_31_0.modelId = stackIn_32_1;
           }
           if (var3_int == 6) {
             stackIn_39_0 = this.field_V;
-            if (this.field_V.field_l != 5) {
+            if (this.field_V.modelId != 5) {
               stackIn_40_1 = 5;
             } else {
-              stackIn_40_1 = mp.field_p[this.field_t];
+              stackIn_40_1 = mp.field_p[this.surface];
             }
-            stackIn_39_0.field_l = stackIn_40_1;
+            stackIn_39_0.modelId = stackIn_40_1;
           }
           if (var3_int == 7) {
             stackIn_47_0 = this.field_V;
-            if (this.field_V.field_l == 6) {
-              stackIn_48_1 = mp.field_p[this.field_t];
+            if (this.field_V.modelId == 6) {
+              stackIn_48_1 = mp.field_p[this.surface];
             } else {
               stackIn_48_1 = 6;
             }
-            stackIn_47_0.field_l = stackIn_48_1;
+            stackIn_47_0.modelId = stackIn_48_1;
           }
           if (param0) {
             this.b((byte) -83);
           }
           if (var3_int == 8) {
             stackIn_58_0 = this.field_V;
-            if (this.field_V.field_l != 7) {
+            if (this.field_V.modelId != 7) {
               stackIn_59_1 = 7;
             } else {
-              stackIn_59_1 = mp.field_p[this.field_t];
+              stackIn_59_1 = mp.field_p[this.surface];
             }
-            stackIn_58_0.field_l = stackIn_59_1;
+            stackIn_58_0.modelId = stackIn_59_1;
           }
           if (9 == var3_int) {
             stackIn_66_0 = this.field_V;
-            if (this.field_V.field_l != 8) {
+            if (this.field_V.modelId != 8) {
               stackIn_67_1 = 8;
             } else {
-              stackIn_67_1 = mp.field_p[this.field_t];
+              stackIn_67_1 = mp.field_p[this.surface];
             }
-            stackIn_66_0.field_l = stackIn_67_1;
+            stackIn_66_0.modelId = stackIn_67_1;
           }
           if (var3_int == 11) {
             stackIn_74_0 = var4;
-            stackIn_75_1 = !(var4.field_u);
-            stackIn_74_0.field_u = stackIn_75_1;
+            stackIn_75_1 = !(var4.megamode);
+            stackIn_74_0.megamode = stackIn_75_1;
           }
           if (var3_int == 10) {
-            stackIn_83_1 = !(this.field_G);
-            this.field_G = stackIn_83_1;
+            stackIn_83_1 = !(this.bigHeadMode);
+            this.bigHeadMode = stackIn_83_1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1494,7 +1494,7 @@ final class nu {
         }
     }
 
-    nu(nu param0) {
+    CommonGame(CommonGame param0) {
         this(param0.field_S, param0.field_U, param0.field_c, param0.field_f, param0.field_e, param0.field_L, param0.field_T, param0.field_W, param0.field_w);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -1518,7 +1518,7 @@ final class nu {
         }
     }
 
-    final void a(nu param0, int param1, int param2, int param3) {
+    final void a(CommonGame param0, int param1, int param2, int param3) {
         int stackIn_39_0 = 0;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
@@ -1530,21 +1530,21 @@ final class nu {
         int var7 = 0;
         var7 = Kickabout.field_G;
         try {
-          this.field_v = param0.field_v;
+          this.phaseTime = param0.phaseTime;
           var5_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var5_int < this.field_I) {
-              this.field_R[var5_int].a(param0.field_R[var5_int], param1, param2, 117);
+            if (var5_int < this.playerCount) {
+              this.participantStatus[var5_int].a(param0.participantStatus[var5_int], param1, param2, 117);
               var5_int++;
               if (var7 == 0) {
                 continue;
               }
             } else {
-              if (this.field_u != 0) {
-                if (this.field_u != 2) {
-                  if ((this.field_u != 3) &&
-                    (decompiledFrameRemainder0 = (4 == this.field_u))) {
+              if (this.phase != 0) {
+                if (this.phase != 2) {
+                  if ((this.phase != 3) &&
+                    (decompiledFrameRemainder0 = (4 == this.phase))) {
                     var5_int = 0;
                     while (var5_int < 2) {
                       stackIn_39_0 = 0;
@@ -1560,7 +1560,7 @@ final class nu {
                     }
                     this.field_V.a(param0.field_V, param1, param2, 68);
                     this.field_X.a(param0.field_X, param1, param2, 41);
-                    this.field_G = param0.field_G;
+                    this.bigHeadMode = param0.bigHeadMode;
                     decompiledFrameRemainder0 = (var7 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -1598,18 +1598,18 @@ final class nu {
         }
     }
 
-    final nl b(byte param0) {
+    final FootballerAgent b(byte param0) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
-        nl stackIn_7_0 = null;
+        FootballerAgent stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_V.field_m == -1) {
             stackIn_2_0 = null;
-            return (nl) (stackIn_2_0);
+            return (FootballerAgent) (stackIn_2_0);
           }
           if (param0 != -96) {
-            this.a((nl) null, (byte) 6);
+            this.a((FootballerAgent) null, (byte) 6);
           }
           stackIn_7_0 = this.field_P[this.field_V.field_m][this.field_V.field_s];
           return stackIn_7_0;
@@ -1628,7 +1628,7 @@ final class nu {
           if (param1 > -4) {
             this.a((byte) 53, (ki) null);
           }
-          stackIn_10_0 = (this.field_g[param0].field_p == this.field_V.field_m) && (~this.field_V.field_s == ~this.field_R[param0].field_g);
+          stackIn_10_0 = (this.field_g[param0].field_p == this.field_V.field_m) && (~this.field_V.field_s == ~this.participantStatus[param0].field_g);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1638,9 +1638,9 @@ final class nu {
     }
 
     private final void c(int param0, ki param1) {
-        gt stackIn_37_0 = null;
+        ParticipantStatus stackIn_37_0 = null;
         boolean stackIn_38_1 = false;
-        gt stackIn_44_0 = null;
+        ParticipantStatus stackIn_44_0 = null;
         boolean stackIn_45_1 = false;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -1670,12 +1670,12 @@ final class nu {
               return;
             }
           } else {
-            this.field_R[var3_int].field_v = true;
-            if (this.field_u < 5) {
-              this.field_R[var3_int].field_s = true;
+            this.participantStatus[var3_int].departed = true;
+            if (this.phase < 5) {
+              this.participantStatus[var3_int].resigned = true;
             }
-            this.field_R[var3_int].a((mo) (this.field_g[var3_int]), (byte) 84);
-            this.field_R[var3_int].field_g = -1;
+            this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
+            this.participantStatus[var3_int].field_g = -1;
             this.b(10, var3_int);
             if (var5 == 0) {
               return;
@@ -1684,43 +1684,43 @@ final class nu {
           if ((decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            if (!this.field_R[var3_int].d(3511)) {
+            if (!this.participantStatus[var3_int].d(3511)) {
               return;
             }
-            stackIn_37_0 = this.field_R[var3_int];
-            stackIn_38_1 = !(this.field_R[var3_int].field_q);
-            stackIn_37_0.field_q = stackIn_38_1;
+            stackIn_37_0 = this.participantStatus[var3_int];
+            stackIn_38_1 = !(this.participantStatus[var3_int].offerDraw);
+            stackIn_37_0.offerDraw = stackIn_38_1;
             if (var5 == 0) {
               return;
             }
           }
           if ((decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            stackIn_44_0 = this.field_R[var3_int];
-            stackIn_45_1 = !(this.field_R[var3_int].field_k);
+            stackIn_44_0 = this.participantStatus[var3_int];
+            stackIn_45_1 = !(this.participantStatus[var3_int].field_k);
             stackIn_44_0.field_k = stackIn_45_1;
             if (var5 == 0) {
               return;
             }
           }
           if (decompiledFrameRemainder2) {
-            if (this.field_u >= 5) {
+            if (this.phase >= 5) {
               return;
             }
-            if (this.field_R[var3_int].field_s) {
+            if (this.participantStatus[var3_int].resigned) {
               return;
             }
             this.b(10, var3_int);
-            this.field_R[var3_int].a((mo) (this.field_g[var3_int]), (byte) 84);
-            this.field_R[var3_int].field_s = true;
-            this.field_R[var3_int].field_g = -1;
-            this.field_q[var3_int].field_p = this.field_v;
+            this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
+            this.participantStatus[var3_int].resigned = true;
+            this.participantStatus[var3_int].field_g = -1;
+            this.field_q[var3_int].resignTime = this.phaseTime;
             if (var5 == 0) {
               return;
             }
           }
-          this.field_R[var3_int].a((mo) (this.field_g[var3_int]), (byte) 84);
-          this.field_R[var3_int].field_i = true;
+          this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
+          this.participantStatus[var3_int].loadedPitch = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1741,21 +1741,21 @@ final class nu {
         int stackIn_5_1 = 0;
         int stackIn_17_0 = 0;
         int stackIn_35_0 = 0;
-        nl stackIn_46_0 = null;
+        FootballerAgent stackIn_46_0 = null;
         int stackIn_47_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
-        nl[] var4 = null;
+        FootballerAgent[] var4 = null;
         int var5 = 0;
-        nl var6 = null;
+        FootballerAgent var6 = null;
         int var7 = 0;
-        nl var6Lifetime1;
+        FootballerAgent var6Lifetime1;
         int var5Lifetime1;
         var7 = Kickabout.field_G;
         try {
-          if (this.field_p) {
+          if (this.disableOpponent) {
             param0 = 0;
           }
           var3_int = 0;
@@ -1779,8 +1779,8 @@ final class nu {
                   var5 = stackIn_17_0;
                   var6 = this.field_P[var3_int][var4_int];
                   if ((var5 != 0 ||
-                    !this.field_s) && (var5 == 0 ||
-                    !this.field_p)) {
+                    !this.disableLocal) && (var5 == 0 ||
+                    !this.disableOpponent)) {
                     var6.field_M = ts.a(var4_int, param0, var3_int, 448) << 16;
                     var6.field_w = cp.a((byte) 21, var4_int, var3_int, param0) << 16;
                     decompiledFrameRemainder0 = false;
@@ -1832,7 +1832,7 @@ final class nu {
     }
 
     private final void a(byte param0, ki param1) {
-        jc dupTemp$0 = null;
+        LoggedPlayer dupTemp$0 = null;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
@@ -1841,7 +1841,7 @@ final class nu {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        nl var5 = null;
+        FootballerAgent var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1850,19 +1850,19 @@ final class nu {
         int var11 = 0;
         int var8Lifetime1;
         try {
-          if (this.field_u != 4) {
+          if (this.phase != 4) {
             return;
           }
           if (null != this.field_X &&
-            this.field_X.field_m >= 40) {
+            this.field_X.goalCount >= 40) {
             return;
           }
-          if (-1 != this.field_O &&
-            this.field_O < this.field_v) {
+          if (-1 != this.timeLimit &&
+            this.timeLimit < this.phaseTime) {
             return;
           }
           var3_int = param1.field_u;
-          if (!this.field_R[var3_int].d(3511)) {
+          if (!this.participantStatus[var3_int].d(3511)) {
             return;
           }
           if (param0 != 60) {
@@ -1877,9 +1877,9 @@ final class nu {
             var6 = var5.field_j;
             var7 = var5.field_n;
           }
-          var5.a((mo) (this.field_g[var3_int]), (byte) 84);
+          var5.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
           if (var4 == 0 ||
-            var5.field_u != 1) {
+            var5.action != 1) {
             if (var4 != 0) {
               return;
             }
@@ -1932,7 +1932,7 @@ final class nu {
         }
     }
 
-    private final String c(byte param0) {
+    private final String phaseName(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_4_0 = null;
@@ -1944,32 +1944,32 @@ final class nu {
         String stackIn_27_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_u == 0) {
+          if (this.phase == 0) {
             stackIn_4_0 = "TeamSelection";
             return stackIn_4_0;
           }
           var2_int = -3 / ((-57 - param0) / 49);
-          if (this.field_u == 1) {
+          if (this.phase == 1) {
             stackIn_9_0 = "WaitForPlayers";
             return stackIn_9_0;
           }
-          if (this.field_u == 2) {
+          if (this.phase == 2) {
             stackIn_12_0 = "Formation";
             return stackIn_12_0;
           }
-          if (this.field_u == 3) {
+          if (this.phase == 3) {
             stackIn_15_0 = "LineUp";
             return stackIn_15_0;
           }
-          if (this.field_u == 4) {
+          if (this.phase == 4) {
             stackIn_20_0 = "Playing";
             return stackIn_20_0;
           }
-          if (this.field_u == 5) {
+          if (this.phase == 5) {
             stackIn_25_0 = "GameOver";
             return stackIn_25_0;
           }
-          stackIn_27_0 = "Invalid[" + this.field_u + "]";
+          stackIn_27_0 = "Invalid[" + this.phase + "]";
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1996,14 +1996,14 @@ final class nu {
         }
     }
 
-    final nl a(byte param0, int param1) {
-        nl stackIn_1_0 = null;
+    final FootballerAgent a(byte param0, int param1) {
+        FootballerAgent stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
           var3_int = 48 / ((param0 - 27) / 62);
-          stackIn_1_0 = this.field_P[this.field_g[param1].field_p][this.field_R[param1].field_g];
+          stackIn_1_0 = this.field_P[this.field_g[param1].field_p][this.participantStatus[param1].field_g];
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2031,13 +2031,13 @@ final class nu {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4_int >= this.field_g.length))) {
-            stackOut_6_0 = this.field_R[var4_int].d(3511);
+            stackOut_6_0 = this.participantStatus[var4_int].d(3511);
             stackIn_20_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var5 == 0) {
               if (stackIn_7_0 &&
                 param1 == this.field_g[var4_int].field_p &&
-                param2 == this.field_R[var4_int].field_g) {
+                param2 == this.participantStatus[var4_int].field_g) {
                 stackIn_17_0 = var4_int;
                 return stackIn_17_0;
               }
@@ -2064,15 +2064,15 @@ final class nu {
           if (param0 != 10) {
             return;
           }
-          if (this.field_u == 0) {
+          if (this.phase == 0) {
             this.field_n.a(false, param1);
-            this.field_n.a((mo) (this.field_g[param1]), (byte) 84);
+            this.field_n.a((MatchAgent) (this.field_g[param1]), (byte) 84);
             if (Kickabout.field_G == 0) {
               return;
             }
           }
-          if (2 != this.field_u &&
-            4 == this.field_u &&
+          if (2 != this.phase &&
+            4 == this.phase &&
             this.c(param1, -78)) {
             this.field_V.field_m = -1;
           }
@@ -2084,7 +2084,7 @@ final class nu {
         }
     }
 
-    private final void a(int param0, mo param1, int param2, int param3) {
+    private final void a(int param0, MatchAgent param1, int param2, int param3) {
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -2094,21 +2094,21 @@ final class nu {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6_int = 0;
-        nl var6 = null;
+        FootballerAgent var6 = null;
         int var7_int = 0;
-        nl var7 = null;
+        FootballerAgent var7 = null;
         int var8 = 0;
         var8 = Kickabout.field_G;
         try {
           var5_int = this.field_g[param3].field_p;
           var6_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (this.field_I <= var6_int))) {
+          while (!(decompiledNaturalLoopExit0 = (this.playerCount <= var6_int))) {
             stackIn_13_0 = var5_int;
             stackIn_13_1 = this.field_g[var6_int].field_p;
             if (var8 == 0) {
               if (stackIn_13_0 == stackIn_13_1 &&
-                param2 == this.field_R[var6_int].field_g) {
+                param2 == this.participantStatus[var6_int].field_g) {
                 return;
               }
               var6_int++;
@@ -2121,17 +2121,17 @@ final class nu {
             stackIn_13_1 = (param0 + 39) / 48;
           }
           var7_int = stackIn_13_0 % stackIn_13_1;
-          if (this.field_R[param3].field_g != -1) {
-            this.a((byte) 118, param3).field_I = 6;
+          if (this.participantStatus[param3].field_g != -1) {
+            this.a((byte) 118, param3).aiWait = 6;
           }
-          if (this.field_R[param3].field_g != -1) {
-            var6 = this.field_P[var5_int][this.field_R[param3].field_g];
+          if (this.participantStatus[param3].field_g != -1) {
+            var6 = this.field_P[var5_int][this.participantStatus[param3].field_g];
             var7 = this.field_P[var5_int][param2];
             var7.field_G = var6.field_G;
           }
-          this.field_R[param3].field_g = param2;
+          this.participantStatus[param3].field_g = param2;
           this.a((byte) 91, param3).a(param1, (byte) 84);
-          this.field_R[param3].a(param1, (byte) 84);
+          this.participantStatus[param3].a(param1, (byte) 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2154,14 +2154,14 @@ final class nu {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (3 != this.field_u) {
+          if (3 != this.phase) {
             return;
           }
-          if (!this.field_R[param0.field_u].d(3511)) {
+          if (!this.participantStatus[param0.field_u].d(3511)) {
             return;
           }
           this.field_o.a(param0.field_v, 0, param0.field_t, param0.field_s, param0.field_u);
-          this.field_o.a((mo) (this.field_g[param0.field_u]), (byte) 84);
+          this.field_o.a((MatchAgent) (this.field_g[param0.field_u]), (byte) 84);
           if (param1 >= -8) {
             this.c(-30);
           }
@@ -2183,7 +2183,7 @@ final class nu {
     private final void b(int param0, byte param1) {
         long stackIn_15_0 = 0L;
         RuntimeException decompiledCaughtException = null;
-        nl var3 = null;
+        FootballerAgent var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -2200,13 +2200,13 @@ final class nu {
           var4 = var3.field_M;
           var5 = var3.field_w;
           if (this.field_V.field_m == 1 &&
-            this.field_p) {
+            this.disableOpponent) {
             var5 = 44040192;
             var4 = 29360128;
           }
           var6 = (var4 - this.field_V.field_t) * 3 >> 2;
           var7 = (var5 - this.field_V.field_p) * 3 >> 2;
-          var8 = sg.field_d[this.field_t];
+          var8 = sg.field_d[this.surface];
           var10 = var8;
           var12_int = 0;
           if (param1 != -72) {
@@ -2229,7 +2229,7 @@ final class nu {
           this.field_V.field_h = (int)((long)var7 * var12 >> 16);
           this.field_V.field_n = 573440;
           this.field_V.field_q = (int)((long)var6 * var12 >> 16);
-          this.field_V.field_r = 10;
+          this.field_V.uncatchable = 10;
           this.field_V.field_m = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2261,7 +2261,7 @@ final class nu {
             !param1 &&
             param0 > 32) {
             var9 = var9 + ((var9 * 3 >> 1) + 1280 * param0);
-            this.field_V.field_A = 25;
+            this.field_V.highFriction = 25;
           }
           var11 = de.a(param5 * param5 + param3 * param3, (byte) 84);
           this.field_V.field_n = var10;
@@ -2271,12 +2271,12 @@ final class nu {
           }
           this.field_V.field_m = -1;
           if (param1) {
-            this.field_V.field_r = 35;
+            this.field_V.uncatchable = 35;
             if (Kickabout.field_G == 0) {
               return;
             }
           }
-          this.field_V.field_r = 20;
+          this.field_V.uncatchable = 20;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2286,39 +2286,39 @@ final class nu {
     }
 
     final void d(int param0) {
-        gt dupTemp$0 = null;
-        nl dupTemp$1 = null;
+        ParticipantStatus dupTemp$0 = null;
+        FootballerAgent dupTemp$1 = null;
         int stackIn_36_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3_int = 0;
-        nl var3 = null;
+        FootballerAgent var3 = null;
         int var4 = 0;
         var4 = Kickabout.field_G;
         try {
-          if (this.field_v > 0) {
-            this.field_v = this.field_v - 1;
+          if (this.phaseTime > 0) {
+            this.phaseTime = this.phaseTime - 1;
           }
-          if (this.field_u == 0) {
+          if (this.phase == 0) {
             this.field_n.field_b = this.field_n.field_b + 1;
           }
-          if (this.field_u == 2) {
+          if (this.phase == 2) {
             this.field_C.field_b = this.field_C.field_b + 1;
           }
-          if (this.field_u == 3) {
+          if (this.phase == 3) {
             this.field_o.field_b = this.field_o.field_b + 1;
           }
           boolean decompiledFrameCompleted0 = true;
-          if (this.field_u == param0) {
+          if (this.phase == param0) {
             var2_int = 0;
             do {
-              if (var2_int >= this.field_I) {
+              if (var2_int >= this.playerCount) {
                 this.field_V.field_b = this.field_V.field_b + 1;
                 this.field_X.field_b = this.field_X.field_b + 1;
                 break;
               }
-              dupTemp$0 = this.field_R[var2_int];
+              dupTemp$0 = this.participantStatus[var2_int];
               dupTemp$0.field_b = dupTemp$0.field_b + 1;
               var2_int++;
             } while (var4 == 0);
@@ -2339,17 +2339,17 @@ final class nu {
             }
           }
           if (decompiledFrameCompleted0) {
-            stackIn_36_0 = ~this.field_u;
+            stackIn_36_0 = ~this.phase;
           }
           if (stackIn_36_0 == -5) {
             this.b(11660);
             var2_int = 0;
-            while (var2_int < this.field_I) {
+            while (var2_int < this.playerCount) {
               if (var4 != 0) {
                 return;
               }
-              if (!this.field_R[var2_int].field_s &&
-                this.field_g[var2_int].field_p >= 0 && (!(this.field_R[var2_int].field_g < 0) ||
+              if (!this.participantStatus[var2_int].resigned &&
+                this.field_g[var2_int].field_p >= 0 && (!(this.participantStatus[var2_int].field_g < 0) ||
                 var4 != 0)) {
                 var3 = this.a((byte) -39, var2_int);
                 if (this.field_g[var2_int].field_p == 0 &&
@@ -2525,10 +2525,10 @@ final class nu {
           var2 = new int[]{3, 4, param0, 1};
           var3 = 0;
           while (true) {
-            stackIn_3_0 = ~this.field_R.length;
+            stackIn_3_0 = ~this.participantStatus.length;
             stackIn_3_1 = ~var3;
             if (stackIn_3_0 < stackIn_3_1) {
-              stackOut_4_0 = this.field_R[var3].d(3511);
+              stackOut_4_0 = this.participantStatus[var3].d(3511);
               stackIn_19_0 = stackOut_4_0 ? 1 : 0;
               stackIn_5_0 = stackOut_4_0;
               if (var7 == 0) {
@@ -2540,7 +2540,7 @@ final class nu {
                     stackIn_3_0 = var3;
                     stackIn_3_1 = this.field_i[var4][var6 - 1];
                     if (stackIn_3_0 == stackIn_3_1) {
-                      this.field_R[var3].field_g = var6;
+                      this.participantStatus[var3].field_g = var6;
                       break;
                     }
                     var5++;
@@ -2557,18 +2557,18 @@ final class nu {
               stackIn_21_0 = ~var3;
               stackIn_21_1 = -3;
               if (stackIn_21_0 > stackIn_21_1) {
-                stackOut_22_0 = this.field_R[this.field_i[var3][2]].d(3511);
+                stackOut_22_0 = this.participantStatus[this.field_i[var3][2]].d(3511);
                 stackIn_41_0 = stackOut_22_0 ? 1 : 0;
                 stackIn_23_0 = stackOut_22_0;
                 if (var7 == 0) {
                   if (!stackIn_23_0) {
                     var4Lifetime1 = 0;
-                    while (var4Lifetime1 < this.field_I) {
+                    while (var4Lifetime1 < this.playerCount) {
                       stackIn_21_0 = ~var3;
                       stackIn_21_1 = ~this.field_g[var4Lifetime1].field_p;
                       if (stackIn_21_0 == stackIn_21_1 &&
-                        this.field_R[var4Lifetime1].d(3511)) {
-                        this.field_R[var4Lifetime1].field_g = 3;
+                        this.participantStatus[var4Lifetime1].d(3511)) {
+                        this.participantStatus[var4Lifetime1].field_g = 3;
                         break;
                       }
                       var4Lifetime1++;
@@ -2587,12 +2587,12 @@ final class nu {
                 }
                 var4Lifetime1Lifetime1 = 1;
                 while (var4Lifetime1Lifetime1 < 5) {
-                  this.field_P[var3][var4Lifetime1Lifetime1].field_I = 0;
+                  this.field_P[var3][var4Lifetime1Lifetime1].aiWait = 0;
                   var4Lifetime1Lifetime1++;
                 }
                 var3++;
               }
-              this.field_J = 0;
+              this.aiTick = 0;
               return;
             }
           }
@@ -2604,7 +2604,7 @@ final class nu {
     }
 
     final void a(int param0, byte param1) {
-        jc stackIn_35_0 = null;
+        LoggedPlayer stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
         int stackIn_44_0 = 0;
         int stackIn_44_1 = 0;
@@ -2623,23 +2623,23 @@ final class nu {
           if (param1 > -49) {
             return;
           }
-          this.field_u = param0;
-          this.field_v = cv.field_a[this.field_u];
-          if (this.field_u == 0) {
-            this.field_n = new oe(this.field_R);
+          this.phase = param0;
+          this.phaseTime = cv.field_a[this.phase];
+          if (this.phase == 0) {
+            this.field_n = new TeamSelectionAgent(this.participantStatus);
             if (var7 == 0) {
               return;
             }
           }
-          if (this.field_u != 1) {
-            if (this.field_u == 2) {
-              this.field_C = new wr();
+          if (this.phase != 1) {
+            if (this.phase == 2) {
+              this.field_C = new FormationAgent();
               if (var7 == 0) {
                 return;
               }
             }
-            if (3 != this.field_u) {
-              if (this.field_u != 4) {
+            if (3 != this.phase) {
+              if (this.phase != 4) {
                 return;
               }
               if (this.field_q != null) {
@@ -2650,16 +2650,16 @@ final class nu {
                   }
                   stackIn_35_0 = this.field_q[var3_int];
                   stackIn_36_1 = (this.field_g[var3_int].field_p == 0);
-                  stackIn_35_0.field_o = stackIn_36_1;
+                  stackIn_35_0.home = stackIn_36_1;
                   var3_int++;
                 }
               }
-              this.field_v = this.field_O;
-              if (0 < this.field_v) {
-                this.field_v = this.field_v + 140;
+              this.phaseTime = this.timeLimit;
+              if (0 < this.phaseTime) {
+                this.phaseTime = this.phaseTime + 140;
               }
-              this.field_V = new tj();
-              this.field_P = new nl[2][5];
+              this.field_V = new BallAgent();
+              this.field_P = new FootballerAgent[2][5];
               var3_intLifetime1 = 0;
               while (true) {
                 stackIn_44_0 = 2;
@@ -2683,7 +2683,7 @@ final class nu {
                       } else {
                         var6_ref = mv.b(false);
                       }
-                      this.field_P[var3_intLifetime1][var4] = new nl();
+                      this.field_P[var3_intLifetime1][var4] = new FootballerAgent();
                       this.field_P[var3_intLifetime1][var4].a(var5 != 0, var6_ref, 3);
                       if (var6_ref.a(var5 != 0, (byte) -111)) {
                         this.field_F[var3_intLifetime1] = true;
@@ -2694,8 +2694,8 @@ final class nu {
                     continue;
                   }
                 } else {
-                  this.field_V.field_l = mp.field_p[this.field_t];
-                  this.field_X = new ua();
+                  this.field_V.modelId = mp.field_p[this.surface];
+                  this.field_X = new GoalStateAgent();
                   this.a(1, 0);
                   this.a(2);
                 }
@@ -2705,7 +2705,7 @@ final class nu {
                 break;
               }
             }
-            this.field_o = new wl(this.field_e, this.field_g, this.field_R, this.field_i, this.field_k, this.field_b);
+            this.field_o = new LineupAgent(this.field_e, this.field_g, this.participantStatus, this.field_i, this.field_k, this.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2723,18 +2723,18 @@ final class nu {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (2 != this.field_u) {
+          if (2 != this.phase) {
             return;
           }
           if (param0 != 26214) {
-            this.field_V = (tj) null;
+            this.field_V = (BallAgent) null;
           }
           var3_int = this.field_g[param1.field_u].field_p;
           if (~this.b((byte) 72, var3_int) != ~param1.field_u) {
             return;
           }
           this.field_C.a(var3_int, 1, param1.field_v);
-          this.field_C.a((mo) (this.field_g[param1.field_u]), (byte) 84);
+          this.field_C.a((MatchAgent) (this.field_g[param1.field_u]), (byte) 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2834,45 +2834,45 @@ final class nu {
         int stackIn_52_3Lifetime1;
         var6 = Kickabout.field_G;
         try {
-          var1 = new StringBuilder("CommonGame(players=" + this.field_I + ",timelimit=" + this.field_O + ") phase=" + this.c((byte) 59) + " phase_time=" + this.field_v + "\n");
-          discarded$0 = var1.append("\tsurface=" + this.field_t + "\ttier=" + this.field_m + "\twinner=" + this.field_Z + "\tai_tick=" + this.field_J);
-          if (this.field_G) {
+          var1 = new StringBuilder("CommonGame(players=" + this.playerCount + ",timelimit=" + this.timeLimit + ") phase=" + this.phaseName((byte) 59) + " phase_time=" + this.phaseTime + "\n");
+          discarded$0 = var1.append("\tsurface=" + this.surface + "\ttier=" + this.tier + "\twinner=" + this.winner + "\tai_tick=" + this.aiTick);
+          if (this.bigHeadMode) {
             discarded$1 = var1.append("\tbigheadmode");
           }
-          if (this.field_s) {
+          if (this.disableLocal) {
             discarded$2 = var1.append("\tdisable_local");
           }
-          if (this.field_p) {
+          if (this.disableOpponent) {
             discarded$3 = var1.append("\tdisable_opponent");
           }
           discarded$4 = var1.append("\n");
           var2 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2 >= this.field_S.length))) {
-            discarded$5 = var1.append("\t" + var2 + " [" + this.field_g[var2].field_p + "]: " + this.field_S[var2] + "\t" + this.field_R[var2].field_g + " " + this.field_R[var2].field_p + " " + this.field_R[var2].field_l + "\t");
-            stackOut_13_0 = this.field_R[var2].field_k;
+            discarded$5 = var1.append("\t" + var2 + " [" + this.field_g[var2].field_p + "]: " + this.field_S[var2] + "\t" + this.participantStatus[var2].field_g + " " + this.participantStatus[var2].field_p + " " + this.participantStatus[var2].field_l + "\t");
+            stackOut_13_0 = this.participantStatus[var2].field_k;
             stackIn_42_0 = stackOut_13_0 ? 1 : 0;
             stackIn_14_0 = stackOut_13_0;
             if (var6 == 0) {
               if (stackIn_14_0) {
                 discarded$6 = var1.append("offer_rematch\t");
               }
-              if (this.field_R[var2].field_q) {
+              if (this.participantStatus[var2].offerDraw) {
                 discarded$7 = var1.append("offer_draw\t");
               }
-              if (this.field_R[var2].field_s) {
+              if (this.participantStatus[var2].resigned) {
                 discarded$8 = var1.append("resigned\t");
               }
-              if (this.field_R[var2].field_v) {
+              if (this.participantStatus[var2].departed) {
                 discarded$9 = var1.append("departed\t");
               }
-              if (!this.field_R[var2].field_i) {
+              if (!this.participantStatus[var2].loadedPitch) {
                 discarded$10 = var1.append("!loaded_pitch\t");
               }
-              if (!this.field_R[var2].field_n) {
+              if (!this.participantStatus[var2].rewardEligible) {
                 discarded$11 = var1.append("!reward\t");
               }
-              if (this.field_R[var2].field_u) {
+              if (this.participantStatus[var2].megamode) {
                 discarded$12 = var1.append("megamode\t");
               }
               discarded$13 = var1.append("\n");
@@ -2954,16 +2954,16 @@ final class nu {
             stackIn_74_0 = -1;
             break;
           }
-          if (stackIn_74_0 == ~this.field_u) {
+          if (stackIn_74_0 == ~this.phase) {
             discarded$23 = var1.append("\t" + this.field_n);
           }
-          if (this.field_u == 2) {
+          if (this.phase == 2) {
             discarded$24 = var1.append("\t" + this.field_C);
           }
-          if (this.field_u == 3) {
+          if (this.phase == 3) {
             discarded$25 = var1.append("\t" + this.field_o);
           }
-          if (this.field_u == 4) {
+          if (this.phase == 4) {
             discarded$26 = var1.append("\n\t" + this.field_X);
             discarded$27 = var1.append("\n\t" + this.field_V);
             var3 = 0;
@@ -3027,18 +3027,18 @@ final class nu {
           param0.p(param2 ^ -118);
           var4_int = 0;
           do {
-            if (var4_int >= this.field_I) {
-              this.field_u = param0.l(3, param2 ^ 58);
+            if (var4_int >= this.playerCount) {
+              this.phase = param0.l(3, param2 ^ 58);
               break;
             }
             this.field_g[var4_int].field_h = param0.l(16, 59);
             this.field_g[var4_int].field_f = param0.l(3, 59);
             var4_int++;
           } while (var7 == 0);
-          if (this.field_u > 0) {
+          if (this.phase > 0) {
             var4_int = 0;
             do {
-              if (var4_int >= this.field_I) {
+              if (var4_int >= this.playerCount) {
                 var4_int = 0;
                 break;
               }
@@ -3047,7 +3047,7 @@ final class nu {
             } while (var7 == 0);
             do {
               if (var4_int >= 2) {
-                this.field_t = param0.l(2, 59);
+                this.surface = param0.l(2, 59);
                 break;
               }
               this.field_H[var4_int] = param0.l(5, 59);
@@ -3055,10 +3055,10 @@ final class nu {
               this.field_Q[var4_int] = param0.l(5, 59);
               var4_int++;
             } while (var7 == 0);
-            this.field_m = param0.l(2, 59);
+            this.tier = param0.l(2, 59);
           }
           boolean decompiledFrameCompleted2 = true;
-          if (2 < this.field_u) {
+          if (2 < this.phase) {
             var4_int = 0;
             while (var4_int < 2) {
               this.field_r[var4_int] = param0.l(3, 59);
@@ -3079,7 +3079,7 @@ final class nu {
             stackIn_38_0 = 3;
           }
           boolean decompiledFrameCompleted1 = true;
-          if (stackIn_38_0 < this.field_u) {
+          if (stackIn_38_0 < this.phase) {
             var4_int = 0;
             scanLoop1: while (true) {
               if (var4_int < 2) {
@@ -3121,10 +3121,10 @@ final class nu {
             stackIn_64_0 = 5;
           }
           boolean decompiledFrameCompleted0 = true;
-          if (stackIn_64_0 <= this.field_u) {
-            this.field_Z = param0.l(3, 59) - 3;
+          if (stackIn_64_0 <= this.phase) {
+            this.winner = param0.l(3, 59) - 3;
             var4_int = 0;
-            while (this.field_I > var4_int) {
+            while (this.playerCount > var4_int) {
               this.field_g[var4_int].field_l = mu.a(param0, (byte) -39);
               this.field_g[var4_int].field_i = mu.a(param0, (byte) -39);
               stackIn_85_0 = var4_int;
@@ -3154,25 +3154,25 @@ final class nu {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.a(this.field_u, (byte) -124);
+            this.a(this.phase, (byte) -124);
             stackIn_85_0 = param2;
             stackIn_85_1 = 1;
           }
           if (stackIn_85_0 != stackIn_85_1) {
             return;
           }
-          this.field_v = -1 + sk.a(19881, 8, 0, 4, param0, 16);
+          this.phaseTime = -1 + sk.a(19881, 8, 0, 4, param0, 16);
           var4_int = 0;
           scanLoop2: while (true) {
-            if (var4_int < this.field_I) {
-              this.field_R[var4_int].b(param0, 4);
-              this.field_R[var4_int].c(param0, param2 + 0);
+            if (var4_int < this.playerCount) {
+              this.participantStatus[var4_int].b(param0, 4);
+              this.participantStatus[var4_int].c(param0, param2 + 0);
               var4_int++;
               if (var7 == 0) {
                 continue;
               }
             } else {
-              if (this.field_u != 0) {
+              if (this.phase != 0) {
                 break scanLoop2;
               }
               this.field_n.b(param0, 4);
@@ -3180,15 +3180,15 @@ final class nu {
             this.field_n.a(74, param0);
             break;
           }
-          if (this.field_u == 2) {
+          if (this.phase == 2) {
             this.field_C.b(param0, 4);
             this.field_C.c(param0, 2);
           }
-          if (3 == this.field_u) {
+          if (3 == this.phase) {
             this.field_o.b(param0, 4);
             this.field_o.a(param0, false);
           }
-          if (this.field_u == 4) {
+          if (this.phase == 4) {
             this.field_V.b(param0, 4);
             var4_int = 0;
             scanLoop3: while (true) {
@@ -3225,10 +3225,10 @@ final class nu {
               }
               this.field_V.a(param0, (byte) -124);
               this.field_X.a(param0, (byte) -84);
-              this.field_J = param0.l(8, 59);
+              this.aiTick = param0.l(8, 59);
               break;
             }
-            this.field_G = mu.a(param0, (byte) -39);
+            this.bigHeadMode = mu.a(param0, (byte) -39);
           }
           param0.l((byte) 95);
           return;
@@ -3246,7 +3246,7 @@ final class nu {
         }
     }
 
-    nu(String[] param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, boolean param8) {
+    CommonGame(String[] param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, boolean param8) {
         it[] stackIn_9_0;
         int stackIn_9_1;
         it stackIn_9_2;
@@ -3267,19 +3267,19 @@ final class nu {
         int var10_intLifetime1;
         int var10_intLifetime2;
         var12 = Kickabout.field_G;
-        this.field_u = -1;
+        this.phase = -1;
         this.field_E = new tf();
         this.field_l = false;
         this.field_A = false;
         this.field_h = false;
         this.field_z = false;
-        this.field_p = false;
-        this.field_Z = -2;
-        this.field_s = false;
+        this.disableOpponent = false;
+        this.winner = -2;
+        this.disableLocal = false;
         this.field_B = vi.field_t;
         this.field_y = false;
         this.field_Y = false;
-        this.field_G = false;
+        this.bigHeadMode = false;
         this.field_x = wk.field_g;
         try {
           this.field_W = param7;
@@ -3291,13 +3291,13 @@ final class nu {
           this.field_c = param2;
           this.field_w = param8;
           this.field_L = param5;
-          this.field_I = this.field_S.length;
-          this.field_O = op.field_z[this.field_U];
-          this.field_g = new it[this.field_I];
-          this.field_R = new gt[this.field_I];
+          this.playerCount = this.field_S.length;
+          this.timeLimit = op.field_z[this.field_U];
+          this.field_g = new it[this.playerCount];
+          this.participantStatus = new ParticipantStatus[this.playerCount];
           var10_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var10_int >= this.field_I))) {
+          while (!(decompiledNaturalLoopExit0 = (var10_int >= this.playerCount))) {
             if (var12 == 0) {
               stackIn_9_0 = this.field_g;
               stackIn_9_1 = var10_int;
@@ -3314,7 +3314,7 @@ final class nu {
                 stackIn_10_5 = true;
               }
               stackIn_9_0[stackIn_9_1] = new it(stackIn_9_4, stackIn_10_5);
-              this.field_R[var10_int] = new gt();
+              this.participantStatus[var10_int] = new ParticipantStatus();
               var10_int++;
               continue;
             }
@@ -3346,15 +3346,15 @@ final class nu {
             this.field_H = new int[2];
             this.field_F = new boolean[2];
             this.field_Q = new int[2];
-            this.field_N = new ch();
-            this.field_ab = new p(this.field_I);
-            this.field_q = new jc[this.field_I];
+            this.field_N = new LoggedGoal();
+            this.field_ab = new p(this.playerCount);
+            this.field_q = new LoggedPlayer[this.playerCount];
             stackIn_24_0 = 0;
             break;
           }
           var10_intLifetime2 = stackIn_24_0;
-          while (this.field_I > var10_intLifetime2) {
-            this.field_q[var10_intLifetime2] = new jc();
+          while (this.playerCount > var10_intLifetime2) {
+            this.field_q[var10_intLifetime2] = new LoggedPlayer();
             var10_intLifetime2++;
             if (var12 != 0) {
               return;

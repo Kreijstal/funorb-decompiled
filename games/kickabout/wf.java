@@ -702,8 +702,8 @@ final class wf extends qt {
           for (var7 = 0; var7 < 2; var7++) {
             um.field_e.field_o.field_g[var7].field_p = var7;
           }
-          um.field_e.field_o.field_t = var5.field_K;
-          um.field_e.field_o.field_m = var5.field_o;
+          um.field_e.field_o.surface = var5.field_K;
+          um.field_e.field_o.tier = var5.field_o;
           um.field_e.field_o.field_H[0] = var5.field_w;
           um.field_e.field_o.field_d[0] = var5.field_k;
           um.field_e.field_o.field_Q[0] = var5.field_R;
@@ -718,7 +718,7 @@ final class wf extends qt {
             um.field_e.field_o.field_b[1][0] = var4.field_i[0];
             um.field_e.field_o.field_b[1][1] = var4.field_i[1];
             um.field_e.field_o.field_b[1][2] = var4.field_i[2];
-            um.field_e.field_o.field_s = true;
+            um.field_e.field_o.disableLocal = true;
             um.field_e.field_o.field_b[1][3] = var4.field_i[3];
             um.field_e.b(param0 + 26405, 4);
             la.a(um.field_e.field_o, 0);
@@ -726,7 +726,7 @@ final class wf extends qt {
             um.field_e.b(26415, 2);
             gm.a(de.field_a, true, (byte) -117);
           }
-          sb.a(false, (byte) -122, um.field_e.field_o.field_m, um.field_e.field_o.field_t);
+          sb.a(false, (byte) -122, um.field_e.field_o.tier, um.field_e.field_o.surface);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wf.IA(" + param0 + ',' + param1 + ')');
         }

@@ -92,7 +92,7 @@ final class ql {
         }
         try {
           ep.field_b = param2;
-          ma.field_y = param1;
+          NetworkGameClient.field_y = param1;
           ku.a(dh.field_g, 4, param0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ql.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -111,11 +111,11 @@ final class ql {
             field_d = (String) null;
           }
           var3_int = al.a(false, (byte) 71);
-          if (4 == vt.field_c.field_u) {
+          if (4 == vt.field_c.phase) {
             sk.a(1, var3_int);
-            od.a(param2, var3_int, vt.field_c.field_R, 14839);
+            od.a(param2, var3_int, vt.field_c.participantStatus, 14839);
             if (vu.field_Cb == -2 ||
-              !vt.field_c.field_R[vu.field_Cb].d(3511)) {
+              !vt.field_c.participantStatus[vu.field_Cb].d(3511)) {
               ig.a(param1, 16777215, var3_int);
             }
           }

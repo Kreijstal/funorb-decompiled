@@ -5,7 +5,7 @@ abstract class hs {
     static String field_b;
     static om field_d;
     int field_g;
-    nu field_a;
+    CommonGame field_a;
     static int field_e;
     boolean field_f;
     private ko field_i;
@@ -58,7 +58,7 @@ abstract class hs {
         if (param0 != 13) {
           this.d(-24);
         }
-        stackIn_6_0 = (this.field_g != -2) && (this.field_a.field_R[this.field_g].d(3511));
+        stackIn_6_0 = (this.field_g != -2) && (this.field_a.participantStatus[this.field_g].d(3511));
         return stackIn_6_0;
     }
 
@@ -147,18 +147,18 @@ abstract class hs {
           var19 = var15.field_p;
           if (param2 != 4) {
             var16 = -9284;
-            var20 = gt.field_h[param2][param8][param5].length;
+            var20 = ParticipantStatus.field_h[param2][param8][param5].length;
             for (var21 = 0; var33.length > var21; var21++) {
               if (var33[var21] == var16) {
-                var19[var21] = (short)gt.field_h[param2][param8][param5][0];
+                var19[var21] = (short)ParticipantStatus.field_h[param2][param8][param5][0];
               }
             }
-            var20Lifetime3 = gt.field_h[param2][param8][param5].length;
+            var20Lifetime3 = ParticipantStatus.field_h[param2][param8][param5].length;
             for (var21Lifetime3 = 0; var21Lifetime3 < var20Lifetime3; var21Lifetime3++) {
-              var16Lifetime3 = (short)gt.field_h[param2][param8][0][var21Lifetime3];
+              var16Lifetime3 = (short)ParticipantStatus.field_h[param2][param8][0][var21Lifetime3];
               for (var22 = 0; var22 < var33.length; var22++) {
                 if (var16Lifetime3 == var33[var22]) {
-                  var19[var22] = (short)gt.field_h[param2][param8][param5][var21Lifetime3];
+                  var19[var22] = (short)ParticipantStatus.field_h[param2][param8][param5][var21Lifetime3];
                 }
               }
             }
@@ -389,7 +389,7 @@ abstract class hs {
           this.field_c = (io[]) null;
         }
         if (param1 / 50 <= 10) {
-          var8 = var8 + (-200 + 4 * (this.field_a.field_v % 50) + 128);
+          var8 = var8 + (-200 + 4 * (this.field_a.phaseTime % 50) + 128);
           if (256 > var8) {
             var8 = 256;
           }
@@ -442,7 +442,7 @@ abstract class hs {
         stackIn_13_0 = var6;
         stackIn_13_1 = 4;
         if (param0 != 0) {
-          stackIn_14_2 = nu.field_a;
+          stackIn_14_2 = CommonGame.field_a;
         } else {
           stackIn_14_2 = he.field_Ub;
         }
@@ -453,14 +453,14 @@ abstract class hs {
         }
         var14 = 0;
         var7Lifetime1 = var14;
-        while (var14 < this.field_a.field_I) {
+        while (var14 < this.field_a.playerCount) {
           if (param0 == this.field_a.field_g[var14].field_p) {
             b.field_U[this.field_a.field_g[var14].field_f].c(param3, -16 + param1);
-            stackIn_24_0 = (this.field_a.field_R[var14].d(3511)) ? 16777215 : 11184810;
+            stackIn_24_0 = (this.field_a.participantStatus[var14].d(3511)) ? 16777215 : 11184810;
             var8 = stackIn_24_0;
             var9 = this.field_a.field_S[var14].toLowerCase();
             un.field_d.d(var9, param3 + 80, param1, var8, -1);
-            if (!this.field_a.field_R[var14].d(3511)) {
+            if (!this.field_a.participantStatus[var14].d(3511)) {
               var10 = un.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;
@@ -478,7 +478,7 @@ abstract class hs {
         try {
           on.a(22, 62, 596, 28, 10, 65793, 128);
           if (param0) {
-            this.field_a = (nu) null;
+            this.field_a = (CommonGame) null;
           }
           un.field_d.d(param1.toUpperCase(), 320, 83, 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -493,7 +493,7 @@ abstract class hs {
         return 342 - param1 * 29;
     }
 
-    hs(nu param0, int param1, boolean param2, int[] param3) {
+    hs(CommonGame param0, int param1, boolean param2, int[] param3) {
         int var5_int = 0;
         try {
           this.field_g = param1;
@@ -563,12 +563,12 @@ abstract class hs {
         this.a(1, param0, (byte) -72, var4[1]);
         var10 = 0;
         var7Lifetime1 = var10;
-        while (this.field_a.field_I > var10) {
+        while (this.field_a.playerCount > var10) {
           var8 = this.field_a.field_g[var10].field_p;
           pt.a(640, -22914, 2 + (var4[var8] + 160), 480, 0);
           on.a(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
           ta.e(123);
-          if (this.field_a.field_R[var10].field_i) {
+          if (this.field_a.participantStatus[var10].loadedPitch) {
             vb.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);
           }
           var5[var8] = var5[var8] + 23;

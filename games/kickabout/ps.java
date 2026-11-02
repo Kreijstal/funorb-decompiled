@@ -9,25 +9,25 @@ abstract class ps {
     static int[] field_d;
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
-        nu stackIn_2_0 = null;
+        CommonGame stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
-        nu stackIn_5_0 = null;
+        CommonGame stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        nu stackIn_9_0 = null;
+        CommonGame stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        nu stackIn_12_0 = null;
+        CommonGame stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        nu stackIn_15_0 = null;
+        CommonGame stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        nu stackIn_18_0 = null;
+        CommonGame stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        nu stackIn_22_0 = null;
+        CommonGame stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
-        nu stackIn_25_0 = null;
+        CommonGame stackIn_25_0 = null;
         boolean stackIn_26_1 = false;
-        nu stackIn_28_0 = null;
+        CommonGame stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        nu stackIn_31_0 = null;
+        CommonGame stackIn_31_0 = null;
         boolean stackIn_32_1 = false;
         stackIn_2_0 = et.field_d;
         stackIn_3_1 = (param5) ? false : true;

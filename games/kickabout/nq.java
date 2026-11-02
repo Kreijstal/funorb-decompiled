@@ -121,10 +121,10 @@ final class nq extends i {
         }
     }
 
-    final static void a(int param0, int param1, nl param2, int param3, byte param4, int param5) {
+    final static void a(int param0, int param1, FootballerAgent param2, int param3, byte param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
-        nl stackIn_4_0 = null;
+        FootballerAgent stackIn_4_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_8_2 = 0;
         int stackIn_11_3 = 0;
@@ -141,7 +141,7 @@ final class nq extends i {
           }
           var6_int = param2.f(-95);
           var7 = param2.a(true);
-          stackIn_4_0 = (nl) (param2);
+          stackIn_4_0 = (FootballerAgent) (param2);
           if (param1 + param0 < var7) {
             stackIn_5_1 = 4;
           } else {

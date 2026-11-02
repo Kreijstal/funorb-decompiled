@@ -5,7 +5,7 @@ final class vt {
     static String field_a;
     static byte[][] field_d;
     static String field_b;
-    static nu field_c;
+    static CommonGame field_c;
 
     public static void a(int param0) {
         int var1 = 11 % ((36 - param0) / 52);
@@ -20,7 +20,7 @@ final class vt {
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (!param1) {
-          field_c = (nu) null;
+          field_c = (CommonGame) null;
           if (param0 < 48) {
             if (param0 >= 65 &&
               param0 <= 90) {

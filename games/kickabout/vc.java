@@ -105,14 +105,14 @@ final class vc extends fp {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        nl var2_ref_nl = null;
-        nl var3 = null;
+        FootballerAgent var2_ref_nl = null;
+        FootballerAgent var3 = null;
         int var3_int = 0;
         la[] var4 = null;
         la var6 = null;
         int var7 = 0;
         String var8 = null;
-        tj var9 = null;
+        BallAgent var9 = null;
         var7 = Kickabout.field_G;
         try {
           if (param0 != 125) {
@@ -124,7 +124,7 @@ final class vc extends fp {
           }
           var9 = et.field_d.field_V;
           if (ic.field_i) {
-            var2 = et.field_d.field_R[0].field_g;
+            var2 = et.field_d.participantStatus[0].field_g;
             if (var9.field_m == 1) {
               var9.field_m = -1;
             }
@@ -139,10 +139,10 @@ final class vc extends fp {
             }
             var3 = et.field_d.field_P[0][var2];
             if (!qg.a(2235, var3.field_w, 20, var3.field_M)) {
-              var9.field_r = 3;
+              var9.uncatchable = 3;
             } else {
-              var9.field_r = 0;
-              if (var3.field_u != 0) {
+              var9.uncatchable = 0;
+              if (var3.action != 0) {
                 var3.a((byte) -31, 0);
               }
             }
@@ -201,8 +201,8 @@ final class vc extends fp {
           if (param0 != 45) {
             vc.i((byte) 21);
           }
-          for (var1_int = 0; var1_int < tq.field_F.field_I; var1_int++) {
-            if (tq.field_F.field_R[var1_int].d(3511) &&
+          for (var1_int = 0; var1_int < tq.field_F.playerCount; var1_int++) {
+            if (tq.field_F.participantStatus[var1_int].d(3511) &&
               wp.field_c == tq.field_F.field_g[var1_int].field_p) {
               var2 = (gm) (tq.field_F.a((byte) -60, var1_int));
               stackIn_14_0 = (jn.field_kb != var1_int) ? 160 : 256;

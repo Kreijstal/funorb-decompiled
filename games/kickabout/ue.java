@@ -10,7 +10,7 @@ final class ue extends IntrusiveNode {
     static String[] field_g;
     static vs[] field_f;
 
-    final static void a(int param0, int param1, nl param2, int param3) {
+    final static void a(int param0, int param1, FootballerAgent param2, int param3) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -131,10 +131,10 @@ final class ue extends IntrusiveNode {
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
-          if (40 > jo.field_F.field_X.field_m) {
+          if (40 > jo.field_F.field_X.goalCount) {
             return;
           }
-          var1_int = -40 + jo.field_F.field_X.field_m;
+          var1_int = -40 + jo.field_F.field_X.goalCount;
           var2 = 69;
           if (var1_int < 30) {
             var2 = var1_int * 69 / 30;
@@ -183,7 +183,7 @@ final class ue extends IntrusiveNode {
             for (var7 = 0; var7 < 2; var7++) {
               stackIn_31_0 = un.field_d;
               if (var7 != 0) {
-                stackIn_32_1 = nu.field_a;
+                stackIn_32_1 = CommonGame.field_a;
               } else {
                 stackIn_32_1 = he.field_Ub;
               }
@@ -191,14 +191,14 @@ final class ue extends IntrusiveNode {
               nb.field_j[var7].f(var14[var7] - 50, 170);
             }
             tb.field_q[10].c(285, 180, var3);
-            stackIn_35_0 = jo.field_F.field_X.field_j;
+            stackIn_35_0 = jo.field_F.field_X.score;
             if (var5Lifetime1 == 0) {
               stackIn_36_1 = 0;
             } else {
               stackIn_36_1 = 1;
             }
             var7Lifetime1 = stackIn_35_0[stackIn_36_1];
-            stackIn_38_0 = jo.field_F.field_X.field_j;
+            stackIn_38_0 = jo.field_F.field_X.score;
             if (var5Lifetime1 != 0) {
               stackIn_39_1 = 0;
             } else {
@@ -216,7 +216,7 @@ final class ue extends IntrusiveNode {
               var8 = 99;
             }
             stackIn_47_0 = (var5Lifetime1 == 0) ? 0 : 1;
-            if (stackIn_47_0 != jo.field_F.field_X.field_n) {
+            if (stackIn_47_0 != jo.field_F.field_X.goalScorer) {
               iq.$cfr$intArgs$a$8e2a9e3a0d15(-91, 180, 295, var7Lifetime1, var3);
               f.$cfr$intArgs$a$8e2a9e3a0d15(125, var8, var3, var4 + 180, 355);
               stackIn_54_0 = 122;

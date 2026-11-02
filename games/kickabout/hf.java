@@ -282,7 +282,7 @@ final class hf {
         }
     }
 
-    final static int a(int param0, nu param1, int param2) {
+    final static int a(int param0, CommonGame param1, int param2) {
         int var6 = 0;
         int var3_int = 0;
         int var4 = 0;

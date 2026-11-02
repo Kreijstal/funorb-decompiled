@@ -15,28 +15,28 @@ final class vk {
         var2 = nb.field_b;
         nb.field_b = nr.field_e;
         if (param1 == 51) {
-          gt.field_t.field_l = 2;
+          ParticipantStatus.field_t.field_l = 2;
         } else {
           if (50 == param1) {
-            gt.field_t.field_l = 5;
+            ParticipantStatus.field_t.field_l = 5;
           } else {
-            gt.field_t.field_l = 1;
+            ParticipantStatus.field_t.field_l = 1;
           }
         }
         nr.field_e = var2;
-        gt.field_t.field_o = gt.field_t.field_o + 1;
+        ParticipantStatus.field_t.field_o = ParticipantStatus.field_t.field_o + 1;
         if (param0 >= -115) {
           return 120;
         }
-        if (gt.field_t.field_o >= 2 &&
+        if (ParticipantStatus.field_t.field_o >= 2 &&
           param1 == 51) {
           return 2;
         }
-        if (gt.field_t.field_o >= 2 &&
+        if (ParticipantStatus.field_t.field_o >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (4 <= gt.field_t.field_o) {
+        if (4 <= ParticipantStatus.field_t.field_o) {
           return 1;
         }
         return -1;

@@ -6,7 +6,7 @@ final class jo extends tm {
     static String field_A;
     static String field_B;
     static int field_D;
-    static nu field_F;
+    static CommonGame field_F;
     static int field_E;
 
     jo(String param0, Class[] param1, String param2) {
@@ -32,7 +32,7 @@ final class jo extends tm {
             jo.g(27);
           }
           var5 = param0.a((byte) -121, param3, var4_int);
-          stackIn_3_0 = ua.a(var4_int, var5, param0, false);
+          stackIn_3_0 = GoalStateAgent.a(var4_int, var5, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ final class jo extends tm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 84) {
-            field_F = (nu) null;
+            field_F = (CommonGame) null;
           }
           stackIn_3_0 = new li(nt.k(39));
           return stackIn_3_0;

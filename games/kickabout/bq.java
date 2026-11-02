@@ -54,11 +54,11 @@ final class bq {
           if (!ui.field_t) {
             stackIn_7_3 = 0;
           } else {
-            stackIn_7_3 = 2 + (oe.field_f + 40 + 2);
+            stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
           ((hd) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
-          jf.field_D.a(true, oe.field_f + 42, -40 - oe.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
-          ClientException.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, oe.field_f);
+          jf.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
+          ClientException.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, TeamSelectionAgent.field_f);
           ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
           ci.field_h.a(true, fp.field_p.field_q, 0, 0, 30);
           sg.field_a.a(true, fp.field_p.field_q, 0, 30, -40 + (fp.field_p.field_mb - 2) - 30);

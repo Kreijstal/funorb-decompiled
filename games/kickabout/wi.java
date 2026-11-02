@@ -157,9 +157,9 @@ class wi extends fd {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_p != 0 &&
-            this.field_p != nl.field_p) {
+            this.field_p != FootballerAgent.field_p) {
             if (this.a((byte) -70, param2, param3, el.field_A, n.field_m) &&
-              0 == nl.field_p) {
+              0 == FootballerAgent.field_p) {
               this.b(this.field_p, -param2 + el.field_A, n.field_m - param3, -1);
             }
             this.a(param3, n.field_m, el.field_A, param1, param0 - 13, param2);

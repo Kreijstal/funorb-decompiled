@@ -143,7 +143,7 @@ final class bo extends hd {
           var17.field_A = 1;
           this.field_yb = new hd(0L, param2);
           var8 = new hd(0L, param3);
-          var9 = new hd(0L, param3, jc.field_l);
+          var9 = new hd(0L, param3, LoggedPlayer.field_l);
           var9.field_A = 1;
           var10 = 50;
           var11 = 0;

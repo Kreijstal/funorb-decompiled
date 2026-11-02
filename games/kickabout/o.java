@@ -149,7 +149,7 @@ final class o {
 
     final static void a(byte param0) {
         int var1_int = 0;
-        nl var2 = null;
+        FootballerAgent var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

@@ -15,7 +15,7 @@ final class ih {
 
     final static boolean a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
-        nu var3 = null;
+        CommonGame var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -23,8 +23,8 @@ final class ih {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            var3 = (nu) null;
-            ih.a(28, (nu) null, 23);
+            var3 = (CommonGame) null;
+            ih.a(28, (CommonGame) null, 23);
           }
           stackIn_3_0 = gv.a(false, param0, 0);
           return stackIn_3_0;
@@ -50,7 +50,7 @@ final class ih {
         field_b = null;
     }
 
-    final static void a(int param0, nu param1, int param2) {
+    final static void a(int param0, CommonGame param1, int param2) {
         int var4 = 0;
         int[] var3 = null;
         int var5 = 0;

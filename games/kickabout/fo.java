@@ -15,7 +15,7 @@ final class fo extends jd {
         try {
           var1 = nr.field_q;
           synchronized (var1) {
-            wl.field_n = vb.field_b;
+            LineupAgent.field_n = vb.field_b;
             fj.field_c = fj.field_c + 1;
             if (param0 > rc.field_d) {
               var5 = 0;

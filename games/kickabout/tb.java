@@ -10,7 +10,7 @@ final class tb extends bi {
     static int field_v;
     static String field_r;
     static ut[] field_q;
-    static nu field_w;
+    static CommonGame field_w;
     static String field_u;
 
     final boolean a(byte param0) {
@@ -522,7 +522,7 @@ final class tb extends bi {
 
     final void b(byte param0) {
         if (param0 != 109) {
-          field_w = (nu) null;
+          field_w = (CommonGame) null;
         }
         if (this.field_x != null) {
           this.field_x.a(param0 ^ 108);

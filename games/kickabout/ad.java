@@ -2234,7 +2234,7 @@ final class ad {
                 }
                 var2 = ib.a("away", -80);
                 if (var2 != null) {
-                  nu.field_a = kt.a(var2, true);
+                  CommonGame.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("auto_assign", -90);
                 if (var2 != null) {
@@ -2498,7 +2498,7 @@ final class ad {
                 }
                 var2 = ib.a("you_have_played_X_in_past_hour", -87);
                 if (null != var2) {
-                  oe.field_m = kt.a(var2, true);
+                  TeamSelectionAgent.field_m = kt.a(var2, true);
                 }
                 var2 = ib.a("quickplay_no_reward", -108);
                 if (var2 != null) {
@@ -2530,7 +2530,7 @@ final class ad {
                 }
                 var2 = ib.a("buyout", -83);
                 if (null != var2) {
-                  jc.field_k = kt.a(var2, true);
+                  LoggedPlayer.field_k = kt.a(var2, true);
                 }
                 var2 = ib.a("no_auctions", -101);
                 if (var2 != null) {
@@ -3696,27 +3696,27 @@ final class ad {
                 }
                 var2 = ib.a("instructions_auctions3,0,0", -103);
                 if (null != var2) {
-                  tj.field_w[0][0] = kt.a(var2, true);
+                  BallAgent.field_w[0][0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions3,0,1", -105);
                 if (null != var2) {
-                  tj.field_w[0][1] = kt.a(var2, true);
+                  BallAgent.field_w[0][1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions3,0,2", -87);
                 if (null != var2) {
-                  tj.field_w[0][2] = kt.a(var2, true);
+                  BallAgent.field_w[0][2] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions3,0,3", -99);
                 if (var2 != null) {
-                  tj.field_w[0][3] = kt.a(var2, true);
+                  BallAgent.field_w[0][3] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions3,1,0", -108);
                 if (null != var2) {
-                  tj.field_w[1][0] = kt.a(var2, true);
+                  BallAgent.field_w[1][0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions3,1,1", -117);
                 if (var2 != null) {
-                  tj.field_w[1][1] = kt.a(var2, true);
+                  BallAgent.field_w[1][1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemodes3,0,0", param1 ^ -113);
                 if (null != var2) {
@@ -3806,7 +3806,7 @@ final class ad {
                 }
                 var2 = ib.a("move", -83);
                 if (var2 != null) {
-                  tj.field_g = kt.a(var2, true);
+                  BallAgent.field_g = kt.a(var2, true);
                 }
                 var2 = ib.a("sprint", -104);
                 if (var2 != null) {
@@ -4234,11 +4234,11 @@ final class ad {
                 }
                 var2 = ib.a("stage_inthesemifinal", param1 - 110);
                 if (null != var2) {
-                  wr.field_g = kt.a(var2, true);
+                  FormationAgent.field_g = kt.a(var2, true);
                 }
                 var2 = ib.a("stage_inthequarterfinal", param1 ^ -93);
                 if (var2 != null) {
-                  mo.field_a = kt.a(var2, true);
+                  MatchAgent.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("stage_inthequalifying", -88);
                 if (null != var2) {
@@ -4262,15 +4262,15 @@ final class ad {
                 }
                 var2 = ib.a("page_names,0", -109);
                 if (var2 != null) {
-                  jc.field_e[0] = kt.a(var2, true);
+                  LoggedPlayer.field_e[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("page_names,1", -124);
                 if (null != var2) {
-                  jc.field_e[1] = kt.a(var2, true);
+                  LoggedPlayer.field_e[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("page_names,2", -113);
                 if (null != var2) {
-                  jc.field_e[2] = kt.a(var2, true);
+                  LoggedPlayer.field_e[2] = kt.a(var2, true);
                 }
                 var2 = ib.a("scheduled_game", param1 - 125);
                 if (null != var2) {
@@ -4310,7 +4310,7 @@ final class ad {
                 }
                 var2 = ib.a("goals_and_posession", param1 ^ -101);
                 if (var2 != null) {
-                  oe.field_j = kt.a(var2, true);
+                  TeamSelectionAgent.field_j = kt.a(var2, true);
                 }
                 var2 = ib.a("goals_and_posession_col_names,0", -104);
                 if (null != var2) {
@@ -4406,7 +4406,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_draw_tackles2", param1 - 112);
                 if (var2 != null) {
-                  gt.field_r = kt.a(var2, true);
+                  ParticipantStatus.field_r = kt.a(var2, true);
                 }
                 var2 = ib.a("tournament_draw_passes", param1 - 87);
                 if (null != var2) {
@@ -4418,7 +4418,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_draw_equal", -103);
                 if (null != var2) {
-                  gt.field_m = kt.a(var2, true);
+                  ParticipantStatus.field_m = kt.a(var2, true);
                 }
                 var2 = ib.a("tournament_draw_equal2", -103);
                 if (var2 != null) {

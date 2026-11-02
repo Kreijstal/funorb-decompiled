@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends mo {
+final class GoalStateAgent extends MatchAgent {
     static long field_g;
-    int field_n;
+    int goalScorer;
     static String field_h;
-    int[] field_j;
+    int[] score;
     static String field_i;
     static hd field_k;
     static String field_f;
-    int field_m;
+    int goalCount;
     static int field_l;
 
     final void a(CipherPacketBuffer param0, byte param1) {
@@ -17,17 +17,17 @@ final class ua extends mo {
           return;
         }
         try {
-          this.field_j[0] = hq.a(22531, 7, param0, 0);
-          this.field_j[1] = hq.a(22531, 7, param0, 0);
-          this.field_m = hq.a(22531, 10, param0, 0);
+          this.score[0] = hq.a(22531, 7, param0, 0);
+          this.score[1] = hq.a(22531, 7, param0, 0);
+          this.goalCount = hq.a(22531, 10, param0, 0);
           int var3_int = -57 % ((25 - param1) / 63);
-          this.field_n = -1 + param0.l(2, 59);
+          this.goalScorer = -1 + param0.l(2, 59);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(tj param0, int param1) {
+    final void a(BallAgent param0, int param1) {
         RuntimeException runtimeException = null;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -39,8 +39,8 @@ final class ua extends mo {
           if (param1 > -116) {
             return;
           }
-          if (this.field_m > 0) {
-            this.field_m = this.field_m + 1;
+          if (this.goalCount > 0) {
+            this.goalCount = this.goalCount + 1;
             return;
           }
           if (param0.field_m == -1 &&
@@ -49,15 +49,15 @@ final class ua extends mo {
               return;
             }
             if (param0.field_p < 0) {
-              this.field_m = 1;
-              this.field_n = 0;
+              this.goalCount = 1;
+              this.goalScorer = 0;
               return;
             }
             if (param0.field_p <= 88080384) {
               return;
             }
-            this.field_m = 1;
-            this.field_n = 1;
+            this.goalCount = 1;
+            this.goalScorer = 1;
             return;
           }
           return;
@@ -83,13 +83,13 @@ final class ua extends mo {
           field_f = null;
           return;
         }
-        ua.a((byte) 106);
+        GoalStateAgent.a((byte) 106);
         field_k = null;
         field_f = null;
     }
 
     public final String toString() {
-        return "AgentGoalState\tscore=[" + this.field_j[0] + "," + this.field_j[1] + "]\tgoal_count=" + this.field_m + "\tgoal_scorer=" + this.field_n;
+        return "AgentGoalState\tscore=[" + this.score[0] + "," + this.score[1] + "]\tgoal_count=" + this.goalCount + "\tgoal_scorer=" + this.goalScorer;
     }
 
     final static kg[] a(int param0, int param1, sj param2, boolean param3) {
@@ -124,19 +124,19 @@ final class ua extends mo {
         }
     }
 
-    final void a(byte param0, mo param1) {
-        ua var4 = null;
-        ua var3 = null;
+    final void a(byte param0, MatchAgent param1) {
+        GoalStateAgent var4 = null;
+        GoalStateAgent var3 = null;
         if (param0 >= -52) {
           return;
         }
         try {
-          var4 = (ua) (param1);
+          var4 = (GoalStateAgent) (param1);
           var3 = var4;
-          this.field_m = var3.field_m;
-          this.field_j[0] = var4.field_j[0];
-          this.field_n = var3.field_n;
-          this.field_j[1] = var4.field_j[1];
+          this.goalCount = var3.goalCount;
+          this.score[0] = var4.score[0];
+          this.goalScorer = var3.goalScorer;
+          this.score[1] = var4.score[1];
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ua.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -144,16 +144,16 @@ final class ua extends mo {
 
     final int c(int param0) {
         int var2 = 0;
-        var2 = fj.a(-40, this.field_j[param0] ^ var2);
-        var2 = fj.a(-40, this.field_j[1] ^ var2);
-        var2 = fj.a(-40, var2 ^ this.field_m);
-        var2 = fj.a(-40, var2 ^ this.field_n);
+        var2 = fj.a(-40, this.score[param0] ^ var2);
+        var2 = fj.a(-40, this.score[1] ^ var2);
+        var2 = fj.a(-40, var2 ^ this.goalCount);
+        var2 = fj.a(-40, var2 ^ this.goalScorer);
         return var2;
     }
 
-    public ua() {
-        this.field_j = new int[2];
-        this.field_m = 0;
+    public GoalStateAgent() {
+        this.score = new int[2];
+        this.goalCount = 0;
     }
 
     static {

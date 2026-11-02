@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class tu extends ma implements hc {
+abstract class tu extends NetworkGameClient implements hc {
     static String field_D;
     static gr field_E;
     static String field_C;
@@ -11,7 +11,7 @@ abstract class tu extends ma implements hc {
     final void a(int param0, pk param1) {
         try {
           try {
-            ma.field_t = param1;
+            NetworkGameClient.field_t = param1;
             this.a(true, -1);
             this.h((byte) 105);
             this.l(-1);
@@ -79,7 +79,7 @@ abstract class tu extends ma implements hc {
         stackIn_7_2 = (e.field_m != null);
         this.c(stackIn_6_1, stackIn_7_2);
         if (nd.field_c) {
-          ma.field_t.a(7312);
+          NetworkGameClient.field_t.a(7312);
           nd.field_c = false;
         }
         if (uf.c(608)) {
@@ -91,14 +91,14 @@ abstract class tu extends ma implements hc {
         this.s(-113);
         if (!iu.field_h) {
           iu.a(17, id.field_v);
-          if (ma.field_t.a(true)) {
-            ma.field_t.b(12763);
+          if (NetworkGameClient.field_t.a(true)) {
+            NetworkGameClient.field_t.b(12763);
             iu.field_h = true;
           }
         } else {
           if (!rg.field_b) {
             if (!la.a(100)) {
-              if (ma.field_t.c(-27598)) {
+              if (NetworkGameClient.field_t.c(-27598)) {
                 rg.field_b = true;
                 this.o(55);
                 nt.c(false);
@@ -279,13 +279,13 @@ abstract class tu extends ma implements hc {
           return;
         }
         if (!iu.field_h) {
-          wr.a(var2, -14142);
+          FormationAgent.a(var2, -14142);
           return;
         }
         if (!rg.field_b &&
           !la.a(100)) {
           ju.a(100.0f, hm.field_H, (byte) 30);
-          wr.a(var2, -14142);
+          FormationAgent.a(var2, -14142);
           return;
         }
         vg.field_Rb = true;

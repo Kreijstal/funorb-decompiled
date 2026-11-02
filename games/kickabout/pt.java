@@ -931,7 +931,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -58, "multiconst_open");
                 if (null != var2) {
-                  oe.field_g = kt.a(var2, true);
+                  TeamSelectionAgent.field_g = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -112, "no_options_available");
                 if (null != var2) {
@@ -1015,7 +1015,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -98, "gameopt_membersonly");
                 if (var2 != null) {
-                  oe.field_n = kt.a(var2, true);
+                  TeamSelectionAgent.field_n = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -72, "gameopt_1moreratedgame");
                 if (var2 != null) {
@@ -1055,7 +1055,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -115, "gameopt_playerneedsrating");
                 if (null != var2) {
-                  nu.field_D = kt.a(var2, true);
+                  CommonGame.field_D = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -64, "gameopt_youneedrating");
                 if (null != var2) {
@@ -1229,7 +1229,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -94, "rule_2_0");
                 if (var2 != null) {
-                  gt.field_o = kt.a(var2, true);
+                  ParticipantStatus.field_o = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -56, "rule_2_1");
                 if (var2 != null) {
@@ -1565,7 +1565,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -79, "month");
                 if (null != var2) {
-                  mo.field_d = kt.a(var2, true);
+                  MatchAgent.field_d = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -105, "year");
                 if (null != var2) {
@@ -1637,7 +1637,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -110, "create_displayname");
                 if (var2 != null) {
-                  ua.field_f = kt.a(var2, true);
+                  GoalStateAgent.field_f = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -82, "create_password");
                 if (var2 != null) {
@@ -1844,7 +1844,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -56, "create_alert_passchars");
                 if (var2 != null) {
-                  ua.field_h = kt.a(var2, param0);
+                  GoalStateAgent.field_h = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -58, "create_alert_passrepeated");
                 if (null != var2) {
@@ -1972,7 +1972,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -63, "enterignore_add");
                 if (null != var2) {
-                  gt.field_j = kt.a(var2, param0);
+                  ParticipantStatus.field_j = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -106, "enterignore_del");
                 if (null != var2) {
@@ -2000,7 +2000,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -72, "waitingfor_graphics");
                 if (var2 != null) {
-                  nu.field_M = kt.a(var2, true);
+                  CommonGame.field_M = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -106, "waitingfor_models");
                 if (null != var2) {
@@ -2028,7 +2028,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -117, "waitingfor_extradata");
                 if (null != var2) {
-                  oe.field_l = kt.a(var2, true);
+                  TeamSelectionAgent.field_l = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -66, "waitingfor_languages");
                 if (var2 != null) {
@@ -2530,7 +2530,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -59, "secretachievement");
                 if (var2 != null) {
-                  ma.field_w = kt.a(var2, param0);
+                  NetworkGameClient.field_w = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -57, "no_highscores");
                 if (null != var2) {
@@ -2710,7 +2710,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -94, "quickchat_help_title");
                 if (null != var2) {
-                  jc.field_l = kt.a(var2, param0);
+                  LoggedPlayer.field_l = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -52, "quickchat_shortcut_help,0");
                 if (null != var2) {
@@ -2762,7 +2762,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -106, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  CipherPacketBuffer.field_v = nl.a(false, var2[0]);
+                  CipherPacketBuffer.field_v = FootballerAgent.a(false, var2[0]);
                 }
                 var2 = ni.a((byte) -113, "rating_noratings");
                 if (null != var2) {

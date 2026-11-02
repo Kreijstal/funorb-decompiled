@@ -67,7 +67,7 @@ final class fi extends Exception {
           dj.field_D = new hd(0L, (hd) null);
           Kickabout.field_H = new hd(0L, param4);
           ei.field_b = new hd(0L, param3);
-          ei.field_b.field_X = nl.field_i;
+          ei.field_b.field_X = FootballerAgent.field_i;
           Kickabout.field_H.a((byte) -112, ei.field_b);
           ij.field_s = new hd(0L, qt.field_n);
           Kickabout.field_H.a((byte) -126, ij.field_s);

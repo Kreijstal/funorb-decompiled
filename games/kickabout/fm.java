@@ -433,7 +433,7 @@ final class fm extends qt {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = mo.a(0, var6);
+          var2 = MatchAgent.a(0, var6);
           if (param1 != 145) {
             field_C = (hd) null;
           }
@@ -443,7 +443,7 @@ final class fm extends qt {
           var3 = (gg) (ni.field_m.a(-3611, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Gb);
-            var4 = mo.a(0, var7);
+            var4 = MatchAgent.a(0, var7);
             if (var4 == null) {
               var4 = var3.field_Gb;
             }

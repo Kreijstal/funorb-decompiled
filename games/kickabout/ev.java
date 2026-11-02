@@ -13,8 +13,8 @@ final class ev extends tm {
           field_D = null;
           return;
         }
-        nu var2 = (nu) null;
-        ev.a((nu) null, 1, -15);
+        CommonGame var2 = (CommonGame) null;
+        ev.a((CommonGame) null, 1, -15);
         field_D = null;
     }
 
@@ -24,9 +24,9 @@ final class ev extends tm {
         }
         if (param0 != 10326) {
           ev.h(113);
-          return ma.field_y;
+          return NetworkGameClient.field_y;
         }
-        return ma.field_y;
+        return NetworkGameClient.field_y;
     }
 
     final li a(byte param0, li[] param1) {
@@ -62,10 +62,10 @@ final class ev extends tm {
         super(param0, param1, param2);
     }
 
-    final static void a(nu param0, int param1, int param2) {
+    final static void a(CommonGame param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
-        nl var7 = null;
+        FootballerAgent var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -141,7 +141,7 @@ final class ev extends tm {
           var15Lifetime1 = ug.a(0, var7.f(-116));
           var16Lifetime1 = lf.a((byte) -82, var7.a(true));
           on.a(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
-          q.field_d.d("DMG=" + var7.field_o + "  A=" + var7.field_u + "  T=" + var7.field_L, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
+          q.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.field_L, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ev.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

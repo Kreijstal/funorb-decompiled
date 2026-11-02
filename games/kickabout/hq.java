@@ -40,7 +40,7 @@ final class hq {
           if (param0 != 22531) {
             hq.a((byte) -59);
           }
-          stackIn_3_0 = wr.a(param1, param2, 1 << param3, param3, 1 << param1, 1);
+          stackIn_3_0 = FormationAgent.a(param1, param2, 1 << param3, param3, 1 << param1, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

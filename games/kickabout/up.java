@@ -680,7 +680,7 @@ final class up implements lv {
         if (param0 != -3) {
           return true;
         }
-        ua.field_g = 15000L + nj.a(param0 - 109);
+        GoalStateAgent.field_g = 15000L + nj.a(param0 - 109);
         return vj.field_c == 11 ? true : false;
     }
 

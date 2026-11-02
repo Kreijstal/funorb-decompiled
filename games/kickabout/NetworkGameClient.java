@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ma extends GameAppletShell {
+abstract class NetworkGameClient extends GameAppletShell {
     private int field_p;
     private long field_v;
     String field_z;
@@ -174,7 +174,7 @@ abstract class ma extends GameAppletShell {
           h.field_f = null;
         }
         if (!param0) {
-          ma.k((byte) 24);
+          NetworkGameClient.k((byte) 24);
         }
     }
 
@@ -249,7 +249,7 @@ abstract class ma extends GameAppletShell {
         int var4;
         var4 = Kickabout.field_G;
         if (param0 < 83) {
-          ma.b(false);
+          NetworkGameClient.b(false);
         }
         var2 = so.field_b;
         if (var2 < 64 &&
@@ -383,9 +383,9 @@ abstract class ma extends GameAppletShell {
             lr.b((byte) -116);
             ws.a((byte) -31);
             fc.a(uc.field_D, 2, -56);
-            oe.c(30929);
+            TeamSelectionAgent.c(30929);
             fc.field_d = true;
-            ua.field_g = 15000L + nj.a(-48);
+            GoalStateAgent.field_g = 15000L + nj.a(-48);
           }
         }
         if (es.field_h == -1 ||
@@ -401,7 +401,7 @@ abstract class ma extends GameAppletShell {
           }
           if (es.field_h != -1 &&
             0 != es.field_h) {
-            ua.field_g = nj.a(-65) + 15000L;
+            GoalStateAgent.field_g = nj.a(-65) + 15000L;
           }
         }
         if (es.field_h != -1 &&
@@ -451,7 +451,7 @@ abstract class ma extends GameAppletShell {
         if ((es.field_h != -1 &&
           es.field_h != 0 ||
           hq.a((byte) 10)) &&
-          nj.a(param0 ^ 34) >= ua.field_g) {
+          nj.a(param0 ^ 34) >= GoalStateAgent.field_g) {
           fc.field_d = false;
           if (-1 != es.field_h &&
             es.field_h != 0) {
@@ -497,7 +497,7 @@ abstract class ma extends GameAppletShell {
         }
         if (hl.field_d == 3 &&
           so.a(bw.field_b, true, gs.field_c, up.field_k) &&
-          ch.a(-2, up.field_k)) {
+          LoggedGoal.a(-2, up.field_k)) {
           oi.a(115);
           wm.c(param0 + 1);
           ts.field_b = jw.field_yb;
@@ -1084,7 +1084,7 @@ abstract class ma extends GameAppletShell {
                       }
                     }
                   } else {
-                    var21 = oe.field_n;
+                    var21 = TeamSelectionAgent.field_n;
                   }
                 } else {
                   var21 = w.field_c;
@@ -1404,11 +1404,11 @@ abstract class ma extends GameAppletShell {
         }
         if (param0 != 1) {
           CharSequence var2 = (CharSequence) null;
-          ma.a((byte) -6, (CharSequence) null, true);
+          NetworkGameClient.a((byte) -6, (CharSequence) null, true);
         }
     }
 
-    ma() {
+    NetworkGameClient() {
     }
 
     private final void j(byte param0) {
@@ -1449,7 +1449,7 @@ abstract class ma extends GameAppletShell {
         ws.a((byte) -74);
         fc.a(gd.field_b, var2, 71);
         fc.field_d = true;
-        ua.field_g = nj.a(121) + 15000L;
+        GoalStateAgent.field_g = nj.a(121) + 15000L;
         if (param0 < 114) {
           field_t = (pk) null;
         }

@@ -121,11 +121,11 @@ final class p {
         return dq.$cfr$intArgs$a$7f8aad568c81(112, param1, is.field_e);
     }
 
-    final void a(int param0, nu param1) {
+    final void a(int param0, CommonGame param1) {
         int[] dupTemp$8 = null;
         int var4 = 0;
-        tj var5 = null;
-        tj var6 = null;
+        BallAgent var5 = null;
+        BallAgent var6 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

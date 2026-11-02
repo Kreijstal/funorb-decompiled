@@ -29,11 +29,11 @@ final class ve extends cm implements vh {
     }
 
     final static int c(boolean param0) {
-        if (tj.field_u) {
+        if (BallAgent.field_u) {
           return -1;
         }
         if (bo.field_Cb.a(param0, "park")) {
-          tj.field_u = true;
+          BallAgent.field_u = true;
           bn.field_E = ng.a("benches", "park", 2, bo.field_Cb);
           tm.field_w = bg.a("park", bo.field_Cb, (byte) 70, "hotdog");
           pi.field_a = bg.a("park", bo.field_Cb, (byte) 59, "swing");

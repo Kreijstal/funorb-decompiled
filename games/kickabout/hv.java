@@ -17,7 +17,7 @@ final class hv {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = bg.a((byte) 116, jc.a(param1, param0));
+          var2 = bg.a((byte) 116, LoggedPlayer.a(param1, param0));
           if (param0) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
@@ -41,7 +41,7 @@ final class hv {
         }
     }
 
-    final static void a(boolean param0, nu param1, int param2) {
+    final static void a(boolean param0, CommonGame param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -65,8 +65,8 @@ final class hv {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        nl var18 = null;
-        nl var19 = null;
+        FootballerAgent var18 = null;
+        FootballerAgent var19 = null;
         var17 = Kickabout.field_G;
         try {
           var18 = param1.field_P[param2][0];
@@ -84,13 +84,13 @@ final class hv {
           var12 = -var9 + var5;
           stackIn_10_0 = (62500 <= var11 * var11 + var12 * var12) ? 0 : 1;
           var13 = stackIn_10_0;
-          if (var19.field_u != 14) {
-            stackIn_16_0 = (var19.field_u == 0) ? 1 : 0;
+          if (var19.action != 14) {
+            stackIn_16_0 = (var19.action == 0) ? 1 : 0;
           } else {
             stackIn_16_0 = 1;
           }
           var14 = stackIn_16_0;
-          if (3 == var19.field_u) {
+          if (3 == var19.action) {
             var19.field_G = uv.a(true, var9 - var7, -var6 + var8);
             if (-1 == param1.field_V.field_m) {
               var19.a((byte) -31, 0);
@@ -119,7 +119,7 @@ final class hv {
             if (var13 != 0 &&
               -1 == param1.field_V.field_m &&
               var10 < 400000) {
-              var19.field_u = 0;
+              var19.action = 0;
               ue.a(4, var8, var19, var9);
               return;
             }
@@ -128,14 +128,14 @@ final class hv {
             }
             gg.a(param2, 0, param1.field_V);
             ue.a(4, pu.field_zb[0], var18, pu.field_zb[1]);
-            if (var19.field_u == 0 &&
+            if (var19.action == 0 &&
               0 == var19.field_G) {
               var19.a((byte) -31, 14);
             }
             if (var13 != 0) {
               es.a(-120, var19, param2, param1.b((byte) -96), param1.field_V);
             }
-            if (var19.field_u == 14) {
+            if (var19.action == 14) {
               var19.a(uv.a(param0, -var19.a(true) + var9, var8 - var19.f(-98)), 26214);
               return;
             }

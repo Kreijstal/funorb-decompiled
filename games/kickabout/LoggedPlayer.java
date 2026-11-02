@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc {
+final class LoggedPlayer {
     static ut[] field_g;
-    boolean field_o;
+    boolean home;
     int field_c;
     int field_q;
     int field_n;
@@ -13,25 +13,25 @@ final class jc {
     int field_m;
     static String field_l;
     static String field_k;
-    int field_j;
+    int crosses;
     int field_i;
     private boolean field_d;
     private boolean field_b;
-    int field_p;
+    int resignTime;
     int field_f;
     static String[] field_e;
-    int field_h;
+    int headers;
 
     public final String toString() {
         StringBuilder var2 = new StringBuilder();
-        StringBuilder discarded$0 = var2.append(this.field_o ? "home" : "away");
-        StringBuilder discarded$1 = var2.append(" resigntime=" + this.field_p);
+        StringBuilder discarded$0 = var2.append(this.home ? "home" : "away");
+        StringBuilder discarded$1 = var2.append(" resigntime=" + this.resignTime);
         StringBuilder discarded$2 = var2.append(" reward=" + this.field_d);
         StringBuilder discarded$3 = var2.append(" member=" + this.field_b);
         StringBuilder discarded$4 = var2.append(" tackles=" + this.field_m + "." + this.field_c + "." + this.field_n + "." + this.field_a);
         StringBuilder discarded$5 = var2.append(" kicks=" + this.field_i + "." + this.field_f + "." + this.field_q);
-        StringBuilder discarded$6 = var2.append(" crosses=" + this.field_j);
-        StringBuilder discarded$7 = var2.append(" headers=" + this.field_h);
+        StringBuilder discarded$6 = var2.append(" crosses=" + this.crosses);
+        StringBuilder discarded$7 = var2.append(" headers=" + this.headers);
         StringBuilder discarded$8 = var2.append(" tot_goals=" + this.field_s);
         return "LoggedPlayer{" + var2.toString() + "}";
     }
@@ -51,7 +51,7 @@ final class jc {
         var7 = Kickabout.field_G;
         try {
           if (param1) {
-            jc.a(-79, true);
+            LoggedPlayer.a(-79, true);
           }
           var2_long = 0L;
           var4 = param0.length();
@@ -105,14 +105,14 @@ final class jc {
         return 2 * param0;
     }
 
-    final void a(boolean param0, jc param1) {
+    final void a(boolean param0, LoggedPlayer param1) {
         this.field_c = param1.field_c;
         this.field_s = param1.field_s;
         this.field_b = param1.field_b;
-        this.field_o = param1.field_o;
-        this.field_j = param1.field_j;
-        this.field_h = param1.field_h;
-        this.field_p = param1.field_p;
+        this.home = param1.home;
+        this.crosses = param1.crosses;
+        this.headers = param1.headers;
+        this.resignTime = param1.resignTime;
         this.field_a = param1.field_a;
         this.field_d = param1.field_d;
         this.field_f = param1.field_f;
@@ -147,8 +147,8 @@ final class jc {
         field_r = null;
     }
 
-    public jc() {
-        this.field_p = -1;
+    public LoggedPlayer() {
+        this.resignTime = -1;
     }
 
     static {

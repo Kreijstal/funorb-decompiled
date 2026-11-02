@@ -62,10 +62,10 @@ final class go {
         return 123;
     }
 
-    final static void a(int param0, nu param1, int param2, int param3, int param4, int param5) {
-        nl stackIn_4_0 = null;
+    final static void a(int param0, CommonGame param1, int param2, int param3, int param4, int param5) {
+        FootballerAgent stackIn_4_0 = null;
         int stackIn_5_1 = 0;
-        nl stackIn_28_0 = null;
+        FootballerAgent stackIn_28_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_32_2 = 0;
         int stackIn_34_1 = 0;
@@ -81,7 +81,7 @@ final class go {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        nl var11 = null;
+        FootballerAgent var11 = null;
         try {
           var11 = param1.field_P[param3][param4];
           var7 = param5 << 16;
@@ -96,12 +96,12 @@ final class go {
             }
             stackIn_4_0.field_n = stackIn_5_1;
             var11.field_j = 0;
-            if (var11.field_u != 0) {
+            if (var11.action != 0) {
               var11.a((byte) -31, 0);
             }
             return;
           }
-          if (var11.field_u == 11) {
+          if (var11.action == 11) {
             if ((8 & var11.field_G) != 0 &&
               var11.field_M > var7) {
               var11.field_M = var7;
@@ -149,7 +149,7 @@ final class go {
           }
           stackIn_28_0.field_G = stackIn_37_1 | stackIn_38_2;
           var11.field_L = 2;
-          var11.field_u = 11;
+          var11.action = 11;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

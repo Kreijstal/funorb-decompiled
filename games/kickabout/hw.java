@@ -38,7 +38,7 @@ final class hw extends IntrusiveNode {
           var3_int = param0.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = mo.a(0, param0);
+            var4 = MatchAgent.a(0, param0);
             if (var4 != null &&
               1 <= var4.length()) {
               if (ca.a(false, var4.charAt(0))) {

@@ -36,15 +36,15 @@ final class vp implements hc {
         int var8Lifetime1;
         var11 = Kickabout.field_G;
         try {
-          if (param1 == wr.field_l) {
+          if (param1 == FormationAgent.field_l) {
             return;
           }
           hq.field_a = false;
-          wr.field_l = param1;
+          FormationAgent.field_l = param1;
           var12 = new dd();
           Runtime.getRuntime().freeMemory();
-          if (wr.field_l != 0 &&
-            wr.field_l != 1) {
+          if (FormationAgent.field_l != 0 &&
+            FormationAgent.field_l != 1) {
             vf.field_K = new byte[5][][][];
             cb.field_b = new byte[5][][];
             var3 = 5;

@@ -171,7 +171,7 @@ final class rm extends qt {
           field_B = (boolean[]) null;
         }
         if (param0 == 1) {
-          return wr.field_f + (-this.field_i[param0].field_d - 5);
+          return FormationAgent.field_f + (-this.field_i[param0].field_d - 5);
         }
         return super.b(param0, -22667);
     }

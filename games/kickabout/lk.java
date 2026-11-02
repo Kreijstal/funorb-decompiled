@@ -13,12 +13,12 @@ final class lk extends IntrusiveNode {
     String field_h;
     tf field_j;
 
-    final static void a(int param0, nu param1, int param2, nl param3) {
+    final static void a(int param0, CommonGame param1, int param2, FootballerAgent param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        nl var7 = null;
-        nl stackIn_2_0 = null;
+        FootballerAgent var7 = null;
+        FootballerAgent stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -27,7 +27,7 @@ final class lk extends IntrusiveNode {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = (nl) (param3);
+          stackIn_2_0 = (FootballerAgent) (param3);
           if (param0 == 1) {
             stackIn_3_1 = 1;
           } else {

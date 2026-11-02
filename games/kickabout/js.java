@@ -80,9 +80,9 @@ abstract class js {
           rc.field_f = param1;
           wo.field_k = param5;
           or.field_c = param3;
-          gt.field_t = (bi) ((Object) new tb());
+          ParticipantStatus.field_t = (bi) ((Object) new tb());
           e.field_i = new eb(param2);
-          al.field_Ab = new n(gt.field_t, e.field_i);
+          al.field_Ab = new n(ParticipantStatus.field_t, e.field_i);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "js.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -235,7 +235,7 @@ abstract class js {
               }
               ow.field_e = un.field_e.a(8);
               var12 = (CharSequence) ((Object) ow.field_e);
-              kd.field_w = mo.a(0, var12);
+              kd.field_w = MatchAgent.a(0, var12);
               rl.field_n = un.field_e.h((byte) -128);
               un.field_c = jn.field_rb;
               if (vq.field_h.a((byte) -109) != qq.field_K) {

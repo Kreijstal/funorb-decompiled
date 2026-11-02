@@ -56,14 +56,14 @@ final class ko {
           this.field_d = rl.field_q;
         }
         if (this.field_i != 0 &&
-          nl.field_p != 0) {
+          FootballerAgent.field_p != 0) {
           if (0 >= this.field_d) {
             this.field_d = vj.field_b;
           }
           this.field_d = this.field_d - 1;
         }
         if (wj.field_A == 0 &&
-          nl.field_p == 0) {
+          FootballerAgent.field_p == 0) {
           this.field_i = 0;
         }
         if (this.field_i == 0 && (this.field_g ||

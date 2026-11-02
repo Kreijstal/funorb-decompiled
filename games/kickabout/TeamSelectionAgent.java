@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends mo {
+final class TeamSelectionAgent extends MatchAgent {
     static String field_j;
     static String field_m;
     private int field_o;
-    private gt[] field_h;
+    private ParticipantStatus[] field_h;
     static String field_l;
     private int field_i;
     static String field_n;
@@ -48,19 +48,19 @@ final class oe extends mo {
         return stackIn_11_0;
     }
 
-    final void a(byte param0, mo param1) {
-        oe var6 = null;
-        oe var3 = null;
+    final void a(byte param0, MatchAgent param1) {
+        TeamSelectionAgent var6 = null;
+        TeamSelectionAgent var3 = null;
         int var4 = 0;
         int var5 = Kickabout.field_G;
         try {
-          var6 = (oe) (param1);
+          var6 = (TeamSelectionAgent) (param1);
           var3 = var6;
           for (var4 = 0; this.field_i > var4; var4++) {
             this.field_k[var4] = var6.field_k[var4];
           }
           if (param0 > -52) {
-            this.field_h = (gt[]) null;
+            this.field_h = (ParticipantStatus[]) null;
           }
           this.field_o = var3.field_o;
         } catch (RuntimeException runtimeException) {
@@ -292,7 +292,7 @@ final class oe extends mo {
         return var2;
     }
 
-    oe(gt[] param0) {
+    TeamSelectionAgent(ParticipantStatus[] param0) {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

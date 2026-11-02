@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class it extends mo {
+final class it extends MatchAgent {
     boolean field_l;
     int[] field_o;
     static ji field_m;
@@ -14,7 +14,7 @@ final class it extends mo {
     static boolean field_n;
     boolean field_i;
 
-    final void a(byte param0, mo param1) {
+    final void a(byte param0, MatchAgent param1) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         it var6 = (it) (param1);
@@ -142,7 +142,7 @@ final class it extends mo {
         }
     }
 
-    final void a(mo param0, byte param1) {
+    final void a(MatchAgent param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

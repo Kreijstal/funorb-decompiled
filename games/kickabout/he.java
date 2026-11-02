@@ -154,7 +154,7 @@ final class he extends hd {
         var9 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            nw.field_b.field_R[ek.field_G].d(3511)) {
+            nw.field_b.participantStatus[ek.field_G].d(3511)) {
             var10 = (gm) (nw.field_b.a((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = lf.a((byte) -119, var10.field_bb >> 16);
@@ -166,9 +166,9 @@ final class he extends hd {
             for (var5 = 0; var5 < var4.length; var5++) {
               var6 = var4[var5];
               var7 = -1;
-              for (var8 = 0; nw.field_b.field_I > var8; var8++) {
+              for (var8 = 0; nw.field_b.playerCount > var8; var8++) {
                 if (nw.field_b.field_g[ek.field_G].field_p == nw.field_b.field_g[var8].field_p &&
-                  var6.field_h == nw.field_b.field_R[var8].field_g) {
+                  var6.field_h == nw.field_b.participantStatus[var8].field_g) {
                   var7 = var8;
                 }
                 var6.a(var2, var3, var7, -113);
@@ -192,7 +192,7 @@ final class he extends hd {
           this.field_Rb = param0;
           this.field_Nb = param1;
           var6 = (CharSequence) ((Object) this.field_Rb);
-          mo.a(0, var6);
+          MatchAgent.a(0, var6);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -249,7 +249,7 @@ final class he extends hd {
         try {
           this.field_Nb = param1;
           var5 = (CharSequence) ((Object) this.field_Rb);
-          mo.a(param0 ^ -2, var5);
+          MatchAgent.a(param0 ^ -2, var5);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

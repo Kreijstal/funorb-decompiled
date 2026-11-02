@@ -194,11 +194,11 @@ final class fw extends ta {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (gt.field_t.field_o >= 4) {
-            if (gt.field_t.field_l == -1) {
+          if (ParticipantStatus.field_t.field_o >= 4) {
+            if (ParticipantStatus.field_t.field_l == -1) {
               return 3;
             }
-            if (gt.field_t.field_l == -2) {
+            if (ParticipantStatus.field_t.field_l == -2) {
               return 4;
             }
             return 1;
@@ -249,7 +249,7 @@ final class fw extends ta {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            gt.field_t.a(je.field_e, 20, ac.field_f);
+            ParticipantStatus.field_t.a(je.field_e, 20, ac.field_f);
             je.field_e = null;
             ci.field_a = 0;
             iv.field_o = null;

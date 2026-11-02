@@ -203,7 +203,7 @@ final class lo extends jd {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (jc.a(var3, false) != 0L) {
+            if (LoggedPlayer.a(var3, false) != 0L) {
               return;
             }
           }
@@ -275,7 +275,7 @@ final class lo extends jd {
             return stackIn_8_0;
           }
           if (hf.a(var5, -3)) {
-            stackIn_11_0 = ua.field_h;
+            stackIn_11_0 = GoalStateAgent.field_h;
             return stackIn_11_0;
           }
           if (qe.a(true, var5)) {

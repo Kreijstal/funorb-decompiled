@@ -211,7 +211,7 @@ final class tr implements hc {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = mo.a(0, var6);
+          var2 = MatchAgent.a(0, var6);
           if (param1 != 40) {
             field_g = (String) null;
           }
@@ -222,7 +222,7 @@ final class tr implements hc {
           var3 = (gg) (kw.field_b.a(param1 ^ -3635, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Gb);
-            var4 = mo.a(param1 ^ 40, var7);
+            var4 = MatchAgent.a(param1 ^ 40, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;

@@ -28,7 +28,7 @@ final class bg extends am {
         var9 = Kickabout.field_G;
         try {
           if (param1 == 1) {
-            this.field_u = wr.a(param2.a(param0 ^ 100), 2, '<');
+            this.field_u = FormationAgent.a(param2.a(param0 ^ 100), 2, '<');
           } else {
             if (2 == param1) {
               var4_int = param2.h((byte) -122);

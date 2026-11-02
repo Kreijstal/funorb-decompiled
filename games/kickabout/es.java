@@ -41,12 +41,12 @@ final class es extends IntrusiveNode {
         this.field_j = param0;
     }
 
-    final static void a(int param0, nl param1, int param2, nl param3, tj param4) {
+    final static void a(int param0, FootballerAgent param1, int param2, FootballerAgent param3, BallAgent param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        tj var8 = null;
+        BallAgent var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -61,8 +61,8 @@ final class es extends IntrusiveNode {
           }
           var5_int = param1.f(-92) - param4.a(true);
           if (param0 >= -56) {
-            var8 = (tj) null;
-            es.a(-29, (nl) null, -8, (nl) null, (tj) null);
+            var8 = (BallAgent) null;
+            es.a(-29, (FootballerAgent) null, -8, (FootballerAgent) null, (BallAgent) null);
           }
           var6 = param1.a(true) - param4.c(879306160);
           var7 = nb.a(param1, 170);

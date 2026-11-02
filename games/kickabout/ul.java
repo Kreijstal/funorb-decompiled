@@ -131,7 +131,7 @@ final class ul {
         int var2;
         int var3;
         int var4;
-        tj var5;
+        BallAgent var5;
         var4 = Kickabout.field_G;
         var5 = et.field_d.field_V;
         if (param0 != 11) {

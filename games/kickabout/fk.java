@@ -45,8 +45,8 @@ final class fk extends hs {
 
     final void e(int param0) {
         this.c(112);
-        this.a(false, vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[this.field_a.field_t][this.field_a.field_m]}));
-        this.b(param0 - 2352, this.field_a.field_v);
+        this.a(false, vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[this.field_a.surface][this.field_a.tier]}));
+        this.b(param0 - 2352, this.field_a.phaseTime);
         this.a(150, 17709);
         if (param0 != 1) {
           this.e(-98);
@@ -87,7 +87,7 @@ final class fk extends hs {
         }
     }
 
-    fk(nu param0, int param1, boolean param2) {
+    fk(CommonGame param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
         this.field_l = false;
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tq extends tm {
-    static nu field_F;
+    static CommonGame field_F;
     static String field_E;
     static String field_C;
     static String field_D;
@@ -11,12 +11,12 @@ final class tq extends tm {
     final static void g(byte param0) {
         if (param0 == -47) {
           eq.a(0);
-          qn.a(param0 - 24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, oe.field_f);
+          qn.a(param0 - 24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, TeamSelectionAgent.field_f);
           return;
         }
         tq.a(83, false, -82, 24, true, (byte) 68);
         eq.a(0);
-        qn.a(param0 - 24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, oe.field_f);
+        qn.a(param0 - 24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, TeamSelectionAgent.field_f);
     }
 
     final static ut[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {

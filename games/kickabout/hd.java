@@ -370,7 +370,7 @@ class hd extends iv {
           var3 = 0;
         }
         if (2 == ov.field_b &&
-          !jc.b(-3197)) {
+          !LoggedPlayer.b(-3197)) {
           var3 = 0;
         }
         if (84 == cc.field_e) {
@@ -442,7 +442,7 @@ class hd extends iv {
               }
             }
             var16 = var7Lifetime6 + var15 + ": ";
-            var5Lifetime1 = var5Lifetime1 - nl.field_i.a(var16);
+            var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.a(var16);
           } else {
             var18 = (CharSequence) ((Object) at.field_Kb);
             var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, b.field_F, new String[]{hv.a(false, var18)});
@@ -451,15 +451,15 @@ class hd extends iv {
             var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
             var7Lifetime6 = var8;
             var7Lifetime6 = var8;
-            var9 = nl.field_i.a(var14);
-            var10 = nl.field_i.a(var8);
+            var9 = FootballerAgent.field_i.a(var14);
+            var10 = FootballerAgent.field_i.a(var8);
             if (var10 >= var9) {
               var5Lifetime1 = var5Lifetime1 - var10;
             } else {
               var5Lifetime1 = var5Lifetime1 - var9;
             }
           }
-          if (nl.field_i.a(cq.field_m.toString()) > var5Lifetime1) {
+          if (FootballerAgent.field_i.a(cq.field_m.toString()) > var5Lifetime1) {
             dj.a(cq.field_m.length() - 1, ' ', -11407, cq.field_m);
           }
         }
@@ -556,10 +556,10 @@ class hd extends iv {
         }
         stackIn_31_1 = (!bd.field_D) && (on.field_b <= el.field_A) && (el.field_A < on.field_c) && (on.field_e <= n.field_m) && (n.field_m < on.field_h);
         this.field_Q = stackIn_31_1;
-        if (nl.field_p == 0) {
+        if (FootballerAgent.field_p == 0) {
           this.field_qb = 0;
         }
-        stackIn_39_1 = (this.field_Q) && (this.field_qb == nl.field_p) && (param2);
+        stackIn_39_1 = (this.field_Q) && (this.field_qb == FootballerAgent.field_p) && (param2);
         this.field_gb = stackIn_39_1;
         if (null != this.field_jb) {
           var13 = (hd) (this.field_jb.d(param1 ^ 9032));

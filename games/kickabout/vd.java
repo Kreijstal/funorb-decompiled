@@ -47,7 +47,7 @@ final class vd {
         int var1Lifetime1;
         if (param0 == 82) {
           if (null != um.field_e &&
-            5 == um.field_e.field_o.field_u) {
+            5 == um.field_e.field_o.phase) {
             return true;
           }
           if (um.field_e == null &&
@@ -62,7 +62,7 @@ final class vd {
         }
         field_b = (String) null;
         if (null != um.field_e &&
-          5 == um.field_e.field_o.field_u) {
+          5 == um.field_e.field_o.phase) {
           return true;
         }
         if (um.field_e != null) {

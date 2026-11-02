@@ -57,7 +57,7 @@ final class gb extends wi {
         int var6 = (this.field_i >> 1) + (this.field_g + param3);
         rv var8 = this.field_J.c(param1 - 24472);
         if (var8 == mn.field_c) {
-          var15 = jc.field_g[0];
+          var15 = LoggedPlayer.field_g[0];
           var9 = var15.field_o << 1;
           var10 = var15.field_v << 1;
           if (null == nq.field_G) {
@@ -92,7 +92,7 @@ final class gb extends wi {
           return;
         }
         if (var8 == en.field_p) {
-          var16 = jc.field_g[0];
+          var16 = LoggedPlayer.field_g[0];
           var9Lifetime1 = var16.field_o << 1;
           var10Lifetime1 = var16.field_v << 1;
           if (null == nq.field_G) {
@@ -127,14 +127,14 @@ final class gb extends wi {
           return;
         }
         if (jt.field_Bb == var8) {
-          var13 = jc.field_g[2];
+          var13 = LoggedPlayer.field_g[2];
           var13.c(-(var13.field_q >> 1) + var5, -(var13.field_w >> 1) + var6, 256);
           return;
         }
         if (var8 != he.field_yb) {
           return;
         }
-        ut var12 = jc.field_g[1];
+        ut var12 = LoggedPlayer.field_g[1];
         var12.c(-(var12.field_q >> 1) + var5, var6 - (var12.field_w >> 1), 256);
     }
 

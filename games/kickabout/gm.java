@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gm extends nl {
+final class gm extends FootballerAgent {
     private boolean field_ab;
     private int field_W;
     private double field_H;
@@ -175,7 +175,7 @@ final class gm extends nl {
         if (param1 <= 39) {
           this.field_Y = false;
         }
-        int[] var6 = !this.field_jb ? gt.field_f : dt.field_f;
+        int[] var6 = !this.field_jb ? ParticipantStatus.field_f : dt.field_f;
         int[] var3 = var6;
         int var4 = var6[0] * t.field_o[param0] >> 16;
         int var5 = t.field_f[param0] * var6[0] >> 16;
@@ -206,8 +206,8 @@ final class gm extends nl {
         if (this.field_V) {
           var7 = 2047 & var7 + 1024;
         }
-        if (this.field_l &&
-          this.field_u == 4) {
+        if (this.megamode &&
+          this.action == 4) {
           var7 = this.field_L * (2048 / vf.field_I[4]) + var7 & 2047;
         }
         var8.a(0, var7, 0, param1, 0, 0, 0, param0);
@@ -317,7 +317,7 @@ final class gm extends nl {
         if (th.field_d &&
           this.field_N.field_q != 4) {
           var8_ref_String__ = new String[]{"action:", "action_time:", "dash_delay"};
-          var9_ref_String__ = new String[]{Integer.toString(this.field_u), Integer.toString(this.field_L), Integer.toString(this.field_C)};
+          var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.field_L), Integer.toString(this.field_C)};
           var10 = new StringBuilder("(");
           eh.a(this.field_M, 100, var10);
           discarded$6 = var10.append(", ");
@@ -369,7 +369,7 @@ final class gm extends nl {
           return;
         }
         var8 = 300;
-        if (this.field_J == 4 &&
+        if (this.archetype == 4 &&
           15 == this.field_ob) {
           stackIn_18_0 = ia.field_c;
           stackIn_19_1 = (this.a(true) >= 672) ? false : true;
@@ -378,7 +378,7 @@ final class gm extends nl {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.field_l && (1 == tb.field_v ||
+        if (!this.megamode && (1 == tb.field_v ||
           this.field_ab ||
           this.field_T)) {
           PacketBuffer.a(-88, kw.field_f);
@@ -408,7 +408,7 @@ final class gm extends nl {
         }
         else {
           var2 = (var2 << 8) / hw.field_i;
-          if (this.field_l) {
+          if (this.megamode) {
             var2 = var2 >> 1;
           }
           this.a(var2, var8, var3, var4, (byte) -75);
@@ -418,10 +418,10 @@ final class gm extends nl {
         }
     }
 
-    gm(vn param0, int param1, boolean param2, nl param3) {
+    gm(vn param0, int param1, boolean param2, FootballerAgent param3) {
         this(param0, param1, param2);
         try {
-          this.a(param3.field_y, param3.field_N, 3);
+          this.a(param3.member, param3.field_N, 3);
           this.a(param3, false);
           this.a(this.field_M, false, this.field_v, this.field_w);
         } catch (RuntimeException runtimeException) {
@@ -565,8 +565,8 @@ final class gm extends nl {
         this.field_V = stackIn_12_1;
         var4 = param1 ? 1 : 0;
         var5 = 0;
-        if (this.field_u == 5 ||
-          this.field_u == 6) {
+        if (this.action == 5 ||
+          this.action == 6) {
           stackIn_18_0 = (this.a(true) >= 672) ? 0 : 1;
           var6 = stackIn_18_0;
           stackIn_20_0 = var6;
@@ -622,23 +622,23 @@ final class gm extends nl {
             var7Lifetime1 = 16;
           }
           this.field_ib = (int)((double)this.field_ib - var8);
-          if (this.field_u == 4) {
+          if (this.action == 4) {
             this.field_ib = this.field_ib - 3;
           }
         }
         if (this.field_ib < 0) {
           this.h((byte) 109);
         }
-        if (14 == this.field_u) {
+        if (14 == this.action) {
           var8 = 1.5;
           var7Lifetime1 = 15;
         }
-        if (this.field_u == 2 &&
+        if (this.action == 2 &&
           this.field_R == var6Lifetime1) {
           var7Lifetime1 = 4;
         }
-        if (this.field_u != 3 &&
-          this.field_u != 12) {
+        if (this.action != 3 &&
+          this.action != 12) {
           this.field_db = false;
         } else {
           var7Lifetime1 = 0;
@@ -656,30 +656,30 @@ final class gm extends nl {
             this.field_db = true;
           }
         }
-        if (this.field_u == 13) {
+        if (this.action == 13) {
           var8 = 0.38;
           var7Lifetime1 = 8;
         }
-        if (10 == this.field_u) {
+        if (10 == this.action) {
           var7Lifetime1 = 6;
           var8 = 2.0;
           if (this.field_L > vf.field_I[10]) {
             var7Lifetime1 = 7;
           }
         }
-        if (5 == this.field_u) {
+        if (5 == this.action) {
           stackIn_86_0 = (var4 == 0) ? 14 : 12;
           var7Lifetime1 = stackIn_86_0;
         }
-        if (this.field_u == 6) {
+        if (this.action == 6) {
           var8 = 0.7;
           stackIn_92_0 = (var4 != 0) ? 11 : 13;
           var7Lifetime1 = stackIn_92_0;
         }
-        if (this.field_u == 9) {
+        if (this.action == 9) {
           var7Lifetime1 = 2;
         }
-        if (this.field_u != 7) {
+        if (this.action != 7) {
           this.field_Y = false;
         } else {
           if (!this.field_Y &&
@@ -710,32 +710,32 @@ final class gm extends nl {
           }
           var7Lifetime1 = 1;
         }
-        if (this.field_u == 8) {
+        if (this.action == 8) {
           var7Lifetime1 = 2;
           var8 = 0.0;
         }
-        if (this.field_u == 11 &&
+        if (this.action == 11 &&
           this.e(292603688) &&
           param0) {
           var7Lifetime1 = 9;
         }
-        if (this.field_u == 4) {
+        if (this.action == 4) {
           var8 = 2.0;
         }
-        if (this.field_u == 1 &&
+        if (this.action == 1 &&
           this.e(292603688)) {
-          var8 = (!this.field_N.c(this.field_y, (byte) -62)) ? 0.25 : 0.5;
+          var8 = (!this.field_N.c(this.member, (byte) -62)) ? 0.25 : 0.5;
         }
         if (!this.field_nb) {
           this.b((byte) -128, var7Lifetime1);
         }
-        if (this.field_l) {
-          if (7 == this.field_u &&
+        if (this.megamode) {
+          if (7 == this.action &&
             this.field_L == 1) {
             dn.b(-5, 10);
           }
           var8 = var8 / 2.0;
-          if (4 == this.field_u) {
+          if (4 == this.action) {
             var8 = var8 * 2.0;
           }
         }
@@ -764,13 +764,13 @@ final class gm extends nl {
             }
           }
         }
-        if (this.field_u == 4 &&
-          this.field_N.c(this.field_y, -94) &&
+        if (this.action == 4 &&
+          this.field_N.c(this.member, -94) &&
           this.field_L % 2 == 0) {
           fs.a(100, this, 109);
         }
-        if (3 == this.field_u &&
-          this.field_N.a((byte) 44, this.field_y) &&
+        if (3 == this.action &&
+          this.field_N.a((byte) 44, this.member) &&
           this.field_L % 2 == 0) {
           fs.a(60, this, 104);
         }
@@ -790,12 +790,12 @@ final class gm extends nl {
     private final int f(byte param0) {
         int var2;
         int stackIn_20_0 = 0;
-        if ((this.field_u == 13 ||
-          this.field_u == 3 ||
-          this.field_u == 10 ||
-          this.field_u == 12) &&
+        if ((this.action == 13 ||
+          this.action == 3 ||
+          this.action == 10 ||
+          this.action == 12) &&
           (this.field_s ||
-          !this.field_N.a((byte) 44, this.field_y))) {
+          !this.field_N.a((byte) 44, this.member))) {
           return (uv.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
         var2 = -68 / ((param0 + 17) / 51);
@@ -823,7 +823,7 @@ final class gm extends nl {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
         sn.field_e = null;
-        ma.b(true);
+        NetworkGameClient.b(true);
         param11 = in.a(param4, 50, param5, param11, param13, param12, param1);
         ud.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
         sb.a(param9, false, param8);
@@ -877,8 +877,8 @@ final class gm extends nl {
         field_S = null;
     }
 
-    final void a(mo param0, int param1, int param2, int param3) {
-        nl var5 = null;
+    final void a(MatchAgent param0, int param1, int param2, int param3) {
+        FootballerAgent var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -892,7 +892,7 @@ final class gm extends nl {
           if (param3 <= 38) {
             return;
           }
-          var5 = (nl) (param0);
+          var5 = (FootballerAgent) (param0);
           if (this.a(-93, var5, param2, param1)) {
             return;
           }

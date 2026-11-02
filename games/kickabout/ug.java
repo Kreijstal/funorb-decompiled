@@ -156,7 +156,7 @@ final class ug {
             var6 = (gg) (var4.c(33));
           }
           if (nq.field_F.field_Eb.field_sb != 0) {
-            k.field_m = new sl(nq.field_F.field_Eb.field_F, nq.field_F.field_Eb.field_T, nq.field_F.field_Eb.field_q, nq.field_F.field_Eb.field_mb, gt.field_j, pn.field_u, dw.field_e, dw.field_e);
+            k.field_m = new sl(nq.field_F.field_Eb.field_F, nq.field_F.field_Eb.field_T, nq.field_F.field_Eb.field_q, nq.field_F.field_Eb.field_mb, ParticipantStatus.field_j, pn.field_u, dw.field_e, dw.field_e);
             fs.field_b = 2;
           }
           if (0 == nq.field_F.field_zb.field_sb) {

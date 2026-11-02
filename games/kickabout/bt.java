@@ -100,7 +100,7 @@ final class bt {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        nl var2_ref_nl = null;
+        FootballerAgent var2_ref_nl = null;
         gm var4 = null;
         int var5 = 0;
         int var2Lifetime1;
@@ -158,7 +158,7 @@ final class bt {
           if (ks.field_e == 8) {
             var2Lifetime3 = 1;
             stackIn_50_0 = var2Lifetime3;
-            if (ld.field_f.field_u == 0 &&
+            if (ld.field_f.action == 0 &&
               tc.a(8, (byte) 114, 3932160, ld.field_f, 16384000)) {
               stackIn_51_1 = 1;
             } else {
@@ -225,7 +225,7 @@ final class bt {
           var2Lifetime6 = 1;
           var2Lifetime6 = var2Lifetime6 != 0 & tc.a(12, (byte) 113, 3276800, mh.field_k, 58982400) ? 1 : 0;
           if (var2Lifetime6 != 0 &&
-            mh.field_k.field_u == 0 &&
+            mh.field_k.action == 0 &&
             0 == et.field_d.field_V.field_m) {
             ej.b(200, -2, -100, 30);
           }

@@ -427,8 +427,8 @@ final class ba extends sr {
           IOException var2 = null;
           var3 = Kickabout.field_G;
           try {
-            if (null != gt.field_t) {
-              gt.field_t.b((byte) 109);
+            if (null != ParticipantStatus.field_t) {
+              ParticipantStatus.field_t.b((byte) 109);
             }
             if (null != e.field_i) {
               e.field_i.b(109);

@@ -159,7 +159,7 @@ final class kw {
             if (param1 >= -99) {
               kw.d((byte) -40);
             }
-            vd.field_c = nl.field_p;
+            vd.field_c = FootballerAgent.field_p;
             dn.field_yb = sm.field_q;
             ip.field_a = wj.field_A;
             kf.field_Eb = vc.field_y;
@@ -176,7 +176,7 @@ final class kw {
               if (param1 >= -99) {
                 kw.d((byte) -40);
               }
-              vd.field_c = nl.field_p;
+              vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
               ip.field_a = wj.field_A;
               kf.field_Eb = vc.field_y;
@@ -202,7 +202,7 @@ final class kw {
               if (param1 >= -99) {
                 kw.d((byte) -40);
               }
-              vd.field_c = nl.field_p;
+              vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
               ip.field_a = wj.field_A;
               kf.field_Eb = vc.field_y;
@@ -241,7 +241,7 @@ final class kw {
             if (param1 >= -99) {
               kw.d((byte) -40);
             }
-            vd.field_c = nl.field_p;
+            vd.field_c = FootballerAgent.field_p;
             dn.field_yb = sm.field_q;
             ip.field_a = wj.field_A;
             kf.field_Eb = vc.field_y;
@@ -269,7 +269,7 @@ final class kw {
               if (param1 >= -99) {
                 kw.d((byte) -40);
               }
-              vd.field_c = nl.field_p;
+              vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
               ip.field_a = wj.field_A;
               kf.field_Eb = vc.field_y;
@@ -286,7 +286,7 @@ final class kw {
                 if (param1 >= -99) {
                   kw.d((byte) -40);
                 }
-                vd.field_c = nl.field_p;
+                vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
                 ip.field_a = wj.field_A;
                 kf.field_Eb = vc.field_y;
@@ -312,7 +312,7 @@ final class kw {
                 if (param1 >= -99) {
                   kw.d((byte) -40);
                 }
-                vd.field_c = nl.field_p;
+                vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
                 ip.field_a = wj.field_A;
                 kf.field_Eb = vc.field_y;
@@ -350,7 +350,7 @@ final class kw {
               if (param1 >= -99) {
                 kw.d((byte) -40);
               }
-              vd.field_c = nl.field_p;
+              vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
               ip.field_a = wj.field_A;
               kf.field_Eb = vc.field_y;
@@ -368,7 +368,7 @@ final class kw {
                 if (param1 >= -99) {
                   kw.d((byte) -40);
                 }
-                vd.field_c = nl.field_p;
+                vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
                 ip.field_a = wj.field_A;
                 kf.field_Eb = vc.field_y;
@@ -405,7 +405,7 @@ final class kw {
                 if (param1 >= -99) {
                   kw.d((byte) -40);
                 }
-                vd.field_c = nl.field_p;
+                vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
                 ip.field_a = wj.field_A;
                 kf.field_Eb = vc.field_y;
@@ -421,7 +421,7 @@ final class kw {
                   if (param1 >= -99) {
                     kw.d((byte) -40);
                   }
-                  vd.field_c = nl.field_p;
+                  vd.field_c = FootballerAgent.field_p;
                   dn.field_yb = sm.field_q;
                   ip.field_a = wj.field_A;
                   kf.field_Eb = vc.field_y;
@@ -447,7 +447,7 @@ final class kw {
                   if (param1 >= -99) {
                     kw.d((byte) -40);
                   }
-                  vd.field_c = nl.field_p;
+                  vd.field_c = FootballerAgent.field_p;
                   dn.field_yb = sm.field_q;
                   ip.field_a = wj.field_A;
                   kf.field_Eb = vc.field_y;

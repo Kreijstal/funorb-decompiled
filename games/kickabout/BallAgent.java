@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tj extends mo {
+class BallAgent extends MatchAgent {
     int field_j;
     int field_i;
     int field_q;
@@ -9,9 +9,9 @@ class tj extends mo {
     int field_o;
     int field_h;
     int field_v;
-    int field_A;
+    int highFriction;
     static ff field_z;
-    int field_l;
+    int modelId;
     int field_t;
     static boolean field_u;
     static kg[] field_f;
@@ -19,7 +19,7 @@ class tj extends mo {
     boolean field_k;
     static String field_g;
     static String[][] field_w;
-    int field_r;
+    int uncatchable;
     int field_s;
     int field_n;
     int field_m;
@@ -46,9 +46,9 @@ class tj extends mo {
         var2 = fj.a(-40, var2 ^ this.field_n);
         var2 = fj.a(-40, this.field_m ^ var2);
         var2 = fj.a(-40, this.field_s ^ var2);
-        var2 = fj.a(-40, var2 ^ this.field_r);
-        var2 = fj.a(-40, this.field_A ^ var2);
-        var2 = fj.a(-40, this.field_l ^ var2);
+        var2 = fj.a(-40, var2 ^ this.uncatchable);
+        var2 = fj.a(-40, this.highFriction ^ var2);
+        var2 = fj.a(-40, this.modelId ^ var2);
         return var2;
     }
 
@@ -78,9 +78,9 @@ class tj extends mo {
         StringBuilder discarded$4 = var2.append(",");
         eh.a(this.field_n, 100, var2);
         StringBuilder discarded$5 = var2.append("]\tposessor=" + this.field_m + "/" + this.field_s);
-        StringBuilder discarded$6 = var2.append("\tuncatchable=" + this.field_r);
-        StringBuilder discarded$7 = var2.append("\thigh_friction=" + this.field_A);
-        StringBuilder discarded$8 = var2.append("\tmodel_id=" + this.field_l);
+        StringBuilder discarded$6 = var2.append("\tuncatchable=" + this.uncatchable);
+        StringBuilder discarded$7 = var2.append("\thigh_friction=" + this.highFriction);
+        StringBuilder discarded$8 = var2.append("\tmodel_id=" + this.modelId);
         return var2.toString();
     }
 
@@ -211,9 +211,9 @@ class tj extends mo {
           if (!mu.a(param0, (byte) -39)) {
             return;
           }
-          this.field_r = hq.a(22531, 9, param0, 0);
-          this.field_A = hq.a(22531, 5, param0, 0);
-          this.field_l = param0.l(4, 59);
+          this.uncatchable = hq.a(22531, 9, param0, 0);
+          this.highFriction = hq.a(22531, 5, param0, 0);
+          this.modelId = param0.l(4, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,12 +240,12 @@ class tj extends mo {
           this.field_q = param0.l(32, 59);
           this.field_h = param0.l(32, 59);
           this.field_n = param0.l(32, 59);
-          this.field_r = param0.l(10, 59);
-          this.field_A = param0.l(5, 59);
+          this.uncatchable = param0.l(10, 59);
+          this.highFriction = param0.l(5, 59);
           if (param1 >= -94) {
             discarded$0 = this.b(false);
           }
-          this.field_l = param0.l(4, 59);
+          this.modelId = param0.l(4, 59);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -253,7 +253,7 @@ class tj extends mo {
 
     final boolean g(int param0) {
         int var2 = 58 / ((param0 + 51) / 54);
-        if (this.field_r != 0) {
+        if (this.uncatchable != 0) {
           return false;
         }
         if (this.b(true) >= 30) {
@@ -268,14 +268,14 @@ class tj extends mo {
         return false;
     }
 
-    final void a(byte param0, mo param1) {
-        tj var5 = null;
+    final void a(byte param0, MatchAgent param1) {
+        BallAgent var5 = null;
         try {
-          var5 = (tj) (param1);
+          var5 = (BallAgent) (param1);
           this.field_m = var5.field_m;
           this.field_n = var5.field_n;
           this.field_s = var5.field_s;
-          this.field_l = var5.field_l;
+          this.modelId = var5.modelId;
           this.field_o = var5.field_o;
           this.field_v = var5.field_v;
           if (param0 > -52) {
@@ -285,8 +285,8 @@ class tj extends mo {
           this.field_t = var5.field_t;
           this.field_q = var5.field_q;
           this.field_p = var5.field_p;
-          this.field_A = var5.field_A;
-          this.field_r = var5.field_r;
+          this.highFriction = var5.highFriction;
+          this.uncatchable = var5.uncatchable;
           this.field_i = var5.field_i;
           this.field_h = var5.field_h;
         } catch (RuntimeException runtimeException) {
@@ -312,13 +312,13 @@ class tj extends mo {
         int[] var17 = null;
         try {
           this.field_x = false;
-          if (this.field_r > 0) {
-            this.field_r = this.field_r - 1;
+          if (this.uncatchable > 0) {
+            this.uncatchable = this.uncatchable - 1;
           }
           this.field_y = false;
           this.field_k = false;
-          if (this.field_A > 0) {
-            this.field_A = this.field_A - 1;
+          if (this.highFriction > 0) {
+            this.highFriction = this.highFriction - 1;
           }
           var4_int = 90 / ((-3 - param0) / 59);
           this.field_j = -1;
@@ -359,7 +359,7 @@ class tj extends mo {
             this.field_v == 0) {
             return;
           }
-          if (this.field_A > 10) {
+          if (this.highFriction > 10) {
             stackIn_38_0 = 60293L;
           } else {
             if (this.field_v >= 65536) {
@@ -395,13 +395,13 @@ class tj extends mo {
         }
     }
 
-    public tj() {
+    public BallAgent() {
         this.field_j = -1;
         this.field_o = -1;
         this.field_s = 0;
         this.field_i = -1;
         this.field_m = -1;
-        this.field_A = 0;
+        this.highFriction = 0;
     }
 
     static {

@@ -77,7 +77,7 @@ final class wq {
           if (wp.field_f) {
             var1_int++;
           }
-          if (wl.field_g) {
+          if (LineupAgent.field_g) {
             var1_int++;
           }
           if (fa.field_j != 0) {
@@ -86,9 +86,9 @@ final class wq {
           if (pb.field_B) {
             var1_int++;
           }
-          if (wl.field_o &&
+          if (LineupAgent.field_o &&
             null != um.field_e) {
-            var1_int = var1_int + um.field_e.field_o.field_I;
+            var1_int = var1_int + um.field_e.field_o.playerCount;
           }
           if (var1_int == 0) {
             return;
@@ -114,9 +114,9 @@ final class wq {
             pb.field_C.c(var9, 620, var2, 16777215, 0);
             var2 += 20;
           }
-          if (wl.field_o &&
+          if (LineupAgent.field_o &&
             null != um.field_e) {
-            for (var3 = 0; var3 < um.field_e.field_o.field_I; var3++) {
+            for (var3 = 0; var3 < um.field_e.field_o.playerCount; var3++) {
               stackIn_42_0 = (~var3 == ~um.field_e.field_h) ? 16777215 : 11184812;
               var4 = stackIn_42_0;
               var10 = um.field_e.field_o.field_S[var3] + ": " + um.field_e.field_z[var3] + "ms / team " + um.field_e.field_o.field_g[var3].field_p;
@@ -159,7 +159,7 @@ final class wq {
             pb.field_C.c(var3_ref_String, 620, var2, 16777215, 0);
             var2 += 20;
           }
-          if (wl.field_g) {
+          if (LineupAgent.field_g) {
             var3Lifetime1 = pq.field_J / 5;
             var4Lifetime1 = pq.field_J % 5;
             if (var4Lifetime1 != 0) {

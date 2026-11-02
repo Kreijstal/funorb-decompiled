@@ -12,7 +12,7 @@ final class br {
         String var3 = lw.field_a[param1];
         if (param0 == -98) {
           if (th.field_a[param1]) {
-            var3 = ma.field_w;
+            var3 = NetworkGameClient.field_w;
             var4 = var3;
             var4 = var3;
           }
@@ -26,7 +26,7 @@ final class br {
         }
         field_b = (String) null;
         if (th.field_a[param1]) {
-          var3 = ma.field_w;
+          var3 = NetworkGameClient.field_w;
           var4 = var3;
           var4 = var3;
         }

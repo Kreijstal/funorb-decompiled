@@ -64,7 +64,7 @@ final class od extends sr {
         field_o = null;
     }
 
-    final static void a(int[] param0, int param1, gt[] param2, int param3) {
+    final static void a(int[] param0, int param1, ParticipantStatus[] param2, int param3) {
         int dupTemp$0 = 0;
         int var12 = 0;
         it[] stackIn_6_0 = null;
@@ -135,13 +135,13 @@ final class od extends sr {
           for (var9Lifetime1 = 0; 2 > var9Lifetime1; var9Lifetime1++) {
             on.a(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
             on.a(643 - (et.field_c + rn.field_c + 2), var25[var9Lifetime1], rn.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
-            var10 = vt.field_c.field_X.field_j[var9Lifetime1];
+            var10 = vt.field_c.field_X.score[var9Lifetime1];
             if (var10 > 99) {
               var10 = 99;
             }
             ((hu) ((Object) var4)).d(Integer.toString(var10), -2 + (-rn.field_c + 644 - et.field_c + (rn.field_c >> 1)) + 1, (var24[var9Lifetime1] + rn.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
             var11 = 0;
-            for (var12 = 0; vt.field_c.field_I > var12; var12++) {
+            for (var12 = 0; vt.field_c.playerCount > var12; var12++) {
               if (~var9Lifetime1 == ~vt.field_c.field_g[var12].field_p) {
                 var13 = 1 + (rb.field_yb + var11 * rn.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
@@ -153,11 +153,11 @@ final class od extends sr {
                   us.field_j < var13) {
                   wa.a((byte) 52, vo.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{kn.field_G[var12], var14 + ""}));
                 }
-                stackIn_29_0 = (vt.field_c.field_R[var12].d(3511)) ? 16777215 : 11184810;
+                stackIn_29_0 = (vt.field_c.participantStatus[var12].d(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
                 ((hu) ((Object) var4)).a(kn.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
-                if (vt.field_c.field_R[var12].d(3511)) {
-                  if (vt.field_c.field_R[var12].field_q) {
+                if (vt.field_c.participantStatus[var12].d(3511)) {
+                  if (vt.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((hu) ((Object) var4)).a(pj.field_A) + 12;
                     pt.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
                     on.a(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);

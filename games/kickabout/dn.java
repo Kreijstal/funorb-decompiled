@@ -90,7 +90,7 @@ final class dn extends hd {
           if (var3 != -2) {
             if (-1 != var3) {
               var4 = ck.field_b.b(26) ? 1 : 0;
-              nu.a(119, ck.field_b.field_Eb, var3, param1, var4 != 0, ck.field_b.a(-15596));
+              CommonGame.a(119, ck.field_b.field_Eb, var3, param1, var4 != 0, ck.field_b.a(-15596));
             }
             ck.field_b = null;
             da.b(108);

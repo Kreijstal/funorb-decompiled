@@ -374,7 +374,7 @@ final class pw extends i {
         rt.field_F.field_R = null;
         rt.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (pb.field_C.field_G + pb.field_C.field_p), 67);
         oa.field_b.a((byte) -121, (hd) (rt.field_F));
-        kr.field_a = new jw(jc.field_k.toLowerCase(), un.field_d);
+        kr.field_a = new jw(LoggedPlayer.field_k.toLowerCase(), un.field_d);
         kr.field_a.field_J = 5;
         kr.field_a.field_s = 5 + (oa.field_b.field_q - kr.field_a.field_q >> 1);
         hk.field_I = eo.a(false, 0);

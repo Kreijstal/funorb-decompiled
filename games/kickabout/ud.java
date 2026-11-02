@@ -297,7 +297,7 @@ final class ud extends qt {
         var11 = Kickabout.field_G;
         if (param4) {
           df.field_H = ub.field_B;
-          gt.a(param4, 1);
+          ParticipantStatus.a(param4, 1);
           if (ns.field_a > 0) {
             we.a(param7, param4, (byte) -119, param6);
           }
@@ -331,7 +331,7 @@ final class ud extends qt {
                   } else {
                     df.field_H = (ea.field_a - 640) / 2;
                   }
-                  gt.a(param4, 1);
+                  ParticipantStatus.a(param4, 1);
                   if (ns.field_a > 0) {
                     we.a(param7, param4, (byte) -119, param6);
                   }
@@ -365,7 +365,7 @@ final class ud extends qt {
             }
             if (!param4) {
               df.field_H = (ea.field_a - 640) / 2;
-              gt.a(param4, 1);
+              ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
               }
@@ -389,7 +389,7 @@ final class ud extends qt {
               }
             } else {
               df.field_H = ub.field_B;
-              gt.a(param4, 1);
+              ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
               }
@@ -424,7 +424,7 @@ final class ud extends qt {
                   } else {
                     df.field_H = (ea.field_a - 640) / 2;
                   }
-                  gt.a(param4, 1);
+                  ParticipantStatus.a(param4, 1);
                   if (ns.field_a > 0) {
                     we.a(param7, param4, (byte) -119, param6);
                   }
@@ -458,7 +458,7 @@ final class ud extends qt {
             }
             if (!param4) {
               df.field_H = (ea.field_a - 640) / 2;
-              gt.a(param4, 1);
+              ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
               }
@@ -482,7 +482,7 @@ final class ud extends qt {
               }
             } else {
               df.field_H = ub.field_B;
-              gt.a(param4, 1);
+              ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
               }

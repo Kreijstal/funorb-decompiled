@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch extends IntrusiveNode {
+final class LoggedGoal extends IntrusiveNode {
     private int field_e;
     private int field_m;
     private int field_i;
     private int field_p;
-    int field_t;
+    int goalType;
     static ut field_o;
     int field_k;
     private int field_r;
     private int field_q;
     int field_s;
-    int field_l;
+    int time;
     private int field_j;
     private boolean field_n;
     private int field_h;
@@ -49,7 +49,7 @@ final class ch extends IntrusiveNode {
           this.field_q = param0.a((byte) 81);
           this.field_r = param0.a((byte) 81);
           int var3_int = -82 / ((-7 - param1) / 53);
-          this.field_t = param0.h((byte) -127);
+          this.goalType = param0.h((byte) -127);
           this.field_i = param0.h((byte) -110);
           this.field_n = param0.h((byte) -123) == 1 ? true : false;
           this.field_h = param0.h((byte) -105);
@@ -57,7 +57,7 @@ final class ch extends IntrusiveNode {
           this.field_m = param0.a((byte) 81);
           this.field_p = param0.a((byte) 81);
           this.field_e = param0.h((byte) -118);
-          this.field_l = param0.a((byte) 81);
+          this.time = param0.a((byte) 81);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ch.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -77,15 +77,15 @@ final class ch extends IntrusiveNode {
         var1 = var3;
         StringBuilder discarded$0 = var3.append(" p=(" + this.field_q + "," + this.field_r + ")/" + this.field_k + "/" + this.field_g + "/" + this.field_f);
         StringBuilder discarded$1 = var3.append(" b=(" + this.field_h + "," + this.field_j + ")");
-        if (this.field_t == 0) {
+        if (this.goalType == 0) {
           discarded$2 = var3.append(" !!null!!");
         } else {
-          if (2 == this.field_t) {
+          if (2 == this.goalType) {
             discarded$3 = var3.append(" cross");
           } else {
-            if (this.field_t != 3) {
-              if (this.field_t != 1) {
-                discarded$4 = var3.append(" invalid_goaltype/" + this.field_t);
+            if (this.goalType != 3) {
+              if (this.goalType != 1) {
+                discarded$4 = var3.append(" invalid_goaltype/" + this.goalType);
               } else {
                 discarded$5 = var3.append(" kick/" + this.field_i + "/" + this.field_n);
               }
@@ -95,7 +95,7 @@ final class ch extends IntrusiveNode {
           }
         }
         StringBuilder discarded$7 = var3.append(" g=(" + this.field_m + "," + this.field_p + ")/" + this.field_e);
-        StringBuilder discarded$8 = var3.append(" time=" + this.field_l);
+        StringBuilder discarded$8 = var3.append(" time=" + this.time);
         return "LoggedGoal{" + var3 + "}";
     }
 
@@ -104,7 +104,7 @@ final class ch extends IntrusiveNode {
         int var1 = -25 / ((28 - param0) / 44);
     }
 
-    final void a(nu param0, int param1, int param2, int param3, nl param4, int param5, nl param6, int param7, int param8) {
+    final void a(CommonGame param0, int param1, int param2, int param3, FootballerAgent param4, int param5, FootballerAgent param6, int param7, int param8) {
         try {
           this.a(param7, param2, param3, 1, param5, param0, param1 + 87, param8);
           if (param1 != 32) {
@@ -115,15 +115,15 @@ final class ch extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, ch param1) {
+    final void a(int param0, LoggedGoal param1) {
         try {
           this.field_n = param1.field_n;
           this.field_i = param1.field_i;
           this.field_e = param1.field_e;
-          this.field_l = param1.field_l;
+          this.time = param1.time;
           this.field_m = param1.field_m;
           this.field_p = param1.field_p;
-          this.field_t = param1.field_t;
+          this.goalType = param1.goalType;
           this.field_r = param1.field_r;
           this.field_k = param1.field_k;
           this.field_q = param1.field_q;
@@ -133,22 +133,22 @@ final class ch extends IntrusiveNode {
           this.field_j = param1.field_j;
           if (param0 != -4) {
             sj var4 = (sj) null;
-            ch.a(-13, (sj) null);
+            LoggedGoal.a(-13, (sj) null);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ch.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, nu param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, CommonGame param5, int param6, int param7) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
-        nl var10 = null;
+        FootballerAgent var10 = null;
         int var11 = 0;
-        nl var12 = null;
+        FootballerAgent var12 = null;
         var11 = Kickabout.field_G;
         try {
           var12 = param5.field_P[param2][param7];
@@ -163,7 +163,7 @@ final class ch extends IntrusiveNode {
           this.field_r = var12.a(true);
           if (param3 == 2) {
             this.field_j = var12.field_m;
-            this.field_t = 2;
+            this.goalType = 2;
             this.field_n = false;
             this.field_i = 0;
             this.field_h = var12.field_k;
@@ -171,11 +171,11 @@ final class ch extends IntrusiveNode {
             if (3 != param3) {
               this.field_i = param4;
               this.field_h = var12.field_x;
-              this.field_t = 1;
+              this.goalType = 1;
               this.field_n = var12.field_O;
               this.field_j = var12.field_P;
             } else {
-              this.field_t = 3;
+              this.goalType = 3;
               this.field_i = 0;
               this.field_h = var12.field_k;
               this.field_n = false;
@@ -184,7 +184,7 @@ final class ch extends IntrusiveNode {
           }
           this.field_m = var10.f(-93);
           this.field_p = var10.a(true);
-          this.field_l = param1;
+          this.time = param1;
           this.field_e = var10.field_o;
           while (true) {
             if (127 >= Math.abs(this.field_h) &&
@@ -208,7 +208,7 @@ final class ch extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, int param1, nl param2, int param3, int param4, int param5, int param6, nu param7, nl param8) {
+    final void a(byte param0, int param1, FootballerAgent param2, int param3, int param4, int param5, int param6, CommonGame param7, FootballerAgent param8) {
         if (param0 != 35) {
           return;
         }
@@ -246,8 +246,8 @@ final class ch extends IntrusiveNode {
         }
     }
 
-    public ch() {
-        this.field_t = 0;
+    public LoggedGoal() {
+        this.goalType = 0;
     }
 
     static {

@@ -102,7 +102,7 @@ final class kh {
           PacketBuffer.a(102, vf.field_F);
           on.b();
           t.c();
-          if (wr.field_l == 3) {
+          if (FormationAgent.field_l == 3) {
             var6 = 256 + param2;
             if (var6 >= 2048) {
               var6 -= 2048;
@@ -116,7 +116,7 @@ final class kh {
             var7.f();
             var7.a(0, 0, 1792, 0, 0, 0, 0, param4);
           } else {
-            if (2 == wr.field_l) {
+            if (2 == FormationAgent.field_l) {
               var6 = param2 + 1280;
               if (var6 >= 2048) {
                 var6 -= 2048;

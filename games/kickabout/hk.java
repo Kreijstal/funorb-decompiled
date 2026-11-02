@@ -33,7 +33,7 @@ final class hk extends i {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = ma.a((byte) -119, param0, false);
+            stackIn_4_0 = NetworkGameClient.a((byte) -119, param0, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -121,7 +121,7 @@ final class hk extends i {
           or.field_d.b(this.field_J, (byte) 124);
           or.field_d.a(this.field_M, -1781890008);
           or.field_d.b(-74, this.field_N);
-          gt.$cfr$intArgs$a$60f25194e713(true, 128, 118, 49);
+          ParticipantStatus.$cfr$intArgs$a$60f25194e713(true, 128, 118, 49);
           this.field_M = -1L;
           ((wf) (rn.a(-108, 16))).field_H = -1L;
           if (param0 >= 60) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends mo {
+final class LineupAgent extends MatchAgent {
     static boolean field_o;
     private it[] field_k;
     private int field_h;
@@ -9,7 +9,7 @@ final class wl extends mo {
     private up[][] field_i;
     private int[][] field_j;
     private int[][] field_m;
-    private gt[] field_f;
+    private ParticipantStatus[] field_f;
     static boolean field_g;
     private boolean field_l;
 
@@ -141,7 +141,7 @@ final class wl extends mo {
     final void a(gr param0, up[] param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
-        mo var8 = null;
+        MatchAgent var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -153,8 +153,8 @@ final class wl extends mo {
         try {
           var6_int = 0;
           if (param2 > -70) {
-            var8 = (mo) null;
-            this.a((byte) -51, (mo) null);
+            var8 = (MatchAgent) null;
+            this.a((byte) -51, (MatchAgent) null);
           }
           while (var6_int < 9) {
             if (this.a(var6_int, param0, param4, 4)) {
@@ -199,15 +199,15 @@ final class wl extends mo {
         int var8 = 0;
         up var9 = null;
         int var11 = 0;
-        mo var12 = null;
+        MatchAgent var12 = null;
         up var13 = null;
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
           var6_int = this.field_k[param4].field_p;
           if (param1 != 0) {
-            var12 = (mo) null;
-            this.a((byte) 13, (mo) null);
+            var12 = (MatchAgent) null;
+            this.a((byte) 13, (MatchAgent) null);
           }
           if (-1 == param0) {
             this.field_h = this.field_h ^ 1 << param4;
@@ -290,13 +290,13 @@ final class wl extends mo {
         }
     }
 
-    final void a(byte param0, mo param1) {
-        wl var3 = null;
+    final void a(byte param0, MatchAgent param1) {
+        LineupAgent var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Kickabout.field_G;
         try {
-          var3 = (wl) (param1);
+          var3 = (LineupAgent) (param1);
           if (param0 > -52) {
             this.field_m = (int[][]) null;
           }
@@ -321,7 +321,7 @@ final class wl extends mo {
         return stackIn_7_0;
     }
 
-    wl(boolean param0, it[] param1, gt[] param2, int[][] param3, int[][] param4, up[][] param5) {
+    LineupAgent(boolean param0, it[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, up[][] param5) {
         try {
           this.field_f = param2;
           this.field_k = param1;

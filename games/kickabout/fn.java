@@ -260,7 +260,7 @@ final class fn {
             640 >= -48 + var2_int &&
             48 + var2_int >= 0) {
             if (tb.field_v != 0 &&
-              wr.field_l >= 2) {
+              FormationAgent.field_l >= 2) {
               var4 = param0.field_U;
               var5 = param0.field_ob;
               if ((var5 == 3 ||
@@ -553,7 +553,7 @@ final class fn {
             var2 = vp.field_g;
           }
           if (~ov.field_b == param0 &&
-            !jc.b(param0 - 3194)) {
+            !LoggedPlayer.b(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(lf.a(qi.field_o, -39));
             if (!decompiledSharedTail1) {
               var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_c, new String[]{at.field_Kb});
@@ -587,7 +587,7 @@ final class fn {
             if (var6 == 2) {
               var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, b.field_F, new String[]{at.field_Kb});
               var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hd.field_ib, new String[]{var3});
-              var7 = -485 + ij.field_s.field_q + (ei.field_b.field_q + (nl.field_i.a(var8) - nl.field_i.a(var4)));
+              var7 = -485 + ij.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -630,7 +630,7 @@ final class fn {
                 var4 = "<col=999999>" + var4 + ru.field_t + "</col>";
                 var5 = "";
               }
-              var9 = nl.field_i.a(var4);
+              var9 = FootballerAgent.field_i.a(var4);
               if (!vb.b(119)) {
                 if (ei.field_b.field_gb &&
                   el.field_A - ei.field_b.field_F < var9) {

@@ -155,7 +155,7 @@ final class ne extends dj {
             var5_ref_gmLifetime2 = bk.field_a[var4];
             var5_ref_gmLifetime2.a(2, (la[]) null, false, false);
             var5_ref_gmLifetime2.g((byte) 126);
-            if (var5_ref_gmLifetime2.field_u != 0 &&
+            if (var5_ref_gmLifetime2.action != 0 &&
               0 >= var5_ref_gmLifetime2.field_L) {
               var5_ref_gmLifetime2.a((byte) -31, 0);
             }
@@ -390,7 +390,7 @@ final class ne extends dj {
             var3_int = 2;
           }
           ip.field_b[var2] = new gm(fp.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
-          ip.field_b[var2].field_J = var3_int;
+          ip.field_b[var2].archetype = var3_int;
           ip.field_b[var2].g((byte) 127);
           ip.field_b[var2].field_mb.a(dq.$cfr$intArgs$a$7f8aad568c81(79, ip.field_b[var2].field_mb.a(true), new Random()), -61);
         }
@@ -564,7 +564,7 @@ final class ne extends dj {
             stackIn_32_2 = 0;
           }
           ((uo) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
-          if (bk.field_a[var4].field_u == 4) {
+          if (bk.field_a[var4].action == 4) {
             stackIn_38_0 = (bk.field_a[var4].field_L > vf.field_I[4] - 13) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
@@ -600,14 +600,14 @@ final class ne extends dj {
               return true;
             }
             if (param0 == 83) {
-              if (bk.field_a[0].field_u == 0) {
+              if (bk.field_a[0].action == 0) {
                 bk.field_a[0].a((byte) -31, 4);
               }
               return true;
             }
             decompiledFrameRemainder0 = (param0 == 82);
             if (decompiledFrameRemainder0) {
-              if (0 == bk.field_a[1].field_u) {
+              if (0 == bk.field_a[1].action) {
                 bk.field_a[1].a((byte) -31, 4);
               }
               return true;
