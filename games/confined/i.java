@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class i extends te {
+abstract class i extends GameAppletShell {
     static mi field_r;
     private boolean field_m;
     private boolean field_x;
@@ -65,10 +65,10 @@ abstract class i extends te {
           vh.b(-4749);
           fh.a(var2, (byte) -1, gl.field_k);
           eg.field_l = true;
-          ec.field_e = ri.a(-3) + 15000L;
+          ClientException.field_e = ri.a(-3) + 15000L;
           return var2;
         }
-        if (rk.field_e == 11 &&
+        if (IntrusiveNode.field_e == 11 &&
           ch.field_c == 0) {
           h.m(-31574);
         }
@@ -92,7 +92,7 @@ abstract class i extends te {
           }
           else {
             if (hl.a((byte) 27)) {
-              if (rk.field_e == 0) {
+              if (IntrusiveNode.field_e == 0) {
                 discarded$5 = this.a(false, false, (byte) -106);
               } else {
                 ca.a(il.field_cb, -1856653215);
@@ -140,14 +140,14 @@ abstract class i extends te {
           return;
         }
         if (!ga.g(15214) &&
-          rk.field_e != 11) {
+          IntrusiveNode.field_e != 11) {
           ei.n(15102);
         }
         if (null != jc.field_c) {
           il.field_cb = jc.field_c.a(8);
         }
         if (kk.a(117)) {
-          var3 = 1200 * bg.a(12398);
+          var3 = 1200 * KeyboardInput.a(12398);
           if (this.field_m ||
             !(var3 >= eh.e(0)) &&
             !(qk.a((byte) -58) <= var3)) {
@@ -157,7 +157,7 @@ abstract class i extends te {
             fh.a(2, (byte) -1, ii.field_g);
             sd.a((byte) -4);
             eg.field_l = true;
-            ec.field_e = ri.a(-3) + 15000L;
+            ClientException.field_e = ri.a(-3) + 15000L;
           }
         }
         if (-1 == ch.field_c ||
@@ -167,13 +167,13 @@ abstract class i extends te {
           ch.field_c = hn.g(18042);
           if (var3Lifetime1 != 0 &&
             ch.field_c == 0 &&
-            rk.field_e == 11 &&
+            IntrusiveNode.field_e == 11 &&
             !rj.b(28404)) {
             h.m(-31574);
           }
           if (ch.field_c != -1 &&
             ch.field_c != 0) {
-            ec.field_e = ri.a(-3) + 15000L;
+            ClientException.field_e = ri.a(-3) + 15000L;
           }
         }
         if (-1 != ch.field_c &&
@@ -197,7 +197,7 @@ abstract class i extends te {
               this.a("js5crc", false);
             }
           } else {
-            if (rk.field_e >= 10) {
+            if (IntrusiveNode.field_e >= 10) {
               vh.b(param0 ^ -4835);
               if (ch.field_c == 3) {
                 fh.a(256, (byte) -1, jg.field_a);
@@ -223,7 +223,7 @@ abstract class i extends te {
         if ((ch.field_c != -1 &&
           0 != ch.field_c ||
           rj.b(28404)) &&
-          ec.field_e <= ri.a(param0 - 113)) {
+          ClientException.field_e <= ri.a(param0 - 113)) {
           eg.field_l = false;
           if (ch.field_c != -1 &&
             0 != ch.field_c) {
@@ -241,7 +241,7 @@ abstract class i extends te {
         }
         if (we.field_c == 1) {
           if (0 != hc.field_m) {
-            o.field_f = cc.a(si.field_h, -14245);
+            IntrusiveNodeHashTableIterator.field_f = cc.a(si.field_h, -14245);
           }
           wc.field_Wb = gi.a(gd.field_n, false, true, 1, true);
           field_r = gi.a(wg.field_e, false, true, 1, true);
@@ -250,19 +250,19 @@ abstract class i extends te {
           pb.field_e = wc.field_Wb;
         }
         if (we.field_c == 2) {
-          if (null != o.field_f &&
-            o.field_f.b(0)) {
-            if (o.field_f.b("", -4308)) {
-              if (o.field_f.a("", 0)) {
-                wb.a(param0 ^ 104, o.field_f);
-                o.field_f = null;
+          if (null != IntrusiveNodeHashTableIterator.field_f &&
+            IntrusiveNodeHashTableIterator.field_f.b(0)) {
+            if (IntrusiveNodeHashTableIterator.field_f.b("", -4308)) {
+              if (IntrusiveNodeHashTableIterator.field_f.a("", 0)) {
+                wb.a(param0 ^ 104, IntrusiveNodeHashTableIterator.field_f);
+                IntrusiveNodeHashTableIterator.field_f = null;
                 am.g(-4258);
               }
             } else {
-              o.field_f = null;
+              IntrusiveNodeHashTableIterator.field_f = null;
             }
           }
-          if (null == o.field_f) {
+          if (null == IntrusiveNodeHashTableIterator.field_f) {
             we.field_c = 3;
           }
         }
@@ -272,7 +272,7 @@ abstract class i extends te {
           bd.b(param0 ^ -4585);
           lb.d(param0 - 228);
           qf.field_g = false;
-          ui.field_b = ec.field_d;
+          ui.field_b = ClientException.field_d;
           fi.a(tf.field_k, 0, d.field_d, wc.field_Wb, field_r);
           if (ad.field_d ||
             null != je.field_v) {
@@ -293,7 +293,7 @@ abstract class i extends te {
           tf.field_k = null;
           field_r = null;
           wc.field_Wb = null;
-          ec.a((java.applet.Applet) (this), 3);
+          ClientException.a((java.applet.Applet) (this), 3);
           am.g(-4258);
           we.field_c = 10;
         }
@@ -362,7 +362,7 @@ abstract class i extends te {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 2:
                 md.b(-10964);
@@ -387,18 +387,18 @@ abstract class i extends te {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      kg.i((byte) -52);
-                      break L1;
+                      PacketBuffer.i((byte) -52);
+                      break regionExit1;
                     case 17:
                       this.b(false);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       sf.c(-52);
-                      break L1;
+                      break regionExit1;
                     default:
                       mb.a("MGS1: " + ui.a(10), true, (Throwable) null);
                       dc.d(124);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_28_0 = 1;
@@ -742,7 +742,7 @@ abstract class i extends te {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          kg var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Confined.field_J ? 1 : 0;
@@ -753,7 +753,7 @@ abstract class i extends te {
           if (1 == var4) {
             var5_int = s.a(aa.a((byte) -115), md.c(97), (byte) -87);
             if (-1 != var5_int) {
-              gj.a(gl.field_k, true, sc.field_g, var5_int);
+              GameCanvas.a(gl.field_k, true, sc.field_g, var5_int);
               gl.field_k = null;
               sc.field_g = null;
             }
@@ -786,7 +786,7 @@ abstract class i extends te {
                   field_p = vb.field_d;
                   h.m(-31574);
                   fd.field_j = false;
-                  rk.field_e = 10;
+                  IntrusiveNode.field_e = 10;
                 }
               }
             } else {
@@ -796,7 +796,7 @@ abstract class i extends te {
           if (var4 == 4) {
             if (!d.field_d) {
               fd.field_j = true;
-              rk.field_e = 10;
+              IntrusiveNode.field_e = 10;
             } else {
               pe.a(ii.b(false), (byte) 11);
             }
@@ -809,7 +809,7 @@ abstract class i extends te {
           }
           if (var4 == 6 &&
             qf.field_g) {
-            rk.field_e = 10;
+            IntrusiveNode.field_e = 10;
           }
           if (var4 == 7) {
             ci.a(ii.b(false), true);
@@ -855,7 +855,7 @@ abstract class i extends te {
             }
           }
           if (var4 == 15) {
-            rk.field_e = 10;
+            IntrusiveNode.field_e = 10;
           }
           if (var4 == 16) {
             return 1;

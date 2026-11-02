@@ -16,7 +16,7 @@ final class ln {
     private ln(int param0, int param1, int param2) {
     }
 
-    final void a(boolean param0, byte[] param1, kg param2) {
+    final void a(boolean param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
             if (31 != param2.field_m[param2.field_n] ||

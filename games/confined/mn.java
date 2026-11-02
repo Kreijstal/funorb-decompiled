@@ -4,17 +4,17 @@
 final class mn {
     static String field_g;
     static mi field_b;
-    rk field_a;
+    IntrusiveNode field_a;
     static e field_f;
-    private rk field_d;
+    private IntrusiveNode field_d;
     static mi field_e;
     static String field_c;
 
-    final rk b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         if (param0 <= 83) {
-          return (rk) null;
+          return (IntrusiveNode) null;
         }
-        rk var2 = this.field_a.field_a;
+        IntrusiveNode var2 = this.field_a.field_a;
         if (this.field_a != var2) {
           var2.a(true);
           return var2;
@@ -22,8 +22,8 @@ final class mn {
         return null;
     }
 
-    final rk d(int param0) {
-        rk var2 = this.field_d;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_d;
         if (this.field_a == var2) {
           this.field_d = null;
           return null;
@@ -36,9 +36,9 @@ final class mn {
         return var2;
     }
 
-    final rk c(int param0) {
-        rk var2 = null;
-        rk var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 1) {
           this.b((byte) 116);
           var2 = this.field_a.field_h;
@@ -56,7 +56,7 @@ final class mn {
         return null;
     }
 
-    final void a(rk param0, byte param1) {
+    final void a(IntrusiveNode param0, byte param1) {
         try {
           int var3_int = -8 / ((param1 - 0) / 61);
           if (param0.field_a != null) {
@@ -91,7 +91,7 @@ final class mn {
         }
     }
 
-    final void a(rk param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         if (param1 != -1) {
           return;
         }
@@ -108,8 +108,8 @@ final class mn {
         }
     }
 
-    final rk a(byte param0) {
-        rk var2 = this.field_d;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_d;
         if (this.field_a == var2) {
           this.field_d = null;
           return null;
@@ -120,7 +120,7 @@ final class mn {
     }
 
     final void e(int param0) {
-        rk var2;
+        IntrusiveNode var2;
         int var3;
         var3 = Confined.field_J ? 1 : 0;
         while (true) {
@@ -139,11 +139,11 @@ final class mn {
         return;
     }
 
-    final rk a(rk param0, boolean param1) {
-        rk var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        rk stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -160,7 +160,7 @@ final class mn {
           if (this.field_a == var3) {
             this.field_d = null;
             stackIn_8_0 = null;
-            return (rk) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_d = var3.field_a;
           stackIn_10_0 = var3;
@@ -179,8 +179,8 @@ final class mn {
         }
     }
 
-    final rk a(int param0) {
-        rk var2 = this.field_a.field_h;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_a.field_h;
         if (var2 != this.field_a) {
           int var3 = -59 / ((-54 - param0) / 59);
           this.field_d = var2.field_h;
@@ -190,8 +190,8 @@ final class mn {
         return null;
     }
 
-    final rk a(boolean param0) {
-        rk var2 = this.field_a.field_a;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_a.field_a;
         if (this.field_a == var2) {
           this.field_d = null;
           return null;
@@ -205,7 +205,7 @@ final class mn {
     }
 
     public mn() {
-        this.field_a = new rk();
+        this.field_a = new IntrusiveNode();
         this.field_a.field_a = this.field_a;
         this.field_a.field_h = this.field_a;
     }

@@ -48,7 +48,7 @@ final class mm extends ah {
           this.field_db.field_m = -var4;
           this.field_db.field_w = true;
           this.field_db.field_x = -var6;
-          param0.a((rk) (this.field_db), (byte) 104);
+          param0.a((IntrusiveNode) (this.field_db), (byte) 104);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "mm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

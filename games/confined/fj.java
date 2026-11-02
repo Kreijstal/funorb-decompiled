@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class fj extends rk {
+class fj extends IntrusiveNode {
     int field_q;
     fe field_n;
     String field_C;
@@ -238,11 +238,11 @@ class fj extends rk {
           param0--;
           if (0 == incrementValue$15) {
             fn.h(84, 88, 204, 114);
-            lm.field_c.d(-76, 88);
+            IntrusiveDeque.field_c.d(-76, 88);
             fn.h(78, 114, 210, 166);
-            lm.field_c.d(-76, 88);
+            IntrusiveDeque.field_c.d(-76, 88);
             fn.h(80, 166, 202, 192);
-            lm.field_c.d(-76, 88);
+            IntrusiveDeque.field_c.d(-76, 88);
             fn.c();
             var2_intLifetime2 = 0;
             while (true) {
@@ -264,11 +264,11 @@ class fj extends rk {
                 tj.a(11038741, 170, (byte) 104, 218, 212, 170);
                 pn.field_a.a(rj.field_d, 226, 160, 334, 60, 4243584, -1, 0, 0, 20);
                 fn.h(90, 0, 640, 254);
-                lm.field_c.d(-470, 224);
+                IntrusiveDeque.field_c.d(-470, 224);
                 fn.h(110, 254, 640, 288);
-                lm.field_c.d(-470, 224);
+                IntrusiveDeque.field_c.d(-470, 224);
                 fn.h(118, 288, 640, 307);
-                lm.field_c.d(-470, 224);
+                IntrusiveDeque.field_c.d(-470, 224);
                 fn.c();
                 ol.a(122, 30613, 2, 9, 232);
                 pn.field_a.a(ug.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);
@@ -330,7 +330,7 @@ class fj extends rk {
             pn.field_a.a(b.a(new String[]{r.field_b}, qm.field_A, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(kd.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
             pn.field_a.a(bf.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(te.field_g, 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.a(GameAppletShell.field_g, 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$20 = param0;
           param0--;
@@ -405,7 +405,7 @@ class fj extends rk {
         }
         var5 = al.a((byte) -99);
         if (var5 != null) {
-          bg.field_d.a(var5, (byte) 50, nm.field_I, he.field_f);
+          KeyboardInput.field_d.a(var5, (byte) 50, nm.field_I, he.field_f);
         }
         if (param0 != -47) {
           this.field_F = -77;
@@ -584,12 +584,12 @@ class fj extends rk {
           if (Confined.field_I == 0 &&
             i.field_w != 0) {
             this.a(-102, param2, ld.field_l, this, jh.field_R, param3);
-            var6 = rk.field_k;
+            var6 = IntrusiveNode.field_k;
             if (var6 != null) {
               if (var6.field_t instanceof sn) {
                 ((sn) (var6.field_t)).a((s) null, var6, (byte) 104);
               }
-              rk.field_k = null;
+              IntrusiveNode.field_k = null;
             }
             if (var7 != 0 &&
               var5 != 0 &&
@@ -604,7 +604,7 @@ class fj extends rk {
           }
         }
         i.field_w = Confined.field_I;
-        hb.a((byte) 122, this.f((byte) -108));
+        CipherPacketBuffer.a((byte) 122, this.f((byte) -108));
         if (!param0) {
           this.field_B = (String) null;
         }
@@ -619,7 +619,7 @@ class fj extends rk {
     }
 
     fj(String param0, uk param1) {
-        this(param0, bg.field_d.field_m, param1);
+        this(param0, KeyboardInput.field_d.field_m, param1);
     }
 
     boolean e(byte param0) {

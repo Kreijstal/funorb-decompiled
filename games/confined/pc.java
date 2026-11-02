@@ -3,7 +3,7 @@
  */
 final class pc implements Runnable {
     static long field_a;
-    static kg field_j;
+    static PacketBuffer field_j;
     static nf[] field_e;
     static boolean field_d;
     static boolean field_f;
@@ -72,7 +72,7 @@ final class pc implements Runnable {
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1, hb param2, int param3) {
+    final static byte[] a(byte[] param0, byte param1, CipherPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

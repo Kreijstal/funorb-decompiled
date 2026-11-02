@@ -32,7 +32,7 @@ final class v extends dh implements el {
                 if (!param1) {
                   om.b(true);
                 }
-                var4 = ec.field_a;
+                var4 = ClientException.field_a;
                 this.field_Gb = true;
               }
             } else {
@@ -46,7 +46,7 @@ final class v extends dh implements el {
           if (!param2.field_a) {
             if (!this.field_Gb) {
               if (param2.field_g != 5) {
-                var5.a(0, te.field_i, -1);
+                var5.a(0, GameAppletShell.field_i, -1);
               } else {
                 var5.a(0, ei.field_nb, 11);
                 var5.a(param0 + 96, al.field_c, 17);
@@ -139,7 +139,7 @@ final class v extends dh implements el {
     }
 
     final void o(int param0) {
-        this.a((byte) -96, true, gd.a(4, ec.field_a, 248));
+        this.a((byte) -96, true, gd.a(4, ClientException.field_a, 248));
         if (param0 < 107) {
           v.j((byte) -117);
         }

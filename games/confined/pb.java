@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pb {
-    private jl field_d;
+    private DualLinkNode field_d;
     private long field_c;
     private int field_f;
-    private jl[] field_b;
+    private DualLinkNode[] field_b;
     static mi field_e;
     static String field_a;
 
-    final void a(long param0, jl param1, int param2) {
-        jl var5 = null;
+    final void a(long param0, DualLinkNode param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param1.field_q) {
             param1.b(true);
@@ -29,11 +29,11 @@ final class pb {
         }
     }
 
-    final jl a(long param0, int param1) {
-        jl var5 = null;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var5 = null;
         int var6 = Confined.field_J ? 1 : 0;
         this.field_c = param0;
-        jl var4 = this.field_b[(int)(param0 & (long)(param1 + this.field_f))];
+        DualLinkNode var4 = this.field_b[(int)(param0 & (long)(param1 + this.field_f))];
         this.field_d = var4.field_o;
         while (var4 != this.field_d) {
           if (param0 == this.field_d.field_r) {
@@ -59,12 +59,12 @@ final class pb {
 
     pb(int param0) {
         int var2 = 0;
-        jl dupTemp$0 = null;
-        jl var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_f = param0;
-        this.field_b = new jl[param0];
+        this.field_b = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new jl();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
           var3.field_q = var3;
@@ -88,14 +88,14 @@ final class pb {
         }
     }
 
-    final jl a(int param0) {
-        jl var4 = null;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var4 = null;
         int var5 = Confined.field_J ? 1 : 0;
         if (this.field_d == null) {
           return null;
         }
         int var2 = 86 / ((49 - param0) / 55);
-        jl var3 = this.field_b[(int)((long)(-1 + this.field_f) & this.field_c)];
+        DualLinkNode var3 = this.field_b[(int)((long)(-1 + this.field_f) & this.field_c)];
         while (var3 != this.field_d) {
           if (~this.field_d.field_r == ~this.field_c) {
             var4 = this.field_d;

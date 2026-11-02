@@ -16,7 +16,7 @@ final class fk {
         if (var3 == null) {
           return null;
         }
-        return new fk(new kg(var3));
+        return new fk(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -64,10 +64,10 @@ final class fk {
         if (var3 == null) {
           return null;
         }
-        return new fk(new kg(var3));
+        return new fk(new PacketBuffer(var3));
     }
 
-    private fk(kg param0) {
+    private fk(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new lg[10];

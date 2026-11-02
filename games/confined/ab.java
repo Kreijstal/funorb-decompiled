@@ -81,7 +81,7 @@ final class ab {
     }
 
     final static void a(int param0) {
-        cb.field_a.a(gj.field_d, 100, fa.field_S * 48 >> 7);
+        cb.field_a.a(GameCanvas.field_d, 100, fa.field_S * 48 >> 7);
         if (param0 != 2026) {
           field_b = (fi) null;
         }

@@ -142,7 +142,7 @@ final class eg {
                                     }
                                     if (decompiledFrameRemainder0) {
                                       if (param1 == 100) {
-                                        var15 = rk.field_b;
+                                        var15 = IntrusiveNode.field_b;
                                         this.a(0, (String) null, 0, (String) null, (String) null, 0, -90);
                                         this.a(0, var15, -vg.field_I.c(var15) + 640 >> 1, (String) null, (String) null, 1, -112);
                                         this.a(0, 1000, (nf) null, 0, 0);
@@ -344,7 +344,7 @@ final class eg {
         var15 = Confined.field_J ? 1 : 0;
         try {
           var7_int = param3;
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_3_0 = var7_int;
             stackIn_3_1 = 3;
             if (stackIn_3_0 < stackIn_3_1) {
@@ -386,7 +386,7 @@ final class eg {
               }
               param1 += 3;
               var7_int++;
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -479,10 +479,10 @@ final class eg {
         }
         var3 = this.b(-1, 0);
         var4 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           stackIn_4_0 = -4;
           stackIn_4_1 = ~var4;
-          L2: while (true) {
+          scanLoop2: while (true) {
             if (stackIn_4_0 < stackIn_4_1) {
               var18 = this.field_n[0][var4];
               stackIn_94_0 = var18;
@@ -491,7 +491,7 @@ final class eg {
                   var20 = stackIn_94_0;
                   var5_ref_String = var20;
                   stackIn_51_0 = null;
-                  break L2;
+                  break scanLoop2;
                 }
               }
               if (stackIn_94_0 != null) {
@@ -519,7 +519,7 @@ final class eg {
                   stackIn_4_0 = ~var6;
                   stackIn_4_1 = -1;
                   if (var17 != 0) {
-                    continue L2;
+                    continue scanLoop2;
                   }
                   if (stackIn_4_0 >= stackIn_4_1) {
                     break;
@@ -545,7 +545,7 @@ final class eg {
               }
               var4++;
               if (var17 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
             }
             var3 = this.b(-1, 1);
@@ -559,7 +559,7 @@ final class eg {
               var5_ref_StringLifetime1 = var20Lifetime1;
               stackIn_51_0 = null;
               if (var17 != 0) {
-                break L2;
+                break scanLoop2;
               }
               if (stackIn_51_0 != var20Lifetime1 ||
                 var17 != 0) {
@@ -715,7 +715,7 @@ final class eg {
                     300 == this.field_a &&
                     !this.field_c)) {
                     this.field_c = true;
-                    bg.field_f = 0;
+                    KeyboardInput.field_f = 0;
                     hc.field_u = vd.field_l;
                   }
                 }
@@ -724,7 +724,7 @@ final class eg {
                   300 == this.field_a &&
                   !this.field_c) {
                   this.field_c = true;
-                  bg.field_f = 0;
+                  KeyboardInput.field_f = 0;
                   hc.field_u = vd.field_l;
                 }
               }
@@ -851,7 +851,7 @@ final class eg {
                 var14_double = Math.sin(var12_double);
                 var16_double = Math.cos(var12_double);
                 var18_ref_int__ = new int[]{0, var11_int, var10, -65536, 0, 0, 0, (int)(65536.0 * var16_double), -(int)(var14_double * 65536.0), 0, (int)(var14_double * 65536.0), (int)(-65536.0 * var16_double)};
-                var40 = (sk) (fc.field_d.a(96, 1365, 0, 0, -256, var18_ref_int__));
+                var40 = (sk) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var18_ref_int__));
                 var40.a(var9_ref_int__, var18_ref_int__);
                 decompiledSharedTail0 = (var35 != 0);
               }
@@ -922,7 +922,7 @@ final class eg {
                 var15 = Math.sin(var13);
                 var17 = Math.cos(var13);
                 var39 = new int[]{0, var12, var11_int, -65536, 0, 0, 0, (int)(65536.0 * var17), -(int)(65536.0 * var15), 0, (int)(65536.0 * var15), (int)(-65536.0 * var17)};
-                var41 = (sk) (fc.field_d.a(96, 1365, 0, 0, -256, var39));
+                var41 = (sk) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var39));
                 var41.a(var9_ref_int__, var39);
               }
               decompiledFrameRemainder1 = (var35 != 0);
@@ -1019,13 +1019,13 @@ final class eg {
           var17 = var17 * (-Math.pow(0.98, (double)this.field_a) + 1.0);
           var19 = -((double)ga.field_I[4] * var11) + 110.0;
           var21Lifetime1 = 0;
-          L29: while (true) {
+          scanLoop1: while (true) {
             if (var21Lifetime1 < 7) {
               var22 = (int)((double)ga.field_I[var21Lifetime1] * var11 + var19);
               var23 = 52;
               stackIn_68_0 = 127;
               if (var35 != 0) {
-                break L29;
+                break scanLoop1;
               }
               var24Lifetime1 = stackIn_68_0;
               while (var24Lifetime1 >= 0) {

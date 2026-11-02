@@ -67,7 +67,7 @@ final class qc extends mf {
             return stackIn_2_0;
           }
           if (this.a((byte) -95, param0) == fb.field_e) {
-            stackIn_6_0 = te.field_d;
+            stackIn_6_0 = GameAppletShell.field_d;
             return stackIn_6_0;
           }
           if (!param1) {

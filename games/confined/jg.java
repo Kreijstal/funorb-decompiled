@@ -34,7 +34,7 @@ abstract class jg {
             stackIn_5_0 = (ce) null;
             return stackIn_5_0;
           }
-          var2 = new ce(param1, jl.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
+          var2 = new ce(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
           ql.a(false);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -52,7 +52,7 @@ abstract class jg {
         }
     }
 
-    final static void a(kg param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -78,10 +78,10 @@ abstract class jg {
             var10 = var6;
             var8 = var10;
             var2 = var8;
-            if (bg.field_b != null) {
+            if (KeyboardInput.field_b != null) {
               try {
-                bg.field_b.a((byte) 123, 0L);
-                bg.field_b.a(var9, (byte) -4);
+                KeyboardInput.field_b.a((byte) 123, 0L);
+                KeyboardInput.field_b.a(var9, (byte) -4);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

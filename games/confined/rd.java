@@ -305,7 +305,7 @@ final class rd extends id {
             this.field_ib.field_v = -var8[8];
             this.field_ib.field_u = (double)(-this.field_ob + 256) * 0.390625;
             this.field_ib.field_x = -var8[7];
-            param0.a((rk) (this.field_ib), (byte) 86);
+            param0.a((IntrusiveNode) (this.field_ib), (byte) 86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -818,7 +818,7 @@ final class rd extends id {
               var3 = stackIn_17_0;
             }
             if (var3 != 0) {
-              ri.a((rk) (this), 0, new cl(this.field_A, this));
+              ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this));
             }
             if (!this.field_Rb) {
               this.field_A.a((byte) 50, si.a(107, this));
@@ -900,7 +900,7 @@ final class rd extends id {
               var3Lifetime1 = stackIn_76_0;
             }
             if (var3Lifetime1 != 0) {
-              ri.a((rk) (this), 0, new cl(this.field_A, this));
+              ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this));
             }
             if (!this.field_Rb) {
               this.field_A.a((byte) 50, si.a(107, this));
@@ -947,7 +947,7 @@ final class rd extends id {
           var3Lifetime2 = stackIn_107_0;
         }
         if (var3Lifetime2 != 0) {
-          ri.a((rk) (this), 0, new cl(this.field_A, this));
+          ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this));
         }
         if (!this.field_Rb) {
           this.field_A.a((byte) 50, si.a(107, this));

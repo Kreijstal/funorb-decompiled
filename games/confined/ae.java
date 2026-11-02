@@ -108,7 +108,7 @@ final class ae {
                 this.field_d.a(6, (byte) 9, 0, gi.field_db);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -124,7 +124,7 @@ final class ae {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = gi.field_db[9] & 255;
                         var10 = (65280 & gi.field_db[7] << 8) + (((255 & gi.field_db[6]) << 16) + (gi.field_db[8] & 255));
@@ -140,7 +140,7 @@ final class ae {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = gi.field_db[7] & 255;
                         var10 = (gi.field_db[6] & 255) + ((16711680 & gi.field_db[4] << 16) + ((255 & gi.field_db[5]) << 8));

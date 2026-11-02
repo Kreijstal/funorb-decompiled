@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_f;
     static mn field_b;
     java.awt.Frame field_e;
@@ -49,7 +49,7 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    gj() {
+    GameCanvas() {
     }
 
     final static void a(String param0, boolean param1, String[] param2, int param3) {
@@ -72,19 +72,19 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
           if (param3 == 255) {
             stackIn_9_0 = -108;
             stackIn_10_1 = !(wc.field_Ob >= 13);
-            lm.field_e = jj.$cfr$intArgs$a$81305413f30a(stackIn_9_0, stackIn_10_1);
+            IntrusiveDeque.field_e = jj.$cfr$intArgs$a$81305413f30a(stackIn_9_0, stackIn_10_1);
             var7 = (String[]) null;
-            fc.a(-7212, (String[]) null);
+            IsaacRandom.a(-7212, (String[]) null);
           } else {
             if (param3 < 100) {
-              lm.field_e = gd.a(4, param0, param3);
+              IntrusiveDeque.field_e = gd.a(4, param0, param3);
             } else {
               if (105 < param3) {
-                lm.field_e = gd.a(4, param0, param3);
+                IntrusiveDeque.field_e = gd.a(4, param0, param3);
               } else {
                 var8 = param2;
-                fc.a(-7212, var8);
-                lm.field_e = p.a(26663, param2);
+                IsaacRandom.a(-7212, var8);
+                IntrusiveDeque.field_e = p.a(26663, param2);
               }
             }
           }
@@ -92,7 +92,7 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
           }
           var6 = (String[]) null;
-          gj.a((String) null, false, (String[]) null, -96);
+          GameCanvas.a((String) null, false, (String[]) null, -96);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

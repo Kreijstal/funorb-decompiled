@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rk {
-    rk field_a;
+class IntrusiveNode {
+    IntrusiveNode field_a;
     long field_i;
     static e field_g;
     static int field_j;
-    rk field_h;
+    IntrusiveNode field_h;
     static qe field_k;
     static boolean field_f;
     static byte[][] field_c;
@@ -80,7 +80,7 @@ class rk {
             var15 = var7[var10];
             bm[] var11 = var15;
             for (var12_int = 0; var15.length > var12_int; var12_int++) {
-              var15[var12_int] = jl.a(var19[var12_int], var6[var10], 0);
+              var15[var12_int] = DualLinkNode.a(var19[var12_int], var6[var10], 0);
             }
           }
           var10Lifetime1 = var5.field_w;
@@ -110,7 +110,7 @@ class rk {
         field_g = null;
         field_c = (byte[][]) null;
         if (param0 != 14) {
-          rk.b((byte) -93);
+          IntrusiveNode.b((byte) -93);
         }
         field_l = null;
     }

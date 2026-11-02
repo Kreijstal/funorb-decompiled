@@ -12,7 +12,7 @@ final class fa extends rg {
     private fa(String param0, fe param1, uk param2) {
         super(param0, param1, param2);
         try {
-          this.field_n = bg.field_d.field_j;
+          this.field_n = KeyboardInput.field_d.field_j;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -110,9 +110,9 @@ final class fa extends rg {
     }
 
     private fa(String param0, uk param1) {
-        this(param0, bg.field_d.field_h, param1);
+        this(param0, KeyboardInput.field_d.field_h, param1);
         try {
-          this.field_n = bg.field_d.field_j;
+          this.field_n = KeyboardInput.field_d.field_j;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

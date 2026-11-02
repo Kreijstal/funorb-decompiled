@@ -3,15 +3,15 @@
  */
 final class wd {
     static byte[][] field_d;
-    private jl field_b;
-    private jl field_a;
+    private DualLinkNode field_b;
+    private DualLinkNode field_a;
     static ej field_f;
     static String field_e;
     static int field_c;
 
-    final jl a(byte param0) {
+    final DualLinkNode a(byte param0) {
         int var3 = 29 / ((-69 - param0) / 34);
-        jl var2 = this.field_a;
+        DualLinkNode var2 = this.field_a;
         if (this.field_b == var2) {
           this.field_a = null;
           return null;
@@ -20,9 +20,9 @@ final class wd {
         return var2;
     }
 
-    final jl a(int param0) {
-        jl var2 = null;
-        jl var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 0) {
           field_e = (String) null;
           var2 = this.field_a;
@@ -42,8 +42,8 @@ final class wd {
         return null;
     }
 
-    final jl d(int param0) {
-        jl var2 = this.field_b.field_o;
+    final DualLinkNode d(int param0) {
+        DualLinkNode var2 = this.field_b.field_o;
         int var3 = -78 / ((param0 + 30) / 50);
         if (this.field_b == var2) {
           this.field_a = null;
@@ -53,9 +53,9 @@ final class wd {
         return var2;
     }
 
-    final jl c(boolean param0) {
-        jl var2 = null;
-        jl var2Lifetime1;
+    final DualLinkNode c(boolean param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0) {
           this.a(-10);
           var2 = this.field_b.field_o;
@@ -74,7 +74,7 @@ final class wd {
     }
 
     final void a(boolean param0) {
-        jl var2 = null;
+        DualLinkNode var2 = null;
         int var3 = Confined.field_J ? 1 : 0;
         while (true) {
           var2 = this.field_b.field_o;
@@ -93,9 +93,9 @@ final class wd {
 
     final int b(boolean param0) {
         int var2 = 0;
-        jl var3 = null;
+        DualLinkNode var3 = null;
         int var4 = Confined.field_J ? 1 : 0;
-        jl var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         int var2Lifetime1;
         if (param0) {
           var2 = 0;
@@ -117,7 +117,7 @@ final class wd {
     }
 
     public wd() {
-        this.field_b = new jl();
+        this.field_b = new DualLinkNode();
         this.field_b.field_o = this.field_b;
         this.field_b.field_q = this.field_b;
     }
@@ -141,8 +141,8 @@ final class wd {
         }
     }
 
-    final jl c(int param0) {
-        jl var2 = this.field_b.field_q;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = this.field_b.field_q;
         if (this.field_b == var2) {
           this.field_a = null;
           return null;
@@ -151,7 +151,7 @@ final class wd {
         if (param0 < -81) {
           return var2;
         }
-        return (jl) null;
+        return (DualLinkNode) null;
     }
 
     final static boolean a(int param0, String param1, String param2) {
@@ -205,7 +205,7 @@ final class wd {
         }
     }
 
-    final void a(jl param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (null != param0.field_q) {
             param0.b(true);

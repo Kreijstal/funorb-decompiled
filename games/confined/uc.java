@@ -49,14 +49,14 @@ final class uc extends sa {
           this.a((byte) 112, ji.field_a, 1.5);
           this.a(qg.field_k, false);
           for (var2 = 0; var2 < 5; var2++) {
-            ri.a((rk) (this), 0, new mm(this.field_A, (ee) (this), this.field_S, qg.field_k[var2]));
+            ri.a((IntrusiveNode) (this), 0, new mm(this.field_A, (ee) (this), this.field_S, qg.field_k[var2]));
           }
           return;
         }
         this.a((byte) 112, ji.field_a, 1.5);
         this.a(qg.field_k, false);
         for (var2Lifetime1 = 0; var2Lifetime1 < 5; var2Lifetime1++) {
-          ri.a((rk) (this), 0, new mm(this.field_A, (ee) (this), this.field_S, qg.field_k[var2Lifetime1]));
+          ri.a((IntrusiveNode) (this), 0, new mm(this.field_A, (ee) (this), this.field_S, qg.field_k[var2Lifetime1]));
         }
     }
 

@@ -14,7 +14,7 @@ final class nk {
     int field_d;
     private int field_k;
 
-    final void a(kg param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_a = param0.c(32);
         this.field_b = new int[this.field_a];
@@ -25,7 +25,7 @@ final class nk {
         }
     }
 
-    final void b(kg param0) {
+    final void b(PacketBuffer param0) {
         this.field_d = param0.c(32);
         this.field_i = param0.f((byte) 57);
         this.field_j = param0.f((byte) 74);

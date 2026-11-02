@@ -38,12 +38,12 @@ final class je extends vf {
             var4 = hh.a(0, param2);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!bg.a(175, var4.charAt(0)) &&
-                !bg.a(param0 ^ 175, var4.charAt(var4.length() - 1))) {
+              if (!KeyboardInput.a(175, var4.charAt(0)) &&
+                !KeyboardInput.a(param0 ^ 175, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 for (var6 = param0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (!bg.a(param0 ^ 175, (char) var7)) {
+                  if (!KeyboardInput.a(param0 ^ 175, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;

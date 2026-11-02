@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_e;
     static pf field_b;
     static int field_f;
@@ -12,7 +12,7 @@ final class bg implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static boolean a(int param0, char param1) {
         if (param0 != 175) {
-          bg.a(-126, 'ﾻ');
+          KeyboardInput.a(-126, 'ﾻ');
           if (160 == param1) {
             return true;
           }
@@ -191,7 +191,7 @@ final class bg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           field_b = null;
           return;
         }
-        bg.a(104, '\024');
+        KeyboardInput.a(104, '\024');
         field_e = null;
         field_c = null;
         field_g = null;

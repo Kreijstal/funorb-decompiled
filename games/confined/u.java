@@ -105,7 +105,7 @@ final class u extends ee {
             var9.field_K = Math.sin(var14) * var12;
             var9.field_G = Math.cos(var14) * var12;
             var9.field_L = var10 * 0.04;
-            ri.a((rk) (this), param0 - 26402, var9);
+            ri.a((IntrusiveNode) (this), param0 - 26402, var9);
             if (this.field_S < 0.0) {
               hn.field_I = false;
               this.field_S = -var9.a(14170, true, -this.field_S);

@@ -16,7 +16,7 @@ final class im {
 
     final static void a(byte param0) {
         s.field_K = false;
-        rk.field_f = false;
+        IntrusiveNode.field_f = false;
         if (param0 >= -58) {
           return;
         }
@@ -71,7 +71,7 @@ final class im {
             var3.d(-2, -2, 16777215);
             fn.a(4, 4, 0, 0, 540, 140);
           }
-          bg.field_c.d();
+          KeyboardInput.field_c.d();
           var1.b(0, 0);
           ib.b(false);
         } catch (RuntimeException runtimeException) {

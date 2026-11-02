@@ -109,7 +109,7 @@ final class we {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        kg var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -125,7 +125,7 @@ final class we {
         int var13Lifetime1Lifetime1;
         var16 = Confined.field_J ? 1 : 0;
         try {
-          var17 = new kg(tm.a(-64, param1));
+          var17 = new PacketBuffer(tm.a(-64, param1));
           var4 = var17.c(32);
           if (var4 >= 5 &&
             var4 <= 7) {

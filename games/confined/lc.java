@@ -204,8 +204,8 @@ final class lc {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        kg var16 = null;
-        kg var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -217,13 +217,13 @@ final class lc {
         int var4Lifetime5;
         var15 = Confined.field_J ? 1 : 0;
         try {
-          var16 = new kg(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.field_n = -2 + param1.length;
           wc.field_hc = var17.a((byte) 25);
           rj.field_f = new byte[wc.field_hc][];
           un.field_i = new byte[wc.field_hc][];
-          jl.field_p = new int[wc.field_hc];
+          DualLinkNode.field_p = new int[wc.field_hc];
           ij.field_r = new int[wc.field_hc];
           sd.field_f = new int[wc.field_hc];
           rg.field_I = new int[wc.field_hc];
@@ -233,7 +233,7 @@ final class lc {
           em.field_e = var17.a((byte) 25);
           var3 = 1 + (255 & var17.c(32));
           for (var4 = 0; wc.field_hc > var4; var4++) {
-            jl.field_p[var4] = var16.a((byte) 25);
+            DualLinkNode.field_p[var4] = var16.a((byte) 25);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < wc.field_hc; var4Lifetime1++) {
             ij.field_r[var4Lifetime1] = var17.a((byte) 25);
@@ -472,7 +472,7 @@ final class lc {
         if (var6 > var4) {
           var4 = var6;
         }
-        return (-(2.0 * var4) + 1.0) * (this.field_i * rk.field_l[this.field_f]) - param1;
+        return (-(2.0 * var4) + 1.0) * (this.field_i * IntrusiveNode.field_l[this.field_f]) - param1;
     }
 
     private final void a(byte param0, double param1, int param2) {

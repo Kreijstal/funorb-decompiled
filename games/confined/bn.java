@@ -7,7 +7,7 @@ final class bn {
     static String field_d;
     private String field_c;
 
-    final static short[] a(int param0, hb param1, short[] param2, int param3) {
+    final static short[] a(int param0, CipherPacketBuffer param1, short[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -81,7 +81,7 @@ final class bn {
     final boolean b(int param0) {
         if (param0 != 0) {
           short[] var3 = (short[]) null;
-          bn.a(69, (hb) null, (short[]) null, 72);
+          bn.a(69, (CipherPacketBuffer) null, (short[]) null, 72);
         }
         return this.field_a;
     }

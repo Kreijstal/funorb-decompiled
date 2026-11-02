@@ -79,7 +79,7 @@ final class fh {
           var7_int = 0;
           param4 = param4 + param2;
           var8 = param0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param3[var8];
             if (var9 < 0) {
               var7_int = this.field_d[var7_int];
@@ -93,7 +93,7 @@ final class fh {
               param2++;
               param1[incrementValue$1] = (byte)(~var10);
               if (param2 >= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -109,7 +109,7 @@ final class fh {
               param2++;
               param1[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param2 >= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -125,7 +125,7 @@ final class fh {
               param2++;
               param1[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param2 >= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -141,7 +141,7 @@ final class fh {
               param2++;
               param1[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param4 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -157,7 +157,7 @@ final class fh {
               param2++;
               param1[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param4 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -173,7 +173,7 @@ final class fh {
               param2++;
               param1[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param4 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -205,7 +205,7 @@ final class fh {
               param2++;
               param1[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param2 >= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -248,8 +248,8 @@ final class fh {
             var3_int = 1;
             if (param0 != 8) {
             } else {
-              if (rk.field_f) {
-                param2 = bg.field_e;
+              if (IntrusiveNode.field_f) {
+                param2 = KeyboardInput.field_e;
               } else {
                 param2 = ml.field_b;
               }
@@ -265,7 +265,7 @@ final class fh {
                 param2 = b.a(new String[]{param2}, cg.field_c, param1 + 1178);
               }
               if (pc.field_f) {
-                param2 = gj.field_c;
+                param2 = GameCanvas.field_c;
               }
               ki.field_c.a(param2, param0, false);
             }
@@ -273,7 +273,7 @@ final class fh {
               if (10 == param0) {
                 return;
               }
-              if (rk.field_f) {
+              if (IntrusiveNode.field_f) {
                 return;
               }
               om.field_p.g((byte) -104);

@@ -3,12 +3,12 @@
  */
 final class vh {
     private int field_f;
-    private rk field_g;
-    private rk field_c;
+    private IntrusiveNode field_g;
+    private IntrusiveNode field_c;
     static pf[] field_e;
     private int field_d;
-    private rk[] field_b;
-    static hb field_a;
+    private IntrusiveNode[] field_b;
+    static CipherPacketBuffer field_a;
 
     public static void b(boolean param0) {
         field_e = null;
@@ -20,8 +20,8 @@ final class vh {
         field_a = null;
     }
 
-    final void a(rk param0, int param1, long param2) {
-        rk var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param0.field_a) {
             param0.a(true);
@@ -44,29 +44,29 @@ final class vh {
         if (param0 != -4749) {
           field_e = (pf[]) null;
         }
-        if (rk.field_e == 10) {
-          ec.a((byte) 126);
-          rk.field_e = 11;
+        if (IntrusiveNode.field_e == 10) {
+          ClientException.a((byte) 126);
+          IntrusiveNode.field_e = 11;
         } else {
           if (!ja.c((byte) -126)) {
-            ec.a((byte) 126);
-            rk.field_e = 11;
+            ClientException.a((byte) 126);
+            IntrusiveNode.field_e = 11;
           }
         }
         mk.field_o = true;
     }
 
-    final rk a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        rk var4;
-        rk var5;
-        rk var9;
-        rk var12;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var9;
+        IntrusiveNode var12;
         var3 = Confined.field_J ? 1 : 0;
         if (param0 < 66) {
-          return (rk) null;
+          return (IntrusiveNode) null;
         }
         if (0 >= this.field_f) {
           do {
@@ -99,11 +99,11 @@ final class vh {
         return var9;
     }
 
-    final rk a(int param0, long param1) {
-        rk var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Confined.field_J ? 1 : 0;
-        rk var4 = this.field_b[(int)((long)(-1 + this.field_d) & param1)];
-        rk var5Lifetime1;
+        IntrusiveNode var4 = this.field_b[(int)((long)(-1 + this.field_d) & param1)];
+        IntrusiveNode var5Lifetime1;
         this.field_g = var4.field_h;
         if (param0 == 1) {
           while (this.field_g != var4) {
@@ -130,7 +130,7 @@ final class vh {
         return null;
     }
 
-    final rk a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         this.field_f = 0;
         if (!param0) {
           vh.b(-33);
@@ -156,13 +156,13 @@ final class vh {
 
     vh(int param0) {
         int var2 = 0;
-        rk dupTemp$1 = null;
-        rk var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_f = 0;
         this.field_d = param0;
-        this.field_b = new rk[param0];
+        this.field_b = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new rk();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
           var3.field_a = var3;

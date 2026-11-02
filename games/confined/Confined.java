@@ -18,20 +18,20 @@ public final class Confined extends i {
         var3 = field_J ? 1 : 0;
         try {
           Confined.o(3000);
-          bg.a((byte) -108);
+          KeyboardInput.a((byte) -108);
           jc.a((byte) -92);
-          bh.a(param0 ^ 4891);
+          MouseInput.a(param0 ^ 4891);
           mi.a((byte) -63);
           dn.a(-89);
           ua.a(7526);
           i.b((byte) 82);
-          ec.a(3);
-          te.b(32575);
+          ClientException.a(3);
+          GameAppletShell.b(32575);
           pk.c(param0 - 13733);
           ck.a((byte) 81);
           fn.a();
           mg.a((byte) -121);
-          kg.d(param0 - 196);
+          PacketBuffer.d(param0 - 196);
           ri.a((byte) 28);
           ih.a(-172274096);
           f.a(-12435);
@@ -48,7 +48,7 @@ public final class Confined extends i {
           jg.b((byte) 1);
           rb.b((byte) -90);
           ad.a((byte) -120);
-          gj.a((byte) -86);
+          GameCanvas.a((byte) -86);
           wi.b((byte) 12);
           jb.l(320);
           hl.b(0);
@@ -62,8 +62,8 @@ public final class Confined extends i {
           pm.e((byte) 45);
           rd.n(-122);
           ee.k(2);
-          jl.b(9898);
-          rk.a(14);
+          DualLinkNode.b(9898);
+          IntrusiveNode.a(14);
           oi.b(false);
           ka.l(0);
           od.c();
@@ -150,7 +150,7 @@ public final class Confined extends i {
           vh.b(false);
           ji.a((byte) 102);
           ic.a((byte) 19);
-          hb.g(-1);
+          CipherPacketBuffer.g(-1);
           aa.a(param0 ^ 198);
           an.b(-22861);
           ch.a(param0 - 120);
@@ -172,7 +172,7 @@ public final class Confined extends i {
           fm.a(param0 - 191);
           im.a(false);
           rl.c(-114);
-          fc.a(-1);
+          IsaacRandom.a(-1);
           ni.a(false);
           qf.b(param0 ^ param0);
           oa.a();
@@ -251,13 +251,13 @@ public final class Confined extends i {
           qe.h(44);
           s.g((byte) 92);
           e.a(64);
-          gh.a(param0 - 245);
-          lm.a((byte) 108);
+          IntrusiveNodeHashTable.a(param0 - 245);
+          IntrusiveDeque.a((byte) 108);
           nd.c(30661);
           oj.e(20);
           og.d(param0 ^ -211);
           qk.a(param0 - 81);
-          o.a((byte) -91);
+          IntrusiveNodeHashTableIterator.a((byte) -91);
           tm.a(-125);
           qn.b(-1362);
           bj.a((byte) 113);
@@ -308,7 +308,7 @@ public final class Confined extends i {
           runtimeException = decompiledCaughtException;
           throw sd.a((Throwable) ((Object) runtimeException), "Confined.E(" + param0 + ')');
         }
-        if (te.field_k != 0) {
+        if (GameAppletShell.field_k != 0) {
           field_J = (var3 == 0);
         }
     }
@@ -585,11 +585,11 @@ public final class Confined extends i {
             }
             k.b();
             var17_int = 0;
-            L18: while (true) {
+            scanLoop1: while (true) {
               if (var17_int < mm.field_eb.length) {
                 stackIn_98_0 = 0;
                 if (var23 != 0) {
-                  break L18;
+                  break scanLoop1;
                 }
                 var18 = stackIn_98_0;
                 while (mm.field_eb[var17_int].length > var18) {
@@ -635,7 +635,7 @@ public final class Confined extends i {
             fd.field_e.field_z = var17;
           }
           if (hc.field_u != null &&
-            (bg.field_f & 32) == 0) {
+            (KeyboardInput.field_f & 32) == 0) {
             pn.field_a.a(hc.field_u, 632, 364, 16777215, -1);
           }
           if (of.field_a &&
@@ -655,7 +655,7 @@ public final class Confined extends i {
             decompiledFrameRemainder1 = (var23 != 0);
           }
           if (decompiledFrameRemainder1) {
-            lm.field_c.c(0, 376);
+            IntrusiveDeque.field_c.c(0, 376);
             if (0 < qn.field_v.field_B.field_ub) {
               mn.a(ic.field_d, 8, (byte) -30, 384, 14, qn.field_v.field_B.field_ub);
             }
@@ -748,7 +748,7 @@ public final class Confined extends i {
                 var4 = 0;
               }
               pn.field_a.a(Integer.toString(var4), 631, 446, 16777215, -1);
-              pn.field_a.a(hb.field_s, 521, 470, 16777215, -1);
+              pn.field_a.a(CipherPacketBuffer.field_s, 521, 470, 16777215, -1);
               pn.field_a.a(Integer.toString(qn.field_v.field_h), 631, 470, 16777215, -1);
               ig.a(0, 176, (byte) 118, qn.field_v.field_B.field_Bb.field_d);
               ig.a(1, 208, (byte) -56, qn.field_v.field_B.field_Hb);
@@ -764,8 +764,8 @@ public final class Confined extends i {
             if (hh.field_d != null) {
               hh.field_d.a(4243584);
             }
-            if (null != bg.field_a) {
-              bg.field_a.h((byte) 95);
+            if (null != KeyboardInput.field_a) {
+              KeyboardInput.field_a.h((byte) 95);
             }
             if (null != ji.field_e) {
               ji.field_e.f((byte) 62);
@@ -780,7 +780,7 @@ public final class Confined extends i {
           boolean decompiledSharedTail0 = !(ka.k(-58));
           if (!decompiledSharedTail0) {
             fn.a(0, 0, 640, 480);
-            fn.b(-30 - hn.d(param0 ^ 43292) / 2 + 320, 240 - gh.a(true) / 2 - 20, 60 + hn.d(24860), gh.a(true) + 40, 0, 150);
+            fn.b(-30 - hn.d(param0 ^ 43292) / 2 + 320, 240 - IntrusiveNodeHashTable.a(true) / 2 - 20, 60 + hn.d(24860), IntrusiveNodeHashTable.a(true) + 40, 0, 150);
             pi.j(-1101556575);
             decompiledSharedTail0 = (var23 != 0);
           }
@@ -840,13 +840,13 @@ public final class Confined extends i {
         double var2_doubleLifetime1Lifetime8;
         var7 = field_J ? 1 : 0;
         try {
-          if (fc.field_d == null) {
+          if (IsaacRandom.field_d == null) {
             ca.a(il.field_cb, -1856653215);
             eb.a((byte) -102);
             jc.a(ij.field_o, param0 ^ -10312, 50.0f);
             this.h(param0 ^ -51295);
-            fc.field_d = od.a(ka.field_N, "", "player/ship");
-            var2_double = 0.3 / (double)fc.field_d.b(153);
+            IsaacRandom.field_d = od.a(ka.field_N, "", "player/ship");
+            var2_double = 0.3 / (double)IsaacRandom.field_d.b(153);
             jb.a((byte) -100, var2_double, me.field_J);
             jb.a((byte) -92, var2_double, ac.field_c);
             jb.a((byte) -86, var2_double, jg.field_b);
@@ -963,28 +963,28 @@ public final class Confined extends i {
           if (li.field_m == null) {
             jc.a(ch.field_b, 10265, 56.0f);
             this.h(51200);
-            ng.a(gl.field_j, -15518, gj.field_a);
+            ng.a(gl.field_j, -15518, GameCanvas.field_a);
             li.field_m = new sg(0);
             return;
           }
           if (!li.field_m.g((byte) 61)) {
             return;
           }
-          if (null != gj.field_a) {
+          if (null != GameCanvas.field_a) {
             jc.a(ch.field_b, 10265, 56.0f);
             this.h(51200);
             var2_int = 0;
-            L19: while (true) {
+            scanLoop1: while (true) {
               if (var2_int < 4) {
                 var3_ref_od = gg.field_n[var2_int];
                 var4Lifetime2 = var3_ref_od.b(192);
                 stackIn_64_0 = 0;
                 if (var7 != 0) {
-                  break L19;
+                  break scanLoop1;
                 }
                 var5 = stackIn_64_0;
                 while (tf.field_b[var2_int] > var5) {
-                  var6Lifetime1 = gj.field_a.a(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
+                  var6Lifetime1 = GameCanvas.field_a.a(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
                   tf.field_n[var2_int][var5] = var6Lifetime1;
                   tf.field_c[var2_int][var5] = va.a((int) i.field_u.a((byte) -2, 0, var6Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1, 192);
@@ -992,7 +992,7 @@ public final class Confined extends i {
                 }
                 var5Lifetime1 = 0;
                 while (ee.field_I[var2_int] > var5Lifetime1) {
-                  var6Lifetime1Lifetime1 = gj.field_a.a(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
+                  var6Lifetime1Lifetime1 = GameCanvas.field_a.a(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
                   ee.field_H[var2_int][var5Lifetime1] = var6Lifetime1Lifetime1;
                   ee.field_O[var2_int][var5Lifetime1] = va.a((int) i.field_u.a((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1Lifetime1, 192);
@@ -1000,10 +1000,10 @@ public final class Confined extends i {
                 }
                 jb.a((byte) -109, 1.5 / (double)var4Lifetime2, vl.field_c[var2_int]);
                 var2_int++;
-                continue L19;
+                continue scanLoop1;
               }
               gl.field_j = null;
-              gj.field_a = null;
+              GameCanvas.field_a = null;
               i.field_u = null;
               stackIn_64_0 = -4258;
               break;
@@ -1025,7 +1025,7 @@ public final class Confined extends i {
             pn.field_a = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy16", (byte) 38);
             vg.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32", (byte) 38);
             ei.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
-            gh.field_h = f.a(8364, ei.field_mb, 96);
+            IntrusiveNodeHashTable.field_h = f.a(8364, ei.field_mb, 96);
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
             pc.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
             jc.a(wl.field_a, 10265, 63.0f);
@@ -1054,7 +1054,7 @@ public final class Confined extends i {
                 this.h(51200);
                 cd.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
                 wb.field_a = dh.a(false, "missile_flame", "", ih.field_d);
-                lm.field_c = dh.a(false, "interface", "", ih.field_d);
+                IntrusiveDeque.field_c = dh.a(false, "interface", "", ih.field_d);
                 nn.field_t = nm.a(ih.field_d, "interface_icons", param0 + 96, "");
                 dn.field_c = nm.a(ih.field_d, "interface_bars", 1, "");
                 gd.field_t = nm.a(ih.field_d, "interface_confined_decoration", 1, "");
@@ -1122,7 +1122,7 @@ public final class Confined extends i {
             ri.field_b = fk.a(jd.field_b, "", "player-explode").a();
             ck.field_a = fk.a(jd.field_b, "", "wing-pod-explode").a();
             ne.field_b = fk.a(jd.field_b, "", "boss-on-fire").a();
-            gj.field_d = fk.a(jd.field_b, "", "power-up-collected").a();
+            GameCanvas.field_d = fk.a(jd.field_b, "", "power-up-collected").a();
             tl.field_b = fk.a(jd.field_b, "", "friend-shield-fizzle").a();
             fh.field_b = fk.a(jd.field_b, "", "enemy-shield-fizzle").a();
             hc.field_p = fk.a(jd.field_b, "", "invincibility-fizzle").a();
@@ -1203,15 +1203,15 @@ public final class Confined extends i {
             am.g(param0 - 4163);
             return;
           }
-          if (te.field_c == null) {
+          if (GameAppletShell.field_c == null) {
             jc.a(qh.field_u, 10265, 96.0f);
             this.h(51200);
             var2 = new m(jd.field_b, v.field_Bb);
             v.field_Bb = null;
             jd.field_b = null;
-            te.field_c = gi.a(var2, (byte) -65, mn.field_b, "music/music", "");
+            GameAppletShell.field_c = gi.a(var2, (byte) -65, mn.field_b, "music/music", "");
             mn.field_b = null;
-            h.field_R = new dd(te.field_c);
+            h.field_R = new dd(GameAppletShell.field_c);
             h.field_R.b(64 * hd.field_f >> 7);
             h.field_R.b(ig.field_j[0], 32);
             am.g(-4258);
@@ -1266,7 +1266,7 @@ public final class Confined extends i {
               ql.a(false);
               break;
             }
-            var1[var2] = new bm(kb.field_a, em.field_e, jl.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], rj.field_f[var2], an.field_p);
+            var1[var2] = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], rj.field_f[var2], an.field_p);
             var2++;
           } while (var3 == 0);
           stackIn_12_0 = var1;
@@ -1394,7 +1394,7 @@ public final class Confined extends i {
             if (decompiledFrameRemainder2) {
               if (fi.field_a != 2) {
                 if (fi.field_a == 3) {
-                  bg.field_a = bk.a(320, false, false, i.field_o);
+                  KeyboardInput.field_a = bk.a(320, false, false, i.field_o);
                   decompiledFrameRemainder2 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder2) {
@@ -1496,10 +1496,10 @@ public final class Confined extends i {
             if (decompiledFrameRemainder1) {
               if (!kc.field_o) {
                 if (!bj.field_m) {
-                  if (!gh.field_k) {
+                  if (!IntrusiveNodeHashTable.field_k) {
                     if (ef.field_tb >= 0 &&
                       ef.field_tb < 3000) {
-                      ec.a((jb) null, 0);
+                      ClientException.a((jb) null, 0);
                       while (nm.e((byte) -96)) {
                         if (83 != gk.field_r &&
                           gk.field_r != 84 &&
@@ -1541,7 +1541,7 @@ public final class Confined extends i {
               }
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameCompleted1)) {
-                bg.field_a.g((byte) 118);
+                KeyboardInput.field_a.g((byte) 118);
                 decompiledFrameRemainder1 = (var3 != 0);
               }
             }
@@ -1589,11 +1589,11 @@ public final class Confined extends i {
             Confined.o(117);
           }
           if (ej.field_b) {
-            bg.field_f = bg.field_f + 1;
+            KeyboardInput.field_f = KeyboardInput.field_f + 1;
           }
           if ((!(ef.field_tb >= 0) ||
             !(ef.field_tb < 3000)) &&
-            bg.field_f == 320) {
+            KeyboardInput.field_f == 320) {
             hc.field_u = null;
           }
           if (of.field_a) {

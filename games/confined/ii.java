@@ -20,7 +20,7 @@ final class ii extends em {
         }
     }
 
-    final void a(kg param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         if (param1 <= 47) {
           return;
         }
@@ -44,7 +44,7 @@ final class ii extends em {
 
     final si b(byte param0) {
         int var2 = 111 % ((51 - param0) / 57);
-        return gh.field_a;
+        return IntrusiveNodeHashTable.field_a;
     }
 
     public static void a(boolean param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pl extends jl {
+abstract class pl extends DualLinkNode {
     int field_t;
     int field_x;
     int field_w;

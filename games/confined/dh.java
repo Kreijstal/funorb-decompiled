@@ -102,7 +102,7 @@ class dh extends sj implements el {
     }
 
     final static void a(int param0, qn param1, int param2) {
-        hb var3 = vh.field_a;
+        CipherPacketBuffer var3 = vh.field_a;
         var3.b(true, param0);
         var3.f(118, 5);
         var3.f(115, 0);
@@ -167,7 +167,7 @@ class dh extends sj implements el {
               if (this.field_zb) {
                 stackIn_12_2 = aa.field_a;
               } else {
-                stackIn_12_2 = te.field_i;
+                stackIn_12_2 = GameAppletShell.field_i;
               }
               ((jn) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2, -1);
             }
@@ -215,7 +215,7 @@ class dh extends sj implements el {
         }
         this.field_H = false;
         if (this.field_zb) {
-          bh.b(2);
+          MouseInput.b(2);
           return;
         }
         if (!this.field_ub) {

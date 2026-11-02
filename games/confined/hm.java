@@ -301,7 +301,7 @@ final class hm extends dc {
             if (var6 != null && (var7 == null ||
               -this.field_T.field_D + (-((pm) (var7)).field_C + ((pm) (var7)).field_D) > -((pm) (var6)).field_C + (this.field_T.field_D - ((pm) (var6)).field_D))) {
               param2 = this.a((pm) (var6), param2, param0, (byte) 119);
-              var17.a((rk) (var6), 0);
+              var17.a((IntrusiveNode) (var6), 0);
               var20_ref = (pm) (var17.a(0));
               if (var20_ref == null) {
                 continue;
@@ -313,7 +313,7 @@ final class hm extends dc {
               continue;
             }
             param2 = this.a((pm) (var7), param2, param0, (byte) 119);
-            var17.b((rk) (var7), 6);
+            var17.b((IntrusiveNode) (var7), 6);
             var21_ref = (pm) (var17.b(-125));
             if (var21_ref == null) {
               continue;

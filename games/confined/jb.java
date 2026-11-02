@@ -44,7 +44,7 @@ final class jb {
         int var2;
         int var3;
         var3 = Confined.field_J ? 1 : 0;
-        ec.a(this, 0);
+        ClientException.a(this, 0);
         while (nm.e((byte) -96)) {
           if (13 == gk.field_r) {
             this.e((byte) -126);
@@ -97,7 +97,7 @@ final class jb {
         int var2;
         int var3;
         var3 = Confined.field_J ? 1 : 0;
-        ec.a(this, param0 ^ 68);
+        ClientException.a(this, param0 ^ 68);
         while (nm.e((byte) -96)) {
           this.field_p.c(-1);
           var2 = this.d(-98, false) ? 1 : 0;
@@ -280,7 +280,7 @@ final class jb {
           var2 = this.field_d;
         }
         var3 = pc.a(h.field_W, var2, 113, lc.field_J);
-        pn.field_a.c(gh.field_b, 125, 29 + this.field_c, 4243584, -1);
+        pn.field_a.c(IntrusiveNodeHashTable.field_b, 125, 29 + this.field_c, 4243584, -1);
         pn.field_a.a(tk.field_d, 400, 29 + this.field_c, 4243584, -1);
         pn.field_a.a(e.field_d, 545, this.field_c + 29, 4243584, -1);
         for (var4_int = 0; var4_int < 10; var4_int++) {
@@ -360,7 +360,7 @@ final class jb {
         boolean discarded$3 = false;
         int var3;
         var3 = Confined.field_J ? 1 : 0;
-        ec.a(this, param0 + 1);
+        ClientException.a(this, param0 + 1);
         do {
           if (!nm.e((byte) -96)) {
             if (param0 != -1) {
@@ -406,7 +406,7 @@ final class jb {
         if (param0 != 3678) {
           return;
         }
-        ec.a(this, 0);
+        ClientException.a(this, 0);
         do {
           if (!nm.e((byte) -96)) {
             this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
@@ -534,7 +534,7 @@ final class jb {
         if ((var3 == 14 ||
           !param0) &&
           this.field_p.d((byte) 55)) {
-          gh.field_k = false;
+          IntrusiveNodeHashTable.field_k = false;
           da.field_e.b(param0, (byte) -123);
           this.e((byte) -120);
           return true;
@@ -1026,7 +1026,7 @@ final class jb {
         boolean discarded$1 = false;
         int var3;
         var3 = Confined.field_J ? 1 : 0;
-        ec.a(this, param0);
+        ClientException.a(this, param0);
         do {
           if (!nm.e((byte) -96)) {
             this.field_p.a(true, this.a((byte) -118, wm.field_hb, m.field_a), this.a((byte) -118, ld.field_l, jh.field_R));
@@ -1036,7 +1036,7 @@ final class jb {
           this.field_p.h((byte) -128);
           if (gk.field_r == 13) {
             this.e((byte) -125);
-            gh.field_k = false;
+            IntrusiveNodeHashTable.field_k = false;
             da.field_e.b(false, (byte) -126);
             return;
           }
@@ -1153,7 +1153,7 @@ final class jb {
         }
         if (2 == var3 &&
           this.field_p.d((byte) 55)) {
-          gh.field_k = true;
+          IntrusiveNodeHashTable.field_k = true;
           va.field_b = nj.a(param1, this.field_a, (byte) -119);
           this.e((byte) -124);
           return true;
@@ -1329,34 +1329,34 @@ final class jb {
             }
             if (var8Lifetime2 != m.field_l) {
               m.field_l = var8Lifetime2;
-              o.b((byte) -106);
+              IntrusiveNodeHashTableIterator.b((byte) -106);
             }
           }
           if (this.field_p.a(0)) {
             if (m.field_l != 0) {
               m.field_l = 0;
-              o.b((byte) -123);
+              IntrusiveNodeHashTableIterator.b((byte) -123);
             }
             this.e((byte) -127);
           }
           if (this.field_p.c((byte) -120)) {
             if (m.field_l != 128) {
               m.field_l = 128;
-              o.b((byte) -125);
+              IntrusiveNodeHashTableIterator.b((byte) -125);
             }
             this.e((byte) -122);
           }
           if (this.field_p.e((byte) 105)) {
             if (m.field_l > 0) {
               m.field_l = -16 & m.field_l - 1;
-              o.b((byte) -117);
+              IntrusiveNodeHashTableIterator.b((byte) -117);
             }
             this.e((byte) -127);
           }
           if (this.field_p.b(124)) {
             if (m.field_l < 128) {
               m.field_l = -16 & 16 + m.field_l;
-              o.b((byte) -127);
+              IntrusiveNodeHashTableIterator.b((byte) -127);
             }
             this.e((byte) -121);
           }
@@ -1381,7 +1381,7 @@ final class jb {
         if (var3 == 12 &&
           this.field_p.d((byte) 55)) {
           kc.field_o = true;
-          bg.field_a = bk.a(320, false, param1, i.field_o);
+          KeyboardInput.field_a = bk.a(320, false, param1, i.field_o);
           this.e((byte) -128);
           return true;
         }
@@ -1407,7 +1407,7 @@ final class jb {
           return false;
         }
         this.e((byte) -123);
-        kg.c(false);
+        PacketBuffer.c(false);
         return true;
     }
 
@@ -1428,7 +1428,7 @@ final class jb {
         }
         if (17 == var3 &&
           this.field_p.d((byte) 55)) {
-          rk.d((byte) -61);
+          IntrusiveNode.d((byte) -61);
           qf.field_e = false;
           ei.a(-54, param1);
           this.e((byte) -121);

@@ -28,7 +28,7 @@ final class nh {
         RuntimeException var3 = null;
         int var4 = 0;
         sf var5 = null;
-        hb var6 = null;
+        CipherPacketBuffer var6 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

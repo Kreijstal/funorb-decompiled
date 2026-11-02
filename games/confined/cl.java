@@ -71,7 +71,7 @@ final class cl extends ee {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          kg var2 = null;
+          PacketBuffer var2 = null;
           if (param0 >= -51) {
             return -101;
           }
@@ -100,7 +100,7 @@ final class cl extends ee {
             }
             if (2 == we.field_k) {
               gk.field_u = new vd((java.net.Socket) (ol.field_a.field_f), ek.field_p);
-              var2 = new kg(13);
+              var2 = new PacketBuffer(13);
               ql.a(hj.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
               var2.f(93, 15);
               var2.d(-103, pi.field_L);
@@ -499,7 +499,7 @@ final class cl extends ee {
                                             this.field_A.field_J.field_m = this.field_A.field_J.field_o + 3;
                                             if (this.field_A.field_J.field_m <= 24) {
                                               hc.field_u = b.a(new String[]{Integer.toString(this.field_A.field_J.field_m)}, oe.field_X, 1177);
-                                              bg.field_f = 0;
+                                              KeyboardInput.field_f = 0;
                                             }
                                           } else {
                                             if (var4 == 17) {
@@ -597,7 +597,7 @@ final class cl extends ee {
             }
           }
           if (this.field_z) {
-            gd.a(48, 70, gj.field_d, (pm) (this));
+            gd.a(48, 70, GameCanvas.field_d, (pm) (this));
             if (!this.field_U) {
               this.field_A.a((byte) 50, 200);
             }

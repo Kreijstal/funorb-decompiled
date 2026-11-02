@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class te extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_i;
     static String field_g;
     static vk field_c;
@@ -69,7 +69,7 @@ public abstract class te extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fc.field_f = true;
+          IsaacRandom.field_f = true;
           ve.field_f = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,7 +155,7 @@ public abstract class te extends java.applet.Applet implements Runnable, java.aw
           fm.field_b = param0 & fm.field_b + 1;
           var6 = this;
           synchronized (var6) {
-            on.field_e = fc.field_f;
+            on.field_e = IsaacRandom.field_f;
           }
           this.e(-1);
           return;
@@ -222,7 +222,7 @@ public abstract class te extends java.applet.Applet implements Runnable, java.aw
           }
           fb.field_b.addFocusListener((java.awt.event.FocusListener) (this));
           fb.field_b.requestFocus();
-          fc.field_f = true;
+          IsaacRandom.field_f = true;
           on.field_e = true;
           ve.field_f = true;
           ac.field_a = false;
@@ -310,7 +310,7 @@ public abstract class te extends java.applet.Applet implements Runnable, java.aw
           }
           var5 = param2.a((byte) -2, param3, param1);
           if (null != var5) {
-            stackIn_7_0 = new vk(new kg(var5), param4);
+            stackIn_7_0 = new vk(new PacketBuffer(var5), param4);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -661,7 +661,7 @@ public abstract class te extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fc.field_f = false;
+          IsaacRandom.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -935,7 +935,7 @@ public abstract class te extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected te() {
+    protected GameAppletShell() {
         this.field_e = false;
     }
 

@@ -20,7 +20,7 @@ final class s extends am {
         qe var7 = null;
         try {
           super.a(-51, param1, param2, param3, param4, param5);
-          var7 = rk.field_k;
+          var7 = IntrusiveNode.field_k;
           if (param0 > -18) {
             field_J = (String) null;
           }
@@ -28,14 +28,14 @@ final class s extends am {
             this.a(param2, (byte) 123, param5, param4, param1)) {
             if (this.field_t instanceof sn) {
               ((sn) (this.field_t)).a(this, var7, (byte) 105);
-              rk.field_k = null;
+              IntrusiveNode.field_k = null;
               return;
             }
             if (!(var7.field_t instanceof sn)) {
               return;
             }
             ((sn) (var7.field_t)).a(this, var7, (byte) 105);
-            rk.field_k = null;
+            IntrusiveNode.field_k = null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "s.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -51,7 +51,7 @@ final class s extends am {
         gg var4 = null;
         Object var5 = null;
         int var6 = 0;
-        hb var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var13 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Confined.field_J ? 1 : 0;
@@ -59,7 +59,7 @@ final class s extends am {
           var9 = e.field_c;
           var2 = var9.c(32);
           if (param0 == var2) {
-            var3_ref_pe = (pe) (gh.field_e.a(param0 + 38));
+            var3_ref_pe = (pe) (IntrusiveNodeHashTable.field_e.a(param0 + 38));
             if (var3_ref_pe == null) {
               dc.d(111);
               return;
@@ -85,10 +85,10 @@ final class s extends am {
             return;
           }
           var3 = var9.f((byte) 36);
-          var4 = (gg) (gj.field_b.a(-117));
+          var4 = (gg) (GameCanvas.field_b.a(-117));
           while (var4 != null) {
             if (var4.field_o != var3) {
-              var4 = (gg) (gj.field_b.d(2123));
+              var4 = (gg) (GameCanvas.field_b.d(2123));
               continue;
             }
             break;

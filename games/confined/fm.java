@@ -19,7 +19,7 @@ final class fm {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = vh.field_a;
+        CipherPacketBuffer var2 = vh.field_a;
         var2.b(true, param1);
         var2.f(87, 1);
         var2.f(115, 2);

@@ -105,7 +105,7 @@ final class h extends ee {
         }
         oj.field_B = 0;
         hc.field_u = hk.field_f;
-        bg.field_f = 0;
+        KeyboardInput.field_f = 0;
         ef.field_tb = 3001;
         qn.field_v.field_J.field_o = 1;
         qn.field_v.field_y = false;
@@ -180,7 +180,7 @@ final class h extends ee {
             stackIn_2_0 = null;
             return (l) (stackIn_2_0);
           }
-          var2 = new l(param1, jl.field_p, ij.field_r, rg.field_I, sd.field_f, an.field_p, rj.field_f);
+          var2 = new l(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, an.field_p, rj.field_f);
           ql.a(param0);
           if (param0) {
             var3 = (byte[]) null;
@@ -218,7 +218,7 @@ final class h extends ee {
         if (param0 != -31574) {
           field_R = (dd) null;
         }
-        if (rk.field_f) {
+        if (IntrusiveNode.field_f) {
           ki.field_c.i((byte) 92);
         } else {
           var1 = oi.field_q;
@@ -226,7 +226,7 @@ final class h extends ee {
             if (var1 == 1) {
               cb.field_b = jc.field_b;
             } else {
-              cb.field_b = b.a(new String[]{Integer.toString(var1)}, gj.field_g, param0 + 32751);
+              cb.field_b = b.a(new String[]{Integer.toString(var1)}, GameCanvas.field_g, param0 + 32751);
             }
             cb.field_b = pf.a(11739, new CharSequence[]{(CharSequence) ((Object) cb.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) f.field_a)});
           }

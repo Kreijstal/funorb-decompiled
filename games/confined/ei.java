@@ -16,7 +16,7 @@ final class ei extends ug implements el {
           field_ob = (dk) null;
         }
         if (kc.field_o) {
-          bg.field_a = bk.a(320, true, param1, oj.field_B);
+          KeyboardInput.field_a = bk.a(320, true, param1, oj.field_B);
         } else {
           if (bj.field_m) {
             ji.field_e = qh.a(param1, (byte) 108);
@@ -98,7 +98,7 @@ final class ei extends ug implements el {
               }
             }
           } else {
-            var3 = gh.field_d;
+            var3 = IntrusiveNodeHashTable.field_d;
           }
           var4 = new fj((String) (var3), (uk) null);
           var4.field_F = this.field_F;
@@ -186,7 +186,7 @@ final class ei extends ug implements el {
     }
 
     final static bm o(int param0) {
-        bm var1 = new bm(kb.field_a, em.field_e, jl.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], rj.field_f[0], an.field_p);
+        bm var1 = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], rj.field_f[0], an.field_p);
         ql.a(false);
         if (param0 >= 20) {
           return var1;

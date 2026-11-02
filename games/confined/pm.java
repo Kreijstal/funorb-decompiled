@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pm extends jl {
+abstract class pm extends DualLinkNode {
     double field_D;
     hn field_A;
     static nf[] field_w;
@@ -48,7 +48,7 @@ abstract class pm extends jl {
         try {
           var6 = 14 / ((-15 - param0) / 53);
           var5 = new ka(this, param2, param1);
-          ri.a((rk) (this), 0, var5);
+          ri.a((IntrusiveNode) (this), 0, var5);
           this.field_z = true;
           stackIn_1_0 = var5;
           return stackIn_1_0;
@@ -223,7 +223,7 @@ abstract class pm extends jl {
           return;
         }
         wb.field_b = param0;
-        rk.field_j = param1;
+        IntrusiveNode.field_j = param1;
         var19 = fd.field_e.field_z;
         var17 = var19;
         var2 = var17;
@@ -302,10 +302,10 @@ abstract class pm extends jl {
           (var2[var8 - 1] | var2[var8 - 640]) != 0) {
           pm.a(var8, var6, var7);
         }
-        var4 = var4 - rk.field_j;
-        var6 = var6 + rk.field_j;
-        var5 = var5 - rk.field_j;
-        var7 = var7 + rk.field_j;
+        var4 = var4 - IntrusiveNode.field_j;
+        var6 = var6 + IntrusiveNode.field_j;
+        var5 = var5 - IntrusiveNode.field_j;
+        var7 = var7 + IntrusiveNode.field_j;
         if (var4 < 0) {
           var4 = 0;
         }
@@ -514,10 +514,10 @@ abstract class pm extends jl {
         int var10;
         int var11;
         int var12;
-        var3 = param1 - rk.field_j + 1;
-        var4 = param1 + rk.field_j;
-        var5 = param2 - rk.field_j + 1;
-        var6 = param2 + rk.field_j;
+        var3 = param1 - IntrusiveNode.field_j + 1;
+        var4 = param1 + IntrusiveNode.field_j;
+        var5 = param2 - IntrusiveNode.field_j + 1;
+        var6 = param2 + IntrusiveNode.field_j;
         if (var3 < 0) {
           var3 = 0;
         }
@@ -532,7 +532,7 @@ abstract class pm extends jl {
         }
         param0 = param0 + ((var5 - param2) * 640 + (var3 - param1));
         var7 = 640 - (var4 - var3);
-        var8 = (double)wb.field_b / (double)rk.field_j;
+        var8 = (double)wb.field_b / (double)IntrusiveNode.field_j;
         var10 = var5;
         while (var10 < var6) {
           var11 = var3;
@@ -722,7 +722,7 @@ abstract class pm extends jl {
             return stackIn_27_0;
           }
           var13 = 4.0;
-          var15 = lm.field_a;
+          var15 = IntrusiveDeque.field_a;
           var17 = ke.field_Z;
           var19 = sb.field_g;
           var21 = new vb(param7);
@@ -851,7 +851,7 @@ abstract class pm extends jl {
             discarded$1 = this.a((mn) null, (oi) null, (vg) null, (od) null, (double[]) null, -98, -0.5432285346715034);
           }
           var9 = new mb(this, param2, param4, param3, param1);
-          ri.a((rk) (this), 0, var9);
+          ri.a((IntrusiveNode) (this), 0, var9);
           this.field_z = true;
           stackIn_3_0 = var9;
           return (ka) ((Object) stackIn_3_0);

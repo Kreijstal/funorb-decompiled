@@ -76,7 +76,7 @@ final class wl {
           if (var45.field_P != null &&
             var45.field_A > 1) {
             var61 = var45.field_P;
-            fc.a(-1257536924, 0, bd.field_g, 0, var61);
+            IsaacRandom.a(-1257536924, 0, bd.field_g, 0, var61);
           } else {
             wb.a(-60);
           }
@@ -230,10 +230,10 @@ final class wl {
 
     final static void a(int param0) {
         try {
-          if (null != bg.field_b) {
+          if (null != KeyboardInput.field_b) {
             try {
-              bg.field_b.a((byte) 123, 0L);
-              bg.field_b.a(24, (byte) 9, e.field_c.field_n, e.field_c.field_m);
+              KeyboardInput.field_b.a((byte) 123, 0L);
+              KeyboardInput.field_b.a(24, (byte) 9, e.field_c.field_n, e.field_c.field_m);
             } catch (Exception exception) {
             }
           }

@@ -13,9 +13,9 @@ abstract class n {
     final static be a(int param0) {
         if (param0 != 21146) {
           n.a(124);
-          return hb.field_r;
+          return CipherPacketBuffer.field_r;
         }
-        return hb.field_r;
+        return CipherPacketBuffer.field_r;
     }
 
     final java.net.Socket c(int param0) throws IOException {

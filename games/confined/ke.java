@@ -244,7 +244,7 @@ final class ke extends ga implements ge, el, pg {
         this.field_U.field_C = p.field_a;
         this.field_W.field_C = tf.field_g;
         this.field_H.field_C = oe.field_O;
-        this.field_X.field_C = jl.field_m;
+        this.field_X.field_C = DualLinkNode.field_m;
         this.field_V.field_C = rm.field_D;
         this.field_bb.field_C = hf.field_U;
         this.field_R.a(-18312, new qg(this.field_R));
@@ -270,7 +270,7 @@ final class ke extends ga implements ge, el, pg {
         var3 = var3 + this.a(this.field_U, oh.field_d, 170, var3, 120);
         var3 = var3 + (this.a(this.field_W, 170, var3, fj.field_A, "", 20, 20) + 5);
         var3 = var3 + this.a(this.field_H, sc.field_b, 170, var3, 120);
-        var3 = var3 + (5 + this.a(hb.field_t, jj.field_hb, 150, 170, var3, this.field_X));
+        var3 = var3 + (5 + this.a(CipherPacketBuffer.field_t, jj.field_hb, 150, 170, var3, this.field_X));
         var3 = var3 + (5 + this.a(rc.field_a, va.field_d, 150, 170, var3, this.field_R));
         var3 = var3 + this.a(170, var3, qi.field_j, (byte) 59, this.field_V);
         la var4 = new la(46, var3, -90 + this.field_F, 25, this.field_bb, true, -120 + this.field_F, 5, fa.field_Q, 11579568, ag.field_j);

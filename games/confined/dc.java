@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dc extends jl {
+abstract class dc extends DualLinkNode {
     double field_y;
     private int field_db;
     private int field_E;
@@ -320,7 +320,7 @@ abstract class dc extends jl {
             var20Lifetime1Lifetime1++;
           }
           var21Lifetime1Lifetime2 = var13Lifetime1;
-          L34: while (true) {
+          scanLoop1: while (true) {
             if (var21Lifetime1Lifetime2 < var8) {
               var22Lifetime1Lifetime2 = this.field_U * (-this.field_G + var21Lifetime1Lifetime2) + this.field_O * (-this.field_z + var11Lifetime1);
               if (var22Lifetime1Lifetime2 >= param1 &&
@@ -328,17 +328,17 @@ abstract class dc extends jl {
                 var22Lifetime1Lifetime2 = var22Lifetime1Lifetime2 >> 12;
                 var23Lifetime2 = (this.field_v << 8) + (var22Lifetime1Lifetime2 * (this.field_E - this.field_v) >> 8);
                 if (var23Lifetime2 <= 0) {
-                  break L34;
+                  break scanLoop1;
                 }
                 var24Lifetime1 = (this.field_Z * (var21Lifetime1Lifetime2 - this.field_G) + this.field_db * (var11Lifetime1 - this.field_z)) / var23Lifetime2;
                 if (256 <= var24Lifetime1) {
-                  break L34;
+                  break scanLoop1;
                 }
                 if (0 > var24Lifetime1) {
                   localTemp$0 = -var24Lifetime1;
                   var24Lifetime1 = localTemp$0;
                   if (localTemp$0 >= 256) {
-                    break L34;
+                    break scanLoop1;
                   }
                 }
                 var25Lifetime1 = -var24Lifetime1 + 256;
@@ -360,7 +360,7 @@ abstract class dc extends jl {
           var20Lifetime1Lifetime2 = var9Lifetime1 + (var12Lifetime1 >> 4);
           var9Lifetime1 += 640;
           var21Lifetime1Lifetime3 = -16 + var12Lifetime1;
-          L38: while (true) {
+          scanLoop2: while (true) {
             if (var21Lifetime1Lifetime3 >= var7) {
               var20Lifetime1Lifetime2--;
               var22Lifetime1Lifetime3 = this.field_O * (-this.field_z + var11Lifetime1) + (-this.field_G + var21Lifetime1Lifetime3) * this.field_U;
@@ -369,17 +369,17 @@ abstract class dc extends jl {
                 var22Lifetime1Lifetime3 = var22Lifetime1Lifetime3 >> 12;
                 var23Lifetime3 = ((this.field_E - this.field_v) * var22Lifetime1Lifetime3 >> 8) + (this.field_v << 8);
                 if (var23Lifetime3 <= 0) {
-                  break L38;
+                  break scanLoop2;
                 }
                 var24Lifetime2 = (this.field_Z * (-this.field_G + var21Lifetime1Lifetime3) + (var11Lifetime1 - this.field_z) * this.field_db) / var23Lifetime3;
                 if (256 <= var24Lifetime2) {
-                  break L38;
+                  break scanLoop2;
                 }
                 if (var24Lifetime2 < 0) {
                   localTemp$1 = -var24Lifetime2;
                   var24Lifetime2 = localTemp$1;
                   if (localTemp$1 >= 256) {
-                    break L38;
+                    break scanLoop2;
                   }
                 }
                 var25Lifetime2 = 256 - var24Lifetime2;
@@ -484,7 +484,7 @@ abstract class dc extends jl {
         if (param0 != -14) {
           field_M = (String) null;
         }
-        stackIn_6_0 = (10 <= rk.field_e) && (we.field_c >= 13);
+        stackIn_6_0 = (10 <= IntrusiveNode.field_e) && (we.field_c >= 13);
         return stackIn_6_0;
     }
 
@@ -628,7 +628,7 @@ abstract class dc extends jl {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int stackIn_9_0 = 0;
-        rk stackIn_12_0 = null;
+        IntrusiveNode stackIn_12_0 = null;
         Object stackIn_23_0 = null;
         Object stackIn_40_0 = null;
         RuntimeException stackIn_44_0 = null;
@@ -708,7 +708,7 @@ abstract class dc extends jl {
                 }
                 break;
               }
-              ri.a((rk) (var7), 0, var23_ref);
+              ri.a((IntrusiveNode) (var7), 0, var23_ref);
               var7 = var23_ref;
             } else {
               while (var6 != null) {
@@ -723,7 +723,7 @@ abstract class dc extends jl {
               } else {
                 stackIn_23_0 = param0.field_a;
               }
-              ri.a((rk) (stackIn_23_0), 0, var23_ref);
+              ri.a((IntrusiveNode) (stackIn_23_0), 0, var23_ref);
             }
             var12 = var12 + var20;
           }
@@ -747,7 +747,7 @@ abstract class dc extends jl {
               }
               break;
             }
-            ri.a((rk) (var7), 0, var24_ref);
+            ri.a((IntrusiveNode) (var7), 0, var24_ref);
             var7 = var24_ref;
             return;
           }
@@ -763,7 +763,7 @@ abstract class dc extends jl {
           } else {
             stackIn_40_0 = param0.field_a;
           }
-          ri.a((rk) (stackIn_40_0), 0, var24_ref);
+          ri.a((IntrusiveNode) (stackIn_40_0), 0, var24_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

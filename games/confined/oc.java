@@ -27,7 +27,7 @@ final class oc {
           if (this.field_j == he.field_e) {
             return 1;
           }
-          if (rk.field_d == 2 &&
+          if (IntrusiveNode.field_d == 2 &&
             bj.a(true, this.field_f)) {
             return 1;
           }
@@ -40,7 +40,7 @@ final class oc {
         if (this.field_j == he.field_e) {
           return 1;
         }
-        if (rk.field_d != 2) {
+        if (IntrusiveNode.field_d != 2) {
           var2Lifetime1 = -28 % ((9 - param0) / 60);
           return 0;
         }

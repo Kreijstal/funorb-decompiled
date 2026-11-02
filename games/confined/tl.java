@@ -30,8 +30,8 @@ final class tl {
             if (param4 != 9737) {
               return;
             }
-            e.field_c = new hb(param2);
-            vh.field_a = new hb(param13);
+            e.field_c = new CipherPacketBuffer(param2);
+            vh.field_a = new CipherPacketBuffer(param13);
             kk.field_b = param7;
             na.field_W = param8;
             d.field_d = param5;
@@ -45,7 +45,7 @@ final class tl {
             qa.field_c = param3;
             if (null != ld.field_k.field_n) {
               try {
-                bg.field_b = new pf(ld.field_k.field_n, 64, 0);
+                KeyboardInput.field_b = new pf(ld.field_k.field_n, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

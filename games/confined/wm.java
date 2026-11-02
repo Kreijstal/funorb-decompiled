@@ -47,7 +47,7 @@ final class wm extends hf {
               if (var4.a(this.field_cb, false, 15.0)) {
                 this.field_A.field_B.field_Db = this.field_A.field_B.field_Db + 2.0;
                 var4.field_Q.field_m = 96;
-                this.field_A.field_F.a((rk) (var4), (byte) 72);
+                this.field_A.field_F.a((IntrusiveNode) (var4), (byte) 72);
               }
             }
             var3_int++;
@@ -169,7 +169,7 @@ final class wm extends hf {
     final void g(int param0) {
         mb var2 = new mb((pm) (this), 6.0, 0.3, 0.0003, jd.field_a);
         var2.field_M.field_w = this.field_C / 0.4 * 4.0;
-        ri.a((rk) (this), 0, var2);
+        ri.a((IntrusiveNode) (this), 0, var2);
         if (param0 != 26402) {
           this.field_cb = (hm[]) null;
         }
@@ -206,7 +206,7 @@ final class wm extends hf {
           this.field_kb.field_p = this.field_D;
           this.field_kb.field_t = this.field_E;
           this.field_kb.field_u = 100.0 * this.field_C;
-          param0.a((rk) (this.field_kb), (byte) -74);
+          param0.a((IntrusiveNode) (this.field_kb), (byte) -74);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "wm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

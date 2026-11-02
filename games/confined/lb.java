@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends jl {
+final class lb extends DualLinkNode {
     private String[] field_w;
     int[] field_s;
     private int[][] field_t;
     static int[] field_u;
     private int[] field_v;
 
-    final void a(int param0, kg param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -41,7 +41,7 @@ final class lb extends jl {
         }
     }
 
-    private final void a(int param0, kg param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;

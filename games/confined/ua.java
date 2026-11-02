@@ -6,7 +6,7 @@ final class ua {
 
     final static void a(sf param0, int param1, int param2) {
         try {
-          sm.field_y.a((rk) (param0), (byte) -77);
+          sm.field_y.a((IntrusiveNode) (param0), (byte) -77);
           nh.a(param0, param2 - 8795, param1);
           if (param2 != 8795) {
             String var4 = (String) null;
@@ -36,7 +36,7 @@ final class ua {
             field_a = (boolean[]) null;
           }
           var5 = param2.a(var4_int, param3, -99);
-          stackIn_3_0 = jl.a(-5744, var4_int, var5, param2);
+          stackIn_3_0 = DualLinkNode.a(-5744, var4_int, var5, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

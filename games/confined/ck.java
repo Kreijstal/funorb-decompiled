@@ -23,12 +23,12 @@ abstract class ck {
           var9 = (int)(param3 * 325.94932345220167);
           var10 = 1;
           while (var10 < 4) {
-            bh.field_b[-1 + var10] = ti.field_m[va.a(2047, (var10 * 4 + 3) * var7_int)] >> 2;
-            bh.field_b[2 + var10] = ti.field_m[va.a((3 + var10 * 4) * var8, 2047)] >> 2;
-            bh.field_b[5 + var10] = ti.field_m[va.a(2047, var9 * (3 + 4 * var10))] >> 2;
-            bh.field_b[8 + var10] = ti.field_j[va.a(2047, var7_int * (3 + var10 * 4))] >> 2;
-            bh.field_b[var10 + 11] = ti.field_j[va.a(2047, var8 * (var10 * 4 + 3))] >> 2;
-            bh.field_b[var10 + 14] = ti.field_j[va.a(var9 * (var10 * 4 + 3), 2047)] >> 2;
+            MouseInput.field_b[-1 + var10] = ti.field_m[va.a(2047, (var10 * 4 + 3) * var7_int)] >> 2;
+            MouseInput.field_b[2 + var10] = ti.field_m[va.a((3 + var10 * 4) * var8, 2047)] >> 2;
+            MouseInput.field_b[5 + var10] = ti.field_m[va.a(2047, var9 * (3 + 4 * var10))] >> 2;
+            MouseInput.field_b[8 + var10] = ti.field_j[va.a(2047, var7_int * (3 + var10 * 4))] >> 2;
+            MouseInput.field_b[var10 + 11] = ti.field_j[va.a(2047, var8 * (var10 * 4 + 3))] >> 2;
+            MouseInput.field_b[var10 + 14] = ti.field_j[va.a(var9 * (var10 * 4 + 3), 2047)] >> 2;
             var10++;
             if (var11 != 0) {
               return;
@@ -130,7 +130,7 @@ abstract class ck {
           var21Lifetime2 = ti.field_k;
           var22Lifetime2 = ti.field_f;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param6.field_b > var23Lifetime2) {
               var24Lifetime1 = param6.field_x[var23Lifetime2];
@@ -145,7 +145,7 @@ abstract class ck {
                 if (stackIn_59_0 < stackIn_59_1) {
                   stackIn_68_0 = ~var18;
                   stackIn_68_1 = ~tf.field_m.length;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -233,7 +233,7 @@ abstract class ck {
                   stackIn_68_0 = ~var18;
                   stackIn_68_1 = ~tf.field_m.length;
                   if (var31 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_68_0 <= stackIn_68_1) {
                     break;
@@ -350,13 +350,13 @@ abstract class ck {
         try {
           var2_int = param0.length();
           var3 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var2_int > var3) {
               var4 = param0.charAt(var3);
               stackIn_14_0 = ~var4;
               stackIn_14_1 = -49;
               if (var5 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_14_0 <= stackIn_14_1 &&
                 var4 <= 57) {
@@ -407,7 +407,7 @@ abstract class ck {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hb var2 = null;
+        CipherPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -416,7 +416,7 @@ abstract class ck {
         int var7 = 0;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          var2 = new hb(param1.a(param0 ^ -26592, "logo.fo3d", ""));
+          var2 = new CipherPacketBuffer(param1.a(param0 ^ -26592, "logo.fo3d", ""));
           var3 = var2.c(param0 ^ 26581);
           var2.i(8);
           im.field_a = ul.a(var2, 31662);

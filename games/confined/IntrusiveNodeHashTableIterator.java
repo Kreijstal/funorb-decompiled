@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class o implements Iterator {
-    private rk field_c;
+final class IntrusiveNodeHashTableIterator implements Iterator {
+    private IntrusiveNode field_c;
     static mi field_f;
     static String field_d;
-    private rk field_e;
+    private IntrusiveNode field_e;
     private int field_b;
-    private gh field_a;
+    private IntrusiveNodeHashTable field_a;
 
     final static void b(byte param0) {
         ti.a(ua.a(true));
         if (param0 >= -104) {
-          o.a((byte) -125);
+          IntrusiveNodeHashTableIterator.a((byte) -125);
           da.field_h = 512;
           return;
         }
@@ -60,7 +60,7 @@ final class o implements Iterator {
         this.field_b = param0;
     }
 
-    o(gh param0) {
+    IntrusiveNodeHashTableIterator(IntrusiveNodeHashTable param0) {
         this.field_c = null;
         try {
           this.field_a = param0;
@@ -72,7 +72,7 @@ final class o implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        rk var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Confined.field_J ? 1 : 0;
         if (this.field_a.field_j[-1 + this.field_b] != this.field_e) {

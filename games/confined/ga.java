@@ -328,7 +328,7 @@ class ga extends fj implements hi {
 
     final void b(fj param0, int param1) {
         try {
-          this.field_N.a((rk) (param0), (byte) -66);
+          this.field_N.a((IntrusiveNode) (param0), (byte) -66);
           if (param1 != 10) {
             field_I = (int[]) null;
           }

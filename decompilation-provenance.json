@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "confined": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/confined"
+      },
+      "inputTreeSha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c",
+      "sources": {
+        "files": 341,
+        "sha256": "e3aecaa15332d72ad9bcede40c6fd627a1878935a224f5f8c7b5a90843c7794f"
+      },
+      "dictionary": {
+        "path": "decompilation/confined-naming.json",
+        "sha256": "88f86721715797863b48285c28157c5255902b88b5b64cebeb31ca4bbef5ad48"
+      },
+      "readingGuide": {
+        "path": "games/confined/README.md",
+        "sha256": "4c4579eb05fcd90c20a158c1e74a50baee568e7f0839aadf4df4a563b0a177d6"
+      },
+      "rulesSha256": "dc681ca0daf44a9dbc5e696bc0a0c4bcd45178125ba193dee82c6a229a5ab75a",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11013,6 +11037,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 341,
+          "sha256": "e3aecaa15332d72ad9bcede40c6fd627a1878935a224f5f8c7b5a90843c7794f"
         }
       },
       "crazycrystals": {

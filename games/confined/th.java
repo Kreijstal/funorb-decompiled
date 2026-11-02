@@ -137,7 +137,7 @@ final class th extends ah {
           this.field_db.field_w = true;
           this.field_db.field_v = -var9;
           this.field_db.field_p = this.field_D - this.field_C * var9;
-          param0.a((rk) (this.field_db), (byte) 125);
+          param0.a((IntrusiveNode) (this.field_db), (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "th.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -41,7 +41,7 @@ final class wi {
     }
 
     final static void a(int param0, int param1) {
-        rk var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         sf var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -160,7 +160,7 @@ final class wi {
         }
     }
 
-    final gj a(int param0) {
+    final GameCanvas a(int param0) {
         this.field_o = wm.field_ab;
         this.field_p = im.field_b;
         this.field_e.a(this.field_a, this.field_k, param0 ^ 21837);
@@ -168,7 +168,7 @@ final class wi {
         if (param0 != 20742) {
           this.field_a = 67;
         }
-        gj var2 = id.a(2401, ki.field_d, this.field_a, 0, 0, this.field_k);
+        GameCanvas var2 = id.a(2401, ki.field_d, this.field_a, 0, 0, this.field_k);
         if (var2 == null) {
           this.a((byte) -105);
         }

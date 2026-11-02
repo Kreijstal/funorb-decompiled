@@ -305,7 +305,7 @@ class dk {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -338,7 +338,7 @@ class dk {
                       var12.field_m = var12.field_m + var13;
                     }
                     if (var4 >= this.field_r) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {

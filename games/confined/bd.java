@@ -21,7 +21,7 @@ final class bd {
         }
     }
 
-    final static void a(kg param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
@@ -88,7 +88,7 @@ final class bd {
         if (param0 != -4487) {
           return;
         }
-        gh.field_f = null;
+        IntrusiveNodeHashTable.field_f = null;
     }
 
     static {

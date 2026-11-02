@@ -84,7 +84,7 @@ final class dj extends ee {
               if (stackIn_21_0 == 0 &&
                 this.field_Nb[var4] == null) {
                 var5 = new h(this.field_A, this, var4);
-                ri.a((rk) (this), 0, var5);
+                ri.a((IntrusiveNode) (this), 0, var5);
                 this.field_Nb[var4] = var5;
                 var2_int = 1;
               }
@@ -620,7 +620,7 @@ final class dj extends ee {
           } else {
             var10 = 1;
           }
-          L35: {
+          regionExit1: {
             if (!this.field_A.field_M &&
               !this.field_Mb &&
               var10 != 0 &&
@@ -663,7 +663,7 @@ final class dj extends ee {
                   stackIn_151_3Lifetime1 = null;
                   stackIn_154_12 = true;
                 }
-                ri.a((rk) (this), stackIn_150_1, new cf(stackIn_150_4, (ee) (this), stackIn_150_6, stackIn_150_7, stackIn_150_8, stackIn_150_9, stackIn_151_10, stackIn_153_11, stackIn_154_12));
+                ri.a((IntrusiveNode) (this), stackIn_150_1, new cf(stackIn_150_4, (ee) (this), stackIn_150_6, stackIn_150_7, stackIn_150_8, stackIn_150_9, stackIn_151_10, stackIn_153_11, stackIn_154_12));
                 if (this.field_mb) {
                   stackIn_157_1 = 3;
                 } else {
@@ -706,7 +706,7 @@ final class dj extends ee {
                     stackIn_164_3Lifetime1 = null;
                     stackIn_167_12 = true;
                   }
-                  ri.a((rk) (this), stackIn_163_1, new cf(stackIn_163_4, (ee) (this), stackIn_163_6, stackIn_163_7, stackIn_163_8, stackIn_163_9, stackIn_164_10, stackIn_166_11, stackIn_167_12));
+                  ri.a((IntrusiveNode) (this), stackIn_163_1, new cf(stackIn_163_4, (ee) (this), stackIn_163_6, stackIn_163_7, stackIn_163_8, stackIn_163_9, stackIn_164_10, stackIn_166_11, stackIn_167_12));
                   stackIn_169_0 = this;
                   stackIn_169_1 = 0;
                   stackIn_169_2 = null;
@@ -738,7 +738,7 @@ final class dj extends ee {
                     stackIn_170_3Lifetime1 = null;
                     stackIn_173_12 = true;
                   }
-                  ri.a((rk) (this), stackIn_169_1, new cf(stackIn_169_4, (ee) (this), stackIn_169_6, stackIn_169_7, stackIn_169_8, stackIn_169_9, stackIn_170_10, stackIn_172_11, stackIn_173_12));
+                  ri.a((IntrusiveNode) (this), stackIn_169_1, new cf(stackIn_169_4, (ee) (this), stackIn_169_6, stackIn_169_7, stackIn_169_8, stackIn_169_9, stackIn_170_10, stackIn_172_11, stackIn_173_12));
                   stackIn_175_0 = this;
                   stackIn_175_1 = 0;
                   stackIn_175_2 = null;
@@ -770,7 +770,7 @@ final class dj extends ee {
                     stackIn_176_3Lifetime1 = null;
                     stackIn_179_12 = true;
                   }
-                  ri.a((rk) (this), stackIn_175_1, new cf(stackIn_175_4, (ee) (this), stackIn_175_6, stackIn_175_7, stackIn_175_8, stackIn_175_9, stackIn_176_10, stackIn_178_11, stackIn_179_12));
+                  ri.a((IntrusiveNode) (this), stackIn_175_1, new cf(stackIn_175_4, (ee) (this), stackIn_175_6, stackIn_175_7, stackIn_175_8, stackIn_175_9, stackIn_176_10, stackIn_178_11, stackIn_179_12));
                   stackIn_181_0 = this;
                   stackIn_181_1 = 0;
                   stackIn_181_2 = null;
@@ -806,7 +806,7 @@ final class dj extends ee {
                     stackIn_185_5 = this;
                     stackIn_185_12 = true;
                   }
-                  ri.a((rk) (this), stackIn_181_1, new cf(stackIn_181_4, (ee) (this), stackIn_181_6, stackIn_181_7, stackIn_181_8, stackIn_181_9, stackIn_182_10, stackIn_184_11, stackIn_185_12));
+                  ri.a((IntrusiveNode) (this), stackIn_181_1, new cf(stackIn_181_4, (ee) (this), stackIn_181_6, stackIn_181_7, stackIn_181_8, stackIn_181_9, stackIn_182_10, stackIn_184_11, stackIn_185_12));
                   this.field_Z = 63 & this.field_Z + this.field_kb;
                   var12 += 4;
                 }
@@ -817,7 +817,7 @@ final class dj extends ee {
                   stackIn_340_0 = stackOut_188_0;
                   stackIn_189_0 = stackOut_188_0;
                   if (var32 != 0) {
-                    break L35;
+                    break regionExit1;
                   }
                   if (stackIn_189_0 != null) {
                     var14_ref_h.field_Z.b(118);
@@ -854,7 +854,7 @@ final class dj extends ee {
                       stackIn_197_3Lifetime1 = null;
                       stackIn_200_12 = true;
                     }
-                    ri.a((rk) (this), stackIn_196_1, new cf(stackIn_196_4, stackIn_196_5, stackIn_196_6, stackIn_196_7, stackIn_196_8, stackIn_196_9, stackIn_197_10, stackIn_199_11, stackIn_200_12));
+                    ri.a((IntrusiveNode) (this), stackIn_196_1, new cf(stackIn_196_4, stackIn_196_5, stackIn_196_6, stackIn_196_7, stackIn_196_8, stackIn_196_9, stackIn_197_10, stackIn_199_11, stackIn_200_12));
                   }
                   var13_int++;
                 }
@@ -912,7 +912,7 @@ final class dj extends ee {
                   stackIn_242_3 = null;
                   stackIn_242_8 = true;
                 }
-                ri.a((rk) (this), stackIn_241_1, new wm(stackIn_241_4, this, stackIn_241_6, stackIn_241_7, stackIn_242_8));
+                ri.a((IntrusiveNode) (this), stackIn_241_1, new wm(stackIn_241_4, this, stackIn_241_6, stackIn_241_7, stackIn_242_8));
                 this.field_fb = 0;
                 if (var32 != 0 &&
                   0 < this.field_fb) {
@@ -953,18 +953,18 @@ final class dj extends ee {
             } else {
               stackIn_273_0 = 0;
             }
-            L68: {
+            regionExit2: {
               var11 = stackIn_273_0;
               if (var11 != 0 &&
                 this.field_Hb >= 2048) {
                 this.field_Hb = this.field_Hb - 2048;
                 this.field_lb = this.field_lb + 1;
                 if (null != this.field_Y) {
-                  break L68;
+                  break regionExit2;
                 }
                 this.field_Y = new gk((pm) (this), th.field_bb, 1, true);
                 if (var32 == 0) {
-                  break L68;
+                  break regionExit2;
                 }
               }
               if (var11 != 0) {
@@ -994,7 +994,7 @@ final class dj extends ee {
                   stackIn_299_3 = null;
                   stackIn_299_8 = true;
                 }
-                ri.a((rk) (this), stackIn_298_1, new il(stackIn_298_4, this, stackIn_298_6, stackIn_298_7, stackIn_299_8));
+                ri.a((IntrusiveNode) (this), stackIn_298_1, new il(stackIn_298_4, this, stackIn_298_6, stackIn_298_7, stackIn_299_8));
                 this.field_lb = 0;
                 if (var32 != 0 &&
                   this.field_lb > 0) {
@@ -1055,7 +1055,7 @@ final class dj extends ee {
               stackIn_340_0 = this.a(var3[9], var3[10], var3[11], false);
             }
           }
-          L80: {
+          regionExit3: {
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameCompleted2 = true;
@@ -1128,7 +1128,7 @@ final class dj extends ee {
                   this.a(false, var3, var18 * 3, ac.field_c);
                   this.field_Ab[var18].a(ud.field_o, var11, this.field_bb[2 + var18 * 3], var14, var16, dh.field_sb, rn.field_c, this.field_bb[var18 * 3], false, this.field_bb[1 + 3 * var18]);
                   this.field_Ab[var18].field_Q.field_m = this.field_Q * 96 >> 3;
-                  this.field_A.field_b.a((rk) (this.field_Ab[var18]), (byte) -64);
+                  this.field_A.field_b.a((IntrusiveNode) (this.field_Ab[var18]), (byte) -64);
                   var18++;
                 } while (var32 == 0);
                 while (var18 < 5) {
@@ -1145,7 +1145,7 @@ final class dj extends ee {
                     if (null != var19.field_Q.field_Q) {
                       var19.field_Q.field_Q.field_m = this.field_Q * 96 >> 3;
                     }
-                    this.field_A.field_b.a((rk) (var19.field_Q), (byte) 79);
+                    this.field_A.field_b.a((IntrusiveNode) (var19.field_Q), (byte) 79);
                   }
                   var18++;
                 }
@@ -1176,7 +1176,7 @@ final class dj extends ee {
                     var11 += 4;
                     this.field_Lb.b(118);
                     this.field_S.field_Q.field_m = 48;
-                    this.field_A.field_F.a((rk) (this.field_S), (byte) 116);
+                    this.field_A.field_F.a((IntrusiveNode) (this.field_S), (byte) 116);
                   }
                   var12 = 0;
                   while (var12 < 5) {
@@ -1191,7 +1191,7 @@ final class dj extends ee {
                       if (var13.field_X.a((hm[]) null, false, 3.0)) {
                         var13.field_X.field_Q.field_m = 32;
                         this.field_A.field_t = true;
-                        this.field_A.field_F.a((rk) (var13.field_X), (byte) -95);
+                        this.field_A.field_F.a((IntrusiveNode) (var13.field_X), (byte) -95);
                         var13.field_Z.b(118);
                         var11++;
                       }
@@ -1222,7 +1222,7 @@ final class dj extends ee {
                         (decompiledFrameRemainder0 = !(this.field_A.field_P)) &&
                         (decompiledFrameRemainder0 = (0 == this.field_A.field_L))) {
                         this.field_Lb.b(118);
-                        ri.a((rk) (this), 0, new gi(this.field_A, this));
+                        ri.a((IntrusiveNode) (this), 0, new gi(this.field_A, this));
                         this.field_ob = 16;
                         this.field_A.field_P = true;
                         this.field_ab = this.field_ab - 1;
@@ -1230,7 +1230,7 @@ final class dj extends ee {
                       }
                       if (decompiledFrameRemainder0) {
                         this.field_Lb.b(118);
-                        ri.a((rk) (this), 0, new ik(this.field_A, this));
+                        ri.a((IntrusiveNode) (this), 0, new ik(this.field_A, this));
                         this.field_zb = this.field_zb - 1;
                         this.field_ob = 16;
                         decompiledFrameRemainder0 = (var32 != 0);
@@ -1238,12 +1238,12 @@ final class dj extends ee {
                     }
                     if (decompiledFrameRemainder0) {
                       this.field_Lb.b(118);
-                      ri.a((rk) (this), 0, new gm(this.field_A, this));
+                      ri.a((IntrusiveNode) (this), 0, new gm(this.field_A, this));
                       this.field_tb = this.field_tb - 1;
                       this.field_ob = 16;
                       if (var32 != 0) {
                         this.field_Lb.b(118);
-                        ri.a((rk) (this), 0, new th(this.field_A, this));
+                        ri.a((IntrusiveNode) (this), 0, new th(this.field_A, this));
                         this.field_ob = 16;
                         this.field_ub = this.field_ub - 1;
                         this.field_ob = this.field_ob - 1;
@@ -1251,7 +1251,7 @@ final class dj extends ee {
                     }
                   } else {
                     this.field_Lb.b(118);
-                    ri.a((rk) (this), 0, new th(this.field_A, this));
+                    ri.a((IntrusiveNode) (this), 0, new th(this.field_A, this));
                     this.field_ob = 16;
                     this.field_ub = this.field_ub - 1;
                     if (var32 != 0) {
@@ -1288,7 +1288,7 @@ final class dj extends ee {
                           ((tf) (Object) stackIn_527_0.field_Z).b(118);
                         }
                         var11++;
-                        break L80;
+                        break regionExit3;
                       }
                     }
                   }
@@ -1325,7 +1325,7 @@ final class dj extends ee {
                     var11++;
                   }
                 }
-                break L80;
+                break regionExit3;
               }
             }
             while (true) {
@@ -1333,10 +1333,10 @@ final class dj extends ee {
               do {
                 var11++;
                 if (var32 != 0) {
-                  break L80;
+                  break regionExit3;
                 }
                 if (var11 >= 5) {
-                  break L80;
+                  break regionExit3;
                 }
                 stackIn_524_0 = null;
                 stackIn_524_1 = this.field_Nb[var11];
@@ -1592,7 +1592,7 @@ final class dj extends ee {
               }
               break;
             }
-            this.field_A.field_g.a((rk) (this), -1);
+            this.field_A.field_g.a((IntrusiveNode) (this), -1);
           }
           if (decompiledFrameCompleted0) {
             stackIn_40_0 = param0 ? 1 : 0;
@@ -1834,7 +1834,7 @@ final class dj extends ee {
             if ((double)var3 > Math.random() * (double)incrementValue$0) {
               this.field_mb = false;
               var3--;
-              ri.a((rk) (this), param0 + 1, new cl(this.field_A, this, 0));
+              ri.a((IntrusiveNode) (this), param0 + 1, new cl(this.field_A, this, 0));
             }
           }
           if (this.field_Eb) {
@@ -1843,7 +1843,7 @@ final class dj extends ee {
             if ((double)var3 > Math.random() * (double)incrementValue$1) {
               this.field_Eb = false;
               var3--;
-              ri.a((rk) (this), param0 + 1, new cl(this.field_A, this, 1));
+              ri.a((IntrusiveNode) (this), param0 + 1, new cl(this.field_A, this, 1));
             }
           }
           if (this.field_Sb) {
@@ -1852,7 +1852,7 @@ final class dj extends ee {
             if (Math.random() * (double)incrementValue$2 < (double)var3) {
               var3--;
               this.field_Sb = false;
-              ri.a((rk) (this), 0, new cl(this.field_A, this, 2));
+              ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 2));
             }
           }
           if (this.field_cb) {
@@ -1861,7 +1861,7 @@ final class dj extends ee {
             if ((double)incrementValue$3 * Math.random() < (double)var3) {
               var3--;
               this.field_cb = false;
-              ri.a((rk) (this), 0, new cl(this.field_A, this, 3));
+              ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 3));
             }
           }
           if (this.field_eb) {
@@ -1870,7 +1870,7 @@ final class dj extends ee {
             if ((double)incrementValue$4 * Math.random() < (double)var3) {
               this.field_eb = false;
               var3--;
-              ri.a((rk) (this), param0 + 1, new cl(this.field_A, this, 5));
+              ri.a((IntrusiveNode) (this), param0 + 1, new cl(this.field_A, this, 5));
             }
           }
           if (this.field_rb) {
@@ -1879,16 +1879,16 @@ final class dj extends ee {
             if ((double)var3 > (double)incrementValue$5 * Math.random()) {
               var3--;
               this.field_rb = false;
-              ri.a((rk) (this), ~param0, new cl(this.field_A, this, 4));
+              ri.a((IntrusiveNode) (this), ~param0, new cl(this.field_A, this, 4));
             }
           }
           if (this.field_U > 0) {
             this.field_U = 0;
-            ri.a((rk) (this), 0, new cl(this.field_A, this, 8));
+            ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 8));
           }
           if (0 < this.field_Pb) {
             this.field_Pb = 0;
-            ri.a((rk) (this), param0 + 1, new cl(this.field_A, this, 7));
+            ri.a((IntrusiveNode) (this), param0 + 1, new cl(this.field_A, this, 7));
           }
           var4 = this.field_ub;
           boolean decompiledNaturalLoopExit4 = false;
@@ -1903,7 +1903,7 @@ final class dj extends ee {
                 if (this.field_ub < 0) {
                   this.field_ub = 0;
                 }
-                ri.a((rk) (this), 0, new cl(this.field_A, this, 10));
+                ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 10));
               }
               var4 -= 4;
               continue;
@@ -1926,7 +1926,7 @@ final class dj extends ee {
                 if (this.field_tb < 0) {
                   this.field_tb = 0;
                 }
-                ri.a((rk) (this), ~param0, new cl(this.field_A, this, 11));
+                ri.a((IntrusiveNode) (this), ~param0, new cl(this.field_A, this, 11));
               }
               var4Lifetime1 -= 4;
               continue;
@@ -1949,7 +1949,7 @@ final class dj extends ee {
                 if (0 > this.field_zb) {
                   this.field_zb = 0;
                 }
-                ri.a((rk) (this), 0, new cl(this.field_A, this, 12));
+                ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 12));
               }
               var4Lifetime2 -= 4;
               continue;
@@ -1969,7 +1969,7 @@ final class dj extends ee {
               if (stackIn_120_0 < 0) {
                 this.field_ab = this.field_ab - 1;
                 var3--;
-                ri.a((rk) (this), 0, new cl(this.field_A, this, 13));
+                ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 13));
               }
               var4Lifetime3--;
               continue;
@@ -1989,7 +1989,7 @@ final class dj extends ee {
               if (stackIn_130_0 > 0) {
                 this.field_Bb.field_b = this.field_Bb.field_b - 1;
                 var3--;
-                ri.a((rk) (this), 0, new cl(this.field_A, this, 14));
+                ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 14));
               }
               var4Lifetime4--;
               continue;
@@ -2017,16 +2017,16 @@ final class dj extends ee {
               }
               break;
             }
-            ri.a((rk) (this), 0, new cl(this.field_A, this, 15));
+            ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 15));
           }
           if (this.field_Gb > 0) {
             this.field_Gb = 0;
             this.field_Kb = 0;
-            ri.a((rk) (this), ~param0, new cl(this.field_A, this, 16));
+            ri.a((IntrusiveNode) (this), ~param0, new cl(this.field_A, this, 16));
           }
           if (param0 > ~this.field_R) {
             this.field_R = 0;
-            ri.a((rk) (this), 0, new cl(this.field_A, this, 9));
+            ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this, 9));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2160,7 +2160,7 @@ final class dj extends ee {
             this.field_A.field_a.field_E = var8;
           }
           if ((4 & this.field_Qb) == 0) {
-            this.a(512, true, param1, (byte) 44, fc.field_d, this.field_jb, param3, param4, param0, this.field_Kb);
+            this.a(512, true, param1, (byte) 44, IsaacRandom.field_d, this.field_jb, param3, param4, param0, this.field_Kb);
           }
           if (var7_int == 0) {
             this.field_Bb.a(param3, param1, (byte) 125);

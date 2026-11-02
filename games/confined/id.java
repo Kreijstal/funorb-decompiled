@@ -119,7 +119,7 @@ abstract class id extends ee {
         this.field_nb.a(param0, param3, param2, 100);
     }
 
-    final static void a(kg param0, java.math.BigInteger param1, int param2, int param3, byte[] param4, java.math.BigInteger param5, int param6) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, int param2, int param3, byte[] param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -153,7 +153,7 @@ abstract class id extends ee {
           }
           if (null == jf.field_b ||
             !(var7_int <= jf.field_b.field_m.length)) {
-            jf.field_b = new kg(var7_int);
+            jf.field_b = new PacketBuffer(var7_int);
           }
           jf.field_b.field_n = 0;
           jf.field_b.a(param6, param3, param4, 109);
@@ -161,7 +161,7 @@ abstract class id extends ee {
           jf.field_b.a(65280, var13);
           if (null == pc.field_j ||
             !(100 <= pc.field_j.field_m.length)) {
-            pc.field_j = new kg(100);
+            pc.field_j = new PacketBuffer(100);
           }
           pc.field_j.field_n = 0;
           pc.field_j.f(117, 10);
@@ -298,14 +298,14 @@ abstract class id extends ee {
         }
     }
 
-    final static gj a(int param0, df param1, int param2, int param3, int param4, int param5) {
+    final static GameCanvas a(int param0, df param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        gj var7 = null;
+        GameCanvas var7 = null;
         df var8 = null;
         java.awt.Frame var9 = null;
         Object stackIn_2_0 = null;
-        gj stackIn_6_0 = null;
+        GameCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -315,13 +315,13 @@ abstract class id extends ee {
           var6 = var9;
           if (var9 == null) {
             stackIn_2_0 = null;
-            return (gj) (stackIn_2_0);
+            return (GameCanvas) (stackIn_2_0);
           }
           if (param0 != 2401) {
             var8 = (df) null;
             id.a(62, (df) null, 51, -70, 79, 121);
           }
-          var7 = new gj();
+          var7 = new GameCanvas();
           var7.field_e = var9;
           var7.field_e.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param2, param5);
@@ -605,7 +605,7 @@ abstract class id extends ee {
           if (this.field_Bb == 0) {
             this.field_Bb = this.field_wb;
             this.field_nb.b(118);
-            ri.a((rk) (this), 0, this.h((byte) 59));
+            ri.a((IntrusiveNode) (this), 0, this.h((byte) 59));
           }
         }
         if (0 < this.field_sb) {
@@ -613,7 +613,7 @@ abstract class id extends ee {
           if (this.field_W == 0) {
             this.field_W = this.field_sb;
             this.field_nb.b(118);
-            ri.a((rk) (this), param0 - 11878, this.i((byte) 96));
+            ri.a((IntrusiveNode) (this), param0 - 11878, this.i((byte) 96));
           }
         }
         if (this.field_jb <= 0) {
@@ -626,7 +626,7 @@ abstract class id extends ee {
             } else {
               stackIn_35_2 = new uc(this.field_A, (ee) (this), this.field_Eb);
             }
-            ri.a((rk) (this), stackIn_34_1, (rk) (stackIn_35_2));
+            ri.a((IntrusiveNode) (this), stackIn_34_1, (IntrusiveNode) (stackIn_35_2));
             this.field_nb.b(param0 ^ 11792);
           }
         } else {
@@ -637,7 +637,7 @@ abstract class id extends ee {
           this.field_mb.a(16736448, param0 ^ 11878, 50.0, 0.5);
           if (this.field_mb.a((hm[]) null, false, this.field_lb)) {
             this.field_nb.b(param0 - 11760);
-            this.field_A.field_F.a((rk) (this.field_mb), (byte) -84);
+            this.field_A.field_F.a((IntrusiveNode) (this.field_mb), (byte) -84);
             this.field_Q = this.field_Q + 4.0;
           }
           this.field_pb.field_m = (int)(Math.sqrt(this.field_Q) * 16.0);

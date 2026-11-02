@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ph extends rk {
+final class ph extends IntrusiveNode {
     private float[] field_q;
     private static float[] field_D;
     private boolean field_P;
@@ -44,7 +44,7 @@ final class ph extends rk {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        kg var2 = new kg(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_r = var2.f((byte) 44);
         this.field_F = var2.f((byte) 78);
         this.field_m = var2.f((byte) 46);

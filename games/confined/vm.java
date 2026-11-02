@@ -58,7 +58,7 @@ final class vm extends hf {
           this.field_eb.field_u = 0.5;
           this.field_eb.field_t = this.field_E;
           this.field_eb.field_o = this.field_t;
-          param0.a((rk) (this.field_eb), (byte) -93);
+          param0.a((IntrusiveNode) (this.field_eb), (byte) -93);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "vm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -199,7 +199,7 @@ final class vm extends hf {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        hb var8 = null;
+        CipherPacketBuffer var8 = null;
         lb var9 = null;
         var7 = Confined.field_J ? 1 : 0;
         var8 = e.field_c;
@@ -218,11 +218,11 @@ final class vm extends hf {
         }
         stackIn_9_0 = (param0 != var8.c(32)) ? 0 : 1;
         var4 = stackIn_9_0;
-        hb.field_v = var8.d(true);
+        CipherPacketBuffer.field_v = var8.d(true);
         if (var4 != 0) {
           ej.field_d = var8.d(true);
         } else {
-          ej.field_d = hb.field_v;
+          ej.field_d = CipherPacketBuffer.field_v;
         }
         if (cc.field_m == 1 ||
           4 == cc.field_m) {

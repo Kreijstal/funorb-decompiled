@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends rk {
+final class pe extends IntrusiveNode {
     static va field_p;
     static volatile int field_n;
     static bi field_o;
@@ -227,7 +227,7 @@ final class pe extends rk {
             for (var6 = 0; var6 < ai.field_i; var6++) {
               var5.field_q[var6] = e.field_c.field_m[var6];
             }
-            qh.field_w.a((rk) (var5), (byte) -93);
+            qh.field_w.a((IntrusiveNode) (var5), (byte) -93);
             tg.field_S = -1;
             stackIn_18_0 = tg.field_S;
           }

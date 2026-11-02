@@ -144,8 +144,8 @@ final class dl {
           if (rj.field_a > 0) {
             fieldTemp$21 = rj.field_a - 1;
             rj.field_a = rj.field_a - 1;
-            var2_ref_byte__Lifetime5 = rk.field_c[fieldTemp$21];
-            rk.field_c[rj.field_a] = null;
+            var2_ref_byte__Lifetime5 = IntrusiveNode.field_c[fieldTemp$21];
+            IntrusiveNode.field_c[rj.field_a] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (param1 < -98) {
@@ -202,8 +202,8 @@ final class dl {
           if (rj.field_a > 0) {
             fieldTemp$20 = rj.field_a - 1;
             rj.field_a = rj.field_a - 1;
-            var2_ref_byte__Lifetime1 = rk.field_c[fieldTemp$20];
-            rk.field_c[rj.field_a] = null;
+            var2_ref_byte__Lifetime1 = IntrusiveNode.field_c[fieldTemp$20];
+            IntrusiveNode.field_c[rj.field_a] = null;
             return var2_ref_byte__Lifetime1;
           }
           if (param1 >= -98) {

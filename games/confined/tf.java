@@ -13,9 +13,9 @@ final class tf {
     static int[][] field_c;
     static int[][] field_n;
     double field_f;
-    static bh field_a;
+    static MouseInput field_a;
     static int[] field_m;
-    static bg field_p;
+    static KeyboardInput field_p;
     static String field_g;
     static mi field_k;
     static double field_e;
@@ -146,9 +146,9 @@ final class tf {
         field_b = new int[]{5, 12, 7, 14};
         field_n = new int[][]{new int[field_b[0]], new int[field_b[1]], new int[field_b[2]], new int[field_b[3]]};
         field_c = new int[][]{new int[field_b[0]], new int[field_b[1]], new int[field_b[2]], new int[field_b[3]]};
-        field_a = new bh();
+        field_a = new MouseInput();
         field_m = new int[8192];
         field_g = "Type your email address again to make sure it's correct";
-        field_p = new bg();
+        field_p = new KeyboardInput();
     }
 }

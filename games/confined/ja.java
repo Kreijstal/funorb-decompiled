@@ -3,7 +3,7 @@
  */
 final class ja {
     private pc field_c;
-    private kg field_j;
+    private PacketBuffer field_j;
     private java.math.BigInteger field_h;
     private tn field_i;
     private jf field_f;
@@ -31,7 +31,7 @@ final class ja {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = an.field_p[va.a((int) var4[var6], 255)];
           }
-          var1[var2] = new nf(kb.field_a, em.field_e, jl.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var5);
+          var1[var2] = new nf(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var5);
         }
         ql.a(false);
         return var1;
@@ -44,7 +44,7 @@ final class ja {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        kg var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -62,7 +62,7 @@ final class ja {
         if (this.field_i.field_v) {
           return false;
         }
-        var10 = new kg(this.field_i.e((byte) 118));
+        var10 = new PacketBuffer(this.field_i.e((byte) 118));
         var10.field_n = 5;
         var3 = var10.c(32);
         var10.field_n = var10.field_n + 72 * var3;

@@ -289,7 +289,7 @@ final class pi extends ga implements ge, el {
         int var2 = 0;
         int var1 = hn.d(24860);
         if (param0 == -1101556575) {
-          var2 = gh.a(true);
+          var2 = IntrusiveNodeHashTable.a(true);
           kn.field_d.a(-ll.field_a + uh.field_c, ef.field_sb - g.field_n, (byte) 103, (ll.field_a << 1) + var2, var1 + (g.field_n << 1));
           na.f(0);
           return;
