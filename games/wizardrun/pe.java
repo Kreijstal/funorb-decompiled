@@ -122,11 +122,11 @@ class pe extends UiWidget implements bg {
         RuntimeException var5 = null;
         var10 = wizardrun.field_H;
         try {
-          SoftwareRasterizer.f(param4, param2, 1 + param3, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param4, param2, 1 + param3, 10000536);
           if (param1 != -14) {
             return;
           }
-          SoftwareRasterizer.f(param4, param0 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param4, param0 + param2, 1 + param3, 12105912);
           var5_int = 1;
           var6 = param0;
           if (param2 + var5_int < SoftwareRasterizer.clipTop) {

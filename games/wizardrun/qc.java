@@ -59,7 +59,7 @@ final class qc extends pe implements fj, qd {
           gh.field_b.a(this.field_F, 20 + (param0 + this.field_o), 15 + (this.field_l + param3), this.field_r - 40, this.field_n, 16777215, -1, 1, 0, gh.field_b.field_M);
         }
         if (null != this.field_M) {
-          SoftwareRasterizer.f(10 + param0, 134 + param3, this.field_r - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param3, this.field_r - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

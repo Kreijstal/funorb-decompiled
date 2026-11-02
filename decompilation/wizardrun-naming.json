@@ -916,6 +916,22 @@
       "renamedSymbol": "M:SoftwareRasterizer.desaturateRect(IIII)V"
     },
     {
+      "symbol": "M:ed.e(IIII)V",
+      "originalName": "e",
+      "to": "drawVerticalLine",
+      "evidence": "Clips y against the top and bottom bounds and stores the colour down one column.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.drawVerticalLine(IIII)V"
+    },
+    {
+      "symbol": "M:ed.f(IIII)V",
+      "originalName": "f",
+      "to": "drawHorizontalLine",
+      "evidence": "Clips x against the left and right bounds and stores the colour along one row.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.drawHorizontalLine(IIII)V"
+    },
+    {
       "symbol": "M:o.b()V",
       "originalName": "b",
       "to": "bindAsRasterTarget",
@@ -50201,7 +50217,7 @@
     },
     {
       "symbol": "L:ed.e(IIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.drawVerticalLine(IIII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -50212,7 +50228,7 @@
     },
     {
       "symbol": "L:ed.e(IIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.drawVerticalLine(IIII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -50377,7 +50393,7 @@
     },
     {
       "symbol": "L:ed.f(IIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.drawHorizontalLine(IIII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -50388,7 +50404,7 @@
     },
     {
       "symbol": "L:ed.f(IIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.drawHorizontalLine(IIII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -149707,9 +149723,9 @@
     },
     {
       "symbol": "M:ed.e(IIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.e(IIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.drawVerticalLine(IIII)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "drawVerticalLine",
       "declaration": {
         "file": "ed.java",
         "start": 48482,
@@ -149740,9 +149756,9 @@
     },
     {
       "symbol": "M:ed.f(IIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.f(IIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.drawHorizontalLine(IIII)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "drawHorizontalLine",
       "declaration": {
         "file": "ed.java",
         "start": 581,
@@ -178252,7 +178268,7 @@
     },
     {
       "symbol": "P:ed.e(IIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.drawVerticalLine(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178263,7 +178279,7 @@
     },
     {
       "symbol": "P:ed.e(IIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.drawVerticalLine(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178274,7 +178290,7 @@
     },
     {
       "symbol": "P:ed.e(IIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.drawVerticalLine(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -178285,7 +178301,7 @@
     },
     {
       "symbol": "P:ed.e(IIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.drawVerticalLine(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -178417,7 +178433,7 @@
     },
     {
       "symbol": "P:ed.f(IIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.drawHorizontalLine(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178428,7 +178444,7 @@
     },
     {
       "symbol": "P:ed.f(IIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.drawHorizontalLine(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178439,7 +178455,7 @@
     },
     {
       "symbol": "P:ed.f(IIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.drawHorizontalLine(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -178450,7 +178466,7 @@
     },
     {
       "symbol": "P:ed.f(IIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.drawHorizontalLine(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -233232,7 +233248,7 @@
       "original": "ed.java",
       "renamed": "SoftwareRasterizer.java",
       "inputSha256": "0ed33e3a56a33860d99da8c94300acc7276755b2fcda4848ba845197d5458f10",
-      "outputSha256": "359ede6823e8d4b05a3d18e68a7985c5952ae08f6bcbc85053344be9d4bce9bd",
+      "outputSha256": "f33f7eb6bf9f08348ace8a85381c9c72b5dfafe5cc84581d9afc8691445afd30",
       "edits": [
         {
           "start": 50,
@@ -233331,6 +233347,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 581,
+          "end": 582,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 699,
@@ -233466,11 +233489,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1425,
+          "end": 1426,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 1468,
           "end": 1470,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1471,
+          "end": 1472,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 1527,
@@ -233480,11 +233517,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1530,
+          "end": 1531,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
+        },
+        {
           "start": 1573,
           "end": 1575,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1576,
+          "end": 1577,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
         },
         {
           "start": 1737,
@@ -234439,11 +234490,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 34296,
+          "end": 34297,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 34376,
           "end": 34378,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 34379,
+          "end": 34380,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 34525,
@@ -234453,11 +234518,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 34528,
+          "end": 34529,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
+        },
+        {
           "start": 34608,
           "end": 34610,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 34611,
+          "end": 34612,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
         },
         {
           "start": 35128,
@@ -235104,11 +235183,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 42724,
+          "end": 42725,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
+        },
+        {
           "start": 42797,
           "end": 42799,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 42800,
+          "end": 42801,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
         },
         {
           "start": 42886,
@@ -235118,11 +235211,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 42889,
+          "end": 42890,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 42962,
           "end": 42964,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 42965,
+          "end": 42966,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 43225,
@@ -235564,6 +235671,13 @@
           "symbol": "F:ed.field_k:[I",
           "original": "field_k",
           "renamed": "pixels"
+        },
+        {
+          "start": 48482,
+          "end": 48483,
+          "symbol": "M:ed.e(IIII)V",
+          "original": "e",
+          "renamed": "drawVerticalLine"
         },
         {
           "start": 48600,
@@ -240970,7 +241084,7 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "dcd3feaa3b3b41279e3c2c0274f9feffc2ecb532b8bc9134d96fb46d05ce6e64",
-      "outputSha256": "071ea0fda94bbf07ed25c0054e95855765904865e3e4dc60eee88f7adb760dbd",
+      "outputSha256": "5ce7dd37ee35e898e4d5a2f1f90a5ad3423ade7707296a5c1b903a2194902132",
       "edits": [
         {
           "start": 61,
@@ -241071,11 +241185,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1782,
+          "end": 1783,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 1870,
           "end": 1872,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1873,
+          "end": 1874,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 2138,
@@ -241085,11 +241213,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 2141,
+          "end": 2142,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 2211,
           "end": 2213,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2214,
+          "end": 2215,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 2676,
@@ -241501,7 +241643,7 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "beb65a34c307d022f61f3fa771144a4aa3e7439f210c361b44d5590a52f890ad",
-      "outputSha256": "88ac8e59d994893100e5401963d6d03e371e0c378c2f08e7977075b7dc854fce",
+      "outputSha256": "725f1a4f105e952c8120b9bdc37245438c740243c156ed6bb615444572894817",
       "edits": [
         {
           "start": 382,
@@ -241523,6 +241665,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 522,
+          "end": 523,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 581,
@@ -256696,7 +256845,7 @@
       "original": "pe.java",
       "renamed": "pe.java",
       "inputSha256": "5690ad8711808b8165e844860cffec6deebaf1be9855465f54af2df7dbe10035",
-      "outputSha256": "f9c43f4be6528e39d8dfc4899f9f1b3d1c5f9340400d1acead54154f84d06b0f",
+      "outputSha256": "80ae3aebede0a217ac82378d88bc995faef44ffd85fc6efb33e2ae7039f4a1db",
       "edits": [
         {
           "start": 76,
@@ -256839,11 +256988,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 4115,
+          "end": 4116,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 4229,
           "end": 4231,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 4232,
+          "end": 4233,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 4365,
@@ -259766,7 +259929,7 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "e3b08289104a00feec438f98487eac9a09d75419f60217479e9efeb22b561f26",
-      "outputSha256": "4acbea61ae118be389738ea4b73d0220ae025011d344de8a6e855a24f95b218d",
+      "outputSha256": "f977b50cc78c71d2d830ca165731cf45c811aa03baf92d036d83ee449857e4e1",
       "edits": [
         {
           "start": 201,
@@ -259788,6 +259951,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1967,
+          "end": 1968,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 4499,
@@ -261140,7 +261310,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "e416dff9a43b89e4a38402293546b1e4cc87b7bf47d428e510c3fcdcba9e7fbc",
-      "outputSha256": "88bba7c578ef3852dcacd611fc93f47da164b6a468370af8690ed8aff2408d0b",
+      "outputSha256": "a7e5eebb40b32676e14916c305c2d37b6b4408cb2d527aa3ce0d6372735c8f29",
       "edits": [
         {
           "start": 502,
@@ -261269,11 +261439,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6519,
+          "end": 6520,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 7026,
           "end": 7028,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7029,
+          "end": 7030,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 7083,
@@ -261283,6 +261467,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7086,
+          "end": 7087,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 7931,
           "end": 7933,
           "symbol": "C:ed",
@@ -261290,11 +261481,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7934,
+          "end": 7935,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 7988,
           "end": 7990,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7991,
+          "end": 7992,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         }
       ]
     },
@@ -268051,7 +268256,7 @@
       "original": "vd.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "4cec30c9a79ee2736df60ed288c7cb9c5dd1656171e493b351623646b31ec3ac",
-      "outputSha256": "6e7c289980b07f7004b3185720ddeb4a74d6d42a91e26b7eb7f01565c1a4d041",
+      "outputSha256": "688b0808b42b305ad3f4c900d7fe712fdb8924b8957e4cde66cb51bfe32e9353",
       "edits": [
         {
           "start": 53,
@@ -268145,11 +268350,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 9835,
+          "end": 9836,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
+        },
+        {
           "start": 9981,
           "end": 9983,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9984,
+          "end": 9985,
+          "symbol": "M:ed.f(IIII)V",
+          "original": "f",
+          "renamed": "drawHorizontalLine"
         },
         {
           "start": 10502,
@@ -279339,10 +279558,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/wizardrun"
     },
-    "rulesSha256": "3564e7ef3cb360583201fb3bddac2c4e7a0805867e265c2dca573bdec06df901",
+    "rulesSha256": "9e5713206a82f951d339f76e6b26c4ced368c328192bc55f7e3acda833636aed",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3",
-    "outputTreeSha256": "2b9e38752503784d978fda1770124b19d74378b8282022d1aa10d940c41627b6",
+    "outputTreeSha256": "e3dabd6bc373e0368aa8ddf0482412b8a3909ee0631bf740ed7043b2ac176eb5",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

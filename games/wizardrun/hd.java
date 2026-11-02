@@ -52,13 +52,13 @@ final class hd extends UiWidget {
           var10 = -var5 + var6;
           var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
           var12 = var11 < 256 ? (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 8 : var8 | var9;
-          SoftwareRasterizer.f(var7, var6, this.field_J, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_J, var12);
           var9Lifetime1 = 65280 & param0;
-          SoftwareRasterizer.f(-(this.field_J * 2) + var7, var6, this.field_J, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_J * 2) + var7, var6, this.field_J, var12);
           var8Lifetime1 = param0 & 16711935;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var9Lifetime1 * var11) >>> 8;
-          SoftwareRasterizer.f(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
-          SoftwareRasterizer.f(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
         bb.b(4);
         return var14;
