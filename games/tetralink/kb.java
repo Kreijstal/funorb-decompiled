@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends mc {
+final class kb extends IntrusiveNode {
     int field_s;
     int field_o;
     int field_r;
     static String field_p;
     boolean field_n;
-    static bc field_q;
+    static BitPacketBuffer field_q;
     static int field_t;
 
     final static void a(boolean param0, le param1) {

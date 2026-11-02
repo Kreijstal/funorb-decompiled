@@ -19,7 +19,7 @@ final class kf {
         if (11 == fn.field_R) {
           kn.a(param0 ^ -8145);
         }
-        nn.a(bn.field_a, md.field_v, param0 + 8007, n.field_Q);
+        nn.a(bn.field_a, SpriteState.field_v, param0 + 8007, n.field_Q);
         if (param0 != -8129) {
           return;
         }
@@ -30,12 +30,12 @@ final class kf {
         }
     }
 
-    final static oh[] a(boolean param0, oh[] param1) {
+    final static Sprite[] a(boolean param0, Sprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        oh var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        oh[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -52,7 +52,7 @@ final class kf {
             param1[var2_int].field_t = param1[var2_int].field_u;
             param1[var2_int].field_F = param1[var2_int].field_E;
           }
-          stackIn_7_0 = (oh[]) (param1);
+          stackIn_7_0 = (Sprite[]) (param1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

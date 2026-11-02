@@ -5,7 +5,7 @@ final class vi {
     static int field_d;
     static String field_b;
     static int field_c;
-    static qe field_a;
+    static GameKeyHandler field_a;
 
     final static String a(int param0) {
         if (2 > vd.field_a) {
@@ -33,7 +33,7 @@ final class vi {
           return hh.field_a + " - " + ib.field_a.a("commonui", true) + "%";
         }
         if (!q.field_b.c(param0 ^ -31270)) {
-          return fl.field_a;
+          return BufferedSocket.field_a;
         }
         if (!q.field_b.a(false)) {
           return v.field_w + " - " + q.field_b.b(22300) + "%";
@@ -43,7 +43,7 @@ final class vi {
 
     public static void b(int param0) {
         if (param0 < 12) {
-          field_a = (qe) null;
+          field_a = (GameKeyHandler) null;
           field_b = null;
           field_a = null;
           return;
@@ -55,6 +55,6 @@ final class vi {
     static {
         field_d = 0;
         field_b = "Show players in <%0>'s game";
-        field_a = new qe();
+        field_a = new GameKeyHandler();
     }
 }

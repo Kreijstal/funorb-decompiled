@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends eb {
+final class ee extends PcmStream {
     private int field_G;
     private int field_u;
     private int field_y;
@@ -84,14 +84,14 @@ final class ee extends eb {
             if (this.field_A == -256 &&
               (this.field_x & 255) == 0) {
               if (nk.field_s) {
-                return ee.b(0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this);
+                return ee.b(0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this);
               }
-              return ee.b(((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this);
+              return ee.b(((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this);
             }
             if (nk.field_s) {
-              return ee.b(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this, this.field_A, param4);
+              return ee.b(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this, this.field_A, param4);
             }
-            return ee.b(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this, this.field_A, param4);
+            return ee.b(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this, this.field_A, param4);
           }
           var6 = param1 + this.field_v;
           if (var6 > param3) {
@@ -101,15 +101,15 @@ final class ee extends eb {
           if (this.field_A == -256 &&
             (this.field_x & 255) == 0) {
             if (!nk.field_s) {
-              param1 = ee.b(((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this);
+              param1 = ee.b(((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this);
             } else {
-              param1 = ee.a(0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this);
+              param1 = ee.a(0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this);
             }
           } else {
             if (!nk.field_s) {
-              param1 = ee.d(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this, this.field_A, param4);
+              param1 = ee.d(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this, this.field_A, param4);
             } else {
-              param1 = ee.b(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this, this.field_A, param4);
+              param1 = ee.b(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this, this.field_A, param4);
             }
           }
           this.field_v = this.field_v - param1;
@@ -267,27 +267,27 @@ final class ee extends eb {
     }
 
     final synchronized boolean l() {
-        return this.field_x < 0 || this.field_x >= ((wf) (this.field_p)).field_s.length << 8;
+        return this.field_x < 0 || this.field_x >= ((PcmSample) (this.field_p)).field_s.length << 8;
     }
 
     final int d() {
         int var1 = this.field_r * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_B == 0) {
-          var1 = var1 - var1 * this.field_x / (((wf) (this.field_p)).field_s.length << 8);
+          var1 = var1 - var1 * this.field_x / (((PcmSample) (this.field_p)).field_s.length << 8);
         } else {
           if (this.field_B >= 0) {
-            var1 = var1 - var1 * this.field_u / ((wf) (this.field_p)).field_s.length;
+            var1 = var1 - var1 * this.field_u / ((PcmSample) (this.field_p)).field_s.length;
           }
         }
         return var1 > 255 ? 255 : var1;
     }
 
-    final eb c() {
+    final PcmStream c() {
         return null;
     }
 
-    final static ee a(wf param0, int param1, int param2, int param3) {
+    final static ee a(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_s == null) {
           return null;
         }
@@ -480,7 +480,7 @@ final class ee extends eb {
         this.field_v = 0;
     }
 
-    final static ee a(wf param0, int param1, int param2) {
+    final static ee a(PcmSample param0, int param1, int param2) {
         if (param0.field_s == null) {
           return null;
         }
@@ -598,7 +598,7 @@ final class ee extends eb {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        wf var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -611,7 +611,7 @@ final class ee extends eb {
           this.a(param2);
           return;
         }
-        var4 = (wf) (this.field_p);
+        var4 = (PcmSample) (this.field_p);
         var5 = this.field_u << 8;
         var6 = this.field_y << 8;
         var7 = var4.field_s.length << 8;
@@ -1077,7 +1077,7 @@ final class ee extends eb {
     }
 
     final synchronized void e(int param0) {
-        int var2 = ((wf) (this.field_p)).field_s.length << 8;
+        int var2 = ((PcmSample) (this.field_p)).field_s.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -1087,7 +1087,7 @@ final class ee extends eb {
         this.field_x = param0;
     }
 
-    final eb b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -1164,14 +1164,14 @@ final class ee extends eb {
             if (this.field_A == 256 &&
               (this.field_x & 255) == 0) {
               if (nk.field_s) {
-                return ee.a(0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this);
+                return ee.a(0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this);
               }
-              return ee.a(((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this);
+              return ee.a(((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this);
             }
             if (nk.field_s) {
-              return ee.c(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this, this.field_A, param4);
+              return ee.c(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, 0, param3, param2, this, this.field_A, param4);
             }
-            return ee.a(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this, this.field_A, param4);
+            return ee.a(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, 0, param3, param2, this, this.field_A, param4);
           }
           var6 = param1 + this.field_v;
           if (var6 > param3) {
@@ -1181,15 +1181,15 @@ final class ee extends eb {
           if (this.field_A == 256 &&
             (this.field_x & 255) == 0) {
             if (!nk.field_s) {
-              param1 = ee.a(((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this);
+              param1 = ee.a(((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this);
             } else {
-              param1 = ee.b(0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this);
+              param1 = ee.b(0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this);
             }
           } else {
             if (!nk.field_s) {
-              param1 = ee.a(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this, this.field_A, param4);
+              param1 = ee.a(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_r, this.field_D, 0, var6, param2, this, this.field_A, param4);
             } else {
-              param1 = ee.a(0, 0, ((wf) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this, this.field_A, param4);
+              param1 = ee.a(0, 0, ((PcmSample) (this.field_p)).field_s, param0, this.field_x, param1, this.field_E, this.field_G, this.field_F, this.field_s, 0, var6, param2, this, this.field_A, param4);
             }
           }
           this.field_v = this.field_v - param1;
@@ -1208,7 +1208,7 @@ final class ee extends eb {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        wf var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -1233,7 +1233,7 @@ final class ee extends eb {
             this.f();
           }
         }
-        var2 = (wf) (this.field_p);
+        var2 = (PcmSample) (this.field_p);
         var3 = this.field_u << 8;
         var4 = this.field_y << 8;
         var5 = var2.field_s.length << 8;
@@ -1712,8 +1712,8 @@ final class ee extends eb {
         return param3;
     }
 
-    private ee(wf param0, int param1, int param2) {
-        this.field_p = (ff) ((Object) param0);
+    private ee(PcmSample param0, int param1, int param2) {
+        this.field_p = (AbstractAudioSample) ((Object) param0);
         this.field_u = param0.field_q;
         this.field_y = param0.field_r;
         this.field_t = param0.field_p;
@@ -1724,8 +1724,8 @@ final class ee extends eb {
         this.f();
     }
 
-    private ee(wf param0, int param1, int param2, int param3) {
-        this.field_p = (ff) ((Object) param0);
+    private ee(PcmSample param0, int param1, int param2, int param3) {
+        this.field_p = (AbstractAudioSample) ((Object) param0);
         this.field_u = param0.field_q;
         this.field_y = param0.field_r;
         this.field_t = param0.field_p;

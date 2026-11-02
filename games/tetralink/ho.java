@@ -9,7 +9,7 @@ final class ho extends gn implements ij, dm, sh {
     private ae field_V;
     private fo field_R;
     static String field_Q;
-    static oh field_M;
+    static Sprite field_M;
     private fo field_O;
     private ae field_S;
     private fo field_U;
@@ -17,7 +17,7 @@ final class ho extends gn implements ij, dm, sh {
     private fo field_N;
     private fk field_P;
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           if (!param3) {
             this.a(true);
@@ -29,7 +29,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -75,8 +75,8 @@ final class ho extends gn implements ij, dm, sh {
         int var1 = 1;
         this.field_T = new re("", (dn) null, var1 != 0);
         this.field_V = new ae(pf.field_k, (dn) null);
-        this.field_S = new ae(bg.field_n, (dn) null);
-        this.field_O.field_C = sf.field_c;
+        this.field_S = new ae(GameApplet.field_n, (dn) null);
+        this.field_O.field_C = SecondaryNodeDequeIterator.field_c;
         this.field_W.field_C = jj.field_c;
         this.field_K.field_C = f.field_t;
         this.field_R.field_C = ci.field_D;
@@ -107,7 +107,7 @@ final class ho extends gn implements ij, dm, sh {
         var3 = var3 + (5 + this.a("", 20, 170, om.field_Pb, this.field_K, var3, false));
         var3 = var3 + this.a(gj.field_a, this.field_R, -115, var3, 170);
         var3 = var3 + (5 + this.a(this.field_N, 170, qm.field_f, 120, var3, fm.field_e));
-        var3 = var3 + (5 + this.a(this.field_O, 170, jm.field_c, 120, var3, kl.field_e));
+        var3 = var3 + (5 + this.a(this.field_O, 170, jm.field_c, 120, var3, FullscreenFocusCanvas.field_e));
         var3 = var3 + this.a(170, ba.field_P, var3, this.field_U, 107);
         rc var4 = new rc(46, var3, this.field_F - 90, 25, this.field_T, true, this.field_F - 120, 5, dh.field_d, 11579568, ke.field_e);
         this.c(var4, 10);
@@ -260,7 +260,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    private final int a(int param0, String param1, int param2, na param3, int param4) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         ab var7 = null;
         int var8 = 0;
@@ -301,7 +301,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    private final int a(String param0, int param1, int param2, String param3, na param4, int param5, boolean param6) {
+    private final int a(String param0, int param1, int param2, String param3, UiWidget param4, int param5, boolean param6) {
         RuntimeException var8 = null;
         ck var9 = null;
         rc var10 = null;
@@ -363,8 +363,8 @@ final class ho extends gn implements ij, dm, sh {
 
     private final String f(byte param0) {
         if (param0 != 9) {
-          na var3 = (na) null;
-          this.a(-82, '\0', 16, (na) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-82, '\0', 16, (UiWidget) null);
           return "</col></u>";
         }
         return "</col></u>";
@@ -415,7 +415,7 @@ final class ho extends gn implements ij, dm, sh {
         return false;
     }
 
-    private final int a(String param0, na param1, int param2, int param3, int param4) {
+    private final int a(String param0, UiWidget param1, int param2, int param3, int param4) {
         rc var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -452,7 +452,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    private final int a(na param0, int param1, String param2, int param3, int param4, String param5) {
+    private final int a(UiWidget param0, int param1, String param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

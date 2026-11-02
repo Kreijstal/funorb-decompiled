@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn extends eb {
+final class wn extends PcmStream {
     private g field_r;
-    je field_u;
+    IntrusiveDeque field_u;
     static String field_v;
     static uh field_t;
     fg field_s;
 
-    final eb c() {
+    final PcmStream c() {
         oc var1_ref = null;
         int var2 = TetraLink.field_J;
         do {
@@ -17,10 +17,10 @@ final class wn extends eb {
             return null;
           }
         } while (var1_ref.field_I == null);
-        return (eb) ((Object) var1_ref.field_I);
+        return (PcmStream) ((Object) var1_ref.field_I);
     }
 
-    final eb b() {
+    final PcmStream b() {
         oc var1 = (oc) (this.field_u.c(false));
         if (var1 == null) {
           return null;
@@ -28,7 +28,7 @@ final class wn extends eb {
         if (var1.field_I == null) {
           return this.c();
         }
-        return (eb) ((Object) var1.field_I);
+        return (PcmStream) ((Object) var1.field_I);
     }
 
     private final void a(boolean param0, int param1, oc param2) {
@@ -294,7 +294,7 @@ final class wn extends eb {
     }
 
     wn(g param0) {
-        this.field_u = new je();
+        this.field_u = new IntrusiveDeque();
         this.field_s = new fg();
         try {
           this.field_r = param0;

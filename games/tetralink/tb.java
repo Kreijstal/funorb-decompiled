@@ -3,13 +3,13 @@
  */
 final class tb {
     static String field_h;
-    static je field_d;
+    static IntrusiveDeque field_d;
     boolean field_i;
     int field_k;
     private int[][] field_a;
     int field_b;
     int[] field_l;
-    static bh field_j;
+    static PacketBuffer field_j;
     int[] field_f;
     static boolean field_e;
     private int[] field_c;
@@ -20,7 +20,7 @@ final class tb {
         CharSequence var5 = null;
         try {
           ka.field_m = param1;
-          sf.field_d = 2;
+          SecondaryNodeDequeIterator.field_d = 2;
           var5 = (CharSequence) ((Object) param1);
           qj.field_a = cc.a(var5, (byte) 114);
           vj.field_o = param2;
@@ -33,10 +33,10 @@ final class tb {
         }
     }
 
-    private final void a(boolean param0, bh param1) {
+    private final void a(boolean param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        bh var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -45,8 +45,8 @@ final class tb {
         var4 = TetraLink.field_J;
         try {
           if (!param0) {
-            var5 = (bh) null;
-            this.a(-64, (byte) 59, (bh) null);
+            var5 = (PacketBuffer) null;
+            this.a(-64, (byte) 59, (PacketBuffer) null);
           }
           while (true) {
             var3_int = param1.d((byte) -99);
@@ -69,21 +69,21 @@ final class tb {
         }
     }
 
-    tb(ah param0, String param1, String param2) {
+    tb(Archive param0, String param1, String param2) {
         this(param0, param0.a(-1, param1), param2);
     }
 
     final static void a(int param0, int param1) {
-        bc var2 = nd.field_Lb;
+        BitPacketBuffer var2 = nd.field_Lb;
         var2.f(param0, (byte) -92);
         var2.a(1, false);
         if (param1 != -15289) {
-          field_j = (bh) null;
+          field_j = (PacketBuffer) null;
         }
         var2.a(1, false);
     }
 
-    private tb(ah param0, int param1, String param2) {
+    private tb(Archive param0, int param1, String param2) {
         this(param0, param1, param0.a(param1, false, param2));
     }
 
@@ -92,11 +92,11 @@ final class tb {
         field_j = null;
         field_h = null;
         if (param0 >= -112) {
-          field_d = (je) null;
+          field_d = (IntrusiveDeque) null;
         }
     }
 
-    private final void a(int param0, byte param1, bh param2) {
+    private final void a(int param0, byte param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -241,7 +241,7 @@ final class tb {
         return stackIn_6_0;
     }
 
-    private tb(ah param0, int param1, int param2) {
+    private tb(Archive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;
@@ -264,7 +264,7 @@ final class tb {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(true, new bh(var11));
+            this.a(true, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; this.field_f.length > var6; var6++) {
@@ -295,8 +295,8 @@ final class tb {
 
     static {
         field_h = "Email is valid";
-        field_d = new je();
-        field_j = new bh(256);
+        field_d = new IntrusiveDeque();
+        field_j = new PacketBuffer(256);
         field_e = true;
     }
 }

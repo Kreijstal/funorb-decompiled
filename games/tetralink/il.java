@@ -118,14 +118,14 @@ final class il extends en {
           this.field_J.a(0, this.field_t + param1, param2 + this.field_w, param3);
           return;
         }
-        oh var6 = new oh(this.field_J.field_F, this.field_J.field_u);
+        Sprite var6 = new Sprite(this.field_J.field_F, this.field_J.field_u);
         sk.a((byte) 105, var6);
         this.field_J.a(param0, 0, 0, param3);
         dh.a(-581);
         var6.a(this.field_t + param1, param2 + this.field_w, this.field_N);
     }
 
-    il(na param0) {
+    il(UiWidget param0) {
         super(param0.field_t, param0.field_w, param0.field_F, param0.field_u, (kg) null, (dn) null);
         try {
           param0.a(this.field_u, 0, -118, 0, this.field_F);

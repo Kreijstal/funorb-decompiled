@@ -8,7 +8,7 @@ class lk extends ml implements dm {
     static int field_wb;
     private boolean field_qb;
     private boolean field_vb;
-    private jb field_ub;
+    private BitmapFont field_ub;
     static String field_pb;
     private lg field_tb;
     static String field_nb;
@@ -106,7 +106,7 @@ class lk extends ml implements dm {
         }
     }
 
-    lk(pk param0, jb param1, String param2, boolean param3, boolean param4) {
+    lk(WidgetContainer param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ba((lk) null, param1, param2), 77, 10, 10);
         try {
           this.field_ob = false;
@@ -122,7 +122,7 @@ class lk extends ml implements dm {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -284,11 +284,11 @@ class lk extends ml implements dm {
               var10_ref_int__ = var18;
               var11 = 0;
               var12 = 0;
-              L19: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var20.length) {
                   if (var11 == 0 &&
                     hg.field_k != param2) {
-                    break L19;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var12 < var20.length; var12 += 2) {
@@ -301,13 +301,13 @@ class lk extends ml implements dm {
                       n.field_P = true;
                     }
                   }
-                  break L19;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var20[var12];
                 var14 = var10_ref_int__[1 + var12];
                 if (-1 == var13_intLifetime1) {
                   if (cl.field_f[param5] != var14) {
-                    break L19;
+                    break scanLoop1;
                   }
                 } else {
                   if (param2 == var13_intLifetime1 &&
@@ -315,10 +315,10 @@ class lk extends ml implements dm {
                     var11 = 1;
                   } else {
                     if (var13_intLifetime1 >= param2) {
-                      break L19;
+                      break scanLoop1;
                     }
                     if ((255 & eg.field_K[var13_intLifetime1]) != var14) {
-                      break L19;
+                      break scanLoop1;
                     }
                   }
                 }
@@ -329,7 +329,7 @@ class lk extends ml implements dm {
               var9++;
             }
           }
-          stackIn_35_0 = cn.field_e;
+          stackIn_35_0 = ClientException.field_e;
           if (-1 == param2) {
             stackIn_36_1 = 1;
           } else {
@@ -486,7 +486,7 @@ class lk extends ml implements dm {
               var6.a(u.field_d, 8, 97);
             } else {
               if (6 == param1) {
-                var6.a(em.field_c, 9, 81);
+                var6.a(MatchSetup.field_c, 9, 81);
               } else {
                 if (9 != param1) {
                   this.e(var6, -27667);
@@ -526,7 +526,7 @@ class lk extends ml implements dm {
             t.a(3, 0);
             this.r(-124);
           } else {
-            ha.a(-92, "tochangedisplayname.ws", lk.q(13));
+            MouseInputHandler.a(-92, "tochangedisplayname.ws", lk.q(13));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

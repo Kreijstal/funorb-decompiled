@@ -6,7 +6,7 @@ final class ve {
     static int[] field_a;
     static boolean[] field_d;
     static String field_c;
-    private oh[] field_e;
+    private Sprite[] field_e;
     static String field_f;
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
@@ -14,7 +14,7 @@ final class ve {
         int var6 = 11 % ((-72 - param2) / 50);
     }
 
-    final static ah b(int param0, int param1) {
+    final static Archive b(int param0, int param1) {
         int var2 = 33 / ((param0 - 4) / 40);
         return ai.a(false, param1, false, 1, (byte) 38, true);
     }
@@ -23,7 +23,7 @@ final class ve {
         ec.field_i = 0;
         ph.field_z = -1;
         sc.field_c = null;
-        fl.field_s = false;
+        BufferedSocket.field_s = false;
         fi.field_Db = -1;
         if (param0 != -83) {
           field_b = 56;
@@ -46,8 +46,8 @@ final class ve {
 
     final static void a(int param0, String param1, String param2) {
         try {
-          if (null != fl.field_u) {
-            fl.field_u.r(-127);
+          if (null != BufferedSocket.field_u) {
+            BufferedSocket.field_u.r(-127);
           }
           ao.field_c = new tl(param2, param1, false, true, true);
           if (param0 != -1) {
@@ -79,7 +79,7 @@ final class ve {
         }
     }
 
-    ve(oh[] param0) {
+    ve(Sprite[] param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {

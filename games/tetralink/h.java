@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class h {
-    static oh field_c;
+    static Sprite field_c;
     static int field_b;
     static int field_a;
 
     public static void a(int param0) {
         field_c = null;
         if (param0 > -38) {
-          field_c = (oh) null;
+          field_c = (Sprite) null;
         }
     }
 
@@ -71,10 +71,10 @@ final class h {
         }
     }
 
-    final static oh[] a(int param0, int param1, boolean param2, ah param3) {
+    final static Sprite[] a(int param0, int param1, boolean param2, Archive param3) {
         RuntimeException var4 = null;
-        oh[] stackIn_5_0 = null;
-        oh[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -87,7 +87,7 @@ final class h {
             stackIn_7_0 = ci.d(-1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (oh[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

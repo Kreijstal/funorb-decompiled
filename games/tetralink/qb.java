@@ -74,22 +74,22 @@ final class qb extends gn implements dm {
         var1 = kd.field_g;
         synchronized (var1) {
           ho.field_X = kf.field_c;
-          ea.field_a = ea.field_a + 1;
+          IterableNodeHashTable.field_a = IterableNodeHashTable.field_a + 1;
           aa.field_Nb = nl.field_d;
           a.field_a = va.field_y;
           qd.field_T = tl.field_M;
           tl.field_M = param0;
-          tm.field_t = tg.field_f;
+          tm.field_t = IntrusiveDequeCursor.field_f;
           ci.field_B = qc.field_Z;
           li.field_o = qm.field_c;
-          tg.field_f = 0;
+          IntrusiveDequeCursor.field_f = 0;
         }
     }
 
     public qb() {
         super(0, 0, 476, 225, (kg) null);
         this.field_L = new ae(jm.field_f, (dn) null);
-        this.field_M = new ae(bg.field_n, (dn) null);
+        this.field_M = new ae(GameApplet.field_n, (dn) null);
         this.field_O = new ae(pi.field_d, (dn) null);
         uj var1 = new uj();
         this.field_L.field_H = (kg) ((Object) var1);
@@ -105,7 +105,7 @@ final class qb extends gn implements dm {
         this.field_L.field_s = (dn) (this);
         this.field_L.field_C = vc.field_e;
         this.field_O.field_s = (dn) (this);
-        this.field_O.field_C = rk.field_a;
+        this.field_O.field_C = SecondaryNodeDeque.field_a;
         this.c(this.field_M, 10);
         this.c(this.field_L, 10);
         this.c(this.field_O, 10);
@@ -244,7 +244,7 @@ final class qb extends gn implements dm {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;

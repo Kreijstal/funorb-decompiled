@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g extends eb {
+final class g extends PcmStream {
     private int field_R;
     private int[] field_r;
     private int[] field_V;
@@ -61,7 +61,7 @@ final class g extends eb {
           this.b((byte) 38);
           return;
         }
-        L2: while (true) {
+        scanLoop1: while (true) {
           stackIn_7_0 = ~var3;
           stackIn_7_1 = ~this.field_S;
           if (stackIn_7_0 == stackIn_7_1) {
@@ -104,7 +104,7 @@ final class g extends eb {
             var2 = this.field_N.g();
             var3 = this.field_N.field_g[var2];
             var4 = this.field_N.d(var3);
-            continue L2;
+            continue scanLoop1;
           }
           break;
         }
@@ -242,14 +242,14 @@ final class g extends eb {
         }
         if (64 == var5Lifetime4) {
           if (64 <= var6Lifetime3) {
-            this.field_I[var4Lifetime4] = mc.a(this.field_I[var4Lifetime4], 1);
+            this.field_I[var4Lifetime4] = IntrusiveNode.a(this.field_I[var4Lifetime4], 1);
           } else {
             this.field_I[var4Lifetime4] = pl.a(this.field_I[var4Lifetime4], -2);
           }
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 >= 64) {
-            this.field_I[var4Lifetime4] = mc.a(this.field_I[var4Lifetime4], 2);
+            this.field_I[var4Lifetime4] = IntrusiveNode.a(this.field_I[var4Lifetime4], 2);
           } else {
             this.a(var4Lifetime4, (byte) 116);
             this.field_I[var4Lifetime4] = pl.a(this.field_I[var4Lifetime4], -3);
@@ -299,7 +299,7 @@ final class g extends eb {
             this.b(var4Lifetime4, 114);
             this.field_I[var4Lifetime4] = pl.a(this.field_I[var4Lifetime4], -5);
           } else {
-            this.field_I[var4Lifetime4] = mc.a(this.field_I[var4Lifetime4], 4);
+            this.field_I[var4Lifetime4] = IntrusiveNode.a(this.field_I[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -411,12 +411,12 @@ final class g extends eb {
     }
 
     final static void c(int param0) {
-        gm.field_d.a((byte) -92, hh.field_c.field_Hb - (kj.field_b ? ha.field_e + 2 + 42 : 0), 0, 18, 0);
+        gm.field_d.a((byte) -92, hh.field_c.field_Hb - (kj.field_b ? MouseInputHandler.field_e + 2 + 42 : 0), 0, 18, 0);
         if (param0 != 1753) {
           field_s = 47;
         }
-        qc.field_eb.a((byte) -93, 42 + ha.field_e, 0, 18, -40 + hh.field_c.field_Hb + (-ha.field_e - 2));
-        hn.field_Q.a(hh.field_c.field_Hb, ha.field_e, hh.field_c.field_R - 20, true, 20, 0, 2);
+        qc.field_eb.a((byte) -93, 42 + MouseInputHandler.field_e, 0, 18, -40 + hh.field_c.field_Hb + (-MouseInputHandler.field_e - 2));
+        hn.field_Q.a(hh.field_c.field_Hb, MouseInputHandler.field_e, hh.field_c.field_R - 20, true, 20, 0, 2);
     }
 
     private final int a(byte param0, oc param1) {
@@ -452,11 +452,11 @@ final class g extends eb {
         }
     }
 
-    final static oh[] a(int param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var6 = TetraLink.field_J;
-        oh[] var7 = new oh[9];
-        oh[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = ce.a(param1, param2, 0);
         for (var5 = 1; 9 > var5; var5++) {
           var7[var5] = var7[0];
@@ -537,8 +537,8 @@ final class g extends eb {
 
     private final synchronized void a(int param0, boolean param1) {
         if (param0 != 487759088) {
-          ah var4 = (ah) null;
-          this.a((fa) null, (ri) null, (ah) null, -13, -73);
+          Archive var4 = (Archive) null;
+          this.a((SoundEffectLibrary) null, (ri) null, (Archive) null, -13, -73);
         }
         this.field_N.d();
         this.field_z = null;
@@ -662,7 +662,7 @@ final class g extends eb {
     final static void a(int param0, byte param1, int param2) {
         el var6 = null;
         el var7 = null;
-        bc var4 = null;
+        BitPacketBuffer var4 = null;
         if (param2 != nd.field_Nb) {
           var6 = (el) (db.field_e.a((long)nd.field_Nb, 1));
           var7 = var6;
@@ -682,7 +682,7 @@ final class g extends eb {
     }
 
     final static void e(int param0, int param1, int param2) {
-        bc var3 = nd.field_Lb;
+        BitPacketBuffer var3 = nd.field_Lb;
         var3.f(param2, (byte) -92);
         var3.a(3, false);
         var3.a(9, false);
@@ -729,7 +729,7 @@ final class g extends eb {
         }
     }
 
-    final synchronized eb c() {
+    final synchronized PcmStream c() {
         return null;
     }
 
@@ -768,8 +768,8 @@ final class g extends eb {
         }
     }
 
-    final synchronized eb b() {
-        return (eb) ((Object) this.field_y);
+    final synchronized PcmStream b() {
+        return (PcmStream) ((Object) this.field_y);
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
@@ -779,7 +779,7 @@ final class g extends eb {
         boolean stackIn_18_3;
         oc var5;
         int var6_int;
-        wf var6;
+        PcmSample var6;
         oc var7;
         oc var8;
         int var9;
@@ -1152,7 +1152,7 @@ final class g extends eb {
         }
     }
 
-    final synchronized boolean a(fa param0, ri param1, ah param2, int param3, int param4) {
+    final synchronized boolean a(SoundEffectLibrary param0, ri param1, Archive param2, int param3, int param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1181,7 +1181,7 @@ final class g extends eb {
           var8 = (ch) (param1.field_n.b(43));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_c;
+            var9 = (int)var8.key;
             var12 = (ng) (this.field_A.a((long)var9, (byte) -43));
             if (var12 == null) {
               var13 = go.a(true, var9, param2);

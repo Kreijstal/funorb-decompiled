@@ -3,11 +3,11 @@
  */
 final class q implements kg {
     private int field_c;
-    private jb field_e;
+    private BitmapFont field_e;
     static String field_d;
     static String[] field_a;
     private int field_f;
-    static ah field_b;
+    static Archive field_b;
 
     final static void b(int param0) {
         hm.field_a = af.field_h;
@@ -18,7 +18,7 @@ final class q implements kg {
         if (qb.a(kb.field_t, (byte) 114)) {
           kk.field_X[kb.field_t].b(param0 ^ 4);
         }
-        qe.field_b = nn.field_X;
+        GameKeyHandler.field_b = nn.field_X;
         if (tb.field_g) {
           ud.field_Qb = null;
           aa.field_bc = null;
@@ -81,23 +81,23 @@ final class q implements kg {
 
     final static void a(int param0, byte param1, long param2) {
         int var5 = 0;
-        bc var4 = nd.field_Lb;
+        BitPacketBuffer var4 = nd.field_Lb;
         int var5Lifetime1;
         var4.f(param0, (byte) -92);
         if (param1 == -118) {
-          var4.field_t = var4.field_t + 1;
-          var5 = var4.field_t;
+          var4.position = var4.position + 1;
+          var5 = var4.position;
           var4.a(6, false);
           var4.a(-1, param2);
-          var4.b(var4.field_t - var5, param1 + 116);
+          var4.b(var4.position - var5, param1 + 116);
           return;
         }
         q.b(106);
-        var4.field_t = var4.field_t + 1;
-        var5Lifetime1 = var4.field_t;
+        var4.position = var4.position + 1;
+        var5Lifetime1 = var4.position;
         var4.a(6, false);
         var4.a(-1, param2);
-        var4.b(var4.field_t - var5Lifetime1, param1 + 116);
+        var4.b(var4.position - var5Lifetime1, param1 + 116);
     }
 
     public q() {
@@ -144,7 +144,7 @@ final class q implements kg {
         }
     }
 
-    q(jb param0, int param1, int param2) {
+    q(BitmapFont param0, int param1, int param2) {
         try {
           this.field_f = param2;
           this.field_e = param0;
@@ -154,7 +154,7 @@ final class q implements kg {
         }
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

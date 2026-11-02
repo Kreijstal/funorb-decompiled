@@ -169,48 +169,48 @@ final class el extends hl {
         field_oc = null;
     }
 
-    final static oh[] a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5) {
-        oh var14 = null;
-        oh var15 = null;
-        int[] var17 = ra.field_b;
+    final static Sprite[] a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5) {
+        Sprite var14 = null;
+        Sprite var15 = null;
+        int[] var17 = SoftwareRasterizer.field_b;
         int[] var16 = var17;
         int[] var13 = var16;
         int[] var6 = var13;
-        int var7 = ra.field_f;
-        int var8 = ra.field_e;
-        oh var9 = new oh(16, param4);
+        int var7 = SoftwareRasterizer.field_f;
+        int var8 = SoftwareRasterizer.field_e;
+        Sprite var9 = new Sprite(16, param4);
         var9.c();
-        ra.b(0, 0, 16, param4, param2, param5);
+        SoftwareRasterizer.b(0, 0, 16, param4, param2, param5);
         Object var10 = null;
         Object var11 = null;
         if (param0) {
           var14 = var9.d();
           var10 = var14;
           var14.c();
-          ra.g(0, 0, 5, 0);
-          ra.g(0, 1, 3, 0);
-          ra.g(0, 2, 2, 0);
-          ra.g(0, 3, 1, 0);
-          ra.g(0, 4, 1, 0);
+          SoftwareRasterizer.g(0, 0, 5, 0);
+          SoftwareRasterizer.g(0, 1, 3, 0);
+          SoftwareRasterizer.g(0, 2, 2, 0);
+          SoftwareRasterizer.g(0, 3, 1, 0);
+          SoftwareRasterizer.g(0, 4, 1, 0);
         }
         if (param3) {
           var15 = var9.d();
           var11 = var15;
           var15.c();
-          ra.g(11, 0, 5, 0);
-          ra.g(13, 1, 3, 0);
-          ra.g(14, 2, 2, 0);
-          ra.g(15, 3, 1, 0);
-          ra.g(15, 4, 1, 0);
+          SoftwareRasterizer.g(11, 0, 5, 0);
+          SoftwareRasterizer.g(13, 1, 3, 0);
+          SoftwareRasterizer.g(14, 2, 2, 0);
+          SoftwareRasterizer.g(15, 3, 1, 0);
+          SoftwareRasterizer.g(15, 4, 1, 0);
         }
         if (!param1) {
-          ra.a(var17, var7, var8);
-          return new oh[]{null, null, null, (oh) (var10), var9, (oh) (var11), null, null, null};
+          SoftwareRasterizer.a(var17, var7, var8);
+          return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         java.applet.Applet var12 = (java.applet.Applet) null;
         el.a(113, (java.applet.Applet) null);
-        ra.a(var17, var7, var8);
-        return new oh[]{null, null, null, (oh) (var10), var9, (oh) (var11), null, null, null};
+        SoftwareRasterizer.a(var17, var7, var8);
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
     final static void d(int param0, int param1) {
@@ -234,7 +234,7 @@ final class el extends hl {
         return (int)this.c(97);
     }
 
-    final static kh[] a(ah param0, String param1, String param2, int param3) {
+    final static kh[] a(Archive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

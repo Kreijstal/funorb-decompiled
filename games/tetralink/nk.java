@@ -7,13 +7,13 @@ class nk {
     static boolean field_s;
     static int field_k;
     private long field_i;
-    private eb field_j;
+    private PcmStream field_j;
     private static pg field_q;
     private static int field_n;
     private int field_h;
     private int field_m;
-    private eb[] field_f;
-    private eb[] field_d;
+    private PcmStream[] field_f;
+    private PcmStream[] field_d;
     private int field_u;
     private int field_e;
     private int field_t;
@@ -139,12 +139,12 @@ class nk {
         return this.field_r;
     }
 
-    private final static void b(eb param0) {
+    private final static void b(PcmStream param0) {
         param0.field_q = false;
         if (param0.field_p != null) {
           param0.field_p.field_n = 0;
         }
-        eb var1 = param0.b();
+        PcmStream var1 = param0.b();
         while (var1 != null) {
           nk.b(var1);
           var1 = param0.c();
@@ -187,9 +187,9 @@ class nk {
         field_n = param2;
     }
 
-    private final void a(eb param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        eb var4 = this.field_f[var3];
+        PcmStream var4 = this.field_f[var3];
         if (var4 == null) {
           this.field_d[var3] = param0;
         } else {
@@ -199,11 +199,11 @@ class nk {
         param0.field_o = param1;
     }
 
-    final synchronized void a(eb param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_j = param0;
     }
 
-    final static nk a(ie param0, java.awt.Component param1, int param2, int param3) {
+    final static nk a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           vk var4 = null;
           Throwable var4_ref = null;
@@ -281,20 +281,20 @@ class nk {
         int var7_int;
         Object var7;
         int var8_int;
-        eb[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        eb var11;
-        ff var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        eb var14;
+        PcmStream var14;
         int var15_int;
-        eb var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        eb var14Lifetime1;
-        eb var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_s) {
           var3 = var3 << 1;
@@ -309,7 +309,7 @@ class nk {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -342,7 +342,7 @@ class nk {
                       var12.field_n = var12.field_n + var13;
                     }
                     if (var4 >= this.field_h) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.b();
                     if (var14Lifetime2 != null) {
@@ -355,12 +355,12 @@ class nk {
                     var15 = var11.field_n;
                     var11.field_n = null;
                     if (var10 != null) {
-                      ((eb) (var10)).field_n = var15;
+                      ((PcmStream) (var10)).field_n = var15;
                     } else {
                       this.field_d[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_f[var7_int] = (eb) (var10);
+                      this.field_f[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -381,8 +381,8 @@ class nk {
             this.field_f[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((eb) (var7)).field_n;
-              ((eb) (var7)).field_n = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_n;
+              ((PcmStream) (var7)).field_n = null;
               var7 = var10Lifetime1;
             }
           }
@@ -424,8 +424,8 @@ class nk {
         this.field_o = false;
         this.field_h = 32;
         this.field_i = k.a(0);
-        this.field_d = new eb[8];
-        this.field_f = new eb[8];
+        this.field_d = new PcmStream[8];
+        this.field_f = new PcmStream[8];
         this.field_u = 0;
         this.field_e = 0;
         this.field_a = 0;

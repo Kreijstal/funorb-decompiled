@@ -3,7 +3,7 @@
  */
 final class wc extends mb {
     private Object field_F;
-    static je field_E;
+    static IntrusiveDeque field_E;
     static String field_H;
     static String field_K;
     static int field_J;
@@ -39,7 +39,7 @@ final class wc extends mb {
         int stackIn_59_1 = 0;
         ud stackIn_59_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bc var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -63,7 +63,7 @@ final class wc extends mb {
           if (0 == var2) {
             if (null == sd.field_nb) {
               sd.field_nb = new kd(128);
-              ca.field_c = 0;
+              SocketConnector.field_c = 0;
             }
             stackIn_11_0 = (var1.d((byte) -99) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
@@ -90,8 +90,8 @@ final class wc extends mb {
             if (var6 == null) {
               var6 = new ud();
               sd.field_nb.a((long)var8.hashCode(), var6, 113);
-              fieldTemp$0 = ca.field_c;
-              ca.field_c = ca.field_c + 1;
+              fieldTemp$0 = SocketConnector.field_c;
+              SocketConnector.field_c = SocketConnector.field_c + 1;
               var6.field_Rb = fieldTemp$0;
               mm.field_s.a(var6, false);
             }
@@ -125,8 +125,8 @@ final class wc extends mb {
             gd.d(var4, 3);
             return;
           }
-          if (null == wb.field_f) {
-            wb.field_f = new kd(128);
+          if (null == DelegatingCanvas.field_f) {
+            DelegatingCanvas.field_f = new kd(128);
             qi.field_q = 0;
           }
           var3Lifetime1 = var1.g((byte) 81);
@@ -139,12 +139,12 @@ final class wc extends mb {
           if (null == var6Lifetime1) {
             var6Lifetime1 = ke.a(var5Lifetime1, false);
             if (null != var6Lifetime1) {
-              wb.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 124).hashCode(), var6Lifetime1, 106);
+              DelegatingCanvas.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 124).hashCode(), var6Lifetime1, 106);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ud();
-            wb.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 95).hashCode(), var6Lifetime1, 96);
+            DelegatingCanvas.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 95).hashCode(), var6Lifetime1, 96);
             fieldTemp$1 = qi.field_q;
             qi.field_q = qi.field_q + 1;
             var6Lifetime1.field_Rb = fieldTemp$1;
@@ -158,13 +158,13 @@ final class wc extends mb {
           var6Lifetime1.field_Vb = var5Lifetime1;
           var6Lifetime1.b(false);
           var7_ref = (ud) (og.field_j.c(false));
-          L14: while (true) {
+          scanLoop1: while (true) {
             if (null != var7_ref) {
               stackIn_59_0 = var6Lifetime1;
               stackIn_59_1 = 126;
               stackIn_59_2 = var7_ref;
               if (var9 != 0) {
-                break L14;
+                break scanLoop1;
               }
               if (om.$cfr$intArgs$a$b4eb2ef2f0cf(stackIn_59_0, stackIn_59_1, stackIn_59_2)) {
                 var7_ref = (ud) (og.field_j.a((byte) -70));
@@ -286,7 +286,7 @@ final class wc extends mb {
     }
 
     static {
-        field_E = new je();
+        field_E = new IntrusiveDeque();
         field_K = "Unfortunately you are not eligible to create an account.";
         field_H = "You have resigned and are offering a rematch.";
         field_G = "Connection timed out. Please try using a different server.";

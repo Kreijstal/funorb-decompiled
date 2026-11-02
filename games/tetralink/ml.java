@@ -8,7 +8,7 @@ abstract class ml extends nb {
     static long field_jb;
     static String field_fb;
     private int field_X;
-    private na field_eb;
+    private UiWidget field_eb;
     static String field_cb;
     private int field_gb;
     static int[] field_mb;
@@ -33,7 +33,7 @@ abstract class ml extends nb {
         }
     }
 
-    boolean a(int param0, char param1, int param2, na param3) {
+    boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -103,7 +103,7 @@ abstract class ml extends nb {
         return super.l(-1);
     }
 
-    ml(pk param0, na param1, int param2, int param3, int param4) {
+    ml(WidgetContainer param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_F + 12, param1.field_u + (param2 + 12));
         try {
           this.field_Z = param2;
@@ -121,7 +121,7 @@ abstract class ml extends nb {
         vh.field_e.field_d = 0;
     }
 
-    private final void a(byte param0, na param1) {
+    private final void a(byte param0, UiWidget param1) {
         try {
           if (this.field_bb != null) {
             this.field_bb.b(false);
@@ -167,7 +167,7 @@ abstract class ml extends nb {
         field_cb = null;
     }
 
-    void e(na param0, int param1) {
+    void e(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

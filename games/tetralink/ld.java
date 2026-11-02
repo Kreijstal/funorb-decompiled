@@ -3,16 +3,16 @@
  */
 abstract class ld extends gn {
     private int field_N;
-    private pk field_L;
+    private WidgetContainer field_L;
     static String field_M;
     boolean field_K;
 
-    final na d(byte param0) {
-        na var2 = super.d(param0);
+    final UiWidget d(byte param0) {
+        UiWidget var2 = super.d(param0);
         if (var2 != null) {
           return var2;
         }
-        return (na) (this);
+        return (UiWidget) (this);
     }
 
     private final int a(int param0) {
@@ -71,7 +71,7 @@ abstract class ld extends gn {
           return true;
         }
         if (hi.field_a) {
-          return bg.a(param2, param0, -9614);
+          return GameApplet.a(param2, param0, -9614);
         }
         if (l.a(param0, param2, param1 ^ 1885069744)) {
           return true;
@@ -85,7 +85,7 @@ abstract class ld extends gn {
     final void a(int param0, byte param1, int param2) {
         this.a(param2, -param2 + bi.field_a >> 1, -118, -param0 + i.field_e >> 1, param0);
         if (param1 <= 17) {
-          this.field_L = (pk) null;
+          this.field_L = (WidgetContainer) null;
         }
     }
 
@@ -159,9 +159,9 @@ abstract class ld extends gn {
           return;
         }
         if (null == ej.field_v) {
-          ej.field_v = new oh(this.field_F, this.field_u);
+          ej.field_v = new Sprite(this.field_F, this.field_u);
           sk.a((byte) 126, ej.field_v);
-          ra.a();
+          SoftwareRasterizer.a();
           this.b(param0, 120, 0);
           super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
           dh.a(param0 ^ -581);
@@ -169,9 +169,9 @@ abstract class ld extends gn {
           return;
         }
         if (this.field_F > ej.field_v.field_u) {
-          ej.field_v = new oh(this.field_F, this.field_u);
+          ej.field_v = new Sprite(this.field_F, this.field_u);
           sk.a((byte) 126, ej.field_v);
-          ra.a();
+          SoftwareRasterizer.a();
           this.b(param0, 120, 0);
           super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
           dh.a(param0 ^ -581);
@@ -180,16 +180,16 @@ abstract class ld extends gn {
         }
         if (this.field_u <= ej.field_v.field_E) {
           sk.a((byte) 126, ej.field_v);
-          ra.a();
+          SoftwareRasterizer.a();
           this.b(param0, 120, 0);
           super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
           dh.a(param0 ^ -581);
           ej.field_v.a(this.field_t + param1, this.field_w + param2, this.field_N);
           return;
         }
-        ej.field_v = new oh(this.field_F, this.field_u);
+        ej.field_v = new Sprite(this.field_F, this.field_u);
         sk.a((byte) 126, ej.field_v);
-        ra.a();
+        SoftwareRasterizer.a();
         this.b(param0, 120, 0);
         super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
         dh.a(param0 ^ -581);
@@ -205,7 +205,7 @@ abstract class ld extends gn {
         ma.field_g = false;
     }
 
-    ld(pk param0, int param1, int param2) {
+    ld(WidgetContainer param0, int param1, int param2) {
         super(i.field_e - param1 >> 1, bi.field_a - param2 >> 1, param1, param2, (kg) null);
         try {
           this.field_K = false;

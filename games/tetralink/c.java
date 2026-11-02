@@ -19,7 +19,7 @@ final class c {
     static int field_f;
     static hl field_b;
 
-    final static void a(oh[][] param0, byte[] param1, ah param2, byte param3, byte[] param4, String[][] param5, int[] param6, int param7, String[][] param8, int[] param9, String[] param10, ah param11, ah param12, kh[] param13, boolean param14, int param15, oh[][] param16) {
+    final static void a(Sprite[][] param0, byte[] param1, Archive param2, byte param3, byte[] param4, String[][] param5, int[] param6, int param7, String[][] param8, int[] param9, String[] param10, Archive param11, Archive param12, kh[] param13, boolean param14, int param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -54,7 +54,7 @@ final class c {
           var18 = (String[]) null;
           fb.a(param11, param9, param6, param13, param5, param8, param16, param15, param0, param7, param10, 125, param12, 1, param14, param4, param2, param1, (String[]) null);
           if (param3 != -35) {
-            c.a((oh[][]) null, (byte[]) null, (ah) null, (byte) 1, (byte[]) null, (String[][]) null, (int[]) null, -121, (String[][]) null, (int[]) null, (String[]) null, (ah) null, (ah) null, (kh[]) null, false, -92, (oh[][]) null);
+            c.a((Sprite[][]) null, (byte[]) null, (Archive) null, (byte) 1, (byte[]) null, (String[][]) null, (int[]) null, -121, (String[][]) null, (int[]) null, (String[]) null, (Archive) null, (Archive) null, (kh[]) null, false, -92, (Sprite[][]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class c {
         field_k = null;
         field_o = null;
         if (param0 < 61) {
-          c.a((oh[][]) null, (byte[]) null, (ah) null, (byte) -117, (byte[]) null, (String[][]) null, (int[]) null, 89, (String[][]) null, (int[]) null, (String[]) null, (ah) null, (ah) null, (kh[]) null, true, -57, (oh[][]) null);
+          c.a((Sprite[][]) null, (byte[]) null, (Archive) null, (byte) -117, (byte[]) null, (String[][]) null, (int[]) null, 89, (String[][]) null, (int[]) null, (String[]) null, (Archive) null, (Archive) null, (kh[]) null, true, -57, (Sprite[][]) null);
           field_m = null;
           field_a = null;
           field_b = null;
@@ -161,17 +161,17 @@ final class c {
     final static void a(int param0, boolean param1, boolean param2, int param3, int param4) {
         ei stackIn_9_0;
         int stackIn_9_1;
-        oh stackIn_9_2;
-        oh stackIn_9_3;
+        Sprite stackIn_9_2;
+        Sprite stackIn_9_3;
         boolean stackIn_10_4 = false;
         ei stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
-        oh stackIn_17_2 = null;
+        Sprite stackIn_17_2 = null;
         boolean stackIn_18_3 = false;
         ei stackIn_26_0;
         int stackIn_26_1;
-        oh stackIn_26_2;
-        oh stackIn_26_3;
+        Sprite stackIn_26_2;
+        Sprite stackIn_26_3;
         boolean stackIn_27_4 = false;
         ei stackIn_31_0 = null;
         boolean stackIn_32_1 = false;
@@ -181,17 +181,17 @@ final class c {
         int stackIn_37_3 = 0;
         ei stackIn_55_0;
         int stackIn_55_1;
-        oh stackIn_55_2;
-        oh stackIn_55_3;
+        Sprite stackIn_55_2;
+        Sprite stackIn_55_3;
         boolean stackIn_56_4 = false;
         ei stackIn_59_0 = null;
         boolean stackIn_60_1 = false;
-        oh stackIn_62_2 = null;
+        Sprite stackIn_62_2 = null;
         boolean stackIn_63_3 = false;
         ei stackIn_69_0;
         int stackIn_69_1;
-        oh stackIn_69_2;
-        oh stackIn_69_3;
+        Sprite stackIn_69_2;
+        Sprite stackIn_69_3;
         boolean stackIn_70_4 = false;
         ei stackIn_73_0 = null;
         boolean stackIn_74_1 = false;
@@ -263,7 +263,7 @@ final class c {
           }
           return;
         }
-        c.a((oh[][]) null, (byte[]) null, (ah) null, (byte) -80, (byte[]) null, (String[][]) null, (int[]) null, -47, (String[][]) null, (int[]) null, (String[]) null, (ah) null, (ah) null, (kh[]) null, false, 92, (oh[][]) null);
+        c.a((Sprite[][]) null, (byte[]) null, (Archive) null, (byte) -80, (byte[]) null, (String[][]) null, (int[]) null, -47, (String[][]) null, (int[]) null, (String[]) null, (Archive) null, (Archive) null, (kh[]) null, false, 92, (Sprite[][]) null);
         nl.a(bl.field_Lb, (byte) -127, 0);
         if (!wk.field_i.field_n) {
           nl.a(rh.field_M, (byte) -122, 0);

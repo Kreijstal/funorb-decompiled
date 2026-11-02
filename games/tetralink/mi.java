@@ -12,13 +12,13 @@ final class mi extends hl {
     final static void a(hl param0, hl param1, int param2) {
         try {
           if (null == param0.field_fb) {
-            param0.field_fb = new je();
+            param0.field_fb = new IntrusiveDeque();
           }
           if (null == param1.field_fb) {
-            param1.field_fb = new je();
+            param1.field_fb = new IntrusiveDeque();
           }
-          if (null == wb.field_f) {
-            wb.field_f = new kd(64);
+          if (null == DelegatingCanvas.field_f) {
+            DelegatingCanvas.field_f = new kd(64);
           }
           if (null == sd.field_nb) {
             sd.field_nb = new kd(64);
@@ -53,7 +53,7 @@ final class mi extends hl {
         this.field_Ob.a((byte) -121, this.field_Hb - var3Lifetime1, 0, this.field_R, var3Lifetime1);
     }
 
-    mi(long param0, oh param1, oh param2, int param3, hl param4, String param5) {
+    mi(long param0, Sprite param1, Sprite param2, int param3, hl param4, String param5) {
         this(param0, (hl) null, param4, param5);
         try {
           this.field_Lb.field_vb = param2;
@@ -73,7 +73,7 @@ final class mi extends hl {
     }
 
     final static void a(int param0, int param1, int param2) {
-        bc var3 = nd.field_Lb;
+        BitPacketBuffer var3 = nd.field_Lb;
         var3.f(param2, (byte) -92);
         var3.a(param0, false);
         var3.a(10, false);

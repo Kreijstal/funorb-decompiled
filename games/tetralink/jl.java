@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static je field_a;
+    static IntrusiveDeque field_a;
     static int field_e;
     static String[] field_b;
     static String field_d;
@@ -74,7 +74,7 @@ final class jl {
         RuntimeException var3 = null;
         var6 = TetraLink.field_J;
         try {
-          ra.c(640 - param1 >> 1, param2 - param0 >> 1, param1, param0, 9408511);
+          SoftwareRasterizer.c(640 - param1 >> 1, param2 - param0 >> 1, param1, param0, 9408511);
           var3_int = -param0;
           while (true) {
             if (var3_int >= 0) {
@@ -90,7 +90,7 @@ final class jl {
               }
               incrementValue$1 = var4;
               var4++;
-              ra.field_b[incrementValue$1] = 11513855;
+              SoftwareRasterizer.field_b[incrementValue$1] = 11513855;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

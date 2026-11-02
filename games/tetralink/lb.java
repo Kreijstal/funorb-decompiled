@@ -11,7 +11,7 @@ final class lb extends eg implements dm {
     static int field_V;
     static String field_U;
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_T.field_K = this.field_W.a(-104).c(-68) == pf.field_a ? true : false;
@@ -25,7 +25,7 @@ final class lb extends eg implements dm {
         this.field_W = new od(new mf(10000536), ef.field_n, 0, 0, 140, 25);
         this.field_W.a(45, new qh());
         this.field_T = new ae(al.field_e, (dn) (this));
-        this.field_I = new na[]{(na) ((Object) this.field_W), (na) ((Object) this.field_T)};
+        this.field_I = new UiWidget[]{(UiWidget) ((Object) this.field_W), (UiWidget) ((Object) this.field_T)};
         this.field_T.field_H = (kg) ((Object) new uj());
         this.b((byte) 37);
     }
@@ -45,7 +45,7 @@ final class lb extends eg implements dm {
         this.field_T.a(30, (this.field_u - 10 >> 1) + 2, -124, 10 + ((-var2Lifetime1 + this.field_F >> 1) + 140), 100);
     }
 
-    final static void a(bh param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -60,8 +60,8 @@ final class lb extends eg implements dm {
           l.field_j = l.field_j + (var2_intLifetime1 >> 6);
           fd.field_F = fd.field_F + (param0.d((byte) -99) << 7);
           if (param1) {
-            wf var3 = (wf) null;
-            lb.a((wf) null, 38);
+            PcmSample var3 = (PcmSample) null;
+            lb.a((PcmSample) null, 38);
           }
           var2_intLifetime2 = param0.d((byte) -99);
           om.field_Nb = (var2_intLifetime2 & 1) << 16;
@@ -88,7 +88,7 @@ final class lb extends eg implements dm {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        dh.field_d.b(na.field_G, param1 + (this.field_t + 4), dh.field_d.field_N + this.field_w + (param2 + 4), 16777215, -1);
+        dh.field_d.b(UiWidget.field_G, param1 + (this.field_t + 4), dh.field_d.field_N + this.field_w + (param2 + 4), 16777215, -1);
     }
 
     public final void a(byte param0, ae param1, int param2, int param3, int param4) {
@@ -99,13 +99,13 @@ final class lb extends eg implements dm {
           return;
         }
         try {
-          qe.a(this.field_W.a(false), 0, this.field_W.f((byte) 90), this.field_W.g((byte) 12));
+          GameKeyHandler.a(this.field_W.a(false), 0, this.field_W.f((byte) 90), this.field_W.g((byte) 12));
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "lb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static bf a(wf param0, int param1) {
+    final static bf a(PcmSample param0, int param1) {
         RuntimeException var2 = null;
         bf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

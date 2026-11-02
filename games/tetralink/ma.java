@@ -14,7 +14,7 @@ final class ma {
     private int field_h;
     private tb field_c;
 
-    final static String a(ah param0, String param1, int param2, String param3, byte param4) {
+    final static String a(Archive param0, String param1, int param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -251,7 +251,7 @@ final class ma {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var5 = 0;
-        bc var9 = null;
+        BitPacketBuffer var9 = null;
         var6 = TetraLink.field_J;
         try {
           var10 = (CharSequence) ((Object) param1);
@@ -265,7 +265,7 @@ final class ma {
           }
           var8 = ke.a(param1, false);
           if (var8 == null) {
-            stackIn_10_0 = sk.a(new String[]{param1}, sf.field_b, 127);
+            stackIn_10_0 = sk.a(new String[]{param1}, SecondaryNodeDequeIterator.field_b, 127);
             return stackIn_10_0;
           }
           og.field_j.a((byte) -10, var8);
@@ -282,11 +282,11 @@ final class ma {
           qi.field_q = qi.field_q - 1;
           var9 = nd.field_Lb;
           var9.f(param2, (byte) -92);
-          var9.field_t = var9.field_t + 1;
-          var5 = var9.field_t;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.a(1, param0);
           var9.a(param1, 0);
-          var9.b(-var5 + var9.field_t, -2);
+          var9.b(-var5 + var9.position, -2);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -476,11 +476,11 @@ final class ma {
         bb.field_d[20] = ok.field_e;
         bb.field_d[4] = kf.field_b;
         bb.field_d[16] = rb.field_Lb;
-        bb.field_d[15] = wd.field_a;
-        bb.field_d[21] = em.field_a;
+        bb.field_d[15] = RasterBuffer.field_a;
+        bb.field_d[21] = MatchSetup.field_a;
         bb.field_d[11] = gh.field_b;
         if (param0 == 24657) {
-          bb.field_d[9] = ha.field_f;
+          bb.field_d[9] = MouseInputHandler.field_f;
           bb.field_d[17] = pg.field_e;
           bb.field_d[6] = qf.field_e;
           bb.field_d[18] = gm.field_c;

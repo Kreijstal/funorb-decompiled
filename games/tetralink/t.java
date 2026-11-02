@@ -44,7 +44,7 @@ final class t {
             stackIn_4_0 = null;
             return (de) (stackIn_4_0);
           }
-          var2 = new de(param1, qa.field_x, i.field_t, je.field_h, sn.field_e, ga.field_a);
+          var2 = new de(param1, qa.field_x, i.field_t, IntrusiveDeque.field_h, sn.field_e, ga.field_a);
           an.b(-100);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -62,7 +62,7 @@ final class t {
         }
     }
 
-    final static int a(int param0, int param1, String param2, String[] param3, jb param4) {
+    final static int a(int param0, int param1, String param2, String[] param3, BitmapFont param4) {
         int var10 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -187,7 +187,7 @@ final class t {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        bh var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -204,7 +204,7 @@ final class t {
         int var13Lifetime1Lifetime1;
         var16 = TetraLink.field_J;
         try {
-          var17 = new bh(pk.a(param0, (byte) 94));
+          var17 = new PacketBuffer(WidgetContainer.a(param0, (byte) 94));
           var4 = var17.d((byte) -99);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -378,13 +378,13 @@ final class t {
     }
 
     final static void b(int param0, int param1) {
-        bh.h((byte) -47);
+        PacketBuffer.h((byte) -47);
         if (param1 != -21901) {
           field_p = (String) null;
         }
     }
 
-    final static void a(boolean param0, ie param1, long param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9, int param10, String param11, boolean param12, int param13) {
+    final static void a(boolean param0, PlatformTaskDispatcher param1, long param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9, int param10, String param11, boolean param12, int param13) {
         try {
           RuntimeException stackIn_12_0 = null;
           StringBuilder stackIn_12_1 = null;
@@ -396,11 +396,11 @@ final class t {
           RuntimeException var15_ref = null;
           byte[] var16 = null;
           try {
-            kb.field_q = new bc(param4);
-            nd.field_Lb = new bc(param7);
+            kb.field_q = new BitPacketBuffer(param4);
+            nd.field_Lb = new BitPacketBuffer(param7);
             wc.field_I = param3;
             oi.field_m = param5;
-            mc.field_k = param12;
+            IntrusiveNode.field_k = param12;
             tc.field_s = param2;
             if (param9 <= 29) {
               var16 = (byte[]) null;

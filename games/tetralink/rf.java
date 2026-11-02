@@ -96,26 +96,26 @@ final class rf {
         var12 = var12 - param4;
         var13 = var13 + param4;
         var14 = var14 + param4;
-        if (var11 < ra.field_j) {
-          var11 = ra.field_j;
+        if (var11 < SoftwareRasterizer.field_j) {
+          var11 = SoftwareRasterizer.field_j;
         }
-        if (var12 < ra.field_i) {
-          var12 = ra.field_i;
+        if (var12 < SoftwareRasterizer.field_i) {
+          var12 = SoftwareRasterizer.field_i;
         }
-        if (var13 > ra.field_l) {
-          var13 = ra.field_l;
+        if (var13 > SoftwareRasterizer.field_l) {
+          var13 = SoftwareRasterizer.field_l;
         }
-        if (var14 > ra.field_g) {
-          var14 = ra.field_g;
+        if (var14 > SoftwareRasterizer.field_g) {
+          var14 = SoftwareRasterizer.field_g;
         }
         dk.field_b = 256 / param4;
         ng.field_n = param5 * 128 / param4;
-        kl.field_b = (var12 - param1) * var7;
+        FullscreenFocusCanvas.field_b = (var12 - param1) * var7;
         ud.field_Sb = (var12 - param1) * var8;
         ic.field_e = (var11 - param0) * var7;
         bj.field_b = (var11 - param0) * var8;
-        bg.field_k = param6;
-        rf.a(param0, param1, param4, 0, 0, var9, ra.field_b, var12 * ra.field_f + var11, param5, var7, var8, var12 - var14, var11 - var13, ra.field_f - (var13 - var11));
+        GameApplet.field_k = param6;
+        rf.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_b, var12 * SoftwareRasterizer.field_f + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_f - (var13 - var11));
     }
 
     private final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -164,7 +164,7 @@ final class rf {
             if (var23 < 0) {
               var23 = 0;
             }
-            var24 = ra.field_b[var23 * 640 + var22];
+            var24 = SoftwareRasterizer.field_b[var23 * 640 + var22];
             var25 = 64;
             if (var25 < 0) {
               var25 = -var25;
@@ -176,7 +176,7 @@ final class rf {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            ra.field_b[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_b[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -203,7 +203,7 @@ final class rf {
           if (var23Lifetime1 < 0) {
             var23Lifetime1 = 0;
           }
-          var24Lifetime1 = ra.field_b[var23Lifetime1 * 640 + var22Lifetime1];
+          var24Lifetime1 = SoftwareRasterizer.field_b[var23Lifetime1 * 640 + var22Lifetime1];
           var25Lifetime1 = 64;
           if (var25Lifetime1 < 0) {
             var25Lifetime1 = -var25Lifetime1;
@@ -214,7 +214,7 @@ final class rf {
           var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
           var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
           var15Lifetime1--;
-          ra.field_b[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+          SoftwareRasterizer.field_b[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
         }
     }
 
@@ -237,8 +237,8 @@ final class rf {
         if (var8 < 0) {
           var8 = 0;
         }
-        if (var10 > ra.field_e) {
-          var10 = ra.field_e;
+        if (var10 > SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e;
         }
         if (var6 < 0) {
           var6 = 0;
@@ -249,8 +249,8 @@ final class rf {
         if (var9 < 0) {
           var9 = 0;
         }
-        if (var9 > ra.field_e) {
-          var9 = ra.field_e;
+        if (var9 > SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e;
         }
         int var11 = (var6 << 4) - param0;
         var11 = var11 * var11;
@@ -344,10 +344,10 @@ final class rf {
               var22 = 639;
             }
             var23 = param0 + (var14 * var21 + 131072 >> 18);
-            if (var23 > ra.field_e - 1) {
-              var23 = ra.field_e - 1;
+            if (var23 > SoftwareRasterizer.field_e - 1) {
+              var23 = SoftwareRasterizer.field_e - 1;
             }
-            var24 = ra.field_b[var23 * 640 + var22];
+            var24 = SoftwareRasterizer.field_b[var23 * 640 + var22];
             var25 = 64;
             if (var25 < 0) {
               throw new Error();
@@ -359,7 +359,7 @@ final class rf {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            ra.field_b[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_b[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -383,10 +383,10 @@ final class rf {
             var22Lifetime1 = 0;
           }
           var23Lifetime1 = param0 + (var14 * var21Lifetime1 + 131072 >> 18);
-          if (var23Lifetime1 > ra.field_e - 1) {
-            var23Lifetime1 = ra.field_e - 1;
+          if (var23Lifetime1 > SoftwareRasterizer.field_e - 1) {
+            var23Lifetime1 = SoftwareRasterizer.field_e - 1;
           }
-          var24Lifetime1 = ra.field_b[var23Lifetime1 * 640 + var22Lifetime1];
+          var24Lifetime1 = SoftwareRasterizer.field_b[var23Lifetime1 * 640 + var22Lifetime1];
           var25Lifetime1 = 64;
           if (var25Lifetime1 < 0) {
             var25Lifetime1 = -var25Lifetime1;
@@ -397,7 +397,7 @@ final class rf {
           var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
           var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
           var15Lifetime1--;
-          ra.field_b[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+          SoftwareRasterizer.field_b[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
         }
     }
 
@@ -410,7 +410,7 @@ final class rf {
           nj.field_g = bj.field_b;
           var14 = param12;
           while (var14 < 0) {
-            param1 = nj.field_g - kl.field_b >> 16;
+            param1 = nj.field_g - FullscreenFocusCanvas.field_b >> 16;
             if (param1 >= -param2 &&
               param1 <= param2) {
               param0 = io.field_i + ud.field_Sb >> 16;
@@ -428,9 +428,9 @@ final class rf {
                 param3 = stackIn_16_0;
                 param4 = param1 * param3 * dk.field_b >> 8;
                 if (param4 < 0) {
-                  stackIn_19_0 = bg.field_k[param3 + param4];
+                  stackIn_19_0 = GameApplet.field_k[param3 + param4];
                 } else {
-                  stackIn_19_0 = bg.field_k[param3 - param4];
+                  stackIn_19_0 = GameApplet.field_k[param3 - param4];
                 }
                 param1 = stackIn_19_0;
                 param0 = param6[param7];
@@ -447,7 +447,7 @@ final class rf {
           }
           param7 = param7 + param13;
           param11++;
-          kl.field_b = kl.field_b + param9;
+          FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + param9;
           ud.field_Sb = ud.field_Sb + param10;
         }
     }

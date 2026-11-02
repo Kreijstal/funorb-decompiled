@@ -34,7 +34,7 @@ final class pm {
         field_b = null;
     }
 
-    final static de a(String param0, String param1, ah param2, ah param3, int param4) {
+    final static de a(String param0, String param1, Archive param2, Archive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -101,8 +101,8 @@ final class pm {
         var6 = TetraLink.field_J;
         try {
           var2_int = 0;
-          for (var3 = -(ra.field_f * ra.field_e); 0 > var3; var3++) {
-            var4 = ra.field_b[var2_int];
+          for (var3 = -(SoftwareRasterizer.field_f * SoftwareRasterizer.field_e); 0 > var3; var3++) {
+            var4 = SoftwareRasterizer.field_b[var2_int];
             var5 = 16711935 & var4;
             var4 = var4 & 65280;
             var5 = var5 * param1;
@@ -112,7 +112,7 @@ final class pm {
             var4 = (var5 | var4) >> 8;
             incrementValue$1 = var2_int;
             var2_int++;
-            ra.field_b[incrementValue$1] = var4;
+            SoftwareRasterizer.field_b[incrementValue$1] = var4;
           }
           if (param0 == -16711936) {
             return;

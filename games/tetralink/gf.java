@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gf extends mc {
+final class gf extends IntrusiveNode {
     private int[] field_r;
     private int[] field_q;
     private int[] field_s;
@@ -28,7 +28,7 @@ final class gf extends mc {
         this.field_u = null;
     }
 
-    final boolean a(float param0, int param1, ah param2) {
+    final boolean a(float param0, int param1, Archive param2) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -127,7 +127,7 @@ final class gf extends mc {
         return true;
     }
 
-    gf(bh param0) {
+    gf(PacketBuffer param0) {
         boolean stackIn_3_1 = false;
         int var2;
         int var3;

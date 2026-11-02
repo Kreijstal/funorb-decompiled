@@ -119,21 +119,21 @@ final class af {
     }
 
     final static void b(int param0) {
-        oh var1 = null;
-        oh var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = TetraLink.field_J;
         try {
-          var1 = new oh(540, 140);
+          var1 = new Sprite(540, 140);
           sk.a((byte) 110, var1);
           vn.b();
-          ra.a();
+          SoftwareRasterizer.a();
           en.field_K = 0;
           ni.a((byte) 71);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
-            ra.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           oi.field_e.c();
           var1.d(0, 0);

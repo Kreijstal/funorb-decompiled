@@ -3,7 +3,7 @@
  */
 final class sb {
     static byte[] field_b;
-    static ah field_a;
+    static Archive field_a;
     static String field_c;
 
     final static boolean a(byte param0, String param1) {

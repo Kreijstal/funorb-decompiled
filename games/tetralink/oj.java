@@ -40,7 +40,7 @@ final class oj {
           if (param0.field_Kb && (2 == param0.field_Zb ||
             !(2 > dd.field_c))) {
             var7 = hd.field_s;
-            var8 = sk.a(new String[]{param3}, md.field_y, 119);
+            var8 = sk.a(new String[]{param3}, SpriteState.field_y, 119);
             var7.field_j.a(var8, 1, 10);
           }
           hd.field_s.b((byte) 79);
@@ -184,9 +184,9 @@ final class oj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        bc var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        bc var15 = null;
+        BitPacketBuffer var15 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r extends eb {
+final class r extends PcmStream {
     private int[] field_x;
     private int field_z;
     private ri field_C;
@@ -30,9 +30,9 @@ final class r extends eb {
         }
     }
 
-    final static void a(ah param0, ah param1, boolean param2, boolean param3) {
+    final static void a(Archive param0, Archive param1, boolean param2, boolean param3) {
         try {
-          tg.a(0, ek.field_n, t.field_o, uf.field_g, u.field_b, sd.field_rb, tn.field_b, bk.field_i, param3, rh.field_N, ek.field_o, qc.field_cb);
+          IntrusiveDequeCursor.a(0, ek.field_n, t.field_o, uf.field_g, u.field_b, sd.field_rb, tn.field_b, bk.field_i, param3, rh.field_N, ek.field_o, qc.field_cb);
           ec.field_n = bf.a((byte) -99, param0, "lobby", "chatfilter");
           gk.field_a[0] = oj.field_h;
           gk.field_a[2] = mk.field_f;
@@ -106,8 +106,8 @@ final class r extends eb {
         }
     }
 
-    final static void a(ie param0, java.awt.Frame param1, int param2) {
-        vl var3 = null;
+    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+        AsyncRequest var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -437,7 +437,7 @@ final class r extends eb {
         return 2;
     }
 
-    final eb b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -482,7 +482,7 @@ final class r extends eb {
                 lb.field_R = lb.field_R + 1;
               }
               var10 = u.a(18440, var8_ref_fj);
-              var11 = var10 + jb.c(var8_ref_fj.field_h);
+              var11 = var10 + BitmapFont.c(var8_ref_fj.field_h);
               var12 = fi.a((byte) 100, var8_ref_fj);
               var8_ref_fj.field_f = new hl(0L, ll.field_A, var11);
               var6 = var6 + param2;
@@ -535,7 +535,7 @@ final class r extends eb {
         return (fj) (var4);
     }
 
-    final eb c() {
+    final PcmStream c() {
         return null;
     }
 

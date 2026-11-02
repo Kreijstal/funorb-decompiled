@@ -6,8 +6,8 @@ final class ja implements m {
     static int field_g;
     static volatile boolean field_h;
     static int field_a;
-    private ah field_c;
-    static oh field_i;
+    private Archive field_c;
+    static Sprite field_i;
     static int field_f;
     static String field_e;
     static int[] field_l;
@@ -114,7 +114,7 @@ final class ja implements m {
 
     public final boolean a(boolean param0, int param1) {
         if (!param0) {
-          this.field_c = (ah) null;
+          this.field_c = (Archive) null;
           return true;
         }
         return true;
@@ -147,11 +147,11 @@ final class ja implements m {
         return false;
     }
 
-    ja(ah param0, ah param1) {
+    ja(Archive param0, Archive param1) {
         int var5 = 0;
         int[] var3 = null;
         int var4 = 0;
-        bh var6 = null;
+        PacketBuffer var6 = null;
         int[] var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -167,7 +167,7 @@ final class ja implements m {
           var4 = var8.length;
           this.field_b = new jn[param0.b(-23126, 0)];
           for (var5 = 0; var5 < var4; var5++) {
-            var6 = new bh(param0.a(50, var8[var5], 0));
+            var6 = new PacketBuffer(param0.a(50, var8[var5], 0));
             this.field_b[var8[var5]] = new jn(var6);
           }
           return;
@@ -235,7 +235,7 @@ final class ja implements m {
           var10 = var7 * var10 & 16711680;
           var9 = var9 & 16711935;
           var9 = -16711936 & var9 * var7;
-          var5[var8] = mc.a(var9, var10) >>> 8;
+          var5[var8] = IntrusiveNode.a(var9, var10) >>> 8;
         }
         return var5;
     }

@@ -123,10 +123,10 @@ final class k {
         if (param0 == 0) {
           var1 = System.currentTimeMillis();
           if (!(var1 >= af.field_f)) {
-            wd.field_f = wd.field_f + (af.field_f - var1);
+            RasterBuffer.field_f = RasterBuffer.field_f + (af.field_f - var1);
           }
           af.field_f = var1;
-          return var1 + wd.field_f;
+          return var1 + RasterBuffer.field_f;
         }
         return -61L;
     }

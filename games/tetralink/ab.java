@@ -3,9 +3,9 @@
  */
 final class ab extends ae {
     private int field_W;
-    static oh field_R;
+    static Sprite field_R;
     private vm field_S;
-    static jb field_V;
+    static BitmapFont field_V;
     static int field_Q;
     static String field_P;
     static String field_U;
@@ -25,9 +25,9 @@ final class ab extends ae {
         return null;
     }
 
-    final boolean a(na param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        na var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -36,8 +36,8 @@ final class ab extends ae {
           if (param1 == -384169950) {
             return false;
           }
-          var4 = (na) null;
-          this.a((na) null, 31);
+          var4 = (UiWidget) null;
+          this.a((UiWidget) null, 31);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,10 +87,10 @@ final class ab extends ae {
         int var9;
         int var10;
         int var11;
-        oh var13;
-        oh var14;
-        oh var15;
-        oh var16;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = TetraLink.field_J;
@@ -106,19 +106,19 @@ final class ab extends ae {
           var9 = var16.field_t << 1;
           var10 = var16.field_F << 1;
           if (bb.field_c == null) {
-            bb.field_c = new oh(var9, var10);
+            bb.field_c = new Sprite(var9, var10);
             sk.a((byte) 112, bb.field_c);
           } else {
             if (bb.field_c.field_u < var9) {
-              bb.field_c = new oh(var9, var10);
+              bb.field_c = new Sprite(var9, var10);
               sk.a((byte) 112, bb.field_c);
             } else {
               if (bb.field_c.field_E < var10) {
-                bb.field_c = new oh(var9, var10);
+                bb.field_c = new Sprite(var9, var10);
                 sk.a((byte) 112, bb.field_c);
               } else {
                 sk.a((byte) 120, bb.field_c);
-                ra.a();
+                SoftwareRasterizer.a();
               }
             }
           }
@@ -144,19 +144,19 @@ final class ab extends ae {
         var9Lifetime1 = var15.field_t << 1;
         var10Lifetime1 = var15.field_F << 1;
         if (bb.field_c == null) {
-          bb.field_c = new oh(var9Lifetime1, var10Lifetime1);
+          bb.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
           sk.a((byte) 112, bb.field_c);
         } else {
           if (bb.field_c.field_u < var9Lifetime1) {
-            bb.field_c = new oh(var9Lifetime1, var10Lifetime1);
+            bb.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
             sk.a((byte) 112, bb.field_c);
           } else {
             if (bb.field_c.field_E < var10Lifetime1) {
-              bb.field_c = new oh(var9Lifetime1, var10Lifetime1);
+              bb.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
               sk.a((byte) 112, bb.field_c);
             } else {
               sk.a((byte) 120, bb.field_c);
-              ra.a();
+              SoftwareRasterizer.a();
             }
           }
         }
@@ -183,7 +183,7 @@ final class ab extends ae {
         field_P = null;
     }
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           this.field_W = this.field_W + 1;
           super.a(param0, param1, param2, param3);

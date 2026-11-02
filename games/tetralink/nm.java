@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nm extends mc {
+final class nm extends IntrusiveNode {
     int[] field_q;
     static String field_y;
     byte[][][] field_t;
@@ -9,9 +9,9 @@ final class nm extends mc {
     static hl field_n;
     static String field_p;
     static String field_v;
-    vl[] field_u;
+    AsyncRequest[] field_u;
     int field_r;
-    vl[] field_x;
+    AsyncRequest[] field_x;
     int field_s;
     static ve field_o;
     static String field_A;
@@ -38,7 +38,7 @@ final class nm extends mc {
           if (var1 == null) {
             var1 = new dl();
           }
-          var1.a(ra.field_g, ra.field_l, ra.field_f, ra.field_j, ra.field_b, true, ra.field_i, ra.field_e);
+          var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_i, SoftwareRasterizer.field_e);
           oa.field_u.a(var1, false);
           return;
         }

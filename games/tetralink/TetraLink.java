@@ -6,7 +6,7 @@ public final class TetraLink extends ph {
     static aa field_P;
     static String field_O;
     static String field_M;
-    private je field_L;
+    private IntrusiveDeque field_L;
     private int field_K;
     static int field_I;
     public static int field_J;
@@ -14,8 +14,8 @@ public final class TetraLink extends ph {
     final void h(int param0) {
         TetraLink.p(10297);
         ek.b((byte) -64);
-        mc.b(20043);
-        je.b((byte) 25);
+        IntrusiveNode.b(20043);
+        IntrusiveDeque.b((byte) 25);
         kj.a(param0 ^ param0);
         sn.a(-127);
         ma.d(-3);
@@ -23,23 +23,23 @@ public final class TetraLink extends ph {
         ao.a(true);
         ib.a(27204);
         rf.b(127);
-        qe.a((byte) -70);
+        GameKeyHandler.a((byte) -70);
         jj.a(param0 - 1320);
         cd.a((byte) 67);
         lf.a(true);
         gi.a(14914);
         bj.a(-28);
         ph.o(param0 ^ -1328);
-        cn.a(true);
-        bg.e(6);
+        ClientException.a(true);
+        GameApplet.e(6);
         un.a(-2);
-        ha.a(param0 ^ 1322);
-        se.b(-1);
-        ra.b();
-        ah.d(16);
-        jb.a();
+        MouseInputHandler.a(param0 ^ 1322);
+        MouseWheelInput.b(-1);
+        SoftwareRasterizer.b();
+        Archive.d(16);
+        BitmapFont.a();
         gh.a(126);
-        bh.c(true);
+        PacketBuffer.c(true);
         k.b(-14243);
         jg.a(true);
         da.a(param0 - 1333);
@@ -52,23 +52,23 @@ public final class TetraLink extends ph {
         fj.a(param0 ^ 1316);
         nj.a((byte) 122);
         uh.a((byte) 41);
-        wd.a((byte) -20);
+        RasterBuffer.a((byte) -20);
         wh.a(false);
-        kl.a((byte) -117);
+        FullscreenFocusCanvas.a((byte) -117);
         i.a(false);
-        fa.b(-2);
+        SoundEffectLibrary.b(-2);
         th.a(121);
         ke.a(param0 ^ 1327);
         ni.c((byte) 107);
         p.b((byte) -94);
-        fl.b(-26787);
+        BufferedSocket.b(-26787);
         cl.d(-119);
         ei.b(false);
         wg.a(6945);
         ob.d();
         ti.a(2);
-        md.f(21);
-        gb.d(105);
+        SpriteState.f(21);
+        DualLinkNode.d(105);
         fe.a(-1);
         rl.a(14236);
         bb.b(-578);
@@ -118,7 +118,7 @@ public final class TetraLink extends ph {
         hk.b(8);
         kn.a(true);
         hh.a((byte) 126);
-        pk.h(param0 - 1324);
+        WidgetContainer.h(param0 - 1324);
         fi.g((byte) -22);
         ug.f(false);
         sd.p(-32527);
@@ -140,12 +140,12 @@ public final class TetraLink extends ph {
         pi.a((byte) -62);
         df.a((byte) -108);
         hm.a(118);
-        bc.j(29313);
+        BitPacketBuffer.j(29313);
         oj.a((byte) 125);
         kd.a(-84);
         me.b((byte) -92);
         l.b(9);
-        em.f(-86);
+        MatchSetup.f(-86);
         lb.h(param0 ^ 1322);
         vi.b(117);
         sb.a((byte) -30);
@@ -154,12 +154,12 @@ public final class TetraLink extends ph {
         qj.a((byte) -78);
         mj.b();
         nm.c((byte) 6);
-        sa.b((byte) -112);
+        RandomAccessCacheFile.b((byte) -112);
         ua.c(-1);
         pj.a(39);
         pg.a(false);
         pd.e(param0 - 1322);
-        jo.a(21332);
+        DualLinkDeque.a(21332);
         rh.g(-84);
         sk.c(29187);
         fd.h(-1);
@@ -177,7 +177,7 @@ public final class TetraLink extends ph {
         an.a(param0 ^ -14345);
         bd.a((byte) 119);
         on.a(-10457);
-        wb.a(-108);
+        DelegatingCanvas.a(-108);
         qf.a(false);
         qm.a(false);
         jd.b(-84);
@@ -190,13 +190,13 @@ public final class TetraLink extends ph {
         cc.a(-114);
         dc.b(82);
         hi.a((byte) 91);
-        na.c((byte) 101);
+        UiWidget.c((byte) 101);
         ae.a(true);
         en.g(99);
         nb.n(-463);
         ld.k(param0 ^ -1365);
         gn.d(true);
-        tg.a(param0 - 1322);
+        IntrusiveDequeCursor.a(param0 - 1322);
         qk.a(-30581);
         cj.b();
         kf.a(23365);
@@ -209,10 +209,10 @@ public final class TetraLink extends ph {
         qa.f(param0 - 1322);
         j.f(4);
         ec.a((byte) 116);
-        ca.d(param0 ^ 1322);
+        SocketConnector.d(param0 ^ 1322);
         bn.b(-26623);
         ef.c(-34);
-        wm.b(true);
+        ImageProducerRasterBuffer.b(true);
         pl.a((byte) 63);
         nl.a(false);
         ql.a();
@@ -249,16 +249,16 @@ public final class TetraLink extends ph {
         vd.a((byte) 83);
         ed.a(false);
         te.h(-108);
-        ea.a(-4099);
-        rk.a(0);
+        IterableNodeHashTable.a(-4099);
+        SecondaryNodeDeque.a(0);
         mb.b((byte) -48);
         db.a(true);
         wc.c((byte) -103);
-        vb.b((byte) -109);
+        ProxySocketConnector.b((byte) -109);
         si.a();
         h.a(-74);
-        lj.b((byte) 123);
-        sf.a((byte) -125);
+        NodeHashTableIterator.b((byte) 123);
+        SecondaryNodeDequeIterator.a((byte) -125);
         c.a((byte) 72);
         kb.a(111);
         ko.b((byte) -127);
@@ -362,7 +362,7 @@ public final class TetraLink extends ph {
         if (var3 != null) {
           var3.a(-9104, true);
           vg.j(109);
-          if (qe.field_b &&
+          if (GameKeyHandler.field_b &&
             nn.field_X) {
             rn.a(hc.c(64), -124);
           }
@@ -383,12 +383,12 @@ public final class TetraLink extends ph {
           }
           pn.a(var4, 256, 16769381, false, false);
         }
-        if (!qe.field_b ||
+        if (!GameKeyHandler.field_b ||
           !nn.field_X) {
           rn.a(hc.c(64), -108);
         }
         if (pj.b((byte) 56)) {
-          ra.e(0, 0, ra.field_f, ra.field_e);
+          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e);
           var4Lifetime1 = 14 + dc.a((byte) 117);
           var5 = ia.h(88) + 16;
           jl.a(var5, var4Lifetime1, 480);
@@ -513,11 +513,11 @@ public final class TetraLink extends ph {
         }
         if (var2 != 0) {
           if (qd.field_P == null) {
-            qd.field_P = new oh(640, 480);
+            qd.field_P = new Sprite(640, 480);
             bd.a(qd.field_P, param0 - 4);
-            ra.c(0, 0, 640, 480, 3158064);
+            SoftwareRasterizer.c(0, 0, 640, 480, 3158064);
             var3_int = (dh.field_e % 20480 << 12) % 83886080;
-            var4 = md.field_G;
+            var4 = SpriteState.field_G;
             var5 = ik.field_a;
             kd.a(320, 240, (byte) -121);
             ta.a(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var3_int, 59918628 + var3_int, 0, 16711680, wk.field_i.field_g);
@@ -588,7 +588,7 @@ public final class TetraLink extends ph {
                 var4Lifetime1 = var4Lifetime1 + (-16711936 & 16711935 * sk.field_c);
                 var5Lifetime1 = var5Lifetime1 & 16711680;
                 var5Lifetime1 = var5Lifetime1 + (65280 * sk.field_c & 16711680);
-                var10[var6] = mc.a(var5Lifetime1, var4Lifetime1) >>> 8;
+                var10[var6] = IntrusiveNode.a(var5Lifetime1, var4Lifetime1) >>> 8;
               }
             }
             var5Lifetime1Lifetime1 = 200;
@@ -613,12 +613,12 @@ public final class TetraLink extends ph {
               var5_ref_ko = (ko) (eg.field_J.a((byte) -70));
             }
             fh.a(true);
-            bl.field_Lb.c(md.field_G - (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a);
+            bl.field_Lb.c(SpriteState.field_G - (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a);
             if (!(wk.field_i.field_l <= 0)) {
-              rf.a(-(bl.field_Lb.field_u >> 1) + md.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + md.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-              rf.a(md.field_G + (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + md.field_G, (bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-              rf.a(md.field_G + (bl.field_Lb.field_u >> 1), ik.field_a + (bl.field_Lb.field_E >> 1), -(bl.field_Lb.field_u >> 1) + md.field_G, ik.field_a + (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
-              rf.a(md.field_G - (bl.field_Lb.field_u >> 1), (bl.field_Lb.field_E >> 1) + ik.field_a, md.field_G - (bl.field_Lb.field_u >> 1), ik.field_a - (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+              rf.a(-(bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
+              rf.a(SpriteState.field_G + (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, (bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
+              rf.a(SpriteState.field_G + (bl.field_Lb.field_u >> 1), ik.field_a + (bl.field_Lb.field_E >> 1), -(bl.field_Lb.field_u >> 1) + SpriteState.field_G, ik.field_a + (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+              rf.a(SpriteState.field_G - (bl.field_Lb.field_u >> 1), (bl.field_Lb.field_E >> 1) + ik.field_a, SpriteState.field_G - (bl.field_Lb.field_u >> 1), ik.field_a - (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
             }
           }
           var3_ref = (qi) (nd.field_Sb.c(false));
@@ -627,7 +627,7 @@ public final class TetraLink extends ph {
             var6Lifetime1 = 512 + (var3_ref.field_y >> 12);
             var5Lifetime2 = var3_ref.field_v >> 12;
             if (var6Lifetime1 > 0) {
-              ra.a((md.field_G << 4) + (var4Lifetime2 << 13) / var6Lifetime1, (var5Lifetime2 << 13) / var6Lifetime1 + (ik.field_a << 4), 65536 / var6Lifetime1, 5 * var3_ref.field_s / 3, oi.field_n);
+              SoftwareRasterizer.a((SpriteState.field_G << 4) + (var4Lifetime2 << 13) / var6Lifetime1, (var5Lifetime2 << 13) / var6Lifetime1 + (ik.field_a << 4), 65536 / var6Lifetime1, 5 * var3_ref.field_s / 3, oi.field_n);
             }
             var3_ref = (qi) (nd.field_Sb.a((byte) -70));
           }
@@ -650,44 +650,44 @@ public final class TetraLink extends ph {
           var5 = (int)(mb.a((float)var4 / 200.0f, (float)dh.field_e, false) * 3.0f);
           stackIn_13_0 = var5;
           if (stackIn_13_0 > 0) {
-            var6 = ra.field_f * var4 + 100;
+            var6 = SoftwareRasterizer.field_f * var4 + 100;
             var3 = 440;
             while (var3 > 0) {
-              ra.field_b[var6 - var5] = ra.field_b[var6];
+              SoftwareRasterizer.field_b[var6 - var5] = SoftwareRasterizer.field_b[var6];
               var3--;
               var6++;
             }
           } else {
             if (var5 < 0) {
-              var6 = ra.field_f * var4 + 539;
+              var6 = SoftwareRasterizer.field_f * var4 + 539;
               for (var3 = 440; var3 > 0; var3--) {
-                ra.field_b[-var5 + var6] = ra.field_b[var6];
+                SoftwareRasterizer.field_b[-var5 + var6] = SoftwareRasterizer.field_b[var6];
                 var6--;
               }
             }
           }
           var4++;
         }
-        ra.g(110, var2, 420, 16777215);
-        ra.e(110, (var2 + 3) % 400, 420, 16777215, 192);
-        ra.e(110, (var2 + 5) % 400, 420, 16777215, 128);
-        ra.e(110, (var2 + 9) % 400, 420, 16777215, 64);
-        ra.e(110, (150 + var2) % 400, 420, 16777215, 128);
+        SoftwareRasterizer.g(110, var2, 420, 16777215);
+        SoftwareRasterizer.e(110, (var2 + 3) % 400, 420, 16777215, 192);
+        SoftwareRasterizer.e(110, (var2 + 5) % 400, 420, 16777215, 128);
+        SoftwareRasterizer.e(110, (var2 + 9) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.e(110, (150 + var2) % 400, 420, 16777215, 128);
         stackIn_13_0Lifetime1 = param0;
         if (stackIn_13_0Lifetime1 <= 4) {
           field_O = (String) null;
         }
-        ra.e(110, (153 + var2) % 400, 420, 16777215, 96);
-        ra.e(110, (var2 + 155) % 400, 420, 16777215, 64);
-        ra.e(110, (var2 + 159) % 400, 420, 16777215, 32);
-        ra.e(110, (var2 + 250) % 400, 420, 16777215, 64);
-        ra.e(110, (253 + var2) % 400, 420, 16777215, 48);
-        ra.e(110, (255 + var2) % 400, 420, 16777215, 32);
-        ra.e(110, (259 + var2) % 400, 420, 16777215, 16);
-        ra.e(110, (350 + var2) % 400, 420, 16777215, 64);
-        ra.e(110, (353 + var2) % 400, 420, 16777215, 48);
-        ra.e(110, (355 + var2) % 400, 420, 16777215, 32);
-        ra.e(110, (var2 + 359) % 400, 420, 16777215, 16);
+        SoftwareRasterizer.e(110, (153 + var2) % 400, 420, 16777215, 96);
+        SoftwareRasterizer.e(110, (var2 + 155) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.e(110, (var2 + 159) % 400, 420, 16777215, 32);
+        SoftwareRasterizer.e(110, (var2 + 250) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.e(110, (253 + var2) % 400, 420, 16777215, 48);
+        SoftwareRasterizer.e(110, (255 + var2) % 400, 420, 16777215, 32);
+        SoftwareRasterizer.e(110, (259 + var2) % 400, 420, 16777215, 16);
+        SoftwareRasterizer.e(110, (350 + var2) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.e(110, (353 + var2) % 400, 420, 16777215, 48);
+        SoftwareRasterizer.e(110, (355 + var2) % 400, 420, 16777215, 32);
+        SoftwareRasterizer.e(110, (var2 + 359) % 400, 420, 16777215, 16);
         return;
     }
 
@@ -819,11 +819,11 @@ public final class TetraLink extends ph {
                 if (var2 != 2) {
                   if (var2 != 3) {
                     if (4 == var2) {
-                      em.field_f = true;
+                      MatchSetup.field_f = true;
                       hd.a(rm.field_d, 0, -308);
                     }
                   } else {
-                    em.field_f = false;
+                    MatchSetup.field_f = false;
                     s.a(8, li.field_l, (byte) 7, 2, true, 240, 8, 320, mk.field_b.field_K + mk.field_b.field_u, mk.field_b.field_u, mk.field_b, li.field_l);
                   }
                 } else {
@@ -836,12 +836,12 @@ public final class TetraLink extends ph {
             }
           }
         }
-        while (bn.a(-19161, je.field_b)) {
+        while (bn.a(-19161, IntrusiveDeque.field_b)) {
           stackIn_155_0 = ua.field_c;
           stackIn_155_1 = 9;
           if (stackIn_155_0 == stackIn_155_1) {
             q.b(0);
-            jo.field_e = false;
+            DualLinkDeque.field_e = false;
             ed.field_O = 9;
             cl.field_g = 2;
             ok.field_d = 128.0f;
@@ -852,11 +852,11 @@ public final class TetraLink extends ph {
           if (ua.field_c == 14) {
             lb.a(e.field_c, 573509761);
             q.b(0);
-            tm.a((byte) -58, 1024, fa.a(true), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, cn.a(12), 150, cc.a(2000, (byte) -51));
+            tm.a((byte) -58, 1024, SoundEffectLibrary.a(true), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, ClientException.a(12), 150, cc.a(2000, (byte) -51));
             mi.a(uj.b(false), uh.b(32), 0);
             mi.field_Pb = true;
             ed.field_O = -2;
-            jo.field_e = false;
+            DualLinkDeque.field_e = false;
             continue;
           }
           if (ua.field_c == 15) {
@@ -880,14 +880,14 @@ public final class TetraLink extends ph {
                 stackIn_72_0 = 3.141592653589793;
               }
               uk.field_x = (float)stackIn_72_0;
-              sa.a(-113, false);
+              RandomAccessCacheFile.a(-113, false);
               ti.field_g[0] = (double)rn.field_d * Math.sin((double)dj.field_h);
               ti.field_g[2] = (double)rn.field_d * Math.cos((double)dj.field_h);
-              wb.a(true, -7869);
+              DelegatingCanvas.a(true, -7869);
               eo.a(-20);
             }
             fj.field_o = false;
-            jo.field_e = false;
+            DualLinkDeque.field_e = false;
             continue;
           }
           if (ua.field_c == 10 &&
@@ -911,7 +911,7 @@ public final class TetraLink extends ph {
                 if (ph.field_s) {
                   aa.field_bc.a(true, false);
                 }
-                wb.a(true, -7869);
+                DelegatingCanvas.a(true, -7869);
                 ph.field_s = false;
                 lb.field_R = 0;
                 tb.field_g = true;
@@ -1041,12 +1041,12 @@ public final class TetraLink extends ph {
             stackIn_103_1 = array$1;
             stackIn_103_2 = 0;
             if (0 == var5Lifetime1) {
-              stackIn_104_3 = bh.field_s;
+              stackIn_104_3 = PacketBuffer.field_s;
             } else {
               stackIn_104_3 = ek.field_t;
             }
             stackIn_103_1[stackIn_103_2] = stackIn_104_3;
-            var13 = sk.a(stackIn_103_0, fl.field_e, 119);
+            var13 = sk.a(stackIn_103_0, BufferedSocket.field_e, 119);
             fi.a(0, 0, ph.field_w, 1, var13, var6.field_a.field_o[0]);
           }
           sk.a(0);
@@ -1066,7 +1066,7 @@ public final class TetraLink extends ph {
         if (tb.field_e) {
           lb.field_R = 0;
         }
-        if (ca.c(-25945)) {
+        if (SocketConnector.c(-25945)) {
           var2Lifetime2 = this.n(-1);
           if (var2Lifetime2 == 0 ||
             1 == var2Lifetime2) {
@@ -1085,17 +1085,17 @@ public final class TetraLink extends ph {
                   ac.a(0, -93, false, 0);
                 }
                 q.b(0);
-                wb.a(true, -7869);
+                DelegatingCanvas.a(true, -7869);
                 kk.field_X[kb.field_t].b(false, 0, -1);
                 mi.field_Pb = false;
                 sj.field_a = false;
                 ph.field_s = false;
               }
-              jo.field_e = false;
+              DualLinkDeque.field_e = false;
               fj.field_o = false;
             } else {
               fj.field_o = true;
-              jo.field_e = true;
+              DualLinkDeque.field_e = true;
             }
           }
           var3Lifetime1 = 0;
@@ -1103,7 +1103,7 @@ public final class TetraLink extends ph {
             var3Lifetime1 = 1;
           }
           if (mi.field_Pb ||
-            jo.field_e ||
+            DualLinkDeque.field_e ||
             fj.field_o) {
             var3Lifetime1 = 1;
           }
@@ -1222,7 +1222,7 @@ public final class TetraLink extends ph {
           var8_int = var6 * 300 >> 16;
           var9_int = var7_int * 300 >> 16;
           var10 = 210;
-          if (!jo.field_a) {
+          if (!DualLinkDeque.field_a) {
             var5 = var5 - (il.field_S << 6);
           } else {
             var5 = var5 + (il.field_S << 6);
@@ -1238,7 +1238,7 @@ public final class TetraLink extends ph {
         la.field_g = new ob();
         ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
         if (var2 != 0) {
-          ra.c(0, 0, 640, 480, 3158064);
+          SoftwareRasterizer.c(0, 0, 640, 480, 3158064);
           var5Lifetime1 = (dh.field_e % 20480 << 12) % 83886080;
           ta.a(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var5Lifetime1, 59918628 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
           ta.a(ka.field_h, new double[]{-768.0 + 400.0 * vh.field_b, 20.0, 400.0 * vh.field_b + 600.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1 + 59918628, 83820544 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
@@ -1318,7 +1318,7 @@ public final class TetraLink extends ph {
                 var12 = var12 & 16711680;
                 var11Lifetime1 = var11Lifetime1 + (16711935 * sk.field_c & -16711936);
                 var12 = var12 + (16711680 & sk.field_c * 65280);
-                var17[var13] = mc.a(var12, var11Lifetime1) >>> 8;
+                var17[var13] = IntrusiveNode.a(var12, var11Lifetime1) >>> 8;
               }
             }
             boolean decompiledFrameRemainder0 = true;
@@ -1417,7 +1417,7 @@ public final class TetraLink extends ph {
                 var13 = var13 + (sk.field_c * 16711935 & -16711936);
                 var14 = var14 & 16711680;
                 var14 = var14 + (16711680 & 65280 * sk.field_c);
-                bl.field_Lb.field_C[var15_int] = mc.a(var14, var13) >>> 8;
+                bl.field_Lb.field_C[var15_int] = IntrusiveNode.a(var14, var13) >>> 8;
               }
               var15_intLifetime1 = 256000;
               while (var15_intLifetime1 > 0) {
@@ -1431,7 +1431,7 @@ public final class TetraLink extends ph {
                 var13 = var13 + (sk.field_c * 16711935 & -16711936);
                 var14 = var14 & 16711680;
                 var14 = var14 + (sk.field_c * 65280 & 16711680);
-                rh.field_M.field_C[var15_intLifetime1] = mc.a(var13, var14) >>> 8;
+                rh.field_M.field_C[var15_intLifetime1] = IntrusiveNode.a(var13, var14) >>> 8;
               }
             }
             boolean decompiledFrameCompleted0 = true;
@@ -1593,7 +1593,7 @@ public final class TetraLink extends ph {
               }
             }
             if (var27[2] > 0) {
-              ra.a((md.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
+              SoftwareRasterizer.a((SpriteState.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
             }
           }
           var15 = (qi) (nd.field_Sb.c(false));
@@ -1606,7 +1606,7 @@ public final class TetraLink extends ph {
             var12Lifetime1 = bd.field_b[5] * var6 + var10 * bd.field_b[3] + bd.field_b[4] * var11Lifetime2;
             var6 = var14Lifetime1 >> 22;
             if (var14Lifetime1 > 0) {
-              ra.a((md.field_G << 4) + (var12Lifetime1 >> 9) / var6, (ik.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
+              SoftwareRasterizer.a((SpriteState.field_G << 4) + (var12Lifetime1 >> 9) / var6, (ik.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
             }
             var15 = (qi) (nd.field_Sb.a((byte) -70));
           }
@@ -1698,7 +1698,7 @@ public final class TetraLink extends ph {
           if (1 == ko.field_s) {
             ai.field_i = ai.field_i + 1;
             if (ai.field_i == 16) {
-              if (em.field_f) {
+              if (MatchSetup.field_f) {
                 ic.a((byte) 117);
               } else {
                 ei.b((byte) -123);
@@ -1710,8 +1710,8 @@ public final class TetraLink extends ph {
               if (!ug.o(-103)) {
                 ed.field_O = ci.field_x;
                 ld.i(param0 - 21781);
-                if (em.field_f) {
-                  em.field_f = false;
+                if (MatchSetup.field_f) {
+                  MatchSetup.field_f = false;
                   s.a(8, li.field_l, (byte) 7, 2, false, 240, 8, 320, mk.field_b.field_u + mk.field_b.field_K, mk.field_b.field_u, mk.field_b, li.field_l);
                 }
                 if (kf.field_d) {
@@ -1773,9 +1773,9 @@ public final class TetraLink extends ph {
             }
           }
           if (mi.field_Pb &&
-            !jo.field_e &&
+            !DualLinkDeque.field_e &&
             !fj.field_o) {
-            wd.a(var3 != 0, -36);
+            RasterBuffer.a(var3 != 0, -36);
             if (sj.field_a) {
               ud.field_Qb.a(var4 != 0, (byte) 91);
             }
@@ -1837,7 +1837,7 @@ public final class TetraLink extends ph {
         if (ed.field_O == -4) {
           nd.field_Lb.f(9, (byte) -92);
           ed.field_O = kb.field_t;
-          jo.field_e = true;
+          DualLinkDeque.field_e = true;
         }
         if (-5 == ed.field_O) {
           g.e(qb.field_N.j(-68), -124, 11);
@@ -1874,30 +1874,30 @@ public final class TetraLink extends ph {
         var3.a(9, 128, (byte) -128);
         l.a((java.awt.Component) ((Object) uh.field_b), 22050, var3, 1024, true, nd.field_Pb);
         bm.field_n = 8437759;
-        je.field_b[61] = 2;
+        IntrusiveDeque.field_b[61] = 2;
         ve.field_b = 16777215;
         uj.field_w = 255;
-        je.field_b[62] = 1;
+        IntrusiveDeque.field_b[62] = 1;
         if (param0 != -20173) {
           this.b(-119);
         }
-        je.field_b[67] = 1;
-        je.field_b[63] = 1;
+        IntrusiveDeque.field_b[67] = 1;
+        IntrusiveDeque.field_b[63] = 1;
         lk.field_wb = 255;
-        je.field_b[66] = 1;
-        mc.field_b = 8437759;
-        je.field_b[60] = 4;
-        je.field_b[64] = 1;
-        je.field_b[65] = 1;
-        je.field_b[57] = -2;
+        IntrusiveDeque.field_b[66] = 1;
+        IntrusiveNode.field_b = 8437759;
+        IntrusiveDeque.field_b[60] = 4;
+        IntrusiveDeque.field_b[64] = 1;
+        IntrusiveDeque.field_b[65] = 1;
+        IntrusiveDeque.field_b[57] = -2;
         wa.field_d = 16777215;
-        je.field_b[58] = -2;
+        IntrusiveDeque.field_b[58] = -2;
         this.a(false, true, false, true, false, false, (byte) -6);
         bo.c(200, 3);
         this.e((byte) 67);
     }
 
-    private final void a(boolean param0, ah param1) {
+    private final void a(boolean param0, Archive param1) {
         kc var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -1950,7 +1950,7 @@ public final class TetraLink extends ph {
         if (param0 != 67) {
           field_O = (String) null;
         }
-        qe.field_g = 3;
+        GameKeyHandler.field_g = 3;
         vn.field_b = false;
         va.field_p = 3;
         c dupTemp$0 = new c();
@@ -1965,23 +1965,23 @@ public final class TetraLink extends ph {
         wk.field_i.field_n = true;
         ul.field_d = 0.0f;
         hi.field_d = new double[]{1.0, 0.0, 0.0};
-        ah.field_a = 0;
+        Archive.field_a = 0;
         cd.field_d.field_n = true;
         gk.field_e = new int[]{0, 210, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         ti.field_d = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-        bl.field_Lb = new oh(640, 400);
-        rh.field_M = new oh(640, 400);
-        kn.field_d = new oh(200, 400);
+        bl.field_Lb = new Sprite(640, 400);
+        rh.field_M = new Sprite(640, 400);
+        kn.field_d = new Sprite(200, 400);
         for (var2 = 0; var2 < 256; var2++) {
           oi.field_n[var2] = pl.a(-486473984, 143 * var2) << 8;
-          oi.field_n[var2] = mc.a(oi.field_n[var2], pl.a(65280, 191 * var2));
-          oi.field_n[var2] = mc.a(oi.field_n[var2], var2);
+          oi.field_n[var2] = IntrusiveNode.a(oi.field_n[var2], pl.a(65280, 191 * var2));
+          oi.field_n[var2] = IntrusiveNode.a(oi.field_n[var2], var2);
         }
         kd.a(320, 240, (byte) -121);
         dd.field_a = -1;
     }
 
-    private final void a(ah param0, ah param1, boolean param2, ah param3, ah param4, ah param5) {
+    private final void a(Archive param0, Archive param1, boolean param2, Archive param3, Archive param4, Archive param5) {
         int var9_int = 0;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -1998,21 +1998,21 @@ public final class TetraLink extends ph {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         int var8 = 0;
-        oh[][] var9 = null;
-        oh var10_ref_oh = null;
+        Sprite[][] var9 = null;
+        Sprite var10_ref_oh = null;
         int var11 = 0;
-        oh var12 = null;
+        Sprite var12 = null;
         var11 = field_J;
         try {
           mk.field_b = pm.a("", "font", param1, param3, -89);
           go.field_g = pm.a("kartika13", "", param0, param4, -63);
           var12 = ug.a(param1, (byte) -45, "starfield", "");
-          ja.field_i = new oh(2560, 256);
+          ja.field_i = new Sprite(2560, 256);
           ja.field_i.c();
           var12.b(0, 0);
           var12.b(1280, 0);
-          pk.field_O.a(-117);
-          bg.field_c = qk.a((byte) 79, param1, "", "logo");
+          WidgetContainer.field_O.a(-117);
+          GameApplet.field_c = qk.a((byte) 79, param1, "", "logo");
           ef.field_k = ug.a(param1, (byte) -45, "splash", "");
           of.field_f = el.a(param1, "walk1", "", -1409);
           th.field_p = el.a(param1, "walk2", "", -1409);
@@ -2022,15 +2022,15 @@ public final class TetraLink extends ph {
           ek.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
           w.field_r = ug.a(param0, (byte) -45, "orbcoin", "basic");
           var8 = sd.field_qb.length;
-          hl.field_G = new oh[var8];
+          hl.field_G = new Sprite[var8];
           me.a(false);
           for (var9_int = 0; var9_int < var8; var9_int++) {
-            var10_ref_oh = new oh(32, 32);
+            var10_ref_oh = new Sprite(32, 32);
             var10_ref_oh.c();
             sd.field_qb[var9_int].b(0, 0, 32, 32);
             hl.field_G[var9_int] = var10_ref_oh;
           }
-          cm.field_F = new oh(32, 32);
+          cm.field_F = new Sprite(32, 32);
           cm.field_F.c();
           ek.field_p.b(0, 0, 32, 32);
           fh.a(true);
@@ -2041,7 +2041,7 @@ public final class TetraLink extends ph {
             me.field_e = ug.a(param1, (byte) -45, "red_counter", "allhallowseve");
             qd.field_X = ug.a(param1, (byte) -45, "white_counter", "allhallowseve");
           }
-          var9 = new oh[ua.field_b.length][];
+          var9 = new Sprite[ua.field_b.length][];
           for (var10 = 0; ua.field_b.length > var10; var10++) {
             var9[var10] = bf.a((byte) -126, param1, "", ua.field_b[var10]);
           }
@@ -2095,7 +2095,7 @@ public final class TetraLink extends ph {
         if (um.field_k != null) {
           of.a(-98, um.field_k);
           um.field_k = null;
-          rk.c(-8243);
+          SecondaryNodeDeque.c(-8243);
         }
         nl.field_b = ve.b(108, 3);
         cd.field_b = ve.b(-84, 5);
@@ -2105,7 +2105,7 @@ public final class TetraLink extends ph {
         ll.field_x = ve.b(-47, 6);
         n.field_N = ve.b(-64, 7);
         oa.field_p = ve.b(92, 8);
-        jo.field_f = ve.b(-68, 9);
+        DualLinkDeque.field_f = ve.b(-68, 9);
         nl.field_g = ve.b(-70, 10);
         fk.field_U = ve.b(-119, 11);
         vf.field_a = ve.b(-113, 12);
@@ -2117,22 +2117,22 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final oh a(int param0, int param1, byte param2) {
+    private final Sprite a(int param0, int param1, byte param2) {
         int var5 = 0;
         int var6 = field_J;
-        oh var4 = new oh(57, 57);
+        Sprite var4 = new Sprite(57, 57);
         int var5Lifetime1;
         bd.a(var4, 6);
-        ra.f(29, 29, 27, 263172);
+        SoftwareRasterizer.f(29, 29, 27, 263172);
         for (var5 = 23; var5 >= 0; var5--) {
-          ra.f(29, 29, var5, param1 * var5 + param0);
+          SoftwareRasterizer.f(29, 29, var5, param1 * var5 + param0);
         }
         if (param2 != -107) {
-          ah var7 = (ah) null;
-          this.a(false, (ah) null);
+          Archive var7 = (Archive) null;
+          this.a(false, (Archive) null);
         }
         for (var5Lifetime1 = 0; 57 > var5Lifetime1; var5Lifetime1 += 2) {
-          ra.e(0, var5Lifetime1, 57, 0, 128);
+          SoftwareRasterizer.e(0, var5Lifetime1, 57, 0, 128);
         }
         fh.a(true);
         return var4;
@@ -2157,13 +2157,13 @@ public final class TetraLink extends ph {
             qc.field_bb[2] = ri.a(nl.field_g, "", "tetralink ingame 2");
             qc.field_bb[3] = ri.a(nl.field_g, "", "tetralink ingame 3");
             for (var3 = 0; var3 < 4; var3++) {
-              ic.field_b.a(bh.field_q, qc.field_bb[var3], jo.field_f, -1, 0);
+              ic.field_b.a(PacketBuffer.field_q, qc.field_bb[var3], DualLinkDeque.field_f, -1, 0);
             }
             ic.field_b.e((byte) 115);
-            jo.field_f = null;
+            DualLinkDeque.field_f = null;
             nl.field_g = null;
-            bh.field_q = null;
-            rk.c(-8243);
+            PacketBuffer.field_q = null;
+            SecondaryNodeDeque.c(-8243);
             return false;
           }
           if (null != ll.field_x) {
@@ -2172,7 +2172,7 @@ public final class TetraLink extends ph {
             this.a(v.field_v, cd.field_b, true, ll.field_x, sb.field_a, vf.field_a);
             sb.field_a = null;
             ll.field_x = null;
-            rk.c(-8243);
+            SecondaryNodeDeque.c(-8243);
             return false;
           }
           if (fk.field_U != null) {
@@ -2180,7 +2180,7 @@ public final class TetraLink extends ph {
             this.g(118);
             this.a(false, fk.field_U);
             fk.field_U = null;
-            rk.c(-8243);
+            SecondaryNodeDeque.c(-8243);
             return false;
           }
           if (mf.field_v != null &&
@@ -2199,7 +2199,7 @@ public final class TetraLink extends ph {
           if (null != nl.field_b) {
             bj.a(5, new fh(nl.field_b.a("", "huffman", true)));
             nl.field_b = null;
-            rk.c(-8243);
+            SecondaryNodeDeque.c(-8243);
             return false;
           }
           o.b((byte) -117);
@@ -2234,8 +2234,8 @@ public final class TetraLink extends ph {
                     n.field_N.a(false)) {
                     if (oa.field_p.c(108) &&
                       oa.field_p.a(false)) {
-                      if (jo.field_f.c(97) &&
-                        jo.field_f.a(false)) {
+                      if (DualLinkDeque.field_f.c(97) &&
+                        DualLinkDeque.field_f.a(false)) {
                         if (nl.field_g.c(108) &&
                           nl.field_g.a(false)) {
                           if (cd.field_b.c(95) &&
@@ -2277,34 +2277,34 @@ public final class TetraLink extends ph {
                                       if (!param1) {
                                         return false;
                                       }
-                                      bh.field_q = new fa(n.field_N, oa.field_p);
-                                      bh.field_q.a("menu_select", "", (byte) 1);
-                                      io.field_c = bh.field_q.a("tetralink_invalid_move", "", (byte) 1);
-                                      s.field_a = new wf[5];
-                                      ti.field_a = new wf[5];
+                                      PacketBuffer.field_q = new SoundEffectLibrary(n.field_N, oa.field_p);
+                                      PacketBuffer.field_q.a("menu_select", "", (byte) 1);
+                                      io.field_c = PacketBuffer.field_q.a("tetralink_invalid_move", "", (byte) 1);
+                                      s.field_a = new PcmSample[5];
+                                      ti.field_a = new PcmSample[5];
                                       for (var3Lifetime1 = 0; 5 > var3Lifetime1; var3Lifetime1++) {
-                                        s.field_a[var3Lifetime1] = bh.field_q.a("tetralink_drop_piece_" + (1 + var3Lifetime1), "", (byte) 1);
-                                        ti.field_a[var3Lifetime1] = bh.field_q.a("tetralink_piece_inplace_" + (1 + var3Lifetime1), "", (byte) 1);
+                                        s.field_a[var3Lifetime1] = PacketBuffer.field_q.a("tetralink_drop_piece_" + (1 + var3Lifetime1), "", (byte) 1);
+                                        ti.field_a[var3Lifetime1] = PacketBuffer.field_q.a("tetralink_piece_inplace_" + (1 + var3Lifetime1), "", (byte) 1);
                                       }
-                                      bf.field_r = bh.field_q.a("tetralink_reset_board", "", (byte) 1);
-                                      sk.field_a = bh.field_q.a("tetralink_second_tick", "", (byte) 1);
-                                      bo.field_A = bh.field_q.a("tetralink_select_column", "", (byte) 1);
-                                      pi.field_c = bh.field_q.a("tetralink_start_game", "", (byte) 1);
-                                      ug.field_ib = bh.field_q.a("tetralink_winning_line_sound_winner", "", (byte) 1);
-                                      se.field_c = bh.field_q.a("tetralink_winning_line_sound_loser", "", (byte) 1);
-                                      oa.field_x = bh.field_q.a("tetralink_title_appear", "", (byte) 1);
-                                      e.field_c = bh.field_q.a("tetralink_dissolve", "", (byte) 1);
-                                      uf.field_d = bh.field_q.a("tetralink_dissolve_in", "", (byte) 1);
-                                      mb.field_y = new wf[3];
-                                      mb.field_y[0] = bh.field_q.a(-122, "", "tetralink_NASA_chatter_1");
-                                      mb.field_y[1] = bh.field_q.a(-123, "", "tetralink_NASA_chatter_2");
-                                      mb.field_y[2] = bh.field_q.a(-128, "", "tetralink_NASA_chatter_3");
+                                      bf.field_r = PacketBuffer.field_q.a("tetralink_reset_board", "", (byte) 1);
+                                      sk.field_a = PacketBuffer.field_q.a("tetralink_second_tick", "", (byte) 1);
+                                      bo.field_A = PacketBuffer.field_q.a("tetralink_select_column", "", (byte) 1);
+                                      pi.field_c = PacketBuffer.field_q.a("tetralink_start_game", "", (byte) 1);
+                                      ug.field_ib = PacketBuffer.field_q.a("tetralink_winning_line_sound_winner", "", (byte) 1);
+                                      MouseWheelInput.field_c = PacketBuffer.field_q.a("tetralink_winning_line_sound_loser", "", (byte) 1);
+                                      oa.field_x = PacketBuffer.field_q.a("tetralink_title_appear", "", (byte) 1);
+                                      e.field_c = PacketBuffer.field_q.a("tetralink_dissolve", "", (byte) 1);
+                                      uf.field_d = PacketBuffer.field_q.a("tetralink_dissolve_in", "", (byte) 1);
+                                      mb.field_y = new PcmSample[3];
+                                      mb.field_y[0] = PacketBuffer.field_q.a(-122, "", "tetralink_NASA_chatter_1");
+                                      mb.field_y[1] = PacketBuffer.field_q.a(-123, "", "tetralink_NASA_chatter_2");
+                                      mb.field_y[2] = PacketBuffer.field_q.a(-128, "", "tetralink_NASA_chatter_3");
                                       oa.field_p = null;
                                       n.field_N = null;
-                                      rk.c(-8243);
+                                      SecondaryNodeDeque.c(-8243);
                                       return false;
                                     }
-                                    ak.a(0, fn.a(0, rc.field_U, fl.field_a, v.field_w), 77.0f);
+                                    ak.a(0, fn.a(0, rc.field_U, BufferedSocket.field_a, v.field_w), 77.0f);
                                     return false;
                                   }
                                   ak.a(0, ji.a(ng.field_x, vf.field_a, rh.field_L, "", 1152753825), 75.0f);
@@ -2313,7 +2313,7 @@ public final class TetraLink extends ph {
                                 ak.a(0, ji.a(la.field_k, fk.field_U, on.field_a, "", 1152753825), 75.0f);
                                 return false;
                               }
-                              ak.a(0, ji.a(v.field_w, nl.field_b, fl.field_a, "", 1152753825), 75.0f);
+                              ak.a(0, ji.a(v.field_w, nl.field_b, BufferedSocket.field_a, "", 1152753825), 75.0f);
                               return false;
                             }
                             ak.a(0, ji.a(nc.field_c, ll.field_x, qa.field_C, "", 1152753825), 75.0f);
@@ -2322,10 +2322,10 @@ public final class TetraLink extends ph {
                           ak.a(0, ji.a(nc.field_c, cd.field_b, qa.field_C, "", 1152753825), 75.0f);
                           return false;
                         }
-                        ak.a(0, ji.a(rl.field_g, nl.field_g, se.field_a, "", 1152753825), 60.0f);
+                        ak.a(0, ji.a(rl.field_g, nl.field_g, MouseWheelInput.field_a, "", 1152753825), 60.0f);
                         return false;
                       }
-                      ak.a(0, ma.a(jo.field_f, se.field_a, 0, rl.field_g, (byte) 15), 45.0f);
+                      ak.a(0, ma.a(DualLinkDeque.field_f, MouseWheelInput.field_a, 0, rl.field_g, (byte) 15), 45.0f);
                       return false;
                     }
                     ak.a(0, ji.a(va.field_t, oa.field_p, oc.field_w, "", 1152753825), 40.0f);
@@ -2351,7 +2351,7 @@ public final class TetraLink extends ph {
     }
 
     public TetraLink() {
-        this.field_L = new je();
+        this.field_L = new IntrusiveDeque();
         this.field_K = 0;
     }
 

@@ -10,7 +10,7 @@ final class pg implements Runnable {
     static al field_d;
     static String field_b;
     static String field_e;
-    ie field_j;
+    PlatformTaskDispatcher field_j;
     static String field_c;
     static int[] field_i;
     volatile nk[] field_l;

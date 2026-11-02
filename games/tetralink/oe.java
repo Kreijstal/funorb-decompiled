@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends mc {
+final class oe extends IntrusiveNode {
     private boolean[] field_n;
     int field_o;
     int[][] field_q;
@@ -22,7 +22,7 @@ final class oe extends mc {
           if (q.a(false, param1)) {
             return false;
           }
-          if (ha.a(param1, -63)) {
+          if (MouseInputHandler.a(param1, -63)) {
             return false;
           }
           if (pi.a(param1, 17510)) {
@@ -83,15 +83,15 @@ final class oe extends mc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        bh var7 = null;
-        bh var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
         try {
           this.field_o = param0;
-          var7 = new bh(param1);
+          var7 = new PacketBuffer(param1);
           var8 = var7;
           this.field_r = var8.d((byte) -99);
           this.field_p = new int[this.field_r];

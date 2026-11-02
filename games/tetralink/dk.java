@@ -5,7 +5,7 @@ final class dk {
     static String field_a;
     static int field_b;
     private String field_c;
-    static jb field_d;
+    static BitmapFont field_d;
 
     final void a(byte param0, java.applet.Applet param1) {
         try {

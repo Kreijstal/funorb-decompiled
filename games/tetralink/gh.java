@@ -22,7 +22,7 @@ final class gh {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, oh[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -43,8 +43,8 @@ final class gh {
             var7 = param3[1].field_t;
             param3[0].c(param1, param2);
             param3[2].c(param1 + param0 - var6, param2);
-            ra.a(lj.field_a);
-            ra.b(var5_int + param1, param2, -var6 + (param0 + param1), param2 + param3[1].field_F);
+            SoftwareRasterizer.a(NodeHashTableIterator.field_a);
+            SoftwareRasterizer.b(var5_int + param1, param2, -var6 + (param0 + param1), param2 + param3[1].field_F);
             var8 = var5_int + param1;
             var9 = param1 - (-param0 + var6);
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {
@@ -53,7 +53,7 @@ final class gh {
             if (param4 > -123) {
               field_b = (String) null;
             }
-            ra.b(lj.field_a);
+            SoftwareRasterizer.b(NodeHashTableIterator.field_a);
             return;
           }
           return;

@@ -22,8 +22,8 @@ final class fi extends lk implements dm {
         try {
           jd.field_a = false;
           s.field_f = false;
-          if (null != fl.field_u &&
-            fl.field_u.field_K) {
+          if (null != BufferedSocket.field_u &&
+            BufferedSocket.field_u.field_K) {
             var3_int = 1;
             if (8 == param1) {
               if (!qa.field_v) {
@@ -45,7 +45,7 @@ final class fi extends lk implements dm {
               if (sn.field_b) {
                 param0 = bf.field_s;
               }
-              fl.field_u.a(param0, param1, 17);
+              BufferedSocket.field_u.a(param0, param1, 17);
             }
             if (param1 != 256 &&
               param1 != 10 &&
@@ -88,7 +88,7 @@ final class fi extends lk implements dm {
         }
     }
 
-    fi(pk param0, ho param1) {
+    fi(WidgetContainer param0, ho param1) {
         super(param0, ab.field_V, ic.field_a, false, false);
         try {
           this.field_Bb = param1;
@@ -194,7 +194,7 @@ final class fi extends lk implements dm {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1, bc param2, byte param3) {
+    final static byte[] a(int param0, byte[] param1, BitPacketBuffer param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -372,7 +372,7 @@ final class fi extends lk implements dm {
                 this.e(var5, -27667);
                 return;
               }
-              var5.a(em.field_c, 9, 115);
+              var5.a(MatchSetup.field_c, 9, 115);
             } else {
               var5.a(hl.field_C, 7, 75);
             }

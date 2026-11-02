@@ -21,22 +21,22 @@ final class ok {
         throw new IllegalStateException();
     }
 
-    final static oh[] a(oh param0, byte param1) {
-        oh[] var2 = null;
+    final static Sprite[] a(Sprite param0, byte param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        oh[] var3 = null;
-        oh[] stackIn_2_0 = null;
-        oh[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 21) {
-            stackIn_2_0 = (oh[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var3 = new oh[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param0;
           stackIn_4_0 = var2;

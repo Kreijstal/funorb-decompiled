@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends mc {
+final class qi extends IntrusiveNode {
     int field_t;
     static hl field_n;
     int field_y;
@@ -136,7 +136,7 @@ final class qi extends mc {
                   if (vn.field_n <= param7) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + ra.field_f;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_f;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -190,7 +190,7 @@ final class qi extends mc {
               if (param7 >= vn.field_n) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + ra.field_f;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_f;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

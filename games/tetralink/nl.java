@@ -4,7 +4,7 @@
 final class nl {
     int field_h;
     static String field_c;
-    static ah field_b;
+    static Archive field_b;
     int field_k;
     static boolean field_j;
     int field_i;
@@ -12,7 +12,7 @@ final class nl {
     static volatile int field_d;
     int field_e;
     static int[] field_f;
-    static ah field_g;
+    static Archive field_g;
     static String field_l;
 
     final static void a(String param0, int param1, String param2) {
@@ -39,7 +39,7 @@ final class nl {
     }
 
     final static void a(int param0, int param1) {
-        bc var2 = nd.field_Lb;
+        BitPacketBuffer var2 = nd.field_Lb;
         var2.f(param1, (byte) -92);
         var2.a(2, false);
         if (param0 <= 55) {
@@ -49,16 +49,16 @@ final class nl {
         var2.a(wg.a(true), false);
     }
 
-    final static oh a(int param0) {
+    final static Sprite a(int param0) {
         int var4_int = 0;
         int var5 = TetraLink.field_J;
-        int var1 = je.field_h[0] * sn.field_e[param0];
+        int var1 = IntrusiveDeque.field_h[0] * sn.field_e[param0];
         byte[] var2 = ga.field_a[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = ti.field_c[pl.a((int) var2[var4_int], 255)];
         }
-        oh var4 = new oh(wm.field_l, mm.field_w, qa.field_x[0], i.field_t[0], je.field_h[0], sn.field_e[0], var3);
+        Sprite var4 = new Sprite(ImageProducerRasterBuffer.field_l, mm.field_w, qa.field_x[0], i.field_t[0], IntrusiveDeque.field_h[0], sn.field_e[0], var3);
         an.b(-83);
         return var4;
     }
@@ -149,7 +149,7 @@ final class nl {
         char[] var6 = new char[param2];
         char[] var3 = var6;
         if (param0 != 52) {
-          field_b = (ah) null;
+          field_b = (Archive) null;
         }
         for (var4 = 0; var4 < param2; var4++) {
           var6[var4] = param1;
@@ -157,7 +157,7 @@ final class nl {
         return new String(var6);
     }
 
-    final static void a(oh param0, byte param1, int param2) {
+    final static void a(Sprite param0, byte param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -193,7 +193,7 @@ final class nl {
     final static boolean a(byte param0, String param1, long param2) {
         ud var4 = null;
         RuntimeException var4_ref = null;
-        oh var5 = null;
+        Sprite var5 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -201,15 +201,15 @@ final class nl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 126) {
-            var5 = (oh) null;
-            nl.a((oh) null, (byte) -84, -67);
+            var5 = (Sprite) null;
+            nl.a((Sprite) null, (byte) -84, -67);
           }
           var4 = ke.a(param1, false);
           if (var4 != null &&
             var4.field_Ub != null) {
             return true;
           }
-          stackIn_10_0 = (null != qb.field_N) && (sf.a(-18701, param2) != null);
+          stackIn_10_0 = (null != qb.field_N) && (SecondaryNodeDequeIterator.a(-18701, param2) != null);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

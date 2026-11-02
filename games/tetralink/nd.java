@@ -4,13 +4,13 @@
 final class nd extends hl {
     static String field_Qb;
     private hl field_Ob;
-    static je field_Sb;
+    static IntrusiveDeque field_Sb;
     static String[] field_Rb;
     static String field_Kb;
     static int field_Nb;
     static int field_Mb;
-    static bc field_Lb;
-    static ie field_Pb;
+    static BitPacketBuffer field_Lb;
+    static PlatformTaskDispatcher field_Pb;
 
     final boolean b(int param0, boolean param1) {
         boolean stackIn_9_0 = false;
@@ -153,11 +153,11 @@ final class nd extends hl {
         hl var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new hl(0L, param1, vb.field_m.toUpperCase());
+          var17 = new hl(0L, param1, ProxySocketConnector.field_m.toUpperCase());
           var17.field_xb = 1;
           this.field_Ob = new hl(0L, param2);
           var8 = new hl(0L, param3);
-          var9 = new hl(0L, param3, ca.field_h);
+          var9 = new hl(0L, param3, SocketConnector.field_h);
           var9.field_xb = 1;
           var10 = 50;
           var11 = 0;
@@ -180,7 +180,7 @@ final class nd extends hl {
           this.field_Ob.a((byte) -121, 15, 5, 15, -20 + var17.field_Hb);
           var8.a((byte) -128, this.field_Hb, var17.field_R, -var17.field_R + this.field_R, 0);
           var9.a((byte) -94, this.field_Hb, 20, 15, 0);
-          var8.field_Eb = ah.a(2105376, 3, 8421504, 16, 11579568, var8.field_R);
+          var8.field_Eb = Archive.a(2105376, 3, 8421504, 16, 11579568, var8.field_R);
           var17.a((byte) -102, this.field_Ob);
           var8.a((byte) 58, var9);
           this.a((byte) -86, var17);
@@ -235,6 +235,6 @@ final class nd extends hl {
     static {
         field_Qb = "Show all lobby chat";
         field_Kb = "Waiting for fonts";
-        field_Sb = new je();
+        field_Sb = new IntrusiveDeque();
     }
 }

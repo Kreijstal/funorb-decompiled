@@ -16,7 +16,7 @@ final class fj {
     static int[] field_p;
     static hl field_b;
     int field_g;
-    static oh[] field_q;
+    static Sprite[] field_q;
     long field_r;
     static boolean field_o;
     hl field_f;
@@ -61,7 +61,7 @@ final class fj {
         this.field_h = ml.field_fb;
         this.field_c = ab.field_U;
         if (param0) {
-          this.field_a = ha.field_i;
+          this.field_a = MouseInputHandler.field_i;
         } else {
           this.field_a = null;
         }

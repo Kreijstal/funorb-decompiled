@@ -3,7 +3,7 @@
  */
 final class a {
     static String field_e;
-    static oh field_c;
+    static Sprite field_c;
     static int[][] field_g;
     static String field_f;
     static String[] field_i;
@@ -14,10 +14,10 @@ final class a {
 
     final boolean a(byte param0) {
         int var2 = -7 % ((50 - param0) / 33);
-        if (this == vb.field_l) {
+        if (this == ProxySocketConnector.field_l) {
           return true;
         }
-        if (sa.field_f == this) {
+        if (RandomAccessCacheFile.field_f == this) {
           return true;
         }
         if (this != li.field_a) {

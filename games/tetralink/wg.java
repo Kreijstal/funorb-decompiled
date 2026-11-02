@@ -16,13 +16,13 @@ final class wg {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        bc var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        bc var8 = null;
+        BitPacketBuffer var8 = null;
         j var9 = null;
         var7 = TetraLink.field_J;
         var8 = kb.field_q;
@@ -61,7 +61,7 @@ final class wg {
         }
         if (!param1) {
           ml.field_fb = rh.a(119, var8, 80);
-          ha.field_i = null;
+          MouseInputHandler.field_i = null;
         } else {
           var5 = var8.e(127);
           try {
@@ -72,13 +72,13 @@ final class wg {
             } else {
               stackIn_24_0 = var9.field_v;
             }
-            ha.field_i = stackIn_24_0;
+            MouseInputHandler.field_i = stackIn_24_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             fk.a(param0 ^ -122, (Throwable) ((Object) var6), "CC1");
             ml.field_fb = null;
-            ha.field_i = null;
+            MouseInputHandler.field_i = null;
           }
         }
         return new fj(param1);
@@ -175,7 +175,7 @@ final class wg {
         if (!param0) {
           wg.a(123);
         }
-        return mc.field_f + ((me.field_b << 2) + (ik.field_e << 4));
+        return IntrusiveNode.field_f + ((me.field_b << 2) + (ik.field_e << 4));
     }
 
     static {
@@ -194,13 +194,13 @@ final class wg {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        bc var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        bc var8 = null;
+        BitPacketBuffer var8 = null;
         j var9 = null;
         var7 = TetraLink.field_J;
         var8 = kb.field_q;
@@ -239,7 +239,7 @@ final class wg {
         }
         if (!param1) {
           ml.field_fb = rh.a(119, var8, 80);
-          ha.field_i = null;
+          MouseInputHandler.field_i = null;
         } else {
           var5 = var8.e(127);
           try {
@@ -250,13 +250,13 @@ final class wg {
             } else {
               stackIn_24_0 = var9.field_v;
             }
-            ha.field_i = stackIn_24_0;
+            MouseInputHandler.field_i = stackIn_24_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             fk.a(param0 ^ -122, (Throwable) ((Object) var6), "CC1");
             ml.field_fb = null;
-            ha.field_i = null;
+            MouseInputHandler.field_i = null;
           }
         }
         return new fj(param1);

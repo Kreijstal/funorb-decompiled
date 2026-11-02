@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ae extends na {
+class ae extends UiWidget {
     boolean field_N;
     static hl field_J;
     private boolean field_O;
@@ -62,7 +62,7 @@ class ae extends na {
         }
     }
 
-    boolean a(na param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -75,7 +75,7 @@ class ae extends na {
             this.field_O = true;
             if (null != this.field_s &&
               this.field_s instanceof ub) {
-              ((ub) (this.field_s)).a(param1 ^ 384161774, (na) (this), this.field_O);
+              ((ub) (this.field_s)).a(param1 ^ 384161774, (UiWidget) (this), this.field_O);
             }
             if (param1 == -384169950) {
               return true;
@@ -97,7 +97,7 @@ class ae extends na {
         }
     }
 
-    final static void a(java.math.BigInteger param0, bh param1, bh param2, java.math.BigInteger param3, int param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, java.math.BigInteger param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -113,7 +113,7 @@ class ae extends na {
           if (param4 <= 54) {
             field_L = 109;
           }
-          ac.a((byte) 92, param2.field_u, param2.field_t, param1, 0, param0, param3);
+          ac.a((byte) 92, param2.payload, param2.position, param1, 0, param0, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,7 +158,7 @@ class ae extends na {
           if (param0 != 82) {
             field_J = (hl) null;
           }
-          bo.field_C = new je();
+          bo.field_C = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,7 +184,7 @@ class ae extends na {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        je var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         ud var7 = null;
@@ -206,11 +206,11 @@ class ae extends na {
         try {
           stackIn_4_0 = pj.field_f.field_Rb;
           stackIn_4_1 = 2;
-          stackIn_4_2 = qe.field_d + 2;
+          stackIn_4_2 = GameKeyHandler.field_d + 2;
           stackIn_4_3 = -127;
           stackIn_4_4 = param0;
           stackIn_5_5 = (bi.field_d == pj.field_f.field_Rb);
-          var3_int = ((rb) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_5_5, param1 * (6 + qe.field_d * 3)) ? 1 : 0;
+          var3_int = ((rb) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_5_5, param1 * (6 + GameKeyHandler.field_d * 3)) ? 1 : 0;
           var4 = pj.field_f.field_Kb.field_fb;
           if (param2 != -13047) {
             stackIn_7_0 = (ud) null;
@@ -222,7 +222,7 @@ class ae extends na {
             mi.field_Kb.field_jb = dg.field_m;
             go.field_d.field_S = false;
             if (ji.field_Tb != 1) {
-              pj.field_f.field_Rb.field_Ob.field_jb = kl.field_f;
+              pj.field_f.field_Rb.field_Ob.field_jb = FullscreenFocusCanvas.field_f;
               if (var19 != 0) {
                 pj.field_f.field_Rb.field_Ob.field_jb = oe.field_t;
               }
@@ -272,7 +272,7 @@ class ae extends na {
                     !var7.field_Vb.equals("")) {
                     var7.field_Kb.field_vb = db.field_b;
                     var7.field_Kb.field_L = var11;
-                    var7.field_Kb.a((byte) -120, 3 + db.field_b.field_t, var9, qe.field_d, 0);
+                    var7.field_Kb.a((byte) -120, 3 + db.field_b.field_t, var9, GameKeyHandler.field_d, 0);
                     var12 = 1;
                   }
                   var7.field_Wb.field_ib = var11;
@@ -291,12 +291,12 @@ class ae extends na {
                   }
                   stackIn_44_0 = var7.field_Tb;
                   if (var14 > 0) {
-                    stackIn_45_1 = jb.a(var7.field_Tb.field_Ib, var7.field_Mb, var14);
+                    stackIn_45_1 = BitmapFont.a(var7.field_Tb.field_Ib, var7.field_Mb, var14);
                   } else {
                     stackIn_45_1 = var7.field_Mb;
                   }
                   stackIn_44_0.field_jb = stackIn_45_1;
-                  var7.field_Tb.a((byte) -93, var14, var9, qe.field_d, var13);
+                  var7.field_Tb.a((byte) -93, var14, var9, GameKeyHandler.field_d, var13);
                   stackIn_48_0 = var7.field_Wb;
                   if (var7.field_Ub != null) {
                     stackIn_49_1 = var7.field_Ub;
@@ -304,10 +304,10 @@ class ae extends na {
                     stackIn_49_1 = j.field_t;
                   }
                   stackIn_48_0.field_jb = stackIn_49_1;
-                  var7.field_Wb.a((byte) -108, 80, var9, qe.field_d, var7.field_Hb - 80);
+                  var7.field_Wb.a((byte) -108, 80, var9, GameKeyHandler.field_d, var7.field_Hb - 80);
                   stackIn_53_0 = (var7.field_Tb.field_jb.equals(var7.field_Mb)) ? 0 : 1;
                   var15 = stackIn_53_0;
-                  var9 = var9 + qe.field_d;
+                  var9 = var9 + GameKeyHandler.field_d;
                   if (var3_int == 0) {
                     var7.field_mb = var9 - var7.field_R;
                   }
@@ -366,7 +366,7 @@ class ae extends na {
         }
     }
 
-    boolean a(int param0, char param1, int param2, na param3) {
+    boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -456,7 +456,7 @@ class ae extends na {
         }
     }
 
-    final void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
+    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -486,7 +486,7 @@ class ae extends na {
         }
     }
 
-    boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -521,7 +521,7 @@ class ae extends na {
         }
     }
 
-    void a(na param0, int param1, int param2, boolean param3) {
+    void a(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -578,7 +578,7 @@ class ae extends na {
             this.field_O = false;
             if (this.field_s != null &&
               this.field_s instanceof ub) {
-              ((ub) (this.field_s)).a(-8244, (na) (this), this.field_O);
+              ((ub) (this.field_s)).a(-8244, (UiWidget) (this), this.field_O);
             }
           }
           if (param0 > -63) {

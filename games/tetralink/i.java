@@ -81,7 +81,7 @@ final class i {
           this.field_u.a(var3, -13325, var2);
         }
         if (this.field_l > 0) {
-          sa.field_g = (this.field_l - n.field_M) / 2;
+          RandomAccessCacheFile.field_g = (this.field_l - n.field_M) / 2;
         }
     }
 
@@ -101,10 +101,10 @@ final class i {
     }
 
     final static void a(boolean param0, int param1) {
-        bc var2 = nd.field_Lb;
+        BitPacketBuffer var2 = nd.field_Lb;
         var2.f(param1, (byte) -92);
-        var2.field_t = var2.field_t + 1;
-        int var3 = var2.field_t;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(5, !param0 ? true : false);
         if (!param0) {
           return;
@@ -113,7 +113,7 @@ final class i {
         int var4 = qb.field_N.field_ic + (qb.field_N.field_Zb << 6);
         var2.a(var4, false);
         var2.a(0, 128, qb.field_N.field_sc, qb.field_N.field_sc.length);
-        var2.b(-var3 + var2.field_t, -2);
+        var2.b(-var3 + var2.position, -2);
     }
 
     final static void c(int param0) {
@@ -146,7 +146,7 @@ final class i {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        bc var27 = null;
+        BitPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var3Lifetime1;
@@ -211,7 +211,7 @@ final class i {
               var20 = var27.d((byte) -99);
               var21 = lh.field_v[var20].field_e;
               var22 = var27.c(255);
-              var24 = var27.field_t;
+              var24 = var27.position;
               if (var19 < var6) {
                 var8[0][var12] = var21;
                 var9[0][var12] = lh.field_v[var20].field_g;
@@ -229,7 +229,7 @@ final class i {
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
                 var13++;
-                var27.field_t = var24;
+                var27.position = var24;
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
@@ -242,7 +242,7 @@ final class i {
                 var8[2][var14] = var21;
                 var9[2][var14] = lh.field_v[var20].field_g;
                 var34[2][var14] = var22;
-                var27.field_t = var24;
+                var27.position = var24;
                 var14++;
                 for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                   incrementValue$2 = var17;
@@ -397,10 +397,10 @@ final class i {
         }
         if (this.field_l <= n.field_M) {
           if (this.field_l > 0) {
-            sa.field_g = 0;
+            RandomAccessCacheFile.field_g = 0;
           }
         } else {
-          sa.field_g = (-n.field_M + this.field_l) / 2;
+          RandomAccessCacheFile.field_g = (-n.field_M + this.field_l) / 2;
         }
         if (this.field_g != n.field_M ||
           this.field_m != d.field_h) {
@@ -408,12 +408,12 @@ final class i {
         }
     }
 
-    final kl b(boolean param0) {
+    final FullscreenFocusCanvas b(boolean param0) {
         this.field_d = n.field_M;
         this.field_x = d.field_h;
         this.field_u.a(this.field_o, -13325, this.field_r);
-        ha.field_h = param0 ? true : false;
-        kl var2 = bm.a(this.field_o, 0, 0, this.field_r, 0, nd.field_Pb);
+        MouseInputHandler.field_h = param0 ? true : false;
+        FullscreenFocusCanvas var2 = bm.a(this.field_o, 0, 0, this.field_r, 0, nd.field_Pb);
         if (var2 == null) {
           this.a((byte) 36);
         }
@@ -434,14 +434,14 @@ final class i {
 
     final static void a(int param0, eh param1, int param2) {
         int var4 = 0;
-        bc var5 = nd.field_Lb;
+        BitPacketBuffer var5 = nd.field_Lb;
         var5.f(param0, (byte) -92);
         if (param2 != 0) {
           return;
         }
         try {
-          var5.field_t = var5.field_t + 1;
-          var4 = var5.field_t;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, false);
           var5.a(param1.field_r, false);
           var5.a(param1.field_y, false);
@@ -450,7 +450,7 @@ final class i {
           var5.d(param1.field_u, (byte) -124);
           var5.d(param1.field_t, (byte) -124);
           var5.c(var4, param2 ^ -71);
-          var5.b(var5.field_t - var4, param2 ^ -2);
+          var5.b(var5.position - var4, param2 ^ -2);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "i.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

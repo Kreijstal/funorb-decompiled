@@ -38,26 +38,26 @@ final class bn extends IOException {
               var4_ref_tc.field_r < var2_long) {
               var4_ref_tc.b(false);
               rl.field_d = var4_ref_tc.field_o.length;
-              kb.field_q.field_t = 0;
+              kb.field_q.position = 0;
               var5_int = 0;
               do {
                 if (!(rl.field_d > var5_int)) {
                   mh.field_g = lk.field_sb;
-                  lk.field_sb = md.field_A;
-                  md.field_A = ua.field_c;
+                  lk.field_sb = SpriteState.field_A;
+                  SpriteState.field_A = ua.field_c;
                   ua.field_c = var4_ref_tc.field_u;
                   break;
                 }
-                kb.field_q.field_u[var5_int] = var4_ref_tc.field_o[var5_int];
+                kb.field_q.payload[var5_int] = var4_ref_tc.field_o[var5_int];
                 var5_int++;
               } while (var7 == 0);
               return true;
             }
           }
-          L5: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (ti.field_e < 0) {
-              kb.field_q.field_t = 0;
+              kb.field_q.position = 0;
               stackIn_38_0 = en.b(97, 1);
               decompiledFrameRemainder0 = (var7 == 0);
               if (decompiledFrameRemainder0) {
@@ -65,7 +65,7 @@ final class bn extends IOException {
                   return false;
                 }
                 ti.field_e = kb.field_q.d(false);
-                kb.field_q.field_t = 0;
+                kb.field_q.position = 0;
                 rl.field_d = param1[ti.field_e];
               }
             }
@@ -78,7 +78,7 @@ final class bn extends IOException {
             if (i.field_f != 0) {
               var4 = i.field_f;
               if (0.0 != jg.field_f) {
-                var4 = (int)((double)var4 + ca.field_i.nextGaussian() * jg.field_f);
+                var4 = (int)((double)var4 + SocketConnector.field_i.nextGaussian() * jg.field_f);
                 if (var4 < 0) {
                   var4 = 0;
                 }
@@ -87,7 +87,7 @@ final class bn extends IOException {
               var6 = 0;
               while (true) {
                 if (var6 < rl.field_d) {
-                  var5.field_o[var6] = kb.field_q.field_u[var6];
+                  var5.field_o[var6] = kb.field_q.payload[var6];
                   var6++;
                   if (var7 == 0) {
                     continue;
@@ -99,14 +99,14 @@ final class bn extends IOException {
                 break;
               }
               if (var7 == 0) {
-                continue L5;
+                continue scanLoop1;
               }
             }
             break;
           }
           mh.field_g = lk.field_sb;
-          lk.field_sb = md.field_A;
-          md.field_A = ua.field_c;
+          lk.field_sb = SpriteState.field_A;
+          SpriteState.field_A = ua.field_c;
           ua.field_c = ti.field_e;
           ti.field_e = -1;
           return true;
@@ -390,10 +390,10 @@ final class bn extends IOException {
             db.field_f = new int[param7 + 100];
             wk.field_b = new int[param7 + 100];
           }
-          if (null != param18 && (mc.field_m == null ||
-            !(mc.field_m.length >= param7))) {
-            rk.field_b = new int[100 + param7];
-            mc.field_m = new int[param7 + 100];
+          if (null != param18 && (IntrusiveNode.field_m == null ||
+            !(IntrusiveNode.field_m.length >= param7))) {
+            SecondaryNodeDeque.field_b = new int[100 + param7];
+            IntrusiveNode.field_m = new int[param7 + 100];
             tc.field_w = new int[100 + param7];
           }
           if (null == am.field_b ||
@@ -703,14 +703,14 @@ final class bn extends IOException {
                     wk.field_b = var54Lifetime2Lifetime2;
                     if (null != param18) {
                       var54Lifetime2Lifetime3 = new int[98 + (var30 + (param7 + var57))];
-                      rd.a(mc.field_m, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
-                      mc.field_m = var54Lifetime2Lifetime3;
+                      rd.a(IntrusiveNode.field_m, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      IntrusiveNode.field_m = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[var30 + (param7 + var57 + 98)];
                       rd.a(tc.field_w, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       tc.field_w = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[98 + var57 + (var30 + param7)];
-                      rd.a(rk.field_b, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
-                      rk.field_b = var54Lifetime2Lifetime3;
+                      rd.a(SecondaryNodeDeque.field_b, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      SecondaryNodeDeque.field_b = var54Lifetime2Lifetime3;
                     }
                   }
                   ja.field_l[var33Lifetime2] = var26[0];
@@ -718,12 +718,12 @@ final class bn extends IOException {
                   wk.field_b[var33Lifetime2] = var26[2];
                   if (param18 != null) {
                     if (var64 == 0) {
-                      mc.field_m[var33Lifetime2] = var35;
-                      rk.field_b[var33Lifetime2] = var37;
+                      IntrusiveNode.field_m[var33Lifetime2] = var35;
+                      SecondaryNodeDeque.field_b[var33Lifetime2] = var37;
                     } else {
-                      mc.field_m[var33Lifetime2] = var26[8];
+                      IntrusiveNode.field_m[var33Lifetime2] = var26[8];
                       tc.field_w[var33Lifetime2] = var26[9];
-                      rk.field_b[var33Lifetime2] = var26[10];
+                      SecondaryNodeDeque.field_b[var33Lifetime2] = var26[10];
                     }
                   }
                   var27[var33Lifetime2++] = var38;
@@ -733,12 +733,12 @@ final class bn extends IOException {
                     wk.field_b[var33Lifetime2] = var26[0];
                     if (param18 != null) {
                       if (var64 != 0) {
-                        mc.field_m[var33Lifetime2] = var26[10];
+                        IntrusiveNode.field_m[var33Lifetime2] = var26[10];
                         tc.field_w[var33Lifetime2] = var26[11];
-                        rk.field_b[var33Lifetime2] = var26[8];
+                        SecondaryNodeDeque.field_b[var33Lifetime2] = var26[8];
                       } else {
-                        mc.field_m[var33Lifetime2] = var35;
-                        rk.field_b[var33Lifetime2] = var37;
+                        IntrusiveNode.field_m[var33Lifetime2] = var35;
+                        SecondaryNodeDeque.field_b[var33Lifetime2] = var37;
                       }
                     }
                     var30++;
@@ -884,9 +884,9 @@ final class bn extends IOException {
                 }
                 wk.field_b[var33Lifetime2] = var34;
                 if (null != param18) {
-                  mc.field_m[var33Lifetime2] = param18[var38];
+                  IntrusiveNode.field_m[var33Lifetime2] = param18[var38];
                   tc.field_w[var33Lifetime2] = param8[var38];
-                  rk.field_b[var33Lifetime2] = param17[var38];
+                  SecondaryNodeDeque.field_b[var33Lifetime2] = param17[var38];
                 }
                 var27[var33Lifetime2] = var38;
               }
@@ -899,7 +899,7 @@ final class bn extends IOException {
             bm.field_p = param10;
             hb.field_d = param10;
             d.field_b = mf.field_u;
-            ea.field_e = k.field_e;
+            IterableNodeHashTable.field_e = k.field_e;
             stackIn_249_0 = 0;
             stackIn_249_1 = param10;
           }
@@ -907,12 +907,12 @@ final class bn extends IOException {
             if (null != param6) {
               fieldTemp$24 = param6.field_v;
               va.field_q.field_v = param6.field_v;
-              fl.field_o.field_v = fieldTemp$24;
-              if (fl.field_o.field_k == null ||
-                !(fl.field_o.field_k.length >= param10)) {
-                fl.field_o.field_Q = new short[param10];
-                fl.field_o.field_k = new short[param10];
-                fl.field_o.field_N = new short[param10];
+              BufferedSocket.field_o.field_v = fieldTemp$24;
+              if (BufferedSocket.field_o.field_k == null ||
+                !(BufferedSocket.field_o.field_k.length >= param10)) {
+                BufferedSocket.field_o.field_Q = new short[param10];
+                BufferedSocket.field_o.field_k = new short[param10];
+                BufferedSocket.field_o.field_N = new short[param10];
               }
               if (va.field_q.field_k == null ||
                 !(param10 <= va.field_q.field_k.length)) {
@@ -927,13 +927,13 @@ final class bn extends IOException {
                     if (param6.field_v[var38Lifetime1] != 0) {
                       dupTemp$25 = param6.field_k[var38Lifetime1];
                       va.field_q.field_k[var38Lifetime1] = dupTemp$25;
-                      fl.field_o.field_k[var38Lifetime1] = dupTemp$25;
+                      BufferedSocket.field_o.field_k[var38Lifetime1] = dupTemp$25;
                       dupTemp$26 = param6.field_N[var38Lifetime1];
                       va.field_q.field_N[var38Lifetime1] = dupTemp$26;
-                      fl.field_o.field_N[var38Lifetime1] = dupTemp$26;
+                      BufferedSocket.field_o.field_N[var38Lifetime1] = dupTemp$26;
                       dupTemp$27 = param6.field_Q[var38Lifetime1];
                       va.field_q.field_Q[var38Lifetime1] = dupTemp$27;
-                      fl.field_o.field_Q[var38Lifetime1] = dupTemp$27;
+                      BufferedSocket.field_o.field_Q[var38Lifetime1] = dupTemp$27;
                     } else {
                       var33Lifetime3 = param6.field_k[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
@@ -946,7 +946,7 @@ final class bn extends IOException {
                         nn.field_S[var34Lifetime1] = param5[var33Lifetime3];
                         bd.field_a[var34Lifetime1] = param11[var33Lifetime3];
                       }
-                      fl.field_o.field_k[var38Lifetime1] = (short)var34Lifetime1;
+                      BufferedSocket.field_o.field_k[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
                         fieldTemp$29 = mf.field_u;
@@ -969,7 +969,7 @@ final class bn extends IOException {
                         nn.field_S[var34Lifetime1] = param5[var33Lifetime3];
                         bd.field_a[var34Lifetime1] = param11[var33Lifetime3];
                       }
-                      fl.field_o.field_N[var38Lifetime1] = (short)var34Lifetime1;
+                      BufferedSocket.field_o.field_N[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
                         fieldTemp$31 = mf.field_u;
@@ -992,7 +992,7 @@ final class bn extends IOException {
                         nn.field_S[var34Lifetime1] = param5[var33Lifetime3];
                         bd.field_a[var34Lifetime1] = param11[var33Lifetime3];
                       }
-                      fl.field_o.field_Q[var38Lifetime1] = (short)var34Lifetime1;
+                      BufferedSocket.field_o.field_Q[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (0 > var34Lifetime1) {
                         fieldTemp$33 = mf.field_u;
@@ -1011,28 +1011,28 @@ final class bn extends IOException {
                 } else {
                   fieldTemp$34 = param6.field_S;
                   va.field_q.field_S = param6.field_S;
-                  fl.field_o.field_S = fieldTemp$34;
+                  BufferedSocket.field_o.field_S = fieldTemp$34;
                   fieldTemp$35 = param6.field_x;
                   va.field_q.field_x = param6.field_x;
-                  fl.field_o.field_x = fieldTemp$35;
+                  BufferedSocket.field_o.field_x = fieldTemp$35;
                   fieldTemp$36 = param6.field_D;
                   va.field_q.field_D = param6.field_D;
-                  fl.field_o.field_D = fieldTemp$36;
+                  BufferedSocket.field_o.field_D = fieldTemp$36;
                   fieldTemp$37 = param6.field_n;
                   va.field_q.field_n = param6.field_n;
-                  fl.field_o.field_n = fieldTemp$37;
+                  BufferedSocket.field_o.field_n = fieldTemp$37;
                   fieldTemp$38 = param6.field_M;
                   va.field_q.field_M = param6.field_M;
-                  fl.field_o.field_M = fieldTemp$38;
+                  BufferedSocket.field_o.field_M = fieldTemp$38;
                   fieldTemp$39 = param6.field_F;
                   va.field_q.field_F = param6.field_F;
-                  fl.field_o.field_F = fieldTemp$39;
+                  BufferedSocket.field_o.field_F = fieldTemp$39;
                   fieldTemp$40 = param6.field_L;
                   va.field_q.field_L = param6.field_L;
-                  fl.field_o.field_L = fieldTemp$40;
+                  BufferedSocket.field_o.field_L = fieldTemp$40;
                   fieldTemp$41 = param6.field_l;
                   va.field_q.field_l = param6.field_l;
-                  fl.field_o.field_l = fieldTemp$41;
+                  BufferedSocket.field_o.field_l = fieldTemp$41;
                 }
                 break;
               }
@@ -1040,10 +1040,10 @@ final class bn extends IOException {
                 return;
               }
             }
-            if (bg.field_f == null ||
-              !(param10 <= bg.field_f.length)) {
-              gb.field_r = new int[param10];
-              bg.field_f = new int[param10];
+            if (GameApplet.field_f == null ||
+              !(param10 <= GameApplet.field_f.length)) {
+              DualLinkNode.field_r = new int[param10];
+              GameApplet.field_f = new int[param10];
               ch.field_s = new int[param10];
             }
             if (nh.field_Mb == null ||
@@ -1068,7 +1068,7 @@ final class bn extends IOException {
                 nn.field_S[var34Lifetime1Lifetime1] = param5[var33Lifetime3Lifetime1];
                 bd.field_a[var34Lifetime1Lifetime1] = param11[var33Lifetime3Lifetime1];
               }
-              bg.field_f[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              GameApplet.field_f[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
                 fieldTemp$43 = mf.field_u;
@@ -1091,7 +1091,7 @@ final class bn extends IOException {
                 nn.field_S[var34Lifetime1Lifetime1] = param5[var33Lifetime3Lifetime1];
                 bd.field_a[var34Lifetime1Lifetime1] = param11[var33Lifetime3Lifetime1];
               }
-              gb.field_r[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              DualLinkNode.field_r[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
                 fieldTemp$45 = mf.field_u;

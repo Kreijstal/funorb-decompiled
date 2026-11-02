@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class un implements Runnable {
-    private vl field_i;
-    private ie field_a;
+    private AsyncRequest field_i;
+    private PlatformTaskDispatcher field_a;
     static int[] field_j;
-    private vl field_b;
+    private AsyncRequest field_b;
     private DataInputStream field_d;
-    private vl field_h;
+    private AsyncRequest field_h;
     private java.net.URL field_e;
     static long field_f;
-    private bh field_g;
+    private PacketBuffer field_g;
     private int field_c;
 
     final synchronized boolean b(byte param0) {
@@ -66,7 +66,7 @@ final class un implements Runnable {
               var4.write(q.a(-125, var6));
               this.field_d = new DataInputStream(var5.getInputStream());
             }
-            this.field_g.field_t = 0;
+            this.field_g.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = (IOException) (Object) decompiledCaughtException;
@@ -97,7 +97,7 @@ final class un implements Runnable {
         field_j = null;
     }
 
-    final bh a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (this.field_c == 3) {
           return this.field_g;
         }
@@ -118,16 +118,16 @@ final class un implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = TetraLink.field_J;
           try {
-            while (this.field_g.field_u.length > this.field_g.field_t) {
-              var1_int = this.field_d.read(this.field_g.field_u, this.field_g.field_t, this.field_g.field_u.length - this.field_g.field_t);
+            while (this.field_g.payload.length > this.field_g.position) {
+              var1_int = this.field_d.read(this.field_g.payload, this.field_g.position, this.field_g.payload.length - this.field_g.position);
               if (var1_int >= 0) {
-                this.field_g.field_t = this.field_g.field_t + var1_int;
+                this.field_g.position = this.field_g.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_g.field_t == this.field_g.field_u.length) {
-              throw un.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_u.length + " " + this.field_e));
+            if (this.field_g.position == this.field_g.payload.length) {
+              throw un.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -152,17 +152,17 @@ final class un implements Runnable {
         }
     }
 
-    un(ie param0, java.net.URL param1, int param2) {
+    un(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_e = param1;
           this.field_a = param0;
-          this.field_g = new bh(param2);
+          this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static ig a(int param0, ah param1, int param2, int param3, ah param4) {
+    final static ig a(int param0, Archive param1, int param2, int param3, Archive param4) {
         RuntimeException var5 = null;
         ig stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -179,7 +179,7 @@ final class un implements Runnable {
             return stackIn_2_0;
           }
           if (ia.a(param3, param4, param2, -58)) {
-            stackIn_7_0 = fa.a(param0 + 28748, param1.a(param0 + 28976, param3, param2));
+            stackIn_7_0 = SoundEffectLibrary.a(param0 + 28748, param1.a(param0 + 28976, param3, param2));
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

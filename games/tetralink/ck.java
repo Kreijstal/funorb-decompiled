@@ -7,7 +7,7 @@ final class ck extends fk {
     static fh field_Z;
     private String field_eb;
     private vm field_db;
-    private oh field_cb;
+    private Sprite field_cb;
 
     public static void f(byte param0) {
         field_bb = null;
@@ -20,10 +20,10 @@ final class ck extends fk {
     }
 
     final static void a(boolean param0, int param1) {
-        mc var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         eh var4 = null;
-        je stackIn_8_0 = null;
+        IntrusiveDeque stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -37,12 +37,12 @@ final class ck extends fk {
             i.a(param1, var4, 0);
             var4 = (eh) (qn.field_t.a((byte) -70));
           }
-          stackIn_8_0 = sf.field_a;
+          stackIn_8_0 = SecondaryNodeDequeIterator.field_a;
           stackIn_9_1 = !(param0);
-          var2 = ((je) (Object) stackIn_8_0).c(stackIn_9_1);
+          var2 = ((IntrusiveDeque) (Object) stackIn_8_0).c(stackIn_9_1);
           while (var2 != null) {
             ei.a((byte) 102, param1);
-            var2 = sf.field_a.a((byte) -70);
+            var2 = SecondaryNodeDequeIterator.field_a.a((byte) -70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,16 +61,16 @@ final class ck extends fk {
         int var13;
         String var17;
         Object var18;
-        oh var19;
+        Sprite var19;
         Object var22;
         jh var28;
         String var5;
-        oh var20;
-        oh var21;
-        oh var23;
-        oh var24;
-        oh var26;
-        oh var27;
+        Sprite var20;
+        Sprite var21;
+        Sprite var23;
+        Sprite var24;
+        Sprite var26;
+        Sprite var27;
         jh var29;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -97,25 +97,25 @@ final class ck extends fk {
           var6 = this.field_db.c(param0 - 113);
           var29 = (jh) ((Object) this.field_H);
           var9 = param1 + this.field_t;
-          var10 = var29.a((na) (this), param2, true) + (var29.a((na) (this), false).a(true) >> 1);
+          var10 = var29.a((UiWidget) (this), param2, true) + (var29.a((UiWidget) (this), false).a(true) >> 1);
           if (pm.field_b == var6) {
             var24 = fj.field_q[0];
             var11 = var24.field_t << 1;
             var12 = var24.field_F << 1;
             if (null == this.field_cb) {
-              this.field_cb = new oh(var11, var12);
+              this.field_cb = new Sprite(var11, var12);
               sk.a((byte) 111, this.field_cb);
             } else {
               if (this.field_cb.field_u < var11) {
-                this.field_cb = new oh(var11, var12);
+                this.field_cb = new Sprite(var11, var12);
                 sk.a((byte) 111, this.field_cb);
               } else {
                 if (var12 > this.field_cb.field_E) {
-                  this.field_cb = new oh(var11, var12);
+                  this.field_cb = new Sprite(var11, var12);
                   sk.a((byte) 111, this.field_cb);
                 } else {
                   sk.a((byte) 118, this.field_cb);
-                  ra.a();
+                  SoftwareRasterizer.a();
                 }
               }
             }
@@ -140,19 +140,19 @@ final class ck extends fk {
           var11Lifetime2 = var23.field_t << 1;
           var12Lifetime2 = var23.field_F << 1;
           if (null == this.field_cb) {
-            this.field_cb = new oh(var11Lifetime2, var12Lifetime2);
+            this.field_cb = new Sprite(var11Lifetime2, var12Lifetime2);
             sk.a((byte) 111, this.field_cb);
           } else {
             if (this.field_cb.field_u < var11Lifetime2) {
-              this.field_cb = new oh(var11Lifetime2, var12Lifetime2);
+              this.field_cb = new Sprite(var11Lifetime2, var12Lifetime2);
               sk.a((byte) 111, this.field_cb);
             } else {
               if (var12Lifetime2 > this.field_cb.field_E) {
-                this.field_cb = new oh(var11Lifetime2, var12Lifetime2);
+                this.field_cb = new Sprite(var11Lifetime2, var12Lifetime2);
                 sk.a((byte) 111, this.field_cb);
               } else {
                 sk.a((byte) 118, this.field_cb);
-                ra.a();
+                SoftwareRasterizer.a();
               }
             }
           }
@@ -170,7 +170,7 @@ final class ck extends fk {
         var6Lifetime1 = this.field_db.c(param0 - 113);
         var28 = (jh) ((Object) this.field_H);
         var9Lifetime1 = param1 + this.field_t;
-        var10Lifetime1 = var28.a((na) (this), param2, true) + (var28.a((na) (this), false).a(true) >> 1);
+        var10Lifetime1 = var28.a((UiWidget) (this), param2, true) + (var28.a((UiWidget) (this), false).a(true) >> 1);
         if (pm.field_b != var6Lifetime1 &&
           var6Lifetime1 != ug.field_cb) {
           if (db.field_h == var6Lifetime1) {
@@ -190,9 +190,9 @@ final class ck extends fk {
             this.field_cb.field_u >= var11Lifetime1 &&
             var12Lifetime1 <= this.field_cb.field_E) {
             sk.a((byte) 118, this.field_cb);
-            ra.a();
+            SoftwareRasterizer.a();
           } else {
-            this.field_cb = new oh(var11Lifetime1, var12Lifetime1);
+            this.field_cb = new Sprite(var11Lifetime1, var12Lifetime1);
             sk.a((byte) 111, this.field_cb);
           }
           var19.a(112, 144, var19.field_t << 4, var19.field_F << 4, -this.field_ab << 10, 4096);
@@ -201,7 +201,7 @@ final class ck extends fk {
         }
     }
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           this.field_ab = this.field_ab + 1;
           super.a(param0, param1, param2, param3);
@@ -210,7 +210,7 @@ final class ck extends fk {
         }
     }
 
-    final boolean a(na param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

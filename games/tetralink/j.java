@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j extends gb {
+final class j extends DualLinkNode {
     static int[] field_x;
     static int field_u;
     private int[] field_y;
@@ -18,7 +18,7 @@ final class j extends gb {
         field_t = null;
     }
 
-    private final void a(int param0, int param1, bh param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -82,7 +82,7 @@ final class j extends gb {
         }
     }
 
-    final void a(bh param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -144,12 +144,12 @@ final class j extends gb {
         int var2 = 0;
         int var3 = TetraLink.field_J;
         if (param0 != 25271) {
-          bh var4 = (bh) null;
-          this.a(0, 67, (bh) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a(0, 67, (PacketBuffer) null);
         }
         if (null != this.field_v) {
           for (var2 = 0; this.field_v.length > var2; var2++) {
-            this.field_v[var2] = mc.a(this.field_v[var2], 32768);
+            this.field_v[var2] = IntrusiveNode.a(this.field_v[var2], 32768);
           }
         }
     }

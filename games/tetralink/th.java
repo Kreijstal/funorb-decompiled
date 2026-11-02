@@ -3,18 +3,18 @@
  */
 abstract class th {
     static java.awt.Color field_e;
-    jo field_k;
+    DualLinkDeque field_k;
     static hl field_i;
     static kh[] field_p;
     static int field_g;
     static int field_l;
-    jo field_j;
-    jo field_o;
-    jo field_c;
+    DualLinkDeque field_j;
+    DualLinkDeque field_o;
+    DualLinkDeque field_c;
     int field_a;
     long field_f;
-    bh field_b;
-    bh field_m;
+    PacketBuffer field_b;
+    PacketBuffer field_m;
     volatile int field_h;
     byte field_n;
     volatile int field_d;
@@ -114,7 +114,7 @@ abstract class th {
         if (param0 == 119) {
           return 20 <= this.c((byte) -47) ? true : false;
         }
-        this.field_b = (bh) null;
+        this.field_b = (PacketBuffer) null;
         return 20 <= this.c((byte) -47) ? true : false;
     }
 
@@ -128,7 +128,7 @@ abstract class th {
           field_l = -80;
           var8 = new rh();
           var8.field_D = param4 ? true : false;
-          var8.field_n = var6;
+          var8.secondaryKey = var6;
           var8.field_H = param2;
           if (!param4) {
             if (!(this.d(20) < 20)) {
@@ -145,7 +145,7 @@ abstract class th {
         }
         var8Lifetime1 = new rh();
         var8Lifetime1.field_D = param4 ? true : false;
-        var8Lifetime1.field_n = var6;
+        var8Lifetime1.secondaryKey = var6;
         var8Lifetime1.field_H = param2;
         if (!param4) {
           if (!(this.d(20) < 20)) {
@@ -162,15 +162,15 @@ abstract class th {
     }
 
     th() {
-        this.field_k = new jo();
-        this.field_j = new jo();
-        this.field_o = new jo();
-        this.field_c = new jo();
-        this.field_b = new bh(6);
+        this.field_k = new DualLinkDeque();
+        this.field_j = new DualLinkDeque();
+        this.field_o = new DualLinkDeque();
+        this.field_c = new DualLinkDeque();
+        this.field_b = new PacketBuffer(6);
         this.field_h = 0;
         this.field_d = 0;
         this.field_n = (byte) 0;
-        this.field_m = new bh(10);
+        this.field_m = new PacketBuffer(10);
     }
 
     static {

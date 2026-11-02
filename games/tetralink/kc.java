@@ -218,7 +218,7 @@ final class kc extends vh {
         return (fc) ((Object) new ob(this, param0, param1, param2, param3, param4));
     }
 
-    final static kc a(ah param0, String param1, String param2) {
+    final static kc a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, true);
         if (var3 == null) {
           return null;
@@ -230,13 +230,13 @@ final class kc extends vh {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        bh var2;
-        bh var3;
-        bh var4;
-        bh var5;
-        bh var6;
-        bh var7;
-        bh var8;
+        PacketBuffer var2;
+        PacketBuffer var3;
+        PacketBuffer var4;
+        PacketBuffer var5;
+        PacketBuffer var6;
+        PacketBuffer var7;
+        PacketBuffer var8;
         int var9;
         int var10;
         int var11;
@@ -300,14 +300,14 @@ final class kc extends vh {
         int var57Lifetime3;
         int var58Lifetime1;
         int var58Lifetime2;
-        var2 = new bh(param0);
-        var3 = new bh(param0);
-        var4 = new bh(param0);
-        var5 = new bh(param0);
-        var6 = new bh(param0);
-        var7 = new bh(param0);
-        var8 = new bh(param0);
-        var2.field_t = param0.length - 23;
+        var2 = new PacketBuffer(param0);
+        var3 = new PacketBuffer(param0);
+        var4 = new PacketBuffer(param0);
+        var5 = new PacketBuffer(param0);
+        var6 = new PacketBuffer(param0);
+        var7 = new PacketBuffer(param0);
+        var8 = new PacketBuffer(param0);
+        var2.position = param0.length - 23;
         var9 = var2.e(127);
         var10 = var2.e(127);
         var11 = var2.d((byte) -99);
@@ -331,7 +331,7 @@ final class kc extends vh {
         var27 = 0;
         if (var11 > 0) {
           this.field_v = new byte[var11];
-          var2.field_t = 0;
+          var2.position = 0;
           for (var28 = 0; var28 < var11; var28++) {
             dupTemp$0 = var2.g(-1772093437);
             this.field_v[var28] = dupTemp$0;
@@ -453,11 +453,11 @@ final class kc extends vh {
             this.field_F = new byte[var27];
           }
         }
-        var2.field_t = var29Lifetime1;
-        var3.field_t = var40;
-        var4.field_t = var41;
-        var5.field_t = var42;
-        var6.field_t = var34;
+        var2.position = var29Lifetime1;
+        var3.position = var40;
+        var4.position = var41;
+        var5.position = var42;
+        var6.position = var34;
         var50 = 0;
         var51 = 0;
         var52 = 0;
@@ -485,13 +485,13 @@ final class kc extends vh {
             this.field_G[var53] = var6.d((byte) -99);
           }
         }
-        var2.field_t = var39;
-        var3.field_t = var30;
-        var4.field_t = var32;
-        var5.field_t = var35;
-        var6.field_t = var33;
-        var7.field_t = var37;
-        var8.field_t = var38;
+        var2.position = var39;
+        var3.position = var30;
+        var4.position = var32;
+        var5.position = var35;
+        var6.position = var33;
+        var7.position = var37;
+        var8.position = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
           this.field_H[var53Lifetime1] = (short)var2.e(127);
           if (var13 != 0) {
@@ -518,8 +518,8 @@ final class kc extends vh {
           }
         }
         this.field_E = -1;
-        var2.field_t = var36;
-        var3.field_t = var31;
+        var2.position = var36;
+        var3.position = var31;
         var53Lifetime2 = 0;
         var54Lifetime1 = 0;
         var55Lifetime1 = 0;
@@ -583,12 +583,12 @@ final class kc extends vh {
           }
         }
         this.field_E = this.field_E + 1;
-        var2.field_t = var43;
-        var3.field_t = var44;
-        var4.field_t = var45;
-        var5.field_t = var46;
-        var6.field_t = var47;
-        var7.field_t = var48;
+        var2.position = var43;
+        var3.position = var44;
+        var4.position = var45;
+        var5.position = var46;
+        var6.position = var47;
+        var7.position = var48;
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_v[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
@@ -633,14 +633,14 @@ final class kc extends vh {
           }
         }
         if (var14 != 0) {
-          var2.field_t = var49;
+          var2.position = var49;
           var57Lifetime3 = var2.d((byte) -99);
           if (var57Lifetime3 > 0) {
-            var2.field_t = var2.field_t + 4 * var57Lifetime3;
+            var2.position = var2.position + 4 * var57Lifetime3;
           }
           var58Lifetime2 = var2.d((byte) -99);
           if (var58Lifetime2 > 0) {
-            var2.field_t = var2.field_t + 4 * var58Lifetime2;
+            var2.position = var2.position + 4 * var58Lifetime2;
           }
         }
     }
@@ -648,11 +648,11 @@ final class kc extends vh {
     private final void b(byte[] param0) {
         int var2;
         int var3;
-        bh var4;
-        bh var5;
-        bh var6;
-        bh var7;
-        bh var8;
+        PacketBuffer var4;
+        PacketBuffer var5;
+        PacketBuffer var6;
+        PacketBuffer var7;
+        PacketBuffer var8;
         int var9;
         int var10;
         int var11;
@@ -703,12 +703,12 @@ final class kc extends vh {
         int var44Lifetime1;
         var2 = 0;
         var3 = 0;
-        var4 = new bh(param0);
-        var5 = new bh(param0);
-        var6 = new bh(param0);
-        var7 = new bh(param0);
-        var8 = new bh(param0);
-        var4.field_t = param0.length - 18;
+        var4 = new PacketBuffer(param0);
+        var5 = new PacketBuffer(param0);
+        var6 = new PacketBuffer(param0);
+        var7 = new PacketBuffer(param0);
+        var8 = new PacketBuffer(param0);
+        var4.position = param0.length - 18;
         var9 = var4.e(127);
         var10 = var4.e(127);
         var11 = var4.d((byte) -99);
@@ -793,11 +793,11 @@ final class kc extends vh {
           this.field_p = new int[var10];
         }
         this.field_H = new short[var10];
-        var4.field_t = var22;
-        var5.field_t = var32;
-        var6.field_t = var33;
-        var7.field_t = var34;
-        var8.field_t = var27;
+        var4.position = var22;
+        var5.position = var32;
+        var6.position = var33;
+        var7.position = var34;
+        var8.position = var27;
         var35 = 0;
         var36 = 0;
         var37 = 0;
@@ -825,11 +825,11 @@ final class kc extends vh {
             this.field_G[var38] = var8.d((byte) -99);
           }
         }
-        var4.field_t = var30;
-        var5.field_t = var26;
-        var6.field_t = var24;
-        var7.field_t = var28;
-        var8.field_t = var25;
+        var4.position = var30;
+        var5.position = var26;
+        var6.position = var24;
+        var7.position = var28;
+        var8.position = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
           this.field_H[var38Lifetime1] = (short)var4.e(127);
           if (var12 == 1) {
@@ -863,8 +863,8 @@ final class kc extends vh {
           }
         }
         this.field_E = -1;
-        var4.field_t = var29;
-        var5.field_t = var23;
+        var4.position = var29;
+        var5.position = var23;
         var38Lifetime2 = 0;
         var39Lifetime2 = 0;
         var40Lifetime1 = 0;
@@ -928,7 +928,7 @@ final class kc extends vh {
           }
         }
         this.field_E = this.field_E + 1;
-        var4.field_t = var31;
+        var4.position = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_v[var42Lifetime2] = (byte) 0;
           this.field_k[var42Lifetime2] = (short)var4.e(127);

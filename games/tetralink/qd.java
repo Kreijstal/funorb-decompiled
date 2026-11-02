@@ -10,14 +10,14 @@ final class qd extends ae {
     int field_V;
     static int[] field_Y;
     int field_U;
-    static oh field_X;
+    static Sprite field_X;
     static int[] field_W;
-    static oh field_P;
+    static Sprite field_P;
     static kh[] field_cb;
     int field_R;
     int field_Z;
 
-    final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -70,7 +70,7 @@ final class qd extends ae {
         if (param0 >= 107) {
           return null != db.field_e ? (el) (db.field_e.a((long)param1, 1)) : null;
         }
-        field_P = (oh) null;
+        field_P = (Sprite) null;
         return null != db.field_e ? (el) (db.field_e.a((long)param1, 1)) : null;
     }
 

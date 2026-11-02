@@ -8,8 +8,8 @@ abstract class hk {
     static long field_c;
 
     final static void a(byte param0) {
-        if (fl.field_u != null) {
-          fl.field_u.r(-128);
+        if (BufferedSocket.field_u != null) {
+          BufferedSocket.field_u.r(-128);
         }
         ko.field_q = new fn();
         mm.field_u.e(ko.field_q, -27667);
@@ -44,8 +44,8 @@ abstract class hk {
         int var14 = 0;
         int var15 = 0;
         byte[] var16 = null;
-        bh var17 = null;
-        bh var18 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -61,19 +61,19 @@ abstract class hk {
             var16 = (byte[]) null;
             hk.a((byte[]) null, 72);
           }
-          var17 = new bh(param0);
+          var17 = new PacketBuffer(param0);
           var18 = var17;
-          var18.field_t = -2 + param0.length;
+          var18.position = -2 + param0.length;
           vj.field_n = var18.e(127);
           gm.field_g = new boolean[vj.field_n];
           ga.field_a = new byte[vj.field_n][];
           sn.field_e = new int[vj.field_n];
           qa.field_x = new int[vj.field_n];
-          je.field_h = new int[vj.field_n];
+          IntrusiveDeque.field_h = new int[vj.field_n];
           i.field_t = new int[vj.field_n];
           jg.field_i = new byte[vj.field_n][];
-          var18.field_t = -(vj.field_n * 8) - 7 + param0.length;
-          wm.field_l = var18.e(127);
+          var18.position = -(vj.field_n * 8) - 7 + param0.length;
+          ImageProducerRasterBuffer.field_l = var18.e(127);
           mm.field_w = var18.e(127);
           var3 = 1 + (255 & var18.d((byte) -99));
           for (var4 = 0; var4 < vj.field_n; var4++) {
@@ -83,12 +83,12 @@ abstract class hk {
             i.field_t[var4Lifetime1] = var18.e(127);
           }
           for (var4Lifetime2 = 0; vj.field_n > var4Lifetime2; var4Lifetime2++) {
-            je.field_h[var4Lifetime2] = var18.e(127);
+            IntrusiveDeque.field_h[var4Lifetime2] = var18.e(127);
           }
           for (var4Lifetime3 = 0; vj.field_n > var4Lifetime3; var4Lifetime3++) {
             sn.field_e[var4Lifetime3] = var18.e(127);
           }
-          var18.field_t = 3 - 3 * var3 + (param0.length - (7 + vj.field_n * 8));
+          var18.position = 3 - 3 * var3 + (param0.length - (7 + vj.field_n * 8));
           ti.field_c = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             ti.field_c[var4Lifetime4] = var18.d(-1);
@@ -96,9 +96,9 @@ abstract class hk {
               ti.field_c[var4Lifetime4] = 1;
             }
           }
-          var18.field_t = 0;
+          var18.position = 0;
           for (var4Lifetime5 = 0; vj.field_n > var4Lifetime5; var4Lifetime5++) {
-            var5 = je.field_h[var4Lifetime5];
+            var5 = IntrusiveDeque.field_h[var4Lifetime5];
             var6 = sn.field_e[var4Lifetime5];
             var7 = var6 * var5;
             var21 = new byte[var7];

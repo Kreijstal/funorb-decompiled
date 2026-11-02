@@ -8,7 +8,7 @@ final class te extends en {
     static int field_P;
     static int field_R;
 
-    final void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
+    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         ed var7 = null;
         ed var8 = null;
@@ -63,7 +63,7 @@ final class te extends en {
         field_O = null;
     }
 
-    private te(int param0, int param1, int param2, int param3, kg param4, dn param5, na param6) {
+    private te(int param0, int param1, int param2, int param3, kg param4, dn param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_J = param6;

@@ -4,22 +4,22 @@
 final class bd {
     static int[] field_b;
     static int field_e;
-    static je field_c;
+    static IntrusiveDeque field_c;
     static String field_f;
     static String field_d;
     static int[] field_a;
     static hl field_g;
 
-    final static oh[] a(int param0, int param1, int param2, int param3, byte param4) {
-        oh dupTemp$0 = null;
-        oh dupTemp$1 = null;
-        oh[] var6 = null;
-        oh[] var5 = null;
-        oh[] var6Lifetime1;
-        oh[] var5Lifetime1;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
+        Sprite dupTemp$0 = null;
+        Sprite dupTemp$1 = null;
+        Sprite[] var6 = null;
+        Sprite[] var5 = null;
+        Sprite[] var6Lifetime1;
+        Sprite[] var5Lifetime1;
         if (param4 != 126) {
           bd.a((byte) -37);
-          var6 = new oh[9];
+          var6 = new Sprite[9];
           var5 = var6;
           dupTemp$0 = ce.a(param2, param1, param4 - 126);
           var5[6] = dupTemp$0;
@@ -37,15 +37,15 @@ final class bd {
           }
           return var5;
         }
-        var6Lifetime1 = new oh[9];
+        var6Lifetime1 = new Sprite[9];
         var5Lifetime1 = var6Lifetime1;
-        oh dupTemp$2 = ce.a(param2, param1, param4 - 126);
+        Sprite dupTemp$2 = ce.a(param2, param1, param4 - 126);
         var5Lifetime1[6] = dupTemp$2;
         var5Lifetime1[3] = dupTemp$2;
         var5Lifetime1[2] = dupTemp$2;
         var5Lifetime1[1] = dupTemp$2;
         var5Lifetime1[0] = dupTemp$2;
-        oh dupTemp$3 = ce.a(param0, param1, 0);
+        Sprite dupTemp$3 = ce.a(param0, param1, 0);
         var6Lifetime1[8] = dupTemp$3;
         var5Lifetime1[7] = dupTemp$3;
         var5Lifetime1[5] = dupTemp$3;
@@ -67,11 +67,11 @@ final class bd {
         return ph.field_w;
     }
 
-    final static void a(oh param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           if (param1 != 6) {
-            oh var3 = (oh) null;
-            bd.a((oh) null, -66);
+            Sprite var3 = (Sprite) null;
+            bd.a((Sprite) null, -66);
           }
           me.a(false);
           param0.c();
@@ -88,13 +88,13 @@ final class bd {
         field_a = null;
         field_g = null;
         if (param0 < 111) {
-          oh var2 = (oh) null;
-          bd.a((oh) null, 71);
+          Sprite var2 = (Sprite) null;
+          bd.a((Sprite) null, 71);
         }
     }
 
     static {
-        field_c = new je();
+        field_c = new IntrusiveDeque();
         field_f = "Report abuse";
         field_d = "Quick Chat game";
     }

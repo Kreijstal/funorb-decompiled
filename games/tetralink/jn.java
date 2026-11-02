@@ -9,8 +9,8 @@ final class jn {
     static String field_a;
     int field_e;
 
-    final static void a(ah param0, boolean param1, ah param2) {
-        lj.field_c = param2;
+    final static void a(Archive param0, boolean param1, Archive param2) {
+        NodeHashTableIterator.field_c = param2;
         if (!param1) {
           return;
         }
@@ -29,7 +29,7 @@ final class jn {
         }
     }
 
-    jn(bh param0) {
+    jn(PacketBuffer param0) {
         int var2_int = 0;
         try {
           this.field_b = param0.e(127);

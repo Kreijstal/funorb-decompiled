@@ -6,7 +6,7 @@ final class n extends gn implements dm {
     static int field_M;
     static fj[] field_L;
     static boolean field_P;
-    static ah field_N;
+    static Archive field_N;
     static int field_O;
     private String[] field_V;
     static hj field_U;
@@ -89,7 +89,7 @@ final class n extends gn implements dm {
         if (0 != param3) {
           return;
         }
-        jb var5 = od.field_S;
+        BitmapFont var5 = od.field_S;
         if (null != this.field_V) {
           var5.a(pg.field_c, param1 + this.field_t, param2 + this.field_w, this.field_F, 20, 16777215, -1, 0, 0, var5.field_K + var5.field_N);
         }
@@ -147,7 +147,7 @@ final class n extends gn implements dm {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -226,14 +226,14 @@ final class n extends gn implements dm {
           if (param1.field_i == 0 &&
             !u.a(113) &&
             null == qb.field_N &&
-            null == qe.field_a) {
+            null == GameKeyHandler.field_a) {
             if (!fn.field_K) {
               var5 = hd.field_s;
               var6 = mn.field_f;
               var5.field_j.a(var6, 1, 14);
             }
             var7 = hd.field_s;
-            var8 = bc.field_x;
+            var8 = BitPacketBuffer.field_x;
             var7.field_j.a(var8, 1, 20);
           }
           if (param1.field_i == 1 &&

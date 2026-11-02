@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cl {
-    static oh field_d;
+    static Sprite field_d;
     private int field_c;
     static int[] field_f;
     static int field_g;
@@ -47,12 +47,12 @@ final class cl {
           if (var5 == 14) {
             var4 = 0;
             if (this.field_h.c((byte) -123) &&
-              0 < wb.field_c) {
+              0 < DelegatingCanvas.field_c) {
               qn.a(0, 128);
               var4 = 1;
             }
             if (this.field_h.e(107) &&
-              wb.field_c < 256) {
+              DelegatingCanvas.field_c < 256) {
               qn.a(256, 128);
               var4 = 1;
             }
@@ -72,14 +72,14 @@ final class cl {
               var4 = 1;
             }
             if (this.field_h.a(true) &&
-              wb.field_c > 0) {
+              DelegatingCanvas.field_c > 0) {
               var4 = 1;
               v.a(-127);
             }
             if (this.field_h.c(97) &&
-              wb.field_c < 256) {
+              DelegatingCanvas.field_c < 256) {
               var4 = 1;
-              bh.a(256);
+              PacketBuffer.a(256);
             }
             if ((var4 != 0) &&
               (!this.field_h.d(0) ||
@@ -124,33 +124,33 @@ final class cl {
                   if (!this.field_h.f(-3)) {
                     decompiledFrameRemainder0 = !(!this.field_h.b((byte) 111));
                     if (decompiledFrameRemainder0) {
-                      fieldTemp$0 = qe.field_g + 1;
-                      qe.field_g = qe.field_g + 1;
+                      fieldTemp$0 = GameKeyHandler.field_g + 1;
+                      GameKeyHandler.field_g = GameKeyHandler.field_g + 1;
                       if (fieldTemp$0 >= qf.field_f.length) {
-                        qe.field_g = 2;
+                        GameKeyHandler.field_g = 2;
                       }
                     }
                   } else {
-                    fieldTemp$1 = qe.field_g - 1;
-                    qe.field_g = qe.field_g - 1;
+                    fieldTemp$1 = GameKeyHandler.field_g - 1;
+                    GameKeyHandler.field_g = GameKeyHandler.field_g - 1;
                     if (2 > fieldTemp$1) {
-                      qe.field_g = qf.field_f.length - 1;
+                      GameKeyHandler.field_g = qf.field_f.length - 1;
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    oi.field_c = qe.field_g;
-                    wb.a(true, -7869);
+                    oi.field_c = GameKeyHandler.field_g;
+                    DelegatingCanvas.a(true, -7869);
                   }
                 }
               } else {
                 if (this.field_h.f(-3) ||
                   this.field_h.b((byte) 101)) {
-                  if (qe.field_g < 2) {
-                    qe.field_g = oi.field_c;
-                    wb.a(true, -7869);
+                  if (GameKeyHandler.field_g < 2) {
+                    GameKeyHandler.field_g = oi.field_c;
+                    DelegatingCanvas.a(true, -7869);
                   } else {
-                    qe.field_g = 0;
-                    wb.a(true, -7869);
+                    GameKeyHandler.field_g = 0;
+                    DelegatingCanvas.a(true, -7869);
                   }
                 }
               }
@@ -168,7 +168,7 @@ final class cl {
           field_f = (int[]) null;
         }
         int var5 = mk.field_b.c(var6, 370);
-        ra.c(132, 125, 376, 6 + 24 * var5, param1 == 1 ? 127 : 394896);
+        SoftwareRasterizer.c(132, 125, 376, 6 + 24 * var5, param1 == 1 ? 127 : 394896);
         qj.a(370 + li.field_l[0].field_t + li.field_l[2].field_t, (byte) -36, li.field_l, 135 - li.field_l[0].field_t, li.field_l[6].field_F + (24 * var5 + li.field_l[0].field_F), -li.field_l[0].field_F + 128);
         if (2 != param1) {
           mk.field_b.a(var6, 135, 125, 370, 240, 8437759, -1, 1, 0, 24);
@@ -202,14 +202,14 @@ final class cl {
             1 >= this.field_h.field_b) {
             this.field_h.a(2, -101);
           } else {
-            this.field_h.a(wd.field_k, -65);
+            this.field_h.a(RasterBuffer.field_k, -65);
           }
         }
         if (dg.field_e == 98) {
           if (2 != this.field_h.field_b) {
             this.field_h.a(2, -108);
           } else {
-            this.field_h.a(wd.field_k, -95);
+            this.field_h.a(RasterBuffer.field_k, -95);
           }
         }
         this.field_h.a((byte) -108);
@@ -266,7 +266,7 @@ final class cl {
             if (!cd.field_d.field_c) {
               stackIn_29_1 = we.field_n;
             } else {
-              stackIn_29_1 = qf.field_f[qe.field_g];
+              stackIn_29_1 = qf.field_f[GameKeyHandler.field_g];
             }
             var6 = ((StringBuilder) (Object) stackIn_28_0).append(stackIn_29_1).toString();
             break;
@@ -294,7 +294,7 @@ final class cl {
                 var6 = lf.field_c;
                 break;
               }
-              var6 = bh.field_o;
+              var6 = PacketBuffer.field_o;
               break;
             }
             var6 = cd.field_c[7];
@@ -331,14 +331,14 @@ final class cl {
           return;
         }
         var11 = var11 + om.field_Rb;
-        ra.b(var11, -1 + (var10 + var12 / 2), 121, 2, var15);
+        SoftwareRasterizer.b(var11, -1 + (var10 + var12 / 2), 121, 2, var15);
         if (var5 != 14) {
           stackIn_56_0 = 120 * jj.field_a / 256;
         } else {
-          stackIn_56_0 = 120 * wb.field_c / 256;
+          stackIn_56_0 = 120 * DelegatingCanvas.field_c / 256;
         }
         var16 = stackIn_56_0;
-        ra.b(var16 + (var11 - 1), var10 + 3, 3, var12 - 6, var15);
+        SoftwareRasterizer.b(var16 + (var11 - 1), var10 + 3, 3, var12 - 6, var15);
         return;
     }
 
@@ -605,8 +605,8 @@ final class cl {
         if (3 == th.field_l) {
           var4 = var4 + go.field_g.field_N;
         }
-        L2: {
-          go.field_g.a(md.field_w, 310, var5, var3, -1);
+        regionExit1: {
+          go.field_g.a(SpriteState.field_w, 310, var5, var3, -1);
           go.field_g.a(sj.field_j, 368, var4, var3, -1);
           go.field_g.a(ib.field_d, 420, var5, var3, -1);
           go.field_g.a(e.field_a, 458, var4, var3, -1);
@@ -615,8 +615,8 @@ final class cl {
           if (cm.field_x.field_u) {
             if (cm.field_x.field_p != null) {
               var6 = lo.field_c;
-              var7 = cm.field_x.field_p[wd.field_k];
-              var8 = cm.field_x.field_y[wd.field_k];
+              var7 = cm.field_x.field_p[RasterBuffer.field_k];
+              var8 = cm.field_x.field_y[RasterBuffer.field_k];
               var9 = 0;
               for (var10 = 0; var10 < 8; var10++) {
                 if (null != var7[var10]) {
@@ -636,7 +636,7 @@ final class cl {
                 var3 = 8437759;
                 this.a(-1, var4, cm.field_x.field_t, ph.field_w, cm.field_x.field_s, var3, cm.field_x.field_B, false, cm.field_x.field_o);
               }
-              break L2;
+              break regionExit1;
             }
             var6 = wk.field_l;
           } else {
@@ -650,7 +650,7 @@ final class cl {
 
     private final void a(int param0, byte param1) {
         ef.field_k.d(110, 0, 192);
-        bg.field_c.a(163, 20, 315, 120);
+        GameApplet.field_c.a(163, 20, 315, 120);
         int var3 = -94 % ((-17 - param1) / 53);
     }
 
@@ -663,16 +663,16 @@ final class cl {
         return hg.field_g[this.field_c];
     }
 
-    final static void a(mc param0, int param1, mc param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
-          if (param2.field_e != null) {
+          if (param2.previous != null) {
             param2.b(false);
           }
-          param2.field_j = param0;
+          param2.next = param0;
           int var3_int = -58 / ((-38 - param1) / 33);
-          param2.field_e = param0.field_e;
-          param2.field_e.field_j = param2;
-          param2.field_j.field_e = param2;
+          param2.previous = param0.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "cl.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -708,7 +708,7 @@ final class cl {
         int var3;
         int var4;
         var4 = TetraLink.field_J;
-        if (!jo.field_e &&
+        if (!DualLinkDeque.field_e &&
           !fj.field_o) {
           while (nj.b((byte) 28)) {
             if (13 != dg.field_e) {
@@ -760,7 +760,7 @@ final class cl {
           }
         }
         if (param0 != 0) {
-          field_d = (oh) null;
+          field_d = (Sprite) null;
         }
     }
 
@@ -845,12 +845,12 @@ final class cl {
     }
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        oh var7;
+        Sprite var7;
         int var8;
-        oh var9;
-        oh stackIn_4_0 = null;
-        oh stackIn_10_0 = null;
-        oh var10;
+        Sprite var9;
+        Sprite stackIn_4_0 = null;
+        Sprite stackIn_10_0 = null;
+        Sprite var10;
         var8 = TetraLink.field_J;
         if (param3 == 32) {
           if ((hj.field_a & 1 << param1) != 0) {
@@ -892,8 +892,8 @@ final class cl {
         field_d = null;
         field_a = null;
         if (param0 > -95) {
-          mc var2 = (mc) null;
-          cl.a((mc) null, 47, (mc) null);
+          IntrusiveNode var2 = (IntrusiveNode) null;
+          cl.a((IntrusiveNode) null, 47, (IntrusiveNode) null);
         }
         field_f = null;
     }
@@ -906,7 +906,7 @@ final class cl {
         int var11;
         var12 = TetraLink.field_J;
         var9 = -105 % ((param5 - 52) / 32);
-        if (!jo.field_e &&
+        if (!DualLinkDeque.field_e &&
           !fj.field_o) {
           if (8 == this.field_c) {
             if (param0) {
@@ -982,14 +982,14 @@ final class cl {
         int var7;
         int var8;
         var8 = TetraLink.field_J;
-        ra.c(100, 0, 10, 400, 0);
-        ra.c(530, 0, 10, 400, 0);
+        SoftwareRasterizer.c(100, 0, 10, 400, 0);
+        SoftwareRasterizer.c(530, 0, 10, 400, 0);
         stackIn_2_0 = 110;
         stackIn_2_1 = 0;
         stackIn_2_2 = 420;
         stackIn_2_3 = 400;
         stackIn_3_4 = (1 == param2) ? 127 : 394896;
-        ra.c(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
+        SoftwareRasterizer.c(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
         if (this.field_c == 10) {
           this.a(param2, (byte) -111);
           return;
@@ -997,7 +997,7 @@ final class cl {
         if (param0) {
           this.a(67, 7, true);
         }
-        bg.field_c.a(163, 20, 315, 120);
+        GameApplet.field_c.a(163, 20, 315, 120);
         var4 = mk.field_b.b(co.field_p[this.field_c]);
         stackIn_9_0 = -20;
         if (hg.field_b[this.field_c] < 120) {
@@ -1011,7 +1011,7 @@ final class cl {
         stackIn_12_2 = 6 + var4;
         stackIn_12_3 = -li.field_l[6].field_F - li.field_l[0].field_F + (mk.field_b.field_N + 16);
         stackIn_13_4 = (param2 != 1) ? 394896 : 127;
-        ra.c(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
+        SoftwareRasterizer.c(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
         qj.a(li.field_l[2].field_t + li.field_l[0].field_t + var4, (byte) -36, li.field_l, -var4 + (468 - li.field_l[0].field_t), mk.field_b.field_N + 10, var6 - mk.field_b.field_N);
         mk.field_b.b(co.field_p[this.field_c], -var4 + 470, 2 + var6, 16777215, -1);
         for (var5 = 0; this.field_h.field_g > var5; var5++) {
@@ -1040,7 +1040,7 @@ final class cl {
                 stackIn_31_2 = 376;
                 stackIn_31_3 = 6 + 24 * var7;
                 stackIn_32_4 = (param2 == 1) ? 127 : 394896;
-                ra.c(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4);
+                SoftwareRasterizer.c(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4);
                 qj.a(li.field_l[2].field_t + 370 + li.field_l[0].field_t, (byte) -36, li.field_l, 135 - li.field_l[0].field_t, var7 * 24 - (-li.field_l[0].field_F - li.field_l[6].field_F), 125 - li.field_l[0].field_F);
                 if (param2 != 2) {
                   mk.field_b.a(n.field_R, 135, 125, 370, 240, 8437759, -1, 1, 0, 24);
@@ -1074,7 +1074,7 @@ final class cl {
     }
 
     static {
-        field_d = new oh(540, 140);
+        field_d = new Sprite(540, 140);
         field_a = "Resign";
         field_e = true;
     }

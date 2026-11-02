@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends gb {
+final class qa extends DualLinkNode {
     static int field_A;
     static boolean field_v;
     static int[] field_x;
@@ -28,7 +28,7 @@ final class qa extends gb {
         return wh.field_k;
     }
 
-    private final void a(bh param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         char[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
@@ -146,11 +146,11 @@ final class qa extends gb {
         }
     }
 
-    final static oh[] a(String param0, int param1, ah param2, String param3) {
+    final static Sprite[] a(String param0, int param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        oh[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -213,7 +213,7 @@ final class qa extends gb {
         int var2Lifetime1;
         if (this.field_t != null) {
           for (var2 = 0; this.field_t.length > var2; var2++) {
-            this.field_t[var2] = mc.a(this.field_t[var2], 32768);
+            this.field_t[var2] = IntrusiveNode.a(this.field_t[var2], 32768);
           }
         }
         if (param0 != 32768) {
@@ -223,13 +223,13 @@ final class qa extends gb {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < this.field_z.length) {
-            this.field_z[var4] = mc.a(this.field_z[var4], 32768);
+            this.field_z[var4] = IntrusiveNode.a(this.field_z[var4], 32768);
             var4++;
           }
         }
     }
 
-    final void a(bh param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;

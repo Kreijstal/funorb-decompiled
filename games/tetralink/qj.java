@@ -20,11 +20,11 @@ final class qj {
           if (null != sk.field_f) {
             try {
               sk.field_f.a(0L, 0);
-              sk.field_f.a(param0 ^ -19814, kb.field_q.field_u, kb.field_q.field_t, 24);
+              sk.field_f.a(param0 ^ -19814, kb.field_q.payload, kb.field_q.position, 24);
             } catch (Exception exception) {
             }
           }
-          kb.field_q.field_t = kb.field_q.field_t + 24;
+          kb.field_q.position = kb.field_q.position + 24;
           if (param0 != 115) {
             field_d = (String) null;
           }
@@ -44,8 +44,8 @@ final class qj {
         return stackIn_7_0;
     }
 
-    final static oh[] a(int param0, int param1) {
-        oh[] var2 = new oh[9];
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var2 = new Sprite[9];
         var2[4] = ce.a(param1, 64, oj.a(param0, param0));
         return var2;
     }
@@ -57,7 +57,7 @@ final class qj {
         return ph.field_t.field_Pb;
     }
 
-    final static void a(int param0, byte param1, oh[] param2, int param3, int param4, int param5) {
+    final static void a(int param0, byte param1, Sprite[] param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -136,73 +136,73 @@ final class qj {
             }
             var18 = var14;
             var19 = var15;
-            ra.a(pg.field_i);
+            SoftwareRasterizer.a(pg.field_i);
             if (var18 > var19) {
               var19 = param5 + var8 * param4 / (var9 + var8);
               var18 = param5 + var8 * param4 / (var9 + var8);
             }
             if (param2[0] != null) {
-              ra.b(param3, param5, var16, var18);
+              SoftwareRasterizer.b(param3, param5, var16, var18);
               param2[0].c(param3, param5);
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (param2[2] != null) {
-              ra.b(var17, param5, var10, var18);
+              SoftwareRasterizer.b(var17, param5, var10, var18);
               param2[2].c(var13, param5);
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (null != param2[6]) {
-              ra.b(param3, var19, var16, var11);
+              SoftwareRasterizer.b(param3, var19, var16, var11);
               param2[6].c(param3, var15);
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (param2[8] != null) {
-              ra.b(var17, var19, var10, var11);
+              SoftwareRasterizer.b(var17, var19, var10, var11);
               param2[8].c(var13, var15);
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (null != param2[1] &&
               0 != param2[1].field_t) {
-              ra.b(var16, param5, var17, var18);
+              SoftwareRasterizer.b(var16, param5, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_t) {
                 param2[1].c(var20, param5);
               }
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (null != param2[7] &&
               param2[7].field_t != 0) {
-              ra.b(var16, var19, var17, var11);
+              SoftwareRasterizer.b(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param2[7].field_t) {
                 param2[7].c(var20Lifetime1, var15);
               }
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (param2[3] != null &&
               param2[3].field_F != 0) {
-              ra.b(param3, var18, var16, var19);
+              SoftwareRasterizer.b(param3, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param2[3].field_F) {
                 param2[3].c(param3, var20Lifetime2);
               }
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (param2[5] != null &&
               param2[5].field_F != 0) {
-              ra.b(var17, var18, var10, var19);
+              SoftwareRasterizer.b(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param2[5].field_F) {
                 param2[5].c(var13, var20Lifetime3);
               }
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
             }
             if (param2[4] != null &&
               0 != param2[4].field_t &&
               param2[4].field_F != 0) {
-              ra.b(var16, var18, var17, var19);
+              SoftwareRasterizer.b(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param2[4].field_F) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param2[4].field_t) {
                   param2[4].c(var21, var20Lifetime4);
                 }
               }
-              ra.b(pg.field_i);
+              SoftwareRasterizer.b(pg.field_i);
               return;
             }
             return;

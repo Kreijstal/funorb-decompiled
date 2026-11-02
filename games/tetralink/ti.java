@@ -7,14 +7,14 @@ final class ti {
     static int[][] field_f;
     static int[] field_d;
     static int[] field_c;
-    static wf[] field_a;
+    static PcmSample[] field_a;
     static double[] field_g;
 
-    final static void a(ah param0, byte param1, kh[] param2, int[] param3, ah param4) {
-        oh[] dupTemp$0 = null;
-        oh[] dupTemp$1 = null;
-        oh[] dupTemp$2 = null;
-        oh[] dupTemp$3 = null;
+    final static void a(Archive param0, byte param1, kh[] param2, int[] param3, Archive param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         kh[] var5 = null;
         kh[] var6 = null;
         int var7_int = 0;
@@ -37,12 +37,12 @@ final class ti {
         hl var9 = null;
         hl var10 = null;
         hl var11 = null;
-        oh[] var12 = null;
-        oh[] var13 = null;
-        oh[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         hl var15 = null;
-        oh[] var16 = null;
-        oh[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         byte[] var19 = null;
         int[] var21 = null;
         int[] var22 = null;
@@ -82,7 +82,7 @@ final class ti {
             }
           }
           wc.field_J = 2;
-          qe.field_d = 15;
+          GameKeyHandler.field_d = 15;
           ai.field_d = 11;
           fn.field_Q = 4;
           eh.field_w = 2;
@@ -94,14 +94,14 @@ final class ti {
           uf.field_g.a(var5, var22);
           var8 = new hl(0L, (hl) null);
           var8.field_N = 16777215;
-          var8.field_Ib = (jb) ((Object) var7);
-          var8.field_Q = qe.field_d;
+          var8.field_Ib = (BitmapFont) ((Object) var7);
+          var8.field_Q = GameKeyHandler.field_d;
           var8.field_J = 1;
           var9 = var8;
           var9.field_xb = 1;
           var10 = new hl(0L, (hl) null);
-          var10.field_Q = qe.field_d;
-          var10.field_Ib = (jb) ((Object) rn.field_e);
+          var10.field_Q = GameKeyHandler.field_d;
+          var10.field_Ib = (BitmapFont) ((Object) rn.field_e);
           var10.field_N = 16777215;
           var10.field_J = 1;
           var11 = var10;
@@ -111,7 +111,7 @@ final class ti {
           u.field_b = new hl(0L, (hl) null);
           u.field_b.field_Eb = el.a(false, false, 8421504, false, 120, 4210752);
           ek.field_o = new hl(0L, (hl) null);
-          ek.field_o.field_Eb = ah.a(1, 3, 6316128, 16, 6316128, 114);
+          ek.field_o.field_Eb = Archive.a(1, 3, 6316128, 16, 6316128, 114);
           um.field_n = new hl(0L, (hl) null);
           um.field_n.field_Eb = kf.a(true, bf.a((byte) -121, param4, "lobby", "popup"));
           var12 = kf.a(true, bf.a((byte) -102, param4, "lobby", "popup_mouseover"));
@@ -136,8 +136,8 @@ final class ti {
           bk.field_i = new hl(0L, (hl) null);
           bk.field_i.field_N = 13421772;
           bk.field_i.field_J = 1;
-          bk.field_i.field_Q = qe.field_d;
-          bk.field_i.field_Ib = (jb) ((Object) rn.field_e);
+          bk.field_i.field_Q = GameKeyHandler.field_d;
+          bk.field_i.field_Ib = (BitmapFont) ((Object) rn.field_e);
           ek.field_n = new hl(0L, bk.field_i);
           ek.field_n.field_N = 16764006;
           ek.field_n.field_ib = 16777215;
@@ -146,8 +146,8 @@ final class ti {
           ek.field_n.field_nb = 16777215;
           var15 = new hl(0L, ek.field_n);
           var15.field_N = 16777215;
-          var15.field_Ib = (jb) ((Object) var7);
-          var15.field_Q = qe.field_d;
+          var15.field_Ib = (BitmapFont) ((Object) var7);
+          var15.field_Q = GameKeyHandler.field_d;
           tn.field_b = new hl(0L, bk.field_i);
           tn.field_b.field_Eb = el.a(false, false, 2236962, false, 16, 2236962);
           tn.field_b.field_V = 2;
@@ -159,7 +159,7 @@ final class ti {
           sk.field_h = new hl(0L, sd.field_rb);
           sk.field_h.a(ek.field_n, -2147483648);
           var16 = bf.a((byte) -115, param4, "lobby", "button_mouseover");
-          TetraLink.field_P = new aa(um.field_n, var12, bk.field_i, ek.field_n, 3, 2, eh.field_w, 3, qe.field_d);
+          TetraLink.field_P = new aa(um.field_n, var12, bk.field_i, ek.field_n, 3, 2, eh.field_w, 3, GameKeyHandler.field_d);
           o.field_r = new hl(0L, ek.field_n);
           o.field_r.field_kb = var16;
           o.field_r.field_Eb = var13;
@@ -177,9 +177,9 @@ final class ti {
           te.field_O.field_kb = kf.a(true, bf.a((byte) -112, param4, "lobby", "tab_mouseover"));
           te.field_O.field_Gb = var14;
           rc.field_S = new hl(0L, (hl) null);
-          rc.field_S.field_Eb = ah.a(-1, 3, 1127256, 16, 1856141, 206);
+          rc.field_S.field_Eb = Archive.a(-1, 3, 1127256, 16, 1856141, 206);
           il.field_Q = new hl(0L, (hl) null);
-          il.field_Q.field_Eb = ah.a(-1, 3, 6052956, 16, 11579568, 290);
+          il.field_Q.field_Eb = Archive.a(-1, 3, 6052956, 16, 11579568, 290);
           rj.field_l = new hl(0L, var15);
           rj.field_l.field_Jb = 1;
           rj.field_l.field_D = 1;
@@ -195,7 +195,7 @@ final class ti {
           rb.field_Kb.field_E = 1;
           eo.field_c = new hl(0L, rb.field_Kb);
           wh.field_l = new hl(0L, rb.field_Kb);
-          rk.field_d = new hl(0L, rj.field_l);
+          SecondaryNodeDeque.field_d = new hl(0L, rj.field_l);
           t.field_o = new hl(0L, rb.field_Kb);
           rh.field_N = new hl(0L, rb.field_Kb);
           ia.field_L = new hl(0L, rb.field_Kb);
@@ -218,10 +218,10 @@ final class ti {
           wh.field_l.field_Eb = kf.a(true, bf.a((byte) -71, param4, "lobby", "redbutton"));
           wh.field_l.field_kb = kf.a(true, bf.a((byte) -73, param4, "lobby", "redbutton_mouseover"));
           wh.field_l.field_pb = kf.a(true, bf.a((byte) -91, param4, "lobby", "redbutton_mouseheld"));
-          rk.field_d.field_Eb = kf.a(true, bf.a((byte) -110, param4, "lobby", "backbutton"));
-          rk.field_d.field_kb = kf.a(true, bf.a((byte) -99, param4, "lobby", "backbutton_mouseover"));
-          rk.field_d.field_pb = kf.a(true, bf.a((byte) -120, param4, "lobby", "backbutton_mouseheld"));
-          rk.field_d.field_H = kf.a(true, bf.a((byte) -77, param4, "lobby", "backbutton_disabled"));
+          SecondaryNodeDeque.field_d.field_Eb = kf.a(true, bf.a((byte) -110, param4, "lobby", "backbutton"));
+          SecondaryNodeDeque.field_d.field_kb = kf.a(true, bf.a((byte) -99, param4, "lobby", "backbutton_mouseover"));
+          SecondaryNodeDeque.field_d.field_pb = kf.a(true, bf.a((byte) -120, param4, "lobby", "backbutton_mouseheld"));
+          SecondaryNodeDeque.field_d.field_H = kf.a(true, bf.a((byte) -77, param4, "lobby", "backbutton_disabled"));
           ia.field_L.field_Eb = kf.a(true, bf.a((byte) -88, param4, "lobby", "gameoptionbutton"));
           ia.field_L.field_kb = kf.a(true, bf.a((byte) -119, param4, "lobby", "gameoptionbutton_mouseover"));
           dupTemp$1 = kf.a(true, bf.a((byte) -84, param4, "lobby", "gameoptionbutton_active"));
@@ -380,7 +380,7 @@ final class ti {
 
     final static void a(int param0, int param1, int param2, ve param3) {
         try {
-          fa.field_d = param2;
+          SoundEffectLibrary.field_d = param2;
           qm.field_b = param3;
           if (param1 != 1) {
             ve var5 = (ve) null;

@@ -5,7 +5,7 @@ final class mm extends um {
     static om field_y;
     static int field_w;
     static sd field_u;
-    static je field_s;
+    static IntrusiveDeque field_s;
     private nn field_r;
     static String field_q;
     private nn field_t;
@@ -179,7 +179,7 @@ final class mm extends um {
             stackIn_9_0 = ic.field_d;
             return stackIn_9_0;
           }
-          if (ha.a(var5, -78)) {
+          if (MouseInputHandler.a(var5, -78)) {
             stackIn_13_0 = ac.field_d;
             return stackIn_13_0;
           }

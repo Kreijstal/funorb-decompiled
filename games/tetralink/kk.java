@@ -29,7 +29,7 @@ final class kk extends ae {
         return this.field_S;
     }
 
-    final static oh[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 >= -9) {
           field_R = (String) null;
         }
@@ -52,12 +52,12 @@ final class kk extends ae {
           return;
         }
         if (hi.field_a) {
-          ra.e(ra.field_j, ra.field_i, ra.field_l - ra.field_j, -ra.field_i + ra.field_g);
+          SoftwareRasterizer.e(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l - SoftwareRasterizer.field_j, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_g);
           ck.field_bb.a(false, param0 + 257);
         }
     }
 
-    final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;

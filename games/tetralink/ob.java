@@ -768,7 +768,7 @@ final class ob extends fc {
           field_X = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_ob; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_j[var8Lifetime1] != -2) {
               var9 = this.field_kb[var8Lifetime1];
               var10 = this.field_A[var8Lifetime1];
@@ -815,7 +815,7 @@ final class ob extends fc {
                       var28 = field_H[var27];
                       if (var28 == 64) {
                         if (field_X == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_X;
                         field_X = field_X + 1;
@@ -830,7 +830,7 @@ final class ob extends fc {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(bl.field_Mb + vn.field_a, li.field_b + vn.field_f, field_G[var9], field_G[var10], field_G[var11], var12, var13, var14_int)) {
@@ -857,7 +857,7 @@ final class ob extends fc {
                     var16Lifetime2 = field_H[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_X == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_X;
                       field_X = field_X + 1;

@@ -4,14 +4,14 @@
 import java.io.*;
 import java.util.*;
 
-abstract class en extends na implements nf {
+abstract class en extends UiWidget implements nf {
     static wh field_L;
-    na field_J;
+    UiWidget field_J;
     static String field_I;
     static int field_K;
     static String field_M;
 
-    void a(na param0, int param1, int param2, boolean param3) {
+    void a(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -44,16 +44,16 @@ abstract class en extends na implements nf {
         return null != this.field_J ? this.field_J.d(-127) : 0;
     }
 
-    final static wd a(int param0, java.awt.Component param1, int param2, byte param3) {
+    final static RasterBuffer a(int param0, java.awt.Component param1, int param2, byte param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          wd var5 = null;
-          wm var5_ref = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
           java.awt.Component var6 = null;
-          wd stackIn_3_0 = null;
-          wm stackIn_5_0 = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -65,17 +65,17 @@ abstract class en extends na implements nf {
                 var6 = (java.awt.Component) null;
                 en.a(-5, (java.awt.Component) null, 72, (byte) -86);
               }
-              var5 = (wd) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param1, 42, param2, param0);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new wm();
-              ((wd) ((Object) var5_ref)).a(param1, param3 ^ -77, param2, param0);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param1, param3 ^ -77, param2, param0);
               stackIn_5_0 = var5_ref;
-              return (wd) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -106,7 +106,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
+    void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -140,7 +140,7 @@ abstract class en extends na implements nf {
 
     final static boolean b(int param0, int param1) {
         try {
-          if (param1 <= kb.field_q.field_t) {
+          if (param1 <= kb.field_q.position) {
             return true;
           }
           if (wa.field_e == null) {
@@ -151,16 +151,16 @@ abstract class en extends na implements nf {
           }
           int var2_int = wa.field_e.f(0);
           if (var2_int > 0) {
-            if (var2_int > -kb.field_q.field_t + param1) {
-              var2_int = param1 - kb.field_q.field_t;
+            if (var2_int > -kb.field_q.position + param1) {
+              var2_int = param1 - kb.field_q.position;
             }
-            wa.field_e.a(kb.field_q.field_t, var2_int, kb.field_q.field_u, 0);
+            wa.field_e.a(kb.field_q.position, var2_int, kb.field_q.payload, 0);
             sj.field_k = k.a(0);
-            kb.field_q.field_t = kb.field_q.field_t + var2_int;
-            if (param1 > kb.field_q.field_t) {
+            kb.field_q.position = kb.field_q.position + var2_int;
+            if (param1 > kb.field_q.position) {
               return false;
             }
-            kb.field_q.field_t = 0;
+            kb.field_q.position = 0;
             return true;
           }
           try {
@@ -284,7 +284,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    final boolean a(na param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -311,7 +311,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -393,7 +393,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    final boolean a(int param0, na param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -420,8 +420,8 @@ abstract class en extends na implements nf {
         }
     }
 
-    na a(int param0) {
-        na var2 = this.field_J;
+    UiWidget a(int param0) {
+        UiWidget var2 = this.field_J;
         if (param0 != 9) {
           this.a(125);
         }
@@ -434,7 +434,7 @@ abstract class en extends na implements nf {
         return null;
     }
 
-    private final boolean b(na param0, int param1) {
+    private final boolean b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -461,7 +461,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    private final boolean c(na param0, int param1) {
+    private final boolean c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -470,7 +470,7 @@ abstract class en extends na implements nf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.field_J = (na) null;
+            this.field_J = (UiWidget) null;
           }
           stackIn_7_0 = (null != this.field_J) && (!this.field_J.c(3)) && (this.field_J.a(param0, -384169950));
           return stackIn_7_0;
@@ -488,7 +488,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    final static kh a(int param0, byte param1, ah param2, int param3) {
+    final static kh a(int param0, byte param1, Archive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         kh stackIn_6_0 = null;
@@ -523,7 +523,7 @@ abstract class en extends na implements nf {
     void a(int param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
           this.field_H != null) {
-          this.field_H.a((na) (this), param1, param2, true, true);
+          this.field_H.a((UiWidget) (this), param1, param2, true, true);
         }
         if (this.field_J != null) {
           this.field_J.a(0, param1 + this.field_t, this.field_w + param2, param3);
@@ -533,7 +533,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;

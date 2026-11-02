@@ -15,11 +15,11 @@ class al implements kg, jh {
     int field_n;
     int field_d;
     int field_g;
-    jb field_b;
+    BitmapFont field_b;
     int field_h;
     int field_c;
 
-    public final int b(na param0, int param1) {
+    public final int b(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -46,14 +46,14 @@ class al implements kg, jh {
     }
 
     final static void a(int param0, boolean param1, byte[] param2, int param3, boolean param4, int param5) {
-        bc var10 = null;
+        BitPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;
         try {
           var10 = nd.field_Lb;
           var10.f(param3, (byte) -92);
-          var10.field_t = var10.field_t + 1;
-          var7 = var10.field_t;
+          var10.position = var10.position + 1;
+          var7 = var10.position;
           var10.a(4, !param4 ? true : false);
           var10.a(param5, false);
           var8 = param0;
@@ -66,20 +66,20 @@ class al implements kg, jh {
             al.a((String) null, (byte) -79);
           }
           var10.a(0, 128, param2, param2.length);
-          var10.b(-var7 + var10.field_t, -2);
+          var10.b(-var7 + var10.position, -2);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "al.FA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    public void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         if (null == this.field_b) {
           return;
         }
         try {
           if (!param3) {
-            na var7 = (na) null;
-            this.a(-34, (na) null);
+            UiWidget var7 = (UiWidget) null;
+            this.a(-34, (UiWidget) null);
           }
           this.a(param1, param2, param0, (byte) -47);
         } catch (RuntimeException runtimeException) {
@@ -87,7 +87,7 @@ class al implements kg, jh {
         }
     }
 
-    private final void a(int param0, na param1) {
+    private final void a(int param0, UiWidget param1) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -159,7 +159,7 @@ class al implements kg, jh {
         }
     }
 
-    public final int a(int param0, int param1, na param2) {
+    public final int a(int param0, int param1, UiWidget param2) {
         RuntimeException var4 = null;
         al var5 = null;
         int stackIn_3_0 = 0;
@@ -206,7 +206,7 @@ class al implements kg, jh {
         return var2;
     }
 
-    public final int a(int param0, int param1, int param2, int param3, na param4, byte param5) {
+    public final int a(int param0, int param1, int param2, int param3, UiWidget param4, byte param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -234,7 +234,7 @@ class al implements kg, jh {
         }
     }
 
-    public final hi a(na param0, boolean param1) {
+    public final hi a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         hi stackIn_8_0 = null;
         hi stackIn_10_0 = null;
@@ -271,7 +271,7 @@ class al implements kg, jh {
         }
     }
 
-    public final void a(na param0, int param1, int param2, int param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, int param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -280,7 +280,7 @@ class al implements kg, jh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        na var13 = null;
+        UiWidget var13 = null;
         hi var14 = null;
         hi var15 = null;
         int stackIn_6_0 = 0;
@@ -293,8 +293,8 @@ class al implements kg, jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 0) {
-            var13 = (na) null;
-            discarded$1 = this.d((na) null, -88);
+            var13 = (UiWidget) null;
+            discarded$1 = this.d((UiWidget) null, -88);
           }
           if (!param0.c(3)) {
             return;
@@ -315,7 +315,7 @@ class al implements kg, jh {
             stackIn_7_3 = var8.field_a;
           }
           var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
-          kl.a(param0.field_F + (param0.field_t + param4), param0.field_u + param1 + param0.field_w, param1 + param0.field_w, (byte) -79, param0.field_t + param4);
+          FullscreenFocusCanvas.a(param0.field_F + (param0.field_t + param4), param0.field_u + param1 + param0.field_w, param1 + param0.field_w, (byte) -79, param0.field_t + param4);
           dh.field_q.a(var12, var10, param3 - 64, var11, this.field_o, var10);
           dh.a(-581);
           return;
@@ -333,7 +333,7 @@ class al implements kg, jh {
         }
     }
 
-    public final int a(na param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -386,7 +386,7 @@ class al implements kg, jh {
         }
     }
 
-    private final void a(int param0, int param1, na param2, byte param3) {
+    private final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           this.a(param2, param0, 0, (byte) 45, this.field_m, this.field_a, 0, param1);
           if (param3 != -47) {
@@ -397,7 +397,7 @@ class al implements kg, jh {
         }
     }
 
-    private final int a(int param0, na param1, byte param2, int param3) {
+    private final int a(int param0, UiWidget param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -423,9 +423,9 @@ class al implements kg, jh {
         }
     }
 
-    public final int a(na param0, int param1, boolean param2) {
+    public final int a(UiWidget param0, int param1, boolean param2) {
         RuntimeException var4 = null;
-        na var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -433,8 +433,8 @@ class al implements kg, jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            var5 = (na) null;
-            this.b((na) null, -6);
+            var5 = (UiWidget) null;
+            this.b((UiWidget) null, -6);
           }
           stackIn_3_0 = this.a(param1, param0, (byte) 120, 0);
           return stackIn_3_0;
@@ -464,7 +464,7 @@ class al implements kg, jh {
         }
     }
 
-    private final void a(na param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+    private final void a(UiWidget param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -480,7 +480,7 @@ class al implements kg, jh {
         var13 = TetraLink.field_J;
         try {
           boolean decompiledFrameRemainder0 = true;
-          kl.a(param0.field_F + param0.field_t + param1, param7 + param0.field_w + param0.field_u, param0.field_w + param7, (byte) -79, param0.field_t + param1);
+          FullscreenFocusCanvas.a(param0.field_F + param0.field_t + param1, param7 + param0.field_w + param0.field_u, param0.field_w + param7, (byte) -79, param0.field_t + param1);
           var9_int = this.b(param0, 75);
           var10 = this.d(param0, -19);
           if (this.field_p) {
@@ -535,7 +535,7 @@ class al implements kg, jh {
         }
     }
 
-    String c(na param0, int param1) {
+    String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         al var4 = null;
         String stackIn_3_0 = null;
@@ -564,7 +564,7 @@ class al implements kg, jh {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, na param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -581,7 +581,7 @@ class al implements kg, jh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        na var17 = null;
+        UiWidget var17 = null;
         hi var18 = null;
         hi var19 = null;
         var16 = TetraLink.field_J;
@@ -590,8 +590,8 @@ class al implements kg, jh {
             return;
           }
           if (param1 != 18985) {
-            var17 = (na) null;
-            this.a(-123, (na) null);
+            var17 = (UiWidget) null;
+            this.a(-123, (UiWidget) null);
           }
           if (!param5.c(param1 - 18982)) {
             return;
@@ -607,7 +607,7 @@ class al implements kg, jh {
           }
           var10 = var19.a(var8, 107);
           var11 = var19.a(var9, 113);
-          kl.a(param3 - (-param5.field_t - param5.field_F), param5.field_u + param5.field_w + param4, param5.field_w + param4, (byte) -79, param5.field_t + param3);
+          FullscreenFocusCanvas.a(param3 - (-param5.field_t - param5.field_F), param5.field_u + param5.field_w + param4, param5.field_w + param4, (byte) -79, param5.field_t + param3);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var18.field_c[var12];
             if (var10 == var12) {
@@ -644,9 +644,9 @@ class al implements kg, jh {
         }
     }
 
-    private final int a(int param0, na param1, int param2, int param3) {
+    private final int a(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
-        na var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -654,8 +654,8 @@ class al implements kg, jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var6 = (na) null;
-            this.a((na) null, 74, false);
+            var6 = (UiWidget) null;
+            this.a((UiWidget) null, 74, false);
           }
           stackIn_3_0 = param1.field_t + (param2 + this.field_f) + (param1.field_E + param3);
           return stackIn_3_0;
@@ -680,7 +680,7 @@ class al implements kg, jh {
         int var1 = -5 % ((-21 - param0) / 62);
     }
 
-    private final int d(na param0, int param1) {
+    private final int d(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -706,9 +706,9 @@ class al implements kg, jh {
         }
     }
 
-    public final int a(na param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        na var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -716,8 +716,8 @@ class al implements kg, jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 65) {
-            var4 = (na) null;
-            this.a(-16, 92, (na) null);
+            var4 = (UiWidget) null;
+            this.a(-16, 92, (UiWidget) null);
           }
           this.a(param0, false);
           stackIn_3_0 = param0.field_D.a(true) + (this.field_j + this.field_h);
@@ -739,11 +739,11 @@ class al implements kg, jh {
     protected al() {
     }
 
-    al(jb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    al(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    al(jb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    al(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_g = param2;
           this.field_n = param11;

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ll extends gb {
-    static oh[] field_u;
+abstract class ll extends DualLinkNode {
+    static Sprite[] field_u;
     boolean field_D;
     static hl field_A;
     static uf field_C;
@@ -13,11 +13,11 @@ abstract class ll extends gb {
     static String field_E;
     static String field_w;
     static String field_z;
-    static ah field_x;
+    static Archive field_x;
 
     final static int a(int param0, byte param1, int param2) {
         if (param1 != -122) {
-          field_u = (oh[]) null;
+          field_u = (Sprite[]) null;
           if (param0 >= 2) {
             return 2;
           }
@@ -112,7 +112,7 @@ abstract class ll extends gb {
         field_A = null;
     }
 
-    final static void a(boolean param0, java.awt.Component param1, int param2, ie param3, g param4, int param5, byte param6, int param7) {
+    final static void a(boolean param0, java.awt.Component param1, int param2, PlatformTaskDispatcher param3, g param4, int param5, byte param6, int param7) {
         try {
           nk.a(param7, param0, 10);
           ch.field_q = nk.a(param3, param1, 0, param2);
@@ -122,7 +122,7 @@ abstract class ll extends gb {
           hc.field_v.a(u.field_g);
           if (param6 < 126) {
             g var9 = (g) null;
-            ll.a(true, (java.awt.Component) null, -128, (ie) null, (g) null, 27, (byte) -4, -4);
+            ll.a(true, (java.awt.Component) null, -128, (PlatformTaskDispatcher) null, (g) null, 27, (byte) -4, -4);
           }
           ic.field_b = param4;
           ic.field_b.a((byte) 96, jj.field_a);
@@ -132,7 +132,7 @@ abstract class ll extends gb {
         }
     }
 
-    final static void a(int param0, oh[] param1, jb param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, oh[] param13, int param14, int param15, jb param16, int param17, int param18, oh[] param19, int param20) {
+    final static void a(int param0, Sprite[] param1, BitmapFont param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, int param15, BitmapFont param16, int param17, int param18, Sprite[] param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -151,7 +151,7 @@ abstract class ll extends gb {
           fn.a(param12, param18, new ve(param19), param16, param2, true, param20, param9, new ve(param13), new ve(param1), param10, param6, param4, param0, param15, param17, param8, param11, param7, param3, param14);
           if (param5 != -11319) {
             var22 = (g) null;
-            ll.a(false, (java.awt.Component) null, -31, (ie) null, (g) null, -116, (byte) 29, 80);
+            ll.a(false, (java.awt.Component) null, -31, (PlatformTaskDispatcher) null, (g) null, -116, (byte) 29, 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

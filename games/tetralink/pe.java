@@ -54,8 +54,8 @@ final class pe {
             if (0 < ae.field_L) {
               fieldTemp$22 = ae.field_L - 1;
               ae.field_L = ae.field_L - 1;
-              var2_ref_byte__ = bg.field_j[fieldTemp$22];
-              bg.field_j[ae.field_L] = null;
+              var2_ref_byte__ = GameApplet.field_j[fieldTemp$22];
+              GameApplet.field_j[ae.field_L] = null;
               return var2_ref_byte__;
             }
             if (param0 == 30000 &&
@@ -66,34 +66,34 @@ final class pe {
               ng.field_q[uf.field_e] = null;
               return var2_ref_byte__;
             }
-            if (rk.field_c == null) {
+            if (SecondaryNodeDeque.field_c == null) {
               return new byte[param0];
             }
             for (var2 = 0; ed.field_V.length > var2; var2++) {
               if (param0 == ed.field_V[var2] &&
                 0 < im.field_d[var2]) {
                 dupTemp$20 = im.field_d[var2] - 1;
-                arrayValue$21 = rk.field_c[var2];
+                arrayValue$21 = SecondaryNodeDeque.field_c[var2];
                 im.field_d[var2] = dupTemp$20;
                 var3 = arrayValue$21[dupTemp$20];
-                rk.field_c[var2][im.field_d[var2]] = null;
+                SecondaryNodeDeque.field_c[var2][im.field_d[var2]] = null;
                 return var3;
               }
             }
             return new byte[param0];
           }
           if (param0 != 30000) {
-            if (rk.field_c == null) {
+            if (SecondaryNodeDeque.field_c == null) {
               return new byte[param0];
             }
             for (var2Lifetime4 = 0; ed.field_V.length > var2Lifetime4; var2Lifetime4++) {
               if (param0 == ed.field_V[var2Lifetime4] &&
                 0 < im.field_d[var2Lifetime4]) {
                 dupTemp$14 = im.field_d[var2Lifetime4] - 1;
-                arrayValue$15 = rk.field_c[var2Lifetime4];
+                arrayValue$15 = SecondaryNodeDeque.field_c[var2Lifetime4];
                 im.field_d[var2Lifetime4] = dupTemp$14;
                 var3Lifetime4 = arrayValue$15[dupTemp$14];
-                rk.field_c[var2Lifetime4][im.field_d[var2Lifetime4]] = null;
+                SecondaryNodeDeque.field_c[var2Lifetime4][im.field_d[var2Lifetime4]] = null;
                 return var3Lifetime4;
               }
             }
@@ -106,17 +106,17 @@ final class pe {
             ng.field_q[uf.field_e] = null;
             return var2_ref_byte__Lifetime5;
           }
-          if (rk.field_c == null) {
+          if (SecondaryNodeDeque.field_c == null) {
             return new byte[param0];
           }
           for (var2Lifetime5 = 0; ed.field_V.length > var2Lifetime5; var2Lifetime5++) {
             if (param0 == ed.field_V[var2Lifetime5] &&
               0 < im.field_d[var2Lifetime5]) {
               dupTemp$16 = im.field_d[var2Lifetime5] - 1;
-              arrayValue$17 = rk.field_c[var2Lifetime5];
+              arrayValue$17 = SecondaryNodeDeque.field_c[var2Lifetime5];
               im.field_d[var2Lifetime5] = dupTemp$16;
               var3Lifetime5 = arrayValue$17[dupTemp$16];
-              rk.field_c[var2Lifetime5][im.field_d[var2Lifetime5]] = null;
+              SecondaryNodeDeque.field_c[var2Lifetime5][im.field_d[var2Lifetime5]] = null;
               return var3Lifetime5;
             }
           }
@@ -131,17 +131,17 @@ final class pe {
         }
         if (5000 != param0) {
           if (param0 != 30000) {
-            if (rk.field_c == null) {
+            if (SecondaryNodeDeque.field_c == null) {
               return new byte[param0];
             }
             for (var2Lifetime1 = 0; ed.field_V.length > var2Lifetime1; var2Lifetime1++) {
               if (param0 == ed.field_V[var2Lifetime1] &&
                 0 < im.field_d[var2Lifetime1]) {
                 dupTemp$2 = im.field_d[var2Lifetime1] - 1;
-                arrayValue$3 = rk.field_c[var2Lifetime1];
+                arrayValue$3 = SecondaryNodeDeque.field_c[var2Lifetime1];
                 im.field_d[var2Lifetime1] = dupTemp$2;
                 var3Lifetime1 = arrayValue$3[dupTemp$2];
-                rk.field_c[var2Lifetime1][im.field_d[var2Lifetime1]] = null;
+                SecondaryNodeDeque.field_c[var2Lifetime1][im.field_d[var2Lifetime1]] = null;
                 return var3Lifetime1;
               }
             }
@@ -154,17 +154,17 @@ final class pe {
             ng.field_q[uf.field_e] = null;
             return var2_ref_byte__Lifetime2;
           }
-          if (rk.field_c == null) {
+          if (SecondaryNodeDeque.field_c == null) {
             return new byte[param0];
           }
           for (var2Lifetime1Lifetime1 = 0; ed.field_V.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
             if (param0 == ed.field_V[var2Lifetime1Lifetime1] &&
               0 < im.field_d[var2Lifetime1Lifetime1]) {
               dupTemp$4 = im.field_d[var2Lifetime1Lifetime1] - 1;
-              arrayValue$5 = rk.field_c[var2Lifetime1Lifetime1];
+              arrayValue$5 = SecondaryNodeDeque.field_c[var2Lifetime1Lifetime1];
               im.field_d[var2Lifetime1Lifetime1] = dupTemp$4;
               var3Lifetime1Lifetime1 = arrayValue$5[dupTemp$4];
-              rk.field_c[var2Lifetime1Lifetime1][im.field_d[var2Lifetime1Lifetime1]] = null;
+              SecondaryNodeDeque.field_c[var2Lifetime1Lifetime1][im.field_d[var2Lifetime1Lifetime1]] = null;
               return var3Lifetime1Lifetime1;
             }
           }
@@ -173,22 +173,22 @@ final class pe {
         if (0 < ae.field_L) {
           fieldTemp$12 = ae.field_L - 1;
           ae.field_L = ae.field_L - 1;
-          var2_ref_byte__Lifetime3 = bg.field_j[fieldTemp$12];
-          bg.field_j[ae.field_L] = null;
+          var2_ref_byte__Lifetime3 = GameApplet.field_j[fieldTemp$12];
+          GameApplet.field_j[ae.field_L] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param0 != 30000) {
-          if (rk.field_c == null) {
+          if (SecondaryNodeDeque.field_c == null) {
             return new byte[param0];
           }
           for (var2Lifetime2 = 0; ed.field_V.length > var2Lifetime2; var2Lifetime2++) {
             if (param0 == ed.field_V[var2Lifetime2] &&
               0 < im.field_d[var2Lifetime2]) {
               dupTemp$7 = im.field_d[var2Lifetime2] - 1;
-              arrayValue$8 = rk.field_c[var2Lifetime2];
+              arrayValue$8 = SecondaryNodeDeque.field_c[var2Lifetime2];
               im.field_d[var2Lifetime2] = dupTemp$7;
               var3Lifetime2 = arrayValue$8[dupTemp$7];
-              rk.field_c[var2Lifetime2][im.field_d[var2Lifetime2]] = null;
+              SecondaryNodeDeque.field_c[var2Lifetime2][im.field_d[var2Lifetime2]] = null;
               return var3Lifetime2;
             }
           }
@@ -201,17 +201,17 @@ final class pe {
           ng.field_q[uf.field_e] = null;
           return var2_ref_byte__Lifetime4;
         }
-        if (rk.field_c == null) {
+        if (SecondaryNodeDeque.field_c == null) {
           return new byte[param0];
         }
         for (var2Lifetime3 = 0; ed.field_V.length > var2Lifetime3; var2Lifetime3++) {
           if (param0 == ed.field_V[var2Lifetime3] &&
             0 < im.field_d[var2Lifetime3]) {
             dupTemp$9 = im.field_d[var2Lifetime3] - 1;
-            arrayValue$10 = rk.field_c[var2Lifetime3];
+            arrayValue$10 = SecondaryNodeDeque.field_c[var2Lifetime3];
             im.field_d[var2Lifetime3] = dupTemp$9;
             var3Lifetime3 = arrayValue$10[dupTemp$9];
-            rk.field_c[var2Lifetime3][im.field_d[var2Lifetime3]] = null;
+            SecondaryNodeDeque.field_c[var2Lifetime3][im.field_d[var2Lifetime3]] = null;
             return var3Lifetime3;
           }
         }

@@ -6,7 +6,7 @@ final class od extends hn {
     private nn field_W;
     static int[] field_Y;
     private nn field_V;
-    static jb field_S;
+    static BitmapFont field_S;
     static long field_T;
     static String[] field_Z;
     static int[] field_X;
@@ -63,7 +63,7 @@ final class od extends hn {
         }
     }
 
-    private final void a(na param0, byte param1, int param2, int param3, String param4) {
+    private final void a(UiWidget param0, byte param1, int param2, int param3, String param4) {
         try {
           dh.field_d.a(param4, param2 + (param0.field_t + (param0.field_F >> 1)), param3 + param0.field_w - 5, 16777215, -1);
           if (param1 != 33) {
@@ -85,7 +85,7 @@ final class od extends hn {
         return null;
     }
 
-    final static ig a(ah param0, String param1, ah param2, String param3, byte param4) {
+    final static ig a(Archive param0, String param1, Archive param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -237,9 +237,9 @@ final class od extends hn {
     final static int a(byte param0, String param1, hb param2, int param3, int param4, boolean param5, hb param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        bh stackIn_19_0 = null;
+        PacketBuffer stackIn_19_0 = null;
         String stackIn_20_1 = null;
-        bh stackIn_22_0 = null;
+        PacketBuffer stackIn_22_0 = null;
         String stackIn_23_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_48_0 = 0;
@@ -275,7 +275,7 @@ final class od extends hn {
         try {
           if (param0 != 98) {
             var14 = (String) null;
-            od.a((ah) null, (String) null, (ah) null, (String) null, (byte) -75);
+            od.a((Archive) null, (String) null, (Archive) null, (String) null, (byte) -75);
           }
           var15 = param2.a((byte) -54);
           var8 = param6.a((byte) -66);
@@ -284,40 +284,40 @@ final class od extends hn {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (bc.field_z == qi.field_p) {
+          if (BitPacketBuffer.field_z == qi.field_p) {
             ui.field_b = null;
-            nd.field_Lb.field_t = 0;
+            nd.field_Lb.position = 0;
             if (param1 == null) {
-              tb.field_j.field_t = 0;
-              tb.field_j.d(ca.field_i.nextInt(), (byte) -124);
-              tb.field_j.d(ca.field_i.nextInt(), (byte) -124);
+              tb.field_j.position = 0;
+              tb.field_j.d(SocketConnector.field_i.nextInt(), (byte) -124);
+              tb.field_j.d(SocketConnector.field_i.nextInt(), (byte) -124);
               stackIn_19_0 = tb.field_j;
               if (!param2.a(0)) {
                 stackIn_20_1 = "";
               } else {
                 stackIn_20_1 = var15;
               }
-              ((bh) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 103);
+              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 103);
               stackIn_22_0 = tb.field_j;
               if (!param6.a(0)) {
                 stackIn_23_1 = "";
               } else {
                 stackIn_23_1 = var8;
               }
-              ((bh) (Object) stackIn_22_0).a(stackIn_23_1, (byte) 103);
+              ((PacketBuffer) (Object) stackIn_22_0).a(stackIn_23_1, (byte) 103);
               nd.field_Lb.a(16, false);
-              nd.field_Lb.field_t = nd.field_Lb.field_t + 1;
-              var9 = nd.field_Lb.field_t;
+              nd.field_Lb.position = nd.field_Lb.position + 1;
+              var9 = nd.field_Lb.position;
               ae.a(ki.field_c, nd.field_Lb, tb.field_j, jg.field_c, 104);
-              nd.field_Lb.b(-var9 + nd.field_Lb.field_t, -2);
+              nd.field_Lb.b(-var9 + nd.field_Lb.position, -2);
             } else {
               var9 = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              tb.field_j.field_t = 0;
-              tb.field_j.d(ca.field_i.nextInt(), (byte) -124);
-              tb.field_j.d(ca.field_i.nextInt(), (byte) -124);
+              tb.field_j.position = 0;
+              tb.field_j.d(SocketConnector.field_i.nextInt(), (byte) -124);
+              tb.field_j.d(SocketConnector.field_i.nextInt(), (byte) -124);
               tb.field_j.a(var15, (byte) 103);
               tb.field_j.a(var8, (byte) 103);
               var17 = (CharSequence) ((Object) param1);
@@ -326,23 +326,23 @@ final class od extends hn {
               tb.field_j.a(param4, false);
               tb.field_j.a(var9, false);
               nd.field_Lb.a(18, false);
-              nd.field_Lb.field_t = nd.field_Lb.field_t + 2;
-              var10 = nd.field_Lb.field_t;
+              nd.field_Lb.position = nd.field_Lb.position + 2;
+              var10 = nd.field_Lb.position;
               var11_ref_String = dd.a(lk.q(13), (byte) 99);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               nd.field_Lb.a(var11_ref_String, 0);
               ae.a(ki.field_c, nd.field_Lb, tb.field_j, jg.field_c, 123);
-              nd.field_Lb.a((byte) 59, -var10 + nd.field_Lb.field_t);
+              nd.field_Lb.a((byte) 59, -var10 + nd.field_Lb.position);
             }
             ak.a((byte) -114, -1);
-            qi.field_p = ha.field_a;
+            qi.field_p = MouseInputHandler.field_a;
           }
-          if (ha.field_a == qi.field_p &&
+          if (MouseInputHandler.field_a == qi.field_p &&
             en.b(99, 1)) {
             var9Lifetime1 = kb.field_q.d((byte) -99);
-            kb.field_q.field_t = 0;
+            kb.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               og.field_h = new String[-100 + var9Lifetime1];
@@ -350,9 +350,9 @@ final class od extends hn {
             } else {
               if (248 == var9Lifetime1) {
                 ei.a(lk.q(13), 60);
-                tg.field_d = k.field_d;
+                IntrusiveDequeCursor.field_d = k.field_d;
                 mk.a(false);
-                vb.field_j = false;
+                ProxySocketConnector.field_j = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
@@ -362,8 +362,8 @@ final class od extends hn {
                 rl.field_d = -1;
               } else {
                 en.b(96, bb.a(param0 + 31934));
-                ui.field_b = new Boolean(bg.a(kb.field_q, (byte) 55));
-                kb.field_q.field_t = 0;
+                ui.field_b = new Boolean(GameApplet.a(kb.field_q, (byte) 55));
+                kb.field_q.position = 0;
               }
             }
           }
@@ -371,14 +371,14 @@ final class od extends hn {
             var9Lifetime2 = 2;
             if (en.b(param0 ^ 23, var9Lifetime2)) {
               var10Lifetime1 = kb.field_q.e(127);
-              kb.field_q.field_t = 0;
+              kb.field_q.position = 0;
               if (en.b(108, var10Lifetime1)) {
                 var11 = og.field_h.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   og.field_h[var12] = kb.field_q.a(true);
                 }
                 mk.a(false);
-                vb.field_j = false;
+                ProxySocketConnector.field_j = false;
                 stackIn_48_0 = 100 + var11;
                 return stackIn_48_0;
               }
@@ -392,27 +392,27 @@ final class od extends hn {
                 qi.a(var9_ref_String, -7011, lk.q(13));
               }
             } else {
-              tg.field_d = kb.field_q.g((byte) 81);
+              IntrusiveDequeCursor.field_d = kb.field_q.g((byte) 81);
             }
             mk.a(false);
-            vb.field_j = false;
+            ProxySocketConnector.field_j = false;
             stackIn_57_0 = ua.field_c;
             return stackIn_57_0;
           }
           if (wa.field_e == null) {
-            if (vb.field_j) {
+            if (ProxySocketConnector.field_j) {
               if (ib.a((byte) 127) <= 30000L) {
-                tg.field_d = ja.field_d;
+                IntrusiveDequeCursor.field_d = ja.field_d;
               } else {
-                tg.field_d = wc.field_G;
+                IntrusiveDequeCursor.field_d = wc.field_G;
               }
-              vb.field_j = false;
+              ProxySocketConnector.field_j = false;
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
             var9Lifetime3 = ko.field_t;
             ko.field_t = oi.field_m;
-            vb.field_j = true;
+            ProxySocketConnector.field_j = true;
             oi.field_m = var9Lifetime3;
           }
           stackIn_68_0 = -1;

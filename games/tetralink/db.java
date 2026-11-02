@@ -8,7 +8,7 @@ final class db {
     int field_c;
     static kd field_a;
     static int[] field_f;
-    static oh field_b;
+    static Sprite field_b;
     static kd field_e;
 
     public static void a(boolean param0) {
@@ -23,7 +23,7 @@ final class db {
         }
     }
 
-    final static void a(ah param0, jb param1, int param2) {
+    final static void a(Archive param0, BitmapFont param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -39,7 +39,7 @@ final class db {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        jb var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = TetraLink.field_J;
         try {
@@ -61,24 +61,24 @@ final class db {
             return;
           }
           s.a(-1, var4);
-          var12 = (jb) null;
-          wa.field_a = ec.a(1513239, (jb) null, 5138823, 4020342, (byte) -120, 65793, 65793, 2245737, 1127256, 65793, 8947848, 1513239, 0);
+          var12 = (BitmapFont) null;
+          wa.field_a = ec.a(1513239, (BitmapFont) null, 5138823, 4020342, (byte) -120, 65793, 65793, 2245737, 1127256, 65793, 8947848, 1513239, 0);
           ec.field_b = ec.a(0, param1, 0, 0, (byte) -120, 0, 0, 0, 0, 0, 0, 0, 16764006);
           hc.field_n = ec.a(0, param1, 0, 0, (byte) -120, 0, 0, 0, 0, 0, 0, 0, 16777215);
           if (param2 < 54) {
             field_e = (kd) null;
           }
-          var5 = ra.field_f;
-          var6 = ra.field_e;
-          var16 = ra.field_b;
-          ab.field_R = new oh(10, 14);
+          var5 = SoftwareRasterizer.field_f;
+          var6 = SoftwareRasterizer.field_e;
+          var16 = SoftwareRasterizer.field_b;
+          ab.field_R = new Sprite(10, 14);
           ab.field_R.c();
           for (var8 = 2; 7 > var8; var8++) {
-            ra.c(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.c(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          ra.a(var16, var5, var6);
+          SoftwareRasterizer.a(var16, var5, var6);
           rh.field_F = gm.a(-122, wa.field_a, var4, hc.field_n, ec.field_b);
-          ck.field_bb.field_fb = new je();
+          ck.field_bb.field_fb = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,31 +101,31 @@ final class db {
     }
 
     final static void a(int param0) {
-        bk.field_c = ra.field_e;
-        cf.field_n = ra.field_f;
-        lj.a((byte) -94);
+        bk.field_c = SoftwareRasterizer.field_e;
+        cf.field_n = SoftwareRasterizer.field_f;
+        NodeHashTableIterator.a((byte) -94);
         gg.field_j.a(0, 0, hn.field_P.field_R - 40 - 2, param0 + 48, hn.field_P.field_Hb);
-        uh.field_e.a((byte) -107, uh.field_f.field_Hb, 0, qe.field_d, 0);
-        int var1 = 2 + qe.field_d;
+        uh.field_e.a((byte) -107, uh.field_f.field_Hb, 0, GameKeyHandler.field_d, 0);
+        int var1 = 2 + GameKeyHandler.field_d;
         hh.field_c.a((byte) -116, uh.field_f.field_Hb, kj.field_b ? var1 : 0, uh.field_f.field_R - (kj.field_b ? var1 : 0), 0);
         g.c(param0 ^ 1756);
         gg.field_i.a((byte) -87, hn.field_P.field_Hb, hn.field_P.field_R - 40, 40, 0);
-        qn.field_r.a((byte) -123, qe.field_c.field_Hb, 0, 30, 0);
-        da.field_f.a((byte) -90, qe.field_c.field_Hb, 30, qe.field_c.field_R - 40 - 32, 0);
+        qn.field_r.a((byte) -123, GameKeyHandler.field_c.field_Hb, 0, 30, 0);
+        da.field_f.a((byte) -90, GameKeyHandler.field_c.field_Hb, 30, GameKeyHandler.field_c.field_R - 40 - 32, 0);
         v.field_A.a((byte) -85, 68, 5, 30, param0);
         wc.field_D.a((byte) -86, 78, 5, 30, 75);
         jm.field_a.a((byte) -125, 48, 5, 30, 155);
         dh.field_p.a((byte) -121, 48, 5, 30, 205);
         int var2 = kj.field_b ? 250 : 200;
         rj.field_d.a((byte) -107, 363 - var2, 5, 30, var2 + 5);
-        rm.field_g.a((byte) -83, qe.field_c.field_Hb - 10 - 365, 5, 30, 370);
-        ph.field_t.a(da.field_f.field_Hb - 5 - 5, ha.field_e, -32 + (da.field_f.field_R - 10), true, 37, 5, 2);
-        int var3 = (qe.field_c.field_Hb + 2) / 2;
-        ei.field_q.a((byte) -116, -2 + var3, qe.field_c.field_R - 40, 40, 0);
+        rm.field_g.a((byte) -83, GameKeyHandler.field_c.field_Hb - 10 - 365, 5, 30, 370);
+        ph.field_t.a(da.field_f.field_Hb - 5 - 5, MouseInputHandler.field_e, -32 + (da.field_f.field_R - 10), true, 37, 5, 2);
+        int var3 = (GameKeyHandler.field_c.field_Hb + 2) / 2;
+        ei.field_q.a((byte) -116, -2 + var3, GameKeyHandler.field_c.field_R - 40, 40, 0);
         if (!kj.field_b) {
           var3 = 0;
         }
-        je.field_e.a((byte) -91, qe.field_c.field_Hb - var3, qe.field_c.field_R - 40, 40, var3);
+        IntrusiveDeque.field_e.a((byte) -91, GameKeyHandler.field_c.field_Hb - var3, GameKeyHandler.field_c.field_R - 40, 40, var3);
     }
 
     public final String toString() {

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends mc {
+final class ek extends IntrusiveNode {
     int field_q;
     static String field_t;
     static hl field_o;
     static String field_r;
     static hl field_n;
-    static oh field_p;
+    static Sprite field_p;
     static String field_s;
 
     ek(int param0) {

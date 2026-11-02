@@ -35,7 +35,7 @@ final class ci extends mf {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        je var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         gd var12 = null;
@@ -125,11 +125,11 @@ final class ci extends mf {
           }
           stackIn_41_0 = (rb) (param1);
           stackIn_41_1 = 2;
-          stackIn_41_2 = (qe.field_d + 2) * 2;
+          stackIn_41_2 = (GameKeyHandler.field_d + 2) * 2;
           stackIn_41_3 = -120;
           stackIn_41_4 = param2;
           stackIn_42_5 = (bi.field_d == param1);
-          stackIn_45_0 = (!((rb) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5, param0 * (4 * qe.field_d + 8))) ? 0 : 1;
+          stackIn_45_0 = (!((rb) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5, param0 * (4 * GameKeyHandler.field_d + 8))) ? 0 : 1;
           var9Lifetime1 = stackIn_45_0;
           var10 = param1.field_Pb.field_fb;
           var11 = null;
@@ -185,7 +185,7 @@ final class ci extends mf {
             if (param1 == hn.field_Q) {
               var21 += 42;
             }
-            var33 = jb.a(var12.field_Wb.field_Ib, var32, var21);
+            var33 = BitmapFont.a(var12.field_Wb.field_Ib, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -247,7 +247,7 @@ final class ci extends mf {
                 ~oj.field_c != ~var12.field_Nb) {
                 if (null != var12.field_ac.field_jb) {
                   var26 = var12.field_ac.f(-19) + fn.field_Q * 2;
-                  var12.field_ac.a((byte) -104, var26, var19, qe.field_d, var25_int);
+                  var12.field_ac.a((byte) -104, var26, var19, GameKeyHandler.field_d, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Vb.field_jb != null) {
@@ -256,7 +256,7 @@ final class ci extends mf {
                   } else {
                     var26Lifetime2 = var12.field_Vb.f(param3 ^ 63) + 2 * fn.field_Q;
                   }
-                  var12.field_Vb.a((byte) -90, var26Lifetime2, var19, qe.field_d, var25_int);
+                  var12.field_Vb.a((byte) -90, var26Lifetime2, var19, GameKeyHandler.field_d, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -268,10 +268,10 @@ final class ci extends mf {
               } else {
                 stackIn_95_3 = 0;
               }
-              ((hl) (Object) stackIn_94_0).a((byte) stackIn_94_1, stackIn_94_2 - stackIn_95_3 + var12.field_Hb, var19, qe.field_d, var25_int);
+              ((hl) (Object) stackIn_94_0).a((byte) stackIn_94_1, stackIn_94_2 - stackIn_95_3 + var12.field_Hb, var19, GameKeyHandler.field_d, var25_int);
               var12.field_Lb.field_jb = Integer.toString(var12.field_Pb);
-              var12.field_Lb.a((byte) -123, 40, var19, qe.field_d, -40 + var12.field_Hb);
-              var19 = var19 + qe.field_d;
+              var12.field_Lb.a((byte) -123, 40, var19, GameKeyHandler.field_d, -40 + var12.field_Hb);
+              var19 = var19 + GameKeyHandler.field_d;
               if (var12.field_Wb.field_Y &&
                 var22 != 0) {
                 re.field_P = var12.field_Yb;
@@ -298,8 +298,8 @@ final class ci extends mf {
               var24_intLifetime1 = var12.field_Ob.field_Ib.c(var23, -fn.field_Q - fn.field_Q + var12.field_Hb);
               var12.field_Ob.field_K = var12.field_Sb * 256 / u.field_a;
               var12.field_Ob.field_jb = var23;
-              var12.field_Ob.a((byte) -80, var12.field_Hb - fn.field_Q * 2, var19, var24_intLifetime1 * qe.field_d, fn.field_Q);
-              var19 = var19 + var24_intLifetime1 * qe.field_d;
+              var12.field_Ob.a((byte) -80, var12.field_Hb - fn.field_Q * 2, var19, var24_intLifetime1 * GameKeyHandler.field_d, fn.field_Q);
+              var19 = var19 + var24_intLifetime1 * GameKeyHandler.field_d;
             }
             if (var9Lifetime1 == 0) {
               var12.field_mb = -var12.field_R + var19;
@@ -311,7 +311,7 @@ final class ci extends mf {
               !var12.d((byte) -1)) {
               if (var12.field_ac.field_F == 0) {
                 if (var12.field_Vb.field_F != 0) {
-                  qe.a(-122, param4, var12.field_Nb);
+                  GameKeyHandler.a(-122, param4, var12.field_Nb);
                 } else {
                   qh.a(var12, field_B, 0, -66, li.field_o, 0, param1);
                 }
@@ -345,7 +345,7 @@ final class ci extends mf {
                   } else {
                     if (var6 <= var12.field_Pb) {
                       if ((~var12.field_Ub & var8) != 0) {
-                        var25_int = fa.a(var8 & ~var12.field_Ub, -24338);
+                        var25_int = SoundEffectLibrary.a(var8 & ~var12.field_Ub, -24338);
                         var24Lifetime2 = sk.a(new String[]{var20}, o.field_o, param3 + 123);
                         if (0 < var25_int &&
                           null != pd.field_t &&
@@ -373,8 +373,8 @@ final class ci extends mf {
                   } else {
                     if (var12.field_Pb >= var6) {
                       if ((var8 & ~var12.field_Ub) != 0) {
-                        var25_int = fa.a(~var12.field_Ub & var8, param3 ^ 24337);
-                        var24Lifetime2 = jo.field_b;
+                        var25_int = SoundEffectLibrary.a(~var12.field_Ub & var8, param3 ^ 24337);
+                        var24Lifetime2 = DualLinkDeque.field_b;
                         if (var25_int > 0 &&
                           null != pd.field_t &&
                           pd.field_t.length >= var25_int &&
@@ -489,7 +489,7 @@ final class ci extends mf {
         }
     }
 
-    private ci(jb param0, int param1) {
+    private ci(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -520,7 +520,7 @@ final class ci extends mf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, oh[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -546,14 +546,14 @@ final class ci extends mf {
             var8 = param4[1].field_t;
             param4[0].e(param3, param1, param0);
             param4[2].e(-var7 + param2 + param3, param1, param0);
-            ra.a(lj.field_a);
-            ra.b(param3 + var6_int, param1, param3 + param2 - var7, param1 + param4[1].field_F);
+            SoftwareRasterizer.a(NodeHashTableIterator.field_a);
+            SoftwareRasterizer.b(param3 + var6_int, param1, param3 + param2 - var7, param1 + param4[1].field_F);
             var9 = param3 + var6_int;
             var10 = param3 + (param2 - var7);
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param4[1].e(param3, param1, param0);
             }
-            ra.b(lj.field_a);
+            SoftwareRasterizer.b(NodeHashTableIterator.field_a);
             return;
           }
           return;
@@ -571,7 +571,7 @@ final class ci extends mf {
         }
     }
 
-    final String c(na param0, int param1) {
+    final String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -619,11 +619,11 @@ final class ci extends mf {
         lg.a(param1, param0 - 79, true);
     }
 
-    final static oh[] d(int param0) {
+    final static Sprite[] d(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        oh[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -637,9 +637,9 @@ final class ci extends mf {
         byte[] var21;
         int[] var22;
         var8 = TetraLink.field_J;
-        var1 = new oh[vj.field_n];
+        var1 = new Sprite[vj.field_n];
         for (var2 = 0; var2 < vj.field_n; var2++) {
-          var3 = sn.field_e[var2] * je.field_h[var2];
+          var3 = sn.field_e[var2] * IntrusiveDeque.field_h[var2];
           var21 = ga.field_a[var2];
           if (!gm.field_g[var2]) {
             var10 = new int[var3];
@@ -647,7 +647,7 @@ final class ci extends mf {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = ti.field_c[pl.a((int) var21[var6], 255)];
             }
-            var1[var2] = new oh(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], var22);
+            var1[var2] = new Sprite(ImageProducerRasterBuffer.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], IntrusiveDeque.field_h[var2], sn.field_e[var2], var22);
           } else {
             var15 = jg.field_i[var2];
             var11 = var15;
@@ -657,9 +657,9 @@ final class ci extends mf {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = mc.a(pl.a(-16777216, var15[var7] << 24), ti.field_c[pl.a(255, (int) var21[var7])]);
+              var6_ref_int__[var7] = IntrusiveNode.a(pl.a(-16777216, var15[var7] << 24), ti.field_c[pl.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (oh) ((Object) new ue(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ue(ImageProducerRasterBuffer.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], IntrusiveDeque.field_h[var2], sn.field_e[var2], var17));
           }
         }
         if (param0 != -1) {

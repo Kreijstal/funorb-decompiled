@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uk extends gb {
+class uk extends DualLinkNode {
     static float field_x;
     static db field_t;
     static String field_u;

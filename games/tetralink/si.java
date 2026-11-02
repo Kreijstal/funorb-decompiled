@@ -27,7 +27,7 @@ final class si {
         field_d = (int[][]) null;
     }
 
-    final void a(bh param0, td param1) {
+    final void a(PacketBuffer param0, td param1) {
         int var3;
         int var4;
         int var5;

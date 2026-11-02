@@ -32,14 +32,14 @@ final class re extends ae {
         bm.a(-25676);
         if (!param0) {
           re.e((byte) -39);
-          if (wm.c(-14688)) {
+          if (ImageProducerRasterBuffer.c(-14688)) {
             nd.field_Lb.f(1, (byte) -92);
             ak.a((byte) -86, 0);
           }
           mk.a(false);
           return;
         }
-        if (wm.c(-14688)) {
+        if (ImageProducerRasterBuffer.c(-14688)) {
           nd.field_Lb.f(1, (byte) -92);
           ak.a((byte) -86, 0);
         }
@@ -77,8 +77,8 @@ final class re extends ae {
         gd var2 = null;
         int var3 = TetraLink.field_J;
         try {
-          kl.field_a = false;
-          qe.field_a = null;
+          FullscreenFocusCanvas.field_a = false;
+          GameKeyHandler.field_a = null;
           qb.field_N = null;
           if (gl.field_p != null) {
             gl.field_p.b(1);

@@ -3,7 +3,7 @@
  */
 final class dh implements m {
     private gf[] field_f;
-    static jb field_d;
+    static BitmapFont field_d;
     static String field_c;
     static boolean field_o;
     static wk field_q;
@@ -14,8 +14,8 @@ final class dh implements m {
     static int field_i;
     static int field_e;
     static hl field_p;
-    private je field_b;
-    private ah field_j;
+    private IntrusiveDeque field_b;
+    private Archive field_j;
     private int field_h;
     private int field_k;
     private int field_a;
@@ -25,19 +25,19 @@ final class dh implements m {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        ra.a(var1.field_t, var1.field_p, var1.field_o);
+        SoftwareRasterizer.a(var1.field_t, var1.field_p, var1.field_o);
         if (param0 != -581) {
           return;
         }
-        ra.a(var1.field_r, var1.field_q, var1.field_u, var1.field_s);
+        SoftwareRasterizer.a(var1.field_r, var1.field_q, var1.field_u, var1.field_s);
         var1.field_t = null;
         fm.field_a.a(var1, false);
     }
 
     public final int b(int param0, int param1) {
         if (param0 != 6092) {
-          bh var4 = (bh) null;
-          dh.a(false, false, (el) null, (bh) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          dh.a(false, false, (el) null, (PacketBuffer) null);
         }
         if (this.field_f[param1] == null) {
           return 0;
@@ -47,7 +47,7 @@ final class dh implements m {
 
     public final int a(int param0, int param1) {
         if (param1 != 0) {
-          this.field_b = (je) null;
+          this.field_b = (IntrusiveDeque) null;
         }
         if (!this.field_f[param0].field_p) {
           return 1;
@@ -89,7 +89,7 @@ final class dh implements m {
         return null;
     }
 
-    final static void a(boolean param0, boolean param1, el param2, bh param3) {
+    final static void a(boolean param0, boolean param1, el param2, PacketBuffer param3) {
         int var8 = 0;
         el stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -163,11 +163,11 @@ final class dh implements m {
             param2.field_bc = param3.f(-122);
           }
           param2.field_cc = param3.c(255);
-          var7 = param3.field_t;
+          var7 = param3.position;
           param2.field_ec = param3.g((byte) 81);
           if (var6 != 0) {
             param2.field_fc = new String[param2.field_jc];
-            param3.field_t = var7;
+            param3.position = var7;
             for (var8 = 0; var8 < param2.field_jc; var8++) {
               param2.field_fc[var8] = param3.g((byte) 81);
             }
@@ -198,7 +198,7 @@ final class dh implements m {
     final static void a(boolean param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bc var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -210,11 +210,11 @@ final class dh implements m {
           var1 = nd.field_Lb;
           while (jl.a(false)) {
             var1.f(8, (byte) -92);
-            fieldTemp$0 = var1.field_t + 1;
-            var1.field_t = var1.field_t + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            md.a((byte) -93, var1);
-            nd.field_Lb.b(-var2 + var1.field_t, -2);
+            SpriteState.a((byte) -93, var1);
+            nd.field_Lb.b(-var2 + var1.position, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,17 +245,17 @@ final class dh implements m {
 
     public final boolean a(boolean param0, int param1) {
         if (!param0) {
-          this.field_b = (je) null;
+          this.field_b = (IntrusiveDeque) null;
           return true;
         }
         return true;
     }
 
-    dh(ah param0, ah param1, int param2, int param3) {
+    dh(Archive param0, Archive param1, int param2, int param3) {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
-        bh var8 = null;
+        PacketBuffer var8 = null;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
@@ -266,7 +266,7 @@ final class dh implements m {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        this.field_b = new je();
+        this.field_b = new IntrusiveDeque();
         this.field_h = 128;
         this.field_a = 0;
         try {
@@ -281,7 +281,7 @@ final class dh implements m {
           var6 = var12.length;
           this.field_f = new gf[param0.b(-23126, 0)];
           for (var7 = 0; var6 > var7; var7++) {
-            var8 = new bh(param0.a(4, var12[var7], 0));
+            var8 = new PacketBuffer(param0.a(4, var12[var7], 0));
             this.field_f[var12[var7]] = new gf(var8);
           }
           return;

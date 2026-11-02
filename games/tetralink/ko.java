@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ko extends mc {
-    static jb field_u;
+final class ko extends IntrusiveNode {
+    static BitmapFont field_u;
     static int field_s;
     int field_p;
     int field_n;
@@ -39,7 +39,7 @@ final class ko extends mc {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        je var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         ud var6 = null;
         int var7 = 0;
@@ -55,26 +55,26 @@ final class ko extends mc {
         pf var17 = null;
         var15 = TetraLink.field_J;
         try {
-          stackIn_3_0 = fl.field_n.field_Rb;
+          stackIn_3_0 = BufferedSocket.field_n.field_Rb;
           stackIn_3_1 = 2;
-          stackIn_3_2 = 2 + qe.field_d;
+          stackIn_3_2 = 2 + GameKeyHandler.field_d;
           stackIn_3_3 = 123;
           stackIn_3_4 = param1;
-          stackIn_4_5 = (fl.field_n.field_Rb == bi.field_d);
-          var3_int = ((rb) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, param0 * ((qe.field_d + 2) * 3)) ? 1 : 0;
+          stackIn_4_5 = (BufferedSocket.field_n.field_Rb == bi.field_d);
+          var3_int = ((rb) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, param0 * ((GameKeyHandler.field_d + 2) * 3)) ? 1 : 0;
           if (param2 != -64) {
             field_t = 122;
           }
-          var4 = fl.field_n.field_Kb.field_fb;
+          var4 = BufferedSocket.field_n.field_Kb.field_fb;
           if (ji.field_Tb != 2 &&
             1 != ji.field_Tb) {
-            fl.field_n.field_S = false;
-            fl.field_n.field_Rb.field_Ob.field_jb = kl.field_f;
-            hd.a(fl.field_n.field_Kb, (byte) -104);
+            BufferedSocket.field_n.field_S = false;
+            BufferedSocket.field_n.field_Rb.field_Ob.field_jb = FullscreenFocusCanvas.field_f;
+            hd.a(BufferedSocket.field_n.field_Kb, (byte) -104);
             return;
           }
-          fl.field_n.field_S = true;
-          fl.field_n.field_Rb.field_Ob.field_jb = null;
+          BufferedSocket.field_n.field_S = true;
+          BufferedSocket.field_n.field_Rb.field_Ob.field_jb = null;
           var5 = null;
           var6 = (ud) (var4.c(false));
           while (var6 != null) {
@@ -87,14 +87,14 @@ final class ko extends mc {
               var6.c((byte) 112);
               var7 = 1;
             }
-            var6.field_Hb = fl.field_n.field_Kb.field_Hb;
-            var6.field_Tb.a((byte) -107, var6.field_Hb, 0, qe.field_d, 0);
+            var6.field_Hb = BufferedSocket.field_n.field_Kb.field_Hb;
+            var6.field_Tb.a((byte) -107, var6.field_Hb, 0, GameKeyHandler.field_d, 0);
             var8 = 0;
             if (null != var6.field_Vb &&
               !var6.field_Vb.equals("")) {
               var6.field_Kb.field_L = 16737894;
               var6.field_Kb.field_vb = db.field_b;
-              var6.field_Kb.a((byte) -79, 3 + db.field_b.field_t, 0, qe.field_d, 0);
+              var6.field_Kb.a((byte) -79, 3 + db.field_b.field_t, 0, GameKeyHandler.field_d, 0);
               var8 = 1;
             }
             var9 = 0;
@@ -105,19 +105,19 @@ final class ko extends mc {
             }
             stackIn_23_0 = var6.field_Tb;
             if (var10 > 0) {
-              stackIn_24_1 = jb.a(var6.field_Tb.field_Ib, var6.field_Mb, var10);
+              stackIn_24_1 = BitmapFont.a(var6.field_Tb.field_Ib, var6.field_Mb, var10);
             } else {
               stackIn_24_1 = var6.field_Mb;
             }
             stackIn_23_0.field_jb = stackIn_24_1;
             stackIn_27_0 = (var6.field_Tb.field_jb.equals(var6.field_Mb)) ? 0 : 1;
             var11 = stackIn_27_0;
-            var6.field_Tb.a((byte) -107, var10, 0, qe.field_d, var9);
+            var6.field_Tb.a((byte) -107, var10, 0, GameKeyHandler.field_d, var9);
             if (var3_int == 0) {
-              var6.field_mb = -var6.field_R + qe.field_d;
+              var6.field_mb = -var6.field_R + GameKeyHandler.field_d;
             }
             if (var7 != 0) {
-              fl.field_n.field_Kb.a((hl) (var5), true, var6, 2);
+              BufferedSocket.field_n.field_Kb.a((hl) (var5), true, var6, 2);
             }
             if (null != var6.field_Kb &&
               var6.field_Kb.field_Y) {
@@ -130,7 +130,7 @@ final class ko extends mc {
             }
             var5 = var6;
             if (var6.field_F != 0) {
-              gd.a(var6.field_Lb, 255, var6.field_Mb, -1, fl.field_n.field_Rb, (int[]) null, 0L, var6, -1);
+              gd.a(var6.field_Lb, 255, var6.field_Mb, -1, BufferedSocket.field_n.field_Rb, (int[]) null, 0L, var6, -1);
               var16 = hd.field_s;
               var13_ref_String = kk.field_P;
               var16.field_j.a(var13_ref_String, param2 ^ -63, 7);
@@ -141,14 +141,14 @@ final class ko extends mc {
             }
             var6 = (ud) (var4.a((byte) -70));
           }
-          if (fl.field_n.field_Sb.field_F != 0) {
-            lf.field_b = new vg(fl.field_n.field_Sb.field_eb, fl.field_n.field_Sb.field_z, fl.field_n.field_Sb.field_Hb, fl.field_n.field_Sb.field_R, vj.field_p, um.field_n, bk.field_i, bk.field_i);
+          if (BufferedSocket.field_n.field_Sb.field_F != 0) {
+            lf.field_b = new vg(BufferedSocket.field_n.field_Sb.field_eb, BufferedSocket.field_n.field_Sb.field_z, BufferedSocket.field_n.field_Sb.field_Hb, BufferedSocket.field_n.field_Sb.field_R, vj.field_p, um.field_n, bk.field_i, bk.field_i);
             ke.field_c = 2;
           }
-          if (fl.field_n.field_Pb.field_F == 0) {
+          if (BufferedSocket.field_n.field_Pb.field_F == 0) {
             return;
           }
-          lf.field_b = new vg(fl.field_n.field_Pb.field_eb, fl.field_n.field_Pb.field_z, fl.field_n.field_Pb.field_Hb, fl.field_n.field_Pb.field_R, ha.field_d, um.field_n, bk.field_i, bk.field_i);
+          lf.field_b = new vg(BufferedSocket.field_n.field_Pb.field_eb, BufferedSocket.field_n.field_Pb.field_z, BufferedSocket.field_n.field_Pb.field_Hb, BufferedSocket.field_n.field_Pb.field_R, MouseInputHandler.field_d, um.field_n, bk.field_i, bk.field_i);
           ke.field_c = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

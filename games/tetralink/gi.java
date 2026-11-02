@@ -5,9 +5,9 @@ final class gi {
     static String field_b;
     static String field_a;
     static ed field_c;
-    static je field_d;
+    static IntrusiveDeque field_d;
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2605_0;
             StringBuilder stackIn_2605_1;
@@ -18,9 +18,9 @@ final class gi {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            ah param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ah initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2605_0 = null;
@@ -52,7 +52,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 75, "error_js5crc");
                 if (var2 != null) {
-                  ea.field_c = ud.a(var2, param0 ^ -96);
+                  IterableNodeHashTable.field_c = ud.a(var2, param0 ^ -96);
                 }
                 var2 = vj.a(-110, "error_js5io");
                 if (null != var2) {
@@ -60,7 +60,7 @@ final class gi {
                 }
                 var2 = vj.a(-74, "error_js5connect_full");
                 if (var2 != null) {
-                  je.field_g = ud.a(var2, -66);
+                  IntrusiveDeque.field_g = ud.a(var2, -66);
                 }
                 var2 = vj.a(-92, "error_js5connect");
                 if (null != var2) {
@@ -204,11 +204,11 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 99, "mu_game_has_started");
                 if (null != var2) {
-                  na.field_q = ud.a(var2, -85);
+                  UiWidget.field_q = ud.a(var2, -85);
                 }
                 var2 = vj.a(-124, "mu_you_declined_invite");
                 if (var2 != null) {
-                  fl.field_h = ud.a(var2, param0 ^ -95);
+                  BufferedSocket.field_h = ud.a(var2, param0 ^ -95);
                 }
                 var2 = vj.a(param0 ^ -111, "mu_invite_withdrawn");
                 if (null != var2) {
@@ -236,7 +236,7 @@ final class gi {
                 }
                 var2 = vj.a(-80, "mu_lobby_friend_add");
                 if (var2 != null) {
-                  wd.field_d = ud.a(var2, -94);
+                  RasterBuffer.field_d = ud.a(var2, -94);
                 }
                 var2 = vj.a(-77, "mu_lobby_friend_rm");
                 if (var2 != null) {
@@ -252,7 +252,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 ^ -112, "mu_lobby_location");
                 if (var2 != null) {
-                  kl.field_g = ud.a(var2, -105);
+                  FullscreenFocusCanvas.field_g = ud.a(var2, -105);
                 }
                 var2 = vj.a(-106, "mu_gamelist_all_games");
                 if (null != var2) {
@@ -264,7 +264,7 @@ final class gi {
                 }
                 var2 = vj.a(-101, "mu_gamelist_owner");
                 if (var2 != null) {
-                  ah.field_c = ud.a(var2, -75);
+                  Archive.field_c = ud.a(var2, -75);
                 }
                 var2 = vj.a(param0 ^ -105, "mu_gamelist_players");
                 if (null != var2) {
@@ -296,7 +296,7 @@ final class gi {
                 }
                 var2 = vj.a(-106, "mu_options_whocanjoin");
                 if (var2 != null) {
-                  wd.field_b = ud.a(var2, param0 ^ -53);
+                  RasterBuffer.field_b = ud.a(var2, param0 ^ -53);
                 }
                 var2 = vj.a(-79, "mu_options_players");
                 if (var2 != null) {
@@ -364,7 +364,7 @@ final class gi {
                 }
                 var2 = vj.a(-94, "invite_decline_xs_game");
                 if (null != var2) {
-                  ca.field_b = ud.a(var2, -72);
+                  SocketConnector.field_b = ud.a(var2, -72);
                 }
                 var2 = vj.a(param0 ^ -84, "join_xs_game");
                 if (var2 != null) {
@@ -408,7 +408,7 @@ final class gi {
                 }
                 var2 = vj.a(-103, "unable_to_send_message_password_b");
                 if (null != var2) {
-                  sa.field_a = ud.a(var2, -80);
+                  RandomAccessCacheFile.field_a = ud.a(var2, -80);
                 }
                 var2 = vj.a(-90, "mu_chat_lobby_show_all");
                 if (var2 != null) {
@@ -440,7 +440,7 @@ final class gi {
                 }
                 var2 = vj.a(-112, "mu_chat_game_hide");
                 if (null != var2) {
-                  md.field_H = ud.a(var2, -86);
+                  SpriteState.field_H = ud.a(var2, -86);
                 }
                 var2 = vj.a(-98, "mu_chat_pm_show_all");
                 if (null != var2) {
@@ -456,7 +456,7 @@ final class gi {
                 }
                 var2 = vj.a(-90, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  mc.field_a = ud.a(var2, param0 - 127);
+                  IntrusiveNode.field_a = ud.a(var2, param0 - 127);
                 }
                 var2 = vj.a(-120, "you_have_been_removed_from_xs_game");
                 if (null != var2) {
@@ -464,7 +464,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 ^ -73, "your_rating_is_x");
                 if (var2 != null) {
-                  wb.field_b = ud.a(var2, param0 ^ -113);
+                  DelegatingCanvas.field_b = ud.a(var2, param0 ^ -113);
                 }
                 var2 = vj.a(-111, "you_are_on_x_server");
                 if (null != var2) {
@@ -488,7 +488,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 112, "searching_for_opponents_plural");
                 if (var2 != null) {
-                  md.field_I = ud.a(var2, -69);
+                  SpriteState.field_I = ud.a(var2, -69);
                 }
                 var2 = vj.a(-98, "find_opponent_singular");
                 if (null != var2) {
@@ -520,7 +520,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 98, "join_requests_one");
                 if (null != var2) {
-                  ca.field_d = ud.a(var2, -113);
+                  SocketConnector.field_d = ud.a(var2, -113);
                 }
                 var2 = vj.a(-124, "join_requests_many");
                 if (null != var2) {
@@ -528,7 +528,7 @@ final class gi {
                 }
                 var2 = vj.a(-99, "xs_game");
                 if (var2 != null) {
-                  qe.field_e = ud.a(var2, -108);
+                  GameKeyHandler.field_e = ud.a(var2, -108);
                 }
                 var2 = vj.a(-94, "waiting_for_x_to_start_game");
                 if (null != var2) {
@@ -548,7 +548,7 @@ final class gi {
                 }
                 var2 = vj.a(-113, "quickchat_lobby");
                 if (null != var2) {
-                  bc.field_x = ud.a(var2, -43);
+                  BitPacketBuffer.field_x = ud.a(var2, -43);
                 }
                 var2 = vj.a(-106, "message_game");
                 if (null != var2) {
@@ -648,7 +648,7 @@ final class gi {
                 }
                 var2 = vj.a(-113, "spectate_xs_game");
                 if (var2 != null) {
-                  md.field_y = ud.a(var2, -77);
+                  SpriteState.field_y = ud.a(var2, -77);
                 }
                 var2 = vj.a(param0 - 86, "hide_players_in_xs_game");
                 if (var2 != null) {
@@ -664,7 +664,7 @@ final class gi {
                 }
                 var2 = vj.a(-107, "loading");
                 if (null != var2) {
-                  kl.field_f = ud.a(var2, -47);
+                  FullscreenFocusCanvas.field_f = ud.a(var2, -47);
                 }
                 var2 = vj.a(param0 - 95, "offline");
                 if (null != var2) {
@@ -712,7 +712,7 @@ final class gi {
                 }
                 var2 = vj.a(-117, "dob_enterforchat");
                 if (null != var2) {
-                  na.field_G = ud.a(var2, -117);
+                  UiWidget.field_G = ud.a(var2, -117);
                 }
                 var2 = vj.a(-122, "tab_hidechattemporarily");
                 if (var2 != null) {
@@ -728,7 +728,7 @@ final class gi {
                 }
                 var2 = vj.a(-85, "privatequickchat_from_x");
                 if (var2 != null) {
-                  mc.field_h = ud.a(var2, -72);
+                  IntrusiveNode.field_h = ud.a(var2, -72);
                 }
                 var2 = vj.a(-80, "privatequickchat_to_x");
                 if (var2 != null) {
@@ -792,11 +792,11 @@ final class gi {
                 }
                 var2 = vj.a(-85, "gameopt_notunlocked");
                 if (null != var2) {
-                  qe.field_f = ud.a(var2, -43);
+                  GameKeyHandler.field_f = ud.a(var2, -43);
                 }
                 var2 = vj.a(-116, "gameopt_cannotbecombined1");
                 if (null != var2) {
-                  cn.field_c = ud.a(var2, -110);
+                  ClientException.field_c = ud.a(var2, -110);
                 }
                 var2 = vj.a(-85, "gameopt_cannotbecombined2");
                 if (var2 != null) {
@@ -840,7 +840,7 @@ final class gi {
                 }
                 var2 = vj.a(-80, "gameopt_youhaventunlocked");
                 if (var2 != null) {
-                  jo.field_b = ud.a(var2, -119);
+                  DualLinkDeque.field_b = ud.a(var2, -119);
                 }
                 var2 = vj.a(-91, "gameopt_trychanging1");
                 if (null != var2) {
@@ -868,7 +868,7 @@ final class gi {
                 }
                 var2 = vj.a(-86, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
-                  cn.field_b = ud.a(var2, -101);
+                  ClientException.field_b = ud.a(var2, -101);
                 }
                 var2 = vj.a(param0 ^ -105, "gameopt_unselectedoptions");
                 if (var2 != null) {
@@ -884,11 +884,11 @@ final class gi {
                 }
                 var2 = vj.a(-98, "gameopt_badnumplayers");
                 if (null != var2) {
-                  gb.field_q = ud.a(var2, -49);
+                  DualLinkNode.field_q = ud.a(var2, -49);
                 }
                 var2 = vj.a(-99, "gameopt_inviteplayers_or_trychanging1");
                 if (var2 != null) {
-                  mc.field_d = ud.a(var2, -45);
+                  IntrusiveNode.field_d = ud.a(var2, -45);
                 }
                 var2 = vj.a(param0 ^ -109, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
@@ -938,7 +938,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 85, "rule_0_1");
                 if (null != var2) {
-                  ha.field_f = ud.a(var2, -82);
+                  MouseInputHandler.field_f = ud.a(var2, -82);
                 }
                 var2 = vj.a(param0 ^ -82, "rule_0_2");
                 if (null != var2) {
@@ -950,7 +950,7 @@ final class gi {
                 }
                 var2 = vj.a(-117, "rule_0_4");
                 if (null != var2) {
-                  wd.field_a = ud.a(var2, -114);
+                  RasterBuffer.field_a = ud.a(var2, -114);
                 }
                 var2 = vj.a(-118, "rule_0_5");
                 if (null != var2) {
@@ -990,7 +990,7 @@ final class gi {
                 }
                 var2 = vj.a(-116, "rule_2_1");
                 if (null != var2) {
-                  em.field_a = ud.a(var2, -64);
+                  MatchSetup.field_a = ud.a(var2, -64);
                 }
                 var2 = vj.a(-123, "rule_2_2");
                 if (null != var2) {
@@ -1042,7 +1042,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 100, "tocustomersupport");
                 if (var2 != null) {
-                  em.field_c = ud.a(var2, -72);
+                  MatchSetup.field_c = ud.a(var2, -72);
                 }
                 var2 = vj.a(param0 ^ -76, "changedisplayname");
                 if (null != var2) {
@@ -1066,7 +1066,7 @@ final class gi {
                 }
                 var2 = vj.a(-75, "goback");
                 if (null != var2) {
-                  bg.field_n = ud.a(var2, -65);
+                  GameApplet.field_n = ud.a(var2, -65);
                 }
                 var2 = vj.a(-105, "otheroptions");
                 if (var2 != null) {
@@ -1394,7 +1394,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 ^ -127, "create_displayname");
                 if (null != var2) {
-                  kl.field_e = ud.a(var2, param0 - 57);
+                  FullscreenFocusCanvas.field_e = ud.a(var2, param0 - 57);
                 }
                 var2 = vj.a(-106, "create_password");
                 if (var2 != null) {
@@ -1494,7 +1494,7 @@ final class gi {
                 }
                 var2 = vj.a(-125, "login_justplay_tooltip");
                 if (var2 != null) {
-                  rk.field_a = ud.a(var2, param0 ^ -43);
+                  SecondaryNodeDeque.field_a = ud.a(var2, param0 ^ -43);
                 }
                 var2 = vj.a(-84, "login_back_tooltip");
                 if (null != var2) {
@@ -1514,7 +1514,7 @@ final class gi {
                 }
                 var2 = vj.a(-110, "create_displayname_tooltip");
                 if (null != var2) {
-                  sf.field_c = ud.a(var2, param0 ^ -59);
+                  SecondaryNodeDequeIterator.field_c = ud.a(var2, param0 ^ -59);
                 }
                 var2 = vj.a(-85, "create_displayname_hint");
                 if (null != var2) {
@@ -1530,7 +1530,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 ^ -124, "create_password_confirm_tooltip");
                 if (param0 != 1) {
-                  gi.a(-92, (ah) null);
+                  gi.a(-92, (Archive) null);
                 }
                 if (null != var2) {
                   gm.field_e = ud.a(var2, -100);
@@ -1633,7 +1633,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 123, "create_alert_email_unavailable");
                 if (var2 != null) {
-                  ha.field_c = ud.a(var2, -78);
+                  MouseInputHandler.field_c = ud.a(var2, -78);
                 }
                 var2 = vj.a(param0 ^ -88, "create_alert_invaliddate");
                 if (var2 != null) {
@@ -1689,7 +1689,7 @@ final class gi {
                 }
                 var2 = vj.a(-78, "friendlistfull");
                 if (var2 != null) {
-                  ha.field_g = ud.a(var2, param0 - 94);
+                  MouseInputHandler.field_g = ud.a(var2, param0 - 94);
                 }
                 var2 = vj.a(-110, "friendlistdupe");
                 if (null != var2) {
@@ -1697,7 +1697,7 @@ final class gi {
                 }
                 var2 = vj.a(-79, "friendnotfound");
                 if (null != var2) {
-                  sf.field_b = ud.a(var2, -60);
+                  SecondaryNodeDequeIterator.field_b = ud.a(var2, -60);
                 }
                 var2 = vj.a(param0 - 116, "ignorelistfull");
                 if (null != var2) {
@@ -1733,7 +1733,7 @@ final class gi {
                 }
                 var2 = vj.a(-125, "enterignore_del");
                 if (var2 != null) {
-                  ha.field_d = ud.a(var2, param0 ^ -120);
+                  MouseInputHandler.field_d = ud.a(var2, param0 ^ -120);
                 }
                 var2 = vj.a(-123, "text_removed_from_game");
                 if (null != var2) {
@@ -1773,7 +1773,7 @@ final class gi {
                 }
                 var2 = vj.a(-105, "waitingfor_music");
                 if (var2 != null) {
-                  se.field_a = ud.a(var2, param0 ^ -79);
+                  MouseWheelInput.field_a = ud.a(var2, param0 ^ -79);
                 }
                 var2 = vj.a(-118, "waitingfor_instruments");
                 if (null != var2) {
@@ -1785,7 +1785,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 112, "waitingfor_extradata");
                 if (var2 != null) {
-                  fl.field_a = ud.a(var2, -81);
+                  BufferedSocket.field_a = ud.a(var2, -81);
                 }
                 var2 = vj.a(-96, "waitingfor_languages");
                 if (var2 != null) {
@@ -1895,7 +1895,7 @@ final class gi {
                 }
                 var2 = vj.a(-76, "music_colon");
                 if (var2 != null) {
-                  tg.field_c = ud.a(var2, -70);
+                  IntrusiveDequeCursor.field_c = ud.a(var2, -70);
                 }
                 var2 = vj.a(param0 - 109, "fullscreen");
                 if (var2 != null) {
@@ -1959,7 +1959,7 @@ final class gi {
                 }
                 var2 = vj.a(-85, "pausemenu");
                 if (null != var2) {
-                  bh.field_o = ud.a(var2, -46);
+                  PacketBuffer.field_o = ud.a(var2, -46);
                 }
                 var2 = vj.a(param0 ^ -117, "optionsmenu_notpaused");
                 if (var2 != null) {
@@ -2363,7 +2363,7 @@ final class gi {
                 }
                 var2 = vj.a(-100, "mp_x_wantstodraw");
                 if (null != var2) {
-                  bc.field_v = ud.a(var2, -89);
+                  BitPacketBuffer.field_v = ud.a(var2, -89);
                 }
                 var2 = vj.a(-83, "mp_x_offersrematch");
                 if (null != var2) {
@@ -2415,7 +2415,7 @@ final class gi {
                 }
                 var2 = vj.a(-96, "mp_youhavewon");
                 if (var2 != null) {
-                  mc.field_g = ud.a(var2, -66);
+                  IntrusiveNode.field_g = ud.a(var2, -66);
                 }
                 var2 = vj.a(-100, "mp_gamedrawn");
                 if (null != var2) {
@@ -2455,7 +2455,7 @@ final class gi {
                 }
                 var2 = vj.a(-76, "click_to_quickchat");
                 if (var2 != null) {
-                  bh.field_n = ud.a(var2, -43);
+                  PacketBuffer.field_n = ud.a(var2, -43);
                 }
                 var2 = vj.a(-106, "autorespond");
                 if (var2 != null) {
@@ -2463,11 +2463,11 @@ final class gi {
                 }
                 var2 = vj.a(-101, "quickchat_help");
                 if (var2 != null) {
-                  vb.field_m = ud.a(var2, -52);
+                  ProxySocketConnector.field_m = ud.a(var2, -52);
                 }
                 var2 = vj.a(param0 - 89, "quickchat_help_title");
                 if (null != var2) {
-                  ca.field_h = ud.a(var2, -40);
+                  SocketConnector.field_h = ud.a(var2, -40);
                 }
                 var2 = vj.a(-89, "quickchat_shortcut_help,0");
                 if (var2 != null) {
@@ -2527,7 +2527,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 76, "rating_rating");
                 if (null != var2) {
-                  md.field_w = ud.a(var2, -119);
+                  SpriteState.field_w = ud.a(var2, -119);
                 }
                 var2 = vj.a(-115, "rating_played");
                 if (null != var2) {
@@ -2667,7 +2667,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 - 115, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  gb.field_p = ud.a(var2, -98);
+                  DualLinkNode.field_p = ud.a(var2, -98);
                 }
                 var2 = vj.a(-113, "fs_nonmember");
                 if (null != var2) {
@@ -3045,8 +3045,8 @@ final class gi {
                   throw oi.a((Throwable) ((Object) stackIn_2605_0), ((StringBuilder) (Object) stackIn_2605_1).append(stackIn_2606_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2614_0 = (!bg.field_l);
-                  bg.field_l = stackIn_2614_0;
+                  stackIn_2614_0 = (!GameApplet.field_l);
+                  GameApplet.field_l = stackIn_2614_0;
                 }
             }
         }
@@ -3071,7 +3071,7 @@ final class gi {
             return false;
           }
           if (param0) {
-            gi.a(14, 36, 67, 82, (ie) null, -10, (String) null, -2, 20);
+            gi.a(14, 36, 67, 82, (PlatformTaskDispatcher) null, -10, (String) null, -2, 20);
           }
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -3106,7 +3106,7 @@ final class gi {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ie param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3117,9 +3117,9 @@ final class gi {
         try {
           ji.field_Lb = param6;
           if (param2 != 1) {
-            field_d = (je) null;
+            field_d = (IntrusiveDeque) null;
           }
-          je.field_f = param3;
+          IntrusiveDeque.field_f = param3;
           dh.field_l = param8;
           ui.field_g = param0;
           hk.field_d = param7;

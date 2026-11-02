@@ -8,7 +8,7 @@ final class lc {
     static String[][] field_g;
     static String field_f;
     static java.applet.Applet field_h;
-    static bg field_a;
+    static GameApplet field_a;
     static cf field_e;
     static String field_d;
     static String field_c;

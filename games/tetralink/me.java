@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class me {
-    static oh field_e;
+    static Sprite field_e;
     static String field_h;
     static String field_c;
     static String field_i;
@@ -26,13 +26,13 @@ final class me {
     }
 
     final static void a(boolean param0) {
-        sc.field_a[vc.field_c] = ra.field_b;
-        qd.field_Y[vc.field_c] = ra.field_j;
-        ea.field_b[vc.field_c] = ra.field_l;
-        ca.field_f[vc.field_c] = ra.field_i;
-        ml.field_ib[vc.field_c] = ra.field_g;
-        gh.field_a[vc.field_c] = ra.field_f;
-        hc.field_s[vc.field_c] = ra.field_e;
+        sc.field_a[vc.field_c] = SoftwareRasterizer.field_b;
+        qd.field_Y[vc.field_c] = SoftwareRasterizer.field_j;
+        IterableNodeHashTable.field_b[vc.field_c] = SoftwareRasterizer.field_l;
+        SocketConnector.field_f[vc.field_c] = SoftwareRasterizer.field_i;
+        ml.field_ib[vc.field_c] = SoftwareRasterizer.field_g;
+        gh.field_a[vc.field_c] = SoftwareRasterizer.field_f;
+        hc.field_s[vc.field_c] = SoftwareRasterizer.field_e;
         if (!param0) {
           vc.field_c = vc.field_c + 1;
           return;

@@ -7,7 +7,7 @@ final class rl {
     static int[] field_c;
     static int field_d;
     static int field_a;
-    static oh[][] field_b;
+    static Sprite[][] field_b;
     static fg field_f;
 
     final static void b(int param0) {
@@ -28,7 +28,7 @@ final class rl {
 
     public static void a(int param0) {
         field_e = null;
-        field_b = (oh[][]) null;
+        field_b = (Sprite[][]) null;
         field_g = null;
         field_f = null;
         field_c = null;

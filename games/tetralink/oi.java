@@ -9,13 +9,13 @@ abstract class oi {
     int field_d;
     int field_j;
     int field_f;
-    static oh field_e;
+    static Sprite field_e;
     static int field_m;
-    static ie field_l;
+    static PlatformTaskDispatcher field_l;
     static int field_c;
     static String field_i;
     static int[] field_n;
-    static jb field_a;
+    static BitmapFont field_a;
 
     final static void a(byte param0, String param1, boolean param2, java.applet.Applet param3) {
         try {
@@ -28,7 +28,7 @@ abstract class oi {
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (ie.field_l.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_l.startsWith("win") &&
               in.a(18, param1)) {
               return;
             }
@@ -73,7 +73,7 @@ abstract class oi {
     abstract void a(int param0, int param1);
 
     final static void a(byte param0, int param1) {
-        bc var2 = nd.field_Lb;
+        BitPacketBuffer var2 = nd.field_Lb;
         if (param0 == 126) {
           var2.f(param1, (byte) -92);
           var2.a(1, false);
@@ -98,12 +98,12 @@ abstract class oi {
         }
     }
 
-    final static cn a(Throwable param0, String param1) {
-        cn var2 = null;
-        if (!(param0 instanceof cn)) {
-          var2 = new cn(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (cn) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_d = var2.field_d + ' ' + param1;
         }
         return var2;
@@ -113,7 +113,7 @@ abstract class oi {
 
     static {
         field_g = "to keep fullscreen or";
-        field_e = new oh(270, 70);
+        field_e = new Sprite(270, 70);
         field_i = "You are offering an unrated rematch.";
         field_n = new int[256];
     }

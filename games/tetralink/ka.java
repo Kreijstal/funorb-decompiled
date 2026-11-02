@@ -10,7 +10,7 @@ class ka extends hm {
     static double[] field_h;
     private String field_k;
 
-    final void a(int param0, bh param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a(-1, this.field_j);
           param1.a((byte) -127, this.field_k);
@@ -39,7 +39,7 @@ class ka extends hm {
     final static void c(int param0) {
         jl.field_b = null;
         me.field_d = false;
-        ah.field_j = null;
+        Archive.field_j = null;
         fi.field_Ab = null;
         if (param0 < 76) {
           ka.c((byte) 76);
@@ -77,16 +77,16 @@ class ka extends hm {
             dd.field_a = ed.a((byte) 101, ci.field_B, li.field_o);
             if (dd.field_a == 0 &&
               wk.field_u != 0) {
-              if (2 > qe.field_g) {
-                qe.field_g = oi.field_c;
+              if (2 > GameKeyHandler.field_g) {
+                GameKeyHandler.field_g = oi.field_c;
               } else {
-                qe.field_g = 0;
+                GameKeyHandler.field_g = 0;
               }
-              wb.a(qb.a(kb.field_t, (byte) 114), param0 ^ -7865);
+              DelegatingCanvas.a(qb.a(kb.field_t, (byte) 114), param0 ^ -7865);
             } else {
               if (wk.field_u == 2 &&
                 5 == dd.field_a) {
-                sa.a(-107, true);
+                RandomAccessCacheFile.a(-107, true);
               }
             }
           }
@@ -100,16 +100,16 @@ class ka extends hm {
               if (dd.field_a != 2) {
                 if (3 != dd.field_a) {
                   if (dd.field_a == 4) {
-                    ca.a(-8.0f, 0.0f, -2452);
+                    SocketConnector.a(-8.0f, 0.0f, -2452);
                   }
                 } else {
-                  ca.a(8.0f, 0.0f, param0 ^ -2456);
+                  SocketConnector.a(8.0f, 0.0f, param0 ^ -2456);
                 }
               } else {
-                ca.a(0.0f, -0.029999999329447746f, -2452);
+                SocketConnector.a(0.0f, -0.029999999329447746f, -2452);
               }
             } else {
-              ca.a(0.0f, 0.029999999329447746f, -2452);
+              SocketConnector.a(0.0f, 0.029999999329447746f, -2452);
             }
           }
           if (ed.field_O == kb.field_t &&
@@ -122,7 +122,7 @@ class ka extends hm {
           }
           var1 = stackIn_44_0;
           if (wk.field_i.field_c) {
-            var2_double = (double)(-(ra.field_f >> 1) + aa.field_Nb) / 512.0;
+            var2_double = (double)(-(SoftwareRasterizer.field_f >> 1) + aa.field_Nb) / 512.0;
             var4 = (double)(a.field_a - ik.field_a) / 512.0;
             var6 = -field_h[2] / (var2_double * field_h[5] + var4 * field_h[8] + field_h[11]);
             wh.field_c = (var6 * (field_h[9] + (var4 * field_h[6] + field_h[3] * var2_double)) + field_h[0]) * 4.0;
@@ -131,16 +131,16 @@ class ka extends hm {
             } else {
               wh.field_c = 320.0 - wh.field_c;
             }
-            ua.field_i = (double)(440 - (ra.field_e >> 1)) + 4.0 * (field_h[1] + (field_h[10] + (field_h[7] * var4 + field_h[4] * var2_double)) * var6);
+            ua.field_i = (double)(440 - (SoftwareRasterizer.field_e >> 1)) + 4.0 * (field_h[1] + (field_h[10] + (field_h[7] * var4 + field_h[4] * var2_double)) * var6);
             if (oj.field_a.field_z > a.field_a) {
               if ((2 == ho.field_X ||
                 sn.field_a[81]) &&
                 (ab.field_T != -1 &&
                 aa.field_Nb != -1)) {
-                ca.a(0.0f, 0.004999999888241291f * (float)(-ab.field_T + aa.field_Nb), -2452);
+                SocketConnector.a(0.0f, 0.004999999888241291f * (float)(-ab.field_T + aa.field_Nb), -2452);
               }
               if (hc.field_p != 0) {
-                ca.a((float)(hc.field_p * 24), 0.0f, -2452);
+                SocketConnector.a((float)(hc.field_p * 24), 0.0f, -2452);
               }
             }
           } else {

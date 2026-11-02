@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hd extends um {
-    static vl field_x;
+    static AsyncRequest field_x;
     static int[] field_D;
     private boolean field_w;
     static ve field_t;
     static String field_B;
     static int field_q;
-    static kl field_u;
+    static FullscreenFocusCanvas field_u;
     private cb field_A;
     static int field_v;
     static String field_z;
     private String field_y;
     static pf field_s;
-    static oh field_r;
+    static Sprite field_r;
 
     hd(nn param0, nn param1) {
         super(param0);
@@ -27,7 +27,7 @@ final class hd extends um {
         }
     }
 
-    final static kh a(int param0, int param1, ah param2) {
+    final static kh a(int param0, int param1, Archive param2) {
         RuntimeException var3 = null;
         kh stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -35,7 +35,7 @@ final class hd extends um {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!bg.a(-141, param1, param2)) {
+          if (!GameApplet.a(-141, param1, param2)) {
             return null;
           }
           if (param0 != 1) {
@@ -95,7 +95,7 @@ final class hd extends um {
         hl var2Lifetime1;
         try {
           if (param1 != -104) {
-            field_x = (vl) null;
+            field_x = (AsyncRequest) null;
           }
           var4 = (hl) (param0.field_fb.c(false));
           var2 = var4;
@@ -181,7 +181,7 @@ final class hd extends um {
             stackIn_10_0 = tb.field_h;
             return stackIn_10_0;
           }
-          stackIn_8_0 = ha.field_c;
+          stackIn_8_0 = MouseInputHandler.field_c;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

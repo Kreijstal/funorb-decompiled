@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends mc {
+final class km extends IntrusiveNode {
     static String field_p;
     static byte[] field_o;
     static int[] field_n;

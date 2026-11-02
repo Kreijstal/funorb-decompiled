@@ -8,7 +8,7 @@ class nn extends ae {
     static boolean field_X;
     static boolean field_R;
     private boolean field_Z;
-    static ah field_T;
+    static Archive field_T;
     private int field_ab;
     static int field_cb;
     private boolean field_W;
@@ -43,7 +43,7 @@ class nn extends ae {
         }
     }
 
-    final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -57,7 +57,7 @@ class nn extends ae {
         try {
           if (super.a(param0, param1, param2, param3, param4 + 0, param5, param6) &&
             this.field_H instanceof jh) {
-            var8_int = ((jh) ((Object) this.field_H)).a(param3, param1, a.field_a, aa.field_Nb, (na) (this), (byte) -34);
+            var8_int = ((jh) ((Object) this.field_H)).a(param3, param1, a.field_a, aa.field_Nb, (UiWidget) (this), (byte) -34);
             stackIn_5_1 = 81;
             if (var8_int == -1) {
               stackIn_6_2 = 0;
@@ -207,7 +207,7 @@ class nn extends ae {
         }
     }
 
-    void a(na param0, int param1, int param2, boolean param3) {
+    void a(UiWidget param0, int param1, int param2, boolean param3) {
         jh var5 = null;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -221,7 +221,7 @@ class nn extends ae {
           if (this.field_x == 1) {
             if (this.field_H instanceof jh) {
               var5 = (jh) ((Object) this.field_H);
-              var6 = var5.a(param2, param1, a.field_a, aa.field_Nb, (na) (this), (byte) -34);
+              var6 = var5.a(param2, param1, a.field_a, aa.field_Nb, (UiWidget) (this), (byte) -34);
               if (var6 != -1) {
                 if (this.field_Z &&
                   var6 < this.field_ab &&
@@ -289,15 +289,15 @@ class nn extends ae {
         }
         if (this.field_H != null &&
           0 == param3) {
-          this.field_H.a((na) (this), param1, param2, true, this.field_K);
+          this.field_H.a((UiWidget) (this), param1, param2, true, this.field_K);
           if (this.field_H instanceof jh) {
             var8 = (jh) ((Object) this.field_H);
             if (this.field_Q != this.field_V) {
-              var8.a(this.field_Q, 18985, this.field_V, param1, param2, (na) (this));
+              var8.a(this.field_Q, 18985, this.field_V, param1, param2, (UiWidget) (this));
             }
             var6 = k.a(param0 ^ 0);
             if ((var6 - this.field_bb) % 1000L < 500L) {
-              var8.a((na) (this), param2, this.field_V, 0, param1);
+              var8.a((UiWidget) (this), param2, this.field_V, 0, param1);
             }
           }
         }
@@ -310,7 +310,7 @@ class nn extends ae {
         return -ja.field_j + hd.field_q;
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_62_1 = 0;
         int stackIn_63_2 = 0;
@@ -505,9 +505,9 @@ class nn extends ae {
 
     final static int i(int param0) {
         if (param0 < 66) {
-          field_T = (ah) null;
+          field_T = (Archive) null;
         }
-        return ea.field_a;
+        return IterableNodeHashTable.field_a;
     }
 
     private final void h(byte param0) {
@@ -530,9 +530,9 @@ class nn extends ae {
         }
         var10 = (jh) ((Object) this.field_H);
         var5 = -2 % ((72 - param0) / 39);
-        var3 = var10.a((na) (this), false);
+        var3 = var10.a((UiWidget) (this), false);
         var4 = var3.b((byte) 66);
-        var6 = var10.b((na) (this), 92);
+        var6 = var10.b((UiWidget) (this), 92);
         var7 = var10.a(true) >> 1;
         if (var4 < var6 - var7) {
           this.field_o = 0;
@@ -644,7 +644,7 @@ class nn extends ae {
             mf.field_s.a(nl.field_a, false);
           }
           nl.field_a.a(param0, (byte) -122, param1, param3);
-          ra.a();
+          SoftwareRasterizer.a();
           i.b(true, 122);
           int var4_int = -4 % ((param2 + 53) / 62);
         } catch (RuntimeException runtimeException) {

@@ -3,10 +3,10 @@
  */
 final class pb {
     boolean field_a;
-    static je field_f;
+    static IntrusiveDeque field_f;
     static String field_b;
     String field_g;
-    static je field_c;
+    static IntrusiveDeque field_c;
     String field_e;
     static a field_d;
 
@@ -30,8 +30,8 @@ final class pb {
     }
 
     static {
-        field_f = new je();
-        field_c = new je();
+        field_f = new IntrusiveDeque();
+        field_c = new IntrusiveDeque();
         field_d = new a();
     }
 }

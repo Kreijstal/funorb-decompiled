@@ -3,7 +3,7 @@
  */
 final class ib {
     static int field_b;
-    static ah field_a;
+    static Archive field_a;
     static String field_d;
     static String field_c;
 

@@ -16,7 +16,7 @@ final class ul implements kg {
         field_a = null;
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -24,7 +24,7 @@ final class ul implements kg {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        oh var8 = null;
+        Sprite var8 = null;
         gd var9 = null;
         try {
           if (!param3) {

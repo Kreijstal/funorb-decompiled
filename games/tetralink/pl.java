@@ -22,7 +22,7 @@ final class pl {
 
     final static cf a(int param0, byte param1) {
         cf var2 = new cf();
-        sf.field_a.a(var2, false);
+        SecondaryNodeDequeIterator.field_a.a(var2, false);
         int var3 = -10 % ((42 - param1) / 44);
         ei.a((byte) 53, param0);
         return var2;
@@ -32,7 +32,7 @@ final class pl {
         return param0 & param1;
     }
 
-    final static ah a(int param0, boolean param1, boolean param2, int param3, byte param4) {
+    final static Archive a(int param0, boolean param1, boolean param2, int param3, byte param4) {
         if (param4 < -47) {
           return ai.a(param2, param0, false, param3, (byte) 122, param1);
         }

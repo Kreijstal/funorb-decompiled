@@ -3,12 +3,12 @@
  */
 final class u {
     private ec field_f;
-    private ah field_c;
+    private Archive field_c;
     static String field_d;
     static int field_a;
     static hl field_b;
     static fg field_g;
-    private ah field_e;
+    private Archive field_e;
 
     public static void b(int param0) {
         if (param0 == 32768) {
@@ -29,12 +29,12 @@ final class u {
         }
         if (param0 <= 79) {
           field_b = (hl) null;
-          if (sf.field_d == 0) {
+          if (SecondaryNodeDequeIterator.field_d == 0) {
             return true;
           }
           return false;
         }
-        if (sf.field_d == 0) {
+        if (SecondaryNodeDequeIterator.field_d == 0) {
           return true;
         }
         return false;
@@ -81,7 +81,7 @@ final class u {
                 0 == param1.field_s) {
                 var3_ref = sk.a(new String[]{(String) (var2)}, vd.field_b, 119);
               } else {
-                var3_ref = sk.a(new String[]{(String) (var2)}, mc.field_h, param0 ^ 18544);
+                var3_ref = sk.a(new String[]{(String) (var2)}, IntrusiveNode.field_h, param0 ^ 18544);
               }
             }
           } else {
@@ -90,7 +90,7 @@ final class u {
               var3_ref = "[" + nm.field_v + "] ";
             }
             if (param1.field_i == 1) {
-              var3_ref = "[" + sk.a(new String[]{param1.field_c}, qe.field_e, 127) + "] ";
+              var3_ref = "[" + sk.a(new String[]{param1.field_c}, GameKeyHandler.field_e, 127) + "] ";
             }
             if (param1.field_i == 4 &&
               ec.field_h != null) {
@@ -136,7 +136,7 @@ final class u {
         if (param1 < -125) {
           var6 = new j();
           if (var4 != null) {
-            var6.a(new bh(var4), 15067);
+            var6.a(new PacketBuffer(var4), 15067);
           }
           if (param0 >= 32768) {
             var6.g(25271);
@@ -147,7 +147,7 @@ final class u {
         this.a(-123, -16);
         var5 = new j();
         if (var4 != null) {
-          var5.a(new bh(var4), 15067);
+          var5.a(new PacketBuffer(var4), 15067);
         }
         if (param0 >= 32768) {
           var5.g(25271);
@@ -156,7 +156,7 @@ final class u {
         return var5;
     }
 
-    u(int param0, ah param1, ah param2, sm param3) {
+    u(int param0, Archive param1, Archive param2, sm param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

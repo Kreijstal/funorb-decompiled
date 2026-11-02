@@ -8,19 +8,19 @@ final class kj {
     static boolean field_b;
     static String field_e;
 
-    final static void a(int param0, ah param1) {
-        oh var2 = null;
+    final static void a(int param0, Archive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new oh(param1.a("final_frame.jpg", "", true), (java.awt.Component) ((Object) uh.field_b));
+          var2 = new Sprite(param1.a("final_frame.jpg", "", true), (java.awt.Component) ((Object) uh.field_b));
           var3 = var2.field_u;
           var4 = var2.field_E;
           nm.b((byte) 45);
-          a.field_c = new oh(var3, var4 * param0 / 4);
+          a.field_c = new Sprite(var3, var4 * param0 / 4);
           a.field_c.c();
           var2.b(0, 0);
-          h.field_c = new oh(var3, var4 - a.field_c.field_E);
+          h.field_c = new Sprite(var3, var4 - a.field_c.field_E);
           h.field_c.c();
           var2.b(0, -a.field_c.field_E);
           h.field_c.field_D = a.field_c.field_E;
@@ -82,8 +82,8 @@ final class kj {
     final static void a(byte param0, int param1, int param2) {
         sj.field_e = param1;
         if (param0 != -77) {
-          ah var4 = (ah) null;
-          kj.a(43, (ah) null);
+          Archive var4 = (Archive) null;
+          kj.a(43, (Archive) null);
           hl.field_cb = param2;
           return;
         }

@@ -6,8 +6,8 @@ final class e {
     static db field_e;
     static String[] field_b;
     static hl field_d;
-    static wf field_c;
-    static oh field_f;
+    static PcmSample field_c;
+    static Sprite field_f;
 
     public static void b(byte param0) {
         field_e = null;
@@ -21,15 +21,15 @@ final class e {
         field_d = null;
     }
 
-    final static void a(int param0, byte param1, int param2, oh[] param3) {
+    final static void a(int param0, byte param1, int param2, Sprite[] param3) {
         if (param1 != -92) {
           return;
         }
         try {
           nm.field_o = new ve(param3);
           ng.field_D = param0;
-          fl.field_b = param2;
-          ca.b(-69);
+          BufferedSocket.field_b = param2;
+          SocketConnector.b(-69);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "e.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -40,7 +40,7 @@ final class e {
         int var3 = TetraLink.field_J;
         kh[] var1 = new kh[vj.field_n];
         for (var2 = 0; vj.field_n > var2; var2++) {
-          var1[var2] = new kh(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], ga.field_a[var2], ti.field_c);
+          var1[var2] = new kh(ImageProducerRasterBuffer.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], IntrusiveDeque.field_h[var2], sn.field_e[var2], ga.field_a[var2], ti.field_c);
         }
         if (param0 >= 98) {
           an.b(-125);

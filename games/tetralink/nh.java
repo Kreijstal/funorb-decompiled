@@ -24,7 +24,7 @@ final class nh extends hl {
         }
     }
 
-    nh(long param0, hl param1, hl param2, hl param3, oh param4, String param5) {
+    nh(long param0, hl param1, hl param2, hl param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_13_0 = null;
@@ -168,10 +168,10 @@ final class nh extends hl {
             stackIn_13_0 = stackOut_12_0;
             if (var19 == 0) {
               if (stackIn_13_0) {
-                var12 = lj.field_b[var9];
+                var12 = NodeHashTableIterator.field_b[var9];
                 var13 = pl.field_f[var9];
-                var14 = -var12 + lj.field_b[var10];
-                var15 = lj.field_b[var11] - var12;
+                var14 = -var12 + NodeHashTableIterator.field_b[var10];
+                var15 = NodeHashTableIterator.field_b[var11] - var12;
                 var16 = pl.field_f[var10] - var13;
                 var17 = pl.field_f[var11] - var13;
               }

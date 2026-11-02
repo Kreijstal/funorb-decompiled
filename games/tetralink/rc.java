@@ -5,12 +5,12 @@ final class rc extends en {
     private String field_Q;
     static String field_T;
     private int field_V;
-    static ah field_U;
+    static Archive field_U;
     static hl field_S;
     private int field_O;
     private int field_P;
     static long field_N;
-    private jb field_R;
+    private BitmapFont field_R;
     private boolean field_W;
 
     final static int a(CharSequence param0, int param1) {
@@ -63,7 +63,7 @@ final class rc extends en {
         field_T = null;
     }
 
-    rc(int param0, int param1, int param2, int param3, na param4, boolean param5, int param6, int param7, jb param8, int param9, String param10) {
+    rc(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (kg) null, (dn) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

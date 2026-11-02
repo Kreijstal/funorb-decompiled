@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends mc {
+final class ng extends IntrusiveNode {
     static int field_D;
     static int field_t;
     static boolean field_r;
@@ -10,7 +10,7 @@ final class ng extends mc {
     static String field_E;
     lm[] field_v;
     static byte[][] field_q;
-    wf[] field_z;
+    PcmSample[] field_z;
     static String field_x;
     int field_C;
     byte[] field_p;
@@ -53,7 +53,7 @@ final class ng extends mc {
         }
     }
 
-    final boolean a(int[] param0, fa param1, byte param2, byte[] param3) {
+    final boolean a(int[] param0, SoundEffectLibrary param1, byte param2, byte[] param3) {
         int var8 = 0;
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -96,7 +96,7 @@ final class ng extends mc {
                   }
                 }
                 if (var7 != null) {
-                  this.field_z[var8] = (wf) (var7);
+                  this.field_z[var8] = (PcmSample) (var7);
                   this.field_B[var8] = 0;
                 }
               }
@@ -151,11 +151,11 @@ final class ng extends mc {
         int var6 = 0;
         String var7 = null;
         try {
-          ai.field_e[0] = ca.field_i.nextInt();
-          ai.field_e[1] = ca.field_i.nextInt();
-          tb.field_j.field_t = 0;
-          ai.field_e[2] = (int)(ca.field_g >> 32);
-          ai.field_e[3] = (int)ca.field_g;
+          ai.field_e[0] = SocketConnector.field_i.nextInt();
+          ai.field_e[1] = SocketConnector.field_i.nextInt();
+          tb.field_j.position = 0;
+          ai.field_e[2] = (int)(SocketConnector.field_g >> 32);
+          ai.field_e[3] = (int)SocketConnector.field_g;
           tb.field_j.d(ai.field_e[0], (byte) -124);
           tb.field_j.d(ai.field_e[1], (byte) -124);
           tb.field_j.d(ai.field_e[2], (byte) -124);
@@ -163,7 +163,7 @@ final class ng extends mc {
           mh.a(-105, tb.field_j);
           tb.field_j.b(param1, false);
           param3.a(-22017, tb.field_j);
-          nd.field_Lb.field_t = 0;
+          nd.field_Lb.position = 0;
           if (param2) {
             nd.field_Lb.a(18, false);
           } else {
@@ -172,15 +172,15 @@ final class ng extends mc {
           if (param0 != -34) {
             return;
           }
-          nd.field_Lb.field_t = nd.field_Lb.field_t + 2;
-          var5_int = nd.field_Lb.field_t;
+          nd.field_Lb.position = nd.field_Lb.position + 2;
+          var5_int = nd.field_Lb.position;
           nd.field_Lb.d(lm.field_g, (byte) -124);
           nd.field_Lb.a(-1, tc.field_s);
           var6 = 0;
           if (pg.field_m) {
             var6 = var6 | 1;
           }
-          if (mc.field_k) {
+          if (IntrusiveNode.field_k) {
             var6 = var6 | 4;
           }
           if (param4) {
@@ -199,7 +199,7 @@ final class ng extends mc {
             nd.field_Lb.a(cl.field_b, (byte) 103);
           }
           ae.a(ki.field_c, nd.field_Lb, tb.field_j, jg.field_c, 97);
-          nd.field_Lb.a((byte) 17, nd.field_Lb.field_t - var5_int);
+          nd.field_Lb.a((byte) 17, nd.field_Lb.position - var5_int);
           ak.a((byte) -82, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ final class ng extends mc {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        bh var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         lm var40 = null;
         byte[] var41 = null;
@@ -362,15 +362,15 @@ final class ng extends mc {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_z = new wf[128];
+          this.field_z = new PcmSample[128];
           this.field_B = new int[128];
           this.field_o = new short[128];
           this.field_A = new byte[128];
           this.field_p = new byte[128];
           this.field_w = new byte[128];
           this.field_v = new lm[128];
-          var38 = new bh(param0);
-          for (var3 = 0; var38.field_u[var3 + var38.field_t] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -379,10 +379,10 @@ final class ng extends mc {
             var4[var5] = var38.g(-1772093437);
           }
           var3++;
-          var38.field_t = var38.field_t + 1;
-          var5Lifetime1 = var38.field_t;
-          var38.field_t = var38.field_t + var3;
-          for (var6 = 0; 0 != var38.field_u[var38.field_t + var6]; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; 0 != var38.payload[var38.position + var6]; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -390,11 +390,11 @@ final class ng extends mc {
           for (var8 = 0; var8 < var6; var8++) {
             var7[var8] = var38.g(-1772093437);
           }
-          var38.field_t = var38.field_t + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_t;
-          var38.field_t = var38.field_t + var6;
-          for (var9 = 0; 0 != var38.field_u[var9 + var38.field_t]; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; 0 != var38.payload[var9 + var38.position]; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -403,7 +403,7 @@ final class ng extends mc {
             var10[var11_int] = var38.g(-1772093437);
           }
           var9++;
-          var38.field_t = var38.field_t + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -461,7 +461,7 @@ final class ng extends mc {
           var58 = stackIn_42_0;
           var47 = var58;
           var16 = var47;
-          for (var17 = 0; 0 != var38.field_u[var38.field_t + var17]; var17++) {
+          for (var17 = 0; 0 != var38.payload[var38.position + var17]; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -469,7 +469,7 @@ final class ng extends mc {
           for (var19 = 0; var17 > var19; var19++) {
             var18[var19] = var38.g(-1772093437);
           }
-          var38.field_t = var38.field_t + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
@@ -510,7 +510,7 @@ final class ng extends mc {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_u[incrementValue$6];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
               var20Lifetime3--;
               this.field_p[var24] = (byte)var23Lifetime1;
@@ -529,7 +529,7 @@ final class ng extends mc {
                 }
                 incrementValue$4 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_u[incrementValue$4] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$4] << 2;
               }
               this.field_w[var25_int] = (byte)var24Lifetime1;
               var20Lifetime4--;

@@ -5,11 +5,11 @@ final class ec {
     static String field_f;
     private int field_c;
     static String field_g;
-    private ea field_m;
+    private IterableNodeHashTable field_m;
     private int field_j;
     static mh field_a;
-    static oh[] field_n;
-    private rk field_o;
+    static Sprite[] field_n;
+    private SecondaryNodeDeque field_o;
     static ob field_l;
     static int field_i;
     static String field_h;
@@ -56,7 +56,7 @@ final class ec {
         this.a(var4, 44);
     }
 
-    final static hl a(int param0, jb param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static hl a(int param0, BitmapFont param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         hl var13 = null;
         RuntimeException var13_ref = null;
         hl stackIn_2_0 = null;
@@ -67,11 +67,11 @@ final class ec {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new hl(0L, (hl) null);
-          var13.field_Eb = wm.a((byte) 28, param9, param11);
-          var13.field_kb = wm.a((byte) 28, param0, param10);
-          var13.field_pb = wm.a((byte) 28, param8, param7);
-          var13.field_Gb = wm.a((byte) 28, param3, param2);
-          var13.field_H = wm.a((byte) 28, param6, param5);
+          var13.field_Eb = ImageProducerRasterBuffer.a((byte) 28, param9, param11);
+          var13.field_kb = ImageProducerRasterBuffer.a((byte) 28, param0, param10);
+          var13.field_pb = ImageProducerRasterBuffer.a((byte) 28, param8, param7);
+          var13.field_Gb = ImageProducerRasterBuffer.a((byte) 28, param3, param2);
+          var13.field_H = ImageProducerRasterBuffer.a((byte) 28, param6, param5);
           var13.field_N = param12;
           var13.field_Ib = param1;
           if (param4 == -120) {
@@ -132,26 +132,26 @@ final class ec {
           ec.a(false, -84);
           if (!var7.f(105)) {
             this.field_o.a((byte) -50, var7);
-            var7.field_n = 0L;
+            var7.secondaryKey = 0L;
             return var5;
           }
           var6 = new wc(var5, var7.field_t);
-          this.field_m.a(var7.field_c, var6, false);
+          this.field_m.a(var7.key, var6, false);
           this.field_o.a((byte) -85, var6);
-          ((mb) ((Object) var6)).field_n = 0L;
+          ((mb) ((Object) var6)).secondaryKey = 0L;
           var7.b(false);
           var7.e(0);
           return var5;
         }
         if (!var7.f(105)) {
           this.field_o.a((byte) -50, var7);
-          var7.field_n = 0L;
+          var7.secondaryKey = 0L;
           return var5;
         }
         var6Lifetime1 = new wc(var5, var7.field_t);
-        this.field_m.a(var7.field_c, var6Lifetime1, false);
+        this.field_m.a(var7.key, var6Lifetime1, false);
         this.field_o.a((byte) -85, var6Lifetime1);
-        ((mb) ((Object) var6Lifetime1)).field_n = 0L;
+        ((mb) ((Object) var6Lifetime1)).secondaryKey = 0L;
         var7.b(false);
         var7.e(0);
         return var5;
@@ -191,7 +191,7 @@ final class ec {
           var6_ref = new wc(param1, param3);
           this.field_m.a(param2, var6_ref, false);
           this.field_o.a((byte) -14, var6_ref);
-          ((mb) ((Object) var6_ref)).field_n = (long)param0;
+          ((mb) ((Object) var6_ref)).secondaryKey = (long)param0;
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "ec.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -199,13 +199,13 @@ final class ec {
 
     private ec(int param0, int param1) {
         int var3;
-        this.field_o = new rk();
+        this.field_o = new SecondaryNodeDeque();
         this.field_c = param0;
         this.field_j = param0;
         var3 = 1;
         while (true) {
           if (param0 <= var3 + var3) {
-            this.field_m = new ea(var3);
+            this.field_m = new IterableNodeHashTable(var3);
             return;
           }
           if (param1 > var3) {
@@ -214,7 +214,7 @@ final class ec {
           }
           break;
         }
-        this.field_m = new ea(var3);
+        this.field_m = new IterableNodeHashTable(var3);
         return;
     }
 

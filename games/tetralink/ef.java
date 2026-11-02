@@ -10,7 +10,7 @@ final class ef extends uh {
     private long field_i;
     private long field_p;
     private int field_m;
-    static oh field_k;
+    static Sprite field_k;
     static boolean field_n;
 
     final static void a(int param0, int param1, int param2) {
@@ -47,10 +47,10 @@ final class ef extends uh {
         }
         sk.a((byte) 115, cl.field_d);
         vn.b();
-        ra.a();
+        SoftwareRasterizer.a();
         ni.a((byte) 71);
         if (var5 < 256) {
-          ra.d(0, 0, ra.field_f, ra.field_e, 0, -var5 + 256);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, -var5 + 256);
         }
         var6 = -23 / ((param2 + 17) / 41);
         dh.a(-581);
@@ -172,11 +172,11 @@ final class ef extends uh {
             return stackIn_8_0;
           }
           if (param2 == 7) {
-            stackIn_11_0 = na.field_q;
+            stackIn_11_0 = UiWidget.field_q;
             return stackIn_11_0;
           }
           if (8 == param2) {
-            stackIn_14_0 = fl.field_h;
+            stackIn_14_0 = BufferedSocket.field_h;
             return stackIn_14_0;
           }
           if (param2 == 9) {

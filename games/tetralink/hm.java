@@ -20,7 +20,7 @@ abstract class hm {
         field_c = null;
     }
 
-    abstract void a(int param0, bh param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     static {
         field_z = "hm.E(";

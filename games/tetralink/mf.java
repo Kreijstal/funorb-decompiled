@@ -4,11 +4,11 @@
 import java.util.*;
 
 class mf extends al {
-    static pk field_s;
+    static WidgetContainer field_s;
     static Calendar field_t;
     static int field_u;
-    static oh[] field_q;
-    static ah field_v;
+    static Sprite[] field_q;
+    static Archive field_v;
     static String field_r;
     static ob field_w;
 
@@ -49,7 +49,7 @@ class mf extends al {
         }
     }
 
-    mf(jb param0, int param1) {
+    mf(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_N, -1, 2147483647, false);
     }
 
@@ -80,7 +80,7 @@ class mf extends al {
         }
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         try {
           if (param4) {
             in.a(param1 + param0.field_t, param0.field_w + param2, (byte) -110, param0.field_F, param0.field_u);
@@ -154,7 +154,7 @@ class mf extends al {
           }
           if (var3 == 0 &&
             2 == f.field_z) {
-            var4 = -tg.field_a + k.a(0);
+            var4 = -IntrusiveDequeCursor.field_a + k.a(0);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

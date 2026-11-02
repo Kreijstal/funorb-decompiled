@@ -34,7 +34,7 @@ final class tm extends um {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!fl.a((byte) 123, var4)) {
+          if (!BufferedSocket.a((byte) 123, var4)) {
             stackIn_3_0 = db.field_h;
             return stackIn_3_0;
           }
@@ -159,10 +159,10 @@ final class tm extends um {
           kn.field_a = param4;
           oj.field_c = -1L;
           hg.field_k = param6.length;
-          kl.field_a = false;
+          FullscreenFocusCanvas.field_a = false;
           km.field_o = new byte[(kn.field_a + 7) / 8];
           qb.field_N = null;
-          qe.field_a = null;
+          GameKeyHandler.field_a = null;
           var10_int = 0;
           for (var11 = 0; var11 < nn.field_Y.length; var11++) {
             var10_int = var10_int + (255 & nn.field_Y[var11]);
@@ -170,7 +170,7 @@ final class tm extends um {
           var10_int = (7 + var10_int) / 8;
           lo.field_a = new byte[var10_int];
           if (param5.field_fb == null) {
-            param5.field_fb = new je();
+            param5.field_fb = new IntrusiveDeque();
           }
           if (param0 != -58) {
             tm.g(71);
@@ -181,15 +181,15 @@ final class tm extends um {
           aa.field_Pb = -1;
           nd.field_Nb = 0;
           ja.field_g = 0;
-          mc.field_l = -1;
+          IntrusiveNode.field_l = -1;
           if (null == param7.field_fb) {
-            param7.field_fb = new je();
+            param7.field_fb = new IntrusiveDeque();
           }
           jl.field_a = param7.field_fb;
           jl.field_a.b(1);
           db.field_e = new kd(param1);
           if (null == param2.field_fb) {
-            param2.field_fb = new je();
+            param2.field_fb = new IntrusiveDeque();
           }
           ui.field_d = param2.field_fb;
           ui.field_d.b(1);

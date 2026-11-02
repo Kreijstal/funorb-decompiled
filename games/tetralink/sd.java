@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sd extends ml {
-    static oh[] field_qb;
+    static Sprite[] field_qb;
     static String field_ob;
     static hl field_rb;
     static String field_pb;
     static kd field_nb;
 
-    final void e(na param0, int param1) {
+    final void e(UiWidget param0, int param1) {
         try {
           super.e(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -16,7 +16,7 @@ final class sd extends ml {
         }
     }
 
-    sd(pk param0, na param1) {
+    sd(WidgetContainer param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -92,7 +92,7 @@ final class sd extends ml {
         }
     }
 
-    final static boolean a(byte param0, ah param1) {
+    final static boolean a(byte param0, Archive param1) {
         RuntimeException var2 = null;
         String var3 = null;
         boolean stackIn_3_0 = false;
@@ -165,7 +165,7 @@ final class sd extends ml {
           cc.c(param0 - 9216);
           fn.field_R = 11;
         } else {
-          if (!wm.b(param0 - 27112)) {
+          if (!ImageProducerRasterBuffer.b(param0 - 27112)) {
             cc.c(param0 - 9216);
             fn.field_R = 11;
           }

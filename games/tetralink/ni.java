@@ -5,7 +5,7 @@ final class ni {
     static int field_c;
     private java.math.BigInteger field_j;
     private java.math.BigInteger field_e;
-    private bh field_d;
+    private PacketBuffer field_d;
     private th field_a;
     static db field_h;
     private bo[] field_f;
@@ -37,7 +37,7 @@ final class ni {
               stackIn_9_0 = this.field_f[param0];
               return stackIn_9_0;
             }
-            this.field_d.field_t = param0 * 72 + 6;
+            this.field_d.position = param0 * 72 + 6;
             var6_int = this.field_d.f(12);
             var7 = this.field_d.f(126);
             var13 = new byte[64];
@@ -82,7 +82,7 @@ final class ni {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        bh var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -100,14 +100,14 @@ final class ni {
         if (this.field_g.field_v) {
           return false;
         }
-        var10 = new bh(this.field_g.c(true));
-        var10.field_t = 5;
+        var10 = new PacketBuffer(this.field_g.c(true));
+        var10.position = 5;
         var3 = var10.d((byte) -99);
         if (param0 != 9) {
           ni.c((byte) 110);
         }
-        var10.field_t = var10.field_t + var3 * 72;
-        var13 = new byte[-var10.field_t + var10.field_u.length];
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.b(var13.length, 0, var13, -26);
@@ -122,7 +122,7 @@ final class ni {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = qb.a(var10.field_u, (byte) -89, -var13.length + (var10.field_t - 5), 5);
+        var15 = qb.a(var10.payload, (byte) -89, -var13.length + (var10.position - 5), 5);
         for (var7 = 0; 64 > var7; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();
@@ -165,9 +165,9 @@ final class ni {
         }
     }
 
-    final static void a(ah param0, fg param1, int param2, byte param3) {
+    final static void a(Archive param0, fg param1, int param2, byte param3) {
         try {
-          cn.field_f = va.a(param3 ^ 4) * param2 / 1000;
+          ClientException.field_f = va.a(param3 ^ 4) * param2 / 1000;
           ug.a(param3 ^ -126, param0);
           ji.a(param0, 1);
           kj.a(3, param0);
@@ -176,7 +176,7 @@ final class ni {
           if (param3 != -5) {
             field_c = -68;
           }
-          en.field_K = -cn.field_f + 0;
+          en.field_K = -ClientException.field_f + 0;
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "ni.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -236,7 +236,7 @@ final class ni {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_id = wa.field_f[var3];
             var4_ref_id.b(false);
-            na.a(var3, false);
+            UiWidget.a(var3, false);
             var5 = var4_ref_id.field_a + var4_ref_id.field_j >> 1;
             var6 = var4_ref_id.field_L + var4_ref_id.field_f >> 1;
             var7 = var4_ref_id.field_m + var4_ref_id.field_P >> 1;
@@ -284,11 +284,11 @@ final class ni {
             }
             var2[var16] = -2147483648;
             var17 = wa.field_f[var16];
-            na.a(var16, false);
+            UiWidget.a(var16, false);
             for (var18 = 0; var18 < 3; var18++) {
               bk.field_k[var18] = bk.field_k[var18] + da.field_b[var15][var18];
             }
-            na.a(ec.field_e, true, bk.field_k, 9, false, false, var17);
+            UiWidget.a(ec.field_e, true, bk.field_k, 9, false, false, var17);
             bf.a(65793, var7Lifetime1, var17, var12Lifetime1, var13Lifetime1, var8Lifetime1, var9Lifetime1, var14);
           }
           return;

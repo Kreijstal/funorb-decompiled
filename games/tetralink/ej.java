@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends mc {
+final class ej extends IntrusiveNode {
     int field_u;
     int field_q;
     static db field_r;
@@ -14,7 +14,7 @@ final class ej extends mc {
     static int field_z;
     static String field_t;
     static byte[] field_o;
-    static oh field_v;
+    static Sprite field_v;
 
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
@@ -26,7 +26,7 @@ final class ej extends mc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 4) {
-            field_v = (oh) null;
+            field_v = (Sprite) null;
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = ik.field_f.equals(cc.a(var3, (byte) 103));

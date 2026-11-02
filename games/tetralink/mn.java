@@ -36,7 +36,7 @@ final class mn {
         }
     }
 
-    final static nl[] a(ie param0, int param1) {
+    final static nl[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         nl[] stackIn_3_0 = null;
         nl[] stackIn_10_0 = null;
@@ -50,7 +50,7 @@ final class mn {
         nl[] var4 = null;
         nl var6 = null;
         int var7 = 0;
-        vl var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = TetraLink.field_J;
@@ -127,8 +127,8 @@ final class mn {
         var14 = TetraLink.field_J;
         try {
           var6_int = 485 + param2 + 8 - (-2 - param1 - 8);
-          ea.field_f.a((byte) -104, -6 + var6_int, 3, oj.field_a.field_R - 6, 3);
-          var7 = -5 + ea.field_f.field_R;
+          IterableNodeHashTable.field_f.a((byte) -104, -6 + var6_int, 3, oj.field_a.field_R - 6, 3);
+          var7 = -5 + IterableNodeHashTable.field_f.field_R;
           pj.field_d.a((byte) -109, param1 + param2 + 487, var7 - param3, param3, 5);
           in.field_g.a((byte) -112, -param2 + (pj.field_d.field_Hb - ba.field_L.field_Hb), 0, param3, param2);
           ba.field_L.a((byte) -96, ba.field_L.field_Hb, 0, param3, param2 + in.field_g.field_Hb);

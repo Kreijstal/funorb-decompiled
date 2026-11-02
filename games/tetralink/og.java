@@ -4,7 +4,7 @@
 final class og implements kg {
     static hl[] field_o;
     private int field_q;
-    static je field_j;
+    static IntrusiveDeque field_j;
     private int field_e;
     private int field_b;
     private int field_n;
@@ -12,7 +12,7 @@ final class og implements kg {
     static String[] field_h;
     private int field_c;
     static int field_i;
-    private jb field_k;
+    private BitmapFont field_k;
     private int field_g;
     private int field_m;
     private int field_d;
@@ -29,8 +29,8 @@ final class og implements kg {
         }
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
-        na stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -43,7 +43,7 @@ final class og implements kg {
         re var11 = null;
         try {
           if (param0 instanceof re) {
-            stackIn_3_0 = (na) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           } else {
             stackIn_3_0 = null;
           }
@@ -55,17 +55,17 @@ final class og implements kg {
             field_f = 95;
           }
           var7 = 5592405;
-          ra.c(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_q);
+          SoftwareRasterizer.c(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_q);
           if (param4) {
             var7 = 16777215;
           }
           var8 = this.field_g + (param1 + param0.field_t);
           var9 = param2 + param0.field_w + this.field_a;
-          ra.a(var8, var9, this.field_l, this.field_e, 5592405);
-          ra.c(var8, var9, this.field_l, this.field_e, var7);
+          SoftwareRasterizer.a(var8, var9, this.field_l, this.field_e, 5592405);
+          SoftwareRasterizer.c(var8, var9, this.field_l, this.field_e, var7);
           if (var11.field_N) {
-            ra.d(var8, var9, this.field_l + var8, this.field_e + var9, 1);
-            ra.d(this.field_l + var8, var9, var8, var9 + this.field_e, 1);
+            SoftwareRasterizer.d(var8, var9, this.field_l + var8, this.field_e + var9, 1);
+            SoftwareRasterizer.d(this.field_l + var8, var9, var8, var9 + this.field_e, 1);
           }
           if (this.field_k == null) {
             return;
@@ -87,7 +87,7 @@ final class og implements kg {
         }
     }
 
-    og(jb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    og(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_d = 1;
         this.field_m = 1;
         try {

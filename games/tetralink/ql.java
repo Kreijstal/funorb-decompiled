@@ -269,7 +269,7 @@ final class ql {
         return 0;
     }
 
-    final void a(bh param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_c = new td();
@@ -278,7 +278,7 @@ final class ql {
         this.field_n.a(param0);
         int var2 = param0.d((byte) -99);
         if (var2 != 0) {
-          param0.field_t = param0.field_t - 1;
+          param0.position = param0.position - 1;
           this.field_o = new td();
           this.field_o.a(param0);
           this.field_g = new td();
@@ -286,7 +286,7 @@ final class ql {
         }
         var2 = param0.d((byte) -99);
         if (var2 != 0) {
-          param0.field_t = param0.field_t - 1;
+          param0.position = param0.position - 1;
           this.field_u = new td();
           this.field_u.a(param0);
           this.field_a = new td();
@@ -294,7 +294,7 @@ final class ql {
         }
         var2 = param0.d((byte) -99);
         if (var2 != 0) {
-          param0.field_t = param0.field_t - 1;
+          param0.position = param0.position - 1;
           this.field_p = new td();
           this.field_p.a(param0);
           this.field_i = new td();
