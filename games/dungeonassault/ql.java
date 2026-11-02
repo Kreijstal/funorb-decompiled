@@ -35,8 +35,8 @@ final class ql extends java.awt.Canvas {
           field_h = null;
           return;
         }
-        nh var2 = (nh) null;
-        ql.a((nh) null, (nh) null, (byte) 30, (nh) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        ql.a((ResourceArchive) null, (ResourceArchive) null, (byte) 30, (ResourceArchive) null);
         field_f = null;
         field_c = null;
         field_e = null;
@@ -44,7 +44,7 @@ final class ql extends java.awt.Canvas {
         field_h = null;
     }
 
-    final static boolean a(nh param0, nh param1, byte param2, nh param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_17_0 = null;

@@ -69,7 +69,7 @@ final class ja {
           param5 = param5 + param4;
           var7_int = 0;
           var8 = param3;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param0[var8];
             if (var9 < 0) {
               var7_int = this.field_e[var7_int];
@@ -83,7 +83,7 @@ final class ja {
               param4++;
               param1[incrementValue$1] = (byte)(~var10);
               if (param4 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -99,7 +99,7 @@ final class ja {
               param4++;
               param1[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param4 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -115,7 +115,7 @@ final class ja {
               param4++;
               param1[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param5 <= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -131,7 +131,7 @@ final class ja {
               param4++;
               param1[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param5 <= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -147,7 +147,7 @@ final class ja {
               param4++;
               param1[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param4 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -179,7 +179,7 @@ final class ja {
               param4++;
               param1[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param4 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -195,7 +195,7 @@ final class ja {
               param4++;
               param1[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param4 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -372,16 +372,16 @@ final class ja {
           }
           if (!param3) {
             var5_int = 0;
-            if (og.field_f > param1) {
-              var5_int = -param1 + og.field_f;
+            if (KeyboardInput.field_f > param1) {
+              var5_int = -param1 + KeyboardInput.field_f;
             }
             var6 = param4.length;
-            if (param4.length + param1 > fb.field_d.length + og.field_f) {
-              var6 = fb.field_d.length + (og.field_f - param1);
+            if (param4.length + param1 > fb.field_d.length + KeyboardInput.field_f) {
+              var6 = fb.field_d.length + (KeyboardInput.field_f - param1);
             }
             for (var7 = var5_int; var7 < var6; var7++) {
               param4[var7].field_b = var7 + param1;
-              fb.field_d[var7 + param1 - og.field_f] = param4[var7];
+              fb.field_d[var7 + param1 - KeyboardInput.field_f] = param4[var7];
             }
             return;
           }
@@ -389,7 +389,7 @@ final class ja {
           if (null == ip.field_j) {
             return;
           }
-          og.field_f = param1;
+          KeyboardInput.field_f = param1;
           vd.field_a = param1;
           hi.field_c.field_z = param1;
           for (var6Lifetime1 = 0; param4.length > var6Lifetime1; var6Lifetime1++) {
@@ -456,16 +456,16 @@ final class ja {
           }
           if (!param3) {
             var5_int = 0;
-            if (og.field_f > param1) {
-              var5_int = -param1 + og.field_f;
+            if (KeyboardInput.field_f > param1) {
+              var5_int = -param1 + KeyboardInput.field_f;
             }
             var6 = param4.length;
-            if (param4.length + param1 > fb.field_d.length + og.field_f) {
-              var6 = fb.field_d.length + (og.field_f - param1);
+            if (param4.length + param1 > fb.field_d.length + KeyboardInput.field_f) {
+              var6 = fb.field_d.length + (KeyboardInput.field_f - param1);
             }
             for (var7 = var5_int; var7 < var6; var7++) {
               param4[var7].field_b = var7 + param1;
-              fb.field_d[var7 + param1 - og.field_f] = param4[var7];
+              fb.field_d[var7 + param1 - KeyboardInput.field_f] = param4[var7];
             }
             return;
           }
@@ -473,7 +473,7 @@ final class ja {
           if (null == ip.field_j) {
             return;
           }
-          og.field_f = param1;
+          KeyboardInput.field_f = param1;
           vd.field_a = param1;
           hi.field_c.field_z = param1;
           for (var6Lifetime1 = 0; param4.length > var6Lifetime1; var6Lifetime1++) {

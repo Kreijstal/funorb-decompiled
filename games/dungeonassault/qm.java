@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qm extends ip {
-    static md field_q;
+    static IntrusiveDeque field_q;
     static String field_p;
     static cn field_m;
     static long field_o;
@@ -124,7 +124,7 @@ final class qm extends ip {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 != 57) {
-            field_q = (md) null;
+            field_q = (IntrusiveDeque) null;
           }
           var7 = new cd(param4);
           var8 = new cd(param6);
@@ -158,6 +158,6 @@ final class qm extends ip {
 
     static {
         field_p = "<col=FF0000>Attack -2</col>";
-        field_q = new md();
+        field_q = new IntrusiveDeque();
     }
 }

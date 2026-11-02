@@ -7,7 +7,7 @@ final class lj implements cl {
     private int field_t;
     static cn field_o;
     static int field_u;
-    private pj field_h;
+    private CombatState field_h;
     static String field_p;
     private int[][] field_w;
     private wm field_k;
@@ -66,8 +66,8 @@ final class lj implements cl {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           var2_int = -126 % ((21 - param1) / 40);
-          param0.addKeyListener(in.field_C);
-          param0.addFocusListener(in.field_C);
+          param0.addKeyListener(NetworkGameClient.field_C);
+          param0.addFocusListener(NetworkGameClient.field_C);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -279,7 +279,7 @@ final class lj implements cl {
           if (0 < param2 ||
             param0) {
             if (param2 % 30 >= 15) {
-              ec.a(this.field_l, this.field_q - 224, (byte) -72, this.field_f, 16711680, 256);
+              PacketBuffer.a(this.field_l, this.field_q - 224, (byte) -72, this.field_f, 16711680, 256);
               if (DungeonAssault.field_K != 0) {
                 this.field_f.b(-224 + this.field_q, this.field_l, 256);
               }
@@ -831,15 +831,15 @@ final class lj implements cl {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        hb[] var6 = null;
+        Raider[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         var8 = DungeonAssault.field_K;
         try {
           var5_int = 0;
-          var6 = new hb[4];
+          var6 = new Raider[4];
           var7 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (4 > var7) {
               if (var8 == 0) {
                 if (this.field_h.field_A[var7] != null &&
@@ -860,7 +860,7 @@ final class lj implements cl {
                   this.a(44 + param1, 256, 128, var6[1].field_c, param2, param3 + 37);
                   this.a(param1 + 32, 256, 128, var6[2].field_c, param2, 48 + param3);
                   if (var8 == 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                 default:
                   this.a(param1 + 32, 256, 96, var6[0].field_c, param2, 31 + param3);
@@ -868,13 +868,13 @@ final class lj implements cl {
                   this.a(48 + param1, 256, 96, var6[2].field_c, param2, 41 + param3);
                   this.a(32 + param1, 256, 96, var6[3].field_c, param2, 51 + param3);
                   if (var8 == 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                 case 2:
                   this.a(22 + param1, 256, 144, var6[0].field_c, param2, 45 + param3);
                   this.a(42 + param1, 256, 144, var6[1].field_c, param2, param3 + 45);
                   if (var8 == 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   break;
                 case 1:
@@ -942,21 +942,21 @@ final class lj implements cl {
               var7_int = param2 - 7;
               if (this.field_h.field_p.a(var7_int, (byte) 110) &&
                 this.field_i.a(var7_int + 42, (byte) 78)) {
-                ec.a(18 + param1, param0, (byte) -80, mf.field_b[0], (je.field_d[this.field_a[var7_int]] >> 1 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> 2);
+                PacketBuffer.a(18 + param1, param0, (byte) -80, mf.field_b[0], (je.field_d[this.field_a[var7_int]] >> 1 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> 2);
               }
             }
             if (param2 % 7 != 6) {
               var7_intLifetime2 = 1 + param2;
               if (this.field_h.field_p.a(var7_intLifetime2, (byte) 93) &&
                 this.field_i.a(param2 - param2 / 7, (byte) 121)) {
-                ec.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime2]] >> 1), this.a((byte) -8, var7_intLifetime2) >> 2);
+                PacketBuffer.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime2]] >> 1), this.a((byte) -8, var7_intLifetime2) >> 2);
               }
             }
             if (param2 < 42) {
               var7_intLifetime3 = 7 + param2;
               if (this.field_h.field_p.a(var7_intLifetime3, (byte) 104) &&
                 this.field_i.a(param2 + 42, (byte) 97)) {
-                ec.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & je.field_d[this.field_a[var7_intLifetime3]] >> 1) + 8421504, this.a((byte) -67, var7_intLifetime3) >> 2);
+                PacketBuffer.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & je.field_d[this.field_a[var7_intLifetime3]] >> 1) + 8421504, this.a((byte) -67, var7_intLifetime3) >> 2);
               }
             }
             if (0 == param2 % 7) {
@@ -965,7 +965,7 @@ final class lj implements cl {
             var7_intLifetime4 = -1 + param2;
             if (this.field_h.field_p.a(var7_intLifetime4, (byte) 114) &&
               this.field_i.a(var7_intLifetime4 - var7_intLifetime4 / 7, (byte) 101)) {
-              ec.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((je.field_d[this.field_a[var7_intLifetime4]] & 16711422) >> 1) + 8421504, this.a((byte) -36, var7_intLifetime4) >> 2);
+              PacketBuffer.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((je.field_d[this.field_a[var7_intLifetime4]] & 16711422) >> 1) + 8421504, this.a((byte) -36, var7_intLifetime4) >> 2);
             }
             if (var10 == 0) {
               return;
@@ -1012,7 +1012,7 @@ final class lj implements cl {
               }
             }
             if (this.field_h != null) {
-              L17: {
+              regionExit1: {
                 boolean decompiledFrameCompleted0 = true;
                 boolean decompiledFrameCompleted1 = true;
                 if (this.field_v[param2] != null) {
@@ -1043,33 +1043,33 @@ final class lj implements cl {
                 }
                 if ((decompiledFrameCompleted0) &&
                   (param2 <= 6)) {
-                  break L17;
+                  break regionExit1;
                 }
                 var7_intLifetime1Lifetime1 = -7 + param2;
                 if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 106) &&
                   this.field_i.a(var7_intLifetime1Lifetime1 + 42, (byte) 86)) {
-                  ec.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 + ((16711422 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]]) >> 1), this.a((byte) -39, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 + ((16711422 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]]) >> 1), this.a((byte) -39, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 % 7 != 6) {
                 var7_intLifetime1Lifetime1 = param2 + 1;
                 if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 110) &&
                   this.field_i.a(-(param2 / 7) + param2, (byte) 92)) {
-                  ec.a(param1 + 18, param0, (byte) -82, mf.field_b[1], ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1) + 8421504, this.a((byte) -57, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(param1 + 18, param0, (byte) -82, mf.field_b[1], ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1) + 8421504, this.a((byte) -57, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 < 42) {
                 var7_intLifetime1Lifetime1 = 7 + param2;
                 if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 93) &&
                   this.field_i.a(param2 + 42, (byte) 92)) {
-                  ec.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1), this.a((byte) -56, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1), this.a((byte) -56, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 % 7 != 0) {
                 var7_intLifetime1Lifetime1 = param2 - 1;
                 if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 69) &&
                   this.field_i.a(var7_intLifetime1Lifetime1 - var7_intLifetime1Lifetime1 / 7, (byte) 67)) {
-                  ec.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]] >> 1), this.a((byte) -52, var7_intLifetime1Lifetime1) >> 2);
+                  PacketBuffer.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]] >> 1), this.a((byte) -52, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
             }
@@ -1227,14 +1227,14 @@ final class lj implements cl {
             var2_int++;
           } while (var13 == 0);
           var2_int = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var2_int < 7) {
               var3 = -(32 * (1 + var2_int)) + this.field_q;
               var4 = var2_int * 24 + this.field_l;
               var5 = -var2_int + 6;
               stackIn_119_0 = 0;
               if (var13 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var6 = stackIn_119_0;
               while (1 + var2_int > var6) {
@@ -1323,7 +1323,7 @@ final class lj implements cl {
                 var5 += 8;
               }
               var2_int++;
-              continue L3;
+              continue scanLoop1;
             }
             stackIn_119_0 = 7;
             break;

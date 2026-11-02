@@ -25,7 +25,7 @@ final class ac {
     String field_z;
     static ai field_n;
     eh field_m;
-    static wj field_B;
+    static CipherPacketBuffer field_B;
     String field_t;
     static String field_D;
     static boolean field_l;
@@ -81,10 +81,10 @@ final class ac {
             field_B.d((byte) -99, 58);
           }
           field_B.d((byte) -114, 60);
-          field_B.field_o = field_B.field_o + 1;
-          var2_int = field_B.field_o;
+          field_B.position = field_B.position + 1;
+          var2_int = field_B.position;
           field_B.a(param1 ^ 2, param0);
-          field_B.c(-var2_int + field_B.field_o, -1);
+          field_B.c(-var2_int + field_B.position, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ac.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -102,7 +102,7 @@ final class ac {
         field_B = null;
     }
 
-    final static void a(byte param0, nh param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         jp var2 = null;
         if (param0 != -125) {
           return;

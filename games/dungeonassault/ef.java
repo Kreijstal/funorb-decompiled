@@ -13,8 +13,8 @@ final class ef {
 
     private final boolean a(int param0) {
         if (param0 >= -62) {
-          nh var3 = (nh) null;
-          ef.a(92, -86, (nh) null, 64, (nh) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          ef.a(92, -86, (ResourceArchive) null, 64, (ResourceArchive) null);
           if (rp.field_d == this) {
             return true;
           }
@@ -35,7 +35,7 @@ final class ef {
         return true;
     }
 
-    final static tj a(int param0, int param1, nh param2, int param3, nh param4) {
+    final static tj a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;

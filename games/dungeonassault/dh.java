@@ -7,7 +7,7 @@ final class dh implements Iterable {
     static af field_b;
     static String field_c;
     static String field_f;
-    ll field_d;
+    DualLinkNode field_d;
     static cn field_a;
     static int field_g;
     static String field_e;
@@ -20,7 +20,7 @@ final class dh implements Iterable {
         return true;
     }
 
-    final void a(ll param0, boolean param1) {
+    final void a(DualLinkNode param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -92,8 +92,8 @@ final class dh implements Iterable {
         dh.a(true);
     }
 
-    final ll b(boolean param0) {
-        ll var2 = this.field_d.field_n;
+    final DualLinkNode b(boolean param0) {
+        DualLinkNode var2 = this.field_d.field_n;
         if (this.field_d == var2) {
           return null;
         }
@@ -101,8 +101,8 @@ final class dh implements Iterable {
         if (param0) {
           return var2;
         }
-        ll var3 = (ll) null;
-        this.a((ll) null, false);
+        DualLinkNode var3 = (DualLinkNode) null;
+        this.a((DualLinkNode) null, false);
         return var2;
     }
 

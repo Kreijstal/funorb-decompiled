@@ -7,7 +7,7 @@ final class mi {
     static String[] field_a;
     static int field_f;
     static String field_b;
-    static nh field_e;
+    static ResourceArchive field_e;
 
     final static void a(pp param0, String param1, se param2, int param3, cn param4) {
         int var9_int = 0;
@@ -122,7 +122,7 @@ final class mi {
     final static void a(int param0) {
         lf.field_w = dk.a(120, 1, "da_title3");
         jd.field_o = dk.a(170, 1, "da_intro");
-        wj.field_u = dk.a(150, 1, "da_highscores");
+        CipherPacketBuffer.field_u = dk.a(150, 1, "da_highscores");
         gh.field_d = dk.a(110, 1, "da_ingame_battle");
         if (param0 >= -48) {
           field_b = (String) null;

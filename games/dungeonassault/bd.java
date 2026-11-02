@@ -117,10 +117,10 @@ final class bd extends en {
         if (param1 != 113) {
           bd.a(123, (byte) 56);
         }
-        wj var2 = ac.field_B;
+        CipherPacketBuffer var2 = ac.field_B;
         var2.d((byte) -82, param0);
-        var2.a(6, 1);
-        var2.a(6, 2);
+        var2.writeByte(6, 1);
+        var2.writeByte(6, 2);
     }
 
     final cn b(byte param0) {
@@ -198,7 +198,7 @@ final class bd extends en {
         }
     }
 
-    bd(pj param0, ai param1) {
+    bd(CombatState param0, ai param1) {
         try {
           this.field_d = param1;
           this.field_h = this.field_d.field_h;

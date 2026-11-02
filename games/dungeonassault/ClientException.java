@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends RuntimeException {
+final class ClientException extends RuntimeException {
     static String field_b;
     static char[] field_a;
-    String field_c;
-    Throwable field_d;
+    String context;
+    Throwable cause;
 
     final static void a(int param0, int param1, byte param2, boolean param3, qh param4) {
         byte dupTemp$0 = 0;
@@ -139,7 +139,7 @@ final class b extends RuntimeException {
             }
           }
           if (param2 > -27) {
-            b.b(-114);
+            ClientException.b(-114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class b extends RuntimeException {
         field_a = null;
         field_b = null;
         if (param0 != -30719) {
-          b.a(-59);
+          ClientException.a(-59);
         }
     }
 
@@ -195,7 +195,7 @@ final class b extends RuntimeException {
         try {
           n.field_f[0] = bl.field_i.nextInt();
           n.field_f[1] = bl.field_i.nextInt();
-          ta.field_c.field_o = 0;
+          ta.field_c.position = 0;
           n.field_f[2] = (int)(o.field_j >> 32);
           n.field_f[3] = (int)o.field_j;
           ta.field_c.a((byte) 63, n.field_f[0]);
@@ -203,21 +203,21 @@ final class b extends RuntimeException {
           ta.field_c.a((byte) 63, n.field_f[2]);
           ta.field_c.a((byte) 63, n.field_f[3]);
           mf.a(-30463, ta.field_c);
-          ta.field_c.i(param3, -112);
+          ta.field_c.writeShort(param3, -112);
           param0.a(ta.field_c, (byte) -79);
-          ac.field_B.field_o = 0;
+          ac.field_B.position = 0;
           if (param4) {
-            ac.field_B.a(6, 18);
+            ac.field_B.writeByte(6, 18);
           }
           if (!param4 ||
             DungeonAssault.field_K != 0) {
-            ac.field_B.a(6, 16);
+            ac.field_B.writeByte(6, 16);
           }
           if (param2 > -22) {
             return;
           }
-          ac.field_B.field_o = ac.field_B.field_o + 2;
-          var5_int = ac.field_B.field_o;
+          ac.field_B.position = ac.field_B.position + 2;
+          var5_int = ac.field_B.position;
           ac.field_B.a((byte) 63, la.field_c);
           ac.field_B.a(58, dn.field_Q);
           var6 = 0;
@@ -233,7 +233,7 @@ final class b extends RuntimeException {
           if (pd.field_E != null) {
             var6 = var6 | 16;
           }
-          ac.field_B.a(6, var6);
+          ac.field_B.writeByte(6, var6);
           var7 = oj.a(m.c(true), (byte) 98);
           if (null == var7) {
             var7 = "";
@@ -243,7 +243,7 @@ final class b extends RuntimeException {
             ac.field_B.a(2, pd.field_E);
           }
           of.a(ac.field_B, kd.field_d, om.field_c, (byte) -114, ta.field_c);
-          ac.field_B.b(-var5_int + ac.field_B.field_o, 1);
+          ac.field_B.b(-var5_int + ac.field_B.position, 1);
           op.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,9 +287,9 @@ final class b extends RuntimeException {
         }
     }
 
-    b(Throwable param0, String param1) {
-        this.field_d = param0;
-        this.field_c = param1;
+    ClientException(Throwable param0, String param1) {
+        this.cause = param0;
+        this.context = param1;
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends ne {
+final class vh extends IntrusiveNode {
     wa field_j;
     byte[] field_i;
 
@@ -108,15 +108,15 @@ final class vh extends ne {
         }
     }
 
-    final static vh a(nh param0, String param1, String param2) {
+    final static vh a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, (byte) -122);
         if (var3 == null) {
           return null;
         }
-        return new vh(new ec(var3));
+        return new vh(new PacketBuffer(var3));
     }
 
-    private vh(ec param0) {
+    private vh(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -145,7 +145,7 @@ final class vh extends ne {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        ec stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_85_1 = 0;
         int stackIn_91_0 = 0;
         int var2;
@@ -197,7 +197,7 @@ final class vh extends ne {
         int var48;
         int var49;
         int var50;
-        ec var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -219,11 +219,11 @@ final class vh extends ne {
         int var15Lifetime2;
         int var28Lifetime1;
         int var29Lifetime1;
-        param0.field_o = param0.field_m.length - 3;
+        param0.position = param0.payload.length - 3;
         var2 = param0.c(true);
         var3 = param0.k(0);
         var4 = 14 + var2 * 10;
-        param0.field_o = 0;
+        param0.position = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
@@ -282,13 +282,13 @@ final class vh extends ne {
         var4 = var4 + 5 * var5;
         var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
         var4 = var4 + (var10 + var12);
-        var13Lifetime1 = param0.field_o;
+        var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
           param0.e(-651413500);
         }
-        var4 = var4 + (param0.field_o - var13Lifetime1);
-        var15Lifetime2 = param0.field_o;
+        var4 = var4 + (param0.position - var13Lifetime1);
+        var15Lifetime2 = param0.position;
         var16 = 0;
         var17 = 0;
         var18 = 0;
@@ -375,50 +375,50 @@ final class vh extends ne {
           }
         }
         var29Lifetime1 = 0;
-        var30 = param0.field_o;
-        param0.field_o = param0.field_o + var26;
-        var31 = param0.field_o;
-        param0.field_o = param0.field_o + var11;
-        var32 = param0.field_o;
-        param0.field_o = param0.field_o + var10;
-        var33 = param0.field_o;
-        param0.field_o = param0.field_o + var9;
-        var34 = param0.field_o;
-        param0.field_o = param0.field_o + var16;
-        var35 = param0.field_o;
-        param0.field_o = param0.field_o + var18;
-        var36 = param0.field_o;
-        param0.field_o = param0.field_o + var20;
-        var37 = param0.field_o;
-        param0.field_o = param0.field_o + (var7 + var8 + var11);
-        var38 = param0.field_o;
-        param0.field_o = param0.field_o + var7;
-        var39 = param0.field_o;
-        param0.field_o = param0.field_o + var27;
-        var40 = param0.field_o;
-        param0.field_o = param0.field_o + var8;
-        var41 = param0.field_o;
-        param0.field_o = param0.field_o + var17;
-        var42 = param0.field_o;
-        param0.field_o = param0.field_o + var19;
-        var43 = param0.field_o;
-        param0.field_o = param0.field_o + var21;
-        var44 = param0.field_o;
-        param0.field_o = param0.field_o + var12;
-        var45 = param0.field_o;
-        param0.field_o = param0.field_o + var9;
-        var46 = param0.field_o;
-        param0.field_o = param0.field_o + var22;
-        var47 = param0.field_o;
-        param0.field_o = param0.field_o + var23;
-        var48 = param0.field_o;
-        param0.field_o = param0.field_o + var24;
-        var49 = param0.field_o;
-        param0.field_o = param0.field_o + var25;
-        var50 = param0.field_o;
-        param0.field_o = param0.field_o + var5 * 3;
+        var30 = param0.position;
+        param0.position = param0.position + var26;
+        var31 = param0.position;
+        param0.position = param0.position + var11;
+        var32 = param0.position;
+        param0.position = param0.position + var10;
+        var33 = param0.position;
+        param0.position = param0.position + var9;
+        var34 = param0.position;
+        param0.position = param0.position + var16;
+        var35 = param0.position;
+        param0.position = param0.position + var18;
+        var36 = param0.position;
+        param0.position = param0.position + var20;
+        var37 = param0.position;
+        param0.position = param0.position + (var7 + var8 + var11);
+        var38 = param0.position;
+        param0.position = param0.position + var7;
+        var39 = param0.position;
+        param0.position = param0.position + var27;
+        var40 = param0.position;
+        param0.position = param0.position + var8;
+        var41 = param0.position;
+        param0.position = param0.position + var17;
+        var42 = param0.position;
+        param0.position = param0.position + var19;
+        var43 = param0.position;
+        param0.position = param0.position + var21;
+        var44 = param0.position;
+        param0.position = param0.position + var12;
+        var45 = param0.position;
+        param0.position = param0.position + var9;
+        var46 = param0.position;
+        param0.position = param0.position + var22;
+        var47 = param0.position;
+        param0.position = param0.position + var23;
+        var48 = param0.position;
+        param0.position = param0.position + var24;
+        var49 = param0.position;
+        param0.position = param0.position + var25;
+        var50 = param0.position;
+        param0.position = param0.position + var5 * 3;
         this.field_i = new byte[var4];
-        var51 = new ec(this.field_i);
+        var51 = new PacketBuffer(this.field_i);
         var51.a((byte) 63, 1297377380);
         var51.a((byte) 63, 6);
         stackIn_84_0 = var51;
@@ -427,10 +427,10 @@ final class vh extends ne {
         } else {
           stackIn_85_1 = 1;
         }
-        ((ec) (Object) stackIn_84_0).i(stackIn_85_1, -117);
-        var51.i(var2, -90);
-        var51.i(var3, -125);
-        param0.field_o = var13Lifetime1;
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_85_1, -117);
+        var51.writeShort(var2, -90);
+        var51.writeShort(var3, -125);
+        param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
         var54 = 0;
@@ -446,97 +446,97 @@ final class vh extends ne {
             return;
           }
           var51.a((byte) 63, 1297379947);
-          var51.field_o = var51.field_o + 4;
-          var61 = var51.field_o;
+          var51.position = var51.position + 4;
+          var61 = var51.position;
           var62 = -1;
           while (true) {
             var63 = param0.e(-651413500);
             var51.e(-268435456, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
-            var64 = param0.field_m[incrementValue$0] & 255;
+            var64 = param0.payload[incrementValue$0] & 255;
             stackIn_91_0 = (var64 == var62) ? 0 : 1;
             var65 = stackIn_91_0;
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {
-                var51.a(6, 255);
+                var51.writeByte(6, 255);
               }
-              var51.a(6, 47);
-              var51.a(6, 0);
-              var51.d(1, var51.field_o - var61);
+              var51.writeByte(6, 47);
+              var51.writeByte(6, 0);
+              var51.d(1, var51.position - var61);
               var60++;
               break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
-                var51.a(6, 255);
+                var51.writeByte(6, 255);
               }
-              var51.a(6, 81);
-              var51.a(6, 3);
+              var51.writeByte(6, 81);
+              var51.writeByte(6, 3);
               incrementValue$25 = var50;
               var50++;
-              var51.a(6, (int) param0.field_m[incrementValue$25]);
+              var51.writeByte(6, (int) param0.payload[incrementValue$25]);
               incrementValue$26 = var50;
               var50++;
-              var51.a(6, (int) param0.field_m[incrementValue$26]);
+              var51.writeByte(6, (int) param0.payload[incrementValue$26]);
               incrementValue$27 = var50;
               var50++;
-              var51.a(6, (int) param0.field_m[incrementValue$27]);
+              var51.writeByte(6, (int) param0.payload[incrementValue$27]);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
             if (var62 == 0) {
               if (var65 != 0) {
-                var51.a(6, 144 + var52);
+                var51.writeByte(6, 144 + var52);
               }
               incrementValue$23 = var37;
               var37++;
-              var53 = var53 + param0.field_m[incrementValue$23];
+              var53 = var53 + param0.payload[incrementValue$23];
               incrementValue$24 = var38;
               var38++;
-              var54 = var54 + param0.field_m[incrementValue$24];
-              var51.a(6, var53 & 127);
-              var51.a(6, var54 & 127);
+              var54 = var54 + param0.payload[incrementValue$24];
+              var51.writeByte(6, var53 & 127);
+              var51.writeByte(6, var54 & 127);
               continue;
             }
             if (var62 == 1) {
               if (var65 != 0) {
-                var51.a(6, 128 + var52);
+                var51.writeByte(6, 128 + var52);
               }
               incrementValue$21 = var37;
               var37++;
-              var53 = var53 + param0.field_m[incrementValue$21];
+              var53 = var53 + param0.payload[incrementValue$21];
               incrementValue$22 = var40;
               var40++;
-              var55 = var55 + param0.field_m[incrementValue$22];
-              var51.a(6, var53 & 127);
-              var51.a(6, var55 & 127);
+              var55 = var55 + param0.payload[incrementValue$22];
+              var51.writeByte(6, var53 & 127);
+              var51.writeByte(6, var55 & 127);
               continue;
             }
             if (var62 != 2) {
               if (var62 == 3) {
                 if (var65 != 0) {
-                  var51.a(6, 224 + var52);
+                  var51.writeByte(6, 224 + var52);
                 }
                 incrementValue$5 = var45;
                 var45++;
-                var56 = var56 + param0.field_m[incrementValue$5];
+                var56 = var56 + param0.payload[incrementValue$5];
                 incrementValue$6 = var33;
                 var33++;
-                var56 = var56 + (param0.field_m[incrementValue$6] << 7);
-                var51.a(6, var56 & 127);
-                var51.a(6, var56 >> 7 & 127);
+                var56 = var56 + (param0.payload[incrementValue$6] << 7);
+                var51.writeByte(6, var56 & 127);
+                var51.writeByte(6, var56 >> 7 & 127);
                 continue;
               }
               if (var62 == 4) {
                 if (var65 != 0) {
-                  var51.a(6, 208 + var52);
+                  var51.writeByte(6, 208 + var52);
                 }
                 incrementValue$4 = var32;
                 var32++;
-                var57 = var57 + param0.field_m[incrementValue$4];
-                var51.a(6, var57 & 127);
+                var57 = var57 + param0.payload[incrementValue$4];
+                var51.writeByte(6, var57 & 127);
                 continue;
               }
               if (var62 != 5) {
@@ -544,75 +544,75 @@ final class vh extends ne {
                   throw new RuntimeException();
                 }
                 if (var65 != 0) {
-                  var51.a(6, 192 + var52);
+                  var51.writeByte(6, 192 + var52);
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.a(6, (int) param0.field_m[incrementValue$1]);
+                var51.writeByte(6, (int) param0.payload[incrementValue$1]);
                 continue;
               }
               if (var65 != 0) {
-                var51.a(6, 160 + var52);
+                var51.writeByte(6, 160 + var52);
               }
               incrementValue$2 = var37;
               var37++;
-              var53 = var53 + param0.field_m[incrementValue$2];
+              var53 = var53 + param0.payload[incrementValue$2];
               incrementValue$3 = var31;
               var31++;
-              var58 = var58 + param0.field_m[incrementValue$3];
-              var51.a(6, var53 & 127);
-              var51.a(6, var58 & 127);
+              var58 = var58 + param0.payload[incrementValue$3];
+              var51.writeByte(6, var53 & 127);
+              var51.writeByte(6, var58 & 127);
               continue;
             }
             if (var65 != 0) {
-              var51.a(6, 176 + var52);
+              var51.writeByte(6, 176 + var52);
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
-            var28Lifetime1 = var28Lifetime1 + param0.field_m[incrementValue$7] & 127;
-            var51.a(6, var28Lifetime1);
+            var28Lifetime1 = var28Lifetime1 + param0.payload[incrementValue$7] & 127;
+            var51.writeByte(6, var28Lifetime1);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
                 incrementValue$19 = var34;
                 var34++;
-                var66 = param0.field_m[incrementValue$19];
+                var66 = param0.payload[incrementValue$19];
               } else if (var28Lifetime1 == 33) {
                 incrementValue$18 = var41;
                 var41++;
-                var66 = param0.field_m[incrementValue$18];
+                var66 = param0.payload[incrementValue$18];
               } else if (var28Lifetime1 == 7) {
                 incrementValue$17 = var35;
                 var35++;
-                var66 = param0.field_m[incrementValue$17];
+                var66 = param0.payload[incrementValue$17];
               } else if (var28Lifetime1 == 39) {
                 incrementValue$16 = var42;
                 var42++;
-                var66 = param0.field_m[incrementValue$16];
+                var66 = param0.payload[incrementValue$16];
               } else if (var28Lifetime1 == 10) {
                 incrementValue$15 = var36;
                 var36++;
-                var66 = param0.field_m[incrementValue$15];
+                var66 = param0.payload[incrementValue$15];
               } else if (var28Lifetime1 == 42) {
                 incrementValue$14 = var43;
                 var43++;
-                var66 = param0.field_m[incrementValue$14];
+                var66 = param0.payload[incrementValue$14];
               } else if (var28Lifetime1 == 99) {
                 incrementValue$13 = var46;
                 var46++;
-                var66 = param0.field_m[incrementValue$13];
+                var66 = param0.payload[incrementValue$13];
               } else if (var28Lifetime1 == 98) {
                 incrementValue$12 = var47;
                 var47++;
-                var66 = param0.field_m[incrementValue$12];
+                var66 = param0.payload[incrementValue$12];
               } else if (var28Lifetime1 == 101) {
                 incrementValue$11 = var48;
                 var48++;
-                var66 = param0.field_m[incrementValue$11];
+                var66 = param0.payload[incrementValue$11];
               } else if (var28Lifetime1 == 100) {
                 incrementValue$10 = var49;
                 var49++;
-                var66 = param0.field_m[incrementValue$10];
+                var66 = param0.payload[incrementValue$10];
               } else if (var28Lifetime1 != 64 &&
                 var28Lifetime1 != 65 &&
                 var28Lifetime1 != 120 &&
@@ -620,20 +620,20 @@ final class vh extends ne {
                 var28Lifetime1 != 123) {
                 incrementValue$8 = var39;
                 var39++;
-                var66 = param0.field_m[incrementValue$8];
+                var66 = param0.payload[incrementValue$8];
               } else {
                 incrementValue$9 = var30;
                 var30++;
-                var66 = param0.field_m[incrementValue$9];
+                var66 = param0.payload[incrementValue$9];
               }
             } else {
               incrementValue$20 = var44;
               var44++;
-              var66 = param0.field_m[incrementValue$20];
+              var66 = param0.payload[incrementValue$20];
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;
-            var51.a(6, var66 & 127);
+            var51.writeByte(6, var66 & 127);
           }
         }
     }

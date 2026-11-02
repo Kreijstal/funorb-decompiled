@@ -22,12 +22,12 @@ final class hi {
         RuntimeException decompiledCaughtException = null;
         var2 = DungeonAssault.field_K;
         try {
-          if (null != og.field_e &&
-            og.field_e.field_J != null) {
-            var3 = (lk) (og.field_e.field_J.e(-24172));
+          if (null != KeyboardInput.field_e &&
+            KeyboardInput.field_e.field_J != null) {
+            var3 = (lk) (KeyboardInput.field_e.field_J.e(-24172));
             while (var3 != null) {
               var3.g(255);
-              var3 = (lk) (og.field_e.field_J.a(param0 + 3));
+              var3 = (lk) (KeyboardInput.field_e.field_J.a(param0 + 3));
             }
             if (param0 == 1) {
               return;

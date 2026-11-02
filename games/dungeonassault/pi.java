@@ -191,7 +191,7 @@ final class pi {
           return null;
         }
         ol.field_i = sp.field_e;
-        return mh.field_b;
+        return MouseInput.field_b;
     }
 
     final void a(boolean param0, pi param1) {
@@ -294,7 +294,7 @@ final class pi {
         return this;
     }
 
-    final static byte[] a(String param0, int param1, String param2, String param3, int param4, int param5, nh param6) {
+    final static byte[] a(String param0, int param1, String param2, String param3, int param4, int param5, ResourceArchive param6) {
         Object stackIn_3_0 = null;
         byte[] stackIn_40_0 = null;
         RuntimeException stackIn_43_0 = null;
@@ -347,28 +347,28 @@ final class pi {
           if (var15 == null) {
             return null;
           }
-          oi.field_J.field_o = 0;
-          oi.field_J.a(6, 255);
-          oi.field_J.a(param1 ^ 6, 216);
-          oi.field_J.a(6, 255);
-          oi.field_J.a(6, 224);
-          oi.field_J.i(16, -121);
+          oi.field_J.position = 0;
+          oi.field_J.writeByte(6, 255);
+          oi.field_J.writeByte(param1 ^ 6, 216);
+          oi.field_J.writeByte(6, 255);
+          oi.field_J.writeByte(6, 224);
+          oi.field_J.writeShort(16, -121);
           var22 = he.field_o;
           var16 = var22;
           var14 = var16;
           var8 = var14;
           for (var9 = 0; var9 < var22.length; var9++) {
             var10_int = var22[var9];
-            oi.field_J.a(6, var10_int);
+            oi.field_J.writeByte(6, var10_int);
           }
-          oi.field_J.i(258, param1 ^ -91);
-          oi.field_J.a(6, 0);
-          oi.field_J.i(1, -110);
-          oi.field_J.i(1, -109);
-          oi.field_J.a(6, 0);
-          oi.field_J.a(6, 0);
-          oi.field_J.a(6, 255);
-          oi.field_J.a(6, 219);
+          oi.field_J.writeShort(258, param1 ^ -91);
+          oi.field_J.writeByte(6, 0);
+          oi.field_J.writeShort(1, -110);
+          oi.field_J.writeShort(1, -109);
+          oi.field_J.writeByte(6, 0);
+          oi.field_J.writeByte(6, 0);
+          oi.field_J.writeByte(6, 255);
+          oi.field_J.writeByte(6, 219);
           var23 = new byte[4][];
           var18 = var23;
           var8_array = var18;
@@ -380,30 +380,30 @@ final class pi {
               var9Lifetime1 = var9Lifetime1 + var23[var10_intLifetime1].length;
             }
           }
-          oi.field_J.i(var9Lifetime1, param1 - 108);
+          oi.field_J.writeShort(var9Lifetime1, param1 - 108);
           for (var10_intLifetime2 = 0; var10_intLifetime2 < 4; var10_intLifetime2++) {
             if (var23[var10_intLifetime2] != null) {
               oi.field_J.a(var23[var10_intLifetime2], 1, var23[var10_intLifetime2].length, 0);
             }
           }
-          oi.field_J.a(6, 255);
-          oi.field_J.a(6, 192);
-          oi.field_J.i(17, -88);
-          oi.field_J.a(6, 8);
-          oi.field_J.i(param4, param1 ^ -113);
-          oi.field_J.i(param5, -99);
-          oi.field_J.a(6, 3);
-          oi.field_J.a(6, 1);
-          oi.field_J.a(6, 34);
-          oi.field_J.a(param1 ^ 6, 0);
-          oi.field_J.a(6, 2);
-          oi.field_J.a(6, 17);
-          oi.field_J.a(6, 1);
-          oi.field_J.a(param1 ^ 6, 3);
-          oi.field_J.a(6, 17);
-          oi.field_J.a(6, 1);
-          oi.field_J.a(param1 + 6, 255);
-          oi.field_J.a(6, 196);
+          oi.field_J.writeByte(6, 255);
+          oi.field_J.writeByte(6, 192);
+          oi.field_J.writeShort(17, -88);
+          oi.field_J.writeByte(6, 8);
+          oi.field_J.writeShort(param4, param1 ^ -113);
+          oi.field_J.writeShort(param5, -99);
+          oi.field_J.writeByte(6, 3);
+          oi.field_J.writeByte(6, 1);
+          oi.field_J.writeByte(6, 34);
+          oi.field_J.writeByte(param1 ^ 6, 0);
+          oi.field_J.writeByte(6, 2);
+          oi.field_J.writeByte(6, 17);
+          oi.field_J.writeByte(6, 1);
+          oi.field_J.writeByte(param1 ^ 6, 3);
+          oi.field_J.writeByte(6, 17);
+          oi.field_J.writeByte(6, 1);
+          oi.field_J.writeByte(param1 + 6, 255);
+          oi.field_J.writeByte(6, 196);
           var24 = new byte[32][];
           var19 = var24;
           var10 = var19;
@@ -415,38 +415,38 @@ final class pi {
               var9Lifetime2 = var9Lifetime2 + var24[var11_int].length;
             }
           }
-          oi.field_J.i(var9Lifetime2, -100);
+          oi.field_J.writeShort(var9Lifetime2, -100);
           for (var11_intLifetime1 = 0; var11_intLifetime1 < 32; var11_intLifetime1++) {
             if (var24[var11_intLifetime1] != null) {
               oi.field_J.a(var24[var11_intLifetime1], param1 ^ 1, var24[var11_intLifetime1].length, 0);
             }
           }
-          oi.field_J.a(6, 255);
-          oi.field_J.a(6, 218);
-          oi.field_J.i(12, -128);
-          oi.field_J.a(6, 3);
-          oi.field_J.a(6, 1);
-          oi.field_J.a(6, 0);
-          oi.field_J.a(6, 2);
-          oi.field_J.a(6, 17);
-          oi.field_J.a(6, 3);
-          oi.field_J.a(6, 17);
-          oi.field_J.a(6, 0);
-          oi.field_J.a(param1 ^ 6, 63);
-          oi.field_J.a(param1 + 6, 0);
+          oi.field_J.writeByte(6, 255);
+          oi.field_J.writeByte(6, 218);
+          oi.field_J.writeShort(12, -128);
+          oi.field_J.writeByte(6, 3);
+          oi.field_J.writeByte(6, 1);
+          oi.field_J.writeByte(6, 0);
+          oi.field_J.writeByte(6, 2);
+          oi.field_J.writeByte(6, 17);
+          oi.field_J.writeByte(6, 3);
+          oi.field_J.writeByte(6, 17);
+          oi.field_J.writeByte(6, 0);
+          oi.field_J.writeByte(param1 ^ 6, 63);
+          oi.field_J.writeByte(param1 + 6, 0);
           for (var11_intLifetime2 = param1; var11_intLifetime2 < var28.length; var11_intLifetime2++) {
             var12 = var28[var11_intLifetime2];
-            oi.field_J.a(6, var12);
+            oi.field_J.writeByte(6, var12);
             if (255 == (255 & var12)) {
-              oi.field_J.a(6, 0);
+              oi.field_J.writeByte(6, 0);
             }
           }
-          oi.field_J.a(6, 255);
-          oi.field_J.a(6, 217);
-          var26 = new byte[oi.field_J.field_o];
+          oi.field_J.writeByte(6, 255);
+          oi.field_J.writeByte(6, 217);
+          var26 = new byte[oi.field_J.position];
           var21 = var26;
           var11 = var21;
-          cj.a(oi.field_J.field_m, 0, var26, 0, oi.field_J.field_o);
+          cj.a(oi.field_J.payload, 0, var26, 0, oi.field_J.position);
           stackIn_40_0 = var11;
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

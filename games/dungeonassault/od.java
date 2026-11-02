@@ -85,13 +85,13 @@ final class od {
               field_b = (String[]) null;
             }
             eg.a(pp.field_K, true);
-            if (ec.field_n != hh.field_s) {
+            if (PacketBuffer.field_n != hh.field_s) {
               if (tk.field_k != hh.field_s) {
                 if (ti.field_A != hh.field_s) {
                   return true;
                 }
                 var4 = (gn) null;
-                og.a(false, 0, (gn) null);
+                KeyboardInput.a(false, 0, (gn) null);
                 return true;
               }
               fieldTemp$14 = fc.field_d - 1;
@@ -99,25 +99,25 @@ final class od {
               if (0 > fieldTemp$14) {
                 fc.field_d = -1 + uo.field_f.length;
               }
-              og.a(true, 0, uo.field_f[fc.field_d]);
+              KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
             } else {
               fieldTemp$15 = fc.field_d + 1;
               fc.field_d = fc.field_d + 1;
               if (fieldTemp$15 >= uo.field_f.length) {
                 fc.field_d = 0;
               }
-              og.a(false, 0, uo.field_f[fc.field_d]);
+              KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             }
             return true;
           }
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);
-            if (ec.field_n != hh.field_s) {
+            if (PacketBuffer.field_n != hh.field_s) {
               if (tk.field_k != hh.field_s) {
                 if (ti.field_A == hh.field_s) {
                   var4Lifetime5 = (gn) null;
-                  og.a(false, 0, (gn) null);
+                  KeyboardInput.a(false, 0, (gn) null);
                 }
               } else {
                 fieldTemp$18 = fc.field_d - 1;
@@ -125,7 +125,7 @@ final class od {
                 if (0 > fieldTemp$18) {
                   fc.field_d = -1 + uo.field_f.length;
                 }
-                og.a(true, 0, uo.field_f[fc.field_d]);
+                KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
               }
             } else {
               fieldTemp$19 = fc.field_d + 1;
@@ -133,18 +133,18 @@ final class od {
               if (fieldTemp$19 >= uo.field_f.length) {
                 fc.field_d = 0;
               }
-              og.a(false, 0, uo.field_f[fc.field_d]);
+              KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             }
             return true;
           }
           eg.a(pp.field_K, true);
-          if (ec.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == hh.field_s) {
             fieldTemp$17 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$17 >= uo.field_f.length) {
               fc.field_d = 0;
             }
-            og.a(false, 0, uo.field_f[fc.field_d]);
+            KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
           if (tk.field_k != hh.field_s) {
@@ -152,7 +152,7 @@ final class od {
               return true;
             }
             var4Lifetime6 = (gn) null;
-            og.a(false, 0, (gn) null);
+            KeyboardInput.a(false, 0, (gn) null);
             return true;
           }
           fieldTemp$16 = fc.field_d - 1;
@@ -160,7 +160,7 @@ final class od {
           if (0 > fieldTemp$16) {
             fc.field_d = -1 + uo.field_f.length;
           }
-          og.a(true, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
           return true;
         }
         if (null != jn.field_l) {
@@ -203,11 +203,11 @@ final class od {
               field_b = (String[]) null;
             }
             eg.a(pp.field_K, true);
-            if (ec.field_n != hh.field_s) {
+            if (PacketBuffer.field_n != hh.field_s) {
               if (tk.field_k != hh.field_s) {
                 if (ti.field_A == hh.field_s) {
                   var4Lifetime1 = (gn) null;
-                  og.a(false, 0, (gn) null);
+                  KeyboardInput.a(false, 0, (gn) null);
                 }
               } else {
                 fieldTemp$8 = fc.field_d - 1;
@@ -215,7 +215,7 @@ final class od {
                 if (0 > fieldTemp$8) {
                   fc.field_d = -1 + uo.field_f.length;
                 }
-                og.a(true, 0, uo.field_f[fc.field_d]);
+                KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
               }
             } else {
               fieldTemp$9 = fc.field_d + 1;
@@ -223,18 +223,18 @@ final class od {
               if (fieldTemp$9 >= uo.field_f.length) {
                 fc.field_d = 0;
               }
-              og.a(false, 0, uo.field_f[fc.field_d]);
+              KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             }
             return true;
           }
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);
-            if (ec.field_n != hh.field_s) {
+            if (PacketBuffer.field_n != hh.field_s) {
               if (tk.field_k != hh.field_s) {
                 if (ti.field_A == hh.field_s) {
                   var4Lifetime1Lifetime1 = (gn) null;
-                  og.a(false, 0, (gn) null);
+                  KeyboardInput.a(false, 0, (gn) null);
                 }
               } else {
                 fieldTemp$12 = fc.field_d - 1;
@@ -242,7 +242,7 @@ final class od {
                 if (0 > fieldTemp$12) {
                   fc.field_d = -1 + uo.field_f.length;
                 }
-                og.a(true, 0, uo.field_f[fc.field_d]);
+                KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
               }
             } else {
               fieldTemp$13 = fc.field_d + 1;
@@ -250,18 +250,18 @@ final class od {
               if (fieldTemp$13 >= uo.field_f.length) {
                 fc.field_d = 0;
               }
-              og.a(false, 0, uo.field_f[fc.field_d]);
+              KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             }
             return true;
           }
           eg.a(pp.field_K, true);
-          if (ec.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == hh.field_s) {
             fieldTemp$11 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$11 >= uo.field_f.length) {
               fc.field_d = 0;
             }
-            og.a(false, 0, uo.field_f[fc.field_d]);
+            KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
           if (tk.field_k != hh.field_s) {
@@ -269,7 +269,7 @@ final class od {
               return true;
             }
             var4Lifetime1Lifetime2 = (gn) null;
-            og.a(false, 0, (gn) null);
+            KeyboardInput.a(false, 0, (gn) null);
             return true;
           }
           fieldTemp$10 = fc.field_d - 1;
@@ -277,14 +277,14 @@ final class od {
           if (0 > fieldTemp$10) {
             fc.field_d = -1 + uo.field_f.length;
           }
-          og.a(true, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
           return true;
         }
         if (no.field_d != 0) {
           if (!pd.c(hm.field_k, lc.field_c, (byte) 67)) {
             return false;
           }
-          og.a(false, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
           return true;
         }
         if (la.field_g == 0) {
@@ -325,11 +325,11 @@ final class od {
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);
-            if (ec.field_n != hh.field_s) {
+            if (PacketBuffer.field_n != hh.field_s) {
               if (tk.field_k != hh.field_s) {
                 if (ti.field_A == hh.field_s) {
                   var4Lifetime2 = (gn) null;
-                  og.a(false, 0, (gn) null);
+                  KeyboardInput.a(false, 0, (gn) null);
                 }
               } else {
                 fieldTemp$2 = fc.field_d - 1;
@@ -337,7 +337,7 @@ final class od {
                 if (0 > fieldTemp$2) {
                   fc.field_d = -1 + uo.field_f.length;
                 }
-                og.a(true, 0, uo.field_f[fc.field_d]);
+                KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
               }
             } else {
               fieldTemp$3 = fc.field_d + 1;
@@ -345,18 +345,18 @@ final class od {
               if (fieldTemp$3 >= uo.field_f.length) {
                 fc.field_d = 0;
               }
-              og.a(false, 0, uo.field_f[fc.field_d]);
+              KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             }
             return true;
           }
           eg.a(pp.field_K, true);
-          if (ec.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == hh.field_s) {
             fieldTemp$1 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$1 >= uo.field_f.length) {
               fc.field_d = 0;
             }
-            og.a(false, 0, uo.field_f[fc.field_d]);
+            KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
           if (tk.field_k != hh.field_s) {
@@ -364,7 +364,7 @@ final class od {
               return true;
             }
             var4Lifetime2Lifetime1 = (gn) null;
-            og.a(false, 0, (gn) null);
+            KeyboardInput.a(false, 0, (gn) null);
             return true;
           }
           fieldTemp$0 = fc.field_d - 1;
@@ -372,18 +372,18 @@ final class od {
           if (0 > fieldTemp$0) {
             fc.field_d = -1 + uo.field_f.length;
           }
-          og.a(true, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
           return true;
         }
         if (param0 <= -50) {
           eg.a(pp.field_K, true);
-          if (ec.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == hh.field_s) {
             fieldTemp$5 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$5 >= uo.field_f.length) {
               fc.field_d = 0;
             }
-            og.a(false, 0, uo.field_f[fc.field_d]);
+            KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
           if (tk.field_k != hh.field_s) {
@@ -391,7 +391,7 @@ final class od {
               return true;
             }
             var4Lifetime3 = (gn) null;
-            og.a(false, 0, (gn) null);
+            KeyboardInput.a(false, 0, (gn) null);
             return true;
           }
           fieldTemp$4 = fc.field_d - 1;
@@ -399,18 +399,18 @@ final class od {
           if (0 > fieldTemp$4) {
             fc.field_d = -1 + uo.field_f.length;
           }
-          og.a(true, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
           return true;
         }
         field_b = (String[]) null;
         eg.a(pp.field_K, true);
-        if (ec.field_n == hh.field_s) {
+        if (PacketBuffer.field_n == hh.field_s) {
           fieldTemp$7 = fc.field_d + 1;
           fc.field_d = fc.field_d + 1;
           if (fieldTemp$7 >= uo.field_f.length) {
             fc.field_d = 0;
           }
-          og.a(false, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
           return true;
         }
         if (tk.field_k != hh.field_s) {
@@ -418,7 +418,7 @@ final class od {
             return true;
           }
           var4Lifetime4 = (gn) null;
-          og.a(false, 0, (gn) null);
+          KeyboardInput.a(false, 0, (gn) null);
           return true;
         }
         fieldTemp$6 = fc.field_d - 1;
@@ -426,7 +426,7 @@ final class od {
         if (0 > fieldTemp$6) {
           fc.field_d = -1 + uo.field_f.length;
         }
-        og.a(true, 0, uo.field_f[fc.field_d]);
+        KeyboardInput.a(true, 0, uo.field_f[fc.field_d]);
         return true;
     }
 

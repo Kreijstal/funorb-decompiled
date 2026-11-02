@@ -228,9 +228,9 @@ final class bf {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        wj var13 = null;
+        CipherPacketBuffer var13 = null;
         int var14 = 0;
-        wj var15 = null;
+        CipherPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -311,10 +311,10 @@ final class bf {
               var9Lifetime1++;
               var14++;
             }
-            var3.a(false);
+            var3.unlink(false);
             return;
           }
-          var3.a(false);
+          var3.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

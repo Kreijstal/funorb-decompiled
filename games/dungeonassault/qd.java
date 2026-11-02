@@ -27,7 +27,7 @@ final class qd {
         return null;
     }
 
-    final static nh a(boolean param0, boolean param1, int param2, byte param3, int param4) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, byte param3, int param4) {
         if (param3 != -31) {
           field_e = (String[]) null;
         }

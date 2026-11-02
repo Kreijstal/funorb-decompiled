@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hf extends sj {
-    static nh field_pb;
+    static ResourceArchive field_pb;
     private int field_jb;
     private lm field_xb;
     private int field_lb;
     static String field_ub;
-    static md field_ob;
+    static IntrusiveDeque field_ob;
     static int field_sb;
     private int field_qb;
     private int field_tb;
@@ -25,7 +25,7 @@ abstract class hf extends sj {
     private final void b(lm param0, byte param1) {
         try {
           if (this.field_rb != null) {
-            this.field_rb.a(false);
+            this.field_rb.unlink(false);
           }
           int var3_int = -47 / ((param1 - 32) / 42);
           if (param0 != null) {
@@ -58,10 +58,10 @@ abstract class hf extends sj {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null != in.field_C) {
-          var1 = in.field_C;
+        if (null != NetworkGameClient.field_C) {
+          var1 = NetworkGameClient.field_C;
           synchronized (var1) {
-            in.field_C = null;
+            NetworkGameClient.field_C = null;
           }
         }
         if (param0 > -5) {
@@ -146,7 +146,7 @@ abstract class hf extends sj {
         RuntimeException var3 = null;
         try {
           this.field_xb = param1;
-          if (ec.field_i == this.field_kb) {
+          if (PacketBuffer.field_i == this.field_kb) {
             this.b(12 + this.field_xb.field_x, this.field_vb, this.field_xb.field_s + this.field_tb + 12, 22284);
             this.field_lb = 0;
           } else {
@@ -207,7 +207,7 @@ abstract class hf extends sj {
           if (fieldTemp$0 != this.field_jb) {
             this.field_rb.field_H = 256 - (this.field_lb << 8) / this.field_jb;
           } else {
-            this.field_kb = ec.field_i;
+            this.field_kb = PacketBuffer.field_i;
             this.b(12 + this.field_xb.field_x, this.field_vb, this.field_tb + 12 + this.field_xb.field_s, param0 ^ -22358);
             this.field_lb = 0;
             this.field_rb.field_H = 0;
@@ -239,7 +239,7 @@ abstract class hf extends sj {
 
     static {
         field_ub = "Username: ";
-        field_ob = new md();
+        field_ob = new IntrusiveDeque();
         field_zb = "Names should contain a maximum of 12 characters";
         field_yb = new int[16384];
         field_wb = new ad(13, 0, 1, 0);

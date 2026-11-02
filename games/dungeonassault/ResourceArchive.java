@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh {
+final class ResourceArchive {
     static String field_i;
     private boolean field_d;
     static String field_a;
@@ -84,7 +84,7 @@ final class nh {
         ta.field_a.b(1, cd.field_f);
     }
 
-    final static void a(byte param0, nh param1, mb param2, int param3) {
+    final static void a(byte param0, ResourceArchive param1, mb param2, int param3) {
         hh.field_b = eg.c(1) * param3 / 1000;
         ac.a((byte) -125, param1);
         kd.a(31913, param1);
@@ -502,7 +502,7 @@ final class nh {
             return stackIn_6_0;
           }
           if (param1 != 1000) {
-            nh.c(true);
+            ResourceArchive.c(true);
           }
           stackIn_10_0 = var3_int;
           return stackIn_10_0;
@@ -567,12 +567,12 @@ final class nh {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ec var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        ec var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        ec var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -626,8 +626,8 @@ final class nh {
             var35 = dn.a(this.field_j[param2], true, (byte) 48);
             var25 = var35;
             var9 = var25;
-            var26 = new ec(var35);
-            var26.a(var26.field_m.length, param0, 5, -10708);
+            var26 = new PacketBuffer(var35);
+            var26.a(var26.payload.length, param0, 5, -10708);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -655,14 +655,14 @@ final class nh {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var12 * var5_int);
-              var32 = new ec(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_o = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var32.h(param3 ^ 11905);
+                  var17 = var17 + var32.readInt(param3 ^ 11905);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -678,13 +678,13 @@ final class nh {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_o = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var32.h(-35);
+                  var19 = var19 + var32.readInt(-35);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -703,15 +703,15 @@ final class nh {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var5_int * var12 * 4;
-              var29 = new ec(var43);
+              var29 = new PacketBuffer(var43);
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
-              var29.field_o = var11;
+              var29.position = var11;
               for (var15 = 0; var12 > var15; var15++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var29.h(-121);
+                  var16 = var16 + var29.readInt(-121);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -723,12 +723,12 @@ final class nh {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_o = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var29.h(-117);
+                  var18 = var18 + var29.readInt(-117);
                   cj.a(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
@@ -850,7 +850,7 @@ final class nh {
         throw new RuntimeException();
     }
 
-    nh(qa param0, boolean param1, int param2) {
+    ResourceArchive(qa param0, boolean param1, int param2) {
         this.field_h = null;
         try {
           if (param2 < 0 ||

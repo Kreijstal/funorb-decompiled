@@ -33,7 +33,7 @@ final class fh {
         return this.field_h - this.field_f >> 15;
     }
 
-    final void a(ec param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_b = param0.c(true);
         this.field_k = new int[this.field_b];
@@ -54,10 +54,10 @@ final class fh {
         this.field_g[1] = 65535;
     }
 
-    final void b(ec param0) {
+    final void b(PacketBuffer param0) {
         this.field_d = param0.c(true);
-        this.field_c = param0.h(-97);
-        this.field_j = param0.h(-128);
+        this.field_c = param0.readInt(-97);
+        this.field_j = param0.readInt(-128);
         this.a(param0);
     }
 

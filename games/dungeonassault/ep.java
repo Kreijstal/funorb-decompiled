@@ -38,12 +38,12 @@ final class ep extends un {
         return var4;
     }
 
-    final static hb a(int param0, int param1, ec param2) {
+    final static Raider a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        hb var4 = null;
+        Raider var4 = null;
         Object stackIn_3_0 = null;
-        hb stackIn_5_0 = null;
+        Raider stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -51,11 +51,11 @@ final class ep extends un {
         try {
           var3_int = param2.c(true);
           if (param1 == ~var3_int) {
-            param2.b((byte) 80);
+            param2.readLong((byte) 80);
             stackIn_3_0 = null;
-            return (hb) (stackIn_3_0);
+            return (Raider) (stackIn_3_0);
           }
-          var4 = new hb(param0, var3_int);
+          var4 = new Raider(param0, var3_int);
           var4.field_e = param2.c(true);
           var4.field_g = param2.c(true);
           var4.field_f = param2.c(true);
@@ -80,7 +80,7 @@ final class ep extends un {
     }
 
     final static void a(byte param0, int param1) {
-        ne var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
         ak var5 = null;

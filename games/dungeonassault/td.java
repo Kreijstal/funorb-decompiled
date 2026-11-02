@@ -53,8 +53,8 @@ final class td {
             return true;
           }
           field_d = param0;
-          mh.field_b = null;
-          in.field_E = param1;
+          MouseInput.field_b = null;
+          NetworkGameClient.field_E = param1;
           wk.field_g = param5;
           he.field_m = param6;
           ol.field_i = ql.field_f;

@@ -77,7 +77,7 @@ final class ng extends ck {
         }
     }
 
-    final static void a(int param0, nh param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2626_0;
             StringBuilder stackIn_2626_1;
@@ -87,9 +87,9 @@ final class ng extends ck {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            nh param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, nh initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2626_0 = null;
@@ -132,7 +132,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("error_js5connect", 124);
                 if (null != var2) {
-                  b.field_b = dj.a(var2, false);
+                  ClientException.field_b = dj.a(var2, false);
                 }
                 var2 = rp.a("login_gameupdated", 73);
                 if (var2 != null) {
@@ -1701,7 +1701,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_alert_email_unavailable", 122);
                 if (null != var2) {
-                  pj.field_n = dj.a(var2, false);
+                  CombatState.field_n = dj.a(var2, false);
                 }
                 var2 = rp.a("create_alert_invaliddate", param0 ^ -27037);
                 if (null != var2) {
@@ -2787,7 +2787,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("mb_full_access_1", 78);
                 if (null != var2) {
-                  md.field_a = dj.a(var2, false);
+                  IntrusiveDeque.field_a = dj.a(var2, false);
                 }
                 var2 = rp.a("mb_full_access_2", 70);
                 if (null != var2) {
@@ -2823,15 +2823,15 @@ final class ng extends ck {
                 }
                 var2 = rp.a("hs_mode_name,0", 107);
                 if (null != var2) {
-                  og.field_b[0] = dj.a(var2, false);
+                  KeyboardInput.field_b[0] = dj.a(var2, false);
                 }
                 var2 = rp.a("hs_mode_name,1", 57);
                 if (null != var2) {
-                  og.field_b[1] = dj.a(var2, false);
+                  KeyboardInput.field_b[1] = dj.a(var2, false);
                 }
                 var2 = rp.a("hs_mode_name,2", 53);
                 if (null != var2) {
-                  og.field_b[2] = dj.a(var2, false);
+                  KeyboardInput.field_b[2] = dj.a(var2, false);
                 }
                 var2 = rp.a("rating_mode_name,0", param0 ^ -27121);
                 if (var2 != null) {
@@ -3112,7 +3112,7 @@ final class ng extends ck {
                   }
                   throw vk.a((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(')').toString());
                 }
-                if (kg.field_j) {
+                if (GameAppletShell.field_j) {
                   var3++;
                   DungeonAssault.field_K = var3;
                 }
@@ -3416,11 +3416,11 @@ final class ng extends ck {
           if (param1 < 38) {
             field_K = (String) null;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             var3 = param0.a(param2, (byte) -61);
             while (true) {
               if (0 == var3.field_c) {
-                pj.a(0, 10L);
+                CombatState.a(0, 10L);
                 if (var4 != 0) {
                   return;
                 }
@@ -3429,9 +3429,9 @@ final class ng extends ck {
               break;
             }
             if (var3.field_c != 1) {
-              pj.a(0, 100L);
+              CombatState.a(0, 100L);
               if (var4 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
             }
             break;

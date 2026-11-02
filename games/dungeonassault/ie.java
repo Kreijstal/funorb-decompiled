@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends ne {
+final class ie extends IntrusiveNode {
     gd field_m;
     static int[] field_k;
     static cn field_l;

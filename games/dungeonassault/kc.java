@@ -127,7 +127,7 @@ final class kc extends ii implements vg {
           }
           var9 = param0.a(false);
           while (var9.field_c == 0) {
-            pj.a(0, 10L);
+            CombatState.a(0, 10L);
           }
           if (var9.field_c == 2) {
             stackIn_9_0 = new ki[]{};

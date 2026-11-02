@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj {
+final class CombatState {
     static int[] field_e;
     static boolean[] field_w;
     wm field_v;
@@ -21,9 +21,9 @@ final class pj {
     int field_g;
     int field_y;
     int field_t;
-    hb field_u;
+    Raider field_u;
     int field_k;
-    hb[] field_A;
+    Raider[] field_A;
     private int field_s;
     int field_q;
     int field_l;
@@ -31,7 +31,7 @@ final class pj {
     private wm field_b;
     wm field_m;
 
-    pj(ec param0, boolean param1) {
+    CombatState(PacketBuffer param0, boolean param1) {
         this();
         try {
           this.a(111, param1, param0);
@@ -189,10 +189,10 @@ final class pj {
 
     final void a(int param0, int param1) {
         int var4 = 0;
-        hb[] var3;
-        hb var5;
+        Raider[] var3;
+        Raider var5;
         int var6;
-        hb[] var7;
+        Raider[] var7;
         var6 = DungeonAssault.field_K;
         this.a(false, 128);
         if (param0 != 32768) {
@@ -320,7 +320,7 @@ final class pj {
         return this.a(var7Lifetime1 != 0, var9, param1, (byte) 98);
     }
 
-    private final void a(wm param0, ec param1, int param2) {
+    private final void a(wm param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -359,12 +359,12 @@ final class pj {
         }
     }
 
-    private final void a(hb param0, int param1) {
+    private final void a(Raider param0, int param1) {
         boolean discarded$1 = false;
         int var3_int = 0;
-        hb[] var4 = null;
+        Raider[] var4 = null;
         int var5 = 0;
-        hb var6 = null;
+        Raider var6 = null;
         int var7 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -413,9 +413,9 @@ final class pj {
         }
     }
 
-    private final void a(int param0, boolean param1, ec param2) {
+    private final void a(int param0, boolean param1, PacketBuffer param2) {
         ai dupTemp$0 = null;
-        hb stackIn_19_1 = null;
+        Raider stackIn_19_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -551,7 +551,7 @@ final class pj {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        hb var19 = null;
+        Raider var19 = null;
         int var13Lifetime1;
         var18 = DungeonAssault.field_K;
         try {
@@ -568,8 +568,8 @@ final class pj {
           var8 = param1.field_h.a(0, 17);
           var9 = this.field_u.field_g;
           if (param3 != 98) {
-            var19 = (hb) null;
-            this.a((hb) null, -125);
+            var19 = (Raider) null;
+            this.a((Raider) null, -125);
           }
           var10 = this.field_u.field_e;
           var11 = param1.field_p;
@@ -617,7 +617,7 @@ final class pj {
             var9--;
           }
           var15 = 0;
-          L15: while (true) {
+          scanLoop1: while (true) {
             var15++;
             if (var5_int != 0) {
               if (param2 != 2) {
@@ -644,12 +644,12 @@ final class pj {
                 if (2 == param2) {
                   this.a(-8);
                   var14 = var14 | 4096;
-                  break L15;
+                  break scanLoop1;
                 }
                 if (0 >= var8) {
                   this.a(false);
                   var14 = var14 | 4096;
-                  break L15;
+                  break scanLoop1;
                 }
                 var14 = var14 | 512;
                 var8--;
@@ -667,7 +667,7 @@ final class pj {
                   this.a(false);
                 }
                 var15 = 5;
-                break L15;
+                break scanLoop1;
               }
             }
             var5_int = 1;
@@ -720,7 +720,7 @@ final class pj {
         field_n = null;
         field_w = null;
         if (param0 < 111) {
-          pj.a(43, 127L);
+          CombatState.a(43, 127L);
         }
     }
 
@@ -739,16 +739,16 @@ final class pj {
     }
 
     final void a(boolean param0, int param1) {
-        hb[] var3;
+        Raider[] var3;
         int var4;
-        hb var5;
+        Raider var5;
         int var6;
-        hb[] var7;
-        hb[] var8;
+        Raider[] var7;
+        Raider[] var8;
         int var9;
-        hb var10;
+        Raider var10;
         int var4Lifetime1;
-        hb[] var3Lifetime1;
+        Raider[] var3Lifetime1;
         var6 = DungeonAssault.field_K;
         this.field_k = param1;
         if (32 == this.field_k) {
@@ -786,19 +786,19 @@ final class pj {
         if (param2 != 18833) {
           this.field_t = 19;
         }
-        ec var6 = new ec(3);
-        var6.i(param3, -128);
+        PacketBuffer var6 = new PacketBuffer(3);
+        var6.writeShort(param3, -128);
         if (this.a(param4, param3, param2 + 18031, param1, param0)) {
-          var6.a(6, 16 | this.a((byte) 47));
+          var6.writeByte(6, 16 | this.a((byte) 47));
           this.a(32768, 2);
         } else {
-          var6.a(6, 0);
+          var6.writeByte(6, 0);
           this.a(32768, 1);
         }
         return new mo(68, var6);
     }
 
-    final void a(int param0, hb param1) {
+    final void a(int param0, Raider param1) {
         int var3_int = 1;
         h var4 = param1.field_n;
         if (var4.a(ob.field_kc, -92) &&
@@ -858,7 +858,7 @@ final class pj {
         return -1;
     }
 
-    final boolean b(int param0, hb param1) {
+    final boolean b(int param0, Raider param1) {
         RuntimeException stackIn_126_0 = null;
         StringBuilder stackIn_126_1 = null;
         String stackIn_127_2 = null;
@@ -866,20 +866,20 @@ final class pj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        hb[] var5 = null;
+        Raider[] var5 = null;
         int var6 = 0;
-        hb var7 = null;
+        Raider var7 = null;
         int var8 = 0;
-        hb[] var9 = null;
-        hb[] var10 = null;
-        hb var11 = null;
-        hb[] var12 = null;
-        hb var13 = null;
-        hb var14 = null;
-        hb[] var5Lifetime1;
-        hb var7Lifetime1;
-        hb[] var5Lifetime2;
-        hb var7Lifetime2;
+        Raider[] var9 = null;
+        Raider[] var10 = null;
+        Raider var11 = null;
+        Raider[] var12 = null;
+        Raider var13 = null;
+        Raider var14 = null;
+        Raider[] var5Lifetime1;
+        Raider var7Lifetime1;
+        Raider[] var5Lifetime2;
+        Raider var7Lifetime2;
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
@@ -1038,7 +1038,7 @@ final class pj {
         int var6;
         int var7;
         int var8;
-        md var9;
+        IntrusiveDeque var9;
         wm var10;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -1048,8 +1048,8 @@ final class pj {
         var10 = new wm(84);
         var3 = 0;
         if (param0 > -1) {
-          var9 = (md) null;
-          this.a((md) null, -59, -23, 96, true);
+          var9 = (IntrusiveDeque) null;
+          this.a((IntrusiveDeque) null, -59, -23, 96, true);
         }
         for (var4 = 0; var4 < 7; var4++) {
           for (var5 = 0; 6 > var5; var5++) {
@@ -1177,7 +1177,7 @@ final class pj {
         return new mo(66, 0);
     }
 
-    final void a(hb param0, boolean param1, int param2) {
+    final void a(Raider param0, boolean param1, int param2) {
         ai var5 = null;
         boolean stackIn_11_1 = false;
         boolean stackIn_15_1 = false;
@@ -1298,8 +1298,8 @@ final class pj {
     final int c(int param0) {
         int var4 = 0;
         int var2;
-        hb[] var3_ref_hb__;
-        hb var5;
+        Raider[] var3_ref_hb__;
+        Raider var5;
         int var6;
         int var3;
         var6 = DungeonAssault.field_K;
@@ -1336,14 +1336,14 @@ final class pj {
         int var6;
         int var7;
         int var8;
-        hb[] var9;
-        hb var11;
+        Raider[] var9;
+        Raider var11;
         int var12;
         ai var13;
         var12 = DungeonAssault.field_K;
         var13 = this.field_h[param1];
         if (param0 != -52) {
-          pj.e(-22);
+          CombatState.e(-22);
         }
         var5 = var13.field_h;
         if (param2) {
@@ -1429,8 +1429,8 @@ final class pj {
         int var6;
         int var7;
         int var8;
-        hb[] var9;
-        hb var11;
+        Raider[] var9;
+        Raider var11;
         int var12;
         ai var13;
         var12 = DungeonAssault.field_K;
@@ -1508,7 +1508,7 @@ final class pj {
         try {
           if (param0 != 66) {
             var4 = (String) null;
-            pj.a((byte) -8, -92, (String) null);
+            CombatState.a((byte) -8, -92, (String) null);
           }
           if (param2 == null) {
             stackIn_5_0 = ng.field_K;
@@ -1516,7 +1516,7 @@ final class pj {
             stackIn_5_0 = (String) (param2);
           }
           param2 = stackIn_5_0;
-          if (mh.a(125, param1)) {
+          if (MouseInput.a(125, param1)) {
             stackIn_9_0 = ln.a(param1, param2, 255);
             return stackIn_9_0;
           }
@@ -1699,14 +1699,14 @@ final class pj {
         }
     }
 
-    private final void a(int param0, int param1, hb param2, int param3) {
+    private final void a(int param0, int param1, Raider param2, int param3) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        hb var7 = null;
+        Raider var7 = null;
         var6 = DungeonAssault.field_K;
         try {
           if (param2.field_n.a(ob.field_Ub, 53)) {
@@ -1741,8 +1741,8 @@ final class pj {
             }
           }
           if (param3 > -68) {
-            var7 = (hb) null;
-            this.a((hb) null, false, -72);
+            var7 = (Raider) null;
+            this.a((Raider) null, false, -72);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1759,7 +1759,7 @@ final class pj {
         }
     }
 
-    private final void a(int param0, ec param1, wm param2) {
+    private final void a(int param0, PacketBuffer param1, wm param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -1775,7 +1775,7 @@ final class pj {
             return;
           }
           for (var4_int = 0; param2.field_f.length > var4_int; var4_int++) {
-            param2.field_f[var4_int] = param1.h(-50);
+            param2.field_f[var4_int] = param1.readInt(-50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1902,7 +1902,7 @@ final class pj {
     private final double c(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var6;
-        hb var8;
+        Raider var8;
         int var9;
         var9 = DungeonAssault.field_K;
         var6 = 0;
@@ -1915,12 +1915,12 @@ final class pj {
           }
         }
         if (param3 != 2) {
-          pj.a(-70, 33L);
+          CombatState.a(-70, 33L);
         }
         return rm.a((byte) 96, var6, param4, ek.a(this.field_s, (byte) -127, param0, param1), param2);
     }
 
-    final mo a(hb param0, ec param1, int param2) {
+    final mo a(Raider param0, PacketBuffer param1, int param2) {
         mo stackIn_9_0 = null;
         mo stackIn_16_0 = null;
         mo stackIn_21_0 = null;
@@ -1942,23 +1942,23 @@ final class pj {
         int var5 = 0;
         int var6 = 0;
         int var8 = 0;
-        ec var10 = null;
-        ec var11 = null;
-        hb var12 = null;
-        ec var13 = null;
-        ec var14 = null;
-        hb var15 = null;
-        ec var16 = null;
-        hb var17 = null;
-        ec var18 = null;
-        ec var19 = null;
-        ec var20 = null;
-        ec var21 = null;
-        ec var22 = null;
-        hb var23 = null;
-        ec var25 = null;
-        ec var26 = null;
-        ec var27 = null;
+        PacketBuffer var10 = null;
+        PacketBuffer var11 = null;
+        Raider var12 = null;
+        PacketBuffer var13 = null;
+        PacketBuffer var14 = null;
+        Raider var15 = null;
+        PacketBuffer var16 = null;
+        Raider var17 = null;
+        PacketBuffer var18 = null;
+        PacketBuffer var19 = null;
+        PacketBuffer var20 = null;
+        PacketBuffer var21 = null;
+        PacketBuffer var22 = null;
+        Raider var23 = null;
+        PacketBuffer var25 = null;
+        PacketBuffer var26 = null;
+        PacketBuffer var27 = null;
         int var5Lifetime1;
         int var6Lifetime1;
         int var5Lifetime2;
@@ -1978,10 +1978,10 @@ final class pj {
             } else {
               this.a(false, 128);
             }
-            var13 = new ec(3);
-            var13.a(6, 2);
-            var13.a(6, param0.field_j);
-            var13.a(6, var12.field_j);
+            var13 = new PacketBuffer(3);
+            var13.writeByte(6, 2);
+            var13.writeByte(6, param0.field_j);
+            var13.writeByte(6, var12.field_j);
             stackIn_9_0 = new mo(65, var13);
             return stackIn_9_0;
           }
@@ -1994,10 +1994,10 @@ final class pj {
                 var17.a(false);
                 param0.field_o = param0.field_o & -2;
                 this.a(false);
-                var18 = new ec(3);
-                var18.a(6, 2);
-                var18.a(6, param0.field_j);
-                var18.a(6, var17.field_j);
+                var18 = new PacketBuffer(3);
+                var18.writeByte(6, 2);
+                var18.writeByte(6, param0.field_j);
+                var18.writeByte(6, var17.field_j);
                 stackIn_25_0 = new mo(65, var18);
                 return stackIn_25_0;
               }
@@ -2006,9 +2006,9 @@ final class pj {
                 if (ob.field_Wb == var4_int) {
                   this.field_B = this.field_q;
                   this.a(false, 8);
-                  var20 = new ec(2);
-                  var20.a(6, 1);
-                  var20.a(6, param0.field_j);
+                  var20 = new PacketBuffer(2);
+                  var20.writeByte(6, 1);
+                  var20.writeByte(6, param0.field_j);
                   stackIn_33_0 = new mo(65, var20);
                   return stackIn_33_0;
                 }
@@ -2018,25 +2018,25 @@ final class pj {
                   this.field_p.a(var5, -88);
                   this.field_p.a(var6, -119);
                   this.a(false, this.field_k);
-                  var10 = new ec(16);
+                  var10 = new PacketBuffer(16);
                   var21 = var10;
-                  var21.a(6, 15);
-                  var21.a(6, param0.field_j);
-                  var21.a(6, var5);
-                  var10.a(6, var6);
+                  var21.writeByte(6, 15);
+                  var21.writeByte(6, param0.field_j);
+                  var21.writeByte(6, var5);
+                  var10.writeByte(6, var6);
                   this.field_h[var5].a(-12, true, var21);
-                  var21.a(6, this.d(var5, 30813));
+                  var21.writeByte(6, this.d(var5, 30813));
                   this.field_h[var6].a(-12, true, var21);
-                  var21.a(6, this.d(var6, 30813));
+                  var21.writeByte(6, this.d(var6, 30813));
                   stackIn_37_0 = new mo(65, var21);
                   return stackIn_37_0;
                 }
                 if (var4_int == ob.field_Pb) {
                   this.field_t = this.field_t | 1;
                   this.a(false, this.field_k);
-                  var22 = new ec(2);
-                  var22.a(6, 1);
-                  var22.a(6, param0.field_j);
+                  var22 = new PacketBuffer(2);
+                  var22.writeByte(6, 1);
+                  var22.writeByte(6, param0.field_j);
                   stackIn_41_0 = new mo(65, var22);
                   return stackIn_41_0;
                 }
@@ -2050,11 +2050,11 @@ final class pj {
                   var6Lifetime1 = param1.c(true);
                   param0.field_e = var5Lifetime2;
                   param0.field_g = var6Lifetime1;
-                  var25 = new ec(4);
-                  var25.a(6, 3);
-                  var25.a(6, param0.field_j);
-                  var25.a(6, var5Lifetime2);
-                  var25.a(6, var6Lifetime1);
+                  var25 = new PacketBuffer(4);
+                  var25.writeByte(6, 3);
+                  var25.writeByte(6, param0.field_j);
+                  var25.writeByte(6, var5Lifetime2);
+                  var25.writeByte(6, var6Lifetime1);
                   stackIn_57_0 = new mo(65, var25);
                   return stackIn_57_0;
                 }
@@ -2065,10 +2065,10 @@ final class pj {
                   if (var4_int != ob.field_Jb) {
                     if (var4_int != ob.field_pc) {
                       this.a(false, this.field_k);
-                      var26 = new ec(3);
-                      var26.a(6, 2);
-                      var26.a(6, param0.field_j);
-                      var26.a(6, var23.field_j);
+                      var26 = new PacketBuffer(3);
+                      var26.writeByte(6, 2);
+                      var26.writeByte(6, param0.field_j);
+                      var26.writeByte(6, var23.field_j);
                       return new mo(65, var26);
                     }
                     var23.field_d = var23.field_d | 4;
@@ -2077,17 +2077,17 @@ final class pj {
                   }
                 }
                 this.a(false, this.field_k);
-                var27 = new ec(3);
-                var27.a(6, 2);
-                var27.a(6, param0.field_j);
-                var27.a(6, var23.field_j);
+                var27 = new PacketBuffer(3);
+                var27.writeByte(6, 2);
+                var27.writeByte(6, param0.field_j);
+                var27.writeByte(6, var23.field_j);
                 stackIn_54_0 = new mo(65, var27);
                 return stackIn_54_0;
               }
               this.a(false);
-              var19 = new ec(2);
-              var19.a(6, 1);
-              var19.a(6, param0.field_j);
+              var19 = new PacketBuffer(2);
+              var19.writeByte(6, 1);
+              var19.writeByte(6, param0.field_j);
               stackIn_30_0 = new mo(65, var19);
               return stackIn_30_0;
             }
@@ -2096,10 +2096,10 @@ final class pj {
             param0.field_o = param0.field_o & -7;
             param0.field_o = param0.field_o & -2;
             this.a(false, 8);
-            var16 = new ec(3);
-            var16.a(6, 2);
-            var16.a(6, param0.field_j);
-            var16.a(6, var15.field_j);
+            var16 = new PacketBuffer(3);
+            var16.writeByte(6, 2);
+            var16.writeByte(6, param0.field_j);
+            var16.writeByte(6, var15.field_j);
             stackIn_21_0 = new mo(65, var16);
             return stackIn_21_0;
           }
@@ -2111,13 +2111,13 @@ final class pj {
             this.a((byte) -52, var5Lifetime1, false);
           }
           this.a(false, this.field_k);
-          var11 = new ec(9);
+          var11 = new PacketBuffer(9);
           var14 = var11;
-          var14.a(6, 8);
-          var14.a(6, param0.field_j);
-          var14.a(6, var5Lifetime1);
+          var14.writeByte(6, 8);
+          var14.writeByte(6, param0.field_j);
+          var14.writeByte(6, var5Lifetime1);
           this.field_h[var5Lifetime1].a(-12, true, var14);
-          var14.a(6, this.d(var5Lifetime1, 30813));
+          var14.writeByte(6, this.d(var5Lifetime1, 30813));
           stackIn_16_0 = new mo(65, var14);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2140,7 +2140,7 @@ final class pj {
         }
     }
 
-    private final void a(md param0, int param1, int param2, int param3, boolean param4) {
+    private final void a(IntrusiveDeque param0, int param1, int param2, int param3, boolean param4) {
         String var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -2153,7 +2153,7 @@ final class pj {
             this.field_m.a(param2, -92);
             if (param1 != 49) {
               var7 = (String) null;
-              pj.a((byte) 106, -25, (String) null);
+              CombatState.a((byte) 106, -25, (String) null);
             }
             if (!this.field_j.a(param2, (byte) 109)) {
               if (param4) {
@@ -2180,7 +2180,7 @@ final class pj {
         }
     }
 
-    pj() {
+    CombatState() {
         int var1 = 0;
         this.field_v = new wm(84);
         this.field_h = new ai[49];
@@ -2188,7 +2188,7 @@ final class pj {
         this.field_j = new wm(49);
         this.field_d = new wm(49);
         this.field_g = 0;
-        this.field_A = new hb[4];
+        this.field_A = new Raider[4];
         this.field_B = -1;
         this.field_u = null;
         this.field_q = -1;

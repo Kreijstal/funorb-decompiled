@@ -5,9 +5,9 @@ final class so {
     static aj field_b;
     static String field_a;
 
-    final static void a(byte param0, ne param1, ne param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
-        ne var4 = null;
+        IntrusiveNode var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -15,18 +15,18 @@ final class so {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_a != null) {
-            param2.a(false);
+          if (param2.next != null) {
+            param2.unlink(false);
           }
-          param2.field_a = param1.field_a;
-          param2.field_e = param1;
-          param2.field_a.field_e = param2;
-          param2.field_e.field_a = param2;
+          param2.next = param1.next;
+          param2.previous = param1;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
           if (param0 > 36) {
             return;
           }
-          var4 = (ne) null;
-          so.$cfr$intArgs$a$d4f67f19bfc6(-107, (ne) null, (ne) null);
+          var4 = (IntrusiveNode) null;
+          so.$cfr$intArgs$a$d4f67f19bfc6(-107, (IntrusiveNode) null, (IntrusiveNode) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,9 +64,9 @@ final class so {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$d4f67f19bfc6(int param0, ne param1, ne param2) {
+    final static void $cfr$intArgs$a$d4f67f19bfc6(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
-        ne var4 = null;
+        IntrusiveNode var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -74,18 +74,18 @@ final class so {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_a != null) {
-            param2.a(false);
+          if (param2.next != null) {
+            param2.unlink(false);
           }
-          param2.field_a = param1.field_a;
-          param2.field_e = param1;
-          param2.field_a.field_e = param2;
-          param2.field_e.field_a = param2;
+          param2.next = param1.next;
+          param2.previous = param1;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
           if (param0 > 36) {
             return;
           }
-          var4 = (ne) null;
-          so.$cfr$intArgs$a$d4f67f19bfc6(-107, (ne) null, (ne) null);
+          var4 = (IntrusiveNode) null;
+          so.$cfr$intArgs$a$d4f67f19bfc6(-107, (IntrusiveNode) null, (IntrusiveNode) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

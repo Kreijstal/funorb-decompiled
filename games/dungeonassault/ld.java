@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ld {
     static boolean field_i;
-    static hb field_e;
+    static Raider field_e;
     static boolean field_g;
     static cn field_d;
     static String field_a;

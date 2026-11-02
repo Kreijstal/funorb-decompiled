@@ -25,15 +25,15 @@ final class ha extends um {
         ui.field_a = 0;
         ce.field_p = -1;
         bl.field_l = null;
-        pp.field_K = new md();
+        pp.field_K = new IntrusiveDeque();
         ti.field_A = sj.a(dh.field_a, 37);
         ti.field_A.field_v = 1;
         tk.field_k = sj.a(fl.field_i, 107);
-        ec.field_n = sj.a(wm.field_h, 59);
-        ec.field_n.field_v = param0;
+        PacketBuffer.field_n = sj.a(wm.field_h, 59);
+        PacketBuffer.field_n.field_v = param0;
         pp.field_K.a(ti.field_A, false);
         pp.field_K.a(tk.field_k, false);
-        pp.field_K.a(ec.field_n, false);
+        pp.field_K.a(PacketBuffer.field_n, false);
         o.field_n.a(1);
     }
 
@@ -326,13 +326,13 @@ final class ha extends um {
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = in.field_C;
+        var1 = NetworkGameClient.field_C;
         synchronized (var1) {
-          if (je.field_i == pj.field_x) {
+          if (je.field_i == CombatState.field_x) {
             return false;
           }
           mm.field_t = jk.field_Db[je.field_i];
-          ob.field_Yb = b.field_a[je.field_i];
+          ob.field_Yb = ClientException.field_a[je.field_i];
           je.field_i = 127 & je.field_i + 1;
           if (param0 != 47) {
             field_j = (String[]) null;

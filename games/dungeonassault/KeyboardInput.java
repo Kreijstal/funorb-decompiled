@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static ed field_e;
     static ad field_c;
     static String[] field_b;
@@ -47,7 +47,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != in.field_C) {
+          if (null != NetworkGameClient.field_C) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
@@ -55,7 +55,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & ka.field_c + 1;
               if (var3 != je.field_i) {
                 jk.field_Db[ka.field_c] = -1;
-                b.field_a[ka.field_c] = (char)var2_int;
+                ClientException.field_a[ka.field_c] = (char)var2_int;
                 ka.field_c = var3;
               }
             }
@@ -125,7 +125,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != in.field_C) {
+          if (null != NetworkGameClient.field_C) {
             ia.field_M = -1;
           }
           return;
@@ -151,7 +151,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != in.field_C) {
+          if (null != NetworkGameClient.field_C) {
             hl.field_g = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -297,7 +297,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null != in.field_C) {
+          if (null != NetworkGameClient.field_C) {
             hl.field_g = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -321,7 +321,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & 1 + ka.field_c;
               if (var3 != je.field_i) {
                 jk.field_Db[ka.field_c] = var2_int;
-                b.field_a[ka.field_c] = (char)0;
+                ClientException.field_a[ka.field_c] = (char)0;
                 ka.field_c = var3;
               }
             }

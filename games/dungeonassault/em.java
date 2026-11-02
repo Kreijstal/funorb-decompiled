@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class em extends vf {
-    ec field_D;
+    PacketBuffer field_D;
     static volatile int field_C;
     byte field_E;
     static String field_F;
@@ -30,12 +30,12 @@ final class em extends vf {
         if (param0 < 98) {
           this.field_G = -32;
           if (this.field_D != null) {
-            return 100 * this.field_D.field_o / (-this.field_E + this.field_D.field_m.length);
+            return 100 * this.field_D.position / (-this.field_E + this.field_D.payload.length);
           }
           return 0;
         }
         if (this.field_D != null) {
-          return 100 * this.field_D.field_o / (-this.field_E + this.field_D.field_m.length);
+          return 100 * this.field_D.position / (-this.field_E + this.field_D.payload.length);
         }
         return 0;
     }
@@ -76,16 +76,16 @@ final class em extends vf {
           if (this.field_v) {
             throw new RuntimeException();
           }
-          if (this.field_D.field_o >= this.field_D.field_m.length - this.field_E) {
-            return this.field_D.field_m;
+          if (this.field_D.position >= this.field_D.payload.length - this.field_E) {
+            return this.field_D.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_v) {
           throw new RuntimeException();
         }
-        if (this.field_D.field_o >= this.field_D.field_m.length - this.field_E) {
-          return this.field_D.field_m;
+        if (this.field_D.position >= this.field_D.payload.length - this.field_E) {
+          return this.field_D.payload;
         }
         throw new RuntimeException();
     }

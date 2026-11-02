@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends ne {
+final class fl extends IntrusiveNode {
     int field_q;
     static int field_l;
     static cn field_j;
@@ -12,7 +12,7 @@ final class fl extends ne {
     static int[] field_m;
     int field_p;
 
-    final static boolean a(int param0, nh param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -87,7 +87,7 @@ final class fl extends ne {
         field_l = 29;
     }
 
-    final static q a(int param0, nh param1, int param2, int param3) {
+    final static q a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         q stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -101,7 +101,7 @@ final class fl extends ne {
           if (param0 != -1) {
             field_j = (cn) null;
           }
-          stackIn_6_0 = ec.g(0);
+          stackIn_6_0 = PacketBuffer.g(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

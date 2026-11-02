@@ -11,7 +11,7 @@ class bh extends ck {
     static String[] field_J;
     static String field_K;
     static String[] field_N;
-    private md field_S;
+    private IntrusiveDeque field_S;
 
     final static int b(int param0, int param1, boolean param2) {
         int var3 = tg.field_f[param1][param0];
@@ -165,9 +165,9 @@ class bh extends ck {
                 var10 = (String) null;
                 be.field_n = l.a(param1, false, hg.field_s, false, (String) null);
               }
-              ac.field_B.field_o = 0;
-              ac.field_B.a(6, 14);
-              ac.field_B.a(6, be.field_n.b(-110).field_c);
+              ac.field_B.position = 0;
+              ac.field_B.writeByte(6, 14);
+              ac.field_B.writeByte(6, be.field_n.b(-110).field_c);
               op.a(0, -1);
               pd.field_A = ik.field_b;
             }
@@ -179,22 +179,22 @@ class bh extends ck {
                 nj.field_b = -1;
                 pd.field_A = bj.field_K;
               } else {
-                pd.field_A = mh.field_c;
+                pd.field_A = MouseInput.field_c;
               }
-              ra.field_c.field_o = 0;
+              ra.field_c.position = 0;
             }
-            if (mh.field_c == pd.field_A &&
+            if (MouseInput.field_c == pd.field_A &&
               oi.a(-12929, 8)) {
               o.field_j = ra.field_c.c((byte) 105);
-              ra.field_c.field_o = 0;
-              b.a(be.field_n, param0, (byte) -27, param3, param4);
+              ra.field_c.position = 0;
+              ClientException.a(be.field_n, param0, (byte) -27, param3, param4);
               pd.field_A = rp.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
             if (rp.field_d == pd.field_A &&
               oi.a(-12929, 1)) {
               var6_intLifetime1 = ra.field_c.c(true);
-              ra.field_c.field_o = 0;
+              ra.field_c.position = 0;
               hc.field_c = var6_intLifetime1;
               pd.field_E = null;
               if (0 != var6_intLifetime1 &&
@@ -206,7 +206,7 @@ class bh extends ck {
                 }
                 else {
                   tl.a(127);
-                  nh.field_e = false;
+                  ResourceArchive.field_e = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
@@ -222,7 +222,7 @@ class bh extends ck {
             if (k.field_e == pd.field_A &&
               kh.d((byte) -86)) {
               hg.field_s = ra.field_c.c((byte) 53);
-              nh.field_k = ra.field_c.c(true);
+              ResourceArchive.field_k = ra.field_c.c(true);
               ra.field_c.c(true);
               pb.field_G = ra.field_c.k(0);
               var6 = ra.field_c.b(true);
@@ -241,7 +241,7 @@ class bh extends ck {
               if (fa.field_j) {
                 ra.field_c.c(true);
                 ra.field_c.c(true);
-                ra.field_c.h(-59);
+                ra.field_c.readInt(-59);
                 ao.field_k = ra.field_c.k(0);
                 ti.field_q = new byte[ao.field_k];
                 for (var8 = 0; var8 < ao.field_k; var8++) {
@@ -254,13 +254,13 @@ class bh extends ck {
               hf.field_sb = ra.field_c.c(true);
               pd.field_A = qa.field_c;
               if (be.field_n.b(65) != pe.field_j) {
-                if (be.field_n.b(-104) == ug.field_w) {
+                if (be.field_n.b(-104) == MidiPcmStream.field_w) {
                   gg.field_c.a(64, m.c(true));
                 }
               } else {
                 ba.field_e.a(64, m.c(true));
               }
-              nh.field_e = false;
+              ResourceArchive.field_e = false;
               if (var6 != null) {
                 jb.a(true, var6, m.c(true));
               }
@@ -295,8 +295,8 @@ class bh extends ck {
               kh.d((byte) -60)) {
               tl.a(-17);
               if (hc.field_c == 7 &&
-                !nh.field_e) {
-                nh.field_e = true;
+                !ResourceArchive.field_e) {
+                ResourceArchive.field_e = true;
                 stackIn_89_0 = -1;
                 return stackIn_89_0;
               }
@@ -304,25 +304,25 @@ class bh extends ck {
                 hc.field_c = 3;
               }
               tp.field_v = ra.field_c.d(-96);
-              nh.field_e = false;
+              ResourceArchive.field_e = false;
               stackIn_87_0 = hc.field_c;
               return stackIn_87_0;
             }
             if (null == sp.field_c) {
-              if (nh.field_e) {
-                if (b.a(123) <= 30000L) {
+              if (ResourceArchive.field_e) {
+                if (ClientException.a(123) <= 30000L) {
                   tp.field_v = fc.field_l;
                 } else {
                   tp.field_v = lh.field_r;
                 }
-                nh.field_e = false;
+                ResourceArchive.field_e = false;
                 stackIn_96_0 = 3;
                 return stackIn_96_0;
               }
               var6_intLifetime2 = an.field_E;
               an.field_E = l.field_b;
               l.field_b = var6_intLifetime2;
-              nh.field_e = true;
+              ResourceArchive.field_e = true;
             }
             stackIn_99_0 = -1;
             return stackIn_99_0;
@@ -371,7 +371,7 @@ class bh extends ck {
           var7 = var5.a((lm) (this), (byte) 75, param1);
           var8 = var5.a((byte) 84, param3, (lm) (this));
           do {
-            in.a(-2 + (var6.field_k + var7), var6.field_p + 2, var6.field_i + 2, var6.field_l + (var8 - 2), 1);
+            NetworkGameClient.a(-2 + (var6.field_k + var7), var6.field_p + 2, var6.field_i + 2, var6.field_l + (var8 - 2), 1);
             var6 = var6.field_o;
           } while (var6 != null);
         }
@@ -432,7 +432,7 @@ class bh extends ck {
         int var17;
         int var8Lifetime1;
         var17 = DungeonAssault.field_K;
-        this.field_S = new md();
+        this.field_S = new IntrusiveDeque();
         var2 = 0;
         var3 = (th) ((Object) this.field_o);
         var4 = -22 / ((param0 + 42) / 62);

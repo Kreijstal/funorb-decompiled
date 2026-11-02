@@ -57,7 +57,7 @@ final class oa implements ca {
             } else {
               var10 = var10 + (-var8 + param1.field_s);
             }
-            in.a(-2 + var9, var8, var7 + 4, 2 + var10, 1);
+            NetworkGameClient.a(-2 + var9, var8, var7 + 4, 2 + var10, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

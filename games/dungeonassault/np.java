@@ -6,13 +6,13 @@ class np extends rj {
     static String[] field_z;
     static rj field_M;
     static ab field_E;
-    static nh field_A;
+    static ResourceArchive field_A;
     private int[] field_L;
     static boolean field_D;
     boolean field_N;
     static int[] field_I;
     static cn field_F;
-    md field_J;
+    IntrusiveDeque field_J;
     static String[] field_C;
     static int field_K;
 
@@ -119,7 +119,7 @@ class np extends rj {
           }
           param0.e(var4, var3_int, 100);
           if (null == this.field_J) {
-            this.field_J = new md();
+            this.field_J = new IntrusiveDeque();
           }
           this.field_J.b(param0, false);
           param0.field_r = (rj) (this);
@@ -203,7 +203,7 @@ class np extends rj {
         var8 = DungeonAssault.field_K;
         var4 = param1 - this.field_q;
         var5 = param2 - this.field_x;
-        sharedTailExit_0: {
+        regionExit1: {
           if (!param0) {
             if (this.field_J == null) {
               if (0 != (this.field_v & 1)) {
@@ -218,7 +218,7 @@ class np extends rj {
                 stackIn_44_0 = -var5;
               }
               var7 = stackIn_44_0;
-              break sharedTailExit_0;
+              break regionExit1;
             }
             var6_ref = (rj) (this.field_J.e(-24172));
             while (var6_ref != null) {
@@ -247,7 +247,7 @@ class np extends rj {
             this.field_x = param2;
             return;
           }
-          field_A = (nh) null;
+          field_A = (ResourceArchive) null;
           if (this.field_J == null) {
             if (0 != (this.field_v & 1)) {
               stackIn_5_0 = -var4;

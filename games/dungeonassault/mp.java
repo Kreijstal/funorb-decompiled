@@ -44,7 +44,7 @@ final class mp {
             if (!al.field_o.a(param3, (byte) 104)) {
               return;
             }
-            if (ll.a((byte) -110, param0, hb.a((byte) -111, param3), param1)) {
+            if (DualLinkNode.a((byte) -110, param0, Raider.a((byte) -111, param3), param1)) {
               continue;
             }
             break;

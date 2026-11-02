@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn extends ne {
+final class nn extends IntrusiveNode {
     static String field_k;
     gd field_l;
-    private md field_m;
+    private IntrusiveDeque field_m;
     private boolean field_i;
     static int[] field_j;
 
@@ -28,7 +28,7 @@ final class nn extends ne {
     }
 
     nn(boolean param0) {
-        this.field_m = new md();
+        this.field_m = new IntrusiveDeque();
         this.field_i = param0 ? true : false;
     }
 
@@ -87,7 +87,7 @@ final class nn extends ne {
           var3 = (ie) (this.field_m.e(-24172));
           while (var3 != null) {
             if (var3.field_m == param0) {
-              var3.a(false);
+              var3.unlink(false);
             }
             var3 = (ie) (this.field_m.a(4));
           }

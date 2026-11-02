@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cc implements Runnable {
-    static md field_i;
+    static IntrusiveDeque field_i;
     private up field_h;
     static int field_d;
     static String[] field_e;
@@ -161,7 +161,7 @@ final class cc implements Runnable {
           try {
             this.field_g.join();
             if (param0 >= -49) {
-              field_i = (md) null;
+              field_i = (IntrusiveDeque) null;
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -315,7 +315,7 @@ final class cc implements Runnable {
         try {
           var2 = param0.a(-21432, 5, (Runnable) (this));
           while (var2.field_c == 0) {
-            pj.a(0, 10L);
+            CombatState.a(0, 10L);
           }
           if (var2.field_c == 2) {
             throw new RuntimeException();
@@ -328,7 +328,7 @@ final class cc implements Runnable {
 
     static {
         field_d = 0;
-        field_i = new md();
+        field_i = new IntrusiveDeque();
         field_c = false;
         field_a = "Banshee";
     }

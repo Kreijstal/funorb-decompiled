@@ -36,7 +36,7 @@ final class dm {
         return var1;
     }
 
-    final static void a(md param0, int[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(IntrusiveDeque param0, int[] param1, int param2, int param3, int param4, int param5) {
         a var6 = null;
         RuntimeException var6_ref = null;
         a var7 = null;

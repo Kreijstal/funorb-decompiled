@@ -23,12 +23,12 @@ final class fp {
         bl.field_r.a((byte) 62);
         if (param0 <= 51) {
           fp.a((byte) 113);
-          if (hb.field_a.b((byte) 60)) {
+          if (Raider.field_a.b((byte) 60)) {
             return 0;
           }
           return bk.a(0);
         }
-        if (hb.field_a.b((byte) 60)) {
+        if (Raider.field_a.b((byte) 60)) {
           return 0;
         }
         return bk.a(0);

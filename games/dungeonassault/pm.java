@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pm extends ne {
+final class pm extends IntrusiveNode {
     int field_i;
     int field_j;
     static ad field_l;

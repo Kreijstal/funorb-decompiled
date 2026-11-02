@@ -3,7 +3,7 @@
  */
 final class sb {
     static int field_b;
-    static nh field_a;
+    static ResourceArchive field_a;
 
     public static void a(byte param0) {
         if (param0 >= -73) {
@@ -24,7 +24,7 @@ final class sb {
           ub.field_q = (byte[][]) null;
           return;
         }
-        field_a = (nh) null;
+        field_a = (ResourceArchive) null;
         hg.field_t = null;
         uo.field_b = null;
         jn.field_k = null;

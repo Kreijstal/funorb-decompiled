@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends ne {
+final class kk extends IntrusiveNode {
     of[] field_n;
     static gp field_l;
     static String field_s;
     byte[] field_p;
     private int[] field_q;
     static String field_i;
-    va[] field_k;
+    PcmSample[] field_k;
     int field_j;
     short[] field_r;
     byte[] field_m;
@@ -65,7 +65,7 @@ final class kk extends ne {
                   }
                 }
                 if (var7 != null) {
-                  this.field_k[var8] = (va) (var7);
+                  this.field_k[var8] = (PcmSample) (var7);
                   this.field_q[var8] = 0;
                 }
               }
@@ -203,7 +203,7 @@ final class kk extends ne {
         }
     }
 
-    final static tj a(nh param0, nh param1, String param2, int param3, String param4) {
+    final static tj a(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -255,10 +255,10 @@ final class kk extends ne {
         }
     }
 
-    final static boolean a(nh param0, int param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, int param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        nh var5 = null;
+        ResourceArchive var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -274,8 +274,8 @@ final class kk extends ne {
           if (param1 == 1) {
             return true;
           }
-          var5 = (nh) null;
-          kk.a((nh) null, -46, 0, -57);
+          var5 = (ResourceArchive) null;
+          kk.a((ResourceArchive) null, -46, 0, -57);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -343,7 +343,7 @@ final class kk extends ne {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        ec var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         of var40 = null;
         byte[] var41 = null;
@@ -421,13 +421,13 @@ final class kk extends ne {
         try {
           this.field_o = new byte[128];
           this.field_q = new int[128];
-          this.field_k = new va[128];
+          this.field_k = new PcmSample[128];
           this.field_n = new of[128];
           this.field_r = new short[128];
           this.field_m = new byte[128];
           this.field_p = new byte[128];
-          var38 = new ec(param0);
-          for (var3 = 0; var38.field_m[var38.field_o + var3] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -436,10 +436,10 @@ final class kk extends ne {
             var4[var5] = var38.a((byte) 2);
           }
           var3++;
-          var38.field_o = var38.field_o + 1;
-          var5Lifetime1 = var38.field_o;
-          var38.field_o = var38.field_o + var3;
-          for (var6 = 0; var38.field_m[var38.field_o + var6] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -447,11 +447,11 @@ final class kk extends ne {
           for (var8 = 0; var6 > var8; var8++) {
             var7[var8] = var38.a((byte) 2);
           }
-          var38.field_o = var38.field_o + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_o;
-          var38.field_o = var38.field_o + var6;
-          for (var9 = 0; var38.field_m[var38.field_o + var9] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -459,7 +459,7 @@ final class kk extends ne {
           for (var11_int = 0; var11_int < var9; var11_int++) {
             var10[var11_int] = var38.a((byte) 2);
           }
-          var38.field_o = var38.field_o + 1;
+          var38.position = var38.position + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -518,7 +518,7 @@ final class kk extends ne {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_m[var17 + var38.field_o] != 0; var17++) {
+          for (var17 = 0; var38.payload[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -527,7 +527,7 @@ final class kk extends ne {
             var18[var19] = var38.a((byte) 2);
           }
           var17++;
-          var38.field_o = var38.field_o + 1;
+          var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.c(true);
@@ -562,7 +562,7 @@ final class kk extends ne {
               if (var20Lifetime3 == 0) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_m[incrementValue$5] - 1;
+                var23Lifetime1 = var38.payload[incrementValue$5] - 1;
                 if (var21Lifetime1 >= var55.length) {
                   var20Lifetime3 = -1;
                 } else {
@@ -581,7 +581,7 @@ final class kk extends ne {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_m[incrementValue$3] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$3] + 16 << 2;
                 if (var56.length > var21Lifetime2) {
                   var20Lifetime4 = var7[var21Lifetime2++];
                 } else {

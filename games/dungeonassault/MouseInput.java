@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static vk field_b;
     static ef field_c;
     static int field_g;
@@ -148,8 +148,8 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         ed var4 = eh.field_o;
         ed var5 = var4;
         var5.field_w = true;
-        ed var2 = og.field_e;
-        og.field_e.field_N = false;
+        ed var2 = KeyboardInput.field_e;
+        KeyboardInput.field_e.field_N = false;
         var2.field_w = false;
     }
 
@@ -174,7 +174,7 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           return false;
         }
         if (!(param1 < uf.field_a)) {
-          return -uf.field_a + param1 < hb.field_m.length ? true : false;
+          return -uf.field_a + param1 < Raider.field_m.length ? true : false;
         }
         if (wm.field_a <= param1) {
           return dc.field_p.length > -wm.field_a + param1 ? true : false;

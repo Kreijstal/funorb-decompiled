@@ -133,8 +133,8 @@ class hh implements ca, th {
           return;
         }
         if (param0 >= -91) {
-          nh var2 = (nh) null;
-          hh.a((nh) null, (nh) null, 93, (byte) -9, 95);
+          ResourceArchive var2 = (ResourceArchive) null;
+          hh.a((ResourceArchive) null, (ResourceArchive) null, 93, (byte) -9, 95);
         }
         ae.a(false, 4, -1);
     }
@@ -168,7 +168,7 @@ class hh implements ca, th {
         }
     }
 
-    final static gp a(nh param0, nh param1, int param2, byte param3, int param4) {
+    final static gp a(ResourceArchive param0, ResourceArchive param1, int param2, byte param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -268,7 +268,7 @@ class hh implements ca, th {
 
     public final int a(int param0, int param1, int param2, int param3, lm param4, int param5) {
         RuntimeException var7 = null;
-        nh var8 = null;
+        ResourceArchive var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -276,8 +276,8 @@ class hh implements ca, th {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 16) {
-            var8 = (nh) null;
-            hh.a((nh) null, (nh) null, 60, (byte) 22, -28);
+            var8 = (ResourceArchive) null;
+            hh.a((ResourceArchive) null, (ResourceArchive) null, 60, (byte) 22, -28);
           }
           this.b(-2, param4);
           stackIn_3_0 = param4.field_t.a(param2 - this.a(param4, (byte) 93, param3), -this.a((byte) -85, param1, param4) + param5, (byte) -118);

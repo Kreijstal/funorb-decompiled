@@ -6,7 +6,7 @@ import java.io.*;
 abstract class um {
     static int field_h;
     static String field_c;
-    static hb[] field_i;
+    static Raider[] field_i;
     int field_f;
     static String field_d;
     static String field_e;

@@ -7,7 +7,7 @@ final class go extends qe {
     static String[] field_A;
     private boolean field_w;
     static cn field_S;
-    pj field_Y;
+    CombatState field_Y;
     static String field_F;
     static String field_V;
     private int field_H;
@@ -18,7 +18,7 @@ final class go extends qe {
     private int field_s;
     private int field_u;
     private String field_E;
-    private hb field_y;
+    private Raider field_y;
     private boolean field_v;
     private int field_C;
     private hj[] field_z;
@@ -28,15 +28,15 @@ final class go extends qe {
     private pp field_N;
     private pp field_r;
     private tf field_x;
-    private md field_B;
+    private IntrusiveDeque field_B;
     private int field_G;
     private pp field_J;
     private cl field_R;
-    private md field_T;
+    private IntrusiveDeque field_T;
     private pp field_t;
-    ni field_D;
+    PcmSampleStream field_D;
     private int field_X;
-    ni field_L;
+    PcmSampleStream field_L;
     private pp field_K;
 
     final void b(int param0, int param1) {
@@ -45,25 +45,25 @@ final class go extends qe {
             return;
           }
           ac.field_B.d((byte) -97, 69);
-          ac.field_B.i(param0, -94);
+          ac.field_B.writeShort(param0, -94);
           return;
         }
         mo var3 = this.field_Y.b(this.field_Y.field_o, gm.field_d.field_N, param1 ^ 18900, param0, this.field_Y.field_y);
-        var3.field_c.field_o = 0;
+        var3.field_c.position = 0;
         if (param1 != 69) {
           this.field_E = (String) null;
         }
         this.a(true, var3.field_c, param1 + 53);
     }
 
-    private final void a(byte param0, hb param1) {
+    private final void a(byte param0, Raider param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ec var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
         int var6 = 0;
         var6 = DungeonAssault.field_K;
@@ -73,8 +73,8 @@ final class go extends qe {
           this.field_G = -1;
           var5 = 23 % ((param0 + 15) / 45);
           this.field_y = param1;
-          var4 = new ec(1);
-          var4.a(6, param1.field_j);
+          var4 = new PacketBuffer(1);
+          var4.writeByte(6, param1.field_j);
           if (ob.field_lc != var3_int &&
             var3_int != ob.field_Gb &&
             ob.field_Wb != var3_int &&
@@ -158,16 +158,16 @@ final class go extends qe {
             lj.field_r = 200;
             var1 = (fa) (ud.field_v.e(-24172));
             while (var1 != null) {
-              if (!var1.field_o.c(-62)) {
-                var1.a(false);
+              if (!var1.field_o.isLinked(-62)) {
+                var1.unlink(false);
               }
               var1 = (fa) (ud.field_v.a(param0 ^ 10));
             }
             if (oi.field_F != null) {
               var1Lifetime1 = (fa) (oi.field_F.e(-24172));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_o.c(-67)) {
-                  var1Lifetime1.a(false);
+                if (!var1Lifetime1.field_o.isLinked(-67)) {
+                  var1Lifetime1.unlink(false);
                 }
                 var1Lifetime1 = (fa) (oi.field_F.a(4));
               }
@@ -189,7 +189,7 @@ final class go extends qe {
         RuntimeException var3 = null;
         try {
           if (param0 < 16) {
-            this.field_y = (hb) null;
+            this.field_y = (Raider) null;
           }
           if (null != param1.field_h.field_u) {
             param1.field_c.a(29, param1.field_h.field_u);
@@ -234,8 +234,8 @@ final class go extends qe {
         int var4;
         int var5_int;
         mo var5;
-        hb[] var6;
-        hb var8;
+        Raider[] var6;
+        Raider var8;
         var9 = DungeonAssault.field_K;
         if (this.field_w) {
           if (!this.h(6)) {
@@ -276,7 +276,7 @@ final class go extends qe {
           stackIn_31_0 = this.field_Y.c(-94, param1);
         }
         var5 = stackIn_31_0;
-        var5.field_c.field_o = 0;
+        var5.field_c.position = 0;
         this.a(true, var5.field_c, var3, 4743);
         return;
     }
@@ -319,10 +319,10 @@ final class go extends qe {
     private final void g(boolean param0) {
         int var2_int = 0;
         int var3 = 0;
-        hb[] var2;
-        hb var4;
+        Raider[] var2;
+        Raider var4;
         int var5;
-        hb[] var6;
+        Raider[] var6;
         var5 = DungeonAssault.field_K;
         super.b(param0);
         bl.a((byte) 98);
@@ -368,7 +368,7 @@ final class go extends qe {
         }
     }
 
-    private final void a(hb param0, boolean param1) {
+    private final void a(Raider param0, boolean param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -379,7 +379,7 @@ final class go extends qe {
             gd.a(64, param0.field_n.field_a);
           }
           if (!param1) {
-            this.field_B = (md) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -418,11 +418,11 @@ final class go extends qe {
         int var4_int = 0;
         int var5 = 0;
         int var2;
-        hb[] var3_ref_hb__;
+        Raider[] var3_ref_hb__;
         int var3;
-        hb[] var4;
-        hb var5_ref_hb;
-        hb var6;
+        Raider[] var4;
+        Raider var5_ref_hb;
+        Raider var6;
         int[] var7;
         int var8;
         var8 = DungeonAssault.field_K;
@@ -473,7 +473,7 @@ final class go extends qe {
         this.d(false);
     }
 
-    private final void a(int param0, boolean param1, hb param2) {
+    private final void a(int param0, boolean param1, Raider param2) {
         wd stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -513,9 +513,9 @@ final class go extends qe {
     private final void g(int param0) {
         int var3_int = 0;
         int var2 = 0;
-        hb var4;
+        Raider var4;
         int var5;
-        hb[] var6;
+        Raider[] var6;
         ai var3;
         var5 = DungeonAssault.field_K;
         this.field_R.c(-30876);
@@ -548,8 +548,8 @@ final class go extends qe {
         return;
     }
 
-    private final void a(byte param0, ec param1, boolean param2) {
-        hb stackIn_4_0 = null;
+    private final void a(byte param0, PacketBuffer param1, boolean param2) {
+        Raider stackIn_4_0 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_43_2 = null;
@@ -557,7 +557,7 @@ final class go extends qe {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hb var6 = null;
+        Raider var6 = null;
         ai var7 = null;
         int var8_int = 0;
         String var8 = null;
@@ -696,7 +696,7 @@ final class go extends qe {
         boolean stackIn_62_1 = false;
         boolean stackIn_67_1 = false;
         hj[] var2;
-        ec var3_ref_ec;
+        PacketBuffer var3_ref_ec;
         hj var4;
         int var5;
         hj[] var6;
@@ -734,12 +734,12 @@ final class go extends qe {
             if (this.field_b instanceof hn) {
               var7 = (hn) (this.field_b);
               if (var7.field_s) {
-                var3_ref_ec = new ec(3);
+                var3_ref_ec = new PacketBuffer(3);
                 this.field_y.field_g = -var7.field_o + var7.field_n;
                 this.field_y.field_e = var7.field_o;
-                var3_ref_ec.a(6, this.field_y.field_j);
-                var3_ref_ec.a(6, this.field_y.field_e);
-                var3_ref_ec.a(6, this.field_y.field_g);
+                var3_ref_ec.writeByte(6, this.field_y.field_j);
+                var3_ref_ec.writeByte(6, this.field_y.field_e);
+                var3_ref_ec.writeByte(6, this.field_y.field_g);
                 this.a(this.field_y, true);
                 this.a(var3_ref_ec, 118);
               }
@@ -850,9 +850,9 @@ final class go extends qe {
         int var13;
         wb var14;
         int var15;
-        md var16;
+        IntrusiveDeque var16;
         wb[] var17;
-        hb var18;
+        Raider var18;
         ai var19;
         ac var20;
         Object var21;
@@ -869,8 +869,8 @@ final class go extends qe {
         var15 = DungeonAssault.field_K;
         this.field_s = -1;
         if (kh.d(true)) {
-          var16 = (md) null;
-          eg.a((md) null, true);
+          var16 = (IntrusiveDeque) null;
+          eg.a((IntrusiveDeque) null, true);
           return;
         }
         if (kn.field_g &&
@@ -962,7 +962,7 @@ final class go extends qe {
           }
         }
         if (this.field_y != null) {
-          this.a(this.field_y, (hb) (var2), var3, (byte) -115);
+          this.a(this.field_y, (Raider) (var2), var3, (byte) -115);
         }
         if (-1 != this.field_s) {
           var19 = this.field_Y.field_h[this.field_s];
@@ -1086,12 +1086,12 @@ final class go extends qe {
         return;
     }
 
-    private final void a(int param0, ec param1, boolean param2) {
+    private final void a(int param0, PacketBuffer param1, boolean param2) {
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hb var4 = null;
+        Raider var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -1104,24 +1104,24 @@ final class go extends qe {
         ai var11 = null;
         int var12 = 0;
         int var13 = 0;
-        ec var14 = null;
-        hb var15 = null;
-        hb var16 = null;
-        hb var17 = null;
+        PacketBuffer var14 = null;
+        Raider var15 = null;
+        Raider var16 = null;
+        Raider var17 = null;
         var13 = DungeonAssault.field_K;
         try {
           this.field_y = null;
           var15 = this.field_Y.field_A[param1.c(true)];
           var4 = var15;
           if (param0 != -67) {
-            var14 = (ec) null;
-            this.a(false, (ec) null, 48, 11);
+            var14 = (PacketBuffer) null;
+            this.a(false, (PacketBuffer) null, 48, 11);
           }
           var5 = var15.field_n.field_s;
           if (var5 != ob.field_dc &&
             var5 != ob.field_Nb) {
             if (var5 == ob.field_Lb) {
-              var6 = param1.field_o;
+              var6 = param1.position;
               var7 = param1.c(true);
               var8_int = param1.c(true);
               if (!param2) {
@@ -1143,32 +1143,32 @@ final class go extends qe {
                 this.b(false, var8_int);
               }
               je.a(param0 ^ -67, dc.field_q);
-              param1.field_o = var6;
+              param1.position = var6;
             } else if (var5 != ob.field_nc &&
               ob.field_Ib != var5 &&
               var5 != ob.field_Zb) {
               if (var5 == ob.field_Mb) {
-                var6 = param1.field_o;
+                var6 = param1.position;
                 var16 = this.field_Y.field_A[param1.c(true)];
                 var16.field_b.a(rf.field_M, var16.field_n.field_t, -10872);
-                param1.field_o = var6;
+                param1.position = var6;
               } else if (var5 == ob.field_lc ||
                 var5 == ob.field_Gb) {
                 this.a(param0 ^ -71, this.field_Y.field_u);
                 this.b(this.field_Y.field_h[this.field_Y.field_B], -113);
               }
             } else {
-              var6 = param1.field_o;
+              var6 = param1.position;
               var17 = this.field_Y.field_A[param1.c(true)];
               var17.field_b.a(li.field_h, var17.field_n.field_l, -10872);
-              param1.field_o = var6;
+              param1.position = var6;
               if (null != var17.field_n.field_g) {
                 gd.a(64, var17.field_n.field_g);
               }
               var4.field_b = new wd(var15.field_n.field_e, var15.field_n.field_t, rf.field_M);
             }
           } else {
-            var6 = param1.field_o;
+            var6 = param1.position;
             var7 = param1.c(true);
             if (!param2) {
               var8 = bl.a(true, param1, false);
@@ -1183,7 +1183,7 @@ final class go extends qe {
             if (ob.field_dc == var5) {
               je.a(0, dc.field_q);
             }
-            param1.field_o = var6;
+            param1.position = var6;
           }
           this.field_Y.a(var15, param1, 118);
           this.d(false);
@@ -1218,10 +1218,10 @@ final class go extends qe {
         if (param0 != 7872) {
           go.a(117L, 85);
         }
-        this.field_B = new md();
-        this.field_T = new md();
-        this.field_D = ni.a(om.field_b.field_e, 256, 0);
-        this.field_L = ni.a(k.field_f.field_e, 256, 0);
+        this.field_B = new IntrusiveDeque();
+        this.field_T = new IntrusiveDeque();
+        this.field_D = PcmSampleStream.a(om.field_b.field_e, 256, 0);
+        this.field_L = PcmSampleStream.a(k.field_f.field_e, 256, 0);
         this.field_D.e(-1);
         this.field_L.e(-1);
         l.a(this.field_D, 0);
@@ -1229,7 +1229,7 @@ final class go extends qe {
         t.a(64, g.field_Lb, true, true);
     }
 
-    private final void b(hb param0, int param1) {
+    private final void b(Raider param0, int param1) {
         try {
           param0.field_b.a(li.field_h, param0.field_n.field_l, -10872);
           if (param0.field_n.field_g != null) {
@@ -1259,7 +1259,7 @@ final class go extends qe {
         if (13 == mm.field_t) {
           gd.a(dc.field_z, 0, 1, false);
         } else {
-          if (ll.field_k) {
+          if (DualLinkNode.field_k) {
             if (this.field_Y.field_u != null &&
               !qk.field_e[82] &&
               !this.field_w) {
@@ -1280,7 +1280,7 @@ final class go extends qe {
                 }
               }
               if (var2 != var3_int) {
-                this.field_Y.field_A[var1] = new hb(var1, var3_int);
+                this.field_Y.field_A[var1] = new Raider(var1, var3_int);
                 this.field_Y.field_A[var1].field_b = new wd(this.field_Y.field_A[var1].field_n.field_e);
                 this.b((byte) 47, this.field_Y.field_A[var1]);
               }
@@ -1309,14 +1309,14 @@ final class go extends qe {
               }
             }
             if (mm.field_t == 9) {
-              ll.a(-72);
+              DualLinkNode.a(-72);
             }
           }
           super.f();
         }
     }
 
-    private final void b(int param0, hb param1) {
+    private final void b(int param0, Raider param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -1388,7 +1388,7 @@ final class go extends qe {
         return var3;
     }
 
-    private final void a(hb param0, hb param1, int param2, byte param3) {
+    private final void a(Raider param0, Raider param1, int param2, byte param3) {
         int stackIn_32_0 = 0;
         int stackIn_51_0 = 0;
         RuntimeException stackIn_71_0 = null;
@@ -1399,7 +1399,7 @@ final class go extends qe {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        ec var6 = null;
+        PacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var8Lifetime1;
@@ -1411,16 +1411,16 @@ final class go extends qe {
             return;
           }
           var5_int = param0.field_n.field_s;
-          var6 = new ec(3);
+          var6 = new PacketBuffer(3);
           var7 = 0;
-          var6.a(6, param0.field_j);
+          var6.writeByte(6, param0.field_j);
           if ((ob.field_dc == var5_int ||
             var5_int == ob.field_Nb) && (this.field_G == -1 &&
             this.field_Y.b(param2, 27747) &&
             param2 != 24)) {
             this.field_G = param2;
             var7 = 1;
-            var6.a(6, this.field_G);
+            var6.writeByte(6, this.field_G);
           }
           if ((ob.field_nc == var5_int ||
             ob.field_Ib == var5_int) && (this.field_G == -1 &&
@@ -1430,12 +1430,12 @@ final class go extends qe {
               if ((ob.field_Ib == var5_int) &&
                 (param1.field_n.field_z == 1)) {
                 this.field_G = param1.field_j;
-                var6.a(6, this.field_G);
+                var6.writeByte(6, this.field_G);
                 var7 = 1;
               }
             } else {
               this.field_G = param1.field_j;
-              var6.a(6, this.field_G);
+              var6.writeByte(6, this.field_G);
               var7 = 1;
             }
           }
@@ -1452,7 +1452,7 @@ final class go extends qe {
               (6 & param1.field_o) == 0 &&
               (param1.field_d & var8) == 0) {
               this.field_G = param1.field_j;
-              var6.a(6, this.field_G);
+              var6.writeByte(6, this.field_G);
               var7 = 1;
             }
           }
@@ -1463,7 +1463,7 @@ final class go extends qe {
             (param1.field_o & 6) == 0) {
             this.field_G = param1.field_j;
             var7 = 1;
-            var6.a(6, this.field_G);
+            var6.writeByte(6, this.field_G);
           }
           if (var5_int == ob.field_Lb) {
             if (param2 != -1) {
@@ -1477,9 +1477,9 @@ final class go extends qe {
               param2 != 24) {
               if (this.field_G != -1) {
                 this.field_I = param2;
-                var6.a(6, this.field_G);
+                var6.writeByte(6, this.field_G);
                 var7 = 1;
-                var6.a(6, this.field_I);
+                var6.writeByte(6, this.field_I);
               } else {
                 this.field_G = param2;
               }
@@ -1492,7 +1492,7 @@ final class go extends qe {
             param1.field_g > 0) {
             this.field_G = param1.field_j;
             var7 = 1;
-            var6.a(6, this.field_G);
+            var6.writeByte(6, this.field_G);
           }
           if (var7 != 0) {
             this.a(param0, true);
@@ -1520,7 +1520,7 @@ final class go extends qe {
         }
     }
 
-    private final void b(byte param0, hb param1) {
+    private final void b(byte param0, Raider param1) {
         String[] var3 = null;
         String var4 = null;
         String[] var5 = null;
@@ -1557,8 +1557,8 @@ final class go extends qe {
         }
     }
 
-    private final void a(hb param0, int param1, byte param2) {
-        ec stackIn_16_0 = null;
+    private final void a(Raider param0, int param1, byte param2) {
+        PacketBuffer stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -1566,7 +1566,7 @@ final class go extends qe {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ec var5 = null;
+        PacketBuffer var5 = null;
         try {
           if (param0 == null &&
             this.field_Y.field_k == 4) {
@@ -1580,14 +1580,14 @@ final class go extends qe {
               return;
             }
             ac.field_B.d((byte) -101, 63);
-            ac.field_B.a(6, param1);
-            ac.field_B.a(6, param0.field_j);
+            ac.field_B.writeByte(6, param1);
+            ac.field_B.writeByte(6, param0.field_j);
             return;
           }
-          var5 = new ec(2);
-          var5.a(6, param1);
+          var5 = new PacketBuffer(2);
+          var5.writeByte(6, param1);
           if (param2 <= 6) {
-            this.field_L = (ni) null;
+            this.field_L = (PcmSampleStream) null;
           }
           stackIn_16_0 = var5;
           stackIn_16_1 = 6;
@@ -1596,8 +1596,8 @@ final class go extends qe {
           } else {
             stackIn_17_2 = param0.field_j;
           }
-          ((ec) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
-          var5.field_o = 0;
+          ((PacketBuffer) (Object) stackIn_16_0).writeByte(stackIn_16_1, stackIn_17_2);
+          var5.position = 0;
           this.a((byte) -110, var5, true);
           if (this.field_Y.field_h[this.field_Y.field_B].field_a == 2) {
             if (!kn.field_g) {
@@ -1634,8 +1634,8 @@ final class go extends qe {
         int var6 = la.field_b.field_H;
         cn var7 = new cn(var2, var5);
         if (param0 > -62) {
-          hb var12 = (hb) null;
-          this.a((hb) null, (hb) null, 123, (byte) -100);
+          Raider var12 = (Raider) null;
+          this.a((Raider) null, (Raider) null, 123, (byte) -100);
         }
         var7.e();
         String[] var8 = var3;
@@ -1695,12 +1695,12 @@ final class go extends qe {
         ai stackIn_101_0 = null;
         boolean stackIn_102_1 = false;
         int var6;
-        hb var7;
+        Raider var7;
         int var8;
-        hb[] var9_ref_hb__;
+        Raider[] var9_ref_hb__;
         int var9;
         int var10;
-        hb var11_ref_hb;
+        Raider var11_ref_hb;
         int var11;
         int var12;
         ai var13;
@@ -1904,7 +1904,7 @@ final class go extends qe {
         int var9;
         int var10;
         int var11;
-        hb var12;
+        Raider var12;
         wd var13;
         String[] var14;
         rj var15;
@@ -1937,8 +1937,8 @@ final class go extends qe {
             var2 = var2 + la.field_b.field_H;
           }
         } else {
-          var12 = (hb) null;
-          go.a(10, 57, (hb) null);
+          var12 = (Raider) null;
+          go.a(10, 57, (Raider) null);
         }
         go.a(50, 320, this.field_Y.field_u, this.field_Y.field_i);
         var2Lifetime1 = this.field_Y.field_B;
@@ -2034,7 +2034,7 @@ final class go extends qe {
               uk.field_e = mf.a(16744448, 4 + var9, 8, 4 + var8, (byte) 112);
             }
             if (this.field_X % 30 >= 15) {
-              ec.a(var7Lifetime1 - 2, var6 - 2, (byte) -93, uk.field_e, 16711680, 256);
+              PacketBuffer.a(var7Lifetime1 - 2, var6 - 2, (byte) -93, uk.field_e, 16711680, 256);
             } else {
               if (this.field_X <= 0) {
                 stackIn_75_0 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 10.0f))) * 64.0) + 128;
@@ -2054,7 +2054,7 @@ final class go extends qe {
               rd.field_z = mf.a(16744448, 4 + var9Lifetime1, 8, var8Lifetime1 + 4, (byte) 115);
             }
             if (15 <= this.field_X % 30) {
-              ec.a(-2 + var7Lifetime1Lifetime1, -2 + var6Lifetime2, (byte) -96, rd.field_z, 16711680, 256);
+              PacketBuffer.a(-2 + var7Lifetime1Lifetime1, -2 + var6Lifetime2, (byte) -96, rd.field_z, 16711680, 256);
             } else {
               if (this.field_X <= 0) {
                 stackIn_85_0 = (int)(64.0 * (Math.cos((double)((float)mo.field_a / 10.0f)) + 1.0)) + 128;
@@ -2080,9 +2080,9 @@ final class go extends qe {
           }
           oh.a((byte) 17);
         }
-        if (ll.field_k &&
+        if (DualLinkNode.field_k &&
           0 < this.field_H) {
-          ne.field_c.a(Integer.toString(this.field_H), 630, ne.field_c.field_H + 10, 16777215, -1);
+          IntrusiveNode.field_c.a(Integer.toString(this.field_H), 630, IntrusiveNode.field_c.field_H + 10, 16777215, -1);
         }
         return;
     }
@@ -2155,7 +2155,7 @@ final class go extends qe {
         int var7;
         int var8;
         int var10;
-        ec var11;
+        PacketBuffer var11;
         int var12;
         o var3Lifetime1;
         var10 = DungeonAssault.field_K;
@@ -2213,8 +2213,8 @@ final class go extends qe {
         this.field_L.d(this.field_P[1] * (k.field_f.field_a * oo.field_d) / 96 >> 8);
         var3 = (o) (this.field_B.e(param1 - 251594126));
         if (param1 != 251569954) {
-          var11 = (ec) null;
-          this.a(false, (ec) null, 74);
+          var11 = (PacketBuffer) null;
+          this.a(false, (PacketBuffer) null, 74);
         }
         while (var3 != null) {
           var3.field_k.a(var3.field_p * this.field_P[2] >> 2, param1 ^ 251569970);
@@ -2316,11 +2316,11 @@ final class go extends qe {
           if ((var3 == ob.field_nc ||
             var3 == ob.field_Ib) &&
             -1 == this.field_G) {
-            stackIn_57_0 = (0 != ((hb) (var2)).field_n.field_z) ? 0 : 1;
+            stackIn_57_0 = (0 != ((Raider) (var2)).field_n.field_z) ? 0 : 1;
             var4Lifetime1 = stackIn_57_0;
             if (ob.field_Ib == var3) {
               stackIn_60_0 = var4Lifetime1;
-              if (((hb) (var2)).field_n.field_z != 1) {
+              if (((Raider) (var2)).field_n.field_z != 1) {
                 stackIn_61_1 = 0;
               } else {
                 stackIn_61_1 = 1;
@@ -2328,7 +2328,7 @@ final class go extends qe {
               var4Lifetime1 = stackIn_60_0 | stackIn_61_1;
             }
             stackIn_64_0 = var4Lifetime1;
-            if (0 != (6 & ((hb) (var2)).field_o)) {
+            if (0 != (6 & ((Raider) (var2)).field_o)) {
               stackIn_65_1 = 0;
             } else {
               stackIn_65_1 = 1;
@@ -2343,8 +2343,8 @@ final class go extends qe {
           }
           if (var3 == ob.field_Mb &&
             this.field_G == -1) {
-            if ((((hb) (var2)).field_o & 4) != 0 &&
-              ((hb) (var2)).field_g > 0) {
+            if ((((Raider) (var2)).field_o & 4) != 0 &&
+              ((Raider) (var2)).field_g > 0) {
               kh.field_r.h(hj.field_S - 16, eh.field_h - 16);
             } else {
               kh.field_r.e(-16 + hj.field_S, eh.field_h - 16, 4210752);
@@ -2355,7 +2355,7 @@ final class go extends qe {
             this.field_G == -1 &&
             hj.field_S != -1) {
             if (var2 != this.field_y &&
-              (((hb) (var2)).field_o & 6) == 0) {
+              (((Raider) (var2)).field_o & 6) == 0) {
               bf.field_e[0].h(-16 + hj.field_S, -16 + eh.field_h);
             } else {
               bf.field_e[1].h(hj.field_S - 16, -16 + eh.field_h);
@@ -2367,10 +2367,10 @@ final class go extends qe {
     }
 
     final boolean j(int param0) {
-        wj var2 = ra.field_c;
+        CipherPacketBuffer var2 = ra.field_c;
         if (hc.field_c == 59) {
           this.e(false);
-          this.a((byte) -110, (ec) (var2), false);
+          this.a((byte) -110, (PacketBuffer) (var2), false);
           return true;
         }
         if (hc.field_c == 66) {
@@ -2390,9 +2390,9 @@ final class go extends qe {
         }
         if (hc.field_c == 67) {
           this.e(false);
-          this.field_Y.field_o = ((ec) ((Object) var2)).f(-118);
-          this.field_Y.field_y = ((ec) ((Object) var2)).f(-97);
-          this.field_Y.field_l = ((ec) ((Object) var2)).f(-119);
+          this.field_Y.field_o = ((PacketBuffer) ((Object) var2)).f(-118);
+          this.field_Y.field_y = ((PacketBuffer) ((Object) var2)).f(-97);
+          this.field_Y.field_l = ((PacketBuffer) ((Object) var2)).f(-119);
           this.i(104);
           return true;
         }
@@ -2417,7 +2417,7 @@ final class go extends qe {
         this.e((byte) -119);
     }
 
-    private final void a(int param0, hb param1) {
+    private final void a(int param0, Raider param1) {
         try {
           param1.field_b.a(95, param1.field_n.field_t);
           if (param0 != 4) {
@@ -2477,7 +2477,7 @@ final class go extends qe {
                 this.field_N.field_n = (en) ((Object) new qf(dn.field_L, a.field_k, gi.field_Q));
               }
             } else {
-              this.field_N.field_n = (en) ((Object) new qf(u.field_S, kg.field_k, rb.field_I));
+              this.field_N.field_n = (en) ((Object) new qf(u.field_S, GameAppletShell.field_k, rb.field_I));
             }
           } else {
             this.field_N.field_n = (en) ((Object) new qf(vd.field_b, ai.field_d, vo.field_o));
@@ -2491,28 +2491,28 @@ final class go extends qe {
         }
     }
 
-    private final void a(ec param0, int param1) {
+    private final void a(PacketBuffer param0, int param1) {
         if (this.field_w) {
           if (!this.h(56)) {
             return;
           }
           ac.field_B.d((byte) -114, 64);
-          ac.field_B.a(6, param0.field_o);
-          ac.field_B.a(param0.field_m, 1, param0.field_o, 0);
+          ac.field_B.writeByte(6, param0.position);
+          ac.field_B.a(param0.payload, 1, param0.position, 0);
           return;
         }
         try {
           if (param1 < 106) {
             this.a(false);
           }
-          param0.field_o = 0;
+          param0.position = 0;
           this.a(-67, param0, true);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "go.UC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    go(boolean param0, pj param1, go param2) {
+    go(boolean param0, CombatState param1, go param2) {
         this(param0, param1);
         try {
           if (gl.field_Lb) {
@@ -2535,7 +2535,7 @@ final class go extends qe {
         }
     }
 
-    private final void a(boolean param0, ec param1, int param2) {
+    private final void a(boolean param0, PacketBuffer param1, int param2) {
         ro dupTemp$3 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -2587,9 +2587,9 @@ final class go extends qe {
     private final void d(boolean param0) {
         int var3_int = 0;
         int var2 = 0;
-        hb var4_ref_hb;
+        Raider var4_ref_hb;
         int var5;
-        hb[] var6;
+        Raider[] var6;
         int stackIn_22_0 = 0;
         int stackIn_23_1 = 0;
         int stackIn_25_0 = 0;
@@ -2649,8 +2649,8 @@ final class go extends qe {
         }
         this.field_Y.a(false, 8);
         if (param0 != 68) {
-          hb var3 = (hb) null;
-          this.a((hb) null, (hb) null, -76, (byte) -21);
+          Raider var3 = (Raider) null;
+          this.a((Raider) null, (Raider) null, -76, (byte) -21);
         }
     }
 
@@ -2681,8 +2681,8 @@ final class go extends qe {
         this.field_N = ke.a(var2, (byte) -123, gh.field_g[1], 464);
         this.field_t = ke.a(var2, (byte) -125, gh.field_g[2], 548);
         this.field_O = ke.a(var2, (byte) -114, gh.field_g[3], 590);
-        this.field_J = tn.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, ne.field_c, jm.field_i, param0 - 18125, l.field_d);
-        this.field_K = tn.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), ne.field_c, jm.field_i, -109, r.field_a);
+        this.field_J = tn.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, IntrusiveNode.field_c, jm.field_i, param0 - 18125, l.field_d);
+        this.field_K = tn.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -109, r.field_a);
         var3 = 424;
         this.field_M = new nn(false);
         this.field_z = new hj[4];
@@ -2702,14 +2702,14 @@ final class go extends qe {
         if (null == this.field_Y.field_f) {
           stackIn_13_1 = null;
         } else {
-          stackIn_13_1 = new tf(ne.field_c, this.field_Y.field_f, ag.field_c);
+          stackIn_13_1 = new tf(IntrusiveNode.field_c, this.field_Y.field_f, ag.field_c);
         }
         this.field_x = stackIn_13_1;
         this.field_q = new sa(180, 401, 280, 79);
         this.d((byte) -70);
     }
 
-    private final void a(boolean param0, ec param1, int param2, int param3) {
+    private final void a(boolean param0, PacketBuffer param1, int param2, int param3) {
         int stackIn_17_0 = 0;
         int stackIn_41_0 = 0;
         int stackIn_44_0 = 0;
@@ -2722,7 +2722,7 @@ final class go extends qe {
         int var5_int = 0;
         RuntimeException var5 = null;
         ai var6 = null;
-        hb var7 = null;
+        Raider var7 = null;
         int var8 = 0;
         Object var9 = null;
         String var10 = null;
@@ -2895,7 +2895,7 @@ final class go extends qe {
                   }
                 } else {
                   if (var5_int != 36864) {
-                    var9 = new oc(var7, var6, false, nh.field_b);
+                    var9 = new oc(var7, var6, false, ResourceArchive.field_b);
                   } else {
                     var9 = new oc(var7, var6, true, c.field_c);
                   }
@@ -2960,7 +2960,7 @@ final class go extends qe {
         }
     }
 
-    go(boolean param0, pj param1) {
+    go(boolean param0, CombatState param1) {
         e dupTemp$1 = null;
         e dupTemp$2 = null;
         boolean stackIn_4_1 = false;
@@ -2972,22 +2972,22 @@ final class go extends qe {
         int var3_int = 0;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        hb[] var4_ref_hb__ = null;
+        Raider[] var4_ref_hb__ = null;
         int var5 = 0;
         int[] var6 = null;
-        hb var6_ref = null;
+        Raider var6_ref = null;
         int[] var8 = null;
         int[] var9 = null;
-        hb[] var10 = null;
-        hb var11 = null;
+        Raider[] var10 = null;
+        Raider var11 = null;
         int[] var12 = null;
-        hb[] var13 = null;
+        Raider[] var13 = null;
         ai var14 = null;
         int[] var15 = null;
         int[] var16 = null;
-        md discarded$0 = new md();
-        hb[] var4_ref_hb__Lifetime1;
-        hb var6_refLifetime1;
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
+        Raider[] var4_ref_hb__Lifetime1;
+        Raider var6_refLifetime1;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;

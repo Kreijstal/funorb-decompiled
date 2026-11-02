@@ -20,9 +20,9 @@ final class of {
     static r field_g;
     int field_a;
 
-    final static void a(ec param0, java.math.BigInteger param1, java.math.BigInteger param2, byte param3, ec param4) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, java.math.BigInteger param2, byte param3, PacketBuffer param4) {
         try {
-          cb.a(param1, param4.field_o, param4.field_m, param0, 5471, param2, 0);
+          cb.a(param1, param4.position, param4.payload, param0, 5471, param2, 0);
           if (param3 > -110) {
             field_k = false;
           }

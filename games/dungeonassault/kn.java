@@ -149,7 +149,7 @@ final class kn {
         }
     }
 
-    final static cn[] a(nh param0, String param1, String param2, int param3) {
+    final static cn[] a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

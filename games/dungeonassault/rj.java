@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class rj extends ne {
+abstract class rj extends IntrusiveNode {
     static String[] field_j;
     int field_v;
     boolean field_w;
@@ -22,7 +22,7 @@ abstract class rj extends ne {
     Object field_u;
     int field_i;
 
-    final static byte[] a(wj param0, boolean param1, int param2, byte[] param3) {
+    final static byte[] a(CipherPacketBuffer param0, boolean param1, int param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -100,7 +100,7 @@ abstract class rj extends ne {
         if (param0 != 30) {
           this.d(-28, 91, -122);
         }
-        this.a(false);
+        this.unlink(false);
     }
 
     final void d(int param0) {
@@ -258,14 +258,14 @@ abstract class rj extends ne {
 
     final static boolean a(byte param0, boolean param1) {
         try {
-          wj var5 = null;
-          wj var6 = null;
+          CipherPacketBuffer var5 = null;
+          CipherPacketBuffer var6 = null;
           if (kf.field_m == null) {
             kf.field_m = sc.field_q.a(-74, an.field_E, ii.field_D);
           }
           if (param0 <= 23) {
             byte[] var3 = (byte[]) null;
-            rj.a((wj) null, false, -48, (byte[]) null);
+            rj.a((CipherPacketBuffer) null, false, -48, (byte[]) null);
           }
           if (0 == kf.field_m.field_c) {
             return false;
@@ -278,15 +278,15 @@ abstract class rj extends ne {
           } else {
             try {
               sp.field_c = new rk((java.net.Socket) (kf.field_m.field_f), sc.field_q);
-              ac.field_B.field_o = 0;
+              ac.field_B.position = 0;
               var5 = ra.field_c;
               var6 = var5;
-              var6.field_o = 0;
+              var6.position = 0;
               pd.field_A = no.field_c;
               wl.field_f = !param1 ? -1 : -2;
               oc.field_E = !param1 ? -1 : -2;
               rd.field_C = !param1 ? -1 : -2;
-              rg.a(mh.field_g, ac.field_B, kn.field_b, 119, rd.field_D);
+              rg.a(MouseInput.field_g, ac.field_B, kn.field_b, 119, rd.field_D);
               op.a(0, -1);
             } catch (IOException iOException) {
               pd.field_A = tp.field_B;
@@ -324,7 +324,7 @@ abstract class rj extends ne {
         this.field_t = param0;
         this.field_u = null;
         this.field_v = param2;
-        rl.field_h.b((ne) (this), false);
+        rl.field_h.b((IntrusiveNode) (this), false);
     }
 
     static {

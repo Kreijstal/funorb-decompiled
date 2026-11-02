@@ -36,7 +36,7 @@ final class ga extends ip {
             return stackIn_3_0;
           }
           if (this.a(param1, 60) == pd.field_J) {
-            stackIn_6_0 = pj.field_n;
+            stackIn_6_0 = CombatState.field_n;
             return stackIn_6_0;
           }
           if (param0 < 44) {
@@ -158,7 +158,7 @@ final class ga extends ip {
             field_o = (cn[]) null;
           }
           while (var11.field_c == 0) {
-            pj.a(0, 10L);
+            CombatState.a(0, 10L);
           }
           var7 = (java.awt.Frame) (var11.field_f);
           if (var7 == null) {

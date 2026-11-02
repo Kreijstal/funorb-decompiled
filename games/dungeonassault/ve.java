@@ -153,13 +153,13 @@ final class ve {
           this.a(56, -92, 125, -12);
           var2 = (this.field_b >> 2) * (this.field_b >> 2) + (this.field_f >> 2) * (this.field_f >> 2) + (this.field_d >> 2) * (this.field_d >> 2);
           if (var2 >= 0) {
-            return ug.a(!param0 ? true : false, var2) << 2;
+            return MidiPcmStream.a(!param0 ? true : false, var2) << 2;
           }
           throw new RuntimeException();
         }
         var2Lifetime1 = (this.field_b >> 2) * (this.field_b >> 2) + (this.field_f >> 2) * (this.field_f >> 2) + (this.field_d >> 2) * (this.field_d >> 2);
         if (var2Lifetime1 >= 0) {
-          return ug.a(!param0 ? true : false, var2Lifetime1) << 2;
+          return MidiPcmStream.a(!param0 ? true : false, var2Lifetime1) << 2;
         }
         throw new RuntimeException();
     }

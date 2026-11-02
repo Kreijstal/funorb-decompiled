@@ -5,7 +5,7 @@ import java.util.*;
 
 class ii extends lm implements aa {
     static String field_E;
-    md field_B;
+    IntrusiveDeque field_B;
     static String[] field_I;
     static int field_G;
     static String field_C;
@@ -31,7 +31,7 @@ class ii extends lm implements aa {
           var8 = new dj(this.field_B);
           var9 = (lm) (var8.a(-479592473));
           while (var9 != null) {
-            if (var9.c(-55)) {
+            if (var9.isLinked(-55)) {
               if (var9.a((byte) 57) &&
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) -84)) {
                 return true;
@@ -70,7 +70,7 @@ class ii extends lm implements aa {
 
     ii(int param0, int param1, int param2, int param3, ca param4) {
         super(param0, param1, param2, param3, param4, (pg) null);
-        this.field_B = new md();
+        this.field_B = new IntrusiveDeque();
     }
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, byte param3) {
@@ -269,7 +269,7 @@ class ii extends lm implements aa {
           var5 = new dj(this.field_B);
           var6 = (lm) (var5.a(-479592473));
           while (var6 != null) {
-            if (var6.c(-18)) {
+            if (var6.isLinked(-18)) {
               var6.a(this.field_q + param0, param1 + this.field_v, param2, param3);
               var6 = (lm) (var5.c(17756));
               continue;
@@ -428,7 +428,7 @@ class ii extends lm implements aa {
           var9 = new dj(this.field_B);
           var8 = (lm) (var9.a(-479592473));
           while (var8 != null) {
-            if (var8.c(-124)) {
+            if (var8.isLinked(-124)) {
               if (var8.a((byte) 59) &&
                 var8.a(param0, param1, param2, (byte) 112)) {
                 return true;
@@ -610,7 +610,7 @@ class ii extends lm implements aa {
           var9 = -121 / ((param5 + 80) / 35);
           var10 = (lm) (var8.a(-479592473));
           while (var10 != null) {
-            if (var10.c(-76)) {
+            if (var10.isLinked(-76)) {
               if (var10.a(param0, param1, param2, this.field_q + param3, param4, (byte) 53, this.field_v + param6)) {
                 return true;
               }
@@ -648,7 +648,7 @@ class ii extends lm implements aa {
           var7 = new dj(this.field_B);
           var8 = (lm) (var7.a(-479592473));
           while (var8 != null) {
-            if (var8.c(-101)) {
+            if (var8.isLinked(-101)) {
               var8.a(this.field_v + param0, true, param2, param3, param4 + this.field_q, param5);
               var8 = (lm) (var7.c(17756));
               continue;

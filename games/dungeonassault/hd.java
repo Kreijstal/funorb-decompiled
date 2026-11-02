@@ -202,7 +202,7 @@ final class hd {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        wj var9 = null;
+        CipherPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = DungeonAssault.field_K;
@@ -219,7 +219,7 @@ final class hd {
               tl.a(-21);
               return;
             }
-            var5_int = nj.field_b - var9.field_o;
+            var5_int = nj.field_b - var9.position;
             var11 = var4_ref_kj.field_l;
             var10 = var11;
             var6 = var10;
@@ -229,7 +229,7 @@ final class hd {
             for (var7 = 0; var5_int > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.c(true) << nb.a(768, var7 << 8));
             }
-            var4_ref_kj.a(false);
+            var4_ref_kj.unlink(false);
             return;
           }
           if (1 == var2) {
@@ -247,7 +247,7 @@ final class hd {
               tl.a(-23);
               return;
             }
-            var5.a(false);
+            var5.unlink(false);
             return;
           }
           sm.a((Throwable) null, 1, "LR1: " + sj.l(192));
@@ -453,7 +453,7 @@ final class hd {
     }
 
     final static cf a(boolean param0, int param1, String param2) {
-        va var3 = null;
+        PcmSample var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
         cf stackIn_5_0 = null;

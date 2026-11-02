@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends ne {
+final class o extends IntrusiveNode {
     static String field_l;
     static long field_j;
     static wm field_n;
@@ -13,13 +13,13 @@ final class o extends ne {
     static gj field_o;
 
     final static void a(int param0, int param1, jd param2) {
-        wj var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = ac.field_B;
           var3.d((byte) -122, param0);
           int var4 = -95 % ((-66 - param1) / 54);
-          var3.a(6, param2.field_m);
-          var3.i(param2.field_k, -128);
+          var3.writeByte(6, param2.field_m);
+          var3.writeShort(param2.field_k, -128);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "o.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -120,7 +120,7 @@ final class o extends ne {
         int[] var8 = null;
         var7 = DungeonAssault.field_K;
         try {
-          if (!mh.a(116, param2)) {
+          if (!MouseInput.a(116, param2)) {
             return false;
           }
           if (param2 == ek.field_c) {
@@ -157,7 +157,7 @@ final class o extends ne {
           for (var6 = 0; var6 < 6; var6++) {
             var5_int = var5_int + param3.field_J[var6];
           }
-          stackIn_36_0 = !(var5_int < hb.field_m[param2 - uf.field_a]);
+          stackIn_36_0 = !(var5_int < Raider.field_m[param2 - uf.field_a]);
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

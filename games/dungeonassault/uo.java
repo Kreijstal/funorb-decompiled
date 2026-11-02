@@ -143,13 +143,13 @@ final class uo {
         throw new Error();
     }
 
-    final static nh a(boolean param0, int param1, boolean param2, int param3, int param4, boolean param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           ti var8 = null;
-          nh stackIn_12_0 = null;
-          nh stackIn_17_0 = null;
+          ResourceArchive stackIn_12_0 = null;
+          ResourceArchive stackIn_17_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -171,13 +171,13 @@ final class uo {
             }
             var8 = bl.field_r.a(param5, 4210752, param3, (ln) (var6), (ln) (var7));
             if (param4 != 27847) {
-              stackIn_12_0 = (nh) null;
+              stackIn_12_0 = (ResourceArchive) null;
               return stackIn_12_0;
             }
             if (param0) {
               var8.d(param4 ^ 30326);
             }
-            stackIn_17_0 = new nh(var8, param2, param1);
+            stackIn_17_0 = new ResourceArchive(var8, param2, param1);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

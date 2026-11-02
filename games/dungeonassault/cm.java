@@ -141,11 +141,11 @@ final class cm extends ii implements pf, vg {
 
     final static void a(float param0, float param1, int param2, float param3, float param4) {
         if (param2 == -7788) {
-          md.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
+          IntrusiveDeque.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
           return;
         }
         field_S = (String) null;
-        md.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
+        IntrusiveDeque.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
     }
 
     private final String a(int param0) {

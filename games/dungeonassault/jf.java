@@ -12,8 +12,8 @@ final class jf extends en {
         field_e = null;
         field_g = null;
         if (!param0) {
-          nh var2 = (nh) null;
-          jf.a(18, (nh) null, -123, (byte) -39);
+          ResourceArchive var2 = (ResourceArchive) null;
+          jf.a(18, (ResourceArchive) null, -123, (byte) -39);
         }
     }
 
@@ -53,7 +53,7 @@ final class jf extends en {
         return var6;
     }
 
-    final static cn a(int param0, nh param1, int param2, byte param3) {
+    final static cn a(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
         cn stackIn_2_0 = null;
         Object stackIn_5_0 = null;

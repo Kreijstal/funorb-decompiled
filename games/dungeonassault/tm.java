@@ -52,7 +52,7 @@ final class tm {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ec var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -69,7 +69,7 @@ final class tm {
         int var13Lifetime1Lifetime1;
         var16 = DungeonAssault.field_K;
         try {
-          var17 = new ec(lc.a(param0, 50166));
+          var17 = new PacketBuffer(lc.a(param0, 50166));
           var4 = var17.c(true);
           if (5 <= var4 &&
             7 >= var4) {
@@ -79,7 +79,7 @@ final class tm {
             if (6 > var4) {
               this.field_s = 0;
             } else {
-              this.field_s = var17.h(-42);
+              this.field_s = var17.readInt(-42);
             }
             var5 = var17.c(true);
             stackIn_13_0 = ((1 & var5) == 0) ? 0 : 1;
@@ -128,12 +128,12 @@ final class tm {
                 this.field_c[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_h > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_c[this.field_j[var10Lifetime1Lifetime1]] = var17.h(-50);
+                this.field_c[this.field_j[var10Lifetime1Lifetime1]] = var17.readInt(-50);
               }
               this.field_a = new ra(this.field_c);
             }
             for (var10Lifetime2 = 0; this.field_h > var10Lifetime2; var10Lifetime2++) {
-              this.field_q[this.field_j[var10Lifetime2]] = var17.h(-77);
+              this.field_q[this.field_j[var10Lifetime2]] = var17.readInt(-77);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_h > var10Lifetime3; var10Lifetime3++) {
@@ -143,7 +143,7 @@ final class tm {
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_h; var10Lifetime4++) {
-              this.field_o[this.field_j[var10Lifetime4]] = var17.h(-100);
+              this.field_o[this.field_j[var10Lifetime4]] = var17.readInt(-100);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
@@ -215,7 +215,7 @@ final class tm {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_d[var11Lifetime1][var14Lifetime1] = var17.h(-81);
+                  this.field_d[var11Lifetime1][var14Lifetime1] = var17.readInt(-81);
                 }
                 this.field_n[var11Lifetime1] = new ra(this.field_d[var11Lifetime1]);
               }

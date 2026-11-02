@@ -10,7 +10,7 @@ final class rl {
     static ba field_j;
     static String field_a;
     static String field_k;
-    static md field_h;
+    static IntrusiveDeque field_h;
     static String[] field_g;
     static String[] field_e;
     private static String field_z;
@@ -26,7 +26,7 @@ final class rl {
         field_h = null;
         field_g = null;
         if (param0 <= 41) {
-          field_h = (md) null;
+          field_h = (IntrusiveDeque) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class rl {
         field_k = "Loading sound effects";
         field_j = new ba("");
         field_g = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
-        field_h = new md();
+        field_h = new IntrusiveDeque();
         field_e = new String[]{null, "Your goal when attacking a dungeon is to reach the hoard room, and steal as much gold as you can without waking the rival dragon."};
     }
 }

@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ne {
-    ne field_a;
+class IntrusiveNode {
+    IntrusiveNode next;
     static hh field_b;
-    ne field_e;
+    IntrusiveNode previous;
     static long field_g;
     static gp field_c;
-    long field_h;
+    long key;
     static String[] field_f;
     static cn field_d;
 
-    final void a(boolean param0) {
-        if (this.field_a != null) {
-          this.field_a.field_e = this.field_e;
-          this.field_e.field_a = this.field_a;
-          this.field_e = null;
-          this.field_a = null;
-          if (param0) {
+    final void unlink(boolean obfuscationGuard) {
+        if (this.next != null) {
+          this.next.previous = this.previous;
+          this.previous.next = this.next;
+          this.previous = null;
+          this.next = null;
+          if (obfuscationGuard) {
             field_d = (cn) null;
           }
           return;
         }
     }
 
-    final boolean c(int param0) {
-        if (null == this.field_a) {
+    final boolean isLinked(int obfuscationGuard) {
+        if (null == this.next) {
           return false;
         }
-        if (param0 >= -15) {
+        if (obfuscationGuard >= -15) {
           field_f = (String[]) null;
           return true;
         }

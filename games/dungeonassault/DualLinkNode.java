@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-class ll extends ne {
+class DualLinkNode extends IntrusiveNode {
     static boolean field_k;
-    static md field_i;
+    static IntrusiveDeque field_i;
     static String[] field_j;
-    static nh field_r;
+    static ResourceArchive field_r;
     static String field_s;
-    ll field_n;
+    DualLinkNode field_n;
     static String[] field_m;
     static vk field_p;
     static String field_u;
-    ll field_l;
+    DualLinkNode field_l;
     long field_o;
     static cn field_q;
     static String[] field_t;
@@ -88,7 +88,7 @@ class ll extends ne {
         le.field_b[0] = lc.a(-27711, new String[][]{bh.field_J, nf.field_C});
         le.field_b[1] = lc.a(-27711, new String[][]{rl.field_e, co.field_J});
         int var1 = -50 % ((30 - param0) / 40);
-        le.field_b[2] = lc.a(-27711, new String[][]{p.field_J, je.field_f, og.field_a, h.field_y});
+        le.field_b[2] = lc.a(-27711, new String[][]{p.field_J, je.field_f, KeyboardInput.field_a, h.field_y});
         le.field_b[3] = lc.a(-27711, new String[][]{pp.field_E, np.field_C});
         le.field_b[4] = lc.a(-27711, new String[][]{eg.field_b, lp.field_q, lb.field_d, le.field_c});
         le.field_b[5] = lc.a(-27711, new String[][]{bn.field_m, lp.field_q, ka.field_d});
@@ -103,12 +103,12 @@ class ll extends ne {
         le.field_b[14] = lc.a(-27711, new String[][]{ha.field_j});
         le.field_b[15] = lc.a(-27711, new String[][]{qa.field_e});
         le.field_b[16] = lc.a(-27711, new String[][]{tl.field_m});
-        le.field_b[17] = lc.a(-27711, new String[][]{ug.field_M});
+        le.field_b[17] = lc.a(-27711, new String[][]{MidiPcmStream.field_M});
         le.field_b[18] = lc.a(-27711, new String[][]{qh.field_E, dg.field_O});
         le.field_b[19] = lc.a(-27711, new String[][]{tg.field_e, uo.field_g});
         le.field_b[20] = lc.a(-27711, new String[][]{hh.field_n, fj.field_a, k.field_a});
         le.field_b[21] = lc.a(-27711, new String[][]{rn.field_g});
-        le.field_b[22] = lc.a(-27711, new String[][]{kg.field_e});
+        le.field_b[22] = lc.a(-27711, new String[][]{GameAppletShell.field_e});
         le.field_b[23] = lc.a(-27711, new String[][]{vf.field_A, qd.field_e, rk.field_k, un.field_b});
         le.field_b[24] = lc.a(-27711, new String[][]{tp.field_A});
         if (!(kd.field_c <= 25)) {
@@ -118,7 +118,7 @@ class ll extends ne {
         if (!(fc.field_d <= uo.field_f.length)) {
           fc.field_d = 0;
         }
-        og.a(false, 0, uo.field_f[fc.field_d]);
+        KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
     }
 
     final void b(byte param0) {
@@ -152,7 +152,7 @@ class ll extends ne {
           return;
         }
         String var2 = (String) null;
-        ll.a((String) null, (byte) 100);
+        DualLinkNode.a((String) null, (byte) 100);
         field_u = null;
         field_q = null;
         field_s = null;
@@ -285,7 +285,7 @@ class ll extends ne {
           if (param1 == -47) {
             return null;
           }
-          ll.a((byte) 52);
+          DualLinkNode.a((byte) 52);
           stackIn_21_0 = null;
           return (bo) (stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -302,14 +302,14 @@ class ll extends ne {
         }
     }
 
-    protected ll() {
+    protected DualLinkNode() {
     }
 
     static {
         field_s = "Magical Guardian";
         field_u = "Crusher";
         field_j = new String[]{null, "Another option is to <%flee>. If the raider survives at least one combat round, they may be able to escape the room (if they win a <%dodge> roll against the room's <%snare>), allowing you to send a different raider in to face it, or to seek a different route entirely.<br><br><%command>Select one of these strategies now.</col>"};
-        field_i = new md();
+        field_i = new IntrusiveDeque();
         field_t = new String[]{"Ferocity", "The <%0> is able to channel his fury into a violent flurry of blows; during the first round of each combat, his <%attack> is doubled."};
     }
 }

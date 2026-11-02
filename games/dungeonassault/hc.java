@@ -46,7 +46,7 @@ final class hc {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        b var14 = null;
+        ClientException var14 = null;
         StringWriter var21 = null;
         PrintWriter var20 = null;
         String var22 = null;
@@ -97,12 +97,12 @@ final class hc {
         int var9Lifetime1;
         int var10Lifetime1;
         int var12Lifetime1;
-        if (!(param1 instanceof b)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (b) ((Object) param1);
-          param1 = var14.field_d;
-          var2 = var14.field_c + " | ";
+          var14 = (ClientException) ((Object) param1);
+          param1 = var14.cause;
+          var2 = var14.context + " | ";
           var11 = var2;
           var2 = var11;
           var11Lifetime11 = var2;

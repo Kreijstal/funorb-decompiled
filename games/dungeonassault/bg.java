@@ -4,7 +4,7 @@
 final class bg extends qe {
     private rh field_w;
     private cn field_u;
-    static md field_s;
+    static IntrusiveDeque field_s;
     private rh field_r;
     static String field_x;
     private cn field_v;
@@ -137,7 +137,7 @@ final class bg extends qe {
         un.a(41, (byte) 63, 558, 416, true);
         this.a(40, 70, 117);
         jh.b();
-        fk.a((byte) 121, wj.field_u);
+        fk.a((byte) 121, CipherPacketBuffer.field_u);
         ao.field_o = 0;
         if (fb.field_d == null) {
           fb.field_d = new di[10];
@@ -240,16 +240,16 @@ final class bg extends qe {
           return -1;
         }
         if (param0 > -72) {
-          field_s = (md) null;
+          field_s = (IntrusiveDeque) null;
         }
         return vd.field_a + var4;
     }
 
     private final void a(byte param0) {
         this.b();
-        le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), ne.field_c, jm.field_i, -62, l.field_d);
-        wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, ne.field_c, jm.field_i, -52, ia.field_Y);
-        ic.field_y = tn.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, ne.field_c, jm.field_i, -61, hb.field_l.toUpperCase());
+        le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, l.field_d);
+        wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, ia.field_Y);
+        ic.field_y = tn.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -61, Raider.field_l.toUpperCase());
         wf.field_w.field_w = false;
         ic.field_y.field_w = !ed.c(true) ? true : false;
         int var2 = ao.field_o - 10;
@@ -654,7 +654,7 @@ final class bg extends qe {
         }
     }
 
-    final static nh a(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
         if (param3) {
           field_t = (String) null;
         }
@@ -702,7 +702,7 @@ final class bg extends qe {
           var9[incrementValue$0] = fb.field_d[incrementValue$1];
         }
         fb.field_d = var3;
-        og.field_f = param1;
+        KeyboardInput.field_f = param1;
         vd.field_a = param1;
         if (hi.field_c != null) {
           hi.field_c.field_z = vd.field_a;
@@ -848,8 +848,8 @@ final class bg extends qe {
           gg.a((byte) -96);
         }
         if (var2 != -1 &&
-          0 != pj.field_r) {
-          hi.field_c.a(1, pj.field_r);
+          0 != CombatState.field_r) {
+          hi.field_c.a(1, CombatState.field_r);
         }
         if (param0 != 5458) {
           var8 = (di) null;
@@ -860,7 +860,7 @@ final class bg extends qe {
 
     static {
         field_x = "Buy";
-        field_s = new md();
+        field_s = new IntrusiveDeque();
         field_t = "Loading...";
     }
 }

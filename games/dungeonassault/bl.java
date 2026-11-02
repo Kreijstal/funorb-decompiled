@@ -11,7 +11,7 @@ final class bl {
     static boolean field_k;
     static cn field_j;
     static Random field_i;
-    nh field_q;
+    ResourceArchive field_q;
     String field_h;
     static String field_b;
     static cn[] field_d;
@@ -23,7 +23,7 @@ final class bl {
     static int field_c;
     static je field_r;
     static String field_a;
-    static nh field_t;
+    static ResourceArchive field_t;
 
     public static void d(byte param0) {
         field_o = null;
@@ -110,7 +110,7 @@ final class bl {
           of.field_j = oh.a(hj.field_Z, "", 11091, "menu_button");
           le.field_f = oh.a(hj.field_Z, "", 11091, "menu_moss_top_left");
           e.field_j = oh.a(hj.field_Z, "", 11091, "menu_moss_top_right");
-          wj.field_w = oh.a(hj.field_Z, "", 11091, "menu_moss_1");
+          CipherPacketBuffer.field_w = oh.a(hj.field_Z, "", 11091, "menu_moss_1");
           oj.field_a = oh.a(hj.field_Z, "", 11091, "menu_moss_2");
           oh.a(hj.field_Z, "", 11091, "menu_moss_bottom");
           am.field_a = oh.a(hj.field_Z, "", 11091, "menu_chain_frame");
@@ -207,9 +207,9 @@ final class bl {
             }
           }
           ac.field_w = new ph(var4, var10);
-          ec.field_j = qa.a(15322, "achievements_large", "", hj.field_Z);
-          md.a(97, f.field_a);
-          md.a(98, lb.field_o);
+          PacketBuffer.field_j = qa.a(15322, "achievements_large", "", hj.field_Z);
+          IntrusiveDeque.a(97, f.field_a);
+          IntrusiveDeque.a(98, lb.field_o);
           cf.field_f = new cn(32, 32);
           cf.field_f.e();
           lb.field_o.a(0, 0, 32, 32);
@@ -276,7 +276,7 @@ final class bl {
           ia.field_R = oh.a(hj.field_Z, "pieces", 11091, "piece_beastman");
           ld.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_blackknight");
           ck.field_G = oh.a(hj.field_Z, "pieces", 11091, "piece_blade_construct");
-          ll.field_q = oh.a(hj.field_Z, "pieces", 11091, "piece_darkelf");
+          DualLinkNode.field_q = oh.a(hj.field_Z, "pieces", 11091, "piece_darkelf");
           lb.field_v = oh.a(hj.field_Z, "pieces", 11091, "piece_demon");
           fp.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_dryhad");
           bj.field_F = oh.a(hj.field_Z, "pieces", 11091, "piece_dwarf");
@@ -310,7 +310,7 @@ final class bl {
           sp.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_troglodyte");
           gd.field_A = oh.a(hj.field_Z, "pieces", 11091, "piece_troll");
           h.field_E = oh.a(hj.field_Z, "pieces", 11091, "piece_vampire");
-          in.field_D = oh.a(hj.field_Z, "pieces", 11091, "piece_witch");
+          NetworkGameClient.field_D = oh.a(hj.field_Z, "pieces", 11091, "piece_witch");
           up.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_zealot");
           gd.field_E = oh.a(hj.field_Z, "", 11091, "stat_attack");
           jj.field_b = oh.a(hj.field_Z, "", 11091, "stat_defence");
@@ -382,7 +382,7 @@ final class bl {
           li.field_l[6] = oh.a(hj.field_Z, "", 11091, "scroll_bottom_left");
           li.field_l[7] = oh.a(hj.field_Z, "", 11091, "scroll_bottom_centre");
           li.field_l[8] = oh.a(hj.field_Z, "", 11091, "scroll_bottom_right");
-          kg.field_a = oh.a(hj.field_Z, "", 11091, "small_button");
+          GameAppletShell.field_a = oh.a(hj.field_Z, "", 11091, "small_button");
           jn.field_n = new lg(327680, 1310720, 327680, 327680, 65536, 32768, 49152, 24576, 0, -4096, 100, 50);
           var13 = new int[256];
           for (var14 = 0; var14 < 64; var14++) {
@@ -395,11 +395,11 @@ final class bl {
             var13[var14Lifetime2] = 16776960 + (-192 + var14Lifetime2) * 4;
           }
           jn.field_n.field_v.field_i = var13;
-          fp.field_d = new tf(ne.field_c, tp.field_u, cm.field_M);
-          na.field_w = new tf(ne.field_c, bn.field_q, cm.field_M);
-          cg.field_a = new tf(ne.field_c, vd.field_c, cm.field_M);
-          ih.field_x = new tf(ne.field_c, c.field_e.toUpperCase(), cm.field_M);
-          bf.field_m = new tf(ne.field_c, gk.field_K, cm.field_M);
+          fp.field_d = new tf(IntrusiveNode.field_c, tp.field_u, cm.field_M);
+          na.field_w = new tf(IntrusiveNode.field_c, bn.field_q, cm.field_M);
+          cg.field_a = new tf(IntrusiveNode.field_c, vd.field_c, cm.field_M);
+          ih.field_x = new tf(IntrusiveNode.field_c, c.field_e.toUpperCase(), cm.field_M);
+          bf.field_m = new tf(IntrusiveNode.field_c, gk.field_K, cm.field_M);
           kd.field_e = new tf[ie.field_j.length];
           for (var14Lifetime3 = 0; var14Lifetime3 < ie.field_j.length; var14Lifetime3++) {
             kd.field_e[var14Lifetime3] = new tf(db.field_v, ie.field_j[var14Lifetime3], cm.field_M);
@@ -493,14 +493,14 @@ final class bl {
         }
         ti.field_A.b(204 + vf.field_w, qc.field_w - 28, (byte) 4);
         tk.field_k.b(vf.field_w - 7, 20 + qc.field_w + wi.field_kb, (byte) 4);
-        ec.field_n.b(7 + (vf.field_w + 200), qc.field_w + (wi.field_kb + 22), (byte) 4);
+        PacketBuffer.field_n.b(7 + (vf.field_w + 200), qc.field_w + (wi.field_kb + 22), (byte) 4);
         stackIn_22_0 = ti.field_A;
         stackIn_23_1 = (null == gk.field_L) ? false : true;
         stackIn_22_0.field_w = stackIn_23_1;
         stackIn_25_0 = tk.field_k;
         stackIn_26_1 = (param0 >= fc.field_d) ? false : true;
         stackIn_25_0.field_w = stackIn_26_1;
-        stackIn_28_0 = ec.field_n;
+        stackIn_28_0 = PacketBuffer.field_n;
         stackIn_29_1 = (fc.field_d >= uo.field_f.length - 1) ? false : true;
         stackIn_28_0.field_w = stackIn_29_1;
     }
@@ -588,13 +588,13 @@ final class bl {
         return var3;
     }
 
-    final static ai a(boolean param0, ec param1, boolean param2) {
+    final static ai a(boolean param0, PacketBuffer param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ai var4 = null;
-        ec var5 = null;
+        PacketBuffer var5 = null;
         ai stackIn_5_0 = null;
-        ec stackIn_5_1 = null;
+        PacketBuffer stackIn_5_1 = null;
         boolean stackIn_6_2 = false;
         ai stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -603,8 +603,8 @@ final class bl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            var5 = (ec) null;
-            bl.a(false, (ec) null, true);
+            var5 = (PacketBuffer) null;
+            bl.a(false, (PacketBuffer) null, true);
           }
           var3_int = param1.c(true);
           var4 = new ai(var3_int);
@@ -616,9 +616,9 @@ final class bl {
             var4.field_j = param1.c(true);
             var4.field_l = param1.c(true);
             stackIn_5_0 = var4;
-            stackIn_5_1 = (ec) (param1);
+            stackIn_5_1 = (PacketBuffer) (param1);
             stackIn_6_2 = !(param2);
-            stackIn_5_0.field_s = ((ec) (Object) stackIn_5_1).c(stackIn_6_2);
+            stackIn_5_0.field_s = ((PacketBuffer) (Object) stackIn_5_1).c(stackIn_6_2);
             var4.field_o = param1.c(true);
           }
           stackIn_8_0 = var4;

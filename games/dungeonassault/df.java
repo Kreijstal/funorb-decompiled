@@ -49,7 +49,7 @@ final class df {
         return (int)(-16912800L + kd.c(-2456) / 60000L);
     }
 
-    final static qh a(boolean param0, wj param1) {
+    final static qh a(boolean param0, CipherPacketBuffer param1) {
         int var7 = 0;
         qh stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -137,8 +137,8 @@ final class df {
         try {
           qh.field_G = param1;
           if (param0 != 11) {
-            wj var3 = (wj) null;
-            df.a(true, (wj) null);
+            CipherPacketBuffer var3 = (CipherPacketBuffer) null;
+            df.a(true, (CipherPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "df.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -152,8 +152,8 @@ final class df {
         field_f = null;
         field_e = null;
         if (param0 != 255) {
-          wj var2 = (wj) null;
-          df.a(true, (wj) null);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          df.a(true, (CipherPacketBuffer) null);
         }
         field_c = null;
         field_a = null;

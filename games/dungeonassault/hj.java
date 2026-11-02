@@ -6,10 +6,10 @@ final class hj extends gd {
     static String field_U;
     static String[] field_O;
     static int[] field_W;
-    static nh field_Z;
-    private pj field_R;
+    static ResourceArchive field_Z;
+    private CombatState field_R;
     static cn field_T;
-    hb field_V;
+    Raider field_V;
     static int field_S;
     boolean field_Y;
     static String field_X;
@@ -99,11 +99,11 @@ final class hj extends gd {
     }
 
     final static void g(int param0) {
-        fe.field_k = new md();
+        fe.field_k = new IntrusiveDeque();
         int var1 = -89 / ((param0 - 62) / 36);
     }
 
-    hj(pj param0, hb param1, int param2, int param3) {
+    hj(CombatState param0, Raider param1, int param2, int param3) {
         super(param2, param3, 40, 40, 0);
         int var5_int = 0;
         int var6 = 0;

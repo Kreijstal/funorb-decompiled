@@ -15,7 +15,7 @@ abstract class hl {
     static String field_j;
 
     final static void a(int param0, int param1, al param2) {
-        wj var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -24,11 +24,11 @@ abstract class hl {
         try {
           var3 = ac.field_B;
           var3.d((byte) -118, param0);
-          var3.a(6, 5);
-          var3.a(6, 0);
-          var3.i(param2.field_k, -125);
-          var3.a(6, param2.field_l);
-          var3.a(6, param2.field_p);
+          var3.writeByte(6, 5);
+          var3.writeByte(6, 0);
+          var3.writeShort(param2.field_k, -125);
+          var3.writeByte(6, param2.field_l);
+          var3.writeByte(6, param2.field_p);
           if (param1 < -122) {
             return;
           }
@@ -94,7 +94,7 @@ abstract class hl {
         field_h = null;
     }
 
-    abstract void a(ec param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     abstract fd b(int param0);
 

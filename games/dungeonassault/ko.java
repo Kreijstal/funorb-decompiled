@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ko extends ll {
+class ko extends DualLinkNode {
     static int[] field_v;
     static String field_w;
 

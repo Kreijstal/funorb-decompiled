@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wa {
-    private ne field_i;
-    private ne[] field_h;
+    private IntrusiveNode field_i;
+    private IntrusiveNode[] field_h;
     static String field_e;
     private int field_n;
     static int field_k;
-    private ne field_d;
+    private IntrusiveNode field_d;
     private int field_g;
     static String field_f;
     static int field_c;
-    static ec field_b;
+    static PacketBuffer field_b;
     static mb field_j;
     static boolean field_a;
     static int[] field_m;
@@ -26,51 +26,51 @@ final class wa {
         }
     }
 
-    final ne a(long param0, int param1) {
-        ne var4;
-        ne var5;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        ne var4Lifetime1;
-        ne var5Lifetime1;
+        IntrusiveNode var4Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = DungeonAssault.field_K;
         if (param1 == 8) {
           var4 = this.field_h[(int)((long)(-1 + this.field_n) & param0)];
-          this.field_d = var4.field_e;
+          this.field_d = var4.previous;
           while (true) {
             if (this.field_d == var4) {
               this.field_d = null;
               return null;
             }
-            if (~this.field_d.field_h != ~param0) {
-              this.field_d = this.field_d.field_e;
+            if (~this.field_d.key != ~param0) {
+              this.field_d = this.field_d.previous;
               continue;
             }
             break;
           }
           var5 = this.field_d;
-          this.field_d = this.field_d.field_e;
+          this.field_d = this.field_d.previous;
           return var5;
         }
-        field_b = (ec) null;
+        field_b = (PacketBuffer) null;
         var4Lifetime1 = this.field_h[(int)((long)(-1 + this.field_n) & param0)];
-        this.field_d = var4Lifetime1.field_e;
+        this.field_d = var4Lifetime1.previous;
         while (true) {
           if (this.field_d == var4Lifetime1) {
             this.field_d = null;
             return null;
           }
-          if (~this.field_d.field_h != ~param0) {
-            this.field_d = this.field_d.field_e;
+          if (~this.field_d.key != ~param0) {
+            this.field_d = this.field_d.previous;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_d;
-        this.field_d = this.field_d.field_e;
+        this.field_d = this.field_d.previous;
         return var5Lifetime1;
     }
 
-    final ne a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (!param0) {
           field_l = -108;
           this.field_g = 0;
@@ -114,17 +114,17 @@ final class wa {
         return new int[8];
     }
 
-    final ne a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
-        ne var4;
-        ne var7;
-        ne var8;
+        IntrusiveNode var4;
+        IntrusiveNode var7;
+        IntrusiveNode var8;
         var3 = DungeonAssault.field_K;
         if (0 >= this.field_g) {
           if (param0 != 4318) {
-            return (ne) null;
+            return (IntrusiveNode) null;
           }
           do {
             if (this.field_g >= this.field_n) {
@@ -132,18 +132,18 @@ final class wa {
             }
             fieldTemp$0 = this.field_g;
             this.field_g = this.field_g + 1;
-            var8 = this.field_h[fieldTemp$0].field_e;
+            var8 = this.field_h[fieldTemp$0].previous;
           } while (this.field_h[this.field_g - 1] == var8);
-          this.field_i = var8.field_e;
+          this.field_i = var8.previous;
           return var8;
         }
         if (this.field_h[this.field_g - 1] != this.field_i) {
           var7 = this.field_i;
-          this.field_i = var7.field_e;
+          this.field_i = var7.previous;
           return var7;
         }
         if (param0 != 4318) {
-          return (ne) null;
+          return (IntrusiveNode) null;
         }
         do {
           if (this.field_g >= this.field_n) {
@@ -151,27 +151,27 @@ final class wa {
           }
           fieldTemp$1 = this.field_g;
           this.field_g = this.field_g + 1;
-          var4 = this.field_h[fieldTemp$1].field_e;
+          var4 = this.field_h[fieldTemp$1].previous;
         } while (this.field_h[this.field_g - 1] == var4);
-        this.field_i = var4.field_e;
+        this.field_i = var4.previous;
         return var4;
     }
 
-    final void a(ne param0, int param1, long param2) {
-        ne var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param0.field_a) {
-            param0.a(false);
+          if (null != param0.next) {
+            param0.unlink(false);
           }
           var5 = this.field_h[(int)(param2 & (long)(this.field_n - 1))];
-          param0.field_a = var5.field_a;
-          param0.field_e = var5;
-          param0.field_a.field_e = param0;
+          param0.next = var5.next;
+          param0.previous = var5;
+          param0.next.previous = param0;
           if (param1 != 12460) {
             field_e = (String) null;
           }
-          param0.field_e.field_a = param0;
-          param0.field_h = param2;
+          param0.previous.next = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "wa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -179,17 +179,17 @@ final class wa {
 
     wa(int param0) {
         int var2 = 0;
-        ne dupTemp$1 = null;
-        ne var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_g = 0;
-        this.field_h = new ne[param0];
+        this.field_h = new IntrusiveNode[param0];
         this.field_n = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new ne();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_h[var2] = dupTemp$1;
-          var3.field_a = var3;
-          var3.field_e = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

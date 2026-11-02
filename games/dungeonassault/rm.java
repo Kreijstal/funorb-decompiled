@@ -293,7 +293,7 @@ class rm extends ck {
         }
     }
 
-    final static int a(ec param0, int param1) {
+    final static int a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
@@ -575,7 +575,7 @@ class rm extends ck {
         Object var5 = null;
         int var6 = 0;
         ub var8 = null;
-        wj var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = DungeonAssault.field_K;
         try {
@@ -597,15 +597,15 @@ class rm extends ck {
               var13 = new byte[var4];
               var9.a((byte) -111, 0, var4, var13);
             }
-            var9.field_o = var9.field_o + 4;
+            var9.position = var9.position + 4;
             if (!var9.d(true)) {
               tl.a(param0 ^ -5667);
               return;
             }
-            var8.a(false);
+            var8.unlink(false);
           } else {
             if (var2 == 1) {
-              var3 = var9.h(-107);
+              var3 = var9.readInt(-107);
               var4_ref_ue = (ue) (qm.field_q.e(-24172));
               while (var4_ref_ue != null) {
                 if (var4_ref_ue.field_k != var3) {
@@ -615,7 +615,7 @@ class rm extends ck {
                 break;
               }
               if (var4_ref_ue != null) {
-                var4_ref_ue.a(false);
+                var4_ref_ue.unlink(false);
                 return;
               }
               tl.a(126);
@@ -639,7 +639,7 @@ class rm extends ck {
         int var6;
         int var7;
         int var8;
-        ec var9;
+        PacketBuffer var9;
         th var10;
         var8 = DungeonAssault.field_K;
         if (!this.field_Q) {
@@ -652,8 +652,8 @@ class rm extends ck {
         }
         var10 = (th) ((Object) this.field_o);
         if (param0 != -24768) {
-          var9 = (ec) null;
-          rm.a((ec) null, -49);
+          var9 = (PacketBuffer) null;
+          rm.a((PacketBuffer) null, -49);
         }
         var3 = var10.b(-2, (lm) (this));
         var4 = var3.c(-117);

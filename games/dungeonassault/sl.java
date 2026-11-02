@@ -21,7 +21,7 @@ final class sl {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
-          ne.field_c = ah.a(gh.field_c, 200, "", "roman20", uc.field_I);
+          IntrusiveNode.field_c = ah.a(gh.field_c, 200, "", "roman20", uc.field_I);
           la.field_b = ah.a(gh.field_c, 200, "", "roman12", uc.field_I);
           f.field_a = oh.a(uc.field_I, "basic", 11091, "unachieved");
           int var2_int = -24 % ((param0 + 15) / 54);

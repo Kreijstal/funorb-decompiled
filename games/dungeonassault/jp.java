@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jp extends ne {
+final class jp extends IntrusiveNode {
     private int field_G;
     private static float[] field_E;
     private static int[] field_l;
@@ -39,7 +39,7 @@ final class jp extends ne {
     private static nd[] field_q;
     private static float[] field_J;
 
-    final va c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -71,7 +71,7 @@ final class jp extends ne {
           }
         }
         this.field_t = null;
-        return new va(this.field_C, var1, this.field_r, this.field_G, this.field_z);
+        return new PcmSample(this.field_C, var1, this.field_r, this.field_G, this.field_z);
     }
 
     private final float[] e(int param0) {
@@ -426,7 +426,7 @@ final class jp extends ne {
         return (float[]) (var17);
     }
 
-    final static jp a(nh param0, int param1, int param2) {
+    final static jp a(ResourceArchive param0, int param1, int param2) {
         try {
           jp var4_ref = null;
           if (!jp.a(param0)) {
@@ -459,7 +459,7 @@ final class jp extends ne {
         return var0;
     }
 
-    final static jp a(nh param0, String param1, String param2) {
+    final static jp a(ResourceArchive param0, String param1, String param2) {
         try {
           jp var4_ref = null;
           if (!jp.a(param0)) {
@@ -484,7 +484,7 @@ final class jp extends ne {
         }
     }
 
-    private final static boolean a(nh param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_y) {
           var1 = param0.b(5, 0, 0);
@@ -675,16 +675,16 @@ final class jp extends ne {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        ec var2 = new ec(param0);
-        this.field_C = var2.h(-45);
-        this.field_m = var2.h(-48);
-        this.field_r = var2.h(-34);
-        this.field_G = var2.h(-42);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_C = var2.readInt(-45);
+        this.field_m = var2.readInt(-48);
+        this.field_r = var2.readInt(-34);
+        this.field_G = var2.readInt(-42);
         if (this.field_G < 0) {
           this.field_G = ~this.field_G;
           this.field_z = true;
         }
-        int var3 = var2.h(-125);
+        int var3 = var2.readInt(-125);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -701,7 +701,7 @@ final class jp extends ne {
         }
     }
 
-    final va a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -751,7 +751,7 @@ final class jp extends ne {
         this.field_t = null;
         var12 = this.field_w;
         this.field_w = null;
-        return new va(this.field_C, var12, this.field_r, this.field_G, this.field_z);
+        return new PcmSample(this.field_C, var12, this.field_r, this.field_G, this.field_z);
     }
 
     private jp(byte[] param0) throws IOException {

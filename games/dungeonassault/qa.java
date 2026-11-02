@@ -12,7 +12,7 @@ abstract class qa {
 
     abstract int b(int param0, int param1);
 
-    final static q[] a(int param0, String param1, String param2, nh param3) {
+    final static q[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

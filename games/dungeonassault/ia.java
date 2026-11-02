@@ -7,9 +7,9 @@ final class ia extends ii implements vg {
     static int[] field_S;
     static int field_X;
     static String field_N;
-    static nh field_U;
+    static ResourceArchive field_U;
     static cn field_R;
-    static nh field_W;
+    static ResourceArchive field_W;
     private ck field_Z;
     static tk field_K;
     static String field_Y;
@@ -62,7 +62,7 @@ final class ia extends ii implements vg {
             return;
           }
           if (this.field_V == param0) {
-            nh.c(true);
+            ResourceArchive.c(true);
             return;
           }
           if (param0 != this.field_T) {
@@ -91,7 +91,7 @@ final class ia extends ii implements vg {
         super.a(param0, param1, param2, param3);
     }
 
-    final static cn a(String param0, int param1, String param2, int param3, int param4, String param5, nh param6) {
+    final static cn a(String param0, int param1, String param2, int param3, int param4, String param5, ResourceArchive param6) {
         int var9 = 0;
         byte[] var7 = null;
         RuntimeException var7_ref = null;
@@ -246,7 +246,7 @@ final class ia extends ii implements vg {
             return stackIn_6_0;
           }
           if (param3 < 55) {
-            field_U = (nh) null;
+            field_U = (ResourceArchive) null;
           }
           if (param2 != 99) {
             return false;

@@ -5,7 +5,7 @@ final class fe extends l {
     private boolean field_q;
     private String field_l;
     private int field_j;
-    static md field_k;
+    static IntrusiveDeque field_k;
     private int field_m;
     private int field_p;
     private int field_h;
@@ -285,7 +285,7 @@ final class fe extends l {
     }
 
     static {
-        field_k = new md();
+        field_k = new IntrusiveDeque();
         field_n = new String[]{"Reconnoitre", "Reveal two rooms at start of game. (Single use)"};
     }
 }

@@ -63,8 +63,8 @@ final class lf extends kl {
           super.b(-91);
           var3 = this.field_k + (this.field_a >> 1);
           var4 = this.field_j + 10;
-          ne.field_c.c(this.field_t, var3, ne.field_c.field_H + var4, 16777215, -1);
-          var4 = var4 + ne.field_c.field_H;
+          IntrusiveNode.field_c.c(this.field_t, var3, IntrusiveNode.field_c.field_H + var4, 16777215, -1);
+          var4 = var4 + IntrusiveNode.field_c.field_H;
           la.field_b.a(this.field_r, 20 + this.field_k, var4, this.field_a - 40, -(jm.field_i.field_v * 2) + (-24 - var4) + (this.field_i + this.field_j), 16777215, -1, 1, 1, la.field_b.field_H);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "lf.F(" + param0 + ')');
@@ -86,8 +86,8 @@ final class lf extends kl {
           var4_int = 88 - (-(2 * jm.field_i.field_v) - oj.a(this.field_r, -1, new int[]{300}, la.field_b) * la.field_b.field_H);
           this.a(param2, 0, var4_int);
           this.field_d = false;
-          this.field_o = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_i + (this.field_j - 24 - jm.field_i.field_v * 2), ne.field_c, jm.field_i, -81, mp.field_e);
-          this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -16 + this.field_j - (-this.field_i + jm.field_i.field_v), ne.field_c, jm.field_i, -111, um.field_d);
+          this.field_o = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_i + (this.field_j - 24 - jm.field_i.field_v * 2), IntrusiveNode.field_c, jm.field_i, -81, mp.field_e);
+          this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -16 + this.field_j - (-this.field_i + jm.field_i.field_v), IntrusiveNode.field_c, jm.field_i, -111, um.field_d);
           this.field_f.a(this.field_o, false);
           this.field_f.a(this.field_s, false);
           return;
@@ -119,7 +119,7 @@ final class lf extends kl {
         int stackIn_67_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_56_0;
-        wj var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -211,9 +211,9 @@ final class lf extends kl {
           }
           var4_ref_StringLifetime1 = var1.d(param0 - 230);
           var5_ref = var1.d(-117);
-          var6_ref = ll.a(var4_ref_StringLifetime1, (byte) -47);
+          var6_ref = DualLinkNode.a(var4_ref_StringLifetime1, (byte) -47);
           if (null == var6_ref) {
-            var6_ref = ll.a(var5_ref, (byte) -47);
+            var6_ref = DualLinkNode.a(var5_ref, (byte) -47);
             if (null != var6_ref) {
               fk.field_v.a(var6_ref, (long)jm.a((byte) 59, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -86);
             }
@@ -231,15 +231,15 @@ final class lf extends kl {
           }
           var6_ref.field_Nb = (String) (var3Lifetime1);
           var6_ref.field_Hb = var4_ref_StringLifetime1;
-          var6_ref.a(false);
+          var6_ref.unlink(false);
           var7_ref = (bo) (jm.field_f.e(-24172));
-          L13: while (true) {
+          scanLoop1: while (true) {
             if (var7_ref != null) {
               stackOut_56_0 = eg.a(var6_ref, param0 + 77, var7_ref);
               stackIn_67_0 = stackOut_56_0 ? 1 : 0;
               stackIn_57_0 = stackOut_56_0;
               if (var8 != 0) {
-                break L13;
+                break scanLoop1;
               }
               if (stackIn_57_0) {
                 var7_ref = (bo) (jm.field_f.a(param0 - 119));

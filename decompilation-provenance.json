@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "dungeonassault": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/dungeonassault"
+      },
+      "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
+      "sources": {
+        "files": 387,
+        "sha256": "f49a66f2d905754cab564c9a1e7b09dd2100217c3ab6383e5cbfb4e307fc89d9"
+      },
+      "dictionary": {
+        "path": "decompilation/dungeonassault-naming.json",
+        "sha256": "81cdf8b371571f3d6e92040aaa9498dccbc3551f2e276e9d12cf4ad2c15778cc"
+      },
+      "readingGuide": {
+        "path": "games/dungeonassault/README.md",
+        "sha256": "6a88b3ff5ee6914c150c87fd7859150ae1f01c417ace10458967757df2ff8734"
+      },
+      "rulesSha256": "1b296b6f665d3e14b41f912210ae020341c0410dcca194c0a42b486621c68b3c",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11201,6 +11225,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 387,
+          "sha256": "f49a66f2d905754cab564c9a1e7b09dd2100217c3ab6383e5cbfb4e307fc89d9"
         }
       },
       "escapevector": {

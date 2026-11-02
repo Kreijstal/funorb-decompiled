@@ -465,7 +465,7 @@ abstract class da extends lm implements aa {
           mp.a(param2, oa.field_e, -128, 42, 1);
           mp.a(param2, oa.field_e, -128, 48, 1);
           for (var4 = 0; var4 < 49; var4++) {
-            L2: {
+            regionExit1: {
               if (uj.a(param2, 37, 5) == 0 &&
                 me.field_g[var4].field_a == 0) {
                 var5 = nf.a(a.field_o, var4, (byte) 121);
@@ -477,13 +477,13 @@ abstract class da extends lm implements aa {
                   var8 = var12[var7];
                   switch (var8) {
                     case 0:
-                      break L2;
+                      break regionExit1;
                     case 6:
-                      break L2;
+                      break regionExit1;
                     case 42:
-                      break L2;
+                      break regionExit1;
                     case 48:
-                      break L2;
+                      break regionExit1;
                     default:
                       break;
                   }
@@ -531,7 +531,7 @@ abstract class da extends lm implements aa {
         this.e((byte) -95);
     }
 
-    final static cn[] a(String param0, String param1, int param2, nh param3) {
+    final static cn[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -79,12 +79,12 @@ final class ih extends qe {
             ac.field_B.d((byte) -112, 56);
             for (var2 = 0; var2 < 8; var2++) {
               if (um.field_i[var2] == gm.field_d.field_a[var2]) {
-                ac.field_B.a(6, -1);
+                ac.field_B.writeByte(6, -1);
               } else {
                 if (um.field_i[var2] == null) {
-                  ac.field_B.a(6, 0);
+                  ac.field_B.writeByte(6, 0);
                 } else {
-                  ac.field_B.a(6, um.field_i[var2].field_c);
+                  ac.field_B.writeByte(6, um.field_i[var2].field_c);
                 }
               }
             }
@@ -136,17 +136,17 @@ final class ih extends qe {
             var3 = ((u) (op.field_d.field_l)).field_Q;
           }
         } else {
-          var3 = ((hb) (var2)).field_n;
+          var3 = ((Raider) (var2)).field_n;
         }
         if (var2 != null) {
-          ih.a(216, 275, (hb) (var2));
+          ih.a(216, 275, (Raider) (var2));
         } else {
           ih.a(216, 275, this.field_F, kc.field_S);
         }
         if (var2 == null) {
           ih.a(339, 289, (h) (var3));
         } else {
-          ih.a(339, 289, (hb) (var2), 0);
+          ih.a(339, 289, (Raider) (var2), 0);
         }
         this.b(286, 144, 476);
         var4 = (rj) (this.field_p.e(-24172));
@@ -256,12 +256,12 @@ final class ih extends qe {
     }
 
     private final void f(int param0) {
-        hb stackIn_30_0 = null;
+        Raider stackIn_30_0 = null;
         int stackIn_49_0 = 0;
         int var2;
-        hb var2_ref_hb;
+        Raider var2_ref_hb;
         wb[] var3;
-        hb var3_ref;
+        Raider var3_ref;
         en var4;
         int var5;
         int var6;
@@ -273,12 +273,12 @@ final class ih extends qe {
         int var12;
         wb var13;
         int var14;
-        hb var15;
+        Raider var15;
         wb[] var16;
-        hb var17;
+        Raider var17;
         h var18;
         h var19;
-        hb var20;
+        Raider var20;
         h var21;
         var14 = DungeonAssault.field_K;
         this.field_t = -1;
@@ -297,7 +297,7 @@ final class ih extends qe {
           null != um.field_i[this.field_t]) {
           var15 = um.field_i[this.field_t];
           if (ld.field_e != var15) {
-            j.field_Q = (en) ((Object) new fc((pj) null, var15));
+            j.field_Q = (en) ((Object) new fc((CombatState) null, var15));
             ld.field_e = var15;
           }
           var16 = var15.field_i;
@@ -330,13 +330,13 @@ final class ih extends qe {
           }
           uj.a(var4, 95);
         }
-        L7: {
+        regionExit1: {
           if (hh.field_s != sn.field_b) {
             if (hh.field_s == nl.field_a) {
               this.d(param0 + 26693);
               this.a((byte) -125, true);
             } else {
-              if (in.field_y != hh.field_s) {
+              if (NetworkGameClient.field_y != hh.field_s) {
                 if (hh.field_s != null &&
                   hh.field_s instanceof u) {
                   var18 = ((u) (hh.field_s)).field_Q;
@@ -345,11 +345,11 @@ final class ih extends qe {
                     var18.field_t != this.field_F.field_n) {
                     this.field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
                     if (null == var18.field_p) {
-                      break L7;
+                      break regionExit1;
                     }
                     gd.a(64, var18.field_p);
                   }
-                  break L7;
+                  break regionExit1;
                 }
                 if (hh.field_s == hl.field_b) {
                   this.a(0, 0);
@@ -402,7 +402,7 @@ final class ih extends qe {
                                 }
                               } else {
                                 var19 = ((u) (op.field_d.field_l)).field_Q;
-                                um.field_i[var2] = new hb(var2, var19.field_w);
+                                um.field_i[var2] = new Raider(var2, var19.field_w);
                                 um.field_i[var2].field_b = new wd(var19.field_e);
                                 ho.b((byte) -36);
                                 op.field_d.a((byte) 80);
@@ -425,7 +425,7 @@ final class ih extends qe {
                 var17 = stackIn_30_0;
                 var2_ref_hb = var17;
                 if (var2_ref_hb != null) {
-                  um.field_i[this.field_C] = new hb(this.field_C, var17.field_c);
+                  um.field_i[this.field_C] = new Raider(this.field_C, var17.field_c);
                   um.field_i[this.field_C].field_b = new wd(var17.field_n.field_e);
                   ho.b((byte) -36);
                   this.a((byte) -112, -1);
@@ -512,9 +512,9 @@ final class ih extends qe {
         op.field_d = new nn(true);
         wd.field_f = new nn(false);
         ud.field_t = new ed(8, 90, 180, 382);
-        sn.field_b = tn.a(16, 12, ne.field_c, jm.field_i, -107, lk.field_P);
-        nl.field_a = tn.a(472, 12, ne.field_c, jm.field_i, -76, be.field_r.toUpperCase());
-        in.field_y = tn.a((164 - jm.field_i.field_y >> 1) + 340, 376, ne.field_c, jm.field_i, -100, sa.field_e);
+        sn.field_b = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, -107, lk.field_P);
+        nl.field_a = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, be.field_r.toUpperCase());
+        NetworkGameClient.field_y = tn.a((164 - jm.field_i.field_y >> 1) + 340, 376, IntrusiveNode.field_c, jm.field_i, -100, sa.field_e);
         hl.field_b = sj.a(22, param0 ^ 38, 65, uj.field_c, wd.field_f);
         hi.field_a = sj.a(55, 109, 65, gd.field_E, wd.field_f);
         kl.field_h = sj.a(86, 104, 65, jj.field_b, wd.field_f);
@@ -523,7 +523,7 @@ final class ih extends qe {
         this.field_p.a(ud.field_t, false);
         this.field_p.a(sn.field_b, false);
         this.field_p.a(nl.field_a, false);
-        this.field_p.a(in.field_y, false);
+        this.field_p.a(NetworkGameClient.field_y, false);
         this.field_p.a(hl.field_b, false);
         this.field_p.a(hi.field_a, false);
         this.field_p.a(kl.field_h, false);
@@ -807,26 +807,26 @@ final class ih extends qe {
           var3 = um.field_i[this.field_C];
         }
         if (var3 == null) {
-          mi.a(in.field_y, sa.field_e, ne.field_c, 13195, jm.field_i);
-          in.field_y.field_w = false;
+          mi.a(NetworkGameClient.field_y, sa.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
+          NetworkGameClient.field_y.field_w = false;
         } else {
-          var4 = ((hb) (var3)).field_n;
-          if (255 != ((hb) (var3)).field_p) {
-            if (var4.field_m <= ((hb) (var3)).field_e &&
-              ((hb) (var3)).field_g >= var4.field_r &&
-              ((hb) (var3)).field_f >= var4.field_b &&
-              ((hb) (var3)).field_k >= var4.field_o) {
-              mi.a(in.field_y, sa.field_e, ne.field_c, 13195, jm.field_i);
-              in.field_y.field_w = false;
+          var4 = ((Raider) (var3)).field_n;
+          if (255 != ((Raider) (var3)).field_p) {
+            if (var4.field_m <= ((Raider) (var3)).field_e &&
+              ((Raider) (var3)).field_g >= var4.field_r &&
+              ((Raider) (var3)).field_f >= var4.field_b &&
+              ((Raider) (var3)).field_k >= var4.field_o) {
+              mi.a(NetworkGameClient.field_y, sa.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
+              NetworkGameClient.field_y.field_w = false;
               return;
             }
-            mi.a(in.field_y, ae.field_e, ne.field_c, 13195, jm.field_i);
-            in.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(gj.a(-1704798751, var4), (byte) -111)}, t.field_c, 30496), (String) null));
-            in.field_y.field_w = true;
+            mi.a(NetworkGameClient.field_y, ae.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
+            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(gj.a(-1704798751, var4), (byte) -111)}, t.field_c, 30496), (String) null));
+            NetworkGameClient.field_y.field_w = true;
           } else {
-            mi.a(in.field_y, sa.field_e, ne.field_c, 13195, jm.field_i);
-            in.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(gj.a(-1704798751, var4), (byte) -102)}, e.field_g, 30496), (String) null));
-            in.field_y.field_w = true;
+            mi.a(NetworkGameClient.field_y, sa.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
+            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(gj.a(-1704798751, var4), (byte) -102)}, e.field_g, 30496), (String) null));
+            NetworkGameClient.field_y.field_w = true;
           }
         }
         return;
@@ -862,9 +862,9 @@ final class ih extends qe {
     final void c(boolean param0) {
         int var3 = 0;
         int var5;
-        hb[] var2;
-        hb var4;
-        hb[] var6;
+        Raider[] var2;
+        Raider var4;
+        Raider[] var6;
         lf var7;
         var5 = DungeonAssault.field_K;
         super.c(param0);
@@ -912,7 +912,7 @@ final class ih extends qe {
     }
 
     ih() {
-        this.field_B = new tf(ne.field_c, lg.field_h, cm.field_M);
+        this.field_B = new tf(IntrusiveNode.field_c, lg.field_h, cm.field_M);
         tf discarded$0 = new tf(db.field_v, ak.field_m.toUpperCase(), cm.field_M);
     }
 

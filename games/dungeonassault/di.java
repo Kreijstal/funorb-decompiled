@@ -44,11 +44,11 @@ final class di {
             var4_ref_ao = (ao) (nl.field_e.e(-24172));
             if (var4_ref_ao != null &&
               var2_long > var4_ref_ao.field_l) {
-              var4_ref_ao.a(false);
+              var4_ref_ao.unlink(false);
               nj.field_b = var4_ref_ao.field_m.length;
-              ra.field_c.field_o = 0;
+              ra.field_c.position = 0;
               for (var5_int = 0; var5_int < nj.field_b; var5_int++) {
-                ra.field_c.field_m[var5_int] = var4_ref_ao.field_m[var5_int];
+                ra.field_c.payload[var5_int] = var4_ref_ao.field_m[var5_int];
               }
               wl.field_f = oc.field_E;
               oc.field_E = rd.field_C;
@@ -59,12 +59,12 @@ final class di {
           }
           while (true) {
             if (pp.field_J < 0) {
-              ra.field_c.field_o = 0;
+              ra.field_c.position = 0;
               if (!oi.a(-12929, 1)) {
                 return false;
               }
               pp.field_J = ra.field_c.m(255);
-              ra.field_c.field_o = 0;
+              ra.field_c.position = 0;
               nj.field_b = param0[pp.field_J];
             }
             if (!kh.d((byte) -117)) {
@@ -87,7 +87,7 @@ final class di {
             }
             var5 = new ao((long)var4 + var2_long, pp.field_J, new byte[nj.field_b]);
             for (var6 = 0; nj.field_b > var6; var6++) {
-              var5.field_m[var6] = ra.field_c.field_m[var6];
+              var5.field_m[var6] = ra.field_c.payload[var6];
             }
             nl.field_e.a(var5, false);
             pp.field_J = -1;
@@ -106,12 +106,12 @@ final class di {
         }
     }
 
-    final void a(ec param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           this.field_i = param0.a(-21030);
           if (param1 != -1) {
-            ec var4 = (ec) null;
-            this.a((ec) null, -21);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, -21);
           }
           this.field_g = param0.a(-21030);
           this.field_c = param0.a(-21030);

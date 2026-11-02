@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vm {
-    private ec field_a;
+    private PacketBuffer field_a;
     private static byte[] field_g;
     private long field_b;
     int[] field_d;
@@ -13,19 +13,19 @@ final class vm {
     private int[] field_f;
 
     final void e() {
-        this.field_a.field_o = -1;
+        this.field_a.position = -1;
     }
 
     final boolean g() {
-        return this.field_a.field_m != null;
+        return this.field_a.payload != null;
     }
 
     final void d(int param0) {
-        this.field_a.field_o = this.field_f[param0];
+        this.field_a.position = this.field_f[param0];
     }
 
     final void c() {
-        this.field_a.field_m = null;
+        this.field_a.payload = null;
         this.field_i = null;
         this.field_f = null;
         this.field_d = null;
@@ -43,7 +43,7 @@ final class vm {
           var3 = this.field_a.c(true);
           var4 = this.field_a.e(-651413500);
           if (var3 == 47) {
-            this.field_a.field_o = this.field_a.field_o + var4;
+            this.field_a.position = this.field_a.position + var4;
             return 1;
           }
           if (var3 == 81) {
@@ -52,10 +52,10 @@ final class vm {
             var6 = this.field_d[param0];
             this.field_b = this.field_b + (long)var6 * (long)(this.field_h - var5);
             this.field_h = var5;
-            this.field_a.field_o = this.field_a.field_o + var4;
+            this.field_a.position = this.field_a.position + var4;
             return 2;
           }
-          this.field_a.field_o = this.field_a.field_o + var4;
+          this.field_a.position = this.field_a.position + var4;
           return 3;
         }
         var3Lifetime1 = field_g[param1 - 128];
@@ -78,21 +78,21 @@ final class vm {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_a.field_m = param0;
-        this.field_a.field_o = 10;
+        this.field_a.payload = param0;
+        this.field_a.position = 10;
         int var2 = this.field_a.k(0);
         this.field_c = this.field_a.k(0);
         this.field_h = 500000;
         this.field_i = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_a.h(-62);
-          var5 = this.field_a.h(-61);
+          var4 = this.field_a.readInt(-62);
+          var5 = this.field_a.readInt(-61);
           if (var4 == 1297379947) {
-            this.field_i[var3] = this.field_a.field_o;
+            this.field_i[var3] = this.field_a.position;
             var3++;
           }
-          this.field_a.field_o = this.field_a.field_o + var5;
+          this.field_a.position = this.field_a.position + var5;
         }
         this.field_b = 0L;
         this.field_f = new int[var2];
@@ -129,7 +129,7 @@ final class vm {
     }
 
     final void a(int param0) {
-        this.field_f[param0] = this.field_a.field_o;
+        this.field_f[param0] = this.field_a.position;
     }
 
     final void a(long param0) {
@@ -139,9 +139,9 @@ final class vm {
         for (var4 = 0; var4 < var3; var4++) {
           this.field_d[var4] = 0;
           this.field_e[var4] = 0;
-          this.field_a.field_o = this.field_i[var4];
+          this.field_a.position = this.field_i[var4];
           this.b(var4);
-          this.field_f[var4] = this.field_a.field_o;
+          this.field_f[var4] = this.field_a.position;
         }
     }
 
@@ -154,13 +154,13 @@ final class vm {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_a.field_m[this.field_a.field_o];
+        var2 = this.field_a.payload[this.field_a.position];
         if (var2 >= 0) {
           var2 = this.field_e[param0];
         } else {
           var2 = var2 & 255;
           this.field_e[param0] = var2;
-          this.field_a.field_o = this.field_a.field_o + 1;
+          this.field_a.position = this.field_a.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
@@ -169,17 +169,17 @@ final class vm {
         var3 = this.field_a.e(-651413500);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_a.field_m[this.field_a.field_o] & 255;
+          var4 = this.field_a.payload[this.field_a.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_a.field_o = this.field_a.field_o + 1;
+            this.field_a.position = this.field_a.position + 1;
             this.field_e[param0] = var4;
             return this.a(param0, var4);
           }
         }
-        this.field_a.field_o = this.field_a.field_o + var3;
+        this.field_a.position = this.field_a.position + var3;
         return 0;
     }
 
@@ -203,11 +203,11 @@ final class vm {
     }
 
     vm() {
-        this.field_a = new ec((byte[]) null);
+        this.field_a = new PacketBuffer((byte[]) null);
     }
 
     vm(byte[] param0) {
-        this.field_a = new ec((byte[]) null);
+        this.field_a = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

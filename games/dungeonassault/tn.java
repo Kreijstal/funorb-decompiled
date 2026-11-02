@@ -233,9 +233,9 @@ final class tn extends bh {
         cn var15;
         cn var16;
         od var6Lifetime1;
-        L0: {
-          L1: {
-            L2: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
               var13 = DungeonAssault.field_K;
               var6 = this.field_T.a((byte) -116);
               if (ub.field_s != var6 &&
@@ -243,17 +243,17 @@ final class tn extends bh {
                 var5 = this.field_T.a(true);
                 if (var5 == null) {
                   var5 = this.field_Z;
-                  break L2;
+                  break regionExit3;
                 }
                 if (!var5.equals(this.field_w)) {
-                  break L1;
+                  break regionExit2;
                 }
-                break L0;
+                break regionExit1;
               }
               var5 = kj.field_k;
             }
             if (var5.equals(this.field_w)) {
-              break L0;
+              break regionExit1;
             }
           }
           this.field_w = var5;
@@ -317,8 +317,8 @@ final class tn extends bh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ec var16 = null;
-        ec var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -330,9 +330,9 @@ final class tn extends bh {
         int var4Lifetime5;
         var15 = DungeonAssault.field_K;
         try {
-          var16 = new ec(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_o = -2 + param1.length;
+          var17.position = -2 + param1.length;
           dk.field_d = var17.k(0);
           jn.field_k = new int[dk.field_d];
           ub.field_q = new byte[dk.field_d][];
@@ -344,7 +344,7 @@ final class tn extends bh {
           rf.field_P = new byte[dk.field_d][];
           jc.field_f = new int[dk.field_d];
           fe.field_g = new int[dk.field_d];
-          var17.field_o = -7 + (param1.length - dk.field_d * 8);
+          var17.position = -7 + (param1.length - dk.field_d * 8);
           ce.field_x = var17.k(0);
           tb.field_i = var17.k(0);
           var3 = 1 + (255 & var17.c(true));
@@ -360,7 +360,7 @@ final class tn extends bh {
           for (var4Lifetime3 = 0; var4Lifetime3 < dk.field_d; var4Lifetime3++) {
             jn.field_k[var4Lifetime3] = var17.k(0);
           }
-          var17.field_o = -(3 * var3) + (-4 + param1.length - 8 * dk.field_d);
+          var17.position = -(3 * var3) + (-4 + param1.length - 8 * dk.field_d);
           uo.field_b = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             uo.field_b[var4Lifetime4] = var17.f(-114);
@@ -368,7 +368,7 @@ final class tn extends bh {
               uo.field_b[var4Lifetime4] = 1;
             }
           }
-          var17.field_o = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; dk.field_d > var4Lifetime5; var4Lifetime5++) {
             var5 = jc.field_f[var4Lifetime5];
             var6 = jn.field_k[var4Lifetime5];

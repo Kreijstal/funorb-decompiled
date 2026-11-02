@@ -9,7 +9,7 @@ final class aj extends ok {
         throw new Error();
     }
 
-    final static short[] a(wj param0, short[] param1, byte param2, int param3) {
+    final static short[] a(CipherPacketBuffer param0, short[] param1, byte param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -39,7 +39,7 @@ final class aj extends ok {
           var5 = param0.j(84, 4);
           if (param2 != 31) {
             var9 = (short[]) null;
-            aj.a((wj) null, (short[]) null, (byte) 18, -27);
+            aj.a((CipherPacketBuffer) null, (short[]) null, (byte) 18, -27);
           }
           var6 = (short)param0.j(-93, 16);
           if (0 >= var5) {

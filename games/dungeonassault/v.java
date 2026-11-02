@@ -6,17 +6,17 @@ final class v {
     private int field_a;
     private wg[] field_c;
 
-    final static v a(nh param0, int param1, int param2) {
+    final static v a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.b(5, param1, param2);
         if (var3 == null) {
           return null;
         }
-        return new v(new ec(var3));
+        return new v(new PacketBuffer(var3));
     }
 
-    final va a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new va(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
     private final byte[] b() {
@@ -59,14 +59,14 @@ final class v {
         return var3;
     }
 
-    private v(ec param0) {
+    private v(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new wg[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.c(true);
           if (var3 != 0) {
-            param0.field_o = param0.field_o - 1;
+            param0.position = param0.position - 1;
             this.field_c[var2] = new wg();
             this.field_c[var2].a(param0);
           }

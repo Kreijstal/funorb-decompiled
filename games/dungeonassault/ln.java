@@ -12,7 +12,7 @@ final class ln {
     private hd field_f;
     private hd field_g;
 
-    final static void a(ni param0, int param1) {
+    final static void a(PcmSampleStream param0, int param1) {
         try {
           if (param1 != -28711) {
             String var3 = (String) null;
@@ -274,7 +274,7 @@ final class ln {
                   this.field_b = 88;
                 }
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -290,7 +290,7 @@ final class ln {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = (65280 & un.field_c[2] << 8) + (un.field_c[3] & 255);
                         var13 = un.field_c[7] & 255;
@@ -306,7 +306,7 @@ final class ln {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = ((un.field_c[1] & 255) << 16) + ((-16777216 & un.field_c[0] << 24) + (un.field_c[2] << 8 & 65280) + (un.field_c[3] & 255));
                         var10 = (un.field_c[7] << 8 & 65280) + ((un.field_c[6] & 255) << 16) + (255 & un.field_c[8]);

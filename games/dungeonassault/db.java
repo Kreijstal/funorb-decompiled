@@ -33,20 +33,20 @@ final class db extends qe {
         if (null != fo.field_d.field_l) {
           var3 = ((Integer) (fo.field_d.field_l.field_u)).intValue();
         }
-        L2: {
+        regionExit1: {
           var11 = (int[]) null;
           if (o.a(gj.field_c, (int[]) null, var3, gm.field_d, true)) {
-            var12 = jk.a(new String[]{pj.a((byte) 66, gm.field_d.field_w, tc.field_u)}, DungeonAssault.field_G, 30496);
+            var12 = jk.a(new String[]{CombatState.a((byte) 66, gm.field_d.field_w, tc.field_u)}, DungeonAssault.field_G, 30496);
             la.field_b.a(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             if (var10 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
-          var4 = ib.a((byte) -15, 16760960, pj.a((byte) 66, var3, tc.field_u));
+          var4 = ib.a((byte) -15, 16760960, CombatState.a((byte) 66, var3, tc.field_u));
           var5 = jk.a(new String[]{var4}, dk.field_e, 30496);
           var6 = 127 & var3;
           if (wh.field_a > var6) {
-            L4: {
+            regionExit2: {
               if (var6 < cp.field_R) {
                 if (ok.field_z <= var6) {
                   var7 = -ok.field_z + var6;
@@ -56,14 +56,14 @@ final class db extends qe {
                     var5 = jk.a(new String[]{var9, var4}, l.field_c, 30496);
                   }
                   if (var10 == 0) {
-                    break L4;
+                    break regionExit2;
                   }
                 }
                 if (gn.field_d > var6) {
                   if (uf.field_a <= var6) {
                     var7 = -uf.field_a + var6;
-                    if (var7 < hb.field_m.length) {
-                      var8_intLifetime1 = hb.field_m[var7];
+                    if (var7 < Raider.field_m.length) {
+                      var8_intLifetime1 = Raider.field_m[var7];
                       var9 = ib.a((byte) -128, 16760960, Integer.toString(var8_intLifetime1));
                       if (1 != var8_intLifetime1) {
                         var5 = jk.a(new String[]{var9, var4}, wf.field_y, 30496);
@@ -75,7 +75,7 @@ final class db extends qe {
                       }
                     }
                     if (var10 == 0) {
-                      break L4;
+                      break regionExit2;
                     }
                   }
                   if (!(wm.field_a > var6)) {
@@ -142,11 +142,11 @@ final class db extends qe {
     private final void a(int param0, byte param1) {
         int var3 = tg.field_f[3][param0];
         String var4 = this.a(var3, 0);
-        int var5 = ne.field_c.b(var4);
-        int var6 = ne.field_c.field_E + ne.field_c.field_H;
+        int var5 = IntrusiveNode.field_c.b(var4);
+        int var6 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
         cn var7 = new cn(var5, var6);
         jh.a(var7);
-        ne.field_c.b(var4, 0, ne.field_c.field_H, 16760960, -1);
+        IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         if (param1 != -121) {
           db.c((byte) 98);
@@ -172,7 +172,7 @@ final class db extends qe {
         }
         var4 = tg.field_f[3][param1];
         var5 = this.a(var4, 0);
-        var6 = ne.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.b(var5);
         var7 = bh.b(param1, 3, false);
         var8 = qd.a(param1, 380, 3);
         var9 = o.a(3, (byte) 101, param1);
@@ -189,20 +189,20 @@ final class db extends qe {
           }
         } else {
           if (var11 == 0) {
-            var12 = ug.field_E;
+            var12 = MidiPcmStream.field_E;
           } else {
             var12 = ml.field_b;
           }
         }
-        L3: {
+        regionExit1: {
           if (var11 == 0) {
             if (of.field_k) {
               if (var4 != 22) {
-                break L3;
+                break regionExit1;
               }
             } else {
               if (23 != var4) {
-                break L3;
+                break regionExit1;
               }
             }
             var12 = fo.field_c;
@@ -211,12 +211,12 @@ final class db extends qe {
         if (null == this.field_s[param1] ||
           this.field_s[param1].field_f != var5 ||
           this.field_s[param1].field_h != var12) {
-          this.field_s[param1] = new tf(ne.field_c, var5, var12);
+          this.field_s[param1] = new tf(IntrusiveNode.field_c, var5, var12);
         }
         this.field_s[param1].b(var9, 32, var10);
         if (var4 == 22 &&
           ak.field_o[0] > gm.field_d.field_m) {
-          hj.field_T.h(-20 + var10, ne.field_c.field_H + var9 - 15);
+          hj.field_T.h(-20 + var10, IntrusiveNode.field_c.field_H + var9 - 15);
         }
         if (param0) {
           if (param1 != nf.field_y) {
@@ -261,7 +261,7 @@ final class db extends qe {
         var8 = wd.field_l;
         var2 = var8;
         var3 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameRemainder0 = true;
           if (var8.length > var3) {
             var4_ref_bf = var8[var3];
@@ -288,13 +288,13 @@ final class db extends qe {
               if (o.a(gj.field_c, (int[]) null, var2_int, gm.field_d, true)) {
                 gm.field_d.field_w = var2_int;
                 ac.field_B.d((byte) -106, 59);
-                ac.field_B.a(6, var2_int);
+                ac.field_B.writeByte(6, var2_int);
               }
             }
             while (ha.b((byte) 47)) {
               this.f();
               if (var6 != 0) {
-                break L1;
+                break scanLoop1;
               }
             }
           }
@@ -325,7 +325,7 @@ final class db extends qe {
             stackIn_35_0 = 0;
           }
           var5 = stackIn_35_0;
-          hf.field_mb.field_D = og.field_e.field_N;
+          hf.field_mb.field_D = KeyboardInput.field_e.field_N;
           stackIn_39_0 = hf.field_mb;
           stackIn_40_1 = (hf.field_mb.field_D) && (var5 == 0) && (var4 <= gm.field_d.field_s);
           stackIn_39_0.field_w = stackIn_40_1;
@@ -344,14 +344,14 @@ final class db extends qe {
         if (param1 != 0) {
           this.d(false);
         }
-        var3 = ll.field_m[param0];
-        if (param0 == 10 && (ec.field_p == 0 ||
+        var3 = DualLinkNode.field_m[param0];
+        if (param0 == 10 && (PacketBuffer.field_p == 0 ||
           dc.field_z == 0 ||
-          12 == ec.field_p ||
+          12 == PacketBuffer.field_p ||
           dc.field_z == 12 ||
-          ec.field_p == 1 ||
+          PacketBuffer.field_p == 1 ||
           dc.field_z == 1)) {
-          var3 = ll.field_m[9];
+          var3 = DualLinkNode.field_m[9];
         }
         return var3;
     }
@@ -480,7 +480,7 @@ final class db extends qe {
         if (stackIn_10_0 >= -65) {
           field_u = (String) null;
         }
-        L7: while (true) {
+        scanLoop1: while (true) {
           if (dc.field_p.length > var5_int) {
             var6_intLifetime1 = var5_int + wm.field_a;
             var12 = (int[]) null;
@@ -492,7 +492,7 @@ final class db extends qe {
             stackIn_24_0 = stackOut_16_0 ? 1 : 0;
             stackIn_17_0 = stackOut_16_0;
             if (var10 != 0) {
-              break L7;
+              break scanLoop1;
             }
             if (!stackIn_17_0) {
               var20 = this.a(var3, var6_intLifetime1 + rj.field_l, 99, var7Lifetime1 != 0);
@@ -507,8 +507,8 @@ final class db extends qe {
           break;
         }
         var5_intLifetime1 = stackIn_24_0;
-        L12: while (true) {
-          if (hb.field_m.length > var5_intLifetime1) {
+        scanLoop2: while (true) {
+          if (Raider.field_m.length > var5_intLifetime1) {
             var6_intLifetime2 = uf.field_a + var5_intLifetime1;
             var13 = (int[]) null;
             stackIn_29_0 = (!o.a(gj.field_c, (int[]) null, var6_intLifetime2, gm.field_d, true)) ? 0 : 1;
@@ -519,7 +519,7 @@ final class db extends qe {
             stackIn_36_0 = stackOut_29_0 ? 1 : 0;
             stackIn_30_0 = stackOut_29_0;
             if (var10 != 0) {
-              break L12;
+              break scanLoop2;
             }
             if (!stackIn_30_0) {
               var22 = this.a(var3, rj.field_l + var6_intLifetime2, 47, var7Lifetime2 != 0);
@@ -534,7 +534,7 @@ final class db extends qe {
           break;
         }
         var5_intLifetime2 = stackIn_36_0;
-        L17: while (true) {
+        scanLoop3: while (true) {
           if (var5_intLifetime2 < ci.field_s.length) {
             var6_intLifetime3 = var5_intLifetime2 + gn.field_d;
             var14 = (int[]) null;
@@ -546,7 +546,7 @@ final class db extends qe {
             stackIn_49_0 = stackOut_41_0 ? 1 : 0;
             stackIn_42_0 = stackOut_41_0;
             if (var10 != 0) {
-              break L17;
+              break scanLoop3;
             }
             if (!stackIn_42_0) {
               var24 = this.a(var3, var6_intLifetime3 + rj.field_l, 18, var7Lifetime3 != 0);
@@ -581,13 +581,13 @@ final class db extends qe {
         }
         if (decompiledNaturalLoopExit0) {
           mk.field_j = new nn(true);
-          og.field_e = new ed(90, 7 + var2, 250, -var2 + 328);
+          KeyboardInput.field_e = new ed(90, 7 + var2, 250, -var2 + 328);
         }
-        var5 = og.field_e;
-        og.field_e.field_N = false;
+        var5 = KeyboardInput.field_e;
+        KeyboardInput.field_e.field_N = false;
         var5.field_w = false;
-        this.field_p.a(og.field_e, false);
-        hf.field_mb = tn.a(-(kg.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, kg.field_a, -81, bg.field_x.toUpperCase());
+        this.field_p.a(KeyboardInput.field_e, false);
+        hf.field_mb = tn.a(-(GameAppletShell.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, GameAppletShell.field_a, -81, bg.field_x.toUpperCase());
         var6 = hf.field_mb;
         hf.field_mb.field_D = false;
         var6.field_w = false;
@@ -602,7 +602,7 @@ final class db extends qe {
           if (gm.field_d.field_m >= ak.field_o[var8] && (cf.field_b[var8] ||
             var10 != 0)) {
             var9 = new lk(0, var3Lifetime1, 200, 40, var8);
-            og.field_e.a(var9, (byte) -101);
+            KeyboardInput.field_e.a(var9, (byte) -101);
             var3Lifetime1 += 40;
             mk.field_j.a((gd) (var9), (byte) -20);
             if (var7Lifetime5 != 0) {
@@ -612,8 +612,8 @@ final class db extends qe {
           }
           var8++;
         }
-        og.field_e.e(49);
-        og.field_e.c(107, 8);
+        KeyboardInput.field_e.e(49);
+        KeyboardInput.field_e.c(107, 8);
         return;
     }
 
@@ -654,7 +654,7 @@ final class db extends qe {
             gm.field_d.field_A = fm.field_i + (int)(-16912800L + kd.c(-2456) / 60000L);
           }
           ac.field_B.d((byte) -79, 73);
-          ac.field_B.a(6, param1);
+          ac.field_B.writeByte(6, param1);
           hi.b(1);
           return;
         }
@@ -744,12 +744,12 @@ final class db extends qe {
           var12Lifetime3 = 0;
           var13 = var4;
           var14 = 0;
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (10 > var14) {
               var15 = var19.field_t[var14];
               stackIn_21_0 = $cfr$lcmp(-1L, var15);
               if (var18 != 0) {
-                break L7;
+                break scanLoop1;
               }
               if (stackIn_21_0 != 0) {
                 var12Lifetime3++;
@@ -842,7 +842,7 @@ final class db extends qe {
         }
         this.field_r = new rh(58, 394, 80, 160, 255, 197376, 240);
         this.field_t = new rh(580, 394, 80, 160, 255, 197376, 240);
-        mh.b(-1);
+        MouseInput.b(-1);
         return;
     }
 
@@ -943,7 +943,7 @@ final class db extends qe {
         gf.b(80, 250, 256, 85, 1118481, 128);
         gf.e(80, 250, 256, 85, 5592405, 128);
         var5 = (rj) (this.field_p.e(-24172));
-        L5: while (true) {
+        scanLoop1: while (true) {
           if (var5 != null) {
             var5.a(102);
             var5 = (rj) (this.field_p.a(4));
@@ -952,7 +952,7 @@ final class db extends qe {
             }
           } else {
             if (null == this.field_b) {
-              break L5;
+              break scanLoop1;
             }
           }
           this.field_b.a((byte) -118);
@@ -1084,10 +1084,10 @@ final class db extends qe {
 
     final void f() {
         if (mm.field_t == 13) {
-          gd.a(ec.field_p, 0, ec.field_p, false);
+          gd.a(PacketBuffer.field_p, 0, PacketBuffer.field_p, false);
           return;
         }
-        if (ll.field_k &&
+        if (DualLinkNode.field_k &&
           mm.field_t == 1) {
           ld.field_b = !ld.field_b ? true : false;
         }

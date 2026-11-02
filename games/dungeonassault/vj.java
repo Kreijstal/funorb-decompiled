@@ -142,10 +142,10 @@ final class vj {
         this.field_b = param2;
         this.field_g = new int[this.field_b * this.field_f];
         this.field_a = new int[this.field_f * this.field_b];
-        int var6 = uj.a(md.field_d, 37, 640);
-        int var7 = uj.a(md.field_d, 37, 640);
-        int var8 = uj.a(md.field_d, 37, 480);
-        int var9 = uj.a(md.field_d, 37, 480);
+        int var6 = uj.a(IntrusiveDeque.field_d, 37, 640);
+        int var7 = uj.a(IntrusiveDeque.field_d, 37, 640);
+        int var8 = uj.a(IntrusiveDeque.field_d, 37, 480);
+        int var9 = uj.a(IntrusiveDeque.field_d, 37, 480);
         int[] var20 = new int[this.field_b];
         int[] var18 = var20;
         int[] var10 = var18;

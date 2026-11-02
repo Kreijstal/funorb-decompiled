@@ -116,7 +116,7 @@ final class tk {
             var14 = var12 / 2;
             var15 = var13 / 2;
             this.field_c[var11] = -1024 + uj.a(var9, 37, 2048);
-            this.field_n[var11] = 6000 + uj.a(var9, md.b(param6, 2085), 2048);
+            this.field_n[var11] = 6000 + uj.a(var9, IntrusiveDeque.b(param6, 2085), 2048);
             this.field_A[var11] = -var14 / 2;
             this.field_y[var11] = -var15 / 2;
             this.field_j[var11] = -(var14 * this.field_n[var11]) >> 12;

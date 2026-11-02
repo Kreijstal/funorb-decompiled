@@ -22,8 +22,8 @@ final class ti extends qa {
     private cc field_B;
     private boolean field_r;
     private boolean field_x;
-    private md field_j;
-    private md field_u;
+    private IntrusiveDeque field_j;
+    private IntrusiveDeque field_u;
     private int field_z;
     private long field_m;
     private boolean field_k;
@@ -57,7 +57,7 @@ final class ti extends qa {
           param2 == 0 &&
           !var12.field_B &&
           var12.field_v) {
-          var12.a(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -93,7 +93,7 @@ final class ti extends qa {
               var4 = this.field_B.a((byte) -78, this.field_D, param1);
             }
           }
-          this.field_l.a((ne) (var4), 12460, (long)param1);
+          this.field_l.a((IntrusiveNode) (var4), 12460, (long)param1);
         }
         if (((vf) (var4)).field_v) {
           return null;
@@ -134,7 +134,7 @@ final class ti extends qa {
                 this.field_h[param1] = (byte) 1;
               }
               if (!((vf) (var4)).field_B) {
-                ((vf) (var4)).a(false);
+                ((vf) (var4)).unlink(false);
               }
               stackIn_89_0 = var4;
               return (vf) (stackIn_89_0);
@@ -144,7 +144,7 @@ final class ti extends qa {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_h[param1] = (byte)-1;
-            ((vf) (var4)).a(false);
+            ((vf) (var4)).unlink(false);
             if (!((vf) (var4)).field_B) {
               return null;
             }
@@ -152,7 +152,7 @@ final class ti extends qa {
               return null;
             }
             var4 = this.field_t.a(true, this.field_p, (byte) 2, param1, (byte) 77);
-            this.field_l.a((ne) (var4), 12460, (long)param1);
+            this.field_l.a((IntrusiveNode) (var4), 12460, (long)param1);
             return null;
           }
         }
@@ -184,7 +184,7 @@ final class ti extends qa {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_t.f(-118);
-          ((vf) (var4)).a(false);
+          ((vf) (var4)).unlink(false);
           if (!((vf) (var4)).field_B) {
             return null;
           }
@@ -192,7 +192,7 @@ final class ti extends qa {
             return null;
           }
           var4 = this.field_t.a(true, this.field_p, (byte) 2, param1, (byte) 105);
-          this.field_l.a((ne) (var4), 12460, (long)param1);
+          this.field_l.a((IntrusiveNode) (var4), 12460, (long)param1);
           return null;
         }
         var5[-2 + var18.length] = (byte)(this.field_y.field_o[param1] >>> 8);
@@ -204,7 +204,7 @@ final class ti extends qa {
           }
         }
         if (!((vf) (var4)).field_B) {
-          ((vf) (var4)).a(false);
+          ((vf) (var4)).unlink(false);
         }
         return (vf) (var4);
     }
@@ -216,14 +216,14 @@ final class ti extends qa {
         vf discarded$2 = null;
         int var2_int;
         vf var2;
-        ne var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ne var6;
-        ne var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        ne var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = DungeonAssault.field_K;
         if (this.field_j != null) {
@@ -234,12 +234,12 @@ final class ti extends qa {
             var2_int = 1;
             var3 = this.field_j.e(-24172);
             while (var3 != null) {
-              var4 = (int)var3.field_h;
+              var4 = (int)var3.key;
               if (0 == this.field_h[var4]) {
                 discarded$1 = this.a((byte) 127, var4, 1);
               }
               if (0 != this.field_h[var4]) {
-                var3.a(false);
+                var3.unlink(false);
               } else {
                 var2_int = 0;
               }
@@ -255,8 +255,8 @@ final class ti extends qa {
                   discarded$0 = this.a((byte) 126, this.field_z, 1);
                 }
                 if (this.field_h[this.field_z] == 0) {
-                  var7 = new ne();
-                  var7.field_h = (long)this.field_z;
+                  var7 = new IntrusiveNode();
+                  var7.key = (long)this.field_z;
                   var2_int = 0;
                   this.field_j.a(var7, false);
                 }
@@ -277,30 +277,30 @@ final class ti extends qa {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_j.e(-24172);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_h;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_h[var4Lifetime1]) {
                   discarded$3 = this.a((byte) 107, var4Lifetime1, 2);
                 }
                 if (this.field_h[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.a(false);
+                  var3Lifetime1.unlink(false);
                 }
                 var3Lifetime1 = this.field_j.a(4);
               }
-              L10: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_z < this.field_y.field_k.length) {
                   if (this.field_y.field_k[this.field_z] != 0) {
                     if (this.field_t.d(20)) {
                       var2_intLifetime1 = 0;
-                      break L10;
+                      break scanLoop1;
                     }
                     if (this.field_h[this.field_z] != 1) {
                       discarded$2 = this.a((byte) 112, this.field_z, 2);
                     }
                     if (1 != this.field_h[this.field_z]) {
-                      var6 = new ne();
-                      var6.field_h = (long)this.field_z;
+                      var6 = new IntrusiveNode();
+                      var6.key = (long)this.field_z;
                       this.field_j.a(var6, false);
                       var2_intLifetime1 = 0;
                     }
@@ -332,7 +332,7 @@ final class ti extends qa {
                 if (!var2.field_B) {
                   throw new RuntimeException();
                 }
-                var2.a(false);
+                var2.unlink(false);
               }
             }
             var2 = (vf) (this.field_l.a(param0 + 15108));
@@ -353,7 +353,7 @@ final class ti extends qa {
           return (byte[]) null;
         }
         byte[] var4 = var3.b(true);
-        var3.a(false);
+        var3.unlink(false);
         return var4;
     }
 
@@ -443,7 +443,7 @@ final class ti extends qa {
         }
         this.field_r = true;
         if (null == this.field_j) {
-          this.field_j = new md();
+          this.field_j = new IntrusiveDeque();
         }
     }
 
@@ -461,17 +461,17 @@ final class ti extends qa {
         if (null == this.a(26538)) {
           return;
         }
-        ne var2 = this.field_u.e(-24172);
+        IntrusiveNode var2 = this.field_u.e(-24172);
         while (var2 != null) {
-          var3 = (int)var2.field_h;
+          var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.a(param0);
+            var2.unlink(param0);
           } else {
             if (var3 >= this.field_y.field_l) {
-              var2.a(param0);
+              var2.unlink(param0);
             } else {
               if (0 == this.field_y.field_k[var3]) {
-                var2.a(param0);
+                var2.unlink(param0);
               } else {
                 if (this.field_h[var3] == 0) {
                   discarded$0 = this.a((byte) 95, var3, 1);
@@ -480,7 +480,7 @@ final class ti extends qa {
                   discarded$1 = this.a((byte) 123, var3, 2);
                 }
                 if (this.field_h[var3] == 1) {
-                  var2.a(false);
+                  var2.unlink(false);
                 }
               }
             }
@@ -541,14 +541,14 @@ final class ti extends qa {
         RuntimeException var10 = null;
         this.field_l = new wa(16);
         this.field_z = 0;
-        this.field_u = new md();
+        this.field_u = new IntrusiveDeque();
         this.field_m = 0L;
         try {
           this.field_p = param0;
           this.field_D = param1;
           if (null != this.field_D) {
             this.field_x = true;
-            this.field_j = new md();
+            this.field_j = new IntrusiveDeque();
           } else {
             this.field_x = false;
           }

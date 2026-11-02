@@ -4,7 +4,7 @@
 final class co extends vf {
     byte[] field_D;
     ln field_K;
-    static md field_I;
+    static IntrusiveDeque field_I;
     int field_L;
     static int field_H;
     static vj field_G;
@@ -67,7 +67,7 @@ final class co extends vf {
     }
 
     static {
-        field_I = new md();
+        field_I = new IntrusiveDeque();
         field_E = "Use postcombat abilities.";
         field_G = null;
         field_J = new String[]{"Raiders", "You control a party of between one and four <%raiders>, displayed at the bottom-left of the screen.<br><br><%command>Select one of these raiders now.</col>"};

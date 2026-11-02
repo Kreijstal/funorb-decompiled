@@ -15,24 +15,24 @@ final class op {
           Throwable decompiledCaughtException = null;
           if (null != sp.field_c && (param1 < 0 ||
             pd.field_A == qa.field_c)) {
-            if (param0 == ac.field_B.field_o &&
+            if (param0 == ac.field_B.position &&
               kd.c(-2456) > 10000L + wh.field_e) {
               ac.field_B.d((byte) -91, param1);
             }
-            if (0 < ac.field_B.field_o) {
+            if (0 < ac.field_B.position) {
               try {
-                sp.field_c.b(ac.field_B.field_m, false, 0, ac.field_B.field_o);
+                sp.field_c.b(ac.field_B.payload, false, 0, ac.field_B.position);
                 wh.field_e = kd.c(-2456);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 tl.a(117);
               }
-              ac.field_B.field_o = 0;
+              ac.field_B.position = 0;
             }
             return;
           }
-          ac.field_B.field_o = 0;
+          ac.field_B.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -43,10 +43,10 @@ final class op {
     final static int a(cd param0, int param1, int param2, cd param3, String param4, int param5, boolean param6) {
         int var12 = 0;
         int stackIn_7_0 = 0;
-        ec stackIn_12_0 = null;
+        PacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         String stackIn_13_2 = null;
-        ec stackIn_15_0 = null;
+        PacketBuffer stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         String stackIn_16_2 = null;
         int stackIn_34_0 = 0;
@@ -98,34 +98,34 @@ final class op {
           }
           if (no.field_c == pd.field_A) {
             fj.field_e = null;
-            ac.field_B.field_o = 0;
+            ac.field_B.position = 0;
             if (param4 != null) {
               var9 = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              ta.field_c.field_o = 0;
+              ta.field_c.position = 0;
               ta.field_c.a((byte) 63, bl.field_i.nextInt());
               ta.field_c.a((byte) 63, bl.field_i.nextInt());
               ta.field_c.a(2, var14);
               ta.field_c.a(2, var8);
               var15 = (CharSequence) ((Object) param4);
               ta.field_c.a(2, qf.a(var15, -1));
-              ta.field_c.i(param1, -86);
-              ta.field_c.a(6, param2);
-              ta.field_c.a(6, var9);
-              ac.field_B.a(6, 18);
-              ac.field_B.field_o = ac.field_B.field_o + 2;
-              var10 = ac.field_B.field_o;
+              ta.field_c.writeShort(param1, -86);
+              ta.field_c.writeByte(6, param2);
+              ta.field_c.writeByte(6, var9);
+              ac.field_B.writeByte(6, 18);
+              ac.field_B.position = ac.field_B.position + 2;
+              var10 = ac.field_B.position;
               var11_ref_StringLifetime4 = oj.a(m.c(true), (byte) -21);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               ac.field_B.b(var11_ref_StringLifetime4, (byte) -20);
               of.a(ac.field_B, kd.field_d, om.field_c, (byte) -120, ta.field_c);
-              ac.field_B.b(-var10 + ac.field_B.field_o, 1);
+              ac.field_B.b(-var10 + ac.field_B.position, 1);
             } else {
-              ta.field_c.field_o = 0;
+              ta.field_c.position = 0;
               ta.field_c.a((byte) 63, bl.field_i.nextInt());
               ta.field_c.a((byte) 63, bl.field_i.nextInt());
               stackIn_12_0 = ta.field_c;
@@ -135,7 +135,7 @@ final class op {
               } else {
                 stackIn_13_2 = var14;
               }
-              ((ec) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
+              ((PacketBuffer) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
               stackIn_15_0 = ta.field_c;
               stackIn_15_1 = 2;
               if (param3.a((byte) 123)) {
@@ -143,12 +143,12 @@ final class op {
               } else {
                 stackIn_16_2 = "";
               }
-              ((ec) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
-              ac.field_B.a(6, 16);
-              ac.field_B.field_o = ac.field_B.field_o + 1;
-              var9 = ac.field_B.field_o;
+              ((PacketBuffer) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
+              ac.field_B.writeByte(6, 16);
+              ac.field_B.position = ac.field_B.position + 1;
+              var9 = ac.field_B.position;
               of.a(ac.field_B, kd.field_d, om.field_c, (byte) -116, ta.field_c);
-              ac.field_B.c(ac.field_B.field_o - var9, -1);
+              ac.field_B.c(ac.field_B.position - var9, -1);
             }
             op.a(0, -1);
             pd.field_A = kp.field_b;
@@ -156,7 +156,7 @@ final class op {
           if (pd.field_A == kp.field_b &&
             oi.a(-12929, 1)) {
             var9Lifetime1 = ra.field_c.c(true);
-            ra.field_c.field_o = 0;
+            ra.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               pd.field_A = jg.field_a;
@@ -166,14 +166,14 @@ final class op {
                 np.a((byte) -126, m.c(true));
                 tp.field_v = m.field_f;
                 tl.a(-84);
-                nh.field_e = false;
+                ResourceArchive.field_e = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
               }
               if (99 == var9Lifetime1) {
                 oi.a(-12929, la.a(23940));
                 fj.field_e = new Boolean(fm.a(ra.field_c, -127));
-                ra.field_c.field_o = 0;
+                ra.field_c.position = 0;
               } else {
                 nj.field_b = -1;
                 hc.field_c = var9Lifetime1;
@@ -185,14 +185,14 @@ final class op {
             var9Lifetime2 = 2;
             if (oi.a(-12929, var9Lifetime2)) {
               var10Lifetime1 = ra.field_c.k(0);
-              ra.field_c.field_o = 0;
+              ra.field_c.position = 0;
               if (oi.a(-12929, var10Lifetime1)) {
                 var11 = mf.field_c.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   mf.field_c[var12] = ra.field_c.a(-21030);
                 }
                 tl.a(-60);
-                nh.field_e = false;
+                ResourceArchive.field_e = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
@@ -209,24 +209,24 @@ final class op {
               }
             }
             tl.a(-59);
-            nh.field_e = false;
+            ResourceArchive.field_e = false;
             stackIn_54_0 = hc.field_c;
             return stackIn_54_0;
           }
           if (null == sp.field_c) {
-            if (nh.field_e) {
-              if (30000L >= b.a(119)) {
+            if (ResourceArchive.field_e) {
+              if (30000L >= ClientException.a(119)) {
                 tp.field_v = fc.field_l;
               } else {
                 tp.field_v = lh.field_r;
               }
-              nh.field_e = false;
+              ResourceArchive.field_e = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
             var9Lifetime3 = an.field_E;
             an.field_E = l.field_b;
-            nh.field_e = true;
+            ResourceArchive.field_e = true;
             l.field_b = var9Lifetime3;
           }
           stackIn_64_0 = -1;

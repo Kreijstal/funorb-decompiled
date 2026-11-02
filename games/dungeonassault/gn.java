@@ -50,18 +50,18 @@ final class gn {
             this.field_g = 0;
             return;
           }
-          var3 = null != this.field_b ? oj.a(this.field_b, -1, new int[]{194}, ne.field_c) : 0;
-          this.field_g = var3 * ne.field_c.field_H;
-          this.field_a = this.field_a + (ne.field_c.field_H * var3 + 10);
+          var3 = null != this.field_b ? oj.a(this.field_b, -1, new int[]{194}, IntrusiveNode.field_c) : 0;
+          this.field_g = var3 * IntrusiveNode.field_c.field_H;
+          this.field_a = this.field_a + (IntrusiveNode.field_c.field_H * var3 + 10);
           return;
         }
         if (null == this.field_b) {
           this.field_g = 0;
           return;
         }
-        var3Lifetime1 = null != this.field_b ? oj.a(this.field_b, -1, new int[]{194}, ne.field_c) : 0;
-        this.field_g = var3Lifetime1 * ne.field_c.field_H;
-        this.field_a = this.field_a + (ne.field_c.field_H * var3Lifetime1 + 10);
+        var3Lifetime1 = null != this.field_b ? oj.a(this.field_b, -1, new int[]{194}, IntrusiveNode.field_c) : 0;
+        this.field_g = var3Lifetime1 * IntrusiveNode.field_c.field_H;
+        this.field_a = this.field_a + (IntrusiveNode.field_c.field_H * var3Lifetime1 + 10);
     }
 
     gn(String param0, String param1) {

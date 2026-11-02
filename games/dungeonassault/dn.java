@@ -67,7 +67,7 @@ final class dn extends ii implements jo, vg {
                 }
               }
             } else {
-              nh.c(true);
+              ResourceArchive.c(true);
             }
           } else {
             this.j(-24327);

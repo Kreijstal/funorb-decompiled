@@ -3,7 +3,7 @@
  */
 final class oh implements ca {
     static String field_a;
-    static md field_j;
+    static IntrusiveDeque field_j;
     private se field_m;
     private int field_g;
     static int field_s;
@@ -138,7 +138,7 @@ final class oh implements ca {
           }
         }
         if (param0 <= 1) {
-          field_j = (md) null;
+          field_j = (IntrusiveDeque) null;
         }
     }
 
@@ -199,7 +199,7 @@ final class oh implements ca {
         }
     }
 
-    final static cn a(nh param0, String param1, int param2, String param3) {
+    final static cn a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -263,7 +263,7 @@ final class oh implements ca {
             (param1 < 160 ||
             255 < param1)) {
             if (0 != param1) {
-              var6 = mh.field_d;
+              var6 = MouseInput.field_d;
               var2 = var6;
               for (var3 = 0; var3 < var6.length; var3++) {
                 var4 = var6[var3];
@@ -309,7 +309,7 @@ final class oh implements ca {
         field_o = "Recently raided by: ";
         field_q = "Hidden Pit";
         field_b = "Reload game";
-        field_j = new md();
+        field_j = new IntrusiveDeque();
         field_n = "Play the game without logging in just yet";
     }
 }

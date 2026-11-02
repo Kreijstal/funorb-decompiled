@@ -101,7 +101,7 @@ final class ph {
         this.d(param0, param1);
     }
 
-    final static ph a(nh param0, String param1, String param2) {
+    final static ph a(ResourceArchive param0, String param1, String param2) {
         cn var4 = null;
         cn var3 = oh.a(param0, param1, 11091, param2);
         param2 = param2 + field_z;

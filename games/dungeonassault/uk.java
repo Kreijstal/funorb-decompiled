@@ -93,7 +93,7 @@ final class uk {
             var3 == 3) {
             bo.field_Jb.a(66, -70);
           }
-          var4 = ec.h(24, 5);
+          var4 = PacketBuffer.h(24, 5);
           for (var5 = 0; var5 < 4; var5++) {
             if (var5 == 0) {
               stackIn_54_0 = 0;
@@ -109,7 +109,7 @@ final class uk {
               }
             }
             var6 = stackIn_54_0;
-            var16 = ec.h(var6, param0 ^ 5);
+            var16 = PacketBuffer.h(var6, param0 ^ 5);
             var8 = 0;
             var9 = -1;
             for (var10 = 1; ib.field_l > var10; var10++) {
@@ -151,7 +151,7 @@ final class uk {
               return stackIn_103_0;
             }
             bo.field_Jb.a(var6Lifetime1, -88);
-            var4 = ec.h(24, 5);
+            var4 = PacketBuffer.h(24, 5);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,7 +209,7 @@ final class uk {
         }
     }
 
-    final void a(int param0, byte[] param1, ec param2) {
+    final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -220,13 +220,13 @@ final class uk {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2.field_m[param2.field_o] == 31 &&
-              param2.field_m[1 + param2.field_o] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[1 + param2.position] == -117) {
               if (null == this.field_d) {
                 this.field_d = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_d.setInput(param2.field_m, 10 + param2.field_o, param2.field_m.length - 10 + (-param2.field_o - 8));
+                this.field_d.setInput(param2.payload, 10 + param2.position, param2.payload.length - 10 + (-param2.position - 8));
                 this.field_d.inflate(param1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

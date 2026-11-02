@@ -428,7 +428,7 @@ final class p extends qe {
           wm.field_c.b(205, 83, 256);
           wm.field_c.b(205, 83, var5);
           if (this.field_w.field_B) {
-            ec.a(95, 205, (byte) -95, im.field_e, 16744448, 192);
+            PacketBuffer.a(95, 205, (byte) -95, im.field_e, 16744448, 192);
           }
           decompiledSharedTail0 = (var15 != 0);
         }
@@ -437,7 +437,7 @@ final class p extends qe {
           wm.field_c.b(-(im.field_e.field_y >> 1) + 356, -(im.field_e.field_v >> 1) + 267, 256);
           wm.field_c.b(356 - (im.field_e.field_y >> 1), 267 - (im.field_e.field_v >> 1), var5);
           if (this.field_w.field_B) {
-            ec.a(-(im.field_e.field_v >> 1) + 265, -(im.field_e.field_y >> 1) + 354, (byte) -86, im.field_e, 16744448, 96);
+            PacketBuffer.a(-(im.field_e.field_v >> 1) + 265, -(im.field_e.field_y >> 1) + 354, (byte) -86, im.field_e, 16744448, 96);
           }
         }
         var4 = (rj) (this.field_p.e(-24172));
@@ -540,7 +540,7 @@ final class p extends qe {
         return;
     }
 
-    final static void a(nh param0, int param1, nh param2, nh param3) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -601,13 +601,13 @@ final class p extends qe {
             var8++;
           } while (var13 == 0);
           var9 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var9 < 3) {
               var14 = var6[var9];
               var10 = var14;
               stackIn_18_0 = 0;
               if (var13 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var11_int = stackIn_18_0;
               while (var11_int < var14.length) {
@@ -615,7 +615,7 @@ final class p extends qe {
                 var11_int++;
               }
               var9++;
-              continue L3;
+              continue scanLoop1;
             }
             var9 = var17.field_v;
             ie.a(95);
@@ -1232,10 +1232,10 @@ final class p extends qe {
         if (param1 > -3) {
           this.c((byte) 76);
         }
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var3 < 49) {
             if (var5 != 0) {
-              break L2;
+              break scanLoop1;
             }
             if (null == qj.field_c[var3] ||
               var5 != 0) {
@@ -1257,7 +1257,7 @@ final class p extends qe {
           }
           break;
         }
-        var6 = wj.field_x;
+        var6 = CipherPacketBuffer.field_x;
         var4 = var6;
         if (!gm.field_d.field_H) {
           var4 = var6 + dh.field_c;
@@ -1298,8 +1298,8 @@ final class p extends qe {
         this.field_R = new nn(true);
         this.field_M = new nn(false);
         hf.field_nb = new ed(8, 90, 180, 382);
-        this.field_Q = tn.a(16, 12, ne.field_c, jm.field_i, param0 ^ -18245, lk.field_P);
-        this.field_O = tn.a(472, 12, ne.field_c, jm.field_i, param0 ^ -18248, be.field_r.toUpperCase());
+        this.field_Q = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18245, lk.field_P);
+        this.field_O = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18248, be.field_r.toUpperCase());
         this.field_A = sj.a(24, 87, 66, uj.field_c, this.field_M);
         this.field_L = sj.a(55, 96, 66, gd.field_E, this.field_M);
         this.field_C = sj.a(86, 110, 66, jj.field_b, this.field_M);
@@ -1342,7 +1342,7 @@ final class p extends qe {
         ol.field_a = new cn[4];
         ol.field_a[0] = me.a(32, param0, 14, 0, 14);
         ol.field_a[1] = me.a(32, 14, 0, 14, 14);
-        ol.field_a[2] = me.a(md.b(param0, 46), 0, 14, 14, 14);
+        ol.field_a[2] = me.a(IntrusiveDeque.b(param0, 46), 0, 14, 14, 14);
         ol.field_a[3] = me.a(32, 14, 14, 14, 0);
         if (!gl.field_Lb) {
           ol.field_a = p.a(wk.a(ol.field_a, param0 - 14), 400);
@@ -1402,9 +1402,9 @@ final class p extends qe {
                   var2 != 24 &&
                   var2 != 42 && var2 != 48) {
                   if (null != qj.field_c[var2]) {
-                    ac.field_B.a(6, qj.field_c[var2].field_a);
+                    ac.field_B.writeByte(6, qj.field_c[var2].field_a);
                   } else {
-                    ac.field_B.a(6, 0);
+                    ac.field_B.writeByte(6, 0);
                   }
                 }
                 var2++;
@@ -1759,7 +1759,7 @@ final class p extends qe {
     }
 
     p() {
-        this.field_E = new tf(ne.field_c, f.field_c, cm.field_M);
+        this.field_E = new tf(IntrusiveNode.field_c, f.field_c, cm.field_M);
     }
 
     static {

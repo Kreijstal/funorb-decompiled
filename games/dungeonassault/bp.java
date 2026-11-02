@@ -223,10 +223,10 @@ final class bp {
         RuntimeException var1_ref = null;
         var4 = DungeonAssault.field_K;
         try {
-          var1 = in.field_C;
+          var1 = NetworkGameClient.field_C;
           synchronized (var1) {
             hl.field_g = hl.field_g + 1;
-            je.field_i = pj.field_x;
+            je.field_i = CombatState.field_x;
             if (0 > ia.field_M) {
               for (var2 = 0; var2 < 112; var2++) {
                 qk.field_e[var2] = false;
@@ -246,7 +246,7 @@ final class bp {
             if (param0 <= 28) {
               return;
             }
-            pj.field_x = ka.field_c;
+            CombatState.field_x = ka.field_c;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

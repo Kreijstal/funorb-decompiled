@@ -4,7 +4,7 @@
 final class ra {
     private int[] field_d;
     static String field_a;
-    static wj field_c;
+    static CipherPacketBuffer field_c;
     static int[] field_b;
 
     final int a(int param0, int param1) {
@@ -59,12 +59,12 @@ final class ra {
         }
         if (1 == no.field_d) {
           var2 = lc.a(lc.field_c, (byte) -94, hm.field_k);
-          if (var2 == kg.field_f) {
+          if (var2 == GameAppletShell.field_f) {
             um.field_g = null;
-            kg.field_f = -1;
+            GameAppletShell.field_f = -1;
           } else {
             if (var2 != -1) {
-              kg.field_f = var2;
+              GameAppletShell.field_f = var2;
               um.field_g = new rh(0, 0, 40, 80, 16711680, 768, 224);
             }
           }
@@ -175,14 +175,14 @@ final class ra {
     }
 
     final static void b(int param0) {
-        ha.field_k = new lc(ia.field_W, ll.field_r);
+        ha.field_k = new lc(ia.field_W, DualLinkNode.field_r);
         hd.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[]{110, 110, 110, 110, 140});
         hp.field_c = sh.a(-95, "da_ambience_insect", new int[]{256, 256, 168});
         dc.field_q = sh.a(param0 ^ -92, "da_door_open", new int[]{110, 100});
         om.field_b = hd.a(false, 140, "da_ambience_burning_torches_loop_4000ms");
         k.field_f = hd.a(false, 256, "da_ambience_running_water_loop_1000ms");
-        mh.field_f = hd.a(false, 51, "da_menu_fire");
+        MouseInput.field_f = hd.a(false, 51, "da_menu_fire");
         qm.field_n = hd.a(false, 256, "da_gold_stealing");
         eb.field_O = sh.a(-62, "da_gold_bar", new int[]{125, 125, 125, 125});
         bc.field_b = hd.a(false, 256, "da_dice_roll_dry");

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb {
+final class Raider {
     h field_n;
     int field_c;
     int field_p;
@@ -22,7 +22,7 @@ final class hb {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 3) {
-          hb.a((byte) 75);
+          Raider.a((byte) 75);
         }
         field_h = null;
         field_l = null;
@@ -60,11 +60,11 @@ final class hb {
         this.field_p = 255;
         this.field_o = this.field_o | 4;
         if (param0) {
-          hb.a((byte) 103);
+          Raider.a((byte) 103);
         }
     }
 
-    final static void a(int param0, ec param1, qg param2, int param3) {
+    final static void a(int param0, PacketBuffer param1, qg param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -102,13 +102,13 @@ final class hb {
           try {
             var18 = new oe();
             var18.field_q = param1.c(true);
-            var18.field_j = param1.h(-43);
+            var18.field_j = param1.readInt(-43);
             var18.field_o = new pn[var18.field_q];
             var18.field_l = new int[var18.field_q];
             var18.field_k = new byte[var18.field_q][][];
             var18.field_s = new pn[var18.field_q];
             if (param0 != -5) {
-              hb.a((byte) -84, 16);
+              Raider.a((byte) -84, 16);
             }
             var18.field_r = new int[var18.field_q];
             var18.field_n = new int[var18.field_q];
@@ -132,7 +132,7 @@ final class hb {
                     var11 = var19;
                     if (3 == var6_int) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.h(-58);
+                        var13 = param1.readInt(-58);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param1.a((byte) -98, 0, var13, var22[var12_int]);
@@ -154,7 +154,7 @@ final class hb {
                   var16 = param1.d(-114);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.h(-46);
+                    var9 = param1.readInt(-46);
                   }
                   var18.field_n[var5] = var6_int;
                   var18.field_l[var5] = var9;
@@ -290,7 +290,7 @@ final class hb {
         this.field_p = param0;
     }
 
-    hb(int param0, int param1) {
+    Raider(int param0, int param1) {
         this.field_j = param0;
         this.field_c = param1;
         this.field_n = hp.field_b[this.field_c];

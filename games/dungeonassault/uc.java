@@ -14,7 +14,7 @@ final class uc extends lm {
     private cn field_P;
     static String field_Q;
     static String field_C;
-    static nh field_I;
+    static ResourceArchive field_I;
     private int field_J;
     private int field_F;
     private cn[] field_M;

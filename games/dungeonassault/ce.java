@@ -36,8 +36,8 @@ final class ce extends kl {
         super.b(-51);
         int var2 = (this.field_a >> 1) + this.field_k;
         int var3 = this.field_j + 10;
-        ne.field_c.c(hb.field_l.toUpperCase(), var2, var3 + ne.field_c.field_H, 16777215, -1);
-        var3 = var3 + ne.field_c.field_H;
+        IntrusiveNode.field_c.c(Raider.field_l.toUpperCase(), var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
+        var3 = var3 + IntrusiveNode.field_c.field_H;
         la.field_b.a(hl.field_k, 20 + this.field_k, var3, -40 + this.field_a, this.field_i + this.field_j - var3 - (24 + jm.field_i.field_v * 2), 16777215, -1, 1, 1, la.field_b.field_H);
         int var4 = this.field_k + (this.field_a - 200 >> 1);
         int var5 = 60 + var3;
@@ -125,8 +125,8 @@ final class ce extends kl {
           var2_int = 88 + 2 * jm.field_i.field_v + oj.a(hl.field_k, -1, new int[]{300}, la.field_b) * la.field_b.field_H;
           this.a(350, 0, var2_int);
           this.field_d = false;
-          this.field_r = tn.a(this.field_k + 10 + (-10 + (this.field_a >> 1) - jm.field_i.field_y >> 1), this.field_i + (this.field_j - 16) - jm.field_i.field_v, ne.field_c, jm.field_i, -85, hb.field_l);
-          this.field_n = tn.a((-jm.field_i.field_y + (this.field_a >> 1) - 10 >> 1) + (this.field_a >> 1) + this.field_k, this.field_i + this.field_j + (-16 - jm.field_i.field_v), ne.field_c, jm.field_i, -125, be.field_r);
+          this.field_r = tn.a(this.field_k + 10 + (-10 + (this.field_a >> 1) - jm.field_i.field_y >> 1), this.field_i + (this.field_j - 16) - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -85, Raider.field_l);
+          this.field_n = tn.a((-jm.field_i.field_y + (this.field_a >> 1) - 10 >> 1) + (this.field_a >> 1) + this.field_k, this.field_i + this.field_j + (-16 - jm.field_i.field_v), IntrusiveNode.field_c, jm.field_i, -125, be.field_r);
           this.field_f.a(this.field_r, false);
           this.field_f.a(this.field_n, false);
         } catch (RuntimeException runtimeException) {

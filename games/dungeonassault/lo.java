@@ -11,7 +11,7 @@ abstract class lo {
     int field_g;
     static long field_f;
 
-    final static sm[] a(wj param0, byte param1) {
+    final static sm[] a(CipherPacketBuffer param0, byte param1) {
         int var5 = 0;
         Object stackIn_3_0 = null;
         sm[] stackIn_14_0 = null;
@@ -135,7 +135,7 @@ abstract class lo {
 
     final static void a(int param0, boolean param1, vh param2, int param3, int param4) {
         RuntimeException var5 = null;
-        wj var6 = null;
+        CipherPacketBuffer var6 = null;
         tc stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
@@ -159,8 +159,8 @@ abstract class lo {
           if (param0 >= 65) {
             return;
           }
-          var6 = (wj) null;
-          lo.a((wj) null, (byte) 71);
+          var6 = (CipherPacketBuffer) null;
+          lo.a((CipherPacketBuffer) null, (byte) 71);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

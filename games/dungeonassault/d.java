@@ -5,7 +5,7 @@ final class d {
     static String field_b;
     static int field_e;
     static q[] field_c;
-    static nh field_d;
+    static ResourceArchive field_d;
     static String field_a;
     static ae field_g;
     static boolean field_f;
@@ -34,7 +34,7 @@ final class d {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        wj var8 = null;
+        CipherPacketBuffer var8 = null;
         nf var9 = null;
         var7 = DungeonAssault.field_K;
         if (param1 <= 40) {

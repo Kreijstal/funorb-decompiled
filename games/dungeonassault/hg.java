@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends qb {
-    private ug field_m;
-    static md field_n;
+final class hg extends PcmStream {
+    private MidiPcmStream field_m;
+    static IntrusiveDeque field_n;
     static long field_s;
     static int[] field_t;
     static wi field_r;
     static String field_p;
-    md field_q;
+    IntrusiveDeque field_q;
     mb field_o;
 
     private final void a(lp param0, int[] param1, int param2, int param3, int param4, boolean param5) {
-        ug stackIn_12_0 = null;
+        MidiPcmStream stackIn_12_0 = null;
         lp stackIn_12_1 = null;
         int stackIn_12_2 = 0;
         boolean stackIn_13_3;
@@ -27,7 +27,7 @@ final class hg extends qb {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ni var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = DungeonAssault.field_K;
         try {
@@ -51,14 +51,14 @@ final class hg extends qb {
               }
               var11 = param0.field_v;
               if (this.field_m.field_o[param0.field_p] == 0) {
-                param0.field_v = ni.a(param0.field_I, var11.l(), var11.i(), var11.h());
+                param0.field_v = PcmSampleStream.a(param0.field_I, var11.l(), var11.i(), var11.h());
               } else {
-                param0.field_v = ni.a(param0.field_I, var11.l(), 0, var11.h());
+                param0.field_v = PcmSampleStream.a(param0.field_I, var11.l(), 0, var11.h());
                 stackIn_12_0 = this.field_m;
                 stackIn_12_1 = (lp) (param0);
                 stackIn_12_2 = 4917;
                 stackIn_13_3 = !(param0.field_x.field_r[param0.field_y] >= 0);
-                ((ug) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_13_3);
+                ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_13_3);
                 param0.field_v.a(var9, var11.i());
               }
               if (0 > param0.field_x.field_r[param0.field_y]) {
@@ -339,7 +339,7 @@ final class hg extends qb {
     }
 
     private final void a(int param0, lp param1, int param2) {
-        ug stackIn_7_0 = null;
+        MidiPcmStream stackIn_7_0 = null;
         lp stackIn_7_1 = null;
         int stackIn_7_2 = 0;
         boolean stackIn_8_3;
@@ -358,14 +358,14 @@ final class hg extends qb {
             param1.field_m = 1048575 & var4_int * param2 + param1.field_m;
             if (param2 >= var5) {
               if (0 == this.field_m.field_o[param1.field_p]) {
-                param1.field_v = ni.a(param1.field_I, param1.field_v.l(), param1.field_v.i(), param1.field_v.h());
+                param1.field_v = PcmSampleStream.a(param1.field_I, param1.field_v.l(), param1.field_v.i(), param1.field_v.h());
               } else {
-                param1.field_v = ni.a(param1.field_I, param1.field_v.l(), 0, param1.field_v.h());
+                param1.field_v = PcmSampleStream.a(param1.field_I, param1.field_v.l(), 0, param1.field_v.h());
                 stackIn_7_0 = this.field_m;
                 stackIn_7_1 = (lp) (param1);
                 stackIn_7_2 = 4917;
                 stackIn_8_3 = !(param1.field_x.field_r[param1.field_y] >= 0);
-                ((ug) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
               if (param1.field_x.field_r[param1.field_y] < 0) {
                 param1.field_v.e(-1);
@@ -404,14 +404,14 @@ final class hg extends qb {
         var4 = DungeonAssault.field_K;
         this.field_o.a(param0);
         var3 = (lp) (this.field_q.e(-24172));
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           stackIn_4_0 = this.field_m.a(var3, -16257);
           if (stackIn_4_0) {
             var3 = (lp) (this.field_q.a(4));
-            continue L0;
+            continue scanLoop1;
           }
           var2 = param0;
           do {
@@ -419,7 +419,7 @@ final class hg extends qb {
               this.a(-84, var3, var2);
               var3.field_H = var3.field_H - var2;
               var3 = (lp) (this.field_q.a(4));
-              continue L0;
+              continue scanLoop1;
             }
             this.a(-72, var3, var3.field_H);
             var2 = var2 - var3.field_H;
@@ -429,7 +429,7 @@ final class hg extends qb {
         }
     }
 
-    final qb c() {
+    final PcmStream c() {
         lp var1_ref = null;
         int var2 = DungeonAssault.field_K;
         do {
@@ -438,7 +438,7 @@ final class hg extends qb {
             return null;
           }
         } while (null == var1_ref.field_v);
-        return (qb) ((Object) var1_ref.field_v);
+        return (PcmStream) ((Object) var1_ref.field_v);
     }
 
     public static void d(int param0) {
@@ -456,13 +456,13 @@ final class hg extends qb {
         field_t = null;
     }
 
-    final qb d() {
+    final PcmStream d() {
         lp var1 = (lp) (this.field_q.e(-24172));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_v) {
-          return (qb) ((Object) var1.field_v);
+          return (PcmStream) ((Object) var1.field_v);
         }
         return this.c();
     }
@@ -482,14 +482,14 @@ final class hg extends qb {
         try {
           this.field_o.b(param0, param1, param2);
           var6 = (lp) (this.field_q.e(-24172));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             stackIn_4_0 = this.field_m.a(var6, -16257);
             if (stackIn_4_0) {
               var6 = (lp) (this.field_q.a(4));
-              continue L0;
+              continue scanLoop1;
             }
             var5 = param2;
             var4_int = param1;
@@ -498,7 +498,7 @@ final class hg extends qb {
                 this.a(var6, param0, var4_int + var5, var4_int, var5, true);
                 var6.field_H = var6.field_H - var5;
                 var6 = (lp) (this.field_q.a(4));
-                continue L0;
+                continue scanLoop1;
               }
               this.a(var6, param0, var5 + var4_int, var4_int, var6.field_H, true);
               var5 = var5 - var6.field_H;
@@ -521,8 +521,8 @@ final class hg extends qb {
         }
     }
 
-    hg(ug param0) {
-        this.field_q = new md();
+    hg(MidiPcmStream param0) {
+        this.field_q = new IntrusiveDeque();
         this.field_o = new mb();
         try {
           this.field_m = param0;
@@ -532,7 +532,7 @@ final class hg extends qb {
     }
 
     static {
-        field_n = new md();
+        field_n = new IntrusiveDeque();
         field_p = "Skeleton Sentinels";
     }
 }

@@ -6,12 +6,12 @@ final class sf implements cl {
     static String field_e;
     static int[] field_b;
     private wm field_f;
-    static md field_c;
+    static IntrusiveDeque field_c;
     private int field_a;
     static String field_i;
     private int field_d;
     static int field_g;
-    private pj field_j;
+    private CombatState field_j;
 
     final static void d(int param0) {
         RuntimeException runtimeException = null;
@@ -264,11 +264,11 @@ final class sf implements cl {
           var7 = this.field_a;
           var8 = this.field_d;
           var9 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var9 < 7) {
               stackIn_171_0 = 0;
               if (var16 != 0) {
-                break L2;
+                break scanLoop1;
               }
               var10 = stackIn_171_0;
               while (7 > var10) {
@@ -404,7 +404,7 @@ final class sf implements cl {
               stackIn_169_0Lifetime1 = var8;
               stackIn_169_1Lifetime1 = var3;
               var8 = stackIn_169_0Lifetime1 + stackIn_169_1Lifetime1;
-              continue L2;
+              continue scanLoop1;
             }
             stackIn_171_0 = 0;
             break;
@@ -710,7 +710,7 @@ final class sf implements cl {
           jh.c();
           p.field_G = new cn[16];
           var7 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             stackIn_9_0 = 16;
             stackIn_9_1 = var7;
             if (stackIn_9_0 > stackIn_9_1) {
@@ -747,7 +747,7 @@ final class sf implements cl {
               }
               p.field_G[var7] = var8;
               var7++;
-              continue L2;
+              continue scanLoop1;
             }
             break;
           }
@@ -782,11 +782,11 @@ final class sf implements cl {
           var2 = (fa) (ud.field_v.e(-24172));
           var3 = -72 / ((param0 + 32) / 61);
           while (var2 != null) {
-            stackIn_19_0 = var2.field_o.c(-71);
+            stackIn_19_0 = var2.field_o.isLinked(-71);
             if (var4 != 0) {
               while (true) {
                 if (!stackIn_19_0) {
-                  var2.a(false);
+                  var2.unlink(false);
                 }
                 var2.field_n.h(128 + oo.field_d * var2.field_l >> 8);
                 var2 = (fa) (oi.field_F.a(4));
@@ -794,7 +794,7 @@ final class sf implements cl {
               }
             }
             if (!stackIn_19_0) {
-              var2.a(false);
+              var2.unlink(false);
             }
             if (stackIn_19_0 ||
               var4 != 0) {
@@ -812,9 +812,9 @@ final class sf implements cl {
               if (var4 != 0) {
                 return;
               }
-              stackIn_19_0Lifetime1 = var2Lifetime1.field_o.c(-70);
+              stackIn_19_0Lifetime1 = var2Lifetime1.field_o.isLinked(-70);
               if (!stackIn_19_0Lifetime1) {
-                var2Lifetime1.a(false);
+                var2Lifetime1.unlink(false);
               } else {
                 var2Lifetime1.field_n.h(128 + oo.field_d * var2Lifetime1.field_l >> 8);
               }
@@ -834,6 +834,6 @@ final class sf implements cl {
         field_g = 0;
         field_b = new int[]{1052688, 1056800, 1056784, 4198416, 2105408, 4202560};
         field_i = "Vampire Bats";
-        field_c = new md();
+        field_c = new IntrusiveDeque();
     }
 }

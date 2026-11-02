@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class se extends ll {
+abstract class se extends DualLinkNode {
     private lo[] field_x;
     private int[] field_z;
     private int[] field_G;
@@ -165,7 +165,7 @@ abstract class se extends ll {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(hb.a((byte) -38, (char) var7) & 255);
+              var7 = (char)(Raider.a((byte) -38, (char) var7) & 255);
               var4 = var4 + this.field_M[var7];
               if (this.field_v != null &&
                 var3 != 0) {
@@ -487,7 +487,7 @@ abstract class se extends ll {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(hb.a((byte) -38, (char) var8) & 255);
+              var8 = (char)(Raider.a((byte) -38, (char) var8) & 255);
               if (this.field_v != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_v[(var5 << 8) + var8];
@@ -690,7 +690,7 @@ abstract class se extends ll {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_J.append((char) var14);
-                var14 = (char)(hb.a((byte) -38, (char) var14) & 255);
+                var14 = (char)(Raider.a((byte) -38, (char) var14) & 255);
                 var4 = var4 + this.field_M[var14];
                 if (this.field_v != null &&
                   var10 != 0) {
@@ -760,7 +760,7 @@ abstract class se extends ll {
     }
 
     final int a(char param0) {
-        return this.field_M[hb.a((byte) -38, param0) & 255];
+        return this.field_M[Raider.a((byte) -38, param0) & 255];
     }
 
     final int b(String param0, int param1) {

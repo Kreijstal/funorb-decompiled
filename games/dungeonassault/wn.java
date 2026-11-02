@@ -49,7 +49,7 @@ final class wn extends vn {
           this.field_w.start();
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (in.a(param0, 8) != 1) {
+          if (NetworkGameClient.a(param0, 8) != 1) {
             this.b(gk.a(-912121912, param0));
             return;
           }

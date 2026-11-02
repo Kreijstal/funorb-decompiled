@@ -9,9 +9,9 @@ final class eh {
     int[] field_j;
     String field_b;
     static String[] field_e;
-    nh field_d;
+    ResourceArchive field_d;
     static String field_a;
-    private md field_n;
+    private IntrusiveDeque field_n;
     int field_f;
     String field_i;
     static ed field_o;
@@ -124,7 +124,7 @@ final class eh {
           return (cn) null;
         }
         if (this.field_n == null) {
-          this.field_n = new md();
+          this.field_n = new IntrusiveDeque();
         }
         var5 = (fl) (this.field_n.e(param3 ^ -24172));
         while (var5 != null) {

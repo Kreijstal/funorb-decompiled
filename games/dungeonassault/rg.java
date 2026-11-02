@@ -148,7 +148,7 @@ final class rg extends ii implements pf, vg, mg {
         }
     }
 
-    final static void a(int param0, ec param1, int param2, int param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         String var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -156,16 +156,16 @@ final class rg extends ii implements pf, vg, mg {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          param1.a(6, 12);
-          param1.i(17, -119);
-          param1.i(param2, -90);
-          param1.i(param0, -95);
+          param1.writeByte(6, 12);
+          param1.writeShort(17, -119);
+          param1.writeShort(param2, -90);
+          param1.writeShort(param0, -95);
           if (param3 <= 4) {
             var6 = (String) null;
             rg.a(62, (String) null);
-            param1.a(6, param4);
+            param1.writeByte(6, param4);
           } else {
-            param1.a(6, param4);
+            param1.writeByte(6, param4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -345,8 +345,8 @@ final class rg extends ii implements pf, vg, mg {
     final static void a(int param0, String param1) {
         try {
           if (param0 != 15) {
-            ec var3 = (ec) null;
-            rg.a(65, (ec) null, -49, -86, -120);
+            PacketBuffer var3 = (PacketBuffer) null;
+            rg.a(65, (PacketBuffer) null, -49, -86, -120);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "rg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -355,8 +355,8 @@ final class rg extends ii implements pf, vg, mg {
 
     private final String g(byte param0) {
         if (param0 > -17) {
-          ec var3 = (ec) null;
-          rg.a(76, (ec) null, -91, 62, -13);
+          PacketBuffer var3 = (PacketBuffer) null;
+          rg.a(76, (PacketBuffer) null, -91, 62, -13);
         }
         return "<u=2164A2><col=2164A2>";
     }

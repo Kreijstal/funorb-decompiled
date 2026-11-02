@@ -210,45 +210,45 @@ final class he extends ip {
         int var3Lifetime4;
         var8 = DungeonAssault.field_K;
         try {
-          if (ll.field_m != null) {
+          if (DualLinkNode.field_m != null) {
             return;
           }
-          ll.field_m = new String[29];
-          ll.field_m[0] = o.field_q.toUpperCase();
-          ll.field_m[1] = t.field_b.toUpperCase();
-          ll.field_m[2] = me.field_c.toUpperCase();
-          ll.field_m[3] = t.field_b.toUpperCase();
-          ll.field_m[4] = sj.field_W.toUpperCase();
-          ll.field_m[5] = uc.field_C.toUpperCase();
-          ll.field_m[6] = rl.field_a.toUpperCase();
-          ll.field_m[7] = ue.field_m.toUpperCase();
-          ll.field_m[8] = kd.field_a.toUpperCase();
-          ll.field_m[9] = wo.field_d.toUpperCase();
-          ll.field_m[10] = null;
-          ll.field_m[11] = vd.field_d.toUpperCase();
-          ll.field_m[12] = cd.field_h.toUpperCase();
-          ll.field_m[13] = pd.field_B.toUpperCase();
-          ll.field_m[14] = ja.field_a.toUpperCase();
-          ll.field_m[15] = ef.field_g.toUpperCase();
-          ll.field_m[16] = uo.field_e.toUpperCase();
-          ll.field_m[17] = jg.field_e.toUpperCase();
-          ll.field_m[18] = lb.field_E.toUpperCase();
-          ll.field_m[19] = bl.field_a.toUpperCase();
-          ll.field_m[20] = ub.field_k.toUpperCase();
-          ll.field_m[21] = vf.field_y.toUpperCase();
-          ll.field_m[22] = ag.field_b.toUpperCase();
-          ll.field_m[23] = uj.field_e.toUpperCase();
-          ll.field_m[24] = id.field_k.toUpperCase();
-          ll.field_m[26] = og.field_d.toUpperCase();
-          ll.field_m[25] = an.field_y.toUpperCase();
-          ll.field_m[27] = hk.field_a.toUpperCase();
+          DualLinkNode.field_m = new String[29];
+          DualLinkNode.field_m[0] = o.field_q.toUpperCase();
+          DualLinkNode.field_m[1] = t.field_b.toUpperCase();
+          DualLinkNode.field_m[2] = me.field_c.toUpperCase();
+          DualLinkNode.field_m[3] = t.field_b.toUpperCase();
+          DualLinkNode.field_m[4] = sj.field_W.toUpperCase();
+          DualLinkNode.field_m[5] = uc.field_C.toUpperCase();
+          DualLinkNode.field_m[6] = rl.field_a.toUpperCase();
+          DualLinkNode.field_m[7] = ue.field_m.toUpperCase();
+          DualLinkNode.field_m[8] = kd.field_a.toUpperCase();
+          DualLinkNode.field_m[9] = wo.field_d.toUpperCase();
+          DualLinkNode.field_m[10] = null;
+          DualLinkNode.field_m[11] = vd.field_d.toUpperCase();
+          DualLinkNode.field_m[12] = cd.field_h.toUpperCase();
+          DualLinkNode.field_m[13] = pd.field_B.toUpperCase();
+          DualLinkNode.field_m[14] = ja.field_a.toUpperCase();
+          DualLinkNode.field_m[15] = ef.field_g.toUpperCase();
+          DualLinkNode.field_m[16] = uo.field_e.toUpperCase();
+          DualLinkNode.field_m[17] = jg.field_e.toUpperCase();
+          DualLinkNode.field_m[18] = lb.field_E.toUpperCase();
+          DualLinkNode.field_m[19] = bl.field_a.toUpperCase();
+          DualLinkNode.field_m[20] = ub.field_k.toUpperCase();
+          DualLinkNode.field_m[21] = vf.field_y.toUpperCase();
+          DualLinkNode.field_m[22] = ag.field_b.toUpperCase();
+          DualLinkNode.field_m[23] = uj.field_e.toUpperCase();
+          DualLinkNode.field_m[24] = id.field_k.toUpperCase();
+          DualLinkNode.field_m[26] = KeyboardInput.field_d.toUpperCase();
+          DualLinkNode.field_m[25] = an.field_y.toUpperCase();
+          DualLinkNode.field_m[27] = hk.field_a.toUpperCase();
           var1 = new String[ob.field_ac][];
           var1[ob.field_fc] = bo.field_Gb;
           var1[ob.field_hc] = ao.field_i;
           var1[ob.field_Mb] = hh.field_h;
           var1[ob.field_Wb] = up.field_c;
           var1[ob.field_Nb] = jm.field_a;
-          var1[ob.field_jc] = ll.field_t;
+          var1[ob.field_jc] = DualLinkNode.field_t;
           var1[ob.field_Hb] = qj.field_f;
           var1[ob.field_Ob] = an.field_F;
           var1[ob.field_Qb] = ob.field_oc;
@@ -268,7 +268,7 @@ final class he extends ip {
           var1[ob.field_Ub] = j.field_S;
           var2 = new String[ob.field_ac][];
           var2[ob.field_fc] = ha.field_l;
-          var2[ob.field_hc] = ne.field_f;
+          var2[ob.field_hc] = IntrusiveNode.field_f;
           var2[ob.field_Mb] = rp.field_f;
           var2[ob.field_Wb] = bj.field_H;
           var2[ob.field_Nb] = hk.field_d;
@@ -344,7 +344,7 @@ final class he extends ip {
             hp.field_b[6].field_F = var3_ref_StringLifetime5;
           }
           var3_ref_StringLifetime6 = fb.field_b;
-          var4Lifetime6 = in.field_t;
+          var4Lifetime6 = NetworkGameClient.field_t;
           if (null != hp.field_b[7]) {
             hp.field_b[7].field_F = var3_ref_StringLifetime6;
             hp.field_b[7].field_G = var4Lifetime6;
@@ -512,7 +512,7 @@ final class he extends ip {
             hp.field_b[34].field_G = var4Lifetime33;
           }
           var3_ref_StringLifetime34 = ic.field_A;
-          var4Lifetime34 = nh.field_a;
+          var4Lifetime34 = ResourceArchive.field_a;
           var5 = (String) null;
           if (gh.field_i[0] != null) {
             gh.field_i[0].field_o = var5;
@@ -602,7 +602,7 @@ final class he extends ip {
             gh.field_i[10].field_t = var4Lifetime44;
             gh.field_i[10].field_o = var5Lifetime10;
           }
-          var3_ref_StringLifetime45 = ll.field_u;
+          var3_ref_StringLifetime45 = DualLinkNode.field_u;
           var4Lifetime45 = dm.field_b;
           var5Lifetime11 = (String) null;
           if (gh.field_i[11] != null) {
@@ -746,7 +746,7 @@ final class he extends ip {
             gh.field_i[28].field_z = var3_ref_StringLifetime62;
             gh.field_i[28].field_o = var5Lifetime28;
           }
-          var3_ref_StringLifetime63 = hb.field_h;
+          var3_ref_StringLifetime63 = Raider.field_h;
           var4Lifetime63 = pe.field_k;
           var5Lifetime29 = (String) null;
           if (gh.field_i[29] != null) {
@@ -754,7 +754,7 @@ final class he extends ip {
             gh.field_i[29].field_z = var3_ref_StringLifetime63;
             gh.field_i[29].field_t = var4Lifetime63;
           }
-          var3_ref_StringLifetime64 = ec.field_q;
+          var3_ref_StringLifetime64 = PacketBuffer.field_q;
           var4Lifetime64 = jm.field_d;
           var5Lifetime30 = (String) null;
           if (gh.field_i[30] != null) {
@@ -810,7 +810,7 @@ final class he extends ip {
             gh.field_i[36].field_z = var3_ref_StringLifetime70;
             gh.field_i[36].field_t = var4Lifetime70;
           }
-          var3_ref_StringLifetime71 = ll.field_s;
+          var3_ref_StringLifetime71 = DualLinkNode.field_s;
           var4Lifetime71 = ic.field_z;
           var5Lifetime37 = ii.field_J;
           if (null != gh.field_i[37]) {
@@ -831,7 +831,7 @@ final class he extends ip {
             cc.field_e[var3 + wm.field_a] = od.field_b[var3];
             cc.field_e[var3 + (rj.field_l + wm.field_a)] = ek.field_h[var3];
           }
-          for (var3Lifetime1 = 0; hb.field_m.length > var3Lifetime1; var3Lifetime1++) {
+          for (var3Lifetime1 = 0; Raider.field_m.length > var3Lifetime1; var3Lifetime1++) {
             cc.field_e[var3Lifetime1 + uf.field_a] = j.field_O[var3Lifetime1];
             cc.field_e[rj.field_l + uf.field_a + var3Lifetime1] = ff.field_f[var3Lifetime1];
           }
@@ -860,14 +860,14 @@ final class he extends ip {
           ck.field_H.a(vo.field_m, 69, "useskill");
           ck.field_H.a("<img=1>", 104, "command");
           ck.field_H.a("<col=FF0000>", -117, "highlight");
-          ck.field_H.a(b.a(gg.field_e, -1), param0 ^ 23494, "raider");
-          ck.field_H.a(b.a(af.field_a, param0 ^ 23486), -107, "monster");
-          ck.field_H.a(b.a(DungeonAssault.field_H, -1), 74, "trap");
-          ck.field_H.a(b.a(ki.field_e, -1), -106, "guardian");
-          ck.field_H.a(b.a(ak.field_m, -1), param0 + 23560, "raiders");
-          ck.field_H.a(b.a(wo.field_f, -1), 102, "monsters");
-          ck.field_H.a(b.a(dh.field_e, -1), param0 ^ -23517, "traps");
-          ck.field_H.a(b.a(wm.field_j, -1), -115, "guardians");
+          ck.field_H.a(ClientException.a(gg.field_e, -1), param0 ^ 23494, "raider");
+          ck.field_H.a(ClientException.a(af.field_a, param0 ^ 23486), -107, "monster");
+          ck.field_H.a(ClientException.a(DungeonAssault.field_H, -1), 74, "trap");
+          ck.field_H.a(ClientException.a(ki.field_e, -1), -106, "guardian");
+          ck.field_H.a(ClientException.a(ak.field_m, -1), param0 + 23560, "raiders");
+          ck.field_H.a(ClientException.a(wo.field_f, -1), 102, "monsters");
+          ck.field_H.a(ClientException.a(dh.field_e, -1), param0 ^ -23517, "traps");
+          ck.field_H.a(ClientException.a(wm.field_j, -1), -115, "guardians");
           ck.field_H.a("<col=8B1717>", -103, "col_charge");
           ck.field_H.a("<col=2E5D17>", -106, "col_advance");
           ck.field_H.a("<col=8B8B2E>", -101, "col_flee");
@@ -1058,7 +1058,7 @@ final class he extends ip {
             var12 = new cn(195, 221);
             var6 = var12.field_y / 2;
             var12.e();
-            dc.field_e.c(jk.a(new String[]{mj.field_f}, md.field_a, 30496), var6, 40, 16777215, -1);
+            dc.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
             tg.field_l.c(jk.a(new String[]{mj.field_f}, hm.field_t, 30496), var6, 60, 16777215, -1);
             dc.field_e.c(jk.a(new String[]{dh.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
             tg.field_l.c(jk.a(new String[]{dh.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
@@ -1067,14 +1067,14 @@ final class he extends ip {
             uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
             gn.field_c.e();
             var12.h(18 - gn.field_c.field_w, -gn.field_c.field_A + 241);
-            for (var7 = 0; var7 < ec.field_l.length; var7++) {
+            for (var7 = 0; var7 < PacketBuffer.field_l.length; var7++) {
               en.field_b[var7].e();
-              tg.field_l.a(ec.field_l[var7], 3, 3, en.field_b[var7].field_y - 6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H + tg.field_l.field_E);
+              tg.field_l.a(PacketBuffer.field_l[var7], 3, 3, en.field_b[var7].field_y - 6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H + tg.field_l.field_E);
               uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
             }
-            ec.field_l = null;
-            ne.field_d = ep.field_g.d();
-            ne.field_d.e();
+            PacketBuffer.field_l = null;
+            IntrusiveNode.field_d = ep.field_g.d();
+            IntrusiveNode.field_d.e();
             jj.a(64, -971598481, 0, 0, 2 * gf.field_c / 3, gf.field_i);
             gf.a(var27, var2, var3);
             gf.b(rp.field_e);
@@ -1147,7 +1147,7 @@ final class he extends ip {
             var9.h(0, 0);
             ud.field_r = new cn(640, 480);
             ud.field_r.e();
-            qc.field_z.e((qc.field_z.field_E >> 1) + je.field_b, (qc.field_z.field_G >> 1) + ig.field_a, md.field_f, 4096);
+            qc.field_z.e((qc.field_z.field_E >> 1) + je.field_b, (qc.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
             qc.field_z = null;
             ud.field_r.c();
             gf.a(var28, var2Lifetime1, var3Lifetime1);
@@ -1208,7 +1208,7 @@ final class he extends ip {
             tl.field_i.h(231, 390);
             var2_ref_cn = ep.field_g;
             if (o.field_i.field_b == 0) {
-              var2_ref_cn = ne.field_d;
+              var2_ref_cn = IntrusiveNode.field_d;
             }
             var2_ref_cn.h(0, 0);
             stackIn_50_0 = jc.field_e;

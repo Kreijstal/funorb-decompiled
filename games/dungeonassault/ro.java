@@ -330,7 +330,7 @@ final class ro extends kl {
         }
         this.field_n = null;
         this.field_s.b((byte) 30);
-        this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -jm.field_i.field_v + this.field_i + this.field_j, ne.field_c, jm.field_i, -124, tf.field_g);
+        this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -jm.field_i.field_v + this.field_i + this.field_j, IntrusiveNode.field_c, jm.field_i, -124, tf.field_g);
         this.field_f.a(this.field_s, false);
         this.field_y.a((byte) -19);
         System.gc();
@@ -421,7 +421,7 @@ final class ro extends kl {
           oe.field_m.j(-63 + this.field_a, 21);
           ad.field_e.i(23, -38 + this.field_i);
           ad.field_e.f(-39 + this.field_a, this.field_i - 38);
-          da.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + ne.field_c.field_H >> 1) + 14, ne.field_c);
+          da.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
           jh.b();
           return;
         }
@@ -441,7 +441,7 @@ final class ro extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, -38 + this.field_i);
         ad.field_e.f(-39 + this.field_a, this.field_i - 38);
-        da.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + ne.field_c.field_H >> 1) + 14, ne.field_c);
+        da.a(ak.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
         jh.b();
     }
 
@@ -484,12 +484,12 @@ final class ro extends kl {
           this.field_y = rg.field_M[0];
           this.field_o = new wd(this.field_y);
           if (this.field_p.field_Y.field_l <= 0) {
-            this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, ne.field_c, jm.field_i, -75, pe.field_n);
+            this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, IntrusiveNode.field_c, jm.field_i, -75, pe.field_n);
             this.field_f.a(this.field_s, false);
             this.field_f.a(this.field_n, false);
             this.field_t = 0;
           } else {
-            this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_j + this.field_i - jm.field_i.field_v, ne.field_c, jm.field_i, -47, hj.field_X);
+            this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_j + this.field_i - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -47, hj.field_X);
             this.field_f.a(this.field_s, false);
             this.field_t = 5;
           }
@@ -517,7 +517,7 @@ final class ro extends kl {
 
     private final void d(byte param0) {
         this.field_s.b((byte) 30);
-        this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + (this.field_i + this.field_j), ne.field_c, jm.field_i, -64, tf.field_g);
+        this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + (this.field_i + this.field_j), IntrusiveNode.field_c, jm.field_i, -64, tf.field_g);
         if (param0 > -86) {
           this.b((byte) -86);
           this.field_f.a(this.field_s, false);
@@ -551,15 +551,15 @@ final class ro extends kl {
     }
 
     private final void a(String param0, int param1, int param2) {
-        int var4_int = ne.field_c.b(param0);
-        int var5 = ne.field_c.field_E + ne.field_c.field_H;
+        int var4_int = IntrusiveNode.field_c.b(param0);
+        int var5 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
         if (param2 > -75) {
           return;
         }
         try {
           this.field_v = new cn(var4_int, var5);
           jh.a(this.field_v);
-          ne.field_c.b(param0, 0, ne.field_c.field_H, param1, -1);
+          IntrusiveNode.field_c.b(param0, 0, IntrusiveNode.field_c.field_H, param1, -1);
           this.field_q = rb.a(16, this.field_v, param1, (byte) 86);
           this.field_v.d(65793);
           jh.b();
@@ -646,10 +646,10 @@ final class ro extends kl {
             }
             if (2 == this.field_t) {
               if (ga.field_n == this.field_o.field_k) {
-                L12: {
+                regionExit1: {
                   this.field_o.a(ga.field_n, ce.field_v, -10872);
                   var3 = this.field_p.a(1, this.field_C);
-                  var4 = in.a(var3, 8);
+                  var4 = NetworkGameClient.a(var3, 8);
                   if (var3 != 0) {
                     if (var4 <= 1) {
                       var9 = null;
@@ -657,7 +657,7 @@ final class ro extends kl {
                       while (true) {
                         if (var7 >= 4) {
                           var5 = jk.a(new String[]{((String) (var9)).toUpperCase()}, rp.field_a, 30496);
-                          break L12;
+                          break regionExit1;
                         }
                         if ((1 << var7 & var3) == 0) {
                           var7++;
@@ -737,7 +737,7 @@ final class ro extends kl {
             }
             this.field_o.a(ga.field_n, ce.field_v, -10872);
             var3Lifetime1 = this.field_p.a(1, this.field_C);
-            var4 = in.a(var3Lifetime1, 8);
+            var4 = NetworkGameClient.a(var3Lifetime1, 8);
             if (var3Lifetime1 == 0) {
               var12 = l.field_f;
               var16 = var12;
@@ -796,7 +796,7 @@ final class ro extends kl {
         }
         if (this.field_t == 5) {
           this.field_f.a(this.field_n, param0);
-          mi.a(this.field_s, pe.field_n, ne.field_c, 13195, jm.field_i);
+          mi.a(this.field_s, pe.field_n, IntrusiveNode.field_c, 13195, jm.field_i);
           this.field_t = 0;
           return;
         }
@@ -873,13 +873,13 @@ final class ro extends kl {
     }
 
     final static void a(pm param0, int param1, int param2) {
-        wj var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = ac.field_B;
           int var4 = -85 % ((-8 - param2) / 52);
           var3.d((byte) -126, param1);
-          var3.a(6, param0.field_j);
-          var3.a(6, param0.field_i);
+          var3.writeByte(6, param0.field_j);
+          var3.writeByte(6, param0.field_i);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ro.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

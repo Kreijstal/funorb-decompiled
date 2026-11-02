@@ -9,10 +9,10 @@ class ch extends hl {
 
     fd b(int param0) {
         int var2 = 33 / ((-56 - param0) / 41);
-        return ug.field_w;
+        return MidiPcmStream.field_w;
     }
 
-    final void a(ec param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(71, this.field_m);
           param0.a(this.field_o, (byte) 122);
@@ -37,8 +37,8 @@ class ch extends hl {
     }
 
     final static void a(byte param0, fn param1, int param2) {
-        wj var7 = null;
-        wj var8 = null;
+        CipherPacketBuffer var7 = null;
+        CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = DungeonAssault.field_K;
@@ -46,25 +46,25 @@ class ch extends hl {
           var7 = ac.field_B;
           var8 = var7;
           var8.d((byte) -93, param2);
-          var8.field_o = var8.field_o + 1;
-          var4 = var8.field_o;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           if (param0 != -16) {
             field_l = (String) null;
           }
-          var8.a(param0 ^ -10, 1);
-          var8.i(param1.field_r, -102);
-          var8.i(param1.field_s, -115);
-          var8.i(param1.field_l, param0 - 105);
+          var8.writeByte(param0 ^ -10, 1);
+          var8.writeShort(param1.field_r, -102);
+          var8.writeShort(param1.field_s, -115);
+          var8.writeShort(param1.field_l, param0 - 105);
           var8.a((byte) 63, param1.field_i);
           var8.a((byte) 63, param1.field_n);
           var8.a((byte) 63, param1.field_m);
           var8.a((byte) 63, param1.field_k);
-          var8.a(6, param1.field_p.length);
+          var8.writeByte(6, param1.field_p.length);
           for (var5 = 0; var5 < param1.field_p.length; var5++) {
             var7.a((byte) 63, param1.field_p[var5]);
           }
           var8.c((byte) -106, var4);
-          var8.c(var8.field_o - var4, -1);
+          var8.c(var8.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ch.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

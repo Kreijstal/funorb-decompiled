@@ -3,16 +3,16 @@
  */
 final class up {
     static int field_d;
-    private ll field_a;
+    private DualLinkNode field_a;
     static String[] field_c;
-    private ll field_e;
+    private DualLinkNode field_e;
     static cn field_b;
 
-    final ll c(int param0) {
+    final DualLinkNode c(int param0) {
         if (param0 != 13395) {
-          return (ll) null;
+          return (DualLinkNode) null;
         }
-        ll var2 = this.field_a.field_n;
+        DualLinkNode var2 = this.field_a.field_n;
         if (var2 == this.field_a) {
           this.field_e = null;
           return null;
@@ -36,7 +36,7 @@ final class up {
           qe.field_f = hj.field_S << 16;
           var1 = -qe.field_n + qe.field_f;
           var2 = qe.field_l - qe.field_c;
-          var3 = ug.a(true, (var2 >> 12) * (var2 >> 12) + (var1 >> 12) * (var1 >> 12)) >> 6;
+          var3 = MidiPcmStream.a(true, (var2 >> 12) * (var2 >> 12) + (var1 >> 12) * (var1 >> 12)) >> 6;
           if (0 > var3) {
             throw new RuntimeException();
           }
@@ -57,7 +57,7 @@ final class up {
         }
         var1Lifetime1 = -qe.field_n + qe.field_f;
         var2Lifetime1 = qe.field_l - qe.field_c;
-        var3Lifetime1 = ug.a(true, (var2Lifetime1 >> 12) * (var2Lifetime1 >> 12) + (var1Lifetime1 >> 12) * (var1Lifetime1 >> 12)) >> 6;
+        var3Lifetime1 = MidiPcmStream.a(true, (var2Lifetime1 >> 12) * (var2Lifetime1 >> 12) + (var1Lifetime1 >> 12) * (var1Lifetime1 >> 12)) >> 6;
         if (0 > var3Lifetime1) {
           throw new RuntimeException();
         }
@@ -76,8 +76,8 @@ final class up {
         qe.field_n = qe.field_n + qe.field_a;
     }
 
-    final ll a(int param0) {
-        ll var2 = this.field_a.field_n;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a.field_n;
         int var3 = 89 / ((58 - param0) / 60);
         if (var2 != this.field_a) {
           var2.b((byte) -2);
@@ -86,8 +86,8 @@ final class up {
         return null;
     }
 
-    final ll a(byte param0) {
-        ll var2 = this.field_e;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_e;
         if (var2 == this.field_a) {
           this.field_e = null;
           return null;
@@ -111,7 +111,7 @@ final class up {
         jd.field_l = true;
     }
 
-    final void a(ll param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         if (null != param0.field_l) {
           param0.b((byte) -2);
         }
@@ -140,9 +140,9 @@ final class up {
 
     final int b(byte param0) {
         int var2 = 0;
-        ll var3 = null;
+        DualLinkNode var3 = null;
         int var4 = DungeonAssault.field_K;
-        ll var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         int var2Lifetime1;
         if (param0 == 53) {
           var2 = 0;
@@ -164,7 +164,7 @@ final class up {
     }
 
     public up() {
-        this.field_a = new ll();
+        this.field_a = new DualLinkNode();
         this.field_a.field_n = this.field_a;
         this.field_a.field_l = this.field_a;
     }

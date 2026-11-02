@@ -4,7 +4,7 @@
 final class cd {
     private String field_a;
     static boolean field_b;
-    static md field_g;
+    static IntrusiveDeque field_g;
     static gd field_d;
     private boolean field_c;
     static String field_h;
@@ -74,6 +74,6 @@ final class cd {
     static {
         field_b = false;
         field_h = "Quit";
-        field_g = new md();
+        field_g = new IntrusiveDeque();
     }
 }

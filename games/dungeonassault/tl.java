@@ -6,13 +6,13 @@ import java.io.*;
 final class tl implements Runnable {
     private java.net.URL field_h;
     private int field_a;
-    static nh field_k;
+    static ResourceArchive field_k;
     private pn field_g;
     static cn field_i;
     static String[] field_e;
     static String field_c;
     private DataInputStream field_o;
-    private ec field_j;
+    private PacketBuffer field_j;
     private pn field_b;
     static String[] field_m;
     private qg field_f;
@@ -250,7 +250,7 @@ final class tl implements Runnable {
         return '_';
     }
 
-    final ec c(int param0) {
+    final PacketBuffer c(int param0) {
         if (this.field_a != param0) {
           return null;
         }
@@ -315,16 +315,16 @@ final class tl implements Runnable {
           Object var2_ref = null;
           var4 = DungeonAssault.field_K;
           try {
-            while (this.field_j.field_m.length > this.field_j.field_o) {
-              var1_int = this.field_o.read(this.field_j.field_m, this.field_j.field_o, -this.field_j.field_o + this.field_j.field_m.length);
+            while (this.field_j.payload.length > this.field_j.position) {
+              var1_int = this.field_o.read(this.field_j.payload, this.field_j.position, -this.field_j.position + this.field_j.payload.length);
               if (var1_int >= 0) {
-                this.field_j.field_o = this.field_j.field_o + var1_int;
+                this.field_j.position = this.field_j.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_j.field_m.length == this.field_j.field_o) {
-              throw tl.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.field_m.length + " " + this.field_h));
+            if (this.field_j.payload.length == this.field_j.position) {
+              throw tl.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_h));
             }
             var1 = this;
             synchronized (var1) {
@@ -399,7 +399,7 @@ final class tl implements Runnable {
               var3.write(n.a(var5, -14553));
               this.field_o = new DataInputStream(var4.getInputStream());
             }
-            this.field_j.field_o = 0;
+            this.field_j.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -446,7 +446,7 @@ final class tl implements Runnable {
         try {
           this.field_h = param1;
           this.field_f = param0;
-          this.field_j = new ec(param2);
+          this.field_j = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -458,7 +458,7 @@ final class tl implements Runnable {
         }
         if (ia.field_U != null) {
           if (!ia.field_U.a(-14354)) {
-            return ec.field_r;
+            return PacketBuffer.field_r;
           }
           return ki.field_c;
         }
@@ -468,11 +468,11 @@ final class tl implements Runnable {
         if (!fi.field_u.a(false, "commonui")) {
           return sa.field_w + " - " + fi.field_u.b("commonui", -1) + "%";
         }
-        if (!kg.field_b.a(param0 ^ 14355)) {
+        if (!GameAppletShell.field_b.a(param0 ^ 14355)) {
           return rf.field_L;
         }
-        if (!kg.field_b.a(false, "commonui")) {
-          return mp.field_c + " - " + kg.field_b.b("commonui", param0 ^ 2) + "%";
+        if (!GameAppletShell.field_b.a(false, "commonui")) {
+          return mp.field_c + " - " + GameAppletShell.field_b.b("commonui", param0 ^ 2) + "%";
         }
         if (!ib.field_b.a(param0 - 14351)) {
           return fg.field_m;

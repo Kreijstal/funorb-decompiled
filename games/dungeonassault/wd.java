@@ -109,29 +109,29 @@ final class wd {
     }
 
     final static void a(byte param0, int param1, ue param2) {
-        wj var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = ac.field_B;
-          wj var3 = var6;
+          CipherPacketBuffer var3 = var6;
           var6.d((byte) -126, param1);
-          var6.field_o = var6.field_o + 1;
-          var4 = var6.field_o;
-          var6.a(6, 1);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(6, 1);
           if (null != param2.field_l) {
-            var6.a(6, param2.field_l.length);
+            var6.writeByte(6, param2.field_l.length);
             var6.a(param2.field_l, 1, param2.field_l.length, 0);
           } else {
-            var6.a(6, 0);
+            var6.writeByte(6, 0);
           }
           var6.c((byte) -106, var4);
-          var6.field_o = var6.field_o - 4;
+          var6.position = var6.position - 4;
           if (param0 >= -68) {
             ue var5 = (ue) null;
             wd.a((byte) -67, -90, (ue) null);
           }
-          param2.field_k = var6.h(-31);
-          var6.c(var6.field_o - var4, -1);
+          param2.field_k = var6.readInt(-31);
+          var6.c(var6.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "wd.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
