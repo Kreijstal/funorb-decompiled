@@ -50,7 +50,7 @@ final class cb extends jc {
         }
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
         int stackIn_17_1 = 0;
@@ -127,7 +127,7 @@ final class cb extends jc {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_10_0 = 0;
@@ -207,7 +207,7 @@ final class cb extends jc {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         super.a(77, param1, param2, param3, param4, param5);
         if (param0 < 36) {
           return;
@@ -274,7 +274,7 @@ final class cb extends jc {
         }
     }
 
-    private cb(int param0, int param1, int param2, int param3, cj param4, sc param5, gl param6, boolean param7, boolean param8) {
+    private cb(int param0, int param1, int param2, int param3, cj param4, sc param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_N = 2147483647;
         this.field_M = 2147483647;

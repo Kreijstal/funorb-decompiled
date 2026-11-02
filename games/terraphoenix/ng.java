@@ -14,7 +14,7 @@ class ng extends fd {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
             ah.a(param1.field_n, 128, param1.field_p, param2 + param1.field_w, param1.field_u + param0);

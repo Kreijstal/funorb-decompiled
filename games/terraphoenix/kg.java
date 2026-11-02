@@ -26,7 +26,7 @@ final class kg extends h {
             } else {
               stackIn_6_1 = 3;
             }
-            ((PacketBuffer) (Object) stackIn_5_0).i(stackIn_6_1, param0 - 99);
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, param0 - 99);
             this.field_e.b((long)param0, -2108648176);
             this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -97,8 +97,8 @@ final class kg extends h {
             if (this.field_n != 0) {
               try {
                 this.field_e.position = 0;
-                this.field_e.i(4, -90);
-                this.field_e.i((int) this.field_n, 68);
+                this.field_e.writeByte(4, -90);
+                this.field_e.writeByte((int) this.field_n, 68);
                 this.field_e.e(0, 8959);
                 this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -162,7 +162,7 @@ final class kg extends h {
           }
           try {
             this.field_e.position = 0;
-            this.field_e.i(6, -108);
+            this.field_e.writeByte(6, -108);
             this.field_e.a(3, (byte) -89);
             this.field_e.h(-1564407352, 0);
             this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
@@ -257,8 +257,8 @@ final class kg extends h {
             var2 = (nh) (this.field_b.c(8192));
             while (var2 != null) {
               this.field_e.position = 0;
-              this.field_e.i(1, -115);
-              this.field_e.b(var2.field_m, -2108648176);
+              this.field_e.writeByte(1, -115);
+              this.field_e.b(var2.secondaryKey, -2108648176);
               this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_m.a(11152, var2);
               var2 = (nh) (this.field_b.a(6273));
@@ -266,8 +266,8 @@ final class kg extends h {
             var2Lifetime1 = (nh) (this.field_a.c(8192));
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
-              this.field_e.i(0, -124);
-              this.field_e.b(var2Lifetime1.field_m, -2108648176);
+              this.field_e.writeByte(0, -124);
+              this.field_e.b(var2Lifetime1.secondaryKey, -2108648176);
               this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_g.a(11152, var2Lifetime1);
               var2Lifetime1 = (nh) (this.field_a.a(6273));
@@ -309,7 +309,7 @@ final class kg extends h {
                       this.field_k.field_F = 0;
                     }
                   } else {
-                    this.field_k.c((byte) 13);
+                    this.field_k.unlinkSecondary((byte) 13);
                     this.field_k.field_A = false;
                     this.field_k = null;
                   }
@@ -352,7 +352,7 @@ final class kg extends h {
                       if (var11 != 0) {
                         var14_ref = (nh) (this.field_g.c(8192));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_m) {
+                          if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -364,7 +364,7 @@ final class kg extends h {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (nh) (this.field_m.c(8192));
                         while (var14_ref != null) {
-                          if (var14_ref.field_m == var12) {
+                          if (var14_ref.secondaryKey == var12) {
                             break;
                           }
                           var14_ref = (nh) (this.field_m.a(6273));
@@ -377,7 +377,7 @@ final class kg extends h {
                       var15 = stackIn_59_0;
                       this.field_k = var14_ref;
                       this.field_k.field_H = new PacketBuffer(this.field_k.field_G + (var15 + var9));
-                      this.field_k.field_H.i(var10, 89);
+                      this.field_k.field_H.writeByte(var10, 89);
                       this.field_k.field_H.e(var9, 8959);
                       this.field_k.field_F = 10;
                       this.field_o.position = 0;

@@ -7,7 +7,7 @@ final class rd extends ld {
     private String field_j;
     private int field_i;
     static ae field_s;
-    static jj field_k;
+    static IntrusiveDeque field_k;
     private int field_l;
     static int field_t;
     private pk field_n;
@@ -312,7 +312,7 @@ final class rd extends ld {
     final static Boolean b(byte param0) {
         Boolean var1 = ge.field_d;
         if (param0 < 14) {
-          field_k = (jj) null;
+          field_k = (IntrusiveDeque) null;
         }
         ge.field_d = null;
         return var1;
@@ -323,6 +323,6 @@ final class rd extends ld {
 
     static {
         field_o = false;
-        field_k = new jj();
+        field_k = new IntrusiveDeque();
     }
 }

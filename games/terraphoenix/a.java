@@ -18,7 +18,7 @@ final class a {
     final static void a(int param0, int param1) {
         NodeHashTableIterator.field_i = th.field_c[param0];
         si.field_hb = jc.field_C[param0];
-        qb.field_e = dk.field_h[param0];
+        qb.field_e = LevelMap.field_h[param0];
         int var2 = 48 % ((-54 - param1) / 46);
     }
 

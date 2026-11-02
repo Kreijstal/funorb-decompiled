@@ -102,7 +102,7 @@ final class km {
             stackIn_11_0 = (0 == (var5 & 1)) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 < 7) {
-              this.field_s = var18.i(-25578);
+              this.field_s = var18.readUnsignedShort(-25578);
             } else {
               this.field_s = var18.d(-10355);
             }
@@ -122,7 +122,7 @@ final class km {
               }
             } else {
               for (var10 = 0; var10 < this.field_s; var10++) {
-                dupTemp$1 = var8 + var18.i(-25578);
+                dupTemp$1 = var8 + var18.readUnsignedShort(-25578);
                 var8 = dupTemp$1;
                 this.field_b[var10] = dupTemp$1;
                 if (this.field_b[var10] > var9) {
@@ -194,7 +194,7 @@ final class km {
               }
             } else {
               for (var10Lifetime5 = 0; this.field_s > var10Lifetime5; var10Lifetime5++) {
-                this.field_d[this.field_b[var10Lifetime5]] = var18.i(-25578);
+                this.field_d[this.field_b[var10Lifetime5]] = var18.readUnsignedShort(-25578);
               }
               for (var10Lifetime5 = 0; this.field_s > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_b[var10Lifetime5];
@@ -204,7 +204,7 @@ final class km {
                 array$5 = new int[var12];
                 this.field_r[var11] = array$5;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var18.i(-25578);
+                  dupTemp$6 = var8Lifetime1 + var18.readUnsignedShort(-25578);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_r[var11];
                   dupTemp$7[var14] = dupTemp$6;

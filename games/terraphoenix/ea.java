@@ -20,8 +20,8 @@ final class ea implements cj {
     private int field_q;
     static String field_n;
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
-        gl stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -36,7 +36,7 @@ final class ea implements cj {
           if (!(param1 instanceof df)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (gl) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var11 = (df) (stackIn_3_0);
           if (var11 != null) {

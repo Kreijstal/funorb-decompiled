@@ -11,14 +11,14 @@ abstract class wc extends DualLinkNode {
 
     abstract boolean d(int param0);
 
-    final static void a(e param0, int param1, int param2, int param3) {
+    final static void a(BattleState param0, int param1, int param2, int param3) {
         se dupTemp$0 = null;
         int stackIn_61_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_70_0 = 0;
         Object stackIn_98_0 = null;
-        r stackIn_98_1 = null;
+        BattleUnit stackIn_98_1 = null;
         int stackIn_119_0 = 0;
         RuntimeException stackIn_195_0 = null;
         StringBuilder stackIn_195_1 = null;
@@ -240,12 +240,12 @@ abstract class wc extends DualLinkNode {
                 break regionExit1;
               }
               for (var9Lifetime1Lifetime1 = 0; var9Lifetime1Lifetime1 < 12; var9Lifetime1Lifetime1++) {
-                if (null != param0.field_C[var9Lifetime1Lifetime1] &&
-                  param0.field_C[var9Lifetime1Lifetime1].field_Z != null) {
-                  stackIn_119_0 = (param0.field_C[var9Lifetime1Lifetime1].field_ob) ? 0 : 1;
+                if (null != param0.units[var9Lifetime1Lifetime1] &&
+                  param0.units[var9Lifetime1Lifetime1].field_Z != null) {
+                  stackIn_119_0 = (param0.units[var9Lifetime1Lifetime1].field_ob) ? 0 : 1;
                   if (stackIn_119_0 == 1 &&
-                    param0.field_h.a((byte) -93, param0.field_C[var9Lifetime1Lifetime1], p.field_a[var4_intLifetime1].field_d)) {
-                    param0.field_C[var9Lifetime1Lifetime1].field_ob = true;
+                    param0.map.a((byte) -93, param0.units[var9Lifetime1Lifetime1], p.field_a[var4_intLifetime1].field_d)) {
+                    param0.units[var9Lifetime1Lifetime1].field_ob = true;
                   }
                 }
               }
@@ -259,13 +259,13 @@ abstract class wc extends DualLinkNode {
               }
               if (fd.field_o) {
                 if (var5Lifetime1 != 0 && (param0.field_q == null ||
-                  !param0.field_h.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
+                  !param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
                   rh.field_b[p.field_a[var4_intLifetime1].field_b].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
                   break regionExit1;
                 }
                 rh.field_b[p.field_a[var4_intLifetime1].field_b].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
                 if (param0.field_q != null &&
-                  param0.field_h.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d)) {
+                  param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d)) {
                   l.a(16 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e, 16, 16711680);
                   l.a(p.field_a[var4_intLifetime1].field_f + 16, 16 + p.field_a[var4_intLifetime1].field_e, 17, 8388608);
                 }

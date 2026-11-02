@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends lj {
+final class wl extends PcmStream {
     private int[] field_M;
     int[] field_q;
     private int[] field_C;
@@ -258,8 +258,8 @@ final class wl extends lj {
         }
     }
 
-    final synchronized lj c() {
-        return (lj) ((Object) this.field_t);
+    final synchronized PcmStream c() {
+        return (PcmStream) ((Object) this.field_t);
     }
 
     final synchronized void a(boolean param0, byte param1, tk param2) {
@@ -495,7 +495,7 @@ final class wl extends lj {
             if (var3.field_h < 0) {
               this.field_J[var3.field_v][var3.field_w] = null;
             }
-            var3.b((byte) 12);
+            var3.unlink((byte) 12);
           }
           var3 = (sh) (this.field_t.field_n.e((byte) -119));
         }
@@ -509,7 +509,7 @@ final class wl extends lj {
         sh var5;
         qd var5_ref;
         int var6;
-        gg var7;
+        PcmSample var7;
         sh var8;
         sh var9;
         int var10;
@@ -792,7 +792,7 @@ final class wl extends lj {
           if (0 <= param3.field_h && (null == param3.field_k ||
             param3.field_k.i())) {
             param3.c((byte) -120);
-            param3.b((byte) 12);
+            param3.unlink((byte) 12);
             if (param3.field_C > 0) {
               if (param3 != this.field_O[param3.field_v][param3.field_C]) {
                 return true;
@@ -881,7 +881,7 @@ final class wl extends lj {
           }
           param3.c((byte) -120);
           if (0 <= param3.field_h) {
-            param3.b((byte) 12);
+            param3.unlink((byte) 12);
             if (param3.field_C > 0 &&
               this.field_O[param3.field_v][param3.field_C] == param3) {
               this.field_O[param3.field_v][param3.field_C] = null;
@@ -917,7 +917,7 @@ final class wl extends lj {
         field_Q = null;
     }
 
-    final synchronized lj a() {
+    final synchronized PcmStream a() {
         return null;
     }
 
@@ -1275,7 +1275,7 @@ final class wl extends lj {
           if (param0.field_h < 0) {
             return true;
           }
-          param0.b((byte) 12);
+          param0.unlink((byte) 12);
           if (0 < param0.field_C &&
             param0 == this.field_O[param0.field_v][param0.field_C]) {
             this.field_O[param0.field_v][param0.field_C] = null;
@@ -1383,7 +1383,7 @@ final class wl extends lj {
           }
           var8 = (sb) (param2.field_h.a((byte) 117));
           while (var8 != null) {
-            var9 = (int)var8.field_g;
+            var9 = (int)var8.key;
             var12 = (qd) (this.field_z.a((byte) 46, (long)var9));
             if (var12 == null) {
               var13 = kf.a(var9, (byte) 122, param0);

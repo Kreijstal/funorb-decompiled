@@ -5,8 +5,8 @@ import java.io.*;
 
 abstract class vc {
     static Sprite field_e;
-    static jj field_d;
-    static jj field_g;
+    static IntrusiveDeque field_d;
+    static IntrusiveDeque field_g;
     static String field_b;
     static fh field_c;
     static ud field_f;
@@ -50,7 +50,7 @@ abstract class vc {
           if (param0 > -97) {
             field_b = (String) null;
           }
-          if (mk.field_j.position >= param1) {
+          if (LevelEditor.field_j.position >= param1) {
             return true;
           }
           if (null == ig.field_e) {
@@ -59,30 +59,30 @@ abstract class vc {
           try {
             var2_int = ig.field_e.a(0);
             if (var2_int > 0) {
-              if (param1 - mk.field_j.position < var2_int) {
-                var2_int = param1 - mk.field_j.position;
+              if (param1 - LevelEditor.field_j.position < var2_int) {
+                var2_int = param1 - LevelEditor.field_j.position;
               }
-              ig.field_e.a(mk.field_j.payload, var2_int, mk.field_j.position, (byte) 114);
+              ig.field_e.a(LevelEditor.field_j.payload, var2_int, LevelEditor.field_j.position, (byte) 114);
               dm.field_c = ll.a(1000);
-              mk.field_j.position = mk.field_j.position + var2_int;
-              if (param1 > mk.field_j.position) {
+              LevelEditor.field_j.position = LevelEditor.field_j.position + var2_int;
+              if (param1 > LevelEditor.field_j.position) {
                 return false;
               }
-              mk.field_j.position = 0;
+              LevelEditor.field_j.position = 0;
               return true;
             }
             if (0 > var2_int) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
             } else {
               if (30000L >= IterableNodeHashTable.b(1)) {
                 return false;
               }
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            gb.g(-17464);
+            WidgetContainer.g(-17464);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -120,8 +120,8 @@ abstract class vc {
     }
 
     static {
-        field_d = new jj();
+        field_d = new IntrusiveDeque();
         field_b = "L-TAW";
-        field_g = new jj();
+        field_g = new IntrusiveDeque();
     }
 }

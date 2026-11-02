@@ -107,7 +107,7 @@ final class pj {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = b.field_f;
+            stackIn_3_0 = RandomAccessCacheFile.field_f;
             return stackIn_3_0;
           }
           if (var2_int > 63) {

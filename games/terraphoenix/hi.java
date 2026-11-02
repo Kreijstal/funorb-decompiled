@@ -125,7 +125,7 @@ final class hi extends ei implements n {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (u.field_d == param1) {
@@ -145,7 +145,7 @@ final class hi extends ei implements n {
               }
             }
           }
-          var4 = new gl((String) (var3), (sc) null);
+          var4 = new UiWidget((String) (var3), (sc) null);
           var4.field_n = 80;
           var4.field_u = 50;
           var4.field_p = this.field_p;

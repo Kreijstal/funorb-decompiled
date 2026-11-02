@@ -106,16 +106,16 @@ final class ha extends di {
 
     final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (null != param2.field_a) {
-            param2.b((byte) 12);
+          if (null != param2.next) {
+            param2.unlink((byte) 12);
           }
           if (param0 <= 63) {
             field_p = 107;
           }
-          param2.field_a = param1.field_a;
-          param2.field_d = param1;
-          param2.field_a.field_d = param2;
-          param2.field_d.field_a = param2;
+          param2.next = param1.next;
+          param2.previous = param1;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "ha.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

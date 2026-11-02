@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends gb implements n {
+final class am extends WidgetContainer implements n {
     private eb[] field_L;
     private rg field_G;
     static String field_H;
-    static jj field_F;
+    static IntrusiveDeque field_F;
     static int field_J;
     static nb field_K;
     private String[] field_I;
@@ -28,7 +28,7 @@ final class am extends gb implements n {
 
     final static void a(fa param0, boolean param1, fa param2, fa param3, byte param4) {
         try {
-          vc.field_a = gl.b("", 20);
+          vc.field_a = UiWidget.b("", 20);
           vc.field_a.a(false, param4 + 87);
           if (param4 != -22) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
@@ -164,7 +164,7 @@ final class am extends gb implements n {
               this.field_I[var4_int] = tj.a((CharSequence) ((Object) param1[var4_int]), sl.a(param0, -11664)).replace(' ', ' ');
             }
             if (param0 != -11678) {
-              field_F = (jj) null;
+              field_F = (IntrusiveDeque) null;
             }
             var4 = new qh(qk.field_e, 0, 1);
             this.field_L = new eb[var3_int + 1];
@@ -197,7 +197,7 @@ final class am extends gb implements n {
         }
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -269,7 +269,7 @@ final class am extends gb implements n {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!nd.a((char) var3, 127) &&
-              !gb.a((byte) 41, (char) var3)) {
+              !WidgetContainer.a((byte) 41, (char) var3)) {
               return true;
             }
           }

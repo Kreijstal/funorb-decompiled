@@ -71,7 +71,7 @@ final class jg extends al {
         field_ib = null;
     }
 
-    final void a(gl param0, int param1) {
+    final void a(UiWidget param0, int param1) {
         try {
           super.a(param0, -31);
           if (param1 > -21) {
@@ -82,7 +82,7 @@ final class jg extends al {
         }
     }
 
-    jg(d param0, gl param1) {
+    jg(d param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gi {
-    private dk field_u;
+    private LevelMap field_u;
     static bg[] field_j;
     int field_o;
     double field_t;
     static qf field_r;
     double field_b;
-    e field_g;
+    BattleState field_g;
     int field_m;
     double field_k;
     double field_p;
@@ -206,7 +206,7 @@ final class gi {
 
     private final gi a(int param0, int param1, int param2, byte param3) {
         int var5;
-        dl var6;
+        MapTile var6;
         int var7;
         var7 = Terraphoenix.field_V;
         this.field_n = true;
@@ -242,7 +242,7 @@ final class gi {
                   if (var6.field_h != null) {
                     var6.field_h.field_E = var6.field_h.field_E - 1;
                     var6.field_h.field_P = 0;
-                    var6.field_h.field_c = var6.field_c;
+                    var6.field_h.tile = var6.field_c;
                     if (null == var6.field_c.field_h) {
                       var6.field_c.field_h = var6.field_h;
                       var6.field_h = null;
@@ -254,7 +254,7 @@ final class gi {
                         var6.field_c.field_c.field_h.field_d = 5;
                         var6.field_c.field_c.field_h.field_S = true;
                         var6.field_c.field_c.field_h.field_P = 0;
-                        var6.field_c.field_c.field_h.field_c = var6.field_c.field_c;
+                        var6.field_c.field_c.field_h.tile = var6.field_c.field_c;
                       }
                     }
                   }
@@ -278,7 +278,7 @@ final class gi {
         gi discarded$5 = null;
         gi discarded$6 = null;
         gi discarded$0 = null;
-        dl stackIn_45_0 = null;
+        MapTile stackIn_45_0 = null;
         int stackIn_46_1 = 0;
         int var3;
         int var4;
@@ -287,9 +287,9 @@ final class gi {
         int var8;
         int var9;
         int var10;
-        dl var11;
+        MapTile var11;
         int var12;
-        dl var13;
+        MapTile var13;
         int var5Lifetime1;
         int var6Lifetime1;
         var12 = Terraphoenix.field_V;
@@ -389,20 +389,20 @@ final class gi {
           }
         }
         if (param0 != -6) {
-          var13 = (dl) null;
-          discarded$0 = this.a((dl) null, false, 122);
+          var13 = (MapTile) null;
+          discarded$0 = this.a((MapTile) null, false, 122);
         }
     }
 
     final gi a(byte param0) {
         int var2;
         int var3;
-        dl var4;
+        MapTile var4;
         gi var5;
         int var6;
         int var7;
         int var8;
-        dl var9;
+        MapTile var9;
         gi var5Lifetime1;
         gi var5Lifetime2;
         var8 = Terraphoenix.field_V;
@@ -790,8 +790,8 @@ final class gi {
 
     private final gi a(int param0, int param1, int param2, int param3) {
         int var6;
-        dl var7;
-        dl var8;
+        MapTile var7;
+        MapTile var8;
         var6 = Terraphoenix.field_V;
         this.field_n = true;
         var7 = this.field_u.a(param1 ^ -3426, param0, param3, param2);
@@ -893,21 +893,21 @@ final class gi {
         int var26Lifetime2;
         var27 = Terraphoenix.field_V;
         try {
-          var28 = mk.field_j;
+          var28 = LevelEditor.field_j;
           var3 = 83 % ((56 - param0) / 50);
           var2 = var28.a(-16384);
           if (var2 == 0) {
-            var4 = var28.i(-25578);
-            var5 = (nd) (r.field_Q.d(9272));
+            var4 = var28.readUnsignedShort(-25578);
+            var5 = (nd) (BattleUnit.field_Q.d(9272));
             while (var5 != null) {
               if (var5.field_s != var4) {
-                var5 = (nd) (r.field_Q.e((byte) -119));
+                var5 = (nd) (BattleUnit.field_Q.e((byte) -119));
                 continue;
               }
               break;
             }
             if (var5 == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var6 = var28.a(-16384);
@@ -918,10 +918,10 @@ final class gi {
               od.field_h[0].field_f = kj.field_f;
               od.field_h[0].field_a = false;
               for (var9_int = 1; var6 > var9_int; var9_int++) {
-                od.field_h[var9_int].field_f = var28.e(-1);
+                od.field_h[var9_int].field_f = var28.readString(-1);
                 od.field_h[var9_int].field_a = false;
                 if (1 == var28.a(-16384)) {
-                  od.field_h[var9_int].field_d = var28.e(-1);
+                  od.field_h[var9_int].field_d = var28.readString(-1);
                 } else {
                   od.field_h[var9_int].field_d = null;
                 }
@@ -991,11 +991,11 @@ final class gi {
               }
             }
             var5.field_m = true;
-            var5.b((byte) 12);
+            var5.unlink((byte) 12);
             return;
           }
           if (var2 == 1) {
-            var4Lifetime1 = var28.i(-25578);
+            var4Lifetime1 = var28.readUnsignedShort(-25578);
             var5_long = var28.h((byte) 78);
             var7_ref_fb = (fb) (hd.field_p.d(9272));
             while (var7_ref_fb != null) {
@@ -1006,15 +1006,15 @@ final class gi {
               break;
             }
             if (var7_ref_fb == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var7_ref_fb.field_p = var5_long;
-            var7_ref_fb.b((byte) 12);
+            var7_ref_fb.unlink((byte) 12);
             return;
           }
-          bd.a((Throwable) null, "HS1: " + r.i(-15465), -60);
-          gb.g(-17464);
+          bd.a((Throwable) null, "HS1: " + BattleUnit.i(-15465), -60);
+          WidgetContainer.g(-17464);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1023,7 +1023,7 @@ final class gi {
         }
     }
 
-    private final gi a(dl param0, boolean param1, int param2) {
+    private final gi a(MapTile param0, boolean param1, int param2) {
         gi stackIn_2_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -1048,7 +1048,7 @@ final class gi {
               decompiledFrameRemainder0 = (param0.field_g != 32);
             }
             if ((decompiledFrameRemainder0) && ((28 != param0.field_g ||
-              13 != param0.field_s.field_i.field_G.field_Bb) && 0 <= param0.field_g)) {
+              13 != param0.map.field_i.field_G.field_Bb) && 0 <= param0.field_g)) {
               if (nh.field_E[param0.field_g] == 1) {
                 param0.a(1, true, 111);
               }
@@ -1094,7 +1094,7 @@ final class gi {
         }
     }
 
-    private final gi a(byte param0, boolean param1, dl param2) {
+    private final gi a(byte param0, boolean param1, MapTile param2) {
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
@@ -1117,7 +1117,7 @@ final class gi {
               decompiledFrameRemainder0 = (32 != param2.field_k);
             }
             if ((decompiledFrameRemainder0) && ((28 != param2.field_k ||
-              param2.field_s.field_i.field_G.field_Bb != 13) && param2.field_k >= 0)) {
+              param2.map.field_i.field_G.field_Bb != 13) && param2.field_k >= 0)) {
               if (1 == nh.field_E[param2.field_k]) {
                 param2.a(2, true, -95);
               }
@@ -1187,7 +1187,7 @@ final class gi {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          e.field_p = ig.a(param0, 0, "frame_top", "commonui");
+          BattleState.field_p = ig.a(param0, 0, "frame_top", "commonui");
           qb.field_f = ig.a(param0, 0, "frame_bottom", "commonui");
           hd.field_o = il.a("jagex_logo_grey", "commonui", param0, param3 + 2039);
           i.field_c = ig.a(param0, 0, "button", "commonui");
@@ -1245,13 +1245,13 @@ final class gi {
         }
     }
 
-    gi(e param0) {
+    gi(BattleState param0) {
         try {
           this.field_g = param0;
           this.field_n = false;
           this.field_f = 0;
           this.field_e = null;
-          this.field_u = this.field_g.field_h;
+          this.field_u = this.field_g.map;
           this.field_d = 0;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');

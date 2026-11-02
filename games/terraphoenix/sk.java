@@ -13,9 +13,9 @@ final class sk implements cj {
     static String field_d;
     private pk field_g;
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
-        gl stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -29,7 +29,7 @@ final class sk implements cj {
         var11 = Terraphoenix.field_V;
         try {
           if (param1 instanceof wi) {
-            stackIn_4_0 = (gl) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }

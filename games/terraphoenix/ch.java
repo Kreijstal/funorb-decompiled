@@ -199,7 +199,7 @@ final class ch {
         if (param0 > -35) {
           return (rh[]) null;
         }
-        return new rh[]{vj.field_K, rf.field_z, lf.field_f, rf.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, e.field_l, le.field_n, wg.field_b};
+        return new rh[]{vj.field_K, rf.field_z, lf.field_f, rf.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
     }
 
     final void a(int param0, Terraphoenix param1) {
@@ -549,7 +549,7 @@ final class ch {
                 }
               }
               if (decompiledFrameRemainder0) {
-                e.field_g.c(this.field_i + 57, var3_int, 384);
+                BattleState.field_g.c(this.field_i + 57, var3_int, 384);
                 this.a(var6_int, 16777215, param0 + 3569, param1, true, var3_int);
                 var3_int += 92;
               }
@@ -558,7 +558,7 @@ final class ch {
           for (var6_int = sj.field_a.length - 1; var6_int >= 0; var6_int--) {
             if (sj.field_a[var6_int].field_l &&
               2 == param1.field_hb) {
-              e.field_g.c(57 + this.field_i, var3_int, 384);
+              BattleState.field_g.c(57 + this.field_i, var3_int, 384);
               this.a(true, (byte) -128, var6_int, var3_int, param1, 0);
               var3_int += 92;
             }
@@ -620,7 +620,7 @@ final class ch {
             if (ha.field_q >= 1) {
               var6 = jc.field_E;
             } else {
-              var6 = r.field_kb;
+              var6 = BattleUnit.field_kb;
             }
             var7 = og.field_f.c(var6, 263);
             l.d(-this.field_i + 360, -(14 * var7) + 307 + 8, 268, 14 * var7 + 14 - 10, 0, 96);

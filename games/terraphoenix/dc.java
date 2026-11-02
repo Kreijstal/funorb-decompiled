@@ -98,7 +98,7 @@ final class dc {
             return 57;
           }
           if (jg.field_gb == 2 &&
-            b.a(true, this.field_d)) {
+            RandomAccessCacheFile.a(true, this.field_d)) {
             return 1;
           }
           return 0;

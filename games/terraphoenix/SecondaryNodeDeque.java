@@ -33,11 +33,11 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 != 0) {
           this.c(117);
         }
-        DualLinkNode var2 = this.field_a.field_o;
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (this.field_a == var2) {
           return null;
         }
-        var2.c((byte) 13);
+        var2.unlinkSecondary((byte) 13);
         return var2;
     }
 
@@ -52,7 +52,7 @@ final class SecondaryNodeDeque implements Iterable {
           var1 = th.field_g;
           synchronized (var1) {
             eb.field_F = eb.field_F + 1;
-            r.field_V = d.field_M;
+            BattleUnit.field_V = d.field_M;
             if (0 > dj.field_e) {
               for (var2 = 0; var2 < 112; var2++) {
                 bh.field_e[var2] = false;
@@ -84,14 +84,14 @@ final class SecondaryNodeDeque implements Iterable {
 
     final void a(DualLinkNode param0, byte param1) {
         try {
-          if (param0.field_i != null) {
-            param0.c((byte) 13);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary((byte) 13);
           }
-          param0.field_i = this.field_a.field_i;
-          param0.field_o = this.field_a;
-          param0.field_i.field_o = param0;
+          param0.secondaryPrevious = this.field_a.secondaryPrevious;
+          param0.secondaryNext = this.field_a;
+          param0.secondaryPrevious.secondaryNext = param0;
           int var3_int = -73 / ((param1 + 57) / 49);
-          param0.field_o.field_i = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "tc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

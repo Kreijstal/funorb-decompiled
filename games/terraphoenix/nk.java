@@ -7,7 +7,7 @@ class nk {
     static boolean field_r;
     int[] field_t;
     private boolean field_p;
-    private lj field_i;
+    private PcmStream field_i;
     private int field_l;
     private static nf field_g;
     static int field_u;
@@ -16,20 +16,20 @@ class nk {
     private int field_n;
     private int field_k;
     private int field_s;
-    private lj[] field_e;
+    private PcmStream[] field_e;
     private long field_f;
-    private lj[] field_c;
+    private PcmStream[] field_c;
     private int field_q;
     private int field_a;
     private int field_d;
     private int field_b;
 
-    private final static void a(lj param0) {
+    private final static void a(PcmStream param0) {
         param0.field_j = false;
         if (param0.field_i != null) {
           param0.field_i.field_h = 0;
         }
-        lj var1 = param0.c();
+        PcmStream var1 = param0.c();
         while (var1 != null) {
           nk.a(var1);
           var1 = param0.a();
@@ -46,9 +46,9 @@ class nk {
         field_m = param2;
     }
 
-    private final void a(lj param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        lj var4 = this.field_c[var3];
+        PcmStream var4 = this.field_c[var3];
         if (var4 == null) {
           this.field_e[var3] = param0;
         } else {
@@ -58,7 +58,7 @@ class nk {
         param0.field_k = param1;
     }
 
-    final synchronized void b(lj param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_i = param0;
     }
 
@@ -78,13 +78,13 @@ class nk {
 
     final static nk a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          ul var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          ul var5 = null;
-          ul stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          ul stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_u == 0) {
             throw new IllegalStateException();
@@ -95,7 +95,7 @@ class nk {
               param3 = 256;
             }
             try {
-              var5 = new ul();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
@@ -148,20 +148,20 @@ class nk {
         int var7_int;
         Object var7;
         int var8_int;
-        lj[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        lj var11;
-        id var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        lj var14;
+        PcmStream var14;
         int var15_int;
-        lj var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        lj var14Lifetime1;
-        lj var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_r) {
           var3 = var3 << 1;
@@ -222,12 +222,12 @@ class nk {
                     var15 = var11.field_h;
                     var11.field_h = null;
                     if (var10 != null) {
-                      ((lj) (var10)).field_h = var15;
+                      ((PcmStream) (var10)).field_h = var15;
                     } else {
                       this.field_e[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_c[var7_int] = (lj) (var10);
+                      this.field_c[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -248,8 +248,8 @@ class nk {
             this.field_c[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((lj) (var7)).field_h;
-              ((lj) (var7)).field_h = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_h;
+              ((PcmStream) (var7)).field_h = null;
               var7 = var10Lifetime1;
             }
           }
@@ -406,11 +406,11 @@ class nk {
         this.field_l = 32;
         this.field_h = ll.a(1000);
         this.field_n = 0;
-        this.field_e = new lj[8];
+        this.field_e = new PcmStream[8];
         this.field_k = 0;
         this.field_f = 0L;
         this.field_j = 0L;
-        this.field_c = new lj[8];
+        this.field_c = new PcmStream[8];
         this.field_a = 0;
         this.field_o = true;
         this.field_d = 0;

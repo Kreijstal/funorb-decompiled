@@ -50,11 +50,11 @@ final class rj {
             var4_ref_ra = (ra) (am.field_F.d(9272));
             if (var4_ref_ra != null &&
               var4_ref_ra.field_o < var2_long) {
-              var4_ref_ra.b((byte) 12);
+              var4_ref_ra.unlink((byte) 12);
               qh.field_d = var4_ref_ra.field_k.length;
-              mk.field_j.position = 0;
+              LevelEditor.field_j.position = 0;
               for (var5_int = 0; var5_int < qh.field_d; var5_int++) {
-                mk.field_j.payload[var5_int] = var4_ref_ra.field_k[var5_int];
+                LevelEditor.field_j.payload[var5_int] = var4_ref_ra.field_k[var5_int];
               }
               wc.field_r = wf.field_n;
               wf.field_n = uc.field_r;
@@ -68,12 +68,12 @@ final class rj {
           }
           while (true) {
             if (fg.field_d < 0) {
-              mk.field_j.position = 0;
+              LevelEditor.field_j.position = 0;
               if (!vc.a(-125, 1)) {
                 return false;
               }
-              fg.field_d = mk.field_j.a(false);
-              mk.field_j.position = 0;
+              fg.field_d = LevelEditor.field_j.a(false);
+              LevelEditor.field_j.position = 0;
               qh.field_d = param1[fg.field_d];
             }
             if (!cm.b((byte) -43)) {
@@ -96,7 +96,7 @@ final class rj {
             }
             var5 = new ra(var2_long + (long)var4, fg.field_d, new byte[qh.field_d]);
             for (var6 = 0; qh.field_d > var6; var6++) {
-              var5.field_k[var6] = mk.field_j.payload[var6];
+              var5.field_k[var6] = LevelEditor.field_j.payload[var6];
             }
             am.field_F.a(var5, param0 ^ 1491066943);
             fg.field_d = -1;
@@ -133,7 +133,7 @@ final class rj {
         int[] var12 = null;
         var8 = Terraphoenix.field_V;
         try {
-          var10 = mk.field_j;
+          var10 = LevelEditor.field_j;
           var2 = var10.a(-16384);
           var3 = var10.a(-16384);
           if (param0 < 72) {
@@ -143,7 +143,7 @@ final class rj {
           if (0 == var2) {
             var4 = (me) (ga.field_r.d(9272));
             if (var4 == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var5 = qh.field_d - var10.position;
@@ -156,7 +156,7 @@ final class rj {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.a(-16384) << (dg.a(3, var7) << 8));
             }
-            var4.b((byte) 12);
+            var4.unlink((byte) 12);
             return;
           }
           if (var2 == 1) {
@@ -171,14 +171,14 @@ final class rj {
               break;
             }
             if (var5_ref_vi == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
-            var5_ref_vi.b((byte) 12);
+            var5_ref_vi.unlink((byte) 12);
             return;
           }
-          bd.a((Throwable) null, "LR1: " + r.i(-15465), 67);
-          gb.g(-17464);
+          bd.a((Throwable) null, "LR1: " + BattleUnit.i(-15465), 67);
+          WidgetContainer.g(-17464);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -192,12 +192,12 @@ final class rj {
         try {
           var3 = di.field_l;
           var3.k(-17410, param0);
-          var3.i(2, -106);
-          var3.i(0, -119);
+          var3.writeByte(2, -106);
+          var3.writeByte(0, -119);
           if (param1 >= -117) {
             field_f = (String) null;
           }
-          var3.i(param2.field_j, 12);
+          var3.writeByte(param2.field_j, 12);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "rj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

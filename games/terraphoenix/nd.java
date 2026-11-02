@@ -175,7 +175,7 @@ final class nd extends IntrusiveNode {
                   var25Lifetime1Lifetime1 = param0.field_i[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_w[var23Lifetime2];
                   ec.field_a[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16);
-                  dl.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
+                  MapTile.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
                   lm.field_a[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + (var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_c[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
@@ -314,7 +314,7 @@ final class nd extends IntrusiveNode {
           var1 = lk.c(-62);
           mb.field_s = new uh(var1, (String) null, true, false, false);
           var2 = -47 % ((-58 - param0) / 40);
-          jl.field_I.a((gl) (bj.field_f), (byte) -1);
+          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           bj.field_f.a(mb.field_s, -67);
           bj.field_f.j(-2065096856);
           return;

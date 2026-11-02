@@ -14,7 +14,7 @@ final class wi extends eb {
         return this.field_L;
     }
 
-    final static void a(byte param0, e param1, int param2, int param3) {
+    final static void a(byte param0, BattleState param1, int param2, int param3) {
         try {
           int var4_int = 26 % ((param0 + 37) / 38);
           if (param1 != null) {
@@ -41,7 +41,7 @@ final class wi extends eb {
         return this.field_N.c(-16952);
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;

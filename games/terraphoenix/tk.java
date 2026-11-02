@@ -222,7 +222,7 @@ final class tk extends IntrusiveNode {
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
         var2 = param0.a(-16384);
-        var3 = param0.i(-25578);
+        var3 = param0.readUnsignedShort(-25578);
         var4 = 14 + var2 * 10;
         param0.position = 0;
         var5 = 0;
@@ -462,35 +462,35 @@ final class tk extends IntrusiveNode {
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {
-                var51.i(255, -127);
+                var51.writeByte(255, -127);
               }
-              var51.i(47, -106);
-              var51.i(0, 51);
+              var51.writeByte(47, -106);
+              var51.writeByte(0, 51);
               var51.b(-1, var51.position - var61);
               var60++;
               break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
-                var51.i(255, 40);
+                var51.writeByte(255, 40);
               }
-              var51.i(81, -99);
-              var51.i(3, -94);
+              var51.writeByte(81, -99);
+              var51.writeByte(3, -94);
               incrementValue$25 = var50;
               var50++;
-              var51.i((int) param0.payload[incrementValue$25], -91);
+              var51.writeByte((int) param0.payload[incrementValue$25], -91);
               incrementValue$26 = var50;
               var50++;
-              var51.i((int) param0.payload[incrementValue$26], -103);
+              var51.writeByte((int) param0.payload[incrementValue$26], -103);
               incrementValue$27 = var50;
               var50++;
-              var51.i((int) param0.payload[incrementValue$27], 122);
+              var51.writeByte((int) param0.payload[incrementValue$27], 122);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
             if (var62 == 0) {
               if (var65 != 0) {
-                var51.i(144 + var52, -115);
+                var51.writeByte(144 + var52, -115);
               }
               incrementValue$23 = var37;
               var37++;
@@ -498,13 +498,13 @@ final class tk extends IntrusiveNode {
               incrementValue$24 = var38;
               var38++;
               var54 = var54 + param0.payload[incrementValue$24];
-              var51.i(var53 & 127, -90);
-              var51.i(var54 & 127, -127);
+              var51.writeByte(var53 & 127, -90);
+              var51.writeByte(var54 & 127, -127);
               continue;
             }
             if (var62 == 1) {
               if (var65 != 0) {
-                var51.i(128 + var52, -106);
+                var51.writeByte(128 + var52, -106);
               }
               incrementValue$21 = var37;
               var37++;
@@ -512,14 +512,14 @@ final class tk extends IntrusiveNode {
               incrementValue$22 = var40;
               var40++;
               var55 = var55 + param0.payload[incrementValue$22];
-              var51.i(var53 & 127, 42);
-              var51.i(var55 & 127, -90);
+              var51.writeByte(var53 & 127, 42);
+              var51.writeByte(var55 & 127, -90);
               continue;
             }
             if (var62 != 2) {
               if (var62 == 3) {
                 if (var65 != 0) {
-                  var51.i(224 + var52, 78);
+                  var51.writeByte(224 + var52, 78);
                 }
                 incrementValue$5 = var45;
                 var45++;
@@ -527,18 +527,18 @@ final class tk extends IntrusiveNode {
                 incrementValue$6 = var33;
                 var33++;
                 var56 = var56 + (param0.payload[incrementValue$6] << 7);
-                var51.i(var56 & 127, 127);
-                var51.i(var56 >> 7 & 127, -19);
+                var51.writeByte(var56 & 127, 127);
+                var51.writeByte(var56 >> 7 & 127, -19);
                 continue;
               }
               if (var62 == 4) {
                 if (var65 != 0) {
-                  var51.i(208 + var52, 109);
+                  var51.writeByte(208 + var52, 109);
                 }
                 incrementValue$4 = var32;
                 var32++;
                 var57 = var57 + param0.payload[incrementValue$4];
-                var51.i(var57 & 127, 72);
+                var51.writeByte(var57 & 127, 72);
                 continue;
               }
               if (var62 != 5) {
@@ -546,15 +546,15 @@ final class tk extends IntrusiveNode {
                   throw new RuntimeException();
                 }
                 if (var65 != 0) {
-                  var51.i(192 + var52, 114);
+                  var51.writeByte(192 + var52, 114);
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.i((int) param0.payload[incrementValue$1], -114);
+                var51.writeByte((int) param0.payload[incrementValue$1], -114);
                 continue;
               }
               if (var65 != 0) {
-                var51.i(160 + var52, -111);
+                var51.writeByte(160 + var52, -111);
               }
               incrementValue$2 = var37;
               var37++;
@@ -562,17 +562,17 @@ final class tk extends IntrusiveNode {
               incrementValue$3 = var31;
               var31++;
               var58 = var58 + param0.payload[incrementValue$3];
-              var51.i(var53 & 127, -126);
-              var51.i(var58 & 127, 91);
+              var51.writeByte(var53 & 127, -126);
+              var51.writeByte(var58 & 127, 91);
               continue;
             }
             if (var65 != 0) {
-              var51.i(176 + var52, -119);
+              var51.writeByte(176 + var52, -119);
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
             var28Lifetime1 = var28Lifetime1 + param0.payload[incrementValue$7] & 127;
-            var51.i(var28Lifetime1, -108);
+            var51.writeByte(var28Lifetime1, -108);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
@@ -635,7 +635,7 @@ final class tk extends IntrusiveNode {
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;
-            var51.i(var66 & 127, -116);
+            var51.writeByte(var66 & 127, -116);
           }
         }
     }

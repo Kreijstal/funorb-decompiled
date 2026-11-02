@@ -9,7 +9,7 @@ final class dd extends eb {
     private rc field_K;
     static String field_N;
 
-    final boolean a(byte param0, gl param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -70,7 +70,7 @@ final class dd extends eb {
         RuntimeException var2_ref = null;
         var5 = Terraphoenix.field_V;
         try {
-          if (gb.field_z == null) {
+          if (WidgetContainer.field_z == null) {
             return null;
           }
           if (param1 == null) {
@@ -86,7 +86,7 @@ final class dd extends eb {
             stackIn_10_0 = null;
             return (q) (stackIn_10_0);
           }
-          var3 = (q) (gb.field_z.a(71, (long)var2.hashCode()));
+          var3 = (q) (WidgetContainer.field_z.a(71, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Lb);
             var4 = hm.a((byte) 124, var7);
@@ -94,7 +94,7 @@ final class dd extends eb {
               stackIn_17_0 = var3;
               return stackIn_17_0;
             }
-            var3 = (q) (gb.field_z.c((byte) -66));
+            var3 = (q) (WidgetContainer.field_z.c((byte) -66));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class dd extends eb {
         }
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         this.field_P = this.field_P + 1;
         if (param3 < 25) {
           return;

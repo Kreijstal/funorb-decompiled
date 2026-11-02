@@ -88,9 +88,9 @@ final class le extends di {
                 !(param1 + param0 <= pf.field_b.length)) {
                 pf.field_b = new int[2 * (param1 + param0)];
               }
-              if (dl.field_y == null ||
-                !(dl.field_y.length >= param0)) {
-                dl.field_y = new boolean[param0 * 2];
+              if (MapTile.field_y == null ||
+                !(MapTile.field_y.length >= param0)) {
+                MapTile.field_y = new boolean[param0 * 2];
               }
             } else {
               if (al.field_bb.length < param0) {
@@ -99,20 +99,20 @@ final class le extends di {
                   !(param1 + param0 <= pf.field_b.length)) {
                   pf.field_b = new int[2 * (param1 + param0)];
                 }
-                if (dl.field_y == null ||
-                  !(dl.field_y.length >= param0)) {
-                  dl.field_y = new boolean[param0 * 2];
+                if (MapTile.field_y == null ||
+                  !(MapTile.field_y.length >= param0)) {
+                  MapTile.field_y = new boolean[param0 * 2];
                 }
               } else {
                 if (null == pf.field_b ||
                   !(param1 + param0 <= pf.field_b.length)) {
                   pf.field_b = new int[2 * (param1 + param0)];
                 }
-                if (dl.field_y == null) {
-                  dl.field_y = new boolean[param0 * 2];
+                if (MapTile.field_y == null) {
+                  MapTile.field_y = new boolean[param0 * 2];
                 } else {
-                  if (dl.field_y.length < param0) {
-                    dl.field_y = new boolean[param0 * 2];
+                  if (MapTile.field_y.length < param0) {
+                    MapTile.field_y = new boolean[param0 * 2];
                   }
                 }
               }
@@ -158,11 +158,11 @@ final class le extends di {
                 }
               }
             }
-            if (dl.field_y == null) {
-              dl.field_y = new boolean[param0 * 2];
+            if (MapTile.field_y == null) {
+              MapTile.field_y = new boolean[param0 * 2];
             } else {
-              if (dl.field_y.length < param0) {
-                dl.field_y = new boolean[param0 * 2];
+              if (MapTile.field_y.length < param0) {
+                MapTile.field_y = new boolean[param0 * 2];
               }
             }
           }
@@ -192,9 +192,9 @@ final class le extends di {
             !(param1 + param0 <= pf.field_b.length)) {
             pf.field_b = new int[2 * (param1 + param0)];
           }
-          if (dl.field_y == null ||
-            !(dl.field_y.length >= param0)) {
-            dl.field_y = new boolean[param0 * 2];
+          if (MapTile.field_y == null ||
+            !(MapTile.field_y.length >= param0)) {
+            MapTile.field_y = new boolean[param0 * 2];
           }
           bd.field_a = 2147483647;
           hm.field_L = 2147483647;
@@ -214,9 +214,9 @@ final class le extends di {
             !(param1 + param0 <= pf.field_b.length)) {
             pf.field_b = new int[2 * (param1 + param0)];
           }
-          if (dl.field_y == null ||
-            !(dl.field_y.length >= param0)) {
-            dl.field_y = new boolean[param0 * 2];
+          if (MapTile.field_y == null ||
+            !(MapTile.field_y.length >= param0)) {
+            MapTile.field_y = new boolean[param0 * 2];
           }
         } else {
           if (param0 > dd.field_L.length) {
@@ -230,9 +230,9 @@ final class le extends di {
             !(param1 + param0 <= pf.field_b.length)) {
             pf.field_b = new int[2 * (param1 + param0)];
           }
-          if (dl.field_y == null ||
-            !(dl.field_y.length >= param0)) {
-            dl.field_y = new boolean[param0 * 2];
+          if (MapTile.field_y == null ||
+            !(MapTile.field_y.length >= param0)) {
+            MapTile.field_y = new boolean[param0 * 2];
           }
         }
         bd.field_a = 2147483647;
@@ -303,10 +303,10 @@ final class le extends di {
           if (od.b(255)) {
             di.field_l.k(-17410, 1);
             bc.a(0, 0);
-            gb.g(-17464);
+            WidgetContainer.g(-17464);
             return;
           }
-          gb.g(-17464);
+          WidgetContainer.g(-17464);
           return;
         }
         ga.b((byte) 111);
@@ -317,12 +317,12 @@ final class le extends di {
         rf.d((byte) 93);
         lf.a(param0);
         if (!od.b(255)) {
-          gb.g(-17464);
+          WidgetContainer.g(-17464);
           return;
         }
         di.field_l.k(-17410, 1);
         bc.a(0, 0);
-        gb.g(-17464);
+        WidgetContainer.g(-17464);
     }
 
     final static boolean a(boolean param0, byte param1) {
@@ -351,7 +351,7 @@ final class le extends di {
             try {
               ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.field_e), da.field_g);
               di.field_l.position = 0;
-              var4 = mk.field_j;
+              var4 = LevelEditor.field_j;
               var5 = var4;
               mh.field_a = va.field_e;
               stackIn_12_0 = (!param0) ? -1 : -2;

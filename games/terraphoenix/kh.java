@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kh extends gb {
+abstract class kh extends WidgetContainer {
     static String field_O;
     static String field_L;
     private int field_G;
@@ -365,12 +365,12 @@ abstract class kh extends gb {
         return '_';
     }
 
-    final gl e(byte param0) {
-        gl var2 = super.e(param0);
+    final UiWidget e(byte param0) {
+        UiWidget var2 = super.e(param0);
         if (var2 != null) {
           return var2;
         }
-        return (gl) (this);
+        return (UiWidget) (this);
     }
 
     boolean f(byte param0) {

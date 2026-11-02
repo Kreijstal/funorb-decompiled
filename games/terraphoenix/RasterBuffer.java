@@ -30,7 +30,7 @@ abstract class RasterBuffer {
         int[] var16 = null;
         var8 = Terraphoenix.field_V;
         try {
-          var12 = mk.field_j;
+          var12 = LevelEditor.field_j;
           if (param0 != 67) {
             field_e = (String) null;
           }
@@ -49,36 +49,36 @@ abstract class RasterBuffer {
             }
             var15 = (ok) (vc.field_g.d(9272));
             if (var15 == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var15.field_l = var3;
             var15.field_m = var16[0];
             var15.field_k = true;
-            var15.b((byte) 12);
+            var15.unlink((byte) 12);
             return;
           }
           if (var2 == 1) {
             var11 = (eg) (ic.field_s.d(9272));
             if (var11 == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
-            var11.b((byte) 12);
+            var11.unlink((byte) 12);
           } else {
             if (var2 != 2) {
-              bd.a((Throwable) null, "A1: " + r.i(-15465), -87);
-              gb.g(-17464);
+              bd.a((Throwable) null, "A1: " + BattleUnit.i(-15465), -87);
+              WidgetContainer.g(-17464);
             } else {
               var13 = (ok) (vc.field_g.d(9272));
               if (var13 == null) {
-                gb.g(param0 - 17531);
+                WidgetContainer.g(param0 - 17531);
                 return;
               }
               var13.field_l = a.b(3922);
               var13.field_k = true;
               var13.field_m = var13.field_l[0];
-              var13.b((byte) 12);
+              var13.unlink((byte) 12);
             }
           }
           return;

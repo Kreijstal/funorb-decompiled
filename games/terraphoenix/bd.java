@@ -28,7 +28,7 @@ final class bd {
         return this;
     }
 
-    final void a(int param0, gl param1, int param2, int param3, hf param4) {
+    final void a(int param0, UiWidget param1, int param2, int param3, hf param4) {
         pk stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
@@ -282,7 +282,7 @@ final class bd {
         }
     }
 
-    final void a(gl param0, bd param1, hf param2, int param3, byte param4, int param5) {
+    final void a(UiWidget param0, bd param1, hf param2, int param3, byte param4, int param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;

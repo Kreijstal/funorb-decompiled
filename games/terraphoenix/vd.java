@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd extends lj {
+final class vd extends PcmStream {
     static String field_p;
     static String field_o;
     private wl field_q;
-    static jj field_l;
-    jj field_n;
+    static IntrusiveDeque field_l;
+    IntrusiveDeque field_n;
     vg field_m;
 
-    final lj c() {
+    final PcmStream c() {
         sh var1 = (sh) (this.field_n.d(9272));
         if (var1 == null) {
           return null;
@@ -17,7 +17,7 @@ final class vd extends lj {
         if (var1.field_k == null) {
           return this.a();
         }
-        return (lj) ((Object) var1.field_k);
+        return (PcmStream) ((Object) var1.field_k);
     }
 
     final static int b(int param0, int param1) {
@@ -43,7 +43,7 @@ final class vd extends lj {
         field_p = (String) null;
     }
 
-    final lj a() {
+    final PcmStream a() {
         sh var1;
         while (true) {
           var1 = (sh) (this.field_n.e((byte) -119));
@@ -51,7 +51,7 @@ final class vd extends lj {
             return null;
           }
           if (var1.field_k != null) {
-            return (lj) ((Object) var1.field_k);
+            return (PcmStream) ((Object) var1.field_k);
           }
         }
     }
@@ -271,7 +271,7 @@ final class vd extends lj {
     }
 
     vd(wl param0) {
-        this.field_n = new jj();
+        this.field_n = new IntrusiveDeque();
         this.field_m = new vg();
         try {
           this.field_q = param0;
@@ -283,6 +283,6 @@ final class vd extends lj {
     static {
         field_p = "Email is valid";
         field_o = "Please wait...";
-        field_l = new jj();
+        field_l = new IntrusiveDeque();
     }
 }

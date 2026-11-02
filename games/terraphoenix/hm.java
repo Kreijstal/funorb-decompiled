@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends gl {
+final class hm extends UiWidget {
     private Sprite[] field_D;
     private int field_E;
     private int field_K;
@@ -117,12 +117,12 @@ final class hm extends gl {
         RuntimeException var5 = null;
         int var7 = 0;
         int var8 = 0;
-        gl var9 = null;
+        UiWidget var9 = null;
         var8 = Terraphoenix.field_V;
         try {
           if (param3 != -1) {
-            var9 = (gl) null;
-            this.a((gl) null, 26, 3, -111);
+            var9 = (UiWidget) null;
+            this.a((UiWidget) null, 26, 3, -111);
           }
           var5_int = this.field_p + param2;
           di.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.field_n, this.field_C.field_r + param2);
@@ -266,7 +266,7 @@ final class hm extends gl {
         field_H = null;
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

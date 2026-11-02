@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends lj {
+final class lh extends PcmStream {
     private int field_n;
     private int field_v;
     private int field_z;
@@ -18,7 +18,7 @@ final class lh extends lj {
     private int field_p;
     private int field_t;
 
-    final lj c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -198,7 +198,7 @@ final class lh extends lj {
     }
 
     final synchronized void d(int param0) {
-        int var2 = ((gg) (this.field_i)).field_k.length << 8;
+        int var2 = ((PcmSample) (this.field_i)).field_k.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -286,7 +286,7 @@ final class lh extends lj {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        gg var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -304,14 +304,14 @@ final class lh extends lj {
               this.field_s = 0;
               this.field_t = 0;
               this.field_r = 0;
-              this.b((byte) 12);
+              this.unlink((byte) 12);
               param0 = this.field_n;
             }
             this.field_n = 0;
             this.f();
           }
         }
-        var2 = (gg) (this.field_i);
+        var2 = (PcmSample) (this.field_i);
         var3 = this.field_o << 8;
         var4 = this.field_w << 8;
         var5 = var2.field_k.length << 8;
@@ -322,7 +322,7 @@ final class lh extends lj {
         if (this.field_q < 0) {
           if (this.field_y <= 0) {
             this.j();
-            this.b((byte) 12);
+            this.unlink((byte) 12);
             return;
           }
           this.field_q = 0;
@@ -330,7 +330,7 @@ final class lh extends lj {
         if (this.field_q >= var5) {
           if (this.field_y >= 0) {
             this.j();
-            this.b((byte) 12);
+            this.unlink((byte) 12);
             return;
           }
           this.field_q = var5 - 1;
@@ -443,7 +443,7 @@ final class lh extends lj {
           if (this.field_q >= var5) {
             this.field_q = var5;
             this.j();
-            this.b((byte) 12);
+            this.unlink((byte) 12);
           }
           return;
         }
@@ -452,7 +452,7 @@ final class lh extends lj {
         }
         this.field_q = -1;
         this.j();
-        this.b((byte) 12);
+        this.unlink((byte) 12);
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, lh param11, int param12, int param13) {
@@ -514,7 +514,7 @@ final class lh extends lj {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        gg var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -527,7 +527,7 @@ final class lh extends lj {
           this.a(param2);
           return;
         }
-        var4 = (gg) (this.field_i);
+        var4 = (PcmSample) (this.field_i);
         var5 = this.field_o << 8;
         var6 = this.field_w << 8;
         var7 = var4.field_k.length << 8;
@@ -540,7 +540,7 @@ final class lh extends lj {
         if (this.field_q < 0) {
           if (this.field_y <= 0) {
             this.j();
-            this.b((byte) 12);
+            this.unlink((byte) 12);
             return;
           }
           this.field_q = 0;
@@ -548,7 +548,7 @@ final class lh extends lj {
         if (this.field_q >= var7) {
           if (this.field_y >= 0) {
             this.j();
-            this.b((byte) 12);
+            this.unlink((byte) 12);
             return;
           }
           this.field_q = var7 - 1;
@@ -675,7 +675,7 @@ final class lh extends lj {
           if (this.field_q >= var7) {
             this.field_q = var7;
             this.j();
-            this.b((byte) 12);
+            this.unlink((byte) 12);
           }
           return;
         }
@@ -685,7 +685,7 @@ final class lh extends lj {
         }
         this.field_q = -1;
         this.j();
-        this.b((byte) 12);
+        this.unlink((byte) 12);
         return;
     }
 
@@ -693,10 +693,10 @@ final class lh extends lj {
         int var1 = this.field_r * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_m == 0) {
-          var1 = var1 - var1 * this.field_q / (((gg) (this.field_i)).field_k.length << 8);
+          var1 = var1 - var1 * this.field_q / (((PcmSample) (this.field_i)).field_k.length << 8);
         } else {
           if (this.field_m >= 0) {
-            var1 = var1 - var1 * this.field_o / ((gg) (this.field_i)).field_k.length;
+            var1 = var1 - var1 * this.field_o / ((PcmSample) (this.field_i)).field_k.length;
           }
         }
         return var1 > 255 ? 255 : var1;
@@ -726,7 +726,7 @@ final class lh extends lj {
           this.field_s = 0;
           this.field_t = 0;
           this.field_r = 0;
-          this.b((byte) 12);
+          this.unlink((byte) 12);
           return true;
         }
         if (this.field_r >= var1) {
@@ -831,7 +831,7 @@ final class lh extends lj {
         return param3;
     }
 
-    final lj a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -893,7 +893,7 @@ final class lh extends lj {
         return param5;
     }
 
-    final static lh a(gg param0, int param1, int param2) {
+    final static lh a(PcmSample param0, int param1, int param2) {
         if (param0.field_k == null) {
           return null;
         }
@@ -1178,7 +1178,7 @@ final class lh extends lj {
         return param4 >> 1;
     }
 
-    final static lh a(gg param0, int param1, int param2, int param3) {
+    final static lh a(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_k == null) {
           return null;
         }
@@ -1193,7 +1193,7 @@ final class lh extends lj {
     }
 
     final synchronized boolean i() {
-        return this.field_q < 0 || this.field_q >= ((gg) (this.field_i)).field_k.length << 8;
+        return this.field_q < 0 || this.field_q >= ((PcmSample) (this.field_i)).field_k.length << 8;
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, lh param10, int param11, int param12) {
@@ -1240,14 +1240,14 @@ final class lh extends lj {
             if (this.field_y == -256 &&
               (this.field_q & 255) == 0) {
               if (nk.field_r) {
-                return lh.b(0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this);
+                return lh.b(0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this);
               }
-              return lh.a(((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this);
+              return lh.a(((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this);
             }
             if (nk.field_r) {
-              return lh.a(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this, this.field_y, param4);
+              return lh.a(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this, this.field_y, param4);
             }
-            return lh.b(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this, this.field_y, param4);
+            return lh.b(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this, this.field_y, param4);
           }
           var6 = param1 + this.field_n;
           if (var6 > param3) {
@@ -1257,15 +1257,15 @@ final class lh extends lj {
           if (this.field_y == -256 &&
             (this.field_q & 255) == 0) {
             if (!nk.field_r) {
-              param1 = lh.a(((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this);
+              param1 = lh.a(((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this);
             } else {
-              param1 = lh.a(0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this);
+              param1 = lh.a(0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this);
             }
           } else {
             if (!nk.field_r) {
-              param1 = lh.d(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this, this.field_y, param4);
+              param1 = lh.d(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this, this.field_y, param4);
             } else {
-              param1 = lh.a(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this, this.field_y, param4);
+              param1 = lh.a(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this, this.field_y, param4);
             }
           }
           this.field_n = this.field_n - param1;
@@ -1409,7 +1409,7 @@ final class lh extends lj {
         int var2Lifetime1;
         if (param0 == 0) {
           this.e(0);
-          this.b((byte) 12);
+          this.unlink((byte) 12);
           return;
         }
         if (this.field_t != 0) {
@@ -1469,7 +1469,7 @@ final class lh extends lj {
         this.field_n = 0;
         this.field_x = 0;
         this.field_r = 0;
-        this.b((byte) 12);
+        this.unlink((byte) 12);
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, lh param10) {
@@ -1669,14 +1669,14 @@ final class lh extends lj {
             if (this.field_y == 256 &&
               (this.field_q & 255) == 0) {
               if (nk.field_r) {
-                return lh.a(0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this);
+                return lh.a(0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this);
               }
-              return lh.b(((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this);
+              return lh.b(((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this);
             }
             if (nk.field_r) {
-              return lh.b(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this, this.field_y, param4);
+              return lh.b(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, 0, param3, param2, this, this.field_y, param4);
             }
-            return lh.a(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this, this.field_y, param4);
+            return lh.a(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, 0, param3, param2, this, this.field_y, param4);
           }
           var6 = param1 + this.field_n;
           if (var6 > param3) {
@@ -1686,15 +1686,15 @@ final class lh extends lj {
           if (this.field_y == 256 &&
             (this.field_q & 255) == 0) {
             if (!nk.field_r) {
-              param1 = lh.b(((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this);
+              param1 = lh.b(((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this);
             } else {
-              param1 = lh.b(0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this);
+              param1 = lh.b(0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this);
             }
           } else {
             if (!nk.field_r) {
-              param1 = lh.c(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this, this.field_y, param4);
+              param1 = lh.c(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_r, this.field_z, 0, var6, param2, this, this.field_y, param4);
             } else {
-              param1 = lh.b(0, 0, ((gg) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this, this.field_y, param4);
+              param1 = lh.b(0, 0, ((PcmSample) (this.field_i)).field_k, param0, this.field_q, param1, this.field_t, this.field_s, this.field_l, this.field_p, 0, var6, param2, this, this.field_y, param4);
             }
           }
           this.field_n = this.field_n - param1;
@@ -1712,8 +1712,8 @@ final class lh extends lj {
         this.f();
     }
 
-    private lh(gg param0, int param1, int param2) {
-        this.field_i = (id) ((Object) param0);
+    private lh(PcmSample param0, int param1, int param2) {
+        this.field_i = (AbstractAudioSample) ((Object) param0);
         this.field_o = param0.field_j;
         this.field_w = param0.field_m;
         this.field_u = param0.field_i;
@@ -1724,8 +1724,8 @@ final class lh extends lj {
         this.f();
     }
 
-    private lh(gg param0, int param1, int param2, int param3) {
-        this.field_i = (id) ((Object) param0);
+    private lh(PcmSample param0, int param1, int param2, int param3) {
+        this.field_i = (AbstractAudioSample) ((Object) param0);
         this.field_o = param0.field_j;
         this.field_w = param0.field_m;
         this.field_u = param0.field_i;

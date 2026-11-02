@@ -35,13 +35,13 @@ final class ek {
         this.field_a[0] = var3 >> 4;
         this.field_a[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_c[0] = param0.i(-25578);
-          this.field_c[1] = param0.i(-25578);
+          this.field_c[0] = param0.readUnsignedShort(-25578);
+          this.field_c[1] = param0.readUnsignedShort(-25578);
           var4 = param0.a(-16384);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_a[var5]; var6++) {
-              this.field_b[var5][0][var6] = param0.i(-25578);
-              this.field_f[var5][0][var6] = param0.i(-25578);
+              this.field_b[var5][0][var6] = param0.readUnsignedShort(-25578);
+              this.field_f[var5][0][var6] = param0.readUnsignedShort(-25578);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -52,8 +52,8 @@ final class ek {
                 this.field_b[var5Lifetime1][1][var7] = this.field_b[var5Lifetime1][0][var7];
                 this.field_f[var5Lifetime1][1][var7] = this.field_f[var5Lifetime1][0][var7];
               } else {
-                this.field_b[var5Lifetime1][1][var7] = param0.i(-25578);
-                this.field_f[var5Lifetime1][1][var7] = param0.i(-25578);
+                this.field_b[var5Lifetime1][1][var7] = param0.readUnsignedShort(-25578);
+                this.field_f[var5Lifetime1][1][var7] = param0.readUnsignedShort(-25578);
               }
               var7++;
             }

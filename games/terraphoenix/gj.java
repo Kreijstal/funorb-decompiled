@@ -64,9 +64,9 @@ final class gj {
           param3.a((byte) -2, nc.field_c);
           di.field_l.position = 0;
           if (!param0) {
-            di.field_l.i(16, 18);
+            di.field_l.writeByte(16, 18);
           } else {
-            di.field_l.i(18, param2 ^ 16);
+            di.field_l.writeByte(18, param2 ^ 16);
           }
           di.field_l.position = di.field_l.position + 2;
           var5_int = di.field_l.position;
@@ -85,7 +85,7 @@ final class gj {
           if (og.field_e != null) {
             var6 = var6 | 16;
           }
-          di.field_l.i(var6, -112);
+          di.field_l.writeByte(var6, -112);
           var7 = kf.a(-95, dg.a(false));
           if (var7 == null) {
             var7 = "";
@@ -112,7 +112,7 @@ final class gj {
         }
     }
 
-    final static boolean a(e param0, int param1, byte param2, int param3) {
+    final static boolean a(BattleState param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

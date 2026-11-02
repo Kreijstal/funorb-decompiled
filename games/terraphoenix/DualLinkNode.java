@@ -5,10 +5,10 @@ class DualLinkNode extends IntrusiveNode {
     static String field_n;
     static bg[] field_k;
     static int[][] field_j;
-    long field_m;
-    DualLinkNode field_i;
+    long secondaryKey;
+    DualLinkNode secondaryPrevious;
     static String field_l;
-    DualLinkNode field_o;
+    DualLinkNode secondaryNext;
     static String field_h;
 
     final static boolean a(int param0, int param1, fa param2, boolean param3) {
@@ -28,7 +28,7 @@ class DualLinkNode extends IntrusiveNode {
           if (var5 == null) {
             return false;
           }
-          b.a(var5, (byte) -110);
+          RandomAccessCacheFile.a(var5, (byte) -110);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,19 +54,19 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final void c(byte param0) {
-        if (this.field_i == null) {
+    final void unlinkSecondary(byte obfuscationGuard) {
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_i.field_o = this.field_o;
-        this.field_o.field_i = this.field_i;
-        this.field_i = null;
-        if (param0 == 13) {
-          this.field_o = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious = null;
+        if (obfuscationGuard == 13) {
+          this.secondaryNext = null;
           return;
         }
-        this.field_m = 69L;
-        this.field_o = null;
+        this.secondaryKey = 69L;
+        this.secondaryNext = null;
     }
 
     public static void a(int param0) {

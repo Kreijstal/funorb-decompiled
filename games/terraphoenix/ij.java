@@ -78,7 +78,7 @@ final class ij {
                 var5 = 2 + var6_int;
               }
               while (var3_int > var5) {
-                stackOut_13_0 = gb.a((byte) 41, param2.charAt(var5));
+                stackOut_13_0 = WidgetContainer.a((byte) 41, param2.charAt(var5));
                 stackIn_6_0 = stackOut_13_0 ? 1 : 0;
                 stackIn_14_0 = stackOut_13_0;
                 if (var11 != 0) {
@@ -123,7 +123,7 @@ final class ij {
                 var5Lifetime1 = var8Lifetime1 + 2;
               }
               while (var3_int > var5Lifetime1) {
-                stackOut_41_0 = gb.a((byte) 41, param2.charAt(var5Lifetime1));
+                stackOut_41_0 = WidgetContainer.a((byte) 41, param2.charAt(var5Lifetime1));
                 stackIn_34_0 = stackOut_41_0 ? 1 : 0;
                 stackIn_42_0 = stackOut_41_0;
                 if (var11 != 0) {
@@ -1550,7 +1550,7 @@ final class ij {
                 }
                 var2 = bc.a("create_welcome", false);
                 if (null != var2) {
-                  gb.field_A = ll.a(0, var2);
+                  WidgetContainer.field_A = ll.a(0, var2);
                 }
                 var2 = bc.a("create_u13_welcome", false);
                 if (var2 != null) {
@@ -1638,7 +1638,7 @@ final class ij {
                 }
                 var2 = bc.a("login_username_email", false);
                 if (var2 != null) {
-                  gb.field_D = ll.a(param0 - 3, var2);
+                  WidgetContainer.field_D = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("login_username", false);
                 if (var2 != null) {
@@ -1954,7 +1954,7 @@ final class ij {
                 }
                 var2 = bc.a("waitingfor_extradata", false);
                 if (null != var2) {
-                  jj.field_d = ll.a(0, var2);
+                  IntrusiveDeque.field_d = ll.a(0, var2);
                 }
                 var2 = bc.a("waitingfor_languages", false);
                 if (null != var2) {
@@ -2190,7 +2190,7 @@ final class ij {
                 }
                 var2 = bc.a("ok", false);
                 if (null != var2) {
-                  r.field_lb = ll.a(0, var2);
+                  BattleUnit.field_lb = ll.a(0, var2);
                 }
                 var2 = bc.a("on", false);
                 if (var2 != null) {
@@ -2816,7 +2816,7 @@ final class ij {
                 }
                 var2 = bc.a("fs_button_accept", false);
                 if (var2 != null) {
-                  r.field_o = ll.a(param0 - 3, var2);
+                  BattleUnit.field_o = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("fs_accept_afteraccept", false);
                 if (var2 != null) {
@@ -2872,7 +2872,7 @@ final class ij {
                 }
                 var2 = bc.a("fs_button_tryagain", false);
                 if (null != var2) {
-                  mk.field_h = ll.a(param0 ^ 3, var2);
+                  LevelEditor.field_h = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("graphics_ui_fs_countdown", false);
                 if (null != var2) {
@@ -2988,7 +2988,7 @@ final class ij {
                 }
                 var2 = bc.a("serviceunavailable", false);
                 if (var2 != null) {
-                  r.field_bb = ll.a(0, var2);
+                  BattleUnit.field_bb = ll.a(0, var2);
                 }
                 var2 = bc.a("createtouse", false);
                 if (var2 != null) {

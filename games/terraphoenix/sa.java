@@ -344,12 +344,12 @@ final class sa {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param1, var7 + (-(6 * param1.length()) + 304) / 2, 22 + var8);
             }
-            if (e.field_o == null) {
+            if (BattleState.field_o == null) {
               return;
             }
             var9.setFont(t.field_e);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(e.field_o, ja.field_j / 2 - 6 * e.field_o.length() / 2, -26 + wc.field_p / 2);
+            var9.drawString(BattleState.field_o, ja.field_j / 2 - 6 * BattleState.field_o.length() / 2, -26 + wc.field_p / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

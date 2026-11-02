@@ -31,7 +31,7 @@ final class qh implements cj {
         return new gd(pb.a((byte) -47), dd.f((byte) 105));
     }
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

@@ -63,7 +63,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (var2_int >= 0) {
               var3 = 1 + u.field_g & 127;
-              if (var3 != r.field_V) {
+              if (var3 != BattleUnit.field_V) {
                 ll.field_b[u.field_g] = var2_int;
                 ah.field_E[u.field_g] = (char)0;
                 u.field_g = var3;
@@ -163,7 +163,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int != 65535 &&
               re.a(-10152, (char) var2_int)) {
               var3 = 127 & u.field_g + 1;
-              if (r.field_V != var3) {
+              if (BattleUnit.field_V != var3) {
                 ll.field_b[u.field_g] = -1;
                 ah.field_E[u.field_g] = (char)var2_int;
                 u.field_g = var3;

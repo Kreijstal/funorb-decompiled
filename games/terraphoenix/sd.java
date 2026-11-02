@@ -118,7 +118,7 @@ final class sd {
         RuntimeException var1_ref = null;
         var4 = Terraphoenix.field_V;
         try {
-          var5 = dk.field_c;
+          var5 = LevelMap.field_c;
           var1 = var5;
           if (param0 != 87) {
             return;
@@ -223,12 +223,12 @@ final class sd {
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.e(-1);
-                    var21 = param2.e(-1);
+                    var20 = param2.readString(-1);
+                    var21 = param2.readString(-1);
                     var9 = param2.a(-16384);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param2.e(-1);
+                      var10[var11_int] = param2.readString(-1);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -253,8 +253,8 @@ final class sd {
                     var18.field_o[var5] = var22;
                   }
                 } else {
-                  var15 = param2.e(-1);
-                  var16 = param2.e(-1);
+                  var15 = param2.readString(-1);
+                  var16 = param2.readString(-1);
                   var9 = 0;
                   if (1 == var6_int) {
                     var9 = param2.f((byte) -107);
@@ -327,7 +327,7 @@ final class sd {
           this.field_c = true;
           this.field_h = param2;
           this.field_j = ma.field_I;
-          this.field_b = gl.field_m;
+          this.field_b = UiWidget.field_m;
         }
         if (this.field_j != 0 &&
           oh.field_f != 0) {

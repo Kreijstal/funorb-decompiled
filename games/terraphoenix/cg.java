@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends gb implements n {
+final class cg extends WidgetContainer implements n {
     private eb field_J;
     static ok field_K;
     private eb field_G;
@@ -15,7 +15,7 @@ final class cg extends gb implements n {
         }
         int var5 = param0 + this.field_w;
         int var6 = this.field_u + param3;
-        qk.field_e.a(gb.field_A, 20 + var5, 20 + var6, -40 + this.field_p, this.field_n - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
+        qk.field_e.a(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.field_p, this.field_n - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
         super.a(param0, -125, param2, param3);
     }
 
@@ -99,7 +99,7 @@ final class cg extends gb implements n {
         }
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;

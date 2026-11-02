@@ -215,7 +215,7 @@ final class ma extends rf {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_4_0 = b.field_f;
+            stackIn_4_0 = RandomAccessCacheFile.field_f;
             return stackIn_4_0;
           }
           if (255 < var2_int) {
@@ -224,7 +224,7 @@ final class ma extends rf {
           }
           var3 = nc.a(14352, param0, (char)param1);
           if (var3.length < 2) {
-            stackIn_12_0 = b.field_f;
+            stackIn_12_0 = RandomAccessCacheFile.field_f;
             return stackIn_12_0;
           }
           var4 = var3;

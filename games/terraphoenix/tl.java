@@ -118,7 +118,7 @@ final class tl extends IntrusiveNode {
         }
     }
 
-    final gg a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -168,7 +168,7 @@ final class tl extends IntrusiveNode {
         this.field_j = null;
         var12 = this.field_C;
         this.field_C = null;
-        return new gg(this.field_A, var12, this.field_x, this.field_E, this.field_s);
+        return new PcmSample(this.field_A, var12, this.field_x, this.field_E, this.field_s);
     }
 
     private final static boolean a(fa param0) {
@@ -307,7 +307,7 @@ final class tl extends IntrusiveNode {
         field_I = true;
     }
 
-    final gg a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -339,7 +339,7 @@ final class tl extends IntrusiveNode {
           }
         }
         this.field_j = null;
-        return new gg(this.field_A, var1, this.field_x, this.field_E, this.field_s);
+        return new PcmSample(this.field_A, var1, this.field_x, this.field_E, this.field_s);
     }
 
     private final void b(byte[] param0) throws IOException {

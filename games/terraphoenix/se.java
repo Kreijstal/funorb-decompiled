@@ -10,7 +10,7 @@ final class se {
     int field_i;
     static Sprite[] field_c;
     int field_a;
-    r field_d;
+    BattleUnit field_d;
     int field_f;
 
     public static void a(int param0) {
@@ -22,7 +22,7 @@ final class se {
         field_c = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, r param4) {
+    final void a(int param0, int param1, int param2, int param3, BattleUnit param4) {
         this.field_d = param4;
         this.field_b = param1;
         this.field_a = param0;

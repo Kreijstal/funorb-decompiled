@@ -51,7 +51,7 @@ final class bm {
         uc var8 = null;
         mb var9 = null;
         var7 = Terraphoenix.field_V;
-        var8 = mk.field_j;
+        var8 = LevelEditor.field_j;
         var2 = var8;
         var3 = var8.a(-16384);
         if (param1 != 0) {
@@ -66,24 +66,24 @@ final class bm {
           ji.field_k = 0;
           wb.field_c = 0;
         } else {
-          wb.field_c = var8.i(-25578);
+          wb.field_c = var8.readUnsignedShort(-25578);
           ji.field_k = var8.d((byte) -114);
         }
         stackIn_11_0 = (var8.a(-16384) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        ge.field_c = var8.e(-1);
+        ge.field_c = var8.readString(-1);
         if (var4 != 0) {
-          wh.field_a = var8.e(-1);
+          wh.field_a = var8.readString(-1);
         } else {
           wh.field_a = ge.field_c;
         }
         if (im.field_c == 1) {
-          var8.i(-25578);
-          var8.e(-1);
+          var8.readUnsignedShort(-25578);
+          var8.readString(-1);
         } else {
           if (im.field_c == 4) {
-            var8.i(-25578);
-            var8.e(-1);
+            var8.readUnsignedShort(-25578);
+            var8.readString(-1);
           }
         }
         if (!param0) {
@@ -91,7 +91,7 @@ final class bm {
           ui.field_e = null;
           return new dc(param0);
         }
-        var5 = var8.i(-25578);
+        var5 = var8.readUnsignedShort(-25578);
         try {
           var9 = fl.field_c.a(true, var5);
           ea.field_n = var9.a(false);

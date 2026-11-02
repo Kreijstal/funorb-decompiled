@@ -7,7 +7,7 @@ final class sb extends IntrusiveNode {
     static String field_k;
     static String field_n;
     static int[] field_m;
-    static jj field_h;
+    static IntrusiveDeque field_h;
     static String field_l;
     static int field_i;
     byte[] field_o;
@@ -20,7 +20,7 @@ final class sb extends IntrusiveNode {
         field_h = null;
         field_l = null;
         if (param0 != 29) {
-          field_h = (jj) null;
+          field_h = (IntrusiveDeque) null;
         }
     }
 

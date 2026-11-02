@@ -85,7 +85,7 @@ final class lm {
           if (var45.field_f != null &&
             var45.field_I > 1) {
             var61 = var45.field_f;
-            hk.a(0, -57, var61, 0, dk.field_c);
+            hk.a(0, -57, var61, 0, LevelMap.field_c);
           } else {
             th.a(true);
           }

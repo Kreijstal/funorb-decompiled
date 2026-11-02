@@ -29,18 +29,18 @@ class fd implements cj, w {
         Throwable decompiledCaughtException = null;
         var1_ref = th.field_g;
         synchronized (var1_ref) {
-          if (d.field_M == r.field_V) {
+          if (d.field_M == BattleUnit.field_V) {
             return false;
           }
-          lf.field_c = ll.field_b[r.field_V];
-          ua.field_g = ah.field_E[r.field_V];
-          r.field_V = param0 + r.field_V & 127;
+          lf.field_c = ll.field_b[BattleUnit.field_V];
+          ua.field_g = ah.field_E[BattleUnit.field_V];
+          BattleUnit.field_V = param0 + BattleUnit.field_V & 127;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;
     }
 
-    public final int a(int param0, int param1, int param2, gl param3, int param4, int param5) {
+    public final int a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -68,7 +68,7 @@ class fd implements cj, w {
         }
     }
 
-    private final void c(int param0, gl param1) {
+    private final void c(int param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -79,13 +79,13 @@ class fd implements cj, w {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        gl var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = Terraphoenix.field_V;
         try {
           if (param0 <= 105) {
-            var8 = (gl) null;
-            this.a((gl) null, 98, 4);
+            var8 = (UiWidget) null;
+            this.a((UiWidget) null, 98, 4);
           }
           if (null == param1.field_q) {
             param1.field_q = (ld) ((Object) new rd());
@@ -142,7 +142,7 @@ class fd implements cj, w {
         }
     }
 
-    public final void b(int param0, int param1, int param2, gl param3, int param4, int param5) {
+    public final void b(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -224,12 +224,12 @@ class fd implements cj, w {
         if (param0 == 8233) {
           return this.field_j.field_s + this.field_j.field_p;
         }
-        gl var3 = (gl) null;
-        this.a(22, 56, (gl) null, -76, -64);
+        UiWidget var3 = (UiWidget) null;
+        this.a(22, 56, (UiWidget) null, -76, -64);
         return this.field_j.field_s + this.field_j.field_p;
     }
 
-    public final int a(gl param0, int param1, byte param2) {
+    public final int a(UiWidget param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -256,7 +256,7 @@ class fd implements cj, w {
         }
     }
 
-    public final void a(int param0, int param1, gl param2, int param3, int param4) {
+    public final void a(int param0, int param1, UiWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         em var8 = null;
@@ -315,7 +315,7 @@ class fd implements cj, w {
         }
     }
 
-    String b(gl param0, int param1) {
+    String b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -349,7 +349,7 @@ class fd implements cj, w {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, gl param5, byte param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6, int param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -418,7 +418,7 @@ class fd implements cj, w {
         }
     }
 
-    private final int b(int param0, gl param1) {
+    private final int b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         fd var4 = null;
         int stackIn_3_0 = 0;
@@ -451,7 +451,7 @@ class fd implements cj, w {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final ld a(gl param0, int param1) {
+    public final ld a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         ld stackIn_4_0 = null;
         ld stackIn_9_0 = null;
@@ -499,9 +499,9 @@ class fd implements cj, w {
         field_p = null;
     }
 
-    public final int a(int param0, gl param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -509,8 +509,8 @@ class fd implements cj, w {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 28889) {
-            var4 = (gl) null;
-            this.c(-45, (gl) null);
+            var4 = (UiWidget) null;
+            this.c(-45, (UiWidget) null);
           }
           stackIn_3_0 = param1.field_p - this.field_d - this.field_l;
           return stackIn_3_0;
@@ -528,7 +528,7 @@ class fd implements cj, w {
         }
     }
 
-    public final int b(gl param0, byte param1) {
+    public final int b(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -579,7 +579,7 @@ class fd implements cj, w {
         }
     }
 
-    public final int a(gl param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -605,7 +605,7 @@ class fd implements cj, w {
         }
     }
 
-    private final int a(gl param0, byte param1, int param2, int param3) {
+    private final int a(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -634,7 +634,7 @@ class fd implements cj, w {
         }
     }
 
-    private final void a(int param0, int param1, int param2, gl param3) {
+    private final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.a(this.field_e, 0, 0, param2, param0, param3, (byte) 70, this.field_n);
           if (param1 != -6087) {
@@ -645,7 +645,7 @@ class fd implements cj, w {
         }
     }
 
-    private final int a(int param0, gl param1, int param2, byte param3) {
+    private final int a(int param0, UiWidget param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -672,7 +672,7 @@ class fd implements cj, w {
         }
     }
 
-    public final int a(gl param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -702,7 +702,7 @@ class fd implements cj, w {
         }
     }
 
-    public void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         if (param3 != -24381) {
           return;
         }

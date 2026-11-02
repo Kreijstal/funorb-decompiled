@@ -40,71 +40,71 @@ final class bl {
                 nj.field_i = param1;
                 var2 = il.a((byte) 85, "achievement_names,0");
                 if (var2 != null) {
-                  b.field_g[0] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 107, "achievement_names,1");
                 if (null != var2) {
-                  b.field_g[1] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "achievement_names,2");
                 if (null != var2) {
-                  b.field_g[2] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 93, "achievement_names,3");
                 if (null != var2) {
-                  b.field_g[3] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 97, "achievement_names,4");
                 if (var2 != null) {
-                  b.field_g[4] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 73, "achievement_names,5");
                 if (null != var2) {
-                  b.field_g[5] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "achievement_names,6");
                 if (var2 != null) {
-                  b.field_g[6] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "achievement_names,7");
                 if (null != var2) {
-                  b.field_g[7] = ll.a(sl.a((int) param0, 96), var2);
+                  RandomAccessCacheFile.field_g[7] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 71, "achievement_names,8");
                 if (null != var2) {
-                  b.field_g[8] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[8] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 127, "achievement_names,9");
                 if (var2 != null) {
-                  b.field_g[9] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[9] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 72, "achievement_names,10");
                 if (var2 != null) {
-                  b.field_g[10] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[10] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 100, "achievement_names,11");
                 if (var2 != null) {
-                  b.field_g[11] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[11] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 92, "achievement_names,12");
                 if (null != var2) {
-                  b.field_g[12] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 85, "achievement_names,13");
                 if (null != var2) {
-                  b.field_g[13] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[13] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "achievement_names,14");
                 if (null != var2) {
-                  b.field_g[14] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "achievement_names,15");
                 if (null != var2) {
-                  b.field_g[15] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[15] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 115, "achievement_names,16");
                 if (null != var2) {
-                  b.field_g[16] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 79, "points");
                 if (var2 != null) {
@@ -252,7 +252,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 126, "basescore");
                 if (null != var2) {
-                  dl.field_o = ll.a(0, var2);
+                  MapTile.field_o = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "makeanaccounttosave");
                 if (null != var2) {
@@ -288,7 +288,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 123, "savingwilloverwrite");
                 if (null != var2) {
-                  gl.field_t = ll.a(0, var2);
+                  UiWidget.field_t = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 77, "backtoms");
                 if (var2 != null) {
@@ -472,7 +472,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 95, "andactivateauto");
                 if (null != var2) {
-                  gl.field_h = ll.a(0, var2);
+                  UiWidget.field_h = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "andreturntomove");
                 if (var2 != null) {
@@ -508,7 +508,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "enemyturn");
                 if (null != var2) {
-                  mk.field_f = ll.a(0, var2);
+                  LevelEditor.field_f = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "clicktocontinue");
                 if (null != var2) {
@@ -1398,7 +1398,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 125, "noresearchfac");
                 if (var2 != null) {
-                  r.field_kb = ll.a(param0 - 96, var2);
+                  BattleUnit.field_kb = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 84, "noresearchres");
                 if (null != var2) {
@@ -1442,7 +1442,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 91, "GameName");
                 if (var2 != null) {
-                  b.field_c = ll.a(0, var2);
+                  RandomAccessCacheFile.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "down_a_mission");
                 if (var2 != null) {
@@ -2144,7 +2144,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 79, "diffeasy");
                 if (var2 != null) {
-                  gl.field_i = ll.a(0, var2);
+                  UiWidget.field_i = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "diffnorm");
                 if (var2 != null) {

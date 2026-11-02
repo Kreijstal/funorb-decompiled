@@ -3,7 +3,7 @@
  */
 final class pd {
     static int field_h;
-    static jj field_g;
+    static IntrusiveDeque field_g;
     String field_b;
     boolean field_i;
     String[] field_d;
@@ -41,7 +41,7 @@ final class pd {
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (param0 <= 11) {
-          field_g = (jj) null;
+          field_g = (IntrusiveDeque) null;
           if (48 > param1) {
             if (param1 >= 65 &&
               param1 <= 90) {
@@ -209,6 +209,6 @@ final class pd {
     static {
         field_e = "REC";
         field_f = "HARD MODE UNLOCKED";
-        field_g = new jj();
+        field_g = new IntrusiveDeque();
     }
 }

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk {
+final class LevelMap {
     int field_m;
     int field_e;
     static String[] field_h;
     int[][] field_g;
     int field_a;
     static int[] field_c;
-    dl[][] field_f;
+    MapTile[][] tiles;
     private int[][] field_d;
-    mk field_l;
+    LevelEditor field_l;
     int field_b;
-    e field_i;
+    BattleState field_i;
     static int[] field_j;
     private int field_k;
 
@@ -31,14 +31,14 @@ final class dk {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        dl var18 = null;
+        MapTile var18 = null;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        dl var18Lifetime1;
-        dl var18Lifetime1Lifetime1;
-        dl var18Lifetime1Lifetime2;
-        dl var18Lifetime1Lifetime3;
+        MapTile var18Lifetime1;
+        MapTile var18Lifetime1Lifetime1;
+        MapTile var18Lifetime1Lifetime2;
+        MapTile var18Lifetime1Lifetime3;
         int var14Lifetime1;
         int var14Lifetime1Lifetime1;
         var21 = Terraphoenix.field_V;
@@ -219,20 +219,20 @@ final class dk {
               this.field_e > var11) {
               var11 = var13;
               if (var12 < var10 &&
-                (this.field_f[var10][var11].field_e & 1) == 1) {
+                (this.tiles[var10][var11].field_e & 1) == 1) {
                 return;
               }
               if (var12 > var10 &&
-                4 == (this.field_f[var10][var11].field_e & 4)) {
+                4 == (this.tiles[var10][var11].field_e & 4)) {
                 return;
               }
               var11 = var8 * var14 / var9 + param3;
               if (var13 < var11 &&
-                2 == (this.field_f[var10][var11].field_e & 2)) {
+                2 == (this.tiles[var10][var11].field_e & 2)) {
                 return;
               }
               if (var11 < var13 &&
-                (this.field_f[var10][var11].field_e & 8) == 8) {
+                (this.tiles[var10][var11].field_e & 8) == 8) {
                 return;
               }
               if (var14 - jh.field_n < this.field_g[var10][var11] &&
@@ -240,10 +240,10 @@ final class dk {
                 this.field_g[var10][var11] = var14 - jh.field_n;
               }
               if (var14 != var9) {
-                if (2 == this.field_f[var10][var11].field_v) {
+                if (2 == this.tiles[var10][var11].field_v) {
                   return;
                 }
-                if (this.field_f[var10][var11].field_v == 3) {
+                if (this.tiles[var10][var11].field_v == 3) {
                   return;
                 }
               }
@@ -281,7 +281,7 @@ final class dk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param7) {
-            dk.b(51);
+            LevelMap.b(51);
           }
           stackIn_4_0 = this.a(param4, param0, param1, -93, false, param3, param6, param5, param2);
           return stackIn_4_0;
@@ -316,7 +316,7 @@ final class dk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        dl var14 = null;
+        MapTile var14 = null;
         int var15_int = 0;
         Object var15 = null;
         int var16 = 0;
@@ -634,7 +634,7 @@ final class dk {
         }
     }
 
-    final boolean a(int param0, r param1, r param2, boolean param3) {
+    final boolean a(int param0, BattleUnit param1, BattleUnit param2, boolean param3) {
         int stackIn_366_0 = 0;
         int stackIn_446_0 = 0;
         RuntimeException stackIn_466_0 = null;
@@ -643,7 +643,7 @@ final class dk {
         StringBuilder stackIn_470_1 = null;
         String stackIn_471_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dl var5 = null;
+        MapTile var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         double var7 = 0.0;
@@ -667,12 +667,12 @@ final class dk {
         double var33 = 0.0;
         double var35 = 0.0;
         int var37 = 0;
-        dl var38 = null;
+        MapTile var38 = null;
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        dl var38Lifetime1;
-        dl var38Lifetime1Lifetime1;
+        MapTile var38Lifetime1;
+        MapTile var38Lifetime1Lifetime1;
         var41 = Terraphoenix.field_V;
         try {
           if (param2 == param1) {
@@ -680,11 +680,11 @@ final class dk {
           }
           if (param2 != null &&
             param1 != null) {
-            var5 = param1.field_c;
+            var5 = param1.tile;
             if (param3) {
               var5 = this.a(114, param1.field_gb, param1.field_R, param1.field_i);
             }
-            if (null != param2.field_c &&
+            if (null != param2.tile &&
               null != var5) {
               if (null != param2.field_Z &&
                 !var5.field_a &&
@@ -758,8 +758,8 @@ final class dk {
                 var13 == 15) {
                 var12 = 54 + 100 * var11;
               }
-              if (param2.field_c.field_C != null &&
-                param2.field_c.field_C.field_v == 5) {
+              if (param2.tile.field_C != null &&
+                param2.tile.field_C.field_v == 5) {
                 var12 += 25;
               }
               if (var11 < param2.field_E) {
@@ -1215,23 +1215,23 @@ final class dk {
                         (-1 + this.field_b) > var5 &&
                         -1 + this.field_b > var6) {
                         var7 = 64;
-                        if (var7 > this.field_f[var5 - 1][var6].field_x) {
-                          var7 = this.field_f[-1 + var5][var6].field_x;
+                        if (var7 > this.tiles[var5 - 1][var6].field_x) {
+                          var7 = this.tiles[-1 + var5][var6].field_x;
                         }
-                        if (this.field_f[var5][-1 + var6].field_x < var7) {
-                          var7 = this.field_f[var5][-1 + var6].field_x;
+                        if (this.tiles[var5][-1 + var6].field_x < var7) {
+                          var7 = this.tiles[var5][-1 + var6].field_x;
                         }
-                        if (this.field_f[-1 + var5][-1 + var6].field_x < var7) {
-                          var7 = this.field_f[var5 - 1][var6 - 1].field_x;
+                        if (this.tiles[-1 + var5][-1 + var6].field_x < var7) {
+                          var7 = this.tiles[var5 - 1][var6 - 1].field_x;
                         }
-                        this.field_f[var5][var6].field_x = 1 + var7;
+                        this.tiles[var5][var6].field_x = 1 + var7;
                       } else {
-                        this.field_f[var5][var6].field_x = 1;
+                        this.tiles[var5][var6].field_x = 1;
                       }
-                      if (this.field_f[var5][var6].field_B) {
-                        this.field_f[var5][var6].field_x = 0;
+                      if (this.tiles[var5][var6].field_B) {
+                        this.tiles[var5][var6].field_x = 0;
                       }
-                      if (this.field_f[var5][var6].field_x > 4) {
+                      if (this.tiles[var5][var6].field_x > 4) {
                         var3 = var5;
                         var2_int = 0;
                         var4 = var6;
@@ -1246,7 +1246,7 @@ final class dk {
                 }
                 boolean decompiledFrameCompleted0 = true;
                 if (stackIn_43_0 == 0) {
-                  var5 = this.field_f[var3][var4].field_x;
+                  var5 = this.tiles[var3][var4].field_x;
                   if (var5 > 24) {
                     var5 = (int)(-24.0 + Math.random() * (double)var5 + 24.0);
                   }
@@ -1269,8 +1269,8 @@ final class dk {
                     var6Lifetime1 = (int)(2.0 * Math.random());
                   }
                   if (1 == var5) {
-                    this.field_f[var3][var4].field_b = 0;
-                    this.field_f[var3][var4].field_B = true;
+                    this.tiles[var3][var4].field_b = 0;
+                    this.tiles[var3][var4].field_B = true;
                     var6Lifetime1 = 0;
                   }
                   if (0 == var6Lifetime1) {
@@ -1282,38 +1282,38 @@ final class dk {
                         if (var16 == 0) {
                           var8 = stackIn_167_0;
                           while (var5 + var4 > var8) {
-                            this.field_f[var7Lifetime1][var8].field_b = 0;
-                            this.field_f[var7Lifetime1][var8].field_B = true;
+                            this.tiles[var7Lifetime1][var8].field_b = 0;
+                            this.tiles[var7Lifetime1][var8].field_B = true;
                             stackIn_74_0 = $cfr$dcmpg(Math.random() * 100.0, 20.0);
                             if (stackIn_74_0 < 0) {
-                              this.field_f[var7Lifetime1][var8].field_j = 0;
+                              this.tiles[var7Lifetime1][var8].field_j = 0;
                             }
                             if (var3 < var7Lifetime1 &&
-                              var4 < var8 && (this.field_f[-1 + var7Lifetime1][var8].field_j != 1 &&
-                              this.field_f[var7Lifetime1][var8 - 1].field_j != 1 &&
-                              this.field_f[1 + var7Lifetime1][var8].field_j != 1 &&
-                              this.field_f[-1 + var7Lifetime1][var8].field_j != 7 &&
-                              7 != this.field_f[var7Lifetime1][var8 - 1].field_j &&
-                              this.field_f[var7Lifetime1 + 1][var8].field_j != 7 ||
-                              this.field_f[var7Lifetime1 - 1][var8].field_j != 1 &&
-                              1 != this.field_f[var7Lifetime1][1 + var8].field_j &&
-                              this.field_f[var7Lifetime1 + 1][var8].field_j != 1 &&
-                              7 != this.field_f[var7Lifetime1 - 1][var8].field_j &&
-                              7 != this.field_f[var7Lifetime1][var8 + 1].field_j &&
-                              7 != this.field_f[var7Lifetime1 + 1][var8].field_j ||
-                              this.field_f[var7Lifetime1 - 1][var8].field_j != 1 &&
-                              this.field_f[var7Lifetime1][var8 - 1].field_j != 1 &&
-                              1 != this.field_f[1 + var8][var8].field_j &&
-                              7 != this.field_f[-1 + var7Lifetime1][var8].field_j &&
-                              this.field_f[var7Lifetime1][var8 - 1].field_j != 7 &&
-                              this.field_f[var7Lifetime1][-1 + var8].field_j != 7 ||
-                              this.field_f[1 + var7Lifetime1][var8].field_j != 1 &&
-                              this.field_f[var7Lifetime1][var8 - 1].field_j != 1 &&
-                              this.field_f[var8 + 1][var8].field_j != 1 &&
-                              this.field_f[var7Lifetime1 + 1][var8].field_j != 7 &&
-                              this.field_f[var7Lifetime1][var8 - 1].field_j != 7 &&
-                              this.field_f[var7Lifetime1][var8 + 1].field_j != 7) && 100.0 * Math.random() < 10.0) {
-                              this.field_f[var7Lifetime1][var8].field_j = 1;
+                              var4 < var8 && (this.tiles[-1 + var7Lifetime1][var8].field_j != 1 &&
+                              this.tiles[var7Lifetime1][var8 - 1].field_j != 1 &&
+                              this.tiles[1 + var7Lifetime1][var8].field_j != 1 &&
+                              this.tiles[-1 + var7Lifetime1][var8].field_j != 7 &&
+                              7 != this.tiles[var7Lifetime1][var8 - 1].field_j &&
+                              this.tiles[var7Lifetime1 + 1][var8].field_j != 7 ||
+                              this.tiles[var7Lifetime1 - 1][var8].field_j != 1 &&
+                              1 != this.tiles[var7Lifetime1][1 + var8].field_j &&
+                              this.tiles[var7Lifetime1 + 1][var8].field_j != 1 &&
+                              7 != this.tiles[var7Lifetime1 - 1][var8].field_j &&
+                              7 != this.tiles[var7Lifetime1][var8 + 1].field_j &&
+                              7 != this.tiles[var7Lifetime1 + 1][var8].field_j ||
+                              this.tiles[var7Lifetime1 - 1][var8].field_j != 1 &&
+                              this.tiles[var7Lifetime1][var8 - 1].field_j != 1 &&
+                              1 != this.tiles[1 + var8][var8].field_j &&
+                              7 != this.tiles[-1 + var7Lifetime1][var8].field_j &&
+                              this.tiles[var7Lifetime1][var8 - 1].field_j != 7 &&
+                              this.tiles[var7Lifetime1][-1 + var8].field_j != 7 ||
+                              this.tiles[1 + var7Lifetime1][var8].field_j != 1 &&
+                              this.tiles[var7Lifetime1][var8 - 1].field_j != 1 &&
+                              this.tiles[var8 + 1][var8].field_j != 1 &&
+                              this.tiles[var7Lifetime1 + 1][var8].field_j != 7 &&
+                              this.tiles[var7Lifetime1][var8 - 1].field_j != 7 &&
+                              this.tiles[var7Lifetime1][var8 + 1].field_j != 7) && 100.0 * Math.random() < 10.0) {
+                              this.tiles[var7Lifetime1][var8].field_j = 1;
                             }
                             var8++;
                           }
@@ -1336,65 +1336,65 @@ final class dk {
                         if (var16 == 0) {
                           var8Lifetime1 = stackIn_346_0;
                           while (var8Lifetime1 < var5 + var4) {
-                            this.field_f[var7Lifetime1Lifetime1][var8Lifetime1].field_b = 0;
-                            this.field_f[var7Lifetime1Lifetime1][var8Lifetime1].field_B = true;
+                            this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_b = 0;
+                            this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_B = true;
                             stackIn_173_0 = $cfr$dcmpl(30.0, Math.random() * 100.0);
                             if (stackIn_173_0 > 0) {
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 0;
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 0;
                             }
                             if (var7Lifetime1Lifetime1 > var3 &&
-                              var4 < var8Lifetime1 && (1 != this.field_f[-1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
-                              7 != this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j &&
-                              this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 ||
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
-                              1 != this.field_f[var7Lifetime1Lifetime1][1 + var8Lifetime1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
-                              7 != this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 + 1].field_j &&
-                              7 != this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j ||
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
-                              1 != this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j &&
-                              this.field_f[1 + var8Lifetime1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
-                              7 != this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 7 ||
-                              1 != this.field_f[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 1 &&
-                              this.field_f[1 + var8Lifetime1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 &&
-                              7 != this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j &&
-                              7 != this.field_f[var7Lifetime1Lifetime1][1 + var8Lifetime1].field_j) && 100.0 * Math.random() < 40.0) {
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 1;
+                              var4 < var8Lifetime1 && (1 != this.tiles[-1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
+                              7 != this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j &&
+                              this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 ||
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
+                              1 != this.tiles[var7Lifetime1Lifetime1][1 + var8Lifetime1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
+                              7 != this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 + 1].field_j &&
+                              7 != this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j ||
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
+                              1 != this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j &&
+                              this.tiles[1 + var8Lifetime1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
+                              7 != this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 7 ||
+                              1 != this.tiles[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 1 &&
+                              this.tiles[1 + var8Lifetime1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 &&
+                              7 != this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j &&
+                              7 != this.tiles[var7Lifetime1Lifetime1][1 + var8Lifetime1].field_j) && 100.0 * Math.random() < 40.0) {
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 1;
                             }
                             if (var7Lifetime1Lifetime1 > var3 &&
-                              var4 < var8Lifetime1 && (this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 1 &&
-                              this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[-1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 &&
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 7 &&
-                              this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 ||
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 + 1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
-                              this.field_f[var7Lifetime1Lifetime1][1 + var8Lifetime1].field_j != 7 &&
-                              this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 ||
-                              1 != this.field_f[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 1 &&
-                              1 != this.field_f[var8Lifetime1 + 1][var8Lifetime1].field_j &&
-                              7 != this.field_f[-1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 7 &&
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 7 ||
-                              this.field_f[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 1 &&
-                              this.field_f[1 + var8Lifetime1][var8Lifetime1].field_j != 1 &&
-                              this.field_f[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 &&
-                              7 != this.field_f[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j &&
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1 + 1].field_j != 7) && 20.0 > 100.0 * Math.random()) {
-                              this.field_f[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 7;
+                              var4 < var8Lifetime1 && (this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 1 &&
+                              this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[-1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 &&
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 7 &&
+                              this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 ||
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 + 1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j != 7 &&
+                              this.tiles[var7Lifetime1Lifetime1][1 + var8Lifetime1].field_j != 7 &&
+                              this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 ||
+                              1 != this.tiles[var7Lifetime1Lifetime1 - 1][var8Lifetime1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 1 &&
+                              1 != this.tiles[var8Lifetime1 + 1][var8Lifetime1].field_j &&
+                              7 != this.tiles[-1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 7 &&
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 - 1].field_j != 7 ||
+                              this.tiles[var7Lifetime1Lifetime1 + 1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j != 1 &&
+                              this.tiles[1 + var8Lifetime1][var8Lifetime1].field_j != 1 &&
+                              this.tiles[1 + var7Lifetime1Lifetime1][var8Lifetime1].field_j != 7 &&
+                              7 != this.tiles[var7Lifetime1Lifetime1][-1 + var8Lifetime1].field_j &&
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1 + 1].field_j != 7) && 20.0 > 100.0 * Math.random()) {
+                              this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 7;
                             }
                             var8Lifetime1++;
                           }
@@ -1443,17 +1443,17 @@ final class dk {
                       }
                       var15 = stackIn_416_0;
                       while (var15 < var4 + var5) {
-                        this.field_f[var14][var15].field_b = 0;
+                        this.tiles[var14][var15].field_b = 0;
                         stackIn_358_0Lifetime1 = var3;
                         stackIn_358_1Lifetime1 = var14;
                         if (stackIn_358_0Lifetime1 < stackIn_358_1Lifetime1 &&
                           var15 > var4) {
-                          this.field_f[var14][var15].field_b = var9;
+                          this.tiles[var14][var15].field_b = var9;
                           if ((var15 + var14 + (int)(Math.random() * 3.0)) % 2 == 0) {
-                            this.field_f[var14][var15].field_b = var10;
+                            this.tiles[var14][var15].field_b = var10;
                           }
                         }
-                        this.field_f[var14][var15].field_B = true;
+                        this.tiles[var14][var15].field_B = true;
                         if (var7Lifetime1Lifetime2 != var14 &&
                           var14 != 1 + var7Lifetime1Lifetime2 &&
                           ~var8Lifetime2 != ~var15 &&
@@ -1461,20 +1461,20 @@ final class dk {
                           if (1 + var3 >= var14 ||
                             1 + var4 >= var15) {
                             if (100.0 * Math.random() < 30.0) {
-                              this.field_f[var14][var15].field_j = 0;
+                              this.tiles[var14][var15].field_j = 0;
                             }
                           } else {
                             if (Math.random() * 100.0 < 65.0) {
-                              this.field_f[var14][var15].field_j = var11;
+                              this.tiles[var14][var15].field_j = var11;
                             }
                           }
                           if (~(1 + var3) == ~var14 &&
                             var15 != var4) {
-                            this.field_f[var14][var15].field_g = var12;
+                            this.tiles[var14][var15].field_g = var12;
                           }
                           if (var15 == var4 + 1 &&
                             ~var14 != ~var3) {
-                            this.field_f[var14][var15].field_k = var12;
+                            this.tiles[var14][var15].field_k = var12;
                           }
                         }
                         var15++;
@@ -1497,7 +1497,7 @@ final class dk {
             break;
           }
           if (stackIn_3_0 != stackIn_3_1) {
-            this.field_i = (e) null;
+            this.field_i = (BattleState) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1509,7 +1509,7 @@ final class dk {
 
     private final boolean a(boolean param0, int param1, int param2, byte param3, int param4) {
         RuntimeException decompiledCaughtException = null;
-        dl var6 = null;
+        MapTile var6 = null;
         RuntimeException var6_ref = null;
         try {
           if (param1 > 0 &&
@@ -1590,7 +1590,7 @@ final class dk {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        dl var8 = null;
+        MapTile var8 = null;
         int var9 = 0;
         int var5Lifetime1;
         var9 = Terraphoenix.field_V;
@@ -1613,17 +1613,17 @@ final class dk {
               if (var9 == 0) {
                 var5 = stackIn_31_0;
                 while (this.field_e > var5) {
-                  if (this.field_f[var4_int][var5] == null) {
+                  if (this.tiles[var4_int][var5] == null) {
                     var6 = -50;
                   } else {
-                    var6 = this.field_f[var4_int][var5].field_r;
+                    var6 = this.tiles[var4_int][var5].field_r;
                   }
                   incrementValue$2 = var3;
                   var3++;
                   var2[incrementValue$2] = (byte)(50 + var6);
                   var7 = 0;
                   if (var6 != -50) {
-                    var8 = this.field_f[var4_int][var5];
+                    var8 = this.tiles[var4_int][var5];
                     while (var7 == 0) {
                       incrementValue$3 = var3;
                       var3++;
@@ -1696,7 +1696,7 @@ final class dk {
         int stackIn_78_0 = 0;
         int stackIn_81_0 = 0;
         int stackIn_81_1 = 0;
-        dl stackIn_86_0 = null;
+        MapTile stackIn_86_0 = null;
         RuntimeException decompiledCaughtException = null;
         byte stackOut_54_0;
         int var2_int = 0;
@@ -1708,7 +1708,7 @@ final class dk {
         int var7 = 0;
         byte[] var8 = null;
         int var9 = 0;
-        dl stackIn_86_0Lifetime1;
+        MapTile stackIn_86_0Lifetime1;
         int stackIn_78_0Lifetime1;
         int stackIn_81_0Lifetime1;
         int stackIn_81_1Lifetime1;
@@ -1737,23 +1737,23 @@ final class dk {
                         var5 < this.field_b &&
                         this.field_b > var6) {
                         var7 = 64;
-                        if (this.field_f[-1 + var5][var6].field_x < var7) {
-                          var7 = this.field_f[-1 + var5][var6].field_x;
+                        if (this.tiles[-1 + var5][var6].field_x < var7) {
+                          var7 = this.tiles[-1 + var5][var6].field_x;
                         }
-                        if (this.field_f[var5][-1 + var6].field_x < var7) {
-                          var7 = this.field_f[var5][var6 - 1].field_x;
+                        if (this.tiles[var5][-1 + var6].field_x < var7) {
+                          var7 = this.tiles[var5][var6 - 1].field_x;
                         }
-                        if (var7 > this.field_f[-1 + var5][var6 - 1].field_x) {
-                          var7 = this.field_f[var5 - 1][-1 + var6].field_x;
+                        if (var7 > this.tiles[-1 + var5][var6 - 1].field_x) {
+                          var7 = this.tiles[var5 - 1][-1 + var6].field_x;
                         }
-                        this.field_f[var5][var6].field_x = var7 + 1;
+                        this.tiles[var5][var6].field_x = var7 + 1;
                       } else {
-                        this.field_f[var5][var6].field_x = 1;
+                        this.tiles[var5][var6].field_x = 1;
                       }
-                      if (this.field_f[var5][var6].field_B) {
-                        this.field_f[var5][var6].field_x = 0;
+                      if (this.tiles[var5][var6].field_B) {
+                        this.tiles[var5][var6].field_x = 0;
                       }
-                      if (16 <= this.field_f[var5][var6].field_x &&
+                      if (16 <= this.tiles[var5][var6].field_x &&
                         var5 % 16 == 15 &&
                         var6 % 16 == 15) {
                         var2_int = 0;
@@ -1769,7 +1769,7 @@ final class dk {
                 if (stackIn_43_0 == 0) {
                   var3 = (int)(Math.random() * (double)(this.field_b / 16)) * 16;
                   var4 = (int)(Math.random() * (double)(this.field_b / 16)) * 16;
-                  var5 = this.field_f[var3 + 15][15 + var4].field_x;
+                  var5 = this.tiles[var3 + 15][15 + var4].field_x;
                   if (var5 >= 16) {
                     var6Lifetime1 = 5;
                     var7Lifetime1 = 8;
@@ -1805,14 +1805,14 @@ final class dk {
             stackIn_78_0 = 0;
             var4 = stackIn_78_0;
             while (var4 < this.field_e) {
-              stackIn_86_0 = this.field_f[var3][var4];
+              stackIn_86_0 = this.tiles[var3][var4];
               if (stackIn_86_0 == null) {
-                this.field_f[var3][var4] = new dl(var3, var4, 0, this);
+                this.tiles[var3][var4] = new MapTile(var3, var4, 0, this);
               }
-              if (this.field_f[var3][var4].field_b == -1 ||
-                -1 == this.field_f[var3][var4].field_v) {
-                this.field_f[var3][var4].field_b = 1;
-                this.field_f[var3][var4].field_v = 0;
+              if (this.tiles[var3][var4].field_b == -1 ||
+                -1 == this.tiles[var3][var4].field_v) {
+                this.tiles[var3][var4].field_b = 1;
+                this.tiles[var3][var4].field_v = 0;
               }
               var4++;
             }
@@ -1829,14 +1829,14 @@ final class dk {
               }
               var4 = 0;
               while (var4 < this.field_e) {
-                stackIn_86_0Lifetime1 = this.field_f[var3][var4];
+                stackIn_86_0Lifetime1 = this.tiles[var3][var4];
                 stackIn_81_0Lifetime1 = ~stackIn_86_0Lifetime1.field_j;
                 stackIn_81_1Lifetime1 = -44;
                 if (stackIn_81_0Lifetime1 == stackIn_81_1Lifetime1 ||
-                  this.field_f[var3][var4].field_j == 44) {
-                  this.field_f[var3][var4].field_j = -1;
-                  this.field_f[var3][var4].field_v = 0;
-                  this.field_f[var3][var4].field_C.field_v = 0;
+                  this.tiles[var3][var4].field_j == 44) {
+                  this.tiles[var3][var4].field_j = -1;
+                  this.tiles[var3][var4].field_v = 0;
+                  this.tiles[var3][var4].field_C.field_v = 0;
                 }
                 var4++;
               }
@@ -1869,7 +1869,7 @@ final class dk {
         int var10_int = 0;
         RuntimeException var10 = null;
         int var11 = 0;
-        dl var12 = null;
+        MapTile var12 = null;
         int var13 = 0;
         int var14_int = 0;
         ue var14 = null;
@@ -2130,7 +2130,7 @@ final class dk {
     final void b(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        r var2 = null;
+        BattleUnit var2 = null;
         int var3 = 0;
         int var4 = 0;
         int stackIn_13_0 = 0;
@@ -2160,7 +2160,7 @@ final class dk {
           var3Lifetime1 = stackIn_13_0;
           var3Lifetime2 = 0;
           while (var3Lifetime2 < 12) {
-            var2 = this.field_i.field_C[var3Lifetime2];
+            var2 = this.field_i.units[var3Lifetime2];
             if (var4 != 0) {
               return;
             }
@@ -2219,15 +2219,15 @@ final class dk {
         }
     }
 
-    final dl a(int param0, int param1, int param2, int param3) {
-        dl var5 = null;
+    final MapTile a(int param0, int param1, int param2, int param3) {
+        MapTile var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         Object stackIn_14_0 = null;
         Object stackIn_19_0 = null;
         Object stackIn_26_0 = null;
-        dl stackIn_29_0 = null;
+        MapTile stackIn_29_0 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Terraphoenix.field_V;
         try {
@@ -2235,16 +2235,16 @@ final class dk {
             param1 >= 0 &&
             this.field_b > param3 &&
             this.field_e > param1) {
-            var5 = this.field_f[param3][param1];
+            var5 = this.tiles[param3][param1];
             if (null == var5) {
               stackIn_19_0 = null;
-              return (dl) (stackIn_19_0);
+              return (MapTile) (stackIn_19_0);
             }
             var6 = -24 / ((27 - param0) / 52);
             while (param2 > var5.field_r) {
               if (null == var5.field_C) {
                 stackIn_26_0 = null;
-                return (dl) (stackIn_26_0);
+                return (MapTile) (stackIn_26_0);
               }
               var5 = var5.field_C;
               if (var7 == 0) {
@@ -2256,7 +2256,7 @@ final class dk {
             return stackIn_29_0;
           }
           stackIn_14_0 = null;
-          return (dl) (stackIn_14_0);
+          return (MapTile) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
@@ -2292,7 +2292,7 @@ final class dk {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        dl var12 = null;
+        MapTile var12 = null;
         int var13 = 0;
         var13 = Terraphoenix.field_V;
         try {
@@ -2344,9 +2344,9 @@ final class dk {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      this.field_f[var8][var9] = new dl(var8, var9, var10, this);
-                      this.field_f[var8][var9].field_B = true;
-                      var12 = this.field_f[var8][var9];
+                      this.tiles[var8][var9] = new MapTile(var8, var9, var10, this);
+                      this.tiles[var8][var9].field_B = true;
+                      var12 = this.tiles[var8][var9];
                       while (var11 != 1) {
                         incrementValue$4 = var5_int;
                         var5_int++;
@@ -2381,7 +2381,7 @@ final class dk {
                           (stackIn_49_0 = !(var12.field_c.field_a))) {
                           var12.field_a = false;
                         }
-                        var12.field_C = new dl(var8, var9, var12.field_r + 1, this);
+                        var12.field_C = new MapTile(var8, var9, var12.field_r + 1, this);
                         var12.field_C.field_c = var12;
                         var12 = var12.field_C;
                         var11 = 0;
@@ -2426,7 +2426,7 @@ final class dk {
         }
     }
 
-    final boolean a(byte param0, r param1, r param2) {
+    final boolean a(byte param0, BattleUnit param1, BattleUnit param2) {
         boolean discarded$1 = false;
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
@@ -2486,10 +2486,10 @@ final class dk {
         Object stackIn_230_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        dl var8 = null;
+        MapTile var8 = null;
         RuntimeException var8_ref = null;
         int var9_int = 0;
-        dl var9 = null;
+        MapTile var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2624,61 +2624,61 @@ final class dk {
                             if (var17 > 1) {
                               var15 = 0;
                               var14 = -1;
-                              if (this.field_d[var17 + var14][var15 + var18] > var16_int - (-this.field_f[var17][var18].a(var15, 1000, param3, var14) - var19)) {
-                                this.field_d[var14 + var17][var15 + var18] = var19 + this.field_f[var17][var18].a(var15, 1000, param3, var14) + var16_int;
+                              if (this.field_d[var17 + var14][var15 + var18] > var16_int - (-this.tiles[var17][var18].a(var15, 1000, param3, var14) - var19)) {
+                                this.field_d[var14 + var17][var15 + var18] = var19 + this.tiles[var17][var18].a(var15, 1000, param3, var14) + var16_int;
                               }
                             }
                             if (var17 > 1 &&
                               var18 > 1) {
                               var15Lifetime2 = -1;
                               var14Lifetime2 = -1;
-                              if (this.field_d[var14Lifetime2 + var17][var15Lifetime2 + var18] > (var16_int + this.field_f[var17][var18].a(var15Lifetime2, 1000, param3, var14Lifetime2) + var19)) {
-                                this.field_d[var17 + var14Lifetime2][var18 + var15Lifetime2] = var19 + (this.field_f[var17][var18].a(var15Lifetime2, 1000, param3, var14Lifetime2) + var16_int);
+                              if (this.field_d[var14Lifetime2 + var17][var15Lifetime2 + var18] > (var16_int + this.tiles[var17][var18].a(var15Lifetime2, 1000, param3, var14Lifetime2) + var19)) {
+                                this.field_d[var17 + var14Lifetime2][var18 + var15Lifetime2] = var19 + (this.tiles[var17][var18].a(var15Lifetime2, 1000, param3, var14Lifetime2) + var16_int);
                               }
                             }
                             if (var17 > 1 &&
                               var18 < (-2 + this.field_e)) {
                               var14Lifetime3 = -1;
                               var15Lifetime3 = 1;
-                              if (this.field_d[var17 + var14Lifetime3][var18 + var15Lifetime3] > (this.field_f[var17][var18].a(var15Lifetime3, 1000, param3, var14Lifetime3) + var16_int + var19)) {
-                                this.field_d[var17 + var14Lifetime3][var15Lifetime3 + var18] = var19 + (var16_int + this.field_f[var17][var18].a(var15Lifetime3, 1000, param3, var14Lifetime3));
+                              if (this.field_d[var17 + var14Lifetime3][var18 + var15Lifetime3] > (this.tiles[var17][var18].a(var15Lifetime3, 1000, param3, var14Lifetime3) + var16_int + var19)) {
+                                this.field_d[var17 + var14Lifetime3][var15Lifetime3 + var18] = var19 + (var16_int + this.tiles[var17][var18].a(var15Lifetime3, 1000, param3, var14Lifetime3));
                               }
                             }
                             if (-2 + this.field_b > var17) {
                               var14Lifetime4 = 1;
                               var15Lifetime4 = 0;
-                              if (this.field_d[var17 + var14Lifetime4][var18 + var15Lifetime4] > this.field_f[var17][var18].a(var15Lifetime4, 1000, param3, var14Lifetime4) + var16_int + var19) {
-                                this.field_d[var17 + var14Lifetime4][var15Lifetime4 + var18] = var16_int + (this.field_f[var17][var18].a(var15Lifetime4, 1000, param3, var14Lifetime4) + var19);
+                              if (this.field_d[var17 + var14Lifetime4][var18 + var15Lifetime4] > this.tiles[var17][var18].a(var15Lifetime4, 1000, param3, var14Lifetime4) + var16_int + var19) {
+                                this.field_d[var17 + var14Lifetime4][var15Lifetime4 + var18] = var16_int + (this.tiles[var17][var18].a(var15Lifetime4, 1000, param3, var14Lifetime4) + var19);
                               }
                             }
                             if ((-2 + this.field_b) > var17 &&
                               1 < var18) {
                               var14Lifetime5 = 1;
                               var15Lifetime5 = -1;
-                              if (this.field_d[var14Lifetime5 + var17][var18 + var15Lifetime5] > (this.field_f[var17][var18].a(var15Lifetime5, 1000, param3, var14Lifetime5) + var16_int + var19)) {
-                                this.field_d[var14Lifetime5 + var17][var15Lifetime5 + var18] = var19 + var16_int + this.field_f[var17][var18].a(var15Lifetime5, 1000, param3, var14Lifetime5);
+                              if (this.field_d[var14Lifetime5 + var17][var18 + var15Lifetime5] > (this.tiles[var17][var18].a(var15Lifetime5, 1000, param3, var14Lifetime5) + var16_int + var19)) {
+                                this.field_d[var14Lifetime5 + var17][var15Lifetime5 + var18] = var19 + var16_int + this.tiles[var17][var18].a(var15Lifetime5, 1000, param3, var14Lifetime5);
                               }
                             }
                             if (var17 < (-2 + this.field_b) &&
                               this.field_e - 2 > var18) {
                               var14Lifetime6 = 1;
                               var15Lifetime6 = 1;
-                              if (this.field_d[var17 + var14Lifetime6][var18 + var15Lifetime6] > (var19 + (this.field_f[var17][var18].a(var15Lifetime6, 1000, param3, var14Lifetime6) + var16_int))) {
-                                this.field_d[var17 + var14Lifetime6][var18 + var15Lifetime6] = this.field_f[var17][var18].a(var15Lifetime6, 1000, param3, var14Lifetime6) + var16_int + var19;
+                              if (this.field_d[var17 + var14Lifetime6][var18 + var15Lifetime6] > (var19 + (this.tiles[var17][var18].a(var15Lifetime6, 1000, param3, var14Lifetime6) + var16_int))) {
+                                this.field_d[var17 + var14Lifetime6][var18 + var15Lifetime6] = this.tiles[var17][var18].a(var15Lifetime6, 1000, param3, var14Lifetime6) + var16_int + var19;
                               }
                             }
                             if (var18 > 1) {
                               var14Lifetime7 = 0;
                               var15Lifetime7 = -1;
-                              if (this.field_d[var17 + var14Lifetime7][var18 + var15Lifetime7] > var19 + (this.field_f[var17][var18].a(var15Lifetime7, 1000, param3, var14Lifetime7) + var16_int)) {
-                                this.field_d[var14Lifetime7 + var17][var15Lifetime7 + var18] = var16_int + this.field_f[var17][var18].a(var15Lifetime7, 1000, param3, var14Lifetime7) + var19;
+                              if (this.field_d[var17 + var14Lifetime7][var18 + var15Lifetime7] > var19 + (this.tiles[var17][var18].a(var15Lifetime7, 1000, param3, var14Lifetime7) + var16_int)) {
+                                this.field_d[var14Lifetime7 + var17][var15Lifetime7 + var18] = var16_int + this.tiles[var17][var18].a(var15Lifetime7, 1000, param3, var14Lifetime7) + var19;
                               }
                             }
                             if (this.field_e - 2 > var18) {
                               var15Lifetime8 = 1;
                               var14Lifetime8 = 0;
-                              if (this.field_d[var17 + var14Lifetime8][var15Lifetime8 + var18] > var19 + (var16_int + this.field_f[var17][var18].a(var15Lifetime8, 1000, param3, var14Lifetime8))) {
-                                this.field_d[var14Lifetime8 + var17][var18 + var15Lifetime8] = this.field_f[var17][var18].a(var15Lifetime8, 1000, param3, var14Lifetime8) + var16_int + var19;
+                              if (this.field_d[var17 + var14Lifetime8][var15Lifetime8 + var18] > var19 + (var16_int + this.tiles[var17][var18].a(var15Lifetime8, 1000, param3, var14Lifetime8))) {
+                                this.field_d[var14Lifetime8 + var17][var18 + var15Lifetime8] = this.tiles[var17][var18].a(var15Lifetime8, 1000, param3, var14Lifetime8) + var16_int + var19;
                               }
                             }
                           }
@@ -2742,7 +2742,7 @@ final class dk {
                               (var20 + var14Lifetime1) < (this.field_b - 1) &&
                               (-1 + this.field_e) > (var21 + var15Lifetime1) &&
                               var19Lifetime1 > this.field_d[var20 + var14Lifetime1][var21 + var15Lifetime1] &&
-                              1000 > this.field_f[var20 + var14Lifetime1][var15Lifetime1 + var21].a(-var15Lifetime1, 1000, param3, -var14Lifetime1)) {
+                              1000 > this.tiles[var20 + var14Lifetime1][var15Lifetime1 + var21].a(-var15Lifetime1, 1000, param3, -var14Lifetime1)) {
                               var19Lifetime1 = this.field_d[var20 + var14Lifetime1][var15Lifetime1 + var21];
                               var17Lifetime1 = var14Lifetime1;
                               var18Lifetime1 = var15Lifetime1;
@@ -2754,7 +2754,7 @@ final class dk {
                         }
                       } else {
                         if (var16 == null) {
-                          var16 = new ue(var17Lifetime1, var18Lifetime1, this.field_f[var20][var21].a(var18Lifetime1, 1000, param3, var17Lifetime1));
+                          var16 = new ue(var17Lifetime1, var18Lifetime1, this.tiles[var20][var21].a(var18Lifetime1, 1000, param3, var17Lifetime1));
                           if (var22 != 0) {
                             ((ue) (var16)).a(-var19Lifetime1 + this.field_d[var20][var21], var18Lifetime1, var17Lifetime1, (byte) -91);
                           }
@@ -2796,7 +2796,7 @@ final class dk {
 
     final boolean b(int param0, int param1, int param2, int param3) {
         boolean discarded$1 = false;
-        dl var5 = null;
+        MapTile var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2818,20 +2818,20 @@ final class dk {
         }
     }
 
-    dk(int param0, int param1) {
+    LevelMap(int param0, int param1) {
         this.field_k = 0;
         try {
           this.field_e = param1;
           this.field_b = param0;
-          this.field_f = new dl[this.field_b][this.field_e];
+          this.tiles = new MapTile[this.field_b][this.field_e];
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void a(boolean param0, boolean param1) {
-        dl stackIn_89_0 = null;
-        dl stackIn_104_0;
+        MapTile stackIn_89_0 = null;
+        MapTile stackIn_104_0;
         int stackIn_104_1;
         int stackIn_104_2;
         Object stackIn_104_3;
@@ -2854,16 +2854,16 @@ final class dk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        dl var14 = null;
+        MapTile var14 = null;
         Object var15 = null;
         Object var16 = null;
         int var17 = 0;
-        dl stackIn_89_0Lifetime1;
-        dl var14Lifetime1;
+        MapTile stackIn_89_0Lifetime1;
+        MapTile var14Lifetime1;
         Object var15Lifetime1;
         Object var16Lifetime1;
-        dl stackIn_89_0Lifetime2;
-        dl var14Lifetime2;
+        MapTile stackIn_89_0Lifetime2;
+        MapTile var14Lifetime2;
         Object var15Lifetime2;
         Object var16Lifetime2;
         int stackIn_184_0Lifetime1;
@@ -3069,19 +3069,19 @@ final class dk {
                           }
                         }
                       }
-                      stackIn_89_0Lifetime2 = this.field_f[var11][var12];
+                      stackIn_89_0Lifetime2 = this.tiles[var11][var12];
                       while (true) {
                         if (stackIn_89_0Lifetime2 == null) {
                           bm.a(var6, var5, (byte) 127);
                         } else {
-                          stackIn_104_0 = this.field_f[var11][var12];
+                          stackIn_104_0 = this.tiles[var11][var12];
                           stackIn_104_1 = var5;
                           stackIn_104_2 = var3_int;
                           stackIn_104_3 = var4;
                           stackIn_104_4 = var6;
                           stackIn_104_5 = 125;
                           stackIn_105_6 = (var11 == IntrusiveNode.field_c) && (~vf.field_a == ~var12) && (param1);
-                          var3_int = ((dl) (Object) stackIn_104_0).a(stackIn_104_1, stackIn_104_2, (gi[]) (stackIn_104_3), stackIn_104_4, (byte) stackIn_104_5, stackIn_105_6);
+                          var3_int = ((MapTile) (Object) stackIn_104_0).a(stackIn_104_1, stackIn_104_2, (gi[]) (stackIn_104_3), stackIn_104_4, (byte) stackIn_104_5, stackIn_105_6);
                         }
                         if (IntrusiveNode.field_c != var11) {
                           decompiledFrameCompleted3 = false;
@@ -3323,17 +3323,17 @@ final class dk {
         int var14 = 0;
         int var15 = 0;
         int var16_int = 0;
-        r var16 = null;
+        BattleUnit var16 = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        dl var20 = null;
+        MapTile var20 = null;
         int var21 = 0;
         int var22 = 0;
-        dl var22_ref_dl = null;
+        MapTile var22_ref_dl = null;
         int var23 = 0;
         int var24 = 0;
-        r var16Lifetime1;
+        BattleUnit var16Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
         int var16_intLifetime1;
@@ -3488,7 +3488,7 @@ final class dk {
                               var21 = 1;
                             }
                           }
-                          if (this.field_i.field_h.field_f[var17][var18].field_v >= 3) {
+                          if (this.field_i.map.tiles[var17][var18].field_v >= 3) {
                             var21 = 1;
                           }
                           var22_ref_dl = var20;
@@ -3677,7 +3677,7 @@ final class dk {
                 if (50 != param2) {
                   var17Lifetime1 = 0;
                   while (100 > var17Lifetime1) {
-                    var16 = this.field_i.field_C[var17Lifetime1];
+                    var16 = this.field_i.units[var17Lifetime1];
                     if (var24 != 0) {
                       return;
                     }
@@ -3695,8 +3695,8 @@ final class dk {
                           rh.field_b[6].c(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
                         }
                         if (var16.field_Z != null &&
-                          var16.field_c != null &&
-                          var16 == var16.field_c.field_h) {
+                          var16.tile != null &&
+                          var16 == var16.tile.field_h) {
                           rh.field_b[0].c(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
                           if (var16 == this.field_i.field_q) {
                             rh.field_b[0].f(var6Lifetime1Lifetime2 - 6, var7Lifetime1Lifetime2 - 6);
@@ -3713,7 +3713,7 @@ final class dk {
                             rh.field_b[1].c(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
                           }
                           if (((null != this.field_i.field_q)) &&
-                            (!(!this.field_i.field_h.a((byte) -93, this.field_i.field_q, var16)))) {
+                            (!(!this.field_i.map.a((byte) -93, this.field_i.field_q, var16)))) {
                             l.a(2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 + 2, 4, 16711680);
                             l.a(var6Lifetime1Lifetime2 + 2, 2 + var7Lifetime1Lifetime2, 5, 8388608);
                           }
@@ -3742,7 +3742,7 @@ final class dk {
             }
             var17Lifetime2 = 0;
             while (var17Lifetime2 < 100) {
-              var16Lifetime1 = this.field_i.field_C[var17Lifetime2];
+              var16Lifetime1 = this.field_i.units[var17Lifetime2];
               if (var24 != 0) {
                 return;
               }
@@ -3776,7 +3776,7 @@ final class dk {
                       rh.field_b[1].c(-2 + var6Lifetime1Lifetime3, -2 + var7Lifetime1Lifetime3);
                     }
                     if (((null != this.field_i.field_q)) &&
-                      (!(!this.field_i.field_h.a((byte) -93, this.field_i.field_q, var16Lifetime1)))) {
+                      (!(!this.field_i.map.a((byte) -93, this.field_i.field_q, var16Lifetime1)))) {
                       l.a(2 + var6Lifetime1Lifetime3, 2 + var7Lifetime1Lifetime3, 4, 16711680);
                       l.a(2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 + 2, 5, 8388608);
                     }
@@ -3807,7 +3807,7 @@ final class dk {
         }
     }
 
-    dk(byte[] param0) {
+    LevelMap(byte[] param0) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         RuntimeException runtimeException = null;
@@ -3825,7 +3825,7 @@ final class dk {
           incrementValue$5 = var2_int;
           var2_int++;
           this.field_e = param0[incrementValue$5];
-          this.field_f = new dl[this.field_b][this.field_e];
+          this.tiles = new MapTile[this.field_b][this.field_e];
           this.a(0, (byte) 104, 0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3842,7 +3842,7 @@ final class dk {
         }
     }
 
-    dk(e param0) {
+    LevelMap(BattleState param0) {
         int stackIn_74_1 = 0;
         int stackIn_82_1 = 0;
         int stackIn_96_1 = 0;
@@ -4102,7 +4102,7 @@ final class dk {
           }
           this.field_d = new int[this.field_b][this.field_e];
           this.field_g = new int[this.field_b][this.field_e];
-          this.field_f = new dl[this.field_b][this.field_e];
+          this.tiles = new MapTile[this.field_b][this.field_e];
           var6 = 0;
           scanLoop2: while (true) {
             if (var6 < this.field_b) {
@@ -4112,7 +4112,7 @@ final class dk {
               }
               var7 = stackIn_124_0;
               while (var7 < this.field_e) {
-                this.field_f[var6][var7] = new dl(var6, var7, 0, this);
+                this.tiles[var6][var7] = new MapTile(var6, var7, 0, this);
                 var7++;
               }
               var6++;
@@ -4235,17 +4235,17 @@ final class dk {
                   var13 = stackIn_257_0;
                   while (var13 < this.field_b) {
                     stackIn_268_0 = 34;
-                    stackIn_268_1 = this.field_f[var13][1].field_j;
+                    stackIn_268_1 = this.tiles[var13][1].field_j;
                     if (var22 != 0) {
                       if (stackIn_268_0 < stackIn_268_1) {
                         stackIn_279_0 = -35;
-                        stackIn_279_1 = ~this.field_f[1][var13].field_j;
+                        stackIn_279_1 = ~this.tiles[1][var13].field_j;
                         break regionExit3;
                       }
                       break scanLoop4;
                     }
                     if (stackIn_268_0 != stackIn_268_1) {
-                      this.field_f[var13][2].field_k = -1;
+                      this.tiles[var13][2].field_k = -1;
                     }
                     var13++;
                   }
@@ -4257,12 +4257,12 @@ final class dk {
                       break scanLoop4;
                     }
                     stackIn_279_0 = -35;
-                    stackIn_279_1 = ~this.field_f[1][var13].field_j;
+                    stackIn_279_1 = ~this.tiles[1][var13].field_j;
                     if (var22 != 0) {
                       break regionExit3;
                     }
                     if (stackIn_279_0 != stackIn_279_1) {
-                      this.field_f[2][var13].field_g = -1;
+                      this.tiles[2][var13].field_g = -1;
                     }
                     var13++;
                   }
@@ -4366,8 +4366,8 @@ final class dk {
                   stackIn_340_0 = -5;
                   stackIn_340_1 = ~var10;
                   if (stackIn_340_0 < stackIn_340_1) {
-                    this.field_f[var6][var7].field_B = true;
-                    this.field_f[var6][var7].field_b = 1;
+                    this.tiles[var6][var7].field_B = true;
+                    this.tiles[var6][var7].field_b = 1;
                   }
                   var7++;
                 }
@@ -4400,8 +4400,8 @@ final class dk {
                   stackIn_357_0 = ~var10;
                   stackIn_357_1 = -8;
                   if (stackIn_357_0 > stackIn_357_1) {
-                    this.field_f[var6][var7].field_B = true;
-                    this.field_f[var6][var7].field_b = 1;
+                    this.tiles[var6][var7].field_B = true;
+                    this.tiles[var6][var7].field_b = 1;
                   }
                   var7++;
                 }
@@ -4434,8 +4434,8 @@ final class dk {
                   stackIn_376_0 = ~var10;
                   stackIn_376_1 = -9;
                   if (stackIn_376_0 > stackIn_376_1) {
-                    this.field_f[var6][var7].field_B = true;
-                    this.field_f[var6][var7].field_b = 1;
+                    this.tiles[var6][var7].field_B = true;
+                    this.tiles[var6][var7].field_b = 1;
                   }
                   var7++;
                 }
@@ -4487,21 +4487,21 @@ final class dk {
                     if (stackIn_405_0 != 0 &&
                       var14 != 0) {
                       var15 = 32;
-                      if (var15 > this.field_f[var13 - 1][var14].field_x) {
-                        var15 = this.field_f[var13 - 1][var14].field_x;
+                      if (var15 > this.tiles[var13 - 1][var14].field_x) {
+                        var15 = this.tiles[var13 - 1][var14].field_x;
                       }
-                      if (var15 > this.field_f[var13][-1 + var14].field_x) {
-                        var15 = this.field_f[var13][-1 + var14].field_x;
+                      if (var15 > this.tiles[var13][-1 + var14].field_x) {
+                        var15 = this.tiles[var13][-1 + var14].field_x;
                       }
-                      if (this.field_f[var13 - 1][-1 + var14].field_x < var15) {
-                        var15 = this.field_f[-1 + var13][var14 - 1].field_x;
+                      if (this.tiles[var13 - 1][-1 + var14].field_x < var15) {
+                        var15 = this.tiles[-1 + var13][var14 - 1].field_x;
                       }
-                      this.field_f[var13][var14].field_x = 1 + var15;
+                      this.tiles[var13][var14].field_x = 1 + var15;
                     } else {
-                      this.field_f[var13][var14].field_x = 1;
+                      this.tiles[var13][var14].field_x = 1;
                     }
-                    if (this.field_f[var13][var14].field_B) {
-                      this.field_f[var13][var14].field_x = 0;
+                    if (this.tiles[var13][var14].field_B) {
+                      this.tiles[var13][var14].field_x = 0;
                     }
                     var14++;
                   }
@@ -4610,7 +4610,7 @@ final class dk {
                               var16 = ((byte[]) (var13_ref))[1] / 2 + 1;
                             }
                           }
-                          if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
+                          if ((((byte[]) (var13_ref))[0] + 1) > this.tiles[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
                             continue scanLoop6;
                           }
                           if (var22 == 0) {
@@ -4634,7 +4634,7 @@ final class dk {
                             var16 = ((byte[]) (var13_ref))[1] / 2 + 1;
                           }
                         }
-                        if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
+                        if ((((byte[]) (var13_ref))[0] + 1) > this.tiles[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
                           continue scanLoop6;
                         }
                       } while (var22 != 0);
@@ -4676,7 +4676,7 @@ final class dk {
                               var16 = ((byte[]) (var13_ref))[1] / 2 + 1;
                             }
                           }
-                          if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
+                          if ((((byte[]) (var13_ref))[0] + 1) > this.tiles[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
                             continue scanLoop7;
                           }
                           if (var22 == 0) {
@@ -4700,7 +4700,7 @@ final class dk {
                             var16 = ((byte[]) (var13_ref))[1] / 2 + 1;
                           }
                         }
-                        if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
+                        if ((((byte[]) (var13_ref))[0] + 1) > this.tiles[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
                           continue scanLoop7;
                         }
                       } while (var22 != 0);
@@ -4792,7 +4792,7 @@ final class dk {
                           stackIn_548_1 = ~var14;
                           if (stackIn_548_0 >= stackIn_548_1 &&
                             (double)var14 * Math.random() > (double)var19) {
-                            this.field_f[var20][var21].a(false);
+                            this.tiles[var20][var21].a(false);
                           }
                           var21++;
                         }
@@ -4831,11 +4831,11 @@ final class dk {
                     }
                     var14 = 0;
                     while (var14 < this.field_e) {
-                      this.field_f[var13][var14].a(0);
+                      this.tiles[var13][var14].a(0);
                       stackIn_571_0 = param0.field_G.field_Bb;
                       stackIn_571_1 = 1;
                       if (stackIn_571_0 == stackIn_571_1) {
-                        this.field_f[var13][var14].field_z = true;
+                        this.tiles[var13][var14].field_z = true;
                       }
                       var14++;
                     }

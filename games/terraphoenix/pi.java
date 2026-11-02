@@ -292,8 +292,8 @@ final class pi {
         }
         this.field_i = param0.h(-110);
         this.field_t = param0.h(112);
-        this.field_r = param0.i(-25578);
-        this.field_s = param0.i(-25578);
+        this.field_r = param0.readUnsignedShort(-25578);
+        this.field_s = param0.readUnsignedShort(-25578);
         this.field_k = new ek();
         this.field_h = new fj();
         this.field_k.a(param0, this.field_h);

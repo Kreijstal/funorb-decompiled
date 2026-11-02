@@ -7,11 +7,11 @@ class vj extends eb {
     static int field_P;
     private hh field_N;
     static boolean field_Q;
-    private jj field_R;
+    private IntrusiveDeque field_R;
     private String[] field_M;
     static String[] field_O;
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -110,7 +110,7 @@ class vj extends eb {
         }
     }
 
-    boolean a(byte param0, gl param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -143,7 +143,7 @@ class vj extends eb {
         if (null == vi.field_n) {
           vi.field_n = new na(jl.field_I, m.field_e);
         }
-        jl.field_I.a((gl) (vi.field_n), (byte) -1);
+        jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
     }
 
     final void b(boolean param0) {
@@ -167,14 +167,14 @@ class vj extends eb {
         String var17;
         int var7Lifetime1;
         var16 = Terraphoenix.field_V;
-        this.field_R = new jj();
+        this.field_R = new IntrusiveDeque();
         if (!param0) {
           var17 = (String) null;
           this.a(-95, (String) null, (byte) -110);
         }
         var2 = 0;
         var3 = (w) ((Object) this.field_l);
-        var4 = var3.a((gl) (this), -19302);
+        var4 = var3.a((UiWidget) (this), -19302);
         while (true) {
           var5 = this.field_o.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -263,8 +263,8 @@ class vj extends eb {
         hh var6 = this.field_N;
         if (var6 == null) {
         } else {
-          var7 = var9.a((gl) (this), -37, param0);
-          var8 = var9.a((gl) (this), param3, (byte) -72);
+          var7 = var9.a((UiWidget) (this), -37, param0);
+          var8 = var9.a((UiWidget) (this), param3, (byte) -72);
           do {
             ed.a(var6.field_q + 2, var6.field_h + 2, var8 + (var6.field_o - 2), 52, var7 - (-var6.field_n + 2));
             var6 = var6.field_j;
@@ -273,7 +273,7 @@ class vj extends eb {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(param0, (byte) 88, param3, param2, ((w) ((Object) this.field_l)).b((gl) (this), (byte) 112));
+        this.a(param0, (byte) 88, param3, param2, ((w) ((Object) this.field_l)).b((UiWidget) (this), (byte) 112));
         if (param1 >= -4) {
           field_L = (String) null;
         }

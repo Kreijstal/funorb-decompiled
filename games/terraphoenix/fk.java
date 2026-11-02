@@ -157,8 +157,8 @@ final class fk {
         int var3Lifetime1;
         this.field_a.payload = param0;
         this.field_a.position = 10;
-        int var2 = this.field_a.i(-25578);
-        this.field_e = this.field_a.i(-25578);
+        int var2 = this.field_a.readUnsignedShort(-25578);
+        this.field_e = this.field_a.readUnsignedShort(-25578);
         this.field_h = 500000;
         this.field_d = new int[var2];
         int var3 = 0;

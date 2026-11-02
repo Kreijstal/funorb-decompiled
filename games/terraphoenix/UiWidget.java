@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class gl extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     cj field_l;
     static String field_t;
     int field_j;
@@ -32,7 +32,7 @@ class gl extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 20) {
-            gl.a(true);
+            UiWidget.a(true);
           }
           stackIn_3_0 = new ec(param0);
           return stackIn_3_0;
@@ -50,11 +50,11 @@ class gl extends IntrusiveNode {
         }
     }
 
-    gl(String param0, sc param1) {
+    UiWidget(String param0, sc param1) {
         this(param0, vc.field_c.field_t, param1);
     }
 
-    boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -115,7 +115,7 @@ class gl extends IntrusiveNode {
     String f(int param0) {
         if (param0 < 70) {
           String var3 = (String) null;
-          gl.b((String) null, 49);
+          UiWidget.b((String) null, 49);
           if (this.field_s) {
             return this.field_x;
           }
@@ -127,7 +127,7 @@ class gl extends IntrusiveNode {
         return null;
     }
 
-    boolean a(char param0, gl param1, int param2, int param3) {
+    boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -249,9 +249,9 @@ class gl extends IntrusiveNode {
         }
     }
 
-    boolean a(byte param0, gl param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -260,8 +260,8 @@ class gl extends IntrusiveNode {
           if (param0 > 2) {
             return false;
           }
-          var4 = (gl) null;
-          this.a((gl) null, -124, 106, 49, -92, 11, (byte) 17);
+          var4 = (UiWidget) null;
+          this.a((UiWidget) null, -124, 106, 49, -92, 11, (byte) 17);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,7 +297,7 @@ class gl extends IntrusiveNode {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
-          b.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.f(105));
           return param0;
         }
         if (vj.field_P == 0) {
@@ -329,19 +329,19 @@ class gl extends IntrusiveNode {
                   }
                 }
                 ab.field_k = oh.field_f;
-                b.a((byte) 16, this.f(105));
+                RandomAccessCacheFile.a((byte) 16, this.f(105));
                 return param0;
               }
             }
           }
           if (oh.field_f != 0) {
             ab.field_k = oh.field_f;
-            b.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.f(105));
             return param0;
           }
           if (0 == ab.field_k) {
             ab.field_k = oh.field_f;
-            b.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.f(105));
             return param0;
           }
           this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
@@ -358,7 +358,7 @@ class gl extends IntrusiveNode {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
-          b.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.f(105));
           return param0;
         }
         if (var5 != 0) {
@@ -375,12 +375,12 @@ class gl extends IntrusiveNode {
           }
           if (oh.field_f != 0) {
             ab.field_k = oh.field_f;
-            b.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.f(105));
             return param0;
           }
           if (0 == ab.field_k) {
             ab.field_k = oh.field_f;
-            b.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.f(105));
             return param0;
           }
           this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
@@ -396,7 +396,7 @@ class gl extends IntrusiveNode {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
-          b.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.f(105));
           return param0;
         }
         if (ma.field_I != 0 &&
@@ -407,12 +407,12 @@ class gl extends IntrusiveNode {
         }
         if (oh.field_f != 0) {
           ab.field_k = oh.field_f;
-          b.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.f(105));
           return param0;
         }
         if (0 == ab.field_k) {
           ab.field_k = oh.field_f;
-          b.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.f(105));
           return param0;
         }
         this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
@@ -429,7 +429,7 @@ class gl extends IntrusiveNode {
           this.e(-31);
         }
         ab.field_k = oh.field_f;
-        b.a((byte) 16, this.f(105));
+        RandomAccessCacheFile.a((byte) 16, this.f(105));
         return param0;
     }
 
@@ -443,7 +443,7 @@ class gl extends IntrusiveNode {
         this.field_n = param4;
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
@@ -488,7 +488,7 @@ class gl extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           this.field_j = 0;
           if (param0 < 36) {
@@ -501,7 +501,7 @@ class gl extends IntrusiveNode {
 
     int d(byte param0) {
         if (param0 < 23) {
-          gl.a(false);
+          UiWidget.a(false);
           return 0;
         }
         return 0;
@@ -578,7 +578,7 @@ class gl extends IntrusiveNode {
           }
           if (this.field_l != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_l instanceof gl)) {
+            if (!(this.field_l instanceof UiWidget)) {
               discarded$5 = param3.append(this.field_l);
               if (var6 != 0) {
                 param3 = this.a(34, param3, 1 + param1, param0);
@@ -589,7 +589,7 @@ class gl extends IntrusiveNode {
           }
           if (null != this.field_r) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_r instanceof gl)) {
+            if (!(this.field_r instanceof UiWidget)) {
               discarded$7 = param3.append(this.field_r);
               if (var6 != 0) {
                 param3 = this.a(34, param3, param1 + 1, param0);
@@ -670,7 +670,7 @@ class gl extends IntrusiveNode {
         if (param0 > 107) {
           return;
         }
-        gl.c((byte) -35);
+        UiWidget.c((byte) -35);
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3, int param4) {
@@ -678,7 +678,7 @@ class gl extends IntrusiveNode {
         String var7;
         if (param2) {
           var7 = (String) null;
-          gl.b((String) null, -102);
+          UiWidget.b((String) null, -102);
           if (param0 + this.field_w > param4) {
             return false;
           }
@@ -703,7 +703,7 @@ class gl extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    boolean a(gl param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -729,12 +729,12 @@ class gl extends IntrusiveNode {
         }
     }
 
-    protected gl() {
+    protected UiWidget() {
         this.field_y = 0;
         this.field_v = 0;
     }
 
-    gl(String param0, cj param1, sc param2) {
+    UiWidget(String param0, cj param1, sc param2) {
         w var4 = null;
         this.field_y = 0;
         this.field_v = 0;
@@ -752,7 +752,7 @@ class gl extends IntrusiveNode {
         }
     }
 
-    gl(int param0, int param1, int param2, int param3, cj param4, sc param5) {
+    UiWidget(int param0, int param1, int param2, int param3, cj param4, sc param5) {
         this.field_y = 0;
         this.field_v = 0;
         try {

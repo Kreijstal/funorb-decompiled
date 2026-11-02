@@ -210,7 +210,7 @@ final class ja extends IntrusiveNode {
                 rb.field_d[var6] = kh.field_F[var6];
               }
               rb.field_d[var5 - 3] = "";
-              rb.field_d[-2 + var5] = mk.field_h;
+              rb.field_d[-2 + var5] = LevelEditor.field_h;
               f.field_a[var5 - 2] = 0;
               pj.field_l[0] = 3;
               rb.field_d[-1 + var5] = RasterBuffer.field_e;
@@ -270,7 +270,7 @@ final class ja extends IntrusiveNode {
             }
             rb.field_d[0] = p.field_c;
             pj.field_l = new int[2];
-            rb.field_d[1] = r.field_o;
+            rb.field_d[1] = BattleUnit.field_o;
             f.field_a[1] = 0;
             f.field_a[3] = 1;
             rb.field_d[5] = "";

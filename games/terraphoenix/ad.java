@@ -3,7 +3,7 @@
  */
 final class ad {
     static int[] field_u;
-    e field_A;
+    BattleState field_A;
     Terraphoenix field_i;
     private boolean field_n;
     int field_c;
@@ -71,14 +71,14 @@ final class ad {
         int var4;
         int var5;
         int var6;
-        r var7;
-        r var8;
-        r var9;
-        r var10;
-        r var11;
-        r var12;
-        r var13;
-        r var14;
+        BattleUnit var7;
+        BattleUnit var8;
+        BattleUnit var9;
+        BattleUnit var10;
+        BattleUnit var11;
+        BattleUnit var12;
+        BattleUnit var13;
+        BattleUnit var14;
         int var2Lifetime1;
         int var2Lifetime2;
         int var3Lifetime1;
@@ -151,40 +151,40 @@ final class ad {
           }
           if (this.field_l == this.field_d &&
             this.field_d <= 12 &&
-            this.field_A.field_q != this.field_A.field_C[0]) {
+            this.field_A.field_q != this.field_A.units[0]) {
             this.field_B = 13;
             this.field_w = 5;
           }
           if (this.field_d == this.field_l &&
             this.field_d <= 13 &&
-            (!(this.field_A.field_C[6].field_P > 0) ||
-            !(this.field_A.field_C[7].field_P > 0))) {
+            (!(this.field_A.units[6].field_P > 0) ||
+            !(this.field_A.units[7].field_P > 0))) {
             this.field_w = 5;
             this.field_B = 14;
           }
           if (this.field_l == this.field_d &&
             this.field_d <= 14 &&
-            this.field_A.field_C[6].field_P <= 0 &&
-            0 >= this.field_A.field_C[7].field_P) {
+            this.field_A.units[6].field_P <= 0 &&
+            0 >= this.field_A.units[7].field_P) {
             this.field_B = 15;
             this.field_w = 5;
           }
           if (this.field_l == this.field_d &&
             this.field_d == 15 && (this.field_A.field_q.field_B == 0 ||
-            !(this.field_A.field_C[8].field_P > 0) ||
-            !(this.field_A.field_C[9].field_P > 0))) {
+            !(this.field_A.units[8].field_P > 0) ||
+            !(this.field_A.units[9].field_P > 0))) {
             this.field_B = 16;
             this.field_w = 5;
           }
           if (this.field_l == this.field_d &&
-            16 >= this.field_d && (!(this.field_A.field_C[8].field_P > 0) ||
-            !(this.field_A.field_C[9].field_P > 0))) {
+            16 >= this.field_d && (!(this.field_A.units[8].field_P > 0) ||
+            !(this.field_A.units[9].field_P > 0))) {
             this.field_w = 5;
             this.field_B = 17;
           }
           if (this.field_d == this.field_l && (9 == this.field_l ||
             this.field_l == 10)) {
-            var8 = this.field_A.field_C[4];
+            var8 = this.field_A.units[4];
             var8.field_jb = var8.field_v;
             if (!var8.field_S) {
               var8.field_d = 2;
@@ -196,7 +196,7 @@ final class ad {
             }
             var8.field_B = 0;
             var8.field_nb.field_c = 20;
-            var9 = this.field_A.field_C[5];
+            var9 = this.field_A.units[5];
             if (!var9.field_S) {
               var9.field_d = 2;
               var9.field_n = 28;
@@ -210,16 +210,16 @@ final class ad {
           }
           if (this.field_l == this.field_d &&
             this.field_d <= 17 &&
-            0 >= this.field_A.field_C[8].field_P &&
-            this.field_A.field_C[9].field_P <= 0) {
+            0 >= this.field_A.units[8].field_P &&
+            this.field_A.units[9].field_P <= 0) {
             this.field_B = 18;
             this.field_w = 5;
           }
           if (this.field_d == this.field_l &&
             this.field_l == 10) {
-            var10 = this.field_A.field_C[6];
+            var10 = this.field_A.units[6];
             if (!var10.field_S &&
-              0 < this.field_A.field_C[5].field_P) {
+              0 < this.field_A.units[5].field_P) {
               var10.field_S = true;
               var10.field_A = 0;
               var10.field_X = 19;
@@ -229,9 +229,9 @@ final class ad {
             }
             var10.field_jb = var10.field_v;
             var10.field_nb.field_c = 20;
-            var11 = this.field_A.field_C[7];
+            var11 = this.field_A.units[7];
             if (!var11.field_S &&
-              this.field_A.field_C[4].field_P > 0) {
+              this.field_A.units[4].field_P > 0) {
               var11.field_N = 0;
               var11.field_A = 0;
               var11.field_n = 16;
@@ -241,8 +241,8 @@ final class ad {
             }
             var11.field_nb.field_c = 20;
             var11.field_jb = var11.field_v;
-            if (this.field_A.field_C[4].field_P <= 0 &&
-              0 >= this.field_A.field_C[5].field_P) {
+            if (this.field_A.units[4].field_P <= 0 &&
+              0 >= this.field_A.units[5].field_P) {
               this.field_B = this.field_l + 1;
               this.field_l = this.field_B;
               this.field_d = this.field_l;
@@ -251,7 +251,7 @@ final class ad {
           }
           if (this.field_l == this.field_d &&
             this.field_l == 11) {
-            var12 = this.field_A.field_C[6];
+            var12 = this.field_A.units[6];
             var12.field_jb = var12.field_v;
             if (!var12.field_S) {
               var12.field_N = 0;
@@ -268,7 +268,7 @@ final class ad {
                 var12.field_S = false;
               }
             }
-            var7 = this.field_A.field_C[7];
+            var7 = this.field_A.units[7];
             var13 = var7;
             var13.field_jb = var13.field_v;
             if (!var13.field_S) {
@@ -286,7 +286,7 @@ final class ad {
                 var7.field_S = false;
               }
             }
-            var14 = this.field_A.field_C[1];
+            var14 = this.field_A.units[1];
             var14.field_jb = var14.field_v;
             if (!var14.field_S) {
               var14.field_n = 19;
@@ -303,8 +303,8 @@ final class ad {
                 var14.field_S = false;
               }
               if (22 > var14.field_H &&
-                !this.field_A.field_C[6].field_S &&
-                !this.field_A.field_C[7].field_S) {
+                !this.field_A.units[6].field_S &&
+                !this.field_A.units[7].field_S) {
                 var14.field_jb = var14.field_v;
                 this.field_w = 5;
                 var14.field_B = 1;
@@ -412,9 +412,9 @@ final class ad {
           this.field_l == 19) {
           le.field_q = null;
           this.field_A.a(this.field_A.field_G, (byte) 122);
-          this.field_A.field_C[9].field_jb = this.field_A.field_C[9].field_v;
-          this.field_A.field_C[10].field_jb = 2 * this.field_A.field_C[10].field_v;
-          this.field_A.field_C[11].field_jb = this.field_A.field_C[11].field_v;
+          this.field_A.units[9].field_jb = this.field_A.units[9].field_v;
+          this.field_A.units[10].field_jb = 2 * this.field_A.units[10].field_v;
+          this.field_A.units[11].field_jb = this.field_A.units[11].field_v;
         }
         if (1 == this.field_p &&
           this.field_l == 11) {
@@ -697,7 +697,7 @@ final class ad {
     final void a(boolean param0) {
         int var2;
         int var3;
-        r var4;
+        BattleUnit var4;
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0) {
@@ -718,7 +718,7 @@ final class ad {
         }
         if (this.field_l == this.field_d &&
           this.field_l == 11) {
-          var4 = this.field_A.field_C[1];
+          var4 = this.field_A.units[1];
           var2Lifetime1 = 32 * (-var4.field_H + var4.field_F);
           var4.field_jb = var4.field_v;
           var3Lifetime1 = (var4.field_H + var4.field_F) * 16 - 48 * var4.field_E;
@@ -728,57 +728,57 @@ final class ad {
     }
 
     final void c(byte param0) {
-        dl var5 = null;
-        r dupTemp$0 = null;
-        dl var4 = null;
-        dl var6 = null;
-        dl var7 = null;
+        MapTile var5 = null;
+        BattleUnit dupTemp$0 = null;
+        MapTile var4 = null;
+        MapTile var6 = null;
+        MapTile var7 = null;
         int var3 = 0;
-        dl var8 = null;
-        r dupTemp$1 = null;
-        dl var9 = null;
-        r dupTemp$2 = null;
-        dl var10 = null;
-        r dupTemp$3 = null;
-        dl var2 = null;
-        dl var2Lifetime1;
-        dl var2Lifetime1Lifetime1;
-        dl var2Lifetime1Lifetime2;
+        MapTile var8 = null;
+        BattleUnit dupTemp$1 = null;
+        MapTile var9 = null;
+        BattleUnit dupTemp$2 = null;
+        MapTile var10 = null;
+        BattleUnit dupTemp$3 = null;
+        MapTile var2 = null;
+        MapTile var2Lifetime1;
+        MapTile var2Lifetime1Lifetime1;
+        MapTile var2Lifetime1Lifetime2;
         int var3Lifetime1;
         int var3Lifetime2;
         if (this.field_p == 0) {
           this.field_A.a(29518, -1);
           this.field_A.a(29518, -2);
           if (this.field_l == 0) {
-            this.field_A.field_C[0].field_c = null;
-            this.field_A.field_C[0].field_H = 18;
-            this.field_A.field_C[0].field_F = 3;
-            var5 = this.field_A.field_h.a(-66, this.field_A.field_C[0].field_H, this.field_A.field_C[0].field_E, this.field_A.field_C[0].field_F);
+            this.field_A.units[0].tile = null;
+            this.field_A.units[0].field_H = 18;
+            this.field_A.units[0].field_F = 3;
+            var5 = this.field_A.map.a(-66, this.field_A.units[0].field_H, this.field_A.units[0].field_E, this.field_A.units[0].field_F);
             var2 = var5;
             if (var5.field_h != null) {
-              dupTemp$0 = this.field_A.field_C[0];
+              dupTemp$0 = this.field_A.units[0];
               dupTemp$0.field_F = dupTemp$0.field_F + 1;
-              var2 = this.field_A.field_h.a(-104, this.field_A.field_C[0].field_H, this.field_A.field_C[0].field_E, this.field_A.field_C[0].field_F);
+              var2 = this.field_A.map.a(-104, this.field_A.units[0].field_H, this.field_A.units[0].field_E, this.field_A.units[0].field_F);
             }
-            this.field_A.field_C[0].field_c = var2;
-            var2.field_h = this.field_A.field_C[0];
+            this.field_A.units[0].tile = var2;
+            var2.field_h = this.field_A.units[0];
           }
           if (9 > this.field_l) {
-            this.field_A.field_C[4].field_t = 7;
-            var4 = this.field_A.field_C[4].field_c;
+            this.field_A.units[4].field_t = 7;
+            var4 = this.field_A.units[4].tile;
             var6 = var4;
-            this.field_A.field_C[4].field_C = 0;
-            this.field_A.field_C[4].field_P = 0;
+            this.field_A.units[4].field_C = 0;
+            this.field_A.units[4].field_P = 0;
             var6.field_m = 7;
             if (7 == var6.field_m) {
               var6.field_m = 7;
             }
             var6.field_t = 16777088;
             var4.field_h = null;
-            var7 = this.field_A.field_C[5].field_c;
-            this.field_A.field_C[5].field_C = 0;
-            this.field_A.field_C[5].field_P = 0;
-            this.field_A.field_C[5].field_t = 7;
+            var7 = this.field_A.units[5].tile;
+            this.field_A.units[5].field_C = 0;
+            this.field_A.units[5].field_P = 0;
+            this.field_A.units[5].field_t = 7;
             var7.field_m = 7;
             if (7 == var7.field_m) {
               var7.field_m = 7;
@@ -788,50 +788,50 @@ final class ad {
           }
           if (this.field_l < 11) {
             var3 = 1;
-            this.field_A.field_C[var3] = new r(this.field_A.field_G.field_nb[var3]);
-            this.field_A.field_C[var3].field_F = 7;
-            this.field_A.field_C[var3].field_H = 24;
-            this.field_A.field_C[var3].field_E = 0;
-            this.field_A.field_C[var3].field_U = 4;
-            var8 = this.field_A.field_h.a(88, this.field_A.field_C[var3].field_H, this.field_A.field_C[var3].field_E, this.field_A.field_C[var3].field_F);
+            this.field_A.units[var3] = new BattleUnit(this.field_A.field_G.field_nb[var3]);
+            this.field_A.units[var3].field_F = 7;
+            this.field_A.units[var3].field_H = 24;
+            this.field_A.units[var3].field_E = 0;
+            this.field_A.units[var3].field_U = 4;
+            var8 = this.field_A.map.a(88, this.field_A.units[var3].field_H, this.field_A.units[var3].field_E, this.field_A.units[var3].field_F);
             var2Lifetime1 = var8;
             if (null != var8.field_h) {
-              dupTemp$1 = this.field_A.field_C[var3];
+              dupTemp$1 = this.field_A.units[var3];
               dupTemp$1.field_F = dupTemp$1.field_F + 1;
-              var2Lifetime1 = this.field_A.field_h.a(-26, this.field_A.field_C[var3].field_H, this.field_A.field_C[var3].field_E, this.field_A.field_C[var3].field_F);
+              var2Lifetime1 = this.field_A.map.a(-26, this.field_A.units[var3].field_H, this.field_A.units[var3].field_E, this.field_A.units[var3].field_F);
             }
-            var2Lifetime1.field_h = this.field_A.field_C[var3];
-            this.field_A.field_C[var3].field_c = var2Lifetime1;
+            var2Lifetime1.field_h = this.field_A.units[var3];
+            this.field_A.units[var3].tile = var2Lifetime1;
             var3Lifetime1 = 2;
-            this.field_A.field_C[var3Lifetime1] = new r(this.field_A.field_G.field_nb[var3Lifetime1]);
-            this.field_A.field_C[var3Lifetime1].field_F = 5;
-            this.field_A.field_C[var3Lifetime1].field_H = 16;
-            this.field_A.field_C[var3Lifetime1].field_E = 0;
-            this.field_A.field_C[var3Lifetime1].field_U = 1;
-            var9 = this.field_A.field_h.a(-48, this.field_A.field_C[var3Lifetime1].field_H, this.field_A.field_C[var3Lifetime1].field_E, this.field_A.field_C[var3Lifetime1].field_F);
+            this.field_A.units[var3Lifetime1] = new BattleUnit(this.field_A.field_G.field_nb[var3Lifetime1]);
+            this.field_A.units[var3Lifetime1].field_F = 5;
+            this.field_A.units[var3Lifetime1].field_H = 16;
+            this.field_A.units[var3Lifetime1].field_E = 0;
+            this.field_A.units[var3Lifetime1].field_U = 1;
+            var9 = this.field_A.map.a(-48, this.field_A.units[var3Lifetime1].field_H, this.field_A.units[var3Lifetime1].field_E, this.field_A.units[var3Lifetime1].field_F);
             var2Lifetime1Lifetime1 = var9;
             if (var9.field_h != null) {
-              dupTemp$2 = this.field_A.field_C[var3Lifetime1];
+              dupTemp$2 = this.field_A.units[var3Lifetime1];
               dupTemp$2.field_F = dupTemp$2.field_F + 1;
-              var2Lifetime1Lifetime1 = this.field_A.field_h.a(112, this.field_A.field_C[var3Lifetime1].field_H, this.field_A.field_C[var3Lifetime1].field_E, this.field_A.field_C[var3Lifetime1].field_F);
+              var2Lifetime1Lifetime1 = this.field_A.map.a(112, this.field_A.units[var3Lifetime1].field_H, this.field_A.units[var3Lifetime1].field_E, this.field_A.units[var3Lifetime1].field_F);
             }
-            var2Lifetime1Lifetime1.field_h = this.field_A.field_C[var3Lifetime1];
-            this.field_A.field_C[var3Lifetime1].field_c = var2Lifetime1Lifetime1;
+            var2Lifetime1Lifetime1.field_h = this.field_A.units[var3Lifetime1];
+            this.field_A.units[var3Lifetime1].tile = var2Lifetime1Lifetime1;
             var3Lifetime2 = 3;
-            this.field_A.field_C[var3Lifetime2] = new r(this.field_A.field_G.field_nb[var3Lifetime2]);
-            this.field_A.field_C[var3Lifetime2].field_F = 6;
-            this.field_A.field_C[var3Lifetime2].field_H = 17;
-            this.field_A.field_C[var3Lifetime2].field_E = 0;
-            this.field_A.field_C[var3Lifetime2].field_U = 2;
-            var10 = this.field_A.field_h.a(102, this.field_A.field_C[var3Lifetime2].field_H, this.field_A.field_C[var3Lifetime2].field_E, this.field_A.field_C[var3Lifetime2].field_F);
+            this.field_A.units[var3Lifetime2] = new BattleUnit(this.field_A.field_G.field_nb[var3Lifetime2]);
+            this.field_A.units[var3Lifetime2].field_F = 6;
+            this.field_A.units[var3Lifetime2].field_H = 17;
+            this.field_A.units[var3Lifetime2].field_E = 0;
+            this.field_A.units[var3Lifetime2].field_U = 2;
+            var10 = this.field_A.map.a(102, this.field_A.units[var3Lifetime2].field_H, this.field_A.units[var3Lifetime2].field_E, this.field_A.units[var3Lifetime2].field_F);
             var2Lifetime1Lifetime2 = var10;
             if (var10.field_h != null) {
-              dupTemp$3 = this.field_A.field_C[var3Lifetime2];
+              dupTemp$3 = this.field_A.units[var3Lifetime2];
               dupTemp$3.field_F = dupTemp$3.field_F + 1;
-              var2Lifetime1Lifetime2 = this.field_A.field_h.a(-30, this.field_A.field_C[var3Lifetime2].field_H, this.field_A.field_C[var3Lifetime2].field_E, this.field_A.field_C[var3Lifetime2].field_F);
+              var2Lifetime1Lifetime2 = this.field_A.map.a(-30, this.field_A.units[var3Lifetime2].field_H, this.field_A.units[var3Lifetime2].field_E, this.field_A.units[var3Lifetime2].field_F);
             }
-            var2Lifetime1Lifetime2.field_h = this.field_A.field_C[var3Lifetime2];
-            this.field_A.field_C[var3Lifetime2].field_c = var2Lifetime1Lifetime2;
+            var2Lifetime1Lifetime2.field_h = this.field_A.units[var3Lifetime2];
+            this.field_A.units[var3Lifetime2].tile = var2Lifetime1Lifetime2;
           }
         }
         if (param0 < 28) {
@@ -878,9 +878,9 @@ final class ad {
     }
 
     private final void a(boolean param0, int param1) {
-        r dupTemp$0 = null;
-        r dupTemp$1 = null;
-        r dupTemp$2 = null;
+        BattleUnit dupTemp$0 = null;
+        BattleUnit dupTemp$1 = null;
+        BattleUnit dupTemp$2 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         StringBuilder stackIn_21_1 = null;
@@ -917,16 +917,16 @@ final class ad {
         StringBuilder stackIn_104_1 = null;
         String stackIn_105_2 = null;
         int var3_int;
-        dl var3;
+        MapTile var3;
         int var4;
         int var5;
-        dl var6;
-        dl var7;
-        dl var8;
+        MapTile var6;
+        MapTile var7;
+        MapTile var8;
         int var4Lifetime1;
         int var4Lifetime2;
-        dl var3Lifetime1;
-        dl var3Lifetime2;
+        MapTile var3Lifetime1;
+        MapTile var3Lifetime2;
         var5 = Terraphoenix.field_V;
         this.field_a = true;
         this.field_n = false;
@@ -1221,52 +1221,52 @@ final class ad {
                                     } else {
                                       this.field_o = "";
                                       if (!param0) {
-                                        this.field_A.field_C[0].field_jb = this.field_A.field_C[0].field_v;
+                                        this.field_A.units[0].field_jb = this.field_A.units[0].field_v;
                                         var4 = 1;
-                                        this.field_A.field_C[var4] = new r(this.field_A.field_G.field_nb[var4]);
-                                        this.field_A.field_C[var4].field_F = 7;
-                                        this.field_A.field_C[var4].field_H = 24;
-                                        this.field_A.field_C[var4].field_E = 0;
-                                        this.field_A.field_C[var4].field_U = 4;
-                                        var6 = this.field_A.field_h.a(-41, this.field_A.field_C[var4].field_H, this.field_A.field_C[var4].field_E, this.field_A.field_C[var4].field_F);
+                                        this.field_A.units[var4] = new BattleUnit(this.field_A.field_G.field_nb[var4]);
+                                        this.field_A.units[var4].field_F = 7;
+                                        this.field_A.units[var4].field_H = 24;
+                                        this.field_A.units[var4].field_E = 0;
+                                        this.field_A.units[var4].field_U = 4;
+                                        var6 = this.field_A.map.a(-41, this.field_A.units[var4].field_H, this.field_A.units[var4].field_E, this.field_A.units[var4].field_F);
                                         var3 = var6;
                                         if (null != var6.field_h) {
-                                          dupTemp$0 = this.field_A.field_C[var4];
+                                          dupTemp$0 = this.field_A.units[var4];
                                           dupTemp$0.field_F = dupTemp$0.field_F + 1;
-                                          var3 = this.field_A.field_h.a(param1 - 17164, this.field_A.field_C[var4].field_H, this.field_A.field_C[var4].field_E, this.field_A.field_C[var4].field_F);
+                                          var3 = this.field_A.map.a(param1 - 17164, this.field_A.units[var4].field_H, this.field_A.units[var4].field_E, this.field_A.units[var4].field_F);
                                         }
-                                        var3.field_h = this.field_A.field_C[var4];
-                                        this.field_A.field_C[var4].field_c = var3;
+                                        var3.field_h = this.field_A.units[var4];
+                                        this.field_A.units[var4].tile = var3;
                                         var4Lifetime1 = 2;
-                                        this.field_A.field_C[var4Lifetime1] = new r(this.field_A.field_G.field_nb[var4Lifetime1]);
-                                        this.field_A.field_C[var4Lifetime1].field_F = 5;
-                                        this.field_A.field_C[var4Lifetime1].field_H = 16;
-                                        this.field_A.field_C[var4Lifetime1].field_E = 0;
-                                        this.field_A.field_C[var4Lifetime1].field_U = 1;
-                                        var7 = this.field_A.field_h.a(123, this.field_A.field_C[var4Lifetime1].field_H, this.field_A.field_C[var4Lifetime1].field_E, this.field_A.field_C[var4Lifetime1].field_F);
+                                        this.field_A.units[var4Lifetime1] = new BattleUnit(this.field_A.field_G.field_nb[var4Lifetime1]);
+                                        this.field_A.units[var4Lifetime1].field_F = 5;
+                                        this.field_A.units[var4Lifetime1].field_H = 16;
+                                        this.field_A.units[var4Lifetime1].field_E = 0;
+                                        this.field_A.units[var4Lifetime1].field_U = 1;
+                                        var7 = this.field_A.map.a(123, this.field_A.units[var4Lifetime1].field_H, this.field_A.units[var4Lifetime1].field_E, this.field_A.units[var4Lifetime1].field_F);
                                         var3Lifetime1 = var7;
                                         if (null != var7.field_h) {
-                                          dupTemp$1 = this.field_A.field_C[var4Lifetime1];
+                                          dupTemp$1 = this.field_A.units[var4Lifetime1];
                                           dupTemp$1.field_F = dupTemp$1.field_F + 1;
-                                          var3Lifetime1 = this.field_A.field_h.a(param1 ^ -17130, this.field_A.field_C[var4Lifetime1].field_H, this.field_A.field_C[var4Lifetime1].field_E, this.field_A.field_C[var4Lifetime1].field_F);
+                                          var3Lifetime1 = this.field_A.map.a(param1 ^ -17130, this.field_A.units[var4Lifetime1].field_H, this.field_A.units[var4Lifetime1].field_E, this.field_A.units[var4Lifetime1].field_F);
                                         }
-                                        var3Lifetime1.field_h = this.field_A.field_C[var4Lifetime1];
-                                        this.field_A.field_C[var4Lifetime1].field_c = var3Lifetime1;
+                                        var3Lifetime1.field_h = this.field_A.units[var4Lifetime1];
+                                        this.field_A.units[var4Lifetime1].tile = var3Lifetime1;
                                         var4Lifetime2 = 3;
-                                        this.field_A.field_C[var4Lifetime2] = new r(this.field_A.field_G.field_nb[var4Lifetime2]);
-                                        this.field_A.field_C[var4Lifetime2].field_F = 6;
-                                        this.field_A.field_C[var4Lifetime2].field_H = 17;
-                                        this.field_A.field_C[var4Lifetime2].field_E = 0;
-                                        this.field_A.field_C[var4Lifetime2].field_U = 2;
-                                        var8 = this.field_A.field_h.a(90, this.field_A.field_C[var4Lifetime2].field_H, this.field_A.field_C[var4Lifetime2].field_E, this.field_A.field_C[var4Lifetime2].field_F);
+                                        this.field_A.units[var4Lifetime2] = new BattleUnit(this.field_A.field_G.field_nb[var4Lifetime2]);
+                                        this.field_A.units[var4Lifetime2].field_F = 6;
+                                        this.field_A.units[var4Lifetime2].field_H = 17;
+                                        this.field_A.units[var4Lifetime2].field_E = 0;
+                                        this.field_A.units[var4Lifetime2].field_U = 2;
+                                        var8 = this.field_A.map.a(90, this.field_A.units[var4Lifetime2].field_H, this.field_A.units[var4Lifetime2].field_E, this.field_A.units[var4Lifetime2].field_F);
                                         var3Lifetime2 = var8;
                                         if (null != var8.field_h) {
-                                          dupTemp$2 = this.field_A.field_C[var4Lifetime2];
+                                          dupTemp$2 = this.field_A.units[var4Lifetime2];
                                           dupTemp$2.field_F = dupTemp$2.field_F + 1;
-                                          var3Lifetime2 = this.field_A.field_h.a(84, this.field_A.field_C[var4Lifetime2].field_H, this.field_A.field_C[var4Lifetime2].field_E, this.field_A.field_C[var4Lifetime2].field_F);
+                                          var3Lifetime2 = this.field_A.map.a(84, this.field_A.units[var4Lifetime2].field_H, this.field_A.units[var4Lifetime2].field_E, this.field_A.units[var4Lifetime2].field_F);
                                         }
-                                        var3Lifetime2.field_h = this.field_A.field_C[var4Lifetime2];
-                                        this.field_A.field_C[var4Lifetime2].field_c = var3Lifetime2;
+                                        var3Lifetime2.field_h = this.field_A.units[var4Lifetime2];
+                                        this.field_A.units[var4Lifetime2].tile = var3Lifetime2;
                                       }
                                     }
                                   } else {
@@ -1278,12 +1278,12 @@ final class ad {
                                     this.field_A.a(29518, -1);
                                   }
                                   if (!param0) {
-                                    this.field_A.field_C[4].field_C = 0;
-                                    this.field_A.field_C[4].field_t = 7;
-                                    this.field_A.field_C[4].field_x = 16777088;
-                                    this.field_A.field_C[5].field_C = 0;
-                                    this.field_A.field_C[5].field_x = 10460976;
-                                    this.field_A.field_C[5].field_t = 7;
+                                    this.field_A.units[4].field_C = 0;
+                                    this.field_A.units[4].field_t = 7;
+                                    this.field_A.units[4].field_x = 16777088;
+                                    this.field_A.units[5].field_C = 0;
+                                    this.field_A.units[5].field_x = 10460976;
+                                    this.field_A.units[5].field_t = 7;
                                   }
                                 }
                               } else {

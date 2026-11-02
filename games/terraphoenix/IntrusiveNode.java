@@ -6,9 +6,9 @@ class IntrusiveNode {
     static int field_b;
     static Sprite field_f;
     static int field_c;
-    long field_g;
-    IntrusiveNode field_a;
-    IntrusiveNode field_d;
+    long key;
+    IntrusiveNode next;
+    IntrusiveNode previous;
 
     public static void b(int param0) {
         field_f = null;
@@ -20,10 +20,10 @@ class IntrusiveNode {
 
     final boolean a(byte param0) {
         if (param0 <= -21) {
-          return null != this.field_a ? true : false;
+          return null != this.next ? true : false;
         }
         IntrusiveNode.a(55, -98);
-        if (null == this.field_a) {
+        if (null == this.next) {
           return false;
         }
         return true;
@@ -58,15 +58,15 @@ class IntrusiveNode {
         }
     }
 
-    final void b(byte param0) {
-        if (this.field_a == null) {
+    final void unlink(byte obfuscationGuard) {
+        if (this.next == null) {
           return;
         }
-        this.field_a.field_d = this.field_d;
-        this.field_d.field_a = this.field_a;
-        if (param0 == 12) {
-          this.field_d = null;
-          this.field_a = null;
+        this.next.previous = this.previous;
+        this.previous.next = this.next;
+        if (obfuscationGuard == 12) {
+          this.previous = null;
+          this.next = null;
           return;
         }
     }

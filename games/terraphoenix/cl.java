@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends gb implements jf, n {
+final class cl extends WidgetContainer implements jf, n {
     private eb field_G;
     static d field_J;
     static String field_I;
@@ -111,7 +111,7 @@ final class cl extends gb implements jf, n {
         return "</col></u>";
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends gb implements rg, n {
+final class ae extends WidgetContainer implements rg, n {
     static int field_H;
     am field_N;
     private eb field_K;
@@ -64,7 +64,7 @@ final class ae extends gb implements rg, n {
         }
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         if (param3 <= 25) {
           return;
         }
@@ -84,7 +84,7 @@ final class ae extends gb implements rg, n {
         return true;
     }
 
-    private final int a(String param0, String param1, int param2, int param3, gl param4, int param5) {
+    private final int a(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -166,8 +166,8 @@ final class ae extends gb implements rg, n {
         super(0, 0, 496, 0, (cj) null);
         this.field_J = new ib("", (sc) null, 12);
         fd var1 = new fd(ra.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
-        gl var2 = new gl(wj.field_f, var1, (sc) null);
-        this.field_K = new eb(r.field_lb, (sc) null);
+        UiWidget var2 = new UiWidget(wj.field_f, var1, (sc) null);
+        this.field_K = new eb(BattleUnit.field_lb, (sc) null);
         this.field_O = new eb(lf.field_d, (sc) null);
         this.field_J.field_x = p.field_g;
         this.field_J.a(new ia(this.field_J), 5859);
@@ -194,7 +194,7 @@ final class ae extends gb implements rg, n {
         this.a(0, (byte) 94, 496, 0, var3 - (-55 - var4));
     }
 
-    private final int a(int param0, int param1, int param2, String param3, int param4, String param5, gl param6) {
+    private final int a(int param0, int param1, int param2, String param3, int param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         ki var9 = null;
         j var10 = null;
@@ -269,7 +269,7 @@ final class ae extends gb implements rg, n {
         }
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;

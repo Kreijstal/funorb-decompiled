@@ -34,7 +34,7 @@ final class bc {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                gb.g(-17464);
+                WidgetContainer.g(-17464);
               }
               di.field_l.position = 0;
             }

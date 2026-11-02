@@ -69,7 +69,7 @@ final class j extends jc {
         field_I = null;
     }
 
-    j(int param0, int param1, int param2, int param3, gl param4, boolean param5, int param6, int param7, pk param8, int param9, String param10) {
+    j(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, pk param8, int param9, String param10) {
         super(param0, param1, param2, param3, (cj) null, (sc) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

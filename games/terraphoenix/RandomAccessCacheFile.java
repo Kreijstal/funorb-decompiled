@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class b {
+final class RandomAccessCacheFile {
     private RandomAccessFile field_d;
     static oa field_f;
     static String field_c;
@@ -19,7 +19,7 @@ final class b {
         }
         if (param0 <= 113) {
           String var3 = (String) null;
-          b.a(false, (String) null);
+          RandomAccessCacheFile.a(false, (String) null);
         }
     }
 
@@ -46,7 +46,7 @@ final class b {
           }
           if (param3 != 12955) {
             var6 = (String) null;
-            b.a((byte) 62, (String) null);
+            RandomAccessCacheFile.a((byte) 62, (String) null);
           }
           stackIn_6_0 = var5_int;
           return stackIn_6_0;
@@ -110,7 +110,7 @@ final class b {
         this.field_a = param0;
         if (param1 < 64) {
           String var5 = (String) null;
-          b.a(true, (String) null);
+          RandomAccessCacheFile.a(true, (String) null);
         }
     }
 
@@ -126,7 +126,7 @@ final class b {
           var4 = (wf) (rd.field_k.d(9272));
           var1 = var4;
           if (param0 > -86) {
-            b.a((byte) -125);
+            RandomAccessCacheFile.a((byte) -125);
           }
           if (var1 == null) {
             return false;
@@ -295,7 +295,7 @@ final class b {
           var17 = new PacketBuffer(param0);
           var18 = var17;
           var18.position = -2 + param0.length;
-          kf.field_b = var18.i(-25578);
+          kf.field_b = var18.readUnsignedShort(-25578);
           ug.field_c = new byte[kf.field_b][];
           sb.field_m = new int[kf.field_b];
           hj.field_K = new int[kf.field_b];
@@ -304,24 +304,24 @@ final class b {
           qc.field_b = new byte[kf.field_b][];
           rf.field_p = new int[kf.field_b];
           var18.position = param0.length + (-7 - kf.field_b * 8);
-          ah.field_A = var18.i(-25578);
-          sb.field_j = var18.i(-25578);
+          ah.field_A = var18.readUnsignedShort(-25578);
+          sb.field_j = var18.readUnsignedShort(-25578);
           if (param1 > -58) {
             var16 = (String) null;
-            b.a((byte) 57, (String) null);
+            RandomAccessCacheFile.a((byte) 57, (String) null);
           }
           var3 = (255 & var18.a(-16384)) + 1;
           for (var4 = 0; var4 < kf.field_b; var4++) {
-            ha.field_s[var4] = var17.i(-25578);
+            ha.field_s[var4] = var17.readUnsignedShort(-25578);
           }
           for (var4Lifetime1 = 0; kf.field_b > var4Lifetime1; var4Lifetime1++) {
-            hj.field_K[var4Lifetime1] = var18.i(-25578);
+            hj.field_K[var4Lifetime1] = var18.readUnsignedShort(-25578);
           }
           for (var4Lifetime2 = 0; kf.field_b > var4Lifetime2; var4Lifetime2++) {
-            sb.field_m[var4Lifetime2] = var18.i(-25578);
+            sb.field_m[var4Lifetime2] = var18.readUnsignedShort(-25578);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < kf.field_b; var4Lifetime3++) {
-            rf.field_p[var4Lifetime3] = var18.i(-25578);
+            rf.field_p[var4Lifetime3] = var18.readUnsignedShort(-25578);
           }
           var18.position = -((-1 + var3) * 3) + (-7 + param0.length) - kf.field_b * 8;
           wb.field_a = new int[var3];
@@ -406,7 +406,7 @@ final class b {
         }
     }
 
-    b(File param0, String param1, long param2) throws IOException {
+    RandomAccessCacheFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

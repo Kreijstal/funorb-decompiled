@@ -4,7 +4,7 @@
 final class u {
     static qf field_d;
     static Sprite[] field_e;
-    static jj field_c;
+    static IntrusiveDeque field_c;
     static int field_g;
     static String field_f;
     static Sprite field_a;
@@ -31,7 +31,7 @@ final class u {
 
     static {
         field_d = new qf();
-        field_c = new jj();
+        field_c = new IntrusiveDeque();
         field_f = "Unpacking levels";
         field_b = "Shielding: 20";
         field_g = 0;

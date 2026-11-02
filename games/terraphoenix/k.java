@@ -7,7 +7,7 @@ final class k {
     static og field_b;
     static int[] field_e;
     private IntrusiveNode field_g;
-    private jj field_c;
+    private IntrusiveDeque field_c;
     static RasterBuffer field_f;
 
     final IntrusiveNode c(int param0) {
@@ -19,7 +19,7 @@ final class k {
           this.field_g = null;
           return null;
         }
-        this.field_g = var2.field_d;
+        this.field_g = var2.previous;
         return var2;
     }
 
@@ -102,14 +102,14 @@ final class k {
           if (param1 != null) {
             var4 = param1;
           } else {
-            var4 = this.field_c.field_a.field_d;
+            var4 = this.field_c.field_a.previous;
           }
           if (var4 == this.field_c.field_a) {
             this.field_g = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
           }
-          this.field_g = var4.field_d;
+          this.field_g = var4.previous;
           stackIn_8_0 = var4;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,17 +143,17 @@ final class k {
     }
 
     final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_c.field_a.field_a;
+        IntrusiveNode var2 = this.field_c.field_a.next;
         if (var2 == this.field_c.field_a) {
           this.field_g = null;
           return null;
         }
         if (param0 > 45) {
-          this.field_g = var2.field_a;
+          this.field_g = var2.next;
           return var2;
         }
         field_b = (og) null;
-        this.field_g = var2.field_a;
+        this.field_g = var2.next;
         return var2;
     }
 
@@ -173,12 +173,12 @@ final class k {
             return stackIn_2_0;
           }
           if (param1 == null) {
-            var3 = this.field_c.field_a.field_a;
+            var3 = this.field_c.field_a.next;
           } else {
             var3 = param1;
           }
           if (this.field_c.field_a != var3) {
-            this.field_g = var3.field_a;
+            this.field_g = var3.next;
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
@@ -200,25 +200,25 @@ final class k {
     }
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_c.field_a.field_d;
+        IntrusiveNode var2 = this.field_c.field_a.previous;
         if (param0 != -13) {
           field_b = (og) null;
           if (this.field_c.field_a != var2) {
-            this.field_g = var2.field_d;
+            this.field_g = var2.previous;
             return var2;
           }
           this.field_g = null;
           return null;
         }
         if (this.field_c.field_a != var2) {
-          this.field_g = var2.field_d;
+          this.field_g = var2.previous;
           return var2;
         }
         this.field_g = null;
         return null;
     }
 
-    k(jj param0) {
+    k(IntrusiveDeque param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -236,7 +236,7 @@ final class k {
             this.field_g = null;
             return null;
           }
-          this.field_g = var2.field_a;
+          this.field_g = var2.next;
           return var2;
         }
         var2Lifetime1 = this.field_g;
@@ -244,7 +244,7 @@ final class k {
           this.field_g = null;
           return null;
         }
-        this.field_g = var2Lifetime1.field_a;
+        this.field_g = var2Lifetime1.next;
         return var2Lifetime1;
     }
 

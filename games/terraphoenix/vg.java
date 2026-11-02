@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends lj {
-    private jj field_m;
-    private jj field_o;
+final class vg extends PcmStream {
+    private IntrusiveDeque field_m;
+    private IntrusiveDeque field_o;
     private int field_n;
     private int field_l;
 
-    final lj a() {
-        return (lj) (this.field_m.e((byte) -119));
+    final PcmStream a() {
+        return (PcmStream) (this.field_m.e((byte) -119));
     }
 
     final synchronized void a(int param0) {
@@ -38,7 +38,7 @@ final class vg extends lj {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.field_d, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_h = 0;
               this.a(var3);
@@ -52,17 +52,17 @@ final class vg extends lj {
         while (true) {
           if (param0 == this.field_o.field_a) {
             ha.a(127, param0, param1);
-            this.field_l = ((we) (this.field_o.field_a.field_d)).field_h;
+            this.field_l = ((we) (this.field_o.field_a.previous)).field_h;
             return;
           }
           if (((we) (param0)).field_h <= param1.field_h) {
-            param0 = param0.field_d;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         ha.a(127, param0, param1);
-        this.field_l = ((we) (this.field_o.field_a.field_d)).field_h;
+        this.field_l = ((we) (this.field_o.field_a.previous)).field_h;
         return;
     }
 
@@ -80,9 +80,9 @@ final class vg extends lj {
     }
 
     private final void a(we param0) {
-        param0.b((byte) 12);
+        param0.unlink((byte) 12);
         param0.a();
-        IntrusiveNode var2 = this.field_o.field_a.field_d;
+        IntrusiveNode var2 = this.field_o.field_a.previous;
         if (var2 == this.field_o.field_a) {
           this.field_l = -1;
         } else {
@@ -90,7 +90,7 @@ final class vg extends lj {
         }
     }
 
-    final synchronized void a(lj param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_m.a((IntrusiveNode) (param0), (byte) 0);
     }
 
@@ -99,14 +99,14 @@ final class vg extends lj {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        lj var4 = (lj) (this.field_m.d(9272));
+        PcmStream var4 = (PcmStream) (this.field_m.d(9272));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (lj) (this.field_m.e((byte) -119));
+          var4 = (PcmStream) (this.field_m.e((byte) -119));
         }
     }
 
-    final void a(gg param0, int param1, int param2) {
+    final void a(PcmSample param0, int param1, int param2) {
         this.a(lh.a(param0, param1, param2));
     }
 
@@ -138,7 +138,7 @@ final class vg extends lj {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.field_d, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_h = 0;
               this.a(var5);
@@ -149,20 +149,20 @@ final class vg extends lj {
     }
 
     private final void c(int param0) {
-        lj var2 = (lj) (this.field_m.d(9272));
+        PcmStream var2 = (PcmStream) (this.field_m.d(9272));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (lj) (this.field_m.e((byte) -119));
+          var2 = (PcmStream) (this.field_m.e((byte) -119));
         }
     }
 
-    final lj c() {
-        return (lj) (this.field_m.d(9272));
+    final PcmStream c() {
+        return (PcmStream) (this.field_m.d(9272));
     }
 
     public vg() {
-        this.field_m = new jj();
-        this.field_o = new jj();
+        this.field_m = new IntrusiveDeque();
+        this.field_o = new IntrusiveDeque();
         this.field_n = 0;
         this.field_l = -1;
     }

@@ -126,8 +126,8 @@ final class NodeHashTableIterator implements Iterator {
         while (this.field_h.field_c > this.field_f) {
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          if (this.field_h.field_a[fieldTemp$0].field_d != this.field_h.field_a[this.field_f - 1]) {
-            this.field_e = this.field_h.field_a[-1 + this.field_f].field_d;
+          if (this.field_h.field_a[fieldTemp$0].previous != this.field_h.field_a[this.field_f - 1]) {
+            this.field_e = this.field_h.field_a[-1 + this.field_f].previous;
             return true;
           }
           this.field_e = this.field_h.field_a[this.field_f - 1];
@@ -139,7 +139,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_g == null) {
           throw new IllegalStateException();
         }
-        this.field_g.b((byte) 12);
+        this.field_g.unlink((byte) 12);
         this.field_g = null;
     }
 
@@ -151,7 +151,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_h.field_a[-1 + this.field_f] != this.field_e) {
           var1 = this.field_e;
           this.field_g = var1;
-          this.field_e = var1.field_d;
+          this.field_e = var1.previous;
           return var1;
         }
         do {
@@ -160,10 +160,10 @@ final class NodeHashTableIterator implements Iterator {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var1 = this.field_h.field_a[fieldTemp$0].field_d;
+          var1 = this.field_h.field_a[fieldTemp$0].previous;
         } while (this.field_h.field_a[this.field_f - 1] == var1);
         this.field_g = var1;
-        this.field_e = var1.field_d;
+        this.field_e = var1.previous;
         return var1;
     }
 
@@ -209,7 +209,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     private final void a(boolean param0) {
-        this.field_e = this.field_h.field_a[0].field_d;
+        this.field_e = this.field_h.field_a[0].previous;
         if (param0) {
           return;
         }

@@ -23,7 +23,7 @@ final class sh extends IntrusiveNode {
     lh field_k;
     static long field_n;
     int field_u;
-    gg field_F;
+    PcmSample field_F;
     int field_C;
     int field_G;
     int field_p;

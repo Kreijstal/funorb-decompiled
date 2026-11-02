@@ -8,7 +8,7 @@ final class o {
 
     final static void a(int param0, int param1, int param2, pk param3, int param4, int param5) {
         try {
-          gl.c((byte) 123);
+          UiWidget.c((byte) 123);
           if (param0 != 50) {
             field_b = -25;
           }
@@ -33,10 +33,10 @@ final class o {
           if (param1 >= -38) {
             o.b(48, (byte) 24);
           }
-          var5 = (nd) (r.field_Q.d(9272));
+          var5 = (nd) (BattleUnit.field_Q.d(9272));
           while (var5 != null) {
-            gb.a((byte) 15, var5, param0);
-            var5 = (nd) (r.field_Q.e((byte) -119));
+            WidgetContainer.a((byte) 15, var5, param0);
+            var5 = (nd) (BattleUnit.field_Q.e((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class o {
           if (this == af.field_b) {
             return true;
           }
-          if (gb.field_B != this) {
+          if (WidgetContainer.field_B != this) {
             return this == od.field_g ? true : false;
           }
           return true;
@@ -70,7 +70,7 @@ final class o {
         if (this == af.field_b) {
           return true;
         }
-        if (gb.field_B == this) {
+        if (WidgetContainer.field_B == this) {
           return true;
         }
         if (this != od.field_g) {

@@ -182,7 +182,7 @@ final class mb extends DualLinkNode {
               var4_int = param0.a(-16384);
               this.field_r = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_r[var5] = param0.i(-25578);
+                this.field_r[var5] = param0.readUnsignedShort(-25578);
               }
             } else {
               if (3 == param2) {
@@ -190,14 +190,14 @@ final class mb extends DualLinkNode {
                 this.field_q = new int[var4_int][];
                 this.field_v = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param0.i(-25578);
+                  var6 = param0.readUnsignedShort(-25578);
                   var7 = di.a((byte) 33, var6);
                   if (var7 != null) {
                     this.field_v[var5] = var6;
                     array$0 = new int[var7.field_a];
                     this.field_q[var5] = array$0;
                     for (var8 = 0; var7.field_a > var8; var8++) {
-                      this.field_q[var5][var8] = param0.i(-25578);
+                      this.field_q[var5][var8] = param0.readUnsignedShort(-25578);
                     }
                   }
                 }
@@ -207,7 +207,7 @@ final class mb extends DualLinkNode {
               }
             }
           } else {
-            this.field_t = nc.a(14352, param0.e(-1), '<');
+            this.field_t = nc.a(14352, param0.readString(-1), '<');
           }
           if (param1 <= 111) {
             mb.b(13, 47);

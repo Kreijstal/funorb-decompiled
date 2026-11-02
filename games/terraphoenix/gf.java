@@ -68,7 +68,7 @@ abstract class gf extends GameApplet {
     }
 
     private final void g(byte param0) {
-        int var2 = mk.field_j.a(-16384);
+        int var2 = LevelEditor.field_j.a(-16384);
         if (param0 != -118) {
           String var6 = (String) null;
           this.a(-109, -4, -25, (String) null, -60);
@@ -76,7 +76,7 @@ abstract class gf extends GameApplet {
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         int var4 = qh.field_d - 1;
         byte[] var5 = new byte[var4];
-        mk.field_j.b(0, var5, var4, 0);
+        LevelEditor.field_j.b(0, var5, var4, 0);
         m.a(dg.a(false), var3 != 0, ll.a(0, var5), param0 + 118);
     }
 
@@ -130,7 +130,7 @@ abstract class gf extends GameApplet {
         if (var2 == 0 ||
           1 == var2) {
           if (q.field_Jb == 11 &&
-            jj.field_f == 0) {
+            IntrusiveDeque.field_f == 0) {
             kj.a((byte) 95);
           }
           return var2;
@@ -138,7 +138,7 @@ abstract class gf extends GameApplet {
         if (!rf.field_r) {
           this.a("reconnect", true);
         }
-        gl.c((byte) 120);
+        UiWidget.c((byte) 120);
         if (param0 != 78) {
           this.field_B = -50;
         }
@@ -210,9 +210,9 @@ abstract class gf extends GameApplet {
             }
           }
           if (3 == var4) {
-            if (jj.field_f != -1 &&
-              jj.field_f != 0) {
-              jj.field_f = -1;
+            if (IntrusiveDeque.field_f != -1 &&
+              IntrusiveDeque.field_f != 0) {
+              IntrusiveDeque.field_f = -1;
               bb.b(3287);
             }
             if (param1) {
@@ -255,13 +255,13 @@ abstract class gf extends GameApplet {
             rk.a(dg.a(false), true);
           }
           if (var4 == 9) {
-            dl.a(23943, dg.a(false));
+            MapTile.a(23943, dg.a(false));
           }
           if (var4 == 10) {
             di.field_l.k(-17410, 17);
           }
           if (var4 == 11) {
-            dl.a(dg.a(false), -6242);
+            MapTile.a(dg.a(false), -6242);
           }
           if (var4 == 12) {
             nl.a((byte) 122, ej.f((byte) -30), dg.a(false));
@@ -345,39 +345,39 @@ abstract class gf extends GameApplet {
             !(var3 >= ch.a((byte) -5)) &&
             !(var3 >= wj.a(-127))) {
             this.field_q = false;
-            gb.g(-17464);
-            gl.c((byte) 127);
+            WidgetContainer.g(-17464);
+            UiWidget.c((byte) 127);
             k.a(2, ae.field_F, false);
             ke.a((byte) -107);
             q.field_Gb = true;
             ah.field_z = ll.a(1000) + 15000L;
           }
         }
-        if (jj.field_f == -1 ||
-          jj.field_f == 0) {
-          stackIn_23_0 = (jj.field_f != -1) ? 0 : 1;
+        if (IntrusiveDeque.field_f == -1 ||
+          IntrusiveDeque.field_f == 0) {
+          stackIn_23_0 = (IntrusiveDeque.field_f != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          jj.field_f = wc.c(0);
+          IntrusiveDeque.field_f = wc.c(0);
           if (var3Lifetime1 != 0 &&
-            jj.field_f == 0 &&
+            IntrusiveDeque.field_f == 0 &&
             q.field_Jb == 11 &&
             !qf.a((byte) 64)) {
             kj.a((byte) 95);
           }
-          if (-1 != jj.field_f &&
-            jj.field_f != 0) {
+          if (-1 != IntrusiveDeque.field_f &&
+            IntrusiveDeque.field_f != 0) {
             ah.field_z = 15000L + ll.a(1000);
           }
         }
-        if (-1 != jj.field_f &&
-          jj.field_f != 0) {
+        if (-1 != IntrusiveDeque.field_f &&
+          IntrusiveDeque.field_f != 0) {
           if (uh.field_H >= 10) {
             if (10 <= q.field_Jb) {
-              gl.c((byte) 118);
-              if (jj.field_f != 3) {
-                if (jj.field_f != 4) {
-                  if (jj.field_f != 2) {
-                    if (jj.field_f == 5) {
+              UiWidget.c((byte) 118);
+              if (IntrusiveDeque.field_f != 3) {
+                if (IntrusiveDeque.field_f != 4) {
+                  if (IntrusiveDeque.field_f != 2) {
+                    if (IntrusiveDeque.field_f == 5) {
                       k.a(5, sh.field_x, false);
                     } else {
                       k.a(256, ak.field_f, false);
@@ -394,12 +394,12 @@ abstract class gf extends GameApplet {
               q.field_Gb = true;
             }
           } else {
-            if (jj.field_f != 3) {
-              if (jj.field_f == 4) {
+            if (IntrusiveDeque.field_f != 3) {
+              if (IntrusiveDeque.field_f == 4) {
                 this.a("js5io", true);
               } else {
-                if (jj.field_f != 2) {
-                  if (jj.field_f == 5) {
+                if (IntrusiveDeque.field_f != 2) {
+                  if (IntrusiveDeque.field_f == 5) {
                     this.a("outofdate", true);
                   } else {
                     this.a("js5connect", true);
@@ -413,18 +413,18 @@ abstract class gf extends GameApplet {
             }
           }
         }
-        if ((jj.field_f != -1 &&
-          jj.field_f != 0 ||
+        if ((IntrusiveDeque.field_f != -1 &&
+          IntrusiveDeque.field_f != 0 ||
           qf.a((byte) 91)) &&
           ah.field_z <= ll.a(1000)) {
           q.field_Gb = false;
-          if (-1 != jj.field_f &&
-            jj.field_f != 0) {
-            jj.field_f = -1;
+          if (-1 != IntrusiveDeque.field_f &&
+            IntrusiveDeque.field_f != 0) {
+            IntrusiveDeque.field_f = -1;
             bb.b(3287);
           }
         }
-        if (0 == jj.field_f &&
+        if (0 == IntrusiveDeque.field_f &&
           !qf.a((byte) 106)) {
           da.field_f = false;
         }
@@ -463,7 +463,7 @@ abstract class gf extends GameApplet {
         if (uh.field_H == 3 &&
           nh.a(ph.field_q, ch.field_g, false, bi.field_d) &&
           gf.a((byte) 103, ch.field_g)) {
-          jj.e(-119);
+          IntrusiveDeque.e(-119);
           hj.g(-7958);
           ad.field_e = hh.field_k;
           wd.field_b = false;
@@ -611,8 +611,8 @@ abstract class gf extends GameApplet {
                                 bh.b(-80);
                                 return;
                               }
-                              bd.a((Throwable) null, "MGS1: " + r.i(-15465), -87);
-                              gb.g(-17464);
+                              bd.a((Throwable) null, "MGS1: " + BattleUnit.i(-15465), -87);
+                              WidgetContainer.g(-17464);
                               return;
                             }
                             stackIn_32_0 = (12 == var2);
@@ -622,7 +622,7 @@ abstract class gf extends GameApplet {
                             Terraphoenix.q(320);
                           }
                         } else {
-                          sd.a((byte) 43, nj.field_l, mk.field_j, qh.field_d);
+                          sd.a((byte) 43, nj.field_l, LevelEditor.field_j, qh.field_d);
                         }
                       }
                     } else {
@@ -641,8 +641,8 @@ abstract class gf extends GameApplet {
           }
           return;
         }
-        bd.a((Throwable) null, "MGS2: " + r.i(-15465), -109);
-        gb.g(-17464);
+        bd.a((Throwable) null, "MGS2: " + BattleUnit.i(-15465), -109);
+        WidgetContainer.g(-17464);
     }
 
     private final void a(byte param0, boolean param1) {
@@ -739,25 +739,25 @@ abstract class gf extends GameApplet {
     }
 
     private final void f(byte param0) {
-        dk.field_j[9] = -1;
-        dk.field_j[2] = -2;
-        dk.field_j[6] = -2;
-        dk.field_j[11] = -1;
-        dk.field_j[10] = -1;
-        dk.field_j[7] = -1;
-        dk.field_j[1] = 16;
-        dk.field_j[3] = -1;
-        dk.field_j[4] = -1;
-        dk.field_j[5] = -1;
-        dk.field_j[17] = -1;
-        dk.field_j[16] = -1;
-        dk.field_j[13] = -1;
-        dk.field_j[8] = -2;
+        LevelMap.field_j[9] = -1;
+        LevelMap.field_j[2] = -2;
+        LevelMap.field_j[6] = -2;
+        LevelMap.field_j[11] = -1;
+        LevelMap.field_j[10] = -1;
+        LevelMap.field_j[7] = -1;
+        LevelMap.field_j[1] = 16;
+        LevelMap.field_j[3] = -1;
+        LevelMap.field_j[4] = -1;
+        LevelMap.field_j[5] = -1;
+        LevelMap.field_j[17] = -1;
+        LevelMap.field_j[16] = -1;
+        LevelMap.field_j[13] = -1;
+        LevelMap.field_j[8] = -2;
         if (param0 >= -78) {
           field_y = (nd) null;
         }
-        dk.field_j[18] = 1;
-        dk.field_j[12] = -1;
+        LevelMap.field_j[18] = 1;
+        LevelMap.field_j[12] = -1;
     }
 
     private final void i(int param0) {

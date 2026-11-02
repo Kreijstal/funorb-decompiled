@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends id {
+final class PcmSample extends AbstractAudioSample {
     int field_j;
     int field_m;
     int field_l;
     byte[] field_k;
     boolean field_i;
 
-    final gg a(m param0) {
+    final PcmSample a(m param0) {
         this.field_k = param0.a((byte) 109, this.field_k);
         this.field_l = param0.a(this.field_l, true);
         if (this.field_j != this.field_m) {
@@ -25,14 +25,14 @@ final class gg extends id {
         return this;
     }
 
-    gg(int param0, byte[] param1, int param2, int param3) {
+    PcmSample(int param0, byte[] param1, int param2, int param3) {
         this.field_l = param0;
         this.field_k = param1;
         this.field_j = param2;
         this.field_m = param3;
     }
 
-    gg(int param0, byte[] param1, int param2, int param3, boolean param4) {
+    PcmSample(int param0, byte[] param1, int param2, int param3, boolean param4) {
         this.field_l = param0;
         this.field_k = param1;
         this.field_j = param2;

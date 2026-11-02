@@ -3,7 +3,7 @@
  */
 final class qb {
     static bg field_c;
-    static jj field_a;
+    static IntrusiveDeque field_a;
     static Sprite[] field_f;
     static String field_d;
     static fd field_b;
@@ -30,7 +30,7 @@ final class qb {
           }
           var4_int = param3.c(-1, param2);
           var5 = param3.a(param1 - 90, var4_int, param0);
-          stackIn_3_0 = jj.a(param3, var5, (byte) 18, var4_int);
+          stackIn_3_0 = IntrusiveDeque.a(param3, var5, (byte) 18, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,7 +115,7 @@ final class qb {
           if (param0 != 0) {
             return;
           }
-          var13 = mk.field_j;
+          var13 = LevelEditor.field_j;
           var15 = var13;
           var2 = var15.a(param0 ^ -16384);
           var3 = (ja) (vd.field_l.d(9272));
@@ -127,7 +127,7 @@ final class qb {
             break;
           }
           if (var3 == null) {
-            gb.g(-17464);
+            WidgetContainer.g(-17464);
             return;
           }
           var4 = var15.a(-16384);
@@ -135,7 +135,7 @@ final class qb {
             GameApplet.field_k[0] = kj.field_f;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              GameApplet.field_k[var6_int] = var13.e(param0 - 1);
+              GameApplet.field_k[var6_int] = var13.readString(param0 - 1);
             }
             le.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -185,10 +185,10 @@ final class qb {
               var14++;
               var9Lifetime1++;
             }
-            var3.b((byte) 12);
+            var3.unlink((byte) 12);
             return;
           }
-          var3.b((byte) 12);
+          var3.unlink((byte) 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ final class qb {
 
     static {
         field_d = "Music: ";
-        field_a = new jj();
+        field_a = new IntrusiveDeque();
         field_h = new rj();
         field_g = 64;
     }

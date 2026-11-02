@@ -17,7 +17,7 @@ final class vk {
             if (null != a.field_b &&
               a.field_b.field_d) {
               ga.b((byte) 82);
-              cl.field_J.a((gl) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
+              cl.field_J.a((UiWidget) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
             }
             return;
           }

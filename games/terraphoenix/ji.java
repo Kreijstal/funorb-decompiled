@@ -105,7 +105,7 @@ final class ji extends IntrusiveNode {
           RuntimeException var15 = null;
           IOException var16 = null;
           try {
-            mk.field_j = new uc(param9);
+            LevelEditor.field_j = new uc(param9);
             di.field_l = new uc(param8);
             nd.field_i = param13;
             jm.field_c = param1;

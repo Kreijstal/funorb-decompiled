@@ -14,7 +14,7 @@ final class ta {
             CharSequence var4 = (CharSequence) null;
             ta.a((CharSequence) null, 126);
           }
-          jl.field_I.a((gl) (nb.field_b), (byte) -1);
+          jl.field_I.a((UiWidget) (nb.field_b), (byte) -1);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

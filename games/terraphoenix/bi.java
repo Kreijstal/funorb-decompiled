@@ -26,7 +26,7 @@ final class bi {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_8_0 = b.field_f;
+              stackIn_8_0 = RandomAccessCacheFile.field_f;
               return stackIn_8_0;
             }
             if (param0 != -29456) {

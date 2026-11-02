@@ -7,7 +7,7 @@ final class ui {
     static int[] field_e;
     static bg[] field_a;
     boolean field_c;
-    static r field_f;
+    static BattleUnit field_f;
 
     final static String a(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
@@ -24,7 +24,7 @@ final class ui {
         try {
           try {
             if (param2 != -48) {
-              field_f = (r) null;
+              field_f = (BattleUnit) null;
             }
             var3_int = param1.h(-115);
             if (var3_int > param0) {

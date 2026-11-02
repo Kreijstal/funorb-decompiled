@@ -93,8 +93,8 @@ final class wj {
                 am.field_K = ji.a(-1, param3, false, param2);
               }
               di.field_l.position = 0;
-              di.field_l.i(14, 28);
-              di.field_l.i(am.field_K.c(0).field_c, -115);
+              di.field_l.writeByte(14, 28);
+              di.field_l.writeByte(am.field_K.c(0).field_c, -115);
               bc.a(-1, 0);
               mh.field_a = s.field_c;
             }
@@ -103,8 +103,8 @@ final class wj {
             }
             if (mh.field_a == s.field_c &&
               vc.a(-113, 1)) {
-              var6_int = mk.field_j.a(-16384);
-              mk.field_j.position = 0;
+              var6_int = LevelEditor.field_j.a(-16384);
+              LevelEditor.field_j.position = 0;
               if (0 != var6_int) {
                 qk.field_b = var6_int;
                 mh.field_a = vf.field_c;
@@ -115,18 +115,18 @@ final class wj {
             }
             if (mh.field_a == cb.field_J &&
               vc.a(-110, 8)) {
-              kd.field_c = mk.field_j.h((byte) 78);
-              mk.field_j.position = 0;
+              kd.field_c = LevelEditor.field_j.h((byte) 78);
+              LevelEditor.field_j.position = 0;
               gj.a(param0, param4, 1, am.field_K, param5);
               mh.field_a = af.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
             if (mh.field_a == af.field_b &&
               vc.a(-115, 1)) {
-              var6_intLifetime1 = mk.field_j.a(param1 - 45782);
+              var6_intLifetime1 = LevelEditor.field_j.a(param1 - 45782);
               og.field_e = null;
               qk.field_b = var6_intLifetime1;
-              mk.field_j.position = 0;
+              LevelEditor.field_j.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -135,25 +135,25 @@ final class wj {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  gb.g(-17464);
+                  WidgetContainer.g(-17464);
                   vj.field_Q = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                mh.field_a = gb.field_B;
+                mh.field_a = WidgetContainer.field_B;
                 qh.field_d = -1;
               }
             }
-            if (gb.field_B == mh.field_a &&
+            if (WidgetContainer.field_B == mh.field_a &&
               cm.b((byte) -61)) {
-              SpriteState.field_y = mk.field_j.h((byte) 78);
-              mm.field_e = mk.field_j.a(-16384);
-              mk.field_j.a(param1 ^ -19754);
-              me.field_o = mk.field_j.i(param1 - 54976);
-              var6 = mk.field_j.j(param1 ^ -1915102434);
-              var7 = mk.field_j.a(param1 ^ -19754);
+              SpriteState.field_y = LevelEditor.field_j.h((byte) 78);
+              mm.field_e = LevelEditor.field_j.a(-16384);
+              LevelEditor.field_j.a(param1 ^ -19754);
+              me.field_o = LevelEditor.field_j.readUnsignedShort(param1 - 54976);
+              var6 = LevelEditor.field_j.j(param1 ^ -1915102434);
+              var7 = LevelEditor.field_j.a(param1 ^ -19754);
               if (0 != (var7 & 1)) {
                 wh.b(96);
               }
@@ -166,19 +166,19 @@ final class wj {
                 }
               }
               if (hf.field_x) {
-                mk.field_j.a(-16384);
-                mk.field_j.a(-16384);
-                mk.field_j.f((byte) -107);
-                kf.field_g = mk.field_j.i(param1 ^ -4416);
-                r.field_O = new byte[kf.field_g];
+                LevelEditor.field_j.a(-16384);
+                LevelEditor.field_j.a(-16384);
+                LevelEditor.field_j.f((byte) -107);
+                kf.field_g = LevelEditor.field_j.readUnsignedShort(param1 ^ -4416);
+                BattleUnit.field_O = new byte[kf.field_g];
                 for (var8 = 0; kf.field_g > var8; var8++) {
-                  r.field_O[var8] = mk.field_j.f(2);
+                  BattleUnit.field_O[var8] = LevelEditor.field_j.f(2);
                 }
               }
-              kj.field_f = mk.field_j.e(-1);
+              kj.field_f = LevelEditor.field_j.readString(-1);
               var11 = (CharSequence) ((Object) kj.field_f);
-              jj.field_e = hm.a((byte) 2, var11);
-              MouseInputHandler.field_b = mk.field_j.a(-16384);
+              IntrusiveDeque.field_e = hm.a((byte) 2, var11);
+              MouseInputHandler.field_b = LevelEditor.field_j.a(-16384);
               mh.field_a = od.field_g;
               if (am.field_K.c(0) != rj.field_a) {
                 if (am.field_K.c(param1 ^ 29398) == hf.field_s) {
@@ -214,13 +214,13 @@ final class wj {
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 ab.field_g[var8Lifetime1] = ab.field_g[var8Lifetime1] + 50;
               }
-              mk.field_j.a(ab.field_g, 16888);
+              LevelEditor.field_j.a(ab.field_g, 16888);
               stackIn_76_0 = qk.field_b;
               return stackIn_76_0;
             }
             if (vf.field_c == mh.field_a &&
               cm.b((byte) -39)) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               if (qk.field_b == 7 &&
                 !vj.field_Q) {
                 vj.field_Q = true;
@@ -230,7 +230,7 @@ final class wj {
               if (7 == qk.field_b) {
                 qk.field_b = 3;
               }
-              bh.field_d = mk.field_j.e(-1);
+              bh.field_d = LevelEditor.field_j.readString(-1);
               vj.field_Q = false;
               stackIn_85_0 = qk.field_b;
               return stackIn_85_0;

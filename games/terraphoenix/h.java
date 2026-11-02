@@ -40,7 +40,7 @@ abstract class h {
         long var6 = (long)param0 + ((long)param2 << 32);
         nh var8 = new nh();
         var8.field_G = param4;
-        var8.field_m = var6;
+        var8.secondaryKey = var6;
         if (param3 < 55) {
           h.a(false);
           var8.field_x = param1 ? true : false;

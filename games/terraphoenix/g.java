@@ -24,7 +24,7 @@ class g extends wa {
     private int field_A;
     int field_R;
     private Sprite field_y;
-    private jj field_L;
+    private IntrusiveDeque field_L;
     private int field_v;
     int field_x;
     private Sprite field_xb;
@@ -200,7 +200,7 @@ class g extends wa {
     final void a(g param0, int param1) {
         try {
           if (this.field_L == null) {
-            this.field_L = new jj();
+            this.field_L = new IntrusiveDeque();
           }
           if (param1 != -14951) {
             this.field_w = (Sprite) null;
@@ -565,7 +565,7 @@ class g extends wa {
         this.field_M = -1;
         this.field_E = 256;
         try {
-          this.field_g = param0;
+          this.key = param0;
           this.field_lb = param5;
           this.field_ib = param3;
           this.field_R = param2;

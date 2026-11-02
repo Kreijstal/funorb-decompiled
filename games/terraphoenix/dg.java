@@ -81,7 +81,7 @@ final class dg {
           if (param0 < 37) {
             field_c = (im) null;
           }
-          while (b.a((byte) -102)) {
+          while (RandomAccessCacheFile.a((byte) -102)) {
             var1.k(-17410, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

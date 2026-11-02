@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e {
+final class BattleState {
     boolean field_J;
-    dk field_h;
+    LevelMap map;
     int field_f;
     int field_E;
     int field_j;
@@ -11,9 +11,9 @@ final class e {
     int field_B;
     boolean field_r;
     boolean field_m;
-    private r field_D;
+    private BattleUnit field_D;
     static Sprite field_g;
-    r[] field_C;
+    BattleUnit[] units;
     int field_k;
     hk field_e;
     static rh field_l;
@@ -21,7 +21,7 @@ final class e {
     th field_n;
     private int field_z;
     int field_N;
-    r field_q;
+    BattleUnit field_q;
     boolean field_b;
     static int[] field_t;
     static Sprite[] field_p;
@@ -43,19 +43,19 @@ final class e {
     int field_y;
     Terraphoenix field_G;
 
-    private final void a(boolean param0, r param1) {
+    private final void a(boolean param0, BattleUnit param1) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dl var3 = null;
+        MapTile var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         var6 = Terraphoenix.field_V;
         try {
-          this.field_h.b((byte) -109);
+          this.map.b((byte) -109);
           if (param0) {
             return;
           }
@@ -67,9 +67,9 @@ final class e {
             }
             var5 = -1 + param1.field_H;
             while (param1.field_H + 1 >= var5) {
-              var3 = this.field_h.a(107, var5, param1.field_E, var4);
+              var3 = this.map.a(107, var5, param1.field_E, var4);
               if (null != var3 &&
-                this.field_h.field_g[param1.field_F][param1.field_H] < this.field_h.field_g[var4][var5] &&
+                this.map.field_g[param1.field_F][param1.field_H] < this.map.field_g[var4][var5] &&
                 var3.a(-param1.field_H + var5, var4 - param1.field_F, -128) <= 50) {
                 param1.field_jb = 20;
                 param1.field_d = param1.field_B;
@@ -423,36 +423,36 @@ final class e {
             this.field_B = 101;
           }
           var2_int = 0;
-          while (var2_int < this.field_C.length) {
+          while (var2_int < this.units.length) {
             if (var3 != 0) {
               return;
             }
-            if (null != this.field_C[var2_int]) {
-              if (this.field_C[var2_int].field_Z != null) {
+            if (null != this.units[var2_int]) {
+              if (this.units[var2_int].field_Z != null) {
                 if (this.field_G.field_Bb == 5 ||
                   this.field_G.field_Bb == 7 ||
                   this.field_G.field_Bb == 9) {
-                  this.field_C[var2_int].field_h = true;
-                  this.field_C[var2_int].field_R = this.field_C[var2_int].field_E;
-                  this.field_C[var2_int].field_i = this.field_C[var2_int].field_F;
-                  this.field_C[var2_int].field_gb = this.field_C[var2_int].field_H;
+                  this.units[var2_int].field_h = true;
+                  this.units[var2_int].field_R = this.units[var2_int].field_E;
+                  this.units[var2_int].field_i = this.units[var2_int].field_F;
+                  this.units[var2_int].field_gb = this.units[var2_int].field_H;
                 }
                 if (this.field_J) {
-                  this.field_C[var2_int].b(60);
+                  this.units[var2_int].b(60);
                 } else {
-                  this.field_C[var2_int].b(60);
-                  this.field_C[var2_int].field_jb = 0;
+                  this.units[var2_int].b(60);
+                  this.units[var2_int].field_jb = 0;
                 }
                 if (null == this.field_q) {
-                  this.field_q = this.field_C[var2_int];
+                  this.field_q = this.units[var2_int];
                 }
-                this.field_C[var2_int].a(false);
+                this.units[var2_int].a(false);
               } else {
                 if (this.field_J) {
-                  this.field_C[var2_int].b(60);
-                  this.field_C[var2_int].field_q = -(int)(Math.random() * (double)this.field_C[var2_int].field_jb);
+                  this.units[var2_int].b(60);
+                  this.units[var2_int].field_q = -(int)(Math.random() * (double)this.units[var2_int].field_jb);
                 } else {
-                  this.field_C[var2_int].b(60);
+                  this.units[var2_int].b(60);
                 }
               }
             }
@@ -466,7 +466,7 @@ final class e {
         }
     }
 
-    private final int a(byte param0, r param1, r param2) {
+    private final int a(byte param0, BattleUnit param1, BattleUnit param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -506,17 +506,17 @@ final class e {
     }
 
     private final void a(Terraphoenix param0, boolean param1) {
-        r stackIn_47_0 = null;
-        r stackIn_131_0 = null;
+        BattleUnit stackIn_47_0 = null;
+        BattleUnit stackIn_131_0 = null;
         boolean stackIn_132_1 = false;
-        r stackIn_315_0 = null;
+        BattleUnit stackIn_315_0 = null;
         boolean stackIn_316_1 = false;
-        r stackIn_538_0 = null;
-        r stackIn_538_1 = null;
+        BattleUnit stackIn_538_0 = null;
+        BattleUnit stackIn_538_1 = null;
         int stackIn_557_0 = 0;
         int stackIn_558_1 = 0;
         boolean stackIn_562_0 = false;
-        r stackIn_670_0 = null;
+        BattleUnit stackIn_670_0 = null;
         ga stackIn_673_0 = null;
         int stackIn_826_0 = 0;
         int stackIn_827_1 = 0;
@@ -530,7 +530,7 @@ final class e {
         Object var3 = null;
         int var4 = 0;
         Object var4_ref = null;
-        dl var5 = null;
+        MapTile var5 = null;
         int var5_int = 0;
         oh var5_ref = null;
         int var6 = 0;
@@ -539,7 +539,7 @@ final class e {
         int[] var7_ref_int__ = null;
         int var8 = 0;
         int var9 = 0;
-        dl var5Lifetime1;
+        MapTile var5Lifetime1;
         oh var5_refLifetime1;
         int var5_intLifetime1;
         int var6Lifetime1;
@@ -571,7 +571,7 @@ final class e {
             var4 = 0;
             while (var4 < 12) {
               stackIn_538_0 = this.field_q;
-              stackIn_538_1 = this.field_C[var4];
+              stackIn_538_1 = this.units[var4];
               if (var9 != 0) {
                 decompiledFrameCompleted2 = false;
                 break;
@@ -590,10 +590,10 @@ final class e {
                   var3_int -= 12;
                 }
                 if (var4 < 12) {
-                  if (this.field_C[var3_int] == null) {
+                  if (this.units[var3_int] == null) {
                     continue;
                   }
-                  stackIn_47_0 = this.field_C[var3_int];
+                  stackIn_47_0 = this.units[var3_int];
                   if (var9 != 0) {
                     decompiledFrameCompleted1 = false;
                     break;
@@ -601,20 +601,20 @@ final class e {
                   if (stackIn_47_0.field_Z == null) {
                     continue;
                   }
-                  if (0 >= this.field_C[var3_int].field_jb) {
+                  if (0 >= this.units[var3_int].field_jb) {
                     continue;
                   }
-                  if (0 >= this.field_C[var3_int].field_P) {
+                  if (0 >= this.units[var3_int].field_P) {
                     continue;
                   }
                 }
                 break;
               }
               if (decompiledFrameCompleted1) {
-                if (null != this.field_C[var3_int] &&
-                  null != this.field_C[var3_int].field_Z &&
-                  this.field_C[var3_int].field_P > 0) {
-                  this.field_q = this.field_C[var3_int];
+                if (null != this.units[var3_int] &&
+                  null != this.units[var3_int].field_Z &&
+                  this.units[var3_int].field_P > 0) {
+                  this.field_q = this.units[var3_int];
                   sj.field_b = (this.field_q.field_F - this.field_q.field_H) * 32;
                   lg.field_c = 16 * (this.field_q.field_F + this.field_q.field_H) - this.field_q.field_E * 48;
                   eg.field_p = this.field_q.field_E;
@@ -651,7 +651,7 @@ final class e {
               var3 = null;
               var4_ref = null;
               if (!ha.field_o) {
-                var5 = this.field_h.a(94, vf.field_a, cm.field_d, IntrusiveNode.field_c);
+                var5 = this.map.a(94, vf.field_a, cm.field_d, IntrusiveNode.field_c);
                 if (null != this.field_q &&
                   IntrusiveNode.field_c != -1) {
                   var3 = ke.field_g;
@@ -699,7 +699,7 @@ final class e {
                   }
                   stackIn_131_0 = this.field_q;
                   stackIn_132_1 = !(param1);
-                  var8 = ((r) (Object) stackIn_131_0).c(stackIn_132_1);
+                  var8 = ((BattleUnit) (Object) stackIn_131_0).c(stackIn_132_1);
                   this.field_q.field_ab = var7;
                   if (var5.field_A == this.field_q.field_F &&
                     var5.field_n == this.field_q.field_H) {
@@ -771,7 +771,7 @@ final class e {
                   regionExit2: {
                     qd.$cfr$intArgs$a$e9dea5688aa5(45, 22);
                     ok.field_i = true;
-                    var5Lifetime1 = this.field_h.a(117, vf.field_a, cm.field_d, IntrusiveNode.field_c);
+                    var5Lifetime1 = this.map.a(117, vf.field_a, cm.field_d, IntrusiveNode.field_c);
                     this.field_m = false;
                     if (this.field_q != null) {
                       if ((!ha.field_o ||
@@ -808,7 +808,7 @@ final class e {
                           this.field_B < 10) {
                           this.field_B = this.field_B + 1;
                         }
-                        this.field_q = this.field_h.a(102, vf.field_a, cm.field_d, IntrusiveNode.field_c).field_h;
+                        this.field_q = this.map.a(102, vf.field_a, cm.field_d, IntrusiveNode.field_c).field_h;
                         this.a(-1);
                         this.field_m = false;
                         this.field_L = 0;
@@ -832,7 +832,7 @@ final class e {
                         this.field_q.a(param1, this.field_q.field_X, this.field_q.field_n);
                         stackIn_315_0 = this.field_q;
                         stackIn_316_1 = !(param1);
-                        var8Lifetime1 = ((r) (Object) stackIn_315_0).c(stackIn_316_1);
+                        var8Lifetime1 = ((BattleUnit) (Object) stackIn_315_0).c(stackIn_316_1);
                         if (Math.abs(var6Lifetime4 - this.field_q.field_U) >= 2 &&
                           Math.abs(-this.field_q.field_U + var6Lifetime4) <= 6) {
                           this.field_q.field_ab = 0;
@@ -898,9 +898,9 @@ final class e {
                           ld.field_e = vf.field_a;
                           og.field_d = -1;
                           this.field_q.field_S = false;
-                          this.field_q.field_c.field_h = null;
-                          fi.field_m = this.field_h.a(false, this.field_q.field_n, this.field_q.field_H, -89, true, this.field_q.field_N, this.field_q.field_E, this.field_q.field_X, this.field_q.field_F);
-                          this.field_q.field_c.field_h = this.field_q;
+                          this.field_q.tile.field_h = null;
+                          fi.field_m = this.map.a(false, this.field_q.field_n, this.field_q.field_H, -89, true, this.field_q.field_N, this.field_q.field_E, this.field_q.field_X, this.field_q.field_F);
+                          this.field_q.tile.field_h = this.field_q;
                           if (fi.field_m != null) {
                             og.field_d = fi.field_m.a(param1);
                             if (var9 != 0) {
@@ -1132,7 +1132,7 @@ final class e {
                   if (var6Lifetime1 < 12) {
                     stackIn_670_0 = this.field_q;
                     if (var9 == 0) {
-                      if (stackIn_670_0 == this.field_C[var6Lifetime1]) {
+                      if (stackIn_670_0 == this.units[var6Lifetime1]) {
                         var5_intLifetime1 = var6Lifetime1;
                       }
                       var6Lifetime1++;
@@ -1147,10 +1147,10 @@ final class e {
                         var5_intLifetime1 -= 12;
                       }
                       if (var6Lifetime1 < 12) {
-                        if (this.field_C[var5_intLifetime1] == null) {
+                        if (this.units[var5_intLifetime1] == null) {
                           continue;
                         }
-                        stackIn_673_0 = this.field_C[var5_intLifetime1].field_Z;
+                        stackIn_673_0 = this.units[var5_intLifetime1].field_Z;
                         if (var9 != 0) {
                           decompiledFrameCompleted0 = false;
                           break;
@@ -1158,32 +1158,32 @@ final class e {
                         if (stackIn_673_0 == null) {
                           continue;
                         }
-                        if (this.field_C[var5_intLifetime1].field_jb <= 0) {
+                        if (this.units[var5_intLifetime1].field_jb <= 0) {
                           continue;
                         }
-                        if (this.field_C[var5_intLifetime1].field_P <= 0) {
+                        if (this.units[var5_intLifetime1].field_P <= 0) {
                           continue;
                         }
                       }
                       break;
                     }
                     if (decompiledFrameCompleted0) {
-                      stackIn_670_0 = this.field_C[var5_intLifetime1];
+                      stackIn_670_0 = this.units[var5_intLifetime1];
                     }
                   }
                   if (decompiledFrameCompleted0) {
                     if (stackIn_670_0 == null) {
                       break;
                     }
-                    stackIn_673_0 = this.field_C[var5_intLifetime1].field_Z;
+                    stackIn_673_0 = this.units[var5_intLifetime1].field_Z;
                   }
                   if (stackIn_673_0 == null) {
                     break;
                   }
-                  if (this.field_C[var5_intLifetime1].field_P <= 0) {
+                  if (this.units[var5_intLifetime1].field_P <= 0) {
                     break;
                   }
-                  this.field_q = this.field_C[var5_intLifetime1];
+                  this.field_q = this.units[var5_intLifetime1];
                   lg.field_c = -(this.field_q.field_E * 48) + (this.field_q.field_H + this.field_q.field_F) * 16;
                   this.field_m = false;
                   if (this.field_B >= 7 &&
@@ -1233,7 +1233,7 @@ final class e {
               }
               if (null != var5_ref) {
                 param0.field_Eb = new String[1];
-                param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_ref.field_g].field_j + " " + gl.field_h;
+                param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_ref.field_g].field_j + " " + UiWidget.field_h;
                 if (this.field_L == 1) {
                   param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_ref.field_g].field_j + " " + td.field_a;
                 }
@@ -1320,7 +1320,7 @@ final class e {
               }
               if (var5_refLifetime1 != null) {
                 param0.field_Eb = new String[1];
-                param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_refLifetime1.field_g].field_j + " " + gl.field_h;
+                param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_refLifetime1.field_g].field_j + " " + UiWidget.field_h;
                 if (this.field_L == 1) {
                   param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_refLifetime1.field_g].field_j + " " + td.field_a;
                 }
@@ -1476,9 +1476,9 @@ final class e {
         boolean stackIn_44_1 = false;
         boolean stackIn_55_0 = false;
         boolean stackIn_66_0 = false;
-        r stackIn_163_0 = null;
-        r stackIn_283_0 = null;
-        r stackIn_283_1 = null;
+        BattleUnit stackIn_163_0 = null;
+        BattleUnit stackIn_283_0 = null;
+        BattleUnit stackIn_283_1 = null;
         int stackIn_330_0 = 0;
         int stackIn_330_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1575,7 +1575,7 @@ final class e {
             var4 = 0;
             while (var4 < 12) {
               stackIn_283_0 = this.field_q;
-              stackIn_283_1 = this.field_C[var4];
+              stackIn_283_1 = this.units[var4];
               if (var5 != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
@@ -1594,30 +1594,30 @@ final class e {
                 }
                 var4Lifetime2++;
                 if (var4Lifetime2 < 12) {
-                  if (null == this.field_C[var3_intLifetime2]) {
+                  if (null == this.units[var3_intLifetime2]) {
                     continue;
                   }
-                  stackIn_163_0 = this.field_C[var3_intLifetime2];
+                  stackIn_163_0 = this.units[var3_intLifetime2];
                   if (var5 != 0) {
                     break scanLoop1;
                   }
                   if (stackIn_163_0.field_Z == null) {
                     continue;
                   }
-                  if (this.field_C[var3_intLifetime2].field_jb <= 0) {
+                  if (this.units[var3_intLifetime2].field_jb <= 0) {
                     continue;
                   }
-                  if (this.field_C[var3_intLifetime2].field_P <= 0) {
+                  if (this.units[var3_intLifetime2].field_P <= 0) {
                     continue;
                   }
                 }
-                stackIn_163_0 = this.field_C[var3_intLifetime2];
+                stackIn_163_0 = this.units[var3_intLifetime2];
                 break;
               }
               if (stackIn_163_0 != null &&
-                null != this.field_C[var3_intLifetime2].field_Z &&
-                this.field_C[var3_intLifetime2].field_P > 0) {
-                this.field_q = this.field_C[var3_intLifetime2];
+                null != this.units[var3_intLifetime2].field_Z &&
+                this.units[var3_intLifetime2].field_P > 0) {
+                this.field_q = this.units[var3_intLifetime2];
                 sj.field_b = 32 * (-this.field_q.field_H + this.field_q.field_F);
                 eg.field_p = this.field_q.field_E;
                 lg.field_c = (this.field_q.field_H + this.field_q.field_F) * 16 - this.field_q.field_E * 48;
@@ -1656,10 +1656,10 @@ final class e {
                 if (this.field_s >= 100) {
                   this.field_s = 0;
                 }
-                if (this.field_C[this.field_s] == null) {
+                if (this.units[this.field_s] == null) {
                   continue;
                 }
-                stackIn_330_0 = this.field_C[this.field_s].field_C;
+                stackIn_330_0 = this.units[this.field_s].field_C;
                 stackIn_330_1 = 1;
                 if (var5 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -1668,13 +1668,13 @@ final class e {
                 if (stackIn_330_0 != stackIn_330_1) {
                   continue;
                 }
-                if (!this.field_h.a((byte) -93, this.field_q, this.field_C[this.field_s])) {
+                if (!this.map.a((byte) -93, this.field_q, this.units[this.field_s])) {
                   continue;
                 }
-                sj.field_b = 32 * (-this.field_C[this.field_s].field_H + this.field_C[this.field_s].field_F);
+                sj.field_b = 32 * (-this.units[this.field_s].field_H + this.units[this.field_s].field_F);
                 var4Lifetime1 = 1;
-                lg.field_c = -(48 * this.field_C[this.field_s].field_E) + (this.field_C[this.field_s].field_H + this.field_C[this.field_s].field_F) * 16;
-                eg.field_p = this.field_C[this.field_s].field_E;
+                lg.field_c = -(48 * this.units[this.field_s].field_E) + (this.units[this.field_s].field_H + this.units[this.field_s].field_F) * 16;
+                eg.field_p = this.units[this.field_s].field_E;
               }
             }
             if (decompiledFrameCompleted0) {
@@ -1791,7 +1791,7 @@ final class e {
         try {
           field_o = null;
           if (param0 != 20) {
-            e.b(-97);
+            BattleState.b(-97);
           }
           field_g = null;
           field_l = null;
@@ -1807,7 +1807,7 @@ final class e {
 
     private final void a(int param0, Terraphoenix param1, boolean param2) {
         int incrementValue$0 = 0;
-        r stackIn_70_0 = null;
+        BattleUnit stackIn_70_0 = null;
         int stackIn_115_0 = 0;
         int stackIn_116_1 = 0;
         int stackIn_153_0 = 0;
@@ -1819,10 +1819,10 @@ final class e {
         boolean stackIn_247_0 = false;
         Object stackIn_277_0 = null;
         Object stackIn_413_0 = null;
-        dl stackIn_413_1 = null;
+        MapTile stackIn_413_1 = null;
         boolean stackIn_431_0 = false;
         Object stackIn_437_0;
-        dk stackIn_437_1;
+        LevelMap stackIn_437_1;
         int stackIn_437_2;
         int stackIn_437_3;
         int stackIn_437_4;
@@ -1838,18 +1838,18 @@ final class e {
         StringBuilder stackIn_649_1 = null;
         String stackIn_650_2 = null;
         RuntimeException decompiledCaughtException = null;
-        r stackOut_69_0;
+        BattleUnit stackOut_69_0;
         Object var4 = null;
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        dl var9_ref_dl = null;
+        MapTile var9_ref_dl = null;
         int var10 = 0;
         int var11_int = 0;
         Object var11 = null;
-        dl var11_ref = null;
+        MapTile var11_ref = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1863,15 +1863,15 @@ final class e {
           }
           var6 = 0;
           scanLoop1: while (true) {
-            if (var6 < this.field_C.length) {
-              if (null != this.field_C[var6] &&
-                this.field_C[var6].field_Z == null && (param1.field_Bb != 0 ||
-                this.field_C[var6].field_k ||
-                this.field_C[var6].field_h ||
+            if (var6 < this.units.length) {
+              if (null != this.units[var6] &&
+                this.units[var6].field_Z == null && (param1.field_Bb != 0 ||
+                this.units[var6].field_k ||
+                this.units[var6].field_h ||
                 this.field_B >= 16 ||
-                !(fa.field_a <= 0)) && (this.field_C[var6].field_P > 0 &&
-                !this.field_C[var6].field_Y)) {
-                var4 = this.field_C[var6];
+                !(fa.field_a <= 0)) && (this.units[var6].field_P > 0 &&
+                !this.units[var6].field_Y)) {
+                var4 = this.units[var6];
                 break scanLoop1;
               }
               var6++;
@@ -1915,38 +1915,38 @@ final class e {
             }
           }
           if (decompiledFrameCompleted0) {
-            ((r) (var4)).field_f = false;
+            ((BattleUnit) (var4)).field_f = false;
           }
-          this.field_D = (r) (var4);
+          this.field_D = (BattleUnit) (var4);
           var6 = 0;
           var7 = 20000;
-          if (null != ((r) (var4)).field_a &&
-            0 >= ((r) (var4)).field_a.field_P) {
-            ((r) (var4)).field_a = null;
-            ((r) (var4)).field_w = 0;
+          if (null != ((BattleUnit) (var4)).field_a &&
+            0 >= ((BattleUnit) (var4)).field_a.field_P) {
+            ((BattleUnit) (var4)).field_a = null;
+            ((BattleUnit) (var4)).field_w = 0;
           }
           var8 = 0;
           scanLoop2: while (true) {
-            if (var8 < this.field_C.length) {
-              stackOut_69_0 = this.field_C[var8];
+            if (var8 < this.units.length) {
+              stackOut_69_0 = this.units[var8];
               stackIn_277_0 = stackOut_69_0;
               stackIn_70_0 = stackOut_69_0;
               if (var16 == 0) {
                 if (stackIn_70_0 != null &&
-                  this.field_C[var8].field_P > 0 &&
-                  ~((r) (var4)).field_C != ~this.field_C[var8].field_C && (this.field_C[var8].field_k ||
-                  this.field_C[var8].field_h)) {
+                  this.units[var8].field_P > 0 &&
+                  ~((BattleUnit) (var4)).field_C != ~this.units[var8].field_C && (this.units[var8].field_k ||
+                  this.units[var8].field_h)) {
                   var9 = 1;
-                  var10 = this.field_C[var8].field_F;
-                  var11_int = this.field_C[var8].field_H;
-                  if (!this.field_C[var8].field_k) {
-                    var10 = this.field_C[var8].field_i;
-                    var11_int = this.field_C[var8].field_gb;
+                  var10 = this.units[var8].field_F;
+                  var11_int = this.units[var8].field_H;
+                  if (!this.units[var8].field_k) {
+                    var10 = this.units[var8].field_i;
+                    var11_int = this.units[var8].field_gb;
                   }
-                  ((r) (var4)).a(true, var10, var11_int);
-                  var12 = this.field_h.a((byte) -93, (r) (var4), this.field_C[var8]) ? 1 : 0;
-                  var13 = -((r) (var4)).field_F + var10;
-                  var14 = -((r) (var4)).field_H + var11_int;
+                  ((BattleUnit) (var4)).a(true, var10, var11_int);
+                  var12 = this.map.a((byte) -93, (BattleUnit) (var4), this.units[var8]) ? 1 : 0;
+                  var13 = -((BattleUnit) (var4)).field_F + var10;
+                  var14 = -((BattleUnit) (var4)).field_H + var11_int;
                   var15 = var13 * var13 + var14 * var14;
                   if (null != var5) {
                     if ((var12 != 0 ||
@@ -1964,26 +1964,26 @@ final class e {
                           stackIn_116_1 = 1;
                         }
                         if (stackIn_115_0 != stackIn_116_1) {
-                          if (~((r) (var5)).field_E == ~((r) (var4)).field_E &&
-                            ~this.field_C[var8].field_E != ~((r) (var4)).field_E &&
+                          if (~((BattleUnit) (var5)).field_E == ~((BattleUnit) (var4)).field_E &&
+                            ~this.units[var8].field_E != ~((BattleUnit) (var4)).field_E &&
                             var12 == 0) {
                             var9 = 0;
                           }
-                          if (((r) (var4)).field_E < ((r) (var5)).field_E &&
-                            ((r) (var4)).field_E > this.field_C[var8].field_E &&
+                          if (((BattleUnit) (var4)).field_E < ((BattleUnit) (var5)).field_E &&
+                            ((BattleUnit) (var4)).field_E > this.units[var8].field_E &&
                             var12 == 0) {
                             var9 = 0;
                           }
                           if (var12 == 0 &&
-                            this.field_C[var8].field_E < ((r) (var4)).field_E) {
+                            this.units[var8].field_E < ((BattleUnit) (var4)).field_E) {
                             var9 = 0;
                           }
                         }
                       }
                       if (var12 == 0 &&
-                        ((r) (var4)).field_z == 1) {
-                        stackIn_153_0 = (((r) (var4)).field_c.field_d) ? 0 : 1;
-                        if (this.field_C[var8].field_c.field_d) {
+                        ((BattleUnit) (var4)).field_z == 1) {
+                        stackIn_153_0 = (((BattleUnit) (var4)).tile.field_d) ? 0 : 1;
+                        if (this.units[var8].tile.field_d) {
                           stackIn_157_1 = 0;
                         } else {
                           stackIn_157_1 = 1;
@@ -1994,17 +1994,17 @@ final class e {
                         }
                       }
                       if (var12 == 0 &&
-                        ((r) (var4)).field_z == 2 &&
-                        this.field_C[var8].field_E < ((r) (var4)).field_E) {
-                        stackIn_177_0 = (((r) (var4)).field_c.field_d) ? 0 : 1;
-                        if (stackIn_177_0 == (this.field_C[var8].field_c.field_d ? 1 : 0) && (!this.field_A ||
+                        ((BattleUnit) (var4)).field_z == 2 &&
+                        this.units[var8].field_E < ((BattleUnit) (var4)).field_E) {
+                        stackIn_177_0 = (((BattleUnit) (var4)).tile.field_d) ? 0 : 1;
+                        if (stackIn_177_0 == (this.units[var8].tile.field_d ? 1 : 0) && (!this.field_A ||
                           param1.field_Bb != 6)) {
                           var9 = 0;
                         }
                       }
                       if (var12 == 0 &&
-                        3 <= ((r) (var4)).field_z &&
-                        this.field_C[var8].field_E < ((r) (var4)).field_E) {
+                        3 <= ((BattleUnit) (var4)).field_z &&
+                        this.units[var8].field_E < ((BattleUnit) (var4)).field_E) {
                         var9 = 0;
                       }
                       if (var7 < var15) {
@@ -2013,13 +2013,13 @@ final class e {
                     }
                   } else {
                     if (var12 == 0 &&
-                      this.field_C[var8].field_E < ((r) (var4)).field_E) {
+                      this.units[var8].field_E < ((BattleUnit) (var4)).field_E) {
                       var9 = 0;
                     }
                     if (var12 == 0 &&
-                      ((r) (var4)).field_z == 1) {
-                      stackIn_216_0 = (this.field_C[var8].field_c.field_d) ? 0 : 1;
-                      if (((r) (var4)).field_c.field_d) {
+                      ((BattleUnit) (var4)).field_z == 1) {
+                      stackIn_216_0 = (this.units[var8].tile.field_d) ? 0 : 1;
+                      if (((BattleUnit) (var4)).tile.field_d) {
                         stackIn_220_1 = 0;
                       } else {
                         stackIn_220_1 = 1;
@@ -2032,9 +2032,9 @@ final class e {
                       }
                     }
                     if (var12 == 0 &&
-                      2 == ((r) (var4)).field_z &&
-                      ((r) (var4)).field_E > this.field_C[var8].field_E &&
-                      this.field_C[var8].field_c.field_d != ((r) (var4)).field_c.field_d) {
+                      2 == ((BattleUnit) (var4)).field_z &&
+                      ((BattleUnit) (var4)).field_E > this.units[var8].field_E &&
+                      this.units[var8].tile.field_d != ((BattleUnit) (var4)).tile.field_d) {
                       stackIn_247_0 = !(this.field_A);
                       if (stackIn_247_0 ||
                         param1.field_Bb != 6) {
@@ -2042,14 +2042,14 @@ final class e {
                       }
                     }
                     if (var12 == 0 &&
-                      ((r) (var4)).field_z >= 3 &&
-                      ((r) (var4)).field_E > this.field_C[var8].field_E) {
+                      ((BattleUnit) (var4)).field_z >= 3 &&
+                      ((BattleUnit) (var4)).field_E > this.units[var8].field_E) {
                       var9 = 0;
                     }
                   }
                   if (var9 != 0) {
                     var6 = var12;
-                    var5 = this.field_C[var8];
+                    var5 = this.units[var8];
                     var7 = var15;
                   }
                 }
@@ -2057,84 +2057,84 @@ final class e {
                 continue;
               }
             } else {
-              if (null != ((r) (var4)).field_a &&
-                ((r) (var4)).field_a.field_P > 0 &&
-                ((r) (var4)).field_a.field_k) {
-                var8 = ((r) (var4)).field_a.field_F - ((r) (var4)).field_F;
-                var9 = ((r) (var4)).field_a.field_H - ((r) (var4)).field_H;
+              if (null != ((BattleUnit) (var4)).field_a &&
+                ((BattleUnit) (var4)).field_a.field_P > 0 &&
+                ((BattleUnit) (var4)).field_a.field_k) {
+                var8 = ((BattleUnit) (var4)).field_a.field_F - ((BattleUnit) (var4)).field_F;
+                var9 = ((BattleUnit) (var4)).field_a.field_H - ((BattleUnit) (var4)).field_H;
                 var10 = var9 * var9 + var8 * var8;
-                var5 = ((r) (var4)).field_a;
-                var6 = this.field_h.a((byte) -93, (r) (var4), (r) (var5)) ? 1 : 0;
+                var5 = ((BattleUnit) (var4)).field_a;
+                var6 = this.map.a((byte) -93, (BattleUnit) (var4), (BattleUnit) (var5)) ? 1 : 0;
                 var7 = var10;
               }
               if (var6 != 0) {
-                ((r) (var4)).field_a = (r) (var5);
+                ((BattleUnit) (var4)).field_a = (BattleUnit) (var5);
                 if (var16 == 0) {
                   break scanLoop2;
                 }
               }
               stackIn_277_0 = var4;
             }
-            ((r) (stackIn_277_0)).field_a = null;
+            ((BattleUnit) (stackIn_277_0)).field_a = null;
             break;
           }
           var7 = (int)Math.sqrt((double)var7);
-          if (0 == ((r) (var4)).field_w) {
-            var8 = od.field_c[((r) (var4)).field_nb.field_g].field_m;
+          if (0 == ((BattleUnit) (var4)).field_w) {
+            var8 = od.field_c[((BattleUnit) (var4)).field_nb.field_g].field_m;
             if ((0 == var8 ||
               1 == var8 &&
-              10.0 > Math.random() * 100.0) && ((r) (var4)).field_B == 1) {
-              ((r) (var4)).field_B = 0;
-              ((r) (var4)).field_jb = ((r) (var4)).field_jb * 3 / 2;
+              10.0 > Math.random() * 100.0) && ((BattleUnit) (var4)).field_B == 1) {
+              ((BattleUnit) (var4)).field_B = 0;
+              ((BattleUnit) (var4)).field_jb = ((BattleUnit) (var4)).field_jb * 3 / 2;
             }
             if (var8 == 4 &&
-              ((r) (var4)).field_B == 1 &&
-              ((r) (var4)).field_mb > ((r) (var4)).field_P) {
-              ((r) (var4)).field_jb = ((r) (var4)).field_jb * 3 / 2;
-              ((r) (var4)).field_B = 0;
+              ((BattleUnit) (var4)).field_B == 1 &&
+              ((BattleUnit) (var4)).field_mb > ((BattleUnit) (var4)).field_P) {
+              ((BattleUnit) (var4)).field_jb = ((BattleUnit) (var4)).field_jb * 3 / 2;
+              ((BattleUnit) (var4)).field_B = 0;
             }
             if (var5 != null) {
               if (var6 != 0) {
-                ((r) (var4)).field_w = 3;
+                ((BattleUnit) (var4)).field_w = 3;
                 if (1 == var8) {
-                  ((r) (var4)).field_w = 4;
-                  if (((r) (var4)).field_ab == 0 &&
+                  ((BattleUnit) (var4)).field_w = 4;
+                  if (((BattleUnit) (var4)).field_ab == 0 &&
                     (double)var7 > Math.random() * 10.0 + 10.0) {
-                    ((r) (var4)).field_w = 3;
+                    ((BattleUnit) (var4)).field_w = 3;
                   }
                 }
                 if (var8 == 2) {
-                  ((r) (var4)).field_w = 4;
+                  ((BattleUnit) (var4)).field_w = 4;
                 }
                 if (3 == var8) {
-                  ((r) (var4)).field_w = 5;
+                  ((BattleUnit) (var4)).field_w = 5;
                 }
-                if (!(((r) (var4)).field_z < 2)) {
-                  ((r) (var4)).field_w = 5;
+                if (!(((BattleUnit) (var4)).field_z < 2)) {
+                  ((BattleUnit) (var4)).field_w = 5;
                   if (var16 != 0) {
-                    ((r) (var4)).field_w = 2;
-                    ((r) (var4)).field_w = 1;
+                    ((BattleUnit) (var4)).field_w = 2;
+                    ((BattleUnit) (var4)).field_w = 1;
                     var6 = 0;
                   }
                 }
               } else {
-                ((r) (var4)).field_w = 2;
+                ((BattleUnit) (var4)).field_w = 2;
                 if (var16 != 0) {
-                  ((r) (var4)).field_w = 1;
+                  ((BattleUnit) (var4)).field_w = 1;
                   var6 = 0;
                 }
               }
             } else {
-              ((r) (var4)).field_w = 1;
+              ((BattleUnit) (var4)).field_w = 1;
               var6 = 0;
             }
           }
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameRemainder2 = true;
-          var8 = ((r) (var4)).field_w;
+          var8 = ((BattleUnit) (var4)).field_w;
           if (var8 == 0) {
-            ((r) (var4)).field_Y = true;
+            ((BattleUnit) (var4)).field_Y = true;
           } else {
             if (var8 != 1) {
               decompiledFrameRemainder2 = (2 != var8 ||
@@ -2151,8 +2151,8 @@ final class e {
           if ((decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            if (7 == ((r) (var4)).field_t) {
-              ((r) (var4)).field_Y = true;
+            if (7 == ((BattleUnit) (var4)).field_t) {
+              ((BattleUnit) (var4)).field_Y = true;
               return;
             }
             if (param2) {
@@ -2160,57 +2160,57 @@ final class e {
             }
             if (var6 != 0 &&
               null != var5 &&
-              ((r) (var5)).field_P > 0) {
+              ((BattleUnit) (var5)).field_P > 0) {
               if (var6 != 0 ||
                 var5 != null &&
-                !(((r) (var5)).field_P <= 0)) {
-                ((r) (var4)).field_w = 4;
+                !(((BattleUnit) (var5)).field_P <= 0)) {
+                ((BattleUnit) (var4)).field_w = 4;
                 if (var16 == 0) {
                   return;
                 }
               }
-              ((r) (var4)).field_Y = true;
+              ((BattleUnit) (var4)).field_Y = true;
               if (var16 == 0) {
                 return;
               }
             }
             boolean decompiledFrameRemainder1 = true;
-            if ((!(Math.abs(((r) (var4)).field_X - ((r) (var4)).field_F) < 2) ||
-              !(Math.abs(-((r) (var4)).field_H + ((r) (var4)).field_n) < 2)) &&
-              null != this.field_h.a(false, ((r) (var4)).field_X, ((r) (var4)).field_E, ((r) (var4)).field_F, ((r) (var4)).field_n, ((r) (var4)).field_H, 86)) {
-              ((r) (var4)).field_A = 0;
-              ((r) (var4)).field_d = ((r) (var4)).field_B;
-              ((r) (var4)).field_S = true;
+            if ((!(Math.abs(((BattleUnit) (var4)).field_X - ((BattleUnit) (var4)).field_F) < 2) ||
+              !(Math.abs(-((BattleUnit) (var4)).field_H + ((BattleUnit) (var4)).field_n) < 2)) &&
+              null != this.map.a(false, ((BattleUnit) (var4)).field_X, ((BattleUnit) (var4)).field_E, ((BattleUnit) (var4)).field_F, ((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_H, 86)) {
+              ((BattleUnit) (var4)).field_A = 0;
+              ((BattleUnit) (var4)).field_d = ((BattleUnit) (var4)).field_B;
+              ((BattleUnit) (var4)).field_S = true;
               decompiledFrameRemainder1 = (var16 != 0);
             }
             if (decompiledFrameRemainder1) {
-              ((r) (var4)).field_A = 0;
-              ((r) (var4)).field_S = true;
-              ((r) (var4)).field_d = ((r) (var4)).field_B;
+              ((BattleUnit) (var4)).field_A = 0;
+              ((BattleUnit) (var4)).field_S = true;
+              ((BattleUnit) (var4)).field_d = ((BattleUnit) (var4)).field_B;
               var8 = 0;
               var10 = 0;
               scanLoop3: while (true) {
-                ((r) (var4)).field_X = 4 + (int)(Math.random() * (double)(this.field_h.field_b - 8));
-                ((r) (var4)).field_n = 4 + (int)(Math.random() * (double)(-8 + this.field_h.field_e));
-                ((r) (var4)).field_N = ((r) (var4)).field_E;
-                if (((r) (var4)).field_z == 2) {
-                  ((r) (var4)).field_N = 1;
+                ((BattleUnit) (var4)).field_X = 4 + (int)(Math.random() * (double)(this.map.field_b - 8));
+                ((BattleUnit) (var4)).field_n = 4 + (int)(Math.random() * (double)(-8 + this.map.field_e));
+                ((BattleUnit) (var4)).field_N = ((BattleUnit) (var4)).field_E;
+                if (((BattleUnit) (var4)).field_z == 2) {
+                  ((BattleUnit) (var4)).field_N = 1;
                 }
-                if (((r) (var4)).field_z == 3) {
-                  ((r) (var4)).field_N = 2;
+                if (((BattleUnit) (var4)).field_z == 3) {
+                  ((BattleUnit) (var4)).field_N = 2;
                 }
-                if (4 == ((r) (var4)).field_z) {
-                  ((r) (var4)).field_N = 4;
+                if (4 == ((BattleUnit) (var4)).field_z) {
+                  ((BattleUnit) (var4)).field_N = 4;
                 }
-                var9_ref_dl = this.field_h.a(-115, ((r) (var4)).field_n, ((r) (var4)).field_E, ((r) (var4)).field_X);
-                ((r) (var4)).field_c.field_h = null;
+                var9_ref_dl = this.map.a(-115, ((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_E, ((BattleUnit) (var4)).field_X);
+                ((BattleUnit) (var4)).tile.field_h = null;
                 stackIn_413_0 = null;
                 stackIn_413_1 = var9_ref_dl;
                 do {
-                  if (stackIn_413_0 != stackIn_413_1 && (~((r) (var4)).field_X != ~((r) (var4)).field_F ||
-                    ((r) (var4)).field_n != ((r) (var4)).field_H)) {
+                  if (stackIn_413_0 != stackIn_413_1 && (~((BattleUnit) (var4)).field_X != ~((BattleUnit) (var4)).field_F ||
+                    ((BattleUnit) (var4)).field_n != ((BattleUnit) (var4)).field_H)) {
                     var8 = 1;
-                    if (0 == ((r) (var4)).field_z &&
+                    if (0 == ((BattleUnit) (var4)).field_z &&
                       var9_ref_dl.field_d) {
                       var8 = 0;
                     }
@@ -2218,22 +2218,22 @@ final class e {
                   stackIn_431_0 = (var8 == 0);
                   if (!stackIn_431_0) {
                     stackIn_437_0 = null;
-                    stackIn_437_1 = this.field_h;
-                    stackIn_437_2 = ((r) (var4)).field_n;
-                    stackIn_437_3 = ((r) (var4)).field_H;
-                    stackIn_437_4 = ((r) (var4)).field_F;
-                    stackIn_437_5 = ((r) (var4)).field_N;
-                    stackIn_438_6 = !(((r) (var4)).field_C <= 0);
-                    if (stackIn_437_0 == ((dk) (Object) stackIn_437_1).a(stackIn_437_2, stackIn_437_3, stackIn_437_4, stackIn_437_5, stackIn_438_6, ((r) (var4)).field_X, ((r) (var4)).field_E, true)) {
+                    stackIn_437_1 = this.map;
+                    stackIn_437_2 = ((BattleUnit) (var4)).field_n;
+                    stackIn_437_3 = ((BattleUnit) (var4)).field_H;
+                    stackIn_437_4 = ((BattleUnit) (var4)).field_F;
+                    stackIn_437_5 = ((BattleUnit) (var4)).field_N;
+                    stackIn_438_6 = !(((BattleUnit) (var4)).field_C <= 0);
+                    if (stackIn_437_0 == ((LevelMap) (Object) stackIn_437_1).a(stackIn_437_2, stackIn_437_3, stackIn_437_4, stackIn_437_5, stackIn_438_6, ((BattleUnit) (var4)).field_X, ((BattleUnit) (var4)).field_E, true)) {
                       var8 = 0;
                     }
                   }
-                  ((r) (var4)).field_c.field_h = (r) (var4);
+                  ((BattleUnit) (var4)).tile.field_h = (BattleUnit) (var4);
                   var10++;
                   if (25 < var10) {
                     var8 = 1;
-                    ((r) (var4)).field_Y = true;
-                    ((r) (var4)).field_S = false;
+                    ((BattleUnit) (var4)).field_Y = true;
+                    ((BattleUnit) (var4)).field_S = false;
                   }
                   if (0 == var8) {
                     continue scanLoop3;
@@ -2245,48 +2245,48 @@ final class e {
               }
               if (stackIn_413_0 != stackIn_413_1) {
                 stackIn_453_0 = (var9_ref_dl.field_d) ? 0 : 1;
-                if (((r) (var4)).field_c.field_d) {
+                if (((BattleUnit) (var4)).tile.field_d) {
                   stackIn_457_1 = 0;
                 } else {
                   stackIn_457_1 = 1;
                 }
                 if (stackIn_453_0 != stackIn_457_1) {
-                  ((r) (var4)).field_Y = true;
-                  ((r) (var4)).field_S = false;
+                  ((BattleUnit) (var4)).field_Y = true;
+                  ((BattleUnit) (var4)).field_S = false;
                 }
               }
-              ((r) (var4)).field_r = null;
-              ((r) (var4)).field_w = 0;
+              ((BattleUnit) (var4)).field_r = null;
+              ((BattleUnit) (var4)).field_w = 0;
             }
-            if (!((double)((r) (var4)).field_jb < (double)((r) (var4)).field_v * Math.random())) {
+            if (!((double)((BattleUnit) (var4)).field_jb < (double)((BattleUnit) (var4)).field_v * Math.random())) {
               return;
             }
             if (!param2) {
-              this.a(false, (r) (var4));
+              this.a(false, (BattleUnit) (var4));
             }
-            ((r) (var4)).field_Y = true;
+            ((BattleUnit) (var4)).field_Y = true;
             if (var16 == 0) {
               return;
             }
           }
           if ((decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            if (((r) (var4)).field_t == 7) {
-              ((r) (var4)).field_Y = true;
+            if (((BattleUnit) (var4)).field_t == 7) {
+              ((BattleUnit) (var4)).field_Y = true;
               return;
             }
-            if (((r) (var4)).field_w != 3) {
+            if (((BattleUnit) (var4)).field_w != 3) {
             }
             if (null == var5) {
-              ((r) (var4)).field_w = 0;
+              ((BattleUnit) (var4)).field_w = 0;
               if (var16 == 0) {
                 return;
               }
             }
             if (!param2) {
-              ((r) (var4)).field_A = 0;
-              ((r) (var4)).field_d = ((r) (var4)).field_B;
-              ((r) (var4)).field_S = true;
+              ((BattleUnit) (var4)).field_A = 0;
+              ((BattleUnit) (var4)).field_d = ((BattleUnit) (var4)).field_B;
+              ((BattleUnit) (var4)).field_S = true;
               var8 = 0;
               var9 = 0;
               scanLoop4: while (true) {
@@ -2294,10 +2294,10 @@ final class e {
                 var10 = 0;
                 var11 = null;
                 scanLoop5: while (true) {
-                  ((r) (var4)).field_X = ((r) (var5)).field_F + (int)(9.0 * Math.random() - 4.0);
-                  ((r) (var4)).field_n = ((r) (var5)).field_H + (int)(9.0 * Math.random() - 4.0);
-                  ((r) (var4)).field_N = ((r) (var5)).field_E;
-                  var11_ref = ((r) (var4)).field_c.field_s.a(-82, ((r) (var4)).field_n, ((r) (var4)).field_N, ((r) (var4)).field_X);
+                  ((BattleUnit) (var4)).field_X = ((BattleUnit) (var5)).field_F + (int)(9.0 * Math.random() - 4.0);
+                  ((BattleUnit) (var4)).field_n = ((BattleUnit) (var5)).field_H + (int)(9.0 * Math.random() - 4.0);
+                  ((BattleUnit) (var4)).field_N = ((BattleUnit) (var5)).field_E;
+                  var11_ref = ((BattleUnit) (var4)).tile.map.a(-82, ((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_N, ((BattleUnit) (var4)).field_X);
                   incrementValue$0 = var10;
                   var10++;
                   stackIn_489_0 = ~incrementValue$0;
@@ -2316,52 +2316,52 @@ final class e {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      stackIn_496_0 = ((r) (var5)).field_k;
+                      stackIn_496_0 = ((BattleUnit) (var5)).field_k;
                     }
                     if (!stackIn_496_0) {
-                      ((r) (var4)).field_X = ((r) (var5)).field_i + (int)(-4.0 + Math.random() * 9.0);
-                      ((r) (var4)).field_n = ((r) (var5)).field_gb + (int)(9.0 * Math.random() - 4.0);
-                      ((r) (var4)).field_N = ((r) (var5)).field_R;
+                      ((BattleUnit) (var4)).field_X = ((BattleUnit) (var5)).field_i + (int)(-4.0 + Math.random() * 9.0);
+                      ((BattleUnit) (var4)).field_n = ((BattleUnit) (var5)).field_gb + (int)(9.0 * Math.random() - 4.0);
+                      ((BattleUnit) (var4)).field_N = ((BattleUnit) (var5)).field_R;
                     }
-                    ((r) (var4)).field_c.field_h = null;
-                    ((r) (var4)).field_r = null;
-                    if (((r) (var4)).field_C == 0) {
-                      ((r) (var4)).field_r = this.field_h.a(((r) (var4)).field_n, ((r) (var4)).field_H, ((r) (var4)).field_F, ((r) (var4)).field_N, false, ((r) (var4)).field_X, ((r) (var4)).field_E, true);
-                      if (((r) (var4)).field_r == null) {
+                    ((BattleUnit) (var4)).tile.field_h = null;
+                    ((BattleUnit) (var4)).field_r = null;
+                    if (((BattleUnit) (var4)).field_C == 0) {
+                      ((BattleUnit) (var4)).field_r = this.map.a(((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_H, ((BattleUnit) (var4)).field_F, ((BattleUnit) (var4)).field_N, false, ((BattleUnit) (var4)).field_X, ((BattleUnit) (var4)).field_E, true);
+                      if (((BattleUnit) (var4)).field_r == null) {
                         var8 = 0;
                         if (var16 != 0) {
-                          this.field_h.b((byte) 75);
-                          ((r) (var4)).field_r = this.field_h.a(((r) (var4)).field_n, ((r) (var4)).field_N, ((r) (var4)).field_X, ((r) (var4)).field_E, ((r) (var4)).field_H, ((r) (var4)).field_F, true);
-                          if (null == ((r) (var4)).field_r) {
+                          this.map.b((byte) 75);
+                          ((BattleUnit) (var4)).field_r = this.map.a(((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_N, ((BattleUnit) (var4)).field_X, ((BattleUnit) (var4)).field_E, ((BattleUnit) (var4)).field_H, ((BattleUnit) (var4)).field_F, true);
+                          if (null == ((BattleUnit) (var4)).field_r) {
                             var8 = 0;
                           }
                         }
                       }
                     } else {
-                      this.field_h.b((byte) 75);
-                      ((r) (var4)).field_r = this.field_h.a(((r) (var4)).field_n, ((r) (var4)).field_N, ((r) (var4)).field_X, ((r) (var4)).field_E, ((r) (var4)).field_H, ((r) (var4)).field_F, true);
-                      if (null == ((r) (var4)).field_r) {
+                      this.map.b((byte) 75);
+                      ((BattleUnit) (var4)).field_r = this.map.a(((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_N, ((BattleUnit) (var4)).field_X, ((BattleUnit) (var4)).field_E, ((BattleUnit) (var4)).field_H, ((BattleUnit) (var4)).field_F, true);
+                      if (null == ((BattleUnit) (var4)).field_r) {
                         var8 = 0;
                       }
                     }
-                    ((r) (var4)).field_c.field_h = (r) (var4);
+                    ((BattleUnit) (var4)).tile.field_h = (BattleUnit) (var4);
                     var9++;
                     if (var9 > 25) {
-                      ((r) (var4)).field_w = 1;
+                      ((BattleUnit) (var4)).field_w = 1;
                       var8 = 1;
-                      if (od.field_c[((r) (var4)).field_nb.field_g].field_m > 1) {
-                        ((r) (var4)).field_Y = true;
+                      if (od.field_c[((BattleUnit) (var4)).field_nb.field_g].field_m > 1) {
+                        ((BattleUnit) (var4)).field_Y = true;
                       }
-                      ((r) (var4)).field_X = ((r) (var4)).field_F;
-                      ((r) (var4)).field_S = false;
-                      ((r) (var4)).field_n = ((r) (var4)).field_H;
+                      ((BattleUnit) (var4)).field_X = ((BattleUnit) (var4)).field_F;
+                      ((BattleUnit) (var4)).field_S = false;
+                      ((BattleUnit) (var4)).field_n = ((BattleUnit) (var4)).field_H;
                     }
                     stackIn_521_0 = (var8 != 0) ? 0 : 1;
                     if (stackIn_521_0 == 1) {
                       continue scanLoop4;
                     }
                     stackIn_489_0 = 2;
-                    stackIn_489_1 = ((r) (var4)).field_w;
+                    stackIn_489_1 = ((BattleUnit) (var4)).field_w;
                   } while (var16 != 0);
                   break;
                 }
@@ -2369,36 +2369,36 @@ final class e {
               }
               if (stackIn_489_0 == stackIn_489_1 &&
                 var6 != 0) {
-                ((r) (var4)).field_S = false;
-                ((r) (var4)).field_w = 0;
-                ((r) (var4)).field_X = ((r) (var4)).field_F;
-                ((r) (var4)).field_n = ((r) (var4)).field_H;
+                ((BattleUnit) (var4)).field_S = false;
+                ((BattleUnit) (var4)).field_w = 0;
+                ((BattleUnit) (var4)).field_X = ((BattleUnit) (var4)).field_F;
+                ((BattleUnit) (var4)).field_n = ((BattleUnit) (var4)).field_H;
               }
             }
             var8 = (int)(10.0 * Math.random() + 10.0);
-            if (((r) (var4)).field_t == 9) {
-              ((r) (var4)).field_ab = 0;
+            if (((BattleUnit) (var4)).field_t == 9) {
+              ((BattleUnit) (var4)).field_ab = 0;
               var8 = 2;
             }
-            if (3 == ((r) (var4)).field_w && (var8 > var7 ||
-              !(((r) (var4)).field_ab <= 0)) && var6 != 0 && (!(((r) (var4)).field_jb < ((r) (var4)).c(false)) ||
-              !(((r) (var4)).field_jb <= 10))) {
+            if (3 == ((BattleUnit) (var4)).field_w && (var8 > var7 ||
+              !(((BattleUnit) (var4)).field_ab <= 0)) && var6 != 0 && (!(((BattleUnit) (var4)).field_jb < ((BattleUnit) (var4)).c(false)) ||
+              !(((BattleUnit) (var4)).field_jb <= 10))) {
               if (var5 != null) {
-                ((r) (var4)).field_N = ((r) (var5)).field_E;
-                ((r) (var4)).field_n = ((r) (var5)).field_H;
-                ((r) (var4)).field_A = 0;
-                ((r) (var4)).field_d = 2;
-                ((r) (var4)).field_S = true;
-                ((r) (var4)).field_X = ((r) (var5)).field_F;
-                if ((!(this.a((byte) -60, (r) (var5), (r) (var4)) >= 8)) &&
-                  (null != ((r) (var4)).field_b)) {
-                  ((r) (var4)).field_d = 4;
+                ((BattleUnit) (var4)).field_N = ((BattleUnit) (var5)).field_E;
+                ((BattleUnit) (var4)).field_n = ((BattleUnit) (var5)).field_H;
+                ((BattleUnit) (var4)).field_A = 0;
+                ((BattleUnit) (var4)).field_d = 2;
+                ((BattleUnit) (var4)).field_S = true;
+                ((BattleUnit) (var4)).field_X = ((BattleUnit) (var5)).field_F;
+                if ((!(this.a((byte) -60, (BattleUnit) (var5), (BattleUnit) (var4)) >= 8)) &&
+                  (null != ((BattleUnit) (var4)).field_b)) {
+                  ((BattleUnit) (var4)).field_d = 4;
                   if (var16 != 0) {
-                    ((r) (var4)).field_w = 0;
+                    ((BattleUnit) (var4)).field_w = 0;
                   }
                 }
               } else {
-                ((r) (var4)).field_w = 0;
+                ((BattleUnit) (var4)).field_w = 0;
               }
             }
             if (var16 == 0) {
@@ -2406,27 +2406,27 @@ final class e {
             }
           }
           if (decompiledFrameRemainder4) {
-            if (((r) (var4)).field_jb > ((r) (var4)).c(false)) {
+            if (((BattleUnit) (var4)).field_jb > ((BattleUnit) (var4)).c(false)) {
               if (var5 == null ||
-                !(((r) (var5)).field_P > 0)) {
-                ((r) (var4)).field_w = 0;
+                !(((BattleUnit) (var5)).field_P > 0)) {
+                ((BattleUnit) (var4)).field_w = 0;
                 if (var16 == 0) {
                   return;
                 }
               }
-              ((r) (var4)).field_n = ((r) (var5)).field_H;
-              ((r) (var4)).field_X = ((r) (var5)).field_F;
-              ((r) (var4)).field_S = true;
-              ((r) (var4)).field_A = 0;
-              ((r) (var4)).field_d = 2;
-              ((r) (var4)).field_N = ((r) (var5)).field_E;
-              if (this.a((byte) -60, (r) (var5), (r) (var4)) >= 8) {
+              ((BattleUnit) (var4)).field_n = ((BattleUnit) (var5)).field_H;
+              ((BattleUnit) (var4)).field_X = ((BattleUnit) (var5)).field_F;
+              ((BattleUnit) (var4)).field_S = true;
+              ((BattleUnit) (var4)).field_A = 0;
+              ((BattleUnit) (var4)).field_d = 2;
+              ((BattleUnit) (var4)).field_N = ((BattleUnit) (var5)).field_E;
+              if (this.a((byte) -60, (BattleUnit) (var5), (BattleUnit) (var4)) >= 8) {
                 return;
               }
-              if (null == ((r) (var4)).field_b) {
+              if (null == ((BattleUnit) (var4)).field_b) {
                 return;
               }
-              ((r) (var4)).field_d = 4;
+              ((BattleUnit) (var4)).field_d = 4;
               if (var16 == 0) {
                 return;
               }
@@ -2434,64 +2434,64 @@ final class e {
             if (param2) {
               return;
             }
-            if (((r) (var4)).field_t == 7) {
-              ((r) (var4)).field_Y = true;
+            if (((BattleUnit) (var4)).field_t == 7) {
+              ((BattleUnit) (var4)).field_Y = true;
               return;
             }
-            this.a(false, (r) (var4));
+            this.a(false, (BattleUnit) (var4));
             if (var16 == 0) {
               return;
             }
           }
           if (var6 == 0 ||
-            !(((r) (var4)).field_jb >= ((r) (var4)).c(false)) &&
-            !(((r) (var4)).field_ab > 0) &&
-            !(((r) (var4)).field_jb > 10)) {
+            !(((BattleUnit) (var4)).field_jb >= ((BattleUnit) (var4)).c(false)) &&
+            !(((BattleUnit) (var4)).field_ab > 0) &&
+            !(((BattleUnit) (var4)).field_jb > 10)) {
             if (param2) {
               return;
             }
-            if (7 == ((r) (var4)).field_t) {
-              ((r) (var4)).field_Y = true;
+            if (7 == ((BattleUnit) (var4)).field_t) {
+              ((BattleUnit) (var4)).field_Y = true;
               return;
             }
-            this.a(false, (r) (var4));
+            this.a(false, (BattleUnit) (var4));
             if (var16 == 0) {
               return;
             }
           }
-          if (((r) (var4)).field_jb < ((r) (var4)).c(false) &&
-            ((r) (var4)).field_jb <= 10) {
+          if (((BattleUnit) (var4)).field_jb < ((BattleUnit) (var4)).c(false) &&
+            ((BattleUnit) (var4)).field_jb <= 10) {
             if (param2) {
               return;
             }
-            if (((r) (var4)).field_t == 7) {
-              ((r) (var4)).field_Y = true;
+            if (((BattleUnit) (var4)).field_t == 7) {
+              ((BattleUnit) (var4)).field_Y = true;
               return;
             }
-            this.a(false, (r) (var4));
+            this.a(false, (BattleUnit) (var4));
             if (var16 == 0) {
               return;
             }
           }
           if (null == var5) {
-            ((r) (var4)).field_w = 0;
+            ((BattleUnit) (var4)).field_w = 0;
             if (var16 == 0) {
               return;
             }
           }
-          ((r) (var4)).field_d = 2;
-          ((r) (var4)).field_S = true;
-          ((r) (var4)).field_A = 0;
-          ((r) (var4)).field_N = ((r) (var5)).field_E;
-          ((r) (var4)).field_X = ((r) (var5)).field_F;
-          ((r) (var4)).field_n = ((r) (var5)).field_H;
-          if (this.a((byte) -60, (r) (var5), (r) (var4)) >= 8) {
+          ((BattleUnit) (var4)).field_d = 2;
+          ((BattleUnit) (var4)).field_S = true;
+          ((BattleUnit) (var4)).field_A = 0;
+          ((BattleUnit) (var4)).field_N = ((BattleUnit) (var5)).field_E;
+          ((BattleUnit) (var4)).field_X = ((BattleUnit) (var5)).field_F;
+          ((BattleUnit) (var4)).field_n = ((BattleUnit) (var5)).field_H;
+          if (this.a((byte) -60, (BattleUnit) (var5), (BattleUnit) (var4)) >= 8) {
             return;
           }
-          if (((r) (var4)).field_b == null) {
+          if (((BattleUnit) (var4)).field_b == null) {
             return;
           }
-          ((r) (var4)).field_d = 4;
+          ((BattleUnit) (var4)).field_d = 4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2557,17 +2557,17 @@ final class e {
             return;
           }
           var2_int = 0;
-          while (this.field_C.length > var2_int) {
+          while (this.units.length > var2_int) {
             if (var3 != 0) {
               return;
             }
-            if (this.field_C[var2_int] != null &&
-              null == this.field_C[var2_int].field_Z &&
-              this.field_C[var2_int].field_P > 0) {
-              if (!this.field_h.a((byte) -93, this.field_q, this.field_C[var2_int])) {
-                this.field_C[var2_int].field_ib = false;
+            if (this.units[var2_int] != null &&
+              null == this.units[var2_int].field_Z &&
+              this.units[var2_int].field_P > 0) {
+              if (!this.map.a((byte) -93, this.field_q, this.units[var2_int])) {
+                this.units[var2_int].field_ib = false;
               } else {
-                this.field_C[var2_int].field_ib = true;
+                this.units[var2_int].field_ib = true;
               }
             }
             var2_int++;
@@ -3097,7 +3097,7 @@ final class e {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int dupTemp$3 = 0;
-        r dupTemp$4 = null;
+        BattleUnit dupTemp$4 = null;
         ga dupTemp$5 = null;
         ga dupTemp$6 = null;
         ga dupTemp$7 = null;
@@ -3116,7 +3116,7 @@ final class e {
         int stackIn_139_1 = 0;
         hk stackIn_149_0 = null;
         int stackIn_150_1 = 0;
-        r stackIn_209_0 = null;
+        BattleUnit stackIn_209_0 = null;
         ga stackIn_210_0 = null;
         hk stackIn_270_0 = null;
         int stackIn_271_1 = 0;
@@ -3127,7 +3127,7 @@ final class e {
         int stackIn_476_0 = 0;
         int stackIn_523_0 = 0;
         int stackIn_523_1 = 0;
-        r stackIn_548_0 = null;
+        BattleUnit stackIn_548_0 = null;
         RuntimeException stackIn_599_0 = null;
         StringBuilder stackIn_599_1 = null;
         String stackIn_600_2 = null;
@@ -3162,16 +3162,16 @@ final class e {
           var6 = 0;
           scanLoop1: while (true) {
             regionExit2: {
-              if (this.field_C.length > var6) {
-                stackIn_209_0 = this.field_C[var6];
+              if (this.units.length > var6) {
+                stackIn_209_0 = this.units[var6];
                 if (var12 != 0) {
                   while (true) {
                     stackIn_210_0 = stackIn_209_0.field_Z;
                     if (stackIn_210_0.field_b != null) {
-                      this.field_C[var6].field_Z.field_b = this.field_C[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
+                      this.units[var6].field_Z.field_b = this.units[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
                     }
-                    if (null != this.field_C[var6].field_Z.field_A) {
-                      this.field_C[var6].field_Z.field_A = this.field_C[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
+                    if (null != this.units[var6].field_Z.field_A) {
+                      this.units[var6].field_Z.field_A = this.units[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
                     }
                     while (true) {
                       var6++;
@@ -3180,12 +3180,12 @@ final class e {
                   }
                 }
                 if (stackIn_209_0 != null &&
-                  this.field_C[var6].field_P > 0) {
-                  if (null != this.field_C[var6].field_c) {
-                    this.field_C[var6].field_c.field_h = null;
+                  this.units[var6].field_P > 0) {
+                  if (null != this.units[var6].tile) {
+                    this.units[var6].tile.field_h = null;
                   }
-                  if (null == this.field_C[var6].field_Z &&
-                    this.field_C[var6].field_C != 0) {
+                  if (null == this.units[var6].field_Z &&
+                    this.units[var6].field_C != 0) {
                     var5++;
                     if (var12 != 0) {
                       var3_int++;
@@ -3205,10 +3205,10 @@ final class e {
                 if (var12 != 0) {
                   while (true) {
                     if (stackIn_210_0.field_b != null) {
-                      this.field_C[var6].field_Z.field_b = this.field_C[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
+                      this.units[var6].field_Z.field_b = this.units[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
                     }
-                    if (null != this.field_C[var6].field_Z.field_A) {
-                      this.field_C[var6].field_Z.field_A = this.field_C[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
+                    if (null != this.units[var6].field_Z.field_A) {
+                      this.units[var6].field_Z.field_A = this.units[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
                     }
                     while (true) {
                       var6++;
@@ -3233,54 +3233,54 @@ final class e {
                   this.field_e.field_i = -1;
                   var6 = 0;
                   while (true) {
-                    if (var6 < this.field_C.length &&
+                    if (var6 < this.units.length &&
                       var12 == 0) {
                       boolean decompiledFrameRemainder2 = true;
-                      if (this.field_C[var6] != null) {
-                        if (this.field_C[var6].field_Z != null) {
+                      if (this.units[var6] != null) {
+                        if (this.units[var6].field_Z != null) {
                           if ((param1.field_Bb != 12)) {
-                            if (null != this.field_C[var6].field_Z.field_b) {
-                              this.field_C[var6].field_Z.field_b = this.field_C[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
+                            if (null != this.units[var6].field_Z.field_b) {
+                              this.units[var6].field_Z.field_b = this.units[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
                             }
-                            if ((this.field_C[var6].field_Z.field_A != null)) {
-                              this.field_C[var6].field_Z.field_A = this.field_C[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
+                            if ((this.units[var6].field_Z.field_A != null)) {
+                              this.units[var6].field_Z.field_A = this.units[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
                             }
                           }
                           decompiledFrameRemainder2 = false;
                         }
                         else {
-                          if (this.field_C[var6].field_t == 0) {
+                          if (this.units[var6].field_t == 0) {
                             this.field_e.field_g = this.field_e.field_g + 1;
                           }
-                          if (this.field_C[var6].field_t == 1) {
+                          if (this.units[var6].field_t == 1) {
                             this.field_e.field_j = this.field_e.field_j + 1;
                           }
-                          if (this.field_C[var6].field_t == 2) {
+                          if (this.units[var6].field_t == 2) {
                             this.field_e.field_j = this.field_e.field_j + 1;
                           }
-                          if (this.field_C[var6].field_t == 3) {
+                          if (this.units[var6].field_t == 3) {
                             this.field_e.field_j = this.field_e.field_j + 1;
                             this.field_e.field_l.field_a[17] = this.field_e.field_l.field_a[17] + 1;
                           }
-                          if (4 == this.field_C[var6].field_t) {
+                          if (4 == this.units[var6].field_t) {
                             this.field_e.field_b = this.field_e.field_b + 1;
                           }
-                          if (this.field_C[var6].field_t == 5) {
+                          if (this.units[var6].field_t == 5) {
                             this.field_e.field_j = this.field_e.field_j + 1;
                           }
-                          if (6 == this.field_C[var6].field_t) {
+                          if (6 == this.units[var6].field_t) {
                             this.field_e.field_j = this.field_e.field_j + 1;
                           }
-                          if (9 == this.field_C[var6].field_t) {
+                          if (9 == this.units[var6].field_t) {
                             this.field_e.field_m = this.field_e.field_m + 1;
                           }
-                          if (this.field_C[var6].field_nb != null) {
-                            dupTemp$0 = this.field_C[var6].field_nb.field_g;
+                          if (this.units[var6].field_nb != null) {
+                            dupTemp$0 = this.units[var6].field_nb.field_g;
                             this.field_e.field_l.field_a[dupTemp$0] = this.field_e.field_l.field_a[dupTemp$0] + 1;
                           }
-                          if (this.field_C[var6].field_b != null) {
-                            dupTemp$1 = this.field_C[var6].field_b.field_g;
-                            this.field_e.field_l.field_a[dupTemp$1] = this.field_e.field_l.field_a[dupTemp$1] + this.field_C[var6].field_b.field_d;
+                          if (this.units[var6].field_b != null) {
+                            dupTemp$1 = this.units[var6].field_b.field_g;
+                            this.field_e.field_l.field_a[dupTemp$1] = this.field_e.field_l.field_a[dupTemp$1] + this.units[var6].field_b.field_d;
                           }
                         }
                       }
@@ -3351,58 +3351,58 @@ final class e {
                 }
                 var6 = 0;
                 do {
-                  if (var6 >= this.field_C.length) {
+                  if (var6 >= this.units.length) {
                     break scanLoop1;
                   }
-                  if (null != this.field_C[var6]) {
-                    if (null == this.field_C[var6].field_Z) {
-                      if (!(this.field_C[var6].field_P > 0)) {
-                        if (this.field_C[var6].field_t == 0) {
+                  if (null != this.units[var6]) {
+                    if (null == this.units[var6].field_Z) {
+                      if (!(this.units[var6].field_P > 0)) {
+                        if (this.units[var6].field_t == 0) {
                           this.field_e.field_g = this.field_e.field_g + 1;
                         }
-                        if (this.field_C[var6].field_t == 1) {
+                        if (this.units[var6].field_t == 1) {
                           this.field_e.field_j = this.field_e.field_j + 1;
                         }
-                        if (this.field_C[var6].field_t == 2) {
+                        if (this.units[var6].field_t == 2) {
                           this.field_e.field_j = this.field_e.field_j + 1;
                         }
-                        if (this.field_C[var6].field_t == 3) {
+                        if (this.units[var6].field_t == 3) {
                           this.field_e.field_j = this.field_e.field_j + 1;
                           this.field_e.field_l.field_a[17] = this.field_e.field_l.field_a[17] + 1;
                         }
-                        if (this.field_C[var6].field_t == 4) {
+                        if (this.units[var6].field_t == 4) {
                           this.field_e.field_b = this.field_e.field_b + 1;
                         }
-                        if (this.field_C[var6].field_t == 5) {
+                        if (this.units[var6].field_t == 5) {
                           this.field_e.field_j = this.field_e.field_j + 1;
                         }
-                        if (6 == this.field_C[var6].field_t) {
+                        if (6 == this.units[var6].field_t) {
                           this.field_e.field_j = this.field_e.field_j + 1;
                         }
-                        if (this.field_C[var6].field_t == 9) {
+                        if (this.units[var6].field_t == 9) {
                           this.field_e.field_m = this.field_e.field_m + 1;
                           if ((var12 != 0) &&
                             (param1.field_Bb != 12)) {
-                            stackIn_209_0 = this.field_C[var6];
+                            stackIn_209_0 = this.units[var6];
                             stackIn_210_0 = stackIn_209_0.field_Z;
                             if (stackIn_210_0.field_b != null) {
-                              this.field_C[var6].field_Z.field_b = this.field_C[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
+                              this.units[var6].field_Z.field_b = this.units[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
                             }
-                            if (null != this.field_C[var6].field_Z.field_A) {
-                              this.field_C[var6].field_Z.field_A = this.field_C[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
+                            if (null != this.units[var6].field_Z.field_A) {
+                              this.units[var6].field_Z.field_A = this.units[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
                             }
                           }
                         }
                       }
                     } else {
                       if (param1.field_Bb != 12) {
-                        stackIn_209_0 = this.field_C[var6];
+                        stackIn_209_0 = this.units[var6];
                         stackIn_210_0 = stackIn_209_0.field_Z;
                         if (stackIn_210_0.field_b != null) {
-                          this.field_C[var6].field_Z.field_b = this.field_C[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
+                          this.units[var6].field_Z.field_b = this.units[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
                         }
-                        if (null != this.field_C[var6].field_Z.field_A) {
-                          this.field_C[var6].field_Z.field_A = this.field_C[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
+                        if (null != this.units[var6].field_Z.field_A) {
+                          this.units[var6].field_Z.field_A = this.units[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
                         }
                       }
                     }
@@ -3509,54 +3509,54 @@ final class e {
               this.field_e.field_i = 12;
             }
             var6 = 0;
-            while (this.field_C.length > var6) {
+            while (this.units.length > var6) {
               boolean decompiledFrameRemainder0 = true;
-              if (null != this.field_C[var6]) {
-                if ((this.field_C[var6].field_Z != null) &&
+              if (null != this.units[var6]) {
+                if ((this.units[var6].field_Z != null) &&
                   (decompiledFrameRemainder0 = (param1.field_Bb != 12))) {
-                  if (this.field_C[var6].field_Z.field_b != null) {
-                    this.field_C[var6].field_Z.field_b = this.field_C[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
+                  if (this.units[var6].field_Z.field_b != null) {
+                    this.units[var6].field_Z.field_b = this.units[var6].field_Z.field_b.a(this.field_e.field_l, param1.field_I, 8);
                   }
-                  decompiledFrameRemainder0 = (this.field_C[var6].field_Z.field_A != null);
+                  decompiledFrameRemainder0 = (this.units[var6].field_Z.field_A != null);
                   if (decompiledFrameRemainder0) {
-                    this.field_C[var6].field_Z.field_A = this.field_C[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
+                    this.units[var6].field_Z.field_A = this.units[var6].field_Z.field_A.a(this.field_e.field_l, param1.field_I, 8);
                     decompiledFrameRemainder0 = (var12 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (this.field_C[var6].field_t == 0) {
+                  if (this.units[var6].field_t == 0) {
                     this.field_e.field_g = this.field_e.field_g + 1;
                   }
-                  if (this.field_C[var6].field_t == 1) {
+                  if (this.units[var6].field_t == 1) {
                     this.field_e.field_j = this.field_e.field_j + 1;
                   }
-                  if (2 == this.field_C[var6].field_t) {
+                  if (2 == this.units[var6].field_t) {
                     this.field_e.field_j = this.field_e.field_j + 1;
                   }
-                  if (this.field_C[var6].field_t == 3) {
+                  if (this.units[var6].field_t == 3) {
                     this.field_e.field_j = this.field_e.field_j + 1;
                     this.field_e.field_l.field_a[17] = this.field_e.field_l.field_a[17] + 1;
                   }
-                  if (this.field_C[var6].field_t == 4) {
+                  if (this.units[var6].field_t == 4) {
                     this.field_e.field_b = this.field_e.field_b + 1;
                   }
-                  if (this.field_C[var6].field_t == 5) {
+                  if (this.units[var6].field_t == 5) {
                     this.field_e.field_j = this.field_e.field_j + 1;
                   }
-                  if (6 == this.field_C[var6].field_t) {
+                  if (6 == this.units[var6].field_t) {
                     this.field_e.field_j = this.field_e.field_j + 1;
                   }
-                  if (this.field_C[var6].field_t == 9) {
+                  if (this.units[var6].field_t == 9) {
                     this.field_e.field_m = this.field_e.field_m + 1;
                   }
-                  if (this.field_C[var6].field_nb != null &&
-                    19 > this.field_C[var6].field_nb.field_g) {
-                    dupTemp$2 = this.field_C[var6].field_nb.field_g;
+                  if (this.units[var6].field_nb != null &&
+                    19 > this.units[var6].field_nb.field_g) {
+                    dupTemp$2 = this.units[var6].field_nb.field_g;
                     this.field_e.field_l.field_a[dupTemp$2] = this.field_e.field_l.field_a[dupTemp$2] + 1;
                   }
-                  if (null != this.field_C[var6].field_b) {
-                    dupTemp$3 = this.field_C[var6].field_b.field_g;
-                    this.field_e.field_l.field_a[dupTemp$3] = this.field_e.field_l.field_a[dupTemp$3] + this.field_C[var6].field_b.field_d;
+                  if (null != this.units[var6].field_b) {
+                    dupTemp$3 = this.units[var6].field_b.field_g;
+                    this.field_e.field_l.field_a[dupTemp$3] = this.field_e.field_l.field_a[dupTemp$3] + this.units[var6].field_b.field_d;
                   }
                 }
               }
@@ -3581,21 +3581,21 @@ final class e {
                 param1.field_nb[var6] = null;
               }
               boolean decompiledFrameRemainder1 = true;
-              if (this.field_C[var6] != null) {
-                if (null != this.field_C[var6].field_Z &&
-                  0 >= this.field_C[var6].field_P &&
-                  this.field_C[var6].field_T > 0 && (this.field_f == 1 ||
+              if (this.units[var6] != null) {
+                if (null != this.units[var6].field_Z &&
+                  0 >= this.units[var6].field_P &&
+                  this.units[var6].field_T > 0 && (this.field_f == 1 ||
                   this.field_r)) {
-                  dupTemp$4 = this.field_C[var6];
-                  dupTemp$4.field_P = dupTemp$4.field_P + this.field_C[var6].field_T;
-                  this.field_C[var6].field_T = 0;
+                  dupTemp$4 = this.units[var6];
+                  dupTemp$4.field_P = dupTemp$4.field_P + this.units[var6].field_T;
+                  this.units[var6].field_T = 0;
                   this.field_e.field_f = this.field_e.field_f + 1;
                 }
-                if (this.field_C[var6].field_P > 0) {
-                  if ((null != this.field_C[var6].field_Z)) {
-                    param1.field_nb[var6] = this.field_C[var6].field_Z;
-                    param1.field_nb[var6].field_b = this.field_C[var6].field_nb;
-                    param1.field_nb[var6].field_A = this.field_C[var6].field_eb;
+                if (this.units[var6].field_P > 0) {
+                  if ((null != this.units[var6].field_Z)) {
+                    param1.field_nb[var6] = this.units[var6].field_Z;
+                    param1.field_nb[var6].field_b = this.units[var6].field_nb;
+                    param1.field_nb[var6].field_A = this.units[var6].field_eb;
                     if (null != param1.field_nb[var6].field_b) {
                       var10 = param1.field_nb[var6].field_b.field_g;
                       if (0 == var10 ||
@@ -3607,105 +3607,105 @@ final class e {
                         param1.field_nb[var6].field_b = var11_ref_oh;
                       }
                     }
-                    param1.field_nb[var6].field_i = this.field_C[var6].field_b;
-                    if (this.field_C[var6].field_Z.field_e > 0 &&
-                      this.field_C[var6].field_Z.field_h == 0) {
-                      this.field_C[var6].field_Z.field_h = 1;
+                    param1.field_nb[var6].field_i = this.units[var6].field_b;
+                    if (this.units[var6].field_Z.field_e > 0 &&
+                      this.units[var6].field_Z.field_h == 0) {
+                      this.units[var6].field_Z.field_h = 1;
                     }
-                    if (this.field_C[var6].field_Z.field_h == 2) {
+                    if (this.units[var6].field_Z.field_h == 2) {
                       var8++;
                     }
-                    if (this.field_C[var6].field_Z.field_h == 3) {
+                    if (this.units[var6].field_Z.field_h == 3) {
                       var9++;
                     }
-                    if (this.field_C[var6].field_Z.field_h == 1) {
+                    if (this.units[var6].field_Z.field_h == 1) {
                       var7++;
                     }
-                    this.field_C[var6].field_Z.d((byte) 126);
-                    var10Lifetime3 = -this.field_C[var6].field_Z.field_v + this.field_C[var6].field_Z.field_x;
+                    this.units[var6].field_Z.d((byte) 126);
+                    var10Lifetime3 = -this.units[var6].field_Z.field_v + this.units[var6].field_Z.field_x;
                     if (var10Lifetime3 > 0) {
                       if (var10Lifetime3 > 20) {
                         var10Lifetime3 = 20;
                       }
-                      dupTemp$5 = this.field_C[var6].field_Z;
+                      dupTemp$5 = this.units[var6].field_Z;
                       dupTemp$5.field_v = (int)((double)dupTemp$5.field_v + (3.0 * Math.random() * (double)var10Lifetime3 / 4.0 + (double)(var10Lifetime3 / 4)));
-                      if (this.field_C[var6].field_Z.field_v > 100) {
-                        this.field_C[var6].field_Z.field_v = 100;
+                      if (this.units[var6].field_Z.field_v > 100) {
+                        this.units[var6].field_Z.field_v = 100;
                       }
                     }
                     var11 = 0;
-                    while (var11 < this.field_C[var6].field_Z.field_h) {
-                      stackIn_476_0 = $cfr$dcmpl(100.0 * Math.random(), (double)this.field_C[var6].field_Z.field_t);
+                    while (var11 < this.units[var6].field_Z.field_h) {
+                      stackIn_476_0 = $cfr$dcmpl(100.0 * Math.random(), (double)this.units[var6].field_Z.field_t);
                       if (stackIn_476_0 > 0) {
-                        dupTemp$6 = this.field_C[var6].field_Z;
+                        dupTemp$6 = this.units[var6].field_Z;
                         dupTemp$6.field_t = dupTemp$6.field_t + 1;
                       }
-                      if (100.0 * Math.random() > (double)this.field_C[var6].field_Z.field_w) {
-                        dupTemp$7 = this.field_C[var6].field_Z;
+                      if (100.0 * Math.random() > (double)this.units[var6].field_Z.field_w) {
+                        dupTemp$7 = this.units[var6].field_Z;
                         dupTemp$7.field_w = dupTemp$7.field_w + 1;
                       }
-                      if (Math.random() * 100.0 > (double)this.field_C[var6].field_Z.field_v) {
-                        dupTemp$8 = this.field_C[var6].field_Z;
+                      if (Math.random() * 100.0 > (double)this.units[var6].field_Z.field_v) {
+                        dupTemp$8 = this.units[var6].field_Z;
                         dupTemp$8.field_v = dupTemp$8.field_v + 1;
                       }
-                      if (Math.random() * 100.0 > (double)this.field_C[var6].field_Z.field_B) {
-                        dupTemp$9 = this.field_C[var6].field_Z;
+                      if (Math.random() * 100.0 > (double)this.units[var6].field_Z.field_B) {
+                        dupTemp$9 = this.units[var6].field_Z;
                         dupTemp$9.field_B = dupTemp$9.field_B + 1;
                       }
-                      if (Math.random() * 100.0 > (double)this.field_C[var6].field_Z.field_q) {
-                        dupTemp$10 = this.field_C[var6].field_Z;
+                      if (Math.random() * 100.0 > (double)this.units[var6].field_Z.field_q) {
+                        dupTemp$10 = this.units[var6].field_Z;
                         dupTemp$10.field_q = dupTemp$10.field_q + 1;
                       }
                       var11++;
                     }
                     stackIn_476_0Lifetime1 = 0;
-                    if (stackIn_476_0Lifetime1 < this.field_C[var6].field_Z.field_h) {
-                      if ((33 * this.field_C[var6].field_Z.field_h + 1) > this.field_C[var6].field_Z.field_t) {
-                        dupTemp$11 = this.field_C[var6].field_Z;
+                    if (stackIn_476_0Lifetime1 < this.units[var6].field_Z.field_h) {
+                      if ((33 * this.units[var6].field_Z.field_h + 1) > this.units[var6].field_Z.field_t) {
+                        dupTemp$11 = this.units[var6].field_Z;
                         dupTemp$11.field_t = dupTemp$11.field_t + 1;
                       }
-                      if (33 * this.field_C[var6].field_Z.field_h + 1 > this.field_C[var6].field_Z.field_w) {
-                        dupTemp$12 = this.field_C[var6].field_Z;
+                      if (33 * this.units[var6].field_Z.field_h + 1 > this.units[var6].field_Z.field_w) {
+                        dupTemp$12 = this.units[var6].field_Z;
                         dupTemp$12.field_w = dupTemp$12.field_w + 1;
                       }
-                      if ((33 * this.field_C[var6].field_Z.field_h + 1) > this.field_C[var6].field_Z.field_v) {
-                        dupTemp$13 = this.field_C[var6].field_Z;
+                      if ((33 * this.units[var6].field_Z.field_h + 1) > this.units[var6].field_Z.field_v) {
+                        dupTemp$13 = this.units[var6].field_Z;
                         dupTemp$13.field_v = dupTemp$13.field_v + 1;
                       }
-                      if ((this.field_C[var6].field_Z.field_h * 33 + 1) > this.field_C[var6].field_Z.field_B) {
-                        dupTemp$14 = this.field_C[var6].field_Z;
+                      if ((this.units[var6].field_Z.field_h * 33 + 1) > this.units[var6].field_Z.field_B) {
+                        dupTemp$14 = this.units[var6].field_Z;
                         dupTemp$14.field_B = dupTemp$14.field_B + 1;
                       }
-                      if ((this.field_C[var6].field_Z.field_h * 33 + 1) > this.field_C[var6].field_Z.field_q) {
-                        dupTemp$15 = this.field_C[var6].field_Z;
+                      if ((this.units[var6].field_Z.field_h * 33 + 1) > this.units[var6].field_Z.field_q) {
+                        dupTemp$15 = this.units[var6].field_Z;
                         dupTemp$15.field_q = dupTemp$15.field_q + 1;
                       }
                     }
-                    if (this.field_C[var6].field_Z.field_B >= 90) {
+                    if (this.units[var6].field_Z.field_B >= 90) {
                       mh.a((byte) 121, 0, 255);
                     }
-                    if (this.field_C[var6].field_Z.field_t >= 90) {
+                    if (this.units[var6].field_Z.field_t >= 90) {
                       mh.a((byte) 125, 1, 254);
                     }
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  if (this.field_C[var6].field_Z != null) {
+                  if (this.units[var6].field_Z != null) {
                     this.field_e.field_k = this.field_e.field_k + 1;
                   }
                   if (this.field_f == 1) {
-                    if (null != this.field_C[var6].field_nb) {
-                      dupTemp$16 = this.field_C[var6].field_nb.field_g;
+                    if (null != this.units[var6].field_nb) {
+                      dupTemp$16 = this.units[var6].field_nb.field_g;
                       this.field_e.field_l.field_a[dupTemp$16] = this.field_e.field_l.field_a[dupTemp$16] + 1;
                     }
-                    if (null != this.field_C[var6].field_eb) {
-                      dupTemp$17 = this.field_C[var6].field_eb.field_g;
+                    if (null != this.units[var6].field_eb) {
+                      dupTemp$17 = this.units[var6].field_eb.field_g;
                       this.field_e.field_l.field_a[dupTemp$17] = this.field_e.field_l.field_a[dupTemp$17] + 1;
                     }
-                    if (null != this.field_C[var6].field_b) {
-                      dupTemp$18 = this.field_C[var6].field_b.field_g;
-                      this.field_e.field_l.field_a[dupTemp$18] = this.field_e.field_l.field_a[dupTemp$18] + this.field_C[var6].field_b.field_d;
+                    if (null != this.units[var6].field_b) {
+                      dupTemp$18 = this.units[var6].field_b.field_g;
+                      this.field_e.field_l.field_a[dupTemp$18] = this.field_e.field_l.field_a[dupTemp$18] + this.units[var6].field_b.field_d;
                     }
                   }
                 }
@@ -3724,12 +3724,12 @@ final class e {
             var6 = 0;
             while (true) {
               if (var6 < ak.field_q) {
-                stackIn_548_0 = this.field_C[var6];
+                stackIn_548_0 = this.units[var6];
                 if (var12 == 0) {
                   if (stackIn_548_0 != null &&
-                    null != this.field_C[var6].field_Z &&
-                    this.field_C[var6].field_Z.field_h == 1 && (var10Lifetime1 == 0 ||
-                    !(this.field_C[var6].field_Z.field_e <= this.field_C[var10Lifetime1].field_Z.field_e))) {
+                    null != this.units[var6].field_Z &&
+                    this.units[var6].field_Z.field_h == 1 && (var10Lifetime1 == 0 ||
+                    !(this.units[var6].field_Z.field_e <= this.units[var10Lifetime1].field_Z.field_e))) {
                     var10Lifetime1 = var6;
                   }
                   var6++;
@@ -3738,7 +3738,7 @@ final class e {
               } else {
                 var8++;
                 var7--;
-                stackIn_548_0 = this.field_C[var10Lifetime1];
+                stackIn_548_0 = this.units[var10Lifetime1];
               }
               break;
             }
@@ -3751,17 +3751,17 @@ final class e {
             while (true) {
               if (var6 < ak.field_q) {
                 if (var12 == 0) {
-                  if (null != this.field_C[var6] &&
-                    null != this.field_C[var6].field_Z &&
-                    this.field_C[var6].field_Z.field_h <= 2 && (0 == var10Lifetime2 ||
-                    !(this.field_C[var6].field_Z.field_e <= this.field_C[var10Lifetime2].field_Z.field_e))) {
+                  if (null != this.units[var6] &&
+                    null != this.units[var6].field_Z &&
+                    this.units[var6].field_Z.field_h <= 2 && (0 == var10Lifetime2 ||
+                    !(this.units[var6].field_Z.field_e <= this.units[var10Lifetime2].field_Z.field_e))) {
                     var10Lifetime2 = var6;
                   }
                   var6++;
                   continue;
                 }
               } else {
-                this.field_C[var10Lifetime2].field_Z.field_h = 3;
+                this.units[var10Lifetime2].field_Z.field_h = 3;
                 mh.a((byte) 118, 4, 251);
                 var9++;
               }
@@ -3801,7 +3801,7 @@ final class e {
 
     final void a(boolean param0, boolean param1) {
         int stackIn_22_0 = 0;
-        dk stackIn_156_0 = null;
+        LevelMap stackIn_156_0 = null;
         int stackIn_156_1 = 0;
         int stackIn_157_2 = 0;
         int stackIn_176_0 = 0;
@@ -3824,7 +3824,7 @@ final class e {
         int stackIn_426_2;
         int stackIn_426_3;
         int stackIn_426_4;
-        dl stackIn_573_0 = null;
+        MapTile stackIn_573_0 = null;
         Object stackIn_732_0 = null;
         int stackIn_745_0 = 0;
         int stackIn_745_1 = 0;
@@ -3832,7 +3832,7 @@ final class e {
         int stackIn_753_1 = 0;
         int stackIn_753_2 = 0;
         boolean stackIn_782_0 = false;
-        dk stackIn_810_0 = null;
+        LevelMap stackIn_810_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -3841,14 +3841,14 @@ final class e {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        dl var8_ref_dl = null;
+        MapTile var8_ref_dl = null;
         Sprite var8_ref_ci = null;
         th var8_ref_th = null;
         int var9 = 0;
         Object var9_ref = null;
         int var10_int = 0;
         Sprite var10 = null;
-        dl var10_ref = null;
+        MapTile var10_ref = null;
         int var11_int = 0;
         Object var11 = null;
         int var12 = 0;
@@ -3861,8 +3861,8 @@ final class e {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        dk stackIn_810_0Lifetime1;
-        dl var8_ref_dlLifetime1;
+        LevelMap stackIn_810_0Lifetime1;
+        MapTile var8_ref_dlLifetime1;
         Object var9_refLifetime1;
         Object var9_refLifetime2;
         int stackIn_176_0Lifetime1;
@@ -3896,16 +3896,16 @@ final class e {
           rd.field_t = 0;
           li.field_a = false;
           if (!this.field_u) {
-            this.field_h.a(24, (byte) -122, 92);
+            this.map.a(24, (byte) -122, 92);
             return;
           }
           if (this.field_q != null) {
             tg.field_l = -1;
-            if (null != this.field_q.field_c.field_C) {
-              if (this.field_q.field_c.field_C.field_C != null) {
+            if (null != this.field_q.tile.field_C) {
+              if (this.field_q.tile.field_C.field_C != null) {
                 tg.field_l = 1 + this.field_q.field_E;
               }
-              if (this.field_q.field_c.field_C.field_b != -1) {
+              if (this.field_q.tile.field_C.field_b != -1) {
                 tg.field_l = this.field_q.field_E;
               }
             }
@@ -3927,13 +3927,13 @@ final class e {
           if (!this.field_J) {
             var5 = 0;
           }
-          this.field_h.a(false, var5 != 0);
+          this.map.a(false, var5 != 0);
           var6 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (this.field_C.length <= var6))) {
+          while (!(decompiledNaturalLoopExit0 = (this.units.length <= var6))) {
             if (var19 == 0) {
-              if (null != this.field_C[var6]) {
-                this.field_C[var6].e((byte) 41);
+              if (null != this.units[var6]) {
+                this.units[var6].e((byte) 41);
               }
               var6++;
               continue;
@@ -3965,7 +3965,7 @@ final class e {
             var6Lifetime1 = var6Lifetime1 + 16 * (vf.field_a + IntrusiveNode.field_c);
             var7Lifetime1 = 0;
             while (!(var7Lifetime1 > eg.field_p)) {
-              var8_ref_dl = this.field_h.a(-99, vf.field_a, var7Lifetime1, IntrusiveNode.field_c);
+              var8_ref_dl = this.map.a(-99, vf.field_a, var7Lifetime1, IntrusiveNode.field_c);
               stackIn_573_0 = var8_ref_dl;
               if (var19 != 0) {
                 decompiledFrameCompleted7 = false;
@@ -4014,18 +4014,18 @@ final class e {
                     if (var12 > this.field_q.field_jb && (!(var12 - 10 <= this.field_q.field_jb) ||
                       this.field_m ||
                       !(this.field_q.field_jb >= 10))) {
-                      this.field_h.a(-(48 * var7Lifetime1) - 36 + var6Lifetime1, 16711680, var4Lifetime1, -2, hj.field_A);
+                      this.map.a(-(48 * var7Lifetime1) - 36 + var6Lifetime1, 16711680, var4Lifetime1, -2, hj.field_A);
                     } else {
                       if (var12 > this.field_q.field_jb) {
                         var12 = this.field_q.field_jb;
                       }
                       var13 = var12;
-                      this.field_h.a(-(var7Lifetime1 * 48) + (var6Lifetime1 - 36), 16711680, var4Lifetime1, -2, Integer.toString(var13));
+                      this.map.a(-(var7Lifetime1 * 48) + (var6Lifetime1 - 36), 16711680, var4Lifetime1, -2, Integer.toString(var13));
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    this.field_h.a(-36 + var6Lifetime1 - 48 * var7Lifetime1, 16711680, var4Lifetime1, -2, ta.field_a);
+                    this.map.a(-36 + var6Lifetime1 - 48 * var7Lifetime1, 16711680, var4Lifetime1, -2, ta.field_a);
                   }
                 }
                 if (hb.field_p[0] == var9_ref &&
@@ -4060,21 +4060,21 @@ final class e {
                 var9 = (int)(Math.cos(mm.field_f) * 24.0 + 24.0);
                 ve.a(var8_ref_ci, -5353, var9 + var7Lifetime1Lifetime1 * 144, -var9 - 48 * var7Lifetime1Lifetime1 + var6Lifetime1Lifetime1, -24 + var4Lifetime1Lifetime1);
                 var10_int = og.field_d;
-                stackIn_156_0 = this.field_h;
+                stackIn_156_0 = this.map;
                 stackIn_156_1 = var6Lifetime1Lifetime1 + (-24 - var7Lifetime1Lifetime1 * 48);
                 if (var10_int > this.field_q.field_jb) {
                   stackIn_157_2 = 16711680;
                 } else {
                   stackIn_157_2 = 65280;
                 }
-                ((dk) (Object) stackIn_156_0).a(stackIn_156_1, stackIn_157_2, var4Lifetime1Lifetime1, -2, Integer.toString(var10_int));
+                ((LevelMap) (Object) stackIn_156_0).a(stackIn_156_1, stackIn_157_2, var4Lifetime1Lifetime1, -2, Integer.toString(var10_int));
                 if (var19 != 0) {
                   var8_ref_ci = hb.field_p[3];
                   var9 = (int)(24.0 + Math.sin(mm.field_f) * 24.0);
                   ve.a(var8_ref_ci, -5353, var9 + var7Lifetime1Lifetime1 * 144, -(48 * var7Lifetime1Lifetime1) + (var6Lifetime1Lifetime1 - var9), var4Lifetime1Lifetime1 - 24);
                   var9 = (int)(24.0 + 24.0 * Math.cos(mm.field_f));
                   ve.a(var8_ref_ci, -5353, 144 * var7Lifetime1Lifetime1 + var9, -(48 * var7Lifetime1Lifetime1) + (var6Lifetime1Lifetime1 - var9), -24 + var4Lifetime1Lifetime1);
-                  this.field_h.a(-(48 * var7Lifetime1Lifetime1) + (-24 + var6Lifetime1Lifetime1), 16711680, var4Lifetime1Lifetime1, -2, rj.field_f);
+                  this.map.a(-(48 * var7Lifetime1Lifetime1) + (-24 + var6Lifetime1Lifetime1), 16711680, var4Lifetime1Lifetime1, -2, rj.field_f);
                 }
               } else {
                 var8_ref_ci = hb.field_p[3];
@@ -4082,7 +4082,7 @@ final class e {
                 ve.a(var8_ref_ci, -5353, var9 + var7Lifetime1Lifetime1 * 144, -(48 * var7Lifetime1Lifetime1) + (var6Lifetime1Lifetime1 - var9), var4Lifetime1Lifetime1 - 24);
                 var9 = (int)(24.0 + 24.0 * Math.cos(mm.field_f));
                 ve.a(var8_ref_ci, -5353, 144 * var7Lifetime1Lifetime1 + var9, -(48 * var7Lifetime1Lifetime1) + (var6Lifetime1Lifetime1 - var9), -24 + var4Lifetime1Lifetime1);
-                this.field_h.a(-(48 * var7Lifetime1Lifetime1) + (-24 + var6Lifetime1Lifetime1), 16711680, var4Lifetime1Lifetime1, -2, rj.field_f);
+                this.map.a(-(48 * var7Lifetime1Lifetime1) + (-24 + var6Lifetime1Lifetime1), 16711680, var4Lifetime1Lifetime1, -2, rj.field_f);
               }
             }
             var6Lifetime1Lifetime1 = 0;
@@ -4468,13 +4468,13 @@ final class e {
                     decompiledFrameCompleted3 = false;
                     break;
                   }
-                  if (stackIn_732_0 != this.field_C[var12Lifetime2] &&
-                    null != this.field_C[var12Lifetime2].field_Z &&
-                    this.field_C[var12Lifetime2].field_P > 0) {
+                  if (stackIn_732_0 != this.units[var12Lifetime2] &&
+                    null != this.units[var12Lifetime2].field_Z &&
+                    this.units[var12Lifetime2].field_P > 0) {
                     if (this.field_q == null) {
-                      this.field_q = this.field_C[var11_intLifetime1Lifetime1];
+                      this.field_q = this.units[var11_intLifetime1Lifetime1];
                     }
-                    if (this.field_C[var12Lifetime2] == this.field_q) {
+                    if (this.units[var12Lifetime2] == this.field_q) {
                       var10_int = var9;
                     }
                     var11_intLifetime1Lifetime1 = var12Lifetime2;
@@ -4509,8 +4509,8 @@ final class e {
                     if (var10_int < var13Lifetime1Lifetime1) {
                       var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 + (90 - var12Lifetime2);
                     }
-                    while (null == this.field_C[var11_intLifetime1Lifetime1] ||
-                      !(this.field_C[var11_intLifetime1Lifetime1].field_P > 0)) {
+                    while (null == this.units[var11_intLifetime1Lifetime1] ||
+                      !(this.units[var11_intLifetime1Lifetime1].field_P > 0)) {
                       var11_intLifetime1Lifetime1--;
                     }
                     var8 = 384;
@@ -4520,7 +4520,7 @@ final class e {
                       ef.field_j <= (var14Lifetime1 + var4Lifetime1Lifetime1) && (!ha.field_o ||
                       this.field_B >= 7)) {
                       this.field_G.field_Eb = new String[1];
-                      this.field_G.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.field_C[var11_intLifetime1Lifetime1].field_Z.b(1);
+                      this.field_G.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.units[var11_intLifetime1Lifetime1].field_Z.b(1);
                       if (oh.field_f == 1) {
                         if (this.field_B >= 7 &&
                           this.field_B < 10 &&
@@ -4528,7 +4528,7 @@ final class e {
                           16 * (this.field_q.field_F + this.field_q.field_H) != lg.field_c) {
                           this.field_B = this.field_B + 1;
                         }
-                        this.field_q = this.field_C[var11_intLifetime1Lifetime1];
+                        this.field_q = this.units[var11_intLifetime1Lifetime1];
                         eg.field_p = this.field_q.field_E;
                         sj.field_b = (-this.field_q.field_H + this.field_q.field_F) * 32;
                         lg.field_c = 16 * (this.field_q.field_F + this.field_q.field_H);
@@ -4537,32 +4537,32 @@ final class e {
                         this.field_m = false;
                       }
                     }
-                    var15Lifetime1 = this.field_C[var11_intLifetime1Lifetime1].field_jb;
+                    var15Lifetime1 = this.units[var11_intLifetime1Lifetime1].field_jb;
                     var16 = 52428;
                     var17Lifetime1 = 65535;
                     var18 = 16777215;
-                    if (this.field_C[var11_intLifetime1Lifetime1].field_B == 0) {
+                    if (this.units[var11_intLifetime1Lifetime1].field_B == 0) {
                       var17Lifetime1 = 16711680;
                       var18 = 16744576;
                       var16 = 13369344;
                     }
                     if (~var10_int != ~var13Lifetime1Lifetime1) {
                       th.field_i.b(var4Lifetime1Lifetime1 - th.field_i.field_r + var14Lifetime1, 365);
-                      og.field_f.b(this.field_C[var11_intLifetime1Lifetime1].field_Z.a(-1426, -12 + var14Lifetime1 - 8), var4Lifetime1Lifetime1, var8 - 5, 52224, -1);
+                      og.field_f.b(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -12 + var14Lifetime1 - 8), var4Lifetime1Lifetime1, var8 - 5, 52224, -1);
                       og.field_f.a(Integer.toString(var15Lifetime1), -5 + (var14Lifetime1 + var4Lifetime1Lifetime1), -5 + var8, var16, -1);
                     } else {
                       vl.field_c.b(var14Lifetime1 + var4Lifetime1Lifetime1 - vl.field_c.field_r, 365);
-                      og.field_f.b(this.field_C[var11_intLifetime1Lifetime1].field_Z.a(-1426, -20 + var14Lifetime1), var4Lifetime1Lifetime1, var8 - 5, 65280, -1);
+                      og.field_f.b(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -20 + var14Lifetime1), var4Lifetime1Lifetime1, var8 - 5, 65280, -1);
                       og.field_f.a(Integer.toString(var15Lifetime1), -5 + (var4Lifetime1Lifetime1 + var14Lifetime1), -5 + var8, var17Lifetime1, -1);
                     }
-                    if (this.field_C[var11_intLifetime1Lifetime1].field_ob) {
+                    if (this.units[var11_intLifetime1Lifetime1].field_ob) {
                       l.e(89 - vl.field_c.field_r + var4Lifetime1Lifetime1 - (-var14Lifetime1 + 1), 383, 4, 16777215);
                       l.e(89 + (-vl.field_c.field_r + (var4Lifetime1Lifetime1 + var14Lifetime1)) + 1, 383, 4, 16777215);
                       l.e(-vl.field_c.field_r + var4Lifetime1Lifetime1 + (var14Lifetime1 + 89), 383, 3, 16711680);
                       l.e(var4Lifetime1Lifetime1 + (-vl.field_c.field_r + var14Lifetime1) + 89, 383, 2, 0);
                     }
-                    if (this.field_C[var11_intLifetime1Lifetime1].field_v == this.field_C[var11_intLifetime1Lifetime1].field_jb &&
-                      1 == this.field_C[var11_intLifetime1Lifetime1].field_B) {
+                    if (this.units[var11_intLifetime1Lifetime1].field_v == this.units[var11_intLifetime1Lifetime1].field_jb &&
+                      1 == this.units[var11_intLifetime1Lifetime1].field_B) {
                       og.field_f.a(Integer.toString(var15Lifetime1), var14Lifetime1 + var4Lifetime1Lifetime1 - 5, var8 - 5, var18, -1);
                     }
                     var11_intLifetime1Lifetime1--;
@@ -4575,7 +4575,7 @@ final class e {
               (decompiledFrameRemainder2 = !(!g.field_tb)) &&
               (decompiledFrameRemainder2 = !(mm.field_e < 2))) {
               vc.field_f.b("QA MODE", 10, 70, 16711823, 0);
-              stackIn_573_0 = this.field_h.a(-111, vf.field_a, eg.field_p, IntrusiveNode.field_c);
+              stackIn_573_0 = this.map.a(-111, vf.field_a, eg.field_p, IntrusiveNode.field_c);
             }
           }
           if ((decompiledFrameRemainder2) &&
@@ -4591,23 +4591,23 @@ final class e {
               var9_refLifetime1 = var8_ref_dlLifetime1.field_h;
               var10_intLifetime2 = 80;
               if (null != var9_refLifetime1) {
-                og.field_f.a(((r) (var9_refLifetime1)).field_K, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a(((BattleUnit) (var9_refLifetime1)).field_K, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Health " + ((r) (var9_refLifetime1)).field_P + "/" + ((r) (var9_refLifetime1)).field_mb, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a("Health " + ((BattleUnit) (var9_refLifetime1)).field_P + "/" + ((BattleUnit) (var9_refLifetime1)).field_mb, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Armour " + ((r) (var9_refLifetime1)).field_u + "/" + ((r) (var9_refLifetime1)).field_fb, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a("Armour " + ((BattleUnit) (var9_refLifetime1)).field_u + "/" + ((BattleUnit) (var9_refLifetime1)).field_fb, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Shield " + ((r) (var9_refLifetime1)).field_m + "/" + ((r) (var9_refLifetime1)).field_J, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a("Shield " + ((BattleUnit) (var9_refLifetime1)).field_m + "/" + ((BattleUnit) (var9_refLifetime1)).field_J, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Weapon: " + od.field_c[((r) (var9_refLifetime1)).field_nb.field_g].field_j, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a("Weapon: " + od.field_c[((BattleUnit) (var9_refLifetime1)).field_nb.field_g].field_j, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                if (null != ((r) (var9_refLifetime1)).field_b) {
-                  og.field_f.a("Nades:  " + od.field_c[((r) (var9_refLifetime1)).field_b.field_g].field_j + "*" + ((r) (var9_refLifetime1)).field_b.field_d, 630, var10_intLifetime2, 16777215, 0);
+                if (null != ((BattleUnit) (var9_refLifetime1)).field_b) {
+                  og.field_f.a("Nades:  " + od.field_c[((BattleUnit) (var9_refLifetime1)).field_b.field_g].field_j + "*" + ((BattleUnit) (var9_refLifetime1)).field_b.field_d, 630, var10_intLifetime2, 16777215, 0);
                 }
                 var10_intLifetime2 += 12;
-                og.field_f.a("Tus " + ((r) (var9_refLifetime1)).field_jb + "/" + ((r) (var9_refLifetime1)).field_v, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a("Tus " + ((BattleUnit) (var9_refLifetime1)).field_jb + "/" + ((BattleUnit) (var9_refLifetime1)).field_v, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
-                og.field_f.a("Interupt " + ((r) (var9_refLifetime1)).field_q, 630, var10_intLifetime2, 16777215, 0);
+                og.field_f.a("Interupt " + ((BattleUnit) (var9_refLifetime1)).field_q, 630, var10_intLifetime2, 16777215, 0);
                 var10_intLifetime2 += 12;
                 var10_intLifetime2 += 12;
                 og.field_f.a("Use [ and ] to change weapon", 630, var10_intLifetime2, 16777215, 0);
@@ -4619,101 +4619,101 @@ final class e {
                 og.field_f.a("Press / to kill this unit", 630, var10_intLifetime2, 16777215, 0);
                 if (bh.field_e[IntrusiveNode.field_b]) {
                   if (bh.field_e[81]) {
-                    ((r) (var9_refLifetime1)).field_q = ((r) (var9_refLifetime1)).field_q - 1;
-                    if (((r) (var9_refLifetime1)).field_q < -((r) (var9_refLifetime1)).field_v) {
-                      ((r) (var9_refLifetime1)).field_q = -((r) (var9_refLifetime1)).field_v;
+                    ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_q - 1;
+                    if (((BattleUnit) (var9_refLifetime1)).field_q < -((BattleUnit) (var9_refLifetime1)).field_v) {
+                      ((BattleUnit) (var9_refLifetime1)).field_q = -((BattleUnit) (var9_refLifetime1)).field_v;
                     }
-                    if (!(-((r) (var9_refLifetime1)).field_jb <= ((r) (var9_refLifetime1)).field_q)) {
-                      ((r) (var9_refLifetime1)).field_jb = -((r) (var9_refLifetime1)).field_q;
+                    if (!(-((BattleUnit) (var9_refLifetime1)).field_jb <= ((BattleUnit) (var9_refLifetime1)).field_q)) {
+                      ((BattleUnit) (var9_refLifetime1)).field_jb = -((BattleUnit) (var9_refLifetime1)).field_q;
                       if (var19 != 0) {
-                        ((r) (var9_refLifetime1)).field_jb = ((r) (var9_refLifetime1)).field_jb - 1;
-                        if (((r) (var9_refLifetime1)).field_jb < 0) {
-                          ((r) (var9_refLifetime1)).field_jb = 0;
+                        ((BattleUnit) (var9_refLifetime1)).field_jb = ((BattleUnit) (var9_refLifetime1)).field_jb - 1;
+                        if (((BattleUnit) (var9_refLifetime1)).field_jb < 0) {
+                          ((BattleUnit) (var9_refLifetime1)).field_jb = 0;
                         }
-                        if (((r) (var9_refLifetime1)).field_q < -((r) (var9_refLifetime1)).field_jb) {
-                          ((r) (var9_refLifetime1)).field_q = -((r) (var9_refLifetime1)).field_jb;
+                        if (((BattleUnit) (var9_refLifetime1)).field_q < -((BattleUnit) (var9_refLifetime1)).field_jb) {
+                          ((BattleUnit) (var9_refLifetime1)).field_q = -((BattleUnit) (var9_refLifetime1)).field_jb;
                         }
                       }
                     }
                   } else {
-                    ((r) (var9_refLifetime1)).field_jb = ((r) (var9_refLifetime1)).field_jb - 1;
-                    if (((r) (var9_refLifetime1)).field_jb < 0) {
-                      ((r) (var9_refLifetime1)).field_jb = 0;
+                    ((BattleUnit) (var9_refLifetime1)).field_jb = ((BattleUnit) (var9_refLifetime1)).field_jb - 1;
+                    if (((BattleUnit) (var9_refLifetime1)).field_jb < 0) {
+                      ((BattleUnit) (var9_refLifetime1)).field_jb = 0;
                     }
-                    if (((r) (var9_refLifetime1)).field_q < -((r) (var9_refLifetime1)).field_jb) {
-                      ((r) (var9_refLifetime1)).field_q = -((r) (var9_refLifetime1)).field_jb;
+                    if (((BattleUnit) (var9_refLifetime1)).field_q < -((BattleUnit) (var9_refLifetime1)).field_jb) {
+                      ((BattleUnit) (var9_refLifetime1)).field_q = -((BattleUnit) (var9_refLifetime1)).field_jb;
                     }
                   }
                 }
                 var10_intLifetime2 += 12;
                 if (bh.field_e[SecondaryNodeDequeIterator.field_e]) {
                   if (!bh.field_e[81]) {
-                    ((r) (var9_refLifetime1)).field_jb = ((r) (var9_refLifetime1)).field_jb + 1;
-                    if (((r) (var9_refLifetime1)).field_v < ((r) (var9_refLifetime1)).field_jb) {
-                      ((r) (var9_refLifetime1)).field_jb = ((r) (var9_refLifetime1)).field_v;
+                    ((BattleUnit) (var9_refLifetime1)).field_jb = ((BattleUnit) (var9_refLifetime1)).field_jb + 1;
+                    if (((BattleUnit) (var9_refLifetime1)).field_v < ((BattleUnit) (var9_refLifetime1)).field_jb) {
+                      ((BattleUnit) (var9_refLifetime1)).field_jb = ((BattleUnit) (var9_refLifetime1)).field_v;
                     }
-                    if (!((((r) (var9_refLifetime1)).field_q + ((r) (var9_refLifetime1)).field_jb) <= ((r) (var9_refLifetime1)).field_v)) {
-                      ((r) (var9_refLifetime1)).field_q = ((r) (var9_refLifetime1)).field_v - ((r) (var9_refLifetime1)).field_jb;
+                    if (!((((BattleUnit) (var9_refLifetime1)).field_q + ((BattleUnit) (var9_refLifetime1)).field_jb) <= ((BattleUnit) (var9_refLifetime1)).field_v)) {
+                      ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_v - ((BattleUnit) (var9_refLifetime1)).field_jb;
                       if (var19 != 0) {
-                        ((r) (var9_refLifetime1)).field_q = ((r) (var9_refLifetime1)).field_q + 1;
-                        if (((r) (var9_refLifetime1)).field_q > ((r) (var9_refLifetime1)).field_v) {
-                          ((r) (var9_refLifetime1)).field_q = ((r) (var9_refLifetime1)).field_v;
+                        ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_q + 1;
+                        if (((BattleUnit) (var9_refLifetime1)).field_q > ((BattleUnit) (var9_refLifetime1)).field_v) {
+                          ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_v;
                         }
-                        if (((r) (var9_refLifetime1)).field_v < (((r) (var9_refLifetime1)).field_q + ((r) (var9_refLifetime1)).field_jb)) {
-                          ((r) (var9_refLifetime1)).field_jb = ((r) (var9_refLifetime1)).field_v - ((r) (var9_refLifetime1)).field_q;
+                        if (((BattleUnit) (var9_refLifetime1)).field_v < (((BattleUnit) (var9_refLifetime1)).field_q + ((BattleUnit) (var9_refLifetime1)).field_jb)) {
+                          ((BattleUnit) (var9_refLifetime1)).field_jb = ((BattleUnit) (var9_refLifetime1)).field_v - ((BattleUnit) (var9_refLifetime1)).field_q;
                         }
                       }
                     }
                   } else {
-                    ((r) (var9_refLifetime1)).field_q = ((r) (var9_refLifetime1)).field_q + 1;
-                    if (((r) (var9_refLifetime1)).field_q > ((r) (var9_refLifetime1)).field_v) {
-                      ((r) (var9_refLifetime1)).field_q = ((r) (var9_refLifetime1)).field_v;
+                    ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_q + 1;
+                    if (((BattleUnit) (var9_refLifetime1)).field_q > ((BattleUnit) (var9_refLifetime1)).field_v) {
+                      ((BattleUnit) (var9_refLifetime1)).field_q = ((BattleUnit) (var9_refLifetime1)).field_v;
                     }
-                    if (((r) (var9_refLifetime1)).field_v < (((r) (var9_refLifetime1)).field_q + ((r) (var9_refLifetime1)).field_jb)) {
-                      ((r) (var9_refLifetime1)).field_jb = ((r) (var9_refLifetime1)).field_v - ((r) (var9_refLifetime1)).field_q;
+                    if (((BattleUnit) (var9_refLifetime1)).field_v < (((BattleUnit) (var9_refLifetime1)).field_q + ((BattleUnit) (var9_refLifetime1)).field_jb)) {
+                      ((BattleUnit) (var9_refLifetime1)).field_jb = ((BattleUnit) (var9_refLifetime1)).field_v - ((BattleUnit) (var9_refLifetime1)).field_q;
                     }
                   }
                 }
                 if (25 > nd.field_k) {
                   if (bh.field_e[42]) {
-                    ((r) (var9_refLifetime1)).field_nb.field_g = ((r) (var9_refLifetime1)).field_nb.field_g - 1;
-                    if (((r) (var9_refLifetime1)).field_nb.field_g == 17) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 16;
+                    ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = ((BattleUnit) (var9_refLifetime1)).field_nb.field_g - 1;
+                    if (((BattleUnit) (var9_refLifetime1)).field_nb.field_g == 17) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 16;
                     }
-                    if (((r) (var9_refLifetime1)).field_nb.field_g == 5) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 4;
+                    if (((BattleUnit) (var9_refLifetime1)).field_nb.field_g == 5) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 4;
                     }
-                    if (11 == ((r) (var9_refLifetime1)).field_nb.field_g) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 10;
+                    if (11 == ((BattleUnit) (var9_refLifetime1)).field_nb.field_g) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 10;
                     }
                     nd.field_k = 25;
-                    if (((r) (var9_refLifetime1)).field_nb.field_g <= -1) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 18;
+                    if (((BattleUnit) (var9_refLifetime1)).field_nb.field_g <= -1) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 18;
                     }
                   }
                   if (bh.field_e[43]) {
-                    ((r) (var9_refLifetime1)).field_nb.field_g = ((r) (var9_refLifetime1)).field_nb.field_g + 1;
-                    if (17 == ((r) (var9_refLifetime1)).field_nb.field_g) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 18;
+                    ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = ((BattleUnit) (var9_refLifetime1)).field_nb.field_g + 1;
+                    if (17 == ((BattleUnit) (var9_refLifetime1)).field_nb.field_g) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 18;
                     }
-                    if (((r) (var9_refLifetime1)).field_nb.field_g == 5) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 6;
+                    if (((BattleUnit) (var9_refLifetime1)).field_nb.field_g == 5) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 6;
                     }
-                    if (((r) (var9_refLifetime1)).field_nb.field_g == 11) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 12;
+                    if (((BattleUnit) (var9_refLifetime1)).field_nb.field_g == 11) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 12;
                     }
-                    if (((r) (var9_refLifetime1)).field_nb.field_g >= 19) {
-                      ((r) (var9_refLifetime1)).field_nb.field_g = 0;
+                    if (((BattleUnit) (var9_refLifetime1)).field_nb.field_g >= 19) {
+                      ((BattleUnit) (var9_refLifetime1)).field_nb.field_g = 0;
                     }
                     nd.field_k = 25;
                   }
                 }
                 decompiledFrameRemainder2 = !(!bh.field_e[73]);
                 if (decompiledFrameRemainder2) {
-                  ((r) (var9_refLifetime1)).field_d = 5;
-                  ((r) (var9_refLifetime1)).field_A = 0;
-                  ((r) (var9_refLifetime1)).field_S = true;
-                  ((r) (var9_refLifetime1)).field_P = 0;
+                  ((BattleUnit) (var9_refLifetime1)).field_d = 5;
+                  ((BattleUnit) (var9_refLifetime1)).field_A = 0;
+                  ((BattleUnit) (var9_refLifetime1)).field_S = true;
+                  ((BattleUnit) (var9_refLifetime1)).field_P = 0;
                   decompiledFrameRemainder2 = (var19 != 0);
                 }
               }
@@ -4725,44 +4725,44 @@ final class e {
                 }
                 var11 = null;
                 if (bh.field_e[25]) {
-                  var11 = new r(0, this.field_G.field_Bb);
+                  var11 = new BattleUnit(0, this.field_G.field_Bb);
                 }
                 if (bh.field_e[16]) {
-                  var11 = new r(1, this.field_G.field_Bb);
+                  var11 = new BattleUnit(1, this.field_G.field_Bb);
                 }
                 if (bh.field_e[17]) {
-                  var11 = new r(2, this.field_G.field_Bb);
+                  var11 = new BattleUnit(2, this.field_G.field_Bb);
                 }
                 if (bh.field_e[18]) {
-                  var11 = new r(3, this.field_G.field_Bb);
+                  var11 = new BattleUnit(3, this.field_G.field_Bb);
                 }
                 if (bh.field_e[19]) {
-                  var11 = new r(4, this.field_G.field_Bb);
+                  var11 = new BattleUnit(4, this.field_G.field_Bb);
                 }
                 if (bh.field_e[20]) {
-                  var11 = new r(5, this.field_G.field_Bb);
+                  var11 = new BattleUnit(5, this.field_G.field_Bb);
                 }
                 if (bh.field_e[21]) {
-                  var11 = new r(6, this.field_G.field_Bb);
+                  var11 = new BattleUnit(6, this.field_G.field_Bb);
                 }
                 if (null != var11) {
                   var12Lifetime1 = 0;
-                  while (this.field_C.length > var12Lifetime1) {
+                  while (this.units.length > var12Lifetime1) {
                     stackIn_732_0 = null;
                     if (var19 != 0) {
                       decompiledFrameCompleted1 = false;
                       break;
                     }
-                    if (stackIn_732_0 != this.field_C[var12Lifetime1]) {
+                    if (stackIn_732_0 != this.units[var12Lifetime1]) {
                       var12Lifetime1++;
                       continue;
                     }
-                    this.field_C[var12Lifetime1] = (r) (var11);
-                    ((r) (var11)).field_c = var8_ref_dlLifetime1;
-                    ((r) (var11)).field_H = vf.field_a;
-                    ((r) (var11)).field_E = eg.field_p;
-                    var8_ref_dlLifetime1.field_h = (r) (var11);
-                    ((r) (var11)).field_F = IntrusiveNode.field_c;
+                    this.units[var12Lifetime1] = (BattleUnit) (var11);
+                    ((BattleUnit) (var11)).tile = var8_ref_dlLifetime1;
+                    ((BattleUnit) (var11)).field_H = vf.field_a;
+                    ((BattleUnit) (var11)).field_E = eg.field_p;
+                    var8_ref_dlLifetime1.field_h = (BattleUnit) (var11);
+                    ((BattleUnit) (var11)).field_F = IntrusiveNode.field_c;
                     var11 = null;
                     break;
                   }
@@ -4770,18 +4770,18 @@ final class e {
                 if ((decompiledFrameCompleted1) &&
                   (var11 != null)) {
                   var12Lifetime1Lifetime1 = 0;
-                  while (this.field_C.length > var12Lifetime1Lifetime1) {
+                  while (this.units.length > var12Lifetime1Lifetime1) {
                     if (var19 != 0) {
                       break;
                     }
-                    if (this.field_C[var12Lifetime1Lifetime1] != null &&
-                      0 >= this.field_C[var12Lifetime1Lifetime1].field_P) {
-                      this.field_C[var12Lifetime1Lifetime1] = (r) (var11);
-                      ((r) (var11)).field_H = vf.field_a;
-                      ((r) (var11)).field_c = var8_ref_dlLifetime1;
-                      ((r) (var11)).field_E = eg.field_p;
-                      var8_ref_dlLifetime1.field_h = (r) (var11);
-                      ((r) (var11)).field_F = IntrusiveNode.field_c;
+                    if (this.units[var12Lifetime1Lifetime1] != null &&
+                      0 >= this.units[var12Lifetime1Lifetime1].field_P) {
+                      this.units[var12Lifetime1Lifetime1] = (BattleUnit) (var11);
+                      ((BattleUnit) (var11)).field_H = vf.field_a;
+                      ((BattleUnit) (var11)).tile = var8_ref_dlLifetime1;
+                      ((BattleUnit) (var11)).field_E = eg.field_p;
+                      var8_ref_dlLifetime1.field_h = (BattleUnit) (var11);
+                      ((BattleUnit) (var11)).field_F = IntrusiveNode.field_c;
                       var11 = null;
                       break;
                     }
@@ -4796,7 +4796,7 @@ final class e {
             (decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
             if (this.field_w) {
-              this.field_h.c(5);
+              this.map.c(5);
             }
             stackIn_732_0 = null;
           }
@@ -4804,7 +4804,7 @@ final class e {
             (decompiledFrameCompleted2)) {
             if (stackIn_732_0 == this.field_K &&
               !this.field_J) {
-              this.field_K = mk.field_f;
+              this.field_K = LevelEditor.field_f;
               var8 = vc.field_f.b(this.field_K);
               var9 = 24;
               if (var8 >= 320) {
@@ -4928,7 +4928,7 @@ final class e {
             !li.field_a) {
             var8Lifetime1 = 0;
             while (true) {
-              stackIn_810_0 = this.field_h;
+              stackIn_810_0 = this.map;
               if (stackIn_810_0.field_b <= var8Lifetime1) {
                 return;
               }
@@ -4936,9 +4936,9 @@ final class e {
                 return;
               }
               var9Lifetime2 = 0;
-              while (this.field_h.field_e > var9Lifetime2) {
-                stackIn_810_0Lifetime1 = this.field_h;
-                var10_ref = stackIn_810_0Lifetime1.field_f[var8Lifetime1][var9Lifetime2];
+              while (this.map.field_e > var9Lifetime2) {
+                stackIn_810_0Lifetime1 = this.map;
+                var10_ref = stackIn_810_0Lifetime1.tiles[var8Lifetime1][var9Lifetime2];
                 while (null != var10_ref) {
                   var10_ref.field_p = 0;
                   var10_ref = var10_ref.field_C;
@@ -5247,13 +5247,13 @@ final class e {
             return;
           }
           var2_int = 0;
-          while (var2_int < this.field_C.length) {
+          while (var2_int < this.units.length) {
             if (var3 != 0) {
               return;
             }
-            if (null != this.field_C[var2_int] &&
-              null == this.field_C[var2_int].field_Z) {
-              this.field_C[var2_int].field_P = 0;
+            if (null != this.units[var2_int] &&
+              null == this.units[var2_int].field_Z) {
+              this.units[var2_int].field_P = 0;
             }
             var2_int++;
           }
@@ -5266,17 +5266,17 @@ final class e {
     }
 
     final void a(Terraphoenix param0, byte param1) {
-        dl dupTemp$0 = null;
-        dl dupTemp$1 = null;
+        MapTile dupTemp$0 = null;
+        MapTile dupTemp$1 = null;
         boolean stackIn_17_1 = false;
-        r stackIn_53_0 = null;
+        BattleUnit stackIn_53_0 = null;
         int stackIn_58_0 = 0;
         int stackIn_58_1 = 0;
         int stackIn_65_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_67_1 = 0;
         int stackIn_91_0 = 0;
-        r stackIn_170_0 = null;
+        BattleUnit stackIn_170_0 = null;
         RuntimeException stackIn_218_0 = null;
         StringBuilder stackIn_218_1 = null;
         String stackIn_219_2 = null;
@@ -5284,7 +5284,7 @@ final class e {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        r var4_ref_r = null;
+        BattleUnit var4_ref_r = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -5301,11 +5301,11 @@ final class e {
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
             if (var3_int < 12) {
-              stackIn_53_0 = this.field_C[var3_int];
+              stackIn_53_0 = this.units[var3_int];
               if (var7 == 0) {
                 if (stackIn_53_0 != null &&
-                  this.field_C[var3_int].field_Z != null) {
-                  this.field_C[var3_int].field_ob = false;
+                  this.units[var3_int].field_Z != null) {
+                  this.units[var3_int].field_ob = false;
                 }
                 var3_int++;
                 continue;
@@ -5324,17 +5324,17 @@ final class e {
                 (decompiledFrameRemainder0 = (12 == param0.field_Bb ||
                 13 == param0.field_Bb))) {
                 if (Math.random() * 100.0 < 50.0 &&
-                  !this.field_h.field_f[this.field_h.field_b / 2][2].field_z &&
-                  !this.field_h.a(this.field_h.field_b / 2, false, 0, 2)) {
+                  !this.map.tiles[this.map.field_b / 2][2].field_z &&
+                  !this.map.a(this.map.field_b / 2, false, 0, 2)) {
                   var3_int = 0;
-                  var4_ref_r = this.field_C[0];
+                  var4_ref_r = this.units[0];
                   while (var4_ref_r != null) {
-                    stackIn_58_0 = ~(this.field_C.length - 1);
+                    stackIn_58_0 = ~(this.units.length - 1);
                     stackIn_58_1 = ~var3_int;
                     if (var7 != 0) {
                       if (stackIn_58_0 < stackIn_58_1) {
                         var3_int++;
-                        var4_ref_r = this.field_C[var3_int];
+                        var4_ref_r = this.units[var3_int];
                         decompiledFrameCompleted1 = false;
                         break;
                       }
@@ -5343,7 +5343,7 @@ final class e {
                     }
                     if (stackIn_58_0 < stackIn_58_1) {
                       var3_int++;
-                      var4_ref_r = this.field_C[var3_int];
+                      var4_ref_r = this.units[var3_int];
                       continue;
                     }
                     break;
@@ -5351,20 +5351,20 @@ final class e {
                   if ((decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0) &&
                     (null == var4_ref_r)) {
-                    this.field_C[var3_int] = new r(4, param0.field_Bb);
-                    var4_ref_r = this.field_C[var3_int];
-                    var4_ref_r.field_F = this.field_h.field_b / 2;
+                    this.units[var3_int] = new BattleUnit(4, param0.field_Bb);
+                    var4_ref_r = this.units[var3_int];
+                    var4_ref_r.field_F = this.map.field_b / 2;
                     var4_ref_r.field_H = 2;
-                    var4_ref_r.field_c = this.field_h.field_f[this.field_h.field_b / 2][2];
-                    var4_ref_r.field_c.field_h = var4_ref_r;
+                    var4_ref_r.tile = this.map.tiles[this.map.field_b / 2][2];
+                    var4_ref_r.tile.field_h = var4_ref_r;
                   }
                 }
                 if (((decompiledFrameCompleted1) && (decompiledFrameCompleted0)) &&
                   (decompiledFrameRemainder0 = !(!(50.0 > Math.random() * 100.0))) &&
-                  (decompiledFrameRemainder0 = !(this.field_h.field_f[2][this.field_h.field_e / 2].field_z)) &&
-                  (decompiledFrameRemainder0 = !(this.field_h.a(2, false, 0, this.field_h.field_e / 2)))) {
+                  (decompiledFrameRemainder0 = !(this.map.tiles[2][this.map.field_e / 2].field_z)) &&
+                  (decompiledFrameRemainder0 = !(this.map.a(2, false, 0, this.map.field_e / 2)))) {
                   var3_int = 0;
-                  stackIn_53_0 = this.field_C[0];
+                  stackIn_53_0 = this.units[0];
                 }
               }
             }
@@ -5378,22 +5378,22 @@ final class e {
                   break scanLoop1;
                 }
                 stackIn_58_0Lifetime1 = stackIn_65_0;
-                stackIn_58_1Lifetime1 = this.field_C.length - 1;
+                stackIn_58_1Lifetime1 = this.units.length - 1;
                 if (stackIn_58_0Lifetime1 >= stackIn_58_1Lifetime1) {
                   break;
                 }
                 var3_int++;
-                var4_ref_r = this.field_C[var3_int];
+                var4_ref_r = this.units[var3_int];
               }
             }
             if ((decompiledFrameRemainder0) &&
               (var4_ref_r == null)) {
-              this.field_C[var3_int] = new r(4, param0.field_Bb);
-              var4_ref_r = this.field_C[var3_int];
+              this.units[var3_int] = new BattleUnit(4, param0.field_Bb);
+              var4_ref_r = this.units[var3_int];
               var4_ref_r.field_F = 2;
-              var4_ref_r.field_H = this.field_h.field_e / 2;
-              var4_ref_r.field_c = this.field_h.field_f[2][this.field_h.field_e / 2];
-              var4_ref_r.field_c.field_h = var4_ref_r;
+              var4_ref_r.field_H = this.map.field_e / 2;
+              var4_ref_r.tile = this.map.tiles[2][this.map.field_e / 2];
+              var4_ref_r.tile.field_h = var4_ref_r;
             }
             var3_int = 0;
             stackIn_65_0 = 0;
@@ -5401,28 +5401,28 @@ final class e {
           }
           var5 = stackIn_65_0;
           while (true) {
-            stackIn_67_0 = ~this.field_h.field_b;
+            stackIn_67_0 = ~this.map.field_b;
             stackIn_67_1 = ~var5;
             if (stackIn_67_0 < stackIn_67_1) {
               stackIn_91_0 = 0;
               if (var7 == 0) {
                 var6 = stackIn_91_0;
-                while (var6 < this.field_h.field_e) {
-                  this.field_h.field_f[var5][var6].field_B = false;
+                while (var6 < this.map.field_e) {
+                  this.map.tiles[var5][var6].field_B = false;
                   stackIn_67_0 = 0;
-                  stackIn_67_1 = this.field_h.field_f[var5][var6].field_i;
+                  stackIn_67_1 = this.map.tiles[var5][var6].field_i;
                   if (stackIn_67_0 < stackIn_67_1) {
-                    if ((1 & this.field_h.field_f[var5][var6].field_i) > 0 &&
-                      this.field_h.field_f[var5][var6].field_g % 4 == 3) {
-                      dupTemp$0 = this.field_h.field_f[var5][var6];
+                    if ((1 & this.map.tiles[var5][var6].field_i) > 0 &&
+                      this.map.tiles[var5][var6].field_g % 4 == 3) {
+                      dupTemp$0 = this.map.tiles[var5][var6];
                       dupTemp$0.field_g = dupTemp$0.field_g - 3;
-                      this.field_h.field_f[var5][var6].a(1, true, 114);
+                      this.map.tiles[var5][var6].a(1, true, 114);
                     }
-                    if (0 < (2 & this.field_h.field_f[var5][var6].field_i) &&
-                      this.field_h.field_f[var5][var6].field_k % 4 == 3) {
-                      dupTemp$1 = this.field_h.field_f[var5][var6];
+                    if (0 < (2 & this.map.tiles[var5][var6].field_i) &&
+                      this.map.tiles[var5][var6].field_k % 4 == 3) {
+                      dupTemp$1 = this.map.tiles[var5][var6];
                       dupTemp$1.field_k = dupTemp$1.field_k - 3;
-                      this.field_h.field_f[var5][var6].a(2, true, 87);
+                      this.map.tiles[var5][var6].a(2, true, 87);
                     }
                   }
                   var6++;
@@ -5437,53 +5437,53 @@ final class e {
             this.field_A = false;
             var5 = 0;
             scanLoop2: while (true) {
-              if (var5 < this.field_C.length) {
-                stackIn_170_0 = this.field_C[var5];
+              if (var5 < this.units.length) {
+                stackIn_170_0 = this.units[var5];
                 if (var7 == 0) {
                   boolean decompiledFrameRemainder1 = true;
                   if (stackIn_170_0 != null &&
-                    this.field_C[var5].field_P > 0) {
-                    if (null != this.field_C[var5].field_Z ||
-                      this.field_C[var5].field_C == 0) {
+                    this.units[var5].field_P > 0) {
+                    if (null != this.units[var5].field_Z ||
+                      this.units[var5].field_C == 0) {
                       var3_int++;
                       if (this.field_z > 0 &&
-                        this.field_C[var5].field_c != null &&
-                        this.field_C[var5].field_c.field_d) {
+                        this.units[var5].tile != null &&
+                        this.units[var5].tile.field_d) {
                         this.field_A = true;
                       }
-                      if (this.field_C[var5].field_Z != null &&
-                        null != this.field_C[var5].field_c) {
-                        this.field_q = this.field_C[var5];
+                      if (this.units[var5].field_Z != null &&
+                        null != this.units[var5].tile) {
+                        this.field_q = this.units[var5];
                       }
                       if (this.field_J) {
-                        this.field_C[var5].b(60);
+                        this.units[var5].b(60);
                       } else {
-                        this.field_C[var5].f(100);
+                        this.units[var5].f(100);
                       }
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      if (this.field_C[var5].field_C == 1) {
+                      if (this.units[var5].field_C == 1) {
                         var4Lifetime1++;
                       }
                       if (!this.field_J) {
-                        this.field_C[var5].b(60);
+                        this.units[var5].b(60);
                       } else {
-                        this.field_C[var5].f(106);
+                        this.units[var5].f(106);
                       }
-                      this.field_C[var5].field_k = false;
+                      this.units[var5].field_k = false;
                       var6Lifetime1 = 0;
-                      while (this.field_C.length > var6Lifetime1) {
-                        stackIn_170_0 = this.field_C[var6Lifetime1];
+                      while (this.units.length > var6Lifetime1) {
+                        stackIn_170_0 = this.units[var6Lifetime1];
                         if (stackIn_170_0 != null &&
-                          this.field_C[var6Lifetime1].field_C == 0 &&
-                          this.field_C[var6Lifetime1].field_P > 0 &&
-                          ~this.field_C[var5].field_E == ~this.field_C[var6Lifetime1].field_E &&
-                          this.field_h.a((byte) -93, this.field_C[var6Lifetime1], this.field_C[var5])) {
-                          this.field_C[var5].field_k = true;
-                          this.field_C[var5].field_h = true;
-                          this.field_C[var5].field_i = this.field_C[var5].field_F;
-                          this.field_C[var5].field_gb = this.field_C[var5].field_H;
+                          this.units[var6Lifetime1].field_C == 0 &&
+                          this.units[var6Lifetime1].field_P > 0 &&
+                          ~this.units[var5].field_E == ~this.units[var6Lifetime1].field_E &&
+                          this.map.a((byte) -93, this.units[var6Lifetime1], this.units[var5])) {
+                          this.units[var5].field_k = true;
+                          this.units[var5].field_h = true;
+                          this.units[var5].field_i = this.units[var5].field_F;
+                          this.units[var5].field_gb = this.units[var5].field_H;
                         }
                         var6Lifetime1++;
                       }
@@ -5546,7 +5546,7 @@ final class e {
               var3_int == 0) {
               this.a(-125, param0);
             }
-            this.field_h.b((byte) -19);
+            this.map.b((byte) -19);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5564,14 +5564,14 @@ final class e {
     }
 
     final void b(int param0, Terraphoenix param1) {
-        r dupTemp$0 = null;
-        r dupTemp$1 = null;
-        r dupTemp$2 = null;
-        r dupTemp$3 = null;
-        dl dupTemp$4 = null;
-        dl dupTemp$5 = null;
-        dl dupTemp$6 = null;
-        dl dupTemp$7 = null;
+        BattleUnit dupTemp$0 = null;
+        BattleUnit dupTemp$1 = null;
+        BattleUnit dupTemp$2 = null;
+        BattleUnit dupTemp$3 = null;
+        MapTile dupTemp$4 = null;
+        MapTile dupTemp$5 = null;
+        MapTile dupTemp$6 = null;
+        MapTile dupTemp$7 = null;
         int stackIn_27_0 = 0;
         int stackIn_92_0 = 0;
         int stackIn_94_0 = 0;
@@ -5582,42 +5582,42 @@ final class e {
         Object stackIn_114_1 = null;
         Object stackIn_130_0 = null;
         Object stackIn_130_1 = null;
-        r stackIn_149_0 = null;
-        r stackIn_221_0 = null;
+        BattleUnit stackIn_149_0 = null;
+        BattleUnit stackIn_221_0 = null;
         boolean stackIn_236_0 = false;
         Object stackIn_254_0 = null;
-        r stackIn_254_1 = null;
+        BattleUnit stackIn_254_1 = null;
         Object stackIn_256_0 = null;
-        r stackIn_256_1 = null;
-        r stackIn_262_0 = null;
-        r stackIn_272_0 = null;
-        r stackIn_273_0 = null;
-        r stackIn_292_0 = null;
+        BattleUnit stackIn_256_1 = null;
+        BattleUnit stackIn_262_0 = null;
+        BattleUnit stackIn_272_0 = null;
+        BattleUnit stackIn_273_0 = null;
+        BattleUnit stackIn_292_0 = null;
         Object stackIn_313_0 = null;
-        r stackIn_313_1 = null;
+        BattleUnit stackIn_313_1 = null;
         Object stackIn_332_0 = null;
-        r stackIn_332_1 = null;
+        BattleUnit stackIn_332_1 = null;
         Object stackIn_333_0 = null;
-        r stackIn_333_1 = null;
-        r stackIn_349_0 = null;
-        r stackIn_390_0 = null;
+        BattleUnit stackIn_333_1 = null;
+        BattleUnit stackIn_349_0 = null;
+        BattleUnit stackIn_390_0 = null;
         Object stackIn_439_0 = null;
-        r stackIn_439_1 = null;
+        BattleUnit stackIn_439_1 = null;
         Object stackIn_494_0 = null;
-        r stackIn_494_1 = null;
+        BattleUnit stackIn_494_1 = null;
         int stackIn_568_0 = 0;
         Object stackIn_574_0 = null;
         Object stackIn_574_1 = null;
         Object stackIn_576_0 = null;
-        r stackIn_576_1 = null;
+        BattleUnit stackIn_576_1 = null;
         int stackIn_598_0 = 0;
         int stackIn_611_0 = 0;
         int stackIn_681_0 = 0;
-        r stackIn_686_0 = null;
+        BattleUnit stackIn_686_0 = null;
         Object stackIn_763_0 = null;
-        r stackIn_763_1 = null;
+        BattleUnit stackIn_763_1 = null;
         Object stackIn_797_0 = null;
-        r stackIn_797_1 = null;
+        BattleUnit stackIn_797_1 = null;
         Object stackIn_831_0 = null;
         Object stackIn_831_1 = null;
         Object stackIn_850_0 = null;
@@ -5625,9 +5625,9 @@ final class e {
         Object stackIn_864_0 = null;
         Object stackIn_864_1 = null;
         Object stackIn_865_0 = null;
-        r stackIn_865_1 = null;
-        r stackIn_884_0 = null;
-        r stackIn_909_0 = null;
+        BattleUnit stackIn_865_1 = null;
+        BattleUnit stackIn_884_0 = null;
+        BattleUnit stackIn_909_0 = null;
         RuntimeException stackIn_927_0 = null;
         StringBuilder stackIn_927_1 = null;
         RuntimeException stackIn_929_0 = null;
@@ -5645,7 +5645,7 @@ final class e {
         th var4 = null;
         int var5 = 0;
         int var6 = 0;
-        dl var7_ref_dl = null;
+        MapTile var7_ref_dl = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -5678,7 +5678,7 @@ final class e {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -5724,7 +5724,7 @@ final class e {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -5744,7 +5744,7 @@ final class e {
                                 } else {
                                     /* Inlined CFG state: 14. */
                                     {
-                                        if (null == this.field_C[var4_int]) {
+                                        if (null == this.units[var4_int]) {
                                             statePc = 108;
                                             continue scanLoop1;
                                         } else {
@@ -5754,7 +5754,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var4_int].field_c != null) {
+                                                    if (this.units[var4_int].tile != null) {
                                                         statePc = 108;
                                                         continue scanLoop1;
                                                     } else {
@@ -5783,7 +5783,7 @@ final class e {
                     } catch (Throwable stateCaught_12) {
                         statePc = ((Object) stateCaught_12 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
                         }
                         caughtException = stateCaught_12;
                         continue scanLoop1;
@@ -5804,7 +5804,7 @@ final class e {
                     } catch (Throwable stateCaught_21) {
                         statePc = ((Object) stateCaught_21 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
                         }
                         caughtException = stateCaught_21;
                         continue scanLoop1;
@@ -5823,7 +5823,7 @@ final class e {
                     } catch (Throwable stateCaught_24) {
                         statePc = ((Object) stateCaught_24 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
                         }
                         caughtException = stateCaught_24;
                         continue scanLoop1;
@@ -5836,7 +5836,7 @@ final class e {
                     } catch (Throwable stateCaught_25) {
                         statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
                         }
                         caughtException = stateCaught_25;
                         continue scanLoop1;
@@ -5850,7 +5850,7 @@ final class e {
                     } catch (Throwable stateCaught_26) {
                         statePc = ((Object) stateCaught_26 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
                         continue scanLoop1;
@@ -5864,7 +5864,7 @@ final class e {
                     } catch (Throwable stateCaught_27) {
                         statePc = ((Object) stateCaught_27 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
                         }
                         caughtException = stateCaught_27;
                         continue scanLoop1;
@@ -5882,7 +5882,7 @@ final class e {
                     } catch (Throwable stateCaught_28) {
                         statePc = ((Object) stateCaught_28 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
                         }
                         caughtException = stateCaught_28;
                         continue scanLoop1;
@@ -5896,7 +5896,7 @@ final class e {
                     } catch (Throwable stateCaught_29) {
                         statePc = ((Object) stateCaught_29 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_29);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_29);
                         }
                         caughtException = stateCaught_29;
                         continue scanLoop1;
@@ -5904,10 +5904,10 @@ final class e {
                 }
                 case 30: {
                     try {
-                        if (-2 + this.field_h.field_b < var8) {
+                        if (-2 + this.map.field_b < var8) {
                             /* Inlined CFG state: 33. */
                             {
-                                var8 = -2 + this.field_h.field_b;
+                                var8 = -2 + this.map.field_b;
                                 statePc = 34;
                                 continue scanLoop1;
                             }
@@ -5921,7 +5921,7 @@ final class e {
                     } catch (Throwable stateCaught_30) {
                         statePc = ((Object) stateCaught_30 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_30);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_30);
                         }
                         caughtException = stateCaught_30;
                         continue scanLoop1;
@@ -5929,13 +5929,13 @@ final class e {
                 }
                 case 34: {
                     try {
-                        if (this.field_h.field_e - 2 >= var9) {
+                        if (this.map.field_e - 2 >= var9) {
                             statePc = 36;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 35. */
                             {
-                                var9 = this.field_h.field_e - 2;
+                                var9 = this.map.field_e - 2;
                                 statePc = 36;
                                 continue scanLoop1;
                             }
@@ -5943,7 +5943,7 @@ final class e {
                     } catch (Throwable stateCaught_34) {
                         statePc = ((Object) stateCaught_34 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
                         }
                         caughtException = stateCaught_34;
                         continue scanLoop1;
@@ -5951,10 +5951,10 @@ final class e {
                 }
                 case 36: {
                     try {
-                        this.field_C[var4_int].field_F = var8;
+                        this.units[var4_int].field_F = var8;
                         var5++;
-                        this.field_C[var4_int].field_H = var9;
-                        var7_ref_dl = this.field_h.a(109, this.field_C[var4_int].field_H, 0, this.field_C[var4_int].field_F);
+                        this.units[var4_int].field_H = var9;
+                        var7_ref_dl = this.map.a(109, this.units[var4_int].field_H, 0, this.units[var4_int].field_F);
                         if (var5 <= 10) {
                             statePc = 38;
                         } else {
@@ -5964,7 +5964,7 @@ final class e {
                     } catch (Throwable stateCaught_36) {
                         statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
                         continue scanLoop1;
@@ -5979,7 +5979,7 @@ final class e {
                     } catch (Throwable stateCaught_37) {
                         statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
                         continue scanLoop1;
@@ -5987,16 +5987,16 @@ final class e {
                 }
                 case 38: {
                     try {
-                        if (2 != this.field_h.field_a) {
+                        if (2 != this.map.field_a) {
                             statePc = 68;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 39. */
                             {
-                                this.field_C[var4_int].a(true, this.field_h.field_b / 2, this.field_h.field_e / 2);
-                                dupTemp$0 = this.field_C[var4_int];
+                                this.units[var4_int].a(true, this.map.field_b / 2, this.map.field_e / 2);
+                                dupTemp$0 = this.units[var4_int];
                                 dupTemp$0.field_U = dupTemp$0.field_U + 4;
-                                if (8 <= this.field_C[var4_int].field_U) {
+                                if (8 <= this.units[var4_int].field_U) {
                                     statePc = 44;
                                 } else {
                                     statePc = 40;
@@ -6007,7 +6007,7 @@ final class e {
                     } catch (Throwable stateCaught_38) {
                         statePc = ((Object) stateCaught_38 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_38);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_38);
                         }
                         caughtException = stateCaught_38;
                         continue scanLoop1;
@@ -6025,7 +6025,7 @@ final class e {
                     } catch (Throwable stateCaught_40) {
                         statePc = ((Object) stateCaught_40 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_40);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_40);
                         }
                         caughtException = stateCaught_40;
                         continue scanLoop1;
@@ -6033,14 +6033,14 @@ final class e {
                 }
                 case 44: {
                     try {
-                        dupTemp$1 = this.field_C[var4_int];
+                        dupTemp$1 = this.units[var4_int];
                         dupTemp$1.field_U = dupTemp$1.field_U - 8;
                         statePc = 45;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_44) {
                         statePc = ((Object) stateCaught_44 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
                         }
                         caughtException = stateCaught_44;
                         continue scanLoop1;
@@ -6048,7 +6048,7 @@ final class e {
                 }
                 case 45: {
                     try {
-                        var11 = this.field_h.field_b / 4;
+                        var11 = this.map.field_b / 4;
                         if (param1.field_Bb == 11) {
                             statePc = 48;
                         } else {
@@ -6058,7 +6058,7 @@ final class e {
                     } catch (Throwable stateCaught_45) {
                         statePc = ((Object) stateCaught_45 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
                         }
                         caughtException = stateCaught_45;
                         continue scanLoop1;
@@ -6071,7 +6071,7 @@ final class e {
                     } catch (Throwable stateCaught_46) {
                         statePc = ((Object) stateCaught_46 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_46);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_46);
                         }
                         caughtException = stateCaught_46;
                         continue scanLoop1;
@@ -6079,13 +6079,13 @@ final class e {
                 }
                 case 48: {
                     try {
-                        var11 = this.field_h.field_b / 8 + 1;
+                        var11 = this.map.field_b / 8 + 1;
                         statePc = 49;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_48) {
                         statePc = ((Object) stateCaught_48 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_48);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_48);
                         }
                         caughtException = stateCaught_48;
                         continue scanLoop1;
@@ -6093,13 +6093,13 @@ final class e {
                 }
                 case 49: {
                     try {
-                        if (var8 < -var11 + this.field_h.field_b / 2) {
+                        if (var8 < -var11 + this.map.field_b / 2) {
                             statePc = 59;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 50. */
                             {
-                                if (~var8 < ~(var11 + this.field_h.field_b / 2)) {
+                                if (~var8 < ~(var11 + this.map.field_b / 2)) {
                                     statePc = 59;
                                     continue scanLoop1;
                                 } else {
@@ -6109,7 +6109,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (this.field_h.field_e / 2 - var11 > var9) {
+                                            if (this.map.field_e / 2 - var11 > var9) {
                                                 statePc = 59;
                                                 continue scanLoop1;
                                             } else {
@@ -6119,7 +6119,7 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (~(this.field_h.field_e / 2 + var11) <= ~var9) {
+                                                        if (~(this.map.field_e / 2 + var11) <= ~var9) {
                                                             statePc = 60;
                                                             continue scanLoop1;
                                                         } else {
@@ -6140,7 +6140,7 @@ final class e {
                     } catch (Throwable stateCaught_49) {
                         statePc = ((Object) stateCaught_49 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_49);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_49);
                         }
                         caughtException = stateCaught_49;
                         continue scanLoop1;
@@ -6154,7 +6154,7 @@ final class e {
                     } catch (Throwable stateCaught_59) {
                         statePc = ((Object) stateCaught_59 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_59);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_59);
                         }
                         caughtException = stateCaught_59;
                         continue scanLoop1;
@@ -6162,13 +6162,13 @@ final class e {
                 }
                 case 60: {
                     try {
-                        if (var9 >= this.field_h.field_e / 2 - var11 + 3) {
+                        if (var9 >= this.map.field_e / 2 - var11 + 3) {
                             statePc = 68;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 61. */
                             {
-                                if (this.field_h.field_b / 2 - 1 > var8) {
+                                if (this.map.field_b / 2 - 1 > var8) {
                                     statePc = 68;
                                     continue scanLoop1;
                                 } else {
@@ -6178,7 +6178,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (~var8 < ~(this.field_h.field_b / 2 + 1)) {
+                                            if (~var8 < ~(this.map.field_b / 2 + 1)) {
                                                 statePc = 68;
                                                 continue scanLoop1;
                                             } else {
@@ -6202,7 +6202,7 @@ final class e {
                     } catch (Throwable stateCaught_60) {
                         statePc = ((Object) stateCaught_60 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_60);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_60);
                         }
                         caughtException = stateCaught_60;
                         continue scanLoop1;
@@ -6210,17 +6210,17 @@ final class e {
                 }
                 case 68: {
                     try {
-                        if (this.field_h.field_a == 3) {
+                        if (this.map.field_a == 3) {
                             /* Inlined CFG state: 71. */
                             {
-                                this.field_C[var4_int].a(true, this.field_h.field_b / 2, this.field_h.field_e / 2);
-                                if (~var8 >= ~(this.field_h.field_b / 8)) {
+                                this.units[var4_int].a(true, this.map.field_b / 2, this.map.field_e / 2);
+                                if (~var8 >= ~(this.map.field_b / 8)) {
                                     statePc = 82;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 72. */
                                     {
-                                        if (~(this.field_h.field_b * 7 / 8) >= ~var8) {
+                                        if (~(this.map.field_b * 7 / 8) >= ~var8) {
                                             statePc = 82;
                                             continue scanLoop1;
                                         } else {
@@ -6230,7 +6230,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_h.field_e / 8 >= var9) {
+                                                    if (this.map.field_e / 8 >= var9) {
                                                         statePc = 82;
                                                         continue scanLoop1;
                                                     } else {
@@ -6240,7 +6240,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (~(this.field_h.field_e * 7 / 8) >= ~var9) {
+                                                                if (~(this.map.field_e * 7 / 8) >= ~var9) {
                                                                     statePc = 82;
                                                                 } else {
                                                                     statePc = 79;
@@ -6265,7 +6265,7 @@ final class e {
                     } catch (Throwable stateCaught_68) {
                         statePc = ((Object) stateCaught_68 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_68);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_68);
                         }
                         caughtException = stateCaught_68;
                         continue scanLoop1;
@@ -6284,7 +6284,7 @@ final class e {
                     } catch (Throwable stateCaught_79) {
                         statePc = ((Object) stateCaught_79 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_79);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_79);
                         }
                         caughtException = stateCaught_79;
                         continue scanLoop1;
@@ -6292,13 +6292,13 @@ final class e {
                 }
                 case 82: {
                     try {
-                        if (this.field_h.field_a == 4) {
+                        if (this.map.field_a == 4) {
                             statePc = 88;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 83. */
                             {
-                                if (1 == this.field_h.field_a) {
+                                if (1 == this.map.field_a) {
                                     statePc = 88;
                                     continue scanLoop1;
                                 } else {
@@ -6318,7 +6318,7 @@ final class e {
                     } catch (Throwable stateCaught_82) {
                         statePc = ((Object) stateCaught_82 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_82);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_82);
                         }
                         caughtException = stateCaught_82;
                         continue scanLoop1;
@@ -6326,13 +6326,13 @@ final class e {
                 }
                 case 88: {
                     try {
-                        this.field_C[var4_int].a(true, this.field_h.field_b / 2, this.field_h.field_e / 2);
+                        this.units[var4_int].a(true, this.map.field_b / 2, this.map.field_e / 2);
                         statePc = 89;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_88) {
                         statePc = ((Object) stateCaught_88 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_88);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_88);
                         }
                         caughtException = stateCaught_88;
                         continue scanLoop1;
@@ -6340,7 +6340,7 @@ final class e {
                 }
                 case 89: {
                     try {
-                        if (this.field_h.field_f[this.field_C[var4_int].field_F][this.field_C[var4_int].field_H].field_v < 3) {
+                        if (this.map.tiles[this.units[var4_int].field_F][this.units[var4_int].field_H].field_v < 3) {
                             statePc = 91;
                             continue scanLoop1;
                         } else {
@@ -6354,7 +6354,7 @@ final class e {
                     } catch (Throwable stateCaught_89) {
                         statePc = ((Object) stateCaught_89 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_89);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_89);
                         }
                         caughtException = stateCaught_89;
                         continue scanLoop1;
@@ -6384,7 +6384,7 @@ final class e {
                     } catch (Throwable stateCaught_91) {
                         statePc = ((Object) stateCaught_91 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_91);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_91);
                         }
                         caughtException = stateCaught_91;
                         continue scanLoop1;
@@ -6398,7 +6398,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 96. */
                             {
-                                stackOut_96_0 = this.field_h.a(this.field_C[var4_int].field_F, false, 0, this.field_C[var4_int].field_H);
+                                stackOut_96_0 = this.map.a(this.units[var4_int].field_F, false, 0, this.units[var4_int].field_H);
                                 stackIn_27_0 = stackOut_96_0 ? 1 : 0;
                                 stackIn_97_0 = stackOut_96_0;
                                 if (var12 != 0) {
@@ -6419,13 +6419,13 @@ final class e {
                                                 } else {
                                                     /* Inlined CFG state: 99. */
                                                     {
-                                                        this.field_h.field_f[this.field_C[var4_int].field_F][this.field_C[var4_int].field_H].field_h = this.field_C[var4_int];
-                                                        this.field_C[var4_int].field_c = this.field_h.field_f[this.field_C[var4_int].field_F][this.field_C[var4_int].field_H];
-                                                        this.field_q = this.field_C[var4_int];
+                                                        this.map.tiles[this.units[var4_int].field_F][this.units[var4_int].field_H].field_h = this.units[var4_int];
+                                                        this.units[var4_int].tile = this.map.tiles[this.units[var4_int].field_F][this.units[var4_int].field_H];
+                                                        this.field_q = this.units[var4_int];
                                                         lg.field_c = 16 * (this.field_q.field_F + this.field_q.field_H);
                                                         eg.field_p = this.field_q.field_E;
                                                         sj.field_b = (-this.field_q.field_H + this.field_q.field_F) * 32;
-                                                        if (null == this.field_C[var4_int].field_nb) {
+                                                        if (null == this.units[var4_int].field_nb) {
                                                             statePc = 103;
                                                         } else {
                                                             statePc = 100;
@@ -6442,7 +6442,7 @@ final class e {
                     } catch (Throwable stateCaught_95) {
                         statePc = ((Object) stateCaught_95 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_95);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_95);
                         }
                         caughtException = stateCaught_95;
                         continue scanLoop1;
@@ -6450,7 +6450,7 @@ final class e {
                 }
                 case 100: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[this.field_C[var4_int].field_nb.field_g].field_n);
+                        qd.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[this.units[var4_int].field_nb.field_g].field_n);
                         if (var12 == 0) {
                             statePc = 105;
                             continue scanLoop1;
@@ -6464,7 +6464,7 @@ final class e {
                     } catch (Throwable stateCaught_100) {
                         statePc = ((Object) stateCaught_100 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_100);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_100);
                         }
                         caughtException = stateCaught_100;
                         continue scanLoop1;
@@ -6472,13 +6472,13 @@ final class e {
                 }
                 case 103: {
                     try {
-                        qd.$cfr$intArgs$a$e9dea5688aa5(127, od.field_c[this.field_C[var4_int].field_eb.field_g].field_n);
+                        qd.$cfr$intArgs$a$e9dea5688aa5(127, od.field_c[this.units[var4_int].field_eb.field_g].field_n);
                         statePc = 105;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_103) {
                         statePc = ((Object) stateCaught_103 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_103);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_103);
                         }
                         caughtException = stateCaught_103;
                         continue scanLoop1;
@@ -6496,7 +6496,7 @@ final class e {
                     } catch (Throwable stateCaught_105) {
                         statePc = ((Object) stateCaught_105 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_105);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_105);
                         }
                         caughtException = stateCaught_105;
                         continue scanLoop1;
@@ -6510,7 +6510,7 @@ final class e {
                     } catch (Throwable stateCaught_106) {
                         statePc = ((Object) stateCaught_106 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_106);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_106);
                         }
                         caughtException = stateCaught_106;
                         continue scanLoop1;
@@ -6528,7 +6528,7 @@ final class e {
                     } catch (Throwable stateCaught_108) {
                         statePc = ((Object) stateCaught_108 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_108);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_108);
                         }
                         caughtException = stateCaught_108;
                         continue scanLoop1;
@@ -6542,7 +6542,7 @@ final class e {
                     } catch (Throwable stateCaught_109) {
                         statePc = ((Object) stateCaught_109 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_109);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_109);
                         }
                         caughtException = stateCaught_109;
                         continue scanLoop1;
@@ -6569,7 +6569,7 @@ final class e {
                                 } else {
                                     /* Inlined CFG state: 114. */
                                     {
-                                        if (stackIn_114_0 == ((e) (this)).field_C[var4_int]) {
+                                        if (stackIn_114_0 == ((BattleState) (this)).units[var4_int]) {
                                             statePc = 124;
                                             continue scanLoop1;
                                         } else {
@@ -6579,7 +6579,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var4_int].field_P <= 0) {
+                                                    if (this.units[var4_int].field_P <= 0) {
                                                         statePc = 124;
                                                         continue scanLoop1;
                                                     } else {
@@ -6589,7 +6589,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (this.field_C[var4_int].field_Z == null) {
+                                                                if (this.units[var4_int].field_Z == null) {
                                                                     statePc = 124;
                                                                 } else {
                                                                     statePc = 121;
@@ -6608,7 +6608,7 @@ final class e {
                     } catch (Throwable stateCaught_112) {
                         statePc = ((Object) stateCaught_112 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_112);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_112);
                         }
                         caughtException = stateCaught_112;
                         continue scanLoop1;
@@ -6627,7 +6627,7 @@ final class e {
                     } catch (Throwable stateCaught_121) {
                         statePc = ((Object) stateCaught_121 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_121);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_121);
                         }
                         caughtException = stateCaught_121;
                         continue scanLoop1;
@@ -6645,7 +6645,7 @@ final class e {
                     } catch (Throwable stateCaught_124) {
                         statePc = ((Object) stateCaught_124 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_124);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_124);
                         }
                         caughtException = stateCaught_124;
                         continue scanLoop1;
@@ -6672,7 +6672,7 @@ final class e {
                     } catch (Throwable stateCaught_125) {
                         statePc = ((Object) stateCaught_125 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_125);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_125);
                         }
                         caughtException = stateCaught_125;
                         continue scanLoop1;
@@ -6687,7 +6687,7 @@ final class e {
                     } catch (Throwable stateCaught_129) {
                         statePc = ((Object) stateCaught_129 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_129);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_129);
                         }
                         caughtException = stateCaught_129;
                         continue scanLoop1;
@@ -6695,7 +6695,7 @@ final class e {
                 }
                 case 130: {
                     try {
-                        if (stackIn_130_0 == ((e) (this)).field_n) {
+                        if (stackIn_130_0 == ((BattleState) (this)).field_n) {
                             statePc = 139;
                             continue scanLoop1;
                         } else {
@@ -6735,7 +6735,7 @@ final class e {
                     } catch (Throwable stateCaught_130) {
                         statePc = ((Object) stateCaught_130 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_130);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_130);
                         }
                         caughtException = stateCaught_130;
                         continue scanLoop1;
@@ -6753,7 +6753,7 @@ final class e {
                     } catch (Throwable stateCaught_139) {
                         statePc = ((Object) stateCaught_139 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_139);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_139);
                         }
                         caughtException = stateCaught_139;
                         continue scanLoop1;
@@ -6791,7 +6791,7 @@ final class e {
                     } catch (Throwable stateCaught_140) {
                         statePc = ((Object) stateCaught_140 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_140);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_140);
                         }
                         caughtException = stateCaught_140;
                         continue scanLoop1;
@@ -6799,13 +6799,13 @@ final class e {
                 }
                 case 147: {
                     try {
-                        if (~var5 <= ~this.field_C.length) {
+                        if (~var5 <= ~this.units.length) {
                             statePc = 180;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 148. */
                             {
-                                stackIn_221_0 = this.field_C[var5];
+                                stackIn_221_0 = this.units[var5];
                                 stackIn_149_0 = stackIn_221_0;
                                 if (var12 != 0) {
                                     statePc = 221;
@@ -6823,10 +6823,10 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var5].field_Z == null) {
+                                                    if (this.units[var5].field_Z == null) {
                                                         /* Inlined CFG state: 157. */
                                                         {
-                                                            if (0 < this.field_C[var5].field_P) {
+                                                            if (0 < this.units[var5].field_P) {
                                                                 statePc = 161;
                                                             } else {
                                                                 statePc = 158;
@@ -6855,7 +6855,7 @@ final class e {
                     } catch (Throwable stateCaught_147) {
                         statePc = ((Object) stateCaught_147 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_147);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_147);
                         }
                         caughtException = stateCaught_147;
                         continue scanLoop1;
@@ -6863,8 +6863,8 @@ final class e {
                 }
                 case 158: {
                     try {
-                        this.field_C[var5].field_nb = null;
-                        this.field_C[var5].field_b = null;
+                        this.units[var5].field_nb = null;
+                        this.units[var5].field_b = null;
                         if (var12 == 0) {
                             statePc = 163;
                             continue scanLoop1;
@@ -6878,7 +6878,7 @@ final class e {
                     } catch (Throwable stateCaught_158) {
                         statePc = ((Object) stateCaught_158 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_158);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_158);
                         }
                         caughtException = stateCaught_158;
                         continue scanLoop1;
@@ -6886,13 +6886,13 @@ final class e {
                 }
                 case 161: {
                     try {
-                        this.field_C[var5] = null;
+                        this.units[var5] = null;
                         statePc = 163;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_161) {
                         statePc = ((Object) stateCaught_161 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_161);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_161);
                         }
                         caughtException = stateCaught_161;
                         continue scanLoop1;
@@ -6900,22 +6900,22 @@ final class e {
                 }
                 case 163: {
                     try {
-                        if (this.field_C[var5] == null) {
+                        if (this.units[var5] == null) {
                             statePc = 179;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 164. */
                             {
-                                if (null != this.field_C[var5].field_Z) {
+                                if (null != this.units[var5].field_Z) {
                                     /* Inlined CFG state: 169. */
                                     {
-                                        if (this.field_C[var5].field_P > 0) {
+                                        if (this.units[var5].field_P > 0) {
                                             statePc = 179;
                                             continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 170. */
                                             {
-                                                if (this.field_C[var5].field_P + this.field_C[var5].field_T <= 0) {
+                                                if (this.units[var5].field_P + this.units[var5].field_T <= 0) {
                                                     statePc = 176;
                                                     continue scanLoop1;
                                                 } else {
@@ -6955,7 +6955,7 @@ final class e {
                     } catch (Throwable stateCaught_163) {
                         statePc = ((Object) stateCaught_163 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_163);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_163);
                         }
                         caughtException = stateCaught_163;
                         continue scanLoop1;
@@ -6968,7 +6968,7 @@ final class e {
                     } catch (Throwable stateCaught_174) {
                         statePc = ((Object) stateCaught_174 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_174);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_174);
                         }
                         caughtException = stateCaught_174;
                         continue scanLoop1;
@@ -6982,7 +6982,7 @@ final class e {
                     } catch (Throwable stateCaught_176) {
                         statePc = ((Object) stateCaught_176 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_176);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_176);
                         }
                         caughtException = stateCaught_176;
                         continue scanLoop1;
@@ -6990,13 +6990,13 @@ final class e {
                 }
                 case 178: {
                     try {
-                        this.field_C[var5] = null;
+                        this.units[var5] = null;
                         statePc = 179;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_178) {
                         statePc = ((Object) stateCaught_178 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_178);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_178);
                         }
                         caughtException = stateCaught_178;
                         continue scanLoop1;
@@ -7014,7 +7014,7 @@ final class e {
                     } catch (Throwable stateCaught_179) {
                         statePc = ((Object) stateCaught_179 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_179);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_179);
                         }
                         caughtException = stateCaught_179;
                         continue scanLoop1;
@@ -7036,7 +7036,7 @@ final class e {
                     } catch (Throwable stateCaught_180) {
                         statePc = ((Object) stateCaught_180 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_180);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_180);
                         }
                         caughtException = stateCaught_180;
                         continue scanLoop1;
@@ -7044,7 +7044,7 @@ final class e {
                 }
                 case 182: {
                     try {
-                        if (~var5 <= ~this.field_C.length) {
+                        if (~var5 <= ~this.units.length) {
                             statePc = 232;
                             continue scanLoop1;
                         } else {
@@ -7056,7 +7056,7 @@ final class e {
                                 } else {
                                     /* Inlined CFG state: 184. */
                                     {
-                                        if (null == this.field_C[var5]) {
+                                        if (null == this.units[var5]) {
                                             statePc = 220;
                                             continue scanLoop1;
                                         } else {
@@ -7066,10 +7066,10 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var5].field_c.field_d) {
+                                                    if (this.units[var5].tile.field_d) {
                                                         /* Inlined CFG state: 192. */
                                                         {
-                                                            if (this.field_C[var5].field_Z != null) {
+                                                            if (this.units[var5].field_Z != null) {
                                                                 statePc = 211;
                                                             } else {
                                                                 statePc = 193;
@@ -7098,7 +7098,7 @@ final class e {
                     } catch (Throwable stateCaught_182) {
                         statePc = ((Object) stateCaught_182 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_182);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_182);
                         }
                         caughtException = stateCaught_182;
                         continue scanLoop1;
@@ -7106,13 +7106,13 @@ final class e {
                 }
                 case 193: {
                     try {
-                        if (this.field_C[var5].field_P <= 0) {
+                        if (this.units[var5].field_P <= 0) {
                             /* Inlined CFG state: 198. */
                             {
-                                if (this.field_C[var5].field_t != 4) {
+                                if (this.units[var5].field_t != 4) {
                                     /* Inlined CFG state: 201. */
                                     {
-                                        if (this.field_C[var5].field_t == 9) {
+                                        if (this.units[var5].field_t == 9) {
                                             statePc = 205;
                                             continue scanLoop1;
                                         } else {
@@ -7155,7 +7155,7 @@ final class e {
                     } catch (Throwable stateCaught_193) {
                         statePc = ((Object) stateCaught_193 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_193);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_193);
                         }
                         caughtException = stateCaught_193;
                         continue scanLoop1;
@@ -7169,7 +7169,7 @@ final class e {
                     } catch (Throwable stateCaught_205) {
                         statePc = ((Object) stateCaught_205 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_205);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_205);
                         }
                         caughtException = stateCaught_205;
                         continue scanLoop1;
@@ -7177,7 +7177,7 @@ final class e {
                 }
                 case 207: {
                     try {
-                        if (this.field_C[var5].field_t == 4) {
+                        if (this.units[var5].field_t == 4) {
                             /* Inlined CFG state: 210. */
                             {
                                 this.field_e.field_b = this.field_e.field_b + 1;
@@ -7198,7 +7198,7 @@ final class e {
                     } catch (Throwable stateCaught_207) {
                         statePc = ((Object) stateCaught_207 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_207);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_207);
                         }
                         caughtException = stateCaught_207;
                         continue scanLoop1;
@@ -7206,7 +7206,7 @@ final class e {
                 }
                 case 211: {
                     try {
-                        if (this.field_C[var5].field_T + this.field_C[var5].field_P > 0) {
+                        if (this.units[var5].field_T + this.units[var5].field_P > 0) {
                             statePc = 217;
                             continue scanLoop1;
                         } else {
@@ -7233,7 +7233,7 @@ final class e {
                     } catch (Throwable stateCaught_211) {
                         statePc = ((Object) stateCaught_211 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_211);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_211);
                         }
                         caughtException = stateCaught_211;
                         continue scanLoop1;
@@ -7247,7 +7247,7 @@ final class e {
                     } catch (Throwable stateCaught_217) {
                         statePc = ((Object) stateCaught_217 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_217);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_217);
                         }
                         caughtException = stateCaught_217;
                         continue scanLoop1;
@@ -7255,13 +7255,13 @@ final class e {
                 }
                 case 219: {
                     try {
-                        this.field_C[var5] = null;
+                        this.units[var5] = null;
                         statePc = 220;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_219) {
                         statePc = ((Object) stateCaught_219 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_219);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_219);
                         }
                         caughtException = stateCaught_219;
                         continue scanLoop1;
@@ -7269,13 +7269,13 @@ final class e {
                 }
                 case 220: {
                     try {
-                        stackIn_221_0 = this.field_C[var5];
+                        stackIn_221_0 = this.units[var5];
                         statePc = 221;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_220) {
                         statePc = ((Object) stateCaught_220 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_220);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_220);
                         }
                         caughtException = stateCaught_220;
                         continue scanLoop1;
@@ -7289,7 +7289,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 222. */
                             {
-                                if (this.field_C[var5].field_Z != null) {
+                                if (this.units[var5].field_Z != null) {
                                     statePc = 231;
                                     continue scanLoop1;
                                 } else {
@@ -7299,10 +7299,10 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (this.field_C[var5].field_P > 0) {
+                                            if (this.units[var5].field_P > 0) {
                                                 /* Inlined CFG state: 230. */
                                                 {
-                                                    this.field_C[var5] = null;
+                                                    this.units[var5] = null;
                                                     statePc = 231;
                                                     continue scanLoop1;
                                                 }
@@ -7326,7 +7326,7 @@ final class e {
                     } catch (Throwable stateCaught_221) {
                         statePc = ((Object) stateCaught_221 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_221);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_221);
                         }
                         caughtException = stateCaught_221;
                         continue scanLoop1;
@@ -7344,7 +7344,7 @@ final class e {
                     } catch (Throwable stateCaught_231) {
                         statePc = ((Object) stateCaught_231 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_231);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_231);
                         }
                         caughtException = stateCaught_231;
                         continue scanLoop1;
@@ -7358,7 +7358,7 @@ final class e {
                     } catch (Throwable stateCaught_232) {
                         statePc = ((Object) stateCaught_232 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_232);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_232);
                         }
                         caughtException = stateCaught_232;
                         continue scanLoop1;
@@ -7410,7 +7410,7 @@ final class e {
                     } catch (Throwable stateCaught_234) {
                         statePc = ((Object) stateCaught_234 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_234);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_234);
                         }
                         caughtException = stateCaught_234;
                         continue scanLoop1;
@@ -7439,7 +7439,7 @@ final class e {
                     } catch (Throwable stateCaught_241) {
                         statePc = ((Object) stateCaught_241 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_241);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_241);
                         }
                         caughtException = stateCaught_241;
                         continue scanLoop1;
@@ -7479,7 +7479,7 @@ final class e {
                     } catch (Throwable stateCaught_245) {
                         statePc = ((Object) stateCaught_245 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_245);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_245);
                         }
                         caughtException = stateCaught_245;
                         continue scanLoop1;
@@ -7495,7 +7495,7 @@ final class e {
                             {
                                 stackIn_494_0 = null;
                                 stackIn_254_0 = stackIn_494_0;
-                                stackIn_494_1 = this.field_C[var5];
+                                stackIn_494_1 = this.units[var5];
                                 stackIn_254_1 = stackIn_494_1;
                                 if (var12 != 0) {
                                     statePc = 494;
@@ -7519,13 +7519,13 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (null == this.field_C[var5].field_Z) {
+                                                        if (null == this.units[var5].field_Z) {
                                                             statePc = 266;
                                                             continue scanLoop1;
                                                         } else {
                                                             /* Inlined CFG state: 260. */
                                                             {
-                                                                stackIn_262_0 = this.field_C[var5];
+                                                                stackIn_262_0 = this.units[var5];
                                                                 statePc = 262;
                                                                 continue scanLoop1;
                                                             }
@@ -7541,7 +7541,7 @@ final class e {
                     } catch (Throwable stateCaught_252) {
                         statePc = ((Object) stateCaught_252 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_252);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_252);
                         }
                         caughtException = stateCaught_252;
                         continue scanLoop1;
@@ -7549,7 +7549,7 @@ final class e {
                 }
                 case 262: {
                     try {
-                        if (stackIn_262_0.field_c.field_C.field_v != -1) {
+                        if (stackIn_262_0.tile.field_C.field_v != -1) {
                             /* Inlined CFG state: 265. */
                             {
                                 this.a(29518, 0);
@@ -7572,7 +7572,7 @@ final class e {
                     } catch (Throwable stateCaught_262) {
                         statePc = ((Object) stateCaught_262 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_262);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_262);
                         }
                         caughtException = stateCaught_262;
                         continue scanLoop1;
@@ -7590,7 +7590,7 @@ final class e {
                     } catch (Throwable stateCaught_266) {
                         statePc = ((Object) stateCaught_266 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_266);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_266);
                         }
                         caughtException = stateCaught_266;
                         continue scanLoop1;
@@ -7616,7 +7616,7 @@ final class e {
                     } catch (Throwable stateCaught_267) {
                         statePc = ((Object) stateCaught_267 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_267);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_267);
                         }
                         caughtException = stateCaught_267;
                         continue scanLoop1;
@@ -7624,13 +7624,13 @@ final class e {
                 }
                 case 270: {
                     try {
-                        if (~var5 <= ~this.field_C.length) {
+                        if (~var5 <= ~this.units.length) {
                             statePc = 282;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 271. */
                             {
-                                stackIn_272_0 = this.field_C[var5];
+                                stackIn_272_0 = this.units[var5];
                                 statePc = 272;
                                 continue scanLoop1;
                             }
@@ -7638,7 +7638,7 @@ final class e {
                     } catch (Throwable stateCaught_270) {
                         statePc = ((Object) stateCaught_270 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_270);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_270);
                         }
                         caughtException = stateCaught_270;
                         continue scanLoop1;
@@ -7660,7 +7660,7 @@ final class e {
                                 } else {
                                     /* Inlined CFG state: 274. */
                                     {
-                                        if (this.field_C[var5].field_P <= 0) {
+                                        if (this.units[var5].field_P <= 0) {
                                             statePc = 281;
                                             continue scanLoop1;
                                         } else {
@@ -7670,7 +7670,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var5].field_C != 1) {
+                                                    if (this.units[var5].field_C != 1) {
                                                         statePc = 281;
                                                         continue scanLoop1;
                                                     } else {
@@ -7696,7 +7696,7 @@ final class e {
                     } catch (Throwable stateCaught_272) {
                         statePc = ((Object) stateCaught_272 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_272);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_272);
                         }
                         caughtException = stateCaught_272;
                         continue scanLoop1;
@@ -7714,7 +7714,7 @@ final class e {
                     } catch (Throwable stateCaught_281) {
                         statePc = ((Object) stateCaught_281 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_281);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_281);
                         }
                         caughtException = stateCaught_281;
                         continue scanLoop1;
@@ -7740,7 +7740,7 @@ final class e {
                     } catch (Throwable stateCaught_282) {
                         statePc = ((Object) stateCaught_282 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_282);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_282);
                         }
                         caughtException = stateCaught_282;
                         continue scanLoop1;
@@ -7766,7 +7766,7 @@ final class e {
                     } catch (Throwable stateCaught_286) {
                         statePc = ((Object) stateCaught_286 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_286);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_286);
                         }
                         caughtException = stateCaught_286;
                         continue scanLoop1;
@@ -7780,7 +7780,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 291. */
                             {
-                                stackIn_272_0 = this.field_C[var5];
+                                stackIn_272_0 = this.units[var5];
                                 stackIn_292_0 = stackIn_272_0;
                                 if (var12 != 0) {
                                     statePc = 272;
@@ -7794,7 +7794,7 @@ final class e {
                                         } else {
                                             /* Inlined CFG state: 293. */
                                             {
-                                                if (this.field_C[var5].field_P <= 0) {
+                                                if (this.units[var5].field_P <= 0) {
                                                     statePc = 302;
                                                     continue scanLoop1;
                                                 } else {
@@ -7804,7 +7804,7 @@ final class e {
                                                         {
                                                         }
                                                         {
-                                                            if (this.field_C[var5].field_Z != null) {
+                                                            if (this.units[var5].field_Z != null) {
                                                                 statePc = 301;
                                                             } else {
                                                                 statePc = 297;
@@ -7822,7 +7822,7 @@ final class e {
                     } catch (Throwable stateCaught_290) {
                         statePc = ((Object) stateCaught_290 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_290);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_290);
                         }
                         caughtException = stateCaught_290;
                         continue scanLoop1;
@@ -7840,7 +7840,7 @@ final class e {
                     } catch (Throwable stateCaught_297) {
                         statePc = ((Object) stateCaught_297 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_297);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_297);
                         }
                         caughtException = stateCaught_297;
                         continue scanLoop1;
@@ -7854,7 +7854,7 @@ final class e {
                     } catch (Throwable stateCaught_301) {
                         statePc = ((Object) stateCaught_301 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_301);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_301);
                         }
                         caughtException = stateCaught_301;
                         continue scanLoop1;
@@ -7872,7 +7872,7 @@ final class e {
                     } catch (Throwable stateCaught_302) {
                         statePc = ((Object) stateCaught_302 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_302);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_302);
                         }
                         caughtException = stateCaught_302;
                         continue scanLoop1;
@@ -7899,7 +7899,7 @@ final class e {
                     } catch (Throwable stateCaught_303) {
                         statePc = ((Object) stateCaught_303 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_303);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_303);
                         }
                         caughtException = stateCaught_303;
                         continue scanLoop1;
@@ -7924,7 +7924,7 @@ final class e {
                     } catch (Throwable stateCaught_307) {
                         statePc = ((Object) stateCaught_307 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_307);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_307);
                         }
                         caughtException = stateCaught_307;
                         continue scanLoop1;
@@ -7932,7 +7932,7 @@ final class e {
                 }
                 case 311: {
                     try {
-                        if (var5 >= this.field_C.length) {
+                        if (var5 >= this.units.length) {
                             statePc = 328;
                             continue scanLoop1;
                         } else {
@@ -7940,7 +7940,7 @@ final class e {
                             {
                                 stackIn_332_0 = null;
                                 stackIn_313_0 = stackIn_332_0;
-                                stackIn_332_1 = this.field_C[var5];
+                                stackIn_332_1 = this.units[var5];
                                 stackIn_313_1 = stackIn_332_1;
                                 if (var12 != 0) {
                                     statePc = 332;
@@ -7953,7 +7953,7 @@ final class e {
                     } catch (Throwable stateCaught_311) {
                         statePc = ((Object) stateCaught_311 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_311);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_311);
                         }
                         caughtException = stateCaught_311;
                         continue scanLoop1;
@@ -7971,7 +7971,7 @@ final class e {
                                 {
                                 }
                                 {
-                                    if (6 != this.field_C[var5].field_t) {
+                                    if (6 != this.units[var5].field_t) {
                                         statePc = 327;
                                         continue scanLoop1;
                                     } else {
@@ -7981,7 +7981,7 @@ final class e {
                                             {
                                             }
                                             {
-                                                if (this.field_C[var5].field_k) {
+                                                if (this.units[var5].field_k) {
                                                     statePc = 325;
                                                     continue scanLoop1;
                                                 } else {
@@ -7991,7 +7991,7 @@ final class e {
                                                         {
                                                         }
                                                         {
-                                                            if (this.field_C[var5].field_P > 0) {
+                                                            if (this.units[var5].field_P > 0) {
                                                                 statePc = 327;
                                                                 continue scanLoop1;
                                                             } else {
@@ -8013,7 +8013,7 @@ final class e {
                     } catch (Throwable stateCaught_313) {
                         statePc = ((Object) stateCaught_313 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_313);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_313);
                         }
                         caughtException = stateCaught_313;
                         continue scanLoop1;
@@ -8028,7 +8028,7 @@ final class e {
                     } catch (Throwable stateCaught_325) {
                         statePc = ((Object) stateCaught_325 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_325);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_325);
                         }
                         caughtException = stateCaught_325;
                         continue scanLoop1;
@@ -8046,7 +8046,7 @@ final class e {
                     } catch (Throwable stateCaught_327) {
                         statePc = ((Object) stateCaught_327 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_327);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_327);
                         }
                         caughtException = stateCaught_327;
                         continue scanLoop1;
@@ -8068,7 +8068,7 @@ final class e {
                     } catch (Throwable stateCaught_328) {
                         statePc = ((Object) stateCaught_328 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_328);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_328);
                         }
                         caughtException = stateCaught_328;
                         continue scanLoop1;
@@ -8076,14 +8076,14 @@ final class e {
                 }
                 case 330: {
                     try {
-                        if (this.field_C.length <= var5) {
+                        if (this.units.length <= var5) {
                             statePc = 344;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 331. */
                             {
                                 stackIn_332_0 = null;
-                                stackIn_332_1 = this.field_C[var5];
+                                stackIn_332_1 = this.units[var5];
                                 statePc = 332;
                                 continue scanLoop1;
                             }
@@ -8091,7 +8091,7 @@ final class e {
                     } catch (Throwable stateCaught_330) {
                         statePc = ((Object) stateCaught_330 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_330);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_330);
                         }
                         caughtException = stateCaught_330;
                         continue scanLoop1;
@@ -8115,7 +8115,7 @@ final class e {
                                 } else {
                                     /* Inlined CFG state: 334. */
                                     {
-                                        if (!this.field_C[var5].field_s) {
+                                        if (!this.units[var5].field_s) {
                                             statePc = 343;
                                             continue scanLoop1;
                                         } else {
@@ -8125,7 +8125,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (null != this.field_C[var5].field_Z) {
+                                                    if (null != this.units[var5].field_Z) {
                                                         /* Inlined CFG state: 342. */
                                                         {
                                                             this.a(29518, 9);
@@ -8155,7 +8155,7 @@ final class e {
                     } catch (Throwable stateCaught_332) {
                         statePc = ((Object) stateCaught_332 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_332);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_332);
                         }
                         caughtException = stateCaught_332;
                         continue scanLoop1;
@@ -8173,7 +8173,7 @@ final class e {
                     } catch (Throwable stateCaught_343) {
                         statePc = ((Object) stateCaught_343 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_343);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_343);
                         }
                         caughtException = stateCaught_343;
                         continue scanLoop1;
@@ -8200,7 +8200,7 @@ final class e {
                     } catch (Throwable stateCaught_344) {
                         statePc = ((Object) stateCaught_344 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_344);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_344);
                         }
                         caughtException = stateCaught_344;
                         continue scanLoop1;
@@ -8214,7 +8214,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 348. */
                             {
-                                stackIn_686_0 = this.field_C[var6];
+                                stackIn_686_0 = this.units[var6];
                                 stackIn_349_0 = stackIn_686_0;
                                 if (var12 != 0) {
                                     statePc = 686;
@@ -8232,7 +8232,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var6].field_P <= 0) {
+                                                    if (this.units[var6].field_P <= 0) {
                                                         statePc = 365;
                                                         continue scanLoop1;
                                                     } else {
@@ -8242,7 +8242,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (!this.field_C[var6].field_s) {
+                                                                if (!this.units[var6].field_s) {
                                                                     statePc = 365;
                                                                 } else {
                                                                     statePc = 356;
@@ -8261,7 +8261,7 @@ final class e {
                     } catch (Throwable stateCaught_347) {
                         statePc = ((Object) stateCaught_347 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_347);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_347);
                         }
                         caughtException = stateCaught_347;
                         continue scanLoop1;
@@ -8273,7 +8273,7 @@ final class e {
                         {
                         }
                         {
-                            if (this.field_C[var6].field_Z == null) {
+                            if (this.units[var6].field_Z == null) {
                                 statePc = 365;
                                 continue scanLoop1;
                             } else {
@@ -8283,7 +8283,7 @@ final class e {
                                     {
                                     }
                                     {
-                                        if (this.field_C[var6].field_c.field_d) {
+                                        if (this.units[var6].tile.field_d) {
                                             statePc = 365;
                                             continue scanLoop1;
                                         } else {
@@ -8306,7 +8306,7 @@ final class e {
                     } catch (Throwable stateCaught_356) {
                         statePc = ((Object) stateCaught_356 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_356);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_356);
                         }
                         caughtException = stateCaught_356;
                         continue scanLoop1;
@@ -8314,13 +8314,13 @@ final class e {
                 }
                 case 365: {
                     try {
-                        if (null == this.field_C[var6]) {
+                        if (null == this.units[var6]) {
                             statePc = 378;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 366. */
                             {
-                                if (this.field_C[var6].field_P <= 0) {
+                                if (this.units[var6].field_P <= 0) {
                                     statePc = 378;
                                     continue scanLoop1;
                                 } else {
@@ -8330,7 +8330,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (null == this.field_C[var6].field_Z) {
+                                            if (null == this.units[var6].field_Z) {
                                                 statePc = 378;
                                                 continue scanLoop1;
                                             } else {
@@ -8340,7 +8340,7 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (this.field_C[var6].field_c.field_d) {
+                                                        if (this.units[var6].tile.field_d) {
                                                             /* Inlined CFG state: 377. */
                                                             {
                                                                 var3_int = 0;
@@ -8370,7 +8370,7 @@ final class e {
                     } catch (Throwable stateCaught_365) {
                         statePc = ((Object) stateCaught_365 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_365);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_365);
                         }
                         caughtException = stateCaught_365;
                         continue scanLoop1;
@@ -8388,7 +8388,7 @@ final class e {
                     } catch (Throwable stateCaught_378) {
                         statePc = ((Object) stateCaught_378 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_378);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_378);
                         }
                         caughtException = stateCaught_378;
                         continue scanLoop1;
@@ -8396,7 +8396,7 @@ final class e {
                 }
                 case 379: {
                     try {
-                        this.field_h.field_m = 1;
+                        this.map.field_m = 1;
                         if (var3_int == 0) {
                             statePc = 386;
                             continue scanLoop1;
@@ -8429,7 +8429,7 @@ final class e {
                     } catch (Throwable stateCaught_379) {
                         statePc = ((Object) stateCaught_379 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_379);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_379);
                         }
                         caughtException = stateCaught_379;
                         continue scanLoop1;
@@ -8453,7 +8453,7 @@ final class e {
                     } catch (Throwable stateCaught_386) {
                         statePc = ((Object) stateCaught_386 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_386);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_386);
                         }
                         caughtException = stateCaught_386;
                         continue scanLoop1;
@@ -8467,7 +8467,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 389. */
                             {
-                                stackIn_686_0 = this.field_C[var6];
+                                stackIn_686_0 = this.units[var6];
                                 stackIn_390_0 = stackIn_686_0;
                                 if (var12 != 0) {
                                     statePc = 686;
@@ -8485,7 +8485,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var6].field_P <= 0) {
+                                                    if (this.units[var6].field_P <= 0) {
                                                         statePc = 408;
                                                         continue scanLoop1;
                                                     } else {
@@ -8495,7 +8495,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (null == this.field_C[var6].field_Z) {
+                                                                if (null == this.units[var6].field_Z) {
                                                                     statePc = 408;
                                                                 } else {
                                                                     statePc = 397;
@@ -8514,7 +8514,7 @@ final class e {
                     } catch (Throwable stateCaught_388) {
                         statePc = ((Object) stateCaught_388 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_388);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_388);
                         }
                         caughtException = stateCaught_388;
                         continue scanLoop1;
@@ -8526,7 +8526,7 @@ final class e {
                         {
                         }
                         {
-                            if (Math.abs(-(this.field_h.field_b / 2) + this.field_C[var6].field_F) >= this.field_h.field_b / 2 - 5) {
+                            if (Math.abs(-(this.map.field_b / 2) + this.units[var6].field_F) >= this.map.field_b / 2 - 5) {
                                 statePc = 408;
                                 continue scanLoop1;
                             } else {
@@ -8536,7 +8536,7 @@ final class e {
                                     {
                                     }
                                     {
-                                        if (~Math.abs(-(this.field_h.field_e / 2) + this.field_C[var6].field_H) > ~(this.field_h.field_e / 2 - 5)) {
+                                        if (~Math.abs(-(this.map.field_e / 2) + this.units[var6].field_H) > ~(this.map.field_e / 2 - 5)) {
                                             /* Inlined CFG state: 407. */
                                             {
                                                 var3_int = 0;
@@ -8562,7 +8562,7 @@ final class e {
                     } catch (Throwable stateCaught_397) {
                         statePc = ((Object) stateCaught_397 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_397);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_397);
                         }
                         caughtException = stateCaught_397;
                         continue scanLoop1;
@@ -8570,13 +8570,13 @@ final class e {
                 }
                 case 408: {
                     try {
-                        if (this.field_C[var6] == null) {
+                        if (this.units[var6] == null) {
                             statePc = 425;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 409. */
                             {
-                                if (this.field_C[var6].field_P <= 0) {
+                                if (this.units[var6].field_P <= 0) {
                                     statePc = 425;
                                     continue scanLoop1;
                                 } else {
@@ -8586,7 +8586,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (!this.field_C[var6].field_s) {
+                                            if (!this.units[var6].field_s) {
                                                 statePc = 425;
                                                 continue scanLoop1;
                                             } else {
@@ -8596,7 +8596,7 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (this.field_C[var6].field_Z == null) {
+                                                        if (this.units[var6].field_Z == null) {
                                                             statePc = 425;
                                                             continue scanLoop1;
                                                         } else {
@@ -8606,7 +8606,7 @@ final class e {
                                                                 {
                                                                 }
                                                                 {
-                                                                    if (Math.abs(this.field_C[var6].field_F - this.field_h.field_b / 2) >= -5 + this.field_h.field_b / 2) {
+                                                                    if (Math.abs(this.units[var6].field_F - this.map.field_b / 2) >= -5 + this.map.field_b / 2) {
                                                                         statePc = 424;
                                                                     } else {
                                                                         statePc = 419;
@@ -8626,7 +8626,7 @@ final class e {
                     } catch (Throwable stateCaught_408) {
                         statePc = ((Object) stateCaught_408 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_408);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_408);
                         }
                         caughtException = stateCaught_408;
                         continue scanLoop1;
@@ -8638,7 +8638,7 @@ final class e {
                         {
                         }
                         {
-                            if (Math.abs(-(this.field_h.field_e / 2) + this.field_C[var6].field_H) < -5 + this.field_h.field_e / 2) {
+                            if (Math.abs(-(this.map.field_e / 2) + this.units[var6].field_H) < -5 + this.map.field_e / 2) {
                                 statePc = 425;
                                 continue scanLoop1;
                             } else {
@@ -8652,7 +8652,7 @@ final class e {
                     } catch (Throwable stateCaught_419) {
                         statePc = ((Object) stateCaught_419 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_419);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_419);
                         }
                         caughtException = stateCaught_419;
                         continue scanLoop1;
@@ -8666,7 +8666,7 @@ final class e {
                     } catch (Throwable stateCaught_424) {
                         statePc = ((Object) stateCaught_424 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_424);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_424);
                         }
                         caughtException = stateCaught_424;
                         continue scanLoop1;
@@ -8684,7 +8684,7 @@ final class e {
                     } catch (Throwable stateCaught_425) {
                         statePc = ((Object) stateCaught_425 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_425);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_425);
                         }
                         caughtException = stateCaught_425;
                         continue scanLoop1;
@@ -8692,7 +8692,7 @@ final class e {
                 }
                 case 426: {
                     try {
-                        this.field_h.field_m = 2;
+                        this.map.field_m = 2;
                         if (var3_int == 0) {
                             statePc = 433;
                             continue scanLoop1;
@@ -8725,7 +8725,7 @@ final class e {
                     } catch (Throwable stateCaught_426) {
                         statePc = ((Object) stateCaught_426 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_426);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_426);
                         }
                         caughtException = stateCaught_426;
                         continue scanLoop1;
@@ -8752,7 +8752,7 @@ final class e {
                     } catch (Throwable stateCaught_433) {
                         statePc = ((Object) stateCaught_433 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_433);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_433);
                         }
                         caughtException = stateCaught_433;
                         continue scanLoop1;
@@ -8768,7 +8768,7 @@ final class e {
                             {
                                 stackIn_576_0 = null;
                                 stackIn_439_0 = stackIn_576_0;
-                                stackIn_576_1 = this.field_C[var6];
+                                stackIn_576_1 = this.units[var6];
                                 stackIn_439_1 = stackIn_576_1;
                                 if (var12 != 0) {
                                     statePc = 576;
@@ -8786,7 +8786,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var6].field_P <= 0) {
+                                                    if (this.units[var6].field_P <= 0) {
                                                         statePc = 463;
                                                         continue scanLoop1;
                                                     } else {
@@ -8796,7 +8796,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (this.field_C[var6].field_Z == null) {
+                                                                if (this.units[var6].field_Z == null) {
                                                                     statePc = 463;
                                                                 } else {
                                                                     statePc = 446;
@@ -8815,7 +8815,7 @@ final class e {
                     } catch (Throwable stateCaught_437) {
                         statePc = ((Object) stateCaught_437 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_437);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_437);
                         }
                         caughtException = stateCaught_437;
                         continue scanLoop1;
@@ -8827,7 +8827,7 @@ final class e {
                         {
                         }
                         {
-                            if (1 != this.field_C[var6].field_E) {
+                            if (1 != this.units[var6].field_E) {
                                 statePc = 463;
                                 continue scanLoop1;
                             } else {
@@ -8837,7 +8837,7 @@ final class e {
                                     {
                                     }
                                     {
-                                        if (this.field_C[var6].field_F > 12) {
+                                        if (this.units[var6].field_F > 12) {
                                             statePc = 463;
                                             continue scanLoop1;
                                         } else {
@@ -8847,7 +8847,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var6].field_H > 12) {
+                                                    if (this.units[var6].field_H > 12) {
                                                         statePc = 463;
                                                         continue scanLoop1;
                                                     } else {
@@ -8857,7 +8857,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (this.field_C[var6].field_s) {
+                                                                if (this.units[var6].field_s) {
                                                                     /* Inlined CFG state: 462. */
                                                                     {
                                                                         var5 = 1;
@@ -8889,7 +8889,7 @@ final class e {
                     } catch (Throwable stateCaught_446) {
                         statePc = ((Object) stateCaught_446 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_446);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_446);
                         }
                         caughtException = stateCaught_446;
                         continue scanLoop1;
@@ -8897,13 +8897,13 @@ final class e {
                 }
                 case 463: {
                     try {
-                        if (this.field_C[var6] == null) {
+                        if (this.units[var6] == null) {
                             statePc = 480;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 464. */
                             {
-                                if (this.field_C[var6].field_P <= 0) {
+                                if (this.units[var6].field_P <= 0) {
                                     statePc = 480;
                                     continue scanLoop1;
                                 } else {
@@ -8913,7 +8913,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (null == this.field_C[var6].field_Z) {
+                                            if (null == this.units[var6].field_Z) {
                                                 statePc = 480;
                                                 continue scanLoop1;
                                             } else {
@@ -8923,7 +8923,7 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (this.field_C[var6].field_E != 1) {
+                                                        if (this.units[var6].field_E != 1) {
                                                             statePc = 479;
                                                             continue scanLoop1;
                                                         } else {
@@ -8933,7 +8933,7 @@ final class e {
                                                                 {
                                                                 }
                                                                 {
-                                                                    if (this.field_C[var6].field_F > 12) {
+                                                                    if (this.units[var6].field_F > 12) {
                                                                         statePc = 479;
                                                                     } else {
                                                                         statePc = 474;
@@ -8953,7 +8953,7 @@ final class e {
                     } catch (Throwable stateCaught_463) {
                         statePc = ((Object) stateCaught_463 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_463);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_463);
                         }
                         caughtException = stateCaught_463;
                         continue scanLoop1;
@@ -8965,7 +8965,7 @@ final class e {
                         {
                         }
                         {
-                            if (this.field_C[var6].field_H <= 12) {
+                            if (this.units[var6].field_H <= 12) {
                                 statePc = 480;
                                 continue scanLoop1;
                             } else {
@@ -8979,7 +8979,7 @@ final class e {
                     } catch (Throwable stateCaught_474) {
                         statePc = ((Object) stateCaught_474 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_474);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_474);
                         }
                         caughtException = stateCaught_474;
                         continue scanLoop1;
@@ -8993,7 +8993,7 @@ final class e {
                     } catch (Throwable stateCaught_479) {
                         statePc = ((Object) stateCaught_479 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_479);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_479);
                         }
                         caughtException = stateCaught_479;
                         continue scanLoop1;
@@ -9011,7 +9011,7 @@ final class e {
                     } catch (Throwable stateCaught_480) {
                         statePc = ((Object) stateCaught_480 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_480);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_480);
                         }
                         caughtException = stateCaught_480;
                         continue scanLoop1;
@@ -9019,7 +9019,7 @@ final class e {
                 }
                 case 481: {
                     try {
-                        this.field_h.field_m = 3;
+                        this.map.field_m = 3;
                         if (var3_int == 0) {
                             statePc = 488;
                             continue scanLoop1;
@@ -9052,7 +9052,7 @@ final class e {
                     } catch (Throwable stateCaught_481) {
                         statePc = ((Object) stateCaught_481 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_481);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_481);
                         }
                         caughtException = stateCaught_481;
                         continue scanLoop1;
@@ -9063,7 +9063,7 @@ final class e {
                         if (var4.field_a == 7) {
                             /* Inlined CFG state: 491. */
                             {
-                                this.field_h.field_m = 4;
+                                this.map.field_m = 4;
                                 var5 = 0;
                                 statePc = 492;
                                 continue scanLoop1;
@@ -9078,7 +9078,7 @@ final class e {
                     } catch (Throwable stateCaught_488) {
                         statePc = ((Object) stateCaught_488 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_488);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_488);
                         }
                         caughtException = stateCaught_488;
                         continue scanLoop1;
@@ -9094,7 +9094,7 @@ final class e {
                             {
                                 stackIn_332_0 = null;
                                 stackIn_494_0 = stackIn_332_0;
-                                stackIn_332_1 = this.field_C[var5];
+                                stackIn_332_1 = this.units[var5];
                                 stackIn_494_1 = stackIn_332_1;
                                 if (var12 != 0) {
                                     statePc = 332;
@@ -9107,7 +9107,7 @@ final class e {
                     } catch (Throwable stateCaught_492) {
                         statePc = ((Object) stateCaught_492 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_492);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_492);
                         }
                         caughtException = stateCaught_492;
                         continue scanLoop1;
@@ -9121,7 +9121,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 495. */
                             {
-                                if (this.field_C[var5].field_P <= 0) {
+                                if (this.units[var5].field_P <= 0) {
                                     statePc = 509;
                                     continue scanLoop1;
                                 } else {
@@ -9131,7 +9131,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (!this.field_C[var5].field_s) {
+                                            if (!this.units[var5].field_s) {
                                                 statePc = 509;
                                                 continue scanLoop1;
                                             } else {
@@ -9141,7 +9141,7 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (null == this.field_C[var5].field_Z) {
+                                                        if (null == this.units[var5].field_Z) {
                                                             statePc = 509;
                                                             continue scanLoop1;
                                                         } else {
@@ -9151,7 +9151,7 @@ final class e {
                                                                 {
                                                                 }
                                                                 {
-                                                                    if (this.field_C[var5].field_E != 2) {
+                                                                    if (this.units[var5].field_E != 2) {
                                                                         statePc = 509;
                                                                     } else {
                                                                         statePc = 505;
@@ -9171,7 +9171,7 @@ final class e {
                     } catch (Throwable stateCaught_494) {
                         statePc = ((Object) stateCaught_494 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_494);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_494);
                         }
                         caughtException = stateCaught_494;
                         continue scanLoop1;
@@ -9192,7 +9192,7 @@ final class e {
                     } catch (Throwable stateCaught_505) {
                         statePc = ((Object) stateCaught_505 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_505);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_505);
                         }
                         caughtException = stateCaught_505;
                         continue scanLoop1;
@@ -9210,7 +9210,7 @@ final class e {
                     } catch (Throwable stateCaught_509) {
                         statePc = ((Object) stateCaught_509 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_509);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_509);
                         }
                         caughtException = stateCaught_509;
                         continue scanLoop1;
@@ -9257,7 +9257,7 @@ final class e {
                     } catch (Throwable stateCaught_510) {
                         statePc = ((Object) stateCaught_510 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_510);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_510);
                         }
                         caughtException = stateCaught_510;
                         continue scanLoop1;
@@ -9296,7 +9296,7 @@ final class e {
                     } catch (Throwable stateCaught_519) {
                         statePc = ((Object) stateCaught_519 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_519);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_519);
                         }
                         caughtException = stateCaught_519;
                         continue scanLoop1;
@@ -9332,7 +9332,7 @@ final class e {
                     } catch (Throwable stateCaught_526) {
                         statePc = ((Object) stateCaught_526 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_526);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_526);
                         }
                         caughtException = stateCaught_526;
                         continue scanLoop1;
@@ -9360,7 +9360,7 @@ final class e {
                     } catch (Throwable stateCaught_532) {
                         statePc = ((Object) stateCaught_532 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_532);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_532);
                         }
                         caughtException = stateCaught_532;
                         continue scanLoop1;
@@ -9408,7 +9408,7 @@ final class e {
                     } catch (Throwable stateCaught_536) {
                         statePc = ((Object) stateCaught_536 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_536);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_536);
                         }
                         caughtException = stateCaught_536;
                         continue scanLoop1;
@@ -9451,7 +9451,7 @@ final class e {
                     } catch (Throwable stateCaught_545) {
                         statePc = ((Object) stateCaught_545 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_545);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_545);
                         }
                         caughtException = stateCaught_545;
                         continue scanLoop1;
@@ -9486,7 +9486,7 @@ final class e {
                     } catch (Throwable stateCaught_552) {
                         statePc = ((Object) stateCaught_552 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_552);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_552);
                         }
                         caughtException = stateCaught_552;
                         continue scanLoop1;
@@ -9513,7 +9513,7 @@ final class e {
                     } catch (Throwable stateCaught_558) {
                         statePc = ((Object) stateCaught_558 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_558);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_558);
                         }
                         caughtException = stateCaught_558;
                         continue scanLoop1;
@@ -9542,7 +9542,7 @@ final class e {
                     } catch (Throwable stateCaught_563) {
                         statePc = ((Object) stateCaught_563 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_563);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_563);
                         }
                         caughtException = stateCaught_563;
                         continue scanLoop1;
@@ -9556,7 +9556,7 @@ final class e {
                     } catch (Throwable stateCaught_567) {
                         statePc = ((Object) stateCaught_567 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_567);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_567);
                         }
                         caughtException = stateCaught_567;
                         continue scanLoop1;
@@ -9578,7 +9578,7 @@ final class e {
                     } catch (Throwable stateCaught_568) {
                         statePc = ((Object) stateCaught_568 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_568);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_568);
                         }
                         caughtException = stateCaught_568;
                         continue scanLoop1;
@@ -9593,7 +9593,7 @@ final class e {
                     } catch (Throwable stateCaught_571) {
                         statePc = ((Object) stateCaught_571 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_571);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_571);
                         }
                         caughtException = stateCaught_571;
                         continue scanLoop1;
@@ -9601,7 +9601,7 @@ final class e {
                 }
                 case 572: {
                     try {
-                        if (~var5 <= ~this.field_C.length) {
+                        if (~var5 <= ~this.units.length) {
                             statePc = 830;
                             continue scanLoop1;
                         } else {
@@ -9618,7 +9618,7 @@ final class e {
                                     /* Inlined CFG state: 574. */
                                     {
                                         stackIn_576_0 = stackIn_574_0;
-                                        stackIn_576_1 = ((e) (this)).field_C[var5];
+                                        stackIn_576_1 = ((BattleState) (this)).units[var5];
                                         statePc = 576;
                                         continue scanLoop1;
                                     }
@@ -9628,7 +9628,7 @@ final class e {
                     } catch (Throwable stateCaught_572) {
                         statePc = ((Object) stateCaught_572 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_572);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_572);
                         }
                         caughtException = stateCaught_572;
                         continue scanLoop1;
@@ -9642,7 +9642,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 577. */
                             {
-                                if (0 >= this.field_C[var5].field_cb) {
+                                if (0 >= this.units[var5].field_cb) {
                                     statePc = 582;
                                     continue scanLoop1;
                                 } else {
@@ -9652,7 +9652,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            dupTemp$2 = this.field_C[var5];
+                                            dupTemp$2 = this.units[var5];
                                             dupTemp$2.field_cb = dupTemp$2.field_cb - 8;
                                             statePc = 582;
                                             continue scanLoop1;
@@ -9664,7 +9664,7 @@ final class e {
                     } catch (Throwable stateCaught_576) {
                         statePc = ((Object) stateCaught_576 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_576);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_576);
                         }
                         caughtException = stateCaught_576;
                         continue scanLoop1;
@@ -9672,13 +9672,13 @@ final class e {
                 }
                 case 582: {
                     try {
-                        if (this.field_C[var5].field_ib) {
+                        if (this.units[var5].field_ib) {
                             statePc = 668;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 583. */
                             {
-                                if (this.field_C[var5].field_Z != null) {
+                                if (this.units[var5].field_Z != null) {
                                     statePc = 645;
                                     continue scanLoop1;
                                 } else {
@@ -9688,7 +9688,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (this.field_C[var5].field_t == 7) {
+                                            if (this.units[var5].field_t == 7) {
                                                 statePc = 668;
                                                 continue scanLoop1;
                                             } else {
@@ -9708,7 +9708,7 @@ final class e {
                                                                 {
                                                                 }
                                                                 {
-                                                                    if (this.field_C[var5].field_k) {
+                                                                    if (this.units[var5].field_k) {
                                                                         statePc = 597;
                                                                     } else {
                                                                         statePc = 593;
@@ -9728,7 +9728,7 @@ final class e {
                     } catch (Throwable stateCaught_582) {
                         statePc = ((Object) stateCaught_582 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_582);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_582);
                         }
                         caughtException = stateCaught_582;
                         continue scanLoop1;
@@ -9747,7 +9747,7 @@ final class e {
                     } catch (Throwable stateCaught_593) {
                         statePc = ((Object) stateCaught_593 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_593);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_593);
                         }
                         caughtException = stateCaught_593;
                         continue scanLoop1;
@@ -9761,7 +9761,7 @@ final class e {
                     } catch (Throwable stateCaught_597) {
                         statePc = ((Object) stateCaught_597 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_597);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_597);
                         }
                         caughtException = stateCaught_597;
                         continue scanLoop1;
@@ -9826,7 +9826,7 @@ final class e {
                     } catch (Throwable stateCaught_598) {
                         statePc = ((Object) stateCaught_598 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_598);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_598);
                         }
                         caughtException = stateCaught_598;
                         continue scanLoop1;
@@ -9843,7 +9843,7 @@ final class e {
                     } catch (Throwable stateCaught_611) {
                         statePc = ((Object) stateCaught_611 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_611);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_611);
                         }
                         caughtException = stateCaught_611;
                         continue scanLoop1;
@@ -9851,7 +9851,7 @@ final class e {
                 }
                 case 612: {
                     try {
-                        if (this.field_C[var5].field_P <= 0) {
+                        if (this.units[var5].field_P <= 0) {
                             statePc = 618;
                             continue scanLoop1;
                         } else {
@@ -9861,7 +9861,7 @@ final class e {
                                 {
                                 }
                                 {
-                                    if (this.field_h.a((byte) -93, this.field_q, this.field_C[var5])) {
+                                    if (this.map.a((byte) -93, this.field_q, this.units[var5])) {
                                         statePc = 621;
                                         continue scanLoop1;
                                     } else {
@@ -9877,7 +9877,7 @@ final class e {
                     } catch (Throwable stateCaught_612) {
                         statePc = ((Object) stateCaught_612 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_612);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_612);
                         }
                         caughtException = stateCaught_612;
                         continue scanLoop1;
@@ -9885,7 +9885,7 @@ final class e {
                 }
                 case 618: {
                     try {
-                        this.field_C[var5].field_p = 0;
+                        this.units[var5].field_p = 0;
                         if (var12 == 0) {
                             statePc = 668;
                             continue scanLoop1;
@@ -9899,7 +9899,7 @@ final class e {
                     } catch (Throwable stateCaught_618) {
                         statePc = ((Object) stateCaught_618 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_618);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_618);
                         }
                         caughtException = stateCaught_618;
                         continue scanLoop1;
@@ -9959,7 +9959,7 @@ final class e {
                     } catch (Throwable stateCaught_621) {
                         statePc = ((Object) stateCaught_621 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_621);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_621);
                         }
                         caughtException = stateCaught_621;
                         continue scanLoop1;
@@ -9988,7 +9988,7 @@ final class e {
                     } catch (Throwable stateCaught_633) {
                         statePc = ((Object) stateCaught_633 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_633);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_633);
                         }
                         caughtException = stateCaught_633;
                         continue scanLoop1;
@@ -9996,18 +9996,18 @@ final class e {
                 }
                 case 638: {
                     try {
-                        if (!this.field_C[var5].field_l) {
+                        if (!this.units[var5].field_l) {
                             /* Inlined CFG state: 641. */
                             {
-                                this.field_C[var5].field_l = true;
-                                this.field_a = this.field_C[var5].field_F;
-                                this.field_x = this.field_C[var5].field_H;
+                                this.units[var5].field_l = true;
+                                this.field_a = this.units[var5].field_F;
+                                this.field_x = this.units[var5].field_H;
                                 this.field_k = lg.field_c;
                                 this.field_c = sj.field_b;
                                 this.field_E = eg.field_p;
-                                eg.field_p = this.field_C[var5].field_E;
+                                eg.field_p = this.units[var5].field_E;
                                 this.field_K = ib.field_X;
-                                if (this.field_C[var5].field_t < 1) {
+                                if (this.units[var5].field_t < 1) {
                                     statePc = 644;
                                     continue scanLoop1;
                                 } else {
@@ -10029,7 +10029,7 @@ final class e {
                     } catch (Throwable stateCaught_638) {
                         statePc = ((Object) stateCaught_638 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_638);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_638);
                         }
                         caughtException = stateCaught_638;
                         continue scanLoop1;
@@ -10037,7 +10037,7 @@ final class e {
                 }
                 case 644: {
                     try {
-                        this.field_C[var5].field_ib = true;
+                        this.units[var5].field_ib = true;
                         qd.$cfr$intArgs$a$e9dea5688aa5(26, 3);
                         if (var12 == 0) {
                             statePc = 668;
@@ -10048,7 +10048,7 @@ final class e {
                     } catch (Throwable stateCaught_644) {
                         statePc = ((Object) stateCaught_644 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_644);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_644);
                         }
                         caughtException = stateCaught_644;
                         continue scanLoop1;
@@ -10056,7 +10056,7 @@ final class e {
                 }
                 case 645: {
                     try {
-                        if (0 < this.field_C[var5].field_P) {
+                        if (0 < this.units[var5].field_P) {
                             statePc = 660;
                             continue scanLoop1;
                         } else {
@@ -10077,9 +10077,9 @@ final class e {
                                             }
                                             {
                                                 param1.field_Y = false;
-                                                dupTemp$3 = this.field_C[var5];
+                                                dupTemp$3 = this.units[var5];
                                                 dupTemp$3.field_p = dupTemp$3.field_p + 1;
-                                                if (this.field_C[var5].field_p > 25) {
+                                                if (this.units[var5].field_p > 25) {
                                                     statePc = 656;
                                                 } else {
                                                     statePc = 652;
@@ -10094,7 +10094,7 @@ final class e {
                     } catch (Throwable stateCaught_645) {
                         statePc = ((Object) stateCaught_645 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_645);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_645);
                         }
                         caughtException = stateCaught_645;
                         continue scanLoop1;
@@ -10112,7 +10112,7 @@ final class e {
                     } catch (Throwable stateCaught_652) {
                         statePc = ((Object) stateCaught_652 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_652);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_652);
                         }
                         caughtException = stateCaught_652;
                         continue scanLoop1;
@@ -10120,20 +10120,20 @@ final class e {
                 }
                 case 656: {
                     try {
-                        this.field_a = this.field_C[var5].field_F;
-                        this.field_x = this.field_C[var5].field_H;
+                        this.field_a = this.units[var5].field_F;
+                        this.field_x = this.units[var5].field_H;
                         this.field_c = sj.field_b;
                         this.field_k = lg.field_c;
                         this.field_E = eg.field_p;
-                        eg.field_p = this.field_C[var5].field_E;
-                        this.field_K = this.field_C[var5].field_Z.b(1) + aa.field_r;
-                        if (this.field_C[var5].field_T <= 0) {
+                        eg.field_p = this.units[var5].field_E;
+                        this.field_K = this.units[var5].field_Z.b(1) + aa.field_r;
+                        if (this.units[var5].field_T <= 0) {
                             statePc = 659;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 657. */
                             {
-                                this.field_K = this.field_C[var5].field_Z.b(1) + d.field_O;
+                                this.field_K = this.units[var5].field_Z.b(1) + d.field_O;
                                 statePc = 659;
                                 continue scanLoop1;
                             }
@@ -10141,7 +10141,7 @@ final class e {
                     } catch (Throwable stateCaught_656) {
                         statePc = ((Object) stateCaught_656 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_656);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_656);
                         }
                         caughtException = stateCaught_656;
                         continue scanLoop1;
@@ -10149,7 +10149,7 @@ final class e {
                 }
                 case 659: {
                     try {
-                        this.field_C[var5].field_ib = true;
+                        this.units[var5].field_ib = true;
                         qd.$cfr$intArgs$a$e9dea5688aa5(126, 3);
                         if (var12 == 0) {
                             statePc = 668;
@@ -10160,7 +10160,7 @@ final class e {
                     } catch (Throwable stateCaught_659) {
                         statePc = ((Object) stateCaught_659 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_659);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_659);
                         }
                         caughtException = stateCaught_659;
                         continue scanLoop1;
@@ -10168,7 +10168,7 @@ final class e {
                 }
                 case 660: {
                     try {
-                        if (this.field_C[var5].field_P > 0) {
+                        if (this.units[var5].field_P > 0) {
                             statePc = 666;
                             continue scanLoop1;
                         } else {
@@ -10178,7 +10178,7 @@ final class e {
                                 {
                                 }
                                 {
-                                    this.field_C[var5].field_p = 26;
+                                    this.units[var5].field_p = 26;
                                     if (var12 == 0) {
                                         statePc = 668;
                                         continue scanLoop1;
@@ -10195,7 +10195,7 @@ final class e {
                     } catch (Throwable stateCaught_660) {
                         statePc = ((Object) stateCaught_660 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_660);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_660);
                         }
                         caughtException = stateCaught_660;
                         continue scanLoop1;
@@ -10203,13 +10203,13 @@ final class e {
                 }
                 case 666: {
                     try {
-                        this.field_C[var5].field_p = 0;
+                        this.units[var5].field_p = 0;
                         statePc = 668;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_666) {
                         statePc = ((Object) stateCaught_666 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_666);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_666);
                         }
                         caughtException = stateCaught_666;
                         continue scanLoop1;
@@ -10217,22 +10217,22 @@ final class e {
                 }
                 case 668: {
                     try {
-                        if (7 == this.field_C[var5].field_t) {
+                        if (7 == this.units[var5].field_t) {
                             statePc = 685;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 669. */
                             {
-                                if (this.field_C[var5].field_Z == null) {
+                                if (this.units[var5].field_Z == null) {
                                     /* Inlined CFG state: 674. */
                                     {
-                                        if (this.field_C[var5].field_d != 5) {
+                                        if (this.units[var5].field_d != 5) {
                                             statePc = 685;
                                             continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 675. */
                                             {
-                                                if (this.field_C[var5].field_S) {
+                                                if (this.units[var5].field_S) {
                                                     /* Inlined CFG state: 680. */
                                                     {
                                                         stackIn_681_0 = 0;
@@ -10272,7 +10272,7 @@ final class e {
                     } catch (Throwable stateCaught_668) {
                         statePc = ((Object) stateCaught_668 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_668);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_668);
                         }
                         caughtException = stateCaught_668;
                         continue scanLoop1;
@@ -10283,7 +10283,7 @@ final class e {
                         if (stackIn_681_0 == 1) {
                             /* Inlined CFG state: 684. */
                             {
-                                this.field_C[var5].field_d = 6;
+                                this.units[var5].field_d = 6;
                                 statePc = 685;
                                 continue scanLoop1;
                             }
@@ -10297,7 +10297,7 @@ final class e {
                     } catch (Throwable stateCaught_681) {
                         statePc = ((Object) stateCaught_681 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_681);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_681);
                         }
                         caughtException = stateCaught_681;
                         continue scanLoop1;
@@ -10305,13 +10305,13 @@ final class e {
                 }
                 case 685: {
                     try {
-                        stackIn_686_0 = this.field_C[var5];
+                        stackIn_686_0 = this.units[var5];
                         statePc = 686;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_685) {
                         statePc = ((Object) stateCaught_685 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_685);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_685);
                         }
                         caughtException = stateCaught_685;
                         continue scanLoop1;
@@ -10322,19 +10322,19 @@ final class e {
                         if (stackIn_686_0.field_P > 0) {
                             /* Inlined CFG state: 689. */
                             {
-                                if ((1 & this.field_h.a(112, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_i) <= 0) {
+                                if ((1 & this.map.a(112, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_i) <= 0) {
                                     statePc = 701;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 690. */
                                     {
-                                        if (this.field_h.a(-63, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_g % 4 == 0) {
+                                        if (this.map.a(-63, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_g % 4 == 0) {
                                             /* Inlined CFG state: 695. */
                                             {
-                                                dupTemp$4 = this.field_C[var5].field_c;
+                                                dupTemp$4 = this.units[var5].tile;
                                                 dupTemp$4.field_g = dupTemp$4.field_g + 3;
-                                                this.field_C[var5].field_c.a(1, true, -114);
-                                                if (24 <= this.field_C[var5].field_c.field_g) {
+                                                this.units[var5].tile.a(1, true, -114);
+                                                if (24 <= this.units[var5].tile.field_g) {
                                                     statePc = 699;
                                                 } else {
                                                     statePc = 696;
@@ -10366,7 +10366,7 @@ final class e {
                     } catch (Throwable stateCaught_686) {
                         statePc = ((Object) stateCaught_686 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_686);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_686);
                         }
                         caughtException = stateCaught_686;
                         continue scanLoop1;
@@ -10388,7 +10388,7 @@ final class e {
                     } catch (Throwable stateCaught_696) {
                         statePc = ((Object) stateCaught_696 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_696);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_696);
                         }
                         caughtException = stateCaught_696;
                         continue scanLoop1;
@@ -10402,7 +10402,7 @@ final class e {
                     } catch (Throwable stateCaught_699) {
                         statePc = ((Object) stateCaught_699 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_699);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_699);
                         }
                         caughtException = stateCaught_699;
                         continue scanLoop1;
@@ -10410,13 +10410,13 @@ final class e {
                 }
                 case 701: {
                     try {
-                        if ((this.field_h.a(param0 - 35, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_i & 2) <= 0) {
+                        if ((this.map.a(param0 - 35, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_i & 2) <= 0) {
                             statePc = 713;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 702. */
                             {
-                                if (0 != this.field_h.a(-124, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_k % 4) {
+                                if (0 != this.map.a(-124, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_k % 4) {
                                     statePc = 713;
                                     continue scanLoop1;
                                 } else {
@@ -10426,10 +10426,10 @@ final class e {
                                         {
                                         }
                                         {
-                                            dupTemp$5 = this.field_C[var5].field_c;
+                                            dupTemp$5 = this.units[var5].tile;
                                             dupTemp$5.field_k = dupTemp$5.field_k + 3;
-                                            this.field_C[var5].field_c.a(2, true, 81);
-                                            if (this.field_C[var5].field_c.field_k >= 24) {
+                                            this.units[var5].tile.a(2, true, 81);
+                                            if (this.units[var5].tile.field_k >= 24) {
                                                 statePc = 711;
                                             } else {
                                                 statePc = 706;
@@ -10443,7 +10443,7 @@ final class e {
                     } catch (Throwable stateCaught_701) {
                         statePc = ((Object) stateCaught_701 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_701);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_701);
                         }
                         caughtException = stateCaught_701;
                         continue scanLoop1;
@@ -10470,7 +10470,7 @@ final class e {
                     } catch (Throwable stateCaught_706) {
                         statePc = ((Object) stateCaught_706 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_706);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_706);
                         }
                         caughtException = stateCaught_706;
                         continue scanLoop1;
@@ -10484,7 +10484,7 @@ final class e {
                     } catch (Throwable stateCaught_711) {
                         statePc = ((Object) stateCaught_711 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_711);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_711);
                         }
                         caughtException = stateCaught_711;
                         continue scanLoop1;
@@ -10492,19 +10492,19 @@ final class e {
                 }
                 case 713: {
                     try {
-                        if ((4 & this.field_h.a(105, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_i) <= 0) {
+                        if ((4 & this.map.a(105, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_i) <= 0) {
                             statePc = 725;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 714. */
                             {
-                                if (this.field_h.a(127, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F + 1).field_g % 4 == 0) {
+                                if (this.map.a(127, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F + 1).field_g % 4 == 0) {
                                     /* Inlined CFG state: 719. */
                                     {
-                                        dupTemp$6 = this.field_h.a(param0 ^ -112, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F + 1);
+                                        dupTemp$6 = this.map.a(param0 ^ -112, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F + 1);
                                         dupTemp$6.field_g = dupTemp$6.field_g + 3;
-                                        this.field_h.a(98, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F + 1).a(1, true, -111);
-                                        if (this.field_h.a(-64, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F + 1).field_g < 24) {
+                                        this.map.a(98, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F + 1).a(1, true, -111);
+                                        if (this.map.a(-64, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F + 1).field_g < 24) {
                                             statePc = 723;
                                         } else {
                                             statePc = 720;
@@ -10528,7 +10528,7 @@ final class e {
                     } catch (Throwable stateCaught_713) {
                         statePc = ((Object) stateCaught_713 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_713);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_713);
                         }
                         caughtException = stateCaught_713;
                         continue scanLoop1;
@@ -10550,7 +10550,7 @@ final class e {
                     } catch (Throwable stateCaught_720) {
                         statePc = ((Object) stateCaught_720 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_720);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_720);
                         }
                         caughtException = stateCaught_720;
                         continue scanLoop1;
@@ -10564,7 +10564,7 @@ final class e {
                     } catch (Throwable stateCaught_723) {
                         statePc = ((Object) stateCaught_723 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_723);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_723);
                         }
                         caughtException = stateCaught_723;
                         continue scanLoop1;
@@ -10572,19 +10572,19 @@ final class e {
                 }
                 case 725: {
                     try {
-                        if ((this.field_h.a(param0 ^ 72, this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_i & 8) <= 0) {
+                        if ((this.map.a(param0 ^ 72, this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_i & 8) <= 0) {
                             statePc = 737;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 726. */
                             {
-                                if (this.field_h.a(param0 - 116, 1 + this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).field_k % 4 == 0) {
+                                if (this.map.a(param0 - 116, 1 + this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).field_k % 4 == 0) {
                                     /* Inlined CFG state: 731. */
                                     {
-                                        dupTemp$7 = this.field_h.a(91, this.field_C[var5].field_H + 1, this.field_C[var5].field_E, this.field_C[var5].field_F);
+                                        dupTemp$7 = this.map.a(91, this.units[var5].field_H + 1, this.units[var5].field_E, this.units[var5].field_F);
                                         dupTemp$7.field_k = dupTemp$7.field_k + 3;
-                                        this.field_h.a(86, 1 + this.field_C[var5].field_H, this.field_C[var5].field_E, this.field_C[var5].field_F).a(2, true, -113);
-                                        if (this.field_h.a(param0 - 78, this.field_C[var5].field_H + 1, this.field_C[var5].field_E, this.field_C[var5].field_F).field_k >= 24) {
+                                        this.map.a(86, 1 + this.units[var5].field_H, this.units[var5].field_E, this.units[var5].field_F).a(2, true, -113);
+                                        if (this.map.a(param0 - 78, this.units[var5].field_H + 1, this.units[var5].field_E, this.units[var5].field_F).field_k >= 24) {
                                             statePc = 735;
                                         } else {
                                             statePc = 732;
@@ -10608,7 +10608,7 @@ final class e {
                     } catch (Throwable stateCaught_725) {
                         statePc = ((Object) stateCaught_725 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_725);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_725);
                         }
                         caughtException = stateCaught_725;
                         continue scanLoop1;
@@ -10630,7 +10630,7 @@ final class e {
                     } catch (Throwable stateCaught_732) {
                         statePc = ((Object) stateCaught_732 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_732);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_732);
                         }
                         caughtException = stateCaught_732;
                         continue scanLoop1;
@@ -10644,7 +10644,7 @@ final class e {
                     } catch (Throwable stateCaught_735) {
                         statePc = ((Object) stateCaught_735 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_735);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_735);
                         }
                         caughtException = stateCaught_735;
                         continue scanLoop1;
@@ -10652,20 +10652,20 @@ final class e {
                 }
                 case 737: {
                     try {
-                        if (this.field_C[var5].field_C == 1) {
+                        if (this.units[var5].field_C == 1) {
                             statePc = 786;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 738. */
                             {
-                                if (this.field_C[var5].field_k) {
+                                if (this.units[var5].field_k) {
                                     /* Inlined CFG state: 743. */
                                     {
-                                        this.field_C[var5].field_h = true;
-                                        this.field_C[var5].field_i = this.field_C[var5].field_F;
-                                        this.field_C[var5].field_gb = this.field_C[var5].field_H;
-                                        this.field_C[var5].field_R = this.field_C[var5].field_E;
-                                        this.field_C[var5].field_k = false;
+                                        this.units[var5].field_h = true;
+                                        this.units[var5].field_i = this.units[var5].field_F;
+                                        this.units[var5].field_gb = this.units[var5].field_H;
+                                        this.units[var5].field_R = this.units[var5].field_E;
+                                        this.units[var5].field_k = false;
                                         statePc = 744;
                                         continue scanLoop1;
                                     }
@@ -10686,7 +10686,7 @@ final class e {
                     } catch (Throwable stateCaught_737) {
                         statePc = ((Object) stateCaught_737 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_737);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_737);
                         }
                         caughtException = stateCaught_737;
                         continue scanLoop1;
@@ -10710,7 +10710,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            this.field_C[var5].a((byte) -46, false);
+                                            this.units[var5].a((byte) -46, false);
                                             statePc = 750;
                                             continue scanLoop1;
                                         }
@@ -10721,7 +10721,7 @@ final class e {
                     } catch (Throwable stateCaught_744) {
                         statePc = ((Object) stateCaught_744 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_744);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_744);
                         }
                         caughtException = stateCaught_744;
                         continue scanLoop1;
@@ -10735,7 +10735,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 751. */
                             {
-                                if (this.field_q != this.field_C[var5]) {
+                                if (this.field_q != this.units[var5]) {
                                     statePc = 760;
                                     continue scanLoop1;
                                 } else {
@@ -10748,7 +10748,7 @@ final class e {
                                             if (ok.field_i) {
                                                 /* Inlined CFG state: 759. */
                                                 {
-                                                    this.field_C[var5].a((byte) -51, true);
+                                                    this.units[var5].a((byte) -51, true);
                                                     statePc = 760;
                                                     continue scanLoop1;
                                                 }
@@ -10772,7 +10772,7 @@ final class e {
                     } catch (Throwable stateCaught_750) {
                         statePc = ((Object) stateCaught_750 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_750);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_750);
                         }
                         caughtException = stateCaught_750;
                         continue scanLoop1;
@@ -10780,14 +10780,14 @@ final class e {
                 }
                 case 760: {
                     try {
-                        this.field_C[var5].field_k = false;
+                        this.units[var5].field_k = false;
                         var7 = 0;
                         statePc = 761;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_760) {
                         statePc = ((Object) stateCaught_760 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_760);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_760);
                         }
                         caughtException = stateCaught_760;
                         continue scanLoop1;
@@ -10795,7 +10795,7 @@ final class e {
                 }
                 case 761: {
                     try {
-                        if (~this.field_C.length >= ~var7) {
+                        if (~this.units.length >= ~var7) {
                             statePc = 782;
                             continue scanLoop1;
                         } else {
@@ -10803,7 +10803,7 @@ final class e {
                             {
                                 stackIn_865_0 = null;
                                 stackIn_763_0 = stackIn_865_0;
-                                stackIn_865_1 = this.field_C[var7];
+                                stackIn_865_1 = this.units[var7];
                                 stackIn_763_1 = stackIn_865_1;
                                 if (var12 != 0) {
                                     statePc = 865;
@@ -10821,7 +10821,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var7].field_C != 1) {
+                                                    if (this.units[var7].field_C != 1) {
                                                         statePc = 781;
                                                         continue scanLoop1;
                                                     } else {
@@ -10831,7 +10831,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (this.field_C[var7].field_P <= 0) {
+                                                                if (this.units[var7].field_P <= 0) {
                                                                     statePc = 781;
                                                                 } else {
                                                                     statePc = 770;
@@ -10850,7 +10850,7 @@ final class e {
                     } catch (Throwable stateCaught_761) {
                         statePc = ((Object) stateCaught_761 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_761);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_761);
                         }
                         caughtException = stateCaught_761;
                         continue scanLoop1;
@@ -10862,14 +10862,14 @@ final class e {
                         {
                         }
                         {
-                            if (this.field_h.a((byte) -93, this.field_C[var7], this.field_C[var5])) {
+                            if (this.map.a((byte) -93, this.units[var7], this.units[var5])) {
                                 /* Inlined CFG state: 777. */
                                 {
-                                    this.field_C[var5].field_k = true;
-                                    this.field_C[var5].field_h = true;
-                                    this.field_C[var5].field_i = this.field_C[var5].field_F;
-                                    this.field_C[var5].field_gb = this.field_C[var5].field_H;
-                                    this.field_C[var5].field_R = this.field_C[var5].field_E;
+                                    this.units[var5].field_k = true;
+                                    this.units[var5].field_h = true;
+                                    this.units[var5].field_i = this.units[var5].field_F;
+                                    this.units[var5].field_gb = this.units[var5].field_H;
+                                    this.units[var5].field_R = this.units[var5].field_E;
                                     statePc = 778;
                                     continue scanLoop1;
                                 }
@@ -10889,7 +10889,7 @@ final class e {
                     } catch (Throwable stateCaught_770) {
                         statePc = ((Object) stateCaught_770 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_770);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_770);
                         }
                         caughtException = stateCaught_770;
                         continue scanLoop1;
@@ -10897,16 +10897,16 @@ final class e {
                 }
                 case 778: {
                     try {
-                        if (!this.field_C[var5].field_db) {
+                        if (!this.units[var5].field_db) {
                             statePc = 781;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 779. */
                             {
-                                this.field_C[var5].field_h = true;
-                                this.field_C[var5].field_i = this.field_C[var5].field_F;
-                                this.field_C[var5].field_gb = this.field_C[var5].field_H;
-                                this.field_C[var5].field_R = this.field_C[var5].field_E;
+                                this.units[var5].field_h = true;
+                                this.units[var5].field_i = this.units[var5].field_F;
+                                this.units[var5].field_gb = this.units[var5].field_H;
+                                this.units[var5].field_R = this.units[var5].field_E;
                                 statePc = 781;
                                 continue scanLoop1;
                             }
@@ -10914,7 +10914,7 @@ final class e {
                     } catch (Throwable stateCaught_778) {
                         statePc = ((Object) stateCaught_778 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_778);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_778);
                         }
                         caughtException = stateCaught_778;
                         continue scanLoop1;
@@ -10932,7 +10932,7 @@ final class e {
                     } catch (Throwable stateCaught_781) {
                         statePc = ((Object) stateCaught_781 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_781);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_781);
                         }
                         caughtException = stateCaught_781;
                         continue scanLoop1;
@@ -10940,10 +10940,10 @@ final class e {
                 }
                 case 782: {
                     try {
-                        if (this.field_C[var5].field_k) {
+                        if (this.units[var5].field_k) {
                             /* Inlined CFG state: 785. */
                             {
-                                this.field_C[var5].field_h = false;
+                                this.units[var5].field_h = false;
                                 if (var12 == 0) {
                                     statePc = 829;
                                 } else {
@@ -10961,7 +10961,7 @@ final class e {
                     } catch (Throwable stateCaught_782) {
                         statePc = ((Object) stateCaught_782 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_782);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_782);
                         }
                         caughtException = stateCaught_782;
                         continue scanLoop1;
@@ -10969,7 +10969,7 @@ final class e {
                 }
                 case 786: {
                     try {
-                        if (this.field_C[var5].field_k) {
+                        if (this.units[var5].field_k) {
                             statePc = 792;
                             continue scanLoop1;
                         } else {
@@ -10979,7 +10979,7 @@ final class e {
                                 {
                                 }
                                 {
-                                    if (this.field_C[var5].field_t != 6) {
+                                    if (this.units[var5].field_t != 6) {
                                         statePc = 794;
                                         continue scanLoop1;
                                     } else {
@@ -10995,7 +10995,7 @@ final class e {
                     } catch (Throwable stateCaught_786) {
                         statePc = ((Object) stateCaught_786 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_786);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_786);
                         }
                         caughtException = stateCaught_786;
                         continue scanLoop1;
@@ -11003,17 +11003,17 @@ final class e {
                 }
                 case 792: {
                     try {
-                        this.field_C[var5].field_h = true;
-                        this.field_C[var5].field_i = this.field_C[var5].field_F;
-                        this.field_C[var5].field_gb = this.field_C[var5].field_H;
-                        this.field_C[var5].field_R = this.field_C[var5].field_E;
-                        this.field_C[var5].field_k = false;
+                        this.units[var5].field_h = true;
+                        this.units[var5].field_i = this.units[var5].field_F;
+                        this.units[var5].field_gb = this.units[var5].field_H;
+                        this.units[var5].field_R = this.units[var5].field_E;
+                        this.units[var5].field_k = false;
                         statePc = 794;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_792) {
                         statePc = ((Object) stateCaught_792 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_792);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_792);
                         }
                         caughtException = stateCaught_792;
                         continue scanLoop1;
@@ -11028,7 +11028,7 @@ final class e {
                     } catch (Throwable stateCaught_794) {
                         statePc = ((Object) stateCaught_794 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_794);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_794);
                         }
                         caughtException = stateCaught_794;
                         continue scanLoop1;
@@ -11036,7 +11036,7 @@ final class e {
                 }
                 case 795: {
                     try {
-                        if (this.field_C.length <= var8) {
+                        if (this.units.length <= var8) {
                             statePc = 823;
                             continue scanLoop1;
                         } else {
@@ -11044,7 +11044,7 @@ final class e {
                             {
                                 stackIn_865_0 = null;
                                 stackIn_797_0 = stackIn_865_0;
-                                stackIn_865_1 = this.field_C[var8];
+                                stackIn_865_1 = this.units[var8];
                                 stackIn_797_1 = stackIn_865_1;
                                 if (var12 != 0) {
                                     statePc = 865;
@@ -11062,7 +11062,7 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var8].field_C != 0) {
+                                                    if (this.units[var8].field_C != 0) {
                                                         statePc = 822;
                                                         continue scanLoop1;
                                                     } else {
@@ -11072,7 +11072,7 @@ final class e {
                                                             {
                                                             }
                                                             {
-                                                                if (this.field_C[var8].field_P > 0) {
+                                                                if (this.units[var8].field_P > 0) {
                                                                     statePc = 808;
                                                                 } else {
                                                                     statePc = 804;
@@ -11091,7 +11091,7 @@ final class e {
                     } catch (Throwable stateCaught_795) {
                         statePc = ((Object) stateCaught_795 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_795);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_795);
                         }
                         caughtException = stateCaught_795;
                         continue scanLoop1;
@@ -11109,7 +11109,7 @@ final class e {
                     } catch (Throwable stateCaught_804) {
                         statePc = ((Object) stateCaught_804 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_804);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_804);
                         }
                         caughtException = stateCaught_804;
                         continue scanLoop1;
@@ -11117,17 +11117,17 @@ final class e {
                 }
                 case 808: {
                     try {
-                        if (!this.field_h.a((byte) -93, this.field_C[var8], this.field_C[var5])) {
+                        if (!this.map.a((byte) -93, this.units[var8], this.units[var5])) {
                             statePc = 812;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 809. */
                             {
-                                this.field_C[var5].field_k = true;
-                                this.field_C[var5].field_h = true;
-                                this.field_C[var5].field_i = this.field_C[var5].field_F;
-                                this.field_C[var5].field_gb = this.field_C[var5].field_H;
-                                this.field_C[var5].field_R = this.field_C[var5].field_E;
+                                this.units[var5].field_k = true;
+                                this.units[var5].field_h = true;
+                                this.units[var5].field_i = this.units[var5].field_F;
+                                this.units[var5].field_gb = this.units[var5].field_H;
+                                this.units[var5].field_R = this.units[var5].field_E;
                                 if (var12 == 0) {
                                     statePc = 819;
                                     continue scanLoop1;
@@ -11143,7 +11143,7 @@ final class e {
                     } catch (Throwable stateCaught_808) {
                         statePc = ((Object) stateCaught_808 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_808);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_808);
                         }
                         caughtException = stateCaught_808;
                         continue scanLoop1;
@@ -11151,7 +11151,7 @@ final class e {
                 }
                 case 812: {
                     try {
-                        if (!this.field_C[var5].field_h) {
+                        if (!this.units[var5].field_h) {
                             statePc = 819;
                             continue scanLoop1;
                         } else {
@@ -11161,7 +11161,7 @@ final class e {
                                 {
                                 }
                                 {
-                                    if (!this.field_h.a(param0 + 10057, this.field_C[var5], this.field_C[var8], true)) {
+                                    if (!this.map.a(param0 + 10057, this.units[var5], this.units[var8], true)) {
                                         statePc = 819;
                                         continue scanLoop1;
                                     } else {
@@ -11183,7 +11183,7 @@ final class e {
                     } catch (Throwable stateCaught_812) {
                         statePc = ((Object) stateCaught_812 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_812);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_812);
                         }
                         caughtException = stateCaught_812;
                         continue scanLoop1;
@@ -11191,16 +11191,16 @@ final class e {
                 }
                 case 819: {
                     try {
-                        if (!this.field_C[var5].field_db) {
+                        if (!this.units[var5].field_db) {
                             statePc = 822;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 820. */
                             {
-                                this.field_C[var5].field_h = true;
-                                this.field_C[var5].field_i = this.field_C[var5].field_F;
-                                this.field_C[var5].field_gb = this.field_C[var5].field_H;
-                                this.field_C[var5].field_R = this.field_C[var5].field_E;
+                                this.units[var5].field_h = true;
+                                this.units[var5].field_i = this.units[var5].field_F;
+                                this.units[var5].field_gb = this.units[var5].field_H;
+                                this.units[var5].field_R = this.units[var5].field_E;
                                 statePc = 822;
                                 continue scanLoop1;
                             }
@@ -11208,7 +11208,7 @@ final class e {
                     } catch (Throwable stateCaught_819) {
                         statePc = ((Object) stateCaught_819 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_819);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_819);
                         }
                         caughtException = stateCaught_819;
                         continue scanLoop1;
@@ -11226,7 +11226,7 @@ final class e {
                     } catch (Throwable stateCaught_822) {
                         statePc = ((Object) stateCaught_822 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_822);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_822);
                         }
                         caughtException = stateCaught_822;
                         continue scanLoop1;
@@ -11234,7 +11234,7 @@ final class e {
                 }
                 case 823: {
                     try {
-                        if (this.field_C[var5].field_k) {
+                        if (this.units[var5].field_k) {
                             statePc = 827;
                             continue scanLoop1;
                         } else {
@@ -11255,7 +11255,7 @@ final class e {
                     } catch (Throwable stateCaught_823) {
                         statePc = ((Object) stateCaught_823 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_823);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_823);
                         }
                         caughtException = stateCaught_823;
                         continue scanLoop1;
@@ -11263,13 +11263,13 @@ final class e {
                 }
                 case 827: {
                     try {
-                        this.field_C[var5].field_h = false;
+                        this.units[var5].field_h = false;
                         statePc = 829;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_827) {
                         statePc = ((Object) stateCaught_827 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_827);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_827);
                         }
                         caughtException = stateCaught_827;
                         continue scanLoop1;
@@ -11287,7 +11287,7 @@ final class e {
                     } catch (Throwable stateCaught_829) {
                         statePc = ((Object) stateCaught_829 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_829);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_829);
                         }
                         caughtException = stateCaught_829;
                         continue scanLoop1;
@@ -11302,7 +11302,7 @@ final class e {
                     } catch (Throwable stateCaught_830) {
                         statePc = ((Object) stateCaught_830 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_830);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_830);
                         }
                         caughtException = stateCaught_830;
                         continue scanLoop1;
@@ -11310,7 +11310,7 @@ final class e {
                 }
                 case 831: {
                     try {
-                        if (stackIn_831_0 == ((e) (this)).field_K) {
+                        if (stackIn_831_0 == ((BattleState) (this)).field_K) {
                             statePc = 841;
                             continue scanLoop1;
                         } else {
@@ -11353,7 +11353,7 @@ final class e {
                     } catch (Throwable stateCaught_831) {
                         statePc = ((Object) stateCaught_831 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_831);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_831);
                         }
                         caughtException = stateCaught_831;
                         continue scanLoop1;
@@ -11376,7 +11376,7 @@ final class e {
                     } catch (Throwable stateCaught_841) {
                         statePc = ((Object) stateCaught_841 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_841);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_841);
                         }
                         caughtException = stateCaught_841;
                         continue scanLoop1;
@@ -11399,7 +11399,7 @@ final class e {
                     } catch (Throwable stateCaught_844) {
                         statePc = ((Object) stateCaught_844 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_844);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_844);
                         }
                         caughtException = stateCaught_844;
                         continue scanLoop1;
@@ -11414,7 +11414,7 @@ final class e {
                     } catch (Throwable stateCaught_847) {
                         statePc = ((Object) stateCaught_847 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_847);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_847);
                         }
                         caughtException = stateCaught_847;
                         continue scanLoop1;
@@ -11438,7 +11438,7 @@ final class e {
                                 } else {
                                     /* Inlined CFG state: 850. */
                                     {
-                                        if (stackIn_850_0 == ((e) (this)).field_F[var5]) {
+                                        if (stackIn_850_0 == ((BattleState) (this)).field_F[var5]) {
                                             statePc = 858;
                                             continue scanLoop1;
                                         } else {
@@ -11474,7 +11474,7 @@ final class e {
                     } catch (Throwable stateCaught_848) {
                         statePc = ((Object) stateCaught_848 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_848);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_848);
                         }
                         caughtException = stateCaught_848;
                         continue scanLoop1;
@@ -11488,7 +11488,7 @@ final class e {
                     } catch (Throwable stateCaught_857) {
                         statePc = ((Object) stateCaught_857 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_857);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_857);
                         }
                         caughtException = stateCaught_857;
                         continue scanLoop1;
@@ -11506,7 +11506,7 @@ final class e {
                     } catch (Throwable stateCaught_858) {
                         statePc = ((Object) stateCaught_858 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_858);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_858);
                         }
                         caughtException = stateCaught_858;
                         continue scanLoop1;
@@ -11520,7 +11520,7 @@ final class e {
                     } catch (Throwable stateCaught_859) {
                         statePc = ((Object) stateCaught_859 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_859);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_859);
                         }
                         caughtException = stateCaught_859;
                         continue scanLoop1;
@@ -11528,7 +11528,7 @@ final class e {
                 }
                 case 860: {
                     try {
-                        if (~var5 <= ~this.field_C.length) {
+                        if (~var5 <= ~this.units.length) {
                             statePc = 872;
                             continue scanLoop1;
                         } else {
@@ -11551,7 +11551,7 @@ final class e {
                     } catch (Throwable stateCaught_860) {
                         statePc = ((Object) stateCaught_860 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_860);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_860);
                         }
                         caughtException = stateCaught_860;
                         continue scanLoop1;
@@ -11560,13 +11560,13 @@ final class e {
                 case 864: {
                     try {
                         stackIn_865_0 = stackIn_864_0;
-                        stackIn_865_1 = ((e) (this)).field_C[var5];
+                        stackIn_865_1 = ((BattleState) (this)).units[var5];
                         statePc = 865;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_864) {
                         statePc = ((Object) stateCaught_864 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_864);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_864);
                         }
                         caughtException = stateCaught_864;
                         continue scanLoop1;
@@ -11577,10 +11577,10 @@ final class e {
                         if (stackIn_865_0 != stackIn_865_1) {
                             /* Inlined CFG state: 867. */
                             {
-                                if (this.field_C[var5].field_S) {
+                                if (this.units[var5].field_S) {
                                     /* Inlined CFG state: 870. */
                                     {
-                                        this.field_C[var5].a(var7 != 0, (byte) -127);
+                                        this.units[var5].a(var7 != 0, (byte) -127);
                                         var6 = 1;
                                         statePc = 871;
                                         continue scanLoop1;
@@ -11603,7 +11603,7 @@ final class e {
                     } catch (Throwable stateCaught_865) {
                         statePc = ((Object) stateCaught_865 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_865);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_865);
                         }
                         caughtException = stateCaught_865;
                         continue scanLoop1;
@@ -11621,7 +11621,7 @@ final class e {
                     } catch (Throwable stateCaught_871) {
                         statePc = ((Object) stateCaught_871 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_871);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_871);
                         }
                         caughtException = stateCaught_871;
                         continue scanLoop1;
@@ -11643,7 +11643,7 @@ final class e {
                     } catch (Throwable stateCaught_872) {
                         statePc = ((Object) stateCaught_872 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_872);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_872);
                         }
                         caughtException = stateCaught_872;
                         continue scanLoop1;
@@ -11654,7 +11654,7 @@ final class e {
                         if (this.field_w) {
                             /* Inlined CFG state: 877. */
                             {
-                                this.field_h.c((byte) -96);
+                                this.map.c((byte) -96);
                                 statePc = 878;
                                 continue scanLoop1;
                             }
@@ -11668,7 +11668,7 @@ final class e {
                     } catch (Throwable stateCaught_874) {
                         statePc = ((Object) stateCaught_874 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_874);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_874);
                         }
                         caughtException = stateCaught_874;
                         continue scanLoop1;
@@ -11693,7 +11693,7 @@ final class e {
                     } catch (Throwable stateCaught_878) {
                         statePc = ((Object) stateCaught_878 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_878);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_878);
                         }
                         caughtException = stateCaught_878;
                         continue scanLoop1;
@@ -11707,7 +11707,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 883. */
                             {
-                                stackIn_909_0 = this.field_C[var8];
+                                stackIn_909_0 = this.units[var8];
                                 stackIn_884_0 = stackIn_909_0;
                                 if (var12 != 0) {
                                     statePc = 909;
@@ -11725,10 +11725,10 @@ final class e {
                                                 {
                                                 }
                                                 {
-                                                    if (this.field_C[var8].field_Z != null) {
+                                                    if (this.units[var8].field_Z != null) {
                                                         /* Inlined CFG state: 892. */
                                                         {
-                                                            this.field_C[var8].field_ob = false;
+                                                            this.units[var8].field_ob = false;
                                                             statePc = 893;
                                                             continue scanLoop1;
                                                         }
@@ -11754,7 +11754,7 @@ final class e {
                     } catch (Throwable stateCaught_882) {
                         statePc = ((Object) stateCaught_882 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_882);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_882);
                         }
                         caughtException = stateCaught_882;
                         continue scanLoop1;
@@ -11772,7 +11772,7 @@ final class e {
                     } catch (Throwable stateCaught_893) {
                         statePc = ((Object) stateCaught_893 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_893);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_893);
                         }
                         caughtException = stateCaught_893;
                         continue scanLoop1;
@@ -11813,7 +11813,7 @@ final class e {
                     } catch (Throwable stateCaught_894) {
                         statePc = ((Object) stateCaught_894 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_894);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_894);
                         }
                         caughtException = stateCaught_894;
                         continue scanLoop1;
@@ -11827,7 +11827,7 @@ final class e {
                     } catch (Throwable stateCaught_901) {
                         statePc = ((Object) stateCaught_901 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_901);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_901);
                         }
                         caughtException = stateCaught_901;
                         continue scanLoop1;
@@ -11851,7 +11851,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            stackIn_909_0 = this.field_C[9];
+                                            stackIn_909_0 = this.units[9];
                                             statePc = 909;
                                             continue scanLoop1;
                                         }
@@ -11862,7 +11862,7 @@ final class e {
                     } catch (Throwable stateCaught_903) {
                         statePc = ((Object) stateCaught_903 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_903);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_903);
                         }
                         caughtException = stateCaught_903;
                         continue scanLoop1;
@@ -11876,7 +11876,7 @@ final class e {
                         } else {
                             /* Inlined CFG state: 910. */
                             {
-                                if (this.field_C[10].field_k) {
+                                if (this.units[10].field_k) {
                                     statePc = 922;
                                     continue scanLoop1;
                                 } else {
@@ -11886,7 +11886,7 @@ final class e {
                                         {
                                         }
                                         {
-                                            if (this.field_C[11].field_k) {
+                                            if (this.units[11].field_k) {
                                                 statePc = 922;
                                                 continue scanLoop1;
                                             } else {
@@ -11896,7 +11896,7 @@ final class e {
                                                     {
                                                     }
                                                     {
-                                                        if (this.field_C[6].field_P <= 0) {
+                                                        if (this.units[6].field_P <= 0) {
                                                             statePc = 922;
                                                             continue scanLoop1;
                                                         } else {
@@ -11906,7 +11906,7 @@ final class e {
                                                                 {
                                                                 }
                                                                 {
-                                                                    if (this.field_C[7].field_P > 0) {
+                                                                    if (this.units[7].field_P > 0) {
                                                                         statePc = 924;
                                                                     } else {
                                                                         statePc = 920;
@@ -11926,7 +11926,7 @@ final class e {
                     } catch (Throwable stateCaught_909) {
                         statePc = ((Object) stateCaught_909 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_909);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_909);
                         }
                         caughtException = stateCaught_909;
                         continue scanLoop1;
@@ -11939,7 +11939,7 @@ final class e {
                     } catch (Throwable stateCaught_920) {
                         statePc = ((Object) stateCaught_920 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_920);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_920);
                         }
                         caughtException = stateCaught_920;
                         continue scanLoop1;
@@ -11953,7 +11953,7 @@ final class e {
                     } catch (Throwable stateCaught_922) {
                         statePc = ((Object) stateCaught_922 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_922);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_922);
                         }
                         caughtException = stateCaught_922;
                         continue scanLoop1;
@@ -11967,7 +11967,7 @@ final class e {
                     } catch (Throwable stateCaught_924) {
                         statePc = ((Object) stateCaught_924 instanceof RuntimeException ? 926 : -1);
                         if (statePc == -1) {
-                            throw e.<RuntimeException>$cfr$sneakyThrow(stateCaught_924);
+                            throw BattleState.<RuntimeException>$cfr$sneakyThrow(stateCaught_924);
                         }
                         caughtException = stateCaught_924;
                         continue scanLoop1;
@@ -12011,7 +12011,7 @@ final class e {
         }
     }
 
-    e(Terraphoenix param0) {
+    BattleState(Terraphoenix param0) {
         Terraphoenix stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         Terraphoenix stackIn_8_0 = null;
@@ -12023,9 +12023,9 @@ final class e {
         ga stackIn_306_0 = null;
         int stackIn_333_0 = 0;
         int stackIn_333_1 = 0;
-        r stackIn_336_0 = null;
+        BattleUnit stackIn_336_0 = null;
         int stackIn_455_0 = 0;
-        r stackIn_528_0 = null;
+        BattleUnit stackIn_528_0 = null;
         int stackIn_563_0 = 0;
         int stackIn_639_0 = 0;
         Object stackIn_767_0 = null;
@@ -12049,12 +12049,12 @@ final class e {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        dl var17_ref_dl = null;
+        MapTile var17_ref_dl = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        dl var21 = null;
+        MapTile var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -12063,7 +12063,7 @@ final class e {
         this.field_F = new gi[50];
         this.field_w = false;
         this.field_n = null;
-        this.field_C = new r[100];
+        this.units = new BattleUnit[100];
         try {
           System.gc();
           this.field_i = 1;
@@ -12491,14 +12491,14 @@ final class e {
                 if (var24 != 0) {
                   while (true) {
                     if (stackIn_306_0 != null) {
-                      this.field_C[var15].field_F = var15 / 3 % 2 + (2 * (var15 % 3) + (this.field_h.field_b - 9));
-                      this.field_C[var15].field_H = this.field_h.field_e - 8 + var15 / 3;
-                      this.field_C[var15].field_E = 0;
-                      this.field_C[var15].field_U = 5;
-                      var17_ref_dl = this.field_h.a(-121, this.field_C[var15].field_H, this.field_C[var15].field_E, this.field_C[var15].field_F);
-                      var17_ref_dl.field_h = this.field_C[var15];
-                      this.field_C[var15].field_c = var17_ref_dl;
-                      this.field_q = this.field_C[var15];
+                      this.units[var15].field_F = var15 / 3 % 2 + (2 * (var15 % 3) + (this.map.field_b - 9));
+                      this.units[var15].field_H = this.map.field_e - 8 + var15 / 3;
+                      this.units[var15].field_E = 0;
+                      this.units[var15].field_U = 5;
+                      var17_ref_dl = this.map.a(-121, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
+                      var17_ref_dl.field_h = this.units[var15];
+                      this.units[var15].tile = var17_ref_dl;
+                      this.field_q = this.units[var15];
                       lg.field_c = (this.field_q.field_F + this.field_q.field_H) * 16;
                       eg.field_p = this.field_q.field_E;
                       sj.field_b = (this.field_q.field_F - this.field_q.field_H) * 32;
@@ -12510,7 +12510,7 @@ final class e {
                   }
                 }
                 if (stackIn_306_0 != null) {
-                  this.field_C[ak.field_q] = new r(param0.field_nb[var15]);
+                  this.units[ak.field_q] = new BattleUnit(param0.field_nb[var15]);
                   ak.field_q = ak.field_q + 1;
                 }
                 var15++;
@@ -12518,22 +12518,22 @@ final class e {
                   continue;
                 }
               }
-              this.field_h = new dk(this);
+              this.map = new LevelMap(this);
               if (param0.field_Bb == 0) {
                 var15 = 0;
-                this.field_C[var15].field_F = 3;
-                this.field_C[var15].field_H = 4;
-                this.field_C[var15].field_E = 0;
-                this.field_C[var15].field_U = 2;
-                var17_ref_dl = this.field_h.a(120, this.field_C[var15].field_H, this.field_C[var15].field_E, this.field_C[var15].field_F);
-                var17_ref_dl.field_h = this.field_C[var15];
-                this.field_C[var15].field_c = var17_ref_dl;
-                this.field_q = this.field_C[var15];
+                this.units[var15].field_F = 3;
+                this.units[var15].field_H = 4;
+                this.units[var15].field_E = 0;
+                this.units[var15].field_U = 2;
+                var17_ref_dl = this.map.a(120, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
+                var17_ref_dl.field_h = this.units[var15];
+                this.units[var15].tile = var17_ref_dl;
+                this.field_q = this.units[var15];
                 this.field_u = true;
-                this.field_C[1] = null;
-                this.field_C[2] = null;
+                this.units[1] = null;
+                this.units[2] = null;
                 eg.field_p = this.field_q.field_E;
-                this.field_C[3] = null;
+                this.units[3] = null;
                 lg.field_c = (this.field_q.field_F + this.field_q.field_H) * 16;
                 sj.field_b = (this.field_q.field_F - this.field_q.field_H) * 32;
               }
@@ -12545,48 +12545,48 @@ final class e {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
-                  if (null != this.field_C[var15] &&
-                    null != this.field_C[var15].field_Z) {
+                  if (null != this.units[var15] &&
+                    null != this.units[var15].field_Z) {
                     if (0 == var15) {
-                      this.field_C[var15].field_F = 42;
-                      this.field_C[var15].field_H = 31;
+                      this.units[var15].field_F = 42;
+                      this.units[var15].field_H = 31;
                     }
                     if (var15 == 1) {
-                      this.field_C[var15].field_F = 41;
-                      this.field_C[var15].field_H = 30;
+                      this.units[var15].field_F = 41;
+                      this.units[var15].field_H = 30;
                     }
                     if (var15 == 2) {
-                      this.field_C[var15].field_F = 41;
-                      this.field_C[var15].field_H = 28;
+                      this.units[var15].field_F = 41;
+                      this.units[var15].field_H = 28;
                     }
                     if (var15 == 3) {
-                      this.field_C[var15].field_F = 42;
-                      this.field_C[var15].field_H = 27;
+                      this.units[var15].field_F = 42;
+                      this.units[var15].field_H = 27;
                     }
                     if (var15 == 4) {
-                      this.field_C[var15].field_F = 44;
-                      this.field_C[var15].field_H = 31;
+                      this.units[var15].field_F = 44;
+                      this.units[var15].field_H = 31;
                     }
                     if (var15 == 5) {
-                      this.field_C[var15].field_F = 45;
-                      this.field_C[var15].field_H = 30;
+                      this.units[var15].field_F = 45;
+                      this.units[var15].field_H = 30;
                     }
                     if (6 == var15) {
-                      this.field_C[var15].field_F = 45;
-                      this.field_C[var15].field_H = 28;
+                      this.units[var15].field_F = 45;
+                      this.units[var15].field_H = 28;
                     }
                     if (var15 == 7) {
-                      this.field_C[var15].field_F = 44;
-                      this.field_C[var15].field_H = 27;
+                      this.units[var15].field_F = 44;
+                      this.units[var15].field_H = 27;
                     }
-                    this.field_C[var15].field_U = 6;
-                    this.field_C[var15].field_E = 0;
-                    var17_ref_dl = this.field_h.a(-75, this.field_C[var15].field_H, this.field_C[var15].field_E, this.field_C[var15].field_F);
-                    var17_ref_dl.field_h = this.field_C[var15];
+                    this.units[var15].field_U = 6;
+                    this.units[var15].field_E = 0;
+                    var17_ref_dl = this.map.a(-75, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
+                    var17_ref_dl.field_h = this.units[var15];
                     var17_ref_dl.field_j = -1;
                     var17_ref_dl.field_v = 0;
-                    this.field_C[var15].field_c = var17_ref_dl;
-                    this.field_q = this.field_C[var15];
+                    this.units[var15].tile = var17_ref_dl;
+                    this.field_q = this.units[var15];
                     eg.field_p = this.field_q.field_E;
                     lg.field_c = (this.field_q.field_F + this.field_q.field_H) * 16;
                     sj.field_b = (-this.field_q.field_H + this.field_q.field_F) * 32;
@@ -12607,22 +12607,22 @@ final class e {
                 13 == param0.field_Bb)))) {
                 var15 = 0;
                 while (12 > var15) {
-                  stackIn_336_0 = this.field_C[var15];
+                  stackIn_336_0 = this.units[var15];
                   if (var24 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
                   if (stackIn_336_0 != null) {
-                    stackIn_306_0 = this.field_C[var15].field_Z;
+                    stackIn_306_0 = this.units[var15].field_Z;
                     if (stackIn_306_0 != null) {
-                      this.field_C[var15].field_F = var15 / 3 % 2 + (2 * (var15 % 3) + (this.field_h.field_b - 9));
-                      this.field_C[var15].field_H = this.field_h.field_e - 8 + var15 / 3;
-                      this.field_C[var15].field_E = 0;
-                      this.field_C[var15].field_U = 5;
-                      var17_ref_dl = this.field_h.a(-121, this.field_C[var15].field_H, this.field_C[var15].field_E, this.field_C[var15].field_F);
-                      var17_ref_dl.field_h = this.field_C[var15];
-                      this.field_C[var15].field_c = var17_ref_dl;
-                      this.field_q = this.field_C[var15];
+                      this.units[var15].field_F = var15 / 3 % 2 + (2 * (var15 % 3) + (this.map.field_b - 9));
+                      this.units[var15].field_H = this.map.field_e - 8 + var15 / 3;
+                      this.units[var15].field_E = 0;
+                      this.units[var15].field_U = 5;
+                      var17_ref_dl = this.map.a(-121, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
+                      var17_ref_dl.field_h = this.units[var15];
+                      this.units[var15].tile = var17_ref_dl;
+                      this.field_q = this.units[var15];
                       lg.field_c = (this.field_q.field_F + this.field_q.field_H) * 16;
                       eg.field_p = this.field_q.field_E;
                       sj.field_b = (this.field_q.field_F - this.field_q.field_H) * 32;
@@ -12641,35 +12641,35 @@ final class e {
               var15 = 0;
               while (true) {
                 if (var15 < var6) {
-                  this.field_C[var16] = new r(7, param0.field_Bb);
+                  this.units[var16] = new BattleUnit(7, param0.field_Bb);
                   stackIn_333_0 = ~param0.field_Bb;
                   stackIn_333_1 = -2;
                   if (var24 == 0) {
                     if (stackIn_333_0 == stackIn_333_1) {
                       if (var15 == 0) {
-                        this.field_C[var16].field_F = 28;
-                        this.field_C[var16].field_H = 37;
-                        this.field_C[var16].field_U = 6;
+                        this.units[var16].field_F = 28;
+                        this.units[var16].field_H = 37;
+                        this.units[var16].field_U = 6;
                       }
                       if (1 == var15) {
-                        this.field_C[var16].field_F = 42;
-                        this.field_C[var16].field_H = 43;
-                        this.field_C[var16].field_U = 4;
+                        this.units[var16].field_F = 42;
+                        this.units[var16].field_H = 43;
+                        this.units[var16].field_U = 4;
                       }
                       if (2 == var15) {
-                        this.field_C[var16].field_F = 34;
-                        this.field_C[var16].field_H = 19;
-                        this.field_C[var16].field_U = 2;
+                        this.units[var16].field_F = 34;
+                        this.units[var16].field_H = 19;
+                        this.units[var16].field_U = 2;
                       }
                       if (var15 == 3) {
-                        this.field_C[var16].field_F = 27;
-                        this.field_C[var16].field_H = 21;
-                        this.field_C[var16].field_U = 4;
+                        this.units[var16].field_F = 27;
+                        this.units[var16].field_H = 21;
+                        this.units[var16].field_U = 4;
                       }
-                      this.field_C[var16].field_E = 0;
-                      var17_ref_dl = this.field_h.a(-49, this.field_C[var16].field_H, this.field_C[var16].field_E, this.field_C[var16].field_F);
-                      var17_ref_dl.field_h = this.field_C[var16];
-                      this.field_C[var16].field_c = var17_ref_dl;
+                      this.units[var16].field_E = 0;
+                      var17_ref_dl = this.map.a(-49, this.units[var16].field_H, this.units[var16].field_E, this.units[var16].field_F);
+                      var17_ref_dl.field_h = this.units[var16];
+                      this.units[var16].tile = var17_ref_dl;
                     }
                     var16++;
                     ak.field_q = ak.field_q + 1;
@@ -12685,16 +12685,16 @@ final class e {
               if (stackIn_333_0 != stackIn_333_1) {
                 break scanLoop15;
               }
-              stackIn_336_0 = this.field_C[0];
+              stackIn_336_0 = this.units[0];
             }
             stackIn_336_0.field_s = true;
             break;
           }
           if (12 == param0.field_Bb) {
-            this.field_C[0].field_s = true;
+            this.units[0].field_s = true;
           }
           if (param0.field_Bb == 13) {
-            this.field_C[0].field_s = true;
+            this.units[0].field_s = true;
           }
           var15 = 0;
           do {
@@ -12702,7 +12702,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(0, param0.field_Bb);
+            this.units[var16] = new BattleUnit(0, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12711,7 +12711,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(1, param0.field_Bb);
+            this.units[var16] = new BattleUnit(1, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12720,7 +12720,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(2, param0.field_Bb);
+            this.units[var16] = new BattleUnit(2, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12729,7 +12729,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(3, param0.field_Bb);
+            this.units[var16] = new BattleUnit(3, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12738,7 +12738,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(4, param0.field_Bb);
+            this.units[var16] = new BattleUnit(4, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12747,7 +12747,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(5, param0.field_Bb);
+            this.units[var16] = new BattleUnit(5, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12756,7 +12756,7 @@ final class e {
               var15 = 0;
               break;
             }
-            this.field_C[var16] = new r(6, param0.field_Bb);
+            this.units[var16] = new BattleUnit(6, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
@@ -12765,39 +12765,39 @@ final class e {
               var15 = var16 - 1;
               break;
             }
-            this.field_C[var16] = new r(9, param0.field_Bb);
+            this.units[var16] = new BattleUnit(9, param0.field_Bb);
             var16++;
             var15++;
           } while (var24 == 0);
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (!(var15 >= ak.field_q)))) {
-            stackIn_455_0 = ~this.field_C[var15].field_t;
+            stackIn_455_0 = ~this.units[var15].field_t;
             if (var24 == 0) {
               if (stackIn_455_0 != -5 &&
-                this.field_C[var15].field_t != 6) {
+                this.units[var15].field_t != 6) {
                 if (var10 <= 0) {
                   if (var9 <= 0) {
                     if (0 < var8) {
                       var8--;
-                      this.field_C[var15].field_z = 2;
+                      this.units[var15].field_z = 2;
                     }
                   } else {
-                    this.field_C[var15].field_z = 3;
+                    this.units[var15].field_z = 3;
                     var9--;
                   }
                 } else {
-                  this.field_C[var15].field_z = 4;
+                  this.units[var15].field_z = 4;
                   var10--;
                 }
                 if (param0.field_Bb == 3 &&
-                  this.field_C[var15].field_t == 1 &&
+                  this.units[var15].field_t == 1 &&
                   param0.field_ub == 2) {
-                  this.field_C[var15].field_z = 2;
+                  this.units[var15].field_z = 2;
                 }
                 if (param0.field_Bb == 3 &&
-                  this.field_C[var15].field_t == 1 &&
+                  this.units[var15].field_t == 1 &&
                   param0.field_ub == 1) {
-                  this.field_C[var15].field_z = 1;
+                  this.units[var15].field_z = 1;
                 }
               }
               var15--;
@@ -12811,87 +12811,87 @@ final class e {
           var17 = stackIn_455_0;
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var15 >= this.field_C.length))) {
+          while (!(decompiledNaturalLoopExit0 = (var15 >= this.units.length))) {
             stackIn_767_0 = null;
             if (var24 == 0) {
-              if (stackIn_767_0 != this.field_C[var15] &&
-                this.field_C[var15].field_Z == null &&
-                this.field_C[var15].field_c == null) {
+              if (stackIn_767_0 != this.units[var15] &&
+                this.units[var15].field_Z == null &&
+                this.units[var15].tile == null) {
                 var17 = 0;
                 if (0 == param0.field_Bb) {
                   var17 = 2;
                 }
                 if (param0.field_Bb == 1 &&
-                  this.field_C[var15].field_t == 0) {
+                  this.units[var15].field_t == 0) {
                   var17 = 1;
                 }
                 if (param0.field_Bb == 11) {
                   var17 = 1;
                 }
-                if (this.field_C[var15].field_z == 0 &&
+                if (this.units[var15].field_z == 0 &&
                   var11 > 0) {
                   var11--;
                   var17 = 1;
                 }
-                if (this.field_C[var15].field_t == 9) {
+                if (this.units[var15].field_t == 9) {
                   var17 = 1;
                 }
                 if (0 == var17) {
-                  if (0 == this.field_C[var15].field_C) {
-                    this.field_C[var15].field_z = 0;
+                  if (0 == this.units[var15].field_C) {
+                    this.units[var15].field_z = 0;
                   }
-                  if (this.field_C[var15].field_z == 0 &&
-                    this.field_C[var15].field_t > 0 &&
-                    this.field_C[var15].field_C == 1 && (param0.field_Bb == 4 ||
+                  if (this.units[var15].field_z == 0 &&
+                    this.units[var15].field_t > 0 &&
+                    this.units[var15].field_C == 1 && (param0.field_Bb == 4 ||
                     6 == param0.field_Bb ||
                     param0.field_Bb == 8 ||
                     param0.field_Bb == 10) && 50.0 > Math.random() * 100.0) {
-                    this.field_C[var15].field_z = 1;
+                    this.units[var15].field_z = 1;
                   }
-                  this.field_C[var15].field_U = (int)(8.0 * Math.random());
+                  this.units[var15].field_U = (int)(8.0 * Math.random());
                   var23 = 0;
                   while (true) {
-                    var18 = (int)(Math.random() * (double)this.field_h.field_b / 2.0) + this.field_h.field_b / 4;
+                    var18 = (int)(Math.random() * (double)this.map.field_b / 2.0) + this.map.field_b / 4;
                     var23++;
-                    var19 = (int)(Math.random() * (double)this.field_h.field_e / 2.0) + this.field_h.field_e / 4;
-                    if (this.field_C[var15].field_t >= 1 &&
-                      6 >= this.field_C[var15].field_t) {
-                      var18 = 2 + (int)(Math.random() * (double)(-4 + this.field_h.field_b));
-                      var19 = (int)(Math.random() * (double)(-4 + this.field_h.field_e)) + 2;
+                    var19 = (int)(Math.random() * (double)this.map.field_e / 2.0) + this.map.field_e / 4;
+                    if (this.units[var15].field_t >= 1 &&
+                      6 >= this.units[var15].field_t) {
+                      var18 = 2 + (int)(Math.random() * (double)(-4 + this.map.field_b));
+                      var19 = (int)(Math.random() * (double)(-4 + this.map.field_e)) + 2;
                     }
                     if (9 == param0.field_Bb) {
-                      var18 = 2 + (int)(Math.random() * (double)(-4 + this.field_h.field_b));
-                      var19 = (int)(Math.random() * (double)(this.field_h.field_e - 4)) + 2;
+                      var18 = 2 + (int)(Math.random() * (double)(-4 + this.map.field_b));
+                      var19 = (int)(Math.random() * (double)(this.map.field_e - 4)) + 2;
                     }
                     var20 = 0;
-                    stackIn_528_0 = this.field_C[var15];
+                    stackIn_528_0 = this.units[var15];
                     if (stackIn_528_0.field_t != 0 &&
-                      this.field_C[var15].field_t != 7 &&
-                      9 != this.field_C[var15].field_t) {
-                      var21 = this.field_h.a(-118, var19, var20, var18);
+                      this.units[var15].field_t != 7 &&
+                      9 != this.units[var15].field_t) {
+                      var21 = this.map.a(-118, var19, var20, var18);
                       if (var21.field_C != null &&
-                        this.field_C[var15].field_z >= 2) {
+                        this.units[var15].field_z >= 2) {
                         var20++;
-                        var21 = this.field_h.a(-51, var19, var20, var18);
+                        var21 = this.map.a(-51, var19, var20, var18);
                       }
                       if (null != var21.field_C &&
-                        3 <= this.field_C[var15].field_z) {
+                        3 <= this.units[var15].field_z) {
                         var20++;
-                        var21 = this.field_h.a(-48, var19, var20, var18);
+                        var21 = this.map.a(-48, var19, var20, var18);
                       }
                       if (var21.field_C != null &&
-                        this.field_C[var15].field_z == 4) {
+                        this.units[var15].field_z == 4) {
                         var20++;
-                        var21 = this.field_h.a(102, var19, var20, var18);
+                        var21 = this.map.a(102, var19, var20, var18);
                       }
                       if (null != var21.field_C &&
-                        this.field_C[var15].field_z == 4) {
+                        this.units[var15].field_z == 4) {
                         var20++;
-                        var21 = this.field_h.a(-63, var19, var20, var18);
+                        var21 = this.map.a(-63, var19, var20, var18);
                       }
-                      stackIn_563_0 = (this.field_h.a(var18, false, var20, var19)) ? 0 : 1;
+                      stackIn_563_0 = (this.map.a(var18, false, var20, var19)) ? 0 : 1;
                       var22 = stackIn_563_0;
-                      if ((this.field_C[var15].field_z - 1) > var21.field_r) {
+                      if ((this.units[var15].field_z - 1) > var21.field_r) {
                         var22 = 0;
                       }
                       if (4 != var21.field_b &&
@@ -12899,52 +12899,52 @@ final class e {
                         var22 = 0;
                       }
                     } else {
-                      var21 = this.field_h.a(124, var19, var20, var18);
+                      var21 = this.map.a(124, var19, var20, var18);
                       if (var21.field_C != null &&
-                        this.field_C[var15].field_z >= 2) {
+                        this.units[var15].field_z >= 2) {
                         var20++;
-                        var21 = this.field_h.a(-32, var19, var20, var18);
+                        var21 = this.map.a(-32, var19, var20, var18);
                       }
                       if (var21.field_C != null &&
-                        this.field_C[var15].field_z >= 3) {
+                        this.units[var15].field_z >= 3) {
                         var20++;
-                        var21 = this.field_h.a(114, var19, var20, var18);
+                        var21 = this.map.a(114, var19, var20, var18);
                       }
                       if (null != var21.field_C &&
-                        this.field_C[var15].field_z == 4) {
+                        this.units[var15].field_z == 4) {
                         var20++;
-                        var21 = this.field_h.a(-36, var19, var20, var18);
+                        var21 = this.map.a(-36, var19, var20, var18);
                       }
                       if (null != var21.field_C &&
-                        this.field_C[var15].field_z == 4) {
+                        this.units[var15].field_z == 4) {
                         var20++;
-                        var21 = this.field_h.a(-111, var19, var20, var18);
+                        var21 = this.map.a(-111, var19, var20, var18);
                       }
                       if (var23 > 1000 &&
-                        this.field_C[var15].field_z == 4) {
-                        this.field_C[var15].field_z = 3;
+                        this.units[var15].field_z == 4) {
+                        this.units[var15].field_z = 3;
                       }
                       if (1250 < var23 &&
-                        this.field_C[var15].field_z == 3) {
-                        this.field_C[var15].field_z = 2;
+                        this.units[var15].field_z == 3) {
+                        this.units[var15].field_z = 2;
                       }
                       if (var23 > 1500 &&
-                        2 == this.field_C[var15].field_z) {
-                        this.field_C[var15].field_z = 0;
+                        2 == this.units[var15].field_z) {
+                        this.units[var15].field_z = 0;
                       }
                       if (var21.field_C != null &&
                         param0.field_db &&
                         Math.random() * 100.0 < 75.0) {
                         var20++;
-                        var21 = this.field_h.a(88, var19, var20, var18);
+                        var21 = this.map.a(88, var19, var20, var18);
                       }
                       if (var21.field_C != null &&
                         param0.field_db &&
                         75.0 > Math.random() * 100.0) {
                         var20++;
-                        var21 = this.field_h.a(124, var19, var20, var18);
+                        var21 = this.map.a(124, var19, var20, var18);
                       }
-                      stackIn_639_0 = (this.field_h.a(var18, false, var20, var19)) ? 0 : 1;
+                      stackIn_639_0 = (this.map.a(var18, false, var20, var19)) ? 0 : 1;
                       var22 = stackIn_639_0;
                       if (param0.field_db &&
                         6 == var21.field_b) {
@@ -12958,12 +12958,12 @@ final class e {
                         var21.field_b == 0) {
                         var22 = 0;
                       }
-                      if ((-1 + this.field_C[var15].field_z) > var21.field_r &&
-                        this.field_C[var15].field_z < 4) {
+                      if ((-1 + this.units[var15].field_z) > var21.field_r &&
+                        this.units[var15].field_z < 4) {
                         var22 = 0;
                       }
-                      if (this.field_C[var15].field_z > var21.field_r &&
-                        this.field_C[var15].field_z == 4) {
+                      if (this.units[var15].field_z > var21.field_r &&
+                        this.units[var15].field_z == 4) {
                         var22 = 0;
                       }
                       if (var21.field_b == 3) {
@@ -12982,23 +12982,23 @@ final class e {
                     if (var22 == 0) {
                       continue;
                     }
-                    this.field_C[var15].field_F = var18;
-                    this.field_C[var15].field_H = var19;
-                    this.field_C[var15].field_E = var20;
-                    var21 = this.field_h.a(-119, var19, var20, var18);
-                    var21.field_h = this.field_C[var15];
-                    stackIn_528_0 = this.field_C[var15];
-                    stackIn_528_0.field_c = var21;
+                    this.units[var15].field_F = var18;
+                    this.units[var15].field_H = var19;
+                    this.units[var15].field_E = var20;
+                    var21 = this.map.a(-119, var19, var20, var18);
+                    var21.field_h = this.units[var15];
+                    stackIn_528_0 = this.units[var15];
+                    stackIn_528_0.tile = var21;
                     break;
                   }
                 }
                 if (1 == var17) {
-                  this.field_C[var15].field_U = (int)(8.0 * Math.random());
-                  this.field_C[var15].field_z = 0;
+                  this.units[var15].field_U = (int)(8.0 * Math.random());
+                  this.units[var15].field_z = 0;
                   scanLoop17: while (true) {
                     var20 = (int)(Math.random() * 4.0);
-                    var18 = (int)(Math.random() * (double)(-6 + this.field_h.field_b)) + 3;
-                    var19 = 3 + (int)(Math.random() * (double)(-6 + this.field_h.field_e));
+                    var18 = (int)(Math.random() * (double)(-6 + this.map.field_b)) + 3;
+                    var19 = 3 + (int)(Math.random() * (double)(-6 + this.map.field_e));
                     if (param0.field_Bb == 1) {
                       var20 = 0;
                     }
@@ -13011,36 +13011,36 @@ final class e {
                           var19 = (int)(2.0 + Math.random() * 3.0);
                         }
                         if (3 == var20) {
-                          var19 = this.field_h.field_e - (int)(3.0 * Math.random() + 2.0);
+                          var19 = this.map.field_e - (int)(3.0 * Math.random() + 2.0);
                         }
-                        if (this.field_h.a(var18, false, 0, var19)) {
+                        if (this.map.a(var18, false, 0, var19)) {
                           continue scanLoop17;
                         }
-                        this.field_C[var15].field_F = var18;
-                        this.field_C[var15].field_H = var19;
-                        this.field_h.field_f[var18][var19].field_h = this.field_C[var15];
+                        this.units[var15].field_F = var18;
+                        this.units[var15].field_H = var19;
+                        this.map.tiles[var18][var19].field_h = this.units[var15];
                         break scanLoop17;
                       }
                     }
                     while (true) {
-                      var18 = this.field_h.field_b - (int)(3.0 * Math.random() + 2.0);
+                      var18 = this.map.field_b - (int)(3.0 * Math.random() + 2.0);
                       if (var20 == 2) {
                         var19 = (int)(2.0 + Math.random() * 3.0);
                       }
                       if (3 == var20) {
-                        var19 = this.field_h.field_e - (int)(3.0 * Math.random() + 2.0);
+                        var19 = this.map.field_e - (int)(3.0 * Math.random() + 2.0);
                       }
-                      if (this.field_h.a(var18, false, 0, var19)) {
+                      if (this.map.a(var18, false, 0, var19)) {
                         continue scanLoop17;
                       }
-                      this.field_C[var15].field_F = var18;
-                      this.field_C[var15].field_H = var19;
-                      this.field_h.field_f[var18][var19].field_h = this.field_C[var15];
+                      this.units[var15].field_F = var18;
+                      this.units[var15].field_H = var19;
+                      this.map.tiles[var18][var19].field_h = this.units[var15];
                       break;
                     }
                     break;
                   }
-                  this.field_C[var15].field_c = this.field_h.field_f[var18][var19];
+                  this.units[var15].tile = this.map.tiles[var18][var19];
                 }
                 if (2 == var17) {
                   var18 = 0;
@@ -13049,11 +13049,11 @@ final class e {
                   if (~var15 == ~(0 + ak.field_q)) {
                     var19 = 16;
                     var20 = 0;
-                    this.field_C[var15].field_nb = new oh(2);
+                    this.units[var15].field_nb = new oh(2);
                     var18 = 20;
                   }
                   if (ak.field_q + 1 == var15) {
-                    this.field_C[var15].field_nb = new oh(2);
+                    this.units[var15].field_nb = new oh(2);
                     var19 = 20;
                     var18 = 19;
                     var20 = 0;
@@ -13062,34 +13062,34 @@ final class e {
                     var20 = 0;
                     var18 = 26;
                     var19 = 21;
-                    this.field_C[var15].field_nb = new oh(1);
+                    this.units[var15].field_nb = new oh(1);
                   }
                   if (~(ak.field_q + 3) == ~var15) {
                     var20 = 0;
                     var18 = 27;
-                    this.field_C[var15].field_nb = new oh(1);
+                    this.units[var15].field_nb = new oh(1);
                     var19 = 18;
                   }
                   if (4 + ak.field_q == var15) {
                     var20 = 0;
                     var19 = 30;
-                    this.field_C[var15].field_nb = new oh(0);
+                    this.units[var15].field_nb = new oh(0);
                     var18 = 28;
                   }
                   if (var15 == ak.field_q + 5) {
-                    this.field_C[var15].field_nb = new oh(1);
+                    this.units[var15].field_nb = new oh(1);
                     var19 = 33;
                     var20 = 0;
                     var18 = 27;
                   }
                   if (var15 == ak.field_q + 6) {
                     var19 = 31;
-                    this.field_C[var15].field_nb = new oh(1);
+                    this.units[var15].field_nb = new oh(1);
                     var20 = 0;
                     var18 = 29;
                   }
                   if (~(7 + ak.field_q) == ~var15) {
-                    this.field_C[var15].field_nb = new oh(3);
+                    this.units[var15].field_nb = new oh(3);
                     var20 = 0;
                     var18 = 25;
                     var19 = 5;
@@ -13097,11 +13097,11 @@ final class e {
                   if (var15 == ak.field_q + 8) {
                     var18 = 26;
                     var19 = 5;
-                    this.field_C[var15].field_nb = new oh(1);
+                    this.units[var15].field_nb = new oh(1);
                     var20 = 0;
                   }
                   if (~var15 == ~(ak.field_q + 9)) {
-                    this.field_C[var15].field_nb = new oh(3);
+                    this.units[var15].field_nb = new oh(3);
                     var20 = 0;
                     var18 = 27;
                     var19 = 5;
@@ -13110,10 +13110,10 @@ final class e {
                     var19 = 37;
                     var20 = 0;
                     var18 = 2;
-                    this.field_C[var15].field_nb = new oh(2);
+                    this.units[var15].field_nb = new oh(2);
                   }
                   if (var15 == ak.field_q + 11) {
-                    this.field_C[var15].field_nb = new oh(2);
+                    this.units[var15].field_nb = new oh(2);
                     var18 = 3;
                     var20 = 0;
                     var19 = 38;
@@ -13122,21 +13122,21 @@ final class e {
                     var18 = 29;
                     var19 = 2;
                     var20 = 0;
-                    this.field_C[var15].field_nb = new oh(2);
+                    this.units[var15].field_nb = new oh(2);
                   }
                   if (13 + ak.field_q == var15) {
                     var20 = 0;
                     var18 = 29;
-                    this.field_C[var15].field_nb = new oh(2);
+                    this.units[var15].field_nb = new oh(2);
                     var19 = 1;
                   }
-                  this.field_C[var15].field_F = var18;
-                  this.field_C[var15].field_H = var19;
-                  this.field_C[var15].field_E = var20;
-                  var21 = this.field_h.a(-125, var19, var20, var18);
-                  var21.field_h = this.field_C[var15];
-                  this.field_C[var15].field_c = var21;
-                  this.field_C[var15].field_U = 6;
+                  this.units[var15].field_F = var18;
+                  this.units[var15].field_H = var19;
+                  this.units[var15].field_E = var20;
+                  var21 = this.map.a(-125, var19, var20, var18);
+                  var21.field_h = this.units[var15];
+                  this.units[var15].tile = var21;
+                  this.units[var15].field_U = 6;
                 }
               }
               var15++;

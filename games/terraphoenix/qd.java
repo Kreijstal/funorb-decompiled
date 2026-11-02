@@ -8,7 +8,7 @@ final class qd extends IntrusiveNode {
     short[] field_p;
     gm[] field_q;
     byte[] field_m;
-    gg[] field_n;
+    PcmSample[] field_n;
     int field_k;
     byte[] field_r;
     static volatile int field_i;
@@ -31,8 +31,8 @@ final class qd extends IntrusiveNode {
           var5.k(-17410, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.i(1, -95);
-          var5.i(param2.field_l, -110);
+          var5.writeByte(1, -95);
+          var5.writeByte(param2.field_l, -110);
           var5.a((byte) -107, param2.field_s);
           var5.e(param2.field_i, param1 ^ -15940);
           var5.e(param2.field_m, 8959);
@@ -61,7 +61,7 @@ final class qd extends IntrusiveNode {
           return;
         }
         if (GameApplet.field_g[param1] != null) {
-          gb.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
+          WidgetContainer.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
         }
     }
 
@@ -105,7 +105,7 @@ final class qd extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_n[var8] = (gg) (var7);
+                  this.field_n[var8] = (PcmSample) (var7);
                   this.field_o[var8] = 0;
                 }
               }
@@ -337,7 +337,7 @@ final class qd extends IntrusiveNode {
           this.field_q = new gm[128];
           this.field_p = new short[128];
           this.field_o = new int[128];
-          this.field_n = new gg[128];
+          this.field_n = new PcmSample[128];
           this.field_r = new byte[128];
           this.field_m = new byte[128];
           var38 = new PacketBuffer(param0);
@@ -730,7 +730,7 @@ final class qd extends IntrusiveNode {
           return;
         }
         if (GameApplet.field_g[param1] != null) {
-          gb.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
+          WidgetContainer.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
         }
     }
 }

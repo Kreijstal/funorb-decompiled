@@ -323,7 +323,7 @@ abstract class ei extends kh {
           var8Lifetime1++;
         }
         hd.field_o.b(this.field_p + param0 - 90, 10 + param1);
-        gd.a(param1 + 35, e.field_p, 5 + param0, 121, this.field_p - 10);
+        gd.a(param1 + 35, BattleState.field_p, 5 + param0, 121, this.field_p - 10);
         gd.a(-22 + (this.field_n + param1), qb.field_f, param0, 126, this.field_p);
         var4Lifetime2 = this.field_n - 79;
         var5Lifetime2 = 169;
@@ -408,7 +408,7 @@ abstract class ei extends kh {
           var2_int = -124 % ((param0 - 26) / 49);
           if (vc.field_a.a(-71) &&
             !param1.equals(vc.field_a.b(-110))) {
-            vc.field_a = gl.b(param1, 20);
+            vc.field_a = UiWidget.b(param1, 20);
           }
           stackIn_5_0 = vc.field_a;
           return stackIn_5_0;

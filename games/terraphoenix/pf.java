@@ -18,7 +18,7 @@ final class pf {
         }
     }
 
-    final static void a(e param0, byte param1, int param2, int param3) {
+    final static void a(BattleState param0, byte param1, int param2, int param3) {
         try {
           if (param1 != 71) {
             pf.a(-67);

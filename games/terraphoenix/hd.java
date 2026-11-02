@@ -10,7 +10,7 @@ final class hd extends IntrusiveNode {
     static int field_h;
     static String field_m;
     static int field_i;
-    static jj field_p;
+    static IntrusiveDeque field_p;
     static Sprite field_o;
 
     public static void c(byte param0) {
@@ -34,6 +34,6 @@ final class hd extends IntrusiveNode {
         field_j = "Updates will sent to the email address you've given";
         field_m = "Back to Mission Selection";
         field_k = "Player";
-        field_p = new jj();
+        field_p = new IntrusiveDeque();
     }
 }

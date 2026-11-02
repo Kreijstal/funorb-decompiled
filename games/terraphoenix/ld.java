@@ -496,7 +496,7 @@ abstract class ld {
                         if (param2.field_I > 0 &&
                           null != param2.field_f) {
                           dupTemp$0 = param2.field_f[var8];
-                          dk.field_c[dupTemp$0] = dk.field_c[dupTemp$0] + 1;
+                          LevelMap.field_c[dupTemp$0] = LevelMap.field_c[dupTemp$0] + 1;
                         }
                         ae.field_I = ae.field_I + 1;
                         break;
@@ -520,9 +520,9 @@ abstract class ld {
             null != param2.field_f) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(dk.field_c.length <= var9Lifetime1)) {
-              var10Lifetime1 = dk.field_c[var9Lifetime1];
-              dk.field_c[var9Lifetime1] = var8Lifetime1;
+            while (!(LevelMap.field_c.length <= var9Lifetime1)) {
+              var10Lifetime1 = LevelMap.field_c[var9Lifetime1];
+              LevelMap.field_c[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

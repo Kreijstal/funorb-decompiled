@@ -20,8 +20,8 @@ final class fj {
         this.field_h = new int[this.field_j];
         this.field_k = new int[this.field_j];
         for (var2 = 0; var2 < this.field_j; var2++) {
-          this.field_h[var2] = param0.i(-25578);
-          this.field_k[var2] = param0.i(-25578);
+          this.field_h[var2] = param0.readUnsignedShort(-25578);
+          this.field_k[var2] = param0.readUnsignedShort(-25578);
         }
     }
 

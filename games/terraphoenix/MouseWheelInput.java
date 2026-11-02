@@ -94,16 +94,16 @@ abstract class MouseWheelInput {
         uc var2 = null;
         ji var1 = (ji) (vc.field_d.d(9272));
         if (var1 == null) {
-          gb.g(-17464);
+          WidgetContainer.g(-17464);
           return;
         }
         if (param0 < -125) {
-          var2 = mk.field_j;
+          var2 = LevelEditor.field_j;
           var2.f((byte) -107);
           var2.f((byte) -107);
           var2.f((byte) -107);
           var2.f((byte) -107);
-          var1.b((byte) 12);
+          var1.unlink((byte) 12);
           return;
         }
     }

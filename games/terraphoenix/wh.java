@@ -50,7 +50,7 @@ final class wh implements Runnable {
           synchronized (var5) {
             var6 = (ma) (this.field_c.c(param2 ^ 8194));
             while (var6 != null) {
-              if (var6.field_m == (long)param1 &&
+              if (var6.secondaryKey == (long)param1 &&
                 param0 == var6.field_F &&
                 2 == var6.field_H) {
                 var4.field_G = var6.field_G;
@@ -96,7 +96,7 @@ final class wh implements Runnable {
           var4 = new ma();
           var4.field_x = false;
           var4.field_F = param2;
-          var4.field_m = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_H = 3;
           var5 = 97 / ((param0 + 11) / 47);
           this.a(28366, var4);
@@ -151,7 +151,7 @@ final class wh implements Runnable {
             try {
               boolean decompiledFrameRemainder0 = true;
               if (2 == var7.field_H) {
-                var7.field_F.a((int)var7.field_m, var7.field_G, 0, var7.field_G.length);
+                var7.field_F.a((int)var7.secondaryKey, var7.field_G, 0, var7.field_G.length);
                 var7.field_A = false;
               } else {
                 if (var7.field_H != 3) {
@@ -159,7 +159,7 @@ final class wh implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_G = var7.field_F.a(-18342, (int)var7.field_m);
+                  var7.field_G = var7.field_F.a(-18342, (int)var7.secondaryKey);
                   var7.field_A = false;
                 }
               }
@@ -214,14 +214,14 @@ final class wh implements Runnable {
           if (mh.field_b != null) {
             try {
               mh.field_b.a(false, 0L);
-              mh.field_b.a(-1, 24, mk.field_j.payload, mk.field_j.position);
+              mh.field_b.a(-1, 24, LevelEditor.field_j.payload, LevelEditor.field_j.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
             }
           }
           var1 = -15 % ((param0 - 58) / 35);
-          mk.field_j.position = mk.field_j.position + 24;
+          LevelEditor.field_j.position = LevelEditor.field_j.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -241,7 +241,7 @@ final class wh implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new ma();
-          var5.field_m = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_H = 2;
           var5.field_x = false;
           var5.field_G = param0;

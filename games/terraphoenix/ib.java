@@ -53,7 +53,7 @@ final class ib extends ej implements v {
         super(param0, param1, param2);
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           if (param3 < 25) {
             this.f(-56);

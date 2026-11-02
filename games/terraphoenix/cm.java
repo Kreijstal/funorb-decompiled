@@ -39,8 +39,8 @@ final class cm {
           if (!vc.a(-127, 1)) {
             return false;
           }
-          qh.field_d = mk.field_j.a(-16384);
-          mk.field_j.position = 0;
+          qh.field_d = LevelEditor.field_j.a(-16384);
+          LevelEditor.field_j.position = 0;
         }
         if (qh.field_d != -2) {
           return vc.a(-122, qh.field_d);
@@ -48,8 +48,8 @@ final class cm {
         if (!vc.a(-104, 2)) {
           return false;
         }
-        qh.field_d = mk.field_j.i(-25578);
-        mk.field_j.position = 0;
+        qh.field_d = LevelEditor.field_j.readUnsignedShort(-25578);
+        LevelEditor.field_j.position = 0;
         return vc.a(-122, qh.field_d);
     }
 

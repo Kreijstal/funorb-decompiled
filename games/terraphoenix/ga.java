@@ -11,7 +11,7 @@ final class ga {
     int field_u;
     int field_d;
     int field_q;
-    static jj field_k;
+    static IntrusiveDeque field_k;
     int field_e;
     int field_t;
     int field_B;
@@ -27,7 +27,7 @@ final class ga {
     String field_z;
     static String field_p;
     int field_f;
-    static jj field_r;
+    static IntrusiveDeque field_r;
     static String field_l;
     int field_x;
     static String field_a;
@@ -71,7 +71,7 @@ final class ga {
               gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.field_e), mc.field_b);
               var2 = new PacketBuffer(13);
               ej.a(ng.field_y, -25563, var2, tj.field_wb, ai.field_c);
-              var2.i(15, -121);
+              var2.writeByte(15, -121);
               var2.e(rf.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);
               hm.field_N = hm.field_N + 1;
@@ -244,7 +244,7 @@ final class ga {
     }
 
     final static void d(int param0) {
-        int var1 = mk.a(-1);
+        int var1 = LevelEditor.a(-1);
         int var2 = mc.a(55);
         DelegatingCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
         if (param0 != -6513) {
@@ -521,11 +521,11 @@ final class ga {
     }
 
     static {
-        field_k = new jj();
+        field_k = new IntrusiveDeque();
         field_j = 0;
         field_p = "Type your email address again to make sure it's correct";
         field_o = new java.math.BigInteger("65537");
-        field_r = new jj();
+        field_r = new IntrusiveDeque();
         field_c = -1;
         field_l = "to keep fullscreen or";
         field_a = "to over <%0> great games";

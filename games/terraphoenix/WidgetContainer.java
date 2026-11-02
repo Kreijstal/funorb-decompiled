@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-class gb extends gl implements sf {
-    jj field_C;
+class WidgetContainer extends UiWidget implements sf {
+    IntrusiveDeque field_C;
     static o field_B;
     static String field_A;
     static vb field_z;
@@ -22,9 +22,9 @@ class gb extends gl implements sf {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        gl var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
-        gl var9 = null;
+        UiWidget var9 = null;
         k var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -36,10 +36,10 @@ class gb extends gl implements sf {
         var8 = Terraphoenix.field_V;
         try {
           var10 = new k(this.field_C);
-          var6 = (gl) (var10.a((byte) -13));
+          var6 = (UiWidget) (var10.a((byte) -13));
           if (param1 != 81) {
-            var9 = (gl) null;
-            this.a((byte) 44, (gl) null);
+            var9 = (UiWidget) null;
+            this.a((byte) 44, (UiWidget) null);
           }
           while (var6 != null) {
             discarded$3 = param2.append('\n');
@@ -47,7 +47,7 @@ class gb extends gl implements sf {
               discarded$4 = param2.append(' ');
             }
             var6.a(34, param2, param3 + 1, param0);
-            var6 = (gl) (var10.c(30));
+            var6 = (UiWidget) (var10.c(30));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,10 +70,10 @@ class gb extends gl implements sf {
         }
     }
 
-    final boolean a(byte param0, gl param1) {
+    final boolean a(byte param0, UiWidget param1) {
         k var3 = null;
         RuntimeException var3_ref = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -82,7 +82,7 @@ class gb extends gl implements sf {
         var5 = Terraphoenix.field_V;
         try {
           var3 = new k(this.field_C);
-          var4 = (gl) (var3.a((byte) -13));
+          var4 = (UiWidget) (var3.a((byte) -13));
           while (true) {
             if (var4 == null) {
               if (param0 >= 2) {
@@ -92,7 +92,7 @@ class gb extends gl implements sf {
               return false;
             }
             if (!var4.a((byte) 90, param1)) {
-              var4 = (gl) (var3.c(81));
+              var4 = (UiWidget) (var3.c(81));
               continue;
             }
             break;
@@ -112,11 +112,11 @@ class gb extends gl implements sf {
         }
     }
 
-    final void b(byte param0, gl param1) {
+    final void b(byte param0, UiWidget param1) {
         try {
           this.field_C.a(param1, -16611);
           if (param0 != 95) {
-            gb.a((byte) -55, 'ﾬ');
+            WidgetContainer.a((byte) -55, 'ﾬ');
           }
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "gb.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -128,14 +128,14 @@ class gb extends gl implements sf {
         try {
           var3 = di.field_l;
           var3.k(-17410, param2);
-          var3.i(5, 3);
+          var3.writeByte(5, 3);
           if (param0 != 15) {
             field_A = (String) null;
           }
-          var3.i(0, param0 + 70);
+          var3.writeByte(0, param0 + 70);
           var3.h(param0 ^ -1564407353, param1.field_s);
-          var3.i(param1.field_n, -103);
-          var3.i(param1.field_j, -102);
+          var3.writeByte(param1.field_n, -103);
+          var3.writeByte(param1.field_j, -102);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "gb.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -154,29 +154,29 @@ class gb extends gl implements sf {
     final int d(byte param0) {
         int var2;
         k var3;
-        gl var4;
+        UiWidget var4;
         int var5;
         int var6;
         var6 = Terraphoenix.field_V;
         var2 = 0;
         var3 = new k(this.field_C);
-        var4 = (gl) (var3.a((byte) -13));
+        var4 = (UiWidget) (var3.a((byte) -13));
         while (var4 != null) {
           var5 = var4.d((byte) 107);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (gl) (var3.c(76));
+          var4 = (UiWidget) (var3.c(76));
         }
         if (param0 < 23) {
-          this.field_C = (jj) null;
+          this.field_C = (IntrusiveDeque) null;
         }
         return var2;
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
-        gl var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         k var11 = null;
         RuntimeException stackIn_15_0 = null;
@@ -186,13 +186,13 @@ class gb extends gl implements sf {
         var10 = Terraphoenix.field_V;
         try {
           var11 = new k(this.field_C);
-          var9 = (gl) (var11.a((byte) -13));
+          var9 = (UiWidget) (var11.a((byte) -13));
           while (var9 != null) {
             if (var9.a((byte) -109)) {
               if (var9.a(false, param1, param2 + this.field_u, param3 + this.field_w, param4, param5, param6)) {
                 return true;
               }
-              var9 = (gl) (var11.c(102));
+              var9 = (UiWidget) (var11.c(102));
               continue;
             }
             break;
@@ -216,10 +216,10 @@ class gb extends gl implements sf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException runtimeException = null;
         k var7 = null;
-        gl var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -231,11 +231,11 @@ class gb extends gl implements sf {
           if (param0 < 36) {
             this.e((byte) -50);
           }
-          var8 = (gl) (var7.a((byte) -13));
+          var8 = (UiWidget) (var7.a((byte) -13));
           while (var8 != null) {
             if (var8.a((byte) -111)) {
               var8.a(97, param1, this.field_u + param2, this.field_w + param3, param4, param5);
-              var8 = (gl) (var7.c(45));
+              var8 = (UiWidget) (var7.c(45));
               continue;
             }
             break;
@@ -255,10 +255,10 @@ class gb extends gl implements sf {
         }
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         k var5 = null;
-        gl var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -271,11 +271,11 @@ class gb extends gl implements sf {
           }
           super.a(param0, param1, param2, 101);
           var5 = new k(this.field_C);
-          var6 = (gl) (var5.a((byte) -13));
+          var6 = (UiWidget) (var5.a((byte) -13));
           while (var6 != null) {
             if (var6.a((byte) -117)) {
               var6.a(param0, this.field_u + param1, this.field_w + param2, 73);
-              var6 = (gl) (var5.c(66));
+              var6 = (UiWidget) (var5.c(66));
               continue;
             }
             break;
@@ -297,7 +297,7 @@ class gb extends gl implements sf {
 
     final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
-        gl var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -311,8 +311,8 @@ class gb extends gl implements sf {
             this.a(param3, param0 + 47, param1, param2);
           }
           if (param0 != 34) {
-            var6 = (gl) null;
-            this.a('J', (gl) null, -124, 44);
+            var6 = (UiWidget) null;
+            this.a('J', (UiWidget) null, -124, 44);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -348,7 +348,7 @@ class gb extends gl implements sf {
     final static boolean a(byte param0, char param1) {
         boolean stackIn_6_0 = false;
         if (param0 != 41) {
-          gb.a(92, 99, -125);
+          WidgetContainer.a(92, 99, -125);
         }
         stackIn_6_0 = (param1 >= 48) && (57 >= param1);
         return stackIn_6_0;
@@ -360,10 +360,10 @@ class gb extends gl implements sf {
           field_D = (String) null;
         }
         k var2 = new k(this.field_C);
-        gl var3 = (gl) (var2.a((byte) -13));
+        UiWidget var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
           var3.c(0);
-          var3 = (gl) (var2.c(85));
+          var3 = (UiWidget) (var2.c(85));
         }
     }
 
@@ -372,7 +372,7 @@ class gb extends gl implements sf {
         wj.field_a = param2;
         nb.field_g = param0;
         if (param1 != -25786) {
-          gb.a((byte) -77, 'ￎ');
+          WidgetContainer.a((byte) -77, 'ￎ');
         }
     }
 
@@ -398,20 +398,20 @@ class gb extends gl implements sf {
     final void e(int param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_C);
-        gl var3 = (gl) (var2.a((byte) -13));
+        UiWidget var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
           var3.e(-59);
-          var3 = (gl) (var2.c(101));
+          var3 = (UiWidget) (var2.c(101));
         }
         if (param0 >= 0) {
           this.d((byte) 24);
         }
     }
 
-    final boolean a(gl param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         k var8 = null;
         RuntimeException var8_ref = null;
-        gl var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -423,14 +423,14 @@ class gb extends gl implements sf {
             field_D = (String) null;
           }
           var8 = new k(this.field_C);
-          var9 = (gl) (var8.a((byte) -13));
+          var9 = (UiWidget) (var8.a((byte) -13));
           while (var9 != null) {
             if (var9.a((byte) -59)) {
               if (var9.d(-105) &&
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) 9)) {
                 return true;
               }
-              var9 = (gl) (var8.c(92));
+              var9 = (UiWidget) (var8.c(92));
               continue;
             }
             break;
@@ -450,11 +450,11 @@ class gb extends gl implements sf {
         }
     }
 
-    final boolean a(gl param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         k var5 = null;
-        gl var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         nd var8 = null;
         k var9 = null;
@@ -468,25 +468,25 @@ class gb extends gl implements sf {
             return false;
           }
           var9 = new k(this.field_C);
-          var4 = (gl) (var9.a((byte) -13));
+          var4 = (UiWidget) (var9.a((byte) -13));
           while (var4 != null) {
             if (var4.d(-126)) {
               var5 = new k(this.field_C);
               var5.a((byte) -113, (IntrusiveNode) (var4));
-              var6 = (gl) (var5.c(23));
+              var6 = (UiWidget) (var5.c(23));
               while (var6 != null) {
                 if (!var6.a((byte) 52, param0)) {
-                  var6 = (gl) (var5.c(15));
+                  var6 = (UiWidget) (var5.c(15));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (gl) (var9.c(112));
+            var4 = (UiWidget) (var9.c(112));
           }
           if (param1 < 77) {
             var8 = (nd) null;
-            gb.a((byte) 71, (nd) null, 117);
+            WidgetContainer.a((byte) 71, (nd) null, 117);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,29 +507,29 @@ class gb extends gl implements sf {
         int var7 = Terraphoenix.field_V;
         if (param2 == 0 &&
           this.field_l != null) {
-          this.field_l.a(param3, (gl) (this), param0, -24381, true);
+          this.field_l.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         k var5 = new k(this.field_C);
         if (param1 >= -106) {
           return;
         }
-        gl var6 = (gl) (var5.b(59));
+        UiWidget var6 = (UiWidget) (var5.b(59));
         while (var6 != null) {
           var6.a(param0 + this.field_w, -128, param2, param3 + this.field_u);
-          var6 = (gl) (var5.d(-119));
+          var6 = (UiWidget) (var5.d(-119));
         }
     }
 
-    gb(int param0, int param1, int param2, int param3, cj param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, cj param4) {
         super(param0, param1, param2, param3, param4, (sc) null);
-        this.field_C = new jj();
+        this.field_C = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, gl param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         k var5 = null;
-        gl var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         k var8 = null;
         RuntimeException stackIn_21_0 = null;
@@ -545,21 +545,21 @@ class gb extends gl implements sf {
             return false;
           }
           var8 = new k(this.field_C);
-          var4 = (gl) (var8.b(81));
+          var4 = (UiWidget) (var8.b(81));
           while (var4 != null) {
             if (var4.d(-109)) {
               var5 = new k(this.field_C);
               var5.a(98, var4);
-              var6 = (gl) (var5.d(-81));
+              var6 = (UiWidget) (var5.d(-81));
               while (var6 != null) {
                 if (!var6.a((byte) 35, param1)) {
-                  var6 = (gl) (var5.d(-114));
+                  var6 = (UiWidget) (var5.d(-114));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (gl) (var8.d(-111));
+            var4 = (UiWidget) (var8.d(-111));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -576,9 +576,9 @@ class gb extends gl implements sf {
         }
     }
 
-    boolean a(char param0, gl param1, int param2, int param3) {
+    boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
-        gl var6_ref_gl = null;
+        UiWidget var6_ref_gl = null;
         int var6 = 0;
         int var7 = 0;
         k var8 = null;
@@ -590,7 +590,7 @@ class gb extends gl implements sf {
         var7 = Terraphoenix.field_V;
         try {
           var8 = new k(this.field_C);
-          var6_ref_gl = (gl) (var8.a((byte) -13));
+          var6_ref_gl = (UiWidget) (var8.a((byte) -13));
           if (param2 != 30) {
             return false;
           }
@@ -600,7 +600,7 @@ class gb extends gl implements sf {
                 var6_ref_gl.a(param0, param1, param2 ^ 0, param3)) {
                 return true;
               }
-              var6_ref_gl = (gl) (var8.c(108));
+              var6_ref_gl = (UiWidget) (var8.c(108));
               continue;
             }
             break;
@@ -631,7 +631,7 @@ class gb extends gl implements sf {
 
     final String f(int param0) {
         k var2;
-        gl var3;
+        UiWidget var3;
         String var4;
         int var5;
         var5 = Terraphoenix.field_V;
@@ -639,31 +639,31 @@ class gb extends gl implements sf {
         if (param0 < 70) {
           this.d(-26);
         }
-        var3 = (gl) (var2.a((byte) -13));
+        var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
           var4 = var3.f(71);
           if (var4 != null) {
             return var4;
           }
-          var3 = (gl) (var2.c(32));
+          var3 = (UiWidget) (var2.c(32));
         }
         return null;
     }
 
-    gl e(byte param0) {
+    UiWidget e(byte param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_C);
-        gl var3 = (gl) (var2.a((byte) -13));
+        UiWidget var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
           if (var3.d(-108)) {
             return var3;
           }
-          var3 = (gl) (var2.c(param0 ^ -10));
+          var3 = (UiWidget) (var2.c(param0 ^ -10));
         }
         if (param0 == -116) {
           return null;
         }
-        gb.a((byte) -118, 'ﾻ');
+        WidgetContainer.a((byte) -118, 'ﾻ');
         return null;
     }
 

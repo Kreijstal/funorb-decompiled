@@ -28,9 +28,9 @@ final class ab {
     final static String c(int param0) {
         if (param0 != -14700) {
           ab.c(23);
-          return mk.field_j.e(-1);
+          return LevelEditor.field_j.readString(-1);
         }
-        return mk.field_j.e(-1);
+        return LevelEditor.field_j.readString(-1);
     }
 
     final static void a(byte param0) {

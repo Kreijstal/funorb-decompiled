@@ -6,7 +6,7 @@ abstract class al extends ei {
     private int field_X;
     private jl field_Z;
     private int field_ab;
-    private gl field_Y;
+    private UiWidget field_Y;
     private int field_eb;
     private int field_db;
     private rj field_fb;
@@ -27,13 +27,13 @@ abstract class al extends ei {
         return oh.a(param2, 1, 1, 3, param1, 1, 1, param0, param3);
     }
 
-    private final void b(gl param0, byte param1) {
+    private final void b(UiWidget param0, byte param1) {
         if (param1 != -68) {
           return;
         }
         try {
           if (this.field_Z != null) {
-            this.field_Z.b((byte) 12);
+            this.field_Z.unlink((byte) 12);
           }
           if (param0 == null) {
             this.field_Z = new jl();
@@ -48,7 +48,7 @@ abstract class al extends ei {
         }
     }
 
-    void a(gl param0, int param1) {
+    void a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -103,7 +103,7 @@ abstract class al extends ei {
         this.field_Z.field_J = 0;
     }
 
-    al(d param0, gl param1, int param2, int param3, int param4) {
+    al(d param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_p, param1.field_n + (param2 + 12));
         try {
           this.field_cb = param2;
@@ -197,7 +197,7 @@ abstract class al extends ei {
         return super.f((byte) -121);
     }
 
-    boolean a(char param0, gl param1, int param2, int param3) {
+    boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends gb implements jf, n, rg {
+final class pl extends WidgetContainer implements jf, n, rg {
     static int field_P;
     private vj field_T;
     private ib field_R;
@@ -62,7 +62,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(int param0, boolean param1, String param2, gl param3, int param4) {
+    private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         dd var7 = null;
         j var8 = null;
@@ -188,7 +188,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(String param0, gl param1, int param2, String param3, int param4, int param5) {
+    private final int a(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -231,7 +231,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, 106);
         if (param3 < 25) {
           return;
@@ -332,7 +332,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(boolean param0, int param1, String param2, gl param3, String param4, int param5, int param6) {
+    private final int a(boolean param0, int param1, String param2, UiWidget param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ki var9 = null;
         j var10 = null;
@@ -387,7 +387,7 @@ final class pl extends gb implements jf, n, rg {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(String param0, gl param1, int param2, int param3, int param4) {
+    private final int a(String param0, UiWidget param1, int param2, int param3, int param4) {
         j var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -478,8 +478,8 @@ final class pl extends gb implements jf, n, rg {
           ((ia) (this.field_J.a(29730))).g(-4328);
           return;
         }
-        gl var3 = (gl) null;
-        this.a((gl) null, 45, -116, 19);
+        UiWidget var3 = (UiWidget) null;
+        this.a((UiWidget) null, 45, -116, 19);
         ((ia) (this.field_J.a(29730))).g(-4328);
     }
 
@@ -490,7 +490,7 @@ final class pl extends gb implements jf, n, rg {
         return "</col></u>";
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;

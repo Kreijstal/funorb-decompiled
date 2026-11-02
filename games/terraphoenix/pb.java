@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pb {
-    static jj field_a;
+    static IntrusiveDeque field_a;
     static String field_c;
     static int field_b;
 
@@ -61,7 +61,7 @@ final class pb {
     }
 
     static {
-        field_a = new jj();
+        field_a = new IntrusiveDeque();
         field_c = "Please check if address is correct";
     }
 }

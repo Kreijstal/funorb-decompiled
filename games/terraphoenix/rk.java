@@ -15,7 +15,7 @@ final class rk {
         }
         try {
           lb.a("", param0, -1);
-          dl.a(param0, -6242);
+          MapTile.a(param0, -6242);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "rk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

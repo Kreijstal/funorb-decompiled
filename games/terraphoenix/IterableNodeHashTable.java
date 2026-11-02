@@ -88,15 +88,15 @@ final class IterableNodeHashTable implements Iterable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_a != null) {
-            param0.b((byte) 12);
+          if (param0.next != null) {
+            param0.unlink((byte) 12);
           }
           var5 = this.field_a[(int)(param2 & (long)(this.field_c - 1))];
-          param0.field_a = var5.field_a;
-          param0.field_d = var5;
-          param0.field_a.field_d = param0;
-          param0.field_d.field_a = param0;
-          param0.field_g = param2;
+          param0.next = var5.next;
+          param0.previous = var5;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
+          param0.key = param2;
           if (param1 <= -49) {
             return;
           }
@@ -120,14 +120,14 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var5 = null;
         int var6 = Terraphoenix.field_V;
         IntrusiveNode var4 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
-        this.field_b = var4.field_d;
+        this.field_b = var4.previous;
         while (var4 != this.field_b) {
-          if (param0 == this.field_b.field_g) {
+          if (param0 == this.field_b.key) {
             var5 = this.field_b;
-            this.field_b = this.field_b.field_d;
+            this.field_b = this.field_b.previous;
             return var5;
           }
-          this.field_b = this.field_b.field_d;
+          this.field_b = this.field_b.previous;
         }
         this.field_b = null;
         if (param1 != -21) {

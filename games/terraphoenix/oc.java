@@ -6,9 +6,9 @@ final class oc {
     private pi[] field_b;
     private int field_c;
 
-    final gg a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new gg(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     final static oc a(fa param0, int param1, int param2) {
@@ -71,7 +71,7 @@ final class oc {
             this.field_b[var2].a(param0);
           }
         }
-        this.field_c = param0.i(-25578);
-        this.field_a = param0.i(-25578);
+        this.field_c = param0.readUnsignedShort(-25578);
+        this.field_a = param0.readUnsignedShort(-25578);
     }
 }

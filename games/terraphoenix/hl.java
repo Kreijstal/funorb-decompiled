@@ -30,18 +30,18 @@ final class hl {
         int var2 = 0;
         DualLinkNode var3Lifetime1;
         if (!param0) {
-          var3 = this.field_f.field_o;
+          var3 = this.field_f.secondaryNext;
           while (this.field_f != var3) {
             var2++;
-            var3 = var3.field_o;
+            var3 = var3.secondaryNext;
           }
           return var2;
         }
         field_b = (rj) null;
-        var3Lifetime1 = this.field_f.field_o;
+        var3Lifetime1 = this.field_f.secondaryNext;
         while (this.field_f != var3Lifetime1) {
           var2++;
-          var3Lifetime1 = var3Lifetime1.field_o;
+          var3Lifetime1 = var3Lifetime1.secondaryNext;
         }
         return var2;
     }
@@ -62,9 +62,9 @@ final class hl {
         if (param0 > -28) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_f.field_o;
+        DualLinkNode var2 = this.field_f.secondaryNext;
         if (this.field_f != var2) {
-          var2.c((byte) 13);
+          var2.unlinkSecondary((byte) 13);
           return var2;
         }
         return null;
@@ -77,16 +77,16 @@ final class hl {
 
     final void a(int param0, DualLinkNode param1) {
         try {
-          if (param1.field_i != null) {
-            param1.c((byte) 13);
+          if (param1.secondaryPrevious != null) {
+            param1.unlinkSecondary((byte) 13);
           }
           if (param0 != 11152) {
             this.field_d = (DualLinkNode) null;
           }
-          param1.field_o = this.field_f;
-          param1.field_i = this.field_f.field_i;
-          param1.field_i.field_o = param1;
-          param1.field_o.field_i = param1;
+          param1.secondaryNext = this.field_f;
+          param1.secondaryPrevious = this.field_f.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "hl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -121,8 +121,8 @@ final class hl {
 
     public hl() {
         this.field_f = new DualLinkNode();
-        this.field_f.field_o = this.field_f;
-        this.field_f.field_i = this.field_f;
+        this.field_f.secondaryNext = this.field_f;
+        this.field_f.secondaryPrevious = this.field_f;
     }
 
     final DualLinkNode a(int param0) {
@@ -131,7 +131,7 @@ final class hl {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_o;
+        this.field_d = var2.secondaryNext;
         if (param0 == 6273) {
           return var2;
         }
@@ -140,18 +140,18 @@ final class hl {
     }
 
     final DualLinkNode c(int param0) {
-        DualLinkNode var2 = this.field_f.field_o;
+        DualLinkNode var2 = this.field_f.secondaryNext;
         if (param0 != 8192) {
           field_a = false;
           if (this.field_f != var2) {
-            this.field_d = var2.field_o;
+            this.field_d = var2.secondaryNext;
             return var2;
           }
           this.field_d = null;
           return null;
         }
         if (this.field_f != var2) {
-          this.field_d = var2.field_o;
+          this.field_d = var2.secondaryNext;
           return var2;
         }
         this.field_d = null;

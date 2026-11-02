@@ -74,11 +74,11 @@ final class fb extends IntrusiveNode {
     }
 
     final static void a(int param0, PacketBuffer param1) {
-        hb.field_j = param1.i(-25578) << 5;
+        hb.field_j = param1.readUnsignedShort(-25578) << 5;
         int var2_int = param1.a(-16384);
         lb.field_d = var2_int << 18 & 1835008;
         hb.field_j = hb.field_j + (var2_int >> 3);
-        lb.field_d = lb.field_d + (param1.i(param0 - 4642) << 2);
+        lb.field_d = lb.field_d + (param1.readUnsignedShort(param0 - 4642) << 2);
         var2_int = param1.a(param0 + 4552);
         jc.field_D = (63 & var2_int) << 15;
         lb.field_d = lb.field_d + (var2_int >> 6);
@@ -90,7 +90,7 @@ final class fb extends IntrusiveNode {
         }
         try {
           dc.field_a = (var2_int & 1) << 16;
-          dc.field_a = dc.field_a + param1.i(-25578);
+          dc.field_a = dc.field_a + param1.readUnsignedShort(-25578);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "fb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

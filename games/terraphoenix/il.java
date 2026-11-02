@@ -29,15 +29,15 @@ final class il {
           if (param2 >= -62) {
             this.a(false);
           }
-          if (null != param0.field_a) {
-            param0.b((byte) 12);
+          if (null != param0.next) {
+            param0.unlink((byte) 12);
           }
           var5 = this.field_d[(int)((long)(this.field_c - 1) & param1)];
-          param0.field_d = var5;
-          param0.field_a = var5.field_a;
-          param0.field_a.field_d = param0;
-          param0.field_d.field_a = param0;
-          param0.field_g = param1;
+          param0.previous = var5;
+          param0.next = var5.next;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
+          param0.key = param1;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "il.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -101,38 +101,38 @@ final class il {
         var6 = Terraphoenix.field_V;
         if (param0 == 46) {
           var4 = this.field_d[(int)((long)(-1 + this.field_c) & param1)];
-          this.field_g = var4.field_d;
+          this.field_g = var4.previous;
           while (true) {
             if (var4 == this.field_g) {
               this.field_g = null;
               return null;
             }
-            if (this.field_g.field_g != param1) {
-              this.field_g = this.field_g.field_d;
+            if (this.field_g.key != param1) {
+              this.field_g = this.field_g.previous;
               continue;
             }
             break;
           }
           var5 = this.field_g;
-          this.field_g = this.field_g.field_d;
+          this.field_g = this.field_g.previous;
           return var5;
         }
         this.field_g = (IntrusiveNode) null;
         var4Lifetime1 = this.field_d[(int)((long)(-1 + this.field_c) & param1)];
-        this.field_g = var4Lifetime1.field_d;
+        this.field_g = var4Lifetime1.previous;
         while (true) {
           if (var4Lifetime1 == this.field_g) {
             this.field_g = null;
             return null;
           }
-          if (this.field_g.field_g != param1) {
-            this.field_g = this.field_g.field_d;
+          if (this.field_g.key != param1) {
+            this.field_g = this.field_g.previous;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_g;
-        this.field_g = this.field_g.field_d;
+        this.field_g = this.field_g.previous;
         return var5Lifetime1;
     }
 
@@ -163,15 +163,15 @@ final class il {
             }
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
-            var4 = this.field_d[fieldTemp$1].field_d;
+            var4 = this.field_d[fieldTemp$1].previous;
             var5 = var4;
           } while (var4 == this.field_d[this.field_f - 1]);
-          this.field_a = var5.field_d;
+          this.field_a = var5.previous;
           return var5;
         }
         if (this.field_a != this.field_d[-1 + this.field_f]) {
           var12 = this.field_a;
-          this.field_a = var12.field_d;
+          this.field_a = var12.previous;
           return var12;
         }
         if (!param0) {
@@ -183,10 +183,10 @@ final class il {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var4 = this.field_d[fieldTemp$0].field_d;
+          var4 = this.field_d[fieldTemp$0].previous;
           var9 = var4;
         } while (var4 == this.field_d[this.field_f - 1]);
-        this.field_a = var9.field_d;
+        this.field_a = var9.previous;
         return var9;
     }
 
@@ -230,8 +230,8 @@ final class il {
           dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          var3.field_d = var3;
-          var3.field_a = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

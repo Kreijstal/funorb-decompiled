@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends nk {
+final class JavaSoundAudioOutput extends nk {
     private byte[] field_w;
     private javax.sound.sampled.SourceDataLine field_x;
     private int field_v;
@@ -37,7 +37,7 @@ final class ul extends nk {
         this.field_x.write(this.field_w, 0, var1 << 1);
     }
 
-    ul() {
+    JavaSoundAudioOutput() {
     }
 
     final void a(java.awt.Component param0) {

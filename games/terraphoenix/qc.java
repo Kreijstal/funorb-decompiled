@@ -6,7 +6,7 @@ import java.util.*;
 final class qc {
     static byte[][] field_b;
     static int field_c;
-    static jj field_a;
+    static IntrusiveDeque field_a;
     static java.util.zip.CRC32 field_d;
     static Sprite[] field_f;
     static String field_e;
@@ -153,9 +153,9 @@ final class qc {
           var6.k(-17410, param0);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.i(1, -125);
-          var6.i(param1.field_o, -18);
-          var6.i(param1.field_l, -99);
+          var6.writeByte(1, -125);
+          var6.writeByte(param1.field_o, -18);
+          var6.writeByte(param1.field_l, -99);
           var6.e(param1.field_q, 8959);
           var6.e(param1.field_m, 8959);
           var6.e(param1.field_i, 8959);
@@ -235,7 +235,7 @@ final class qc {
 
     static {
         field_c = 0;
-        field_a = new jj();
+        field_a = new IntrusiveDeque();
         field_d = new java.util.zip.CRC32();
         field_e = "Continue saved game";
     }

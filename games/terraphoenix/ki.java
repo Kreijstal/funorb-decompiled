@@ -335,7 +335,7 @@ final class ki extends vj {
         }
     }
 
-    final boolean a(byte param0, gl param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -369,7 +369,7 @@ final class ki extends vj {
         return null;
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_W = this.field_W + 1;
           super.a(param0, param1, param2, 95);
@@ -416,7 +416,7 @@ final class ki extends vj {
         var6Lifetime1 = this.field_X.a(-16323);
         var8 = (w) ((Object) this.field_l);
         var9 = param0 + this.field_w;
-        var10 = var8.a((gl) (this), param3, (byte) -72) + (var8.a((gl) (this), -19302).c(5859) >> 1);
+        var10 = var8.a((UiWidget) (this), param3, (byte) -72) + (var8.a((UiWidget) (this), -19302).c(5859) >> 1);
         if (kj.field_d != var6Lifetime1 &&
           var6Lifetime1 != oh.field_b) {
           if (qf.field_d == var6Lifetime1) {

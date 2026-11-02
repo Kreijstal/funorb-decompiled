@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends gb implements n {
+final class oi extends WidgetContainer implements n {
     static Sprite field_J;
     private eb[] field_K;
     private int[] field_L;

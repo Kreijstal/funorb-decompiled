@@ -68,7 +68,7 @@ final class bb {
               var6 = bb.$cfr$intArgs$a$62abead39cee(87, true, rb.field_d[var3_int]);
               var7 = -(var6 >> 1) + nd.field_r;
               var4 = var4 + hi.field_ab;
-              if (gb.a(var7 - se.field_j, var4, param2, (byte) 76, param1, var6 + (se.field_j << 1), (dc.field_b << 1) + lm.field_d)) {
+              if (WidgetContainer.a(var7 - se.field_j, var4, param2, (byte) 76, param1, var6 + (se.field_j << 1), (dc.field_b << 1) + lm.field_d)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

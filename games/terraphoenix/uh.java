@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends gb implements pa, n {
+final class uh extends WidgetContainer implements pa, n {
     private boolean field_O;
     static String[] field_L;
     static String[] field_J;
@@ -39,7 +39,7 @@ final class uh extends gb implements pa, n {
         }
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_11_0 = false;
@@ -167,7 +167,7 @@ final class uh extends gb implements pa, n {
           if (null != this.field_I) {
             this.field_u = this.field_u + (var7.a(this.field_I, this.field_p - 40, var7.field_s) + 5);
           }
-          var8 = gb.field_D;
+          var8 = WidgetContainer.field_D;
           var9 = vk.a(false, dg.a(false));
           if (var9 == RasterBuffer.field_g) {
             var8 = ed.field_b;
@@ -179,12 +179,12 @@ final class uh extends gb implements pa, n {
           dupTemp$0 = new j(10, this.field_u, this.field_p - 20, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) 95, dupTemp$0);
-          this.field_u = this.field_u + (((gl) ((Object) var12)).field_n + 5);
+          this.field_u = this.field_u + (((UiWidget) ((Object) var12)).field_n + 5);
           dupTemp$1 = new j(10, this.field_u, this.field_p - 20, 25, this.field_R, false, 80, 3, var7, 16777215, eb.field_E);
           var13 = dupTemp$1;
           this.b((byte) 95, dupTemp$1);
           this.field_F.field_r = (sc) (this);
-          this.field_u = this.field_u + (((gl) ((Object) var13)).field_n + 5);
+          this.field_u = this.field_u + (((UiWidget) ((Object) var13)).field_n + 5);
           if (null != this.field_K) {
             this.field_K.field_r = (sc) (this);
           }
@@ -261,7 +261,7 @@ final class uh extends gb implements pa, n {
             this.g((byte) 36);
           }
           if (this.field_N == param0) {
-            this.field_R.a((byte) 17, (gl) (this));
+            this.field_R.a((byte) 17, (UiWidget) (this));
           }
           if (this.field_R == param0) {
             this.f((byte) 121);

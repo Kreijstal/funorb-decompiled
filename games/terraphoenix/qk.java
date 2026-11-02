@@ -40,36 +40,36 @@ final class qk {
         }
         Object var5 = var7.d((byte) -125);
         if (var5 == null) {
-          var7.b((byte) 12);
-          var7.c((byte) 13);
+          var7.unlink((byte) 12);
+          var7.unlinkSecondary((byte) 13);
           this.field_h = this.field_h + var7.field_q;
           return null;
         }
         if (param1 == -24469) {
           if (!var7.d(123)) {
             this.field_d.a(var7, (byte) -3);
-            var7.field_m = 0L;
+            var7.secondaryKey = 0L;
           } else {
             var6 = new be(var5, var7.field_q);
-            this.field_c.a(var6, (byte) -118, var7.field_g);
+            this.field_c.a(var6, (byte) -118, var7.key);
             this.field_d.a(var6, (byte) 17);
-            ((wc) ((Object) var6)).field_m = 0L;
-            var7.b((byte) 12);
-            var7.c((byte) 13);
+            ((wc) ((Object) var6)).secondaryKey = 0L;
+            var7.unlink((byte) 12);
+            var7.unlinkSecondary((byte) 13);
           }
           return var5;
         }
         this.field_h = -10;
         if (!var7.d(123)) {
           this.field_d.a(var7, (byte) -3);
-          var7.field_m = 0L;
+          var7.secondaryKey = 0L;
         } else {
           var6Lifetime1 = new be(var5, var7.field_q);
-          this.field_c.a(var6Lifetime1, (byte) -118, var7.field_g);
+          this.field_c.a(var6Lifetime1, (byte) -118, var7.key);
           this.field_d.a(var6Lifetime1, (byte) 17);
-          ((wc) ((Object) var6Lifetime1)).field_m = 0L;
-          var7.b((byte) 12);
-          var7.c((byte) 13);
+          ((wc) ((Object) var6Lifetime1)).secondaryKey = 0L;
+          var7.unlink((byte) 12);
+          var7.unlinkSecondary((byte) 13);
         }
         return var5;
     }
@@ -107,8 +107,8 @@ final class qk {
           if (param0 == null) {
             return;
           }
-          param0.b((byte) 12);
-          param0.c((byte) 13);
+          param0.unlink((byte) 12);
+          param0.unlinkSecondary((byte) 13);
           this.field_h = this.field_h + param0.field_q;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class qk {
           var6_ref = new be(param0, param2);
           this.field_c.a(var6_ref, (byte) -50, param1);
           this.field_d.a(var6_ref, (byte) 78);
-          ((wc) ((Object) var6_ref)).field_m = 0L;
+          ((wc) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "qk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

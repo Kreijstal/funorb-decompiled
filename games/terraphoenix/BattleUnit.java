@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r {
+final class BattleUnit {
     int field_P;
     private int field_G;
     int field_F;
@@ -11,7 +11,7 @@ final class r {
     String field_K;
     int field_u;
     se field_g;
-    static jj field_j;
+    static IntrusiveDeque field_j;
     private int field_e;
     private int field_D;
     boolean field_l;
@@ -45,19 +45,19 @@ final class r {
     int field_B;
     boolean field_db;
     int field_E;
-    dl field_c;
+    MapTile tile;
     int field_J;
     int field_z;
     boolean field_h;
     ga field_Z;
     int field_T;
-    static jj field_Q;
+    static IntrusiveDeque field_Q;
     ue field_r;
     int field_mb;
     int field_v;
     boolean field_S;
     boolean field_Y;
-    r field_a;
+    BattleUnit field_a;
     int field_A;
     int field_y;
     int field_cb;
@@ -77,7 +77,7 @@ final class r {
         int var6;
         int var7;
         var7 = Terraphoenix.field_V;
-        if (null == this.field_c) {
+        if (null == this.tile) {
           return;
         }
         if (null == this.field_Z) {
@@ -108,41 +108,41 @@ final class r {
           }
           if (this.field_U <= 1 ||
             this.field_U >= 6) {
-            this.field_c.field_s.a(false, var2 + var5, var4, var3, var2, var3 - var6);
+            this.tile.map.a(false, var2 + var5, var4, var3, var2, var3 - var6);
           }
           if (this.field_U <= 2 ||
             this.field_U >= 7) {
-            this.field_c.field_s.a(false, var2 + var5, var4, var3, var2, var6 + var3);
+            this.tile.map.a(false, var2 + var5, var4, var3, var2, var6 + var3);
           }
           if (3 >= this.field_U ||
             this.field_U == 0) {
-            this.field_c.field_s.a(false, var2 + var6, var4, var3, var2, var3 + var5);
+            this.tile.map.a(false, var2 + var6, var4, var3, var2, var3 + var5);
           }
           if (this.field_U <= 4 &&
             1 <= this.field_U) {
-            this.field_c.field_s.a(false, var2 - var6, var4, var3, var2, var5 + var3);
+            this.tile.map.a(false, var2 - var6, var4, var3, var2, var5 + var3);
           }
           if (this.field_U <= 5 &&
             this.field_U >= 2) {
-            this.field_c.field_s.a(false, var2 - var5, var4, var3, var2, var3 + var6);
+            this.tile.map.a(false, var2 - var5, var4, var3, var2, var3 + var6);
           }
           if (6 >= this.field_U) {
             if (this.field_U >= 3) {
-              this.field_c.field_s.a(false, var2 - var5, var4, var3, var2, var3 - var6);
+              this.tile.map.a(false, var2 - var5, var4, var3, var2, var3 - var6);
             }
             if (this.field_U <= 7 &&
               this.field_U >= 4) {
-              this.field_c.field_s.a(false, var2 - var6, var4, var3, var2, var3 - var5);
+              this.tile.map.a(false, var2 - var6, var4, var3, var2, var3 - var5);
             }
           } else {
             if (this.field_U <= 7 &&
               this.field_U >= 4) {
-              this.field_c.field_s.a(false, var2 - var6, var4, var3, var2, var3 - var5);
+              this.tile.map.a(false, var2 - var6, var4, var3, var2, var3 - var5);
             }
           }
           if (8 >= this.field_U &&
             this.field_U >= 5) {
-            this.field_c.field_s.a(false, var6 + var2, var4, var3, var2, -var5 + var3);
+            this.tile.map.a(false, var6 + var2, var4, var3, var2, -var5 + var3);
           }
           var6++;
         }
@@ -741,7 +741,7 @@ final class r {
         if (var8 == 7) {
           me.field_l[5 * this.field_nb.field_g + 2].a().a(0, var4);
         }
-        if (this == this.field_c.field_s.field_i.field_q) {
+        if (this == this.tile.map.field_i.field_q) {
           NodeHashTableIterator.a((byte) -86, var12, 16777215);
           NodeHashTableIterator.a((byte) -86, var12, 8421504);
           NodeHashTableIterator.a((byte) -86, var12, 4210752);
@@ -794,7 +794,7 @@ final class r {
         double var15Lifetime1;
         double var23Lifetime1;
         double var25Lifetime1;
-        var37 = new gi(this.field_c.field_s.field_i);
+        var37 = new gi(this.tile.map.field_i);
         var38 = var37;
         this.field_gb = this.field_H;
         this.field_h = true;
@@ -846,22 +846,22 @@ final class r {
         if (this.field_N < this.field_E) {
           var10 = 87 + this.field_E * 100;
         }
-        if (null != this.field_c.field_C &&
-          this.field_c.field_C.field_v == 5) {
+        if (null != this.tile.field_C &&
+          this.tile.field_C.field_v == 5) {
           var10 += 25;
         }
         var11 = 100 * this.field_N;
         var12 = null;
-        if (null != this.field_c.field_s.a(-66, this.field_n, this.field_N, this.field_X)) {
-          var12 = this.field_c.field_s.a(108, this.field_n, this.field_N, this.field_X).field_h;
+        if (null != this.tile.map.a(-66, this.field_n, this.field_N, this.field_X)) {
+          var12 = this.tile.map.a(108, this.field_n, this.field_N, this.field_X).field_h;
         }
         if (var12 != null) {
-          var11 = 100 * ((r) (var12)).field_E + 70;
-          if (((r) (var12)).field_E < this.field_E) {
-            var11 = ((r) (var12)).field_E * 100 + 55;
+          var11 = 100 * ((BattleUnit) (var12)).field_E + 70;
+          if (((BattleUnit) (var12)).field_E < this.field_E) {
+            var11 = ((BattleUnit) (var12)).field_E * 100 + 55;
           }
-          if (((r) (var12)).field_E > this.field_E) {
-            var11 = 85 + 100 * ((r) (var12)).field_E;
+          if (((BattleUnit) (var12)).field_E > this.field_E) {
+            var11 = 85 + 100 * ((BattleUnit) (var12)).field_E;
           }
         }
         var13 = (double)(var11 - var10);
@@ -1011,33 +1011,33 @@ final class r {
             }
             else {
               if (-50.0 >= var38.field_y &&
-                (this.field_c.field_e & 1) == 1) {
+                (this.tile.field_e & 1) == 1) {
                 var38.field_d = 5;
               }
             }
           } else {
             if (-50.0 >= var38.field_y &&
-              (this.field_c.field_e & 1) == 1) {
+              (this.tile.field_e & 1) == 1) {
               var38.field_d = 5;
             }
           }
         } else {
           if (-50.0 >= var38.field_y &&
-            (this.field_c.field_e & 1) == 1) {
+            (this.tile.field_e & 1) == 1) {
             var38.field_d = 5;
           }
         }
         if (decompiledFrameRemainder0) {
           if (-50.0 >= var38.field_p &&
-            (this.field_c.field_e & 2) == 2) {
+            (this.tile.field_e & 2) == 2) {
             var38.field_d = 5;
           }
           if (var38.field_y >= 50.0 &&
-            4 == (this.field_c.field_e & 4)) {
+            4 == (this.tile.field_e & 4)) {
             var38.field_d = 5;
           }
           if (50.0 <= var38.field_p &&
-            (8 & this.field_c.field_e) == 8) {
+            (8 & this.tile.field_e) == 8) {
             var38.field_d = 5;
           }
           var38.a((byte) 11);
@@ -1242,10 +1242,10 @@ final class r {
         if (this.field_B == 0) {
           return false;
         }
-        if (this.field_c == null) {
+        if (this.tile == null) {
           return false;
         }
-        stackIn_29_0 = !(this.field_c.field_e < 16) || !(this.field_c.field_v < 1);
+        stackIn_29_0 = !(this.tile.field_e < 16) || !(this.tile.field_v < 1);
         return stackIn_29_0;
     }
 
@@ -1423,10 +1423,10 @@ final class r {
 
     private final void l(int param0) {
         if (this.field_Z != null) {
-          this.field_c.field_s.field_i.field_G.field_Ab = false;
-          this.field_c.field_s.field_i.field_G.field_H = false;
+          this.tile.map.field_i.field_G.field_Ab = false;
+          this.tile.map.field_i.field_G.field_H = false;
         }
-        if (!this.field_c.field_s.a(this.field_E, this.field_H, this.field_N, this.field_X, -17402, this.field_F, this.field_n)) {
+        if (!this.tile.map.a(this.field_E, this.field_H, this.field_N, this.field_X, -17402, this.field_F, this.field_n)) {
           this.d((byte) -11);
         } else {
           this.a(this.field_b.field_g, (byte) 73);
@@ -1892,16 +1892,16 @@ final class r {
         int var8Lifetime1;
         int var9Lifetime1;
         var10 = Terraphoenix.field_V;
-        if (null != this.field_c &&
-          this == this.field_c.field_h) {
+        if (null != this.tile &&
+          this == this.tile.field_h) {
           var2 = 320 - sj.field_b;
           var3 = -lg.field_c + 240;
           var2 = var2 + 32 * (-this.field_H + this.field_F);
           var3 = var3 - this.field_E * 48;
           var3 = var3 + (this.field_F + this.field_H) * 16;
           var4 = 0;
-          if (this.field_c.field_C != null &&
-            this.field_c.field_C.field_v == 5) {
+          if (this.tile.field_C != null &&
+            this.tile.field_C.field_v == 5) {
             var4 = 16;
             var3 -= 16;
           }
@@ -1933,46 +1933,46 @@ final class r {
               return;
             }
           }
-          if (this.field_c != null && (this.field_k ||
+          if (this.tile != null && (this.field_k ||
             this.field_C != 1)) {
-            this.field_c.field_a = true;
+            this.tile.field_a = true;
           }
           var5Lifetime1 = 42 / ((-1 - param0) / 42);
           var6 = null;
-          stackIn_31_0 = (this.field_c.a(-120, this.field_U) >= 1000) ? 0 : 1;
+          stackIn_31_0 = (this.tile.a(-120, this.field_U) >= 1000) ? 0 : 1;
           var7 = stackIn_31_0;
           if (var7 == 0 &&
-            this.field_c.a(101, (this.field_U + 7) % 8) < 1000) {
+            this.tile.a(101, (this.field_U + 7) % 8) < 1000) {
             var7 = 1;
             this.field_U = (this.field_U - 1 + 8) % 8;
           }
           if (var7 == 0 &&
-            this.field_c.a(70, (1 + this.field_U + 8) % 8) < 1000) {
+            this.tile.a(70, (1 + this.field_U + 8) % 8) < 1000) {
             this.field_U = (this.field_U + 1 + 8) % 8;
             var7 = 1;
           }
           if (var7 == 0 &&
-            1000 > this.field_c.a(47, (6 + this.field_U) % 8)) {
+            1000 > this.tile.a(47, (6 + this.field_U) % 8)) {
             var7 = 1;
             this.field_U = (this.field_U - 2 + 8) % 8;
           }
           if (var7 == 0 &&
-            this.field_c.a(29, (this.field_U + 10) % 8) < 1000) {
+            this.tile.a(29, (this.field_U + 10) % 8) < 1000) {
             this.field_U = (2 + this.field_U + 8) % 8;
             var7 = 1;
           }
           if (var7 == 0 &&
-            this.field_c.a(113, (8 + this.field_U - 3) % 8) < 1000) {
+            this.tile.a(113, (8 + this.field_U - 3) % 8) < 1000) {
             var7 = 1;
             this.field_U = (this.field_U - 3 + 8) % 8;
           }
           if (var7 == 0 &&
-            1000 > this.field_c.a(-114, (3 + (this.field_U + 8)) % 8)) {
+            1000 > this.tile.a(-114, (3 + (this.field_U + 8)) % 8)) {
             var7 = 1;
             this.field_U = (8 + this.field_U + 3) % 8;
           }
           if (var7 == 0 &&
-            this.field_c.a(33, (-4 + (this.field_U + 8)) % 8) < 1000) {
+            this.tile.a(33, (-4 + (this.field_U + 8)) % 8) < 1000) {
             var7 = 1;
             this.field_U = (4 + this.field_U) % 8;
           }
@@ -2009,7 +2009,7 @@ final class r {
             var6 != null) {
             if (this.field_C == 1 &&
               this.field_k &&
-              this.field_c.field_s.field_i.field_L > 0) {
+              this.tile.map.field_i.field_L > 0) {
               NodeHashTableIterator.a((byte) -86, (Sprite) (var6), 16711680);
             }
             if (!this.field_k &&
@@ -2317,7 +2317,7 @@ final class r {
           if (this.field_t != 0 &&
             this.field_t != 7 &&
             this.field_Z == null) {
-            if (this.field_c.field_z) {
+            if (this.tile.field_z) {
               var9 = new int[]{6, 17};
               qd.$cfr$intArgs$a$e9dea5688aa5(122, var9[(int)(Math.random() * (double)var9.length)]);
             }
@@ -2346,7 +2346,7 @@ final class r {
           }
           if (this.field_s) {
             GameApplet.field_m = true;
-            this.field_c.field_w = true;
+            this.tile.field_w = true;
             ui.field_f = this;
             this.field_s = false;
           }
@@ -2483,12 +2483,12 @@ final class r {
         if (null != this.field_Z) {
           if (4 != this.field_nb.field_g &&
             this.field_nb.field_g != 15) {
-            this.field_c.field_s.field_i.field_G.field_Ab = false;
+            this.tile.map.field_i.field_G.field_Ab = false;
           }
           if (this.field_nb.field_g != 0) {
-            this.field_c.field_s.field_i.field_G.field_H = false;
+            this.tile.map.field_i.field_G.field_H = false;
           }
-          this.field_c.field_s.field_i.field_G.field_E = false;
+          this.tile.map.field_i.field_G.field_E = false;
         }
         if (param0 != 5813) {
           discarded$0 = this.j(88);
@@ -2539,7 +2539,7 @@ final class r {
         int var3;
         int var4;
         int var5_int;
-        r var5;
+        BattleUnit var5;
         int var6;
         int var7;
         int var3Lifetime1;
@@ -2555,7 +2555,7 @@ final class r {
         int var4Lifetime2Lifetime1;
         int var4Lifetime2Lifetime2;
         int var5_intLifetime1Lifetime1;
-        r var5Lifetime1;
+        BattleUnit var5Lifetime1;
         int var5_intLifetime4;
         int var6Lifetime3;
         var7 = Terraphoenix.field_V;
@@ -2564,9 +2564,9 @@ final class r {
           this.field_d = 5;
           this.field_A = 0;
         }
-        if (this.field_c.field_w &&
+        if (this.tile.field_w &&
           this.field_P > 0) {
-          this.field_c.field_w = false;
+          this.tile.field_w = false;
           ui.field_f = null;
           this.field_s = true;
           GameApplet.field_m = false;
@@ -2615,7 +2615,7 @@ final class r {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (!this.field_c.field_s.field_i.field_J) {
+                  if (!this.tile.map.field_i.field_J) {
                     var3 = this.field_F * 32 - 32 * this.field_H + this.field_hb;
                     var4 = 16 * this.field_H + this.field_F * 16 - (-this.field_L + this.field_E * 48);
                     eg.field_p = this.field_E;
@@ -2699,11 +2699,11 @@ final class r {
           if (null == this.field_Z &&
             this.field_C == 1 &&
             !q.field_Ib &&
-            !this.field_c.field_s.field_i.field_J &&
+            !this.tile.map.field_i.field_J &&
             !this.field_f) {
             if ((this.field_A <= 10 &&
               !param0) &&
-              (decompiledFrameRemainder2 = !(!this.field_c.field_a))) {
+              (decompiledFrameRemainder2 = !(!this.tile.field_a))) {
               var5_int = this.field_F * 32 - 32 * this.field_H;
               eg.field_p = this.field_E;
               var6 = 16 * this.field_H + (this.field_F * 16 - this.field_E * 48);
@@ -2743,7 +2743,7 @@ final class r {
           if (null == this.field_Z &&
             0 == this.field_C &&
             !q.field_Ib &&
-            !this.field_c.field_s.field_i.field_J &&
+            !this.tile.map.field_i.field_J &&
             !this.field_f) {
             var5_intLifetime2 = 32 * this.field_F - this.field_H * 32;
             var6Lifetime1 = -(this.field_E * 48) + 16 * this.field_H + 16 * this.field_F;
@@ -2782,7 +2782,7 @@ final class r {
             this.field_A == 10 &&
             10 <= var4Lifetime1 &&
             var4Lifetime1 < 20) {
-            this.field_c.field_a = true;
+            this.tile.field_a = true;
             if (ja.field_n > 0) {
               q.field_Ib = true;
               this.field_A = this.field_A - 1;
@@ -2808,7 +2808,7 @@ final class r {
           if (this.field_Z == null &&
             this.field_C == 1 &&
             !q.field_Ib &&
-            !this.field_c.field_s.field_i.field_J) {
+            !this.tile.map.field_i.field_J) {
             var4Lifetime2 = 32 * this.field_X - 32 * this.field_n;
             eg.field_p = this.field_N;
             var5_intLifetime1 = -(this.field_N * 48) + this.field_X * 16 + this.field_n * 16;
@@ -2828,7 +2828,7 @@ final class r {
           if (null == this.field_Z &&
             this.field_C == 0 &&
             !q.field_Ib &&
-            !this.field_c.field_s.field_i.field_J) {
+            !this.tile.map.field_i.field_J) {
             var4Lifetime2Lifetime1 = this.field_F * 32 - 32 * this.field_H;
             var5_intLifetime1Lifetime1 = this.field_F * 16 + 16 * this.field_H - this.field_E * 48;
             eg.field_p = this.field_E;
@@ -2871,16 +2871,16 @@ final class r {
               this.field_A = this.field_A + 3;
               if (this.field_A > 50) {
                 this.field_S = false;
-                this.field_c.field_m = this.field_t;
-                if (7 == this.field_c.field_m) {
-                  this.field_c.field_m = 7;
+                this.tile.field_m = this.field_t;
+                if (7 == this.tile.field_m) {
+                  this.tile.field_m = 7;
                 }
                 boolean decompiledFrameCompleted1 = true;
-                if (this.field_c.field_m == 9) {
-                  this.field_c.field_m = 11;
+                if (this.tile.field_m == 9) {
+                  this.tile.field_m = 11;
                   var4Lifetime2Lifetime2 = 0;
                   while (var4Lifetime2Lifetime2 < 100) {
-                    var5 = this.field_c.field_s.field_i.field_C[var4Lifetime2Lifetime2];
+                    var5 = this.tile.map.field_i.units[var4Lifetime2Lifetime2];
                     if (var7 != 0) {
                       decompiledFrameCompleted1 = false;
                       break;
@@ -2895,20 +2895,20 @@ final class r {
                   }
                 }
                 if (decompiledFrameCompleted1) {
-                  this.field_c.field_h = null;
-                  this.field_c.field_t = this.field_x;
+                  this.tile.field_h = null;
+                  this.tile.field_t = this.field_x;
                 }
-                if (this.field_c.field_m == 0) {
-                  this.field_c.field_m = 9;
+                if (this.tile.field_m == 0) {
+                  this.tile.field_m = 9;
                   if (this.field_nb.field_g == 0 ||
                     this.field_nb.field_g == 3) {
-                    this.field_c.field_m = 8;
+                    this.tile.field_m = 8;
                   }
                   if (4 != this.field_nb.field_g &&
                     this.field_nb.field_g != 18) {
                     return;
                   }
-                  this.field_c.field_m = 10;
+                  this.tile.field_m = 10;
                 }
               }
             }
@@ -2927,16 +2927,16 @@ final class r {
           this.field_A = this.field_A + 3;
           if (this.field_A > 50) {
             this.field_S = false;
-            this.field_c.field_m = this.field_t;
-            if (7 == this.field_c.field_m) {
-              this.field_c.field_m = 7;
+            this.tile.field_m = this.field_t;
+            if (7 == this.tile.field_m) {
+              this.tile.field_m = 7;
             }
             boolean decompiledFrameCompleted0 = true;
-            if (this.field_c.field_m == 9) {
-              this.field_c.field_m = 11;
+            if (this.tile.field_m == 9) {
+              this.tile.field_m = 11;
               var4Lifetime3 = 0;
               while (var4Lifetime3 < 100) {
-                var5Lifetime1 = this.field_c.field_s.field_i.field_C[var4Lifetime3];
+                var5Lifetime1 = this.tile.map.field_i.units[var4Lifetime3];
                 if (var7 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -2951,18 +2951,18 @@ final class r {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.field_c.field_h = null;
-              this.field_c.field_t = this.field_x;
+              this.tile.field_h = null;
+              this.tile.field_t = this.field_x;
             }
-            if (this.field_c.field_m == 0) {
-              this.field_c.field_m = 9;
+            if (this.tile.field_m == 0) {
+              this.tile.field_m = 9;
               if (this.field_nb.field_g == 0 ||
                 this.field_nb.field_g == 3) {
-                this.field_c.field_m = 8;
+                this.tile.field_m = 8;
               }
               if (4 == this.field_nb.field_g ||
                 this.field_nb.field_g == 18) {
-                this.field_c.field_m = 10;
+                this.tile.field_m = 10;
               }
             }
           }
@@ -2979,16 +2979,16 @@ final class r {
     final void b(int param0, byte param1) {
         int stackIn_14_0 = 0;
         int stackIn_15_1 = 0;
-        e var3;
+        BattleState var3;
         int var4;
         int var5;
-        r var6;
+        BattleUnit var6;
         int var7;
         int var8;
         int var9;
-        e var10;
+        BattleState var10;
         var9 = Terraphoenix.field_V;
-        var10 = this.field_c.field_s.field_i;
+        var10 = this.tile.map.field_i;
         var3 = var10;
         var4 = 0;
         var5 = 50;
@@ -3001,7 +3001,7 @@ final class r {
         }
         var7 = var4;
         while (var7 < var5) {
-          var6 = var10.field_C[var7];
+          var6 = var10.units[var7];
           if (var9 != 0) {
             return;
           }
@@ -3019,7 +3019,7 @@ final class r {
             if (stackIn_14_0 != stackIn_15_1 &&
               Math.abs(-this.field_F + var6.field_F) <= 30 &&
               Math.abs(-this.field_H + var6.field_H) <= 30 &&
-              this.field_c.field_s.a((byte) -93, var6, this)) {
+              this.tile.map.a((byte) -93, var6, this)) {
               var6.field_f = true;
               if (var6.field_f) {
                 var8 = param0;
@@ -3061,7 +3061,7 @@ final class r {
         String var8 = null;
         var5 = Terraphoenix.field_V;
         if (param0 != -15465) {
-          r.k(-82);
+          BattleUnit.k(-82);
         }
         boolean decompiledFrameCompleted0 = true;
         var6 = "(" + wc.field_r + " " + wf.field_n + " " + uc.field_r + ") " + qk.field_b;
@@ -3076,7 +3076,7 @@ final class r {
               break;
             }
             var7 = stackIn_16_0;
-            var3 = mk.field_j.payload[var2] & 255;
+            var3 = LevelEditor.field_j.payload[var2] & 255;
             var4 = var3 >> 4;
             if (var4 >= 10) {
               var4 += 55;
@@ -3115,7 +3115,7 @@ final class r {
         gi var24;
         gi var25;
         double var10Lifetime1;
-        var24 = new gi(this.field_c.field_s.field_i);
+        var24 = new gi(this.tile.map.field_i);
         var25 = var24;
         this.field_R = this.field_E;
         this.field_db = true;
@@ -3132,17 +3132,17 @@ final class r {
         if (this.field_B == 1) {
           if (this.f((byte) 122)) {
             var7 = 66;
-            if (this.field_c.field_c == null) {
-              if (((this.field_c.field_C != null)) &&
-                ((this.field_c.field_C.field_v == 5))) {
+            if (this.tile.field_c == null) {
+              if (((this.tile.field_C != null)) &&
+                ((this.tile.field_C.field_v == 5))) {
                 var7 += 25;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (this.field_c.field_c.field_v != 4) {
-                if (((this.field_c.field_C != null)) &&
-                  ((this.field_c.field_C.field_v == 5))) {
+              if (this.tile.field_c.field_v != 4) {
+                if (((this.tile.field_C != null)) &&
+                  ((this.tile.field_C.field_v == 5))) {
                   var7 += 25;
                 }
                 decompiledFrameRemainder0 = false;
@@ -3152,17 +3152,17 @@ final class r {
               }
             }
           } else {
-            if (this.field_c.field_c == null) {
-              if (((this.field_c.field_C != null)) &&
-                ((this.field_c.field_C.field_v == 5))) {
+            if (this.tile.field_c == null) {
+              if (((this.tile.field_C != null)) &&
+                ((this.tile.field_C.field_v == 5))) {
                 var7 += 25;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (this.field_c.field_c.field_v != 4) {
-                if (((this.field_c.field_C != null)) &&
-                  ((this.field_c.field_C.field_v == 5))) {
+              if (this.tile.field_c.field_v != 4) {
+                if (((this.tile.field_C != null)) &&
+                  ((this.tile.field_C.field_v == 5))) {
                   var7 += 25;
                 }
                 decompiledFrameRemainder0 = false;
@@ -3173,17 +3173,17 @@ final class r {
             }
           }
         } else {
-          if (this.field_c.field_c == null) {
-            if (((this.field_c.field_C != null)) &&
-              ((this.field_c.field_C.field_v == 5))) {
+          if (this.tile.field_c == null) {
+            if (((this.tile.field_C != null)) &&
+              ((this.tile.field_C.field_v == 5))) {
               var7 += 25;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_c.field_c.field_v != 4) {
-              if (((this.field_c.field_C != null)) &&
-                ((this.field_c.field_C.field_v == 5))) {
+            if (this.tile.field_c.field_v != 4) {
+              if (((this.tile.field_C != null)) &&
+                ((this.tile.field_C.field_v == 5))) {
                 var7 += 25;
               }
               decompiledFrameRemainder0 = false;
@@ -3193,8 +3193,8 @@ final class r {
             }
           }
         }
-        if ((decompiledFrameRemainder0) && (this.field_c.field_C != null &&
-          this.field_c.field_C.field_v == 5)) {
+        if ((decompiledFrameRemainder0) && (this.tile.field_C != null &&
+          this.tile.field_C.field_v == 5)) {
           var7 += 25;
         }
         var8 = (double)((this.field_N - this.field_E) * 100);
@@ -3240,7 +3240,7 @@ final class r {
     final void a(boolean param0) {
         int stackIn_3_0 = 0;
         Object var2 = null;
-        dl var2_ref = null;
+        MapTile var2_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -3262,9 +3262,9 @@ final class r {
               var6 = stackIn_3_0;
               while (3 + this.field_E >= var6) {
                 var2 = null;
-                var2_ref = this.field_c.field_s.a(-34, var5, var6, var4);
+                var2_ref = this.tile.map.a(-34, var5, var6, var4);
                 if (var2_ref != null &&
-                  this.field_c.field_s.a(this.field_E, this.field_H, var6, var4, -17402, this.field_F, var5)) {
+                  this.tile.map.a(this.field_E, this.field_H, var6, var4, -17402, this.field_F, var5)) {
                   var2_ref.field_a = true;
                 }
                 var6++;
@@ -3333,8 +3333,8 @@ final class r {
           var3 = (Sprite) null;
           this.a(-58, 102, -90, (Sprite) null, 103);
         }
-        if (null != this.field_c &&
-          this.field_c.field_s.field_i.field_G.field_Bb == 0 &&
+        if (null != this.tile &&
+          this.tile.map.field_i.field_G.field_Bb == 0 &&
           this.field_Z == null &&
           fa.field_a < 2) {
           this.field_jb = this.field_v / 2;
@@ -3356,8 +3356,8 @@ final class r {
         }
         this.field_jb = this.field_jb - var2;
         this.field_q = this.field_q + var2;
-        if (this.field_c != null &&
-          0 == this.field_c.field_s.field_i.field_G.field_Bb &&
+        if (this.tile != null &&
+          0 == this.tile.map.field_i.field_G.field_Bb &&
           fa.field_a < 2) {
           this.field_q = 0;
           this.field_jb = 0;
@@ -3367,7 +3367,7 @@ final class r {
     final void a(byte param0, boolean param1) {
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
-        dl stackIn_51_0 = null;
+        MapTile stackIn_51_0 = null;
         boolean stackIn_52_1 = false;
         Object var3 = null;
         int var4 = 0;
@@ -3376,7 +3376,7 @@ final class r {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        dl var10 = null;
+        MapTile var10 = null;
         var9 = Terraphoenix.field_V;
         if (param0 >= -1) {
           return;
@@ -3429,7 +3429,7 @@ final class r {
               var8 = this.field_E - 3;
               while (3 + this.field_E >= var8) {
                 var3 = null;
-                var10 = this.field_c.field_s.a(104, var6, var8, var5);
+                var10 = this.tile.map.a(104, var6, var8, var5);
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 != null) {
                   if (var7 == 0) {
@@ -3439,7 +3439,7 @@ final class r {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    var4 = this.field_c.field_s.a(this.field_E, this.field_H, var8, var5, -17402, this.field_F, var6) ? 1 : 0;
+                    var4 = this.tile.map.a(this.field_E, this.field_H, var8, var5, -17402, this.field_F, var6) ? 1 : 0;
                     if (var4 != 0 ||
                       param1) {
                       stackIn_51_0 = var10;
@@ -3569,14 +3569,14 @@ final class r {
             } else {
               if (this.field_r != null) {
                 var4Lifetime1 = this.field_E;
-                if (this.field_c.field_s.a(-60, this.field_r.field_a + this.field_H, var4Lifetime1, this.field_r.field_b + this.field_F).field_v == 4) {
+                if (this.tile.map.a(-60, this.field_r.field_a + this.field_H, var4Lifetime1, this.field_r.field_b + this.field_F).field_v == 4) {
                   var4Lifetime1++;
                 }
-                if (5 == this.field_c.field_s.a(param0 ^ -13954, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).field_v) {
+                if (5 == this.tile.map.a(param0 ^ -13954, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).field_v) {
                   var4Lifetime1--;
                 }
-                if (null != this.field_c.field_s.a(91, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).field_h) {
-                  this.field_c.field_s.a(-33, this.field_r.field_a + this.field_H, var4Lifetime1, this.field_F + this.field_r.field_b).field_h.field_k = true;
+                if (null != this.tile.map.a(91, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).field_h) {
+                  this.tile.map.a(-33, this.field_r.field_a + this.field_H, var4Lifetime1, this.field_F + this.field_r.field_b).field_h.field_k = true;
                   if (this.field_r.field_b == 1 &&
                     this.field_r.field_a == 0) {
                     this.field_U = 0;
@@ -3617,24 +3617,24 @@ final class r {
               var3Lifetime1 = 1;
               if (this.field_r == null) {
                 boolean decompiledFrameRemainder0 = true;
-                this.field_c.field_h = null;
+                this.tile.field_h = null;
                 if (0 == this.field_C) {
-                  this.field_r = this.field_c.field_s.a(false, this.field_n, this.field_H, -88, true, this.field_N, this.field_E, this.field_X, this.field_F);
+                  this.field_r = this.tile.map.a(false, this.field_n, this.field_H, -88, true, this.field_N, this.field_E, this.field_X, this.field_F);
                   decompiledFrameRemainder0 = (var6 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.field_c.field_s.b((byte) -106);
-                  this.field_r = this.field_c.field_s.a(this.field_n, this.field_N, this.field_X, this.field_E, this.field_H, this.field_F, true);
+                  this.tile.map.b((byte) -106);
+                  this.field_r = this.tile.map.a(this.field_n, this.field_N, this.field_X, this.field_E, this.field_H, this.field_F, true);
                   if (this.field_r != null) {
                   }
                   if (~this.field_E != ~this.field_N &&
                     this.field_r == null) {
-                    this.field_c.field_h = this;
+                    this.tile.field_h = this;
                     this.field_Y = true;
                     return false;
                   }
                 }
-                this.field_c.field_h = this;
+                this.tile.field_h = this;
                 var3Lifetime1 = 0;
               }
               if (this.field_r != null) {
@@ -3651,15 +3651,15 @@ final class r {
             }
             if (this.field_C == 1 &&
               !this.field_k &&
-              this.field_c.field_s.field_g[this.field_F][this.field_H] > 100 &&
+              this.tile.map.field_g[this.field_F][this.field_H] > 100 &&
               (this.field_v / 2) > this.field_jb &&
-              this.field_c.field_s.field_g[this.field_F + this.field_r.field_b][this.field_H + this.field_r.field_a] <= 100) {
+              this.tile.map.field_g[this.field_F + this.field_r.field_b][this.field_H + this.field_r.field_a] <= 100) {
               this.field_Y = true;
               return false;
             }
             var4Lifetime1Lifetime1 = this.field_E * 48;
-            if (this.field_c.field_C != null &&
-              this.field_c.field_C.field_v == 5) {
+            if (this.tile.field_C != null &&
+              this.tile.field_C.field_v == 5) {
               var4Lifetime1Lifetime1 += 16;
             }
             this.field_hb = this.field_hb - 32 * (this.field_r.field_b - this.field_r.field_a);
@@ -3669,7 +3669,7 @@ final class r {
             }
             this.field_G = this.field_G - var4Lifetime1Lifetime1;
             this.field_H = this.field_H + this.field_r.field_a;
-            this.field_c.field_h = null;
+            this.tile.field_h = null;
             this.field_L = this.field_L - 16 * (this.field_r.field_a + this.field_r.field_b);
             this.field_F = this.field_F + this.field_r.field_b;
             if (this.field_r.field_b == 1 &&
@@ -3707,31 +3707,31 @@ final class r {
               0 == this.field_r.field_a) {
               return false;
             }
-            this.field_c = this.field_c.field_s.a(-32, this.field_H, this.field_E, this.field_F);
-            if (4 != this.field_c.field_v) {
-              if ((this.field_c.field_v == 5 ||
-                -1 == this.field_c.field_v) && (this.field_c.field_c != null)) {
-                this.field_c = this.field_c.field_c;
-                this.field_E = this.field_c.field_r;
+            this.tile = this.tile.map.a(-32, this.field_H, this.field_E, this.field_F);
+            if (4 != this.tile.field_v) {
+              if ((this.tile.field_v == 5 ||
+                -1 == this.tile.field_v) && (this.tile.field_c != null)) {
+                this.tile = this.tile.field_c;
+                this.field_E = this.tile.field_r;
                 eg.field_p = this.field_E;
                 if (var6 != 0) {
-                  this.field_c = this.field_c.field_C;
-                  this.field_E = this.field_c.field_r;
+                  this.tile = this.tile.field_C;
+                  this.field_E = this.tile.field_r;
                   eg.field_p = this.field_E;
                 }
               }
             } else {
-              this.field_c = this.field_c.field_C;
-              this.field_E = this.field_c.field_r;
+              this.tile = this.tile.field_C;
+              this.field_E = this.tile.field_r;
               eg.field_p = this.field_E;
             }
             var5 = this.field_E * 48;
-            if (this.field_c.field_C != null &&
-              this.field_c.field_C.field_v == 5) {
+            if (this.tile.field_C != null &&
+              this.tile.field_C.field_v == 5) {
               var5 += 16;
             }
             this.field_G = this.field_G + var5;
-            this.field_c.field_h = this;
+            this.tile.field_h = this;
             this.field_jb = this.field_jb - this.field_r.field_c;
             this.b(this.field_r.field_c, (byte) -77);
             this.field_r = this.field_r.field_d;
@@ -3822,7 +3822,7 @@ final class r {
         return var2;
     }
 
-    r(int param0, int param1) {
+    BattleUnit(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -4108,7 +4108,7 @@ final class r {
         this.field_fb = this.field_u;
     }
 
-    r(ga param0) {
+    BattleUnit(ga param0) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -4229,7 +4229,7 @@ final class r {
     static {
         field_lb = "OK";
         field_o = "Accept";
-        field_Q = new jj();
+        field_Q = new IntrusiveDeque();
         field_kb = "You currently do not have access to a research facility, so research on new equipment cannot be carried out.";
         field_V = 0;
         field_bb = "Service unavailable";

@@ -25,7 +25,7 @@ final class mh {
           var8.k(-17410, param1);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.i(1, -22);
+          var8.writeByte(1, -22);
           var8.h(-1564407352, param0.field_s);
           var8.h(-1564407352, param0.field_h);
           var8.h(-1564407352, param0.field_q);
@@ -33,7 +33,7 @@ final class mh {
           var8.e(param0.field_l, 8959);
           var8.e(param0.field_j, 8959);
           var8.e(param0.field_o, 8959);
-          var8.i(param0.field_r.length, -99);
+          var8.writeByte(param0.field_r.length, -99);
           for (var5 = param2; var5 < param0.field_r.length; var5++) {
             var7.e(param0.field_r[var5], 8959);
           }

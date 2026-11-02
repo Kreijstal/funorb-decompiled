@@ -23,7 +23,7 @@ final class uk {
         var6 = Terraphoenix.field_V;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var8 = mk.field_j;
+          var8 = LevelEditor.field_j;
           var2 = var8.a(-16384);
           if (0 != var2) {
             if (var2 == 1) {
@@ -37,22 +37,22 @@ final class uk {
                 break;
               }
               if (var4 != null) {
-                var4.b((byte) 12);
+                var4.unlink((byte) 12);
                 decompiledFrameRemainder0 = false;
               }
               else {
-                gb.g(-17464);
+                WidgetContainer.g(-17464);
                 return;
               }
             }
             if (decompiledFrameRemainder0) {
-              bd.a((Throwable) null, "A1: " + r.i(-15465), 117);
-              gb.g(-17464);
+              bd.a((Throwable) null, "A1: " + BattleUnit.i(-15465), 117);
+              WidgetContainer.g(-17464);
             }
           } else {
             var3_ref_jh = (jh) (qc.field_a.d(9272));
             if (var3_ref_jh == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var4_int = var8.a(-16384);
@@ -67,12 +67,12 @@ final class uk {
             }
             var8.position = var8.position + 4;
             if (!var8.c(0)) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var3_ref_jh.field_i = true;
             var3_ref_jh.field_j = (byte[]) (var5);
-            var3_ref_jh.b((byte) 12);
+            var3_ref_jh.unlink((byte) 12);
           }
           if (param0) {
             return;

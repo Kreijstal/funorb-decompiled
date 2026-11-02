@@ -9,7 +9,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static rh field_f;
     boolean field_i;
     static Sprite field_b;
-    static gg[] field_g;
+    static PcmSample[] field_g;
     static int field_d;
     public static boolean field_j;
     public static int field_a;
@@ -153,7 +153,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           field_k = null;
           field_b = null;
           if (param0 != -25) {
-            field_g = (gg[]) null;
+            field_g = (PcmSample[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "eh.G(" + param0 + ')');
@@ -233,7 +233,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = gb.a((byte) 41, var2.charAt(var3));
+                      stackIn_68_0 = WidgetContainer.a((byte) 41, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -512,7 +512,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
-            gl.field_k = ((var6_int >> 1) + 32000) / var6_int;
+            UiWidget.field_k = ((var6_int >> 1) + 32000) / var6_int;
           }
           if (param0 != 0) {
             GameApplet.a(108, (PacketBuffer) null);
@@ -871,7 +871,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             var2 = new byte[24];
             if (param0 != 9371) {
-              field_g = (gg[]) null;
+              field_g = (PcmSample[]) null;
             }
             if (mh.field_b != null) {
               try {

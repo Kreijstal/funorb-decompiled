@@ -42,24 +42,24 @@ final class aa extends IntrusiveNode {
 
     final static nd a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Terraphoenix.field_V;
-        nd var5 = (nd) (r.field_Q.d(9272));
+        nd var5 = (nd) (BattleUnit.field_Q.d(9272));
         while (var5 != null) {
           if (~param2 == ~var5.field_s) {
             return var5;
           }
-          var5 = (nd) (r.field_Q.e((byte) -119));
+          var5 = (nd) (BattleUnit.field_Q.e((byte) -119));
         }
         var5 = new nd();
         var5.field_j = param1;
         var5.field_s = param2;
         var5.field_n = param4;
-        r.field_Q.a(var5, -16611);
+        BattleUnit.field_Q.a(var5, -16611);
         if (param0 == 8166) {
-          gb.a((byte) 15, var5, param3);
+          WidgetContainer.a((byte) 15, var5, param3);
           return var5;
         }
         aa.a(2, 40, -127, -46, 80);
-        gb.a((byte) 15, var5, param3);
+        WidgetContainer.a((byte) 15, var5, param3);
         return var5;
     }
 

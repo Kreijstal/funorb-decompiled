@@ -135,16 +135,16 @@ class ej extends eb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          param2.i(12, param1 + 25544);
+          param2.writeByte(12, param1 + 25544);
           param2.h(-1564407352, 17);
           param2.h(-1564407352, param0);
           param2.h(param1 ^ 1564382701, param4);
           if (param1 != -25563) {
             var6 = (java.awt.Canvas) null;
             ej.a(-21, (java.awt.Canvas) null);
-            param2.i(param3, 24);
+            param2.writeByte(param3, 24);
           } else {
-            param2.i(param3, 24);
+            param2.writeByte(param3, 24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,9 +181,9 @@ class ej extends eb {
           return;
         }
         var10 = (w) ((Object) this.field_l);
-        var3 = var10.a((gl) (this), -19302);
+        var3 = var10.a((UiWidget) (this), -19302);
         var4 = var3.b(0);
-        var5 = var10.a(28889, (gl) (this));
+        var5 = var10.a(28889, (UiWidget) (this));
         var6 = var10.a(8233) >> 1;
         if (var5 - var6 > var4) {
           this.field_y = 0;
@@ -325,7 +325,7 @@ class ej extends eb {
         }
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         w var7 = null;
@@ -344,7 +344,7 @@ class ej extends eb {
           }
           if (this.field_l instanceof w) {
             var7 = (w) ((Object) this.field_l);
-            var6 = var7.a(ef.field_j, -3477, MouseWheelInput.field_b, (gl) (this), param1, param2);
+            var6 = var7.a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param1, param2);
             if (var6 != -1) {
               if (this.field_O &&
                 var6 < this.field_L &&
@@ -387,7 +387,7 @@ class ej extends eb {
           this.field_T = -91;
           return;
         }
-        this.field_l.a(param3, (gl) (this), param0, -24381, this.field_A);
+        this.field_l.a(param3, (UiWidget) (this), param0, -24381, this.field_A);
         if (!(this.field_l instanceof w)) {
           if (param1 < -106) {
             return;
@@ -397,11 +397,11 @@ class ej extends eb {
         }
         var8 = (w) ((Object) this.field_l);
         if (this.field_K != this.field_T) {
-          var8.b(0, param3, param0, (gl) (this), this.field_K, this.field_T);
+          var8.b(0, param3, param0, (UiWidget) (this), this.field_K, this.field_T);
         }
         var6 = ll.a(1000);
         if ((var6 - this.field_P) % 1000L < 500L) {
-          var8.a(this.field_K, param3, (gl) (this), param0, -32135);
+          var8.a(this.field_K, param3, (UiWidget) (this), param0, -32135);
         }
         if (param1 < -106) {
           return;
@@ -456,8 +456,8 @@ class ej extends eb {
           this.i(122);
           return;
         }
-        gl var3 = (gl) null;
-        this.a(false, 4, -51, -52, -78, (gl) null, 121);
+        UiWidget var3 = (UiWidget) null;
+        this.a(false, 4, -51, -52, -78, (UiWidget) null, 121);
         this.i(122);
     }
 
@@ -476,7 +476,7 @@ class ej extends eb {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -490,7 +490,7 @@ class ej extends eb {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
             this.field_l instanceof w) {
-            var8_int = ((w) ((Object) this.field_l)).a(ef.field_j, -3477, MouseWheelInput.field_b, (gl) (this), param2, param3);
+            var8_int = ((w) ((Object) this.field_l)).a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param2, param3);
             stackIn_5_1 = 19;
             if (var8_int != -1) {
               stackIn_6_2 = var8_int;
@@ -554,7 +554,7 @@ class ej extends eb {
         return kj.field_f;
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_37_1 = 0;
         int stackIn_38_2 = 0;

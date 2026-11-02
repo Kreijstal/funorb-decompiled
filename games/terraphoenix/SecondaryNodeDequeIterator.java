@@ -14,7 +14,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (null == this.field_c) {
           throw new IllegalStateException();
         }
-        this.field_c.c((byte) 13);
+        this.field_c.unlinkSecondary((byte) 13);
         this.field_c = null;
     }
 
@@ -28,7 +28,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var1 = null;
           this.field_a = null;
         } else {
-          this.field_a = ((DualLinkNode) (var1)).field_o;
+          this.field_a = ((DualLinkNode) (var1)).secondaryNext;
         }
         this.field_c = (DualLinkNode) (var1);
         return var1;
@@ -44,14 +44,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_d = param0;
           this.field_c = null;
-          this.field_a = this.field_d.field_a.field_o;
+          this.field_a = this.field_d.field_a.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        jj discarded$0 = new jj();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_b = "Select ";
         field_e = 72;
     }

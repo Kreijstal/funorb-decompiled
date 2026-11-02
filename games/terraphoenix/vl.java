@@ -7,7 +7,7 @@ final class vl {
     int field_f;
     private int field_d;
     boolean field_b;
-    static jj field_i;
+    static IntrusiveDeque field_i;
     static int[] field_a;
     private int field_g;
     static int field_h;
@@ -329,10 +329,10 @@ final class vl {
                   if (MouseWheelInput.field_b > 84 &&
                     364 > MouseWheelInput.field_b &&
                     ef.field_j >= 57 + this.field_f &&
-                    ef.field_j < e.field_g.field_r + (57 + this.field_f) &&
+                    ef.field_j < BattleState.field_g.field_r + (57 + this.field_f) &&
                     MouseWheelInput.field_b >= var4 &&
-                    MouseWheelInput.field_b < var4 + e.field_g.field_t) {
-                    e.field_g.c(57 + this.field_f, var4, 384);
+                    MouseWheelInput.field_b < var4 + BattleState.field_g.field_t) {
+                    BattleState.field_g.c(57 + this.field_f, var4, 384);
                     param1.field_gb = 1 + var6;
                     if ((this.field_g != param1.field_gb)) {
                       this.field_g = param1.field_gb;
@@ -341,10 +341,10 @@ final class vl {
                     decompiledFrameRemainder3 = false;
                   }
                   else {
-                    e.field_g.b(57 + this.field_f, var4);
+                    BattleState.field_g.b(57 + this.field_f, var4);
                   }
                 } else {
-                  e.field_g.c(this.field_f + 57, var4, 128);
+                  BattleState.field_g.c(this.field_f + 57, var4, 128);
                 }
                 l.i(59 + this.field_f, 2 + var4, this.field_f + 321, var4 + 66);
                 if (var6 != 5 &&
@@ -509,10 +509,10 @@ final class vl {
                 if (MouseWheelInput.field_b > 84 &&
                   MouseWheelInput.field_b < 364 &&
                   57 + this.field_f <= ef.field_j &&
-                  ef.field_j < this.field_f + (57 + e.field_g.field_r) &&
+                  ef.field_j < this.field_f + (57 + BattleState.field_g.field_r) &&
                   MouseWheelInput.field_b >= var4 &&
-                  e.field_g.field_t + var4 > MouseWheelInput.field_b) {
-                  e.field_g.c(57 + this.field_f, var4, 384);
+                  BattleState.field_g.field_t + var4 > MouseWheelInput.field_b) {
+                  BattleState.field_g.c(57 + this.field_f, var4, 384);
                   param1.field_gb = -1 - var6;
                   if ((this.field_g != -param1.field_gb)) {
                     this.field_g = -param1.field_gb;
@@ -521,10 +521,10 @@ final class vl {
                   decompiledFrameRemainder2 = false;
                 }
                 else {
-                  e.field_g.b(this.field_f + 57, var4);
+                  BattleState.field_g.b(this.field_f + 57, var4);
                 }
               } else {
-                e.field_g.c(57 + this.field_f, var4, 128);
+                BattleState.field_g.c(57 + this.field_f, var4, 128);
               }
               l.i(this.field_f + 59, 2 + var4, this.field_f + 321, var4 + 66);
               kb.field_a[var6].a(0, 128, this.field_f + 190, 32 + (var4 + 2), (byte) 21);
@@ -830,7 +830,7 @@ final class vl {
     }
 
     static {
-        field_i = new jj();
+        field_i = new IntrusiveDeque();
         field_h = 0;
         field_e = new int[4];
     }

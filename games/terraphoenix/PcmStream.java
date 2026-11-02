@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lj extends IntrusiveNode {
+abstract class PcmStream extends IntrusiveNode {
     volatile boolean field_j;
-    lj field_h;
+    PcmStream field_h;
     int field_k;
-    id field_i;
+    AbstractAudioSample field_i;
 
     abstract void a(int param0);
 
-    abstract lj c();
+    abstract PcmStream c();
 
     abstract void a(int[] param0, int param1, int param2);
 
@@ -27,9 +27,9 @@ abstract class lj extends IntrusiveNode {
 
     abstract int d();
 
-    abstract lj a();
+    abstract PcmStream a();
 
-    protected lj() {
+    protected PcmStream() {
         this.field_j = true;
     }
 }

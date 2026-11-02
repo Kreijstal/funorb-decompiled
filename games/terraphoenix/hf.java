@@ -13,8 +13,8 @@ final class hf extends fd {
     static Sprite[] field_w;
     static boolean field_t;
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
-        gl stackIn_5_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -32,7 +32,7 @@ final class hf extends fd {
             field_t = false;
           }
           if (param1 instanceof eb) {
-            stackIn_5_0 = (gl) (param1);
+            stackIn_5_0 = (UiWidget) (param1);
           } else {
             stackIn_5_0 = null;
           }

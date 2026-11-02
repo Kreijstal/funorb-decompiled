@@ -31,7 +31,7 @@ final class sj {
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, mb.field_s);
-          jl.field_I.a((gl) (bj.field_f), (byte) -1);
+          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
             field_a = (lg[]) null;
           }
@@ -83,7 +83,7 @@ final class sj {
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, mb.field_s);
-          jl.field_I.a((gl) (bj.field_f), (byte) -1);
+          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
             field_a = (lg[]) null;
           }

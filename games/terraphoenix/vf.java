@@ -26,7 +26,7 @@ final class vf {
           }
           var8 = new tj(jl.field_I, param0);
           var7 = var8;
-          jl.field_I.a((gl) (var8), (byte) -1);
+          jl.field_I.a((UiWidget) (var8), (byte) -1);
           if (param4) {
             return true;
           }

@@ -242,18 +242,18 @@ final class ia extends di {
           ie.field_b.position = 0;
           ie.field_b.a(-222449912, param6, param5, param0);
           ie.field_b.f(var7_int, -2108648176);
-          ie.field_b.a(-6716, var12);
+          ie.field_b.xteaEncrypt(-6716, var12);
           if (null == jc.field_z ||
             !(100 <= jc.field_z.payload.length)) {
             jc.field_z = new PacketBuffer(100);
           }
           jc.field_z.position = 0;
-          jc.field_z.i(10, 92);
+          jc.field_z.writeByte(10, 92);
           for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
             jc.field_z.e(var12[var9Lifetime1], 8959);
           }
           jc.field_z.h(-1564407352, param5);
-          jc.field_z.a(param4, (byte) -52, param3);
+          jc.field_z.rsaEncrypt(param4, (byte) -52, param3);
           param1.a(-222449912, jc.field_z.payload, jc.field_z.position, 0);
           var9Lifetime2 = 39 % ((param2 - 0) / 61);
           param1.a(-222449912, ie.field_b.payload, ie.field_b.position, 0);
@@ -315,12 +315,12 @@ final class ia extends di {
         }
         try {
           var4 = var5.position;
-          var5.i(1, -114);
+          var5.writeByte(1, -114);
           if (param1.field_h != null) {
-            var5.i(param1.field_h.length, -108);
+            var5.writeByte(param1.field_h.length, -108);
             var5.a(-222449912, param1.field_h, param1.field_h.length, 0);
           } else {
-            var5.i(0, -119);
+            var5.writeByte(0, -119);
           }
           var5.d(var4, 8600);
           var5.position = var5.position - 4;

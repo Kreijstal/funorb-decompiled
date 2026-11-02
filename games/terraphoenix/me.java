@@ -37,7 +37,7 @@ final class me extends IntrusiveNode {
         try {
           var2_int = 70 % ((param0 - 34) / 55);
           var3 = (CharSequence) ((Object) param1);
-          stackIn_1_0 = jj.field_e.equals(hm.a((byte) 6, var3));
+          stackIn_1_0 = IntrusiveDeque.field_e.equals(hm.a((byte) 6, var3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

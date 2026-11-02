@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-abstract class jc extends gl implements sf {
+abstract class jc extends UiWidget implements sf {
     static String field_E;
-    gl field_F;
+    UiWidget field_F;
     static Sprite[] field_G;
     static String field_B;
     static int field_D;
@@ -42,18 +42,18 @@ abstract class jc extends gl implements sf {
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 45) {
-          gl var7 = (gl) null;
-          this.a((byte) -18, (gl) null);
+          UiWidget var7 = (UiWidget) null;
+          this.a((byte) -18, (UiWidget) null);
         }
         super.a(param0, (byte) 72, param2, param3, param4);
         this.a(0);
     }
 
-    gl e(byte param0) {
+    UiWidget e(byte param0) {
         if (param0 != 82) {
-          return (gl) null;
+          return (UiWidget) null;
         }
-        gl var2 = this.field_F;
+        UiWidget var2 = this.field_F;
         if (var2 == null) {
           return null;
         }
@@ -66,7 +66,7 @@ abstract class jc extends gl implements sf {
     void a(int param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
           null != this.field_l) {
-          this.field_l.a(param3, (gl) (this), param0, -24381, true);
+          this.field_l.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         if (null != this.field_F) {
           this.field_F.a(this.field_w + param0, -124, param2, this.field_u + param3);
@@ -89,13 +89,13 @@ abstract class jc extends gl implements sf {
 
     final boolean d(int param0) {
         if (param0 > -103) {
-          gl var3 = (gl) null;
-          this.a((byte) -109, (gl) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a((byte) -109, (UiWidget) null);
         }
         return null != this.e((byte) 82) ? true : false;
     }
 
-    private final boolean a(int param0, gl param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -122,7 +122,7 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, 75);
         if (param3 <= 25) {
           return;
@@ -136,7 +136,7 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -171,7 +171,7 @@ abstract class jc extends gl implements sf {
         return this.field_F == null ? 0 : this.field_F.d((byte) 93);
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_13_0 = false;
@@ -212,7 +212,7 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    private final boolean a(gl param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -293,7 +293,7 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -320,7 +320,7 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    final boolean a(byte param0, gl param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -347,7 +347,7 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    final boolean a(gl param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;

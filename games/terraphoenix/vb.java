@@ -25,24 +25,24 @@ final class vb {
           this.a(true, (DualLinkNode) null, -18L);
           var2 = this.field_h[(int)(this.field_b & (long)(-1 + this.field_g))];
           while (var2 != this.field_d) {
-            if (~this.field_d.field_m == ~this.field_b) {
+            if (~this.field_d.secondaryKey == ~this.field_b) {
               var3 = this.field_d;
-              this.field_d = this.field_d.field_o;
+              this.field_d = this.field_d.secondaryNext;
               return var3;
             }
-            this.field_d = this.field_d.field_o;
+            this.field_d = this.field_d.secondaryNext;
           }
           this.field_d = null;
           return null;
         }
         var2Lifetime1 = this.field_h[(int)(this.field_b & (long)(-1 + this.field_g))];
         while (var2Lifetime1 != this.field_d) {
-          if (~this.field_d.field_m == ~this.field_b) {
+          if (~this.field_d.secondaryKey == ~this.field_b) {
             var3Lifetime1 = this.field_d;
-            this.field_d = this.field_d.field_o;
+            this.field_d = this.field_d.secondaryNext;
             return var3Lifetime1;
           }
-          this.field_d = this.field_d.field_o;
+          this.field_d = this.field_d.secondaryNext;
         }
         this.field_d = null;
         return null;
@@ -74,7 +74,7 @@ final class vb {
           return ki.field_S + " - " + ph.field_q.b(param0 ^ 120, "commonui") + "%";
         }
         if (!ch.field_g.a(param0 ^ -27)) {
-          return jj.field_d;
+          return IntrusiveDeque.field_d;
         }
         if (ch.field_g.b((byte) -128)) {
           return vd.field_o;
@@ -94,14 +94,14 @@ final class vb {
         int var6 = Terraphoenix.field_V;
         this.field_b = param1;
         DualLinkNode var4 = this.field_h[(int)((long)(this.field_g - 1) & param1)];
-        this.field_d = var4.field_o;
+        this.field_d = var4.secondaryNext;
         while (var4 != this.field_d) {
-          if (~param1 == ~this.field_d.field_m) {
+          if (~param1 == ~this.field_d.secondaryKey) {
             var5 = this.field_d;
-            this.field_d = this.field_d.field_o;
+            this.field_d = this.field_d.secondaryNext;
             return var5;
           }
-          this.field_d = this.field_d.field_o;
+          this.field_d = this.field_d.secondaryNext;
         }
         if (param0 < 25) {
           this.field_g = 79;
@@ -120,15 +120,15 @@ final class vb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (null != param1.field_i) {
-            param1.c((byte) 13);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary((byte) 13);
           }
           var5 = this.field_h[(int)((long)(-1 + this.field_g) & param2)];
-          param1.field_i = var5.field_i;
-          param1.field_o = var5;
-          param1.field_i.field_o = param1;
-          param1.field_o.field_i = param1;
-          param1.field_m = param2;
+          param1.secondaryPrevious = var5.secondaryPrevious;
+          param1.secondaryNext = var5;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
+          param1.secondaryKey = param2;
           if (param0) {
             field_i = -113;
           }
@@ -415,8 +415,8 @@ final class vb {
           dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_h[var2] = dupTemp$0;
-          var3.field_i = var3;
-          var3.field_o = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 
