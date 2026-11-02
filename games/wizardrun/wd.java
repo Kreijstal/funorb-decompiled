@@ -3,7 +3,7 @@
  */
 final class wd {
     static int field_g;
-    static int[] field_a;
+    static int[] keyEventQueue;
     boolean field_d;
     boolean field_i;
     String field_h;
@@ -13,7 +13,7 @@ final class wd {
     static int[] field_f;
 
     public static void a(byte param0) {
-        field_a = null;
+        keyEventQueue = null;
         field_f = null;
         field_e = null;
         if (param0 < 102) {
@@ -100,7 +100,7 @@ final class wd {
         int var2 = 0;
         int var0;
         field_g = 100;
-        field_a = new int[128];
+        keyEventQueue = new int[128];
         field_e = new int[8192];
         field_f = new int[256];
         for (var1 = 0; var1 < 256; var1++) {

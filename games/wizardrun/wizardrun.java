@@ -15,7 +15,7 @@ public final class wizardrun extends GameShell {
     static int field_E;
     static String field_F;
     static java.awt.Canvas field_G;
-    static volatile int field_T;
+    static volatile int pointerX;
     private boolean field_J;
     private int field_K;
     private boolean field_P;
@@ -4319,7 +4319,7 @@ public final class wizardrun extends GameShell {
 
     static {
         field_O = new byte[520];
-        field_T = -1;
+        pointerX = -1;
         field_F = "Close";
         field_E = -1;
     }

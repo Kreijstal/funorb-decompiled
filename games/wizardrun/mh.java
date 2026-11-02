@@ -6,7 +6,7 @@ class mh extends gf implements qd {
     static String[] field_sb;
     static java.awt.Font field_ob;
     private boolean field_rb;
-    static volatile int field_pb;
+    static volatile int clickX;
     static kl field_jb;
     static String field_lb;
     private BitmapFont field_qb;
@@ -332,7 +332,7 @@ class mh extends gf implements qd {
 
     static {
         field_sb = new String[]{"Complete the game", "Capture and pop all creatures in world 1", "Complete world 1", "Reach world 4 from world 1 without losing a life", "Reach world 6 from world 1 without losing a life", "Kill the Giant Spider on world 1, losing no lives", "Kill the Pygmy Boss on world 2, losing no lives", "Kill the Pirate Captain on world 3, losing no lives", "Kill the Troll Ancient on world 4, losing no lives", "Kill the Ice Dragon on world 5, losing no lives", "Kill the Harpy King on world 6, losing no lives", "Collect 100 pumpkins in world 6 during halloween"};
-        field_pb = 0;
+        clickX = 0;
         field_lb = "Fullscreen";
     }
 }

@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3",
       "sources": {
         "files": 298,
-        "sha256": "6bfb7ec494ed4eec4482a5944bbecc12e90b280f8cf15b42c81155227ab14d65"
+        "sha256": "09dbb37ae85d26b0996570ad0467fed3d5a0ec123120c04d753e3dfb791e888e"
       },
       "dictionary": {
         "path": "decompilation/wizardrun-naming.json",
-        "sha256": "28412f6ad9497b6b9b2a14308fe6daf4d2e29753ae0ca90ba82885fcb047d8ea"
+        "sha256": "c7abbd34085946669a06d155041478f951f057be3167e9d7af39c5fe7d51f16f"
       },
       "readingGuide": {
         "path": "games/wizardrun/README.md",
         "sha256": "1e1953f2fa63839f315025ed2ede1c161440404113d969b20fad2062919fad13"
       },
-      "rulesSha256": "c98d120225abe7bcf5ec0bc0dc00fe8b02ac53adb85779765ea849d6fa78a944",
+      "rulesSha256": "0410250f5097d96b7feec80e3c89096ef3996e0c2de4b013c7cca45d6df26f64",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12685,7 +12685,7 @@
         },
         "publishedSources": {
           "files": 298,
-          "sha256": "6bfb7ec494ed4eec4482a5944bbecc12e90b280f8cf15b42c81155227ab14d65"
+          "sha256": "09dbb37ae85d26b0996570ad0467fed3d5a0ec123120c04d753e3dfb791e888e"
         }
       },
       "zombiedawn": {

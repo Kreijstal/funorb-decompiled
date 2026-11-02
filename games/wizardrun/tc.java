@@ -5,7 +5,7 @@ final class tc extends IntrusiveNode {
     static boolean field_j;
     static tg field_l;
     static int field_k;
-    static MouseInputHandler field_m;
+    static MouseInputHandler mouseHandler;
     static String field_n;
     static int field_i;
 
@@ -16,7 +16,7 @@ final class tc extends IntrusiveNode {
     public static void a(byte param0) {
         field_l = null;
         field_n = null;
-        field_m = null;
+        mouseHandler = null;
         if (param0 >= -90) {
           tc.a((byte) 125);
         }
@@ -25,7 +25,7 @@ final class tc extends IntrusiveNode {
     static {
         field_k = 0;
         field_l = new tg();
-        field_m = new MouseInputHandler();
+        mouseHandler = new MouseInputHandler();
         field_n = "Try again";
     }
 }

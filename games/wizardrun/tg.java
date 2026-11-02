@@ -12,7 +12,7 @@ final class tg implements Serializable {
     int[] field_a;
     static long field_g;
     static long field_e;
-    static int field_i;
+    static int keyQueueReadIndex;
     static String field_b;
 
     final static ae a(int param0, String param1) {
@@ -101,6 +101,6 @@ final class tg implements Serializable {
 
     static {
         field_c = new IntrusiveDeque();
-        field_i = 0;
+        keyQueueReadIndex = 0;
     }
 }

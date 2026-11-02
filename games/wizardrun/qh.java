@@ -9,7 +9,7 @@ class qh {
     static int field_j;
     ob field_f;
     static int field_g;
-    static int field_b;
+    static int keyQueueWriteIndex;
     static int field_l;
     int field_k;
     int field_h;
@@ -617,6 +617,6 @@ class qh {
 
     static {
         field_a = new byte[50][];
-        field_b = 0;
+        keyQueueWriteIndex = 0;
     }
 }

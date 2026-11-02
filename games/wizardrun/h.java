@@ -7,7 +7,7 @@ final class h extends IntrusiveNode {
     byte[] field_q;
     static long field_m;
     static int[] field_s;
-    static volatile int field_p;
+    static volatile int keyIdleTime;
     byte[] field_l;
     short[] field_r;
     int field_n;
@@ -684,6 +684,6 @@ final class h extends IntrusiveNode {
     }
 
     static {
-        field_p = 0;
+        keyIdleTime = 0;
     }
 }

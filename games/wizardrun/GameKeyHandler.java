@@ -14,10 +14,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ff.field_H == null) {
+          if (ff.keyHandler == null) {
             return;
           }
-          wk.field_b = -1;
+          wk.keyEventWriteIndex = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,16 +37,16 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (ff.field_H != null) {
+          if (ff.keyHandler != null) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
               ne.a((char) var2_int, 160)) {
-              var3 = qh.field_b + 1 & 127;
-              if (tg.field_i != var3) {
-                ge.field_n[qh.field_b] = -1;
-                ve.field_a[qh.field_b] = (char)var2_int;
-                qh.field_b = var3;
+              var3 = qh.keyQueueWriteIndex + 1 & 127;
+              if (tg.keyQueueReadIndex != var3) {
+                ge.keyCodeQueue[qh.keyQueueWriteIndex] = -1;
+                ve.typedCharQueue[qh.keyQueueWriteIndex] = (char)var2_int;
+                qh.keyQueueWriteIndex = var3;
               }
             }
           }
@@ -87,8 +87,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ff.field_H) {
-            h.field_p = 0;
+          if (null != ff.keyHandler) {
+            h.keyIdleTime = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < he.field_s.length) {
@@ -96,12 +96,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (wk.field_b >= 0 &&
+            if (wk.keyEventWriteIndex >= 0 &&
               var2_int >= 0) {
-              wd.field_a[wk.field_b] = ~var2_int;
-              wk.field_b = 127 & wk.field_b + 1;
-              if (wk.field_b == lk.field_a) {
-                wk.field_b = -1;
+              wd.keyEventQueue[wk.keyEventWriteIndex] = ~var2_int;
+              wk.keyEventWriteIndex = 127 & wk.keyEventWriteIndex + 1;
+              if (wk.keyEventWriteIndex == lk.keyEventReadIndex) {
+                wk.keyEventWriteIndex = -1;
               }
             }
           }
@@ -131,10 +131,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (ff.field_H == null) {
+          if (ff.keyHandler == null) {
             return;
           }
-          h.field_p = 0;
+          h.keyIdleTime = 0;
           var2_int = param0.getKeyCode();
           if (var2_int >= 0 &&
             var2_int < he.field_s.length) {
@@ -145,20 +145,20 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             var2_int = -1;
           }
-          if (wk.field_b >= 0 &&
+          if (wk.keyEventWriteIndex >= 0 &&
             var2_int >= 0) {
-            wd.field_a[wk.field_b] = var2_int;
-            wk.field_b = 1 + wk.field_b & 127;
-            if (lk.field_a == wk.field_b) {
-              wk.field_b = -1;
+            wd.keyEventQueue[wk.keyEventWriteIndex] = var2_int;
+            wk.keyEventWriteIndex = 1 + wk.keyEventWriteIndex & 127;
+            if (lk.keyEventReadIndex == wk.keyEventWriteIndex) {
+              wk.keyEventWriteIndex = -1;
             }
           }
           if (var2_int >= 0) {
-            var3 = 127 & qh.field_b + 1;
-            if (var3 != tg.field_i) {
-              ge.field_n[qh.field_b] = var2_int;
-              ve.field_a[qh.field_b] = (char)0;
-              qh.field_b = var3;
+            var3 = 127 & qh.keyQueueWriteIndex + 1;
+            if (var3 != tg.keyQueueReadIndex) {
+              ge.keyCodeQueue[qh.keyQueueWriteIndex] = var2_int;
+              ve.typedCharQueue[qh.keyQueueWriteIndex] = (char)0;
+              qh.keyQueueWriteIndex = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();

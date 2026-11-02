@@ -14,9 +14,9 @@ final class ne {
     final static int a(byte param0) {
         if (param0 != 28) {
           field_b = (ji) null;
-          return h.field_p;
+          return h.keyIdleTime;
         }
-        return h.field_p;
+        return h.keyIdleTime;
     }
 
     final static boolean b(int param0) {

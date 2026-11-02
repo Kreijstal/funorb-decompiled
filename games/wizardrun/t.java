@@ -14,19 +14,19 @@ final class t {
         RuntimeException var1_ref = null;
         var4 = wizardrun.field_H;
         try {
-          var1 = ff.field_H;
+          var1 = ff.keyHandler;
           synchronized (var1) {
-            h.field_p = h.field_p + 1;
-            tg.field_i = ph.field_r;
-            if (param0 < ~wk.field_b) {
+            h.keyIdleTime = h.keyIdleTime + 1;
+            tg.keyQueueReadIndex = ph.field_r;
+            if (param0 < ~wk.keyEventWriteIndex) {
               for (var2 = 0; var2 < 112; var2++) {
                 BufferedSocket.field_p[var2] = false;
               }
-              wk.field_b = lk.field_a;
+              wk.keyEventWriteIndex = lk.keyEventReadIndex;
             } else {
-              while (wk.field_b != lk.field_a) {
-                var2 = wd.field_a[lk.field_a];
-                lk.field_a = 127 & lk.field_a + 1;
+              while (wk.keyEventWriteIndex != lk.keyEventReadIndex) {
+                var2 = wd.keyEventQueue[lk.keyEventReadIndex];
+                lk.keyEventReadIndex = 127 & lk.keyEventReadIndex + 1;
                 if (var2 >= 0) {
                   BufferedSocket.field_p[var2] = true;
                   continue;
@@ -34,7 +34,7 @@ final class t {
                 BufferedSocket.field_p[~var2] = false;
               }
             }
-            ph.field_r = qh.field_b;
+            ph.field_r = qh.keyQueueWriteIndex;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

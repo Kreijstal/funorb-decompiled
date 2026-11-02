@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lk {
-    static int field_a;
+    static int keyEventReadIndex;
     static Sprite[] field_b;
 
     public static void a(int param0) {
@@ -79,6 +79,6 @@ final class lk {
     }
 
     static {
-        field_a = 0;
+        keyEventReadIndex = 0;
     }
 }

@@ -6,7 +6,7 @@ import java.util.*;
 final class wk {
     static int field_c;
     private java.util.zip.Inflater field_a;
-    static int field_b;
+    static int keyEventWriteIndex;
 
     public wk() {
         this(-1, 1000000, 1000000);
@@ -73,6 +73,6 @@ final class wk {
     }
 
     static {
-        field_b = 0;
+        keyEventWriteIndex = 0;
     }
 }

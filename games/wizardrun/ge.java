@@ -7,7 +7,7 @@ abstract class ge {
     static int field_j;
     int field_a;
     private int field_c;
-    static int[] field_n;
+    static int[] keyCodeQueue;
     static int field_f;
     static int field_b;
     private int field_h;
@@ -203,7 +203,7 @@ abstract class ge {
     public static void a(boolean param0) {
         field_i = null;
         field_k = null;
-        field_n = null;
+        keyCodeQueue = null;
         if (!param0) {
           ge.a(false);
         }
@@ -236,13 +236,13 @@ abstract class ge {
         if (param1 <= -52) {
           return var4;
         }
-        field_n = (int[]) null;
+        keyCodeQueue = (int[]) null;
         return var4;
     }
 
     static {
         field_j = 0;
-        field_n = new int[128];
+        keyCodeQueue = new int[128];
         field_i = "Loading sound effects";
         field_k = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }

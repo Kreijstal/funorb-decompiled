@@ -15,12 +15,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tc.field_m == null) {
+          if (tc.mouseHandler == null) {
             return;
           }
-          oc.field_a = 0;
-          wizardrun.field_T = param0.getX();
-          IterableNodeHashTable.field_a = param0.getY();
+          oc.mouseIdleTime = 0;
+          wizardrun.pointerX = param0.getX();
+          IterableNodeHashTable.pointerY = param0.getY();
           jf.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -39,8 +39,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (tc.field_m != null) {
-            ve.field_d = 0;
+          if (tc.mouseHandler != null) {
+            ve.pressedButton = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "tf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -54,12 +54,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == tc.field_m) {
+          if (null == tc.mouseHandler) {
             return;
           }
-          oc.field_a = 0;
-          wizardrun.field_T = -1;
-          IterableNodeHashTable.field_a = -1;
+          oc.mouseIdleTime = 0;
+          wizardrun.pointerX = -1;
+          IterableNodeHashTable.pointerY = -1;
           jf.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,17 +84,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tc.field_m != null) {
-            oc.field_a = 0;
-            mh.field_pb = param0.getX();
-            dc.field_t = param0.getY();
+          if (tc.mouseHandler != null) {
+            oc.mouseIdleTime = 0;
+            mh.clickX = param0.getX();
+            dc.clickY = param0.getY();
             d.a((byte) 93);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               fi.field_w = 1;
-              ve.field_d = 1;
+              ve.pressedButton = 1;
             } else {
               fi.field_w = 2;
-              ve.field_d = 2;
+              ve.pressedButton = 2;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) == 0) {
@@ -191,10 +191,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (tc.field_m != null) {
-            oc.field_a = 0;
-            wizardrun.field_T = param0.getX();
-            IterableNodeHashTable.field_a = param0.getY();
+          if (tc.mouseHandler != null) {
+            oc.mouseIdleTime = 0;
+            wizardrun.pointerX = param0.getX();
+            IterableNodeHashTable.pointerY = param0.getY();
             jf.field_i = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -235,12 +235,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == tc.field_m) {
+          if (null == tc.mouseHandler) {
             return;
           }
-          oc.field_a = 0;
-          wizardrun.field_T = param0.getX();
-          IterableNodeHashTable.field_a = param0.getY();
+          oc.mouseIdleTime = 0;
+          wizardrun.pointerX = param0.getX();
+          IterableNodeHashTable.pointerY = param0.getY();
           jf.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,9 +265,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tc.field_m != null) {
-            oc.field_a = 0;
-            ve.field_d = 0;
+          if (tc.mouseHandler != null) {
+            oc.mouseIdleTime = 0;
+            ve.pressedButton = 0;
             jf.field_i = true;
             var2_int = param0.getModifiers();
             if (0 == (var2_int & 16)) {

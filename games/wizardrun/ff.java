@@ -3,7 +3,7 @@
  */
 class ff extends pl {
     private String[] field_I;
-    static GameKeyHandler field_H;
+    static GameKeyHandler keyHandler;
     private IntrusiveDeque field_G;
     private dd field_F;
     static int field_J;
@@ -34,7 +34,7 @@ class ff extends pl {
 
     public static void d(int param0) {
         int var1 = 65 % ((param0 - 84) / 40);
-        field_H = null;
+        keyHandler = null;
     }
 
     String c(boolean param0) {
@@ -99,7 +99,7 @@ class ff extends pl {
     final void a(int param0, byte param1, int param2, int param3) {
         this.a(127, param0, ((qe) ((Object) this.field_w)).a((byte) 89, (UiWidget) (this)), param2, param3);
         if (param1 != 61) {
-          field_H = (GameKeyHandler) null;
+          keyHandler = (GameKeyHandler) null;
         }
     }
 
@@ -296,6 +296,6 @@ class ff extends pl {
     }
 
     static {
-        field_H = new GameKeyHandler();
+        keyHandler = new GameKeyHandler();
     }
 }

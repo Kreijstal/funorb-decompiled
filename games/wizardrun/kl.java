@@ -386,12 +386,12 @@ final class kl {
 
     final static void a(int param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
-        param1.addKeyListener(ff.field_H);
+        param1.addKeyListener(ff.keyHandler);
         if (param0 != 0) {
           return;
         }
         try {
-          param1.addFocusListener(ff.field_H);
+          param1.addFocusListener(ff.keyHandler);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "kl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

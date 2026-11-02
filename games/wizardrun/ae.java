@@ -254,14 +254,14 @@ final class ae {
         Throwable decompiledCaughtException = null;
         try {
           var1_int = 108 % ((param0 + 6) / 55);
-          var2_ref = ff.field_H;
+          var2_ref = ff.keyHandler;
           synchronized (var2_ref) {
-            if (tg.field_i == ph.field_r) {
+            if (tg.keyQueueReadIndex == ph.field_r) {
               return false;
             }
-            vk.field_r = ge.field_n[tg.field_i];
-            field_a = ve.field_a[tg.field_i];
-            tg.field_i = 1 + tg.field_i & 127;
+            vk.field_r = ge.keyCodeQueue[tg.keyQueueReadIndex];
+            field_a = ve.typedCharQueue[tg.keyQueueReadIndex];
+            tg.keyQueueReadIndex = 1 + tg.keyQueueReadIndex & 127;
             stackIn_5_0 = true;
           }
           return stackIn_5_0;

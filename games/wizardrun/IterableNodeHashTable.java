@@ -6,7 +6,7 @@ import java.util.*;
 final class IterableNodeHashTable implements Iterable {
     static db[] field_f;
     private IntrusiveNode field_e;
-    static volatile int field_a;
+    static volatile int pointerY;
     static int field_b;
     int field_d;
     IntrusiveNode[] field_c;
@@ -133,7 +133,7 @@ final class IterableNodeHashTable implements Iterable {
               var5 = -1;
             }
             if (param0 != 115) {
-              field_a = -119;
+              pointerY = -119;
             }
             if (param1 == 14) {
               var4 = -1;
@@ -192,7 +192,7 @@ final class IterableNodeHashTable implements Iterable {
           var5Lifetime1 = -1;
         }
         if (param0 != 115) {
-          field_a = -119;
+          pointerY = -119;
         }
         if (param1 == 14) {
           var4Lifetime1 = -1;
@@ -322,9 +322,9 @@ final class IterableNodeHashTable implements Iterable {
           return;
         }
         try {
-          param0.addMouseListener(tc.field_m);
-          param0.addMouseMotionListener(tc.field_m);
-          param0.addFocusListener(tc.field_m);
+          param0.addMouseListener(tc.mouseHandler);
+          param0.addMouseMotionListener(tc.mouseHandler);
+          param0.addFocusListener(tc.mouseHandler);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -354,7 +354,7 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     static {
-        field_a = -1;
+        pointerY = -1;
         field_b = 0;
     }
 }

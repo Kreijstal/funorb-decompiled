@@ -30,16 +30,16 @@ final class td {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (ff.field_H == null) {
+        if (ff.keyHandler == null) {
           if (param0 == 4) {
             return;
           }
           td.b(-24);
           return;
         }
-        var1 = ff.field_H;
+        var1 = ff.keyHandler;
         synchronized (var1) {
-          ff.field_H = null;
+          ff.keyHandler = null;
         }
         if (param0 != 4) {
           td.b(-24);

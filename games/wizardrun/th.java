@@ -15,20 +15,20 @@ final class th {
     final static void b(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = tc.field_m;
+        var1 = tc.mouseHandler;
         synchronized (var1) {
-          sh.field_c = ve.field_d;
-          oc.field_a = oc.field_a + 1;
-          pg.field_n = wizardrun.field_T;
-          fi.field_B = IterableNodeHashTable.field_a;
+          sh.field_c = ve.pressedButton;
+          oc.mouseIdleTime = oc.mouseIdleTime + 1;
+          pg.field_n = wizardrun.pointerX;
+          fi.field_B = IterableNodeHashTable.pointerY;
           ih.field_a = jf.field_i;
           if (param0 != -21) {
             th.a((byte) 88);
           }
           jf.field_i = false;
           w.field_c = fi.field_w;
-          MouseInputHandler.field_e = mh.field_pb;
-          dh.field_b = dc.field_t;
+          MouseInputHandler.field_e = mh.clickX;
+          dh.field_b = dc.clickY;
           fi.field_w = 0;
         }
     }

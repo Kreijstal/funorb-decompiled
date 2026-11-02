@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static char[] field_a;
+    static char[] typedCharQueue;
     static String field_b;
-    static volatile int field_d;
+    static volatile int pressedButton;
     static Sprite[] wizardSprites;
 
     final static void a(String param0, String[] param1, byte param2, int param3) {
@@ -22,7 +22,7 @@ final class ve {
         try {
           fi.field_y = mi.field_z;
           if (param2 >= -96) {
-            field_d = -13;
+            pressedButton = -13;
           }
           if (255 != param3) {
             if (param3 < 100) {
@@ -70,12 +70,12 @@ final class ve {
     public static void a(boolean param0) {
         field_b = null;
         if (!param0) {
-          field_d = -120;
-          field_a = null;
+          pressedButton = -120;
+          typedCharQueue = null;
           wizardSprites = null;
           return;
         }
-        field_a = null;
+        typedCharQueue = null;
         wizardSprites = null;
     }
 
@@ -94,8 +94,8 @@ final class ve {
     }
 
     static {
-        field_a = new char[128];
-        field_d = 0;
+        typedCharQueue = new char[128];
+        pressedButton = 0;
         field_b = "Confirm Email:";
     }
 }

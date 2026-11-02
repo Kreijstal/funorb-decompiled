@@ -404,12 +404,52 @@
       "renamedSymbol": "F:a.font12:Lgb;"
     },
     {
+      "symbol": "F:dc.field_t:I",
+      "originalName": "field_t",
+      "to": "clickY",
+      "evidence": "mousePressed stores the click getY here.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:dc.clickY:I"
+    },
+    {
       "symbol": "F:dg.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "to": "loadingMessage",
       "evidence": "showLoadingProgress stores the stage message here and the loading frame draws it.",
       "confidence": "reviewed",
       "renamedSymbol": "F:dg.loadingMessage:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:ff.field_H:Loj;",
+      "originalName": "field_H",
+      "to": "keyHandler",
+      "evidence": "Static slot holding the key listener; key events are ignored while it is null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ff.keyHandler:LGameKeyHandler;"
+    },
+    {
+      "symbol": "F:ge.field_n:[I",
+      "originalName": "field_n",
+      "to": "keyCodeQueue",
+      "evidence": "keyPressed and keyTyped append a key code at the write index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ge.keyCodeQueue:[I"
+    },
+    {
+      "symbol": "F:gj.field_a:I",
+      "originalName": "field_a",
+      "to": "pointerY",
+      "evidence": "mouseMoved stores getY here and mouseExited resets it to -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.pointerY:I"
+    },
+    {
+      "symbol": "F:h.field_p:I",
+      "originalName": "field_p",
+      "to": "keyIdleTime",
+      "evidence": "Every key press and release resets it to 0.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:h.keyIdleTime:I"
     },
     {
       "symbol": "F:hj.field_g:Lgb;",
@@ -444,6 +484,22 @@
       "renamedSymbol": "F:jl.bossSoundArchive:Lkl;"
     },
     {
+      "symbol": "F:lk.field_a:I",
+      "originalName": "field_a",
+      "to": "keyEventReadIndex",
+      "evidence": "The event write index becomes -1 when it reaches this index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:lk.keyEventReadIndex:I"
+    },
+    {
+      "symbol": "F:mh.field_pb:I",
+      "originalName": "field_pb",
+      "to": "clickX",
+      "evidence": "mousePressed stores the click getX here.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:mh.clickX:I"
+    },
+    {
       "symbol": "F:mi.field_y:Lkl;",
       "originalName": "field_y",
       "to": "soundArchive",
@@ -458,6 +514,14 @@
       "evidence": "Filled with intro bird, cage and enemy death sounds at load.",
       "confidence": "reviewed",
       "renamedSymbol": "F:SpriteState.secondarySoundEffects:[Lje;"
+    },
+    {
+      "symbol": "F:oc.field_a:I",
+      "originalName": "field_a",
+      "to": "mouseIdleTime",
+      "evidence": "Every mouse event resets it to 0.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:oc.mouseIdleTime:I"
     },
     {
       "symbol": "F:ok.field_b:F",
@@ -482,6 +546,14 @@
       "evidence": "Loaded from the \"frame\" sprite group.",
       "confidence": "reviewed",
       "renamedSymbol": "F:pd.frameSprites:[LSprite;"
+    },
+    {
+      "symbol": "F:qh.field_b:I",
+      "originalName": "field_b",
+      "to": "keyQueueWriteIndex",
+      "evidence": "Advanced modulo 128 after each queued key code and character.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:qh.keyQueueWriteIndex:I"
     },
     {
       "symbol": "F:ra.field_m:[Lo;",
@@ -532,6 +604,22 @@
       "renamedSymbol": "F:sl.musicTracks:[Lji;"
     },
     {
+      "symbol": "F:tc.field_m:Ltf;",
+      "originalName": "field_m",
+      "to": "mouseHandler",
+      "evidence": "Static slot holding the mouse listener; mouse events are ignored while it is null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:tc.mouseHandler:LMouseInputHandler;"
+    },
+    {
+      "symbol": "F:tg.field_i:I",
+      "originalName": "field_i",
+      "to": "keyQueueReadIndex",
+      "evidence": "The write index stops advancing when it reaches this index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:tg.keyQueueReadIndex:I"
+    },
+    {
       "symbol": "F:th.field_h:Z",
       "originalName": "field_h",
       "to": "resourcesLoaded",
@@ -556,6 +644,14 @@
       "renamedSymbol": "F:PacketBuffer.position:I"
     },
     {
+      "symbol": "F:ve.field_a:[C",
+      "originalName": "field_a",
+      "to": "typedCharQueue",
+      "evidence": "keyTyped and keyPressed append the typed character at the write index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ve.typedCharQueue:[C"
+    },
+    {
       "symbol": "F:ve.field_c:[Lo;",
       "originalName": "field_c",
       "to": "wizardSprites",
@@ -564,12 +660,44 @@
       "renamedSymbol": "F:ve.wizardSprites:[LSprite;"
     },
     {
+      "symbol": "F:ve.field_d:I",
+      "originalName": "field_d",
+      "to": "pressedButton",
+      "evidence": "mousePressed stores 1 or 2 here from the button modifiers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ve.pressedButton:I"
+    },
+    {
+      "symbol": "F:wd.field_a:[I",
+      "originalName": "field_a",
+      "to": "keyEventQueue",
+      "evidence": "keyPressed stores the code and keyReleased stores its complement.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:wd.keyEventQueue:[I"
+    },
+    {
       "symbol": "F:wizardrun.field_D:[Lo;",
       "originalName": "field_D",
       "to": "numberSprites",
       "evidence": "Loaded from the \"numbers\" sprite group; element 10 is reused as a score sprite.",
       "confidence": "reviewed",
       "renamedSymbol": "F:wizardrun.numberSprites:[LSprite;"
+    },
+    {
+      "symbol": "F:wizardrun.field_T:I",
+      "originalName": "field_T",
+      "to": "pointerX",
+      "evidence": "mouseMoved stores getX here and mouseExited resets it to -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:wizardrun.pointerX:I"
+    },
+    {
+      "symbol": "F:wk.field_b:I",
+      "originalName": "field_b",
+      "to": "keyEventWriteIndex",
+      "evidence": "Advanced modulo 128 after each queued key event.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:wk.keyEventWriteIndex:I"
     },
     {
       "symbol": "F:wl.field_b:Lwl;",
@@ -6882,9 +7010,9 @@
     },
     {
       "symbol": "F:dc.field_t:I",
-      "renamedSymbol": "F:dc.field_t:I",
+      "renamedSymbol": "F:dc.clickY:I",
       "originalName": "field_t",
-      "renamedName": "field_t",
+      "renamedName": "clickY",
       "declaration": {
         "file": "dc.java",
         "start": 151,
@@ -8928,9 +9056,9 @@
     },
     {
       "symbol": "F:ff.field_H:Loj;",
-      "renamedSymbol": "F:ff.field_H:LGameKeyHandler;",
+      "renamedSymbol": "F:ff.keyHandler:LGameKeyHandler;",
       "originalName": "field_H",
-      "renamedName": "field_H",
+      "renamedName": "keyHandler",
       "declaration": {
         "file": "ff.java",
         "start": 104,
@@ -10006,9 +10134,9 @@
     },
     {
       "symbol": "F:ge.field_n:[I",
-      "renamedSymbol": "F:ge.field_n:[I",
+      "renamedSymbol": "F:ge.keyCodeQueue:[I",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "keyCodeQueue",
       "declaration": {
         "file": "ge.java",
         "start": 191,
@@ -10358,9 +10486,9 @@
     },
     {
       "symbol": "F:gj.field_a:I",
-      "renamedSymbol": "F:IterableNodeHashTable.field_a:I",
+      "renamedSymbol": "F:IterableNodeHashTable.pointerY:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "pointerY",
       "declaration": {
         "file": "gj.java",
         "start": 169,
@@ -10919,9 +11047,9 @@
     },
     {
       "symbol": "F:h.field_p:I",
-      "renamedSymbol": "F:h.field_p:I",
+      "renamedSymbol": "F:h.keyIdleTime:I",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "keyIdleTime",
       "declaration": {
         "file": "h.java",
         "start": 211,
@@ -15374,9 +15502,9 @@
     },
     {
       "symbol": "F:lk.field_a:I",
-      "renamedSymbol": "F:lk.field_a:I",
+      "renamedSymbol": "F:lk.keyEventReadIndex:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "keyEventReadIndex",
       "declaration": {
         "file": "lk.java",
         "start": 70,
@@ -15946,9 +16074,9 @@
     },
     {
       "symbol": "F:mh.field_pb:I",
-      "renamedSymbol": "F:mh.field_pb:I",
+      "renamedSymbol": "F:mh.clickX:I",
       "originalName": "field_pb",
-      "renamedName": "field_pb",
+      "renamedName": "clickX",
       "declaration": {
         "file": "mh.java",
         "start": 223,
@@ -17574,9 +17702,9 @@
     },
     {
       "symbol": "F:oc.field_a:I",
-      "renamedSymbol": "F:oc.field_a:I",
+      "renamedSymbol": "F:oc.mouseIdleTime:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "mouseIdleTime",
       "declaration": {
         "file": "oc.java",
         "start": 105,
@@ -19862,9 +19990,9 @@
     },
     {
       "symbol": "F:qh.field_b:I",
-      "renamedSymbol": "F:qh.field_b:I",
+      "renamedSymbol": "F:qh.keyQueueWriteIndex:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "keyQueueWriteIndex",
       "declaration": {
         "file": "qh.java",
         "start": 213,
@@ -22348,9 +22476,9 @@
     },
     {
       "symbol": "F:tc.field_m:Ltf;",
-      "renamedSymbol": "F:tc.field_m:LMouseInputHandler;",
+      "renamedSymbol": "F:tc.mouseHandler:LMouseInputHandler;",
       "originalName": "field_m",
-      "renamedName": "field_m",
+      "renamedName": "mouseHandler",
       "declaration": {
         "file": "tc.java",
         "start": 155,
@@ -22623,9 +22751,9 @@
     },
     {
       "symbol": "F:tg.field_i:I",
-      "renamedSymbol": "F:tg.field_i:I",
+      "renamedSymbol": "F:tg.keyQueueReadIndex:I",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "keyQueueReadIndex",
       "declaration": {
         "file": "tg.java",
         "start": 289,
@@ -24867,9 +24995,9 @@
     },
     {
       "symbol": "F:ve.field_a:[C",
-      "renamedSymbol": "F:ve.field_a:[C",
+      "renamedSymbol": "F:ve.typedCharQueue:[C",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "typedCharQueue",
       "declaration": {
         "file": "ve.java",
         "start": 73,
@@ -24900,9 +25028,9 @@
     },
     {
       "symbol": "F:ve.field_d:I",
-      "renamedSymbol": "F:ve.field_d:I",
+      "renamedSymbol": "F:ve.pressedButton:I",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "pressedButton",
       "declaration": {
         "file": "ve.java",
         "start": 133,
@@ -26099,9 +26227,9 @@
     },
     {
       "symbol": "F:wd.field_a:[I",
-      "renamedSymbol": "F:wd.field_a:[I",
+      "renamedSymbol": "F:wd.keyEventQueue:[I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "keyEventQueue",
       "declaration": {
         "file": "wd.java",
         "start": 96,
@@ -26825,9 +26953,9 @@
     },
     {
       "symbol": "F:wizardrun.field_T:I",
-      "renamedSymbol": "F:wizardrun.field_T:I",
+      "renamedSymbol": "F:wizardrun.pointerX:I",
       "originalName": "field_T",
-      "renamedName": "field_T",
+      "renamedName": "pointerX",
       "declaration": {
         "file": "wizardrun.java",
         "start": 418,
@@ -26902,9 +27030,9 @@
     },
     {
       "symbol": "F:wk.field_b:I",
-      "renamedSymbol": "F:wk.field_b:I",
+      "renamedSymbol": "F:wk.keyEventWriteIndex:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "keyEventWriteIndex",
       "declaration": {
         "file": "wk.java",
         "start": 159,
@@ -223796,7 +223924,7 @@
       "original": "ae.java",
       "renamed": "ae.java",
       "inputSha256": "442e750d970b8d53cc2a09fca7ad4adf5635e1d867f70bed9f22300d0654320e",
-      "outputSha256": "2883d4d6065fd04e40938b4d7fb12032ae91302183f6a3e67ab9abbe8b9fa3a8",
+      "outputSha256": "e6547547b9291bab27a955fad0c73648cdb16517e05bb4326582b329b108eafa",
       "edits": [
         {
           "start": 118,
@@ -223849,6 +223977,62 @@
           "original": "L1",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 12083,
+          "end": 12090,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 12147,
+          "end": 12154,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 12242,
+          "end": 12249,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
+        },
+        {
+          "start": 12253,
+          "end": 12260,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 12288,
+          "end": 12295,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
+          "start": 12299,
+          "end": 12306,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 12324,
+          "end": 12331,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 12341,
+          "end": 12348,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
         }
       ]
     },
@@ -227091,7 +227275,7 @@
       "original": "dc.java",
       "renamed": "dc.java",
       "inputSha256": "75f929fcf520c2630a89b1015feb3892425d5c194d619eead8428b711371325f",
-      "outputSha256": "53b15a6b02dde2e7bbc446c363a6102d7de97bf8ff82b80c768c7fa7e79ed232",
+      "outputSha256": "743d0c2d3427e8e56a82bf70cfbd5e54f85117ceef80ffac0b495b28cc851577",
       "edits": [
         {
           "start": 61,
@@ -227099,6 +227283,13 @@
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 151,
+          "end": 158,
+          "symbol": "F:dc.field_t:I",
+          "original": "field_t",
+          "renamed": "clickY"
         },
         {
           "start": 286,
@@ -227218,6 +227409,13 @@
           "symbol": "C:eb",
           "original": "eb",
           "renamed": "ClientException"
+        },
+        {
+          "start": 4026,
+          "end": 4033,
+          "symbol": "F:dc.field_t:I",
+          "original": "field_t",
+          "renamed": "clickY"
         }
       ]
     },
@@ -228975,7 +229173,7 @@
       "original": "ee.java",
       "renamed": "ee.java",
       "inputSha256": "51fda4a40f6e3d7cbbff85bd5bd2526b7a52161defc7ac2fa0c9dae102dfe50f",
-      "outputSha256": "10e83fc3af926e6e76a43384806eab83c7418b97c549f3986298689b4668767e",
+      "outputSha256": "f2f3a9761f73c494762d39185093f294d251c180577160e4dfddb41f0dfb9916",
       "edits": [
         {
           "start": 55,
@@ -228990,6 +229188,34 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 250,
+          "end": 257,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 306,
+          "end": 313,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 356,
+          "end": 363,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 379,
+          "end": 386,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
         }
       ]
     },
@@ -231316,7 +231542,7 @@
       "original": "ff.java",
       "renamed": "ff.java",
       "inputSha256": "89a2c6e29b0b2704ad018270059d4a26f496a1504489014868d43b3866f0202d",
-      "outputSha256": "cd422e4e1419e90d34a7149fa5f4c73dcfa791e1f6d8a050415354cecb6db7df",
+      "outputSha256": "be5dc9b4f196f2a187ab208e1620e135ac02cfe8ddc0746e68777481f8d4d1d8",
       "edits": [
         {
           "start": 101,
@@ -231326,11 +231552,25 @@
           "renamed": "GameKeyHandler"
         },
         {
+          "start": 104,
+          "end": 111,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
           "start": 125,
           "end": 127,
           "symbol": "C:oi",
           "original": "oi",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1150,
+          "end": 1157,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
         },
         {
           "start": 1882,
@@ -231352,6 +231592,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 3444,
+          "end": 3451,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
         },
         {
           "start": 3455,
@@ -231394,6 +231641,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 9735,
+          "end": 9742,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
         },
         {
           "start": 9749,
@@ -232103,8 +232357,15 @@
       "original": "ge.java",
       "renamed": "ge.java",
       "inputSha256": "a673fafc49d6e3ddfb2ffc3e3e3b87930fd78cd9ed3bd39c3ec95004c6c40736",
-      "outputSha256": "94c8fe5844cd7f5b38b3c1d35a26312b1c3d57d34565be61d2a6cb34dfd80601",
+      "outputSha256": "f396187667e7b9981afe37b24fc441380d666c650f7365c910f24d05095fe134",
       "edits": [
+        {
+          "start": 191,
+          "end": 198,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
+        },
         {
           "start": 4238,
           "end": 4240,
@@ -232118,6 +232379,27 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 5467,
+          "end": 5474,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
+        },
+        {
+          "start": 6296,
+          "end": 6303,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
+        },
+        {
+          "start": 6390,
+          "end": 6397,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
         }
       ]
     },
@@ -232444,7 +232726,7 @@
       "original": "gj.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "3a472083b3869b95e3c2f5d9abb8011f8587a1ea88a34da0c05dd7195c2e0002",
-      "outputSha256": "2717b541f9a2b6861db53b46071661dee4a971a7b84121198eef9d78ee9a8169",
+      "outputSha256": "8dcd9b42235c3842ec27203f3e5d1bc4c029a82746f9739c44725e206298813e",
       "edits": [
         {
           "start": 71,
@@ -232459,6 +232741,13 @@
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 169,
+          "end": 176,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
         },
         {
           "start": 223,
@@ -232489,11 +232778,25 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 3909,
+          "end": 3916,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
+        },
+        {
           "start": 4140,
           "end": 4142,
           "symbol": "C:cg",
           "original": "cg",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 5354,
+          "end": 5361,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
         },
         {
           "start": 5581,
@@ -232629,6 +232932,27 @@
           "renamed": "next"
         },
         {
+          "start": 9351,
+          "end": 9358,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 9404,
+          "end": 9411,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 9451,
+          "end": 9458,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
           "start": 9693,
           "end": 9695,
           "symbol": "C:wl",
@@ -232711,6 +233035,13 @@
           "symbol": "M:gj.<init>()V",
           "original": "gj",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 10440,
+          "end": 10447,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
         }
       ]
     },
@@ -232845,7 +233176,7 @@
       "original": "h.java",
       "renamed": "h.java",
       "inputSha256": "dce1434e401236c465d78576ce33e6f4e410bf279d0f615944b11baf65bb5c62",
-      "outputSha256": "a10835e1c4b9a30dbf6836fd558d0d654986380a1b73621971687a143dfef02f",
+      "outputSha256": "4993b01175bcbcfba532cf1837d1baea4e60a3f65919eb77ef42b52ff7cef170",
       "edits": [
         {
           "start": 60,
@@ -232860,6 +233191,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 211,
+          "end": 218,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
         },
         {
           "start": 6801,
@@ -233056,6 +233394,13 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 24821,
+          "end": 24828,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
         }
       ]
     },
@@ -236425,7 +236770,7 @@
       "original": "kl.java",
       "renamed": "kl.java",
       "inputSha256": "417368e0ecbc75d68c8892390fb96a5669b97613e86a7e6578e9c7a5132862cb",
-      "outputSha256": "d8428a347e176161a9064f69d6b13ce5b809a23cfd5166e0c5ddc13c1ed7b7f9",
+      "outputSha256": "1a68349f6eb53f4b8cbb8b9a93dee4773992387015f060c57898d6a63bd3c05d",
       "edits": [
         {
           "start": 6029,
@@ -236503,6 +236848,20 @@
           "symbol": "F:va.field_m:I",
           "original": "field_m",
           "renamed": "position"
+        },
+        {
+          "start": 14695,
+          "end": 14702,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 14811,
+          "end": 14818,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
         }
       ]
     },
@@ -237228,8 +237587,15 @@
       "original": "lk.java",
       "renamed": "lk.java",
       "inputSha256": "d8d6412bbf3f69672708dccfc6e320d4daf90146dcbef0a11c6dfa591d0f136f",
-      "outputSha256": "26d9cf60a8c1cc9392337dfb7deecf1947a899f90d7a4f31e4b0fc78277dabb4",
+      "outputSha256": "36b61726233f4285199500ad75ea55d737abaae9c59f09f9da38a43856b85c94",
       "edits": [
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
         {
           "start": 90,
           "end": 91,
@@ -237250,6 +237616,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 2850,
+          "end": 2857,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
         }
       ]
     },
@@ -237850,8 +238223,15 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "3dc610689e5479700bf3932bc1b9612a589dc46bfec07d13e9ae9e530b08f9e7",
-      "outputSha256": "9453b6c79ef698c693188ed5db28a74aeeae528bd6ed15c36cf407049c5cd2c4",
+      "outputSha256": "4bd88b9e86f02a67fb043e265b94c59fd935c4eb0c7f0c39d7ff95e5ff33e3de",
       "edits": [
+        {
+          "start": 223,
+          "end": 231,
+          "symbol": "F:mh.field_pb:I",
+          "original": "field_pb",
+          "renamed": "clickX"
+        },
         {
           "start": 297,
           "end": 299,
@@ -237907,6 +238287,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 12601,
+          "end": 12609,
+          "symbol": "F:mh.field_pb:I",
+          "original": "field_pb",
+          "renamed": "clickX"
         }
       ]
     },
@@ -238146,7 +238533,7 @@
       "original": "mj.java",
       "renamed": "mj.java",
       "inputSha256": "176c94db952d046072d924a9e6c4085834bbf0121a6b4536e59278b88549fb06",
-      "outputSha256": "2f98f52164b41e8c23a6b18fb409d5e9830fde4b8a31f7eecc9d3d62e03305b6",
+      "outputSha256": "8576d670870fbd1c5a9d2eddc5c13ab6b6c6b1f77fc3d24aea6b14159f8355d0",
       "edits": [
         {
           "start": 112,
@@ -238154,6 +238541,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 280,
+          "end": 287,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
         },
         {
           "start": 313,
@@ -238217,6 +238611,27 @@
           "symbol": "C:ib",
           "original": "ib",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 1743,
+          "end": 1750,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 1863,
+          "end": 1870,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 1886,
+          "end": 1893,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
         },
         {
           "start": 2347,
@@ -238412,8 +238827,22 @@
       "original": "ne.java",
       "renamed": "ne.java",
       "inputSha256": "7b6926e773af640b9479964914d6f365defce11b69eb5efe0b202e74b85ed2bc",
-      "outputSha256": "0acaa70c5de50d42e611ffc9bd90848b83f8d689ef365aed15c8f6e18bf76021",
+      "outputSha256": "d57c649c1c295e23f5210a1d402d005a0a2dcdc9d7329cff1e84a4dd908014c2",
       "edits": [
+        {
+          "start": 382,
+          "end": 389,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
+        },
+        {
+          "start": 418,
+          "end": 425,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
+        },
         {
           "start": 620,
           "end": 622,
@@ -240929,7 +241358,7 @@
       "original": "oc.java",
       "renamed": "oc.java",
       "inputSha256": "7461cc74af838e45437138c5bccc6972f4ee59ecf705e1e01ea9592cfc08300b",
-      "outputSha256": "02810e7f5433295b155d419c311ba08249f10df7b597095928c3590aacb356f1",
+      "outputSha256": "05c6ce122a1247911a60a0ac60a22f7ee6449c2b3239a5cd8c31d865f57c78fd",
       "edits": [
         {
           "start": 66,
@@ -240937,6 +241366,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 105,
+          "end": 112,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
         },
         {
           "start": 125,
@@ -240951,6 +241387,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2521,
+          "end": 2528,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
         }
       ]
     },
@@ -242014,7 +242457,7 @@
       "original": "oj.java",
       "renamed": "GameKeyHandler.java",
       "inputSha256": "75de758b422a8b23fdfb171e5a63676b344b34543d8d595a5d6433058fdb857f",
-      "outputSha256": "4f281ad3932f371765934f42263f9b5c0ec5469f8bb5b3f4e5128a08c6ca46f7",
+      "outputSha256": "23f501f7e7002bc783d138a56dcb656a6f52d2b0db46d9d89307cfb37389d293",
       "edits": [
         {
           "start": 50,
@@ -242022,6 +242465,265 @@
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "GameKeyHandler"
+        },
+        {
+          "start": 557,
+          "end": 564,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 621,
+          "end": 628,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 1370,
+          "end": 1377,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 1569,
+          "end": 1576,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 1609,
+          "end": 1616,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 1647,
+          "end": 1654,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
+        },
+        {
+          "start": 1658,
+          "end": 1665,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 1692,
+          "end": 1699,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
+          "start": 1703,
+          "end": 1710,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 1749,
+          "end": 1756,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 3118,
+          "end": 3125,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 3143,
+          "end": 3150,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
+        },
+        {
+          "start": 3416,
+          "end": 3423,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 3480,
+          "end": 3487,
+          "symbol": "F:wd.field_a:[I",
+          "original": "field_a",
+          "renamed": "keyEventQueue"
+        },
+        {
+          "start": 3491,
+          "end": 3498,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 3530,
+          "end": 3537,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 3549,
+          "end": 3556,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 3583,
+          "end": 3590,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 3597,
+          "end": 3604,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
+        {
+          "start": 3627,
+          "end": 3634,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 4719,
+          "end": 4726,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 4782,
+          "end": 4789,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
+        },
+        {
+          "start": 5116,
+          "end": 5123,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 5176,
+          "end": 5183,
+          "symbol": "F:wd.field_a:[I",
+          "original": "field_a",
+          "renamed": "keyEventQueue"
+        },
+        {
+          "start": 5187,
+          "end": 5194,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 5223,
+          "end": 5230,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 5240,
+          "end": 5247,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 5274,
+          "end": 5281,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
+        {
+          "start": 5288,
+          "end": 5295,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 5316,
+          "end": 5323,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 5415,
+          "end": 5422,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 5455,
+          "end": 5462,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 5483,
+          "end": 5490,
+          "symbol": "F:ge.field_n:[I",
+          "original": "field_n",
+          "renamed": "keyCodeQueue"
+        },
+        {
+          "start": 5494,
+          "end": 5501,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 5532,
+          "end": 5539,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
+          "start": 5543,
+          "end": 5550,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
+        {
+          "start": 5580,
+          "end": 5587,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
         }
       ]
     },
@@ -245354,8 +246056,15 @@
       "original": "qh.java",
       "renamed": "qh.java",
       "inputSha256": "f063ab3819cb6309b412649964556e644e3555f30f83096551170d121c9278ff",
-      "outputSha256": "69136c3d46a38137097c19a5a94ab965bde7088dcbbc5abaed653bd9976039bd",
+      "outputSha256": "a7268901053abbdecdf643ec0144832cac9d5c1438500c671c1ac05678b484c5",
       "edits": [
+        {
+          "start": 213,
+          "end": 220,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
+        },
         {
           "start": 1748,
           "end": 1750,
@@ -245593,6 +246302,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 22930,
+          "end": 22937,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
         }
       ]
     },
@@ -247547,14 +248263,105 @@
       "original": "t.java",
       "renamed": "t.java",
       "inputSha256": "0f3e9bae4bc54f88474be430ef20c07e8595a8305d3f6730ed87ae1ae4736aab",
-      "outputSha256": "adffc7359c518ea1ae36e5c009c701e60b0db8862f58639f41ec03f39b9492c5",
+      "outputSha256": "bddb386a814ff93cc655605df4524544dd162f81ad75f4ad78be3f47d4aff3ac",
       "edits": [
+        {
+          "start": 408,
+          "end": 415,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 463,
+          "end": 470,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
+        },
+        {
+          "start": 475,
+          "end": 482,
+          "symbol": "F:h.field_p:I",
+          "original": "field_p",
+          "renamed": "keyIdleTime"
+        },
+        {
+          "start": 503,
+          "end": 510,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
+          "start": 554,
+          "end": 561,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
         {
           "start": 632,
           "end": 634,
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 691,
+          "end": 698,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 704,
+          "end": 711,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
+        {
+          "start": 758,
+          "end": 765,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
+        {
+          "start": 772,
+          "end": 779,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
+        {
+          "start": 809,
+          "end": 816,
+          "symbol": "F:wd.field_a:[I",
+          "original": "field_a",
+          "renamed": "keyEventQueue"
+        },
+        {
+          "start": 820,
+          "end": 827,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
+        {
+          "start": 849,
+          "end": 856,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
+        },
+        {
+          "start": 868,
+          "end": 875,
+          "symbol": "F:lk.field_a:I",
+          "original": "field_a",
+          "renamed": "keyEventReadIndex"
         },
         {
           "start": 932,
@@ -247569,6 +248376,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 1104,
+          "end": 1111,
+          "symbol": "F:qh.field_b:I",
+          "original": "field_b",
+          "renamed": "keyQueueWriteIndex"
         }
       ]
     },
@@ -247795,7 +248609,7 @@
       "original": "tc.java",
       "renamed": "tc.java",
       "inputSha256": "e8823c71bb4ebaee48cbafcf2c8392cc53d646b34ab70aabdcc3efad3d9b621e",
-      "outputSha256": "7de052a45b598f3446d3c23396eb564169141769a6df0b080e1b0d7fd91e84be",
+      "outputSha256": "d32da9e755f3038e82c03702954d74241666d442a2efc0b70693fd0e701dfbf7",
       "edits": [
         {
           "start": 61,
@@ -247812,6 +248626,27 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 155,
+          "end": 162,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 382,
+          "end": 389,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 542,
+          "end": 549,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
           "start": 556,
           "end": 558,
           "symbol": "C:tf",
@@ -247824,8 +248659,30 @@
       "original": "td.java",
       "renamed": "td.java",
       "inputSha256": "6b59820736a94bd7d3e290427d5fcbf41e26806014ca91ba4a62d664759dffc4",
-      "outputSha256": "6b59820736a94bd7d3e290427d5fcbf41e26806014ca91ba4a62d664759dffc4",
-      "edits": []
+      "outputSha256": "b6c5b518951c97ba18c163222da83ecb7b8577ac4fc5790ad4aa53cbb47030b0",
+      "edits": [
+        {
+          "start": 757,
+          "end": 764,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 904,
+          "end": 911,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        },
+        {
+          "start": 956,
+          "end": 963,
+          "symbol": "F:ff.field_H:Loj;",
+          "original": "field_H",
+          "renamed": "keyHandler"
+        }
+      ]
     },
     {
       "original": "te.java",
@@ -247853,7 +248710,7 @@
       "original": "tf.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "f734e802fdef8312912202c7f65703ef9640c926cd04a070749a8e98a189e2a1",
-      "outputSha256": "945e4c62270d0434a17a715502258bc1562beb542779a7f2130ec3c29010f34b",
+      "outputSha256": "7d3621d840fce23861f3048d8e076d5d535149d89aebcb4451c75197d6683630",
       "edits": [
         {
           "start": 50,
@@ -247863,6 +248720,27 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 624,
+          "end": 631,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 688,
+          "end": 695,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 721,
+          "end": 728,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
+        },
+        {
           "start": 756,
           "end": 758,
           "symbol": "C:gj",
@@ -247870,11 +248748,102 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 759,
+          "end": 766,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
+        },
+        {
+          "start": 1517,
+          "end": 1524,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 1551,
+          "end": 1558,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
+        },
+        {
+          "start": 2112,
+          "end": 2119,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 2168,
+          "end": 2175,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 2201,
+          "end": 2208,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
+        },
+        {
           "start": 2225,
           "end": 2227,
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 2228,
+          "end": 2235,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
+        },
+        {
+          "start": 3227,
+          "end": 3234,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 3261,
+          "end": 3268,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 3289,
+          "end": 3297,
+          "symbol": "F:mh.field_pb:I",
+          "original": "field_pb",
+          "renamed": "clickX"
+        },
+        {
+          "start": 3330,
+          "end": 3337,
+          "symbol": "F:dc.field_t:I",
+          "original": "field_t",
+          "renamed": "clickY"
+        },
+        {
+          "start": 3504,
+          "end": 3511,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
+        },
+        {
+          "start": 3585,
+          "end": 3592,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
         },
         {
           "start": 4983,
@@ -247898,6 +248867,27 @@
           "renamed": "GameShell"
         },
         {
+          "start": 6620,
+          "end": 6627,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 6654,
+          "end": 6661,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 6689,
+          "end": 6696,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
+        },
+        {
           "start": 6726,
           "end": 6728,
           "symbol": "C:gj",
@@ -247905,11 +248895,67 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 6729,
+          "end": 6736,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
+        },
+        {
+          "start": 8337,
+          "end": 8344,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 8393,
+          "end": 8400,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 8426,
+          "end": 8433,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
+        },
+        {
           "start": 8461,
           "end": 8463,
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 8464,
+          "end": 8471,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
+        },
+        {
+          "start": 9476,
+          "end": 9483,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 9510,
+          "end": 9517,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 9538,
+          "end": 9545,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
         }
       ]
     },
@@ -247917,7 +248963,7 @@
       "original": "tg.java",
       "renamed": "tg.java",
       "inputSha256": "2d1bc4689f3794736c8b206cc77a82bc64976d2fe2768b0485f3459fad9d7a67",
-      "outputSha256": "be30c96d28a2e91ed0897e835e8625bc11ed395f78524a578bdb540c096e2b40",
+      "outputSha256": "f0739323d1b3c0822f3bb0993ed1b70315dbaef3430d4e6a2faee93e832f5b89",
       "edits": [
         {
           "start": 193,
@@ -247927,11 +248973,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 289,
+          "end": 296,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
+        },
+        {
           "start": 2898,
           "end": 2900,
           "symbol": "C:oi",
           "original": "oi",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 2912,
+          "end": 2919,
+          "symbol": "F:tg.field_i:I",
+          "original": "field_i",
+          "renamed": "keyQueueReadIndex"
         }
       ]
     },
@@ -247939,7 +248999,7 @@
       "original": "th.java",
       "renamed": "th.java",
       "inputSha256": "6612849d2f4e45726c46f512d5d187a2f11a1f6a18c88db01b3a9238bd532002",
-      "outputSha256": "e11957ec9c060d59eee6152d63b643e03aecae277089965b8ba05ae8e17913c3",
+      "outputSha256": "d75770c7ac9bd09145f8057af1c24235c17db82d5d920093afedfc4a4fdb435d",
       "edits": [
         {
           "start": 105,
@@ -247963,6 +249023,41 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 424,
+          "end": 431,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 489,
+          "end": 496,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
+        },
+        {
+          "start": 511,
+          "end": 518,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 524,
+          "end": 531,
+          "symbol": "F:oc.field_a:I",
+          "original": "field_a",
+          "renamed": "mouseIdleTime"
+        },
+        {
+          "start": 570,
+          "end": 577,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
+        },
+        {
           "start": 602,
           "end": 604,
           "symbol": "C:gj",
@@ -247970,11 +249065,32 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 605,
+          "end": 612,
+          "symbol": "F:gj.field_a:I",
+          "original": "field_a",
+          "renamed": "pointerY"
+        },
+        {
           "start": 795,
           "end": 797,
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 811,
+          "end": 819,
+          "symbol": "F:mh.field_pb:I",
+          "original": "field_pb",
+          "renamed": "clickX"
+        },
+        {
+          "start": 847,
+          "end": 854,
+          "symbol": "F:dc.field_t:I",
+          "original": "field_t",
+          "renamed": "clickY"
         },
         {
           "start": 909,
@@ -252649,8 +253765,22 @@
       "original": "ve.java",
       "renamed": "ve.java",
       "inputSha256": "092062df56908a8fc30c510c7098e709fe19cf935bc595108333f27d01a30f2a",
-      "outputSha256": "aa6aac94ce1ed1fb05c4873bf0b8eb71837b3a22801e5d29fb111a16c5ce6e3f",
+      "outputSha256": "0b65993f16e84b8f8073124403334977028ca633d36da84ca576c8adfa7fb3d3",
       "edits": [
+        {
+          "start": 73,
+          "end": 80,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
+          "start": 133,
+          "end": 140,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
+        },
         {
           "start": 153,
           "end": 154,
@@ -252664,6 +253794,13 @@
           "symbol": "F:ve.field_c:[Lo;",
           "original": "field_c",
           "renamed": "wizardSprites"
+        },
+        {
+          "start": 767,
+          "end": 774,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
         },
         {
           "start": 2332,
@@ -252680,6 +253817,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2471,
+          "end": 2478,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
+        },
+        {
+          "start": 2497,
+          "end": 2504,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
           "start": 2523,
           "end": 2530,
           "symbol": "F:ve.field_c:[Lo;",
@@ -252687,11 +253838,32 @@
           "renamed": "wizardSprites"
         },
         {
+          "start": 2575,
+          "end": 2582,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
           "start": 2599,
           "end": 2606,
           "symbol": "F:ve.field_c:[Lo;",
           "original": "field_c",
           "renamed": "wizardSprites"
+        },
+        {
+          "start": 3031,
+          "end": 3038,
+          "symbol": "F:ve.field_a:[C",
+          "original": "field_a",
+          "renamed": "typedCharQueue"
+        },
+        {
+          "start": 3064,
+          "end": 3071,
+          "symbol": "F:ve.field_d:I",
+          "original": "field_d",
+          "renamed": "pressedButton"
         }
       ]
     },
@@ -253345,14 +254517,35 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "f0740784fafead4738258219e75bd9f0d23a4a090a1ba30f667db270043bcac5",
-      "outputSha256": "572809643b1944ce9c9fff437fdbf6913c7d5cc645c685b20e14efb8be2d7b3e",
+      "outputSha256": "f76a63b8397fb2c26e2e5125fad7b3bb489ad851d5e0fe3bacaf855a953bd2a1",
       "edits": [
+        {
+          "start": 96,
+          "end": 103,
+          "symbol": "F:wd.field_a:[I",
+          "original": "field_a",
+          "renamed": "keyEventQueue"
+        },
+        {
+          "start": 307,
+          "end": 314,
+          "symbol": "F:wd.field_a:[I",
+          "original": "field_a",
+          "renamed": "keyEventQueue"
+        },
         {
           "start": 1309,
           "end": 1311,
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 3044,
+          "end": 3051,
+          "symbol": "F:wd.field_a:[I",
+          "original": "field_a",
+          "renamed": "keyEventQueue"
         }
       ]
     },
@@ -253692,7 +254885,7 @@
       "original": "wh.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "76e4e4d9006f2542fd883df323c58bf08af51e265218ee589b62185c949aa51f",
-      "outputSha256": "30db74f6fe9cf9937ec55ca17e681ea88cf0b107aeb6cd2871aa66d28e36aa56",
+      "outputSha256": "847fe2c8032316d698cf4eb71dcb0f89e573014d4239f0250b992048f18a0b6e",
       "edits": [
         {
           "start": 71,
@@ -253756,6 +254949,27 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "Sprite"
+        },
+        {
+          "start": 5833,
+          "end": 5840,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 5864,
+          "end": 5871,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
+        },
+        {
+          "start": 5920,
+          "end": 5927,
+          "symbol": "F:tc.field_m:Ltf;",
+          "original": "field_m",
+          "renamed": "mouseHandler"
         },
         {
           "start": 6035,
@@ -253981,7 +255195,7 @@
       "original": "wizardrun.java",
       "renamed": "wizardrun.java",
       "inputSha256": "8176a9846caa5aad0ed46dbe90fdb664c8ec85276a6c288b4c53ea3bf24ade0b",
-      "outputSha256": "652587799080ed6f2917fcf892182586dfdd98852d99a53a0e87c37cbe3275db",
+      "outputSha256": "1b58f18ce0c8b70f53d7c780e190e3bdbd8d90f21b08824c125166635328c062",
       "edits": [
         {
           "start": 94,
@@ -254003,6 +255217,13 @@
           "symbol": "F:wizardrun.field_D:[Lo;",
           "original": "field_D",
           "renamed": "numberSprites"
+        },
+        {
+          "start": 418,
+          "end": 425,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
         },
         {
           "start": 594,
@@ -261975,6 +263196,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 180245,
+          "end": 180252,
+          "symbol": "F:wizardrun.field_T:I",
+          "original": "field_T",
+          "renamed": "pointerX"
         }
       ]
     },
@@ -262074,8 +263302,15 @@
       "original": "wk.java",
       "renamed": "wk.java",
       "inputSha256": "098834eb228f9001ffeab1526f5a47dcd80fa41cbd20ede42f383539c84f3361",
-      "outputSha256": "f2847b876a4e216761e81c01c7fac796b0548d47bf829fb43d7c99011223647b",
+      "outputSha256": "feb563f09a484d8a8e7ecaf6e7393ffb82f593bcb2001aa5f52e25924375ca56",
       "edits": [
+        {
+          "start": 159,
+          "end": 166,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
+        },
         {
           "start": 322,
           "end": 324,
@@ -262138,6 +263373,13 @@
           "symbol": "F:va.field_k:[B",
           "original": "field_k",
           "renamed": "payload"
+        },
+        {
+          "start": 2847,
+          "end": 2854,
+          "symbol": "F:wk.field_b:I",
+          "original": "field_b",
+          "renamed": "keyEventWriteIndex"
         }
       ]
     },
@@ -262298,10 +263540,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/wizardrun"
     },
-    "rulesSha256": "c98d120225abe7bcf5ec0bc0dc00fe8b02ac53adb85779765ea849d6fa78a944",
+    "rulesSha256": "0410250f5097d96b7feec80e3c89096ef3996e0c2de4b013c7cca45d6df26f64",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3",
-    "outputTreeSha256": "6bfb7ec494ed4eec4482a5944bbecc12e90b280f8cf15b42c81155227ab14d65",
+    "outputTreeSha256": "09dbb37ae85d26b0996570ad0467fed3d5a0ec123120c04d753e3dfb791e888e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -187,10 +187,10 @@ final class NodeHashTableIterator implements Iterator {
         if (param0 >= -28) {
           field_d = (Sprite) null;
         }
-        if (null != tc.field_m) {
-          var1 = tc.field_m;
+        if (null != tc.mouseHandler) {
+          var1 = tc.mouseHandler;
           synchronized (var1) {
-            tc.field_m = null;
+            tc.mouseHandler = null;
           }
         }
     }

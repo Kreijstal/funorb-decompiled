@@ -11,7 +11,7 @@ final class mj {
 
     final static int a(byte param0) {
         int var1 = 36 / ((param0 + 19) / 45);
-        return oc.field_a;
+        return oc.mouseIdleTime;
     }
 
     final static SocketConnector a(String param0, int param1, int param2) {
@@ -49,12 +49,12 @@ final class mj {
 
     final static void a(java.awt.Component param0, byte param1) {
         try {
-          param0.removeKeyListener(ff.field_H);
+          param0.removeKeyListener(ff.keyHandler);
           if (param1 <= 91) {
             field_c = true;
           }
-          param0.removeFocusListener(ff.field_H);
-          wk.field_b = -1;
+          param0.removeFocusListener(ff.keyHandler);
+          wk.keyEventWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "mj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

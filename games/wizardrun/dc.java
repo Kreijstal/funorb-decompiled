@@ -5,7 +5,7 @@ final class dc extends IntrusiveNode {
     int field_m;
     int field_i;
     static String field_n;
-    static volatile int field_t;
+    static volatile int clickY;
     int field_r;
     int field_l;
     static String field_q;
@@ -127,7 +127,7 @@ final class dc extends IntrusiveNode {
     }
 
     static {
-        field_t = 0;
+        clickY = 0;
         field_q = "Email: ";
         field_j = 0.0;
         field_o = "Passwords can only contain letters and numbers";

@@ -3,7 +3,7 @@
  */
 final class oc {
     static Sprite[][] field_b;
-    static volatile int field_a;
+    static volatile int mouseIdleTime;
     static Sprite[] field_c;
     static int field_d;
 
@@ -69,6 +69,6 @@ final class oc {
     }
 
     static {
-        field_a = 0;
+        mouseIdleTime = 0;
     }
 }
