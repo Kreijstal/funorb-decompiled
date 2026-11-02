@@ -117,17 +117,17 @@ final class kh extends vh {
         int var3;
         var3 = Pool.field_O;
         ep.field_z = false;
-        oa.field_d = null;
+        ClientException.field_d = null;
         var1 = -42 % ((-1 - param0) / 38);
         if (!ro.field_e) {
           var2 = no.field_l;
           if (var2 > 0) {
             if (1 == var2) {
-              oa.field_d = vd.field_m;
+              ClientException.field_d = vd.field_m;
             } else {
-              oa.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.field_d);
+              ClientException.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.field_d);
             }
-            oa.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) oa.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.field_E)});
+            ClientException.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.field_E)});
           }
           d.field_d.k(17);
           ci.d((byte) -126);

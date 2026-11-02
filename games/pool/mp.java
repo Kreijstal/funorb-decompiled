@@ -158,7 +158,7 @@ final class mp extends ch implements tb {
         }
         gi.field_o.field_tb = pa.field_M.field_tb;
         gi.field_o.field_Fb = 1;
-        if (uf.field_z > 0) {
+        if (PoolMatchController.field_z > 0) {
           wk.a(param4, param9, param1, 112);
         }
         if (nj.field_b > 0) {

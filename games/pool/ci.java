@@ -184,7 +184,7 @@ final class ci {
     final static void d(byte param0) {
         wd.field_Ub.k(-22216);
         if (of.field_Nb == null) {
-          of.field_Nb = new wa(wd.field_Ub, oa.field_d);
+          of.field_Nb = new wa(wd.field_Ub, ClientException.field_d);
         }
         if (param0 <= -108) {
           wd.field_Ub.b(of.field_Nb, 30000);

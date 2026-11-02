@@ -88,7 +88,7 @@ final class cj extends vc {
         }
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -792,7 +792,7 @@ final class cj extends vc {
         }
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         Object stackIn_53_0;
         int[] stackIn_53_1;
         int stackIn_53_2;
@@ -902,7 +902,7 @@ final class cj extends vc {
           kf.a(ta.field_c, (byte) -104, pa.field_L, ph.field_g, cq.field_c);
           kf.a(am.field_h, (byte) -104, pa.field_L, ph.field_g, c.field_b);
           kf.a(gf.field_d, (byte) -104, pa.field_L, ph.field_g, hl.field_n);
-          kf.a(cn.field_d, (byte) -104, pa.field_L, ph.field_g, oa.field_e);
+          kf.a(cn.field_d, (byte) -104, pa.field_L, ph.field_g, ClientException.field_e);
           kf.a(wn.field_j, (byte) -104, pa.field_L, ph.field_g, ue.field_a);
           this.a(param1, 9291);
           pr.a(gr.field_w, false);
@@ -960,7 +960,7 @@ final class cj extends vc {
               }
             }
           }
-          var7 = oa.field_e;
+          var7 = ClientException.field_e;
           var8 = cn.field_d;
           for (var10 = var8 - 1; var7 <= var10; var10--) {
             var9 = ph.field_g[var10];
@@ -983,7 +983,7 @@ final class cj extends vc {
             }
             this.a(stackIn_53_1, (byte) stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_54_5);
           }
-          var7Lifetime1 = oa.field_e;
+          var7Lifetime1 = ClientException.field_e;
           var8Lifetime1 = cn.field_d;
           var15 = -1 + var8Lifetime1;
           var10Lifetime1 = var15;
@@ -1152,7 +1152,7 @@ final class cj extends vc {
         this.field_v = 5609813;
     }
 
-    private final void a(uf param0, int param1) {
+    private final void a(PoolMatchController param0, int param1) {
         int var8 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -1353,7 +1353,7 @@ final class cj extends vc {
         int var4;
         int var6;
         int var7;
-        uf var8;
+        PoolMatchController var8;
         p[] var9;
         p[] var10;
         p[] var11;
@@ -1382,8 +1382,8 @@ final class cj extends vc {
         cq.field_c = var3;
         var2 = ec.field_c;
         if (param0 > -11) {
-          var8 = (uf) null;
-          this.a((byte) 7, (uf) null);
+          var8 = (PoolMatchController) null;
+          this.a((byte) 7, (PoolMatchController) null);
         }
         while (var2 < im.field_Wb) {
           var4 = var2;
@@ -1412,7 +1412,7 @@ final class cj extends vc {
           var3 += 4;
         }
         wn.field_j = var3;
-        oa.field_e = var3;
+        ClientException.field_e = var3;
         for (var2Lifetime3 = nm.field_e; ca.field_h > var2Lifetime3; var2Lifetime3++) {
           var4Lifetime3 = var2Lifetime3;
           var12 = th.field_l;

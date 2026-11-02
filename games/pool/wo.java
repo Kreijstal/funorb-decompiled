@@ -55,7 +55,7 @@ final class wo {
         vh var3 = null;
         try {
           oi.field_o = pf.a("basic", (byte) 54, "display_name_changed", param1);
-          aj.field_Mb = new ao(0L, em.field_J, wg.field_Rb, ge.field_m);
+          aj.field_Mb = new ao(0L, em.field_J, wg.field_Rb, PacketBuffer.field_m);
           cp.field_c = new ao(0L, em.field_J, ag.field_d, tp.field_f);
           ud.field_J = new vh(0L, (vh) null);
           ba.field_sb = new vh(0L, uo.field_Lb);

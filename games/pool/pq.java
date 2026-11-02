@@ -88,8 +88,8 @@ final class pq {
         this.field_p = false;
     }
 
-    final void a(int param0, ge param1) {
-        ge stackIn_2_0 = null;
+    final void a(int param0, PacketBuffer param1) {
+        PacketBuffer stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -97,13 +97,13 @@ final class pq {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          stackIn_2_0 = (ge) (param1);
+          stackIn_2_0 = (PacketBuffer) (param1);
           if (!this.field_s) {
             stackIn_3_1 = 0;
           } else {
             stackIn_3_1 = 1;
           }
-          ((ge) (Object) stackIn_2_0).a(stackIn_3_1, false);
+          ((PacketBuffer) (Object) stackIn_2_0).a(stackIn_3_1, false);
           if (this.field_s) {
             if (this.field_v != 0) {
               throw new IllegalStateException("Writing state before ball is stopped.");
@@ -182,7 +182,7 @@ final class pq {
         }
     }
 
-    final void a(ge param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -190,15 +190,15 @@ final class pq {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          stackIn_3_1 = (param0.g(-80) == 1);
+          stackIn_3_1 = (param0.readUnsignedByte(-80) == 1);
           this.field_s = stackIn_3_1;
           if (param1 != -1285) {
             return;
           }
           if (this.field_s) {
             this.field_x.a(false, param0);
-            this.field_g = param0.b(true);
-            this.field_k = param0.b(true);
+            this.field_g = param0.readInt(true);
+            this.field_k = param0.readInt(true);
             this.field_o = false;
             this.field_e = 0;
             this.field_j = -524288;

@@ -65,7 +65,7 @@ final class s {
         return -3;
     }
 
-    final static String a(ge param0, int param1, boolean param2) {
+    final static String a(PacketBuffer param0, int param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -89,7 +89,7 @@ final class s {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_v = param0.field_v + Pool.field_J.a((byte) 36, 0, param0.field_v, var4, param0.field_t, var3_int);
+            param0.position = param0.position + Pool.field_J.a((byte) 36, 0, param0.position, var4, param0.payload, var3_int);
             var5 = tl.a(var3_int, -7510, var4, 0);
             stackIn_7_0 = var5;
             return stackIn_7_0;

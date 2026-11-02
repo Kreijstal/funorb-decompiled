@@ -471,10 +471,10 @@ final class cm extends ob {
           return;
         }
         oq var3 = kn.field_e;
-        var3.b(true);
-        var3.b(true);
-        var3.b(true);
-        var3.b(true);
+        var3.readInt(true);
+        var3.readInt(true);
+        var3.readInt(true);
+        var3.readInt(true);
         var1.unlink((byte) -117);
     }
 

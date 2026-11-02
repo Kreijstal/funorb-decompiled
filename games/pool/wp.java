@@ -12,7 +12,7 @@ final class wp implements si {
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
-        ge var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -27,9 +27,9 @@ final class wp implements si {
         String stackIn_37_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2 = new ge(param1);
-          var3 = var2.g(-72);
-          var4 = var2.b(true);
+          var2 = new PacketBuffer(param1);
+          var3 = var2.readUnsignedByte(-72);
+          var4 = var2.readInt(true);
           if (0 <= var4 && (sb.field_b == 0 ||
             !(var4 > sb.field_b))) {
             if (param0 == var3) {
@@ -38,7 +38,7 @@ final class wp implements si {
               stackIn_12_0 = var5_ref_byte__;
               return stackIn_12_0;
             }
-            var5 = var2.b(true);
+            var5 = var2.readInt(true);
             if (var5 >= 0 && (0 == sb.field_b ||
               !(var5 > sb.field_b))) {
               var6 = new byte[var5];
@@ -117,11 +117,11 @@ final class wp implements si {
             while (null != var7) {
               var8 = 0;
               if (var7.field_T == null) {
-                var7.field_Pb = new vh(0L, ge.field_s);
+                var7.field_Pb = new vh(0L, PacketBuffer.field_s);
                 var7.a(94, var7.field_Pb);
                 var7.field_Nb = new vh(0L, tm.field_d);
                 var7.a(-103, var7.field_Nb);
-                var7.field_Ob = new vh(0L, ge.field_s);
+                var7.field_Ob = new vh(0L, PacketBuffer.field_s);
                 var7.a(-120, var7.field_Ob);
                 var7.field_Nb.field_Fb = 2;
                 var7.d((byte) -127);

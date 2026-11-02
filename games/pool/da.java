@@ -42,7 +42,7 @@ final class da {
         try {
           var13 = kn.field_e;
           var15 = var13;
-          var2 = var15.g(-113);
+          var2 = var15.readUnsignedByte(-113);
           if (param0 < 93) {
             return;
           }
@@ -58,7 +58,7 @@ final class da {
             dn.c(-82);
             return;
           }
-          var4 = var15.g(-79);
+          var4 = var15.readUnsignedByte(-79);
           if (var4 != 0) {
             var5 = var3.field_o;
             sa.field_e[0] = di.field_j;
@@ -155,7 +155,7 @@ final class da {
           nk.field_f[48] = un.field_d;
           nk.field_f[5] = hb.field_p;
           nk.field_f[23] = ep.field_y;
-          nk.field_f[49] = th.field_h ? hb.field_q : uf.field_K;
+          nk.field_f[49] = th.field_h ? hb.field_q : PoolMatchController.field_K;
           nk.field_f[38] = s.field_d[1];
           nk.field_f[59] = wm.field_Yb;
           nk.field_f[19] = qd.field_e;
@@ -178,7 +178,7 @@ final class da {
           nk.field_f[26] = ue.field_d;
           nk.field_f[51] = pl.field_e;
           int var1_int = -62 / ((-24 - param0) / 60);
-          nk.field_f[22] = ge.field_o;
+          nk.field_f[22] = PacketBuffer.field_o;
           nk.field_f[25] = cb.field_c;
           nk.field_f[42] = pf.field_a;
           nk.field_f[17] = mm.field_n[0];

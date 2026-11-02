@@ -118,13 +118,13 @@ final class wm extends vh {
         return 85;
     }
 
-    final static oa a(Throwable param0, String param1) {
-        oa var2 = null;
-        if (param0 instanceof oa) {
-          var2 = (oa) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_i = var2.field_i + ' ' + param1;
         } else {
-          var2 = new oa(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
@@ -441,7 +441,7 @@ final class wm extends vh {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        bc.field_b.field_v = 0;
+        bc.field_b.position = 0;
         bc.field_b.a(12, false);
         bc.field_b.a(true, lc.field_P.nextInt());
         if (param0 >= -116) {
@@ -450,14 +450,14 @@ final class wm extends vh {
         bc.field_b.a(true, lc.field_P.nextInt());
         bc.field_b.a(param3, false);
         bc.field_b.a(param2, false);
-        bc.field_b.a((byte) -81, param1);
+        bc.field_b.writeShort((byte) -81, param1);
         bc.field_b.a(rb.field_l, 124, ei.field_q);
         ej.field_j.b(false, 18);
-        int fieldTemp$0 = ej.field_j.field_v + 1;
-        ej.field_j.field_v = ej.field_j.field_v + 1;
+        int fieldTemp$0 = ej.field_j.position + 1;
+        ej.field_j.position = ej.field_j.position + 1;
         int var4 = fieldTemp$0;
-        ej.field_j.a(bc.field_b.field_t, (byte) 0, 0, bc.field_b.field_v);
-        ej.field_j.b(-var4 + ej.field_j.field_v, true);
+        ej.field_j.a(bc.field_b.payload, (byte) 0, 0, bc.field_b.position);
+        ej.field_j.b(-var4 + ej.field_j.position, true);
     }
 
     public static void f(byte param0) {

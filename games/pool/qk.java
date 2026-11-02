@@ -1190,7 +1190,7 @@ final class qk {
                 }
                 var2 = cm.a("ticker_hint_leave_shot_mode", (byte) 76);
                 if (var2 != null) {
-                  uf.field_s = a.a(var2, 125);
+                  PoolMatchController.field_s = a.a(var2, 125);
                 }
                 var2 = cm.a("ticker_hint_move_cueball", (byte) 76);
                 if (null != var2) {
@@ -1270,7 +1270,7 @@ final class qk {
                 }
                 var2 = cm.a("status_wants_a_rematch", (byte) 30);
                 if (var2 != null) {
-                  ge.field_n = a.a(var2, 123);
+                  PacketBuffer.field_n = a.a(var2, 123);
                 }
                 var2 = cm.a("player_list_first", (byte) 33);
                 if (var2 != null) {
@@ -1654,7 +1654,7 @@ final class qk {
                 }
                 var2 = cm.a("mouse_y_axis_normal", (byte) 48);
                 if (null != var2) {
-                  uf.field_K = a.a(var2, 123);
+                  PoolMatchController.field_K = a.a(var2, 123);
                 }
                 var2 = cm.a("mouse_y_axis_inverted", (byte) 82);
                 if (null != var2) {

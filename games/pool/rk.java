@@ -328,7 +328,7 @@ final class rk {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_T) {
-              var12.field_ac = new vh(0L, ge.field_s);
+              var12.field_ac = new vh(0L, PacketBuffer.field_s);
               var12.a(-106, var12.field_ac);
               var12.field_Tb = new vh(0L, tm.field_d);
               if (tq.field_p) {
@@ -996,9 +996,9 @@ final class rk {
               var4_ref_fr.field_p < var2_long) {
               var4_ref_fr.unlink((byte) -117);
               of.field_Pb = var4_ref_fr.field_l.length;
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               for (var5_int = 0; var5_int < of.field_Pb; var5_int++) {
-                kn.field_e.field_t[var5_int] = var4_ref_fr.field_l[var5_int];
+                kn.field_e.payload[var5_int] = var4_ref_fr.field_l[var5_int];
               }
               hb.field_e = vd.field_g;
               vd.field_g = ia.field_l;
@@ -1023,12 +1023,12 @@ final class rk {
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               if (!lq.b((byte) 107, 1)) {
                 return false;
               }
               wq.field_b = kn.field_e.q(param0 + 107);
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               of.field_Pb = param1[wq.field_b];
             }
             if (!wf.a((byte) 39)) {
@@ -1051,7 +1051,7 @@ final class rk {
             }
             var5 = new fr(var2_long + (long)var4, wq.field_b, new byte[of.field_Pb]);
             for (var6 = 0; var6 < of.field_Pb; var6++) {
-              var5.field_l[var6] = kn.field_e.field_t[var6];
+              var5.field_l[var6] = kn.field_e.payload[var6];
             }
             vn.field_g.b((byte) -64, var5);
             wq.field_b = -1;

@@ -137,7 +137,7 @@ abstract class ep extends GameApplet {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          ge var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Pool.field_O;
@@ -232,7 +232,7 @@ abstract class ep extends GameApplet {
               if (l.field_d.a((byte) -118)) {
                 var12 = l.field_d.a(-25955);
                 if (var12 != null) {
-                  var7 = tl.a(var12.field_v, -7510, var12.field_t, 0);
+                  var7 = tl.a(var12.position, -7510, var12.payload, 0);
                   hg.a(var7, true);
                 } else {
                   var9 = (String) null;
@@ -381,7 +381,7 @@ abstract class ep extends GameApplet {
         vp.a(this.field_u, this.field_D, (byte) 86, this.field_r, gj.field_S, this.field_B, param5, this.field_t, lg.field_s, 5000, this.field_q, 5000, param6, this.field_o);
         je.a(lg.field_s, param6, this.field_D, this.field_B, this.field_t, (byte) -96, this.field_u, gj.field_S, this.field_q);
         fl.a(true);
-        oa.field_a = nn.b(96);
+        ClientException.field_a = nn.b(96);
         kc.a(pa.field_K, param4 + param4);
         jd.field_d = param2;
         mk.field_c = param0;
@@ -392,7 +392,7 @@ abstract class ep extends GameApplet {
         ao.c(false);
     }
 
-    final static void a(byte param0, uf param1) {
+    final static void a(byte param0, PoolMatchController param1) {
         ij dupTemp$0 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_63_0 = null;
@@ -403,7 +403,7 @@ abstract class ep extends GameApplet {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        uf var5 = null;
+        PoolMatchController var5 = null;
         ij var6 = null;
         var4 = Pool.field_O;
         try {
@@ -508,8 +508,8 @@ abstract class ep extends GameApplet {
             }
           }
           if (param0 != -73) {
-            var5 = (uf) null;
-            ep.a((byte) -7, (uf) null);
+            var5 = (PoolMatchController) null;
+            ep.a((byte) -7, (PoolMatchController) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -579,7 +579,7 @@ abstract class ep extends GameApplet {
 
     private final void d(int param0) {
         int var4 = 122 % ((-11 - param0) / 50);
-        int var2 = kn.field_e.g(-74);
+        int var2 = kn.field_e.readUnsignedByte(-74);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var5 = -1 + of.field_Pb;
         byte[] var6 = new byte[var5];
@@ -660,8 +660,8 @@ abstract class ep extends GameApplet {
           fk.field_ab != 11) {
           t.b(-11);
         }
-        if (null != oa.field_a) {
-          wp.field_d = oa.field_a.b(2);
+        if (null != ClientException.field_a) {
+          wp.field_d = ClientException.field_a.b(2);
         }
         if (mg.a(-66)) {
           var3 = up.a(-21282) * 1200;
@@ -794,7 +794,7 @@ abstract class ep extends GameApplet {
           ia.a((byte) 98);
           am.field_n = o.field_A;
           mf.field_o = false;
-          uf.a(param0 ^ 11934, bf.field_g, uj.field_d, rg.field_r, vf.field_nb);
+          PoolMatchController.a(param0 ^ 11934, bf.field_g, uj.field_d, rg.field_r, vf.field_nb);
           if (pd.field_g ||
             null != b.field_J) {
             stackIn_102_0 = -122;
@@ -897,7 +897,7 @@ abstract class ep extends GameApplet {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        uf var6 = null;
+        PoolMatchController var6 = null;
         dd[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -909,8 +909,8 @@ abstract class ep extends GameApplet {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 36) {
-            var6 = (uf) null;
-            ep.a((byte) -107, (uf) null);
+            var6 = (PoolMatchController) null;
+            ep.a((byte) -107, (PoolMatchController) null);
           }
           var4_int = param1.b(param3, -1);
           var5 = param1.a(var4_int, 0, param2);

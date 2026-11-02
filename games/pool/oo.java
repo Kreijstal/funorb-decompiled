@@ -122,7 +122,7 @@ abstract class oo {
         }
     }
 
-    private final void a(dl param0, int param1, uf param2, int param3) {
+    private final void a(dl param0, int param1, PoolMatchController param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -1071,7 +1071,7 @@ abstract class oo {
         }
     }
 
-    abstract void a(byte param0, uf param1);
+    abstract void a(byte param0, PoolMatchController param1);
 
     void j(int param0) {
         if (param0 != 2) {
@@ -1557,7 +1557,7 @@ abstract class oo {
         this.b(115);
     }
 
-    void a(int param0, uf param1) {
+    void a(int param0, PoolMatchController param1) {
         int var4 = 0;
         int var6 = 0;
         dl[] var3 = null;

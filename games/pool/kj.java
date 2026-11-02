@@ -66,14 +66,14 @@ final class kj {
         return 0 <= this.field_n ? true : false;
     }
 
-    final void a(ge param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         if (param1 < 67) {
           return;
         }
         try {
-          param0.a((byte) -81, this.field_n);
-          param0.a((byte) -81, this.field_h & 2047);
-          param0.a((byte) -81, this.field_k);
+          param0.writeShort((byte) -81, this.field_n);
+          param0.writeShort((byte) -81, this.field_h & 2047);
+          param0.writeShort((byte) -81, this.field_k);
           param0.a(this.field_d, false);
           param0.a(this.field_e, false);
         } catch (RuntimeException runtimeException) {
@@ -414,16 +414,16 @@ final class kj {
         }
     }
 
-    final void a(int param0, ge param1) {
-        this.field_n = param1.d(-1034);
-        this.field_h = param1.d(-1034);
-        this.field_k = param1.d(param0 ^ -64266);
+    final void a(int param0, PacketBuffer param1) {
+        this.field_n = param1.readUnsignedShort(-1034);
+        this.field_h = param1.readUnsignedShort(-1034);
+        this.field_k = param1.readUnsignedShort(param0 ^ -64266);
         if (param0 != 65280) {
           return;
         }
         try {
-          this.field_d = param1.e((byte) 105);
-          this.field_e = param1.e((byte) 105);
+          this.field_d = param1.readByte((byte) 105);
+          this.field_e = param1.readByte((byte) 105);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

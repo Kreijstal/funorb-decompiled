@@ -110,7 +110,7 @@ final class uo extends vh {
         var8 = Pool.field_O;
         try {
           var13 = kn.field_e;
-          var2 = var13.g(-94);
+          var2 = var13.readUnsignedByte(-94);
           if (param0 >= -102) {
             uo.f(44);
           }
@@ -120,9 +120,9 @@ final class uo extends vh {
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((ge) ((Object) var5)).g(-101);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-101);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((ge) ((Object) var5)).b(true);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
             var11 = (tq) (hb.field_j.c((byte) 77));
             if (var11 == null) {

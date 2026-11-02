@@ -50,11 +50,11 @@ final class ae {
           }
           var5 = ej.field_j;
           var5.b(false, param3);
-          var5.field_v = var5.field_v + 1;
-          var6 = var5.field_v;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.a(3, false);
           var5.a(-9946, param2);
-          var5.b(-var6 + var5.field_v, true);
+          var5.b(-var6 + var5.position, true);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -326,7 +326,7 @@ final class ae {
             var1.c(0, 0);
             stackIn_52_0 = 40;
             stackIn_52_1 = 40;
-            stackIn_52_2 = uf.field_X;
+            stackIn_52_2 = PoolMatchController.field_X;
             if (jc.field_j.field_h != 0) {
               stackIn_53_3 = 3;
             } else {
@@ -366,7 +366,7 @@ final class ae {
             w.field_f.c(586, var1_int);
             if (gg.field_f > var1_int &&
               gg.field_f < vq.field_Yb.field_A + var1_int) {
-              var2Lifetime5 = (ao.a(uf.field_X << 4, true) * 40 >> 16) + 40;
+              var2Lifetime5 = (ao.a(PoolMatchController.field_X << 4, true) * 40 >> 16) + 40;
               if (var2Lifetime5 <= 0) {
                 pj.f(-1);
                 jr.field_m[rj.field_f].c(269, 340);

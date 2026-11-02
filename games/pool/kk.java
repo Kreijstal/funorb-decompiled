@@ -139,8 +139,8 @@ abstract class kk extends rg {
         var9 = Pool.field_O;
         try {
           lk.field_o = true;
-          oa.field_h = param2;
-          if (oa.field_h == 0) {
+          ClientException.field_h = param2;
+          if (ClientException.field_h == 0) {
             var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 3 + var3_int;
             IterableNodeHashTable.field_c = new int[var4];
@@ -159,7 +159,7 @@ abstract class kk extends rg {
             dq.field_j[-1 + var4] = hi.field_i;
             IterableNodeHashTable.field_c[var4 - 1] = 1;
             mb.field_c[1] = 5;
-          } else if (oa.field_h == 1) {
+          } else if (ClientException.field_h == 1) {
             var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 2 + var3_int;
             dq.field_j = new String[var4];
@@ -175,8 +175,8 @@ abstract class kk extends rg {
             dq.field_j[var4 - 1] = hi.field_i;
             IterableNodeHashTable.field_c[var4 - 1] = 0;
             mb.field_c[0] = 5;
-          } else if (oa.field_h != 2) {
-            if (oa.field_h == 3) {
+          } else if (ClientException.field_h != 2) {
+            if (ClientException.field_h == 3) {
               if (lg.field_s.field_k) {
                 var3_int = rg.a(wj.field_T, ih.field_c, ih.field_b, dq.field_f, param1 ^ 4);
               } else {
@@ -196,7 +196,7 @@ abstract class kk extends rg {
               dq.field_j[-1 + var4] = hi.field_i;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
-            } else if (4 == oa.field_h) {
+            } else if (4 == ClientException.field_h) {
               var3_int = rg.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f, 0);
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
@@ -213,7 +213,7 @@ abstract class kk extends rg {
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
             } else {
-              if (oa.field_h != 5) {
+              if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = rg.a(wj.field_T, ih.field_c, de.field_c, dq.field_f, param1 ^ 4);
@@ -333,7 +333,7 @@ abstract class kk extends rg {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (oa.field_h == 2) {
+          if (ClientException.field_h == 2) {
             var10 = hk.field_n;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -388,7 +388,7 @@ abstract class kk extends rg {
             }
             var4Lifetime3++;
           }
-          if (oa.field_h != 2) {
+          if (ClientException.field_h != 2) {
             n.field_W.a(param0, 0, ub.a(wn.field_i, gg.field_f, 0), true);
           } else {
             n.field_W.a(param0, -1, -1, true);

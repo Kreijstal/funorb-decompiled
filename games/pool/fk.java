@@ -625,7 +625,7 @@ final class fk extends oo {
         int var1 = -122 / ((param0 + 65) / 38);
     }
 
-    private final void a(boolean param0, int[] param1, uf param2) {
+    private final void a(boolean param0, int[] param1, PoolMatchController param2) {
         int stackIn_26_0 = 0;
         int stackIn_29_1 = 0;
         RuntimeException stackIn_34_0 = null;
@@ -726,7 +726,7 @@ final class fk extends oo {
         }
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = Pool.field_O;
         try {
@@ -950,7 +950,7 @@ final class fk extends oo {
         return;
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         int var5 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_1 = 0;

@@ -216,10 +216,10 @@ final class rq extends kd {
 
     final static void a(int param0, int param1) {
         String dupTemp$0 = null;
-        uf stackIn_8_0 = null;
+        PoolMatchController stackIn_8_0 = null;
         StringBuilder stackIn_15_0 = null;
         String stackIn_16_1 = null;
-        uf var2;
+        PoolMatchController var2;
         String var3;
         int var4;
         String var5;
@@ -496,17 +496,17 @@ final class rq extends kd {
                 var4 = 0;
               }
             }
-            if (0 < ej.field_j.field_v) {
-              var14 = new byte[ej.field_j.field_v];
+            if (0 < ej.field_j.position) {
+              var14 = new byte[ej.field_j.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var6 < var14.length; var6++) {
-                var8[var6] = ej.field_j.field_t[var6];
+                var8[var6] = ej.field_j.payload[var6];
               }
-              var6_ref_fr = new fr((long)var4 + var2_long, ej.field_j.field_v, var17);
+              var6_ref_fr = new fr((long)var4 + var2_long, ej.field_j.position, var17);
               field_q.b((byte) 90, var6_ref_fr);
-              ej.field_j.field_v = 0;
+              ej.field_j.position = 0;
             }
             var9 = (fr) (field_q.c((byte) -73));
             var13 = var9;
@@ -516,10 +516,10 @@ final class rq extends kd {
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.field_r) {
-                ej.field_j.field_t[var10] = var9.field_l[var10];
+                ej.field_j.payload[var10] = var9.field_l[var10];
                 var10++;
               }
-              ej.field_j.field_v = var13.field_r;
+              ej.field_j.position = var13.field_r;
             }
           }
           if (param0 >= -16) {

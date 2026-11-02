@@ -3,7 +3,7 @@
  */
 final class gd {
     static int[] field_d;
-    static ge field_f;
+    static PacketBuffer field_f;
     static int field_g;
     static boolean field_b;
     static dd field_e;
@@ -19,7 +19,7 @@ final class gd {
           field_c = null;
           return;
         }
-        field_f = (ge) null;
+        field_f = (PacketBuffer) null;
         field_f = null;
         field_e = null;
         field_a = null;

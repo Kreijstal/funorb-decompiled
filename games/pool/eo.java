@@ -48,7 +48,7 @@ final class eo extends vh {
             var4.b(false, param0);
             var4.a(3, false);
             var4.a(11, false);
-            var4.a((byte) -81, param1);
+            var4.writeShort((byte) -81, param1);
             if (param2 != 11) {
               field_Rb = (String) null;
               return;
@@ -59,7 +59,7 @@ final class eo extends vh {
           var4Lifetime1.b(false, param0);
           var4Lifetime1.a(3, false);
           var4Lifetime1.a(11, false);
-          var4Lifetime1.a((byte) -81, param1);
+          var4Lifetime1.writeShort((byte) -81, param1);
           if (param2 != 11) {
             field_Rb = (String) null;
             return;

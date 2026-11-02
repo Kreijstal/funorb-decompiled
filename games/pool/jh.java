@@ -35,7 +35,7 @@ class jh {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new pn(param3, param4, param0, param2, param1);
-          oa.a(-63, var6);
+          ClientException.a(-63, var6);
           if (param5) {
             return;
           }

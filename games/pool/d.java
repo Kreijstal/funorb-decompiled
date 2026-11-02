@@ -147,9 +147,9 @@ final class d {
             while (var6 != null) {
               var7 = 0;
               if (var6.field_T == null) {
-                var6.field_Pb = new vh(0L, ge.field_s);
+                var6.field_Pb = new vh(0L, PacketBuffer.field_s);
                 var6.a(-99, var6.field_Pb);
-                var6.field_Ob = new vh(0L, ge.field_s);
+                var6.field_Ob = new vh(0L, PacketBuffer.field_s);
                 var6.a(-120, var6.field_Ob);
                 var6.d((byte) -127);
                 var7 = 1;
@@ -226,7 +226,7 @@ final class d {
         }
     }
 
-    final static void a(kh param0, int param1, ge param2, boolean param3) {
+    final static void a(kh param0, int param1, PacketBuffer param2, boolean param3) {
         int var9 = 0;
         kh stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -258,11 +258,11 @@ final class d {
         var10 = Pool.field_O;
         try {
           if (param3) {
-            param0.field_mc = param2.g(-67);
+            param0.field_mc = param2.readUnsignedByte(-67);
           }
-          param0.field_Nb = param2.g(-70);
-          param0.field_ac = param2.g(-124);
-          var4_int = param2.g(-124);
+          param0.field_Nb = param2.readUnsignedByte(-70);
+          param0.field_ac = param2.readUnsignedByte(-124);
+          var4_int = param2.readUnsignedByte(-124);
           var5 = 36 / ((63 - param1) / 46);
           stackIn_6_0 = (kh) (param0);
           stackIn_7_1 = ((128 & var4_int) != 0);
@@ -291,18 +291,18 @@ final class d {
           param2.a(0, (byte) -127, param0.field_tc, param0.field_tc.length);
           stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var7 = stackIn_29_0;
-          param0.field_pc = param2.d(-1034);
-          param0.field_sc = rl.a((byte) -95) - (long)param2.b(true);
+          param0.field_pc = param2.readUnsignedShort(-1034);
+          param0.field_sc = rl.a((byte) -95) - (long)param2.readInt(true);
           if (var6 != 0) {
-            param0.field_qc = param2.b(true);
+            param0.field_qc = param2.readInt(true);
           } else {
             param0.field_qc = -1;
           }
-          param0.field_Zb = param2.h(-412303328);
-          var8 = param2.field_v;
+          param0.field_Zb = param2.readLong(-412303328);
+          var8 = param2.position;
           param0.field_Ob = param2.j(-57);
           if (var7 != 0) {
-            param2.field_v = var8;
+            param2.position = var8;
             param0.field_bc = new String[param0.field_mc];
             for (var9 = 0; param0.field_mc > var9; var9++) {
               param0.field_bc[var9] = param2.j(-72);

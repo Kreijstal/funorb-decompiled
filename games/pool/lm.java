@@ -44,14 +44,14 @@ final class lm extends tm {
     final static void c(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, param1);
-        var2.field_v = var2.field_v + 1;
-        int var3 = var2.field_v;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(param0, false);
         var2.a(em.field_L.field_Nb, false);
         int var4 = em.field_L.field_ac + (em.field_L.field_Yb << 6);
         var2.a(var4, false);
         var2.a(em.field_L.field_tc, (byte) 0, 0, em.field_L.field_tc.length);
-        var2.b(-var3 + var2.field_v, true);
+        var2.b(-var3 + var2.position, true);
     }
 
     final void a(di param0, byte param1) {

@@ -72,15 +72,15 @@ final class wf {
           if (!lq.b((byte) 114, 1)) {
             return false;
           }
-          of.field_Pb = kn.field_e.g(-86);
-          kn.field_e.field_v = 0;
+          of.field_Pb = kn.field_e.readUnsignedByte(-86);
+          kn.field_e.position = 0;
         }
         if (of.field_Pb == -2) {
           if (!lq.b((byte) 76, 2)) {
             return false;
           }
-          of.field_Pb = kn.field_e.d(-1034);
-          kn.field_e.field_v = 0;
+          of.field_Pb = kn.field_e.readUnsignedShort(-1034);
+          kn.field_e.position = 0;
         }
         if (param0 == 39) {
           return lq.b((byte) 67, of.field_Pb);
@@ -111,7 +111,7 @@ final class wf {
           if (param2.field_ec && (param2.field_Yb == 2 ||
             !(hq.field_i < 2))) {
             var9 = vl.field_m;
-            var10 = nr.a(new String[]{param3}, param0 + 109, ge.field_w);
+            var10 = nr.a(new String[]{param3}, param0 + 109, PacketBuffer.field_w);
             var9.field_n.a(var10, 17130, 10);
           }
           vl.field_m.b(2616);

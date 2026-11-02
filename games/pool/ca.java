@@ -29,7 +29,7 @@ final class ca extends re {
         return dg.field_L;
     }
 
-    final void a(byte param0, ge param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           int var3_int = -92 / ((22 - param0) / 51);
           param1.a(false, this.field_n);

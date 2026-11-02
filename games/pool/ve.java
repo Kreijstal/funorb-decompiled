@@ -587,7 +587,7 @@ final class ve extends op {
               var25Lifetime2 = param6.field_e[var23Lifetime3];
               var26Lifetime2 = param6.field_D[var23Lifetime3];
               ap.field_B[var23Lifetime3] = (var25Lifetime2 * var15 + var24Lifetime2 * var12 + var18 * var26Lifetime2 >> 16) + var9;
-              ge.field_p[var23Lifetime3] = var10 + (var16 * var25Lifetime2 + (var24Lifetime2 * var13 + var26Lifetime2 * var19) >> 16);
+              PacketBuffer.field_p[var23Lifetime3] = var10 + (var16 * var25Lifetime2 + (var24Lifetime2 * var13 + var26Lifetime2 * var19) >> 16);
               dn.field_n[var23Lifetime3] = (var26Lifetime2 * var20 + var17 * var25Lifetime2 + var24Lifetime2 * var14 >> 16) + var11;
               var24Lifetime2Lifetime1 = param6.field_C[var23Lifetime3];
               var25Lifetime2Lifetime1 = param6.field_M[var23Lifetime3];

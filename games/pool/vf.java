@@ -32,7 +32,7 @@ final class vf extends vc {
         super.i(param0);
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = Pool.field_O;
         try {
@@ -48,7 +48,7 @@ final class vf extends vc {
         }
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         int var3_int = 0;
         int var6 = 0;
         boolean[] stackIn_13_0 = null;
@@ -301,7 +301,7 @@ final class vf extends vc {
         so[] var17;
         int var18;
         int var19;
-        uf var21;
+        PoolMatchController var21;
         so var30;
         eg var31;
         so var32;
@@ -410,8 +410,8 @@ final class vf extends vc {
         var6.a((byte) -120, var3);
         var7.a((byte) 38, var4);
         if (!param0) {
-          var21 = (uf) null;
-          this.a((byte) 16, (uf) null);
+          var21 = (PoolMatchController) null;
+          this.a((byte) 16, (PoolMatchController) null);
         }
         var8.a((byte) 72, var5);
         var15 = 0;
@@ -1022,7 +1022,7 @@ final class vf extends vc {
         }
     }
 
-    private final void a(boolean param0, uf param1) {
+    private final void a(boolean param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

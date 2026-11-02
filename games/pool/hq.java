@@ -17,7 +17,7 @@ final class hq {
     private String field_g;
     hq field_j;
     private boolean field_b;
-    uf field_a;
+    PoolMatchController field_a;
     static int field_c;
 
     private final void a(int param0, int param1) {

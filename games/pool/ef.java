@@ -169,7 +169,7 @@ final class ef {
         var3.b(false, param2);
         var3.a(param1, false);
         var3.a(10, false);
-        var3.a((byte) -81, param0);
+        var3.writeShort((byte) -81, param0);
     }
 
     public static void b(int param0) {

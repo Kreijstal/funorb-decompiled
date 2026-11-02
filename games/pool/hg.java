@@ -24,7 +24,7 @@ final class hg {
           if (!param2) {
             return;
           }
-          var4 = uf.field_X % o.field_C.field_z * 2;
+          var4 = PoolMatchController.field_X % o.field_C.field_z * 2;
           if (var4 >= o.field_C.field_z) {
             var4 = o.field_C.field_z + (-var4 + o.field_C.field_z);
           }
@@ -43,7 +43,7 @@ final class hg {
         if (!param2) {
           return;
         }
-        var4Lifetime1 = uf.field_X % o.field_C.field_z * 2;
+        var4Lifetime1 = PoolMatchController.field_X % o.field_C.field_z * 2;
         if (var4Lifetime1 >= o.field_C.field_z) {
           var4Lifetime1 = o.field_C.field_z + (-var4Lifetime1 + o.field_C.field_z);
         }

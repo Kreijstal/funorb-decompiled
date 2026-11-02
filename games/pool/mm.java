@@ -165,7 +165,7 @@ final class mm {
         this.field_f = 288.0;
     }
 
-    final void a(uf param0, int param1) {
+    final void a(PoolMatchController param0, int param1) {
         try {
           this.field_f = (double)pf.b(126, param0.field_I.field_l[0].field_g);
           if (param1 != 1) {

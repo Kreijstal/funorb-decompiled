@@ -110,13 +110,13 @@ final class ga extends sl implements sc {
         eo var6Lifetime1;
         try {
           var1 = kn.field_e;
-          var2 = var1.g(-125);
+          var2 = var1.readUnsignedByte(-125);
           if (var2 == 0) {
             if (gd.field_c == null) {
               gd.field_c = new tk(128);
               gi.field_t = 0;
             }
-            stackIn_10_0 = (1 != var1.g(-91)) ? 0 : 1;
+            stackIn_10_0 = (1 != var1.readUnsignedByte(-91)) ? 0 : 1;
             var3_int = stackIn_10_0;
             var4_ref_String = var1.j(param0 - 29836);
             if (var3_int != 0) {
@@ -173,7 +173,7 @@ final class ga extends sl implements sc {
             th.field_a = 1;
             var3 = var1.j(-118);
             cm.field_J = ((String) (var3)).intern();
-            var4 = var1.g(-84);
+            var4 = var1.readUnsignedByte(-84);
             vd.a((byte) 78, var4);
             return;
           }

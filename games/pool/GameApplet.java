@@ -431,8 +431,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != -15568) {
             this.windowIconified((java.awt.event.WindowEvent) null);
           }
-          var4 = oa.field_f[kb.field_e];
-          oa.field_f[kb.field_e] = var2_long;
+          var4 = ClientException.field_f[kb.field_e];
+          ClientException.field_f[kb.field_e] = var2_long;
           if (var4 != 0L &&
             var4 >= var2_long) {
           }

@@ -308,7 +308,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -102, "mu_all_players_have_left");
                 if (null != var2) {
-                  ge.field_x = a.a(var2, -58);
+                  PacketBuffer.field_x = a.a(var2, -58);
                 }
                 var2 = gg.a((byte) -77, "mu_lobby_name");
                 if (null != var2) {
@@ -324,7 +324,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 109, "mu_lobby_friend_rm");
                 if (var2 != null) {
-                  ge.field_m = a.a(var2, 127);
+                  PacketBuffer.field_m = a.a(var2, 127);
                 }
                 var2 = gg.a((byte) -81, "mu_lobby_name_add");
                 if (null != var2) {
@@ -732,7 +732,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 108, "spectate_xs_game");
                 if (null != var2) {
-                  ge.field_w = a.a(var2, 126);
+                  PacketBuffer.field_w = a.a(var2, 126);
                 }
                 var2 = gg.a((byte) -100, "hide_players_in_xs_game");
                 if (var2 != null) {
@@ -1629,7 +1629,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 126, "create_age_tooltip");
                 if (var2 != null) {
-                  uf.field_J = a.a(var2, 123);
+                  PoolMatchController.field_J = a.a(var2, 123);
                 }
                 var2 = gg.a((byte) -107, "create_optin_news_tooltip");
                 if (var2 != null) {
@@ -1999,7 +1999,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -62, "achievements");
                 if (null != var2) {
-                  ge.field_o = a.a(var2, -20);
+                  PacketBuffer.field_o = a.a(var2, -20);
                 }
                 var2 = gg.a((byte) 98, "achievementsthisgame");
                 if (null != var2) {
@@ -2495,7 +2495,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 96, "mp_x_haswon");
                 if (null != var2) {
-                  ge.field_r = a.a(var2, param1 + 20900);
+                  PacketBuffer.field_r = a.a(var2, param1 + 20900);
                 }
                 var2 = gg.a((byte) 106, "mp_youhavewon");
                 if (null != var2) {
@@ -3181,7 +3181,7 @@ final class nk {
             return;
           }
           var1 = kn.field_e;
-          var2 = var1.g(-72);
+          var2 = var1.readUnsignedByte(-72);
           if (var2 != 0) {
             if (var2 != 1) {
               tc.a((Throwable) null, "A1: " + t.a(93), -8555);
@@ -3190,7 +3190,7 @@ final class nk {
                 return;
               }
             }
-            var3_int = var1.b(true);
+            var3_int = var1.readInt(true);
             var4_ref_kg = (kg) (we.field_c.c((byte) 86));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
@@ -3222,7 +3222,7 @@ final class nk {
             dn.c(116);
             return;
           }
-          var4 = var1.g(-70);
+          var4 = var1.readUnsignedByte(-70);
           if (var4 == 0) {
             var5 = null;
           }
@@ -3231,7 +3231,7 @@ final class nk {
             var5_array = new byte[var4];
             var1.a(0, (byte) -121, var5_array, var4);
           }
-          var1.field_v = var1.field_v + 4;
+          var1.position = var1.position + 4;
           if (!var1.a(false)) {
             dn.c(112);
             return;

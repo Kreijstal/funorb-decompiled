@@ -52,7 +52,7 @@ final class e {
         try {
           var1_int = uh.field_n;
           var2 = 0;
-          if (2 == oa.field_h) {
+          if (2 == ClientException.field_h) {
             var3_long = -ap.field_y + rl.a((byte) -112);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
@@ -75,7 +75,7 @@ final class e {
               }
             }
             var6 = dq.field_j[var3];
-            if (oa.field_h == 2 &&
+            if (ClientException.field_h == 2 &&
               var2 == 1) {
               if (va.field_W.length <= hk.field_n.length) {
                 stackIn_18_0 = hk.field_n.length;
@@ -145,7 +145,7 @@ final class e {
         }
     }
 
-    final static boolean a(int param0, uf param1) {
+    final static boolean a(int param0, PoolMatchController param1) {
         qe var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_13_0 = null;

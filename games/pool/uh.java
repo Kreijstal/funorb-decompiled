@@ -11,7 +11,7 @@ final class uh extends ig {
     private sl field_m;
     static int field_n;
     static int[] field_t;
-    static ge field_r;
+    static PacketBuffer field_r;
     private sl field_v;
     static int field_w;
 

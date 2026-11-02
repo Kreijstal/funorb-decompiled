@@ -406,7 +406,7 @@ class ob extends jh {
                     if (th.field_h) {
                       stackIn_85_2 = hb.field_q;
                     } else {
-                      stackIn_85_2 = uf.field_K;
+                      stackIn_85_2 = PoolMatchController.field_K;
                     }
                     stackIn_84_0[stackIn_84_1] = stackIn_85_2;
                   } else {

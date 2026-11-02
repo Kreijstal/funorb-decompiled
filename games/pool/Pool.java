@@ -16,33 +16,33 @@ public final class Pool extends ep {
 
     private final void a(boolean param0, int param1) {
         int fieldTemp$0 = 0;
-        uf stackIn_26_0 = null;
+        PoolMatchController stackIn_26_0 = null;
         boolean stackIn_27_1 = false;
-        uf stackIn_32_0 = null;
+        PoolMatchController stackIn_32_0 = null;
         boolean stackIn_33_1 = false;
-        uf stackIn_91_0;
-        uf stackIn_91_1;
+        PoolMatchController stackIn_91_0;
+        PoolMatchController stackIn_91_1;
         int stackIn_91_2;
         int stackIn_91_3;
         int stackIn_91_4;
         int stackIn_91_5;
         int stackIn_91_6;
-        uf stackIn_92_0 = null;
-        uf stackIn_92_1 = null;
+        PoolMatchController stackIn_92_0 = null;
+        PoolMatchController stackIn_92_1 = null;
         boolean stackIn_92_7 = false;
         int stackIn_95_0 = 0;
         int stackIn_97_0 = 0;
         int stackIn_97_1 = 0;
         int stackIn_98_2 = 0;
-        uf stackIn_105_0;
-        uf stackIn_105_1;
+        PoolMatchController stackIn_105_0;
+        PoolMatchController stackIn_105_1;
         int stackIn_105_2;
         int stackIn_105_3;
         int stackIn_105_4;
         int stackIn_105_5;
         int stackIn_105_6;
-        uf stackIn_106_0 = null;
-        uf stackIn_106_1 = null;
+        PoolMatchController stackIn_106_0 = null;
+        PoolMatchController stackIn_106_1 = null;
         boolean stackIn_106_7 = false;
         int stackIn_108_0 = 0;
         int stackIn_108_1 = 0;
@@ -51,15 +51,15 @@ public final class Pool extends ep {
         int stackIn_119_0 = 0;
         int stackIn_119_1 = 0;
         int stackIn_120_2 = 0;
-        uf stackIn_127_0;
-        uf stackIn_127_1;
+        PoolMatchController stackIn_127_0;
+        PoolMatchController stackIn_127_1;
         int stackIn_127_2;
         int stackIn_127_3;
         int stackIn_127_4;
         int stackIn_127_5;
         int stackIn_127_6;
-        uf stackIn_128_0 = null;
-        uf stackIn_128_1 = null;
+        PoolMatchController stackIn_128_0 = null;
+        PoolMatchController stackIn_128_1 = null;
         boolean stackIn_128_7 = false;
         int stackIn_131_0 = 0;
         int stackIn_133_0 = 0;
@@ -68,7 +68,7 @@ public final class Pool extends ep {
         int var3_int;
         String var3;
         int var4;
-        uf var4_ref_uf;
+        PoolMatchController var4_ref_uf;
         int var5;
         int var6;
         String[] var7;
@@ -163,13 +163,13 @@ public final class Pool extends ep {
             if (mj.field_e) {
               stackIn_26_0 = am.field_e;
               stackIn_27_1 = (0 != fl.field_q.field_R);
-              ((uf) (Object) stackIn_26_0).a(stackIn_27_1, var4 != 0, (byte) -118);
+              ((PoolMatchController) (Object) stackIn_26_0).a(stackIn_27_1, var4 != 0, (byte) -118);
             }
             if (ib.field_v) {
               ie.a(180, var4 != 0, param1 - 17156, 320);
               stackIn_32_0 = ba.field_ub;
               stackIn_33_1 = (fl.field_q.field_R != 0);
-              ((uf) (Object) stackIn_32_0).a(stackIn_33_1, var4 != 0, (byte) -108);
+              ((PoolMatchController) (Object) stackIn_32_0).a(stackIn_33_1, var4 != 0, (byte) -108);
             }
             while (n.h(127)) {
               if (un.field_b) {
@@ -235,7 +235,7 @@ public final class Pool extends ep {
             stackIn_92_1 = null;
             stackIn_92_7 = true;
           }
-          ba.field_ub = new uf(stackIn_91_2, stackIn_91_3, stackIn_91_4, stackIn_91_5, stackIn_91_6, stackIn_92_7, var9, 0, false);
+          ba.field_ub = new PoolMatchController(stackIn_91_2, stackIn_91_3, stackIn_91_4, stackIn_91_5, stackIn_91_6, stackIn_92_7, var9, 0, false);
           stackIn_95_0 = (!jd.field_a) ? 0 : 1;
           var4Lifetime1Lifetime1 = stackIn_95_0;
           stackIn_97_0 = param1 - 3405;
@@ -271,7 +271,7 @@ public final class Pool extends ep {
             stackIn_106_1 = null;
             stackIn_106_7 = true;
           }
-          var4_ref_uf = new uf(stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_105_5, stackIn_105_6, stackIn_106_7, var10, 0, false);
+          var4_ref_uf = new PoolMatchController(stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_105_5, stackIn_105_6, stackIn_106_7, var10, 0, false);
           var4_ref_uf.field_I.a(ga.a(512, true, ea.field_r), -1, 0, (ba.field_ub.field_I.field_A + 1) % fr.field_n, param1 ^ 19063);
           ba.field_ub = var4_ref_uf;
           var5 = jd.field_a ? 1 : 0;
@@ -291,7 +291,7 @@ public final class Pool extends ep {
           if (var3 == null) {
             var3 = vq.field_Zb;
           }
-          ba.field_ub = new uf(vh.field_Ab, new String[]{var3});
+          ba.field_ub = new PoolMatchController(vh.field_Ab, new String[]{var3});
           stackIn_117_0 = (!jd.field_a) ? 0 : 1;
           var4Lifetime3 = stackIn_117_0;
           stackIn_119_0 = param1 - 3405;
@@ -322,7 +322,7 @@ public final class Pool extends ep {
             stackIn_128_1 = null;
             stackIn_128_7 = true;
           }
-          ba.field_ub = new uf(stackIn_127_2, stackIn_127_3, stackIn_127_4, stackIn_127_5, stackIn_127_6, stackIn_128_7, new String[]{var3}, 0, false);
+          ba.field_ub = new PoolMatchController(stackIn_127_2, stackIn_127_3, stackIn_127_4, stackIn_127_5, stackIn_127_6, stackIn_128_7, new String[]{var3}, 0, false);
           stackIn_131_0 = (!jd.field_a) ? 0 : 1;
           var4Lifetime4 = stackIn_131_0;
           stackIn_133_0 = -3405;
@@ -389,7 +389,7 @@ public final class Pool extends ep {
         if (param0 != 120) {
           return;
         }
-        if (!uf.d(false)) {
+        if (!PoolMatchController.d(false)) {
           fo.a(cf.field_c, 100.0f, false);
           vc.a(true, var11);
           return;
@@ -521,14 +521,14 @@ public final class Pool extends ep {
         ta.b(24470);
         pk.a((byte) 101);
         ep.a(true);
-        oa.a(param0 ^ -28);
+        ClientException.a(param0 ^ -28);
         GameApplet.g((byte) -77);
         ej.a(true);
         ql.a((byte) -109);
         id.a((byte) 35);
         qh.a();
         di.e(0);
-        ge.e(4109);
+        PacketBuffer.e(4109);
         rl.a(-125);
         lf.a((byte) 112);
         wb.a((byte) 118);
@@ -562,7 +562,7 @@ public final class Pool extends ep {
         eg.f();
         lr.a();
         cf.a(param0 + 28774);
-        uf.c(true);
+        PoolMatchController.c(true);
         nk.d(param0 + 28);
         IntrusiveNode.b((byte) 115);
         vk.c(-819201);
@@ -895,7 +895,7 @@ public final class Pool extends ep {
         r.field_m[72] = 1;
         er.field_W = of.field_Lb[1];
         r.field_m[9] = -1;
-        oa.field_g = ek.a(-95);
+        ClientException.field_g = ek.a(-95);
         hp.field_c = ek.a(5);
     }
 
@@ -927,15 +927,15 @@ public final class Pool extends ep {
         int var7_int = 0;
         int stackIn_49_0 = 0;
         int stackIn_52_0 = 0;
-        uf stackIn_57_0;
-        uf stackIn_57_1;
+        PoolMatchController stackIn_57_0;
+        PoolMatchController stackIn_57_1;
         int stackIn_57_2;
         int stackIn_57_3;
         int stackIn_57_4;
         int stackIn_57_5;
         int stackIn_57_6;
-        uf stackIn_58_0 = null;
-        uf stackIn_58_1 = null;
+        PoolMatchController stackIn_58_0 = null;
+        PoolMatchController stackIn_58_1 = null;
         boolean stackIn_58_7 = false;
         int stackIn_101_0 = 0;
         int stackIn_101_1 = 0;
@@ -949,7 +949,7 @@ public final class Pool extends ep {
         Object var4_ref;
         int var5;
         String[] var6;
-        uf var7;
+        PoolMatchController var7;
         int var8;
         int[] var9;
         int[] var10;
@@ -1031,12 +1031,12 @@ public final class Pool extends ep {
             var2 = var17;
             var9 = (int[]) var2;
             var4_ref_oq = kn.field_e;
-            var5 = ((ge) ((Object) var4_ref_oq)).g(-100);
+            var5 = ((PacketBuffer) ((Object) var4_ref_oq)).readUnsignedByte(-100);
             for (var6_int = 0; var6_int < var5; var6_int++) {
-              var9[var6_int] = ((ge) ((Object) var4_ref_oq)).b(true);
+              var9[var6_int] = ((PacketBuffer) ((Object) var4_ref_oq)).readInt(true);
             }
             var10 = (int[]) var2;
-            var21 = oa.field_g;
+            var21 = ClientException.field_g;
             var16 = var21;
             var11 = var16;
             var4_ref_int__ = var11;
@@ -1050,7 +1050,7 @@ public final class Pool extends ep {
                 }
               }
             }
-            var12 = oa.field_g;
+            var12 = ClientException.field_g;
             var23 = (int[]) var2;
             var18 = var23;
             var13 = var18;
@@ -1099,37 +1099,37 @@ public final class Pool extends ep {
             }
             if (var2Lifetime1 != null) {
               if (uq.field_c == 79) {
-                ((uf) (var2Lifetime1)).g(true);
+                ((PoolMatchController) (var2Lifetime1)).g(true);
                 continue;
               }
               if (uq.field_c == 67) {
-                ((uf) (var2Lifetime1)).b(kn.field_e, false);
+                ((PoolMatchController) (var2Lifetime1)).b(kn.field_e, false);
                 continue;
               }
               if (uq.field_c == 68) {
-                ((uf) (var2Lifetime1)).a(kn.field_e, 0);
+                ((PoolMatchController) (var2Lifetime1)).a(kn.field_e, 0);
                 continue;
               }
               if (uq.field_c == 76) {
-                ((uf) (var2Lifetime1)).a(kn.field_e, false);
+                ((PoolMatchController) (var2Lifetime1)).a(kn.field_e, false);
                 continue;
               }
               if (uq.field_c == 78) {
-                ((uf) (var2Lifetime1)).b(69, kn.field_e);
+                ((PoolMatchController) (var2Lifetime1)).b(69, kn.field_e);
                 continue;
               }
               if (uq.field_c == 75) {
-                ((uf) (var2Lifetime1)).a(96, kn.field_e);
+                ((PoolMatchController) (var2Lifetime1)).a(96, kn.field_e);
                 continue;
               }
               if (uq.field_c == 77) {
-                ((uf) (var2Lifetime1)).d(4096, kn.field_e);
+                ((PoolMatchController) (var2Lifetime1)).d(4096, kn.field_e);
                 continue;
               }
               if (uq.field_c == 69) {
-                var3Lifetime1 = kn.field_e.e((byte) 105);
-                ((uf) (var2Lifetime1)).field_I.c(param0 - 14289, var3Lifetime1);
-                if (((uf) (var2Lifetime1)).field_db == var3Lifetime1) {
+                var3Lifetime1 = kn.field_e.readByte((byte) 105);
+                ((PoolMatchController) (var2Lifetime1)).field_I.c(param0 - 14289, var3Lifetime1);
+                if (((PoolMatchController) (var2Lifetime1)).field_db == var3Lifetime1) {
                   kh.field_gc.a(17, 256, (byte) -121, 128);
                 } else {
                   kh.field_gc.a(18, 256, (byte) -114, 128);
@@ -1143,8 +1143,8 @@ public final class Pool extends ep {
                   stackIn_102_2 = 0;
                 }
                 fq.a(stackIn_101_0, stackIn_101_1, stackIn_102_2, false);
-                ((uf) (var20)).a(-23095);
-                if ((f.field_f & ((uf) (var20)).field_L) == 0) {
+                ((PoolMatchController) (var20)).a(-23095);
+                if ((f.field_f & ((PoolMatchController) (var20)).field_L) == 0) {
                   continue;
                 }
                 ne.field_w = 23;
@@ -1152,7 +1152,7 @@ public final class Pool extends ep {
                 continue;
               }
               if (uq.field_c == 70) {
-                ((uf) (var2Lifetime1)).field_I.field_x = kn.field_e.g(param0 ^ -92);
+                ((PoolMatchController) (var2Lifetime1)).field_I.field_x = kn.field_e.readUnsignedByte(param0 ^ -92);
                 if (ba.field_ub == null) {
                   continue;
                 }
@@ -1160,12 +1160,12 @@ public final class Pool extends ep {
                 continue;
               }
               if (uq.field_c == 71) {
-                ((uf) (var2Lifetime1)).field_I.field_p = kn.field_e.g(param0 - 63);
-                ((uf) (var2Lifetime1)).field_I.field_x = ((uf) (var2Lifetime1)).field_I.field_x & ~((uf) (var2Lifetime1)).field_I.field_p;
+                ((PoolMatchController) (var2Lifetime1)).field_I.field_p = kn.field_e.readUnsignedByte(param0 - 63);
+                ((PoolMatchController) (var2Lifetime1)).field_I.field_x = ((PoolMatchController) (var2Lifetime1)).field_I.field_x & ~((PoolMatchController) (var2Lifetime1)).field_I.field_p;
                 continue;
               }
               if (uq.field_c == 72) {
-                ((uf) (var2Lifetime1)).field_I.field_b = kn.field_e.g(param0 - 119);
+                ((PoolMatchController) (var2Lifetime1)).field_I.field_b = kn.field_e.readUnsignedByte(param0 - 119);
                 if (ba.field_ub == null) {
                   continue;
                 }
@@ -1173,8 +1173,8 @@ public final class Pool extends ep {
                 continue;
               }
               if (73 == uq.field_c) {
-                ((uf) (var2Lifetime1)).field_cb = kn.field_e.g(-105);
-                ((uf) (var2Lifetime1)).field_I.field_b = ((uf) (var2Lifetime1)).field_I.field_b & ~((uf) (var2Lifetime1)).field_cb;
+                ((PoolMatchController) (var2Lifetime1)).field_cb = kn.field_e.readUnsignedByte(-105);
+                ((PoolMatchController) (var2Lifetime1)).field_I.field_b = ((PoolMatchController) (var2Lifetime1)).field_I.field_b & ~((PoolMatchController) (var2Lifetime1)).field_cb;
                 if (null == ba.field_ub) {
                   continue;
                 }
@@ -1201,7 +1201,7 @@ public final class Pool extends ep {
           stackIn_52_0 = (kn.field_e.e(1, 111) != 1) ? 0 : 1;
           var5Lifetime1 = stackIn_52_0;
           kn.field_e.o(8);
-          var6 = new String[kn.field_e.g(param0 ^ -70)];
+          var6 = new String[kn.field_e.readUnsignedByte(param0 ^ -70)];
           for (var7_int = 0; var7_int < var6.length; var7_int++) {
             var6[var7_int] = kn.field_e.a(cq.a(param0, 10761));
           }
@@ -1222,7 +1222,7 @@ public final class Pool extends ep {
             stackIn_58_1 = null;
             stackIn_58_7 = true;
           }
-          var7 = new uf(stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_58_7, var6, var2_int, var4 != 0);
+          var7 = new PoolMatchController(stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_58_7, var6, var2_int, var4 != 0);
           var7.c(16915, kn.field_e);
           if (65 != uq.field_c) {
             mj.field_e = true;
@@ -1316,7 +1316,7 @@ public final class Pool extends ep {
             rm.field_d = true;
           }
         } else {
-          if (!uf.d(false)) {
+          if (!PoolMatchController.d(false)) {
             ro.b(-26);
           } else {
             if (!bj.c(1)) {

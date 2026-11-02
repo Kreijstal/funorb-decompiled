@@ -170,8 +170,8 @@ final class pf {
               hb.field_a = hb.field_a - 1;
               return;
             }
-            if (uf.field_z > 0) {
-              uf.field_z = uf.field_z - 1;
+            if (PoolMatchController.field_z > 0) {
+              PoolMatchController.field_z = PoolMatchController.field_z - 1;
               return;
             }
             if (0 >= nj.field_b) {
@@ -185,8 +185,8 @@ final class pf {
               hb.field_a = hb.field_a - 1;
               return;
             }
-            if (uf.field_z > 0) {
-              uf.field_z = uf.field_z - 1;
+            if (PoolMatchController.field_z > 0) {
+              PoolMatchController.field_z = PoolMatchController.field_z - 1;
               return;
             }
             if (ir.field_h > nj.field_b) {
@@ -199,8 +199,8 @@ final class pf {
           } else {
             if (tp.field_e == null) {
               nr.field_bb = false;
-              if (0 < uf.field_z) {
-                uf.field_z = uf.field_z - 1;
+              if (0 < PoolMatchController.field_z) {
+                PoolMatchController.field_z = PoolMatchController.field_z - 1;
                 return;
               }
               if (nj.field_b > 0) {
@@ -224,11 +224,11 @@ final class pf {
               nj.field_b = nj.field_b - 1;
               return;
             }
-            if (uf.field_z < ir.field_h) {
-              if (uf.field_z == 0) {
+            if (PoolMatchController.field_z < ir.field_h) {
+              if (PoolMatchController.field_z == 0) {
                 db.a(27194, true);
               }
-              uf.field_z = uf.field_z + 1;
+              PoolMatchController.field_z = PoolMatchController.field_z + 1;
               return;
             }
           }

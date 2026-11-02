@@ -82,7 +82,7 @@ final class a {
     final static void a(String param0, boolean param1, boolean param2, float param3) {
         try {
           if (of.field_Nb == null) {
-            of.field_Nb = new wa(wd.field_Ub, oa.field_d);
+            of.field_Nb = new wa(wd.field_Ub, ClientException.field_d);
             wd.field_Ub.b(of.field_Nb, 30000);
           }
           of.field_Nb.a(param0, 2113632, param3, param2);

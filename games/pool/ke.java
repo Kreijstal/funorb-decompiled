@@ -68,11 +68,11 @@ final class ke {
           if (nl.field_c != null) {
             try {
               nl.field_c.a(param0 ^ 100, 0L);
-              nl.field_c.a(24, kn.field_e.field_t, kn.field_e.field_v, -1);
+              nl.field_c.a(24, kn.field_e.payload, kn.field_e.position, -1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              kn.field_e.field_v = kn.field_e.field_v + 24;
+              kn.field_e.position = kn.field_e.position + 24;
               if (param0 == 100) {
                 return;
               }
@@ -80,7 +80,7 @@ final class ke {
               return;
             }
           }
-          kn.field_e.field_v = kn.field_e.field_v + 24;
+          kn.field_e.position = kn.field_e.position + 24;
           if (param0 != 100) {
             field_f = (IntrusiveDeque) null;
           }

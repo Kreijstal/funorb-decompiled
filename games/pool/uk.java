@@ -243,7 +243,7 @@ final class uk implements Iterable {
               if (null == var8_ref_pn.field_u) {
                 ib.field_r = ib.field_r + 1;
               }
-              var10 = ge.a((byte) -24, var8_ref_pn);
+              var10 = PacketBuffer.a((byte) -24, var8_ref_pn);
               var11 = var10 + lr.a(var8_ref_pn.field_f);
               var12 = fn.a(var8_ref_pn, -55);
               var8_ref_pn.field_u = new vh(0L, kb.field_h, var11);

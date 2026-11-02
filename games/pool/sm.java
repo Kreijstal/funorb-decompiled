@@ -250,11 +250,11 @@ final class sm extends om {
           if (td.field_f == pa.field_I &&
             param0.equals(l.field_c)) {
             pa.field_I = aa.field_c;
-            stackIn_6_0 = uf.field_gb;
+            stackIn_6_0 = PoolMatchController.field_gb;
             return stackIn_6_0;
           }
           l.field_c = param0;
-          uf.field_gb = null;
+          PoolMatchController.field_gb = null;
           pa.field_I = ra.field_e;
           stackIn_8_0 = null;
           return (wc) (stackIn_8_0);

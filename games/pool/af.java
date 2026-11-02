@@ -441,7 +441,7 @@ final class af extends sq {
               var11 = 3 & var10;
               if (var11 != 0) {
                 if (var11 == 1) {
-                  var4 = var4 | (oa.field_b | i.field_m);
+                  var4 = var4 | (ClientException.field_b | i.field_m);
                 }
               } else {
                 var4 = var4 | i.field_m;
@@ -1018,7 +1018,7 @@ final class af extends sq {
         return param1 < 6144 ? -wf.field_b[-4096 + param1] : -wf.field_b[8192 - param1];
     }
 
-    final void a(ge param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -1029,7 +1029,7 @@ final class af extends sq {
           if (!param1) {
             this.e(99, 46);
           }
-          var3_int = param0.e((byte) 105);
+          var3_int = param0.readByte((byte) 105);
           this.field_g[0] = var3_int >> 7;
           if (this.field_g[0] != -1) {
             this.field_g[1] = 1 - this.field_g[0];

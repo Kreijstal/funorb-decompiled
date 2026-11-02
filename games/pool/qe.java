@@ -12,7 +12,7 @@ final class qe extends IntrusiveNode {
     static String field_K;
     static int field_y;
     int field_n;
-    ge field_T;
+    PacketBuffer field_T;
     static String field_p;
     static String field_B;
     int field_u;
@@ -135,7 +135,7 @@ final class qe extends IntrusiveNode {
         return false;
     }
 
-    final void a(ge param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         if (param1 != 0) {
           return;
         }
@@ -197,7 +197,7 @@ final class qe extends IntrusiveNode {
         }
     }
 
-    final void b(byte param0, ge param1) {
+    final void b(byte param0, PacketBuffer param1) {
         boolean discarded$1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -205,7 +205,7 @@ final class qe extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a(param1.g(-105), true);
+          this.a(param1.readUnsignedByte(-105), true);
           if (!this.d(117)) {
             this.field_q = 3;
           }
@@ -458,7 +458,7 @@ final class qe extends IntrusiveNode {
         li.field_b = cf.a(var2 * var5, false, var2 * var4);
     }
 
-    final byte c(byte param0, ge param1) {
+    final byte c(byte param0, PacketBuffer param1) {
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_17_0 = 0;
@@ -475,11 +475,11 @@ final class qe extends IntrusiveNode {
         int var8 = 0;
         try {
           if (param0 != -28) {
-            this.field_T = (ge) null;
+            this.field_T = (PacketBuffer) null;
           }
-          var3_int = param1.g(-78) & 255;
+          var3_int = param1.readUnsignedByte(-78) & 255;
           if ((this.field_v & 255) != var3_int) {
-            param1.field_v = param1.field_v + 6;
+            param1.position = param1.position + 6;
             if (var3_int >= this.field_v - 1) {
               return (byte) 1;
             }
@@ -487,11 +487,11 @@ final class qe extends IntrusiveNode {
             stackIn_17_0 = 1;
             return (byte) stackIn_17_0;
           }
-          var4 = param1.d((byte) -80);
-          var5 = param1.d((byte) -108);
-          var6 = param1.d((byte) -103);
-          var7 = param1.e((byte) 105);
-          var8 = param1.e((byte) 105);
+          var4 = param1.readShort((byte) -80);
+          var5 = param1.readShort((byte) -108);
+          var6 = param1.readShort((byte) -103);
+          var7 = param1.readByte((byte) 105);
+          var8 = param1.readByte((byte) 105);
           if (this.field_q == 0) {
             this.field_D = (byte)var7;
             this.field_H = (byte)var8;
@@ -525,7 +525,7 @@ final class qe extends IntrusiveNode {
         }
     }
 
-    final void b(ge param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -594,10 +594,10 @@ final class qe extends IntrusiveNode {
         return var2;
     }
 
-    final void a(al param0, ge param1, int param2) {
+    final void a(al param0, PacketBuffer param1, int param2) {
         al var6 = null;
         pq var5 = null;
-        ge var4_ref = null;
+        PacketBuffer var4_ref = null;
         try {
           var6 = param0;
           al var4 = var6;
@@ -627,7 +627,7 @@ final class qe extends IntrusiveNode {
         if (!param0) {
           return true;
         }
-        if (0 == (oa.field_b & this.field_s)) {
+        if (0 == (ClientException.field_b & this.field_s)) {
           return false;
         }
         if ((3 & this.field_l) == 0) {
@@ -658,16 +658,16 @@ final class qe extends IntrusiveNode {
     final void a(int param0, boolean param1) {
         int var3;
         int var4;
-        ge var5;
+        PacketBuffer var5;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        ge var5Lifetime1;
-        ge var5Lifetime2;
-        ge var5Lifetime3;
+        PacketBuffer var5Lifetime1;
+        PacketBuffer var5Lifetime2;
+        PacketBuffer var5Lifetime3;
         int var3Lifetime4;
         var4 = Pool.field_O;
-        if ((oa.field_b & this.field_s) != 0) {
+        if ((ClientException.field_b & this.field_s) != 0) {
           if ((3 & param0) == 0) {
             if ((ab.field_g & this.field_s) != 0 &&
               (param0 & 24) != 0) {
@@ -698,8 +698,8 @@ final class qe extends IntrusiveNode {
             }
             this.field_l = (byte)(this.field_l | param0);
             if (!param1) {
-              var5 = (ge) null;
-              this.b((byte) 32, (ge) null);
+              var5 = (PacketBuffer) null;
+              this.b((byte) 32, (PacketBuffer) null);
             }
             return;
           }
@@ -739,8 +739,8 @@ final class qe extends IntrusiveNode {
             if (param1) {
               return;
             }
-            var5Lifetime3 = (ge) null;
-            this.b((byte) 32, (ge) null);
+            var5Lifetime3 = (PacketBuffer) null;
+            this.b((byte) 32, (PacketBuffer) null);
             return;
           }
           var3Lifetime3 = param0;
@@ -805,8 +805,8 @@ final class qe extends IntrusiveNode {
                   }
                   this.field_l = (byte)(this.field_l | param0);
                   if (!param1) {
-                    var5Lifetime1 = (ge) null;
-                    this.b((byte) 32, (ge) null);
+                    var5Lifetime1 = (PacketBuffer) null;
+                    this.b((byte) 32, (PacketBuffer) null);
                   }
                   return;
                 }
@@ -824,8 +824,8 @@ final class qe extends IntrusiveNode {
         if (param1) {
           return;
         }
-        var5Lifetime2 = (ge) null;
-        this.b((byte) 32, (ge) null);
+        var5Lifetime2 = (PacketBuffer) null;
+        this.b((byte) 32, (PacketBuffer) null);
     }
 
     final boolean d(int param0) {
@@ -847,7 +847,7 @@ final class qe extends IntrusiveNode {
         return true;
     }
 
-    final void a(byte param0, ge param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -855,7 +855,7 @@ final class qe extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.f(98);
+          var3_int = param1.readUnsignedMedium(98);
           if (param0 < 76) {
             return;
           }
@@ -908,7 +908,7 @@ final class qe extends IntrusiveNode {
     private final boolean a(int param0, int param1) {
         boolean stackIn_27_0 = false;
         boolean stackIn_101_0 = false;
-        if ((this.field_s & oa.field_b) == 0) {
+        if ((this.field_s & ClientException.field_b) == 0) {
           if ((ab.field_g & this.field_s) != 0 &&
             0 != (24 & param1)) {
             if ((24 & this.field_l) == 0) {

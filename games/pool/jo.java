@@ -175,7 +175,7 @@ class jo extends ob {
         if (param0 != 0) {
           field_I = (String[]) null;
           if (ac.field_m == param1) {
-            if (!oa.field_j &&
+            if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
               pm.field_p = gg.field_f;
@@ -183,10 +183,10 @@ class jo extends ob {
               hh.field_a = 0;
             }
           } else {
-            if (oa.field_j) {
+            if (ClientException.field_j) {
               var2 = 0;
               if (param1 != -1) {
-                if (!oa.field_j &&
+                if (!ClientException.field_j &&
                   var2 == 0) {
                   hh.field_a = 0;
                 } else {
@@ -198,17 +198,17 @@ class jo extends ob {
               pa.field_H = wn.field_i;
               if (param1 == -1) {
                 if (var2 != 0) {
-                  oa.field_j = true;
+                  ClientException.field_j = true;
                 }
               } else {
-                oa.field_j = false;
+                ClientException.field_j = false;
               }
               pm.field_p = gg.field_f;
             } else {
               if (hh.field_a < se.field_l) {
                 var2 = 0;
                 if (param1 != -1) {
-                  if (oa.field_j) {
+                  if (ClientException.field_j) {
                     hh.field_a = se.field_l;
                   } else {
                     if (var2 != 0) {
@@ -223,10 +223,10 @@ class jo extends ob {
                 pa.field_H = wn.field_i;
                 if (param1 == -1) {
                   if (var2 != 0) {
-                    oa.field_j = true;
+                    ClientException.field_j = true;
                   }
                 } else {
-                  oa.field_j = false;
+                  ClientException.field_j = false;
                 }
                 pm.field_p = gg.field_f;
               } else {
@@ -234,7 +234,7 @@ class jo extends ob {
                 boolean decompiledFrameRemainder1 = true;
                 var2 = stackIn_52_0;
                 if (param1 != -1) {
-                  if (oa.field_j) {
+                  if (ClientException.field_j) {
                     hh.field_a = se.field_l;
                     decompiledFrameRemainder1 = false;
                   }
@@ -252,19 +252,19 @@ class jo extends ob {
                 pa.field_H = wn.field_i;
                 if (param1 == -1) {
                   if (var2 != 0) {
-                    oa.field_j = true;
+                    ClientException.field_j = true;
                     pm.field_p = gg.field_f;
                     decompiledFrameRemainder0 = false;
                   }
                 } else {
-                  oa.field_j = false;
+                  ClientException.field_j = false;
                 }
                 if (decompiledFrameRemainder0) {
                   pm.field_p = gg.field_f;
                 }
               }
             }
-            if (!oa.field_j &&
+            if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
               pm.field_p = gg.field_f;
@@ -273,15 +273,15 @@ class jo extends ob {
             }
           }
           ac.field_m = param1;
-          if (oa.field_j &&
+          if (ClientException.field_j &&
             eo.field_Vb == hh.field_a) {
             hh.field_a = 0;
-            oa.field_j = false;
+            ClientException.field_j = false;
           }
           return;
         }
         if (ac.field_m == param1) {
-          if (!oa.field_j &&
+          if (!ClientException.field_j &&
             hh.field_a < se.field_l &&
             re.field_c) {
             pm.field_p = gg.field_f;
@@ -289,15 +289,15 @@ class jo extends ob {
             hh.field_a = 0;
           }
           ac.field_m = param1;
-          if (oa.field_j &&
+          if (ClientException.field_j &&
             eo.field_Vb == hh.field_a) {
             hh.field_a = 0;
-            oa.field_j = false;
+            ClientException.field_j = false;
             return;
           }
           return;
         }
-        if (!oa.field_j) {
+        if (!ClientException.field_j) {
           if (hh.field_a >= se.field_l) {
             stackIn_128_0 = (oe.field_Q + se.field_l > hh.field_a) ? 1 : 0;
           } else {
@@ -311,43 +311,43 @@ class jo extends ob {
           hh.field_a = 0;
           pa.field_H = wn.field_i;
           if (param1 != -1) {
-            oa.field_j = false;
+            ClientException.field_j = false;
             pm.field_p = gg.field_f;
-            if (!oa.field_j &&
+            if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
               pm.field_p = gg.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
               ac.field_m = param1;
-              if (oa.field_j &&
+              if (ClientException.field_j &&
                 eo.field_Vb == hh.field_a) {
                 hh.field_a = 0;
-                oa.field_j = false;
+                ClientException.field_j = false;
               }
               return;
             }
           } else {
             if (var2Lifetime1 != 0) {
-              oa.field_j = true;
+              ClientException.field_j = true;
               pm.field_p = gg.field_f;
-              if (!oa.field_j &&
+              if (!ClientException.field_j &&
                 hh.field_a < se.field_l &&
                 re.field_c) {
                 pm.field_p = gg.field_f;
                 pa.field_H = wn.field_i;
                 hh.field_a = 0;
                 ac.field_m = param1;
-                if (oa.field_j &&
+                if (ClientException.field_j &&
                   eo.field_Vb == hh.field_a) {
                   hh.field_a = 0;
-                  oa.field_j = false;
+                  ClientException.field_j = false;
                 }
                 return;
               }
             } else {
               pm.field_p = gg.field_f;
-              if (!oa.field_j &&
+              if (!ClientException.field_j &&
                 hh.field_a < se.field_l &&
                 re.field_c) {
                 pm.field_p = gg.field_f;
@@ -357,18 +357,18 @@ class jo extends ob {
             }
           }
         } else {
-          if (oa.field_j) {
+          if (ClientException.field_j) {
             hh.field_a = se.field_l;
             pa.field_H = wn.field_i;
             if (param1 == -1) {
               if (var2Lifetime1 != 0) {
-                oa.field_j = true;
+                ClientException.field_j = true;
               }
             } else {
-              oa.field_j = false;
+              ClientException.field_j = false;
             }
             pm.field_p = gg.field_f;
-            if (!oa.field_j &&
+            if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
               pm.field_p = gg.field_f;
@@ -376,10 +376,10 @@ class jo extends ob {
               hh.field_a = 0;
             }
             ac.field_m = param1;
-            if (oa.field_j &&
+            if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
-              oa.field_j = false;
+              ClientException.field_j = false;
             }
             return;
           }
@@ -387,12 +387,12 @@ class jo extends ob {
             hh.field_a = se.field_l;
             pa.field_H = wn.field_i;
             if (param1 == -1) {
-              oa.field_j = true;
+              ClientException.field_j = true;
             } else {
-              oa.field_j = false;
+              ClientException.field_j = false;
             }
             pm.field_p = gg.field_f;
-            if (!oa.field_j &&
+            if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
               pm.field_p = gg.field_f;
@@ -400,10 +400,10 @@ class jo extends ob {
               hh.field_a = 0;
             }
             ac.field_m = param1;
-            if (oa.field_j &&
+            if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
-              oa.field_j = false;
+              ClientException.field_j = false;
               return;
             }
             return;
@@ -411,10 +411,10 @@ class jo extends ob {
           hh.field_a = 0;
           pa.field_H = wn.field_i;
           if (param1 != -1) {
-            oa.field_j = false;
+            ClientException.field_j = false;
           } else {
             pm.field_p = gg.field_f;
-            if (!oa.field_j &&
+            if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
               pm.field_p = gg.field_f;
@@ -422,39 +422,39 @@ class jo extends ob {
               hh.field_a = 0;
             }
             ac.field_m = param1;
-            if (oa.field_j &&
+            if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
-              oa.field_j = false;
+              ClientException.field_j = false;
               return;
             }
             return;
           }
           pm.field_p = gg.field_f;
-          if (!oa.field_j &&
+          if (!ClientException.field_j &&
             hh.field_a < se.field_l &&
             re.field_c) {
             pm.field_p = gg.field_f;
             pa.field_H = wn.field_i;
             hh.field_a = 0;
             ac.field_m = param1;
-            if (oa.field_j &&
+            if (ClientException.field_j &&
               eo.field_Vb == hh.field_a) {
               hh.field_a = 0;
-              oa.field_j = false;
+              ClientException.field_j = false;
             }
             return;
           }
         }
         ac.field_m = param1;
-        if (!oa.field_j) {
+        if (!ClientException.field_j) {
           return;
         }
         if (eo.field_Vb != hh.field_a) {
           return;
         }
         hh.field_a = 0;
-        oa.field_j = false;
+        ClientException.field_j = false;
         return;
     }
 

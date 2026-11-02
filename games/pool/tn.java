@@ -15,7 +15,7 @@ final class tn extends IntrusiveNode {
     int field_r;
     int[] field_q;
 
-    final static void a(uf param0, int param1) {
+    final static void a(PoolMatchController param0, int param1) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_28_0 = null;

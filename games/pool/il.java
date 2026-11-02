@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il {
-    static ge field_b;
+    static PacketBuffer field_b;
     static String field_d;
     static String field_h;
     static dd field_a;

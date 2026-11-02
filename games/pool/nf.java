@@ -111,11 +111,11 @@ final class nf extends ch implements jb, tb, jn {
         var3.a(3, !param1 ? true : false);
         var3.a(9, !param1 ? true : false);
         if (param1) {
-          var3.a((byte) -81, param0);
+          var3.writeShort((byte) -81, param0);
           return;
         }
         nf.g((byte) 125);
-        var3.a((byte) -81, param0);
+        var3.writeShort((byte) -81, param0);
     }
 
     public final void a(int param0) {
@@ -442,7 +442,7 @@ final class nf extends ch implements jb, tb, jn {
         this.field_O.field_p = wp.field_e;
         this.field_X.field_p = kc.field_f;
         this.field_R.field_p = ii.field_b;
-        this.field_ab.field_p = uf.field_J;
+        this.field_ab.field_p = PoolMatchController.field_J;
         this.field_W.field_p = ui.field_ab;
         this.field_bb.a((byte) -111, new ua(this.field_bb));
         this.field_cb.a((byte) -111, new r(this.field_cb));

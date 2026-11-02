@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class oq extends ge {
+final class oq extends PacketBuffer {
     static java.util.zip.CRC32 field_B;
     static String field_C;
     private li field_A;
@@ -19,7 +19,7 @@ final class oq extends ge {
     }
 
     final void o(int param0) {
-        this.field_v = (this.field_y + 7) / param0;
+        this.position = (this.field_y + 7) / param0;
     }
 
     oq(int param0) {
@@ -41,9 +41,9 @@ final class oq extends ge {
             this.a(33, -53, (byte[]) null, -26);
           }
           for (var5_int = 0; var5_int < param3; var5_int++) {
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            param2[var5_int + param0] = (byte)(this.field_t[fieldTemp$0] - this.field_A.a((byte) 7));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_A.a((byte) 7));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,7 +61,7 @@ final class oq extends ge {
     }
 
     final void p(int param0) {
-        this.field_y = this.field_v * param0;
+        this.field_y = this.position * param0;
     }
 
     final void b(boolean param0, int param1) {
@@ -69,9 +69,9 @@ final class oq extends ge {
           byte[] var4 = (byte[]) null;
           this.a(-89, -96, (byte[]) null, 98);
         }
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(this.field_A.a((byte) 7) + param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_A.a((byte) 7) + param1);
     }
 
     final static void n(int param0) {
@@ -89,9 +89,9 @@ final class oq extends ge {
 
     final int q(int param0) {
         int var2 = -125 % ((14 - param0) / 47);
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        return 255 & this.field_t[fieldTemp$0] - this.field_A.a((byte) 7);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.field_A.a((byte) 7);
     }
 
     final int e(int param0, int param1) {
@@ -103,14 +103,14 @@ final class oq extends ge {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((co.field_ab[var4] & this.field_t[incrementValue$0]) << -var4 + param0);
+          var5 = var5 + ((co.field_ab[var4] & this.payload[incrementValue$0]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 == var4) {
-          var5 = var5 + (co.field_ab[var4] & this.field_t[var3]);
+          var5 = var5 + (co.field_ab[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.field_t[var3] >> -param0 + var4 & co.field_ab[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & co.field_ab[param0]);
         }
         if (param1 <= 15) {
           field_C = (String) null;

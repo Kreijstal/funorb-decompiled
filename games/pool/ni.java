@@ -23,7 +23,7 @@ final class ni extends vc {
     private jg field_db;
     private jg field_V;
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         nb dupTemp$0 = null;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
@@ -131,7 +131,7 @@ final class ni extends vc {
         }
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         boolean[] stackIn_7_0 = null;
@@ -818,15 +818,15 @@ final class ni extends vc {
         try {
           this.field_B = new dd(param1.a(false, "modern-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
           if (param0 != 5) {
-            uf var4 = (uf) null;
-            this.a(false, (uf) null);
+            PoolMatchController var4 = (PoolMatchController) null;
+            this.a(false, (PoolMatchController) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ni.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(boolean param0, uf param1) {
+    private final void a(boolean param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

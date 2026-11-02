@@ -18,7 +18,7 @@ final class ul extends tm {
           return;
         }
         ea.field_z = false;
-        hr.field_y = 0 == kn.field_e.g(-83) ? true : false;
+        hr.field_y = 0 == kn.field_e.readUnsignedByte(-83) ? true : false;
     }
 
     final int a(int param0, boolean param1) {
@@ -181,12 +181,12 @@ final class ul extends tm {
           nr.field_S = nr.field_S - 1;
           var9 = ej.field_j;
           var9.b(false, param2);
-          var9.field_v = var9.field_v + 1;
+          var9.position = var9.position + 1;
           var6 = -10 % ((param0 - 20) / 53);
-          var5 = var9.field_v;
+          var5 = var9.position;
           var9.a(1, false);
           var9.a(-9946, param1);
-          var9.b(var9.field_v - var5, true);
+          var9.b(var9.position - var5, true);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

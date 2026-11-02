@@ -145,14 +145,14 @@ class fe extends ei {
                 kc.field_b.field_pb = false;
               }
               kc.field_b.field_F = mg.field_c.field_F;
-              if (uf.field_jb > 0) {
-                boolean decompiledSharedTail1 = (uf.field_jb != 1);
+              if (PoolMatchController.field_jb > 0) {
+                boolean decompiledSharedTail1 = (PoolMatchController.field_jb != 1);
                 if (!decompiledSharedTail1) {
                   var10_ref_String = lo.field_b;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = nr.a(new String[]{Integer.toString(uf.field_jb)}, -1, hq.field_f);
+                  var10_ref_String = nr.a(new String[]{Integer.toString(PoolMatchController.field_jb)}, -1, hq.field_f);
                 }
                 if ((va.field_V & 16) == 0 &&
                   !nr.field_bb) {

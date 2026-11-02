@@ -12,12 +12,12 @@ abstract class no {
     static int[] field_n;
     static hj field_g;
     wo field_o;
-    ge field_r;
+    PacketBuffer field_r;
     long field_d;
     int field_m;
     static String field_b;
     static int field_l;
-    ge field_p;
+    PacketBuffer field_p;
     volatile int field_a;
     byte field_c;
     volatile int field_e;
@@ -301,11 +301,11 @@ abstract class no {
         this.field_f = new wo();
         this.field_t = new wo();
         this.field_o = new wo();
-        this.field_r = new ge(6);
+        this.field_r = new PacketBuffer(6);
         this.field_e = 0;
         this.field_a = 0;
         this.field_c = (byte) 0;
-        this.field_p = new ge(10);
+        this.field_p = new PacketBuffer(10);
     }
 
     static {

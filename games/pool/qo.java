@@ -161,7 +161,7 @@ abstract class qo extends rg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
-            stackIn_4_0 = oa.a(0, param0, ~param2, param1);
+            stackIn_4_0 = ClientException.a(0, param0, ~param2, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -30;

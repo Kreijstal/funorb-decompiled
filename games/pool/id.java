@@ -97,7 +97,7 @@ abstract class id {
           return;
         }
         ug.field_u = hj.field_l;
-        uf.field_X = 0;
+        PoolMatchController.field_X = 0;
         rj.field_f = 0;
         li.field_d = 0;
         jc.field_j = new ia(2);
@@ -150,9 +150,9 @@ abstract class id {
             id.a(33, true);
           }
           var27 = kn.field_e;
-          var2 = var27.g(-107);
+          var2 = var27.readUnsignedByte(-107);
           if (var2 == 0) {
-            var3 = var27.d(-1034);
+            var3 = var27.readUnsignedShort(-1034);
             var4 = (eh) (wg.field_Lb.c((byte) -36));
             while (var4 != null) {
               if (var3 != var4.field_A) {
@@ -165,7 +165,7 @@ abstract class id {
               dn.c(118);
               return;
             }
-            var5 = var27.g(-79);
+            var5 = var27.readUnsignedByte(-79);
             if (0 != var5) {
               var6 = var4.field_r;
               rq.field_y[0].field_b = null;
@@ -175,7 +175,7 @@ abstract class id {
               for (var8_int = 1; var5 > var8_int; var8_int++) {
                 rq.field_y[var8_int].field_f = var27.j(-76);
                 rq.field_y[var8_int].field_c = false;
-                if (1 != var27.g(-60)) {
+                if (1 != var27.readUnsignedByte(-60)) {
                   rq.field_y[var8_int].field_b = null;
                 } else {
                   rq.field_y[var8_int].field_b = var27.j(-126);
@@ -197,13 +197,13 @@ abstract class id {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.g(-112);
+              var18 = var27.readUnsignedByte(-112);
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.g(-105);
+                  var20 = var27.readUnsignedByte(-105);
                   var21 = rq.field_y[var20].field_f;
-                  var22 = var27.h(-412303328);
-                  var24 = var27.field_v;
+                  var22 = var27.readLong(-412303328);
+                  var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = rq.field_y[var20].field_b;
@@ -212,7 +212,7 @@ abstract class id {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.b(true);
+                      var11[0][incrementValue$3] = var27.readInt(true);
                     }
                   }
                   if (var21 != null &&
@@ -220,12 +220,12 @@ abstract class id {
                     var8[1][var13] = di.field_j;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_v = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.b(true);
+                      var11[1][incrementValue$4] = var27.readInt(true);
                     }
                   }
                   if (var6 > var14 &&
@@ -234,12 +234,12 @@ abstract class id {
                     var8[2][var14] = var21;
                     var9[2][var14] = rq.field_y[var20].field_b;
                     var10[2][var14] = var22;
-                    var27.field_v = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.b(true);
+                      var11[2][incrementValue$5] = var27.readInt(true);
                     }
                   }
                 }
@@ -250,8 +250,8 @@ abstract class id {
             return;
           }
           if (1 == var2) {
-            var3Lifetime1 = var27.d(-1034);
-            var4_long = var27.h(-412303328);
+            var3Lifetime1 = var27.readUnsignedShort(-1034);
+            var4_long = var27.readLong(-412303328);
             var6_ref_oj = (oj) (ta.field_i.c((byte) 71));
             while (var6_ref_oj != null) {
               if (var6_ref_oj.field_B != var3Lifetime1) {

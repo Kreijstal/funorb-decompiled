@@ -27,9 +27,9 @@ class se extends re {
         field_k = null;
     }
 
-    final void a(byte param0, ge param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
-          param1.a(this.field_j, (byte) -90);
+          param1.writeLong(this.field_j, (byte) -90);
           int var3_int = 6 % ((param0 - 22) / 51);
           param1.a(this.field_g, 103);
         } catch (RuntimeException runtimeException) {

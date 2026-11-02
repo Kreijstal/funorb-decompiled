@@ -108,7 +108,7 @@ final class ro {
             ta.field_g = bo.a(4, 47);
           }
           if (ta.field_g.field_s) {
-            var12 = oa.field_g;
+            var12 = ClientException.field_g;
             var10 = var12;
             var5 = var10;
             var1 = var5;

@@ -6,7 +6,7 @@ final class bc {
     static int field_f;
     static String field_d;
     static String field_a;
-    static ge field_b;
+    static PacketBuffer field_b;
     static String field_g;
     static String field_h;
     static int[] field_c;
@@ -62,7 +62,7 @@ final class bc {
           var8 = var11;
           var3 = var8;
           if (param0 != 17) {
-            field_b = (ge) null;
+            field_b = (PacketBuffer) null;
           }
           for (var4 = 0; var4 < var10.length; var4++) {
             var11[var4] = var4;
@@ -83,7 +83,7 @@ final class bc {
         field_f = 48;
         field_a = "Time trial completed!";
         field_d = "End tutorial";
-        field_b = new ge(256);
+        field_b = new PacketBuffer(256);
         field_g = "Not yet achieved";
         field_i = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
         field_h = ", <%0>";

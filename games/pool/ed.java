@@ -14,21 +14,21 @@ final class ed {
     private int field_g;
     int field_b;
 
-    final void b(ge param0) {
-        this.field_b = param0.g(-67);
-        this.field_f = param0.b(true);
-        this.field_a = param0.b(true);
+    final void b(PacketBuffer param0) {
+        this.field_b = param0.readUnsignedByte(-67);
+        this.field_f = param0.readInt(true);
+        this.field_a = param0.readInt(true);
         this.a(param0);
     }
 
-    final void a(ge param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_d = param0.g(-128);
+        this.field_d = param0.readUnsignedByte(-128);
         this.field_e = new int[this.field_d];
         this.field_c = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
-          this.field_e[var2] = param0.d(-1034);
-          this.field_c[var2] = param0.d(-1034);
+          this.field_e[var2] = param0.readUnsignedShort(-1034);
+          this.field_c[var2] = param0.readUnsignedShort(-1034);
         }
     }
 

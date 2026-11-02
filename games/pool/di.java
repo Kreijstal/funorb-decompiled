@@ -809,10 +809,10 @@ final class di {
         byte[] var22 = null;
         int[] var23 = null;
         byte[] var24 = null;
-        ge var25 = null;
+        PacketBuffer var25 = null;
         byte[] var26 = null;
-        ge var28 = null;
-        ge var30 = null;
+        PacketBuffer var28 = null;
+        PacketBuffer var30 = null;
         int[] var31 = null;
         byte[][] var32 = null;
         int[] var33 = null;
@@ -863,8 +863,8 @@ final class di {
             var34 = or.a(this.field_l[param3], -19261, true);
             var24 = var34;
             var9 = var24;
-            var25 = new ge(var34);
-            var25.a(var25.field_t.length, 5, param1, param0 - 81);
+            var25 = new PacketBuffer(var34);
+            var25.a(var25.payload.length, 5, param1, param0 - 81);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -892,14 +892,14 @@ final class di {
               var11--;
               var12 = var22[var11] & 255;
               var11 = var11 - var5_int * (var12 * 4);
-              var28 = new ge(var42);
+              var28 = new PacketBuffer(var42);
               var14_int = 0;
               var15_int = 0;
-              var28.field_v = var11;
+              var28.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var28.b(true);
+                  var17 = var17 + var28.readInt(true);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -915,13 +915,13 @@ final class di {
                 return true;
               }
               var43 = new byte[var14_int];
-              var28.field_v = var11;
+              var28.position = var11;
               var14_intLifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var28.b(true);
+                  var19 = var19 + var28.readInt(true);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -940,15 +940,15 @@ final class di {
               var11--;
               var12 = var22[var11] & 255;
               var11 = var11 - var5_int * var12 * 4;
-              var30 = new ge(var42);
-              var30.field_v = var11;
+              var30 = new PacketBuffer(var42);
+              var30.position = var11;
               var38 = new int[var5_int];
               var31 = var38;
               var14 = var31;
               for (var15_int = 0; var15_int < var12; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var30.b(true);
+                  var16 = var16 + var30.readInt(true);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -960,12 +960,12 @@ final class di {
                 var15[var16] = array$1;
                 var38[var16] = 0;
               }
-              var30.field_v = var11;
+              var30.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var30.b(true);
+                  var18 = var18 + var30.readInt(true);
                   qn.a(var35, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;

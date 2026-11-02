@@ -98,7 +98,7 @@ final class gh extends vc {
           hj.field_j = param0.a("space_ball_4", true, "");
           wn.field_b = param0.a("space_ball_cushion1", true, "");
           cr.field_o = param0.a("space_ball_cushion2", true, "");
-          ge.field_q = param0.a("space_ball_cushion3", true, "");
+          PacketBuffer.field_q = param0.a("space_ball_cushion3", true, "");
           qi.field_f = param0.a("space_ball_cushion4", true, "");
           to.field_l = param0.a("space_respot_the_white", true, "");
           bh.field_a = param0.a("", "space_ball_pot", (byte) 125);
@@ -158,7 +158,7 @@ final class gh extends vc {
         }
     }
 
-    private final void a(uf param0, int param1) {
+    private final void a(PoolMatchController param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -255,7 +255,7 @@ final class gh extends vc {
         gd.field_g = gd.field_g + var2;
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -356,7 +356,7 @@ final class gh extends vc {
           } else {
             if (1 != var6) {
               if (var6 == 2) {
-                kp.a(100, ge.field_q, param3, param1);
+                kp.a(100, PacketBuffer.field_q, param3, param1);
               } else {
                 if (var6 == 3) {
                   kp.a(100, qi.field_f, param3, param1);
@@ -369,7 +369,7 @@ final class gh extends vc {
         }
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         boolean[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_22_2 = 0;
@@ -530,7 +530,7 @@ final class gh extends vc {
             va.field_N[var5] = ra.field_f[wm.field_Ub[var5]].a(var57, (byte) 91);
           }
           k.a(wm.field_Ub, (byte) -121, va.field_N);
-          ge.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
+          PacketBuffer.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
           var26 = ig.field_h;
           var88 = oh.field_d;
           if (param0 != -55) {
@@ -591,7 +591,7 @@ final class gh extends vc {
           var16[0] = var16[0] - 2304;
           var16[1] = var16[1] - 1152;
           for (var6 = ra.field_f.length - 1; 0 <= var6; var6--) {
-            if (ge.field_l <= va.field_N[var6]) {
+            if (PacketBuffer.field_l <= va.field_N[var6]) {
               ra.field_f[wm.field_Ub[var6]].a(var94, this, 126);
               continue;
             }
@@ -1049,9 +1049,9 @@ final class gh extends vc {
             }
           } else {
             if (var2 != 0) {
-              if (oa.field_h == 2) {
+              if (ClientException.field_h == 2) {
                 if (param0 == ~var3 &&
-                  oa.field_h == 2) {
+                  ClientException.field_h == 2) {
                   var4 = -ap.field_y + rl.a((byte) -128);
                   var6 = (int)((10999L - var4) / 1000L);
                   if (var6 <= 0) {
@@ -1065,7 +1065,7 @@ final class gh extends vc {
             }
           }
           if (param0 == ~var3 &&
-            oa.field_h == 2) {
+            ClientException.field_h == 2) {
             var4Lifetime1 = -ap.field_y + rl.a((byte) -128);
             var6Lifetime1 = (int)((10999L - var4Lifetime1) / 1000L);
             if (var6Lifetime1 <= 0) {

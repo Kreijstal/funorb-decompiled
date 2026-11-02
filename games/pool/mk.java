@@ -136,7 +136,7 @@ final class mk {
               var12.field_xc = new vh(0L, tm.field_d);
               var12.a(-108, var12.field_xc);
               var12.field_xc.field_Fb = 1;
-              var12.field_cc = new vh(0L, ge.field_s);
+              var12.field_cc = new vh(0L, PacketBuffer.field_s);
               var12.a(119, var12.field_cc);
               var12.field_Lb = new vh(0L, tm.field_d);
               var12.a(-111, var12.field_Lb);
@@ -144,7 +144,7 @@ final class mk {
               var12.field_nc = new vh(0L, tm.field_d);
               var12.a(-123, var12.field_nc);
               var12.field_nc.field_tb = 0;
-              var12.field_Bc = new vh(0L, ge.field_s);
+              var12.field_Bc = new vh(0L, PacketBuffer.field_s);
               var12.a(118, var12.field_Bc);
               var12.field_Bc.field_Fb = 2;
               stackIn_12_0 = var12;
@@ -158,7 +158,7 @@ final class mk {
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = ge.field_s;
+                stackIn_13_4 = PacketBuffer.field_s;
               }
               stackIn_12_0.field_Sb = new vh(stackIn_12_3, stackIn_13_4);
               var12.a(94, var12.field_Sb);
@@ -204,12 +204,12 @@ final class mk {
               } else {
                 stackIn_33_1 = null;
                 stackIn_33_2 = null;
-                stackIn_33_4 = ge.field_s;
+                stackIn_33_4 = PacketBuffer.field_s;
               }
               stackIn_32_0.field_dc = new vh(stackIn_32_3, stackIn_33_4);
               var12.a(53, var12.field_dc);
               var12.field_dc.field_Fb = 2;
-              var12.field_jc = new vh(0L, ge.field_s);
+              var12.field_jc = new vh(0L, PacketBuffer.field_s);
               var12.a(-100, var12.field_jc);
               var12.field_Rb = new vh(0L, ei.field_A);
               var12.a(40, var12.field_Rb);
@@ -587,11 +587,11 @@ final class mk {
         try {
           qf.field_j = param4;
           ve.field_m = -1L;
-          uf.field_hb = param8;
+          PoolMatchController.field_hb = param8;
           dr.field_c = param4.length;
           tp.field_e = null;
           em.field_L = null;
-          md.field_c = new byte[(uf.field_hb + 7) / 8];
+          md.field_c = new byte[(PoolMatchController.field_hb + 7) / 8];
           kh.field_Ac = false;
           var10_int = 0;
           for (var11 = 0; qf.field_j.length > var11; var11++) {
@@ -608,7 +608,7 @@ final class mk {
           IntrusiveNode.field_i = param7.field_T;
           IntrusiveNode.field_i.d((byte) 106);
           ln.field_n = new tk(param6);
-          uf.field_jb = 0;
+          PoolMatchController.field_jb = 0;
           og.field_I = -1;
           mg.field_d = -1;
           ka.field_r = 0;

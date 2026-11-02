@@ -18,14 +18,14 @@ final class lc extends fe {
         int var7_int = 0;
         try {
           ej.field_j.b(false, param3);
-          ej.field_j.field_v = ej.field_j.field_v + 1;
+          ej.field_j.position = ej.field_j.position + 1;
           int var8 = 55 % ((param5 + 38) / 51);
-          var7_int = ej.field_j.field_v;
-          ej.field_j.a(param4, (byte) -79);
+          var7_int = ej.field_j.position;
+          ej.field_j.writeLong(param4, (byte) -79);
           ej.field_j.a(-9946, param1);
           ej.field_j.a(param2, false);
           ej.field_j.a(!param0 ? 0 : 1, false);
-          ej.field_j.b(ej.field_j.field_v - var7_int, true);
+          ej.field_j.b(ej.field_j.position - var7_int, true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -39,7 +39,7 @@ final class jl {
           if (var5 == null) {
             return false;
           }
-          oa.a(true, var5);
+          ClientException.a(true, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

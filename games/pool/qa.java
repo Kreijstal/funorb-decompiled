@@ -144,7 +144,7 @@ final class qa extends IntrusiveNode {
     }
 
     final static void a(byte param0, boolean param1) {
-        oa.a(param1, (byte) 80);
+        ClientException.a(param1, (byte) 80);
         if (param0 != 55) {
           String var3 = (String) null;
           qa.a((String) null, 95);

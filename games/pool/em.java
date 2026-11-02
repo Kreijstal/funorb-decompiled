@@ -331,7 +331,7 @@ final class em extends ob {
         }
         var3.a(3, false);
         var3.a(8, false);
-        var3.a((byte) -81, param0);
+        var3.writeShort((byte) -81, param0);
     }
 
     final void c(int param0) {

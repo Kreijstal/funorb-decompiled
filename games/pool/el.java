@@ -47,7 +47,7 @@ final class el extends ob {
         if (var2 != 0) {
           stackIn_6_0 = hp.field_c;
         } else {
-          stackIn_6_0 = oa.field_g;
+          stackIn_6_0 = ClientException.field_g;
         }
         var15 = stackIn_6_0;
         var14 = var15;
@@ -190,7 +190,7 @@ final class el extends ob {
         if (param1) {
           stackIn_3_0 = hp.field_c;
         } else {
-          stackIn_3_0 = oa.field_g;
+          stackIn_3_0 = ClientException.field_g;
         }
         var10 = stackIn_3_0;
         var5 = var10;

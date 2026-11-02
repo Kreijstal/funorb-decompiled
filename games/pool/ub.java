@@ -35,7 +35,7 @@ final class ub extends se {
           if (param2 >= -113) {
             field_p = false;
           }
-          var3.a((byte) -81, param0.field_A);
+          var3.writeShort((byte) -81, param0.field_A);
           var3.a(param0.field_r, false);
           var3.a(param0.field_v, false);
           return;
@@ -122,7 +122,7 @@ final class ub extends se {
             stackIn_38_0 = null;
             return (String) (stackIn_38_0);
           }
-          stackIn_36_0 = nr.a(new String[]{param0}, -1, ge.field_x);
+          stackIn_36_0 = nr.a(new String[]{param0}, -1, PacketBuffer.field_x);
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,18 +153,18 @@ final class ub extends se {
           var6_int = 125 % ((param0 + 54) / 62);
           var7 = ej.field_j;
           var7.b(false, param2);
-          var7.field_v = var7.field_v + 1;
-          var8 = var7.field_v;
+          var7.position = var7.position + 1;
+          var8 = var7.position;
           var7.a(param4, false);
           if (2 == param4) {
             var7.a(-9946, param3);
           }
           if (param1 == null) {
-            var7.a((byte) -81, param5);
+            var7.writeShort((byte) -81, param5);
           } else {
             im.a(var7, (byte) 75, param1);
           }
-          var7.b(-var8 + var7.field_v, true);
+          var7.b(-var8 + var7.position, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

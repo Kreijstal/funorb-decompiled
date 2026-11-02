@@ -20,7 +20,7 @@ final class lq extends ud {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= kn.field_e.field_v) {
+          if (param1 <= kn.field_e.position) {
             return true;
           }
           if (null == jd.field_c) {
@@ -32,16 +32,16 @@ final class lq extends ud {
               field_U = (String) null;
             }
             if (0 < var2_int) {
-              if (var2_int > param1 - kn.field_e.field_v) {
-                var2_int = param1 - kn.field_e.field_v;
+              if (var2_int > param1 - kn.field_e.position) {
+                var2_int = param1 - kn.field_e.position;
               }
-              jd.field_c.a(var2_int, 0, kn.field_e.field_v, kn.field_e.field_t);
+              jd.field_c.a(var2_int, 0, kn.field_e.position, kn.field_e.payload);
               ob.field_v = rl.a((byte) -97);
-              kn.field_e.field_v = kn.field_e.field_v + var2_int;
-              if (param1 > kn.field_e.field_v) {
+              kn.field_e.position = kn.field_e.position + var2_int;
+              if (param1 > kn.field_e.position) {
                 return false;
               }
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               return true;
             }
             if (var2_int < 0) {

@@ -215,7 +215,7 @@ final class wh {
             this.field_d.a(90, var6, (long)param1);
             return var6;
           }
-          var6.a(-20678, new ge(var4));
+          var6.a(-20678, new PacketBuffer(var4));
           if (param1 >= 32768) {
             var6.b(true);
             this.field_d.a(90, var6, (long)param1);
@@ -235,7 +235,7 @@ final class wh {
         }
         ap var7 = new ap();
         if (var4Lifetime1 != null) {
-          var7.a(-20678, new ge(var4Lifetime1));
+          var7.a(-20678, new PacketBuffer(var4Lifetime1));
           if (param1 < 32768) {
             this.field_d.a(90, var7, (long)param1);
             return var7;

@@ -18,7 +18,7 @@ final class nn {
           tf.field_a.field_j[vn.field_e] = (nc) (tf.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
         tf.field_a.a(tp.field_h, bf.field_i, vn.field_e, -3637);
-        uf var3 = ba.field_ub;
+        PoolMatchController var3 = ba.field_ub;
         if (var3 == null) {
           var3 = am.field_e;
         }

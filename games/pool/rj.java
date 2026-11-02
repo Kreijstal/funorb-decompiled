@@ -159,7 +159,7 @@ final class rj extends sq {
         return var4;
     }
 
-    final void a(ge param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -175,7 +175,7 @@ final class rj extends sq {
           }
           var3_int = 0;
           while (true) {
-            var4 = param0.g(-119);
+            var4 = param0.readUnsignedByte(-119);
             this.field_e[var3_int] = rb.b(var4, 254) >> 4;
             var3_int++;
             if (this.field_d.field_h.length != var3_int) {

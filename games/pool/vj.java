@@ -128,7 +128,7 @@ final class vj {
           if (var5 == null) {
             return false;
           }
-          oa.a(true, var5);
+          ClientException.a(true, var5);
           if (param3 == 121) {
             return true;
           }

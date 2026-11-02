@@ -50,7 +50,7 @@ final class lf {
         }
     }
 
-    final static void a(java.math.BigInteger param0, byte[] param1, java.math.BigInteger param2, ge param3, int param4, int param5, int param6) {
+    final static void a(java.math.BigInteger param0, byte[] param1, java.math.BigInteger param2, PacketBuffer param3, int param4, int param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -81,18 +81,18 @@ final class lf {
             var8[var9] = cb.field_a.nextInt();
           }
           if (null == gd.field_f ||
-            !(var7_int <= gd.field_f.field_t.length)) {
-            gd.field_f = new ge(var7_int);
+            !(var7_int <= gd.field_f.payload.length)) {
+            gd.field_f = new PacketBuffer(var7_int);
           }
-          gd.field_f.field_v = 0;
+          gd.field_f.position = 0;
           gd.field_f.a(param1, (byte) 0, param5, param4);
           gd.field_f.b(var7_int, (byte) -8);
           gd.field_f.a(32052, var12);
           if (il.field_b == null ||
-            !(100 <= il.field_b.field_t.length)) {
-            il.field_b = new ge(100);
+            !(100 <= il.field_b.payload.length)) {
+            il.field_b = new PacketBuffer(100);
           }
-          il.field_b.field_v = 0;
+          il.field_b.position = 0;
           il.field_b.a(10, false);
           var10 = param6;
           var9Lifetime1 = var10;
@@ -100,10 +100,10 @@ final class lf {
             il.field_b.a(true, var12[var10]);
             var10++;
           }
-          il.field_b.a((byte) -81, param4);
+          il.field_b.writeShort((byte) -81, param4);
           il.field_b.a(param2, 116, param0);
-          param3.a(il.field_b.field_t, (byte) 0, 0, il.field_b.field_v);
-          param3.a(gd.field_f.field_t, (byte) 0, 0, gd.field_f.field_v);
+          param3.a(il.field_b.payload, (byte) 0, 0, il.field_b.position);
+          param3.a(gd.field_f.payload, (byte) 0, 0, gd.field_f.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

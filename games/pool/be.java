@@ -10,7 +10,7 @@ final class be extends ob {
     private static int field_H;
     static vh field_L;
 
-    final static void a(ge param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

@@ -101,7 +101,7 @@ final class dp implements in {
         if (param0 != 104) {
           kh var2 = (kh) null;
           dp.a(70, (kh) null);
-          if (oa.field_j) {
+          if (ClientException.field_j) {
             return -1;
           }
           if (hh.field_a < se.field_l) {
@@ -112,7 +112,7 @@ final class dp implements in {
           }
           return -1;
         }
-        if (oa.field_j) {
+        if (ClientException.field_j) {
           return -1;
         }
         if (hh.field_a < se.field_l) {
@@ -249,7 +249,7 @@ final class dp implements in {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
-        ge var8 = null;
+        PacketBuffer var8 = null;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
@@ -275,7 +275,7 @@ final class dp implements in {
           var6 = var12.length;
           this.field_f = new dh[param0.a(false, 0)];
           for (var7 = 0; var7 < var6; var7++) {
-            var8 = new ge(param0.a(86, var12[var7], 0));
+            var8 = new PacketBuffer(param0.a(86, var12[var7], 0));
             this.field_f[var12[var7]] = new dh(var8);
           }
           return;

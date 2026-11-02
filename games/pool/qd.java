@@ -8,7 +8,7 @@ final class qd {
     private no field_i;
     static int field_k;
     private java.math.BigInteger field_l;
-    private ge field_a;
+    private PacketBuffer field_a;
     static int field_g;
     private sp field_d;
     static String field_e;
@@ -48,9 +48,9 @@ final class qd {
               stackIn_10_0 = this.field_f[param2];
               return stackIn_10_0;
             }
-            this.field_a.field_v = 6 + param2 * 72;
-            var6_int = this.field_a.b(true);
-            var7 = this.field_a.b(true);
+            this.field_a.position = 6 + param2 * 72;
+            var6_int = this.field_a.readInt(true);
+            var7 = this.field_a.readInt(true);
             var13 = new byte[64];
             this.field_a.a(0, (byte) -115, var13, 64);
             var9 = new up(param2, param1, param4, this.field_i, this.field_j, var6_int, var13, var7, param0);
@@ -120,18 +120,18 @@ final class qd {
 
     final boolean a(boolean param0) {
         int var7 = 0;
-        ge stackIn_13_0 = null;
-        ge stackIn_13_1 = null;
+        PacketBuffer stackIn_13_0 = null;
+        PacketBuffer stackIn_13_1 = null;
         sp stackIn_13_2 = null;
-        ge stackIn_14_0 = null;
-        ge stackIn_14_1 = null;
+        PacketBuffer stackIn_14_0 = null;
+        PacketBuffer stackIn_14_1 = null;
         boolean stackIn_14_3 = false;
         int var3;
         byte[] var4;
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ge var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -164,11 +164,11 @@ final class qd {
           stackIn_14_1 = null;
           stackIn_14_3 = true;
         }
-        var10 = new ge(((sp) (Object) stackIn_13_2).b(stackIn_14_3));
-        var10.field_v = 5;
-        var3 = var10.g(-62);
-        var10.field_v = var10.field_v + var3 * 72;
-        var13 = new byte[-var10.field_v + var10.field_t.length];
+        var10 = new PacketBuffer(((sp) (Object) stackIn_13_2).b(stackIn_14_3));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(-62);
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(0, (byte) -125, var4, var13.length);
@@ -183,7 +183,7 @@ final class qd {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = jr.a(var10.field_v + (-var13.length - 5), (byte) -121, var10.field_t, 5);
+        var15 = jr.a(var10.position + (-var13.length - 5), (byte) -121, var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -198,14 +198,14 @@ final class qd {
         oq var2 = ej.field_j;
         var2.b(false, param1);
         int var3 = -32 / ((param0 - 16) / 57);
-        var2.field_v = var2.field_v + 1;
-        int var4 = var2.field_v;
+        var2.position = var2.position + 1;
+        int var4 = var2.position;
         var2.a(2, false);
         var2.a(md.field_c, (byte) 0, 0, md.field_c.length);
         var2.a(pm.field_l, false);
         var2.a(mc.field_l, false);
         var2.a(ka.field_s, (byte) 0, 0, ka.field_s.length);
-        var2.b(var2.field_v - var4, true);
+        var2.b(var2.position - var4, true);
     }
 
     private qd(no param0, rn param1, java.math.BigInteger param2, java.math.BigInteger param3) {

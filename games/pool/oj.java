@@ -48,7 +48,7 @@ final class oj extends IntrusiveNode {
         try {
           var7 = new oq(param0.a(false, "", "logo.fo3d"));
           var9 = var7;
-          var3 = var9.g(-123);
+          var3 = var9.readUnsignedByte(-123);
           var9.p(8);
           cf.field_a = ro.a(24, var9);
           qe.field_S = new oc[var3];

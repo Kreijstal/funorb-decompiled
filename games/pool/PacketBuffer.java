@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ge extends IntrusiveNode {
+class PacketBuffer extends IntrusiveNode {
     static String field_o;
     static String field_n;
     static jg field_q;
@@ -9,11 +9,11 @@ class ge extends IntrusiveNode {
     static int[] field_p;
     static String field_r;
     static le field_u;
-    int field_v;
+    int position;
     static vh field_s;
     static String field_w;
     static String field_x;
-    byte[] field_t;
+    byte[] payload;
     static int field_l;
 
     final void a(int param0, byte param1, byte[] param2, int param3) {
@@ -29,9 +29,9 @@ class ge extends IntrusiveNode {
             return;
           }
           for (var5_int = param0; var5_int < param0 + param3; var5_int++) {
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            param2[var5_int] = this.field_t[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,12 +48,12 @@ class ge extends IntrusiveNode {
         }
     }
 
-    final int f(int param0) {
-        if (param0 <= 43) {
-          this.l(-98);
+    final int readUnsignedMedium(int obfuscationGuard) {
+        if (obfuscationGuard <= 43) {
+          this.readMedium(-98);
         }
-        this.field_v = this.field_v + 3;
-        return (this.field_t[this.field_v - 1] & 255) + ((this.field_t[this.field_v - 3] << 16 & 16711680) + ((255 & this.field_t[-2 + this.field_v]) << 8));
+        this.position = this.position + 3;
+        return (this.payload[this.position - 1] & 255) + ((this.payload[this.position - 3] << 16 & 16711680) + ((255 & this.payload[-2 + this.position]) << 8));
     }
 
     final void a(byte[] param0, byte param1, int param2, int param3) {
@@ -69,9 +69,9 @@ class ge extends IntrusiveNode {
             field_n = (String) null;
           }
           for (var5_int = param2; var5_int < param3 + param2; var5_int++) {
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            this.field_t[fieldTemp$0] = param0[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param0[var5_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,12 +89,12 @@ class ge extends IntrusiveNode {
     }
 
     final boolean a(boolean param0) {
-        this.field_v = this.field_v - 4;
+        this.position = this.position - 4;
         if (param0) {
           this.a(true);
         }
-        int var2 = oa.a(0, this.field_v, -1, this.field_t);
-        int var3 = this.b(true);
+        int var2 = ClientException.a(0, this.position, -1, this.payload);
+        int var3 = this.readInt(true);
         if (var3 == var2) {
           return true;
         }
@@ -105,98 +105,98 @@ class ge extends IntrusiveNode {
         if (param0 >= -2) {
           return 77;
         }
-        int var2 = this.field_t[this.field_v] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (var2 < 128) {
-          return -64 + this.g(-60);
+          return -64 + this.readUnsignedByte(-60);
         }
-        return this.d(-1034) - 49152;
+        return this.readUnsignedShort(-1034) - 49152;
     }
 
     final String m(int param0) {
-        if (this.field_t[this.field_v] == 0) {
-          this.field_v = this.field_v + 1;
+        if (this.payload[this.position] == 0) {
+          this.position = this.position + 1;
           return null;
         }
         if (param0 < 106) {
-          this.a((byte) -12, -102);
+          this.writeShort((byte) -12, -102);
         }
         return this.j(-112);
     }
 
-    final int l(int param0) {
-        this.field_v = this.field_v + 3;
-        int var2 = (65280 & this.field_t[-2 + this.field_v] << 8) + (((255 & this.field_t[-3 + this.field_v]) << 16) + (this.field_t[this.field_v - 1] & 255));
+    final int readMedium(int obfuscationGuard) {
+        this.position = this.position + 3;
+        int var2 = (65280 & this.payload[-2 + this.position] << 8) + (((255 & this.payload[-3 + this.position]) << 16) + (this.payload[this.position - 1] & 255));
         if (var2 > 8388607) {
           var2 = var2 - 16777216;
         }
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return 110;
         }
         return var2;
     }
 
-    final void a(long param0, byte param1) {
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 56);
-        int fieldTemp$1 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 48);
-        if (param1 >= -75) {
+    final void writeLong(long value, byte obfuscationGuard) {
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(value >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(value >> 48);
+        if (obfuscationGuard >= -75) {
           return;
         }
-        int fieldTemp$2 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 40);
-        int fieldTemp$3 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 32);
-        int fieldTemp$4 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)(param0 >> 24);
-        int fieldTemp$5 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$5] = (byte)(int)(param0 >> 16);
-        int fieldTemp$6 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$6] = (byte)(int)(param0 >> 8);
-        int fieldTemp$7 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$7] = (byte)(int)param0;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(value >> 40);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(value >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(value >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(value >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(value >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)value;
     }
 
     private final void a(long param0, int param1) {
         int var4 = 122 % ((30 - param1) / 51);
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 48);
-        int fieldTemp$1 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 40);
-        int fieldTemp$2 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 32);
-        int fieldTemp$3 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 24);
-        int fieldTemp$4 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)(param0 >> 16);
-        int fieldTemp$5 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$5] = (byte)(int)(param0 >> 8);
-        int fieldTemp$6 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$6] = (byte)(int)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 32);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param0 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param0 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param0;
     }
 
-    final int g(int param0) {
-        if (param0 >= -59) {
-          this.g(-3);
+    final int readUnsignedByte(int obfuscationGuard) {
+        if (obfuscationGuard >= -59) {
+          this.readUnsignedByte(-3);
         }
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        return 255 & this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
     final int c(byte param0) {
@@ -204,11 +204,11 @@ class ge extends IntrusiveNode {
           String var3 = (String) null;
           this.a((String) null, 68);
         }
-        int var2 = this.field_t[this.field_v] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (var2 < 128) {
-          return this.g(-82);
+          return this.readUnsignedByte(-82);
         }
-        return this.d(-1034) - 32768;
+        return this.readUnsignedShort(-1034) - 32768;
     }
 
     final void a(String param0, int param1) {
@@ -292,15 +292,15 @@ class ge extends IntrusiveNode {
             var10 = (String) null;
             this.a((String) null, 85);
           }
-          var3_int = this.field_v / 8;
-          this.field_v = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           var4 = 0;
           while (true) {
             if (var4 >= var3_int) {
               return;
             }
-            var5 = this.b(true);
-            var6 = this.b(true);
+            var5 = this.readInt(true);
+            var6 = this.readInt(true);
             var7 = 0;
             var8 = -1640531527;
             var9 = 32;
@@ -315,7 +315,7 @@ class ge extends IntrusiveNode {
               }
               break;
             }
-            this.field_v = this.field_v - 8;
+            this.position = this.position - 8;
             this.a(true, var5);
             this.a(true, var6);
             var4++;
@@ -335,18 +335,18 @@ class ge extends IntrusiveNode {
     }
 
     final void b(int param0, int param1) {
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(param0 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 16);
         if (param1 <= 37) {
-          this.field_v = 87;
+          this.position = 87;
         }
-        int fieldTemp$1 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(param0 >> 8);
-        int fieldTemp$2 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)param0;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param0 >> 8);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param0;
     }
 
     final int k(int param0) {
@@ -354,36 +354,36 @@ class ge extends IntrusiveNode {
         int var2;
         int var3;
         int var4;
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        var2 = this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         var4 = 22 % ((param0 - 0) / 63);
         var3 = 0;
         while (var2 < 0) {
           var3 = (var3 | var2 & 127) << 7;
-          fieldTemp$1 = this.field_v;
-          this.field_v = this.field_v + 1;
-          var2 = this.field_t[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          var2 = this.payload[fieldTemp$1];
         }
         return var3 | var2;
     }
 
     final void a(boolean param0, int param1) {
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(param1 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 16);
         if (!param0) {
           return;
         }
-        int fieldTemp$2 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(param1 >> 8);
-        int fieldTemp$3 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)param1;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param1 >> 8);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param1;
     }
 
     public static void e(int param0) {
@@ -402,23 +402,23 @@ class ge extends IntrusiveNode {
         field_w = null;
     }
 
-    final int b(boolean param0) {
-        this.field_v = this.field_v + 4;
-        if (!param0) {
+    final int readInt(boolean obfuscationGuard) {
+        this.position = this.position + 4;
+        if (!obfuscationGuard) {
           return 15;
         }
-        return (255 & this.field_t[this.field_v - 1]) + (65280 & this.field_t[-2 + this.field_v] << 8) + (this.field_t[-4 + this.field_v] << 24 & -16777216) + (16711680 & this.field_t[-3 + this.field_v] << 16);
+        return (255 & this.payload[this.position - 1]) + (65280 & this.payload[-2 + this.position] << 8) + (this.payload[-4 + this.position] << 24 & -16777216) + (16711680 & this.payload[-3 + this.position] << 16);
     }
 
     final void a(int param0, byte param1) {
-        this.field_t[-4 + (this.field_v - param0)] = (byte)(param0 >> 24);
-        this.field_t[this.field_v - param0 - 3] = (byte)(param0 >> 16);
+        this.payload[-4 + (this.position - param0)] = (byte)(param0 >> 24);
+        this.payload[this.position - param0 - 3] = (byte)(param0 >> 16);
         if (param1 > -90) {
           int[] var4 = (int[]) null;
           this.a(125, -118, (int[]) null, -41);
         }
-        this.field_t[-2 + (-param0 + this.field_v)] = (byte)(param0 >> 8);
-        this.field_t[-param0 + this.field_v - 1] = (byte)param0;
+        this.payload[-2 + (-param0 + this.position)] = (byte)(param0 >> 8);
+        this.payload[-param0 + this.position - 1] = (byte)param0;
     }
 
     final void a(int param0, int param1) {
@@ -441,30 +441,30 @@ class ge extends IntrusiveNode {
     }
 
     final int d(int param0, int param1) {
-        int var3 = oa.a(param1, this.field_v, param0, this.field_t);
+        int var3 = ClientException.a(param1, this.position, param0, this.payload);
         this.a(true, var3);
         return var3;
     }
 
-    final void a(byte param0, int param1) {
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(param1 >> 8);
-        int fieldTemp$1 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)param1;
-        if (param0 != -81) {
+    final void writeShort(byte obfuscationGuard, int value) {
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(value >> 8);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)value;
+        if (obfuscationGuard != -81) {
           String var4 = (String) null;
           this.a(false, (String) null);
         }
     }
 
-    final long h(int param0) {
-        long var2 = 4294967295L & (long)this.b(true);
-        if (param0 != -412303328) {
+    final long readLong(int obfuscationGuard) {
+        long var2 = 4294967295L & (long)this.readInt(true);
+        if (obfuscationGuard != -412303328) {
           field_s = (vh) null;
         }
-        long var4 = (long)this.b(true) & 4294967295L;
+        long var4 = (long)this.readInt(true) & 4294967295L;
         return (var2 << 32) + var4;
     }
 
@@ -473,10 +473,10 @@ class ge extends IntrusiveNode {
         if (param1 != -8) {
           return;
         }
-        while (param0 > this.field_v) {
-          fieldTemp$0 = this.field_v;
-          this.field_v = this.field_v + 1;
-          this.field_t[fieldTemp$0] = (byte) 0;
+        while (param0 > this.position) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
     }
 
@@ -487,19 +487,19 @@ class ge extends IntrusiveNode {
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-          var4_int = this.field_v;
-          this.field_v = 0;
+          var4_int = this.position;
+          this.position = 0;
           var5 = new byte[var4_int];
           this.a(0, (byte) -128, var5, var4_int);
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(param0, param2);
           var8 = var7.toByteArray();
-          this.field_v = 0;
+          this.position = 0;
           if (param1 <= 39) {
             String var9 = (String) null;
             this.a(true, (String) null);
           }
-          this.a((byte) -81, var8.length);
+          this.writeShort((byte) -81, var8.length);
           this.a(var8, (byte) 0, 0, var8.length);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ge.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -507,22 +507,22 @@ class ge extends IntrusiveNode {
     }
 
     final void a(int param0, boolean param1) {
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param0;
         if (param1) {
           this.c(-68);
         }
     }
 
-    final int d(byte param0) {
-        this.field_v = this.field_v + 2;
-        int var2 = (this.field_t[-1 + this.field_v] & 255) + ((this.field_t[this.field_v - 2] & 255) << 8);
+    final int readShort(byte obfuscationGuard) {
+        this.position = this.position + 2;
+        int var2 = (this.payload[-1 + this.position] & 255) + ((this.payload[this.position - 2] & 255) << 8);
         if (32767 < var2) {
           var2 = var2 - 65536;
         }
-        if (param0 > -76) {
-          this.b(true);
+        if (obfuscationGuard > -76) {
+          this.readInt(true);
         }
         return var2;
     }
@@ -534,14 +534,14 @@ class ge extends IntrusiveNode {
         if (param0 >= -10) {
           return (String) null;
         }
-        var2 = this.field_v;
+        var2 = this.position;
         do {
-          fieldTemp$0 = this.field_v;
-          this.field_v = this.field_v + 1;
-        } while (this.field_t[fieldTemp$0] != 0);
-        var3 = -var2 + this.field_v - 1;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$0] != 0);
+        var3 = -var2 + this.position - 1;
         if (0 != var3) {
-          return tl.a(var3, -7510, this.field_t, var2);
+          return tl.a(var3, -7510, this.payload, var2);
         }
         return "";
     }
@@ -613,19 +613,19 @@ class ge extends IntrusiveNode {
         }
         if (0 <= param1 &&
           param1 < 32768) {
-          this.a((byte) -81, param1 + 32768);
+          this.writeShort((byte) -81, param1 + 32768);
           return;
         }
         throw new IllegalArgumentException();
     }
 
     final void c(int param0, byte param1) {
-        this.field_t[this.field_v + (-param0 - 2)] = (byte)(param0 >> 8);
+        this.payload[this.position + (-param0 - 2)] = (byte)(param0 >> 8);
         if (param1 != -92) {
           String var4 = (String) null;
           this.a((String) null, 44);
         }
-        this.field_t[-1 + (this.field_v - param0)] = (byte)param0;
+        this.payload[-1 + (this.position - param0)] = (byte)param0;
     }
 
     final String a(int param0) {
@@ -633,23 +633,23 @@ class ge extends IntrusiveNode {
         int var2;
         int var3;
         int var4;
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        var2 = this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (0 != var2) {
           throw new IllegalStateException("");
         }
         if (param0 != 10762) {
           return (String) null;
         }
-        var3 = this.field_v;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_v;
-          this.field_v = this.field_v + 1;
-        } while (this.field_t[fieldTemp$1] != 0);
-        var4 = -1 + (-var3 + this.field_v);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$1] != 0);
+        var4 = -1 + (-var3 + this.position);
         if (0 != var4) {
-          return tl.a(var4, param0 - 18272, this.field_t, var3);
+          return tl.a(var4, param0 - 18272, this.payload, var3);
         }
         return "";
     }
@@ -664,70 +664,70 @@ class ge extends IntrusiveNode {
           if (0 <= var3_int) {
             throw new IllegalArgumentException("");
           }
-          fieldTemp$0 = this.field_v;
-          this.field_v = this.field_v + 1;
-          this.field_t[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.field_v = this.field_v + o.a(this.field_t, var4, -24984, param1.length(), 0, this.field_v);
+          this.position = this.position + o.a(this.payload, var4, -24984, param1.length(), 0, this.position);
           if (param0) {
-            this.field_t = (byte[]) null;
+            this.payload = (byte[]) null;
           }
-          fieldTemp$1 = this.field_v;
-          this.field_v = this.field_v + 1;
-          this.field_t[fieldTemp$1] = (byte) 0;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ge.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(long param0, int param1) {
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 32);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
         if (param1 != 24136) {
           this.i(-128);
         }
-        int fieldTemp$1 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 24);
-        int fieldTemp$2 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 16);
-        int fieldTemp$3 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 8);
-        int fieldTemp$4 = this.field_v;
-        this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)param0;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 24);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param0;
     }
 
-    final int d(int param0) {
-        this.field_v = this.field_v + 2;
-        if (param0 != -1034) {
+    final int readUnsignedShort(int obfuscationGuard) {
+        this.position = this.position + 2;
+        if (obfuscationGuard != -1034) {
           field_s = (vh) null;
         }
-        return (this.field_t[-2 + this.field_v] << 8 & 65280) + (this.field_t[this.field_v - 1] & 255);
+        return (this.payload[-2 + this.position] << 8 & 65280) + (this.payload[this.position - 1] & 255);
     }
 
     final int c(int param0) {
         int var2 = -95 / ((9 - param0) / 59);
-        if (0 > this.field_t[this.field_v]) {
-          return this.b(true) & 2147483647;
+        if (0 > this.payload[this.position]) {
+          return this.readInt(true) & 2147483647;
         }
-        return this.d(-1034);
+        return this.readUnsignedShort(-1034);
     }
 
-    ge(int param0) {
-        this.field_t = ja.a(param0, -1);
-        this.field_v = 0;
+    PacketBuffer(int capacity) {
+        this.payload = ja.a(capacity, -1);
+        this.position = 0;
     }
 
-    ge(byte[] param0) {
+    PacketBuffer(byte[] payload) {
         try {
-          this.field_v = 0;
-          this.field_t = param0;
+          this.position = 0;
+          this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (payload != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -739,7 +739,7 @@ class ge extends IntrusiveNode {
         }
         if (param1 < 16384 &&
           param1 >= -16384) {
-          this.a((byte) -81, 49152 + param1);
+          this.writeShort((byte) -81, 49152 + param1);
           return;
         }
         if (param0 > -84) {
@@ -767,7 +767,7 @@ class ge extends IntrusiveNode {
         try {
           if (param0 != -24) {
             var5 = (int[]) null;
-            ge.a((float[]) null, (int[]) null, (int[]) null, (float[]) null, (int[]) null, (int[]) null, (int[]) null, (byte) 9, (int[]) null);
+            PacketBuffer.a((float[]) null, (int[]) null, (int[]) null, (float[]) null, (int[]) null, (int[]) null, (int[]) null, (byte) 9, (int[]) null);
           }
           var2 = null;
           if (null != param1.field_j) {
@@ -842,10 +842,10 @@ class ge extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.field_v = this.field_v + o.a(this.field_t, var4, param0 - 15038, param1.length(), 0, this.field_v);
-          fieldTemp$0 = this.field_v;
-          this.field_v = this.field_v + 1;
-          this.field_t[fieldTemp$0] = (byte) 0;
+          this.position = this.position + o.a(this.payload, var4, param0 - 15038, param1.length(), 0, this.position);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ge.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -863,12 +863,12 @@ class ge extends IntrusiveNode {
         int incrementValue$0 = 0;
         try {
           int var6 = -28 / ((param3 + 39) / 41);
-          var5_int = this.field_v;
-          this.field_v = param1;
+          var5_int = this.position;
+          this.position = param1;
           var7 = (param0 - param1) / 8;
           for (var8 = 0; var7 > var8; var8++) {
-            var9 = this.b(true);
-            var10 = this.b(true);
+            var9 = this.readInt(true);
+            var10 = this.readInt(true);
             var11 = -957401312;
             var12 = -1640531527;
             var13 = 32;
@@ -882,30 +882,30 @@ class ge extends IntrusiveNode {
               var11 = var11 - var12;
               var9 = var9 - (var11 + param2[var11 & 3] ^ (var10 << 4 ^ var10 >>> 5) + var10);
             }
-            this.field_v = this.field_v - 8;
+            this.position = this.position - 8;
             this.a(true, var9);
             this.a(true, var10);
           }
-          this.field_v = var5_int;
+          this.position = var5_int;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ge.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final void b(int param0, boolean param1) {
-        this.field_t[-1 - param0 + this.field_v] = (byte)param0;
+        this.payload[-1 - param0 + this.position] = (byte)param0;
         if (!param1) {
           field_o = (String) null;
         }
     }
 
-    final byte e(byte param0) {
-        if (param0 != 105) {
+    final byte readByte(byte obfuscationGuard) {
+        if (obfuscationGuard != 105) {
           return (byte) -27;
         }
-        int fieldTemp$0 = this.field_v;
-        this.field_v = this.field_v + 1;
-        return this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     static {

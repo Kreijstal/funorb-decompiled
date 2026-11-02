@@ -88,7 +88,7 @@ final class ap extends rg {
         }
     }
 
-    final void a(int param0, ge param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -102,7 +102,7 @@ final class ap extends rg {
             field_D = (kf[]) null;
           }
           while (true) {
-            var3_int = param1.g(param0 ^ 20652);
+            var3_int = param1.readUnsignedByte(param0 ^ 20652);
             if (var3_int == 0) {
               return;
             }
@@ -284,8 +284,8 @@ final class ap extends rg {
           GameApplet.field_a.field_tb = 2;
           tm.field_d = new vh(0L, pa.field_M);
           tm.field_d.a((byte) -87, ei.field_A);
-          ge.field_s = new vh(0L, GameApplet.field_a);
-          ge.field_s.a((byte) -87, ei.field_A);
+          PacketBuffer.field_s = new vh(0L, GameApplet.field_a);
+          PacketBuffer.field_s.a((byte) -87, ei.field_A);
           var16 = aj.a(0, "lobby", param4, "button_mouseover");
           IntrusiveDeque.field_c = new vq(wa.field_qb, var12, uo.field_Lb, ei.field_A, 3, 2, ja.field_b, 3, ad.field_x);
           ug.field_x = new vh(0L, ei.field_A);
@@ -426,7 +426,7 @@ final class ap extends rg {
         }
     }
 
-    private final void a(int param0, ge param1, byte param2) {
+    private final void a(int param0, PacketBuffer param1, byte param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -446,24 +446,24 @@ final class ap extends rg {
           }
           if (param0 != 1) {
             if (param0 == 2) {
-              var4_int = param1.g(-105);
+              var4_int = param1.readUnsignedByte(-105);
               this.field_C = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_C[var5] = param1.d(-1034);
+                this.field_C[var5] = param1.readUnsignedShort(-1034);
               }
             } else if (param0 == 3) {
-              var4_int = param1.g(-107);
+              var4_int = param1.readUnsignedByte(-107);
               this.field_x = new int[var4_int][];
               this.field_z = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                var6 = param1.d(-1034);
+                var6 = param1.readUnsignedShort(-1034);
                 var7 = tm.a(var6, -124);
                 if (var7 != null) {
                   this.field_z[var5] = var6;
                   array$0 = new int[var7.field_b];
                   this.field_x[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_b; var8++) {
-                    this.field_x[var5][var8] = param1.d(-1034);
+                    this.field_x[var5][var8] = param1.readUnsignedShort(-1034);
                   }
                 }
               }

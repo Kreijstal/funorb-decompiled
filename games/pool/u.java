@@ -202,7 +202,7 @@ final class u {
           }
           var27 = hr.field_n;
           nk.field_a = 0;
-          uf.field_W = 0;
+          PoolMatchController.field_W = 0;
           de.field_a = 0;
           var28 = gr.field_B;
           eq.field_R = 0;
@@ -514,7 +514,7 @@ final class u {
                     var58++;
                   }
                   var29 = var29 + (var55 - nk.field_a);
-                  var33Lifetime2 = uf.field_W;
+                  var33Lifetime2 = PoolMatchController.field_W;
                   nk.field_a = var55;
                   if (hi.field_k.length < (-2 + (var30 + param12 + var57))) {
                     var54Lifetime2 = new int[98 + param12 - (-var30 - var57)];
@@ -570,7 +570,7 @@ final class u {
                     var30++;
                   }
                   var31 = var31 + (var56 - de.field_a);
-                  uf.field_W = var33Lifetime2;
+                  PoolMatchController.field_W = var33Lifetime2;
                   de.field_a = var56;
                   var33Lifetime2 = eq.field_R;
                   if (wn.field_d.length < (-2 + var58 + param12 + var32)) {
@@ -672,8 +672,8 @@ final class u {
                   var28[var33Lifetime2] = var38;
                 }
               } else {
-                fieldTemp$20 = uf.field_W;
-                uf.field_W = uf.field_W + 1;
+                fieldTemp$20 = PoolMatchController.field_W;
+                PoolMatchController.field_W = PoolMatchController.field_W + 1;
                 var33Lifetime2 = fieldTemp$20;
                 var34 = var24[var39];
                 if (var34 < 0) {

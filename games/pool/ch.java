@@ -267,12 +267,12 @@ class ch extends ei implements lj {
           var6 = ej.field_j;
           var7 = var6;
           var7.b(false, param2);
-          var7.field_v = var7.field_v + 1;
-          var4 = var7.field_v;
+          var7.position = var7.position + 1;
+          var4 = var7.position;
           var7.a(1, false);
-          var7.a((byte) -81, param1.field_B);
-          var7.a((byte) -81, param1.field_l);
-          var7.a((byte) -81, param1.field_p);
+          var7.writeShort((byte) -81, param1.field_B);
+          var7.writeShort((byte) -81, param1.field_l);
+          var7.writeShort((byte) -81, param1.field_p);
           var7.a(true, param1.field_n);
           stackIn_2_0 = var7;
           stackIn_3_1 = !(param0);
@@ -286,7 +286,7 @@ class ch extends ei implements lj {
             var6.a(true, param1.field_z[var5]);
           }
           var7.d(-1, var4);
-          var7.b(-var4 + var7.field_v, true);
+          var7.b(-var4 + var7.position, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

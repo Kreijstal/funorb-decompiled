@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class uf {
+final class PoolMatchController {
     private int field_B;
     private int field_h;
     private kj field_w;
@@ -719,7 +719,7 @@ final class uf {
           var11.e();
           var4.a(var9 - var4.field_z, 0);
           if (param1 != -22764) {
-            uf.a(26, false, (di) null, (di) null, (di) null);
+            PoolMatchController.a(26, false, (di) null, (di) null, (di) null);
           }
           var12 = new dd(var4.field_z - var9 * 2, var9);
           var12.e();
@@ -761,10 +761,10 @@ final class uf {
         int[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          if (fe.a(oa.field_g, -13671, param1)) {
+          if (fe.a(ClientException.field_g, -13671, param1)) {
             return;
           }
-          var4 = oa.field_g;
+          var4 = ClientException.field_g;
           var5 = param1;
           var4[var5 >> 5] = md.a(var4[var5 >> 5], 1 << rb.b(var5, 31));
           var4Lifetime1 = hp.field_c;
@@ -1467,9 +1467,9 @@ final class uf {
         }
     }
 
-    final void b(ge param0, boolean param1) {
+    final void b(PacketBuffer param0, boolean param1) {
         RuntimeException runtimeException = null;
-        ge var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -1479,7 +1479,7 @@ final class uf {
             return;
           }
           var3 = param0;
-          this.field_o = var3.d(-1034);
+          this.field_o = var3.readUnsignedShort(-1034);
           this.field_I.a(2, param0);
           this.s((byte) -43);
           return;
@@ -1529,7 +1529,7 @@ final class uf {
         }
     }
 
-    final void a(ge param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           RuntimeException stackIn_45_0 = null;
           StringBuilder stackIn_45_1 = null;
@@ -1632,22 +1632,22 @@ final class uf {
     }
 
     private final void c(qe param0, int param1) {
-        ge stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         boolean stackIn_13_1 = false;
         int stackIn_14_2 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ge var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         al var4 = null;
-        ge var5 = null;
+        PacketBuffer var5 = null;
         int var6 = 0;
         int var6Lifetime1;
         try {
           this.b(param0, (byte) 93);
-          var3 = new ge(this.field_I.a(-1) + 8);
+          var3 = new PacketBuffer(this.field_I.a(-1) + 8);
           var3.a(true, f.field_g);
           var4 = this.field_I;
           var5 = var3;
@@ -1668,8 +1668,8 @@ final class uf {
           } else {
             stackIn_14_2 = 0;
           }
-          ((ge) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2);
-          param0.field_x = ii.a(var3.field_t, var3.field_v, 0, 154302664);
+          ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2);
+          param0.field_x = ii.a(var3.payload, var3.position, 0, 154302664);
           if ((this.field_L & hq.field_c) == 0 &&
             this.field_I.field_q != -1) {
             this.field_o = wn.field_f[this.field_I.field_q];
@@ -1679,7 +1679,7 @@ final class uf {
             this.a(param0, 1);
           } else {
             ej.field_j.b(false, 69);
-            ej.field_j.a(param0.field_x, (byte) -127);
+            ej.field_j.writeLong(param0.field_x, (byte) -127);
           }
           id.field_c.field_g = true;
           return;
@@ -1816,7 +1816,7 @@ final class uf {
         }
     }
 
-    final void d(int param0, ge param1) {
+    final void d(int param0, PacketBuffer param1) {
         qe var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -2292,11 +2292,11 @@ final class uf {
         RuntimeException var5 = null;
         try {
           if (param0 != -11934) {
-            uf.a(-105, true, (di) null, (di) null, (di) null);
+            PoolMatchController.a(-105, true, (di) null, (di) null, (di) null);
           }
           ig.field_j = oh.a(-71, "");
           ig.field_j.a(false, (byte) 120);
-          uf.a(param3, -22764, param2, param4);
+          PoolMatchController.a(param3, -22764, param2, param4);
           nd.b((byte) -124);
           pa.field_I = aa.field_c;
           wd.field_Lb = aa.field_c;
@@ -2504,12 +2504,12 @@ final class uf {
               ej.field_j.b(false, 65);
               var3Lifetime1 = var2;
               var4_ref = ej.field_j;
-              ((ge) ((Object) var4_ref)).a(var3Lifetime1.field_v, false);
-              ((ge) ((Object) var4_ref)).a((byte) -81, (int) var3Lifetime1.field_C);
-              ((ge) ((Object) var4_ref)).a((byte) -81, (int) var3Lifetime1.field_A);
-              ((ge) ((Object) var4_ref)).a((byte) -81, (int) var3Lifetime1.field_V);
-              ((ge) ((Object) var4_ref)).a((int) var3Lifetime1.field_D, false);
-              ((ge) ((Object) var4_ref)).a((int) var3Lifetime1.field_H, false);
+              ((PacketBuffer) ((Object) var4_ref)).a(var3Lifetime1.field_v, false);
+              ((PacketBuffer) ((Object) var4_ref)).writeShort((byte) -81, (int) var3Lifetime1.field_C);
+              ((PacketBuffer) ((Object) var4_ref)).writeShort((byte) -81, (int) var3Lifetime1.field_A);
+              ((PacketBuffer) ((Object) var4_ref)).writeShort((byte) -81, (int) var3Lifetime1.field_V);
+              ((PacketBuffer) ((Object) var4_ref)).a((int) var3Lifetime1.field_D, false);
+              ((PacketBuffer) ((Object) var4_ref)).a((int) var3Lifetime1.field_H, false);
             }
             this.field_I.field_i = null;
             this.B((byte) 17);
@@ -2587,7 +2587,7 @@ final class uf {
         }
     }
 
-    final void c(int param0, ge param1) {
+    final void c(int param0, PacketBuffer param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -3320,11 +3320,11 @@ final class uf {
         }
     }
 
-    final void a(int param0, ge param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           RuntimeException runtimeException = null;
           qe var3 = null;
-          ge var4 = null;
+          PacketBuffer var4 = null;
           RuntimeException stackIn_18_0 = null;
           StringBuilder stackIn_18_1 = null;
           String stackIn_19_2 = null;
@@ -3342,7 +3342,7 @@ final class uf {
               }
             }
             var4 = param1;
-            this.field_o = var4.d(-1034);
+            this.field_o = var4.readUnsignedShort(-1034);
             if (param0 <= 55) {
               this.field_bb = false;
             }
@@ -3445,19 +3445,19 @@ final class uf {
             !this.field_q) {
             if (59 == qi.field_a) {
               if (uh.field_r == null) {
-                uh.field_r = new ge(30);
+                uh.field_r = new PacketBuffer(30);
                 decompiledFrameRemainder0 = (var7 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (uh.field_r.field_v == 30 &&
-                  cp.a(uh.field_r.field_t, (byte) -83, 30) == 1099305073022L) {
+                if (uh.field_r.position == 30 &&
+                  cp.a(uh.field_r.payload, (byte) -83, 30) == 1099305073022L) {
                   this.field_q = true;
                   em.$cfr$intArgs$a$c9c3307e6488(121, false, 1, ec.a((byte) -119, 64525515431L));
                 }
                 uh.field_r = null;
                 if (var7 != 0) {
                   if (null != uh.field_r &&
-                    uh.field_r.field_v < 30) {
+                    uh.field_r.position < 30) {
                     uh.field_r.a(qi.field_a, false);
                     uh.field_r = null;
                   } else {
@@ -3467,7 +3467,7 @@ final class uf {
               }
             } else {
               if (null != uh.field_r &&
-                uh.field_r.field_v < 30) {
+                uh.field_r.position < 30) {
                 uh.field_r.a(qi.field_a, false);
                 if (var7 != 0) {
                   uh.field_r = null;
@@ -3605,7 +3605,7 @@ final class uf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            uf.c(true);
+            PoolMatchController.c(true);
           }
           stackIn_10_0 = (em.field_K) || (hk.b(-126));
           return stackIn_10_0;
@@ -3811,12 +3811,12 @@ final class uf {
                     var8_int = this.field_I.field_f.b((byte) -121, this.field_I.field_f.c(-59, this.field_I.field_A));
                     if (se.a(false, var8_int) <= 1) {
                       if (this.field_I.field_A != this.field_db) {
-                        var7_ref_StringLifetime2 = nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, ge.field_r);
+                        var7_ref_StringLifetime2 = nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, PacketBuffer.field_r);
                       } else {
                         var7_ref_StringLifetime2 = il.field_h;
                       }
                     } else {
-                      var7_ref_StringLifetime2 = this.a(jq.field_h, ge.field_r, gk.field_jb, nf.field_db, (byte) 61, var8_int, sk.field_e, il.field_h);
+                      var7_ref_StringLifetime2 = this.a(jq.field_h, PacketBuffer.field_r, gk.field_jb, nf.field_db, (byte) 61, var8_int, sk.field_e, il.field_h);
                     }
                   } else {
                     if ((f.field_f & this.field_L) != 0) {
@@ -3827,7 +3827,7 @@ final class uf {
                       }
                     } else {
                       if ((sk.field_d & this.field_L) == 0) {
-                        var7_ref_StringLifetime2 = nr.a(new String[]{this.field_I.field_h[this.field_I.field_A]}, -1, ge.field_r);
+                        var7_ref_StringLifetime2 = nr.a(new String[]{this.field_I.field_h[this.field_I.field_A]}, -1, PacketBuffer.field_r);
                       } else {
                         if ((var3.field_s & ag.field_e) == 0) {
                           var7_ref_StringLifetime2 = nd.field_g;
@@ -4673,7 +4673,7 @@ final class uf {
                 break;
               }
               var5_ref_String = md.field_a[var4Lifetime3];
-              if (fe.a(oa.field_g, -13671, var4Lifetime3)) {
+              if (fe.a(ClientException.field_g, -13671, var4Lifetime3)) {
                 var5_ref_String = var5_ref_String + " [all]";
               }
               if (fe.a(hp.field_c, -13671, var4Lifetime3)) {
@@ -4950,7 +4950,7 @@ final class uf {
             }
           }
           if (param0 != -47) {
-            this.c(-48, (ge) null);
+            this.c(-48, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5144,7 +5144,7 @@ final class uf {
               var3 = new StringBuilder(nr.a(new String[]{var3.toString()}, param1 + 22803, this.H(2)));
               var4 = 1;
             }
-            discarded$10 = var3.append(ge.field_n);
+            discarded$10 = var3.append(PacketBuffer.field_n);
           } else {
             if ((this.field_I.field_x & 1 << param0) != 0) {
               if (var4 == 0) {
@@ -7745,7 +7745,7 @@ final class uf {
             return stackIn_38_0;
           }
           if (param0 != 1163) {
-            uf.a((di) null, -44, (di) null, (di) null);
+            PoolMatchController.a((di) null, -44, (di) null, (di) null);
           }
           if (ub.field_q.field_pb &&
             ub.field_q.field_W) {
@@ -7904,34 +7904,34 @@ final class uf {
                     if (pq.field_B != null &&
                       pq.field_B.length > 0) {
                       if (var4 != 0 &&
-                        t.a(0, oa.field_g, 21)) {
+                        t.a(0, ClientException.field_g, 21)) {
                         this.a((byte) 104, 21, 234);
                       }
                       if (var5 != 0 &&
-                        t.a(param1 - 1, oa.field_g, 22)) {
+                        t.a(param1 - 1, ClientException.field_g, 22)) {
                         this.a((byte) 104, 22, 233);
                       }
                       if (var3_int == 0) {
                         break;
                       }
-                      if (!t.a(0, oa.field_g, 20)) {
+                      if (!t.a(0, ClientException.field_g, 20)) {
                         break;
                       }
                       this.a((byte) 104, 20, 235);
                       break;
                     }
                     if (var4 != 0 &&
-                      t.a(0, oa.field_g, 24)) {
+                      t.a(0, ClientException.field_g, 24)) {
                       this.a((byte) 104, 24, 231);
                     }
                     if (var5 != 0 &&
-                      t.a(0, oa.field_g, 25)) {
+                      t.a(0, ClientException.field_g, 25)) {
                       this.a((byte) 104, 25, 230);
                     }
                     if (var3_int == 0) {
                       break;
                     }
-                    if (!t.a(param1 ^ 1, oa.field_g, 23)) {
+                    if (!t.a(param1 ^ 1, ClientException.field_g, 23)) {
                       break;
                     }
                     this.a((byte) 104, 23, 232);
@@ -8030,7 +8030,7 @@ final class uf {
             }
           }
           if ((param0.field_s & i.field_m) != 0 &&
-            (param0.field_s & oa.field_b) == 0) {
+            (param0.field_s & ClientException.field_b) == 0) {
             this.b(124, param0);
           }
           if ((sk.field_d & this.field_L) == 0) {
@@ -8183,7 +8183,7 @@ final class uf {
         }
     }
 
-    final void a(ge param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         boolean discarded$1 = false;
         RuntimeException runtimeException = null;
         qe var3 = null;
@@ -8194,11 +8194,11 @@ final class uf {
         try {
           var3 = this.field_I.j(23);
           if (0 != var3.field_q) {
-            param0.field_v = param0.field_v + 8;
+            param0.position = param0.position + 8;
             return;
           }
           if (this.field_db == var3.field_L) {
-            param0.field_v = param0.field_v + 8;
+            param0.position = param0.position + 8;
             return;
           }
           this.field_b.a(65280, param0);
@@ -8909,11 +8909,11 @@ final class uf {
         }
     }
 
-    final void b(int param0, ge param1) {
+    final void b(int param0, PacketBuffer param1) {
         RuntimeException runtimeException = null;
         qe var3 = null;
         qe var4 = null;
-        ge var5 = null;
+        PacketBuffer var5 = null;
         int var6 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -8924,8 +8924,8 @@ final class uf {
           var6 = 62 % ((-58 - param0) / 63);
           var4 = var3;
           var5 = param1;
-          var4.field_P = var5.b(true);
-          var4.field_Q = var5.b(true);
+          var4.field_P = var5.readInt(true);
+          var4.field_Q = var5.readInt(true);
           if (0L != (pd.field_i & 2097152L)) {
             System.out.println("<-S2C_BALL_MANHANDLED: " + vi.a((byte) 111, 16, 4, (long)var3.field_P) + "," + vi.a((byte) 55, 16, 4, (long)var3.field_Q));
           }
@@ -9017,7 +9017,7 @@ final class uf {
         }
     }
 
-    uf(int param0, int param1, int param2, int param3, int param4, boolean param5, String[] param6, int param7, boolean param8) {
+    PoolMatchController(int param0, int param1, int param2, int param3, int param4, boolean param5, String[] param6, int param7, boolean param8) {
         pq[] array$0 = null;
         pq[] array$1 = null;
         boolean stackIn_4_1 = false;
@@ -9239,7 +9239,7 @@ final class uf {
         }
     }
 
-    uf(hq param0, String[] param1) {
+    PoolMatchController(hq param0, String[] param1) {
         RuntimeException runtimeException = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_9_0 = null;

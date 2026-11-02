@@ -91,7 +91,7 @@ final class dl {
         }
     }
 
-    final void a(byte param0, ge param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -105,11 +105,11 @@ final class dl {
           if (param0 != 113) {
             this.field_f = -35;
           }
-          var3_int = param1.g(-101);
+          var3_int = param1.readUnsignedByte(-101);
           if (var3_int > 0) {
             this.field_c = cj.a(var3_int, 1, 0);
             for (var4 = 0; var4 < var3_int; var4++) {
-              this.field_c.a(10499, param1.g(param0 - 222), var4);
+              this.field_c.a(10499, param1.readUnsignedByte(param0 - 222), var4);
             }
             return;
           }
@@ -137,7 +137,7 @@ final class dl {
         this.field_c.a((byte) -2, param0);
     }
 
-    final void a(ge param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

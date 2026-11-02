@@ -138,7 +138,7 @@ final class hr {
         if (var3 != null) {
           vl.field_m.a((byte) 124, false);
           var4 = vl.field_m;
-          var5_ref_String = ge.field_m;
+          var5_ref_String = PacketBuffer.field_m;
           var4.field_n.a(var5_ref_String, 17130, 5);
           var4Lifetime1 = vl.field_m;
           var5 = lq.field_W;

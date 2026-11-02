@@ -225,7 +225,7 @@ abstract class re {
 
     abstract tf b(byte param0);
 
-    abstract void a(byte param0, ge param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     final static void a(boolean param0, String param1, int param2) {
         int var3_int = 0;

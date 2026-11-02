@@ -57,11 +57,11 @@ final class jd {
           }
           var5 = ej.field_j;
           var5.b(false, param0);
-          var5.field_v = var5.field_v + 1;
-          var4 = var5.field_v;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(param2, false);
           var5.a(param2 - 9948, param1);
-          var5.b(var5.field_v - var4, true);
+          var5.b(var5.position - var4, true);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

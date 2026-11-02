@@ -151,7 +151,7 @@ final class im extends vh {
         field_Ob = null;
         if (param0 != -48) {
           String var2 = (String) null;
-          im.a((ge) null, (byte) 100, (String) null);
+          im.a((PacketBuffer) null, (byte) 100, (String) null);
         }
     }
 
@@ -167,7 +167,7 @@ final class im extends vh {
         return !this.d(59) ? true : false;
     }
 
-    final static int a(ge param0, byte param1, String param2) {
+    final static int a(PacketBuffer param0, byte param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -185,12 +185,12 @@ final class im extends vh {
             stackIn_2_0 = -12;
             return stackIn_2_0;
           }
-          var3_int = param0.field_v;
+          var3_int = param0.position;
           var5 = (CharSequence) ((Object) param2);
           var4 = hi.a(-66, var5);
           param0.b((byte) -49, var4.length);
-          param0.field_v = param0.field_v + Pool.field_J.a(0, var4.length, param0.field_t, param0.field_v, var4, true);
-          stackIn_4_0 = -var3_int + param0.field_v;
+          param0.position = param0.position + Pool.field_J.a(0, var4.length, param0.payload, param0.position, var4, true);
+          stackIn_4_0 = -var3_int + param0.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

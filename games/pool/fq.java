@@ -47,7 +47,7 @@ final class fq extends qq implements tb {
               var4 = param0.field_b;
               if (param0.field_g == 248) {
                 if (!param2) {
-                  uf.r((byte) -80);
+                  PoolMatchController.r((byte) -80);
                 }
                 var4 = hb.field_b;
                 this.field_Eb = true;

@@ -77,8 +77,8 @@ final class fr extends IntrusiveNode {
           var6 = ej.field_j;
           oq var3 = var6;
           var6.b(false, param2);
-          var6.field_v = var6.field_v + 1;
-          var4 = var6.field_v;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.a(1, false);
           if (null != param1.field_p) {
             var6.a(param1.field_p.length, false);
@@ -88,9 +88,9 @@ final class fr extends IntrusiveNode {
           }
           int var5 = 48 / ((param0 - 52) / 40);
           var6.d(-1, var4);
-          var6.field_v = var6.field_v - 4;
-          param1.field_o = var6.b(true);
-          var6.b(-var4 + var6.field_v, true);
+          var6.position = var6.position - 4;
+          param1.field_o = var6.readInt(true);
+          var6.b(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

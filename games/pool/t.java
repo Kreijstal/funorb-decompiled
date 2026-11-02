@@ -61,7 +61,7 @@ final class t {
           var1Lifetime3 = var14 + ":";
           for (var2 = 0; of.field_Pb > var2; var2++) {
             var15 = var1Lifetime3 + ' ';
-            var3 = kn.field_e.field_t[var2] & 255;
+            var3 = kn.field_e.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {
@@ -88,7 +88,7 @@ final class t {
         var1Lifetime2 = var8 + ":";
         for (var2Lifetime1 = 0; of.field_Pb > var2Lifetime1; var2Lifetime1++) {
           var12 = var1Lifetime2 + ' ';
-          var3Lifetime1 = kn.field_e.field_t[var2Lifetime1] & 255;
+          var3Lifetime1 = kn.field_e.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (var4Lifetime1 >= 10) {
