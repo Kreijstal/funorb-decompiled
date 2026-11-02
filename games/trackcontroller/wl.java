@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends fc {
-    static kk field_l;
+final class wl extends IntrusiveNode {
+    static Archive field_l;
     byte[] field_k;
     static int field_j;
     static wj field_i;
@@ -14,29 +14,29 @@ final class wl extends fc {
             return;
           }
           if (param0 % 10L != 0L) {
-            pf.a(3, param0);
+            Model.a(3, param0);
             return;
           }
-          pf.a(3, -1L + param0);
-          pf.a(3, 1L);
+          Model.a(3, -1L + param0);
+          Model.a(3, 1L);
           return;
         }
         if (0L >= param0) {
           return;
         }
         if (param0 % 10L != 0L) {
-          pf.a(3, param0);
+          Model.a(3, param0);
           return;
         }
-        pf.a(3, -1L + param0);
-        pf.a(3, 1L);
+        Model.a(3, -1L + param0);
+        Model.a(3, 1L);
     }
 
     wl(byte[] param0) {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class p {
-    static oh field_a;
+    static BitmapFont field_a;
 
     final static void a(byte param0) {
         if (param0 != 25) {
-          field_a = (oh) null;
+          field_a = (BitmapFont) null;
           if (null == gl.field_E) {
             if (null == ib.field_e) {
               rf.a(true);

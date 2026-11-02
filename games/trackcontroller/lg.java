@@ -16,7 +16,7 @@ final class lg {
         RuntimeException decompiledCaughtException = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (kj) (si.field_a.b(2));
+          var4 = (kj) (si.field_a.first(2));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -38,20 +38,20 @@ final class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "lg.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "lg.B(" + param0 + ')');
         }
     }
 
-    final static h a(int param0) {
+    final static MouseWheelInput a(int param0) {
         try {
           Throwable var1 = null;
-          h stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 < 54) {
             lg.c(106);
           }
           try {
-            stackIn_3_0 = (h) (Class.forName("bi").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

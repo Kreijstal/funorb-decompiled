@@ -7,7 +7,7 @@ final class ba {
     static long field_f;
     static String field_d;
     static String[] field_c;
-    static oh field_b;
+    static BitmapFont field_b;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -34,7 +34,7 @@ final class ba {
             var9 = (String) null;
             ba.a((String) null, true);
           }
-          stackIn_3_0 = me.a(param2, param1, param5, var7, param0, param6 + 92, var8);
+          stackIn_3_0 = MovingBlock.a(param2, param1, param5, var7, param0, param6 + 92, var8);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class ba {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class ba {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

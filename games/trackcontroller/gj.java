@@ -3,7 +3,7 @@
  */
 final class gj {
     static int field_c;
-    static ea[] field_f;
+    static LevelData[] levels;
     static String[] field_b;
     static String field_a;
     static String field_d;
@@ -13,19 +13,19 @@ final class gj {
         if (param0 >= -108) {
           return -112;
         }
-        return da.field_o;
+        return SocketArchiveRequestConnection.field_o;
     }
 
     final static void a(int param0, nk param1, int param2) {
         la var3 = null;
         try {
-          var3 = ra.field_C;
+          var3 = LevelView.field_C;
           var3.c(param2, 7);
-          var3.a(param0, (byte) -93);
-          var3.a(0, (byte) -69);
-          var3.a(param1.field_i, (byte) -120);
+          var3.writeByte(param0, (byte) -93);
+          var3.writeByte(0, (byte) -69);
+          var3.writeByte(param1.field_i, (byte) -120);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -75,13 +75,13 @@ final class gj {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     public static void b(byte param0) {
         int var1 = 67 / ((param0 - 10) / 44);
-        field_f = null;
+        levels = null;
         field_a = null;
         field_e = null;
         field_d = null;

@@ -9,17 +9,17 @@ final class he {
     static int field_b;
     static long field_a;
     static ej field_c;
-    static ra[] field_f;
+    static LevelView[] field_f;
 
     final static void a(int param0, int param1, int param2, int param3) {
         j.field_a = param3;
         if (param1 != 0) {
           field_d = -71;
-          sl.field_n = param0;
+          LevelGrid.field_n = param0;
           db.field_db = param2;
           return;
         }
-        sl.field_n = param0;
+        LevelGrid.field_n = param0;
         db.field_db = param2;
     }
 
@@ -35,6 +35,6 @@ final class he {
     static {
         field_e = new Random();
         field_b = 0;
-        field_f = new ra[17];
+        field_f = new LevelView[17];
     }
 }

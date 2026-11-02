@@ -47,7 +47,7 @@ final class af extends di {
               this.field_m = param1;
               this.field_p = var3.field_e;
             } else {
-              stackIn_13_0 = tk.field_t;
+              stackIn_13_0 = AsyncRequest.field_t;
               return stackIn_13_0;
             }
           }
@@ -67,7 +67,7 @@ final class af extends di {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class af extends di {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -132,7 +132,7 @@ final class af extends di {
                 param2 = ba.field_d;
               }
               param1 = 2;
-              ra.field_y.a((byte) 114, qg.field_c);
+              LevelView.field_y.a((byte) 114, qg.field_c);
             }
             if (param1 == 10) {
               pl.a(0);
@@ -142,15 +142,15 @@ final class af extends di {
               if (u.field_i) {
                 param2 = dh.a((byte) -73, new String[]{param2}, od.field_b);
               }
-              if (pc.field_h) {
-                param2 = cb.field_a;
+              if (ArchiveIndex.field_h) {
+                param2 = MouseInputHandler.field_a;
               }
               kb.field_a.a(param1, param2, -10);
             }
             if (param1 != 256 &&
               10 != param1 &&
               !vg.field_o) {
-              ra.field_y.a((byte) 121);
+              LevelView.field_y.a((byte) 121);
             }
           }
           if (param0 >= -60) {
@@ -167,7 +167,7 @@ final class af extends di {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class af extends di {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          var3 = il.a(-67, var5);
+          var3 = BufferedCacheFile.a(-67, var5);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;
@@ -208,7 +208,7 @@ final class af extends di {
             stackIn_17_0 = qk.field_K;
             return stackIn_17_0;
           }
-          stackIn_15_0 = ga.field_f;
+          stackIn_15_0 = IterableNodeHashTable.field_f;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class af extends di {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class af extends di {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (sj.a((byte) -29, "getcookies", param1));
-              var4 = te.a(var3, ';', (byte) -46);
+              var4 = DelegatingCanvas.a(var3, ';', (byte) -46);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&
@@ -274,7 +274,7 @@ final class af extends di {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

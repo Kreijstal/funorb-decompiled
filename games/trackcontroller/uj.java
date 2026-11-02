@@ -11,8 +11,8 @@ final class uj {
     final static String a(int param0) {
         String var1 = "";
         if (param0 < -98) {
-          if (ra.field_y != null) {
-            var1 = ra.field_y.d(true);
+          if (LevelView.field_y != null) {
+            var1 = LevelView.field_y.d(true);
           }
           if (var1.length() == 0) {
             var1 = li.d(-579139480);
@@ -25,12 +25,12 @@ final class uj {
         return (String) null;
     }
 
-    final static qj[] a(String param0, kk param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, Archive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        qj[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -67,7 +67,7 @@ final class uj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class uj {
         field_b = null;
     }
 
-    final static void a(String param0, long param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, uf param9, boolean param10, int param11, int param12, boolean param13) {
+    final static void a(String param0, long param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, PlatformTaskDispatcher param9, boolean param10, int param11, int param12, boolean param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -94,7 +94,7 @@ final class uj {
           RuntimeException var15_ref = null;
           try {
             ne.field_a = new la(param7);
-            ra.field_C = new la(param4);
+            LevelView.field_C = new la(param4);
             ke.field_c = param6;
             dc.field_o = param0;
             ma.field_c = param2;
@@ -113,7 +113,7 @@ final class uj {
               return;
             }
             try {
-              pl.field_b = new il(gf.field_o.field_p, 64, 0);
+              pl.field_b = new BufferedCacheFile(gf.field_o.field_p, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class uj {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

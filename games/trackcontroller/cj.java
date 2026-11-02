@@ -8,13 +8,13 @@ final class cj extends rb {
     static le field_e;
     private int field_i;
     private boolean field_l;
-    private oh field_n;
-    static ja field_j;
+    private BitmapFont field_n;
+    static IntrusiveDeque field_j;
     private int field_h;
     private String field_k;
-    static lj field_o;
+    static GameKeyHandler field_o;
 
-    private final va a(oh param0, int param1, String param2, int param3) {
+    private final va a(BitmapFont param0, int param1, String param2, int param3) {
         va var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -49,11 +49,11 @@ final class cj extends rb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, String param1, int param2, oh param3, int param4) {
+    final void a(int param0, String param1, int param2, BitmapFont param3, int param4) {
         va var8 = null;
         va var9 = null;
         if (param1 == null) {
@@ -77,11 +77,11 @@ final class cj extends rb {
           }
           var8 = this.a(param3, 115, param1, param2);
           var9 = var8;
-          var9.field_b[0] = param4 - param3.a(param1);
+          var9.field_b[0] = param4 - param3.stringWidth(param1);
           var9.field_b[param1.length()] = param4;
-          id.$cfr$intArgs$a$1fdf1ca47e3f(-119, 0, param3, param1, var9);
+          NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-119, 0, param3, param1, var9);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "cj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class cj extends rb {
         field_e = null;
     }
 
-    final void a(oh param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7) {
+    final void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7) {
         va stackIn_37_0;
         va stackIn_37_1;
         int stackIn_37_2;
@@ -195,14 +195,14 @@ final class cj extends rb {
             var14 = new va(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
-              var14.field_b[var13.length()] = param0.a(var13);
+              var14.field_b[var13.length()] = param0.stringWidth(var13);
               stackIn_42_0 = -123;
               if (param2 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param0.a(var13), var13, 5, param5);
+                stackIn_43_1 = this.a(param0.stringWidth(var13), var13, 5, param5);
               }
-              id.$cfr$intArgs$a$1fdf1ca47e3f(stackIn_42_0, stackIn_43_1, param0, var13, var14);
+              NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(stackIn_42_0, stackIn_43_1, param0, var13, var14);
             }
             var11 = var11 + param4;
             this.field_b[var12Lifetime1] = var14;
@@ -224,7 +224,7 @@ final class cj extends rb {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -237,47 +237,47 @@ final class cj extends rb {
     }
 
     final static void a(int param0, boolean param1) {
-        la var2 = ra.field_C;
+        la var2 = LevelView.field_C;
         var2.c(param0, 7);
-        var2.a(1, (byte) -104);
-        var2.a(0, (byte) -88);
+        var2.writeByte(1, (byte) -104);
+        var2.writeByte(0, (byte) -88);
         if (param1) {
           field_e = (le) null;
         }
     }
 
     final static void d(int param0) {
-        qj var1 = null;
-        qj var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = TrackController.field_F ? 1 : 0;
         try {
-          var1 = new qj(540, 140);
+          var1 = new Sprite(540, 140);
           mb.a((byte) 124, var1);
           ig.a();
-          ll.a();
+          SoftwareRasterizer.a();
           fb.field_a = 0;
-          be.a((byte) -108);
+          PacketBuffer.a((byte) -108);
           var2 = var1.b();
           if (param0 <= 81) {
             field_e = (le) null;
           }
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            ll.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           ha.field_E.a();
           var1.d(0, 0);
-          ch.m(124);
+          GameShell.m(124);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "cj.R(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.R(" + param0 + ')');
         }
     }
 
     public cj() {
     }
 
-    final void a(int param0, int param1, oh param2, int param3, String param4) {
+    final void a(int param0, int param1, BitmapFont param2, int param3, String param4) {
         va var7 = null;
         va var8 = null;
         if (param0 != 1888) {
@@ -302,14 +302,14 @@ final class cj extends rb {
           var7 = this.a(param2, -103, param4, param1);
           var8 = var7;
           var7.field_b[0] = param3;
-          var8.field_b[param4.length()] = param2.a(param4) + param3;
-          id.$cfr$intArgs$a$1fdf1ca47e3f(-121, 0, param2, param4, var8);
+          var8.field_b[param4.length()] = param2.stringWidth(param4) + param3;
+          NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-121, 0, param2, param4, var8);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "cj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, oh param1, String param2, int param3, int param4) {
+    final void a(int param0, BitmapFont param1, String param2, int param3, int param4) {
         va var8 = null;
         int var7 = 0;
         if (param2 == null) {
@@ -328,18 +328,18 @@ final class cj extends rb {
           this.field_m = 1;
           this.field_l = true;
           var8 = this.a(param1, 117, param2, param3);
-          var7 = param1.a(param2);
+          var7 = param1.stringWidth(param2);
           var8.field_b[0] = param4 - (var7 >> 1);
           var8.field_b[param2.length()] = (var7 >> 1) + param4;
-          id.$cfr$intArgs$a$1fdf1ca47e3f(-125, 0, param1, param2, var8);
+          NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-125, 0, param1, param2, var8);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "cj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
         field_e = new le();
-        field_j = new ja();
-        field_o = new lj();
+        field_j = new IntrusiveDeque();
+        field_o = new GameKeyHandler();
     }
 }

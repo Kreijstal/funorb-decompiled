@@ -6,7 +6,7 @@ final class ma implements t {
     static int field_c;
     static String field_a;
 
-    final static de a(int param0, byte param1, int param2, ng[] param3, byte[] param4, int param5) {
+    final static de a(int param0, byte param1, int param2, IndexedSprite[] param3, byte[] param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
@@ -77,15 +77,15 @@ final class ma implements t {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = ll.field_i;
-          var13 = ll.field_d;
-          var14 = ll.field_k;
+          var45 = SoftwareRasterizer.pixels;
+          var13 = SoftwareRasterizer.stride;
+          var14 = SoftwareRasterizer.field_k;
           if (param1 >= -120) {
             stackIn_6_0 = (de) null;
             return stackIn_6_0;
           }
           var44 = new int[4];
-          ll.a(var44);
+          SoftwareRasterizer.a(var44);
           for (var16_int = 0; 256 > var16_int; var16_int++) {
             var6[var16_int] = param3[var16_int].field_b - param2;
             var7[var16_int] = -param2 + param3[var16_int].field_a;
@@ -99,17 +99,17 @@ final class ma implements t {
             var20 = param3[var16_int].field_j;
             var21 = var36[var16_int];
             var22 = -var19 + var21;
-            ll.a(new int[var37[var16_int] * var36[var16_int]], var36[var16_int], var37[var16_int]);
+            SoftwareRasterizer.a(new int[var37[var16_int] * var36[var16_int]], var36[var16_int], var37[var16_int]);
             var23 = 0;
             for (var24 = 0; var24 < var20; var24++) {
               for (var25 = 0; var19 > var25; var25++) {
                 if (var18[var23++] != 0) {
-                  ll.f(var25 + param2, var24 + param2, param2, 2);
+                  SoftwareRasterizer.f(var25 + param2, var24 + param2, param2, 2);
                 }
               }
             }
             for (var24Lifetime1 = 0; var17.length > var24Lifetime1; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)ll.field_i[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)SoftwareRasterizer.pixels[var24Lifetime1];
             }
             var23Lifetime1 = 0;
             var24Lifetime2 = param2 * (var36[var16_int] + 1);
@@ -132,8 +132,8 @@ final class ma implements t {
           var16.field_u = var16.field_u - param2;
           var16.field_H = var16.field_H - param2;
           var16.field_G = var16.field_G - param2;
-          ll.a(var45, var13, var14);
-          ll.b(var44);
+          SoftwareRasterizer.a(var45, var13, var14);
+          SoftwareRasterizer.b(var44);
           stackIn_32_0 = var16;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ final class ma implements t {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -163,10 +163,10 @@ final class ma implements t {
         }
     }
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
-        qj var8 = null;
+        Sprite var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -175,17 +175,17 @@ final class ma implements t {
         try {
           var6_int = param1.field_p + param4;
           var7 = param1.field_m + param2;
-          fc.a(param1.field_x, var7, param1.field_u, (byte) -77, var6_int);
+          IntrusiveNode.a(param1.field_x, var7, param1.field_u, (byte) -77, var6_int);
           if (param0 != -24969) {
             return;
           }
           var8 = TrackController.field_D[1];
-          if (param1 instanceof rh &&
-            ((rh) (param1)).field_G) {
+          if (param1 instanceof ButtonWidget &&
+            ((ButtonWidget) (param1)).field_G) {
             var8.a((param1.field_x - var8.field_s >> 1) + (1 + var6_int), var7 + 1 + (param1.field_u - var8.field_v >> 1), 256);
           }
           if (param1.h(-111)) {
-            bc.a(param1.field_u - 4, -28846, param1.field_x - 4, var7 + 2, var6_int + 2);
+            BufferedSocket.a(param1.field_u - 4, -28846, param1.field_x - 4, var7 + 2, var6_int + 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class ma implements t {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class ma implements t {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

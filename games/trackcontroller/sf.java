@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends td implements m {
-    private rh field_E;
-    private rh field_C;
+final class sf extends td implements ButtonListener {
+    private ButtonWidget field_E;
+    private ButtonWidget field_C;
     static ba field_D;
     static int field_F;
-    private rh field_G;
+    private ButtonWidget field_G;
     static java.awt.Frame field_H;
 
-    final static pf a(la param0, boolean param1) {
+    final static Model a(la param0, boolean param1) {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
-        pf stackIn_35_0 = null;
+        Model stackIn_35_0 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -21,7 +21,7 @@ final class sf extends td implements m {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        pf var5 = null;
+        Model var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -36,7 +36,7 @@ final class sf extends td implements m {
             field_H = (java.awt.Frame) null;
           }
           var4 = lf.a((byte) -68, param0) ? 1 : 0;
-          var5 = new pf();
+          var5 = new Model();
           var5.field_q = (short)param0.d(0, 16);
           var5.field_y = v.a(16, var5.field_y, param0, 115);
           var5.field_o = v.a(16, var5.field_o, param0, 39);
@@ -106,7 +106,7 @@ final class sf extends td implements m {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,11 +123,11 @@ final class sf extends td implements m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2), "sf.G(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2), "sf.G(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -160,11 +160,11 @@ final class sf extends td implements m {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(byte param0, kk param1) {
+    final static void a(byte param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2635_0;
             StringBuilder stackIn_2635_1;
@@ -176,9 +176,9 @@ final class sf extends td implements m {
             int var4;
             int var5;
             byte param0;
-            kk param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, kk initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2635_0 = null;
@@ -215,7 +215,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "error_js5io");
                 if (null != var2) {
-                  qc.field_f = ta.a(32200, var2);
+                  ProxySocketConnector.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "error_js5connect_full");
                 if (null != var2) {
@@ -263,11 +263,11 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "ticketing_xunread");
                 if (null != var2) {
-                  be.field_l = ta.a(32200, var2);
+                  PacketBuffer.field_l = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "ticketing_gotowebsite");
                 if (null != var2) {
-                  cb.field_e = ta.a(32200, var2);
+                  MouseInputHandler.field_e = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "ticketing_waitingformessages");
                 if (null != var2) {
@@ -1179,7 +1179,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "pleasetryagain");
                 if (var2 != null) {
-                  cb.field_a = ta.a(32200, var2);
+                  MouseInputHandler.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "pleasereenterpass");
                 if (null != var2) {
@@ -1195,7 +1195,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "toserverlist");
                 if (null != var2) {
-                  ea.field_y = ta.a(32200, var2);
+                  LevelData.field_y = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "tocustomersupport");
                 if (var2 != null) {
@@ -1223,7 +1223,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "goback");
                 if (null != var2) {
-                  al.field_v = ta.a(32200, var2);
+                  UiWidget.field_v = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "otheroptions");
                 if (null != var2) {
@@ -1285,7 +1285,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "back");
                 if (null != var2) {
-                  ea.field_p = ta.a(32200, var2);
+                  LevelData.field_p = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "exitfullscreenmode");
                 if (null != var2) {
@@ -1389,7 +1389,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "checking");
                 if (null != var2) {
-                  bf.field_d = ta.a(32200, var2);
+                  WhirlpoolDigest.field_d = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1613,7 +1613,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_optin_news");
                 if (var2 != null) {
-                  lj.field_c = ta.a(32200, var2);
+                  GameKeyHandler.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_agreeterms");
                 if (null != var2) {
@@ -1629,11 +1629,11 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "login_username");
                 if (null != var2) {
-                  nb.field_q = ta.a(32200, var2);
+                  MidiPlayer.field_q = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "login_email");
                 if (null != var2) {
-                  re.field_m = ta.a(32200, var2);
+                  GameApplet.field_m = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "login_username_tooltip");
                 if (null != var2) {
@@ -1733,7 +1733,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_username_unavailable");
                 if (null != var2) {
-                  ga.field_f = ta.a(32200, var2);
+                  IterableNodeHashTable.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_username_available");
                 if (null != var2) {
@@ -1765,7 +1765,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_alert_passlength");
                 if (var2 != null) {
-                  nl.field_c = ta.a(32200, var2);
+                  ClientException.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_alert_passcontainsname");
                 if (var2 != null) {
@@ -1773,7 +1773,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  h.field_a = ta.a(32200, var2);
+                  MouseWheelInput.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -1809,15 +1809,15 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_passwordvalid");
                 if (var2 != null) {
-                  pf.field_N = ta.a(32200, var2);
+                  Model.field_N = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_emailvalid");
                 if (null != var2) {
-                  hf.field_a = ta.a(32200, var2);
+                  DiskArchiveStore.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_account_success");
                 if (null != var2) {
-                  tk.field_s = ta.a(32200, var2);
+                  AsyncRequest.field_s = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "invalid_name");
                 if (var2 != null) {
@@ -1925,7 +1925,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "waitingfor_soundeffects");
                 if (null != var2) {
-                  fc.field_f = ta.a(32200, var2);
+                  IntrusiveNode.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "waitingfor_music");
                 if (var2 != null) {
@@ -1941,7 +1941,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "waitingfor_extradata");
                 if (var2 != null) {
-                  ra.field_w = ta.a(32200, var2);
+                  LevelView.field_w = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "waitingfor_languages");
                 if (var2 != null) {
@@ -2017,7 +2017,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "unpacking_levels");
                 if (null != var2) {
-                  rj.field_f = ta.a(32200, var2);
+                  SecondaryNodeDeque.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "unpacking_languages");
                 if (null != var2) {
@@ -2033,7 +2033,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "instructions");
                 if (null != var2) {
-                  rh.field_H = ta.a(32200, var2);
+                  ButtonWidget.field_H = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "tutorial");
                 if (var2 != null) {
@@ -2129,7 +2129,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "nextlevel");
                 if (null != var2) {
-                  rh.field_E = ta.a(32200, var2);
+                  ButtonWidget.field_E = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "startgame");
                 if (var2 != null) {
@@ -2347,7 +2347,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "unreachedlevel_cannotplayreason");
                 if (var2 != null) {
-                  kk.field_a = ta.a(32200, var2);
+                  Archive.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "unreachedlevel_cannotplayreason_shorter");
                 if (null != var2) {
@@ -2411,7 +2411,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "mouseoveranicon");
                 if (var2 != null) {
-                  id.field_a = ta.a(32200, var2);
+                  NodeHashTable.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "notyetachieved");
                 if (null != var2) {
@@ -2651,27 +2651,27 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  h.field_b[0] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[0] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,1");
                 if (null != var2) {
-                  h.field_b[1] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[1] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  h.field_b[2] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,3");
                 if (null != var2) {
-                  h.field_b[3] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  h.field_b[4] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[4] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  h.field_b[5] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[5] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "keychar_the_character_under_questionmark");
                 if (null != var2) {
@@ -2735,20 +2735,20 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  ra.field_t[0] = ta.a(32200, var2);
+                  LevelView.field_t[0] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  ra.field_t[1] = ta.a(32200, var2);
+                  LevelView.field_t[1] = ta.a(32200, var2);
                 }
                 var3 = -120 / ((-49 - param0) / 56);
                 var2 = va.a(0, "reconnect_lost_seq,2");
                 if (null != var2) {
-                  ra.field_t[2] = ta.a(32200, var2);
+                  LevelView.field_t[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "reconnect_lost_seq,3");
                 if (null != var2) {
-                  ra.field_t[3] = ta.a(32200, var2);
+                  LevelView.field_t[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "reconnect_lost");
                 if (var2 != null) {
@@ -2832,7 +2832,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_button_close");
                 if (null != var2) {
-                  me.field_k = ta.a(32200, var2);
+                  MovingBlock.field_k = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_button_members");
                 if (var2 != null) {
@@ -2840,11 +2840,11 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_unavailable");
                 if (null != var2) {
-                  lj.field_b = ta.a(32200, var2);
+                  GameKeyHandler.field_b = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  bf.field_c = ta.a(32200, var2);
+                  WhirlpoolDigest.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_focus");
                 if (null != var2) {
@@ -2852,7 +2852,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_focus_or_resolution");
                 if (null != var2) {
-                  nb.field_A = ta.a(32200, var2);
+                  MidiPlayer.field_A = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_timeout");
                 if (var2 != null) {
@@ -2860,7 +2860,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_button_tryagain");
                 if (var2 != null) {
-                  vk.field_i = ta.a(32200, var2);
+                  GameStringTable.field_i = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "graphics_ui_fs_countdown");
                 if (null != var2) {
@@ -2980,7 +2980,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "createtouse");
                 if (null != var2) {
-                  hh.field_b = ta.a(32200, var2);
+                  SecondaryNodeDequeIterator.field_b = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "achievementsoffline");
                 if (var2 != null) {
@@ -3028,31 +3028,31 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "mustlogin3,1");
                 if (var2 != null) {
-                  fc.field_c[1] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[1] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,2");
                 if (null != var2) {
-                  fc.field_c[2] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,3");
                 if (var2 != null) {
-                  fc.field_c[3] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,4");
                 if (null != var2) {
-                  fc.field_c[4] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[4] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,5");
                 if (var2 != null) {
-                  fc.field_c[5] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[5] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,6");
                 if (null != var2) {
-                  fc.field_c[6] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[6] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,7");
                 if (null != var2) {
-                  fc.field_c[7] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[7] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "discard");
                 if (null != var2) {
@@ -3060,31 +3060,31 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "mustlogin4,1");
                 if (var2 != null) {
-                  al.field_i[1] = ta.a(32200, var2);
+                  UiWidget.field_i[1] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin4,2");
                 if (var2 != null) {
-                  al.field_i[2] = ta.a(32200, var2);
+                  UiWidget.field_i[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin4,3");
                 if (null != var2) {
-                  al.field_i[3] = ta.a(32200, var2);
+                  UiWidget.field_i[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin4,4");
                 if (null != var2) {
-                  al.field_i[4] = ta.a(32200, var2);
+                  UiWidget.field_i[4] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin4,5");
                 if (null != var2) {
-                  al.field_i[5] = ta.a(32200, var2);
+                  UiWidget.field_i[5] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin4,6");
                 if (null != var2) {
-                  al.field_i[6] = ta.a(32200, var2);
+                  UiWidget.field_i[6] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin4,7");
                 if (null != var2) {
-                  al.field_i[7] = ta.a(32200, var2);
+                  UiWidget.field_i[7] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin_notloggedin");
                 if (null != var2) {
@@ -3195,12 +3195,12 @@ final class sf extends td implements m {
                   } else {
                     stackIn_2636_2 = "{...}";
                   }
-                  throw sl.a((Throwable) ((Object) stackIn_2635_0), ((StringBuilder) (Object) stackIn_2635_1).append(stackIn_2636_2).append(')').toString());
+                  throw LevelGrid.toClientException((Throwable) ((Object) stackIn_2635_0), ((StringBuilder) (Object) stackIn_2635_1).append(stackIn_2636_2).append(')').toString());
                 }
                 if (var4 != 0) {
-                  var5 = re.field_j;
+                  var5 = GameApplet.field_j;
                   var5++;
-                  re.field_j = var5;
+                  GameApplet.field_j = var5;
                 }
             }
         }
@@ -3215,9 +3215,9 @@ final class sf extends td implements m {
         int var3 = 0;
         int var4 = 0;
         try {
-          this.field_G = new rh(md.field_f, (tg) null);
-          this.field_E = new rh(al.field_v, (tg) null);
-          this.field_C = new rh(v.field_d, (tg) null);
+          this.field_G = new ButtonWidget(md.field_f, (tg) null);
+          this.field_E = new ButtonWidget(UiWidget.field_v, (tg) null);
+          this.field_C = new ButtonWidget(v.field_d, (tg) null);
           var1 = new dc();
           this.field_G.field_y = (t) ((Object) var1);
           this.field_E.field_y = (t) ((Object) var1);
@@ -3237,7 +3237,7 @@ final class sf extends td implements m {
           this.a(false, this.field_G);
           this.a(false, this.field_C);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "sf.<init>()");
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.<init>()");
         }
     }
 
@@ -3286,7 +3286,7 @@ final class sf extends td implements m {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3303,7 +3303,7 @@ final class sf extends td implements m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "sf.C(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "sf.C(" + param0 + ')');
         }
     }
 
@@ -3315,7 +3315,7 @@ final class sf extends td implements m {
             sf.j(105);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
         }
     }
 
@@ -3331,11 +3331,11 @@ final class sf extends td implements m {
           gk.field_c.a(we.field_a, var5_int + 20, 20 + var6, this.field_x - 40, -50 + this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
           super.a(param0, param1, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -3374,7 +3374,7 @@ final class sf extends td implements m {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

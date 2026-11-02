@@ -3,7 +3,7 @@
  */
 final class aa {
     int field_c;
-    static qj[] field_a;
+    static Sprite[] field_a;
     int field_b;
 
     public final String toString() {
@@ -13,7 +13,7 @@ final class aa {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != -14) {
-          field_a = (qj[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

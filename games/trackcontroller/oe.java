@@ -40,7 +40,7 @@ final class oe {
             return stackIn_5_0;
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
-            if (!ue.a(-16490, param0.charAt(var4))) {
+            if (!IntrusiveDequeCursor.a(-16490, param0.charAt(var4))) {
               stackIn_12_0 = gj.field_d;
               return stackIn_12_0;
             }
@@ -56,7 +56,7 @@ final class oe {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -98,24 +98,24 @@ final class oe {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, kk param1, kk param2, kk param3, int param4) {
+    final static void a(boolean param0, Archive param1, Archive param2, Archive param3, int param4) {
         try {
           sa.field_Q = c.a("", param4 + 59176);
           sa.field_Q.a(false, true);
           ak.a(param3, param1, param2, 127);
           jh.a(-128);
-          fd.field_h = hf.field_f;
+          fd.field_h = DiskArchiveStore.field_f;
           if (param4 != -28484) {
             CharSequence var6 = (CharSequence) null;
             oe.a((CharSequence) null, (byte) 110, true);
           }
-          rk.field_X = hf.field_f;
+          rk.field_X = DiskArchiveStore.field_f;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

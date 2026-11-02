@@ -40,7 +40,7 @@ final class sh {
         if (param2) {
           return;
         }
-        var4Lifetime1 = ml.field_w[this.field_d].field_f;
+        var4Lifetime1 = VorbisDecoder.field_w[this.field_d].field_f;
         var5 = this.field_g - this.field_e;
         var6 = var5 / this.field_b;
         var22 = new int[var6];
@@ -50,7 +50,7 @@ final class sh {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = ml.field_w[this.field_d].a();
+              var10 = VorbisDecoder.field_w[this.field_d].a();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_a;
@@ -65,7 +65,7 @@ final class sh {
               var12 = this.field_f[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.field_e + var9 * this.field_b;
-                var14 = ml.field_w[var12];
+                var14 = VorbisDecoder.field_w[var12];
                 if (this.field_c != 0) {
                   var15 = 0;
                   while (var15 < this.field_b) {
@@ -102,19 +102,19 @@ final class sh {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_c = ml.f(16);
-        this.field_e = ml.f(24);
-        this.field_g = ml.f(24);
-        this.field_b = ml.f(24) + 1;
-        this.field_a = ml.f(6) + 1;
-        this.field_d = ml.f(8);
+        this.field_c = VorbisDecoder.f(16);
+        this.field_e = VorbisDecoder.f(24);
+        this.field_g = VorbisDecoder.f(24);
+        this.field_b = VorbisDecoder.f(24) + 1;
+        this.field_a = VorbisDecoder.f(6) + 1;
+        this.field_d = VorbisDecoder.f(8);
         int[] var1 = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
           var3 = 0;
-          var4 = ml.f(3);
-          var5 = ml.b() != 0 ? 1 : 0;
+          var4 = VorbisDecoder.f(3);
+          var5 = VorbisDecoder.b() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = ml.f(5);
+            var3 = VorbisDecoder.f(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class sh {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_a * 8) {
-          this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ml.f(8) : -1;
+          this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisDecoder.f(8) : -1;
           var6++;
         }
     }

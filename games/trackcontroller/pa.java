@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa {
-    static ja field_c;
+    static IntrusiveDeque field_c;
     static long field_b;
-    static volatile int field_a;
+    static volatile int idleTicks;
 
     public static void a(byte param0) {
         if (param0 > -120) {
@@ -21,24 +21,24 @@ final class pa {
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (dh) (field_c.b(param1 - 38));
+          var4 = (dh) (field_c.first(param1 - 38));
           while (var4 != null) {
-            me.a(var4, 0, param0);
-            var4 = (dh) (field_c.a(param1 - 30));
+            MovingBlock.a(var4, 0, param0);
+            var4 = (dh) (field_c.next(param1 - 30));
           }
           if (param1 != 40) {
             pa.b((byte) 41);
           }
-          var5 = (nk) (qh.field_e.b(param1 ^ 42));
+          var5 = (nk) (qh.field_e.first(param1 ^ 42));
           while (var5 != null) {
             gj.a(2, var5, param0);
-            var5 = (nk) (qh.field_e.a(10));
+            var5 = (nk) (qh.field_e.next(10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2), "pa.B(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2), "pa.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -46,11 +46,11 @@ final class pa {
         if (param0 != 91) {
           return true;
         }
-        return af.a(9819, gd.b((byte) 77));
+        return af.a(9819, CachedArchiveSource.b((byte) 77));
     }
 
     static {
-        field_c = new ja();
-        field_a = 0;
+        field_c = new IntrusiveDeque();
+        idleTicks = 0;
     }
 }

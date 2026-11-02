@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ne implements t {
-    static ja field_b;
-    private oh field_e;
+    static IntrusiveDeque field_b;
+    private BitmapFont field_e;
     private int field_c;
     static bk field_d;
     private int field_f;
@@ -18,7 +18,7 @@ final class ne implements t {
         }
     }
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -45,7 +45,7 @@ final class ne implements t {
           var6_int = stackIn_7_0;
           this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_u + this.field_e.field_G);
           if (param1.h(-95)) {
-            var7 = this.field_e.a(param1.field_s);
+            var7 = this.field_e.stringWidth(param1.field_s);
             var8 = this.field_e.field_u + this.field_e.field_G;
             var9 = param4 + param1.field_p;
             var10 = param2 + param1.field_m;
@@ -63,7 +63,7 @@ final class ne implements t {
             } else {
               var10 = var10 + (param1.field_u - var8);
             }
-            bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+            BufferedSocket.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class ne implements t {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -86,17 +86,17 @@ final class ne implements t {
         this.field_f = 1;
     }
 
-    ne(oh param0, int param1, int param2) {
+    ne(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param1;
           this.field_e = param0;
           this.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        field_b = new ja();
+        field_b = new IntrusiveDeque();
     }
 }

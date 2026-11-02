@@ -3,13 +3,13 @@
  */
 abstract class wj {
     static sk field_b;
-    static qj[] field_a;
+    static Sprite[] field_a;
 
     abstract void b(int param0);
 
     abstract int a(int param0, long param1);
 
-    final static void a(int param0, uf param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         try {
           kb.field_d = param1;
           gi.field_r = param3;
@@ -17,14 +17,14 @@ abstract class wj {
           sa.field_T = param6;
           kf.field_a = param5;
           int var9_int = 41 % ((-36 - param7) / 32);
-          fc.field_g = param4;
-          vk.field_j = param2;
-          ga.field_e = param0;
-          rj.field_d = (ae) ((Object) new da());
+          IntrusiveNode.field_g = param4;
+          GameStringTable.field_j = param2;
+          IterableNodeHashTable.field_e = param0;
+          SecondaryNodeDeque.field_d = (ArchiveRequestConnection) ((Object) new SocketArchiveRequestConnection());
           rb.field_a = new sd(param1);
-          ij.field_d = new wg(rj.field_d, rb.field_a);
+          ij.field_d = new wg(SecondaryNodeDeque.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ abstract class wj {
           }
           return this.a(119, param1);
         }
-        field_a = (qj[]) null;
+        field_a = (Sprite[]) null;
         var4Lifetime1 = this.a(-27042);
         if (var4Lifetime1 > 0L) {
           wl.a(var4Lifetime1, false);
@@ -53,13 +53,13 @@ abstract class wj {
         int var3Lifetime1;
         var4 = TrackController.field_F ? 1 : 0;
         var2 = -64 / ((44 - param0) / 37);
-        if (0 >= hk.field_d) {
+        if (0 >= SocketConnector.field_d) {
           if (jj.s(109)) {
             var3 = 0;
           } else {
             var3 = 1;
           }
-          if (null != tk.field_u) {
+          if (null != AsyncRequest.field_u) {
             return;
           }
           if (ag.field_b) {
@@ -67,25 +67,25 @@ abstract class wj {
           }
           return;
         }
-        if (null == tk.field_u) {
+        if (null == AsyncRequest.field_u) {
           og.field_rb = dj.a(0, 480, 640, (byte) 96, rg.field_c, 0);
           if (og.field_rb == null) {
             var3Lifetime1 = 3;
           } else {
-            te.a(true, og.field_rb);
+            DelegatingCanvas.a(true, og.field_rb);
             var3Lifetime1 = 2;
           }
         } else {
-          og.field_rb = tk.field_u.c(0);
+          og.field_rb = AsyncRequest.field_u.c(0);
           ni.a(-127, 2);
           if (og.field_rb == null) {
             var3Lifetime1 = 3;
           } else {
-            te.a(true, og.field_rb);
+            DelegatingCanvas.a(true, og.field_rb);
             var3Lifetime1 = 2;
           }
         }
-        if (null != tk.field_u) {
+        if (null != AsyncRequest.field_u) {
           return;
         }
         if (!ag.field_b) {

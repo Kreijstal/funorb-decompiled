@@ -70,7 +70,7 @@ final class gi extends ic {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -79,11 +79,11 @@ final class gi extends ic {
         try {
           param0.a(param1, this, 11);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(qj param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         qi[] var3 = null;
         qi var5 = null;
@@ -118,11 +118,11 @@ final class gi extends ic {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, qj[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         qi[] var3 = null;
         qi var5 = null;
@@ -157,12 +157,12 @@ final class gi extends ic {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
-        al stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -170,18 +170,18 @@ final class gi extends ic {
         RuntimeException var6 = null;
         qi var7 = null;
         qi var9 = null;
-        rh var10 = null;
+        ButtonWidget var10 = null;
         qi var11 = null;
         qi var12 = null;
         qi var13 = null;
         qi var14 = null;
         try {
-          if (!(param1 instanceof rh)) {
+          if (!(param1 instanceof ButtonWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (al) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
-          var10 = (rh) (stackIn_3_0);
+          var10 = (ButtonWidget) (stackIn_3_0);
           mb.a(param4 + param1.field_p, param1.field_m + param2, param2 + param1.field_m + param1.field_u, (byte) -41, param1.field_p + (param4 + param1.field_x));
           if (var10 != null) {
             param3 = param3 & var10.field_B;
@@ -225,7 +225,7 @@ final class gi extends ic {
             }
           }
           this.field_p.a(param4, param2, param1, -16711924, this);
-          ch.m(35);
+          GameShell.m(35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,24 +237,24 @@ final class gi extends ic {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(int param0, qj[] param1, byte param2) {
+    final void a(int param0, Sprite[] param1, byte param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
           if (param2 != -33) {
-            al var5 = (al) null;
-            this.a(111, (al) null, -5, true, -65);
+            UiWidget var5 = (UiWidget) null;
+            this.a(111, (UiWidget) null, -5, true, -65);
           }
           if (null == this.field_s[var4_int]) {
             this.field_s[var4_int] = new qi();
           }
           this.field_s[param0].field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

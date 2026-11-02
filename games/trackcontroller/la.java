@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends be {
+final class la extends PacketBuffer {
     private int field_r;
-    static volatile int field_s;
+    static volatile int liveMouseX;
     private nf field_n;
     static int[] field_p;
     static String field_q;
@@ -19,14 +19,14 @@ final class la extends be {
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((pf.field_c[var4] & this.field_j[incrementValue$0]) << -var4 + param1);
+          var5 = var5 + ((Model.field_c[var4] & this.payload[incrementValue$0]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 == var4) {
-          var5 = var5 + (this.field_j[var3] & pf.field_c[var4]);
+          var5 = var5 + (this.payload[var3] & Model.field_c[var4]);
         } else {
-          var5 = var5 + (this.field_j[var3] >> var4 - param1 & pf.field_c[param1]);
+          var5 = var5 + (this.payload[var3] >> var4 - param1 & Model.field_c[param1]);
         }
         return var5;
     }
@@ -51,9 +51,9 @@ final class la extends be {
             return;
           }
           while (var5_int < param0) {
-            fieldTemp$0 = this.field_k;
-            this.field_k = this.field_k + 1;
-            param3[var5_int + param2] = (byte)(this.field_j[fieldTemp$0] - this.field_n.c(127));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_n.c(127));
             var5_int++;
           }
           return;
@@ -67,12 +67,12 @@ final class la extends be {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final void g(byte param0) {
-        this.field_k = (this.field_r + 7) / 8;
+        this.position = (this.field_r + 7) / 8;
         if (param0 <= -25) {
           return;
         }
@@ -86,7 +86,7 @@ final class la extends be {
         try {
           this.field_n = new nf(param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class la extends be {
     }
 
     final void h(byte param0) {
-        this.field_r = 8 * this.field_k;
+        this.field_r = 8 * this.position;
         if (param0 == 31) {
           return;
         }
@@ -111,9 +111,9 @@ final class la extends be {
     }
 
     final void c(int param0, int param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(this.field_n.c(126) + param0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_n.c(126) + param0);
         if (param1 == 7) {
           return;
         }
@@ -125,17 +125,17 @@ final class la extends be {
         if (param0) {
           byte[] var3 = (byte[]) null;
           this.a(-123, false, 4, (byte[]) null);
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          return this.field_j[fieldTemp$0] - this.field_n.c(125) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_n.c(125) & 255;
         }
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        return this.field_j[fieldTemp$1] - this.field_n.c(125) & 255;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$1] - this.field_n.c(125) & 255;
     }
 
     static {
-        field_s = -1;
+        liveMouseX = -1;
         field_p = new int[8192];
     }
 }

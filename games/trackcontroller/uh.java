@@ -10,7 +10,7 @@ final class uh {
     int field_h;
     int field_k;
     byte[] field_i;
-    static bh[] field_b;
+    static PcmSampleStream[] field_b;
     int field_l;
     byte[] field_c;
     int field_j;
@@ -45,7 +45,7 @@ final class uh {
           na.field_e = param2;
           nh.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,12 +78,12 @@ final class uh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var3), "uh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var3), "uh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
         field_d = "to return to the normal view.";
-        field_b = new bh[13];
+        field_b = new PcmSampleStream[13];
     }
 }

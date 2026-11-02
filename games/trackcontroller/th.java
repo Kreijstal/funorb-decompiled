@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends fc {
+final class th extends IntrusiveNode {
     int field_m;
     static String field_i;
     static String field_n;
@@ -12,10 +12,10 @@ final class th extends fc {
     final static void d(int param0) {
         if (param0 != -31574) {
           field_i = (String) null;
-          pf.field_U = 0;
+          Model.field_U = 0;
           return;
         }
-        pf.field_U = 0;
+        Model.field_U = 0;
     }
 
     final static kh f(int param0) {

@@ -5,7 +5,7 @@ final class wf {
     static int field_b;
     static String[] field_a;
     static int[] field_c;
-    static volatile int field_d;
+    static volatile int pendingClick;
 
     final static boolean a(byte param0, String param1, String param2, String param3, vd param4, boolean param5, int param6) {
         RuntimeException var7 = null;
@@ -21,7 +21,7 @@ final class wf {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hf.field_f != fd.field_h) {
+          if (DiskArchiveStore.field_f != fd.field_h) {
             return false;
           }
           var8 = new og(gl.field_E, param4);
@@ -33,13 +33,13 @@ final class wf {
             var8.u(-118);
             return true;
           }
-          bf.field_f = param2;
+          WhirlpoolDigest.field_f = param2;
           fi.field_l = param3;
           th.field_n = param1;
-          h.field_c = null;
+          MouseWheelInput.field_c = null;
           v.field_e = param5;
           fd.field_h = oe.field_b;
-          da.field_o = param6;
+          SocketArchiveRequestConnection.field_o = param6;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,14 +69,14 @@ final class wf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -43) {
-          field_d = 72;
+          pendingClick = 72;
           field_c = null;
           return;
         }
@@ -103,7 +103,7 @@ final class wf {
         return false;
     }
 
-    final static String a(String param0, String param1, String param2, kk param3, int param4) {
+    final static String a(String param0, String param1, String param2, Archive param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -155,13 +155,13 @@ final class wf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
         field_a = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_c = new int[8192];
-        field_d = 0;
+        pendingClick = 0;
     }
 }

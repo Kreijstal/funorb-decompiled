@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends fc {
+final class dh extends IntrusiveNode {
     static int field_l;
     int field_n;
     static String field_r;
@@ -17,7 +17,7 @@ final class dh extends fc {
         nk var4 = new nk();
         var4.field_i = param2;
         var4.field_m = new int[param3];
-        qh.field_e.a((byte) -93, var4);
+        qh.field_e.addLast((byte) -93, var4);
         gj.a(2, var4, param0);
         if (param1 != -1) {
           field_i = (String) null;
@@ -88,7 +88,7 @@ final class dh extends fc {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -105,11 +105,11 @@ final class dh extends fc {
         }
     }
 
-    final static qj[] e(int param0) {
+    final static Sprite[] e(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        qj[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -120,29 +120,29 @@ final class dh extends fc {
         int[] var21;
         byte[] var22;
         var8 = TrackController.field_F ? 1 : 0;
-        var1 = new qj[gi.field_o];
+        var1 = new Sprite[gi.field_o];
         if (param0 != 2) {
           field_p = -49;
         }
         for (var2 = 0; var2 < gi.field_o; var2++) {
           var3 = cf.field_p[var2] * j.field_f[var2];
           var20 = qk.field_M[var2];
-          if (!ga.field_b[var2]) {
+          if (!IterableNodeHashTable.field_b[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var9[var6_int] = qe.field_z[tc.a((int) var20[var6_int], 255)];
+              var9[var6_int] = qe.field_z[RandomAccessCacheFile.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new qj(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var21);
+            var1[var2] = new Sprite(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var21);
           } else {
             var22 = fk.field_d[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = ok.a(tc.a(var22[var7] << 24, -16777216), qe.field_z[tc.a(255, (int) var20[var7])]);
+              var6[var7] = ok.a(RandomAccessCacheFile.a(var22[var7] << 24, -16777216), qe.field_z[RandomAccessCacheFile.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (qj) ((Object) new d(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
+            var1[var2] = (Sprite) ((Object) new d(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
           }
         }
         ff.b(param0 + 46);
@@ -194,7 +194,7 @@ final class dh extends fc {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            rj.a(param2, (byte) -99);
+            SecondaryNodeDeque.a(param2, (byte) -99);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -212,7 +212,7 @@ final class dh extends fc {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -328,7 +328,7 @@ final class dh extends fc {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

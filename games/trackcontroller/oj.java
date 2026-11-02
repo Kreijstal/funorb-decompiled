@@ -3,11 +3,11 @@
  */
 final class oj {
     static java.security.SecureRandom field_b;
-    static ja field_d;
+    static IntrusiveDeque field_d;
     static String field_c;
     static aa field_a;
 
-    final static void a(int param0, boolean param1, boolean param2, pf param3, int[] param4, int[] param5, boolean param6) {
+    final static void a(int param0, boolean param1, boolean param2, Model param3, int[] param4, int[] param5, boolean param6) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         RuntimeException stackIn_67_0 = null;
@@ -80,19 +80,19 @@ final class oj {
           var21Lifetime1 = param4[0] - param5[0];
           var22Lifetime1 = param4[1] - param5[1];
           var23Lifetime1 = param4[2] - param5[2];
-          var9 = var21Lifetime1 * param5[3] + (var22Lifetime1 * param5[4] + var23Lifetime1 * param5[5]) >> 16 - wi.field_b;
+          var9 = var21Lifetime1 * param5[3] + (var22Lifetime1 * param5[4] + var23Lifetime1 * param5[5]) >> 16 - ArchiveSource.field_b;
           var11 = var23Lifetime1 * param5[11] + param5[9] * var21Lifetime1 + param5[10] * var22Lifetime1 >> 16;
-          var10 = var21Lifetime1 * param5[6] + (var22Lifetime1 * param5[7] + var23Lifetime1 * param5[8]) >> -wi.field_b + 16;
+          var10 = var21Lifetime1 * param5[6] + (var22Lifetime1 * param5[7] + var23Lifetime1 * param5[8]) >> -ArchiveSource.field_b + 16;
           var21Lifetime2 = ig.field_h;
           var22Lifetime2 = ig.field_a;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param3.field_q > var23Lifetime2) {
               var24Lifetime1 = param3.field_y[var23Lifetime2];
               var25Lifetime1 = param3.field_o[var23Lifetime2];
               var26Lifetime1 = param3.field_S[var23Lifetime2];
-              var27Lifetime1 = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16 - wi.field_b);
-              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + (var24Lifetime1 * var13 + var16 * var25Lifetime1) >> 16 - wi.field_b);
+              var27Lifetime1 = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16 - ArchiveSource.field_b);
+              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + (var24Lifetime1 * var13 + var16 * var25Lifetime1) >> 16 - ArchiveSource.field_b);
               var29Lifetime1 = (var20 * var26Lifetime1 + var24Lifetime1 * var14 + var25Lifetime1 * var17 >> 16) + var11;
               stackIn_62_0 = ~var29Lifetime1;
               stackIn_62_1 = -51;
@@ -111,8 +111,8 @@ final class oj {
                   }
                 }
                 if (param6) {
-                  bg.field_a[var23Lifetime2] = var27Lifetime1 >> wi.field_b;
-                  pl.field_c[var23Lifetime2] = var28Lifetime1 >> wi.field_b;
+                  bg.field_a[var23Lifetime2] = var27Lifetime1 >> ArchiveSource.field_b;
+                  pl.field_c[var23Lifetime2] = var28Lifetime1 >> ArchiveSource.field_b;
                   la.field_p[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -134,7 +134,7 @@ final class oj {
                   var25Lifetime1 = param3.field_h[var23Lifetime2];
                   var26Lifetime1 = param3.field_t[var23Lifetime2];
                   vj.field_c[var23Lifetime2] = (var25Lifetime1 * var15 + var24Lifetime1 * var12 + var26Lifetime1 * var18 >> 16) + var9;
-                  id.field_k[var23Lifetime2] = (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var19 * var26Lifetime1) >> 16) + var10;
+                  NodeHashTable.field_k[var23Lifetime2] = (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var19 * var26Lifetime1) >> 16) + var10;
                   sd.field_d[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param3.field_f[var23Lifetime2];
                   var25Lifetime1 = param3.field_D[var23Lifetime2];
@@ -145,9 +145,9 @@ final class oj {
                   var24Lifetime1 = param3.field_v[var23Lifetime2];
                   var25Lifetime1 = param3.field_z[var23Lifetime2];
                   var26Lifetime1 = param3.field_s[var23Lifetime2];
-                  nb.field_s[var23Lifetime2] = (var18 * var26Lifetime1 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16) + var9;
+                  MidiPlayer.field_s[var23Lifetime2] = (var18 * var26Lifetime1 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16) + var9;
                   jb.field_b[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> 16);
-                  ri.field_B[var23Lifetime2] = (var26Lifetime1 * var20 + (var17 * var25Lifetime1 + var14 * var24Lifetime1) >> 16) + var11;
+                  ActiveLevel.field_B[var23Lifetime2] = (var26Lifetime1 * var20 + (var17 * var25Lifetime1 + var14 * var24Lifetime1) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;
@@ -169,7 +169,7 @@ final class oj {
                   stackIn_62_0 = wf.field_c.length;
                   stackIn_62_1 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_62_0 <= stackIn_62_1) {
                     break;
@@ -178,8 +178,8 @@ final class oj {
                   var20 = param3.field_R[var18];
                   var21Lifetime2 = param3.field_b[var18];
                   wf.field_c[var18] = var15 * var21Lifetime2 + (var9 * var19 + var20 * var12) >> 16;
-                  ch.field_y[var18] = var21Lifetime2 * var16 + var10 * var19 + var20 * var13 >> 16;
-                  ea.field_w[var18] = var21Lifetime2 * var17 + var20 * var14 + var11 * var19 >> 16;
+                  GameShell.field_y[var18] = var21Lifetime2 * var16 + var10 * var19 + var20 * var13 >> 16;
+                  LevelData.field_w[var18] = var21Lifetime2 * var17 + var20 * var14 + var11 * var19 >> 16;
                   var18++;
                 }
               }
@@ -212,27 +212,27 @@ final class oj {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final static hk a(String param0, int param1, int param2) {
-        qc var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        qc stackIn_4_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new qc();
+          var3 = new ProxySocketConnector();
           if (param2 != 0) {
-            field_d = (ja) null;
+            field_d = (IntrusiveDeque) null;
           }
-          ((hk) ((Object) var3)).field_b = param0;
-          ((hk) ((Object) var3)).field_c = param1;
+          ((SocketConnector) ((Object) var3)).field_b = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_4_0 = var3;
-          return (hk) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -243,7 +243,7 @@ final class oj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -260,15 +260,15 @@ final class oj {
           if (param0 > -74) {
             field_b = (java.security.SecureRandom) null;
           }
-          if (tk.field_u != null) {
-            tk.field_u.b(6391);
+          if (AsyncRequest.field_u != null) {
+            AsyncRequest.field_u.b(6391);
           }
           ki.field_f.requestFocus();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "oj.D(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "oj.D(" + param0 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class oj {
           int var1_int = -25 % ((param0 + 56) / 60);
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ')');
         }
     }
 

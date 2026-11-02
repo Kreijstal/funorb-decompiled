@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ia {
-    static rc field_b;
+    static RasterBuffer field_b;
     static aa field_a;
 
     public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         if (!param0) {
-          field_b = (rc) null;
+          field_b = (RasterBuffer) null;
         }
     }
 
@@ -31,14 +31,14 @@ final class ia {
             stackIn_3_0 = 79;
             return stackIn_3_0;
           }
-          gl.field_E.a(hf.field_d, true, param0, ra.field_z);
+          gl.field_E.a(DiskArchiveStore.field_d, true, param0, LevelView.field_z);
           gl.field_E.b(true);
           while (mh.e(127)) {
             gl.field_E.a(md.field_d, 3931, kg.field_d);
           }
-          if (ra.field_v != -1) {
-            var1_int = ra.field_v;
-            qc.b(-1, (byte) -42);
+          if (LevelView.field_v != -1) {
+            var1_int = LevelView.field_v;
+            ProxySocketConnector.b(-1, (byte) -42);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }
@@ -63,15 +63,15 @@ final class ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "ia.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "ia.B(" + param0 + ')');
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, wb param4) {
+    final static void a(boolean param0, int param1, int param2, int param3, MidiFile param4) {
         try {
-          da.field_n.a(!param0 ? true : false, param2, true, param3, param4, param1);
+          SocketArchiveRequestConnection.field_n.a(!param0 ? true : false, param2, true, param3, param4, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ia.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ia.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

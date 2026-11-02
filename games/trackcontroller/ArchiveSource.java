@@ -1,0 +1,29 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ArchiveSource {
+    static jb field_c;
+    static int field_b;
+    static volatile int liveMouseY;
+    private static String field_z;
+
+    abstract byte[] a(int param0, int param1);
+
+    abstract int b(int param0, int param1);
+
+    public static void a(boolean param0) {
+        field_c = null;
+        if (param0) {
+          ArchiveSource.a(false);
+        }
+    }
+
+    abstract ArchiveIndex a(int param0);
+
+    static {
+        field_z = "wi.J(";
+        field_b = 9;
+        field_c = new jb();
+        liveMouseY = -1;
+    }
+}

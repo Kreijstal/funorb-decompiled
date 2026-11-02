@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vh extends gb {
+abstract class vh extends DualLinkNode {
     int field_o;
     static String field_p;
     static volatile boolean field_q;
@@ -9,7 +9,7 @@ abstract class vh extends gb {
     final static void h(int param0) {
         bk.field_J = null;
         jf.field_i = null;
-        ue.field_c = null;
+        IntrusiveDequeCursor.field_c = null;
         mh.field_i = false;
         el.field_O = null;
         if (param0 != -2532) {
@@ -85,7 +85,7 @@ abstract class vh extends gb {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ abstract class vh extends gb {
         this.field_o = param0;
     }
 
-    final static kk a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static Archive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 == 98) {
           return fh.a(param4, param0, param2, false, param3, -122);
         }
@@ -345,7 +345,7 @@ abstract class vh extends gb {
             field_q = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "vh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "vh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

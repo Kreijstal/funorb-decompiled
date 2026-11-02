@@ -35,7 +35,7 @@ final class hc {
     int field_g;
     int field_s;
 
-    final static void a(int param0, int param1, int param2, qj[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -56,8 +56,8 @@ final class hc {
             var7 = param3[1].field_s;
             param3[0].e(param0, param1);
             param3[2].e(-var6 + (param2 + param0), param1);
-            ll.a(kk.field_g);
-            ll.b(param0 + var5_int, param1, -var6 + (param0 + param2), param1 + param3[1].field_v);
+            SoftwareRasterizer.a(Archive.field_g);
+            SoftwareRasterizer.b(param0 + var5_int, param1, -var6 + (param0 + param2), param1 + param3[1].field_v);
             if (param4 != -22081) {
               return;
             }
@@ -66,7 +66,7 @@ final class hc {
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
               param3[1].e(param0, param1);
             }
-            ll.b(kk.field_g);
+            SoftwareRasterizer.b(Archive.field_g);
             return;
           }
           return;
@@ -80,7 +80,7 @@ final class hc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 

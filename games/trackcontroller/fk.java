@@ -3,8 +3,8 @@
  */
 final class fk {
     static byte[][] field_d;
-    static kk field_e;
-    static oh field_a;
+    static Archive field_e;
+    static BitmapFont field_a;
     static String field_c;
     static int field_b;
     private static String field_z;

@@ -11274,6 +11274,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "trackcontroller": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/trackcontroller"
+      },
+      "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
+      "sources": {
+        "files": 298,
+        "sha256": "59e2a1c2b4fc73697115c0c78c3eee0a2adc9951d2de4633dddf2d4b1981f726"
+      },
+      "dictionary": {
+        "path": "decompilation/trackcontroller-naming.json",
+        "sha256": "7135b012f2b23b57ee408347ee3586a48af5b4f76982d5f25baeabc1feeab8f1"
+      },
+      "readingGuide": {
+        "path": "games/trackcontroller/README.md",
+        "sha256": "8e0560bd3499c04966503c172aa41a59244b44bb5be44be00fe975bb0e0e370a"
+      },
+      "rulesSha256": "4a8f479879d65e34db4f36daafa53d34db4b11516cc3e20dae12ebae6252fc12",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13307,6 +13331,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 298,
+          "sha256": "59e2a1c2b4fc73697115c0c78c3eee0a2adc9951d2de4633dddf2d4b1981f726"
         }
       },
       "transmogrify": {

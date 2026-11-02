@@ -42,7 +42,7 @@ final class ji {
             fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
           } else {
             if (!ic.a(false)) {
-              ll.a();
+              SoftwareRasterizer.a();
               hi.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
@@ -66,7 +66,7 @@ final class ji {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class ji {
             fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
           } else {
             if (!ic.a(false)) {
-              ll.a();
+              SoftwareRasterizer.a();
               hi.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
@@ -121,7 +121,7 @@ final class ji {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 }

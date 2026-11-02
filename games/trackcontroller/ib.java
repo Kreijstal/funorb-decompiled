@@ -28,10 +28,10 @@ final class ib {
             return stackIn_2_0;
           }
           if (param0) {
-            stackIn_7_0 = mk.field_b.a(param2);
+            stackIn_7_0 = mk.field_b.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = r.field_k.a(param2);
+          stackIn_5_0 = r.field_k.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class ib {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -63,8 +63,8 @@ final class ib {
           Throwable decompiledCaughtException = null;
           java.net.MalformedURLException var4_ref = null;
           try {
-            if (uf.field_b.startsWith("win") &&
-              fc.b(false, param1)) {
+            if (PlatformTaskDispatcher.field_b.startsWith("win") &&
+              IntrusiveNode.b(false, param1)) {
               return;
             }
             try {
@@ -72,7 +72,7 @@ final class ib {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              hb.a((Throwable) null, 0, "MGR1: " + param1);
+              hb.reportClientError((Throwable) null, 0, "MGR1: " + param1);
             }
             if (param3 == -25) {
               return;
@@ -96,7 +96,7 @@ final class ib {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -105,12 +105,12 @@ final class ib {
         }
     }
 
-    final static qj[] a(int param0, String param1, kk param2, String param3) {
+    final static Sprite[] a(int param0, String param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        qj[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -150,7 +150,7 @@ final class ib {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends fc {
+final class kj extends IntrusiveNode {
     int field_n;
     static int[] field_s;
     static int field_r;
@@ -14,7 +14,7 @@ final class kj extends fc {
     int[] field_m;
     int[] field_i;
     private static long[] field_q;
-    static qj field_l;
+    static Sprite field_l;
     static int field_o;
     static int field_k;
 
@@ -28,10 +28,10 @@ final class kj extends fc {
         field_t = null;
     }
 
-    final static ng a(byte param0) {
-        ng var1 = new ng(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], qk.field_M[0], qe.field_z);
+    final static IndexedSprite a(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], qk.field_M[0], qe.field_z);
         if (param0 < 51) {
-          return (ng) null;
+          return (IndexedSprite) null;
         }
         ff.b(60);
         return var1;
@@ -68,7 +68,7 @@ final class kj extends fc {
           }
           if (rk.field_X == cj.field_e &&
             param0.equals(vh.field_p)) {
-            rk.field_X = hf.field_f;
+            rk.field_X = DiskArchiveStore.field_f;
             stackIn_11_0 = fh.field_c;
             return stackIn_11_0;
           }
@@ -87,7 +87,7 @@ final class kj extends fc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class kj extends fc {
         }
         if (var2 >= 128 &&
           var2 < 160) {
-          var3 = h.field_e[-128 + var2];
+          var3 = MouseWheelInput.field_e[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }
@@ -141,6 +141,6 @@ final class kj extends fc {
           field_q[var2] = var0;
         }
         field_o = -1;
-        field_l = new qj(540, 140);
+        field_l = new Sprite(540, 140);
     }
 }

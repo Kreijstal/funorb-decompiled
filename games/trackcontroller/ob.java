@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends gb {
+final class ob extends DualLinkNode {
     static String field_v;
     static String field_o;
-    static bc field_u;
+    static BufferedSocket field_u;
     int[] field_r;
     static char[] field_q;
     private int[][] field_t;
@@ -13,7 +13,7 @@ final class ob extends gb {
     static String field_x;
     private int[] field_p;
 
-    private final void a(be param0, int param1, boolean param2) {
+    private final void a(PacketBuffer param0, int param1, boolean param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -29,28 +29,28 @@ final class ob extends gb {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           if (param1 == 1) {
-            this.field_s = te.a(param0.g(0), '<', (byte) -94);
+            this.field_s = DelegatingCanvas.a(param0.readString(0), '<', (byte) -94);
           } else {
             if (2 == param1) {
-              var4_int = param0.h(16383);
+              var4_int = param0.readUnsignedByte(16383);
               this.field_r = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_r[var5] = param0.d((byte) -66);
+                this.field_r[var5] = param0.readUnsignedShort((byte) -66);
               }
             } else {
               if (param1 == 3) {
-                var4_int = param0.h(16383);
+                var4_int = param0.readUnsignedByte(16383);
                 this.field_p = new int[var4_int];
                 this.field_t = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param0.d((byte) -79);
+                  var6 = param0.readUnsignedShort((byte) -79);
                   var7 = dk.a(var6, (byte) 25);
                   if (var7 != null) {
                     this.field_p[var5] = var6;
                     array$0 = new int[var7.field_b];
                     this.field_t[var5] = array$0;
                     for (var8 = 0; var7.field_b > var8; var8++) {
-                      this.field_t[var5][var8] = param0.d((byte) -78);
+                      this.field_t[var5][var8] = param0.readUnsignedShort((byte) -78);
                     }
                   }
                 }
@@ -61,7 +61,7 @@ final class ob extends gb {
             }
           }
           if (param2) {
-            ob.h(-53);
+            ob.publishKeyState(-53);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,7 +74,7 @@ final class ob extends gb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class ob extends gb {
           }
           dh.a(var3, var4, param1, var2, 1000);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ob.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ob.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class ob extends gb {
         return var2.toString();
     }
 
-    final void a(boolean param0, be param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -143,7 +143,7 @@ final class ob extends gb {
             field_x = (String) null;
           }
           while (true) {
-            var3_int = param1.h(16383);
+            var3_int = param1.readUnsignedByte(16383);
             if (var3_int == 0) {
               return;
             }
@@ -159,7 +159,7 @@ final class ob extends gb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -169,14 +169,14 @@ final class ob extends gb {
         }
         try {
           if (null == ib.field_e) {
-            ib.field_e = new rk(gl.field_E, tk.field_r);
+            ib.field_e = new rk(gl.field_E, AsyncRequest.field_r);
             gl.field_E.d((byte) -97, ib.field_e);
           }
           ib.field_e.a(param3, (byte) 88, param0, param2);
-          ll.a();
+          SoftwareRasterizer.a();
           lh.a(true, 66);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ob.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ob.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class ob extends gb {
         int var2 = 0;
         int var3 = TrackController.field_F ? 1 : 0;
         if (param0 != 32768) {
-          field_u = (bc) null;
+          field_u = (BufferedSocket) null;
         }
         if (null != this.field_r) {
           for (var2 = 0; var2 < this.field_r.length; var2++) {
@@ -253,7 +253,7 @@ final class ob extends gb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class ob extends gb {
         return rl.field_N == 11 ? true : false;
     }
 
-    final static void h(int param0) {
+    final static void publishKeyState(int param0) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
@@ -280,30 +280,30 @@ final class ob extends gb {
           var1 = cj.field_o;
           synchronized (var1) {
             mb.field_f = mb.field_f + 1;
-            lj.field_d = fc.field_d;
-            if (mg.field_f < 0) {
+            GameKeyHandler.field_d = IntrusiveNode.field_d;
+            if (GameScreen.keyQueueWrite < 0) {
               for (var2 = 0; var2 < 112; var2++) {
-                ni.field_m[var2] = false;
+                ni.keyDown[var2] = false;
               }
-              mg.field_f = hb.field_f;
+              GameScreen.keyQueueWrite = hb.keyQueueRead;
             } else {
-              while (hb.field_f != mg.field_f) {
-                var2 = md.field_b[hb.field_f];
-                hb.field_f = hb.field_f + 1 & 127;
+              while (hb.keyQueueRead != GameScreen.keyQueueWrite) {
+                var2 = md.keyQueue[hb.keyQueueRead];
+                hb.keyQueueRead = hb.keyQueueRead + 1 & 127;
                 if (var2 < 0) {
-                  ni.field_m[~var2] = false;
+                  ni.keyDown[~var2] = false;
                   continue;
                 }
-                ni.field_m[var2] = true;
+                ni.keyDown[var2] = true;
               }
             }
-            fc.field_d = ri.field_V;
+            IntrusiveNode.field_d = ActiveLevel.field_V;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "ob.F(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "ob.F(" + param0 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class ob extends gb {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = ue.a(vh.a((byte) -127, param1), (byte) 76);
+          var2 = IntrusiveDequeCursor.a(vh.a((byte) -127, param1), (byte) 76);
           if (var2 == null) {
             var2 = "";
           }
@@ -337,7 +337,7 @@ final class ob extends gb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

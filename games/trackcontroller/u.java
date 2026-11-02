@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends fc {
+final class u extends IntrusiveNode {
     private int field_m;
     private int field_j;
     static boolean field_i;
@@ -15,7 +15,7 @@ final class u extends fc {
         int var2;
         int var3;
         int var4;
-        qj var6;
+        Sprite var6;
         int var7;
         int var8;
         var8 = TrackController.field_F ? 1 : 0;
@@ -32,7 +32,7 @@ final class u extends fc {
           }
           var4 = 64;
           for (var5 = 3; var5 >= 0; var5--) {
-            var6 = hk.field_a[var5 + 4 * var3];
+            var6 = SocketConnector.field_a[var5 + 4 * var3];
             var7 = Math.min(255, (1 + var5) * var4);
             if (v.field_g.length - 1 == var3) {
               var7 = var7 + (1 + var2) * var4 / v.field_g[var3];
@@ -90,7 +90,7 @@ final class u extends fc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

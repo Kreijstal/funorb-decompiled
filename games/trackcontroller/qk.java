@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk extends rh {
+final class qk extends ButtonWidget {
     int field_P;
     static int field_N;
     static byte[][] field_M;
@@ -15,12 +15,12 @@ final class qk extends rh {
         if (param0) {
           qk.j(125);
           if (oe.field_b == fd.field_h) {
-            return bf.field_f;
+            return WhirlpoolDigest.field_f;
           }
           return lf.field_T;
         }
         if (oe.field_b == fd.field_h) {
-          return bf.field_f;
+          return WhirlpoolDigest.field_f;
         }
         return lf.field_T;
     }
@@ -77,7 +77,7 @@ final class qk extends rh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -119,11 +119,11 @@ final class qk extends rh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -181,7 +181,7 @@ final class qk extends rh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

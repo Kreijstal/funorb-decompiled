@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed extends rh {
-    static kk field_I;
+final class ed extends ButtonWidget {
+    static Archive field_I;
 
     private ed(String param0, tg param1) {
         this(param0, lb.field_O.field_h, param1);
         try {
           this.field_y = lb.field_O.field_j;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -18,7 +18,7 @@ final class ed extends rh {
         try {
           this.field_y = lb.field_O.field_j;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class ed extends rh {
           var4_int = 67 / ((param3 + 20) / 57);
           rk.field_X = cj.field_e;
           if (param1 == 255) {
-            stackIn_5_0 = !(da.field_o >= 13);
+            stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
             fh.field_c = oc.a(stackIn_5_0, -21017);
             var7 = (String[]) null;
             gk.a((String[]) null, (byte) -93);
@@ -74,7 +74,7 @@ final class ed extends rh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ed extends rh {
         }
         ij.a((byte) 111, 4, false);
         if (param0 > -91) {
-          field_I = (kk) null;
+          field_I = (Archive) null;
         }
     }
 
@@ -96,9 +96,9 @@ final class ed extends rh {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         this.field_G = !this.field_G ? true : false;
-        super.b(param0, param1, param2, param3);
+        super.activate(param0, param1, param2, param3);
     }
 
     ed(String param0, tg param1, boolean param2) {
@@ -106,7 +106,7 @@ final class ed extends rh {
         try {
           this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

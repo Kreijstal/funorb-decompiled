@@ -10,17 +10,17 @@ final class fj extends ok {
     private int field_Q;
     static java.math.BigInteger field_N;
     private int field_I;
-    static ng[] field_M;
-    static ja field_H;
+    static IndexedSprite[] field_M;
+    static IntrusiveDeque field_H;
     private boolean field_J;
-    static nb field_P;
+    static MidiPlayer field_P;
     static String field_O;
     static int field_S;
     static String field_R;
     static int field_U;
     static int field_T;
 
-    private fj(int param0, int param1, int param2, int param3, t param4, tg param5, al param6, boolean param7, boolean param8) {
+    private fj(int param0, int param1, int param2, int param3, t param4, tg param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_E = 2147483647;
         this.field_Q = 2147483647;
@@ -29,7 +29,7 @@ final class fj extends ok {
           this.field_J = param8 ? true : false;
           this.field_L = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -60,12 +60,12 @@ final class fj extends ok {
         field_H = null;
     }
 
-    final void a(al param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_r = 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "fj.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "fj.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class fj extends ok {
         return stackIn_26_0;
     }
 
-    final boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_5_0 = 0;
@@ -176,7 +176,7 @@ final class fj extends ok {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -222,11 +222,11 @@ final class fj extends ok {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2, al param3) {
+    final void a(int param0, int param1, byte param2, UiWidget param3) {
         int stackIn_10_1 = 0;
         int stackIn_13_2 = 0;
         int stackIn_20_1 = 0;
@@ -242,11 +242,11 @@ final class fj extends ok {
         int var5_intLifetime1Lifetime1;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_B instanceof rh) ||
-            ((rh) (this.field_B)).field_B) &&
+          if ((!(this.field_B instanceof ButtonWidget) ||
+            ((ButtonWidget) (this.field_B)).field_B) &&
             1 == this.field_r) {
-            var5_int = -this.field_K + (kf.field_b - param1);
-            var6 = -param0 + (-this.field_I + fg.field_a);
+            var5_int = -this.field_K + (kf.mouseX - param1);
+            var6 = -param0 + (-this.field_I + fg.mouseY);
             if ((this.field_p != var5_int ||
               this.field_m != var6)) {
               this.field_m = var6;
@@ -301,7 +301,7 @@ final class fj extends ok {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -329,13 +329,13 @@ final class fj extends ok {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var3), "fj.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var3), "fj.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
         field_N = new java.math.BigInteger("65537");
-        field_H = new ja();
+        field_H = new IntrusiveDeque();
         field_O = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_R = "Resume Game";
         field_S = 2;

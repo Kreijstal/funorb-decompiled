@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk {
-    static oh field_b;
+    static BitmapFont field_b;
     static na field_a;
     static boolean field_c;
 
-    final static String a(int param0, kk param1, String param2, String param3, byte param4) {
+    final static String a(int param0, Archive param1, String param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_2_0 = null;
@@ -26,7 +26,7 @@ final class mk {
           }
           if (param4 <= 107) {
             var6 = (String) null;
-            mk.a(-118, (kk) null, (String) null, (String) null, (byte) 60);
+            mk.a(-118, (Archive) null, (String) null, (String) null, (byte) 60);
           }
           stackIn_6_0 = param2 + " - " + param1.a(param0, -24214) + "%";
           return stackIn_6_0;
@@ -52,7 +52,7 @@ final class mk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 

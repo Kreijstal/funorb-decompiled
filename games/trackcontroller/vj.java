@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj {
-    static qj field_a;
+    static Sprite field_a;
     static int[] field_c;
     static volatile boolean field_b;
 

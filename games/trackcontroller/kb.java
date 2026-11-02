@@ -3,7 +3,7 @@
  */
 final class kb {
     static aa field_e;
-    static uf field_d;
+    static PlatformTaskDispatcher field_d;
     static jj field_a;
     static boolean[] field_f;
     static int field_b;
@@ -15,9 +15,9 @@ final class kb {
           if (uh.field_b[param2] == null) {
             return;
           }
-          if (uh.field_b[param2].b(10000536)) {
+          if (uh.field_b[param2].isLinked(10000536)) {
             fe.a(uh.field_b[param2], 2);
-            da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+            SocketArchiveRequestConnection.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
             return;
           }
           return;
@@ -25,9 +25,9 @@ final class kb {
         if (uh.field_b[param2] == null) {
           return;
         }
-        if (uh.field_b[param2].b(10000536)) {
+        if (uh.field_b[param2].isLinked(10000536)) {
           fe.a(uh.field_b[param2], 2);
-          da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+          SocketArchiveRequestConnection.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
           return;
         }
     }

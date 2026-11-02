@@ -6,17 +6,17 @@ import java.io.*;
 final class hb {
     static String field_a;
     static java.awt.Image field_i;
-    static int field_f;
+    static int keyQueueRead;
     private int field_g;
     private int field_b;
-    private ga field_e;
-    private rj field_h;
+    private IterableNodeHashTable field_e;
+    private SecondaryNodeDeque field_h;
     static String field_c;
     static String field_d;
 
-    final static void a(Throwable param0, int param1, String param2) {
+    final static void reportClientError(Throwable param0, int param1, String param2) {
         try {
-          uf stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           boolean stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -47,7 +47,7 @@ final class hb {
               }
               var3 = var3 + param2;
             }
-            re.a((byte) 53, var3);
+            GameApplet.a((byte) 53, var3);
             var7 = bb.a(var3, (byte) -82, "%3a", ":");
             var8 = bb.a(var7, (byte) -82, "%40", "@");
             var9 = bb.a(var8, (byte) -82, "%26", "&");
@@ -58,12 +58,12 @@ final class hb {
             if (null == qf.field_b) {
               return;
             }
-            stackIn_14_0 = re.field_f;
+            stackIn_14_0 = GameApplet.field_f;
             stackIn_14_1 = false;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = qf.field_b.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(lj.field_a).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(GameKeyHandler.field_a).append("&u=");
             if (null != ac.field_b) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -73,7 +73,7 @@ final class hb {
               stackIn_15_3 = null;
               stackIn_15_6 = "" + fi.field_p;
             }
-            var4 = ((uf) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(uf.field_e).append("&v2=").append(uf.field_g).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
             while (0 == var4.field_f) {
               wl.a(1L, false);
             }
@@ -127,7 +127,7 @@ final class hb {
               param1.d(0, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.d(0, be.d((byte) -98, -1 + var5));
+              var6_int = param1.d(0, PacketBuffer.d((byte) -98, -1 + var5));
               var4[var5] = var4[var6_int];
             }
           }
@@ -143,7 +143,7 @@ final class hb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -161,15 +161,15 @@ final class hb {
             var8.field_m = 0L;
           } else {
             var7 = new ad(var6, var8.field_o);
-            this.field_e.a(var7, var8.field_b, -1);
+            this.field_e.a(var7, var8.key, -1);
             this.field_h.a(var7, 8466);
             ((vh) ((Object) var7)).field_m = 0L;
-            var8.a(-57);
+            var8.unlink(-57);
             var8.e(0);
           }
           return var6;
         }
-        var8.a(-110);
+        var8.unlink(-110);
         var8.e(0);
         this.field_g = this.field_g + var8.field_o;
         return null;
@@ -185,12 +185,12 @@ final class hb {
         try {
           if (param0 >= -92) {
             var4 = (String) null;
-            hb.a((Throwable) null, 126, (String) null);
+            hb.reportClientError((Throwable) null, 126, (String) null);
           }
           if (param1 == null) {
             return;
           }
-          param1.a(-113);
+          param1.unlink(-113);
           param1.e(0);
           this.field_g = this.field_g + param1.field_o;
           return;
@@ -204,7 +204,7 @@ final class hb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class hb {
           this.field_h.a(var6, 8466);
           ((vh) ((Object) var6)).field_m = 0L;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class hb {
             this.a(-15L, (byte) -124);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -275,6 +275,6 @@ final class hb {
         field_a = "OK";
         field_d = "Type your password again to make sure it's correct";
         field_c = "Time bonus: ";
-        field_f = 0;
+        keyQueueRead = 0;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mh extends fc {
+final class mh extends IntrusiveNode {
     static String[] field_k;
     short[] field_q;
     byte[] field_l;
@@ -11,7 +11,7 @@ final class mh extends fc {
     uh[] field_p;
     static boolean field_i;
     byte[] field_j;
-    ik[] field_o;
+    PcmSample[] field_o;
 
     final void f(int param0) {
         if (param0 != 21645) {
@@ -63,7 +63,7 @@ final class mh extends fc {
                   }
                 }
                 if (var7 != null) {
-                  this.field_o[var8] = (ik) (var7);
+                  this.field_o[var8] = (PcmSample) (var7);
                   this.field_n[var8] = 0;
                 }
               }
@@ -93,7 +93,7 @@ final class mh extends fc {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -105,12 +105,12 @@ final class mh extends fc {
         Throwable decompiledCaughtException = null;
         var1_ref = cj.field_o;
         synchronized (var1_ref) {
-          if (lj.field_d == fc.field_d) {
+          if (GameKeyHandler.field_d == IntrusiveNode.field_d) {
             return false;
           }
-          kg.field_d = mc.field_K[lj.field_d];
-          md.field_d = tk.field_o[lj.field_d];
-          lj.field_d = 1 + lj.field_d & param0;
+          kg.field_d = mc.field_K[GameKeyHandler.field_d];
+          md.field_d = AsyncRequest.field_o[GameKeyHandler.field_d];
+          GameKeyHandler.field_d = 1 + GameKeyHandler.field_d & param0;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;
@@ -176,7 +176,7 @@ final class mh extends fc {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        be var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         uh var40 = null;
         byte[] var41 = null;
@@ -260,41 +260,41 @@ final class mh extends fc {
           this.field_q = new short[128];
           this.field_n = new int[128];
           this.field_p = new uh[128];
-          this.field_o = new ik[128];
-          var38 = new be(param0);
-          for (var3 = 0; var38.field_j[var3 + var38.field_k] != 0; var3++) {
+          this.field_o = new PcmSample[128];
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = var38.f(-126);
+            var4[var5] = var38.readByte(-126);
           }
           var3++;
-          var38.field_k = var38.field_k + 1;
-          var5Lifetime1 = var38.field_k;
-          var38.field_k = var38.field_k + var3;
-          for (var6 = 0; var38.field_j[var6 + var38.field_k] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var6 + var38.position] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.f(-128);
+            var7[var8] = var38.readByte(-128);
           }
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_k;
-          var38.field_k = var38.field_k + var6;
-          for (var9 = 0; var38.field_j[var38.field_k + var9] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.f(-128);
+            var10[var11_int] = var38.readByte(-128);
           }
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -304,7 +304,7 @@ final class mh extends fc {
             var13_int = 1;
             var12 = 2;
             for (var14 = 2; var9 > var14; var14++) {
-              var15_int = var38.h(16383);
+              var15_int = var38.readUnsignedByte(16383);
               if (var15_int != 0) {
                 if (var13_int >= var15_int) {
                   var15_int--;
@@ -326,17 +326,17 @@ final class mh extends fc {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.h(16383);
+            var16_int = var38.readUnsignedByte(16383);
             if (var16_int > 0) {
               var15_ref.field_c = new byte[2 * var16_int];
             }
-            var16_intLifetime1 = var38.h(16383);
+            var16_intLifetime1 = var38.readUnsignedByte(16383);
             if (var16_intLifetime1 > 0) {
               var15_ref.field_i = new byte[2 + 2 * var16_intLifetime1];
               var40.field_i[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.h(16383);
+          var14Lifetime2 = var38.readUnsignedByte(16383);
           if (0 >= var14Lifetime2) {
             stackIn_39_0 = null;
           } else {
@@ -344,7 +344,7 @@ final class mh extends fc {
           }
           var46 = stackIn_39_0;
           var15 = var46;
-          var14Lifetime3 = var38.h(16383);
+          var14Lifetime3 = var38.readUnsignedByte(16383);
           if (0 < var14Lifetime3) {
             stackIn_42_0 = new byte[var14Lifetime3 * 2];
           } else {
@@ -353,24 +353,24 @@ final class mh extends fc {
           var58 = stackIn_42_0;
           var47 = var58;
           var16 = var47;
-          for (var17 = 0; var38.field_j[var38.field_k + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var19 < var17; var19++) {
-            var18[var19] = var38.f(-128);
+            var18[var19] = var38.readByte(-128);
           }
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.h(16383);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(16383);
             this.field_q[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.h(16383);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(16383);
             this.field_q[var20Lifetime1] = (short)(this.field_q[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -385,7 +385,7 @@ final class mh extends fc {
               }
               var22 = var38.m(127);
             }
-            this.field_q[var23] = (short)(this.field_q[var23] + tc.a(-1 + var22 << 14, 32768));
+            this.field_q[var23] = (short)(this.field_q[var23] + RandomAccessCacheFile.a(-1 + var22 << 14, 32768));
             this.field_n[var23] = var22;
             var20Lifetime2--;
           }
@@ -397,7 +397,7 @@ final class mh extends fc {
               if (0 == var20Lifetime3) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_j[incrementValue$5] - 1;
+                var23Lifetime1 = var38.payload[incrementValue$5] - 1;
                 if (var55.length <= var21Lifetime1) {
                   var20Lifetime3 = -1;
                 } else {
@@ -416,7 +416,7 @@ final class mh extends fc {
               if (0 == var20Lifetime4) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_j[incrementValue$3] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$3] + 16 << 2;
                 if (var21Lifetime2 < var56.length) {
                   var20Lifetime4 = var7[var21Lifetime2++];
                 } else {
@@ -455,34 +455,34 @@ final class mh extends fc {
                 var20Lifetime6 = -1;
               }
               if (this.field_n[var27] > 0) {
-                var26Lifetime1 = 1 + var38.h(16383);
+                var26Lifetime1 = 1 + var38.readUnsignedByte(16383);
               }
             }
             var20Lifetime6--;
             this.field_j[var27] = (byte)var26Lifetime1;
           }
-          this.field_m = var38.h(16383) + 1;
+          this.field_m = var38.readUnsignedByte(16383) + 1;
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (var45.field_c != null) {
               for (var29 = 1; var29 < var45.field_c.length; var29 += 2) {
-                var45.field_c[var29] = var38.f(-126);
+                var45.field_c[var29] = var38.readByte(-126);
               }
             }
             if (null != var45.field_i) {
               for (var29Lifetime5 = 3; var45.field_i.length - 2 > var29Lifetime5; var29Lifetime5 += 2) {
-                var45.field_i[var29Lifetime5] = var38.f(-128);
+                var45.field_i[var29Lifetime5] = var38.readByte(-128);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var46.length > var27Lifetime2; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.f(-128);
+              var15[var27Lifetime2] = var38.readByte(-128);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var58.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.f(-127);
+              var16[var27Lifetime3] = var38.readByte(-127);
             }
           }
           for (var27Lifetime4 = 0; var27Lifetime4 < var12; var27Lifetime4++) {
@@ -491,7 +491,7 @@ final class mh extends fc {
             if (null != var48.field_i) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_i.length; var29Lifetime1 += 2) {
-                var19Lifetime3 = var19Lifetime3 + 1 + var38.h(16383);
+                var19Lifetime3 = var19Lifetime3 + 1 + var38.readUnsignedByte(16383);
                 var48.field_i[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -502,16 +502,16 @@ final class mh extends fc {
             if (null != var49.field_c) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_c.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var38.h(16383) + (1 + var19Lifetime4);
+                var19Lifetime4 = var38.readUnsignedByte(16383) + (1 + var19Lifetime4);
                 var49.field_c[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (var15 != null) {
-            var19Lifetime5 = var38.h(16383);
+            var19Lifetime5 = var38.readUnsignedByte(16383);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var27Lifetime6 < var46.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = var19Lifetime5 + 1 + var38.h(16383);
+              var19Lifetime5 = var19Lifetime5 + 1 + var38.readUnsignedByte(16383);
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var46[0];
@@ -538,13 +538,13 @@ final class mh extends fc {
           }
           if (var16 == null) {
             for (var27Lifetime7 = 0; var27Lifetime7 < var12; var27Lifetime7++) {
-              var13[var27Lifetime7].field_j = var38.h(16383);
+              var13[var27Lifetime7].field_j = var38.readUnsignedByte(16383);
             }
           } else {
-            var19Lifetime6 = var38.h(16383);
+            var19Lifetime6 = var38.readUnsignedByte(16383);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var27Lifetime7 < var58.length; var27Lifetime7 += 2) {
-              var19Lifetime6 = var38.h(16383) + var19Lifetime6 + 1;
+              var19Lifetime6 = var38.readUnsignedByte(16383) + var19Lifetime6 + 1;
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7 = var58[0];
@@ -595,35 +595,35 @@ final class mh extends fc {
               this.field_r[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
             for (var27Lifetime7 = 0; var27Lifetime7 < var12; var27Lifetime7++) {
-              var13[var27Lifetime7].field_j = var38.h(16383);
+              var13[var27Lifetime7].field_j = var38.readUnsignedByte(16383);
             }
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
             var50 = var13[var27Lifetime8];
             var28Lifetime2 = var50;
             if (var50.field_c != null) {
-              var50.field_f = var38.h(16383);
+              var50.field_f = var38.readUnsignedByte(16383);
             }
             if (null != var50.field_i) {
-              var28Lifetime2.field_g = var38.h(16383);
+              var28Lifetime2.field_g = var38.readUnsignedByte(16383);
             }
             if (var28Lifetime2.field_j > 0) {
-              var28Lifetime2.field_k = var38.h(16383);
+              var28Lifetime2.field_k = var38.readUnsignedByte(16383);
             }
           }
           for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
-            var13[var27Lifetime9].field_a = var38.h(16383);
+            var13[var27Lifetime9].field_a = var38.readUnsignedByte(16383);
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
             var51 = var13[var27Lifetime10];
             if (0 < var51.field_a) {
-              var51.field_h = var38.h(16383);
+              var51.field_h = var38.readUnsignedByte(16383);
             }
           }
           for (var27Lifetime11 = 0; var12 > var27Lifetime11; var27Lifetime11++) {
             var52 = var13[var27Lifetime11];
             if (var52.field_h > 0) {
-              var52.field_l = var38.h(16383);
+              var52.field_l = var38.readUnsignedByte(16383);
             }
           }
           return;
@@ -637,7 +637,7 @@ final class mh extends fc {
           } else {
             stackIn_208_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
         }
     }
 

@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends td implements a, m {
+final class bk extends td implements a, ButtonListener {
     static int field_D;
     static String[] field_J;
-    private rh field_H;
+    private ButtonWidget field_H;
     private lf field_K;
     static String field_G;
-    static oh field_E;
+    static BitmapFont font;
     nd field_I;
-    private rh field_F;
+    private ButtonWidget field_F;
 
-    final void a(int param0, int param1, byte param2, al param3) {
+    final void a(int param0, int param1, byte param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_F.field_B = this.l(19);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "bk.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "bk.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int param0, int param1, int param2, al param3, int param4, String param5, String param6) {
+    private final int a(int param0, int param1, int param2, UiWidget param3, int param4, String param5, String param6) {
         RuntimeException var8 = null;
         mi var9 = null;
         sa var10 = null;
@@ -66,7 +66,7 @@ final class bk extends td implements a, m {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -83,11 +83,11 @@ final class bk extends td implements a, m {
           var4 = param1;
           ((lb) ((Object) var3)).a(false, var4, -124);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "bk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "bk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -116,7 +116,7 @@ final class bk extends td implements a, m {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -132,9 +132,9 @@ final class bk extends td implements a, m {
         super(0, 0, 496, 0, (t) null);
         this.field_K = new lf("", (tg) null, 12);
         ic var1 = new ic(fk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
-        al var2 = new al(qd.field_a, var1, (tg) null);
-        this.field_F = new rh(hb.field_a, (tg) null);
-        this.field_H = new rh(ta.field_a, (tg) null);
+        UiWidget var2 = new UiWidget(qd.field_a, var1, (tg) null);
+        this.field_F = new ButtonWidget(hb.field_a, (tg) null);
+        this.field_H = new ButtonWidget(ta.field_a, (tg) null);
         this.field_K.field_n = ak.field_c;
         this.field_K.a(1, new af(this.field_K));
         this.field_F.field_B = false;
@@ -160,7 +160,7 @@ final class bk extends td implements a, m {
         this.a(55 + var3 + var4, -3050, 0, 496, 0);
     }
 
-    private final int a(al param0, String param1, int param2, byte param3, int param4, String param5) {
+    private final int a(UiWidget param0, String param1, int param2, byte param3, int param4, String param5) {
         int discarded$1 = 0;
         RuntimeException var7 = null;
         String var8 = null;
@@ -176,7 +176,7 @@ final class bk extends td implements a, m {
         try {
           if (param3 != -13) {
             var8 = (String) null;
-            discarded$1 = this.a(-122, 46, 116, (al) null, 107, (String) null, (String) null);
+            discarded$1 = this.a(-122, 46, 116, (UiWidget) null, 107, (String) null, (String) null);
           }
           stackIn_3_0 = this.a(35, param2, param4, param0, 19753, param1, param5);
           return stackIn_3_0;
@@ -202,7 +202,7 @@ final class bk extends td implements a, m {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -248,25 +248,25 @@ final class bk extends td implements a, m {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final void a(byte param0) {
         ((af) (this.field_K.a((byte) -97))).a(false);
         if (param0 <= 117) {
-          al var3 = (al) null;
-          this.a((byte) -3, 'o', (al) null, 53);
+          UiWidget var3 = (UiWidget) null;
+          this.a((byte) -3, 'o', (UiWidget) null, 53);
         }
     }
 
     final static void j(int param0) {
-        ue.field_a = ne.field_a.g(param0 + param0);
-        CharSequence var2 = (CharSequence) ((Object) ue.field_a);
+        IntrusiveDequeCursor.field_a = ne.field_a.readString(param0 + param0);
+        CharSequence var2 = (CharSequence) ((Object) IntrusiveDequeCursor.field_a);
         dd.field_p = r.a(var2, param0 - 11133);
     }
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -299,12 +299,12 @@ final class bk extends td implements a, m {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void k(int param0) {
-        field_E = null;
+        font = null;
         if (param0 >= -71) {
           return;
         }

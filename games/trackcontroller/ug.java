@@ -5,9 +5,9 @@ class ug extends ii {
     private boolean field_E;
     private int field_w;
     private boolean field_v;
-    private qj[] field_S;
+    private Sprite[] field_S;
     private boolean field_U;
-    private qj field_ab;
+    private Sprite field_ab;
     private boolean field_H;
     private int field_z;
     private int field_F;
@@ -18,28 +18,28 @@ class ug extends ii {
     private int field_P;
     private int field_K;
     private int field_V;
-    private qj[] field_Y;
+    private Sprite[] field_Y;
     private boolean field_G;
     private int field_N;
     private int field_u;
     private int field_X;
-    private qj[] field_C;
+    private Sprite[] field_C;
     private int field_x;
-    private oh field_I;
-    private qj[] field_eb;
-    private qj field_M;
+    private BitmapFont field_I;
+    private Sprite[] field_eb;
+    private Sprite field_M;
     private int field_db;
     private boolean field_hb;
-    private qj[] field_D;
+    private Sprite[] field_D;
     static String field_t;
-    private qj field_W;
+    private Sprite field_W;
     private int field_T;
     private String field_J;
     private int field_fb;
-    private qj field_A;
+    private Sprite field_A;
     static bj field_cb;
     private int field_B;
-    private qj field_O;
+    private Sprite field_O;
     private int field_gb;
     private int field_y;
 
@@ -50,11 +50,11 @@ class ug extends ii {
           param1.addKeyListener(cj.field_o);
           param1.addFocusListener(cj.field_o);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(String param0, kk param1, int param2, String param3) {
+    final static String a(String param0, Archive param1, int param2, String param3) {
         RuntimeException var4 = null;
         java.awt.Component var5 = null;
         String stackIn_5_0 = null;
@@ -100,7 +100,7 @@ class ug extends ii {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ class ug extends ii {
         field_cb = null;
         if (param0 > -84) {
           String var2 = (String) null;
-          ug.a((String) null, (kk) null, -13, (String) null);
+          ug.a((String) null, (Archive) null, -13, (String) null);
         }
     }
 
@@ -251,7 +251,7 @@ class ug extends ii {
           } else {
             stackIn_96_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -270,13 +270,13 @@ class ug extends ii {
         this.field_T = -2147483648;
         this.field_gb = -1;
         try {
-          this.field_b = param0;
+          this.key = param0;
           this.a(param1, 256);
           if (param6 != null) {
             this.field_L = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

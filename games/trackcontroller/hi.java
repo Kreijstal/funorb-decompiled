@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends tk {
+final class hi extends AsyncRequest {
     byte field_B;
     int field_z;
     static int field_y;
     static int[] field_A;
-    be field_x;
+    PacketBuffer field_x;
 
     final static void b(int param0, int param1, int param2) {
         int var3;
@@ -36,18 +36,18 @@ final class hi extends tk {
         }
         mb.a((byte) -35, kj.field_l);
         ig.a();
-        ll.a();
-        be.a((byte) -78);
+        SoftwareRasterizer.a();
+        PacketBuffer.a((byte) -78);
         if (256 > var5) {
-          ll.c(0, 0, ll.field_d, ll.field_k, 0, -var5 + 256);
-          ch.m(119);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, -var5 + 256);
+          GameShell.m(119);
           if (150 <= fb.field_a) {
             ej.field_d.d(var3 + 15, 10 + var4, var5);
           } else {
             kj.field_l.d(var3, var4);
           }
         } else {
-          ch.m(119);
+          GameShell.m(119);
           if (150 <= fb.field_a) {
             ej.field_d.d(var3 + 15, 10 + var4, var5);
             var6 = fb.field_a - 125;
@@ -152,10 +152,10 @@ final class hi extends tk {
           return 0;
         }
         if (param0 == 43) {
-          return this.field_x.field_k * 100 / (this.field_x.field_j.length - this.field_B);
+          return this.field_x.position * 100 / (this.field_x.payload.length - this.field_B);
         }
         field_y = -41;
-        return this.field_x.field_k * 100 / (this.field_x.field_j.length - this.field_B);
+        return this.field_x.position * 100 / (this.field_x.payload.length - this.field_B);
     }
 
     final byte[] g(int param0) {
@@ -165,8 +165,8 @@ final class hi extends tk {
         if (this.field_w) {
           throw new RuntimeException();
         }
-        if (-this.field_B + this.field_x.field_j.length <= this.field_x.field_k) {
-          return this.field_x.field_j;
+        if (-this.field_B + this.field_x.payload.length <= this.field_x.position) {
+          return this.field_x.payload;
         }
         throw new RuntimeException();
     }

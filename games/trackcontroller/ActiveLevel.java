@@ -1,0 +1,1908 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ActiveLevel extends LevelGrid {
+    private Sprite field_ab;
+    private int field_W;
+    private int field_U;
+    static int field_V;
+    private int field_Y;
+    private int field_r;
+    private int field_cb;
+    private int phase;
+    private int field_C;
+    private cd field_A;
+    private int field_X;
+    private int field_x;
+    private int field_R;
+    int score;
+    private String field_L;
+    private boolean field_F;
+    private IntrusiveDeque movingBlocks;
+    private int playerColumn;
+    static int[] field_H;
+    private int field_q;
+    private int field_T;
+    private int field_s;
+    private int field_G;
+    private LevelData level;
+    private int field_E;
+    private int field_t;
+    private int field_p;
+    static int field_P;
+    private int field_v;
+    private long field_w;
+    private int field_bb;
+    private String field_y;
+    private int playerRow;
+    static int[] field_B;
+    private IntrusiveDeque field_M;
+    private int field_N;
+    private boolean field_z;
+    private boolean field_K;
+    private LevelView field_u;
+
+    private final void unlockAchievement(int param0, int param1, int param2) {
+        if (param2 != -5383) {
+          return;
+        }
+        int var4 = 1 << param1;
+        if ((th.field_l & var4) != 0) {
+          return;
+        }
+        th.field_l = th.field_l | var4;
+        oe.field_e = oe.field_e | var4;
+        this.field_s = this.field_s | var4;
+        ka.field_d.addLast((byte) -123, new cf(param1, param0, this.field_R, this.field_bb, this.field_cb, this.field_E));
+    }
+
+    private final void a(IntrusiveDeque param0, int param1, IntrusiveDeque param2, MovingBlock param3) {
+        int stackIn_9_0 = 0;
+        int stackIn_12_1 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        var6 = TrackController.field_F ? 1 : 0;
+        try {
+          if (!param3.advance(param1 - 3045)) {
+            param3.unlink(-68);
+            this.tileFlags[param3.row][param3.column] = RandomAccessCacheFile.a(this.tileFlags[param3.row][param3.column], ~this.b(16384, param3.columnStep, param3.rowStep));
+            param3.completeStep(param1 ^ 3098);
+            this.tileFlags[param3.row][param3.column] = param3.tileValue;
+            if (param3.tileValue == 38) {
+              this.playerRow = param3.row;
+              this.playerColumn = param3.column;
+              stackIn_9_0 = (this.playerRow != this.field_G) ? 0 : 1;
+              if (this.field_x != this.playerColumn) {
+                stackIn_12_1 = 0;
+              } else {
+                stackIn_12_1 = 1;
+              }
+              if ((stackIn_9_0 ^ stackIn_12_1) == 0) {
+                this.field_G = -1;
+                this.field_x = -1;
+              }
+            } else {
+              if (this.floorKind[param3.row][param3.column] == 1) {
+                param2.addLast((byte) -118, param3);
+              } else {
+                param0.addLast((byte) -123, param3);
+              }
+            }
+          }
+          if (param1 != 3098) {
+            this.field_C = 32;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_19_0 = var5;
+          stackIn_19_1 = new StringBuilder().append("ri.BA(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          if (param3 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+        }
+    }
+
+    private final int a(byte param0, int param1) {
+        int stackIn_7_0 = 0;
+        if (param0 <= 105) {
+          this.field_L = (String) null;
+        }
+        if (param1 != 38 &&
+          (32640 & param1) == 0) {
+          stackIn_7_0 = -65 & param1;
+        } else {
+          stackIn_7_0 = 0;
+        }
+        return stackIn_7_0;
+    }
+
+    private final int a(int[][] param0, int param1, int param2, int param3) {
+        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3 >= 0 &&
+            param0.length > param3 &&
+            0 <= param1) {
+            if (param0[param3].length <= param1) {
+              return 0;
+            }
+            if (param2 != 21278) {
+              field_B = (int[]) null;
+            }
+            stackIn_10_0 = this.a((byte) 110, param0[param3][param1]);
+            return stackIn_10_0;
+          }
+          stackIn_6_0 = 0;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ri.HA(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final void setPhase(int param0, int param1) {
+        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        dh var7_ref_dh;
+        int var9;
+        int var6Lifetime1;
+        var9 = TrackController.field_F ? 1 : 0;
+        if (param0 != 247) {
+          return;
+        }
+        var3 = BufferedSocket.field_c[this.field_bb & 7][this.field_E & 7];
+        this.field_R = this.field_R - var3 * this.field_E;
+        this.field_cb = this.field_cb + var3;
+        this.field_bb = this.field_bb + var3;
+        if (param1 == this.phase) {
+          return;
+        }
+        this.field_v = this.tickCount;
+        this.phase = param1;
+        var7 = this.phase;
+        if (var7 == 2) {
+          fe.a(false, Model.field_P[2], param0 ^ 503);
+          si.$cfr$intArgs$a$e9dea5688aa5(-68, 3);
+          var4 = this.field_X >> 1;
+          var5 = this.level.field_v + var4;
+          this.field_R = this.field_R + var5;
+          this.score = this.score + var5;
+          this.field_y = dh.a((byte) -127, new String[]{Integer.toString(this.level.field_v), Integer.toString(var4), Integer.toString(var5)}, ob.field_o);
+          this.field_Y = 156;
+          var6 = bk.font.stringWidth(this.field_y) + 4;
+          if (this.field_Y < var6) {
+            this.field_Y = var6 + var6 % 26;
+            this.field_Y = this.field_Y - this.field_Y % 26;
+          }
+          if (!this.field_F) {
+            this.field_p = 0;
+          } else {
+            this.field_L = RandomAccessCacheFile.field_e + (var5 << 1);
+            this.score = this.score + var5;
+            this.field_R = this.field_R + var5;
+            this.field_p = this.field_p + 1;
+            var6Lifetime1 = 4 + bk.font.stringWidth(this.field_L);
+            if (this.field_Y < var6Lifetime1) {
+              this.field_Y = var6Lifetime1 % 26 + var6Lifetime1;
+              this.field_Y = this.field_Y - this.field_Y % 26;
+            }
+          }
+          if (ui.a(0, true)) {
+            this.field_W = this.field_W + 1;
+          }
+          this.field_t = -this.field_Y;
+          if (this.level.levelIndex == gj.levels.length) {
+            this.g(63);
+          }
+          if (Math.abs(this.score) > this.field_T) {
+            vd.b(-1, 10, 23636);
+          }
+          this.field_A.a(-1, this.field_A.field_a, (byte) 100);
+          if (ArchiveIndex.field_i + 1 == this.level.levelIndex) {
+            ArchiveIndex.field_i = this.level.levelIndex;
+            var7_ref_dh = new dh(0, -1 + this.level.levelIndex, this.field_R, this.field_bb, this.field_cb, this.field_E);
+            if (!jj.s(param0 - 205)) {
+              ij.a(var7_ref_dh, 5, -124);
+            } else {
+              cd.field_h.addLast((byte) -97, var7_ref_dh);
+            }
+          }
+          if (ArchiveIndex.field_i != 5) {
+            if (10 != ArchiveIndex.field_i) {
+              if (ArchiveIndex.field_i != 20) {
+                if (ArchiveIndex.field_i == 30) {
+                  this.unlockAchievement(252, 3, -5383);
+                }
+              } else {
+                this.unlockAchievement(253, 2, param0 - 5630);
+              }
+            } else {
+              this.unlockAchievement(254, 1, param0 ^ -5618);
+            }
+          } else {
+            this.unlockAchievement(255, 0, param0 ^ -5618);
+          }
+          if (this.field_p != 5) {
+            if (10 == this.field_p) {
+              this.unlockAchievement(250, 5, param0 - 5630);
+            } else {
+              if (this.field_p == 20) {
+                this.unlockAchievement(249, 6, -5383);
+              } else {
+                if (30 == this.field_p) {
+                  this.unlockAchievement(248, 7, -5383);
+                }
+              }
+            }
+          } else {
+            this.unlockAchievement(251, 4, param0 - 5630);
+          }
+          if (this.score < 100000) {
+            if (50000 > this.score) {
+              if (this.score < 25000) {
+                if (this.score >= 10000) {
+                  this.unlockAchievement(247, 8, -5383);
+                }
+              } else {
+                this.unlockAchievement(246, 9, -5383);
+              }
+            } else {
+              this.unlockAchievement(245, 10, param0 - 5630);
+            }
+          } else {
+            this.unlockAchievement(244, 11, -5383);
+          }
+          if (ui.a(0, true) &&
+            20 == this.field_W) {
+            this.unlockAchievement(243, 12, param0 - 5630);
+          }
+          for (var7 = 0; var7 < 16; var7++) {
+            for (var8 = 0; var8 < 16; var8++) {
+              this.tileFlags[var7][var8] = RandomAccessCacheFile.a(this.tileFlags[var7][var8], -32641);
+            }
+          }
+          this.field_u = new LevelView(this.floorKind, this.tileFlags, this.targetLayout, 16, 48, true);
+          this.field_u.tickCount = this.tickCount;
+          return;
+        }
+        return;
+    }
+
+    private final int b(int param0, byte param1, int param2) {
+        int var4;
+        if (param1 >= -29) {
+          ActiveLevel.e(-34);
+        }
+        var4 = param0 + param2 * 2;
+        if (var4 == -1) {
+          return 128;
+        }
+        if (var4 == 1) {
+          return 1024;
+        }
+        if (var4 == -2) {
+          return 512;
+        }
+        if (var4 == 2) {
+          return 256;
+        }
+        throw new IllegalStateException();
+    }
+
+    public static void a(int param0) {
+        field_B = null;
+        field_H = null;
+        if (param0 > -27) {
+          field_V = -43;
+        }
+    }
+
+    ActiveLevel() {
+        super(true, 16, 48);
+        this.field_W = 0;
+        this.field_U = -1;
+        this.field_r = -1;
+        this.field_cb = 4194336;
+        this.field_x = -1;
+        this.field_E = -17;
+        this.field_R = 0;
+        this.field_t = -1000;
+        this.field_G = -1;
+        this.field_p = 0;
+        this.field_F = true;
+        this.field_bb = 16777219;
+        this.field_A = new cd(1);
+        this.field_z = false;
+        this.field_bb = qh.field_b.levelIndex;
+        this.field_R = -692867528;
+        this.field_cb = 640022790;
+        this.field_E = 0;
+        this.loadLevel(qh.field_b, 42);
+    }
+
+    private final void a(int param0, boolean param1) {
+        int discarded$0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var4Lifetime1;
+        var6 = TrackController.field_F ? 1 : 0;
+        if (this.field_u != null) {
+          this.field_u.tick(true, 105);
+        }
+        var3 = this.field_a + 130;
+        if (this.field_t < var3) {
+          this.field_t = this.field_t + 3;
+          if (var3 < this.field_t) {
+            this.field_t = var3;
+          }
+        }
+        if (param0 != 150) {
+          discarded$0 = this.b(-96, 54, 106);
+        }
+        if (this.field_q > 0) {
+          var4 = 20;
+          if (this.field_q < var4) {
+            var4 = this.field_q;
+          }
+          var5 = this.field_q % 20;
+          if (var5 != 0) {
+            var4 = var5;
+          }
+          this.field_T = this.field_T + (var4 >> 1);
+          this.field_q = this.field_q - var4;
+          if (this.field_F) {
+            this.field_T = this.field_T + (var4 >> 1);
+          }
+        } else {
+          if (this.field_X > 0) {
+            var4 = 20;
+            if (var4 > this.field_X) {
+              var4 = this.field_X;
+            }
+            var5 = this.field_X % 20;
+            if (var5 != 0) {
+              var4 = var5;
+            }
+            this.field_X = this.field_X - var4;
+            this.field_T = this.field_T + (var4 >> 1);
+            if (this.field_F) {
+              this.field_T = this.field_T + (var4 >> 1);
+            }
+          }
+        }
+        if (0 == this.field_X) {
+          hl.a(10, 0);
+        }
+        if (param1) {
+          var4Lifetime1 = 0;
+          while (mh.e(127)) {
+            this.field_A.b((byte) -107);
+            if (!this.field_A.b(false)) {
+              continue;
+            }
+            var4Lifetime1 = 1;
+          }
+          this.field_A.a(26 + this.field_C, this.field_t, 26, false, 156 + this.field_t);
+          if (this.field_A.b(false)) {
+            var4Lifetime1 = 1;
+          }
+          if (var4Lifetime1 != 0) {
+            this.field_T = Math.abs(this.score);
+            hl.a(10, 0);
+            sc.field_g = -2;
+          }
+        }
+    }
+
+    private final void f(int param0) {
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var12Lifetime1;
+        var14 = TrackController.field_F ? 1 : 0;
+        var2 = -this.field_v + this.tickCount;
+        var3 = 69;
+        if (param0 >= -93) {
+          return;
+        }
+        var4 = 92;
+        var5 = 150;
+        var6 = (480 - var5) * (var2 - var4) * (var2 - var4) / ((var3 - var4) * (-var4 + var3)) + var5;
+        if (var4 < var2 &&
+          var6 > 194) {
+          var6 = 194;
+        }
+        if (var2 > var3 << 1) {
+          var6 = 194;
+        }
+        if (var2 > var4) {
+          if (null == jj.field_fb) {
+            jj.field_fb = new int[pi.field_f.length()];
+          }
+          var7 = var2;
+          for (var8 = 0; var8 < jj.field_fb.length; var8++) {
+            jj.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
+            var7--;
+          }
+          var8Lifetime2 = bk.font.stringWidth(pi.field_f);
+          bk.font.b(8, -1);
+          bk.font.a(pi.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
+        }
+        if (0 != this.field_s) {
+          j.field_b[1].e(466, var6);
+          cl.a(nd.field_L, 457, 124, var6 + 71, 176, 4);
+          var7Lifetime1 = this.field_s;
+          var8Lifetime1 = sc.a(var7Lifetime1, -1);
+          var9 = (-var3 + var2) / 300;
+          var10 = var9 - 1;
+          if (0 > var9) {
+            var9 = 0;
+          }
+          if (var9 >= var8Lifetime1) {
+            var9 = var8Lifetime1 - 1;
+            var10 = -1;
+          }
+          var11 = -1;
+          for (var12 = 0; var12 < wa.field_k.length; var12++) {
+            if ((1 << var12 & var7Lifetime1) != 0) {
+              if (var10 == 0) {
+                var11 = var12;
+              }
+              if (var9 == 0) {
+                bb.field_b[var12].b(467, 26 + var6 + 71 + 10);
+                bk.font.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
+              }
+              var9--;
+              var10--;
+            }
+          }
+          if (var11 != -1) {
+            var12Lifetime1 = (var2 - var3) % 300;
+            var13 = var6 + (var12Lifetime1 * var12Lifetime1 >> 2);
+            cl.a(nd.field_L, 457, 124, 71 + var13, 176, 4);
+            bb.field_b[var11].b(467, 26 + (81 + var13));
+            bk.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
+          }
+          j.field_b[2].e(466, var6);
+          return;
+        }
+        j.field_b[0].e(466, var6);
+        return;
+    }
+
+    private final boolean matchesTargetLayout(int param0) {
+        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var13;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        var13 = TrackController.field_F ? 1 : 0;
+        if (LevelGrid.field_j >= 2 &&
+          ni.keyDown[12]) {
+          return true;
+        }
+        if (param0 < 79) {
+          this.field_v = 41;
+        }
+        if (this.movingBlocks.size(true) > 1) {
+          return false;
+        }
+        if (this.movingBlocks.size(true) == 1 &&
+          ((MovingBlock) (this.movingBlocks.first(2))).tileValue != 38) {
+          return false;
+        }
+        if (this.b(this.tileFlags, (byte) -66) != this.field_w) {
+          return false;
+        }
+        var2 = this.a(this.targetLayout, 0);
+        var3 = this.a(this.targetLayout, (byte) -76);
+        var4 = -var2 + this.a(this.tileFlags, 0);
+        var5 = -var3 + this.a(this.tileFlags, (byte) -69);
+        var6 = this.targetLayout.length;
+        var7 = this.targetLayout[0].length;
+        for (var8 = var2; var6 > var8; var8++) {
+          for (var9 = var3; var7 > var9; var9++) {
+            if (~this.targetLayout[var8][var9] != ~this.a(this.tileFlags, var5 + var9, 21278, var4 + var8)) {
+              return false;
+            }
+          }
+        }
+        var8Lifetime1 = var4 + var2;
+        var9Lifetime1 = 0;
+        var10 = this.tileFlags[0].length;
+        var11 = this.tileFlags.length - 1;
+        scanLoop1: while (true) {
+          if (var11 >= 0) {
+            for (var12 = 0; var10 > var12; var12++) {
+              if (this.a((byte) 121, this.tileFlags[var11][var12]) != 0) {
+                break scanLoop1;
+              }
+            }
+            var11--;
+            var9Lifetime1++;
+            continue;
+          }
+          break;
+        }
+        if (var8Lifetime1 <= var9Lifetime1) {
+          this.field_C = -26 + (-(13 * var9Lifetime1) + 416) + this.field_f;
+        } else {
+          this.field_C = 13 * var8Lifetime1 + this.field_f - 26;
+        }
+        if (this.field_F) {
+          this.field_C = this.field_C + 13;
+        }
+        return true;
+    }
+
+    final void c(int param0, int param1) {
+        int var4;
+        var4 = TrackController.field_F ? 1 : 0;
+        hl.a(10, 0);
+        fe.a((param0 == 0), Model.field_P[param0], 256);
+        if (param1 <= 110) {
+          this.setPhase(27, 2);
+        }
+        if (!jj.s(24)) {
+          this.g(18);
+          if (oe.field_e != 0) {
+            sc.field_g = 16;
+          } else {
+            if (0 != this.score) {
+              sc.field_g = 11;
+            } else {
+              sc.field_g = 1;
+            }
+          }
+        } else {
+          if ((this.score | oe.field_e) == 0) {
+            sc.field_g = 0;
+          } else {
+            sc.field_g = 15;
+          }
+        }
+    }
+
+    final void tick(boolean param0, int param1) {
+        boolean discarded$0 = false;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_43_1 = 0;
+        int stackIn_43_2 = 0;
+        Object stackIn_44_0;
+        int stackIn_44_3;
+        int stackIn_50_0 = 0;
+        int stackIn_53_1 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_65_1 = 0;
+        int stackIn_84_0 = 0;
+        int stackIn_89_0 = 0;
+        int stackIn_121_0 = 0;
+        int stackIn_132_1 = 0;
+        int stackIn_172_0 = 0;
+        int stackIn_191_0 = 0;
+        int stackIn_191_1 = 0;
+        int stackIn_204_1 = 0;
+        int stackIn_204_2 = 0;
+        Object stackIn_205_0;
+        int stackIn_205_3;
+        int stackIn_206_0 = 0;
+        int stackIn_206_1 = 0;
+        boolean stackIn_235_0 = false;
+        int var3;
+        int var4_int;
+        IntrusiveDeque var4;
+        IntrusiveDeque var5;
+        int var6;
+        int var7_int;
+        MovingBlock var7;
+        oc var7_ref;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14_int;
+        MovingBlock var14;
+        MovingBlock var15;
+        int var16;
+        Object var17;
+        MovingBlock var18;
+        int var3Lifetime1;
+        int var6Lifetime1;
+        int var7_intLifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var4_intLifetime1;
+        int var9Lifetime2;
+        int var9Lifetime3;
+        int var10Lifetime2;
+        int var10Lifetime3;
+        int var10Lifetime4;
+        MovingBlock var7Lifetime1;
+        int stackIn_191_0Lifetime1;
+        int stackIn_191_0Lifetime2;
+        int stackIn_191_1Lifetime1;
+        int stackIn_191_1Lifetime2;
+        int stackIn_206_0Lifetime1;
+        int stackIn_206_1Lifetime1;
+        boolean stackIn_235_0Lifetime1;
+        var17 = null;
+        var16 = TrackController.field_F ? 1 : 0;
+        super.tick(param0, 107);
+        if (param0) {
+          this.c((byte) -4);
+        }
+        if (param1 < 72) {
+          discarded$0 = this.a(true, -46, 126);
+        }
+        if (param0 &&
+          GameScreen.mouseMoved) {
+          this.field_A.field_a = true;
+        }
+        if (param0 &&
+          uk.clickButton == 1 &&
+          this.phase != 2) {
+          fieldTemp$1 = this.field_E;
+          fieldTemp$2 = this.field_E + 1;
+          this.field_E = this.field_E + 1;
+          this.field_bb = this.field_bb ^ (fieldTemp$1 ^ fieldTemp$2);
+          this.field_R = this.field_R - this.field_cb;
+          var3 = db.clickX - 467;
+          var4_int = wg.clickY - 138;
+          if (0 <= var3 &&
+            26 + ba.field_b.field_G > var4_int &&
+            var3 < 156 &&
+            var4_int >= 0) {
+            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+            stackIn_20_0 = (!jj.s(29)) ? 12 : 13;
+            sc.field_g = stackIn_20_0;
+            return;
+          }
+          var4_intLifetime1 = wg.clickY - 178;
+          if (var3 >= 0 &&
+            26 + ba.field_b.field_G > var4_intLifetime1 &&
+            156 > var3 &&
+            var4_intLifetime1 >= 0) {
+            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+            sc.field_g = -2;
+            return;
+          }
+        }
+        if (1 == SpriteState.field_p &&
+          1 == this.phase) {
+          si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+          sc.field_g = -2;
+          return;
+        }
+        if (2 == this.phase) {
+          this.a(150, param0);
+          return;
+        }
+        var3Lifetime1 = -3 + this.field_E;
+        this.field_bb = this.field_bb ^ (this.field_E ^ var3Lifetime1);
+        if (0 < this.field_X) {
+          this.field_X = this.field_X - 1;
+        }
+        this.field_R = this.field_R + this.field_cb * 3;
+        this.field_E = var3Lifetime1;
+        var4 = new IntrusiveDeque();
+        var5 = new IntrusiveDeque();
+        var18 = (MovingBlock) (this.movingBlocks.first(2));
+        while (var18 != null) {
+          this.a(var5, 3098, var4, var18);
+          var18 = (MovingBlock) (this.movingBlocks.next(10));
+        }
+        if (this.field_b != 0) {
+          this.field_b = this.field_b + 1;
+        }
+        if (this.field_N != this.field_l) {
+          var6 = -this.field_l + this.field_N;
+          var7_int = -16 + gj.a(2, 32, 16 + var6);
+          stackIn_43_1 = 2;
+          stackIn_43_2 = 32;
+          if (var7_int <= 0) {
+            stackIn_44_0 = this;
+            stackIn_44_3 = this.field_l - 1;
+          } else {
+            stackIn_44_0 = this;
+            stackIn_44_3 = this.field_l + 1;
+          }
+          this.field_l = gj.a(stackIn_43_1, stackIn_43_2, stackIn_44_3);
+        }
+        var6Lifetime1 = 0;
+        if (this.playerColumn != -2) {
+          this.field_K = false;
+          this.field_r = -1;
+          this.field_U = -1;
+          stackIn_50_0 = (!ni.keyDown[98]) ? 0 : -1;
+          stackIn_53_1 = (ni.keyDown[99]) ? 1 : 0;
+          var7_intLifetime1 = stackIn_50_0 + stackIn_53_1;
+          if (ni.keyDown[98] ||
+            ni.keyDown[99] ||
+            ni.keyDown[96] ||
+            ni.keyDown[97]) {
+            this.field_A.field_a = false;
+          }
+          stackIn_62_0 = (ni.keyDown[96]) ? -1 : 0;
+          stackIn_65_1 = (ni.keyDown[97]) ? 1 : 0;
+          var8 = stackIn_62_0 + stackIn_65_1;
+          if (SecondaryNodeDeque.mouseButton != 0) {
+            var9 = (kf.mouseX - 16) / 26;
+            var10 = (fg.mouseY - 48) / 26;
+            if (var10 >= 0 &&
+              var9 >= 0 &&
+              16 > var10 &&
+              16 > var9 && (~var10 == ~this.playerRow ||
+              ~this.playerColumn == ~var9) && 38 != this.tileFlags[var10][var9]) {
+              this.field_x = var9;
+              this.field_G = var10;
+            }
+          }
+          if (this.field_G > -1) {
+            if (this.playerRow < this.field_G) {
+              stackIn_84_0 = 1;
+            } else {
+              stackIn_84_0 = (this.playerRow <= this.field_G) ? 0 : -1;
+            }
+            var9Lifetime2 = stackIn_84_0;
+            if (this.playerColumn >= this.field_x) {
+              stackIn_89_0 = (this.field_x >= this.playerColumn) ? 0 : -1;
+            } else {
+              stackIn_89_0 = 1;
+            }
+            var10Lifetime2 = stackIn_89_0;
+            if (var7_intLifetime1 * var9Lifetime2 < 0 ||
+              0 > var10Lifetime2 * var8 ||
+              0 != var7_intLifetime1 * var10Lifetime2 ||
+              var9Lifetime2 * var8 != 0) {
+              var9Lifetime2 = 0;
+              this.field_x = -1;
+              var10Lifetime2 = 0;
+              this.field_G = -1;
+            }
+            if (var8 == 0) {
+              var8 = var10Lifetime2;
+            }
+            if (var7_intLifetime1 == 0) {
+              var7_intLifetime1 = var9Lifetime2;
+            }
+          }
+          if (this.field_x != -1) {
+            if (this.playerColumn < this.field_x) {
+              this.field_ab = SocketArchiveRequestConnection.avatarSprites[16][0];
+            } else {
+              if (this.field_x >= this.playerColumn) {
+                if (this.field_G <= this.playerRow) {
+                  this.field_ab = SocketArchiveRequestConnection.avatarSprites[24][0];
+                } else {
+                  this.field_ab = SocketArchiveRequestConnection.avatarSprites[8][0];
+                }
+              } else {
+                this.field_ab = SocketArchiveRequestConnection.avatarSprites[0][0];
+              }
+            }
+          } else {
+            this.field_ab = null;
+          }
+          var9Lifetime3 = this.floorKind[this.playerRow][this.playerColumn];
+          if (0 == var7_intLifetime1 &&
+            (var9Lifetime3 == 6 ||
+            var9Lifetime3 == 5) ||
+            var8 == 0 &&
+            (var9Lifetime3 == 4 ||
+            var9Lifetime3 == 3)) {
+            var6Lifetime1 = 1;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          stackIn_121_0 = var6Lifetime1;
+          if ((4 != var9Lifetime3 ||
+            var8 != 1) && (var9Lifetime3 != 3 ||
+            -1 != var8) && (var9Lifetime3 != 5 ||
+            var7_intLifetime1 != -1) && (var9Lifetime3 != 6 ||
+            1 != var7_intLifetime1)) {
+            stackIn_132_1 = 0;
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            stackIn_132_1 = 1;
+          }
+          var6Lifetime1 = stackIn_121_0 | stackIn_132_1;
+          if (var6Lifetime1 != 0) {
+            if (var9Lifetime3 != 4 &&
+              var9Lifetime3 != 3) {
+              var7_intLifetime1 = 0;
+            } else {
+              var8 = 0;
+            }
+          }
+          if (0 == this.field_b) {
+            this.field_b = 1;
+          }
+          if (var7_intLifetime1 != 0 &&
+            var8 == 0) {
+            this.field_N = (2 - var7_intLifetime1) * 32 / 4;
+          } else {
+            if (var8 != 0) {
+              this.field_N = 32 * (1 + var8) / 4;
+            } else {
+              if (var6Lifetime1 == 0) {
+                this.field_b = 0;
+              } else {
+                var10Lifetime3 = var9Lifetime3;
+                if (var10Lifetime3 == 4) {
+                  this.field_N = 16;
+                } else {
+                  if (3 != var10Lifetime3) {
+                    if (var10Lifetime3 != 6) {
+                      if (var10Lifetime3 != 5) {
+                        throw new IllegalStateException();
+                      }
+                      this.field_N = 24;
+                    } else {
+                      this.field_N = 8;
+                    }
+                  } else {
+                    this.field_N = 0;
+                  }
+                }
+              }
+            }
+          }
+          if (this.a(false, var8, var7_intLifetime1)) {
+            var10Lifetime4 = this.playerRow + var7_intLifetime1;
+            var11 = var8 + this.playerColumn;
+            var12 = this.tileFlags[var10Lifetime4][var11] & 32640;
+            if (this.tileFlags[var10Lifetime4][var11] != 0 &&
+              var12 == 0) {
+              si.$cfr$intArgs$a$e9dea5688aa5(-68, 6);
+              if (this.a(this.tileFlags, var11, 21278, var10Lifetime4 - 1) == 0 &&
+                0 == this.a(this.tileFlags, var11, 21278, var10Lifetime4 + 1) &&
+                this.a(this.tileFlags, var11 - 1, 21278, var10Lifetime4) == 0 &&
+                this.a(this.tileFlags, var11 + 1, 21278, var10Lifetime4) == 0) {
+                stackIn_172_0 = 0;
+              } else {
+                stackIn_172_0 = 1;
+              }
+              var13 = stackIn_172_0;
+              if (var13 != 0) {
+                var14_int = 1;
+                var15 = (MovingBlock) (var4.first(2));
+                while (true) {
+                  if (var15 != null) {
+                    stackIn_191_0 = var10Lifetime4;
+                    stackIn_191_1 = var15.row;
+                    if (stackIn_191_0 == stackIn_191_1 &&
+                      ~var11 == ~var15.column) {
+                      var14_int = 0;
+                    }
+                    var15 = (MovingBlock) (var4.next(10));
+                    continue;
+                  }
+                  var15 = (MovingBlock) (var5.first(2));
+                  while (var15 != null) {
+                    stackIn_191_0Lifetime1 = var15.row;
+                    stackIn_191_1Lifetime1 = var10Lifetime4;
+                    if (stackIn_191_0Lifetime1 == stackIn_191_1Lifetime1 &&
+                      var15.column == var11) {
+                      var14_int = 0;
+                    }
+                    var15 = (MovingBlock) (var5.next(10));
+                  }
+                  if (var14_int == 0) {
+                    break;
+                  }
+                  stackIn_191_0Lifetime2 = 0;
+                  stackIn_191_1Lifetime2 = 11;
+                  vd.b(stackIn_191_0Lifetime2, stackIn_191_1Lifetime2, 23636);
+                  break;
+                }
+              }
+              this.a(var8, var10Lifetime4, 1, var7_intLifetime1, var11, (byte) 103);
+              if (this.field_G != -1) {
+                this.field_r = var8 + this.field_x;
+                this.field_U = var7_intLifetime1 + this.field_G;
+              }
+              this.field_K = true;
+              var14 = (MovingBlock) (var4.first(2));
+              while (var14 != null) {
+                stackIn_206_0 = var14.row;
+                stackIn_206_1 = var10Lifetime4;
+                if (stackIn_206_0 == stackIn_206_1 &&
+                  ~var11 == ~var14.column) {
+                  var14.unlink(-78);
+                }
+                var14 = (MovingBlock) (var4.next(10));
+              }
+            }
+            stackIn_204_1 = var8;
+            stackIn_204_2 = this.playerRow;
+            if (this.tileFlags[var10Lifetime4][var11] != 0) {
+              stackIn_205_0 = this;
+              stackIn_205_3 = 1;
+            } else {
+              stackIn_205_0 = this;
+              stackIn_205_3 = 2;
+            }
+            this.a(stackIn_204_1, stackIn_204_2, stackIn_205_3, var7_intLifetime1, this.playerColumn, (byte) -121);
+            this.field_z = true;
+            stackIn_206_0Lifetime1 = -68;
+            stackIn_206_1Lifetime1 = 8;
+            si.$cfr$intArgs$a$e9dea5688aa5(stackIn_206_0Lifetime1, stackIn_206_1Lifetime1);
+          } else {
+            if (SecondaryNodeDeque.mouseButton == 0) {
+              this.field_x = -1;
+              this.field_G = -1;
+            }
+          }
+        }
+        var7 = (MovingBlock) (var4.first(2));
+        while (var7 != null) {
+          stackIn_235_0 = this.a(var7.columnStep, var7.rowStep, 99, var7.columnStep + var7.column, var7.rowStep + var7.row);
+          if (stackIn_235_0) {
+            this.movingBlocks.addLast((byte) -125, var7);
+            this.a((byte) -91, var7);
+            si.$cfr$intArgs$a$e9dea5688aa5(-68, 9);
+          } else {
+            var5.addLast((byte) -113, var7);
+          }
+          var7 = (MovingBlock) (var4.next(10));
+        }
+        var7_ref = (oc) (this.field_M.first(2));
+        while (var7_ref != null) {
+          var8Lifetime1 = var7_ref.field_l >> 24 & 255;
+          var9Lifetime1 = (var7_ref.field_l & 16760288) >> 16;
+          if (this.tileFlags[var8Lifetime1][var9Lifetime1] != 0 &&
+            (32640 & this.tileFlags[var8Lifetime1][var9Lifetime1]) == 0) {
+            var10Lifetime1 = (byte)(var7_ref.field_l >> 8);
+            var11Lifetime1 = (byte)var7_ref.field_l;
+            var12Lifetime1 = var8Lifetime1 + var10Lifetime1;
+            var13Lifetime1 = var9Lifetime1 + var11Lifetime1;
+            if (this.a(var11Lifetime1, var10Lifetime1, 86, var13Lifetime1, var12Lifetime1) && (this.tileFlags[var8Lifetime1][var9Lifetime1] != 38 ||
+              var6Lifetime1 == 0)) {
+              this.a(var11Lifetime1, var8Lifetime1, 1, var10Lifetime1, var9Lifetime1, (byte) -90);
+            }
+          }
+          var7_ref = (oc) (this.field_M.next(10));
+        }
+        var7Lifetime1 = (MovingBlock) (var5.first(2));
+        scanLoop1: while (true) {
+          if (var7Lifetime1 != null) {
+            if (0 == (32640 & this.tileFlags[var7Lifetime1.row][var7Lifetime1.column]) && (this.a(this.tileFlags, var7Lifetime1.column, 21278, var7Lifetime1.row - 1) != 0 ||
+              this.a(this.tileFlags, var7Lifetime1.column, 21278, 1 + var7Lifetime1.row) != 0 ||
+              0 != this.a(this.tileFlags, var7Lifetime1.column - 1, 21278, var7Lifetime1.row) ||
+              this.a(this.tileFlags, 1 + var7Lifetime1.column, 21278, var7Lifetime1.row) != 0)) {
+              vd.b(0, 7, 23636);
+              break scanLoop1;
+            }
+            var7Lifetime1 = (MovingBlock) (var5.next(10));
+            continue;
+          }
+          break;
+        }
+        stackIn_235_0Lifetime1 = this.matchesTargetLayout(102);
+        if (stackIn_235_0Lifetime1) {
+          this.setPhase(247, 2);
+        }
+        return;
+    }
+
+    private final void b(boolean param0, int param1) {
+        Object var3;
+        int var4;
+        MovingBlock var5;
+        int var6;
+        Object var3Lifetime1;
+        var6 = TrackController.field_F ? 1 : 0;
+        if (this.level.levelIndex != 1 &&
+          this.level.levelIndex != 3) {
+          return;
+        }
+        if (this.phase != 1) {
+          return;
+        }
+        if (this.level.levelIndex == 3) {
+          boolean decompiledFrameRemainder0 = true;
+          if (this.playerRow == -2) {
+            var3 = (MovingBlock) (this.movingBlocks.first(2));
+            while (var3 != null) {
+              if (38 == ((MovingBlock) (var3)).tileValue) {
+                if (((MovingBlock) (var3)).column != 12) {
+                  return;
+                }
+                if (((MovingBlock) (var3)).columnStep != 0) {
+                  return;
+                }
+              }
+              var3 = (MovingBlock) (this.movingBlocks.next(10));
+            }
+          } else {
+            if ((this.playerRow <= 11) &&
+              (decompiledFrameRemainder0 = (this.playerColumn != 12))) {
+              return;
+            }
+            if (decompiledFrameRemainder0) {
+              return;
+            }
+          }
+          cl.a(nd.field_L, 58, 98, 376, 332, 4);
+          bk.font.a(ki.field_a, 73, -bk.font.field_G + 386 + bk.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          return;
+        }
+        var3Lifetime1 = null;
+        var4 = 0;
+        var5 = (MovingBlock) (this.movingBlocks.first(2));
+        if (param1 != -28786) {
+          this.field_ab = (Sprite) null;
+        }
+        while (var5 != null) {
+          if (var5.tileValue == 13 &&
+            var5.row == 11 &&
+            7 == var5.column) {
+            var4 = 1;
+          }
+          var5 = (MovingBlock) (this.movingBlocks.next(10));
+        }
+        if (this.tileFlags[11][8] != 13 &&
+          13 != this.tileFlags[9][8] &&
+          13 != this.tileFlags[7][8] &&
+          this.tileFlags[11][7] != 13 &&
+          this.tileFlags[4][7] != 13 &&
+          var4 == 0) {
+          if (!this.field_z) {
+            if (!param0) {
+              var3Lifetime1 = ej.field_b;
+            }
+          } else if (this.tileFlags[9][9] == 0) {
+            if (param0 &&
+              this.tickCount % 30 < 15) {
+              ii.tileSprites[50].e(182 + this.field_a, this.field_f + 234);
+            }
+            if (!param0) {
+              var3Lifetime1 = va.field_a;
+            }
+          } else if (0 == this.tileFlags[7][9]) {
+            if (param0 &&
+              15 > this.tickCount % 30) {
+              ii.tileSprites[50].e(this.field_a + 182, 182 + this.field_f);
+            }
+            if (!param0) {
+              var3Lifetime1 = jk.field_b;
+            }
+          } else if ((this.tileFlags[5][8] == 0 ||
+            this.tileFlags[4][8] == 0) && !param0) {
+            var3Lifetime1 = sk.field_g;
+          }
+        } else {
+          if (!param0) {
+            var3Lifetime1 = wa.field_n;
+          }
+        }
+        if (var3Lifetime1 != null) {
+          cl.a(nd.field_L, 110, 98, 376, 228, 4);
+          bk.font.a((String) (var3Lifetime1), 125, -bk.font.field_G + (bk.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
+        }
+        if (this.level.levelIndex == 1 &&
+          !param0) {
+          if (fi.field_i) {
+            return;
+          }
+          cl.a(nd.field_L, 58, 72, 64, 332, 4);
+          bk.font.a(uk.field_d, 73, -bk.font.field_G + 74 + bk.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
+        }
+        return;
+    }
+
+    private final boolean a(int param0, int param1, int param2, int param3, int param4) {
+        boolean stackIn_16_0 = false;
+        if (param4 >= 0 &&
+          param4 < 16 &&
+          param3 >= 0 &&
+          param3 < 16 &&
+          this.floorKind[param4][param3] != 2) {
+          if (0 == param1 &&
+            0 == param0) {
+            return false;
+          }
+          if (param2 < 79) {
+            return true;
+          }
+          stackIn_16_0 = (0 == this.tileFlags[param4][param3]) || ((this.tileFlags[param4][param3] & 32640) == this.b(16384, param0, param1));
+          return stackIn_16_0;
+        }
+        return false;
+    }
+
+    final boolean c(int param0) {
+        if (param0 > -120) {
+          return true;
+        }
+        return 2 == this.phase ? true : false;
+    }
+
+    final void loadLevel(LevelData param0, int param1) {
+        if (null == BufferedSocket.field_c) {
+          BufferedSocket.field_c = new int[][]{new int[]{3, 2, 1, 4, 1, 2, 1, 0}, new int[]{1, 2, 3, 4, 1, 2, 0, 0}, new int[]{5, 4, 1, 4, 1, 0, 1, 0}, new int[]{1, 4, 3, 4, 0, 0, 0, 0}, new int[]{2, 2, 1, -4, 1, 2, 1, 0}, new int[]{1, 2, -4, -4, 2, 2, 0, 0}, new int[]{1, -4, -3, -4, -2, -2, 1, 0}, new int[]{-6, -2, -1, -4, -1, -2, -1, 0}};
+        }
+        this.field_F = param0 != this.level ? true : false;
+        this.level = param0;
+        super.loadLevel(param0, 107);
+        this.playerRow = param0.a(-8299);
+        this.playerColumn = param0.c((byte) 107);
+        this.field_w = this.b(this.targetLayout, (byte) -66);
+        this.tickCount = 0;
+        this.setPhase(247, 1);
+        this.field_x = -1;
+        if (param1 < 36) {
+          return;
+        }
+        try {
+          this.field_r = -1;
+          this.field_X = param0.field_r * 50;
+          this.field_U = -1;
+          this.field_s = 0;
+          this.field_q = param0.field_v << 1;
+          this.field_G = -1;
+          this.movingBlocks = new IntrusiveDeque();
+          this.field_M = this.i(123);
+          this.field_u = null;
+          this.field_t = -1000;
+          vl.n(-27145);
+          vg.field_p = true;
+          this.field_A.field_e = 0;
+          this.field_z = false;
+          fe.a(true, Model.field_P[1], 256);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    private final int a(int[][] param0, byte param1) {
+        int var5 = 0;
+        int var6 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var7 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = TrackController.field_F ? 1 : 0;
+        try {
+          var3_int = param0.length;
+          var4 = param0[0].length;
+          for (var5 = 0; var4 > var5; var5++) {
+            for (var6 = 0; var3_int > var6; var6++) {
+              if (this.a((byte) 115, param0[var6][var5]) != 0) {
+                stackIn_8_0 = var5;
+                return stackIn_8_0;
+              }
+            }
+          }
+          if (param1 < -67) {
+            throw new IllegalStateException();
+          }
+          stackIn_13_0 = -68;
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_17_0 = var3;
+          stackIn_17_1 = new StringBuilder().append("ri.Q(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void a(boolean param0) {
+        cl.a(nd.field_L, 457, 124, 10, 176, 4);
+        bk.font.c(nj.field_d, 471, 40, 5, -1);
+        bk.font.a(Integer.toString(this.field_T), 622, 40, 5, -1);
+        bk.font.c(ba.field_e, 471, 66, 5, -1);
+        bk.font.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
+        bk.font.c(hb.field_c, 471, 92, 5, -1);
+        bk.font.a(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
+        if (param0) {
+          return;
+        }
+        bk.font.c(LevelView.field_r + this.level.levelIndex + u.field_k, 471, 118, 5, -1);
+        bk.font.a(this.level.name, 622, 118, 5, -1);
+    }
+
+    private final IntrusiveDeque i(int param0) {
+        int discarded$1 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        IntrusiveDeque var2;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        var8 = TrackController.field_F ? 1 : 0;
+        if (param0 < 102) {
+          discarded$1 = this.a((int[][]) null, -88, -65, 122);
+        }
+        var2 = new IntrusiveDeque();
+        for (var3 = 0; var3 < 16; var3++) {
+          for (var4 = 0; var4 < 16; var4++) {
+            var5 = 0;
+            var6 = 0;
+            var7 = this.floorKind[var3][var4];
+            if (var7 != 4) {
+              if (var7 == 3) {
+                var6 = 1;
+              } else {
+                if (6 != var7) {
+                  if (var7 == 5) {
+                    var5 = 1;
+                  }
+                } else {
+                  var5 = -1;
+                }
+              }
+            } else {
+              var6 = -1;
+            }
+            if (0 != var5 ||
+              0 != var6) {
+              var2.addLast((byte) -98, new oc(var3 << 24 | var4 << 16 | var5 << 8 & 65280 | 255 & var6));
+            }
+          }
+        }
+        return var2;
+    }
+
+    final static boolean a(byte param0, String param1, String param2) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_31_2 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (sd.a(param1, (byte) 89)) {
+            return false;
+          }
+          if (ba.a(param1, false)) {
+            return false;
+          }
+          if (ac.a(param1, -23797)) {
+            return false;
+          }
+          if (param2.length() == 0) {
+            return true;
+          }
+          if (param0 != 56) {
+            ActiveLevel.a(106);
+          }
+          if (MouseInputHandler.a(param2, param1, (byte) 96)) {
+            return false;
+          }
+          if (ButtonWidget.a(19438, param2, param1)) {
+            return false;
+          }
+          if (!ui.a(param1, param2, (byte) 100)) {
+            return true;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_30_0 = var3;
+          stackIn_30_1 = new StringBuilder().append("ri.OA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
+          }
+          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
+          if (param2 == null) {
+            stackIn_34_2 = "null";
+          } else {
+            stackIn_34_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+        }
+    }
+
+    final void h(int param0) {
+        boolean stackIn_7_1 = false;
+        int stackIn_44_0 = 0;
+        int stackIn_46_1 = 0;
+        int var2_int;
+        MovingBlock var2;
+        String var2_ref;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        var7 = TrackController.field_F ? 1 : 0;
+        cl.a(ha.field_m, 6, 436, 38, 436, 4);
+        UiWidget.field_z[0].e(41, 1);
+        if (null == this.field_u) {
+          this.b(true, param0 - 53447);
+          stackIn_7_1 = !(this.field_z);
+          super.drawGrid(stackIn_7_1, 0, true);
+          fd.field_d.e(0, 0);
+          var2_int = kf.mouseX - 467;
+          var3 = fg.mouseY - 138;
+          if (var2_int >= 0) {
+            if (26 + ba.field_b.field_G > var3) {
+              if (var2_int < 156) {
+                if (var3 >= 0) {
+                  UiWidget.field_t.e(0, 0);
+                } else {
+                  ai.field_a.e(0, 0);
+                }
+              } else {
+                ai.field_a.e(0, 0);
+              }
+            } else {
+              ai.field_a.e(0, 0);
+            }
+          } else {
+            ai.field_a.e(0, 0);
+          }
+          var3 = fg.mouseY - 178;
+          if (var2_int >= 0) {
+            if (var3 < ba.field_b.field_G + 26) {
+              if (var2_int < 156) {
+                if (var3 >= 0) {
+                  vl.field_K.e(0, 0);
+                } else {
+                  WhirlpoolDigest.field_o.e(0, 0);
+                }
+              } else {
+                WhirlpoolDigest.field_o.e(0, 0);
+              }
+            } else {
+              if (var3 >= 0) {
+                WhirlpoolDigest.field_o.e(0, 0);
+              }
+            }
+          } else {
+            WhirlpoolDigest.field_o.e(0, 0);
+          }
+        } else {
+          this.field_u.a(true);
+          this.f(-111);
+          var2_int = Math.min(255, -this.field_v + this.tickCount << 2);
+          this.a(467, (byte) -121, (this.tickCount - this.field_v << 2) + 229);
+          var3 = 255 - var2_int;
+          fd.field_d.e(0, -this.field_v + this.tickCount << 2);
+          if (var3 > 0) {
+            ai.field_a.d(0, 0, var3);
+            WhirlpoolDigest.field_o.d(0, 0, var3);
+          }
+        }
+        this.a(false);
+        if (param0 != 24661) {
+          ActiveLevel.a(11);
+        }
+        var2 = (MovingBlock) (this.movingBlocks.first(2));
+        while (var2 != null) {
+          var3Lifetime1 = var2.columnStep * var2.progress + 26 * var2.column + 16;
+          var4 = var2.rowStep * var2.progress + (var2.row * 26 + 48);
+          if (var2.tileValue == 38) {
+            var5 = this.field_b / 3 % 4;
+            stackIn_44_0 = this.field_l;
+            if (!this.field_K &&
+              !ui.a(0, true)) {
+              stackIn_46_1 = 0;
+            } else {
+              stackIn_46_1 = 32;
+            }
+            var6 = stackIn_44_0 + stackIn_46_1;
+            SocketArchiveRequestConnection.avatarSprites[var6][var5].e(var3Lifetime1, var4);
+          } else {
+            ii.tileSprites[-65 & var2.tileValue].e(var3Lifetime1, var4);
+            if ((var2.tileValue & 64) != 0) {
+              IntrusiveDequeCursor.a(var3Lifetime1, var2.tileValue, (byte) 91, var4);
+            }
+          }
+          var2 = (MovingBlock) (this.movingBlocks.next(10));
+        }
+        if (this.phase == 1 &&
+          this.field_G != -1) {
+          this.field_ab.d(16 + this.field_x * 26, this.field_G * 26 + 48, 127);
+          if (this.field_U != -1) {
+            ii.tileSprites[51].d(16 + this.field_r * 26, 48 + this.field_U * 26, 127);
+          }
+        }
+        var2_ref = ButtonWidget.field_E;
+        if (this.level == gj.levels[gj.levels.length - 1]) {
+          var2_ref = TrackController.field_C;
+        }
+        var3Lifetime2 = 0;
+        if (this.field_A.field_e == 0) {
+          var3Lifetime2 = 1;
+        }
+        if (!this.field_F) {
+          cl.a(nd.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
+          cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
+          bk.font.b(this.field_y, 78 + this.field_t, this.field_C + bk.font.field_G, 5, -1);
+          bk.font.b(var2_ref, 78 + this.field_t, bk.font.field_G + this.field_C + 24, var3Lifetime2, -1);
+        } else {
+          cl.a(nd.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
+          cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
+          bk.font.b(this.field_y, 78 + this.field_t, this.field_C + bk.font.field_G - 26, 5, -1);
+          bk.font.b(this.field_L, this.field_t + 78, bk.font.field_G + this.field_C, 5, -1);
+          bk.font.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (bk.font.field_G - 2)), var3Lifetime2, -1);
+        }
+        this.b(false, -28786);
+        if (ak.field_b != -1) {
+          vl.a(-21173, ag.field_c[ak.field_b]);
+        }
+    }
+
+    final void b(int param0) {
+        int discarded$0 = 0;
+        int var3 = TrackController.field_F ? 1 : 0;
+        if (1 == this.phase) {
+          wg.b(117);
+          this.loadLevel(this.level, param0 ^ 97);
+        } else {
+          if (this.phase != 2) {
+          } else {
+            this.field_T = Math.abs(this.score);
+            hl.a(10, 0);
+            this.field_R = this.field_R + this.field_E;
+            this.field_cb = this.field_cb - 1;
+            if (this.level.levelIndex >= gj.levels.length) {
+              this.c(0, 114);
+              sc.field_g = 14;
+            } else {
+              this.loadLevel(gj.levels[this.level.levelIndex], param0 ^ 120);
+            }
+          }
+        }
+        if (param0 != 0) {
+          discarded$0 = this.a((byte) 32, 84);
+        }
+    }
+
+    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
+        int var7 = 32 % ((-43 - param5) / 41);
+        if (this.tileFlags[param1][param4] == 38) {
+          this.playerRow = -2;
+          this.playerColumn = -2;
+        }
+        MovingBlock var8 = new MovingBlock(this.tileFlags[param1][param4], param1, param4, param3, param0, param2);
+        this.movingBlocks.addLast((byte) -122, var8);
+        this.a((byte) -32, var8);
+    }
+
+    private final int a(int[][] param0, int param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = TrackController.field_F ? 1 : 0;
+        try {
+          var3_int = param0.length;
+          var4 = param0[param1].length;
+          var5 = 0;
+          scanLoop1: while (true) {
+            if (var5 >= var3_int) {
+              throw new IllegalStateException();
+            }
+            var6 = 0;
+            while (true) {
+              if (var6 >= var4) {
+                var5++;
+                continue scanLoop1;
+              }
+              if (this.a((byte) 119, param0[var5][var6]) == 0) {
+                var6++;
+                continue;
+              }
+              break;
+            }
+            break;
+          }
+          stackIn_7_0 = var5;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_13_0 = var3;
+          stackIn_13_1 = new StringBuilder().append("ri.AA(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final long b(int[][] param0, byte param1) {
+        long stackIn_23_0 = 0L;
+        long stackIn_25_0 = 0L;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long var3_long = 0L;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        var11 = TrackController.field_F ? 1 : 0;
+        try {
+          var3_long = 0L;
+          var5 = param0.length;
+          var6 = param0[0].length;
+          for (var7 = -1; var7 < var5; var7++) {
+            for (var8 = 0; var6 > var8; var8++) {
+              var9 = this.a(param0, var8, 21278, var7);
+              var10 = this.a(param0, var8, 21278, var7 + 1);
+              if (var9 != 0 ||
+                var10 != 0) {
+                var3_long = -(long)var10 + 37L * var3_long + (long)var9;
+              }
+            }
+          }
+          for (var7Lifetime1 = -1; var7Lifetime1 < var6; var7Lifetime1++) {
+            for (var8Lifetime1 = 0; var5 > var8Lifetime1; var8Lifetime1++) {
+              var9Lifetime1 = this.a(param0, var7Lifetime1, 21278, var8Lifetime1);
+              var10Lifetime1 = this.a(param0, 1 + var7Lifetime1, 21278, var8Lifetime1);
+              if (var9Lifetime1 != 0 ||
+                var10Lifetime1 != 0) {
+                var3_long = var3_long * 37L + (long)var9Lifetime1 - (long)var10Lifetime1;
+              }
+            }
+          }
+          if (param1 == -66) {
+            stackIn_25_0 = var3_long;
+            return stackIn_25_0;
+          }
+          stackIn_23_0 = 75L;
+          return stackIn_23_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_28_0 = var3;
+          stackIn_28_1 = new StringBuilder().append("ri.FA(");
+          if (param0 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final boolean a(boolean param0, int param1, int param2) {
+        int discarded$1 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int stackIn_3_0 = 0;
+        int stackIn_6_1 = 0;
+        stackIn_3_0 = (param1 != 0) ? 0 : 1;
+        stackIn_6_1 = (param2 != 0) ? 0 : 1;
+        if ((stackIn_3_0 ^ stackIn_6_1) == 0) {
+          return false;
+        }
+        var4 = this.playerRow + param2;
+        var5 = param1 + this.playerColumn;
+        if (0 <= var5 &&
+          var5 < 16 &&
+          var4 >= 0 &&
+          16 > var4) {
+          if (param0) {
+            discarded$1 = this.a((int[][]) null, -72);
+          }
+          if (this.floorKind[var4][var5] == 2) {
+            return false;
+          }
+          var6 = 32640 & this.tileFlags[var4][var5];
+          if (var6 != 0 &&
+            this.b(16384, param1, param2) != var6) {
+            return false;
+          }
+          if (this.tileFlags[var4][var5] != 0 &&
+            var6 == 0 &&
+            !this.a(param1, param2, 103, param1 + var5, param2 + var4)) {
+            vd.b(0, 12, 23636);
+            return false;
+          }
+          return true;
+        }
+        return false;
+    }
+
+    private final void a(byte param0, MovingBlock param1) {
+        try {
+          this.tileFlags[param1.row][param1.column] = RandomAccessCacheFile.a(ok.a(this.tileFlags[param1.row][param1.column], this.b(16384, param1.columnStep, param1.rowStep)), 32640);
+          if (param0 > 0) {
+            this.field_r = -66;
+          }
+          this.tileFlags[param1.rowStep + param1.row][param1.columnStep + param1.column] = RandomAccessCacheFile.a(32640, ok.a(this.tileFlags[param1.row + param1.rowStep][param1.column + param1.columnStep], this.b(param1.rowStep, (byte) -86, param1.columnStep)));
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void g(int param0) {
+        if (param0 <= 11) {
+          this.c(100, 98);
+        }
+        if (this.score <= 0) {
+          return;
+        }
+        if (!jj.s(51) &&
+          rk.field_bb == null) {
+          SpriteState.field_w = null;
+          rk.field_bb = sd.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.score}, this.field_E);
+          return;
+        }
+    }
+
+    private final int b(int param0, int param1, int param2) {
+        int var4;
+        if (param0 != 16384) {
+          return 10;
+        }
+        var4 = 2 * param1 + param2;
+        if (var4 == -1) {
+          return 16384;
+        }
+        if (1 == var4) {
+          return 2048;
+        }
+        if (var4 == -2) {
+          return 4096;
+        }
+        if (2 == var4) {
+          return 8192;
+        }
+        throw new IllegalStateException();
+    }
+
+    private final void c(byte param0) {
+        int var6 = 0;
+        int var2;
+        int var3;
+        int var4_int;
+        MovingBlock var4;
+        int var5;
+        int var7;
+        int var8;
+        int var3Lifetime1;
+        var8 = TrackController.field_F ? 1 : 0;
+        if (GameScreen.mouseMoved) {
+          vg.field_p = false;
+        }
+        ak.field_b = -1;
+        var2 = this.field_f;
+        var3 = 0;
+        var4_int = 48 % ((-64 - param0) / 42);
+        while (this.floorKind.length > var3) {
+          var5 = this.field_a;
+          for (var6 = 0; this.floorKind[0].length > var6; var6++) {
+            if (eb.a(var5, fg.mouseY, 10, 26, var2, kf.mouseX, 26)) {
+              if (this.floorKind[var3][var6] != 1) {
+                if (this.floorKind[var3][var6] != 2) {
+                  if (this.floorKind[var3][var6] >= 3 &&
+                    this.floorKind[var3][var6] <= 6) {
+                    ak.field_b = 2;
+                  } else {
+                    var7 = -65 & this.tileFlags[var3][var6];
+                    if (var7 >= 7 &&
+                      var7 < 38) {
+                      ak.field_b = 3;
+                    } else {
+                      if (var7 == 38) {
+                        ak.field_b = 4;
+                      }
+                    }
+                  }
+                } else {
+                  ak.field_b = 1;
+                }
+              } else {
+                ak.field_b = 0;
+              }
+            }
+            var5 += 26;
+          }
+          var2 += 26;
+          var3++;
+        }
+        if (this.field_u == null) {
+          if (eb.a(467, fg.mouseY, 10, 156, 229, kf.mouseX, 208)) {
+            ak.field_b = 5;
+          } else {
+            if (!eb.a(ai.field_a.field_r, fg.mouseY, 10, ai.field_a.field_t, ai.field_a.field_o, kf.mouseX, ai.field_a.field_q)) {
+              if (eb.a(WhirlpoolDigest.field_o.field_r, fg.mouseY, 10, WhirlpoolDigest.field_o.field_t, WhirlpoolDigest.field_o.field_o, kf.mouseX, WhirlpoolDigest.field_o.field_q)) {
+                ak.field_b = 7;
+              }
+            } else {
+              ak.field_b = 6;
+            }
+          }
+          if (this.level.levelIndex != 1) {
+            if (3 == this.level.levelIndex &&
+              eb.a(68, fg.mouseY, 10, 312, 386, kf.mouseX, 78)) {
+              var3Lifetime1 = 1;
+              if (this.playerRow == -2) {
+                var4 = (MovingBlock) (this.movingBlocks.first(2));
+                while (var4 != null) {
+                  if (var4.tileValue == 38 && (var4.column != 12 ||
+                    var4.columnStep != 0)) {
+                    var3Lifetime1 = 0;
+                  }
+                  var4 = (MovingBlock) (this.movingBlocks.next(10));
+                }
+              } else if (this.playerRow > 11 ||
+                this.playerColumn != 12) {
+                var3Lifetime1 = 0;
+              }
+              if (var3Lifetime1 != 0) {
+                ak.field_b = 11;
+              }
+            }
+          } else {
+            if (!eb.a(68, fg.mouseY, 10, 312, 74, kf.mouseX, 52)) {
+              if (eb.a(120, fg.mouseY, 10, 208, 386, kf.mouseX, 78)) {
+                ak.field_b = 11;
+              }
+            } else {
+              ak.field_b = 11;
+            }
+          }
+        }
+        if (!eb.a(467, fg.mouseY, 10, 156, 20, kf.mouseX, 26)) {
+          if (!eb.a(467, fg.mouseY, 10, 156, 46, kf.mouseX, 26)) {
+            if (eb.a(467, fg.mouseY, 10, 156, 72, kf.mouseX, 26)) {
+              ak.field_b = 9;
+            }
+          } else {
+            ak.field_b = 12;
+          }
+        } else {
+          ak.field_b = 8;
+        }
+        if (eb.a(467, fg.mouseY, 10, 156, 98, kf.mouseX, 26)) {
+          ak.field_b = 10;
+        }
+        if (vg.field_p ||
+          fi.field_i) {
+          ak.field_b = -1;
+        }
+        ProxySocketConnector.a(ak.field_b, (byte) 20);
+    }
+
+    final static void e(int param0) {
+        int var1;
+        int var2;
+        var2 = TrackController.field_F ? 1 : 0;
+        if (param0 > -21) {
+          field_P = -65;
+        }
+        AsyncRequest.field_r = null;
+        gh.field_k = false;
+        if (!vg.field_o) {
+          var1 = si.field_d;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              AsyncRequest.field_r = ob.field_x;
+            } else {
+              AsyncRequest.field_r = dh.a((byte) -75, new String[]{Integer.toString(var1)}, PacketBuffer.field_l);
+            }
+            AsyncRequest.field_r = fi.a(116, new CharSequence[]{(CharSequence) ((Object) AsyncRequest.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
+          }
+          kb.field_a.t(20252);
+          r.f(-635);
+        } else {
+          kb.field_a.r(44);
+        }
+    }
+
+    static {
+        field_H = new int[]{40, 41, 42, 43, 44};
+        field_P = 0;
+        field_B = new int[8192];
+        field_V = 0;
+    }
+}

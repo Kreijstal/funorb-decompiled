@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends jj implements m {
+final class og extends jj implements ButtonListener {
     static int field_pb;
-    static ih field_rb;
+    static FullscreenFocusCanvas field_rb;
     static String field_qb;
     private vd field_mb;
     private boolean field_lb;
@@ -15,7 +15,7 @@ final class og extends jj implements m {
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class og extends jj implements m {
         if (param0 != -83) {
           return;
         }
-        ne.field_a.h(16383);
+        ne.field_a.readUnsignedByte(16383);
     }
 
     final void u(int param0) {
@@ -63,7 +63,7 @@ final class og extends jj implements m {
         try {
           this.field_ob = true;
           if (param1.field_e) {
-            var4 = tk.field_s;
+            var4 = AsyncRequest.field_s;
           } else {
             if (null == param1.field_a) {
               var4 = param1.field_c;
@@ -75,7 +75,7 @@ final class og extends jj implements m {
                 this.field_lb = true;
               }
             } else {
-              var4 = ga.field_f;
+              var4 = IterableNodeHashTable.field_f;
               if (this.field_mb != null) {
                 this.field_mb.a((byte) 121);
               }
@@ -96,7 +96,7 @@ final class og extends jj implements m {
                 var5.a(-17040, dh.field_r, 11);
                 var5.a(-17040, cg.field_b, 17);
               } else {
-                var5.a(param2 ^ -17033, ea.field_p, -1);
+                var5.a(param2 ^ -17033, LevelData.field_p, -1);
               }
             }
             if (param1.field_b != 3) {
@@ -104,7 +104,7 @@ final class og extends jj implements m {
                 var5.a(-17040, md.field_c, 9);
               }
             } else {
-              var5.a(-17040, ea.field_y, 7);
+              var5.a(-17040, LevelData.field_y, 7);
             }
           }
           if (param2 != 7) {
@@ -122,11 +122,11 @@ final class og extends jj implements m {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_lb) {
           nk.a(true, -126, false);
           return;
@@ -138,7 +138,7 @@ final class og extends jj implements m {
             this.field_ob = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "og.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "og.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class pi extends fh {
     private java.nio.ByteBuffer field_g;
     static String field_f;
 
-    final static void a(int param0, int param1, int param2, int param3, qj[] param4, int param5, int param6, int param7, qj[] param8, int param9, int param10, int param11, qj[] param12, int param13, oh param14, int param15, int param16, int param17, int param18, oh param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, int param6, int param7, Sprite[] param8, int param9, int param10, int param11, Sprite[] param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, BitmapFont param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -24,7 +24,7 @@ final class pi extends fh {
           if (param17 != 0) {
             return;
           }
-          hf.a(param19, param5, param3, param10, false, param11, param20, param14, param15, param7, new na(param12), param0, param1, param2, new na(param8), param6, param13, param9, new na(param4), param18, param16);
+          DiskArchiveStore.a(param19, param5, param3, param10, false, param11, param20, param14, param15, param7, new na(param12), param0, param1, param2, new na(param8), param6, param13, param9, new na(param4), param18, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class pi extends fh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class pi extends fh {
             this.a((byte[]) null, -51);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "pi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "pi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

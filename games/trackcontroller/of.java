@@ -33,7 +33,7 @@ final class of extends ec {
             !sa.field_P.equals(param0.getParameter("session"))) {
             var4 = sa.field_P;
           }
-          stackIn_10_0 = ue.a(param1, 56, (String) (var3), -1, (String) (var4));
+          stackIn_10_0 = IntrusiveDequeCursor.a(param1, 56, (String) (var3), -1, (String) (var4));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,30 +51,30 @@ final class of extends ec {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void c(byte param0) {
+    final static void publishInputState(byte param0) {
         java.net.URL var3 = null;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = hd.field_p;
+        var1 = hd.mouseHandler;
         synchronized (var1) {
-          rj.field_a = db.field_bb;
-          pa.field_a = pa.field_a + 1;
+          SecondaryNodeDeque.mouseButton = db.liveMouseButton;
+          pa.idleTicks = pa.idleTicks + 1;
           if (param0 != 66) {
             var3 = (java.net.URL) null;
             of.a((java.applet.Applet) null, (java.net.URL) null, false);
           }
-          kf.field_b = la.field_s;
-          fg.field_a = wi.field_a;
-          mg.field_a = hd.field_q;
-          hd.field_q = false;
-          uk.field_a = wf.field_d;
-          db.field_X = sa.field_M;
-          wg.field_e = ch.field_x;
-          wf.field_d = 0;
+          kf.mouseX = la.liveMouseX;
+          fg.mouseY = ArchiveSource.liveMouseY;
+          GameScreen.mouseMoved = hd.inputPending;
+          hd.inputPending = false;
+          uk.clickButton = wf.pendingClick;
+          db.clickX = sa.pressX;
+          wg.clickY = GameShell.pressY;
+          wf.pendingClick = 0;
         }
     }
 
@@ -91,10 +91,10 @@ final class of extends ec {
 
     final nh a(boolean param0) {
         if (param0) {
-          of.c((byte) 60);
-          return be.field_m;
+          of.publishInputState((byte) 60);
+          return PacketBuffer.field_m;
         }
-        return be.field_m;
+        return PacketBuffer.field_m;
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -129,7 +129,7 @@ final class of extends ec {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -14,8 +14,8 @@ final class qd {
         if (null != fj.field_P) {
           fj.field_P.d(16384, param1);
         }
-        if (da.field_n != null) {
-          da.field_n.a(param1, -65);
+        if (SocketArchiveRequestConnection.field_n != null) {
+          SocketArchiveRequestConnection.field_n.a(param1, -65);
           if (param0) {
             var3 = (byte[]) null;
             qd.a((byte[]) null, (byte) 113);
@@ -63,7 +63,7 @@ final class qd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class qd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

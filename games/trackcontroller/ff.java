@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff {
-    static kk field_b;
+    static Archive field_b;
     static String[] field_c;
     private int[] field_a;
 
@@ -26,7 +26,7 @@ final class ff {
           j.field_f = null;
           return;
         }
-        field_b = (kk) null;
+        field_b = (Archive) null;
         qk.field_M = (byte[][]) null;
         j.field_f = null;
     }
@@ -78,7 +78,7 @@ final class ff {
           var7_int = param3;
           param4 = param4 + param2;
           var8 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param0[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -92,7 +92,7 @@ final class ff {
               param2++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -108,7 +108,7 @@ final class ff {
               param2++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -124,7 +124,7 @@ final class ff {
               param2++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -140,7 +140,7 @@ final class ff {
               param2++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -156,7 +156,7 @@ final class ff {
               param2++;
               param5[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -172,7 +172,7 @@ final class ff {
               param2++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -204,7 +204,7 @@ final class ff {
               param2++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -230,7 +230,7 @@ final class ff {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 

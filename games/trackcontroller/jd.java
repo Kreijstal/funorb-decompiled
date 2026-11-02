@@ -6,17 +6,17 @@ final class jd implements t {
     private int field_k;
     private int field_a;
     private int field_i;
-    static qj field_g;
-    private oh field_c;
+    static Sprite field_g;
+    private BitmapFont field_c;
     private int field_e;
     private int field_b;
     static int field_d;
     static String field_f;
     private int field_j;
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int var10 = 0;
-        al stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -30,20 +30,20 @@ final class jd implements t {
         var11 = TrackController.field_F ? 1 : 0;
         try {
           if (param1 instanceof qk) {
-            stackIn_4_0 = (al) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (qk) (stackIn_4_0);
-          ll.c(param1.field_p + param4, param1.field_m + param2, param1.field_x, param1.field_u, this.field_a);
+          SoftwareRasterizer.c(param1.field_p + param4, param1.field_m + param2, param1.field_x, param1.field_u, this.field_a);
           if (var12 == null) {
           }
           var7 = -(2 * var12.field_I) + param1.field_x;
           var8 = param1.field_p + param4 + var12.field_I;
           var9 = var12.field_P + (param1.field_m + param2);
-          ll.e(var8, var9, var8 + var7, var9, this.field_k);
+          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_k);
           for (var10 = -1 + var12.c(true); var10 >= 0; var10--) {
-            ll.f(var12.a(param0 ^ 24968, var10) * var7 / var12.k(26856) + var8, var9, this.field_i, this.field_b);
+            SoftwareRasterizer.f(var12.a(param0 ^ 24968, var10) * var7 / var12.k(26856) + var8, var9, this.field_i, this.field_b);
           }
           if (param0 != -24969) {
             return;
@@ -62,7 +62,7 @@ final class jd implements t {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class jd implements t {
         field_h = null;
         field_f = null;
         if (param0 != -12814) {
-          field_g = (qj) null;
+          field_g = (Sprite) null;
         }
         field_g = null;
     }
@@ -104,7 +104,7 @@ final class jd implements t {
             stackIn_8_0 = bl.field_c;
             return stackIn_8_0;
           }
-          var3 = te.a(param0, '.', (byte) -67);
+          var3 = DelegatingCanvas.a(param0, '.', (byte) -67);
           if (2 > var3.length) {
             stackIn_12_0 = oc.field_j;
             return stackIn_12_0;
@@ -136,15 +136,15 @@ final class jd implements t {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static qj[] a(int param0, int param1, int param2, kk param3) {
+    final static Sprite[] a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        qj[] stackIn_5_0 = null;
-        qj[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -152,13 +152,13 @@ final class jd implements t {
         try {
           if (!sk.a(param1, param3, param0 - 4763, param2)) {
             stackIn_2_0 = null;
-            return (qj[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param0 == 4764) {
             stackIn_7_0 = dh.e(param0 ^ 4766);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (qj[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,11 +170,11 @@ final class jd implements t {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    jd(oh param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    jd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_k = param3;
           this.field_i = param5;
@@ -184,7 +184,7 @@ final class jd implements t {
           this.field_j = param1;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

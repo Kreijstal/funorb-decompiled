@@ -14,7 +14,7 @@ final class nj {
         vg.field_o = true;
         u.field_i = true;
         gl.field_E.l(24910);
-        nb.a(oj.field_c, false, -16257);
+        MidiPlayer.a(oj.field_c, false, -16257);
         if (param0 != -27958) {
           nj.b((byte) -82);
         }
@@ -87,7 +87,7 @@ final class nj {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class nj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "nj.C(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "nj.C(" + param0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class nj {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

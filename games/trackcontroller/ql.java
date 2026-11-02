@@ -4,9 +4,9 @@
 final class ql extends dd {
     static String field_q;
 
-    final String c(byte param0, al param1) {
+    final String c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        al var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -14,8 +14,8 @@ final class ql extends dd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 49) {
-            var4 = (al) null;
-            this.c((byte) -78, (al) null);
+            var4 = (UiWidget) null;
+            this.c((byte) -78, (UiWidget) null);
           }
           stackIn_3_0 = uh.a(param1.field_s.length(), '*', (byte) 20);
           return stackIn_3_0;
@@ -29,7 +29,7 @@ final class ql extends dd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class ql extends dd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class ql extends dd {
         this(gk.field_c, param0);
     }
 
-    private ql(oh param0, int param1) {
+    private ql(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

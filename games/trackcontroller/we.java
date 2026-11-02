@@ -14,7 +14,7 @@ abstract class we {
           }
           q.a(param1, param0 - 1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "we.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "we.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,7 +25,7 @@ abstract class we {
             we.a(-85, 1, -73, (na) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "we.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "we.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,28 +36,28 @@ abstract class we {
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
         try {
-          var8 = ra.field_C;
+          var8 = LevelView.field_C;
           var9 = var8;
           var9.c(param0, 7);
-          var9.field_k = var9.field_k + 1;
-          var4 = var9.field_k;
-          var9.a(1, (byte) -119);
+          var9.position = var9.position + 1;
+          var4 = var9.position;
+          var9.writeByte(1, (byte) -119);
           var9.b(param1.field_q, (byte) -127);
           var9.b(param1.field_p, (byte) -120);
           var9.b(param1.field_n, (byte) -119);
-          var9.b(false, param1.field_r);
-          var9.b(false, param1.field_k);
-          var9.b(false, param1.field_l);
-          var9.b(false, param1.field_i);
-          var9.a(param1.field_o.length, (byte) -75);
+          var9.writeInt(false, param1.field_r);
+          var9.writeInt(false, param1.field_k);
+          var9.writeInt(false, param1.field_l);
+          var9.writeInt(false, param1.field_i);
+          var9.writeByte(param1.field_o.length, (byte) -75);
           int var5 = 18 % ((param2 - 54) / 62);
           for (var6 = 0; param1.field_o.length > var6; var6++) {
-            var8.b(false, param1.field_o[var6]);
+            var8.writeInt(false, param1.field_o[var6]);
           }
           var9.a(var4, false);
-          var9.a(true, var9.field_k - var4);
+          var9.a(true, var9.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "we.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "we.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl extends td implements se, m {
+final class rl extends td implements se, ButtonListener {
     private boolean field_L;
-    private rh field_G;
-    private rh field_O;
+    private ButtonWidget field_G;
+    private ButtonWidget field_O;
     static q[] field_C;
     private String field_M;
     private lb field_H;
-    static kk field_D;
+    static Archive field_D;
     static int field_N;
     private boolean field_K;
     private lb field_F;
     private boolean field_I;
-    private rh field_J;
+    private ButtonWidget field_J;
 
     final static kd a(int param0, boolean param1, String param2, String param3) {
         long var4_long = 0L;
@@ -57,7 +57,7 @@ final class rl extends td implements se, m {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class rl extends td implements se, m {
           var3.a(false, var4, 122);
           this.field_F.l(-68);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "rl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class rl extends td implements se, m {
           gk.field_c.a(this.field_M, param1 + this.field_p + 20, this.field_m + param2 + 15, this.field_x - 40, this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
         }
         if (this.field_O != null) {
-          ll.a(param1 + 10, 134 + param2, this.field_x - 20, 4210752);
+          SoftwareRasterizer.a(param1 + 10, 134 + param2, this.field_x - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -109,7 +109,7 @@ final class rl extends td implements se, m {
             this.field_I = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "rl.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rl.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,10 +120,10 @@ final class rl extends td implements se, m {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        rh stackIn_18_1 = null;
-        rh stackIn_18_2 = null;
-        rh stackIn_19_1 = null;
-        rh stackIn_19_2 = null;
+        ButtonWidget stackIn_18_1 = null;
+        ButtonWidget stackIn_18_2 = null;
+        ButtonWidget stackIn_19_1 = null;
+        ButtonWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -133,7 +133,7 @@ final class rl extends td implements se, m {
         RuntimeException decompiledCaughtException = null;
         dc var6 = null;
         RuntimeException var6_ref = null;
-        oh var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         bl var9 = null;
         sa var12 = null;
@@ -153,25 +153,25 @@ final class rl extends td implements se, m {
           this.field_H = (lb) ((Object) new lf(param0, (tg) (this), 100));
           this.field_F = (lb) ((Object) new lf("", (tg) (this), 20));
           if (!this.field_L) {
-            this.field_G = new rh(nd.field_H, (tg) null);
+            this.field_G = new ButtonWidget(nd.field_H, (tg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_I) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ea.field_p;
+              stackIn_19_3 = LevelData.field_p;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
               stackIn_19_3 = v.field_d;
             }
-            this.field_J = new rh(stackIn_19_3, (tg) null);
+            this.field_J = new ButtonWidget(stackIn_19_3, (tg) null);
             if (this.field_K) {
-              this.field_O = new rh(md.field_f, (tg) (this));
+              this.field_O = new ButtonWidget(md.field_f, (tg) (this));
             }
           } else {
-            this.field_G = new rh(ib.field_c, (tg) null);
-            this.field_J = new rh(cg.field_b, (tg) null);
+            this.field_G = new ButtonWidget(ib.field_c, (tg) null);
+            this.field_J = new ButtonWidget(cg.field_b, (tg) null);
             this.field_H.field_B = false;
           }
           this.field_H.field_y = (t) ((Object) new dd(10000536));
@@ -204,22 +204,22 @@ final class rl extends td implements se, m {
             this.field_m = this.field_m + (var7.a(this.field_M, -40 + this.field_x, var7.field_G) + 5);
           }
           var8 = ai.field_i;
-          var9 = gj.a(100, gd.b((byte) 77));
+          var9 = gj.a(100, CachedArchiveSource.b((byte) 77));
           if (rd.field_o != var9) {
             if (qi.field_f == var9) {
-              var8 = nb.field_q;
+              var8 = MidiPlayer.field_q;
             }
           } else {
-            var8 = re.field_m;
+            var8 = GameApplet.field_m;
           }
           dupTemp$0 = new sa(10, this.field_m, this.field_x - 20, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(false, dupTemp$0);
-          this.field_m = this.field_m + (5 + ((al) ((Object) var12)).field_u);
+          this.field_m = this.field_m + (5 + ((UiWidget) ((Object) var12)).field_u);
           dupTemp$1 = new sa(10, this.field_m, this.field_x - 20, 25, this.field_F, false, 80, 3, var7, 16777215, rf.field_d);
           var13 = dupTemp$1;
           this.a(false, dupTemp$1);
-          this.field_m = this.field_m + (5 + ((al) ((Object) var13)).field_u);
+          this.field_m = this.field_m + (5 + ((UiWidget) ((Object) var13)).field_u);
           this.field_G.field_l = (tg) (this);
           if (null != this.field_O) {
             this.field_O.field_l = (tg) (this);
@@ -273,11 +273,11 @@ final class rl extends td implements se, m {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -310,12 +310,12 @@ final class rl extends td implements se, m {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void c(boolean param0) {
-        if (kk.b((byte) -128) ||
+        if (Archive.b((byte) -128) ||
           !(0 >= this.field_H.field_s.length()) &&
           !(this.field_F.field_s.length() <= 0)) {
           vh.a(this.field_H.field_s, 224, this.field_F.field_s);
@@ -327,7 +327,7 @@ final class rl extends td implements se, m {
 
     public final void b(int param0, lb param1) {
         if (this.field_H == param1) {
-          this.field_F.a((byte) -108, (al) (this));
+          this.field_F.a((byte) -108, (UiWidget) (this));
         }
         if (param0 >= -23) {
           return;
@@ -337,11 +337,11 @@ final class rl extends td implements se, m {
             this.c(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "rl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -370,7 +370,7 @@ final class rl extends td implements se, m {
             }
           }
           if (param4 != -27322) {
-            this.field_O = (rh) null;
+            this.field_O = (ButtonWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,7 +383,7 @@ final class rl extends td implements se, m {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

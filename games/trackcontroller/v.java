@@ -14,7 +14,7 @@ abstract class v implements eh {
         if (!ge.field_D) {
           throw new IllegalStateException();
         }
-        bc.field_d = true;
+        BufferedSocket.field_d = true;
         if (param0 == 6) {
           wg.a(param0 - 107, true);
           rl.field_N = 0;
@@ -94,7 +94,7 @@ abstract class v implements eh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ abstract class v implements eh {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 

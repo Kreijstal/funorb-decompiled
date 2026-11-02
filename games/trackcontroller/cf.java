@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends fc {
+final class cf extends IntrusiveNode {
     int field_i;
     int field_j;
     static String field_m;
@@ -26,7 +26,7 @@ final class cf extends fc {
         field_p = null;
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -37,7 +37,7 @@ final class cf extends fc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        bf var5 = null;
+        WhirlpoolDigest var5 = null;
         byte[] var6 = null;
         byte[] var9 = null;
         byte[] var10 = null;
@@ -55,7 +55,7 @@ final class cf extends fc {
           if (param3 != -6196) {
             field_m = (String) null;
           }
-          var5 = new bf();
+          var5 = new WhirlpoolDigest();
           var5.a(param3 + 6185);
           var5.a(var4, (long)(param2 * 8), 30654);
           var10 = new byte[64];
@@ -74,7 +74,7 @@ final class cf extends fc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

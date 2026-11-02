@@ -94,19 +94,19 @@ final class tf {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(')').toString());
         }
     }
 
-    final static rc a(int param0, boolean param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer a(int param0, boolean param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          rc var5 = null;
-          ub var5_ref = null;
-          rc stackIn_3_0 = null;
-          ub stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -117,17 +117,17 @@ final class tf {
               if (!param1) {
                 field_b = (String) null;
               }
-              var5 = (rc) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param0, -48, param3, param2);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new ub();
-              ((rc) ((Object) var5_ref)).a(param0, -123, param3, param2);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param0, -123, param3, param2);
               stackIn_5_0 = var5_ref;
-              return (rc) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -139,7 +139,7 @@ final class tf {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

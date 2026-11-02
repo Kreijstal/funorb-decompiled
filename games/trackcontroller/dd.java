@@ -5,18 +5,18 @@ class dd extends ic {
     static int field_o;
     static String field_p;
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         try {
           if (param3) {
-            fc.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
+            IntrusiveNode.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    dd(oh param0, int param1) {
+    dd(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 
@@ -29,15 +29,15 @@ class dd extends ic {
     }
 
     final static nj d(byte param0) {
-        if (hf.field_f == fd.field_h) {
+        if (DiskArchiveStore.field_f == fd.field_h) {
           throw new IllegalStateException();
         }
         if (param0 <= 82) {
           return (nj) null;
         }
         if (fd.field_h == cj.field_e) {
-          fd.field_h = hf.field_f;
-          return h.field_c;
+          fd.field_h = DiskArchiveStore.field_f;
+          return MouseWheelInput.field_c;
         }
         return null;
     }

@@ -15,19 +15,19 @@ final class vb {
         if (param2 < -28) {
           dk.field_a = param3;
           ai.field_h = param0;
-          pc.field_m = param1;
+          ArchiveIndex.field_m = param1;
           dh.field_l = param4;
           return;
         }
         field_a = (int[]) null;
         dk.field_a = param3;
         ai.field_h = param0;
-        pc.field_m = param1;
+        ArchiveIndex.field_m = param1;
         dh.field_l = param4;
     }
 
     final static void a(int param0) {
-        si.field_a = new ja();
+        si.field_a = new IntrusiveDeque();
         if (param0 > -47) {
           field_a = (int[]) null;
         }

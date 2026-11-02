@@ -20,8 +20,8 @@ final class nh {
     }
 
     final static void a(byte param0) {
-        nf.a(true, bf.field_f, fi.field_l, (byte) -105);
-        pc.field_h = true;
+        nf.a(true, WhirlpoolDigest.field_f, fi.field_l, (byte) -105);
+        ArchiveIndex.field_h = true;
         int var1 = -113 % ((param0 - 15) / 60);
     }
 

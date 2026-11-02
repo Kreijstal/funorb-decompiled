@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends fc {
-    static ja field_m;
+final class ei extends IntrusiveNode {
+    static IntrusiveDeque field_m;
     int field_n;
     static int field_o;
     static String field_k;
-    static kk field_i;
+    static Archive field_i;
     byte[] field_l;
     static String field_j;
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
           if (param0 >= -119) {
-            qj var3 = (qj) null;
-            ei.a((qj) null, -127);
+            Sprite var3 = (Sprite) null;
+            ei.a((Sprite) null, -127);
           }
-          param1.addMouseListener(hd.field_p);
-          param1.addMouseMotionListener(hd.field_p);
-          param1.addFocusListener(hd.field_p);
+          param1.addMouseListener(hd.mouseHandler);
+          param1.addMouseMotionListener(hd.mouseHandler);
+          param1.addFocusListener(hd.mouseHandler);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ng a(int param0, ng param1, int[] param2) {
-        ng var3 = null;
+    final static IndexedSprite a(int param0, IndexedSprite param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        ng stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -35,7 +35,7 @@ final class ei extends fc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ng(0, param0, 0);
+          var3 = new IndexedSprite(0, param0, 0);
           var3.field_c = param1.field_c;
           var3.field_a = param1.field_a;
           var3.field_j = param1.field_j;
@@ -62,7 +62,7 @@ final class ei extends fc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -76,11 +76,11 @@ final class ei extends fc {
 
     final static String a(byte param0) {
         if (!(gl.field_I >= 2)) {
-          return ee.field_f;
+          return NodeHashTableIterator.field_f;
         }
         if (null != ff.field_b) {
           if (!ff.field_b.c(96)) {
-            return pc.field_t;
+            return ArchiveIndex.field_t;
           }
           return jb.field_c;
         }
@@ -97,7 +97,7 @@ final class ei extends fc {
           return v.field_c + " - " + ha.field_x.a("commonui", 0) + "%";
         }
         if (!ok.field_G.c(117)) {
-          return ra.field_w;
+          return LevelView.field_w;
         }
         if (param0 <= 96) {
           return (String) null;
@@ -108,7 +108,7 @@ final class ei extends fc {
         return f.field_d;
     }
 
-    final static void a(qj param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int var6 = 0;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -130,10 +130,10 @@ final class ei extends fc {
             var5 = new int[(param0.field_t + var2_int) * (var3 + param0.field_q)];
             for (var6 = 0; var6 < param0.field_q; var6++) {
               for (var7 = 0; param0.field_t > var7; var7++) {
-                var5[(var3 + var6) * var4 - (-var2_int - var7)] = param0.field_z[var7 + param0.field_t * var6];
+                var5[(var3 + var6) * var4 - (-var2_int - var7)] = param0.pixels[var7 + param0.field_t * var6];
               }
             }
-            param0.field_z = var5;
+            param0.pixels = var5;
             param0.field_t = param0.field_t + var2_int;
             param0.field_r = param0.field_r - var2_int;
             param0.field_o = param0.field_o - var3;
@@ -151,7 +151,7 @@ final class ei extends fc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -164,13 +164,13 @@ final class ei extends fc {
         ij.a(13809);
         mi.k(10228);
         if (wf.a(-28510)) {
-          ra.field_C.c(1, 7);
-          me.a(param0 + 18600, 0);
+          LevelView.field_C.c(1, 7);
+          MovingBlock.a(param0 + 18600, 0);
         }
         if (param0 != -18601) {
           return;
         }
-        lj.a((byte) 117);
+        GameKeyHandler.a((byte) 117);
     }
 
     private ei() throws Throwable {
@@ -178,7 +178,7 @@ final class ei extends fc {
     }
 
     static {
-        field_m = new ja();
+        field_m = new IntrusiveDeque();
         field_k = "Loading levels";
         field_j = "Names should contain a maximum of 12 characters";
     }

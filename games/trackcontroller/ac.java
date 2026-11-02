@@ -25,7 +25,7 @@ final class ac {
           }
           if (param0 != null &&
             param0.length() >= wl.field_j &&
-            param0.length() <= da.field_m) {
+            param0.length() <= SocketArchiveRequestConnection.field_m) {
             return false;
           }
           return true;
@@ -39,7 +39,7 @@ final class ac {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

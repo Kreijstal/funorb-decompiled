@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class j {
-    static qj[] field_b;
+    static Sprite[] field_b;
     static int field_a;
     private boolean field_g;
     static int[] field_f;
-    static kk field_h;
+    static Archive field_h;
     private String field_e;
     static String field_d;
     private boolean field_i;
@@ -42,7 +42,7 @@ final class j {
         int var10;
         String var11;
         int var13;
-        nl var14;
+        ClientException var14;
         StringWriter var15;
         String var20;
         BufferedReader var21;
@@ -100,13 +100,13 @@ final class j {
         String var11Lifetime8Lifetime2;
         String var11Lifetime8Lifetime3;
         var13 = TrackController.field_F ? 1 : 0;
-        if (!(param1 instanceof nl)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime9 = var2;
         } else {
-          var14 = (nl) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           var2 = var14.field_a + " | ";
           param1 = var14.field_d;
         }
@@ -243,12 +243,12 @@ final class j {
         try {
           param0.removeKeyListener(cj.field_o);
           param0.removeFocusListener(cj.field_o);
-          mg.field_f = -1;
+          GameScreen.keyQueueWrite = -1;
           if (param1 <= 55) {
             field_c = -8;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class j {
           field_h = null;
           return;
         }
-        field_b = (qj[]) null;
+        field_b = (Sprite[]) null;
         field_f = null;
         field_d = null;
         field_h = null;
@@ -272,7 +272,7 @@ final class j {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

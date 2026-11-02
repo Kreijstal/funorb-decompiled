@@ -3,15 +3,15 @@
  */
 final class sg {
     String field_g;
-    kk field_c;
+    Archive field_c;
     String field_f;
     String field_b;
     int field_h;
     static ba field_d;
     static String field_e;
-    static kk field_a;
+    static Archive field_a;
 
-    final static void a(java.awt.Frame param0, byte param1, uf param2) {
+    final static void a(java.awt.Frame param0, byte param1, PlatformTaskDispatcher param2) {
         ce var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -56,7 +56,7 @@ final class sg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class sg {
         if (param5 != -733) {
           return;
         }
-        g.field_u[oe.field_c] = param4;
+        SpriteState.field_u[oe.field_c] = param4;
         if (vi.field_d < param4) {
           sd.field_b = param4;
         }
@@ -104,7 +104,7 @@ final class sg {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           if (param3 < 68) {
-            field_a = (kk) null;
+            field_a = (Archive) null;
           }
           var6_int = -param4 + param5;
           for (var7 = 0; var7 < var6_int; var7++) {
@@ -222,7 +222,7 @@ final class sg {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends fc {
+final class nk extends IntrusiveNode {
     boolean field_k;
     static int field_l;
     int[] field_m;
@@ -9,28 +9,28 @@ final class nk extends fc {
     static String field_j;
 
     final static void b(boolean param0) {
-        vg var1 = (vg) (gd.field_q.c((byte) -123));
+        vg var1 = (vg) (CachedArchiveSource.field_q.removeLast((byte) -123));
         if (!param0) {
           if (var1 == null) {
             var1 = new vg();
           }
-          var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
-          cj.field_j.a((byte) -97, var1);
+          var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, 11033, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.field_k, SoftwareRasterizer.clipTop);
+          cj.field_j.addLast((byte) -97, var1);
           return;
         }
         nk.d(-35);
         if (var1 == null) {
           var1 = new vg();
         }
-        var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
-        cj.field_j.a((byte) -97, var1);
+        var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, 11033, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.field_k, SoftwareRasterizer.clipTop);
+        cj.field_j.addLast((byte) -97, var1);
     }
 
     final static void a(int param0, int param1) {
-        la var2 = ra.field_C;
+        la var2 = LevelView.field_C;
         var2.c(param0, 7);
-        var2.a(1, (byte) -70);
-        var2.a(2, (byte) -65);
+        var2.writeByte(1, (byte) -70);
+        var2.writeByte(2, (byte) -65);
         if (param1 < -85) {
           return;
         }

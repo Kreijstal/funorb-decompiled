@@ -5,8 +5,8 @@ final class hd extends di {
     static String field_m;
     private boolean field_n;
     static String field_r;
-    static volatile boolean field_q;
-    static cb field_p;
+    static volatile boolean inputPending;
+    static MouseInputHandler mouseHandler;
     private ni field_t;
     static int field_s;
     private String field_u;
@@ -19,13 +19,13 @@ final class hd extends di {
         try {
           this.field_t = new ni(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0, char param1) {
         if (param0 >= -112) {
-          field_q = true;
+          inputPending = true;
           if (param1 < 48) {
             return false;
           }
@@ -64,7 +64,7 @@ final class hd extends di {
           if (param1 != 426) {
             this.field_u = (String) null;
           }
-          stackIn_9_0 = hf.field_a;
+          stackIn_9_0 = DiskArchiveStore.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,7 +76,7 @@ final class hd extends di {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,13 +84,13 @@ final class hd extends di {
         if (param0 == 69) {
           field_r = null;
           field_m = null;
-          field_p = null;
+          mouseHandler = null;
           return;
         }
         hd.d((byte) -97);
         field_r = null;
         field_m = null;
-        field_p = null;
+        mouseHandler = null;
     }
 
     final ud a(int param0, String param1) {
@@ -116,7 +116,7 @@ final class hd extends di {
           if (!param1.equals(this.field_u)) {
             var3 = ca.a(param1, 647);
             if (!var3.b((byte) 79)) {
-              stackIn_12_0 = tk.field_t;
+              stackIn_12_0 = AsyncRequest.field_t;
               return stackIn_12_0;
             }
             this.field_u = param1;
@@ -138,14 +138,14 @@ final class hd extends di {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     static {
-        field_q = false;
+        inputPending = false;
         field_r = "Sound: ";
         field_m = "Continue";
-        field_p = new cb();
+        mouseHandler = new MouseInputHandler();
     }
 }

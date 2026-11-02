@@ -39,7 +39,7 @@ final class ve extends ug {
             return stackIn_15_0;
           }
           if (param0 != 11) {
-            ve.a(-101, 122, 42, (pf) null, false);
+            ve.a(-101, 122, 42, (Model) null, false);
           }
           if (param1.equals("Z")) {
             stackIn_22_0 = Boolean.TYPE;
@@ -69,11 +69,11 @@ final class ve extends ug {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, pf param3, boolean param4) {
+    final static void a(int param0, int param1, int param2, Model param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_27_0 = 0;
@@ -113,7 +113,7 @@ final class ve extends ug {
         int var14Lifetime1;
         var20 = TrackController.field_F ? 1 : 0;
         try {
-          var5_int = ea.b(false, 3 * (param2 - param1));
+          var5_int = LevelData.b(false, 3 * (param2 - param1));
           var7 = -112 % ((0 - param0) / 41);
           var6 = param1 * 3;
           var8 = -10 + var5_int;
@@ -221,7 +221,7 @@ final class ve extends ug {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class ve extends ug {
         StringBuilder stackIn_102_1 = null;
         String stackIn_103_2 = null;
         RuntimeException decompiledCaughtException = null;
-        be var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -270,27 +270,27 @@ final class ve extends ug {
         int var12Lifetime3;
         var15 = TrackController.field_F ? 1 : 0;
         try {
-          var2 = new be(param1);
-          var2.field_k = -2 + param1.length;
-          gi.field_o = var2.d((byte) -46);
+          var2 = new PacketBuffer(param1);
+          var2.position = -2 + param1.length;
+          gi.field_o = var2.readUnsignedShort((byte) -46);
           fk.field_d = new byte[gi.field_o][];
           ka.field_f = new int[gi.field_o];
           j.field_f = new int[gi.field_o];
           cf.field_p = new int[gi.field_o];
-          ga.field_b = new boolean[gi.field_o];
+          IterableNodeHashTable.field_b = new boolean[gi.field_o];
           qk.field_M = new byte[gi.field_o][];
           vb.field_a = new int[gi.field_o];
-          var2.field_k = -(gi.field_o * 8) + (param1.length - 7);
-          ab.field_a = var2.d((byte) -57);
-          qe.field_p = var2.d((byte) -119);
-          var3 = (var2.h(16383) & 255) + 1;
+          var2.position = -(gi.field_o * 8) + (param1.length - 7);
+          ab.field_a = var2.readUnsignedShort((byte) -57);
+          qe.field_p = var2.readUnsignedShort((byte) -119);
+          var3 = (var2.readUnsignedByte(16383) & 255) + 1;
           var4 = 0;
           do {
             if (!(var4 < gi.field_o)) {
               var4 = 0;
               break;
             }
-            ka.field_f[var4] = var2.d((byte) -111);
+            ka.field_f[var4] = var2.readUnsignedShort((byte) -111);
             var4++;
           } while (var15 == 0);
           do {
@@ -298,7 +298,7 @@ final class ve extends ug {
               var4 = 0;
               break;
             }
-            vb.field_a[var4] = var2.d((byte) -101);
+            vb.field_a[var4] = var2.readUnsignedShort((byte) -101);
             var4++;
           } while (var15 == 0);
           do {
@@ -306,16 +306,16 @@ final class ve extends ug {
               var4 = 0;
               break;
             }
-            cf.field_p[var4] = var2.d((byte) -66);
+            cf.field_p[var4] = var2.readUnsignedShort((byte) -66);
             var4++;
           } while (var15 == 0);
           do {
             if (!(var4 < gi.field_o)) {
-              var2.field_k = param1.length - 7 - gi.field_o * 8 + 3 - var3 * 3;
+              var2.position = param1.length - 7 - gi.field_o * 8 + 3 - var3 * 3;
               qe.field_z = new int[var3];
               break;
             }
-            j.field_f[var4] = var2.d((byte) -62);
+            j.field_f[var4] = var2.readUnsignedShort((byte) -62);
             var4++;
           } while (var15 == 0);
           var4 = 1;
@@ -340,9 +340,9 @@ final class ve extends ug {
           if (stackIn_42_0 != stackIn_42_1) {
             ve.a((byte) -62, (byte[]) null);
           }
-          var2.field_k = 0;
+          var2.position = 0;
           var4 = 0;
-          L17: while (true) {
+          scanLoop1: while (true) {
             stackIn_47_0 = var4;
             if (stackIn_47_0 < gi.field_o) {
               var5 = cf.field_p[var4];
@@ -353,7 +353,7 @@ final class ve extends ug {
               var9 = new byte[var7];
               fk.field_d[var4] = var9;
               var10 = 0;
-              var11 = var2.h(16383);
+              var11 = var2.readUnsignedByte(16383);
               if (var15 != 0) {
                 return;
               }
@@ -365,13 +365,13 @@ final class ve extends ug {
                   if (stackIn_51_0 == (stackIn_51_1 & stackIn_51_2)) {
                     var12 = 0;
                     while (var12 < var7) {
-                      var8[var12] = var2.f(-126);
+                      var8[var12] = var2.readByte(-126);
                       var12++;
                     }
                     if (((var11 & 2) != 0)) {
                       var12Lifetime3 = 0;
                       while (var12Lifetime3 < var7) {
-                        dupTemp$0 = var2.f(param0 - 99);
+                        dupTemp$0 = var2.readByte(param0 - 99);
                         var9[var12Lifetime3] = dupTemp$0;
                         var13 = dupTemp$0;
                         stackIn_51_0 = var10;
@@ -392,7 +392,7 @@ final class ve extends ug {
                       stackIn_80_0 = 0;
                       var13Lifetime1 = stackIn_80_0;
                       while (var6 > var13Lifetime1) {
-                        var8[var12Lifetime1 + var13Lifetime1 * var5] = var2.f(-125);
+                        var8[var12Lifetime1 + var13Lifetime1 * var5] = var2.readByte(-125);
                         var13Lifetime1++;
                       }
                       var12Lifetime1++;
@@ -410,7 +410,7 @@ final class ve extends ug {
                         stackIn_47_0 = 0;
                         var13Lifetime2 = stackIn_47_0;
                         while (var13Lifetime2 < var6) {
-                          dupTemp$1 = var2.f(-125);
+                          dupTemp$1 = var2.readByte(-125);
                           var9[var13Lifetime2 * var5 + var12Lifetime2] = dupTemp$1;
                           var14 = dupTemp$1;
                           stackIn_85_0Lifetime1 = var10;
@@ -429,9 +429,9 @@ final class ve extends ug {
                     }
                   }
                 }
-                ga.field_b[var4] = var10 != 0;
+                IterableNodeHashTable.field_b[var4] = var10 != 0;
                 var4++;
-                continue L17;
+                continue scanLoop1;
               }
             }
             break;
@@ -447,7 +447,7 @@ final class ve extends ug {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 

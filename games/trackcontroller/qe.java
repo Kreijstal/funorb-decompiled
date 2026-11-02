@@ -1,36 +1,36 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends wh {
+final class qe extends PcmStream {
     private int field_t;
     private int[] field_s;
     private boolean field_q;
-    private wb field_y;
+    private MidiFile field_y;
     static ba field_C;
-    private nb field_A;
-    private nb field_w;
+    private MidiPlayer field_A;
+    private MidiPlayer field_w;
     private int field_m;
-    private nb field_r;
+    private MidiPlayer field_r;
     private int field_v;
     private int field_u;
     static int[] field_z;
-    private wb field_o;
+    private MidiFile field_o;
     private boolean field_D;
     private int[] field_B;
     static aa field_n;
-    private wb field_x;
+    private MidiFile field_x;
     static int field_p;
 
-    private final void a(int param0, int param1, nb param2, int param3) {
+    private final void a(int param0, int param1, MidiPlayer param2, int param3) {
         try {
           param2.a(param0, (byte) -116, param1);
           param2.a(0, param3);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final wh b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -42,11 +42,11 @@ final class qe extends wh {
         this.field_u = param0;
         if (param1 > -45) {
           int[] var4 = (int[]) null;
-          this.a((int[]) null, -45, 18);
+          this.mix((int[]) null, -45, 18);
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mix(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -70,7 +70,7 @@ final class qe extends wh {
         var11 = TrackController.field_F ? 1 : 0;
         try {
           if (this.field_u <= 0) {
-            this.d(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_q) {
@@ -127,7 +127,7 @@ final class qe extends wh {
           if (this.field_t < 256 && (null != this.field_x ||
             this.field_y != null)) {
             if (var4_int == 256) {
-              this.field_w.a(param0, param1, param2);
+              this.field_w.mix(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_B != null &&
@@ -138,8 +138,8 @@ final class qe extends wh {
                   this.field_s = new int[var6];
                   this.field_B = new int[var6];
                 }
-                this.field_w.a(this.field_B, 0, param2);
-                this.field_r.a(this.field_s, 0, param2);
+                this.field_w.mix(this.field_B, 0, param2);
+                this.field_r.mix(this.field_s, 0, param2);
                 if (!oa.field_k) {
                   stackIn_46_0 = param1;
                 } else {
@@ -152,7 +152,7 @@ final class qe extends wh {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_B[var8] * var4_int + this.field_s[var8] * var5 >> 8);
                 }
               } else {
-                this.field_r.a(param0, param1, param2);
+                this.field_r.mix(param0, param1, param2);
               }
             }
           }
@@ -165,7 +165,7 @@ final class qe extends wh {
               this.field_s = new int[var6];
               this.field_B = new int[var6];
             }
-            this.field_A.a(this.field_B, 0, param2);
+            this.field_A.mix(this.field_B, 0, param2);
             if (!oa.field_k) {
               stackIn_60_0 = param1;
             } else {
@@ -192,24 +192,24 @@ final class qe extends wh {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (this.field_m > 0 &&
           this.field_x != null) {
-          this.field_w.d(param0);
+          this.field_w.skip(param0);
         }
         if (this.field_m < 1048576 &&
           this.field_y != null) {
-          this.field_r.d(param0);
+          this.field_r.skip(param0);
         }
         if (0 < this.field_t &&
           this.field_o != null) {
-          this.field_A.d(param0);
+          this.field_A.skip(param0);
         }
         if (this.field_q) {
           if (0 < this.field_v &&
@@ -256,7 +256,7 @@ final class qe extends wh {
         }
     }
 
-    final static qj[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 != 1) {
           qe.e(52);
         }
@@ -272,15 +272,15 @@ final class qe extends wh {
         field_n = null;
     }
 
-    final synchronized void a(boolean param0, int param1, boolean param2, int param3, wb param4, int param5) {
+    final synchronized void a(boolean param0, int param1, boolean param2, int param3, MidiFile param4, int param5) {
         boolean stackIn_21_1 = false;
         int stackIn_35_0 = 0;
-        nb stackIn_45_0 = null;
-        wb stackIn_45_1 = null;
+        MidiPlayer stackIn_45_0 = null;
+        MidiFile stackIn_45_1 = null;
         int stackIn_45_2 = 0;
         boolean stackIn_46_3;
-        nb stackIn_54_0 = null;
-        wb stackIn_54_1 = null;
+        MidiPlayer stackIn_54_0 = null;
+        MidiFile stackIn_54_1 = null;
         int stackIn_54_2 = 0;
         boolean stackIn_55_3;
         RuntimeException stackIn_60_0 = null;
@@ -347,10 +347,10 @@ final class qe extends wh {
             this.field_y = param4;
             if (param4 != null) {
               stackIn_54_0 = this.field_r;
-              stackIn_54_1 = (wb) (param4);
+              stackIn_54_1 = (MidiFile) (param4);
               stackIn_54_2 = 14526;
               stackIn_55_3 = !(param0);
-              ((nb) (Object) stackIn_54_0).a(stackIn_54_1, stackIn_54_2, stackIn_55_3);
+              ((MidiPlayer) (Object) stackIn_54_0).a(stackIn_54_1, stackIn_54_2, stackIn_55_3);
               this.a(param5, -1, this.field_r, param3);
             }
             this.field_v = -param1;
@@ -361,10 +361,10 @@ final class qe extends wh {
             this.field_x = param4;
             if (param4 != null) {
               stackIn_45_0 = this.field_w;
-              stackIn_45_1 = (wb) (param4);
+              stackIn_45_1 = (MidiFile) (param4);
               stackIn_45_2 = 14526;
               stackIn_46_3 = !(param0);
-              ((nb) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_45_2, stackIn_46_3);
+              ((MidiPlayer) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_45_2, stackIn_46_3);
               this.a(param5, -1, this.field_w, param3);
             }
             this.field_v = param1;
@@ -380,11 +380,11 @@ final class qe extends wh {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final wh a() {
+    final PcmStream a() {
         return null;
     }
 

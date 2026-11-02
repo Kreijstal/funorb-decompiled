@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-abstract class ok extends al implements je {
+abstract class ok extends UiWidget implements je {
     static int[] field_F;
-    static kk field_G;
-    al field_B;
+    static Archive field_G;
+    UiWidget field_B;
     static String[] field_C;
     static ic field_D;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, al param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -33,12 +33,12 @@ abstract class ok extends al implements je {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    al i(int param0) {
-        al var2 = this.field_B;
+    UiWidget i(int param0) {
+        UiWidget var2 = this.field_B;
         if (var2 != null) {
           if (var2.h(-89)) {
             return var2;
@@ -66,7 +66,7 @@ abstract class ok extends al implements je {
         field_D = null;
     }
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
@@ -85,7 +85,7 @@ abstract class ok extends al implements je {
             var5_int = -53 % ((17 - param0) / 51);
             return false;
           }
-          if (ni.field_m[81]) {
+          if (ni.keyDown[81]) {
             stackIn_10_0 = this.b((byte) 104, param2);
           } else {
             stackIn_10_0 = this.c((byte) 100, param2);
@@ -101,7 +101,7 @@ abstract class ok extends al implements je {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ abstract class ok extends al implements je {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ abstract class ok extends al implements je {
         this.a((byte) -6);
     }
 
-    void a(int param0, int param1, byte param2, al param3) {
+    void a(int param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -192,12 +192,12 @@ abstract class ok extends al implements je {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static void a(k param0, int param1, byte param2, kk param3) {
-        vi.field_c = il.c(-14496) * param1 / 1000;
+    final static void a(k param0, int param1, byte param2, Archive param3) {
+        vi.field_c = BufferedCacheFile.c(-14496) * param1 / 1000;
         if (param2 != 52) {
           return;
         }
@@ -205,11 +205,11 @@ abstract class ok extends al implements je {
           ak.a(param3, 4);
           fe.a(30344, param3);
           cl.a(param3, (byte) -123);
-          ea.a(false);
+          LevelData.a(false);
           cj.d(param2 + 45);
           fb.field_a = 0 - vi.field_c;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ok.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ok.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -225,7 +225,7 @@ abstract class ok extends al implements je {
         return var3;
     }
 
-    final boolean a(byte param0, al param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -248,7 +248,7 @@ abstract class ok extends al implements je {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ abstract class ok extends al implements je {
           this.c((byte) 58);
           return;
         }
-        this.field_y.a(-24969, (al) (this), param2, true, param1);
+        this.field_y.a(-24969, (UiWidget) (this), param2, true, param1);
         if (null != this.field_B) {
           this.field_B.a(param0, this.field_p + param1, param2 + this.field_m, 29221);
         }
@@ -297,7 +297,7 @@ abstract class ok extends al implements je {
         }
     }
 
-    private final boolean c(byte param0, al param1) {
+    private final boolean c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -320,11 +320,11 @@ abstract class ok extends al implements je {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    void a(al param0, boolean param1, int param2, int param3, int param4, int param5) {
+    void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param1) {
           return;
         }
@@ -333,11 +333,11 @@ abstract class ok extends al implements je {
             this.field_B.a(param0, false, param2, param3 + this.field_m, param4, this.field_p + param5);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ok.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ok.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -360,7 +360,7 @@ abstract class ok extends al implements je {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ abstract class ok extends al implements je {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -418,10 +418,10 @@ abstract class ok extends al implements je {
         }
     }
 
-    private final boolean b(byte param0, al param1) {
+    private final boolean b(byte param0, UiWidget param1) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
-        al var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -429,8 +429,8 @@ abstract class ok extends al implements je {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 104) {
-            var4 = (al) null;
-            discarded$1 = this.c((byte) 3, (al) null);
+            var4 = (UiWidget) null;
+            discarded$1 = this.c((byte) 3, (UiWidget) null);
           }
           stackIn_7_0 = (this.field_B != null) && (!this.field_B.h(-90)) && (this.field_B.a((byte) -118, param1));
           return stackIn_7_0;
@@ -444,7 +444,7 @@ abstract class ok extends al implements je {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

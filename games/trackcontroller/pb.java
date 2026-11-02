@@ -4,10 +4,10 @@
 final class pb {
     static int[] field_c;
     static float field_a;
-    static ja field_d;
+    static IntrusiveDeque field_d;
     static String field_b;
 
-    final static ck a(int param0, int param1, kk param2, kk param3, byte param4) {
+    final static ck a(int param0, int param1, Archive param2, Archive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         ck stackIn_4_0 = null;
@@ -22,7 +22,7 @@ final class pb {
           if (!sk.a(param1, param2, 1, param0)) {
             return null;
           }
-          stackIn_4_0 = bc.a(12587, param3.a(param0, param1, (byte) -25));
+          stackIn_4_0 = BufferedSocket.a(12587, param3.a(param0, param1, (byte) -25));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,16 +40,16 @@ final class pb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static boolean a(byte param0) {
         int var1 = -44 / ((param0 - 32) / 54);
-        if (mg.field_b == null) {
+        if (GameScreen.field_b == null) {
           return false;
         }
-        if (null != mg.field_b.j(-6121)) {
+        if (null != GameScreen.field_b.j(-6121)) {
           return true;
         }
         return false;

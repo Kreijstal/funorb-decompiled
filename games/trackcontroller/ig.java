@@ -26,7 +26,7 @@ final class ig {
     }
 
     final static void a() {
-        ig.a(ll.field_a, ll.field_b, ll.field_e, ll.field_g);
+        ig.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -35,12 +35,12 @@ final class ig {
         field_d = param3 - param1;
         ig.c();
         if (field_i.length < field_d) {
-          field_i = new int[bc.a(field_d, -73)];
+          field_i = new int[BufferedSocket.a(field_d, -73)];
         }
-        int var4 = param1 * ll.field_d + param0;
+        int var4 = param1 * SoftwareRasterizer.stride + param0;
         for (var5 = 0; var5 < field_d; var5++) {
           field_i[var5] = var4;
-          var4 = var4 + ll.field_d;
+          var4 = var4 + SoftwareRasterizer.stride;
         }
     }
 

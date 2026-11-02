@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends rh {
+final class ua extends ButtonWidget {
     private eh field_I;
-    static ri field_L;
+    static ActiveLevel field_L;
     static String field_K;
     private int field_J;
 
@@ -18,7 +18,7 @@ final class ua extends rh {
         return null;
     }
 
-    final boolean a(byte param0, al param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -39,7 +39,7 @@ final class ua extends rh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -54,12 +54,12 @@ final class ua extends rh {
         field_K = null;
     }
 
-    final void a(int param0, int param1, byte param2, al param3) {
+    final void a(int param0, int param1, byte param2, UiWidget param3) {
         try {
           this.field_J = this.field_J + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,10 +70,10 @@ final class ua extends rh {
         int var9;
         int var10;
         int var11;
-        qj var13;
-        qj var14;
-        qj var15;
-        qj var16;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = TrackController.field_F ? 1 : 0;
@@ -89,28 +89,28 @@ final class ua extends rh {
           var9 = var16.field_s << 1;
           var10 = var16.field_v << 1;
           if (bl.field_a == null) {
-            bl.field_a = new qj(var9, var10);
+            bl.field_a = new Sprite(var9, var10);
             mb.a((byte) 122, bl.field_a);
           } else {
             if (var9 > bl.field_a.field_t) {
-              bl.field_a = new qj(var9, var10);
+              bl.field_a = new Sprite(var9, var10);
               mb.a((byte) 122, bl.field_a);
             } else {
               if (bl.field_a.field_q >= var10) {
                 mb.a((byte) -103, bl.field_a);
-                ll.a();
+                SoftwareRasterizer.a();
               } else {
-                bl.field_a = new qj(var9, var10);
+                bl.field_a = new Sprite(var9, var10);
                 mb.a((byte) 122, bl.field_a);
               }
             }
           }
           var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -this.field_J << 10, 4096);
-          ch.m(-74);
+          GameShell.m(-74);
           bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
           return;
         }
-        if (tk.field_t != var8) {
+        if (AsyncRequest.field_t != var8) {
           if (var8 == ef.field_b) {
             var13 = TrackController.field_D[2];
             var13.a(-(var13.field_t >> 1) + var5, var6 - (var13.field_q >> 1), 256);
@@ -127,24 +127,24 @@ final class ua extends rh {
         var9Lifetime1 = var15.field_s << 1;
         var10Lifetime1 = var15.field_v << 1;
         if (bl.field_a == null) {
-          bl.field_a = new qj(var9Lifetime1, var10Lifetime1);
+          bl.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
           mb.a((byte) 122, bl.field_a);
         } else {
           if (var9Lifetime1 > bl.field_a.field_t) {
-            bl.field_a = new qj(var9Lifetime1, var10Lifetime1);
+            bl.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             mb.a((byte) 122, bl.field_a);
           } else {
             if (bl.field_a.field_q >= var10Lifetime1) {
               mb.a((byte) -103, bl.field_a);
-              ll.a();
+              SoftwareRasterizer.a();
             } else {
-              bl.field_a = new qj(var9Lifetime1, var10Lifetime1);
+              bl.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
               mb.a((byte) 122, bl.field_a);
             }
           }
         }
         var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -this.field_J << 10, 4096);
-        ch.m(-74);
+        GameShell.m(-74);
         bl.field_a.a(-var15.field_s + var5, -var15.field_v + var6, 256);
     }
 
@@ -152,7 +152,7 @@ final class ua extends rh {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -67,23 +67,23 @@ final class q {
         int var3 = 0;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var1 = ra.field_C;
+          var1 = LevelView.field_C;
           if (!param0) {
             field_j = (String) null;
           }
           while (lg.c(-1)) {
             var1.c(8, 7);
-            fieldTemp$0 = var1.field_k + 1;
-            var1.field_k = var1.field_k + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            rc.a(78, var1);
-            ra.field_C.a(param0, -var2 + var1.field_k);
+            RasterBuffer.a(78, var1);
+            LevelView.field_C.a(param0, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "q.D(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "q.D(" + param0 + ')');
         }
     }
 
@@ -97,14 +97,14 @@ final class q {
     }
 
     q(boolean param0) {
-        this.field_h = id.field_h;
+        this.field_h = NodeHashTable.field_h;
         this.field_e = fd.field_e;
         if (!param0) {
           this.field_i = null;
         } else {
           this.field_i = hi.field_A;
         }
-        this.field_l = nl.field_b;
+        this.field_l = ClientException.field_b;
         this.field_g = lg.field_a;
         this.field_d = o.field_b;
         this.field_b = jb.field_d;
@@ -158,7 +158,7 @@ final class q {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

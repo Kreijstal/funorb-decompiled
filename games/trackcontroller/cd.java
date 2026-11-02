@@ -7,8 +7,8 @@ final class cd {
     int field_e;
     private int field_m;
     boolean field_a;
-    static ja field_h;
-    static qj field_c;
+    static IntrusiveDeque field_h;
+    static Sprite field_c;
     static int field_b;
     private int field_d;
     private int field_f;
@@ -40,8 +40,8 @@ final class cd {
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var6 = this.a(param1, fg.field_a, param4, -85, param0, param2, kf.field_b);
-        int var7 = this.a(param1, wg.field_e, param4, -85, param0, param2, db.field_X);
+        int var6 = this.a(param1, fg.mouseY, param4, -85, param0, param2, kf.mouseX);
+        int var7 = this.a(param1, wg.clickY, param4, -85, param0, param2, db.clickX);
         if (!param3) {
           this.a(-126, var6, var7);
           return;
@@ -192,19 +192,19 @@ final class cd {
         this.field_m = 0;
         this.field_f = 0;
         this.field_d = 0;
-        if (uk.field_a != 0) {
+        if (uk.clickButton != 0) {
           this.field_e = param2;
           this.field_k = qk.field_N;
-          this.field_l = uk.field_a;
+          this.field_l = uk.clickButton;
           this.field_a = true;
-          this.field_m = uk.field_a;
-          this.field_d = uk.field_a;
+          this.field_m = uk.clickButton;
+          this.field_d = uk.clickButton;
         }
         if (this.field_l == 0) {
-          if (uk.field_a == 0) {
-            if (rj.field_a != 0) {
+          if (uk.clickButton == 0) {
+            if (SecondaryNodeDeque.mouseButton != 0) {
               if (0 == this.field_l && (this.field_a ||
-                mg.field_a)) {
+                GameScreen.mouseMoved)) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                     this.field_e = param1;
@@ -246,7 +246,7 @@ final class cd {
                 return;
               }
             } else {
-              if (mg.field_a) {
+              if (GameScreen.mouseMoved) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                   }
@@ -270,12 +270,12 @@ final class cd {
           this.a(true);
           return;
         }
-        if (rj.field_a == 0) {
+        if (SecondaryNodeDeque.mouseButton == 0) {
           boolean decompiledFrameRemainder0 = true;
-          if (uk.field_a == 0) {
-            if (rj.field_a != 0) {
+          if (uk.clickButton == 0) {
+            if (SecondaryNodeDeque.mouseButton != 0) {
               if (0 == this.field_l && (this.field_a ||
-                mg.field_a)) {
+                GameScreen.mouseMoved)) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                     this.field_e = param1;
@@ -305,7 +305,7 @@ final class cd {
               return;
             }
             if (!this.field_a) {
-              if (!mg.field_a) {
+              if (!GameScreen.mouseMoved) {
                 if (param0 < -117) {
                   return;
                 }
@@ -346,10 +346,10 @@ final class cd {
             this.field_k = f.field_a;
           }
           this.field_k = this.field_k - 1;
-          if (uk.field_a == 0) {
-            if (rj.field_a != 0) {
+          if (uk.clickButton == 0) {
+            if (SecondaryNodeDeque.mouseButton != 0) {
               if (0 == this.field_l && (this.field_a ||
-                mg.field_a)) {
+                GameScreen.mouseMoved)) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                     this.field_e = param1;
@@ -395,7 +395,7 @@ final class cd {
             this.a(true);
             return;
           }
-          if (!mg.field_a) {
+          if (!GameScreen.mouseMoved) {
             if (param0 < -117) {
               return;
             }
@@ -506,7 +506,7 @@ final class cd {
     }
 
     static {
-        field_h = new ja();
+        field_h = new IntrusiveDeque();
         field_g = 0;
         field_j = false;
     }

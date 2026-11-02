@@ -12,11 +12,11 @@ final class ab {
         }
     }
 
-    final static qj a(String param0, int param1, String param2, kk param3) {
+    final static Sprite a(String param0, int param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qj stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -55,16 +55,16 @@ final class ab {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static kh a(boolean param0) {
         if (!param0) {
-          return new kh(re.c(6), r.b(true));
+          return new kh(GameApplet.c(6), r.b(true));
         }
         field_a = 107;
-        return new kh(re.c(6), r.b(!param0 ? true : false));
+        return new kh(GameApplet.c(6), r.b(!param0 ? true : false));
     }
 
     static {

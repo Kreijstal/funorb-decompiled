@@ -13,7 +13,7 @@ final class jh {
         nk.a(true, 41, true);
     }
 
-    final static int a(oh param0, String param1, int param2, boolean param3) {
+    final static int a(BitmapFont param0, String param1, int param2, boolean param3) {
         int var7 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -38,10 +38,10 @@ final class jh {
           var6 = param1.length();
           for (var7 = 0; var7 < var6; var7++) {
             var8 = param1.charAt(var7);
-            var5 = var5 + param0.a((char) var8);
+            var5 = var5 + param0.charWidth((char) var8);
             if (param2 <= var5) {
               if (var8 == 32) {
-                var5 = var5 - param0.a((char) var8);
+                var5 = var5 - param0.charWidth((char) var8);
               }
               if (var8 == 32 ||
                 var8 == 45) {
@@ -73,7 +73,7 @@ final class jh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

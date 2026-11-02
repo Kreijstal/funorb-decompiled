@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti extends fc {
+final class ti extends IntrusiveNode {
     long[][] field_q;
     int[][] field_n;
     String[][] field_m;
@@ -33,19 +33,19 @@ final class ti extends fc {
           if (param1 < 17) {
             ti.a(-51, -77);
           }
-          kd.field_b.a((byte) -120, param2);
+          kd.field_b.addLast((byte) -120, param2);
           md.a(param0, param2, 118);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ti.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ti.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ng a(String param0, kk param1, String param2, int param3) {
+    final static IndexedSprite a(String param0, Archive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ng stackIn_2_0 = null;
-        ng stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -56,7 +56,7 @@ final class ti extends fc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 17) {
-            stackIn_2_0 = (ng) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var4_int = param1.a(true, param2);
@@ -85,18 +85,18 @@ final class ti extends fc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         if (param0 == -58) {
-          qc.b(17, (byte) -42);
+          ProxySocketConnector.b(17, (byte) -42);
           return;
         }
         String var2 = (String) null;
-        ti.a((String) null, (kk) null, (String) null, -73);
-        qc.b(17, (byte) -42);
+        ti.a((String) null, (Archive) null, (String) null, -73);
+        ProxySocketConnector.b(17, (byte) -42);
     }
 
     ti() {

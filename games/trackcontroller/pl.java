@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pl {
-    static il field_b;
+    static BufferedCacheFile field_b;
     static int[] field_c;
     static String field_d;
     static int[] field_a;
@@ -29,7 +29,7 @@ final class pl {
               field_c = (int[]) null;
               return true;
             }
-            if (ue.a(-16490, param1.charAt(var3_int))) {
+            if (IntrusiveDequeCursor.a(-16490, param1.charAt(var3_int))) {
               var3_int++;
               continue;
             }
@@ -46,7 +46,7 @@ final class pl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class pl {
         if (param0 != 0) {
           field_d = (String) null;
         }
-        re.field_g.b(ne.field_d, -113);
+        GameApplet.field_g.b(ne.field_d, -113);
     }
 
     final static void b(int param0) {
@@ -103,35 +103,35 @@ final class pl {
         var26 = TrackController.field_F ? 1 : 0;
         try {
           var27 = ne.field_a;
-          var2 = var27.h(16383);
+          var2 = var27.readUnsignedByte(16383);
           if (var2 == 0) {
-            var3 = var27.d((byte) -48);
-            var4 = (ti) (ea.field_s.b(2));
+            var3 = var27.readUnsignedShort((byte) -48);
+            var4 = (ti) (LevelData.field_s.first(2));
             while (var4 != null) {
               if (var4.field_i != var3) {
-                var4 = (ti) (ea.field_s.a(10));
+                var4 = (ti) (LevelData.field_s.next(10));
                 continue;
               }
               break;
             }
             if (var4 == null) {
-              lj.a((byte) 115);
+              GameKeyHandler.a((byte) 115);
               return;
             }
-            var5 = var27.h(16383);
+            var5 = var27.readUnsignedByte(16383);
             if (0 != var5) {
               var6 = var4.field_l;
               var7 = var4.field_k;
-              cb.field_c[0].field_f = null;
-              cb.field_c[0].field_h = ue.field_a;
-              cb.field_c[0].field_i = false;
+              MouseInputHandler.field_c[0].field_f = null;
+              MouseInputHandler.field_c[0].field_h = IntrusiveDequeCursor.field_a;
+              MouseInputHandler.field_c[0].field_i = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                cb.field_c[var8_int].field_h = var27.g(0);
-                cb.field_c[var8_int].field_i = false;
-                if (var27.h(param0 + 19953) == 1) {
-                  cb.field_c[var8_int].field_f = var27.g(param0 ^ -3570);
+                MouseInputHandler.field_c[var8_int].field_h = var27.readString(0);
+                MouseInputHandler.field_c[var8_int].field_i = false;
+                if (var27.readUnsignedByte(param0 + 19953) == 1) {
+                  MouseInputHandler.field_c[var8_int].field_f = var27.readString(param0 ^ -3570);
                 } else {
-                  cb.field_c[var8_int].field_f = null;
+                  MouseInputHandler.field_c[var8_int].field_f = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -150,76 +150,76 @@ final class pl {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.h(param0 ^ -12815);
+              var18 = var27.readUnsignedByte(param0 ^ -12815);
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.h(16383);
-                  var21 = cb.field_c[var20].field_h;
-                  var22 = var27.f((byte) 38);
-                  var24 = var27.field_k;
+                  var20 = var27.readUnsignedByte(16383);
+                  var21 = MouseInputHandler.field_c[var20].field_h;
+                  var22 = var27.readLong((byte) 38);
+                  var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = cb.field_c[var20].field_f;
+                    var9[0][var12] = MouseInputHandler.field_c[var20].field_f;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.e((byte) 113);
+                      var11[0][incrementValue$3] = var27.readInt((byte) 113);
                     }
                   }
                   if (var21 != null &&
                     rb.a(false, var21)) {
-                    var8[1][var13] = ue.field_a;
+                    var8[1][var13] = IntrusiveDequeCursor.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var27.field_k = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.e((byte) 113);
+                      var11[1][incrementValue$4] = var27.readInt((byte) 113);
                     }
                   }
                   if (var14 < var6 &&
-                    !cb.field_c[var20].field_i) {
-                    cb.field_c[var20].field_i = true;
+                    !MouseInputHandler.field_c[var20].field_i) {
+                    MouseInputHandler.field_c[var20].field_i = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = cb.field_c[var20].field_f;
+                    var9[2][var14] = MouseInputHandler.field_c[var20].field_f;
                     var10[2][var14] = var22;
                     var14++;
-                    var27.field_k = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.e((byte) 113);
+                      var11[2][incrementValue$5] = var27.readInt((byte) 113);
                     }
                   }
                 }
               }
             }
             var4.field_o = true;
-            var4.a(-47);
+            var4.unlink(-47);
           } else if (var2 == 1) {
-            var3 = var27.d((byte) -127);
-            var4_long = var27.f((byte) 108);
-            var6_ref_aj = (aj) (ub.field_e.b(2));
+            var3 = var27.readUnsignedShort((byte) -127);
+            var4_long = var27.readLong((byte) 108);
+            var6_ref_aj = (aj) (ImageProducerRasterBuffer.field_e.first(2));
             while (var6_ref_aj != null) {
               if (~var6_ref_aj.field_q != ~var3) {
-                var6_ref_aj = (aj) (ub.field_e.a(param0 ^ -3580));
+                var6_ref_aj = (aj) (ImageProducerRasterBuffer.field_e.next(param0 ^ -3580));
                 continue;
               }
               break;
             }
             if (var6_ref_aj == null) {
-              lj.a((byte) 114);
+              GameKeyHandler.a((byte) 114);
               return;
             }
             var6_ref_aj.field_j = var4_long;
-            var6_ref_aj.a(-62);
+            var6_ref_aj.unlink(-62);
           } else {
-            hb.a((Throwable) null, param0 + 3570, "HS1: " + jc.b(116));
-            lj.a((byte) 118);
+            hb.reportClientError((Throwable) null, param0 + 3570, "HS1: " + jc.b(116));
+            GameKeyHandler.a((byte) 118);
           }
           if (param0 != -3570) {
             field_a = (int[]) null;
@@ -228,7 +228,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "pl.F(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "pl.F(" + param0 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class pl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class pl {
         field_d = null;
         field_c = null;
         if (param0 != -30877) {
-          field_b = (il) null;
+          field_b = (BufferedCacheFile) null;
         }
     }
 
@@ -330,7 +330,7 @@ final class pl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

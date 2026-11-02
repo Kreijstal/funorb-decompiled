@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f {
-    static re field_c;
+    static GameApplet field_c;
     static String field_d;
     static byte[][] field_b;
     static int field_a;
@@ -15,7 +15,7 @@ final class f {
         }
     }
 
-    final static void a(Object param0, byte param1, uf param2) {
+    final static void a(Object param0, byte param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -68,7 +68,7 @@ final class f {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

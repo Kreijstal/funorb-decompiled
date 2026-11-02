@@ -3,7 +3,7 @@
  */
 final class fb {
     static int field_a;
-    static kk field_b;
+    static Archive field_b;
 
     final static void a(boolean param0, int param1, java.awt.Color param2, String param3, byte param4) {
         Exception exception = null;
@@ -94,21 +94,21 @@ final class fb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(hd.field_p);
-          param1.removeMouseMotionListener(hd.field_p);
-          param1.removeFocusListener(hd.field_p);
+          param1.removeMouseListener(hd.mouseHandler);
+          param1.removeMouseMotionListener(hd.mouseHandler);
+          param1.removeFocusListener(hd.mouseHandler);
           if (param0 >= -99) {
             fb.a(-114);
           }
-          db.field_bb = 0;
+          db.liveMouseButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "fb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "fb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha extends fc {
+final class ha extends IntrusiveNode {
     int field_s;
     int field_t;
-    bh field_l;
+    PcmSampleStream field_l;
     int field_F;
     int field_A;
     int field_v;
     int field_u;
-    static kk field_x;
+    static Archive field_x;
     static int field_z;
-    ik field_n;
+    PcmSample field_n;
     int field_p;
     mh field_B;
-    static qj[] field_m;
+    static Sprite[] field_m;
     int field_q;
     int field_y;
     int field_C;
@@ -24,11 +24,11 @@ final class ha extends fc {
     int field_w;
     uh field_k;
     int field_G;
-    static qj field_E;
+    static Sprite field_E;
     int field_r;
     int field_D;
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, byte[] param3, int param4, byte param5, be param6) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, byte[] param3, int param4, byte param5, PacketBuffer param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -50,7 +50,7 @@ final class ha extends fc {
         int var9Lifetime1;
         var10 = TrackController.field_F ? 1 : 0;
         try {
-          var7_int = ae.a((byte) -39, param2);
+          var7_int = ArchiveRequestConnection.a((byte) -39, param2);
           if (null == oj.field_b) {
             oj.field_b = new java.security.SecureRandom();
           }
@@ -59,36 +59,36 @@ final class ha extends fc {
           var8 = var12;
           var9 = 0;
           if (param5 < 43) {
-            field_E = (qj) null;
+            field_E = (Sprite) null;
           }
           while (4 > var9) {
             var8[var9] = oj.field_b.nextInt();
             var9++;
           }
           if (null == dg.field_H ||
-            !(dg.field_H.field_j.length >= var7_int)) {
-            dg.field_H = new be(var7_int);
+            !(dg.field_H.payload.length >= var7_int)) {
+            dg.field_H = new PacketBuffer(var7_int);
           }
-          dg.field_H.field_k = 0;
+          dg.field_H.position = 0;
           dg.field_H.a(param2, 121, param4, param3);
           dg.field_H.a(-3869, var7_int);
-          dg.field_H.a(29715, var13);
-          if (al.field_w == null ||
-            !(al.field_w.field_j.length >= 100)) {
-            al.field_w = new be(100);
+          dg.field_H.xteaEncrypt(29715, var13);
+          if (UiWidget.field_w == null ||
+            !(UiWidget.field_w.payload.length >= 100)) {
+            UiWidget.field_w = new PacketBuffer(100);
           }
-          al.field_w.field_k = 0;
-          al.field_w.a(10, (byte) -83);
+          UiWidget.field_w.position = 0;
+          UiWidget.field_w.writeByte(10, (byte) -83);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            al.field_w.b(false, var13[var11]);
+            UiWidget.field_w.writeInt(false, var13[var11]);
             var11++;
           }
-          al.field_w.b(param2, (byte) -120);
-          al.field_w.a(param1, param0, false);
-          param6.a(al.field_w.field_k, 79, 0, al.field_w.field_j);
-          param6.a(dg.field_H.field_k, 83, 0, dg.field_H.field_j);
+          UiWidget.field_w.b(param2, (byte) -120);
+          UiWidget.field_w.rsaEncrypt(param1, param0, false);
+          param6.a(UiWidget.field_w.position, 79, 0, UiWidget.field_w.payload);
+          param6.a(dg.field_H.position, 83, 0, dg.field_H.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class ha extends fc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ha extends fc {
         String var3 = null;
         String var4 = null;
         oi var5 = null;
-        oh var6 = null;
+        BitmapFont var6 = null;
         oi stackIn_4_0 = null;
         oi stackIn_7_0 = null;
         oi stackIn_12_0 = null;
@@ -154,8 +154,8 @@ final class ha extends fc {
               return stackIn_7_0;
             }
             if (param1 > -106) {
-              var6 = (oh) null;
-              ha.a((oh) null, 98, -93, (oh) null);
+              var6 = (BitmapFont) null;
+              ha.a((BitmapFont) null, 98, -93, (BitmapFont) null);
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(var2_int + 1);
@@ -167,7 +167,7 @@ final class ha extends fc {
             stackIn_12_0 = var5;
             return stackIn_12_0;
           }
-          stackIn_4_0 = gd.field_f;
+          stackIn_4_0 = CachedArchiveSource.field_f;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +179,7 @@ final class ha extends fc {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -195,15 +195,15 @@ final class ha extends fc {
         field_E = null;
     }
 
-    final static void a(oh param0, int param1, int param2, oh param3) {
+    final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
           mk.field_b = param0;
           r.field_k = param3;
           sc.field_f = param2;
-          jk.a(ll.field_k / param1, -120, ll.field_d / 2);
+          jk.a(SoftwareRasterizer.field_k / param1, -120, SoftwareRasterizer.stride / 2);
           vb.a(param3.field_H, param0.field_H + param0.field_u, param1 - 107, param0.field_H, param3.field_H + param3.field_u);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -212,6 +212,6 @@ final class ha extends fc {
 
     static {
         field_z = -1;
-        field_E = new qj(270, 70);
+        field_E = new Sprite(270, 70);
     }
 }

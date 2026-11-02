@@ -27,11 +27,11 @@ final class gl extends ok {
           this.field_B.a(param0, param1 + this.field_p, this.field_m + param2, param3 + 0);
           return;
         }
-        qj var6 = new qj(this.field_B.field_x, this.field_B.field_u);
+        Sprite var6 = new Sprite(this.field_B.field_x, this.field_B.field_u);
         if (param3 == 29221) {
           mb.a((byte) -12, var6);
           this.field_B.a(param0, 0, 0, param3 + 0);
-          ch.m(param3 - 29294);
+          GameShell.m(param3 - 29294);
           var6.d(this.field_p + param1, this.field_m + param2, this.field_H);
           return;
         }
@@ -57,17 +57,17 @@ final class gl extends ok {
           fd.field_h = cj.field_e;
           if (param2 != 255) {
             if (param2 < 100) {
-              h.field_c = wg.a((byte) 54, param2, param0);
+              MouseWheelInput.field_c = wg.a((byte) 54, param2, param0);
             } else {
               if (param2 > 105) {
-                h.field_c = wg.a((byte) 54, param2, param0);
+                MouseWheelInput.field_c = wg.a((byte) 54, param2, param0);
               } else {
-                h.field_c = qg.a(param1, 91);
+                MouseWheelInput.field_c = qg.a(param1, 91);
               }
             }
           } else {
-            stackIn_5_0 = !(da.field_o >= 13);
-            h.field_c = oc.a(stackIn_5_0, -21017);
+            stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
+            MouseWheelInput.field_c = oc.a(stackIn_5_0, -21017);
           }
           if (param3 >= 93) {
             return;
@@ -90,38 +90,38 @@ final class gl extends ok {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static qj[] b(int param0, int param1, int param2, int param3, int param4) {
-        qj[] var7 = new qj[9];
-        qj[] var5 = var7;
-        qj dupTemp$0 = ee.a(param0, param1, (byte) 104);
+    final static Sprite[] b(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var5 = var7;
+        Sprite dupTemp$0 = NodeHashTableIterator.a(param0, param1, (byte) 104);
         var7[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        qj dupTemp$1 = ee.a(param2, param1, (byte) -74);
+        Sprite dupTemp$1 = NodeHashTableIterator.a(param2, param1, (byte) -74);
         var7[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         int var6 = 87 % ((-23 - param3) / 37);
         if (param4 != 0) {
-          var7[4] = ee.a(param4, 64, (byte) 104);
+          var7[4] = NodeHashTableIterator.a(param4, 64, (byte) 104);
         }
         return var5;
     }
 
-    gl(al param0) {
+    gl(UiWidget param0) {
         super(param0.field_p, param0.field_m, param0.field_x, param0.field_u, (t) null, (tg) null);
         try {
           param0.a(this.field_u, -3050, 0, this.field_x, 0);
           this.field_H = 256;
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

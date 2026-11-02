@@ -13,8 +13,8 @@ final class rf {
         field_d = null;
         field_e = null;
         if (param0 != 0) {
-          uf var2 = (uf) null;
-          rf.a((uf) null, false);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          rf.a((PlatformTaskDispatcher) null, false);
         }
     }
 
@@ -26,33 +26,33 @@ final class rf {
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (aj) (ub.field_e.b(param1 + 2));
+          var4 = (aj) (ImageProducerRasterBuffer.field_e.first(param1 + 2));
           while (var4 != null) {
             we.a(param0, var4, (byte) -47);
-            var4 = (aj) (ub.field_e.a(10));
+            var4 = (aj) (ImageProducerRasterBuffer.field_e.next(10));
           }
           if (param1 != 0) {
             field_d = (String) null;
           }
-          var5 = (ti) (ea.field_s.b(2));
+          var5 = (ti) (LevelData.field_s.first(2));
           while (var5 != null) {
             mc.a(false, param0, var5);
-            var5 = (ti) (ea.field_s.a(10));
+            var5 = (ti) (LevelData.field_s.next(10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2), "rf.E(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2), "rf.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0) {
         int var1 = 70 / ((param0 - 57) / 63);
-        if (null == tk.field_u) {
+        if (null == AsyncRequest.field_u) {
           return false;
         }
-        if (tk.field_u.a(32130)) {
+        if (AsyncRequest.field_u.a(32130)) {
           return true;
         }
         return false;
@@ -63,13 +63,13 @@ final class rf {
         if (!param0) {
           return;
         }
-        nl.field_f = null;
+        ClientException.field_f = null;
         cd.field_j = false;
         aj.field_m = -1;
         vl.field_H = 0;
     }
 
-    final static ji[] a(uf param0, boolean param1) {
+    final static ji[] a(PlatformTaskDispatcher param0, boolean param1) {
         int var5 = 0;
         ji[] stackIn_4_0 = null;
         ji[] stackIn_10_0 = null;
@@ -83,7 +83,7 @@ final class rf {
         ji[] var4 = null;
         ji var6 = null;
         int var7 = 0;
-        uf var8 = null;
+        PlatformTaskDispatcher var8 = null;
         ce var9 = null;
         int[] var10 = null;
         int[] var11 = null;
@@ -106,8 +106,8 @@ final class rf {
           var3 = var10;
           var4 = new ji[var11.length >> 2];
           if (param1) {
-            var8 = (uf) null;
-            rf.a((uf) null, false);
+            var8 = (PlatformTaskDispatcher) null;
+            rf.a((PlatformTaskDispatcher) null, false);
           }
           for (var5 = 0; var4.length > var5; var5++) {
             var6 = new ji();
@@ -129,7 +129,7 @@ final class rf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends fc {
+final class aj extends IntrusiveNode {
     int field_q;
     int field_n;
     int field_i;
@@ -60,16 +60,16 @@ final class aj extends fc {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
     final static String a(byte param0) {
         if (param0 != 107) {
           field_m = 13;
-          return ne.field_a.g(0);
+          return ne.field_a.readString(0);
         }
-        return ne.field_a.g(0);
+        return ne.field_a.readString(0);
     }
 
     final static void a(byte param0, String param1) {
@@ -89,14 +89,14 @@ final class aj extends fc {
           }
           if (-1 == j.field_c &&
             nk.field_l == -1) {
-            nk.field_l = fg.field_a;
-            j.field_c = kf.field_b;
+            nk.field_l = fg.mouseY;
+            j.field_c = kf.mouseX;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
-            decompiledFrameRemainder0 = !(param1.equals(nl.field_f));
+            decompiledFrameRemainder0 = !(param1.equals(ClientException.field_f));
           } else {
-            decompiledFrameRemainder0 = (nl.field_f == null);
+            decompiledFrameRemainder0 = (ClientException.field_f == null);
           }
           if (decompiledFrameRemainder0) {
             if (!cd.field_j) {
@@ -132,10 +132,10 @@ final class aj extends fc {
             }
             r.field_j = j.field_c;
           }
-          nl.field_f = param1;
+          ClientException.field_f = param1;
           if (!cd.field_j &&
             ib.field_d > vl.field_H &&
-            mg.field_a) {
+            GameScreen.mouseMoved) {
             r.field_j = j.field_c;
             vl.field_H = 0;
             field_m = nk.field_l;
@@ -159,7 +159,7 @@ final class aj extends fc {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class aj extends fc {
           this.field_n = param1;
           this.field_o = param6;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "aj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "aj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
