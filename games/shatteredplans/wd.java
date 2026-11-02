@@ -18,7 +18,7 @@ final class wd extends ji {
             ja var7 = (ja) null;
             this.a((ja) null, -116);
           }
-          EmailValidator.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> 1)), param2.field_q + param4 - 5, 16777215, -1);
+          EmailValidator.field_x.drawCentred(param3, param0 - (-param2.field_m - (param2.field_x >> 1)), param2.field_q + param4 - 5, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "wd.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

@@ -33,7 +33,7 @@ final class ta {
           for (var7 = 1; param0.length() > var7; var7++) {
             var8 = param0.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + (param1.field_b[0] + param4.c(param0.substring(0, var7)));
+              var6 = (var5_int >> 8) + (param1.field_b[0] + param4.stringWidth(param0.substring(0, var7)));
             }
             if (var6 != -1) {
               param1.field_b[var7] = var6;
@@ -41,7 +41,7 @@ final class ta {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param1.field_b[var7] = (var5_int >> 8) - (-param1.field_b[0] + (-param4.c(param0.substring(0, var7 + 1)) + param4.a((char) var8)));
+              param1.field_b[var7] = (var5_int >> 8) - (-param1.field_b[0] + (-param4.stringWidth(param0.substring(0, var7 + 1)) + param4.charWidth((char) var8)));
             }
             if (62 == var8) {
               var6 = -1;

@@ -110,7 +110,7 @@ final class wj extends IntrusiveNode {
           var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
           var1_int = -(int)(200.0 * Math.sin((double)var3));
           var2 = (int)(Math.cos((double)var3) * 200.0) - 200;
-          va.field_e.f(var1_int, var2);
+          va.field_e.draw(var1_int, var2);
           var4 = -(di.field_m * 120 / 1000) + 176;
           var5 = 540 - var4;
           RandomAccessCacheFile.a(-111);
@@ -119,11 +119,11 @@ final class wj extends IntrusiveNode {
             var5 = 256;
           }
           if (null == WeightedCacheEntry.field_u) {
-            WeightedCacheEntry.field_u = ds.field_b.g();
-            WeightedCacheEntry.field_u.e();
+            WeightedCacheEntry.field_u = ds.field_b.copy();
+            WeightedCacheEntry.field_u.bindAsRenderTarget();
           } else {
-            WeightedCacheEntry.field_u.e();
-            ds.field_b.c(0, 0);
+            WeightedCacheEntry.field_u.bindAsRenderTarget();
+            ds.field_b.drawOpaque(0, 0);
           }
           var1_intLifetime1 = -5;
           var2Lifetime1 = -80 + 100 * di.field_m / 1000;
@@ -137,7 +137,7 @@ final class wj extends IntrusiveNode {
           if (param0 != 128) {
             return;
           }
-          DefendTask.field_s.f(var1_intLifetime1, var2Lifetime1);
+          DefendTask.field_s.draw(var1_intLifetime1, var2Lifetime1);
           tg.a(var2Lifetime1, oe.field_c, (byte) 15, var1_intLifetime1);
           stackIn_13_0 = WeightedCacheEntry.field_u;
           stackIn_13_1 = 0;

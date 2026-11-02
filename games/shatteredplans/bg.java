@@ -83,14 +83,14 @@ final class bg {
         GameState.field_F = new Sprite(var2, 2);
         IntrusiveDeque.field_d = new Sprite(var2 + IntrusiveDeque.field_a[0].field_z / 4, 2);
         RandomAccessCacheFile.a(param0 + 2499);
-        GameState.field_F.e();
+        GameState.field_F.bindAsRenderTarget();
         gf.f(0, 0, GameState.field_F.field_z, 10790052);
         gf.f(0, 1, GameState.field_F.field_z, 16777215);
         GameState.field_F.field_B[0] = SolVictoryChecker.a(0, GameState.field_F.field_B[0], -90, 185);
         GameState.field_F.field_B[1] = SolVictoryChecker.a(0, GameState.field_F.field_B[1], -94, 220);
         GameState.field_F.field_B[var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2], -118, 185);
         GameState.field_F.field_B[1 + var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2 + 1], -96, 220);
-        IntrusiveDeque.field_d.e();
+        IntrusiveDeque.field_d.bindAsRenderTarget();
         gf.f(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
         gf.f(0, 1, IntrusiveDeque.field_d.field_z, 16777215);
         cg.i(0);

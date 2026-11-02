@@ -1459,7 +1459,7 @@ public final class ShatteredPlansClient extends tl {
               if (!this.field_G.isEmpty(27)) {
                 var3_ref_he = (he) (this.field_G.startForward(param0 ^ 1));
                 var4 = ud.field_a[var3_ref_he.field_k];
-                var5_int = mp.field_b.c(var4) + 50;
+                var5_int = mp.field_b.stringWidth(var4) + 50;
                 var6 = 36;
                 var7_int = 10 + var5_int / 2;
                 var8 = 10;
@@ -1478,8 +1478,8 @@ public final class ShatteredPlansClient extends tl {
                 MidiPcmStream.a(var6, var8, var11, (byte) -78, var10);
                 gf.d(var11, var8, var10 + var11, var8 + var6);
                 var13 = oi.a(var3_ref_he.field_k, (byte) 66);
-                var13.f(-36 + (var7_int + var5_int / 2), 4 + var8);
-                mp.field_b.d(var4, -(var5_int / 2) + (var7_int + 10), -2 + (mp.field_b.field_J + var6 >> 1) + var8, 2805974, -1);
+                var13.draw(-36 + (var7_int + var5_int / 2), 4 + var8);
+                mp.field_b.drawString(var4, -(var5_int / 2) + (var7_int + 10), -2 + (mp.field_b.field_J + var6 >> 1) + var8, 2805974, -1);
                 gf.b(var18);
               }
             } else {
@@ -1496,11 +1496,11 @@ public final class ShatteredPlansClient extends tl {
         }
         if (mm.field_n &&
           AchievementProgress.field_g) {
-          mp.field_b.d(Integer.toString(LinkPainter.field_i), 4, 4 + mp.field_b.field_J, 16777215, -1);
+          mp.field_b.drawString(Integer.toString(LinkPainter.field_i), 4, 4 + mp.field_b.field_J, 16777215, -1);
           var3 = Runtime.getRuntime().totalMemory();
           var5 = Runtime.getRuntime().freeMemory();
           var7 = -var5 + var3;
-          mp.field_b.d((int)(var7 >> 10) + "kb", 4, 2 * mp.field_b.field_J + 8, 16777215, -1);
+          mp.field_b.drawString((int)(var7 >> 10) + "kb", 4, 2 * mp.field_b.field_J + 8, 16777215, -1);
         }
         if (param0 != 1) {
           this.shutdown(true);

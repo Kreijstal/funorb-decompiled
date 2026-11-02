@@ -104,14 +104,14 @@ final class sp {
           var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new gn(var4, true);
-          var14.a(-12, var13.g());
-          var13.f();
+          var14.a(-12, var13.copy());
+          var13.rotate90();
           var14Lifetime1 = new gn(var4, param1);
-          var14Lifetime1.a(-12, var13.g());
-          var13.f();
+          var14Lifetime1.a(-12, var13.copy());
+          var13.rotate90();
           var14Lifetime2 = new gn(var4, true);
-          var14Lifetime2.a(-12, var13.g());
-          var13.f();
+          var14Lifetime2.a(-12, var13.copy());
+          var13.rotate90();
           var19 = new gn(var4, true);
           var19.a(-12, var13);
         } catch (RuntimeException runtimeException) {
@@ -315,7 +315,7 @@ final class sp {
             var7 = this.field_h.field_q + this.field_h.field_J;
           }
           var8 = gf.field_b >> 2;
-          var9 = this.field_h.c(param0);
+          var9 = this.field_h.stringWidth(param0);
           var10 = this.field_h.field_J + this.field_h.field_q;
           var11 = 1;
           if (var8 < var9 ||
@@ -329,11 +329,11 @@ final class sp {
               var13 = var9 / var8;
               var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
             }
-            var11Lifetime1 = this.field_h.a(param0, new int[]{var12}, mp.field_c);
+            var11Lifetime1 = this.field_h.wrapText(param0, new int[]{var12}, mp.field_c);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_h.c(mp.field_c[var13Lifetime2]);
+              var14 = this.field_h.stringWidth(mp.field_c[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -376,7 +376,7 @@ final class sp {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_h.c(param2);
+          var5_int = this.field_h.stringWidth(param2);
           var6 = this.field_h.field_K + this.field_h.field_q;
           var7 = param3;
           if (gf.field_b < 6 + var5_int + var7) {
@@ -388,7 +388,7 @@ final class sp {
           }
           gf.b(var7, var8, var5_int + 6, var6 + 6, this.field_p);
           gf.d(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_k);
-          this.field_h.d(param2, var7 + 3, 3 + (var8 + this.field_h.field_K), this.field_p, -1);
+          this.field_h.drawString(param2, var7 + 3, 3 + (var8 + this.field_h.field_K), this.field_p, -1);
           if (param0 > -98) {
             this.field_h = (nq) null;
           }

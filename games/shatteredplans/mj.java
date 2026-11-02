@@ -155,14 +155,14 @@ final class mj extends qr {
             var6_int = param5[0].field_o;
             var7 = param5[param1].field_o;
             var8 = param5[1].field_o;
-            param5[0].d(param4, param3, param2);
-            param5[2].d(-var7 + (param4 + param0), param3, param2);
+            param5[0].drawTinted(param4, param3, param2);
+            param5[2].drawTinted(-var7 + (param4 + param0), param3, param2);
             gf.a(fc.field_g);
             gf.i(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
             var9 = param4 + var6_int;
             var10 = param0 + param4 - var7;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param5[1].d(param4, param3, param2);
+              param5[1].drawTinted(param4, param3, param2);
             }
             gf.b(fc.field_g);
             return;

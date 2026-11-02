@@ -244,7 +244,7 @@ final class cf extends WidgetContainer implements ButtonListener {
           this.field_J = param1;
           this.field_K = param0;
           this.field_L = param2;
-          var4_int = this.field_L != null ? this.field_J.c(this.field_L, 260, this.field_J.field_J) : 0;
+          var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_J) : 0;
           this.a(0, 22 + var4_int, (byte) 121, 0, 288);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

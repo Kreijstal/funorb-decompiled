@@ -132,11 +132,11 @@ abstract class le {
           var61 = (CharSequence) ((Object) gi.field_a);
           var20 = re.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
           var8 = re.a(cf.field_M, 4371, new String[]{var16});
-          var9 = ho.field_f.c(var20);
-          var10 = ho.field_f.c(var8);
+          var9 = ho.field_f.stringWidth(var20);
+          var10 = ho.field_f.stringWidth(var8);
           if (var9 <= var10) {
             var5Lifetime1 = var5Lifetime1 - var10;
-            if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
               aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
@@ -146,8 +146,8 @@ abstract class le {
           var7 = "";
           if (0 != em.field_h) {
             var59 = var7 + var18 + ": ";
-            var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var59);
-            if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+            var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59);
+            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
               aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
@@ -156,8 +156,8 @@ abstract class le {
             if (!je.field_e) {
               if (null == np.field_a) {
                 var47 = var7 + var18 + ": ";
-                var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var47);
-                if (var5Lifetime1 >= ho.field_f.c(cg.field_E.toString())) {
+                var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var47);
+                if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
                   return true;
                 }
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
@@ -166,8 +166,8 @@ abstract class le {
               if (!DialPainter.field_c) {
                 var50 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
-                var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var51);
-                if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+                var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var51);
+                if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                   aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 }
                 return true;
@@ -175,16 +175,16 @@ abstract class le {
               if (AiTask.field_m == null) {
                 var48 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
-                var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var49);
-                if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+                var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var49);
+                if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                   aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 }
                 return true;
               }
               var52 = "[" + AiTask.field_m + "] ";
               var53 = var52 + var18 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var53);
-              if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+              var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var53);
+              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
@@ -195,8 +195,8 @@ abstract class le {
             if (!DialPainter.field_c) {
               var57 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var58);
-              if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+              var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var58);
+              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
@@ -204,24 +204,24 @@ abstract class le {
             if (AiTask.field_m == null) {
               var55 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var56);
-              if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+              var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var56);
+              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
             }
             var7 = "[" + AiTask.field_m + "] ";
             var59Lifetime1 = var7 + var18 + ": ";
-            var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var59Lifetime1);
-            if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+            var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59Lifetime1);
+            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
               aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
           }
           var54 = var7 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var54);
+          var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var54);
         }
-        if (var5Lifetime1 >= ho.field_f.c(cg.field_E.toString())) {
+        if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
           return true;
         }
         aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');

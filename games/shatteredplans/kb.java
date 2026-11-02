@@ -35,7 +35,7 @@ final class kb extends vd {
           this.field_z = param4;
           this.field_C = new Sprite(this.field_m, this.field_i);
           RandomAccessCacheFile.a(-111);
-          this.field_C.e();
+          this.field_C.bindAsRenderTarget();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);
             gf.f(0, var8_int, this.field_C.field_z, SolVictoryChecker.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
@@ -208,12 +208,12 @@ final class kb extends vd {
         gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
         int var3 = rs.field_Cb.field_J;
         int var4 = -24 / ((param0 - 67) / 47);
-        this.field_C.f(this.field_k, this.field_t);
+        this.field_C.draw(this.field_k, this.field_t);
         if (this.field_z != null) {
           if (this.field_B) {
-            rs.field_Cb.c(this.field_z, 1 + (this.field_k + this.field_m / 2), (rs.field_Cb.field_J + rs.field_Cb.field_q) / 2 + (3 + this.field_t), this.field_u, -1);
+            rs.field_Cb.drawCentred(this.field_z, 1 + (this.field_k + this.field_m / 2), (rs.field_Cb.field_J + rs.field_Cb.field_q) / 2 + (3 + this.field_t), this.field_u, -1);
           } else {
-            rs.field_Cb.d(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
+            rs.field_Cb.drawString(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
           }
         }
         gf.b(var11);

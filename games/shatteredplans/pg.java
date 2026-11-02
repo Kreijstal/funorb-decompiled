@@ -48,7 +48,7 @@ final class pg extends SingleChildWidget {
           stackIn_4_1 = (param5);
           this.field_I = stackIn_4_1;
           var12_int = -this.field_K + this.field_H;
-          var13 = this.field_G.c(param10, var12_int, this.field_G.field_J) + this.field_K * 2;
+          var13 = this.field_G.textHeight(param10, var12_int, this.field_G.field_J) + this.field_K * 2;
           if (param3 < var13) {
             this.a(param1, var13, (byte) 102, param0, param2);
           } else {

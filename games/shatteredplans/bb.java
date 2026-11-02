@@ -170,7 +170,7 @@ final class bb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = dn.field_f.field_nb.c(var16) + 3 * dn.field_f.field_nb.a('.');
+              var10Lifetime1 = dn.field_f.field_nb.stringWidth(var16) + 3 * dn.field_f.field_nb.charWidth('.');
               dn.field_f.field_kb = (-var10Lifetime1 + dn.field_f.field_K) / 2;
               if (16 == (Star.field_w & 48)) {
                 var9 = var16 + ".";

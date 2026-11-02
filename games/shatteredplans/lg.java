@@ -182,11 +182,11 @@ final class lg extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = mp.field_b;
-          var3 = ((nq) ((Object) var2)).c(param1);
+          var3 = ((nq) ((Object) var2)).stringWidth(param1);
           var4 = ((nq) ((Object) var2)).field_J + ((nq) ((Object) var2)).field_q;
           var5 = new Sprite(var3, var4);
           bs.a(var5, 112);
-          ((nq) ((Object) var2)).d(param1, 0, ((nq) ((Object) var2)).field_J, 16777215, -1);
+          ((nq) ((Object) var2)).drawString(param1, 0, ((nq) ((Object) var2)).field_J, 16777215, -1);
           cg.i(param0);
           stackIn_1_0 = var5;
           return stackIn_1_0;

@@ -25,7 +25,7 @@ final class fr extends SingleChildWidget {
           gf.f(0, 0, 640, 0);
           return;
         }
-        Star.field_K.c(-var1 >> 4, -var2 >> 4);
+        Star.field_K.drawOpaque(-var1 >> 4, -var2 >> 4);
     }
 
     final void h(int param0) {

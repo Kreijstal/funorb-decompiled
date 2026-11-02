@@ -87,13 +87,13 @@ final class ArchiveSourceManager {
         int var7 = gf.field_b;
         int var8 = gf.field_k;
         Sprite var9 = new Sprite(16, param3);
-        var9.e();
+        var9.bindAsRenderTarget();
         gf.i(0, 0, 16, param3, param4, param1);
         Object var10 = null;
         if (param0) {
-          var13 = var9.g();
+          var13 = var9.copy();
           var10 = var13;
-          var13.e();
+          var13.bindAsRenderTarget();
           gf.f(0, 0, 5, 0);
           gf.f(0, 1, 3, 0);
           gf.f(0, 2, 2, 0);
@@ -105,9 +105,9 @@ final class ArchiveSourceManager {
         }
         Object var11 = null;
         if (param2) {
-          var14 = var9.g();
+          var14 = var9.copy();
           var11 = var14;
-          var14.e();
+          var14.bindAsRenderTarget();
           gf.f(11, 0, 5, 0);
           gf.f(13, 1, 3, 0);
           gf.f(14, 2, 2, 0);

@@ -53,7 +53,7 @@ final class SliderPainter implements WidgetPainter {
           if (null == this.field_c) {
             return;
           }
-          this.field_c.c(var12.field_s, var8 + var7 / 2, var9 + this.field_c.field_L + var12.field_I, this.field_m, this.field_i);
+          this.field_c.drawCentred(var12.field_s, var8 + var7 / 2, var9 + this.field_c.field_L + var12.field_I, this.field_m, this.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

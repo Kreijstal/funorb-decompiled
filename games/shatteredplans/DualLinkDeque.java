@@ -161,7 +161,7 @@ final class DualLinkDeque {
         int var6Lifetime1;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = param1.c(param2);
+          var5_int = param1.stringWidth(param2);
           if (param4 != 3) {
             field_d = (String) null;
           }
@@ -181,7 +181,7 @@ final class DualLinkDeque {
             if (32 == var10 ||
               45 == var10) {
               var11 = param2.substring(var7, 1 + var9).trim();
-              var12 = param1.c(var11);
+              var12 = param1.stringWidth(var11);
               if (var12 >= param0) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

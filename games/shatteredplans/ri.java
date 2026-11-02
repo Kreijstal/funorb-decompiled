@@ -292,7 +292,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           this.field_q = 15;
           var7 = gn.field_u;
           if (null != this.field_J) {
-            this.field_q = this.field_q + (var7.c(this.field_J, this.field_x - 40, var7.field_J) + 5);
+            this.field_q = this.field_q + (var7.textHeight(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
           var8 = ph.field_e;
           var9 = ArchiveRequest.a(GameScreen.f((byte) 124), true);

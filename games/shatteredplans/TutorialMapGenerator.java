@@ -683,7 +683,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           }
           do {
             try {
-              var4_int = param0.a(param2, param3, IterableNodeHashTable.field_g);
+              var4_int = param0.wrapText(param2, param3, IterableNodeHashTable.field_g);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

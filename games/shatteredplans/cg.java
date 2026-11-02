@@ -63,7 +63,7 @@ final class cg extends SingleChildWidget {
           aq.a((byte) 114, var6);
           this.field_z.a(param0, param1, 0, 0);
           Star.f((byte) -78);
-          var6.a(param3 + this.field_m, param2 + this.field_q, this.field_J);
+          var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.field_J);
           return;
         }
         this.field_z.a(param0, -11857, param2 + this.field_q, param3 + this.field_m);

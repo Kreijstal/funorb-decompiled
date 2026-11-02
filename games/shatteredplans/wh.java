@@ -68,14 +68,14 @@ final class wh {
             var5_int = param0[0].field_o;
             var6 = param0[2].field_o;
             var7 = param0[1].field_o;
-            param0[0].f(param4, param1);
-            param0[2].f(param2 + param4 - var6, param1);
+            param0[0].draw(param4, param1);
+            param0[2].draw(param2 + param4 - var6, param1);
             gf.a(fc.field_g);
             gf.i(var5_int + param4, param1, -var6 + param2 + param4, param0[1].field_p + param1);
             var8 = var5_int + param4;
             var9 = -var6 + param4 + param2;
             for (param4 = var8; param4 < var9; param4 = param4 + var7) {
-              param0[1].f(param4, param1);
+              param0[1].draw(param4, param1);
             }
             gf.b(fc.field_g);
             return;

@@ -84,7 +84,7 @@ final class GameSession implements AiHost {
           var4 = param0.name + ": ";
           var5 = ji.field_I.field_K;
           if (this.field_f) {
-            var5 = var5 - ho.field_f.c("[" + re.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
+            var5 = var5 - ho.field_f.stringWidth("[" + re.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
           if (this.field_f) {
             stackIn_16_0 = 0;
@@ -92,8 +92,8 @@ final class GameSession implements AiHost {
             stackIn_16_0 = param0.field_k;
           }
           var6 = stackIn_16_0;
-          var7 = -ho.field_f.c(var4) + var5 - 20;
-          if (var7 < ho.field_f.c(param1)) {
+          var7 = -ho.field_f.stringWidth(var4) + var5 - 20;
+          if (var7 < ho.field_f.stringWidth(param1)) {
             var8 = TutorialMapGenerator.a(ho.field_f, (byte) 125, param1, new int[]{var7});
             var9 = var8;
             var10 = 0;

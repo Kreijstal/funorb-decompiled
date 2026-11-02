@@ -379,8 +379,8 @@ final class WhirlpoolHasher {
         if (!param0) {
           return;
         }
-        IsolationistAi.field_t = mp.field_b.c(oq.field_i[21]);
-        int var1 = mp.field_b.c(oq.field_i[22]);
+        IsolationistAi.field_t = mp.field_b.stringWidth(oq.field_i[21]);
+        int var1 = mp.field_b.stringWidth(oq.field_i[22]);
         if (!(var1 <= IsolationistAi.field_t)) {
           IsolationistAi.field_t = var1;
         }
@@ -485,7 +485,7 @@ final class WhirlpoolHasher {
           var7 = (-IntrusiveDeque.field_a[param3.field_x].field_z + 182) * param0 / param2;
           var8 = new Sprite(var6 + var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2, 2 + rs.field_Cb.field_J);
           RandomAccessCacheFile.a(-128);
-          var8.e();
+          var8.bindAsRenderTarget();
           if (param4 <= 0) {
             var7 = var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
             var9 = SolVictoryChecker.a(2105376, param3.field_k, -90, 128);

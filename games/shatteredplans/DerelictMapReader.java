@@ -98,7 +98,7 @@ final class DerelictMapReader implements MapGenerator {
           var2 = var3;
           MapView.field_sb[param0] = dupTemp$0;
           bs.a(var3, 100);
-          CellVertex.field_j[param0].f(64, 64);
+          CellVertex.field_j[param0].draw(64, 64);
           gf.b(12, 12, 0, 0, 256, 256);
           cg.i(0);
         }

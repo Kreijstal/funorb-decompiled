@@ -118,10 +118,10 @@ final class ClientException extends RuntimeException {
               var2 = var2 + uo.field_g;
             }
             if (var4 >= 0) {
-              MusicEnvelope.field_g.d(var6, var8, var2 + we.field_c, var5, -1);
+              MusicEnvelope.field_g.drawString(var6, var8, var2 + we.field_c, var5, -1);
               var2 = var2 + (vh.field_b + js.field_e + uo.field_g);
             } else {
-              lq.field_k.d(var6, var8, var2 + sp.field_r, var5, -1);
+              lq.field_k.drawString(var6, var8, var2 + sp.field_r, var5, -1);
               var2 = var2 + fe.field_A;
             }
           }

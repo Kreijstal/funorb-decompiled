@@ -64,7 +64,7 @@ final class md extends UiWidget {
           md.a((byte) 86, -76, 69);
         }
         this.field_R = this.h(61);
-        this.field_N = this.field_R.c();
+        this.field_N = this.field_R.flippedCopy();
         this.field_S = new Sprite(this.field_n >> 1, this.field_n);
     }
 
@@ -142,26 +142,26 @@ final class md extends UiWidget {
           var5_int = param2 + this.field_x;
           BufferedSocket.a(-6187, var5_int - this.field_R.field_z, this.field_n + param1, param1, param2 + this.field_R.field_z);
           for (var6 = -this.field_P + param2; var5_int > var6; var6 = var6 + param0.field_z) {
-            param0.f(var6, param1);
+            param0.draw(var6, param1);
           }
           Star.f((byte) -64);
           if (gf.field_i <= param2 + this.field_R.field_z) {
             aq.a((byte) -90, this.field_S);
-            param0.f(-this.field_P, 0);
-            param0.f(-this.field_P + this.field_H * 2, 0);
-            this.field_N.e(0, 0);
+            param0.draw(-this.field_P, 0);
+            param0.draw(-this.field_P + this.field_H * 2, 0);
+            this.field_N.drawMultiply(0, 0);
             Star.f((byte) -91);
-            this.field_S.f(param2, param1);
+            this.field_S.draw(param2, param1);
           }
           if (gf.field_l >= -this.field_R.field_z + var5_int) {
             aq.a((byte) 98, this.field_S);
             for (var7 = -this.field_R.field_z + this.field_x + this.field_P; 2 * this.field_H < var7; var7 = var7 - 2 * this.field_H) {
             }
-            param0.f(-var7, 0);
-            param0.f(this.field_H * 2 - var7, 0);
-            this.field_R.e(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(this.field_H * 2 - var7, 0);
+            this.field_R.drawMultiply(0, 0);
             Star.f((byte) 111);
-            this.field_S.f(-this.field_R.field_z + var5_int, param1);
+            this.field_S.draw(-this.field_R.field_z + var5_int, param1);
             return;
           }
           return;
@@ -235,7 +235,7 @@ final class md extends UiWidget {
         int var1Lifetime1;
         Star.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
         RandomAccessCacheFile.a(param0 - 106);
-        Star.field_F.e();
+        Star.field_F.bindAsRenderTarget();
         for (var1 = 1; -1 + Star.field_F.field_w > var1; var1++) {
           var2 = (-var1 + Star.field_F.field_w / 2) * (Star.field_F.field_w / 2 - var1);
           gf.f(0, var1, Star.field_F.field_z, 328965 * (Star.field_F.field_w / 2 * (Star.field_F.field_w / 2) - var2));

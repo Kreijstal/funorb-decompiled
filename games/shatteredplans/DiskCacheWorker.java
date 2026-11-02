@@ -27,11 +27,11 @@ final class DiskCacheWorker implements Runnable {
         sr.field_F = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
         oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
         SliderPainter.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
-        DualLinkDeque.field_a.e();
+        DualLinkDeque.field_a.bindAsRenderTarget();
         BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
-        Dialog.field_D.e();
+        Dialog.field_D.bindAsRenderTarget();
         BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
-        vm.field_Jb.e();
+        vm.field_Jb.bindAsRenderTarget();
         MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
         id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
@@ -39,17 +39,17 @@ final class DiskCacheWorker implements Runnable {
         ja.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
         ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
         ds.field_b = new Sprite(640, 430);
-        ds.field_b.e();
+        ds.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {
           var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
           gf.g(320, 527, var2 + 400, (var1_int << 2) * 65793);
         }
         gf.b(4, 4, 0, 0, gf.field_b, gf.field_k);
         DefensiveAi.field_r = new Sprite(640, 624 - DefendTask.field_s.field_x);
-        DefensiveAi.field_r.e();
+        DefensiveAi.field_r.bindAsRenderTarget();
         for (var1_int = 254; var1_int >= 1; var1_int--) {
           var2 = (int)(Math.log((double)(254.0f / (float)var1_int)) * 40.0 / Math.log(2.0));
-          DefendTask.field_s.e(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
+          DefendTask.field_s.drawSilhouette(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
         }
         va.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
         q.field_Cb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
@@ -75,16 +75,16 @@ final class DiskCacheWorker implements Runnable {
         we.field_f.field_p = mm.field_o.field_p + 60;
         we.field_f.field_x = -60 + mm.field_o.field_x;
         we.field_f.field_o = mm.field_o.field_o;
-        he.field_h.e();
+        he.field_h.bindAsRenderTarget();
         if (param0 != 50) {
           return;
         }
         try {
           gf.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
-          we.field_f.e();
+          we.field_f.bindAsRenderTarget();
           gf.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
-          ks.field_j = va.field_e.g();
-          ks.field_j.d();
+          ks.field_j = va.field_e.copy();
+          ks.field_j.rotate180();
           for (var3 = 0; var3 < ks.field_j.field_B.length; var3++) {
             var4 = ks.field_j.field_B[var3];
             var5 = 8323072 & var4 >> 1;
@@ -98,13 +98,13 @@ final class DiskCacheWorker implements Runnable {
             var7 = 255 & var4;
             ks.field_j.field_B[var3] = ee.a(ee.a(var6, var5), var7);
           }
-          MusicVoice.field_n = DefendTask.field_s.c();
+          MusicVoice.field_n = DefendTask.field_s.flippedCopy();
           uo.a((byte) 110, MusicVoice.field_n, 32768);
           var1_int = MusicVoice.field_n.field_z;
           var2 = MusicVoice.field_n.field_z + 120;
           CheckboxPainter.field_b = new Sprite(var1_int, var2);
-          CheckboxPainter.field_b.e();
-          MusicVoice.field_n.e(0, 120, 4259648);
+          CheckboxPainter.field_b.bindAsRenderTarget();
+          MusicVoice.field_n.drawSilhouette(0, 120, 4259648);
           gf.b(120, 120, 0, 0, var1_int, var2);
           cg.i(0);
           jn.field_a = true;

@@ -81,10 +81,10 @@ final class vm extends qr {
             vm.g(-38);
           }
           if (!param2) {
-            stackIn_6_0 = PlayerStats.field_c.c(param0);
+            stackIn_6_0 = PlayerStats.field_c.stringWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ql.field_n.c(param0);
+          stackIn_4_0 = ql.field_n.stringWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -319,7 +319,7 @@ final class vm extends qr {
             }
             this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (Sprite) (var14), param6[var13]);
             this.a(4, this.field_Kb[var13]);
-            var15 = var17.c(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (this.field_Ib < var15) {
               this.field_Ib = var15;
             }

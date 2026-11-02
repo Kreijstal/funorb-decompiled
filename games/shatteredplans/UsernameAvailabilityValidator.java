@@ -137,7 +137,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
         Sprite var4 = new Sprite(var3, -6 + d.field_b[param0].field_w);
         RandomAccessCacheFile.a(-104);
-        var4.e();
+        var4.bindAsRenderTarget();
         for (var5 = 0; var4.field_z > var5; var5++) {
           gf.j(var5, 0, var4.field_w, SolVictoryChecker.a(0, gm.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
         }

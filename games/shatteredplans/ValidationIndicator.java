@@ -165,7 +165,7 @@ final class ValidationIndicator extends FocusableWidget {
           ValidationIndicator.a((byte) 53);
         }
         while (var4 < param1) {
-          var3.e();
+          var3.bindAsRenderTarget();
           gf.b();
           for (var5 = 0; var5 < 4; var5++) {
             var6 = (double)(param1 * (3 + var5) + var4) * 6.283185307179586;
@@ -174,11 +174,11 @@ final class ValidationIndicator extends FocusableWidget {
             var12 = (int)(12288.0 / (var10 + 3.0));
             var13 = 1920 + (int)(var8 * 2400.0 / (3.0 + var10));
             var14 = (int)(1920.0 / (3.0 + var10));
-            e.field_e.b(e.field_e.field_o << 3, e.field_e.field_p << 3, var13, var14, 0, var12);
+            e.field_e.drawRotatedAbout(e.field_e.field_o << 3, e.field_e.field_p << 3, var13, var14, 0, var12);
           }
           var2[var4] = new Sprite(60, 30);
-          var16[var4].e();
-          var3.g(0, 0);
+          var16[var4].bindAsRenderTarget();
+          var3.drawQuarterSize(0, 0);
           var4++;
         }
         cg.i(0);
@@ -232,7 +232,7 @@ final class ValidationIndicator extends FocusableWidget {
           gg.field_e = new Sprite(var9, var10);
           aq.a((byte) -107, gg.field_e);
         }
-        var14.b(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
+        var14.drawRotatedAbout(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
         Star.f((byte) -94);
         gg.field_e.c(var5 - var14.field_o, -var14.field_p + var6, 256);
         return;

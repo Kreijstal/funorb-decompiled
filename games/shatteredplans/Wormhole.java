@@ -26,25 +26,25 @@ final class Wormhole extends IntrusiveNode {
         int var7 = gf.field_b;
         int var8 = gf.field_k;
         Sprite var9 = new Sprite(param1, param2 - 2 * param1);
-        var9.e();
+        var9.bindAsRenderTarget();
         gf.i(0, 0, param1, param2 - param1 * 2, param3, param4);
         Sprite var10 = new Sprite(param1, param1);
-        var10.e();
+        var10.bindAsRenderTarget();
         gf.d(0, 0, param1, param1, param3);
         Sprite var11 = new Sprite(16, param1);
-        var11.e();
+        var11.bindAsRenderTarget();
         gf.d(0, 0, param0, param1, param3);
         Sprite var12 = new Sprite(param1, param1);
-        var12.e();
+        var12.bindAsRenderTarget();
         gf.d(0, 0, param1, param1, param4);
         Sprite var13 = new Sprite(16, param1);
-        var13.e();
+        var13.bindAsRenderTarget();
         gf.d(0, 0, 16, param1, param4);
         Object var14 = null;
         if (0 < param5) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.e();
+          var16.bindAsRenderTarget();
           gf.d(0, 0, 16, 16, param5);
         }
         gf.a(var18, var7, var8);

@@ -115,26 +115,26 @@ abstract class ArchiveRequest extends DualLinkNode {
     final static void a(int param0, Sprite param1) {
         RandomAccessCacheFile.a(-117);
         DerelictMapGenerator.field_n = new Sprite(128, 128);
-        DerelictMapGenerator.field_n.e();
+        DerelictMapGenerator.field_n.bindAsRenderTarget();
         if (param0 <= 12) {
           return;
         }
         try {
-          param1.f(0, 0);
+          param1.draw(0, 0);
           ks.field_h = new Sprite(256, 256);
-          ks.field_h.e();
-          DerelictMapGenerator.field_n.b(0, 0, 256, 256);
+          ks.field_h.bindAsRenderTarget();
+          DerelictMapGenerator.field_n.drawScaled(0, 0, 256, 256);
           gf.b(3, 3, 0, 0, 256, 256);
           lq.field_o = new Sprite(32, 32);
-          lq.field_o.e();
-          DerelictMapGenerator.field_n.g(0, 0);
+          lq.field_o.bindAsRenderTarget();
+          DerelictMapGenerator.field_n.drawQuarterSize(0, 0);
           n.field_k = new Sprite(256, 256);
-          n.field_k.e();
-          DerelictMapGenerator.field_n.f(64, 64);
+          n.field_k.bindAsRenderTarget();
+          DerelictMapGenerator.field_n.draw(64, 64);
           gf.b(12, 12, 0, 0, 256, 256);
           MouseInputHandler.field_b = new Sprite(64, 64);
-          MouseInputHandler.field_b.e();
-          lq.field_o.f(16, 16);
+          MouseInputHandler.field_b.bindAsRenderTarget();
+          lq.field_o.draw(16, 16);
           gf.b(3, 3, 0, 0, 64, 64);
           cg.i(0);
         } catch (RuntimeException runtimeException) {

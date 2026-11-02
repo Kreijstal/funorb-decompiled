@@ -203,7 +203,7 @@ final class bk {
             if (var7 == 2) {
               var5 = re.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
               var9 = re.a(cf.field_M, 4371, new String[]{var4});
-              var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.c(var9) + ho.field_f.c(var5));
+              var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
               }
@@ -244,7 +244,7 @@ final class bk {
                 var6 = "";
                 var5 = "<col=999999>" + var5 + qj.field_c + "</col>";
               }
-              var10 = ho.field_f.c(var5);
+              var10 = ho.field_f.stringWidth(var5);
               if (!BattleEvent.a((byte) 110)) {
                 if (uq.field_j.field_L &&
                   var10 > (-uq.field_j.field_B + pd.field_k)) {

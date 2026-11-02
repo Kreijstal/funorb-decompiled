@@ -83,7 +83,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void d() {
+    final void rotate180() {
         int incrementValue$0 = 0;
         int var1 = 0;
         int var2 = this.field_z * this.field_w;
@@ -99,7 +99,7 @@ class Sprite extends SpriteState {
         this.field_x = this.field_p - this.field_w - this.field_x;
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -741,7 +741,7 @@ class Sprite extends SpriteState {
         return;
     }
 
-    final void e(int param0, int param1) {
+    final void drawMultiply(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -834,7 +834,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -880,7 +880,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b() {
+    final void flipVertical() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1015,7 +1015,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void f() {
+    final void rotate90() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
@@ -1124,7 +1124,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void f(int param0, int param1) {
+    void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1170,7 +1170,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final Sprite c() {
+    final Sprite flippedCopy() {
         int var2 = 0;
         int var3 = 0;
         Sprite var1 = new Sprite(this.field_z, this.field_w);
@@ -1186,7 +1186,7 @@ class Sprite extends SpriteState {
         return var1;
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawSilhouette(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1232,7 +1232,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.field_t >> 1);
         param1 = param1 + (this.field_x >> 1);
         int var3 = param0 < gf.field_i ? gf.field_i - param0 << 1 : 0;
@@ -1242,12 +1242,12 @@ class Sprite extends SpriteState {
         Sprite.a(this.field_B, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * gf.field_b + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), gf.field_b - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawRotated(int param0, int param1, int param2, int param3) {
         int var5 = this.field_o << 3;
         int var6 = this.field_p << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        this.b(var5, var6, param0, param1, param2, param3);
+        this.drawRotatedAbout(var5, var6, param0, param1, param2, param3);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -1322,7 +1322,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1394,7 +1394,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void e() {
+    final void bindAsRenderTarget() {
         gf.a(this.field_B, this.field_z, this.field_w);
     }
 
@@ -1570,7 +1570,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3, int param4) {
+    void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1721,7 +1721,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedAbout(int param0, int param1, int param2, int param3, int param4, int param5) {
         double var7;
         int var9;
         int var10;
@@ -2350,7 +2350,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final Sprite g() {
+    final Sprite copy() {
         int var3 = 0;
         Sprite var1 = new Sprite(this.field_z, this.field_w);
         var1.field_o = this.field_o;
@@ -2364,7 +2364,7 @@ class Sprite extends SpriteState {
         return var1;
     }
 
-    void g(int param0, int param1) {
+    void drawQuarterSize(int param0, int param1) {
         int var9 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -2439,7 +2439,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1) {
+    void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -2571,7 +2571,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a() {
+    final void flipHorizontal() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2591,7 +2591,7 @@ class Sprite extends SpriteState {
         this.field_t = this.field_o - this.field_z - this.field_t;
     }
 
-    final void f(int param0) {
+    final void addOutline(int param0) {
         int var4 = 0;
         int var5 = 0;
         int[] var2;

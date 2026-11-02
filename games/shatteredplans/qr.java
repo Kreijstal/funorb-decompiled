@@ -248,7 +248,7 @@ class qr extends hm {
         int var4_intLifetime1;
         if (null != this.field_z &&
           this.field_nb != null) {
-          var4_int = this.field_nb.c(this.field_z, param0);
+          var4_int = this.field_nb.maxLineWidth(this.field_z, param0);
           if (var4_int > var3) {
             var3 = var4_int;
           }
@@ -939,9 +939,9 @@ class qr extends hm {
             var24 = var24 + (-var17.field_p + this.field_mb);
           }
           if (256 > this.field_eb) {
-            var17.a(var23_int, var24, this.field_eb);
+            var17.drawAlpha(var23_int, var24, this.field_eb);
           } else {
-            var17.f(var23_int, var24);
+            var17.draw(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -955,7 +955,7 @@ class qr extends hm {
             this.field_u != null) {
             var23Lifetime2 = var26 + this.field_u;
           }
-          if (this.field_nb.c(var23Lifetime2) <= -(2 * this.field_kb) + this.field_K &&
+          if (this.field_nb.stringWidth(var23Lifetime2) <= -(2 * this.field_kb) + this.field_K &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_G == 1) {
               var22 = var22 + (-this.field_nb.field_q + this.field_mb - this.field_nb.field_J) / 2;
@@ -965,15 +965,15 @@ class qr extends hm {
               }
             }
             if (this.field_y == 0) {
-              this.field_nb.d(var23Lifetime2, var21 + (this.field_B + this.field_kb), this.field_nb.field_J + var22 + this.field_N, var18, -1, this.field_I);
+              this.field_nb.drawStringAlpha(var23Lifetime2, var21 + (this.field_B + this.field_kb), this.field_nb.field_J + var22 + this.field_N, var18, -1, this.field_I);
             } else {
               if (this.field_y == 1) {
-                this.field_nb.a(var23Lifetime2, var21 + this.field_B + this.field_kb + (this.field_K - this.field_kb * 2) / 2, this.field_N + var22 + this.field_nb.field_J, var18, -1, this.field_I);
+                this.field_nb.drawCentredAlpha(var23Lifetime2, var21 + this.field_B + this.field_kb + (this.field_K - this.field_kb * 2) / 2, this.field_N + var22 + this.field_nb.field_J, var18, -1, this.field_I);
               } else {
                 if (this.field_y != 2) {
                   this.field_nb.a(var23Lifetime2, this.field_kb + this.field_B + var21, var22 + this.field_N, this.field_K - 2 * this.field_kb, this.field_mb, var18, -1, this.field_I, this.field_y, this.field_G, this.field_Y);
                 } else {
-                  this.field_nb.c(var23Lifetime2, this.field_K + (-(this.field_kb * 2) + var21) + (this.field_B + this.field_kb), var22 + (this.field_N + this.field_nb.field_J), var18, -1, this.field_I);
+                  this.field_nb.drawRightAlignedAlpha(var23Lifetime2, this.field_K + (-(this.field_kb * 2) + var21) + (this.field_B + this.field_kb), var22 + (this.field_N + this.field_nb.field_J), var18, -1, this.field_I);
                 }
               }
             }
@@ -1007,11 +1007,11 @@ class qr extends hm {
             qr.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);
           }
           PlacementOrder.field_q = new Sprite(var3, 3 * var4 / 4);
-          PlacementOrder.field_q.e();
-          var6.c(0, 0);
+          PlacementOrder.field_q.bindAsRenderTarget();
+          var6.drawOpaque(0, 0);
           DiskArchiveRequest.field_z = new Sprite(var3, -PlacementOrder.field_q.field_w + var4);
-          DiskArchiveRequest.field_z.e();
-          var6.c(0, -PlacementOrder.field_q.field_w);
+          DiskArchiveRequest.field_z.bindAsRenderTarget();
+          var6.drawOpaque(0, -PlacementOrder.field_q.field_w);
           DiskArchiveRequest.field_z.field_x = PlacementOrder.field_q.field_w;
           Star.f((byte) 85);
         } catch (RuntimeException runtimeException) {

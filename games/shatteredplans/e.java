@@ -33,7 +33,7 @@ final class e {
             e.a(-126, -120, (PcmSample) null);
           }
           param3.field_c[param2] = var11;
-          var5 = new qk(132 - rs.field_Cb.c(or.field_d[param2]), 0, or.field_d[param2]);
+          var5 = new qk(132 - rs.field_Cb.stringWidth(or.field_d[param2]), 0, or.field_d[param2]);
           var12.a(var5, 8);
           var6 = new b(d.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - d.field_b[param2].field_z / 2, d.field_b[param2].field_w, 2, 2105376);
           var12.a(var6, 8);

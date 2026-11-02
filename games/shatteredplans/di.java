@@ -221,7 +221,7 @@ final class di extends IntrusiveNode {
         BufferedSocket.a(-6187, gf.field_b + 640 >> 1, gf.field_k, 0, -640 + gf.field_b >> 1);
         if (PlacementOrder.field_t > 0) {
           if (gn.field_y != null) {
-            gn.field_y.c(MapViewState.field_j.field_hb, 0);
+            gn.field_y.drawOpaque(MapViewState.field_j.field_hb, 0);
           }
           stackIn_7_0 = MapViewState.field_j;
           stackIn_8_1 = (param1) && (!IntrusiveDequeCursor.field_b);
@@ -236,7 +236,7 @@ final class di extends IntrusiveNode {
         if (!(Archive.field_b <= 0) ||
           !(ee.field_k <= 0)) {
           if (null != gn.field_y) {
-            gn.field_y.c(am.field_xb.field_hb, 0);
+            gn.field_y.drawOpaque(am.field_xb.field_hb, 0);
           }
           stackIn_24_0 = am.field_xb;
           stackIn_25_1 = (param1) && (!IntrusiveNodeHashTable.field_e);

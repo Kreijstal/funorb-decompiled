@@ -309,10 +309,10 @@ final class kd {
               var1_int = var1_int + ArchiveNetworkClient.field_i;
             }
             if (0 <= var4) {
-              ql.field_n.d(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
+              ql.field_n.drawString(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
               var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
-              PlayerStats.field_c.d(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
+              PlayerStats.field_c.drawString(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
               var1_int = var1_int + e.field_d;
             }
           }

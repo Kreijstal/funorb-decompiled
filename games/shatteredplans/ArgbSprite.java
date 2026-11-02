@@ -120,7 +120,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -166,7 +166,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -238,7 +238,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -284,7 +284,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -457,7 +457,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1);
     }
 
-    final void g(int param0, int param1) {
+    final void drawQuarterSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;
@@ -591,7 +591,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1355,7 +1355,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1546,7 +1546,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

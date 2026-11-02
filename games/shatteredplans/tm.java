@@ -64,9 +64,9 @@ final class tm extends IntrusiveNode {
           field_r = (Sprite) null;
         }
         if (this.field_q != 256) {
-          ss.field_b.d(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);
+          ss.field_b.drawStringAlpha(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);
         } else {
-          ss.field_b.d(this.field_l, 100, 14 + param1, 16777215, -1);
+          ss.field_b.drawString(this.field_l, 100, 14 + param1, 16777215, -1);
         }
     }
 
@@ -77,7 +77,7 @@ final class tm extends IntrusiveNode {
           this.field_q = 256;
           this.field_l = param0;
           this.field_m = !this.field_n ? 0 : 500;
-          var3_int = 20 + ss.field_b.c(this.field_l);
+          var3_int = 20 + ss.field_b.stringWidth(this.field_l);
           this.field_s = Math.max(400, var3_int);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

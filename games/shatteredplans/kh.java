@@ -173,15 +173,15 @@ final class kh extends qr {
               discarded$0 = this.field_xb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_nb.c(md.field_D);
+            var17 = param6.field_nb.stringWidth(md.field_D);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_nb.c(tq.field_k);
+            var17Lifetime2 = param6.field_nb.stringWidth(tq.field_k);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_nb.c(GzipInflater.field_a);
+            var17Lifetime3 = param6.field_nb.stringWidth(GzipInflater.field_a);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -271,7 +271,7 @@ final class kh extends qr {
           this.field_Cb.a(4, this.field_Ab);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Ab.field_nb.a(this.field_Ab.field_z, var15_int);
+          var17Lifetime1 = this.field_Ab.field_nb.lineCount(this.field_Ab.field_z, var15_int);
           this.field_Ab.a(var15_int, cr.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + cr.field_c * var17Lifetime1;
           this.field_Cb.a(var15_int + 26, var16Lifetime1 + 10, (byte) 77, 24, 0);
@@ -410,7 +410,7 @@ final class kh extends qr {
         RuntimeException decompiledCaughtException = null;
         try {
           param3 += 8;
-          var6_int = param2.field_nb.c(param2.field_z, param4 - 2 * param2.field_kb, param2.field_Y);
+          var6_int = param2.field_nb.textHeight(param2.field_z, param4 - 2 * param2.field_kb, param2.field_Y);
           var7 = -13 % ((param0 + 85) / 38);
           param2.a(param4, var6_int, (byte) 91, param3, 0);
           param3 = param3 + (0 + var6_int);
@@ -469,7 +469,7 @@ final class kh extends qr {
         this.a(param0, -20429);
         if (null != this.field_Bb) {
           this.field_Bb.field_z = this.field_xb.toString();
-          this.field_Bb.field_hb = (this.field_K - this.field_Bb.field_nb.c(this.field_Bb.field_z)) / 2;
+          this.field_Bb.field_hb = (this.field_K - this.field_Bb.field_nb.stringWidth(this.field_Bb.field_z)) / 2;
           if (null != this.field_zb &&
             this.field_zb.field_rb != 0) {
             stackIn_6_0 = this.field_zb;

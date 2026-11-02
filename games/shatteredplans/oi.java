@@ -78,7 +78,7 @@ final class oi {
           var2 = var3;
           bd.field_C[param0] = dupTemp$0;
           bs.a(var3, 77);
-          CellVertex.field_j[param0].g(0, 0);
+          CellVertex.field_j[param0].drawQuarterSize(0, 0);
           cg.i(0);
         }
         if (param1 != 66) {

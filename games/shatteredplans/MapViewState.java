@@ -439,7 +439,7 @@ abstract class MapViewState {
           }
           var4 = uk.a(false, param1);
           var5 = var4;
-          var4.b(-1 + this.field_i[param1.field_p] - (int)(this.field_g * (float)var5.field_z / (this.field_I * 2.0f)), -1 + this.field_J[param1.field_p] - (int)((float)var5.field_z * this.field_g / (this.field_I * 2.0f)), (int)(this.field_g * (float)var5.field_z / this.field_I), (int)(this.field_g * (float)var5.field_z / this.field_I));
+          var4.drawScaled(-1 + this.field_i[param1.field_p] - (int)(this.field_g * (float)var5.field_z / (this.field_I * 2.0f)), -1 + this.field_J[param1.field_p] - (int)((float)var5.field_z * this.field_g / (this.field_I * 2.0f)), (int)(this.field_g * (float)var5.field_z / this.field_I), (int)(this.field_g * (float)var5.field_z / this.field_I));
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ia.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -598,7 +598,7 @@ abstract class MapViewState {
         int var5 = -108 % ((-29 - param0) / 51);
         int var4 = -(((int)this.field_k - 0) * (var2 << 4)) / (0 + this.field_O.field_k);
         int var6 = -(((int)this.field_E + 0) * (var3 << 4)) / (0 + this.field_O.field_b);
-        Star.field_K.f(var4 >> 4, var6 >> 4);
+        Star.field_K.draw(var4 >> 4, var6 >> 4);
     }
 
     final void c(boolean param0) {
@@ -877,7 +877,7 @@ abstract class MapViewState {
 
     MapViewState() {
         this.field_L = -30;
-        rs.field_Cb.c("+");
+        rs.field_Cb.stringWidth("+");
         this.field_bb = new int[4][];
     }
 

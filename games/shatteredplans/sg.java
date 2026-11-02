@@ -193,7 +193,7 @@ final class sg extends qr {
           }
           var9 = new String[32];
           var10 = var9;
-          var6 = param4.a(param3, new int[]{600}, var10);
+          var6 = param4.wrapText(param3, new int[]{600}, var10);
           if (param1) {
             param2 = param2 - var6 * 50;
           }

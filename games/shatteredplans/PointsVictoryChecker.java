@@ -163,14 +163,14 @@ final class PointsVictoryChecker extends VictoryChecker {
         RuntimeException var12 = null;
         try {
           cl.a(param5, param8, -22466, param0, param9, param4, param2, param3, param11);
-          param1.c(param6, param5 + (param0 >> 1), param3 + (param1.field_J + param9 >> 1), 16777215, param10);
+          param1.drawCentred(param6, param5 + (param0 >> 1), param3 + (param1.field_J + param9 >> 1), 16777215, param10);
           if (param7) {
             var13 = new Sprite(param0, param9);
             bs.a(var13, 98);
-            param1.c(param6, (param0 >> 1) + 1, param9 + param1.field_J >> 1, 16777215, -1);
-            param1.c(param6, (param0 >> 1) - 1, param1.field_J + param9 >> 1, 16777215, -1);
-            param1.c(param6, param0 >> 1, (param9 + param1.field_J >> 1) + 1, 16777215, -1);
-            param1.c(param6, param0 >> 1, -1 + (param1.field_J + param9 >> 1), 16777215, -1);
+            param1.drawCentred(param6, (param0 >> 1) + 1, param9 + param1.field_J >> 1, 16777215, -1);
+            param1.drawCentred(param6, (param0 >> 1) - 1, param1.field_J + param9 >> 1, 16777215, -1);
+            param1.drawCentred(param6, param0 >> 1, (param9 + param1.field_J >> 1) + 1, 16777215, -1);
+            param1.drawCentred(param6, param0 >> 1, -1 + (param1.field_J + param9 >> 1), 16777215, -1);
             cg.i(0);
             var13.c(param5, param3, 64);
           }

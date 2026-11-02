@@ -477,7 +477,7 @@ final class ProxySocketConnector extends SocketConnector {
         float var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);
-        va.field_e.f(var1, var2);
+        va.field_e.draw(var1, var2);
         var2 = -(di.field_m * 40 / 800) + 200;
         var1 = -62;
         he.field_h.c(var1, -60 + var2, 256);
@@ -486,13 +486,13 @@ final class ProxySocketConnector extends SocketConnector {
         we.field_f.c(var1, -60 + var2, 256);
         var1 = -62;
         var2 = -(di.field_m * 40 / 800) + 200;
-        q.field_Cb.f(var1, var2);
+        q.field_Cb.draw(var1, var2);
         var1 = -120;
         var2 = -(di.field_m * 150 / 800) + 300;
-        mm.field_o.f(var1, var2);
+        mm.field_o.draw(var1, var2);
         var2 = di.field_m * 240 / 800 + 20;
         var1 = 0;
-        ch.field_c.f(var1, var2);
+        ch.field_c.draw(var1, var2);
         gf.d(0, ch.field_c.field_p + var2, 640, 480, 0);
         if (param0 != 8421504) {
           Star var4 = (Star) null;

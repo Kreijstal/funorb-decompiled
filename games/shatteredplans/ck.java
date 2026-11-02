@@ -57,11 +57,11 @@ final class ck {
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
           RandomAccessCacheFile.a(-110);
           jf.field_a = new Sprite(var7_int, var8);
-          jf.field_a.e();
+          jf.field_a.bindAsRenderTarget();
           gf.d(0, 0, var7_int, var8, 16777215);
-          SecondaryNodeHashTable.field_f.e(0, 0, 0);
+          SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
           gf.b(3, 3, 0, 0, var7_int, var8);
-          SecondaryNodeHashTable.field_f.e(0, 0, 255);
+          SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           cg.i(param6 + 8);
           fm.field_d = ae.a(101, "", param0, "edge_orbs");
           IsaacRandom.field_b = new Sprite[4];
@@ -69,10 +69,10 @@ final class ck {
           for (var9_int = 0; 4 > var9_int; var9_int++) {
             var19 = fm.field_d[var9_int];
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
-            var20.e();
-            var19.e(16 - var19.field_t, 16 - var19.field_x, 16777215);
+            var20.bindAsRenderTarget();
+            var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 16777215);
             gf.b(8, 8, 0, 0, var20.field_z, var20.field_w);
-            var19.e(16 - var19.field_t, 16 - var19.field_x, 0);
+            var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 0);
             IsaacRandom.field_b[var9_int] = var20;
           }
           cg.i(0);
@@ -124,7 +124,7 @@ final class ck {
           VictoryChecker.field_h = ds.a(true, param0, "", "shine_mid");
           SpriteState.field_q = ds.a(true, param0, "", "combat_hex_white");
           RandomAccessCacheFile.a(-116);
-          SpriteState.field_q.e();
+          SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.b(0, 0, 2105376);
           cg.i(0);
           bj.field_H = ds.a(true, param0, "", "planet_burnt");
@@ -242,21 +242,21 @@ final class ck {
           AllianceExpiredEvent.field_k = new Sprite(16, 10);
           pr.field_a = new Sprite(18, 12);
           bs.a(AllianceExpiredEvent.field_k, 98);
-          kb.field_y.d(0, 0);
-          pr.field_a.e();
+          kb.field_y.drawHalfSize(0, 0);
+          pr.field_a.bindAsRenderTarget();
           AllianceExpiredEvent.field_k.b(1, 1, 8421504);
           fm.field_b = new Sprite(10, 12);
-          fm.field_b.e();
+          fm.field_b.bindAsRenderTarget();
           wo.field_b.b(1, 1, 8421504);
           ef.field_f = new Sprite(12, 12);
-          ef.field_f.e();
+          ef.field_f.bindAsRenderTarget();
           oo.field_a.b(1, 1, 8421504);
           mj.field_Kb = new Sprite(12, 12);
-          mj.field_Kb.e();
+          mj.field_Kb.bindAsRenderTarget();
           ab.field_e.b(1, 1, 8421504);
           wa.field_b = new Sprite(128, 128);
-          wa.field_b.e();
-          TextFieldWidget.field_L.f(0, 0);
+          wa.field_b.bindAsRenderTarget();
+          TextFieldWidget.field_L.draw(0, 0);
           for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
             if (wa.field_b.field_B[var13_intLifetime7] != 0) {
               gf.c(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
@@ -264,17 +264,17 @@ final class ck {
             }
           }
           fb.field_Vb = new Sprite(18, 12);
-          fb.field_Vb.e();
+          fb.field_Vb.bindAsRenderTarget();
           bd.field_G.b(1, 1, 8421504);
           cg.i(0);
-          pr.field_a.f(16777215);
-          fm.field_b.f(16777215);
+          pr.field_a.addOutline(16777215);
+          fm.field_b.addOutline(16777215);
           if (param6 != -8) {
             ck.a(-23);
           }
-          ef.field_f.f(16777215);
-          mj.field_Kb.f(16777215);
-          fb.field_Vb.f(16777215);
+          ef.field_f.addOutline(16777215);
+          mj.field_Kb.addOutline(16777215);
+          fb.field_Vb.addOutline(16777215);
           kj.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
@@ -294,25 +294,25 @@ final class ck {
           gf.g(15, 15, 15, 65793);
           gf.g(15, 15, 5, 0);
           le.field_d = new Sprite(15, 20);
-          le.field_d.e();
+          le.field_d.bindAsRenderTarget();
           gf.d(0, 0, 15, 20, 65793);
           gf.g(0, -1, 5, 0);
           gf.g(0, 20, 5, 0);
           var15Lifetime1 = id.a(2, param0, "", "menu_pip");
           GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
-          GameKeyHandler.field_e.e();
-          var15Lifetime1.e(1, 1, 65793);
+          GameKeyHandler.field_e.bindAsRenderTarget();
+          var15Lifetime1.drawSilhouette(1, 1, 65793);
           bg.field_a = new Sprite(21, 22);
-          bg.field_a.e();
+          bg.field_a.bindAsRenderTarget();
           for (var16 = 0; var16 < 20; var16++) {
             var17 = var16 > 10 ? 20 - var16 : 3;
             gf.f(11 - var17, 1 + var16, 2 * var17, 65793);
           }
           cg.i(0);
-          GameKeyHandler.field_e.f(2458760);
-          bg.field_a.f(2458760);
-          WidgetTheme.field_k = bg.field_a.g();
-          WidgetTheme.field_k.b();
+          GameKeyHandler.field_e.addOutline(2458760);
+          bg.field_a.addOutline(2458760);
+          WidgetTheme.field_k = bg.field_a.copy();
+          WidgetTheme.field_k.flipVertical();
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

@@ -175,7 +175,7 @@ final class qh extends vd {
           var9 = 64 + 192 * (-var10 + var8Lifetime1) / (var8Lifetime1 - var7Lifetime3);
           VictoryChecker.field_h.c(var10, this.field_t + 3, var9);
         }
-        rs.field_Cb.c(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
+        rs.field_Cb.drawCentred(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
         vd var12 = (vd) (this.field_l.startReverse(3725));
         while (var12 != null) {
           var12.a(-14);
@@ -238,8 +238,8 @@ final class qh extends vd {
         if (param2 < 27) {
           param2 = 27;
         }
-        if (!(param2 >= 40 + rs.field_Cb.c(this.field_y + "X"))) {
-          param2 = rs.field_Cb.c(this.field_y + "X") + 40;
+        if (!(param2 >= 40 + rs.field_Cb.stringWidth(this.field_y + "X"))) {
+          param2 = rs.field_Cb.stringWidth(this.field_y + "X") + 40;
         }
         if (!param0) {
           this.a(1);

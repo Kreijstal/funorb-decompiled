@@ -51,12 +51,12 @@ final class qj {
           if (0 < var6) {
             eh.field_L = new Sprite[var6];
             eh.field_L[0] = new Sprite(var3, var2_int);
-            eh.field_L[0].e();
-            rs.field_Cb.d(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
+            eh.field_L[0].bindAsRenderTarget();
+            rs.field_Cb.drawString(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
             for (var7 = 1; var7 < var6; var7++) {
               eh.field_L[var7] = new Sprite(var3, var2_int);
-              eh.field_L[var7].e();
-              rs.field_Cb.d(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
+              eh.field_L[var7].bindAsRenderTarget();
+              rs.field_Cb.drawString(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
             }
           } else {
             eh.field_L = null;
@@ -80,10 +80,10 @@ final class qj {
               sp.field_m[var8] = array$1;
               for (var10 = 0; var10 < var6Lifetime1; var10++) {
                 oi.field_i[var8][var10] = new Sprite(var3, var2_int);
-                oi.field_i[var8][var10].e();
-                rs.field_Cb.d(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
-                sp.field_m[var8][var10] = oi.field_i[var8][var10].g();
-                sp.field_m[var8][var10].e();
+                oi.field_i[var8][var10].bindAsRenderTarget();
+                rs.field_Cb.drawString(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
+                sp.field_m[var8][var10] = oi.field_i[var8][var10].copy();
+                sp.field_m[var8][var10].bindAsRenderTarget();
                 gf.b(1, 1, 0, 0, var3, var2_int);
               }
             }

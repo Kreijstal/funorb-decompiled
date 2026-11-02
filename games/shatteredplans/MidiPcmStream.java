@@ -679,7 +679,7 @@ final class MidiPcmStream extends PcmStream {
               if (var12.field_mc) {
                 var12.field_Wb.field_z = "/" + var12.field_Eb;
                 var12.field_Rb.field_y = 2;
-                var33_int = (348 - var12.field_Wb.field_nb.c("/")) / 2;
+                var33_int = (348 - var12.field_Wb.field_nb.stringWidth("/")) / 2;
                 var12.field_Rb.a(var33_int - 150, cr.field_c, (byte) 83, var31, 150);
                 var12.field_Wb.a(-var33_int + 198, cr.field_c, (byte) 84, var31, var33_int);
               } else {
@@ -786,7 +786,7 @@ final class MidiPcmStream extends PcmStream {
                 }
                 var38 = var37.toString();
                 var12.field_Tb.field_z = var38;
-                var39Lifetime1 = var12.field_Tb.field_nb.a(var38, var12.field_K - 2 * var12.field_Tb.field_kb);
+                var39Lifetime1 = var12.field_Tb.field_nb.lineCount(var38, var12.field_K - 2 * var12.field_Tb.field_kb);
                 var12.field_Tb.a(var12.field_K, cr.field_c * var39Lifetime1, (byte) 73, var31, 0);
                 var31 = var31 + var39Lifetime1 * cr.field_c;
               }
@@ -803,7 +803,7 @@ final class MidiPcmStream extends PcmStream {
             }
             var33 = StarLink.a(var12.field_hc, -11, var32);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_ic.field_nb.a(var33, -tg.field_a - tg.field_a + var12.field_K);
+              var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -tg.field_a - tg.field_a + var12.field_K);
               var12.field_ic.field_z = var33;
               var12.field_ic.field_I = 256 * var12.field_Nb / ks.field_i;
               var12.field_ic.a(var12.field_K - tg.field_a * 2, cr.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);

@@ -261,7 +261,7 @@ class ts extends FocusableWidget {
           us.a(0, bj.field_L);
         }
         qn.a((byte) -120);
-        var1 = NetworkArchiveRequest.field_C.c(np.field_d) + 20;
+        var1 = NetworkArchiveRequest.field_C.stringWidth(np.field_d) + 20;
         if (var1 < 80) {
           var1 = 80;
         }

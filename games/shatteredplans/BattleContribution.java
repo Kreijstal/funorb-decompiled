@@ -96,7 +96,7 @@ final class BattleContribution extends IntrusiveNode {
         }
         Sprite var2 = new Sprite(IntrusiveDeque.field_d.field_z, IntrusiveDeque.field_d.field_w);
         RandomAccessCacheFile.a(-127);
-        var2.e();
+        var2.bindAsRenderTarget();
         IntrusiveDeque.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
         cg.i(0);
         return var2;
@@ -173,7 +173,7 @@ final class BattleContribution extends IntrusiveNode {
           var6 = gf.field_k;
           var14 = gf.field_h;
           GameKeyHandler.field_c = new Sprite(10, 14);
-          GameKeyHandler.field_c.e();
+          GameKeyHandler.field_c.bindAsRenderTarget();
           for (var8 = 2; 7 > var8; var8++) {
             gf.j(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }

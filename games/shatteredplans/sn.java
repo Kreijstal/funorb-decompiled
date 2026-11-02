@@ -47,9 +47,9 @@ final class sn {
           return;
         }
         if (js.field_j >= 150) {
-          PlacementOrder.field_q.a(15 + var3, var4 + 10, var5);
+          PlacementOrder.field_q.drawAlpha(15 + var3, var4 + 10, var5);
         } else {
-          SecondaryNodeHashTable.field_i.d(var3, var4);
+          SecondaryNodeHashTable.field_i.drawHalfSize(var3, var4);
         }
         var6 = -125 + js.field_j;
         if (var6 > 0 &&
@@ -72,7 +72,7 @@ final class sn {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          DiskArchiveRequest.field_z.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+          DiskArchiveRequest.field_z.drawAlpha(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

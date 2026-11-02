@@ -603,16 +603,16 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_c.c(this.b(true, param4), (var9_int >> 1) + this.b((byte) -14, param4, param7, param0), var11 + this.a((byte) 121, param4, param6, param1), param2, param5);
+                this.field_c.drawCentred(this.b(true, param4), (var9_int >> 1) + this.b((byte) -14, param4, param7, param0), var11 + this.a((byte) 121, param4, param6, param1), param2, param5);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_c.b(this.b(true, param4), var9_int + this.b((byte) -14, param4, param7, param0), this.a((byte) 75, param4, param6, param1) + var11, param2, param5);
+                  this.field_c.drawRightAligned(this.b(true, param4), var9_int + this.b((byte) -14, param4, param7, param0), this.a((byte) 75, param4, param6, param1) + var11, param2, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_c.d(this.b(true, param4), this.b((byte) -14, param4, param7, param0), var11 + this.a((byte) 100, param4, param6, param1), param2, param5);
+              this.field_c.drawString(this.b(true, param4), this.b((byte) -14, param4, param7, param0), var11 + this.a((byte) 100, param4, param6, param1), param2, param5);
             }
           }
           Star.f((byte) -104);

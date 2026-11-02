@@ -182,18 +182,18 @@ final class SolMapGenerator extends StandardMapGenerator {
         try {
           var9 = var17.field_w;
           wh.a(false);
-          var17.e();
+          var17.bindAsRenderTarget();
           gf.e(0, 0, gf.field_b, gf.field_k);
           var15 = new Sprite(var9, var9);
           var18 = var15;
-          var18.e();
-          var17.c(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9, var9);
-          var11.e();
-          var17.c(-var17.field_z + var9, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_z + var9, 0);
           var12 = new Sprite(var17.field_z - 2 * var9, var9);
-          var12.e();
-          var17.c(-var9, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9, 0);
           Star.f((byte) 67);
           AttackTask.field_q = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

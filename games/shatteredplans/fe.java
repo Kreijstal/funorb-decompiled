@@ -42,11 +42,11 @@ final class fe extends vd {
           gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_K);
         }
         if (null != this.field_D) {
-          this.field_D.f((this.field_m - this.field_D.field_z) / 2 + this.field_k, (-this.field_D.field_w + this.field_i) / 2 + this.field_t);
+          this.field_D.draw((this.field_m - this.field_D.field_z) / 2 + this.field_k, (-this.field_D.field_w + this.field_i) / 2 + this.field_t);
         }
         int var2 = -72 % ((67 - param0) / 47);
         if (null != this.field_F) {
-          rs.field_Cb.c(this.field_F, this.field_m / 2 + this.field_k + 1, (rs.field_Cb.field_J + rs.field_Cb.field_q) / 4 + this.field_t + this.field_i / 2, this.field_G, -1);
+          rs.field_Cb.drawCentred(this.field_F, this.field_m / 2 + this.field_k + 1, (rs.field_Cb.field_J + rs.field_Cb.field_q) / 4 + this.field_t + this.field_i / 2, this.field_G, -1);
         }
     }
 

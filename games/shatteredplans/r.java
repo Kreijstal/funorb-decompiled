@@ -173,14 +173,14 @@ final class r implements Runnable {
           gf.b();
           js.field_j = 0;
           gq.e(-65);
-          var2 = var1.g();
+          var2 = var1.copy();
           int var4 = 11 / ((31 - param0) / 62);
           for (var3 = 0; 15 > var3; var3++) {
-            var2.e(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             gf.b(4, 4, 0, 0, 540, 140);
           }
-          AllianceExpiredEvent.field_h.e();
-          var1.d(0, 0);
+          AllianceExpiredEvent.field_h.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           Star.f((byte) -70);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
