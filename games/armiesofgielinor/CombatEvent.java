@@ -22,9 +22,9 @@ final class CombatEvent extends GameEvent {
     static String field_O;
     private int attackerAnimationCount;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_A = null;
-        if (param0 < -122) {
+        if (obfuscationGuard < -122) {
           field_O = null;
           field_L = null;
           field_I = null;
@@ -45,7 +45,7 @@ final class CombatEvent extends GameEvent {
           var3.writeShort(true, roomId);
           return;
         }
-        CombatEvent.e((byte) 75);
+        CombatEvent.releaseStatics((byte) 75);
         var3.writeShort(true, roomId);
     }
 

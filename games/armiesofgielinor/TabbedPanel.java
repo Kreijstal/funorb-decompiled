@@ -234,13 +234,13 @@ final class TabbedPanel extends ClientUiComponent {
         }
     }
 
-    final static af a(boolean param0, String param1, byte param2, String param3) {
+    final static LoginCredentials a(boolean param0, String param1, byte param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         String var7 = null;
         CharSequence var8 = null;
-        af stackIn_6_0 = null;
+        LoginCredentials stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

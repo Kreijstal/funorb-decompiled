@@ -42,12 +42,12 @@ final class DropdownOptionList extends kq {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_S = null;
         field_X = null;
         field_Y = null;
         field_R = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_Y = (String) null;
         }
     }

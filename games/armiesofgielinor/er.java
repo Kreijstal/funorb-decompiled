@@ -16,11 +16,11 @@ final class er {
 
     final static void b(int param0) {
         if (~SoundCache.field_b == param0 ||
-          !du.c(10)) {
+          !SocketFactory.c(10)) {
           EffectPresentation.d(7);
           SoundCache.field_b = 11;
         }
-        dd.field_a = true;
+        ArchiveMasterIndex.field_a = true;
     }
 
     final static boolean a(boolean param0, int param1, CharSequence param2, int param3) {

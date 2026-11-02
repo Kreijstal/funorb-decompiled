@@ -140,11 +140,11 @@ final class UnitCycler {
         return this.selectedNode;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_g = null;
         field_d = null;
-        if (param0 != -55) {
-          UnitCycler.a((byte) 5);
+        if (obfuscationGuard != -55) {
+          UnitCycler.releaseStatics((byte) 5);
         }
         currentRoomPlayersById = null;
     }

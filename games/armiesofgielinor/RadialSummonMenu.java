@@ -172,9 +172,9 @@ final class RadialSummonMenu {
         ClientUiComponent.a(27, param1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
-        if (param0 != -122) {
+        if (obfuscationGuard != -122) {
           field_a = (String) null;
         }
     }

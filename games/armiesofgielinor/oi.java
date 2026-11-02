@@ -5,10 +5,10 @@ final class oi implements WidgetPainter {
     static String field_b;
     static DualNodeHashTable lobbyPlayersById;
     static String[] field_a;
-    static dd field_c;
+    static ArchiveMasterIndex field_c;
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return;
         }
         lobbyPlayersById = null;
@@ -17,11 +17,11 @@ final class oi implements WidgetPainter {
         field_a = null;
     }
 
-    final static af a(String param0, String param1, boolean param2, int param3, long param4) {
+    final static LoginCredentials a(String param0, String param1, boolean param2, int param3, long param4) {
         RuntimeException var6 = null;
         oq stackIn_6_0 = null;
-        eq stackIn_8_0 = null;
-        wv stackIn_12_0 = null;
+        PasswordLoginCredentials stackIn_8_0 = null;
+        KeyedLoginCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -31,18 +31,18 @@ final class oi implements WidgetPainter {
         try {
           if (param4 == 0L &&
             param0 != null) {
-            stackIn_8_0 = new eq(param0, param1);
-            return (af) ((Object) stackIn_8_0);
+            stackIn_8_0 = new PasswordLoginCredentials(param0, param1);
+            return (LoginCredentials) ((Object) stackIn_8_0);
           }
           if (param2) {
             stackIn_6_0 = new oq(param4, param1);
-            return (af) ((Object) stackIn_6_0);
+            return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param3 != 1) {
-            oi.b(true);
+            oi.releaseStatics(true);
           }
-          stackIn_12_0 = new wv(param4, param1);
-          return (af) ((Object) stackIn_12_0);
+          stackIn_12_0 = new KeyedLoginCredentials(param4, param1);
+          return (LoginCredentials) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

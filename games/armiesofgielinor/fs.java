@@ -33,13 +33,13 @@ final class fs {
           }
           var9_int = param5 + ConsoleExpression.field_p[param5];
           if (vs.field_e[param5].terrainType == 3) {
-            eq.$cfr$intArgs$a$de73e65787eb(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
+            PasswordLoginCredentials.$cfr$intArgs$a$de73e65787eb(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
           }
           KingBlackDragonEvent.a(1, param5, param4, false, param0);
           var10_ref_vb = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 122));
           while (var10_ref_vb != null) {
             if (~param5 == ~var10_ref_vb.tileIndex) {
-              var10_ref_vb.draw(ug.field_b, 31785, false);
+              var10_ref_vb.draw(ProxyAuthenticationRequiredException.field_b, 31785, false);
             }
             var10_ref_vb = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
           }
@@ -50,7 +50,7 @@ final class fs {
             stackIn_20_3 = var9_int;
             stackIn_20_4 = param3;
             stackIn_21_5 = (null != vs.field_e[param5].occupant);
-            eq.$cfr$intArgs$a$de73e65787eb(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, 40 + param4, param7);
+            PasswordLoginCredentials.$cfr$intArgs$a$de73e65787eb(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, 40 + param4, param7);
           }
           if (vs.field_e[param5].hasExplicitOwner((byte) -79)) {
             var10 = vs.field_e[param5].getExplicitOwner((byte) -56);
@@ -77,7 +77,7 @@ final class fs {
           if ((2 & var10Lifetime1) == 0) {
             return;
           }
-          nt.a(894, var9_int, ug.field_b, param4, param0);
+          nt.a(894, var9_int, ProxyAuthenticationRequiredException.field_b, param4, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class fs {
           if (-4 + (param6 - 40) < -param3 + param0) {
             return -3;
           }
-          var7 = param3 + (-dd.field_e + 44);
+          var7 = param3 + (-ArchiveMasterIndex.field_e + 44);
           var8 = param2 + (param5 >> 1);
           var9 = (-var7 + param0) / 80 * 2;
           if (param4 > var8) {
@@ -169,7 +169,7 @@ final class fs {
         if (-4 + (param6 - 40) < -param3 + param0) {
           return -3;
         }
-        var7Lifetime1 = param3 + (-dd.field_e + 44);
+        var7Lifetime1 = param3 + (-ArchiveMasterIndex.field_e + 44);
         var8Lifetime1 = param2 + (param5 >> 1);
         var9Lifetime1 = (-var7Lifetime1 + param0) / 80 * 2;
         if (param4 > var8Lifetime1) {

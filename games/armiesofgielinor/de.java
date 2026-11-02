@@ -135,7 +135,7 @@ final class de {
                       battlefield.tiles[battlefield.mapWidth * var8 + var7_int].terrainType != 11) {
                       continue;
                     }
-                    stackIn_52_0 = kp.field_c;
+                    stackIn_52_0 = MarkerSliderPainter.field_c;
                     return stackIn_52_0;
                   }
                   break;
@@ -255,11 +255,11 @@ final class de {
                             if (34 == var7.unitType &&
                               var7.packedFlag8 &&
                               var7.attacksRemaining > 0) {
-                              stackIn_132_0 = eq.field_g;
+                              stackIn_132_0 = PasswordLoginCredentials.field_g;
                               return stackIn_132_0;
                             }
                             if (!var7.movementSpent) {
-                              stackIn_130_0 = eq.field_g;
+                              stackIn_130_0 = PasswordLoginCredentials.field_g;
                               return stackIn_130_0;
                             }
                           }
@@ -293,7 +293,7 @@ final class de {
                 }
               } else {
                 if (var7.unitType != 63) {
-                  stackIn_89_0 = eq.field_k;
+                  stackIn_89_0 = PasswordLoginCredentials.field_k;
                   return stackIn_89_0;
                 }
                 if (var7.packedFlag32) {
@@ -493,10 +493,10 @@ final class de {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_b = null;
         field_c = null;
-        if (param0 > -96) {
+        if (obfuscationGuard > -96) {
           return;
         }
         field_d = null;

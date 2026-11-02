@@ -48,7 +48,7 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
               }
               var7 = new SectorCacheStore(param0, SpellMenuGroup.field_b, mu.field_b[param0], 2097152);
             }
-            var8 = oi.field_c.a(param3, (SectorCacheStore) (var7), param0, 0, (SectorCacheStore) (var6));
+            var8 = oi.field_c.openProvider(param3, (SectorCacheStore) (var7), param0, 0, (SectorCacheStore) (var6));
             if (param4) {
               var8.c(31637);
             }

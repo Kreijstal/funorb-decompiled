@@ -511,9 +511,9 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_G = null;
-        if (param0 != -128) {
+        if (obfuscationGuard != -128) {
           field_X = (String) null;
         }
         field_H = null;

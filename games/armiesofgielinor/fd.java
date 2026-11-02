@@ -26,10 +26,10 @@ final class fd extends IntrusiveNode {
         return param1 & ~var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_o = null;
         themeBackgroundArchive = null;
-        if (param0 == -30097) {
+        if (obfuscationGuard == -30097) {
           field_n = (String[][]) null;
           field_l = null;
           return;

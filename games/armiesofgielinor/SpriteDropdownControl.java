@@ -265,7 +265,7 @@ final class SpriteDropdownControl extends SpriteControlNode {
           synchronized (listenerLock) {
             SummonAction.keyEventReadIndex = FullscreenFocusCanvas.keyEventFrameEndIndex;
             if (!obfuscationGuard) {
-              SpriteDropdownControl.d((byte) 47);
+              SpriteDropdownControl.releaseStatics((byte) 47);
             }
             fc.keyboardIdleTicks = fc.keyboardIdleTicks + 1;
             if (us.keyStateWriteIndex < 0) {
@@ -294,9 +294,9 @@ final class SpriteDropdownControl extends SpriteControlNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         equipmentTutorialMessages = null;
-        if (param0 != -11) {
+        if (obfuscationGuard != -11) {
           return;
         }
         field_J = null;

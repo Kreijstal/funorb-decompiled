@@ -27,11 +27,11 @@ abstract class SpriteControlNode extends IntrusiveNode {
         return ProgressMessageDialog.b(param1, (byte) -59, param2);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_k = null;
         field_m = null;
-        if (param0) {
-          SpriteControlNode.a(true);
+        if (obfuscationGuard) {
+          SpriteControlNode.releaseStatics(true);
         }
     }
 

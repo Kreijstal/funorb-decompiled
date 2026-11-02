@@ -62,12 +62,12 @@ final class mh {
         return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         field_d = null;
         accountNameCheckState = null;
-        if (param0 >= -83) {
-          mh.a((byte) 62);
+        if (obfuscationGuard >= -83) {
+          mh.releaseStatics((byte) 62);
         }
     }
 

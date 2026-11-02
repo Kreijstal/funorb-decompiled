@@ -509,10 +509,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var3 = 114 / ((-56 - obfuscationGuard) / 54);
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_T = null;
         field_n = null;
-        if (param0 != -9480) {
+        if (obfuscationGuard != -9480) {
           field_n = (String) null;
         }
         field_y = null;

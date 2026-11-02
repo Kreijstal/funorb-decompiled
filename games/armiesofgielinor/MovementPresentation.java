@@ -23,7 +23,7 @@ final class MovementPresentation implements EventPresentation {
     private EventPresenter presenter;
     static char[] field_i;
     private int field_t;
-    static h field_l;
+    static LoginKind field_l;
     private int durationFrames;
     static int[] decodedSpritePalette;
     static String field_r;
@@ -447,9 +447,9 @@ final class MovementPresentation implements EventPresentation {
         this.field_g[1] = this.field_n[1];
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_r = null;
-        if (param0 <= 3) {
+        if (obfuscationGuard <= 3) {
           return;
         }
         field_l = null;
@@ -607,7 +607,7 @@ final class MovementPresentation implements EventPresentation {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(false)) {
-            dh.a(event.unit.unitType, 0, 32);
+            ImageProducerSurface.a(event.unit.unitType, 0, 32);
           }
           if (event == null) {
             return;
@@ -689,7 +689,7 @@ final class MovementPresentation implements EventPresentation {
 
     static {
         field_i = new char[]{(char)91, (char)93, (char)35};
-        field_l = new h(0);
+        field_l = new LoginKind(0);
         field_r = "This item can only be used on enemy units.";
     }
 }

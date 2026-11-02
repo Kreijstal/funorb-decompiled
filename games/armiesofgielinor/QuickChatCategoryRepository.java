@@ -46,9 +46,9 @@ final class QuickChatCategoryRepository {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
-        int var1 = 69 / ((-73 - param0) / 51);
+        int var1 = 69 / ((-73 - obfuscationGuard) / 51);
         field_a = null;
         soundHandles = null;
     }
@@ -280,7 +280,7 @@ final class QuickChatCategoryRepository {
                                     ChannelBaseVolumeConsoleCommand.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     break regionExit1;
                                   default:
-                                    af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
+                                    LoginCredentials.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
                                     dj.a((byte) -124);
                                     break regionExit1;
                                 }

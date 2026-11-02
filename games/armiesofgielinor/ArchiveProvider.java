@@ -146,7 +146,7 @@ abstract class ArchiveProvider {
             return stackIn_3_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = el.field_e;
+            stackIn_7_0 = MouseWheelSource.field_e;
             return stackIn_7_0;
           }
           var3 = 82 / ((param1 - 50) / 49);

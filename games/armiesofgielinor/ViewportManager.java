@@ -246,7 +246,7 @@ final class ViewportManager {
         FullscreenFocusCanvas canonicalFullscreen;
         this.savedHeight = dt.viewportHeight;
         if (obfuscationGuard != -1) {
-          ViewportManager.b((byte) -86);
+          ViewportManager.releaseStatics((byte) -86);
           this.savedWidth = bn.viewportWidth;
           this.listener.viewportResized(this.fullscreenHeight, obfuscationGuard ^ 32262, this.fullscreenWidth);
           tq.canvasRebuildRequested = false;
@@ -268,8 +268,8 @@ final class ViewportManager {
         return canonicalFullscreen;
     }
 
-    public static void b(byte param0) {
-        int var1 = -107 / ((57 - param0) / 47);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = -107 / ((57 - obfuscationGuard) / 47);
         field_q = null;
         field_a = null;
         field_w = null;

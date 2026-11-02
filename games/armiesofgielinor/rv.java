@@ -140,8 +140,8 @@ final class rv {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           field_a = (String) null;
         }
         field_a = null;
@@ -171,7 +171,7 @@ final class rv {
             var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 125));
             while (var4 != null) {
               if (param3 == var4.tileIndex) {
-                var4.draw(ug.field_b, 31785, true);
+                var4.draw(ProxyAuthenticationRequiredException.field_b, 31785, true);
               }
               var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
             }

@@ -106,10 +106,10 @@ final class AnimationFrameSet extends DualLinkedNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_z = null;
         unitUnlockGroups = (int[][]) null;
-        if (param0 >= -54) {
+        if (obfuscationGuard >= -54) {
           field_B = (String) null;
         }
         field_F = null;

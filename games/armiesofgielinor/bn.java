@@ -51,10 +51,10 @@ final class bn {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
         field_d = null;
-        if (param0 == 29022) {
+        if (obfuscationGuard == 29022) {
           field_a = null;
           draggedWidget = null;
           field_c = null;
@@ -104,7 +104,7 @@ final class bn {
           ((ClientUiComponent) (Object) stackIn_68_0).updateInput(stackIn_68_1, stackIn_69_2);
           SpellCastEvent.field_E.tabs.advanceTabSelection(10000);
           if (cp.field_d.pressedButton != 0) {
-            cg.field_a = true;
+            ScreenWipeTransition.field_a = true;
           }
           if (param2 < 60) {
             return;
@@ -141,7 +141,7 @@ final class bn {
           ((ClientUiComponent) (Object) stackIn_19_0).updateInput(stackIn_19_1, stackIn_20_2);
           SpellCastEvent.field_E.tabs.advanceTabSelection(10000);
           if (cp.field_d.pressedButton != 0) {
-            cg.field_a = true;
+            ScreenWipeTransition.field_a = true;
           }
           if (param2 < 60) {
             return;

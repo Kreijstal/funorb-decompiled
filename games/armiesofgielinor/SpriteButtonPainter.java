@@ -9,9 +9,9 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
     private int highlightTint;
     static String field_w;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_z = null;
-        if (param0 != -26601) {
+        if (obfuscationGuard != -26601) {
           return;
         }
         field_w = null;
@@ -105,7 +105,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
               var15.printStackTrace();
             }
           }
-          packet.l(obfuscationGuard ^ 24048);
+          packet.releasePayload(obfuscationGuard ^ 24048);
           stackIn_24_0 = campaign;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

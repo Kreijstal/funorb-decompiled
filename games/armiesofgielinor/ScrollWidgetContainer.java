@@ -819,13 +819,13 @@ final class ScrollWidgetContainer extends ArrayWidgetContainer {
         this.updateThumbSizes((byte) -3);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_U = null;
         field_P = null;
         field_T = null;
         field_N = null;
         field_R = null;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         field_J = null;

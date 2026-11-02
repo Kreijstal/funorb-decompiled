@@ -74,7 +74,7 @@ final class ArchiveIndex {
         int namedFileOrdinal;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          packet = new PacketBuffer(el.decompressContainer(obfuscationGuard, encodedIndex));
+          packet = new PacketBuffer(MouseWheelSource.decompressContainer(obfuscationGuard, encodedIndex));
           formatVersion = packet.readUnsignedByte(0);
           if (5 <= formatVersion &&
             formatVersion <= 7) {
@@ -293,10 +293,10 @@ final class ArchiveIndex {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_w = null;
         field_u = null;
-        if (param0 > -48) {
+        if (obfuscationGuard > -48) {
           return;
         }
         field_o = null;

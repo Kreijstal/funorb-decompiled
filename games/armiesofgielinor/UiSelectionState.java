@@ -64,10 +64,10 @@ final class UiSelectionState {
         return stackIn_8_0;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_e = (int[][]) null;
         field_c = null;
-        int var1 = -45 / ((param0 + 26) / 46);
+        int var1 = -45 / ((obfuscationGuard + 26) / 46);
         field_d = null;
     }
 
@@ -175,9 +175,9 @@ final class UiSelectionState {
           if (mj.field_c > TurnTimerDial.field_d) {
             TurnTimerDial.field_d = TurnTimerDial.field_d + 1;
           }
-          if (EquipmentBattleTutorial.field_y != so.field_b.field_g) {
-            UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (-EquipmentBattleTutorial.field_y + so.field_b.field_g);
-            EquipmentBattleTutorial.field_y = so.field_b.field_g;
+          if (EquipmentBattleTutorial.field_y != so.field_b.height) {
+            UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (-EquipmentBattleTutorial.field_y + so.field_b.height);
+            EquipmentBattleTutorial.field_y = so.field_b.height;
           }
           if (TurnTimerDial.field_d <= 0) {
             return;
@@ -197,13 +197,13 @@ final class UiSelectionState {
               if (0 != var5.pressedButton) {
                 QuickChatMenu.a(var5, var4_int, false);
               }
-              var6 = kp.getChatFilter(var4_int, -119);
-              we.field_g[var4_int].sprite = dh.field_n[var6];
+              var6 = MarkerSliderPainter.getChatFilter(var4_int, -119);
+              ArchiveLoadStep.field_g[var4_int].sprite = ImageProducerSurface.field_n[var6];
               ResourceProtocolClient.field_j[var4_int].text = BattlefieldTheme.field_k[var6];
             }
           }
           if (UnitLossCondition.field_f.pressedButton != 0) {
-            Spell.field_b = new ReportAbuseDialog(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, (String) null, 0L);
+            Spell.field_b = new ReportAbuseDialog(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, (String) null, 0L);
           }
           var9 = wm.a(jn.field_d, MusicPatchNode.field_l, (byte) 127, param1);
           if (var9 != null) {
@@ -264,7 +264,7 @@ final class UiSelectionState {
     }
 
     final static void f(int param0) {
-        TurnEffectEvent.a(8, eq.field_h, ArchiveIndex.field_b, ConsoleEvaluationException.field_c, UnitModelPreview.field_m);
+        TurnEffectEvent.a(8, PasswordLoginCredentials.field_h, ArchiveIndex.field_b, ConsoleEvaluationException.field_c, UnitModelPreview.field_m);
         if (param0 != 0) {
           field_i = 123;
         }

@@ -186,7 +186,7 @@ final class PasswordValidator extends TextFieldValidator {
           GradientUiRenderer.drawGradientFrame(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           if (var9_int == -3 &&
             param3 - param8 < 40 &&
-            0 < dd.field_e) {
+            0 < ArchiveMasterIndex.field_e) {
             if (!param0) {
               GradientUiRenderer.drawGradientFrame(8 + param2, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             } else {
@@ -197,7 +197,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           if (var9_int == -3 &&
             -param8 + param3 + 40 > param1 &&
-            NanoGameClock.field_q > dd.field_e) {
+            NanoGameClock.field_q > ArchiveMasterIndex.field_e) {
             if (param0) {
               GradientUiRenderer.drawGradientFrame(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             } else {
@@ -216,7 +216,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_18_0 = var9_int;
             return stackIn_18_0;
           }
-          var10 = param8 - (dd.field_e - 44);
+          var10 = param8 - (ArchiveMasterIndex.field_e - 44);
           var11 = 0;
           if (od.field_c[AccountRegistrationForm.field_X]) {
             var11 = -1;
@@ -248,7 +248,7 @@ final class PasswordValidator extends TextFieldValidator {
                   stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(BufferedSocket.field_j < 2);
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
-                    GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, dh.field_l, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, ImageProducerSurface.field_l, 0, 128, false);
                   } else {
                     GradientUiRenderer.drawGradientFrame(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, AgeValidator.field_k, 0, 128, false);
                   }
@@ -350,7 +350,7 @@ final class PasswordValidator extends TextFieldValidator {
               param4 += 10;
               param3 += 30;
               var12 = null;
-              if (el.field_f[AccountRegistrationForm.field_X][var9_int] <= pg.playerProfile.getUnlockLevel(param7 ^ -40)) {
+              if (MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int] <= pg.playerProfile.getUnlockLevel(param7 ^ -40)) {
                 if (ve.field_a[AccountRegistrationForm.field_X][var9_int] < 0) {
                   var12 = "Unavailable to lowly players";
                 } else {
@@ -375,7 +375,7 @@ final class PasswordValidator extends TextFieldValidator {
                   }
                 }
               } else {
-                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[AccountRegistrationForm.field_X][var9_int])});
+                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int])});
               }
               if (var12 != null) {
                 var19 = EmailCheckResult.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});

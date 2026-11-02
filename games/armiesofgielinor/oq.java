@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends wv {
+final class oq extends KeyedLoginCredentials {
     static String field_j;
     static ClientConnectionState field_m;
     static RgbSprite[] activeStructureShadows;
@@ -11,22 +11,22 @@ final class oq extends wv {
         super(param0, param1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_k = null;
-        if (param0 >= 66) {
+        if (obfuscationGuard >= 66) {
           field_m = null;
           field_j = null;
           activeStructureShadows = null;
           return;
         }
-        oq.a(-38);
+        oq.releaseStatics(-38);
         field_m = null;
         field_j = null;
         activeStructureShadows = null;
     }
 
-    final h a(byte param0) {
-        int var2 = -72 / ((-63 - param0) / 45);
+    final LoginKind getLoginKind(byte obfuscationGuard) {
+        int var2 = -72 / ((-63 - obfuscationGuard) / 45);
         return MovementPresentation.field_l;
     }
 

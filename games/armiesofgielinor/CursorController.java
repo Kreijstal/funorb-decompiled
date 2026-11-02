@@ -1,0 +1,54 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class CursorController {
+    private java.awt.Robot robot;
+    private java.awt.Component hiddenCursorComponent;
+
+    public final void showcursor(java.awt.Component param0, boolean param1) {
+        try {
+          if (param1) {
+            param0 = null;
+          } else {
+            if (param0 == null) {
+              throw new NullPointerException();
+            }
+          }
+          if (this.hiddenCursorComponent == param0) {
+            return;
+          }
+          if (null != this.hiddenCursorComponent) {
+            this.hiddenCursorComponent.setCursor((java.awt.Cursor) null);
+            this.hiddenCursorComponent = null;
+          }
+          if (param0 != null) {
+            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+            this.hiddenCursorComponent = param0;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public final void setcustomcursor(java.awt.Component param0, int[] param1, int param2, int param3, java.awt.Point param4) {
+        java.awt.image.BufferedImage var6 = null;
+        if (param1 == null) {
+          param0.setCursor((java.awt.Cursor) null);
+        } else {
+          var6 = new java.awt.image.BufferedImage(param2, param3, 2);
+          var6.setRGB(0, 0, param2, param3, param1, 0, param2);
+          param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) var6), param4, (String) null));
+        }
+    }
+
+    public final void movemouse(int param0, int param1) {
+        this.robot.mouseMove(param0, param1);
+    }
+
+    public CursorController() throws Exception {
+        java.awt.Robot var2 = new java.awt.Robot();
+        this.robot = var2;
+    }
+}

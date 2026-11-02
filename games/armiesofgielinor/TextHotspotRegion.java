@@ -11,9 +11,9 @@ final class TextHotspotRegion extends IntrusiveNode {
     TextHotspotRegion nextRegion;
     int width;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_m = null;
-        if (param0 != 135) {
+        if (obfuscationGuard != 135) {
           spellMenuById = (SpellMenuGroup[]) null;
           spellMenuById = null;
           return;

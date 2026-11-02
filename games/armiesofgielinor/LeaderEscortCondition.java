@@ -308,7 +308,7 @@ final class LeaderEscortCondition implements MatchCondition {
             dj.a((byte) -126);
             return;
           }
-          af.a((Throwable) null, 76, "HS1: " + CampaignProgress.b(false));
+          LoginCredentials.a((Throwable) null, 76, "HS1: " + CampaignProgress.b(false));
           dj.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

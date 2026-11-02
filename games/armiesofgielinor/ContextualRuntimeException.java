@@ -10,12 +10,12 @@ final class ContextualRuntimeException extends RuntimeException {
     static String field_a;
     static String field_d;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         field_e = null;
         field_d = null;
         contentResizeStage = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           field_a = (String) null;
         }
         field_a = null;
@@ -46,10 +46,10 @@ final class ContextualRuntimeException extends RuntimeException {
         ClientUiComponent var3 = null;
         try {
           NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
-          ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, br.field_g, h.field_b, AnimationFrameSet.field_y);
+          ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, br.field_g, LoginKind.field_b, AnimationFrameSet.field_y);
           TaggedMapData.field_g = new SocialListPanel(0L, br.field_g, lm.field_a, ArchiveIndex.field_u);
           su.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
-          bn.field_c = new ClientUiComponent(0L, eq.field_h);
+          bn.field_c = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           bn.field_c.horizontalAlignment = 1;
           AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           ek.field_a = new ClientUiComponent(0L, br.field_e, SingleChildWidgetContainer.field_C);
@@ -59,12 +59,12 @@ final class ContextualRuntimeException extends RuntimeException {
           su.field_d.addChild(ek.field_a, 49);
           su.field_d.addChild(ListMissionsConsoleCommand.field_E, 105);
           su.field_d.addChild(PlayerProfile.field_f, 56);
-          ListMissionsConsoleCommand.field_E.scrollContainer.viewport.applyStyle(param0 + 6145, eq.field_h);
+          ListMissionsConsoleCommand.field_E.scrollContainer.viewport.applyStyle(param0 + 6145, PasswordLoginCredentials.field_h);
           ListMissionsConsoleCommand.field_E.scrollContainer.viewport.verticalAlignment = 1;
           var6 = ListMissionsConsoleCommand.field_E.scrollContainer.viewport;
           var7 = var6;
           var7.horizontalAlignment = 1;
-          TaggedMapData.field_g.scrollContainer.viewport.applyStyle(0, eq.field_h);
+          TaggedMapData.field_g.scrollContainer.viewport.applyStyle(0, PasswordLoginCredentials.field_h);
           if (param0 != -6145) {
             ResourceArchive var4 = (ResourceArchive) null;
             ContextualRuntimeException.a(-105, (ResourceArchive) null);

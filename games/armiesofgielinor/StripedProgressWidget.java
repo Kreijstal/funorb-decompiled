@@ -128,38 +128,38 @@ final class StripedProgressWidget extends Widget {
         }
     }
 
-    final static bi a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterImageSurface a(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          bi var5 = null;
-          dh var5_ref = null;
-          bi stackIn_2_0 = null;
-          bi stackIn_4_0 = null;
-          dh stackIn_6_0 = null;
+          RasterImageSurface var5 = null;
+          ImageProducerSurface var5_ref = null;
+          RasterImageSurface stackIn_2_0 = null;
+          RasterImageSurface stackIn_4_0 = null;
+          ImageProducerSurface stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("jo");
-              var5 = (bi) (var4.newInstance());
+              var4 = Class.forName("BufferedImageSurface");
+              var5 = (RasterImageSurface) (var4.newInstance());
               if (param2 != 1423111778) {
-                stackIn_2_0 = (bi) null;
+                stackIn_2_0 = (RasterImageSurface) null;
                 return stackIn_2_0;
               }
-              var5.a(param0, param2 ^ -1423111760, param3, param1);
+              var5.allocate(param0, param2 ^ -1423111760, param3, param1);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new dh();
-              ((bi) ((Object) var5_ref)).a(param0, -46, param3, param1);
+              var5_ref = new ImageProducerSurface();
+              ((RasterImageSurface) ((Object) var5_ref)).allocate(param0, -46, param3, param1);
               stackIn_6_0 = var5_ref;
-              return (bi) ((Object) stackIn_6_0);
+              return (RasterImageSurface) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -184,11 +184,11 @@ final class StripedProgressWidget extends Widget {
         this(x, y, width, height, stripeWidth, primaryColour, secondaryColour, primaryColour >> 1 & 8355711, (secondaryColour & 16711422) >> 1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_G = null;
         field_M = null;
         field_F = null;
-        if (param0 >= -67) {
+        if (obfuscationGuard >= -67) {
           return;
         }
         field_Q = null;

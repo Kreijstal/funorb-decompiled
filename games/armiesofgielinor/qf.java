@@ -10,9 +10,9 @@ final class qf {
     static String field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_g = null;
-        int var1 = -77 % ((81 - param0) / 37);
+        int var1 = -77 % ((81 - obfuscationGuard) / 37);
         field_c = null;
         field_e = null;
         field_d = null;
@@ -36,7 +36,7 @@ final class qf {
           LeaderEscortCondition.field_i = param7;
           ScrollWidgetContainer.field_T = (ResourceProtocolClient) ((Object) new SocketResourceClient());
           MapRepository.field_h = new DiskCacheWorker(param8);
-          oi.field_c = new dd(ScrollWidgetContainer.field_T, MapRepository.field_h);
+          oi.field_c = new ArchiveMasterIndex(ScrollWidgetContainer.field_T, MapRepository.field_h);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
@@ -65,13 +65,13 @@ final class qf {
         KingBlackDragonEvent.field_C.showDialog(PointerInputHandler.field_a, 0);
     }
 
-    final static void a(nr param0, int param1, int param2, nr param3, int param4, int param5) {
+    final static void a(NineSliceFrame param0, int param1, int param2, NineSliceFrame param3, int param4, int param5) {
         try {
           if (param5 >= -107) {
             field_b = (String) null;
           }
           et.field_b = param1;
-          el.field_c = param2;
+          MouseWheelSource.field_c = param2;
           cp.field_a = param4;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

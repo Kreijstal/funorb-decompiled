@@ -59,8 +59,8 @@ final class SpellConfirmationDialog {
     }
 
     final int getActionAtPointer(int cancelAction, byte obfuscationGuard, int confirmAction) {
-        int surfaceWidth = so.field_b.field_a;
-        int surfaceHeight = so.field_b.field_g;
+        int surfaceWidth = so.field_b.width;
+        int surfaceHeight = so.field_b.height;
         int dialogHeight = 30 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 5);
         if (IterableDualNodeDeque.isPointerInBounds(-33, surfaceWidth / 2 - 100, -2 + surfaceWidth / 2, surfaceHeight / 2 + ((dialogHeight >> 1) - 30), (dialogHeight >> 1) + surfaceHeight / 2)) {
           return confirmAction;
@@ -74,9 +74,9 @@ final class SpellConfirmationDialog {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
-        if (param0 <= 18) {
+        if (obfuscationGuard <= 18) {
           return;
         }
         field_l = null;
@@ -86,8 +86,8 @@ final class SpellConfirmationDialog {
     }
 
     final void draw(int obfuscationGuard) {
-        int var2 = so.field_b.field_a;
-        int var3 = so.field_b.field_g;
+        int var2 = so.field_b.width;
+        int var3 = so.field_b.height;
         if (obfuscationGuard != 1619620993) {
           return;
         }

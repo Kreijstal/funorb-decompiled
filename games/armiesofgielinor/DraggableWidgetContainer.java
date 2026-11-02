@@ -133,11 +133,11 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_R = null;
         field_K = null;
         field_J = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_K = (String) null;
         }
         field_Q = null;

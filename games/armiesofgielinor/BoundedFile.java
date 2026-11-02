@@ -86,42 +86,42 @@ final class BoundedFile {
         } else {
           if (19 == param0) {
             ModalDialog.a(65, false);
-            SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+            SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
             ConsoleTextNode.field_p[param0].e(param3);
           } else {
             if (param0 == 25) {
               ModalDialog.a(65, false);
-              SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+              SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
               ConsoleTextNode.field_p[param0].e(param3);
             } else {
               if (param0 == 1) {
                 ModalDialog.a(65, false);
-                SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                 ConsoleTextNode.field_p[param0].e(param3);
               } else {
                 if (param0 == 24) {
                   ModalDialog.a(65, false);
-                  SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                  SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                   ConsoleTextNode.field_p[param0].e(param3);
                 } else {
                   if (param0 == 2) {
                     ModalDialog.a(65, false);
-                    SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                    SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                     ConsoleTextNode.field_p[param0].e(param3);
                   } else {
                     if (param0 == 17) {
                       ModalDialog.a(65, false);
-                      SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                      SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                       ConsoleTextNode.field_p[param0].e(param3);
                     } else {
                       if (param0 == 3) {
                         ModalDialog.a(65, false);
-                        SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                        SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                         ConsoleTextNode.field_p[param0].e(param3);
                       } else {
                         if (param0 == 4) {
                           ModalDialog.a(65, false);
-                          SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                          SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                           ConsoleTextNode.field_p[param0].e(param3);
                         } else {
                           if (param0 == -2) {
@@ -140,11 +140,11 @@ final class BoundedFile {
                                     NodeHashIterator.b((byte) -90);
                                   } else {
                                     if (!param2) {
-                                      jg.field_m.drawPixels(so.field_b.field_a / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.field_g / 2);
+                                      jg.field_m.drawPixels(so.field_b.width / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.height / 2);
                                     } else {
                                       ModalDialog.a(61, false);
                                     }
-                                    SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                                    SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
                                     ConsoleTextNode.field_p[param0].e(false);
                                   }
                                 }
@@ -166,10 +166,10 @@ final class BoundedFile {
         BoundedFile.a(49, -48);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_i = null;
         field_e = null;
-        if (param0 >= -78) {
+        if (obfuscationGuard >= -78) {
           field_e = (int[]) null;
         }
     }

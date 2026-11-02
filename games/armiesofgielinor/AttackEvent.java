@@ -157,7 +157,7 @@ final class AttackEvent extends GameEvent {
     }
 
     final static void d(byte param0) {
-        if (!fh.field_i) {
+        if (!GrowableIntArray.field_i) {
           throw new IllegalStateException();
         }
         if (null != GameClock.loginProgressDialog) {

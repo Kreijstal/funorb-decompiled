@@ -131,7 +131,7 @@ final class CommunityTabGroup {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             phraseFailure = (Exception) (Object) decompiledCaughtException;
-            af.a((Throwable) ((Object) phraseFailure), -120, "CC1");
+            LoginCredentials.a((Throwable) ((Object) phraseFailure), -120, "CC1");
             HotspotTextWidget.decodedChatResponsePhraseIds = null;
             BattleGraphicsAssets.decodedChatText = null;
           }
@@ -211,16 +211,16 @@ final class CommunityTabGroup {
         try {
           var3 = new String[]{firstTabLabel, IterableDualNodeDeque.field_a, op.field_e};
           var4 = new ClientUiComponent[]{firstPanel, su.field_d, (ClientUiComponent) ((Object) TaggedMapData.field_g)};
-          this.tabs = new TabbedPanel(0L, h.field_d, var3, wm.field_c, var4, 0);
+          this.tabs = new TabbedPanel(0L, LoginKind.field_d, var3, wm.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ea.<init>(" + (firstTabLabel != null ? "{...}" : "null") + ',' + (firstPanel != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
         field_c = null;
-        int var1 = 43 % ((19 - param0) / 38);
+        int var1 = 43 % ((19 - obfuscationGuard) / 38);
         field_d = null;
     }
 
@@ -297,7 +297,7 @@ final class CommunityTabGroup {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             phraseFailure = (Exception) (Object) decompiledCaughtException;
-            af.a((Throwable) ((Object) phraseFailure), -120, "CC1");
+            LoginCredentials.a((Throwable) ((Object) phraseFailure), -120, "CC1");
             HotspotTextWidget.decodedChatResponsePhraseIds = null;
             BattleGraphicsAssets.decodedChatText = null;
           }

@@ -110,10 +110,10 @@ final class ah {
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (iw) (cg.field_c.first((byte) 107));
+          var4 = (iw) (ScreenWipeTransition.field_c.first((byte) 107));
           while (var4 != null) {
             FixInvisibleUnitsConsoleCommand.a((byte) 112, param1, var4);
-            var4 = (iw) (cg.field_c.next((byte) 123));
+            var4 = (iw) (ScreenWipeTransition.field_c.next((byte) 123));
           }
           var2 = LabeledWidgetContainer.field_O.first((byte) 116);
           while (var2 != null) {

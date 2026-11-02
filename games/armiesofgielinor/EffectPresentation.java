@@ -42,12 +42,12 @@ final class EffectPresentation implements EventPresentation {
     final static void d(int param0) {
         MapRepository.a(true);
         DeployAction.field_A = true;
-        fh.field_i = true;
+        GrowableIntArray.field_i = true;
         KingBlackDragonEvent.field_C.closeAllDialogs(-102);
         if (param0 != 7) {
-          EffectPresentation.c(101);
+          EffectPresentation.releaseStatics(101);
         }
-        af.openLoginProgress(false, CachedArchiveProvider.field_z, -1);
+        LoginCredentials.openLoginProgress(false, CachedArchiveProvider.field_z, -1);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, byte param4, int param5) {
@@ -95,7 +95,7 @@ final class EffectPresentation implements EventPresentation {
             }
             stackIn_22_0 = (stackIn_16_0 != stackIn_19_1) ? -1 : 1;
             var8 = stackIn_22_0;
-            var9 = so.field_b.field_a;
+            var9 = so.field_b.width;
             for (var10 = 0; var10 < 40; var10++) {
               var11 = var6_int * var10 + param1;
               if (param2) {
@@ -103,8 +103,8 @@ final class EffectPresentation implements EventPresentation {
               }
               if (var11 >= 0 &&
                 var9 >= var11) {
-                var12 = (int)(Math.sin((double)(var10 + ug.field_b * (var8 * 2)) * 3.141592653589793 / 20.0) * 3.0 * (double)var8);
-                var12 = var12 + (int)((double)var8 * (3.0 * Math.sin(3.141592653589793 * (double)(-(3 * var8 * ug.field_b) + 2 * var10) / 20.0)));
+                var12 = (int)(Math.sin((double)(var10 + ProxyAuthenticationRequiredException.field_b * (var8 * 2)) * 3.141592653589793 / 20.0) * 3.0 * (double)var8);
+                var12 = var12 + (int)((double)var8 * (3.0 * Math.sin(3.141592653589793 * (double)(-(3 * var8 * ProxyAuthenticationRequiredException.field_b) + 2 * var10) / 20.0)));
                 var13 = 32;
                 var14 = 256;
                 for (var15 = 0; var15 < 16; var15++) {
@@ -139,12 +139,12 @@ final class EffectPresentation implements EventPresentation {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_j = null;
         field_b = null;
         field_a = null;
         field_d = null;
-        if (param0 > -58) {
+        if (obfuscationGuard > -58) {
           field_j = (RgbSprite[]) null;
         }
         field_h = null;
@@ -343,7 +343,7 @@ final class EffectPresentation implements EventPresentation {
                         var4 = var20_ref.unit.tileX + var20_ref.unit.tileY * this.mapWidth;
                         var20_ref.unit.modelAnimationIndex = 1;
                         this.presenter.tileIndex = var4;
-                        dh.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
+                        ImageProducerSurface.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
                         var20_ref.claimUnitModel(var20_ref.unit, 12);
                         this.advanceFrame(var20_ref, (byte) -115);
                       } else {
@@ -407,7 +407,7 @@ final class EffectPresentation implements EventPresentation {
                       this.battlefield.a(0, var14, event);
                       return false;
                     }
-                    dh.a(var13.unit.unitType, 0, 32);
+                    ImageProducerSurface.a(var13.unit.unitType, 0, 32);
                     var13.unit.modelAnimationIndex = 2;
                     var13.claimUnitModel(var13.unit, 12);
                     this.advanceFrame(var13, (byte) 73);
@@ -453,7 +453,7 @@ final class EffectPresentation implements EventPresentation {
               return false;
             }
             var7.unit.modelAnimationIndex = 7;
-            dh.a(var7.unit.unitType, 5, obfuscationGuard - 25);
+            ImageProducerSurface.a(var7.unit.unitType, 5, obfuscationGuard - 25);
             var7.claimUnitModel(var7.unit, 12);
             this.advanceFrame(var7, (byte) 68);
           }

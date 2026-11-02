@@ -58,11 +58,11 @@ abstract class ModalDialog extends DequeWidgetContainer {
         this.setBounds(SoundPlaybackHandle.dialogViewportWidth - width >> 1, width, DebugConsole.dialogViewportHeight - height >> 1, 8192, height);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_I = null;
         field_M = null;
         groundShadowSprite = null;
-        int var1 = -89 % ((8 - param0) / 57);
+        int var1 = -89 % ((8 - obfuscationGuard) / 57);
         field_K = null;
         currentRoomPlayers = null;
         field_J = null;
@@ -184,7 +184,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.b(0, param1);
         }
-        GradientUiRenderer.drawHollowGradientFrame(0, 0, so.field_b.field_a, so.field_b.field_g, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
+        GradientUiRenderer.drawHollowGradientFrame(0, 0, so.field_b.width, so.field_b.height, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
         if (var2 != 0) {
           if (!ChannelFadeTimeConsoleCommand.field_F) {
             stackIn_22_0 = CampaignMenu.field_q;

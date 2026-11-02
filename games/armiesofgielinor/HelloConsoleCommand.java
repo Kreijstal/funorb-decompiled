@@ -57,9 +57,9 @@ final class HelloConsoleCommand extends ConsoleCommand {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_E = null;
-        if (param0 > -14) {
+        if (obfuscationGuard > -14) {
           field_E = (String) null;
         }
     }

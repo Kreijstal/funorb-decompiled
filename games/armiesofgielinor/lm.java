@@ -12,12 +12,12 @@ final class lm {
     static int field_g;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
         field_f = null;
         field_a = null;
         field_h = null;
-        if (param0 == 1638) {
+        if (obfuscationGuard == 1638) {
           nameCheckComplete = null;
           field_b = null;
           return;

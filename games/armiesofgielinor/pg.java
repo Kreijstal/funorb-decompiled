@@ -58,7 +58,7 @@ final class pg {
         BufferedSocket.disableKeyboard((byte) 41);
         LoginMethod.a(-15291);
         DequeWidgetContainer.j(-118);
-        if (fh.b((byte) -88)) {
+        if (GrowableIntArray.b((byte) -88)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);
           hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);
         }
@@ -151,8 +151,8 @@ final class pg {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 20) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 20) {
           return;
         }
         field_b = null;

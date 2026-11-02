@@ -7,11 +7,11 @@ final class dt {
     static String field_c;
     static java.security.SecureRandom field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
         field_d = null;
-        if (param0 != -1) {
-          dt.a(5);
+        if (obfuscationGuard != -1) {
+          dt.releaseStatics(5);
           field_c = null;
           return;
         }
@@ -43,14 +43,14 @@ final class dt {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 23678) {
-            dt.a(4);
+            dt.releaseStatics(4);
           }
           ViewportManager.detachKeyboard((java.awt.Component) ((Object) param0), (byte) 35);
           dc.a((java.awt.Component) ((Object) param0), -37);
           if (CampaignMission.field_I == null) {
             return;
           }
-          CampaignMission.field_I.a((java.awt.Component) ((Object) param0), true);
+          CampaignMission.field_I.detach((java.awt.Component) ((Object) param0), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

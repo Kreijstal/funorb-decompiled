@@ -137,8 +137,8 @@ final class l {
         }
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return;
         }
         field_g = null;

@@ -462,7 +462,7 @@ final class SpriteDropdownMenu {
             return stackIn_3_0;
           }
           if (64 < var2_int) {
-            stackIn_6_0 = el.field_e;
+            stackIn_6_0 = MouseWheelSource.field_e;
             return stackIn_6_0;
           }
           if (param0.charAt(0) == 34) {

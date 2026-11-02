@@ -20,8 +20,8 @@ abstract class ByteStorage {
         return BattleCharacter.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
     }
 
-    public static void b(int param0) {
-        if (param0 != 9892) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 9892) {
           return;
         }
         field_d = null;
@@ -56,7 +56,7 @@ abstract class ByteStorage {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (lj.a("getcookies", (byte) 114, param1));
+              var4 = (String) (AppletScriptBridge.callScriptFunction("getcookies", (byte) 114, param1));
               var5 = dj.splitText(-111, ';', var4);
               for (var6 = param0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

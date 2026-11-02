@@ -51,10 +51,10 @@ final class tf extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_m = null;
         field_p = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_m = (String) null;

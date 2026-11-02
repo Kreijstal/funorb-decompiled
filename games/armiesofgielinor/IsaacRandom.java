@@ -141,8 +141,8 @@ final class IsaacRandom {
         this.remainingResults = 256;
     }
 
-    public static void b(int param0) {
-        int var1 = -102 / ((param0 - 45) / 43);
+    public static void releaseStatics(int obfuscationGuard) {
+        int var1 = -102 / ((obfuscationGuard - 45) / 43);
         field_i = null;
         loginAccountIdentifier = null;
         field_g = null;

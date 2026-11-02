@@ -34,14 +34,14 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_a = null;
         field_f = (boolean[][]) null;
         field_g = null;
         field_h = null;
         field_b = null;
-        if (param0) {
-          IterableNodeHashTable.a(false);
+        if (obfuscationGuard) {
+          IterableNodeHashTable.releaseStatics(false);
         }
     }
 

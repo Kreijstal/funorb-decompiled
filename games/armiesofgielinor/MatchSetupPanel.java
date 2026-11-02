@@ -53,7 +53,7 @@ final class MatchSetupPanel {
         if (!param0) {
           this.itemStarts = (IntPair[]) null;
         }
-        return (nr.field_e.xHeight >> 1) - nr.field_e.maxDescent + (nr.field_e.baselineHeight - nr.field_e.maxAscent + 3);
+        return (NineSliceFrame.field_e.xHeight >> 1) - NineSliceFrame.field_e.maxDescent + (NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxAscent + 3);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -698,8 +698,8 @@ final class MatchSetupPanel {
                 if (param2 != 33) {
                   if (param2 == 29 &&
                     0 <= this.mapSizeSetting &&
-                    h.field_e.length >= this.mapSizeSetting) {
-                    param1 = param1 + h.field_e[t.field_e];
+                    LoginKind.field_e.length >= this.mapSizeSetting) {
+                    param1 = param1 + LoginKind.field_e[t.field_e];
                   }
                 } else {
                   stackIn_15_0 = new StringBuilder().append(param1);
@@ -941,7 +941,7 @@ final class MatchSetupPanel {
           var3 = stackIn_4_0;
           stackIn_7_0 = (ProgressMessageDialog.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_7_0;
-          VerticalScrollbar.field_Rb.advanceFrame(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
+          VerticalScrollbar.field_Rb.advanceFrame(MouseWheelSource.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
           while (true) {
             if (!Unit.pollKeyEvent((byte) 90)) {
               return;
@@ -1160,7 +1160,7 @@ final class MatchSetupPanel {
               }
               if (var14 == 3 &&
                 !param4) {
-                var15 = BitmapFont.truncateWithEllipsis(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
+                var15 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, param11, -10 + uh.field_e[var14][0] << 1);
                 GradientUiRenderer.drawCenteredSolidText(var15, (uh.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
               }
             }
@@ -1290,10 +1290,10 @@ final class MatchSetupPanel {
         this.option33Enabled = false;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_O = null;
         field_x = null;
-        if (param0 != 256) {
+        if (obfuscationGuard != 256) {
           return;
         }
         field_d = null;

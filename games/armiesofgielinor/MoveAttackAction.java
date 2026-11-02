@@ -163,12 +163,12 @@ final class MoveAttackAction extends PreparedAction {
               }
               var4 = param1.getCodeBase();
               var3 = ck.a(-3780, var4, param1).getFile();
-              lj.a(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 116);
-              lj.a(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 74);
-              lj.a(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 98);
-              lj.a(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, 75);
-              lj.a(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, 122);
-              lj.a(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 15938);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 116);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 74);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 98);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, 75);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, 122);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 15938);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -288,7 +288,7 @@ final class MoveAttackAction extends PreparedAction {
               param5 = param5 - (var9 - 640);
             }
           }
-          jp.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
+          ArchiveLoadSequence.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,8 +316,8 @@ final class MoveAttackAction extends PreparedAction {
         }
     }
 
-    public static void e(int param0) {
-        if (param0 >= -40) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -40) {
           return;
         }
         field_G = null;

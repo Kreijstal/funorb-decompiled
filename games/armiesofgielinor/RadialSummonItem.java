@@ -15,29 +15,29 @@ final class RadialSummonItem {
     final static int getCampaignPacketWord2(boolean obfuscationGuard) {
         if (obfuscationGuard) {
           field_e = (String) null;
-          return cg.campaignPacketWord2;
+          return ScreenWipeTransition.campaignPacketWord2;
         }
-        return cg.campaignPacketWord2;
+        return ScreenWipeTransition.campaignPacketWord2;
     }
 
     final static String a(int param0) {
         if (param0 != -1) {
           return (String) null;
         }
-        if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return qk.field_b;
         }
         return ah.loginPassword;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
-        if (param0 > 52) {
+        if (obfuscationGuard > 52) {
           field_f = null;
           field_h = (int[][]) null;
           return;
         }
-        RadialSummonItem.b(125);
+        RadialSummonItem.releaseStatics(125);
         field_f = null;
         field_h = (int[][]) null;
     }
@@ -77,11 +77,11 @@ final class RadialSummonItem {
             if (var6 == 0) {
               if (this.choiceId != 81) {
                 DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
-                km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+                ProjectileEffect.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
                 return;
               }
               DeployAction.field_x[4].drawTransparent(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
-              km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+              ProjectileEffect.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
               return;
             }
           }
@@ -94,14 +94,14 @@ final class RadialSummonItem {
           } else {
             DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
           }
-          km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+          ProjectileEffect.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
           if (var6 != 0) {
             StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, GradientUiRenderer.scaleColour(TutorialLayout.field_g[this.godGroupId], 128));
             if (this.choiceId != 81) {
               DeployAction.field_x[this.choiceId].drawWithBrightness(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
             }
             DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
-            km.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
+            ProjectileEffect.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
           }
           return;
         }
@@ -114,7 +114,7 @@ final class RadialSummonItem {
             DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
           }
         }
-        km.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
+        ProjectileEffect.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

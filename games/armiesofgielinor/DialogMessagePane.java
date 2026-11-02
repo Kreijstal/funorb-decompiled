@@ -72,9 +72,9 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         this.actionIds = newActionIds;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         validationWaiting = null;
-        if (param0 != 63) {
+        if (obfuscationGuard != 63) {
           field_I = (String) null;
         }
         field_I = null;
@@ -123,7 +123,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         super.drawWidget(originX, originY, (byte) -123, renderLayer);
         this.font.drawParagraph(this.message, 14 + originX + this.x, this.y + originY + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.font.maxAscent);
         if (obfuscationGuard > -82) {
-          DialogMessagePane.a((byte) 73);
+          DialogMessagePane.releaseStatics((byte) 73);
         }
     }
 

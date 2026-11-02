@@ -10,13 +10,13 @@ final class pd {
     static MeshData field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         field_f = null;
         field_c = null;
         field_b = null;
         field_d = null;
-        if (param0 >= 37) {
+        if (obfuscationGuard >= 37) {
           field_g = null;
           return;
         }

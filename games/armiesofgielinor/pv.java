@@ -297,9 +297,9 @@ final class pv {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
-        if (param0 == 213) {
+        if (obfuscationGuard == 213) {
           field_d = null;
           field_a = (AnimationSequence[][]) null;
           return;

@@ -8,9 +8,9 @@ final class tv {
     static boolean field_a;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
-        int var1 = 59 % ((param0 + 69) / 52);
+        int var1 = 59 % ((obfuscationGuard + 69) / 52);
         field_e = null;
         field_c = null;
         field_b = null;

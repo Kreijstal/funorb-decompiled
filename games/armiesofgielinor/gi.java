@@ -9,17 +9,17 @@ final class gi {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          gi.a(11);
-          return du.nameCheckPending == mh.accountNameCheckState ? true : false;
+          gi.releaseStatics(11);
+          return SocketFactory.nameCheckPending == mh.accountNameCheckState ? true : false;
         }
-        return du.nameCheckPending == mh.accountNameCheckState ? true : false;
+        return SocketFactory.nameCheckPending == mh.accountNameCheckState ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_c = null;
-        if (param0 != 180) {
-          gi.a(-55);
+        if (obfuscationGuard != 180) {
+          gi.releaseStatics(-55);
           field_d = null;
           return;
         }

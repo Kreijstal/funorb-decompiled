@@ -33,9 +33,9 @@ final class StandardContentDialog extends ContentTransitionDialog {
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_ob = null;
-        if (param0 != 49) {
+        if (obfuscationGuard != 49) {
           return;
         }
         field_kb = null;

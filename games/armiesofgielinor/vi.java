@@ -36,9 +36,9 @@ final class vi {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_f = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_a = null;
@@ -49,10 +49,10 @@ final class vi {
     final synchronized static long monotonicMillis(int obfuscationGuard) {
         long var1 = System.currentTimeMillis();
         int var3 = -1 / ((-3 - obfuscationGuard) / 38);
-        if (!(var1 >= h.field_a)) {
-          IndexedSpriteBase.field_c = IndexedSpriteBase.field_c + (-var1 + h.field_a);
+        if (!(var1 >= LoginKind.field_a)) {
+          IndexedSpriteBase.field_c = IndexedSpriteBase.field_c + (-var1 + LoginKind.field_a);
         }
-        h.field_a = var1;
+        LoginKind.field_a = var1;
         return IndexedSpriteBase.field_c + var1;
     }
 

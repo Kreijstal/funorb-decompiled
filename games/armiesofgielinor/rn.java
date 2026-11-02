@@ -45,7 +45,7 @@ final class rn {
         try {
           MapRepository.a(true);
           KingBlackDragonEvent.field_C.closeAllDialogs(obfuscationGuard ^ -124);
-          ContextActionMenu.loginForm = new LoginForm(IsaacRandom.loginAccountIdentifier, (String) null, fh.field_i, showRegistration, offerGuestPlay);
+          ContextActionMenu.loginForm = new LoginForm(IsaacRandom.loginAccountIdentifier, (String) null, GrowableIntArray.field_i, showRegistration, offerGuestPlay);
           if (obfuscationGuard != 3) {
             field_d = -55;
           }

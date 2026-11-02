@@ -329,7 +329,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = b.getUnitUnlockOrdinal(false, unitType);
+          var3_int = SpriteSheetDecoder.getUnitUnlockOrdinal(false, unitType);
           if (this.controller.battlefield.godFavourLevels[0][-1 + jv.getUnitUnlockGroup(false, unitType)] == 0) {
             return true;
           }

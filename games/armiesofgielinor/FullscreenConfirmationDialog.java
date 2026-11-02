@@ -88,9 +88,9 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
         this.open = false;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_bb = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_db = null;
           field_X = null;
           field_W = null;
@@ -98,7 +98,7 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
           field_cb = null;
           return;
         }
-        FullscreenConfirmationDialog.b(false);
+        FullscreenConfirmationDialog.releaseStatics(false);
         field_db = null;
         field_X = null;
         field_W = null;

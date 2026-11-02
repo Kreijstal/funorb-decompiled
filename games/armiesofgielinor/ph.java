@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph {
-    static lg field_c;
+    static GzipDecoder field_c;
     static long field_d;
     static int[][][] field_e;
     static String[] field_b;
@@ -32,7 +32,7 @@ final class ph {
           if (Character.isISOControl(character)) {
             return false;
           }
-          if (bi.a(character, -31000)) {
+          if (RasterImageSurface.a(character, -31000)) {
             return true;
           }
           var12 = VerticalScrollbar.field_Nb;
@@ -70,9 +70,9 @@ final class ph {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_e = (int[][][]) null;
-        if (param0 > -24) {
+        if (obfuscationGuard > -24) {
           return;
         }
         field_c = null;
@@ -155,7 +155,7 @@ final class ph {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + MusicPatchEnvelope.a((byte) -82, vi.monotonicMillis(-118) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              lj.a((byte) -52, param1, "document.cookie=\"" + var5Lifetime6 + "\"");
+              AppletScriptBridge.evaluateScript((byte) -52, param1, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -188,7 +188,7 @@ final class ph {
     }
 
     static {
-        field_c = new lg();
+        field_c = new GzipDecoder();
         field_a = "Unpacking sound effects";
         field_b = new String[]{"1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"};
         field_e = new int[][][]{new int[][]{new int[]{-60, 0}, new int[]{60, 0}}, new int[][]{new int[]{-80, 20}, new int[]{80, 20}, new int[]{0, 20}}, new int[][]{new int[]{120, 20}, new int[]{-120, 20}, new int[]{40, 20}, new int[]{-40, 20}}};

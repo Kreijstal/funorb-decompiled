@@ -7,10 +7,10 @@ final class CampaignProgress {
     static int field_b;
     private CampaignResult[][] resultsByCampaign;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_a = null;
         field_c = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_a = (ClientUiComponent) null;
         }
     }
@@ -33,7 +33,7 @@ final class CampaignProgress {
         for (var5 = 0; var5 < var3.missions.length; var5++) {
           var6 = this.resultsByCampaign[campaignIndex][var5];
           var7 = var10.missions[var5];
-          var8 = var6 != null ? b.calculateMissionScore(var7.scoreTurnTarget, var7.scoreDamageTarget, var6.damageTaken, (byte) 25, var6.turnsTaken) : 0;
+          var8 = var6 != null ? SpriteSheetDecoder.calculateMissionScore(var7.scoreTurnTarget, var7.scoreDamageTarget, var6.damageTaken, (byte) 25, var6.turnsTaken) : 0;
           var4 = var4 + var8;
         }
         return var4;
@@ -157,7 +157,7 @@ final class CampaignProgress {
           null != this.resultsByCampaign[campaignIndex][missionIndex]) {
           var5 = br.getCampaign(campaignIndex, (byte) -57);
           var6 = var5.missions[missionIndex];
-          return b.calculateMissionScore(var6.scoreTurnTarget, var6.scoreDamageTarget, this.resultsByCampaign[campaignIndex][missionIndex].damageTaken, (byte) 25, this.resultsByCampaign[campaignIndex][missionIndex].turnsTaken);
+          return SpriteSheetDecoder.calculateMissionScore(var6.scoreTurnTarget, var6.scoreDamageTarget, this.resultsByCampaign[campaignIndex][missionIndex].damageTaken, (byte) 25, this.resultsByCampaign[campaignIndex][missionIndex].turnsTaken);
         }
         return 0;
     }

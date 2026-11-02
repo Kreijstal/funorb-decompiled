@@ -7,8 +7,8 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
     static int field_K;
     static RgbSprite field_J;
 
-    public static void k(int param0) {
-        if (param0 <= 43) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard <= 43) {
           return;
         }
         field_L = (String[][]) null;
@@ -17,7 +17,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
 
     final static CampaignQuicksave getStoredQuicksave(int obfuscationGuard) {
         if (obfuscationGuard <= 78) {
-          DropTargetWidgetContainer.k(-59);
+          DropTargetWidgetContainer.releaseStatics(-59);
           if (null != bu.storedQuicksave) {
             return bu.storedQuicksave;
           }

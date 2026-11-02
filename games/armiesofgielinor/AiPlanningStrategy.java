@@ -85,7 +85,7 @@ abstract class AiPlanningStrategy {
                   if (null == var7.children) {
                     var7.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
                     var7.addChild(var7.nameComponent, 87);
-                    var7.locationComponent = new ClientUiComponent(0L, ws.field_P);
+                    var7.locationComponent = new ClientUiComponent(0L, DialWidget.field_P);
                     var7.addChild(var7.locationComponent, 96);
                     var7.previousNameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
                     var7.addChild(var7.previousNameComponent, 69);
@@ -186,7 +186,7 @@ abstract class AiPlanningStrategy {
               } else {
                 decompiledFrameRemainder0 = (0 != ListMissionsConsoleCommand.field_E.addButton.pressedButton);
                 if (decompiledFrameRemainder0) {
-                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, kq.field_N, eq.field_h, eq.field_h);
+                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -195,7 +195,7 @@ abstract class AiPlanningStrategy {
               if (ListMissionsConsoleCommand.field_E.removeButton.pressedButton == 0) {
                 break;
               }
-              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, se.field_b, kq.field_N, eq.field_h, eq.field_h);
+              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, se.field_b, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
               DisplaySettingsDialog.field_fb = 1;
               break;
             }

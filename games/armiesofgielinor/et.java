@@ -107,7 +107,7 @@ final class et {
                         if (param0.field_E > 0 &&
                           null != param0.field_K) {
                           dupTemp$0 = param0.field_K[var8];
-                          jp.field_g[dupTemp$0] = jp.field_g[dupTemp$0] + 1;
+                          ArchiveLoadSequence.field_g[dupTemp$0] = ArchiveLoadSequence.field_g[dupTemp$0] + 1;
                         }
                         UnitModelViewer.field_q = UnitModelViewer.field_q + 1;
                         break;
@@ -128,9 +128,9 @@ final class et {
             param0.field_K != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(jp.field_g.length <= var9Lifetime1)) {
-              var10Lifetime1 = jp.field_g[var9Lifetime1];
-              jp.field_g[var9Lifetime1] = var8Lifetime1;
+            while (!(ArchiveLoadSequence.field_g.length <= var9Lifetime1)) {
+              var10Lifetime1 = ArchiveLoadSequence.field_g[var9Lifetime1];
+              ArchiveLoadSequence.field_g[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -174,11 +174,11 @@ final class et {
           do {
             if (!Unit.pollKeyEvent((byte) 80)) {
               if (OctaveNoiseMap.field_r == -1) {
-                if (ac.field_n) {
+                if (ManaStarParticle.field_n) {
                   stackIn_18_0 = 3;
                   return stackIn_18_0;
                 }
-                if (du.nameCheckPending == mh.accountNameCheckState) {
+                if (SocketFactory.nameCheckPending == mh.accountNameCheckState) {
                   stackIn_21_0 = 1;
                   return stackIn_21_0;
                 }
@@ -186,7 +186,7 @@ final class et {
                   stackIn_24_0 = 1;
                   return stackIn_24_0;
                 }
-                if (ChannelBaseVolumeConsoleCommand.field_L == du.nameCheckPending) {
+                if (ChannelBaseVolumeConsoleCommand.field_L == SocketFactory.nameCheckPending) {
                   stackIn_29_0 = 2;
                   return stackIn_29_0;
                 }

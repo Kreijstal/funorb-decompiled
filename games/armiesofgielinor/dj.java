@@ -22,7 +22,7 @@ final class dj {
               if (param1 == param2.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              lj.a((byte) -110, param0, "document.cookie=\"" + var5 + "\"");
+              AppletScriptBridge.evaluateScript((byte) -110, param0, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
             MoveAttackAction.a(16058, param0);
@@ -200,7 +200,7 @@ final class dj {
         String serviceDescription = null;
         RuntimeException caughtFailure = null;
         try {
-          frame = ug.openFullscreenFrame(bitDepth, refreshRate, -1, platformService, width, height);
+          frame = ProxyAuthenticationRequiredException.openFullscreenFrame(bitDepth, refreshRate, -1, platformService, width, height);
           frameAlias = frame;
           if (frame == null) {
             unavailableCanvas = null;

@@ -41,8 +41,8 @@ final class DelayedPacket extends IntrusiveNode {
           return "Please choose a player, 0-based.";
         }
         controllerAlias.battlefield.eliminatePlayer(10001, playerId, false);
-        kw.campaignPacketWord0 = 2297;
-        cg.campaignPacketWord2 = 72584621;
+        ValidationStatusIcon.campaignPacketWord0 = 2297;
+        ScreenWipeTransition.campaignPacketWord2 = 72584621;
         BirthDateChatEnableForm.campaignPacketWord3 = 224;
         ii.campaignPacketWord1 = 4452;
         int turnsTaken = controller.battlefield.playerTurnCounts[controller.controlledPlayerId];
@@ -58,13 +58,13 @@ final class DelayedPacket extends IntrusiveNode {
         int mutationSelector = UnitModelViewer.campaignMetricMutationCounter % 4;
         int mutationVariant = mutationSelector;
         if (0 == mutationVariant) {
-          kw.campaignPacketWord0 = kw.campaignPacketWord0 - damageDelta;
+          ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - damageDelta;
           ii.campaignPacketWord1 = ii.campaignPacketWord1 - turnDelta;
           return "Done.";
         }
         if (mutationVariant != 1) {
           if (mutationVariant == 2) {
-            kw.campaignPacketWord0 = kw.campaignPacketWord0 + (turnDelta - damageDelta);
+            ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + (turnDelta - damageDelta);
             return "Done.";
           }
           if (mutationVariant != 3) {
@@ -74,7 +74,7 @@ final class DelayedPacket extends IntrusiveNode {
           return "Done.";
         }
         ii.campaignPacketWord1 = ii.campaignPacketWord1 + damageDelta;
-        kw.campaignPacketWord0 = kw.campaignPacketWord0 + turnDelta;
+        ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + turnDelta;
         return "Done.";
     }
 
@@ -280,12 +280,12 @@ final class DelayedPacket extends IntrusiveNode {
         se.field_e = -2147483648;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_n = null;
         field_s = null;
         field_k = null;
         field_r = null;
-        int var1 = 97 % ((32 - param0) / 56);
+        int var1 = 97 % ((32 - obfuscationGuard) / 56);
     }
 
     DelayedPacket(long releaseAtMillis, int opcode, byte[] payload) {

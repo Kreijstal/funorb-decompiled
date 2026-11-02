@@ -10,12 +10,12 @@ final class PortalLossCondition implements MatchCondition {
     static String field_f;
     private Battlefield battlefield;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         instructionRowHeadings = (String[][][]) null;
         instructionSectionTitles = (String[][]) null;
         animationSkeletonsArchive = null;
-        if (param0 != -12428) {
+        if (obfuscationGuard != -12428) {
           return;
         }
         instructionParagraphs = (String[][][][]) null;

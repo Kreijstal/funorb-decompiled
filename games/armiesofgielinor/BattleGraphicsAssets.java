@@ -73,10 +73,10 @@ final class BattleGraphicsAssets {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         decodedChatText = null;
         field_a = null;
-        if (param0 != -12) {
+        if (obfuscationGuard != -12) {
           field_a = (String) null;
         }
     }
@@ -95,13 +95,13 @@ final class BattleGraphicsAssets {
           nextTheme = UnitLossCondition.battlefieldThemes[themeId];
           nextAlias = nextTheme;
           nextAlias.loadSpriteSheets((byte) -118);
-          ac.activeTerrainSprites = nextAlias.terrainSprites;
+          ManaStarParticle.activeTerrainSprites = nextAlias.terrainSprites;
           FullscreenMembershipDialog.activeFoliageShadows = nextAlias.foliageShadowSprites;
-          nr.activeFoliageSprites = nextAlias.foliageSprites;
+          NineSliceFrame.activeFoliageSprites = nextAlias.foliageSprites;
           TextFieldValidator.currentThemeId = themeId;
           l.activeStructureSprites = nextAlias.structureSprites;
           oq.activeStructureShadows = nextTheme.structureShadowSprites;
-          dd.activeTerrainSample = ac.activeTerrainSprites[1].toRgbSprite();
+          ArchiveMasterIndex.activeTerrainSample = ManaStarParticle.activeTerrainSprites[1].toRgbSprite();
           return;
         }
     }

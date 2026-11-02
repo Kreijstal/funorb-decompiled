@@ -113,7 +113,7 @@ final class se {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
+            var1[var2] = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
           } else {
             var22 = CampaignMenuEntry.decodedSpriteAlphas[var2];
             var16 = new int[var3];
@@ -122,7 +122,7 @@ final class se {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = AccountRegistrationDialog.bitwiseOr(MovementPresentation.decodedSpritePalette[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
           }
         }
         if (param0 != 32) {

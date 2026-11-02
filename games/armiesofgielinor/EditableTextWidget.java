@@ -584,8 +584,8 @@ class EditableTextWidget extends InteractiveWidget {
         }
     }
 
-    public static void m(int param0) {
-        if (param0 != 32) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 32) {
           field_Q = (int[]) null;
         }
         field_S = null;

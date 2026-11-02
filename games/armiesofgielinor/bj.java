@@ -26,14 +26,14 @@ final class bj extends IntrusiveNode {
         var1 = ClippedWidgetContainer.decodedSpriteWidths[0] * c.decodedSpriteHeights[0];
         var17 = AnimationPlayer.decodedSpriteIndices[0];
         if (param0 != 12722) {
-          bj.a(-13);
+          bj.releaseStatics(-13);
         }
         if (!MapTile.decodedSpriteHasAlpha[0]) {
           var9 = new int[var1];
           for (var5 = 0; var1 > var5; var5++) {
             var9[var5] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var17[var5])];
           }
-          var3 = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var9);
+          var3 = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var9);
         } else {
           var16 = CampaignMenuEntry.decodedSpriteAlphas[0];
           var13 = new int[var1];
@@ -42,15 +42,15 @@ final class bj extends IntrusiveNode {
           for (var6 = 0; var6 < var1; var6++) {
             var5_ref_int__[var6] = AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(255, (int) var16[var6]) << 24, MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var17[var6])]);
           }
-          var3 = new ArgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var13);
+          var3 = new ArgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var13);
         }
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 113);
         return (RgbSprite) (var3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_l = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_p = null;

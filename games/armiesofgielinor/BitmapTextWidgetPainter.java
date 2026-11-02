@@ -561,10 +561,10 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         musicCrossfadeStream = null;
-        int var1 = -5 / ((-45 - param0) / 50);
+        int var1 = -5 / ((-45 - obfuscationGuard) / 50);
         field_s = null;
         field_r = null;
     }
@@ -705,7 +705,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
           if (CampaignMission.field_I == null) {
             return;
           }
-          CampaignMission.field_I.a(0, (java.awt.Component) ((Object) param1));
+          CampaignMission.field_I.attach(0, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

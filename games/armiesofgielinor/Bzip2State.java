@@ -38,9 +38,9 @@ final class Bzip2State {
     int totalOutputBytes;
     boolean[] inUse;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_t = null;
-        if (param0 != 75) {
+        if (obfuscationGuard != 75) {
           return;
         }
         field_C = null;
@@ -114,7 +114,7 @@ final class Bzip2State {
         try {
           var3 = SummonAction.a(-127, param1, param0);
           if (param2 > -34) {
-            Bzip2State.b((byte) -25);
+            Bzip2State.releaseStatics((byte) -25);
           }
           if (var3 != null) {
             stackIn_6_0 = var3;
@@ -156,7 +156,7 @@ final class Bzip2State {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.decodeSpriteSheetFromArchive(false, param0, param3, param2)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param0, param3, param2)) {
             return null;
           }
           if (param1 == 28) {

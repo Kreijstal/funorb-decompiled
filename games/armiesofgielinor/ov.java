@@ -9,17 +9,17 @@ final class ov {
     static ClientUiComponent field_i;
     static String field_c;
     static ClientConnectionState connectionState;
-    static nr field_m;
+    static NineSliceFrame field_m;
     static String field_l;
     static int field_b;
     static String field_k;
     static String field_a;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_j = null;
         field_h = null;
-        int var1 = 16 % ((param0 + 4) / 43);
+        int var1 = 16 % ((obfuscationGuard + 4) / 43);
         field_m = null;
         field_d = null;
         field_a = null;

@@ -92,7 +92,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
             } else {
               discardedButtonC = null;
               discardedButtonD = null;
-              navigationText = pi.field_O;
+              navigationText = MarkerSliderWidget.field_O;
             }
             this.navigationButton = new InteractiveWidget(navigationText, (WidgetListener) null);
             if (this.showRegistration) {
@@ -298,8 +298,8 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
         }
     }
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return;
         }
         field_K = null;
@@ -309,7 +309,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
         if (obfuscationGuard != 30) {
           LoginForm.allowsEmptyCredentials(105);
         }
-        return fh.field_i;
+        return GrowableIntArray.field_i;
     }
 
     public final void textChanged(EditableTextWidget widget, int obfuscationGuard) {

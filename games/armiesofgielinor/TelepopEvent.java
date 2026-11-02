@@ -10,9 +10,9 @@ final class TelepopEvent extends GameEvent {
     static boolean field_D;
     static int field_F;
 
-    public static void g(int param0) {
-        if (param0 >= -63) {
-          TelepopEvent.g(6);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -63) {
+          TelepopEvent.releaseStatics(6);
         }
         field_y = null;
     }
@@ -20,7 +20,7 @@ final class TelepopEvent extends GameEvent {
     final static void a(boolean param0, String param1) {
         try {
           IconLabelControl.a(param1, (byte) -65);
-          af.openLoginProgress(param0, MapLayout.field_o, -1);
+          LoginCredentials.openLoginProgress(param0, MapLayout.field_o, -1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "q.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -92,7 +92,7 @@ final class TelepopEvent extends GameEvent {
             var6.packedFlag256 = false;
             this.unit.unlink(obfuscationGuard ^ 26707);
           }
-          fl.recomputeClientStateChecksum(battlefield, -112);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -112);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "q.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

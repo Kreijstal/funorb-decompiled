@@ -8,8 +8,8 @@ final class FaceNormal {
     int z;
     int x;
 
-    public static void a(byte param0) {
-        if (param0 >= -43) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard >= -43) {
           field_c = (String) null;
           field_c = null;
           return;

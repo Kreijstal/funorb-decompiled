@@ -57,9 +57,9 @@ abstract class PreparedAction extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_k = null;
-        if (param0 != 28038) {
+        if (obfuscationGuard != 28038) {
           return;
         }
         field_p = null;

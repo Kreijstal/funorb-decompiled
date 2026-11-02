@@ -68,10 +68,10 @@ final class AccountRequestResult {
               if (null != CipherPacketBuffer.currentBattlefield) {
                 var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
               }
-              UnitCycler.a(param1 + 22, var11, ug.field_b + var6_int, 92, 20 + param4);
+              UnitCycler.a(param1 + 22, var11, ProxyAuthenticationRequiredException.field_b + var6_int, 92, 20 + param4);
             }
             if (var7.hasModifierFlag4((byte) -125)) {
-              GameEvent.a(20 + param4, true, var6_int + ug.field_b, var7.ownerPlayer, param1 + 22);
+              GameEvent.a(20 + param4, true, var6_int + ProxyAuthenticationRequiredException.field_b, var7.ownerPlayer, param1 + 22);
             }
             fs.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;

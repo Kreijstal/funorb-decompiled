@@ -9,12 +9,12 @@ final class ConsoleTextNode extends IntrusiveNode {
     static String field_o;
     static TutorialController[] field_p;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_p = null;
         field_k = null;
         field_o = null;
-        if (param0 != -22823) {
-          ConsoleTextNode.a(53);
+        if (obfuscationGuard != -22823) {
+          ConsoleTextNode.releaseStatics(53);
           field_n = null;
           return;
         }

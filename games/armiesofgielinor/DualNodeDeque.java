@@ -73,10 +73,10 @@ final class DualNodeDeque {
         return null;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
         field_a = null;
-        if (param0 <= 93) {
+        if (obfuscationGuard <= 93) {
           return;
         }
         field_k = null;

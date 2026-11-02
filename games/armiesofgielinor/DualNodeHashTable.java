@@ -38,11 +38,11 @@ final class DualNodeHashTable {
         return (DualLinkedNode) null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
         field_f = null;
         field_e = null;
-        int var1 = 20 / ((11 - param0) / 56);
+        int var1 = 20 / ((11 - obfuscationGuard) / 56);
     }
 
     final DualLinkedNode get(byte obfuscationGuard, long key) {

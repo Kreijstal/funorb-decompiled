@@ -108,7 +108,7 @@ abstract class ResizableModalDialog extends ModalDialog {
         }
         gt.field_e.drawTransparent(this.width + (x - 90), 10 + y);
         EquipmentBattleTutorial.a(t.field_d, x + 5, y + 35, this.width - 10, 8941);
-        EquipmentBattleTutorial.a(ip.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
+        EquipmentBattleTutorial.a(WidgetStateStyle.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -177,7 +177,7 @@ abstract class ResizableModalDialog extends ModalDialog {
           }
           startPosition = packet.position;
           textCharacters = (CharSequence) ((Object) text);
-          encodedText = nr.encodeSingleByteText(textCharacters, false);
+          encodedText = NineSliceFrame.encodeSingleByteText(textCharacters, false);
           packet.writeUnsignedSmart(true, encodedText.length);
           packet.position = packet.position + ds.chatHuffmanCodec.compress(0, encodedText, encodedText.length, packet.payload, packet.position, (byte) 28);
           stackIn_3_0 = packet.position - startPosition;
@@ -224,11 +224,11 @@ abstract class ResizableModalDialog extends ModalDialog {
         return super.snapDialogAnimation(66);
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         unitAnimationGroups = null;
         field_Q = null;
-        if (param0 <= 21) {
-          ResizableModalDialog.h((byte) -93);
+        if (obfuscationGuard <= 21) {
+          ResizableModalDialog.releaseStatics((byte) -93);
         }
     }
 

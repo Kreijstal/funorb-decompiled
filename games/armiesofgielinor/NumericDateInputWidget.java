@@ -93,7 +93,7 @@ final class NumericDateInputWidget extends DateInputWidget {
             var8 = packet.getReadBitPosition(false) - var6;
             kq.enterTaggedPayload(var6, obfuscationGuard + 489, var8, var7, packet);
             target.decodeTaggedField(var7, packet, var5, (byte) 37);
-            ao.finishTaggedPayload(var6, 4, var8, packet, var7);
+            StatefulWidgetPainter.finishTaggedPayload(var6, 4, var8, packet, var7);
           }
           if (obfuscationGuard == -24721) {
             return;
@@ -151,14 +151,14 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         cachedConsoleSource = null;
         field_U = null;
         field_P = null;
         field_T = null;
         field_M = null;
         roomSetup = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_U = (int[]) null;
         }
     }

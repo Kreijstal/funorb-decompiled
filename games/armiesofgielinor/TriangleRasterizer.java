@@ -838,7 +838,7 @@ final class TriangleRasterizer {
         TriangleRasterizer.a(0, 512);
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         scanlineOffsets = null;
         colorPalette = null;
         textureProvider = null;

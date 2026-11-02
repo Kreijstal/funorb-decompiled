@@ -46,12 +46,12 @@ final class pu {
     int[] field_I;
     short[] field_y;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_k = (IconTextComponent[][]) null;
         field_h = null;
         field_G = null;
-        if (param0 > -63) {
-          pu.a((byte) -1);
+        if (obfuscationGuard > -63) {
+          pu.releaseStatics((byte) -1);
         }
         field_B = null;
     }

@@ -106,7 +106,7 @@ final class ContextActionMenu extends ClientUiComponent {
         }
         popupWidth = popupWidth + 2 * this.horizontalPadding;
         popupHeight = this.verticalPadding + this.itemCount * this.rowHeight + this.verticalPadding;
-        popupX = jp.a(anchorX, anchorWidth, popupWidth, -1);
+        popupX = ArchiveLoadSequence.a(anchorX, anchorWidth, popupWidth, -1);
         popupY = pd.a(popupHeight, 0, anchorY, anchorHeight);
         this.setBounds(popupHeight, -20500, popupWidth, popupY, popupX);
         for (itemIndex = 0; this.itemCount > itemIndex; itemIndex++) {

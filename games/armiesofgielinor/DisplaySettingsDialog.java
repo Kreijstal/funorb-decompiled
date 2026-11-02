@@ -183,7 +183,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
           actionCenterX = this.backButton.width / 2 + this.backButton.x;
           this.backButton.width = 150;
           this.backButton.x = -this.backButton.width - 20 + actionCenterX;
-          this.applyButton = this.createActionButton((byte) 38, nr.field_f, (WidgetListener) (this));
+          this.applyButton = this.createActionButton((byte) 38, NineSliceFrame.field_f, (WidgetListener) (this));
           this.applyButton.enabled = false;
           this.applyButton.x = actionCenterX + 20;
           this.applyButton.width = this.backButton.width;

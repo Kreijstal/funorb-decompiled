@@ -10,7 +10,7 @@ final class tq {
     final static void a(boolean param0, boolean param1) {
         GlobalSpell.a(-47, param0);
         if (param1) {
-          tq.a((byte) 89);
+          tq.releaseStatics((byte) 89);
           DraggableWidgetContainer.a(param0, true);
           return;
         }
@@ -78,9 +78,9 @@ final class tq {
         return (RgbSprite[]) null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
-        if (param0 != -84) {
+        if (obfuscationGuard != -84) {
           field_d = (String) null;
         }
     }

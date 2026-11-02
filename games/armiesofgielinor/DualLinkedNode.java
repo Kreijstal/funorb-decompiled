@@ -82,8 +82,8 @@ class DualLinkedNode extends IntrusiveNode {
         }
     }
 
-    public static void f(int param0) {
-        if (param0 != -1) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           return;
         }
         field_n = null;
@@ -117,9 +117,9 @@ class DualLinkedNode extends IntrusiveNode {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 >= 111) {
-          ac.field_n = false;
+          ManaStarParticle.field_n = false;
           BestScoreStrategy.field_h = null;
-          if (fh.field_i) {
+          if (GrowableIntArray.field_i) {
             GameClock.loginProgressDialog.showConnectionFailure(4259);
             return;
           }
@@ -137,9 +137,9 @@ class DualLinkedNode extends IntrusiveNode {
           return;
         }
         DualLinkedNode.e(75);
-        ac.field_n = false;
+        ManaStarParticle.field_n = false;
         BestScoreStrategy.field_h = null;
-        if (fh.field_i) {
+        if (GrowableIntArray.field_i) {
           GameClock.loginProgressDialog.showConnectionFailure(4259);
         } else {
           var1 = SpriteControlNode.field_n;

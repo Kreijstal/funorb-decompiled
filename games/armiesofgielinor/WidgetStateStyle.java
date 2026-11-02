@@ -1,0 +1,379 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class WidgetStateStyle {
+    RgbSprite field_j;
+    static boolean field_e;
+    private int field_g;
+    private int field_h;
+    private int field_a;
+    RgbSprite[] field_d;
+    private int field_i;
+    private boolean field_f;
+    static RgbSprite[] field_c;
+    private int field_b;
+
+    final WidgetStateStyle setContentY(byte obfuscationGuard, int offsetY) {
+        this.field_a = offsetY;
+        if (obfuscationGuard != 81) {
+          field_e = true;
+          return this;
+        }
+        return this;
+    }
+
+    final void draw(Widget widget, byte obfuscationGuard, int originY, int originX, StatefulWidgetPainter painter) {
+        BitmapFont stackIn_19_0;
+        String stackIn_19_1;
+        int stackIn_19_2;
+        int stackIn_19_3;
+        int stackIn_20_4 = 0;
+        int stackIn_22_2 = 0;
+        int stackIn_23_3 = 0;
+        int stackIn_25_3;
+        int stackIn_25_4;
+        int stackIn_25_5;
+        int stackIn_25_6;
+        int stackIn_25_7;
+        int stackIn_26_8;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_31_2 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        String var6 = null;
+        RuntimeException var6_ref = null;
+        int var7 = 0;
+        try {
+          ReportAbuseDialog.drawNineSlice(this.field_d, widget.height, widget.x + originX, (byte) -47, originY + widget.y, widget.width);
+          if (null != this.field_j) {
+            var6_int = this.field_i + widget.x + originX;
+            if (1 == painter.horizontalAlignment) {
+              var6_int = var6_int + (widget.width - this.field_j.canvasWidth) / 2;
+            }
+            var7 = this.field_a + (originY + widget.y);
+            if (painter.verticalAlignment == 1) {
+              var7 = var7 + (-this.field_j.canvasHeight + widget.height) / 2;
+            }
+            if (painter.horizontalAlignment == 2) {
+              var6_int = var6_int + (widget.width - this.field_j.canvasWidth);
+            }
+            if (painter.verticalAlignment == 2) {
+              var7 = var7 + (widget.height - this.field_j.canvasHeight);
+            }
+            this.field_j.drawTransparent(var6_int, var7);
+          }
+          var6 = painter.getDisplayText(0, widget);
+          if (obfuscationGuard < 44) {
+            this.setContentX(-101, 108);
+          }
+          if (var6 != null &&
+            painter.font != null) {
+            if (0 > this.field_b) {
+              return;
+            }
+            stackIn_19_0 = painter.font;
+            stackIn_19_1 = var6;
+            stackIn_19_2 = painter.paddingLeft + originX;
+            stackIn_19_3 = widget.x;
+            if (-2147483648 != this.field_i) {
+              stackIn_20_4 = this.field_i;
+            } else {
+              stackIn_20_4 = 0;
+            }
+            stackIn_22_2 = stackIn_19_2 + (stackIn_19_3 + stackIn_20_4);
+            if (this.field_a == -2147483648) {
+              stackIn_23_3 = 0;
+            } else {
+              stackIn_23_3 = this.field_a;
+            }
+            stackIn_25_3 = stackIn_23_3 + painter.paddingTop + (originY + widget.y);
+            stackIn_25_4 = -painter.paddingRight - painter.paddingLeft + widget.width;
+            stackIn_25_5 = -painter.paddingTop + widget.height - painter.paddingBottom;
+            stackIn_25_6 = this.field_b;
+            stackIn_25_7 = this.field_g;
+            if (-2147483648 == this.field_h) {
+              stackIn_26_8 = 256;
+            } else {
+              stackIn_26_8 = this.field_h;
+            }
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraph(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, painter.horizontalAlignment, painter.verticalAlignment, painter.lineHeight);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_30_0 = var6_ref;
+          stackIn_30_1 = new StringBuilder().append("ip.A(");
+          if (widget == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
+          }
+          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(obfuscationGuard).append(',').append(originY).append(',').append(originX).append(',');
+          if (painter == null) {
+            stackIn_34_2 = "null";
+          } else {
+            stackIn_34_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+        }
+    }
+
+    final void copyTo(boolean clearFrameSprites, WidgetStateStyle target) {
+        try {
+          target.field_d = this.field_d;
+          target.field_g = this.field_g;
+          target.field_a = this.field_a;
+          target.field_f = this.field_f;
+          target.field_j = this.field_j;
+          target.field_b = this.field_b;
+          target.field_h = this.field_h;
+          if (clearFrameSprites) {
+            this.field_d = (RgbSprite[]) null;
+          }
+          target.field_i = this.field_i;
+        } catch (RuntimeException runtimeException) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ip.M(" + clearFrameSprites + ',' + (target != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final WidgetStateStyle a(boolean param0, byte param1) {
+        if (param1 >= 53) {
+          this.field_f = param0 ? true : false;
+          return this;
+        }
+        this.field_h = -125;
+        this.field_f = param0 ? true : false;
+        return this;
+    }
+
+    final WidgetStateStyle setContentX(int offsetX, int obfuscationGuard) {
+        this.field_i = offsetX;
+        if (obfuscationGuard != 1) {
+          this.field_d = (RgbSprite[]) null;
+          return this;
+        }
+        return this;
+    }
+
+    final void mergeInto(int obfuscationGuard, WidgetStateStyle workingStyle, int originX, StatefulWidgetPainter painter, int originY, Widget widget) {
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_28_2 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        StatefulWidgetPainter var8 = null;
+        try {
+          if (this.field_f) {
+            workingStyle.draw(widget, (byte) 53, originY, originX, painter);
+            workingStyle.resetDefaults(false);
+          }
+          if (-2147483648 != this.field_i) {
+            workingStyle.field_i = this.field_i;
+          }
+          if (null != this.field_j) {
+            workingStyle.field_j = this.field_j;
+          }
+          if (-1 <= this.field_b) {
+            workingStyle.field_b = this.field_b;
+          }
+          if (this.field_g >= -1) {
+            workingStyle.field_g = this.field_g;
+          }
+          if (this.field_a != -2147483648) {
+            workingStyle.field_a = this.field_a;
+          }
+          if (this.field_h != -2147483648) {
+            workingStyle.field_h = this.field_h;
+          }
+          if (this.field_d != null) {
+            workingStyle.field_d = this.field_d;
+          }
+          if (obfuscationGuard == -10265) {
+            return;
+          }
+          var8 = (StatefulWidgetPainter) null;
+          this.draw((Widget) null, (byte) -95, -90, -1, (StatefulWidgetPainter) null);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_24_0 = var7;
+          stackIn_24_1 = new StringBuilder().append("ip.E(").append(obfuscationGuard).append(',');
+          if (workingStyle == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(originX).append(',');
+          if (painter == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
+          }
+          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(originY).append(',');
+          if (widget == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+        }
+    }
+
+    final WidgetStateStyle b(int param0, int param1) {
+        if (param1 < 121) {
+          this.a(true, (byte) -5);
+          this.field_g = param0;
+          return this;
+        }
+        this.field_g = param0;
+        return this;
+    }
+
+    final void resetDefaults(boolean obfuscationGuard) {
+        this.field_h = 256;
+        this.field_a = 0;
+        if (!obfuscationGuard) {
+          this.field_g = -1;
+          this.field_b = 0;
+          this.field_d = null;
+          this.field_i = 0;
+          this.field_j = null;
+          return;
+        }
+        StatefulWidgetPainter var3 = (StatefulWidgetPainter) null;
+        this.draw((Widget) null, (byte) 78, -97, 60, (StatefulWidgetPainter) null);
+        this.field_g = -1;
+        this.field_b = 0;
+        this.field_d = null;
+        this.field_i = 0;
+        this.field_j = null;
+    }
+
+    final WidgetStateStyle setFrameSprites(RgbSprite[] frameSprites, int obfuscationGuard) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3_int = -84 / ((obfuscationGuard + 64) / 62);
+          this.field_d = frameSprites;
+          return this;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("ip.D(");
+          if (frameSprites == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, int param1, byte param2) {
+        LobbyPlayer.field_Ib = param0;
+        QuickChatCommandDefinition.field_e = param1;
+        if (param2 <= 77) {
+          field_e = true;
+        }
+    }
+
+    final static void a(int param0, int param1, boolean param2, int param3, BinaryBitmapFont param4, RgbSprite[] param5, int param6, String param7, int param8) {
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        try {
+          var9_int = param4.textWidth(param7) + (param5[0].pixelWidth << 1);
+          if (param1 > -92) {
+            field_c = (RgbSprite[]) null;
+          }
+          var10 = param6 - (var9_int >> 1);
+          var11 = param6 + (var9_int >> 1);
+          if (var10 < 0) {
+            param6 = param6 - var10;
+          } else {
+            if (var11 > 640) {
+              param6 = param6 - (-640 + var11);
+            }
+          }
+          ArchiveLoadSequence.a(-(var9_int >> 1) + param6, param8, var9_int, param5, param3, -8991);
+          param4.drawCentered(param7, param6, 2 + (param4.baselineHeight + param8), param0, -1);
+          if (!param2) {
+            return;
+          }
+          HelloConsoleCommand.a(param8, -(var9_int >> 1) + param6, -122, var9_int, param5, 128);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          stackIn_12_0 = var9;
+          stackIn_12_1 = new StringBuilder().append("ip.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param5 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',');
+          if (param7 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(')').toString());
+        }
+    }
+
+    final WidgetStateStyle a(int param0, byte param1) {
+        this.field_b = param0;
+        int var3 = -92 / ((param1 + 28) / 55);
+        return this;
+    }
+
+    public static void releaseStatics(int obfuscationGuard) {
+        int var1 = 72 % ((-33 - obfuscationGuard) / 60);
+        field_c = null;
+    }
+
+    WidgetStateStyle() {
+        this.field_d = null;
+        this.field_a = -2147483648;
+        this.field_g = -2;
+        this.field_j = null;
+        this.field_i = -2147483648;
+        this.field_f = false;
+        this.field_h = -2147483648;
+        this.field_b = -2;
+    }
+
+    static {
+        field_e = false;
+    }
+}

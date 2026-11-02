@@ -10,14 +10,14 @@ final class us {
         if (param0 <= 74) {
           return true;
         }
-        return oi.field_c.a((byte) 14);
+        return oi.field_c.pollMasterIndex((byte) 14);
     }
 
     final static boolean a(boolean param0) {
         if (param0) {
           return null != jl.field_b ? true : false;
         }
-        us.a(125);
+        us.releaseStatics(125);
         return null != jl.field_b ? true : false;
     }
 
@@ -51,8 +51,8 @@ final class us {
         return stackIn_12_0;
     }
 
-    public static void a(int param0) {
-        if (param0 >= -60) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -60) {
           return;
         }
         field_b = null;

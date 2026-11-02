@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static fl field_b;
+    static WidgetTheme field_b;
     static String field_a;
     static String field_m;
     static int[][] field_e;
@@ -236,7 +236,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              af.a(var8_ref, obfuscationGuard - 118, (String) null);
+              LoginCredentials.a(var8_ref, obfuscationGuard - 118, (String) null);
               this.reportGameError("crash", (byte) -62);
             }
             return;
@@ -310,7 +310,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.errorReported = true;
             System.out.println("error_game_" + errorCode);
             try {
-              lj.a("loggedout", (byte) -121, CombatEvent.d((byte) -123));
+              AppletScriptBridge.callScriptFunction("loggedout", (byte) -121, CombatEvent.d((byte) -123));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -438,7 +438,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     MaskedTextEntryPainter.redrawRequested = false;
                     var3_int = 1;
                   }
-                  NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
+                  NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
                 }
               }
             } else {
@@ -451,7 +451,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   MaskedTextEntryPainter.redrawRequested = false;
                   var3_int = 1;
                 }
-                NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
+                NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
               }
             }
           } else {
@@ -460,7 +460,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               MaskedTextEntryPainter.redrawRequested = false;
               var3_int = 1;
             }
-            NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
+            NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
           }
           if (param0) {
             field_m = (String) null;
@@ -641,7 +641,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              af.a((Throwable) (var1), -102, (String) null);
+              LoginCredentials.a((Throwable) (var1), -102, (String) null);
               this.reportGameError("crash", (byte) -121);
             }
             this.shutdownShell(true, -1251);

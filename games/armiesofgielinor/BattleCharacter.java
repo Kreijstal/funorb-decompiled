@@ -592,7 +592,7 @@ final class BattleCharacter {
                 } else {
                   stackIn_49_6 = -1;
                 }
-                fh.$cfr$intArgs$a$e0bc7fdb2979(stackIn_42_0, stackIn_43_1, stackIn_45_2, stackIn_45_3, stackIn_46_4, stackIn_48_5 * stackIn_49_6, this.destinationY);
+                GrowableIntArray.$cfr$intArgs$a$e0bc7fdb2979(stackIn_42_0, stackIn_43_1, stackIn_45_2, stackIn_45_3, stackIn_46_4, stackIn_48_5 * stackIn_49_6, this.destinationY);
               }
               var12++;
             }
@@ -610,14 +610,14 @@ final class BattleCharacter {
         return stackIn_4_0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         runeCapsByOption = null;
         field_v = null;
         pointerInputHandler = null;
         field_c = null;
         field_g = null;
         field_h = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_g = (java.awt.Font) null;
         }
     }
@@ -739,7 +739,7 @@ final class BattleCharacter {
 
     private final void a(int param0) {
         int var2 = this.field_x.frameId >> 16;
-        AnimationFrameSet var3 = we.a(var2, true);
+        AnimationFrameSet var3 = ArchiveLoadStep.a(var2, true);
         MusicPatch.a(var3, (byte) -34);
         if (param0 != -313055120) {
           return;
@@ -833,7 +833,7 @@ final class BattleCharacter {
         var7 = AttackEvent.nextBoundedInt(false, ActionRequest.unitModels[this.modelIndex].length, li.field_n);
         this.model = (ModelMesh) (ActionRequest.unitModels[this.modelIndex][var7]);
         if (null == this.model) {
-          af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
+          LoginCredentials.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
         }
         this.field_n = DiskCacheRequest.unitProjectionVariants[this.modelIndex];
         this.destinationX = param2 + param5;

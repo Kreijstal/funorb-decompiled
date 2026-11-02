@@ -39,10 +39,10 @@ final class NodeDeque {
         return null;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         unlockLevelCosts = null;
         field_b = null;
-        if (param0 != 250) {
+        if (obfuscationGuard != 250) {
           field_b = (int[]) null;
         }
     }

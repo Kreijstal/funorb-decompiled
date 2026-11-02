@@ -17,10 +17,10 @@ final class MatchingTextValidator extends TextFieldValidator {
         gl.a(124, 4);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_l = null;
         field_j = null;
-        int var1 = -96 / ((param0 + 9) / 42);
+        int var1 = -96 / ((obfuscationGuard + 9) / 42);
     }
 
     final ValidationState validateText(int obfuscationGuard, String text) {

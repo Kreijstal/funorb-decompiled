@@ -28,7 +28,7 @@ final class DeathEvent extends GameEvent {
             var5.writeByte(1, param0.field_l.length);
             var5.writeBytes(param0.field_l, 0, param0.field_l.length, 86);
           }
-          var5.b((byte) -39, var4);
+          var5.appendChecksum((byte) -39, var4);
           var5.position = var5.position - 4;
           param0.field_o = var5.readInt(param2 ^ 25523);
           var5.writeByteLengthPrefix(-var4 + var5.position, 5930);
@@ -51,9 +51,9 @@ final class DeathEvent extends GameEvent {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_A = null;
-        if (param0 >= -80) {
+        if (obfuscationGuard >= -80) {
           field_A = (RgbSprite) null;
         }
     }

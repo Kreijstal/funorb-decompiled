@@ -39,8 +39,8 @@ final class th {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 < 32) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard < 32) {
           return;
         }
         field_b = null;

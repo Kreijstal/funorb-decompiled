@@ -13,10 +13,10 @@ final class CampaignDefinition extends IntrusiveNode {
     CampaignParticipant[] participants;
     String name;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_t = null;
-        if (param0 != 9) {
-          CampaignDefinition.a((byte) 115);
+        if (obfuscationGuard != 9) {
+          CampaignDefinition.releaseStatics((byte) 115);
           field_m = null;
           return;
         }

@@ -972,7 +972,7 @@ final class SoftwareRaster {
         return false;
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         pixels = null;
         scanlineMaskStarts = null;
         scanlineMaskWidths = null;

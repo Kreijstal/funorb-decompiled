@@ -263,9 +263,9 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         requestedAccountName = null;
-        if (param0 >= -45) {
+        if (obfuscationGuard >= -45) {
           field_k = (int[]) null;
         }
         field_l = null;

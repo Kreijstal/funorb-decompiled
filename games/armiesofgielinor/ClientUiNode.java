@@ -57,11 +57,11 @@ class ClientUiNode extends DualLinkedNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_v = null;
         field_u = null;
         field_x = null;
-        if (param0 != 31343) {
+        if (obfuscationGuard != 31343) {
           return;
         }
         field_y = null;

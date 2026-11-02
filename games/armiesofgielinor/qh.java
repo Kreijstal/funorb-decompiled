@@ -11,8 +11,8 @@ final class qh {
           if (ModalDialogHost.field_J > 0) {
             bn.a(param0, param9, 117, param5);
           }
-          pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-          pi.field_N.horizontalAlignment = 1;
+          MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+          MarkerSliderWidget.field_N.horizontalAlignment = 1;
           if (param7 > ~PreparedAction.field_r) {
             j.a(1, param9, param0, param5);
           }
@@ -38,8 +38,8 @@ final class qh {
               if (ModalDialogHost.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
-              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-              pi.field_N.horizontalAlignment = 1;
+              MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+              MarkerSliderWidget.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -62,8 +62,8 @@ final class qh {
               if (ModalDialogHost.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
-              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-              pi.field_N.horizontalAlignment = 1;
+              MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+              MarkerSliderWidget.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -86,8 +86,8 @@ final class qh {
             KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
             return;
           }
-          if (so.field_b.field_g == SoftwareRaster.height &&
-            SoftwareRaster.width == so.field_b.field_a) {
+          if (so.field_b.height == SoftwareRaster.height &&
+            SoftwareRaster.width == so.field_b.width) {
             if (null != ToggleWidget.currentRoom) {
               ClientUiComponent.a(45, false);
               if (param9) {
@@ -99,8 +99,8 @@ final class qh {
               if (ModalDialogHost.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
-              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-              pi.field_N.horizontalAlignment = 1;
+              MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+              MarkerSliderWidget.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -134,8 +134,8 @@ final class qh {
             if (ModalDialogHost.field_J > 0) {
               bn.a(param0, param9, 117, param5);
             }
-            pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-            pi.field_N.horizontalAlignment = 1;
+            MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+            MarkerSliderWidget.field_N.horizontalAlignment = 1;
             if (param7 > ~PreparedAction.field_r) {
               j.a(1, param9, param0, param5);
             }
@@ -157,8 +157,8 @@ final class qh {
             ClientUiComponent.c(param9, -120);
             if (ModalDialogHost.field_J > 0) {
               bn.a(param0, param9, 117, param5);
-              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-              pi.field_N.horizontalAlignment = 1;
+              MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+              MarkerSliderWidget.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -176,8 +176,8 @@ final class qh {
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
-              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
-              pi.field_N.horizontalAlignment = 1;
+              MarkerSliderWidget.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
+              MarkerSliderWidget.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }

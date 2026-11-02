@@ -121,12 +121,12 @@ final class SocketResourceClient extends ResourceProtocolClient {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_s = null;
         field_v = null;
         themeSpriteArchive = null;
         field_x = null;
-        if (param0 != -4096) {
+        if (obfuscationGuard != -4096) {
           field_w = (String) null;
         }
         field_w = null;
@@ -381,7 +381,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           try {
             this.outgoingRecord.position = 0;
             this.outgoingRecord.writeByte(1, 6);
-            this.outgoingRecord.a(3, (byte) 58);
+            this.outgoingRecord.writeMedium(3, (byte) 58);
             this.outgoingRecord.writeShort(true, 0);
             this.socket.write(this.outgoingRecord.payload, (byte) 20, 0, this.outgoingRecord.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -481,7 +481,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           vg.field_q[0].normalizeCanvas();
           vg.field_q[1].normalizeCanvas();
           DeployEvent.field_z = param2;
-          ac.field_m = vg.field_q[0].pixelHeight;
+          ManaStarParticle.field_m = vg.field_q[0].pixelHeight;
           if (param0 < 118) {
             field_x = (String) null;
           }

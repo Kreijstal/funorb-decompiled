@@ -638,9 +638,9 @@ final class MovementPlanner {
         return var2;
     }
 
-    public static void b(int param0) {
-        if (param0 >= -30) {
-          MovementPlanner.b(51);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -30) {
+          MovementPlanner.releaseStatics(51);
         }
         field_s = null;
         field_c = null;
@@ -961,7 +961,7 @@ final class MovementPlanner {
             battlefield.tiles[tileIndex] = null;
           }
           if (obfuscationGuard <= 40) {
-            MovementPlanner.b(69);
+            MovementPlanner.releaseStatics(69);
           }
           random = new Random((long)battlefield.randomSeed);
           centerPattern = 3;

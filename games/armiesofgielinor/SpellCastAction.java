@@ -125,7 +125,7 @@ final class SpellCastAction extends PreparedAction {
           try {
             param0.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
           } catch (java.net.MalformedURLException malformedURLException) {
-            af.a((Throwable) null, 107, "MGR1: " + param2);
+            LoginCredentials.a((Throwable) null, 107, "MGR1: " + param2);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

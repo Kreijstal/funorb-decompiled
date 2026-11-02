@@ -7,9 +7,9 @@ final class ConsoleEvaluationException extends Exception {
     static ClientUiComponent field_c;
     static MusicTrack[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
-        int var1 = -112 / ((param0 - 70) / 54);
+        int var1 = -112 / ((obfuscationGuard - 70) / 54);
         field_c = null;
         field_a = null;
     }
@@ -63,7 +63,7 @@ final class ConsoleEvaluationException extends Exception {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          if (kp.decodeSpriteSheetFromArchive(param0, param2, param1, param3)) {
+          if (MarkerSliderPainter.decodeSpriteSheetFromArchive(param0, param2, param1, param3)) {
             stackIn_7_0 = ParasiteEvent.buildDecodedRgbSprites(122);
             return stackIn_7_0;
           }

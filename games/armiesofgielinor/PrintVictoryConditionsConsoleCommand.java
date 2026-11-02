@@ -45,14 +45,14 @@ final class PrintVictoryConditionsConsoleCommand extends ConsoleCommand {
         super(commandName, parameterTypes, description);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_K = null;
         field_E = null;
         field_H = null;
         field_F = null;
         animationRandom = null;
-        if (param0 != -2260) {
-          PrintVictoryConditionsConsoleCommand.g(12);
+        if (obfuscationGuard != -2260) {
+          PrintVictoryConditionsConsoleCommand.releaseStatics(12);
         }
     }
 

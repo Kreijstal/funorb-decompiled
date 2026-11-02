@@ -195,8 +195,8 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         }
     }
 
-    public static void n(int param0) {
-        if (param0 == 12213) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard == 12213) {
           field_X = null;
           field_Y = null;
           field_Z = null;
@@ -204,7 +204,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           field_ab = null;
           return;
         }
-        FullscreenStatusDialog.n(4);
+        FullscreenStatusDialog.releaseStatics(4);
         field_X = null;
         field_Y = null;
         field_Z = null;
@@ -214,7 +214,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
 
     private final void closeStatusNotice(byte obfuscationGuard) {
         if (obfuscationGuard != 60) {
-          FullscreenStatusDialog.n(-98);
+          FullscreenStatusDialog.releaseStatics(-98);
           if (!this.open) {
             return;
           }

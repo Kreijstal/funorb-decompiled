@@ -258,8 +258,8 @@ final class StateChangeEvent extends GameEvent {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 != 35) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != 35) {
           return;
         }
         field_A = null;
@@ -324,7 +324,7 @@ final class StateChangeEvent extends GameEvent {
             battlefield.e(14, this.tileX, this.playerId, 1 + this.tileY);
             battlefield.e(obfuscationGuard + 26675, this.tileX, this.playerId, -1 + this.tileY);
           }
-          fl.recomputeClientStateChecksum(battlefield, -111);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

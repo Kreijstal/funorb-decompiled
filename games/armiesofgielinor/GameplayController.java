@@ -197,7 +197,7 @@ final class GameplayController {
             if (var9 != 0) {
               param0 -= 18;
             }
-            var17 = b.calculateMissionScore(var5.scoreTurnTarget, var5.scoreDamageTarget, var16, (byte) 25, var15);
+            var17 = SpriteSheetDecoder.calculateMissionScore(var5.scoreTurnTarget, var5.scoreDamageTarget, var16, (byte) 25, var15);
             SoftwareRaster.e(db.a(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
             GradientUiRenderer.drawCenteredTextBackdrop(qf.field_g, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
             GradientUiRenderer.drawCenteredGradientText(qf.field_g, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
@@ -210,8 +210,8 @@ final class GameplayController {
               var18 = var5.createRewardPreview(-1);
               StandardContentDialog.field_ob.drawTransparent(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
               var18.icon.drawTransparent(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
-              km.field_h[2].drawTransparent(db.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
-              var19 = 10 + km.field_h[2].canvasWidth + (var10 + 15);
+              ProjectileEffect.field_h[2].drawTransparent(db.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
+              var19 = 10 + ProjectileEffect.field_h[2].canvasWidth + (var10 + 15);
               rs.field_n.drawParagraph(var18.title, db.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
             }
           }
@@ -341,7 +341,7 @@ final class GameplayController {
                 }
               }
             }
-            so.field_b.a(5605);
+            so.field_b.bindRasterTarget(5605);
             break;
           }
           if (param4 != -126) {
@@ -376,7 +376,7 @@ final class GameplayController {
             if (this.battlefield.currentPlayer < 0) {
               stackIn_10_0 = "";
             } else {
-              stackIn_10_0 = BitmapFont.truncateWithEllipsis(nr.field_e, this.battlefield.playerNames[this.battlefield.currentPlayer], 240);
+              stackIn_10_0 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, this.battlefield.playerNames[this.battlefield.currentPlayer], 240);
             }
             var2 = stackIn_10_0;
             if (this.battlefield.currentPlayer == this.controlledPlayerId) {
@@ -391,7 +391,7 @@ final class GameplayController {
           if (decompiledFrameRemainder0) {
             var2_int = this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, param0 - 25168);
             if (this.battlefield.currentPlayer >= 0) {
-              stackIn_19_0 = BitmapFont.truncateWithEllipsis(nr.field_e, this.battlefield.teams[var2_int].getTeamName(param0 ^ 25164), 240);
+              stackIn_19_0 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, this.battlefield.teams[var2_int].getTeamName(param0 ^ 25164), 240);
             } else {
               stackIn_19_0 = "";
             }
@@ -593,7 +593,7 @@ final class GameplayController {
           while (initialUnits.length > initialUnitIndex) {
             initialUnitType = initialUnits[initialUnitIndex];
             initialUnlockGroup = jv.getUnitUnlockGroup(false, initialUnitType);
-            initialUnlockOrdinal = b.getUnitUnlockOrdinal(false, initialUnitType);
+            initialUnlockOrdinal = SpriteSheetDecoder.getUnitUnlockOrdinal(false, initialUnitType);
             unitUnlockMasks[initialUnlockGroup] = AccountRegistrationDialog.bitwiseOr(unitUnlockMasks[initialUnlockGroup], 1 << initialUnlockOrdinal);
             initialUnitIndex++;
             if (var15 == 0) {
@@ -617,7 +617,7 @@ final class GameplayController {
                   while (rewardUnits.length > rewardUnitIndex) {
                     rewardUnitType = rewardUnits[rewardUnitIndex];
                     rewardUnlockGroup = jv.getUnitUnlockGroup(false, rewardUnitType);
-                    rewardUnlockOrdinal = b.getUnitUnlockOrdinal(false, rewardUnitType);
+                    rewardUnlockOrdinal = SpriteSheetDecoder.getUnitUnlockOrdinal(false, rewardUnitType);
                     unitUnlockMasks[rewardUnlockGroup] = AccountRegistrationDialog.bitwiseOr(unitUnlockMasks[rewardUnlockGroup], 1 << rewardUnlockOrdinal);
                     rewardUnitIndex++;
                     if (var15 != 0) {
@@ -1550,7 +1550,7 @@ final class GameplayController {
               stackIn_31_0 = (this.battlefield.unitLossCounts[l.activeCampaignMission.playerSlot] <= 0) ? 0 : 1;
               hasLostUnit = stackIn_31_0;
               damageTaken = this.battlefield.damageTakenByPlayer[l.activeCampaignMission.playerSlot];
-              candidateScore = b.calculateMissionScore(l.activeCampaignMission.scoreTurnTarget, l.activeCampaignMission.scoreDamageTarget, damageTaken, (byte) 25, turnsTaken);
+              candidateScore = SpriteSheetDecoder.calculateMissionScore(l.activeCampaignMission.scoreTurnTarget, l.activeCampaignMission.scoreDamageTarget, damageTaken, (byte) 25, turnsTaken);
               currentDamageThenSpecialUnitCount = damageTaken;
               currentTurns = turnsTaken;
               previousDamage = 996394 ^ this.encodedDamageCheckpoint;
@@ -1568,19 +1568,19 @@ final class GameplayController {
                 || mutationVariant == 3
                 ) ? mutationVariant : -1) {
                 case 0:
-                  kw.campaignPacketWord0 = kw.campaignPacketWord0 - turnDelta;
+                  ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - turnDelta;
                   ii.campaignPacketWord1 = ii.campaignPacketWord1 - damageDelta;
                   if (var15 == 0) {
                     break;
                   }
                 case 1:
                   ii.campaignPacketWord1 = ii.campaignPacketWord1 + turnDelta;
-                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + damageDelta;
+                  ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + damageDelta;
                   if (var15 == 0) {
                     break;
                   }
                 case 2:
-                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + (-turnDelta + damageDelta);
+                  ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + (-turnDelta + damageDelta);
                   if (var15 == 0) {
                     break;
                   }
@@ -2223,8 +2223,8 @@ final class GameplayController {
         int var9Lifetime5Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = so.field_b.field_a;
-          var3 = so.field_b.field_g;
+          var2_int = so.field_b.width;
+          var3 = so.field_b.height;
           if (this.battlefield.field_X) {
             this.field_j = 0;
           }
@@ -2274,12 +2274,12 @@ final class GameplayController {
                 }
                 var8_ref_String = stackIn_60_0;
               }
-              var9 = nr.field_e.textWidth(var8_ref_String) / 2;
+              var9 = NineSliceFrame.field_e.textWidth(var8_ref_String) / 2;
               var10 = -40;
               var11 = 0;
               var12 = 0;
               if (this.field_lb) {
-                var11 = nr.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
+                var11 = NineSliceFrame.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var12 = -65 - var11 + (rs.field_k - var9);
               }
               if (this.f(128, db.a(true, var12)) >= MatchConditionEntry.a(se.field_a, (byte) 94)) {
@@ -2785,8 +2785,8 @@ final class GameplayController {
           GradientUiRenderer.drawHollowGradientFrame(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.battlefield.rankedParticipants[this.field_Rb];
           var5 = this.battlefield.playerNames[var4_int];
-          var5 = BitmapFont.truncateWithEllipsis(nr.field_e, var5, 400);
-          if (pc.field_j == null) {
+          var5 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, var5, 400);
+          if (ProxySocketFactory.field_j == null) {
             var6 = 0;
             if (this.field_lb &&
               this.battlefield.field_G != null &&
@@ -2800,8 +2800,8 @@ final class GameplayController {
             if (var9 < 192) {
               var9 = 192;
             }
-            pc.field_j = new RgbSprite(217, var9);
-            pc.field_j.b();
+            ProxySocketFactory.field_j = new RgbSprite(217, var9);
+            ProxySocketFactory.field_j.b();
             SoftwareRaster.f(0, 0, SoftwareRaster.width, SoftwareRaster.height, 1776150);
             var10 = 0;
             while (var10 < 16) {
@@ -2815,15 +2815,15 @@ final class GameplayController {
               var11 = stackIn_28_0;
               if (var11 != 0) {
                 var8 += 19;
-                DateInputWidget.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
-                var12 = (DateInputWidget.field_E.textWidth(du.field_g[var10]) >> 1) + 3;
+                DateInputWidget.field_E.drawCentered(SocketFactory.field_g[var10], 109, var8, 16777215, -1);
+                var12 = (DateInputWidget.field_E.textWidth(SocketFactory.field_g[var10]) >> 1) + 3;
                 AttackEvent.field_O.drawPixels(-AttackEvent.field_O.pixelWidth + (109 - var12), -10 + var8);
                 AttackEvent.field_O.drawPixels(109 + var12, var8 - 10);
               }
               var10++;
             }
             if (decompiledFrameCompleted0) {
-              so.field_b.a(param2 + 35212);
+              so.field_b.bindRasterTarget(param2 + 35212);
             }
           }
           if (decompiledFrameCompleted0) {
@@ -2834,9 +2834,9 @@ final class GameplayController {
             this.startEquipmentTutorial((byte) 125);
           }
           SoftwareRaster.setClip(db.a(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), db.a(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
-          var6Lifetime1 = -(NanoGameClock.field_n / 3) % pc.field_j.pixelHeight;
-          pc.field_j.drawPixels(db.a(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
-          pc.field_j.drawPixels(db.a(true, 374), MatchConditionEntry.a(pc.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
+          var6Lifetime1 = -(NanoGameClock.field_n / 3) % ProxySocketFactory.field_j.pixelHeight;
+          ProxySocketFactory.field_j.drawPixels(db.a(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
+          ProxySocketFactory.field_j.drawPixels(db.a(true, 374), MatchConditionEntry.a(ProxySocketFactory.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
           SoftwareRaster.a();
           if (!this.field_l) {
             stackIn_42_0 = ConsoleValue.field_b;
@@ -3133,7 +3133,7 @@ final class GameplayController {
                 return;
               }
             }
-            this.a(false, ao.field_x, (byte) -122);
+            this.a(false, StatefulWidgetPainter.field_x, (byte) -122);
             return;
           }
           if (17 == this.selectedUnit.unitType &&
@@ -3523,7 +3523,7 @@ final class GameplayController {
         int var4 = 0;
         Unit var4_ref_jd = null;
         SummonEvent var4_ref_mb = null;
-        ac var4_ref_ac = null;
+        ManaStarParticle var4_ref_ac = null;
         RadialSummonItem var4_ref_jr = null;
         int var5 = 0;
         Unit var6_ref_jd = null;
@@ -3669,7 +3669,7 @@ final class GameplayController {
               (decompiledFrameRemainder3 = (this.field_V))) {
               this.field_V = false;
               this.field_j = 0;
-              mu.field_a = new cg();
+              mu.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               return;
             }
@@ -3695,7 +3695,7 @@ final class GameplayController {
                   if (var10 != 0) {
                     this.field_Sb = this.field_Sb - 1;
                     if (this.field_Sb == 0) {
-                      mu.field_a = new cg();
+                      mu.field_a = new ScreenWipeTransition();
                       ValidatedTextWidget.field_Z = false;
                       GameClock.field_j = 0;
                     }
@@ -3705,7 +3705,7 @@ final class GameplayController {
             } else {
               this.field_Sb = this.field_Sb - 1;
               if (this.field_Sb == 0) {
-                mu.field_a = new cg();
+                mu.field_a = new ScreenWipeTransition();
                 ValidatedTextWidget.field_Z = false;
                 GameClock.field_j = 0;
               }
@@ -3750,7 +3750,7 @@ final class GameplayController {
                       while (((ManaEvent) (var3)).manaPoints > 0) {
                         var8 = -(int)(Math.sin((double)var4 * 3.141592653589793 * 2.0 / (double)var7) * 40.0);
                         var9 = -(int)(40.0 * Math.cos(3.141592653589793 * (double)var4 * 2.0 / (double)var7));
-                        this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(72 + var8, 72 + var9, var8, var9, this.controlledPlayerId, var5 - var4 + var6 >> 1, 1, 3)));
+                        this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(72 + var8, 72 + var9, var8, var9, this.controlledPlayerId, var5 - var4 + var6 >> 1, 1, 3)));
                         ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                         var4++;
                         if (var10 != 0) {
@@ -3771,7 +3771,7 @@ final class GameplayController {
                       if (4 != ((ManaEvent) (var3)).manaTypeCode) {
                         scanLoop3: while (true) {
                           if (((ManaEvent) (var3)).manaPoints > 0) {
-                            this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(20, -120 + this.f(128, 0) + ((ManaEvent) (var3)).manaTypeCode * 25, 30, 0, this.controlledPlayerId, 10 * ((ManaEvent) (var3)).manaTypeCode + (var4 >> 2), 1, ((ManaEvent) (var3)).manaTypeCode)));
+                            this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(20, -120 + this.f(128, 0) + ((ManaEvent) (var3)).manaTypeCode * 25, 30, 0, this.controlledPlayerId, 10 * ((ManaEvent) (var3)).manaTypeCode + (var4 >> 2), 1, ((ManaEvent) (var3)).manaTypeCode)));
                             ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                             var4++;
                             if (var10 != 0) {
@@ -3791,7 +3791,7 @@ final class GameplayController {
                           if (((ManaEvent) (var3)).manaPoints <= 0) {
                             break;
                           }
-                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(AttackEvent.nextBoundedInt(false, 30, vv.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, vv.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).manaTypeCode)));
+                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(AttackEvent.nextBoundedInt(false, 30, vv.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, vv.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).manaTypeCode)));
                           var4++;
                           ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                           if (var10 != 0) {
@@ -3848,11 +3848,11 @@ final class GameplayController {
                 }
               }
             }
-            var4_ref_ac = (ac) (this.field_Ub.first((byte) 111));
+            var4_ref_ac = (ManaStarParticle) (this.field_Ub.first((byte) 111));
             scanLoop4: while (true) {
               if (var4_ref_ac != null) {
                 var4_ref_ac.b(this.battlefield, 100);
-                var4_ref_ac = (ac) (this.field_Ub.next((byte) 123));
+                var4_ref_ac = (ManaStarParticle) (this.field_Ub.next((byte) 123));
                 if (var10 != 0) {
                   break scanLoop4;
                 }
@@ -3949,7 +3949,7 @@ final class GameplayController {
               this.field_Sb = this.field_Sb - 1;
               if (this.field_Sb == 0 &&
                 null == this.battlefield.campaignMission) {
-                mu.field_a = new cg();
+                mu.field_a = new ScreenWipeTransition();
                 GameClock.field_j = 0;
               }
             }
@@ -4022,25 +4022,25 @@ final class GameplayController {
             this.field_g = this.field_g - 5;
           }
           if (this.field_lb) {
-            kp.field_k = bn.field_d;
+            MarkerSliderPainter.field_k = bn.field_d;
             if (!ValidatedTextWidget.field_Z) {
               boolean decompiledSharedTail0 = !(s.field_d > 1);
               if (!decompiledSharedTail0) {
-                kp.field_k = EmailCheckResult.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(s.field_d)});
+                MarkerSliderPainter.field_k = EmailCheckResult.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(s.field_d)});
                 decompiledSharedTail0 = (var10 != 0);
               }
               if (decompiledSharedTail0) {
                 if (1 == s.field_d) {
-                  kp.field_k = CacheEntry.field_y;
+                  MarkerSliderPainter.field_k = CacheEntry.field_y;
                   if (var10 != 0) {
-                    kp.field_k = StandardContentDialog.field_pb;
+                    MarkerSliderPainter.field_k = StandardContentDialog.field_pb;
                   }
                 } else {
-                  kp.field_k = StandardContentDialog.field_pb;
+                  MarkerSliderPainter.field_k = StandardContentDialog.field_pb;
                 }
               }
             }
-            DateInputWidget.field_E.textWidth(kp.field_k);
+            DateInputWidget.field_E.textWidth(MarkerSliderPainter.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4149,7 +4149,7 @@ final class GameplayController {
             stackIn_38_0 = 6684672;
             stackIn_38_1 = -116;
             stackIn_39_2 = (var3 != 0) && (var2_int != 0);
-            ip.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
+            WidgetStateStyle.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
             if (this.field_jc &&
               var2_int != 0) {
               TrianglePulse.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
@@ -4298,7 +4298,7 @@ final class GameplayController {
           } else {
             DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
           }
-          so.field_b.a(5605);
+          so.field_b.bindRasterTarget(5605);
           SpellConfirmationDialog.field_j.g(1);
           SpellConfirmationDialog.field_j.drawTransparent(-75 + var5_int, -75 + var6);
           if (var8 == 0 &&
@@ -4945,11 +4945,11 @@ final class GameplayController {
                 }
               }
               if (var4 != 0) {
-                km.field_h[0].drawWithBrightness(-23 + var6, -23 + var7, 128);
+                ProjectileEffect.field_h[0].drawWithBrightness(-23 + var6, -23 + var7, 128);
               } else if (~var2_int != ~this.field_nc) {
-                km.field_h[0].drawTransparent(-23 + var6, var7 - 23);
+                ProjectileEffect.field_h[0].drawTransparent(-23 + var6, var7 - 23);
               } else {
-                km.field_h[1].drawTransparent(var6 - 23, var7 - 23);
+                ProjectileEffect.field_h[1].drawTransparent(var6 - 23, var7 - 23);
               }
               if (~var2_int == ~this.field_Jb) {
                 TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
@@ -4968,7 +4968,7 @@ final class GameplayController {
             return;
           }
           BattleCharacter.field_h[170].drawTransparent(111, -20 + (-95 + this.o(125)));
-          km.field_h[1].drawTransparent(107, -118 + this.o(param0 + 132));
+          ProjectileEffect.field_h[1].drawTransparent(107, -118 + this.o(param0 + 132));
           if (this.field_Jb == 255) {
             TrianglePulse.field_d.d(95, -95 + this.o(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
           }
@@ -5016,7 +5016,7 @@ final class GameplayController {
           this.field_fb = 0;
           if (null != this.selectedUnit) {
             var4 = this.selectedUnit.q((byte) 117);
-            this.field_mc = (nr.field_e.textWidth(var4) >> 1) - 210;
+            this.field_mc = (NineSliceFrame.field_e.textWidth(var4) >> 1) - 210;
             if (this.field_mc < 0) {
               this.field_mc = 0;
             }
@@ -5088,8 +5088,8 @@ final class GameplayController {
           GradientUiRenderer.drawHollowGradientFrame(param0, param2, 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.field_Rb;
           var5 = this.battlefield.playerNames[var4_int];
-          var5 = BitmapFont.truncateWithEllipsis(nr.field_e, var5, 400);
-          if (null == pc.field_j) {
+          var5 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, var5, 400);
+          if (null == ProxySocketFactory.field_j) {
             var6 = 0;
             if (this.field_lb &&
               this.battlefield.field_G != null &&
@@ -5103,8 +5103,8 @@ final class GameplayController {
             if (var9 < 192) {
               var9 = 192;
             }
-            pc.field_j = new RgbSprite(217, var9);
-            pc.field_j.b();
+            ProxySocketFactory.field_j = new RgbSprite(217, var9);
+            ProxySocketFactory.field_j.b();
             SoftwareRaster.f(0, 0, SoftwareRaster.width, SoftwareRaster.height, 1776150);
             var10 = 0;
             while (var10 < 16) {
@@ -5117,22 +5117,22 @@ final class GameplayController {
               var11 = stackIn_26_0;
               if (var11 != 0) {
                 var8 += 19;
-                DateInputWidget.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
-                var12 = 3 + (DateInputWidget.field_E.textWidth(du.field_g[var10]) >> 1);
+                DateInputWidget.field_E.drawCentered(SocketFactory.field_g[var10], 109, var8, 16777215, -1);
+                var12 = 3 + (DateInputWidget.field_E.textWidth(SocketFactory.field_g[var10]) >> 1);
                 AttackEvent.field_O.drawPixels(109 - var12 - AttackEvent.field_O.pixelWidth, var8 - 10);
                 AttackEvent.field_O.drawPixels(109 + var12, -10 + var8);
               }
               var10++;
             }
             if (decompiledFrameCompleted0) {
-              so.field_b.a(param1 + 5602);
+              so.field_b.bindRasterTarget(param1 + 5602);
             }
           }
           if (decompiledFrameCompleted0) {
             SoftwareRaster.setClip(4 + param0, param2 + 33, param0 + 4 + 217, param2 + 33 + 192);
-            var6Lifetime1 = -(NanoGameClock.field_n / param1) % pc.field_j.pixelHeight;
-            pc.field_j.drawPixels(param0 + 3, var6Lifetime1 + (param2 + 33));
-            pc.field_j.drawPixels(param0 + 3, pc.field_j.pixelHeight + (33 + param2) + var6Lifetime1);
+            var6Lifetime1 = -(NanoGameClock.field_n / param1) % ProxySocketFactory.field_j.pixelHeight;
+            ProxySocketFactory.field_j.drawPixels(param0 + 3, var6Lifetime1 + (param2 + 33));
+            ProxySocketFactory.field_j.drawPixels(param0 + 3, ProxySocketFactory.field_j.pixelHeight + (33 + param2) + var6Lifetime1);
             SoftwareRaster.a();
             stackIn_33_0 = this.field_l ? 1 : 0;
           }
@@ -5580,7 +5580,7 @@ final class GameplayController {
           if (50 == rs.keyCode &&
             this.field_lb &&
             this.field_E) {
-            ug.a(0, this.battlefield, true);
+            ProxyAuthenticationRequiredException.a(0, this.battlefield, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5599,8 +5599,8 @@ final class GameplayController {
         int var5 = 0;
         int var6 = 0;
         try {
-          var3_int = so.field_b.field_a;
-          var4 = so.field_b.field_g;
+          var3_int = so.field_b.width;
+          var4 = so.field_b.height;
           var5 = var3_int * ((param0 - 50) * (param0 - 50)) * (param1 + param0) / 200 / rs.field_k;
           var6 = (int)(Math.sin(3.141592653589793 * (double)param0 / 100.0) * 128.0);
           SoftwareRaster.b(0, 0, var3_int, var4, 0, var6);
@@ -5626,14 +5626,14 @@ final class GameplayController {
           boolean decompiledFrameCompleted0 = true;
           if (!this.B(34)) {
             var2_int = 0;
-            while (so.field_b.field_a > var2_int) {
+            while (so.field_b.width > var2_int) {
               stackIn_17_0 = 0;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               var3 = stackIn_17_0;
-              while (var3 < so.field_b.field_g) {
+              while (var3 < so.field_b.height) {
                 MatchConditionEntry.field_n.drawOpaque(var2_int, var3);
                 var3 = var3 + MatchConditionEntry.field_n.canvasHeight;
               }
@@ -5739,7 +5739,7 @@ final class GameplayController {
             return stackIn_3_0;
           }
           var5_int = this.g(param0, -50);
-          var6 = so.field_b.field_a;
+          var6 = so.field_b.width;
           GradientUiRenderer.drawCenteredGradientText(param1, var6 / 2 + var5_int, 170, ConsoleValue.field_b, false);
           var7 = this.battlefield.h(this.battlefield.currentPlayer, 0);
           if (param3 != 64) {
@@ -6159,7 +6159,7 @@ final class GameplayController {
                       this.battlefield.teamGame &&
                       TabbedPanel.a(-40 + this.o(125) + 14, 88, 14, false)) {
                       if (ChannelFadeTimeConsoleCommand.field_F) {
-                        stackIn_132_0 = or.field_e;
+                        stackIn_132_0 = DialWidgetPainter.field_e;
                       } else {
                         stackIn_132_0 = AccountRegistrationForm.field_E;
                       }
@@ -6194,7 +6194,7 @@ final class GameplayController {
                                 boolean decompiledFrameRemainder12 = true;
                                 if (stackIn_252_0 <= stackIn_252_1 ||
                                   this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1) != var7) {
-                                  var8 = so.field_b.field_a - 60 - (30 * this.battlefield.playerCount >> 2);
+                                  var8 = so.field_b.width - 60 - (30 * this.battlefield.playerCount >> 2);
                                   var9 = 0;
                                   while (var9 < this.battlefield.playerCount) {
                                     stackIn_182_0 = this.battlefield.getPlayerTeamIndex(var9, -1);
@@ -6210,8 +6210,8 @@ final class GameplayController {
                                   }
                                   var6 += 35;
                                   stackIn_182_0 = param0 ^ -89;
-                                  stackIn_182_1 = so.field_b.field_a - 120;
-                                  if (IterableDualNodeDeque.isPointerInBounds(stackIn_182_0, stackIn_182_1, so.field_b.field_a, var6, 30 + var6) &&
+                                  stackIn_182_1 = so.field_b.width - 120;
+                                  if (IterableDualNodeDeque.isPointerInBounds(stackIn_182_0, stackIn_182_1, so.field_b.width, var6, 30 + var6) &&
                                     this.battlefield.campaignMission == null) {
                                     var2 = this.battlefield.teams[var7].getTeamName(3);
                                     var2 = this.a((String) (var2), var7, -255069420);
@@ -6228,14 +6228,14 @@ final class GameplayController {
                                       stackIn_215_1 = ~this.battlefield.currentPlayer;
                                       if (stackIn_215_0 != stackIn_215_1) {
                                         if (var7 == this.battlefield.getPlayerTeamIndex(var8, -1)) {
-                                          if (IterableDualNodeDeque.isPointerInBounds(-33, so.field_b.field_a - 74, so.field_b.field_a - 58, var6, var6 + 30)) {
+                                          if (IterableDualNodeDeque.isPointerInBounds(-33, so.field_b.width - 74, so.field_b.width - 58, var6, var6 + 30)) {
                                             var3 = op.field_c[1][var8];
                                             var2 = this.battlefield.playerNames[var8];
                                           }
                                           var6 += 30;
                                         }
                                       } else {
-                                        if (IterableDualNodeDeque.isPointerInBounds(-33, -28 + (so.field_b.field_a - 60), -28 + so.field_b.field_a, var6, var6 + 60)) {
+                                        if (IterableDualNodeDeque.isPointerInBounds(-33, -28 + (so.field_b.width - 60), -28 + so.field_b.width, var6, var6 + 60)) {
                                           var2 = this.battlefield.playerNames[var8];
                                           var3 = op.field_c[1][var8];
                                         }
@@ -6248,8 +6248,8 @@ final class GameplayController {
                                   }
                                   var6 += 5;
                                   stackIn_215_0 = -33;
-                                  stackIn_215_1 = so.field_b.field_a - 120;
-                                  if (IterableDualNodeDeque.isPointerInBounds(stackIn_215_0, stackIn_215_1, so.field_b.field_a, var6, 30 + var6) &&
+                                  stackIn_215_1 = so.field_b.width - 120;
+                                  if (IterableDualNodeDeque.isPointerInBounds(stackIn_215_0, stackIn_215_1, so.field_b.width, var6, 30 + var6) &&
                                     this.battlefield.campaignMission == null) {
                                     var2 = this.battlefield.teams[var7].getTeamName(3);
                                     var2 = this.a((String) (var2), var7, -255069420);
@@ -6275,7 +6275,7 @@ final class GameplayController {
                                     break regionExit1;
                                   }
                                   if (stackIn_252_0 == stackIn_252_1) {
-                                    if (IterableDualNodeDeque.isPointerInBounds(-33, -64 + so.field_b.field_a, so.field_b.field_a, var6, var6 + 60)) {
+                                    if (IterableDualNodeDeque.isPointerInBounds(-33, -64 + so.field_b.width, so.field_b.width, var6, var6 + 60)) {
                                       var2 = this.battlefield.playerNames[var7];
                                       var2 = this.a((String) (var2), var7, -255069420);
                                       var4 = 1;
@@ -6284,7 +6284,7 @@ final class GameplayController {
                                     }
                                     var6 += 60;
                                   } else {
-                                    if (IterableDualNodeDeque.isPointerInBounds(-33, so.field_b.field_a - 50, so.field_b.field_a, var6, 30 + var6)) {
+                                    if (IterableDualNodeDeque.isPointerInBounds(-33, so.field_b.width - 50, so.field_b.width, var6, 30 + var6)) {
                                       var2 = this.battlefield.playerNames[var7];
                                       var2 = this.a((String) (var2), var7, -255069420);
                                       var3 = op.field_c[0][var7];
@@ -6446,7 +6446,7 @@ final class GameplayController {
                     var2 = EmailCheckResult.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 312, 342, 39, 79)) {
-                    var2 = fh.field_f[eb.bitCount((byte) -109, 3 & ~var13)];
+                    var2 = GrowableIntArray.field_f[eb.bitCount((byte) -109, 3 & ~var13)];
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 344, 378, 39, 79)) {
                     var16 = this.selectedUnit.unitType;
@@ -6497,7 +6497,7 @@ final class GameplayController {
                   var17 = WhirlpoolHasher.unitDefinitions[this.selectedUnit.unitType][12];
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 525, 555, 39, 79)) {
                     if (var17 == -1) {
-                      var2 = du.field_f;
+                      var2 = SocketFactory.field_f;
                       if (var20 != 0) {
                         var2 = DirectByteStorage.field_n[var17];
                       }
@@ -6507,7 +6507,7 @@ final class GameplayController {
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(param0 - 153, 387, 517, 39, 39 + var15 * 30)) {
                     if (var14 == 0) {
-                      var2 = fh.field_f[-1 + fh.field_f.length];
+                      var2 = GrowableIntArray.field_f[-1 + GrowableIntArray.field_f.length];
                     }
                     if (var14 != 0 ||
                       var20 != 0) {
@@ -6519,7 +6519,7 @@ final class GameplayController {
                           if (var20 == 0) {
                             if (stackIn_424_0 != stackIn_424_1) {
                               if (IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, -((3 & var16) * 30) + 487, 517 - (3 & var16) * 30, 39 + 30 * (var16 >> 2), 79 + 30 * (var16 >> 2))) {
-                                var2 = fh.field_f[var18 + 1];
+                                var2 = GrowableIntArray.field_f[var18 + 1];
                               }
                               var16++;
                             }
@@ -6624,7 +6624,7 @@ final class GameplayController {
                               break regionExit3;
                             }
                           }
-                          var2 = ao.field_x;
+                          var2 = StatefulWidgetPainter.field_x;
                         }
                         break regionExit3;
                       }
@@ -6893,7 +6893,7 @@ final class GameplayController {
               if (this.battlefield.currentPlayer > -1) {
                 var13_ref_int__ = this.battlefield.chosenGods[this.battlefield.currentPlayer];
                 var14 = 50;
-                var15 = so.field_b.field_a / 2;
+                var15 = so.field_b.width / 2;
                 var15 = var15 - var14 * (-1 + var13_ref_int__.length) / 2;
                 var16 = 0;
                 while (var13_ref_int__.length > var16) {
@@ -7189,13 +7189,13 @@ final class GameplayController {
                 if (!(6 <= var6)) {
                   var6 = var6 + (6 - var6);
                   if ((var20 != 0) &&
-                    (so.field_b.field_a - 20 < var8 + var6)) {
-                    var6 = -20 + (so.field_b.field_a - var8);
+                    (so.field_b.width - 20 < var8 + var6)) {
+                    var6 = -20 + (so.field_b.width - var8);
                   }
                 }
               } else {
-                if (so.field_b.field_a - 20 < var8 + var6) {
-                  var6 = -20 + (so.field_b.field_a - var8);
+                if (so.field_b.width - 20 < var8 + var6) {
+                  var6 = -20 + (so.field_b.width - var8);
                 }
               }
               if (10 + var7 > this.o(126)) {
@@ -7339,7 +7339,7 @@ final class GameplayController {
             if (this.field_Ab) {
               var5 = 0;
               while (var5 < var2.length) {
-                var6 = 50 * (-1 + var5) + so.field_b.field_a / 2;
+                var6 = 50 * (-1 + var5) + so.field_b.width / 2;
                 var7 = var4 - 30;
                 TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
                 var5++;
@@ -7351,7 +7351,7 @@ final class GameplayController {
             }
             if (decompiledFrameCompleted0) {
               var5 = 50;
-              var6 = so.field_b.field_a / 2;
+              var6 = so.field_b.width / 2;
               var6 = var6 - var5 * (-1 + var2.length) / 2;
             }
             var7Lifetime1 = 0;
@@ -7499,7 +7499,7 @@ final class GameplayController {
         String var4_ref_String = null;
         EventPresenter var4_ref_vb = null;
         int var4 = 0;
-        ac var4_ref_ac = null;
+        ManaStarParticle var4_ref_ac = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -7534,7 +7534,7 @@ final class GameplayController {
                 }
                 var4_ref_String = stackIn_25_0;
               }
-              var5 = nr.field_e.textWidth(var4_ref_String) / 2;
+              var5 = NineSliceFrame.field_e.textWidth(var4_ref_String) / 2;
               var6 = 0;
               var7 = 0;
               if (this.field_lb) {
@@ -7554,7 +7554,7 @@ final class GameplayController {
                   stackIn_40_1 = 1;
                 }
                 ((RgbSprite) (Object) stackIn_39_0[stackIn_40_1]).drawTransparent(28, var9 - 36);
-                var6 = nr.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
+                var6 = NineSliceFrame.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var7 = -65 - var5 - var6 + rs.field_k;
                 var9Lifetime1 = this.f(128, db.a(true, var7));
                 if (MatchConditionEntry.a(0, (byte) 94) + se.field_a > var9Lifetime1) {
@@ -7706,7 +7706,7 @@ final class GameplayController {
                 ~this.controlledPlayerId == ~this.battlefield.currentPlayer &&
                 null == this.spellConfirmation) {
                 BattleCharacter.field_h[uc.spellDefinitions[this.field_gc][2]].drawHalfSize(AiPlanningStrategy.pointerX + 12, 12 + ko.pointerY);
-                km.field_h[1].drawHalfSize(AiPlanningStrategy.pointerX + 10, ko.pointerY + 10);
+                ProjectileEffect.field_h[1].drawHalfSize(AiPlanningStrategy.pointerX + 10, ko.pointerY + 10);
               }
               if (this.field_mb ||
                 ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
@@ -7719,10 +7719,10 @@ final class GameplayController {
             boolean decompiledFrameCompleted0 = true;
             if (0 <= this.controlledPlayerId &&
               this.field_r) {
-              var4_ref_ac = (ac) (this.field_Ub.first((byte) 124));
+              var4_ref_ac = (ManaStarParticle) (this.field_Ub.first((byte) 124));
               while (var4_ref_ac != null) {
                 var4_ref_ac.a(0, 0, (byte) -29);
-                var4_ref_ac = (ac) (this.field_Ub.next((byte) 123));
+                var4_ref_ac = (ManaStarParticle) (this.field_Ub.next((byte) 123));
                 if (var10 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -7954,8 +7954,8 @@ final class GameplayController {
             return;
           }
           boolean decompiledFrameRemainder8 = true;
-          var3_int = so.field_b.field_a;
-          var4 = so.field_b.field_g;
+          var3_int = so.field_b.width;
+          var4 = so.field_b.height;
           var5 = null;
           if (this.selectedUnit != null && (~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer ||
             !this.movementPlanner.otherPlayerPreview) && (!this.field_m &&
@@ -8171,7 +8171,7 @@ final class GameplayController {
             if (this.field_V) {
               this.field_j = 0;
               this.field_V = false;
-              mu.field_a = new cg();
+              mu.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               return;
             }
@@ -8750,7 +8750,7 @@ final class GameplayController {
             this.field_U = TeleportAction.pointerPressY;
             this.field_t = BattleTutorial.pointerPressX;
           }
-          if (0 == (eq.pointerButtonMask & 4) &&
+          if (0 == (PasswordLoginCredentials.pointerButtonMask & 4) &&
             -1 != this.field_t) {
             var8Lifetime3 = AiPlanningStrategy.pointerX - this.field_t;
             var9Lifetime2 = -this.field_U + ko.pointerY;
@@ -8995,7 +8995,7 @@ final class GameplayController {
           if (decompiledFrameRemainder0) {
             while (true) {
               if (this.field_Ub.size(false) > 0) {
-                ((ac) (this.field_Ub.first((byte) 120))).a(this.battlefield, -12614);
+                ((ManaStarParticle) (this.field_Ub.first((byte) 120))).a(this.battlefield, -12614);
                 if (var4 == 0) {
                   continue;
                 }
@@ -9025,7 +9025,7 @@ final class GameplayController {
             this.field_lc = false;
             if (!this.field_z) {
               this.field_V = true;
-              mu.field_a = new cg();
+              mu.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               var3 = this.battlefield.currentPlayer;
               if (var3 > -1) {
@@ -9074,7 +9074,7 @@ final class GameplayController {
             this.camera = (BattleCamera) null;
           }
           if (param1 > CombatEvent.field_I.width) {
-            stackIn_7_0 = so.field_b.field_g;
+            stackIn_7_0 = so.field_b.height;
             return stackIn_7_0;
           }
           stackIn_9_0 = CombatEvent.field_I.screenY;
@@ -9372,21 +9372,21 @@ final class GameplayController {
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
                   ii.campaignPacketWord1 = ii.campaignPacketWord1 - damageDelta;
-                  kw.campaignPacketWord0 = kw.campaignPacketWord0 - turnDelta;
+                  ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - turnDelta;
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1)) {
-                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + damageDelta;
+                  ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + damageDelta;
                   ii.campaignPacketWord1 = ii.campaignPacketWord1 + turnDelta;
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2)) {
-                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + (-turnDelta + damageDelta);
+                  ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + (-turnDelta + damageDelta);
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
@@ -9420,49 +9420,49 @@ final class GameplayController {
               || currentTurnsThenMutationVariant == 7
               ) ? currentTurnsThenMutationVariant : -1) {
               case 0:
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
-                cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
+                ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
+                ScreenWipeTransition.campaignPacketWord2 = ScreenWipeTransition.campaignPacketWord2 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 1:
                 BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
                 if (var14 == 0) {
                   return;
                 }
               case 2:
                 ii.campaignPacketWord1 = ii.campaignPacketWord1 + 1;
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 + 1;
+                ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 3:
                 ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.pointerPressX;
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.pointerPressX;
+                ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + BattleTutorial.pointerPressX;
                 if (var14 == 0) {
                   return;
                 }
               case 4:
                 BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
                 if (var14 == 0) {
                   return;
                 }
               case 5:
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
-                cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
+                ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
+                ScreenWipeTransition.campaignPacketWord2 = ScreenWipeTransition.campaignPacketWord2 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 6:
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 + BirthDateChatEnableForm.campaignPacketWord3;
-                cg.campaignPacketWord2 = cg.campaignPacketWord2 - 1;
+                ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + BirthDateChatEnableForm.campaignPacketWord3;
+                ScreenWipeTransition.campaignPacketWord2 = ScreenWipeTransition.campaignPacketWord2 - 1;
                 if (var14 == 0) {
                   return;
                 }
               case 7:
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 - cg.campaignPacketWord2;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 - ScreenWipeTransition.campaignPacketWord2;
                 BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 - 1;
                 if (var14 == 0) {
                   return;
@@ -9767,7 +9767,7 @@ final class GameplayController {
           if (param0 != -32400) {
             this.controlledPlayerId = 1;
           }
-          var2_int = so.field_b.field_a;
+          var2_int = so.field_b.width;
           if (this.battlefield.playerCoats != null) {
             if (this.field_Wb == null) {
               this.e(16);
@@ -10422,7 +10422,7 @@ final class GameplayController {
             var7 = var7 + EmailCheckResult.a(4800, BattleViewportResizeHandler.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
           }
           var8 = DateInputWidget.field_E.getParagraphHeight(var7, var6_int - 20, 0);
-          var9 = (nr.field_e.getParagraphHeight(MusicPatchEnvelope.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
+          var9 = (NineSliceFrame.field_e.getParagraphHeight(MusicPatchEnvelope.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
           if (param4 != 11951) {
             this.field_l = false;
           }
@@ -10470,7 +10470,7 @@ final class GameplayController {
           this.field_D = false;
           if (this.selectedTileIndex != -1) {
             var4 = this.battlefield.tiles[this.selectedTileIndex].getDisplayName((byte) 81);
-            this.field_mc = (nr.field_e.textWidth(var4) >> 1) - 210;
+            this.field_mc = (NineSliceFrame.field_e.textWidth(var4) >> 1) - 210;
             if (this.field_mc < 0) {
               this.field_mc = 0;
             }
@@ -10621,7 +10621,7 @@ final class GameplayController {
               if (this.field_Rb >= var6) {
                 this.field_Rb = 0;
               }
-              pc.field_j = null;
+              ProxySocketFactory.field_j = null;
             }
           }
           if (DeployEvent.pointerPressButton == 0) {
@@ -10633,7 +10633,7 @@ final class GameplayController {
             var4Lifetime1 = 134 + var2_intLifetime1;
             var5Lifetime1 = 228 + var3Lifetime1;
             if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1, var4Lifetime1, var3Lifetime1, var5Lifetime1)) {
-              pc.field_j = null;
+              ProxySocketFactory.field_j = null;
               this.field_Rb = 0;
             }
             if (var6 == 2) {
@@ -10650,7 +10650,7 @@ final class GameplayController {
               var5Lifetime1 = 111 + var3Lifetime1;
             }
             if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1, var4Lifetime1, var3Lifetime1, var5Lifetime1)) {
-              pc.field_j = null;
+              ProxySocketFactory.field_j = null;
               this.field_Rb = 1;
             }
             if (var6 > 2) {
@@ -10660,7 +10660,7 @@ final class GameplayController {
               var4Lifetime1Lifetime1 = 184 + var2_intLifetime1Lifetime1;
               if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1Lifetime1, var4Lifetime1Lifetime1, var3Lifetime1Lifetime1, var5Lifetime1Lifetime1)) {
                 this.field_Rb = 2;
-                pc.field_j = null;
+                ProxySocketFactory.field_j = null;
               }
             }
             var7 = 298;
@@ -10674,7 +10674,7 @@ final class GameplayController {
                 return;
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, var8, var8 + 110, var7, 110 + var7)) {
-                pc.field_j = null;
+                ProxySocketFactory.field_j = null;
                 this.field_Rb = var9;
               }
               var8 += 110;
@@ -10702,7 +10702,7 @@ final class GameplayController {
                   var14 != 0) {
                   if (IterableDualNodeDeque.isPointerInBounds(-33, var12, var12 + 67, var9Lifetime1 + 50, 155 + var9Lifetime1)) {
                     this.field_Rb = var13;
-                    pc.field_j = null;
+                    ProxySocketFactory.field_j = null;
                     return;
                   }
                   var12 = var12 + var10;
@@ -10885,11 +10885,11 @@ final class GameplayController {
           var4[0] = (int)(128.0 - Math.cos(3.141592653589793 * (double)this.field_dc[0] / 256.0) * 128.0);
           var4[1] = (int)(128.0 - Math.cos((double)this.field_dc[1] * 3.141592653589793 / 256.0) * 128.0);
           var4[2] = (int)(-(Math.cos((double)this.field_dc[2] * 3.141592653589793 / 256.0) * 128.0) + 128.0);
-          var5 = so.field_b.field_a;
+          var5 = so.field_b.width;
           if (param0 != 20) {
             return;
           }
-          var6 = so.field_b.field_g;
+          var6 = so.field_b.height;
           var7 = var6 - this.f(128, this.g(2));
           if (this.field_dc[2] < 256) {
             SoftwareRaster.b(0, 0, var5, var6, 0, (-var4[2] + 255) / 2);
@@ -10972,7 +10972,7 @@ final class GameplayController {
                 pv.field_e.b();
                 SoftwareRaster.b();
                 TrianglePulse.field_d.drawShadedGrayscale(0, 0, TutorialLayout.field_g[1 + this.field_e[var8Lifetime1]]);
-                so.field_b.a(5605);
+                so.field_b.bindRasterTarget(5605);
                 pv.field_e.d(var14 - var16 / 2, var15 - var16 / 2, var16, var16, 255);
                 decompiledFrameRemainder0 = false;
               }
@@ -10983,7 +10983,7 @@ final class GameplayController {
                   if (this.field_dc[var8Lifetime1] < 320) {
                     pv.field_e.b();
                     TrianglePulse.field_d.drawShadedGrayscale(0, 0, TutorialLayout.field_g[this.field_e[var8Lifetime1] + 1]);
-                    so.field_b.a(5605);
+                    so.field_b.bindRasterTarget(5605);
                     pv.field_e.d(var9Lifetime1Lifetime1 - 5, -5 + var10Lifetime1Lifetime1, 10, 10, 255);
                   }
                   if (this.field_dc[var8Lifetime1] > 256) {
@@ -11063,7 +11063,7 @@ final class GameplayController {
                   } else {
                     this.e((byte) 77);
                     this.field_V = true;
-                    mu.field_a = new cg();
+                    mu.field_a = new ScreenWipeTransition();
                     GameClock.field_j = 0;
                     this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
                   }
@@ -11168,7 +11168,7 @@ final class GameplayController {
               } else {
                 cu.field_d[0].drawWithOpacity(211 + var2_intLifetime1 * 45, this.o(127) - 95 - 20, -this.field_n + 256);
               }
-              km.field_h[0].drawWithOpacity(208 + var2_intLifetime1 * 45, -95 + this.o(125) - 23, -this.field_n + 256);
+              ProjectileEffect.field_h[0].drawWithOpacity(208 + var2_intLifetime1 * 45, -95 + this.o(125) - 23, -this.field_n + 256);
               var2_intLifetime1++;
             }
             return;
@@ -11610,7 +11610,7 @@ final class GameplayController {
             SoftwareRaster.h(-(var4 * 8) + var11, -(6 * var4) + var12, var11 - var4 * 8, var12 - 5 * var4, 16777215);
             SoftwareRaster.h(-(10 * var4) + var11, -(5 * var4) + var12, var11 - var4 * 8, var12 - 5 * var4, 16777215);
             this.p((byte) -71);
-            so.field_b.a(5605);
+            so.field_b.bindRasterTarget(5605);
             if (this.battlefield.mapSizeSetting < 2) {
               var5 -= 2;
               if (this.battlefield.mapSizeSetting < 1) {
@@ -12042,7 +12042,7 @@ final class GameplayController {
               MoveEvent.campaignMenu.openCampaign(l.activeCampaignMission.campaign.campaignIndex, true);
             }
           }
-          du.field_h = false;
+          SocketFactory.field_h = false;
           vs.field_j = true;
           if (param0 <= 93) {
             this.startEquipmentTutorial((byte) 85);
@@ -12190,11 +12190,11 @@ final class GameplayController {
           this.encodedDamageCheckpoint = 996394;
           stackIn_4_1 = !(BufferedSocket.field_j < 2);
           this.field_E = stackIn_4_1;
-          pc.field_j = null;
+          ProxySocketFactory.field_j = null;
           this.encodedTurnCheckpoint = 996394;
           ii.campaignPacketWord1 = 4452;
-          kw.campaignPacketWord0 = 2297;
-          cg.campaignPacketWord2 = 72584621;
+          ValidationStatusIcon.campaignPacketWord0 = 2297;
+          ScreenWipeTransition.campaignPacketWord2 = 72584621;
           BirthDateChatEnableForm.campaignPacketWord3 = 224;
           this.field_Ub = new NodeDeque();
           this.field_o = new NodeDeque();
@@ -12268,7 +12268,7 @@ final class GameplayController {
                   while (var22_ref_int__.length > var23) {
                     var24 = var22_ref_int__[var23];
                     var25_int = jv.getUnitUnlockGroup(false, var24);
-                    var19_ref_int__[var25_int] = AccountRegistrationDialog.bitwiseOr(var19_ref_int__[var25_int], 1 << b.getUnitUnlockOrdinal(false, var24));
+                    var19_ref_int__[var25_int] = AccountRegistrationDialog.bitwiseOr(var19_ref_int__[var25_int], 1 << SpriteSheetDecoder.getUnitUnlockOrdinal(false, var24));
                     var23++;
                   }
                 }
@@ -12547,7 +12547,7 @@ final class GameplayController {
                   this.battleTutorial = new BattleTutorial(this, 4);
                 }
                 if (l.activeCampaignMission.musicId != -1) {
-                  this.field_d = fh.field_b[l.activeCampaignMission.musicId];
+                  this.field_d = GrowableIntArray.field_b[l.activeCampaignMission.musicId];
                 }
                 if (var26 == 0) {
                   decompiledFrameCompleted1 = false;

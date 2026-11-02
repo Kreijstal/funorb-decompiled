@@ -71,8 +71,8 @@ final class QuickChatHelpDialog extends ClientUiComponent {
         }
     }
 
-    public static void l(int param0) {
-        if (param0 >= -103) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -103) {
           return;
         }
         field_Jb = null;

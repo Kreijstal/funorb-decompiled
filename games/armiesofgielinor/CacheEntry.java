@@ -63,10 +63,10 @@ abstract class CacheEntry extends DualLinkedNode {
               }
               vd.field_b.writeInt((byte) -108, CampaignMenuButton.connectionRandom.nextInt());
               vd.field_b.writeInt((byte) -52, CampaignMenuButton.connectionRandom.nextInt());
-              vd.field_b.a(var14, 413740432);
-              vd.field_b.a(var8, 413740432);
+              vd.field_b.writeNullCircumfixedString(var14, 413740432);
+              vd.field_b.writeNullCircumfixedString(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
-              vd.field_b.a(CommunityTabGroup.a(param2 + 18820, var15), 413740432);
+              vd.field_b.writeNullCircumfixedString(CommunityTabGroup.a(param2 + 18820, var15), 413740432);
               vd.field_b.writeShort(true, param4);
               vd.field_b.writeByte(1, param3);
               vd.field_b.writeByte(param2 + 20033, var9);
@@ -79,7 +79,7 @@ abstract class CacheEntry extends DualLinkedNode {
               }
               EmailValidator.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
               IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
-              EmailValidator.outgoingPacket.f(0, -var10 + EmailValidator.outgoingPacket.position);
+              EmailValidator.outgoingPacket.writeShortLengthPrefix(0, -var10 + EmailValidator.outgoingPacket.position);
             } else {
               vd.field_b.position = 0;
               vd.field_b.writeInt((byte) -57, CampaignMenuButton.connectionRandom.nextInt());
@@ -90,14 +90,14 @@ abstract class CacheEntry extends DualLinkedNode {
               } else {
                 stackIn_11_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_10_0).a(stackIn_11_1, param2 ^ -413754288);
+              ((PacketBuffer) (Object) stackIn_10_0).writeNullCircumfixedString(stackIn_11_1, param2 ^ -413754288);
               stackIn_13_0 = vd.field_b;
               if (param5.a((byte) -111)) {
                 stackIn_14_1 = var8;
               } else {
                 stackIn_14_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
+              ((PacketBuffer) (Object) stackIn_13_0).writeNullCircumfixedString(stackIn_14_1, 413740432);
               EmailValidator.outgoingPacket.writeByte(1, 16);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
               var9 = EmailValidator.outgoingPacket.position;
@@ -155,7 +155,7 @@ abstract class CacheEntry extends DualLinkedNode {
           if (da.field_b == ov.connectionState &&
             AgeValidator.isPacketPayloadReady(2)) {
             if (MusicCrossfadeStream.deliveredOpcode == 255) {
-              var9_ref_String = ByteStorage.incomingPacket.c((byte) -85);
+              var9_ref_String = ByteStorage.incomingPacket.readOptionalString((byte) -85);
               if (var9_ref_String != null) {
                 ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
@@ -218,8 +218,8 @@ abstract class CacheEntry extends DualLinkedNode {
 
     abstract boolean isReferenceBacked(boolean obfuscationGuard);
 
-    public static void g(int param0) {
-        if (param0 >= -11) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -11) {
           field_y = (String) null;
         }
         field_y = null;
@@ -249,7 +249,7 @@ abstract class CacheEntry extends DualLinkedNode {
           var5 = new CoatOfArms();
           var2 = var5;
           if (obfuscationGuard) {
-            CacheEntry.g(56);
+            CacheEntry.releaseStatics(56);
           }
           for (var3 = 0; var3 < 6; var3++) {
             var5.parts[var3] = packet.readByte((byte) 103);

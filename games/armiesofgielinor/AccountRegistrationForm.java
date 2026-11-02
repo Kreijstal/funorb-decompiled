@@ -289,7 +289,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_L = null;
         field_S = null;
         field_F = null;
@@ -297,8 +297,8 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         field_M = null;
         field_Z = (int[][]) null;
         field_Q = null;
-        if (param0 != 19) {
-          AccountRegistrationForm.f((byte) -98);
+        if (obfuscationGuard != 19) {
+          AccountRegistrationForm.releaseStatics((byte) -98);
         }
         field_Y = null;
         field_R = null;
@@ -346,7 +346,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
 
     private final int a(int param0, Widget param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
-        kw var7 = null;
+        ValidationStatusIcon var7 = null;
         LabeledWidgetContainer var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -363,7 +363,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
             return stackIn_2_0;
           }
           this.addChild((byte) 10, (Widget) (var8));
-          var7 = new kw(((ValidationProvider) ((Object) param1)).getValidationSource(-918933630));
+          var7 = new ValidationStatusIcon(((ValidationProvider) ((Object) param1)).getValidationSource(-918933630));
           this.addChild((byte) 10, (Widget) (var7));
           var7.setBounds(3 + var8.width + var8.x, 15, var8.y + (-15 + var8.height >> 1), 8192, 15);
           stackIn_4_0 = var8.height;

@@ -7,7 +7,7 @@ final class CombatPresentation implements EventPresentation {
     private BattleCharacter[] attackers;
     static String field_N;
     private BattleCamera camera;
-    static jp field_G;
+    static ArchiveLoadSequence field_G;
     static ResourceArchive field_M;
     RgbSprite framebuffer;
     private boolean field_d;
@@ -24,7 +24,7 @@ final class CombatPresentation implements EventPresentation {
     private int phase;
     private int field_J;
     private int field_O;
-    private km[] field_D;
+    private ProjectileEffect[] field_D;
     private int field_u;
     private int field_v;
     private boolean field_m;
@@ -201,7 +201,7 @@ final class CombatPresentation implements EventPresentation {
               param0[var8] = param0[var9];
               param0[var9] = null;
               param0[var8].currentX = FullscreenMembershipDialog.field_W[param1][var8];
-              param0[var8].currentY = kw.field_P[param1][var8];
+              param0[var8].currentY = ValidationStatusIcon.field_P[param1][var8];
             }
             return;
           }
@@ -638,7 +638,7 @@ final class CombatPresentation implements EventPresentation {
                     }
                   }
                   this.field_p = this.field_O - (-AttackEvent.nextBoundedInt(false, this.field_y, vv.field_b) - this.field_y);
-                  this.field_D = new km[this.field_p];
+                  this.field_D = new ProjectileEffect[this.field_p];
                   this.field_b = this.a(this.field_w, (byte) -128);
                   this.phase = 5;
                   if (!var3.defenderDies) {
@@ -734,7 +734,7 @@ final class CombatPresentation implements EventPresentation {
                     stackIn_204_4 = this.field_c;
                     stackIn_204_5 = true;
                     stackIn_204_6 = FullscreenMembershipDialog.field_W[this.field_J][var8Lifetime1];
-                    stackIn_204_7 = kw.field_P[this.field_J][var8Lifetime1];
+                    stackIn_204_7 = ValidationStatusIcon.field_P[this.field_J][var8Lifetime1];
                     stackIn_204_8 = this.field_d;
                     if (this.field_d) {
                       stackIn_205_2 = null;
@@ -767,7 +767,7 @@ final class CombatPresentation implements EventPresentation {
                     stackIn_214_4 = this.field_c;
                     stackIn_214_5 = true;
                     stackIn_214_6 = FullscreenMembershipDialog.field_W[this.field_J][var8Lifetime1];
-                    stackIn_214_7 = kw.field_P[this.field_J][var8Lifetime1];
+                    stackIn_214_7 = ValidationStatusIcon.field_P[this.field_J][var8Lifetime1];
                     stackIn_214_8 = this.field_d;
                     if (!this.field_d) {
                       stackIn_215_2 = null;
@@ -788,7 +788,7 @@ final class CombatPresentation implements EventPresentation {
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameCompleted4)) {
                   while (true) {
-                    stackIn_227_0[stackIn_227_1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
+                    stackIn_227_0[stackIn_227_1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], ValidationStatusIcon.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
                     var8Lifetime1++;
                     if (var10 != 0) {
                       decompiledFrameCompleted3 = false;
@@ -807,7 +807,7 @@ final class CombatPresentation implements EventPresentation {
                   if (!this.field_o) {
                     var8Lifetime1 = 0;
                     while (var8Lifetime1 < this.field_w) {
-                      this.defenders[var8Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
+                      this.defenders[var8Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], ValidationStatusIcon.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
                       var8Lifetime1++;
                       if (var10 != 0) {
                         decompiledFrameCompleted1 = false;
@@ -824,7 +824,7 @@ final class CombatPresentation implements EventPresentation {
                     while (var8Lifetime1 < this.field_w) {
                       stackIn_227_0Lifetime1 = this.defenders;
                       stackIn_227_1Lifetime1 = var8Lifetime1;
-                      stackIn_227_0Lifetime1[stackIn_227_1Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
+                      stackIn_227_0Lifetime1[stackIn_227_1Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], ValidationStatusIcon.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
                       var8Lifetime1++;
                       if (var10 != 0) {
                         decompiledFrameCompleted0 = false;
@@ -1013,9 +1013,9 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
             if (var2_int < this.field_O) {
-              this.field_D[var2_int] = new km(this.defenders[this.field_b[var2_int]].destinationX, 600 - ValidationStatusWidget.field_T[this.field_a][0], this.defenders[this.field_b[var2_int]].destinationY, 200 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), this.field_z);
+              this.field_D[var2_int] = new ProjectileEffect(this.defenders[this.field_b[var2_int]].destinationX, 600 - ValidationStatusWidget.field_T[this.field_a][0], this.defenders[this.field_b[var2_int]].destinationY, 200 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), this.field_z);
             } else {
-              this.field_D[var2_int] = new km(100 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), 600, AttackEvent.nextBoundedInt(false, 850, vv.field_b) + 900, AttackEvent.nextBoundedInt(false, 600, vv.field_b) + 200, this.field_z);
+              this.field_D[var2_int] = new ProjectileEffect(100 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), 600, AttackEvent.nextBoundedInt(false, 850, vv.field_b) + 900, AttackEvent.nextBoundedInt(false, 600, vv.field_b) + 200, this.field_z);
             }
             var2_int++;
           }
@@ -1629,12 +1629,12 @@ final class CombatPresentation implements EventPresentation {
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.field_D.length <= var3))) {
-            stackIn_36_0 = ~this.field_D[var3].field_f;
+            stackIn_36_0 = ~this.field_D[var3].remainingTicks;
             if (var4 == 0) {
               if (stackIn_36_0 < 0) {
                 var2_int = 0;
               }
-              if (this.field_D[var3].b(-103) &&
+              if (this.field_D[var3].advance(-103) &&
                 this.field_O > var3) {
                 this.defenders[this.field_b[var3]].field_d = true;
                 this.defenders[this.field_b[var3]].setAnimationState(2, (byte) -103);
@@ -1954,7 +1954,7 @@ final class CombatPresentation implements EventPresentation {
                   var9 < var10) {
                   incrementValue$3 = var8;
                   var8++;
-                  this.field_D[var4[incrementValue$3]].a(true, -8, true, this.field_C);
+                  this.field_D[var4[incrementValue$3]].draw(true, -8, true, this.field_C);
                 }
                 if (!(var11 > var9) ||
                   !(var9 < var10) || var12 != 0) {
@@ -2047,7 +2047,7 @@ final class CombatPresentation implements EventPresentation {
                     this.defenders[var3[incrementValue$7]].a(this.field_C, param0 - 51, false);
                     incrementValue$8 = var8;
                     var8++;
-                    this.field_D[var4[incrementValue$8]].a(true, -8, false, this.field_C);
+                    this.field_D[var4[incrementValue$8]].draw(true, -8, false, this.field_C);
                   }
                 } else {
                   incrementValue$7 = var7;
@@ -2056,13 +2056,13 @@ final class CombatPresentation implements EventPresentation {
                   if (var12 != 0) {
                     incrementValue$8 = var8;
                     var8++;
-                    this.field_D[var4[incrementValue$8]].a(true, -8, false, this.field_C);
+                    this.field_D[var4[incrementValue$8]].draw(true, -8, false, this.field_C);
                   }
                 }
               } else {
                 incrementValue$8 = var8;
                 var8++;
-                this.field_D[var4[incrementValue$8]].a(true, -8, false, this.field_C);
+                this.field_D[var4[incrementValue$8]].draw(true, -8, false, this.field_C);
               }
             } while (var12 == 0);
             return;
@@ -2675,11 +2675,11 @@ final class CombatPresentation implements EventPresentation {
           if (param0 != -4938) {
             field_N = (String) null;
           }
-          if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
+          if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
             stackIn_5_0 = BufferedFile.field_a;
             return stackIn_5_0;
           }
-          if (du.nameCheckPending == mh.accountNameCheckState) {
+          if (SocketFactory.nameCheckPending == mh.accountNameCheckState) {
             stackIn_8_0 = AgeValidator.requestedAccountName;
             return stackIn_8_0;
           }
@@ -2804,13 +2804,13 @@ final class CombatPresentation implements EventPresentation {
             if (this.field_e > -1) {
               this.battlefield.playerCoats[this.field_e].a(var6Lifetime1, this.battlefield.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
             }
-            var6Lifetime1Lifetime1 = -var2_intLifetime2 + (so.field_b.field_a - var4Lifetime1);
+            var6Lifetime1Lifetime1 = -var2_intLifetime2 + (so.field_b.width - var4Lifetime1);
             if (this.field_g > -1) {
               this.battlefield.playerCoats[this.field_g].a(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
             }
           }
           GradientUiRenderer.drawHollowGradientFrame(0, 0, rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
-          so.field_b.a(5605);
+          so.field_b.bindRasterTarget(5605);
           if (null != MatchConditionEntry.field_p) {
             MatchConditionEntry.field_p.a(-66, this.framebuffer);
             if (var9 == 0) {
@@ -2973,7 +2973,7 @@ final class CombatPresentation implements EventPresentation {
               param4[var9] = param4[var8];
               param4[var8] = null;
               param4[var9].currentX = FullscreenMembershipDialog.field_W[param2][var9];
-              param4[var9].currentY = kw.field_P[param2][var9];
+              param4[var9].currentY = ValidationStatusIcon.field_P[param2][var9];
             }
             return;
           }
@@ -3054,7 +3054,7 @@ final class CombatPresentation implements EventPresentation {
             this.f(-24577);
           }
           if (this.field_D[-1 + this.field_D.length] != null &&
-            this.field_D[-1 + this.field_D.length].field_f > 200) {
+            this.field_D[-1 + this.field_D.length].remainingTicks > 200) {
             this.phase = 6;
             this.h(1);
           }
@@ -3248,7 +3248,7 @@ final class CombatPresentation implements EventPresentation {
         RuntimeException var1 = null;
         try {
           if (param0 >= -30) {
-            field_G = (jp) null;
+            field_G = (ArchiveLoadSequence) null;
           }
           ArchiveIndex.field_g = false;
           return;
@@ -3390,7 +3390,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(boolean param0, BattleCharacter[] param1, byte param2, int param3, km[] param4) {
+    private final void a(boolean param0, BattleCharacter[] param1, byte param2, int param3, ProjectileEffect[] param4) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -3570,7 +3570,7 @@ final class CombatPresentation implements EventPresentation {
                   if (param1[var7[var9]].destinationY < param4[var8[var6_int]].field_d) {
                     incrementValue$1 = var6_int;
                     var6_int++;
-                    param4[var8[incrementValue$1]].a(param0, param2 ^ -107, true, this.field_C);
+                    param4[var8[incrementValue$1]].draw(param0, param2 ^ -107, true, this.field_C);
                     if (var12 == 0) {
                       continue;
                     }
@@ -3591,7 +3591,7 @@ final class CombatPresentation implements EventPresentation {
               }
               incrementValue$4 = var6_int;
               var6_int++;
-              param4[var8[incrementValue$4]].a(param0, -8, true, this.field_C);
+              param4[var8[incrementValue$4]].draw(param0, -8, true, this.field_C);
               if (var12 == 0) {
                 continue;
               }
@@ -3635,7 +3635,7 @@ final class CombatPresentation implements EventPresentation {
               if (param1[var7[var9]].destinationY < param4[var8[var6_int]].field_d) {
                 incrementValue$6 = var6_int;
                 var6_int++;
-                param4[var8[incrementValue$6]].a(param0, -8, false, this.field_C);
+                param4[var8[incrementValue$6]].draw(param0, -8, false, this.field_C);
                 if (var12 == 0) {
                   continue;
                 }
@@ -3649,7 +3649,7 @@ final class CombatPresentation implements EventPresentation {
             }
             incrementValue$8 = var6_int;
             var6_int++;
-            param4[var8[incrementValue$8]].a(param0, -8, false, this.field_C);
+            param4[var8[incrementValue$8]].draw(param0, -8, false, this.field_C);
             if (var12 == 0) {
               continue;
             }
@@ -3761,7 +3761,7 @@ final class CombatPresentation implements EventPresentation {
           if (var3_int >= this.field_D.length) {
             return;
           }
-          this.field_D[var3_int] = new km(-MatchConditionEntry.field_o[this.field_c][1] + this.attackers[param1].destinationX, 600 - ValidationStatusWidget.field_T[this.field_c][1], this.attackers[param1].destinationY, 2, this.field_z);
+          this.field_D[var3_int] = new ProjectileEffect(-MatchConditionEntry.field_o[this.field_c][1] + this.attackers[param1].destinationX, 600 - ValidationStatusWidget.field_T[this.field_c][1], this.attackers[param1].destinationY, 2, this.field_z);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4123,7 +4123,7 @@ final class CombatPresentation implements EventPresentation {
               }
             }
             this.field_p = this.field_O - (-AttackEvent.nextBoundedInt(false, this.field_y, vv.field_b) - this.field_y);
-            this.field_D = new km[this.field_p];
+            this.field_D = new ProjectileEffect[this.field_p];
             this.field_b = this.a(this.field_w, (byte) -127);
             this.phase = 5;
             if (var6_int == 0) {
@@ -4222,7 +4222,7 @@ final class CombatPresentation implements EventPresentation {
               stackIn_207_4 = this.field_c;
               stackIn_207_5 = true;
               stackIn_207_6 = FullscreenMembershipDialog.field_W[this.field_J][var8];
-              stackIn_207_7 = kw.field_P[this.field_J][var8];
+              stackIn_207_7 = ValidationStatusIcon.field_P[this.field_J][var8];
               stackIn_207_8 = this.field_d;
               if (!this.field_d) {
                 stackIn_209_9 = 1300;
@@ -4265,7 +4265,7 @@ final class CombatPresentation implements EventPresentation {
               stackIn_220_4 = this.field_c;
               stackIn_220_5 = true;
               stackIn_220_6 = FullscreenMembershipDialog.field_W[this.field_J][var8];
-              stackIn_220_7 = kw.field_P[this.field_J][var8];
+              stackIn_220_7 = ValidationStatusIcon.field_P[this.field_J][var8];
               stackIn_220_8 = this.field_d;
               if (!this.field_d) {
                 stackIn_222_9 = 1300;
@@ -4296,7 +4296,7 @@ final class CombatPresentation implements EventPresentation {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted4)) {
             while (true) {
-              stackIn_236_0[stackIn_236_1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
+              stackIn_236_0[stackIn_236_1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], ValidationStatusIcon.field_P[this.field_u][var8], this.field_d, 0);
               var8++;
               if (var9 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -4315,7 +4315,7 @@ final class CombatPresentation implements EventPresentation {
             if (!this.field_o) {
               var8 = 0;
               while (var8 < this.field_w) {
-                this.defenders[var8] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
+                this.defenders[var8] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], ValidationStatusIcon.field_P[this.field_u][var8], this.field_d, 0);
                 var8++;
                 if (var9 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -4332,7 +4332,7 @@ final class CombatPresentation implements EventPresentation {
               while (this.field_w > var8) {
                 stackIn_236_0Lifetime1 = this.defenders;
                 stackIn_236_1Lifetime1 = var8;
-                stackIn_236_0Lifetime1[stackIn_236_1Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
+                stackIn_236_0Lifetime1[stackIn_236_1Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], ValidationStatusIcon.field_P[this.field_u][var8], this.field_d, 0);
                 var8++;
                 if (var9 != 0) {
                   decompiledFrameCompleted0 = false;

@@ -32,8 +32,8 @@ final class e {
         TelefragEvent.field_z = 0;
     }
 
-    public static void b(byte param0) {
-        if (param0 != -13) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -13) {
           return;
         }
         field_b = null;

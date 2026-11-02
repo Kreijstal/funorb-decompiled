@@ -31,7 +31,7 @@ final class cd {
           var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {
-              af.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
+              LoginCredentials.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
               dj.a((byte) -128);
               return;
             }
@@ -67,7 +67,7 @@ final class cd {
             var5 = null;
           }
           var8.position = var8.position + 4;
-          if (!var8.j(4215)) {
+          if (!var8.verifyChecksum(4215)) {
             dj.a((byte) -126);
             return;
           }
@@ -150,13 +150,13 @@ final class cd {
 
     final static void a(int param0, int param1, int param2, int param3) {
         BattleCharacter.field_h[uc.spellDefinitions[param0][param3]].drawHalfSize(48 + param1, param2 + 12);
-        km.field_h[0].drawHalfSize(param1 + 46, param2 + 10);
+        ProjectileEffect.field_h[0].drawHalfSize(param1 + 46, param2 + 10);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         campaigns = null;
         field_b = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_e = null;
           field_d = null;
           return;

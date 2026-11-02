@@ -1648,8 +1648,8 @@ class BattleTutorial {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        var2 = so.field_b.field_a;
-        var3 = so.field_b.field_g;
+        var2 = so.field_b.width;
+        var3 = so.field_b.height;
         SoftwareRaster.setClip(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
         GradientUiRenderer.drawHollowGradientFrame(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, ConsoleValue.field_b, 0, 192);
         if (4 != this.buttonMode) {
@@ -1705,7 +1705,7 @@ class BattleTutorial {
               }
               if (decompiledFrameRemainder0) {
                 if (this.buttonMode == 3) {
-                  GradientUiRenderer.drawCenteredSolidText(ac.field_u, -10 + var2 - 120, -16 + var3, 0, true);
+                  GradientUiRenderer.drawCenteredSolidText(ManaStarParticle.field_u, -10 + var2 - 120, -16 + var3, 0, true);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
@@ -1906,7 +1906,7 @@ class BattleTutorial {
             return stackIn_4_0;
           }
           if (param2 != 7502) {
-            BattleTutorial.b(6);
+            BattleTutorial.releaseStatics(6);
           }
           var6 = (-1 + var5_int + param0) / param0;
           param0 = var5_int / var6;
@@ -1987,11 +1987,11 @@ class BattleTutorial {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_i = null;
         field_u = null;
         field_l = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           return;
         }
         field_d = null;

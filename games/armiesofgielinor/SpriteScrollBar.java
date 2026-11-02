@@ -29,7 +29,7 @@ final class SpriteScrollBar {
         try {
           param0 -= 16;
           AttackEvent.field_E.drawHalfSize(param0 + 48, 12 + param1);
-          km.field_h[0].drawHalfSize(46 + param0, param1 + 10);
+          ProjectileEffect.field_h[0].drawHalfSize(46 + param0, param1 + 10);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nb.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -128,9 +128,9 @@ final class SpriteScrollBar {
         return var5 != 0;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_h = null;
-        int var1 = -89 / ((param0 + 18) / 38);
+        int var1 = -89 / ((obfuscationGuard + 18) / 38);
         nameCheckResultConsumed = null;
     }
 

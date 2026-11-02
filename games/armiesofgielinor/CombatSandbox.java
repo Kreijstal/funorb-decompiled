@@ -21,8 +21,8 @@ final class CombatSandbox {
         this.field_h = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Defender", 0, 0);
         this.field_a = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Run Attack", 0, 0);
         this.field_l = new SpriteDropdownControl[6];
-        this.field_l[0] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
-        this.field_l[1] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
+        this.field_l[0] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, LoginCredentials.field_a, 0, 0);
+        this.field_l[1] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, LoginCredentials.field_a, 0, 0);
         this.field_l[2] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
         this.field_l[3] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
         this.field_l[4] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
@@ -251,7 +251,7 @@ final class CombatSandbox {
           var23 = (var17 - var22) * (fk.matchupDamagePercent[var21][var20] * WeightedLruCache.terrainDamageTakenPercent[var10]) / 10000;
           this.combatPresentation = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
           this.combatPresentation.a(var22, var19, var23, true, var18);
-          GameCanvas.field_b = new cg();
+          GameCanvas.field_b = new ScreenWipeTransition();
         }
     }
 
@@ -268,8 +268,8 @@ final class CombatSandbox {
     }
 
     private final void a(int param0) {
-        int var2 = so.field_b.field_a >> 1;
-        int var3 = -this.field_m.maxAscent + so.field_b.field_g - (this.field_m.maxDescent << 1);
+        int var2 = so.field_b.width >> 1;
+        int var3 = -this.field_m.maxAscent + so.field_b.height - (this.field_m.maxDescent << 1);
         int var4 = this.field_i[param0];
         this.field_m.drawCentered("Press Esc to return to the main menu", var2, var3, var4, -1);
     }
@@ -341,7 +341,7 @@ final class CombatSandbox {
           return;
         }
         if (null != GameCanvas.field_b) {
-          GameCanvas.field_b.a(8, this.field_c);
+          GameCanvas.field_b.draw(8, this.field_c);
         }
     }
 
@@ -409,16 +409,16 @@ final class CombatSandbox {
           this.combatPresentation.advanceFrame((GameEvent) null, (byte) -121);
           if (this.combatPresentation.isFinished(8865)) {
             this.combatPresentation = null;
-            GameCanvas.field_b = new cg();
+            GameCanvas.field_b = new ScreenWipeTransition();
           }
           return;
         }
         this.a(inputActive, inputValue, screenX, secondaryInput, screenY, false);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         emailLoginMethod = null;
-        if (param0 != -8) {
+        if (obfuscationGuard != -8) {
           field_e = (String) null;
         }
         field_e = null;

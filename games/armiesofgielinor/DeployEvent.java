@@ -25,7 +25,7 @@ final class DeployEvent extends GameEvent {
 
     final static void h(int param0) {
         GlobalSpell.field_f = new ClientUiComponent(0L, (ClientUiComponent) null);
-        if (fh.field_c) {
+        if (GrowableIntArray.field_c) {
           GlobalSpell.field_f.addChild(t.field_g, 84);
         }
         GlobalSpell.field_f.addChild(IconTextComponent.field_Kb, 104);
@@ -144,7 +144,7 @@ final class DeployEvent extends GameEvent {
               battlefield.a(var5, var4, (byte) -13, var6.ownerPlayer);
             }
           }
-          fl.recomputeClientStateChecksum(battlefield, -115);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,13 +274,13 @@ final class DeployEvent extends GameEvent {
             var6 = (SocialListEntry) (var4.next((byte) 123));
           }
           if (0 != TaggedMapData.field_g.addButton.pressedButton) {
-            EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.addButton.screenX, TaggedMapData.field_g.addButton.screenY, TaggedMapData.field_g.addButton.width, TaggedMapData.field_g.addButton.height, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
+            EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.addButton.screenX, TaggedMapData.field_g.addButton.screenY, TaggedMapData.field_g.addButton.width, TaggedMapData.field_g.addButton.height, iw.field_o, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
             DisplaySettingsDialog.field_fb = 2;
           }
           if (TaggedMapData.field_g.removeButton.pressedButton == 0) {
             return;
           }
-          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, StandardContentDialog.field_kb, kq.field_N, eq.field_h, eq.field_h);
+          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, StandardContentDialog.field_kb, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
           DisplaySettingsDialog.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -6,10 +6,10 @@ final class so {
     static String[] field_a;
     static String[] field_c;
     static ClientUiComponent field_d;
-    static bi field_b;
+    static RasterImageSurface field_b;
 
-    public static void b(int param0) {
-        if (param0 == 256) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard == 256) {
           field_c = null;
           field_b = null;
           field_d = null;

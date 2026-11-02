@@ -30,11 +30,11 @@ final class vs {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
         field_d = null;
         field_e = null;
-        if (param0 < -50) {
+        if (obfuscationGuard < -50) {
           field_g = null;
           field_h = null;
           highlightedConsoleInput = null;

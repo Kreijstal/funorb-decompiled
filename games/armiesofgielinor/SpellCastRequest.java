@@ -78,7 +78,7 @@ final class SpellCastRequest extends ActionRequest {
           return;
         }
         if (param0 < vi.field_a.length) {
-          we.playSoundAtVolume(100, param2, vi.field_a[param0]);
+          ArchiveLoadStep.playSoundAtVolume(100, param2, vi.field_a[param0]);
           int var3 = -110 / ((-58 - param1) / 63);
           return;
         }

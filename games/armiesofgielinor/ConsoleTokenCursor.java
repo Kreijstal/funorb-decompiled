@@ -19,9 +19,9 @@ final class ConsoleTokenCursor {
         return this.tokens[fieldTemp$0];
     }
 
-    public static void b(int param0) {
-        if (param0 > -13) {
-          ConsoleTokenCursor.b(-31);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard > -13) {
+          ConsoleTokenCursor.releaseStatics(-31);
         }
         field_b = null;
         boneSprites = null;
@@ -138,7 +138,7 @@ final class ConsoleTokenCursor {
                   for (var13 = 0; var18.length > var13; var13 += 2) {
                     var14_int = var18[var13];
                     if (var14_int == -1) {
-                      jp.field_a = true;
+                      ArchiveLoadSequence.field_a = true;
                     } else {
                       if (param3 > var14_int) {
                         dt.field_d[var14_int] = true;

@@ -46,7 +46,7 @@ final class SpellMenuGroup {
         branchControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 40) {
-            SpellMenuGroup.a(-65);
+            SpellMenuGroup.releaseStatics(-65);
           }
           angularPhase = transition;
           if (this.children == null) {
@@ -79,7 +79,7 @@ final class SpellMenuGroup {
               TeamRoster.field_e.drawAdditive(db.a(true, 130 + horizontalOffset), MatchConditionEntry.a(177, (byte) 94), 128);
             }
             this.icon.drawWithOpacity(db.a(true, horizontalOffset + 145), MatchConditionEntry.a(192, (byte) 94), opacity);
-            km.field_h[1].drawWithOpacity(db.a(true, 142 + horizontalOffset), MatchConditionEntry.a(189, (byte) 94), opacity);
+            ProjectileEffect.field_h[1].drawWithOpacity(db.a(true, 142 + horizontalOffset), MatchConditionEntry.a(189, (byte) 94), opacity);
           }
           if (null != this.children) {
             entryCount = this.children.length;
@@ -117,7 +117,7 @@ final class SpellMenuGroup {
                 stackIn_58_3 = 256;
               }
               ((RgbSprite) (Object) stackIn_57_0).drawWithOpacity(stackIn_57_1, stackIn_57_2, stackIn_58_3);
-              stackIn_60_0 = km.field_h[1];
+              stackIn_60_0 = ProjectileEffect.field_h[1];
               stackIn_60_1 = db.a(true, iconX - 23);
               stackIn_60_2 = MatchConditionEntry.a(-23 + iconY, (byte) 94);
               if (childIndex == selectedChild) {
@@ -153,7 +153,7 @@ final class SpellMenuGroup {
                 if (this.spellIds[spellIndex] == ab.field_a) {
                   BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(db.a(true, iconX - 20), MatchConditionEntry.a(iconY - 20, (byte) 94), 256 - selectionFade);
                 }
-                km.field_h[0].drawTransparent(db.a(true, -23 + iconX), MatchConditionEntry.a(iconY - 23, (byte) 94));
+                ProjectileEffect.field_h[0].drawTransparent(db.a(true, -23 + iconX), MatchConditionEntry.a(iconY - 23, (byte) 94));
               }
             }
           }
@@ -173,13 +173,13 @@ final class SpellMenuGroup {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_m = null;
         field_l = null;
         field_h = null;
         field_d = null;
         field_b = null;
-        if (param0 > -57) {
+        if (obfuscationGuard > -57) {
           field_b = (BufferedFile) null;
         }
     }

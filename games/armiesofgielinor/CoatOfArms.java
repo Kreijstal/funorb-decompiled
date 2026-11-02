@@ -62,9 +62,9 @@ final class CoatOfArms {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_c = null;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         field_d = null;
@@ -95,9 +95,9 @@ final class CoatOfArms {
         int var4_intLifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ck.animationSequencesByGroup = new AnimationSequence[or.field_f.length][];
-          for (var4_int = param3; or.field_f.length > var4_int; var4_int++) {
-            var10 = or.field_f[var4_int];
+          ck.animationSequencesByGroup = new AnimationSequence[DialWidgetPainter.field_f.length][];
+          for (var4_int = param3; DialWidgetPainter.field_f.length > var4_int; var4_int++) {
+            var10 = DialWidgetPainter.field_f[var4_int];
             var5 = var10;
             var6_int = SetCoatConsoleCommand.field_I[var4_int].length;
             array$0 = new AnimationSequence[var6_int];

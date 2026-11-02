@@ -314,7 +314,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ChatMessage.field_g = fk.loadRgbSpritesByName("opentome", (byte) -124, param7, "lobby");
           lm.field_h = fk.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
-          ResourceRequest.field_u[1] = pc.field_i;
+          ResourceRequest.field_u[1] = ProxySocketFactory.field_i;
           ResourceRequest.field_u[3] = ek.field_f;
           ResourceRequest.field_u[2] = AccountRegistrationForm.field_L;
           ResourceRequest.field_u[0] = AttackEvent.field_D;
@@ -324,19 +324,19 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           IconTextComponent.field_Kb.addChild(StripedProgressWidget.field_F, 79);
-          if (fh.field_c) {
+          if (GrowableIntArray.field_c) {
             IconTextComponent.field_Kb.addChild(CampaignProgress.field_a, 69);
           }
           IconTextComponent.field_Kb.addChild(MapTile.field_f, 59);
-          MapTile.field_f.viewport.applyStyle(0, eq.field_h);
+          MapTile.field_f.viewport.applyStyle(0, PasswordLoginCredentials.field_h);
           MapTile.field_f.viewport.verticalAlignment = 1;
           var24 = MapTile.field_f.viewport;
           var25 = var24;
           var25.horizontalAlignment = 1;
-          t.field_g = new ClientUiComponent(0L, eq.field_h);
+          t.field_g = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           t.field_g.horizontalAlignment = 1;
-          cp.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, eq.field_e.toUpperCase());
-          ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
+          cp.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, PasswordLoginCredentials.field_e.toUpperCase());
+          ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, NineSliceFrame.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
           SpriteDropdownControl.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
@@ -346,12 +346,12 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ModalDialog.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           ViewportManager.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, l.field_f.toUpperCase());
-          ViewportManager.field_d.inputEnabled = fh.field_c;
+          ViewportManager.field_d.inputEnabled = GrowableIntArray.field_c;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
           stackIn_5_3 = ConsoleValue.field_a;
-          if (!fh.field_c) {
+          if (!GrowableIntArray.field_c) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
             stackIn_6_4 = NetworkResourceRequest.field_G;
@@ -367,17 +367,17 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           LobbyPlayer.field_Lb.addChild(SpriteDropdownControl.field_v, 38);
           LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
           LobbyPlayer.field_Lb.addChild(CombatViewTransition.field_p, 121);
-          if (fh.field_c) {
+          if (GrowableIntArray.field_c) {
             LobbyPlayer.field_Lb.addChild(bs.field_a, 114);
           }
           LobbyPlayer.field_Lb.addChild(SphinxActionRequest.field_A, 78);
           LobbyPlayer.field_Lb.addChild(ModalDialog.field_K, 99);
           LobbyPlayer.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
-          if (fh.field_c) {
+          if (GrowableIntArray.field_c) {
             ov.field_i.addChild(ViewportManager.field_d, 127);
           }
           ov.field_i.addChild(VineGrowthAction.field_x, 93);
-          ToggleWidget.field_Q = new ClientUiComponent(0L, eq.field_h);
+          ToggleWidget.field_Q = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           ToggleWidget.field_Q.horizontalAlignment = 1;
           ToggleWidget.field_Q.verticalAlignment = 0;
           LinkButtonPainter.field_g = new ClientUiComponent(0L, WhirlpoolHasher.field_h, LineOfSightGrid.field_f.toUpperCase());
@@ -385,19 +385,19 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           GameClock.field_c.addChild(ToggleWidget.field_Q, 116);
           GameClock.field_c.addChild(LinkButtonPainter.field_g, 89);
           AccountNameAvailabilityValidator.field_l = new ClientUiComponent(0L, ConsoleEvaluationException.field_c);
-          AccountNameAvailabilityValidator.field_l.applyStyle(0, eq.field_h);
+          AccountNameAvailabilityValidator.field_l.applyStyle(0, PasswordLoginCredentials.field_h);
           AccountNameAvailabilityValidator.field_l.verticalAlignment = 1;
           var16 = AccountNameAvailabilityValidator.field_l;
           var16.horizontalAlignment = 1;
           eb.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
-          PrintVictoryConditionsConsoleCommand.field_E = new ClientUiComponent(0L, eq.field_h);
+          PrintVictoryConditionsConsoleCommand.field_E = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           PrintVictoryConditionsConsoleCommand.field_E.horizontalAlignment = 1;
           MatchingTextValidator.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           eb.field_c.addChild(PrintVictoryConditionsConsoleCommand.field_E, 72);
           eb.field_c.addChild(MatchingTextValidator.field_l, 83);
-          if (fh.field_c) {
+          if (GrowableIntArray.field_c) {
             eb.field_c.addChild(SpellCastEvent.field_D, 107);
           }
           eb.field_c.addChild(bu.field_a, 109);
@@ -474,10 +474,10 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           }
           lm.field_b = new ClientUiComponent(0L, ConsoleValue.field_a);
           so.field_d = new ClientUiComponent(0L, ConsoleValue.field_a);
-          pi.field_N = new ClientUiComponent(0L, ke.field_e);
-          pi.field_N.applyStyle(0, eq.field_h);
-          var17 = pi.field_N;
-          pi.field_N.verticalAlignment = 1;
+          MarkerSliderWidget.field_N = new ClientUiComponent(0L, ke.field_e);
+          MarkerSliderWidget.field_N.applyStyle(0, PasswordLoginCredentials.field_h);
+          var17 = MarkerSliderWidget.field_N;
+          MarkerSliderWidget.field_N.verticalAlignment = 1;
           if (param13) {
             var22 = (iw) null;
             SingleChildWidgetContainer.a(-73, 39, (iw) null);
@@ -501,7 +501,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           }
           pd.field_c.addChild(lm.field_b, 77);
           pd.field_c.addChild(so.field_d, 69);
-          pd.field_c.addChild(pi.field_N, 91);
+          pd.field_c.addChild(MarkerSliderWidget.field_N, 91);
           bk.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
           ConsolePanel.field_m = new ClientUiComponent(0L, WhirlpoolHasher.field_h, ConsoleCommand.field_D.toUpperCase());
           return;
@@ -628,9 +628,9 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         return var2;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_C = null;
-        if (param0 > -81) {
+        if (obfuscationGuard > -81) {
           field_F = (String) null;
         }
         field_D = null;
@@ -714,7 +714,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             iw var4 = (iw) null;
             SingleChildWidgetContainer.a(30, -59, (iw) null);
           }
-          cg.field_c.addLast((byte) -119, (IntrusiveNode) (param2));
+          ScreenWipeTransition.field_c.addLast((byte) -119, (IntrusiveNode) (param2));
           FixInvisibleUnitsConsoleCommand.a((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

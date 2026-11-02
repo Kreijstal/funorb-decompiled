@@ -8,10 +8,10 @@ final class su {
     static String field_c;
     static ClientUiComponent field_d;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_b = null;
-        if (!param0) {
-          su.a(true);
+        if (!obfuscationGuard) {
+          su.releaseStatics(true);
         }
         field_d = null;
         field_a = null;

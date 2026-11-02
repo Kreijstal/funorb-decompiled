@@ -50,8 +50,8 @@ final class VineGrowthAction extends PreparedAction {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = -106 / ((param0 - 59) / 60);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = -106 / ((obfuscationGuard - 59) / 60);
         field_x = null;
         field_s = null;
         field_v = null;

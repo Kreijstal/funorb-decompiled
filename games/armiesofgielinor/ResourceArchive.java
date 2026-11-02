@@ -139,9 +139,9 @@ final class ResourceArchive {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         connectedState = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return;
         }
         field_a = null;
@@ -226,7 +226,7 @@ final class ResourceArchive {
           return -1;
         }
         if (obfuscationGuard >= -96) {
-          ResourceArchive.b(52);
+          ResourceArchive.releaseStatics(52);
         }
         return this.index.fileCapacities.length;
     }
@@ -514,7 +514,7 @@ final class ResourceArchive {
           var3 = stackIn_5_0;
           stackIn_8_0 = (ProgressMessageDialog.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_8_0;
-          TurnEffectEvent.field_z.updateInput(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
+          TurnEffectEvent.field_z.updateInput(87, var4 != 0, var3 != 0, var1_int, var2, MouseWheelSource.field_d);
           while (true) {
             if (!Unit.pollKeyEvent((byte) -61)) {
               return;
@@ -732,7 +732,7 @@ final class ResourceArchive {
             encodedGroup = ko.getStoredBytes(false, 87, this.packedGroups[groupId]);
           }
           try {
-            groupData = el.decompressContainer(false, encodedGroup);
+            groupData = MouseWheelSource.decompressContainer(false, encodedGroup);
             decompressedAlias = groupData;
             decompressedBytes = decompressedAlias;
             splitData = decompressedBytes;
@@ -931,7 +931,7 @@ final class ResourceArchive {
           return 100;
         }
         if (obfuscationGuard != 73) {
-          ResourceArchive.b(-64);
+          ResourceArchive.releaseStatics(-64);
         }
         return this.provider.getGroupProgress(5926, groupId);
     }

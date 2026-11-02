@@ -93,8 +93,8 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
         super(commandName, parameterTypes, description);
     }
 
-    public static void g(int param0) {
-        if (param0 < -2) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard < -2) {
           field_E = null;
           kalphiteSprites = null;
           field_H = null;

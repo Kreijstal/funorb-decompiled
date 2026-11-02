@@ -42,11 +42,11 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         return super.advanceDialogAnimation((byte) -1);
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_Cb = null;
         field_Bb = null;
         field_zb = null;
-        int var1 = 18 / ((-35 - param0) / 35);
+        int var1 = 18 / ((-35 - obfuscationGuard) / 35);
     }
 
     final void showUnavailable(byte obfuscationGuard) {
@@ -126,7 +126,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
               }
             }
           } else {
-            message = eq.field_i;
+            message = PasswordLoginCredentials.field_i;
           }
           if (resultGuard >= -2) {
             this.registrationForm = (AccountRegistrationForm) null;

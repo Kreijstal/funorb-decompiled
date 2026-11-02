@@ -48,14 +48,14 @@ final class ProgressDialog extends ResizableModalDialog {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_eb = null;
-        if (param0 == 260) {
+        if (obfuscationGuard == 260) {
           field_W = (String[][]) null;
           field_bb = null;
           return;
         }
-        ProgressDialog.n(-8);
+        ProgressDialog.releaseStatics(-8);
         field_W = (String[][]) null;
         field_bb = null;
     }

@@ -26,7 +26,7 @@ final class CampaignMenuButton {
             return false;
           }
           if (param0 != 30) {
-            CampaignMenuButton.c(70);
+            CampaignMenuButton.releaseStatics(70);
           }
           var2_int = param1.charAt(0);
           if (!Character.isLowerCase((char) var2_int)) {
@@ -67,14 +67,14 @@ final class CampaignMenuButton {
           SoundCache.field_b = 0;
           return;
         }
-        CampaignMenuButton.c(56);
+        CampaignMenuButton.releaseStatics(56);
         DraggableWidgetContainer.a(false, -49);
         SoundCache.field_b = 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         connectionRandom = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_a = null;
           decodedSpriteOffsetYs = null;
           field_b = null;

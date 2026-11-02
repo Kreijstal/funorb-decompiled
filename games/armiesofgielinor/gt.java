@@ -89,7 +89,7 @@ final class gt {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_c = null;
         field_g = null;
@@ -97,7 +97,7 @@ final class gt {
         field_f = null;
         field_e = null;
         keyEventCodes = null;
-        if (param0 == 494) {
+        if (obfuscationGuard == 494) {
           validationPendingText = null;
           return;
         }

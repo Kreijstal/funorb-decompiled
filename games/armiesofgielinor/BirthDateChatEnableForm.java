@@ -43,8 +43,8 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
         try {
           WhirlpoolHasher.field_g = true;
           ToggleWidget.field_Q.text = param1;
-          var2_int = so.field_b.field_a;
-          var3 = so.field_b.field_g;
+          var2_int = so.field_b.width;
+          var3 = so.field_b.height;
           var4 = ToggleWidget.field_Q.font.getParagraphHeight(param1, 272, ToggleWidget.field_Q.textLineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           if (param0 < 27) {
@@ -119,7 +119,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
             aj var7 = (aj) null;
             BirthDateChatEnableForm.a((byte) -126, (aj) null, 112);
           }
-          var9.b((byte) -39, var4);
+          var9.appendChecksum((byte) -39, var4);
           var9.writeByteLengthPrefix(var9.position - var4, 5930);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

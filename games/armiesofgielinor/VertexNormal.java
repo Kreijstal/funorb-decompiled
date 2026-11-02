@@ -142,12 +142,12 @@ final class VertexNormal {
             if (var12.children == null) {
               var12.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
               var12.addChild(var12.nameComponent, 106);
-              var12.ratingComponent = new ClientUiComponent(0L, ws.field_P);
-              if (fh.field_c) {
+              var12.ratingComponent = new ClientUiComponent(0L, DialWidget.field_P);
+              if (GrowableIntArray.field_c) {
                 var12.addChild(var12.ratingComponent, param1 ^ 157);
               }
               var12.ratingComponent.horizontalAlignment = 2;
-              var12.field_fc = new ClientUiComponent(0L, eq.field_h);
+              var12.field_fc = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
               var12.addChild(var12.field_fc, 62);
               var12.inheritVisualStateForDescendants(-10027);
               var12.admissionButton = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
@@ -221,7 +221,7 @@ final class VertexNormal {
               if (bu.field_a != param4) {
                 if (var12.invitationSent) {
                   var12.nameComponent.text = EmailCheckResult.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
-                  var12.cancelRejectButton.text = ac.field_s;
+                  var12.cancelRejectButton.text = ManaStarParticle.field_s;
                 } else {
                   if (var12.joinRequested) {
                     var12.nameComponent.text = EmailCheckResult.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
@@ -259,7 +259,7 @@ final class VertexNormal {
               stackIn_96_1 = jn.field_d;
               stackIn_96_2 = -20500;
               stackIn_96_3 = -var25_int + var12.width;
-              if (fh.field_c) {
+              if (GrowableIntArray.field_c) {
                 stackIn_97_4 = 42;
               } else {
                 stackIn_97_4 = 0;
@@ -334,7 +334,7 @@ final class VertexNormal {
                     if (var6 <= var12.rating) {
                       if ((~var12.optionUnlockMask & var8) != 0) {
                         var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
-                        var24Lifetime2 = EmailCheckResult.a(4800, h.field_f, new String[]{var20});
+                        var24Lifetime2 = EmailCheckResult.a(4800, LoginKind.field_f, new String[]{var20});
                         if (0 < var25_int &&
                           jl.field_c != null &&
                           jl.field_c.length >= var25_int &&
@@ -483,10 +483,10 @@ final class VertexNormal {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_a = null;
-        if (param0 != -14691) {
+        if (obfuscationGuard != -14691) {
           return;
         }
         field_f = null;

@@ -4,17 +4,17 @@
 final class t {
     static BinaryBitmapFont field_a;
     static int field_f;
-    static fl field_c;
+    static WidgetTheme field_c;
     static int field_e;
     static ClientUiComponent field_g;
     static byte[] field_b;
     static RgbSprite[] field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_a = null;
         field_c = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_g = null;

@@ -105,9 +105,9 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_O = null;
-        if (param0 < 14) {
+        if (obfuscationGuard < 14) {
           field_L = (String) null;
         }
         field_P = null;

@@ -196,8 +196,8 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         }
     }
 
-    public static void c(byte param0) {
-        int var1 = 13 % ((-54 - param0) / 57);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = 13 % ((-54 - obfuscationGuard) / 57);
         field_h = null;
         decodedChatChannelLabel = null;
         field_m = null;

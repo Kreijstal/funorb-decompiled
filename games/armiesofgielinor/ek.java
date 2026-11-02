@@ -14,7 +14,7 @@ final class ek {
           GameClock.loginProgressDialog.closeDialog(true);
           DequeWidgetContainer.field_C = new AccountNameSelectionForm();
           if (param0 > -22) {
-            ek.a(-112);
+            ek.releaseStatics(-112);
             BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
             return;
           }
@@ -26,7 +26,7 @@ final class ek {
           BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
-        ek.a(-112);
+        ek.releaseStatics(-112);
         BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
     }
 
@@ -52,10 +52,10 @@ final class ek {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         field_a = null;
-        if (param0 == 236611664) {
+        if (obfuscationGuard == 236611664) {
           field_b = (String[][]) null;
           field_c = null;
           return;

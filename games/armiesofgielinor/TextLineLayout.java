@@ -214,7 +214,7 @@ final class TextLineLayout {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5 = (Exception) (Object) decompiledCaughtException;
-            af.a((Throwable) ((Object) var5), -74, "Error loading quicksave.");
+            LoginCredentials.a((Throwable) ((Object) var5), -74, "Error loading quicksave.");
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -116,11 +116,11 @@ abstract class ConsolePanel implements ap {
         return style;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_k = null;
         field_r = null;
         field_m = null;
-        int var1 = -8 % ((-2 - param0) / 34);
+        int var1 = -8 % ((-2 - obfuscationGuard) / 34);
         field_g = null;
         field_i = null;
     }
@@ -201,7 +201,7 @@ abstract class ConsolePanel implements ap {
           return;
         }
         this.panel.updateInput(true, inputFlag);
-        this.outputScroll.advanceScroll(this.lineHeight, true, el.field_d * (2 * this.lineHeight), false);
+        this.outputScroll.advanceScroll(this.lineHeight, true, MouseWheelSource.field_d * (2 * this.lineHeight), false);
         this.input.advanceEditing(0);
     }
 

@@ -12,10 +12,10 @@ final class aj extends IntrusiveNode {
     int field_r;
     int[] field_l;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_p = null;
-        if (param0 <= 69) {
-          aj.a(-73);
+        if (obfuscationGuard <= 69) {
+          aj.releaseStatics(-73);
         }
     }
 

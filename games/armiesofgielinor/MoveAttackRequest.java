@@ -46,7 +46,7 @@ final class MoveAttackRequest extends ActionRequest {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_C = null;
         chatHistoryPriorityCounts = null;
         sessionSocket = null;
@@ -55,7 +55,7 @@ final class MoveAttackRequest extends ActionRequest {
         field_y = null;
         field_B = null;
         field_I = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           chatHistoryPriorityCounts = (int[]) null;
         }
         field_v = null;

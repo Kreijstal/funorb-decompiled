@@ -165,11 +165,11 @@ final class AiInfluenceMap {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_l = null;
         field_d = null;
         field_f = null;
-        int var1 = 59 % ((param0 + 1) / 41);
+        int var1 = 59 % ((obfuscationGuard + 1) / 41);
         field_h = null;
         field_k = null;
         field_j = null;
@@ -786,7 +786,7 @@ final class AiInfluenceMap {
             }
             DelayedPacket.a(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              jp.a(var14, -83);
+              ArchiveLoadSequence.a(var14, -83);
               if (0 == var6_intLifetime1) {
                 var3.field_r = RevivalEvent.field_D;
                 var3.field_s = ov.field_e;

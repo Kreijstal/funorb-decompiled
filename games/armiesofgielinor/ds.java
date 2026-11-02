@@ -6,9 +6,9 @@ final class ds {
     static RgbSprite[] field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         chatHuffmanCodec = null;
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           chatHuffmanCodec = (HuffmanCodec) null;
         }
         field_b = null;
@@ -32,14 +32,14 @@ final class ds {
           BattleTutorial.pointerPressX = QuickChatMenu.lastPointerPressX;
           TeleportAction.pointerPressY = BoundedFile.lastPointerPressY;
           ArchiveIndex.pressedPointerButton = 0;
-          eq.pointerButtonMask = EffectPresentation.livePointerButtonMask;
+          PasswordLoginCredentials.pointerButtonMask = EffectPresentation.livePointerButtonMask;
         }
     }
 
     final static void a(int param0, int param1) {
         try {
           try {
-            lj.a(CombatEvent.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
+            AppletScriptBridge.callScriptFunction(CombatEvent.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
           } catch (Throwable throwable) {
           }
           int var2 = 87 % ((param1 - 39) / 40);
@@ -64,13 +64,13 @@ final class ds {
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null != ac.activeTerrainSprites &&
+          if (null != ManaStarParticle.activeTerrainSprites &&
             0 <= param5 &&
-            ac.activeTerrainSprites.length > param5 &&
-            ac.activeTerrainSprites[param5] != null) {
+            ManaStarParticle.activeTerrainSprites.length > param5 &&
+            ManaStarParticle.activeTerrainSprites[param5] != null) {
             if (param6 &&
-              ac.activeTerrainSprites.length >= 1) {
-              var8 = ac.activeTerrainSprites[0];
+              ManaStarParticle.activeTerrainSprites.length >= 1) {
+              var8 = ManaStarParticle.activeTerrainSprites[0];
               if (var8 != null) {
                 if (param4) {
                   var8.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
@@ -101,8 +101,8 @@ final class ds {
                 }
                 var12 = var8_int + (param7 * 20 + FullscreenDisplayMode.a(var11, param7, var10, var9, param3 - 27089));
                 if (var12 >= 0 &&
-                  var12 < ac.activeTerrainSprites.length) {
-                  var13 = ac.activeTerrainSprites[var12];
+                  var12 < ManaStarParticle.activeTerrainSprites.length) {
+                  var13 = ManaStarParticle.activeTerrainSprites[var12];
                   if (var13 != null) {
                     if (!param4) {
                       var13.draw(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));

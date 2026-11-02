@@ -75,7 +75,7 @@ final class WhirlpoolHasher {
           bufferBitOffset = 7 & this.bufferedBits;
           remainingLengthBits = bitCount;
           if (obfuscationGuard > 0) {
-            WhirlpoolHasher.a(-47);
+            WhirlpoolHasher.releaseStatics(-47);
           }
           lengthByteIndex = 31;
           lengthCarry = 0;
@@ -210,9 +210,9 @@ final class WhirlpoolHasher {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
-        if (param0 != -28911) {
+        if (obfuscationGuard != -28911) {
           return;
         }
         unitDefinitions = (int[][]) null;
@@ -241,7 +241,7 @@ final class WhirlpoolHasher {
         blockWordIndex = 0;
         inputByteIndex = 0;
         while (blockWordIndex < 8) {
-          this.blockWords[blockWordIndex] = BufferedFile.a(we.a((long)this.inputBlock[7 + inputByteIndex], 255L), BufferedFile.a(we.a((long)this.inputBlock[inputByteIndex + 6], 255L) << 8, BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a((long)this.inputBlock[inputByteIndex] << 56, we.a((long)this.inputBlock[inputByteIndex + 1] << 48, 71776119061217280L)), we.a((long)this.inputBlock[inputByteIndex + 2], 255L) << 40), we.a((long)this.inputBlock[3 + inputByteIndex], 255L) << 32), we.a(255L, (long)this.inputBlock[4 + inputByteIndex]) << 24), we.a((long)this.inputBlock[inputByteIndex + 5], 255L) << 16)));
+          this.blockWords[blockWordIndex] = BufferedFile.a(ArchiveLoadStep.a((long)this.inputBlock[7 + inputByteIndex], 255L), BufferedFile.a(ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 6], 255L) << 8, BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a((long)this.inputBlock[inputByteIndex] << 56, ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 1] << 48, 71776119061217280L)), ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 2], 255L) << 40), ArchiveLoadStep.a((long)this.inputBlock[3 + inputByteIndex], 255L) << 32), ArchiveLoadStep.a(255L, (long)this.inputBlock[4 + inputByteIndex]) << 24), ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 5], 255L) << 16)));
           blockWordIndex++;
           inputByteIndex += 8;
         }

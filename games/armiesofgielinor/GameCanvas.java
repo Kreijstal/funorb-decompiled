@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameCanvas extends java.awt.Canvas {
-    static cg field_b;
+    static ScreenWipeTransition field_b;
     static RgbSprite[] field_c;
     static BufferedFile field_d;
     private java.awt.Component target;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
-        if (param0 < 43) {
-          GameCanvas.a(-119);
+        if (obfuscationGuard < 43) {
+          GameCanvas.releaseStatics(-119);
           field_b = null;
           field_d = null;
           return;

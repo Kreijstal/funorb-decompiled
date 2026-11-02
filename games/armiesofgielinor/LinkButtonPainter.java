@@ -11,10 +11,10 @@ final class LinkButtonPainter implements WidgetPainter {
     static BattleGraphicsAssets field_f;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_a = null;
-        if (param0 < -9) {
+        if (obfuscationGuard < -9) {
           field_f = null;
           field_d = (PcmSample[][]) null;
           field_g = null;

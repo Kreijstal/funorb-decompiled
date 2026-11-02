@@ -15,24 +15,24 @@ final class op {
         int var8 = 0;
         int var2_int = AiPlanningStrategy.pointerX;
         int var3 = ko.pointerY;
-        int var4 = eq.field_h.font.getLineCount(param1, 500);
-        int var5 = 6 + eq.field_h.font.getWrappedWidth(param1, 500);
+        int var4 = PasswordLoginCredentials.field_h.font.getLineCount(param1, 500);
+        int var5 = 6 + PasswordLoginCredentials.field_h.font.getWrappedWidth(param1, 500);
         int var6 = 2 + var4 * jn.field_d;
         if (param0 >= -105) {
           return;
         }
         try {
-          var7 = jp.a(var2_int, 12, var5, -1);
+          var7 = ArchiveLoadSequence.a(var2_int, 12, var5, -1);
           var8 = pd.a(var6, 0, var3, 20);
           SoftwareRaster.b(var7, var8, var5, var6, 0);
           SoftwareRaster.f(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
-          eq.field_h.font.drawParagraph(param1, 3 + var7, -eq.field_h.font.maxAscent + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
+          PasswordLoginCredentials.field_h.font.drawParagraph(param1, 3 + var7, -PasswordLoginCredentials.field_h.font.maxAscent + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "op.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, nr param2, nr param3, int param4, int param5) {
+    final static void a(int param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
         try {
           LoginForm.field_E = param1;
           QuickChatPhrase.field_w = param0;
@@ -47,7 +47,7 @@ final class op {
 
     final static void a(int param0, boolean param1) {
         int var3 = 0;
-        nr var4 = null;
+        NineSliceFrame var4 = null;
         rs var5 = null;
         on var6 = null;
         RuntimeException decompiledCaughtException = null;
@@ -60,8 +60,8 @@ final class op {
             var5 = (rs) (PrintVictoryConditionsConsoleCommand.field_F.next((byte) 123));
           }
           if (!param1) {
-            var4 = (nr) null;
-            op.a(108, -59, (nr) null, (nr) null, -23, 0);
+            var4 = (NineSliceFrame) null;
+            op.a(108, -59, (NineSliceFrame) null, (NineSliceFrame) null, -23, 0);
           }
           var6 = (on) (StateChangeMarker.field_t.first((byte) 112));
           while (var6 != null) {
@@ -122,7 +122,7 @@ final class op {
             return stackIn_21_0;
           }
           if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
-            stackIn_24_0 = EmailCheckResult.a(4800, km.field_a, new String[]{name});
+            stackIn_24_0 = EmailCheckResult.a(4800, ProjectileEffect.field_a, new String[]{name});
             return stackIn_24_0;
           }
           packet = EmailValidator.outgoingPacket;
@@ -152,12 +152,12 @@ final class op {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_d = null;
         field_f = null;
         field_g = null;
         field_a = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_c = (int[][]) null;
           field_e = null;
           field_b = null;

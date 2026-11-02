@@ -180,10 +180,10 @@ class kq extends InteractiveWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_P = null;
         field_N = null;
-        int var1 = 126 % ((param0 + 59) / 34);
+        int var1 = 126 % ((obfuscationGuard + 59) / 34);
         field_M = null;
     }
 

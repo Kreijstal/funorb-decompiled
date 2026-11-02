@@ -19,7 +19,7 @@ final class MaskedTextEntryPainter extends TextEntryWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            MaskedTextEntryPainter.b((byte) 38);
+            MaskedTextEntryPainter.releaseStatics((byte) 38);
           }
           stackIn_3_0 = NumericDateInputWidget.repeatCharacter('*', true, widget.text.length());
           return stackIn_3_0;
@@ -41,10 +41,10 @@ final class MaskedTextEntryPainter extends TextEntryWidgetPainter {
         this(ArmiesOfGielinor.field_J, textColour);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_y = null;
-        if (param0 <= 30) {
-          MaskedTextEntryPainter.b((byte) -13);
+        if (obfuscationGuard <= 30) {
+          MaskedTextEntryPainter.releaseStatics((byte) -13);
           field_x = null;
           cachedConsoleTokens = null;
           return;

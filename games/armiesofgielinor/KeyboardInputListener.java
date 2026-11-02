@@ -56,8 +56,8 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             fc.keyboardIdleTicks = 0;
             mappedKeyCode = event.getKeyCode();
             if (mappedKeyCode >= 0 &&
-              mappedKeyCode < kw.awtToClientKeyCodes.length) {
-              mappedKeyCode = -129 & kw.awtToClientKeyCodes[mappedKeyCode];
+              mappedKeyCode < ValidationStatusIcon.awtToClientKeyCodes.length) {
+              mappedKeyCode = -129 & ValidationStatusIcon.awtToClientKeyCodes[mappedKeyCode];
             } else {
               mappedKeyCode = -1;
             }
@@ -125,8 +125,8 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             fc.keyboardIdleTicks = 0;
             mappedKeyCode = event.getKeyCode();
             if (0 <= mappedKeyCode &&
-              kw.awtToClientKeyCodes.length > mappedKeyCode) {
-              mappedKeyCode = kw.awtToClientKeyCodes[mappedKeyCode];
+              ValidationStatusIcon.awtToClientKeyCodes.length > mappedKeyCode) {
+              mappedKeyCode = ValidationStatusIcon.awtToClientKeyCodes[mappedKeyCode];
               if (0 != (128 & mappedKeyCode)) {
                 mappedKeyCode = -1;
               }

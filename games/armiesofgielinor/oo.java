@@ -423,7 +423,7 @@ final class oo {
             EmailConfirmationValidator.field_n = it.a("", iw.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", iw.field_p, false);
             QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", iw.field_p, false);
-            DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
+            DiskCacheRequest.field_G = ManaStarParticle.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             AlphaWidgetContainer.field_H = null;
             iw.field_p = null;
           }
@@ -723,10 +723,10 @@ final class oo {
             var8 += 2;
           }
           if ((var8 & 1) > 0) {
-            ac.activeTerrainSprites[2].b(-32 + param4, param1 + 10, param0, param2);
+            ManaStarParticle.activeTerrainSprites[2].b(-32 + param4, param1 + 10, param0, param2);
           }
           if ((var8 & 2) > 0) {
-            ac.activeTerrainSprites[2].b(8 + param4, 10 + param1, param0, param2);
+            ManaStarParticle.activeTerrainSprites[2].b(8 + param4, 10 + param1, param0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

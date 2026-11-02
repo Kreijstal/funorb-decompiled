@@ -17,9 +17,9 @@ final class MapTile implements TaggedFieldReader {
     static boolean[] decodedSpriteHasAlpha;
     static int field_i;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
-        if (param0 >= -19) {
+        if (obfuscationGuard >= -19) {
           return;
         }
         decodedSpriteHasAlpha = null;

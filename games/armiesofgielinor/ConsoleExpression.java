@@ -181,12 +181,12 @@ final class ConsoleExpression extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_n = null;
         field_p = null;
         field_l = null;
         field_r = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_t = null;

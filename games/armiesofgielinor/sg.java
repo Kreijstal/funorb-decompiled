@@ -4,11 +4,11 @@
 final class sg {
     static ClientConnectionState field_a;
     static IndexedSprite[] field_b;
-    static nr field_c;
+    static NineSliceFrame field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
-        if (param0 < 83) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard < 83) {
           return;
         }
         field_a = null;

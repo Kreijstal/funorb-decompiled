@@ -527,11 +527,11 @@ final class AiUnitPlanner extends IntrusiveNode {
         var2.writeByteLengthPrefix(var2.position - var3, param0 ^ 5935);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_q = null;
         quickChatShortcutDescriptions = null;
         field_w = null;
-        if (param0 != -31116) {
+        if (obfuscationGuard != -31116) {
           field_w = (String) null;
         }
     }

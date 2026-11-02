@@ -45,7 +45,7 @@ final class PcmPlayerService implements Runnable {
             caughtFailure = workerFailure;
             reportedFailure = (Exception) (Object) caughtFailure;
             reportMessage = (String) null;
-            af.a((Throwable) ((Object) reportedFailure), 98, (String) null);
+            LoginCredentials.a((Throwable) ((Object) reportedFailure), 98, (String) null);
             loopExitKind = 1;
           }
           if (loopExitKind == 0) {

@@ -34,7 +34,7 @@ final class rs extends IntrusiveNode {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + kw.a(param1.charAt(var4), 100);
+            var3 = (var3 << 5) - var3 + ValidationStatusIcon.a(param1.charAt(var4), 100);
           }
           if (param0 == -116) {
             stackIn_8_0 = var3;
@@ -65,12 +65,12 @@ final class rs extends IntrusiveNode {
         return stackIn_9_0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_v = null;
         field_x = null;
         field_p = null;
         field_o = null;
-        int var1 = 39 % ((param0 + 61) / 51);
+        int var1 = 39 % ((obfuscationGuard + 61) / 51);
         field_n = null;
     }
 

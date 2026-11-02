@@ -46,10 +46,10 @@ final class eb {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
         field_e = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           field_c = (ClientUiComponent) null;
           field_a = null;
           field_d = null;

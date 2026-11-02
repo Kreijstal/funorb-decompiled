@@ -15,13 +15,13 @@ final class PlayerProfile {
     static int[] field_l;
     static ClientUiComponent field_f;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         field_l = null;
         field_e = null;
         field_i = null;
         field_h = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_f = (ClientUiComponent) null;
         }
     }

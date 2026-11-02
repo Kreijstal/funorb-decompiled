@@ -205,13 +205,13 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_r = null;
         field_t = null;
         field_u = null;
         field_q = null;
         quickChatHelpTitle = null;
-        if (param0 != -103) {
+        if (obfuscationGuard != -103) {
           return;
         }
         field_p = null;
@@ -353,7 +353,7 @@ abstract class GameEvent extends IntrusiveNode {
           this.unit.modelAnimationIndex = 0;
         }
         if (obfuscationGuard != 6) {
-          GameEvent.a((byte) 88);
+          GameEvent.releaseStatics((byte) 88);
         }
         this.pendingPresentations = 0;
         this.presentationComplete = true;

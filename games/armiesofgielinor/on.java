@@ -11,12 +11,12 @@ final class on extends IntrusiveNode {
     static String field_o;
     static int field_n;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_p = null;
         field_o = null;
         field_k = null;
-        if (param0 != -7) {
-          on.a(-36);
+        if (obfuscationGuard != -7) {
+          on.releaseStatics(-36);
         }
     }
 

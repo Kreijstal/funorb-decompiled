@@ -9,16 +9,16 @@ final class gp {
     static String field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         decodedChatAccountName = null;
         field_e = null;
         field_d = null;
-        if (param0 >= 69) {
+        if (obfuscationGuard >= 69) {
           field_a = null;
           field_c = null;
           return;
         }
-        gp.a((byte) 10);
+        gp.releaseStatics((byte) 10);
         field_a = null;
         field_c = null;
     }

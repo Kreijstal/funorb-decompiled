@@ -7,11 +7,11 @@ final class uc {
     static ClientUiComponent field_b;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_c = null;
         field_b = null;
         spellDefinitions = (int[][]) null;
-        if (param0 != -39) {
+        if (obfuscationGuard != -39) {
           field_b = (ClientUiComponent) null;
         }
     }
@@ -35,7 +35,7 @@ final class uc {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
-        fh.field_e = param0;
+        GrowableIntArray.field_e = param0;
         if (param3) {
           uc.a(29);
           TelepopEvent.field_B = param4;

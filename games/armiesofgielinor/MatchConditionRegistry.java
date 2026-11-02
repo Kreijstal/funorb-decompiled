@@ -152,11 +152,11 @@ final class MatchConditionRegistry {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_d = null;
         field_a = null;
-        if (!param0) {
-          MatchConditionRegistry.a(true);
+        if (!obfuscationGuard) {
+          MatchConditionRegistry.releaseStatics(true);
         }
     }
 

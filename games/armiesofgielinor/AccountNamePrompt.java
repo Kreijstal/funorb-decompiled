@@ -12,12 +12,12 @@ final class AccountNamePrompt extends ClientUiComponent {
     static String field_Jb;
     static String field_Ob;
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Jb = null;
         field_Pb = null;
         field_Ib = null;
         field_Nb = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_Ob = null;
           return;
         }
@@ -401,7 +401,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           this.inputComponent.setBounds(jn.field_d, -20500, var9_int, 3 + jn.field_d, 5);
           var10 = var9_int + 5 + 5;
           var11 = 3 + (2 * jn.field_d + 3);
-          var12 = jp.a(anchorX, anchorWidth, var10, -1);
+          var12 = ArchiveLoadSequence.a(anchorX, anchorWidth, var10, -1);
           var13 = pd.a(var11, 0, anchorY, anchorHeight);
           this.setBounds(var11, -20500, var10, var13, var12);
           return;

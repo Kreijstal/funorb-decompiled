@@ -35,17 +35,17 @@ final class ki {
         return var4 * var2 >> 12;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         contentFadeInStage = null;
         field_f = null;
         field_a = null;
         field_d = (String[][]) null;
-        if (param0 > 87) {
+        if (obfuscationGuard > 87) {
           field_b = null;
           field_c = null;
           return;
         }
-        ki.a((byte) 12);
+        ki.releaseStatics((byte) 12);
         field_b = null;
         field_c = null;
     }

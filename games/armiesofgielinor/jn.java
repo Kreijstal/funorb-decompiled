@@ -9,9 +9,9 @@ final class jn {
     static String field_e;
     static RgbSprite[][] field_b;
 
-    public static void a(int param0) {
-        if (param0 > -94) {
-          jn.a(84);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard > -94) {
+          jn.releaseStatics(84);
         }
         field_a = null;
         field_f = null;

@@ -20,7 +20,7 @@ final class gv {
             var3[var4_int] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var6[var4_int])];
             var4_int++;
           }
-          var4 = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var3);
+          var4 = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var3);
           StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 97);
           return var4;
         }
@@ -28,7 +28,7 @@ final class gv {
           var3[var4_int] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var6[var4_int])];
           var4_int++;
         }
-        var4Lifetime1 = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var3);
+        var4Lifetime1 = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var3);
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 97);
         return var4Lifetime1;
     }

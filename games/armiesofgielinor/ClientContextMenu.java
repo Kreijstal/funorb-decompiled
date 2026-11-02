@@ -174,8 +174,8 @@ final class ClientContextMenu {
 
     final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
-          bk.a(param2, IconLabelControl.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, ClientUiNode.field_x, GameClock.field_e, WeightedLruCache.field_b, PreparedAction.field_o, FullscreenFocusCanvas.field_e);
-          dh.field_n = fk.loadRgbSpritesByName("chatfilter", (byte) -125, param3, "lobby");
+          bk.a(param2, IconLabelControl.field_Lb, PasswordLoginCredentials.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, ClientUiNode.field_x, GameClock.field_e, WeightedLruCache.field_b, PreparedAction.field_o, FullscreenFocusCanvas.field_e);
+          ImageProducerSurface.field_n = fk.loadRgbSpritesByName("chatfilter", (byte) -125, param3, "lobby");
           BattlefieldTheme.field_k[0] = QuickChatPhrase.field_v;
           BattlefieldTheme.field_k[1] = IterableDualNodeDeque.field_a;
           BattlefieldTheme.field_k[param1] = cd.field_d;
@@ -255,7 +255,7 @@ final class ClientContextMenu {
               if (!var11.joinRequested) {
                 this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
               } else {
-                this.menu.addTextAction(0, EmailCheckResult.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
+                this.menu.addTextAction(0, EmailCheckResult.a(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
                 this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, vq.field_g, new String[]{var5}), (byte) -113);
               }
             }
@@ -304,7 +304,7 @@ final class ClientContextMenu {
             if (!var10.joinRequested) {
               this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
             } else {
-              this.menu.addTextAction(0, EmailCheckResult.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
+              this.menu.addTextAction(0, EmailCheckResult.a(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
               this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, vq.field_g, new String[]{var5}), (byte) -113);
             }
           }
@@ -332,13 +332,13 @@ final class ClientContextMenu {
           var3 = var6.ownerName;
           if (var6.invitationReceived) {
             this.menu.addTextAction(2, EmailCheckResult.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
-            this.menu.addTextAction(3, EmailCheckResult.a(4800, or.field_a, new String[]{var3}), (byte) -120);
+            this.menu.addTextAction(3, EmailCheckResult.a(4800, DialWidgetPainter.field_a, new String[]{var3}), (byte) -120);
             return;
           }
           if (var6.joinable) {
             this.menu.addTextAction(2, EmailCheckResult.a(4800, RasterViewportResizeHandler.field_e, new String[]{var3}), (byte) -114);
             if (var6.joinRequestSent) {
-              this.menu.addTextAction(3, EmailCheckResult.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+              this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
             }
             return;
           }
@@ -347,13 +347,13 @@ final class ClientContextMenu {
             if (!var6.playing) {
               this.menu.addTextAction(2, EmailCheckResult.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               if (var6.joinRequestSent) {
-                this.menu.addTextAction(3, EmailCheckResult.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+                this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
             if (!var6.joinable) {
               if (var6.joinRequestSent) {
-                this.menu.addTextAction(3, EmailCheckResult.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+                this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
@@ -362,7 +362,7 @@ final class ClientContextMenu {
           if (!var6.joinRequestSent) {
             return;
           }
-          this.menu.addTextAction(3, EmailCheckResult.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+          this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
           return;
         }
         discarded$0 = this.dispatchChatAction(107, -75, (byte) 100);
@@ -376,7 +376,7 @@ final class ClientContextMenu {
         var3 = var7.ownerName;
         if (var7.invitationReceived) {
           this.menu.addTextAction(2, EmailCheckResult.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
-          this.menu.addTextAction(3, EmailCheckResult.a(4800, or.field_a, new String[]{var3}), (byte) -120);
+          this.menu.addTextAction(3, EmailCheckResult.a(4800, DialWidgetPainter.field_a, new String[]{var3}), (byte) -120);
           return;
         }
         if (var7.joinable) {
@@ -396,7 +396,7 @@ final class ClientContextMenu {
         if (!var7.joinRequestSent) {
           return;
         }
-        this.menu.addTextAction(3, EmailCheckResult.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+        this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
         return;
     }
 
@@ -468,13 +468,13 @@ final class ClientContextMenu {
         if (obfuscationGuard <= 38) {
           ClientContextMenu.a(-18);
           if (actionId == 17) {
-            Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
+            Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
             return true;
           }
           return false;
         }
         if (actionId == 17) {
-          Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
+          Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
           return true;
         }
         return false;
@@ -525,7 +525,7 @@ final class ClientContextMenu {
             2 == chatChannel) && 2 == th.socialListState) {
             var7 = this.getTargetDisplayName(-97);
             var4 = var7;
-            var5 = lg.findFriend(this.accountName, (byte) -34);
+            var5 = GzipDecoder.findFriend(this.accountName, (byte) -34);
             var6 = IndexedSpriteBase.isIgnoredAccount(this.accountName, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {

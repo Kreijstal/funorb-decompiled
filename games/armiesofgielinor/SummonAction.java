@@ -110,12 +110,12 @@ final class SummonAction extends PreparedAction {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_A = null;
         lobbyPlayerOrder = null;
         field_w = null;
         field_y = null;
-        if (param0 < 61) {
+        if (obfuscationGuard < 61) {
           field_v = (String) null;
         }
         field_F = null;

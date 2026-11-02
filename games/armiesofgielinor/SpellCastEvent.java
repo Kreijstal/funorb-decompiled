@@ -39,7 +39,7 @@ final class SpellCastEvent extends GameEvent {
         int var3 = 0;
         String stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        nr stackIn_17_0 = null;
+        NineSliceFrame stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -49,7 +49,7 @@ final class SpellCastEvent extends GameEvent {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        nr var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -86,7 +86,7 @@ final class SpellCastEvent extends GameEvent {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((byte) -111, (FullscreenFocusCanvas.field_b << 1) + jg.field_k, var8 - LoginForm.field_E, (LoginForm.field_E << 1) + var7, var2);
+                var9.drawFrame((byte) -111, (FullscreenFocusCanvas.field_b << 1) + jg.field_k, var8 - LoginForm.field_E, (LoginForm.field_E << 1) + var7, var2);
               }
               var2 = var2 + FullscreenFocusCanvas.field_b;
             }
@@ -160,11 +160,11 @@ final class SpellCastEvent extends GameEvent {
         if (!CombatPresentation.field_M.ensureGroupAvailableByName(28979, "commonui")) {
           return QuickChatPhraseRepository.field_a + " - " + CombatPresentation.field_M.getGroupProgressByName("commonui", (byte) 122) + "%";
         }
-        if (!h.field_g.ensureIndex((byte) 82)) {
+        if (!LoginKind.field_g.ensureIndex((byte) 82)) {
           return ProgressDialog.field_eb;
         }
-        if (!h.field_g.ensureAllGroupsAvailable(param0 ^ 20707)) {
-          return DateInputWidget.field_G + " - " + h.field_g.getOverallProgress(0) + "%";
+        if (!LoginKind.field_g.ensureAllGroupsAvailable(param0 ^ 20707)) {
+          return DateInputWidget.field_G + " - " + LoginKind.field_g.getOverallProgress(0) + "%";
         }
         return fm.field_c;
     }

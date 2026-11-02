@@ -3248,7 +3248,7 @@ final class Battlefield {
           this.collectedManaTarget = this.f((byte) -82);
           this.recountStructures(obfuscationGuard ^ 2);
           this.refreshTileEffectsNear(0, 0, obfuscationGuard + 0, -1);
-          fl.recomputeClientStateChecksum(this, -118);
+          WidgetTheme.recomputeClientStateChecksum(this, -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3340,7 +3340,7 @@ final class Battlefield {
         var11 = var12;
         var7 = var11;
         var8 = WhirlpoolHasher.unitDefinitions[unitType][1];
-        var9 = b.getUnitUnlockOrdinal(false, unitType);
+        var9 = SpriteSheetDecoder.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
           0 == (1 << var9 & this.godUnitUnlockMasks[playerId][var8 + 1])) {
@@ -4379,7 +4379,7 @@ final class Battlefield {
         var10 = var11;
         var6 = var10;
         var7 = WhirlpoolHasher.unitDefinitions[unitType][1];
-        var8 = b.getUnitUnlockOrdinal(false, unitType);
+        var8 = SpriteSheetDecoder.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
           0 == (this.godUnitUnlockMasks[playerId][1 + var7] & 1 << var8)) {
@@ -5170,7 +5170,7 @@ final class Battlefield {
           }
           var15 = "\ncx: " + param8 + ", cy: " + param4 + ", ax: " + param1 + ", ay: " + param6 + ", adam: " + param2 + ", ddam: " + param9 + ", creature: " + param10 + ", attdie: " + param3 + ", defdie: " + param11;
           if (this.field_F) {
-            af.a((Throwable) null, 115, var16 + var15);
+            LoginCredentials.a((Throwable) null, 115, var16 + var15);
             return true;
           }
           this.field_o = true;
@@ -5329,9 +5329,9 @@ final class Battlefield {
         int var2 = 1 + this.field_vb;
         if (this.mapSizeSetting < 0 ||
           ArrayWidgetContainer.field_G.length <= this.mapSizeSetting) {
-          return var2 * nr.field_a[0];
+          return var2 * NineSliceFrame.field_a[0];
         }
-        int var3 = nr.field_a[this.mapSizeSetting] * var2;
+        int var3 = NineSliceFrame.field_a[this.mapSizeSetting] * var2;
         if (this.campaignMission != null) {
           var3 = 9999;
         }
@@ -5806,11 +5806,11 @@ final class Battlefield {
         return var3;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_pb = null;
         field_nb = null;
         field_q = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_nb = (String) null;
         }
     }

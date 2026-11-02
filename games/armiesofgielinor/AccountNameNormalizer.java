@@ -88,10 +88,10 @@ final class AccountNameNormalizer {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_b = null;
-        if (param0 != -13) {
+        if (obfuscationGuard != -13) {
           return;
         }
         field_c = null;

@@ -182,7 +182,7 @@ abstract class TileableNoiseGenerator {
               stackIn_35_0 = pu.field_k[0][1 + choiceState];
               stackIn_36_1 = (controlsEditable != 0);
               stackIn_35_0.inputEnabled = stackIn_36_1;
-              if (!fh.field_c &&
+              if (!GrowableIntArray.field_c &&
                 choiceState == 3) {
                 pu.field_k[0][choiceState + 1].inputEnabled = false;
               }
@@ -431,7 +431,7 @@ abstract class TileableNoiseGenerator {
                 0 <= choiceValue &&
                 null != fs.field_d && (!filterMode ||
                 !SpellCastAction.field_s)) {
-                jp.field_a = false;
+                ArchiveLoadSequence.field_a = false;
                 fc.field_a = false;
                 if (null == TeleportAction.field_B) {
                   TeleportAction.field_B = new byte[tq.gameOptionCount];
@@ -555,7 +555,7 @@ abstract class TileableNoiseGenerator {
                 if (controlsEditable != 0 &&
                   !fc.field_a) {
                   restrictionMessageReference = null;
-                  if (jp.field_a) {
+                  if (ArchiveLoadSequence.field_a) {
                     restrictionMessageReference = "</col>" + ep.field_h + "<col=A00000>";
                     var25Lifetime1 = restrictionMessageReference;
                     restrictionMessageReference = var25Lifetime1;
@@ -651,11 +651,11 @@ abstract class TileableNoiseGenerator {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
         smokeSprites = null;
         field_l = null;
-        if (param0 >= -70) {
+        if (obfuscationGuard >= -70) {
           return;
         }
         field_h = null;
@@ -834,8 +834,8 @@ abstract class TileableNoiseGenerator {
           !(pointerY >= ProgressMessageDialog.field_pb + rs.field_o.pixelHeight)) {
           return 0;
         }
-        if (pointerX >= BattlefieldTheme.field_h && BattlefieldTheme.field_h + rs.field_o.pixelWidth > pointerX && ug.field_a <= pointerY &&
-          !(rs.field_o.pixelHeight + ug.field_a <= pointerY)) {
+        if (pointerX >= BattlefieldTheme.field_h && BattlefieldTheme.field_h + rs.field_o.pixelWidth > pointerX && ProxyAuthenticationRequiredException.field_a <= pointerY &&
+          !(rs.field_o.pixelHeight + ProxyAuthenticationRequiredException.field_a <= pointerY)) {
           return 1;
         }
         return -1;

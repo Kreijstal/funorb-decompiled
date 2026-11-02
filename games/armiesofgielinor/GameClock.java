@@ -13,11 +13,11 @@ abstract class GameClock {
     static String field_f;
     static NodeDeque lobbyRoomOrder;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_i = null;
         field_b = null;
         field_e = null;
-        if (param0 == -108) {
+        if (obfuscationGuard == -108) {
           field_c = null;
           loginProgressDialog = null;
           field_d = null;

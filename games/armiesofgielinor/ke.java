@@ -26,11 +26,11 @@ final class ke {
           if (param0 != 90) {
             field_c = (ClientUiComponent) null;
           }
-          vi.field_a = new PcmSample[km.field_j.length];
+          vi.field_a = new PcmSample[ProjectileEffect.field_j.length];
           var7 = "";
           var2 = var7;
-          for (var3 = 0; var3 < km.field_j.length; var3++) {
-            var4 = km.field_j[var3];
+          for (var3 = 0; var3 < ProjectileEffect.field_j.length; var3++) {
+            var4 = ProjectileEffect.field_j[var3];
             var5 = param1.getSoundEffectByName(var4, (byte) -97, var7);
             vi.field_a[var3] = var5;
           }
@@ -49,11 +49,11 @@ final class ke {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
         field_d = null;
         field_b = (boolean[][]) null;
-        int var1 = 77 % ((5 - param0) / 39);
+        int var1 = 77 % ((5 - obfuscationGuard) / 39);
         field_c = null;
         field_f = null;
     }

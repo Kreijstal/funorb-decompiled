@@ -10,8 +10,8 @@ final class ab {
     static QuickChatCommandDefinition field_d;
     static String field_e;
 
-    public static void a(byte param0) {
-        if (param0 != 32) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != 32) {
           field_d = (QuickChatCommandDefinition) null;
         }
         field_b = null;
@@ -81,7 +81,7 @@ final class ab {
             var4_int = var4_int >> 1;
           }
           if (param3) {
-            ab.a((byte) 89);
+            ab.releaseStatics((byte) 89);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

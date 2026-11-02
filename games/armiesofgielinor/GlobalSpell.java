@@ -110,14 +110,14 @@ final class GlobalSpell extends Spell {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_i = null;
         field_e = null;
         field_l = null;
         field_n = null;
         field_m = null;
         field_j = null;
-        if (param0 == 103) {
+        if (obfuscationGuard == 103) {
           field_k = null;
           field_f = null;
           return;

@@ -77,7 +77,7 @@ final class IterableDualNodeDeque implements Iterable {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (bi.a(param0, -31000)) {
+          if (RasterImageSurface.a(param0, -31000)) {
             return true;
           }
           if (param0 != 45 &&
@@ -92,7 +92,7 @@ final class IterableDualNodeDeque implements Iterable {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (bi.a(param0, -31000)) {
+        if (RasterImageSurface.a(param0, -31000)) {
           return true;
         }
         if (param0 == 45) {

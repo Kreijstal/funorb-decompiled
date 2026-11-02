@@ -24,9 +24,9 @@ final class lb {
         return RadialSummonMenu.field_e;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
-        if (param0 == 13916) {
+        if (obfuscationGuard == 13916) {
           field_c = null;
           field_e = null;
           field_b = null;

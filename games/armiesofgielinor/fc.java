@@ -16,9 +16,9 @@ final class fc implements WidgetPainter {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 >= -86) {
-          fc.a(115);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -86) {
+          fc.releaseStatics(115);
           field_c = null;
           return;
         }

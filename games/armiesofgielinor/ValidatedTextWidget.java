@@ -26,7 +26,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (this.tooltipText == null) {
           return null;
         }
-        ip.a(ko.pointerY, this.width - this.pointerLocalX + AiPlanningStrategy.pointerX, (byte) 113);
+        WidgetStateStyle.a(ko.pointerY, this.width - this.pointerLocalX + AiPlanningStrategy.pointerX, (byte) 113);
         if (obfuscationGuard != 21384) {
           return (String) null;
         }
@@ -137,10 +137,10 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_X = null;
         field_Y = null;
-        int var1 = 21 % ((param0 + 67) / 48);
+        int var1 = 21 % ((obfuscationGuard + 67) / 48);
     }
 
     static {

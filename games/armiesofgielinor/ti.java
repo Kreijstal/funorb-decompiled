@@ -5,22 +5,22 @@ final class ti {
     static String field_a;
     static String field_b;
 
-    final static du a(String param0, byte param1, int param2) {
+    final static SocketFactory a(String param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        pc var4 = null;
-        pc stackIn_1_0 = null;
+        ProxySocketFactory var4 = null;
+        ProxySocketFactory stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 104 % ((16 - param1) / 61);
-          var4 = new pc();
-          ((du) ((Object) var4)).field_a = param0;
-          ((du) ((Object) var4)).field_c = param2;
+          var4 = new ProxySocketFactory();
+          ((SocketFactory) ((Object) var4)).host = param0;
+          ((SocketFactory) ((Object) var4)).port = param2;
           stackIn_1_0 = var4;
-          return (du) ((Object) stackIn_1_0);
+          return (SocketFactory) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -35,9 +35,9 @@ final class ti {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_b = null;
-        if (param0 <= 17) {
+        if (obfuscationGuard <= 17) {
           return;
         }
         field_a = null;

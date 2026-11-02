@@ -589,10 +589,10 @@ final class UnitSpell extends Spell {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_e = null;
-        if (param0 != 6) {
+        if (obfuscationGuard != 6) {
           field_h = (String) null;
         }
     }

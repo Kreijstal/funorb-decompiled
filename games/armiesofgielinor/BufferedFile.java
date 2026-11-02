@@ -39,7 +39,7 @@ final class BufferedFile {
         if (param4 != -1208926000) {
           field_a = (String) null;
         }
-        if (param1 < el.field_f[param0][param3]) {
+        if (param1 < MouseWheelSource.field_f[param0][param3]) {
           return false;
         }
         if (ve.field_a[param0][param3] < 0) {
@@ -182,7 +182,7 @@ final class BufferedFile {
             stackIn_2_0 = (AntialiasedBitmapFont) null;
             return stackIn_2_0;
           }
-          if (!kp.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {
             return null;
           }
           stackIn_7_0 = lq.a(param2.getFile((byte) 103, param4, param1), 0);
@@ -207,8 +207,8 @@ final class BufferedFile {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 <= 40) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard <= 40) {
           field_k = (RgbSprite[]) null;
         }
         field_a = null;
@@ -234,7 +234,7 @@ final class BufferedFile {
 
     final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
-          BufferedFile.b((byte) 15);
+          BufferedFile.releaseStatics((byte) 15);
         }
         return CampaignMenuEntry.a(param1, 1, param0, (byte) 58, param3);
     }

@@ -278,7 +278,7 @@ final class DamageEvent extends GameEvent {
             stackIn_7_0 = PopupPresentation.field_l;
             return stackIn_7_0;
           }
-          friend = lg.findFriend(name, (byte) -34);
+          friend = GzipDecoder.findFriend(name, (byte) -34);
           if (friend == null) {
             stackIn_10_0 = EmailCheckResult.a(4800, TaggedMapData.field_d, new String[]{name});
             return stackIn_10_0;
@@ -321,8 +321,8 @@ final class DamageEvent extends GameEvent {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 != -26) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -26) {
           return;
         }
         field_y = null;

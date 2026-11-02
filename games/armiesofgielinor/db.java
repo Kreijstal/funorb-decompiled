@@ -11,8 +11,8 @@ final class db {
     static String field_d;
     static String field_b;
 
-    public static void a(int param0) {
-        if (param0 == -3) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard == -3) {
           field_h = null;
           field_c = null;
           validationStatusIcons = null;
@@ -130,7 +130,7 @@ final class db {
           }
           ignoredAccount = (SocialListEntry) (bk.ignoredAccountsByName.get((byte) -27, (long)nameKey.hashCode()));
           if (obfuscationGuard > -40) {
-            db.a(-88);
+            db.releaseStatics(-88);
           }
           while (true) {
             if (ignoredAccount == null) {
@@ -167,7 +167,7 @@ final class db {
         if (!param0) {
           return -83;
         }
-        return param1 + (so.field_b.field_a - rs.field_k >> 1);
+        return param1 + (so.field_b.width - rs.field_k >> 1);
     }
 
     static {

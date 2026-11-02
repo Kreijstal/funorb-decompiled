@@ -43,8 +43,8 @@ final class LobbyRoom extends ClientUiComponent {
     ClientUiComponent ratedIcon;
     ClientUiComponent field_Ib;
 
-    public static void e(byte param0) {
-        if (param0 > -52) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard > -52) {
           return;
         }
         field_Jb = null;

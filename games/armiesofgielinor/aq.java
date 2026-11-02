@@ -5,9 +5,9 @@ final class aq {
     static String field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
-        int var1 = -103 / ((22 - param0) / 40);
+        int var1 = -103 / ((22 - obfuscationGuard) / 40);
     }
 
     static {

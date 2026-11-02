@@ -342,9 +342,9 @@ final class OwnerChangeEvent extends GameEvent {
         return var3Lifetime1;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         quickChatMenuHost = null;
-        if (param0 != -19269) {
+        if (obfuscationGuard != -19269) {
           return;
         }
         field_y = null;

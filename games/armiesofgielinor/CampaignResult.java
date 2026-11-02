@@ -61,8 +61,8 @@ final class CampaignResult {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 >= -113) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard >= -113) {
           CampaignResult.a(3);
           field_d = null;
           field_a = null;

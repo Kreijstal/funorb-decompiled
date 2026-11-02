@@ -69,9 +69,9 @@ final class ConsoleValue {
         return ((Integer) (this.payload)).intValue();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
-        if (param0 != -114) {
+        if (obfuscationGuard != -114) {
           return;
         }
         field_d = null;

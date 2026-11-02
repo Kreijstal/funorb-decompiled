@@ -19,7 +19,7 @@ abstract class ConsoleCommand extends DualLinkedNode {
 
     abstract ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments);
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_D = null;
         field_v = (int[][]) null;
         field_y = null;
@@ -27,16 +27,16 @@ abstract class ConsoleCommand extends DualLinkedNode {
         field_w = null;
         field_z = null;
         field_x = null;
-        if (param0 <= 68) {
+        if (obfuscationGuard <= 68) {
           field_w = (String) null;
         }
     }
 
-    final static void a(int param0, byte param1, int param2, nr param3) {
+    final static void a(int param0, byte param1, int param2, NineSliceFrame param3) {
         try {
           if (param1 != 96) {
-            nr var5 = (nr) null;
-            ConsoleCommand.a(125, (byte) -9, 20, (nr) null);
+            NineSliceFrame var5 = (NineSliceFrame) null;
+            ConsoleCommand.a(125, (byte) -9, 20, (NineSliceFrame) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dr.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

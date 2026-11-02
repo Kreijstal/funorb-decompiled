@@ -444,10 +444,10 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_p = null;
-        if (param0 <= 45) {
-          PopupPresentation.d((byte) 124);
+        if (obfuscationGuard <= 45) {
+          PopupPresentation.releaseStatics((byte) 124);
         }
         field_j = null;
         field_c = null;
@@ -591,7 +591,7 @@ final class PopupPresentation implements EventPresentation {
         boolean decompiledFrameRemainder0 = true;
         if (StrongCacheEntry.field_E >= 20 &&
           AccountRequestResult.a((byte) 28) && (!(SpriteControlNode.field_n > 0) ||
-          du.c(10))) {
+          SocketFactory.c(10))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }

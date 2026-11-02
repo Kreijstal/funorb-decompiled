@@ -19,7 +19,7 @@ final class ji {
           if (obfuscationGuard != 0) {
             field_c = (int[]) null;
           }
-          if (mh.accountNameCheckState == du.nameCheckPending) {
+          if (mh.accountNameCheckState == SocketFactory.nameCheckPending) {
             pendingResult = null;
             return (AccountRequestResult) (pendingResult);
           }
@@ -30,7 +30,7 @@ final class ji {
             return completedResult;
           }
           AgeValidator.requestedAccountName = name;
-          mh.accountNameCheckState = du.nameCheckPending;
+          mh.accountNameCheckState = SocketFactory.nameCheckPending;
           EmailValidator.accountNameCheckResult = null;
           queuedResult = null;
           return (AccountRequestResult) (queuedResult);
@@ -62,11 +62,11 @@ final class ji {
         return VertexNormal.field_f;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_b = (String) null;
         }
     }

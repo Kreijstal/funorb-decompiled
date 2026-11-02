@@ -15,9 +15,9 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
     private int maximumDropdownHeight;
     ScrollWidgetContainer dropdownViewport;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_M = null;
-        if (param0 != -11835) {
+        if (obfuscationGuard != -11835) {
           return;
         }
         field_P = null;
@@ -99,7 +99,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           ((DropdownSelectionListener) ((Object) this.listener)).selectionChanged(-109, this);
         }
         if (param0 <= 4) {
-          DropdownSelector.a(-40);
+          DropdownSelector.releaseStatics(-40);
         }
     }
 
@@ -265,7 +265,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
             if (OwnerChangeEvent.field_B) {
               UpkeepEvent.h(-78);
-              ws.b(true);
+              DialWidget.b(true);
               if (ClientContextMenu.field_a == 9 &&
                 !MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
                 ClientContextMenu.field_a = 0;
@@ -278,9 +278,9 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             de.field_a = true;
           }
           if (!ve.field_b &&
-            !af.field_c) {
+            !LoginCredentials.field_c) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 75);
-            af.field_c = true;
+            LoginCredentials.field_c = true;
           }
           var1_int = -118 / ((16 - param0) / 35);
           if (!UnitAnimationPreview.field_h) {
@@ -533,7 +533,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         return super.getTooltipText(obfuscationGuard + 0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, BitmapFont param19) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, NineSliceFrame param12, int param13, NineSliceFrame param14, int param15, int param16, int param17, NineSliceFrame param18, BitmapFont param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -34,8 +34,8 @@ final class MapRepository {
     }
 
     final static void a(boolean param0) {
-        fh.field_i = false;
-        ac.field_n = false;
+        GrowableIntArray.field_i = false;
+        ManaStarParticle.field_n = false;
         if (!param0) {
           return;
         }
@@ -401,7 +401,7 @@ final class MapRepository {
                 var26 = param0.field_n[var23];
                 TextLayout.field_c[var23] = (var18 * var26 + (var12 * var24 + var15 * var25) >> 16) + var9;
                 ji.field_c[var23] = var10 + (var13 * var24 + (var16 * var25 + var26 * var19) >> 16);
-                fl.field_f[var23] = (var26 * var20 + var24 * var14 + var25 * var17 >> 16) + var11;
+                WidgetTheme.field_f[var23] = (var26 * var20 + var24 * var14 + var25 * var17 >> 16) + var11;
                 var24 = param0.field_m[var23];
                 var25 = param0.field_F[var23];
                 var26 = param0.field_I[var23];

@@ -7,11 +7,11 @@ final class jl {
     static ClientUiComponent field_b;
     static long field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_b = null;
-        if (param0 > -124) {
-          jl.a(27);
+        if (obfuscationGuard > -124) {
+          jl.releaseStatics(27);
           field_c = (String[][]) null;
           return;
         }

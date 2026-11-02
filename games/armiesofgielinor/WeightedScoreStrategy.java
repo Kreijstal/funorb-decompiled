@@ -112,7 +112,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           }
           var3 = (AiActionCandidate) (this.candidates.next((byte) 123));
         }
-        af.a((Throwable) null, -114, "ran out of orders! total " + this.totalWeight + ", num " + this.candidateCount + " w " + var2);
+        LoginCredentials.a((Throwable) null, -114, "ran out of orders! total " + this.totalWeight + ", num " + this.candidateCount + " w " + var2);
         return null;
     }
 

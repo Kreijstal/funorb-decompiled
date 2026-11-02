@@ -181,10 +181,10 @@ final class NodeHashIterator implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         field_i = null;
-        int var1 = -28 % ((param0 + 69) / 51);
+        int var1 = -28 % ((obfuscationGuard + 69) / 51);
         field_f = null;
         field_e = null;
         field_h = null;

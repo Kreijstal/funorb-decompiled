@@ -70,7 +70,7 @@ final class vr {
             var10++;
           }
           LinkButtonPainter.field_f.selectTheme(0, param1 - 18);
-          so.field_b.a(5605);
+          so.field_b.bindRasterTarget(5605);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,8 +86,8 @@ final class vr {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 != -37) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -37) {
           field_a = (int[]) null;
           field_a = null;
           return;

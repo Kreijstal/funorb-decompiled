@@ -30,7 +30,7 @@ final class ConsoleParseException extends Exception {
           return;
         }
         try {
-          if (0 == we.field_f.pressedButton) {
+          if (0 == ArchiveLoadStep.field_f.pressedButton) {
           } else {
             if (NodeIterator.field_a) {
             } else {

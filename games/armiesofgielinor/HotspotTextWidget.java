@@ -172,10 +172,10 @@ class HotspotTextWidget extends InteractiveWidget {
         this.rebuildHotspots(-128);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_N = null;
         field_O = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_N = (rn) null;
         }
         decodedChatResponsePhraseIds = null;

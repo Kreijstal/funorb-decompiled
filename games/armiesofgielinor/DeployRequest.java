@@ -54,17 +54,17 @@ final class DeployRequest extends ActionRequest {
         }
     }
 
-    final static b b(int param0, int param1) {
-        b var2 = null;
-        b var2Lifetime1;
+    final static SpriteSheetDecoder b(int param0, int param1) {
+        SpriteSheetDecoder var2 = null;
+        SpriteSheetDecoder var2Lifetime1;
         if (param0 == -1) {
-          var2 = new b();
+          var2 = new SpriteSheetDecoder();
           LabeledWidgetContainer.field_O.addLast((byte) -119, (IntrusiveNode) (var2));
           RegionAnchor.a(param1, (byte) -32);
           return var2;
         }
         field_w = (String) null;
-        var2Lifetime1 = new b();
+        var2Lifetime1 = new SpriteSheetDecoder();
         LabeledWidgetContainer.field_O.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
         RegionAnchor.a(param1, (byte) -32);
         return var2Lifetime1;
@@ -99,10 +99,10 @@ final class DeployRequest extends ActionRequest {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_x = null;
         field_B = null;
-        int var1 = 117 % ((-27 - param0) / 51);
+        int var1 = 117 % ((-27 - obfuscationGuard) / 51);
         field_v = null;
         field_w = null;
     }

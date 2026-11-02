@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mu {
-    static cg field_a;
+    static ScreenWipeTransition field_a;
     static java.math.BigInteger field_c;
     static IndexedSprite[][] field_g;
     static int field_d;
@@ -53,7 +53,7 @@ final class mu {
           OwnerChangeEvent.quickChatMenuHost = new ClientUiComponent(0L, (ClientUiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            af.a((Throwable) null, -116, "QC1");
+            LoginCredentials.a((Throwable) null, -116, "QC1");
             return;
           }
           param2.discardPackedGroups = false;
@@ -63,7 +63,7 @@ final class mu {
           var4 = DisplayModeOptionPainter.findQuickChatRootCategory((byte) -83);
           if (var4 == null) {
             var11 = (Throwable) null;
-            af.a((Throwable) null, 124, "QC2");
+            LoginCredentials.a((Throwable) null, 124, "QC2");
             return;
           }
           MapLayout.addCustomQuickChatOption(var4, 19003);
@@ -103,10 +103,10 @@ final class mu {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = (IndexedSprite[][]) null;
         field_c = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_b = null;
           field_a = null;
           field_e = null;

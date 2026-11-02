@@ -11,12 +11,12 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
     static String decodedChatDisplayName;
     static String field_J;
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         decodedChatDisplayName = null;
         chatRecipientName = null;
         activeQuickChatMenu = null;
-        if (param0 != -15) {
-          RegistrationAgreementPane.k(71);
+        if (obfuscationGuard != -15) {
+          RegistrationAgreementPane.releaseStatics(71);
           field_J = null;
           return;
         }
@@ -166,7 +166,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           InteractiveWidget.field_C = DualNodeHashTable.getNominalTickRate(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);
           jj.a(-93, param0);
-          lg.a(32381, param0);
+          GzipDecoder.a(32381, param0);
           DropdownArrowPainter.a(54);
           SpriteDropdownMenu.b(true);
           if (param1 <= 70) {

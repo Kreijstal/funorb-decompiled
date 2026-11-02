@@ -204,10 +204,10 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_o = null;
         field_m = null;
-        int var1 = 53 / ((-78 - param0) / 43);
+        int var1 = 53 / ((-78 - obfuscationGuard) / 43);
         field_y = null;
     }
 
@@ -314,7 +314,7 @@ class Widget extends IntrusiveNode {
           regionExit1: {
             var5 = this.isFocused(false) ? 1 : 0;
             if (param0) {
-              if (el.field_d != 0) {
+              if (MouseWheelSource.field_d != 0) {
                 if (var5 == 0) {
                   if (DeployEvent.pointerPressButton != 0) {
                     if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
@@ -385,7 +385,7 @@ class Widget extends IntrusiveNode {
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
-                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
+                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
               }
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
@@ -458,7 +458,7 @@ class Widget extends IntrusiveNode {
           field_n = 69;
           var5 = this.isFocused(false) ? 1 : 0;
           if (param0) {
-            if (el.field_d == 0) {
+            if (MouseWheelSource.field_d == 0) {
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 != 0) {
@@ -500,7 +500,7 @@ class Widget extends IntrusiveNode {
               return param0;
             }
             if (var5 != 0) {
-              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
+              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
             }
             if (DeployEvent.pointerPressButton == 0) {
               if (ProgressMessageDialog.pointerButton != 0) {
@@ -822,7 +822,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        t.field_c.a(cc.field_b, -127, var5, lq.field_e);
+        t.field_c.drawTooltip(cc.field_b, -127, var5, lq.field_e);
     }
 
     protected Widget() {

@@ -106,11 +106,11 @@ final class s {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         quickChatArrow = null;
         field_e = null;
-        int var1 = -122 / ((param0 + 19) / 34);
+        int var1 = -122 / ((obfuscationGuard + 19) / 34);
         field_b = null;
     }
 

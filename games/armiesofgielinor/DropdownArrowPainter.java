@@ -81,8 +81,8 @@ final class DropdownArrowPainter implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = -29 / ((13 - param0) / 56);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = -29 / ((13 - obfuscationGuard) / 56);
         field_c = null;
     }
 

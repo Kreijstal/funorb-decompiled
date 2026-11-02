@@ -87,7 +87,7 @@ final class IconLabelControl extends ClientUiComponent {
           if (null != var45.field_K &&
             var45.field_E > 1) {
             var61 = var45.field_K;
-            el.a((byte) -105, var61, jp.field_g, 0, 0);
+            MouseWheelSource.a((byte) -105, var61, ArchiveLoadSequence.field_g, 0, 0);
           } else {
             ListMissionsConsoleCommand.e((byte) -63);
           }
@@ -287,8 +287,8 @@ final class IconLabelControl extends ClientUiComponent {
         }
     }
 
-    public static void k(int param0) {
-        if (param0 != 21755) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 21755) {
           field_Lb = (ClientUiComponent) null;
         }
         field_Lb = null;

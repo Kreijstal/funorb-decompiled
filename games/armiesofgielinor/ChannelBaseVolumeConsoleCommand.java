@@ -12,14 +12,14 @@ final class ChannelBaseVolumeConsoleCommand extends ConsoleCommand {
     static long localAccountId;
     static ResourceArchive field_M;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_G = null;
         field_F = null;
         field_K = null;
         field_J = null;
         field_L = null;
         field_I = null;
-        if (param0 == 21336) {
+        if (obfuscationGuard == 21336) {
           field_M = null;
           return;
         }

@@ -133,11 +133,11 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         LobbyPlayer.d((byte) -24);
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_lb = null;
         modelProjectionCamera = null;
         field_rb = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_kb = null;
@@ -217,7 +217,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             null != ToggleWidget.currentRoom) {
             var5 = 1;
           }
-          if (kp.getChatFilter(var5, param1 ^ -97) == 2) {
+          if (MarkerSliderPainter.getChatFilter(var5, param1 ^ -97) == 2) {
             FullscreenStatusDialog.setChatFilter(1, false, var5, param2);
           }
           it.writeChatMessage(-1, -83, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, param0, var4_ref_String);
@@ -253,7 +253,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         var18 = var16;
         if (rs.outgoingChatChannel == 2) {
           var56 = (CharSequence) ((Object) RegistrationAgreementPane.chatRecipientName);
-          var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ug.a(16, var56)});
+          var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ProxyAuthenticationRequiredException.a(16, var56)});
           var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var16});
           var9 = IntrusiveNode.field_e.textWidth(var20);
           var10 = IntrusiveNode.field_e.textWidth(var8);
@@ -333,7 +333,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (obfuscationGuard != 11) {
-            ProgressMessageDialog.n(46);
+            ProgressMessageDialog.releaseStatics(46);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

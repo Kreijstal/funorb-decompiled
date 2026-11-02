@@ -9,10 +9,10 @@ final class StateChangeMarker extends PreparedAction {
         this.actingPlayer = actingPlayer;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_t = null;
         field_s = null;
-        int var1 = -80 / ((48 - param0) / 47);
+        int var1 = -80 / ((48 - obfuscationGuard) / 47);
     }
 
     final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {

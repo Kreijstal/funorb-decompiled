@@ -99,8 +99,8 @@ final class UnitModelViewer {
         if (obfuscationGuard) {
           this.frameSprites = (RgbSprite[]) null;
         }
-        int hintCenterX = so.field_b.field_a >> 1;
-        int hintBaselineY = -this.font.maxAscent + (so.field_b.field_g - (this.font.maxDescent << 1));
+        int hintCenterX = so.field_b.width >> 1;
+        int hintBaselineY = -this.font.maxAscent + (so.field_b.height - (this.font.maxDescent << 1));
         int hintColour = this.colours[0];
         this.font.drawCentered("Press Esc to return to the main menu", hintCenterX, hintBaselineY, hintColour, -1);
     }
@@ -137,7 +137,7 @@ final class UnitModelViewer {
         }
         if (this.unitDropdown.hasInputChanged((byte) 111) ||
           this.animationDropdown.hasInputChanged((byte) 74)) {
-          this.layoutControls(0, so.field_b.field_a >> 1, so.field_b.field_a >> 1, so.field_b.field_g, 0);
+          this.layoutControls(0, so.field_b.width >> 1, so.field_b.width >> 1, so.field_b.height, 0);
           return;
         }
     }
@@ -180,12 +180,12 @@ final class UnitModelViewer {
         return param1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_o = (int[][]) null;
         field_w = null;
         field_d = null;
-        if (param0 != 1017) {
-          UnitModelViewer.b(44);
+        if (obfuscationGuard != 1017) {
+          UnitModelViewer.releaseStatics(44);
         }
     }
 
@@ -332,9 +332,9 @@ final class UnitModelViewer {
     }
 
     private final void initializePreview(int heightMultiplier) {
-        this.previewCenterY = heightMultiplier * (so.field_b.field_g >> 2);
+        this.previewCenterY = heightMultiplier * (so.field_b.height >> 2);
         this.previewYaw = 0;
-        this.previewCenterX = so.field_b.field_a / 3;
+        this.previewCenterX = so.field_b.width / 3;
         this.preview = new UnitAnimationPreview();
     }
 
@@ -421,7 +421,7 @@ final class UnitModelViewer {
           this.createControls((byte) -127);
           this.initializePreview(3);
           this.selectUnit(initialUnitType, (byte) 39);
-          this.layoutControls(0, so.field_b.field_a >> 1, so.field_b.field_a >> 1, so.field_b.field_g, 0);
+          this.layoutControls(0, so.field_b.width >> 1, so.field_b.width >> 1, so.field_b.height, 0);
           qt.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

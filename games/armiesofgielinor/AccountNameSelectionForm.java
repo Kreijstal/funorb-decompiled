@@ -20,7 +20,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         Widget var2 = new Widget(BattleTutorial.field_u, var1, (WidgetListener) null);
         this.submitButton = new InteractiveWidget(LineOfSightGrid.field_f, (WidgetListener) null);
-        this.cancelButton = new InteractiveWidget(ac.field_s, (WidgetListener) null);
+        this.cancelButton = new InteractiveWidget(ManaStarParticle.field_s, (WidgetListener) null);
         this.nameInput.tooltipText = DualLinkedNode.field_m;
         this.nameInput.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.nameInput));
         this.submitButton.enabled = false;
@@ -390,8 +390,8 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         }
     }
 
-    public static void f(byte param0) {
-        if (param0 == -117) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard == -117) {
           field_J = null;
           field_K = null;
           field_N = null;

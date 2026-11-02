@@ -219,7 +219,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             DualNodeDeque.field_c = 0;
           }
           if (param1 != -10) {
-            mu.field_a = new cg();
+            mu.field_a = new ScreenWipeTransition();
           }
           GameClock.field_j = 0;
           if (MusicCrossfadeStream.a(jt.field_a, true)) {
@@ -230,7 +230,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
           if (param1 != 23) {
             if (param1 != -10) {
-              mu.field_a = new cg();
+              mu.field_a = new ScreenWipeTransition();
             }
             GameClock.field_j = 0;
             if (MusicCrossfadeStream.a(jt.field_a, true)) {
@@ -239,7 +239,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             DualNodeDeque.field_c = 0;
             if (param1 != -10) {
-              mu.field_a = new cg();
+              mu.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               if (MusicCrossfadeStream.a(jt.field_a, true)) {
                 ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);

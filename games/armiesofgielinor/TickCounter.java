@@ -529,7 +529,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "text_campaign_pleaselogin_free");
                 if (null != var2) {
-                  bi.field_e = uu.a(var2, (byte) 4);
+                  RasterImageSurface.field_e = uu.a(var2, (byte) 4);
                 }
                 var2 = fk.a(false, "TXT_REQUIRES");
                 if (null != var2) {
@@ -1223,7 +1223,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_UNITTOUGHEST");
                 if (null != var2) {
-                  we.field_h = uu.a(var2, (byte) 115);
+                  ArchiveLoadStep.field_h = uu.a(var2, (byte) 115);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_KBDSUMMONER");
                 if (null != var2) {
@@ -1243,7 +1243,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MOSTUNITS");
                 if (null != var2) {
-                  pi.field_P = uu.a(var2, (byte) 5);
+                  MarkerSliderWidget.field_P = uu.a(var2, (byte) 5);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MOSTHONOURABLE");
                 if (var2 != null) {
@@ -1275,7 +1275,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "REPLAY_MISSION");
                 if (var2 != null) {
-                  pn.field_k = uu.a(var2, (byte) -109);
+                  GradientFrame.field_k = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "REWARD");
                 if (null != var2) {
@@ -1347,19 +1347,19 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "mapsizes,0");
                 if (var2 != null) {
-                  h.field_e[0] = uu.a(var2, (byte) 64);
+                  LoginKind.field_e[0] = uu.a(var2, (byte) 64);
                 }
                 var2 = fk.a(false, "mapsizes,1");
                 if (var2 != null) {
-                  h.field_e[1] = uu.a(var2, (byte) 16);
+                  LoginKind.field_e[1] = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "mapsizes,2");
                 if (null != var2) {
-                  h.field_e[2] = uu.a(var2, (byte) 87);
+                  LoginKind.field_e[2] = uu.a(var2, (byte) 87);
                 }
                 var2 = fk.a(false, "mapsizes,3");
                 if (var2 != null) {
-                  h.field_e[3] = uu.a(var2, (byte) -119);
+                  LoginKind.field_e[3] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "godnames,0");
                 if (null != var2) {
@@ -1487,7 +1487,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "WRONG_GROUND_PORTAL");
                 if (var2 != null) {
-                  ao.field_x = uu.a(var2, (byte) -120);
+                  StatefulWidgetPainter.field_x = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "WRONG_GROUND_CANNON");
                 if (null != var2) {
@@ -1527,35 +1527,35 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUSTEXT,0");
                 if (var2 != null) {
-                  fh.field_f[0] = uu.a(var2, (byte) -96);
+                  GrowableIntArray.field_f[0] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "STATUSTEXT,1");
                 if (null != var2) {
-                  fh.field_f[1] = uu.a(var2, (byte) -101);
+                  GrowableIntArray.field_f[1] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "STATUSTEXT,2");
                 if (var2 != null) {
-                  fh.field_f[2] = uu.a(var2, (byte) -100);
+                  GrowableIntArray.field_f[2] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "STATUSTEXT,3");
                 if (var2 != null) {
-                  fh.field_f[3] = uu.a(var2, (byte) -111);
+                  GrowableIntArray.field_f[3] = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "STATUSTEXT,4");
                 if (var2 != null) {
-                  fh.field_f[4] = uu.a(var2, (byte) -99);
+                  GrowableIntArray.field_f[4] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "STATUSTEXT,5");
                 if (var2 != null) {
-                  fh.field_f[5] = uu.a(var2, (byte) 80);
+                  GrowableIntArray.field_f[5] = uu.a(var2, (byte) 80);
                 }
                 var2 = fk.a(false, "STATUSTEXT,6");
                 if (var2 != null) {
-                  fh.field_f[6] = uu.a(var2, (byte) -95);
+                  GrowableIntArray.field_f[6] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "STATUSTEXT,7");
                 if (null != var2) {
-                  fh.field_f[7] = uu.a(var2, (byte) 85);
+                  GrowableIntArray.field_f[7] = uu.a(var2, (byte) 85);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,0");
                 if (var2 != null) {
@@ -1701,7 +1701,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "BUTTON_TEAMCHATON");
                 if (var2 != null) {
-                  or.field_e = uu.a(var2, (byte) -119);
+                  DialWidgetPainter.field_e = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "BUTTON_TEAMCHATOFF");
                 if (var2 != null) {
@@ -2963,7 +2963,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "NO_PASSIVE");
                 if (null != var2) {
-                  du.field_f = uu.a(var2, (byte) -117);
+                  SocketFactory.field_f = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "passivespecials,0");
                 if (var2 != null) {
@@ -3247,7 +3247,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_SKIPBATTLES");
                 if (null != var2) {
-                  lg.field_c = uu.a(var2, (byte) 70);
+                  GzipDecoder.field_c = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "LABEL_WALKSPEED");
                 if (var2 != null) {
@@ -3299,7 +3299,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_INSTRUCTIONS");
                 if (var2 != null) {
-                  kw.field_N = uu.a(var2, (byte) 8);
+                  ValidationStatusIcon.field_N = uu.a(var2, (byte) 8);
                 }
                 var2 = fk.a(false, "LABEL_ACHIEVEMENTS");
                 if (var2 != null) {
@@ -3339,7 +3339,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_TRINKETS");
                 if (null != var2) {
-                  dd.field_g = uu.a(var2, (byte) 119);
+                  ArchiveMasterIndex.field_g = uu.a(var2, (byte) 119);
                 }
                 var2 = fk.a(false, "LABEL_RETURN_COFNIRM");
                 if (null != var2) {
@@ -3601,7 +3601,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TUTEND");
                 if (var2 != null) {
-                  ac.field_u = uu.a(var2, (byte) -120);
+                  ManaStarParticle.field_u = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "MANA_LOTS");
                 if (var2 != null) {
@@ -3609,7 +3609,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "SPELLBOOK_PURCHASE");
                 if (null != var2) {
-                  wv.field_e = uu.a(var2, (byte) -112);
+                  KeyedLoginCredentials.field_e = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "SPELLBOOK_OWNED");
                 if (var2 != null) {
@@ -4743,7 +4743,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_INVENTORY");
                 if (null != var2) {
-                  or.field_j = uu.a(var2, (byte) -114);
+                  DialWidgetPainter.field_j = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "TTREEN_EQUIPMENT");
                 if (var2 != null) {
@@ -4867,7 +4867,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_PRAYER");
                 if (var2 != null) {
-                  kp.field_j = uu.a(var2, (byte) -93);
+                  MarkerSliderPainter.field_j = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "TTREEN_TONICS");
                 if (null != var2) {
@@ -5015,7 +5015,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_TONICS");
                 if (var2 != null) {
-                  ao.field_u = uu.a(var2, (byte) 94);
+                  StatefulWidgetPainter.field_u = uu.a(var2, (byte) 94);
                 }
                 var2 = fk.a(false, "TTREED_TOXINS");
                 if (var2 != null) {
@@ -5059,7 +5059,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOPORTALS");
                 if (null != var2) {
-                  kp.field_c = uu.a(var2, (byte) 60);
+                  MarkerSliderPainter.field_c = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "TERROR_NOUNIT");
                 if (null != var2) {
@@ -5079,7 +5079,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTKQUEEN");
                 if (var2 != null) {
-                  eq.field_k = uu.a(var2, (byte) -109);
+                  PasswordLoginCredentials.field_k = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "TERROR_NOTSONGSTRESS");
                 if (var2 != null) {
@@ -5099,7 +5099,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTMOVED");
                 if (var2 != null) {
-                  eq.field_g = uu.a(var2, (byte) 108);
+                  PasswordLoginCredentials.field_g = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "TERROR_LOWLEVEL");
                 if (var2 != null) {
@@ -5528,7 +5528,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "membersExpanionTitle");
                 if (null != var2) {
-                  bi.field_c = uu.a(var2, (byte) -99);
+                  RasterImageSurface.field_c = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "PRESTIGE_LEVEL");
                 if (var2 != null) {
@@ -5729,7 +5729,7 @@ final class TickCounter {
                 }
                 if (var10 == 2) {
                   l.activeStructureSprites[17].b(param7, -40 + param3, param0, param8);
-                  mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
+                  mv.a(param7 + 20, (byte) -95, ProxyAuthenticationRequiredException.field_b + param4, var11, param3);
                   if (var11 > -1) {
                     ResourceRequest.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                   }
@@ -5737,7 +5737,7 @@ final class TickCounter {
                 }
                 if (var10 == 3) {
                   if (var11 > -1) {
-                    mv.a(param7 + 20, (byte) -74, param4 + ug.field_b, var11, param3);
+                    mv.a(param7 + 20, (byte) -74, param4 + ProxyAuthenticationRequiredException.field_b, var11, param3);
                   }
                   ResourceRequest.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                 }
@@ -5749,7 +5749,7 @@ final class TickCounter {
                     if (var11 <= -1) {
                       break regionExit1;
                     }
-                    wb.a(7816226, 21 + param7, var11, param4 + ug.field_b, param3 - 30);
+                    wb.a(7816226, 21 + param7, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 - 30);
                   }
                   if (var10 != 1 ||
                     var13 != 0) {
@@ -5766,7 +5766,7 @@ final class TickCounter {
                           if (var11 <= -1) {
                             break regionExit1;
                           }
-                          wb.a(7816226, 20 + param7, var11, param4 + ug.field_b, param3 + 10);
+                          wb.a(7816226, 20 + param7, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 + 10);
                           if (var13 == 0) {
                             break regionExit1;
                           }
@@ -5797,7 +5797,7 @@ final class TickCounter {
                     }
                     l.activeStructureSprites[var9_int % 2 + 11].b(param7, -50 + param3, param0, param8);
                     if (var11 > -1) {
-                      wb.a(7816226, param7 + 22, var11, param4 + ug.field_b, param3 + var12);
+                      wb.a(7816226, param7 + 22, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 + var12);
                     }
                   }}}
             }
@@ -5810,7 +5810,7 @@ final class TickCounter {
               var12 != 6 &&
               var12 != 2 &&
               0 != (var11 & 1)) {
-              RadialSummonItem.a(var9_int, param5 ^ 117, param3, ug.field_b, param7);
+              RadialSummonItem.a(var9_int, param5 ^ 117, param3, ProxyAuthenticationRequiredException.field_b, param7);
             }
           }
           if (param5 != 0) {

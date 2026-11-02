@@ -12,12 +12,12 @@ final class TileMetadata implements TaggedFieldReader {
     static int[] field_f;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         field_a = null;
         field_i = null;
         field_h = null;
-        if (param0 != 23582) {
+        if (obfuscationGuard != 23582) {
           field_f = (int[]) null;
         }
     }
@@ -138,7 +138,7 @@ final class TileMetadata implements TaggedFieldReader {
           LabeledWidgetContainer.field_R.draw(param1, 20);
         }
         if (param0 != 5295) {
-          TileMetadata.a(88);
+          TileMetadata.releaseStatics(88);
         }
     }
 

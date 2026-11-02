@@ -32,10 +32,10 @@ final class TelefragEvent extends GameEvent {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_y = null;
-        if (param0 != -75) {
-          TelefragEvent.g(-9);
+        if (obfuscationGuard != -75) {
+          TelefragEvent.releaseStatics(-9);
         }
     }
 
@@ -84,10 +84,10 @@ final class TelefragEvent extends GameEvent {
             this.unit.attacksRemaining = 1;
           }
           if (obfuscationGuard != -26661) {
-            TelefragEvent.g(99);
+            TelefragEvent.releaseStatics(99);
           }
           this.unit.movementSpent = true;
-          fl.recomputeClientStateChecksum(battlefield, -114);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -114);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kn.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

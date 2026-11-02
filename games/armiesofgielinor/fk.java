@@ -10,12 +10,12 @@ final class fk implements WidgetPainter {
     static int[][] matchupDamagePercent;
     static String field_e;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_g = null;
         field_e = null;
         field_a = null;
         matchupDamagePercent = (int[][]) null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_f = (String) null;
         }
         field_f = null;
@@ -307,7 +307,7 @@ final class fk implements WidgetPainter {
           var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
-              var3 = (String) (lj.a("getcookies", (byte) -105, applet));
+              var3 = (String) (AppletScriptBridge.callScriptFunction("getcookies", (byte) -105, applet));
               if (obfuscationGuard < 76) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;

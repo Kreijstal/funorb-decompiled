@@ -75,8 +75,8 @@ final class lq {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -31320) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -31320) {
           return;
         }
         field_a = null;

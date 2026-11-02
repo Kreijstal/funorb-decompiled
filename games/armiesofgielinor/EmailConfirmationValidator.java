@@ -27,7 +27,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             return mismatchState;
           }
           if (!text.equals(this.checkedEmail)) {
-            result = dh.getEmailCheckResult(text, (byte) 67);
+            result = ImageProducerSurface.getEmailCheckResult(text, (byte) 67);
             if (!result.isComplete((byte) -74)) {
               checkingState = so.validationChecking;
               return checkingState;
@@ -95,9 +95,9 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_n = null;
-        if (param0 < 91) {
+        if (obfuscationGuard < 91) {
           field_n = (AntialiasedBitmapFont) null;
           field_o = null;
           field_m = null;

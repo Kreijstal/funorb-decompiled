@@ -19,7 +19,7 @@ final class NanoGameClock extends GameClock {
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 22963) {
-            NanoGameClock.d(-122);
+            NanoGameClock.releaseStatics(-122);
           }
           for (var1_int = 0; var1_int < BitmapTextWidgetPainter.chatHistorySize; var1_int++) {
             DefeatPlayerConsoleCommand.chatHistory[var1_int] = null;
@@ -70,7 +70,7 @@ final class NanoGameClock extends GameClock {
         int obfuscationControl;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (obfuscationGuard != 0) {
-          NanoGameClock.d(98);
+          NanoGameClock.releaseStatics(98);
         }
         if (this.accumulatedNanos < this.nextTickNanos) {
           this.lastSampleNanos = this.lastSampleNanos + (this.nextTickNanos - this.accumulatedNanos);
@@ -97,9 +97,9 @@ final class NanoGameClock extends GameClock {
         this.lastSampleNanos = (long)obfuscationGuard;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_s = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_l = null;

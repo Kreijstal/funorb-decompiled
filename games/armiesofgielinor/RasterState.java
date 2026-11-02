@@ -16,12 +16,12 @@ final class RasterState extends IntrusiveNode {
     int width;
     static String field_n;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_l = null;
         field_k = null;
         field_n = null;
         field_m = null;
-        if (param0 != -22856) {
+        if (obfuscationGuard != -22856) {
           field_m = (String) null;
         }
     }
@@ -64,11 +64,11 @@ final class RasterState extends IntrusiveNode {
                     if (null != CipherPacketBuffer.currentBattlefield) {
                       var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                     }
-                    UnitCycler.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
+                    UnitCycler.a(22 + param5, var11, var7 + ProxyAuthenticationRequiredException.field_b, 119, param3 + 20);
                   }
                   fs.a(param3, false, false, var9, param5, var7, param1, var8, param0);
                   if (vs.field_e[var7].hasModifierFlag4((byte) -115)) {
-                    GameEvent.a(param3 + 20, true, ug.field_b + var7, vs.field_e[var7].ownerPlayer, 22 + param5);
+                    GameEvent.a(param3 + 20, true, ProxyAuthenticationRequiredException.field_b + var7, vs.field_e[var7].ownerPlayer, 22 + param5);
                   }
                 }
               } else {
@@ -157,7 +157,7 @@ final class RasterState extends IntrusiveNode {
               var8[var10_int] = null;
             }
             if (obfuscationGuard >= -7) {
-              RasterState.a(-20);
+              RasterState.releaseStatics(-20);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,7 +402,7 @@ final class RasterState extends IntrusiveNode {
                 }
               }
             }
-            param1.b((byte) -39, var4);
+            param1.appendChecksum((byte) -39, var4);
             var17.unlink(-115);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

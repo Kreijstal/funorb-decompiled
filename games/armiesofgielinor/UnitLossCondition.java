@@ -11,7 +11,7 @@ final class UnitLossCondition implements MatchCondition {
 
     public final String describeCondition(int obfuscationGuard) {
         if (obfuscationGuard >= -122) {
-          UnitLossCondition.d(18);
+          UnitLossCondition.releaseStatics(18);
         }
         return "Defeat: Total Unit Loss";
     }
@@ -24,9 +24,9 @@ final class UnitLossCondition implements MatchCondition {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
-        if (param0 <= 114) {
+        if (obfuscationGuard <= 114) {
           return;
         }
         battlefieldThemes = null;

@@ -24,11 +24,11 @@ final class od {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param0 == 100 &&
-          af.field_b > 0) {
-          fieldTemp$0 = af.field_b - 1;
-          af.field_b = af.field_b - 1;
+          LoginCredentials.field_b > 0) {
+          fieldTemp$0 = LoginCredentials.field_b - 1;
+          LoginCredentials.field_b = LoginCredentials.field_b - 1;
           var2_ref_byte__ = DisplaySettingsDialog.field_W[fieldTemp$0];
-          DisplaySettingsDialog.field_W[af.field_b] = null;
+          DisplaySettingsDialog.field_W[LoginCredentials.field_b] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
@@ -44,8 +44,8 @@ final class od {
           GameEvent.field_v > 0) {
           fieldTemp$3 = GameEvent.field_v - 1;
           GameEvent.field_v = GameEvent.field_v - 1;
-          var2_ref_byte__Lifetime2 = dh.field_j[fieldTemp$3];
-          dh.field_j[GameEvent.field_v] = null;
+          var2_ref_byte__Lifetime2 = ImageProducerSurface.field_j[fieldTemp$3];
+          ImageProducerSurface.field_j[GameEvent.field_v] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param1 != 50) {
@@ -81,7 +81,7 @@ final class od {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -16399) {
-            od.a(36);
+            od.releaseStatics(36);
           }
           var2 = null;
           if (param1.length() == 1) {
@@ -110,7 +110,7 @@ final class od {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -118,7 +118,7 @@ final class od {
         field_g = null;
         field_c = null;
         field_a = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_e = (String) null;
         }
     }
@@ -140,9 +140,9 @@ final class od {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1.length == 100 &&
-            af.field_b < 1000) {
-            fieldTemp$0 = af.field_b;
-            af.field_b = af.field_b + 1;
+            LoginCredentials.field_b < 1000) {
+            fieldTemp$0 = LoginCredentials.field_b;
+            LoginCredentials.field_b = LoginCredentials.field_b + 1;
             DisplaySettingsDialog.field_W[fieldTemp$0] = param1;
             return;
           }
@@ -158,7 +158,7 @@ final class od {
             GameEvent.field_v < 50) {
             fieldTemp$3 = GameEvent.field_v;
             GameEvent.field_v = GameEvent.field_v + 1;
-            dh.field_j[fieldTemp$3] = param1;
+            ImageProducerSurface.field_j[fieldTemp$3] = param1;
             return;
           }
           if (PacketBuffer.field_k != null) {

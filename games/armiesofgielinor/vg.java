@@ -15,7 +15,7 @@ final class vg extends IntrusiveNode {
 
     final static boolean hasQuickChatOverlay(int obfuscationGuard) {
         if (obfuscationGuard != 10) {
-          vg.a((byte) 89);
+          vg.releaseStatics((byte) 89);
           if (Spell.quickChatHelpDialog == null) {
             return BattleTutorial.quickChatMenuVisible ? true : false;
           }
@@ -30,8 +30,8 @@ final class vg extends IntrusiveNode {
         return true;
     }
 
-    public static void a(byte param0) {
-        if (param0 < 31) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard < 31) {
           return;
         }
         field_t = null;

@@ -13,14 +13,14 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
     static String field_Y;
     static int[][] field_W;
 
-    public static void n(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_ab = null;
         activeFoliageShadows = null;
         field_db = null;
         field_X = null;
         activeContextMenu = null;
         field_W = (int[][]) null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_Y = null;

@@ -11,7 +11,7 @@ final class bk {
     static IndexedSprite[] attackTargetSprites;
     static String field_h;
 
-    final static void a(boolean param0, boolean param1, af param2, int param3, int param4) {
+    final static void a(boolean param0, boolean param1, LoginCredentials param2, int param3, int param4) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -32,7 +32,7 @@ final class bk {
           vd.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
           PaletteRegionMap.a(vd.field_b, (byte) -84);
           vd.field_b.writeShort(true, param4);
-          param2.a(vd.field_b, -11436);
+          param2.writeCredentials(vd.field_b, -11436);
           EmailValidator.outgoingPacket.position = 0;
           if (!param1) {
             EmailValidator.outgoingPacket.writeByte(1, 16);
@@ -43,7 +43,7 @@ final class bk {
           }
           EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
           var5_int = EmailValidator.outgoingPacket.position;
-          EmailValidator.outgoingPacket.writeInt((byte) -67, fl.field_e);
+          EmailValidator.outgoingPacket.writeInt((byte) -67, WidgetTheme.field_e);
           EmailValidator.outgoingPacket.writeLong(DefeatPlayerConsoleCommand.field_E, 38359632);
           var6 = 0;
           if (BestScoreStrategy.field_l) {
@@ -65,10 +65,10 @@ final class bk {
           }
           EmailValidator.outgoingPacket.writeNullTerminatedString(var7, param3 + 13851);
           if (DropdownSelector.field_P != null) {
-            EmailValidator.outgoingPacket.a(DropdownSelector.field_P, 413740432);
+            EmailValidator.outgoingPacket.writeNullCircumfixedString(DropdownSelector.field_P, 413740432);
           }
           IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
-          EmailValidator.outgoingPacket.f(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
+          EmailValidator.outgoingPacket.writeShortLengthPrefix(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,18 +155,18 @@ final class bk {
           var18.children = new NodeDeque();
           vq.field_a = new ScrollContainer(0L, var18, param1, param9);
           SocialListPanel.field_Qb.addChild(vq.field_a, 126);
-          we.field_f = new ClientUiComponent(0L, param6);
-          SocialListPanel.field_Qb.addChild(we.field_f, 110);
+          ArchiveLoadStep.field_f = new ClientUiComponent(0L, param6);
+          SocialListPanel.field_Qb.addChild(ArchiveLoadStep.field_f, 110);
           UpkeepEvent.field_z = new ClientUiComponent(0L, param2);
           UpkeepEvent.field_z.font = IntrusiveNode.field_e;
-          we.field_f.addChild(UpkeepEvent.field_z, 82);
-          we.field_f.inheritVisualStateForDescendants(-10027);
+          ArchiveLoadStep.field_f.addChild(UpkeepEvent.field_z, 82);
+          ArchiveLoadStep.field_f.inheritVisualStateForDescendants(-10027);
           DebouncedValidator.field_b = new ClientUiComponent(0L, (ClientUiComponent) null);
           DebouncedValidator.field_b.skinSprites = var16;
-          we.field_f.addChild(DebouncedValidator.field_b, 99);
+          ArchiveLoadStep.field_f.addChild(DebouncedValidator.field_b, 99);
           jj.field_i = new ClientUiComponent[5];
           ResourceProtocolClient.field_j = new ClientUiComponent[5];
-          we.field_g = new ClientUiComponent[5];
+          ArchiveLoadStep.field_g = new ClientUiComponent[5];
           gt.field_b = new ClientUiComponent[5];
           var19 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -193,12 +193,12 @@ final class bk {
               if (decompiledFrameRemainder0) {
                 gt.field_b[var19] = new ClientUiComponent(0L, param10);
                 jj.field_i[var19] = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, var20);
-                we.field_g[var19] = new ClientUiComponent(0L, (ClientUiComponent) null);
-                we.field_g[var19].verticalAlignment = 1;
+                ArchiveLoadStep.field_g[var19] = new ClientUiComponent(0L, (ClientUiComponent) null);
+                ArchiveLoadStep.field_g[var19].verticalAlignment = 1;
                 ResourceProtocolClient.field_j[var19] = new ClientUiComponent(0L, SpellConfirmationDialog.field_i);
                 ResourceProtocolClient.field_j[var19].verticalAlignment = 1;
                 gt.field_b[var19].addChild(jj.field_i[var19], 107);
-                gt.field_b[var19].addChild(we.field_g[var19], 45);
+                gt.field_b[var19].addChild(ArchiveLoadStep.field_g[var19], 45);
                 gt.field_b[var19].addChild(ResourceProtocolClient.field_j[var19], 85);
                 gt.field_b[var19].inheritVisualStateForDescendants(-10027);
                 CombatEvent.field_I.addChild(gt.field_b[var19], 121);

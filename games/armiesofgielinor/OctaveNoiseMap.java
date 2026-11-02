@@ -13,7 +13,7 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
     static int field_o;
 
     final static String e(int param0) {
-        if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return cd.field_e;
         }
         if (param0 != 488997228) {
@@ -21,7 +21,7 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
           if (!se.emailCheckResult.isComplete((byte) 126)) {
             return se.emailCheckResult.getEmail(true);
           }
-          if (du.nameCheckPending == mh.accountNameCheckState) {
+          if (SocketFactory.nameCheckPending == mh.accountNameCheckState) {
             return se.emailCheckResult.getEmail(true);
           }
           return IsaacRandom.loginAccountIdentifier;
@@ -29,7 +29,7 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
         if (!se.emailCheckResult.isComplete((byte) 126)) {
           return se.emailCheckResult.getEmail(true);
         }
-        if (du.nameCheckPending == mh.accountNameCheckState) {
+        if (SocketFactory.nameCheckPending == mh.accountNameCheckState) {
           return se.emailCheckResult.getEmail(true);
         }
         return IsaacRandom.loginAccountIdentifier;

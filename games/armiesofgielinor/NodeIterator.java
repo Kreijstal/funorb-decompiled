@@ -36,8 +36,8 @@ final class NodeIterator {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 > -68) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard > -68) {
           return;
         }
         field_b = null;

@@ -564,7 +564,7 @@ class ClientUiComponent extends ClientUiNode {
           stackIn_6_1 = 18;
           stackIn_6_2 = -20500;
           stackIn_6_3 = eb.field_c.width;
-          if (fh.field_c) {
+          if (GrowableIntArray.field_c) {
             stackIn_7_4 = 2 + jn.field_c + 42;
           } else {
             stackIn_7_4 = 0;
@@ -994,9 +994,9 @@ class ClientUiComponent extends ClientUiNode {
         return var3;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Q = null;
-        int var1 = 52 / ((param0 + 55) / 44);
+        int var1 = 52 / ((obfuscationGuard + 55) / 44);
         field_K = (int[][]) null;
         field_zb = null;
         field_lb = null;

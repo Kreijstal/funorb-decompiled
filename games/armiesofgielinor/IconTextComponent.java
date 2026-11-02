@@ -39,7 +39,7 @@ final class IconTextComponent extends ClientUiComponent {
           this.iconComponent.verticalAlignment = this.verticalAlignment;
         }
         if (obfuscationGuard != -81) {
-          IconTextComponent.k(94);
+          IconTextComponent.releaseStatics(94);
         }
         if (null != this.textComponent) {
           this.textComponent.setBounds(this.height, -20500, var5, 0, var4 + padding + iconTextGap);
@@ -59,12 +59,12 @@ final class IconTextComponent extends ClientUiComponent {
         return ResourceArchive.field_a.currentPosition[0];
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Pb = null;
         field_Jb = null;
         field_Ib = null;
         field_Kb = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_Ib = (QuickChatCommandDefinition) null;
         }
         field_Nb = null;

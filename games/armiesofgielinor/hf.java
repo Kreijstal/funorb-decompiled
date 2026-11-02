@@ -12,8 +12,8 @@ final class hf {
     static ClientUiComponent field_f;
     static String[] unitModelNames;
 
-    public static void a(byte param0) {
-        if (param0 != 19) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != 19) {
           return;
         }
         unitModelNames = null;

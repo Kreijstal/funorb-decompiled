@@ -202,7 +202,7 @@ class IntrusiveNode {
           var4 = var5.position;
           var5.writeByte(1, 1);
           var5.writeByte(1, param1.field_r);
-          var5.c((byte) 60, param1.field_l);
+          var5.writeSignedSmart((byte) 60, param1.field_l);
           if (param2 != 105) {
             IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 58, (String) null, -67L);
           }
@@ -210,17 +210,17 @@ class IntrusiveNode {
           var5.writeInt((byte) -53, param1.field_m);
           var5.writeInt((byte) -63, param1.field_s);
           var5.writeInt((byte) -109, param1.field_u);
-          var5.b((byte) -39, var4);
+          var5.appendChecksum((byte) -39, var4);
           var5.writeByteLengthPrefix(-var4 + var5.position, param2 + 5825);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tc.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_e = null;
         field_g = null;
-        if (param0 != 4) {
+        if (obfuscationGuard != 4) {
           field_c = (String) null;
         }
         field_a = null;
@@ -272,7 +272,7 @@ class IntrusiveNode {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              lj.a((byte) -52, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
+              AppletScriptBridge.evaluateScript((byte) -52, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
               if (param2 <= 23) {
                 field_e = (BitmapFont) null;
               }
@@ -320,7 +320,7 @@ class IntrusiveNode {
     }
 
     final static int b(int param0) {
-        oi.field_c.a(18199);
+        oi.field_c.serviceProviders(18199);
         if (!ScrollWidgetContainer.field_T.poll(true)) {
           return ep.b((byte) -120);
         }

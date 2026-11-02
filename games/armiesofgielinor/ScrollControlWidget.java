@@ -384,7 +384,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
 
     final static boolean c(int param0, int param1) {
         if (param0 != 0) {
-          ScrollControlWidget.l(106);
+          ScrollControlWidget.releaseStatics(106);
           if (!(param1 < WhirlpoolHasher.unitDefinitions.length)) {
             return false;
           }
@@ -696,9 +696,9 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
         }
     }
 
-    public static void l(int param0) {
-        if (param0 != -24061) {
-          ScrollControlWidget.l(-117);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -24061) {
+          ScrollControlWidget.releaseStatics(-117);
           field_bb = null;
           field_J = null;
           return;

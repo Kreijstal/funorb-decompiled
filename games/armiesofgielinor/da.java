@@ -81,7 +81,7 @@ final class da {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (lj.a("getcookies", (byte) 81, param1));
+              var3 = (String) (AppletScriptBridge.callScriptFunction("getcookies", (byte) 81, param1));
               var4 = dj.splitText(29, ';', var3);
               if (param0 != 23660) {
                 instructionIllustrationArguments = (int[][][]) null;
@@ -118,8 +118,8 @@ final class da {
         }
     }
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           instructionIllustrationArguments = (int[][][]) null;
         }
         instructionIllustrationArguments = (int[][][]) null;
@@ -252,7 +252,7 @@ final class da {
             dj.a((byte) -125);
             return;
           }
-          af.a((Throwable) null, 70, "LR1: " + CampaignProgress.b(false));
+          LoginCredentials.a((Throwable) null, 70, "LR1: " + CampaignProgress.b(false));
           dj.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -17,7 +17,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           if (param1 != 94) {
             MatchConditionEntry.a((byte) -104);
           }
-          stackIn_4_0 = param0 + (so.field_b.field_g - se.field_a >> 1);
+          stackIn_4_0 = param0 + (so.field_b.height - se.field_a >> 1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class MatchConditionEntry extends IntrusiveNode {
               MatchConditionEntry.a((byte) -118);
             }
             if (updateType != 4) {
-              af.a((Throwable) null, -66, "F1: " + CampaignProgress.b(false));
+              LoginCredentials.a((Throwable) null, -66, "F1: " + CampaignProgress.b(false));
               dj.a((byte) -125);
               return;
             }
@@ -133,9 +133,9 @@ final class MatchConditionEntry extends IntrusiveNode {
           }
           friendDisplayName = packet.readNullTerminatedString(1);
           previousFriendName = packet.readNullTerminatedString(1);
-          friendEntry = lg.findFriend(friendDisplayName, (byte) -34);
+          friendEntry = GzipDecoder.findFriend(friendDisplayName, (byte) -34);
           if (null == friendEntry) {
-            friendEntry = lg.findFriend(previousFriendName, (byte) -34);
+            friendEntry = GzipDecoder.findFriend(previousFriendName, (byte) -34);
             if (null != friendEntry) {
               DiskCacheRequest.friendsByName.put(-1, (long)AccountNameNormalizer.normalize((CharSequence) ((Object) friendDisplayName), false).hashCode(), friendEntry);
             }

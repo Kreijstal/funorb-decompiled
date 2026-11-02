@@ -26,7 +26,7 @@ final class ep {
         if (param0 > -22) {
           return 69;
         }
-        return (-mj.field_b + so.field_b.field_g >> 1) + param1;
+        return (-mj.field_b + so.field_b.height >> 1) + param1;
     }
 
     private final RgbSprite b(int param0, int param1) {
@@ -139,7 +139,7 @@ final class ep {
           SoftwareRaster.b();
           var12 = new String[10];
           var13 = var12;
-          var3_int = nr.field_e.wrapLines(TextLineLayout.field_b, new int[]{1000}, var13);
+          var3_int = NineSliceFrame.field_e.wrapLines(TextLineLayout.field_b, new int[]{1000}, var13);
           for (var4 = 0; var4 < var3_int; var4++) {
             var5 = this.a((byte) -90, var4 * 20 + 200);
             GradientUiRenderer.drawCenteredGradientText(var12[var4], this.a(320, 4592), var5, ConsoleValue.field_b, true);
@@ -149,7 +149,7 @@ final class ep {
             if (this.field_j == 2) {
               var4Lifetime1 = 256 - var4Lifetime1;
             }
-            SoftwareRaster.b(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), so.field_b.field_a, so.field_b.field_g, 65793, var4Lifetime1);
+            SoftwareRaster.b(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), so.field_b.width, so.field_b.height, 65793, var4Lifetime1);
           }
         } else {
           if (ck.field_c == null) {
@@ -169,7 +169,7 @@ final class ep {
           if (var2 > 0) {
             var3 = (double)this.a(-320, 4592);
             this.a(var5, (byte) -79);
-            SoftwareRaster.b(0, 0, so.field_b.field_a, so.field_b.field_g, 65793, var2);
+            SoftwareRaster.b(0, 0, so.field_b.width, so.field_b.height, 65793, var2);
           } else {
             this.a(var5, (byte) -79);
           }
@@ -195,8 +195,8 @@ final class ep {
               var7 = (int)Math.pow(1.1, (double)var7);
               stackIn_43_0 = 0;
               stackIn_43_1 = 0;
-              stackIn_43_2 = so.field_b.field_a;
-              stackIn_43_3 = so.field_b.field_g;
+              stackIn_43_2 = so.field_b.width;
+              stackIn_43_3 = so.field_b.height;
               stackIn_43_4 = 65793;
               if (var7 <= 256) {
                 stackIn_44_5 = var7;
@@ -432,7 +432,7 @@ final class ep {
         if (param1 != 4592) {
           this.field_m = -45;
         }
-        return (so.field_b.field_a - GuestPlayConfirmationForm.field_Q >> 1) + param0;
+        return (so.field_b.width - GuestPlayConfirmationForm.field_Q >> 1) + param0;
     }
 
     public static void a(byte param0) {
@@ -471,7 +471,7 @@ final class ep {
         if (param1 != 16) {
           discarded$0 = this.b(-62, 105);
         }
-        return (double)(-GuestPlayConfirmationForm.field_Q + so.field_b.field_a >> 1) + param0;
+        return (double)(-GuestPlayConfirmationForm.field_Q + so.field_b.width >> 1) + param0;
     }
 
     static {

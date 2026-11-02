@@ -52,7 +52,7 @@ final class QuickChatCategory extends DualLinkedNode {
                 if (0 == encodedShortcut) {
                   stackIn_8_2 = (char)0;
                 } else {
-                  stackIn_8_2 = we.decodeSingleByteCharacter(-121, (byte) encodedShortcut);
+                  stackIn_8_2 = ArchiveLoadStep.decodeSingleByteCharacter(-121, (byte) encodedShortcut);
                 }
                 stackIn_7_0[stackIn_7_1] = stackIn_8_2;
               }
@@ -68,7 +68,7 @@ final class QuickChatCategory extends DualLinkedNode {
                 if (0 == encodedShortcut) {
                   stackIn_15_2 = (char)0;
                 } else {
-                  stackIn_15_2 = we.decodeSingleByteCharacter(-125, (byte) encodedShortcut);
+                  stackIn_15_2 = ArchiveLoadStep.decodeSingleByteCharacter(-125, (byte) encodedShortcut);
                 }
                 stackIn_14_0[stackIn_14_1] = stackIn_15_2;
               }
@@ -118,11 +118,11 @@ final class QuickChatCategory extends DualLinkedNode {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_B = null;
         field_F = null;
-        if (param0 > -91) {
-          QuickChatCategory.h(-117);
+        if (obfuscationGuard > -91) {
+          QuickChatCategory.releaseStatics(-117);
         }
         field_A = null;
         field_G = null;

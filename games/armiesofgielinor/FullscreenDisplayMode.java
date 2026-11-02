@@ -118,7 +118,7 @@ final class FullscreenDisplayMode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.decodeSpriteSheetFromArchive(false, param2, param1, param0)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param2, param1, param0)) {
             return null;
           }
           if (param3 <= -2) {
@@ -182,7 +182,7 @@ final class FullscreenDisplayMode {
           }
           DateOfBirthValidator.field_h.position = 0;
           DateOfBirthValidator.field_h.writeBytes(param6, param1, param4, param3 - 6621);
-          DateOfBirthValidator.field_h.b(var7_int, (byte) 100);
+          DateOfBirthValidator.field_h.zeroFillTo(var7_int, (byte) 100);
           DateOfBirthValidator.field_h.encryptXtea((byte) 31, var13);
           if (ArmiesOfGielinor.field_L == null ||
             !(ArmiesOfGielinor.field_L.payload.length >= 100)) {
@@ -233,9 +233,9 @@ final class FullscreenDisplayMode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
-        if (param0 > -114) {
+        if (obfuscationGuard > -114) {
           return;
         }
         field_c = null;

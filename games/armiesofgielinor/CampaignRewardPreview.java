@@ -10,7 +10,7 @@ final class CampaignRewardPreview {
     String title;
     static String field_a;
     static RgbSprite field_e;
-    static af field_g;
+    static LoginCredentials field_g;
 
     final static void a(int param0, Unit param1, PacketBuffer param2) {
         try {
@@ -23,12 +23,12 @@ final class CampaignRewardPreview {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
         field_g = null;
         field_a = null;
         field_f = null;
-        if (param0 < 124) {
+        if (obfuscationGuard < 124) {
           field_a = (String) null;
         }
         field_e = null;

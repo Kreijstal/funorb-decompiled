@@ -261,11 +261,11 @@ final class EventPresenter extends IntrusiveNode {
         return var2 != 0;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         rasterStatePool = null;
         field_t = null;
         field_o = null;
-        int var1 = -72 % ((param0 - 30) / 51);
+        int var1 = -72 % ((obfuscationGuard - 30) / 51);
         field_l = null;
     }
 

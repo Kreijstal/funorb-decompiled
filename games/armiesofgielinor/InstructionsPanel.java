@@ -589,7 +589,7 @@ final class InstructionsPanel {
         } else {
           this.field_a = null;
         }
-        this.field_F = new IntPair(so.field_b.field_a >> 1, so.field_b.field_g >> 1);
+        this.field_F = new IntPair(so.field_b.width >> 1, so.field_b.height >> 1);
         this.field_x = new IntPair(42, 63);
         this.field_K = new IntPair(597, 417);
         this.initializePanel(99);
@@ -670,7 +670,7 @@ final class InstructionsPanel {
           ProgressMessageDialog.field_rb[param5.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.drawShadedGrayscale(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
-          so.field_b.a(5605);
+          so.field_b.bindRasterTarget(5605);
           SpellConfirmationDialog.field_j.drawWithOpacity(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
@@ -987,7 +987,7 @@ final class InstructionsPanel {
               this.navigationEnd != null) {
               var3 = this.itemIds[itemIndex];
               if (22 == var3) {
-                return -1 + (so.field_b.field_a >> 1);
+                return -1 + (so.field_b.width >> 1);
               }
               if (var3 == 23) {
                 return db.a(!obfuscationGuard, this.navigationEnd.first);
@@ -1016,7 +1016,7 @@ final class InstructionsPanel {
         if (param0 != 21695) {
           return 113;
         }
-        return (nr.field_e.xHeight >> 2) - nr.field_e.maxDescent + nr.field_e.baselineHeight + (-(nr.field_e.maxAscent >> 1) + 3);
+        return (NineSliceFrame.field_e.xHeight >> 2) - NineSliceFrame.field_e.maxDescent + NineSliceFrame.field_e.baselineHeight + (-(NineSliceFrame.field_e.maxAscent >> 1) + 3);
     }
 
     private final void a(RgbSprite param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
@@ -1101,7 +1101,7 @@ final class InstructionsPanel {
               var24 = 105 / ((param4 + 25) / 48);
               var23 = gt.field_c[1 + param1];
               var23.drawTransparent(var21 - var17, var22 - var18);
-              so.field_b.a(5605);
+              so.field_b.bindRasterTarget(5605);
               SoftwareRaster.a(this.field_J);
               SoftwareRaster.b(this.field_J);
               param0.b();
@@ -1109,7 +1109,7 @@ final class InstructionsPanel {
               var25 = param0.canvasWidth;
               var26 = param0.canvasHeight;
               param3.d(param5, param2, var25, var26);
-              so.field_b.a(5605);
+              so.field_b.bindRasterTarget(5605);
               SoftwareRaster.a(this.field_J);
               GradientUiRenderer.clearSentinelPixels(param0);
               param0.a();
@@ -1142,7 +1142,7 @@ final class InstructionsPanel {
         if (param0 <= 14) {
           this.footerEnd = (IntPair) null;
         }
-        return nr.field_e.maxAscent + nr.field_e.maxDescent >> 1;
+        return NineSliceFrame.field_e.maxAscent + NineSliceFrame.field_e.maxDescent >> 1;
     }
 
     private final IntPair a(int param0, int param1, int param2) {
@@ -1336,7 +1336,7 @@ final class InstructionsPanel {
         if (param0 != -2881) {
           return -79;
         }
-        return 3 + nr.field_e.baselineHeight - nr.field_e.maxDescent - (nr.field_e.maxAscent >> 1);
+        return 3 + NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxDescent - (NineSliceFrame.field_e.maxAscent >> 1);
     }
 
     private final void j(int param0) {
@@ -1348,7 +1348,7 @@ final class InstructionsPanel {
         if (this.illustrationAnimation != null) {
           this.illustrationAnimation.advance(-118);
           var2 = this.illustrationAnimation.frameId >> 16;
-          var3 = we.a(var2, true);
+          var3 = ArchiveLoadStep.a(var2, true);
           if (this.illustrationAnimation == null) {
             Object var3_ref = null;
             return;
@@ -1432,7 +1432,7 @@ final class InstructionsPanel {
         if (param0 >= -90) {
           InstructionsPanel.describeBattleVictoryConditions(117);
         }
-        return nr.field_e.baselineHeight - nr.field_e.maxDescent - (nr.field_e.maxAscent - ((nr.field_e.xHeight >> 1) + 3));
+        return NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxDescent - (NineSliceFrame.field_e.maxAscent - ((NineSliceFrame.field_e.xHeight >> 1) + 3));
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
@@ -1467,10 +1467,10 @@ final class InstructionsPanel {
         String var14;
         int var11Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (nr.activeFoliageSprites != null &&
+        if (NineSliceFrame.activeFoliageSprites != null &&
           param0 >= 0 &&
-          param0 < nr.activeFoliageSprites.length &&
-          null != nr.activeFoliageSprites[param0]) {
+          param0 < NineSliceFrame.activeFoliageSprites.length &&
+          null != NineSliceFrame.activeFoliageSprites[param0]) {
           if (param1 < 71) {
             var14 = (String) null;
             discarded$0 = this.a(55, (String[]) null, (String) null, 27, -41, -10, 103, 60, -125);
@@ -1496,9 +1496,9 @@ final class InstructionsPanel {
             var7 = var7 >> 1;
             param2 = param2 >> 1;
             if (0 <= var11Lifetime1 &&
-              nr.activeFoliageSprites.length > var11Lifetime1 &&
-              nr.activeFoliageSprites[var11Lifetime1] != null) {
-              var12 = nr.activeFoliageSprites[var11Lifetime1];
+              NineSliceFrame.activeFoliageSprites.length > var11Lifetime1 &&
+              NineSliceFrame.activeFoliageSprites[var11Lifetime1] != null) {
+              var12 = NineSliceFrame.activeFoliageSprites[var11Lifetime1];
               if (param3) {
                 var12.d(db.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
               } else {
@@ -1871,7 +1871,7 @@ final class InstructionsPanel {
               return db.a(true, this.navigationStart.first);
             }
             if (var3 == 23) {
-              return so.field_b.field_a >> 1;
+              return so.field_b.width >> 1;
             }
             if (var3 != 8) {
               return 1;
@@ -1959,7 +1959,7 @@ final class InstructionsPanel {
         if (!param0) {
           field_D = 24;
         }
-        return nr.field_e.maxAscent >> 1;
+        return NineSliceFrame.field_e.maxAscent >> 1;
     }
 
     private final IntPair e(int param0, int param1) {
@@ -2359,7 +2359,7 @@ final class InstructionsPanel {
               }
               EmailValidator.outgoingPacket.position = 0;
               EmailValidator.outgoingPacket.writeByte(1, 14);
-              EmailValidator.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
+              EmailValidator.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.getLoginKind((byte) -16).code);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
               ov.connectionState = gi.field_d;
             }
@@ -2419,7 +2419,7 @@ final class InstructionsPanel {
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
               tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
               LoginForm.memberEntitlementValue = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
-              var6 = ByteStorage.incomingPacket.c((byte) -125);
+              var6 = ByteStorage.incomingPacket.readOptionalString((byte) -125);
               var7 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
                 wj.a(0);
@@ -2465,8 +2465,8 @@ final class InstructionsPanel {
               IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var11, false);
               SpriteControlNode.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
               ov.connectionState = ResourceArchive.connectedState;
-              if (CampaignRewardPreview.field_g.a((byte) 50) != ContentTransitionDialog.field_db) {
-                if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
+              if (CampaignRewardPreview.field_g.getLoginKind((byte) 50) != ContentTransitionDialog.field_db) {
+                if (CampaignRewardPreview.field_g.getLoginKind((byte) -11) == WidgetTheme.field_u) {
                   DisplayModeOptionPainter.usernameLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -120));
                 }
               } else {
@@ -2479,14 +2479,14 @@ final class InstructionsPanel {
               if (LoginForm.memberEntitlementValue <= 0 &&
                 !LineOfSightGrid.field_m) {
                 try {
-                  lj.a("unzap", (byte) -52, CombatEvent.d((byte) -128));
+                  AppletScriptBridge.callScriptFunction("unzap", (byte) -52, CombatEvent.d((byte) -128));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  lj.a(CombatEvent.d((byte) -115), "zap", new Object[]{BattleViewportResizeHandler.decodeBase37DisplayName(param0 + 53, dc.field_o)}, 106);
+                  AppletScriptBridge.callScriptFunction(CombatEvent.d((byte) -115), "zap", new Object[]{BattleViewportResizeHandler.decodeBase37DisplayName(param0 + 53, dc.field_o)}, 106);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

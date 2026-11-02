@@ -21,7 +21,7 @@ final class FixedQuaternion {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 95 % ((-83 - obfuscationGuard) / 33);
-          var5 = lg.findFriend(name, (byte) -34);
+          var5 = GzipDecoder.findFriend(name, (byte) -34);
           if (var5 != null &&
             var5.locationLabel != null) {
             return true;
@@ -174,10 +174,10 @@ final class FixedQuaternion {
         System.out.println("Error: " + ConsolePanel.replaceText(param0, -87, "%0a", "\n"));
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         fullscreenCanvas = null;
         field_g = null;
-        if (param0 != -57) {
+        if (obfuscationGuard != -57) {
           return;
         }
         field_c = null;

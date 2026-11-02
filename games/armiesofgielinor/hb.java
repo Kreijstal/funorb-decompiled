@@ -7,10 +7,10 @@ final class hb {
     static String field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_b = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_b = (String) null;
         }
     }

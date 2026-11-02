@@ -11,9 +11,9 @@ final class hq {
     static int maximumHeapMiB;
     static int field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
-        if (param0 >= -50) {
+        if (obfuscationGuard >= -50) {
           return;
         }
         surroundTileSprites = null;
@@ -43,7 +43,7 @@ final class hq {
             LineOfSightGrid.field_a = param4;
             DefeatPlayerConsoleCommand.field_E = param12;
             CampaignRewardPreview.field_d = param0;
-            fl.field_e = param13;
+            WidgetTheme.field_e = param13;
             SpriteDropdownMenu.field_v = param6;
             if (null != wj.field_n.randomDataFile) {
               try {

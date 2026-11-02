@@ -140,12 +140,12 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     final static void a(int param0) {
         if (param0 == 4) {
           PaletteRegionMap.field_g.advance(-99);
-          ug.field_b = ug.field_b + 1;
+          ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b + 1;
           return;
         }
         field_a = (ProgressDialog) null;
         PaletteRegionMap.field_g.advance(-99);
-        ug.field_b = ug.field_b + 1;
+        ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b + 1;
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
@@ -180,8 +180,8 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     public final void focusGained(java.awt.event.FocusEvent event) {
     }
 
-    public static void a(byte param0) {
-        if (param0 != -79) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -79) {
           return;
         }
         field_e = null;

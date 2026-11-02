@@ -71,7 +71,7 @@ final class uu {
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 0) {
-            uu.a((byte) -86);
+            uu.releaseStatics((byte) -86);
           }
           AnimationSequence.a(InstructionsPanel.field_D, 125);
           if (ToggleWidget.currentRoom != null) {
@@ -84,15 +84,15 @@ final class uu {
             so.field_d.height = 0;
             var6 = so.field_d;
             var6.width = 0;
-            var7 = pi.field_N;
-            pi.field_N.height = 0;
+            var7 = MarkerSliderWidget.field_N;
+            MarkerSliderWidget.field_N.height = 0;
             var7.width = 0;
             if (!ToggleWidget.isCurrentRoomOwner(false)) {
               var9_ref_String = ToggleWidget.currentRoom.ownerName;
               AccountRegistrationForm.field_F.text = EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
-              pi.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
-              pi.field_N.text = EmailCheckResult.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
-              var8 = pi.field_N;
+              MarkerSliderWidget.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
+              MarkerSliderWidget.field_N.text = EmailCheckResult.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
+              var8 = MarkerSliderWidget.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -417,7 +417,7 @@ final class uu {
               }
               var8.text = EmailCheckResult.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
-            PrintVictoryConditionsConsoleCommand.field_E.text = EmailCheckResult.a(4800, ws.field_T, new String[]{Integer.toString(ToggleWidget.currentRoom.playerCount), Integer.toString(ToggleWidget.currentRoom.playerCapacity)});
+            PrintVictoryConditionsConsoleCommand.field_E.text = EmailCheckResult.a(4800, DialWidget.field_T, new String[]{Integer.toString(ToggleWidget.currentRoom.playerCount), Integer.toString(ToggleWidget.currentRoom.playerCapacity)});
           }
           stackIn_173_0 = BitmapTextWidgetPainter.field_a;
           stackIn_173_1 = true;
@@ -514,8 +514,8 @@ final class uu {
         return true;
     }
 
-    public static void a(byte param0) {
-        int var1 = -123 % ((param0 + 58) / 51);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = -123 % ((obfuscationGuard + 58) / 51);
         field_c = null;
         field_a = null;
     }

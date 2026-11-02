@@ -342,8 +342,8 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         }
     }
 
-    public static void e(byte param0) {
-        if (param0 <= 50) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard <= 50) {
           field_O = (String) null;
         }
         field_P = null;

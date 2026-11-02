@@ -78,10 +78,10 @@ final class KingBlackDragonEvent extends GameEvent {
           stackIn_16_4 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
           ((RgbSprite) (Object) stackIn_15_0).drawShadedGrayscale(stackIn_15_1, stackIn_15_2, stackIn_15_3[stackIn_16_4][var8.ownerPlayer]);
           if (NetworkResourceRequest.field_C.selectedUnit == var9) {
-            TeamRoster.playerRingSprite.drawAdditive(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
+            TeamRoster.playerRingSprite.drawAdditive(10 + param2, param4 + 5, (int)(Math.sin((double)ProxyAuthenticationRequiredException.field_b / 3.141592653589793) * 64.0) + 128);
           } else {
             if (NetworkResourceRequest.field_C.field_oc == var9) {
-              TeamRoster.playerRingSprite.drawAdditive(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
+              TeamRoster.playerRingSprite.drawAdditive(10 + param2, param4 + 5, (int)(Math.sin((double)ProxyAuthenticationRequiredException.field_b / 3.141592653589793) * 64.0) + 128);
             }
           }
           var9.modelPreview.drawAtStoredPosition((byte) -72, param3);
@@ -97,7 +97,7 @@ final class KingBlackDragonEvent extends GameEvent {
             this.describeEvent((byte) -70, false);
           }
           battlefield.kingBlackDragonSummoned = true;
-          fl.recomputeClientStateChecksum(battlefield, -117);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -117);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rl.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -113,8 +113,8 @@ final class KingBlackDragonEvent extends GameEvent {
         return var3;
     }
 
-    public static void g(int param0) {
-        if (param0 <= -33) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard <= -33) {
           field_C = null;
           field_y = null;
           field_z = null;

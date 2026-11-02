@@ -25,9 +25,9 @@ final class AiActionCandidate extends IntrusiveNode {
         ds.a(0, param0 ^ -16982);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_p = null;
-        int var1 = -70 / ((-47 - param0) / 52);
+        int var1 = -70 / ((-47 - obfuscationGuard) / 52);
         renderTimestampsMillis = null;
         field_v = null;
         field_n = null;

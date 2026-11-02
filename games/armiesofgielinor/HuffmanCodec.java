@@ -39,12 +39,12 @@ final class HuffmanCodec {
         return var3Lifetime1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_j = null;
         field_e = null;
         field_f = null;
         field_g = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_d = (String) null;
         }
         field_i = null;

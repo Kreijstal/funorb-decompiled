@@ -5,10 +5,10 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
     static int[] noiseFade12;
     static SocialListPanel field_E;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         noiseFade12 = null;
         field_E = null;
-        if (param0 != 12600) {
+        if (obfuscationGuard != 12600) {
           field_E = (SocialListPanel) null;
         }
     }
@@ -32,10 +32,10 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
           SocialListPanel.field_Qb.setBounds(CombatEvent.field_I.height - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
           var7 = SocialListPanel.field_Qb.height - 5;
           if (param5 != 1) {
-            ListMissionsConsoleCommand.g(78);
+            ListMissionsConsoleCommand.releaseStatics(78);
           }
-          we.field_f.setBounds(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
-          UpkeepEvent.field_z.setBounds(param4, -20500, -DebouncedValidator.field_b.width + (we.field_f.width - param2), 0, param2);
+          ArchiveLoadStep.field_f.setBounds(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
+          UpkeepEvent.field_z.setBounds(param4, -20500, -DebouncedValidator.field_b.width + (ArchiveLoadStep.field_f.width - param2), 0, param2);
           var7 = var7 - (2 + param4);
           DebouncedValidator.field_b.setBounds(param4, -20500, DebouncedValidator.field_b.width, 0, param2 + UpkeepEvent.field_z.width);
           vq.field_a.setLayout(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
@@ -57,7 +57,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
               } else {
                 gt.field_b[var12].setBounds(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
                 jj.field_i[var12].setBounds(var7Lifetime1, -20500, -param2 + var9, 0, param2);
-                we.field_g[var12].setBounds(-param3 + (var7Lifetime1 - param3), -20500, param0, param3, var9);
+                ArchiveLoadStep.field_g[var12].setBounds(-param3 + (var7Lifetime1 - param3), -20500, param0, param3, var9);
                 ResourceProtocolClient.field_j[var12].setBounds(-param3 + (-param3 + var7Lifetime1), param5 - 20501, -var10 + (-param2 + var8), param3, var10);
               }
             }

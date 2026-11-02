@@ -37,10 +37,10 @@ final class wb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_c = null;
         field_a = (String[][]) null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_b = (String[]) null;
           field_b = null;
           return;
@@ -55,7 +55,7 @@ final class wb {
           return;
         }
         try {
-          af.openLoginProgress(closeFlowB, MapLayout.field_o, obfuscationGuard ^ -33);
+          LoginCredentials.openLoginProgress(closeFlowB, MapLayout.field_o, obfuscationGuard ^ -33);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wb.A(" + closeFlowB + ',' + obfuscationGuard + ',' + (accountIdentifier != null ? "{...}" : "null") + ',' + (password != null ? "{...}" : "null") + ')');
         }

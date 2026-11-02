@@ -14,13 +14,13 @@ final class TrianglePulse {
     private int value;
     static RgbSprite field_f;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_i = null;
         field_j = null;
         field_f = null;
         statusProtectionMasks = null;
-        if (param0 != 16) {
+        if (obfuscationGuard != 16) {
           return;
         }
         field_a = null;

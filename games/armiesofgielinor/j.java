@@ -29,8 +29,8 @@ final class j {
         this.field_c[param0] = this.field_c[param0] - this.field_k;
     }
 
-    public static void b(byte param0) {
-        int var1 = 92 % ((param0 - 88) / 37);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = 92 % ((obfuscationGuard - 88) / 37);
         field_j = null;
         field_d = null;
         decodedSpriteOffsetXs = null;
@@ -60,7 +60,7 @@ final class j {
           DisplacedUnitMarker.field_t[6] = AiInfluenceMap.field_k;
           DisplacedUnitMarker.field_t[9] = PreparedAction.field_k;
           DisplacedUnitMarker.field_t[8] = null;
-          DisplacedUnitMarker.field_t[4] = el.field_a;
+          DisplacedUnitMarker.field_t[4] = MouseWheelSource.field_a;
           DisplacedUnitMarker.field_t[54] = mh.field_d;
           DisplacedUnitMarker.field_t[2] = ClientConnectionState.field_b;
           DisplacedUnitMarker.field_t[5] = PointerInputHandler.field_d;
@@ -92,8 +92,8 @@ final class j {
           DisplacedUnitMarker.field_t[47] = qk.field_f;
           DisplacedUnitMarker.field_t[51] = nt.field_p;
           DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
-          DisplacedUnitMarker.field_t[44] = dd.field_g;
-          DisplacedUnitMarker.field_t[37] = lg.field_c;
+          DisplacedUnitMarker.field_t[44] = ArchiveMasterIndex.field_g;
+          DisplacedUnitMarker.field_t[37] = GzipDecoder.field_c;
           CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
@@ -116,10 +116,10 @@ final class j {
           if (param0 < 81) {
             return;
           }
-          wb.field_b[6] = el.field_a;
+          wb.field_b[6] = MouseWheelSource.field_a;
           wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, we.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, DisplaySettingsDialog.field_ib};
-          wb.field_b[18] = dd.field_g;
+          SocketFactory.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, ArchiveLoadStep.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, MarkerSliderWidget.field_P, StateChangeEvent.field_H, DisplaySettingsDialog.field_ib};
+          wb.field_b[18] = ArchiveMasterIndex.field_g;
           wb.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
           wb.field_b[14] = ov.field_d;
           wb.field_b[17] = ke.field_f;
@@ -135,7 +135,7 @@ final class j {
           wb.field_b[15] = UnitModelViewer.field_w;
           wb.field_b[26] = lb.field_d;
           wb.field_b[21] = ConsoleExpression.field_u;
-          wb.field_b[7] = kw.field_N;
+          wb.field_b[7] = ValidationStatusIcon.field_N;
           wb.field_b[8] = pu.field_h;
           wb.field_b[3] = l.field_g;
           wb.field_b[11] = DiskCacheRequest.field_J;
@@ -251,12 +251,12 @@ final class j {
             var5 = so.field_d;
             so.field_d.height = 0;
             var5.width = 0;
-            pi.field_N.height = 0;
-            var6 = pi.field_N;
+            MarkerSliderWidget.field_N.height = 0;
+            var6 = MarkerSliderWidget.field_N;
             var6.width = 0;
             AccountRegistrationForm.field_F.text = uu.field_a.toUpperCase();
             var7 = (2 + pd.field_c.width) / 2;
-            pi.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + pd.field_c.height, 0);
+            MarkerSliderWidget.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + pd.field_c.height, 0);
             so.field_d.setBounds(40, param0 ^ -20499, -var7 + pd.field_c.width, -40 + pd.field_c.height, var7);
             if (lm.field_e.length == 1 &&
               lm.field_e[0] == 2) {
@@ -306,9 +306,9 @@ final class j {
               stackIn_35_0.text = EmailCheckResult.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
               SocialListPanel.field_Lb.inputEnabled = true;
               fc.field_a = true;
-              pi.field_N.text = cg.field_i;
+              MarkerSliderWidget.field_N.text = ScreenWipeTransition.field_i;
               if (fs.field_d != null) {
-                jp.field_a = false;
+                ArchiveLoadSequence.field_a = false;
                 fc.field_a = false;
                 if (null == TeleportAction.field_B) {
                   dt.field_d = new boolean[tq.gameOptionCount];
@@ -330,7 +330,7 @@ final class j {
                 so.field_d.inputEnabled = false;
                 if (so.field_d.hovered) {
                   var9 = null;
-                  if (jp.field_a) {
+                  if (ArchiveLoadSequence.field_a) {
                     var9 = "<col=A00000>" + ep.field_h + "</col>";
                     var11 = var9;
                     var9 = var11;
@@ -349,7 +349,7 @@ final class j {
                       }
                     }
                   }
-                  DialogMessagePane.field_I = "<col=A00000>" + kp.field_e + "<br>" + ov.field_j + (String) (var9);
+                  DialogMessagePane.field_I = "<col=A00000>" + MarkerSliderPainter.field_e + "<br>" + ov.field_j + (String) (var9);
                 }
               }
             } else {
@@ -364,24 +364,24 @@ final class j {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = pi.field_N.font.textWidth(var16) + 3 * pi.field_N.font.characterWidth('.');
-              pi.field_N.textHorizontalPadding = (-var10Lifetime1 + pi.field_N.width) / 2;
+              var10Lifetime1 = MarkerSliderWidget.field_N.font.textWidth(var16) + 3 * MarkerSliderWidget.field_N.font.characterWidth('.');
+              MarkerSliderWidget.field_N.textHorizontalPadding = (-var10Lifetime1 + MarkerSliderWidget.field_N.width) / 2;
               if ((KeyboardInputListener.field_b & 48) == 16) {
                 var9 = var16 + ".";
               }
-              pi.field_N.horizontalAlignment = 0;
+              MarkerSliderWidget.field_N.horizontalAlignment = 0;
               if (32 == (48 & KeyboardInputListener.field_b)) {
                 var9 = (String) (var9) + "..";
               }
               if (48 == (48 & KeyboardInputListener.field_b)) {
                 var9 = (String) (var9) + "...";
               }
-              pi.field_N.text = (String) (var9);
-              so.field_d.text = ac.field_s.toUpperCase();
+              MarkerSliderWidget.field_N.text = (String) (var9);
+              so.field_d.text = ManaStarParticle.field_s.toUpperCase();
             }
           }
           if (param0 != 1) {
-            j.b((byte) 20);
+            j.releaseStatics((byte) 20);
           }
           stackIn_66_0 = BitmapTextWidgetPainter.field_a;
           stackIn_66_1 = true;

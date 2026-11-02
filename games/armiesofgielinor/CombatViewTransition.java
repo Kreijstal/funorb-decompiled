@@ -54,8 +54,8 @@ final class CombatViewTransition {
         this.camera.projectTile(1, param1);
         this.field_a[0] = this.camera.screenPosition[0];
         this.field_a[1] = this.camera.screenPosition[1];
-        this.field_b[0] = so.field_b.field_a >> 1;
-        this.field_b[1] = so.field_b.field_g >> 1;
+        this.field_b[0] = so.field_b.width >> 1;
+        this.field_b[1] = so.field_b.height >> 1;
         this.field_h = false;
         if (param0 > -59) {
           this.isExpanded((byte) -51);
@@ -150,16 +150,16 @@ final class CombatViewTransition {
         int var4Lifetime1;
         int var3Lifetime3;
         if (this.field_o == this.field_j) {
-          this.field_f[1] = so.field_b.field_g >> 1;
-          this.field_f[0] = so.field_b.field_a >> 1;
+          this.field_f[1] = so.field_b.height >> 1;
+          this.field_f[0] = so.field_b.width >> 1;
           return;
         }
         if (param0 != 1959107777) {
           return;
         }
         if (this.field_h) {
-          this.field_a[0] = so.field_b.field_a >> 1;
-          this.field_a[1] = so.field_b.field_g >> 1;
+          this.field_a[0] = so.field_b.width >> 1;
+          this.field_a[1] = so.field_b.height >> 1;
           this.a(-120);
           this.transitionFactor = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
           var2 = this.field_i[0] - this.field_g[0];
@@ -178,8 +178,8 @@ final class CombatViewTransition {
           }
           return;
         }
-        this.field_b[1] = so.field_b.field_g >> 1;
-        this.field_b[0] = so.field_b.field_a >> 1;
+        this.field_b[1] = so.field_b.height >> 1;
+        this.field_b[0] = so.field_b.width >> 1;
         this.a(-120);
         this.transitionFactor = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
         var2Lifetime1 = this.field_i[0] - this.field_g[0];
@@ -225,8 +225,8 @@ final class CombatViewTransition {
         this.field_b[0] = this.camera.screenPosition[0];
         this.field_h = true;
         int var3 = -107 / ((74 - param1) / 42);
-        this.field_a[0] = so.field_b.field_a >> 1;
-        this.field_a[1] = so.field_b.field_g >> 1;
+        this.field_a[0] = so.field_b.width >> 1;
+        this.field_a[1] = so.field_b.height >> 1;
     }
 
     private final void b(int param0) {

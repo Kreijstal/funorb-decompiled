@@ -30,12 +30,12 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_p = null;
         field_z = null;
         field_o = null;
         field_m = null;
-        if (param0 != 52) {
+        if (obfuscationGuard != 52) {
           return;
         }
         field_u = null;

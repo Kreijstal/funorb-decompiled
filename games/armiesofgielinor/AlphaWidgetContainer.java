@@ -19,13 +19,13 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         return (String) null;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_H = null;
         field_M = null;
         field_J = null;
         field_I = null;
-        if (param0) {
-          AlphaWidgetContainer.c(false);
+        if (obfuscationGuard) {
+          AlphaWidgetContainer.releaseStatics(false);
           field_L = null;
           return;
         }

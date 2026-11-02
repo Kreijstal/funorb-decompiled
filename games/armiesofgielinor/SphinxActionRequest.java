@@ -160,12 +160,12 @@ final class SphinxActionRequest extends ActionRequest {
           br.field_e = new ClientUiComponent(0L, var10);
           br.field_e.textHorizontalPadding = 2;
           br.field_e.skinSprites = SetCoatConsoleCommand.a(false, 2039583, -20600, 30, true, 3815994);
-          eq.field_h = new ClientUiComponent(0L, (ClientUiComponent) null);
-          eq.field_h.font = (BitmapFont) ((Object) t.field_a);
-          eq.field_h.textLineSpacing = jn.field_d;
-          eq.field_h.verticalAlignment = 1;
-          eq.field_h.textColour = 13421772;
-          DualLinkedNode.field_k = new ClientUiComponent(0L, eq.field_h);
+          PasswordLoginCredentials.field_h = new ClientUiComponent(0L, (ClientUiComponent) null);
+          PasswordLoginCredentials.field_h.font = (BitmapFont) ((Object) t.field_a);
+          PasswordLoginCredentials.field_h.textLineSpacing = jn.field_d;
+          PasswordLoginCredentials.field_h.verticalAlignment = 1;
+          PasswordLoginCredentials.field_h.textColour = 13421772;
+          DualLinkedNode.field_k = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           DualLinkedNode.field_k.selectedTextColour = 16777215;
           DualLinkedNode.field_k.disabledTextColour = 8421504;
           DualLinkedNode.field_k.textColour = 16764006;
@@ -178,18 +178,18 @@ final class SphinxActionRequest extends ActionRequest {
           var15.textLineSpacing = jn.field_d;
           var15.textColour = 16777215;
           var15.font = (BitmapFont) ((Object) var7);
-          ke.field_e = new ClientUiComponent(0L, eq.field_h);
+          ke.field_e = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           ke.field_e.skinSprites = SetCoatConsoleCommand.a(false, 2236962, -20600, 16, false, 2236962);
           ke.field_e.textHorizontalPadding = 2;
-          IconLabelControl.field_Lb = new ClientUiComponent(0L, eq.field_h);
+          IconLabelControl.field_Lb = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           IconLabelControl.field_Lb.skinSprites = SetCoatConsoleCommand.a(false, 1513239, -20600, 16, false, 1513239);
           IconLabelControl.field_Lb.textHorizontalPadding = 2;
-          ws.field_P = new ClientUiComponent(0L, ke.field_e);
-          ws.field_P.applyStyle(0, DualLinkedNode.field_k);
+          DialWidget.field_P = new ClientUiComponent(0L, ke.field_e);
+          DialWidget.field_P.applyStyle(0, DualLinkedNode.field_k);
           IsaacRandom.field_i = new ClientUiComponent(0L, IconLabelControl.field_Lb);
           IsaacRandom.field_i.applyStyle(0, DualLinkedNode.field_k);
           var16 = fk.loadRgbSpritesByName("button_mouseover", (byte) -128, param1, "lobby");
-          AnimationSequence.field_h = new ContextActionMenu(kq.field_N, var12, eq.field_h, DualLinkedNode.field_k, 3, 2, MusicPatch.field_n, 3, jn.field_d);
+          AnimationSequence.field_h = new ContextActionMenu(kq.field_N, var12, PasswordLoginCredentials.field_h, DualLinkedNode.field_k, 3, 2, MusicPatch.field_n, 3, jn.field_d);
           TextEntryWidgetPainter.field_u = new ClientUiComponent(0L, DualLinkedNode.field_k);
           TextEntryWidgetPainter.field_u.skinSprites = var13;
           TextEntryWidgetPainter.field_u.heldPressOffsetX = 1;
@@ -201,11 +201,11 @@ final class SphinxActionRequest extends ActionRequest {
           TextEntryWidgetPainter.field_u.selectedSkinSprites = fk.loadRgbSpritesByName("button_active", (byte) -124, param1, "lobby");
           TextEntryWidgetPainter.field_u.disabledSkinSprites = fk.loadRgbSpritesByName("button_disabled", (byte) -126, param1, "lobby");
           TextEntryWidgetPainter.field_u.horizontalAlignment = 1;
-          h.field_d = new ClientUiComponent(0L, DualLinkedNode.field_k);
-          h.field_d.horizontalAlignment = 1;
-          h.field_d.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("tab_inactive", (byte) -127, param1, "lobby"));
-          h.field_d.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("tab_mouseover", (byte) -124, param1, "lobby"));
-          h.field_d.selectedSkinSprites = var14;
+          LoginKind.field_d = new ClientUiComponent(0L, DualLinkedNode.field_k);
+          LoginKind.field_d.horizontalAlignment = 1;
+          LoginKind.field_d.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("tab_inactive", (byte) -127, param1, "lobby"));
+          LoginKind.field_d.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("tab_mouseover", (byte) -124, param1, "lobby"));
+          LoginKind.field_d.selectedSkinSprites = var14;
           wm.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           wm.field_c.skinSprites = tq.a(1856141, false, 206, -1, 3, 1127256);
           UnitAnimationPreview.field_m = new ClientUiComponent(0L, (ClientUiComponent) null);
@@ -354,10 +354,10 @@ final class SphinxActionRequest extends ActionRequest {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_v = null;
         field_A = null;
-        if (param0 != -27538) {
+        if (obfuscationGuard != -27538) {
           return;
         }
         keyStateEvents = null;
@@ -366,7 +366,7 @@ final class SphinxActionRequest extends ActionRequest {
     final static void e(int param0) {
         TurnEffectEvent.field_z.drawViewer((byte) -115);
         if (param0 != 0) {
-          SphinxActionRequest.f(64);
+          SphinxActionRequest.releaseStatics(64);
           return;
         }
     }

@@ -50,7 +50,7 @@ final class jj {
             var3 = (String) null;
             jj.isFriend(93, (String) null);
           }
-          stackIn_5_0 = (lg.findFriend(name, (byte) -34) != null);
+          stackIn_5_0 = (GzipDecoder.findFriend(name, (byte) -34) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

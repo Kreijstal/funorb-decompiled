@@ -14,9 +14,9 @@ final class ChannelGainProfile {
         this.gains = new int[16];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
-        if (param0 != -4740) {
+        if (obfuscationGuard != -4740) {
           return;
         }
         field_c = null;

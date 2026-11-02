@@ -407,10 +407,10 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.evaluateMessage((byte) -71);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
         field_c = null;
-        if (param0 != 65280) {
+        if (obfuscationGuard != 65280) {
           field_c = (String) null;
         }
     }

@@ -23,11 +23,11 @@ final class ParasiteEvent extends GameEvent {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_A = null;
         rasterStateStack = null;
         field_F = null;
-        if (param0 != 46) {
+        if (obfuscationGuard != 46) {
           field_F = (String) null;
         }
     }
@@ -47,7 +47,7 @@ final class ParasiteEvent extends GameEvent {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
+          var1[var2] = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
         }
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 106);
         if (obfuscationGuard >= 1) {
@@ -130,7 +130,7 @@ final class ParasiteEvent extends GameEvent {
             GameplayController var6 = (GameplayController) null;
             this.a((NodeDeque) null, (byte) 109, (GameplayController) null);
           }
-          fl.recomputeClientStateChecksum(battlefield, -126);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -126);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "md.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

@@ -96,11 +96,11 @@ final class ck {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_d = null;
         field_c = null;
-        if (param0 != 14) {
+        if (obfuscationGuard != 14) {
           return;
         }
         animationSequencesByGroup = (AnimationSequence[][]) null;
