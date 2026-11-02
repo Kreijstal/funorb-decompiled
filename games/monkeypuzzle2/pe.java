@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pe {
-    static le[] field_a;
+    static Sprite[] field_a;
     private int[] field_b;
     static wg[] field_d;
     static String field_c;
@@ -100,7 +100,7 @@ final class pe {
     final static void a(int param0) {
         int var1 = 69 / ((param0 + 50) / 44);
         if (ok.field_e) {
-          pl.field_e.c("Clearances With Monkeys: " + dc.field_e, 635, 30, 16711680, 1);
+          pl.field_e.c("Clearances With Monkeys: " + IterableNodeHashTable.field_e, 635, 30, 16711680, 1);
           pl.field_e.c("Clearances WithOut Monkeys: " + ek.field_b, 635, 50, 16711680, 1);
           pl.field_e.c("Nuts Fired: " + sc.field_c, 635, 70, 16711680, 1);
           pl.field_e.c("Size of last detatched clump " + ke.field_c, 635, 90, 16711680, 1);
@@ -156,10 +156,10 @@ final class pe {
           var7_int = 0;
           param3 = param3 + param1;
           if (param0 != -1) {
-            field_a = (le[]) null;
+            field_a = (Sprite[]) null;
           }
           var8 = param2;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param5[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -173,7 +173,7 @@ final class pe {
               param1++;
               param4[incrementValue$1] = (byte)(~var10);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -189,7 +189,7 @@ final class pe {
               param1++;
               param4[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -205,7 +205,7 @@ final class pe {
               param1++;
               param4[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -221,7 +221,7 @@ final class pe {
               param1++;
               param4[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -237,7 +237,7 @@ final class pe {
               param1++;
               param4[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param1 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -253,7 +253,7 @@ final class pe {
               param1++;
               param4[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -285,7 +285,7 @@ final class pe {
               param1++;
               param4[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param1 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }

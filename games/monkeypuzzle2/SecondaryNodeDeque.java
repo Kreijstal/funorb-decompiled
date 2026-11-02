@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class ni implements Iterable {
-    bf field_b;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode field_b;
     static java.applet.Applet field_e;
     static String[] field_d;
     static int field_a;
     static ai[] field_c;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new nd(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final static ed[] a(int param0, hb param1) {
@@ -70,7 +70,7 @@ final class ni implements Iterable {
         }
     }
 
-    final void a(int param0, bf param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (null != param1.field_e) {
             param1.a(7847);
@@ -92,7 +92,7 @@ final class ni implements Iterable {
           param0.removeKeyListener(wj.field_k);
           if (param1 > -123) {
             java.awt.Component var3 = (java.awt.Component) null;
-            ni.a((java.awt.Component) null, (byte) -124);
+            SecondaryNodeDeque.a((java.awt.Component) null, (byte) -124);
           }
           param0.removeFocusListener(wj.field_k);
           vf.field_a = -1;
@@ -101,12 +101,12 @@ final class ni implements Iterable {
         }
     }
 
-    final bf b(byte param0) {
+    final DualLinkNode b(byte param0) {
         if (param0 > -73) {
           hb var3 = (hb) null;
-          ni.a(109, (hb) null);
+          SecondaryNodeDeque.a(109, (hb) null);
         }
-        bf var2 = this.field_b.field_g;
+        DualLinkNode var2 = this.field_b.field_g;
         if (var2 == this.field_b) {
           return null;
         }
@@ -114,7 +114,7 @@ final class ni implements Iterable {
         return var2;
     }
 
-    private ni() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends ua implements vc, ql {
+final class qi extends WidgetContainer implements vc, ql {
     private boolean field_F;
     private String field_B;
     private rj field_H;
     static String field_A;
-    private t field_D;
+    private ButtonWidget field_D;
     static String field_J;
     private rj field_L;
-    static le[] field_K;
-    private t field_C;
+    static Sprite[] field_K;
+    private ButtonWidget field_C;
     static String field_E;
     private boolean field_G;
-    private t field_I;
+    private ButtonWidget field_I;
     private boolean field_z;
 
     final void a(String param0, byte param1) {
@@ -38,7 +38,7 @@ final class qi extends ua implements vc, ql {
           if (param1 >= -82) {
             field_A = (String) null;
           }
-          kg.a(be.field_d, lh.field_e, pj.field_h, -9089);
+          kg.a(be.field_d, lh.field_e, IntrusiveDeque.field_h, -9089);
           oh.a(0, (byte) 63, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qi.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -56,7 +56,7 @@ final class qi extends ua implements vc, ql {
             this.field_L = (rj) null;
           }
           if (param1 == this.field_L) {
-            this.field_H.a((we) (this), false);
+            this.field_H.a((UiWidget) (this), false);
           }
           if (this.field_H == param1) {
             this.b(true);
@@ -76,7 +76,7 @@ final class qi extends ua implements vc, ql {
         }
     }
 
-    final static void a(int param0, gk param1, int param2, boolean param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, boolean param3, int param4) {
         param1.b(12, -49152);
         param1.c(17, 93);
         if (param3) {
@@ -94,8 +94,8 @@ final class qi extends ua implements vc, ql {
     public static void d(byte param0) {
         field_K = null;
         if (param0 != 98) {
-          gk var2 = (gk) null;
-          qi.a(10, (gk) null, 41, false, -90);
+          PacketBuffer var2 = (PacketBuffer) null;
+          qi.a(10, (PacketBuffer) null, 41, false, -90);
         }
         field_E = null;
         field_J = null;
@@ -112,7 +112,7 @@ final class qi extends ua implements vc, ql {
         return this.field_L.field_s;
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -157,7 +157,7 @@ final class qi extends ua implements vc, ql {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_B) {
-          t.field_z.a(this.field_B, 20 + (this.field_r + param3), 15 + this.field_e + param2, this.field_l - 40, this.field_p, 16777215, -1, 1, 0, t.field_z.field_C);
+          ButtonWidget.field_z.a(this.field_B, 20 + (this.field_r + param3), 15 + this.field_e + param2, this.field_l - 40, this.field_p, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
         }
         if (this.field_D != null) {
           ge.a(10 + param3, param2 + 134, this.field_l - 20, 4210752);
@@ -190,10 +190,10 @@ final class qi extends ua implements vc, ql {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        t stackIn_17_1 = null;
-        t stackIn_17_2 = null;
-        t stackIn_18_1 = null;
-        t stackIn_18_2 = null;
+        ButtonWidget stackIn_17_1 = null;
+        ButtonWidget stackIn_17_2 = null;
+        ButtonWidget stackIn_18_1 = null;
+        ButtonWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -223,11 +223,11 @@ final class qi extends ua implements vc, ql {
           this.field_L = (rj) ((Object) new qc(param0, (of) (this), 100));
           this.field_H = (rj) ((Object) new qc("", (of) (this), 20));
           if (this.field_z) {
-            this.field_I = new t(qd.field_c, (of) null);
-            this.field_C = new t(vh.field_L, (of) null);
+            this.field_I = new ButtonWidget(qd.field_c, (of) null);
+            this.field_C = new ButtonWidget(vh.field_L, (of) null);
             this.field_L.field_w = false;
           } else {
-            this.field_I = new t(fe.field_c, (of) null);
+            this.field_I = new ButtonWidget(fe.field_c, (of) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_F) {
@@ -239,9 +239,9 @@ final class qi extends ua implements vc, ql {
               stackIn_18_2 = null;
               stackIn_18_3 = oi.field_d;
             }
-            this.field_C = new t(stackIn_18_3, (of) null);
+            this.field_C = new ButtonWidget(stackIn_18_3, (of) null);
             if (this.field_G) {
-              this.field_D = new t(oi.field_g, (of) (this));
+              this.field_D = new ButtonWidget(oi.field_g, (of) (this));
             }
           }
           this.field_L.field_h = (ml) ((Object) new mg(10000536));
@@ -269,7 +269,7 @@ final class qi extends ua implements vc, ql {
             }
           }
           this.field_e = 15;
-          var7 = t.field_z;
+          var7 = ButtonWidget.field_z;
           if (this.field_B != null) {
             this.field_e = this.field_e + (var7.a(this.field_B, this.field_l - 40, var7.field_C) + 5);
           }
@@ -285,11 +285,11 @@ final class qi extends ua implements vc, ql {
           dupTemp$0 = new mh(10, this.field_e, this.field_l - 20, 25, this.field_L, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) -100, dupTemp$0);
-          this.field_e = this.field_e + (5 + ((we) ((Object) var12)).field_p);
+          this.field_e = this.field_e + (5 + ((UiWidget) ((Object) var12)).field_p);
           dupTemp$1 = new mh(10, this.field_e, -20 + this.field_l, 25, this.field_H, false, 80, 3, var7, 16777215, ec.field_c);
           var13 = dupTemp$1;
           this.b((byte) -78, dupTemp$1);
-          this.field_e = this.field_e + (((we) ((Object) var13)).field_p + 5);
+          this.field_e = this.field_e + (((UiWidget) ((Object) var13)).field_p + 5);
           this.field_I.field_o = (of) (this);
           if (null != this.field_D) {
             this.field_D.field_o = (of) (this);
@@ -347,7 +347,7 @@ final class qi extends ua implements vc, ql {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -361,7 +361,7 @@ final class qi extends ua implements vc, ql {
           }
           if (this.field_I != param4) {
             if (param4 == this.field_D) {
-              dc.a(0);
+              IterableNodeHashTable.a(0);
             } else {
               if (this.field_C == param4) {
                 if (!this.field_z) {

@@ -16,9 +16,9 @@ final class ef {
         int var3 = 0;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (gk.field_e == -1 &&
+          if (PacketBuffer.field_e == -1 &&
             oi.field_f == -1) {
-            gk.field_e = ei.field_a;
+            PacketBuffer.field_e = ei.field_a;
             oi.field_f = p.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -31,7 +31,7 @@ final class ef {
           if (decompiledFrameRemainder0) {
             if (!ac.field_b) {
               if (cj.field_e <= ka.field_a) {
-                stackIn_17_0 = (ka.field_a < cj.field_e + id.field_a) ? 1 : 0;
+                stackIn_17_0 = (ka.field_a < cj.field_e + BufferedSocket.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -59,7 +59,7 @@ final class ef {
                 ac.field_b = true;
               }
             }
-            oa.field_G = gk.field_e;
+            oa.field_G = PacketBuffer.field_e;
             nj.field_a = oi.field_f;
           }
           if (!ac.field_b &&
@@ -67,15 +67,15 @@ final class ef {
             oe.field_d) {
             ka.field_a = 0;
             nj.field_a = oi.field_f;
-            oa.field_G = gk.field_e;
+            oa.field_G = PacketBuffer.field_e;
           }
           pf.field_b = param1;
           if (param0 <= 8) {
             ef.a(false);
           }
-          gk.field_e = -1;
+          PacketBuffer.field_e = -1;
           if (ac.field_b &&
-            ik.field_l == ka.field_a) {
+            SpriteState.field_l == ka.field_a) {
             ka.field_a = 0;
             ac.field_b = false;
           }

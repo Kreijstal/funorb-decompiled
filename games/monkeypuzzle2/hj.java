@@ -15,7 +15,7 @@ final class hj {
     private int field_jb;
     private int field_U;
     private boolean field_o;
-    private le field_m;
+    private Sprite field_m;
     private int field_u;
     static boolean field_L;
     private int field_T;
@@ -39,16 +39,16 @@ final class hj {
     private int[] field_fb;
     private boolean field_V;
     private int field_z;
-    private le field_q;
+    private Sprite field_q;
     private int field_eb;
-    private le field_N;
+    private Sprite field_N;
     private int field_i;
     private float field_B;
     private int field_hb;
     private int field_a;
     private int field_g;
     private int field_J;
-    private le field_f;
+    private Sprite field_f;
     private int[] field_F;
     private int field_y;
     private int field_r;
@@ -63,7 +63,7 @@ final class hj {
     private float field_Z;
     private int field_b;
     private int field_ib;
-    private le field_R;
+    private Sprite field_R;
     private int field_w;
     private int field_p;
     private int field_ab;
@@ -85,7 +85,7 @@ final class hj {
           if (var5 >= 50) {
             var6 = (-(60 * (-50 + var5)) + 6000) / 100;
             if (var6 > 5) {
-              var4_int = hc.field_h[param2][1] - Math.abs((int)((float)var6 * ia.a(true, 0.10000000149011612f * (float)(var5 - 50))));
+              var4_int = hc.field_h[param2][1] - Math.abs((int)((float)var6 * ProxySocketConnector.a(true, 0.10000000149011612f * (float)(var5 - 50))));
             } else {
               var4_int = hc.field_h[param2][1];
             }
@@ -115,7 +115,7 @@ final class hj {
             this.field_g = 65535 - this.field_g;
           }
           if (param0 != 120) {
-            this.field_q = (le) null;
+            this.field_q = (Sprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,7 +170,7 @@ final class hj {
           var5 = 0;
           var6 = 15 / ((param0 - 63) / 32);
           while (this.field_fb.length > var5) {
-            var7 = ua.field_w[var5];
+            var7 = WidgetContainer.field_w[var5];
             var8 = ad.field_g[var5];
             this.field_fb[var5] = ch.a(ch.a(65280, var8) * var4 + var3 * ch.a(var7, 65280), 16711680) + ch.a(var4 * ch.a(var8, 16711935) + ch.a(var7, 16711935) * var3, -16711936) >> 8;
             var5++;
@@ -300,8 +300,8 @@ final class hj {
         try {
           if (this.field_A > 0 &&
             !this.field_o &&
-            null == pg.field_b) {
-            pg.field_b = di.a(rk.field_d, 65494, h.field_a, nj.field_b, new int[]{this.field_A}, 41, cl.field_d, 3, (byte) 100);
+            null == ProxyAuthenticationRequiredException.field_b) {
+            ProxyAuthenticationRequiredException.field_b = di.a(rk.field_d, 65494, h.field_a, nj.field_b, new int[]{this.field_A}, 41, cl.field_d, 3, (byte) 100);
           }
           int var2_int = -67 / ((param0 + 63) / 42);
         } catch (RuntimeException runtimeException) {
@@ -467,7 +467,7 @@ final class hj {
           IOException var2 = null;
           RuntimeException var2_ref = null;
           try {
-            if (param0 <= MonkeyPuzzle2.field_D.field_h) {
+            if (param0 <= MonkeyPuzzle2.field_D.position) {
               return true;
             }
             if (ol.field_g == null) {
@@ -479,27 +479,27 @@ final class hj {
               }
               var2_int = ol.field_g.c(-110);
               if (var2_int > 0) {
-                if (var2_int > param0 - MonkeyPuzzle2.field_D.field_h) {
-                  var2_int = param0 - MonkeyPuzzle2.field_D.field_h;
+                if (var2_int > param0 - MonkeyPuzzle2.field_D.position) {
+                  var2_int = param0 - MonkeyPuzzle2.field_D.position;
                 }
-                ol.field_g.a(var2_int, param1, MonkeyPuzzle2.field_D.field_g, MonkeyPuzzle2.field_D.field_h);
+                ol.field_g.a(var2_int, param1, MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position);
                 d.field_k = pf.a(0);
-                MonkeyPuzzle2.field_D.field_h = MonkeyPuzzle2.field_D.field_h + var2_int;
-                if (param0 > MonkeyPuzzle2.field_D.field_h) {
+                MonkeyPuzzle2.field_D.position = MonkeyPuzzle2.field_D.position + var2_int;
+                if (param0 > MonkeyPuzzle2.field_D.position) {
                   return false;
                 }
-                MonkeyPuzzle2.field_D.field_h = 0;
+                MonkeyPuzzle2.field_D.position = 0;
                 return true;
               }
               if (var2_int >= 0 &&
                 wf.a(55) <= 30000L) {
                 return false;
               }
-              gk.a(-1);
+              PacketBuffer.a(-1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              gk.a(-1);
+              PacketBuffer.a(-1);
             }
             return false;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -534,7 +534,7 @@ final class hj {
             var2_float = 3.1415927410125732f;
             var3 = 0.75f * var2_float + (float)(-this.field_g) / 65535.0f * var2_float * 2.0f;
             this.field_B = this.field_B + ha.a((byte) 51, var3);
-            this.field_Z = this.field_Z + ia.a(true, var3);
+            this.field_Z = this.field_Z + ProxySocketConnector.a(true, var3);
             this.field_V = true;
           }
           if (69.0f < this.field_B) {
@@ -613,7 +613,7 @@ final class hj {
           if (0 != kc.field_d &&
             13 == this.field_jb) {
             this.a(false);
-            pg.field_d[l.field_f].c((byte) -87);
+            ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) -87);
             ej.field_b = 0;
             return;
           }
@@ -713,8 +713,8 @@ final class hj {
               } else {
                 this.a(false);
               }
-              pg.field_d[l.field_f].c((byte) 73);
-              pg.field_d[l.field_f].a(false, false);
+              ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) 73);
+              ProxyAuthenticationRequiredException.field_d[l.field_f].a(false, false);
               ej.field_b = 0;
               return;
             }
@@ -740,7 +740,7 @@ final class hj {
               this.field_u == 6) && (oa.field_H == 83 ||
               oa.field_H == 82) && (jj.b(true) &&
               this.field_jb == 0) && (!qb.field_b ||
-              !(ck.field_b >= 0))) {
+              !(DequeCursor.field_b >= 0))) {
               this.field_u = 1;
               this.field_Y = 0;
               this.field_T = 1;
@@ -748,13 +748,13 @@ final class hj {
             }
             if (ec.field_d >= 2) {
               if (oa.field_H == 26 &&
-                dc.field_c > 0) {
+                IterableNodeHashTable.field_c > 0) {
                 this.field_M = 320;
                 this.field_k = 480;
                 this.field_O = -14 + this.field_k;
                 uj.b(0);
-                dc.field_c = dc.field_c - 1;
-                rb.a(dc.field_c, (byte) -58);
+                IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 1;
+                rb.a(IterableNodeHashTable.field_c, (byte) -58);
                 this.field_o = true;
               }
               if (oa.field_H == 36) {
@@ -772,8 +772,8 @@ final class hj {
                 this.field_k = 480;
                 this.field_O = -14 + this.field_k;
                 uj.b(0);
-                dc.field_c = dc.field_c + 1;
-                rb.a(dc.field_c, (byte) -58);
+                IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
+                rb.a(IterableNodeHashTable.field_c, (byte) -58);
                 this.field_o = true;
               }
               if (oa.field_H == 33) {
@@ -828,7 +828,7 @@ final class hj {
               this.field_t > 500 &&
               !ok.field_d &&
               hd.field_u.e(11253)) {
-              al.c((byte) -103);
+              SocketConnector.c((byte) -103);
               this.field_t = 0;
               this.field_r = -1;
             }
@@ -865,7 +865,7 @@ final class hj {
             }
             kj.a(var3 != 0, -1);
             if (qb.field_b &&
-              ck.field_b >= 0) {
+              DequeCursor.field_b >= 0) {
               this.field_d = this.field_d + 2;
             } else {
               this.a(-19921);
@@ -882,13 +882,13 @@ final class hj {
                   if (1 == this.field_u) {
                     var8 = 0;
                     var9_ref_ki = (ki) (wd.field_h.a((byte) -117));
-                    L47: while (true) {
+                    scanLoop1: while (true) {
                       if (var9_ref_ki != null) {
                         if (0 != var8) {
                           this.field_lb[-1 + var8] = var9_ref_ki.field_l;
                           var8++;
                           if (var8 == 6) {
-                            break L47;
+                            break scanLoop1;
                           }
                         } else {
                           var8++;
@@ -941,7 +941,7 @@ final class hj {
               if (this.field_u == 0 &&
                 50 > -90 + this.field_O - this.field_W) {
                 this.field_u = 6;
-                ve.a(125, 8, 0, je.field_i);
+                ve.a(125, 8, 0, WeightedObjectCache.field_i);
               } else {
                 if (((this.field_u == 6)) &&
                   (!(-90 + this.field_O - this.field_W <= 50))) {
@@ -982,7 +982,7 @@ final class hj {
                 if (13 == var7) {
                   if (this.field_nb == 0) {
                     bl.a(50, bl.field_g);
-                    al.c((byte) -84);
+                    SocketConnector.c((byte) -84);
                   }
                   this.field_nb = this.field_nb + 4;
                   if (this.field_nb > 2120) {
@@ -1002,7 +1002,7 @@ final class hj {
                         l.field_f = 6;
                       }
                     }
-                    pg.field_d[l.field_f].c((byte) -98);
+                    ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) -98);
                     ej.field_b = 0;
                   }
                   if ((this.field_d & 15) == 0) {
@@ -1048,8 +1048,8 @@ final class hj {
                           this.field_O = -14 + this.field_k;
                           uj.b(0);
                           vi.a(true);
-                          dc.field_c = dc.field_c + 1;
-                          rb.a(dc.field_c, (byte) -58);
+                          IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
+                          rb.a(IterableNodeHashTable.field_c, (byte) -58);
                           this.field_r = 1;
                           this.field_t = 0;
                           dupTemp$2 = jf.a(-2147483648);
@@ -1066,7 +1066,7 @@ final class hj {
                           } else {
                             this.field_ib = 95;
                           }
-                          if (20 == dc.field_c) {
+                          if (20 == IterableNodeHashTable.field_c) {
                             this.field_u = 4;
                             this.field_jb = 5;
                             decompiledFrameRemainder0 = false;
@@ -1092,7 +1092,7 @@ final class hj {
                             } else {
                               l.field_f = 7;
                             }
-                            pg.field_d[l.field_f].c((byte) 93);
+                            ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) 93);
                             this.field_nb = 0;
                             ej.field_b = 0;
                             this.field_d = 0;
@@ -1119,13 +1119,13 @@ final class hj {
                       this.field_Y = 0;
                       bl.a(50, kb.field_d);
                       this.field_R.e();
-                      lb.a(0, 340, (byte) 24, wc.field_e, 0, 40);
+                      lb.a(0, 340, (byte) 24, NodeHashTableIterator.field_e, 0, 40);
                       sb.field_r.a(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, sb.field_r.field_C, 1, -1);
                       this.field_f.e();
-                      lb.a(0, 340, (byte) -14, wc.field_e, 0, 40);
+                      lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
                       sb.field_r.a(gg.a(new String[]{Integer.toString(this.field_I)}, ff.field_a, true), 170, sb.field_r.field_C, 1, -1);
                       ac.field_a.a((byte) 119);
-                      if (dc.field_c == 19) {
+                      if (IterableNodeHashTable.field_c == 19) {
                         e.a(254, (byte) 40, 1);
                       }
                       this.field_mb = 0.0f;
@@ -1157,14 +1157,14 @@ final class hj {
                     rc.a(this.field_mb, this.field_s, (byte) -111);
                     if (0 > mh.field_D &&
                       this.field_u == 2) {
-                      if (vj.a(dc.field_c, 1) == aa.field_a) {
+                      if (vj.a(IterableNodeHashTable.field_c, 1) == aa.field_a) {
                         ie.a(aa.field_a, 119);
                         this.field_jb = 2;
                         this.field_d = 0;
                       } else {
                         this.field_jb = 4;
                         this.field_d = 0;
-                        if (dc.field_c != 19) {
+                        if (IterableNodeHashTable.field_c != 19) {
                           bl.a(50, b.field_l);
                         } else {
                           bl.a(50, wf.field_h);
@@ -1337,14 +1337,14 @@ final class hj {
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        le var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         Object var9_ref = null;
         int var9 = 0;
         ki var9_ref_ki = null;
-        le var9_ref_le = null;
+        Sprite var9_ref_le = null;
         int var10 = 0;
-        le var10_ref_le = null;
+        Sprite var10_ref_le = null;
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
@@ -1361,10 +1361,10 @@ final class hj {
         ki var22_ref = null;
         Object var23 = null;
         ki var23_ref = null;
-        le var24 = null;
-        le var25 = null;
-        le var10_ref_leLifetime1;
-        le var10_ref_leLifetime1Lifetime1;
+        Sprite var24 = null;
+        Sprite var25 = null;
+        Sprite var10_ref_leLifetime1;
+        Sprite var10_ref_leLifetime1Lifetime1;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var2_intLifetime3;
@@ -1446,7 +1446,7 @@ final class hj {
             }
           }
           if (aa.field_a != 0) {
-            al.a(this.field_H, (byte) -126);
+            SocketConnector.a(this.field_H, (byte) -126);
           }
           if (aa.field_a == 3) {
             stackIn_45_0 = (this.field_ib >= 170) ? 1 : 0;
@@ -1553,7 +1553,7 @@ final class hj {
           }
           ll.a(24733);
           ci.a(-2865);
-          ck.field_a[1].c(20 + this.field_M, -wl.field_f[0].field_n + (this.field_k - 13));
+          DequeCursor.field_a[1].c(20 + this.field_M, -wl.field_f[0].field_n + (this.field_k - 13));
           if (!wd.field_h.e(11253)) {
             var22_ref = (ki) (wd.field_h.a((byte) -117));
             if (var22_ref != null) {
@@ -1589,7 +1589,7 @@ final class hj {
             }
           }
           df.f(18180);
-          var2_intLifetime3 = (int)(ia.a(true, (float)this.field_H * 0.00800000037997961f) * 50.0f);
+          var2_intLifetime3 = (int)(ProxySocketConnector.a(true, (float)this.field_H * 0.00800000037997961f) * 50.0f);
           var3Lifetime4 = 727655;
           ge.c(80, this.field_O, 480, 480, var3Lifetime4, 120);
           var4Lifetime4 = 0;
@@ -1652,7 +1652,7 @@ final class hj {
               var7_intLifetime3 = -this.field_d + 4;
             }
             if (var7_intLifetime3 > 0) {
-              var8Lifetime3 = this.field_v + (int)(ia.a(true, (float)this.field_d * 0.10000000149011612f) * 20.0f);
+              var8Lifetime3 = this.field_v + (int)(ProxySocketConnector.a(true, (float)this.field_d * 0.10000000149011612f) * 20.0f);
               if (var8Lifetime3 < 0) {
                 var8Lifetime3 = 0;
               }
@@ -1660,7 +1660,7 @@ final class hj {
                 var8Lifetime3 = 255;
               }
               for (var9Lifetime2 = 0; var9Lifetime2 < 10; var9Lifetime2++) {
-                ge.a((var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) % 480 + 80 << 4, -90 + this.field_k + (int)(4.0f * ia.a(true, (float)(var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) * 0.10000000149011612f)) << 4, ll.field_c[var9Lifetime2] << 4, jf.field_f[var9Lifetime2], cf.field_a);
+                ge.a((var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) % 480 + 80 << 4, -90 + this.field_k + (int)(4.0f * ProxySocketConnector.a(true, (float)(var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) * 0.10000000149011612f)) << 4, ll.field_c[var9Lifetime2] << 4, jf.field_f[var9Lifetime2], cf.field_a);
               }
               uc.a(78, -90 + this.field_k, 558, this.field_k - 90, 3, var8Lifetime3, var7_intLifetime3, this.field_fb);
             }
@@ -1750,10 +1750,10 @@ final class hj {
           wl.field_f[this.field_U].c(-70 + this.field_M, this.field_k + (-13 - wl.field_f[0].field_n));
           var10Lifetime3 = -this.field_z;
           ci.field_d.a(0, ci.field_d.field_n << 3, this.field_M << 4, this.field_k - 48 << 4, var10Lifetime3, 4096);
-          ck.field_a[0].c(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
+          DequeCursor.field_a[0].c(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
           fa.f(1);
           pl.field_e.a(this.field_j.toString(), 40, 124, 16777215, -1);
-          pl.field_e.a(Integer.toString(1 + dc.field_c % 5), 40, 208, 16777215, -1);
+          pl.field_e.a(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
           var11Lifetime4 = -48 / ((param0 - 56) / 43);
           pl.field_e.a(Integer.toString(1 + aa.field_a), 40, 288, 16777215, -1);
           if (13 != this.field_jb) {
@@ -1774,8 +1774,8 @@ final class hj {
                           f.a(this.field_d, (byte) 117);
                         }
                         ph.field_d.a(0, 0);
-                        for (var12 = 0; var12 < ni.field_c.length; var12++) {
-                          ni.field_c[var12].b(el.field_b[var12][0], el.field_b[var12][1]);
+                        for (var12 = 0; var12 < SecondaryNodeDeque.field_c.length; var12++) {
+                          SecondaryNodeDeque.field_c[var12].b(el.field_b[var12][0], el.field_b[var12][1]);
                         }
                         if (this.field_d / 2 < 255) {
                           stackIn_291_0 = this.field_d / 2;
@@ -1819,7 +1819,7 @@ final class hj {
                     } else {
                       if (this.field_d < 400) {
                         ph.field_d.a(0, 0);
-                        ni.field_c[0].b(el.field_b[0][0], el.field_b[0][1]);
+                        SecondaryNodeDeque.field_c[0].b(el.field_b[0][0], el.field_b[0][1]);
                         cm.field_F[this.field_Y].c(hc.field_h[aa.field_a][0], this.a(-97, 0, aa.field_a));
                       }
                       if (this.field_d > 350 &&
@@ -1849,7 +1849,7 @@ final class hj {
                       3 > aa.field_a) {
                       ph.field_d.a(0, 0);
                       for (var13_int = 0; var13_int <= aa.field_a + 1; var13_int++) {
-                        ni.field_c[var13_int].b(el.field_b[var13_int][0], el.field_b[var13_int][1]);
+                        SecondaryNodeDeque.field_c[var13_int].b(el.field_b[var13_int][0], el.field_b[var13_int][1]);
                       }
                       var13_int = hc.field_h[1 + aa.field_a][0] + (cm.field_F[this.field_Y].field_m - qc.field_L[this.field_Y].field_m) / 2;
                       var14 = (-qc.field_L[this.field_Y].field_n + cm.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + aa.field_a][1];
@@ -1940,7 +1940,7 @@ final class hj {
         this.field_A = 0;
         this.field_n = 32;
         this.field_I = 0;
-        this.field_m = new le(480, 100);
+        this.field_m = new Sprite(480, 100);
         this.field_F = new int[480];
         this.field_ib = -40;
         this.field_p = 1;
@@ -1962,8 +1962,8 @@ final class hj {
           this.field_nb = 0;
           this.field_O = this.field_k - 14;
           uj.b(0);
-          dc.field_c = 0;
-          rb.a(dc.field_c, (byte) -58);
+          IterableNodeHashTable.field_c = 0;
+          rb.a(IterableNodeHashTable.field_c, (byte) -58);
           if (aa.field_a != 0) {
             if (3 == aa.field_a) {
               this.field_ib = 11;
@@ -1979,8 +1979,8 @@ final class hj {
             ge.b(pf.a((byte) 109, 480), pf.a((byte) -100, 100), 16777215);
           }
           ac.field_a.a((byte) 111);
-          this.field_N = new le(480, 200);
-          this.field_q = new le(480, 200);
+          this.field_N = new Sprite(480, 200);
+          this.field_q = new Sprite(480, 200);
           this.field_A = 0;
           this.field_I = 0;
           this.field_j = new StringBuilder(7);
@@ -1988,17 +1988,17 @@ final class hj {
           this.b((byte) -43);
           this.field_z = 49150;
           h.a(0, true);
-          this.field_R = new le(340, 40);
-          this.field_f = new le(340, 40);
+          this.field_R = new Sprite(340, 40);
+          this.field_f = new Sprite(340, 40);
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 10; var1_intLifetime1++) {
             jf.field_f[var1_intLifetime1] = 55 + (pf.a((byte) 119, 12) - 6);
             ll.field_c[var1_intLifetime1] = pf.a((byte) -91, 4) + 2;
             lb.field_D[var1_intLifetime1] = pf.a((byte) -101, 20);
           }
-          this.field_fb = new int[ua.field_w.length];
-          gl.a(ua.field_w, 0, this.field_fb, 0, this.field_fb.length);
+          this.field_fb = new int[WidgetContainer.field_w.length];
+          gl.a(WidgetContainer.field_w, 0, this.field_fb, 0, this.field_fb.length);
           ch.b(-112);
-          pg.field_b = null;
+          ProxyAuthenticationRequiredException.field_b = null;
           dupTemp$0 = jf.a(-2147483648);
           this.field_W = dupTemp$0;
           this.field_J = dupTemp$0;

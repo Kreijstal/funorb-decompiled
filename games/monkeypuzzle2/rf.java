@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class rf {
-    static pj field_a;
+    static IntrusiveDeque field_a;
     static String field_b;
 
     final static void a(int param0, int param1, int param2, boolean param3, sj param4) {
@@ -44,7 +44,7 @@ abstract class rf {
           var5_int = nf.a(3 * (-param2 + param0), true);
           var6 = 3 * param2;
           var7 = var5_int + param1;
-          dc.a((byte) 114);
+          IterableNodeHashTable.a((byte) 114);
           if (0 < param4.field_D &&
             param4.field_N != null) {
             df.h(-22);
@@ -169,6 +169,6 @@ abstract class rf {
 
     static {
         field_b = "Type your email address again to make sure it's correct";
-        field_a = new pj();
+        field_a = new IntrusiveDeque();
     }
 }

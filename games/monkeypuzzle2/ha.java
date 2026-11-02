@@ -4,7 +4,7 @@
 import java.util.*;
 
 class ha extends pc implements ql {
-    static li field_Z;
+    static PcmSampleStream field_Z;
     static ad field_fb;
     private boolean field_eb;
     static long field_ab;
@@ -15,7 +15,7 @@ class ha extends pc implements ql {
     static boolean field_db;
     private ta field_ib;
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -45,7 +45,7 @@ class ha extends pc implements ql {
         }
     }
 
-    public void a(int param0, int param1, int param2, int param3, t param4) {
+    public void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -99,7 +99,7 @@ class ha extends pc implements ql {
         return jk.field_y[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uc.field_f[var5] + "-" + var6 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
     }
 
-    final static void a(int param0, int param1, int param2, int param3, le[] param4, le[] param5, int param6, int param7, int param8, int param9, ta param10) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, Sprite[] param5, int param6, int param7, int param8, int param9, ta param10) {
         try {
           cf.a((byte) 66);
           int var11_int = -74 / ((68 - param1) / 47);
@@ -179,7 +179,7 @@ class ha extends pc implements ql {
           var6 = new sk(this, this.field_ib, param1);
           var4 = var6;
           if (param2 == 5) {
-            var6.a((byte) -116, 11, wc.field_g);
+            var6.a((byte) -116, 11, NodeHashTableIterator.field_g);
             var6.a((byte) 102, 17, vh.field_L);
           } else {
             if (param2 == 256) {
@@ -209,7 +209,7 @@ class ha extends pc implements ql {
               var6.a((byte) -51, 8, ub.field_d);
             }
           } else {
-            var6.a((byte) -27, 7, fc.field_m);
+            var6.a((byte) -27, 7, GameApplet.field_m);
           }
           if (param0 != -10) {
             return;

@@ -4,7 +4,7 @@
 final class wi implements ml {
     static ad field_d;
     static long field_f;
-    static le field_e;
+    static Sprite field_e;
     static String field_a;
     static int field_c;
     static String[] field_b;
@@ -47,7 +47,7 @@ final class wi implements ml {
         field_d = null;
     }
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -55,7 +55,7 @@ final class wi implements ml {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        le var8 = null;
+        Sprite var8 = null;
         try {
           if (param4 <= 19) {
             wi.a(-113);
@@ -64,8 +64,8 @@ final class wi implements ml {
           var7 = param1.field_e + param2;
           eb.b(var6_int, 0, param1.field_p, param1.field_l, var7);
           var8 = hk.field_i[1];
-          if (param1 instanceof t &&
-            ((t) (param1)).field_u) {
+          if (param1 instanceof ButtonWidget &&
+            ((ButtonWidget) (param1)).field_u) {
             var8.c((-var8.field_m + param1.field_l >> 1) + var6_int + 1, (param1.field_p - var8.field_n >> 1) + (1 + var7), 256);
           }
           if (!param1.b((byte) 64)) {

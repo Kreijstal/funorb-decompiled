@@ -266,8 +266,8 @@ abstract class aa {
         if (vh.field_B != null) {
           vh.field_B.b();
         }
-        if (null != fc.field_k) {
-          fc.field_k.b();
+        if (null != GameApplet.field_k) {
+          GameApplet.field_k.b();
         }
         if (param0 != -11449) {
           aa.c(26);

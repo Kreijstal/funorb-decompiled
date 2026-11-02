@@ -6,22 +6,22 @@ import java.io.*;
 final class kj extends jk {
     static int field_G;
     static String field_E;
-    static le field_F;
-    private pj field_D;
+    static Sprite field_F;
+    private IntrusiveDeque field_D;
 
-    final void b(byte param0, we param1) {
+    final void b(byte param0, UiWidget param1) {
         rh var3 = null;
         try {
           if (!(param1 instanceof rh)) {
             throw new IllegalArgumentException();
           }
           if (param0 >= -32) {
-            field_F = (le) null;
+            field_F = (Sprite) null;
           }
           var3 = (rh) (param1);
           this.field_D.a(var3, (byte) 13);
           var3.field_z = true;
-          var3.a((we) (this), false);
+          var3.a((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -29,26 +29,26 @@ final class kj extends jk {
 
     public kj() {
         super(0, 0, tf.field_b, uj.field_l, (ml) null, (of) null);
-        this.field_D = new pj();
+        this.field_D = new IntrusiveDeque();
     }
 
     final static void a(boolean param0, int param1) {
         jk.field_u = jk.field_u + uj.field_h;
         if (!(~jk.field_u <= param1)) {
-          ck.field_b = -1;
+          DequeCursor.field_b = -1;
         }
         if (jk.field_u > 30 &&
-          0 <= ck.field_b &&
+          0 <= DequeCursor.field_b &&
           param0) {
           uj.field_h = uj.field_h * -1;
           jk.field_u = 30;
         }
     }
 
-    final static le a(int param0, ad param1, int param2, int param3) {
+    final static Sprite a(int param0, ad param1, int param2, int param3) {
         RuntimeException var4 = null;
         ad var5 = null;
-        le stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -79,7 +79,7 @@ final class kj extends jk {
 
     final void k(int param0) {
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ck var2 = new ck(this.field_D);
+        DequeCursor var2 = new DequeCursor(this.field_D);
         rh var3 = (rh) (var2.a((byte) -37));
         while (var3 != null) {
           var3.field_z = false;
@@ -91,15 +91,15 @@ final class kj extends jk {
         this.field_v = null;
     }
 
-    final we a(int param0) {
-        ck var2;
+    final UiWidget a(int param0) {
+        DequeCursor var2;
         rh var3;
         int var4;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param0 != -1) {
-          return (we) null;
+          return (UiWidget) null;
         }
-        var2 = new ck(this.field_D);
+        var2 = new DequeCursor(this.field_D);
         var3 = (rh) (var2.a((byte) -37));
         while (var3 != null) {
           if (var3.field_z) {
@@ -119,7 +119,7 @@ final class kj extends jk {
         RuntimeException decompiledCaughtException = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var4 = (i) (ua.field_v.a((byte) -117));
+          var4 = (i) (WidgetContainer.field_v.a((byte) -117));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -151,30 +151,30 @@ final class kj extends jk {
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param0 != 30) {
-          we var8 = (we) null;
-          this.b((byte) -88, (we) null);
+          UiWidget var8 = (UiWidget) null;
+          this.b((byte) -88, (UiWidget) null);
         }
         if (this.field_h != null) {
-          this.field_h.a(true, (we) (this), param2, param3, 55);
+          this.field_h.a(true, (UiWidget) (this), param2, param3, 55);
         }
-        ck var5 = new ck(this.field_D);
-        we var6 = (we) (var5.b((byte) -103));
+        DequeCursor var5 = new DequeCursor(this.field_D);
+        UiWidget var6 = (UiWidget) (var5.b((byte) -103));
         while (var6 != null) {
           var6.a(30, param1, this.field_e + param2, param3 + this.field_r);
-          var6 = (we) (var5.a(param0 - 3733));
+          var6 = (UiWidget) (var5.a(param0 - 3733));
         }
     }
 
     final void a(boolean param0) {
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (!param0) {
-          field_F = (le) null;
+          field_F = (Sprite) null;
         }
-        ck var2 = new ck(this.field_D);
+        DequeCursor var2 = new DequeCursor(this.field_D);
         rh var3 = (rh) (var2.a((byte) -37));
         while (var3 != null) {
           if (var3.b(false)) {
-            var3.c(-19822);
+            var3.unlink(-19822);
           }
           var3 = (rh) (var2.a(true));
         }
@@ -183,18 +183,18 @@ final class kj extends jk {
     final void l(int param0) {
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var4 = -104 / ((75 - param0) / 44);
-        ck var2 = new ck(this.field_D);
+        DequeCursor var2 = new DequeCursor(this.field_D);
         rh var3 = (rh) (var2.a((byte) -37));
         while (var3 != null) {
           if (var3.k(-23913)) {
-            var3.c(-19822);
+            var3.unlink(-19822);
           }
           var3 = (rh) (var2.a(true));
         }
-        this.field_v = (we) ((Object) this.j(-73));
+        this.field_v = (UiWidget) ((Object) this.j(-73));
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, String param6, long param7, boolean param8, int param9, int param10, byte param11, int param12, md param13) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, String param6, long param7, boolean param8, int param9, int param10, byte param11, int param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -207,7 +207,7 @@ final class kj extends jk {
           try {
             MonkeyPuzzle2.field_D = new hb(param9);
             gf.field_c = new hb(param3);
-            pj.field_g = param13;
+            IntrusiveDeque.field_g = param13;
             j.field_a = param10;
             mb.field_c = param2;
             me.field_e = param8;
@@ -220,10 +220,10 @@ final class kj extends jk {
               kj.a(true, -74);
             }
             cg.field_g = param12;
-            id.field_m = param1;
-            if (null != pj.field_g.field_x) {
+            BufferedSocket.field_m = param1;
+            if (null != IntrusiveDeque.field_g.field_x) {
               try {
-                hj.field_D = new ch(pj.field_g.field_x, 64, 0);
+                hj.field_D = new ch(IntrusiveDeque.field_g.field_x, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -258,7 +258,7 @@ final class kj extends jk {
 
     final rh j(int param0) {
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ck var2 = new ck(this.field_D);
+        DequeCursor var2 = new DequeCursor(this.field_D);
         rh var3 = (rh) (var2.a((byte) -37));
         while (var3 != null) {
           if (var3.field_z) {

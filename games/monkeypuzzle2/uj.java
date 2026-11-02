@@ -234,7 +234,7 @@ final class uj implements Runnable {
         ge.d();
         ac.field_a.a((byte) 114);
         ek.field_b = 0;
-        dc.field_e = 0;
+        IterableNodeHashTable.field_e = 0;
         ok.field_d = false;
         sc.field_c = 0;
     }
@@ -386,7 +386,7 @@ final class uj implements Runnable {
         }
     }
 
-    uj(md param0) {
+    uj(PlatformTaskDispatcher param0) {
         ic var2 = null;
         this.field_d = new dl();
         this.field_j = 0;

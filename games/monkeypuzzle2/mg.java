@@ -13,7 +13,7 @@ class mg extends a {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         try {
           if (param0) {
             eb.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 + param1.field_e);
@@ -28,7 +28,7 @@ class mg extends a {
     }
 
     mg(int param0) {
-        this(t.field_z, param0);
+        this(ButtonWidget.field_z, param0);
     }
 
     public static void c(int param0) {

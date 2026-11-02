@@ -16,11 +16,11 @@ final class gd {
           if (null != hj.field_D) {
             try {
               hj.field_D.a((byte) 89, 0L);
-              hj.field_D.a(MonkeyPuzzle2.field_D.field_g, MonkeyPuzzle2.field_D.field_h, (byte) 34, 24);
+              hj.field_D.a(MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position, (byte) 34, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              MonkeyPuzzle2.field_D.field_h = MonkeyPuzzle2.field_D.field_h + 24;
+              MonkeyPuzzle2.field_D.position = MonkeyPuzzle2.field_D.position + 24;
               if (param0 == -594181854) {
                 return;
               }
@@ -28,7 +28,7 @@ final class gd {
               return;
             }
           }
-          MonkeyPuzzle2.field_D.field_h = MonkeyPuzzle2.field_D.field_h + 24;
+          MonkeyPuzzle2.field_D.position = MonkeyPuzzle2.field_D.position + 24;
           if (param0 != -594181854) {
             gd.b(-122);
           }
@@ -60,15 +60,15 @@ final class gd {
             return;
           }
           var10 = MonkeyPuzzle2.field_D;
-          var2 = var10.a((byte) 114);
-          var3 = var10.a((byte) 114);
+          var2 = var10.readUnsignedByte((byte) 114);
+          var3 = var10.readUnsignedByte((byte) 114);
           if (0 == var2) {
             var4_ref_bk = (bk) (wg.field_k.a((byte) -117));
             if (var4_ref_bk == null) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
-            var5_int = -var10.field_h + rc.field_f;
+            var5_int = -var10.position + rc.field_f;
             var12 = var4_ref_bk.field_g;
             var11 = var12;
             var6 = var11;
@@ -76,14 +76,14 @@ final class gd {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.a((byte) 114) << ch.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) 114) << ch.a(var7 << 8, 768));
             }
-            var4_ref_bk.c(-19822);
+            var4_ref_bk.unlink(-19822);
             return;
           }
           if (1 != var2) {
             kk.a("LR1: " + bh.a((byte) -128), (byte) 118, (Throwable) null);
-            gk.a(-1);
+            PacketBuffer.a(-1);
             return;
           }
           var4 = var10.h(-129);
@@ -97,10 +97,10 @@ final class gd {
             break;
           }
           if (var5 != null) {
-            var5.c(param0 - 19830);
+            var5.unlink(param0 - 19830);
             return;
           }
-          gk.a(-1);
+          PacketBuffer.a(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

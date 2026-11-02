@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gk extends ug {
+class PacketBuffer extends IntrusiveNode {
     static int field_e;
-    byte[] field_g;
-    int field_h;
+    byte[] payload;
+    int position;
     static String field_f;
 
     final void a(byte param0, java.math.BigInteger param1, java.math.BigInteger param2) {
@@ -14,17 +14,17 @@ class gk extends ug {
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-          var4_int = this.field_h;
-          this.field_h = 0;
+          var4_int = this.position;
+          this.position = 0;
           var5 = new byte[var4_int];
           this.a(var5, var4_int, -110, 0);
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(param1, param2);
           var8 = var7.toByteArray();
-          this.field_h = 0;
+          this.position = 0;
           this.c(var8.length, 89);
           if (param0 > -125) {
-            this.field_h = 9;
+            this.position = 9;
           }
           this.b(var8, var8.length, -2, 0);
         } catch (RuntimeException runtimeException) {
@@ -34,19 +34,19 @@ class gk extends ug {
 
     final void b(int param0, int param1) {
         if (param1 != -49152) {
-          this.field_h = 61;
+          this.position = 61;
         }
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param0;
     }
 
     final int h(int param0) {
-        int var2 = this.field_g[this.field_h] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (param0 >= ~var2) {
-          return -49152 + this.j(17277);
+          return -49152 + this.readUnsignedShort(17277);
         }
-        return this.a((byte) 114) - 64;
+        return this.readUnsignedByte((byte) 114) - 64;
     }
 
     final void a(int param0, String param1) {
@@ -59,22 +59,22 @@ class gk extends ug {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.field_h = this.field_h + ob.a(-124, var5, this.field_g, 0, this.field_h, param1.length());
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$0] = (byte) 0;
+          this.position = this.position + ob.a(-124, var5, this.payload, 0, this.position, param1.length());
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           int var4 = 31 % ((param0 + 20) / 49);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "gk.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int j(int param0) {
-        this.field_h = this.field_h + 2;
-        if (param0 != 17277) {
+    final int readUnsignedShort(int obfuscationGuard) {
+        this.position = this.position + 2;
+        if (obfuscationGuard != 17277) {
           this.a(false, -27);
         }
-        return (this.field_g[this.field_h - 2] << 8 & 65280) + (this.field_g[-1 + this.field_h] & 255);
+        return (this.payload[this.position - 2] << 8 & 65280) + (this.payload[-1 + this.position] & 255);
     }
 
     final void a(int param0, int param1, int param2, int[] param3) {
@@ -96,8 +96,8 @@ class gk extends ug {
         byte[] var14 = null;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var5_int = this.field_h;
-          this.field_h = param0;
+          var5_int = this.position;
+          this.position = param0;
           var6 = (param1 - param0) / 8;
           var7 = 0;
           while (true) {
@@ -106,11 +106,11 @@ class gk extends ug {
                 var14 = (byte[]) null;
                 this.b((byte[]) null, -80, -100, 89);
               }
-              this.field_h = var5_int;
+              this.position = var5_int;
               return;
             }
-            var8 = this.e(-122);
-            var9 = this.e(127);
+            var8 = this.readInt(-122);
+            var9 = this.readInt(127);
             var10 = -957401312;
             var11 = -1640531527;
             var12 = 32;
@@ -125,7 +125,7 @@ class gk extends ug {
               }
               break;
             }
-            this.field_h = this.field_h - 8;
+            this.position = this.position - 8;
             this.a(-803539344, var8);
             this.a(-803539344, var9);
             var7++;
@@ -151,7 +151,7 @@ class gk extends ug {
           return;
         }
         if (param1) {
-          this.field_h = -125;
+          this.position = -125;
         }
         if (param0 < 16384 &&
           param0 >= -16384) {
@@ -165,18 +165,18 @@ class gk extends ug {
         if (param0 != -1) {
           this.b(47, 64);
         }
-        int var2 = 255 & this.field_g[this.field_h];
+        int var2 = 255 & this.payload[this.position];
         if (var2 < 128) {
-          return this.a((byte) 114);
+          return this.readUnsignedByte((byte) 114);
         }
-        return -32768 + this.j(17277);
+        return -32768 + this.readUnsignedShort(17277);
     }
 
     final int a(byte param0, int param1) {
         if (param0 >= -37) {
           return -68;
         }
-        int var3 = rc.a(param1, this.field_h, 70, this.field_g);
+        int var3 = rc.a(param1, this.position, 70, this.payload);
         this.a(-803539344, var3);
         return var3;
     }
@@ -185,76 +185,76 @@ class gk extends ug {
         if (param0 != -803539344) {
           field_e = -116;
         }
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)(param1 >> 16);
-        int fieldTemp$2 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$2] = (byte)(param1 >> 8);
-        int fieldTemp$3 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$3] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param1 >> 8);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param1;
     }
 
     final int m(int param0) {
         if (param0 != -25141) {
           this.a(-90, 72);
         }
-        if (0 > this.field_g[this.field_h]) {
-          return this.e(127) & 2147483647;
+        if (0 > this.payload[this.position]) {
+          return this.readInt(127) & 2147483647;
         }
-        return this.j(17277);
+        return this.readUnsignedShort(17277);
     }
 
     private final void a(int param0, long param1) {
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(int)(param1 >> 48);
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)(int)(param1 >> 40);
-        int fieldTemp$2 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$2] = (byte)(int)(param1 >> 32);
-        int fieldTemp$3 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$3] = (byte)(int)(param1 >> 24);
-        int fieldTemp$4 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$4] = (byte)(int)(param1 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 32);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 16);
         if (param0 != 5699) {
-          this.j(36);
+          this.readUnsignedShort(36);
         }
-        int fieldTemp$5 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$5] = (byte)(int)(param1 >> 8);
-        int fieldTemp$6 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$6] = (byte)(int)param1;
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param1;
     }
 
     final void a(long param0, int param1) {
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(int)(param0 >> 32);
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)(int)(param0 >> 24);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 24);
         if (param1 != -1268490168) {
-          this.field_g = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        int fieldTemp$2 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$2] = (byte)(int)(param0 >> 16);
-        int fieldTemp$3 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$3] = (byte)(int)(param0 >> 8);
-        int fieldTemp$4 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$4] = (byte)(int)param0;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param0;
     }
 
     final void a(int param0, int[] param1) {
@@ -275,19 +275,19 @@ class gk extends ug {
         java.awt.Canvas var11 = null;
         var10 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var3_int = this.field_h / 8;
-          this.field_h = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           if (param0 != 30350) {
             var11 = (java.awt.Canvas) null;
-            gk.a((java.awt.Canvas) null, 50, true);
+            PacketBuffer.a((java.awt.Canvas) null, 50, true);
           }
           var4 = 0;
           while (true) {
             if (var3_int <= var4) {
               return;
             }
-            var5 = this.e(126);
-            var6 = this.e(126);
+            var5 = this.readInt(126);
+            var6 = this.readInt(126);
             var7 = 0;
             var8 = -1640531527;
             var9 = 32;
@@ -302,7 +302,7 @@ class gk extends ug {
               }
               break;
             }
-            this.field_h = this.field_h - 8;
+            this.position = this.position - 8;
             this.a(-803539344, var5);
             this.a(-803539344, var6);
             var4++;
@@ -322,15 +322,15 @@ class gk extends ug {
     }
 
     final void c(int param0, int param1) {
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(param0 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 8);
         if (param1 <= 58) {
           return;
         }
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)param0;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param0;
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
@@ -348,9 +348,9 @@ class gk extends ug {
             return;
           }
           for (var5_int = param3; var5_int < param1 + param3; var5_int++) {
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            param0[var5_int] = this.field_g[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param0[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -379,12 +379,12 @@ class gk extends ug {
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param2 != -2) {
-            this.field_g = (byte[]) null;
+            this.payload = (byte[]) null;
           }
           for (var5_int = param3; param3 + param1 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            this.field_g[fieldTemp$0] = param0[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param0[var5_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,15 +451,15 @@ class gk extends ug {
 
     final void e(int param0, int param1) {
         int var3 = 127 % ((param0 + 12) / 58);
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(param1 >> 16);
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)(param1 >> 8);
-        int fieldTemp$2 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$2] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 16);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 8);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param1;
     }
 
     final void a(String param0, int param1) {
@@ -472,14 +472,14 @@ class gk extends ug {
           if (var3_int >= 0) {
             throw new IllegalArgumentException("");
           }
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var5 = (CharSequence) ((Object) param0);
-          this.field_h = this.field_h + ob.a(-80, var5, this.field_g, 0, this.field_h, param0.length());
-          fieldTemp$1 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$1] = (byte) 0;
+          this.position = this.position + ob.a(-80, var5, this.payload, 0, this.position, param0.length());
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
           int var4 = -50 % ((39 - param1) / 63);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "gk.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -488,14 +488,14 @@ class gk extends ug {
 
     final void a(int param0, byte param1) {
         int var3 = -66 / ((param1 + 43) / 54);
-        this.field_g[-1 + (-param0 + this.field_h)] = (byte)param0;
+        this.payload[-1 + (-param0 + this.position)] = (byte)param0;
     }
 
     final void d(int param0, int param1) {
-        this.field_g[-param1 + (this.field_h - 2)] = (byte)(param1 >> 8);
-        this.field_g[-1 + (this.field_h - param1)] = (byte)param1;
+        this.payload[-param1 + (this.position - 2)] = (byte)(param1 >> 8);
+        this.payload[-1 + (this.position - param1)] = (byte)param1;
         if (param0 != 6903) {
-          gk.a(111);
+          PacketBuffer.a(111);
         }
     }
 
@@ -506,57 +506,57 @@ class gk extends ug {
         field_f = null;
     }
 
-    final byte k(int param0) {
-        int var2 = -81 % ((-22 - param0) / 44);
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        return this.field_g[fieldTemp$0];
+    final byte readByte(int obfuscationGuard) {
+        int var2 = -81 % ((-22 - obfuscationGuard) / 44);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
-    final int a(byte param0) {
-        if (param0 != 114) {
+    final int readUnsignedByte(byte obfuscationGuard) {
+        if (obfuscationGuard != 114) {
           this.m(101);
         }
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        return 255 & this.field_g[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
-    final long i(int param0) {
-        if (param0 <= 2) {
+    final long readLong(int obfuscationGuard) {
+        if (obfuscationGuard <= 2) {
           return 77L;
         }
-        long var2 = (long)this.e(127) & 4294967295L;
-        long var4 = (long)this.e(126) & 4294967295L;
+        long var2 = (long)this.readInt(127) & 4294967295L;
+        long var4 = (long)this.readInt(126) & 4294967295L;
         return var4 + (var2 << 32);
     }
 
-    final int e(int param0) {
-        this.field_h = this.field_h + 4;
-        int var2 = -12 / ((73 - param0) / 53);
-        return (255 & this.field_g[this.field_h - 1]) + ((this.field_g[-3 + this.field_h] & 255) << 16) + ((-16777216 & this.field_g[-4 + this.field_h] << 24) + ((255 & this.field_g[this.field_h - 2]) << 8));
+    final int readInt(int obfuscationGuard) {
+        this.position = this.position + 4;
+        int var2 = -12 / ((73 - obfuscationGuard) / 53);
+        return (255 & this.payload[this.position - 1]) + ((this.payload[-3 + this.position] & 255) << 16) + ((-16777216 & this.payload[-4 + this.position] << 24) + ((255 & this.payload[this.position - 2]) << 8));
     }
 
-    final int c(byte param0) {
-        this.field_h = this.field_h + 3;
-        int var2 = 21 % ((param0 + 81) / 39);
-        return (this.field_g[-1 + this.field_h] & 255) + ((255 & this.field_g[this.field_h - 3]) << 16) + (this.field_g[this.field_h - 2] << 8 & 65280);
+    final int readUnsignedMedium(byte obfuscationGuard) {
+        this.position = this.position + 3;
+        int var2 = 21 % ((obfuscationGuard + 81) / 39);
+        return (this.payload[-1 + this.position] & 255) + ((255 & this.payload[this.position - 3]) << 16) + (this.payload[this.position - 2] << 8 & 65280);
     }
 
     final String f(int param0) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        var2 = this.field_h;
+        var2 = this.position;
         do {
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-        } while (this.field_g[fieldTemp$0] != 0);
-        var3 = -var2 + (this.field_h - 1);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$0] != 0);
+        var3 = -var2 + (this.position - 1);
         if (param0 == ~var3) {
           return "";
         }
-        return sc.a(this.field_g, var3, 122, var2);
+        return sc.a(this.payload, var3, 122, var2);
     }
 
     final void a(String param0, byte param1) {
@@ -626,9 +626,9 @@ class gk extends ug {
         if (param0 != -24685) {
           return true;
         }
-        this.field_h = this.field_h - 4;
-        int var2 = rc.a(0, this.field_h, 96, this.field_g);
-        int var3 = this.e(-125);
+        this.position = this.position - 4;
+        int var2 = rc.a(0, this.position, 96, this.payload);
+        int var3 = this.readInt(-125);
         if (var2 != var3) {
           return false;
         }
@@ -639,39 +639,39 @@ class gk extends ug {
         if (param0 != -1185292952) {
           return (String) null;
         }
-        if (this.field_g[this.field_h] == 0) {
-          this.field_h = this.field_h + 1;
+        if (this.payload[this.position] == 0) {
+          this.position = this.position + 1;
           return null;
         }
         return this.f(-1);
     }
 
     final void a(long param0, byte param1) {
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(int)(param0 >> 56);
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)(int)(param0 >> 48);
-        int fieldTemp$2 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$2] = (byte)(int)(param0 >> 40);
-        int fieldTemp$3 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$3] = (byte)(int)(param0 >> 32);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 40);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 32);
         int var4 = 34 % ((param1 + 62) / 38);
-        int fieldTemp$4 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$4] = (byte)(int)(param0 >> 24);
-        int fieldTemp$5 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$5] = (byte)(int)(param0 >> 16);
-        int fieldTemp$6 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$6] = (byte)(int)(param0 >> 8);
-        int fieldTemp$7 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$7] = (byte)(int)param0;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param0 >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param0 >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param0 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param0;
     }
 
     final String b(byte param0) {
@@ -683,27 +683,27 @@ class gk extends ug {
         if (param0 < 90) {
           return (String) null;
         }
-        fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        var2 = this.field_g[fieldTemp$0];
+        fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (var2 != 0) {
           throw new IllegalStateException("");
         }
-        var3 = this.field_h;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_h;
-          this.field_h = this.field_h + 1;
-        } while (this.field_g[fieldTemp$1] != 0);
-        var4 = -var3 + (this.field_h - 1);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$1] != 0);
+        var4 = -var3 + (this.position - 1);
         if (var4 == 0) {
           return "";
         }
-        return sc.a(this.field_g, var4, -54, var3);
+        return sc.a(this.payload, var4, -54, var3);
     }
 
-    gk(int param0) {
-        this.field_h = 0;
-        this.field_g = nj.a(0, param0);
+    PacketBuffer(int capacity) {
+        this.position = 0;
+        this.payload = nj.a(0, capacity);
     }
 
     final void a(boolean param0, int param1) {
@@ -711,23 +711,23 @@ class gk extends ug {
         int var4;
         java.awt.Canvas var5;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        while (param1 > this.field_h) {
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$0] = (byte) 0;
+        while (param1 > this.position) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
         if (!param0) {
           var5 = (java.awt.Canvas) null;
-          gk.a((java.awt.Canvas) null, -43, true);
+          PacketBuffer.a((java.awt.Canvas) null, -43, true);
         }
     }
 
-    gk(byte[] param0) {
+    PacketBuffer(byte[] payload) {
         try {
-          this.field_h = 0;
-          this.field_g = param0;
+          this.position = 0;
+          this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw la.a((Throwable) ((Object) runtimeException), "gk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "gk.<init>(" + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

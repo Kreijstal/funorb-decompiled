@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-class ua extends we implements ga {
+class WidgetContainer extends UiWidget implements ga {
     static int[] field_w;
     static String field_y;
-    pj field_u;
-    static pj field_v;
+    IntrusiveDeque field_u;
+    static IntrusiveDeque field_v;
     static sj[] field_x;
 
     final void e(int param0) {
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ck var2 = new ck(this.field_u);
-        we var3 = (we) (var2.a((byte) -37));
+        DequeCursor var2 = new DequeCursor(this.field_u);
+        UiWidget var3 = (UiWidget) (var2.a((byte) -37));
         if (param0 != 13104) {
           this.e(53);
         }
         while (var3 != null) {
           var3.e(13104);
-          var3 = (we) (var2.a(true));
+          var3 = (UiWidget) (var2.a(true));
         }
     }
 
@@ -27,24 +27,24 @@ class ua extends we implements ga {
         int var5 = 0;
         int var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var2 = param0;
-        ck var3 = new ck(this.field_u);
-        we var4 = (we) (var3.a((byte) -37));
+        DequeCursor var3 = new DequeCursor(this.field_u);
+        UiWidget var4 = (UiWidget) (var3.a((byte) -37));
         while (var4 != null) {
           var5 = var4.f(0);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (we) (var3.a(true));
+          var4 = (UiWidget) (var3.a(true));
         }
         return var2;
     }
 
-    final boolean a(we param0, boolean param1) {
-        ck var3 = null;
+    final boolean a(UiWidget param0, boolean param1) {
+        DequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        we var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
-        ck stackIn_12_0 = null;
+        DequeCursor stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -52,18 +52,18 @@ class ua extends we implements ga {
         RuntimeException decompiledCaughtException = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var3 = new ck(this.field_u);
+          var3 = new DequeCursor(this.field_u);
           if (param1) {
             return false;
           }
-          var4 = (we) (var3.a((byte) -37));
+          var4 = (UiWidget) (var3.a((byte) -37));
           while (var4 != null) {
             if (var4.a(param0, false)) {
               return true;
             }
             stackIn_12_0 = var3;
             stackIn_13_1 = !(param1);
-            var4 = (we) (((ck) (Object) stackIn_12_0).a(stackIn_13_1));
+            var4 = (UiWidget) (((DequeCursor) (Object) stackIn_12_0).a(stackIn_13_1));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +85,7 @@ class ua extends we implements ga {
         this.c((byte) 96);
     }
 
-    final void b(byte param0, we param1) {
+    final void b(byte param0, UiWidget param1) {
         if (param0 >= -17) {
           return;
         }
@@ -96,10 +96,10 @@ class ua extends we implements ga {
         }
     }
 
-    void a(we param0, int param1, int param2, byte param3) {
+    void a(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException runtimeException = null;
-        ck var5 = null;
-        we var6 = null;
+        DequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -108,15 +108,15 @@ class ua extends we implements ga {
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           super.a(param0, param1, param2, (byte) -103);
-          var5 = new ck(this.field_u);
-          var6 = (we) (var5.a((byte) -37));
+          var5 = new DequeCursor(this.field_u);
+          var6 = (UiWidget) (var5.a((byte) -37));
           if (param3 >= -13) {
-            field_v = (pj) null;
+            field_v = (IntrusiveDeque) null;
           }
           while (var6 != null) {
-            if (var6.d(-3548)) {
+            if (var6.isLinked(-3548)) {
               var6.a(param0, param1 + this.field_e, param2 + this.field_r, (byte) -64);
-              var6 = (we) (var5.a(true));
+              var6 = (UiWidget) (var5.a(true));
               continue;
             }
             break;
@@ -144,7 +144,7 @@ class ua extends we implements ga {
           !hl.field_d.h()) {
           return;
         }
-        hl.field_d = li.a(ke.field_h[6], 100, 96);
+        hl.field_d = PcmSampleStream.a(ke.field_h[6], 100, 96);
         na.a((byte) 35, hl.field_d);
     }
 
@@ -152,8 +152,8 @@ class ua extends we implements ga {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
-        ck var5 = null;
-        we var6 = null;
+        DequeCursor var5 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -164,15 +164,15 @@ class ua extends we implements ga {
         RuntimeException var5_ref = null;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var5 = new ck(this.field_u);
-          var6 = (we) (var5.a((byte) -37));
+          var5 = new DequeCursor(this.field_u);
+          var6 = (UiWidget) (var5.a((byte) -37));
           while (var6 != null) {
             discarded$2 = param2.append('\n');
             for (var7 = 0; var7 <= param1; var7++) {
               discarded$3 = param2.append(' ');
             }
             var6.a(false, param2, param0, 1 + param1);
-            var6 = (we) (var5.a(true));
+            var6 = (UiWidget) (var5.a(true));
           }
           if (param3 != 13467) {
             field_w = (int[]) null;
@@ -198,12 +198,12 @@ class ua extends we implements ga {
         }
     }
 
-    boolean a(we param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        we var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        ck var9 = null;
+        DequeCursor var9 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -212,16 +212,16 @@ class ua extends we implements ga {
         int var6Lifetime1;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var9 = new ck(this.field_u);
+          var9 = new DequeCursor(this.field_u);
           var6 = -77 % ((param3 - 37) / 50);
-          var7 = (we) (var9.a((byte) -37));
+          var7 = (UiWidget) (var9.a((byte) -37));
           while (var7 != null) {
-            if (var7.d(-3548)) {
+            if (var7.isLinked(-3548)) {
               if (var7.b((byte) 103) &&
                 var7.a(param0, param1, param2, 124)) {
                 return true;
               }
-              var7 = (we) (var9.a(true));
+              var7 = (UiWidget) (var9.a(true));
               continue;
             }
             break;
@@ -254,13 +254,13 @@ class ua extends we implements ga {
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param1 == 0 &&
           this.field_h != null) {
-          this.field_h.a(true, (we) (this), param2, param3, 69);
+          this.field_h.a(true, (UiWidget) (this), param2, param3, 69);
         }
-        ck var5 = new ck(this.field_u);
-        we var6 = (we) (var5.b((byte) -102));
+        DequeCursor var5 = new DequeCursor(this.field_u);
+        UiWidget var6 = (UiWidget) (var5.b((byte) -102));
         while (var6 != null) {
           var6.a(param0 ^ 0, param1, this.field_e + param2, param3 + this.field_r);
-          var6 = (we) (var5.a(param0 - 3733));
+          var6 = (UiWidget) (var5.a(param0 - 3733));
         }
         if (param0 != 30) {
           this.b((byte) 23);
@@ -280,14 +280,14 @@ class ua extends we implements ga {
     final String a(byte param0) {
         String var4 = null;
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ck var2 = new ck(this.field_u);
-        we var3 = (we) (var2.a((byte) -37));
+        DequeCursor var2 = new DequeCursor(this.field_u);
+        UiWidget var3 = (UiWidget) (var2.a((byte) -37));
         while (var3 != null) {
           var4 = var3.a((byte) 54);
           if (var4 != null) {
             return var4;
           }
-          var3 = (we) (var2.a(true));
+          var3 = (UiWidget) (var2.a(true));
         }
         if (param0 == 54) {
           return null;
@@ -298,21 +298,21 @@ class ua extends we implements ga {
 
     private final void c(byte param0) {
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ck var2 = new ck(this.field_u);
+        DequeCursor var2 = new DequeCursor(this.field_u);
         if (param0 < 80) {
           this.b((byte) -67);
         }
-        we var3 = (we) (var2.a((byte) -37));
+        UiWidget var3 = (UiWidget) (var2.a((byte) -37));
         while (var3 != null) {
           var3.g(-1);
-          var3 = (we) (var2.a(true));
+          var3 = (UiWidget) (var2.a(true));
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
-        ck var8 = null;
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+        DequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        we var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -320,15 +320,15 @@ class ua extends we implements ga {
         RuntimeException decompiledCaughtException = null;
         var10 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var8 = new ck(this.field_u);
+          var8 = new DequeCursor(this.field_u);
           if (param3 != -1625) {
-            ua.j(-119);
+            WidgetContainer.j(-119);
           }
-          var9 = (we) (var8.a((byte) -37));
+          var9 = (UiWidget) (var8.a((byte) -37));
           while (var9 != null) {
-            if (var9.d(-3548)) {
+            if (var9.isLinked(-3548)) {
               if (!var9.a(param0 + this.field_e, param1, param2, -1625, param4, param5, param6 + this.field_r)) {
-                var9 = (we) (var8.a(true));
+                var9 = (UiWidget) (var8.a(true));
                 continue;
               }
               return true;
@@ -350,11 +350,11 @@ class ua extends we implements ga {
         }
     }
 
-    final void a(int param0, int param1, we param2, int param3, int param4, int param5) {
-        ck var7 = null;
-        we var8 = null;
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
+        DequeCursor var7 = null;
+        UiWidget var8 = null;
         int var9 = 0;
-        we var10 = null;
+        UiWidget var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -362,19 +362,19 @@ class ua extends we implements ga {
         RuntimeException var7_ref = null;
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var7 = new ck(this.field_u);
-          var8 = (we) (var7.a((byte) -37));
+          var7 = new DequeCursor(this.field_u);
+          var8 = (UiWidget) (var7.a((byte) -37));
           while (var8 != null) {
-            if (var8.d(-3548)) {
+            if (var8.isLinked(-3548)) {
               var8.a(this.field_e + param0, param1, param2, param3, 0, param5 + this.field_r);
-              var8 = (we) (var7.a(true));
+              var8 = (UiWidget) (var7.a(true));
               continue;
             }
             break;
           }
           if (param4 != 0) {
-            var10 = (we) null;
-            this.a(122, 7, (we) null, -60, 25, -69);
+            var10 = (UiWidget) null;
+            this.a(122, 7, (UiWidget) null, -60, 25, -69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -398,31 +398,31 @@ class ua extends we implements ga {
         return null != this.a(true) ? true : false;
     }
 
-    we a(boolean param0) {
-        ck var2;
-        we var3;
+    UiWidget a(boolean param0) {
+        DequeCursor var2;
+        UiWidget var3;
         int var4;
-        we var5;
+        UiWidget var5;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var2 = new ck(this.field_u);
+        var2 = new DequeCursor(this.field_u);
         if (!param0) {
-          var5 = (we) null;
-          this.a((byte) -39, (we) null);
+          var5 = (UiWidget) null;
+          this.a((byte) -39, (UiWidget) null);
         }
-        var3 = (we) (var2.a((byte) -37));
+        var3 = (UiWidget) (var2.a((byte) -37));
         while (var3 != null) {
           if (var3.b((byte) 40)) {
             return var3;
           }
-          var3 = (we) (var2.a(param0));
+          var3 = (UiWidget) (var2.a(param0));
         }
         return null;
     }
 
-    final boolean a(int param0, we param1, int param2, int param3, int param4, int param5, int param6) {
-        ck var8 = null;
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+        DequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        we var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -433,15 +433,15 @@ class ua extends we implements ga {
           if (param6 >= -109) {
             return false;
           }
-          var8 = new ck(this.field_u);
-          var9 = (we) (var8.a((byte) -37));
+          var8 = new DequeCursor(this.field_u);
+          var9 = (UiWidget) (var8.a((byte) -37));
           while (var9 != null) {
-            if (var9.d(-3548)) {
+            if (var9.isLinked(-3548)) {
               if (var9.b((byte) 87) &&
                 var9.a(param0, param1, param2, param3, param4, param5, -119)) {
                 return true;
               }
-              var9 = (we) (var8.a(true));
+              var9 = (UiWidget) (var8.a(true));
               continue;
             }
             break;
@@ -461,12 +461,12 @@ class ua extends we implements ga {
         }
     }
 
-    final boolean b(we param0, boolean param1) {
-        ck var3 = null;
+    final boolean b(UiWidget param0, boolean param1) {
+        DequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        we var4 = null;
-        ck var5 = null;
-        we var6 = null;
+        UiWidget var4 = null;
+        DequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -480,21 +480,21 @@ class ua extends we implements ga {
           if (this.field_u.e(11253)) {
             return false;
           }
-          var3 = new ck(this.field_u);
-          var4 = (we) (var3.a((byte) -37));
+          var3 = new DequeCursor(this.field_u);
+          var4 = (UiWidget) (var3.a((byte) -37));
           while (var4 != null) {
             if (var4.b((byte) 122)) {
-              var5 = new ck(this.field_u);
-              var5.a((byte) -127, (ug) (var4));
-              var6 = (we) (var5.a(true));
+              var5 = new DequeCursor(this.field_u);
+              var5.a((byte) -127, (IntrusiveNode) (var4));
+              var6 = (UiWidget) (var5.a(true));
               while (var6 != null) {
                 if (var6.a(param0, false)) {
                   return true;
                 }
-                var6 = (we) (var5.a(true));
+                var6 = (UiWidget) (var5.a(true));
               }
             }
-            var4 = (we) (var3.a(true));
+            var4 = (UiWidget) (var3.a(true));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -550,17 +550,17 @@ class ua extends we implements ga {
         }
     }
 
-    ua(int param0, int param1, int param2, int param3, ml param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, ml param4) {
         super(param0, param1, param2, param3, param4, (of) null);
-        this.field_u = new pj();
+        this.field_u = new IntrusiveDeque();
     }
 
-    final boolean a(byte param0, we param1) {
-        ck var3 = null;
+    final boolean a(byte param0, UiWidget param1) {
+        DequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        we var4 = null;
-        ck var5 = null;
-        we var6 = null;
+        UiWidget var4 = null;
+        DequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -571,25 +571,25 @@ class ua extends we implements ga {
           if (this.field_u.e(11253)) {
             return false;
           }
-          var3 = new ck(this.field_u);
+          var3 = new DequeCursor(this.field_u);
           if (param0 <= 54) {
             return false;
           }
-          var4 = (we) (var3.b((byte) -96));
+          var4 = (UiWidget) (var3.b((byte) -96));
           while (var4 != null) {
             if (var4.b((byte) 116)) {
-              var5 = new ck(this.field_u);
+              var5 = new DequeCursor(this.field_u);
               var5.a(-11121, var4);
-              var6 = (we) (var5.a(-3703));
+              var6 = (UiWidget) (var5.a(-3703));
               while (var6 != null) {
                 if (!var6.a(param1, false)) {
-                  var6 = (we) (var5.a(-3703));
+                  var6 = (UiWidget) (var5.a(-3703));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (we) (var3.a(-3703));
+            var4 = (UiWidget) (var3.a(-3703));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -620,6 +620,6 @@ class ua extends we implements ga {
             field_w[var0] = bd.a(field_w[var0], 22 * (-2 + var0) << 16);
           }
         }
-        field_v = new pj();
+        field_v = new IntrusiveDeque();
     }
 }

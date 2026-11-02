@@ -113,7 +113,7 @@ class f extends kc {
         }
     }
 
-    final void a(int param0, gk param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a(this.field_h, (byte) 117);
           int var3_int = 37 / ((-34 - param0) / 53);

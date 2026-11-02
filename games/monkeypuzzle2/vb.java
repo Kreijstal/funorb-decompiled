@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vb extends bf {
+class vb extends DualLinkNode {
     static String field_i;
 
     final static void f(int param0) {
@@ -31,7 +31,7 @@ class vb extends bf {
               ob.field_r = 0;
             }
           }
-          dd.field_e = dd.field_e + 6;
+          ClientException.field_e = ClientException.field_e + 6;
           hl.field_a = hl.field_a + 1;
           ne.field_b = ne.field_b + 6;
           if (60 < hl.field_a) {
@@ -43,7 +43,7 @@ class vb extends bf {
             Math.random() > 0.99)) {
             stackIn_17_0 = (480 >= ne.field_b) ? 0 : 1;
             var1_int = stackIn_17_0;
-            stackIn_20_0 = (dd.field_e <= 480) ? 0 : 1;
+            stackIn_20_0 = (ClientException.field_e <= 480) ? 0 : 1;
             var2 = stackIn_20_0;
             if (var1_int != 0 &&
               var2 != 0) {
@@ -54,7 +54,7 @@ class vb extends bf {
               }
             }
             if (var2 != 0) {
-              dd.field_e = -df.field_q[0].field_n;
+              ClientException.field_e = -df.field_q[0].field_n;
             }
             if (var1_int != 0) {
               ne.field_b = -df.field_q[0].field_n;

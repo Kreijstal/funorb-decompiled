@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sf extends ug {
+final class sf extends IntrusiveNode {
     private byte[] field_v;
     private static sa[] field_E;
     private static float[] field_f;
@@ -73,16 +73,16 @@ final class sf extends ug {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        gk var2 = new gk(param0);
-        this.field_G = var2.e(126);
-        this.field_m = var2.e(-90);
-        this.field_i = var2.e(-3);
-        this.field_J = var2.e(-81);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_G = var2.readInt(126);
+        this.field_m = var2.readInt(-90);
+        this.field_i = var2.readInt(-3);
+        this.field_J = var2.readInt(-81);
         if (this.field_J < 0) {
           this.field_J = ~this.field_J;
           this.field_L = true;
         }
-        int var3 = var2.e(-121);
+        int var3 = var2.readInt(-121);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -90,7 +90,7 @@ final class sf extends ug {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.a((byte) 114);
+            var6_int = var2.readUnsignedByte((byte) 114);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -488,7 +488,7 @@ final class sf extends ug {
         return (float[]) (var17);
     }
 
-    final td a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -538,7 +538,7 @@ final class sf extends ug {
         this.field_g = null;
         var12 = this.field_v;
         this.field_v = null;
-        return new td(this.field_G, var12, this.field_i, this.field_J, this.field_L);
+        return new PcmSample(this.field_G, var12, this.field_i, this.field_J, this.field_L);
     }
 
     public static void c() {
@@ -593,7 +593,7 @@ final class sf extends ug {
         return var0;
     }
 
-    final td a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -625,7 +625,7 @@ final class sf extends ug {
           }
         }
         this.field_g = null;
-        return new td(this.field_G, var1, this.field_i, this.field_J, this.field_L);
+        return new PcmSample(this.field_G, var1, this.field_i, this.field_J, this.field_L);
     }
 
     final static float e(int param0) {

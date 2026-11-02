@@ -3,7 +3,7 @@
  */
 final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static String[] field_c;
-    static le[] field_a;
+    static Sprite[] field_a;
     static int field_b;
 
     final static void a(int param0, boolean param1) {
@@ -16,7 +16,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (we.field_n != null) {
+          if (UiWidget.field_n != null) {
             mg.field_s = 0;
             b.field_k = -1;
             dh.field_b = -1;
@@ -34,7 +34,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != we.field_n) {
+          if (null != UiWidget.field_n) {
             mg.field_s = 0;
             b.field_k = param0.getX();
             dh.field_b = param0.getY();
@@ -65,7 +65,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != we.field_n) {
+          if (null != UiWidget.field_n) {
             mg.field_s = 0;
             b.field_k = param0.getX();
             dh.field_b = param0.getY();
@@ -83,7 +83,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (we.field_n != null) {
+          if (UiWidget.field_n != null) {
             mg.field_s = 0;
             b.field_k = param0.getX();
             dh.field_b = param0.getY();
@@ -107,9 +107,9 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     final static int a(int param0, aj param1, int param2, boolean param3, aj param4, int param5, String param6) {
         int var12 = 0;
         int stackIn_8_0 = 0;
-        gk stackIn_19_0 = null;
+        PacketBuffer stackIn_19_0 = null;
         String stackIn_20_1 = null;
-        gk stackIn_22_0 = null;
+        PacketBuffer stackIn_22_0 = null;
         String stackIn_23_1 = null;
         int stackIn_34_0 = 0;
         int stackIn_48_0 = 0;
@@ -145,7 +145,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param2 != -1) {
-            field_a = (le[]) null;
+            field_a = (Sprite[]) null;
           }
           var14 = param4.a((byte) -93);
           var11_ref_String = var14;
@@ -160,9 +160,9 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           if (ii.field_r == dk.field_h) {
             kc.field_b = null;
-            gf.field_c.field_h = 0;
+            gf.field_c.position = 0;
             if (param6 == null) {
-              uc.field_a.field_h = 0;
+              uc.field_a.position = 0;
               uc.field_a.a(-803539344, pi.field_l.nextInt());
               uc.field_a.a(-803539344, pi.field_l.nextInt());
               stackIn_19_0 = uc.field_a;
@@ -171,22 +171,22 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               } else {
                 stackIn_20_1 = var14;
               }
-              ((gk) (Object) stackIn_19_0).a(stackIn_20_1, -84);
+              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_20_1, -84);
               stackIn_22_0 = uc.field_a;
               if (!param1.b(0)) {
                 stackIn_23_1 = "";
               } else {
                 stackIn_23_1 = var8;
               }
-              ((gk) (Object) stackIn_22_0).a(stackIn_23_1, 116);
+              ((PacketBuffer) (Object) stackIn_22_0).a(stackIn_23_1, 116);
               gf.field_c.b(16, param2 - 49151);
-              gf.field_c.field_h = gf.field_c.field_h + 1;
-              var9 = gf.field_c.field_h;
+              gf.field_c.position = gf.field_c.position + 1;
+              var9 = gf.field_c.position;
               e.a(sd.field_a, fj.field_F, (byte) 113, gf.field_c, uc.field_a);
-              gf.field_c.a(gf.field_c.field_h - var9, (byte) -114);
+              gf.field_c.a(gf.field_c.position - var9, (byte) -114);
             } else {
               var9 = 0;
-              uc.field_a.field_h = 0;
+              uc.field_a.position = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
@@ -200,23 +200,23 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               uc.field_a.b(param5, param2 - 49151);
               uc.field_a.b(var9, -49152);
               gf.field_c.b(18, param2 - 49151);
-              gf.field_c.field_h = gf.field_c.field_h + 2;
-              var10 = gf.field_c.field_h;
+              gf.field_c.position = gf.field_c.position + 2;
+              var10 = gf.field_c.position;
               var11_ref_StringLifetime4 = lc.a(ii.a(false), (byte) -89);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               gf.field_c.a(param2 + 69, var11_ref_StringLifetime4);
               e.a(sd.field_a, fj.field_F, (byte) -112, gf.field_c, uc.field_a);
-              gf.field_c.d(6903, gf.field_c.field_h - var10);
+              gf.field_c.d(6903, gf.field_c.position - var10);
             }
-            al.a((byte) -71, -1);
+            SocketConnector.a((byte) -71, -1);
             dk.field_h = vd.field_e;
           }
           if (vd.field_e == dk.field_h &&
             hj.a(1, true)) {
-            var9Lifetime1 = MonkeyPuzzle2.field_D.a((byte) 114);
-            MonkeyPuzzle2.field_D.field_h = 0;
+            var9Lifetime1 = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+            MonkeyPuzzle2.field_D.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               cm.field_E = new String[-100 + var9Lifetime1];
@@ -225,15 +225,15 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (var9Lifetime1 == 248) {
                 nh.a((byte) 99, ii.a(false));
                 sl.field_n = sb.field_q;
-                gk.a(-1);
-                ck.field_e = false;
+                PacketBuffer.a(-1);
+                DequeCursor.field_e = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
               }
               if (var9Lifetime1 == 99) {
                 hj.a(gb.a((byte) 57), true);
                 kc.field_b = new Boolean(bi.a((byte) 122, MonkeyPuzzle2.field_D));
-                MonkeyPuzzle2.field_D.field_h = 0;
+                MonkeyPuzzle2.field_D.position = 0;
               } else {
                 dk.field_h = ma.field_d;
                 rc.field_f = -1;
@@ -244,15 +244,15 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (MonkeyPuzzle2.field_C == dk.field_h) {
             var9Lifetime2 = 2;
             if (hj.a(var9Lifetime2, true)) {
-              var10Lifetime1 = MonkeyPuzzle2.field_D.j(17277);
-              MonkeyPuzzle2.field_D.field_h = 0;
+              var10Lifetime1 = MonkeyPuzzle2.field_D.readUnsignedShort(17277);
+              MonkeyPuzzle2.field_D.position = 0;
               if (hj.a(var10Lifetime1, true)) {
                 var11 = cm.field_E.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   cm.field_E[var12] = MonkeyPuzzle2.field_D.b((byte) 93);
                 }
-                gk.a(-1);
-                ck.field_e = false;
+                PacketBuffer.a(-1);
+                DequeCursor.field_e = false;
                 stackIn_48_0 = 100 + var11;
                 return stackIn_48_0;
               }
@@ -268,26 +268,26 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 pe.a(var9_ref_String, (byte) -108, ii.a(false));
               }
             }
-            gk.a(param2 ^ 0);
-            ck.field_e = false;
+            PacketBuffer.a(param2 ^ 0);
+            DequeCursor.field_e = false;
             stackIn_57_0 = wk.field_a;
             return stackIn_57_0;
           }
           if (ol.field_g == null) {
-            if (ck.field_e) {
+            if (DequeCursor.field_e) {
               if (wf.a(114) > 30000L) {
                 sl.field_n = kj.field_E;
               } else {
                 sl.field_n = hh.field_p;
               }
-              ck.field_e = false;
+              DequeCursor.field_e = false;
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
             var9Lifetime3 = cg.field_g;
-            cg.field_g = id.field_m;
-            ck.field_e = true;
-            id.field_m = var9Lifetime3;
+            cg.field_g = BufferedSocket.field_m;
+            DequeCursor.field_e = true;
+            BufferedSocket.field_m = var9Lifetime3;
           }
           stackIn_68_0 = -1;
           return stackIn_68_0;
@@ -339,8 +339,8 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             ek.field_d[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; ea.field_c > var2_intLifetime1; var2_intLifetime1++) {
-            if (pg.field_e[var2_intLifetime1].field_i == param0.field_i) {
-              dupTemp$3 = pg.field_e[var2_intLifetime1].a(2147483647);
+            if (ProxyAuthenticationRequiredException.field_e[var2_intLifetime1].field_i == param0.field_i) {
+              dupTemp$3 = ProxyAuthenticationRequiredException.field_e[var2_intLifetime1].a(2147483647);
               ek.field_d[dupTemp$3] = ek.field_d[dupTemp$3] + 1;
             }
           }
@@ -349,8 +349,8 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var2_intLifetime2 = 0;
           for (var3 = 0; ea.field_c > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~param0.field_i == ~pg.field_e[var3].field_i) {
-              var4 = pg.field_e[var3].a(2147483647);
+            if (~param0.field_i == ~ProxyAuthenticationRequiredException.field_e[var3].field_i) {
+              var4 = ProxyAuthenticationRequiredException.field_e[var3].a(2147483647);
               if (uj.field_g < ek.field_d[var4]) {
                 ek.field_d[var4] = ek.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -359,7 +359,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              pg.field_e[incrementValue$2] = pg.field_e[var3];
+              ProxyAuthenticationRequiredException.field_e[incrementValue$2] = ProxyAuthenticationRequiredException.field_e[var3];
             }
           }
           ea.field_c = var2_intLifetime2;
@@ -368,7 +368,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           fieldTemp$1 = ea.field_c;
           ea.field_c = ea.field_c + 1;
-          pg.field_e[fieldTemp$1] = param0;
+          ProxyAuthenticationRequiredException.field_e[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,7 +402,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (we.field_n != null) {
+          if (UiWidget.field_n != null) {
             mg.field_s = 0;
             cj.field_d = param0.getX();
             ek.field_a = param0.getY();
@@ -451,7 +451,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != we.field_n) {
+          if (null != UiWidget.field_n) {
             lf.field_a = 0;
           }
           return;
@@ -477,7 +477,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (we.field_n != null) {
+          if (UiWidget.field_n != null) {
             mg.field_s = 0;
             lf.field_a = 0;
             oh.field_b = true;

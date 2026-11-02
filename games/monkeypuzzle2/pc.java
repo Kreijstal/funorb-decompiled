@@ -9,12 +9,12 @@ abstract class pc extends nf {
     private int field_S;
     private ue field_Y;
     private int field_V;
-    private we field_T;
-    static le[] field_U;
+    private UiWidget field_T;
+    static Sprite[] field_U;
     private int field_X;
     static String field_P;
 
-    private final void a(we param0, int param1) {
+    private final void a(UiWidget param0, int param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -22,7 +22,7 @@ abstract class pc extends nf {
         RuntimeException var3 = null;
         try {
           if (this.field_Y != null) {
-            this.field_Y.c(param1 ^ -19820);
+            this.field_Y.unlink(param1 ^ -19820);
           }
           if (param0 != null) {
             param0.a(param0.field_p, 13361, 6, param0.field_l, this.field_V + 6);
@@ -55,7 +55,7 @@ abstract class pc extends nf {
 
     final void e(byte param0) {
         if (param0 != 10) {
-          this.c((byte) 67, (we) null);
+          this.c((byte) 67, (UiWidget) null);
           if (fl.field_c != this.field_O) {
             this.field_O = ie.field_c;
             this.field_X = 0;
@@ -76,7 +76,7 @@ abstract class pc extends nf {
         }
     }
 
-    void c(byte param0, we param1) {
+    void c(byte param0, UiWidget param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -302,12 +302,12 @@ abstract class pc extends nf {
           this.p(-21);
           return super.b(false);
         }
-        this.field_T = (we) null;
+        this.field_T = (UiWidget) null;
         this.p(-21);
         return super.b(false);
     }
 
-    boolean a(we param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
@@ -353,7 +353,7 @@ abstract class pc extends nf {
             this.field_O = null;
             super.p(param0 ^ 0);
             if (param0 != -21) {
-              this.c((byte) -90, (we) null);
+              this.c((byte) -90, (UiWidget) null);
               return;
             }
             return;
@@ -362,7 +362,7 @@ abstract class pc extends nf {
           this.field_O = null;
           super.p(param0 ^ 0);
           if (param0 != -21) {
-            this.c((byte) -90, (we) null);
+            this.c((byte) -90, (UiWidget) null);
             return;
           }
           return;
@@ -371,7 +371,7 @@ abstract class pc extends nf {
         if (param0 == -21) {
           return;
         }
-        this.c((byte) -90, (we) null);
+        this.c((byte) -90, (UiWidget) null);
     }
 
     public static void c(boolean param0) {
@@ -382,7 +382,7 @@ abstract class pc extends nf {
         }
     }
 
-    pc(kj param0, we param1, int param2, int param3, int param4) {
+    pc(kj param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_l, param1.field_p + (param2 + 12));
         try {
           this.field_W = param3;

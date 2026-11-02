@@ -9,7 +9,7 @@ final class ol {
     static na field_h;
     private int field_f;
     private int field_c;
-    static id field_g;
+    static BufferedSocket field_g;
     static int field_e;
 
     public static void a(int param0) {
@@ -187,8 +187,8 @@ final class ol {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        gk var16 = null;
-        gk var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -200,10 +200,10 @@ final class ol {
         int var4Lifetime5;
         var15 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var16 = new gk(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_h = -2 + param0.length;
-          eg.field_c = var17.j(17277);
+          var17.position = -2 + param0.length;
+          eg.field_c = var17.readUnsignedShort(17277);
           ra.field_ab = new int[eg.field_c];
           j.field_d = new boolean[eg.field_c];
           cb.field_b = new byte[eg.field_c][];
@@ -211,34 +211,34 @@ final class ol {
           da.field_c = new int[eg.field_c];
           mb.field_b = new int[eg.field_c];
           jj.field_E = new byte[eg.field_c][];
-          var17.field_h = -7 + param0.length - 8 * eg.field_c;
-          nj.field_d = var17.j(17277);
-          qk.field_a = var17.j(17277);
-          var3 = (255 & var17.a((byte) 114)) + 1;
+          var17.position = -7 + param0.length - 8 * eg.field_c;
+          nj.field_d = var17.readUnsignedShort(17277);
+          qk.field_a = var17.readUnsignedShort(17277);
+          var3 = (255 & var17.readUnsignedByte((byte) 114)) + 1;
           for (var4 = 0; var4 < eg.field_c; var4++) {
-            qc.field_P[var4] = var16.j(17277);
+            qc.field_P[var4] = var16.readUnsignedShort(17277);
           }
           if (param1 > -53) {
             field_e = 83;
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < eg.field_c; var4Lifetime1++) {
-            mb.field_b[var4Lifetime1] = var17.j(17277);
+            mb.field_b[var4Lifetime1] = var17.readUnsignedShort(17277);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < eg.field_c; var4Lifetime2++) {
-            da.field_c[var4Lifetime2] = var17.j(17277);
+            da.field_c[var4Lifetime2] = var17.readUnsignedShort(17277);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < eg.field_c; var4Lifetime3++) {
-            ra.field_ab[var4Lifetime3] = var17.j(17277);
+            ra.field_ab[var4Lifetime3] = var17.readUnsignedShort(17277);
           }
-          var17.field_h = -(3 * (var3 - 1)) - 8 * eg.field_c + (-7 + param0.length);
+          var17.position = -(3 * (var3 - 1)) - 8 * eg.field_c + (-7 + param0.length);
           fk.field_d = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            fk.field_d[var4Lifetime4] = var17.c((byte) -121);
+            fk.field_d[var4Lifetime4] = var17.readUnsignedMedium((byte) -121);
             if (fk.field_d[var4Lifetime4] == 0) {
               fk.field_d[var4Lifetime4] = 1;
             }
           }
-          var17.field_h = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < eg.field_c; var4Lifetime5++) {
             var5 = da.field_c[var4Lifetime5];
             var6 = ra.field_ab[var4Lifetime5];
@@ -252,16 +252,16 @@ final class ol {
             var9 = var19;
             jj.field_E[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.a((byte) 114);
+            var11 = var17.readUnsignedByte((byte) 114);
             stackIn_24_0 = -1;
             stackIn_24_1 = ~(var11 & 1);
             if (stackIn_24_0 == stackIn_24_1) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.k(-77);
+                var8[var12] = var17.readByte(-77);
               }
               if (0 != (2 & var11)) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.k(-108);
+                  dupTemp$1 = var17.readByte(-108);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_33_0 = var10;
@@ -276,13 +276,13 @@ final class ol {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var5 * var13] = var17.k(34);
+                  var8[var12 + var5 * var13] = var17.readByte(34);
                 }
               }
               if (0 != (var11 & 2)) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.k(-117);
+                    dupTemp$0 = var17.readByte(-117);
                     var9[var5 * var13 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;
@@ -365,7 +365,7 @@ final class ol {
 
     final static ad a(int param0, int param1) {
         if (param0 >= -87) {
-          field_g = (id) null;
+          field_g = (BufferedSocket) null;
         }
         return em.a(false, param1, false, true, 1, 50);
     }

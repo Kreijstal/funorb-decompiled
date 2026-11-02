@@ -12,7 +12,7 @@ final class wd {
     int field_e;
     static boolean field_g;
     int[] field_f;
-    static pj field_h;
+    static IntrusiveDeque field_h;
     int field_d;
     private int field_k;
     byte[][] field_n;
@@ -53,7 +53,7 @@ final class wd {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        gk var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -70,20 +70,20 @@ final class wd {
         int var13Lifetime1Lifetime1;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var17 = new gk(rc.a(param1, 115));
-          var4 = var17.a((byte) 114);
+          var17 = new PacketBuffer(rc.a(param1, 115));
+          var4 = var17.readUnsignedByte((byte) 114);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_l = var17.e(param0 ^ 16076);
+              this.field_l = var17.readInt(param0 ^ 16076);
             } else {
               this.field_l = 0;
             }
-            var5 = var17.a((byte) 114);
+            var5 = var17.readUnsignedByte((byte) 114);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 > var4) {
-              this.field_k = var17.j(17277);
+              this.field_k = var17.readUnsignedShort(17277);
             } else {
               this.field_k = var17.m(param0 - 41191);
             }
@@ -106,7 +106,7 @@ final class wd {
               }
             } else {
               for (var10 = 0; var10 < this.field_k; var10++) {
-                dupTemp$1 = var8 + var17.j(gi.a(param0, 32207));
+                dupTemp$1 = var8 + var17.readUnsignedShort(gi.a(param0, 32207));
                 var8 = dupTemp$1;
                 this.field_f[var10] = dupTemp$1;
                 if (this.field_f[var10] > var9) {
@@ -129,12 +129,12 @@ final class wd {
                 this.field_q[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_k; var10Lifetime1Lifetime1++) {
-                this.field_q[this.field_f[var10Lifetime1Lifetime1]] = var17.e(127);
+                this.field_q[this.field_f[var10Lifetime1Lifetime1]] = var17.readInt(127);
               }
               this.field_b = new ie(this.field_q);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_k; var10Lifetime2++) {
-              this.field_j[this.field_f[var10Lifetime2]] = var17.e(-36);
+              this.field_j[this.field_f[var10Lifetime2]] = var17.readInt(-36);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_k > var10Lifetime3; var10Lifetime3++) {
@@ -144,7 +144,7 @@ final class wd {
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_k; var10Lifetime4++) {
-              this.field_p[this.field_f[var10Lifetime4]] = var17.e(-31);
+              this.field_p[this.field_f[var10Lifetime4]] = var17.readInt(-31);
             }
             if (7 <= var4) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_k; var10Lifetime5++) {
@@ -174,7 +174,7 @@ final class wd {
               }
             } else {
               for (var10Lifetime5 = 0; this.field_k > var10Lifetime5; var10Lifetime5++) {
-                this.field_m[this.field_f[var10Lifetime5]] = var17.j(param0 + 1227);
+                this.field_m[this.field_f[var10Lifetime5]] = var17.readUnsignedShort(param0 + 1227);
               }
               for (var10Lifetime5 = 0; this.field_k > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_f[var10Lifetime5];
@@ -184,7 +184,7 @@ final class wd {
                 this.field_a[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.j(17277);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(17277);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_a[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -216,7 +216,7 @@ final class wd {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_o[var11Lifetime1][var14Lifetime1] = var17.e(-99);
+                  this.field_o[var11Lifetime1][var14Lifetime1] = var17.readInt(-99);
                 }
                 this.field_t[var11Lifetime1] = new ie(this.field_o[var11Lifetime1]);
               }
@@ -249,7 +249,7 @@ final class wd {
     }
 
     final static void a(int param0, boolean param1) {
-        ug var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         mk var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -258,16 +258,16 @@ final class wd {
         try {
           var4 = (mk) (eb.field_C.a((byte) -117));
           while (var4 != null) {
-            fc.a(var4, (byte) 108, param0);
+            GameApplet.a(var4, (byte) 108, param0);
             var4 = (mk) (eb.field_C.d((byte) 63));
           }
           if (!param1) {
             field_i = (ud) null;
           }
-          var2 = t.field_v.a((byte) -117);
+          var2 = ButtonWidget.field_v.a((byte) -117);
           while (var2 != null) {
             lf.a(25197, param0);
-            var2 = t.field_v.d((byte) 63);
+            var2 = ButtonWidget.field_v.d((byte) 63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -303,7 +303,7 @@ final class wd {
 
     static {
         field_g = false;
-        field_h = new pj();
+        field_h = new IntrusiveDeque();
         field_s = "Create your own free Jagex account";
     }
 }

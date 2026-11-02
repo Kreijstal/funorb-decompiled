@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends ua implements sh, ql {
-    private t field_z;
+final class eb extends WidgetContainer implements sh, ql {
+    private ButtonWidget field_z;
     static String field_E;
     cm field_H;
-    static pj field_C;
+    static IntrusiveDeque field_C;
     private qc field_G;
     static cc field_A;
-    private t field_D;
+    private ButtonWidget field_D;
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -21,7 +21,7 @@ final class eb extends ua implements sh, ql {
             return;
           }
           if (this.field_z == param4) {
-            je.a(53);
+            WeightedObjectCache.a(53);
           } else {
             if (param4 == this.field_D) {
               this.b(true);
@@ -86,12 +86,12 @@ final class eb extends ua implements sh, ql {
         }
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         try {
           super.a(param0, param1, param2, (byte) -15);
           if (param3 > -13) {
-            we var6 = (we) null;
-            this.a((we) null, -102, 77, (byte) -19);
+            UiWidget var6 = (UiWidget) null;
+            this.a((UiWidget) null, -102, 77, (byte) -19);
           }
           this.field_D.field_w = this.l(-110);
         } catch (RuntimeException runtimeException) {
@@ -224,10 +224,10 @@ final class eb extends ua implements sh, ql {
     public eb() {
         super(0, 0, 496, 0, (ml) null);
         this.field_G = new qc("", (of) null, 12);
-        a var1 = new a(pf.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, t.field_z.field_C, -1, 2147483647, true);
-        we var2 = new we(vh.field_K, var1, (of) null);
-        this.field_D = new t(wi.field_a, (of) null);
-        this.field_z = new t(af.field_b, (of) null);
+        a var1 = new a(pf.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(vh.field_K, var1, (of) null);
+        this.field_D = new ButtonWidget(wi.field_a, (of) null);
+        this.field_z = new ButtonWidget(af.field_b, (of) null);
         this.field_G.field_m = oa.field_E;
         this.field_G.a(new hh(this.field_G), true);
         this.field_D.field_w = false;
@@ -303,12 +303,12 @@ final class eb extends ua implements sh, ql {
               var1.c((byte) -94);
               var1.field_D = 0.0f;
               var1.field_v = 0.0f;
-              var1.c(-19822);
+              var1.unlink(-19822);
               var1.a(7847);
               ok.field_a.a(-8212, var1);
             } else {
               if (ri.field_b == var1.field_t) {
-                var1.c(-19822);
+                var1.unlink(-19822);
                 var1.a(7847);
                 ri.field_b.a(-8212, var1);
               }
@@ -327,7 +327,7 @@ final class eb extends ua implements sh, ql {
             if (var4.field_t != null) {
               boolean decompiledFrameCompleted8 = true;
               boolean decompiledFrameCompleted7 = true;
-              var4.c(-19822);
+              var4.unlink(-19822);
               var4.a(7847);
               var4.g(120);
               if (var4.field_t == hd.field_u) {
@@ -374,7 +374,7 @@ final class eb extends ua implements sh, ql {
                     while (var5 != null) {
                       if (var5.field_j == var4 ||
                         var4 == var5.field_i) {
-                        var5.c(-19822);
+                        var5.unlink(-19822);
                         aj.field_b.a(-8212, var5);
                       }
                       var5 = (il) (rf.field_a.d((byte) 63));
@@ -388,7 +388,7 @@ final class eb extends ua implements sh, ql {
                     }
                     var4.field_D = 10.0f;
                     if (var4.field_w != 0) {
-                      ua.i(83);
+                      WidgetContainer.i(83);
                       decompiledFrameCompleted8 = false;
                       break;
                     }
@@ -474,7 +474,7 @@ final class eb extends ua implements sh, ql {
                     break;
                   }
                   boolean decompiledFrameRemainder0 = true;
-                  L40: {
+                  regionExit1: {
                     boolean decompiledFrameCompleted4 = true;
                     if (var8 != 0) {
                       var10 = (ki) (var7.a((byte) -120));
@@ -564,12 +564,12 @@ final class eb extends ua implements sh, ql {
                             gl.a(var11_refLifetime1.field_o, var12Lifetime1Lifetime1 + 1, var11_refLifetime1.field_o, var12Lifetime1Lifetime1, -var12Lifetime1Lifetime1 + var11_refLifetime1.field_m);
                             var12Lifetime1Lifetime1--;
                             var11_refLifetime1.field_m = var11_refLifetime1.field_m - 1;
-                            L52: while (true) {
+                            scanLoop2: while (true) {
                               var12Lifetime1Lifetime1++;
                               while (var12Lifetime1Lifetime1 >= var11_refLifetime1.field_m) {
                                 var11_refLifetime1 = (ki) (var6.a((byte) -120));
                                 if (var11_refLifetime1 == null) {
-                                  break L40;
+                                  break regionExit1;
                                 }
                                 var7.a(-119, var11_refLifetime1);
                                 if (var10.field_q > var11_refLifetime1.field_q) {
@@ -587,14 +587,14 @@ final class eb extends ua implements sh, ql {
                               var14Lifetime1 = (ki) (var7.a(true));
                               while (var14Lifetime1 != null) {
                                 if (var14Lifetime1 == var13Lifetime1) {
-                                  continue L52;
+                                  continue scanLoop2;
                                 }
                                 var14Lifetime1 = (ki) (var7.c((byte) -75));
                               }
                               var14Lifetime1 = (ki) (var6.a(true));
                               while (var14Lifetime1 != null) {
                                 if (var13Lifetime1 == var14Lifetime1) {
-                                  continue L52;
+                                  continue scanLoop2;
                                 }
                                 var14Lifetime1 = (ki) (var6.c((byte) -75));
                               }
@@ -633,7 +633,7 @@ final class eb extends ua implements sh, ql {
                             while (var12Lifetime1Lifetime1 >= var11_refLifetime1.field_m) {
                               var11_refLifetime1 = (ki) (var6.a((byte) -120));
                               if (var11_refLifetime1 == null) {
-                                break L40;
+                                break regionExit1;
                               }
                               var7.a(-119, var11_refLifetime1);
                               if (var10.field_q > var11_refLifetime1.field_q) {
@@ -670,18 +670,18 @@ final class eb extends ua implements sh, ql {
           }
           if (var1_int == 0) {
             if (ub.field_a) {
-              dc.field_e = 0;
+              IterableNodeHashTable.field_e = 0;
             }
           } else {
             ke.field_c = var3;
             if (var2 == 0) {
-              dc.field_e = 0;
+              IterableNodeHashTable.field_e = 0;
               ek.field_b = ek.field_b + 1;
               if (var3 >= 30) {
                 e.a(253, (byte) 40, 2);
               }
             } else {
-              dc.field_e = dc.field_e + 1;
+              IterableNodeHashTable.field_e = IterableNodeHashTable.field_e + 1;
               ek.field_b = 0;
               if (var3 > 10) {
                 e.a(248, (byte) 40, 7);
@@ -693,13 +693,13 @@ final class eb extends ua implements sh, ql {
                 e.a(246, (byte) 40, 9);
               }
             }
-            if (4 <= dc.field_e) {
+            if (4 <= IterableNodeHashTable.field_e) {
               e.a(252, (byte) 40, 3);
             }
-            if (dc.field_e >= 5) {
+            if (IterableNodeHashTable.field_e >= 5) {
               e.a(251, (byte) 40, 4);
             }
-            if (dc.field_e >= 6) {
+            if (IterableNodeHashTable.field_e >= 6) {
               e.a(250, (byte) 40, 5);
             }
             if (ek.field_b >= 50) {
@@ -729,11 +729,11 @@ final class eb extends ua implements sh, ql {
         field_C = null;
         field_E = null;
         if (param0 > -42) {
-          field_C = (pj) null;
+          field_C = (IntrusiveDeque) null;
         }
     }
 
-    private final int a(String param0, we param1, int param2, String param3, int param4, int param5) {
+    private final int a(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -746,7 +746,7 @@ final class eb extends ua implements sh, ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 35) {
-            this.field_D = (t) null;
+            this.field_D = (ButtonWidget) null;
           }
           stackIn_3_0 = this.a(param1, param0, 35, param5, 120, param3, param2);
           return stackIn_3_0;
@@ -776,7 +776,7 @@ final class eb extends ua implements sh, ql {
         }
     }
 
-    private final int a(we param0, String param1, int param2, int param3, int param4, String param5, int param6) {
+    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         vg var9 = null;
         mh var10 = null;
@@ -790,7 +790,7 @@ final class eb extends ua implements sh, ql {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new mh(20, param6, param4 + param3, 25, param0, false, 120, 3, t.field_z, 16777215, param5);
+          var10 = new mh(20, param6, param4 + param3, 25, param0, false, 120, 3, ButtonWidget.field_z, 16777215, param5);
           this.b((byte) -111, var10);
           var9 = new vg(((ag) ((Object) param0)).a(param4 ^ 88), param1, 126, var10.field_p + param6, 25 + param3, param2);
           var9.field_o = (of) (this);
@@ -823,7 +823,7 @@ final class eb extends ua implements sh, ql {
         }
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -869,6 +869,6 @@ final class eb extends ua implements sh, ql {
 
     static {
         field_E = "This password contains repeated characters, and would be easy to guess";
-        field_C = new pj();
+        field_C = new IntrusiveDeque();
     }
 }

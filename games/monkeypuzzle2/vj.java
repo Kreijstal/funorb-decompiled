@@ -10,7 +10,7 @@ final class vj {
 
     final static void a(byte param0) {
         int var1 = pf.b(1);
-        int var2 = al.a((byte) 113);
+        int var2 = SocketConnector.a((byte) 113);
         hh.field_u.a(var1 + (rb.field_cb << 1), -rb.field_cb + sc.field_g, false, -wg.field_h + fb.field_k, (wg.field_h << 1) + var2);
         ne.a((byte) -107);
         if (param0 == -123) {
@@ -75,14 +75,14 @@ final class vj {
     }
 
     final static int a(int param0, int param1) {
-        byte[] var4 = wc.field_d.a("level" + (param1 + param0), "", -125);
+        byte[] var4 = NodeHashTableIterator.field_d.a("level" + (param1 + param0), "", -125);
         byte[] var2 = var4;
         if (var4 == null) {
           return -1;
         }
-        gk var3 = new gk(var4);
-        var3.a((byte) 114);
-        return var3.a((byte) 114);
+        PacketBuffer var3 = new PacketBuffer(var4);
+        var3.readUnsignedByte((byte) 114);
+        return var3.readUnsignedByte((byte) 114);
     }
 
     final static void a(int param0, boolean param1) {

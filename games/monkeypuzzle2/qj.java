@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj extends t {
+final class qj extends ButtonWidget {
     static boolean field_J;
     static String field_E;
     private int field_G;
     static int field_D;
-    static le[] field_C;
+    static Sprite[] field_C;
     int field_B;
     private oi field_I;
     int field_F;
@@ -69,7 +69,7 @@ final class qj extends t {
         return this.field_G;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -138,7 +138,7 @@ final class qj extends t {
         field_E = null;
         field_C = null;
         if (param0 != 4201) {
-          field_C = (le[]) null;
+          field_C = (Sprite[]) null;
         }
     }
 

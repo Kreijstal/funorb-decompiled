@@ -20,7 +20,7 @@ final class hi {
     private hi(int param0, int param1, int param2) {
     }
 
-    final void a(int param0, byte[] param1, gk param2) {
+    final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -31,8 +31,8 @@ final class hi {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2.field_g[param2.field_h] == 31 &&
-              param2.field_g[param2.field_h + 1] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[param2.position + 1] == -117) {
               if (null == this.field_d) {
                 this.field_d = new java.util.zip.Inflater(true);
               }
@@ -40,7 +40,7 @@ final class hi {
                 if (param0 < 30) {
                   hi.a(80);
                 }
-                this.field_d.setInput(param2.field_g, param2.field_h + 10, -param2.field_h - 10 - 8 + param2.field_g.length);
+                this.field_d.setInput(param2.payload, param2.position + 10, -param2.position - 10 - 8 + param2.payload.length);
                 this.field_d.inflate(param1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

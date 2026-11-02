@@ -61,10 +61,10 @@ final class ul extends nf {
 
     final void a(boolean param0, int param1, int param2) {
         super.a(param0, param1, param2);
-        pj.field_c.a(this.field_T, param1 + (this.field_l >> 1), param2 + 103, 16777215, -1);
+        IntrusiveDeque.field_c.a(this.field_T, param1 + (this.field_l >> 1), param2 + 103, 16777215, -1);
         if (null != this.field_P) {
           ge.a(20 + param1, 113 + param2, 260, 8421504);
-          pj.field_c.a(this.field_P, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, pj.field_c.field_C);
+          IntrusiveDeque.field_c.a(this.field_P, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, IntrusiveDeque.field_c.field_C);
           if (param0) {
             this.field_R = true;
             return;
@@ -90,7 +90,7 @@ final class ul extends nf {
         try {
           this.field_P = param1;
           if (this.field_P != null) {
-            var3_int = pj.field_c.a(this.field_P, 260, pj.field_c.field_C);
+            var3_int = IntrusiveDeque.field_c.a(this.field_P, 260, IntrusiveDeque.field_c.field_C);
             this.a(150 + var3_int, (byte) 110, 300);
           }
           this.field_Q = new jh(13, 50, 274, 30, 15, 2113632, 4210752);

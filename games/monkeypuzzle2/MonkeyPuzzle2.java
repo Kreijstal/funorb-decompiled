@@ -4,7 +4,7 @@
 public final class MonkeyPuzzle2 extends bi {
     static ib field_C;
     static hb field_D;
-    static gk field_A;
+    static PacketBuffer field_A;
     static String field_E;
     public static boolean field_F;
 
@@ -59,12 +59,12 @@ public final class MonkeyPuzzle2 extends bi {
     final void c(byte param0) {
         try {
           MonkeyPuzzle2.g((byte) -127);
-          fc.c(false);
+          GameApplet.c(false);
           rl.a(-104);
           gj.a(1);
           bd.a((byte) -54);
           bi.d((byte) -35);
-          dd.a((byte) -123);
+          ClientException.a((byte) -123);
           qa.a((byte) 115);
           tk.a(119);
           qh.a(8);
@@ -73,7 +73,7 @@ public final class MonkeyPuzzle2 extends bi {
           ad.a((byte) 123);
           el.a(true);
           vj.a(17812);
-          gk.n(-74);
+          PacketBuffer.n(-74);
           pf.a((byte) -118);
           mb.a(-128);
           qg.a(1);
@@ -96,10 +96,10 @@ public final class MonkeyPuzzle2 extends bi {
           uj.a(10);
           c.a(true);
           ch.a((byte) -73);
-          id.b(1);
-          pj.a(83);
-          ik.a((byte) -69);
-          ug.b(-1733);
+          BufferedSocket.b(1);
+          IntrusiveDeque.a(83);
+          SpriteState.a((byte) -69);
+          IntrusiveNode.b(-1733);
           hk.b((byte) 85);
           qf.f();
           va.d();
@@ -199,24 +199,24 @@ public final class MonkeyPuzzle2 extends bi {
           db.a((byte) -36);
           mc.a(-74);
           aa.c(-1);
-          we.h(0);
-          t.j(-64);
+          UiWidget.h(0);
+          ButtonWidget.j(-64);
           jk.c((byte) 77);
           nf.o(-4110);
-          ua.j(0);
-          ck.b(110);
+          WidgetContainer.j(0);
+          DequeCursor.b(110);
           ri.a((byte) -66);
           oj.a();
           ll.a((byte) 115);
           pi.f(-13739);
           nc.b(124);
           wh.a(-18728);
-          je.a((byte) 12);
+          WeightedObjectCache.a((byte) 12);
           n.a(-6991);
           pe.b(16711680);
           di.a(false);
           ek.a(-114);
-          pg.a((byte) 114);
+          ProxyAuthenticationRequiredException.a((byte) 114);
           uf.a((byte) -107);
           sl.b((byte) 74);
           tj.a(89);
@@ -251,14 +251,14 @@ public final class MonkeyPuzzle2 extends bi {
           oi.a((byte) -90);
           oa.a(false);
           te.a((byte) -88);
-          dc.b(24);
-          ni.a((byte) 101);
+          IterableNodeHashTable.b(24);
+          SecondaryNodeDeque.a((byte) 101);
           b.e(116);
-          ia.d((byte) -125);
+          ProxySocketConnector.d((byte) -125);
           gh.a((byte) 56);
           lj.a();
-          wc.b((byte) 67);
-          nd.a(127);
+          NodeHashTableIterator.b((byte) 67);
+          SecondaryNodeDequeIterator.a(127);
           de.a(-6742);
           d.a(true);
           me.a(true);
@@ -327,10 +327,10 @@ public final class MonkeyPuzzle2 extends bi {
           var5 = stackIn_5_0;
           var2 = var5;
           if (param0 != -25976) {
-            field_A = (gk) null;
+            field_A = (PacketBuffer) null;
           }
           if (lc.field_d) {
-            if (!je.field_h) {
+            if (!WeightedObjectCache.field_h) {
               return;
             }
           } else {
@@ -342,10 +342,10 @@ public final class MonkeyPuzzle2 extends bi {
               } else {
                 stackIn_15_2 = true;
               }
-              gk.a((java.awt.Canvas) (stackIn_14_0), stackIn_14_1, stackIn_15_2);
+              PacketBuffer.a((java.awt.Canvas) (stackIn_14_0), stackIn_14_1, stackIn_15_2);
               return;
             }
-            if (!je.field_h) {
+            if (!WeightedObjectCache.field_h) {
               qi.a((java.awt.Canvas) (var5), (byte) -128);
               return;
             }
@@ -359,10 +359,10 @@ public final class MonkeyPuzzle2 extends bi {
           if (l.field_f != qh.field_b && (-1 == qh.field_b ||
             l.field_f == -1)) {
             if (qh.field_b != -1) {
-              pg.field_d[qh.field_b].b((byte) 124);
+              ProxyAuthenticationRequiredException.field_d[qh.field_b].b((byte) 124);
             } else {
               if (-1 != l.field_f) {
-                pg.field_d[l.field_f].b((byte) 125);
+                ProxyAuthenticationRequiredException.field_d[l.field_f].b((byte) 125);
               }
             }
             gl.a(ge.field_i, 0, lb.field_H.field_s, 0, 307200);
@@ -375,14 +375,14 @@ public final class MonkeyPuzzle2 extends bi {
               e.b((byte) 117);
             } else {
               if (qh.field_b != -1) {
-                pg.field_d[qh.field_b].b((byte) 122);
+                ProxyAuthenticationRequiredException.field_d[qh.field_b].b((byte) 122);
               } else {
                 hf.field_f.b(-106);
               }
             }
           }
           if (ad.a(false)) {
-            af.a(15, wc.field_e, 15, -3);
+            af.a(15, NodeHashTableIterator.field_e, 15, -3);
           } else {
             if (kg.a((byte) 90)) {
               stackIn_50_0 = param0 + 25905;
@@ -449,9 +449,9 @@ public final class MonkeyPuzzle2 extends bi {
             }
           }
           boolean decompiledFrameRemainder1 = true;
-          if (!je.field_h) {
+          if (!WeightedObjectCache.field_h) {
             b.a(-21342, ab.field_d);
-            je.field_h = this.b((byte) 36, true);
+            WeightedObjectCache.field_h = this.b((byte) 36, true);
           } else {
             if (this.m(param0 ^ 15245)) {
               if (ek.a((byte) 25) &&
@@ -519,7 +519,7 @@ public final class MonkeyPuzzle2 extends bi {
                       if (!ad.a(false) &&
                         !ek.a((byte) -126)) {
                         if (qh.field_b != -1) {
-                          pg.field_d[qh.field_b].a(-23);
+                          ProxyAuthenticationRequiredException.field_d[qh.field_b].a(-23);
                         } else {
                           hf.field_f.e((byte) 85);
                         }
@@ -553,7 +553,7 @@ public final class MonkeyPuzzle2 extends bi {
                         stackIn_60_0 = 44;
                         stackIn_61_1 = !(af.field_c <= 0);
                         sb.$cfr$intArgs$a$7ffe4b125357(stackIn_60_0, stackIn_61_1);
-                        pg.field_d[1] = new kk(1);
+                        ProxyAuthenticationRequiredException.field_d[1] = new kk(1);
                         qh.field_b = dh.field_c;
                         uh.a((byte) -101, qh.field_b);
                         if (ad.a(false)) {
@@ -573,7 +573,7 @@ public final class MonkeyPuzzle2 extends bi {
               }
             } else {
               cg.a(false);
-              pj.a(false, 31645);
+              IntrusiveDeque.a(false, 31645);
               if (this.m(0) &&
                 fg.field_b <= 0) {
                 if (dh.field_c == 6) {
@@ -587,7 +587,7 @@ public final class MonkeyPuzzle2 extends bi {
             }
           }
           stackIn_130_0 = (qh.field_b == 6) || (qh.field_b == 10);
-          pj.a(stackIn_130_0, 31645);
+          IntrusiveDeque.a(stackIn_130_0, 31645);
           if (ad.a(false)) {
             var2_intLifetime1 = j.a(5);
             if (var2_intLifetime1 == 2) {
@@ -602,7 +602,7 @@ public final class MonkeyPuzzle2 extends bi {
               }
             }
             if (!ad.a(false)) {
-              pg.field_d[qh.field_b].a(true, false);
+              ProxyAuthenticationRequiredException.field_d[qh.field_b].a(true, false);
             }
           }
           if (param0 != 15245) {
@@ -611,11 +611,11 @@ public final class MonkeyPuzzle2 extends bi {
           while (vh.a(ok.field_c, (byte) 125)) {
             this.k(-28710);
           }
-          al.a((byte) -71, 0);
+          SocketConnector.a((byte) -71, 0);
           if (ld.b(true)) {
             var2_intLifetime2 = this.f(param0 ^ 15246);
             if (2 == var2_intLifetime2) {
-              ha.a(8, 126, 8, pl.field_e.field_j, (le[]) null, (le[]) null, 2, 320, pl.field_e.field_j + pl.field_e.field_D, 240, pl.field_e);
+              ha.a(8, 126, 8, pl.field_e.field_j, (Sprite[]) null, (Sprite[]) null, 2, 320, pl.field_e.field_j + pl.field_e.field_D, 240, pl.field_e);
             }
           }
           return;
@@ -718,7 +718,7 @@ public final class MonkeyPuzzle2 extends bi {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        ad.a(tk.a(hk.field_k, "", gk.field_f, param0 ^ 37, tl.field_a), param0 - 24155, 55.0f);
+                        ad.a(tk.a(hk.field_k, "", PacketBuffer.field_f, param0 ^ 37, tl.field_a), param0 - 24155, 55.0f);
                         return false;
                       }
                     }
@@ -733,17 +733,17 @@ public final class MonkeyPuzzle2 extends bi {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  ad.a(tk.a(fi.field_b, "", oh.field_a, 1, wc.field_a), -24119, 35.0f);
+                  ad.a(tk.a(fi.field_b, "", oh.field_a, 1, NodeHashTableIterator.field_a), -24119, 35.0f);
                   return false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                ad.a(tk.a(wi.field_d, "", fe.field_b, 1, t.field_y), -24119, 25.0f);
+                ad.a(tk.a(wi.field_d, "", fe.field_b, 1, ButtonWidget.field_y), -24119, 25.0f);
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
-              ad.a(tk.a(cl.field_a, "", fe.field_b, 1, t.field_y), param0 ^ -24083, 15.0f);
+              ad.a(tk.a(cl.field_a, "", fe.field_b, 1, ButtonWidget.field_y), param0 ^ -24083, 15.0f);
               return false;
             }
           }
@@ -787,7 +787,7 @@ public final class MonkeyPuzzle2 extends bi {
             field_D = (hb) null;
           }
           for (var3_int = 0; var3_int < 11; var3_int++) {
-            pg.field_d[var3_int] = new kk(var3_int);
+            ProxyAuthenticationRequiredException.field_d[var3_int] = new kk(var3_int);
           }
           qh.field_b = 0;
           tk.a(50, true);

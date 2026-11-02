@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mb {
-    static pj field_e;
+    static IntrusiveDeque field_e;
     static int[] field_b;
     static boolean field_c;
     static int field_a;
@@ -22,7 +22,7 @@ final class mb {
 
     static {
         field_z = "mb.A(";
-        field_e = new pj();
+        field_e = new IntrusiveDeque();
         eg.a(50, -1937866142);
     }
 }

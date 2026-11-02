@@ -51,14 +51,14 @@ final class ai extends bh {
         }
     }
 
-    final le a() {
+    final Sprite a() {
         int var3 = 0;
         int var1 = this.field_i * this.field_d;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
           var2[var3] = this.field_m[this.field_n[var3] & 255];
         }
-        return new le(this.field_c, this.field_l, this.field_a, this.field_k, this.field_i, this.field_d, var2);
+        return new Sprite(this.field_c, this.field_l, this.field_a, this.field_k, this.field_i, this.field_d, var2);
     }
 
     final void b(int param0, int param1) {

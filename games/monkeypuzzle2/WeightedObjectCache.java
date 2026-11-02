@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je {
-    private dc field_b;
+final class WeightedObjectCache {
+    private IterableNodeHashTable field_b;
     static String field_a;
     static lg field_i;
     static volatile int field_c;
@@ -10,7 +10,7 @@ final class je {
     private int field_e;
     static String field_f;
     private int field_d;
-    private ni field_g;
+    private SecondaryNodeDeque field_g;
 
     private final void a(Object param0, int param1, int param2, long param3) {
         b var6 = null;
@@ -56,7 +56,7 @@ final class je {
           if (param0 == null) {
             return;
           }
-          param0.c(param1 - 24643);
+          param0.unlink(param1 - 24643);
           param0.a(7847);
           this.field_e = this.field_e + param0.field_n;
           return;
@@ -91,7 +91,7 @@ final class je {
         }
         Object var6 = var8.a((byte) -78);
         if (var6 == null) {
-          var8.c(-19822);
+          var8.unlink(-19822);
           var8.a(7847);
           this.field_e = this.field_e + var8.field_n;
           return null;
@@ -102,10 +102,10 @@ final class je {
           return var6;
         }
         la var7 = new la(var6, var8.field_n);
-        this.field_b.a(var8.field_a, true, var7);
+        this.field_b.a(var8.key, true, var7);
         this.field_g.a(12, var7);
         ((b) ((Object) var7)).field_f = 0L;
-        var8.c(-19822);
+        var8.unlink(-19822);
         var8.a(7847);
         return var6;
     }
@@ -135,13 +135,13 @@ final class je {
           field_i = null;
           return;
         }
-        je.a((byte) -81);
+        WeightedObjectCache.a((byte) -81);
         field_a = null;
         field_f = null;
         field_i = null;
     }
 
-    private je() throws Throwable {
+    private WeightedObjectCache() throws Throwable {
         throw new Error();
     }
 

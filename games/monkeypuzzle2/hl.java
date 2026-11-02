@@ -3,7 +3,7 @@
  */
 final class hl {
     private boolean field_b;
-    static li field_d;
+    static PcmSampleStream field_d;
     private int field_e;
     private long field_j;
     static int[] field_f;

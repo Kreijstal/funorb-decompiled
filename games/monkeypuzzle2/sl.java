@@ -143,7 +143,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                 }
                 if (!var1.field_E) {
                   if ((float)var1.field_y + var1.field_q <= 0.0f) {
-                    dc.field_e = 0;
+                    IterableNodeHashTable.field_e = 0;
                     var1.field_q = var1.field_q - (var1.field_q + (float)var1.field_y);
                     var1.field_j = true;
                     var1.field_t = ok.field_a;

@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class em extends t {
-    static pj field_C;
+final class em extends ButtonWidget {
+    static IntrusiveDeque field_C;
     static int field_B;
 
     final static boolean a(byte param0, String param1) {
@@ -87,7 +87,7 @@ final class em extends t {
           return;
         }
         if (param1) {
-          field_C = (pj) null;
+          field_C = (IntrusiveDeque) null;
           if (0L == param0 % 10L) {
             hc.a(param0 - 1L, (byte) -50);
             hc.a(1L, (byte) -50);
@@ -122,7 +122,7 @@ final class em extends t {
         }
     }
 
-    final static void a(Object param0, byte param1, md param2) {
+    final static void a(Object param0, byte param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -210,6 +210,6 @@ final class em extends t {
     }
 
     static {
-        field_C = new pj();
+        field_C = new IntrusiveDeque();
     }
 }

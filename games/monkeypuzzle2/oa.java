@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oa extends jk {
-    static pj field_J;
+    static IntrusiveDeque field_J;
     static String field_E;
     static int field_G;
     static ai[] field_D;
@@ -25,7 +25,7 @@ final class oa extends jk {
         field_F = null;
     }
 
-    private oa(int param0, int param1, int param2, int param3, ml param4, of param5, we param6) {
+    private oa(int param0, int param1, int param2, int param3, ml param4, of param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_v = param6;
@@ -93,7 +93,7 @@ final class oa extends jk {
         }
     }
 
-    final void a(int param0, int param1, we param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         ee var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -285,7 +285,7 @@ final class oa extends jk {
     }
 
     static {
-        field_J = new pj();
+        field_J = new IntrusiveDeque();
         field_G = -1;
         field_E = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_F = "Please try again in a few minutes.";

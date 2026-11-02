@@ -41,21 +41,21 @@ final class dg {
         return this.field_b - this.field_e >> 15;
     }
 
-    final void a(gk param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_a = param0.a((byte) 114);
+        this.field_a = param0.readUnsignedByte((byte) 114);
         this.field_c = new int[this.field_a];
         this.field_h = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_c[var2] = param0.j(17277);
-          this.field_h[var2] = param0.j(17277);
+          this.field_c[var2] = param0.readUnsignedShort(17277);
+          this.field_h[var2] = param0.readUnsignedShort(17277);
         }
     }
 
-    final void b(gk param0) {
-        this.field_f = param0.a((byte) 114);
-        this.field_j = param0.e(4);
-        this.field_d = param0.e(127);
+    final void b(PacketBuffer param0) {
+        this.field_f = param0.readUnsignedByte((byte) 114);
+        this.field_j = param0.readInt(4);
+        this.field_d = param0.readInt(127);
         this.a(param0);
     }
 

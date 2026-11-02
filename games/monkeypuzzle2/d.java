@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d extends ug {
+final class d extends IntrusiveNode {
     int field_n;
     int field_m;
     int field_i;
@@ -16,7 +16,7 @@ final class d extends ug {
     int field_j;
 
     final static void a(int param0, int param1) {
-        ug var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         vl var4 = null;
         RuntimeException decompiledCaughtException = null;

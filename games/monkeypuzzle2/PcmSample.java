@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends jl {
+final class PcmSample extends AbstractAudioSample {
     int field_f;
     boolean field_h;
     int field_g;
     int field_i;
     byte[] field_j;
 
-    final td a(o param0) {
+    final PcmSample a(o param0) {
         this.field_j = param0.a(false, this.field_j);
         this.field_f = param0.a(this.field_f, -98);
         if (this.field_i != this.field_g) {
@@ -25,14 +25,14 @@ final class td extends jl {
         return this;
     }
 
-    td(int param0, byte[] param1, int param2, int param3) {
+    PcmSample(int param0, byte[] param1, int param2, int param3) {
         this.field_f = param0;
         this.field_j = param1;
         this.field_i = param2;
         this.field_g = param3;
     }
 
-    td(int param0, byte[] param1, int param2, int param3, boolean param4) {
+    PcmSample(int param0, byte[] param1, int param2, int param3, boolean param4) {
         this.field_f = param0;
         this.field_j = param1;
         this.field_i = param2;

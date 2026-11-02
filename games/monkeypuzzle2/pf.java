@@ -41,8 +41,8 @@ final class pf {
           var6 = gf.field_c;
           int var4 = 95 / ((param0 + 41) / 42);
           var6.b(true, param2);
-          var6.field_h = var6.field_h + 1;
-          var5 = var6.field_h;
+          var6.position = var6.position + 1;
+          var5 = var6.position;
           var6.b(1, -49152);
           var6.b(param1.field_m, -49152);
           var6.b(param1.field_n, -49152);
@@ -51,7 +51,7 @@ final class pf {
           var6.a(-803539344, param1.field_e);
           var6.a(-803539344, param1.field_k);
           var6.a((byte) -47, var5);
-          var6.a(-var5 + var6.field_h, (byte) -116);
+          var6.a(-var5 + var6.position, (byte) -116);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "pf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

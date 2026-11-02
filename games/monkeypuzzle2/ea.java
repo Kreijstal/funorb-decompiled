@@ -7,7 +7,7 @@ final class ea {
     static int field_b;
     static int field_c;
 
-    final static String a(byte param0, gk param1, int param2) {
+    final static String a(byte param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -29,7 +29,7 @@ final class ea {
             if (param0 != 90) {
               ea.a(-85);
             }
-            param1.field_h = param1.field_h + jc.field_d.a(-1, 0, param1.field_h, var3_int, var4, param1.field_g);
+            param1.position = param1.position + jc.field_d.a(-1, 0, param1.position, var3_int, var4, param1.payload);
             var5 = sc.a(var4, var3_int, param0 ^ -106, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;

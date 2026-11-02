@@ -12,7 +12,7 @@ final class ee extends jk {
     private int field_K;
     private int field_E;
 
-    private ee(int param0, int param1, int param2, int param3, ml param4, of param5, we param6, boolean param7, boolean param8) {
+    private ee(int param0, int param1, int param2, int param3, ml param4, of param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_H = 2147483647;
         this.field_K = 2147483647;
@@ -94,7 +94,7 @@ final class ee extends jk {
         return var1Lifetime1;
     }
 
-    final void a(int param0, int param1, we param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, 0, param5);
           this.field_t = param4;
@@ -103,7 +103,7 @@ final class ee extends jk {
         }
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
         int stackIn_24_1 = 0;
@@ -116,8 +116,8 @@ final class ee extends jk {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_v instanceof t) ||
-            ((t) (this.field_v)).field_w) &&
+          if ((!(this.field_v instanceof ButtonWidget) ||
+            ((ButtonWidget) (this.field_v)).field_w) &&
             this.field_t == 1) {
             var5_int = -param2 + (-this.field_E + ei.field_a);
             var6 = -this.field_I + p.field_a - param1;
@@ -181,7 +181,7 @@ final class ee extends jk {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_10_0 = 0;
@@ -222,10 +222,10 @@ final class ee extends jk {
 
     final static te[] j(int param0) {
         if (param0 == 44) {
-          return new te[]{rd.field_o, fc.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, fc.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
+          return new te[]{rd.field_o, GameApplet.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
         }
         field_F = -9;
-        return new te[]{rd.field_o, fc.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, fc.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
+        return new te[]{rd.field_o, GameApplet.field_g, eg.field_i, cm.field_D, lb.field_I, ja.field_B, GameApplet.field_j, lg.field_E, o.field_d, wa.field_b, ve.field_A, vj.field_a, ph.field_b, he.field_e};
     }
 
     static {

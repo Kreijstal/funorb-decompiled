@@ -3,9 +3,9 @@
  */
 final class ra extends pc {
     static int[] field_ab;
-    static le[] field_Z;
+    static Sprite[] field_Z;
 
-    final void c(byte param0, we param1) {
+    final void c(byte param0, UiWidget param1) {
         try {
           if (param0 <= 25) {
             ra.f((byte) -87);
@@ -50,7 +50,7 @@ final class ra extends pc {
         field_Z = null;
     }
 
-    ra(kj param0, we param1) {
+    ra(kj param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

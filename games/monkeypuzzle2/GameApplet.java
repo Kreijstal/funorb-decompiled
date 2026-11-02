@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class fc extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_l;
     static te field_j;
     static String field_m;
@@ -168,11 +168,11 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != md.field_l) {
-                var1 = md.field_l.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_l) {
+                var1 = PlatformTaskDispatcher.field_l.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = md.field_m;
+                  var2 = PlatformTaskDispatcher.field_m;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -214,8 +214,8 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != md.field_m))) {
-                stackIn_68_0 = md.field_m.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformTaskDispatcher.field_m))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_m.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -224,8 +224,8 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < md.field_m.length()) {
-                    var3 = md.field_m.charAt(var1_int);
+                  if (var1_int < PlatformTaskDispatcher.field_m.length()) {
+                    var3 = PlatformTaskDispatcher.field_m.charAt(var1_int);
                     stackIn_83_0 = var3;
                     stackIn_83_1 = 48;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -252,7 +252,7 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
                 if (ll.field_b != null) {
                   var1 = ll.field_b;
                 }
-                var2_ref = md.field_h;
+                var2_ref = PlatformTaskDispatcher.field_h;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -727,8 +727,8 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
         try {
           var3 = gf.field_c;
           var3.b(true, param2);
-          var3.field_h = var3.field_h + 1;
-          var4 = var3.field_h;
+          var3.position = var3.position + 1;
+          var4 = var3.position;
           var3.b(1, -49152);
           if (param1 <= 106) {
             field_j = (te) null;
@@ -743,9 +743,9 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
             var3.b(0, -49152);
           }
           var3.a((byte) -76, var4);
-          var3.field_h = var3.field_h - 4;
-          param0.field_e = var3.e(126);
-          var3.a(-var4 + var3.field_h, (byte) 29);
+          var3.position = var3.position - 4;
+          param0.field_e = var3.readInt(126);
+          var3.a(-var4 + var3.position, (byte) 29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -761,7 +761,7 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    final static void a(mj param0, byte param1, ad param2, int param3) {
+    final static void a(PcmStreamMixer param0, byte param1, ad param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -874,7 +874,7 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5, byte param6) {
         try {
-          md dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
@@ -906,8 +906,8 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
               ue.field_D = 0;
               kd.field_c = param2;
               m.field_f = this;
-              ni.field_e = ii.a(false);
-              dupTemp$0 = new md(param4, param5, param0, true);
+              SecondaryNodeDeque.field_e = ii.a(false);
+              dupTemp$0 = new PlatformTaskDispatcher(param4, param5, param0, true);
               rc.field_k = dupTemp$0;
               fk.field_c = dupTemp$0;
               var8 = rc.field_k.a((Runnable) (this), 1, 0);
@@ -1114,7 +1114,7 @@ public abstract class fc extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected fc() {
+    protected GameApplet() {
         this.field_l = false;
     }
 

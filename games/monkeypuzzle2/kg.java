@@ -8,7 +8,7 @@ final class kg {
     static String field_d;
 
     final static boolean a(byte param0) {
-        nd.field_a = true;
+        SecondaryNodeDequeIterator.field_a = true;
         ha.field_ab = 15000L + pf.a(0);
         if (param0 > 75) {
           return k.field_g == 11 ? true : false;

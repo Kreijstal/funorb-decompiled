@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class al {
+abstract class SocketConnector {
     int field_a;
     String field_b;
 
@@ -46,7 +46,7 @@ abstract class al {
         var4 = aa.field_a;
         if (var4 == 1) {
           ib.field_b.a(0, 0);
-          var4 = (int)(20.0f * ia.a(true, (float)param0 * 0.009999999776482582f)) + 70;
+          var4 = (int)(20.0f * ProxySocketConnector.a(true, (float)param0 * 0.009999999776482582f)) + 70;
           m.field_k.b(0, 0, var4);
           return;
         }
@@ -58,10 +58,10 @@ abstract class al {
           return;
         }
         ne.field_a[1].b(0, 0);
-        var3 = 50 + (int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
+        var3 = 50 + (int)(ProxySocketConnector.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
         ne.field_a[0].b(0, 0, var3);
         ge.h(80, 0, 560, 480);
-        ik.field_p[i.field_n].b(100, 0, 70);
+        SpriteState.field_p[i.field_n].b(100, 0, 70);
         cl.field_c[sk.field_G].b(0, 0, 100);
         ge.b();
         return;
@@ -87,28 +87,28 @@ abstract class al {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (param0 != -71) {
-            al.a('ﾑ', -120, -100);
+            SocketConnector.a('ﾑ', -120, -100);
           }
           if (null != ol.field_g && (0 > param1 ||
             dk.field_h == wh.field_b)) {
-            if (gf.field_c.field_h == 0 &&
+            if (gf.field_c.position == 0 &&
               10000L + qg.field_d < pf.a(0)) {
               gf.field_c.b(true, param1);
             }
-            if (0 < gf.field_c.field_h) {
+            if (0 < gf.field_c.position) {
               try {
-                ol.field_g.a(gf.field_c.field_g, 0, (byte) 122, gf.field_c.field_h);
+                ol.field_g.a(gf.field_c.payload, 0, (byte) 122, gf.field_c.position);
                 qg.field_d = pf.a(param0 + 71);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                gk.a(-1);
+                PacketBuffer.a(-1);
               }
-              gf.field_c.field_h = 0;
+              gf.field_c.position = 0;
             }
             return;
           }
-          gf.field_c.field_h = 0;
+          gf.field_c.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -118,7 +118,7 @@ abstract class al {
 
     final static int a(byte param0) {
         if (param0 != 113) {
-          al.a(-92, (byte) 8);
+          SocketConnector.a(-92, (byte) 8);
           return fd.field_s;
         }
         return fd.field_s;

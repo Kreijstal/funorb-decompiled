@@ -12,7 +12,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(byte param0, md param1) {
+    final void a(byte param0, PlatformTaskDispatcher param1) {
         if (param0 != -107) {
           return;
         }

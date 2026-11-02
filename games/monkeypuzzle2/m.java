@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class m extends ug {
+final class m extends IntrusiveNode {
     static int[] field_e;
-    static le[] field_i;
+    static Sprite[] field_i;
     static ai field_k;
     int field_g;
     static int field_h;
     int field_j;
-    static fc field_f;
+    static GameApplet field_f;
 
     final static byte a(int param0, char param1) {
         int var2;
@@ -243,7 +243,7 @@ final class m extends ug {
         try {
           var13 = MonkeyPuzzle2.field_D;
           var15 = var13;
-          var2 = var15.a((byte) 114);
+          var2 = var15.readUnsignedByte((byte) 114);
           var3 = (m) (gi.field_l.a((byte) -117));
           while (var3 != null) {
             if (~var3.field_g != ~var2) {
@@ -253,18 +253,18 @@ final class m extends ug {
             break;
           }
           if (var3 == null) {
-            gk.a(-1);
+            PacketBuffer.a(-1);
             return;
           }
           if (param0 != -106) {
             field_k = (ai) null;
           }
-          var4 = var15.a((byte) 114);
+          var4 = var15.readUnsignedByte((byte) 114);
           if (var4 != 0) {
             var5 = var3.field_j;
-            ni.field_d[0] = cl.field_e;
+            SecondaryNodeDeque.field_d[0] = cl.field_e;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              ni.field_d[var6_int] = var13.f(-1);
+              SecondaryNodeDeque.field_d[var6_int] = var13.f(-1);
             }
             sb.b(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -283,12 +283,12 @@ final class m extends ug {
             var10 = 0;
             while (var9 < var8) {
               var11 = hl.field_f[var9];
-              var6[0][var10] = ni.field_d[var11];
+              var6[0][var10] = SecondaryNodeDeque.field_d[var11];
               var19[0][4 * var10] = gi.field_e[var11];
               var19[0][1 + var10 * 4] = jc.field_a[var11];
               var19[0][2 + 4 * var10] = hf.field_c[var11];
               var19[0][3 + var10 * 4] = rb.field_fb[var11];
-              if (f.a(-15189, ni.field_d[var11]) &&
+              if (f.a(-15189, SecondaryNodeDeque.field_d[var11]) &&
                 0 == jc.field_a[var11] - (-hf.field_c[var11] - rb.field_fb[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -301,12 +301,12 @@ final class m extends ug {
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = hl.field_f[var9Lifetime1 + var5];
-              var6[1][var14] = ni.field_d[var11Lifetime1];
+              var6[1][var14] = SecondaryNodeDeque.field_d[var11Lifetime1];
               var19[1][var14 * 4] = gi.field_e[var11Lifetime1];
               var19[1][1 + 4 * var14] = jc.field_a[var11Lifetime1];
               var19[1][2 + var14 * 4] = hf.field_c[var11Lifetime1];
               var19[1][4 * var14 + 3] = rb.field_fb[var11Lifetime1];
-              if (f.a(-15189, ni.field_d[var11Lifetime1]) &&
+              if (f.a(-15189, SecondaryNodeDeque.field_d[var11Lifetime1]) &&
                 hf.field_c[var11Lifetime1] + jc.field_a[var11Lifetime1] + rb.field_fb[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -314,10 +314,10 @@ final class m extends ug {
               var9Lifetime1++;
               var14++;
             }
-            var3.c(-19822);
+            var3.unlink(-19822);
             return;
           }
-          var3.c(-19822);
+          var3.unlink(-19822);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

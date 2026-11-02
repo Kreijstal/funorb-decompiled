@@ -52,7 +52,7 @@ final class qf extends og {
     private int[] field_y;
     private int[] field_W;
     private int[] field_m;
-    private li[] field_R;
+    private PcmSampleStream[] field_R;
     private int[] field_I;
     private int field_p;
     private int field_fb;
@@ -267,10 +267,10 @@ final class qf extends og {
           this.field_k = this.field_k + 1;
         }
         for (var15 = 0; var15 < this.field_X.field_j; var15++) {
-          L55: {
+          regionExit1: {
             if (this.field_T != 0) {
               if (this.field_g[var15] < 0) {
-                break L55;
+                break regionExit1;
               }
               var16 = this.field_g[var15];
             } else {
@@ -523,7 +523,7 @@ final class qf extends og {
                     }
                   }
                 }
-                L98: {
+                regionExit2: {
                   if (var22 != 3) {
                     if (var22 != 5) {
                       this.field_ab[var15] = 0;
@@ -543,7 +543,7 @@ final class qf extends og {
                                 this.field_t[var15] = this.field_t[var15] * 2;
                               }
                             }
-                            break L98;
+                            break regionExit2;
                           }
                           var25 = 7999;
                         } else {
@@ -969,11 +969,11 @@ final class qf extends og {
         this.field_U = new int[this.field_X.field_j];
         this.field_i = new int[this.field_X.field_j];
         this.field_x = new boolean[this.field_X.field_j];
-        this.field_R = new li[this.field_X.field_j];
+        this.field_R = new PcmSampleStream[this.field_X.field_j];
         this.e();
     }
 
-    final int a(mj param0) {
+    final int a(PcmStreamMixer param0) {
         if (this.d() &&
           !this.field_P) {
           return -1;
@@ -1023,15 +1023,15 @@ final class qf extends og {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        td stackIn_13_0 = null;
+        PcmSample stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_14_2 = 0;
-        li stackIn_16_0 = null;
+        PcmSampleStream stackIn_16_0 = null;
         int stackIn_17_1 = 0;
-        li stackIn_19_0 = null;
+        PcmSampleStream stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         Throwable decompiledCaughtException = null;
-        li var7 = null;
+        PcmSampleStream var7 = null;
         Object var8 = null;
         this.e(param0);
         if (param3 > field_v[7999] &&
@@ -1057,14 +1057,14 @@ final class qf extends og {
           } else {
             stackIn_14_2 = 0;
           }
-          var7 = li.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param5);
+          var7 = PcmSampleStream.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param5);
           var7.c(this.field_X.field_B[param1], this.field_X.field_A[param1]);
           stackIn_16_0 = var7;
           stackIn_17_1 = (this.field_X.field_c[param1] == 0) ? 0 : -1;
-          ((li) (Object) stackIn_16_0).h(stackIn_17_1);
+          ((PcmSampleStream) (Object) stackIn_16_0).h(stackIn_17_1);
           stackIn_19_0 = var7;
           stackIn_20_1 = (this.field_X.field_c[param1] != 2) ? false : true;
-          ((li) (Object) stackIn_19_0).a(stackIn_20_1);
+          ((PcmSampleStream) (Object) stackIn_19_0).a(stackIn_20_1);
           if (param2 != 0) {
             var7.e(param2);
             var7.b(va.field_i >> 7, param4 * this.field_r * this.field_M >> 12, param5);

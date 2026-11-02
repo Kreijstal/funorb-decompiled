@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "monkeypuzzle2": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/monkeypuzzle2"
+      },
+      "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
+      "sources": {
+        "files": 303,
+        "sha256": "bb3e578be5d0efc7f7a9f895899260ccf5ab2fc41ded05867938d1e6d88c5a3a"
+      },
+      "dictionary": {
+        "path": "decompilation/monkeypuzzle2-naming.json",
+        "sha256": "c542042d0399156dce09dd11c09a36f2a99668bee25bea76e87e9b0880feae92"
+      },
+      "readingGuide": {
+        "path": "games/monkeypuzzle2/README.md",
+        "sha256": "b27a17c4730708294696a75765f0c262a5a1013647204702c5118095794c0985"
+      },
+      "rulesSha256": "e21f64c9930b96673e802f42d98220216a304e04d1cd7410e88bc2420d1be3ad",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11715,6 +11739,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 303,
+          "sha256": "bb3e578be5d0efc7f7a9f895899260ccf5ab2fc41ded05867938d1e6d88c5a3a"
         }
       },
       "orbdefence": {

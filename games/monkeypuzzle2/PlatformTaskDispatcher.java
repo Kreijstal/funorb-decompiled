@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class md implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     private static volatile long field_s;
     private static int field_a;
     pl field_t;
@@ -212,7 +212,7 @@ final class md implements Runnable {
           int var3 = 0;
           Exception var3_ref_Exception = null;
           pl var3_ref_pl = null;
-          pg var3_ref_pg = null;
+          ProxyAuthenticationRequiredException var3_ref_pg = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -286,7 +286,7 @@ final class md implements Runnable {
                   case 16:
                   default:
                     if (!this.field_q) {
-                      throw md.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -340,21 +340,21 @@ final class md implements Runnable {
                           Class.forName("bm").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_n, new Object[]{var14[0], var14[1], new Integer(var8.field_c), new Integer(var8.field_d), var14[2]});
                         } else {
                           if (16 != var2_int) {
-                            throw md.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_f.startsWith("win")) {
-                              throw md.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var13 = (String) (var8.field_e);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw md.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var13.length(); var5++) {
                               if (var4.indexOf((int) var13.charAt(var5)) == -1) {
-                                throw md.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -363,16 +363,16 @@ final class md implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref_Exception = (Exception) (Object) decompiledCaughtException;
                             var8.field_b = var3_ref_Exception;
-                            throw md.<RuntimeException>$cfr$sneakyThrow(var3_ref_Exception);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref_Exception);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref_pl = md.a(field_a, "", (String) (var8.field_e), (byte) 84);
+                        var3_ref_pl = PlatformTaskDispatcher.a(field_a, "", (String) (var8.field_e), (byte) 84);
                         var8.field_b = var3_ref_pl;
                         break;
                       case 12:
-                        var3_ref_pl = md.a(field_a, field_j, (String) (var8.field_e), (byte) 84);
+                        var3_ref_pl = PlatformTaskDispatcher.a(field_a, field_j, (String) (var8.field_e), (byte) 84);
                         var8.field_b = var3_ref_pl;
                         break;
                       case 7:
@@ -416,11 +416,11 @@ final class md implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (pg) null;
-                      var8.field_b = bf.a((String) (var8.field_e), (byte) -84, var8.field_c).a(0);
-                    } catch (pg decompiledCaughtParameter2) {
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
+                      var8.field_b = DualLinkNode.a((String) (var8.field_e), (byte) -84, var8.field_c).a(0);
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref_pg = (pg) (Object) decompiledCaughtException;
+                      var3_ref_pg = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.field_b = var3_ref_pg.getMessage();
                       throw var3_ref_pg;
                     }
@@ -490,7 +490,7 @@ final class md implements Runnable {
         return this.a(param1 + (param0 << 16), param3 + (param4 << 16), 6, (Object) null, (byte) 116);
     }
 
-    md(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

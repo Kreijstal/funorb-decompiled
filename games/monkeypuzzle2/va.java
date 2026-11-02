@@ -10,10 +10,10 @@ class va {
     private static int field_a;
     private int field_t;
     private long field_d;
-    private fh field_b;
+    private PcmStream field_b;
     private int field_m;
     private int field_r;
-    private fh[] field_p;
+    private PcmStream[] field_p;
     private int field_c;
     private int field_j;
     private int field_k;
@@ -22,7 +22,7 @@ class va {
     private long field_o;
     private int field_l;
     private boolean field_s;
-    private fh[] field_f;
+    private PcmStream[] field_f;
 
     void f() {
     }
@@ -30,7 +30,7 @@ class va {
     void e() throws Exception {
     }
 
-    final synchronized void b(fh param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_b = param0;
     }
 
@@ -91,7 +91,7 @@ class va {
     void a(int param0) throws Exception {
     }
 
-    final static va a(md param0, java.awt.Component param1, int param2, int param3) {
+    final static va a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           ij var4 = null;
           Throwable var4_ref = null;
@@ -155,9 +155,9 @@ class va {
         }
     }
 
-    private final void a(fh param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        fh var4 = this.field_p[var3];
+        PcmStream var4 = this.field_p[var3];
         if (var4 == null) {
           this.field_f[var3] = param0;
         } else {
@@ -171,12 +171,12 @@ class va {
         field_g = null;
     }
 
-    private final static void a(fh param0) {
+    private final static void a(PcmStream param0) {
         param0.field_h = false;
         if (param0.field_e != null) {
           param0.field_e.field_e = 0;
         }
-        fh var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
           va.a(var1);
           var1 = param0.b();
@@ -191,20 +191,20 @@ class va {
         int var7_int;
         Object var7;
         int var8_int;
-        fh[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        fh var11;
-        jl var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        fh var14;
+        PcmStream var14;
         int var15_int;
-        fh var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        fh var14Lifetime1;
-        fh var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_n) {
           var3 = var3 << 1;
@@ -219,7 +219,7 @@ class va {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -252,7 +252,7 @@ class va {
                       var12.field_e = var12.field_e + var13;
                     }
                     if (var4 >= this.field_t) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {
@@ -265,12 +265,12 @@ class va {
                     var15 = var11.field_g;
                     var11.field_g = null;
                     if (var10 != null) {
-                      ((fh) (var10)).field_g = var15;
+                      ((PcmStream) (var10)).field_g = var15;
                     } else {
                       this.field_f[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_p[var7_int] = (fh) (var10);
+                      this.field_p[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -291,8 +291,8 @@ class va {
             this.field_p[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((fh) (var7)).field_g;
-              ((fh) (var7)).field_g = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_g;
+              ((PcmStream) (var7)).field_g = null;
               var7 = var10Lifetime1;
             }
           }
@@ -405,13 +405,13 @@ class va {
         this.field_u = false;
         this.field_t = 32;
         this.field_d = pf.a(0);
-        this.field_p = new fh[8];
+        this.field_p = new PcmStream[8];
         this.field_m = 0;
         this.field_r = 0;
         this.field_j = 0;
         this.field_c = 0;
         this.field_o = 0L;
-        this.field_f = new fh[8];
+        this.field_f = new PcmStream[8];
         this.field_s = true;
         this.field_e = 0L;
     }

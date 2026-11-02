@@ -53,7 +53,7 @@ final class kh {
             ac.field_c = param0;
             v.field_b = param6;
             v.field_c = param2;
-            dd.field_d = param4;
+            ClientException.field_d = param4;
             ch.field_d = cf.field_b;
             mh.field_F = param3;
           } else {

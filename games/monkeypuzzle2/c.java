@@ -5,7 +5,7 @@ final class c {
     private uj field_c;
     private ca[] field_g;
     private java.math.BigInteger field_d;
-    private gk field_f;
+    private PacketBuffer field_f;
     static c field_h;
     private wl field_e;
     static String field_j;
@@ -21,7 +21,7 @@ final class c {
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var7;
         int var8;
-        gk var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -39,14 +39,14 @@ final class c {
         if (this.field_a.field_j) {
           return false;
         }
-        var10 = new gk(this.field_a.e(100));
-        var10.field_h = 5;
-        var3 = var10.a((byte) 114);
-        var10.field_h = var10.field_h + var3 * 72;
+        var10 = new PacketBuffer(this.field_a.e(100));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte((byte) 114);
+        var10.position = var10.position + var3 * 72;
         if (param0 > -49) {
           return true;
         }
-        var13 = new byte[-var10.field_h + var10.field_g.length];
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(var4, var13.length, -111, 0);
@@ -64,7 +64,7 @@ final class c {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ie.a(-51, var10.field_g, -5 + var10.field_h - var13.length, 5);
+        var15 = ie.a(-51, var10.payload, -5 + var10.position - var13.length, 5);
         var7 = 0;
         while (true) {
           if (var7 >= 64) {
@@ -121,7 +121,7 @@ final class c {
         return;
     }
 
-    final static le[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         int stackIn_13_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_26_0 = 0;
@@ -129,11 +129,11 @@ final class c {
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
         int var9 = 0;
-        le[] var10 = null;
-        le[] var11_ref_le__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_le__ = null;
         int var11 = 0;
         int var12 = 0;
-        le var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -143,18 +143,18 @@ final class c {
         int var12Lifetime2Lifetime2;
         var15 = MonkeyPuzzle2.field_F ? 1 : 0;
         var9 = param3 + (param7 + param6);
-        var10 = new le[]{new le(var9, var9), new le(param1, var9), new le(var9, var9), new le(var9, param1), new le(64, 64), new le(var9, param1), new le(var9, var9), new le(param1, var9), new le(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param1, var9), new Sprite(var9, var9), new Sprite(var9, param1), new Sprite(64, 64), new Sprite(var9, param1), new Sprite(var9, var9), new Sprite(param1, var9), new Sprite(var9, var9)};
         var11_ref_le__ = var10;
         if (!param8) {
           c.a(-50, -14, 118, -7, 1, -75, 1, 23, false);
         }
         var12 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var11_ref_le__.length > var12) {
             var13 = var11_ref_le__[var12];
             stackIn_13_0 = 0;
             if (var15 != 0) {
-              break L1;
+              break scanLoop1;
             }
             var14 = stackIn_13_0;
             while (var14 < var13.field_s.length) {
@@ -162,17 +162,17 @@ final class c {
               var14++;
             }
             var12++;
-            continue L1;
+            continue scanLoop1;
           }
           stackIn_13_0 = 0;
           break;
         }
         var11 = stackIn_13_0;
-        L7: while (true) {
+        scanLoop2: while (true) {
           if (param7 > var11) {
             stackIn_24_0 = 0;
             if (var15 != 0) {
-              break L7;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_24_0;
             while (var12Lifetime1 < var9) {
@@ -183,7 +183,7 @@ final class c {
               var12Lifetime1++;
             }
             var11++;
-            continue L7;
+            continue scanLoop2;
           }
           stackIn_24_0 = 0;
           break;
@@ -214,11 +214,11 @@ final class c {
             stackIn_36_0 = 0;
           }
           var11Lifetime1 = stackIn_36_0;
-          L20: while (true) {
+          scanLoop3: while (true) {
             if (param1 > var11Lifetime1) {
               stackIn_47_0 = 0;
               if (var15 != 0) {
-                break L20;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_47_0;
               while (var12Lifetime2Lifetime1 < param7) {
@@ -229,13 +229,13 @@ final class c {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L20;
+              continue scanLoop3;
             }
             stackIn_47_0 = 0;
             break;
           }
           var11Lifetime1 = stackIn_47_0;
-          L26: while (var11Lifetime1 < param1 >> 1) {
+          scanLoop4: while (var11Lifetime1 < param1 >> 1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param6 > var12Lifetime2Lifetime2) {
@@ -253,7 +253,7 @@ final class c {
               break;
             }
             if (var15 == 0) {
-              continue L26;
+              continue scanLoop4;
             }
             break;
           }
@@ -298,9 +298,9 @@ final class c {
               stackIn_9_0 = this.field_g[param2];
               return stackIn_9_0;
             }
-            this.field_f.field_h = param2 * 72 + 6;
-            var6_int = this.field_f.e(126);
-            var7 = this.field_f.e(-61);
+            this.field_f.position = param2 * 72 + 6;
+            var6_int = this.field_f.readInt(126);
+            var7 = this.field_f.readInt(-61);
             if (param0 != -24559) {
               var10 = (gf) null;
               this.a(-126, (gf) null, 30, (gf) null, false);

@@ -64,10 +64,10 @@ final class e {
         return true;
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, gk param3, gk param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
         try {
           int var5_int = 123 / ((param2 - 0) / 41);
-          be.a(param3, param1, -101, 0, param4.field_h, param0, param4.field_g);
+          be.a(param3, param1, -101, 0, param4.position, param0, param4.payload);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "e.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -177,7 +177,7 @@ final class e {
           if (param0 != 117) {
             return;
           }
-          we.field_f[mg.field_q].c(var2 + (-(we.field_f[mg.field_q].field_m >> 1) + 320), var6 - (we.field_f[mg.field_q].field_n - 40));
+          UiWidget.field_f[mg.field_q].c(var2 + (-(UiWidget.field_f[mg.field_q].field_m >> 1) + 320), var6 - (UiWidget.field_f[mg.field_q].field_n - 40));
           var7_ref_ki = (ki) (bd.field_b.a((byte) -117));
           while (var7_ref_ki != null) {
             var7_ref_ki.field_q = var7_ref_ki.field_q + (float)var1_int;

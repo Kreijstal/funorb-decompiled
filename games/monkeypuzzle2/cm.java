@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends ua implements ql {
+final class cm extends WidgetContainer implements ql {
     private String[] field_C;
     static String[] field_E;
-    static le[] field_F;
-    private t[] field_A;
+    static Sprite[] field_F;
+    private ButtonWidget[] field_A;
     static te field_D;
     static String[] field_z;
     private sh field_H;
@@ -54,21 +54,21 @@ final class cm extends ua implements ql {
             var3_int = param0.length;
             this.field_C = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_C[var4_int] = pj.a((byte) 83, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
+              this.field_C[var4_int] = IntrusiveDeque.a((byte) 83, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new lc(t.field_z, 0, 1);
-            this.field_A = new t[var3_int + 1];
+            var4 = new lc(ButtonWidget.field_z, 0, 1);
+            this.field_A = new ButtonWidget[var3_int + 1];
             if (param1 != 560186724) {
               return;
             }
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_A[var5] = new t(this.field_C[var5], (of) (this));
+              this.field_A[var5] = new ButtonWidget(this.field_C[var5], (of) (this));
               this.field_A[var5].field_h = (ml) ((Object) var4);
               this.field_A[var5].field_m = ad.field_j;
               this.field_A[var5].a(15, 13361, 0, 80, 20 + var5 * 16);
               this.b((byte) -104, this.field_A[var5]);
             }
-            this.field_A[var3_int] = new t(lf.field_b, (of) (this));
+            this.field_A[var3_int] = new ButtonWidget(lf.field_b, (of) (this));
             this.field_A[var3_int].field_h = (ml) ((Object) var4);
             this.field_A[var3_int].a(15, 13361, 0, 100, var3_int * 16 + 36);
             this.b((byte) -89, this.field_A[var3_int]);
@@ -111,7 +111,7 @@ final class cm extends ua implements ql {
         field_D = null;
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -153,13 +153,13 @@ final class cm extends ua implements ql {
         if (param1 != 0) {
           return;
         }
-        ta var5 = t.field_z;
+        ta var5 = ButtonWidget.field_z;
         if (this.field_C != null) {
           var5.a(dh.field_a, this.field_r + param3, param2 + this.field_e, this.field_l, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -197,14 +197,14 @@ final class cm extends ua implements ql {
 
     final static void a(int param0) {
         int var3 = 0;
-        le var1 = null;
-        le var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1 = new le(540, 140);
+          var1 = new Sprite(540, 140);
           mc.a(param0 - 8512, var1);
           ig.b();
           ge.d();

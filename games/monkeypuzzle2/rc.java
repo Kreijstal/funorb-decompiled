@@ -7,7 +7,7 @@ final class rc extends kc {
     static int field_f;
     static double field_l;
     static int[] field_j;
-    static md field_k;
+    static PlatformTaskDispatcher field_k;
     static String field_i;
     private String field_h;
 
@@ -72,18 +72,18 @@ final class rc extends kc {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        gk var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new gk(param0);
-          var3 = var9.a((byte) 114);
+          var9 = new PacketBuffer(param0);
+          var3 = var9.readUnsignedByte((byte) 114);
           if (param1 <= 114) {
             field_i = (String) null;
           }
-          var4 = var9.e(127);
+          var4 = var9.readInt(127);
           if (var4 >= 0 && (fa.field_r == 0 ||
             !(fa.field_r < var4))) {
             if (var3 == 0) {
@@ -94,7 +94,7 @@ final class rc extends kc {
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.e(-80);
+            var5_int = var9.readInt(-80);
             if (var5_int >= 0 && (fa.field_r == 0 ||
               !(fa.field_r < var5_int))) {
               var12 = new byte[var5_int];
@@ -174,7 +174,7 @@ final class rc extends kc {
         mh.field_D = (int)var6Lifetime1[1];
     }
 
-    final void a(int param0, gk param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = 126 % ((-34 - param0) / 53);
           param1.a(this.field_e, -45);
@@ -188,7 +188,7 @@ final class rc extends kc {
         field_i = null;
         field_j = null;
         if (param0 < 85) {
-          field_k = (md) null;
+          field_k = (PlatformTaskDispatcher) null;
           field_k = null;
           return;
         }

@@ -9,7 +9,7 @@ final class na {
         return var2;
     }
 
-    final static void a(byte param0, li param1) {
+    final static void a(byte param0, PcmSampleStream param1) {
         if (param0 <= 17) {
           return;
         }

@@ -3,15 +3,15 @@
  */
 abstract class kc {
     static int field_c;
-    static pj field_a;
+    static IntrusiveDeque field_a;
     static Boolean field_b;
     static int field_d;
 
-    abstract void a(int param0, gk param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     final static void b(boolean param0) {
         if (null == ha.field_Z) {
-          ha.field_Z = li.a(ke.field_h[4], 100, 96);
+          ha.field_Z = PcmSampleStream.a(ke.field_h[4], 100, 96);
           na.a((byte) 60, ha.field_Z);
           if (!param0) {
             field_b = (Boolean) null;
@@ -21,7 +21,7 @@ abstract class kc {
         if (!ha.field_Z.h()) {
           return;
         }
-        ha.field_Z = li.a(ke.field_h[4], 100, 96);
+        ha.field_Z = PcmSampleStream.a(ke.field_h[4], 100, 96);
         na.a((byte) 60, ha.field_Z);
         if (!param0) {
           field_b = (Boolean) null;
@@ -48,7 +48,7 @@ abstract class kc {
           var1 = wj.field_k;
           synchronized (var1) {
             o.field_b = bh.field_e;
-            je.field_c = je.field_c + 1;
+            WeightedObjectCache.field_c = WeightedObjectCache.field_c + 1;
             if (param0 < 86) {
               field_b = (Boolean) null;
             }
@@ -62,7 +62,7 @@ abstract class kc {
               vf.field_a = sl.field_j;
             } else {
               while (sl.field_j != vf.field_a) {
-                var2 = ia.field_g[sl.field_j];
+                var2 = ProxySocketConnector.field_g[sl.field_j];
                 sl.field_j = 127 & sl.field_j + 1;
                 if (var2 < 0) {
                   dl.field_c[~var2] = false;

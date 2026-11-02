@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hd extends a {
-    static pj field_u;
+    static IntrusiveDeque field_u;
     private int field_q;
     private int field_t;
     private int field_s;
-    private le[] field_r;
+    private Sprite[] field_r;
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
@@ -54,7 +54,7 @@ final class hd extends a {
     public static void c(int param0) {
         field_u = null;
         if (param0 != 0) {
-          field_u = (pj) null;
+          field_u = (IntrusiveDeque) null;
         }
     }
 
@@ -66,7 +66,7 @@ final class hd extends a {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -85,8 +85,8 @@ final class hd extends a {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof t) {
-            param0 = param0 & ((t) (param1)).field_w;
+          if (param1 instanceof ButtonWidget) {
+            param0 = param0 & ((ButtonWidget) (param1)).field_w;
           }
           if (param0) {
             if (var6_int != 0) {
@@ -133,7 +133,7 @@ final class hd extends a {
     }
 
     private hd(int param0, int param1, int param2) {
-        this.field_p = pj.field_c;
+        this.field_p = IntrusiveDeque.field_c;
         this.field_q = param0;
         this.field_r = qj.field_C;
         this.field_s = param1;
@@ -141,6 +141,6 @@ final class hd extends a {
     }
 
     static {
-        field_u = new pj();
+        field_u = new IntrusiveDeque();
     }
 }

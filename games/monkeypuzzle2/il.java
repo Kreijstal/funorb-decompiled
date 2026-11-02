@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends ug {
+final class il extends IntrusiveNode {
     ki field_j;
     ki field_i;
     static byte[] field_g;

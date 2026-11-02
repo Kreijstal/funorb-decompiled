@@ -46,9 +46,9 @@ final class g {
         return var3;
     }
 
-    final td b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new td(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     final static g a(ad param0, int param1, int param2) {
@@ -56,22 +56,22 @@ final class g {
         if (var3 == null) {
           return null;
         }
-        return new g(new gk(var3));
+        return new g(new PacketBuffer(var3));
     }
 
-    private g(gk param0) {
+    private g(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new dm[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.a((byte) 114);
+          var3 = param0.readUnsignedByte((byte) 114);
           if (var3 != 0) {
-            param0.field_h = param0.field_h - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new dm();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.j(17277);
-        this.field_c = param0.j(17277);
+        this.field_a = param0.readUnsignedShort(17277);
+        this.field_c = param0.readUnsignedShort(17277);
     }
 }

@@ -467,7 +467,7 @@ final class ch {
         RuntimeException var2_ref = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (null == pj.field_a) {
+          if (null == IntrusiveDeque.field_a) {
             return null;
           }
           if (param0 == null) {
@@ -486,7 +486,7 @@ final class ch {
           if (var2 == null) {
             return null;
           }
-          var3 = (rb) (pj.field_a.a((long)var2.hashCode(), false));
+          var3 = (rb) (IntrusiveDeque.field_a.a((long)var2.hashCode(), false));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_db);
             var4 = pl.a((byte) 126, var7);
@@ -494,7 +494,7 @@ final class ch {
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
-            var3 = (rb) (pj.field_a.b(-34));
+            var3 = (rb) (IntrusiveDeque.field_a.b(-34));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

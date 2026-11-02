@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends ua implements ql {
+final class sk extends WidgetContainer implements ql {
     static int field_G;
-    private t[] field_B;
+    private ButtonWidget[] field_B;
     private int[] field_z;
     private String field_E;
     private ha field_H;
@@ -16,7 +16,7 @@ final class sk extends ua implements ql {
         return param0 & param1;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -147,11 +147,11 @@ final class sk extends ua implements ql {
         if (this.field_C >= param0) {
           return;
         }
-        t[] var8 = new t[param0];
-        t[] var3 = var8;
+        ButtonWidget[] var8 = new ButtonWidget[param0];
+        ButtonWidget[] var3 = var8;
         if (param1 > -67) {
-          t var7 = (t) null;
-          this.a(-89, -86, -14, 112, (t) null);
+          ButtonWidget var7 = (ButtonWidget) null;
+          this.a(-89, -86, -14, 112, (ButtonWidget) null);
         }
         int[] var4 = new int[param0];
         for (var5 = 0; this.field_C > var5; var5++) {
@@ -178,11 +178,11 @@ final class sk extends ua implements ql {
         }
     }
 
-    final t a(int param0, of param1, String param2) {
-        t var4 = null;
+    final ButtonWidget a(int param0, of param1, String param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        t stackIn_1_0 = null;
+        ButtonWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -190,7 +190,7 @@ final class sk extends ua implements ql {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new t(param2, param1);
+          var4 = new ButtonWidget(param2, param1);
           var4.field_h = (ml) ((Object) new hd());
           var5 = -2 + this.field_p;
           this.a(this.field_p + 34, 13361, 0, this.field_l, param0);

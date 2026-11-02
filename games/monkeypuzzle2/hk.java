@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends ug {
-    li field_g;
+final class hk extends IntrusiveNode {
+    PcmSampleStream field_g;
     int field_j;
-    ug field_h;
+    IntrusiveNode field_h;
     static byte[][] field_f;
     static int field_l;
     static ad field_k;
     static java.awt.Frame field_e;
-    static le[] field_i;
+    static Sprite[] field_i;
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
@@ -147,14 +147,14 @@ final class hk extends ug {
                         var38 = -1 + ig.field_c - var37;
                       }
                       if (var37 < 0) {
-                        nd.a(var36Lifetime2, var38 + var37, var41, param2, var39, -23487, var29 - var41 * var37, var40, -(var40 * var37) + var25, -(var39 * var37) + var21);
+                        SecondaryNodeDequeIterator.a(var36Lifetime2, var38 + var37, var41, param2, var39, -23487, var29 - var41 * var37, var40, -(var40 * var37) + var25, -(var39 * var37) + var21);
                       } else {
-                        nd.a(var37 + var36Lifetime2, var38, var41, param2, var39, -23487, var29, var40, var25, var21);
+                        SecondaryNodeDequeIterator.a(var37 + var36Lifetime2, var38, var41, param2, var39, -23487, var29, var40, var25, var21);
                       }
                     } else {
                       if (0 <= var37 &&
                         var37 < ig.field_c) {
-                        nd.a(var37 + var36Lifetime2, var38, 0, param2, 0, -23487, var29, 0, var25, var21);
+                        SecondaryNodeDequeIterator.a(var37 + var36Lifetime2, var38, 0, param2, 0, -23487, var29, 0, var25, var21);
                       }
                     }
                   }
@@ -298,7 +298,7 @@ final class hk extends ug {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < ig.field_c) {
-                    nd.a(var35Lifetime1 + var36Lifetime1, var37Lifetime1, 0, param2, 0, -23487, var29, 0, var25, var21);
+                    SecondaryNodeDequeIterator.a(var35Lifetime1 + var36Lifetime1, var37Lifetime1, 0, param2, 0, -23487, var29, 0, var25, var21);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -308,9 +308,9 @@ final class hk extends ug {
                     var37Lifetime1 = -1 + (ig.field_c - var36Lifetime1);
                   }
                   if (var36Lifetime1 < 0) {
-                    nd.a(var35Lifetime1, var37Lifetime1 + var36Lifetime1, var40Lifetime1, param2, var38Lifetime1, param16 ^ 972971921, var29 - var36Lifetime1 * var40Lifetime1, var39Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var21 - var38Lifetime1 * var36Lifetime1);
+                    SecondaryNodeDequeIterator.a(var35Lifetime1, var37Lifetime1 + var36Lifetime1, var40Lifetime1, param2, var38Lifetime1, param16 ^ 972971921, var29 - var36Lifetime1 * var40Lifetime1, var39Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var21 - var38Lifetime1 * var36Lifetime1);
                   } else {
-                    nd.a(var35Lifetime1 + var36Lifetime1, var37Lifetime1, var40Lifetime1, param2, var38Lifetime1, -23487, var29, var39Lifetime1, var25, var21);
+                    SecondaryNodeDequeIterator.a(var35Lifetime1 + var36Lifetime1, var37Lifetime1, var40Lifetime1, param2, var38Lifetime1, -23487, var29, var39Lifetime1, var25, var21);
                   }
                 }
               }
@@ -482,7 +482,7 @@ final class hk extends ug {
         field_e = null;
     }
 
-    final static void a(gk param0, md param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, PlatformTaskDispatcher param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -521,8 +521,8 @@ final class hk extends ug {
           var14 = MonkeyPuzzle2.field_F ? 1 : 0;
           try {
             var18 = new i();
-            var18.field_e = param0.a((byte) 114);
-            var18.field_l = param0.e(param2 ^ 80);
+            var18.field_e = param0.readUnsignedByte((byte) 114);
+            var18.field_l = param0.readInt(param2 ^ 80);
             var18.field_g = new int[var18.field_e];
             var18.field_k = new ic[var18.field_e];
             var18.field_f = new byte[var18.field_e][][];
@@ -534,7 +534,7 @@ final class hk extends ug {
             var18.field_s = new ic[var18.field_e];
             for (var5 = 0; var5 < var18.field_e; var5++) {
               try {
-                var6_int = param0.a((byte) 114);
+                var6_int = param0.readUnsignedByte((byte) 114);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
@@ -542,7 +542,7 @@ final class hk extends ug {
                     var6_int == 4) {
                     var20 = param0.f(param2 + 0);
                     var21 = param0.f(-1);
-                    var9 = param0.a((byte) 114);
+                    var9 = param0.readUnsignedByte((byte) 114);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
                       var10[var11_int] = param0.f(-1);
@@ -552,7 +552,7 @@ final class hk extends ug {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param0.e(126);
+                        var13 = param0.readInt(126);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param0.a(var22[var12_int], var13, -127, 0);
@@ -576,7 +576,7 @@ final class hk extends ug {
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.e(param2 ^ -127);
+                    var9 = param0.readInt(param2 ^ -127);
                   }
                   var18.field_q[var5] = var6_int;
                   var18.field_g[var5] = var9;
@@ -604,7 +604,7 @@ final class hk extends ug {
                 var18.field_o[var5] = -5;
               }
             }
-            ua.field_v.a(-8212, var18);
+            WidgetContainer.field_v.a(-8212, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -631,7 +631,7 @@ final class hk extends ug {
         }
     }
 
-    hk(li param0, ug param1) {
+    hk(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_g = param0;
           this.field_j = param0.f();

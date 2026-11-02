@@ -49,9 +49,9 @@ final class p {
         var26 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           var28 = MonkeyPuzzle2.field_D;
-          var2 = var28.a((byte) 114);
+          var2 = var28.readUnsignedByte((byte) 114);
           if (var2 == 0) {
-            var3 = var28.j(17277);
+            var3 = var28.readUnsignedShort(17277);
             var4 = (de) (qa.field_d.a((byte) -117));
             while (var4 != null) {
               if (~var3 != ~var4.field_k) {
@@ -61,10 +61,10 @@ final class p {
               break;
             }
             if (var4 == null) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
-            var5 = var28.a((byte) 114);
+            var5 = var28.readUnsignedByte((byte) 114);
             if (var5 != 0) {
               var6 = var4.field_h;
               var7 = var4.field_e;
@@ -74,7 +74,7 @@ final class p {
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 ah.field_a[var8_int].field_d = var28.f(-1);
                 ah.field_a[var8_int].field_a = false;
-                if (1 != var28.a((byte) 114)) {
+                if (1 != var28.readUnsignedByte((byte) 114)) {
                   ah.field_a[var8_int].field_c = null;
                 } else {
                   ah.field_a[var8_int].field_c = var28.f(-1);
@@ -96,13 +96,13 @@ final class p {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.a((byte) 114);
+              var18 = var28.readUnsignedByte((byte) 114);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.a((byte) 114);
+                  var20 = var28.readUnsignedByte((byte) 114);
                   var21 = ah.field_a[var20].field_d;
-                  var22 = var28.i(89);
-                  var24 = var28.field_h;
+                  var22 = var28.readLong(89);
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = ah.field_a[var20].field_c;
@@ -110,7 +110,7 @@ final class p {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.e(-95);
+                      var11[0][incrementValue$3] = var28.readInt(-95);
                     }
                     var12++;
                   }
@@ -120,11 +120,11 @@ final class p {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_h = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.e(126);
+                      var11[1][incrementValue$4] = var28.readInt(126);
                     }
                   }
                   if (var14 < var6 &&
@@ -134,21 +134,21 @@ final class p {
                     var9[2][var14] = ah.field_a[var20].field_c;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_h = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.e(127);
+                      var11[2][incrementValue$5] = var28.readInt(127);
                     }
                   }
                 }
               }
             }
             var4.field_l = true;
-            var4.c(-19822);
+            var4.unlink(-19822);
           } else if (1 == var2) {
-            var3 = var28.j(17277);
-            var4_long = var28.i(58);
+            var3 = var28.readUnsignedShort(17277);
+            var4_long = var28.readLong(58);
             var6_ref_d = (d) (wk.field_b.a((byte) -117));
             while (var6_ref_d != null) {
               if (~var6_ref_d.field_n != ~var3) {
@@ -158,14 +158,14 @@ final class p {
               break;
             }
             if (var6_ref_d == null) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
             var6_ref_d.field_g = var4_long;
-            var6_ref_d.c(-19822);
+            var6_ref_d.unlink(-19822);
           } else {
             kk.a("HS1: " + bh.a((byte) -105), (byte) 115, (Throwable) null);
-            gk.a(-1);
+            PacketBuffer.a(-1);
           }
           if (param0 >= -62) {
             field_b = (String) null;
@@ -199,7 +199,7 @@ final class p {
           ed.field_c = f.field_i;
           if (255 == param2) {
             stackIn_11_0 = -89;
-            stackIn_12_1 = !(dd.field_d >= 13);
+            stackIn_12_1 = !(ClientException.field_d >= 13);
             w.field_c = hj.$cfr$intArgs$a$ae8766b723be(stackIn_11_0, stackIn_12_1);
             var6 = (String[]) null;
             wh.a((String[]) null, true);

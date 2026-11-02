@@ -4,7 +4,7 @@
 final class ri {
     static ed[] field_c;
     static String field_d;
-    static pj field_b;
+    static IntrusiveDeque field_b;
     static ad field_a;
 
     final static ai a(ai param0, boolean param1, int[] param2) {
@@ -54,7 +54,7 @@ final class ri {
 
     final static void a(byte param0, int param1, boolean param2) {
         int stackIn_4_0 = 0;
-        le stackIn_34_0 = null;
+        Sprite stackIn_34_0 = null;
         int stackIn_43_0 = 0;
         int stackIn_54_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -72,7 +72,7 @@ final class ri {
         int var14 = 0;
         float var14_float = 0.0f;
         int var15 = 0;
-        le var15_ref_le = null;
+        Sprite var15_ref_le = null;
         String[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -104,7 +104,7 @@ final class ri {
           var7 = var20.field_D + var20.field_C + 52;
           ke.field_f[0].e();
           ge.d(3, 3, var6 - 6, -6 + var7, 16249775);
-          lb.a(0, var6, (byte) -9, wc.field_e, 0, var7);
+          lb.a(0, var6, (byte) -9, NodeHashTableIterator.field_e, 0, var7);
           var8 = 0;
           if (param2) {
             for (var9 = 9; var9 >= 0; var9--) {
@@ -144,7 +144,7 @@ final class ri {
                 var12 <= var10 &&
                 var12 + 32 >= var10) {
                 ge.h(0, 6, var6, var7 - 6);
-                var14_float = ia.a(true, (float)jk.field_B * 0.10000000149011612f);
+                var14_float = ProxySocketConnector.a(true, (float)jk.field_B * 0.10000000149011612f);
                 if ((var4 & 1 << var13) == 0) {
                   stackIn_34_0 = ka.field_b;
                 } else {
@@ -171,10 +171,10 @@ final class ri {
           }
           ke.field_f[2].e();
           ge.d(3, 3, 172, 184, 16249775);
-          lb.a(0, 178, (byte) 112, wc.field_e, 0, 190);
+          lb.a(0, 178, (byte) 112, NodeHashTableIterator.field_e, 0, 190);
           ke.field_f[1].e();
           ge.d(3, 3, 215, 184, 16249775);
-          lb.a(0, 221, (byte) -119, wc.field_e, 0, 190);
+          lb.a(0, 221, (byte) -119, NodeHashTableIterator.field_e, 0, 190);
           if (ee.field_F >= 0) {
             var5 = ee.field_F;
           }
@@ -248,21 +248,21 @@ final class ri {
     final static void a(ad param0, int param1, ad param2, ad param3) {
         String[] var8 = null;
         int var5 = 0;
-        td var6 = null;
+        PcmSample var6 = null;
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           ii.field_D = new o(22050, va.field_i);
           wd.field_i = new ud(param2, param3);
-          je.field_i = dc.a(2570, "music/Monkey Puzzle Panic", "", wd.field_i, param0);
-          uh.field_e = dc.a(2570, "music/Monkey Puzzle TitleScreen", "", wd.field_i, param0);
-          ah.field_g[0] = dc.a(2570, "music/Monkey Puzzle countryside", "", wd.field_i, param0);
-          ah.field_g[1] = dc.a(2570, "music/Monkey Puzzle jungle", "", wd.field_i, param0);
-          ah.field_g[2] = dc.a(2570, "music/Monkey Puzzle water", "", wd.field_i, param0);
-          ah.field_g[3] = dc.a(2570, "music/Monkey Puzzle aztec", "", wd.field_i, param0);
-          kb.field_d = dc.a(2570, "music/monkey_puzzle_level_complete_jingle", "", wd.field_i, param0);
-          bl.field_g = dc.a(2570, "music/Monkey_Puzzle_game_over_Jingle", "", wd.field_i, param0);
-          b.field_l = dc.a(param1 ^ 2570, "music/Monkey_Puzzle_world_Complete_Jingle", "", wd.field_i, param0);
-          wf.field_h = dc.a(2570, "music/Monkey_Puzzle_Game_Complete_Jingle", "", wd.field_i, param0);
+          WeightedObjectCache.field_i = IterableNodeHashTable.a(2570, "music/Monkey Puzzle Panic", "", wd.field_i, param0);
+          uh.field_e = IterableNodeHashTable.a(2570, "music/Monkey Puzzle TitleScreen", "", wd.field_i, param0);
+          ah.field_g[0] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle countryside", "", wd.field_i, param0);
+          ah.field_g[1] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle jungle", "", wd.field_i, param0);
+          ah.field_g[2] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle water", "", wd.field_i, param0);
+          ah.field_g[3] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle aztec", "", wd.field_i, param0);
+          kb.field_d = IterableNodeHashTable.a(2570, "music/monkey_puzzle_level_complete_jingle", "", wd.field_i, param0);
+          bl.field_g = IterableNodeHashTable.a(2570, "music/Monkey_Puzzle_game_over_Jingle", "", wd.field_i, param0);
+          b.field_l = IterableNodeHashTable.a(param1 ^ 2570, "music/Monkey_Puzzle_world_Complete_Jingle", "", wd.field_i, param0);
+          wf.field_h = IterableNodeHashTable.a(2570, "music/Monkey_Puzzle_Game_Complete_Jingle", "", wd.field_i, param0);
           var8 = new String[]{"menu_select", "MP_throw_coconut", "MP_deflect3", "MP_deflect_ceiling", "MP_monkeyhit", "MP_coconut_hit", "MP_coconut_fall", "MP_monkeyfall", "MP_splash_2", "MP_splash_3", "MP_splash_4", "MP_splash_5", "MP_intro_screen_appear", "MP_intro_screen_close", "MP_intro_screen_monkey_fall", "MP_intro_screen_rain", "MP_intro_screen_ambience_1", "MP_intro_screen_ambience_2", "MP_lvl_end_vine", "MP_lvl_end_climb", "MP_monkey_amb1", "MP_monkey_amb2", "MP_monkey_amb3", "MP_monkey_amb4", "MP_monkey_amb5", "MP_monkey_laugh1", "MP_monkey_laugh2", "MP_monkey_laugh3", "MP_lvl_end_climb_step1", "MP_lvl_end_climb_step2", "MP_lvl_end_climb_step3", "mp_level_complete"};
           String[] var4 = var8;
           for (var5 = param1; var5 < 32; var5++) {
@@ -292,6 +292,6 @@ final class ri {
 
     static {
         field_d = "Type your age in years";
-        field_b = new pj();
+        field_b = new IntrusiveDeque();
     }
 }

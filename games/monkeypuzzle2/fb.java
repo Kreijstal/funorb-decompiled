@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fb extends bf {
+abstract class fb extends DualLinkNode {
     boolean field_m;
     static String field_i;
     static int field_k;

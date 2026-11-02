@@ -75,11 +75,11 @@ final class ei {
           var1 = gf.field_c;
           while (kj.m(0)) {
             var1.b(true, 8);
-            fieldTemp$0 = var1.field_h + 1;
-            var1.field_h = var1.field_h + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             nf.a(param0 ^ -93, var1);
-            gf.field_c.a(var1.field_h - var2, (byte) 31);
+            gf.field_c.a(var1.position - var2, (byte) 31);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class ei {
           if (var7 == null) {
             return null;
           }
-          stackIn_4_0 = new lg(new gk(var7), param2);
+          stackIn_4_0 = new lg(new PacketBuffer(var7), param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

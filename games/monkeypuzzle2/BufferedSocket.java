@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class id implements Runnable {
+final class BufferedSocket implements Runnable {
     static String field_h;
     private java.net.Socket field_j;
     private OutputStream field_b;
     static int field_a;
-    private md field_f;
+    private PlatformTaskDispatcher field_f;
     private InputStream field_g;
     private ic field_d;
     private int field_l;
@@ -89,7 +89,7 @@ final class id implements Runnable {
         String var11;
         int var12;
         int var13;
-        dd var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -117,8 +117,8 @@ final class id implements Runnable {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param0 instanceof dd) {
-          var14 = (dd) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
           param0 = var14.field_b;
           var2 = var14.field_c + " | ";
           var11 = var2;
@@ -188,7 +188,7 @@ final class id implements Runnable {
         }
     }
 
-    id(java.net.Socket param0, md param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -394,7 +394,7 @@ final class id implements Runnable {
         return this.field_g.available();
     }
 
-    private id(java.net.Socket param0, md param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_l = 0;
         this.field_n = false;
         this.field_e = 0;

@@ -4,7 +4,7 @@
 final class s extends nf implements ql {
     static String[] field_Q;
     static int field_R;
-    private t field_P;
+    private ButtonWidget field_P;
     static de field_S;
     static int field_T;
     static int field_O;
@@ -12,7 +12,7 @@ final class s extends nf implements ql {
     s(kj param0, kg param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        we var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -38,7 +38,7 @@ final class s extends nf implements ql {
           } else {
             var3 = ld.field_b;
           }
-          var4 = new we((String) (var3), (of) null);
+          var4 = new UiWidget((String) (var3), (of) null);
           var4.field_e = 50;
           var4.field_l = this.field_l;
           var4.field_p = 80;
@@ -75,11 +75,11 @@ final class s extends nf implements ql {
         }
     }
 
-    private final t a(boolean param0, of param1, String param2) {
-        t var4 = null;
+    private final ButtonWidget a(boolean param0, of param1, String param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        t stackIn_3_0 = null;
+        ButtonWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -87,7 +87,7 @@ final class s extends nf implements ql {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new t(param2, param1);
+          var4 = new ButtonWidget(param2, param1);
           var4.field_h = (ml) ((Object) new hd());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
@@ -129,7 +129,7 @@ final class s extends nf implements ql {
         this.field_z = false;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

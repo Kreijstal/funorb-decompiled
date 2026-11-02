@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends ua implements ql {
-    private t field_B;
-    static le[] field_E;
-    private t field_F;
+final class lb extends WidgetContainer implements ql {
+    private ButtonWidget field_B;
+    static Sprite[] field_E;
+    private ButtonWidget field_F;
     static int field_z;
-    private t field_G;
-    static le field_H;
+    private ButtonWidget field_G;
+    static Sprite field_H;
     static te field_I;
     static String field_A;
     static pd field_C;
     static int[] field_D;
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -66,30 +66,30 @@ final class lb extends ua implements ql {
         return pi.field_p;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        we var8 = null;
+        UiWidget var8 = null;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (this.field_F == param4) {
-            je.a(-117);
+            WeightedObjectCache.a(-117);
           } else {
             if (this.field_G != param4) {
               if (param4 == this.field_B) {
                 il.a(true);
               }
             } else {
-              dc.a(0);
+              IterableNodeHashTable.a(0);
             }
           }
           if (param3 != 7) {
-            var8 = (we) null;
-            this.a((we) null, '￙', -4, -125);
+            var8 = (UiWidget) null;
+            this.a((UiWidget) null, '￙', -4, -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class lb extends ua implements ql {
         int var5 = param3 + this.field_r;
         if (param0 == 30) {
           var6 = this.field_e + param2;
-          t.field_z.a(p.field_b, var5 + 20, 20 + var6, -40 + this.field_l, this.field_p - 50, 16777215, -1, 1, 0, t.field_z.field_C);
+          ButtonWidget.field_z.a(p.field_b, var5 + 20, 20 + var6, -40 + this.field_l, this.field_p - 50, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
           super.a(param0 + 0, param1, param2, param3);
           return;
         }
@@ -119,9 +119,9 @@ final class lb extends ua implements ql {
 
     public lb() {
         super(0, 0, 476, 225, (ml) null);
-        this.field_G = new t(oi.field_g, (of) null);
-        this.field_F = new t(aj.field_d, (of) null);
-        this.field_B = new t(oi.field_d, (of) null);
+        this.field_G = new ButtonWidget(oi.field_g, (of) null);
+        this.field_F = new ButtonWidget(aj.field_d, (of) null);
+        this.field_B = new ButtonWidget(oi.field_d, (of) null);
         hd var1 = new hd();
         this.field_G.field_h = (ml) ((Object) var1);
         this.field_F.field_h = (ml) ((Object) var1);
@@ -174,7 +174,7 @@ final class lb extends ua implements ql {
             return;
           }
           var3 = pf.a((byte) -103, 4);
-          n.field_b[var2] = li.a(ke.field_h[var3 + 8], 100, 96);
+          n.field_b[var2] = PcmSampleStream.a(ke.field_h[var3 + 8], 100, 96);
           na.a((byte) 42, n.field_b[var2]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,11 +184,11 @@ final class lb extends ua implements ql {
         }
     }
 
-    final static le[] a(boolean param0, String param1, ad param2, String param3) {
+    final static Sprite[] a(boolean param0, String param1, ad param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        le[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -231,7 +231,7 @@ final class lb extends ua implements ql {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, le[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, byte param2, Sprite[] param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -397,7 +397,7 @@ final class lb extends ua implements ql {
     }
 
     static {
-        field_H = new le(640, 480);
+        field_H = new Sprite(640, 480);
         field_A = "Press 'ENTER'";
         field_I = new te(6, 0, 4, 2);
         field_D = new int[10];

@@ -4,7 +4,7 @@
 final class fk {
     static int[] field_d;
     int field_b;
-    static md field_c;
+    static PlatformTaskDispatcher field_c;
     static boolean field_a;
 
     public static void a(byte param0) {

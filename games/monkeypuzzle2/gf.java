@@ -245,7 +245,7 @@ final class gf {
                 this.field_d.a(od.field_m, 0, (byte) 44, 6);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -261,7 +261,7 @@ final class gf {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = (255 & od.field_m[3]) + (65280 & od.field_m[2] << 8);
                         var11 = (65280 & od.field_m[0] << 8) + (255 & od.field_m[1]);
@@ -277,7 +277,7 @@ final class gf {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = (od.field_m[5] & 255) + ((od.field_m[4] & 255) << 8);
                         var13 = 255 & od.field_m[9];

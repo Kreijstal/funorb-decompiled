@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uk extends wj {
-    static le field_n;
+    static Sprite field_n;
     static String field_p;
     static int field_q;
     static int field_r;
@@ -92,7 +92,7 @@ final class uk extends wj {
         field_p = null;
     }
 
-    final static void a(int param0, byte param1, le param2) {
+    final static void a(int param0, byte param1, Sprite param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

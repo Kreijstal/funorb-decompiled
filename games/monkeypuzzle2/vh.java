@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends t {
+final class vh extends ButtonWidget {
     static float[] field_C;
     static String field_F;
     private int field_D;
     static float[] field_H;
     static int field_I;
     static va field_B;
-    static le[] field_E;
+    static Sprite[] field_E;
     static String field_L;
     static String field_K;
     private kf field_J;
@@ -20,15 +20,15 @@ final class vh extends t {
         int var9;
         int var10;
         int var11;
-        le var12;
-        le var13;
-        le var14;
+        Sprite var12;
+        Sprite var13;
+        Sprite var14;
         var11 = MonkeyPuzzle2.field_F ? 1 : 0;
         super.a(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
-        L0: {
+        regionExit1: {
           var5 = param3 + this.field_r + (this.field_l >> 1);
           var6 = (this.field_p >> 1) + this.field_e + param2;
           var8 = this.field_J.b(false);
@@ -41,10 +41,10 @@ final class vh extends t {
               if (var8 == wj.field_i) {
                 var13 = hk.field_i[1];
                 var13.c(var5 - (var13.field_k >> 1), -(var13.field_j >> 1) + var6, 256);
-                break L0;
+                break regionExit1;
               }
             }
-            break L0;
+            break regionExit1;
           }
           var12 = hk.field_i[0];
           var9 = var12.field_m << 1;
@@ -55,7 +55,7 @@ final class vh extends t {
             mc.a(param0 ^ -8495, wi.field_e);
             ge.d();
           } else {
-            wi.field_e = new le(var9, var10);
+            wi.field_e = new Sprite(var9, var10);
             mc.a(-8497, wi.field_e);
           }
           var12.b(112, 144, var12.field_m << 4, var12.field_n << 4, -this.field_D << 10, 4096);
@@ -99,11 +99,11 @@ final class vh extends t {
             var4_ref_nh = (nh) (cb.field_a.a((byte) -117));
             if (var4_ref_nh != null &&
               var2_long > var4_ref_nh.field_e) {
-              var4_ref_nh.c(-19822);
+              var4_ref_nh.unlink(-19822);
               rc.field_f = var4_ref_nh.field_h.length;
-              MonkeyPuzzle2.field_D.field_h = 0;
+              MonkeyPuzzle2.field_D.position = 0;
               for (var5_int = 0; var5_int < rc.field_f; var5_int++) {
-                MonkeyPuzzle2.field_D.field_g[var5_int] = var4_ref_nh.field_h[var5_int];
+                MonkeyPuzzle2.field_D.payload[var5_int] = var4_ref_nh.field_h[var5_int];
               }
               bk.field_f = il.field_e;
               il.field_e = hk.field_l;
@@ -117,12 +117,12 @@ final class vh extends t {
           }
           while (true) {
             if (sb.field_f < 0) {
-              MonkeyPuzzle2.field_D.field_h = 0;
+              MonkeyPuzzle2.field_D.position = 0;
               if (!hj.a(1, true)) {
                 return false;
               }
               sb.field_f = MonkeyPuzzle2.field_D.r(-118);
-              MonkeyPuzzle2.field_D.field_h = 0;
+              MonkeyPuzzle2.field_D.position = 0;
               rc.field_f = param0[sb.field_f];
             }
             if (!gb.a(true)) {
@@ -145,7 +145,7 @@ final class vh extends t {
             }
             var5 = new nh(var2_long + (long)var4, sb.field_f, new byte[rc.field_f]);
             for (var6 = 0; rc.field_f > var6; var6++) {
-              var5.field_h[var6] = MonkeyPuzzle2.field_D.field_g[var6];
+              var5.field_h[var6] = MonkeyPuzzle2.field_D.payload[var6];
             }
             cb.field_a.a(-8212, var5);
             sb.field_f = -1;
@@ -173,7 +173,7 @@ final class vh extends t {
         RuntimeException var2 = null;
         try {
           var2_int = -111 / ((-67 - param1) / 48);
-          ni.a((java.awt.Component) ((Object) param0), (byte) -124);
+          SecondaryNodeDeque.a((java.awt.Component) ((Object) param0), (byte) -124);
           ac.a(-117, (java.awt.Component) ((Object) param0));
           if (null != eb.field_A) {
             eb.field_A.a(0, (java.awt.Component) ((Object) param0));
@@ -206,7 +206,7 @@ final class vh extends t {
         }
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         try {
           this.field_D = this.field_D + 1;
           if (param3 >= -13) {
@@ -228,7 +228,7 @@ final class vh extends t {
         return stackIn_6_0;
     }
 
-    final boolean a(we param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -284,7 +284,7 @@ final class vh extends t {
           field_C[var0] = (float)Math.sin(3.141592653589793 * (double)var0 / 32768.0);
           field_H[var0] = (float)Math.cos((double)var0 * 3.141592653589793 / 32768.0);
         }
-        field_E = new le[5];
+        field_E = new Sprite[5];
         field_L = "Quit to website";
         field_K = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
     }

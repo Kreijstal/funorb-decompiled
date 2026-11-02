@@ -24,9 +24,9 @@ final class gh {
     final static int a(int param0) {
         if (param0 != 12035) {
           field_a = (int[]) null;
-          return dd.field_d;
+          return ClientException.field_d;
         }
-        return dd.field_d;
+        return ClientException.field_d;
     }
 
     static {

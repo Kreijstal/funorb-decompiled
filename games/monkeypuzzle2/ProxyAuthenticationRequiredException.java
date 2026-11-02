@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class pg extends IOException {
+final class ProxyAuthenticationRequiredException extends IOException {
     static hl[] field_e;
-    static id field_a;
+    static BufferedSocket field_a;
     static String field_c;
     static kk[] field_d;
     static d field_b;
@@ -20,12 +20,12 @@ final class pg extends IOException {
           field_b = null;
           return;
         }
-        pg.a((byte) -128);
+        ProxyAuthenticationRequiredException.a((byte) -128);
         field_e = null;
         field_b = null;
     }
 
-    pg(String param0) {
+    ProxyAuthenticationRequiredException(String param0) {
         super(param0);
     }
 

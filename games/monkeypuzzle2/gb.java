@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends ug {
+final class gb extends IntrusiveNode {
     static int field_o;
     private boolean field_m;
     private wg field_k;
@@ -43,15 +43,15 @@ final class gb extends ug {
           if (!hj.a(1, true)) {
             return false;
           }
-          rc.field_f = MonkeyPuzzle2.field_D.a((byte) 114);
-          MonkeyPuzzle2.field_D.field_h = 0;
+          rc.field_f = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+          MonkeyPuzzle2.field_D.position = 0;
         }
         if (-2 == rc.field_f) {
           if (!hj.a(2, true)) {
             return false;
           }
-          rc.field_f = MonkeyPuzzle2.field_D.j(17277);
-          MonkeyPuzzle2.field_D.field_h = 0;
+          rc.field_f = MonkeyPuzzle2.field_D.readUnsignedShort(17277);
+          MonkeyPuzzle2.field_D.position = 0;
         }
         if (param0) {
           return hj.a(rc.field_f, param0);

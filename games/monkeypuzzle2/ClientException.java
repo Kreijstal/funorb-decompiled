@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd extends RuntimeException {
+final class ClientException extends RuntimeException {
     static int field_d;
     Throwable field_b;
     String field_c;
@@ -13,7 +13,7 @@ final class dd extends RuntimeException {
         int var1 = 74 / ((-51 - param0) / 54);
     }
 
-    dd(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_c = param1;
         this.field_b = param0;
     }

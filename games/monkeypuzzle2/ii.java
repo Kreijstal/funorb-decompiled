@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ii extends vb {
-    private le[] field_k;
+    private Sprite[] field_k;
     private String field_I;
-    private le field_O;
+    private Sprite field_O;
     private boolean field_x;
-    private le field_R;
+    private Sprite field_R;
     private int field_s;
     private int field_P;
     private boolean field_X;
@@ -25,21 +25,21 @@ class ii extends vb {
     private int field_K;
     private int field_A;
     private String field_ab;
-    private le[] field_M;
+    private Sprite[] field_M;
     private int field_q;
     private int field_z;
-    private le field_p;
+    private Sprite field_p;
     private int field_C;
-    private le field_V;
-    private le field_n;
+    private Sprite field_V;
+    private Sprite field_n;
     static int field_E;
     static int[] field_U;
-    private le[] field_Z;
-    private le[] field_S;
+    private Sprite[] field_Z;
+    private Sprite[] field_S;
     private boolean field_o;
     private ta field_t;
     private int field_G;
-    private le[] field_Y;
+    private Sprite[] field_Y;
     private int field_L;
     static ad field_m;
     static int field_B;
@@ -47,7 +47,7 @@ class ii extends vb {
     static int field_T;
     static o field_D;
 
-    final static void a(md param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(PlatformTaskDispatcher param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           rk.field_g = param0;
           fa.field_q = param5;
@@ -255,7 +255,7 @@ class ii extends vb {
         this.field_z = -2147483648;
         this.field_L = -1;
         try {
-          this.field_a = param0;
+          this.key = param0;
           this.a(param1, true);
           if (param6 != null) {
             this.field_I = param6;

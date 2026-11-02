@@ -6,11 +6,11 @@ final class rd extends wj {
     static te field_o;
     private rj field_n;
 
-    final static le[] a(String param0, ad param1, int param2, String param3) {
+    final static Sprite[] a(String param0, ad param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        le[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -158,7 +158,7 @@ final class rd extends wj {
         String var3 = null;
         Throwable decompiledCaughtException = null;
         String var3Lifetime1;
-        if (we.field_n == null) {
+        if (UiWidget.field_n == null) {
           if (!param0) {
             return;
           }
@@ -166,9 +166,9 @@ final class rd extends wj {
           rd.a((String) null, (ad) null, -96, (String) null);
           return;
         }
-        var1 = we.field_n;
+        var1 = UiWidget.field_n;
         synchronized (var1) {
-          we.field_n = null;
+          UiWidget.field_n = null;
         }
         if (param0) {
           var3Lifetime1 = (String) null;

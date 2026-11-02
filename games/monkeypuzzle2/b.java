@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class b extends bf {
+abstract class b extends DualLinkNode {
     static int[][] field_j;
     static java.awt.Frame field_i;
     int field_n;
@@ -114,7 +114,7 @@ abstract class b extends bf {
           var21Lifetime2 = ig.field_h;
           var22Lifetime2 = ig.field_f;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (param4.field_e > var23Lifetime2) {
               var24Lifetime1 = param4.field_O[var23Lifetime2];
               var25Lifetime1 = param4.field_M[var23Lifetime2];
@@ -178,7 +178,7 @@ abstract class b extends bf {
                   wk.field_e[var23Lifetime2] = (var26Lifetime1 * var20 + (var24Lifetime1 * var14 + var25Lifetime1 * var17) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                 }
               }

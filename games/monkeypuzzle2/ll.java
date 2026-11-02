@@ -57,7 +57,7 @@ final class ll {
                 }
                 var2 = te.a("idlemessage20min", param0 - 89);
                 if (null != var2) {
-                  dc.field_b = be.a(var2, (byte) 100);
+                  IterableNodeHashTable.field_b = be.a(var2, (byte) 100);
                 }
                 var2 = te.a("error_js5crc", -91);
                 if (var2 != null) {
@@ -65,7 +65,7 @@ final class ll {
                 }
                 var2 = te.a("error_js5io", -100);
                 if (var2 != null) {
-                  ia.field_c = be.a(var2, (byte) -54);
+                  ProxySocketConnector.field_c = be.a(var2, (byte) -54);
                 }
                 var2 = te.a("error_js5connect_full", -13);
                 if (null != var2) {
@@ -113,7 +113,7 @@ final class ll {
                 }
                 var2 = te.a("ticketing_xunread", param0 ^ -36);
                 if (var2 != null) {
-                  pj.field_d = be.a(var2, (byte) -89);
+                  IntrusiveDeque.field_d = be.a(var2, (byte) -89);
                 }
                 var2 = te.a("ticketing_gotowebsite", param0 ^ -47);
                 if (var2 != null) {
@@ -1046,11 +1046,11 @@ final class ll {
                 }
                 var2 = te.a("reloadgame", -46);
                 if (null != var2) {
-                  wc.field_g = be.a(var2, (byte) -125);
+                  NodeHashTableIterator.field_g = be.a(var2, (byte) -125);
                 }
                 var2 = te.a("toserverlist", -40);
                 if (var2 != null) {
-                  fc.field_m = be.a(var2, (byte) -50);
+                  GameApplet.field_m = be.a(var2, (byte) -50);
                 }
                 var2 = te.a("tocustomersupport", -22);
                 if (var2 != null) {
@@ -1466,7 +1466,7 @@ final class ll {
                 }
                 var2 = te.a("create_optin_news", param0 - 64);
                 if (var2 != null) {
-                  je.field_f = be.a(var2, (byte) 91);
+                  WeightedObjectCache.field_f = be.a(var2, (byte) 91);
                 }
                 var2 = te.a("create_agreeterms", param0 - 115);
                 if (null != var2) {
@@ -1542,7 +1542,7 @@ final class ll {
                 }
                 var2 = te.a("create_password_confirm_tooltip", -74);
                 if (var2 != null) {
-                  id.field_h = be.a(var2, (byte) -99);
+                  BufferedSocket.field_h = be.a(var2, (byte) -99);
                 }
                 var2 = te.a("create_email_tooltip", -34);
                 if (var2 != null) {
@@ -1618,11 +1618,11 @@ final class ll {
                 }
                 var2 = te.a("create_alert_passlength", param0 - 120);
                 if (null != var2) {
-                  dd.field_a = be.a(var2, (byte) -81);
+                  ClientException.field_a = be.a(var2, (byte) -81);
                 }
                 var2 = te.a("create_alert_passcontainsname", -77);
                 if (null != var2) {
-                  fc.field_b = be.a(var2, (byte) 117);
+                  GameApplet.field_b = be.a(var2, (byte) 117);
                 }
                 var2 = te.a("create_alert_passcontainsemail", -107);
                 if (var2 != null) {
@@ -1630,7 +1630,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_passcontainsname_partial", param0 ^ -44);
                 if (var2 != null) {
-                  ck.field_d = be.a(var2, (byte) 111);
+                  DequeCursor.field_d = be.a(var2, (byte) 111);
                 }
                 var2 = te.a("create_alert_checkname", -59);
                 if (var2 != null) {
@@ -1778,11 +1778,11 @@ final class ll {
                 }
                 var2 = te.a("waitingfor_soundeffects", param0 ^ -126);
                 if (null != var2) {
-                  t.field_y = be.a(var2, (byte) 96);
+                  ButtonWidget.field_y = be.a(var2, (byte) 96);
                 }
                 var2 = te.a("waitingfor_music", -36);
                 if (var2 != null) {
-                  wc.field_a = be.a(var2, (byte) -85);
+                  NodeHashTableIterator.field_a = be.a(var2, (byte) -85);
                 }
                 var2 = te.a("waitingfor_instruments", -91);
                 if (null != var2) {
@@ -1834,7 +1834,7 @@ final class ll {
                 }
                 var2 = te.a("loading_levels", param0 - 93);
                 if (var2 != null) {
-                  gk.field_f = be.a(var2, (byte) 115);
+                  PacketBuffer.field_f = be.a(var2, (byte) 115);
                 }
                 var2 = te.a("loading_extradata", -112);
                 if (var2 != null) {
@@ -2660,7 +2660,7 @@ final class ll {
                 }
                 var2 = te.a("fs_accept_afteraccept", -22);
                 if (var2 != null) {
-                  ua.field_y = be.a(var2, (byte) 93);
+                  WidgetContainer.field_y = be.a(var2, (byte) 93);
                 }
                 var2 = te.a("fs_button_cancel", -84);
                 if (null != var2) {
@@ -2844,7 +2844,7 @@ final class ll {
                 }
                 var2 = te.a("DEFAULT_PLAYER_NAME", -98);
                 if (null != var2) {
-                  pg.field_c = be.a(var2, (byte) 95);
+                  ProxyAuthenticationRequiredException.field_c = be.a(var2, (byte) 95);
                 }
                 var2 = te.a("mustlogin1", -101);
                 if (null != var2) {
@@ -3054,8 +3054,8 @@ final class ll {
                   throw la.a((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2618_0 = (!fc.field_c);
-                  fc.field_c = stackIn_2618_0;
+                  stackIn_2618_0 = (!GameApplet.field_c);
+                  GameApplet.field_c = stackIn_2618_0;
                 }
             }
         }
@@ -3091,7 +3091,7 @@ final class ll {
             return;
           }
           var1 = (ki) (ok.field_a.a((byte) -117));
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (null != var1) {
               stackIn_20_0 = var1.field_w;
@@ -3123,7 +3123,7 @@ final class ll {
               while (var1 != null) {
                 stackIn_29_0 = var1;
                 if (var2 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 stackIn_20_0Lifetime1 = ~stackIn_29_0.field_w;
                 stackIn_20_1Lifetime1 = -3;

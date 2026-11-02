@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends ug {
-    static le[][][] field_f;
+final class nh extends IntrusiveNode {
+    static Sprite[][][] field_f;
     int field_g;
     byte[] field_h;
     long field_e;
@@ -19,7 +19,7 @@ final class nh extends ug {
         int var14 = -param0 + param5;
         int var15 = -param8 + param1;
         if (param4 != -5425) {
-          field_f = (le[][][]) null;
+          field_f = (Sprite[][][]) null;
         }
         ll.field_a = (var10 * var14 - var11 * var13) / var9;
         ok.field_b = (-(var12 * var13) + var10 * var15) / var9;
@@ -28,9 +28,9 @@ final class nh extends ug {
 
     public static void a(int param0) {
         if (param0 != -19931) {
-          field_f = (le[][][]) null;
+          field_f = (Sprite[][][]) null;
         }
-        field_f = (le[][][]) null;
+        field_f = (Sprite[][][]) null;
     }
 
     final static void a(byte param0) {
@@ -132,7 +132,7 @@ final class nh extends ug {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           if (param0 <= 30) {
-            field_f = (le[][][]) null;
+            field_f = (Sprite[][][]) null;
           }
           var4 = -1L;
           wg.a(var2, param1, var3, -26372, var4);
@@ -142,6 +142,6 @@ final class nh extends ug {
     }
 
     static {
-        field_f = new le[2][5][];
+        field_f = new Sprite[2][5][];
     }
 }

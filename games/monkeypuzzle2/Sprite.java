@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class le extends ik {
+class Sprite extends SpriteState {
     int[] field_s;
 
     final void e(int param0, int param1, int param2) {
@@ -45,7 +45,7 @@ class le extends ik {
           if (var6 <= 0) {
             return;
           }
-          le.b(ge.field_i, this.field_s, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.b(ge.field_i, this.field_s, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -91,7 +91,7 @@ class le extends ik {
           if (var5 <= 0) {
             return;
           }
-          le.a(ge.field_i, this.field_s, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(ge.field_i, this.field_s, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -178,7 +178,7 @@ class le extends ik {
         int var4 = param0 + (this.field_k >> 1) > ge.field_j ? ge.field_j - param0 << 1 : this.field_k;
         int var5 = param1 < ge.field_f ? ge.field_f - param1 << 1 : 0;
         int var6 = param1 + (this.field_j >> 1) > ge.field_k ? ge.field_k - param1 << 1 : this.field_j;
-        le.a(this.field_s, var5 * this.field_k + var3, (param1 + (var5 >> 1)) * ge.field_h + (param0 + (var3 >> 1)), (this.field_k << 1) - (var4 - var3) + (this.field_k & 1), ge.field_h - (var4 - var3 >> 1), this.field_k, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_s, var5 * this.field_k + var3, (param1 + (var5 >> 1)) * ge.field_h + (param0 + (var3 >> 1)), (this.field_k << 1) - (var4 - var3) + (this.field_k & 1), ge.field_h - (var4 - var3 >> 1), this.field_k, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     void d(int param0, int param1, int param2) {
@@ -222,7 +222,7 @@ class le extends ik {
           if (var6 <= 0) {
             return;
           }
-          le.a(ge.field_i, this.field_s, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.a(ge.field_i, this.field_s, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -367,9 +367,9 @@ class le extends ik {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            le.a(0, 0, 0, var8, this.field_s, ge.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.a(0, 0, 0, var8, this.field_s, ge.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            le.a(0, 0, 0, var8, this.field_s, ge.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.a(0, 0, 0, var8, this.field_s, ge.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -420,7 +420,7 @@ class le extends ik {
           if (var6 <= 0) {
             return;
           }
-          le.b(ge.field_i, this.field_s, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(ge.field_i, this.field_s, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1001,9 +1001,9 @@ class le extends ik {
         }
     }
 
-    final le d() {
+    final Sprite d() {
         int var3 = 0;
-        le var1 = new le(this.field_k, this.field_j);
+        Sprite var1 = new Sprite(this.field_k, this.field_j);
         var1.field_m = this.field_m;
         var1.field_n = this.field_n;
         var1.field_r = this.field_r;
@@ -1108,9 +1108,9 @@ class le extends ik {
             return;
           }
           if (param2 == 256) {
-            le.a(0, 0, 0, ge.field_i, this.field_s, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, ge.field_i, this.field_s, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            le.a(0, 0, 0, ge.field_i, this.field_s, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, ge.field_i, this.field_s, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1161,7 +1161,7 @@ class le extends ik {
           if (var7 <= 0) {
             return;
           }
-          le.a(ge.field_i, this.field_s, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+          Sprite.a(ge.field_i, this.field_s, 0, var6, var5, var8, var7, var9, var10, param2, param3);
           return;
         }
     }
@@ -1228,7 +1228,7 @@ class le extends ik {
         }
     }
 
-    le(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_m = param0;
         this.field_n = param1;
         this.field_r = param2;
@@ -1992,7 +1992,7 @@ class le extends ik {
           if (var5 <= 0) {
             return;
           }
-          le.a(0, ge.field_i, this.field_s, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, ge.field_i, this.field_s, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2038,7 +2038,7 @@ class le extends ik {
           if (var6 <= 0) {
             return;
           }
-          le.a(ge.field_i, this.field_s, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(ge.field_i, this.field_s, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2280,7 +2280,7 @@ class le extends ik {
           if (var5 <= 0) {
             return;
           }
-          le.c(ge.field_i, this.field_s, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.c(ge.field_i, this.field_s, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2326,7 +2326,7 @@ class le extends ik {
           if (var5 <= 0) {
             return;
           }
-          le.a(ge.field_i, this.field_s, var4, var3, var6, var5, var7, var8);
+          Sprite.a(ge.field_i, this.field_s, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2398,12 +2398,12 @@ class le extends ik {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          le.b(ge.field_i, this.field_s, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.b(ge.field_i, this.field_s, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    le(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_s = new int[param0 * param1];
         this.field_m = param0;
         this.field_k = param0;
@@ -2497,10 +2497,10 @@ class le extends ik {
         }
     }
 
-    final le a() {
+    final Sprite a() {
         int var2 = 0;
         int var3 = 0;
-        le var1 = new le(this.field_k, this.field_j);
+        Sprite var1 = new Sprite(this.field_k, this.field_j);
         var1.field_m = this.field_m;
         var1.field_n = this.field_n;
         var1.field_r = this.field_m - this.field_k - this.field_r;
@@ -2670,7 +2670,7 @@ class le extends ik {
         }
     }
 
-    le(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

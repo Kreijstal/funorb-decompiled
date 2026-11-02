@@ -36,7 +36,7 @@ final class lf {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          gk var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= lg.field_n.field_b) {
             if (-1 == lg.field_n.field_a) {
               return 3;
@@ -61,23 +61,23 @@ final class lf {
               }
             }
             if (ii.field_T == 2) {
-              pg.field_a = new id((java.net.Socket) (kd.field_a.field_b), rk.field_g);
-              var2 = new gk(13);
+              ProxyAuthenticationRequiredException.field_a = new BufferedSocket((java.net.Socket) (kd.field_a.field_b), rk.field_g);
+              var2 = new PacketBuffer(13);
               qi.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
               var2.b(15, -49152);
               var2.a(param0 - 803539347, mk.field_f);
-              pg.field_a.a(var2.field_g, 0, (byte) 93, 13);
+              ProxyAuthenticationRequiredException.field_a.a(var2.payload, 0, (byte) 93, 13);
               ii.field_T = ii.field_T + 1;
               wi.field_f = 30000L + pf.a(0);
             }
             if (ii.field_T == param0) {
-              if (pg.field_a.c(72) <= 0) {
+              if (ProxyAuthenticationRequiredException.field_a.c(72) <= 0) {
                 if (wi.field_f < pf.a(param0 ^ 3)) {
                   stackIn_31_0 = dh.a(true, -2);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = pg.field_a.a(-16840);
+                var1_int = ProxyAuthenticationRequiredException.field_a.a(-16840);
                 if (0 != var1_int) {
                   stackIn_26_0 = dh.a(true, var1_int);
                   return stackIn_26_0;
@@ -88,9 +88,9 @@ final class lf {
             if (ii.field_T != 4) {
               return -1;
             }
-            lg.field_n.a(-105, jf.field_i, pg.field_a);
+            lg.field_n.a(-105, jf.field_i, ProxyAuthenticationRequiredException.field_a);
             kd.field_a = null;
-            pg.field_a = null;
+            ProxyAuthenticationRequiredException.field_a = null;
             ii.field_T = 0;
             stackIn_35_0 = 0;
             return stackIn_35_0;

@@ -134,17 +134,17 @@ final class pd {
         if (!qb.field_b) {
           return;
         }
-        if (ck.field_b < 0) {
+        if (DequeCursor.field_b < 0) {
           return;
         }
-        int var1 = jk.field_u * th.field_o[ck.field_b] / 30;
-        if (var1 > th.field_o[ck.field_b]) {
-          var1 = th.field_o[ck.field_b];
+        int var1 = jk.field_u * th.field_o[DequeCursor.field_b] / 30;
+        if (var1 > th.field_o[DequeCursor.field_b]) {
+          var1 = th.field_o[DequeCursor.field_b];
         }
         if (!param0) {
           return;
         }
-        vh.field_E[ck.field_b].b(sl.field_k[ck.field_b], -((var1 - th.field_o[ck.field_b]) / 2) + si.field_v[ck.field_b], m.field_e[ck.field_b], var1);
+        vh.field_E[DequeCursor.field_b].b(sl.field_k[DequeCursor.field_b], -((var1 - th.field_o[DequeCursor.field_b]) / 2) + si.field_v[DequeCursor.field_b], m.field_e[DequeCursor.field_b], var1);
     }
 
     private final void a(int param0, int param1, rk param2) {
@@ -188,7 +188,7 @@ final class pd {
         throw new Error();
     }
 
-    final static java.awt.Frame a(int param0, int param1, md param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_37_0 = null;
         java.awt.Frame stackIn_39_0 = null;

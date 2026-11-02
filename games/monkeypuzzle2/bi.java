@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bi extends fc {
+abstract class bi extends GameApplet {
     String field_u;
     private boolean field_t;
     static char[] field_s;
@@ -381,10 +381,10 @@ abstract class bi extends fc {
             !(var3 >= qa.b(125)) &&
             !(var3 >= rh.a(1))) {
             this.field_q = false;
-            gk.a(-1);
+            PacketBuffer.a(-1);
             cf.a((byte) 108);
-            pc.a((byte) -46, 2, dc.field_b);
-            dd.a(0);
+            pc.a((byte) -46, 2, IterableNodeHashTable.field_b);
+            ClientException.a(0);
             qj.field_J = true;
             ha.field_ab = 15000L + pf.a(0);
           }
@@ -442,7 +442,7 @@ abstract class bi extends fc {
                     pc.a((byte) -46, 256, vi.field_a);
                   }
                 } else {
-                  pc.a((byte) -46, 256, ia.field_c);
+                  pc.a((byte) -46, 256, ProxySocketConnector.field_c);
                 }
               }
               qj.field_J = true;
@@ -473,7 +473,7 @@ abstract class bi extends fc {
             ec.field_a = ol.a(-107, pl.field_g);
           }
           fj.field_B = b.a(false, 1, true, ph.field_c, (byte) 125);
-          hf.field_a = b.a(false, 1, true, nd.field_e, (byte) -118);
+          hf.field_a = b.a(false, 1, true, SecondaryNodeDequeIterator.field_e, (byte) -118);
           ii.field_m = b.a(false, 1, true, uk.field_q, (byte) -51);
           mc.field_a = 2;
           wj.field_j = fj.field_B;
@@ -498,7 +498,7 @@ abstract class bi extends fc {
         }
         if (mc.field_a == 3 &&
           di.a(fj.field_B, hf.field_a, ii.field_m, (byte) 104) &&
-          al.a(ii.field_m, (byte) 39)) {
+          SocketConnector.a(ii.field_m, (byte) 39)) {
           pb.a(false);
           dj.b(param0 ^ -25469);
           cf.field_c = false;
@@ -518,7 +518,7 @@ abstract class bi extends fc {
             dk.field_e = vd.a(false);
             fa.field_p = ne.a(param0 ^ -100);
           }
-          fc.a(dk.field_e, (byte) 111, ii.field_m, fa.field_p);
+          GameApplet.a(dk.field_e, (byte) 111, ii.field_m, fa.field_p);
           ii.field_m = null;
           fj.field_B = null;
           hf.field_a = null;
@@ -536,7 +536,7 @@ abstract class bi extends fc {
         if (mc.field_a == 11) {
           if (ch.field_j != null && (!ch.field_j.a(-124) ||
             !ch.field_j.b(0))) {
-            ad.a(ec.a(ch.field_j, ug.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
+            ad.a(ec.a(ch.field_j, IntrusiveNode.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -588,7 +588,7 @@ abstract class bi extends fc {
         eg.field_k[5] = true;
     }
 
-    final static boolean a(byte param0, gk param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -601,7 +601,7 @@ abstract class bi extends fc {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 18 / ((46 - param0) / 57);
-          var3 = param1.a((byte) 114);
+          var3 = param1.readUnsignedByte((byte) 114);
           stackIn_3_0 = (var3 == 1) ? 1 : 0;
           var4 = stackIn_3_0;
           stackIn_4_0 = var4;
@@ -637,7 +637,7 @@ abstract class bi extends fc {
         af.a(20, ie.field_e);
         pl.field_g = param3;
         r.field_e = param1;
-        nd.field_e = param7;
+        SecondaryNodeDequeIterator.field_e = param7;
         uk.field_q = param6;
         ph.field_c = param2;
         this.g(param4 ^ 25184);
@@ -693,7 +693,7 @@ abstract class bi extends fc {
                                 return;
                               }
                               kk.a("MGS1: " + bh.a((byte) -49), (byte) 120, (Throwable) null);
-                              gk.a(-1);
+                              PacketBuffer.a(-1);
                               return;
                             }
                             stackIn_32_0 = (var2 == 12);
@@ -714,12 +714,12 @@ abstract class bi extends fc {
               }
             }
           } else {
-            t.i(-118);
+            ButtonWidget.i(-118);
           }
           return;
         }
         kk.a("MGS2: " + bh.a((byte) -38), (byte) 66, (Throwable) null);
-        gk.a(param0 + 28709);
+        PacketBuffer.a(param0 + 28709);
     }
 
     private final int j(int param0) {
@@ -747,7 +747,7 @@ abstract class bi extends fc {
           }
           return var2;
         }
-        if (!nd.field_a) {
+        if (!SecondaryNodeDequeIterator.field_a) {
           this.a((byte) 77, "reconnect");
         }
         cf.a((byte) 3);
@@ -761,7 +761,7 @@ abstract class bi extends fc {
         if (param0 <= 10) {
           return;
         }
-        int var2 = MonkeyPuzzle2.field_D.a((byte) 114);
+        int var2 = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = rc.field_f - 1;
         byte[] var5 = new byte[var4];
@@ -782,7 +782,7 @@ abstract class bi extends fc {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          gk var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -794,7 +794,7 @@ abstract class bi extends fc {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = hb.a(-7468, qj.l(111), wc.a((byte) 112));
+            var5_int = hb.a(-7468, qj.l(111), NodeHashTableIterator.a((byte) 112));
             if (var5_int != -1) {
               p.a(sl.field_n, (byte) 121, var5_int, cm.field_E);
               sl.field_n = null;
@@ -826,7 +826,7 @@ abstract class bi extends fc {
                   pc.a((byte) -46, var5_intLifetime2, sl.field_n);
                   sl.field_n = null;
                 } else {
-                  cc.field_b = ia.field_f;
+                  cc.field_b = ProxySocketConnector.field_f;
                   db.a(false);
                   ha.field_db = false;
                   k.field_g = 10;
@@ -869,7 +869,7 @@ abstract class bi extends fc {
             l.a(ii.a(false), -120);
           }
           if (12 == var4) {
-            k.a(ii.a(false), (byte) 91, pj.b(true));
+            k.a(ii.a(false), (byte) 91, IntrusiveDeque.b(true));
           }
           if (13 == var4) {
             try {
@@ -879,7 +879,7 @@ abstract class bi extends fc {
               if (ec.field_e.c(90)) {
                 var12 = ec.field_e.a(18);
                 if (var12 != null) {
-                  var7 = sc.a(var12.field_g, var12.field_h, 78, 0);
+                  var7 = sc.a(var12.payload, var12.position, 78, 0);
                   ki.a(-125, var7);
                 } else {
                   var9 = (String) null;

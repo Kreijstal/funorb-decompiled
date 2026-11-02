@@ -5,7 +5,7 @@ import java.io.*;
 
 final class df extends wj {
     static String field_o;
-    static le[] field_q;
+    static Sprite[] field_q;
     private rj field_n;
     static ad field_p;
     private rj field_r;
@@ -113,7 +113,7 @@ final class df extends wj {
           }
           var5 = var4;
           if (tl.a(0, var5)) {
-            stackIn_8_0 = dd.field_a;
+            stackIn_8_0 = ClientException.field_a;
             return stackIn_8_0;
           }
           if (bg.a(param0 ^ 4827, var5)) {
@@ -133,17 +133,17 @@ final class df extends wj {
             return stackIn_33_0;
           }
           if (qj.a(var5, false, var6)) {
-            stackIn_23_0 = fc.field_b;
+            stackIn_23_0 = GameApplet.field_b;
             return stackIn_23_0;
           }
           if (ue.a(var5, var6, (byte) 66)) {
-            stackIn_27_0 = ck.field_d;
+            stackIn_27_0 = DequeCursor.field_d;
             return stackIn_27_0;
           }
           if (!di.a(95, var6, var5)) {
-            return dd.field_a;
+            return ClientException.field_a;
           }
-          stackIn_31_0 = fc.field_b;
+          stackIn_31_0 = GameApplet.field_b;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ final class df extends wj {
         }
     }
 
-    final static void a(gk param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -294,7 +294,7 @@ final class df extends wj {
           var4_int = param1.c(param0, (byte) -105);
           var5 = param1.a(param3, var4_int, param2 ^ -28509);
           if (param2 != 118) {
-            field_q = (le[]) null;
+            field_q = (Sprite[]) null;
           }
           stackIn_3_0 = rd.a(var5, param1, var4_int, 1896);
           return stackIn_3_0;
@@ -328,7 +328,7 @@ final class df extends wj {
         if (param0 > -17) {
           return;
         }
-        ua.field_v = new pj();
+        WidgetContainer.field_v = new IntrusiveDeque();
     }
 
     final na a(String param0, int param1) {

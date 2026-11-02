@@ -4,16 +4,16 @@
 final class vd {
     static ib field_e;
     private long field_f;
-    private bf[] field_c;
+    private DualLinkNode[] field_c;
     static int[] field_a;
-    private bf field_d;
+    private DualLinkNode field_d;
     private int field_b;
 
-    final void a(bf param0, long param1, int param2) {
+    final void a(DualLinkNode param0, long param1, int param2) {
         if (param0.field_e != null) {
           param0.a(7847);
         }
-        bf var5 = this.field_c[(int)(param1 & (long)(-1 + this.field_b))];
+        DualLinkNode var5 = this.field_c[(int)(param1 & (long)(-1 + this.field_b))];
         param0.field_g = var5;
         if (param2 >= -55) {
           return;
@@ -28,13 +28,13 @@ final class vd {
         }
     }
 
-    final bf b(int param0) {
-        bf var3 = null;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var3 = null;
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (this.field_d == null) {
           return null;
         }
-        bf var2 = this.field_c[(int)(this.field_f & (long)(this.field_b - 1))];
+        DualLinkNode var2 = this.field_c[(int)(this.field_f & (long)(this.field_b - 1))];
         while (var2 != this.field_d) {
           if (~this.field_f == ~this.field_d.field_f) {
             var3 = this.field_d;
@@ -78,12 +78,12 @@ final class vd {
         }
     }
 
-    final bf a(long param0, boolean param1) {
-        bf var4;
-        bf var5;
+    final DualLinkNode a(long param0, boolean param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        bf var4Lifetime1;
-        bf var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (!param1) {
           this.field_f = param0;
@@ -104,7 +104,7 @@ final class vd {
           this.field_d = this.field_d.field_g;
           return var5;
         }
-        this.field_d = (bf) null;
+        this.field_d = (DualLinkNode) null;
         this.field_f = param0;
         var4Lifetime1 = this.field_c[(int)((long)(-1 + this.field_b) & param0)];
         this.field_d = var4Lifetime1.field_g;
@@ -124,7 +124,7 @@ final class vd {
         return var5Lifetime1;
     }
 
-    final static mj a(boolean param0) {
+    final static PcmStreamMixer a(boolean param0) {
         if (param0) {
           field_e = (ib) null;
           return k.field_f;
@@ -191,12 +191,12 @@ final class vd {
 
     vd(int param0) {
         int var2 = 0;
-        bf dupTemp$0 = null;
-        bf var3 = null;
-        this.field_c = new bf[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_c = new DualLinkNode[param0];
         this.field_b = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new bf();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_e = var3;

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ob extends fb {
-    gk field_o;
+    PacketBuffer field_o;
     int field_p;
-    static pj field_s;
+    static IntrusiveDeque field_s;
     byte field_q;
     static int field_r;
 
     public static void f(int param0) {
         if (param0 != 8364) {
-          field_s = (pj) null;
+          field_s = (IntrusiveDeque) null;
         }
         field_s = null;
     }
@@ -20,7 +20,7 @@ final class ob extends fb {
           if (param0 != -19) {
             ob.f(119);
           }
-          tj.field_d = li.a(ke.field_h[7], 100, 96);
+          tj.field_d = PcmSampleStream.a(ke.field_h[7], 100, 96);
           na.a((byte) 85, tj.field_d);
           return;
         }
@@ -28,7 +28,7 @@ final class ob extends fb {
           if (param0 != -19) {
             ob.f(119);
           }
-          tj.field_d = li.a(ke.field_h[7], 100, 96);
+          tj.field_d = PcmSampleStream.a(ke.field_h[7], 100, 96);
           na.a((byte) 85, tj.field_d);
           return;
         }
@@ -41,7 +41,7 @@ final class ob extends fb {
         if (null == this.field_o) {
           return 0;
         }
-        return this.field_o.field_h * 100 / (-this.field_q + this.field_o.field_g.length);
+        return this.field_o.position * 100 / (-this.field_q + this.field_o.payload.length);
     }
 
     ob() {
@@ -191,15 +191,15 @@ final class ob extends fb {
         if (this.field_j) {
           throw new RuntimeException();
         }
-        if (this.field_o.field_h >= -this.field_q + this.field_o.field_g.length) {
+        if (this.field_o.position >= -this.field_q + this.field_o.payload.length) {
           int var2 = 38 % ((25 - param0) / 41);
-          return this.field_o.field_g;
+          return this.field_o.payload;
         }
         throw new RuntimeException();
     }
 
     static {
-        field_s = new pj();
+        field_s = new IntrusiveDeque();
         field_r = 0;
     }
 }

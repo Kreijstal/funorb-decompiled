@@ -59,9 +59,9 @@ final class ac {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(we.field_n);
-          param1.removeMouseMotionListener(we.field_n);
-          param1.removeFocusListener(we.field_n);
+          param1.removeMouseListener(UiWidget.field_n);
+          param1.removeMouseMotionListener(UiWidget.field_n);
+          param1.removeFocusListener(UiWidget.field_n);
           lf.field_a = 0;
           int var2_int = -63 / ((-17 - param0) / 37);
         } catch (RuntimeException runtimeException) {

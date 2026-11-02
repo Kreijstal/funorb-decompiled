@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd {
-    static pj field_b;
-    static pj field_c;
+    static IntrusiveDeque field_b;
+    static IntrusiveDeque field_c;
     static String field_a;
 
     public static void a(byte param0) {
@@ -49,8 +49,8 @@ final class bd {
     }
 
     static {
-        field_b = new pj();
-        field_c = new pj();
+        field_b = new IntrusiveDeque();
+        field_c = new IntrusiveDeque();
         field_a = "Unpacking sound effects";
     }
 

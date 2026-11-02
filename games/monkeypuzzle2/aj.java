@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj {
-    static le field_e;
-    static pj field_b;
+    static Sprite field_e;
+    static IntrusiveDeque field_b;
     static String field_d;
     private String field_a;
     private boolean field_g;
@@ -75,6 +75,6 @@ final class aj {
         field_d = "Go Back";
         field_c = false;
         field_f = 4;
-        field_b = new pj();
+        field_b = new IntrusiveDeque();
     }
 }

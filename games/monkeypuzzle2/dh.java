@@ -71,7 +71,7 @@ final class dh {
         int var2Lifetime1;
         kd.field_a = null;
         ii.field_T = 0;
-        pg.field_a = null;
+        ProxyAuthenticationRequiredException.field_a = null;
         if (!param0) {
           field_a = (String) null;
           var2 = oh.field_c;

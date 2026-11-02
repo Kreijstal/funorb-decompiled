@@ -3,7 +3,7 @@
  */
 final class tl {
     static String field_a;
-    static le field_b;
+    static Sprite field_b;
 
     public static void a(byte param0) {
         if (param0 != -17) {
@@ -27,7 +27,7 @@ final class tl {
             fd.field_o[var2_int] = param1;
           }
           if (!param1) {
-            ck.field_b = -1;
+            DequeCursor.field_b = -1;
             jk.field_u = 0;
           }
           if (param0 == -32663) {

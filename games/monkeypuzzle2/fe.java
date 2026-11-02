@@ -9,7 +9,7 @@ final class fe {
     static int field_g;
     static int field_h;
     static String field_e;
-    static le[] field_f;
+    static Sprite[] field_f;
     private static String field_z;
 
     public static void a(int param0) {

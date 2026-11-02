@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl extends ug {
+final class vl extends IntrusiveNode {
     static ul field_f;
     static int field_g;
     int field_e;
@@ -23,7 +23,7 @@ final class vl extends ug {
         field_h = null;
     }
 
-    final static le[] a(int param0, int param1, int param2, boolean param3) {
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           return he.a((byte) 67, 1, param1, param0, param2);
         }

@@ -3,8 +3,8 @@
  */
 final class dj {
     static int[] field_c;
-    static le[] field_a;
-    static le field_b;
+    static Sprite[] field_a;
+    static Sprite field_b;
 
     final static void b(int param0) {
         if (param0 != -25376) {
@@ -19,7 +19,7 @@ final class dj {
         }
         if (null != ec.field_a) {
           if (!ec.field_a.a(71)) {
-            return ug.field_b;
+            return IntrusiveNode.field_b;
           }
           return tk.field_a;
         }
@@ -50,7 +50,7 @@ final class dj {
         field_b = null;
         field_a = null;
         if (param0 != 16384) {
-          field_b = (le) null;
+          field_b = (Sprite) null;
         }
     }
 

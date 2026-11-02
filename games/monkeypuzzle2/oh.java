@@ -17,11 +17,11 @@ final class oh {
     final static void a(int param0, int param1, int param2) {
         if (param2 <= 50) {
           field_a = (String) null;
-          gk.field_e = param1;
+          PacketBuffer.field_e = param1;
           oi.field_f = param0;
           return;
         }
-        gk.field_e = param1;
+        PacketBuffer.field_e = param1;
         oi.field_f = param0;
     }
 

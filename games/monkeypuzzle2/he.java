@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends ug {
+final class he extends IntrusiveNode {
     static String[] field_f;
     int field_h;
     static te field_e;
@@ -18,11 +18,11 @@ final class he extends ug {
             e.field_a[var1_int] = var2;
             aj.field_b.a(param0 ^ -8212, new il((ki) null, (ki) null, 32.0f));
           }
-          nd.field_b.e();
-          ge.f(nd.field_b.field_m >> 1, nd.field_b.field_n >> 1, (nd.field_b.field_m >> 1) - 1, 16711680);
+          SecondaryNodeDequeIterator.field_b.e();
+          ge.f(SecondaryNodeDequeIterator.field_b.field_m >> 1, SecondaryNodeDequeIterator.field_b.field_n >> 1, (SecondaryNodeDequeIterator.field_b.field_m >> 1) - 1, 16711680);
           ac.field_a.a((byte) 115);
           ek.field_b = 0;
-          dc.field_e = 0;
+          IterableNodeHashTable.field_e = 0;
           ok.field_d = false;
           sc.field_c = 0;
         } catch (RuntimeException runtimeException) {
@@ -52,15 +52,15 @@ final class he extends ug {
         field_g = null;
     }
 
-    final static le[] a(byte param0, int param1, int param2, int param3, int param4) {
-        le dupTemp$0 = null;
-        le dupTemp$1 = null;
-        le[] var6 = null;
-        le[] var5 = null;
-        le[] var6Lifetime1;
-        le[] var5Lifetime1;
+    final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4) {
+        Sprite dupTemp$0 = null;
+        Sprite dupTemp$1 = null;
+        Sprite[] var6 = null;
+        Sprite[] var5 = null;
+        Sprite[] var6Lifetime1;
+        Sprite[] var5Lifetime1;
         if (param0 == 67) {
-          var6 = new le[9];
+          var6 = new Sprite[9];
           var5 = var6;
           dupTemp$0 = sj.a(param1, 74, param3);
           var6[6] = dupTemp$0;
@@ -78,15 +78,15 @@ final class he extends ug {
           return var5;
         }
         he.f(3);
-        var6Lifetime1 = new le[9];
+        var6Lifetime1 = new Sprite[9];
         var5Lifetime1 = var6Lifetime1;
-        le dupTemp$2 = sj.a(param1, 74, param3);
+        Sprite dupTemp$2 = sj.a(param1, 74, param3);
         var6Lifetime1[6] = dupTemp$2;
         var5Lifetime1[3] = dupTemp$2;
         var5Lifetime1[2] = dupTemp$2;
         var5Lifetime1[1] = dupTemp$2;
         var5Lifetime1[0] = dupTemp$2;
-        le dupTemp$3 = sj.a(param1, 74, param2);
+        Sprite dupTemp$3 = sj.a(param1, 74, param2);
         var6Lifetime1[8] = dupTemp$3;
         var5Lifetime1[7] = dupTemp$3;
         var5Lifetime1[5] = dupTemp$3;

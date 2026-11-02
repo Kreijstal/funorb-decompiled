@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tj {
-    static le field_a;
+    static Sprite field_a;
     static int[] field_c;
     static String field_e;
-    static li field_d;
+    static PcmSampleStream field_d;
     static int[] field_b;
 
     final static void b(int param0) {
@@ -28,10 +28,10 @@ final class tj {
         de.field_n.a(-8212, var1);
     }
 
-    final static le[] a(int param0, ad param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, ad param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        le[] stackIn_5_0 = null;
-        le[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -44,7 +44,7 @@ final class tj {
             stackIn_7_0 = cf.c((byte) 16);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (le[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

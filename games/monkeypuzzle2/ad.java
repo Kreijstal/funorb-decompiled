@@ -195,7 +195,7 @@ final class ad {
 
     final static void a(String param0, int param1, float param2) {
         try {
-          pj.field_h = param2;
+          IntrusiveDeque.field_h = param2;
           be.field_d = param0;
           if (param1 != -24119) {
             field_f = (String) null;
@@ -362,12 +362,12 @@ final class ad {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        gk var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        gk var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        gk var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -417,8 +417,8 @@ final class ad {
             var35 = uj.a(59, this.field_h[param3], true);
             var25 = var35;
             var9 = var25;
-            var26 = new gk(var35);
-            var26.a(5, var26.field_g.length, -84, param1);
+            var26 = new PacketBuffer(var35);
+            var26.a(5, var26.payload.length, -84, param1);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -449,14 +449,14 @@ final class ad {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * var5_int * var12;
-              var32 = new gk(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_h = var11;
+              var32.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.e(param0 ^ -118);
+                  var17 = var17 + var32.readInt(param0 ^ -118);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -473,12 +473,12 @@ final class ad {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_h = var11;
+              var32.position = var11;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var32.e(param0 - 102);
+                  var19 = var19 + var32.readInt(param0 - 102);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -497,15 +497,15 @@ final class ad {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var5_int * var12 * 4;
-              var29 = new gk(var43);
-              var29.field_h = var11;
+              var29 = new PacketBuffer(var43);
+              var29.position = var11;
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
               for (var15 = 0; var12 > var15; var15++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var29.e(-30);
+                  var16 = var16 + var29.readInt(-30);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -517,12 +517,12 @@ final class ad {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_h = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var29.e(-95);
+                  var18 = var18 + var29.readInt(-95);
                   gl.a(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
@@ -838,20 +838,20 @@ final class ad {
             }
             if (dk.field_h == ii.field_r) {
               if (!param3) {
-                pj.field_b = h.a(param1 ^ -739, false, param4, param5);
+                IntrusiveDeque.field_b = h.a(param1 ^ -739, false, param4, param5);
               } else {
                 var11 = (String) null;
-                pj.field_b = sk.a(param4, ia.field_f, false, true, (String) null);
+                IntrusiveDeque.field_b = sk.a(param4, ProxySocketConnector.field_f, false, true, (String) null);
               }
-              gf.field_c.field_h = 0;
+              gf.field_c.position = 0;
               gf.field_c.b(14, -49152);
-              gf.field_c.b(pj.field_b.a(false).field_b, -49152);
-              al.a((byte) -71, -1);
+              gf.field_c.b(IntrusiveDeque.field_b.a(false).field_b, -49152);
+              SocketConnector.a((byte) -71, -1);
               dk.field_h = kh.field_a;
             }
             if (dk.field_h == kh.field_a &&
               hj.a(1, true)) {
-              var6_int = MonkeyPuzzle2.field_D.a((byte) 114);
+              var6_int = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               if (var6_int != 0) {
                 dk.field_h = dk.field_d;
                 rc.field_f = -1;
@@ -859,22 +859,22 @@ final class ad {
               } else {
                 dk.field_h = aa.field_b;
               }
-              MonkeyPuzzle2.field_D.field_h = 0;
+              MonkeyPuzzle2.field_D.position = 0;
             }
             if (aa.field_b == dk.field_h &&
               hj.a(8, true)) {
-              ld.field_a = MonkeyPuzzle2.field_D.i(127);
-              MonkeyPuzzle2.field_D.field_h = 0;
-              ki.a(param0, pj.field_b, true, param3, param2);
+              ld.field_a = MonkeyPuzzle2.field_D.readLong(127);
+              MonkeyPuzzle2.field_D.position = 0;
+              ki.a(param0, IntrusiveDeque.field_b, true, param3, param2);
               dk.field_h = qk.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
             if (qk.field_c == dk.field_h &&
               hj.a(1, true)) {
-              var6_intLifetime1 = MonkeyPuzzle2.field_D.a((byte) 114);
+              var6_intLifetime1 = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               df.field_o = null;
               wk.field_a = var6_intLifetime1;
-              MonkeyPuzzle2.field_D.field_h = 0;
+              MonkeyPuzzle2.field_D.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -883,8 +883,8 @@ final class ad {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  gk.a(-1);
-                  ck.field_e = false;
+                  PacketBuffer.a(-1);
+                  DequeCursor.field_e = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
@@ -896,12 +896,12 @@ final class ad {
             }
             if (dk.field_h == ea.field_a &&
               gb.a(true)) {
-              ia.field_f = MonkeyPuzzle2.field_D.i(103);
-              ec.field_d = MonkeyPuzzle2.field_D.a((byte) 114);
-              MonkeyPuzzle2.field_D.a((byte) 114);
-              af.field_c = MonkeyPuzzle2.field_D.j(17277);
+              ProxySocketConnector.field_f = MonkeyPuzzle2.field_D.readLong(103);
+              ec.field_d = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+              MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+              af.field_c = MonkeyPuzzle2.field_D.readUnsignedShort(17277);
               var6 = MonkeyPuzzle2.field_D.g(-1185292952);
-              var7 = MonkeyPuzzle2.field_D.a((byte) 114);
+              var7 = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               if ((1 & var7) != 0) {
                 gd.b(-594181854);
               }
@@ -914,28 +914,28 @@ final class ad {
                 }
               }
               if (me.field_e) {
-                MonkeyPuzzle2.field_D.a((byte) 114);
-                MonkeyPuzzle2.field_D.a((byte) 114);
-                MonkeyPuzzle2.field_D.e(param1 ^ 756);
-                il.field_h = MonkeyPuzzle2.field_D.j(param1 + 16627);
+                MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+                MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
+                MonkeyPuzzle2.field_D.readInt(param1 ^ 756);
+                il.field_h = MonkeyPuzzle2.field_D.readUnsignedShort(param1 + 16627);
                 il.field_g = new byte[il.field_h];
                 for (var8 = 0; il.field_h > var8; var8++) {
-                  il.field_g[var8] = MonkeyPuzzle2.field_D.k(-91);
+                  il.field_g[var8] = MonkeyPuzzle2.field_D.readByte(-91);
                 }
               }
               cl.field_e = MonkeyPuzzle2.field_D.f(-1);
               var12 = (CharSequence) ((Object) cl.field_e);
               uj.field_f = pl.a((byte) 109, var12);
-              ue.field_G = MonkeyPuzzle2.field_D.a((byte) 114);
+              ue.field_G = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               dk.field_h = wh.field_b;
-              if (pj.field_b.a(false) != te.field_a) {
-                if (pj.field_b.a(false) == sj.field_g) {
+              if (IntrusiveDeque.field_b.a(false) != te.field_a) {
+                if (IntrusiveDeque.field_b.a(false) == sj.field_g) {
                   dh.field_d.a(false, ii.a(false));
                 }
               } else {
                 oe.field_l.a(false, ii.a(false));
               }
-              ck.field_e = false;
+              DequeCursor.field_e = false;
               if (var6 != null) {
                 pe.a(var6, (byte) -108, ii.a(false));
               }
@@ -949,7 +949,7 @@ final class ad {
                 }
               } else {
                 try {
-                  mf.a(126, "zap", ii.a(false), new Object[]{mk.a(ia.field_f, 480)});
+                  mf.a(126, "zap", ii.a(false), new Object[]{mk.a(ProxySocketConnector.field_f, 480)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -968,10 +968,10 @@ final class ad {
             }
             if (dk.field_h == dk.field_d &&
               gb.a(true)) {
-              gk.a(param1 - 651);
+              PacketBuffer.a(param1 - 651);
               if (wk.field_a == 7 &&
-                !ck.field_e) {
-                ck.field_e = true;
+                !DequeCursor.field_e) {
+                DequeCursor.field_e = true;
                 stackIn_82_0 = -1;
                 return stackIn_82_0;
               }
@@ -979,7 +979,7 @@ final class ad {
                 wk.field_a = 3;
               }
               sl.field_n = MonkeyPuzzle2.field_D.f(-1);
-              ck.field_e = false;
+              DequeCursor.field_e = false;
               stackIn_86_0 = wk.field_a;
               return stackIn_86_0;
             }
@@ -988,20 +988,20 @@ final class ad {
               ad.a(-115, 60, false, false, (String) null, (String) null);
             }
             if (ol.field_g == null) {
-              if (ck.field_e) {
+              if (DequeCursor.field_e) {
                 if (30000L >= wf.a(84)) {
                   sl.field_n = hh.field_p;
                 } else {
                   sl.field_n = kj.field_E;
                 }
-                ck.field_e = false;
+                DequeCursor.field_e = false;
                 stackIn_96_0 = 3;
                 return stackIn_96_0;
               }
               var6_intLifetime2 = cg.field_g;
-              cg.field_g = id.field_m;
-              id.field_m = var6_intLifetime2;
-              ck.field_e = true;
+              cg.field_g = BufferedSocket.field_m;
+              BufferedSocket.field_m = var6_intLifetime2;
+              DequeCursor.field_e = true;
             }
             stackIn_98_0 = -1;
             return stackIn_98_0;

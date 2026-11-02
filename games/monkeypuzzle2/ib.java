@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ib {
-    static le field_d;
+    static Sprite field_d;
     static int field_a;
-    static le field_b;
+    static Sprite field_b;
     static int field_c;
 
     public final String toString() {
@@ -35,7 +35,7 @@ final class ib {
           return;
         }
         try {
-          jk.field_C[var2] = li.a(ke.field_h[2], param0, 96);
+          jk.field_C[var2] = PcmSampleStream.a(ke.field_h[2], param0, 96);
           na.a((byte) 38, jk.field_C[var2]);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ')');

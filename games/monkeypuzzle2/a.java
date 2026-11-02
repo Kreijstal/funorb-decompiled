@@ -19,10 +19,10 @@ class a implements ml, ui {
     int field_o;
     int field_a;
 
-    String c(we param0, int param1) {
+    String c(UiWidget param0, int param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
-        we var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -30,8 +30,8 @@ class a implements ml, ui {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -775) {
-            var4 = (we) null;
-            discarded$1 = this.a((we) null, -87);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((UiWidget) null, -87);
           }
           stackIn_3_0 = param0.field_s;
           return stackIn_3_0;
@@ -49,7 +49,7 @@ class a implements ml, ui {
         }
     }
 
-    public final aa a(int param0, we param1) {
+    public final aa a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         aa stackIn_2_0 = null;
         aa stackIn_10_0 = null;
@@ -96,7 +96,7 @@ class a implements ml, ui {
         cj.a((byte) 108, ke.field_h[20 + var1]);
     }
 
-    private final void a(int param0, int param1, we param2, int param3) {
+    private final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.a(this.field_m, param1, 0, param3, param2, param0 ^ -25601, this.field_f, 0);
           if (param0 != 25600) {
@@ -115,7 +115,7 @@ class a implements ml, ui {
         return this.field_p.field_D + this.field_p.field_C;
     }
 
-    public final int b(we param0, boolean param1) {
+    public final int b(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -142,7 +142,7 @@ class a implements ml, ui {
         }
     }
 
-    public final int a(we param0, boolean param1) {
+    public final int a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -170,7 +170,7 @@ class a implements ml, ui {
         }
     }
 
-    public final void a(int param0, we param1, int param2, int param3, int param4, int param5) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -271,9 +271,9 @@ class a implements ml, ui {
         }
     }
 
-    public final int a(we param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
-        we var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -281,8 +281,8 @@ class a implements ml, ui {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -52) {
-            var5 = (we) null;
-            this.a(51, (we) null);
+            var5 = (UiWidget) null;
+            this.a(51, (UiWidget) null);
           }
           stackIn_3_0 = this.a(param2, param0, 0, false);
           return stackIn_3_0;
@@ -300,7 +300,7 @@ class a implements ml, ui {
         }
     }
 
-    private final int a(we param0, int param1) {
+    private final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -327,7 +327,7 @@ class a implements ml, ui {
         }
     }
 
-    public void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         if (null == this.field_p) {
           return;
         }
@@ -345,7 +345,7 @@ class a implements ml, ui {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void b(we param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -412,7 +412,7 @@ class a implements ml, ui {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, we param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
         int discarded$0 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -424,14 +424,14 @@ class a implements ml, ui {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        we var14 = null;
+        UiWidget var14 = null;
         int var12Lifetime1;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           qi.a(param3 + (param4.field_r + param4.field_l), true, param4.field_p + param1 + param4.field_e, param3 + param4.field_r, param4.field_e + param1);
           if (param5 != -1) {
-            var14 = (we) null;
-            discarded$0 = this.a((byte) 57, -109, (we) null, 41);
+            var14 = (UiWidget) null;
+            discarded$0 = this.a((byte) 57, -109, (UiWidget) null, 41);
           }
           boolean decompiledFrameRemainder0 = true;
           var9_int = this.b(param4, true);
@@ -484,7 +484,7 @@ class a implements ml, ui {
         }
     }
 
-    public final int a(int param0, byte param1, we param2) {
+    public final int a(int param0, byte param1, UiWidget param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -511,9 +511,9 @@ class a implements ml, ui {
         }
     }
 
-    private final int a(int param0, we param1, int param2, boolean param3) {
+    private final int a(int param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
-        we var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -521,8 +521,8 @@ class a implements ml, ui {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            var6 = (we) null;
-            this.c((we) null, 32);
+            var6 = (UiWidget) null;
+            this.c((UiWidget) null, 32);
           }
           stackIn_3_0 = param0 + (param1.field_e + this.field_n) + param1.field_i + param2;
           return stackIn_3_0;
@@ -540,7 +540,7 @@ class a implements ml, ui {
         }
     }
 
-    private final int a(byte param0, int param1, we param2, int param3) {
+    private final int a(byte param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -567,7 +567,7 @@ class a implements ml, ui {
         }
     }
 
-    public final void a(we param0, int param1, int param2, int param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         be var8 = null;
@@ -637,7 +637,7 @@ class a implements ml, ui {
         field_j = null;
     }
 
-    public final int a(we param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -667,7 +667,7 @@ class a implements ml, ui {
         }
     }
 
-    public final int a(int param0, int param1, we param2, int param3, boolean param4, int param5) {
+    public final int a(int param0, int param1, UiWidget param2, int param3, boolean param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

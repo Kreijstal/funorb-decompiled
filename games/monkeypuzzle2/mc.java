@@ -14,9 +14,9 @@ final class mc implements ml {
     private ta field_f;
     private int field_g;
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         int var10 = 0;
-        we stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -26,19 +26,19 @@ final class mc implements ml {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        we var12 = null;
+        UiWidget var12 = null;
         qj var13 = null;
         var11 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (!(param1 instanceof qj)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (we) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           }
           var13 = (qj) (stackIn_4_0);
           if (param4 < 19) {
-            var12 = (we) null;
-            this.a(false, (we) null, 106, 30, 56);
+            var12 = (UiWidget) null;
+            this.a(false, (UiWidget) null, 106, 30, 56);
           }
           ge.d(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
           if (var13 == null) {
@@ -76,12 +76,12 @@ final class mc implements ml {
           field_i = null;
           return;
         }
-        le var2 = (le) null;
-        mc.a(0, (le) null);
+        Sprite var2 = (Sprite) null;
+        mc.a(0, (Sprite) null);
         field_i = null;
     }
 
-    final static void a(int param0, le param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           if (param0 != -8497) {
             mc.a(100);
