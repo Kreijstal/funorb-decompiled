@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class en extends vi {
+final class CipherPacketBuffer extends PacketBuffer {
     static bd field_q;
-    private gi field_r;
+    private IsaacGenerator field_r;
     static String field_v;
     private int field_x;
     static bd field_y;
@@ -20,15 +20,15 @@ final class en extends vi {
         if (param0 < -7) {
           return var2;
         }
-        en.r(117);
+        CipherPacketBuffer.r(117);
         return var2;
     }
 
-    en(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    en(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -37,7 +37,7 @@ final class en extends vi {
           if (param1 != 8) {
             this.c(true);
           }
-          this.field_r = new gi(param0);
+          this.field_r = new IsaacGenerator(param0);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "en.FB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -141,7 +141,7 @@ final class en extends vi {
         try {
           var5_int = 0;
           if (param3 <= 66) {
-            this.field_r = (gi) null;
+            this.field_r = (IsaacGenerator) null;
           }
           while (param1 > var5_int) {
             fieldTemp$0 = this.field_i;

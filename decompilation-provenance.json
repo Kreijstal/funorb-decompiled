@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "hostilespawn_vengeance": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/hostilespawn_vengeance"
+      },
+      "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
+      "sources": {
+        "files": 335,
+        "sha256": "86a2bd34bc69d897a450d8c639580237e95104aa41b3eecd1e3c618c1bde9fa1"
+      },
+      "dictionary": {
+        "path": "decompilation/hostilespawn_vengeance-naming.json",
+        "sha256": "793657bfc0610a1f4a2a074cbd43b7964654801bedd548b2c7f479a94bd2a27d"
+      },
+      "readingGuide": {
+        "path": "games/hostilespawn_vengeance/README.md",
+        "sha256": "e237deff638d0cbe141e2d6437bb3bba1114de1eaf0a04fc7641d613afac4bc5"
+      },
+      "rulesSha256": "4119b527f639408490354a8c556939c18e701f178d61ea85f06fd76665108136",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11531,6 +11555,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 335,
+          "sha256": "86a2bd34bc69d897a450d8c639580237e95104aa41b3eecd1e3c618c1bde9fa1"
         }
       },
       "kickabout": {

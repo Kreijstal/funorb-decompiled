@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ac {
-    private gb field_h;
+    private ResourceArchive field_h;
     private dn field_d;
-    private gb field_b;
+    private ResourceArchive field_b;
     static vl field_i;
     static String field_f;
     static int field_a;
@@ -29,7 +29,7 @@ final class ac {
         }
         var3 = new hj();
         if (var4 != null) {
-          var3.a(new vi(var4), 64);
+          var3.a(new PacketBuffer(var4), 64);
         }
         if (param0 >= 32768) {
           var3.c((byte) 64);
@@ -38,7 +38,7 @@ final class ac {
         return var3;
     }
 
-    final static bd a(int param0, int param1, byte param2, gb param3) {
+    final static bd a(int param0, int param1, byte param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         bd stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -173,7 +173,7 @@ final class ac {
                                         qh.field_k = qh.field_k + 5;
                                       }
                                     } else {
-                                      gb.field_h = gb.field_h + 10;
+                                      ResourceArchive.field_h = ResourceArchive.field_h + 10;
                                     }
                                   } else {
                                     gf.field_j = gf.field_j + 100;

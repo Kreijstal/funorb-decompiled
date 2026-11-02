@@ -70,7 +70,7 @@ final class hh {
             hf.field_d[var4 - 2] = lh.field_c;
             jf.field_b[var4 - 2] = 0;
             ue.field_k[0] = 4;
-            hf.field_d[var4 - 1] = gi.field_n;
+            hf.field_d[var4 - 1] = IsaacGenerator.field_n;
             jf.field_b[var4 - 1] = 1;
             ue.field_k[1] = 5;
           } else if (be.field_e == 1) {
@@ -86,7 +86,7 @@ final class hh {
               hf.field_d[var5] = gf.field_c[var5];
             }
             hf.field_d[-2 + var4] = "";
-            hf.field_d[var4 - 1] = gi.field_n;
+            hf.field_d[var4 - 1] = IsaacGenerator.field_n;
             jf.field_b[-1 + var4] = 0;
             ue.field_k[0] = 5;
           } else if (2 != be.field_e) {
@@ -107,7 +107,7 @@ final class hh {
                 hf.field_d[var5] = gf.field_c[var5];
               }
               hf.field_d[-2 + var4] = "";
-              hf.field_d[var4 - 1] = gi.field_n;
+              hf.field_d[var4 - 1] = IsaacGenerator.field_n;
               jf.field_b[-1 + var4] = 0;
               ue.field_k[0] = 5;
             } else if (4 == be.field_e) {
@@ -123,7 +123,7 @@ final class hh {
                 hf.field_d[var5] = gf.field_c[var5];
               }
               hf.field_d[var4 - 2] = "";
-              hf.field_d[var4 - 1] = gi.field_n;
+              hf.field_d[var4 - 1] = IsaacGenerator.field_n;
               jf.field_b[-1 + var4] = 0;
               ue.field_k[0] = 5;
             } else {
@@ -145,7 +145,7 @@ final class hh {
               hf.field_d[var4 - 2] = field_c;
               jf.field_b[-2 + var4] = 0;
               ue.field_k[0] = 3;
-              hf.field_d[-1 + var4] = gi.field_n;
+              hf.field_d[-1 + var4] = IsaacGenerator.field_n;
               jf.field_b[var4 - 1] = 1;
               ue.field_k[1] = 5;
             }
@@ -266,20 +266,20 @@ final class hh {
           }
           pc.field_d = -(var3_intLifetime1 >> 1) + (wk.field_c + var3_intLifetime1);
           hg.field_f = -(var3_intLifetime1 >> 1) + wk.field_c;
-          wc.field_m = (ab.field_b + cl.field_l << 1) * mc.field_F.field_b;
+          ArchiveIndex.field_m = (ab.field_b + cl.field_l << 1) * mc.field_F.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < hf.field_d.length; var4Lifetime2++) {
-            stackIn_112_0 = wc.field_m;
+            stackIn_112_0 = ArchiveIndex.field_m;
             if (jf.field_b[var4Lifetime2] < 0) {
               stackIn_113_1 = kb.field_d;
             } else {
               stackIn_113_1 = eh.field_d;
             }
-            wc.field_m = stackIn_112_0 + stackIn_113_1;
+            ArchiveIndex.field_m = stackIn_112_0 + stackIn_113_1;
           }
           if (param0 != 5) {
             hh.a(36);
           }
-          s.field_g = -(wc.field_m >> 1) + qg.field_l;
+          s.field_g = -(ArchiveIndex.field_m >> 1) + qg.field_l;
           q.field_e = new int[hf.field_d.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = s.field_g;
@@ -327,8 +327,8 @@ final class hh {
           ik.field_a = param3;
           mm.field_s = param5;
           ig.field_N = (ej) ((Object) new ih());
-          vc.field_c = new dh(param2);
-          sj.field_a = new sg(ig.field_N, vc.field_c);
+          GameCanvas.field_c = new dh(param2);
+          sj.field_a = new sg(ig.field_N, GameCanvas.field_c);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -375,7 +375,7 @@ final class hh {
           }
           var7 = mm.field_m[0].field_j.b(-4);
           for (var8_int = 0; var8_int < 10; var8_int++) {
-            L10: {
+            regionExit1: {
               param1.field_l.b(var5, param1.field_c, 127);
               param1.a(8573);
               var9 = param1.field_j.b(-4);
@@ -423,7 +423,7 @@ final class hh {
                     if (!(!(0.0 > param1.field_c))) {
                       param1.field_c = param1.field_c + 256.0;
                     }
-                    break L10;
+                    break regionExit1;
                   }
                   if (var12 == 0 &&
                     var11_intLifetime1 != 2 &&

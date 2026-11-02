@@ -9,7 +9,7 @@ final class sg {
     private ej field_p;
     private java.math.BigInteger field_k;
     private rb[] field_h;
-    private vi field_b;
+    private PacketBuffer field_b;
     private java.math.BigInteger field_l;
     static String field_g;
     static int field_i;
@@ -23,7 +23,7 @@ final class sg {
         field_c = null;
         if (param0 >= -51) {
           String var2 = (String) null;
-          sg.a(true, (String) null, (gb) null, (String) null);
+          sg.a(true, (String) null, (ResourceArchive) null, (String) null);
         }
         field_m = null;
         field_g = null;
@@ -59,7 +59,7 @@ final class sg {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static pg[] a(boolean param0, String param1, gb param2, String param3) {
+    final static pg[] a(boolean param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -166,7 +166,7 @@ final class sg {
             if (0 > var22) {
               var22 = -var22;
             }
-            L6: {
+            regionExit1: {
               if ((30 < var21 ||
                 var22 > 25) &&
                 (var20 != 5 &&
@@ -179,44 +179,44 @@ final class sg {
                   var23 != 18) {
                   if (var23 == 23) {
                     pa.a(var19, var3, var29, false);
-                    break L6;
+                    break regionExit1;
                   }
                   if (32 != var23) {
                     switch (var23) {
                       case 9:
                         jm.a(var29, var3, (byte) -128, var19);
-                        break L6;
+                        break regionExit1;
                       case 1:
                         var19.a(8573);
                         var19.field_l.a(2, (byte) 94, var19.field_c);
                         var19.field_e = var19.field_e + 1;
                         if (var19.field_e <= 16) {
-                          break L6;
+                          break regionExit1;
                         }
                         var19.field_i = -1;
-                        break L6;
+                        break regionExit1;
                       case 2:
                         var19.field_e = var19.field_e + 1;
                         if (32 >= var19.field_e) {
-                          break L6;
+                          break regionExit1;
                         }
                         var19.field_i = -1;
-                        break L6;
+                        break regionExit1;
                       case 3:
                         var19.field_e = var19.field_e + 1;
                         if (var19.field_e <= 32) {
-                          break L6;
+                          break regionExit1;
                         }
                         var19.field_i = -1;
-                        break L6;
+                        break regionExit1;
                       case 21:
                         var19.a(8573);
                         var19.field_e = var19.field_e + 1;
                         if (var19.field_e <= 6) {
-                          break L6;
+                          break regionExit1;
                         }
                         var19.field_i = -1;
-                        break L6;
+                        break regionExit1;
                       case 6:
                       case 37:
                       case 8:
@@ -275,34 +275,34 @@ final class sg {
                                         switch (var23) {
                                           case 33:
                                             rj.a(var19, -2312);
-                                            break L6;
+                                            break regionExit1;
                                           case 12:
                                             var19.field_e = var19.field_e + 4;
                                             if (var19.field_e <= 128) {
-                                              break L6;
+                                              break regionExit1;
                                             }
                                             var19.field_i = -1;
-                                            break L6;
+                                            break regionExit1;
                                           case 13:
                                             ml.a((byte) -128, var14, var16, var19, var29, var25, var3);
-                                            break L6;
+                                            break regionExit1;
                                           case 14:
                                             he.a(var19, var25, (byte) 110, var16, var14);
-                                            break L6;
+                                            break regionExit1;
                                           case 15:
                                             in.a(var14, var19, (byte) 29, var29, var3, var16);
-                                            break L6;
+                                            break regionExit1;
                                           case 16:
                                             ei.a(var19, (byte) -116, var33, var3, var29, var31);
-                                            break L6;
+                                            break regionExit1;
                                           case 17:
                                             var6[var19.field_j.b(-4)] = 100;
                                             fm.a(var19, true, var20, var29);
-                                            break L6;
+                                            break regionExit1;
                                           case 30:
                                             var6[var19.field_j.b(-4)] = 100;
                                             fm.a(var19, true, var20, var29);
-                                            break L6;
+                                            break regionExit1;
                                           case 36:
                                           default:
                                             if (var23 != 19 &&
@@ -320,29 +320,29 @@ final class sg {
                                               } else {
                                                 hh.a(false, var19, var29);
                                               }
-                                              break L6;
+                                              break regionExit1;
                                             }
                                             lj.a(var29, var3, 0, var19);
-                                            break L6;
+                                            break regionExit1;
                                         }
                                       }
                                       vd.a(var19, -127);
                                     } else {
-                                      ui.a(var16, var29, var19, var3, var20, var14, false);
+                                      DualLinkDeque.a(var16, var29, var19, var3, var20, var14, false);
                                     }
                                   }
                                 } else {
-                                  vc.a(var3, -11112, var29, var19);
+                                  GameCanvas.a(var3, -11112, var29, var19);
                                 }
                               }
                             }
                           } else {
                             sc.a(var3, var19, var29, 1);
                           }
-                          break L6;
+                          break regionExit1;
                         }
                         ng.a((byte) 78, var19, var3, var20, var29);
-                        break L6;
+                        break regionExit1;
                     }
                   }
                 }
@@ -380,7 +380,7 @@ final class sg {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        vi var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -401,7 +401,7 @@ final class sg {
         if (param0 != -26720) {
           return true;
         }
-        var10 = new vi(this.field_n.c((byte) 127));
+        var10 = new PacketBuffer(this.field_n.c((byte) 127));
         var10.field_i = 5;
         var3 = var10.l(32270);
         var10.field_i = var10.field_i + var3 * 72;

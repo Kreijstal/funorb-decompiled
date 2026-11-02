@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ag extends am {
+class ag extends IntrusiveNode {
     static int field_k;
     int field_v;
     int field_r;
@@ -45,7 +45,7 @@ class ag extends am {
         var7 = HostileSpawn.field_I ? 1 : 0;
         var1 = hd.field_r[0] * sf.field_X[0];
         if (param0 >= 36) {
-          L6: {
+          regionExit1: {
             var17 = ja.field_e[0];
             if (qj.field_k[0]) {
               var16 = vh.field_a[0];
@@ -59,9 +59,9 @@ class ag extends am {
                 }
                 break;
               }
-              var3 = new gk(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
+              var3 = new gk(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
               if (var7 == 0) {
-                break L6;
+                break regionExit1;
               }
             }
             var9 = new int[var1];
@@ -74,10 +74,10 @@ class ag extends am {
               }
               break;
             }
-            var3 = new bd(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
+            var3 = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
           }
         } else {
-          L0: {
+          regionExit2: {
             field_k = 78;
             var15 = ja.field_e[0];
             if (qj.field_k[0]) {
@@ -92,9 +92,9 @@ class ag extends am {
                 }
                 break;
               }
-              var3 = new gk(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
+              var3 = new gk(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
               if (var7 == 0) {
-                break L0;
+                break regionExit2;
               }
             }
             var9 = new int[var1];
@@ -107,7 +107,7 @@ class ag extends am {
               }
               break;
             }
-            var3 = new bd(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
+            var3 = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
           }
         }
         uj.d(121);
@@ -127,7 +127,7 @@ class ag extends am {
         if (!param2) {
           if (var5 == 0) {
             mn.field_c = ig.field_L;
-            am.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -136,7 +136,7 @@ class ag extends am {
           }
           if (pf.field_o == 0) {
             mn.field_c = ig.field_L;
-            am.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -146,7 +146,7 @@ class ag extends am {
           this.c((byte) -82);
           if (var7 == 0) {
             mn.field_c = ig.field_L;
-            am.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -161,7 +161,7 @@ class ag extends am {
         if (pf.field_o == 0) {
           if (ig.field_L != 0) {
             mn.field_c = ig.field_L;
-            am.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -170,7 +170,7 @@ class ag extends am {
           }
           if (mn.field_c == 0) {
             mn.field_c = ig.field_L;
-            am.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -186,7 +186,7 @@ class ag extends am {
             rh.field_D = null;
           }
           mn.field_c = ig.field_L;
-          am.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -198,7 +198,7 @@ class ag extends am {
           if (var7 == 0) {
             if (ig.field_L != 0) {
               mn.field_c = ig.field_L;
-              am.a(this.e(34), (byte) -82);
+              IntrusiveNode.a(this.e(34), (byte) -82);
               if (param1 == 8799) {
                 return param2;
               }
@@ -207,7 +207,7 @@ class ag extends am {
             }
             if (mn.field_c == 0) {
               mn.field_c = ig.field_L;
-              am.a(this.e(34), (byte) -82);
+              IntrusiveNode.a(this.e(34), (byte) -82);
               if (param1 == 8799) {
                 return param2;
               }
@@ -223,7 +223,7 @@ class ag extends am {
               rh.field_D = null;
             }
             mn.field_c = ig.field_L;
-            am.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -242,7 +242,7 @@ class ag extends am {
                 ((k) (var10.field_p)).a(var10, false, (od) null);
                 rh.field_D = null;
                 mn.field_c = ig.field_L;
-                am.a(this.e(34), (byte) -82);
+                IntrusiveNode.a(this.e(34), (byte) -82);
                 if (param1 != 8799) {
                   ag.d((byte) 54);
                 }
@@ -252,7 +252,7 @@ class ag extends am {
             }
           }
           mn.field_c = ig.field_L;
-          am.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -261,7 +261,7 @@ class ag extends am {
         }
         if (ig.field_L != 0) {
           mn.field_c = ig.field_L;
-          am.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -270,7 +270,7 @@ class ag extends am {
         }
         if (mn.field_c == 0) {
           mn.field_c = ig.field_L;
-          am.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -286,7 +286,7 @@ class ag extends am {
           rh.field_D = null;
         }
         mn.field_c = ig.field_L;
-        am.a(this.e(34), (byte) -82);
+        IntrusiveNode.a(this.e(34), (byte) -82);
         if (param1 == 8799) {
           return param2;
         }

@@ -37,14 +37,14 @@ final class nb extends vd implements qk {
             }
             return 80;
           }
-          if (vc.field_d != null) {
-            if (!vc.field_d.a(-15879)) {
+          if (GameCanvas.field_d != null) {
+            if (!GameCanvas.field_d.a(-15879)) {
               return 14;
             }
-            if (!vc.field_d.a("", (byte) 115)) {
+            if (!GameCanvas.field_d.a("", (byte) 115)) {
               return 29;
             }
-            if (!vc.field_d.a(-8088, "")) {
+            if (!GameCanvas.field_d.a(-8088, "")) {
               return 29;
             }
           }
@@ -74,7 +74,7 @@ final class nb extends vd implements qk {
             }
             return 100;
           }
-          if (vc.field_d == null) {
+          if (GameCanvas.field_d == null) {
             if (!im.field_c.a(-15879)) {
               return 43;
             }
@@ -95,13 +95,13 @@ final class nb extends vd implements qk {
             }
             return 86;
           }
-          if (!vc.field_d.a(-15879)) {
+          if (!GameCanvas.field_d.a(-15879)) {
             return 14;
           }
-          if (!vc.field_d.a("", (byte) 115)) {
+          if (!GameCanvas.field_d.a("", (byte) 115)) {
             return 29;
           }
-          if (!vc.field_d.a(-8088, "")) {
+          if (!GameCanvas.field_d.a(-8088, "")) {
             return 29;
           }
         }
@@ -176,7 +176,7 @@ final class nb extends vd implements qk {
     public nb() {
         super(0, 0, 476, 225, (nn) null);
         this.field_G = new ph(kc.field_f, (mh) null);
-        this.field_H = new ph(dk.field_l, (mh) null);
+        this.field_H = new ph(DualLinkNode.field_l, (mh) null);
         this.field_K = new ph(ej.field_n, (mh) null);
         ke var1 = new ke();
         this.field_G.field_h = (nn) ((Object) var1);
@@ -212,10 +212,10 @@ final class nb extends vd implements qk {
           if (param3 != this.field_H) {
             if (this.field_G != param3) {
               if (param3 == this.field_K) {
-                ci.a(-1);
+                MouseInput.a(-1);
               }
             } else {
-              gb.d(62);
+              ResourceArchive.d(62);
             }
           } else {
             fa.a(5109);

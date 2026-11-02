@@ -14,14 +14,14 @@ final class ma {
     private int[] field_a;
     int field_f;
 
-    final void a(vi param0) {
+    final void a(PacketBuffer param0) {
         this.field_b = param0.l(32270);
         this.field_i = param0.d(8195);
         this.field_f = param0.d(8195);
         this.b(param0);
     }
 
-    final void b(vi param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
         this.field_k = param0.l(32270);
         this.field_d = new int[this.field_k];

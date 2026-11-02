@@ -192,18 +192,18 @@ final class og {
         int var2_intLifetime1;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          vi.field_p = new oj[17];
-          vi.field_p[0] = new oj(param1, 8, rl.field_c);
-          vi.field_p[0].field_I = 1000;
+          PacketBuffer.field_p = new oj[17];
+          PacketBuffer.field_p[0] = new oj(param1, 8, rl.field_c);
+          PacketBuffer.field_p[0].field_I = 1000;
           var2_int = 1;
           var3 = -18 % ((param0 + 14) / 46);
-          while (vi.field_p.length > var2_int) {
-            vi.field_p[var2_int] = new oj(param1, 231, rl.field_c);
-            vi.field_p[var2_int].field_I = 200;
+          while (PacketBuffer.field_p.length > var2_int) {
+            PacketBuffer.field_p[var2_int] = new oj(param1, 231, rl.field_c);
+            PacketBuffer.field_p[var2_int].field_I = 200;
             var2_int++;
           }
-          for (var2_intLifetime1 = -1 + vi.field_p.length; var2_intLifetime1 >= 0; var2_intLifetime1--) {
-            mm.field_m[el.field_j] = vi.field_p[var2_intLifetime1];
+          for (var2_intLifetime1 = -1 + PacketBuffer.field_p.length; var2_intLifetime1 >= 0; var2_intLifetime1--) {
+            mm.field_m[el.field_j] = PacketBuffer.field_p[var2_intLifetime1];
             el.field_j = el.field_j + 1;
           }
           return;

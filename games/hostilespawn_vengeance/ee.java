@@ -162,9 +162,9 @@ final class ee {
               s.field_b.d(94, 14);
               s.field_b.d(89, t.field_i.a(false).field_a);
               mb.d(-1, -22370);
-              rc.field_a = ci.field_h;
+              rc.field_a = MouseInput.field_h;
             }
-            if (rc.field_a == ci.field_h &&
+            if (rc.field_a == MouseInput.field_h &&
               re.c((byte) 33, 1)) {
               var6_int = sc.field_g.l(32270);
               if (var6_int != 0) {
@@ -178,7 +178,7 @@ final class ee {
             }
             if (dc.field_e == rc.field_a &&
               re.c((byte) 33, 8)) {
-              d.field_y = sc.field_g.c(10818);
+              NetworkGameClient.field_y = sc.field_g.c(10818);
               sc.field_g.field_i = 0;
               ln.a(t.field_i, (byte) -73, param1, param0, param2);
               rc.field_a = ej.field_q;
@@ -240,10 +240,10 @@ final class ee {
               }
               qg.field_r = sc.field_g.o(32);
               var13 = (CharSequence) ((Object) qg.field_r);
-              se.field_c = mf.a(false, var13);
+              GameAppletShell.field_c = mf.a(false, var13);
               ca.field_a = sc.field_g.l(32270);
-              rc.field_a = ci.field_d;
-              if (t.field_i.a(false) == uk.field_a) {
+              rc.field_a = MouseInput.field_d;
+              if (t.field_i.a(false) == ArchiveProvider.field_a) {
                 ub.field_b.a((byte) -126, bn.c(-1));
               } else {
                 if (t.field_i.a(false) == ln.field_l) {
@@ -252,7 +252,7 @@ final class ee {
               }
               jn.field_C = false;
               if (var12 != null) {
-                gb.a((byte) 62, bn.c(-1), var12);
+                ResourceArchive.a((byte) 62, bn.c(-1), var12);
               }
               if (0 >= wb.field_S &&
                 !wg.field_ub) {
@@ -271,7 +271,7 @@ final class ee {
                 }
               }
               if (wb.field_S > 0) {
-                wc.field_g = true;
+                ArchiveIndex.field_g = true;
               }
               s.field_b.a(he.field_s, 8);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {

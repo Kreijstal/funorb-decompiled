@@ -278,8 +278,8 @@ final class bn {
           }
           var12 = uj.field_p.field_e + 32;
           var13 = uj.field_p.field_g + 12;
-          var14 = -var12 + am.field_e;
-          var15 = jg.field_l - var13;
+          var14 = -var12 + IntrusiveNode.field_e;
+          var15 = KeyboardInput.field_l - var13;
           var4_int = var14 << 2;
           var7 = param1 << 2;
           var10 = 1;

@@ -98,7 +98,7 @@ final class fg {
         return (java.awt.Container) ((Object) bn.c(-1));
     }
 
-    final static bd a(String param0, String param1, gb param2, boolean param3) {
+    final static bd a(String param0, String param1, ResourceArchive param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

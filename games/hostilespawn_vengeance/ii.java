@@ -110,11 +110,11 @@ final class ii {
           var1 = -97 / ((param0 - 1) / 40);
           return null;
         }
-        if (fb.field_l < ui.field_e) {
+        if (fb.field_l < DualLinkDeque.field_e) {
           var1Lifetime1 = -97 / ((param0 - 1) / 40);
           return null;
         }
-        if (qg.field_u + ui.field_e <= fb.field_l) {
+        if (qg.field_u + DualLinkDeque.field_e <= fb.field_l) {
           var1Lifetime2 = -97 / ((param0 - 1) / 40);
           return null;
         }

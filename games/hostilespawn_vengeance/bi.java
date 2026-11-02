@@ -8,7 +8,7 @@ final class bi {
     static ub field_a;
     static String field_g;
     static String field_f;
-    static gb field_h;
+    static ResourceArchive field_h;
     static String[] field_c;
 
     final static void a(int param0, int param1, int[] param2, int param3) {
@@ -60,7 +60,7 @@ final class bi {
                       var9 = fk.field_c;
                     }
                   } else {
-                    var9 = d.field_s;
+                    var9 = NetworkGameClient.field_s;
                   }
                 } else {
                   var9 = lm.field_y;

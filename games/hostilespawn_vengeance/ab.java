@@ -376,7 +376,7 @@ final class ab extends IOException {
         field_a = null;
     }
 
-    final static void a(int param0, gb param1, gb param2, gb param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         bd var17 = null;
         pg[] var5 = null;
         pg[][] var6 = null;
@@ -397,13 +397,13 @@ final class ab extends IOException {
         try {
           bh.field_a = jd.a((byte) 33, "commonui", param3, "frame_top");
           g.field_G = jd.a((byte) 33, "commonui", param3, "frame_bottom");
-          sf.field_ab = ci.a("commonui", 116, "jagex_logo_grey", param3);
+          sf.field_ab = MouseInput.a("commonui", 116, "jagex_logo_grey", param3);
           km.field_y = jd.a((byte) 33, "commonui", param3, "button");
           cf.field_u = ei.a(param3, 113, "commonui", "validation");
           jn.field_G = (vm) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
           jd.field_s = (vm) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
           pe.field_eb = (vm) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
-          var17 = new bd(param2.a("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) se.field_h));
+          var17 = new bd(param2.a("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
           var5 = sg.a(true, "commonui", param3, "screen_options");
           ak.field_h = new pg[4];

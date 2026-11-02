@@ -105,7 +105,7 @@ final class nh extends fc {
           if (param0 == null) {
             return;
           }
-          L0: {
+          regionExit1: {
             if (0 < param0.field_I) {
               var2_int = param0.field_i;
               if (var2_int != 1 &&
@@ -129,27 +129,27 @@ final class nh extends fc {
                 switch (var2_int) {
                   case 225:
                     jh.a(3 * uh.field_i / 2, (byte) 88, 9, jc.field_c, 3);
-                    break L0;
+                    break regionExit1;
                   case 18:
                     jh.a(uh.field_i * 3 / 2, (byte) 126, 21, jc.field_c, 3);
-                    break L0;
+                    break regionExit1;
                   case 19:
                     jh.a(uh.field_i * 3 / 2, (byte) 118, 26, jc.field_c, 1);
-                    break L0;
+                    break regionExit1;
                   case 27:
-                    break L0;
+                    break regionExit1;
                   case 8:
                     jh.a(3 * uh.field_i / 2, (byte) 55, 40, jc.field_c, 1);
-                    break L0;
+                    break regionExit1;
                   case 3:
                     tk.a(7, jc.field_c, 55, true);
-                    break L0;
+                    break regionExit1;
                   case 4:
                     if (1 != uj.field_l) {
-                      break L0;
+                      break regionExit1;
                     }
                     eh.field_c.a(em.field_a[22], (int)(20.0 * Math.random() - 10.0) + 100, uh.field_i);
-                    break L0;
+                    break regionExit1;
                   case 21:
                   default:
                     if (var2_int != 5 &&
@@ -169,16 +169,16 @@ final class nh extends fc {
                           eh.field_c.a(lm.field_A[17], 100, uh.field_i);
                         }
                       }
-                      break L0;
+                      break regionExit1;
                     }
                     if (1 != uj.field_l) {
-                      break L0;
+                      break regionExit1;
                     }
                     if (!ej.d((byte) 61)) {
-                      break L0;
+                      break regionExit1;
                     }
                     eh.field_c.a(lm.field_A[17], 100 + (int)(20.0 * Math.random() - 10.0), uh.field_i / 3);
-                    break L0;
+                    break regionExit1;
                 }
               }
               jh.a(3 * uh.field_i / 2, (byte) 88, 9, jc.field_c, 3);

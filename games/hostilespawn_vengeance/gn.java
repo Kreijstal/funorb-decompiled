@@ -27,7 +27,7 @@ final class gn {
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         int var6_int = 0;
         int var7 = 0;
-        vi var8 = null;
+        PacketBuffer var8 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var7 = HostileSpawn.field_I ? 1 : 0;
@@ -43,8 +43,8 @@ final class gn {
             si.d(-var6_int + param1, param4 - 9, -var6_int + 9, 16776960, param3);
           }
           if (param5 <= 69) {
-            var8 = (vi) null;
-            gn.a(10, (vi) null);
+            var8 = (PacketBuffer) null;
+            gn.a(10, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class gn {
         }
     }
 
-    final static boolean a(int param0, vi param1) {
+    final static boolean a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -139,7 +139,7 @@ final class gn {
         }
         this.field_h.a((byte) -125, this.field_p, this.field_s);
         ih.field_s = false;
-        ue var2 = jg.a(this.field_s, (byte) -61, gf.field_b, 0, this.field_p, 0);
+        ue var2 = KeyboardInput.a(this.field_s, (byte) -61, gf.field_b, 0, this.field_p, 0);
         if (var2 == null) {
           this.c(115);
         }

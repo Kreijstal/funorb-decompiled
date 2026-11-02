@@ -73,7 +73,7 @@ final class rc {
           param4 = param4 + param0;
           var7_int = 0;
           var8 = param2;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param1[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -87,7 +87,7 @@ final class rc {
               param0++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param4 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -103,7 +103,7 @@ final class rc {
               param0++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param4 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -119,7 +119,7 @@ final class rc {
               param0++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -135,7 +135,7 @@ final class rc {
               param0++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -167,7 +167,7 @@ final class rc {
               param0++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -183,7 +183,7 @@ final class rc {
               param0++;
               param5[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -199,7 +199,7 @@ final class rc {
               param0++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param4 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -239,7 +239,7 @@ final class rc {
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
-        en var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {

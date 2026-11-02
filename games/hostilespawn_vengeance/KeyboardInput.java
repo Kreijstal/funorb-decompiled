@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static bd field_h;
     static String field_a;
@@ -27,8 +27,8 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ae.field_s = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              var2_int < vc.field_i.length) {
-              var2_int = -129 & vc.field_i[var2_int];
+              var2_int < GameCanvas.field_i.length) {
+              var2_int = -129 & GameCanvas.field_i[var2_int];
             } else {
               var2_int = -1;
             }
@@ -81,8 +81,8 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ae.field_s = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              vc.field_i.length > var2_int) {
-              var2_int = vc.field_i[var2_int];
+              GameCanvas.field_i.length > var2_int) {
+              var2_int = GameCanvas.field_i[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
               }

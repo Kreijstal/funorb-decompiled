@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bc extends am {
+final class bc extends IntrusiveNode {
     static nd field_j;
     byte[] field_h;
     static String field_k;
@@ -187,7 +187,7 @@ final class bc extends am {
           vg.field_e[incrementValue$0] = new v(sc.field_h, 1048, 1202, 320, 0);
           incrementValue$1 = var1;
           var1++;
-          vg.field_e[incrementValue$1] = new v(am.field_b, 989, 1151, 256, 1);
+          vg.field_e[incrementValue$1] = new v(IntrusiveNode.field_b, 989, 1151, 256, 1);
           incrementValue$2 = var1;
           var1++;
           vg.field_e[incrementValue$2] = new v(kh.field_V, 1375, 1225, 192, 2);

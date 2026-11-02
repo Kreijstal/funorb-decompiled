@@ -551,7 +551,7 @@ final class dd extends ql {
         }
         this.field_d = new v(ta.field_kb, 0, 24 * this.field_m.field_g - 168, 200);
         this.field_d.field_l = 0;
-        this.field_p = new v(vi.field_o, 0, 0, 200);
+        this.field_p = new v(PacketBuffer.field_o, 0, 0, 200);
         this.field_p.field_l = 0;
         var3Lifetime1 = param0;
         for (var4 = 0; el.field_j > var4; var4++) {

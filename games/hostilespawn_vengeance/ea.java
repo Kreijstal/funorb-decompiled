@@ -67,8 +67,8 @@ final class ea {
     }
 
     final static void a(jd param0, int param1, int param2) {
-        en var7 = null;
-        en var8 = null;
+        CipherPacketBuffer var7 = null;
+        CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = HostileSpawn.field_I ? 1 : 0;

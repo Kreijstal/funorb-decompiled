@@ -180,18 +180,18 @@ final class ld extends hi {
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 == param1 &&
-            d.field_u <= 10) {
+            NetworkGameClient.field_u <= 10) {
             if ((!fh.field_c[0] ||
               kh.field_U[0] != 3) &&
               (!fh.field_c[1] ||
               kh.field_U[1] != 3)) {
-              if ((d.field_u == 0)) {
+              if ((NetworkGameClient.field_u == 0)) {
                 var4 = 1;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              d.field_u = 35;
+              NetworkGameClient.field_u = 35;
               var3 = 1;
             }
           }
@@ -305,8 +305,8 @@ final class ld extends hi {
                     kh.field_ib[dupTemp$1] = kh.field_ib[dupTemp$1] - 4;
                     r.a(0, param1, var10, -5, var11);
                     ib.field_c = ib.field_c + 1;
-                    jg.field_l = (int)((0.5 + ((double)var10.field_j.field_g + var10.field_l.field_a)) * 24.0);
-                    am.field_e = (int)(24.0 * (0.5 + (var10.field_l.field_f + (double)var10.field_j.field_e)));
+                    KeyboardInput.field_l = (int)((0.5 + ((double)var10.field_j.field_g + var10.field_l.field_a)) * 24.0);
+                    IntrusiveNode.field_e = (int)(24.0 * (0.5 + (var10.field_l.field_f + (double)var10.field_j.field_e)));
                   }
                 }
               }

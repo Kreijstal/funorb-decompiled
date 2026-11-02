@@ -21,7 +21,7 @@ final class wk {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        en var8 = null;
+        CipherPacketBuffer var8 = null;
         hj var9 = null;
         var7 = HostileSpawn.field_I ? 1 : 0;
         var8 = sc.field_g;
@@ -36,9 +36,9 @@ final class wk {
         }
         if (lb.field_b != 2) {
           qa.field_e = 0;
-          jg.field_c = 0;
+          KeyboardInput.field_c = 0;
         } else {
-          jg.field_c = var8.e(8);
+          KeyboardInput.field_c = var8.e(8);
           qa.field_e = var8.h(64);
         }
         stackIn_11_0 = (var8.l(32270) != 1) ? 0 : 1;

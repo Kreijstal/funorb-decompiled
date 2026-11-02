@@ -73,7 +73,7 @@ final class cm {
             var5 = (oc) null;
             cm.a((oc) null, true);
           }
-          for (var2_int = 0; var2_int < dk.field_o; var2_int++) {
+          for (var2_int = 0; var2_int < DualLinkNode.field_o; var2_int++) {
             var3 = vj.field_w[var2_int];
             if (var3 != null &&
               var3.field_i >= 145 &&

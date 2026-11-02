@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends am {
+final class ng extends IntrusiveNode {
     byte[][][] field_o;
     static int field_u;
     static boolean field_k;

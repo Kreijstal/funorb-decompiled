@@ -40,7 +40,7 @@ final class ub {
             return true;
           }
           if (this != wj.field_N) {
-            return this == ci.field_d ? true : false;
+            return this == MouseInput.field_d ? true : false;
           }
           return true;
         }
@@ -50,7 +50,7 @@ final class ub {
         if (this == wj.field_N) {
           return true;
         }
-        if (this != ci.field_d) {
+        if (this != MouseInput.field_d) {
           return false;
         }
         return true;

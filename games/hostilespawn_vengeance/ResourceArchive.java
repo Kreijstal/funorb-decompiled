@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb {
-    static gb field_a;
-    private wc field_g;
+final class ResourceArchive {
+    static ResourceArchive field_a;
+    private ArchiveIndex field_g;
     static int field_b;
     private int field_m;
     static int field_h;
@@ -12,7 +12,7 @@ final class gb {
     private Object[] field_d;
     static nd field_f;
     static bd field_l;
-    private uk field_c;
+    private ArchiveProvider field_c;
     private Object[][] field_j;
     static long field_e;
 
@@ -72,7 +72,7 @@ final class gb {
           var4 = 120 / ((param0 - 77) / 40);
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.field_g.field_l.a(true, ci.a(-114, var5));
+          var3_int = this.field_g.field_l.a(true, MouseInput.a(-114, var5));
           stackIn_4_0 = this.b(-8102, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,7 +142,7 @@ final class gb {
           return true;
         }
         if (param2 <= 65) {
-          gb.a(true, (java.awt.Canvas) null, ((boolean[]) (((Object[]) (((Object[]) (this.field_d[36]))[3]))[4]))[0]);
+          ResourceArchive.a(true, (java.awt.Canvas) null, ((boolean[]) (((Object[]) (((Object[]) (this.field_d[36]))[3]))[4]))[0]);
         }
         this.d(20529, param1);
         if (null == this.field_d[param1]) {
@@ -169,8 +169,8 @@ final class gb {
         return this.field_g.field_p.length;
     }
 
-    final static void a(gb param0, int param1) {
-        bd var2 = new bd(param0.a("", "final_frame.jpg", 0), (java.awt.Component) ((Object) se.field_h));
+    final static void a(ResourceArchive param0, int param1) {
+        bd var2 = new bd(param0.a("", "final_frame.jpg", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
         int var3 = var2.field_z;
         int var4 = var2.field_A;
         pf.b(param1 ^ -11731);
@@ -221,7 +221,7 @@ final class gb {
               if (0 == param2.length()) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + dk.a((byte) -41, 94608000000L + hn.a((byte) 80)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 94608000000L + hn.a((byte) 80)) + "; Max-Age=" + 94608000L;
               }
               a.a(param1, 17467, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
@@ -252,7 +252,7 @@ final class gb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        gb var6 = null;
+        ResourceArchive var6 = null;
         bd var7 = null;
         bd var8 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
@@ -277,8 +277,8 @@ final class gb {
             }
           }
           if (param1 != 81) {
-            var6 = (gb) null;
-            gb.a((gb) null, 120);
+            var6 = (ResourceArchive) null;
+            ResourceArchive.a((ResourceArchive) null, 120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -314,22 +314,22 @@ final class gb {
             }
             ki.a(var3_int != 0, nb.j(96), cc.a(74), re.field_A, (byte) 44);
           } else {
-            if (uk.a(27301)) {
+            if (ArchiveProvider.a(27301)) {
               if (fa.field_c == 0) {
                 cf.a(false, param2, (byte) 28);
-                ui.a(0, param1, (byte) -78, 0);
+                DualLinkDeque.a(0, param1, (byte) -78, 0);
               } else {
                 ad.a(param1, param0);
               }
             } else {
               si.d();
               dc.a((byte) 11, 240, 320);
-              ui.a(0, param1, (byte) -29, 0);
+              DualLinkDeque.a(0, param1, (byte) -29, 0);
             }
           }
           if (param0) {
             var5 = (String) null;
-            gb.a((byte) 10, (java.applet.Applet) null, (String) null);
+            ResourceArchive.a((byte) 10, (java.applet.Applet) null, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -369,12 +369,12 @@ final class gb {
           param1 = param1.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.field_g.field_l.a(true, ci.a(-49, var6));
+          var4_int = this.field_g.field_l.a(true, MouseInput.a(-49, var6));
           if (!this.a((byte) -113, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_g.field_h[var4_int].a(true, ci.a(-118, var7));
+          var5 = this.field_g.field_h[var4_int].a(true, MouseInput.a(-118, var7));
           stackIn_10_0 = this.a(var5, var4_int, (byte) 107);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -412,7 +412,7 @@ final class gb {
           }
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.field_g.field_l.a(true, ci.a(-118, var5));
+          var3_int = this.field_g.field_l.a(true, MouseInput.a(-118, var5));
           var4 = 66 % ((param1 - 60) / 54);
           if (var3_int >= 0) {
             return true;
@@ -477,12 +477,12 @@ final class gb {
           param1 = param1.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.field_g.field_l.a(true, ci.a(-57, var6));
+          var4_int = this.field_g.field_l.a(true, MouseInput.a(-57, var6));
           if (!this.a((byte) -62, var4_int)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_g.field_h[var4_int].a(true, ci.a(-86, var7));
+          var5 = this.field_g.field_h[var4_int].a(true, MouseInput.a(-86, var7));
           if (param2 == 0) {
             stackIn_10_0 = this.a(false, var5, var4_int);
             return stackIn_10_0;
@@ -514,8 +514,8 @@ final class gb {
         field_k = null;
         field_l = null;
         if (param0 != -16199) {
-          gb var2 = (gb) null;
-          gb.a((gb) null, 78);
+          ResourceArchive var2 = (ResourceArchive) null;
+          ResourceArchive.a((ResourceArchive) null, 78);
         }
         field_f = null;
     }
@@ -556,10 +556,10 @@ final class gb {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        vi var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        vi var30 = null;
-        vi var32 = null;
+        PacketBuffer var30 = null;
+        PacketBuffer var32 = null;
         int[] var33 = null;
         byte[][] var34 = null;
         int[] var35 = null;
@@ -612,7 +612,7 @@ final class gb {
             var36 = sb.a(true, this.field_d[param1], true);
             var26 = var36;
             var10 = var26;
-            var27 = new vi(var36);
+            var27 = new PacketBuffer(var36);
             var27.a(var27.field_n.length, (byte) -126, 5, param0);
             decompiledFrameRemainder0 = false;
           }
@@ -641,7 +641,7 @@ final class gb {
               var12--;
               var13 = 255 & var24[var12];
               var12 = var12 - 4 * var5_int * var13;
-              var30 = new vi(var44);
+              var30 = new PacketBuffer(var44);
               var15_int = 0;
               var16_int = 0;
               var30.field_i = var12;
@@ -689,7 +689,7 @@ final class gb {
               var12--;
               var13 = 255 & var24[var12];
               var12 = var12 - 4 * (var13 * var5_int);
-              var32 = new vi(var44);
+              var32 = new PacketBuffer(var44);
               var40 = new int[var5_int];
               var33 = var40;
               var15 = var33;
@@ -777,10 +777,10 @@ final class gb {
           }
           param1 = param1.toLowerCase();
           if (param0 != -2) {
-            field_a = (gb) null;
+            field_a = (ResourceArchive) null;
           }
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_g.field_l.a(true, ci.a(-34, var4));
+          var3_int = this.field_g.field_l.a(true, MouseInput.a(-34, var4));
           if (this.a((byte) -71, var3_int)) {
             return var3_int;
           }
@@ -821,7 +821,7 @@ final class gb {
             this.a(false, -33, ((int[]) (this.field_d[32]))[0]);
           }
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_g.field_h[param0].a(true, ci.a(param2 ^ 120, var5));
+          var4_int = this.field_g.field_h[param0].a(true, MouseInput.a(param2 ^ 120, var5));
           if (this.a(param0, (byte) 26, var4_int)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -884,7 +884,7 @@ final class gb {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_g.field_l.a(true, ci.a(-46, var4));
+          var3_int = this.field_g.field_l.a(true, MouseInput.a(-46, var4));
           stackIn_6_0 = this.a(var3_int, (byte) 8);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -918,7 +918,7 @@ final class gb {
         return true;
     }
 
-    gb(uk param0, boolean param1, int param2) {
+    ResourceArchive(ArchiveProvider param0, boolean param1, int param2) {
         this.field_g = null;
         try {
           if (0 > param2 ||
@@ -948,7 +948,7 @@ final class gb {
             return (byte[]) (stackIn_2_0);
           }
           if (param3 != -2) {
-            this.field_g = (wc) null;
+            this.field_g = (ArchiveIndex) null;
           }
           var5 = null;
           if ((null == this.field_j[param0] ||

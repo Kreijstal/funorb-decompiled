@@ -15,7 +15,7 @@ final class mb extends ce {
     private int field_r;
     static he field_s;
     static int field_i;
-    static gb field_m;
+    static ResourceArchive field_m;
     private String field_l;
 
     final void a(int param0, int param1, int param2, int param3, vm param4, String param5, int param6, int param7) {
@@ -201,7 +201,7 @@ final class mb extends ce {
         ne var5_ref_ne = null;
         int[] var6 = null;
         int var8 = 0;
-        en var10 = null;
+        CipherPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = HostileSpawn.field_I ? 1 : 0;
@@ -333,7 +333,7 @@ final class mb extends ce {
             mb.c(-64, 48);
           }
           if (null != ag.field_t && (0 > param0 ||
-            ci.field_d == rc.field_a)) {
+            MouseInput.field_d == rc.field_a)) {
             if (s.field_b.field_i == 0 &&
               10000L + gf.field_h < hn.a((byte) 80)) {
               s.field_b.i(param1 + 41689, param0);

@@ -122,7 +122,7 @@ final class bf {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_l[var2] = ga.a(ga.a(dk.a(255L, (long)this.field_i[6 + var3]) << 8, ga.a(ga.a(dk.a(255L, (long)this.field_i[var3 + 4]) << 24, ga.a(dk.a(1095216660480L, (long)this.field_i[var3 + 3] << 32), ga.a(ga.a((long)this.field_i[var3] << 56, dk.a((long)this.field_i[var3 + 1], 255L) << 48), dk.a(255L, (long)this.field_i[2 + var3]) << 40))), dk.a(16711680L, (long)this.field_i[var3 + 5] << 16))), dk.a((long)this.field_i[var3 + 7], 255L));
+          this.field_l[var2] = ga.a(ga.a(DualLinkNode.a(255L, (long)this.field_i[6 + var3]) << 8, ga.a(ga.a(DualLinkNode.a(255L, (long)this.field_i[var3 + 4]) << 24, ga.a(DualLinkNode.a(1095216660480L, (long)this.field_i[var3 + 3] << 32), ga.a(ga.a((long)this.field_i[var3] << 56, DualLinkNode.a((long)this.field_i[var3 + 1], 255L) << 48), DualLinkNode.a(255L, (long)this.field_i[2 + var3]) << 40))), DualLinkNode.a(16711680L, (long)this.field_i[var3 + 5] << 16))), DualLinkNode.a((long)this.field_i[var3 + 7], 255L));
           var3 += 8;
           var2++;
         }
@@ -179,13 +179,13 @@ final class bf {
         }
     }
 
-    final static gb a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           int var8 = 0;
           rb var9 = null;
-          gb stackIn_12_0 = null;
+          ResourceArchive stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -210,7 +210,7 @@ final class bf {
             if (param4) {
               var9.a((byte) -50);
             }
-            stackIn_12_0 = new gb(var9, param1, param3);
+            stackIn_12_0 = new ResourceArchive(var9, param1, param3);
             return stackIn_12_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

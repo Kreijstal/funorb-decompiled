@@ -163,9 +163,9 @@ final class ha extends cn {
           }
           var12 = uj.field_p.field_e + 36;
           var13 = 12 + uj.field_p.field_g;
-          var14 = -var12 + am.field_e;
+          var14 = -var12 + IntrusiveNode.field_e;
           var4_int = var14 << 2;
-          var15 = -var13 + jg.field_l;
+          var15 = -var13 + KeyboardInput.field_l;
           var6 = param0 << 2;
           var8 = 8;
           var11 = 1;

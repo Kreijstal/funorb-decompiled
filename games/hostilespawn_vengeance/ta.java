@@ -65,7 +65,7 @@ final class ta extends me {
           nl.field_d = 0;
           qi.field_J = 0;
           dn.field_b = 0;
-          vi.field_p = null;
+          PacketBuffer.field_p = null;
           om.field_a = false;
           nh.field_H = 0;
           wk.field_h = false;
@@ -158,7 +158,7 @@ final class ta extends me {
           }
           ll.field_a = 0;
           ib.field_c = 0;
-          dk.field_o = 0;
+          DualLinkNode.field_o = 0;
           for (var2_intLifetime1 = 0; 3000 > var2_intLifetime1; var2_intLifetime1++) {
             mm.field_m[var2_intLifetime1] = null;
           }
@@ -428,7 +428,7 @@ final class ta extends me {
           try {
             var3 = new java.net.URL(param2.getCodeBase(), param1);
             var3 = nj.a(param2, true, var3);
-            wc.a(param2, var3.toString(), (byte) -97, true);
+            ArchiveIndex.a(param2, var3.toString(), (byte) -97, true);
           } catch (Exception exception) {
             exception.printStackTrace();
           }

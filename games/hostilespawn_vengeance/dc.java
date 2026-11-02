@@ -12,7 +12,7 @@ final class dc {
         im.field_e.f((byte) 32);
         if (param0 < -83) {
           if (hj.field_t == null) {
-            hj.field_t = new pe(im.field_e, se.field_g);
+            hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
           }
           im.field_e.c(hj.field_t, 108);
           return;
@@ -20,7 +20,7 @@ final class dc {
         java.awt.Component var2 = (java.awt.Component) null;
         dc.a((java.awt.Component) null, (byte) 101);
         if (hj.field_t == null) {
-          hj.field_t = new pe(im.field_e, se.field_g);
+          hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
         }
         im.field_e.c(hj.field_t, 108);
     }

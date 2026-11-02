@@ -33,7 +33,7 @@ final class ki {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = se.field_h.getGraphics();
+            var9 = GameAppletShell.field_h.getGraphics();
             if (vh.field_d == null) {
               vh.field_d = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -46,7 +46,7 @@ final class ki {
             }
             try {
               if (null == he.field_y) {
-                he.field_y = se.field_h.createImage(304, 34);
+                he.field_y = GameAppletShell.field_h.createImage(304, 34);
               }
               var10 = he.field_y.getGraphics();
               var10.setColor(param3);
@@ -75,15 +75,15 @@ final class ki {
               var9.drawString(param2, (304 - param2.length() * 6) / 2 + var7, var8 + 22);
             }
             var6 = 50 % ((param4 + 62) / 50);
-            if (ed.field_e != null) {
+            if (IntrusiveNodeHashTable.field_e != null) {
               var9.setFont(vh.field_d);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(ed.field_e, hf.field_h / 2 - ed.field_e.length() * 6 / 2, qc.field_s / 2 - 26);
+              var9.drawString(IntrusiveNodeHashTable.field_e, hf.field_h / 2 - IntrusiveNodeHashTable.field_e.length() * 6 / 2, qc.field_s / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            se.field_h.repaint();
+            GameAppletShell.field_h.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

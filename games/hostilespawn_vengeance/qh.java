@@ -798,12 +798,12 @@ final class qh {
               var4 = 1;
             }
             if (var4 != 0) {
-              var6 = ci.field_e[13];
+              var6 = MouseInput.field_e[13];
               if (this.field_v >= 8) {
-                var6 = ci.field_e[14];
+                var6 = MouseInput.field_e[14];
               }
               if (1 == this.field_v) {
-                var6 = ci.field_e[15];
+                var6 = MouseInput.field_e[15];
               }
               for (var7_int = 0; 5 > var7_int; var7_int++) {
                 for (var8_int = 0; var8_int < 5; var8_int++) {
@@ -817,7 +817,7 @@ final class qh {
               var7 = var12;
               try {
                 var8_int = 60000;
-                d.a((byte) -115, var7, new File(uk.a(param0 + 9362, this.field_v)), var8_int);
+                NetworkGameClient.a((byte) -115, var7, new File(ArchiveProvider.a(param0 + 9362, this.field_v)), var8_int);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var8 = (Exception) (Object) decompiledCaughtException;
@@ -834,7 +834,7 @@ final class qh {
             var6_array = var10;
             oc.field_h[0][this.field_v] = var15;
             try {
-              fj.a(var6_array, 15445, var15.length, new File(uk.a(9394, this.field_v)));
+              fj.a(var6_array, 15445, var15.length, new File(ArchiveProvider.a(9394, this.field_v)));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var7_ref = (Exception) (Object) decompiledCaughtException;

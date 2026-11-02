@@ -16,7 +16,7 @@ final class ad {
           if (param1) {
             field_c = (String) null;
           }
-          ui.a(0, param0, (byte) 90, 0);
+          DualLinkDeque.a(0, param0, (byte) 90, 0);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "ad.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

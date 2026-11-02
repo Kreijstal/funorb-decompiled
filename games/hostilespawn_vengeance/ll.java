@@ -4,8 +4,8 @@
 final class ll {
     static int field_a;
     static int field_c;
-    static gb field_b;
-    static gb field_e;
+    static ResourceArchive field_b;
+    static ResourceArchive field_e;
     static int field_d;
 
     public final String toString() {

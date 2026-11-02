@@ -47,12 +47,12 @@ final class od extends fc {
         var10 = new bd[]{new bd(var9, var9), new bd(param0, var9), new bd(var9, var9), new bd(var9, param0), new bd(64, 64), new bd(var9, param0), new bd(var9, var9), new bd(param0, var9), new bd(var9, var9)};
         var11_ref_bd__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var12 < var11_ref_bd__.length) {
             var13 = var11_ref_bd__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var14 < var13.field_D.length) {
@@ -60,17 +60,17 @@ final class od extends fc {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (var11 < param4) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var9 > var12Lifetime1) {
@@ -81,7 +81,7 @@ final class od extends fc {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -112,11 +112,11 @@ final class od extends fc {
             stackIn_34_0 = 0;
           }
           var11Lifetime1 = stackIn_34_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (var11Lifetime1 < param0) {
               stackIn_45_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_45_0;
               while (param4 > var12Lifetime2Lifetime1) {
@@ -127,7 +127,7 @@ final class od extends fc {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_45_0 = param1;
             break;
@@ -136,7 +136,7 @@ final class od extends fc {
             return (bd[]) null;
           }
           var11Lifetime1 = 0;
-          L25: while (var11Lifetime1 < param0 >> 1) {
+          scanLoop4: while (var11Lifetime1 < param0 >> 1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (var12Lifetime2Lifetime2 < param2) {
@@ -154,7 +154,7 @@ final class od extends fc {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }

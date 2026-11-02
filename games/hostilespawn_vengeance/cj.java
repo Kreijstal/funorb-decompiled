@@ -57,7 +57,7 @@ class cj extends ph {
         return this.field_H[this.field_J.field_r];
     }
 
-    final static nc a(gb param0, int param1, int param2, gb param3, int param4) {
+    final static nc a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         nc stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -128,7 +128,7 @@ class cj extends ph {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        gb var10 = null;
+        ResourceArchive var10 = null;
         CharSequence var11 = null;
         String[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -151,8 +151,8 @@ class cj extends ph {
             var6 = 1 + var8;
           }
           if (param1 >= -5) {
-            var10 = (gb) null;
-            cj.a((gb) null, 50, 61, (gb) null, -88);
+            var10 = (ResourceArchive) null;
+            cj.a((ResourceArchive) null, 50, 61, (ResourceArchive) null, -88);
           }
           var4[var3_int] = param0.substring(var6);
           stackIn_10_0 = var4;
@@ -346,11 +346,11 @@ class cj extends ph {
         mm var4;
         mm var5;
         int var6;
-        gb var7;
+        ResourceArchive var7;
         var6 = HostileSpawn.field_I ? 1 : 0;
         if (param0 != -2) {
-          var7 = (gb) null;
-          cj.a((gb) null, 119, -67, (gb) null, 52);
+          var7 = (ResourceArchive) null;
+          cj.a((ResourceArchive) null, 119, -67, (ResourceArchive) null, 52);
         }
         var4 = (mm) (this.field_G.g(-109));
         while (var4 != null) {

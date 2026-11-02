@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends am {
+final class nf extends IntrusiveNode {
     pl[] field_o;
     static long field_n;
     static int field_m;
@@ -228,7 +228,7 @@ final class nf extends am {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        vi var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         pl var40 = null;
         byte[] var41 = null;
@@ -314,7 +314,7 @@ final class nf extends am {
           this.field_q = new jb[128];
           this.field_i = new byte[128];
           this.field_k = new int[128];
-          var38 = new vi(param0);
+          var38 = new PacketBuffer(param0);
           for (var3 = 0; 0 != var38.field_n[var38.field_i + var3]; var3++) {
           }
           var55 = new byte[var3];

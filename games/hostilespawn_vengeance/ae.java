@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ae extends dk {
+abstract class ae extends DualLinkNode {
     static volatile int field_s;
     static int[] field_q;
     volatile boolean field_v;
@@ -87,7 +87,7 @@ abstract class ae extends dk {
         this.field_v = true;
     }
 
-    final static void a(gb param0, int param1, gb param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         cl.field_i = param2;
         if (param1 < 27) {
           return;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ic extends am {
+final class ic extends IntrusiveNode {
     String[][] field_p;
     long[][] field_i;
     static String field_o;

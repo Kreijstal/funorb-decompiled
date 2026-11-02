@@ -33,7 +33,7 @@ final class fh {
         field_d = null;
     }
 
-    final void a(int param0, byte[] param1, vi param2) {
+    final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
             if (param2.field_n[param2.field_i] != 31 ||

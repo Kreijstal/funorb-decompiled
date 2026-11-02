@@ -76,7 +76,7 @@ final class oc {
         int stackIn_14_0 = 0;
         vb stackIn_65_0 = null;
         RuntimeException decompiledCaughtException = null;
-        en var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -190,7 +190,7 @@ final class oc {
           var6_ref.field_Mb = (String) (var3Lifetime1);
           var6_ref.b(-23);
           var7_ref = (vb) (gm.field_d.g(-97));
-          L16: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
               stackIn_65_0 = var7_ref;
@@ -203,7 +203,7 @@ final class oc {
             }
             if (decompiledFrameRemainder0) {
               if (null == var7_ref) {
-                break L16;
+                break scanLoop1;
               }
               stackIn_65_0 = var6_ref;
             }

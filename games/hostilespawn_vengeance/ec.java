@@ -90,7 +90,7 @@ final class ec {
           return;
         }
         if (!hk.field_q) {
-          jh.field_fb = gb.field_b;
+          jh.field_fb = ResourceArchive.field_b;
           bh.field_b = 97;
           aa.field_a = be.field_i;
           fj.field_Jb = 99;
@@ -104,7 +104,7 @@ final class ec {
           aa.field_a = 96;
           fj.field_Ob = 97;
           ln.field_q = ql.field_c;
-          fj.field_Jb = gb.field_b;
+          fj.field_Jb = ResourceArchive.field_b;
           ha.field_v = be.field_i;
           bh.field_b = m.field_h;
         }
@@ -113,7 +113,7 @@ final class ec {
     final static hm a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         hm var8 = new hm(param7, param5, param6, param0, param4, param1);
         ih.field_x.a(var8, 119);
-        ci.a(param3, 2, var8);
+        MouseInput.a(param3, 2, var8);
         if (!param2) {
           field_d = (byte[]) null;
         }
@@ -148,7 +148,7 @@ final class ec {
           return;
         }
         if (!hk.field_q) {
-          jh.field_fb = gb.field_b;
+          jh.field_fb = ResourceArchive.field_b;
           bh.field_b = 97;
           aa.field_a = be.field_i;
           fj.field_Jb = 99;
@@ -162,7 +162,7 @@ final class ec {
           aa.field_a = 96;
           fj.field_Ob = 97;
           ln.field_q = ql.field_c;
-          fj.field_Jb = gb.field_b;
+          fj.field_Jb = ResourceArchive.field_b;
           ha.field_v = be.field_i;
           bh.field_b = m.field_h;
         }

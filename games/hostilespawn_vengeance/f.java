@@ -71,15 +71,15 @@ final class f implements nn {
           return false;
         }
         if (param0 != 119) {
-          vi var2 = (vi) null;
-          f.a(74, (vi) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          f.a(74, (PacketBuffer) null);
         }
         eh.field_c.a(rc.field_c);
         rc.field_c = null;
         return true;
     }
 
-    final static void a(int param0, vi param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;

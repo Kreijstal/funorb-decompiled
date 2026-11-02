@@ -38,7 +38,7 @@ final class e {
         int var4Lifetime1;
         var6 = HostileSpawn.field_I ? 1 : 0;
         this.field_s = this.field_s + 65536;
-        while (ui.a(65535, q.field_d, this.field_s) >= 65536) {
+        while (DualLinkDeque.a(65535, q.field_d, this.field_s) >= 65536) {
           this.field_v = this.field_v + 1;
           this.field_s = this.field_s - q.field_d;
         }
@@ -541,8 +541,8 @@ final class e {
           cl.field_i.a(-8088, "arialish12") &&
           cl.field_i.a(param0 ^ 8149, "pump32")) {
           im.field_g = qm.a("members_expansion_screen", param0 + 67, "frame", jk.field_c);
-          jm.field_b = ci.a("members_expansion_screen", param0 + 181, "arrow", jk.field_c);
-          mn.field_e = wc.a("arialish12", cl.field_i, 84, jk.field_c, "");
+          jm.field_b = MouseInput.a("members_expansion_screen", param0 + 181, "arrow", jk.field_c);
+          mn.field_e = ArchiveIndex.a("arialish12", cl.field_i, 84, jk.field_c, "");
           ra.field_e = th.a(jk.field_c, 126, "", cl.field_i, "pump32");
           ue.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c, false);
           od.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c, false);

@@ -170,7 +170,7 @@ class le extends cf {
         if (0 == ig.field_L) {
           this.field_W = 0;
         }
-        stackIn_36_1 = (!wc.field_u) && (j.field_c >= si.field_b) && (si.field_l > j.field_c) && (si.field_j <= rb.field_m) && (rb.field_m < si.field_a);
+        stackIn_36_1 = (!ArchiveIndex.field_u) && (j.field_c >= si.field_b) && (si.field_l > j.field_c) && (si.field_j <= rb.field_m) && (rb.field_m < si.field_a);
         this.field_Eb = stackIn_36_1;
         stackIn_41_1 = (this.field_Eb) && (ig.field_L == this.field_W) && (param3);
         this.field_S = stackIn_41_1;
@@ -182,7 +182,7 @@ class le extends cf {
           }
         }
         if (this.field_Eb) {
-          wc.field_u = true;
+          ArchiveIndex.field_u = true;
         }
         if (var12 != 0) {
           ob.field_n = true;
@@ -563,7 +563,7 @@ class le extends cf {
     }
 
     final void a(boolean param0, boolean param1) {
-        wc.field_u = !param0 ? true : false;
+        ArchiveIndex.field_u = !param0 ? true : false;
         ob.field_n = !param0 ? true : false;
         this.a(0, si.field_k, 0, param1, (byte) 48, si.field_e);
     }

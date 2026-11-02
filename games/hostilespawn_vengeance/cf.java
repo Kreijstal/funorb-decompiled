@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class cf extends dk {
+class cf extends DualLinkNode {
     static bd[] field_u;
     static String field_r;
     static bd field_t;
@@ -49,7 +49,7 @@ class cf extends dk {
           ej.field_h = qm.b(1, 7);
           tk.field_a = qm.b(1, 3);
           vd.field_C = qm.b(1, 4);
-          gi.field_h = qm.b(1, 5);
+          IsaacGenerator.field_h = qm.b(1, 5);
           bi.field_h = qm.b(1, 6);
           he.field_t = qm.b(1, 12);
           te.field_J = qm.b(1, 8);
@@ -57,7 +57,7 @@ class cf extends dk {
             sc.a((byte) 118);
           }
           if (wb.field_S <= 0) {
-            ae.a(wd.field_a, 110, gb.field_a);
+            ae.a(wd.field_a, 110, ResourceArchive.field_a);
           }
           return;
         }
@@ -70,7 +70,7 @@ class cf extends dk {
         ej.field_h = qm.b(1, 7);
         tk.field_a = qm.b(1, 3);
         vd.field_C = qm.b(1, 4);
-        gi.field_h = qm.b(1, 5);
+        IsaacGenerator.field_h = qm.b(1, 5);
         bi.field_h = qm.b(1, 6);
         he.field_t = qm.b(1, 12);
         te.field_J = qm.b(1, 8);
@@ -78,7 +78,7 @@ class cf extends dk {
           sc.a((byte) 118);
         }
         if (wb.field_S <= 0) {
-          ae.a(wd.field_a, 110, gb.field_a);
+          ae.a(wd.field_a, 110, ResourceArchive.field_a);
         }
     }
 

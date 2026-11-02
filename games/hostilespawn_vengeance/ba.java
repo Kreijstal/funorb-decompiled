@@ -104,7 +104,7 @@ final class ba extends ag {
     final static void e(byte param0) {
         int var1 = 0;
         int var2 = HostileSpawn.field_I ? 1 : 0;
-        se.field_g = null;
+        GameAppletShell.field_g = null;
         eh.field_e = false;
         if (param0 >= -49) {
           ba.a((byte) 13);
@@ -115,11 +115,11 @@ final class ba extends ag {
           var1 = ca.field_a;
           if (0 < var1) {
             if (1 != var1) {
-              se.field_g = vg.a(new String[]{Integer.toString(var1)}, 52, mk.field_Q);
+              GameAppletShell.field_g = vg.a(new String[]{Integer.toString(var1)}, 52, mk.field_Q);
             } else {
-              se.field_g = vj.field_u;
+              GameAppletShell.field_g = vj.field_u;
             }
-            se.field_g = wg.a((byte) -21, new CharSequence[]{(CharSequence) ((Object) se.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) di.field_a)});
+            GameAppletShell.field_g = wg.a((byte) -21, new CharSequence[]{(CharSequence) ((Object) GameAppletShell.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) di.field_a)});
           }
           jj.field_d.g((byte) 64);
           dc.a((byte) -116);

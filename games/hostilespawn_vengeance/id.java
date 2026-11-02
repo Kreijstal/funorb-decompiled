@@ -292,13 +292,13 @@ final class id implements Serializable {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        vi var10 = null;
+        PacketBuffer var10 = null;
         int var8Lifetime1;
         int var7Lifetime1;
         int var7Lifetime2;
         var9 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var10 = new vi(param1);
+          var10 = new PacketBuffer(param1);
           var4 = var10.l(32270);
           if (param0 <= 81) {
             this.a(-10, 78);

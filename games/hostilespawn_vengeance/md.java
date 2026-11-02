@@ -15,7 +15,7 @@ final class md extends nj {
     static boolean field_i;
     static java.awt.Frame field_n;
 
-    final static String a(String param0, gb param1, String param2, byte param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -88,8 +88,8 @@ final class md extends nj {
             if (null != ig.field_N) {
               ig.field_N.a((byte) -128);
             }
-            if (vc.field_c != null) {
-              vc.field_c.a(3);
+            if (GameCanvas.field_c != null) {
+              GameCanvas.field_c.a(3);
             }
             if (null != mk.field_K) {
               try {

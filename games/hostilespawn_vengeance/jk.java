@@ -6,7 +6,7 @@ import java.util.*;
 final class jk {
     static Random field_b;
     static String field_a;
-    static gb field_c;
+    static ResourceArchive field_c;
 
     final static String a(byte param0, CharSequence param1) {
         int var4 = 0;

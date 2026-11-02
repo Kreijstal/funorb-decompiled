@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd extends tj {
+final class kd extends PcmStream {
     int field_w;
     private boolean field_x;
     private int field_s;
@@ -183,7 +183,7 @@ final class kd extends tj {
             }
             if (10 == var6) {
               var6 = 0;
-              for (var4Lifetime4 = 0; var4Lifetime4 < dk.field_o; var4Lifetime4++) {
+              for (var4Lifetime4 = 0; var4Lifetime4 < DualLinkNode.field_o; var4Lifetime4++) {
                 if (2 > var6) {
                   var7 = vj.field_w[var4Lifetime4];
                   if (var7.field_i >= 49 &&
@@ -536,11 +536,11 @@ final class kd extends tj {
         return stackIn_6_0;
     }
 
-    final tj b() {
+    final PcmStream b() {
         return null;
     }
 
-    final tj d() {
+    final PcmStream d() {
         return null;
     }
 

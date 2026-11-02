@@ -216,7 +216,7 @@ final class vh {
 
     final static void a(byte param0, int param1) {
         int var2_int = 0;
-        am var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         hm var5 = null;
         RuntimeException decompiledCaughtException = null;
@@ -225,7 +225,7 @@ final class vh {
         try {
           var5 = (hm) (ih.field_x.g(-77));
           while (var5 != null) {
-            ci.a(param1, 2, var5);
+            MouseInput.a(param1, 2, var5);
             var5 = (hm) (ih.field_x.a(12684));
           }
           var2_int = 109 / ((param0 + 73) / 52);

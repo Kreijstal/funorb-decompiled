@@ -64,7 +64,7 @@ final class ib {
         }
     }
 
-    final static void a(gb param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1324_0;
             StringBuilder stackIn_1324_1;
@@ -73,10 +73,10 @@ final class ib {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            gb param0;
+            ResourceArchive param0;
             byte param1;
             boolean finished;
-            $CfrPartitionedBody(gb initialParam0, byte initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, byte initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1324_0 = null;
@@ -99,15 +99,15 @@ final class ib {
                 }
                 var2 = mk.b("vengeance_benefits,0", (byte) -121);
                 if (var2 != null) {
-                  ci.field_i[0] = nm.a(126, var2);
+                  MouseInput.field_i[0] = nm.a(126, var2);
                 }
                 var2 = mk.b("vengeance_benefits,1", (byte) -124);
                 if (var2 != null) {
-                  ci.field_i[1] = nm.a(126, var2);
+                  MouseInput.field_i[1] = nm.a(126, var2);
                 }
                 var2 = mk.b("vengeance_benefits,2", (byte) -127);
                 if (var2 != null) {
-                  ci.field_i[2] = nm.a(127, var2);
+                  MouseInput.field_i[2] = nm.a(127, var2);
                 }
                 var2 = mk.b("level_set_kerrus", (byte) -123);
                 if (null != var2) {
@@ -167,7 +167,7 @@ final class ib {
                 }
                 var2 = mk.b("hardmodeunlock", (byte) -127);
                 if (null != var2) {
-                  am.field_a = nm.a(125, var2);
+                  IntrusiveNode.field_a = nm.a(125, var2);
                 }
                 var2 = mk.b("selectfrombelow", (byte) -120);
                 if (null != var2) {
@@ -235,7 +235,7 @@ final class ib {
                 }
                 var2 = mk.b("misdat5", (byte) -124);
                 if (var2 != null) {
-                  jg.field_k = nm.a(124, var2);
+                  KeyboardInput.field_k = nm.a(124, var2);
                 }
                 var2 = mk.b("misdat4", (byte) -119);
                 if (var2 != null) {
@@ -263,7 +263,7 @@ final class ib {
                 }
                 var2 = mk.b("levelscompleted", (byte) -127);
                 if (var2 != null) {
-                  vc.field_f = nm.a(122, var2);
+                  GameCanvas.field_f = nm.a(122, var2);
                 }
                 var2 = mk.b("totalalienskilled", (byte) -120);
                 if (var2 != null) {
@@ -874,7 +874,7 @@ final class ib {
                 }
                 var2 = mk.b("tut0", (byte) -120);
                 if (null != var2) {
-                  am.field_b = nm.a(127, var2);
+                  IntrusiveNode.field_b = nm.a(127, var2);
                 }
                 var2 = mk.b("weaponsbroke", (byte) -121);
                 if (var2 != null) {
@@ -898,7 +898,7 @@ final class ib {
                 }
                 var2 = mk.b("pistolname", (byte) -126);
                 if (null != var2) {
-                  gi.field_m = nm.a(122, var2);
+                  IsaacGenerator.field_m = nm.a(122, var2);
                 }
                 var2 = mk.b("gunname,0", (byte) -127);
                 if (null != var2) {
@@ -1208,7 +1208,7 @@ final class ib {
                 }
                 var2 = mk.b("V5_notice_fence", (byte) -125);
                 if (var2 != null) {
-                  vi.field_o = nm.a(122, var2);
+                  PacketBuffer.field_o = nm.a(122, var2);
                 }
                 var2 = mk.b("V5_notice_turrets", (byte) -124);
                 if (null != var2) {
@@ -1256,7 +1256,7 @@ final class ib {
                 }
                 var2 = mk.b("V6_rockets_good", (byte) -128);
                 if (null != var2) {
-                  ui.field_f = nm.a(126, var2);
+                  DualLinkDeque.field_f = nm.a(126, var2);
                 }
                 var2 = mk.b("V6_rockets_bad", (byte) -119);
                 if (var2 != null) {
@@ -1328,7 +1328,7 @@ final class ib {
                 }
                 var2 = mk.b("oV10_killqueen", (byte) -123);
                 if (null != var2) {
-                  en.field_v = nm.a(122, var2);
+                  CipherPacketBuffer.field_v = nm.a(122, var2);
                 }
                 var2 = mk.b("oV10_escape", (byte) -123);
                 if (null != var2) {
@@ -1340,7 +1340,7 @@ final class ib {
                 }
                 var2 = mk.b("chargesplantedcolon", (byte) -124);
                 if (null != var2) {
-                  jg.field_a = nm.a(126, var2);
+                  KeyboardInput.field_a = nm.a(126, var2);
                 }
                 var2 = mk.b("findthe_txt", (byte) -122);
                 if (null != var2) {
@@ -1516,7 +1516,7 @@ final class ib {
                 }
                 var2 = mk.b("keycode_s", (byte) -121);
                 if (null != var2) {
-                  gb.field_b = var2[0] & 255;
+                  ResourceArchive.field_b = var2[0] & 255;
                 }
                 var2 = mk.b("keycode_d", (byte) -120);
                 if (var2 != null) {
@@ -1631,7 +1631,7 @@ final class ib {
                   }
                   throw wg.a((Throwable) ((Object) stackIn_1324_0), ((StringBuilder) (Object) stackIn_1324_1).append(stackIn_1325_2).append(',').append(param1).append(')').toString());
                 }
-                if (se.field_f) {
+                if (GameAppletShell.field_f) {
                   HostileSpawn.field_I = (var3 == 0);
                 }
             }

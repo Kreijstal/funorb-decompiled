@@ -13,14 +13,14 @@ final class lb {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        en var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         hm var12 = null;
         ri var13 = null;
-        en var14 = null;
+        CipherPacketBuffer var14 = null;
         ri var15 = null;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
@@ -35,9 +35,9 @@ final class lb {
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((vi) ((Object) var5)).l(32270);
+            var6 = ((PacketBuffer) ((Object) var5)).l(32270);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((vi) ((Object) var5)).d(8195);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).d(8195);
             }
             var13 = (ri) (ei.field_h.g(-63));
             if (var13 == null) {
@@ -91,10 +91,10 @@ final class lb {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
-        vi stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
-        vi stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         String stackIn_18_2 = null;
         int stackIn_36_0 = 0;
@@ -182,7 +182,7 @@ final class lb {
               } else {
                 stackIn_15_2 = "";
               }
-              ((vi) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
               stackIn_17_0 = ob.field_s;
               stackIn_17_1 = 36;
               if (param4.a((byte) -80)) {
@@ -190,7 +190,7 @@ final class lb {
               } else {
                 stackIn_18_2 = "";
               }
-              ((vi) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
               s.field_b.d(86, 16);
               s.field_b.field_i = s.field_b.field_i + 1;
               var9 = s.field_b.field_i;
@@ -250,7 +250,7 @@ final class lb {
             if (255 == wa.field_k) {
               var9_ref_String = sc.field_g.a((byte) 28);
               if (var9_ref_String != null) {
-                gb.a((byte) 98, bn.c(-1), var9_ref_String);
+                ResourceArchive.a((byte) 98, bn.c(-1), var9_ref_String);
               }
             } else {
               km.field_x = sc.field_g.o(32);

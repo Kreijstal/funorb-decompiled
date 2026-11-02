@@ -21,7 +21,7 @@ class dg extends me implements qk {
         }
         this.field_F = false;
         if (this.field_kb) {
-          ed.b(0);
+          IntrusiveNodeHashTable.b(0);
           return;
         }
         if (!this.field_pb) {
@@ -91,13 +91,13 @@ class dg extends me implements qk {
         this.field_ob.a(2121792, 4210752, -1);
         qi var2 = new qi(this, this.field_lb, id.field_l);
         if (param0 < -33) {
-          var2.a(22770, 15, ui.field_h);
+          var2.a(22770, 15, DualLinkDeque.field_h);
           this.b(var2, (byte) 110);
           return;
         }
         String var3 = (String) null;
         this.a(117, -124, (String) null);
-        var2.a(22770, 15, ui.field_h);
+        var2.a(22770, 15, DualLinkDeque.field_h);
         this.b(var2, (byte) 110);
     }
 
@@ -179,7 +179,7 @@ class dg extends me implements qk {
           if (param0 != 3) {
             if (param0 != 4) {
               if (param0 == 6) {
-                var6.a(param1 + 22753, 9, wc.field_k);
+                var6.a(param1 + 22753, 9, ArchiveIndex.field_k);
               } else {
                 if (param0 != 9) {
                   this.b(var6, (byte) 110);

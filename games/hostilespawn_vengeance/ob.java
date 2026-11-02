@@ -24,7 +24,7 @@ final class ob extends ql {
     private int field_f;
     private v field_w;
     private oc field_j;
-    static vi field_s;
+    static PacketBuffer field_s;
     static bd field_C;
     private oc field_G;
     static boolean field_n;
@@ -138,7 +138,7 @@ final class ob extends ql {
 
     final static int c(byte param0) {
         if (param0 > -19) {
-          field_s = (vi) null;
+          field_s = (PacketBuffer) null;
           return 1;
         }
         return 1;
@@ -229,7 +229,7 @@ final class ob extends ql {
         this.field_q.field_l = -this.field_q.field_m + (this.field_F.field_e - 3) * 24;
         this.field_v = new v(u.field_b, 24 * this.field_j.field_e - 24, 48 + this.field_j.field_g * 24);
         this.field_m = new v(bj.field_h, this.field_z.field_e * 24, -96 + this.field_z.field_g * 24 - 30);
-        this.field_t = new v(ui.field_f, 0, this.field_u.field_g * 24);
+        this.field_t = new v(DualLinkDeque.field_f, 0, this.field_u.field_g * 24);
         this.field_t.field_l = 48 + 24 * this.field_u.field_e;
         this.field_p = new v(m.field_p, 0, this.field_u.field_g * 24);
         this.field_p.field_l = (2 + this.field_u.field_e) * 24;
@@ -325,7 +325,7 @@ final class ob extends ql {
     }
 
     static {
-        field_s = new vi(256);
+        field_s = new PacketBuffer(256);
         field_e = new int[]{24, 27, 5};
         field_E = "Achievements";
     }

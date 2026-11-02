@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends am {
+final class ne extends IntrusiveNode {
     static vh field_j;
     int field_l;
     static int field_o;
@@ -14,7 +14,7 @@ final class ne extends am {
     static String field_p;
     int field_r;
 
-    final static bd[] a(int param0, gb param1, int param2, int param3) {
+    final static bd[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         bd[] stackIn_5_0 = null;
         bd[] stackIn_7_0 = null;
@@ -154,7 +154,7 @@ final class ne extends am {
         field_j = null;
     }
 
-    final static nf a(gb param0, int param1, int param2) {
+    final static nf a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

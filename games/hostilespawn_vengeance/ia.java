@@ -194,7 +194,7 @@ final class ia {
               if (param0.field_i != 35 &&
                 param0.field_e < 40 &&
                 var11 < eh.field_g) {
-                ci.a(-var11 + eh.field_g, 125);
+                MouseInput.a(-var11 + eh.field_g, 125);
               }
             }
           }

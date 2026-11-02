@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class m extends am {
+final class m extends IntrusiveNode {
     static bm field_n;
     static String field_j;
     static String field_r;
@@ -48,11 +48,11 @@ final class m extends am {
           RuntimeException var15_ref = null;
           String var16 = null;
           try {
-            sc.field_g = new en(param7);
-            s.field_b = new en(param4);
+            sc.field_g = new CipherPacketBuffer(param7);
+            s.field_b = new CipherPacketBuffer(param4);
             fh.field_b = param8;
             uj.field_k = param2;
-            vi.field_l = param9;
+            PacketBuffer.field_l = param9;
             uc.field_d = param10;
             if (param11 >= -22) {
               var16 = (String) null;
@@ -63,7 +63,7 @@ final class m extends am {
             og.field_c = param0;
             rl.field_b = param5;
             ea.field_c = param6;
-            wc.field_g = param13;
+            ArchiveIndex.field_g = param13;
             sd.field_u = param1;
             if (uj.field_k.field_q != null) {
               try {

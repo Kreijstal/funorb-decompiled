@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends java.awt.Canvas {
+final class GameCanvas extends java.awt.Canvas {
     static int[] field_i;
     static bd field_k;
     private java.awt.Component field_l;
     static String field_j;
     static int field_e;
     static int field_g;
-    static gb field_d;
+    static ResourceArchive field_d;
     static String field_f;
     static bd field_h;
     static dh field_c;
@@ -259,7 +259,7 @@ final class vc extends java.awt.Canvas {
         field_f = null;
         field_k = null;
         if (param0 < 3) {
-          vc.a(-49);
+          GameCanvas.a(-49);
         }
         field_h = null;
         field_j = null;
@@ -268,7 +268,7 @@ final class vc extends java.awt.Canvas {
         field_c = null;
     }
 
-    vc(java.awt.Component param0) {
+    GameCanvas(java.awt.Component param0) {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

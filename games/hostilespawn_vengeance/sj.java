@@ -45,7 +45,7 @@ final class sj {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          vi var2 = null;
+          PacketBuffer var2 = null;
           if (ig.field_N.field_k >= 4) {
             if (ig.field_N.field_e == -1) {
               return 3;
@@ -74,7 +74,7 @@ final class sj {
             }
             if (ce.field_e == 2) {
               be.field_g = new td((java.net.Socket) (db.field_o.field_c), jj.field_k);
-              var2 = new vi(13);
+              var2 = new PacketBuffer(13);
               hm.a(ab.field_c, mm.field_s, var2, nj.field_a, 4122);
               var2.d(87, 15);
               var2.b(ik.field_a, 25251);
@@ -134,13 +134,13 @@ final class sj {
           var2 = bb.field_e;
           if (bm.field_c == 1) {
             var2 = ua.field_f;
-            var1 = en.field_u;
+            var1 = CipherPacketBuffer.field_u;
           }
           if (ii.b((byte) 30)) {
             var1 = bb.field_b;
           }
           ha.field_w.field_F.a(param0, (byte) 123, var1);
-          ha.field_w.field_C.a(true, (byte) 123, uk.field_d);
+          ha.field_w.field_C.a(true, (byte) 123, ArchiveProvider.field_d);
           ha.field_w.field_B = var2;
           ha.field_w.field_n.a(true, (byte) 12, var2);
           if (null == q.field_g) {

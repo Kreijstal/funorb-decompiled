@@ -10,15 +10,15 @@ final class hn {
 
     final synchronized static long a(byte param0) {
         long var1 = System.currentTimeMillis();
-        if (gb.field_e > var1) {
-          td.field_c = td.field_c + (-var1 + gb.field_e);
-          gb.field_e = var1;
+        if (ResourceArchive.field_e > var1) {
+          td.field_c = td.field_c + (-var1 + ResourceArchive.field_e);
+          ResourceArchive.field_e = var1;
           if (param0 == 80) {
             return var1 + td.field_c;
           }
           return 95L;
         }
-        gb.field_e = var1;
+        ResourceArchive.field_e = var1;
         if (param0 == 80) {
           return var1 + td.field_c;
         }

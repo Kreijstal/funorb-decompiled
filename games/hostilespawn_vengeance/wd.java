@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd {
-    static gb field_a;
+    static ResourceArchive field_a;
     static bd field_b;
 
     public static void a(byte param0) {
@@ -28,7 +28,7 @@ final class wd {
         int var7 = 0;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (ci.field_d != rc.field_a) {
+          if (MouseInput.field_d != rc.field_a) {
             return false;
           }
           var2_long = hn.a((byte) 80);

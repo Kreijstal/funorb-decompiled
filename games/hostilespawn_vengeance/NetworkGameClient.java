@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class d extends se {
+abstract class NetworkGameClient extends GameAppletShell {
     private boolean field_z;
     private boolean field_r;
     private int field_p;
@@ -84,7 +84,7 @@ abstract class d extends se {
           hh.a(nl.field_c, this.field_v, gf.field_b, this.field_p, this.field_o, this.field_q, this.field_m, param3, -1);
           rb.e(-2);
           h.field_b = ti.b((byte) -55);
-          ea.a(se.field_h, 0);
+          ea.a(GameAppletShell.field_h, 0);
           nm.field_i = param6;
           ck.field_e = param4;
           tb.field_P = param7;
@@ -172,7 +172,7 @@ abstract class d extends se {
         int var4 = -1 + jd.field_q;
         byte[] var5 = new byte[var4];
         sc.field_g.a(0, var4, var5, (byte) 82);
-        wc.a(bn.c(-1), nm.a(125, var5), (byte) -97, var3 != 0);
+        ArchiveIndex.a(bn.c(-1), nm.a(125, var5), (byte) -97, var3 != 0);
     }
 
     private final void a(int param0, String param1, int param2, int param3, byte param4) {
@@ -264,7 +264,7 @@ abstract class d extends se {
     private final void f(byte param0) {
         mk.field_O[5] = true;
         if (param0 != 97) {
-          d.g((byte) -39);
+          NetworkGameClient.g((byte) -39);
         }
     }
 
@@ -278,7 +278,7 @@ abstract class d extends se {
           int var8 = 0;
           String var9 = null;
           Boolean var10 = null;
-          vi var11 = null;
+          PacketBuffer var11 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = HostileSpawn.field_I ? 1 : 0;
@@ -330,7 +330,7 @@ abstract class d extends se {
             }
           }
           if (var4 == 4) {
-            if (wc.field_g) {
+            if (ArchiveIndex.field_g) {
               aa.a(bn.c(-1), 2429);
             } else {
               md.field_k = true;
@@ -412,7 +412,7 @@ abstract class d extends se {
         } else {
           if (pb.field_Kb < 10) {
           } else {
-            if (!uk.a(27301)) {
+            if (!ArchiveProvider.a(27301)) {
               qa.a(true);
             } else {
               if (0 != fa.field_c) {
@@ -498,7 +498,7 @@ abstract class d extends se {
                 }
               }
             } else {
-              vi.k(64);
+              PacketBuffer.k(64);
             }
           }
           return;
@@ -547,7 +547,7 @@ abstract class d extends se {
           ie.field_c.a(true);
         }
         sb.a(-113);
-        se.b(false);
+        GameAppletShell.b(false);
         if (!cm.b((byte) -97) &&
           11 != fa.field_c) {
           vf.j(param1 - 9769);
@@ -599,7 +599,7 @@ abstract class d extends se {
                       la.a(256, qb.field_m, (byte) 48);
                     }
                   } else {
-                    la.a(256, jg.field_g, (byte) 84);
+                    la.a(256, KeyboardInput.field_g, (byte) 84);
                   }
                 } else {
                   la.a(256, kd.field_A, (byte) 48);
@@ -653,29 +653,29 @@ abstract class d extends se {
         }
         if (pb.field_Kb == 1) {
           if (nl.field_c != 0) {
-            vc.field_d = qm.b(1, tb.field_P);
+            GameCanvas.field_d = qm.b(1, tb.field_P);
           }
           im.field_c = nj.a(param1 ^ 9811, ck.field_e, true, false, 1);
           mb.field_m = nj.a(96, uh.field_k, true, false, 1);
           ll.field_b = nj.a(114, nm.field_i, true, false, 1);
           wd.field_a = im.field_c;
-          gb.field_a = mb.field_m;
+          ResourceArchive.field_a = mb.field_m;
           pb.field_Kb = 2;
         }
         if (pb.field_Kb == 2) {
-          if (vc.field_d != null &&
-            vc.field_d.a(-15879)) {
-            if (vc.field_d.a("", (byte) 124)) {
-              if (vc.field_d.a(param1 ^ -14784, "")) {
-                dl.a(param1 - 9839, vc.field_d);
-                vc.field_d = null;
+          if (GameCanvas.field_d != null &&
+            GameCanvas.field_d.a(-15879)) {
+            if (GameCanvas.field_d.a("", (byte) 124)) {
+              if (GameCanvas.field_d.a(param1 ^ -14784, "")) {
+                dl.a(param1 - 9839, GameCanvas.field_d);
+                GameCanvas.field_d = null;
                 ql.f(param1 ^ 14668);
               }
             } else {
-              vc.field_d = null;
+              GameCanvas.field_d = null;
             }
           }
-          if (vc.field_d == null) {
+          if (GameCanvas.field_d == null) {
             pb.field_Kb = 3;
           }
         }
@@ -686,7 +686,7 @@ abstract class d extends se {
           ni.c(-30074);
           wi.field_c = l.field_e;
           ka.field_r = false;
-          lc.a(wc.field_g, ll.field_b, im.field_c, 12789, mb.field_m);
+          lc.a(ArchiveIndex.field_g, ll.field_b, im.field_c, 12789, mb.field_m);
           if (rd.field_d ||
             ti.field_d != null) {
             stackIn_102_0 = !(rd.field_d);
@@ -694,13 +694,13 @@ abstract class d extends se {
             ac.a(stackIn_102_0, stackIn_105_1, -1, ti.field_d);
           }
           if (kj.field_b) {
-            ci.a(-1);
+            MouseInput.a(-1);
           }
           if (hf.field_c == null) {
             hf.field_c = wj.e((byte) -98);
-            vc.field_b = uj.e(1);
+            GameCanvas.field_b = uj.e(1);
           }
-          nm.a(vc.field_b, ll.field_b, param1 - 9887, hf.field_c);
+          nm.a(GameCanvas.field_b, ll.field_b, param1 - 9887, hf.field_c);
           mb.field_m = null;
           im.field_c = null;
           ll.field_b = null;
@@ -743,9 +743,9 @@ abstract class d extends se {
         }
         if (!param0 &&
           ih.field_s) {
-          v.a(82, se.field_h);
+          v.a(82, GameAppletShell.field_h);
           this.b(-67);
-          ea.a(se.field_h, 0);
+          ea.a(GameAppletShell.field_h, 0);
         }
         if (mk.field_O[8]) {
           vk.c(8);
@@ -765,7 +765,7 @@ abstract class d extends se {
         }
     }
 
-    protected d() {
+    protected NetworkGameClient() {
     }
 
     static {

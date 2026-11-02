@@ -92,7 +92,7 @@ final class mc extends vd implements qk {
             while (var7 < var3_int) {
               this.field_M[var7] = new ph(this.field_H[var7], (mh) (this));
               this.field_M[var7].field_h = (nn) ((Object) var4);
-              this.field_M[var7].field_i = uk.field_b;
+              this.field_M[var7].field_i = ArchiveProvider.field_b;
               this.field_M[var7].a(80, 20 + 16 * var7, 0, 0, 15);
               this.a(51448, this.field_M[var7]);
               var7++;

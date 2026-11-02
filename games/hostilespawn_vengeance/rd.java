@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rd {
-    private gb field_f;
+    private ResourceArchive field_f;
     static bd field_a;
     static boolean field_d;
-    private gb field_c;
+    private ResourceArchive field_c;
     static String field_g;
     static int field_h;
     private jm field_b;
@@ -617,7 +617,7 @@ final class rd {
         }
     }
 
-    rd(gb param0, gb param1) {
+    rd(ResourceArchive param0, ResourceArchive param1) {
         this.field_b = new jm(256);
         this.field_e = new jm(256);
         try {

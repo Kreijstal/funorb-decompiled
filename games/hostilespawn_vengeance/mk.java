@@ -287,7 +287,7 @@ final class mk extends vd implements nk, qk, kn {
         int var1 = 1;
         this.field_G = new vf("", (mh) null, var1 != 0);
         this.field_S = new ph(ri.field_i, (mh) null);
-        this.field_R = new ph(dk.field_l, (mh) null);
+        this.field_R = new ph(DualLinkNode.field_l, (mh) null);
         this.field_P.field_i = u.field_g;
         this.field_M.field_i = ul.field_M;
         this.field_N.field_i = db.field_u;
@@ -327,8 +327,8 @@ final class mk extends vd implements nk, qk, kn {
         cn var5 = new cn(jd.field_s, 0, 0, 0, 0, 16777215, -1, 0, 0, jd.field_s.field_y, -1, 2147483647, true);
         this.field_T = new cj(var2, var5);
         this.field_T.field_i = "";
-        this.field_T.a(-1, jg.field_e, 0);
-        this.field_T.a(-1, jg.field_e, 1);
+        this.field_T.a(-1, KeyboardInput.field_e, 0);
+        this.field_T.a(-1, KeyboardInput.field_e, 1);
         this.field_T.field_p = (mh) (this);
         this.field_T.a(true, -90 + this.field_s, 46, var3);
         var3 = var3 + (15 + this.field_T.field_x);

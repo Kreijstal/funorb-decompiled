@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ji extends am {
+final class ji extends IntrusiveNode {
     jm field_i;
     byte[] field_h;
 
@@ -106,19 +106,19 @@ final class ji extends am {
         }
     }
 
-    final static ji a(gb param0, String param1, String param2) {
+    final static ji a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, 0);
         if (var3 == null) {
           return null;
         }
-        return new ji(new vi(var3));
+        return new ji(new PacketBuffer(var3));
     }
 
     final void a() {
         this.field_i = null;
     }
 
-    private ji(vi param0) {
+    private ji(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -147,7 +147,7 @@ final class ji extends am {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        vi stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_84_1 = 0;
         int stackIn_85_2 = 0;
         int stackIn_91_0 = 0;
@@ -200,7 +200,7 @@ final class ji extends am {
         int var48;
         int var49;
         int var50;
-        vi var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -421,7 +421,7 @@ final class ji extends am {
         var50 = param0.field_i;
         param0.field_i = param0.field_i + var5 * 3;
         this.field_h = new byte[var4];
-        var51 = new vi(this.field_h);
+        var51 = new PacketBuffer(this.field_h);
         var51.b(1297377380, 25251);
         var51.b(6, 25251);
         stackIn_84_0 = var51;
@@ -431,7 +431,7 @@ final class ji extends am {
         } else {
           stackIn_85_2 = 1;
         }
-        ((vi) (Object) stackIn_84_0).a((byte) stackIn_84_1, stackIn_85_2);
+        ((PacketBuffer) (Object) stackIn_84_0).a((byte) stackIn_84_1, stackIn_85_2);
         var51.a((byte) -121, var2);
         var51.a((byte) -118, var3);
         param0.field_i = var13Lifetime1;

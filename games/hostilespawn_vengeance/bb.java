@@ -6,7 +6,7 @@ final class bb {
     static ji field_b;
     static bd field_a;
     static long field_c;
-    static vi field_f;
+    static PacketBuffer field_f;
     static ji field_e;
 
     final static String b(byte param0) {

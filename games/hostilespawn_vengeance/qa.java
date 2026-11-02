@@ -38,7 +38,7 @@ final class qa {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = bf.field_d[ua.a((int) var21[var6], 255)];
             }
-            var1[var2] = new bd(ra.field_a, vc.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var22);
+            var1[var2] = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var22);
           } else {
             var15 = vh.field_a[var2];
             var11 = var15;
@@ -50,7 +50,7 @@ final class qa {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ll.a(ua.a(-16777216, var15[var7] << 24), bf.field_d[ua.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (bd) ((Object) new gk(ra.field_a, vc.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
+            var1[var2] = (bd) ((Object) new gk(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
           }
         }
         if (param0 != 26627) {
@@ -212,13 +212,13 @@ final class qa {
               } else {
                 eh.a(var8, var9, var21, var22, var23, var24);
               }
-              L14: {
+              regionExit1: {
                 if (var19 >= 0 &&
                   ak.field_b[var19].field_a > 0) {
                   if (r.field_a != 0) {
-                    break L14;
+                    break regionExit1;
                   }
-                  break L14;
+                  break regionExit1;
                 }
                 if (!var13[var7_int] &&
                   rl.field_c >= 0 &&
@@ -234,10 +234,10 @@ final class qa {
                     0 == var12[var7_int + 1 - param5] &&
                     0 == var12[var7_int + param5 - 1] &&
                     var12[-param5 + 1 + var7_int] == 0)) {
-                    break L14;
+                    break regionExit1;
                   }
                   if (var18 != 0) {
-                    break L14;
+                    break regionExit1;
                   }
                   stackIn_72_0 = (var12[-param5 + (-1 + var7_int)] != 0) ? -25 : 25;
                   var25Lifetime1 = stackIn_72_0;
@@ -305,7 +305,7 @@ final class qa {
                       }
                     }
                   }
-                  break L14;
+                  break regionExit1;
                 }
                 if (var21 == 0 &&
                   var22 == 0 &&

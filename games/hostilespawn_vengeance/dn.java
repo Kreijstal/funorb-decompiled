@@ -6,12 +6,12 @@ final class dn {
     static bd field_h;
     static int field_b;
     static int field_a;
-    private ed field_e;
+    private IntrusiveNodeHashTable field_e;
     private int field_c;
     private int field_f;
     static int field_j;
     static String field_g;
-    private ui field_d;
+    private DualLinkDeque field_d;
 
     private final void a(int param0, int param1, Object param2, long param3) {
         lj var9 = null;

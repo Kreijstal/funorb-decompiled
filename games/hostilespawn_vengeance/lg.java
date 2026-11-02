@@ -55,7 +55,7 @@ final class lg extends in {
         oj var14 = null;
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
-          for (var4_int = param1; var4_int < dk.field_o; var4_int++) {
+          for (var4_int = param1; var4_int < DualLinkNode.field_o; var4_int++) {
             var13 = vj.field_w[var4_int];
             if (var13 != null &&
               var13.c(0) == param2) {
@@ -88,7 +88,7 @@ final class lg extends in {
                       if (var13.field_I <= 0) {
                         stackIn_17_0 = v.field_j;
                       } else {
-                        stackIn_17_0 = ci.field_b;
+                        stackIn_17_0 = MouseInput.field_b;
                       }
                       ((bd) (Object) stackIn_17_0).a(true, 128, (int)var13.field_c, var5 - 8, var6 - 8);
                     }
@@ -191,7 +191,7 @@ final class lg extends in {
                   if (var14.field_I <= 0) {
                     stackIn_104_0 = v.field_j;
                   } else {
-                    stackIn_104_0 = ci.field_b;
+                    stackIn_104_0 = MouseInput.field_b;
                   }
                   ((bd) (Object) stackIn_104_0).a(true, 128, (int)var14.field_c, -8 + var5, -8 + var6);
                 }

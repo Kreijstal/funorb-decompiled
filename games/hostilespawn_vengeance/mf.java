@@ -28,7 +28,7 @@ final class mf {
             if (q.field_g != null) {
               q.field_g.c(0);
             }
-            L4: {
+            regionExit1: {
               if (bm.field_c == 0 &&
                 hh.field_d == rl.field_c) {
                 var2_int = rl.field_c;
@@ -42,32 +42,32 @@ final class mf {
                   case 4:
                     ti.a(244, (byte) -115, 11);
                     if (var3 == 0) {
-                      break L4;
+                      break regionExit1;
                     }
                   case 5:
                     ti.a(243, (byte) 22, 12);
                     if (var3 == 0) {
-                      break L4;
+                      break regionExit1;
                     }
                   case 6:
                     ti.a(242, (byte) 126, 13);
                     if (var3 == 0) {
-                      break L4;
+                      break regionExit1;
                     }
                   case 7:
                     ti.a(241, (byte) -120, 14);
                     if (var3 == 0) {
-                      break L4;
+                      break regionExit1;
                     }
                   case 8:
                     ti.a(240, (byte) 17, 15);
                     if (var3 == 0) {
-                      break L4;
+                      break regionExit1;
                     }
                   case 9:
                     break;
                   default:
-                    break L4;
+                    break regionExit1;
                 }
                 ti.a(239, (byte) -122, 16);
               }
@@ -237,7 +237,7 @@ final class mf {
           }
           var2_int = 0;
           var3 = param1.length();
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var3 > var2_int) {
               stackOut_6_0 = rg.a((byte) -109, param1.charAt(var2_int));
@@ -248,7 +248,7 @@ final class mf {
                   stackOut_15_0 = rg.a((byte) -109, param1.charAt(var3 - 1));
                   stackIn_25_0 = stackOut_15_0 ? 1 : 0;
                   stackIn_16_0 = stackOut_15_0;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -269,7 +269,7 @@ final class mf {
                 stackIn_25_0 = stackOut_15_0Lifetime1 ? 1 : 0;
                 stackIn_16_0Lifetime1 = stackOut_15_0Lifetime1;
                 if (var9 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (!stackIn_16_0Lifetime1) {
                   break;

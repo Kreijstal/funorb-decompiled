@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends tj {
+final class b extends PcmStream {
     private int field_w;
     private int field_r;
     private boolean field_p;
@@ -461,7 +461,7 @@ final class b extends tj {
         return param4 >> 1;
     }
 
-    final tj d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -800,7 +800,7 @@ final class b extends tj {
         return param5 >> 1;
     }
 
-    final tj b() {
+    final PcmStream b() {
         return null;
     }
 

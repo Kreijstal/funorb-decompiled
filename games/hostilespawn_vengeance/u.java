@@ -39,10 +39,10 @@ final class u {
           if (!q.field_g.a((byte) -117)) {
             qj.a(-114, param2, param0, param1);
             t.c(param3 - 19706);
-            if (null != vi.field_p[0] &&
-              8 == vi.field_p[0].field_i &&
-              vi.field_p[0].field_I > 0) {
-              if (!vi.field_p[0].field_n) {
+            if (null != PacketBuffer.field_p[0] &&
+              8 == PacketBuffer.field_p[0].field_i &&
+              PacketBuffer.field_p[0].field_I > 0) {
+              if (!PacketBuffer.field_p[0].field_n) {
                 nl.field_b = 180;
               } else {
                 nl.field_b = 256;

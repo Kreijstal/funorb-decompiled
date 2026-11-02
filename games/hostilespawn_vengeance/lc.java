@@ -45,7 +45,7 @@ final class lc {
               eh.field_c.a(lm.field_A[17], 100, uh.field_i);
             }
             boolean decompiledFrameCompleted0 = true;
-            am.a(param0.field_j.b(-4), (byte) 125);
+            IntrusiveNode.a(param0.field_j.b(-4), (byte) 125);
             var3 = ln.field_a.field_g[param0.field_j.b(-4)];
             if (var3 > 0) {
               var4 = 0;
@@ -99,7 +99,7 @@ final class lc {
         }
     }
 
-    final static void a(boolean param0, gb param1, gb param2, int param3, gb param4) {
+    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

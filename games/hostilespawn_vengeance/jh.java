@@ -20,7 +20,7 @@ final class jh extends wb implements qk {
         try {
           var5 = (cl) (ne.field_q.g(-101));
           while (var5 != null) {
-            dk.a(var5, param0, 10);
+            DualLinkNode.a(var5, param0, 10);
             var5 = (cl) (ne.field_q.a(12684));
           }
           if (param1 >= -82) {
@@ -39,13 +39,13 @@ final class jh extends wb implements qk {
         try {
           ih.field_x.a(param2, 98);
           int var3_int = -116 / ((param0 - 59) / 53);
-          ci.a(param1, 2, param2);
+          MouseInput.a(param1, 2, param2);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "jh.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(int param0, gb param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -116,9 +116,9 @@ final class jh extends wb implements qk {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        gb var16 = null;
-        vi var17 = null;
-        vi var18 = null;
+        ResourceArchive var16 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -130,7 +130,7 @@ final class jh extends wb implements qk {
         int var4Lifetime5;
         var15 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var17 = new vi(param1);
+          var17 = new PacketBuffer(param1);
           var18 = var17;
           var18.field_i = param1.length - 2;
           sc.field_c = var18.e(8);
@@ -140,14 +140,14 @@ final class jh extends wb implements qk {
           hd.field_r = new int[sc.field_c];
           sf.field_X = new int[sc.field_c];
           if (param0 != -26869) {
-            var16 = (gb) null;
-            jh.a(-126, (gb) null);
+            var16 = (ResourceArchive) null;
+            jh.a(-126, (ResourceArchive) null);
           }
           nh.field_O = new int[sc.field_c];
           qj.field_k = new boolean[sc.field_c];
           var18.field_i = -(sc.field_c * 8) + (-7 + param1.length);
           ra.field_a = var18.e(param0 + 26877);
-          vc.field_e = var18.e(8);
+          GameCanvas.field_e = var18.e(8);
           var3 = 1 + (255 & var18.l(32270));
           for (var4 = 0; sc.field_c > var4; var4++) {
             th.field_Jb[var4] = var17.e(bm.a(param0, -26877));
@@ -370,7 +370,7 @@ final class jh extends wb implements qk {
           var4.field_m = 50;
           var4.field_h = (nn) ((Object) new cn(jn.field_G, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(51448, var4);
-          this.field_gb = this.a((mh) (this), gi.field_n, (byte) 50);
+          this.field_gb = this.a((mh) (this), IsaacGenerator.field_n, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

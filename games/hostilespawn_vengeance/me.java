@@ -81,7 +81,7 @@ abstract class me extends wb {
     final static boolean a(boolean param0, int param1) {
         try {
           long dupTemp$1 = 0L;
-          en var2 = null;
+          CipherPacketBuffer var2 = null;
           IOException var2_ref = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
@@ -418,7 +418,7 @@ abstract class me extends wb {
             qm.field_R = param1;
             var3 = 15;
             if (null == wa.field_q) {
-              stackIn_6_0 = se.field_h;
+              stackIn_6_0 = GameAppletShell.field_h;
             } else {
               stackIn_6_0 = wa.field_q;
             }

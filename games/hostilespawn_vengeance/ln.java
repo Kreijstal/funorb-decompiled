@@ -36,8 +36,8 @@ final class ln {
         try {
           he.field_s[0] = jk.field_b.nextInt();
           he.field_s[1] = jk.field_b.nextInt();
-          he.field_s[3] = (int)d.field_y;
-          he.field_s[2] = (int)(d.field_y >> 32);
+          he.field_s[3] = (int)NetworkGameClient.field_y;
+          he.field_s[2] = (int)(NetworkGameClient.field_y >> 32);
           ob.field_s.field_i = 0;
           ob.field_s.b(he.field_s[0], param1 ^ -25324);
           ob.field_s.b(he.field_s[1], param1 ^ -25324);
@@ -58,9 +58,9 @@ final class ln {
           s.field_b.field_i = s.field_b.field_i + 2;
           var5_int = s.field_b.field_i;
           s.field_b.b(le.field_bb, 25251);
-          s.field_b.b(9201, vi.field_l);
+          s.field_b.b(9201, PacketBuffer.field_l);
           var6 = 0;
-          if (wc.field_g) {
+          if (ArchiveIndex.field_g) {
             var6 = var6 | 1;
           }
           if (sd.field_u) {
@@ -114,7 +114,7 @@ final class ln {
         field_j = null;
     }
 
-    final static void a(en param0, byte param1) {
+    final static void a(CipherPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -327,7 +327,7 @@ final class ln {
     final int a(boolean param0) {
         if (!this.field_n && (this.field_f != 2 ||
           this.field_k <= 0)) {
-          if (~d.field_n == ~this.field_d) {
+          if (~NetworkGameClient.field_n == ~this.field_d) {
             return 1;
           }
           if (param0) {
@@ -352,7 +352,7 @@ final class ln {
         this.field_s = md.field_f;
         this.field_f = lb.field_b;
         this.field_k = ja.field_c;
-        this.field_i = jg.field_c;
+        this.field_i = KeyboardInput.field_c;
         this.field_d = pm.field_c;
         this.field_e = qa.field_e;
         this.field_n = pk.field_k;

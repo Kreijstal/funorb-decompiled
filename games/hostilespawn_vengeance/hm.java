@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends am {
+final class hm extends IntrusiveNode {
     int field_m;
     int field_p;
     static bd field_l;
@@ -202,7 +202,7 @@ final class hm extends am {
         this.field_m = param0;
     }
 
-    final static void a(int param0, int param1, vi param2, int param3, int param4) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
           param2.d(param4 - 4023, 12);
           param2.a((byte) -113, 17);

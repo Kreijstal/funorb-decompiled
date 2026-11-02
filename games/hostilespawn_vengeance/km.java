@@ -57,7 +57,7 @@ final class km extends sd {
     }
 
     final static void a(de param0, int param1, int param2) {
-        en var3 = null;
+        CipherPacketBuffer var3 = null;
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -102,7 +102,7 @@ final class km extends sd {
     final static void a(String param0, boolean param1, float param2, byte param3) {
         try {
           if (null == hj.field_t) {
-            hj.field_t = new pe(im.field_e, se.field_g);
+            hj.field_t = new pe(im.field_e, GameAppletShell.field_g);
             im.field_e.c(hj.field_t, 98);
           }
           hj.field_t.a(param2, param1, 127, param0);
@@ -206,7 +206,7 @@ final class km extends sd {
               var22 = var20 - ni.field_f;
               var23 = var18 + var11_int * var21 >> 2;
               if ((param0 != 0 ||
-                !(en.field_s * var16 + var21 * gj.field_h < 0)) && (param6 != 0 ||
+                !(CipherPacketBuffer.field_s * var16 + var21 * gj.field_h < 0)) && (param6 != 0 ||
                 !(var17 * bj.field_d + var22 * ic.field_n >= 0))) {
                 if (param0 != 2 &&
                   var23 < 0) {

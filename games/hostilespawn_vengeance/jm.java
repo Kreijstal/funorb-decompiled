@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jm {
-    private am[] field_d;
+    private IntrusiveNode[] field_d;
     static String field_h;
     private int field_f;
     static bd field_b;
-    private am field_g;
-    private am field_c;
+    private IntrusiveNode field_g;
+    private IntrusiveNode field_c;
     private int field_a;
     static int field_e;
 
@@ -20,8 +20,8 @@ final class jm {
         field_h = null;
     }
 
-    final void a(int param0, long param1, am param2) {
-        am var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -55,11 +55,11 @@ final class jm {
         }
     }
 
-    final am b(int param0) {
+    final IntrusiveNode b(int param0) {
         int fieldTemp$0 = 0;
-        am var2;
+        IntrusiveNode var2;
         int var3;
-        am var4;
+        IntrusiveNode var4;
         var3 = HostileSpawn.field_I ? 1 : 0;
         if (~this.field_a < param0 &&
           this.field_d[-1 + this.field_a] != this.field_c) {
@@ -80,7 +80,7 @@ final class jm {
         return var2;
     }
 
-    final am a(int param0) {
+    final IntrusiveNode a(int param0) {
         if (param0 > -92) {
           this.b(31);
         }
@@ -231,7 +231,7 @@ final class jm {
                 ((oj) (var15)).field_I = 0;
               }
               if (((oj) (var15)).field_i == 0) {
-                ci.a(25, 60);
+                MouseInput.a(25, 60);
               }
               ((oj) (var15)).field_F = 255;
               param3.field_e = 1;
@@ -279,10 +279,10 @@ final class jm {
         }
     }
 
-    final am a(boolean param0, long param1) {
-        am var5 = null;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = HostileSpawn.field_I ? 1 : 0;
-        am var4 = this.field_d[(int)((long)(this.field_f - 1) & param1)];
+        IntrusiveNode var4 = this.field_d[(int)((long)(this.field_f - 1) & param1)];
         this.field_g = var4.field_g;
         if (param0) {
           this.a(false, 79L);
@@ -318,13 +318,13 @@ final class jm {
 
     jm(int param0) {
         int var2 = 0;
-        am dupTemp$0 = null;
-        am var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_a = 0;
         this.field_f = param0;
-        this.field_d = new am[param0];
+        this.field_d = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new am();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
           var3.field_f = var3;

@@ -14,7 +14,7 @@ final class ga {
         field_c = null;
     }
 
-    final static byte[] a(int param0, en param1, byte[] param2, int param3) {
+    final static byte[] a(int param0, CipherPacketBuffer param1, byte[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

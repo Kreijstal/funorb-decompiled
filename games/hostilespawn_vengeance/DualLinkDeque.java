@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class ui implements Iterable {
+final class DualLinkDeque implements Iterable {
     static String field_f;
     static String field_h;
     static int field_e;
-    dk field_a;
+    DualLinkNode field_a;
     static String field_d;
     static bd field_c;
     static bd field_b;
@@ -60,7 +60,7 @@ final class ui implements Iterable {
           var11 = param2.field_l.field_f + (double)param2.field_j.field_e;
           if (param6) {
             var29 = (java.awt.Canvas) null;
-            ui.a(-37, (java.awt.Canvas) null, (byte) -30, 35);
+            DualLinkDeque.a(-37, (java.awt.Canvas) null, (byte) -30, 35);
           }
           var13 = (double)param2.field_j.field_g + param2.field_l.field_a;
           while (param2.field_e < 5 &&
@@ -209,20 +209,20 @@ final class ui implements Iterable {
         field_b = null;
         if (param0 != -1667734544) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          ui.a(-40, (java.awt.Canvas) null, (byte) -69, -92);
+          DualLinkDeque.a(-40, (java.awt.Canvas) null, (byte) -69, -92);
         }
         field_c = null;
         field_h = null;
     }
 
-    final void a(int param0, dk param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (param1.field_i != null) {
             param1.c(-1);
           }
           if (param0 != 24) {
-            dk var4 = (dk) null;
-            this.a(-75, (dk) null);
+            DualLinkNode var4 = (DualLinkNode) null;
+            this.a(-75, (DualLinkNode) null);
           }
           param1.field_i = this.field_a.field_i;
           param1.field_j = this.field_a;
@@ -263,7 +263,7 @@ final class ui implements Iterable {
         var9 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param4 != -69) {
-            ui.a(-0.019849789144301654, (int[]) null, (p) null, 108, -25, 1.6753937786913926, true);
+            DualLinkDeque.a(-0.019849789144301654, (int[]) null, (p) null, 108, -25, 1.6753937786913926, true);
           }
           pl.field_k = true;
           if (param1 == param3) {
@@ -358,8 +358,8 @@ final class ui implements Iterable {
         return (Iterator) ((Object) new kj(this));
     }
 
-    final dk a(boolean param0) {
-        dk var2 = this.field_a.field_j;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_a.field_j;
         if (var2 == this.field_a) {
           return null;
         }
@@ -405,7 +405,7 @@ final class ui implements Iterable {
         }
     }
 
-    private ui() throws Throwable {
+    private DualLinkDeque() throws Throwable {
         throw new Error();
     }
 

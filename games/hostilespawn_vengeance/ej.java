@@ -9,16 +9,16 @@ abstract class ej {
     static String field_n;
     static ub field_q;
     bh field_l;
-    static gb field_h;
+    static ResourceArchive field_h;
     bh field_a;
     int field_f;
     long field_c;
-    vi field_m;
+    PacketBuffer field_m;
     volatile int field_k;
     volatile int field_e;
     byte field_r;
     static bd field_d;
-    vi field_i;
+    PacketBuffer field_i;
     lm field_p;
 
     final lm a(byte param0, int param1, int param2, int param3, boolean param4) {
@@ -179,11 +179,11 @@ abstract class ej {
         this.field_j = new bh();
         this.field_l = new bh();
         this.field_a = new bh();
-        this.field_m = new vi(6);
+        this.field_m = new PacketBuffer(6);
         this.field_k = 0;
         this.field_e = 0;
         this.field_r = (byte) 0;
-        this.field_i = new vi(10);
+        this.field_i = new PacketBuffer(10);
     }
 
     static {

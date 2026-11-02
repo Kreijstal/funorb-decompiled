@@ -280,8 +280,8 @@ final class wj extends ph {
             te.field_K = te.field_K - 1;
           }
           var1_float = kd.field_v.j();
-          if (var1_float != vc.field_a) {
-            kd.field_v.d(ua.a((byte) -10, vc.field_a, var1_float, 0.07000000029802322f));
+          if (var1_float != GameCanvas.field_a) {
+            kd.field_v.d(ua.a((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
           }
           var1_floatLifetime1 = kd.field_v.h();
           if (var1_floatLifetime1 != qm.field_O) {
@@ -365,7 +365,7 @@ final class wj extends ph {
             if (!ni.field_e &&
               ii.b((byte) 30)) {
               qm.field_O = 0.5f;
-              vc.field_a = 1.0f;
+              GameCanvas.field_a = 1.0f;
               ea.field_d = 0.6000000238418579f;
               vb.field_Jb = 0.800000011920929f;
               ag.field_w = 10.0f;
@@ -375,7 +375,7 @@ final class wj extends ph {
               ag.field_w = 30.0f;
               vb.field_Jb = 0.8999999761581421f;
               an.field_n = 0.20000000298023224f;
-              vc.field_a = 0.30000001192092896f;
+              GameCanvas.field_a = 0.30000001192092896f;
               qm.field_O = 0.5f;
             }
           }
@@ -421,7 +421,7 @@ final class wj extends ph {
                 var16 = var2 - 1;
               }
               var18 = var13_intLifetime1;
-              L43: while (true) {
+              scanLoop1: while (true) {
                 stackIn_100_0 = var14;
                 if (stackIn_100_0 > var18) {
                   var17 = var15_int + var18 * var2;
@@ -441,7 +441,7 @@ final class wj extends ph {
                     var17++;
                   }
                   var18++;
-                  continue L43;
+                  continue scanLoop1;
                 }
                 break;
               }
@@ -706,7 +706,7 @@ final class wj extends ph {
                   le.field_D = 0;
                   n.b(true, (byte) -89);
                   of.field_h = new re(13);
-                  uk.field_e = 0;
+                  ArchiveProvider.field_e = 0;
                   return;
                 }
                 if (bm.field_c == 0 &&
@@ -715,7 +715,7 @@ final class wj extends ph {
                   le.field_D = 0;
                   ta.a((byte) -100, 3);
                   of.field_h = new re(12);
-                  uk.field_e = 0;
+                  ArchiveProvider.field_e = 0;
                   n.b(false, (byte) -114);
                   return;
                 }
@@ -723,7 +723,7 @@ final class wj extends ph {
                 le.field_D = 0;
                 rl.field_c = 0;
                 n.b(true, (byte) -93);
-                uk.field_e = 0;
+                ArchiveProvider.field_e = 0;
                 of.field_h = new re(13);
                 return;
               }

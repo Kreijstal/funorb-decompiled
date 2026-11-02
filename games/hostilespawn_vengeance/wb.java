@@ -97,8 +97,8 @@ abstract class wb extends ul {
         while (var7 < var4) {
           if (var8 >= si.field_j &&
             var8 < si.field_a) {
-            L4: {
-              L5: {
+            regionExit1: {
+              regionExit2: {
                 var9 = var5 + var7 * (-var5 + var6) / var4;
                 var10 = 0;
                 var11 = this.field_s;
@@ -108,7 +108,7 @@ abstract class wb extends ul {
                     if (var12 <= 462) {
                       if (420 > var12) {
                         if (var7 > 20) {
-                          break L4;
+                          break regionExit1;
                         }
                         var12 = var11;
                         var11 -= 21;
@@ -128,7 +128,7 @@ abstract class wb extends ul {
                           var13++;
                           var11++;
                         }
-                        break L5;
+                        break regionExit2;
                       }
                       var13Lifetime2 = (462 - var12) * var9 / 42;
                       var13Lifetime2 = var13Lifetime2 | (var13Lifetime2 << 8 | var13Lifetime2 << 16);
@@ -138,7 +138,7 @@ abstract class wb extends ul {
                   }
                 }
                 if (var7 > 20) {
-                  break L4;
+                  break regionExit1;
                 }
                 var12 = var11;
                 var11 -= 21;
