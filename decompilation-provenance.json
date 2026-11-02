@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "holdtheline": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/holdtheline"
+      },
+      "inputTreeSha256": "441bb34e6eedfe35fdfa1e973e1e58c222bab2930234cb835b96ae38efcf0b12",
+      "sources": {
+        "files": 356,
+        "sha256": "d80e80314b332fda8d22a82ee1e801919ade5817ea252186ad99763391d37c40"
+      },
+      "dictionary": {
+        "path": "decompilation/holdtheline-naming.json",
+        "sha256": "1994bc361ffc657425426f57acf53e53b42adff8ffb7b5325058b3132ac8a39e"
+      },
+      "readingGuide": {
+        "path": "games/holdtheline/README.md",
+        "sha256": "d4dcd3db559f271ad11c42a78cc0de790536d7a24c42ce9e5680f0b74c77a956"
+      },
+      "rulesSha256": "0e6ce1667decee180d6b0ac369e2cf3d071b51668150c99720c194874d92fb85",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11485,6 +11509,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 356,
+          "sha256": "d80e80314b332fda8d22a82ee1e801919ade5817ea252186ad99763391d37c40"
         }
       },
       "hostilespawn_vengeance": {

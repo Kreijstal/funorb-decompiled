@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class th extends hl {
+class th extends IntrusiveNode {
     static String[] field_o;
     static String[] field_n;
     static gn field_m;
@@ -558,13 +558,13 @@ class th extends hl {
           if (!param0) {
             field_m = (gn) null;
           }
-          if (7 == mi.field_d) {
+          if (7 == DelegatingCanvas.field_d) {
             for (var2_int = 0; var2_int < 4; var2_int++) {
               var10.field_o[0][var2_int] = p.a(pf.a((byte) 82, var2_int), (byte) -110, var2_int);
             }
           } else {
-            if (mi.field_d != 1 &&
-              mi.field_d != 0) {
+            if (DelegatingCanvas.field_d != 1 &&
+              DelegatingCanvas.field_d != 0) {
               var2_int = pc.field_l[5];
               var14 = new hj[var2_int];
               var3 = var14;
@@ -618,7 +618,7 @@ class th extends hl {
                 var15 = tk.field_c[cf.field_w][var9];
                 var15.b(3);
                 if (gj.a(var9, -117, cf.field_w) != 0) {
-                  var6 = var15.a(9392, mi.field_d, 111).e();
+                  var6 = var15.a(9392, DelegatingCanvas.field_d, 111).e();
                   qm.a(var6, 64, -1);
                   vb.a(-108, var6);
                   rf.field_ab.a(-rf.field_ab.field_s + var6.field_s >> 1, -rf.field_ab.field_y + var6.field_y >> 1);

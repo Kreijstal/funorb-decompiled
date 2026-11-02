@@ -54,13 +54,13 @@ final class oc {
         }
     }
 
-    final static ef a(int param0, int param1, int param2, int param3, ib param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, ib param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ef var7 = null;
+        FullscreenFocusCanvas var7 = null;
         int var8 = 0;
         java.awt.Frame var9 = null;
-        ef stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -72,7 +72,7 @@ final class oc {
             return null;
           }
           var8 = -92 % ((-69 - param3) / 53);
-          var7 = new ef();
+          var7 = new FullscreenFocusCanvas();
           var7.field_f = var9;
           var7.field_f.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param5, param2);

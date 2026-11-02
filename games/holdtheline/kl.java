@@ -24,7 +24,7 @@ class kl extends dk {
     }
 
     kl(int param0) {
-        this(hl.field_g, param0);
+        this(IntrusiveNode.field_g, param0);
     }
 
     kl(qi param0, int param1) {

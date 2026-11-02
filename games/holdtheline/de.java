@@ -18,7 +18,7 @@ final class de extends v implements pn, pi {
     public de() {
         super(0, 0, 496, 0, (dh) null);
         this.field_F = new jb("", (tb) null, 12);
-        dk var1 = new dk(mo.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, hl.field_g.field_G, -1, 2147483647, true);
+        dk var1 = new dk(mo.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
         n var2 = new n(ra.field_ib, var1, (tb) null);
         this.field_M = new rm(h.field_d, (tb) null);
         this.field_N = new rm(hh.field_b, (tb) null);
@@ -348,7 +348,7 @@ final class de extends v implements pn, pi {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new dj(20, param3, 120 + param0, 25, param6, false, 120, 3, hl.field_g, 16777215, param1);
+          var10 = new dj(20, param3, 120 + param0, 25, param6, false, 120, 3, IntrusiveNode.field_g, 16777215, param1);
           if (param4 != 10566) {
             stackIn_2_0 = 49;
             return stackIn_2_0;

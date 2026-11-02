@@ -13,7 +13,7 @@ final class gi extends v implements pi {
         if (0 != param3) {
           return;
         }
-        qi var5 = hl.field_g;
+        qi var5 = IntrusiveNode.field_g;
         if (null != this.field_F) {
           var5.a(tk.field_b, param2 + this.field_k, this.field_o + param1, this.field_x, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_I);
         }
@@ -112,7 +112,7 @@ final class gi extends v implements pi {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_F[var4_int] = ok.a((CharSequence) ((Object) param0[var4_int]), -6126).replace(' ', ' ');
             }
-            var4 = new am(hl.field_g, 0, 1);
+            var4 = new am(IntrusiveNode.field_g, 0, 1);
             this.field_I = new rm[var3_int + 1];
             if (param1 != 43) {
               return;

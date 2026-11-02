@@ -409,7 +409,7 @@ final class tl extends kl {
     }
 
     tl(int param0) {
-        this(hl.field_g, param0);
+        this(IntrusiveNode.field_g, param0);
     }
 
     static {

@@ -8,7 +8,7 @@ final class cc extends ca {
     th field_z;
     byte field_B;
     int field_x;
-    static ef field_w;
+    static FullscreenFocusCanvas field_w;
     static String field_A;
 
     final static int a(int param0, int param1, int param2, io param3, boolean param4, String param5, io param6) {
@@ -178,7 +178,7 @@ final class cc extends ca {
           }
           if (lk.field_h == null) {
             if (uk.field_e) {
-              if (sf.d(123) > 30000L) {
+              if (ImageProducerRasterBuffer.d(123) > 30000L) {
                 um.field_b = mo.field_y;
               } else {
                 um.field_b = dc.field_hb;
@@ -331,9 +331,9 @@ final class cc extends ca {
           !(fj.field_q.length >= param0)) {
           fj.field_q = new int[2 * param0];
         }
-        if (oh.field_s == null ||
-          !(param0 <= oh.field_s.length)) {
-          oh.field_s = new int[param0 * 2];
+        if (NetworkGameClient.field_s == null ||
+          !(param0 <= NetworkGameClient.field_s.length)) {
+          NetworkGameClient.field_s = new int[param0 * 2];
         }
         if (null == im.field_h ||
           !(param2 + param0 <= im.field_h.length)) {
@@ -370,7 +370,7 @@ final class cc extends ca {
           tn.a(0);
         }
         if (param4 >= -107) {
-          field_w = (ef) null;
+          field_w = (FullscreenFocusCanvas) null;
         }
     }
 

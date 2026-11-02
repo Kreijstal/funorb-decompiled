@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends tj {
+final class db extends PcmStream {
     private int field_z;
     private int field_A;
     private boolean field_q;
@@ -706,7 +706,7 @@ final class db extends tj {
         this.field_z = -this.field_z;
     }
 
-    final tj a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -1614,7 +1614,7 @@ final class db extends tj {
         return param3;
     }
 
-    final tj b() {
+    final PcmStream b() {
         return null;
     }
 

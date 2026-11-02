@@ -79,10 +79,10 @@ final class vm extends ab implements pi {
               this.a((n) (new bj(this)), (byte) 126);
               return;
             }
-            var5.a(112, (tb) (this), sf.field_j);
+            var5.a(112, (tb) (this), ImageProducerRasterBuffer.field_j);
           } else {
             if (this.field_yb) {
-              var5.a(81, (tb) (this), sf.field_j);
+              var5.a(81, (tb) (this), ImageProducerRasterBuffer.field_j);
             } else {
               if (param2.field_b == 5) {
                 var5.a(11, vn.field_b, (byte) 66);

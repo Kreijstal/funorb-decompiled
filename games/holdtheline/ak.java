@@ -105,12 +105,12 @@ final class ak {
         var10 = new hj[]{new hj(var9, var9), new hj(param7, var9), new hj(var9, var9), new hj(var9, param7), new hj(64, 64), new hj(var9, param7), new hj(var9, var9), new hj(param7, var9), new hj(var9, var9)};
         var11_ref_hj__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var12 < var11_ref_hj__.length) {
             var13 = var11_ref_hj__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var14 < var13.field_z.length) {
@@ -118,17 +118,17 @@ final class ak {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (param5 > var11) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var9 > var12Lifetime1) {
@@ -139,7 +139,7 @@ final class ak {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -170,11 +170,11 @@ final class ak {
             stackIn_35_0 = param6;
           }
           var11Lifetime1 = stackIn_35_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (var11Lifetime1 < param7) {
               stackIn_46_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_46_0;
               while (param5 > var12Lifetime2Lifetime1) {
@@ -185,13 +185,13 @@ final class ak {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_46_0 = 0;
             break;
           }
           var11Lifetime1 = stackIn_46_0;
-          L25: while (var11Lifetime1 < param7 >> 1) {
+          scanLoop4: while (var11Lifetime1 < param7 >> 1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (var12Lifetime2Lifetime2 < param8) {
@@ -209,7 +209,7 @@ final class ak {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }

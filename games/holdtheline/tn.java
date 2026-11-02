@@ -87,10 +87,10 @@ final class tn {
     }
 
     final static String d(int param0) {
-        if (bb.field_a == sf.field_n) {
+        if (bb.field_a == ImageProducerRasterBuffer.field_n) {
           return ol.field_a;
         }
-        if (ak.field_b == sf.field_n) {
+        if (ak.field_b == ImageProducerRasterBuffer.field_n) {
           return rd.field_j;
         }
         if (param0 != 0) {

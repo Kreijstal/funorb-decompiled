@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ah {
-    hl field_e;
+    IntrusiveNode field_e;
     static rg field_a;
     static int field_b;
     static gn field_d;
-    private hl field_c;
+    private IntrusiveNode field_c;
 
     final static int a(vj param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
@@ -72,8 +72,8 @@ final class ah {
         }
     }
 
-    final hl c(byte param0) {
-        hl var2 = this.field_c;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_e) {
           this.field_c = null;
           return null;
@@ -91,8 +91,8 @@ final class ah {
         pb.field_a = null;
     }
 
-    private final void a(hl param0, byte param1, ah param2) {
-        hl var4 = null;
+    private final void a(IntrusiveNode param0, byte param1, ah param2) {
+        IntrusiveNode var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -151,7 +151,7 @@ final class ah {
         return this.field_e.field_h == this.field_e ? true : false;
     }
 
-    final static void a(hl param0, int param1, hl param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (null != param2.field_a) {
             param2.d(0);
@@ -168,7 +168,7 @@ final class ah {
         }
     }
 
-    final void a(byte param0, hl param1) {
+    final void a(byte param0, IntrusiveNode param1) {
         if (param0 >= -61) {
           return;
         }
@@ -236,7 +236,7 @@ final class ah {
     }
 
     final void a(int param0) {
-        hl var2;
+        IntrusiveNode var2;
         int var3;
         var3 = HoldTheLine.field_D;
         while (true) {
@@ -256,11 +256,11 @@ final class ah {
         return;
     }
 
-    final hl d(byte param0) {
+    final IntrusiveNode d(byte param0) {
         if (param0 != 124) {
-          return (hl) null;
+          return (IntrusiveNode) null;
         }
-        hl var2 = this.field_e.field_a;
+        IntrusiveNode var2 = this.field_e.field_a;
         if (this.field_e == var2) {
           this.field_c = null;
           return null;
@@ -269,11 +269,11 @@ final class ah {
         return var2;
     }
 
-    final hl c(int param0) {
-        hl var2 = null;
-        hl var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -4140) {
-          this.field_e = (hl) null;
+          this.field_e = (IntrusiveNode) null;
           var2 = this.field_c;
           if (this.field_e == var2) {
             this.field_c = null;
@@ -291,11 +291,11 @@ final class ah {
         return var2Lifetime1;
     }
 
-    final hl a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 != 74) {
-          return (hl) null;
+          return (IntrusiveNode) null;
         }
-        hl var2 = this.field_e.field_a;
+        IntrusiveNode var2 = this.field_e.field_a;
         if (this.field_e != var2) {
           var2.d(0);
           return var2;
@@ -314,7 +314,7 @@ final class ah {
         }
     }
 
-    final void a(hl param0, boolean param1) {
+    final void a(IntrusiveNode param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -331,7 +331,7 @@ final class ah {
           if (!param1) {
             return;
           }
-          this.field_e = (hl) null;
+          this.field_e = (IntrusiveNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -347,8 +347,8 @@ final class ah {
         }
     }
 
-    final hl b(byte param0) {
-        hl var2 = this.field_e.field_h;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_e.field_h;
         if (param0 <= 84) {
           ah.a(true);
           if (this.field_e != var2) {
@@ -367,7 +367,7 @@ final class ah {
     }
 
     public ah() {
-        this.field_e = new hl();
+        this.field_e = new IntrusiveNode();
         this.field_e.field_a = this.field_e;
         this.field_e.field_h = this.field_e;
     }

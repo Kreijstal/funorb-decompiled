@@ -144,7 +144,7 @@ final class h {
         try {
           var2 = -127 % ((45 - param0) / 55);
           var16_ref = (ec) (l.field_a[13]);
-          if (mi.field_d == 7) {
+          if (DelegatingCanvas.field_d == 7) {
             for (var3 = 0; var3 < 4; var3++) {
               var15 = new StringBuilder(20);
               discarded$24 = var15.append("<col=1>");
@@ -175,8 +175,8 @@ final class h {
             var16_ref.field_Q[0] = hb.field_a;
             return;
           }
-          if (1 != mi.field_d &&
-            mi.field_d != 0) {
+          if (1 != DelegatingCanvas.field_d &&
+            DelegatingCanvas.field_d != 0) {
             var3Lifetime1 = pc.field_l[5];
             var37 = new int[var3Lifetime1];
             var27 = new String[var3Lifetime1];
@@ -291,7 +291,7 @@ final class h {
             } else {
               var20[var8Lifetime1] = "";
               var6Lifetime1[var8Lifetime1] = HoldTheLine.field_G[cf.field_w];
-              var21 = var19.a(9392, mi.field_d, 111).e();
+              var21 = var19.a(9392, DelegatingCanvas.field_d, 111).e();
               qm.a(var21, 64, -1);
               vb.a(-97, var21);
               rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> 1, var21.field_y - rf.field_ab.field_y >> 1);

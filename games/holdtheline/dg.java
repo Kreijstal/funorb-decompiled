@@ -68,7 +68,7 @@ final class dg {
           uk.field_c[9] = ld.field_f;
           uk.field_c[13] = dd.field_H;
           uk.field_c[11] = sa.field_f;
-          uk.field_c[3] = hl.field_c;
+          uk.field_c[3] = IntrusiveNode.field_c;
           uk.field_c[7] = ka.field_e;
           uk.field_c[0] = ca.field_o;
           uk.field_c[20] = sa.field_a;
@@ -89,8 +89,8 @@ final class dg {
           nn.field_g = new String[8];
           ij.field_c[1] = new int[]{km.field_G};
           ij.field_c[0] = new int[]{rl.field_I};
-          nn.field_g[0] = mi.field_h;
-          la.field_f[0] = jh.a(bl.field_n, param0 + 9217, mi.field_h);
+          nn.field_g[0] = DelegatingCanvas.field_h;
+          la.field_f[0] = jh.a(bl.field_n, param0 + 9217, DelegatingCanvas.field_h);
           nn.field_g[1] = qh.field_a;
           la.field_f[1] = jh.a(ra.field_cb, -125, qh.field_a);
           nn.field_g[2] = u.field_Q;

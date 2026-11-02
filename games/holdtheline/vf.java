@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends hl {
+final class vf extends IntrusiveNode {
     private int field_r;
     private int field_p;
     static de field_l;
@@ -14,7 +14,7 @@ final class vf extends hl {
     static int field_t;
     private int field_A;
     private int field_y;
-    static md field_j;
+    static GameAppletShell field_j;
     static String field_u;
     private int field_n;
     private int field_k;

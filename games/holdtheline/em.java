@@ -215,7 +215,7 @@ final class em extends gd {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ak.field_b == sf.field_n) {
+          if (ak.field_b == ImageProducerRasterBuffer.field_n) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
@@ -223,7 +223,7 @@ final class em extends gd {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (bb.field_a != sf.field_n) {
+          if (bb.field_a != ImageProducerRasterBuffer.field_n) {
             return -1;
           }
           stackIn_23_0 = 2;

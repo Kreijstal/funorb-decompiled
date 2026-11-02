@@ -102,9 +102,9 @@ final class nn implements Runnable {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               im.a(76, var14);
               if (var6_intLifetime1 == 0) {
-                rl.a(dk.field_l, ef.field_b, ae.field_a, (byte) 106, var6_intLifetime1, si.field_jb);
+                rl.a(dk.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 106, var6_intLifetime1, si.field_jb);
               } else {
-                rl.a(dk.field_l, ef.field_b, ae.field_a, (byte) 108, var6_intLifetime1, si.field_jb);
+                rl.a(dk.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 108, var6_intLifetime1, si.field_jb);
               }
             }
             uf.a(0, var5);
@@ -432,7 +432,7 @@ final class nn implements Runnable {
           return false;
         }
         hk.field_a = ko.a(false);
-        ho.field_j = om.a("font24", ef.field_c, "", 8192, fb.field_i);
+        ho.field_j = om.a("font24", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
         return true;
     }
 

@@ -178,13 +178,13 @@ final class ti extends pc {
               var7++;
             } while (var9 == 0);
             var7 = 0;
-            L31: while (true) {
+            scanLoop1: while (true) {
               if (var7 < 11) {
                 tc.b(-16 + 64 * var7, var4, 32, 16777215);
                 tc.b(16 + 64 * var7, var4, 32, 16711680);
                 stackIn_87_0 = 0;
                 if (var9 != 0) {
-                  break L31;
+                  break scanLoop1;
                 }
                 var8 = stackIn_87_0;
                 while (var8 < 6) {
@@ -203,13 +203,13 @@ final class ti extends pc {
               break;
             }
             var7 = stackIn_87_0;
-            L37: while (true) {
+            scanLoop2: while (true) {
               if (var7 < 11) {
                 tc.b(var7 * 64, 91 + var4, 32, 16777215);
                 tc.b(var7 * 64 + 32, var4 + 91, 32, 16711680);
                 stackIn_98_0 = 0;
                 if (var9 != 0) {
-                  break L37;
+                  break scanLoop2;
                 }
                 var8Lifetime1 = stackIn_98_0;
                 while (var8Lifetime1 < 6) {
@@ -246,16 +246,16 @@ final class ti extends pc {
         if (param1 != 0) {
           this.a(-4);
         }
-        L1: {
-          L2: {
-            L3: {
-              L4: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
                 var4 = 132;
                 q.a(od.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                 var4 += 40;
-                var5 = sf.field_m % 180 / 5;
+                var5 = ImageProducerRasterBuffer.field_m % 180 / 5;
                 var6 = param0;
-                L5: switch ((var8 == 0
+                regionExit5: switch ((var8 == 0
                   || var6 == 0
                   || var6 == 2
                   || var6 == 3
@@ -287,15 +287,15 @@ final class ti extends pc {
                     ei.a(320 - param2, param1 + 1, kc.field_c, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
                     if (var8 == 0) {
-                      break L1;
+                      break regionExit1;
                     }
                   case 1:
                     wb.a(20, vg.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     if (var8 == 0) {
-                      break L2;
+                      break regionExit2;
                     }
                   case 2:
-                    wb.a(20, sf.field_k, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                    wb.a(20, ImageProducerRasterBuffer.field_k, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 185;
                     var6 = 0;
                     {
@@ -324,7 +324,7 @@ final class ti extends pc {
                         break;
                       }
                       if (var8 == 0) {
-                        break L2;
+                        break regionExit2;
                       }
                     }
                   case 3:
@@ -332,11 +332,11 @@ final class ti extends pc {
                     var4 += 25;
                     var6 = 1;
                     {
-                      L15: while (true) {
+                      scanLoop6: while (true) {
                         if (4 > var6) {
                           stackIn_37_0 = 0;
                           if (var8 != 0) {
-                            break L15;
+                            break scanLoop6;
                           }
                           var7 = stackIn_37_0;
                           while (var6 > var7) {
@@ -349,7 +349,7 @@ final class ti extends pc {
                             var7++;
                           }
                           var6++;
-                          continue L15;
+                          continue scanLoop6;
                         }
                         var4 += 20;
                         ei.a(125 - param2, 1, bj.field_J, 0, var4, HoldTheLine.field_F);
@@ -372,29 +372,29 @@ final class ti extends pc {
                       }
                       wb.a(stackIn_37_0, mk.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
                       if (var8 == 0) {
-                        break L2;
+                        break regionExit2;
                       }
-                      break L5;
+                      break regionExit5;
                     }
                   case 4:
                     break;
                   default:
-                    break L1;
+                    break regionExit1;
                   case 5:
-                    break L4;
+                    break regionExit4;
                   case 6:
-                    break L3;
+                    break regionExit3;
                 }
                 wb.a(20, aa.field_p, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 40;
-                wb.a(20, hl.field_e, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
+                wb.a(20, IntrusiveNode.field_e, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 80;
                 wb.a(20, wb.field_b, 0, 0, 560, var4 - 20, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
                 wb.a(20, ub.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
                 if (var8 == 0) {
-                  break L2;
+                  break regionExit2;
                 }
               }
               wb.a(20, ji.field_n, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, ~param1, 1, HoldTheLine.field_F);
@@ -437,7 +437,7 @@ final class ti extends pc {
               q.a(kc.field_c, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
               if (var8 == 0) {
-                break L2;
+                break regionExit2;
               }
             }
             wb.a(20, io.field_f, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
@@ -566,7 +566,7 @@ final class ti extends pc {
     final void i(int param0) {
         this.field_y = 2;
         int var2 = 44 / ((param0 + 25) / 61);
-        sf.field_m = 0;
+        ImageProducerRasterBuffer.field_m = 0;
     }
 
     private final void m(int param0) {
@@ -859,8 +859,8 @@ final class ti extends pc {
           q.a(Integer.toString(le.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
           var6 = pf.a((byte) -123);
           var7 = le.field_o[var5Lifetime1][1];
-          var8 = sf.field_m / 15 % (var7 + 2);
-          var9 = sf.field_m / 5 % 3;
+          var8 = ImageProducerRasterBuffer.field_m / 15 % (var7 + 2);
+          var9 = ImageProducerRasterBuffer.field_m / 5 % 3;
           var10 = 0;
           while (true) {
             if (var10 < var7) {
@@ -999,8 +999,8 @@ final class ti extends pc {
           q.a(Integer.toString(le.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
           var7 = pf.a((byte) -123);
           var8 = le.field_o[var6Lifetime1][1];
-          var9 = sf.field_m / 15 % (2 + var8);
-          var10 = sf.field_m / 5 % 3;
+          var9 = ImageProducerRasterBuffer.field_m / 15 % (2 + var8);
+          var10 = ImageProducerRasterBuffer.field_m / 5 % 3;
           var11 = 0;
           while (true) {
             if (var11 < var8) {
@@ -1030,7 +1030,7 @@ final class ti extends pc {
           }
           if ((stackIn_29_0 == stackIn_29_1 ||
             var13 != 0) &&
-            sf.field_m % 80 < 40) {
+            ImageProducerRasterBuffer.field_m % 80 < 40) {
             q.a(fc.field_b, HoldTheLine.field_F, 2, 320 - param1, (byte) -127, 352);
           }
           nm.field_c.b(ae.field_c[var6Lifetime1], 320 - param1, 207, 0, -1);
@@ -1092,7 +1092,7 @@ final class ti extends pc {
             wj.a(0, 19189, 80, 20, 50, 0, -1500, jf.field_a.field_b, 80);
             te.a(param0 - 4, kc.field_a.field_i);
             nm.a(bo.field_d.field_b, 22210);
-            oh.a(true, true);
+            NetworkGameClient.a(true, true);
             hn.field_T = true;
           }
         }
@@ -1115,12 +1115,12 @@ final class ti extends pc {
         stackIn_6_0 = ((1 << param1 & 65284) == 0) ? 0 : 1;
         var8 = stackIn_6_0;
         stackIn_9_0 = (param2 != 32) ? 0 : 1;
-        L3: {
+        regionExit1: {
           var9 = stackIn_9_0;
           if (var7 != 0) {
             var10 = ak.a(param4 - 48, var9 != 0, param1);
             if (var11 == 0) {
-              break L3;
+              break regionExit1;
             }
           }
           if (var8 != 0 ||
@@ -1229,7 +1229,7 @@ final class ti extends pc {
         do {
           if (var3 >= this.field_q.length) {
             bd.field_S = -20;
-            sf.field_m = 0;
+            ImageProducerRasterBuffer.field_m = 0;
             break;
           }
           this.field_q[var3] = 0;
@@ -1312,7 +1312,7 @@ final class ti extends pc {
           vl.field_h[var4] = 32;
           var4++;
         } while (var5 == 0);
-        oh.a(param0, true);
+        NetworkGameClient.a(param0, true);
         return;
     }
 
@@ -1434,143 +1434,143 @@ final class ti extends pc {
         int var5;
         int var6;
         int var7;
-        L0: {
-          L1: {
-            L2: {
-              L3: {
-                L4: {
-                  L5: {
-                    L6: {
-                      L7: {
-                        L8: {
-                          L9: {
-                            L10: {
-                              L11: {
-                                L12: {
-                                  L13: {
-                                    L14: {
-                                      L15: {
-                                        L16: {
-                                          L17: {
-                                            L18: {
-                                              L19: {
-                                                L20: {
-                                                  L21: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
+                  regionExit6: {
+                    regionExit7: {
+                      regionExit8: {
+                        regionExit9: {
+                          regionExit10: {
+                            regionExit11: {
+                              regionExit12: {
+                                regionExit13: {
+                                  regionExit14: {
+                                    regionExit15: {
+                                      regionExit16: {
+                                        regionExit17: {
+                                          regionExit18: {
+                                            regionExit19: {
+                                              regionExit20: {
+                                                regionExit21: {
+                                                  regionExit22: {
                                                     var7 = HoldTheLine.field_D;
                                                     var4 = -78 % ((param2 - 36) / 41);
                                                     var6 = param0;
                                                     if (var6 != 2) {
                                                       if (var6 == 13 &&
                                                         var7 == 0) {
-                                                        break L21;
+                                                        break regionExit22;
                                                       }
                                                       if (var6 == 14 &&
                                                         var7 == 0) {
-                                                        break L20;
+                                                        break regionExit21;
                                                       }
                                                       if (var6 == 15) {
-                                                        break L19;
+                                                        break regionExit20;
                                                       }
                                                       if (var6 == 16 &&
                                                         var7 == 0) {
-                                                        break L18;
+                                                        break regionExit19;
                                                       }
                                                       if (var6 == 17 &&
                                                         var7 == 0) {
-                                                        break L17;
+                                                        break regionExit18;
                                                       }
                                                       if (var6 == 0 &&
                                                         var7 == 0) {
-                                                        break L16;
+                                                        break regionExit17;
                                                       }
                                                       if (var6 == 3) {
-                                                        break L15;
+                                                        break regionExit16;
                                                       }
                                                       if (var6 == 7 &&
                                                         var7 == 0) {
-                                                        break L14;
+                                                        break regionExit15;
                                                       }
                                                       if (var6 == 8 &&
                                                         var7 == 0) {
-                                                        break L13;
+                                                        break regionExit14;
                                                       }
                                                       if (var6 == 4 &&
                                                         var7 == 0) {
-                                                        break L12;
+                                                        break regionExit13;
                                                       }
                                                       if (5 == var6 &&
                                                         var7 == 0) {
-                                                        break L11;
+                                                        break regionExit12;
                                                       }
                                                       if (var6 == 9) {
-                                                        break L10;
+                                                        break regionExit11;
                                                       }
                                                       if (var6 == 10 &&
                                                         var7 == 0) {
-                                                        break L9;
+                                                        break regionExit10;
                                                       }
                                                       if (var6 == 11 &&
                                                         var7 == 0) {
-                                                        break L8;
+                                                        break regionExit9;
                                                       }
                                                       switch (var6) {
                                                         case 24:
-                                                          break L7;
+                                                          break regionExit8;
                                                         case 25:
-                                                          break L6;
+                                                          break regionExit7;
                                                         case 12:
-                                                          break L5;
+                                                          break regionExit6;
                                                         case 6:
-                                                          break L4;
+                                                          break regionExit5;
                                                         case 26:
-                                                          break L3;
+                                                          break regionExit4;
                                                         default:
-                                                          break L0;
+                                                          break regionExit1;
                                                         case 1:
                                                           if (var7 == 0) {
-                                                            break L2;
+                                                            break regionExit3;
                                                           }
                                                           break;
                                                       }
                                                     }
                                                     wm.a(param1, false, -1);
                                                     if (var7 == 0) {
-                                                      break L1;
+                                                      break regionExit2;
                                                     }
                                                   }
                                                   wm.a(param1, false, 2);
                                                   this.field_v = param0;
                                                   if (var7 == 0) {
-                                                    break L1;
+                                                    break regionExit2;
                                                   }
                                                 }
                                                 wm.a(param1, false, 6);
                                                 this.field_v = param0;
                                                 if (var7 == 0) {
-                                                  break L1;
+                                                  break regionExit2;
                                                 }
                                               }
                                               wm.a(param1, false, 4);
                                               this.field_v = param0;
                                               if (var7 == 0) {
-                                                break L1;
+                                                break regionExit2;
                                               }
                                             }
                                             wm.a(param1, false, 5);
                                             this.field_v = param0;
                                             if (var7 == 0) {
-                                              break L1;
+                                              break regionExit2;
                                             }
                                           }
                                           if (null == kf.field_U) {
                                             oe.b((byte) 108);
                                             if (var7 == 0) {
-                                              break L1;
+                                              break regionExit2;
                                             }
                                           }
                                           em.a(-29486, false);
                                           if (var7 == 0) {
-                                            break L1;
+                                            break regionExit2;
                                           }
                                         }
                                         if (of.a(-969) ||
@@ -1580,23 +1580,23 @@ final class ti extends pc {
                                           this.field_o != 3) {
                                           wm.a(param1, false, 0);
                                           if (var7 == 0) {
-                                            break L1;
+                                            break regionExit2;
                                           }
                                         }
                                         wm.a(param1, false, 12);
                                         if (var7 == 0) {
-                                          break L1;
+                                          break regionExit2;
                                         }
                                       }
                                       wm.a(param1, false, lm.field_a);
                                       if (var7 == 0) {
-                                        break L1;
+                                        break regionExit2;
                                       }
                                     }
                                     bl.field_r.field_mb = -1;
                                     qn.a(7, param1, true);
                                     if (var7 == 0) {
-                                      break L1;
+                                      break regionExit2;
                                     }
                                   }
                                   if (this.field_o == 10 &&
@@ -1604,17 +1604,17 @@ final class ti extends pc {
                                     3 == ek.field_x) {
                                     wm.a(param1, false, 13);
                                     if (var7 == 0) {
-                                      break L1;
+                                      break regionExit2;
                                     }
                                   }
                                   this.a(7, param1, -12);
                                   if (var7 == 0) {
-                                    break L1;
+                                    break regionExit2;
                                   }
                                 }
                                 wm.a(param1, false, 3);
                                 if (var7 == 0) {
-                                  break L1;
+                                  break regionExit2;
                                 }
                               }
                               if (g.field_o != 0) {
@@ -1624,18 +1624,18 @@ final class ti extends pc {
                               }
                               this.a(stackIn_86_1, param1, -24);
                               if (var7 == 0) {
-                                break L1;
+                                break regionExit2;
                               }
                             }
                             if (this.field_o == 2 ||
                               this.field_o == 6) {
                               i.a((byte) 71, true);
                               if (var7 == 0) {
-                                break L1;
+                                break regionExit2;
                               }
                             }
                             if (this.field_o == 9) {
-                              if (mi.field_d == 7) {
+                              if (DelegatingCanvas.field_d == 7) {
                                 stackIn_97_0 = (ii.field_c == 0) ? 3 : 7;
                                 var6 = stackIn_97_0;
                                 if (var7 != 0) {
@@ -1648,12 +1648,12 @@ final class ti extends pc {
                               }
                               qf.a(var6, true, 3865, param1);
                               if (var7 == 0) {
-                                break L1;
+                                break regionExit2;
                               }
                             }
                             ch.a(en.a(98), (byte) 47);
                             if (var7 == 0) {
-                              break L1;
+                              break regionExit2;
                             }
                           }
                           if (g.field_o == 0) {
@@ -1663,7 +1663,7 @@ final class ti extends pc {
                           }
                           this.a(stackIn_108_1, param1, -35);
                           if (var7 == 0) {
-                            break L1;
+                            break regionExit2;
                           }
                         }
                         eb.field_o = null;
@@ -1671,22 +1671,22 @@ final class ti extends pc {
                         ii.field_c = 0;
                         wm.a(param1, false, 12);
                         if (var7 == 0) {
-                          break L1;
+                          break regionExit2;
                         }
                       }
                       if (-1 == ca.field_s &&
                         var7 == 0) {
-                        break L1;
+                        break regionExit2;
                       }
                       if (ca.field_s == 0) {
                         this.a(0, param1, -125);
                         if (var7 == 0) {
-                          break L1;
+                          break regionExit2;
                         }
                       }
                       var5 = -1 + ca.field_s;
                       if (~var5 == ~pj.field_m) {
-                        break L1;
+                        break regionExit2;
                       }
                       if (~en.field_b != ~pj.field_m ||
                         ~ha.field_p != ~wa.field_j) {
@@ -1697,13 +1697,13 @@ final class ti extends pc {
                       pj.field_m = var5;
                       this.field_p = 640;
                       if (var7 == 0) {
-                        break L1;
+                        break regionExit2;
                       }
                     }
                     if (qd.field_h != 0) {
                       if (2 == qd.field_h) {
                         if (ih.field_p >= 6) {
-                          break L0;
+                          break regionExit1;
                         }
                         fieldTemp$0 = ih.field_p + 1;
                         ih.field_p = ih.field_p + 1;
@@ -1712,19 +1712,19 @@ final class ti extends pc {
                         }
                         this.field_p = 640 * ih.field_p;
                         if (var7 == 0) {
-                          break L1;
+                          break regionExit2;
                         }
                       }
                       if (qd.field_h != 1) {
-                        break L0;
+                        break regionExit1;
                       }
                       wm.a(param1, false, lm.field_a);
                       if (var7 == 0) {
-                        break L1;
+                        break regionExit2;
                       }
                     }
                     if (0 >= ih.field_p) {
-                      break L0;
+                      break regionExit1;
                     }
                     fieldTemp$1 = ih.field_p - 1;
                     ih.field_p = ih.field_p - 1;
@@ -1733,19 +1733,19 @@ final class ti extends pc {
                     }
                     this.field_p = ih.field_p * 640;
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                   if (!nd.field_e) {
                     wm.a(param1, false, 13);
                     this.field_v = param0;
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                   hf.c(0);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit2;
                   }
                 }
                 if (ek.field_x != 2 &&
@@ -1754,7 +1754,7 @@ final class ti extends pc {
                     ek.field_x != 5) {
                     ij.a(param1, -81);
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                   if (pj.b((byte) 108)) {
@@ -1762,12 +1762,12 @@ final class ti extends pc {
                       ad.field_a) {
                       wm.a(param1, false, 9);
                       if (var7 == 0) {
-                        break L1;
+                        break regionExit2;
                       }
                     }
                     wm.a(param1, false, 12);
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                   if (ii.field_c == 0) {
@@ -1780,34 +1780,34 @@ final class ti extends pc {
                     }
                     wm.a(stackIn_160_0, stackIn_160_1, stackIn_161_2);
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                   wm.a(param1, false, 8);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit2;
                   }
                 }
                 if (pj.b((byte) 102)) {
                   wm.a(param1, false, 9);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit2;
                   }
                 }
                 if (ii.field_c == 0) {
                   wm.a(param1, false, 3);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit2;
                   }
                 }
                 wm.a(param1, false, 7);
                 if (var7 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               hf.c(0);
               if (var7 == 0) {
-                break L1;
+                break regionExit2;
               }
             }
             te.a(true);
@@ -1918,7 +1918,7 @@ final class ti extends pc {
           this.j(35);
         }
         var3 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var3 < 4) {
             stackIn_18_1 = ~var3;
             stackIn_18_2 = ~tn.field_a;
@@ -1946,14 +1946,14 @@ final class ti extends pc {
               q.a(nk.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.field_G);
               q.a(ue.field_b, nm.field_c, 0, -param1 + 320, (byte) -127, var3);
               if (var4 == 0) {
-                break L2;
+                break scanLoop1;
               }
             }
             if (1 == this.field_y) {
               this.a(en.field_b, -(int)this.field_t + param1, wa.field_j, (byte) 116);
               this.a(pj.field_m, -(int)this.field_t + (param1 + 640), ha.field_p, (byte) -108);
               if (var4 == 0) {
-                break L2;
+                break scanLoop1;
               }
             }
             stackIn_18_1 = en.field_b;
@@ -2006,7 +2006,7 @@ final class ti extends pc {
           var12 = var10_int + param6;
           var13 = var11 + param8;
           var14 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var14 < param3) {
               tc.b(var10_int + (-1 - var14), -var14 + (var11 - 1), var14 * 2 + (2 + param6), param2);
               tc.b(-var14 - 1 + var10_int, var13 + var14, param6 + 2 + var14 * 2, param0);
@@ -2019,7 +2019,7 @@ final class ti extends pc {
             } else {
               if (param6 == param7.field_s &&
                 param8 == param7.field_y) {
-                break L2;
+                break scanLoop1;
               }
               param7.a(var10_int, var11, param6, param8);
             }
@@ -2163,7 +2163,7 @@ final class ti extends pc {
         }
         if (decompiledFrameCompleted0) {
           var3 = 0;
-          L25: while (true) {
+          scanLoop1: while (true) {
             if (this.field_q.length > var3) {
               stackIn_90_0 = ~this.field_q[var3];
               stackIn_90_1 = -1;
@@ -2182,11 +2182,11 @@ final class ti extends pc {
                 }
                 this.field_s = this.field_s + 1;
                 if (~(this.field_a * 5 + 25) != ~this.field_s) {
-                  break L25;
+                  break scanLoop1;
                 }
                 this.field_y = 1;
                 if (var5 == 0) {
-                  break L25;
+                  break scanLoop1;
                 }
               }
               stackIn_90_0 = 2;
@@ -2194,15 +2194,15 @@ final class ti extends pc {
             }
             if (stackIn_90_0 != stackIn_90_1) {
               if (this.field_y != 3) {
-                break L25;
+                break scanLoop1;
               }
               this.field_w = this.field_w + 1;
               if (40 > this.field_w) {
-                break L25;
+                break scanLoop1;
               }
               this.field_y = 4;
               if (var5 == 0) {
-                break L25;
+                break scanLoop1;
               }
             }
             this.field_r = this.field_r + 1;
@@ -2213,7 +2213,7 @@ final class ti extends pc {
             }
             break;
           }
-          sf.field_m = sf.field_m + 1;
+          ImageProducerRasterBuffer.field_m = ImageProducerRasterBuffer.field_m + 1;
           if ((float)this.field_p != this.field_t) {
             var3_float = (float)this.field_p - this.field_t;
             this.field_t = this.field_t + var3_float * 0.20000000298023224f;
@@ -2368,10 +2368,10 @@ final class ti extends pc {
             } else {
               ol.field_d = 0;
             }
-            decompiledFrameRemainder1 = !(-bd.field_S + sf.field_m <= 20);
+            decompiledFrameRemainder1 = !(-bd.field_S + ImageProducerRasterBuffer.field_m <= 20);
             if (decompiledFrameRemainder1) {
               qf.a(293, cf.field_r);
-              bd.field_S = sf.field_m;
+              bd.field_S = ImageProducerRasterBuffer.field_m;
             }
           }
           if (decompiledFrameRemainder1) {
@@ -2676,7 +2676,7 @@ final class ti extends pc {
           if (var8 != 0) {
             return;
           }
-          if (40 <= sf.field_m % 80) {
+          if (40 <= ImageProducerRasterBuffer.field_m % 80) {
             return;
           }
           if (var7 == null) {
@@ -2983,7 +2983,7 @@ final class ti extends pc {
           if (this.field_o == 10 &&
             0.0f < this.field_t &&
             ek.field_x == 3) {
-            var8 = hl.field_c.toUpperCase();
+            var8 = IntrusiveNode.field_c.toUpperCase();
             if (var14 != 0) {
               var8 = ka.field_e.toUpperCase();
             }
@@ -3233,7 +3233,7 @@ final class ti extends pc {
           var8_int = 80;
           var9_float = 0.10000000149011612f;
           var10_float = (float)Math.exp((double)(-var9_float * 80.0f));
-          var11 = -sf.field_m + var8_int;
+          var11 = -ImageProducerRasterBuffer.field_m + var8_int;
           var3Lifetime1 = (int)((Math.exp((double)(var9_float * (float)var11)) - 1.0) * (double)(300.0f * var10_float)) - 10;
           var6 = var6 + (-5 + (int)((Math.exp((double)(var9_float * (float)(-5 + var11))) - 1.0) * (double)(var10_float * 300.0f)));
           decompiledFrameRemainder0 = (var18 != 0);
@@ -3254,7 +3254,7 @@ final class ti extends pc {
             if (1 < this.field_y &&
               ej.field_b == -1) {
               var8_float = 0.20000000298023224f;
-              var9_floatLifetime1 = -(float)Math.exp((double)(-var8_float * (float)sf.field_m)) + 1.0f;
+              var9_floatLifetime1 = -(float)Math.exp((double)(-var8_float * (float)ImageProducerRasterBuffer.field_m)) + 1.0f;
               var4Lifetime1 = (int)(var9_floatLifetime1 * 342.0f) + 298;
               var6 = (int)((1.0f - var9_floatLifetime1) * (float)var6);
               var5 = (int)(var9_floatLifetime1 * 256.0f) + 224;
@@ -3339,7 +3339,7 @@ final class ti extends pc {
             stackIn_51_0 = 0;
           }
           var10Lifetime1 = stackIn_51_0;
-          L21: while (true) {
+          scanLoop1: while (true) {
             stackIn_53_0 = 4;
             stackIn_53_1 = var10Lifetime1;
             if (stackIn_53_0 > stackIn_53_1 &&
@@ -3353,7 +3353,7 @@ final class ti extends pc {
                     var14_int = 60;
                     var15 = 0.10000000149011612f;
                     var16 = (float)Math.exp((double)(-var15 * 80.0f));
-                    var17 = -sf.field_m + var14_int + 5 * var12;
+                    var17 = -ImageProducerRasterBuffer.field_m + var14_int + 5 * var12;
                     var3Lifetime1 = (int)((-1.0 + Math.exp((double)(var15 * (float)var17))) * (double)(var16 * 300.0f));
                   }
                   if (t.field_j[var11Lifetime1Lifetime1] != 1) {
@@ -3370,7 +3370,7 @@ final class ti extends pc {
                 var11Lifetime1Lifetime1++;
               }
               var10Lifetime1++;
-              continue L21;
+              continue scanLoop1;
             }
             break;
           }
@@ -3487,9 +3487,9 @@ final class ti extends pc {
         var5 = 0.10000000149011612f;
         var6 = (float)Math.exp((double)(400.0f * -var5));
         if (this.field_y > 1) {
-          stackIn_7_0 = sf.field_m;
+          stackIn_7_0 = ImageProducerRasterBuffer.field_m;
         } else {
-          stackIn_7_0 = -sf.field_m + var4;
+          stackIn_7_0 = -ImageProducerRasterBuffer.field_m + var4;
         }
         boolean decompiledFrameRemainder0 = true;
         var7 = stackIn_7_0;
@@ -3543,9 +3543,9 @@ final class ti extends pc {
         var2 += 120;
         if (ek.field_x == 5) {
           if (this.field_y <= 1) {
-            stackIn_33_0 = -sf.field_m + var4;
+            stackIn_33_0 = -ImageProducerRasterBuffer.field_m + var4;
           } else {
-            stackIn_33_0 = sf.field_m;
+            stackIn_33_0 = ImageProducerRasterBuffer.field_m;
           }
           var7Lifetime1 = stackIn_33_0;
           var7Lifetime1 -= 75;
@@ -3570,9 +3570,9 @@ final class ti extends pc {
                 stackIn_39_0 = this.field_y;
                 stackIn_39_1 = 1;
                 if (stackIn_39_0 > stackIn_39_1) {
-                  stackIn_47_0 = sf.field_m;
+                  stackIn_47_0 = ImageProducerRasterBuffer.field_m;
                 } else {
-                  stackIn_47_0 = var4 - sf.field_m;
+                  stackIn_47_0 = var4 - ImageProducerRasterBuffer.field_m;
                 }
                 var7Lifetime2 = stackIn_47_0;
                 var7Lifetime2 = var7Lifetime2 - (5 - var3) * 10;
@@ -3632,7 +3632,7 @@ final class ti extends pc {
           if (stackIn_75_0 != 5) {
             var2 += 30;
           }
-          if (sf.field_m % 50 < 25) {
+          if (ImageProducerRasterBuffer.field_m % 50 < 25) {
             if (ek.field_x == 2 &&
               -1 != ce.field_r) {
               var9 = sd.a(kj.field_n, new String[]{gh.field_t[ce.field_r]}, true);
@@ -3731,13 +3731,13 @@ final class ti extends pc {
           }
         }
         var2 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameRemainder0 = true;
           if (2 > var2) {
             stackIn_26_0 = 0;
             stackIn_26_1 = var2;
             if (var4 != 0) {
-              break L2;
+              break scanLoop1;
             }
             stackIn_13_0 = (stackIn_26_0 == stackIn_26_1) ? 240 : 400;
             var3 = stackIn_13_0;

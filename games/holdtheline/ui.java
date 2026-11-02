@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends hl {
+final class ui extends IntrusiveNode {
     static ll field_l;
     private int field_n;
-    hl field_k;
+    IntrusiveNode field_k;
     db field_j;
     static String field_m;
     static int[] field_i;
@@ -41,7 +41,7 @@ final class ui extends hl {
         }
     }
 
-    ui(db param0, hl param1) {
+    ui(db param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_n = param0.j();

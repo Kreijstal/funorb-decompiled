@@ -93,7 +93,7 @@ final class rb extends ff {
               var4 = this.field_n.a(3, this.field_d, param2);
             }
           }
-          this.field_w.a((hl) (var4), (long)param2, false);
+          this.field_w.a((IntrusiveNode) (var4), (long)param2, false);
         }
         if (((ca) (var4)).field_u) {
           return null;
@@ -147,7 +147,7 @@ final class rb extends ff {
             }
             if (!this.field_A.c(104)) {
               var4 = this.field_A.a(param2, true, (byte) 2, (byte) -60, this.field_q);
-              this.field_w.a((hl) (var4), (long)param2, false);
+              this.field_w.a((IntrusiveNode) (var4), (long)param2, false);
             }
             return null;
           }
@@ -187,7 +187,7 @@ final class rb extends ff {
           if (((ca) (var4)).field_t &&
             !this.field_A.c(90)) {
             var4 = this.field_A.a(param2, true, (byte) 2, (byte) -60, this.field_q);
-            this.field_w.a((hl) (var4), (long)param2, false);
+            this.field_w.a((IntrusiveNode) (var4), (long)param2, false);
           }
           return null;
         }
@@ -330,7 +330,7 @@ final class rb extends ff {
         if (param0 != 2) {
           this.field_h = -32;
         }
-        hl var2 = this.field_j.b((byte) 121);
+        IntrusiveNode var2 = this.field_j.b((byte) 121);
         while (var2 != null) {
           var3 = (int)var2.field_f;
           if (var3 < 0) {
@@ -365,14 +365,14 @@ final class rb extends ff {
         ca discarded$2 = null;
         int var2_int;
         ca var2;
-        hl var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        hl var6;
-        hl var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        hl var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = HoldTheLine.field_D;
         if (this.field_r != null) {
@@ -404,7 +404,7 @@ final class rb extends ff {
                   discarded$0 = this.a(1, 106, this.field_l);
                 }
                 if (this.field_o[this.field_l] == 0) {
-                  var7 = new hl();
+                  var7 = new IntrusiveNode();
                   var7.field_f = (long)this.field_l;
                   var2_int = 0;
                   this.field_r.a((byte) -82, var7);
@@ -437,18 +437,18 @@ final class rb extends ff {
                 }
                 var3Lifetime1 = this.field_r.c((byte) -86);
               }
-              L10: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_l < this.field_v.field_u.length) {
                   if (this.field_v.field_u[this.field_l] != 0) {
                     if (this.field_A.d(param0 ^ 22)) {
                       var2_intLifetime1 = 0;
-                      break L10;
+                      break scanLoop1;
                     }
                     if (this.field_o[this.field_l] != 1) {
                       discarded$2 = this.a(2, 74, this.field_l);
                     }
                     if (1 != this.field_o[this.field_l]) {
-                      var6 = new hl();
+                      var6 = new IntrusiveNode();
                       var6.field_f = (long)this.field_l;
                       var2_intLifetime1 = 0;
                       this.field_r.a((byte) -125, var6);

@@ -8,13 +8,13 @@ abstract class ob implements ia {
     abstract String d(int param0);
 
     final static String d(byte param0) {
-        if (bb.field_a == sf.field_n) {
+        if (bb.field_a == ImageProducerRasterBuffer.field_n) {
           return ij.field_k;
         }
         if (!fj.field_o.a(250)) {
           return fj.field_o.b((byte) 66);
         }
-        if (ak.field_b != sf.field_n) {
+        if (ak.field_b != ImageProducerRasterBuffer.field_n) {
           int var1 = -82 / ((-21 - param0) / 40);
           return ec.field_v;
         }

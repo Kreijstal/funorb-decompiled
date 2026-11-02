@@ -38,7 +38,7 @@ final class vg extends v implements ed, pi {
         if (rd.b(-106) ||
           !(0 >= this.field_M.field_q.length()) &&
           !(0 >= this.field_H.field_q.length())) {
-          mi.a(this.field_H.field_q, (byte) -60, this.field_M.field_q);
+          DelegatingCanvas.a(this.field_H.field_q, (byte) -60, this.field_M.field_q);
         }
         if (param0 != -23) {
           this.a(true);
@@ -229,7 +229,7 @@ final class vg extends v implements ed, pi {
             }
           }
           this.field_o = 15;
-          var7 = hl.field_g;
+          var7 = IntrusiveNode.field_g;
           if (this.field_R != null) {
             this.field_o = this.field_o + (var7.b(this.field_R, this.field_x - 40, var7.field_G) + 5);
           }
@@ -554,7 +554,7 @@ final class vg extends v implements ed, pi {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_R) {
-          hl.field_g.a(this.field_R, 20 + param2 + this.field_k, 15 + (param1 + this.field_o), this.field_x - 40, this.field_u, 16777215, -1, 1, 0, hl.field_g.field_G);
+          IntrusiveNode.field_g.a(this.field_R, 20 + param2 + this.field_k, 15 + (param1 + this.field_o), this.field_x - 40, this.field_u, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
         }
         if (null != this.field_N) {
           tc.b(10 + param2, 134 + param1, -20 + this.field_x, 4210752);

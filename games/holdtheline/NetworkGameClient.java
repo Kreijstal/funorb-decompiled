@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oh extends md {
+abstract class NetworkGameClient extends GameAppletShell {
     private long field_l;
     private boolean field_v;
     private int field_t;
@@ -209,7 +209,7 @@ abstract class oh extends md {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = uf.a(oi.a((byte) 31), ob.d((byte) -116), (byte) 80, ck.a((byte) -27), this.field_q, tn.d(0), ef.c(4));
+            var5_intLifetime1 = uf.a(oi.a((byte) 31), ob.d((byte) -116), (byte) 80, ck.a((byte) -27), this.field_q, tn.d(0), FullscreenFocusCanvas.c(4));
             if (var5_intLifetime1 != -1) {
               si.a(um.field_b, wn.field_h, -98, var5_intLifetime1);
               wn.field_h = null;
@@ -223,7 +223,7 @@ abstract class oh extends md {
               ti.k(-87);
             }
             if (!param0) {
-              var5_intLifetime2 = v.a(this.field_w, 1, tn.d(0), ef.c(4), false, this.field_q);
+              var5_intLifetime2 = v.a(this.field_w, 1, tn.d(0), FullscreenFocusCanvas.c(4), false, this.field_q);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   mk.a(var5_intLifetime2, um.field_b, -2698);
@@ -477,7 +477,7 @@ abstract class oh extends md {
                     mk.a(256, wb.field_f, param0 - 3749);
                   } else {
                     if (ao.field_a == 5) {
-                      mk.a(5, ef.field_e, -2698);
+                      mk.a(5, FullscreenFocusCanvas.field_e, -2698);
                     } else {
                       mk.a(256, vm.field_ub, -2698);
                     }
@@ -572,15 +572,15 @@ abstract class oh extends md {
         }
         if (10 == pf.field_d) {
           if (v.field_C != 0) {
-            md.field_i = bi.a(-110, qb.field_i);
+            GameAppletShell.field_i = bi.a(-110, qb.field_i);
           }
           pf.field_d = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (pf.field_d == 11) {
-          if (null != md.field_i && (!md.field_i.b((byte) -76) ||
-            !md.field_i.a((byte) -60))) {
-            jj.a(85, uj.a(-115, md.field_i, pb.field_d, rg.field_f), 0.0f);
+          if (null != GameAppletShell.field_i && (!GameAppletShell.field_i.b((byte) -76) ||
+            !GameAppletShell.field_i.a((byte) -60))) {
+            jj.a(85, uj.a(-115, GameAppletShell.field_i, pb.field_d, rg.field_f), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -632,7 +632,7 @@ abstract class oh extends md {
 
     public static void m(int param0) {
         if (param0 != 8) {
-          oh.m(46);
+          NetworkGameClient.m(46);
         }
         field_r = null;
         field_s = null;
@@ -649,7 +649,7 @@ abstract class oh extends md {
         if (pj.field_n) {
           return -1;
         }
-        int var2 = v.a(this.field_w, 1, tn.d(0), ef.c(4), true, this.field_q);
+        int var2 = v.a(this.field_w, 1, tn.d(0), FullscreenFocusCanvas.c(4), true, this.field_q);
         if (var2 == -1) {
           return -1;
         }
@@ -748,7 +748,7 @@ abstract class oh extends md {
         try {
           this.a(param2, 640, 127, 480, param0);
           if (param1 != 6165) {
-            oh.a(true, false);
+            NetworkGameClient.a(true, false);
           }
         } catch (RuntimeException runtimeException) {
           throw kk.a((Throwable) ((Object) runtimeException), "oh.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -765,7 +765,7 @@ abstract class oh extends md {
     private final void e(byte param0) {
         String var2 = vd.a(-1);
         if (param0 != -15) {
-          oh.a(false, false);
+          NetworkGameClient.a(false, false);
         }
         mn.a(var2, en.a(104), -1);
     }
@@ -841,7 +841,7 @@ abstract class oh extends md {
         ba.a(-7235, rk.a((byte) 80, var5), var3 != 0, en.a(109));
     }
 
-    protected oh() {
+    protected NetworkGameClient() {
     }
 
     static {

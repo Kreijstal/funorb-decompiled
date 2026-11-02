@@ -157,10 +157,10 @@ final class mf {
           if (va.field_j[param0] < va.field_j[param2]) {
             return false;
           }
-          if (oh.field_s[param0] > oh.field_s[param2]) {
+          if (NetworkGameClient.field_s[param0] > NetworkGameClient.field_s[param2]) {
             return true;
           }
-          if (oh.field_s[param2] > oh.field_s[param0]) {
+          if (NetworkGameClient.field_s[param2] > NetworkGameClient.field_s[param0]) {
             return false;
           }
           var4 = da.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
@@ -176,10 +176,10 @@ final class mf {
           }
           return !(param2 >= param0);
         }
-        if (oh.field_s[param2] < oh.field_s[param0]) {
+        if (NetworkGameClient.field_s[param2] < NetworkGameClient.field_s[param0]) {
           return true;
         }
-        if (oh.field_s[param0] < oh.field_s[param2]) {
+        if (NetworkGameClient.field_s[param0] < NetworkGameClient.field_s[param2]) {
           return false;
         }
         if (va.field_j[param2] < va.field_j[param0]) {

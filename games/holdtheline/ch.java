@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch extends hl {
+final class ch extends IntrusiveNode {
     byte[] field_l;
     int field_j;
     static String[] field_t;
@@ -313,7 +313,7 @@ final class ch extends hl {
           var21Lifetime2 = li.field_b;
           var22Lifetime2 = li.field_c;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param4.field_u > var23Lifetime2) {
               var24Lifetime1 = param4.field_m[var23Lifetime2];
@@ -327,7 +327,7 @@ final class ch extends hl {
               if (var30 != 0) {
                 if (stackIn_63_0 > stackIn_63_1) {
                   stackIn_72_0 = kf.field_T.length;
-                  break L3;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -409,7 +409,7 @@ final class ch extends hl {
                   }
                   stackIn_72_0 = kf.field_T.length;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_72_0 <= var18) {
                     break;
@@ -649,7 +649,7 @@ final class ch extends hl {
           }
           var13 = new ik[stackIn_49_0];
           var14Lifetime1 = 0;
-          L24: while (true) {
+          scanLoop1: while (true) {
             if (var14Lifetime1 < var13.length) {
               dupTemp$1 = new ik();
               var13[var14Lifetime1] = dupTemp$1;
@@ -673,7 +673,7 @@ final class ch extends hl {
               var14Lifetime1 = var2.f((byte) -93);
               if (var14Lifetime1 <= 0) {
                 stackIn_67_0 = null;
-                break L24;
+                break scanLoop1;
               }
               stackIn_65_0 = var14Lifetime1;
               stackIn_65_1 = 2;
@@ -930,7 +930,7 @@ final class ch extends hl {
           if (decompiledFrameCompleted2) {
             var27 = 0;
           }
-          L86: while (true) {
+          scanLoop2: while (true) {
             boolean decompiledFrameCompleted1 = true;
             if (var12 > var27) {
               var28 = var13[var27];
@@ -984,7 +984,7 @@ final class ch extends hl {
               while (var27 < var12) {
                 var28 = var13[var27];
                 if (var36 != 0) {
-                  break L86;
+                  break scanLoop2;
                 }
                 stackIn_233_0Lifetime1 = null;
                 stackIn_233_1Lifetime1 = var28.field_l;
@@ -1023,18 +1023,18 @@ final class ch extends hl {
                 this.field_k[var29] = (byte)(32 + var28_int * this.field_k[var29] >> 6);
                 var29++;
               } while (var36 == 0);
-              L107: while (true) {
+              scanLoop3: while (true) {
                 if (var15_array.length > var29) {
                   var30 = var15_array[var29];
                   var31 = var15_array[var29 + 1];
                   var32 = var28_int * (var30 - var27) + (var30 - var27) / 2;
                   stackIn_268_0 = var27;
                   if (var36 != 0) {
-                    break L107;
+                    break scanLoop3;
                   }
                   var33 = stackIn_268_0;
                   while (var33 < var30) {
-                    var34 = sf.a(var32, -var27 + var30, (byte) -76);
+                    var34 = ImageProducerRasterBuffer.a(var32, -var27 + var30, (byte) -76);
                     var32 = var32 + (var31 - var28_int);
                     this.field_k[var33] = (byte)(var34 * this.field_k[var33] + 32 >> 6);
                     var33++;
@@ -1052,14 +1052,14 @@ final class ch extends hl {
                 this.field_k[var30] = (byte)(var28_int * this.field_k[var30] + 32 >> 6);
                 var30++;
                 if (var36 != 0) {
-                  break L86;
+                  break scanLoop2;
                 }
               }
               var15_array = null;
             }
             break;
           }
-          L114: {
+          regionExit4: {
             if (var16 != null) {
               var19 = var2.f((byte) -27);
               var16[0] = (byte)var19;
@@ -1075,7 +1075,7 @@ final class ch extends hl {
               } while (var36 == 0);
               var28_int = var16[1] << 1;
               var29 = 0;
-              L120: while (true) {
+              scanLoop5: while (true) {
                 if (var29 < var27) {
                   var30 = var28_int + (this.field_l[var29] & 255);
                   stackIn_299_0 = ~var30;
@@ -1086,9 +1086,9 @@ final class ch extends hl {
                       var31 = var16[var29 + 1] << 1;
                       var32 = (var30 - var27) * var28_int + (var30 - var27) / 2;
                       stackIn_323_0 = var27;
-                      break L114;
+                      break regionExit4;
                     }
-                    break L120;
+                    break scanLoop5;
                   }
                   if (stackIn_299_0 > stackIn_299_1) {
                     var30 = 0;
@@ -1105,18 +1105,18 @@ final class ch extends hl {
                   stackIn_299_0Lifetime1 = ~var16.length;
                   stackIn_299_1Lifetime1 = ~var29;
                   if (stackIn_299_0Lifetime1 >= stackIn_299_1Lifetime1) {
-                    break L120;
+                    break scanLoop5;
                   }
                   var30 = var16[var29];
                   var31 = var16[var29 + 1] << 1;
                   var32 = (var30 - var27) * var28_int + (var30 - var27) / 2;
                   stackIn_323_0 = var27;
                   if (var36 != 0) {
-                    break L114;
+                    break regionExit4;
                   }
                   var33 = stackIn_323_0;
                   while (var33 < var30) {
-                    var34 = sf.a(var32, -var27 + var30, (byte) -86);
+                    var34 = ImageProducerRasterBuffer.a(var32, -var27 + var30, (byte) -86);
                     var35 = var34 + (this.field_l[var33] & 255);
                     stackIn_299_0Lifetime1Lifetime1 = 0;
                     stackIn_299_1Lifetime1Lifetime1 = var35;

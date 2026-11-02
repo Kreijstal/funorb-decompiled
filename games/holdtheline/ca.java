@@ -77,7 +77,7 @@ abstract class ca extends ln {
         if (param0 != -11875) {
           field_s = -14;
         }
-        sf.a(-1379);
+        ImageProducerRasterBuffer.a(-1379);
     }
 
     public static void f(int param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends hl {
+final class od extends IntrusiveNode {
     od field_p;
     static String field_r;
     int field_s;

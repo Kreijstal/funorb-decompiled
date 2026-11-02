@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class sf extends mm implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends mm implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static String field_o;
     static String field_j;
     static String field_k;
@@ -87,7 +87,7 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
     public static void c(int param0) {
         field_j = null;
         if (param0 != -1) {
-          sf.c(-126);
+          ImageProducerRasterBuffer.c(-126);
         }
         field_o = null;
         field_k = null;
@@ -168,7 +168,7 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
         try {
           pk.field_G.d();
           if (param0 != -1379) {
-            sf.c(-82);
+            ImageProducerRasterBuffer.c(-82);
           }
           jd.field_G.d();
           gg.field_G = gg.field_G - 1;
@@ -205,7 +205,7 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
         return -var3 + (var3 + param0) / param1;
     }
 
-    sf() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

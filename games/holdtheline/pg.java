@@ -486,14 +486,14 @@ final class pg extends ub {
         try {
           fb.field_i = param2;
           wj.field_n = param1;
-          ef.field_c = param3;
-          var4 = ef.field_c.a("", false, "font");
+          FullscreenFocusCanvas.field_c = param3;
+          var4 = FullscreenFocusCanvas.field_c.a("", false, "font");
           var5 = oc.a("", fb.field_i, (byte) 32, "font");
           qf.a(param0 ^ param0, -1, var4);
           ni.field_a = ce.a(0, var4, var5, 1, 16777215, param0 - 30857);
           qf.a(param0 ^ 30865, 2, var4);
           nm.field_c = ce.a(0, var4, var5, 2, 16777215, 8);
-          HoldTheLine.field_F = om.a("font12", ef.field_c, "", 8192, fb.field_i);
+          HoldTheLine.field_F = om.a("font12", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
           var6 = nm.field_c.field_N[0];
           nm.field_c.field_N = new int[10][];
           nm.field_c.field_N[0] = var6;
@@ -721,7 +721,7 @@ final class pg extends ub {
           al.field_a = lb.b("vehicle_tourer", (byte) -113);
           rl.field_K = lb.b("vehicle_dragster", (byte) 125);
           jg.field_o = lb.b("vehicle_dunebuggy", (byte) -114);
-          md.field_j = lb.b("vehicle_snowcat", (byte) 110);
+          GameAppletShell.field_j = lb.b("vehicle_snowcat", (byte) 110);
           ei.field_a = lb.b("vehicle_snowmobile", (byte) 91);
           am.field_b = lb.b("vehicle_hatchback", (byte) -90);
           ud.field_h = lb.b("vehicle_suv", (byte) 72);
@@ -733,7 +733,7 @@ final class pg extends ub {
           var15 = j.a((byte) 81, 100, 13487565, 40);
           discarded$2 = new mg(var15, true, false);
           qk.field_f = new mg(rl.a(-5936, 0, var15, 10, var15), true, false);
-          de.field_Q = sf.a(60, (byte) -108, 8355647);
+          de.field_Q = ImageProducerRasterBuffer.a(60, (byte) -108, 8355647);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hl {
+class IntrusiveNode {
     static hj field_d;
     long field_f;
     static qi field_g;
     static String field_e;
     static String field_c;
-    hl field_h;
-    hl field_a;
+    IntrusiveNode field_h;
+    IntrusiveNode field_a;
     static boolean field_b;
 
     final static boolean a(boolean param0, int param1, wc param2, qm param3) {
@@ -104,7 +104,7 @@ class hl {
           return;
         }
         String var2 = (String) null;
-        hl.a((String) null, 26, true, (String) null, (a) null, (String) null, 76);
+        IntrusiveNode.a((String) null, 26, true, (String) null, (a) null, (String) null, 76);
         field_e = null;
         field_g = null;
         field_c = null;
@@ -113,7 +113,7 @@ class hl {
 
     final void d(int param0) {
         if (param0 != 0) {
-          hl.c(47);
+          IntrusiveNode.c(47);
           if (null == this.field_a) {
             return;
           }
@@ -159,7 +159,7 @@ class hl {
         try {
           if (param1 != -23000) {
             var8 = (String) null;
-            hl.a((String) null, 49, true, (String) null, (a) null, (String) null, 51);
+            IntrusiveNode.a((String) null, 49, true, (String) null, (a) null, (String) null, 51);
           }
           if (gg.field_M != bb.field_a) {
             return false;
@@ -173,7 +173,7 @@ class hl {
           ij.field_k = param5;
           qd.field_k = param0;
           ff.field_b = param2;
-          bb.field_a = sf.field_n;
+          bb.field_a = ImageProducerRasterBuffer.field_n;
           ol.field_a = param3;
           u.field_V = param6;
           bg.field_d = null;

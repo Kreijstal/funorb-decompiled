@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jk extends hl {
+final class jk extends IntrusiveNode {
     private int field_n;
     private int field_s;
     int field_i;
@@ -22,11 +22,11 @@ final class jk extends hl {
         if (param0 >= -4) {
           this.field_i = -41;
           this.d(0);
-          mm.field_e.a((byte) -112, (hl) (this));
+          mm.field_e.a((byte) -112, (IntrusiveNode) (this));
           return;
         }
         this.d(0);
-        mm.field_e.a((byte) -112, (hl) (this));
+        mm.field_e.a((byte) -112, (IntrusiveNode) (this));
     }
 
     final static void a(int param0) {

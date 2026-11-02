@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_e;
     static int field_b;
     static hj[] field_i;
@@ -38,13 +38,13 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static String c(int param0) {
         if (param0 != 4) {
-          ef.b(12);
-          if (bb.field_a == sf.field_n) {
+          FullscreenFocusCanvas.b(12);
+          if (bb.field_a == ImageProducerRasterBuffer.field_n) {
             return qd.field_k;
           }
           return o.field_d;
         }
-        if (bb.field_a == sf.field_n) {
+        if (bb.field_a == ImageProducerRasterBuffer.field_n) {
           return qd.field_k;
         }
         return o.field_d;
@@ -76,7 +76,7 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
     final void a(ib param0, int param1) {
         try {
           if (param1 != 50) {
-            ef.c(62);
+            FullscreenFocusCanvas.c(62);
           }
           rd.a((byte) 118, param0, this.field_f);
         } catch (RuntimeException runtimeException) {
@@ -139,7 +139,7 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    ef() {
+    FullscreenFocusCanvas() {
     }
 
     final static void a(int param0) {

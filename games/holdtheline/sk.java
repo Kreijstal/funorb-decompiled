@@ -269,7 +269,7 @@ final class sk {
                 }
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param1 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -285,7 +285,7 @@ final class sk {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (oi.field_d[3] & 255) + ((oi.field_d[0] & 255) << 24) + (((oi.field_d[1] & 255) << 16) + ((oi.field_d[2] & 255) << 8));
                         var12 = (oi.field_d[5] & 255) + ((255 & oi.field_d[4]) << 8);
@@ -301,7 +301,7 @@ final class sk {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var13 = 255 & oi.field_d[7];
                         var12 = (oi.field_d[3] & 255) + (65280 & oi.field_d[2] << 8);

@@ -218,7 +218,7 @@ final class wa extends gd {
             return stackIn_8_0;
           }
           if (t.a(0, var5)) {
-            stackIn_11_0 = md.field_c;
+            stackIn_11_0 = GameAppletShell.field_c;
             return stackIn_11_0;
           }
           if (aa.a(var5, 1)) {

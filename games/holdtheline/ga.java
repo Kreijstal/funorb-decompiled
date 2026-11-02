@@ -263,9 +263,9 @@ final class ga {
           this.field_b = 3;
           this.field_n = 3;
           var4.field_b = 11711154;
-          var4.a(0, 62).b(15658734, -26228).a(29536, sf.a(7829367, 10066329, 8947848, 14));
-          var4.a(1, param1 ^ 76).a(29536, sf.a(13421772, 10066329, 11184810, param1 - 25));
-          var4.a(3, 122).a(29536, sf.a(10066329, 7829367, 8947848, 14)).a(1, -116).a(1, true);
+          var4.a(0, 62).b(15658734, -26228).a(29536, ImageProducerRasterBuffer.a(7829367, 10066329, 8947848, 14));
+          var4.a(1, param1 ^ 76).a(29536, ImageProducerRasterBuffer.a(13421772, 10066329, 11184810, param1 - 25));
+          var4.a(3, 122).a(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 8947848, 14)).a(1, -116).a(1, true);
           var5 = new hj[9];
           var17 = new uc(32, 32);
           var19 = var17;
@@ -287,7 +287,7 @@ final class ga {
           discarded$1 = new ug(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ig();
           var18.a((byte) -124, var8);
-          var8.a(0, 61).a(29536, sf.a(10066329, 7829367, 15658734, 14)).b(1118481, -26228).b(-1, false);
+          var8.a(0, 61).a(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 15658734, 14)).b(1118481, -26228).b(-1, false);
           var8.a(4, -90).a(true, param1 ^ -2147483609).a(29536, var5);
           this.field_s = (dh) ((Object) var8);
           var9 = new hj[9];

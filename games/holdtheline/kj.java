@@ -118,7 +118,7 @@ final class kj extends rd {
             field_o = (String) null;
           }
           var5 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5 >= param3.field_e) {
               return false;
             }
@@ -127,7 +127,7 @@ final class kj extends rd {
             while (true) {
               if (var7 >= var6.field_e) {
                 var5++;
-                continue L1;
+                continue scanLoop1;
               }
               var8 = (lb) (var6.field_b[var7]);
               if (!th.a(param0 - 141, var10, var8)) {

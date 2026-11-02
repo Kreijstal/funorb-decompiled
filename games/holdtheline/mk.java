@@ -86,7 +86,7 @@ final class mk extends w {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (0 == param2) {
-            var10 = oh.a(param4, (byte) 111);
+            var10 = NetworkGameClient.a(param4, (byte) 111);
             var6 = var10;
             if (var6 == null) {
               return null;
@@ -466,7 +466,7 @@ final class mk extends w {
                 param1 = sd.a(fk.field_d, new String[]{param1}, true);
               }
               if (gn.field_g) {
-                param1 = mi.field_g;
+                param1 = DelegatingCanvas.field_g;
               }
               sb.field_c.a(true, param1, param0);
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends hl {
+final class fb extends IntrusiveNode {
     int[] field_r;
     int field_t;
     int field_u;
@@ -66,8 +66,8 @@ final class fb extends hl {
         try {
           this.field_p = param3;
           this.field_k = param5;
-          fieldTemp$0 = mi.field_b;
-          mi.field_b = mi.field_b + 1;
+          fieldTemp$0 = DelegatingCanvas.field_b;
+          DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1;
           this.field_u = 65535 & fieldTemp$0;
           this.field_t = param1;
           this.field_o = param4;

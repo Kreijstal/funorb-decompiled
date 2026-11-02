@@ -177,12 +177,12 @@ final class ja extends ee {
           }
           var5 = new eb[stackIn_30_0];
           var6 = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var5.length > var6) {
               var5[var6] = new eb(this.field_sc[var6]);
               var6++;
               if (var20 != 0) {
-                break L6;
+                break scanLoop1;
               }
               if (var20 == 0) {
                 continue;
@@ -200,7 +200,7 @@ final class ja extends ee {
             this.a((byte) stackIn_39_1, stackIn_39_2, stackIn_40_3, var5.length);
             break;
           }
-          L9: {
+          regionExit2: {
             if (this.field_G > 0) {
               var7_float = ha.a(this.field_A, var5[0], false);
               if (this.field_w.field_g * this.field_x + this.field_w.field_j * this.field_t < 0.0f) {
@@ -221,7 +221,7 @@ final class ja extends ee {
                   while ((double)var3 > 3.141592653589793) {
                     var3 = (float)((double)var3 - 6.283185307179586);
                     if (var20 != 0) {
-                      break L9;
+                      break regionExit2;
                     }
                     if (var20 == 0) {
                       continue;
@@ -304,7 +304,7 @@ final class ja extends ee {
           if (param0 <= 64) {
             this.c(-82, -104);
           }
-          L33: {
+          regionExit3: {
             boolean decompiledFrameRemainder4 = true;
             boolean decompiledFrameRemainder2 = true;
             var14 = var13;
@@ -321,10 +321,10 @@ final class ja extends ee {
                 }
               } else {
                 var14 = 0;
-                L40: while (true) {
+                scanLoop4: while (true) {
                   if (var14 < bl.field_r.field_h) {
                     if (var20 != 0) {
-                      break L33;
+                      break regionExit3;
                     }
                     if (this.field_mc != var14) {
                       var15 = bl.field_r.field_C[var14];
@@ -338,7 +338,7 @@ final class ja extends ee {
                             !kj.a(140, var15.field_A, this.field_A, bl.field_r.field_nb)) {
                             var12 = 1;
                             if (var20 == 0) {
-                              break L40;
+                              break scanLoop4;
                             }
                           }
                         }
@@ -358,10 +358,10 @@ final class ja extends ee {
                 !(this.field_lb.b(110)) ||
                 var20 != 0))) {
                 var14 = 0;
-                L45: while (true) {
+                scanLoop5: while (true) {
                   if (bl.field_r.field_h > var14) {
                     if (var20 != 0) {
-                      break L33;
+                      break regionExit3;
                     }
                     if (this.field_mc != var14 ||
                       var20 != 0) {
@@ -376,7 +376,7 @@ final class ja extends ee {
                             !kj.a(140, var15Lifetime1.field_A, this.field_A, bl.field_r.field_nb)) {
                             var12 = 1;
                             if (var20 == 0) {
-                              break L45;
+                              break scanLoop5;
                             }
                           }
                         }
@@ -407,7 +407,7 @@ final class ja extends ee {
               kj.b(2, 250) == 0)) {
               var12 = 1;
               var14_ref_wm = (wm) (bl.field_r.field_d.b((byte) 115));
-              L50: while (true) {
+              scanLoop6: while (true) {
                 if (null != var14_ref_wm) {
                   if (var20 != 0) {
                     break;
@@ -416,7 +416,7 @@ final class ja extends ee {
                     var14_ref_wm.a(2048, this.field_A)) {
                     var12 = 0;
                     if (var20 == 0) {
-                      break L50;
+                      break scanLoop6;
                     }
                   }
                   var14_ref_wm = (wm) (bl.field_r.field_d.c((byte) 120));
@@ -643,7 +643,7 @@ final class ja extends ee {
           var6 = -this.field_y + (float)var3.field_h;
           var7 = -this.field_u + (float)var3.field_f;
           var8 = var5 - this.field_r;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if ((double)var8 > 3.141592653589793) {
               var8 = (float)((double)var8 - 6.283185307179586);
@@ -657,7 +657,7 @@ final class ja extends ee {
               while (-3.141592653589793 > (double)var8) {
                 stackIn_11_0 = (float)((double)var8 + 6.283185307179586);
                 if (var10 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 var8 = stackIn_11_0;
                 if (var10 == 0) {
@@ -2357,10 +2357,10 @@ final class ja extends ee {
           }
           this.d((byte) 99);
           var2_int = bl.field_r.field_h;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var2_int < bl.field_r.field_z) {
               if (var3 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (this == bl.field_r.field_C[var2_int]) {
                 bl.field_r.field_C[var2_int] = null;
@@ -3384,7 +3384,7 @@ final class ja extends ee {
           var6 = new qm(0, 0);
           var7 = 1;
           var8 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_7_0 = 5;
             stackIn_7_1 = var8;
             while (true) {
@@ -3488,7 +3488,7 @@ final class ja extends ee {
                     break;
                   }
                   var8++;
-                  continue L0;
+                  continue scanLoop1;
                 }
               }
               return;
@@ -3832,9 +3832,9 @@ final class ja extends ee {
               this.f(3);
             }
           }
-          L47: {
+          regionExit1: {
             boolean decompiledFrameCompleted0 = true;
-            L48: {
+            regionExit2: {
               boolean decompiledFrameRemainder0 = true;
               this.field_Lb = this.field_Lb + 1;
               if (var2.field_J != 0) {
@@ -3940,7 +3940,7 @@ final class ja extends ee {
                     stackIn_323_1 = this.field_mc;
                     if (var12 != 0) {
                       if (stackIn_323_0 <= stackIn_323_1) {
-                        break L48;
+                        break regionExit2;
                       }
                       var4 = (float)(-this.field_sc[0].field_h + this.field_sc[1].field_h);
                       var5 = (float)(-this.field_sc[0].field_f + this.field_sc[1].field_f);
@@ -3952,7 +3952,7 @@ final class ja extends ee {
                       var9 = var5 * var8 + var7 * var4;
                       var10 = var7 * var5 - var8 * var4;
                       stackIn_340_0 = $cfr$fcmpl(var9, 0.0f);
-                      break L47;
+                      break regionExit1;
                     }
                     if (stackIn_323_0 != stackIn_323_1) {
                       var7_ref_ja = var2.field_C[var6_int];
@@ -5115,7 +5115,7 @@ final class ja extends ee {
             }
             break;
           }
-          L9: {
+          regionExit1: {
             boolean decompiledFrameCompleted0 = true;
             var11Lifetime1 = null;
             if (null != ih.field_n) {
@@ -5150,7 +5150,7 @@ final class ja extends ee {
                   this.a(500.0f * mm.field_d, var5, (int)this.field_y, 40, (int)this.field_u);
                 }
                 if (var17 == 0) {
-                  break L9;
+                  break regionExit1;
                 }
               }
               stackIn_68_0 = (int)(this.field_y + var5.field_j * var6);
@@ -5251,11 +5251,11 @@ final class ja extends ee {
           }
           var6 = this.field_Fb[param1];
           var7 = 3;
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (var7 > 0) {
               stackIn_44_0 = $cfr$fcmpg(rd.field_b[var7 - 1], param0);
               if (var8 != 0) {
-                break L7;
+                break scanLoop1;
               }
               if (stackIn_44_0 < 0) {
                 this.d(var7, -1065046232);

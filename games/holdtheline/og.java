@@ -3,18 +3,18 @@
  */
 final class og {
     private int field_d;
-    private hl field_c;
-    private hl[] field_a;
+    private IntrusiveNode field_c;
+    private IntrusiveNode[] field_a;
     private int field_e;
-    private hl field_b;
+    private IntrusiveNode field_b;
 
-    final hl a(byte param0, long param1) {
-        hl var4;
-        hl var5;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = HoldTheLine.field_D;
         if (param0 < 111) {
-          return (hl) null;
+          return (IntrusiveNode) null;
         }
         var4 = this.field_a[(int)(param1 & (long)(this.field_d - 1))];
         this.field_b = var4.field_h;
@@ -34,8 +34,8 @@ final class og {
         return var5;
     }
 
-    final void a(hl param0, long param1, boolean param2) {
-        hl var5 = null;
+    final void a(IntrusiveNode param0, long param1, boolean param2) {
+        IntrusiveNode var5 = null;
         if (param0.field_a != null) {
           param0.d(0);
         }
@@ -61,19 +61,19 @@ final class og {
         sm.field_c.a((n) (new pk()), (byte) 87);
     }
 
-    final hl a(int param0) {
+    final IntrusiveNode a(int param0) {
         this.field_e = param0;
         return this.b(-1);
     }
 
-    final hl b(int param0) {
+    final IntrusiveNode b(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        hl var4;
-        hl var5;
-        hl var6;
-        hl var9;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
+        IntrusiveNode var9;
         var3 = HoldTheLine.field_D;
         if (0 >= this.field_e) {
           do {
@@ -116,13 +116,13 @@ final class og {
 
     og(int param0) {
         int var2 = 0;
-        hl dupTemp$1 = null;
-        hl var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_e = 0;
-        this.field_a = new hl[param0];
+        this.field_a = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new hl();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
           var3.field_h = var3;

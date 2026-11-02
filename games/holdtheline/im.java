@@ -6,7 +6,7 @@ import java.util.*;
 final class im implements Iterable {
     int field_g;
     static int[] field_h;
-    hl[] field_j;
+    IntrusiveNode[] field_j;
     static volatile int field_e;
     static byte[] field_i;
     static hj field_b;
@@ -14,10 +14,10 @@ final class im implements Iterable {
     static String field_f;
     static int field_a;
     static long field_c;
-    private hl field_d;
+    private IntrusiveNode field_d;
 
-    final void a(byte param0, hl param1, long param2) {
-        hl var5 = null;
+    final void a(byte param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param1.field_a != null) {
             param1.d(0);
@@ -36,10 +36,10 @@ final class im implements Iterable {
         }
     }
 
-    final hl a(long param0, int param1) {
-        hl var4;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
         int var5_int;
-        hl var5;
+        IntrusiveNode var5;
         int var6;
         var6 = HoldTheLine.field_D;
         var4 = this.field_j[(int)((long)(this.field_g - 1) & param0)];
@@ -139,12 +139,12 @@ final class im implements Iterable {
         try {
           si.field_jb = param1.k(-70) << 5;
           var2_int = param1.f((byte) -28);
-          ef.field_b = var2_int << 18 & 1835008;
+          FullscreenFocusCanvas.field_b = var2_int << 18 & 1835008;
           si.field_jb = si.field_jb + (var2_int >> 3);
-          ef.field_b = ef.field_b + (param1.k(-125) << 2);
+          FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (param1.k(-125) << 2);
           var2_intLifetime1 = param1.f((byte) -48);
           ae.field_a = var2_intLifetime1 << 15 & 2064384;
-          ef.field_b = ef.field_b + (var2_intLifetime1 >> 6);
+          FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (var2_intLifetime1 >> 6);
           ae.field_a = ae.field_a + (param1.f((byte) -117) << 7);
           var2_intLifetime2 = param1.f((byte) -97);
           ae.field_a = ae.field_a + (var2_intLifetime2 >> 1);

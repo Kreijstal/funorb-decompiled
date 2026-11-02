@@ -3,7 +3,7 @@
  */
 class lo {
     int[] field_q;
-    private tj field_m;
+    private PcmStream field_m;
     private static bf field_c;
     static boolean field_t;
     private static int field_f;
@@ -14,9 +14,9 @@ class lo {
     private int field_d;
     private int field_u;
     private int field_b;
-    private tj[] field_e;
+    private PcmStream[] field_e;
     private int field_r;
-    private tj[] field_n;
+    private PcmStream[] field_n;
     private long field_i;
     private boolean field_j;
     private long field_o;
@@ -35,20 +35,20 @@ class lo {
         int var7_int;
         Object var7;
         int var8_int;
-        tj[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        tj var11;
+        PcmStream var11;
         eh var12;
         int var13;
-        tj var14;
+        PcmStream var14;
         int var15_int;
-        tj var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        tj var14Lifetime1;
-        tj var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_t) {
           var3 = var3 << 1;
@@ -63,7 +63,7 @@ class lo {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -96,7 +96,7 @@ class lo {
                       var12.field_i = var12.field_i + var13;
                     }
                     if (var4 >= this.field_s) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {
@@ -109,12 +109,12 @@ class lo {
                     var15 = var11.field_k;
                     var11.field_k = null;
                     if (var10 != null) {
-                      ((tj) (var10)).field_k = var15;
+                      ((PcmStream) (var10)).field_k = var15;
                     } else {
                       this.field_n[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_e[var7_int] = (tj) (var10);
+                      this.field_e[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -135,8 +135,8 @@ class lo {
             this.field_e[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((tj) (var7)).field_k;
-              ((tj) (var7)).field_k = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_k;
+              ((PcmStream) (var7)).field_k = null;
               var7 = var10Lifetime1;
             }
           }
@@ -182,12 +182,12 @@ class lo {
     void a(java.awt.Component param0) throws Exception {
     }
 
-    private final static void b(tj param0) {
+    private final static void b(PcmStream param0) {
         param0.field_l = false;
         if (param0.field_i != null) {
           param0.field_i.field_i = 0;
         }
-        tj var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
           lo.b(var1);
           var1 = param0.b();
@@ -276,7 +276,7 @@ class lo {
         }
     }
 
-    final synchronized void a(tj param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_m = param0;
     }
 
@@ -389,9 +389,9 @@ class lo {
         return this.field_k;
     }
 
-    private final void a(tj param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        tj var4 = this.field_e[var3];
+        PcmStream var4 = this.field_e[var3];
         if (var4 == null) {
           this.field_n[var3] = param0;
         } else {
@@ -405,11 +405,11 @@ class lo {
         this.field_p = false;
         this.field_s = 32;
         this.field_h = bb.b(-1);
-        this.field_e = new tj[8];
+        this.field_e = new PcmStream[8];
         this.field_d = 0;
         this.field_u = 0;
         this.field_i = 0L;
-        this.field_n = new tj[8];
+        this.field_n = new PcmStream[8];
         this.field_g = 0;
         this.field_b = 0;
         this.field_j = true;

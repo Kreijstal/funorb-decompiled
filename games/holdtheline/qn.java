@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qn extends hl {
+final class qn extends IntrusiveNode {
     int field_i;
     static boolean field_k;
     static pf[] field_l;
@@ -119,10 +119,10 @@ final class qn extends hl {
             return;
           }
           ce.field_r = -1;
-          if (mi.field_d != 7) {
+          if (DelegatingCanvas.field_d != 7) {
             if (bl.field_r.field_U &&
               !param2) {
-              if (0 == mi.field_d) {
+              if (0 == DelegatingCanvas.field_d) {
                 ek.field_x = 4;
                 for (var3_int = 0; var3_int < 4; var3_int++) {
                   var10 = bl.field_r.field_C[var3_int];
@@ -150,7 +150,7 @@ final class qn extends hl {
                 }
                 cc.a(bl.field_r.field_C[0].field_R, cf.field_w, vg.field_P, bl.field_r.field_ob, -126);
               } else {
-                if (2 != mi.field_d) {
+                if (2 != DelegatingCanvas.field_d) {
                   throw new RuntimeException();
                 }
                 ek.field_x = 5;

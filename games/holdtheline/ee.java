@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ee extends hl {
+class ee extends IntrusiveNode {
     boolean field_z;
     static int field_n;
     float field_x;
@@ -77,7 +77,7 @@ class ee extends hl {
                 if (param1.length <= var5) {
                   var5 = var5 - param1.length;
                 }
-                if (!hl.a(false, this.field_q, param1[var5], this.field_A)) {
+                if (!IntrusiveNode.a(false, this.field_q, param1[var5], this.field_A)) {
                   continue;
                 }
                 this.field_m = var5;
@@ -91,7 +91,7 @@ class ee extends hl {
                 if (var5 >= param1.length) {
                   var5 = var5 - param1.length;
                 }
-                if (!hl.a(false, this.field_q, param1[var5], this.field_A)) {
+                if (!IntrusiveNode.a(false, this.field_q, param1[var5], this.field_A)) {
                   continue;
                 }
                 this.field_l = var5;
@@ -107,7 +107,7 @@ class ee extends hl {
               if (var5 >= param1.length) {
                 var5 = var5 - param1.length;
               }
-            } while (!hl.a(false, this.field_q, param1[var5], this.field_A));
+            } while (!IntrusiveNode.a(false, this.field_q, param1[var5], this.field_A));
             this.field_s = var5;
             return;
           }

@@ -195,10 +195,10 @@ abstract class rd {
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
           mm var5 = null;
-          sf var5_ref = null;
+          ImageProducerRasterBuffer var5_ref = null;
           int var6 = 0;
           mm stackIn_1_0 = null;
-          sf stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_3_0 = null;
           RuntimeException stackIn_6_0 = null;
           StringBuilder stackIn_6_1 = null;
           String stackIn_7_2 = null;
@@ -214,7 +214,7 @@ abstract class rd {
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new sf();
+              var5_ref = new ImageProducerRasterBuffer();
               ((mm) ((Object) var5_ref)).a(param3, param0, param2, 0);
               stackIn_3_0 = var5_ref;
               return (mm) ((Object) stackIn_3_0);

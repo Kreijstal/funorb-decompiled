@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we extends hl {
+final class we extends IntrusiveNode {
     int field_m;
     int field_i;
     static float field_n;

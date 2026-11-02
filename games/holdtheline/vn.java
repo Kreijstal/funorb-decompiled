@@ -43,18 +43,18 @@ class vn {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var4 = HoldTheLine.field_D;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
                         if (null == param2.field_t) {
                             statePc = 3;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 2. */
                             {
@@ -64,7 +64,7 @@ class vn {
                                 {
                                     var3_int = param0;
                                     statePc = 5;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -74,7 +74,7 @@ class vn {
                             throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 3: {
@@ -84,7 +84,7 @@ class vn {
                     try {
                         if (var3_int >= 50) {
                             statePc = 10;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 6. */
                             {
@@ -92,13 +92,13 @@ class vn {
                                 stackIn_7_0 = stackIn_13_0;
                                 if (var4 != 0) {
                                     statePc = 13;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 7. */
                                     {
                                         if (((java.awt.EventQueue) (Object) stackIn_7_0).peekEvent() == null) {
                                             statePc = 10;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 8. */
                                             {
@@ -106,12 +106,12 @@ class vn {
                                                 var3_int++;
                                                 if (var4 == 0) {
                                                     statePc = 5;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 9. */
                                                     {
                                                         statePc = 10;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -126,7 +126,7 @@ class vn {
                             throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 10: {
@@ -136,7 +136,7 @@ class vn {
                             {
                                 stackIn_13_0 = param2.field_t;
                                 statePc = 13;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 11. */
@@ -150,21 +150,21 @@ class vn {
                             throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 13: {
                     try {
                         ((java.awt.EventQueue) (Object) stackIn_13_0).postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param1, 1001, "dummy")));
                         statePc = 14;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_13) {
                         statePc = ((Object) stateCaught_13 instanceof Exception ? 15 : ((Object) stateCaught_13 instanceof RuntimeException ? 17 : -1));
                         if (statePc == -1) {
                             throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
                         }
                         caughtException = stateCaught_13;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 14: {
@@ -176,21 +176,21 @@ class vn {
                             throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 15: {
                     try {
                         var3 = (Exception) ((Object) caughtException);
                         statePc = 16;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_15) {
                         statePc = ((Object) stateCaught_15 instanceof RuntimeException ? 17 : -1);
                         if (statePc == -1) {
                             throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
                         }
                         caughtException = stateCaught_15;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 16: {
@@ -207,21 +207,21 @@ class vn {
                     } else {
                         statePc = 18;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 18: {
                     stackIn_20_0 = stackIn_18_0;
                     stackIn_20_1 = stackIn_18_1;
                     stackIn_20_2 = "{...}";
                     statePc = 20;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 19: {
                     stackIn_20_0 = stackIn_19_0;
                     stackIn_20_1 = stackIn_19_1;
                     stackIn_20_2 = "null";
                     statePc = 20;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 20: {
                     stackIn_22_0 = stackIn_20_0;
@@ -235,7 +235,7 @@ class vn {
                             stackIn_23_1 = stackIn_22_1;
                             stackIn_23_2 = "null";
                             statePc = 23;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 21. */
@@ -244,7 +244,7 @@ class vn {
                             stackIn_23_1 = stackIn_21_1;
                             stackIn_23_2 = "{...}";
                             statePc = 23;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }

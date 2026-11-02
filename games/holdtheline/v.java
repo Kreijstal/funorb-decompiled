@@ -195,7 +195,7 @@ class v extends n implements jm {
                 if (!ci.field_h) {
                 }
               }
-              if (mi.field_f) {
+              if (DelegatingCanvas.field_f) {
                 rd.field_e.f((byte) -53);
                 rd.field_e.f((byte) -82);
                 rd.field_e.a(-116);
@@ -267,7 +267,7 @@ class v extends n implements jm {
             }
             if (null == lk.field_h) {
               if (uk.field_e) {
-                if (30000L < sf.d(126)) {
+                if (30000L < ImageProducerRasterBuffer.d(126)) {
                   um.field_b = mo.field_y;
                 } else {
                   um.field_b = dc.field_hb;
@@ -592,7 +592,7 @@ class v extends n implements jm {
             ih.field_i = param8;
             bo.field_e = param5;
             oi.field_b = param0;
-            mi.field_f = param7;
+            DelegatingCanvas.field_f = param7;
             if (null != na.field_s.field_a) {
               try {
                 ao.field_c = new ud(na.field_s.field_a, 64, 0);

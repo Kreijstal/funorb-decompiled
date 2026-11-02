@@ -21,7 +21,7 @@ abstract class vj extends wc {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ak.field_b == sf.field_n) {
+          if (ak.field_b == ImageProducerRasterBuffer.field_n) {
             stackIn_2_0 = null;
             return (nd) (stackIn_2_0);
           }
@@ -34,7 +34,7 @@ abstract class vj extends wc {
             stackIn_8_0 = ja.field_U;
             return stackIn_8_0;
           }
-          ak.field_b = sf.field_n;
+          ak.field_b = ImageProducerRasterBuffer.field_n;
           ja.field_U = null;
           rd.field_j = param1;
           stackIn_10_0 = null;

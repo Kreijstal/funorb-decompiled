@@ -14,7 +14,7 @@ final class wg {
           if (param0 != 4) {
             wg.a(15, (da) null);
           }
-          stackIn_4_0 = new e[]{uk.field_g, fo.field_n, jj.field_p, lf.field_b, le.field_u, e.field_a, p.field_h, kg.field_a, hh.field_a, sh.field_b, dc.field_ib, lg.field_n, ef.field_j, la.field_k};
+          stackIn_4_0 = new e[]{uk.field_g, fo.field_n, jj.field_p, lf.field_b, le.field_u, e.field_a, p.field_h, kg.field_a, hh.field_a, sh.field_b, dc.field_ib, lg.field_n, FullscreenFocusCanvas.field_j, la.field_k};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class wg {
                 }
                 var2 = si.a(param0 + 5, "login_gameupdated");
                 if (var2 != null) {
-                  ef.field_e = rk.a((byte) -46, var2);
+                  FullscreenFocusCanvas.field_e = rk.a((byte) -46, var2);
                 }
                 var2 = si.a(6, "create_unable");
                 if (null != var2) {
@@ -1053,7 +1053,7 @@ final class wg {
                 }
                 var2 = si.a(6, "pleasetryagain");
                 if (var2 != null) {
-                  mi.field_g = rk.a((byte) 117, var2);
+                  DelegatingCanvas.field_g = rk.a((byte) 117, var2);
                 }
                 var2 = si.a(6, "pleasereenterpass");
             }
@@ -1447,7 +1447,7 @@ final class wg {
                 }
                 var2 = si.a(6, "create_age");
                 if (var2 != null) {
-                  sf.field_o = rk.a((byte) 116, var2);
+                  ImageProducerRasterBuffer.field_o = rk.a((byte) 116, var2);
                 }
                 var2 = si.a(6, "create_u13_email");
                 if (null != var2) {
@@ -1634,7 +1634,7 @@ final class wg {
                 }
                 var2 = si.a(6, "create_alert_passchars");
                 if (null != var2) {
-                  md.field_c = rk.a((byte) -36, var2);
+                  GameAppletShell.field_c = rk.a((byte) -36, var2);
                 }
                 var2 = si.a(6, "create_alert_passrepeated");
                 if (var2 != null) {
@@ -1802,7 +1802,7 @@ final class wg {
                 }
                 var2 = si.a(param0 ^ 7, "waitingfor_soundeffects");
                 if (null != var2) {
-                  oh.field_r = rk.a((byte) -74, var2);
+                  NetworkGameClient.field_r = rk.a((byte) -74, var2);
                 }
                 var2 = si.a(6, "waitingfor_music");
                 if (var2 != null) {
@@ -2124,7 +2124,7 @@ final class wg {
                 }
                 var2 = si.a(6, "cont");
                 if (var2 != null) {
-                  sf.field_j = rk.a((byte) -48, var2);
+                  ImageProducerRasterBuffer.field_j = rk.a((byte) -48, var2);
                 }
                 var2 = si.a(param0 ^ 7, "continue_spectating");
                 if (null != var2) {
@@ -3078,8 +3078,8 @@ final class wg {
                   throw kk.a((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2629_0 = (!md.field_h);
-                  md.field_h = stackIn_2629_0;
+                  stackIn_2629_0 = (!GameAppletShell.field_h);
+                  GameAppletShell.field_h = stackIn_2629_0;
                 }
             }
         }
