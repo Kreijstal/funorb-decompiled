@@ -171,7 +171,7 @@ final class s extends ma implements wl, mj {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        mn.field_h.field_l = 0;
+        mn.field_h.position = 0;
         mn.field_h.c(12, (byte) 65);
         mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
         mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
@@ -180,11 +180,11 @@ final class s extends ma implements wl, mj {
         mn.field_h.b(param3, 115);
         mn.field_h.a(dk.field_k, se.field_M, (byte) 86);
         qn.field_U.f(18, -116);
-        int fieldTemp$0 = qn.field_U.field_l + 1;
-        qn.field_U.field_l = qn.field_U.field_l + 1;
+        int fieldTemp$0 = qn.field_U.position + 1;
+        qn.field_U.position = qn.field_U.position + 1;
         int var4 = fieldTemp$0;
-        qn.field_U.a(mn.field_h.field_o, (byte) -45, param2, mn.field_h.field_l);
-        qn.field_U.a(qn.field_U.field_l - var4, -1);
+        qn.field_U.a(mn.field_h.data, (byte) -45, param2, mn.field_h.position);
+        qn.field_U.a(qn.field_U.position - var4, -1);
     }
 
     public final void a(fb param0, int param1, int param2, int param3, int param4) {
@@ -476,17 +476,17 @@ final class s extends ma implements wl, mj {
               if (var12.field_Ob.field_F &&
                 var22 != 0) {
                 pc.field_Mb = var12.field_Lb;
-                if (((p.field_m != null)) &&
-                  ((null != p.field_m[var12.field_Vb]))) {
-                  pc.field_Mb = pc.field_Mb + " - " + p.field_m[var12.field_Vb];
+                if (((PacketBuffer.field_m != null)) &&
+                  ((null != PacketBuffer.field_m[var12.field_Vb]))) {
+                  pc.field_Mb = pc.field_Mb + " - " + PacketBuffer.field_m[var12.field_Vb];
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (var12.field_Ob.field_F &&
-                  p.field_m != null &&
-                  p.field_m[var12.field_Vb] != null) {
-                  pc.field_Mb = p.field_m[var12.field_Vb];
+                  PacketBuffer.field_m != null &&
+                  PacketBuffer.field_m[var12.field_Vb] != null) {
+                  pc.field_Mb = PacketBuffer.field_m[var12.field_Vb];
                 }
               }
             }

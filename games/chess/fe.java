@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fe {
-    private um field_f;
+    private ResourceArchive field_f;
     static String field_e;
-    private um field_a;
+    private ResourceArchive field_a;
     static byte[] field_d;
     static ci field_h;
     static int field_g;
@@ -321,7 +321,7 @@ final class fe {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(param1 - 2205);
+          var9.unlink(param1 - 2205);
           this.field_c.a(param1 ^ -111, var6, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
@@ -509,7 +509,7 @@ final class fe {
         }
     }
 
-    fe(um param0, um param1) {
+    fe(ResourceArchive param0, ResourceArchive param1) {
         this.field_b = new kl(256);
         this.field_c = new kl(256);
         try {

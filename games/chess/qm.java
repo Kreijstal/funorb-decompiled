@@ -20,7 +20,7 @@ final class qm {
           }
           de.field_c = new le(param0);
           bb.field_b = param2;
-          o.field_f = param3;
+          IntrusiveNode.field_f = param3;
           fi.a((byte) 6);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "qm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -321,7 +321,7 @@ final class qm {
         }
     }
 
-    final static rk[] a(int param0, String param1, String param2, um param3) {
+    final static rk[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

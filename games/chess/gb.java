@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gb extends fa {
+abstract class gb extends GameAppletShell {
     private int field_x;
     static long field_t;
     private int field_y;
@@ -114,7 +114,7 @@ abstract class gb extends fa {
                             }
                             stackIn_30_0 = 0;
                             stackIn_31_1 = (var2 == 12);
-                            var3 = fa.a(stackIn_30_0, stackIn_31_1);
+                            var3 = GameAppletShell.a(stackIn_30_0, stackIn_31_1);
                             d.a((byte) 126, var3);
                           }
                         }
@@ -190,7 +190,7 @@ abstract class gb extends fa {
           qf.field_g = null;
           cf.field_Nb = false;
           if (dk.field_g) {
-            ua.field_d.n(24528);
+            ArchiveProvider.field_d.n(24528);
           } else {
             var1 = gm.field_d;
             if (0 >= var1) {
@@ -202,7 +202,7 @@ abstract class gb extends fa {
               }
               qf.field_g = tb.a((byte) 96, new CharSequence[]{(CharSequence) ((Object) qf.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) bl.field_a)});
             }
-            ua.field_d.k((byte) -123);
+            ArchiveProvider.field_d.k((byte) -123);
             ri.g(127);
           }
           return;
@@ -562,7 +562,7 @@ abstract class gb extends fa {
             jg.b(true);
           }
           if (pe.field_f == null) {
-            pe.field_f = ke.a(-27212);
+            pe.field_f = IsaacCipher.a(-27212);
             qf.field_i = rb.a((byte) 46);
           }
           kh.a((byte) -127, pe.field_f, qf.field_i, bi.field_a);
@@ -667,7 +667,7 @@ abstract class gb extends fa {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          p var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Chess.field_G;
@@ -762,7 +762,7 @@ abstract class gb extends fa {
               if (ki.field_M.a(17)) {
                 var12 = ki.field_M.b(-120);
                 if (var12 != null) {
-                  var7 = gh.a(var12.field_o, 0, -161, var12.field_l);
+                  var7 = gh.a(var12.data, 0, -161, var12.position);
                   ge.a(var7, (byte) 107);
                 } else {
                   var9 = (String) null;

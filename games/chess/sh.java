@@ -36,9 +36,9 @@ final class sh {
         field_d = null;
     }
 
-    final static um a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param3 != 935) {
-          return (um) null;
+          return (ResourceArchive) null;
         }
         return ci.a(param3 ^ -16417, param1, param0, param4, false, param2);
     }
@@ -123,7 +123,7 @@ final class sh {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          p var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= qh.field_c.field_g) {
             if (qh.field_c.field_c == -1) {
               return 3;
@@ -149,11 +149,11 @@ final class sh {
             }
             if (vm.field_k == 2) {
               jj.field_a = new hn((java.net.Socket) (dm.field_b.field_b), ol.field_N);
-              var2 = new p(13);
+              var2 = new PacketBuffer(13);
               dh.a(ue.field_e, 11, uj.field_n, tg.field_t, var2);
               var2.c(15, (byte) 95);
               var2.d(ln.field_oc, (byte) -81);
-              jj.field_a.a(0, 13, (byte) -92, var2.field_o);
+              jj.field_a.a(0, 13, (byte) -92, var2.data);
               vm.field_k = vm.field_k + 1;
               ve.field_Pb = 30000L + ud.a(2);
             }

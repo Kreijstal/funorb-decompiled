@@ -11,12 +11,12 @@ final class tk {
     static int field_b;
     static lh field_a;
     static ci field_d;
-    static um field_g;
+    static ResourceArchive field_g;
     static int field_e;
 
     final static void b(int param0, int param1) {
         qf.field_c = 0;
-        pj.field_f = new int[3];
+        GzipInflater.field_f = new int[3];
         int var2 = -114 / ((param1 + 25) / 36);
         ik.field_i = new ld[param0 * 15];
         fh.field_b = param0;
@@ -80,25 +80,25 @@ final class tk {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (!(param1 > field_h.field_l)) {
+          if (!(param1 > field_h.position)) {
             return true;
           }
-          if (null == lj.field_a) {
+          if (null == ArchiveIndex.field_a) {
             return false;
           }
           int var3 = 64 / ((param0 + 77) / 42);
-          int var2_int = lj.field_a.c(0);
+          int var2_int = ArchiveIndex.field_a.c(0);
           if (0 < var2_int) {
-            if (!(param1 - field_h.field_l >= var2_int)) {
-              var2_int = param1 - field_h.field_l;
+            if (!(param1 - field_h.position >= var2_int)) {
+              var2_int = param1 - field_h.position;
             }
-            lj.field_a.a(field_h.field_o, var2_int, (byte) -87, field_h.field_l);
+            ArchiveIndex.field_a.a(field_h.data, var2_int, (byte) -87, field_h.position);
             ml.field_d = ud.a(2);
-            field_h.field_l = field_h.field_l + var2_int;
-            if (param1 > field_h.field_l) {
+            field_h.position = field_h.position + var2_int;
+            if (param1 > field_h.position) {
               return false;
             }
-            field_h.field_l = 0;
+            field_h.position = 0;
             return true;
           }
           try {

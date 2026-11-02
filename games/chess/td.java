@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends o {
+final class td extends IntrusiveNode {
     static String field_r;
     byte[] field_q;
     static int field_k;
     static char[] field_l;
-    static um field_o;
+    static ResourceArchive field_o;
     static int field_p;
     static String field_j;
     static String[] field_n;

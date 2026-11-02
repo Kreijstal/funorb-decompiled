@@ -7,7 +7,7 @@ final class ca {
     static int[] field_i;
     static km field_a;
     static int field_j;
-    static um field_b;
+    static ResourceArchive field_b;
     static tk field_h;
     static String field_e;
     static String field_f;
@@ -306,7 +306,7 @@ final class ca {
           if (param4 != 113) {
             field_e = (String) null;
           }
-          rh.a(cm.field_w, param9, param11, param1, param13, param1, param6, o.field_f, new le(param7), param2, de.field_c, new le(param3), param10, param2, qb.field_b, param11, ni.field_d, (byte) -123, param5, bb.field_b);
+          rh.a(cm.field_w, param9, param11, param1, param13, param1, param6, IntrusiveNode.field_f, new le(param7), param2, de.field_c, new le(param3), param10, param2, qb.field_b, param11, ni.field_d, (byte) -123, param5, bb.field_b);
           cg.a((byte) -25, param8, param0, param14, param12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

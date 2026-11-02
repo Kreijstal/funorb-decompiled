@@ -13,33 +13,33 @@ abstract class bf extends ma implements ee {
 
     final static void g(byte param0) {
         if (param0 >= 38) {
-          o.field_a[520] = 59;
-          o.field_a[222] = 58;
-          o.field_a[192] = 28;
-          o.field_a[91] = 42;
-          o.field_a[45] = 26;
-          o.field_a[47] = 73;
-          o.field_a[59] = 57;
-          o.field_a[93] = 43;
-          o.field_a[44] = 71;
-          o.field_a[61] = 27;
-          o.field_a[92] = 74;
-          o.field_a[46] = 72;
+          IntrusiveNode.field_a[520] = 59;
+          IntrusiveNode.field_a[222] = 58;
+          IntrusiveNode.field_a[192] = 28;
+          IntrusiveNode.field_a[91] = 42;
+          IntrusiveNode.field_a[45] = 26;
+          IntrusiveNode.field_a[47] = 73;
+          IntrusiveNode.field_a[59] = 57;
+          IntrusiveNode.field_a[93] = 43;
+          IntrusiveNode.field_a[44] = 71;
+          IntrusiveNode.field_a[61] = 27;
+          IntrusiveNode.field_a[92] = 74;
+          IntrusiveNode.field_a[46] = 72;
           return;
         }
         field_N = (String) null;
-        o.field_a[520] = 59;
-        o.field_a[222] = 58;
-        o.field_a[192] = 28;
-        o.field_a[91] = 42;
-        o.field_a[45] = 26;
-        o.field_a[47] = 73;
-        o.field_a[59] = 57;
-        o.field_a[93] = 43;
-        o.field_a[44] = 71;
-        o.field_a[61] = 27;
-        o.field_a[92] = 74;
-        o.field_a[46] = 72;
+        IntrusiveNode.field_a[520] = 59;
+        IntrusiveNode.field_a[222] = 58;
+        IntrusiveNode.field_a[192] = 28;
+        IntrusiveNode.field_a[91] = 42;
+        IntrusiveNode.field_a[45] = 26;
+        IntrusiveNode.field_a[47] = 73;
+        IntrusiveNode.field_a[59] = 57;
+        IntrusiveNode.field_a[93] = 43;
+        IntrusiveNode.field_a[44] = 71;
+        IntrusiveNode.field_a[61] = 27;
+        IntrusiveNode.field_a[92] = 74;
+        IntrusiveNode.field_a[46] = 72;
     }
 
     abstract boolean h(byte param0);

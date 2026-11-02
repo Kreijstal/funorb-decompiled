@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pl extends o {
+abstract class pl extends IntrusiveNode {
     int field_j;
 
     abstract int a(lb param0);

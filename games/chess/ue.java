@@ -42,17 +42,17 @@ final class ue {
     final static void a(long param0, int param1, int param2) {
         nk var4 = qn.field_U;
         var4.f(param2, -75);
-        var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.c(6, (byte) 92);
         if (param1 == 16581) {
           var4.a(-99, param0);
-          var4.a(var4.field_l - var5, -1);
+          var4.a(var4.position - var5, -1);
           return;
         }
         field_c = true;
         var4.a(-99, param0);
-        var4.a(var4.field_l - var5, -1);
+        var4.a(var4.position - var5, -1);
     }
 
     public static void a(int param0) {

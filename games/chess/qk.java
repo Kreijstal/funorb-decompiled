@@ -10,7 +10,7 @@ final class qk implements Runnable {
     private nl field_f;
     static mk field_b;
     private nl field_l;
-    private p field_j;
+    private PacketBuffer field_j;
     private DataInputStream field_c;
     private int field_a;
     static int field_h;
@@ -106,7 +106,7 @@ final class qk implements Runnable {
               var3.write(dj.a(var5, param0 ^ 17));
               this.field_c = new DataInputStream(var4.getInputStream());
             }
-            this.field_j.field_l = 0;
+            this.field_j.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,16 +159,16 @@ final class qk implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Chess.field_G;
           try {
-            while (this.field_j.field_l < this.field_j.field_o.length) {
-              var1_int = this.field_c.read(this.field_j.field_o, this.field_j.field_l, this.field_j.field_o.length - this.field_j.field_l);
+            while (this.field_j.position < this.field_j.data.length) {
+              var1_int = this.field_c.read(this.field_j.data, this.field_j.position, this.field_j.data.length - this.field_j.position);
               if (var1_int >= 0) {
-                this.field_j.field_l = this.field_j.field_l + var1_int;
+                this.field_j.position = this.field_j.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_j.field_o.length == this.field_j.field_l) {
-              throw qk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.field_o.length + " " + this.field_i));
+            if (this.field_j.data.length == this.field_j.position) {
+              throw qk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.data.length + " " + this.field_i));
             }
             var1 = this;
             synchronized (var1) {
@@ -197,13 +197,13 @@ final class qk implements Runnable {
         try {
           this.field_g = param0;
           this.field_i = param1;
-          this.field_j = new p(param2);
+          this.field_j = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final p b(int param0) {
+    final PacketBuffer b(int param0) {
         int var2 = -89 % ((-84 - param0) / 36);
         if (this.field_a == 3) {
           return this.field_j;

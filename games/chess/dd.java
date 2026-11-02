@@ -218,7 +218,7 @@ final class dd extends kk {
           field_t = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_A; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_s[var8Lifetime1] != -2) {
               var9 = this.field_gb[var8Lifetime1];
               var10 = this.field_P[var8Lifetime1];
@@ -265,7 +265,7 @@ final class dd extends kk {
                       var28 = field_O[var27];
                       if (var28 == 64) {
                         if (field_t == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_t;
                         field_t = field_t + 1;
@@ -280,7 +280,7 @@ final class dd extends kk {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(tb.field_d + nh.field_n, v.field_m + nh.field_f, field_G[var9], field_G[var10], field_G[var11], var12, var13, var14_int)) {
@@ -307,7 +307,7 @@ final class dd extends kk {
                     var16Lifetime2 = field_O[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_t == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_t;
                       field_t = field_t + 1;

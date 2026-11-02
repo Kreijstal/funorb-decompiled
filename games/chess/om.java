@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends o {
+final class om extends IntrusiveNode {
     static ao[] field_m;
     static boolean field_j;
     int field_k;
@@ -15,7 +15,7 @@ final class om extends o {
         qh.a(false, false, 4);
     }
 
-    final static rk[] a(um param0, int param1, boolean param2, int param3) {
+    final static rk[] a(ResourceArchive param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         rk[] stackIn_6_0 = null;

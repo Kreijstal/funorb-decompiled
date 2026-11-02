@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "chess": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/chess"
+      },
+      "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
+      "sources": {
+        "files": 346,
+        "sha256": "5107be4437a43169c1e43c3f9c3cd2e0a28617694788c6a2acf5172f62f163db"
+      },
+      "dictionary": {
+        "path": "decompilation/chess-naming.json",
+        "sha256": "8a06b9c0359c1ee0761fc1d45c94365d01cfaebe82f32c7564dee3f67613c56d"
+      },
+      "readingGuide": {
+        "path": "games/chess/README.md",
+        "sha256": "6de1edf84e2f8bbf70036b825f8903acc42c9c80dde0bc6691189a59c58ca96e"
+      },
+      "rulesSha256": "b521882be32a2975a8d0451b00ad06bfc9074f5dedcc51acb4def5710684bf89",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -10967,6 +10991,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 346,
+          "sha256": "5107be4437a43169c1e43c3f9c3cd2e0a28617694788c6a2acf5172f62f163db"
         }
       },
       "confined": {

@@ -31,14 +31,14 @@ abstract class gm {
             return false;
           }
           if (param1 > -65) {
-            gm.a((um) null, 71);
+            gm.a((ResourceArchive) null, 71);
           }
           if (la.a(0, param0)) {
             return true;
           }
           var2 = td.field_l;
           var3 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (var3 < var2.length) {
@@ -51,7 +51,7 @@ abstract class gm {
                 if (stackIn_21_0 < stackIn_21_1) {
                   var4Lifetime2 = var2[var3];
                   stackIn_32_0 = ~var4Lifetime2;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -76,7 +76,7 @@ abstract class gm {
                 var4Lifetime1 = var2[var3];
                 stackIn_32_0 = ~var4Lifetime1;
                 if (var5 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (stackIn_32_0 == ~param0) {
                   break;
@@ -102,7 +102,7 @@ abstract class gm {
 
     abstract long a(byte param0);
 
-    final static void a(um param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2592_0;
             StringBuilder stackIn_2592_1;
@@ -112,10 +112,10 @@ abstract class gm {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            um param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(um initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2592_0 = null;
@@ -231,7 +231,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_chat_ignore", -108);
                 if (var2 != null) {
-                  ke.field_b = ad.a(-29410, var2);
+                  IsaacCipher.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_tips", -118);
                 if (null != var2) {
@@ -463,7 +463,7 @@ abstract class gm {
                 }
                 var2 = cd.a("join_xs_game", -111);
                 if (null != var2) {
-                  lj.field_d = ad.a(-29410, var2);
+                  ArchiveIndex.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("join_request_xs_game", -84);
                 if (null != var2) {
@@ -519,7 +519,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_chat_lobby_hide", -84);
                 if (var2 != null) {
-                  ua.field_e = ad.a(-29410, var2);
+                  ArchiveProvider.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_game_show_all", -127);
                 if (null != var2) {
@@ -687,7 +687,7 @@ abstract class gm {
                 }
                 var2 = cd.a("status_spectate", -125);
                 if (null != var2) {
-                  ke.field_l = ad.a(-29410, var2);
+                  IsaacCipher.field_l = ad.a(-29410, var2);
                 }
                 var2 = cd.a("status_playing", -110);
                 if (var2 != null) {
@@ -967,7 +967,7 @@ abstract class gm {
                 }
                 var2 = cd.a("gameopt_unselectedoptions", -102);
                 if (null != var2) {
-                  ke.field_c = ad.a(-29410, var2);
+                  IsaacCipher.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_pleaseselectoption1", -74);
                 if (null != var2) {
@@ -1157,7 +1157,7 @@ abstract class gm {
                 }
                 var2 = cd.a("login", -92);
                 if (var2 != null) {
-                  ua.field_c = ad.a(-29410, var2);
+                  ArchiveProvider.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("goback", -93);
                 if (null != var2) {
@@ -1221,7 +1221,7 @@ abstract class gm {
                 }
                 var2 = cd.a("back", -74);
                 if (null != var2) {
-                  fa.field_k = ad.a(-29410, var2);
+                  GameAppletShell.field_k = ad.a(-29410, var2);
                 }
                 var2 = cd.a("exitfullscreenmode", -92);
                 if (var2 != null) {
@@ -2618,7 +2618,7 @@ abstract class gm {
                 }
                 var2 = cd.a("rating_noratings", -94);
                 if (null != var2) {
-                  um.field_h = ad.a(-29410, var2);
+                  ResourceArchive.field_h = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rating_rating", -84);
                 if (var2 != null) {
@@ -2674,19 +2674,19 @@ abstract class gm {
                 }
                 var2 = cd.a("reconnect_lost_seq,0", -113);
                 if (null != var2) {
-                  ke.field_i[0] = ad.a(-29410, var2);
+                  IsaacCipher.field_i[0] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("reconnect_lost_seq,1", -90);
                 if (var2 != null) {
-                  ke.field_i[1] = ad.a(-29410, var2);
+                  IsaacCipher.field_i[1] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("reconnect_lost_seq,2", -106);
                 if (null != var2) {
-                  ke.field_i[2] = ad.a(-29410, var2);
+                  IsaacCipher.field_i[2] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("reconnect_lost_seq,3", -123);
                 if (var2 != null) {
-                  ke.field_i[3] = ad.a(-29410, var2);
+                  IsaacCipher.field_i[3] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("reconnect_lost", -122);
                 if (null != var2) {
@@ -3140,8 +3140,8 @@ abstract class gm {
                   throw fk.a((Throwable) ((Object) stackIn_2592_0), ((StringBuilder) (Object) stackIn_2592_1).append(stackIn_2593_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2601_0 = (!fa.field_b);
-                  fa.field_b = stackIn_2601_0;
+                  stackIn_2601_0 = (!GameAppletShell.field_b);
+                  GameAppletShell.field_b = stackIn_2601_0;
                 }
             }
         }

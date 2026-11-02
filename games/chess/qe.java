@@ -105,7 +105,7 @@ final class qe extends uk {
           if (var18 != 0) {
             var20 = ad.field_f[var19];
             var21 = ig.field_f[var19];
-            var22 = pj.field_c[var19];
+            var22 = GzipInflater.field_c[var19];
           } else {
             var20 = se.field_N[var19];
             var21 = jj.field_c[var19];
@@ -253,7 +253,7 @@ final class qe extends uk {
               }
             } else {
               if (this.field_f[var5] == 0) {
-                var9Lifetime1 = pj.field_b[var5];
+                var9Lifetime1 = GzipInflater.field_b[var5];
               } else {
                 var9Lifetime1 = this.field_f[var5] & 16773120;
               }
@@ -494,14 +494,14 @@ final class qe extends uk {
               var10 = oc.field_p.field_C;
             }
           }
-          for (var11 = 0; var11 < pj.field_b.length; var11++) {
+          for (var11 = 0; var11 < GzipInflater.field_b.length; var11++) {
             var5_int = var11 % 8;
             var6 = var11 / 8;
             var6 -= 4;
             var5_int -= 4;
             var12 = new int[]{param2 + (var5_int << 7), param1 << 7, param2 + (var6 << 7), 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
             var14 = this.a(var10, var11, -103) ? 1 : 0;
-            if (pj.field_b[var11] == 0) {
+            if (GzipInflater.field_b[var11] == 0) {
               if (var14 != 0) {
                 var13 = mm.field_a;
               } else {
@@ -856,17 +856,17 @@ final class qe extends uk {
             var18 = var16 & -16773121;
             stackIn_30_0 = (0 != var17) ? 0 : 1;
             var19 = stackIn_30_0;
-            stackIn_33_0 = (0 != pj.field_b[var15]) ? 3100495 : 16444375;
+            stackIn_33_0 = (0 != GzipInflater.field_b[var15]) ? 3100495 : 16444375;
             var20 = stackIn_33_0;
             if (this.field_d[var15]) {
-              stackIn_38_0 = (pj.field_b[var15] == 0) ? 14101529 : 4525064;
+              stackIn_38_0 = (GzipInflater.field_b[var15] == 0) ? 14101529 : 4525064;
               var20 = stackIn_38_0;
             }
             wb.f(var11Lifetime1, var12Lifetime1, 45, 45, var20);
             if (var15 != this.field_m) {
               stackIn_49_0 = (!this.a(var7, var15, -80)) ? 0 : 1;
               var22 = stackIn_49_0;
-              stackIn_52_0 = (pj.field_b[var15] != 4096) ? 1 : 0;
+              stackIn_52_0 = (GzipInflater.field_b[var15] != 4096) ? 1 : 0;
               var23 = stackIn_52_0;
               cl.field_c[var22][var23][var19][var18].d(var11Lifetime1, var12Lifetime1);
             } else {

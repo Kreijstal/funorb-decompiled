@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hi extends o {
+final class hi extends IntrusiveNode {
     private boolean field_M;
     private int field_G;
     private static int field_A;
@@ -44,16 +44,16 @@ final class hi extends o {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        p var2 = new p(param0);
-        this.field_P = var2.e((byte) -120);
-        this.field_o = var2.e((byte) -110);
-        this.field_q = var2.e((byte) -103);
-        this.field_G = var2.e((byte) -117);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_P = var2.readInt((byte) -120);
+        this.field_o = var2.readInt((byte) -110);
+        this.field_q = var2.readInt((byte) -103);
+        this.field_G = var2.readInt((byte) -117);
         if (this.field_G < 0) {
           this.field_G = ~this.field_G;
           this.field_N = true;
         }
-        int var3 = var2.e((byte) -121);
+        int var3 = var2.readInt((byte) -121);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -97,7 +97,7 @@ final class hi extends o {
         field_D = null;
     }
 
-    private final static boolean a(um param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_K) {
           var1 = param0.a(0, 0, 5847);
@@ -115,7 +115,7 @@ final class hi extends o {
         field_F = 0;
     }
 
-    final static hi a(um param0, String param1, String param2) {
+    final static hi a(ResourceArchive param0, String param1, String param2) {
         try {
           hi var4_ref = null;
           if (!hi.a(param0)) {
@@ -719,7 +719,7 @@ final class hi extends o {
         field_K = true;
     }
 
-    final static hi a(um param0, int param1, int param2) {
+    final static hi a(ResourceArchive param0, int param1, int param2) {
         try {
           hi var4_ref = null;
           if (!hi.a(param0)) {

@@ -37,7 +37,7 @@ final class sa {
         field_b = null;
     }
 
-    final static void a(p param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           byte[] var2 = null;

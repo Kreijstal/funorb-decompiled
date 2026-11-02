@@ -204,14 +204,14 @@ final class gd {
             tb.field_f = gh.field_c;
           } else {
             try {
-              lj.field_a = new hn((java.net.Socket) (tl.field_Gb.field_b), re.field_n);
-              qn.field_U.field_l = 0;
+              ArchiveIndex.field_a = new hn((java.net.Socket) (tl.field_Gb.field_b), re.field_n);
+              qn.field_U.position = 0;
               var4 = tk.field_h;
               var5 = var4;
               lf.field_T = param1 ? -2 : -1;
               wc.field_u = param1 ? -2 : -1;
               hh.field_o = param1 ? -2 : -1;
-              var5.field_l = 0;
+              var5.position = 0;
               tb.field_f = ca.field_h;
               dh.a(fn.field_b, 11, cm.field_u, ub.field_e, qn.field_U);
               vh.a(-1, (byte) -35);
@@ -289,7 +289,7 @@ final class gd {
                 this.field_h.a(0, 6, -1, jg.field_O);
                 var9 = 0;
                 var10 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var9) {
                     boolean decompiledFrameRemainder0 = true;
                     var11 = 0;
@@ -305,7 +305,7 @@ final class gd {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var14 = 255 & jg.field_O[7];
                         var11 = (jg.field_O[6] & 255) + (((255 & jg.field_O[4]) << 16) + (jg.field_O[5] << 8 & 65280));
@@ -321,7 +321,7 @@ final class gd {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (255 & jg.field_O[8]) + ((16711680 & jg.field_O[6] << 16) + (jg.field_O[7] << 8 & 65280));
                         var14 = jg.field_O[9] & 255;

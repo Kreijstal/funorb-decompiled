@@ -113,7 +113,7 @@ class uk {
         }
     }
 
-    final void a(un param0, p param1, boolean param2) {
+    final void a(un param0, PacketBuffer param1, boolean param2) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -151,7 +151,7 @@ class uk {
               var5 = param1.c(param2);
               var6 = param1.d((byte) 118);
               var8 = param1.d((byte) 118);
-              var10 = param1.g(0);
+              var10 = param1.readByte(0);
               if (param0 != null) {
                 param0.field_e = (int)(50L * (var6 / 1000L));
                 param0.field_B.field_f = var10;
@@ -283,14 +283,14 @@ class uk {
         try {
           var3_int = -1;
           var4 = 63;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var4 >= 0) {
               var5_int = this.field_f[var4];
               stackIn_19_0 = 0;
               stackIn_19_1 = var5_int;
               if (var11 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_19_0 != stackIn_19_1) {
                 var6 = 16773120 & var5_int;
@@ -321,11 +321,11 @@ class uk {
           ne.a(this.field_d, 0, var5, 0, var5.length);
           var6Lifetime1 = 0;
           var7Lifetime1 = 63;
-          L5: while (true) {
+          scanLoop2: while (true) {
             if (var7Lifetime1 >= 0) {
               stackIn_41_0 = var6Lifetime1;
               if (var11 != 0) {
-                break L5;
+                break scanLoop2;
               }
               if (stackIn_41_0 == 0) {
                 var8 = this.field_f[var7Lifetime1];
@@ -638,7 +638,7 @@ class uk {
               var11 = var8 + var22;
               var23 = 1;
               var27 = -1;
-              L14: while (true) {
+              scanLoop1: while (true) {
                 if (var27 <= 1) {
                   var10 = var7 + var27;
                   stackIn_77_0 = -1;
@@ -671,7 +671,7 @@ class uk {
                   }
                 } else {
                   if (var23 == 0) {
-                    break L14;
+                    break scanLoop1;
                   }
                   stackIn_77_0 = var8;
                   stackIn_77_1 = 1;
@@ -679,10 +679,10 @@ class uk {
                 if (stackIn_77_0 != stackIn_77_1 ||
                   var5 != 0) {
                   if (var8 != 6) {
-                    break L14;
+                    break scanLoop1;
                   }
                   if (4096 != var5) {
-                    break L14;
+                    break scanLoop1;
                   }
                 }
                 var11 = 2 * var22 + var8;
@@ -742,7 +742,7 @@ class uk {
                     return;
                   }
                   var28 = var17[var27];
-                  L31: while (true) {
+                  scanLoop2: while (true) {
                     if (0 <= var28) {
                       stackIn_113_0 = ~var28;
                       stackIn_113_1 = -9;
@@ -762,7 +762,7 @@ class uk {
                           if (var12 != 0) {
                             if (var13 == var5 &&
                               var29 == 0) {
-                              break L31;
+                              break scanLoop2;
                             }
                             var15 = 0;
                           }
@@ -824,7 +824,7 @@ class uk {
                     return;
                   }
                   var15Lifetime2 = 1;
-                  L47: while (true) {
+                  scanLoop3: while (true) {
                     if (var15Lifetime2 != 0) {
                       stackIn_172_0 = var11;
                       if (stackIn_172_0 >= 0 &&
@@ -838,7 +838,7 @@ class uk {
                         if (var12 != 0) {
                           if (var5 == var13 &&
                             var29 == 0) {
-                            break L47;
+                            break scanLoop3;
                           }
                           var15Lifetime2 = 0;
                         }
@@ -864,15 +864,15 @@ class uk {
               while (true) {
                 stackIn_200_0 = ~var27Lifetime2;
                 stackIn_200_1 = -5;
-                L52: {
+                regionExit4: {
                   if (stackIn_200_0 > stackIn_200_1) {
                     var15Lifetime1 = 1;
                     stackIn_227_0 = var17[var27Lifetime2];
                     if (var29 != 0) {
-                      break L52;
+                      break regionExit4;
                     }
                     var28Lifetime1 = stackIn_227_0;
-                    L55: while (true) {
+                    scanLoop5: while (true) {
                       if (var28Lifetime1 >= 0) {
                         stackIn_200_0 = ~var28Lifetime1;
                         stackIn_200_1 = -9;
@@ -890,7 +890,7 @@ class uk {
                             var14Lifetime2 = var12Lifetime2 & -16773121;
                             if (var12Lifetime2 != 0) {
                               if (~var5 == ~var13Lifetime2) {
-                                break L55;
+                                break scanLoop5;
                               }
                               var15Lifetime1 = 0;
                             }
@@ -918,7 +918,7 @@ class uk {
                       return;
                     }
                     var15Lifetime1Lifetime1 = 1;
-                    L65: while (true) {
+                    scanLoop6: while (true) {
                       if (var15Lifetime1Lifetime1 != 0) {
                         stackIn_229_0 = ~var11Lifetime2;
                         stackIn_229_1 = -1;
@@ -932,7 +932,7 @@ class uk {
                           var13Lifetime2 = var12Lifetime2 & 16773120;
                           if (0 != var12Lifetime2) {
                             if (var13Lifetime2 == var5) {
-                              break L65;
+                              break scanLoop6;
                             }
                             var15Lifetime1Lifetime1 = 0;
                           }

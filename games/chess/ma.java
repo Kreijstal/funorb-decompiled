@@ -81,7 +81,7 @@ class ma extends mf implements ra {
           if (param1 != 95) {
             field_D = true;
           }
-          this.field_I.a((o) (param0), (byte) 109);
+          this.field_I.a((IntrusiveNode) (param0), (byte) 109);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ma.EB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -160,7 +160,7 @@ class ma extends mf implements ra {
           }
           var8 = (mf) (var7.c(-20229));
           while (var8 != null) {
-            if (var8.b(20478)) {
+            if (var8.isLinked(20478)) {
               var8.a(param0, param1, this.field_u + param2, param3, 0, this.field_r + param5);
               var8 = (mf) (var7.b(param4 + 8922));
               continue;
@@ -211,7 +211,7 @@ class ma extends mf implements ra {
             return;
           }
           while (var6 != null) {
-            if (var6.b(20478)) {
+            if (var6.isLinked(20478)) {
               var6.a(this.field_u + param0, -54, param2, param3 + this.field_r);
               var6 = (mf) (var5.b(8922));
               continue;
@@ -415,7 +415,7 @@ class ma extends mf implements ra {
           var8 = new qj(this.field_I);
           var9 = (mf) (var8.c(-20229));
           while (var9 != null) {
-            if (var9.b(20478)) {
+            if (var9.isLinked(20478)) {
               if (var9.d((byte) -67) &&
                 var9.a(73, param1, param2, param3, param4, param5, param6)) {
                 return true;
@@ -561,7 +561,7 @@ class ma extends mf implements ra {
           var11 = new qj(this.field_I);
           var9 = (mf) (var11.c(-20229));
           while (var9 != null) {
-            if (var9.b(20478)) {
+            if (var9.isLinked(20478)) {
               if (var9.a(param0, param1, param2, (byte) 88, param4, param5 + this.field_r, this.field_u + param6)) {
                 return true;
               }
@@ -605,7 +605,7 @@ class ma extends mf implements ra {
           var9 = new qj(this.field_I);
           var8 = (mf) (var9.c(-20229));
           while (var8 != null) {
-            if (var8.b(param2 + 20479)) {
+            if (var8.isLinked(param2 + 20479)) {
               if (var8.d((byte) -67) &&
                 var8.a(param0, param1, -1, param3)) {
                 return true;

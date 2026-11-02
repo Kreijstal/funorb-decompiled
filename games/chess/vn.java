@@ -159,7 +159,7 @@ class vn extends bj implements mj {
               if (this.field_zb) {
                 stackIn_16_3 = hl.field_f;
               } else {
-                stackIn_16_3 = fa.field_k;
+                stackIn_16_3 = GameAppletShell.field_k;
               }
               ((e) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_16_3);
             } else {
@@ -209,35 +209,35 @@ class vn extends bj implements mj {
         }
         if (param0 != 10) {
           vn.m(-26);
-          if (null != ua.field_d) {
-            ua.field_d.k((byte) -113);
+          if (null != ArchiveProvider.field_d) {
+            ArchiveProvider.field_d.k((byte) -113);
             var3 = ec.e((byte) -64);
-            um.field_b = new wf(var3, (String) null, true, false, false);
+            ResourceArchive.field_b = new wf(var3, (String) null, true, false, false);
             jh.field_e.b(nj.field_w, (byte) -46);
-            nj.field_w.c(um.field_b, 88);
+            nj.field_w.c(ResourceArchive.field_b, 88);
             nj.field_w.i((byte) -126);
             return;
           }
           var2 = ec.e((byte) -64);
-          um.field_b = new wf(var2, (String) null, true, false, false);
+          ResourceArchive.field_b = new wf(var2, (String) null, true, false, false);
           jh.field_e.b(nj.field_w, (byte) -46);
-          nj.field_w.c(um.field_b, 88);
+          nj.field_w.c(ResourceArchive.field_b, 88);
           nj.field_w.i((byte) -126);
           return;
         }
-        if (null == ua.field_d) {
+        if (null == ArchiveProvider.field_d) {
           var5 = ec.e((byte) -64);
-          um.field_b = new wf(var5, (String) null, true, false, false);
+          ResourceArchive.field_b = new wf(var5, (String) null, true, false, false);
           jh.field_e.b(nj.field_w, (byte) -46);
-          nj.field_w.c(um.field_b, 88);
+          nj.field_w.c(ResourceArchive.field_b, 88);
           nj.field_w.i((byte) -126);
           return;
         }
-        ua.field_d.k((byte) -113);
+        ArchiveProvider.field_d.k((byte) -113);
         String var4 = ec.e((byte) -64);
-        um.field_b = new wf(var4, (String) null, true, false, false);
+        ResourceArchive.field_b = new wf(var4, (String) null, true, false, false);
         jh.field_e.b(nj.field_w, (byte) -46);
-        nj.field_w.c(um.field_b, 88);
+        nj.field_w.c(ResourceArchive.field_b, 88);
         nj.field_w.i((byte) -126);
     }
 

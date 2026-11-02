@@ -154,7 +154,7 @@ final class lf extends kn {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; um.field_a > var13Lifetime1; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; ResourceArchive.field_a > var13Lifetime1; var13Lifetime1++) {
             var14Lifetime1 = ve.field_Hb[var13Lifetime1];
             var15Lifetime1 = param1.field_g[var14Lifetime1];
             var16 = param1.field_A[var14Lifetime1];

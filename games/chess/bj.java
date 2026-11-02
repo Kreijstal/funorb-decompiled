@@ -140,7 +140,7 @@ abstract class bj extends k {
     private final void b(mf param0, byte param1) {
         try {
           if (null != this.field_kb) {
-            this.field_kb.c(-2193);
+            this.field_kb.unlink(-2193);
           }
           if (param0 != null) {
             param0.a(this.field_qb + 6, 34, param0.field_C, param0.field_y, 6);
@@ -252,12 +252,12 @@ abstract class bj extends k {
         }
     }
 
-    final static void a(na param0, boolean param1) {
+    final static void a(PcmSampleStream param0, boolean param1) {
         if (!param1) {
           return;
         }
         try {
-          ef.field_n.a((o) (new tn(param0, param0)), (byte) -57);
+          ef.field_n.a((IntrusiveNode) (new tn(param0, param0)), (byte) -57);
           h.field_s.a(param0);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "bj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

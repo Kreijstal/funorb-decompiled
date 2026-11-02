@@ -59,7 +59,7 @@ final class fh {
             var4 = (ln) null;
             fh.a((byte) -34, (ln) null);
           }
-          param1.c(-2193);
+          param1.unlink(-2193);
           var2 = (ln) (nk.field_t.g(-18110));
           while (var2 != null) {
             if (var2.a(-7, param1)) {
@@ -72,7 +72,7 @@ final class fh {
             he.a(param1, var2, true);
             return;
           }
-          nk.field_t.a((o) (param1), (byte) 125);
+          nk.field_t.a((IntrusiveNode) (param1), (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

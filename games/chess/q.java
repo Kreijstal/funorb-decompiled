@@ -6,7 +6,7 @@ final class q {
     static dd[] field_b;
     static String field_a;
 
-    final static void a(int param0, um param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_315_0 = null;
         StringBuilder stackIn_315_1 = null;
         String stackIn_316_2 = null;
@@ -115,27 +115,27 @@ final class q {
           }
           var2Lifetime3 = vh.a((byte) 122, "HELP_HEAD,0");
           if (var2Lifetime3 != null) {
-            o.field_i[0] = ad.a(-29410, var2Lifetime3);
+            IntrusiveNode.field_i[0] = ad.a(-29410, var2Lifetime3);
           }
           var2Lifetime4 = vh.a((byte) 104, "HELP_HEAD,1");
           if (var2Lifetime4 != null) {
-            o.field_i[1] = ad.a(-29410, var2Lifetime4);
+            IntrusiveNode.field_i[1] = ad.a(-29410, var2Lifetime4);
           }
           var2Lifetime5 = vh.a((byte) 87, "HELP_HEAD,2");
           if (null != var2Lifetime5) {
-            o.field_i[2] = ad.a(dm.a(param0, -29413), var2Lifetime5);
+            IntrusiveNode.field_i[2] = ad.a(dm.a(param0, -29413), var2Lifetime5);
           }
           var2Lifetime6 = vh.a((byte) 53, "HELP_HEAD,3");
           if (var2Lifetime6 != null) {
-            o.field_i[3] = ad.a(-29410, var2Lifetime6);
+            IntrusiveNode.field_i[3] = ad.a(-29410, var2Lifetime6);
           }
           var2Lifetime7 = vh.a((byte) 42, "HELP_HEAD,4");
           if (var2Lifetime7 != null) {
-            o.field_i[4] = ad.a(-29410, var2Lifetime7);
+            IntrusiveNode.field_i[4] = ad.a(-29410, var2Lifetime7);
           }
           var2Lifetime8 = vh.a((byte) 69, "HELP_HEAD,5");
           if (null != var2Lifetime8) {
-            o.field_i[5] = ad.a(param0 - 29415, var2Lifetime8);
+            IntrusiveNode.field_i[5] = ad.a(param0 - 29415, var2Lifetime8);
           }
           var2Lifetime9 = vh.a((byte) 120, "HELP_MAIN");
           if (var2Lifetime9 != null) {
@@ -382,7 +382,7 @@ final class q {
           }
           var2Lifetime69 = vh.a((byte) 49, "YOU_ARE_PLAYING_AS");
           if (var2Lifetime69 != null) {
-            ke.field_e = ad.a(-29410, var2Lifetime69);
+            IsaacCipher.field_e = ad.a(-29410, var2Lifetime69);
           }
           var2Lifetime70 = vh.a((byte) 57, "PLAYER");
           if (null != var2Lifetime70) {
@@ -592,7 +592,7 @@ final class q {
               var2 = bh.field_D.g(-18110);
               break;
             }
-            fa.a((ac) (var2), 15079, param0);
+            GameAppletShell.a((ac) (var2), 15079, param0);
             var2 = (ac) (vn.field_vb.a((byte) -106));
           } while (var3 == 0);
           if (param1 < 30) {
@@ -673,7 +673,7 @@ final class q {
             stackIn_36_0 = bj.field_jb;
           }
           if (stackIn_36_0.field_L != 0) {
-            pj.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
+            GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
           }
           var4 = fj.a(ri.field_g, param1, fe.field_g, param0 ^ -6836);
           if (var4 != null) {

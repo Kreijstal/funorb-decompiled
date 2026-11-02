@@ -5,7 +5,7 @@ final class hm {
     static String field_f;
     static String field_d;
     static String field_a;
-    static um field_e;
+    static ResourceArchive field_e;
     static String field_b;
     static boolean field_g;
     static ci[] field_c;

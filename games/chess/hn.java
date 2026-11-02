@@ -228,7 +228,7 @@ final class hn implements Runnable {
         }
     }
 
-    final static void a(int param0, um param1, um param2, um param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         rk[] var14 = null;
         int var11_int = 0;
         km var15 = null;

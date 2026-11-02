@@ -7,12 +7,12 @@ public final class Chess extends gb {
     private int[] field_H;
     static String field_D;
     static int field_E;
-    static um field_B;
+    static ResourceArchive field_B;
     static String field_C;
     private int field_F;
     public static int field_G;
 
-    final static void a(String[] args, String[] param1, byte[] param2, rk[] param3, um param4, int param5, int[] param6, byte[] param7, km[][] param8, boolean param9, String[][] param10, um param11, int param12, um param13, int[] param14, km[][] param15, String[][] param16, int param17, int param18) {
+    final static void a(String[] args, String[] param1, byte[] param2, rk[] param3, ResourceArchive param4, int param5, int[] param6, byte[] param7, km[][] param8, boolean param9, String[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, int[] param14, km[][] param15, String[][] param16, int param17, int param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -161,16 +161,16 @@ public final class Chess extends gb {
         ea.field_cb.field_j[0] = ik.field_g[qm.field_g];
         ea.field_cb.field_j[1] = ik.field_g[qm.field_g];
         ei.field_q = (dd) (ea.field_cb.a(100, 131072, 0, -10, 0));
-        lj.field_i = new bn(4, 2, 1);
-        lj.field_i.a(-66, 0, -66);
-        lj.field_i.a(66, 0, -66);
-        lj.field_i.a(-66, 0, 66);
-        lj.field_i.a(66, 0, 66);
-        lj.field_i.a(0, 1, 2, (byte) 1, (byte) -1, (short) 960, (short) -1);
-        lj.field_i.a(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
-        lj.field_i.field_j[0] = (short)960;
-        lj.field_i.field_j[1] = (short)960;
-        mm.field_a = (dd) (lj.field_i.a(100, 131072, 0, -10, 0));
+        ArchiveIndex.field_i = new bn(4, 2, 1);
+        ArchiveIndex.field_i.a(-66, 0, -66);
+        ArchiveIndex.field_i.a(66, 0, -66);
+        ArchiveIndex.field_i.a(-66, 0, 66);
+        ArchiveIndex.field_i.a(66, 0, 66);
+        ArchiveIndex.field_i.a(0, 1, 2, (byte) 1, (byte) -1, (short) 960, (short) -1);
+        ArchiveIndex.field_i.a(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
+        ArchiveIndex.field_i.field_j[0] = (short)960;
+        ArchiveIndex.field_i.field_j[1] = (short)960;
+        mm.field_a = (dd) (ArchiveIndex.field_i.a(100, 131072, 0, -10, 0));
         tk.field_i = new bn(4, 2, 1);
         tk.field_i.a(-66, 0, -66);
         tk.field_i.a(66, 0, -66);
@@ -412,7 +412,7 @@ public final class Chess extends gb {
           }
           if (wg.field_B == 14) {
             de.a(-31645);
-            hg.a(rl.field_a.length, 1024, aj.a(false), ak.a(8, 1045), o.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(11520), ai.field_h);
+            hg.a(rl.field_a.length, 1024, aj.a(false), ak.a(8, 1045), IntrusiveNode.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(11520), ai.field_h);
             il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
             wn.field_f = true;
             qk.field_h = -2;
@@ -449,7 +449,7 @@ public final class Chess extends gb {
             var3Lifetime1 = 1 << var2Lifetime1Lifetime1;
             wc.field_w = wc.field_w | var3Lifetime1;
             vk.field_b = vk.field_b | var3Lifetime1;
-            hd.field_l.a((o) (new ef(var2Lifetime1Lifetime1)), (byte) -108);
+            hd.field_l.a((IntrusiveNode) (new ef(var2Lifetime1Lifetime1)), (byte) -108);
             continue;
           }
           if (wg.field_B != 57 &&
@@ -484,7 +484,7 @@ public final class Chess extends gb {
               if (wg.field_B == 60) {
                 var3Lifetime2 = tk.field_h.f(674914976);
                 var4 = tk.field_h.i(-101);
-                var5 = tk.field_h.e((byte) -120);
+                var5 = tk.field_h.readInt((byte) -120);
                 ((un) (var2_ref)).field_B.a(var4, 255, var3Lifetime2);
                 if (((un) (var2_ref)).field_B.field_k == var3Lifetime2) {
                   ((un) (var2_ref)).field_e = var5;
@@ -511,14 +511,14 @@ public final class Chess extends gb {
               if (wg.field_B == 61) {
                 var3Lifetime2Lifetime1 = tk.field_h.c(true);
                 var4Lifetime1 = tk.field_h.c(true);
-                var5Lifetime2 = tk.field_h.g(0);
+                var5Lifetime2 = tk.field_h.readByte(0);
                 ((un) (var2_ref)).field_B.a(var3Lifetime2Lifetime1, var5Lifetime2, ((un) (var2_ref)).field_t, -65, var4Lifetime1);
                 eb.a(var5Lifetime2, ((un) (var2_ref)).field_t.field_f[var4Lifetime1] & -16773121, ((un) (var2_ref)).field_t.field_f[var3Lifetime2Lifetime1] & -16773121, 3);
                 ((un) (var2_ref)).b((byte) 26);
                 continue;
               }
               if (wg.field_B == 62) {
-                var3Lifetime2Lifetime2 = tk.field_h.g(0);
+                var3Lifetime2Lifetime2 = tk.field_h.readByte(0);
                 ((un) (var2_ref)).field_B.a((byte) 93, var3Lifetime2Lifetime2);
                 if (null != oc.field_p) {
                   oc.field_p.field_B.field_f = var3Lifetime2Lifetime2;
@@ -559,7 +559,7 @@ public final class Chess extends gb {
           stackIn_100_0 = (tk.field_h.i(-111) != 1) ? 0 : 1;
           var3Lifetime3 = stackIn_100_0;
           var4_ref_String__ = new String[tk.field_h.i(-106)];
-          var5Lifetime1 = tk.field_h.g(0);
+          var5Lifetime1 = tk.field_h.readByte(0);
           if (var5Lifetime1 < 0) {
             var5Lifetime1 = -2;
           }
@@ -620,15 +620,15 @@ public final class Chess extends gb {
         nj.a(-20, mm.field_e, 92.0f);
         this.a(true);
         cm.field_s = jn.a("logo", 8221, "", mm.field_d);
-        o.field_g = jn.a("achievements", 8221, "", mm.field_d);
+        IntrusiveNode.field_g = jn.a("achievements", 8221, "", mm.field_d);
         ml.field_g = jn.a("instructions", 8221, "", mm.field_d);
         g.field_g = jn.a("rankings", 8221, "", mm.field_d);
         cm.field_s.field_a = -(cm.field_s.field_k / 2) + 320;
         cm.field_s.field_m = cm.field_s.field_h / 4;
-        o.field_g.field_m = cm.field_s.field_m;
+        IntrusiveNode.field_g.field_m = cm.field_s.field_m;
         ml.field_g.field_m = cm.field_s.field_m;
         g.field_g.field_m = cm.field_s.field_m;
-        o.field_g.field_a = 320 - o.field_g.field_k / 2;
+        IntrusiveNode.field_g.field_a = 320 - IntrusiveNode.field_g.field_k / 2;
         ml.field_g.field_a = -(ml.field_g.field_k / 2) + 320;
         g.field_g.field_a = 320 - g.field_g.field_k / 2;
         dc.field_n = new rk[12];
@@ -643,7 +643,7 @@ public final class Chess extends gb {
         dc.field_n[9] = null;
         dc.field_n[2] = cm.field_s;
         dc.field_n[3] = null;
-        dc.field_n[6] = o.field_g;
+        dc.field_n[6] = IntrusiveNode.field_g;
         dc.field_n[11] = cm.field_s;
         dc.field_n[10] = null;
         dc.field_n[0] = cm.field_s;
@@ -893,7 +893,7 @@ public final class Chess extends gb {
           var7 = dl.field_c[var5].field_O;
           dl.field_c[var5].field_O = dl.field_c[var5].field_P;
           dl.field_c[var5].field_P = var7;
-          pj.field_c[var5] = (dd) (dl.field_c[var5].a(var3 * 4, var4 / 4, 5, 10, 5));
+          GzipInflater.field_c[var5] = (dd) (dl.field_c[var5].a(var3 * 4, var4 / 4, 5, 10, 5));
         }
         for (var5 = -1 + kl.field_k.length; 0 <= var5; var5--) {
           kl.field_k[var5] = null;
@@ -985,7 +985,7 @@ public final class Chess extends gb {
         wb.h(0, 0, wb.field_h, wb.field_c, -1 + wb.field_c / 2, 1449732);
         ph.field_j.b(48);
         ek.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
-        ke.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
+        IsaacCipher.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
     }
 
     private final void o(int param0) {
@@ -1017,8 +1017,8 @@ public final class Chess extends gb {
         jj.field_b = dm.a(param0 - 16231, hm.field_e, "", f.field_b, "kartika13");
         jj.field_d = dm.a(0, hm.field_e, "", f.field_b, "roman12");
         dm.a(0, mm.field_d, "font_prose_bold", bo.field_d, "");
-        lj.field_n = jn.a("unachieved", 8221, "basic", hm.field_e);
-        lj.field_n.a();
+        ArchiveIndex.field_n = jn.a("unachieved", 8221, "basic", hm.field_e);
+        ArchiveIndex.field_n.a();
         ao.field_e = jn.a("orbcoin", 8221, "basic", hm.field_e);
         ao.field_e.a();
         me.field_c = qm.a(1, "", "achievements_large", mm.field_d);
@@ -1332,7 +1332,7 @@ public final class Chess extends gb {
                 if (cb.field_e != null) {
                   ba.a(cb.field_e, -102, 3);
                 }
-                um.a(5);
+                ResourceArchive.a(5);
                 qk.field_h = ge.field_bb;
                 if (a.field_d) {
                   fk.a(false, 15);
@@ -1346,7 +1346,7 @@ public final class Chess extends gb {
               }
               var3 = jc.field_f;
               uk.a(qk.field_h, false, 28333, var3);
-              n.field_e = pj.field_d;
+              n.field_e = GzipInflater.field_d;
               nc.field_T = 31;
             } else {
               ji.field_S = ji.field_S - 1;
@@ -1503,10 +1503,10 @@ public final class Chess extends gb {
         this.a(true);
         vn.field_Bb = this.a(2, wk.a(mm.field_d, 1, "win_black", ""));
         jh.field_b = this.a(2, wk.a(mm.field_d, 1, "win_white", ""));
-        fa.field_e = this.a(2, wk.a(mm.field_d, 1, "win_none", ""));
+        GameAppletShell.field_e = this.a(2, wk.a(mm.field_d, 1, "win_none", ""));
         this.a(false, vn.field_Bb);
         this.a(false, jh.field_b);
-        this.a(false, fa.field_e);
+        this.a(false, GameAppletShell.field_e);
         var3 = qm.field_g;
         if (var3 != 1) {
           var2 = wk.a(mm.field_d, 1, "background_3d", "");
@@ -1558,15 +1558,15 @@ public final class Chess extends gb {
         jl.a(-1699);
         gb.f(-113);
         ae.a(122);
-        fa.a((byte) -53);
+        GameAppletShell.a((byte) -53);
         qk.a(true);
         rl.b(1);
         ek.b((byte) 30);
         wb.d();
-        um.d((byte) 73);
+        ResourceArchive.d((byte) 73);
         lh.a();
         jf.a((byte) -8);
-        p.f((byte) -128);
+        PacketBuffer.f((byte) -128);
         ud.a((byte) -109);
         gi.a(true);
         il.a(91);
@@ -1594,7 +1594,7 @@ public final class Chess extends gb {
         hj.c(64655);
         lc.b((byte) -9);
         hn.a(false);
-        o.a((byte) -91);
+        IntrusiveNode.a((byte) -91);
         tn.a(-2);
         md.d();
         vl.f(-1);
@@ -1626,9 +1626,9 @@ public final class Chess extends gb {
         ln.k(0);
         dk.b(12000);
         ce.a(true);
-        lj.a(87);
-        pj.a(-6145);
-        ua.a(1007);
+        ArchiveIndex.a(87);
+        GzipInflater.a(-6145);
+        ArchiveProvider.a(1007);
         rd.a(32286);
         ie.a(-1962602524);
         fm.l(-9);
@@ -1669,7 +1669,7 @@ public final class Chess extends gb {
         uc.a(-112);
         be.a((byte) 122);
         dm.a((byte) 123);
-        ke.a((byte) -105);
+        IsaacCipher.a((byte) -105);
         gl.a((byte) 67);
         ej.a((byte) -30);
         jg.l(10000536);
@@ -1894,7 +1894,7 @@ public final class Chess extends gb {
               ob.f(0);
               return false;
             }
-            um.b(param0 - 19123);
+            ResourceArchive.b(param0 - 19123);
             for (var3Lifetime1 = 0; var3Lifetime1 < 12; var3Lifetime1++) {
               ae.field_e[var3Lifetime1] = new aa(var3Lifetime1);
             }
@@ -1931,7 +1931,7 @@ public final class Chess extends gb {
             mm.field_d = null;
           }
           var6 = (km[][]) null;
-          eg.a(rl.field_a, ek.field_f, -109, true, f.field_b, new km[][]{ke.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
+          eg.a(rl.field_a, ek.field_f, -109, true, f.field_b, new km[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
           ig.field_h = wf.field_Q;
           tk.b(200, 93);
           hm.field_e = null;
@@ -2078,12 +2078,12 @@ public final class Chess extends gb {
         int var2 = 0;
         int var3;
         var3 = field_G;
-        um.field_l[0] = g.a((byte) -34, param0);
+        ResourceArchive.field_l[0] = g.a((byte) -34, param0);
         for (var2 = 1; var2 < 13; var2++) {
           if (ic.field_a[var2]) {
-            um.field_l[var2] = s.field_S.a(va.field_c[var2], "", -12983);
+            ResourceArchive.field_l[var2] = s.field_S.a(va.field_c[var2], "", -12983);
           } else {
-            um.field_l[var2] = s.field_S.a(va.field_c[var2], false, "");
+            ResourceArchive.field_l[var2] = s.field_S.a(va.field_c[var2], false, "");
           }
         }
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj {
+final class ArchiveIndex {
     int[] field_b;
     int field_g;
     int[] field_q;
@@ -47,7 +47,7 @@ final class lj {
           f.a(ed.field_c, true);
         }
         if (param0 != 19) {
-          lj.a((byte) -39);
+          ArchiveIndex.a((byte) -39);
         }
     }
 
@@ -55,7 +55,7 @@ final class lj {
         field_a = null;
         field_i = null;
         if (param0 <= 81) {
-          lj.a((String) null, 126L, -28);
+          ArchiveIndex.a((String) null, 126L, -28);
         }
         field_d = null;
         field_n = null;
@@ -91,7 +91,7 @@ final class lj {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        p var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -107,12 +107,12 @@ final class lj {
         int var13Lifetime1Lifetime1;
         var16 = Chess.field_G;
         try {
-          var17 = new p(dj.a(param0, 119));
+          var17 = new PacketBuffer(dj.a(param0, 119));
           var4 = var17.i(-117);
           if (var4 >= 5 &&
             7 >= var4) {
             if (var4 >= 6) {
-              this.field_s = var17.e((byte) -98);
+              this.field_s = var17.readInt((byte) -98);
             } else {
               this.field_s = 0;
             }
@@ -163,19 +163,19 @@ final class lj {
                 this.field_f[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_k; var10Lifetime1Lifetime1++) {
-                this.field_f[this.field_q[var10Lifetime1Lifetime1]] = var17.e((byte) -114);
+                this.field_f[this.field_q[var10Lifetime1Lifetime1]] = var17.readInt((byte) -114);
               }
               this.field_e = new qh(this.field_f);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_k; var10Lifetime2++) {
-              this.field_p[this.field_q[var10Lifetime2]] = var17.e((byte) -116);
+              this.field_p[this.field_q[var10Lifetime2]] = var17.readInt((byte) -116);
             }
             if (param1 < 35) {
-              lj.a(-43);
+              ArchiveIndex.a(-43);
             }
             if (var7 == 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_k; var10Lifetime3++) {
-                this.field_b[this.field_q[var10Lifetime3]] = var17.e((byte) -93);
+                this.field_b[this.field_q[var10Lifetime3]] = var17.readInt((byte) -93);
               }
             } else {
               for (var10Lifetime3 = 0; this.field_k > var10Lifetime3; var10Lifetime3++) {
@@ -184,7 +184,7 @@ final class lj {
                 this.field_t[this.field_q[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_k; var10Lifetime3++) {
-                this.field_b[this.field_q[var10Lifetime3]] = var17.e((byte) -93);
+                this.field_b[this.field_q[var10Lifetime3]] = var17.readInt((byte) -93);
               }
             }
             if (var4 >= 7) {
@@ -257,7 +257,7 @@ final class lj {
                   } else {
                     var14Lifetime1 = this.field_h[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_m[var11Lifetime1][var14Lifetime1] = var17.e((byte) -97);
+                  this.field_m[var11Lifetime1][var14Lifetime1] = var17.readInt((byte) -97);
                 }
                 this.field_j[var11Lifetime1] = new qh(this.field_m[var11Lifetime1]);
               }
@@ -295,10 +295,10 @@ final class lj {
         }
     }
 
-    lj(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_c = ke.a(param0, 21106, param0.length);
+          this.field_c = IsaacCipher.a(param0, 21106, param0.length);
           if (this.field_c != param1) {
             throw new RuntimeException();
           }

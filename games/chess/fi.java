@@ -10,7 +10,7 @@ final class fi {
     final static void a(byte param0) {
         int var1 = qd.a(false);
         int var2 = nj.b(3);
-        de.field_c.a(vh.field_g - o.field_f, (o.field_f << 1) + var1, var2 + (bb.field_b << 1), true, -bb.field_b + id.field_c);
+        de.field_c.a(vh.field_g - IntrusiveNode.field_f, (IntrusiveNode.field_f << 1) + var1, var2 + (bb.field_b << 1), true, -bb.field_b + id.field_c);
         le.a((byte) -115);
         if (param0 == 6) {
           return;
@@ -48,7 +48,7 @@ final class fi {
         pi.field_d = null;
     }
 
-    final static boolean a(int param0, p param1) {
+    final static boolean a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -88,7 +88,7 @@ final class de {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_l;
+            var4 = param0.position;
             param0.d(var18.field_t, (byte) -81);
             for (var5 = 0; var5 < var18.field_l; var5++) {
               if (0 == var18.field_o[var5]) {
@@ -200,7 +200,7 @@ final class de {
               de.a((nk) null, (byte) -43);
             }
             param0.b(var4, (byte) -126);
-            var18.c(-2193);
+            var18.unlink(-2193);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -243,8 +243,8 @@ final class de {
           pi.field_d.b(-65, param1);
         }
         k.a(param1, param0 ^ 100);
-        if (pj.field_h != null) {
-          pj.field_h.a(false, param1);
+        if (GzipInflater.field_h != null) {
+          GzipInflater.field_h.a(false, param1);
         }
         vk.a(false, param1);
     }

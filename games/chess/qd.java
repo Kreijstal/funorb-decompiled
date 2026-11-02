@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends o {
+final class qd extends IntrusiveNode {
     int field_C;
     int field_y;
     int field_p;
@@ -20,7 +20,7 @@ final class qd extends o {
     static int field_r;
     int field_B;
     int field_E;
-    na field_j;
+    PcmSampleStream field_j;
     int field_x;
     int field_z;
     static String field_l;
@@ -115,8 +115,8 @@ final class qd extends o {
         }
         try {
           cf.field_Nb = true;
-          ua.field_d = new vn(jh.field_e, tk.field_a, param1, dk.field_g, ag.field_e);
-          jh.field_e.b(ua.field_d, (byte) -27);
+          ArchiveProvider.field_d = new vn(jh.field_e, tk.field_a, param1, dk.field_g, ag.field_e);
+          jh.field_e.b(ArchiveProvider.field_d, (byte) -27);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

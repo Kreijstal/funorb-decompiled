@@ -140,16 +140,16 @@ final class of {
             stackIn_10_0 = oc.a(tl.field_Ib, new String[]{param0}, (byte) -90);
             return stackIn_10_0;
           }
-          var7.c(-2193);
+          var7.unlink(-2193);
           var7.d(param3);
           wc.field_v = wc.field_v - 1;
           var5 = qn.field_U;
           var5.f(param1, -123);
-          var5.field_l = var5.field_l + 1;
-          var6 = var5.field_l;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.c(3, (byte) -112);
           var5.a(-120, param2);
-          var5.a(var5.field_l - var6, -1);
+          var5.a(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

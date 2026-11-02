@@ -16,7 +16,7 @@ final class dh {
 
     private final boolean b(int param0, int param1, int param2) {
         if (17 == param1) {
-          pj.field_h = new pc(this.field_k.field_U, this.field_k.field_wb, this.field_k.field_M, this.field_k.field_pb, param0, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, this.field_i, this.field_j);
+          GzipInflater.field_h = new pc(this.field_k.field_U, this.field_k.field_wb, this.field_k.field_M, this.field_k.field_pb, param0, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, this.field_i, this.field_j);
           return true;
         }
         if (param2 == 13563) {
@@ -202,7 +202,7 @@ final class dh {
           return true;
         }
         if (param0 == 18) {
-          lj.a(this.field_i, this.field_j, 112);
+          ArchiveIndex.a(this.field_i, this.field_j, 112);
           return true;
         }
         if (param0 == 11) {
@@ -242,7 +242,7 @@ final class dh {
             if (sg.field_d == 0) {
               this.field_b.a((byte) -12, dl.field_m, 12);
             }
-            this.field_b.a((byte) -12, ua.field_e, 13);
+            this.field_b.a((byte) -12, ArchiveProvider.field_e, 13);
           }
           int var3_int = -49 % ((param0 - 3) / 36);
           if (param1.field_k == 1) {
@@ -269,17 +269,17 @@ final class dh {
           return;
         }
         nk var2 = tk.field_h;
-        var2.e((byte) -96);
-        var2.e((byte) -92);
-        var2.e((byte) -99);
+        var2.readInt((byte) -96);
+        var2.readInt((byte) -92);
+        var2.readInt((byte) -99);
         if (param0 == 49) {
-          var2.e((byte) -109);
-          var1.c(-2193);
+          var2.readInt((byte) -109);
+          var1.unlink(-2193);
           return;
         }
         field_c = -36;
-        var2.e((byte) -109);
-        var1.c(-2193);
+        var2.readInt((byte) -109);
+        var1.unlink(-2193);
     }
 
     final void b(int param0, boolean param1) {
@@ -298,7 +298,7 @@ final class dh {
         RuntimeException var4_ref = null;
         ve var5 = null;
         int var6 = 0;
-        p var7 = null;
+        PacketBuffer var7 = null;
         String var8 = null;
         try {
           if (this.field_i != null && (~this.field_j != ~gb.field_t ||
@@ -339,8 +339,8 @@ final class dh {
           if (param0 == 17) {
             return;
           }
-          var7 = (p) null;
-          dh.a(29, -33, -123, 35, (p) null);
+          var7 = (PacketBuffer) null;
+          dh.a(29, -33, -123, 35, (PacketBuffer) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -434,7 +434,7 @@ final class dh {
             this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
             return;
           }
-          this.field_b.a((byte) -12, oc.a(lj.field_d, new String[]{var3}, (byte) -46), 2);
+          this.field_b.a((byte) -12, oc.a(ArchiveIndex.field_d, new String[]{var3}, (byte) -46), 2);
           if (!var5.field_Tb) {
             return;
           }
@@ -479,7 +479,7 @@ final class dh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, p param4) {
+    final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
         param4.c(12, (byte) -81);
         param4.b(17, 91);
         param4.b(param0, param1 + 78);

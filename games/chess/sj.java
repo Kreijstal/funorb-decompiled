@@ -56,8 +56,8 @@ final class sj implements jm {
           var7 = qn.field_U;
           var8 = var7;
           var8.f(param1, -117);
-          var8.field_l = var8.field_l + 1;
-          var4 = var8.field_l;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.c(1, (byte) 62);
           var8.b(param2.field_s, param0 + 102);
           var8.b(param2.field_t, 114);
@@ -71,7 +71,7 @@ final class sj implements jm {
             var7.d(param2.field_o[var5], (byte) -81);
           }
           var8.b(var4, (byte) -124);
-          var8.a(-var4 + var8.field_l, -1);
+          var8.a(-var4 + var8.position, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

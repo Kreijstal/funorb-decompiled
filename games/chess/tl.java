@@ -117,8 +117,8 @@ final class tl extends ci {
 
     final static void a(ac param0, int param1, byte param2) {
         try {
-          vn.field_vb.a((o) (param0), (byte) 119);
-          fa.a(param0, param2 ^ 14994, param1);
+          vn.field_vb.a((IntrusiveNode) (param0), (byte) 119);
+          GameAppletShell.a(param0, param2 ^ 14994, param1);
           if (param2 != 117) {
             field_Gb = (nl) null;
           }
@@ -133,9 +133,9 @@ final class tl extends ci {
           fi.a(-393711775);
           return true;
         }
-        if (pj.field_h != null &&
-          pj.field_h.f((byte) 95)) {
-          pj.field_h = null;
+        if (GzipInflater.field_h != null &&
+          GzipInflater.field_h.f((byte) 95)) {
+          GzipInflater.field_h = null;
           fi.a(-393711775);
           return true;
         }

@@ -62,7 +62,7 @@ final class fg {
             if (null == ba.field_L) {
               return;
             }
-            stackIn_14_0 = um.field_g;
+            stackIn_14_0 = ResourceArchive.field_g;
             stackIn_14_1 = -49;
             stackIn_14_2 = null;
             stackIn_14_3 = null;

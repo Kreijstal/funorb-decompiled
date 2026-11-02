@@ -218,7 +218,7 @@ final class ol extends ma implements nn, mj, wl {
         }
     }
 
-    final static km[] a(um param0, String param1, String param2, byte param3) {
+    final static km[] a(ResourceArchive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

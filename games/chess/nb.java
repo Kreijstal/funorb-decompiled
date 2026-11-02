@@ -232,9 +232,9 @@ final class nb extends ci {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((p) ((Object) var5)).i(-107);
+            var6 = ((PacketBuffer) ((Object) var5)).i(-107);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((p) ((Object) var5)).e((byte) -99);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -99);
             }
             var15 = (bk) (bh.field_D.g(-18110));
             if (var15 == null) {
@@ -244,7 +244,7 @@ final class nb extends ci {
             var15.field_j = var16[0];
             var15.field_o = var3;
             var15.field_m = true;
-            var15.c(-2193);
+            var15.unlink(-2193);
             return;
           }
           if (var2 != 1) {
@@ -257,7 +257,7 @@ final class nb extends ci {
               var13.field_o = in.a((byte) 20);
               var13.field_j = var13.field_o[0];
               var13.field_m = true;
-              var13.c(-2193);
+              var13.unlink(-2193);
             } else {
               fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -122));
               si.d(65280);
@@ -268,7 +268,7 @@ final class nb extends ci {
               si.d(65280);
               return;
             }
-            var11.c(-2193);
+            var11.unlink(-2193);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

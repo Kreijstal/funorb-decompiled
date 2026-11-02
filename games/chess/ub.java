@@ -126,7 +126,7 @@ abstract class ub {
         if (param0 != 21549) {
           return true;
         }
-        stackIn_6_0 = (null != lj.field_a) && (tb.field_f == ik.field_e);
+        stackIn_6_0 = (null != ArchiveIndex.field_a) && (tb.field_f == ik.field_e);
         return stackIn_6_0;
     }
 

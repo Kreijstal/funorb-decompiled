@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pj {
+final class GzipInflater {
     static volatile long field_g;
     static int[] field_b;
     static int field_d;
@@ -22,7 +22,7 @@ final class pj {
           var2.c(jg.m(73), (byte) -88);
           return;
         }
-        pj.b(27, 37);
+        GzipInflater.b(27, 37);
         var2.c(4, (byte) -71);
         var2.c(jg.m(73), (byte) -88);
     }
@@ -50,7 +50,7 @@ final class pj {
         try {
           ol.field_S[0] = ph.field_d.nextInt();
           ol.field_S[1] = ph.field_d.nextInt();
-          mn.field_h.field_l = 0;
+          mn.field_h.position = 0;
           ol.field_S[2] = (int)(sj.field_h >> 32);
           ol.field_S[3] = (int)sj.field_h;
           mn.field_h.d(ol.field_S[0], (byte) -81);
@@ -60,14 +60,14 @@ final class pj {
           sa.a(mn.field_h, 109);
           mn.field_h.b(param3, param1 + 27463);
           param4.a(mn.field_h, (byte) 123);
-          qn.field_U.field_l = 0;
+          qn.field_U.position = 0;
           if (param2) {
             qn.field_U.c(18, (byte) -81);
           } else {
             qn.field_U.c(16, (byte) 110);
           }
-          qn.field_U.field_l = qn.field_U.field_l + 2;
-          var5_int = qn.field_U.field_l;
+          qn.field_U.position = qn.field_U.position + 2;
+          var5_int = qn.field_U.position;
           qn.field_U.d(gb.field_s, (byte) -81);
           qn.field_U.a(-97, qc.field_a);
           var6 = 0;
@@ -96,7 +96,7 @@ final class pj {
             qn.field_U.a(true, lf.field_N);
           }
           lk.a(dk.field_k, mn.field_h, qn.field_U, 91, se.field_M);
-          qn.field_U.d(qn.field_U.field_l - var5_int, 111);
+          qn.field_U.d(qn.field_U.position - var5_int, 111);
           vh.a(-1, (byte) -42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,7 +113,7 @@ final class pj {
         }
     }
 
-    final void a(byte[] param0, byte param1, p param2) {
+    final void a(byte[] param0, byte param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -124,16 +124,16 @@ final class pj {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (31 == param2.field_o[param2.field_l] &&
-              param2.field_o[param2.field_l + 1] == -117) {
+            if (31 == param2.data[param2.position] &&
+              param2.data[param2.position + 1] == -117) {
               if (null == this.field_a) {
                 this.field_a = new java.util.zip.Inflater(true);
               }
               try {
                 if (param1 >= -19) {
-                  pj.b(106, 101);
+                  GzipInflater.b(106, 101);
                 }
-                this.field_a.setInput(param2.field_o, param2.field_l + 10, -8 - (param2.field_l + 10 - param2.field_o.length));
+                this.field_a.setInput(param2.data, param2.position + 10, -8 - (param2.position + 10 - param2.data.length));
                 this.field_a.inflate(param0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,11 +170,11 @@ final class pj {
         }
     }
 
-    public pj() {
+    public GzipInflater() {
         this(-1, 1000000, 1000000);
     }
 
-    private pj(int param0, int param1, int param2) {
+    private GzipInflater(int param0, int param1, int param2) {
     }
 
     public static void a(int param0) {

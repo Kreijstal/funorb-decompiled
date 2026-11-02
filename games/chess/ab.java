@@ -34,14 +34,14 @@ abstract class ab extends l {
             var8 = param5[1].field_v;
             param5[0].e(param2, param3, param0);
             param5[2].e(param1 + (param2 - var7), param3, param0);
-            wb.b(o.field_d);
+            wb.b(IntrusiveNode.field_d);
             wb.e(param2 + var6_int, param3, -var7 + (param1 + param2), param3 + param5[1].field_u);
             var9 = param2 + var6_int;
             var10 = -var7 + (param1 + param2);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
               param5[1].e(param2, param3, param0);
             }
-            wb.a(o.field_d);
+            wb.a(IntrusiveNode.field_d);
             return;
           }
           return;
@@ -113,16 +113,16 @@ abstract class ab extends l {
             }
             break;
           }
-          var8.c(-2193);
+          var8.unlink(-2193);
           var8.d(-1);
           wg.field_w = wg.field_w - 1;
           var9 = qn.field_U;
           var9.f(param0, -104);
-          var9.field_l = var9.field_l + 1;
-          var5 = var9.field_l;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.c(1, (byte) 66);
           var9.a(param1 - 21360, param2);
-          var9.a(var9.field_l - var5, -1);
+          var9.a(var9.position - var5, -1);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -346,15 +346,15 @@ final class gg {
             } else {
               var5 = null;
             }
-            var9.field_l = var9.field_l + 4;
+            var9.position = var9.position + 4;
             if (!var9.e(-114)) {
               si.d(param0 ^ 65364);
               return;
             }
-            var8.c(-2193);
+            var8.unlink(-2193);
           } else {
             if (var2 == 1) {
-              var3 = var9.e((byte) -117);
+              var3 = var9.readInt((byte) -117);
               var4_ref_om = (om) (fg.field_c.g(-18110));
               while (var4_ref_om != null) {
                 if (var3 != var4_ref_om.field_k) {
@@ -367,7 +367,7 @@ final class gg {
                 si.d(65280);
                 return;
               }
-              var4_ref_om.c(-2193);
+              var4_ref_om.unlink(-2193);
               return;
             }
             fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -124));

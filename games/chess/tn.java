@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends o {
+final class tn extends IntrusiveNode {
     static ci field_j;
-    o field_n;
-    na field_k;
+    IntrusiveNode field_n;
+    PcmSampleStream field_k;
     int field_o;
     static String field_l;
     static int field_m;
@@ -43,7 +43,7 @@ final class tn extends o {
         }
     }
 
-    tn(na param0, o param1) {
+    tn(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_k = param0;
           this.field_o = param0.j();

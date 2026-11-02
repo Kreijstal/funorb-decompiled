@@ -7,7 +7,7 @@ final class lg {
     static ci field_c;
     static String field_e;
     static vc field_d;
-    static um field_b;
+    static ResourceArchive field_b;
 
     final static int a(int param0, int param1) {
         int var2 = 0;

@@ -3,7 +3,7 @@
  */
 abstract class f {
     static String field_a;
-    static um field_b;
+    static ResourceArchive field_b;
 
     abstract void a(byte[] param0, int param1);
 

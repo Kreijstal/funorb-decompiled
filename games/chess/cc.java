@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cc extends ab {
-    p field_y;
+    PacketBuffer field_y;
     byte field_x;
     static String field_A;
     static int field_z;
@@ -15,14 +15,14 @@ final class cc extends ab {
         if (param0 == 81) {
           var2 = qn.field_U;
           var2.f(param1, -118);
-          var2.field_l = var2.field_l + 1;
-          var3 = var2.field_l;
+          var2.position = var2.position + 1;
+          var3 = var2.position;
           var2.c(2, (byte) 47);
           var2.a(g.field_f, (byte) -45, 0, g.field_f.length);
           var2.c(qd.field_u, (byte) -69);
-          var2.c(p.field_n, (byte) 107);
+          var2.c(PacketBuffer.field_n, (byte) 107);
           var2.a(fe.field_d, (byte) -45, 0, fe.field_d.length);
-          var2.a(var2.field_l - var3, -1);
+          var2.a(var2.position - var3, -1);
           return;
         }
     }
@@ -44,12 +44,12 @@ final class cc extends ab {
         if (param0 <= 51) {
           cc.a((byte) -115, 18);
           if (null != this.field_y) {
-            return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
+            return 100 * this.field_y.position / (this.field_y.data.length - this.field_x);
           }
           return 0;
         }
         if (null != this.field_y) {
-          return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
+          return 100 * this.field_y.position / (this.field_y.data.length - this.field_x);
         }
         return 0;
     }
@@ -58,14 +58,14 @@ final class cc extends ab {
         if (this.field_s) {
           throw new RuntimeException();
         }
-        if (-this.field_x + this.field_y.field_o.length > this.field_y.field_l) {
+        if (-this.field_x + this.field_y.data.length > this.field_y.position) {
           throw new RuntimeException();
         }
         if (!param0) {
-          return this.field_y.field_o;
+          return this.field_y.data;
         }
-        this.field_y = (p) null;
-        return this.field_y.field_o;
+        this.field_y = (PacketBuffer) null;
+        return this.field_y.data;
     }
 
     static {

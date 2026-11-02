@@ -496,7 +496,7 @@ class ci extends ei {
           if (null == this.field_I) {
             this.field_I = new jc();
           }
-          this.field_I.a((o) (param1), (byte) 87);
+          this.field_I.a((IntrusiveNode) (param1), (byte) 87);
           if (param0 < 122) {
             this.field_rb = false;
           }
@@ -569,12 +569,12 @@ class ci extends ei {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static um a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           da var8 = null;
-          um stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -601,7 +601,7 @@ class ci extends ei {
             if (param3) {
               var8.a((byte) 108);
             }
-            stackIn_15_0 = new um(var8, param5, param2);
+            stackIn_15_0 = new ResourceArchive(var8, param5, param2);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -890,7 +890,7 @@ class ci extends ei {
           this.field_mb = param2;
           this.field_pb = param5;
           this.field_V = param3;
-          this.field_e = param0;
+          this.key = param0;
           this.field_M = param4;
           this.a(param1, -2147483648);
           if (param6 != null) {

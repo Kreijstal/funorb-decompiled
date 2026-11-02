@@ -14,14 +14,14 @@ final class jl {
             return false;
           }
           sb.field_sb = tk.field_h.i(-117);
-          tk.field_h.field_l = 0;
+          tk.field_h.position = 0;
         }
         if (-2 == sb.field_sb) {
           if (!tk.a(60, 2)) {
             return false;
           }
           sb.field_sb = tk.field_h.f(674914976);
-          tk.field_h.field_l = 0;
+          tk.field_h.position = 0;
         }
         return tk.a(-121, sb.field_sb);
     }

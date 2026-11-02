@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends ua {
+final class da extends ArchiveProvider {
     private int field_g;
     private kl field_j;
     static String field_B;
     static String[] field_C;
     private wm field_s;
     private byte[] field_u;
-    private lj field_n;
+    private ArchiveIndex field_n;
     private int field_v;
     static bn[] field_w;
     private gd field_z;
@@ -94,7 +94,7 @@ final class da extends ua {
           uh.field_m = new ci(0L, param3);
           ji.field_N = new ci(0L, param6);
           if (param9) {
-            da.a((String) null, (String) null, (um) null, -40);
+            da.a((String) null, (String) null, (ResourceArchive) null, -40);
           }
           uh.field_m.a((byte) 125, ji.field_N);
           var17 = new ci(0L, (ci) null);
@@ -240,10 +240,10 @@ final class da extends ua {
     final static int a(int param0, vg param1, String param2, vg param3, int param4, byte param5, boolean param6) {
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
-        p stackIn_28_0 = null;
+        PacketBuffer stackIn_28_0 = null;
         boolean stackIn_28_1 = false;
         String stackIn_29_2 = null;
-        p stackIn_32_0 = null;
+        PacketBuffer stackIn_32_0 = null;
         boolean stackIn_32_1 = false;
         String stackIn_33_2 = null;
         int stackIn_49_0 = 0;
@@ -277,7 +277,7 @@ final class da extends ua {
           }
           var7 = param1.a((byte) -64);
           var8 = param3.a((byte) -64);
-          if (lj.field_a == null) {
+          if (ArchiveIndex.field_a == null) {
             var9 = gd.a((byte) 68, false) ? 1 : 0;
             if (var9 == 0) {
               stackIn_9_0 = -1;
@@ -286,11 +286,11 @@ final class da extends ua {
           }
           if (tb.field_f == ca.field_h) {
             boolean decompiledFrameRemainder0 = true;
-            qn.field_U.field_l = 0;
+            qn.field_U.position = 0;
             uc.field_b = null;
             if (param2 != null) {
               var9 = 0;
-              mn.field_h.field_l = 0;
+              mn.field_h.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
@@ -303,19 +303,19 @@ final class da extends ua {
               mn.field_h.c(param4, (byte) 92);
               mn.field_h.c(var9, (byte) -107);
               qn.field_U.c(18, (byte) 96);
-              qn.field_U.field_l = qn.field_U.field_l + 2;
-              var10 = qn.field_U.field_l;
+              qn.field_U.position = qn.field_U.position + 2;
+              var10 = qn.field_U.position;
               var11_ref_String = m.a(bh.i(81), (byte) 87);
               if (null == var11_ref_String) {
                 var11_ref_String = "";
               }
               qn.field_U.a(-104, var11_ref_String);
               lk.a(dk.field_k, mn.field_h, qn.field_U, 86, se.field_M);
-              qn.field_U.d(qn.field_U.field_l - var10, 70);
+              qn.field_U.d(qn.field_U.position - var10, 70);
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if (decompiledFrameRemainder0) {
-              mn.field_h.field_l = 0;
+              mn.field_h.position = 0;
               mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
               mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
               stackIn_28_0 = mn.field_h;
@@ -325,7 +325,7 @@ final class da extends ua {
               } else {
                 stackIn_29_2 = "";
               }
-              ((p) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
+              ((PacketBuffer) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
               stackIn_32_0 = mn.field_h;
               stackIn_32_1 = true;
               if (!param3.a(-10585)) {
@@ -333,12 +333,12 @@ final class da extends ua {
               } else {
                 stackIn_33_2 = var8;
               }
-              ((p) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
+              ((PacketBuffer) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
               qn.field_U.c(16, (byte) 63);
-              qn.field_U.field_l = qn.field_U.field_l + 1;
-              var9 = qn.field_U.field_l;
+              qn.field_U.position = qn.field_U.position + 1;
+              var9 = qn.field_U.position;
               lk.a(dk.field_k, mn.field_h, qn.field_U, 55, se.field_M);
-              qn.field_U.a(qn.field_U.field_l - var9, -1);
+              qn.field_U.a(qn.field_U.position - var9, -1);
             }
             vh.a(-1, (byte) -27);
             tb.field_f = dk.field_f;
@@ -346,7 +346,7 @@ final class da extends ua {
           if (tb.field_f == dk.field_f &&
             tk.a(82, 1)) {
             var9 = tk.field_h.i(-115);
-            tk.field_h.field_l = 0;
+            tk.field_h.position = 0;
             if (var9 < 100 ||
               var9 > 105) {
               if (var9 == 248) {
@@ -364,14 +364,14 @@ final class da extends ua {
                 if (var13 != 0) {
                   tk.a(50, lg.a((byte) -122));
                   uc.field_b = new Boolean(fi.a(param5 + 68, tk.field_h));
-                  tk.field_h.field_l = 0;
+                  tk.field_h.position = 0;
                   sa.field_b = new String[-100 + var9];
                   tb.field_f = vf.field_a;
                 }
               } else {
                 tk.a(50, lg.a((byte) -122));
                 uc.field_b = new Boolean(fi.a(param5 + 68, tk.field_h));
-                tk.field_h.field_l = 0;
+                tk.field_h.position = 0;
                 if (var13 != 0) {
                   sa.field_b = new String[-100 + var9];
                   tb.field_f = vf.field_a;
@@ -386,7 +386,7 @@ final class da extends ua {
             var9 = 2;
             if (tk.a(param5 + 103, var9)) {
               var10 = tk.field_h.f(674914976);
-              tk.field_h.field_l = 0;
+              tk.field_h.position = 0;
               if (tk.a(-122, var10)) {
                 var11 = sa.field_b.length;
                 var12 = 0;
@@ -422,7 +422,7 @@ final class da extends ua {
             stackIn_91_0 = wg.field_B;
             return stackIn_91_0;
           }
-          if (null == lj.field_a) {
+          if (null == ArchiveIndex.field_a) {
             if (ja.field_f) {
               if (ea.i((byte) -121) > 30000L) {
                 n.field_c = nc.field_Q;
@@ -488,7 +488,7 @@ final class da extends ua {
             return stackIn_7_0;
           }
           var4 = var3.a(false);
-          var3.c(-2193);
+          var3.unlink(-2193);
           stackIn_9_0 = var4;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -498,14 +498,14 @@ final class da extends ua {
         }
     }
 
-    final lj b(int param0) {
-        lj stackIn_5_0 = null;
+    final ArchiveIndex b(int param0) {
+        ArchiveIndex stackIn_5_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_19_0 = null;
-        lj stackIn_22_0 = null;
+        ArchiveIndex stackIn_22_0 = null;
         Object stackIn_39_0 = null;
         Object stackIn_53_0 = null;
-        lj stackIn_61_0 = null;
+        ArchiveIndex stackIn_61_0 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
@@ -520,16 +520,16 @@ final class da extends ua {
           if (null == this.field_q) {
             if (this.field_s.a(true)) {
               stackIn_13_0 = null;
-              return (lj) (stackIn_13_0);
+              return (ArchiveIndex) (stackIn_13_0);
             }
             this.field_q = (ab) ((Object) this.field_s.a(107, 255, (byte) 0, true, this.field_v));
           }
           if (this.field_q.field_s) {
             stackIn_19_0 = null;
-            return (lj) (stackIn_19_0);
+            return (ArchiveIndex) (stackIn_19_0);
           }
           if (param0 < 18) {
-            stackIn_22_0 = (lj) null;
+            stackIn_22_0 = (ArchiveIndex) null;
             return stackIn_22_0;
           }
           var2 = this.field_q.a(false);
@@ -538,7 +538,7 @@ final class da extends ua {
               if (null == var2) {
                 throw new RuntimeException();
               }
-              this.field_n = new lj(var2, this.field_l, this.field_u);
+              this.field_n = new ArchiveIndex(var2, this.field_l, this.field_u);
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -553,7 +553,7 @@ final class da extends ua {
                 this.field_q = null;
               }
               stackIn_53_0 = null;
-              return (lj) (stackIn_53_0);
+              return (ArchiveIndex) (stackIn_53_0);
             }
             if (null != this.field_h) {
               this.field_f.a(var2, this.field_v, 2, this.field_h);
@@ -563,7 +563,7 @@ final class da extends ua {
               if (var2 == null) {
                 throw new RuntimeException();
               }
-              this.field_n = new lj(var2, this.field_l, this.field_u);
+              this.field_n = new ArchiveIndex(var2, this.field_l, this.field_u);
               if (~this.field_n.field_s != ~this.field_g) {
                 throw new RuntimeException();
               }
@@ -580,7 +580,7 @@ final class da extends ua {
                 this.field_q = (ab) ((Object) this.field_s.a(115, 255, (byte) 0, true, this.field_v));
               }
               stackIn_39_0 = null;
-              return (lj) (stackIn_39_0);
+              return (ArchiveIndex) (stackIn_39_0);
             }
           }
           if (null != this.field_z) {
@@ -641,7 +641,7 @@ final class da extends ua {
         ab discarded$0 = null;
         ab discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
-        o var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -658,14 +658,14 @@ final class da extends ua {
           }
           var2 = this.field_i.g(-18110);
           while (var2 != null) {
-            var3 = (int)var2.field_e;
+            var3 = (int)var2.key;
             if (var4 != 0) {
               return;
             }
             if (var3 < 0 ||
               !(var3 < this.field_n.field_g) ||
               this.field_n.field_l[var3] == 0) {
-              var2.c(param0 ^ -14397);
+              var2.unlink(param0 ^ -14397);
             } else {
               if (this.field_E[var3] == 0) {
                 discarded$0 = this.a(var3, 1, (byte) 74);
@@ -674,7 +674,7 @@ final class da extends ua {
                 discarded$1 = this.a(var3, 2, (byte) 89);
               }
               if (this.field_E[var3] == 1) {
-                var2.c(-2193);
+                var2.unlink(-2193);
               }
             }
             var2 = this.field_i.a((byte) -127);
@@ -709,7 +709,7 @@ final class da extends ua {
         }
     }
 
-    final static String a(String param0, String param1, um param2, int param3) {
+    final static String a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
@@ -796,7 +796,7 @@ final class da extends ua {
             0 == param1 &&
             !((ab) (var4)).field_u &&
             ((ab) (var4)).field_s) {
-            ((ab) (var4)).c(-2193);
+            ((ab) (var4)).unlink(-2193);
             var4 = null;
           }
           if (null == var4) {
@@ -846,7 +846,7 @@ final class da extends ua {
                 }
               }
             }
-            this.field_j.a(-125, (long)param0, (o) (var4));
+            this.field_j.a(-125, (long)param0, (IntrusiveNode) (var4));
           }
           if (((ab) (var4)).field_s) {
             stackIn_64_0 = null;
@@ -900,7 +900,7 @@ final class da extends ua {
                   this.field_E[param0] = (byte) 1;
                 }
                 if (!((ab) (var4)).field_u) {
-                  ((ab) (var4)).c(-2193);
+                  ((ab) (var4)).unlink(-2193);
                 }
                 stackIn_150_0 = var4;
                 return (ab) (stackIn_150_0);
@@ -910,11 +910,11 @@ final class da extends ua {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               this.field_E[param0] = (byte) -1;
-              ((ab) (var4)).c(-2193);
+              ((ab) (var4)).unlink(-2193);
               if (((ab) (var4)).field_u &&
                 !this.field_s.a(true)) {
                 var4 = this.field_s.a(96, this.field_v, (byte) 2, true, param0);
-                this.field_j.a(-117, (long)param0, (o) (var4));
+                this.field_j.a(-117, (long)param0, (IntrusiveNode) (var4));
               }
               stackIn_159_0 = null;
               return (ab) (stackIn_159_0);
@@ -967,11 +967,11 @@ final class da extends ua {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             this.field_s.c(0);
-            ((ab) (var4)).c(-2193);
+            ((ab) (var4)).unlink(-2193);
             if (((ab) (var4)).field_u &&
               !this.field_s.a(true)) {
               var4 = this.field_s.a(118, this.field_v, (byte) 2, true, param0);
-              this.field_j.a(92, (long)param0, (o) (var4));
+              this.field_j.a(92, (long)param0, (IntrusiveNode) (var4));
             }
             stackIn_98_0 = null;
             return (ab) (stackIn_98_0);
@@ -992,7 +992,7 @@ final class da extends ua {
             this.field_E[param0] = (byte) 1;
           }
           if (!((ab) (var4)).field_u) {
-            ((ab) (var4)).c(-2193);
+            ((ab) (var4)).unlink(-2193);
           }
           stackIn_111_0 = var4;
           return (ab) (stackIn_111_0);
@@ -1178,10 +1178,10 @@ final class da extends ua {
         int var2_int = 0;
         ab var2 = null;
         RuntimeException var2_ref = null;
-        o var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
-        o var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         int stackIn_23_0Lifetime1;
         int stackIn_23_1Lifetime1;
         int stackIn_67_0Lifetime1;
@@ -1190,7 +1190,7 @@ final class da extends ua {
         int var4Lifetime1;
         var5 = Chess.field_G;
         try {
-          L0: {
+          regionExit1: {
             boolean decompiledFrameRemainder0 = true;
             if (this.field_t != null) {
               if (this.b(param0 ^ 108) == null) {
@@ -1199,18 +1199,18 @@ final class da extends ua {
               if (this.field_k) {
                 var2_int = 1;
                 var3 = this.field_t.g(-18110);
-                L4: while (true) {
+                scanLoop2: while (true) {
                   if (null != var3) {
-                    var4 = (int)var3.field_e;
+                    var4 = (int)var3.key;
                     stackIn_23_0 = -1;
                     stackIn_23_1 = ~this.field_E[var4];
                     if (var5 != 0) {
                       if (stackIn_23_0 > stackIn_23_1) {
                         stackIn_96_0 = -1;
                         stackIn_96_1 = ~this.field_n.field_l[this.field_r];
-                        break L0;
+                        break regionExit1;
                       }
-                      break L4;
+                      break scanLoop2;
                     }
                     if (stackIn_23_0 == stackIn_23_1) {
                       discarded$1 = this.a(var4, 1, (byte) 67);
@@ -1218,7 +1218,7 @@ final class da extends ua {
                     if (0 == this.field_E[var4]) {
                       var2_int = 0;
                     } else {
-                      var3.c(-2193);
+                      var3.unlink(-2193);
                     }
                     var3 = this.field_t.a((byte) -114);
                     continue;
@@ -1232,7 +1232,7 @@ final class da extends ua {
                     stackIn_96_0 = -1;
                     stackIn_96_1 = ~this.field_n.field_l[this.field_r];
                     if (var5 != 0) {
-                      break L0;
+                      break regionExit1;
                     }
                     if (stackIn_96_0 == stackIn_96_1) {
                       this.field_r = this.field_r + 1;
@@ -1246,8 +1246,8 @@ final class da extends ua {
                       discarded$0 = this.a(this.field_r, 1, (byte) 86);
                     }
                     if (0 == this.field_E[this.field_r]) {
-                      var3 = new o();
-                      var3.field_e = (long)this.field_r;
+                      var3 = new IntrusiveNode();
+                      var3.key = (long)this.field_r;
                       this.field_t.a(var3, (byte) -49);
                       var2_int = 0;
                     }
@@ -1265,24 +1265,24 @@ final class da extends ua {
                 if (this.field_x) {
                   var2_intLifetime1 = 1;
                   var3Lifetime1 = this.field_t.g(param0 ^ -18112);
-                  L23: while (true) {
+                  scanLoop3: while (true) {
                     if (var3Lifetime1 != null) {
-                      var4Lifetime1 = (int)var3Lifetime1.field_e;
+                      var4Lifetime1 = (int)var3Lifetime1.key;
                       stackIn_67_0 = ~this.field_E[var4Lifetime1];
                       stackIn_67_1 = -2;
                       if (var5 != 0) {
                         if (stackIn_67_0 < stackIn_67_1) {
                           stackIn_96_0 = 0;
                           stackIn_96_1 = this.field_n.field_l[this.field_r];
-                          break L0;
+                          break regionExit1;
                         }
-                        break L23;
+                        break scanLoop3;
                       }
                       if (stackIn_67_0 != stackIn_67_1) {
                         discarded$3 = this.a(var4Lifetime1, 2, (byte) 54);
                       }
                       if (this.field_E[var4Lifetime1] == 1) {
-                        var3Lifetime1.c(param0 ^ -2195);
+                        var3Lifetime1.unlink(param0 ^ -2195);
                       } else {
                         var2_intLifetime1 = 0;
                       }
@@ -1298,7 +1298,7 @@ final class da extends ua {
                       stackIn_96_0 = 0;
                       stackIn_96_1 = this.field_n.field_l[this.field_r];
                       if (var5 != 0) {
-                        break L0;
+                        break regionExit1;
                       }
                       if (stackIn_96_0 == stackIn_96_1) {
                         this.field_r = this.field_r + 1;
@@ -1312,8 +1312,8 @@ final class da extends ua {
                         discarded$2 = this.a(this.field_r, 2, (byte) 77);
                       }
                       if (1 != this.field_E[this.field_r]) {
-                        var3Lifetime1 = new o();
-                        var3Lifetime1.field_e = (long)this.field_r;
+                        var3Lifetime1 = new IntrusiveNode();
+                        var3Lifetime1.key = (long)this.field_r;
                         this.field_t.a(var3Lifetime1, (byte) 108);
                         var2_intLifetime1 = 0;
                       }
@@ -1354,7 +1354,7 @@ final class da extends ua {
                   if (!var2.field_u) {
                     throw new RuntimeException();
                   }
-                  var2.c(-2193);
+                  var2.unlink(-2193);
                 }
               }
               var2 = (ab) (this.field_j.b((byte) 124));

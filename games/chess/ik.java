@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class ik implements Iterator {
-    private o field_c;
-    private o field_d;
+    private IntrusiveNode field_c;
+    private IntrusiveNode field_d;
     static String field_f;
     static short[] field_g;
     static String[] field_a;
@@ -18,19 +18,19 @@ final class ik implements Iterator {
     private final void a(int param0) {
         this.field_h = 1;
         int var2 = -7 / ((12 - param0) / 54);
-        this.field_c = this.field_j.field_e[0].field_h;
+        this.field_c = this.field_j.field_e[0].previous;
         this.field_d = null;
     }
 
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        o var3;
-        o var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = Chess.field_G;
         if (this.field_j.field_e[this.field_h - 1] != this.field_c) {
           var4 = this.field_c;
-          this.field_c = var4.field_h;
+          this.field_c = var4.previous;
           this.field_d = var4;
           return var4;
         }
@@ -40,10 +40,10 @@ final class ik implements Iterator {
           }
           fieldTemp$0 = this.field_h;
           this.field_h = this.field_h + 1;
-          var3 = this.field_j.field_e[fieldTemp$0].field_h;
+          var3 = this.field_j.field_e[fieldTemp$0].previous;
         } while (var3 == this.field_j.field_e[-1 + this.field_h]);
         this.field_d = var3;
-        this.field_c = var3.field_h;
+        this.field_c = var3.previous;
         return var3;
     }
 
@@ -77,13 +77,13 @@ final class ik implements Iterator {
           }
           fieldTemp$0 = this.field_h;
           this.field_h = this.field_h + 1;
-          if (this.field_j.field_e[fieldTemp$0].field_h == this.field_j.field_e[-1 + this.field_h]) {
+          if (this.field_j.field_e[fieldTemp$0].previous == this.field_j.field_e[-1 + this.field_h]) {
             this.field_c = this.field_j.field_e[-1 + this.field_h];
             continue;
           }
           break;
         }
-        this.field_c = this.field_j.field_e[-1 + this.field_h].field_h;
+        this.field_c = this.field_j.field_e[-1 + this.field_h].previous;
         return true;
     }
 
@@ -116,7 +116,7 @@ final class ik implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.c(-2193);
+        this.field_d.unlink(-2193);
         this.field_d = null;
     }
 

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kj {
-    private um field_e;
+    private ResourceArchive field_e;
     private v field_d;
-    private um field_b;
+    private ResourceArchive field_b;
     static int field_c;
     static lc field_a;
     static int field_h;
@@ -18,30 +18,30 @@ final class kj {
         int var4Lifetime1;
         if (param2 != 4239) {
           kj.a((byte) -55);
-          if (pj.field_h != null) {
-            var3 = pj.field_h.b(param0, (byte) -95);
+          if (GzipInflater.field_h != null) {
+            var3 = GzipInflater.field_h.b(param0, (byte) -95);
             if (var3 == -2) {
               return;
             }
             if (var3 != -1) {
-              var4 = pj.field_h.b(false) ? 1 : 0;
-              ng.a(param1, var4 != 0, pj.field_h.field_Lb, var3, pj.field_h.a(true), 79);
+              var4 = GzipInflater.field_h.b(false) ? 1 : 0;
+              ng.a(param1, var4 != 0, GzipInflater.field_h.field_Lb, var3, GzipInflater.field_h.a(true), 79);
             }
-            pj.field_h = null;
+            GzipInflater.field_h = null;
             fi.a(-393711775);
           }
           return;
         }
-        if (pj.field_h == null) {
+        if (GzipInflater.field_h == null) {
           return;
         }
-        var3Lifetime1 = pj.field_h.b(param0, (byte) -95);
+        var3Lifetime1 = GzipInflater.field_h.b(param0, (byte) -95);
         if (var3Lifetime1 != -2) {
           if (var3Lifetime1 != -1) {
-            var4Lifetime1 = pj.field_h.b(false) ? 1 : 0;
-            ng.a(param1, var4Lifetime1 != 0, pj.field_h.field_Lb, var3Lifetime1, pj.field_h.a(true), 79);
+            var4Lifetime1 = GzipInflater.field_h.b(false) ? 1 : 0;
+            ng.a(param1, var4Lifetime1 != 0, GzipInflater.field_h.field_Lb, var3Lifetime1, GzipInflater.field_h.a(true), 79);
           }
-          pj.field_h = null;
+          GzipInflater.field_h = null;
           fi.a(-393711775);
         }
     }
@@ -62,7 +62,7 @@ final class kj {
         }
         j var5 = new j();
         if (var4 != null) {
-          var5.a(new p(var4), param1 ^ 0);
+          var5.a(new PacketBuffer(var4), param1 ^ 0);
           if (param0 >= 32768) {
             var5.f(0);
             this.field_d.a((long)param0, 1, var5);
@@ -87,7 +87,7 @@ final class kj {
         field_a = null;
     }
 
-    kj(int param0, um param1, um param2) {
+    kj(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

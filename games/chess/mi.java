@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class mi extends nm {
+final class mi extends PcmStream {
     static wg field_q;
     static Calendar field_u;
     static int field_v;
@@ -36,9 +36,9 @@ final class mi extends nm {
             param2.field_x = param1 * var4_int + param2.field_x & 1048575;
             if (param1 >= var5) {
               if (0 == this.field_w.field_r[param2.field_n]) {
-                param2.field_j = na.a(param2.field_H, param2.field_j.k(), param2.field_j.j(), param2.field_j.l());
+                param2.field_j = PcmSampleStream.a(param2.field_H, param2.field_j.k(), param2.field_j.j(), param2.field_j.l());
               } else {
-                param2.field_j = na.a(param2.field_H, param2.field_j.k(), 0, param2.field_j.l());
+                param2.field_j = PcmSampleStream.a(param2.field_H, param2.field_j.k(), 0, param2.field_j.l());
                 stackIn_7_0 = this.field_w;
                 stackIn_7_1 = -76;
                 stackIn_7_2 = (qd) (param2);
@@ -51,7 +51,7 @@ final class mi extends nm {
               param1 = param2.field_x / var4_int;
             }
           }
-          param2.field_j.a(param1);
+          param2.field_j.skip(param1);
           if (param0 > 23) {
             return;
           }
@@ -87,7 +87,7 @@ final class mi extends nm {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        na var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = Chess.field_G;
         try {
@@ -111,9 +111,9 @@ final class mi extends nm {
               }
               var11 = param0.field_j;
               if (this.field_w.field_r[param0.field_n] == 0) {
-                param0.field_j = na.a(param0.field_H, var11.k(), var11.j(), var11.l());
+                param0.field_j = PcmSampleStream.a(param0.field_H, var11.k(), var11.j(), var11.l());
               } else {
-                param0.field_j = na.a(param0.field_H, var11.k(), 0, var11.l());
+                param0.field_j = PcmSampleStream.a(param0.field_H, var11.k(), 0, var11.l());
                 stackIn_13_0 = this.field_w;
                 stackIn_13_1 = -71;
                 stackIn_13_2 = (qd) (param0);
@@ -344,7 +344,7 @@ final class mi extends nm {
         }
     }
 
-    final nm a() {
+    final PcmStream a() {
         qd var1 = (qd) (this.field_x.g(-18110));
         if (var1 == null) {
           return null;
@@ -352,10 +352,10 @@ final class mi extends nm {
         if (var1.field_j == null) {
           return this.b();
         }
-        return (nm) ((Object) var1.field_j);
+        return (PcmStream) ((Object) var1.field_j);
     }
 
-    final nm b() {
+    final PcmStream b() {
         qd var1_ref = null;
         int var2 = Chess.field_G;
         do {
@@ -364,19 +364,19 @@ final class mi extends nm {
             return null;
           }
         } while (var1_ref.field_j == null);
-        return (nm) ((Object) var1_ref.field_j);
+        return (PcmStream) ((Object) var1_ref.field_j);
     }
 
-    final void a(int param0) {
+    final void skip(int sampleCount) {
         int var2;
         qd var3;
         int var4;
         var4 = Chess.field_G;
-        this.field_p.a(param0);
+        this.field_p.skip(sampleCount);
         var3 = (qd) (this.field_x.g(-18110));
         while (var3 != null) {
           if (!this.field_w.a((byte) -25, var3)) {
-            var2 = param0;
+            var2 = sampleCount;
             do {
               if (var2 <= var3.field_B) {
                 this.a(32, var2, var3);

@@ -65,18 +65,18 @@ final class eb extends pk {
           mf.a(gl.field_b, 0);
         } else {
           if (param1 != 0) {
-            wf.a(um.field_l[8], 114);
+            wf.a(ResourceArchive.field_l[8], 114);
           } else {
             if (param1 == 1) {
-              wf.a(um.field_l[3], -65);
+              wf.a(ResourceArchive.field_l[3], -65);
             } else {
               if (param1 == 6) {
-                wf.a(um.field_l[1], 44);
+                wf.a(ResourceArchive.field_l[1], 44);
               } else {
                 if (param1 == 5) {
-                  wf.a(um.field_l[1], 44);
+                  wf.a(ResourceArchive.field_l[1], 44);
                 } else {
-                  wf.a(um.field_l[2], param3 ^ 107);
+                  wf.a(ResourceArchive.field_l[2], param3 ^ 107);
                 }
               }
             }

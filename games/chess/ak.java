@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ak extends o {
+final class ak extends IntrusiveNode {
     static int field_j;
     static int[][] field_q;
     static kj field_u;
@@ -142,7 +142,7 @@ final class ak extends o {
         }
     }
 
-    final static void a(km[][] param0, byte[] param1, int[] param2, um param3, byte[] param4, int param5, rk[] param6, int param7, String[] param8, String[][] param9, int[] param10, int param11, km[][] param12, um param13, um param14, boolean param15, String[][] param16) {
+    final static void a(km[][] param0, byte[] param1, int[] param2, ResourceArchive param3, byte[] param4, int param5, rk[] param6, int param7, String[] param8, String[][] param9, int[] param10, int param11, km[][] param12, ResourceArchive param13, ResourceArchive param14, boolean param15, String[][] param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

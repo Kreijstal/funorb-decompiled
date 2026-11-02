@@ -41,8 +41,8 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             si.field_o = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              o.field_a.length > var2_int) {
-              var2_int = -129 & o.field_a[var2_int];
+              IntrusiveNode.field_a.length > var2_int) {
+              var2_int = -129 & IntrusiveNode.field_a[var2_int];
             } else {
               var2_int = -1;
             }
@@ -88,8 +88,8 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             si.field_o = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < o.field_a.length) {
-              var2_int = o.field_a[var2_int];
+              var2_int < IntrusiveNode.field_a.length) {
+              var2_int = IntrusiveNode.field_a[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
               }
@@ -148,7 +148,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static bk a(int param0, int param1) {
         int var2 = -56 % ((param0 + 30) / 39);
         bk var3 = new bk();
-        bh.field_D.a((o) (var3), (byte) 109);
+        bh.field_D.a((IntrusiveNode) (var3), (byte) 109);
         el.a(4, param1);
         return var3;
     }

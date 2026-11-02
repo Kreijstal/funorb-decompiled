@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends nm {
+final class lb extends PcmStream {
     private jc field_o;
     private jc field_q;
     private int field_n;
     private int field_p;
 
     private final void c(int[] param0, int param1, int param2) {
-        nm var4 = (nm) (this.field_o.g(-18110));
+        PcmStream var4 = (PcmStream) (this.field_o.g(-18110));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
-          var4 = (nm) (this.field_o.a((byte) -114));
+          var4.mixOrSkip(param0, param1, param2);
+          var4 = (PcmStream) (this.field_o.a((byte) -114));
         }
     }
 
-    final nm a() {
-        return (nm) (this.field_o.g(-18110));
+    final PcmStream a() {
+        return (PcmStream) (this.field_o.g(-18110));
     }
 
     private final void a(pl param0) {
-        param0.c(-2193);
+        param0.unlink(-2193);
         param0.a();
-        o var2 = this.field_q.field_a.field_h;
+        IntrusiveNode var2 = this.field_q.field_a.previous;
         if (var2 == this.field_q.field_a) {
           this.field_p = -1;
         } else {
@@ -30,8 +30,8 @@ final class lb extends nm {
         }
     }
 
-    final nm b() {
-        return (nm) (this.field_o.a((byte) -106));
+    final PcmStream b() {
+        return (PcmStream) (this.field_o.a((byte) -106));
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -62,7 +62,7 @@ final class lb extends nm {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_j = var7;
-              this.a(var5.field_h, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_j = 0;
               this.a(var5);
@@ -76,7 +76,7 @@ final class lb extends nm {
         return 0;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int sampleCount) {
         int var2 = 0;
         pl var3 = null;
         int var5 = 0;
@@ -84,17 +84,17 @@ final class lb extends nm {
         Object var4 = null;
         do {
           if (this.field_p < 0) {
-            this.d(param0);
+            this.d(sampleCount);
             return;
           }
-          if (this.field_n + param0 < this.field_p) {
-            this.field_n = this.field_n + param0;
-            this.d(param0);
+          if (this.field_n + sampleCount < this.field_p) {
+            this.field_n = this.field_n + sampleCount;
+            this.d(sampleCount);
             return;
           }
           var2 = this.field_p - this.field_n;
           this.d(var2);
-          param0 = param0 - var2;
+          sampleCount = sampleCount - var2;
           this.field_n = this.field_n + var2;
           this.e();
           var3 = (pl) (this.field_q.g(-18110));
@@ -103,13 +103,13 @@ final class lb extends nm {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_j = var5;
-              this.a(var3.field_h, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_j = 0;
               this.a(var3);
             }
           }
-        } while (param0 != 0);
+        } while (sampleCount != 0);
         return;
     }
 
@@ -126,33 +126,33 @@ final class lb extends nm {
         }
     }
 
-    private final void a(o param0, pl param1) {
+    private final void a(IntrusiveNode param0, pl param1) {
         while (true) {
           if (param0 == this.field_q.field_a) {
             he.a(param1, param0, true);
-            this.field_p = ((pl) (this.field_q.field_a.field_h)).field_j;
+            this.field_p = ((pl) (this.field_q.field_a.previous)).field_j;
             return;
           }
           if (((pl) (param0)).field_j <= param1.field_j) {
-            param0 = param0.field_h;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         he.a(param1, param0, true);
-        this.field_p = ((pl) (this.field_q.field_a.field_h)).field_j;
+        this.field_p = ((pl) (this.field_q.field_a.previous)).field_j;
         return;
     }
 
-    final synchronized void a(nm param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_o.a(param0, 69);
     }
 
     private final void d(int param0) {
-        nm var2 = (nm) (this.field_o.g(-18110));
+        PcmStream var2 = (PcmStream) (this.field_o.g(-18110));
         while (var2 != null) {
-          var2.a(param0);
-          var2 = (nm) (this.field_o.a((byte) -127));
+          var2.skip(param0);
+          var2 = (PcmStream) (this.field_o.a((byte) -127));
         }
     }
 

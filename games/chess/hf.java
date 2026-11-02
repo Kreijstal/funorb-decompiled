@@ -6,7 +6,7 @@ final class hf {
     String field_e;
     String field_b;
     static volatile boolean field_a;
-    um field_c;
+    ResourceArchive field_c;
     static int field_g;
     String field_d;
 
@@ -152,15 +152,15 @@ final class hf {
           }
           var5 = qn.field_U;
           var5.f(param0, -88);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           if (param1 <= 72) {
             stackIn_29_0 = (String) null;
             return stackIn_29_0;
           }
           var5.c(0, (byte) -115);
           var5.a(-113, param2);
-          var5.a(-var4 + var5.field_l, -1);
+          var5.a(-var4 + var5.position, -1);
           stackIn_31_0 = null;
           return (String) (stackIn_31_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

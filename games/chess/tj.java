@@ -10,8 +10,8 @@ final class tj extends vm {
 
     public static void i(int param0) {
         if (param0 != -19374) {
-          um var2 = (um) null;
-          tj.a(-38, -11, (um) null, (byte) -109);
+          ResourceArchive var2 = (ResourceArchive) null;
+          tj.a(-38, -11, (ResourceArchive) null, (byte) -109);
         }
         field_p = null;
         field_n = null;
@@ -35,7 +35,7 @@ final class tj extends vm {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        um var4 = null;
+        ResourceArchive var4 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -45,8 +45,8 @@ final class tj extends vm {
           var2_int = param1.length;
           var3 = new byte[var2_int];
           if (param0 >= -12) {
-            var4 = (um) null;
-            tj.a(93, 27, (um) null, (byte) 6);
+            var4 = (ResourceArchive) null;
+            tj.a(93, 27, (ResourceArchive) null, (byte) 6);
           }
           ne.a(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
@@ -105,7 +105,7 @@ final class tj extends vm {
         return null == rm.field_R ? wc.field_x : true;
     }
 
-    final static boolean a(int param0, int param1, um param2, byte param3) {
+    final static boolean a(int param0, int param1, ResourceArchive param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int[] var5 = null;
@@ -168,11 +168,11 @@ final class tj extends vm {
             var4_ref_tf = (tf) (kn.field_I.g(-18110));
             if (var4_ref_tf != null &&
               var4_ref_tf.field_m < var2_long) {
-              var4_ref_tf.c(-2193);
+              var4_ref_tf.unlink(-2193);
               sb.field_sb = var4_ref_tf.field_j.length;
-              tk.field_h.field_l = 0;
+              tk.field_h.position = 0;
               for (var5_int = 0; var5_int < sb.field_sb; var5_int++) {
-                tk.field_h.field_o[var5_int] = var4_ref_tf.field_j[var5_int];
+                tk.field_h.data[var5_int] = var4_ref_tf.field_j[var5_int];
               }
               lf.field_T = wc.field_u;
               wc.field_u = hh.field_o;
@@ -197,12 +197,12 @@ final class tj extends vm {
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
-              tk.field_h.field_l = 0;
+              tk.field_h.position = 0;
               if (!tk.a(param0 - 222, 1)) {
                 return false;
               }
               da.field_p = tk.field_h.n(param0 ^ -31);
-              tk.field_h.field_l = 0;
+              tk.field_h.position = 0;
               sb.field_sb = param1[da.field_p];
             }
             if (!jl.a(false)) {
@@ -225,9 +225,9 @@ final class tj extends vm {
             }
             var5 = new tf((long)var4 + var2_long, da.field_p, new byte[sb.field_sb]);
             for (var6 = 0; var6 < sb.field_sb; var6++) {
-              var5.field_j[var6] = tk.field_h.field_o[var6];
+              var5.field_j[var6] = tk.field_h.data[var6];
             }
-            kn.field_I.a((o) (var5), (byte) -122);
+            kn.field_I.a((IntrusiveNode) (var5), (byte) -122);
             da.field_p = -1;
             stackIn_20_0 = da.field_p;
           }

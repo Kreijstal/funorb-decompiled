@@ -10,7 +10,7 @@ final class lc {
     static boolean field_q;
     private eg field_c;
     private int field_k;
-    static um field_m;
+    static ResourceArchive field_m;
     private int field_j;
     static String field_l;
     static String field_g;
@@ -408,7 +408,7 @@ final class lc {
 
     final void a(byte param0) throws IOException {
         if (param0 != -87) {
-          field_m = (um) null;
+          field_m = (ResourceArchive) null;
         }
         this.b(param0 ^ -17308);
         this.field_c.a(10992);

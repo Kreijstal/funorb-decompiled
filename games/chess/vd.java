@@ -74,7 +74,7 @@ final class vd extends vn implements mj {
           if (!param1.field_h) {
             if (!this.field_Jb) {
               if (5 != param1.field_g) {
-                var5.a(-1, 114, fa.field_k);
+                var5.a(-1, 114, GameAppletShell.field_k);
               } else {
                 var5.a(11, 67, vi.field_a);
                 var5.a(17, 39, sn.field_b);

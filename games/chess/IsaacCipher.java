@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke {
+final class IsaacCipher {
     static String field_e;
     static int field_d;
     private int field_k;
@@ -45,8 +45,8 @@ final class ke {
         }
     }
 
-    final int b(int param0) {
-        if (param0 == ~this.field_k) {
+    final int nextValue(int obfuscationGuard) {
+        if (obfuscationGuard == ~this.field_k) {
           this.a(true);
           this.field_k = 256;
         }
@@ -98,12 +98,12 @@ final class ke {
         int var7 = 0;
         nk var8 = qn.field_U;
         var8.f(param3, param0 ^ -9832);
-        var8.field_l = var8.field_l + 1;
+        var8.position = var8.position + 1;
         if (param0 != 9822) {
           return;
         }
         try {
-          var7 = var8.field_l;
+          var7 = var8.position;
           var8.c(param1, (byte) 127);
           if (param1 == 2) {
             var8.a(param0 - 9921, param2);
@@ -113,7 +113,7 @@ final class ke {
           } else {
             rm.a(var8, param5, param0 ^ 16701600);
           }
-          var8.a(-var7 + var8.field_l, -1);
+          var8.a(-var7 + var8.position, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ke.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -126,7 +126,7 @@ final class ke {
         int var2Lifetime2;
         if (param0 != 41) {
           byte[] var12 = (byte[]) null;
-          ke.a((byte[]) null, -20, 3);
+          IsaacCipher.a((byte[]) null, -20, 3);
         }
         int var5 = -1640531527;
         int var9 = -1640531527;
@@ -253,7 +253,7 @@ final class ke {
     final static lb a(int param0) {
         if (param0 != -27212) {
           byte[] var2 = (byte[]) null;
-          ke.a((byte[]) null, 98, 120);
+          IsaacCipher.a((byte[]) null, 98, 120);
         }
         return rm.field_M;
     }
@@ -268,7 +268,7 @@ final class ke {
         field_g = null;
     }
 
-    ke(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];

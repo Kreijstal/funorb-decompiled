@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class al {
-    private p field_c;
+    private PacketBuffer field_c;
     private static byte[] field_e;
     private int field_g;
     private int[] field_i;
@@ -27,21 +27,21 @@ final class al {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_c.field_o = param0;
-        this.field_c.field_l = 10;
+        this.field_c.data = param0;
+        this.field_c.position = 10;
         int var2 = this.field_c.f(674914976);
         this.field_h = this.field_c.f(674914976);
         this.field_g = 500000;
         this.field_i = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_c.e((byte) -116);
-          var5 = this.field_c.e((byte) -125);
+          var4 = this.field_c.readInt((byte) -116);
+          var5 = this.field_c.readInt((byte) -125);
           if (var4 == 1297379947) {
-            this.field_i[var3] = this.field_c.field_l;
+            this.field_i[var3] = this.field_c.position;
             var3++;
           }
-          this.field_c.field_l = this.field_c.field_l + var5;
+          this.field_c.position = this.field_c.position + var5;
         }
         this.field_a = 0L;
         this.field_f = new int[var2];
@@ -59,13 +59,13 @@ final class al {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_c.field_o[this.field_c.field_l];
+        var2 = this.field_c.data[this.field_c.position];
         if (var2 >= 0) {
           var2 = this.field_b[param0];
         } else {
           var2 = var2 & 255;
           this.field_b[param0] = var2;
-          this.field_c.field_l = this.field_c.field_l + 1;
+          this.field_c.position = this.field_c.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
@@ -74,22 +74,22 @@ final class al {
         var3 = this.field_c.c((byte) -50);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_c.field_o[this.field_c.field_l] & 255;
+          var4 = this.field_c.data[this.field_c.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_c.field_l = this.field_c.field_l + 1;
+            this.field_c.position = this.field_c.position + 1;
             this.field_b[param0] = var4;
             return this.a(param0, var4);
           }
         }
-        this.field_c.field_l = this.field_c.field_l + var3;
+        this.field_c.position = this.field_c.position + var3;
         return 0;
     }
 
     final void a() {
-        this.field_c.field_l = -1;
+        this.field_c.position = -1;
     }
 
     final void c(int param0) {
@@ -126,9 +126,9 @@ final class al {
         for (var4 = 0; var4 < var3; var4++) {
           this.field_d[var4] = 0;
           this.field_b[var4] = 0;
-          this.field_c.field_l = this.field_i[var4];
+          this.field_c.position = this.field_i[var4];
           this.c(var4);
-          this.field_f[var4] = this.field_c.field_l;
+          this.field_f[var4] = this.field_c.position;
         }
     }
 
@@ -143,7 +143,7 @@ final class al {
           var3 = this.field_c.i(-115);
           var4 = this.field_c.c((byte) -111);
           if (var3 == 47) {
-            this.field_c.field_l = this.field_c.field_l + var4;
+            this.field_c.position = this.field_c.position + var4;
             return 1;
           }
           if (var3 == 81) {
@@ -152,10 +152,10 @@ final class al {
             var6 = this.field_d[param0];
             this.field_a = this.field_a + (long)var6 * (long)(this.field_g - var5);
             this.field_g = var5;
-            this.field_c.field_l = this.field_c.field_l + var4;
+            this.field_c.position = this.field_c.position + var4;
             return 2;
           }
-          this.field_c.field_l = this.field_c.field_l + var4;
+          this.field_c.position = this.field_c.position + var4;
           return 3;
         }
         var3Lifetime1 = field_e[param1 - 128];
@@ -170,7 +170,7 @@ final class al {
     }
 
     final boolean e() {
-        return this.field_c.field_o != null;
+        return this.field_c.data != null;
     }
 
     final int a(int param0) {
@@ -183,7 +183,7 @@ final class al {
     }
 
     final void d(int param0) {
-        this.field_c.field_l = this.field_f[param0];
+        this.field_c.position = this.field_f[param0];
     }
 
     public static void d() {
@@ -191,11 +191,11 @@ final class al {
     }
 
     final void b(int param0) {
-        this.field_f[param0] = this.field_c.field_l;
+        this.field_f[param0] = this.field_c.position;
     }
 
     final void g() {
-        this.field_c.field_o = null;
+        this.field_c.data = null;
         this.field_i = null;
         this.field_f = null;
         this.field_d = null;
@@ -203,11 +203,11 @@ final class al {
     }
 
     al() {
-        this.field_c = new p((byte[]) null);
+        this.field_c = new PacketBuffer((byte[]) null);
     }
 
     al(byte[] param0) {
-        this.field_c = new p((byte[]) null);
+        this.field_c = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

@@ -99,14 +99,14 @@ final class r extends ci {
             var1 = new h();
           }
           var1.a(wb.field_h, wb.field_c, 0, wb.field_d, wb.field_j, wb.field_i, wb.field_b, wb.field_a);
-          tm.field_a.a((o) (var1), (byte) -39);
+          tm.field_a.a((IntrusiveNode) (var1), (byte) -39);
           return;
         }
     }
 
     final static void a(int param0, byte param1, int param2, le param3) {
         try {
-          o.field_f = param2;
+          IntrusiveNode.field_f = param2;
           de.field_c = param3;
           bb.field_b = param0;
           if (param1 > -46) {

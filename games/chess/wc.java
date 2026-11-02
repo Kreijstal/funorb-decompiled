@@ -233,7 +233,7 @@ class wc extends hl {
                   var20 = var27.i(-114);
                   var21 = om.field_m[var20].field_d;
                   var22 = var27.d((byte) 127);
-                  var24 = var27.field_l;
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = om.field_m[var20].field_h;
@@ -242,7 +242,7 @@ class wc extends hl {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$0 = var15;
                       var15++;
-                      var35[0][incrementValue$0] = var27.e((byte) -109);
+                      var35[0][incrementValue$0] = var27.readInt((byte) -109);
                     }
                   }
                   if (var21 != null &&
@@ -250,12 +250,12 @@ class wc extends hl {
                     var8[1][var13] = ci.field_J;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
-                    var27.field_l = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
-                      var35[1][incrementValue$1] = var27.e((byte) -119);
+                      var35[1][incrementValue$1] = var27.readInt((byte) -119);
                     }
                   }
                   if (var14 < var6 &&
@@ -264,18 +264,18 @@ class wc extends hl {
                     var8[2][var14] = var21;
                     var9[2][var14] = om.field_m[var20].field_h;
                     var34[2][var14] = var22;
-                    var27.field_l = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$2 = var17;
                       var17++;
-                      var35[2][incrementValue$2] = var27.e((byte) -107);
+                      var35[2][incrementValue$2] = var27.readInt((byte) -107);
                     }
                   }
                 }
               }
             }
-            var4_ref.c(param0 ^ 2236);
+            var4_ref.unlink(param0 ^ 2236);
           } else {
             if (var2 == 1) {
               var3 = var27.f(674914976);
@@ -289,7 +289,7 @@ class wc extends hl {
                 break;
               }
               if (var4 != null) {
-                var4.c(-2193);
+                var4.unlink(-2193);
                 decompiledFrameRemainder0 = false;
               }
               else {

@@ -109,7 +109,7 @@ final class eg {
         }
     }
 
-    final static void a(int[] param0, String[] param1, int param2, boolean param3, um param4, km[][] param5, String[][] param6, um param7, byte[] param8, int param9, um param10, String[][] param11, byte[] param12, int param13, km[][] param14) {
+    final static void a(int[] param0, String[] param1, int param2, boolean param3, ResourceArchive param4, km[][] param5, String[][] param6, ResourceArchive param7, byte[] param8, int param9, ResourceArchive param10, String[][] param11, byte[] param12, int param13, km[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -139,7 +139,7 @@ final class eg {
         int[] var17 = null;
         try {
           if (param2 > -108) {
-            eg.a((int[]) null, (String[]) null, 1, true, (um) null, (km[][]) null, (String[][]) null, (um) null, (byte[]) null, 64, (um) null, (String[][]) null, (byte[]) null, -39, (km[][]) null);
+            eg.a((int[]) null, (String[]) null, 1, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 64, (ResourceArchive) null, (String[][]) null, (byte[]) null, -39, (km[][]) null);
           }
           var17 = (int[]) null;
           var16 = (rk[]) null;
@@ -224,7 +224,7 @@ final class eg {
           return param0;
         }
         if (param1 != 0) {
-          eg.a((int[]) null, (String[]) null, -25, true, (um) null, (km[][]) null, (String[][]) null, (um) null, (byte[]) null, 53, (um) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
+          eg.a((int[]) null, (String[]) null, -25, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 53, (ResourceArchive) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
           if (param2 != param0) {
             return 1;
           }

@@ -51,7 +51,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null) {
-            param1.c(-2193);
+            param1.unlink(-2193);
             param1.d(param0 - 2);
             this.field_c = this.field_c + param1.field_q;
           }
@@ -87,7 +87,7 @@ final class v {
         }
         Object var5 = var7.f(param0 + 67);
         if (var5 == null) {
-          var7.c(param0 - 2116);
+          var7.unlink(param0 - 2116);
           var7.d(-1);
           this.field_c = this.field_c + var7.field_q;
           return null;
@@ -98,10 +98,10 @@ final class v {
             var7.field_l = 0L;
           } else {
             var6 = new el(var5, var7.field_q);
-            this.field_f.a(var6, var7.field_e, 31313);
+            this.field_f.a(var6, var7.key, 31313);
             this.field_l.a(var6, false);
             ((cm) ((Object) var6)).field_l = 0L;
-            var7.c(-2193);
+            var7.unlink(-2193);
             var7.d(-1);
           }
           return var5;

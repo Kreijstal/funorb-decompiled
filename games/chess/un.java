@@ -159,7 +159,7 @@ final class un {
         jb.field_e.a(var7, var10);
         if (qb.field_a >= 200) {
           array$0 = new String[1];
-          stackIn_6_0 = ke.field_e;
+          stackIn_6_0 = IsaacCipher.field_e;
           stackIn_6_1 = array$0;
           stackIn_6_2 = array$0;
           stackIn_6_3 = 0;
@@ -312,7 +312,7 @@ final class un {
           cl.field_g.field_w = wb.field_h;
           cl.field_g.field_t = wb.field_c;
           cl.field_g.field_x = wb.field_d;
-          um.field_c.e();
+          ResourceArchive.field_c.e();
         }
         wb.a(4, 4, 108, 327, 11, 0, 64);
         stackIn_8_0 = 8;
@@ -501,7 +501,7 @@ final class un {
             var3 < 16) {
             var15Lifetime1 = 255 - 255 * var3 / 16;
           }
-          um.field_c.b(0, 0, var15Lifetime1);
+          ResourceArchive.field_c.b(0, 0, var15Lifetime1);
         }
     }
 
@@ -545,7 +545,7 @@ final class un {
             if (this.field_t.field_j == -1 ||
               this.field_t.field_j == this.field_t.b(0)) {
               this.field_t.a(-1, true, -1);
-              wf.a(um.field_l[5], -103);
+              wf.a(ResourceArchive.field_l[5], -103);
             }
             if (this.field_t.field_j != -1 &&
               -1 != this.field_t.b(param0 + 1)) {
@@ -555,10 +555,10 @@ final class un {
                 var2 == var4) {
                 this.b(true, 1);
                 this.field_t.a(this.field_t.field_j, true, param0 + 0);
-                wf.a(um.field_l[4], -122);
+                wf.a(ResourceArchive.field_l[4], -122);
               } else {
                 if (!this.field_t.field_d[this.field_t.field_j]) {
-                  wf.a(um.field_l[6], param0 + 23);
+                  wf.a(ResourceArchive.field_l[6], param0 + 23);
                 } else {
                   if (!this.field_t.a(8)) {
                     this.a(this.field_t.field_j, 27);
@@ -577,7 +577,7 @@ final class un {
                 var2 == var4) {
                 this.b(true, 1);
                 this.field_t.a(this.field_t.field_j, true, param0 ^ 0);
-                wf.a(um.field_l[4], -76);
+                wf.a(ResourceArchive.field_l[4], -76);
               }
             }
           }
@@ -833,7 +833,7 @@ final class un {
         var5 = wb.field_c;
         if (this.field_b && (!(qb.field_a >= 400) ||
           qb.field_c) && !hl.field_h) {
-          um.field_c.e();
+          ResourceArchive.field_c.e();
         }
         if (hl.field_h) {
           ph.field_j.b(48);
@@ -860,14 +860,14 @@ final class un {
         var6 = jj.field_b.field_C + (2 + jj.field_b.field_t);
         var7 = var6 / 2;
         for (var8 = 0; var8 < this.field_B.field_h; var8++) {
-          L13: {
+          regionExit1: {
             if (~this.field_a == ~var8) {
               if ((this.field_B.field_e & 1 << var8) == 0) {
                 if (this.field_B.field_d) {
-                  break L13;
+                  break regionExit1;
                 }
                 if (0 == (this.field_B.field_m & 1 << var8)) {
-                  break L13;
+                  break regionExit1;
                 }
                 var9 = ue.field_a;
               } else {
@@ -890,10 +890,10 @@ final class un {
                     var9 = oc.a(ig.field_a, new String[]{var20}, (byte) -71);
                   } else {
                     if (this.field_B.field_d) {
-                      break L13;
+                      break regionExit1;
                     }
                     if ((1 << var8 & this.field_B.field_m) == 0) {
-                      break L13;
+                      break regionExit1;
                     }
                     var9 = oc.a(bo.field_a, new String[]{var9}, (byte) -68);
                   }
@@ -936,7 +936,7 @@ final class un {
             } else {
               this.a(-104, qb.field_a, false);
               wb.a(var24, var4, var5);
-              um.field_c.b(0, 0, 64);
+              ResourceArchive.field_c.b(0, 0, 64);
             }
           }
         }
@@ -949,14 +949,14 @@ final class un {
             oc.field_p != null &&
             oc.field_p.field_b) {
             if (oc.field_p.field_a == oc.field_p.field_B.field_f) {
-              wf.a(um.field_l[9], 125);
+              wf.a(ResourceArchive.field_l[9], 125);
             } else {
-              wf.a(um.field_l[10], 50);
+              wf.a(ResourceArchive.field_l[10], 50);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            wf.a(um.field_l[9], param0 - 16777133);
+            wf.a(ResourceArchive.field_l[9], param0 - 16777133);
           }
         }
         if (!hl.field_h) {
@@ -987,8 +987,8 @@ final class un {
         }
         vk.field_b = vk.field_b | var4;
         wc.field_w = wc.field_w | var4;
-        hd.field_l.a((o) (new ef(param1)), (byte) 98);
-        tg.field_e.a((o) (new ac(param1, param2, this.field_D, this.field_E, this.field_j, this.field_r)), (byte) 98);
+        hd.field_l.a((IntrusiveNode) (new ef(param1)), (byte) 98);
+        tg.field_e.a((IntrusiveNode) (new ac(param1, param2, this.field_D, this.field_E, this.field_j, this.field_r)), (byte) 98);
     }
 
     final void h(int param0) {
@@ -1207,7 +1207,7 @@ final class un {
           this.field_b = stackIn_13_1;
           nb.field_Fb.field_x = -1;
           if (!this.field_b) {
-            wf.a(um.field_l[11], 94);
+            wf.a(ResourceArchive.field_l[11], 94);
           }
           this.field_o = 322371584;
           this.field_z = 0;
@@ -1228,7 +1228,7 @@ final class un {
           this.field_t = new qe(stackIn_18_3);
           if (!this.field_b) {
             this.field_B.a(0, 255, 0);
-            dupTemp$0 = p.field_j[this.field_B.field_j];
+            dupTemp$0 = PacketBuffer.field_j[this.field_B.field_j];
             this.field_v = dupTemp$0;
             this.field_e = dupTemp$0;
           } else {

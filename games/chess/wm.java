@@ -12,11 +12,11 @@ abstract class wm {
     ad field_f;
     ad field_p;
     int field_m;
-    p field_l;
+    PacketBuffer field_l;
     long field_d;
     byte field_k;
     volatile int field_c;
-    p field_a;
+    PacketBuffer field_a;
     volatile int field_g;
     cc field_h;
 
@@ -34,7 +34,7 @@ abstract class wm {
         return this.field_f.c(-19099) + this.field_p.c(-19099);
     }
 
-    final static void a(String[] args, int param1, int param2, byte[] param3, String[] param4, um param5, int param6, String[][] param7, String[] param8, byte[] param9, String[][] param10, int param11, km[][] param12, int[] param13, km[][] param14) {
+    final static void a(String[] args, int param1, int param2, byte[] param3, String[] param4, ResourceArchive param5, int param6, String[][] param7, String[] param8, byte[] param9, String[][] param10, int param11, km[][] param12, int[] param13, km[][] param14) {
         tl[] array$0 = null;
         tl[] array$1 = null;
         tl[] array$2 = null;
@@ -96,7 +96,7 @@ abstract class wm {
           bj.field_pb = param4;
           td.field_n = args;
           wn.field_d = param13;
-          pj.field_e = param14;
+          GzipInflater.field_e = param14;
           ae.field_b = param12;
           db.field_m = param8;
           mk.field_c = param1;
@@ -171,7 +171,7 @@ abstract class wm {
           qi.field_o = new ci(0L, qn.field_P);
           qi.field_o.field_cb = 0;
           qi.field_o.field_fb = 1;
-          of.field_i = new ci(0L, p.field_k, hg.field_a.toUpperCase());
+          of.field_i = new ci(0L, PacketBuffer.field_k, hg.field_a.toUpperCase());
           la.field_c = new ci(0L, ki.field_P);
           la.field_c.a((byte) 127, qi.field_o);
           la.field_c.a((byte) 123, of.field_i);
@@ -229,11 +229,11 @@ abstract class wm {
             ba.field_P[var17_intLifetime3 + 4] = array$2;
             ba.field_P[4 + var17_intLifetime3][0] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (km) null, df.field_k);
             for (var18 = 0; (255 & ba.field_Q[var17_intLifetime3]) > var18; var18++) {
-              if (pj.field_e == null) {
+              if (GzipInflater.field_e == null) {
                 var19_ref = null;
               } else {
-                if (pj.field_e[var17_intLifetime3] != null) {
-                  var19_ref = pj.field_e[var17_intLifetime3][var18];
+                if (GzipInflater.field_e[var17_intLifetime3] != null) {
+                  var19_ref = GzipInflater.field_e[var17_intLifetime3][var18];
                 } else {
                   var19_ref = null;
                 }
@@ -290,7 +290,7 @@ abstract class wm {
           ri.field_k.a((byte) 123, aa.field_g);
           ri.field_k.a((byte) 126, tn.field_j);
           qf.field_f = new ci(0L, dc.field_s, uh.field_v.toUpperCase());
-          hn.field_d = new ci(0L, p.field_k, vk.field_f.toUpperCase());
+          hn.field_d = new ci(0L, PacketBuffer.field_k, vk.field_f.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -567,11 +567,11 @@ abstract class wm {
         this.field_e = new ad();
         this.field_f = new ad();
         this.field_p = new ad();
-        this.field_l = new p(6);
+        this.field_l = new PacketBuffer(6);
         this.field_k = (byte) 0;
         this.field_g = 0;
         this.field_c = 0;
-        this.field_a = new p(10);
+        this.field_a = new PacketBuffer(10);
     }
 
     static {

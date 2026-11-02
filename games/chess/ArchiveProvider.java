@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ua {
+abstract class ArchiveProvider {
     static int[] field_b;
     static vn field_d;
     static hg field_a;
@@ -23,7 +23,7 @@ abstract class ua {
 
     abstract int b(int param0, int param1);
 
-    abstract lj b(int param0);
+    abstract ArchiveIndex b(int param0);
 
     abstract byte[] c(int param0, int param1);
 
@@ -31,7 +31,7 @@ abstract class ua {
         if (param1 == 14) {
           return (param0 & -param0) == param0 ? true : false;
         }
-        ua.a(-87);
+        ArchiveProvider.a(-87);
         return (param0 & -param0) == param0 ? true : false;
     }
 

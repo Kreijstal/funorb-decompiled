@@ -15,7 +15,7 @@ final class m {
           var2 = (java.applet.Applet) null;
           m.a((java.applet.Applet) null, (byte) 61);
         }
-        stackIn_6_0 = (null != lj.field_a) && (tb.field_f.a((byte) -121));
+        stackIn_6_0 = (null != ArchiveIndex.field_a) && (tb.field_f.a((byte) -121));
         return stackIn_6_0;
     }
 
@@ -104,10 +104,10 @@ final class m {
           if (param1 != 0) {
             field_a = (bn) null;
           }
-          var4 = (dc) (fa.field_j.g(param1 - 18110));
+          var4 = (dc) (GameAppletShell.field_j.g(param1 - 18110));
           while (var4 != null) {
             bh.a(var4, (byte) 46, param0);
-            var4 = (dc) (fa.field_j.a((byte) -92));
+            var4 = (dc) (GameAppletShell.field_j.a((byte) -92));
           }
           var5 = (pa) (ve.field_Nb.g(param1 ^ -18110));
           while (var5 != null) {

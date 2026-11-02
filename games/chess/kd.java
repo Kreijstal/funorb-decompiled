@@ -59,7 +59,7 @@ final class kd extends ci {
             this.field_Jb.length() > 0) {
             rb.a(' ', this.field_Jb, this.field_Jb.length() - 1, (byte) -105);
           }
-          if (p.a((CharSequence) ((Object) this.field_Jb), d.field_Ib, -13)) {
+          if (PacketBuffer.a((CharSequence) ((Object) this.field_Jb), d.field_Ib, -13)) {
             discarded$1 = this.field_Jb.append(d.field_Ib);
           } else {
             if (0 == this.field_Jb.length() &&

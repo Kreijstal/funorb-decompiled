@@ -5,35 +5,35 @@ import java.util.*;
 
 final class bl implements Iterable {
     static le field_d;
-    o[] field_e;
-    private o field_c;
+    IntrusiveNode[] field_e;
+    private IntrusiveNode field_c;
     static String field_b;
     static volatile int field_g;
     static String field_a;
     int field_f;
 
-    final o a(long param0, byte param1) {
-        o var4;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var4;
         int var5_int;
-        o var5;
+        IntrusiveNode var5;
         int var6;
         var6 = Chess.field_G;
         var4 = this.field_e[(int)((long)(this.field_f - 1) & param0)];
-        this.field_c = var4.field_h;
+        this.field_c = var4.previous;
         while (true) {
           if (var4 == this.field_c) {
             var5_int = 80 / ((3 - param1) / 34);
             this.field_c = null;
             return null;
           }
-          if (~this.field_c.field_e != ~param0) {
-            this.field_c = this.field_c.field_h;
+          if (~this.field_c.key != ~param0) {
+            this.field_c = this.field_c.previous;
             continue;
           }
           break;
         }
         var5 = this.field_c;
-        this.field_c = this.field_c.field_h;
+        this.field_c = this.field_c.previous;
         return var5;
     }
 
@@ -86,20 +86,20 @@ final class bl implements Iterable {
 
     bl(int param0) {
         int var2 = 0;
-        o dupTemp$0 = null;
-        o var3 = null;
-        this.field_e = new o[param0];
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
+        this.field_e = new IntrusiveNode[param0];
         this.field_f = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new o();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
-          var3.field_c = var3;
-          var3.field_h = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 
-    final static void a(String[] args, int param1, byte param2, int param3, int[] param4, um param5, byte[] param6, km[][] param7, int[] param8, boolean param9, rk[] param10, int param11, String[][] param12, km[][] param13, String[][] param14, String[] param15, um param16, String[] param17, um param18, byte[] param19) {
+    final static void a(String[] args, int param1, byte param2, int param3, int[] param4, ResourceArchive param5, byte[] param6, km[][] param7, int[] param8, boolean param9, rk[] param10, int param11, String[][] param12, km[][] param13, String[][] param14, String[] param15, ResourceArchive param16, String[] param17, ResourceArchive param18, byte[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -243,21 +243,21 @@ final class bl implements Iterable {
         }
     }
 
-    final void a(o param0, long param1, int param2) {
-        o var5 = null;
+    final void a(IntrusiveNode param0, long param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param0.field_c) {
-            param0.c(-2193);
+          if (null != param0.next) {
+            param0.unlink(-2193);
           }
           var5 = this.field_e[(int)(param1 & (long)(this.field_f - 1))];
-          param0.field_c = var5.field_c;
-          param0.field_h = var5;
-          param0.field_c.field_h = param0;
-          param0.field_h.field_c = param0;
+          param0.next = var5.next;
+          param0.previous = var5;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
           if (param2 != 31313) {
             bl.a(-20);
           }
-          param0.field_e = param1;
+          param0.key = param1;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

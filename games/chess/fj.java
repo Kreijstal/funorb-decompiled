@@ -69,7 +69,7 @@ final class fj {
     final static void a(int param0) {
         fi.a(param0 - 393711775);
         bk.a(param0 ^ 16777215);
-        pj.field_h = null;
+        GzipInflater.field_h = null;
         rc.b(param0);
     }
 

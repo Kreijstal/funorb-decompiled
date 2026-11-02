@@ -123,7 +123,7 @@ final class rc {
         }
     }
 
-    final static pm a(String param0, int param1, String param2, um param3, um param4) {
+    final static pm a(String param0, int param1, String param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

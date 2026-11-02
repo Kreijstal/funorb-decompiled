@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends o {
+final class pg extends IntrusiveNode {
     int field_r;
     static rk[] field_v;
     int field_q;
     static int field_s;
     String[][] field_t;
-    static um field_o;
+    static ResourceArchive field_o;
     int field_k;
     int[][] field_j;
     int field_m;

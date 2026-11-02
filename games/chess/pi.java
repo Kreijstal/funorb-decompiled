@@ -116,7 +116,7 @@ final class pi {
             }
           }
           var3.field_l = true;
-          var3.c(-2193);
+          var3.unlink(-2193);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

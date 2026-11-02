@@ -15,7 +15,7 @@ class ph extends dm {
     static int field_h;
     static km field_f;
 
-    final void a(p param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(param1 ^ -7, this.field_i);
           param0.a(this.field_e, false);

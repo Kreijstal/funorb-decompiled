@@ -11,18 +11,18 @@ final class he extends ci {
     static int[] field_Fb;
     private ci field_Kb;
 
-    final static void a(o param0, o param1, boolean param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
         try {
-          if (null != param0.field_c) {
-            param0.c(-2193);
+          if (null != param0.next) {
+            param0.unlink(-2193);
           }
-          param0.field_h = param1;
+          param0.previous = param1;
           if (!param2) {
             field_Gb = (int[]) null;
           }
-          param0.field_c = param1.field_c;
-          param0.field_c.field_h = param0;
-          param0.field_h.field_c = param0;
+          param0.next = param1.next;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "he.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

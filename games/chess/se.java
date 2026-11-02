@@ -200,7 +200,7 @@ class se extends fb {
             if (var10 != null) {
               ((re) (var10)).field_q = var15;
             }
-            this.field_O.a((o) (var15), (byte) -124);
+            this.field_O.a((IntrusiveNode) (var15), (byte) -124);
             var10 = var15;
           }
         }

@@ -104,7 +104,7 @@ final class hb {
           var21 = nh.field_n;
           var22 = nh.field_f;
           var23 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var23 < param5.field_d) {
               var24 = param5.field_z[var23];
               var25 = param5.field_a[var23];
@@ -117,7 +117,7 @@ final class hb {
               if (var30 != 0) {
                 if (stackIn_63_0 > stackIn_63_1) {
                   if (lk.field_c.length <= var18) {
-                    break L2;
+                    break scanLoop1;
                   }
                   var19 = param5.field_b[var18];
                   var20 = param5.field_f[var18];
@@ -126,9 +126,9 @@ final class hb {
                   ab.field_r[var18] = var19 * var10 + var20 * var13 + var16 * var21 >> 16;
                   pa.field_o[var18] = var21 * var17 + var14 * var20 + var19 * var11 >> 16;
                   var18++;
-                  break L2;
+                  break scanLoop1;
                 }
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_63_0 <= stackIn_63_1) {
                 qm.field_c[var23] = var27 / var29 + var21;
@@ -190,7 +190,7 @@ final class hb {
             }
             if (decompiledFrameCompleted0) {
               if (!param6) {
-                break L2;
+                break scanLoop1;
               }
               var9 = param3[3];
               var10 = param3[4];

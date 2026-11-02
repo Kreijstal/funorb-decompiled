@@ -9,12 +9,12 @@ final class lk {
     static String field_f;
     static String field_d;
 
-    final static void a(java.math.BigInteger param0, p param1, p param2, int param3, java.math.BigInteger param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, int param3, java.math.BigInteger param4) {
         if (param3 <= 53) {
           return;
         }
         try {
-          ni.a(0, param1.field_l, param0, param2, -21105, param4, param1.field_o);
+          ni.a(0, param1.position, param0, param2, -21105, param4, param1.data);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -28,7 +28,7 @@ final class lk {
         field_d = null;
         if (param0 != 0) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
-          lk.a((java.math.BigInteger) null, (p) null, (p) null, 110, (java.math.BigInteger) null);
+          lk.a((java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null, 110, (java.math.BigInteger) null);
         }
     }
 
@@ -89,7 +89,7 @@ final class lk {
         if (ve.k(-105)) {
           return true;
         }
-        if (null != pj.field_h) {
+        if (null != GzipInflater.field_h) {
           return true;
         }
         if (!jj.b(7)) {
