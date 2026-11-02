@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cm {
-    static kd field_c;
+    static Zombie field_c;
     static km[] field_b;
     static String field_a;
 

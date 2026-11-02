@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class jb implements io {
-    static vo field_b;
+    static IntrusiveDeque field_b;
     static String field_d;
     static String field_c;
     static vn[] field_a;
@@ -31,7 +31,7 @@ final class jb implements io {
             var8.b(var6_int - (-1 - (-var8.field_r + param3.field_i >> 1)), 1 + var7 + (param3.field_n - var8.field_q >> 1), 256);
           }
           if (param3.e(-17741)) {
-            on.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
+            TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class jb implements io {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class jb implements io {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -424,11 +424,11 @@ final class jb implements io {
           }
           return l.field_g;
         }
-        if (!vo.field_d.a((byte) 73)) {
+        if (!IntrusiveDeque.field_d.a((byte) 73)) {
           return DualLinkNode.field_o;
         }
-        if (!vo.field_d.a(-1, "commonui")) {
-          return el.field_m + " - " + vo.field_d.b("commonui", 88) + "%";
+        if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
+          return el.field_m + " - " + IntrusiveDeque.field_d.b("commonui", 88) + "%";
         }
         if (param0 >= -49) {
           return (String) null;
@@ -486,7 +486,7 @@ final class jb implements io {
 
     static {
         field_d = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_b = new vo();
+        field_b = new IntrusiveDeque();
         field_c = "Continue";
     }
 }

@@ -23,7 +23,7 @@ abstract class w {
           nf.field_d.a();
           ni.field_b[2].h(5, -5, 16777215);
           ni.field_b[3].h(5, -5, 16777215);
-          bi.h(4, 4, 0, 0, bi.field_f, bi.field_a);
+          Rasterizer.h(4, 4, 0, 0, Rasterizer.field_f, Rasterizer.field_a);
           ni.field_b[2].h(5, -5, 0);
           ni.field_b[3].h(5, -5, 0);
           mk.field_a = new vn[16];
@@ -44,7 +44,7 @@ abstract class w {
           eb.field_b = so.a(rc.field_v);
           cn.field_f.b(115);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "w.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "w.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

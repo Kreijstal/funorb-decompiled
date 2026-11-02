@@ -51,7 +51,7 @@ final class sn {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class sn {
         ki.a((byte) -97, var10);
         vn var5 = new vn(640, 90);
         ki.a((byte) -94, var5);
-        bi.f(0, 5, 640, 75, 16777215, 1);
+        Rasterizer.f(0, 5, 640, 75, 16777215, 1);
         pa.a(-21189);
         vn var6 = new vn(640, 90);
         ki.a((byte) -113, var6);
@@ -132,7 +132,7 @@ final class sn {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class sn {
           param1.field_k = var5.c(98);
           var5.d(69, var5.field_j - var4);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class sn {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class sn {
         try {
           pg.a(true, param1, 31536000L, "jagex-last-login-method", this.field_a);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class sn {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

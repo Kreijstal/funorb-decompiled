@@ -3,8 +3,8 @@
  */
 final class mp {
     static cg field_b;
-    static vo field_g;
-    static eo field_f;
+    static IntrusiveDeque field_g;
+    static HumanFactory field_f;
     static int field_d;
     static boolean field_e;
     static long field_a;
@@ -129,7 +129,7 @@ final class mp {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class mp {
 
     static {
         field_b = new cg(14, 0, 4, 1);
-        field_g = new vo();
+        field_g = new IntrusiveDeque();
         field_a = 0L;
     }
 }

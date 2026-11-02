@@ -48,7 +48,7 @@ final class da extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "da.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "da.A(" + param0 + ')');
         }
     }
 

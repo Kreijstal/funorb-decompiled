@@ -232,7 +232,7 @@ final class dg extends IOException {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -254,8 +254,8 @@ final class dg extends IOException {
             }
             ja.a(jb.a((byte) -58), ud.field_c, var3_int != 0, dp.a(param1 - 103), (byte) -90);
           } else {
-            if (!kk.a(param1 ^ -251)) {
-              bi.d();
+            if (!Point.a(param1 ^ -251)) {
+              Rasterizer.d();
               dp.a(320, -12138, 240);
               uh.a(40, 0, 0, param0);
             } else {
@@ -281,7 +281,7 @@ final class dg extends IOException {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

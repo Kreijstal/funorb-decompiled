@@ -6,7 +6,7 @@ final class cj {
     static java.awt.Canvas field_d;
     static String[][] field_a;
     static String field_e;
-    private vo field_f;
+    private IntrusiveDeque field_f;
     private IntrusiveNode field_b;
     static mf field_i;
     static String[] field_h;
@@ -14,7 +14,7 @@ final class cj {
 
     final IntrusiveNode a(int param0) {
         IntrusiveNode var2 = this.field_b;
-        if (var2 == this.field_f.field_b) {
+        if (var2 == this.field_f.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -55,11 +55,11 @@ final class cj {
             field_c = (int[]) null;
           }
           if (param0 == null) {
-            var3 = this.field_f.field_b.next;
+            var3 = this.field_f.sentinel.next;
           } else {
             var3 = param0;
           }
-          if (this.field_f.field_b == var3) {
+          if (this.field_f.sentinel == var3) {
             this.field_b = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -77,16 +77,16 @@ final class cj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final IntrusiveNode c(byte param0) {
-        IntrusiveNode var2 = this.field_f.field_b.previous;
+        IntrusiveNode var2 = this.field_f.sentinel.previous;
         if (param0 > -113) {
           cj.b(-19);
         }
-        if (this.field_f.field_b == var2) {
+        if (this.field_f.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -98,8 +98,8 @@ final class cj {
         if (param0 != -21) {
           this.c((byte) 123);
         }
-        IntrusiveNode var2 = this.field_f.field_b.next;
-        if (var2 == this.field_f.field_b) {
+        IntrusiveNode var2 = this.field_f.sentinel.next;
+        if (var2 == this.field_f.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -149,7 +149,7 @@ final class cj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class cj {
           tc.field_w[tc.field_t] = param4;
           tc.field_t = tc.field_t + 1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "cj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "cj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class cj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class cj {
 
     final IntrusiveNode a(byte param0) {
         IntrusiveNode var2 = this.field_b;
-        if (this.field_f.field_b == var2) {
+        if (this.field_f.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -255,11 +255,11 @@ final class cj {
             return stackIn_2_0;
           }
           if (param1 == null) {
-            var3 = this.field_f.field_b.previous;
+            var3 = this.field_f.sentinel.previous;
           } else {
             var3 = param1;
           }
-          if (var3 == this.field_f.field_b) {
+          if (var3 == this.field_f.sentinel) {
             this.field_b = null;
             stackIn_9_0 = null;
             return (IntrusiveNode) (stackIn_9_0);
@@ -277,15 +277,15 @@ final class cj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    cj(vo param0) {
+    cj(IntrusiveDeque param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "cj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "cj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -74,20 +74,20 @@ final class eg extends IntrusiveNode {
             var2 = vh.field_b + 100;
             var3 = var2 + (-vj.field_o + 400 >> 1);
             var4 = 40 + vj.field_o;
-            bi.f(var3, var1 - te.field_bb, var4 + var3, var1);
-            bi.a(var3, var1 - te.field_bb, var4, te.field_bb, 2560, 160);
+            Rasterizer.f(var3, var1 - te.field_bb, var4 + var3, var1);
+            Rasterizer.a(var3, var1 - te.field_bb, var4, te.field_bb, 2560, 160);
             so.b(s.field_j, var2, -te.field_bb + var1, 192);
             ch.field_a.b(var2, -te.field_bb + var1);
             ch.field_a.f(var2, var1 - 5);
-            hi.field_x.b(var3, var1 - te.field_bb);
-            hi.field_x.c(var4 + (var3 - 5), -te.field_bb + var1);
-            vo.field_a[0].b(var3, var1 - te.field_bb);
-            vo.field_a[1].b(-5 + var3 + var4, var1 - te.field_bb);
-            vo.field_a[2].b(var3, -5 + var1);
-            vo.field_a[3].b(var3 + var4 - 5, -5 + var1);
+            GameWorld.field_x.b(var3, var1 - te.field_bb);
+            GameWorld.field_x.c(var4 + (var3 - 5), -te.field_bb + var1);
+            IntrusiveDeque.field_a[0].b(var3, var1 - te.field_bb);
+            IntrusiveDeque.field_a[1].b(-5 + var3 + var4, var1 - te.field_bb);
+            IntrusiveDeque.field_a[2].b(var3, -5 + var1);
+            IntrusiveDeque.field_a[3].b(var3 + var4 - 5, -5 + var1);
             bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
             bj.field_q.a(ip.field_o, 300 + var2, var1 - 14, 10066329, 0);
-            bi.c();
+            Rasterizer.c();
           }
           return;
         }
@@ -100,20 +100,20 @@ final class eg extends IntrusiveNode {
             var2Lifetime1 = vh.field_b + 100;
             var3Lifetime1 = var2Lifetime1 + (-vj.field_o + 400 >> 1);
             var4Lifetime1 = 40 + vj.field_o;
-            bi.f(var3Lifetime1, var1Lifetime1 - te.field_bb, var4Lifetime1 + var3Lifetime1, var1Lifetime1);
-            bi.a(var3Lifetime1, var1Lifetime1 - te.field_bb, var4Lifetime1, te.field_bb, 2560, 160);
+            Rasterizer.f(var3Lifetime1, var1Lifetime1 - te.field_bb, var4Lifetime1 + var3Lifetime1, var1Lifetime1);
+            Rasterizer.a(var3Lifetime1, var1Lifetime1 - te.field_bb, var4Lifetime1, te.field_bb, 2560, 160);
             so.b(s.field_j, var2Lifetime1, -te.field_bb + var1Lifetime1, 192);
             ch.field_a.b(var2Lifetime1, -te.field_bb + var1Lifetime1);
             ch.field_a.f(var2Lifetime1, var1Lifetime1 - 5);
-            hi.field_x.b(var3Lifetime1, var1Lifetime1 - te.field_bb);
-            hi.field_x.c(var4Lifetime1 + (var3Lifetime1 - 5), -te.field_bb + var1Lifetime1);
-            vo.field_a[0].b(var3Lifetime1, var1Lifetime1 - te.field_bb);
-            vo.field_a[1].b(-5 + var3Lifetime1 + var4Lifetime1, var1Lifetime1 - te.field_bb);
-            vo.field_a[2].b(var3Lifetime1, -5 + var1Lifetime1);
-            vo.field_a[3].b(var3Lifetime1 + var4Lifetime1 - 5, -5 + var1Lifetime1);
+            GameWorld.field_x.b(var3Lifetime1, var1Lifetime1 - te.field_bb);
+            GameWorld.field_x.c(var4Lifetime1 + (var3Lifetime1 - 5), -te.field_bb + var1Lifetime1);
+            IntrusiveDeque.field_a[0].b(var3Lifetime1, var1Lifetime1 - te.field_bb);
+            IntrusiveDeque.field_a[1].b(-5 + var3Lifetime1 + var4Lifetime1, var1Lifetime1 - te.field_bb);
+            IntrusiveDeque.field_a[2].b(var3Lifetime1, -5 + var1Lifetime1);
+            IntrusiveDeque.field_a[3].b(var3Lifetime1 + var4Lifetime1 - 5, -5 + var1Lifetime1);
             bj.field_q.a(jd.field_c, 20 + var2Lifetime1, -10 + var1Lifetime1 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
             bj.field_q.a(ip.field_o, 300 + var2Lifetime1, var1Lifetime1 - 14, 10066329, 0);
-            bi.c();
+            Rasterizer.c();
           }
           return;
         }
@@ -128,20 +128,20 @@ final class eg extends IntrusiveNode {
           var2Lifetime2 = vh.field_b + 100;
           var3Lifetime2 = var2Lifetime2 + (-vj.field_o + 400 >> 1);
           var4Lifetime2 = 40 + vj.field_o;
-          bi.f(var3Lifetime2, var1Lifetime2 - te.field_bb, var4Lifetime2 + var3Lifetime2, var1Lifetime2);
-          bi.a(var3Lifetime2, var1Lifetime2 - te.field_bb, var4Lifetime2, te.field_bb, 2560, 160);
+          Rasterizer.f(var3Lifetime2, var1Lifetime2 - te.field_bb, var4Lifetime2 + var3Lifetime2, var1Lifetime2);
+          Rasterizer.a(var3Lifetime2, var1Lifetime2 - te.field_bb, var4Lifetime2, te.field_bb, 2560, 160);
           so.b(s.field_j, var2Lifetime2, -te.field_bb + var1Lifetime2, 192);
           ch.field_a.b(var2Lifetime2, -te.field_bb + var1Lifetime2);
           ch.field_a.f(var2Lifetime2, var1Lifetime2 - 5);
-          hi.field_x.b(var3Lifetime2, var1Lifetime2 - te.field_bb);
-          hi.field_x.c(var4Lifetime2 + (var3Lifetime2 - 5), -te.field_bb + var1Lifetime2);
-          vo.field_a[0].b(var3Lifetime2, var1Lifetime2 - te.field_bb);
-          vo.field_a[1].b(-5 + var3Lifetime2 + var4Lifetime2, var1Lifetime2 - te.field_bb);
-          vo.field_a[2].b(var3Lifetime2, -5 + var1Lifetime2);
-          vo.field_a[3].b(var3Lifetime2 + var4Lifetime2 - 5, -5 + var1Lifetime2);
+          GameWorld.field_x.b(var3Lifetime2, var1Lifetime2 - te.field_bb);
+          GameWorld.field_x.c(var4Lifetime2 + (var3Lifetime2 - 5), -te.field_bb + var1Lifetime2);
+          IntrusiveDeque.field_a[0].b(var3Lifetime2, var1Lifetime2 - te.field_bb);
+          IntrusiveDeque.field_a[1].b(-5 + var3Lifetime2 + var4Lifetime2, var1Lifetime2 - te.field_bb);
+          IntrusiveDeque.field_a[2].b(var3Lifetime2, -5 + var1Lifetime2);
+          IntrusiveDeque.field_a[3].b(var3Lifetime2 + var4Lifetime2 - 5, -5 + var1Lifetime2);
           bj.field_q.a(jd.field_c, 20 + var2Lifetime2, -10 + var1Lifetime2 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
           bj.field_q.a(ip.field_o, 300 + var2Lifetime2, var1Lifetime2 - 14, 10066329, 0);
-          bi.c();
+          Rasterizer.c();
         }
     }
 

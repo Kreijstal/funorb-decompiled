@@ -14,7 +14,7 @@ final class jo extends qk {
 
     final void l(byte param0) {
         int var2;
-        kk var3_ref_kk;
+        Point var3_ref_kk;
         int var3;
         int var4;
         int var5;
@@ -24,24 +24,24 @@ final class jo extends qk {
         int var9;
         qh var10;
         var9 = ZombieDawn.field_J;
-        if (this.field_F == 23) {
-          this.field_F = 0;
+        if (this.state == 23) {
+          this.state = 0;
         }
         super.l(param0);
         if (this.field_Ab < 0) {
           return;
         }
-        if (0 != this.field_F) {
+        if (0 != this.state) {
           return;
         }
         if (this.field_Sb) {
-          this.field_F = 23;
+          this.state = 23;
           if (-1 != this.field_Rb) {
-            var10 = dj.field_e.field_H.a(true, this.a(true), this.field_Pb, this.field_Rb, this.f(237239984));
+            var10 = dj.field_e.field_H.a(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
             if (var10 != null) {
-              var3_ref_kk = (kk) (var10.b((byte) 26));
-              this.field_Pb = var3_ref_kk.field_h;
-              this.field_Rb = var3_ref_kk.field_l;
+              var3_ref_kk = (Point) (var10.b((byte) 26));
+              this.field_Pb = var3_ref_kk.y;
+              this.field_Rb = var3_ref_kk.x;
             }
           }
           return;
@@ -55,8 +55,8 @@ final class jo extends qk {
           return;
         }
         var3 = var2 - 60;
-        var4 = this.a(true);
-        var5 = this.f(237239984);
+        var4 = this.getX(true);
+        var5 = this.getY(237239984);
         var6 = 0;
         var7 = 0;
         var8 = var3;
@@ -151,7 +151,7 @@ final class jo extends qk {
 
     final void g(int param0) {
         boolean stackIn_3_1 = false;
-        stackIn_3_1 = (this.field_F == 23);
+        stackIn_3_1 = (this.state == 23);
         this.field_Sb = stackIn_3_1;
         if (this.field_Sb) {
           this.field_X = this.field_Pb;
@@ -160,12 +160,12 @@ final class jo extends qk {
         }
         super.g(106);
         if (this.field_Sb) {
-          if (1 == this.field_F) {
-            if (this.a(true) != this.field_Rb) {
-              this.field_F = 23;
+          if (1 == this.state) {
+            if (this.getX(true) != this.field_Rb) {
+              this.state = 23;
             } else {
-              if (this.f(237239984) != this.field_Pb) {
-                this.field_F = 23;
+              if (this.getY(237239984) != this.field_Pb) {
+                this.state = 23;
               } else {
                 this.field_Pb = -1;
                 this.field_Rb = -1;
@@ -175,12 +175,12 @@ final class jo extends qk {
               }
             }
           } else {
-            if (0 == this.field_F) {
-              if (this.a(true) != this.field_Rb) {
-                this.field_F = 23;
+            if (0 == this.state) {
+              if (this.getX(true) != this.field_Rb) {
+                this.state = 23;
               } else {
-                if (this.f(237239984) != this.field_Pb) {
-                  this.field_F = 23;
+                if (this.getY(237239984) != this.field_Pb) {
+                  this.state = 23;
                 } else {
                   this.field_Pb = -1;
                   this.field_Rb = -1;
@@ -222,20 +222,20 @@ final class jo extends qk {
           try {
             var1_int = -73 / ((param0 - 36) / 39);
             if (jd.field_a == 0) {
-              hi.field_O = lc.field_a.a(2, gd.field_u, bd.field_j);
+              GameWorld.field_O = lc.field_a.a(2, gd.field_u, bd.field_j);
               jd.field_a = jd.field_a + 1;
             }
             if (jd.field_a == 1) {
-              if (hi.field_O.field_f == 2) {
+              if (GameWorld.field_O.field_f == 2) {
                 stackIn_14_0 = k.a(-1, 50);
                 return stackIn_14_0;
               }
-              if (hi.field_O.field_f == 1) {
+              if (GameWorld.field_O.field_f == 1) {
                 jd.field_a = jd.field_a + 1;
               }
             }
             if (jd.field_a == 2) {
-              sb.field_a = new BufferedSocket((java.net.Socket) (hi.field_O.field_d), lc.field_a);
+              sb.field_a = new BufferedSocket((java.net.Socket) (GameWorld.field_O.field_d), lc.field_a);
               var2_ref_de = new de(13);
               uj.a(ha.field_a, uj.field_d, (byte) -114, var2_ref_de, nd.field_a);
               var2_ref_de.i(15, -101);
@@ -266,7 +266,7 @@ final class jo extends qk {
             tf.field_c.a(bo.field_n, sb.field_a, 120);
             sb.field_a = null;
             jd.field_a = 0;
-            hi.field_O = null;
+            GameWorld.field_O = null;
             stackIn_33_0 = 0;
             return stackIn_33_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class jo extends qk {
         }
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -303,30 +303,30 @@ final class jo extends qk {
           if (param1 != 5060) {
             return;
           }
-          var3_int = param0.a(this.a(true), (byte) -107);
-          var4 = param0.a(this.f(237239984), 0);
-          bi.d(var3_int, var4, this.field_Eb, 65535);
+          var3_int = param0.worldToScreenX(this.getX(true), (byte) -107);
+          var4 = param0.worldToScreenY(this.getY(237239984), 0);
+          Rasterizer.d(var3_int, var4, this.field_Eb, 65535);
           if (this.field_Rb != -1) {
-            bi.e(var3_int, var4, param0.a(this.field_Rb, (byte) -74), param0.a(this.field_Pb, 0), 16711680);
+            Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Rb, (byte) -74), param0.worldToScreenY(this.field_Pb, 0), 16711680);
           }
           if (this.field_yb != null) {
-            var5_int = param0.a(this.field_yb.a(true), (byte) -59);
-            var6 = param0.a(this.field_yb.f(237239984), 0);
-            bi.e(var3_int, 10 + var4 - 48, var5_int, -48 + (var6 + 10), 16776960);
-            bj.field_q.c(Integer.toString(this.field_yb.field_F), var5_int, -48 + var6, 16777215, 0);
+            var5_int = param0.worldToScreenX(this.field_yb.getX(true), (byte) -59);
+            var6 = param0.worldToScreenY(this.field_yb.getY(237239984), 0);
+            Rasterizer.e(var3_int, 10 + var4 - 48, var5_int, -48 + (var6 + 10), 16776960);
+            bj.field_q.c(Integer.toString(this.field_yb.state), var5_int, -48 + var6, 16777215, 0);
           }
-          var5 = Integer.toString(this.field_F);
+          var5 = Integer.toString(this.state);
           var5Lifetime1 = Integer.toString(this.l(-111) & 127);
           var10 = 0;
           var6Lifetime1 = var10;
           while (this.field_ub > var10) {
-            var7 = param0.a(this.field_jb[var10], (byte) -62);
-            var8 = param0.a(this.field_gb[var10], 0);
-            bi.b(-1 + var7, var8 - 1, 3, 3, 0);
-            bi.a(var7, var8, 65280);
+            var7 = param0.worldToScreenX(this.field_jb[var10], (byte) -62);
+            var8 = param0.worldToScreenY(this.field_gb[var10], 0);
+            Rasterizer.b(-1 + var7, var8 - 1, 3, 3, 0);
+            Rasterizer.a(var7, var8, 65280);
             var10++;
           }
-          bi.g(var3_int, var4, 3, 16776960);
+          Rasterizer.g(var3_int, var4, 3, 16776960);
           bj.field_q.c(var5Lifetime1, var3_int, -48 + var4, 16777215, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -339,7 +339,7 @@ final class jo extends qk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

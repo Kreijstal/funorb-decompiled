@@ -56,31 +56,31 @@ final class tj extends rb {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * bi.field_f;
-        var10 = bi.field_f - param3;
+        var9 = param1 + param2 * Rasterizer.field_f;
+        var10 = Rasterizer.field_f - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < bi.field_l) {
-          var13 = bi.field_l - param2;
+        if (param2 < Rasterizer.field_l) {
+          var13 = Rasterizer.field_l - param2;
           param4 = param4 - var13;
-          param2 = bi.field_l;
+          param2 = Rasterizer.field_l;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * bi.field_f;
+          var9 = var9 + var13 * Rasterizer.field_f;
         }
-        if (param2 + param4 > bi.field_d) {
-          param4 = param4 - (param2 + param4 - bi.field_d);
+        if (param2 + param4 > Rasterizer.field_d) {
+          param4 = param4 - (param2 + param4 - Rasterizer.field_d);
         }
-        if (param1 < bi.field_g) {
-          var13Lifetime1 = bi.field_g - param1;
+        if (param1 < Rasterizer.field_g) {
+          var13Lifetime1 = Rasterizer.field_g - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = bi.field_g;
+          param1 = Rasterizer.field_g;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > bi.field_b) {
-          var13Lifetime2 = param1 + param3 - bi.field_b;
+        if (param1 + param3 > Rasterizer.field_b) {
+          var13Lifetime2 = param1 + param3 - Rasterizer.field_b;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -88,9 +88,9 @@ final class tj extends rb {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            tj.a(0, bi.field_c, this.field_D[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
+            tj.a(0, Rasterizer.field_c, this.field_D[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            oi.a(bi.field_c, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            oi.a(Rasterizer.field_c, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -216,31 +216,31 @@ final class tj extends rb {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * bi.field_f;
-        var9 = bi.field_f - param3;
+        var8 = param1 + param2 * Rasterizer.field_f;
+        var9 = Rasterizer.field_f - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < bi.field_l) {
-          var12 = bi.field_l - param2;
+        if (param2 < Rasterizer.field_l) {
+          var12 = Rasterizer.field_l - param2;
           param4 = param4 - var12;
-          param2 = bi.field_l;
+          param2 = Rasterizer.field_l;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * bi.field_f;
+          var8 = var8 + var12 * Rasterizer.field_f;
         }
-        if (param2 + param4 > bi.field_d) {
-          param4 = param4 - (param2 + param4 - bi.field_d);
+        if (param2 + param4 > Rasterizer.field_d) {
+          param4 = param4 - (param2 + param4 - Rasterizer.field_d);
         }
-        if (param1 < bi.field_g) {
-          var12Lifetime1 = bi.field_g - param1;
+        if (param1 < Rasterizer.field_g) {
+          var12Lifetime1 = Rasterizer.field_g - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = bi.field_g;
+          param1 = Rasterizer.field_g;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > bi.field_b) {
-          var12Lifetime2 = param1 + param3 - bi.field_b;
+        if (param1 + param3 > Rasterizer.field_b) {
+          var12Lifetime2 = param1 + param3 - Rasterizer.field_b;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -248,9 +248,9 @@ final class tj extends rb {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            tj.a(0, bi.field_c, this.field_D[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
+            tj.a(0, Rasterizer.field_c, this.field_D[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            oi.a(bi.field_c, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+            oi.a(Rasterizer.field_c, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

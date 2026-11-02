@@ -6,11 +6,11 @@ final class ph {
     static ka field_a;
 
     final static void b(int param0) {
-        eo.field_f = null;
+        HumanFactory.field_f = null;
         if (param0 != 26311) {
           ph.b(64);
         }
-        on.field_i = null;
+        TileMap.field_i = null;
     }
 
     public static void a(int param0) {
@@ -30,7 +30,7 @@ final class ph {
             ph.a((rc) null, (byte) -23, 122, (jc) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ph {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ph {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 

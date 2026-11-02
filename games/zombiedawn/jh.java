@@ -53,7 +53,7 @@ final class jh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "jh.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "jh.B(" + param0 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class jh {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class jh {
           }
           this.a(param0, (byte) -80);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

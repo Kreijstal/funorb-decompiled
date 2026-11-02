@@ -9,7 +9,7 @@ final class so {
     final static vn a(vn param0) {
         vn var1 = new vn(param0.field_r, param0.field_q);
         var1.a();
-        bi.d();
+        Rasterizer.d();
         param0.h(0, 0, 16777215);
         so.a(12303291);
         so.a(8947848);
@@ -23,9 +23,9 @@ final class so {
         param1 += 2;
         param2 -= 4;
         param3 -= 4;
-        int var5 = param0 + param1 * bi.field_f;
-        int var6 = bi.field_f - param2;
-        so.a(bi.field_c, var5, param4, 0, 0, 0, 0, param2, param3, var6);
+        int var5 = param0 + param1 * Rasterizer.field_f;
+        int var6 = Rasterizer.field_f - param2;
+        so.a(Rasterizer.field_c, var5, param4, 0, 0, 0, 0, param2, param3, var6);
     }
 
     final static String a(String[] args) {
@@ -58,35 +58,35 @@ final class so {
 
     final static void b(vn param0, int param1, int param2, int param3) {
         int var10 = 0;
-        int var4 = param1 + param2 * bi.field_f;
+        int var4 = param1 + param2 * Rasterizer.field_f;
         int var5 = 0;
         int var6 = param0.field_t;
         int var7 = param0.field_w;
-        int var8 = bi.field_f - var7;
+        int var8 = Rasterizer.field_f - var7;
         int var9 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        if (param2 < bi.field_l) {
-          var10 = bi.field_l - param2;
+        if (param2 < Rasterizer.field_l) {
+          var10 = Rasterizer.field_l - param2;
           var6 = var6 - var10;
-          param2 = bi.field_l;
+          param2 = Rasterizer.field_l;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * bi.field_f;
+          var4 = var4 + var10 * Rasterizer.field_f;
         }
-        if (param2 + var6 > bi.field_d) {
-          var6 = var6 - (param2 + var6 - bi.field_d);
+        if (param2 + var6 > Rasterizer.field_d) {
+          var6 = var6 - (param2 + var6 - Rasterizer.field_d);
         }
-        if (param1 < bi.field_g) {
-          var10Lifetime1 = bi.field_g - param1;
+        if (param1 < Rasterizer.field_g) {
+          var10Lifetime1 = Rasterizer.field_g - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = bi.field_g;
+          param1 = Rasterizer.field_g;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > bi.field_b) {
-          var10Lifetime2 = param1 + var7 - bi.field_b;
+        if (param1 + var7 > Rasterizer.field_b) {
+          var10Lifetime2 = param1 + var7 - Rasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -95,21 +95,21 @@ final class so {
           var6 <= 0) {
           return;
         }
-        so.a(bi.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
+        so.a(Rasterizer.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
     }
 
-    final static void b(vo param0) {
+    final static void b(IntrusiveDeque param0) {
         Object var1;
         IntrusiveNode var1_ref;
         IntrusiveNode var2;
         while (!so.a(param0)) {
           var1_ref = param0.b((byte) 26);
-          while (var1_ref instanceof fb) {
-            if (!(var1_ref.previous instanceof fb)) {
+          while (var1_ref instanceof WorldObject) {
+            if (!(var1_ref.previous instanceof WorldObject)) {
               break;
             }
             var2 = var1_ref.previous;
-            if (((fb) (var1_ref)).field_x > ((fb) (var2)).field_x) {
+            if (((WorldObject) (var1_ref)).field_x > ((WorldObject) (var2)).field_x) {
               var1_ref.unlink(-27598);
               im.a(var1_ref, -30395, var2);
             }
@@ -120,35 +120,35 @@ final class so {
 
     final static void a(vn param0, int param1, int param2) {
         int var9 = 0;
-        int var3 = param1 + param2 * bi.field_f;
+        int var3 = param1 + param2 * Rasterizer.field_f;
         int var4 = 0;
         int var5 = param0.field_t;
         int var6 = param0.field_w;
-        int var7 = bi.field_f - var6;
+        int var7 = Rasterizer.field_f - var6;
         int var8 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        if (param2 < bi.field_l) {
-          var9 = bi.field_l - param2;
+        if (param2 < Rasterizer.field_l) {
+          var9 = Rasterizer.field_l - param2;
           var5 = var5 - var9;
-          param2 = bi.field_l;
+          param2 = Rasterizer.field_l;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * bi.field_f;
+          var3 = var3 + var9 * Rasterizer.field_f;
         }
-        if (param2 + var5 > bi.field_d) {
-          var5 = var5 - (param2 + var5 - bi.field_d);
+        if (param2 + var5 > Rasterizer.field_d) {
+          var5 = var5 - (param2 + var5 - Rasterizer.field_d);
         }
-        if (param1 < bi.field_g) {
-          var9Lifetime1 = bi.field_g - param1;
+        if (param1 < Rasterizer.field_g) {
+          var9Lifetime1 = Rasterizer.field_g - param1;
           var6 = var6 - var9Lifetime1;
-          param1 = bi.field_g;
+          param1 = Rasterizer.field_g;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param1 + var6 > bi.field_b) {
-          var9Lifetime2 = param1 + var6 - bi.field_b;
+        if (param1 + var6 > Rasterizer.field_b) {
+          var9Lifetime2 = param1 + var6 - Rasterizer.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -157,7 +157,7 @@ final class so {
           var5 <= 0) {
           return;
         }
-        so.a(bi.field_c, param0.field_z, 0, var4, var3, var6, var5, var7, var8);
+        so.a(Rasterizer.field_c, param0.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     public static void a() {
@@ -175,9 +175,9 @@ final class so {
         vn var5;
         int[] var6;
         var1 = 0;
-        var2 = bi.field_c;
-        var3 = bi.field_f;
-        var4 = bi.field_a;
+        var2 = Rasterizer.field_c;
+        var3 = Rasterizer.field_f;
+        var4 = Rasterizer.field_a;
         var5 = new vn(var3, var4);
         var6 = var5.field_z;
         for (var7 = 0; var7 < var4; var7++) {
@@ -238,33 +238,33 @@ final class so {
         int var10Lifetime2;
         param1 = param1 + (param0.field_r - param0.field_w - param0.field_v);
         param2 = param2 + param0.field_x;
-        int var4 = param1 + param2 * bi.field_f;
+        int var4 = param1 + param2 * Rasterizer.field_f;
         int var5 = param0.field_w - 1;
         int var6 = param0.field_t;
         int var7 = param0.field_w;
-        int var8 = bi.field_f - var7;
+        int var8 = Rasterizer.field_f - var7;
         int var9 = var7 + var7;
-        if (param2 < bi.field_l) {
-          var10 = bi.field_l - param2;
+        if (param2 < Rasterizer.field_l) {
+          var10 = Rasterizer.field_l - param2;
           var6 = var6 - var10;
-          param2 = bi.field_l;
+          param2 = Rasterizer.field_l;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * bi.field_f;
+          var4 = var4 + var10 * Rasterizer.field_f;
         }
-        if (param2 + var6 > bi.field_d) {
-          var6 = var6 - (param2 + var6 - bi.field_d);
+        if (param2 + var6 > Rasterizer.field_d) {
+          var6 = var6 - (param2 + var6 - Rasterizer.field_d);
         }
-        if (param1 < bi.field_g) {
-          var10Lifetime1 = bi.field_g - param1;
+        if (param1 < Rasterizer.field_g) {
+          var10Lifetime1 = Rasterizer.field_g - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = bi.field_g;
+          param1 = Rasterizer.field_g;
           var5 = var5 - var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 - var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > bi.field_b) {
-          var10Lifetime2 = param1 + var7 - bi.field_b;
+        if (param1 + var7 > Rasterizer.field_b) {
+          var10Lifetime2 = param1 + var7 - Rasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 - var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -273,15 +273,15 @@ final class so {
           var6 <= 0) {
           return;
         }
-        so.b(bi.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
+        so.b(Rasterizer.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
     }
 
-    private final static boolean a(vo param0) {
+    private final static boolean a(IntrusiveDeque param0) {
         IntrusiveNode var1;
         var1 = param0.b((byte) 26);
-        while (var1 instanceof fb) {
-          if (var1.previous instanceof fb) {
-            if (((fb) (var1)).field_x > ((fb) (var1.previous)).field_x) {
+        while (var1 instanceof WorldObject) {
+          if (var1.previous instanceof WorldObject) {
+            if (((WorldObject) (var1)).field_x > ((WorldObject) (var1.previous)).field_x) {
               return false;
             }
             var1 = var1.previous;
@@ -336,8 +336,8 @@ final class so {
               var11 != param2) {
               param3 = param1 - 1;
               param4 = param1 + 1;
-              param5 = param1 - bi.field_f;
-              param6 = param1 + bi.field_f;
+              param5 = param1 - Rasterizer.field_f;
+              param6 = param1 + Rasterizer.field_f;
               if (param0[param5 + 1] == 0) {
                 param0[param5 + 1] = param2;
               }
@@ -368,11 +368,11 @@ final class so {
               if (param0[param4 + 1] == 0) {
                 param0[param4 + 1] = param2;
               }
-              if (param0[param5 - bi.field_f] == 0) {
-                param0[param5 - bi.field_f] = param2;
+              if (param0[param5 - Rasterizer.field_f] == 0) {
+                param0[param5 - Rasterizer.field_f] = param2;
               }
-              if (param0[param6 + bi.field_f] == 0) {
-                param0[param6 + bi.field_f] = param2;
+              if (param0[param6 + Rasterizer.field_f] == 0) {
+                param0[param6 + Rasterizer.field_f] = param2;
               }
             }
             param1++;

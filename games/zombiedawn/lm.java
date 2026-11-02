@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm extends fb {
+final class lm extends WorldObject {
     private int field_G;
     private int field_F;
     static String field_D;
@@ -59,18 +59,18 @@ final class lm extends fb {
         return false;
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         try {
-          var3_int = param1.a(this.field_y >> 16, (byte) -96);
+          var3_int = param1.worldToScreenX(this.field_y >> 16, (byte) -96);
           if (param0 >= -76) {
             lm.f((byte) -99);
           }
-          var4 = param1.a(this.field_x >> 16, 0) - this.field_H;
+          var4 = param1.worldToScreenY(this.field_x >> 16, 0) - this.field_H;
           ob.field_c[this.field_E].b(var3_int, var4);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

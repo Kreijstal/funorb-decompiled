@@ -3,7 +3,7 @@
  */
 final class bg extends IntrusiveNode {
     byte[] field_m;
-    static vo field_i;
+    static IntrusiveDeque field_i;
     int field_j;
     static String field_n;
     long field_h;
@@ -27,7 +27,7 @@ final class bg extends IntrusiveNode {
           this.field_m = param2;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "bg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "bg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class bg extends IntrusiveNode {
             } else {
               if (var9Lifetime1 == 248) {
                 jc.a((byte) 34, hc.a(0));
-                sc.field_d = wk.field_z;
+                sc.field_d = Camera.field_z;
                 p.a(param0 - 104);
                 nm.field_d = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -258,13 +258,13 @@ final class bg extends IntrusiveNode {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     static {
         field_n = "Quit";
-        field_i = new vo();
+        field_i = new IntrusiveDeque();
         field_k = 2;
         field_l = new vk();
     }

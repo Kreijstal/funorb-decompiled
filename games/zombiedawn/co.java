@@ -100,7 +100,7 @@ final class co {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "co.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "co.C(" + param0 + ')');
         }
     }
 

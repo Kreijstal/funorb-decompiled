@@ -50,7 +50,7 @@ final class b extends IntrusiveNode {
                 var8[var6] = dp.field_e.field_h[var6];
               }
               var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var17);
-              dj.field_m.a(0, var6_ref_bg);
+              dj.field_m.addFirst(0, var6_ref_bg);
               dp.field_e.field_j = 0;
             }
             var9 = (bg) (dj.field_m.b((byte) 26));
@@ -73,7 +73,7 @@ final class b extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "b.B(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "b.B(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -11,13 +11,13 @@ final class lf extends IntrusiveNode {
     int field_A;
     int field_D;
     int field_l;
-    fn field_E;
+    PcmSampleStream field_E;
     int field_q;
     int field_p;
     int field_r;
     nf field_t;
     int field_k;
-    gi field_s;
+    PcmSample field_s;
     static volatile int field_m;
     int field_v;
     int field_z;
@@ -64,7 +64,7 @@ final class lf extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class lf extends IntrusiveNode {
         te.field_eb = param1;
         ul.field_d = param1;
         int[] var4 = (int[]) null;
-        bi.a((int[]) null, 0, 0);
+        Rasterizer.a((int[]) null, 0, 0);
         cn.field_f = l.a(-1, param0, (java.awt.Component) ((Object) cj.field_d), param1);
         cn.field_f.b(param2 - 129);
         ba.a(18002, param0 / 2, param1 / 2);

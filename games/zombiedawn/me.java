@@ -51,8 +51,8 @@ final class me extends wo {
     }
 
     final void d(byte param0) {
-        if (this.f(237239984) < 0 ||
-          this.f(237239984) > dj.field_e.field_H.field_p) {
+        if (this.getY(237239984) < 0 ||
+          this.getY(237239984) > dj.field_e.field_H.field_p) {
           return;
         }
         int var2 = -66 % ((param0 - 66) / 50);
@@ -61,7 +61,7 @@ final class me extends wo {
 
     final void g(int param0) {
         super.g(99);
-        if (this.f(237239984) - 48 > dj.field_e.field_H.field_p) {
+        if (this.getY(237239984) - 48 > dj.field_e.field_H.field_p) {
           this.unlink(-27598);
           this.d(0);
           if (param0 > 95) {
@@ -79,20 +79,20 @@ final class me extends wo {
     final void l(byte param0) {
         int var2;
         int var3;
-        this.field_F = 0;
+        this.state = 0;
         super.l(param0);
         var2 = this.field_Eb;
         var3 = 672;
-        if (var3 - 24 > this.f(237239984) &&
-          this.f(237239984) >= 96) {
-          if (this.field_F != 0) {
+        if (var3 - 24 > this.getY(237239984) &&
+          this.getY(237239984) >= 96) {
+          if (this.state != 0) {
             return;
           }
           this.a(var2, (byte) 115, var3);
           return;
         }
-        this.field_Y = this.a(true);
-        this.field_X = 48 + this.f(param0 + 237239932);
+        this.field_Y = this.getX(true);
+        this.field_X = 48 + this.getY(param0 + 237239932);
         this.c(0, this.field_D);
         this.e(1, param0 - 6956);
         this.g(param0 + 45);
@@ -168,7 +168,7 @@ final class me extends wo {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class me extends wo {
         return qd.field_f[param0] * MouseInputHandler.field_e[param0];
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -207,15 +207,15 @@ final class me extends wo {
         RuntimeException var3 = null;
         var8 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(this.a(true), (byte) -99);
-          var4 = param0.a(this.f(237239984), param1 ^ param1);
-          bi.d(var3_int, var4, this.field_pb, 65535);
-          bi.e(var3_int, var4, param0.a(this.field_Y, (byte) -71), param0.a(this.field_X, 0), 16711935);
+          var3_int = param0.worldToScreenX(this.getX(true), (byte) -99);
+          var4 = param0.worldToScreenY(this.getY(237239984), param1 ^ param1);
+          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
+          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Y, (byte) -71), param0.worldToScreenY(this.field_X, 0), 16711935);
           for (var5 = 0; var5 < this.field_ub; var5++) {
-            var6 = param0.a(this.field_jb[var5], (byte) -114);
-            var7 = param0.a(this.field_gb[var5], 0);
-            bi.b(var6 - 1, var7 - 1, 3, 3, 0);
-            bi.a(var6, var7, 65280);
+            var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -114);
+            var7 = param0.worldToScreenY(this.field_gb[var5], 0);
+            Rasterizer.b(var6 - 1, var7 - 1, 3, 3, 0);
+            Rasterizer.a(var6, var7, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class me extends wo {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

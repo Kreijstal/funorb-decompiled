@@ -10,7 +10,7 @@ class vf implements io, ak {
     int field_a;
     static int field_f;
     int field_g;
-    static fn field_c;
+    static PcmSampleStream field_c;
     int field_i;
     private boolean field_e;
     int field_j;
@@ -50,7 +50,7 @@ class vf implements io, ak {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ class vf implements io, ak {
         int var12Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
-          g.$cfr$intArgs$a$3aedf8649552(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
+          Mover.$cfr$intArgs$a$3aedf8649552(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
           if (param7 < 3) {
             var14 = (ga) null;
             this.b((ga) null, 57, -8);
@@ -183,7 +183,7 @@ class vf implements io, ak {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param7).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ class vf implements io, ak {
         try {
           int var2_int = 90 / ((-63 - param0) / 58);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -267,7 +267,7 @@ class vf implements io, ak {
             }
             var10 = var18.a(104, var8);
             var11 = var18.a(-71, var9);
-            g.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param4 + (param3.field_k + param3.field_i), param3.field_n + (param3.field_j + param2), param4 + param3.field_k);
+            Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param4 + (param3.field_k + param3.field_i), param3.field_n + (param3.field_j + param2), param4 + param3.field_k);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_b[var12];
               if (~var10 != ~var12) {
@@ -304,7 +304,7 @@ class vf implements io, ak {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ class vf implements io, ak {
             this.field_m = (rb) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -432,69 +432,69 @@ class vf implements io, ak {
               var19 = param5 * var8 / (var8 + var9) + param0;
               var18 = param5 * var8 / (var8 + var9) + param0;
             }
-            bi.b(dd.field_c);
+            Rasterizer.b(dd.field_c);
             if (param1[0] != null) {
-              bi.c(param2, param0, var16, var18);
+              Rasterizer.c(param2, param0, var16, var18);
               param1[0].b(param2, param0);
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (null != param1[2]) {
-              bi.c(var17, param0, var10, var18);
+              Rasterizer.c(var17, param0, var10, var18);
               param1[2].b(var13, param0);
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (param1[6] != null) {
-              bi.c(param2, var19, var16, var11);
+              Rasterizer.c(param2, var19, var16, var11);
               param1[6].b(param2, var15);
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (param1[8] != null) {
-              bi.c(var17, var19, var10, var11);
+              Rasterizer.c(var17, var19, var10, var11);
               param1[8].b(var13, var15);
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (null != param1[1] &&
               0 != param1[1].field_r) {
-              bi.c(var16, param0, var17, var18);
+              Rasterizer.c(var16, param0, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_r) {
                 param1[1].b(var20, param0);
               }
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (param1[7] != null &&
               param1[7].field_r != 0) {
-              bi.c(var16, var19, var17, var11);
+              Rasterizer.c(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_r) {
                 param1[7].b(var20Lifetime1, var15);
               }
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (null != param1[param3] &&
               0 != param1[3].field_q) {
-              bi.c(param2, var18, var16, var19);
+              Rasterizer.c(param2, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].field_q) {
                 param1[3].b(param2, var20Lifetime2);
               }
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (param1[5] != null &&
               param1[5].field_q != 0) {
-              bi.c(var17, var18, var10, var19);
+              Rasterizer.c(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param1[5].field_q) {
                 param1[5].b(var13, var20Lifetime3);
               }
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
             }
             if (null != param1[4] &&
               param1[4].field_r != 0 &&
               0 != param1[4].field_q) {
-              bi.c(var16, var18, var17, var19);
+              Rasterizer.c(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].field_q) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param1[4].field_r) {
                   param1[4].b(var21, var20Lifetime4);
                 }
               }
-              bi.a(dd.field_c);
+              Rasterizer.a(dd.field_c);
               return;
             }
             return;
@@ -510,7 +510,7 @@ class vf implements io, ak {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -531,7 +531,7 @@ class vf implements io, ak {
           param0.field_j = this.field_j;
           param0.field_b = this.field_b;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -558,7 +558,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -616,7 +616,7 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -627,7 +627,7 @@ class vf implements io, ak {
             this.field_p = -124;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -657,7 +657,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -726,7 +726,7 @@ class vf implements io, ak {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -749,13 +749,13 @@ class vf implements io, ak {
             var10 = this.a(true, param4, var9, param1);
             var11 = this.a(param4, 1, param2) + Math.max(0, var8.field_b);
             var12 = this.a(param4, 1, param2) + Math.min(this.a(param4, -23803), Math.min(var8.field_g, var7 + 1 >= var14.field_b.length ? var8.field_g : var13.field_b[1 + var7].field_b));
-            g.$cfr$intArgs$a$3aedf8649552(param4.field_j + param2, 99, param4.field_i + (param4.field_k + param1), param4.field_n + (param2 + param4.field_j), param4.field_k + param1);
+            Mover.$cfr$intArgs$a$3aedf8649552(param4.field_j + param2, 99, param4.field_i + (param4.field_k + param1), param4.field_n + (param2 + param4.field_j), param4.field_k + param1);
             se.field_j.a(var12, this.field_a, (byte) -14, var10, var11, var10);
             pa.a(-21189);
           }
           int var6_int = -62 % ((param3 - 37) / 55);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -791,7 +791,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -814,7 +814,7 @@ class vf implements io, ak {
           this.field_b = param3;
           this.field_l = param5;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 
@@ -842,7 +842,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

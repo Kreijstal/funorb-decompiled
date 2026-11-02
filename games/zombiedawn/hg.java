@@ -29,20 +29,20 @@ final class hg {
           var1 = new vn(540, 140);
           ki.a((byte) -122, var1);
           en.c();
-          bi.d();
-          ej.field_x = 0;
+          Rasterizer.d();
+          LevelNavigation.field_x = 0;
           gk.j(30549);
           var2 = var1.e();
           int var3 = 1 / ((4 - param0) / 43);
           for (var4 = 0; var4 < 15; var4++) {
             var2.h(-2, -2, 16777215);
-            bi.h(4, 4, 0, 0, 540, 140);
+            Rasterizer.h(4, 4, 0, 0, 540, 140);
           }
           wc.field_Pb.a();
           var1.d(0, 0);
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class hg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class hg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class hg {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw sh.a((Throwable) ((Object) var1), "hg.C(" + param0 + ')');
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "hg.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

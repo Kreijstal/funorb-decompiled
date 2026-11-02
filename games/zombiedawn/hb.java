@@ -52,13 +52,13 @@ final class hb extends ga {
           var11 = var7 - var5;
           var12 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var11 * var11)) / (double)var5)) + 128;
           var13 = var12 >= 256 ? var9 | var10 : (var12 * var9 & -16711936 | 16711680 & var12 * var10) >>> 8;
-          bi.b(var8, var7, this.field_E, var13);
+          Rasterizer.b(var8, var7, this.field_E, var13);
           var9Lifetime1 = 16711935 & param1;
           var10Lifetime1 = param1 & 65280;
-          bi.b(var8 - 2 * this.field_E, var7, this.field_E, var13);
+          Rasterizer.b(var8 - 2 * this.field_E, var7, this.field_E, var13);
           var13Lifetime1 = var12 < 256 ? (16711680 & var12 * var10Lifetime1 | -16711936 & var9Lifetime1 * var12) >>> 8 : var10Lifetime1 | var9Lifetime1;
-          bi.b(var8 + this.field_E, var7, this.field_E, var13Lifetime1);
-          bi.b(-this.field_E + var8, var7, this.field_E, var13Lifetime1);
+          Rasterizer.b(var8 + this.field_E, var7, this.field_E, var13Lifetime1);
+          Rasterizer.b(-this.field_E + var8, var7, this.field_E, var13Lifetime1);
         }
         pa.a(-21189);
         return var15;
@@ -78,13 +78,13 @@ final class hb extends ga {
         var8 = ZombieDawn.field_J;
         try {
           var5_int = this.field_i + param3;
-          g.$cfr$intArgs$a$3aedf8649552(param0, 99, -this.field_K.field_w + var5_int, this.field_n + param0, this.field_K.field_w + param3);
+          Mover.$cfr$intArgs$a$3aedf8649552(param0, 99, -this.field_K.field_w + var5_int, this.field_n + param0, this.field_K.field_w + param3);
           for (var6 = param3 - this.field_H; var5_int > var6; var6 = var6 + param1.field_w) {
             param1.b(var6, param0);
           }
           var7 = -32 / ((param2 - 34) / 50);
           pa.a(-21189);
-          if (bi.field_g <= this.field_K.field_w + param3) {
+          if (Rasterizer.field_g <= this.field_K.field_w + param3) {
             ki.a((byte) -118, this.field_B);
             param1.b(-this.field_H, 0);
             param1.b(-this.field_H + 2 * this.field_E, 0);
@@ -92,7 +92,7 @@ final class hb extends ga {
             pa.a(-21189);
             this.field_B.b(param3, param0);
           }
-          if (-this.field_K.field_w + var5_int <= bi.field_b) {
+          if (-this.field_K.field_w + var5_int <= Rasterizer.field_b) {
             ki.a((byte) -107, this.field_B);
             for (var7Lifetime1 = -this.field_K.field_w + (this.field_i + this.field_H); this.field_E * 2 < var7Lifetime1; var7Lifetime1 = var7Lifetime1 - this.field_E * 2) {
             }
@@ -114,7 +114,7 @@ final class hb extends ga {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class hb extends ga {
               var6 = Math.sqrt(1.0 - var6);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            bi.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            Rasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         if (param0 >= -81) {
@@ -174,7 +174,7 @@ final class hb extends ga {
           }
           int var5_int = 20 / ((46 - param1) / 42);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class hb extends ga {
         int var6 = this.field_j + param0;
         this.a(var6, this.field_L[param3], (byte) -52, var5);
         if (this.field_C < 65536) {
-          g.$cfr$intArgs$a$3aedf8649552(var6, 99, var5 + this.field_i, var6 + this.field_n, (this.field_i * this.field_C >> 16) + var5);
+          Mover.$cfr$intArgs$a$3aedf8649552(var6, 99, var5 + this.field_i, var6 + this.field_n, (this.field_i * this.field_C >> 16) + var5);
           this.a(var6, this.field_L[1], (byte) -104, var5);
           pa.a(-21189);
         }

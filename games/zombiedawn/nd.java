@@ -144,7 +144,7 @@ final class nd {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class nd {
             return stackIn_2_0;
           }
           var9 = new rc(param2, param8, param7, param0, param1, param6, param3);
-          hk.field_F.a(0, var9);
+          hk.field_F.addFirst(0, var9);
           DelegatingCanvas.a((byte) -108, param5, var9);
           stackIn_4_0 = var9;
           return stackIn_4_0;
@@ -185,7 +185,7 @@ final class nd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class nd {
           var5.e(-126, var4);
           var5.d(75, -var4 + var5.field_j);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

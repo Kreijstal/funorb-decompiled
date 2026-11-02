@@ -3,7 +3,7 @@
  */
 final class kc extends id {
     private int field_U;
-    private fn field_W;
+    private PcmSampleStream field_W;
     boolean field_S;
     static int field_R;
     private int field_Z;
@@ -16,7 +16,7 @@ final class kc extends id {
     static boolean field_Q;
     private boolean field_bb;
 
-    final void a(ej param0, boolean param1) {
+    final void a(LevelNavigation param0, boolean param1) {
         boolean stackIn_4_2 = false;
         int stackIn_35_0 = 0;
         RuntimeException stackIn_39_0 = null;
@@ -32,19 +32,19 @@ final class kc extends id {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        wk var12 = null;
+        Camera var12 = null;
         int[][] var16 = null;
         int var6Lifetime1;
         var11 = ZombieDawn.field_J;
         try {
           var3_int = 12;
           stackIn_4_2 = !(param1);
-          this.field_Z = this.a(stackIn_4_2);
-          this.field_X = this.f(237239984);
+          this.field_Z = this.getX(stackIn_4_2);
+          this.field_X = this.getY(237239984);
           var4 = this.field_Z;
           if (param1) {
-            var12 = (wk) null;
-            this.a((byte) -112, (wk) null);
+            var12 = (Camera) null;
+            this.a((byte) -112, (Camera) null);
           }
           var5 = this.field_X;
           this.field_T = var3_int;
@@ -109,11 +109,11 @@ final class kc extends id {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean a(int param0, kd param1) {
+    final boolean a(int param0, Zombie param1) {
         int stackIn_15_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_32_0 = 0;
@@ -137,8 +137,8 @@ final class kc extends id {
             return false;
           }
           var4 = 0;
-          var5 = param1.a(true);
-          var6 = param1.f(237239984);
+          var5 = param1.getX(true);
+          var6 = param1.getY(237239984);
           if (2 != this.field_V) {
             if (1 == this.field_V) {
               var7 = var6 - this.field_X;
@@ -155,7 +155,7 @@ final class kc extends id {
             }
           } else {
             var7 = var5 - this.field_Z;
-            if (Math.abs(-this.f(237239984) + var6) < 5) {
+            if (Math.abs(-this.getY(237239984) + var6) < 5) {
               if (var7 > 0) {
                 stackIn_15_0 = (var7 < this.field_T) ? 1 : 0;
               } else {
@@ -183,13 +183,13 @@ final class kc extends id {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
         qg.field_f = param2;
-        ej.field_s = param3;
+        LevelNavigation.field_s = param3;
         qi.field_E = param1;
         if (param0 == 50) {
           return;
@@ -317,7 +317,7 @@ final class kc extends id {
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -344,8 +344,8 @@ final class kc extends id {
           var4 = stackIn_8_0;
           stackIn_11_0 = (var3_int == 0) ? 10543359 : 7393279;
           var5 = stackIn_11_0;
-          var6 = param1.a(this.a(true), (byte) -71);
-          var7 = param1.a(this.f(237239984), 0);
+          var6 = param1.worldToScreenX(this.getX(true), (byte) -71);
+          var7 = param1.worldToScreenY(this.getY(237239984), 0);
           if (null != this.field_W) {
             this.field_W.h(pj.a(var7, 106, var6) >> 1);
           }
@@ -362,9 +362,9 @@ final class kc extends id {
               if (!this.field_H) {
                 return;
               }
-              bi.e(-1 + var6, var7, 6 + this.field_T, var4);
-              bi.e(var6, var7, this.field_T + 6, var5);
-              bi.e(1 + var6, var7, this.field_T + 6, var4);
+              Rasterizer.e(-1 + var6, var7, 6 + this.field_T, var4);
+              Rasterizer.e(var6, var7, this.field_T + 6, var5);
+              Rasterizer.e(1 + var6, var7, this.field_T + 6, var4);
               return;
             }
           }
@@ -372,9 +372,9 @@ final class kc extends id {
           var7 -= 12;
           var6 = var6 + var8;
           if (this.field_H) {
-            bi.b(var6, var7 - 1, this.field_T - var8, var4);
-            bi.b(var6, var7, -var8 + this.field_T, var5);
-            bi.b(var6, 1 + var7, this.field_T - var8, var4);
+            Rasterizer.b(var6, var7 - 1, this.field_T - var8, var4);
+            Rasterizer.b(var6, var7, -var8 + this.field_T, var5);
+            Rasterizer.b(var6, 1 + var7, this.field_T - var8, var4);
           }
           var7 -= 12;
           tm.field_h[this.field_F + 1].b(this.field_T + var6 + (-var8 - 24), var7);
@@ -389,7 +389,7 @@ final class kc extends id {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

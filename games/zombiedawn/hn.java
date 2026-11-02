@@ -3,7 +3,7 @@
  */
 final class hn extends IntrusiveNode {
     IntrusiveNode field_k;
-    fn field_n;
+    PcmSampleStream field_n;
     int field_i;
     static char[] field_o;
     static int field_m;
@@ -41,7 +41,7 @@ final class hn extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class hn extends IntrusiveNode {
           pg.field_o = param3;
           el.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -72,14 +72,14 @@ final class hn extends IntrusiveNode {
         ff.field_a = param2;
     }
 
-    hn(fn param0, IntrusiveNode param1) {
+    hn(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_i = param0.k();
           this.field_k = param1;
           this.field_n.g(128 + this.field_i * ge.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

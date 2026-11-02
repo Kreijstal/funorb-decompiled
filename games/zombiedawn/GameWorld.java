@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hi {
+final class GameWorld {
     private boolean field_F;
     private boolean field_A;
     static String field_pb;
@@ -16,24 +16,24 @@ final class hi {
     int field_g;
     private int field_c;
     static vn field_x;
-    private vo field_ob;
+    private IntrusiveDeque field_ob;
     private int field_Z;
     static op field_O;
     int field_r;
     private qj field_b;
     int field_f;
-    ej field_H;
+    LevelNavigation field_H;
     int field_nb;
     int field_G;
     private int field_z;
-    wk field_S;
+    Camera field_S;
     int field_P;
     int field_hb;
     private ub field_gb;
     uh field_Q;
     int field_q;
     private int field_j;
-    private vo field_T;
+    private IntrusiveDeque field_T;
     private int field_N;
     int[] field_u;
     private int field_k;
@@ -41,36 +41,36 @@ final class hi {
     private vn field_t;
     int field_db;
     private int field_jb;
-    private vo field_v;
+    private IntrusiveDeque field_v;
     private boolean field_w;
-    vo field_R;
+    IntrusiveDeque field_R;
     private int field_U;
     private int[] field_s;
     private int field_B;
     private int field_o;
     int field_h;
-    on field_mb;
+    TileMap field_mb;
     private ra field_W;
-    vo field_e;
+    IntrusiveDeque field_e;
     mj field_n;
     private int field_fb;
-    private fn field_L;
+    private PcmSampleStream field_L;
     private int field_ib;
     int[] field_J;
     private boolean field_X;
     private boolean field_M;
     private vn field_V;
-    private vo field_m;
-    private kd field_kb;
+    private IntrusiveDeque field_m;
+    private Zombie field_kb;
     int field_bb;
     private int[] field_D;
     private int field_y;
-    vo field_lb;
-    private vo field_d;
+    IntrusiveDeque field_lb;
+    private IntrusiveDeque field_d;
     int field_l;
-    private vo field_i;
+    private IntrusiveDeque field_i;
     private int field_cb;
-    private ah field_a;
+    private Human field_a;
     private int field_E;
 
     private final void g(byte param0) {
@@ -114,7 +114,7 @@ final class hi {
                     !this.field_F) {
                     var4_ref_wg = new wg(this.field_bb, -1 + to.field_b[this.field_bb], this.field_c, this.field_C, this.field_eb, this.field_Z);
                     if (po.w(13296)) {
-                      dn.field_D.a(0, var4_ref_wg);
+                      dn.field_D.addFirst(0, var4_ref_wg);
                       if (var8 != 0) {
                         dd.a(5, var4_ref_wg, -40);
                       }
@@ -293,11 +293,11 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.C(" + param0 + ')');
         }
     }
 
-    private final void a(boolean param0, kd param1) {
+    private final void a(boolean param0, Zombie param1) {
         Object stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
@@ -315,15 +315,15 @@ final class hi {
             if (this.field_h == 3) {
               boolean decompiledSharedTail0 = (2 != param1.field_fb);
               if (!decompiledSharedTail0) {
-                var3 = this.a(80, (byte) 121, 180, 104, 694);
-                ((kd) (var3)).field_gb = 30;
-                ((kd) (var3)).field_fb = param1.field_fb;
+                var3 = this.spawnZombie(80, (byte) 121, 180, 104, 694);
+                ((Zombie) (var3)).field_gb = 30;
+                ((Zombie) (var3)).field_fb = param1.field_fb;
                 decompiledSharedTail0 = (var5 != 0);
               }
               if (decompiledSharedTail0) {
-                var3 = this.a(80, (byte) 124, 110, 1610, 150);
-                ((kd) (var3)).field_gb = 30;
-                ((kd) (var3)).field_fb = param1.field_fb;
+                var3 = this.spawnZombie(80, (byte) 124, 110, 1610, 150);
+                ((Zombie) (var3)).field_gb = 30;
+                ((Zombie) (var3)).field_fb = param1.field_fb;
               }
               this.field_gb.d((byte) -106);
               if (var5 == 0) {
@@ -334,11 +334,11 @@ final class hi {
               if (this.field_h != 5) {
                 return;
               }
-              var3 = this.a(30, (byte) 126, 20, 1440, 400);
+              var3 = this.spawnZombie(30, (byte) 126, 20, 1440, 400);
               var4_ref_qh = new qh();
-              var4_ref_qh.a(0, new kk(((kd) (var3)).a(true) - 400, ((kd) (var3)).f(237239984)));
-              ((kd) (var3)).a(var4_ref_qh, true);
-              ((kd) (var3)).field_fb = 2;
+              var4_ref_qh.addFirst(0, new Point(((Zombie) (var3)).getX(true) - 400, ((Zombie) (var3)).getY(237239984)));
+              ((Zombie) (var3)).a(var4_ref_qh, true);
+              ((Zombie) (var3)).field_fb = 2;
               this.field_gb.d((byte) -106);
               if (var5 == 0) {
                 return;
@@ -348,18 +348,18 @@ final class hi {
             var4 = param1.field_fb;
             if (var4 == 1 &&
               var5 == 0) {
-              var3 = this.a(200, (byte) 126, 70, 350, 150);
+              var3 = this.spawnZombie(200, (byte) 126, 70, 350, 150);
             } else if (var4 == 2 &&
               var5 == 0) {
-              var3 = this.a(20, (byte) 120, 100, 650, 370);
+              var3 = this.spawnZombie(20, (byte) 120, 100, 650, 370);
             } else {
               if (var4 == 3) {
-                var3 = this.a(20, (byte) 123, 100, 720, 60);
+                var3 = this.spawnZombie(20, (byte) 123, 100, 720, 60);
               }
             }
             if (var3 != null) {
-              ((kd) (var3)).field_fb = param1.field_fb;
-              ((kd) (var3)).field_gb = 30;
+              ((Zombie) (var3)).field_fb = param1.field_fb;
+              ((Zombie) (var3)).field_gb = 30;
             }
             this.field_gb.d((byte) -106);
           }
@@ -374,7 +374,7 @@ final class hi {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -391,38 +391,38 @@ final class hi {
           }
           var4 = dj.field_i;
           var5 = param1;
-          var4[var5 >> 5] = hi.a(var4[var5 >> 5], 1 << eg.a(31, var5));
+          var4[var5 >> 5] = GameWorld.a(var4[var5 >> 5], 1 << eg.a(31, var5));
           var4Lifetime1 = kg.field_g;
           var5Lifetime1 = param1;
           if (param2 != -23) {
             this.field_q = -95;
           }
-          var4Lifetime1[var5Lifetime1 >> 5] = hi.a(var4Lifetime1[var5Lifetime1 >> 5], 1 << eg.a(31, var5Lifetime1));
-          this.field_ob.a(0, new da(param1));
+          var4Lifetime1[var5Lifetime1 >> 5] = GameWorld.a(var4Lifetime1[var5Lifetime1 >> 5], 1 << eg.a(31, var5Lifetime1));
+          this.field_ob.addFirst(0, new da(param1));
           if (!this.field_F) {
-            kk.field_j.a(0, new bo(param1, param0, this.field_c, this.field_C, this.field_eb, this.field_Z));
+            Point.field_j.addFirst(0, new bo(param1, param0, this.field_c, this.field_C, this.field_eb, this.field_Z));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(boolean param0) {
         RuntimeException runtimeException = null;
-        fb var2 = null;
+        WorldObject var2 = null;
         si var3 = null;
         jo var3_ref = null;
-        kd var3_ref2 = null;
+        Zombie var3_ref2 = null;
         int var4 = 0;
-        vo stackIn_27_0 = null;
+        IntrusiveDeque stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
-          var2 = (fb) (this.field_R.b((byte) 26));
+          var2 = (WorldObject) (this.field_R.b((byte) 26));
           if (!param0) {
             return;
           }
@@ -430,7 +430,7 @@ final class hi {
             if (var4 != 0) {
               return;
             }
-            if (!(var2 instanceof kd)) {
+            if (!(var2 instanceof Zombie)) {
               if (var2 instanceof si) {
                 var3 = (si) (var2);
                 var3.g(107);
@@ -439,7 +439,7 @@ final class hi {
                 var3_ref.l((byte) 52);
               }
             } else {
-              var3_ref2 = (kd) (var2);
+              var3_ref2 = (Zombie) (var2);
               if (var3_ref2.field_fb > 0) {
                 var3_ref2.field_gb = so.c(var3_ref2.field_sb);
               }
@@ -450,13 +450,13 @@ final class hi {
             }
             stackIn_27_0 = this.field_R;
             stackIn_28_1 = !(param0);
-            var2 = (fb) (((vo) (Object) stackIn_27_0).a(stackIn_28_1));
+            var2 = (WorldObject) (((IntrusiveDeque) (Object) stackIn_27_0).a(stackIn_28_1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.BB(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.BB(" + param0 + ')');
         }
     }
 
@@ -466,14 +466,14 @@ final class hi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -25983) {
-            this.field_d = (vo) null;
+            this.field_d = (IntrusiveDeque) null;
           }
           stackIn_7_0 = !(eh.field_y <= 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.B(" + param0 + ')');
         }
     }
 
@@ -481,7 +481,7 @@ final class hi {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_29_0 = 0;
-        wk stackIn_39_0 = null;
+        Camera stackIn_39_0 = null;
         boolean stackIn_42_1 = false;
         boolean stackIn_49_2 = false;
         boolean stackIn_59_3 = false;
@@ -538,8 +538,8 @@ final class hi {
             stackIn_29_0 = 1;
           }
           var3_int = stackIn_29_0;
-          var4 = this.field_S.field_u;
-          var5 = this.field_S.field_c;
+          var4 = this.field_S.x;
+          var5 = this.field_S.y;
           if (!param1) {
             this.field_S.a(false, false, false, (byte) -87, false, false);
           }
@@ -559,13 +559,13 @@ final class hi {
             }
             stackIn_63_4 = -48;
             stackIn_66_5 = (bo.field_p[97]) || (bo.field_p[me.field_Gb]);
-            ((wk) (Object) stackIn_39_0).a(stackIn_42_1, stackIn_49_2, stackIn_59_3, (byte) stackIn_63_4, stackIn_66_5, bo.field_p[81]);
+            ((Camera) (Object) stackIn_39_0).a(stackIn_42_1, stackIn_49_2, stackIn_59_3, (byte) stackIn_63_4, stackIn_66_5, bo.field_p[81]);
           }
           if (bo.field_i &&
             this.field_ib != -1 &&
             var3_int == 0) {
-            this.field_S.field_u = var4;
-            this.field_S.field_c = var5;
+            this.field_S.x = var4;
+            this.field_S.y = var5;
             var6 = 0;
             do {
               boolean decompiledFrameRemainder3 = true;
@@ -596,8 +596,8 @@ final class hi {
           }
           if (this.field_p &&
             1 == kc.field_R) {
-            this.field_B = this.field_B - (-var4 + this.field_S.field_u);
-            this.field_j = this.field_j - (this.field_S.field_c - var5);
+            this.field_B = this.field_B - (-var4 + this.field_S.x);
+            this.field_j = this.field_j - (this.field_S.y - var5);
             if (this.field_B == -1) {
               this.field_B = this.field_B - 1;
             }
@@ -607,7 +607,7 @@ final class hi {
             this.field_z = this.field_z + 1;
             if (fieldTemp$1 >= 335) {
               this.field_z = 0;
-              this.field_ob.f(62);
+              this.field_ob.removeLast(62);
             }
           }
           if (this.field_h == -1 &&
@@ -661,11 +661,11 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "hi.GA(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "hi.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final void a(on param0, byte param1) {
+    private final void a(TileMap param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -689,7 +689,7 @@ final class hi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -698,7 +698,7 @@ final class hi {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        fb var8 = null;
+        WorldObject var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -712,31 +712,31 @@ final class hi {
           var5_int = param1 >> 7;
           var6 = param0 >> 7;
           var7 = param3 * param3;
-          var8 = (fb) (this.field_n.a((param3 >> 7) + 1, var6, 29845, var5_int));
+          var8 = (WorldObject) (this.field_n.a((param3 >> 7) + 1, var6, 29845, var5_int));
           while (var8 != null) {
             if (var11 != 0) {
               return;
             }
-            if (var8 instanceof g) {
-              var9 = -param1 + var8.a(true);
-              var10 = var8.f(237239984) - param0;
+            if (var8 instanceof Mover) {
+              var9 = -param1 + var8.getX(true);
+              var10 = var8.getY(237239984) - param0;
               if (var7 > (var9 * var9 + var10 * var10)) {
-                ((g) (var8)).b((byte) 126, 1000);
+                ((Mover) (var8)).b((byte) 126, 1000);
               }
             }
-            var8 = (fb) (this.field_n.b(false));
+            var8 = (WorldObject) (this.field_n.b(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
         IntrusiveNode var6 = null;
-        kd var7 = null;
+        Zombie var7 = null;
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
@@ -749,12 +749,12 @@ final class hi {
             this.f((byte) 105);
           }
           var6 = this.field_R.b((byte) 26);
-          while (var6 instanceof fb) {
+          while (var6 instanceof WorldObject) {
             if (var8 != 0) {
               return;
             }
-            if (var6 instanceof kd) {
-              var7 = (kd) (var6);
+            if (var6 instanceof Zombie) {
+              var7 = (Zombie) (var6);
               if (var7.i((byte) -126)) {
                 var7.field_qb = false;
                 if (var7.a(param1, param4, param2, param0, false)) {
@@ -769,26 +769,26 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var6_ref), "hi.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var6_ref), "hi.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final kd a(int param0, byte param1, int param2, int param3, int param4) {
-        kd var6 = null;
+    final Zombie spawnZombie(int param0, byte param1, int param2, int param3, int param4) {
+        Zombie var6 = null;
         RuntimeException var6_ref = null;
-        kd stackIn_2_0 = null;
-        kd stackIn_6_0;
-        kd stackIn_6_1;
+        Zombie stackIn_2_0 = null;
+        Zombie stackIn_6_0;
+        Zombie stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
-        kd stackIn_7_0;
-        kd stackIn_7_1;
+        Zombie stackIn_7_0;
+        Zombie stackIn_7_1;
         boolean stackIn_7_4;
-        kd stackIn_8_0 = null;
+        Zombie stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 119) {
-            stackIn_2_0 = (kd) null;
+            stackIn_2_0 = (Zombie) null;
             return stackIn_2_0;
           }
           stackIn_6_0 = null;
@@ -804,27 +804,27 @@ final class hi {
             stackIn_7_1 = null;
             stackIn_7_4 = true;
           }
-          var6 = new kd(stackIn_6_2, stackIn_6_3, stackIn_7_4, 0);
+          var6 = new Zombie(stackIn_6_2, stackIn_6_3, stackIn_7_4, 0);
           var6.field_gb = 500;
-          this.field_R.a(0, var6);
+          this.field_R.addFirst(0, var6);
           this.field_gb.d((byte) -106);
           stackIn_8_0 = var6;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var6_ref), "hi.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var6_ref), "hi.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void c(int param0, int param1, int param2) {
         try {
-          this.field_lb.a(0, new mm(param0, param2));
+          this.field_lb.addFirst(0, new mm(param0, param2));
           if (param1 != 54) {
             field_O = (op) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.P(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.P(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -841,7 +841,7 @@ final class hi {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
               if (param1 < 117) {
-                hi.f(true);
+                GameWorld.f(true);
               }
               param0.getAppletContext().showDocument(rc.a(-1, param0, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -860,7 +860,7 @@ final class hi {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -882,15 +882,15 @@ final class hi {
         int var4Lifetime1;
         var6 = ZombieDawn.field_J;
         try {
-          var2_int = 1 * fb.a(1311979239, (int)(tp.field_p << 1)) + 2 * rd.a(true, (int)(tp.field_p >> 1)) >> 16;
-          var3 = (-this.field_S.field_u + (-1 + (int)tp.field_p * bd.field_e)) % 1337;
+          var2_int = 1 * WorldObject.a(1311979239, (int)(tp.field_p << 1)) + 2 * rd.a(true, (int)(tp.field_p >> 1)) >> 16;
+          var3 = (-this.field_S.x + (-1 + (int)tp.field_p * bd.field_e)) % 1337;
           var4 = var3 / bd.field_e;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(nh.field_P > var4)))) {
             stackIn_14_0 = (5 * var4 + var3 * 3) % 9;
             if (var6 == 0) {
               if (stackIn_14_0 == 0) {
-                bi.e(var3, var4, var2_int + var3 - 3, -7 + var4, 6715272);
+                Rasterizer.e(var3, var4, var2_int + var3 - 3, -7 + var4, 6715272);
               }
               var3 += 939;
               if (var3 <= bd.field_e) {
@@ -903,21 +903,21 @@ final class hi {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var3 = ((int)tp.field_p * bd.field_e - 1 - this.field_S.field_u) % 917;
+            var3 = ((int)tp.field_p * bd.field_e - 1 - this.field_S.x) % 917;
             stackIn_14_0 = var3 / bd.field_e;
           }
           var4Lifetime1 = stackIn_14_0;
           while (true) {
             if (!(nh.field_P > var4Lifetime1)) {
               var4Lifetime1 = -54 / ((-32 - param0) / 46);
-              var3 = (-this.field_S.field_u - 1 + (int)tp.field_p * bd.field_e) % 593;
+              var3 = (-this.field_S.x - 1 + (int)tp.field_p * bd.field_e) % 593;
               stackIn_27_0 = var3 / bd.field_e;
               break;
             }
             stackIn_27_0 = (2 * var3 + 4 * var4Lifetime1) % 7;
             if (var6 == 0) {
               if (stackIn_27_0 == 0) {
-                bi.e(var3, var4Lifetime1, var2_int + (var3 - 3), var4Lifetime1 - 5, 3364192);
+                Rasterizer.e(var3, var4Lifetime1, var2_int + (var3 - 3), var4Lifetime1 - 5, 3364192);
               }
               var3 += 547;
               if (bd.field_e >= var3) {
@@ -935,7 +935,7 @@ final class hi {
               return;
             }
             if ((4 * var5 + var3 * 2) % 7 == 0) {
-              bi.e(var3, var5, var3 - 4 + var2_int, -7 + var5, 5461344);
+              Rasterizer.e(var3, var5, var3 - 4 + var2_int, -7 + var5, 5461344);
             }
             var3 += 375;
             if (var3 <= bd.field_e) {
@@ -948,7 +948,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.W(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.W(" + param0 + ')');
         }
     }
 
@@ -972,7 +972,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.Q(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.Q(" + param0 + ')');
         }
     }
 
@@ -1319,13 +1319,13 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "hi.DB(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "hi.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void c(byte param0) {
         RuntimeException runtimeException = null;
-        kd var2 = null;
+        Zombie var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1335,10 +1335,10 @@ final class hi {
             return;
           }
           var3 = -60 / ((param0 + 57) / 38);
-          var2 = (kd) (this.field_W.c((byte) 34));
+          var2 = (Zombie) (this.field_W.c((byte) 34));
           while (null != var2) {
             var2.q((byte) -119);
-            var2 = (kd) (this.field_W.a((byte) 123));
+            var2 = (Zombie) (this.field_W.a((byte) 123));
             if (var4 != 0) {
               return;
             }
@@ -1348,7 +1348,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.IA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.IA(" + param0 + ')');
         }
     }
 
@@ -1357,7 +1357,7 @@ final class hi {
           jk.a(true, false);
           int var1_int = 92 % ((param0 - 56) / 63);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.DA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.DA(" + param0 + ')');
         }
     }
 
@@ -1376,11 +1376,11 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.M(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.M(" + param0 + ')');
         }
     }
 
-    final void a(kd param0, boolean param1) {
+    final void a(Zombie param0, boolean param1) {
         boolean stackIn_39_1 = false;
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
@@ -1388,10 +1388,10 @@ final class hi {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        kd var4_ref_kd = null;
+        Zombie var4_ref_kd = null;
         int var4 = 0;
         qh var5 = null;
-        kd var5_ref = null;
+        Zombie var5_ref = null;
         qh var6 = null;
         int var7 = 0;
         int var3_intLifetime1;
@@ -1409,9 +1409,9 @@ final class hi {
             this.field_gb.field_k < 100) {
             var3_int = 0;
             while (var3_int < 2) {
-              var4_ref_kd = this.a(20, (byte) 125, 400, 160, 670);
+              var4_ref_kd = this.spawnZombie(20, (byte) 125, 400, 160, 670);
               var5 = new qh();
-              var5.a(0, new kk(var4_ref_kd.a(true), -110 + var4_ref_kd.f(237239984)));
+              var5.addFirst(0, new Point(var4_ref_kd.getX(true), -110 + var4_ref_kd.getY(237239984)));
               var4_ref_kd.a(var5, true);
               var3_int++;
               if (var7 != 0) {
@@ -1440,11 +1440,11 @@ final class hi {
           var3_intLifetime1 = 1;
           var4 = 0;
           while (var4 < var3_intLifetime1) {
-            var5_ref = this.a(90, (byte) 125, 90, 915 - (80 - 80 * param0.field_fb), 1600);
+            var5_ref = this.spawnZombie(90, (byte) 125, 90, 915 - (80 - 80 * param0.field_fb), 1600);
             var5_ref.field_fb = param0.field_fb;
             this.field_gb.d((byte) -106);
             var6 = new qh();
-            var6.a(0, new kk(960, 1090));
+            var6.addFirst(0, new Point(960, 1090));
             var5_ref.a(var6, true);
             var4++;
             if (var7 != 0) {
@@ -1462,7 +1462,7 @@ final class hi {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1489,7 +1489,7 @@ final class hi {
           this.field_C = this.field_C + (var4 << 8);
           this.field_ab = this.field_ab + var4 * this.field_K;
           this.h(1);
-          this.field_i.a(0, new ao(param0.a(true), -30 + param0.f(237239984), var3_int, true));
+          this.field_i.addFirst(0, new ao(param0.getX(true), -30 + param0.getY(237239984), var3_int, true));
           this.field_gb.d((byte) -106);
           kh.a(47, false);
           return;
@@ -1503,7 +1503,7 @@ final class hi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1530,7 +1530,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.J(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.J(" + param0 + ')');
         }
     }
 
@@ -1551,7 +1551,7 @@ final class hi {
           this.a(this.a(this.field_q, (byte) -103, this.field_h), (byte) -99);
           eh.field_y = eh.field_y - 1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.QA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.QA(" + param0 + ')');
         }
     }
 
@@ -1638,7 +1638,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.R(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.R(" + param0 + ')');
         }
     }
 
@@ -1646,7 +1646,7 @@ final class hi {
         mn var5 = null;
         mn stackIn_6_0;
         mn stackIn_6_1;
-        ej stackIn_6_2;
+        LevelNavigation stackIn_6_2;
         int stackIn_6_3;
         int stackIn_6_4;
         mn stackIn_7_0 = null;
@@ -1676,12 +1676,12 @@ final class hi {
           var5 = new mn(stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
           stackIn_11_0 = (!param0) ? 77 : 76;
           kh.a(stackIn_11_0, false);
-          this.field_v.a(param1 + 6355, var5);
+          this.field_v.addFirst(param1 + 6355, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5_ref), "hi.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5_ref), "hi.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1694,9 +1694,9 @@ final class hi {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        fn var5 = null;
+        PcmSampleStream var5 = null;
         int var6 = 0;
-        fn var5Lifetime1;
+        PcmSampleStream var5Lifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
         var6 = ZombieDawn.field_J;
@@ -1706,7 +1706,7 @@ final class hi {
           }
           if (0 < this.field_fb) {
             var2_int = this.field_fb * (3 - Math.abs(-3 + this.field_h)) / 3;
-            bi.a(0, 0, bd.field_e, nh.field_P, 13421772, var2_int);
+            Rasterizer.a(0, 0, bd.field_e, nh.field_P, 13421772, var2_int);
             this.field_fb = this.field_fb - 14;
             if (var6 == 0) {
               return;
@@ -1716,7 +1716,7 @@ final class hi {
           var2_intLifetime1 = (int)(tp.field_p % 157L);
           if ((var2_intLifetime1 < 2 ||
             var2_intLifetime1 >= 139 &&
-            var2_intLifetime1 <= 141) && fb.a(1311979239, (int)(tp.field_p << 6)) < 0) {
+            var2_intLifetime1 <= 141) && WorldObject.a(1311979239, (int)(tp.field_p << 6)) < 0) {
             stackIn_18_0 = 1;
             decompiledFrameRemainder0 = false;
           }
@@ -1737,7 +1737,7 @@ final class hi {
             }
           }
           if (var2_intLifetime1 == 5 &&
-            3 > fb.a(param0 ^ 1311979238, (int)(tp.field_p << 6))) {
+            3 > WorldObject.a(param0 ^ 1311979238, (int)(tp.field_p << 6))) {
             var4Lifetime1 = 70 + (40 * rd.a(true, (int)(tp.field_p << 6)) >> 16);
             stackIn_33_0 = 84;
             if (0L != (tp.field_p & 1L)) {
@@ -1754,7 +1754,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.UA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.UA(" + param0 + ')');
         }
     }
 
@@ -1814,7 +1814,7 @@ final class hi {
             this.field_Q.a(3158064, 5);
             return true;
           }
-          if (sh.field_g == param0) {
+          if (ExceptionWrapper.field_g == param0) {
             this.field_Q.a(param2 + 3187702, 6);
             return true;
           }
@@ -1839,8 +1839,8 @@ final class hi {
               al.field_e = stackIn_65_0;
             }
             if (param0 == 51) {
-              stackIn_73_0 = !(g.field_Q);
-              g.field_Q = stackIn_73_0;
+              stackIn_73_0 = !(Mover.field_Q);
+              Mover.field_Q = stackIn_73_0;
             }
             if (param0 == 37) {
               stackIn_81_0 = !(ac.field_r);
@@ -1906,14 +1906,14 @@ final class hi {
             if (param0 == 6) {
               var4 = this.field_R.b((byte) 26);
               boolean decompiledNaturalLoopExit0 = false;
-              while (!(decompiledNaturalLoopExit0 = (!(var4 instanceof fb)))) {
-                stackOut_157_0 = var4 instanceof kd;
+              while (!(decompiledNaturalLoopExit0 = (!(var4 instanceof WorldObject)))) {
+                stackOut_157_0 = var4 instanceof Zombie;
                 stackIn_168_0 = stackOut_157_0;
                 stackIn_158_0 = stackOut_157_0;
                 if (var5 == 0) {
                   if (stackIn_158_0 &&
-                    !((kd) (var4)).p(11312)) {
-                    ((kd) (var4)).z(0);
+                    !((Zombie) (var4)).p(11312)) {
+                    ((Zombie) (var4)).z(0);
                   }
                   var4 = var4.previous;
                   continue;
@@ -1971,7 +1971,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4_ref), "hi.WA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4_ref), "hi.WA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1986,23 +1986,23 @@ final class hi {
         var5 = ZombieDawn.field_J;
         try {
           if (param0 <= 75) {
-            hi.a((java.applet.Applet) null, -78);
+            GameWorld.a((java.applet.Applet) null, -78);
           }
           var2 = this.field_R.b((byte) 26);
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var2 instanceof fb)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var2 instanceof WorldObject)))) {
             var3 = var2.previous;
             stackIn_29_0 = this.field_ib;
             if (var5 == 0) {
               if (stackIn_29_0 == -1 &&
                 var2 instanceof hk) {
-                ((fb) (var2)).g(107);
+                ((WorldObject) (var2)).g(107);
               }
-              if (var2 instanceof kd &&
-                ((kd) (var2)).f(237239984) < 200) {
+              if (var2 instanceof Zombie &&
+                ((Zombie) (var2)).getY(237239984) < 200) {
                 var2.unlink(-27598);
                 ((DualLinkNode) (var2)).c((byte) -10);
-                this.field_i.a(0, new ao(((kd) (var2)).a(true), 200, fl.field_e, false));
+                this.field_i.addFirst(0, new ao(((Zombie) (var2)).getX(true), 200, fl.field_e, false));
                 var4 = fl.field_e;
                 this.field_g = this.field_g - var4 * this.field_K;
                 this.field_l = this.field_l + var4;
@@ -2027,7 +2027,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "hi.SA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "hi.SA(" + param0 + ')');
         }
     }
 
@@ -2097,15 +2097,15 @@ final class hi {
             }
             this.field_L.h(ge.field_c * (220 * var2_int) / 16 >> 8);
             if (var2_int > 0) {
-              this.field_S.field_u = this.field_S.field_u + (pb.a(so.field_a, var2_int, param0 - 9843) - var2_int / 2);
-              this.field_S.field_c = this.field_S.field_c + (-(var2_int / 2) + pb.a(so.field_a, var2_int, 1));
+              this.field_S.x = this.field_S.x + (pb.a(so.field_a, var2_int, param0 - 9843) - var2_int / 2);
+              this.field_S.y = this.field_S.y + (-(var2_int / 2) + pb.a(so.field_a, var2_int, 1));
             }
           }
           this.field_H.a(this.field_S, false);
           if (-1 != this.field_H.field_A.field_c &&
             this.field_H.field_A.field_o != -1) {
-            var2_intLifetime1 = this.field_S.a(this.field_H.field_A.field_c, (byte) -100);
-            var3 = this.field_S.a(this.field_H.field_A.field_o, 0);
+            var2_intLifetime1 = this.field_S.worldToScreenX(this.field_H.field_A.field_c, (byte) -100);
+            var3 = this.field_S.worldToScreenY(this.field_H.field_A.field_o, 0);
             stackIn_27_0 = sl.field_c;
             if (5 > he.field_c) {
               stackIn_28_1 = he.field_c;
@@ -2170,7 +2170,7 @@ final class hi {
             stackIn_58_1 = 9844;
           }
           if (stackIn_58_0 != stackIn_58_1) {
-            this.a((kd) null, false);
+            this.a((Zombie) null, false);
           }
           this.field_H.a(this.field_S, 1, true, false);
           var2 = this.field_v.b((byte) 26);
@@ -2199,13 +2199,13 @@ final class hi {
             wg.field_n = 0;
             break;
           }
-          if (!(Math.abs(-on.field_q + this.field_S.field_u) <= 40) ||
-            !(40 >= Math.abs(-qb.field_b + this.field_S.field_c))) {
-            qb.field_b = this.field_S.field_c;
+          if (!(Math.abs(-TileMap.field_q + this.field_S.x) <= 40) ||
+            !(40 >= Math.abs(-qb.field_b + this.field_S.y))) {
+            qb.field_b = this.field_S.y;
             ld.field_m = true;
-            on.field_q = this.field_S.field_u;
+            TileMap.field_q = this.field_S.x;
             ki.a((byte) -120, hn.field_p);
-            bi.d();
+            Rasterizer.d();
             pa.a(-21189);
             if (var14 != 0) {
               ld.field_m = false;
@@ -2219,7 +2219,7 @@ final class hi {
               var2 = this.field_T.b((byte) 26);
               break;
             }
-            ((fb) (var2)).a((byte) -101, this.field_S);
+            ((WorldObject) (var2)).a((byte) -101, this.field_S);
             var2 = this.field_R.a(false);
           } while (var14 == 0);
           do {
@@ -2249,7 +2249,7 @@ final class hi {
             stackIn_108_1 = -6;
           }
           if (stackIn_108_0 == stackIn_108_1) {
-            hn.field_p.b(-this.field_S.field_u + on.field_q - 40, -this.field_S.field_c + (qb.field_b - 40));
+            hn.field_p.b(-this.field_S.x + TileMap.field_q - 40, -this.field_S.y + (qb.field_b - 40));
           }
           this.field_H.a(this.field_S, 2, true, false);
           if (this.field_H.field_A.field_a == 6 &&
@@ -2260,10 +2260,10 @@ final class hi {
           var2 = this.field_R.b((byte) 26);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
-            stackIn_127_0 = var2 instanceof kd;
+            stackIn_127_0 = var2 instanceof Zombie;
             if (var14 == 0) {
               if (stackIn_127_0) {
-                ((kd) (var2)).a(0, this.field_S);
+                ((Zombie) (var2)).a(0, this.field_S);
               }
               var2 = this.field_R.a(false);
               continue;
@@ -2280,12 +2280,12 @@ final class hi {
           if (stackIn_127_0) {
             var4_int = 0;
             while (var4_int < this.field_H.field_u) {
-              var5_int = this.field_S.a(var4_int, (byte) -92);
+              var5_int = this.field_S.worldToScreenX(var4_int, (byte) -92);
               stackIn_146_0 = ~var5_int;
               stackIn_146_1 = -1;
               if (var14 != 0) {
                 if (stackIn_146_0 < stackIn_146_1) {
-                  var5_int = this.field_S.a(var4_int, 0);
+                  var5_int = this.field_S.worldToScreenY(var4_int, 0);
                   stackIn_180_0 = ~var5_int;
                   stackIn_180_1 = -1;
                   decompiledFrameCompleted2 = false;
@@ -2296,9 +2296,9 @@ final class hi {
               }
               if (stackIn_146_0 <= stackIn_146_1 && (!((bd.field_e * 2) < var5_int) ||
                 var14 != 0)) {
-                bi.e(-1 + var5_int, 0, 2 * nh.field_P, 255);
-                bi.e(var5_int, 0, 2 * nh.field_P, 255);
-                bi.e(var5_int + 1, 0, nh.field_P * 2, 255);
+                Rasterizer.e(-1 + var5_int, 0, 2 * nh.field_P, 255);
+                Rasterizer.e(var5_int, 0, 2 * nh.field_P, 255);
+                Rasterizer.e(var5_int + 1, 0, nh.field_P * 2, 255);
               }
               var4_int += 128;
             }
@@ -2311,7 +2311,7 @@ final class hi {
                 if (stackIn_146_0Lifetime1 >= stackIn_146_1Lifetime1) {
                   break;
                 }
-                var5_intLifetime2 = this.field_S.a(var4_int, 0);
+                var5_intLifetime2 = this.field_S.worldToScreenY(var4_int, 0);
                 stackIn_180_0 = ~var5_intLifetime2;
                 stackIn_180_1 = -1;
                 if (var14 != 0) {
@@ -2320,9 +2320,9 @@ final class hi {
                 }
                 if (stackIn_180_0 <= stackIn_180_1 && (!(var5_intLifetime2 > (2 * nh.field_P)) ||
                   var14 != 0)) {
-                  bi.b(0, -1 + var5_intLifetime2, bd.field_e * 2, 255);
-                  bi.b(0, var5_intLifetime2, 2 * bd.field_e, 255);
-                  bi.b(0, 1 + var5_intLifetime2, bd.field_e * 2, 255);
+                  Rasterizer.b(0, -1 + var5_intLifetime2, bd.field_e * 2, 255);
+                  Rasterizer.b(0, var5_intLifetime2, 2 * bd.field_e, 255);
+                  Rasterizer.b(0, 1 + var5_intLifetime2, bd.field_e * 2, 255);
                 }
                 var4_int += 128;
               }
@@ -2355,9 +2355,9 @@ final class hi {
               } else {
                 var5_intLifetime1 = this.field_j;
               }
-              bi.c(var4_int, var5_intLifetime1, var6_int, var7_int, 16777215);
-              bi.b(var4_int + 1, 1 + var5_intLifetime1, var6_int - 2, -2 + var7_int, 10066431, 32);
-              bi.a(2 + var4_int, 2 + var5_intLifetime1, -4 + var6_int, -4 + var7_int, 3355647, 32);
+              Rasterizer.c(var4_int, var5_intLifetime1, var6_int, var7_int, 16777215);
+              Rasterizer.b(var4_int + 1, 1 + var5_intLifetime1, var6_int - 2, -2 + var7_int, 10066431, 32);
+              Rasterizer.a(2 + var4_int, 2 + var5_intLifetime1, -4 + var6_int, -4 + var7_int, 3355647, 32);
             }
             stackIn_180_0 = -1;
             stackIn_180_1 = ~this.field_ib;
@@ -2370,7 +2370,7 @@ final class hi {
             this.d(param0 - 9934);
           }
           if (ql.field_j >= 0.0f) {
-            oj.field_f.b(this.field_S.a(ek.field_I, (byte) -124), this.field_S.a(-(int)ql.field_j + el.field_g, param0 ^ 9844));
+            oj.field_f.b(this.field_S.worldToScreenX(ek.field_I, (byte) -124), this.field_S.worldToScreenY(-(int)ql.field_j + el.field_g, param0 ^ 9844));
           }
           var2 = this.field_i.b((byte) 26);
           do {
@@ -2390,8 +2390,8 @@ final class hi {
             0.0f < this.field_S.field_g) &&
             (!(vh.field_b <= 150) ||
             !(id.field_M <= 150)))) {
-            var7_intLifetime1 = this.field_S.a(this.field_S.field_v, (byte) -102);
-            var8_int = this.field_S.a(this.field_S.field_f, 0);
+            var7_intLifetime1 = this.field_S.worldToScreenX(this.field_S.field_v, (byte) -102);
+            var8_int = this.field_S.worldToScreenY(this.field_S.field_f, 0);
             var9 = var7_intLifetime1 - 320;
             var10_int = 320 + var7_intLifetime1;
             var11 = var8_int - 240;
@@ -2404,21 +2404,21 @@ final class hi {
               var12 = (int)(var13 * (float)var12 + (-var13 + 1.0f) * (float)(nh.field_P - 5));
               System.out.println("lit area: " + var9 + "," + var11 + "," + (-var9 + var10_int) + "," + (-var11 + var12));
             }
-            bi.f(5, 5, -5 + bd.field_e, -5 + nh.field_P);
-            bi.b(5, 5, -10 + bd.field_e, var11 - 5, 0);
-            bi.b(5, var12, bd.field_e - 10, nh.field_P + (-5 - var12), 0);
-            bi.b(5, var11, -5 + var9, -var11 + var12, 0);
-            bi.b(var10_int, var11, -5 + bd.field_e - var10_int, -var11 + var12, 0);
+            Rasterizer.f(5, 5, -5 + bd.field_e, -5 + nh.field_P);
+            Rasterizer.b(5, 5, -10 + bd.field_e, var11 - 5, 0);
+            Rasterizer.b(5, var12, bd.field_e - 10, nh.field_P + (-5 - var12), 0);
+            Rasterizer.b(5, var11, -5 + var9, -var11 + var12, 0);
+            Rasterizer.b(var10_int, var11, -5 + bd.field_e - var10_int, -var11 + var12, 0);
           }
           if (this.field_ib == -1 ||
             this.field_N > 0) {
-            bi.f(-this.field_N + (vh.field_b + 640), 0, bd.field_e, nh.field_P);
+            Rasterizer.f(-this.field_N + (vh.field_b + 640), 0, bd.field_e, nh.field_P);
             if (this.field_h == -1) {
               var5.a(kb.field_g[this.field_q], bd.field_d, 280, 16777215, 0);
             }
             this.field_V.b(-(this.field_V.field_w / 2) + bd.field_d, nh.field_G - this.field_V.field_t);
             so.a(this.field_t, bd.field_d + (-(this.field_V.field_w / 2) - 6), -6 + (-this.field_V.field_t + nh.field_G));
-            bi.c();
+            Rasterizer.c();
           }
           var7 = (da) (this.field_ob.b((byte) 26));
           if (var7 != null) {
@@ -2434,14 +2434,14 @@ final class hi {
               }
               var8_intLifetime1 = -310 + var12Lifetime1 * 10;
             }
-            bi.a(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 0, 160);
-            bi.e(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 7829367);
+            Rasterizer.a(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 0, 160);
+            Rasterizer.e(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 7829367);
             ed.field_a[var10_intLifetime1].g(var8_intLifetime1 + 9, var9Lifetime1 + 5);
             var5.c(hk.field_J[var10_intLifetime1], var8_intLifetime1 + 50, var9Lifetime1 + 25, 16777215, 3355443);
           }
           of.a(11690);
           if (al.field_e) {
-            bi.a(0, 22, 80, 105, 0, 128);
+            Rasterizer.a(0, 22, 80, 105, 0, 128);
             var6.c(Integer.toString(this.field_c), 5, 40, 16777215, 0);
             var6.c(Integer.toString(this.field_C), 5, 60, 16777215, 0);
             var6.c(Integer.toString(this.field_eb), 5, 80, 16777215, 0);
@@ -2451,13 +2451,13 @@ final class hi {
           if (jp.field_m ||
             ac.field_r ||
             nk.field_d) {
-            bi.a(0, 0, 640, 17, 0, 100);
+            Rasterizer.a(0, 0, 640, 17, 0, 100);
           }
           if (jp.field_m) {
-            pc.field_k.c("cam=(" + this.field_S.field_u + ", " + this.field_S.field_c + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
+            pc.field_k.c("cam=(" + this.field_S.x + ", " + this.field_S.y + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
           }
           if (nk.field_d) {
-            pc.field_k.c("mouseover tile=(" + (-bd.field_d + ha.field_b + this.field_S.field_u) / 24 + ", " + (-nh.field_G + (ei.field_K + this.field_S.field_c)) / 24 + ")  pixel=(" + (ha.field_b + (this.field_S.field_u - bd.field_d)) + "," + (this.field_S.field_c + ei.field_K - nh.field_G) + ")", 5, 13, 16777215, 0);
+            pc.field_k.c("mouseover tile=(" + (-bd.field_d + ha.field_b + this.field_S.x) / 24 + ", " + (-nh.field_G + (ei.field_K + this.field_S.y)) / 24 + ")  pixel=(" + (ha.field_b + (this.field_S.x - bd.field_d)) + "," + (this.field_S.y + ei.field_K - nh.field_G) + ")", 5, 13, 16777215, 0);
           }
           if (this.field_F) {
             var5.b("Cheater!", 630, 410, 16776960, 0);
@@ -2474,7 +2474,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "hi.AB(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "hi.AB(" + param0 + ')');
         }
     }
 
@@ -2494,7 +2494,7 @@ final class hi {
         int var4_int = 0;
         RuntimeException var4 = null;
         ra var5 = null;
-        kd var6_ref_kd = null;
+        Zombie var6_ref_kd = null;
         int var6 = 0;
         qh var7_ref_qh = null;
         int var7 = 0;
@@ -2504,13 +2504,13 @@ final class hi {
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
-        kd var13 = null;
+        Zombie var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        kd var13Lifetime1;
+        Zombie var13Lifetime1;
         int stackIn_41_0Lifetime1;
         int stackIn_63_0Lifetime1;
         int stackIn_79_0Lifetime1;
@@ -2531,9 +2531,9 @@ final class hi {
           }
           var4_int = 1;
           var5 = new ra();
-          var6_ref_kd = (kd) (this.field_W.c((byte) 34));
+          var6_ref_kd = (Zombie) (this.field_W.c((byte) 34));
           while (null != var6_ref_kd) {
-            var7_ref_qh = this.field_H.a(true, var6_ref_kd.a(true), param0, param1, var6_ref_kd.f(237239984));
+            var7_ref_qh = this.field_H.a(true, var6_ref_kd.getX(true), param0, param1, var6_ref_kd.getY(237239984));
             if (var18 != 0) {
               return;
             }
@@ -2543,7 +2543,7 @@ final class hi {
             } else {
               var4_int = 0;
             }
-            var6_ref_kd = (kd) (this.field_W.a((byte) 116));
+            var6_ref_kd = (Zombie) (this.field_W.a((byte) 116));
           }
           if (var4_int == 0) {
             this.field_b.c(20);
@@ -2612,7 +2612,7 @@ final class hi {
               }
               stackIn_63_0Lifetime1 = 0;
               var12Lifetime1 = stackIn_63_0Lifetime1;
-              var13 = (kd) (this.field_W.c((byte) 34));
+              var13 = (Zombie) (this.field_W.c((byte) 34));
               while (null != var13) {
                 var12Lifetime1++;
                 var14Lifetime1 = -1;
@@ -2645,19 +2645,19 @@ final class hi {
                 }
                 param1 = 24 * var14Lifetime1 + fa.e(-128);
                 param0 = fa.e(49) + var15Lifetime1 * 24;
-                var13.a(this.field_H.a(true, var13.a(true), param0, param1, var13.f(237239984)), true);
+                var13.a(this.field_H.a(true, var13.getX(true), param0, param1, var13.getY(237239984)), true);
                 if (7 == this.field_q &&
                   0 == this.field_h &&
                   !var13.x(52)) {
                   ck.a(-12, 6836);
                 }
-                var13 = (kd) (this.field_W.a((byte) 114));
+                var13 = (Zombie) (this.field_W.a((byte) 114));
               }
-              var13Lifetime1 = (kd) (var5.c((byte) 34));
+              var13Lifetime1 = (Zombie) (var5.c((byte) 34));
               while (var13Lifetime1 != null) {
                 var13Lifetime1.c((byte) -85);
                 this.field_W.a(var13Lifetime1, (byte) -109);
-                var13Lifetime1 = (kd) (var5.a((byte) 122));
+                var13Lifetime1 = (Zombie) (var5.a((byte) 122));
               }
               return;
             }
@@ -2668,20 +2668,20 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "hi.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "hi.S(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final on a(int param0, byte param1, int param2) {
+    private final TileMap a(int param0, byte param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        on stackIn_5_0 = null;
+        TileMap stackIn_5_0 = null;
         int stackIn_9_0 = 0;
         byte[][] stackIn_9_1 = null;
         int stackIn_10_2 = 0;
-        on stackIn_11_0 = null;
+        TileMap stackIn_11_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 3 &&
@@ -2708,18 +2708,18 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "hi.JA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "hi.JA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final g a(int param0, boolean param1, byte param2, int param3) {
+    private final Mover a(int param0, boolean param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
-        fb var9 = null;
-        g var10 = null;
+        WorldObject var9 = null;
+        Mover var10 = null;
         int var11 = 0;
         Object stackIn_23_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -2732,35 +2732,35 @@ final class hi {
           if (param2 >= -66) {
             this.a(112, -70, 11, 40, -44);
           }
-          var9 = (fb) (this.field_R.b((byte) 26));
+          var9 = (WorldObject) (this.field_R.b((byte) 26));
           while (null != var9) {
             if (param1 &&
-              var9 instanceof ah ||
+              var9 instanceof Human ||
               !param1 &&
-              var9 instanceof kd) {
-              var10 = (g) (var9);
+              var9 instanceof Zombie) {
+              var10 = (Mover) (var9);
               if (var10.a(76, var5_int, var6) &&
-                var8 < var10.f(237239984)) {
-                var8 = var10.f(237239984);
+                var8 < var10.getY(237239984)) {
+                var8 = var10.getY(237239984);
                 var7 = var10;
               }
             }
-            var9 = (fb) (this.field_R.a(false));
+            var9 = (WorldObject) (this.field_R.a(false));
             if (var11 == 0) {
               continue;
             }
             break;
           }
           stackIn_23_0 = var7;
-          return (g) (stackIn_23_0);
+          return (Mover) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5), "hi.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5), "hi.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, ah param1, byte param2, boolean param3, kk param4) {
+    final void a(int param0, Human param1, byte param2, boolean param3, Point param4) {
         int stackIn_55_0 = 0;
         RuntimeException stackIn_110_0 = null;
         StringBuilder stackIn_110_1 = null;
@@ -2771,9 +2771,9 @@ final class hi {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        kd var8 = null;
+        Zombie var8 = null;
         int var9_int = 0;
-        fn var9 = null;
+        PcmSampleStream var9 = null;
         int var10 = 0;
         try {
           if (fj.a(0, -126)) {
@@ -2793,13 +2793,13 @@ final class hi {
               this.a(238, 17, (byte) -23);
             }
           }
-          var6_int = param1.a(true);
-          var7 = param1.f(237239984);
-          var8 = new kd(var6_int, var7, param1.t(10), param0);
+          var6_int = param1.getX(true);
+          var7 = param1.getY(237239984);
+          var8 = new Zombie(var6_int, var7, param1.t(10), param0);
           if (param1.field_kb) {
             var8.b((byte) 124, 1000);
           }
-          this.field_R.a(0, var8);
+          this.field_R.addFirst(0, var8);
           var8.d((byte) 118);
           so.b(this.field_R);
           if (param0 == 0) {
@@ -2807,13 +2807,13 @@ final class hi {
               var8.r(param2 ^ -31320);
               this.field_W.a(var8, (byte) -126);
               if (param4 != null) {
-                var8.a(this.field_H.a(true, var6_int, param4.field_h, param4.field_l, var7), true);
+                var8.a(this.field_H.a(true, var6_int, param4.y, param4.x, var7), true);
               }
             }
             if (!(param1 instanceof we)) {
               this.field_P = this.field_P + 1;
             }
-            param1.field_F = 18;
+            param1.state = 18;
             if (param1.field_t == 28) {
               this.field_hb = this.field_hb + 1;
             }
@@ -2833,7 +2833,7 @@ final class hi {
                 this.field_G = this.field_G + var10;
                 this.field_ab = this.field_ab + var10 * this.field_K;
                 this.h(1);
-                this.field_i.a(param2 ^ 60, new ao(param1.a(true), param1.f(237239984) - 30, var9_int, true));
+                this.field_i.addFirst(param2 ^ 60, new ao(param1.getX(true), param1.getY(237239984) - 30, var9_int, true));
               }
             }
             if (param1 instanceof we) {
@@ -2890,7 +2890,7 @@ final class hi {
           } else {
             stackIn_115_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
         }
     }
 
@@ -2903,7 +2903,7 @@ final class hi {
         Object var6_ref = null;
         int var6 = 0;
         int var7 = 0;
-        kd var8 = null;
+        Zombie var8 = null;
         int var9 = 0;
         var9 = ZombieDawn.field_J;
         try {
@@ -2934,18 +2934,18 @@ final class hi {
                 }
                 if (decompiledFrameRemainder0) {
                   if (5 == this.field_q) {
-                    var6_ref = eo.a(52, var4_int, 23, var5);
+                    var6_ref = HumanFactory.createHuman(52, var4_int, 23, var5);
                     decompiledFrameRemainder0 = (var9 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (7 != this.field_q) {
-                      var6_ref = eo.a(105, var4_int, so.c(9), var5);
+                      var6_ref = HumanFactory.createHuman(105, var4_int, so.c(9), var5);
                       if (var9 != 0) {
-                        var6_ref = eo.a(68, var4_int, 28, var5);
+                        var6_ref = HumanFactory.createHuman(68, var4_int, 28, var5);
                         var6_ref = new me(var4_int, var5, 3);
                       }
                     } else {
-                      var6_ref = eo.a(68, var4_int, 28, var5);
+                      var6_ref = HumanFactory.createHuman(68, var4_int, 28, var5);
                       if (var9 != 0) {
                         var6_ref = new me(var4_int, var5, 3);
                       }
@@ -2956,9 +2956,9 @@ final class hi {
                 var6_ref = new me(var4_int, var5, 3);
               }
               this.field_f = this.field_f + 1;
-              this.field_R.a(0, (IntrusiveNode) (var6_ref));
+              this.field_R.addFirst(0, (IntrusiveNode) (var6_ref));
               this.field_gb.d((byte) -106);
-              ((ah) (var6_ref)).d((byte) 124);
+              ((Human) (var6_ref)).d((byte) 124);
               decompiledFrameRemainder1 = (var9 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -2971,8 +2971,8 @@ final class hi {
                 var6 = stackIn_50_0;
                 var7 = 0;
                 while (var7 < var6) {
-                  var8 = new kd(var4_int, var5, pb.a(so.field_a, 2, param2 ^ 31099), 0);
-                  this.field_R.a(0, var8);
+                  var8 = new Zombie(var4_int, var5, pb.a(so.field_a, 2, param2 ^ 31099), 0);
+                  this.field_R.addFirst(0, var8);
                   var8.d((byte) -1);
                   var7++;
                   if (var9 != 0) {
@@ -2991,7 +2991,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "hi.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "hi.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3021,14 +3021,14 @@ final class hi {
               this.field_kb.field_cb = false;
               this.field_kb = null;
             }
-            this.field_a = (ah) (this.a(ei.field_K, true, (byte) -87, ha.field_b));
+            this.field_a = (Human) (this.a(ei.field_K, true, (byte) -87, ha.field_b));
             if ((this.field_Q.a(-112)) &&
               (decompiledFrameRemainder0 = (this.field_a != null))) {
               this.field_a.field_ob = true;
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
-              this.field_kb = (kd) (this.a(ei.field_K, false, (byte) -83, ha.field_b));
+              this.field_kb = (Zombie) (this.a(ei.field_K, false, (byte) -83, ha.field_b));
               if (null != this.field_kb) {
                 if (!this.field_kb.i((byte) -126)) {
                   this.field_kb = null;
@@ -3054,13 +3054,13 @@ final class hi {
             }
           }
           if (param0 > -126) {
-            this.field_m = (vo) null;
+            this.field_m = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.AA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.AA(" + param0 + ')');
         }
     }
 
@@ -3074,7 +3074,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3086,7 +3086,7 @@ final class hi {
             field_Y = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.KA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.KA(" + param0 + ')');
         }
     }
 
@@ -3119,9 +3119,9 @@ final class hi {
         mn var6_ref2 = null;
         mn var7_ref_mn = null;
         int var7 = 0;
-        fb var7_ref_fb = null;
+        WorldObject var7_ref_fb = null;
         int[] var7_ref_int__ = null;
-        kd var8_ref_kd = null;
+        Zombie var8_ref_kd = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -3161,12 +3161,12 @@ final class hi {
             var4 = 0;
             var5_ref_le = this.field_R.b((byte) 26);
             boolean decompiledNaturalLoopExit1 = false;
-            while (!(decompiledNaturalLoopExit1 = (!(var5_ref_le instanceof fb)))) {
+            while (!(decompiledNaturalLoopExit1 = (!(var5_ref_le instanceof WorldObject)))) {
               var6 = var5_ref_le.previous;
-              ((fb) (var5_ref_le)).g(119);
+              ((WorldObject) (var5_ref_le)).g(119);
               stackIn_29_0 = var5_ref_le;
               if (var13 == 0) {
-                if (stackIn_29_0 instanceof kd) {
+                if (stackIn_29_0 instanceof Zombie) {
                   var3++;
                 }
                 if (var5_ref_le instanceof we) {
@@ -3259,26 +3259,26 @@ final class hi {
                 decompiledFrameRemainder2 = (var7 == 6);
                 if ((decompiledFrameRemainder2) &&
                   (var13 == 0)) {
-                  var7_ref_fb = (fb) (this.field_n.a(0, 0, this.field_n.field_d, 1, true));
+                  var7_ref_fb = (WorldObject) (this.field_n.a(0, 0, this.field_n.field_d, 1, true));
                   while (null != var7_ref_fb) {
-                    stackIn_130_0 = var7_ref_fb instanceof kd;
+                    stackIn_130_0 = var7_ref_fb instanceof Zombie;
                     if (stackIn_130_0) {
-                      var8_ref_kd = (kd) (var7_ref_fb);
+                      var8_ref_kd = (Zombie) (var7_ref_fb);
                       if (var8_ref_kd.i((byte) -126) &&
-                        var8_ref_kd.f(237239984) < 288) {
+                        var8_ref_kd.getY(237239984) < 288) {
                         var8_ref_kd.field_fb = -1;
                         var8_ref_kd.field_qb = false;
                         var8_ref_kd.field_cb = false;
                         var8_ref_kd.c((byte) -20);
                         var8_ref_kd.q((byte) -114);
-                        var8_ref_kd.a(this.field_H.a(true, var8_ref_kd.a(true), 120, this.field_H.field_u - 1, var8_ref_kd.f(237239984)), true);
+                        var8_ref_kd.a(this.field_H.a(true, var8_ref_kd.getX(true), 120, this.field_H.field_u - 1, var8_ref_kd.getY(237239984)), true);
                         this.field_gb.a(true);
                         if (60 >= this.field_gb.j(-106)) {
                           this.a(233, 22, (byte) -23);
                         }
                       }
                     }
-                    var7_ref_fb = (fb) (this.field_n.b(false));
+                    var7_ref_fb = (WorldObject) (this.field_n.b(false));
                   }
                   decompiledFrameRemainder2 = false;
                 }
@@ -3301,7 +3301,7 @@ final class hi {
                   while (var10 < 18) {
                     var11 = so.c(24) + var8;
                     var12 = so.c(9);
-                    this.field_R.a(0, new me(var11, var9, var12));
+                    this.field_R.addFirst(0, new me(var11, var9, var12));
                     var9 -= 30;
                     var10++;
                     if (var13 != 0) {
@@ -3327,7 +3327,7 @@ final class hi {
                   var9Lifetime4 = var9Lifetime4 + so.c(48);
                   var10Lifetime2 = var10Lifetime2 + so.c(48);
                   this.field_jb = 25;
-                  this.field_R.a(0, new ig(var9Lifetime4, var10Lifetime2, var11Lifetime1));
+                  this.field_R.addFirst(0, new ig(var9Lifetime4, var10Lifetime2, var11Lifetime1));
                 }
               }
             }
@@ -3350,7 +3350,7 @@ final class hi {
                     if (var7Lifetime1 < 4) {
                       var8Lifetime1 = -15 + pb.a(so.field_a, 30, param0 - 92);
                       var9Lifetime1 = pb.a(so.field_a, 30, 1) - 15;
-                      this.field_R.a(param0 ^ 93, eo.a(123, var8Lifetime1 + this.field_H.field_A.field_c, 19, this.field_H.field_A.field_o + var9Lifetime1));
+                      this.field_R.addFirst(param0 ^ 93, HumanFactory.createHuman(123, var8Lifetime1 + this.field_H.field_A.field_c, 19, this.field_H.field_A.field_o + var9Lifetime1));
                       var7Lifetime1++;
                       if (var13 == 0) {
                         continue;
@@ -3448,7 +3448,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.T(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.T(" + param0 + ')');
         }
     }
 
@@ -3502,7 +3502,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "hi.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "hi.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3514,10 +3514,10 @@ final class hi {
         var6 = ZombieDawn.field_J;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (this.field_d.d(-46) > 200) {
+          if (this.field_d.size(-46) > 200) {
             var5_int = 0;
             while (var5_int < 5) {
-              this.field_d.f(67);
+              this.field_d.removeLast(67);
               var5_int++;
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3526,28 +3526,28 @@ final class hi {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_d.a(0, new gk(param3, param0, pb.a(so.field_a, 6, 1), param1));
-            this.field_d.a(0, new gk(param3 + 15, param0, pb.a(so.field_a, 6, 1), param1));
-            this.field_d.a(0, new gk(-15 + param3, param0, pb.a(so.field_a, 6, 1), param1));
-            this.field_d.a(0, new gk(param3, param0 - 15, pb.a(so.field_a, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3, param0, pb.a(so.field_a, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3 + 15, param0, pb.a(so.field_a, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(-15 + param3, param0, pb.a(so.field_a, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3, param0 - 15, pb.a(so.field_a, 6, 1), param1));
           }
           if (param2 < 109) {
-            this.a((kd) null, (byte) -74);
+            this.a((Zombie) null, (byte) -74);
           }
-          this.field_d.a(0, new gk(param3, 15 + param0, pb.a(so.field_a, 6, 1), param1));
+          this.field_d.addFirst(0, new gk(param3, 15 + param0, pb.a(so.field_a, 6, 1), param1));
           if (!this.field_H.a(false, param0 - 24, param3, true) &&
             !this.field_H.a(false, -24 + param0, param3 + 24, true) &&
             !this.field_H.a(false, param0 - 24, -24 + param3, true) &&
             this.field_H.a(false, param0, param3, true)) {
             param0 = param0 - (24 + param0 % 24);
-            this.field_R.a(0, new gk(param3, param0, 6 + pb.a(so.field_a, 6, 1), param1));
-            this.field_d.a(0, new gk(param3, 24 + param0, pb.a(so.field_a, 6, 1), param1));
+            this.field_R.addFirst(0, new gk(param3, param0, 6 + pb.a(so.field_a, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3, 24 + param0, pb.a(so.field_a, 6, 1), param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5), "hi.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5), "hi.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3556,14 +3556,14 @@ final class hi {
         RuntimeException var2 = null;
         try {
           if (param0 != 9091) {
-            this.field_e = (vo) null;
+            this.field_e = (IntrusiveDeque) null;
           }
           bd.a(this.h(false), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.MA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.MA(" + param0 + ')');
         }
     }
 
@@ -3624,10 +3624,10 @@ final class hi {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        fb var4 = null;
+        WorldObject var4 = null;
         String var4_ref = null;
         tj var5 = null;
-        fn var6_ref_fn = null;
+        PcmSampleStream var6_ref_fn = null;
         boolean[][] var6_ref_boolean____ = null;
         int var6 = 0;
         boolean[][] var7_ref_boolean____ = null;
@@ -3635,7 +3635,7 @@ final class hi {
         int var8 = 0;
         int var9 = 0;
         kc var9_ref_kc = null;
-        kd var9_ref_kd = null;
+        Zombie var9_ref_kd = null;
         int var10_int = 0;
         qh var10 = null;
         int[] var10_array = null;
@@ -3646,7 +3646,7 @@ final class hi {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        kd var9_ref_kdLifetime1;
+        Zombie var9_ref_kdLifetime1;
         qh var10Lifetime1;
         int stackIn_304_0Lifetime1;
         int stackIn_304_1Lifetime1;
@@ -3702,7 +3702,7 @@ final class hi {
           this.field_nb = 0;
           mc.field_h = 0;
           this.field_E = 0;
-          on.field_q = -1;
+          TileMap.field_q = -1;
           ld.field_m = true;
           this.field_hb = 0;
           this.field_o = 0;
@@ -3712,24 +3712,24 @@ final class hi {
           this.field_r = 0;
           this.field_fb = 0;
           MouseWheelInput.field_c = 0;
-          this.field_H = new ej(this.field_mb);
+          this.field_H = new LevelNavigation(this.field_mb);
           this.field_u = new int[3];
           this.field_J = new int[3];
           mn.a(false);
           hm.a(9);
           this.field_n = new mj(1 + (this.field_H.field_u >> 7), 1 + (this.field_H.field_p >> 7));
-          this.field_S = new wk(this.field_H.field_u, this.field_H.field_p);
+          this.field_S = new Camera(this.field_H.field_u, this.field_H.field_p);
           this.field_S.a(this.field_mb.field_b[1], this.field_mb.field_b[3], this.field_mb.field_m[2], this.field_mb.field_m[0], this.field_mb.field_b[0], this.field_mb.field_m[1], this.field_mb.field_m[3], this.field_mb.field_b[2], 106);
           this.field_S.a((byte) -98);
           this.b(8, this.field_mb.field_a);
           this.field_mb.a(0, true);
-          this.field_m = new vo();
-          this.field_lb = new vo();
-          this.field_d = new vo();
-          this.field_e = new vo();
-          this.field_v = new vo();
-          this.field_T = new vo();
-          this.field_i = new vo();
+          this.field_m = new IntrusiveDeque();
+          this.field_lb = new IntrusiveDeque();
+          this.field_d = new IntrusiveDeque();
+          this.field_e = new IntrusiveDeque();
+          this.field_v = new IntrusiveDeque();
+          this.field_T = new IntrusiveDeque();
+          this.field_i = new IntrusiveDeque();
           this.field_R = this.field_mb.b((byte) 106);
           so.b(this.field_R);
           this.field_f = 0;
@@ -3744,7 +3744,7 @@ final class hi {
             stackIn_16_0 = 0;
           }
           var3 = stackIn_16_0;
-          var4 = (fb) (this.field_R.b((byte) 26));
+          var4 = (WorldObject) (this.field_R.b((byte) 26));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (null == var4))) {
             stackOut_18_0 = var4 instanceof gb;
@@ -3757,21 +3757,21 @@ final class hi {
                 vi.field_a) {
                 var4.unlink(-27598);
               } else {
-                if (var4 instanceof ah) {
+                if (var4 instanceof Human) {
                   if (var4.field_C &&
                     !vi.field_a) {
                     var4.unlink(-27598);
                     decompiledFrameRemainder3 = false;
                   }
                   else {
-                    if (!((ah) (var4)).field_ib) {
+                    if (!((Human) (var4)).field_ib) {
                       this.field_f = this.field_f + 1;
                     }
                   }
                 }
                 if (decompiledFrameRemainder3) {
                   if (!(var4.field_z <= 0) ||
-                    var4 instanceof g) {
+                    var4 instanceof Mover) {
                     var4.d((byte) -85);
                     if (var4.a((byte) 99, 4)) {
                       this.field_u[-1 + var4.field_z] = this.field_u[-1 + var4.field_z] + 1;
@@ -3785,8 +3785,8 @@ final class hi {
                     var4.d((byte) 127);
                   }
                   if (var3 != 0 &&
-                    var4 instanceof kd) {
-                    ((kd) (var4)).v(-23221);
+                    var4 instanceof Zombie) {
+                    ((Zombie) (var4)).v(-23221);
                     if (this.field_q == 7) {
                       var3 = 0;
                     }
@@ -3796,7 +3796,7 @@ final class hi {
                   }
                 }
               }
-              var4 = (fb) (this.field_R.a(false));
+              var4 = (WorldObject) (this.field_R.a(false));
               continue;
             }
             break;
@@ -3859,7 +3859,7 @@ final class hi {
           var5.a(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
           this.field_t.a();
           this.field_V.h(6, 6, 16777215);
-          bi.h(4, 4, 0, 0, bi.field_f, bi.field_a);
+          Rasterizer.h(4, 4, 0, 0, Rasterizer.field_f, Rasterizer.field_a);
           this.field_V.h(6, 6, 0);
           cn.field_f.b(96);
           stackIn_117_0 = !param0;
@@ -4026,23 +4026,23 @@ final class hi {
                     stackIn_304_1 = -2;
                     if (var17 != 0) {
                       if (stackIn_304_0 < stackIn_304_1) {
-                        var9_ref_kd = this.a(216, (byte) 122, -264 + this.field_H.field_u, 144, 48 + (this.field_H.field_p + 30));
+                        var9_ref_kd = this.spawnZombie(216, (byte) 122, -264 + this.field_H.field_u, 144, 48 + (this.field_H.field_p + 30));
                         var10 = new qh();
-                        var10.a(0, new kk(var9_ref_kd.a(true), this.field_H.field_p - 168 + so.c(96)));
+                        var10.addFirst(0, new Point(var9_ref_kd.getX(true), this.field_H.field_p - 168 + so.c(96)));
                         var9_ref_kd.a(var10, true);
                         break regionExit1;
                       }
                       break scanLoop4;
                     }
                     if (stackIn_304_0 == stackIn_304_1) {
-                      var10_intLifetime1 = (var9_ref_kc.a(true) - 168) / 168;
-                      var11Lifetime2 = (var9_ref_kc.f(237239984) - 168) / 168;
+                      var10_intLifetime1 = (var9_ref_kc.getX(true) - 168) / 168;
+                      var11Lifetime2 = (var9_ref_kc.getY(237239984) - 168) / 168;
                       var9_ref_kc.field_S = var7_ref_boolean____[var11Lifetime2][var10_intLifetime1];
                     } else {
                       stackIn_300_0 = var9_ref_kc;
                       stackIn_301_1 = !(param0);
-                      var10_intLifetime1 = (((kc) (Object) stackIn_300_0).a(stackIn_301_1) - 24) / 168;
-                      var11Lifetime2 = (var9_ref_kc.f(237239984) - 288) / 168;
+                      var10_intLifetime1 = (((kc) (Object) stackIn_300_0).getX(stackIn_301_1) - 24) / 168;
+                      var11Lifetime2 = (var9_ref_kc.getY(237239984) - 288) / 168;
                       var9_ref_kc.field_S = var6_ref_boolean____[var11Lifetime2][var10_intLifetime1];
                     }
                     var9_ref_kc = (kc) (rg.field_J.a((byte) 111));
@@ -4054,9 +4054,9 @@ final class hi {
                     if (stackIn_304_0Lifetime1 >= stackIn_304_1Lifetime1) {
                       break;
                     }
-                    var9_ref_kdLifetime1 = this.a(216, (byte) 122, -264 + this.field_H.field_u, 144, 48 + (this.field_H.field_p + 30));
+                    var9_ref_kdLifetime1 = this.spawnZombie(216, (byte) 122, -264 + this.field_H.field_u, 144, 48 + (this.field_H.field_p + 30));
                     var10Lifetime1 = new qh();
-                    var10Lifetime1.a(0, new kk(var9_ref_kdLifetime1.a(true), this.field_H.field_p - 168 + so.c(96)));
+                    var10Lifetime1.addFirst(0, new Point(var9_ref_kdLifetime1.getX(true), this.field_H.field_p - 168 + so.c(96)));
                     var9_ref_kdLifetime1.a(var10Lifetime1, true);
                     if (var17 != 0) {
                       break regionExit1;
@@ -4288,7 +4288,7 @@ final class hi {
                       var16++;
                     }
                     var16Lifetime1 = var12Lifetime1Lifetime1;
-                    this.field_H.field_A.field_h[var6Lifetime1][var7Lifetime1] = hi.a(eg.a(-128, var8Lifetime1), var16Lifetime1);
+                    this.field_H.field_A.field_h[var6Lifetime1][var7Lifetime1] = GameWorld.a(eg.a(-128, var8Lifetime1), var16Lifetime1);
                   }
                   var7Lifetime1++;
                   continue;
@@ -4313,7 +4313,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.PA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.PA(" + param0 + ')');
         }
     }
 
@@ -4332,7 +4332,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "hi.G(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "hi.G(" + param0 + ')');
         }
     }
 
@@ -4369,11 +4369,11 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.FA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.FA(" + param0 + ')');
         }
     }
 
-    private final void a(kd param0, byte param1) {
+    private final void a(Zombie param0, byte param1) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -4402,7 +4402,7 @@ final class hi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4416,12 +4416,12 @@ final class hi {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_37_0;
         boolean stackOut_117_0;
-        fb var2 = null;
+        WorldObject var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        fb var4 = null;
-        kd var5 = null;
+        WorldObject var4 = null;
+        Zombie var5 = null;
         int var6 = 0;
         int var2_intLifetime1;
         var6 = ZombieDawn.field_J;
@@ -4451,9 +4451,9 @@ final class hi {
                 this.field_M &&
                 this.field_p &&
                 this.field_w) {
-                var2 = (fb) (this.field_R.b((byte) 26));
+                var2 = (WorldObject) (this.field_R.b((byte) 26));
                 while (null != var2) {
-                  stackOut_37_0 = var2 instanceof kd;
+                  stackOut_37_0 = var2 instanceof Zombie;
                   stackIn_126_0 = stackOut_37_0 ? 1 : 0;
                   stackIn_38_0 = stackOut_37_0;
                   if (var6 != 0) {
@@ -4461,9 +4461,9 @@ final class hi {
                     break;
                   }
                   if (stackIn_38_0) {
-                    ((kd) (var2)).field_qb = false;
+                    ((Zombie) (var2)).field_qb = false;
                   }
-                  var2 = (fb) (this.field_R.a(false));
+                  var2 = (WorldObject) (this.field_R.a(false));
                 }
               }
               if (decompiledFrameCompleted1) {
@@ -4537,9 +4537,9 @@ final class hi {
                       !bo.field_p[82]) {
                       this.c((byte) -112);
                     }
-                    var4 = (fb) (this.field_R.b((byte) 26));
+                    var4 = (WorldObject) (this.field_R.b((byte) 26));
                     while (var4 != null) {
-                      stackOut_117_0 = var4 instanceof kd;
+                      stackOut_117_0 = var4 instanceof Zombie;
                       stackIn_126_0 = stackOut_117_0 ? 1 : 0;
                       stackIn_118_0 = stackOut_117_0;
                       if (var6 != 0) {
@@ -4547,12 +4547,12 @@ final class hi {
                         break;
                       }
                       if (stackIn_118_0) {
-                        var5 = (kd) (var4);
+                        var5 = (Zombie) (var4);
                         if (var5.i((byte) -126)) {
                           var5.field_qb = var5.a(this.field_S.a(this.field_B, false), this.field_S.a(ha.field_b, false), this.field_S.b(this.field_j, true), this.field_S.b(ei.field_K, true), false);
                         }
                       }
-                      var4 = (fb) (this.field_R.a(false));
+                      var4 = (WorldObject) (this.field_R.a(false));
                     }
                   }
                 }
@@ -4568,52 +4568,52 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "hi.V(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "hi.V(" + param0 + ')');
         }
     }
 
     final void b(boolean param0) {
         boolean stackIn_4_0 = false;
-        ej stackIn_10_0 = null;
+        LevelNavigation stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
-        g stackIn_17_0 = null;
+        Mover stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        vo stackIn_22_0 = null;
+        IntrusiveDeque stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0;
-        fb var2 = null;
+        WorldObject var2 = null;
         RuntimeException var2_ref = null;
-        g var3 = null;
+        Mover var3 = null;
         int var4 = 0;
         var4 = ZombieDawn.field_J;
         try {
           dj.field_e.field_H.a(param0, -106);
-          var2 = (fb) (this.field_R.b((byte) 26));
+          var2 = (WorldObject) (this.field_R.b((byte) 26));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
-            stackOut_3_0 = var2 instanceof g;
+            stackOut_3_0 = var2 instanceof Mover;
             stackIn_25_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var4 == 0) {
               if (stackIn_4_0) {
-                var3 = (g) (var2);
+                var3 = (Mover) (var2);
                 stackIn_10_0 = this.field_H;
                 stackIn_11_1 = !(param0);
-                if (!((ej) (Object) stackIn_10_0).a(stackIn_11_1, var3.f(237239984), var3.a(true), false)) {
+                if (!((LevelNavigation) (Object) stackIn_10_0).a(stackIn_11_1, var3.getY(237239984), var3.getX(true), false)) {
                   stackIn_17_0 = var3;
-                  if (var3 instanceof ah) {
+                  if (var3 instanceof Human) {
                     stackIn_18_1 = 0;
                   } else {
                     stackIn_18_1 = 4;
                   }
-                  ((g) (Object) stackIn_17_0).e(stackIn_18_1, -6904);
+                  ((Mover) (Object) stackIn_17_0).e(stackIn_18_1, -6904);
                 }
               }
               stackIn_22_0 = this.field_R;
               stackIn_23_1 = !(param0);
-              var2 = (fb) (((vo) (Object) stackIn_22_0).a(stackIn_23_1));
+              var2 = (WorldObject) (((IntrusiveDeque) (Object) stackIn_22_0).a(stackIn_23_1));
               continue;
             }
             break;
@@ -4645,11 +4645,11 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "hi.E(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "hi.E(" + param0 + ')');
         }
     }
 
-    final void a(boolean param0, fb param1) {
+    final void a(boolean param0, WorldObject param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -4671,7 +4671,7 @@ final class hi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -4679,7 +4679,7 @@ final class hi {
         RuntimeException var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m.a(0, new ck(param3, param1, param0));
+          this.field_m.addFirst(0, new ck(param3, param1, param0));
           if (!param2) {
             this.field_W = (ra) null;
           }
@@ -4687,7 +4687,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5), "hi.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5), "hi.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -4733,7 +4733,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.VA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.VA(" + param0 + ')');
         }
     }
 
@@ -4754,11 +4754,11 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "hi.LA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "hi.LA(" + param0 + ')');
         }
     }
 
-    hi(int param0, int param1) {
+    GameWorld(int param0, int param1) {
         RuntimeException runtimeException = null;
         int[] var3 = null;
         int[] var4 = null;
@@ -4774,7 +4774,7 @@ final class hi {
         this.field_C = -604090368;
         this.field_F = false;
         this.field_Z = -12;
-        this.field_ob = new vo();
+        this.field_ob = new IntrusiveDeque();
         this.field_r = 0;
         this.field_P = 0;
         this.field_nb = 0;
@@ -4831,7 +4831,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) runtimeException), "hi.<init>(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -14,13 +14,13 @@ final class l extends ll {
         b var2Lifetime1;
         if (param0 >= 62) {
           var2 = new b();
-          qi.field_J.a(0, var2);
+          qi.field_J.addFirst(0, var2);
           pp.a(2, param1);
           return var2;
         }
         field_g = (String) null;
         var2Lifetime1 = new b();
-        qi.field_J.a(0, var2Lifetime1);
+        qi.field_J.addFirst(0, var2Lifetime1);
         pp.a(2, param1);
         return var2Lifetime1;
     }
@@ -50,7 +50,7 @@ final class l extends ll {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class l extends ll {
           param1.a((byte) -88, this.field_f);
           param1.a(this.field_c, (byte) 95);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "l.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "l.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class l extends ll {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -138,7 +138,7 @@ final class l extends ll {
           this.field_c = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -229,10 +229,10 @@ abstract class rb extends DualLinkNode {
               }
               param1 = param1 + this.field_r[var8];
               if (field_q != -1) {
-                bi.b(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_q);
+                Rasterizer.b(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_q);
               }
               if (field_u != -1) {
-                bi.b(var11, param2 + this.field_C + 1, param1 - var11, field_u);
+                Rasterizer.b(var11, param2 + this.field_C + 1, param1 - var11, field_u);
               }
               var5 = var8;
             }

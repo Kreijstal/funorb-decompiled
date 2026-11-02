@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ma extends IntrusiveNode {
-    gi[] field_o;
+    PcmSample[] field_o;
     static String field_q;
     byte[] field_h;
     nf[] field_s;
@@ -80,7 +80,7 @@ final class ma extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_o[var8] = (gi) (var7);
+                  this.field_o[var8] = (PcmSample) (var7);
                   this.field_l[var8] = 0;
                 }
               }
@@ -110,7 +110,7 @@ final class ma extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class ma extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class ma extends IntrusiveNode {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_o = new gi[128];
+          this.field_o = new PcmSample[128];
           this.field_l = new int[128];
           this.field_t = new byte[128];
           this.field_j = new short[128];
@@ -699,7 +699,7 @@ final class ma extends IntrusiveNode {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk {
-    int field_c;
+final class Camera {
+    int y;
     private int field_q;
     private int field_s;
     private int field_t;
@@ -15,7 +15,7 @@ final class wk {
     private int field_y;
     static vn field_o;
     private int field_p;
-    int field_u;
+    int x;
     private int field_n;
     float field_g;
     private int field_x;
@@ -38,10 +38,10 @@ final class wk {
     }
 
     final void a(byte param0) {
-        this.field_c = this.field_k;
+        this.y = this.field_k;
         this.field_f = this.field_k;
         this.field_d = true;
-        this.field_u = this.field_l;
+        this.x = this.field_l;
         this.field_v = this.field_l;
         this.field_g = 1.0f;
         if (param0 >= -33) {
@@ -69,14 +69,14 @@ final class wk {
         if (param1) {
           this.b(64, false);
         }
-        return -bd.field_d + (param0 + this.field_u);
+        return -bd.field_d + (param0 + this.x);
     }
 
     final void c(int param0) {
         this.field_d = false;
         this.field_e = 1.0f;
-        this.field_u = this.field_j;
-        this.field_c = this.field_h;
+        this.x = this.field_j;
+        this.y = this.field_h;
         int var2 = 73 % ((-42 - param0) / 61);
     }
 
@@ -84,7 +84,7 @@ final class wk {
         if (!param1) {
           return -101;
         }
-        return this.field_c + param0 - nh.field_G;
+        return this.y + param0 - nh.field_G;
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
@@ -140,8 +140,8 @@ final class wk {
                 }
               }
             }
-            wk.a(param0, var8, param2, param3, param4, var9, param6);
-            wk.a(var8, param1, param2, 0, param4, param5, var10);
+            Camera.a(param0, var8, param2, param3, param4, var9, param6);
+            Camera.a(var8, param1, param2, 0, param4, param5, var10);
             return;
           }
           for (var7_intLifetime1 = -1 + param1; param0 < var7_intLifetime1; var7_intLifetime1--) {
@@ -158,22 +158,22 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var7), "wk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var7), "wk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int worldToScreenX(int param0, byte param1) {
         if (param1 >= -58) {
           return -34;
         }
-        return bd.field_d + (param0 - this.field_u);
+        return bd.field_d + (param0 - this.x);
     }
 
-    final int a(int param0, int param1) {
+    final int worldToScreenY(int param0, int param1) {
         if (param1 != 0) {
           this.field_x = 23;
         }
-        return -this.field_c + param0 + nh.field_G;
+        return -this.y + param0 + nh.field_G;
     }
 
     final void a(boolean param0, boolean param1, boolean param2, byte param3, boolean param4, boolean param5) {
@@ -235,8 +235,8 @@ final class wk {
           if (param2) {
             this.field_i = -var7;
           }
-          this.field_u = this.field_u + this.field_i;
-          this.field_c = this.field_c + this.field_y;
+          this.x = this.x + this.field_i;
+          this.y = this.y + this.field_y;
         } else {
           if (0.00001 < (double)this.field_r &&
             this.field_e < 1.0f) {
@@ -246,9 +246,9 @@ final class wk {
             }
             var7_float = this.field_e;
             var8 = 1.0f - var7_float;
-            this.field_u = (int)((float)(this.field_m * 3) * var8 * var7_float * var7_float + (var8 * (var8 * (float)this.field_l) * var8 + var8 * ((float)(this.field_n * 3) * var8) * var7_float) + var7_float * (var7_float * (float)this.field_j * var7_float));
+            this.x = (int)((float)(this.field_m * 3) * var8 * var7_float * var7_float + (var8 * (var8 * (float)this.field_l) * var8 + var8 * ((float)(this.field_n * 3) * var8) * var7_float) + var7_float * (var7_float * (float)this.field_j * var7_float));
             this.field_v = (int)((float)(this.field_m * 3) * var8 * var7_float * var7_float + (var8 * (var8 * (float)this.field_l) * var8 + var8 * ((float)(this.field_n * 3) * var8) * var7_float) + var7_float * (var7_float * (float)this.field_j * var7_float));
-            this.field_c = (int)(var8 * ((float)this.field_k * var8 * var8) + (float)(this.field_x * 3) * var8 * var8 * var7_float + var7_float * (var7_float * (var8 * (float)(this.field_b * 3))) + var7_float * (float)this.field_h * var7_float * var7_float);
+            this.y = (int)(var8 * ((float)this.field_k * var8 * var8) + (float)(this.field_x * 3) * var8 * var8 * var7_float + var7_float * (var7_float * (var8 * (float)(this.field_b * 3))) + var7_float * (float)this.field_h * var7_float * var7_float);
             this.field_f = (int)(var8 * ((float)this.field_k * var8 * var8) + (float)(this.field_x * 3) * var8 * var8 * var7_float + var7_float * (var7_float * (var8 * (float)(this.field_b * 3))) + var7_float * (float)this.field_h * var7_float * var7_float);
           } else {
             this.field_d = false;
@@ -258,31 +258,31 @@ final class wk {
     }
 
     final void a(byte param0, int param1, int param2) {
-        this.field_c = this.field_c - param2;
-        this.field_u = this.field_u - param1;
+        this.y = this.y - param2;
+        this.x = this.x - param1;
         int var4 = 15 % ((-55 - param0) / 43);
         this.b(-28216);
     }
 
     private final void b(int param0) {
-        if (this.field_u < this.field_s) {
-          this.field_u = this.field_s;
+        if (this.x < this.field_s) {
+          this.x = this.field_s;
         }
         if (param0 != -28216) {
           return;
         }
-        if (this.field_w > this.field_c) {
-          this.field_c = this.field_w;
+        if (this.field_w > this.y) {
+          this.y = this.field_w;
         }
-        if (this.field_a < this.field_c) {
-          this.field_c = this.field_a;
+        if (this.field_a < this.y) {
+          this.y = this.field_a;
         }
-        if (this.field_u > this.field_p) {
-          this.field_u = this.field_p;
+        if (this.x > this.field_p) {
+          this.x = this.field_p;
         }
     }
 
-    wk(int param0, int param1) {
+    Camera(int param0, int param1) {
         this.field_y = 0;
         this.field_i = 0;
         this.field_d = false;

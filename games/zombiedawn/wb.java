@@ -122,7 +122,7 @@ abstract class wb extends GameApplet {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ abstract class wb extends GameApplet {
           }
           if (1 != var2) {
             if (var2 == 2) {
-              ej.a((byte) -83);
+              LevelNavigation.a((byte) -83);
             } else {
               if (3 != var2) {
                 if (4 != var2) {
@@ -458,11 +458,11 @@ abstract class wb extends GameApplet {
           if (jp.field_a != 0) {
             f.field_i = mm.a(f.field_f, (byte) -63);
           }
-          vo.field_d = wn.a(true, mp.field_d, (byte) -85, 1, false);
+          IntrusiveDeque.field_d = wn.a(true, mp.field_d, (byte) -85, 1, false);
           da.field_l = wn.a(true, hf.field_F, (byte) -85, 1, false);
           al.field_a = wn.a(true, ho.field_b, (byte) -85, 1, false);
           gj.field_i = da.field_l;
-          nl.field_p = vo.field_d;
+          nl.field_p = IntrusiveDeque.field_d;
           ld.field_j = 2;
         }
         if (ld.field_j == 2) {
@@ -483,13 +483,13 @@ abstract class wb extends GameApplet {
           }
         }
         if (ld.field_j == 3 &&
-          al.a(al.field_a, -31526, vo.field_d, da.field_l) &&
+          al.a(al.field_a, -31526, IntrusiveDeque.field_d, da.field_l) &&
           eh.a(false, al.field_a)) {
           ph.b(26311);
           ng.a(121);
           ka.field_a = ql.field_f;
           de.field_i = false;
-          nk.a(al.field_a, -1, da.field_l, vo.field_d, ih.field_S);
+          nk.a(al.field_a, -1, da.field_l, IntrusiveDeque.field_d, ih.field_S);
           if (sn.field_b ||
             fo.field_b != null) {
             stackIn_99_0 = -753;
@@ -507,7 +507,7 @@ abstract class wb extends GameApplet {
           }
           nl.a(nk.field_g, t.field_m, (byte) -98, al.field_a);
           al.field_a = null;
-          vo.field_d = null;
+          IntrusiveDeque.field_d = null;
           da.field_l = null;
           ca.a((byte) 104, (java.applet.Applet) (this));
           ep.c((byte) -50);
@@ -567,7 +567,7 @@ abstract class wb extends GameApplet {
         try {
           this.a(param2, 640, -17761, 480, param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "wb.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wb.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -769,7 +769,7 @@ abstract class wb extends GameApplet {
           discarded$4 = this.a(stackIn_11_1, stackIn_12_2, 115);
         } else {
           if (ld.field_j >= 10) {
-            if (kk.a(param0 ^ -239)) {
+            if (Point.a(param0 ^ -239)) {
               if (fl.field_a != 0) {
                 wd.b(112, id.field_I);
               } else {

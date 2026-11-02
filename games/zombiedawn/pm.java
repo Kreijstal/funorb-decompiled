@@ -17,7 +17,7 @@ abstract class pm extends um implements ok {
           var3.i(param2.field_u, -114);
           var3.i(param2.field_o, param0 ^ -126);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,7 +89,7 @@ abstract class pm extends um implements ok {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ abstract class pm extends um implements ok {
         try {
           int var3_int = 101 % ((param1 - 35) / 38);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pm.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ abstract class pm extends um implements ok {
             field_c = (java.math.BigInteger) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -132,15 +132,15 @@ abstract class pm extends um implements ok {
     final static void d(byte param0) {
         int var1_int = 0;
         int var2 = ZombieDawn.field_J;
-        ej.field_a = new vn(60, 60);
-        ej.field_a.a();
-        bi.g(30, 30, 28, 4521728);
+        LevelNavigation.field_a = new vn(60, 60);
+        LevelNavigation.field_a.a();
+        Rasterizer.g(30, 30, 28, 4521728);
         og.field_x = new vn[8];
         for (var1_int = 0; 8 > var1_int; var1_int++) {
           og.field_x[var1_int] = new vn(22, 22);
           og.field_x[var1_int].a();
-          bi.g(11, 11, 2 + var1_int, 5622784);
-          bi.g(11, 11, var1_int, 65793);
+          Rasterizer.g(11, 11, 2 + var1_int, 5622784);
+          Rasterizer.g(11, 11, var1_int, 65793);
         }
         if (param0 != 36) {
           return;
@@ -148,7 +148,7 @@ abstract class pm extends um implements ok {
         try {
           cn.field_f.b(69);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pm.F(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.F(" + param0 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ abstract class pm extends um implements ok {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

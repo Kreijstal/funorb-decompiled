@@ -46,9 +46,9 @@ final class ml {
         return var3;
     }
 
-    final gi b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new gi(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
     final static ml a(dj param0, String param1, String param2) {

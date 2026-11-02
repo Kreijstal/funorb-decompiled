@@ -67,7 +67,7 @@ abstract class qb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ abstract class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "qb.E(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "qb.E(" + param0 + ',' + param1 + ')');
         }
     }
 

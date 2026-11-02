@@ -29,7 +29,7 @@ final class k extends vf {
         int var12 = 0;
         int var13 = 0;
         try {
-          bi.c(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
+          Rasterizer.c(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
           if (param1) {
             stackIn_6_0 = (((an) (param3)).field_x) ? 1 : 0;
           } else {
@@ -71,7 +71,7 @@ final class k extends vf {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class k extends vf {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         int var2Lifetime1;
-        hi.field_O = null;
+        GameWorld.field_O = null;
         if (param1 != 50) {
           field_r = (String) null;
           sb.field_a = null;
@@ -266,7 +266,7 @@ final class k extends vf {
           this.field_s = param0;
           this.field_m = ia.field_e;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

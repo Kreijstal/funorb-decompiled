@@ -488,9 +488,9 @@ final class ap extends al {
         int var3;
         int var5;
         int var6;
-        hi var7;
-        hi var9;
-        hi var10;
+        GameWorld var7;
+        GameWorld var9;
+        GameWorld var10;
         int var5Lifetime1;
         int var5Lifetime2;
         var6 = ZombieDawn.field_J;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gb extends fb {
+final class gb extends WorldObject {
     private int field_D;
     private int field_E;
     private boolean field_F;
@@ -16,7 +16,7 @@ final class gb extends fb {
         this.d((byte) 121);
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var11 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -57,15 +57,15 @@ final class gb extends fb {
               }
             }
           }
-          var4 = param1.a(this.a(true), (byte) -81);
-          var5 = -24 + param1.a(this.f(237239984) - var3_int, 0);
+          var4 = param1.worldToScreenX(this.getX(true), (byte) -81);
+          var5 = -24 + param1.worldToScreenY(this.getY(237239984) - var3_int, 0);
           if (var4 >= -48 &&
             var5 >= -48 &&
             var4 <= qj.field_d &&
             var5 <= me.field_Bb) {
             if (ng.field_e &&
               this.field_C) {
-              bi.g(12 + var4, var5 + 12, 14, 16711680);
+              Rasterizer.g(12 + var4, var5 + 12, 14, 16711680);
             }
             if (this.field_F) {
               var6 = -1 + var4 + 12;
@@ -76,11 +76,11 @@ final class gb extends fb {
                 var8 = (this.field_E + var11 * 6) % 120;
                 var12 = var11 * var9;
                 var13 = var11 * var10;
-                bi.d(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
-                bi.a(gj.field_u[var8] + var6 << 4, gj.field_e[var8] + var7 << 4, 96, var13, gj.field_b[this.field_t]);
+                Rasterizer.d(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
+                Rasterizer.a(gj.field_u[var8] + var6 << 4, gj.field_e[var8] + var7 << 4, 96, var13, gj.field_b[this.field_t]);
                 var8 = (var8 + 60) % 120;
-                bi.d(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
-                bi.a(gj.field_u[var8] + var6 << 4, var7 + gj.field_e[var8] << 4, 96, var13, gj.field_b[this.field_t]);
+                Rasterizer.d(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
+                Rasterizer.a(gj.field_u[var8] + var6 << 4, var7 + gj.field_e[var8] << 4, 96, var13, gj.field_b[this.field_t]);
               }
             }
             kb.field_i[this.field_t].b(var4, var5);
@@ -97,7 +97,7 @@ final class gb extends fb {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class gb extends fb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -166,13 +166,13 @@ final class gb extends fb {
         int var5;
         int var6;
         dj var7;
-        kd var8;
+        Zombie var8;
         int var5Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var6 = ZombieDawn.field_J;
         if (5 == dj.field_e.field_H.field_A.field_a) {
-          var2 = (this.a(true) + 12) / 24;
-          var3 = (-1 + this.f(237239984)) / 24;
+          var2 = (this.getX(true) + 12) / 24;
+          var3 = (-1 + this.getY(237239984)) / 24;
           if (var2 >= 0 &&
             var3 >= 0 &&
             dj.field_e.field_H.field_A.field_f[0].length > var2 &&
@@ -238,7 +238,7 @@ final class gb extends fb {
         this.field_D = this.field_D + 1;
         if (fieldTemp$0 > 5) {
           this.field_D = 0;
-          var8 = (kd) (this.a((byte) -74, 36, 2));
+          var8 = (Zombie) (this.a((byte) -74, 36, 2));
           while (var8 != null) {
             if (var8.i((byte) -126) &&
               dj.field_e.field_Q.b(-4149, this.field_t)) {
@@ -260,7 +260,7 @@ final class gb extends fb {
               this.unlink(-27598);
               return;
             }
-            var8 = (kd) (this.e((byte) 32));
+            var8 = (Zombie) (this.e((byte) 32));
           }
         }
     }

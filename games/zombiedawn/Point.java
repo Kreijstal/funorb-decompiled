@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends IntrusiveNode {
-    int field_l;
-    static vo field_j;
+final class Point extends IntrusiveNode {
+    int x;
+    static IntrusiveDeque field_j;
     static String field_k;
     static sg field_i;
-    int field_h;
+    int y;
     static jp field_m;
 
     final static boolean a(int param0) {
         if (param0 == -251) {
-          return ej.field_x > 250 ? true : false;
+          return LevelNavigation.field_x > 250 ? true : false;
         }
         field_m = (jp) null;
-        return ej.field_x > 250 ? true : false;
+        return LevelNavigation.field_x > 250 ? true : false;
     }
 
     public static void c(byte param0) {
@@ -32,17 +32,17 @@ final class kk extends IntrusiveNode {
         field_k = null;
     }
 
-    final kk c(int param0) {
+    final Point c(int param0) {
         if (param0 >= 36) {
-          return new kk(this.field_l, this.field_h);
+          return new Point(this.x, this.y);
         }
         field_m = (jp) null;
-        return new kk(this.field_l, this.field_h);
+        return new Point(this.x, this.y);
     }
 
-    kk(int param0, int param1) {
-        this.field_h = param1;
-        this.field_l = param0;
+    Point(int param0, int param1) {
+        this.y = param1;
+        this.x = param0;
     }
 
     final static oi a(int param0, byte[] param1) {
@@ -60,7 +60,7 @@ final class kk extends IntrusiveNode {
           var2 = new oi(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, vj.field_m);
           no.f((byte) -87);
           if (param0 != -16491) {
-            kk.c((byte) -90);
+            Point.c((byte) -90);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -74,12 +74,12 @@ final class kk extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     static {
-        field_j = new vo();
+        field_j = new IntrusiveDeque();
         field_m = new jp(1);
     }
 }

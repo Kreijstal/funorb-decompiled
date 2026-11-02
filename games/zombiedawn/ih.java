@@ -23,7 +23,7 @@ final class ih extends hp implements ok, hh {
             this.a((tb) null, 89);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ih.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ih.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class ih extends hp implements ok, hh {
           ia.field_e.a(this.field_P, 20 + (param2 + this.field_k), param0 - (-this.field_j - 15), this.field_i - 40, this.field_n, 16777215, -1, 1, 0, ia.field_e.field_I);
         }
         if (this.field_K != null) {
-          bi.b(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
+          Rasterizer.b(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -248,7 +248,7 @@ final class ih extends hp implements ok, hh {
           var3.a(false, false, var4);
           this.field_M.j(0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ih.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ih.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -278,7 +278,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class ih extends hp implements ok, hh {
         if (param0 > -23) {
           return;
         }
-        if (eo.b(127) ||
+        if (HumanFactory.b(127) ||
           !(this.field_N.field_o.length() <= 0) &&
           !(this.field_M.field_o.length() <= 0)) {
           rg.a(this.field_N.field_o, -27, this.field_M.field_o);

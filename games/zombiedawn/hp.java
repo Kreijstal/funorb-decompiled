@@ -4,7 +4,7 @@
 import java.util.*;
 
 class hp extends ga implements jf {
-    vo field_x;
+    IntrusiveDeque field_x;
     static af field_z;
     static dk field_A;
     static mf field_B;
@@ -59,7 +59,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ class hp extends ga implements jf {
         RuntimeException decompiledCaughtException = null;
         var8 = ZombieDawn.field_J;
         try {
-          if (this.field_x.a((byte) -123)) {
+          if (this.field_x.isEmpty((byte) -123)) {
             return false;
           }
           var4 = 2 / ((66 - param0) / 53);
@@ -122,7 +122,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ class hp extends ga implements jf {
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawn.field_J;
         try {
-          if (this.field_x.a((byte) -121)) {
+          if (this.field_x.isEmpty((byte) -121)) {
             return false;
           }
           var8 = new cj(this.field_x);
@@ -300,7 +300,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ class hp extends ga implements jf {
         var4 = ZombieDawn.field_J;
         var2 = new cj(this.field_x);
         if (param0 != 35) {
-          this.field_x = (vo) null;
+          this.field_x = (IntrusiveDeque) null;
         }
         var3 = (ga) (var2.c((byte) -126));
         while (var3 != null) {
@@ -495,7 +495,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -521,7 +521,7 @@ class hp extends ga implements jf {
             break;
           }
           if (param1 < 1) {
-            this.field_x = (vo) null;
+            this.field_x = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -534,7 +534,7 @@ class hp extends ga implements jf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -563,12 +563,12 @@ class hp extends ga implements jf {
 
     final void a(ga param0, int param1) {
         try {
-          this.field_x.a(0, param0);
+          this.field_x.addFirst(0, param0);
           if (param1 != 10) {
             this.c(30);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hp.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hp.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -587,7 +587,7 @@ class hp extends ga implements jf {
 
     hp(int param0, int param1, int param2, int param3, io param4) {
         super(param0, param1, param2, param3, param4, (sk) null);
-        this.field_x = new vo();
+        this.field_x = new IntrusiveDeque();
     }
 
     static {

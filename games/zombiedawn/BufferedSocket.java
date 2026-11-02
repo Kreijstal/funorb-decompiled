@@ -70,7 +70,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -263,10 +263,10 @@ final class BufferedSocket implements Runnable {
           return;
         }
         try {
-          hk.field_F.a(0, param0);
+          hk.field_F.addFirst(0, param0);
           DelegatingCanvas.a((byte) -92, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "gm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "gm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -352,11 +352,11 @@ final class BufferedSocket implements Runnable {
           this.field_d = this.field_l.getOutputStream();
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static on a(byte[] param0, int param1) {
+    final static TileMap a(byte[] param0, int param1) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int var2_int = 0;
@@ -367,8 +367,8 @@ final class BufferedSocket implements Runnable {
         int var6 = 0;
         byte[] var7 = null;
         byte[] var8 = null;
-        on stackIn_3_0 = null;
-        on stackIn_11_0 = null;
+        TileMap stackIn_3_0 = null;
+        TileMap stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -378,7 +378,7 @@ final class BufferedSocket implements Runnable {
         var6 = ZombieDawn.field_J;
         try {
           if (param1 >= -3) {
-            stackIn_3_0 = (on) null;
+            stackIn_3_0 = (TileMap) null;
             return stackIn_3_0;
           }
           var2_int = 0;
@@ -386,7 +386,7 @@ final class BufferedSocket implements Runnable {
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            fb.a(var2_intLifetime1, var3, (byte) -81, md.a(var2_intLifetime1, param0, 70));
+            WorldObject.a(var2_intLifetime1, var3, (byte) -81, md.a(var2_intLifetime1, param0, 70));
           }
           incrementValue$2 = var2_intLifetime1;
           var2_intLifetime1++;
@@ -394,16 +394,16 @@ final class BufferedSocket implements Runnable {
           incrementValue$3 = var2_intLifetime1;
           var2_intLifetime1++;
           var5 = md.a(incrementValue$3, param0, 65);
-          fb.a(4, var8, (byte) 69, var4);
-          fb.a(5, var8, (byte) 61, var5);
-          fb.a(6, var8, (byte) 79, var4);
-          fb.a(7, var8, (byte) 80, var5);
-          fb.a(8, var8, (byte) 56, var4);
-          fb.a(9, var8, (byte) -64, var5);
-          fb.a(10, var8, (byte) 66, var4);
-          fb.a(11, var8, (byte) 74, var5);
+          WorldObject.a(4, var8, (byte) 69, var4);
+          WorldObject.a(5, var8, (byte) 61, var5);
+          WorldObject.a(6, var8, (byte) 79, var4);
+          WorldObject.a(7, var8, (byte) 80, var5);
+          WorldObject.a(8, var8, (byte) 56, var4);
+          WorldObject.a(9, var8, (byte) -64, var5);
+          WorldObject.a(10, var8, (byte) 66, var4);
+          WorldObject.a(11, var8, (byte) 74, var5);
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
-            fb.a(6 + var2_intLifetime2, var3, (byte) 42, md.a(var2_intLifetime2, param0, 93));
+            WorldObject.a(6 + var2_intLifetime2, var3, (byte) 42, md.a(var2_intLifetime2, param0, 93));
           }
           stackIn_11_0 = vk.a((byte) -83, var8);
           return stackIn_11_0;
@@ -417,7 +417,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

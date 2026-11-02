@@ -22,7 +22,7 @@ final class pl extends al {
             e.field_S.b(param1, false, param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pl.P(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pl.P(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "pl.BB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "pl.BB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -112,10 +112,10 @@ final class pl extends al {
           if (param1 != -257) {
             return;
           }
-          bi.d();
+          Rasterizer.d();
           this.a(0, 0, param1 ^ 260);
           if (param0 >= 0) {
-            bi.h(3, 3, 0, 0, 640, 341);
+            Rasterizer.h(3, 3, 0, 0, 640, 341);
             this.a(0, 0, 0, param0);
             cn.field_f.b(125);
           } else {
@@ -125,7 +125,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "pl.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "pl.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var6), "pl.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var6), "pl.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class pl extends al {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -385,16 +385,16 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "pl.F(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "pl.F(" + param0 + ')');
         }
     }
 
     final void a(boolean param0, int param1, int param2) {
-        hi stackIn_44_0 = null;
-        hi stackIn_44_1 = null;
+        GameWorld stackIn_44_0 = null;
+        GameWorld stackIn_44_1 = null;
         int stackIn_44_2 = 0;
-        hi stackIn_45_0 = null;
-        hi stackIn_45_1 = null;
+        GameWorld stackIn_45_0 = null;
+        GameWorld stackIn_45_1 = null;
         int stackIn_45_3 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -443,7 +443,7 @@ final class pl extends al {
                     stackIn_45_1 = null;
                     stackIn_45_3 = -1;
                   }
-                  vl.field_b = new hi(stackIn_44_2, stackIn_45_3);
+                  vl.field_b = new GameWorld(stackIn_44_2, stackIn_45_3);
                   if (var6 == 0 &&
                     var5 == 0) {
                     ((kl) (jj.c(12, 81))).e(-124);
@@ -468,7 +468,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "pl.MA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "pl.MA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -496,7 +496,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "pl.L(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "pl.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -513,7 +513,7 @@ final class pl extends al {
           String var5Lifetime4;
           String var5Lifetime5;
           String var5Lifetime6;
-          g.field_H = param0;
+          Mover.field_H = param0;
           try {
             var6 = param2.getParameter("cookieprefix");
             var5 = var6;
@@ -576,7 +576,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "pl.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "pl.B(" + param0 + ')');
         }
     }
 
@@ -584,7 +584,7 @@ final class pl extends al {
         try {
           int var4_int = -99 % ((-61 - param0) / 34);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pl.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pl.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -656,7 +656,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "pl.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "pl.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -689,7 +689,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "pl.M(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "pl.M(" + param0 + ')');
         }
     }
 
@@ -735,19 +735,19 @@ final class pl extends al {
           var9 = 16777215;
           i.field_T.e(param1, param2);
           var10 = 1;
-          bi.a(param1 + qo.field_s, 35 + param2, bm.field_c, 280, 0, 128);
+          Rasterizer.a(param1 + qo.field_s, 35 + param2, bm.field_c, 280, 0, 128);
           if (nc.field_k.field_r >= bm.field_c) {
             nc.field_k.b(param1 + 195, 30 + param2);
           } else {
-            bi.f(0, 0, 320 + param1, nh.field_P);
+            Rasterizer.f(0, 0, 320 + param1, nh.field_P);
             nc.field_k.b(qo.field_s + param1, 30 + param2);
-            bi.f(320 + param1, 0, bd.field_e, nh.field_P);
+            Rasterizer.f(320 + param1, 0, bd.field_e, nh.field_P);
             nc.field_k.b(param1 - (-j.field_d + nc.field_k.field_r), 30 + param2);
-            bi.c();
+            Rasterizer.c();
           }
-          bi.g(param1 + wl.field_b, param2 + 47, 23, 23, 3, var5_int);
+          Rasterizer.g(param1 + wl.field_b, param2 + 47, 23, 23, 3, var5_int);
           if (hm.field_J == -2) {
-            bi.e(wl.field_b + param1, 47 + param2, 23, 23, 3, 16764108);
+            Rasterizer.e(wl.field_b + param1, 47 + param2, 23, 23, 3, 16764108);
           }
           bj.field_q.a("X", 11 + (param1 + wl.field_b), param2 + 64, var6, 65793);
           if (9 == param3) {
@@ -807,8 +807,8 @@ final class pl extends al {
               var16Lifetime1 = var9;
             }
             if (var13 != 0) {
-              bi.c(5 + qo.field_s + param1, param2 + 118 - 25 + var12 * 29, bm.field_c - 10, 20, 0, 26112);
-              bi.c(5 + qo.field_s + param1, 29 * var12 + (param2 + 113), -10 + bm.field_c, 20, 26112, 0);
+              Rasterizer.c(5 + qo.field_s + param1, param2 + 118 - 25 + var12 * 29, bm.field_c - 10, 20, 0, 26112);
+              Rasterizer.c(5 + qo.field_s + param1, 29 * var12 + (param2 + 113), -10 + bm.field_c, 20, 26112, 0);
             }
             stackIn_65_0 = (var10 != 0) ? 0 : 1;
             var10 = stackIn_65_0;
@@ -818,7 +818,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5), "pl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5), "pl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -847,7 +847,7 @@ final class pl extends al {
             rg.field_F = IterableNodeHashTable.field_b;
             this.f(-1, -257);
             i.field_T.a();
-            bi.h(3, 3, 0, 0, 640, 341);
+            Rasterizer.h(3, 3, 0, 0, 640, 341);
             cn.field_f.b(-128);
             ce.field_p = 0;
           }
@@ -901,7 +901,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "pl.S(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "pl.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -949,7 +949,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "pl.C(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "pl.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -990,7 +990,7 @@ final class pl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4), "pl.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4), "pl.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1002,7 +1002,7 @@ final class pl extends al {
             field_m = -95;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pl.N(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pl.N(" + param0 + ')');
         }
     }
 

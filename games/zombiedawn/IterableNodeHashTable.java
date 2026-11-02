@@ -66,7 +66,7 @@ final class IterableNodeHashTable implements Iterable {
         return var3 + param0;
     }
 
-    final static hn a(int param0, gi param1) {
+    final static hn a(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         hn stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -77,7 +77,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param0 != 96) {
             field_b = 21;
           }
-          stackIn_3_0 = aa.a(106, fn.a(param1, 100, 96));
+          stackIn_3_0 = aa.a(106, PcmSampleStream.a(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class IterableNodeHashTable implements Iterable {
           param2.key = param0;
           param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

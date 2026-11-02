@@ -66,7 +66,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class fk extends hp implements oa, hh, ri {
           int var5_int = 40 % ((46 - param1) / 42);
           this.field_L.field_C = this.j(40);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "fk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -337,7 +337,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class fk extends hp implements oa, hh, ri {
           var4 = param1;
           ((tb) ((Object) var3)).a(false, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "fk.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fk.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -422,7 +422,7 @@ final class fk extends hp implements oa, hh, ri {
         this.field_H = new an(vl.field_f, (sk) null);
         this.field_N.field_s = sn.field_d;
         this.field_G.field_s = c.field_a;
-        this.field_M.field_s = hi.field_pb;
+        this.field_M.field_s = GameWorld.field_pb;
         this.field_P.field_s = BufferedSocket.field_f;
         this.field_Q.field_s = qo.field_t;
         this.field_R.field_s = lm.field_D;
@@ -483,7 +483,7 @@ final class fk extends hp implements oa, hh, ri {
         int fieldTemp$0 = oo.field_R;
         oo.field_R = oo.field_R - 1;
         if (fieldTemp$0 <= 0) {
-          dj.field_e.field_R.a(0, new hk());
+          dj.field_e.field_R.addFirst(0, new hk());
           oo.field_R = pb.a(so.field_a, 40, 1) + 40;
           if (param0) {
             fk.b(false);
@@ -534,7 +534,7 @@ final class fk extends hp implements oa, hh, ri {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

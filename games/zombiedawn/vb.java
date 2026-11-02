@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends fb {
+final class vb extends WorldObject {
     private int field_H;
-    static gi[] field_D;
+    static PcmSample[] field_D;
     static int field_I;
     private int field_G;
     private int field_E;
@@ -69,7 +69,7 @@ final class vb extends fb {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class vb extends fb {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -153,9 +153,9 @@ final class vb extends fb {
         }
     }
 
-    final void a(byte param0, wk param1) {
-        int var3_int = param1.a(this.a(true), (byte) -97) - 24;
-        int var4 = -48 + param1.a(this.f(237239984), 0);
+    final void a(byte param0, Camera param1) {
+        int var3_int = param1.worldToScreenX(this.getX(true), (byte) -97) - 24;
+        int var4 = -48 + param1.worldToScreenY(this.getY(237239984), 0);
         if (-48 > var3_int ||
           -48 > var4 ||
           qj.field_d < var3_int ||
@@ -164,17 +164,17 @@ final class vb extends fb {
         }
         try {
           if (param0 >= -76) {
-            wk var5 = (wk) null;
-            this.a((byte) 89, (wk) null);
+            Camera var5 = (Camera) null;
+            this.a((byte) 89, (Camera) null);
           }
           fj.a(ad.field_g[this.field_t][this.field_G + 32], 0, 339, this.field_t == 0 ? true : false).e(var3_int - 3, var4 - 3, this.field_E);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_D = new gi[155];
+        field_D = new PcmSample[155];
         field_I = 0;
     }
 }

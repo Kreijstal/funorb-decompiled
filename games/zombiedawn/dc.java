@@ -32,20 +32,20 @@ final class dc {
         field_a = null;
     }
 
-    final static fn a(byte param0, int param1) {
+    final static PcmSampleStream a(byte param0, int param1) {
         tm var2 = null;
         tm var2Lifetime1;
-        if (se.field_m.d(-117) >= 4) {
+        if (se.field_m.size(-117) >= 4) {
           return null;
         }
         if (param0 == 18) {
           var2 = new tm(param1);
-          se.field_m.a(param0 ^ 18, var2);
+          se.field_m.addFirst(param0 ^ 18, var2);
           return var2.field_j;
         }
         field_a = (vn[]) null;
         var2Lifetime1 = new tm(param1);
-        se.field_m.a(param0 ^ 18, var2Lifetime1);
+        se.field_m.addFirst(param0 ^ 18, var2Lifetime1);
         return var2Lifetime1.field_j;
     }
 

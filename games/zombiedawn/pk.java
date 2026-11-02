@@ -42,7 +42,7 @@ final class pk extends gl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -56,7 +56,7 @@ final class pk extends gl {
         }
         int var5 = param2 + this.field_k;
         int var6 = param0 + this.field_j;
-        bi.b(var5, var6, this.field_i, this.field_n, 0);
+        Rasterizer.b(var5, var6, this.field_i, this.field_n, 0);
         int var7 = this.field_K;
         if (param3 != ~this.field_O) {
           var7 = this.field_O;
@@ -66,7 +66,7 @@ final class pk extends gl {
             var9 = this.field_L[var8];
             var10 = var9.toString();
             if (var8 == var7) {
-              bi.a(2 + var5, var6 + 4, -4 + this.field_i, this.field_I, 2188450, 128);
+              Rasterizer.a(2 + var5, var6 + 4, -4 + this.field_i, this.field_I, 2188450, 128);
             }
             var6 = var6 + this.field_I;
             this.field_H.c(var10, 2 + var5, var6, 10000536, -1);
@@ -162,7 +162,7 @@ final class pk extends gl {
           this.field_I = this.field_H.field_I + this.field_H.field_x;
           this.a(param3, (byte) 94, param2);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

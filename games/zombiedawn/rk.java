@@ -78,7 +78,7 @@ final class rk {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class rk {
           param1.addKeyListener(ea.field_c);
           param1.addFocusListener(ea.field_c);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,21 +15,21 @@ final class fp extends an {
         if (param5 >= param4) {
           if (param1 <= param5) {
             if (param4 < param1) {
-              wd.a(param0, param2, param6, param1, param5, param4, false, param3, bi.field_c);
+              wd.a(param0, param2, param6, param1, param5, param4, false, param3, Rasterizer.field_c);
               if (param7 <= 51) {
                 fp.a(-83, false, -32, -105);
                 return;
               }
               return;
             }
-            wd.a(param0, param6, param2, param4, param5, param1, false, param3, bi.field_c);
+            wd.a(param0, param6, param2, param4, param5, param1, false, param3, Rasterizer.field_c);
             if (param7 <= 51) {
               fp.a(-83, false, -32, -105);
               return;
             }
             return;
           }
-          wd.a(param6, param2, param0, param5, param1, param4, false, param3, bi.field_c);
+          wd.a(param6, param2, param0, param5, param1, param4, false, param3, Rasterizer.field_c);
           if (param7 <= 51) {
             fp.a(-83, false, -32, -105);
             return;
@@ -37,7 +37,7 @@ final class fp extends an {
           return;
         }
         if (param1 > param4) {
-          wd.a(param6, param0, param2, param4, param1, param5, false, param3, bi.field_c);
+          wd.a(param6, param0, param2, param4, param1, param5, false, param3, Rasterizer.field_c);
           if (param7 <= 51) {
             fp.a(-83, false, -32, -105);
             return;
@@ -45,14 +45,14 @@ final class fp extends an {
           return;
         }
         if (param1 > param5) {
-          wd.a(param2, param0, param6, param1, param4, param5, false, param3, bi.field_c);
+          wd.a(param2, param0, param6, param1, param4, param5, false, param3, Rasterizer.field_c);
           if (param7 <= 51) {
             fp.a(-83, false, -32, -105);
             return;
           }
           return;
         }
-        wd.a(param2, param6, param0, param5, param4, param1, false, param3, bi.field_c);
+        wd.a(param2, param6, param0, param5, param4, param1, false, param3, Rasterizer.field_c);
         if (param7 <= 51) {
           fp.a(-83, false, -32, -105);
           return;
@@ -190,7 +190,7 @@ final class fp extends an {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

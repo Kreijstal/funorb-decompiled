@@ -16,7 +16,7 @@ final class vl implements io {
     private int field_g;
     static int field_r;
     private int field_e;
-    static hi field_b;
+    static GameWorld field_b;
     private int field_a;
     static String field_k;
     private int field_c;
@@ -52,14 +52,14 @@ final class vl implements io {
           if (param1) {
             var7 = 16777215;
           }
-          bi.b(param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, this.field_e);
+          Rasterizer.b(param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, this.field_e);
           var8 = this.field_h + param4 + param3.field_k;
           var9 = param2 - (-param3.field_j - this.field_c);
-          bi.f(var8, var9, this.field_l, this.field_n, 5592405);
-          bi.b(var8, var9, this.field_l, this.field_n, var7);
+          Rasterizer.f(var8, var9, this.field_l, this.field_n, 5592405);
+          Rasterizer.b(var8, var9, this.field_l, this.field_n, var7);
           if (var11.field_x) {
-            bi.e(var8, var9, this.field_l + var8, this.field_n + var9, 1);
-            bi.e(this.field_l + var8, var9, var8, var9 + this.field_n, 1);
+            Rasterizer.e(var8, var9, this.field_l + var8, this.field_n + var9, 1);
+            Rasterizer.e(this.field_l + var8, var9, var8, var9 + this.field_n, 1);
           }
           if (null != this.field_d) {
             var10 = this.field_l + this.field_h + this.field_q;
@@ -76,7 +76,7 @@ final class vl implements io {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -133,11 +133,11 @@ final class vl implements io {
           field_f = null;
           return;
         }
-        field_b = (hi) null;
+        field_b = (GameWorld) null;
         field_f = null;
     }
 
-    final static void a(wk param0, ub param1, int param2) {
+    final static void a(Camera param0, ub param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -153,7 +153,7 @@ final class vl implements io {
           if (param2 > -73) {
             return;
           }
-          var3_int = sh.field_e;
+          var3_int = ExceptionWrapper.field_e;
           if (var3_int == 0) {
             s.a((byte) 80, param0, param1);
             return;
@@ -179,7 +179,7 @@ final class vl implements io {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class vl implements io {
           this.field_j = param2;
           this.field_i = param3;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

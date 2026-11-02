@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class kd extends g {
+final class Zombie extends Mover {
     static int field_pb;
     private int field_Eb;
     private int field_ub;
@@ -20,10 +20,10 @@ final class kd extends g {
     private boolean field_tb;
     boolean field_qb;
     int field_bb;
-    private ah field_wb;
+    private Human field_wb;
     private int field_Ab;
     static vn[][] field_Fb;
-    private kk field_lb;
+    private Point field_lb;
     boolean field_hb;
     private int field_jb;
     private int field_ib;
@@ -86,7 +86,7 @@ final class kd extends g {
         return true;
     }
 
-    final void a(int param0, wk param1) {
+    final void a(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -100,8 +100,8 @@ final class kd extends g {
           if (this.field_J) {
             return;
           }
-          var3_int = param1.a(this.a(true), (byte) -75) - 24;
-          var4 = param1.a(this.f(237239984), param0) - 48;
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -75) - 24;
+          var4 = param1.worldToScreenY(this.getY(237239984), param0) - 48;
           if (this.field_cb) {
             DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);
           } else {
@@ -124,7 +124,7 @@ final class kd extends g {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -149,17 +149,17 @@ final class kd extends g {
         int var3;
         int var4;
         int var5;
-        ej var6;
+        LevelNavigation var6;
         int var7;
-        fb var8;
+        WorldObject var8;
         int var10;
         int var11;
         int var12;
         int var13;
         int var14;
-        kd var15;
+        Zombie var15;
         Object var16;
-        ah var16_ref;
+        Human var16_ref;
         int var12Lifetime1;
         int var13Lifetime1;
         int stackIn_65_0Lifetime1;
@@ -189,23 +189,23 @@ final class kd extends g {
         }
         var8 = this.a((byte) -74, 80, var7);
         while (var8 != null) {
-          stackOut_14_0 = var8 instanceof ah;
+          stackOut_14_0 = var8 instanceof Human;
           stackIn_65_0 = stackOut_14_0 ? 1 : 0;
           stackIn_15_0 = stackOut_14_0;
           if (stackIn_15_0) {
             var5 = this.field_s;
-            var16_ref = (ah) (var8);
-            if (var16_ref.field_F != 18 &&
-              var16_ref.field_F != 20 &&
+            var16_ref = (Human) (var8);
+            if (var16_ref.state != 18 &&
+              var16_ref.state != 20 &&
               !var16_ref.field_V &&
-              var6.a(var16_ref.f(237239984), this.f(237239984), var16_ref.a(true), this.a(true), 125) != -1) {
+              var6.a(var16_ref.getY(237239984), this.getY(237239984), var16_ref.getX(true), this.getX(true), 125) != -1) {
               if (400 > var5) {
                 this.field_wb = var16_ref;
                 var16_ref.r(20);
                 this.e(8, -6904);
                 this.field_zb = 70;
-                this.field_kb = (var16_ref.a(true) - this.a(true)) / 2;
-                this.field_mb = (var16_ref.f(237239984) - this.f(237239984)) / 2;
+                this.field_kb = (var16_ref.getX(true) - this.getX(true)) / 2;
+                this.field_mb = (var16_ref.getY(237239984) - this.getY(237239984)) / 2;
                 if (var16_ref.t(10) &&
                   this.o((byte) -128)) {
                   this.field_Cb = 0;
@@ -222,8 +222,8 @@ final class kd extends g {
               var2 = var16_ref;
             }
           } else {
-            if (var8 instanceof kd) {
-              var15 = (kd) (var8);
+            if (var8 instanceof Zombie) {
+              var15 = (Zombie) (var8);
               if (this.field_fb == -1) {
                 stackIn_21_0 = 0;
               } else {
@@ -241,15 +241,15 @@ final class kd extends g {
                   var8 = this.e((byte) 32);
                   continue;
                 }
-                if ((5 == var15.field_F ||
-                  var15.field_F == 6 ||
-                  4 == var15.field_F) &&
+                if ((5 == var15.state ||
+                  var15.state == 6 ||
+                  4 == var15.state) &&
                   !var15.field_V) {
-                  var3 = var15.a(true) - this.a(true);
-                  var4 = var15.f(237239984) - this.f(237239984);
+                  var3 = var15.getX(true) - this.getX(true);
+                  var4 = var15.getY(237239984) - this.getY(237239984);
                   var5 = var4 * var4 + var3 * var3;
                   if (529 > var5 &&
-                    var6.a(var15.f(237239984), this.f(237239984), var15.a(true), this.a(true), 106) != -1) {
+                    var6.a(var15.getY(237239984), this.getY(237239984), var15.getX(true), this.getX(true), 106) != -1) {
                     this.e(21, -6904);
                     this.field_zb = 50;
                     if (!var15.field_ob) {
@@ -265,16 +265,16 @@ final class kd extends g {
                     }
                     var12 = var15.field_y + (var3 << 15);
                     var13 = var15.field_x + (var4 << 15);
-                    if (var6.a(var13 >> 16, var15.f(237239984), var12 >> 16, var15.a(true), 120) == -1) {
-                      var15.field_Y = var15.a(true);
-                      var15.field_X = var15.f(237239984);
+                    if (var6.a(var13 >> 16, var15.getY(237239984), var12 >> 16, var15.getX(true), 120) == -1) {
+                      var15.field_Y = var15.getX(true);
+                      var15.field_X = var15.getY(237239984);
                     } else {
                       var15.field_X = var13 >> 16;
                       var15.field_Y = var12 >> 16;
                     }
                     var13Lifetime1 = this.field_x - (var4 << 15);
                     var12Lifetime1 = this.field_y - (var3 << 15);
-                    if (var6.a(var13Lifetime1 >> 16, this.f(237239984), var12Lifetime1 >> 16, this.a(true), 108) == -1) {
+                    if (var6.a(var13Lifetime1 >> 16, this.getY(237239984), var12Lifetime1 >> 16, this.getX(true), 108) == -1) {
                       this.field_X = this.field_x >> 16;
                       this.field_Y = this.field_y >> 16;
                     } else {
@@ -294,20 +294,20 @@ final class kd extends g {
           this.C(-127);
         }
         if (var2 != null &&
-          this.field_F != 7 &&
+          this.state != 7 &&
           this.field_Eb == 0 &&
           !this.field_ob) {
-          this.field_Y = ((ah) (var2)).a(true);
-          this.field_X = ((ah) (var2)).f(237239984);
+          this.field_Y = ((Human) (var2)).getX(true);
+          this.field_X = ((Human) (var2)).getY(237239984);
           this.c(0, 114688);
           this.e(7, -6904);
           this.field_Eb = 0;
-          this.field_wb = (ah) (var2);
+          this.field_wb = (Human) (var2);
         }
         return;
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         vn stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         int stackIn_37_2 = 0;
@@ -328,11 +328,11 @@ final class kd extends g {
           if (this.field_J) {
             return;
           }
-          var3_int = param1.a(this.a(true), (byte) -112) - 24;
-          var4 = param1.a(this.f(237239984), 0) - 48;
-          if (this.field_F == 8) {
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -112) - 24;
+          var4 = param1.worldToScreenY(this.getY(237239984), 0) - 48;
+          if (this.state == 8) {
             ki.a((byte) -99, md.field_vb);
-            bi.d();
+            Rasterizer.d();
             DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].b(0, 0);
             pa.a(-21189);
             ho.a(md.field_vb, this.o((byte) -83), this.field_fb, -128);
@@ -343,14 +343,14 @@ final class kd extends g {
             field_Fb = (vn[][]) null;
           }
           if (this.field_tb &&
-            5 == this.field_F ||
-            this.field_F == 7) {
-            lb.field_eb[7].e(param1.a(this.field_jb, (byte) -72), param1.a(this.field_ib, 0), this.field_ub);
+            5 == this.state ||
+            this.state == 7) {
+            lb.field_eb[7].e(param1.worldToScreenX(this.field_jb, (byte) -72), param1.worldToScreenY(this.field_ib, 0), this.field_ub);
           }
-          if (g.field_Q) {
+          if (Mover.field_Q) {
             bj.field_q.c(this.n(-30), var3_int, var4, 16777215, 0);
-            if (5 == this.field_F ||
-              12 == this.field_F) {
+            if (5 == this.state ||
+              12 == this.state) {
               this.a(param1, -1);
             }
           }
@@ -365,7 +365,7 @@ final class kd extends g {
             -48 <= var4 &&
             qj.field_d >= var3_int &&
             me.field_Bb >= var4) {
-            if (this.field_F != 17) {
+            if (this.state != 17) {
               stackIn_36_0 = DualLinkNode.field_k[1];
               stackIn_36_1 = 12;
               if (this.field_S == 3) {
@@ -375,7 +375,7 @@ final class kd extends g {
               }
               so.a(stackIn_36_0, stackIn_36_1 + stackIn_37_2, var4 + 43);
             }
-            var5 = cg.field_d[this.field_F] + this.field_G;
+            var5 = cg.field_d[this.state] + this.field_G;
             if (this.field_ob &&
               var5 < 14) {
               var5 += 49;
@@ -384,7 +384,7 @@ final class kd extends g {
               var5 = 30;
             }
             ki.a((byte) -100, md.field_vb);
-            bi.d();
+            Rasterizer.d();
             if (this.field_S != 3) {
               ad.field_g[this.field_t][var5].b(3, 3);
             } else {
@@ -425,9 +425,9 @@ final class kd extends g {
               pc.field_k.a(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
             }
             if (nk.field_d) {
-              var6Lifetime1 = param1.a(this.a(true), (byte) -96);
-              var7 = param1.a(this.f(237239984), 0);
-              bi.d(var6Lifetime1, var7, 3, 16711935);
+              var6Lifetime1 = param1.worldToScreenX(this.getX(true), (byte) -96);
+              var7 = param1.worldToScreenY(this.getY(237239984), 0);
+              Rasterizer.d(var6Lifetime1, var7, 3, 16711935);
             }
             if (b.field_h) {
               pc.field_k.a(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
@@ -445,7 +445,7 @@ final class kd extends g {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -453,13 +453,13 @@ final class kd extends g {
         int fieldTemp$0 = this.field_Ab;
         this.field_Ab = this.field_Ab - 1;
         if (fieldTemp$0 > 0 ||
-          this.field_F == 9) {
+          this.state == 9) {
           return;
         }
         if (param0 != 0) {
           field_Db = -60;
         }
-        if (this.field_F == 8 &&
+        if (this.state == 8 &&
           null != this.field_wb) {
           this.field_wb.q(118);
         }
@@ -498,12 +498,12 @@ final class kd extends g {
     final void e(int param0, int param1) {
         int var4;
         var4 = ZombieDawn.field_J;
-        if (this.field_F == 9) {
+        if (this.state == 9) {
           return;
         }
         super.e(param0, param1);
-        if (7 != this.field_F) {
-          if (9 == this.field_F &&
+        if (7 != this.state) {
+          if (9 == this.state &&
             !this.field_J) {
             this.field_U = kh.a(66, false);
           }
@@ -524,14 +524,14 @@ final class kd extends g {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
-            !param0.a((byte) -118)) {
+            !param0.isEmpty((byte) -118)) {
             this.field_db = 0;
-            this.field_lb = (kk) (param0.e(0));
+            this.field_lb = (Point) (param0.e(0));
             this.field_yb = param0;
             this.field_ub = 0;
             if (null != this.field_lb) {
-              this.field_ib = this.field_lb.field_h - 30;
-              this.field_jb = this.field_lb.field_l - 12;
+              this.field_ib = this.field_lb.y - 30;
+              this.field_jb = this.field_lb.x - 12;
             }
             if (!param1) {
               return;
@@ -552,7 +552,7 @@ final class kd extends g {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -571,11 +571,11 @@ final class kd extends g {
         boolean stackIn_13_0 = false;
         int stackIn_30_0 = 0;
         boolean stackOut_12_0;
-        ej var2;
+        LevelNavigation var2;
         Object var3;
         Object var4;
         IntrusiveNode var5;
-        ah var6;
+        Human var6;
         qh var7;
         int var8;
         int stackIn_30_0Lifetime1;
@@ -583,9 +583,9 @@ final class kd extends g {
         if (this.field_V) {
           return;
         }
-        if (4 == this.field_F ||
-          this.field_F == 5 ||
-          this.field_F == 6) {
+        if (4 == this.state ||
+          this.state == 5 ||
+          this.state == 6) {
           if (this.field_fb != 2 &&
             pb.a(so.field_a, 2, 1) != 0) {
             return;
@@ -593,18 +593,18 @@ final class kd extends g {
           var2 = dj.field_e.field_H;
           var3 = null;
           var4 = null;
-          var5 = dj.field_e.field_R.field_b.previous;
-          while (var5 != dj.field_e.field_R.field_b) {
-            stackOut_12_0 = var5 instanceof ah;
+          var5 = dj.field_e.field_R.sentinel.previous;
+          while (var5 != dj.field_e.field_R.sentinel) {
+            stackOut_12_0 = var5 instanceof Human;
             stackIn_30_0 = stackOut_12_0 ? 1 : 0;
             stackIn_13_0 = stackOut_12_0;
             if (stackIn_13_0) {
-              var6 = (ah) (var5);
-              if (var6.field_F != 18 &&
-                var6.field_F != 20) {
-                var7 = var2.a(true, this.a(true), var6.f(237239984), var6.a(true), this.f(237239984));
+              var6 = (Human) (var5);
+              if (var6.state != 18 &&
+                var6.state != 20) {
+                var7 = var2.a(true, this.getX(true), var6.getY(237239984), var6.getX(true), this.getY(237239984));
                 if (var7 != null) {
-                  if (this.field_F == 4 &&
+                  if (this.state == 4 &&
                     pb.a(so.field_a, 2, param0 - 17303) != 0) {
                     var5 = var5.previous;
                     continue;
@@ -648,13 +648,13 @@ final class kd extends g {
         if (param4) {
           return true;
         }
-        var6Lifetime2 = this.a(true);
-        var7 = -24 + this.f(237239984);
+        var6Lifetime2 = this.getX(true);
+        var7 = -24 + this.getY(237239984);
         stackIn_13_0 = (param1 < var6Lifetime2) && (param0 > var6Lifetime2) && (param3 < var7) && (var7 < param2);
         return stackIn_13_0;
     }
 
-    private final void a(wk param0, int param1) {
+    private final void a(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -670,10 +670,10 @@ final class kd extends g {
         int var4Lifetime1;
         var8 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(this.a(true), (byte) -105);
-          var4 = param0.a(this.f(param1 ^ -237239985), 0);
-          var5 = param0.a(this.field_Y, (byte) -112);
-          var6 = param0.a(this.field_X, 0);
+          var3_int = param0.worldToScreenX(this.getX(true), (byte) -105);
+          var4 = param0.worldToScreenY(this.getY(param1 ^ -237239985), 0);
+          var5 = param0.worldToScreenX(this.field_Y, (byte) -112);
+          var6 = param0.worldToScreenY(this.field_X, 0);
           if (param1 != -1) {
             this.field_qb = true;
           }
@@ -682,11 +682,11 @@ final class kd extends g {
             return;
           }
           var7 = this.field_yb.b((byte) 26);
-          while (var7 instanceof kk) {
+          while (var7 instanceof Point) {
             var3_intLifetime1 = var5;
             var4Lifetime1 = var6;
-            var5 = param0.a(((kk) (var7)).field_l, (byte) -90);
-            var6 = param0.a(((kk) (var7)).field_h, 0);
+            var5 = param0.worldToScreenX(((Point) (var7)).x, (byte) -90);
+            var6 = param0.worldToScreenY(((Point) (var7)).y, 0);
             this.a(var4Lifetime1, 0, var3_intLifetime1, var6, var5);
             var7 = var7.previous;
           }
@@ -701,7 +701,7 @@ final class kd extends g {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -714,16 +714,16 @@ final class kd extends g {
     }
 
     final boolean y(int param0) {
-        wk var3;
+        Camera var3;
         if (param0 < 97) {
-          var3 = (wk) null;
-          this.a((byte) 118, (wk) null);
+          var3 = (Camera) null;
+          this.a((byte) 118, (Camera) null);
         }
         this.field_W = 8;
-        if (5 == this.field_F) {
+        if (5 == this.state) {
           this.c(0, 57344);
         } else {
-          if (7 == this.field_F) {
+          if (7 == this.state) {
             this.c(0, 114688);
           }
         }
@@ -749,7 +749,7 @@ final class kd extends g {
         if (param0 != 25) {
           this.field_Cb = 21;
         }
-        stackIn_16_0 = (this.field_F == 8) || (this.field_F == 9) || (this.field_F == 22) || (this.field_F == 12) || (this.field_F == 7) || (13 == this.field_F) || (this.field_F == 14) || (this.field_F == 15) || (this.field_F == 17) || (19 == this.field_F) || (this.field_V);
+        stackIn_16_0 = (this.state == 8) || (this.state == 9) || (this.state == 22) || (this.state == 12) || (this.state == 7) || (13 == this.state) || (this.state == 14) || (this.state == 15) || (this.state == 17) || (19 == this.state) || (this.field_V);
         return stackIn_16_0;
     }
 
@@ -781,7 +781,7 @@ final class kd extends g {
         this.z(param0);
     }
 
-    kd(int param0, int param1, int param2, int param3) {
+    Zombie(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, 57344);
         this.field_ub = 0;
         this.field_sb = 200;
@@ -815,28 +815,28 @@ final class kd extends g {
         if (param0 < 24) {
           return true;
         }
-        stackIn_6_0 = (!this.field_ob) && (this.field_F != 9);
+        stackIn_6_0 = (!this.field_ob) && (this.state != 9);
         return stackIn_6_0;
     }
 
     final void c(int param0, int param1, int param2) {
         if (this.n((byte) 25) &&
-          this.field_F != 7) {
+          this.state != 7) {
           return;
         }
         int var4 = 120;
-        int var5 = -this.a(true) + param2;
-        int var6 = -this.f(237239984) + param1;
+        int var5 = -this.getX(true) + param2;
+        int var6 = -this.getY(237239984) + param1;
         double var7 = (double)var4 / (double)so.b(var6 * var6 + var5 * var5);
-        this.field_Y = -(int)(var7 * (double)var5) + this.a(true);
-        this.field_X = -(int)(var7 * (double)var6) + this.f(237239984);
+        this.field_Y = -(int)(var7 * (double)var5) + this.getX(true);
+        this.field_X = -(int)(var7 * (double)var6) + this.getY(237239984);
         int var9 = this.field_S;
         this.c(param0 ^ param0, 401408);
         this.field_S = var9;
         this.e(12, -6904);
     }
 
-    kd(int param0, int param1, boolean param2, int param3) {
+    Zombie(int param0, int param1, boolean param2, int param3) {
         this(param0, param1, param2 ? 0 : 1, param3);
         int stackIn_2_1 = 0;
         int stackIn_2_2 = 0;
@@ -880,7 +880,7 @@ final class kd extends g {
         if (null == this.field_lb) {
           return;
         }
-        this.field_yb = dj.field_e.field_H.a(true, this.a(true), this.field_lb.field_h, this.field_lb.field_l, this.f(237239984));
+        this.field_yb = dj.field_e.field_H.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984));
     }
 
     final boolean o(int param0) {
@@ -899,8 +899,8 @@ final class kd extends g {
           this.a(-104, -36, -28, 47, -27);
         }
         int var6 = 16711935;
-        bi.e(param2, param0, param4, param3, var6);
-        bi.g(param4, param3, 1, var6);
+        Rasterizer.e(param2, param0, param4, param3, var6);
+        Rasterizer.g(param4, param3, 1, var6);
     }
 
     final void r(int param0) {
@@ -912,13 +912,13 @@ final class kd extends g {
     }
 
     final void B(int param0) {
-        kk var2;
+        Point var2;
         int var3;
         if (null != this.field_yb &&
-          !this.field_yb.a((byte) -122)) {
-          var2 = (kk) (this.field_yb.f(29));
-          this.field_Y = var2.field_l;
-          this.field_X = var2.field_h;
+          !this.field_yb.isEmpty((byte) -122)) {
+          var2 = (Point) (this.field_yb.removeLast(29));
+          this.field_Y = var2.x;
+          this.field_X = var2.y;
           var3 = -39 / ((-49 - param0) / 54);
           this.e(5, -6904);
           this.c(0, 57344);
@@ -948,12 +948,12 @@ final class kd extends g {
         boolean stackIn_11_0 = false;
         int stackIn_21_0 = 0;
         int stackIn_89_0 = 0;
-        hi stackIn_119_0;
+        GameWorld stackIn_119_0;
         int stackIn_119_1;
-        ah stackIn_119_2;
+        Human stackIn_119_2;
         int stackIn_119_3;
         boolean stackIn_119_4;
-        kk stackIn_120_5 = null;
+        Point stackIn_120_5 = null;
         boolean stackOut_10_0;
         int var3;
         int var4;
@@ -965,7 +965,7 @@ final class kd extends g {
         int stackIn_21_0Lifetime1;
         var7 = ZombieDawn.field_J;
         var9 = this.m(91);
-        this.d(this.field_F, -26109);
+        this.d(this.state, -26109);
         if (this.field_bb > 0) {
           fieldTemp$0 = this.field_bb - 1;
           this.field_bb = this.field_bb - 1;
@@ -1010,8 +1010,8 @@ final class kd extends g {
         if (stackIn_21_0Lifetime1 <= 95) {
           this.s(16);
         }
-        if (this.field_F != 4) {
-          if (this.field_F == 5) {
+        if (this.state != 4) {
+          if (this.state == 5) {
             if (this.field_Eb > 0) {
               this.field_Eb = this.field_Eb - 1;
             }
@@ -1043,7 +1043,7 @@ final class kd extends g {
             }
             this.A(-128);
           } else {
-            if (6 == this.field_F) {
+            if (6 == this.state) {
               if (this.field_Eb > 0) {
                 this.field_Eb = this.field_Eb - 1;
               }
@@ -1055,7 +1055,7 @@ final class kd extends g {
               }
               this.A(-96);
             } else {
-              if (this.field_F == 21) {
+              if (this.state == 21) {
                 fieldTemp$3 = this.field_zb - 1;
                 this.field_zb = this.field_zb - 1;
                 if (fieldTemp$3 <= 0) {
@@ -1080,22 +1080,22 @@ final class kd extends g {
                   this.field_y = this.field_y + var3;
                 }
               } else {
-                if (this.field_F == 7) {
+                if (this.state == 7) {
                   regionExit1: {
-                    if (this.field_wb.field_F != 18 &&
-                      this.field_wb.field_F != 20) {
+                    if (this.field_wb.state != 18 &&
+                      this.field_wb.state != 20) {
                       fieldTemp$4 = this.field_Eb;
                       this.field_Eb = this.field_Eb + 1;
                       if (fieldTemp$4 <= 60 &&
                         !this.field_wb.field_V) {
-                        if ((this.field_wb.field_F == 1 ||
-                          2 == this.field_wb.field_F)) {
-                          var3 = this.field_wb.a(true);
-                          var4 = this.field_wb.f(237239984);
-                          var5 = -var3 + this.a(true);
-                          var6 = this.f(237239984) - var4;
+                        if ((this.field_wb.state == 1 ||
+                          2 == this.field_wb.state)) {
+                          var3 = this.field_wb.getX(true);
+                          var4 = this.field_wb.getY(237239984);
+                          var5 = -var3 + this.getX(true);
+                          var6 = this.getY(237239984) - var4;
                           if (var6 * var6 + var5 * var5 <= 6410 &&
-                            dj.field_e.field_H.a(var4, this.f(237239984), var3, this.a(true), 114) != -1) {
+                            dj.field_e.field_H.a(var4, this.getY(237239984), var3, this.getX(true), 114) != -1) {
                             this.field_X = var4;
                             this.field_Y = var3;
                             this.c(0, 114688);
@@ -1114,7 +1114,7 @@ final class kd extends g {
                   this.g((byte) 44);
                   this.A(-88);
                 } else {
-                  if (this.field_F == 8) {
+                  if (this.state == 8) {
                     this.field_ob = false;
                     if ((this.field_G == 0 ||
                       2 == this.field_G) && 0 == this.field_N) {
@@ -1144,30 +1144,30 @@ final class kd extends g {
                       } else {
                         stackIn_120_5 = this.field_lb;
                       }
-                      ((hi) (Object) stackIn_119_0).a(stackIn_119_1, stackIn_119_2, (byte) stackIn_119_3, stackIn_119_4, stackIn_120_5);
+                      ((GameWorld) (Object) stackIn_119_0).a(stackIn_119_1, stackIn_119_2, (byte) stackIn_119_3, stackIn_119_4, stackIn_120_5);
                       this.field_wb = null;
                       this.e(4, -6904);
                       if (null != this.field_lb) {
-                        this.a(dj.field_e.field_H.a(true, this.a(true), this.field_lb.field_h, this.field_lb.field_l, this.f(237239984)), true);
+                        this.a(dj.field_e.field_H.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
                       }
                     } else {
                       if (this.field_zb == 30) {
-                        dj.field_e.a(this.field_wb.f(237239984), false, 118, this.field_wb.a(true));
+                        dj.field_e.a(this.field_wb.getY(237239984), false, 118, this.field_wb.getX(true));
                       }
                     }
                   } else {
-                    if (this.field_F != 9) {
-                      if (this.field_F == 12) {
+                    if (this.state != 9) {
+                      if (this.state == 12) {
                         this.field_ob = false;
                         this.g((byte) 23);
-                        stackIn_89_0 = (dj.field_e.field_H.a(false, this.f(237239984), this.a(true), true)) ? 0 : 1;
+                        stackIn_89_0 = (dj.field_e.field_H.a(false, this.getY(237239984), this.getX(true), true)) ? 0 : 1;
                         var3 = stackIn_89_0;
                         if (var3 != 0) {
                           this.field_y = this.field_y - this.field_O;
                           var3 = 0;
                           this.field_x = this.field_x - this.field_T;
                           if (this.field_O != 0 &&
-                            dj.field_e.field_H.a(false, this.f(237239984), this.field_y + this.field_O >> 16, true)) {
+                            dj.field_e.field_H.a(false, this.getY(237239984), this.field_y + this.field_O >> 16, true)) {
                             this.field_T = 0;
                             this.field_X = this.field_x >> 16;
                             this.field_y = this.field_y + this.field_O;
@@ -1188,38 +1188,38 @@ final class kd extends g {
                           this.B(27);
                         }
                       } else {
-                        if (this.field_F == 13) {
+                        if (this.state == 13) {
                           if (this.field_ob) {
                             this.field_G = 2;
                           }
                           if (2 == this.field_G) {
                             this.field_G = 0;
                             this.field_ob = false;
-                            dj.field_e.b(0, this.f(237239984), true, this.a(true));
+                            dj.field_e.b(0, this.getY(237239984), true, this.getX(true));
                             this.e(4, -6904);
                           }
                         } else {
-                          if (14 == this.field_F) {
+                          if (14 == this.state) {
                             this.field_ob = false;
                             this.field_S = 1;
                             if (this.field_G == 4) {
-                              dj.field_e.field_R.a(0, new vb(this.a(true), this.f(237239984), this.field_t));
+                              dj.field_e.field_R.addFirst(0, new vb(this.getX(true), this.getY(237239984), this.field_t));
                               this.e(4, -6904);
                               this.field_db = 2;
                             }
                           } else {
-                            if (this.field_F == 15) {
+                            if (this.state == 15) {
                               if (this.field_G == 4) {
                                 this.field_N = this.field_N - 1;
                                 this.field_ob = false;
                                 if (null != this.field_rb) {
-                                  if (this.field_rb.field_m != this.a(true)) {
-                                    this.field_rb.field_m = this.a(true);
-                                    this.field_rb.field_q = this.f(237239984);
+                                  if (this.field_rb.field_m != this.getX(true)) {
+                                    this.field_rb.field_m = this.getX(true);
+                                    this.field_rb.field_q = this.getY(237239984);
                                   }
                                 } else {
-                                  this.field_rb = new nc(this.a(true), -30 + this.f(237239984));
-                                  dj.field_e.field_e.a(0, this.field_rb);
+                                  this.field_rb = new nc(this.getX(true), -30 + this.getY(237239984));
+                                  dj.field_e.field_e.addFirst(0, this.field_rb);
                                 }
                                 if (this.field_rb.c(123)) {
                                   this.field_rb.unlink(-27598);
@@ -1228,16 +1228,16 @@ final class kd extends g {
                                 }
                               }
                             } else {
-                              if (17 == this.field_F) {
+                              if (17 == this.state) {
                                 if (this.field_G == 3 &&
                                   this.field_N == 0) {
-                                  dj.field_e.c(this.a(true), 54, this.f(237239984));
+                                  dj.field_e.c(this.getX(true), 54, this.getY(237239984));
                                 }
                                 if (this.field_G == 7) {
                                   dj.field_e.a(this, true);
                                 }
                               } else {
-                                if (this.field_F == 19 &&
+                                if (this.state == 19 &&
                                   5 == this.field_G) {
                                   this.field_ob = true;
                                   this.l((byte) -121);
@@ -1253,7 +1253,7 @@ final class kd extends g {
                         this.field_y = this.field_y + (this.field_Gb << 16);
                       }
                       if (this.field_G == 5) {
-                        dj.field_e.a(this.f(237239984), this.field_eb, 111, this.a(true));
+                        dj.field_e.a(this.getY(237239984), this.field_eb, 111, this.getX(true));
                         dj.field_e.a(this, true);
                         if (this.field_rb != null) {
                           this.field_rb.c((byte) -64);
@@ -1287,8 +1287,8 @@ final class kd extends g {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var3 = this.a(true) - (-pb.a(so.field_a, 48, 1) + 24);
-            var4 = this.f(237239984) + (pb.a(so.field_a, 48, 1) - 24);
+            var3 = this.getX(true) - (-pb.a(so.field_a, 48, 1) + 24);
+            var4 = this.getY(237239984) + (pb.a(so.field_a, 48, 1) - 24);
             if (dj.field_e.field_H.a(false, var4, var3, true)) {
               this.a(var4, var3, false);
             } else {

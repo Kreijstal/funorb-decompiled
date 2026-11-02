@@ -21,7 +21,7 @@ final class np extends an {
           super.a(param0, (byte) -110, param2, param3);
           int var5_int = -62 / ((param1 - 46) / 42);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "np.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "np.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class np extends an {
           }
           if (var10 <= tm.field_m.field_t) {
             ki.a((byte) -86, tm.field_m);
-            bi.d();
+            Rasterizer.d();
             var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
             tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
@@ -99,7 +99,7 @@ final class np extends an {
           }
           if (var10Lifetime1 <= tm.field_m.field_t) {
             ki.a((byte) -86, tm.field_m);
-            bi.d();
+            Rasterizer.d();
             var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
             tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
@@ -152,7 +152,7 @@ final class np extends an {
           }
           ln.field_c = var2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "np.F(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "np.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class np extends an {
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class np extends an {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

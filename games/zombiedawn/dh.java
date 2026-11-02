@@ -14,7 +14,7 @@ abstract class dh {
 
     final void b(int param0) {
         int var2 = -12 % ((param0 + 53) / 62);
-        bi.a(this.field_c, this.field_d, this.field_a);
+        Rasterizer.a(this.field_c, this.field_d, this.field_a);
     }
 
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);

@@ -129,30 +129,30 @@ final class pb extends IntrusiveNode {
         RuntimeException var5 = null;
         var10 = ZombieDawn.field_J;
         try {
-          bi.b(param0, param2, param4 + 1, 10000536);
-          bi.b(param0, param2 + param1, 1 + param4, 12105912);
+          Rasterizer.b(param0, param2, param4 + 1, 10000536);
+          Rasterizer.b(param0, param2 + param1, 1 + param4, 12105912);
           var5_int = 1;
           var6 = param1;
-          if (bi.field_l > var5_int + param2) {
-            var5_int = bi.field_l - param2;
+          if (Rasterizer.field_l > var5_int + param2) {
+            var5_int = Rasterizer.field_l - param2;
           }
           if (param3 != 48) {
             return;
           }
-          if (bi.field_d < var6 + param2) {
-            var6 = -param2 + bi.field_d;
+          if (Rasterizer.field_d < var6 + param2) {
+            var6 = -param2 + Rasterizer.field_d;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + var7 * 48 / param1;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            bi.field_c[(var7 + param2) * bi.field_f + param0] = var9;
-            bi.field_c[(var7 + param2) * bi.field_f - (-param0 - param4)] = var9;
+            Rasterizer.field_c[(var7 + param2) * Rasterizer.field_f + param0] = var9;
+            Rasterizer.field_c[(var7 + param2) * Rasterizer.field_f - (-param0 - param4)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5), "pb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5), "pb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -223,11 +223,11 @@ final class pb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "pb.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "pb.A(" + param0 + ')');
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -242,10 +242,10 @@ final class pb extends IntrusiveNode {
           if (param0 != -28) {
             return;
           }
-          ej.field_a.e(param1.a(this.field_i, (byte) -112) - 30, param1.a(this.field_m, param0 + 28) - 30, this.field_p);
+          LevelNavigation.field_a.e(param1.worldToScreenX(this.field_i, (byte) -112) - 30, param1.worldToScreenY(this.field_m, param0 + 28) - 30, this.field_p);
           if (this.field_o >= 0) {
-            var3_int = param1.a(this.field_q, (byte) -77);
-            var4 = param1.a(this.field_j, 0);
+            var3_int = param1.worldToScreenX(this.field_q, (byte) -77);
+            var4 = param1.worldToScreenY(this.field_j, 0);
             og.field_x[this.field_o].e(var3_int - 11, -11 + (-this.field_o + (-this.field_o + var4)) + (-this.field_o - this.field_o), -this.field_o + 8 << 3);
           }
           return;
@@ -259,7 +259,7 @@ final class pb extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class pb extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

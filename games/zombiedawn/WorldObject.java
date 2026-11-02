@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fb extends fa {
+abstract class WorldObject extends fa {
     boolean field_C;
     int field_x;
     int field_t;
@@ -35,16 +35,16 @@ abstract class fb extends fa {
         dj.field_e.a(false, this);
     }
 
-    final fb e(byte param0) {
+    final WorldObject e(byte param0) {
         Object var3;
-        fb var3_ref;
-        fb var6;
+        WorldObject var3_ref;
+        WorldObject var6;
         if (param0 == 32) {
           if (-1 == this.field_v) {
-            return (fb) (dj.field_e.field_n.b(false));
+            return (WorldObject) (dj.field_e.field_n.b(false));
           }
           do {
-            var6 = (fb) (dj.field_e.field_n.b(false));
+            var6 = (WorldObject) (dj.field_e.field_n.b(false));
             if (var6 == null) {
               return null;
             }
@@ -54,10 +54,10 @@ abstract class fb extends fa {
         }
         this.field_x = -55;
         if (-1 == this.field_v) {
-          return (fb) (dj.field_e.field_n.b(false));
+          return (WorldObject) (dj.field_e.field_n.b(false));
         }
         while (true) {
-          var3_ref = (fb) (dj.field_e.field_n.b(false));
+          var3_ref = (WorldObject) (dj.field_e.field_n.b(false));
           if (var3_ref == null) {
             return null;
           }
@@ -75,7 +75,7 @@ abstract class fb extends fa {
         return var3_ref;
     }
 
-    final int a(fb param0, int param1) {
+    final int a(WorldObject param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -103,17 +103,17 @@ abstract class fb extends fa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    abstract void a(byte param0, wk param1);
+    abstract void a(byte param0, Camera param1);
 
     final boolean a(byte param0, int param1) {
-        if (this instanceof ah) {
+        if (this instanceof Human) {
           return (param1 & 1) != 0 ? true : false;
         }
-        if (this instanceof kd) {
+        if (this instanceof Zombie) {
           return 0 != (param1 & 2) ? true : false;
         }
         if (this instanceof id) {
@@ -134,25 +134,25 @@ abstract class fb extends fa {
         return false;
     }
 
-    final fb a(byte param0, int param1, int param2) {
+    final WorldObject a(byte param0, int param1, int param2) {
         Object var4;
-        fb var4_ref;
+        WorldObject var4_ref;
         int var5;
         int var5Lifetime1;
         Object var4Lifetime1;
-        fb var4_refLifetime1;
+        WorldObject var4_refLifetime1;
         if (param1 != -1) {
           this.field_A = param1 * param1;
           this.field_v = param2;
           var4 = null;
           if (param1 != -1) {
             var5 = 1 + (param1 >> 7);
-            var4_ref = (fb) (dj.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
+            var4_ref = (WorldObject) (dj.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
           } else {
-            var4_ref = (fb) (dj.field_e.field_n.a(true));
+            var4_ref = (WorldObject) (dj.field_e.field_n.a(true));
           }
           if (param0 != -74) {
-            return (fb) null;
+            return (WorldObject) null;
           }
           if (var4_ref == null) {
             return null;
@@ -173,12 +173,12 @@ abstract class fb extends fa {
         var4Lifetime1 = null;
         if (param1 != -1) {
           var5Lifetime1 = 1 + (param1 >> 7);
-          var4_refLifetime1 = (fb) (dj.field_e.field_n.a(var5Lifetime1, this.field_u, 29845, this.field_B));
+          var4_refLifetime1 = (WorldObject) (dj.field_e.field_n.a(var5Lifetime1, this.field_u, 29845, this.field_B));
         } else {
-          var4_refLifetime1 = (fb) (dj.field_e.field_n.a(true));
+          var4_refLifetime1 = (WorldObject) (dj.field_e.field_n.a(true));
         }
         if (param0 != -74) {
-          return (fb) null;
+          return (WorldObject) null;
         }
         if (var4_refLifetime1 == null) {
           return null;
@@ -195,7 +195,7 @@ abstract class fb extends fa {
         return var4_refLifetime1;
     }
 
-    final fb b(int param0, int param1) {
+    final WorldObject b(int param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
@@ -205,33 +205,33 @@ abstract class fb extends fa {
           this.field_v = -1;
           if (param1 == 16) {
             if (param0 == -1) {
-              return (fb) (dj.field_e.field_n.a(true));
+              return (WorldObject) (dj.field_e.field_n.a(true));
             }
             var3 = (param0 >> 7) + 1;
-            return (fb) (dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
+            return (WorldObject) (dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
           }
           this.field_x = 64;
           if (param0 == -1) {
-            return (fb) (dj.field_e.field_n.a(true));
+            return (WorldObject) (dj.field_e.field_n.a(true));
           }
           var3Lifetime3 = (param0 >> 7) + 1;
-          return (fb) (dj.field_e.field_n.a(var3Lifetime3, this.field_u, 29845, this.field_B));
+          return (WorldObject) (dj.field_e.field_n.a(var3Lifetime3, this.field_u, 29845, this.field_B));
         }
         this.field_A = -1;
         this.field_v = -1;
         if (param1 == 16) {
           if (param0 == -1) {
-            return (fb) (dj.field_e.field_n.a(true));
+            return (WorldObject) (dj.field_e.field_n.a(true));
           }
           var3Lifetime1 = (param0 >> 7) + 1;
-          return (fb) (dj.field_e.field_n.a(var3Lifetime1, this.field_u, 29845, this.field_B));
+          return (WorldObject) (dj.field_e.field_n.a(var3Lifetime1, this.field_u, 29845, this.field_B));
         }
         this.field_x = 64;
         if (param0 == -1) {
-          return (fb) (dj.field_e.field_n.a(true));
+          return (WorldObject) (dj.field_e.field_n.a(true));
         }
         var3Lifetime2 = (param0 >> 7) + 1;
-        return (fb) (dj.field_e.field_n.a(var3Lifetime2, this.field_u, 29845, this.field_B));
+        return (WorldObject) (dj.field_e.field_n.a(var3Lifetime2, this.field_u, 29845, this.field_B));
     }
 
     final static void a(int param0, byte[] param1, byte param2, int param3) {
@@ -242,21 +242,21 @@ abstract class fb extends fa {
           param1[2 + 4 * param0] = (byte)(param3 >>> 8);
           param1[param0 * 4 + 3] = (byte)param3;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "fb.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fb.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final int f(int param0) {
+    final int getY(int param0) {
         if (param0 != 237239984) {
-          fb.h(-58);
+          WorldObject.h(-58);
           return this.field_x >> 16;
         }
         return this.field_x >> 16;
     }
 
-    final int a(boolean param0) {
+    final int getX(boolean param0) {
         if (!param0) {
-          fb.a(-36, -98);
+          WorldObject.a(-36, -98);
           return this.field_y >> 16;
         }
         return this.field_y >> 16;
@@ -286,7 +286,7 @@ abstract class fb extends fa {
           return stackIn_15_0;
         }
         var3 = (byte[]) null;
-        fb.a(28, (byte[]) null, (byte) -56, 124);
+        WorldObject.a(28, (byte[]) null, (byte) -56, 124);
         param1 = param1 & 8191;
         if (4096 > param1) {
           if (2048 <= param1) {
@@ -315,7 +315,7 @@ abstract class fb extends fa {
         field_w = null;
     }
 
-    fb(int param0, int param1, int param2) {
+    WorldObject(int param0, int param1, int param2) {
         this.field_z = 0;
         this.field_C = false;
         this.field_B = -1;

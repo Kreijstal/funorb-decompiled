@@ -3,7 +3,7 @@
  */
 final class c {
     static String field_a;
-    static vo field_b;
+    static IntrusiveDeque field_b;
     static int field_c;
 
     final static cg[] b(int param0) {
@@ -18,7 +18,7 @@ final class c {
         field_a = null;
         field_b = null;
         if (!param0) {
-          field_b = (vo) null;
+          field_b = (IntrusiveDeque) null;
         }
     }
 
@@ -146,7 +146,7 @@ final class c {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -155,8 +155,8 @@ final class c {
         if (!nm.field_c) {
           throw new IllegalStateException();
         }
-        if (null != kk.field_i) {
-          kk.field_i.h((byte) 20);
+        if (null != Point.field_i) {
+          Point.field_i.h((byte) 20);
         }
         if (param0 == 65) {
           var1 = bo.a(param0 + 39);
@@ -170,6 +170,6 @@ final class c {
 
     static {
         field_a = "Your email address is used to identify this account";
-        field_b = new vo();
+        field_b = new IntrusiveDeque();
     }
 }

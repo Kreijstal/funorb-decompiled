@@ -11,7 +11,7 @@ final class we extends qk {
     static vn field_Ub;
     private int field_Nb;
     static vn field_Tb;
-    private kd field_Qb;
+    private Zombie field_Qb;
     private int field_Pb;
 
     final static String p(byte param0) {
@@ -20,15 +20,15 @@ final class we extends qk {
           return field_Rb;
         }
         if (tk.field_a == vh.field_c) {
-          return kk.field_k;
+          return Point.field_k;
         }
         if (!gl.field_E.a(96)) {
-          return kk.field_k;
+          return Point.field_k;
         }
         return m.field_B;
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -41,25 +41,25 @@ final class we extends qk {
         int var6 = 0;
         IntrusiveNode var7 = null;
         try {
-          var3_int = param0.a(this.a(true), (byte) -77);
-          var4 = param0.a(this.f(237239984), 0);
-          bi.d(var3_int, var4, this.field_Vb, 255);
-          bi.d(var3_int, var4, this.field_pb, 65535);
+          var3_int = param0.worldToScreenX(this.getX(true), (byte) -77);
+          var4 = param0.worldToScreenY(this.getY(237239984), 0);
+          Rasterizer.d(var3_int, var4, this.field_Vb, 255);
+          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
           if (this.field_Qb != null) {
-            bi.e(var3_int, var4, param0.a(this.field_Qb.a(true), (byte) -63), param0.a(this.field_Qb.f(param1 ^ 237235572), 0), 16711680);
+            Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Qb.getX(true), (byte) -63), param0.worldToScreenY(this.field_Qb.getY(param1 ^ 237235572), 0), 16711680);
           }
           if (null != this.field_yb) {
-            var5_int = param0.a(this.field_yb.a(true), (byte) -81);
-            var6 = param0.a(this.field_yb.f(param1 + 237234924), param1 ^ 5060);
-            bi.e(var3_int, var4, var5_int, var6, 16776960);
-            bj.field_q.c(Integer.toString(this.field_yb.field_F), var5_int, var6 - 48, 16777215, 0);
+            var5_int = param0.worldToScreenX(this.field_yb.getX(true), (byte) -81);
+            var6 = param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), param1 ^ 5060);
+            Rasterizer.e(var3_int, var4, var5_int, var6, 16776960);
+            bj.field_q.c(Integer.toString(this.field_yb.state), var5_int, var6 - 48, 16777215, 0);
           }
           if (param1 != 5060) {
             var7 = (IntrusiveNode) null;
             we.a((IntrusiveNode) null, 97, (IntrusiveNode) null);
           }
-          bi.e(var3_int, var4, param0.a(this.field_Y, (byte) -94), param0.a(this.field_X, param1 - 5060), 16711935);
-          var5 = Integer.toString(this.field_F);
+          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Y, (byte) -94), param0.worldToScreenY(this.field_X, param1 - 5060), 16711935);
+          var5 = Integer.toString(this.state);
           bj.field_q.c(var5, var3_int, var4 - 48, 16777215, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class we extends qk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -98,14 +98,14 @@ final class we extends qk {
         if (this.field_Qb == null) {
           this.y(3);
         } else {
-          if (9 == this.field_Qb.field_F) {
+          if (9 == this.field_Qb.state) {
             this.y(3);
           }
         }
         if (null != this.field_Qb) {
           return;
         }
-        if (this.field_F == 0) {
+        if (this.state == 0) {
           return;
         }
         this.e(0, -6904);
@@ -135,7 +135,7 @@ final class we extends qk {
         if (param0 <= 95) {
           return;
         }
-        if (0 == this.field_F) {
+        if (0 == this.state) {
           if (null != this.field_Qb) {
             this.b(false);
             return;
@@ -149,8 +149,8 @@ final class we extends qk {
           this.field_Ob = 0;
           return;
         }
-        if (this.field_F != 1) {
-          if (10 != this.field_F) {
+        if (this.state != 1) {
+          if (10 != this.state) {
             return;
           }
           this.field_N = this.field_N + 3;
@@ -202,17 +202,17 @@ final class we extends qk {
           param2.next.previous = param2;
           param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "we.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "we.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(kd param0, byte param1) {
+    private final void a(Zombie param0, byte param1) {
         try {
           param0.field_Bb = param0.field_Bb + 1;
           int var3_int = 114 / ((param1 + 3) / 58);
           this.field_Qb = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "we.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "we.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -229,12 +229,12 @@ final class we extends qk {
           return;
         }
         if (!param0) {
-          this.a(this.field_Qb.a(true), (byte) -99, this.field_Qb.f(237239984));
+          this.a(this.field_Qb.getX(true), (byte) -99, this.field_Qb.getY(237239984));
           return;
         }
         nc var3 = (nc) null;
         this.a((nc) null, (byte) -119);
-        this.a(this.field_Qb.a(true), (byte) -99, this.field_Qb.f(237239984));
+        this.a(this.field_Qb.getX(true), (byte) -99, this.field_Qb.getY(237239984));
     }
 
     final void c(int param0, int param1, int param2) {
@@ -263,7 +263,7 @@ final class we extends qk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -273,18 +273,18 @@ final class we extends qk {
         int var4;
         int var5;
         Object var6;
-        kd var6_ref;
+        Zombie var6_ref;
         int var8;
         qh var9;
         qh var10;
         qh var17;
         var6 = null;
         var8 = ZombieDawn.field_J;
-        this.a(true);
-        this.f(237239984);
+        this.getX(true);
+        this.getY(237239984);
         if (this.field_yb != null) {
-          this.field_yb.a(true);
-          this.field_yb.f(237239984);
+          this.field_yb.getX(true);
+          this.field_yb.getY(237239984);
           this.field_yb = null;
           if (this.field_Qb != null) {
             this.z(param0 + 12448);
@@ -296,13 +296,13 @@ final class we extends qk {
           if (param0 != 3) {
             this.field_Nb = -9;
           }
-          var6_ref = (kd) (this.a((byte) -74, this.field_Vb, 2));
+          var6_ref = (Zombie) (this.a((byte) -74, this.field_Vb, 2));
           while (var6_ref != null) {
-            if (var6_ref.field_F == 9) {
-              var6_ref = (kd) (this.e((byte) 32));
+            if (var6_ref.state == 9) {
+              var6_ref = (Zombie) (this.e((byte) 32));
               continue;
             }
-            var9 = dj.field_e.field_H.a(true, this.a(true), var6_ref.f(237239984), var6_ref.a(true), this.f(237239984));
+            var9 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
             if (var9 != null) {
               if (var6_ref.field_Bb == 0 && (!(var9.field_g <= var5) ||
                 var5 == -1)) {
@@ -315,16 +315,16 @@ final class we extends qk {
                 var2 = var6_ref;
               }
             }
-            var6_ref = (kd) (this.e((byte) 32));
+            var6_ref = (Zombie) (this.e((byte) 32));
           }
           if (var3 == null) {
             if (var2 != null) {
-              this.a((kd) (var2), (byte) 110);
+              this.a((Zombie) (var2), (byte) 110);
             } else {
               this.z(12451);
             }
           } else {
-            this.a((kd) (var3), (byte) 108);
+            this.a((Zombie) (var3), (byte) 108);
           }
         } else {
           if (this.field_Qb != null) {
@@ -335,13 +335,13 @@ final class we extends qk {
           var4 = -1;
           var5 = -1;
           if (param0 == 3) {
-            var6_ref = (kd) (this.a((byte) -74, this.field_Vb, 2));
+            var6_ref = (Zombie) (this.a((byte) -74, this.field_Vb, 2));
             while (var6_ref != null) {
-              if (var6_ref.field_F == 9) {
-                var6_ref = (kd) (this.e((byte) 32));
+              if (var6_ref.state == 9) {
+                var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var10 = dj.field_e.field_H.a(true, this.a(true), var6_ref.f(237239984), var6_ref.a(true), this.f(237239984));
+              var10 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var10.field_g <= var5) ||
                   var5 == -1)) {
@@ -354,17 +354,17 @@ final class we extends qk {
                   var2 = var6_ref;
                 }
               }
-              var6_ref = (kd) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.e((byte) 32));
             }
           } else {
             this.field_Nb = -9;
-            var6_ref = (kd) (this.a((byte) -74, this.field_Vb, 2));
+            var6_ref = (Zombie) (this.a((byte) -74, this.field_Vb, 2));
             while (var6_ref != null) {
-              if (var6_ref.field_F == 9) {
-                var6_ref = (kd) (this.e((byte) 32));
+              if (var6_ref.state == 9) {
+                var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var17 = dj.field_e.field_H.a(true, this.a(true), var6_ref.f(237239984), var6_ref.a(true), this.f(237239984));
+              var17 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var17 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var17.field_g <= var5) ||
                   var5 == -1)) {
@@ -377,16 +377,16 @@ final class we extends qk {
                   var2 = var6_ref;
                 }
               }
-              var6_ref = (kd) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.e((byte) 32));
             }
           }
           if (var3 != null) {
-            this.a((kd) (var3), (byte) 108);
+            this.a((Zombie) (var3), (byte) 108);
           } else {
             if (var2 == null) {
               this.z(12451);
             } else {
-              this.a((kd) (var2), (byte) 110);
+              this.a((Zombie) (var2), (byte) 110);
             }
           }
         }

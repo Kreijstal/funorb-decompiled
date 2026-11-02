@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends vo {
+final class qh extends IntrusiveDeque {
     static long field_e;
     int field_g;
     static int field_f;
@@ -15,8 +15,8 @@ final class qh extends vo {
           }
           ce.field_q = false;
           mp.field_e = false;
-          if (kk.field_i != null) {
-            if (!kk.field_i.field_H) {
+          if (Point.field_i != null) {
+            if (!Point.field_i.field_H) {
               return;
             }
             if (param1 == 8) {
@@ -40,7 +40,7 @@ final class qh extends vo {
               if (pk.field_J) {
                 param2 = fe.field_L;
               }
-              kk.field_i.a(param2, param1, param0 ^ 27);
+              Point.field_i.a(param2, param1, param0 ^ 27);
             }
             if (param1 != 256) {
               if (param1 == 10) {
@@ -53,7 +53,7 @@ final class qh extends vo {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "qh.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qh.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,10 +70,10 @@ final class qh extends vo {
           return;
         }
         try {
-          bi.d();
+          Rasterizer.d();
           rc.a(true, (byte) -63);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "qh.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qh.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

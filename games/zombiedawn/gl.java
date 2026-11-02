@@ -29,7 +29,7 @@ class gl extends an {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ class gl extends an {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ class gl extends an {
                 }
                 var2 = ClientException.a(127, "keycode_powerup7");
                 if (null != var2) {
-                  sh.field_g = var2[0] & 255;
+                  ExceptionWrapper.field_g = var2[0] & 255;
                 }
                 var2 = ClientException.a(param1 ^ -732, "keycode_powerup8");
                 if (var2 != null) {
@@ -550,7 +550,7 @@ class gl extends an {
                 }
                 var2 = ClientException.a(-48, "achievement_hidden");
                 if (null != var2) {
-                  sh.field_f = gg.a(var2, (byte) 56);
+                  ExceptionWrapper.field_f = gg.a(var2, (byte) 56);
                 }
                 var2 = ClientException.a(param1 ^ -663, "levelselect_levelname");
                 if (null != var2) {
@@ -936,7 +936,7 @@ class gl extends an {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  ah.field_bb = gg.a(var2, (byte) 56);
+                  Human.field_bb = gg.a(var2, (byte) 56);
                 }
                 var2 = ClientException.a(115, "powerup_disguise");
                 if (var2 != null) {
@@ -1512,7 +1512,7 @@ class gl extends an {
                   } else {
                     stackIn_1235_2 = "{...}";
                   }
-                  throw sh.a((Throwable) ((Object) stackIn_1234_0), ((StringBuilder) (Object) stackIn_1234_1).append(stackIn_1235_2).append(',').append(param1).append(')').toString());
+                  throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_1234_0), ((StringBuilder) (Object) stackIn_1234_1).append(stackIn_1235_2).append(',').append(param1).append(')').toString());
                 }
                 if (GameApplet.field_f != 0) {
                   var3++;
@@ -1543,7 +1543,7 @@ class gl extends an {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1554,7 +1554,7 @@ class gl extends an {
         try {
           field_E = null;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "gl.G(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "gl.G(" + param0 + ')');
         }
     }
 

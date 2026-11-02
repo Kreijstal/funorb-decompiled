@@ -33,7 +33,7 @@ final class ud implements io {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -56,9 +56,9 @@ final class ud implements io {
             field_c = (java.awt.Color) null;
           }
           if (param3.e(-17741)) {
-            on.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
+            TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
           }
-          bi.f(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
+          Rasterizer.f(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
           var8 = this.field_b.field_T.g(0);
           if (var8 != null) {
             var9 = var8.toString();
@@ -66,10 +66,10 @@ final class ud implements io {
             if (this.field_b.e(param0 ^ -16759476) &&
               var9.startsWith(this.field_b.field_U)) {
               var10 = this.field_b.field_L.b(this.field_b.field_U);
-              bi.a(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
+              Rasterizer.a(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
             }
           }
-          bi.c();
+          Rasterizer.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class ud implements io {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class ud implements io {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class ud implements io {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class ud implements io {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

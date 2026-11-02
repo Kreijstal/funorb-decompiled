@@ -23,12 +23,12 @@ final class kl extends al {
           this.a((byte) -96);
         }
         var3 = id.field_M;
-        bi.d();
+        Rasterizer.d();
         if (this.field_n) {
           this.d(-105);
           return;
         }
-        bi.c(-32 + vh.field_b, 0, 672 + vh.field_b, nh.field_P);
+        Rasterizer.c(-32 + vh.field_b, 0, 672 + vh.field_b, nh.field_P);
         if (260 <= this.field_m) {
           if (this.field_m >= 388) {
             if (this.field_m < 508) {
@@ -46,7 +46,7 @@ final class kl extends al {
                   } else {
                     nn.field_j.b(-264 + var2, var3);
                     pg.field_t.b(var2 + 270, 200 + var3);
-                    bi.a(0, var3, bd.field_e, 550, 0, 2 * this.field_m - 3448);
+                    Rasterizer.a(0, var3, bd.field_e, 550, 0, 2 * this.field_m - 3448);
                   }
                 }
               } else {
@@ -60,33 +60,33 @@ final class kl extends al {
           } else {
             nn.field_j.b(var2, var3);
             we.field_Ub.b(var2, -we.field_Ub.field_q + (480 + var3));
-            bi.a(0, var3, bd.field_e, 550, 0, -(2 * (-260 + this.field_m)) + 256);
+            Rasterizer.a(0, var3, bd.field_e, 550, 0, -(2 * (-260 + this.field_m)) + 256);
           }
         }
         this.d(-119);
-        bi.c(-32 + vh.field_b, 0, vh.field_b + 672, nh.field_P);
+        Rasterizer.c(-32 + vh.field_b, 0, vh.field_b + 672, nh.field_P);
         if (this.field_m > 120 &&
           this.field_m < 388) {
           bj.field_q.a(rg.field_L, bd.field_d, Math.min(510 + id.field_M, nh.field_P - 20), 16777215, 0);
         }
         if (640 < bd.field_e) {
           var4Lifetime1 = 8;
-          bi.g(-1 + vh.field_b, id.field_M, 550, 0, 4);
+          Rasterizer.g(-1 + vh.field_b, id.field_M, 550, 0, 4);
           for (var5Lifetime1 = vh.field_b - 2; 0 < var5Lifetime1; var5Lifetime1--) {
             if (256 > var4Lifetime1) {
-              bi.g(var5Lifetime1, id.field_M, 550, 0, var4Lifetime1);
+              Rasterizer.g(var5Lifetime1, id.field_M, 550, 0, var4Lifetime1);
               var4Lifetime1 += 8;
               continue;
             }
             break;
           }
           var4Lifetime1Lifetime1 = 8;
-          bi.g(640 + vh.field_b, id.field_M, 550, 0, 4);
+          Rasterizer.g(640 + vh.field_b, id.field_M, 550, 0, 4);
           for (var5Lifetime1Lifetime1 = 640 + vh.field_b + 1; var5Lifetime1Lifetime1 < bd.field_e; var5Lifetime1Lifetime1++) {
             if (256 <= var4Lifetime1Lifetime1) {
               break;
             }
-            bi.g(var5Lifetime1Lifetime1, id.field_M, 550, 0, var4Lifetime1Lifetime1);
+            Rasterizer.g(var5Lifetime1Lifetime1, id.field_M, 550, 0, var4Lifetime1Lifetime1);
             var4Lifetime1Lifetime1 += 8;
           }
         }
@@ -157,8 +157,8 @@ final class kl extends al {
     }
 
     final static void c(int param0) {
-        if (null != sh.field_d) {
-          sh.field_d.a();
+        if (null != ExceptionWrapper.field_d) {
+          ExceptionWrapper.field_d.a();
         }
         if (cf.field_fb != null) {
           cf.field_fb.a();
@@ -235,7 +235,7 @@ final class kl extends al {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class kl extends al {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -311,7 +311,7 @@ final class kl extends al {
         try {
           this.field_n = false;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -325,17 +325,17 @@ final class kl extends al {
     private final void a(int param0, int param1, int param2, String param3) {
         try {
           lf.field_h.a();
-          bi.d();
+          Rasterizer.d();
           sg.field_jb.a(param3, 60, param1, 520, 200, 4, 0, 1, 0, param0);
           so.a(16777215);
           so.a(16777215);
           so.a(16777215);
           so.a(16777215);
-          bi.h(5, 5, 0, 0, 640, 480);
+          Rasterizer.h(5, 5, 0, 0, 640, 480);
           sg.field_jb.a(param3, 60, param1, 520, 200, param2, 0, 1, 0, param0);
           cn.field_f.b(param2 + 11);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kl.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kl.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class kl extends al {
         }
         bn.field_i = param0;
         ki.a((byte) -119, cc.field_b);
-        bi.d();
+        Rasterizer.d();
         vn var2 = f.field_d;
         int var3 = 0;
         int var4 = 0;
@@ -361,11 +361,11 @@ final class kl extends al {
           return;
         }
         try {
-          bi.h(2, 2, 0, 0, 195, 170);
+          Rasterizer.h(2, 2, 0, 0, 195, 170);
           pa.a(-21189);
           ti.field_b = 3 * wd.field_z.length >> 2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kl.T(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kl.T(" + param0 + ',' + param1 + ')');
         }
     }
 

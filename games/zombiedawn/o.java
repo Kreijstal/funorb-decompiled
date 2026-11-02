@@ -37,7 +37,7 @@ final class o {
           this.field_b = new vn(622, 47);
           ki.a((byte) -84, this.field_b);
           int var2 = 76 % ((param0 + 45) / 48);
-          bi.f(0, 0, 622, 47, 4540749, 65793);
+          Rasterizer.f(0, 0, 622, 47, 4540749, 65793);
           var3 = 16448250;
           var4 = 10068666;
           var16 = gk.a(var4, -107, var3);
@@ -50,8 +50,8 @@ final class o {
           var10 = var12;
           var6 = new vn(121, 122);
           ki.a((byte) -127, var6);
-          bi.f(0, 0, var6.field_w, var6.field_t / 2, 16180917, 16306250);
-          bi.f(0, var6.field_t / 2, var6.field_w, var6.field_t, 16306250, 15568919);
+          Rasterizer.f(0, 0, var6.field_w, var6.field_t / 2, 16180917, 16306250);
+          Rasterizer.f(0, var6.field_t / 2, var6.field_w, var6.field_t, 16306250, 15568919);
           var7 = an.field_y;
           var8 = se.field_i;
           this.a(var7, 0, (byte) 63, var6, var14, -16, ui.field_b, var6.field_w, 0.5f, var6.field_t);
@@ -168,7 +168,7 @@ final class o {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class o {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -274,13 +274,13 @@ final class o {
         int var2Lifetime2;
         int var3Lifetime1;
         var4 = ZombieDawn.field_J;
-        bi.f(9, 9, 622, 47, 4540749, 65793);
-        bi.b(9, 257, 622, 33, 2585);
-        bi.f(9, 265, 622, 11, 2585, 1515566);
+        Rasterizer.f(9, 9, 622, 47, 4540749, 65793);
+        Rasterizer.b(9, 257, 622, 33, 2585);
+        Rasterizer.f(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          bi.f(var3, 331, 117, 90, 460551, 3881787);
+          Rasterizer.f(var3, 331, 117, 90, 460551, 3881787);
           var2++;
           var3 += 121;
         }
@@ -291,8 +291,8 @@ final class o {
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          bi.f(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          bi.b(508, var3Lifetime1 + 42, 127, 42, 12410);
+          Rasterizer.f(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          Rasterizer.b(508, var3Lifetime1 + 42, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }
@@ -377,7 +377,7 @@ final class o {
 
     private final void c(int param0) {
         try {
-          hi.a(hc.a(param0 ^ param0), 124);
+          GameWorld.a(hc.a(param0 ^ param0), 124);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -408,7 +408,7 @@ final class o {
         try {
           this.a(param3, param0, 2, param4, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -512,7 +512,7 @@ final class o {
           }
         }
         if (bd.field_r) {
-          while (on.b(param1 - 146)) {
+          while (TileMap.b(param1 - 146)) {
             var5 = this.b(param1 + 3525);
             if (var5 != 0) {
               return var5;
@@ -537,14 +537,14 @@ final class o {
             this.field_p = (vn) null;
           }
           for (var9_int = param1; var9_int < param4; var9_int++) {
-            bi.f(param3, var9_int, param2, var9_int + 1);
+            Rasterizer.f(param3, var9_int, param2, var9_int + 1);
             var10 = var9_int * param6.length / param4;
             var11 = param6[param6.length + (-var10 - 1)];
             param5.a(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);
           }
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "o.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "o.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 

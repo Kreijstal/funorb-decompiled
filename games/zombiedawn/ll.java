@@ -5,10 +5,10 @@ abstract class ll {
     static boolean field_a;
 
     final static void a(int param0, int param1) {
-        if (ej.field_o == ob.field_b[param0]) {
-          ej.field_o = null;
+        if (LevelNavigation.field_o == ob.field_b[param0]) {
+          LevelNavigation.field_o = null;
         }
-        if (tm.field_h == kd.field_Fb[param0]) {
+        if (tm.field_h == Zombie.field_Fb[param0]) {
           tm.field_h = null;
         }
         if (param1 != 4767999) {
@@ -16,7 +16,7 @@ abstract class ll {
         }
         vn[][] var4 = ob.field_b;
         vn[][] var2 = var4;
-        kd.field_Fb[param0] = null;
+        Zombie.field_Fb[param0] = null;
         int var3 = param0;
         var4[var3] = null;
     }
@@ -87,7 +87,7 @@ abstract class ll {
           var9Lifetime1 = var17.field_t;
           hk.i(1584);
           var17.a();
-          bi.a(0, 0, bi.field_f, bi.field_a);
+          Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a);
           var15 = new vn(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();
@@ -126,7 +126,7 @@ abstract class ll {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -163,8 +163,8 @@ abstract class ll {
           for (var3 = 0; n.field_r.length > var3; var3++) {
             var4 = la.field_b[var3];
             if (var4 >= 0) {
-              if (var4 == kk.field_m.field_d) {
-                var5 = ej.field_s;
+              if (var4 == Point.field_m.field_d) {
+                var5 = LevelNavigation.field_s;
               } else {
                 var5 = qi.field_E;
               }
@@ -177,7 +177,7 @@ abstract class ll {
             var7 = sm.a(stackIn_12_0, stackIn_13_1, var6);
             var8 = -(var7 >> 1) + im.field_d;
             if (var4 >= 0) {
-              if (kk.field_m.field_d != var4) {
+              if (Point.field_m.field_d != var4) {
                 stackIn_17_0 = dd.field_b;
               } else {
                 stackIn_17_0 = qi.field_G;
@@ -201,7 +201,7 @@ abstract class ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "ll.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "ll.A(" + param0 + ')');
         }
     }
 

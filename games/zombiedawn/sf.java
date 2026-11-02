@@ -9,7 +9,7 @@ final class sf {
     private byte[] field_b;
     private long field_c;
     private int field_a;
-    static vo field_n;
+    static IntrusiveDeque field_n;
     static pf field_j;
     private int field_m;
     private long field_e;
@@ -199,7 +199,7 @@ final class sf {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class sf {
           this.a(param1.length, false, 0, param1);
           int var3_int = 105 / ((-64 - param0) / 58);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class sf {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class sf {
           this.field_b = new byte[param2];
           this.field_e = 0L;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class qf {
-    private sp field_f;
+    private PcmStream field_f;
     static boolean field_l;
     private int field_b;
     private boolean field_k;
@@ -18,18 +18,18 @@ class qf {
     private int field_i;
     private int field_a;
     private long field_o;
-    private sp[] field_t;
+    private PcmStream[] field_t;
     private long field_c;
     private int field_u;
-    private sp[] field_h;
+    private PcmStream[] field_h;
     private boolean field_e;
 
-    private final static void a(sp param0) {
+    private final static void a(PcmStream param0) {
         param0.field_k = false;
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
-        sp var1 = param0.c();
+        PcmStream var1 = param0.c();
         while (var1 != null) {
           qf.a(var1);
           var1 = param0.d();
@@ -154,13 +154,13 @@ class qf {
         }
     }
 
-    final synchronized void b(sp param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_f = param0;
     }
 
-    private final void a(sp param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        sp var4 = this.field_h[var3];
+        PcmStream var4 = this.field_h[var3];
         if (var4 == null) {
           this.field_t[var3] = param0;
         } else {
@@ -242,20 +242,20 @@ class qf {
         int var7_int;
         Object var7;
         int var8_int;
-        sp[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        sp var11;
-        ik var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        sp var14;
+        PcmStream var14;
         int var15_int;
-        sp var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        sp var14Lifetime1;
-        sp var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_l) {
           var3 = var3 << 1;
@@ -316,12 +316,12 @@ class qf {
                     var15 = var11.field_i;
                     var11.field_i = null;
                     if (var10 != null) {
-                      ((sp) (var10)).field_i = var15;
+                      ((PcmStream) (var10)).field_i = var15;
                     } else {
                       this.field_t[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_h[var7_int] = (sp) (var10);
+                      this.field_h[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -342,8 +342,8 @@ class qf {
             this.field_h[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((sp) (var7)).field_i;
-              ((sp) (var7)).field_i = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_i;
+              ((PcmStream) (var7)).field_i = null;
               var7 = var10Lifetime1;
             }
           }
@@ -429,8 +429,8 @@ class qf {
         this.field_o = 0L;
         this.field_e = true;
         this.field_n = 0;
-        this.field_h = new sp[8];
-        this.field_t = new sp[8];
+        this.field_h = new PcmStream[8];
+        this.field_t = new PcmStream[8];
         this.field_i = 0;
         this.field_c = 0L;
     }

@@ -63,24 +63,24 @@ final class lg {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        kd var8 = null;
-        kd var9 = null;
+        Zombie var8 = null;
+        Zombie var9 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var7 = ZombieDawn.field_J;
         try {
           var3 = 8 / ((param1 - 36) / 46);
           for (var2_int = 0; param0 > var2_int; var2_int++) {
-            if (sh.field_e != 0) {
-              var9 = dj.field_e.a(60, (byte) 125, 930, 140, 960);
-              var5 = 20 + hp.field_A.a(true) - so.c(40);
-              var6 = hp.field_A.f(237239984) - so.c(60);
-              var9.a(dj.field_e.field_H.a(true, var9.a(true), var6, var5, var9.f(237239984)), true);
+            if (ExceptionWrapper.field_e != 0) {
+              var9 = dj.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
+              var5 = 20 + hp.field_A.getX(true) - so.c(40);
+              var6 = hp.field_A.getY(237239984) - so.c(60);
+              var9.a(dj.field_e.field_H.a(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
             } else {
-              var8 = dj.field_e.a(20, (byte) 120, 70, 354, 890);
+              var8 = dj.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
               var5_ref_qh = new qh();
-              var5_ref_qh.a(0, new kk(var8.a(true), 450));
-              var5_ref_qh.a(0, new kk(384, 206));
+              var5_ref_qh.addFirst(0, new Point(var8.getX(true), 450));
+              var5_ref_qh.addFirst(0, new Point(384, 206));
               var8.a(var5_ref_qh, true);
             }
           }
@@ -88,7 +88,7 @@ final class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "lg.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "lg.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class lg {
           this.field_t = 640;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

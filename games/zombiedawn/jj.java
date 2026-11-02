@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends fb {
+final class jj extends WorldObject {
     static String[] field_G;
     static int[] field_H;
     private int field_K;
     private int field_F;
     private int field_E;
     static String field_J;
-    static vo field_D;
+    static IntrusiveDeque field_D;
     private int field_I;
 
     public static void j(int param0) {
@@ -23,18 +23,18 @@ final class jj extends fb {
 
     final void g(int param0) {
         if (param0 >= 95) {
-          this.field_y = (this.field_F << 16) + 4 * fb.a(1311979239, ac.field_m << 5);
+          this.field_y = (this.field_F << 16) + 4 * WorldObject.a(1311979239, ac.field_m << 5);
           this.field_x = (this.field_E << 16) + rd.a(true, ac.field_m << 6) * 4;
           return;
         }
         this.field_E = -11;
-        this.field_y = (this.field_F << 16) + 4 * fb.a(1311979239, ac.field_m << 5);
+        this.field_y = (this.field_F << 16) + 4 * WorldObject.a(1311979239, ac.field_m << 5);
         this.field_x = (this.field_E << 16) + rd.a(true, ac.field_m << 6) * 4;
     }
 
-    final void a(byte param0, wk param1) {
-        int var3_int = param1.a(this.field_y >> 16, (byte) -88);
-        int var4 = param1.a(this.field_x >> 16, 0) - lc.field_k[0].field_t;
+    final void a(byte param0, Camera param1) {
+        int var3_int = param1.worldToScreenX(this.field_y >> 16, (byte) -88);
+        int var4 = param1.worldToScreenY(this.field_x >> 16, 0) - lc.field_k[0].field_t;
         if (param0 > -76) {
           return;
         }
@@ -44,7 +44,7 @@ final class jj extends fb {
           }
           lc.field_k[0].e(var3_int, var4, this.field_K);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,8 +60,8 @@ final class jj extends fb {
         super(param0, param1, 0);
         this.field_I = 48;
         this.field_K = 0;
-        this.field_F = -100 + hp.field_A.a(true);
-        this.field_E = hp.field_A.f(237239984) + 40;
+        this.field_F = -100 + hp.field_A.getX(true);
+        this.field_E = hp.field_A.getY(237239984) + 40;
     }
 
     final static String i(int param0) {
@@ -79,10 +79,10 @@ final class jj extends fb {
         RuntimeException var1 = null;
         var2 = ZombieDawn.field_J;
         try {
-          wk.field_o = new vn(512, 512);
-          wk.field_o.a();
+          Camera.field_o = new vn(512, 512);
+          Camera.field_o.a();
           for (var1_int = 256; var1_int > 0; var1_int--) {
-            bi.g(256, 256, var1_int, -var1_int + 256);
+            Rasterizer.g(256, 256, var1_int, -var1_int + 256);
           }
           if (param0) {
             jj.j(115);
@@ -94,7 +94,7 @@ final class jj extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "jj.G(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "jj.G(" + param0 + ')');
         }
     }
 
@@ -142,13 +142,13 @@ final class jj extends fb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     static {
         field_G = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_J = "Passwords must be between 5 and 20 letters and numbers";
-        field_D = new vo();
+        field_D = new IntrusiveDeque();
     }
 }

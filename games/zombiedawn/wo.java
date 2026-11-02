@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wo extends ah {
+class wo extends Human {
     static dn field_xb;
     static boolean field_wb;
     static int[] field_zb;
     boolean field_Ab;
     static ln field_yb;
 
-    void a(wk param0, int param1) {
+    void a(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -20,15 +20,15 @@ class wo extends ah {
         RuntimeException var3 = null;
         var6 = ZombieDawn.field_J;
         try {
-          bi.d(param0.a(this.a(true), (byte) -74), param0.a(this.f(param1 ^ 237235572), 0), this.field_pb, 16711680);
+          Rasterizer.d(param0.worldToScreenX(this.getX(true), (byte) -74), param0.worldToScreenY(this.getY(param1 ^ 237235572), 0), this.field_pb, 16711680);
           if (param1 != 5060) {
             field_xb = (dn) null;
           }
           for (var3_int = 0; this.field_ub > var3_int; var3_int++) {
-            var4 = param0.a(this.field_jb[var3_int], (byte) -59);
-            var5 = param0.a(this.field_gb[var3_int], 0);
-            bi.b(-1 + var4, var5 - 1, 3, 3, 0);
-            bi.a(var4, var5, 65280);
+            var4 = param0.worldToScreenX(this.field_jb[var3_int], (byte) -59);
+            var5 = param0.worldToScreenY(this.field_gb[var3_int], 0);
+            Rasterizer.b(-1 + var4, var5 - 1, 3, 3, 0);
+            Rasterizer.a(var4, var5, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -41,7 +41,7 @@ class wo extends ah {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ class wo extends ah {
         int var2;
         int var3;
         int var4;
-        wk var5;
+        Camera var5;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
@@ -68,14 +68,14 @@ class wo extends ah {
         stackIn_3_1 = (!this.field_Ab) ? 1 : 2;
         var2 = stackIn_2_0 * stackIn_3_1;
         if (param0 != 52) {
-          var5 = (wk) null;
-          this.a((wk) null, 77);
+          var5 = (Camera) null;
+          this.a((Camera) null, 77);
           this.field_pb = var2;
-          if (0 != this.field_F) {
+          if (0 != this.state) {
             var3 = 0;
             if (!this.a(-86, var2, this.field_Ab)) {
               this.field_Ab = false;
-              if (3 == this.field_F) {
+              if (3 == this.state) {
                 this.e(0, -6904);
               }
             } else {
@@ -83,7 +83,7 @@ class wo extends ah {
                 if (this.field_Ab) {
                   this.field_Ab = false;
                 } else {
-                  if (this.field_F != 3) {
+                  if (this.state != 3) {
                     this.e(3, -6904);
                   }
                 }
@@ -100,7 +100,7 @@ class wo extends ah {
             var3Lifetime3 = 0;
             if (!this.a(-86, var2, this.field_Ab)) {
               this.field_Ab = false;
-              if (3 == this.field_F) {
+              if (3 == this.state) {
                 this.e(0, -6904);
               }
             } else {
@@ -108,7 +108,7 @@ class wo extends ah {
                 if (this.field_Ab) {
                   this.field_Ab = false;
                 } else {
-                  if (this.field_F != 3) {
+                  if (this.state != 3) {
                     this.e(3, -6904);
                   }
                 }
@@ -124,7 +124,7 @@ class wo extends ah {
           var3Lifetime4 = 1;
           if (!this.a(-86, var2, this.field_Ab)) {
             this.field_Ab = false;
-            if (3 != this.field_F) {
+            if (3 != this.state) {
               return;
             }
             this.e(0, -6904);
@@ -141,19 +141,19 @@ class wo extends ah {
             this.field_Ab = false;
             return;
           }
-          if (this.field_F == 3) {
+          if (this.state == 3) {
             return;
           }
           this.e(3, -6904);
           return;
         }
         this.field_pb = var2;
-        if (0 == this.field_F &&
+        if (0 == this.state &&
           !this.field_Ab) {
           var3Lifetime1 = 1;
           if (!this.a(-86, var2, this.field_Ab)) {
             this.field_Ab = false;
-            if (3 != this.field_F) {
+            if (3 != this.state) {
               return;
             }
             this.e(0, -6904);
@@ -170,7 +170,7 @@ class wo extends ah {
             this.field_Ab = false;
             return;
           }
-          if (this.field_F == 3) {
+          if (this.state == 3) {
             return;
           }
           this.e(3, -6904);
@@ -179,7 +179,7 @@ class wo extends ah {
         var3Lifetime2 = 0;
         if (!this.a(-86, var2, this.field_Ab)) {
           this.field_Ab = false;
-          if (3 != this.field_F) {
+          if (3 != this.state) {
             return;
           }
           this.e(0, -6904);
@@ -196,7 +196,7 @@ class wo extends ah {
           this.field_Ab = false;
           return;
         }
-        if (this.field_F == 3) {
+        if (this.state == 3) {
           return;
         }
         this.e(3, -6904);

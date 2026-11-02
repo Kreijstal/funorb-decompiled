@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gk extends fb {
+final class gk extends WorldObject {
     private boolean field_D;
     static String field_H;
     static int field_G;
@@ -12,7 +12,7 @@ final class gk extends fb {
     private boolean field_J;
     static String field_I;
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -26,8 +26,8 @@ final class gk extends fb {
           if (param0 > -76) {
             return;
           }
-          var3_int = param1.a(this.a(true) - 24, (byte) -106);
-          var4 = param1.a(-24 + this.f(237239984), 0);
+          var3_int = param1.worldToScreenX(this.getX(true) - 24, (byte) -106);
+          var4 = param1.worldToScreenY(-24 + this.getY(237239984), 0);
           if (var3_int >= -48 &&
             var4 >= -48 &&
             qj.field_d >= var3_int &&
@@ -58,7 +58,7 @@ final class gk extends fb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -95,10 +95,10 @@ final class gk extends fb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          kd.field_Fb[param0] = param1;
-          kd.field_Fb[param0][-2 + kd.field_Fb[param0].length].a();
+          Zombie.field_Fb[param0] = param1;
+          Zombie.field_Fb[param0][-2 + Zombie.field_Fb[param0].length].a();
           if (!ng.field_e) {
-            bi.d();
+            Rasterizer.d();
           }
           if (!param2) {
             var4 = (byte[]) null;
@@ -118,7 +118,7 @@ final class gk extends fb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,10 +186,10 @@ final class gk extends fb {
           var3Lifetime1 = bn.field_b[9] >> 8;
           var4 = bn.field_b[10] >> 8;
           var5Lifetime1 = bn.field_b[11] >> 8;
-          var6Lifetime1 = ej.field_x << 4;
+          var6Lifetime1 = LevelNavigation.field_x << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = rd.a(true, var6Lifetime1) >> 8;
-          var9Lifetime1 = fb.a(1311979239, var6Lifetime1) >> 8;
+          var9Lifetime1 = WorldObject.a(1311979239, var6Lifetime1) >> 8;
           if (ha.field_b != -1 &&
             -1 != ei.field_K) {
             var7Lifetime1 = ha.field_b - 320;
@@ -227,7 +227,7 @@ final class gk extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "gk.F(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "gk.F(" + param0 + ')');
         }
     }
 
@@ -255,12 +255,12 @@ final class gk extends fb {
 
     final void g(int param0) {
         if (param0 < 95) {
-          wk var3 = (wk) null;
-          this.a((byte) -5, (wk) null);
+          Camera var3 = (Camera) null;
+          this.a((byte) -5, (Camera) null);
         }
     }
 
-    final static on a(byte param0, byte[] param1) {
+    final static TileMap a(byte param0, byte[] param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -268,8 +268,8 @@ final class gk extends fb {
         int var4 = 0;
         byte[] var5 = null;
         int var7 = 0;
-        on stackIn_3_0 = null;
-        on stackIn_8_0 = null;
+        TileMap stackIn_3_0 = null;
+        TileMap stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -277,19 +277,19 @@ final class gk extends fb {
         var7 = ZombieDawn.field_J;
         try {
           if (param0 > -67) {
-            stackIn_3_0 = (on) null;
+            stackIn_3_0 = (TileMap) null;
             return stackIn_3_0;
           }
           var2_int = 90000;
           var3 = 10;
           var4 = 0;
           var5 = new byte[12 + param1.length];
-          fb.a(0, var5, (byte) 67, md.a(0, param1, 74));
-          fb.a(1, var5, (byte) -87, var4);
-          fb.a(2, var5, (byte) 70, var2_int);
-          fb.a(3, var5, (byte) -109, var3);
+          WorldObject.a(0, var5, (byte) 67, md.a(0, param1, 74));
+          WorldObject.a(1, var5, (byte) -87, var4);
+          WorldObject.a(2, var5, (byte) 70, var2_int);
+          WorldObject.a(3, var5, (byte) -109, var3);
           for (var6 = 1; param1.length / 4 > var6; var6++) {
-            fb.a(var6 + 3, var5, (byte) -125, md.a(var6, param1, 85));
+            WorldObject.a(var6 + 3, var5, (byte) -125, md.a(var6, param1, 85));
           }
           stackIn_8_0 = fc.a(var5, (byte) 126);
           return stackIn_8_0;
@@ -303,7 +303,7 @@ final class gk extends fb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

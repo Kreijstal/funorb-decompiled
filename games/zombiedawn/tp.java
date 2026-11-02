@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends sp {
+final class tp extends PcmStream {
     private boolean field_w;
     private wj field_n;
     private boolean field_x;
@@ -9,7 +9,7 @@ final class tp extends sp {
     private int[] field_z;
     private rj field_s;
     private rj field_v;
-    static vo field_m;
+    static IntrusiveDeque field_m;
     static long field_p;
     private int[] field_q;
     private wj field_l;
@@ -127,7 +127,7 @@ final class tp extends sp {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class tp extends sp {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -292,11 +292,11 @@ final class tp extends sp {
           var2 = mb.a(param1, "jagex logo2.packvorbis", "");
           var2.b();
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final sp c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -307,15 +307,15 @@ final class tp extends sp {
         return new ji(ra.e((byte) -16), df.a(1));
     }
 
-    final static fn b(byte param0, int param1) {
-        if (4 <= DelegatingCanvas.field_e.d(-56)) {
+    final static PcmSampleStream b(byte param0, int param1) {
+        if (4 <= DelegatingCanvas.field_e.size(-56)) {
           return null;
         }
         if (param0 < 20) {
-          field_m = (vo) null;
+          field_m = (IntrusiveDeque) null;
         }
         tm var2 = new tm(param1);
-        DelegatingCanvas.field_e.a(0, var2);
+        DelegatingCanvas.field_e.addFirst(0, var2);
         return var2.field_j;
     }
 
@@ -324,7 +324,7 @@ final class tp extends sp {
           param2.a(param0, true, param3);
           param2.a(param1, false);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class tp extends sp {
           i.a(256, param1, (byte) -115, param2);
           int var3_int = -119 / ((-38 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -386,11 +386,11 @@ final class tp extends sp {
           si.field_Ub[1].h(-35, 5, 0);
           cn.field_f.b(89);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final sp d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -526,15 +526,15 @@ final class tp extends sp {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static fn $cfr$intArgs$b$3010b50b2764(int param0, int param1) {
-        if (4 <= DelegatingCanvas.field_e.d(-56)) {
+    final static PcmSampleStream $cfr$intArgs$b$3010b50b2764(int param0, int param1) {
+        if (4 <= DelegatingCanvas.field_e.size(-56)) {
           return null;
         }
         if (param0 < 20) {
-          field_m = (vo) null;
+          field_m = (IntrusiveDeque) null;
         }
         tm var2 = new tm(param1);
-        DelegatingCanvas.field_e.a(0, var2);
+        DelegatingCanvas.field_e.addFirst(0, var2);
         return var2.field_j;
     }
 }

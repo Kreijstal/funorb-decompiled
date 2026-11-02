@@ -5,7 +5,7 @@ final class wh implements wa {
     static int field_b;
     static int field_c;
     static vn[][] field_a;
-    static fn field_e;
+    static PcmSampleStream field_e;
     static int[] field_d;
 
     public final void a(int param0, int param1, int param2) {
@@ -29,7 +29,7 @@ final class wh implements wa {
           }
           var2Lifetime1 = 3 / ((27 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class wh implements wa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -14,17 +14,17 @@ final class fc extends qk {
 
     final void g(int param0) {
         int var3;
-        wk var4;
+        Camera var4;
         var3 = ZombieDawn.field_J;
         if (param0 <= 95) {
-          var4 = (wk) null;
-          this.a((byte) -121, (wk) null);
+          var4 = (Camera) null;
+          this.a((byte) -121, (Camera) null);
         }
         if (this.field_Gb > 0) {
           this.field_Gb = this.field_Gb - 1;
         }
-        if (this.field_F != 0) {
-          if (this.field_F == 10 &&
+        if (this.state != 0) {
+          if (this.state == 10 &&
             2 == this.field_G) {
             this.field_yb.z(0);
             this.e(0, -6904);
@@ -36,7 +36,7 @@ final class fc extends qk {
             this.field_Pb = this.field_Pb - 1;
           }
         }
-        this.d(this.field_F, -26109);
+        this.d(this.state, -26109);
     }
 
     final static void o(byte param0) {
@@ -53,7 +53,7 @@ final class fc extends qk {
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -65,10 +65,10 @@ final class fc extends qk {
         int var5 = 0;
         int var6 = 0;
         try {
-          var3_int = param1.a(this.a(true), (byte) -70);
-          var4 = param1.a(this.f(237239984), 0);
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -70);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0);
           var5 = 0;
-          if (this.field_F == 10 &&
+          if (this.state == 10 &&
             var5 == 0) {
             stackIn_6_0 = (this.field_Nb) ? 2 : 1;
             var5 = stackIn_6_0;
@@ -85,12 +85,12 @@ final class fc extends qk {
             field_Ob = -119;
           }
           if (b.field_h) {
-            bi.d(var3_int + 12, 24 + var4, 260, 16711680);
-            bi.e(var3_int, var4, 260 + var3_int, 260 + var4, 16711680);
-            bi.e(var3_int, var4, -260 + var3_int, 260 + var4, 16711680);
+            Rasterizer.d(var3_int + 12, 24 + var4, 260, 16711680);
+            Rasterizer.e(var3_int, var4, 260 + var3_int, 260 + var4, 16711680);
+            Rasterizer.e(var3_int, var4, -260 + var3_int, 260 + var4, 16711680);
             bj.field_q.c(Integer.toString(var5), var3_int, var4, 16777215, 0);
             bj.field_q.c(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_F), var3_int, -20 + var4, 16777215, 0);
+            bj.field_q.c(Integer.toString(this.state), var3_int, -20 + var4, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,19 +103,19 @@ final class fc extends qk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    final static on a(byte[] param0, byte param1) {
+    final static TileMap a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        on stackIn_9_0 = null;
-        on stackIn_11_0 = null;
+        TileMap stackIn_9_0 = null;
+        TileMap stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -127,18 +127,18 @@ final class fc extends qk {
           var3 = 100;
           var4 = new byte[8 + param0.length];
           for (var5 = 0; var5 < 6; var5++) {
-            fb.a(var5, var4, (byte) 71, md.a(var5, param0, 72));
+            WorldObject.a(var5, var4, (byte) 71, md.a(var5, param0, 72));
           }
-          fb.a(6, var4, (byte) -108, var2_int);
-          fb.a(7, var4, (byte) 57, var3);
+          WorldObject.a(6, var4, (byte) -108, var2_int);
+          WorldObject.a(7, var4, (byte) 57, var3);
           for (var5Lifetime1 = 6; var5Lifetime1 < param0.length / 4; var5Lifetime1++) {
-            fb.a(var5Lifetime1 + 2, var4, (byte) 98, md.a(var5Lifetime1, param0, 105));
+            WorldObject.a(var5Lifetime1 + 2, var4, (byte) 98, md.a(var5Lifetime1, param0, 105));
           }
           if (param1 >= 45) {
             stackIn_11_0 = BufferedSocket.a(var4, -27);
             return stackIn_11_0;
           }
-          stackIn_9_0 = (on) null;
+          stackIn_9_0 = (TileMap) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,7 +150,7 @@ final class fc extends qk {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -176,20 +176,20 @@ final class fc extends qk {
         }
         var5 = -1;
         var6 = dj.field_e.field_R.b((byte) 26);
-        while (var6 instanceof fb) {
-          if (var6 instanceof kd) {
-            if (!((kd) (var6)).x(91)) {
+        while (var6 instanceof WorldObject) {
+          if (var6 instanceof Zombie) {
+            if (!((Zombie) (var6)).x(91)) {
               var6 = var6.previous;
               continue;
             }
-            var2 = ((kd) (var6)).a(true) - this.a(true);
-            var3 = ((kd) (var6)).f(237239984) - this.f(237239984);
+            var2 = ((Zombie) (var6)).getX(true) - this.getX(true);
+            var3 = ((Zombie) (var6)).getY(237239984) - this.getY(237239984);
             if (0 < var3 &&
               Math.abs(var2) < var3) {
               var4 = var2 * var2 + var3 * var3;
               if (var4 < var5 ||
                 -1 == var5) {
-                this.field_yb = (kd) (var6);
+                this.field_yb = (Zombie) (var6);
                 var5 = var4;
               }
             }

@@ -8,14 +8,14 @@ final class fl {
     static int[] field_d;
     static int field_a;
 
-    final static eo a(int param0, boolean param1) {
-        eo var2 = null;
+    final static HumanFactory a(int param0, boolean param1) {
+        HumanFactory var2 = null;
         if (param0 == 5) {
-          var2 = new eo(true);
+          var2 = new HumanFactory(true);
           var2.field_d = param1 ? true : false;
           return var2;
         }
-        return (eo) null;
+        return (HumanFactory) null;
     }
 
     public static void a(byte param0) {

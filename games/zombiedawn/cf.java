@@ -11,7 +11,7 @@ final class cf extends ki {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "cf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "cf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

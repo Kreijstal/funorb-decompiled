@@ -31,7 +31,7 @@ final class jc extends IntrusiveNode {
           var4 = -1L;
           pg.a(true, param1, var4, var2, var3);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

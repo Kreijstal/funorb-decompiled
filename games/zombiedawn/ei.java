@@ -45,7 +45,7 @@ abstract class ei extends hp {
             field_G = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ei.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ei.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ abstract class ei extends hp {
         if (null == f.field_e) {
           f.field_e = new vn(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
-          bi.d();
+          Rasterizer.d();
           this.a(param3, 0, (byte) -121);
           super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
           pa.a(param3 ^ -21189);
@@ -82,7 +82,7 @@ abstract class ei extends hp {
         if (f.field_e.field_w < this.field_i) {
           f.field_e = new vn(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
-          bi.d();
+          Rasterizer.d();
           this.a(param3, 0, (byte) -121);
           super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
           pa.a(param3 ^ -21189);
@@ -91,7 +91,7 @@ abstract class ei extends hp {
         }
         if (f.field_e.field_t >= this.field_n) {
           ki.a((byte) -86, f.field_e);
-          bi.d();
+          Rasterizer.d();
           this.a(param3, 0, (byte) -121);
           super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
           pa.a(param3 ^ -21189);
@@ -100,7 +100,7 @@ abstract class ei extends hp {
         }
         f.field_e = new vn(this.field_i, this.field_n);
         ki.a((byte) -86, f.field_e);
-        bi.d();
+        Rasterizer.d();
         this.a(param3, 0, (byte) -121);
         super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
         pa.a(param3 ^ -21189);
@@ -114,7 +114,7 @@ abstract class ei extends hp {
           this.field_I = 0;
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

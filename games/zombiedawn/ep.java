@@ -27,7 +27,7 @@ final class ep extends IntrusiveNode {
           }
           fc.field_Ob = 0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ep.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ep.C(" + param0 + ')');
         }
     }
 

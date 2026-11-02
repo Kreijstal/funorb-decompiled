@@ -18,7 +18,7 @@ final class jk {
             jk.a(false, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class jk {
           this.field_c = this.field_c + 1;
           this.field_e[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class jk {
           return;
         }
         if (param0) {
-          bi.a(0, 0, bi.field_f, bi.field_a, 0, 192);
+          Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, 192);
         }
         if (!param1) {
           wo.field_xb.a(0, 0, 0);
@@ -115,7 +115,7 @@ final class jk {
             boolean decompiledFrameRemainder0 = true;
             if (cc.field_m[var3].field_j == param1.field_j) {
               var4 = cc.field_m[var3].a((byte) -78);
-              if (ej.field_d < nl.field_o[var4]) {
+              if (LevelNavigation.field_d < nl.field_o[var4]) {
                 nl.field_o[var4] = nl.field_o[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -141,7 +141,7 @@ final class jk {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class jk {
             jk.a((byte) -18, (aa) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class jk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class jk {
             jk.b(-21);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

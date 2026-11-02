@@ -18,7 +18,7 @@ final class sa extends pn {
           super.a(param0, param1, (byte) -121);
           rk.field_b.a(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
           if (this.field_X != null) {
-            bi.b(param0 + 20, -7 + (param1 + 120), 260, 8421504);
+            Rasterizer.b(param0 + 20, -7 + (param1 + 120), 260, 8421504);
             rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
             return;
           }
@@ -29,7 +29,7 @@ final class sa extends pn {
         if (this.field_X == null) {
           return;
         }
-        bi.b(param0 + 20, -7 + (param1 + 120), 260, 8421504);
+        Rasterizer.b(param0 + 20, -7 + (param1 + 120), 260, 8421504);
         rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
     }
 
@@ -55,7 +55,7 @@ final class sa extends pn {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class sa extends pn {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class sa extends pn {
           this.field_ab = false;
           this.a(this.field_V, 10);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sh implements Runnable {
+final class ExceptionWrapper implements Runnable {
     static String field_c;
     static int field_g;
     static int field_a;
@@ -27,7 +27,7 @@ final class sh implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 37) {
-            sh.a((byte) -26);
+            ExceptionWrapper.a((byte) -26);
           }
           var5 = new wd();
           var5.field_x = param2;
@@ -54,7 +54,7 @@ final class sh implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class sh implements Runnable {
           this.field_k = this.field_k + 1;
           if (!param0) {
             String var5 = (String) null;
-            sh.a((Throwable) null, (String) null);
+            ExceptionWrapper.wrapException((Throwable) null, (String) null);
           }
           this.field_b.notifyAll();
         }
@@ -139,7 +139,7 @@ final class sh implements Runnable {
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -220,7 +220,7 @@ final class sh implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -266,11 +266,11 @@ final class sh implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    sh(PlatformTaskDispatcher param0) {
+    ExceptionWrapper(PlatformTaskDispatcher param0) {
         op var2 = null;
         this.field_b = new ra();
         this.field_l = false;
@@ -285,7 +285,7 @@ final class sh implements Runnable {
           }
           this.field_h = (Thread) (var2.field_d);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

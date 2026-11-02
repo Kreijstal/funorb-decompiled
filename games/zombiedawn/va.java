@@ -47,7 +47,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "va.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "va.D(" + param0 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "va.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "va.A(" + param0 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class va {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class va {
               fieldTemp$1 = ih.field_J;
               ih.field_J = ih.field_J + 1;
               var5_ref.field_kb = fieldTemp$1;
-              tp.field_m.a(param0 ^ 1545, var5_ref);
+              tp.field_m.addFirst(param0 ^ 1545, var5_ref);
             }
             var5_ref.field_lb = var4_ref_String;
             return;
@@ -252,7 +252,7 @@ final class va {
             fieldTemp$0 = ne.field_b;
             ne.field_b = ne.field_b + 1;
             var6.field_kb = fieldTemp$0;
-            eb.field_d.a(0, var6);
+            eb.field_d.addFirst(0, var6);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -273,7 +273,7 @@ final class va {
               }
             }
             if (null == var7) {
-              eb.field_d.a(0, var6);
+              eb.field_d.addFirst(0, var6);
               if (var8 == 0) {
                 return;
               }
@@ -286,7 +286,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "va.E(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "va.E(" + param0 + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class va {
             va.b((byte) -42);
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!on.b(-114)))) {
+          while (!(decompiledNaturalLoopExit0 = (!TileMap.b(-114)))) {
             i.field_W.a(21657);
             stackIn_16_0 = i.field_W.d(-127);
             if (var7 == 0) {
@@ -366,7 +366,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "va.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "va.C(" + param0 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class va {
           this.field_f = param3;
           this.field_h = param4;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "va.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "va.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

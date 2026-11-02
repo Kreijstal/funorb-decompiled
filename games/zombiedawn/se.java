@@ -8,7 +8,7 @@ final class se extends qg {
     private java.net.ProxySelector field_k;
     static int field_o;
     static cg field_n;
-    static vo field_m;
+    static IntrusiveDeque field_m;
     static String field_i;
     static rh field_l;
     static of field_j;
@@ -105,7 +105,7 @@ final class se extends qg {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class se extends qg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -160,29 +160,29 @@ final class se extends qg {
         var17 = ZombieDawn.field_J;
         if (param13 < param4) {
           if (param4 < param14) {
-            pi.a(param11, param10, bi.field_c, param6, (byte) -104, param7, param12, param8, param2, param1, param15, param14, param9, param3, param5, param13, param4);
+            pi.a(param11, param10, Rasterizer.field_c, param6, (byte) -104, param7, param12, param8, param2, param1, param15, param14, param9, param3, param5, param13, param4);
           } else {
             if (param13 >= param14) {
-              pi.a(param5, param1, bi.field_c, param11, (byte) -104, param12, param9, param3, param8, param15, param10, param4, param7, param2, param6, param14, param13);
+              pi.a(param5, param1, Rasterizer.field_c, param11, (byte) -104, param12, param9, param3, param8, param15, param10, param4, param7, param2, param6, param14, param13);
             } else {
-              pi.a(param5, param15, bi.field_c, param6, (byte) -104, param12, param7, param3, param2, param1, param10, param4, param9, param8, param11, param13, param14);
+              pi.a(param5, param15, Rasterizer.field_c, param6, (byte) -104, param12, param7, param3, param2, param1, param10, param4, param9, param8, param11, param13, param14);
             }
           }
         } else {
           if (param13 < param14) {
-            pi.a(param11, param1, bi.field_c, param5, (byte) -104, param7, param9, param8, param3, param10, param15, param14, param12, param2, param6, param4, param13);
+            pi.a(param11, param1, Rasterizer.field_c, param5, (byte) -104, param7, param9, param8, param3, param10, param15, param14, param12, param2, param6, param4, param13);
           } else {
             if (param4 >= param14) {
-              pi.a(param6, param10, bi.field_c, param11, (byte) -104, param9, param12, param2, param8, param15, param1, param13, param7, param3, param5, param14, param4);
+              pi.a(param6, param10, Rasterizer.field_c, param11, (byte) -104, param9, param12, param2, param8, param15, param1, param13, param7, param3, param5, param14, param4);
             } else {
-              pi.a(param6, param15, bi.field_c, param5, (byte) -104, param9, param7, param2, param3, param10, param1, param13, param12, param8, param11, param4, param14);
+              pi.a(param6, param15, Rasterizer.field_c, param5, (byte) -104, param9, param7, param2, param3, param10, param1, param13, param12, param8, param11, param4, param14);
             }
           }
         }
         if (!param0) {
           return;
         }
-        field_m = (vo) null;
+        field_m = (IntrusiveDeque) null;
     }
 
     se() {
@@ -377,7 +377,7 @@ final class se extends qg {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -385,7 +385,7 @@ final class se extends qg {
         field_o = 10;
         field_n = new cg(15, 0, 1, 0);
         field_i = "PER MONTH";
-        field_m = new vo();
+        field_m = new IntrusiveDeque();
         field_l = new rh();
     }
 

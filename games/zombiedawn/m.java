@@ -31,9 +31,9 @@ abstract class m extends wb implements ib {
             wh.field_d[10] = -1;
             wh.field_d[9] = -1;
             cf.field_eb = new Vector();
-            on.a((byte) 6, (ib) (this));
+            TileMap.a((byte) 6, (ib) (this));
           } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "m.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "m.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -104,7 +104,7 @@ abstract class m extends wb implements ib {
                   if (var3 != 4) {
                     this.a(false, false);
                   } else {
-                    mn.a(-1, hi.field_Y, false);
+                    mn.a(-1, GameWorld.field_Y, false);
                     hp.field_C = true;
                     this.a(false, false);
                   }
@@ -147,7 +147,7 @@ abstract class m extends wb implements ib {
                 if (!bg.a(2)) {
                   var2 = 1;
                   var3 = -1;
-                  while (on.b(param0 ^ -1902)) {
+                  while (TileMap.b(param0 ^ -1902)) {
                     if (kg.field_i == -1) {
                       if (kg.field_i == -1 &&
                         -1 != var3) {
@@ -268,7 +268,7 @@ abstract class m extends wb implements ib {
         }
         if (!po.w(13296)) {
           while (true) {
-            var5 = (bo) (kk.field_j.f(117));
+            var5 = (bo) (Point.field_j.removeLast(117));
             if (var5 == null) {
               break;
             }
@@ -325,7 +325,7 @@ abstract class m extends wb implements ib {
         lo var4 = new lo();
         var4.field_k = param3;
         var4.field_o = new int[param1];
-        c.field_b.a(0, var4);
+        c.field_b.addFirst(0, var4);
         ga.a(param2, 0, var4);
         return var4;
     }

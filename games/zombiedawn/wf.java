@@ -30,7 +30,7 @@ final class wf extends hm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -48,7 +48,7 @@ final class wf extends hm {
           this.field_R = param0;
           this.a(-119, param3, param2, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class wf extends hm {
           this.field_T = this.field_T + 1;
           super.a(param0, (byte) -91, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "wf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class wf extends hm {
                 ki.a((byte) -118, this.field_O);
               } else {
                 ki.a((byte) -103, this.field_O);
-                bi.d();
+                Rasterizer.d();
               }
             }
           }
@@ -207,7 +207,7 @@ final class wf extends hm {
             } else {
               if (var12Lifetime1 <= this.field_O.field_t) {
                 ki.a((byte) -103, this.field_O);
-                bi.d();
+                Rasterizer.d();
               } else {
                 this.field_O = new vn(var11Lifetime1, var12Lifetime1);
                 ki.a((byte) -118, this.field_O);
@@ -251,7 +251,7 @@ final class wf extends hm {
             var11Lifetime2 <= this.field_O.field_w) {
             if (var12Lifetime2 <= this.field_O.field_t) {
               ki.a((byte) -103, this.field_O);
-              bi.d();
+              Rasterizer.d();
             } else {
               this.field_O = new vn(var11Lifetime2, var12Lifetime2);
               ki.a((byte) -118, this.field_O);
@@ -291,7 +291,7 @@ final class wf extends hm {
             } else {
               if (var12Lifetime3 <= this.field_O.field_t) {
                 ki.a((byte) -103, this.field_O);
-                bi.d();
+                Rasterizer.d();
               } else {
                 this.field_O = new vn(var11Lifetime3, var12Lifetime3);
                 ki.a((byte) -118, this.field_O);
@@ -333,7 +333,7 @@ final class wf extends hm {
               ki.a((byte) -118, this.field_O);
             } else {
               ki.a((byte) -103, this.field_O);
-              bi.d();
+              Rasterizer.d();
             }
           }
         }

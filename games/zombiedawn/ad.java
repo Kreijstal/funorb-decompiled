@@ -9,7 +9,7 @@ final class ad extends vg {
     static vn[] field_f;
     private int field_k;
     private String field_l;
-    static vo field_h;
+    static IntrusiveDeque field_h;
     private int field_j;
     private int field_i;
     static vn[][] field_g;
@@ -51,7 +51,7 @@ final class ad extends vg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class ad extends vg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class ad extends vg {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class ad extends vg {
           field_o = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ad.M(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ad.M(" + param0 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class ad extends vg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class ad extends vg {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -517,7 +517,7 @@ final class ad extends vg {
                 if (param4) {
                   ip.field_r[var23Lifetime2] = var27Lifetime1 >> f.field_a;
                   fm.field_G[var23Lifetime2] = var28Lifetime1 >> f.field_a;
-                  g.field_P[var23Lifetime2] = var29Lifetime1;
+                  Mover.field_P[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -616,7 +616,7 @@ final class ad extends vg {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -668,7 +668,7 @@ final class ad extends vg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -680,7 +680,7 @@ final class ad extends vg {
             ad.b(-91);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ad.I(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ad.I(" + param0 + ')');
         }
     }
 
@@ -689,7 +689,7 @@ final class ad extends vg {
 
     static {
         field_o = "Waiting for extra data";
-        field_h = new vo();
+        field_h = new IntrusiveDeque();
         field_g = new vn[2][];
     }
 }

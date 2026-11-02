@@ -45,7 +45,7 @@ class tc extends vf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ class tc extends vf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ class tc extends vf {
         ce.field_q = false;
         int var1 = 0 / ((30 - param0) / 51);
         if (nm.field_c) {
-          kk.field_i.m(96);
+          Point.field_i.m(96);
         } else {
           var2 = sd.field_b;
           if (0 < var2) {
@@ -104,7 +104,7 @@ class tc extends vf {
             }
             ed.field_c = gf.a(0, new CharSequence[]{(CharSequence) ((Object) ed.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveNode.field_e)});
           }
-          kk.field_i.h((byte) 75);
+          Point.field_i.h((byte) 75);
           rl.c(9);
         }
     }

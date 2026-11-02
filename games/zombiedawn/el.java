@@ -73,7 +73,7 @@ final class el implements io {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class el implements io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "el.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "el.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -133,16 +133,16 @@ final class el implements io {
           var12 = (hf) (stackIn_4_0);
           if (var12 != null) {
           }
-          bi.b(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
+          Rasterizer.b(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
           if (param0 != 16777215) {
             el.a(-79);
           }
           var7 = -(var12.field_K * 2) + param3.field_i;
           var8 = param3.field_k + (param4 + var12.field_K);
           var9 = var12.field_G + (param2 + param3.field_j);
-          bi.e(var8, var9, var8 + var7, var9, this.field_l);
+          Rasterizer.e(var8, var9, var8 + var7, var9, this.field_l);
           for (var10 = var12.a(-85) - 1; var10 >= 0; var10--) {
-            bi.g(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
+            Rasterizer.g(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
           }
           if (null == this.field_j) {
             return;
@@ -159,7 +159,7 @@ final class el implements io {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class el implements io {
           this.field_a = param1;
           this.field_b = param4;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class om extends w {
     private int field_o;
     private pj field_s;
-    private sh field_n;
+    private ExceptionWrapper field_n;
     private na field_l;
     private dl field_p;
     private na field_q;
@@ -17,8 +17,8 @@ final class om extends w {
     private boolean field_m;
     private int field_i;
     private boolean field_e;
-    private vo field_c;
-    private vo field_g;
+    private IntrusiveDeque field_c;
+    private IntrusiveDeque field_g;
     private long field_u;
     private boolean field_f;
 
@@ -95,26 +95,26 @@ final class om extends w {
           var8_int = param2 - param6 - param7;
           var9 = -param6 + (param1 - param7);
           var10 = param6 + (param2 + param7);
-          if (var8_int < bi.field_g) {
-            var8_int = bi.field_g;
+          if (var8_int < Rasterizer.field_g) {
+            var8_int = Rasterizer.field_g;
           }
-          if (bi.field_b < var10) {
-            var10 = bi.field_b;
+          if (Rasterizer.field_b < var10) {
+            var10 = Rasterizer.field_b;
           }
           var11 = param1 - (-param6 - param7);
-          if (bi.field_l > var9) {
-            var9 = bi.field_l;
+          if (Rasterizer.field_l > var9) {
+            var9 = Rasterizer.field_l;
           }
-          if (bi.field_d < var11) {
-            var11 = bi.field_d;
+          if (Rasterizer.field_d < var11) {
+            var11 = Rasterizer.field_d;
           }
           var12 = new int[32];
           var13 = 16711935 & param3;
           var14 = 65280 & param3;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = var15 * param4 >> 4;
-            var12[var15] = hi.a(eg.a(-16711936, var16 * var13), eg.a(var16 * var14, 16711680)) >>> 8;
-            var12[31 - var15] = hi.a(eg.a(var13 * var16, -16711936), eg.a(var14 * var16, 16711680)) >>> 8;
+            var12[var15] = GameWorld.a(eg.a(-16711936, var16 * var13), eg.a(var16 * var14, 16711680)) >>> 8;
+            var12[31 - var15] = GameWorld.a(eg.a(var13 * var16, -16711936), eg.a(var14 * var16, 16711680)) >>> 8;
           }
           var15Lifetime1 = var10 - var8_int;
           var16Lifetime1 = -var9 + var11;
@@ -140,51 +140,51 @@ final class om extends w {
                   if (var18 > var24) {
                     var28 = uf.a(var24 << 12, 12832);
                     var29 = -var28 + (param6 << 6);
-                    var30 = -((65536 - fb.a(1311979239, (var29 << 7) / param6)) * param5 >> 11) + var28;
+                    var30 = -((65536 - WorldObject.a(1311979239, (var29 << 7) / param6)) * param5 >> 11) + var28;
                     var30 = var30 - na.field_c[var25 % 256 + var22 % 256 * 256];
                     var27 = var23 * var30 / var28 + param2;
                     var26 = param1 + var21 * var30 / var28;
-                    if (var27 < bi.field_g) {
-                      var27 = bi.field_g;
+                    if (var27 < Rasterizer.field_g) {
+                      var27 = Rasterizer.field_g;
                     }
-                    if (var26 < bi.field_l) {
-                      var26 = bi.field_l;
+                    if (var26 < Rasterizer.field_l) {
+                      var26 = Rasterizer.field_l;
                     }
-                    if (var27 >= bi.field_b) {
-                      var27 = -1 + bi.field_b;
+                    if (var27 >= Rasterizer.field_b) {
+                      var27 = -1 + Rasterizer.field_b;
                     }
-                    if (bi.field_d <= var26) {
-                      var26 = -1 + bi.field_d;
+                    if (Rasterizer.field_d <= var26) {
+                      var26 = -1 + Rasterizer.field_d;
                     }
                   } else {
                     if (var19 > var24) {
                       var28 = uf.a(var24 << 12, 12832);
                       var29 = -(param6 << 6) + var28;
-                      var30 = -(param5 * (-fb.a(1311979239, (var29 << 7) / param7) + 65536) >> 11) + var28;
+                      var30 = -(param5 * (-WorldObject.a(1311979239, (var29 << 7) / param7) + 65536) >> 11) + var28;
                       var26 = param1 + var30 * var21 / var28;
                       var27 = param2 + var23 * var30 / var28;
-                      if (bi.field_l > var26) {
-                        var26 = bi.field_l;
+                      if (Rasterizer.field_l > var26) {
+                        var26 = Rasterizer.field_l;
                       }
-                      if (bi.field_g > var27) {
-                        var27 = bi.field_g;
+                      if (Rasterizer.field_g > var27) {
+                        var27 = Rasterizer.field_g;
                       }
-                      if (var27 >= bi.field_b) {
-                        var27 = -1 + bi.field_b;
+                      if (var27 >= Rasterizer.field_b) {
+                        var27 = -1 + Rasterizer.field_b;
                       }
-                      if (bi.field_d > var26) {
-                        var17.field_z[var20] = bi.field_c[var27 + bi.field_f * var26];
+                      if (Rasterizer.field_d > var26) {
+                        var17.field_z[var20] = Rasterizer.field_c[var27 + Rasterizer.field_f * var26];
                         var20++;
                         var25++;
                         var23++;
                         var24 = var24 + (2 * var23 - 1);
                         continue;
                       }
-                      var26 = bi.field_d - 1;
+                      var26 = Rasterizer.field_d - 1;
                     }
                   }
                 }
-                var17.field_z[var20] = bi.field_c[var27 + bi.field_f * var26];
+                var17.field_z[var20] = Rasterizer.field_c[var27 + Rasterizer.field_f * var26];
                 var20++;
                 var25++;
                 var23++;
@@ -200,7 +200,7 @@ final class om extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var8), "om.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var8), "om.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class om extends w {
         }
         this.field_m = true;
         if (this.field_c == null) {
-          this.field_c = new vo();
+          this.field_c = new IntrusiveDeque();
         }
     }
 
@@ -477,7 +477,7 @@ final class om extends w {
                   if (this.field_j[this.field_i] == 0) {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_i;
-                    this.field_c.a(0, var6);
+                    this.field_c.addFirst(0, var6);
                     var2_int = 0;
                   }
                 }
@@ -521,7 +521,7 @@ final class om extends w {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_i;
                     var2_intLifetime1 = 0;
-                    this.field_c.a(0, var7);
+                    this.field_c.addFirst(0, var7);
                   }
                   this.field_i = this.field_i + 1;
                   continue;
@@ -634,7 +634,7 @@ final class om extends w {
         return this.field_h;
     }
 
-    om(int param0, na param1, na param2, pc param3, sh param4, int param5, byte[] param6, int param7, boolean param8) {
+    om(int param0, na param1, na param2, pc param3, ExceptionWrapper param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -651,7 +651,7 @@ final class om extends w {
         RuntimeException var10 = null;
         this.field_p = new dl(16);
         this.field_i = 0;
-        this.field_g = new vo();
+        this.field_g = new IntrusiveDeque();
         this.field_u = 0L;
         try {
           this.field_l = param1;
@@ -660,7 +660,7 @@ final class om extends w {
             this.field_e = false;
           } else {
             this.field_e = true;
-            this.field_c = new vo();
+            this.field_c = new IntrusiveDeque();
           }
           this.field_d = param3;
           stackIn_7_1 = (param8);
@@ -708,7 +708,7 @@ final class om extends w {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

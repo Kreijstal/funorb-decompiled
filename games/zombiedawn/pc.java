@@ -71,14 +71,14 @@ abstract class pc {
         return this.a(true) >= 20 ? true : false;
     }
 
-    final static void a(byte param0, fn param1) {
+    final static void a(byte param0, PcmSampleStream param1) {
         try {
           t.field_i.a(param1);
           if (param0 != 13) {
             pc.b(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

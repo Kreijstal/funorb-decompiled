@@ -27,7 +27,7 @@ final class qo extends vf {
           }
           this.field_u[param2].field_t = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "qo.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qo.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class qo extends vf {
             stackIn_3_0 = -36;
             return stackIn_3_0;
           }
-          while (on.b(-54)) {
+          while (TileMap.b(-54)) {
             e.field_S.a(kg.field_i, (byte) 96, lc.field_c);
           }
           if (ba.field_s != -1) {
@@ -79,7 +79,7 @@ final class qo extends vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class qo extends vf {
         try {
           param0.a((byte) 125, param1, this);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class qo extends vf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class qo extends vf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class qo extends vf {
             stackIn_3_0 = (ga) (param3);
           }
           var10 = (an) (stackIn_3_0);
-          g.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
+          Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
           if (var10 != null) {
             param1 = param1 & var10.field_C;
           }
@@ -265,7 +265,7 @@ final class qo extends vf {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -339,7 +339,7 @@ final class qo extends vf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -375,7 +375,7 @@ final class qo extends vf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

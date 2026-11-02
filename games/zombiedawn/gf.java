@@ -77,7 +77,7 @@ final class gf {
             for (var7 = 0; jd.field_b > var7; var7++) {
               var6.field_m[var7] = fj.field_g.field_h[var7];
             }
-            ui.field_f.a(0, var6);
+            ui.field_f.addFirst(0, var6);
             l.field_e = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,7 +90,7 @@ final class gf {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class gf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class gf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -60,7 +60,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             ih.field_F = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

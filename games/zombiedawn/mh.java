@@ -43,7 +43,7 @@ final class mh extends pa {
           this.field_z = param0;
           this.field_H = 256;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,10 +62,10 @@ final class mh extends pa {
           }
           uj.field_d = param8;
           tf.field_c = (pc) ((Object) new lh());
-          he.field_d = new sh(param6);
+          he.field_d = new ExceptionWrapper(param6);
           ep.field_l = new bp(tf.field_c, he.field_d);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

@@ -245,16 +245,16 @@ final class vj extends al {
         if (this.field_r == null) {
           this.field_r = new vn(100, 100);
           ki.a((byte) -92, this.field_r);
-          bi.d();
+          Rasterizer.d();
           jb.field_a[1].b(25, 25);
           for (var3 = 0; var3 < 5; var3++) {
             so.a(4424743);
           }
-          bi.h(2, 2, 0, 0, 100, 100);
+          Rasterizer.h(2, 2, 0, 0, 100, 100);
           pa.a(-21189);
           this.field_u = new vn(100, 100);
           ki.a((byte) -94, this.field_u);
-          bi.d();
+          Rasterizer.d();
           jb.field_a[1].b(25, 25);
           for (var3Lifetime3 = 0; var3Lifetime3 < 2; var3Lifetime3++) {
             so.a(16777215);
@@ -386,7 +386,7 @@ final class vj extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "vj.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "vj.D(" + param0 + ')');
         }
     }
 
@@ -457,7 +457,7 @@ final class vj extends al {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

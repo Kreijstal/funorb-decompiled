@@ -41,7 +41,7 @@ final class nl extends al {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class nl extends al {
         var2 = var22;
         var3 = gd.field_C;
         var4 = kj.field_d;
-        var5 = eo.field_j;
+        var5 = HumanFactory.field_j;
         var6 = sg.field_jb;
         var7 = bj.field_q;
         if (this.field_d == 6) {
@@ -93,13 +93,13 @@ final class nl extends al {
             var9Lifetime1 = id.field_M + cg.field_g[var10];
             var8Lifetime1 = ld.field_k[var10] + vh.field_b;
             if (this.field_d == 6) {
-              bi.a(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
+              Rasterizer.a(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
               if (this.g(var10, -7)) {
                 if (this.field_q == var10) {
-                  bi.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
+                  Rasterizer.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
                 }
                 if (this.field_n == var10) {
-                  bi.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
+                  Rasterizer.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
                 }
                 var11 = this.c(var10, true);
                 if (var11 == null) {
@@ -109,10 +109,10 @@ final class nl extends al {
               }
             } else {
               if (this.field_q == var10) {
-                bi.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
+                Rasterizer.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
               }
               if (this.field_n == var10) {
-                bi.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
+                Rasterizer.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
               }
               var11 = this.c(var10, true);
               if (var11 == null) {
@@ -147,7 +147,7 @@ final class nl extends al {
           var16 = var7.field_I + var7.field_x;
           if (this.f(var10Lifetime1, -21) &&
             !this.g(var10Lifetime1, -7)) {
-            var25 = sh.field_f;
+            var25 = ExceptionWrapper.field_f;
             var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
           } else {
             var24 = var3[var10Lifetime1];
@@ -165,7 +165,7 @@ final class nl extends al {
         }
     }
 
-    final static void a(int param0, fi param1, byte param2, dj param3) {
+    final static void a(int param0, PcmMixer param1, byte param2, dj param3) {
         try {
           mj.field_b = nk.a((byte) 122) * param0 / 1000;
           tp.a((byte) 124, param3);
@@ -174,9 +174,9 @@ final class nl extends al {
           ta.a(255);
           hg.a((byte) -101);
           int var4_int = -67 / ((param2 - 2) / 56);
-          ej.field_x = 0 - mj.field_b;
+          LevelNavigation.field_x = 0 - mj.field_b;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "nl.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nl.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class nl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "nl.HA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "nl.HA(" + param0 + ')');
         }
     }
 
@@ -469,7 +469,7 @@ final class nl extends al {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

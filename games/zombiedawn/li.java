@@ -101,7 +101,7 @@ final class li implements Runnable {
         return false;
     }
 
-    final static void a(int param0, wk param1) {
+    final static void a(int param0, Camera param1) {
         int var7 = 0;
         int stackIn_7_0 = 0;
         int stackIn_8_1 = 0;
@@ -121,11 +121,11 @@ final class li implements Runnable {
         int var10 = 0;
         var10 = ZombieDawn.field_J;
         try {
-          if (sh.field_e == 1 &&
+          if (ExceptionWrapper.field_e == 1 &&
             og.field_A) {
-            var2_int = param1.a(ne.field_c.a(true), (byte) -92);
-            var3 = param1.a(ne.field_c.f(param0 ^ -237220996), 0);
-            var4 = fb.a(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
+            var2_int = param1.worldToScreenX(ne.field_c.getX(true), (byte) -92);
+            var3 = param1.worldToScreenY(ne.field_c.getY(param0 ^ -237220996), 0);
+            var4 = WorldObject.a(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
             stackIn_7_0 = -8;
             if (var4 < 0) {
               stackIn_8_1 = var2_int;
@@ -139,12 +139,12 @@ final class li implements Runnable {
               stackIn_11_0 = -var4 + var2_int;
             }
             var6 = stackIn_11_0 + 8;
-            bi.a(var5, -1 + var3, -var5 + var6, 3, 0, 128);
+            Rasterizer.a(var5, -1 + var3, -var5 + var6, 3, 0, 128);
             for (var7 = 0; var7 < 100; var7++) {
               if (0 < pl.field_t[var7].field_H) {
-                var8 = param1.a(pl.field_t[var7].a(true), (byte) -108) + 4;
-                var9 = 4 + param1.a(pl.field_t[var7].f(237239984), 0);
-                bi.a(var8, var9, 0);
+                var8 = param1.worldToScreenX(pl.field_t[var7].getX(true), (byte) -108) + 4;
+                var9 = 4 + param1.worldToScreenY(pl.field_t[var7].getY(237239984), 0);
+                Rasterizer.a(var8, var9, 0);
               }
             }
           }
@@ -163,7 +163,7 @@ final class li implements Runnable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class li implements Runnable {
     }
 
     final static void a(boolean param0) {
-        bi.a(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
+        Rasterizer.a(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
         hk.field_H.b(vh.field_b, id.field_M + 84);
         if (param0) {
           field_h = (v[]) null;
@@ -225,7 +225,7 @@ final class li implements Runnable {
           this.field_g = param0;
           this.field_a = new de(param2);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

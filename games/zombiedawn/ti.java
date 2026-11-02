@@ -321,7 +321,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "ti.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "ti.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -340,14 +340,14 @@ final class ti {
         try {
           pk.field_J = param1;
           ce.field_q = true;
-          kk.field_i = new sg(e.field_S, rk.field_b, param0, nm.field_c, pk.field_J);
+          Point.field_i = new sg(e.field_S, rk.field_b, param0, nm.field_c, pk.field_J);
           if (param2) {
             String var4 = (String) null;
             ti.a((String) null, false, true);
           }
-          e.field_S.a(kk.field_i, !param2 ? true : false);
+          e.field_S.a(Point.field_i, !param2 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

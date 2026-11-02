@@ -4,7 +4,7 @@
 final class mn extends IntrusiveNode {
     private int field_l;
     private int field_k;
-    private ej field_i;
+    private LevelNavigation field_i;
     private vn field_r;
     private int field_p;
     private int field_q;
@@ -18,7 +18,7 @@ final class mn extends IntrusiveNode {
         int var3 = 0;
         int var2;
         int var4;
-        on stackIn_6_0 = null;
+        TileMap stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
         int var2Lifetime1;
         var4 = ZombieDawn.field_J;
@@ -26,7 +26,7 @@ final class mn extends IntrusiveNode {
           for (var3 = this.field_q; var3 <= this.field_m; var3++) {
             stackIn_6_0 = this.field_i.field_A;
             stackIn_7_1 = (this.field_k == 0);
-            ((on) (Object) stackIn_6_0).a(stackIn_7_1, 14365, var2, true, var3);
+            ((TileMap) (Object) stackIn_6_0).a(stackIn_7_1, 14365, var2, true, var3);
             if (this.field_k == 0) {
               this.field_i.field_b[var2][var3] = true;
             }
@@ -36,7 +36,7 @@ final class mn extends IntrusiveNode {
         dj.field_e.b(true);
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -48,8 +48,8 @@ final class mn extends IntrusiveNode {
           if (param1 != -516) {
             this.field_q = 34;
           }
-          var3_int = param0.a(24 * this.field_q, (byte) -118);
-          var4 = param0.a(24 * this.field_j, 0);
+          var3_int = param0.worldToScreenX(24 * this.field_q, (byte) -118);
+          var4 = param0.worldToScreenY(24 * this.field_j, 0);
           var5 = 50;
           if (this.field_l == 0) {
             var5 = this.field_h - this.field_o;
@@ -66,7 +66,7 @@ final class mn extends IntrusiveNode {
             this.field_r.e(var6 + var3_int, var4 + var7, var9);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class mn extends IntrusiveNode {
           this.d((byte) -123);
         }
         if (param0 != 76) {
-          this.field_i = (ej) null;
+          this.field_i = (LevelNavigation) null;
         }
     }
 
@@ -151,7 +151,7 @@ final class mn extends IntrusiveNode {
         return false;
     }
 
-    private final void a(boolean param0, ej param1) {
+    private final void a(boolean param0, LevelNavigation param1) {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -163,11 +163,11 @@ final class mn extends IntrusiveNode {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5_int = 0;
-        wk var5 = null;
+        Camera var5 = null;
         ek var6_ref_ek = null;
         IntrusiveNode var7 = null;
         int var10 = 0;
-        vo var11 = null;
+        IntrusiveDeque var11 = null;
         var10 = ZombieDawn.field_J;
         try {
           this.field_i = param1;
@@ -189,7 +189,7 @@ final class mn extends IntrusiveNode {
                   for (var5_int = 0; 2 > var5_int; var5_int++) {
                     var6_ref_ek = ip.a(var4 * 24, 24 * var3_int, 100, true);
                     this.field_n.a(var6_ref_ek, (byte) -116);
-                    dj.field_e.field_R.a(var6_ref_ek, -122);
+                    dj.field_e.field_R.addLast(var6_ref_ek, -122);
                   }
                 }
               }
@@ -205,12 +205,12 @@ final class mn extends IntrusiveNode {
               }
             }
             ki.a((byte) -120, this.field_r);
-            var5 = new wk(this.field_i.field_u, this.field_i.field_p);
-            var5.field_u = bd.field_d + this.field_q * 24;
-            var5.field_c = this.field_j * 24 + nh.field_G;
+            var5 = new Camera(this.field_i.field_u, this.field_i.field_p);
+            var5.x = bd.field_d + this.field_q * 24;
+            var5.y = this.field_j * 24 + nh.field_G;
             this.field_i.a(var5, false);
             if (0 == this.field_k) {
-              bi.d();
+              Rasterizer.d();
             }
             this.field_i.a(var5, 1, true, false);
             var11 = dj.field_e.field_R;
@@ -218,7 +218,7 @@ final class mn extends IntrusiveNode {
             while (var7 != null) {
               if (var7 instanceof id &&
                 !(var7 instanceof kc)) {
-                ((fb) (var7)).a((byte) -93, var5);
+                ((WorldObject) (var7)).a((byte) -93, var5);
               }
               var7 = var11.a(false);
             }
@@ -244,7 +244,7 @@ final class mn extends IntrusiveNode {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class mn extends IntrusiveNode {
           }
           rg.field_J.b(97);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mn.I(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.I(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class mn extends IntrusiveNode {
           bh.field_j.field_x = kh.field_a.field_t;
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mn.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -305,11 +305,11 @@ final class mn extends IntrusiveNode {
           }
           rc.field_p = f.field_k;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    mn(ej param0, int param1, int param2, int param3) {
+    mn(LevelNavigation param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int stackIn_4_2 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -350,7 +350,7 @@ final class mn extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

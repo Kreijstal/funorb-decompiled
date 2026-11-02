@@ -47,7 +47,7 @@ final class mb extends IntrusiveNode {
         return var0;
     }
 
-    final gi a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -97,10 +97,10 @@ final class mb extends IntrusiveNode {
         this.field_s = null;
         var12 = this.field_h;
         this.field_h = null;
-        return new gi(this.field_x, var12, this.field_w, this.field_J, this.field_F);
+        return new PcmSample(this.field_x, var12, this.field_w, this.field_J, this.field_F);
     }
 
-    final gi b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -132,7 +132,7 @@ final class mb extends IntrusiveNode {
           }
         }
         this.field_s = null;
-        return new gi(this.field_x, var1, this.field_w, this.field_J, this.field_F);
+        return new PcmSample(this.field_x, var1, this.field_w, this.field_J, this.field_F);
     }
 
     private final void b(byte[] param0) throws IOException {

@@ -28,7 +28,7 @@ final class pg extends al {
         if (param0 > -35) {
           this.field_m = -72;
         }
-        bi.f(5, 5, -5 + bd.field_e, -5 + nh.field_P);
+        Rasterizer.f(5, 5, -5 + bd.field_e, -5 + nh.field_P);
         la.a(30);
         qk.a(6, -(2 * this.field_q) + 640, -11 + nh.field_P, 3 + (this.field_q + vh.field_b), false);
         la.field_d.b((byte) -55);
@@ -46,7 +46,7 @@ final class pg extends al {
           mo.field_a.b(640 + (vh.field_b - this.field_q), 6);
           mo.field_a.b(-this.field_q + vh.field_b + 640, 134);
         }
-        bi.c();
+        Rasterizer.c();
         ql.field_g.b(vh.field_b, id.field_M / 2);
         super.a((byte) -112);
     }
@@ -177,7 +177,7 @@ final class pg extends al {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -195,7 +195,7 @@ final class pg extends al {
             field_n = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

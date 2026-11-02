@@ -5,15 +5,15 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static int[] field_c;
     static boolean field_f;
     private java.awt.Component field_a;
-    static vo field_e;
-    static vo field_d;
+    static IntrusiveDeque field_e;
+    static IntrusiveDeque field_d;
     static int field_b;
 
     public final void paint(java.awt.Graphics param0) {
         try {
           this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var8.e(-123, var4);
           var8.d(50, -var4 + var8.field_j);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,12 +83,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
         var3 = ZombieDawn.field_J;
         var1 = param0 ? 1 : 0;
         if (we.o((byte) -80)) {
-          hi.a((byte) 120);
+          GameWorld.a((byte) 120);
           var1 = 1;
         } else {
           if (!dl.a(false)) {
             if (ac.d(50)) {
-              bi.h(0, 0, bi.field_f, bi.field_a);
+              Rasterizer.h(0, 0, Rasterizer.field_f, Rasterizer.field_a);
               oe.a((byte) -116);
               var1 = 1;
             }
@@ -111,7 +111,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (bg.a(2)) {
           var2 = (ln.field_b - 1 << 8) / 16;
           if (var2 > 0) {
-            bi.a(0, 0, bi.field_f, bi.field_a, 0, var2);
+            Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, var2);
             var1 = 1;
           }
         }
@@ -122,14 +122,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_c = new int[8192];
         field_f = false;
-        field_e = new vo();
-        field_d = new vo();
+        field_e = new IntrusiveDeque();
+        field_d = new IntrusiveDeque();
     }
 }

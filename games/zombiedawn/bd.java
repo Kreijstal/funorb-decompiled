@@ -99,7 +99,7 @@ final class bd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class bd {
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
-          this.field_k[this.field_g] = (byte)hi.a((int) this.field_k[this.field_g], 128 >>> eg.a(this.field_b, 7));
+          this.field_k[this.field_g] = (byte)GameWorld.a((int) this.field_k[this.field_g], 128 >>> eg.a(this.field_b, 7));
           this.field_g = this.field_g + 1;
           if (param2 > -118) {
             this.b(-71);
@@ -198,7 +198,7 @@ final class bd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class bd {
             var8 = param1[var5_int] << var6 & 255 | (255 & param1[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_k[this.field_g] = (byte)hi.a((int) this.field_k[this.field_g], var8 >>> var7);
+              this.field_k[this.field_g] = (byte)GameWorld.a((int) this.field_k[this.field_g], var8 >>> var7);
               this.field_g = this.field_g + 1;
               this.field_b = this.field_b + (-var7 + 8);
               if (this.field_b == 512) {
@@ -344,7 +344,7 @@ final class bd {
           }
           if (param2 > 0L) {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_k[this.field_g] = (byte)hi.a((int) this.field_k[this.field_g], var8Lifetime1 >>> var7);
+            this.field_k[this.field_g] = (byte)GameWorld.a((int) this.field_k[this.field_g], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -376,7 +376,7 @@ final class bd {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 

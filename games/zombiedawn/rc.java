@@ -215,7 +215,7 @@ final class rc extends IntrusiveNode {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -241,9 +241,9 @@ final class rc extends IntrusiveNode {
             var4 = var3;
             var4 = var3;
           }
-          if (g.field_H != null &&
-            !g.field_H.equals(param1.getParameter("session"))) {
-            var4 = g.field_H;
+          if (Mover.field_H != null &&
+            !Mover.field_H.equals(param1.getParameter("session"))) {
+            var4 = Mover.field_H;
           }
           stackIn_10_0 = jp.a((byte) 97, param2, (String) (var4), (String) (var3), -1);
           return stackIn_10_0;
@@ -263,7 +263,7 @@ final class rc extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class rc extends IntrusiveNode {
           this.field_n = param1;
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

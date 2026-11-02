@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class hm extends an {
-    private vo field_I;
+    private IntrusiveDeque field_I;
     static vn field_E;
     private String[] field_K;
     private eg field_G;
@@ -36,7 +36,7 @@ class hm extends an {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -62,11 +62,11 @@ class hm extends an {
             pc.a((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
-          kn.field_L.b(param0 ^ 67);
-          se.field_m.b(-61);
-          DelegatingCanvas.field_e.b(68);
+          kn.field_L.clear(param0 ^ 67);
+          se.field_m.clear(-61);
+          DelegatingCanvas.field_e.clear(68);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hm.G(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.G(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ class hm extends an {
           }
           return null;
         }
-        this.field_I = (vo) null;
+        this.field_I = (IntrusiveDeque) null;
         var4Lifetime1 = (eg) (this.field_I.b((byte) 26));
         while (var4Lifetime1 != null) {
           var5Lifetime1 = var4Lifetime1;
@@ -138,7 +138,7 @@ class hm extends an {
         int stackIn_14_0 = 0;
         int var7Lifetime1;
         var16 = ZombieDawn.field_J;
-        this.field_I = new vo();
+        this.field_I = new IntrusiveDeque();
         if (param0 != -36) {
           return;
         }
@@ -180,7 +180,7 @@ class hm extends an {
               ((eg) (var10)).field_h = var15;
             }
             var10 = var15;
-            this.field_I.a(0, var15);
+            this.field_I.addFirst(0, var15);
           }
         }
     }
@@ -241,7 +241,7 @@ class hm extends an {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ class hm extends an {
             this.field_G = this.b(31677, var6, var7);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -285,7 +285,7 @@ class hm extends an {
             var7 = var5.b((ga) (this), 128, param2);
             var8 = var5.a((ga) (this), 1, param0);
             do {
-              on.b(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
+              TileMap.b(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
               var6 = var6.field_h;
             } while (var6 != null);
           }
@@ -332,7 +332,7 @@ class hm extends an {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ class hm extends an {
         try {
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

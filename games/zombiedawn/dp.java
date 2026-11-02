@@ -27,16 +27,16 @@ final class dp implements io {
           if (param1 != -4) {
             dp.a(-47, 66, -71);
           }
-          var5 = (jc) (on.field_g.b((byte) 26));
+          var5 = (jc) (TileMap.field_g.b((byte) 26));
           while (var5 != null) {
             pm.a(param1 + 4, param0, var5);
-            var5 = (jc) (on.field_g.a(false));
+            var5 = (jc) (TileMap.field_g.a(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "dp.E(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "dp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -47,10 +47,10 @@ final class dp implements io {
           return 0;
         }
         if (jp.field_a == 0) {
-          if (!vo.field_d.a((byte) 73)) {
+          if (!IntrusiveDeque.field_d.a((byte) 73)) {
             return 20;
           }
-          if (!vo.field_d.a(-1, "commonui")) {
+          if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
             return 40;
           }
           if (!da.field_l.a((byte) 73)) {
@@ -68,10 +68,10 @@ final class dp implements io {
           return 100;
         }
         if (f.field_i == null) {
-          if (!vo.field_d.a((byte) 73)) {
+          if (!IntrusiveDeque.field_d.a((byte) 73)) {
             return 43;
           }
-          if (!vo.field_d.a(-1, "commonui")) {
+          if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
             return 57;
           }
           if (!da.field_l.a((byte) 73)) {
@@ -97,10 +97,10 @@ final class dp implements io {
         if (!f.field_i.a(-1, "")) {
           return 29;
         }
-        if (!vo.field_d.a((byte) 73)) {
+        if (!IntrusiveDeque.field_d.a((byte) 73)) {
           return 43;
         }
-        if (!vo.field_d.a(-1, "commonui")) {
+        if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
           return 57;
         }
         if (!da.field_l.a((byte) 73)) {
@@ -163,7 +163,7 @@ final class dp implements io {
             } else {
               var10 = var10 + (param3.field_n - var8);
             }
-            on.b(var7 + 4, var8, var9 - 2, param0 - 16777135, 2 + var10);
+            TileMap.b(var7 + 4, var8, var9 - 2, param0 - 16777135, 2 + var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,7 +176,7 @@ final class dp implements io {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -207,37 +207,37 @@ final class dp implements io {
         int var7Lifetime3;
         int var7Lifetime4;
         var8 = ZombieDawn.field_J;
-        if (ej.field_x < 0) {
+        if (LevelNavigation.field_x < 0) {
           return;
         }
         var3 = param0 - 135;
         var4 = -35 + param2;
         var5 = 256;
-        if (ej.field_x < 75) {
-          var5 = (ej.field_x << 8) / 75;
+        if (LevelNavigation.field_x < 75) {
+          var5 = (LevelNavigation.field_x << 8) / 75;
         }
-        if (ej.field_x > 200) {
-          var5 = (-ej.field_x + 250 << 8) / 50;
+        if (LevelNavigation.field_x > 200) {
+          var5 = (-LevelNavigation.field_x + 250 << 8) / 50;
         }
         ki.a((byte) -102, ti.field_g);
         en.c();
-        bi.d();
+        Rasterizer.d();
         gk.j(30549);
         if (var5 < 256) {
-          bi.a(0, 0, bi.field_f, bi.field_a, 0, 256 - var5);
+          Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, 256 - var5);
           pa.a(param1 ^ 32173);
           if (param1 != -12138) {
             dp.a(118, -83);
           }
-          if (150 <= ej.field_x) {
+          if (150 <= LevelNavigation.field_x) {
             kh.field_a.e(var3 + 15, var4 + 10, var5);
           } else {
             ti.field_g.d(var3, var4);
           }
-          var6 = -125 + ej.field_x;
+          var6 = -125 + LevelNavigation.field_x;
           if (0 < var6) {
             if (var6 >= 50) {
-              var6 = -140 + ej.field_x;
+              var6 = -140 + LevelNavigation.field_x;
               if (var6 > 0) {
                 var7 = 256;
                 if (var6 < 20) {
@@ -259,7 +259,7 @@ final class dp implements io {
               }
             }
           }
-          var6Lifetime3 = -140 + ej.field_x;
+          var6Lifetime3 = -140 + LevelNavigation.field_x;
           if (var6Lifetime3 > 0) {
             var7Lifetime3 = 256;
             if (var6Lifetime3 < 20) {
@@ -272,12 +272,12 @@ final class dp implements io {
         pa.a(param1 ^ 32173);
         if (param1 != -12138) {
           dp.a(118, -83);
-          if (150 <= ej.field_x) {
+          if (150 <= LevelNavigation.field_x) {
             kh.field_a.e(var3 + 15, var4 + 10, var5);
           } else {
             ti.field_g.d(var3, var4);
           }
-          var6Lifetime1 = -125 + ej.field_x;
+          var6Lifetime1 = -125 + LevelNavigation.field_x;
           if (0 < var6Lifetime1 &&
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
@@ -293,12 +293,12 @@ final class dp implements io {
             }
           }
         } else {
-          if (150 <= ej.field_x) {
+          if (150 <= LevelNavigation.field_x) {
             kh.field_a.e(var3 + 15, var4 + 10, var5);
           } else {
             ti.field_g.d(var3, var4);
           }
-          var6Lifetime1 = -125 + ej.field_x;
+          var6Lifetime1 = -125 + LevelNavigation.field_x;
           if (0 < var6Lifetime1 &&
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
@@ -314,7 +314,7 @@ final class dp implements io {
             }
           }
         }
-        var6Lifetime2 = -140 + ej.field_x;
+        var6Lifetime2 = -140 + LevelNavigation.field_x;
         if (var6Lifetime2 > 0) {
           var7Lifetime2 = 256;
           if (var6Lifetime2 < 20) {
@@ -336,7 +336,7 @@ final class dp implements io {
           this.field_f = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "dp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

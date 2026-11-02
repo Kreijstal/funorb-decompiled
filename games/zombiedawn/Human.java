@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-abstract class ah extends g {
+abstract class Human extends Mover {
     int[] field_gb;
     private int field_lb;
     private boolean field_nb;
     private boolean field_hb;
     static int field_eb;
     int field_ub;
-    fb field_sb;
+    WorldObject field_sb;
     static String field_bb;
     private int field_rb;
     private nc field_cb;
@@ -40,7 +40,7 @@ abstract class ah extends g {
         this.field_qb = 5;
         this.field_Y = this.field_jb[var3];
         this.field_X = this.field_gb[var3];
-        ho.a(this.f(237239984), (byte) 54, this.a(true));
+        ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         pi.a(this.field_X, this.field_Y, (byte) 101);
         this.c(0, this.field_D);
         this.e(1, -6904);
@@ -57,21 +57,21 @@ abstract class ah extends g {
         int var10;
         int var11;
         var11 = ZombieDawn.field_J;
-        if (this.field_F == 18) {
+        if (this.state == 18) {
           return;
         }
-        if (this.field_F == 20) {
+        if (this.state == 20) {
           return;
         }
         var4 = 200;
-        var5 = param0 - this.a(true);
+        var5 = param0 - this.getX(true);
         if (param1 <= 24) {
           this.field_hb = false;
         }
-        var6 = -this.f(237239984) + param2;
+        var6 = -this.getY(237239984) + param2;
         var7 = (double)var4 / (double)so.b(var6 * var6 + var5 * var5);
-        this.field_Y = this.a(true) - (int)((double)var5 * var7);
-        this.field_X = -(int)((double)var6 * var7) + this.f(237239984);
+        this.field_Y = this.getX(true) - (int)((double)var5 * var7);
+        this.field_X = -(int)((double)var6 * var7) + this.getY(237239984);
         this.c(0, 401408);
         this.e(2, -6904);
         this.field_rb = 1;
@@ -81,7 +81,7 @@ abstract class ah extends g {
           stackIn_8_1 = 1;
         }
         this.field_S = stackIn_8_1;
-        ho.a(this.f(237239984), (byte) 54, this.a(true));
+        ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         var9 = -1;
         var10 = pb.a(so.field_a, 128, 1);
         if (var10 > 110) {
@@ -102,10 +102,10 @@ abstract class ah extends g {
     }
 
     final boolean a(int param0, int param1, boolean param2) {
-        fb var4;
-        kd var5;
+        WorldObject var4;
+        Zombie var5;
         int var6;
-        fb stackIn_7_0 = null;
+        WorldObject stackIn_7_0 = null;
         boolean stackIn_22_0 = false;
         var6 = ZombieDawn.field_J;
         this.field_sb = null;
@@ -115,16 +115,16 @@ abstract class ah extends g {
         }
         var4 = this.a((byte) -74, param1, 10);
         while (var4 != null) {
-          if (var4 instanceof kd) {
+          if (var4 instanceof Zombie) {
             stackIn_7_0 = var4;
           } else {
             stackIn_7_0 = null;
           }
-          var5 = (kd) (stackIn_7_0);
+          var5 = (Zombie) (stackIn_7_0);
           if (var5 == null ||
             var5.x(79) ||
             this instanceof we &&
-            var5.field_F != 9) {
+            var5.state != 9) {
             if (!param2 &&
               !this.a(72, var4)) {
               var4 = this.e((byte) 32);
@@ -240,14 +240,14 @@ abstract class ah extends g {
         return 0;
     }
 
-    private final String k(byte param0) {
+    private final String stateName(byte param0) {
         int var2;
         int var3;
         var3 = ZombieDawn.field_J;
         if (param0 != -34) {
           return (String) null;
         }
-        var2 = this.field_F;
+        var2 = this.state;
         if (var2 == 0) {
           return "IDLE";
         }
@@ -273,22 +273,22 @@ abstract class ah extends g {
     }
 
     final void a(int param0, byte param1, int param2) {
-        kk var7 = null;
-        kk var6 = null;
+        Point var7 = null;
+        Point var6 = null;
         int var4 = -5 % ((43 - param1) / 57);
-        qh var5 = dj.field_e.field_H.a(true, this.a(true), param2, param0, this.f(237239984));
+        qh var5 = dj.field_e.field_H.a(true, this.getX(true), param2, param0, this.getY(237239984));
         if (var5 != null) {
-          var7 = (kk) (var5.b((byte) 26));
+          var7 = (Point) (var5.b((byte) 26));
           var6 = var7;
-          if (this.a(true) == var7.field_l &&
-            this.f(237239984) == var7.field_h) {
-            var6 = (kk) (var5.a(false));
+          if (this.getX(true) == var7.x &&
+            this.getY(237239984) == var7.y) {
+            var6 = (Point) (var5.a(false));
           }
           if (var6 == null) {
             return;
           }
-          this.field_Y = var6.field_l;
-          this.field_X = var6.field_h;
+          this.field_Y = var6.x;
+          this.field_X = var6.y;
           this.c(0, this.field_D);
           this.e(1, -6904);
         }
@@ -300,7 +300,7 @@ abstract class ah extends g {
         int var3;
         int var4;
         int var5;
-        fb var6;
+        WorldObject var6;
         int var7;
         int var8;
         int var9;
@@ -322,15 +322,15 @@ abstract class ah extends g {
           regionExit1: {
             var5 = stackIn_8_0;
             if (-1 + this.field_ub != var4 && (var5 == 0 ||
-              -1 == dj.field_e.field_H.a(this.field_gb[var4], this.f(237239984), this.field_jb[var4], this.a(true), 124))) {
+              -1 == dj.field_e.field_H.a(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
               MouseInputHandler.field_e[var4] = -1;
               break regionExit1;
             }
             var6 = this.b(250, 16);
             while (var6 != null) {
               regionExit2: {
-                if ((!(var6 instanceof kd) ||
-                  !((kd) (var6)).x(53)) &&
+                if ((!(var6 instanceof Zombie) ||
+                  !((Zombie) (var6)).x(53)) &&
                   !(var6 instanceof vb)) {
                   if (0 == this.field_z) {
                     break regionExit2;
@@ -342,8 +342,8 @@ abstract class ah extends g {
                     var6 = this.e((byte) 32);
                     continue;
                   }
-                  var7 = this.field_jb[var4] - var6.a(true);
-                  var8 = this.field_gb[var4] - var6.f(237239984);
+                  var7 = this.field_jb[var4] - var6.getX(true);
+                  var8 = this.field_gb[var4] - var6.getY(237239984);
                   var9 = var8 * var8 + var7 * var7;
                   if (var9 >= 625) {
                     var6 = this.e((byte) 32);
@@ -354,8 +354,8 @@ abstract class ah extends g {
                   var6 = this.e((byte) 32);
                   continue;
                 }
-                var7Lifetime1 = this.field_jb[var4] - var6.a(true);
-                var8Lifetime1 = this.field_gb[var4] - var6.f(237239984);
+                var7Lifetime1 = this.field_jb[var4] - var6.getX(true);
+                var8Lifetime1 = this.field_gb[var4] - var6.getY(237239984);
                 var9Lifetime1 = var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1;
                 if (0 != MouseInputHandler.field_e[var4] &&
                   MouseInputHandler.field_e[var4] <= var9Lifetime1) {
@@ -380,7 +380,7 @@ abstract class ah extends g {
         }
     }
 
-    void a(byte param0, wk param1) {
+    void a(byte param0, Camera param1) {
         vn stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_21_2 = 0;
@@ -409,10 +409,10 @@ abstract class ah extends g {
         int var6Lifetime1;
         var8 = ZombieDawn.field_J;
         try {
-          if (20 != this.field_F &&
+          if (20 != this.state &&
             !this.field_J) {
-            var3_int = -24 + param1.a(this.a(true), (byte) -81);
-            var4 = param1.a(this.f(237239984), 0) - 48;
+            var3_int = -24 + param1.worldToScreenX(this.getX(true), (byte) -81);
+            var4 = param1.worldToScreenY(this.getY(237239984), 0) - 48;
             if (null != this.field_U) {
               if (this.field_U.l()) {
                 this.field_U = null;
@@ -421,14 +421,14 @@ abstract class ah extends g {
               }
             }
             if (b.field_h) {
-              bj.field_q.c(this.k((byte) -34), var3_int, var4, 16777215, 0);
+              bj.field_q.c(this.stateName((byte) -34), var3_int, var4, 16777215, 0);
               this.a(param1, 5060);
             }
             if (var3_int >= -48 &&
               var4 >= -48 &&
               qj.field_d >= var3_int &&
               var4 <= me.field_Bb) {
-              if (this.field_F != 17) {
+              if (this.state != 17) {
                 stackIn_20_0 = DualLinkNode.field_k[1];
                 stackIn_20_1 = 12;
                 if (this.field_S == 3) {
@@ -439,12 +439,12 @@ abstract class ah extends g {
                 so.a(stackIn_20_0, stackIn_20_1 + stackIn_21_2, 43 + var4);
               }
               if (this.field_z > 0) {
-                Math.abs(ip.field_p[0].field_w * fb.a(1311979239, (int)tp.field_p << 6) >> 16);
-                var5 = 6 * fb.a(1311979239, (int)tp.field_p << 6) >> 16;
+                Math.abs(ip.field_p[0].field_w * WorldObject.a(1311979239, (int)tp.field_p << 6) >> 16);
+                var5 = 6 * WorldObject.a(1311979239, (int)tp.field_p << 6) >> 16;
                 var6 = rd.a(true, (int)tp.field_p << 7) * 3 >> 16;
                 ip.field_p[0].g(var5 + 24 + (var3_int - 7), 2 + (var4 + var6), bb.field_e[-1 + this.field_z]);
               }
-              var5Lifetime1 = cg.field_d[this.field_F] + this.field_G;
+              var5Lifetime1 = cg.field_d[this.state] + this.field_G;
               var6Lifetime1 = var3_int;
               var7 = var4;
               if (!(this.field_Z <= 0) ||
@@ -454,14 +454,14 @@ abstract class ah extends g {
                 !bo.field_p[86]) {
                 ki.a((byte) -114, dn.field_E);
                 var4 = 0;
-                bi.d();
+                Rasterizer.d();
                 var3_int = 0;
               }
               if (param0 > -76) {
                 this.n(-60);
               }
-              if (this.field_F != 10 &&
-                this.field_F != 11) {
+              if (this.state != 10 &&
+                this.state != 11) {
                 if (3 != this.field_S &&
                   this.field_S != 2) {
                   ld.field_l[this.field_t][var5Lifetime1].c(var3_int, var4);
@@ -549,7 +549,7 @@ abstract class ah extends g {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -585,13 +585,13 @@ abstract class ah extends g {
         return var2;
     }
 
-    final boolean a(int param0, fb param1) {
-        ej var3 = null;
+    final boolean a(int param0, WorldObject param1) {
+        LevelNavigation var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wk var8 = null;
+        Camera var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -601,8 +601,8 @@ abstract class ah extends g {
         try {
           var3 = dj.field_e.field_H;
           if (param0 <= 52) {
-            var8 = (wk) null;
-            this.a((byte) -36, (wk) null);
+            var8 = (Camera) null;
+            this.a((byte) -36, (Camera) null);
           }
           var4 = this.field_y >> 16;
           var5 = this.field_x >> 16;
@@ -620,7 +620,7 @@ abstract class ah extends g {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -644,15 +644,15 @@ abstract class ah extends g {
         if (400 + this.field_t > dj.field_e.field_r &&
           dj.field_e.field_r > 200 &&
           pb.a(so.field_a, 25, 1) == 0) {
-          this.c(this.a(true) + pb.a(so.field_a, 1000, 1) - 500, 78, this.f(237239984) - (-pb.a(so.field_a, 1000, 1) + 500));
+          this.c(this.getX(true) + pb.a(so.field_a, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.field_a, 1000, 1) + 500));
         }
         if (param0 < 95) {
           this.field_gb = (int[]) null;
         }
         this.m(-67);
-        this.d(this.field_F, -26109);
+        this.d(this.state, -26109);
         if (this.field_V) {
-          if (this.field_F != 2) {
+          if (this.state != 2) {
             return;
           }
           if (-3 + cg.field_h[2] == this.field_G) {
@@ -662,7 +662,7 @@ abstract class ah extends g {
         }
         regionExit1: {
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_F == 0) {
+          if (this.state == 0) {
             fieldTemp$0 = this.field_vb + 1;
             this.field_vb = this.field_vb + 1;
             if (this.field_lb < fieldTemp$0) {
@@ -691,7 +691,7 @@ abstract class ah extends g {
             this.field_qb = 0;
             this.l((byte) 52);
           } else {
-            if (2 == this.field_F) {
+            if (2 == this.state) {
               if (0 != this.field_O ||
                 this.field_T != 0) {
                 this.g((byte) -113);
@@ -699,7 +699,7 @@ abstract class ah extends g {
                   this.field_x = this.field_x - this.field_T;
                   this.field_y = this.field_y - this.field_O;
                   if (this.field_O != 0 &&
-                    dj.field_e.field_H.a(false, this.f(237239984), this.field_O + this.field_y >> 16, true)) {
+                    dj.field_e.field_H.a(false, this.getY(237239984), this.field_O + this.field_y >> 16, true)) {
                     this.field_T = 0;
                     this.field_y = this.field_y + this.field_O;
                     this.field_X = this.field_x >> 16;
@@ -722,7 +722,7 @@ abstract class ah extends g {
                 if (this.field_G != 4) {
                   if ((6 == this.field_G)) {
                     this.e(0, -6904);
-                    pi.a(this.f(237239984), this.a(true), (byte) 101);
+                    pi.a(this.getY(237239984), this.getX(true), (byte) 101);
                   }
                 } else {
                   this.field_N = 0;
@@ -737,7 +737,7 @@ abstract class ah extends g {
               }
               break regionExit1;
             }
-            if (this.field_F == 1) {
+            if (this.state == 1) {
               fieldTemp$6 = this.field_qb;
               this.field_qb = this.field_qb + 1;
               if (fieldTemp$6 >= 5) {
@@ -767,7 +767,7 @@ abstract class ah extends g {
               }
               break regionExit1;
             }
-            if (23 == this.field_F) {
+            if (23 == this.state) {
               fieldTemp$5 = this.field_qb;
               this.field_qb = this.field_qb + 1;
               if (5 <= fieldTemp$5) {
@@ -798,8 +798,8 @@ abstract class ah extends g {
               }
               break regionExit1;
             }
-            if (this.field_F != 3) {
-              if (this.field_F == 16) {
+            if (this.state != 3) {
+              if (this.state == 16) {
                 fieldTemp$3 = this.field_qb;
                 this.field_qb = this.field_qb + 1;
                 if (fieldTemp$3 < 5) {
@@ -816,7 +816,7 @@ abstract class ah extends g {
                 }
               }
               if ((decompiledFrameRemainder0) &&
-                (this.field_F == 20)) {
+                (this.state == 20)) {
               }
             } else {
               fieldTemp$4 = this.field_qb;
@@ -837,7 +837,7 @@ abstract class ah extends g {
         this.o(-6253);
     }
 
-    ah(int param0, int param1, int param2, int param3) {
+    Human(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
         this.field_nb = false;
         this.field_ub = 61;
@@ -872,8 +872,8 @@ abstract class ah extends g {
     }
 
     final boolean a(boolean param0, boolean param1, int param2, int param3) {
-        fb var5;
-        kd var6;
+        WorldObject var5;
+        Zombie var6;
         int var7;
         var7 = ZombieDawn.field_J;
         if (param2 >= -83) {
@@ -881,18 +881,18 @@ abstract class ah extends g {
         }
         var5 = this.a((byte) -74, param3, 10);
         while (var5 != null) {
-          if (var5 instanceof kd) {
-            var6 = (kd) (var5);
+          if (var5 instanceof Zombie) {
+            var6 = (Zombie) (var5);
             if (var6 != null && (param0 ||
-              var6.field_F != 8) && (var6.x(87) ||
+              var6.state != 8) && (var6.x(87) ||
               this instanceof we)) {
               if (var6.field_hb) {
                 var5 = this.e((byte) 32);
                 continue;
               }
               if (param1 ||
-                dj.field_e.field_H.a(var6.f(237239984), this.a(true), this.f(237239984), (byte) -91, false, var6.a(true)) != -1 ||
-                dj.field_e.field_H.a(var6.f(237239984) - 48, this.a(true), -48 + this.f(237239984), (byte) -109, false, var6.a(true)) != -1) {
+                dj.field_e.field_H.a(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
+                dj.field_e.field_H.a(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
                 return true;
               }
             }
@@ -913,8 +913,8 @@ abstract class ah extends g {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param0.field_m - this.a(true);
-          var4 = param0.field_q - this.f(param1 ^ -237213750);
+          var3_int = param0.field_m - this.getX(true);
+          var4 = param0.field_q - this.getY(param1 ^ -237213750);
           if (param1 != -26246) {
             return;
           }
@@ -943,7 +943,7 @@ abstract class ah extends g {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -980,8 +980,8 @@ abstract class ah extends g {
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
         int var2 = 99 % ((param0 - 0) / 50);
-        int var3 = this.a(true);
-        int var4 = this.f(237239984);
+        int var3 = this.getX(true);
+        int var4 = this.getY(237239984);
         for (var5 = 0; var5 < this.field_ub - 1; var5++) {
           this.field_jb[var5] = qd.field_a[var5] + var3;
           this.field_gb[var5] = var4 + qd.field_f[var5];
@@ -1066,13 +1066,13 @@ abstract class ah extends g {
         return stackIn_35_0;
     }
 
-    abstract void a(wk param0, int param1);
+    abstract void a(Camera param0, int param1);
 
     void a(nc param0, byte param1) {
-        if (this.field_F == 18 ||
-          20 == this.field_F ||
-          this.field_F == 16 ||
-          this.field_F == 2) {
+        if (this.state == 18 ||
+          20 == this.state ||
+          this.state == 16 ||
+          this.state == 2) {
           return;
         }
         try {
@@ -1080,7 +1080,7 @@ abstract class ah extends g {
           this.field_cb = param0;
           int var3_int = -89 % ((param1 + 53) / 54);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ah.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ah.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

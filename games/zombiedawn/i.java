@@ -26,13 +26,13 @@ final class i extends pn implements hh {
 
     final static void a(bo param0, byte param1, int param2) {
         try {
-          mp.field_g.a(0, param0);
+          mp.field_g.addFirst(0, param0);
           SecondaryNodeDequeIterator.a(param2, true, param0);
           if (param1 != 7) {
             field_V = -1.3851797580718994f;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "i.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "i.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -254,14 +254,14 @@ final class i extends pn implements hh {
           if (uh.field_o == null) {
             return;
           }
-          var4 = sh.field_d;
+          var4 = ExceptionWrapper.field_d;
           synchronized (var4) {
             uh.field_o.a(param0, true, -1);
             if (te.field_kb == param3) {
               return;
             }
             uh.field_o.c(28013);
-            sh.field_d.d();
+            ExceptionWrapper.field_d.d();
             te.field_kb = param3;
             if (te.field_kb != null) {
               uh.field_o.a((byte) -22, te.field_kb, param1);
@@ -278,7 +278,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

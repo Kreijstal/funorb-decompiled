@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-class id extends fb {
+class id extends WorldObject {
     boolean field_P;
     int field_F;
-    private fn field_K;
+    private PcmSampleStream field_K;
     static int field_I;
     static int field_N;
     boolean field_J;
@@ -21,8 +21,8 @@ class id extends fb {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         if (!param0) {
-          wk var5 = (wk) null;
-          this.a((byte) -30, (wk) null);
+          Camera var5 = (Camera) null;
+          this.a((byte) -30, (Camera) null);
         }
         for (var3 = 0; var3 < tl.field_g.length; var3++) {
           if (this.field_F == tl.field_g[var3]) {
@@ -41,7 +41,7 @@ class id extends fb {
         return false;
     }
 
-    void a(byte param0, wk param1) {
+    void a(byte param0, Camera param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -55,8 +55,8 @@ class id extends fb {
           if (param0 > -76) {
             this.b(true);
           }
-          var3_int = param1.a(this.a(true), (byte) -118);
-          var4 = param1.a(this.f(237239984), 0) - 24;
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -118);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0) - 24;
           if (this.field_O && (var3_int < -48 ||
             var4 < -48 ||
             !(var3_int <= qj.field_d) ||
@@ -96,7 +96,7 @@ class id extends fb {
           } else {
             if (ng.field_e &&
               this.field_E > 0) {
-              bi.g(8 + var3_int, 1 + var4, 14, bb.field_e[-1 + this.field_E]);
+              Rasterizer.g(8 + var3_int, 1 + var4, 14, bb.field_e[-1 + this.field_E]);
             }
             if (!this.field_P) {
               tm.field_h[this.field_F].g(var3_int, var4, bb.field_e[this.field_E - 1]);
@@ -124,7 +124,7 @@ class id extends fb {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -140,19 +140,19 @@ class id extends fb {
         int var3;
         int var4;
         int var5;
-        ej var6;
-        ej var7;
+        LevelNavigation var6;
+        LevelNavigation var7;
         var5 = ZombieDawn.field_J;
         if (0 == this.field_z) {
           return;
         }
         dj.field_e.field_u[-1 + this.field_z] = dj.field_e.field_u[-1 + this.field_z] - 1;
         if (0 >= dj.field_e.field_u[-1 + this.field_z]) {
-          var2 = dj.field_e.field_R.field_b.previous;
-          while (var2 instanceof fb) {
-            if (var2 instanceof ah &&
-              this.field_z == ((fb) (var2)).field_z) {
-              ((fb) (var2)).field_z = 0;
+          var2 = dj.field_e.field_R.sentinel.previous;
+          while (var2 instanceof WorldObject) {
+            if (var2 instanceof Human &&
+              this.field_z == ((WorldObject) (var2)).field_z) {
+              ((WorldObject) (var2)).field_z = 0;
             }
             var2 = var2.previous;
           }
@@ -161,9 +161,9 @@ class id extends fb {
         this.field_z = 0;
         var6 = dj.field_e.field_H;
         var7 = var6;
-        var3 = this.a(param0) / 24;
-        var4 = this.f(237239984) / 24;
-        if (this.f(237239984) % 24 == 0) {
+        var3 = this.getX(param0) / 24;
+        var4 = this.getY(237239984) / 24;
+        if (this.getY(237239984) % 24 == 0) {
           var4--;
         }
         var6.field_A.field_f[var4][var3] = eg.a(var6.field_A.field_f[var4][var3], -33554433);
@@ -227,10 +227,10 @@ class id extends fb {
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
         int var2;
-        fb var2_ref_fb;
+        WorldObject var2_ref_fb;
         int var3;
         int var4_int;
-        fb var4;
+        WorldObject var4;
         int var5;
         int var6;
         va var7;
@@ -258,9 +258,9 @@ class id extends fb {
             if (!this.a(true, true)) {
               break;
             }
-            var3 = this.a(true) / 24;
-            var4_int = this.f(237239984) / 24;
-            if (this.f(237239984) % 24 == 0) {
+            var3 = this.getX(true) / 24;
+            var4_int = this.getY(237239984) / 24;
+            if (this.getY(237239984) % 24 == 0) {
               var4_int--;
             }
             dj.field_e.field_H.field_A.field_f[var4_int][var3] = eg.a(dj.field_e.field_H.field_A.field_f[var4_int][var3], -33554433);
@@ -303,10 +303,10 @@ class id extends fb {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_G) {
-          stackIn_36_0 = 12 + this.a(true);
+          stackIn_36_0 = 12 + this.getX(true);
           stackIn_36_1 = 24;
           var2Lifetime1 = stackIn_36_0 / stackIn_36_1;
-          var3Lifetime2 = (this.f(237239984) - 1) / 24;
+          var3Lifetime2 = (this.getY(237239984) - 1) / 24;
           if (0 <= var2Lifetime1 &&
             0 <= var3Lifetime2 &&
             var2Lifetime1 < dj.field_e.field_H.field_A.field_f[0].length &&

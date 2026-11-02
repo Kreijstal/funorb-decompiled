@@ -153,7 +153,7 @@ final class tl implements ug {
         }
         if (!sa.field_T &&
           null != this.field_h) {
-          this.a(eo.field_h[15], e.field_I, 55.0f, false, 20.0f);
+          this.a(HumanFactory.field_h[15], e.field_I, 55.0f, false, 20.0f);
           if (!this.a("zombie dawn titlescreen", 0, 0)) {
             return;
           }
@@ -250,12 +250,12 @@ final class tl implements ug {
           hk.field_H = gf.a(a.field_h, "menu_pipebox", 8, "basic");
           pf.field_f = gf.a(a.field_h, "menu_pipebox2", 8, "basic");
           ql.field_g = gf.a(a.field_h, "menu_title", 8, "basic");
-          fb.field_w = vm.a((byte) 113, "menu_risinghands", "basic", a.field_h);
+          WorldObject.field_w = vm.a((byte) 113, "menu_risinghands", "basic", a.field_h);
           cn.field_a = vm.a((byte) 110, "menu_hand", "basic", a.field_h);
           lb.field_eb = vm.a((byte) 120, "engine_icons", "basic", a.field_h);
           ch.field_a = gf.a(a.field_h, "frameh", 8, "basic");
-          hi.field_x = gf.a(a.field_h, "framev", 8, "basic");
-          vo.field_a = vm.a((byte) -8, "framecorners", "basic", a.field_h);
+          GameWorld.field_x = gf.a(a.field_h, "framev", 8, "basic");
+          IntrusiveDeque.field_a = vm.a((byte) -8, "framecorners", "basic", a.field_h);
           this.a(var5, 0, var6, var4);
           ad.field_g[0] = vm.a((byte) -53, "character_zombie0", "basic", a.field_h);
           ad.field_g[1] = vm.a((byte) -15, "character_zombie1", "basic", a.field_h);
@@ -264,7 +264,7 @@ final class tl implements ug {
           af.field_d = gf.a(a.field_h, "levelselect_arrow", 8, "basic");
           dc.field_a[0] = gf.a(a.field_h, "levelselect", 8, "basic");
           nc.field_k = gf.a(a.field_h, "pipeframe_levelselect", param0 - 67, "basic");
-          ah.field_tb = af.field_d;
+          Human.field_tb = af.field_d;
           kb.field_i = vm.a((byte) -18, "powerups", "basic", a.field_h);
           DualLinkNode.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
           tp.a(vm.a((byte) -120, "hud", "basic", a.field_h), -10);
@@ -458,7 +458,7 @@ final class tl implements ug {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class tl implements ug {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -562,7 +562,7 @@ final class tl implements ug {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
         this.field_r[fieldTemp$0] = param1;
-        this.field_p = this.field_p + eo.field_h[param1];
+        this.field_p = this.field_p + HumanFactory.field_h[param1];
         return true;
     }
 
@@ -589,7 +589,7 @@ final class tl implements ug {
           var11 = param2 + var10 * param4;
           this.a(var11, 124, param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tl.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tl.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -633,16 +633,16 @@ final class tl implements ug {
             this.a(0.0f, 127, (String) null);
           }
           if (this.field_o == 0) {
-            this.field_o = eo.field_h[var2];
+            this.field_o = HumanFactory.field_h[var2];
           }
           var3 = this.field_p;
-          if (this.field_o < eo.field_h[var2]) {
-            var3 = var3 + (this.field_o - eo.field_h[var2]);
+          if (this.field_o < HumanFactory.field_h[var2]) {
+            var3 = var3 + (this.field_o - HumanFactory.field_h[var2]);
           }
           this.a((-((float)var3 / (float)this.field_a) + 1.0f) * 100.0f, 127, (String) null);
           pd.a(-22826);
           if (this.a(0, var2)) {
-            this.field_p = this.field_p - eo.field_h[var2];
+            this.field_p = this.field_p - HumanFactory.field_h[var2];
             for (var4 = 0; var4 < -1 + this.field_f; var4++) {
               this.field_r[var4] = this.field_r[var4 + 1];
             }

@@ -3,15 +3,15 @@
  */
 final class dj {
     private Object[] field_j;
-    static vo field_l;
+    static IntrusiveDeque field_l;
     private int field_d;
     private w field_h;
     static String field_a;
     private boolean field_f;
-    static vo field_m;
+    static IntrusiveDeque field_m;
     static int[] field_g;
     private Object[][] field_c;
-    static hi field_e;
+    static GameWorld field_e;
     private jh field_b;
     static vn[] field_k;
     static int[] field_i;
@@ -129,7 +129,7 @@ final class dj {
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
             stackIn_39_2 = (param0 != null);
-            throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SecondaryNodeDeque.a(8099, var9.length, var9)).append(" ").append(SecondaryNodeDeque.a(8099, var9.length - 2, var9)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_m).toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SecondaryNodeDeque.a(8099, var9.length, var9)).append(" ").append(SecondaryNodeDeque.a(8099, var9.length - 2, var9)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_m).toString());
           }
           if (this.field_f) {
             this.field_j[param2] = null;
@@ -255,7 +255,7 @@ final class dj {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class dj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class dj {
           return -1;
         }
         if (param0 != -1) {
-          field_l = (vo) null;
+          field_l = (IntrusiveDeque) null;
         }
         return this.field_b.field_d.length;
     }
@@ -381,7 +381,7 @@ final class dj {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ final class dj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -510,7 +510,7 @@ final class dj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -584,7 +584,7 @@ final class dj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -619,7 +619,7 @@ final class dj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -666,7 +666,7 @@ final class dj {
         field_m = null;
         field_l = null;
         if (param0 <= 67) {
-          field_e = (hi) null;
+          field_e = (GameWorld) null;
         }
         field_e = null;
         field_g = null;
@@ -724,7 +724,7 @@ final class dj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -801,7 +801,7 @@ final class dj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -858,13 +858,13 @@ final class dj {
           this.field_d = param2;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
         field_a = "Passwords can only contain letters and numbers";
-        field_l = new vo();
+        field_l = new IntrusiveDeque();
         field_i = ae.a(14821);
     }
 }

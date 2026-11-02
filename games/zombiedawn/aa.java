@@ -70,11 +70,11 @@ final class aa {
           SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + (var2_intLifetime2 >> 1);
           e.field_H = e.field_H + param0.f(2);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static hn a(int param0, fn param1) {
+    final static hn a(int param0, PcmSampleStream param1) {
         hn var2 = null;
         RuntimeException var2_ref = null;
         hn stackIn_3_0 = null;
@@ -87,7 +87,7 @@ final class aa {
             aa.a(31);
           }
           var2 = new hn(param1, param1);
-          fj.field_i.a(0, var2);
+          fj.field_i.addFirst(0, var2);
           t.field_i.b(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -101,7 +101,7 @@ final class aa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

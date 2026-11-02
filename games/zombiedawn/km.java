@@ -7,7 +7,7 @@ final class km {
     static String field_b;
     String field_c;
 
-    final static boolean a(int param0, int param1, wk param2, int param3) {
+    final static boolean a(int param0, int param1, Camera param2, int param3) {
         RuntimeException var4 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -30,7 +30,7 @@ final class km {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 

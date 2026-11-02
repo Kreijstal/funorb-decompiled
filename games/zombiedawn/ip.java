@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ip extends sp {
+final class ip extends PcmStream {
     private rj field_n;
-    vo field_s;
+    IntrusiveDeque field_s;
     static String field_o;
     static int[] field_r;
     static de field_l;
-    fi field_m;
+    PcmMixer field_m;
     static boolean[] field_q;
     static vn[] field_p;
 
@@ -57,7 +57,7 @@ final class ip extends sp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "ip.I(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "ip.I(" + param0 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class ip extends sp {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        fn var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = ZombieDawn.field_J;
         try {
@@ -101,7 +101,7 @@ final class ip extends sp {
               }
               var11 = param1.field_E;
               if (0 != this.field_n.field_O[param1.field_z]) {
-                param1.field_E = fn.a(param1.field_s, var11.m(), 0, var11.g());
+                param1.field_E = PcmSampleStream.a(param1.field_s, var11.m(), 0, var11.g());
                 stackIn_13_0 = this.field_n;
                 stackIn_13_1 = (lf) (param1);
                 stackIn_13_2 = 124;
@@ -109,7 +109,7 @@ final class ip extends sp {
                 ((rj) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
                 param1.field_E.b(var9, var11.k());
               } else {
-                param1.field_E = fn.a(param1.field_s, var11.m(), var11.k(), var11.g());
+                param1.field_E = PcmSampleStream.a(param1.field_s, var11.m(), var11.k(), var11.g());
               }
               if (param1.field_u.field_j[param1.field_i] < 0) {
                 param1.field_E.e(-1);
@@ -143,11 +143,11 @@ final class ip extends sp {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final sp d() {
+    final PcmStream d() {
         lf var1;
         int var2;
         var2 = ZombieDawn.field_J;
@@ -157,13 +157,13 @@ final class ip extends sp {
             return null;
           }
           if (null != var1.field_E) {
-            return (sp) ((Object) var1.field_E);
+            return (PcmStream) ((Object) var1.field_E);
           }
         }
     }
 
     final static ek a(int param0, int param1, int param2, boolean param3) {
-        ek var4 = (ek) (td.field_c.f(32));
+        ek var4 = (ek) (td.field_c.removeLast(32));
         if (!param3) {
           return (ek) null;
         }
@@ -197,9 +197,9 @@ final class ip extends sp {
             param0.field_D = 1048575 & param1 * var4_int + param0.field_D;
             if (var5 <= param1) {
               if (this.field_n.field_O[param0.field_z] == 0) {
-                param0.field_E = fn.a(param0.field_s, param0.field_E.m(), param0.field_E.k(), param0.field_E.g());
+                param0.field_E = PcmSampleStream.a(param0.field_s, param0.field_E.m(), param0.field_E.k(), param0.field_E.g());
               } else {
-                param0.field_E = fn.a(param0.field_s, param0.field_E.m(), 0, param0.field_E.g());
+                param0.field_E = PcmSampleStream.a(param0.field_s, param0.field_E.m(), 0, param0.field_E.g());
                 stackIn_9_0 = this.field_n;
                 stackIn_9_1 = (lf) (param0);
                 stackIn_9_2 = param2 ^ 26145;
@@ -224,17 +224,17 @@ final class ip extends sp {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final sp c() {
+    final PcmStream c() {
         lf var1 = (lf) (this.field_s.b((byte) 26));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_E) {
-          return (sp) ((Object) var1.field_E);
+          return (PcmStream) ((Object) var1.field_E);
         }
         return this.d();
     }
@@ -314,7 +314,7 @@ final class ip extends sp {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class ip extends sp {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -422,12 +422,12 @@ final class ip extends sp {
     }
 
     ip(rj param0) {
-        this.field_s = new vo();
-        this.field_m = new fi();
+        this.field_s = new IntrusiveDeque();
+        this.field_m = new PcmMixer();
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

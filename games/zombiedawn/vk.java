@@ -39,7 +39,7 @@ final class vk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class vk {
         throw new IllegalStateException();
     }
 
-    final static on a(byte param0, byte[] param1) {
+    final static TileMap a(byte param0, byte[] param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -68,8 +68,8 @@ final class vk {
         int incrementValue$7 = 0;
         int var16 = 0;
         int incrementValue$8 = 0;
-        on stackIn_6_0 = null;
-        on stackIn_20_0 = null;
+        TileMap stackIn_6_0 = null;
+        TileMap stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -122,7 +122,7 @@ final class vk {
           var21 = var25;
           var8 = var21;
           if (param0 > -22) {
-            stackIn_6_0 = (on) null;
+            stackIn_6_0 = (TileMap) null;
             return stackIn_6_0;
           }
           for (var9 = 0; 4 > var9; var9++) {
@@ -164,7 +164,7 @@ final class vk {
             var2_int++;
             var15[var16] = md.a(incrementValue$8, param1, 76);
           }
-          stackIn_20_0 = new on(var27, var23, var3, var5, var6, var24, var25, var9Lifetime1, var10, var4 != 0);
+          stackIn_20_0 = new TileMap(var27, var23, var3, var5, var6, var24, var25, var9Lifetime1, var10, var4 != 0);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,7 +176,7 @@ final class vk {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

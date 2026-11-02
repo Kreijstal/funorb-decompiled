@@ -8,14 +8,14 @@ final class dd {
 
     final static void a(int param0, wg param1, int param2) {
         try {
-          jb.field_b.a(0, param1);
+          jb.field_b.addFirst(0, param1);
           nd.a(param0, 1, param1);
           if (param2 > -6) {
             dj var4 = (dj) null;
             dd.a((String) null, (String) null, 118, (dj) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "dd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class dd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

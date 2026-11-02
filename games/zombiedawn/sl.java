@@ -24,7 +24,7 @@ final class sl {
         int var5Lifetime1;
         var6 = ZombieDawn.field_J;
         var2 = 0;
-        var3 = ej.field_x;
+        var3 = LevelNavigation.field_x;
         if (5 > var3) {
           var2 = 8192 * (var3 * var3) / 1100;
           var4 = 1;

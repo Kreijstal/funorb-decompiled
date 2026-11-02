@@ -108,7 +108,7 @@ class al {
               return;
             }
           }
-          bi.b(0, 0, 640, 480, 65793);
+          Rasterizer.b(0, 0, 640, 480, 65793);
           return;
         }
         regionExit3: {
@@ -167,7 +167,7 @@ class al {
               break regionExit3;
             }
           }
-          bi.b(0, 0, bd.field_e, nh.field_P, 65793);
+          Rasterizer.b(0, 0, bd.field_e, nh.field_P, 65793);
         }
     }
 
@@ -315,7 +315,7 @@ class al {
             var15 = (var8 - var14 >> 1) + var5;
             sg.field_jb.c(var7, var15, (var12 >> 1) + (ca.field_b[0].field_q + sg.field_jb.field_I + var4), var10, 0);
             var15 = var15 + (ff.field_b + 8);
-            bi.c(var15, var9 / 2 + var4 - 1, 129, 2, var10);
+            Rasterizer.c(var15, var9 / 2 + var4 - 1, 129, 2, var10);
             if (var6 == 12) {
               stackIn_65_0 = ge.field_c;
             } else {
@@ -327,8 +327,8 @@ class al {
             if (ad.field_g == null ||
               ad.field_g[0] == null ||
               ad.field_g[0][0] == null) {
-              bi.b(-1 + (var16 >> 1) + var15, 3 + var4, 3, -6 + var9, 6684672);
-              bi.c(-1 + (var16 >> 1) + var15, var4 + 3, 3, -6 + var9, 11141120);
+              Rasterizer.b(-1 + (var16 >> 1) + var15, 3 + var4, 3, -6 + var9, 6684672);
+              Rasterizer.c(-1 + (var16 >> 1) + var15, var4 + 3, 3, -6 + var9, 11141120);
               decompiledFrameRemainder0 = (var22 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -338,10 +338,10 @@ class al {
               if (param2) {
                 var18 = (int)((tp.field_p >> 3) % 4L) + 14;
               }
-              bi.b(var15, var9 / 2 + var4 - 1, 129, 6, 6815744);
-              bi.b(var15, -1 + var9 / 2 + var4, (var16 >> 1) + 1, 6, 13373713);
-              bi.c(var15, -1 + (var4 + var9 / 2), 129, 6, var10);
-              bi.e(var15, var4 + (var9 / 2 - 1), 129, 6, 1, var10);
+              Rasterizer.b(var15, var9 / 2 + var4 - 1, 129, 6, 6815744);
+              Rasterizer.b(var15, -1 + var9 / 2 + var4, (var16 >> 1) + 1, 6, 13373713);
+              Rasterizer.c(var15, -1 + (var4 + var9 / 2), 129, 6, var10);
+              Rasterizer.e(var15, var4 + (var9 / 2 - 1), 129, 6, 1, var10);
               stackIn_79_0 = ad.field_g[var17][var18];
               stackIn_79_1 = 0;
               stackIn_79_2 = 339;
@@ -1004,8 +1004,8 @@ class al {
                       var8 = 0;
                       do {
                         if (8 <= var8) {
-                          kk.field_j.b(param2 + 8482);
-                          dn.field_D.b(-63);
+                          Point.field_j.clear(param2 + 8482);
+                          dn.field_D.clear(-63);
                           to.field_b[0] = 0;
                           break;
                         }
@@ -1537,7 +1537,7 @@ class al {
           bj.field_q.a(wi.field_d, 320, var2, var4, -1);
           bj.field_q.a(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3 + var2, var4, -1);
           bj.field_q.a(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3 * 3 + var2), var4, -1);
-          bj.field_q.a(g.a(rf.field_d, -121, false, eh.field_z), 320, var2 + var3 * 4 + 84, var4, -1);
+          bj.field_q.a(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2 + var3 * 4 + 84, var4, -1);
           if (param0 > -35) {
             this.field_j = -46;
           }
@@ -1586,7 +1586,7 @@ class al {
             bj.field_q.a(wi.field_d, 320, var2Lifetime1, var4Lifetime1, -1);
             bj.field_q.a(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3Lifetime1 + var2Lifetime1, var4Lifetime1, -1);
             bj.field_q.a(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3Lifetime1 * 3 + var2Lifetime1), var4Lifetime1, -1);
-            bj.field_q.a(g.a(rf.field_d, -121, false, eh.field_z), 320, var2Lifetime1 + var3Lifetime1 * 4 + 84, var4Lifetime1, -1);
+            bj.field_q.a(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2Lifetime1 + var3Lifetime1 * 4 + 84, var4Lifetime1, -1);
           }
         }
         if (param0 > -35) {
@@ -1669,7 +1669,7 @@ class al {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -1679,7 +1679,7 @@ class al {
             this.field_b = (jp) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "al.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "al.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1727,7 +1727,7 @@ class al {
           this.field_d = param0;
           this.field_b = new jp(this.field_h.length);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

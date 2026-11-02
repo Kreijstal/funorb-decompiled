@@ -6,7 +6,7 @@ abstract class bc extends IntrusiveNode {
 
     abstract void a();
 
-    abstract int a(fi param0);
+    abstract int a(PcmMixer param0);
 
     private bc() throws Throwable {
         throw new Error();

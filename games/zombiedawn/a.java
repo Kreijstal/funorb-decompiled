@@ -28,21 +28,21 @@ final class a {
         field_l = null;
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         if (!this.field_a) {
           return;
         }
         try {
-          var3_int = param0.a(this.field_i >> 16, (byte) -60);
+          var3_int = param0.worldToScreenX(this.field_i >> 16, (byte) -60);
           if (param1 != 8192) {
             a.a((byte) 123);
           }
-          var4 = param0.a(this.field_o >> 16, 0) - (this.field_k >> 16);
+          var4 = param0.worldToScreenY(this.field_o >> 16, 0) - (this.field_k >> 16);
           tf.field_b[this.field_b].b(-3 + var3_int, -3 + var4);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

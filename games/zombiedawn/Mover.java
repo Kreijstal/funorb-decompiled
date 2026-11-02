@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class g extends fb {
+abstract class Mover extends WorldObject {
     int field_W;
     static int[] field_P;
     int field_ab;
@@ -15,13 +15,13 @@ abstract class g extends fb {
     int field_O;
     int field_R;
     static boolean field_Q;
-    fn field_U;
+    PcmSampleStream field_U;
     int field_X;
     boolean field_J;
     int field_Y;
     static String field_H;
     int field_E;
-    int field_F;
+    int state;
     int field_M;
     int field_S;
     int field_G;
@@ -50,7 +50,7 @@ abstract class g extends fb {
         } else {
           this.field_x = this.field_x - var7.field_i;
           this.field_y = this.field_y - var7.field_h;
-          if (this.field_F == 6) {
+          if (this.state == 6) {
             var4 = this.field_G;
             var5 = this.field_N;
             this.e(4, -6904);
@@ -58,21 +58,21 @@ abstract class g extends fb {
             this.field_G = var4;
             return var7;
           }
-          if (this.field_F == 5) {
+          if (this.state == 5) {
             this.c(0, this.field_L);
             return var7;
           }
-          if (this.field_F == 1) {
+          if (this.state == 1) {
             this.c(0, this.field_L);
             return var7;
           }
-          if (this.field_F == 7) {
+          if (this.state == 7) {
             this.c(0, this.field_L);
             return var7;
           }
           return var7;
         }
-        if (this.field_F == 6) {
+        if (this.state == 6) {
           var4Lifetime1 = this.field_G;
           var5Lifetime1 = this.field_N;
           this.e(4, -6904);
@@ -80,15 +80,15 @@ abstract class g extends fb {
           this.field_G = var4Lifetime1;
           return var7;
         }
-        if (this.field_F == 5) {
+        if (this.state == 5) {
           this.c(0, this.field_L);
           return var7;
         }
-        if (this.field_F == 1) {
+        if (this.state == 1) {
           this.c(0, this.field_L);
           return var7;
         }
-        if (this.field_F == 7) {
+        if (this.state == 7) {
           this.c(0, this.field_L);
           return var7;
         }
@@ -104,12 +104,12 @@ abstract class g extends fb {
         int var6Lifetime1;
         this.field_L = param1;
         param1 = param1 * this.field_W / 4;
-        int var3 = this.field_Y - this.a(true);
+        int var3 = this.field_Y - this.getX(true);
         if (param0 == 0) {
-          var4 = this.field_X - this.f(237239984);
+          var4 = this.field_X - this.getY(237239984);
           var5 = so.b(var3 * var3 + var4 * var4);
           if (var5 == 0) {
-            this.e(this instanceof ah ? 0 : 4, -6904);
+            this.e(this instanceof Human ? 0 : 4, -6904);
           } else {
             var6 = param1 / var5;
             this.field_O = var3 * var6;
@@ -125,10 +125,10 @@ abstract class g extends fb {
           return;
         }
         this.field_D = -90;
-        var4Lifetime1 = this.field_X - this.f(237239984);
+        var4Lifetime1 = this.field_X - this.getY(237239984);
         var5Lifetime1 = so.b(var3 * var3 + var4Lifetime1 * var4Lifetime1);
         if (var5Lifetime1 == 0) {
-          this.e(this instanceof ah ? 0 : 4, -6904);
+          this.e(this instanceof Human ? 0 : 4, -6904);
         } else {
           var6Lifetime1 = param1 / var5Lifetime1;
           this.field_O = var3 * var6Lifetime1;
@@ -145,10 +145,10 @@ abstract class g extends fb {
 
     final int l(int param0) {
         if (param0 <= -71) {
-          return this.b(0, this.a(true), this.f(237239984));
+          return this.b(0, this.getX(true), this.getY(237239984));
         }
-        g.a(false, -39, true, true);
-        return this.b(0, this.a(true), this.f(237239984));
+        Mover.a(false, -39, true, true);
+        return this.b(0, this.getX(true), this.getY(237239984));
     }
 
     abstract void k(int param0);
@@ -202,7 +202,7 @@ abstract class g extends fb {
         int var3 = -66 / ((param0 - 27) / 46);
         this.field_Z = param1;
         this.field_W = 2;
-        int var4 = this.field_F;
+        int var4 = this.state;
         if (var4 != 5) {
           if (var4 == 1) {
             this.c(0, this.field_D);
@@ -223,7 +223,7 @@ abstract class g extends fb {
           if (var4 != 8) {
             return;
           }
-          ((kd) (this)).k((byte) 40);
+          ((Zombie) (this)).k((byte) 40);
           return;
         }
         this.c(0, 57344);
@@ -232,19 +232,19 @@ abstract class g extends fb {
     void e(int param0, int param1) {
         if (param1 != -6904) {
           this.m(-100);
-          if (this.field_F != param0) {
+          if (this.state != param0) {
             this.field_G = 0;
-            this.field_F = param0;
+            this.state = param0;
             this.field_N = 0;
             return;
           }
           return;
         }
-        if (this.field_F == param0) {
+        if (this.state == param0) {
           return;
         }
         this.field_G = 0;
-        this.field_F = param0;
+        this.state = param0;
         this.field_N = 0;
     }
 
@@ -286,13 +286,13 @@ abstract class g extends fb {
         return 0;
     }
 
-    g(int param0, int param1, int param2, int param3) {
+    Mover(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         this.field_U = null;
         this.field_W = 4;
         this.field_J = false;
         this.field_Z = 0;
-        this.field_F = this instanceof ah ? 0 : 4;
+        this.state = this instanceof Human ? 0 : 4;
         this.field_S = pb.a(so.field_a, 2, 1) != 1 ? 1 : 3;
         this.field_G = 0;
         this.field_N = 0;
@@ -806,7 +806,7 @@ abstract class g extends fb {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         hk.i(1584);
-        bi.c(param4, param0, param2, param3);
+        Rasterizer.c(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;
         }
@@ -822,7 +822,7 @@ abstract class g extends fb {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$3aedf8649552(int param0, int param1, int param2, int param3, int param4) {
         hk.i(1584);
-        bi.c(param4, param0, param2, param3);
+        Rasterizer.c(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;
         }

@@ -138,7 +138,7 @@ final class di extends hp implements hh {
                 var18.field_q[var5] = -5;
               }
             }
-            dj.field_l.a(0, var18);
+            dj.field_l.addFirst(0, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -156,7 +156,7 @@ final class di extends hp implements hh {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -216,7 +216,7 @@ final class di extends hp implements hh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class di extends hp implements hh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class di extends hp implements hh {
         v[] var1 = new v[t.field_h];
         int var2 = 104 / ((4 - param0) / 61);
         for (var3 = 0; t.field_h > var3; var3++) {
-          var1[var3] = new v(gl.field_F, kd.field_pb, sl.field_d[var3], bo.field_o[var3], bn.field_c[var3], uf.field_n[var3], vj.field_m[var3], j.field_a);
+          var1[var3] = new v(gl.field_F, Zombie.field_pb, sl.field_d[var3], bo.field_o[var3], bn.field_c[var3], uf.field_n[var3], vj.field_m[var3], j.field_a);
         }
         no.f((byte) -79);
         return var1;

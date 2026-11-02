@@ -17,7 +17,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             kg.field_l = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "h.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             kg.field_l = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "h.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,14 +60,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param1 == 0) {
             param0[param2].a();
             param0[param4].e(0, 0);
-            bi.a(0, 0, 24, 24, 0, 128);
+            Rasterizer.a(0, 0, 24, 24, 0, 128);
             cn.field_f.b(-124);
           } else {
             if (param1 == 1) {
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_int = 0; var5_int < 24; var5_int++) {
-                bi.g(var5_int, 0, 24, 0, 5 * var5_int);
+                Rasterizer.g(var5_int, 0, 24, 0, 5 * var5_int);
               }
               cn.field_f.b(-124);
               return;
@@ -76,7 +76,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime1 = 0; 24 > var5_intLifetime1; var5_intLifetime1++) {
-                bi.g(var5_intLifetime1, 0, 24, 0, -(var5_intLifetime1 * 5) + 120);
+                Rasterizer.g(var5_intLifetime1, 0, 24, 0, -(var5_intLifetime1 * 5) + 120);
               }
               cn.field_f.b(-124);
               return;
@@ -85,7 +85,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime2 = 0; var5_intLifetime2 < 24; var5_intLifetime2++) {
-                bi.a(0, var5_intLifetime2, 24, 0, 5 * var5_intLifetime2);
+                Rasterizer.a(0, var5_intLifetime2, 24, 0, 5 * var5_intLifetime2);
               }
               cn.field_f.b(-124);
               return;
@@ -94,7 +94,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime3 = 0; var5_intLifetime3 < 24; var5_intLifetime3++) {
-                bi.a(0, var5_intLifetime3, 24, 0, -(var5_intLifetime3 * 5) + 120);
+                Rasterizer.a(0, var5_intLifetime3, 24, 0, -(var5_intLifetime3 * 5) + 120);
               }
               cn.field_f.b(-124);
               return;
@@ -103,8 +103,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime4 = 0; 24 > var5_intLifetime4; var5_intLifetime4++) {
-                bi.a(var5_intLifetime4 + 1, var5_intLifetime4, -var5_intLifetime4 + 24, 0, var5_intLifetime4 * 5);
-                bi.g(var5_intLifetime4, var5_intLifetime4, 24 - var5_intLifetime4, 0, 5 * var5_intLifetime4);
+                Rasterizer.a(var5_intLifetime4 + 1, var5_intLifetime4, -var5_intLifetime4 + 24, 0, var5_intLifetime4 * 5);
+                Rasterizer.g(var5_intLifetime4, var5_intLifetime4, 24 - var5_intLifetime4, 0, 5 * var5_intLifetime4);
               }
               cn.field_f.b(-124);
               return;
@@ -113,8 +113,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime5 = 0; var5_intLifetime5 < 24; var5_intLifetime5++) {
-                bi.a(0, var5_intLifetime5, var5_intLifetime5 + 1, 0, -(5 * var5_intLifetime5) + 120);
-                bi.g(var5_intLifetime5, 0, var5_intLifetime5, 0, -(5 * var5_intLifetime5) + 120);
+                Rasterizer.a(0, var5_intLifetime5, var5_intLifetime5 + 1, 0, -(5 * var5_intLifetime5) + 120);
+                Rasterizer.g(var5_intLifetime5, 0, var5_intLifetime5, 0, -(5 * var5_intLifetime5) + 120);
               }
               cn.field_f.b(-124);
               return;
@@ -123,8 +123,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime6 = 0; var5_intLifetime6 < 24; var5_intLifetime6++) {
-                bi.a(0, var5_intLifetime6, 24 - var5_intLifetime6, 0, var5_intLifetime6 * 5);
-                bi.g(var5_intLifetime6, -var5_intLifetime6 + 24, var5_intLifetime6, 0, 120 - var5_intLifetime6 * 5);
+                Rasterizer.a(0, var5_intLifetime6, 24 - var5_intLifetime6, 0, var5_intLifetime6 * 5);
+                Rasterizer.g(var5_intLifetime6, -var5_intLifetime6 + 24, var5_intLifetime6, 0, 120 - var5_intLifetime6 * 5);
               }
               cn.field_f.b(-124);
               return;
@@ -133,8 +133,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               param0[param2].a();
               param0[param4].e(0, 0);
               for (var5_intLifetime7 = 0; var5_intLifetime7 < 24; var5_intLifetime7++) {
-                bi.a(24 - var5_intLifetime7, var5_intLifetime7, var5_intLifetime7, 0, -(var5_intLifetime7 * 5) + 120);
-                bi.g(var5_intLifetime7, 0, 24 - var5_intLifetime7, 0, 5 * var5_intLifetime7);
+                Rasterizer.a(24 - var5_intLifetime7, var5_intLifetime7, var5_intLifetime7, 0, -(var5_intLifetime7 * 5) + 120);
+                Rasterizer.g(var5_intLifetime7, 0, 24 - var5_intLifetime7, 0, 5 * var5_intLifetime7);
               }
               cn.field_f.b(-124);
               return;
@@ -152,7 +152,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "h.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             kg.field_l = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "h.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

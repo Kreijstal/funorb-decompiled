@@ -21,21 +21,21 @@ final class cg {
         var3 = ZombieDawn.field_J;
         try {
           var1_int = 0;
-          while (on.b(-93)) {
-            kk.field_m.a(21657);
-            if (!kk.field_m.d(-122)) {
+          while (TileMap.b(-93)) {
+            Point.field_m.a(21657);
+            if (!Point.field_m.d(-122)) {
               continue;
             }
             var1_int = 1;
           }
-          kk.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
-          if (kk.field_m.d(-120)) {
+          Point.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
+          if (Point.field_m.d(-120)) {
             var1_int = 1;
           }
           var2 = param0;
           if (var1_int != 0 &&
-            kk.field_m.field_d >= 0) {
-            var2 = gn.field_a[kk.field_m.field_d];
+            Point.field_m.field_d >= 0) {
+            var2 = gn.field_a[Point.field_m.field_d];
             if (var2 == 2) {
               sl.a((byte) 85);
             }
@@ -45,7 +45,7 @@ final class cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "cg.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "cg.B(" + param0 + ')');
         }
     }
 

@@ -117,7 +117,7 @@ final class gj {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class gj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class gj {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class gj {
         try {
           param1.field_d = this.field_d;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "gj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "gj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -359,7 +359,7 @@ final class gj {
             if (var7 > 255) {
               var7 = 255;
             }
-            field_b[var4][var3] = hi.a(hi.a(var5 << 16, var6 << 8), var7);
+            field_b[var4][var3] = GameWorld.a(GameWorld.a(var5 << 16, var6 << 8), var7);
           }
         }
         field_c = "Zombies remaining: ";

@@ -10,7 +10,7 @@ final class oe {
     static String field_f;
     static af field_a;
     int field_b;
-    static fn field_c;
+    static PcmSampleStream field_c;
 
     final int a(int param0) {
         int var2;
@@ -53,7 +53,7 @@ final class oe {
           var3.i(param2.field_h, 70);
           var3.i(param2.field_i, param1 + 19119);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "oe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class oe {
         int var4 = ZombieDawn.field_J;
         try {
           ij.field_L = new u[15];
-          ij.field_L[0] = new u(fb.field_w, 0, 0);
+          ij.field_L[0] = new u(WorldObject.field_w, 0, 0);
           var1_int = pb.a(so.field_a, 50, 1) + 30;
           var2 = 1;
           for (var3 = param0; 15 > var3; var3++) {
@@ -77,7 +77,7 @@ final class oe {
           }
           ip.c(param0 ^ -63);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "oe.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oe.C(" + param0 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class oe {
           if (null != param1.field_e) {
           }
           if (param0 != 0) {
-            field_c = (fn) null;
+            field_c = (PcmSampleStream) null;
           }
           jk.a((byte) -126, param1);
           return;
@@ -123,7 +123,7 @@ final class oe {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

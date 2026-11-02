@@ -145,7 +145,7 @@ final class wd extends pj {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + bi.field_f;
+                  var16Lifetime2 = var16Lifetime2 + Rasterizer.field_f;
                 }
               }
               var16Lifetime3 = -param3 + param4;
@@ -195,7 +195,7 @@ final class wd extends pj {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + bi.field_f;
+              var15Lifetime1 = var15Lifetime1 + Rasterizer.field_f;
               var10 = var10 + var12;
             }
             return;
@@ -211,7 +211,7 @@ final class wd extends pj {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 

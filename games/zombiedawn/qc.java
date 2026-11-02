@@ -24,7 +24,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "qc.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "qc.B(" + param0 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "qc.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "qc.A(" + param0 + ')');
         }
     }
 

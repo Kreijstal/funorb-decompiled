@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sp extends IntrusiveNode {
+abstract class PcmStream extends IntrusiveNode {
     int field_j;
-    ik field_h;
+    AbstractAudioSample field_h;
     volatile boolean field_k;
-    sp field_i;
+    PcmStream field_i;
 
     final void b(int[] param0, int param1, int param2) {
         if (this.field_k) {
@@ -25,11 +25,11 @@ abstract class sp extends IntrusiveNode {
 
     abstract int a();
 
-    abstract sp c();
+    abstract PcmStream c();
 
-    abstract sp d();
+    abstract PcmStream d();
 
-    protected sp() {
+    protected PcmStream() {
         this.field_k = true;
     }
 }

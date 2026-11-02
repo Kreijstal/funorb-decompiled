@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi extends sp {
-    private vo field_n;
-    private vo field_l;
+final class PcmMixer extends PcmStream {
+    private IntrusiveDeque field_n;
+    private IntrusiveDeque field_l;
     private int field_o;
     private int field_m;
 
-    final sp c() {
-        return (sp) (this.field_n.b((byte) 26));
+    final PcmStream c() {
+        return (PcmStream) (this.field_n.b((byte) 26));
     }
 
-    final synchronized void b(sp param0) {
-        this.field_n.a(param0, 97);
+    final synchronized void b(PcmStream param0) {
+        this.field_n.addLast(param0, 97);
     }
 
     private final void a(IntrusiveNode param0, bc param1) {
         while (true) {
-          if (param0 == this.field_l.field_b) {
+          if (param0 == this.field_l.sentinel) {
             we.a(param0, 0, param1);
-            this.field_m = ((bc) (this.field_l.field_b.previous)).field_h;
+            this.field_m = ((bc) (this.field_l.sentinel.previous)).field_h;
             return;
           }
           if (((bc) (param0)).field_h <= param1.field_h) {
@@ -29,7 +29,7 @@ final class fi extends sp {
           break;
         }
         we.a(param0, 0, param1);
-        this.field_m = ((bc) (this.field_l.field_b.previous)).field_h;
+        this.field_m = ((bc) (this.field_l.sentinel.previous)).field_h;
         return;
     }
 
@@ -71,35 +71,35 @@ final class fi extends sp {
         return;
     }
 
-    final synchronized void a(sp param0) {
+    final synchronized void a(PcmStream param0) {
         param0.unlink(-27598);
     }
 
     private final void c(int param0) {
-        sp var2 = (sp) (this.field_n.b((byte) 26));
+        PcmStream var2 = (PcmStream) (this.field_n.b((byte) 26));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (sp) (this.field_n.a(false));
+          var2 = (PcmStream) (this.field_n.a(false));
         }
     }
 
-    final sp d() {
-        return (sp) (this.field_n.a(false));
+    final PcmStream d() {
+        return (PcmStream) (this.field_n.a(false));
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        sp var4 = (sp) (this.field_n.b((byte) 26));
+        PcmStream var4 = (PcmStream) (this.field_n.b((byte) 26));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (sp) (this.field_n.a(false));
+          var4 = (PcmStream) (this.field_n.a(false));
         }
     }
 
     private final void a(bc param0) {
         param0.unlink(-27598);
         param0.a();
-        IntrusiveNode var2 = this.field_l.field_b.previous;
-        if (var2 == this.field_l.field_b) {
+        IntrusiveNode var2 = this.field_l.sentinel.previous;
+        if (var2 == this.field_l.sentinel) {
           this.field_m = -1;
         } else {
           this.field_m = ((bc) (var2)).field_h;
@@ -160,9 +160,9 @@ final class fi extends sp {
         return;
     }
 
-    public fi() {
-        this.field_n = new vo();
-        this.field_l = new vo();
+    public PcmMixer() {
+        this.field_n = new IntrusiveDeque();
+        this.field_l = new IntrusiveDeque();
         this.field_o = 0;
         this.field_m = -1;
     }

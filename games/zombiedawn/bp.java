@@ -7,7 +7,7 @@ final class bp {
     static String[] field_a;
     static jk field_h;
     private java.math.BigInteger field_c;
-    private sh field_i;
+    private ExceptionWrapper field_i;
     private om[] field_g;
     static String field_j;
     private de field_d;
@@ -76,11 +76,11 @@ final class bp {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    bp(pc param0, sh param1) {
+    bp(pc param0, ExceptionWrapper param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -170,7 +170,7 @@ final class bp {
         return;
     }
 
-    private bp(pc param0, sh param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private bp(pc param0, ExceptionWrapper param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -219,7 +219,7 @@ final class bp {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

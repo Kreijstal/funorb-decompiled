@@ -4,7 +4,7 @@
 final class qj {
     static volatile long field_g;
     private boolean field_b;
-    static fn field_f;
+    static PcmSampleStream field_f;
     private float field_i;
     private int field_h;
     private int field_a;
@@ -48,7 +48,7 @@ final class qj {
         this.field_a = this.field_a - 25;
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         vn[] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -67,7 +67,7 @@ final class qj {
             } else {
               stackIn_7_1 = 6;
             }
-            ((vn) (Object) stackIn_6_0[stackIn_7_1]).e(param1.a(this.field_h, (byte) -72) - 12, param1.a(this.field_c, 0) - 12, this.field_a);
+            ((vn) (Object) stackIn_6_0[stackIn_7_1]).e(param1.worldToScreenX(this.field_h, (byte) -72) - 12, param1.worldToScreenY(this.field_c, 0) - 12, this.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -80,7 +80,7 @@ final class qj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class qj {
         field_f = null;
         field_j = (vn[][]) null;
         if (param0 != 97) {
-          field_f = (fn) null;
+          field_f = (PcmSampleStream) null;
         }
     }
 

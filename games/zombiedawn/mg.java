@@ -11,7 +11,7 @@ final class mg extends IntrusiveNode {
         int var2 = ZombieDawn.field_J;
         hn var1Lifetime1;
         try {
-          sh.field_d.g();
+          ExceptionWrapper.field_d.g();
           cf.field_fb.g();
           if (param0 > -30) {
             field_j = 75;
@@ -42,7 +42,7 @@ final class mg extends IntrusiveNode {
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ')');
         }
     }
 

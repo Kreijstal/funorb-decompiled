@@ -18,17 +18,17 @@ class wc extends qk {
         }
         int var5 = -1;
         IntrusiveNode var6 = dj.field_e.field_R.b((byte) 26);
-        while (var6 instanceof fb) {
-          if (var6 instanceof kd &&
-            ((kd) (var6)).x(94)) {
-            var2 = ((kd) (var6)).a(true) - this.a(true);
-            var3 = ((kd) (var6)).f(237239984) - this.f(237239984);
+        while (var6 instanceof WorldObject) {
+          if (var6 instanceof Zombie &&
+            ((Zombie) (var6)).x(94)) {
+            var2 = ((Zombie) (var6)).getX(true) - this.getX(true);
+            var3 = ((Zombie) (var6)).getY(237239984) - this.getY(237239984);
             if (var3 > 0 &&
               var3 > Math.abs(var2)) {
               var4 = var3 * var3 + var2 * var2;
               if (var4 < var5 ||
                 -1 == var5) {
-                this.field_yb = (kd) (var6);
+                this.field_yb = (Zombie) (var6);
                 var5 = var4;
               }
             }
@@ -59,7 +59,7 @@ class wc extends qk {
         field_Nb = null;
     }
 
-    void a(byte param0, wk param1) {
+    void a(byte param0, Camera param1) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -71,12 +71,12 @@ class wc extends qk {
         int var5 = 0;
         int var6 = 0;
         try {
-          if (this.field_F == 20) {
+          if (this.state == 20) {
             return;
           }
-          var3_int = param1.a(this.a(true), (byte) -88);
-          var4 = param1.a(this.f(237239984), 0);
-          if (10 == this.field_F &&
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -88);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0);
+          if (10 == this.state &&
             this.field_G == 1) {
             stackIn_8_0 = -1 + var4;
           } else {
@@ -93,12 +93,12 @@ class wc extends qk {
             this.b(var3_int - 3, (byte) -99, var4);
           }
           if (b.field_h) {
-            bi.d(12 + var3_int, var4 + 24, 260, 16711680);
-            bi.e(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
-            bi.e(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
+            Rasterizer.d(12 + var3_int, var4 + 24, 260, 16711680);
+            Rasterizer.e(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
+            Rasterizer.e(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
             bj.field_q.c(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
             bj.field_q.c(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_F), var3_int, var4 - 20, 16777215, 0);
+            bj.field_q.c(Integer.toString(this.state), var3_int, var4 - 20, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ class wc extends qk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ class wc extends qk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ class wc extends qk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "wc.PA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "wc.PA(" + param0 + ')');
         }
     }
 
@@ -280,8 +280,8 @@ class wc extends qk {
         if (this.field_Gb > 0) {
           this.field_Gb = this.field_Gb - 1;
         }
-        if (this.field_F != 0) {
-          if (this.field_F == 10) {
+        if (this.state != 0) {
+          if (this.state == 10) {
             this.field_N = this.field_N + 3;
             if (2 == this.field_G) {
               this.field_yb.z(0);
@@ -295,7 +295,7 @@ class wc extends qk {
             this.field_Qb = this.field_Qb - 1;
           }
         }
-        this.d(this.field_F, -26109);
+        this.d(this.state, -26109);
     }
 
     final void a(nc param0, byte param1) {
@@ -318,7 +318,7 @@ class wc extends qk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ class wc extends qk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "wc.UB(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "wc.UB(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eo {
+final class HumanFactory {
     String field_e;
     String[] field_g;
     boolean field_d;
@@ -31,80 +31,80 @@ final class eo {
         jc.a((byte) 59, hc.a(0));
     }
 
-    final static ah a(int param0, int param1, int param2, int param3) {
+    final static Human createHuman(int param0, int param1, int param2, int param3) {
         if (param0 < 49) {
-          eo.a(false);
+          HumanFactory.a(false);
           if (param2 < 9) {
-            return (ah) ((Object) new wo(param1, param3, param2));
+            return (Human) ((Object) new wo(param1, param3, param2));
           }
           if (param2 < 11) {
-            return (ah) ((Object) new po(param1, param3, param2));
+            return (Human) ((Object) new po(param1, param3, param2));
           }
           if (param2 < 17) {
             if (ng.field_e) {
-              return (ah) ((Object) new qk(param1, param3, param2));
+              return (Human) ((Object) new qk(param1, param3, param2));
             }
             if (dj.field_e.field_q == 7) {
-              return (ah) ((Object) new jo(param1, param3, param2));
+              return (Human) ((Object) new jo(param1, param3, param2));
             }
-            return (ah) ((Object) new qk(param1, param3, param2));
+            return (Human) ((Object) new qk(param1, param3, param2));
           }
           if (28 == param2) {
             if (ng.field_e) {
-              return (ah) ((Object) new qk(param1, param3, param2));
+              return (Human) ((Object) new qk(param1, param3, param2));
             }
             if (dj.field_e.field_q != 7) {
-              return (ah) ((Object) new qk(param1, param3, param2));
+              return (Human) ((Object) new qk(param1, param3, param2));
             }
-            return (ah) ((Object) new jo(param1, param3, param2));
+            return (Human) ((Object) new jo(param1, param3, param2));
           }
           if (param2 == 23) {
-            return (ah) ((Object) new si(param1, param3, param2));
+            return (Human) ((Object) new si(param1, param3, param2));
           }
           if (param2 == 18) {
-            return (ah) ((Object) new wc(param1, param3, param2));
+            return (Human) ((Object) new wc(param1, param3, param2));
           }
           if (param2 == 19) {
-            return (ah) ((Object) new we(param1, param3, param2));
+            return (Human) ((Object) new we(param1, param3, param2));
           }
           if (param2 == 20) {
-            return (ah) ((Object) new fc(param1, param3, param2));
+            return (Human) ((Object) new fc(param1, param3, param2));
           }
           if (27 == param2) {
-            return (ah) ((Object) new dk(param1, param3));
+            return (Human) ((Object) new dk(param1, param3));
           }
-          return (ah) ((Object) new wo(param1, param3, param2));
+          return (Human) ((Object) new wo(param1, param3, param2));
         }
         if (param2 >= 9) {
           if (param2 < 11) {
-            return (ah) ((Object) new po(param1, param3, param2));
+            return (Human) ((Object) new po(param1, param3, param2));
           }
           if (param2 >= 17 &&
             28 != param2) {
             if (param2 == 23) {
-              return (ah) ((Object) new si(param1, param3, param2));
+              return (Human) ((Object) new si(param1, param3, param2));
             }
             if (param2 == 18) {
-              return (ah) ((Object) new wc(param1, param3, param2));
+              return (Human) ((Object) new wc(param1, param3, param2));
             }
             if (param2 == 19) {
-              return (ah) ((Object) new we(param1, param3, param2));
+              return (Human) ((Object) new we(param1, param3, param2));
             }
             if (param2 == 20) {
-              return (ah) ((Object) new fc(param1, param3, param2));
+              return (Human) ((Object) new fc(param1, param3, param2));
             }
             if (27 == param2) {
-              return (ah) ((Object) new dk(param1, param3));
+              return (Human) ((Object) new dk(param1, param3));
             }
-            return (ah) ((Object) new wo(param1, param3, param2));
+            return (Human) ((Object) new wo(param1, param3, param2));
           }
           if (!ng.field_e &&
             dj.field_e.field_q == 7) {
-            return (ah) ((Object) new jo(param1, param3, param2));
+            return (Human) ((Object) new jo(param1, param3, param2));
           }
-          return (ah) ((Object) new qk(param1, param3, param2));
+          return (Human) ((Object) new qk(param1, param3, param2));
         }
-        return (ah) ((Object) new wo(param1, param3, param2));
+        return (Human) ((Object) new wo(param1, param3, param2));
     }
 
     final static boolean b(int param0) {
@@ -114,7 +114,7 @@ final class eo {
         return nm.field_c;
     }
 
-    eo(boolean param0) {
+    HumanFactory(boolean param0) {
         this.field_b = param0 ? true : false;
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rj extends sp {
+final class rj extends PcmStream {
     int[] field_O;
     private int[] field_M;
     static int field_E;
@@ -35,8 +35,8 @@ final class rj extends sp {
     private int field_P;
     private boolean field_C;
 
-    final synchronized sp c() {
-        return (sp) ((Object) this.field_J);
+    final synchronized PcmStream c() {
+        return (PcmStream) ((Object) this.field_J);
     }
 
     final synchronized void a(int param0, byte param1) {
@@ -116,7 +116,7 @@ final class rj extends sp {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class rj extends sp {
         boolean stackIn_19_3;
         lf var5;
         int var6_int;
-        gi var6;
+        PcmSample var6;
         lf var7;
         lf var8;
         int var9;
@@ -185,7 +185,7 @@ final class rj extends sp {
         var7.field_l = 0;
         var7.field_p = 0;
         if (0 != this.field_O[param3]) {
-          var7.field_E = fn.a(var6, this.a(-20165, var7), 0, this.a(var7, true));
+          var7.field_E = PcmSampleStream.a(var6, this.a(-20165, var7), 0, this.a(var7, true));
           stackIn_18_1 = var7;
           stackIn_18_2 = -124;
           if (var11.field_j[param2] >= 0) {
@@ -197,7 +197,7 @@ final class rj extends sp {
           }
           this.a(stackIn_18_1, stackIn_18_2, stackIn_19_3);
         } else {
-          var7.field_E = fn.a(var6, this.a(-20165, var7), this.a(var7, (byte) -111), this.a(var7, true));
+          var7.field_E = PcmSampleStream.a(var6, this.a(-20165, var7), this.a(var7, (byte) -111), this.a(var7, true));
         }
         if (var11.field_j[param2] < 0) {
           var7.field_E.e(-1);
@@ -211,7 +211,7 @@ final class rj extends sp {
           }
           this.field_x[param3][var7.field_B] = var7;
         }
-        this.field_J.field_s.a(param1 ^ param1, var7);
+        this.field_J.field_s.addFirst(param1 ^ param1, var7);
         this.field_G[param3][param2] = var7;
         return;
     }
@@ -340,7 +340,7 @@ final class rj extends sp {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class rj extends sp {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class rj extends sp {
         return this.field_w.a();
     }
 
-    final synchronized sp d() {
+    final synchronized PcmStream d() {
         return null;
     }
 
@@ -448,7 +448,7 @@ final class rj extends sp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -524,7 +524,7 @@ final class rj extends sp {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -699,7 +699,7 @@ final class rj extends sp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ final class rj extends sp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -801,7 +801,7 @@ final class rj extends sp {
             this.a((byte) -8, 95);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -914,7 +914,7 @@ final class rj extends sp {
               if (var6Lifetime2 < 64) {
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -2);
               } else {
-                this.field_l[var4Lifetime2] = hi.a(this.field_l[var4Lifetime2], 1);
+                this.field_l[var4Lifetime2] = GameWorld.a(this.field_l[var4Lifetime2], 1);
               }
             }
             if (var5Lifetime2 == 65) {
@@ -922,7 +922,7 @@ final class rj extends sp {
                 this.a(0, var4Lifetime2);
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -3);
               } else {
-                this.field_l[var4Lifetime2] = hi.a(this.field_l[var4Lifetime2], 2);
+                this.field_l[var4Lifetime2] = GameWorld.a(this.field_l[var4Lifetime2], 2);
               }
             }
             if (var5Lifetime2 == 99) {
@@ -969,7 +969,7 @@ final class rj extends sp {
                 this.c(95, var4Lifetime2);
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -5);
               } else {
-                this.field_l[var4Lifetime2] = hi.a(this.field_l[var4Lifetime2], 4);
+                this.field_l[var4Lifetime2] = GameWorld.a(this.field_l[var4Lifetime2], 4);
               }
             }
             if (var5Lifetime2 == 17) {
@@ -1113,7 +1113,7 @@ final class rj extends sp {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1163,7 +1163,7 @@ final class rj extends sp {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

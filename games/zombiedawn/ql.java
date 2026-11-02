@@ -38,7 +38,7 @@ final class ql extends pm {
     }
 
     final rh a(String param0, int param1) {
-        eo var3 = null;
+        HumanFactory var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         rh stackIn_2_0 = null;
@@ -84,7 +84,7 @@ final class ql extends pm {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ql extends pm {
     final String a(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        eo var4 = null;
+        HumanFactory var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         String stackIn_15_0 = null;
@@ -159,7 +159,7 @@ final class ql extends pm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -11,7 +11,7 @@ final class am extends de {
           this.field_l = new uo(param1);
           int var3_int = 35 % ((-7 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "am.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "am.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,13 +36,13 @@ final class am extends de {
     }
 
     final static void k(int param0) {
-        if (ej.field_x != 0 - mj.field_b &&
-          ej.field_x == -mj.field_b + 250) {
+        if (LevelNavigation.field_x != 0 - mj.field_b &&
+          LevelNavigation.field_x == -mj.field_b + 250) {
         }
         if (param0 != -21215) {
           return;
         }
-        ej.field_x = ej.field_x + 1;
+        LevelNavigation.field_x = LevelNavigation.field_x + 1;
     }
 
     final static String a(String param0, int param1) {
@@ -80,7 +80,7 @@ final class am extends de {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class am extends de {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class am extends de {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

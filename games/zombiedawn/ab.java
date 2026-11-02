@@ -149,7 +149,7 @@ final class ab extends ln {
             }
           } else {
             param0[6].a();
-            bi.b(0, 0, 24, 24, 0);
+            Rasterizer.b(0, 0, 24, 24, 0);
             MouseInputHandler.a(param0, 3, 79, (byte) -17, 2);
             MouseInputHandler.a(param0, 4, 78, (byte) -17, 2);
             MouseInputHandler.a(param0, 1, 77, (byte) -17, 2);
@@ -189,7 +189,7 @@ final class ab extends ln {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class ab extends ln {
           int var5_int = 50 % ((param2 + 43) / 46);
           oh.a(param0.field_h, 0, param4, param3, param0.field_j, 31857, param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ab.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ab.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

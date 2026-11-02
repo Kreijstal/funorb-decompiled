@@ -81,7 +81,7 @@ final class ni {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class ni {
     }
 
     final static void a(byte param0) {
-        dj.field_l = new vo();
+        dj.field_l = new IntrusiveDeque();
         if (param0 != -78) {
           CharSequence[] var2 = (CharSequence[]) null;
           ni.a(40, 57, -80, (CharSequence[]) null);

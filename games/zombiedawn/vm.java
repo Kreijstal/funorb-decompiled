@@ -51,7 +51,7 @@ final class vm extends vf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class vm extends vf {
           var1 = var6;
           var17 = hg.field_b.field_k;
           for (var3 = 0; var3 < 8; var3++) {
-            var6[var3] = hi.a(var13[var3], var17[var3]);
+            var6[var3] = GameWorld.a(var13[var3], var17[var3]);
           }
           var14 = kg.field_g;
           var12 = var14;
@@ -110,7 +110,7 @@ final class vm extends vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "vm.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "vm.C(" + param0 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class vm extends vf {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class hk extends fb {
+final class hk extends WorldObject {
     private int field_I;
-    static vo field_F;
+    static IntrusiveDeque field_F;
     static vn field_H;
     private int field_O;
     private boolean field_D;
@@ -22,11 +22,11 @@ final class hk extends fb {
         int var3;
         int var4;
         int var5;
-        wk var6;
+        Camera var6;
         var5 = ZombieDawn.field_J;
         if (param0 < 95) {
-          var6 = (wk) null;
-          this.a((byte) -28, (wk) null);
+          var6 = (Camera) null;
+          this.a((byte) -28, (Camera) null);
         }
         int fieldTemp$0 = this.field_N;
         this.field_N = this.field_N - 1;
@@ -43,10 +43,10 @@ final class hk extends fb {
         if (fp.field_H >= this.field_O) {
           if (ac.field_t <= this.field_O) {
             var2 = dj.field_e.field_R.b((byte) 26);
-            while (var2 instanceof fb) {
-              if (var2 instanceof kd) {
-                var3 = ((kd) (var2)).a(true);
-                var4 = ((kd) (var2)).f(237239984);
+            while (var2 instanceof WorldObject) {
+              if (var2 instanceof Zombie) {
+                var3 = ((Zombie) (var2)).getX(true);
+                var4 = ((Zombie) (var2)).getY(237239984);
                 if (5 + this.field_E > var4 &&
                   -50 + this.field_E < var4 && (this.field_M &&
                   var3 > this.field_O &&
@@ -54,9 +54,9 @@ final class hk extends fb {
                   !this.field_M &&
                   this.field_O > var3 &&
                   -120 + this.field_O < var3)) {
-                  ((kd) (var2)).z(0);
-                  ((kd) (var2)).q((byte) -108);
-                  ((kd) (var2)).field_Gb = this.field_I * 7 >> 2;
+                  ((Zombie) (var2)).z(0);
+                  ((Zombie) (var2)).q((byte) -108);
+                  ((Zombie) (var2)).field_Gb = this.field_I * 7 >> 2;
                 }
               }
               var2 = var2.previous;
@@ -157,7 +157,7 @@ final class hk extends fb {
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -178,8 +178,8 @@ final class hk extends fb {
         int var8Lifetime1;
         var12 = ZombieDawn.field_J;
         try {
-          var3_int = param1.a(this.field_O, (byte) -75);
-          var4 = param1.a(this.field_E, 0);
+          var3_int = param1.worldToScreenX(this.field_O, (byte) -75);
+          var4 = param1.worldToScreenY(this.field_E, 0);
           if (param0 > -76) {
             field_J = (String[]) null;
           }
@@ -219,7 +219,7 @@ final class hk extends fb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class hk extends fb {
           var7[var7.length - 1] = new va(param6, param0, param4, param2, param3, param5);
           pa.field_x = var7;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -259,12 +259,12 @@ final class hk extends fb {
         if (var1 == null) {
           var1 = new uf();
         }
-        var1.a(bi.field_l, (byte) -29, bi.field_f, bi.field_b, bi.field_d, bi.field_c, bi.field_g, bi.field_a);
-        DelegatingCanvas.field_d.a(param0 ^ param0, var1);
+        var1.a(Rasterizer.field_l, (byte) -29, Rasterizer.field_f, Rasterizer.field_b, Rasterizer.field_d, Rasterizer.field_c, Rasterizer.field_g, Rasterizer.field_a);
+        DelegatingCanvas.field_d.addFirst(param0 ^ param0, var1);
     }
 
     static {
-        field_F = new vo();
+        field_F = new IntrusiveDeque();
         field_J = new String[]{"Legless", "Mostly Armless", "Braaaains", "American Consumer", "Undead End", "Re-Animator", "Bullet Catcher", "Soul Collector", "Plague Spreader", "Generation Z", "Assault on Precinct 15", "The Stench of Corruption", "Pumpkin Eater", "No Heart, No Foul", "There and Back Again", "My Feet are Killing Me", "Stamp Collecting", "The Blanks of Their Eyes", "Into the Barn", "I Know a Shortcut", "Fat Alien", "Alien Revenge", "Running Zombie", "Insider Information", "Long Live the Queen", "Zombie Plane", "Zombie Pigs", "Zombie Helix", "Zombie Throne", "London Calling", "In Through the Back Door", "They're Hiding Under the Stairs"};
         field_P = "Create a free Account";
     }

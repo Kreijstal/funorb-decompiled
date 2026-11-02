@@ -23,8 +23,8 @@ final class uh {
         int var15 = 0;
         int var16 = 0;
         int var2;
-        wk var3;
-        ej var4;
+        Camera var3;
+        LevelNavigation var4;
         int var5;
         int var6;
         int var7;
@@ -67,23 +67,23 @@ final class uh {
             if (var4.field_A.field_k < var10) {
               var10 = var4.field_A.field_k;
             }
-            var11 = var3.a(24 * var7, (byte) -66);
-            var12 = var3.a(24 * var8, 0);
-            var13 = var3.a(var10 * 24, (byte) -95);
-            var14 = var3.a(var9 * 24, 0);
-            g.$cfr$intArgs$a$3aedf8649552(var12, 99, var13, var14, var11);
+            var11 = var3.worldToScreenX(24 * var7, (byte) -66);
+            var12 = var3.worldToScreenY(24 * var8, 0);
+            var13 = var3.worldToScreenX(var10 * 24, (byte) -95);
+            var14 = var3.worldToScreenY(var9 * 24, 0);
+            Mover.$cfr$intArgs$a$3aedf8649552(var12, 99, var13, var14, var11);
             for (var15 = var8; var15 < var9; var15++) {
               for (var16 = var7; var16 < var10; var16++) {
-                var17 = var3.a(24 * var16, (byte) -66);
-                var18 = var3.a(var15 * 24, 0);
-                bi.a(var17, var18, 24, 24, this.field_l, 128);
+                var17 = var3.worldToScreenX(24 * var16, (byte) -66);
+                var18 = var3.worldToScreenY(var15 * 24, 0);
+                Rasterizer.a(var17, var18, 24, 24, this.field_l, 128);
               }
             }
             pa.a(-21189);
           } else {
             var5 = ha.field_b;
             var6 = ei.field_K;
-            bi.d(var5, var6, this.field_a, this.field_l, 128);
+            Rasterizer.d(var5, var6, this.field_a, this.field_l, 128);
           }
         }
     }
@@ -141,7 +141,7 @@ final class uh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -170,13 +170,13 @@ final class uh {
         int var2;
         cc var4;
         int var5;
-        g var6;
+        Mover var6;
         cc[] var7;
         int var2Lifetime1;
         var5 = ZombieDawn.field_J;
         if (param0 != -55) {
-          var6 = (g) null;
-          this.a(87, (g) null);
+          var6 = (Mover) null;
+          this.a(87, (Mover) null);
         }
         var7 = this.field_b;
         var2_ref_cc__ = var7;
@@ -224,18 +224,18 @@ final class uh {
           param2.b(-(param2.field_w / 2) + bd.field_d, 400);
           so.a(param1, bd.field_d - param1.field_w / 2, 400);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, int param1, boolean param2) {
         int var4;
         int var5;
-        hi stackIn_9_0 = null;
+        GameWorld stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
         boolean stackIn_10_3;
-        hi stackIn_16_0 = null;
+        GameWorld stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         boolean stackIn_17_3;
@@ -252,7 +252,7 @@ final class uh {
                 stackIn_16_1 = param0;
                 stackIn_16_2 = param1;
                 stackIn_17_3 = (param2) ? false : true;
-                ((hi) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_17_3, 120);
+                ((GameWorld) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_17_3, 120);
               } else {
                 if (var4 == 12) {
                   dj.field_e.f((byte) 9);
@@ -263,7 +263,7 @@ final class uh {
               stackIn_9_1 = 1;
               stackIn_9_2 = param0;
               stackIn_10_3 = (param2) ? false : true;
-              ((hi) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_10_3, param1);
+              ((GameWorld) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_10_3, param1);
             }
           } else {
             dj.field_e.a(false, -6355, param1, param0);
@@ -361,8 +361,8 @@ final class uh {
         }
     }
 
-    final void a(int param0, g param1) {
-        g stackIn_6_0 = null;
+    final void a(int param0, Mover param1) {
+        Mover stackIn_6_0 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_48_2 = null;
@@ -370,18 +370,18 @@ final class uh {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        kd var6 = null;
+        Zombie var6 = null;
         var5 = ZombieDawn.field_J;
         try {
           if (param0 != 67) {
             return;
           }
-          if (!(param1 instanceof kd)) {
+          if (!(param1 instanceof Zombie)) {
             stackIn_6_0 = null;
           } else {
-            stackIn_6_0 = (g) (param1);
+            stackIn_6_0 = (Mover) (param1);
           }
-          var6 = (kd) (stackIn_6_0);
+          var6 = (Zombie) (stackIn_6_0);
           var4 = this.c(98);
           if (var4 == -1) {
             return;
@@ -403,8 +403,8 @@ final class uh {
                       if (var4 != 6) {
                         if (var4 != 14) {
                           if (var4 == 7) {
-                            ((ah) (param1)).o(-6253);
-                            dj.field_e.a(0, (ah) (param1), (byte) 60, true, (kk) null);
+                            ((Human) (param1)).o(-6253);
+                            dj.field_e.a(0, (Human) (param1), (byte) 60, true, (Point) null);
                           }
                         } else {
                           var6.b(true);
@@ -454,7 +454,7 @@ final class uh {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
         }
     }
 
@@ -551,7 +551,7 @@ final class uh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

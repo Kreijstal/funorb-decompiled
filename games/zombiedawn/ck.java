@@ -5,20 +5,20 @@ import java.io.*;
 import java.util.*;
 
 final class ck extends IntrusiveNode {
-    private fn field_j;
+    private PcmSampleStream field_j;
     static vn field_i;
-    private fn field_r;
+    private PcmSampleStream field_r;
     private int field_q;
     int field_o;
     private int field_p;
     private int field_m;
     static int field_n;
     private oj[] field_s;
-    private vo field_l;
+    private IntrusiveDeque field_l;
     private boolean field_h;
     private int field_k;
 
-    final void a(wk param0, byte param1) {
+    final void a(Camera param0, byte param1) {
         int var11 = 0;
         int stackIn_7_0 = 0;
         int stackIn_19_0 = 0;
@@ -40,8 +40,8 @@ final class ck extends IntrusiveNode {
         int var6Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(this.field_k, (byte) -91);
-          var4 = param0.a(this.field_p, 0);
+          var3_int = param0.worldToScreenX(this.field_k, (byte) -91);
+          var4 = param0.worldToScreenY(this.field_p, 0);
           if (param1 != 110) {
             ck.d(-107);
           }
@@ -103,7 +103,7 @@ final class ck extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class ck extends IntrusiveNode {
         int var3_int;
         IntrusiveNode var3;
         IntrusiveNode var4;
-        fb var5;
+        WorldObject var5;
         int var6;
         int var7;
         int var8;
@@ -213,15 +213,15 @@ final class ck extends IntrusiveNode {
           if (((s) (var3)).field_i < var2) {
             var3.unlink(-27598);
             var5 = ((s) (var3)).field_h;
-            if (!(var5 instanceof kd)) {
-              if (var5 instanceof ah) {
-                ((ah) (var5)).c(this.field_k, 45, this.field_p);
+            if (!(var5 instanceof Zombie)) {
+              if (var5 instanceof Human) {
+                ((Human) (var5)).c(this.field_k, 45, this.field_p);
               } else {
                 if (var5 instanceof id &&
                   ((id) (var5)).a(true, false)) {
-                  var6 = var5.a(true) / 24;
-                  var7 = var5.f(237239984) / 24;
-                  if (var5.f(237239984) % 24 == 0) {
+                  var6 = var5.getX(true) / 24;
+                  var7 = var5.getY(237239984) / 24;
+                  if (var5.getY(237239984) % 24 == 0) {
                     var7--;
                   }
                   dj.field_e.field_H.field_A.field_f[var7][var6] = eg.a(dj.field_e.field_H.field_A.field_f[var7][var6], -33554433);
@@ -237,9 +237,9 @@ final class ck extends IntrusiveNode {
               }
             } else {
               if (this.field_o == 1) {
-                ((kd) (var5)).c(401408, this.field_p, this.field_k);
+                ((Zombie) (var5)).c(401408, this.field_p, this.field_k);
               } else {
-                ((kd) (var5)).z(0);
+                ((Zombie) (var5)).z(0);
               }
             }
           }
@@ -664,17 +664,17 @@ final class ck extends IntrusiveNode {
             this.field_s[var5_int] = new oj(tk.field_d[var4Lifetime1 * var5_int] * 6.0f, 6.0f * tk.field_g[var5_int * var4Lifetime1]);
           }
         }
-        this.field_l = new vo();
+        this.field_l = new IntrusiveDeque();
         var4Lifetime2 = this.field_m * this.field_m;
         var5 = dj.field_e.field_R.b((byte) 26);
-        while (var5 instanceof fb) {
-          if (var5 instanceof kd &&
-            9 != ((kd) (var5)).field_F ||
+        while (var5 instanceof WorldObject) {
+          if (var5 instanceof Zombie &&
+            9 != ((Zombie) (var5)).state ||
             var5 instanceof id ||
-            var5 instanceof ah &&
-            ((ah) (var5)).field_F != 2) {
-            var6 = ((fb) (var5)).a(true);
-            var7 = ((fb) (var5)).f(237239984);
+            var5 instanceof Human &&
+            ((Human) (var5)).state != 2) {
+            var6 = ((WorldObject) (var5)).getX(true);
+            var7 = ((WorldObject) (var5)).getY(237239984);
             var8 = -var6 + this.field_k;
             var9 = this.field_p - var7;
             var10 = var8 * var8 + var9 * var9;
@@ -703,7 +703,7 @@ final class ck extends IntrusiveNode {
               var11 = stackIn_33_0 & stackIn_35_1;
             }
             if (var11 != 0) {
-              this.field_l.a(0, new s((fb) (var5), var10));
+              this.field_l.addFirst(0, new s((WorldObject) (var5), var10));
             }
           }
           var5 = var5.previous;

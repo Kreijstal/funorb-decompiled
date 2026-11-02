@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi {
+final class Rasterizer {
     static int[] field_c;
     static int[] field_j;
     private static int[] field_i;
@@ -39,7 +39,7 @@ final class bi {
         int var22Lifetime2;
         int var22Lifetime3;
         if (param4 == 0) {
-          bi.c(param0, param1, param2, param3, param5);
+          Rasterizer.c(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -114,10 +114,10 @@ final class bi {
                   field_c[var17 + var19] = param5;
                 }
               }
-              bi.e(param0, param1 + var18, param3 - var18 - var18, param5);
-              bi.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-              bi.b(param0 + var18, param1, param2 - var18 - var18, param5);
-              bi.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+              Rasterizer.e(param0, param1 + var18, param3 - var18 - var18, param5);
+              Rasterizer.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+              Rasterizer.b(param0 + var18, param1, param2 - var18 - var18, param5);
+              Rasterizer.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
               while (true) {
                 incrementValue$1 = var19;
                 var19++;
@@ -221,22 +221,22 @@ final class bi {
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bi.a(field_c, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
-        bi.a(field_c, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
+        Rasterizer.a(field_c, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
+        Rasterizer.a(field_c, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
-        bi.b(param0, param1, param2, param4);
-        bi.b(param0, param1 + param3 - 1, param2, param4);
-        bi.e(param0, param1, param3, param4);
-        bi.e(param0 + param2 - 1, param1, param3, param4);
+        Rasterizer.b(param0, param1, param2, param4);
+        Rasterizer.b(param0, param1 + param3 - 1, param2, param4);
+        Rasterizer.e(param0, param1, param3, param4);
+        Rasterizer.e(param0 + param2 - 1, param1, param3, param4);
     }
 
     final static void a(int[] param0, int param1, int param2) {
         field_c = param0;
         field_f = param1;
         field_a = param2;
-        bi.f(0, 0, param1, param2);
+        Rasterizer.f(0, 0, param1, param2);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -282,11 +282,11 @@ final class bi {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          bi.g(param0, param1, param2, param3, param4, param5);
+          Rasterizer.g(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          bi.a(param0, param1, param2, param3, param5, param6);
+          Rasterizer.a(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -419,7 +419,7 @@ final class bi {
         field_l = 0;
         field_b = field_f;
         field_d = field_a;
-        bi.b();
+        Rasterizer.b();
     }
 
     final static void d(int param0, int param1, int param2, int param3) {
@@ -433,7 +433,7 @@ final class bi {
         int var9;
         int var10;
         if (param2 == 0) {
-          bi.a(param0, param1, param3);
+          Rasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -617,7 +617,7 @@ final class bi {
         field_l = param1;
         field_b = param2;
         field_d = param3;
-        bi.b();
+        Rasterizer.b();
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -838,15 +838,15 @@ final class bi {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_f;
         int var23 = field_f + var6 - var7;
-        bi.a(0, 0, 0, 0, 0, var15, var5, var22, field_c, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        Rasterizer.a(0, 0, 0, 0, 0, var15, var5, var22, field_c, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bi.a(param0, param1, param2, param4, param5);
-        bi.a(param0, param1 + param3 - 1, param2, param4, param5);
+        Rasterizer.a(param0, param1, param2, param4, param5);
+        Rasterizer.a(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-          bi.g(param0, param1 + 1, param3 - 2, param4, param5);
-          bi.g(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+          Rasterizer.g(param0, param1 + 1, param3 - 2, param4, param5);
+          Rasterizer.g(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
           return;
         }
     }
@@ -876,7 +876,7 @@ final class bi {
         if (field_d > param3) {
           field_d = param3;
         }
-        bi.b();
+        Rasterizer.b();
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -1129,17 +1129,17 @@ final class bi {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            bi.b(param0 + param2, param1, -param2 + 1, param4);
+            Rasterizer.b(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            bi.b(param0, param1, param2 + 1, param4);
+            Rasterizer.b(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            bi.e(param0, param1 + param3, -param3 + 1, param4);
+            Rasterizer.e(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            bi.e(param0, param1, param3 + 1, param4);
+            Rasterizer.e(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -1235,7 +1235,7 @@ final class bi {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          bi.b(param0, param1, param2, param3, param5);
+          Rasterizer.b(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -1437,7 +1437,7 @@ final class bi {
           return;
         }
         if (param4 == 256) {
-          bi.g(param0, param1, param2, param3);
+          Rasterizer.g(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1610,17 +1610,17 @@ final class bi {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            bi.a(param0 + param2, param1, -param2 + 1, param4, param5);
+            Rasterizer.a(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            bi.a(param0, param1, param2 + 1, param4, param5);
+            Rasterizer.a(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            bi.g(param0, param1 + param3, -param3 + 1, param4, param5);
+            Rasterizer.g(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            bi.g(param0, param1, param3 + 1, param4, param5);
+            Rasterizer.g(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -1727,7 +1727,7 @@ final class bi {
         field_l = param0[1];
         field_b = param0[2];
         field_d = param0[3];
-        bi.b();
+        Rasterizer.b();
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4) {
@@ -1735,8 +1735,8 @@ final class bi {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          bi.a(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          bi.g(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          Rasterizer.a(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          Rasterizer.g(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -1986,7 +1986,7 @@ final class bi {
         }
         int var4 = field_f - param2;
         int var5 = param0 + param1 * field_f;
-        bi.a(var5, field_c, 0, param2, -param3, var4);
+        Rasterizer.a(var5, field_c, 0, param2, -param3, var4);
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
@@ -2086,7 +2086,7 @@ final class bi {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          bi.a(param0, param1, param3);
+          Rasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {

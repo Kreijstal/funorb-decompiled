@@ -56,13 +56,13 @@ final class ub {
         try {
           b.field_q = param0;
           qn.field_g.a();
-          bi.d();
+          Rasterizer.d();
           bd.field_i[qd.field_e][b.field_q].b(10, 10);
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             so.a(16777045);
           }
           bd.field_i[qd.field_e][b.field_q].d(10, 10, 0);
-          bi.h(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
+          Rasterizer.h(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
           cn.field_f.b(-115);
           rk.field_a = 3 * sn.field_f.length >> 2;
           if (param1 >= -25) {
@@ -72,7 +72,7 @@ final class ub {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "ub.L(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "ub.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -132,20 +132,20 @@ final class ub {
         int var2 = -1;
         if (this.field_p == 1.0f) {
           si.field_Ub[5].a();
-          bi.d();
-          this.field_o.b(this.h(31214), -5 + bi.field_f, this.field_o.field_I + 5, 0, var2);
+          Rasterizer.d();
+          this.field_o.b(this.h(31214), -5 + Rasterizer.field_f, this.field_o.field_I + 5, 0, var2);
         } else {
           pl.field_p.a();
-          bi.d();
-          this.field_o.b(this.h(31214), -5 + bi.field_f, 5 + this.field_o.field_I, 2, var2);
-          var3 = (int)(this.field_p * (float)bi.field_f);
-          var4 = (int)((float)bi.field_a * this.field_p);
+          Rasterizer.d();
+          this.field_o.b(this.h(31214), -5 + Rasterizer.field_f, 5 + this.field_o.field_I, 2, var2);
+          var3 = (int)(this.field_p * (float)Rasterizer.field_f);
+          var4 = (int)((float)Rasterizer.field_a * this.field_p);
           si.field_Ub[5].a();
-          bi.d();
-          pl.field_p.a(bi.field_f - var3, 0, var3, var4);
+          Rasterizer.d();
+          pl.field_p.a(Rasterizer.field_f - var3, 0, var3, var4);
         }
         vh.field_e[5].a();
-        bi.d();
+        Rasterizer.d();
         si.field_Ub[5].h(0, 0, 16777215);
         oc.a((byte) 50);
         si.field_Ub[5].h(0, param0, 0);
@@ -158,7 +158,7 @@ final class ub {
         int var4;
         var4 = ZombieDawn.field_J;
         si.field_Ub[2].a();
-        bi.d();
+        Rasterizer.d();
         if (this.field_s) {
           var2 = dj.field_e.field_hb;
         } else {
@@ -186,7 +186,7 @@ final class ub {
           this.field_o.c(Integer.toString(var2), 20, this.field_o.field_I * 2 - 3, 2, 65793);
         }
         vh.field_e[2].a();
-        bi.d();
+        Rasterizer.d();
         si.field_Ub[2].h(0, 0, 16777215);
         oc.a((byte) -65);
         if (param0 >= -20) {
@@ -197,10 +197,10 @@ final class ub {
 
     private final void d(int param0, int param1) {
         si.field_Ub[4].a();
-        bi.d();
-        this.field_o.b(this.b(param0 - 73, param1), -5 + bi.field_f, 5 + this.field_o.field_I, param0, -1);
+        Rasterizer.d();
+        this.field_o.b(this.b(param0 - 73, param1), -5 + Rasterizer.field_f, 5 + this.field_o.field_I, param0, -1);
         vh.field_e[4].a();
-        bi.d();
+        Rasterizer.d();
         si.field_Ub[4].h(0, 0, 16777215);
         oc.a((byte) -78);
         si.field_Ub[4].h(0, 0, 0);
@@ -213,15 +213,15 @@ final class ub {
         this.field_k = 0;
         var2 = dj.field_e.field_R.b((byte) 26);
         k.field_t = 0;
-        while (var2 instanceof fb) {
-          if (var2 instanceof kd &&
-            ((kd) (var2)).i((byte) -126)) {
+        while (var2 instanceof WorldObject) {
+          if (var2 instanceof Zombie &&
+            ((Zombie) (var2)).i((byte) -126)) {
             this.field_k = this.field_k + 1;
           } else {
-            if (var2 instanceof ah && (!this.field_s ||
-              28 == ((ah) (var2)).field_t) && (((ah) (var2)).field_F != 18 &&
-              19 != ((ah) (var2)).field_t &&
-              !((ah) (var2)).field_J)) {
+            if (var2 instanceof Human && (!this.field_s ||
+              28 == ((Human) (var2)).field_t) && (((Human) (var2)).state != 18 &&
+              19 != ((Human) (var2)).field_t &&
+              !((Human) (var2)).field_J)) {
               k.field_t = k.field_t + 1;
             }
           }
@@ -304,9 +304,9 @@ final class ub {
         int var2Lifetime3Lifetime3;
         if (this.field_i) {
           var2 = id.field_M + this.field_n;
-          bi.b(0, 0, bd.field_e, var2, 0);
+          Rasterizer.b(0, 0, bd.field_e, var2, 0);
           var2++;
-          bi.b(0, -var2 + nh.field_P, bd.field_e, var2, 0);
+          Rasterizer.b(0, -var2 + nh.field_P, bd.field_e, var2, 0);
           return;
         }
         if (this.field_c) {
@@ -393,18 +393,18 @@ final class ub {
 
     private final void f(int param0) {
         ki.a((byte) -103, si.field_Ub[param0]);
-        bi.d();
+        Rasterizer.d();
         String var2 = "";
         if (this.field_e) {
           var2 = s.a(1938762664, li.field_f, new String[]{Integer.toString(this.field_b), Integer.toString(this.field_k + this.field_b)});
-          this.field_o.a(var2, bi.field_f / 2, 5 + this.field_o.field_I, 2, 65793);
+          this.field_o.a(var2, Rasterizer.field_f / 2, 5 + this.field_o.field_I, 2, 65793);
         } else {
           var2 = kn.field_I + " " + Integer.toString(dj.field_e.field_nb);
-          bj.field_q.a(var2, bi.field_f / 2, 5 + this.field_o.field_I, 16777088, 65793);
+          bj.field_q.a(var2, Rasterizer.field_f / 2, 5 + this.field_o.field_I, 16777088, 65793);
         }
         pa.a(-21189);
         ki.a((byte) -93, vh.field_e[6]);
-        bi.d();
+        Rasterizer.d();
         si.field_Ub[6].h(0, 0, 16777215);
         oc.a((byte) -104);
         si.field_Ub[6].h(0, 0, 0);
@@ -413,10 +413,10 @@ final class ub {
 
     private final void e(int param0) {
         si.field_Ub[3].a();
-        bi.d();
-        this.field_o.b(Integer.toString(this.field_k), -5 + bi.field_f, this.field_o.field_I + 5, 1, 65793);
+        Rasterizer.d();
+        this.field_o.b(Integer.toString(this.field_k), -5 + Rasterizer.field_f, this.field_o.field_I + 5, 1, 65793);
         vh.field_e[3].a();
-        bi.d();
+        Rasterizer.d();
         si.field_Ub[3].h(0, 0, 16777215);
         oc.a((byte) -83);
         si.field_Ub[3].h(param0, 0, 0);

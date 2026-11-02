@@ -21,7 +21,7 @@ class bn extends ll {
             field_c = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "bn.J(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "bn.J(" + param0 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ class bn extends ll {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_unable", 0);
                 if (var2 != null) {
-                  wk.field_z = gg.a(var2, (byte) 56);
+                  Camera.field_z = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_ineligible", 0);
                 if (var2 != null) {
@@ -1070,7 +1070,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("pleaselogin_member", 0);
                 if (null != var2) {
-                  hi.field_Y = gg.a(var2, (byte) 56);
+                  GameWorld.field_Y = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("invaliduserorpass", param0 ^ 32693);
                 if (var2 != null) {
@@ -1596,7 +1596,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_email_confirm_tooltip", 0);
                 if (null != var2) {
-                  hi.field_pb = gg.a(var2, (byte) 56);
+                  GameWorld.field_pb = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_age_tooltip", 0);
                 if (var2 != null) {
@@ -1660,7 +1660,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_alert_passrepeated", 0);
                 if (var2 != null) {
-                  eo.field_i = gg.a(var2, (byte) 56);
+                  HumanFactory.field_i = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_alert_passlength", 0);
                 if (var2 != null) {
@@ -2042,7 +2042,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("resumegame", param0 - 32693);
                 if (var2 != null) {
-                  sh.field_c = gg.a(var2, (byte) 56);
+                  ExceptionWrapper.field_c = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("resumetutorial", 0);
                 if (null != var2) {
@@ -2078,7 +2078,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("ok", 0);
                 if (var2 != null) {
-                  on.field_n = gg.a(var2, (byte) 56);
+                  TileMap.field_n = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("on", param0 ^ 32693);
                 if (var2 != null) {
@@ -2330,7 +2330,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("orbpoints_colon", 0);
                 if (var2 != null) {
-                  eo.field_j = gg.a(var2, (byte) 56);
+                  HumanFactory.field_j = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("orbcoins_colon", 0);
                 if (null != var2) {
@@ -3097,7 +3097,7 @@ class bn extends ll {
                   } else {
                     stackIn_2596_2 = "{...}";
                   }
-                  throw sh.a((Throwable) ((Object) stackIn_2595_0), ((StringBuilder) (Object) stackIn_2595_1).append(stackIn_2596_2).append(')').toString());
+                  throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_2595_0), ((StringBuilder) (Object) stackIn_2595_1).append(stackIn_2596_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameApplet.field_f;
@@ -3133,7 +3133,7 @@ class bn extends ll {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -3180,7 +3180,7 @@ class bn extends ll {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3197,7 +3197,7 @@ class bn extends ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "bn.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "bn.C(" + param0 + ')');
         }
     }
 
@@ -3221,7 +3221,7 @@ class bn extends ll {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -3258,7 +3258,7 @@ class bn extends ll {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw sh.a((Throwable) ((Object) var1_ref2), "bn.H(" + param0 + ')');
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref2), "bn.H(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

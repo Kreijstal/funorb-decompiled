@@ -5,8 +5,8 @@ import java.io.*;
 
 final class dn extends pa {
     static wl field_I;
-    private vo field_H;
-    static vo field_D;
+    private IntrusiveDeque field_H;
+    static IntrusiveDeque field_D;
     static String field_G;
     static vn field_E;
     static String field_J;
@@ -262,7 +262,7 @@ final class dn extends pa {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -299,16 +299,16 @@ final class dn extends pa {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = j.field_a[eg.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new vn(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var21);
+            var1[var2] = new vn(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var21);
           } else {
             var22 = ka.field_f[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = hi.a(j.field_a[eg.a((int) var20[var7], 255)], eg.a((int) var22[var7], 255) << 24);
+              var6[var7] = GameWorld.a(j.field_a[eg.a((int) var20[var7], 255)], eg.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (vn) ((Object) new cd(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var16));
+            var1[var2] = (vn) ((Object) new cd(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var16));
           }
         }
         no.f((byte) -114);
@@ -357,11 +357,11 @@ final class dn extends pa {
             throw new IllegalArgumentException();
           }
           var3 = (ei) (param0);
-          this.field_H.a(var3, -112);
+          this.field_H.addLast(var3, -112);
           var3.field_H = param1 ? true : false;
           var3.a((byte) 107, (ga) (this));
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "dn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -405,7 +405,7 @@ final class dn extends pa {
 
     public dn() {
         super(0, 0, pk.field_N, b.field_l, (io) null, (sk) null);
-        this.field_H = new vo();
+        this.field_H = new IntrusiveDeque();
     }
 
     final static int a(int param0, boolean param1, int param2) {
@@ -449,7 +449,7 @@ final class dn extends pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "dn.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "dn.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -472,7 +472,7 @@ final class dn extends pa {
     static {
         field_I = new wl();
         field_G = "Names cannot start or end with space or underscore";
-        field_D = new vo();
+        field_D = new IntrusiveDeque();
         field_E = new vn(48, 48);
         field_J = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }

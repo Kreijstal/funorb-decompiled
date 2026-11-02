@@ -5,7 +5,7 @@ import java.io.*;
 
 final class s extends IntrusiveNode {
     int field_i;
-    fb field_h;
+    WorldObject field_h;
     static vn field_j;
 
     final static void a(long param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, PlatformTaskDispatcher param10, String param11, int param12, int param13) {
@@ -61,7 +61,7 @@ final class s extends IntrusiveNode {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,7 +70,7 @@ final class s extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, wk param1, ub param2) {
+    final static void a(byte param0, Camera param1, ub param2) {
         int var5 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_53_0 = null;
@@ -82,7 +82,7 @@ final class s extends IntrusiveNode {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        kd var6 = null;
+        Zombie var6 = null;
         qh var7 = null;
         int var8 = 0;
         var8 = ZombieDawn.field_J;
@@ -95,11 +95,11 @@ final class s extends IntrusiveNode {
             lg.a(2, (byte) 100);
           }
           if (-1.0f == oc.field_c) {
-            oc.field_c = (float)param1.field_c;
+            oc.field_c = (float)param1.y;
           }
           if (oc.field_c > 240.0f) {
             oc.field_c = oc.field_c - i.field_V;
-            param1.field_c = (int)oc.field_c;
+            param1.y = (int)oc.field_c;
           }
           if (ac.field_m == 1428) {
             if (qj.field_f != null &&
@@ -131,11 +131,11 @@ final class s extends IntrusiveNode {
                 if (ac.field_m % 2 == 0) {
                   param2.i(16777215);
                   if ((ac.field_m - 850) / 2 == 100) {
-                    ha.field_d.field_x = -50 + ha.field_d.f(237239984) << 16;
+                    ha.field_d.field_x = -50 + ha.field_d.getY(237239984) << 16;
                     for (var5 = 0; var5 < 5; var5++) {
-                      var6 = dj.field_e.a(10, (byte) 124, 90, 340, 380);
+                      var6 = dj.field_e.spawnZombie(10, (byte) 124, 90, 340, 380);
                       var7 = new qh();
-                      var7.a(0, new kk(var6.a(true), var6.f(237239984) - 100));
+                      var7.addFirst(0, new Point(var6.getX(true), var6.getY(237239984) - 100));
                       var6.a(var7, true);
                     }
                   }
@@ -192,7 +192,7 @@ final class s extends IntrusiveNode {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -313,16 +313,16 @@ final class s extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    s(fb param0, int param1) {
+    s(WorldObject param0, int param1) {
         try {
           this.field_i = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

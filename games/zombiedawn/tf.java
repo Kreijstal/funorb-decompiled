@@ -86,7 +86,7 @@ final class tf {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -117,16 +117,16 @@ final class tf {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         try {
-          kd.field_nb[0] = sg.field_jb.d(16711680);
-          kd.field_nb[1] = sg.field_jb.d(7829248);
-          kd.field_nb[2] = sg.field_jb.d(16776960);
-          kd.field_nb[3] = sg.field_jb.d(30464);
-          kd.field_nb[4] = sg.field_jb.d(65280);
-          kd.field_nb[5] = sg.field_jb.d(30583);
-          kd.field_nb[6] = sg.field_jb.d(65535);
-          kd.field_nb[7] = sg.field_jb.d(119);
-          kd.field_nb[8] = sg.field_jb.d(255);
-          kd.field_nb[9] = sg.field_jb.d(16745473);
+          Zombie.field_nb[0] = sg.field_jb.d(16711680);
+          Zombie.field_nb[1] = sg.field_jb.d(7829248);
+          Zombie.field_nb[2] = sg.field_jb.d(16776960);
+          Zombie.field_nb[3] = sg.field_jb.d(30464);
+          Zombie.field_nb[4] = sg.field_jb.d(65280);
+          Zombie.field_nb[5] = sg.field_jb.d(30583);
+          Zombie.field_nb[6] = sg.field_jb.d(65535);
+          Zombie.field_nb[7] = sg.field_jb.d(119);
+          Zombie.field_nb[8] = sg.field_jb.d(255);
+          Zombie.field_nb[9] = sg.field_jb.d(16745473);
           hm.field_L = sg.field_jb.d(16777215);
           t.field_c = sg.field_jb.d(6710886);
           var6 = sg.field_jb.field_O[0];
@@ -154,7 +154,7 @@ final class tf {
           rf.a(0, 9, 16777215, 14540253, 76);
           rf.a(4096, 10, 16384, 5481009, param0 ^ 29);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tf.E(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tf.E(" + param0 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class tf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

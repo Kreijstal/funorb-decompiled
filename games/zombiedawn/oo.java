@@ -12,7 +12,7 @@ final class oo extends id {
     static String field_T;
     private boolean[][] field_V;
 
-    private final void a(wk param0, boolean param1) {
+    private final void a(Camera param0, boolean param1) {
         int var10 = 0;
         int var12 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -33,8 +33,8 @@ final class oo extends id {
         int var15 = 0;
         var15 = ZombieDawn.field_J;
         try {
-          var3_int = -72 + param0.a(this.a(param1), (byte) -76);
-          var4 = param0.a(this.f(237239984), 0) - 24 * this.field_Q;
+          var3_int = -72 + param0.worldToScreenX(this.getX(param1), (byte) -76);
+          var4 = param0.worldToScreenY(this.getY(237239984), 0) - 24 * this.field_Q;
           var5 = -1 + -var4 / 24;
           if (this.field_Q - 2 > var5) {
             var5 = -2 + this.field_Q;
@@ -73,7 +73,7 @@ final class oo extends id {
             for (var12 = var6; var8 >= var12; var12++) {
               var13 = this.field_X[var10][var12];
               if (var13 != 0) {
-                var14 = kd.field_Fb[6];
+                var14 = Zombie.field_Fb[6];
                 if (!this.field_V[var10][var12]) {
                   var14[-1 + var13].b(var11, var9);
                 } else {
@@ -96,11 +96,11 @@ final class oo extends id {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -137,7 +137,7 @@ final class oo extends id {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -275,15 +275,15 @@ final class oo extends id {
         int[][] discarded$0 = this.b((byte) 123, this.field_Q);
     }
 
-    final void a(wk param0, byte param1) {
+    final void a(Camera param0, byte param1) {
         int var7 = 0;
         int var3_int = nh.field_R[0].field_w;
         int var4 = nh.field_R[0].field_t;
-        int var5 = -(var3_int / 2) + param0.a(this.a(true), (byte) -77);
+        int var5 = -(var3_int / 2) + param0.worldToScreenX(this.getX(true), (byte) -77);
         if (param1 != 65) {
           this.field_H = -94;
         }
-        int var6 = 16 + param0.a(this.f(param1 ^ 237240049), param1 ^ 65) - var4;
+        int var6 = 16 + param0.worldToScreenY(this.getY(param1 ^ 237240049), param1 ^ 65) - var4;
         if (var5 < -var3_int ||
           -var4 > var6 ||
           var5 > bd.field_e ||
@@ -294,7 +294,7 @@ final class oo extends id {
           var7 = 128;
           so.b(nh.field_R[1], 12 + var5, 6 + var6, var7);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "oo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class oo extends id {
         field_U = null;
     }
 
-    private final void a(wk param0, int param1) {
+    private final void a(Camera param0, int param1) {
         int var10 = 0;
         int var12 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -331,8 +331,8 @@ final class oo extends id {
           if (param1 < 32) {
             return;
           }
-          var3_int = -72 + (param0.a(this.a(true), (byte) -72) + 40);
-          var4 = 40 + (param0.a(this.f(237239984), 0) - 24 * this.field_Q);
+          var3_int = -72 + (param0.worldToScreenX(this.getX(true), (byte) -72) + 40);
+          var4 = 40 + (param0.worldToScreenY(this.getY(237239984), 0) - 24 * this.field_Q);
           var5 = -1 + -var4 / 24;
           if (var5 >= 0) {
             if (var5 >= this.field_Q) {
@@ -373,7 +373,7 @@ final class oo extends id {
               for (var12 = var6; var8 >= var12; var12++) {
                 var13 = this.field_X[var10][var12];
                 if (0 != var13) {
-                  var14 = kd.field_Fb[6];
+                  var14 = Zombie.field_Fb[6];
                   if (!this.field_V[var10][var12]) {
                     var14[-1 + var13].b(var11, var9);
                   } else {
@@ -399,7 +399,7 @@ final class oo extends id {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 

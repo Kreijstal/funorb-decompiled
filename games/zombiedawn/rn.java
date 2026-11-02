@@ -56,7 +56,7 @@ final class rn {
           bo.field_o = new int[t.field_h];
           var17.field_j = -7 + (param0.length - t.field_h * 8);
           gl.field_F = var17.f(2);
-          kd.field_pb = var17.f(2);
+          Zombie.field_pb = var17.f(2);
           var3 = (255 & var17.d((byte) -125)) + 1;
           for (var4 = 0; var4 < t.field_h; var4++) {
             sl.field_d[var4] = var16.f(2);
@@ -147,7 +147,7 @@ final class rn {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 

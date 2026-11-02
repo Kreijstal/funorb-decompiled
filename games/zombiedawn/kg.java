@@ -58,7 +58,7 @@ final class kg extends pm {
             return stackIn_11_0;
           }
           if (tb.a(-10723, var5)) {
-            stackIn_14_0 = eo.field_i;
+            stackIn_14_0 = HumanFactory.field_i;
             return stackIn_14_0;
           }
           if (this.b(param0, 1)) {
@@ -93,7 +93,7 @@ final class kg extends pm {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class kg extends pm {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class kg extends pm {
           this.field_h = param1;
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class kg extends pm {
             stackIn_5_0 = (rh) null;
             return stackIn_5_0;
           }
-          if (!on.a((byte) -23, var4, var3)) {
+          if (!TileMap.a((byte) -23, var4, var3)) {
             stackIn_8_0 = MouseWheelInput.field_b;
             return stackIn_8_0;
           }
@@ -200,7 +200,7 @@ final class kg extends pm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
