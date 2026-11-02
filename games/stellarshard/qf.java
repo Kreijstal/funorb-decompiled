@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qf implements Runnable {
-    volatile ba[] field_e;
+    volatile AudioMixer[] field_e;
     volatile boolean field_b;
     static ql field_d;
     PlatformTaskDispatcher field_h;
@@ -32,7 +32,7 @@ final class qf implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        ba var2 = null;
+        AudioMixer var2 = null;
         int var4 = stellarshard.field_B;
         this.field_c = true;
         try {
@@ -57,7 +57,7 @@ final class qf implements Runnable {
     }
 
     qf() {
-        this.field_e = new ba[2];
+        this.field_e = new AudioMixer[2];
         this.field_b = false;
         this.field_c = false;
     }

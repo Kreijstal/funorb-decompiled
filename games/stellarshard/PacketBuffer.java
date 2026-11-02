@@ -7,7 +7,7 @@ class PacketBuffer extends IntrusiveNode {
     static pf field_n;
     int position;
     static String field_l;
-    static ba field_m;
+    static AudioMixer field_m;
     static long field_o;
     byte[] payload;
 

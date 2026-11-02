@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ba {
+class AudioMixer {
     private boolean field_j;
     static boolean field_d;
     int[] field_f;
@@ -55,7 +55,7 @@ class ba {
         if (this.field_r != null &&
           this.field_k <= 0) {
           this.field_k = this.field_k + (field_m >> 4);
-          ba.b(this.field_r);
+          AudioMixer.b(this.field_r);
           this.a(this.field_r, this.field_r.a());
           var4 = 0;
           var5 = 255;
@@ -142,7 +142,7 @@ class ba {
           this.field_k = 0;
         }
         if (this.field_r != null) {
-          this.field_r.b(param0, 0, param1);
+          this.field_r.mix(param0, 0, param1);
         }
         this.field_n = ih.a((byte) -98);
     }
@@ -154,7 +154,7 @@ class ba {
         }
         PcmStream var1 = param0.d();
         while (var1 != null) {
-          ba.b(var1);
+          AudioMixer.b(var1);
           var1 = param0.c();
         }
     }
@@ -167,7 +167,7 @@ class ba {
         field_p = null;
     }
 
-    final static ba a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioMixer a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -195,14 +195,14 @@ class ba {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((ba) ((Object) stackIn_10_0)).field_f = new int[stackIn_10_1 * stackIn_11_2];
-              ((ba) ((Object) var4)).field_i = param3;
-              ((ba) ((Object) var4)).a(param1);
-              ((ba) ((Object) var4)).field_a = (param3 & -1024) + 1024;
-              if (((ba) ((Object) var4)).field_a > 16384) {
-                ((ba) ((Object) var4)).field_a = 16384;
+              ((AudioMixer) ((Object) stackIn_10_0)).field_f = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioMixer) ((Object) var4)).field_i = param3;
+              ((AudioMixer) ((Object) var4)).a(param1);
+              ((AudioMixer) ((Object) var4)).field_a = (param3 & -1024) + 1024;
+              if (((AudioMixer) ((Object) var4)).field_a > 16384) {
+                ((AudioMixer) ((Object) var4)).field_a = 16384;
               }
-              ((ba) ((Object) var4)).b(((ba) ((Object) var4)).field_a);
+              ((AudioMixer) ((Object) var4)).b(((AudioMixer) ((Object) var4)).field_a);
               if (field_l > 0 &&
                 field_p == null) {
                 field_p = new qf();
@@ -213,14 +213,14 @@ class ba {
                 if (field_p.field_e[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_p.field_e[param2] = (ba) ((Object) var5);
+                field_p.field_e[param2] = (AudioMixer) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (ba) ((Object) stackIn_21_0);
+              return (AudioMixer) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new ba();
+              return new AudioMixer();
             }
           }
           throw new IllegalArgumentException();
@@ -361,7 +361,7 @@ class ba {
           this.field_k = 0;
         }
         if (this.field_r != null) {
-          this.field_r.a(param0);
+          this.field_r.skip(param0);
           return;
         }
     }
@@ -401,7 +401,7 @@ class ba {
         return this.field_a;
     }
 
-    ba() {
+    AudioMixer() {
         this.field_j = false;
         this.field_c = 32;
         this.field_n = ih.a((byte) -98);

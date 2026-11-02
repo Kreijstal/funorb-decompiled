@@ -7,7 +7,7 @@ final class hl extends PcmStream {
     private int field_q;
     private int field_p;
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mix(int[] param0, int param1, int param2) {
         int var4 = 0;
         p var5 = null;
         int var7 = 0;
@@ -48,7 +48,7 @@ final class hl extends PcmStream {
     private final void d(int param0) {
         PcmStream var2 = (PcmStream) (this.field_o.b(-92));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skip(param0);
           var2 = (PcmStream) (this.field_o.b((byte) -57));
         }
     }
@@ -89,7 +89,7 @@ final class hl extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2 = 0;
         p var3 = null;
         int var5 = 0;

@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
       "sources": {
         "files": 301,
-        "sha256": "6df1f39a2c62210a04fd746df610c97fcda89992969dcfa80613662ff25a99cf"
+        "sha256": "65735390999736f5d2c2ddd502fb22207727ce7377b615bd2b9ebd30dfa56346"
       },
       "dictionary": {
         "path": "decompilation/stellarshard-naming.json",
-        "sha256": "591ac71d48502041d6d85bc5a2f4d407c658a6b65946e3a0f8e8e56e3e956954"
+        "sha256": "f322005eba5af34fe848736addf0e413e1465796e99c3d42255e6aaf63b7652b"
       },
       "readingGuide": {
         "path": "games/stellarshard/README.md",
-        "sha256": "44d95e0494a2094005353a02fb5d3d452f0de3946475ed8c2b2cbd2283745ced"
+        "sha256": "29183401d541c7cabc0eb5e8d626ce5c44029e0090b7c96792124001a4c89a16"
       },
-      "rulesSha256": "bd069e339f6b2836e1708101daf20075c499654d1c352a4f3dbf6e6e21a1fd6c",
+      "rulesSha256": "1b8d10267c939b24240dce3121f66fdf4b720721f24fad4486321279f1ed6315",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12133,7 +12133,7 @@
         },
         "publishedSources": {
           "files": 301,
-          "sha256": "6df1f39a2c62210a04fd746df610c97fcda89992969dcfa80613662ff25a99cf"
+          "sha256": "65735390999736f5d2c2ddd502fb22207727ce7377b615bd2b9ebd30dfa56346"
         }
       },
       "sumoblitz": {

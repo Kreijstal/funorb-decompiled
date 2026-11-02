@@ -9,7 +9,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ba.a([II)V#0"
+      "renamedSymbol": "B:AudioMixer.a([II)V#0"
     },
     {
       "symbol": "B:bf.a(IC)B#0",
@@ -282,6 +282,14 @@
       "evidence": "Bucket array of IntrusiveNode implementing Iterable.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IterableNodeHashTable"
+    },
+    {
+      "symbol": "C:ba",
+      "originalName": "ba",
+      "to": "AudioMixer",
+      "evidence": "Owns arrays of PcmStream and mixes them into an int buffer; the SourceDataLine output extends it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AudioMixer"
     },
     {
       "symbol": "C:bc",
@@ -732,6 +740,22 @@
       "renamedSymbol": "F:ClientException.context:Ljava/lang/String;"
     },
     {
+      "symbol": "M:gd.a(I)V",
+      "originalName": "a",
+      "to": "skip",
+      "evidence": "Abstract advance by a sample count, called instead of mixing while the stream is inactive. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.skip(I)V"
+    },
+    {
+      "symbol": "M:gd.b([III)V",
+      "originalName": "b",
+      "to": "mix",
+      "evidence": "Abstract fill of an int sample range; PcmSampleStream implements it as the resampling loop. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.mix([III)V"
+    },
+    {
       "symbol": "M:gg.b(I)Z",
       "originalName": "b",
       "to": "isLinked",
@@ -746,6 +770,22 @@
       "evidence": "Splices the node out of its neighbours and clears both links.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveNode.unlink(I)V"
+    },
+    {
+      "symbol": "M:hl.a(I)V",
+      "originalName": "a",
+      "to": "skip",
+      "evidence": "Abstract advance by a sample count, called instead of mixing while the stream is inactive. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hl.skip(I)V"
+    },
+    {
+      "symbol": "M:hl.b([III)V",
+      "originalName": "b",
+      "to": "mix",
+      "evidence": "Abstract fill of an int sample range; PcmSampleStream implements it as the resampling loop. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hl.mix([III)V"
     },
     {
       "symbol": "M:ka.a(ZI)V",
@@ -802,6 +842,22 @@
       "evidence": "Returns the byte at the cursor and advances by one.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PacketBuffer.readByte(I)B"
+    },
+    {
+      "symbol": "M:kd.a(I)V",
+      "originalName": "a",
+      "to": "skip",
+      "evidence": "Abstract advance by a sample count, called instead of mixing while the stream is inactive.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.skip(I)V"
+    },
+    {
+      "symbol": "M:kd.b([III)V",
+      "originalName": "b",
+      "to": "mix",
+      "evidence": "Abstract fill of an int sample range; PcmSampleStream implements it as the resampling loop.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.mix([III)V"
     },
     {
       "symbol": "M:oj.a(B)V",
@@ -879,7 +935,7 @@
   "symbols": [
     {
       "symbol": "B:ba.a([II)V#0",
-      "renamedSymbol": "B:ba.a([II)V#0",
+      "renamedSymbol": "B:AudioMixer.a([II)V#0",
       "originalName": "L3",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -1396,9 +1452,9 @@
     },
     {
       "symbol": "C:ba",
-      "renamedSymbol": "C:ba",
+      "renamedSymbol": "C:AudioMixer",
       "originalName": "ba",
-      "renamedName": "ba",
+      "renamedName": "AudioMixer",
       "declaration": {
         "file": "ba.java",
         "start": 44,
@@ -4762,7 +4818,7 @@
     },
     {
       "symbol": "F:ac.field_h:Lba;",
-      "renamedSymbol": "F:GameApplet.field_h:Lba;",
+      "renamedSymbol": "F:GameApplet.field_h:LAudioMixer;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -5939,7 +5995,7 @@
     },
     {
       "symbol": "F:ba.field_a:I",
-      "renamedSymbol": "F:ba.field_a:I",
+      "renamedSymbol": "F:AudioMixer.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -5950,7 +6006,7 @@
     },
     {
       "symbol": "F:ba.field_b:I",
-      "renamedSymbol": "F:ba.field_b:I",
+      "renamedSymbol": "F:AudioMixer.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -5961,7 +6017,7 @@
     },
     {
       "symbol": "F:ba.field_c:I",
-      "renamedSymbol": "F:ba.field_c:I",
+      "renamedSymbol": "F:AudioMixer.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -5972,7 +6028,7 @@
     },
     {
       "symbol": "F:ba.field_d:Z",
-      "renamedSymbol": "F:ba.field_d:Z",
+      "renamedSymbol": "F:AudioMixer.field_d:Z",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -5983,7 +6039,7 @@
     },
     {
       "symbol": "F:ba.field_e:I",
-      "renamedSymbol": "F:ba.field_e:I",
+      "renamedSymbol": "F:AudioMixer.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -5994,7 +6050,7 @@
     },
     {
       "symbol": "F:ba.field_f:[I",
-      "renamedSymbol": "F:ba.field_f:[I",
+      "renamedSymbol": "F:AudioMixer.field_f:[I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -6005,7 +6061,7 @@
     },
     {
       "symbol": "F:ba.field_g:[Lkd;",
-      "renamedSymbol": "F:ba.field_g:[LPcmStream;",
+      "renamedSymbol": "F:AudioMixer.field_g:[LPcmStream;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -6016,7 +6072,7 @@
     },
     {
       "symbol": "F:ba.field_h:I",
-      "renamedSymbol": "F:ba.field_h:I",
+      "renamedSymbol": "F:AudioMixer.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -6027,7 +6083,7 @@
     },
     {
       "symbol": "F:ba.field_i:I",
-      "renamedSymbol": "F:ba.field_i:I",
+      "renamedSymbol": "F:AudioMixer.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -6038,7 +6094,7 @@
     },
     {
       "symbol": "F:ba.field_j:Z",
-      "renamedSymbol": "F:ba.field_j:Z",
+      "renamedSymbol": "F:AudioMixer.field_j:Z",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -6049,7 +6105,7 @@
     },
     {
       "symbol": "F:ba.field_k:I",
-      "renamedSymbol": "F:ba.field_k:I",
+      "renamedSymbol": "F:AudioMixer.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -6060,7 +6116,7 @@
     },
     {
       "symbol": "F:ba.field_l:I",
-      "renamedSymbol": "F:ba.field_l:I",
+      "renamedSymbol": "F:AudioMixer.field_l:I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -6071,7 +6127,7 @@
     },
     {
       "symbol": "F:ba.field_m:I",
-      "renamedSymbol": "F:ba.field_m:I",
+      "renamedSymbol": "F:AudioMixer.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -6082,7 +6138,7 @@
     },
     {
       "symbol": "F:ba.field_n:J",
-      "renamedSymbol": "F:ba.field_n:J",
+      "renamedSymbol": "F:AudioMixer.field_n:J",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -6093,7 +6149,7 @@
     },
     {
       "symbol": "F:ba.field_o:J",
-      "renamedSymbol": "F:ba.field_o:J",
+      "renamedSymbol": "F:AudioMixer.field_o:J",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -6104,7 +6160,7 @@
     },
     {
       "symbol": "F:ba.field_p:Lqf;",
-      "renamedSymbol": "F:ba.field_p:Lqf;",
+      "renamedSymbol": "F:AudioMixer.field_p:Lqf;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -6115,7 +6171,7 @@
     },
     {
       "symbol": "F:ba.field_q:Z",
-      "renamedSymbol": "F:ba.field_q:Z",
+      "renamedSymbol": "F:AudioMixer.field_q:Z",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -6126,7 +6182,7 @@
     },
     {
       "symbol": "F:ba.field_r:Lkd;",
-      "renamedSymbol": "F:ba.field_r:LPcmStream;",
+      "renamedSymbol": "F:AudioMixer.field_r:LPcmStream;",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -6137,7 +6193,7 @@
     },
     {
       "symbol": "F:ba.field_s:I",
-      "renamedSymbol": "F:ba.field_s:I",
+      "renamedSymbol": "F:AudioMixer.field_s:I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -6148,7 +6204,7 @@
     },
     {
       "symbol": "F:ba.field_t:[Lkd;",
-      "renamedSymbol": "F:ba.field_t:[LPcmStream;",
+      "renamedSymbol": "F:AudioMixer.field_t:[LPcmStream;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -6159,7 +6215,7 @@
     },
     {
       "symbol": "F:ba.field_u:J",
-      "renamedSymbol": "F:ba.field_u:J",
+      "renamedSymbol": "F:AudioMixer.field_u:J",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -14662,7 +14718,7 @@
     },
     {
       "symbol": "F:ka.field_m:Lba;",
-      "renamedSymbol": "F:PacketBuffer.field_m:Lba;",
+      "renamedSymbol": "F:PacketBuffer.field_m:LAudioMixer;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -21977,7 +22033,7 @@
     },
     {
       "symbol": "F:qf.field_e:[Lba;",
-      "renamedSymbol": "F:qf.field_e:[Lba;",
+      "renamedSymbol": "F:qf.field_e:[LAudioMixer;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -35606,7 +35662,7 @@
     },
     {
       "symbol": "L:ba.a()V#0",
-      "renamedSymbol": "L:ba.a()V#0",
+      "renamedSymbol": "L:AudioMixer.a()V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -35617,7 +35673,7 @@
     },
     {
       "symbol": "L:ba.a()V#1",
-      "renamedSymbol": "L:ba.a()V#1",
+      "renamedSymbol": "L:AudioMixer.a()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -35628,7 +35684,7 @@
     },
     {
       "symbol": "L:ba.a()V#2",
-      "renamedSymbol": "L:ba.a()V#2",
+      "renamedSymbol": "L:AudioMixer.a()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -35639,7 +35695,7 @@
     },
     {
       "symbol": "L:ba.a()V#3",
-      "renamedSymbol": "L:ba.a()V#3",
+      "renamedSymbol": "L:AudioMixer.a()V#3",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -35650,7 +35706,7 @@
     },
     {
       "symbol": "L:ba.a()V#4",
-      "renamedSymbol": "L:ba.a()V#4",
+      "renamedSymbol": "L:AudioMixer.a()V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -35661,7 +35717,7 @@
     },
     {
       "symbol": "L:ba.a()V#5",
-      "renamedSymbol": "L:ba.a()V#5",
+      "renamedSymbol": "L:AudioMixer.a()V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -35672,7 +35728,7 @@
     },
     {
       "symbol": "L:ba.a()V#6",
-      "renamedSymbol": "L:ba.a()V#6",
+      "renamedSymbol": "L:AudioMixer.a()V#6",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -35683,7 +35739,7 @@
     },
     {
       "symbol": "L:ba.a()V#7",
-      "renamedSymbol": "L:ba.a()V#7",
+      "renamedSymbol": "L:AudioMixer.a()V#7",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -35694,7 +35750,7 @@
     },
     {
       "symbol": "L:ba.a()V#8",
-      "renamedSymbol": "L:ba.a()V#8",
+      "renamedSymbol": "L:AudioMixer.a()V#8",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -35705,7 +35761,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#0",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#0",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -35716,7 +35772,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#1",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#1",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -35727,7 +35783,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#10",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#10",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -35738,7 +35794,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#2",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#2",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -35749,7 +35805,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#3",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#3",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -35760,7 +35816,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#4",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#4",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -35771,7 +35827,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#5",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#5",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -35782,7 +35838,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#6",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#6",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#6",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -35793,7 +35849,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#7",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#7",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -35804,7 +35860,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#8",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#8",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -35815,7 +35871,7 @@
     },
     {
       "symbol": "L:ba.a(Lej;Ljava/awt/Component;II)Lba;#9",
-      "renamedSymbol": "L:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#9",
+      "renamedSymbol": "L:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -35826,7 +35882,7 @@
     },
     {
       "symbol": "L:ba.a(Lkd;I)V#0",
-      "renamedSymbol": "L:ba.a(LPcmStream;I)V#0",
+      "renamedSymbol": "L:AudioMixer.a(LPcmStream;I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -35837,7 +35893,7 @@
     },
     {
       "symbol": "L:ba.a(Lkd;I)V#1",
-      "renamedSymbol": "L:ba.a(LPcmStream;I)V#1",
+      "renamedSymbol": "L:AudioMixer.a(LPcmStream;I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -35848,7 +35904,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#0",
-      "renamedSymbol": "L:ba.a([II)V#0",
+      "renamedSymbol": "L:AudioMixer.a([II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -35859,7 +35915,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#1",
-      "renamedSymbol": "L:ba.a([II)V#1",
+      "renamedSymbol": "L:AudioMixer.a([II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -35870,7 +35926,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#10",
-      "renamedSymbol": "L:ba.a([II)V#10",
+      "renamedSymbol": "L:AudioMixer.a([II)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -35881,7 +35937,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#11",
-      "renamedSymbol": "L:ba.a([II)V#11",
+      "renamedSymbol": "L:AudioMixer.a([II)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -35892,7 +35948,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#12",
-      "renamedSymbol": "L:ba.a([II)V#12",
+      "renamedSymbol": "L:AudioMixer.a([II)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -35903,7 +35959,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#13",
-      "renamedSymbol": "L:ba.a([II)V#13",
+      "renamedSymbol": "L:AudioMixer.a([II)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -35914,7 +35970,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#14",
-      "renamedSymbol": "L:ba.a([II)V#14",
+      "renamedSymbol": "L:AudioMixer.a([II)V#14",
       "originalName": "var15_int",
       "renamedName": "var15_int",
       "declaration": {
@@ -35925,7 +35981,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#15",
-      "renamedSymbol": "L:ba.a([II)V#15",
+      "renamedSymbol": "L:AudioMixer.a([II)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -35936,7 +35992,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#16",
-      "renamedSymbol": "L:ba.a([II)V#16",
+      "renamedSymbol": "L:AudioMixer.a([II)V#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -35947,7 +36003,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#17",
-      "renamedSymbol": "L:ba.a([II)V#17",
+      "renamedSymbol": "L:AudioMixer.a([II)V#17",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -35958,7 +36014,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#18",
-      "renamedSymbol": "L:ba.a([II)V#18",
+      "renamedSymbol": "L:AudioMixer.a([II)V#18",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -35969,7 +36025,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#19",
-      "renamedSymbol": "L:ba.a([II)V#19",
+      "renamedSymbol": "L:AudioMixer.a([II)V#19",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -35980,7 +36036,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#2",
-      "renamedSymbol": "L:ba.a([II)V#2",
+      "renamedSymbol": "L:AudioMixer.a([II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -35991,7 +36047,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#20",
-      "renamedSymbol": "L:ba.a([II)V#20",
+      "renamedSymbol": "L:AudioMixer.a([II)V#20",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -36002,7 +36058,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#3",
-      "renamedSymbol": "L:ba.a([II)V#3",
+      "renamedSymbol": "L:AudioMixer.a([II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -36013,7 +36069,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#4",
-      "renamedSymbol": "L:ba.a([II)V#4",
+      "renamedSymbol": "L:AudioMixer.a([II)V#4",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -36024,7 +36080,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#5",
-      "renamedSymbol": "L:ba.a([II)V#5",
+      "renamedSymbol": "L:AudioMixer.a([II)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -36035,7 +36091,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#6",
-      "renamedSymbol": "L:ba.a([II)V#6",
+      "renamedSymbol": "L:AudioMixer.a([II)V#6",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -36046,7 +36102,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#7",
-      "renamedSymbol": "L:ba.a([II)V#7",
+      "renamedSymbol": "L:AudioMixer.a([II)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -36057,7 +36113,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#8",
-      "renamedSymbol": "L:ba.a([II)V#8",
+      "renamedSymbol": "L:AudioMixer.a([II)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -36068,7 +36124,7 @@
     },
     {
       "symbol": "L:ba.a([II)V#9",
-      "renamedSymbol": "L:ba.a([II)V#9",
+      "renamedSymbol": "L:AudioMixer.a([II)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -36079,7 +36135,7 @@
     },
     {
       "symbol": "L:ba.b(Lkd;)V#0",
-      "renamedSymbol": "L:ba.b(LPcmStream;)V#0",
+      "renamedSymbol": "L:AudioMixer.b(LPcmStream;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -36090,7 +36146,7 @@
     },
     {
       "symbol": "L:ba.e()V#0",
-      "renamedSymbol": "L:ba.e()V#0",
+      "renamedSymbol": "L:AudioMixer.e()V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -36101,7 +36157,7 @@
     },
     {
       "symbol": "L:ba.e()V#1",
-      "renamedSymbol": "L:ba.e()V#1",
+      "renamedSymbol": "L:AudioMixer.e()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -60499,7 +60555,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#0",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#0",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -60510,7 +60566,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#1",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#1",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -60521,7 +60577,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#2",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#2",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -60532,7 +60588,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#3",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#3",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -60543,7 +60599,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#4",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#4",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -60554,7 +60610,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#5",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#5",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -60565,7 +60621,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#6",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#6",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -60576,7 +60632,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#7",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#7",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -60587,7 +60643,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#8",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#8",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -60598,7 +60654,7 @@
     },
     {
       "symbol": "L:gd.a(I)V#9",
-      "renamedSymbol": "L:PcmSampleStream.a(I)V#9",
+      "renamedSymbol": "L:PcmSampleStream.skip(I)V#9",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -61742,7 +61798,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#0",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#0",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -61753,7 +61809,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#1",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#1",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -61764,7 +61820,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#10",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#10",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -61775,7 +61831,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#11",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#11",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -61786,7 +61842,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#12",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#12",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#12",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -61797,7 +61853,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#13",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#13",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -61808,7 +61864,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#2",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#2",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -61819,7 +61875,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#3",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#3",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#3",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -61830,7 +61886,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#4",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#4",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#4",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -61841,7 +61897,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#5",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#5",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -61852,7 +61908,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#6",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#6",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -61863,7 +61919,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#7",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#7",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -61874,7 +61930,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#8",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#8",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -61885,7 +61941,7 @@
     },
     {
       "symbol": "L:gd.b([III)V#9",
-      "renamedSymbol": "L:PcmSampleStream.b([III)V#9",
+      "renamedSymbol": "L:PcmSampleStream.mix([III)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67539,7 +67595,7 @@
     },
     {
       "symbol": "L:hl.a(I)V#0",
-      "renamedSymbol": "L:hl.a(I)V#0",
+      "renamedSymbol": "L:hl.skip(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -67550,7 +67606,7 @@
     },
     {
       "symbol": "L:hl.a(I)V#1",
-      "renamedSymbol": "L:hl.a(I)V#1",
+      "renamedSymbol": "L:hl.skip(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67561,7 +67617,7 @@
     },
     {
       "symbol": "L:hl.a(I)V#2",
-      "renamedSymbol": "L:hl.a(I)V#2",
+      "renamedSymbol": "L:hl.skip(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67572,7 +67628,7 @@
     },
     {
       "symbol": "L:hl.a(I)V#3",
-      "renamedSymbol": "L:hl.a(I)V#3",
+      "renamedSymbol": "L:hl.skip(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -67583,7 +67639,7 @@
     },
     {
       "symbol": "L:hl.a(I)V#4",
-      "renamedSymbol": "L:hl.a(I)V#4",
+      "renamedSymbol": "L:hl.skip(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67594,7 +67650,7 @@
     },
     {
       "symbol": "L:hl.b([III)V#0",
-      "renamedSymbol": "L:hl.b([III)V#0",
+      "renamedSymbol": "L:hl.mix([III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67605,7 +67661,7 @@
     },
     {
       "symbol": "L:hl.b([III)V#1",
-      "renamedSymbol": "L:hl.b([III)V#1",
+      "renamedSymbol": "L:hl.mix([III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67616,7 +67672,7 @@
     },
     {
       "symbol": "L:hl.b([III)V#2",
-      "renamedSymbol": "L:hl.b([III)V#2",
+      "renamedSymbol": "L:hl.mix([III)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67627,7 +67683,7 @@
     },
     {
       "symbol": "L:hl.b([III)V#3",
-      "renamedSymbol": "L:hl.b([III)V#3",
+      "renamedSymbol": "L:hl.mix([III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -67638,7 +67694,7 @@
     },
     {
       "symbol": "L:hl.b([III)V#4",
-      "renamedSymbol": "L:hl.b([III)V#4",
+      "renamedSymbol": "L:hl.mix([III)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -154615,9 +154671,9 @@
     },
     {
       "symbol": "M:ba.<init>()V",
-      "renamedSymbol": "M:ba.<init>()V",
+      "renamedSymbol": "M:AudioMixer.<init>()V",
       "originalName": "ba",
-      "renamedName": "ba",
+      "renamedName": "AudioMixer",
       "declaration": {
         "file": "ba.java",
         "start": 12540,
@@ -154626,7 +154682,7 @@
     },
     {
       "symbol": "M:ba.a()V",
-      "renamedSymbol": "M:ba.a()V",
+      "renamedSymbol": "M:AudioMixer.a()V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154637,7 +154693,7 @@
     },
     {
       "symbol": "M:ba.a(I)V",
-      "renamedSymbol": "M:ba.a(I)V",
+      "renamedSymbol": "M:AudioMixer.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154648,7 +154704,7 @@
     },
     {
       "symbol": "M:ba.a(IZI)V",
-      "renamedSymbol": "M:ba.a(IZI)V",
+      "renamedSymbol": "M:AudioMixer.a(IZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154659,7 +154715,7 @@
     },
     {
       "symbol": "M:ba.a(Lej;Ljava/awt/Component;II)Lba;",
-      "renamedSymbol": "M:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;",
+      "renamedSymbol": "M:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154670,7 +154726,7 @@
     },
     {
       "symbol": "M:ba.a(Ljava/awt/Component;)V",
-      "renamedSymbol": "M:ba.a(Ljava/awt/Component;)V",
+      "renamedSymbol": "M:AudioMixer.a(Ljava/awt/Component;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154681,7 +154737,7 @@
     },
     {
       "symbol": "M:ba.a(Lkd;)V",
-      "renamedSymbol": "M:ba.a(LPcmStream;)V",
+      "renamedSymbol": "M:AudioMixer.a(LPcmStream;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154692,7 +154748,7 @@
     },
     {
       "symbol": "M:ba.a(Lkd;I)V",
-      "renamedSymbol": "M:ba.a(LPcmStream;I)V",
+      "renamedSymbol": "M:AudioMixer.a(LPcmStream;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154703,7 +154759,7 @@
     },
     {
       "symbol": "M:ba.a([II)V",
-      "renamedSymbol": "M:ba.a([II)V",
+      "renamedSymbol": "M:AudioMixer.a([II)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154714,7 +154770,7 @@
     },
     {
       "symbol": "M:ba.b()V",
-      "renamedSymbol": "M:ba.b()V",
+      "renamedSymbol": "M:AudioMixer.b()V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -154725,7 +154781,7 @@
     },
     {
       "symbol": "M:ba.b(I)V",
-      "renamedSymbol": "M:ba.b(I)V",
+      "renamedSymbol": "M:AudioMixer.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -154736,7 +154792,7 @@
     },
     {
       "symbol": "M:ba.b(Lkd;)V",
-      "renamedSymbol": "M:ba.b(LPcmStream;)V",
+      "renamedSymbol": "M:AudioMixer.b(LPcmStream;)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -154747,7 +154803,7 @@
     },
     {
       "symbol": "M:ba.c()I",
-      "renamedSymbol": "M:ba.c()I",
+      "renamedSymbol": "M:AudioMixer.c()I",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -154758,7 +154814,7 @@
     },
     {
       "symbol": "M:ba.d()V",
-      "renamedSymbol": "M:ba.d()V",
+      "renamedSymbol": "M:AudioMixer.d()V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -154769,7 +154825,7 @@
     },
     {
       "symbol": "M:ba.e()V",
-      "renamedSymbol": "M:ba.e()V",
+      "renamedSymbol": "M:AudioMixer.e()V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -154780,7 +154836,7 @@
     },
     {
       "symbol": "M:ba.f()V",
-      "renamedSymbol": "M:ba.f()V",
+      "renamedSymbol": "M:AudioMixer.f()V",
       "originalName": "f",
       "renamedName": "f",
       "declaration": {
@@ -159631,9 +159687,9 @@
     },
     {
       "symbol": "M:gd.a(I)V",
-      "renamedSymbol": "M:PcmSampleStream.a(I)V",
+      "renamedSymbol": "M:PcmSampleStream.skip(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skip",
       "declaration": {
         "file": "gd.java",
         "start": 44531,
@@ -159895,9 +159951,9 @@
     },
     {
       "symbol": "M:gd.b([III)V",
-      "renamedSymbol": "M:PcmSampleStream.b([III)V",
+      "renamedSymbol": "M:PcmSampleStream.mix([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mix",
       "declaration": {
         "file": "gd.java",
         "start": 31556,
@@ -161303,9 +161359,9 @@
     },
     {
       "symbol": "M:hl.a(I)V",
-      "renamedSymbol": "M:hl.a(I)V",
+      "renamedSymbol": "M:hl.skip(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skip",
       "declaration": {
         "file": "hl.java",
         "start": 2475,
@@ -161391,9 +161447,9 @@
     },
     {
       "symbol": "M:hl.b([III)V",
-      "renamedSymbol": "M:hl.b([III)V",
+      "renamedSymbol": "M:hl.mix([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mix",
       "declaration": {
         "file": "hl.java",
         "start": 193,
@@ -164020,9 +164076,9 @@
     },
     {
       "symbol": "M:kd.a(I)V",
-      "renamedSymbol": "M:PcmStream.a(I)V",
+      "renamedSymbol": "M:PcmStream.skip(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "skip",
       "declaration": {
         "file": "kd.java",
         "start": 477,
@@ -164053,9 +164109,9 @@
     },
     {
       "symbol": "M:kd.b([III)V",
-      "renamedSymbol": "M:PcmStream.b([III)V",
+      "renamedSymbol": "M:PcmStream.mix([III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "mix",
       "declaration": {
         "file": "kd.java",
         "start": 208,
@@ -178298,7 +178354,7 @@
     },
     {
       "symbol": "P:ba.a(I)V#0",
-      "renamedSymbol": "P:ba.a(I)V#0",
+      "renamedSymbol": "P:AudioMixer.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178309,7 +178365,7 @@
     },
     {
       "symbol": "P:ba.a(IZI)V#0",
-      "renamedSymbol": "P:ba.a(IZI)V#0",
+      "renamedSymbol": "P:AudioMixer.a(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178320,7 +178376,7 @@
     },
     {
       "symbol": "P:ba.a(IZI)V#1",
-      "renamedSymbol": "P:ba.a(IZI)V#1",
+      "renamedSymbol": "P:AudioMixer.a(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178331,7 +178387,7 @@
     },
     {
       "symbol": "P:ba.a(IZI)V#2",
-      "renamedSymbol": "P:ba.a(IZI)V#2",
+      "renamedSymbol": "P:AudioMixer.a(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -178342,7 +178398,7 @@
     },
     {
       "symbol": "P:ba.a(Lej;Ljava/awt/Component;II)Lba;#0",
-      "renamedSymbol": "P:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#0",
+      "renamedSymbol": "P:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178353,7 +178409,7 @@
     },
     {
       "symbol": "P:ba.a(Lej;Ljava/awt/Component;II)Lba;#1",
-      "renamedSymbol": "P:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#1",
+      "renamedSymbol": "P:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178364,7 +178420,7 @@
     },
     {
       "symbol": "P:ba.a(Lej;Ljava/awt/Component;II)Lba;#2",
-      "renamedSymbol": "P:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#2",
+      "renamedSymbol": "P:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -178375,7 +178431,7 @@
     },
     {
       "symbol": "P:ba.a(Lej;Ljava/awt/Component;II)Lba;#3",
-      "renamedSymbol": "P:ba.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)Lba;#3",
+      "renamedSymbol": "P:AudioMixer.a(LPlatformTaskDispatcher;Ljava/awt/Component;II)LAudioMixer;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -178386,7 +178442,7 @@
     },
     {
       "symbol": "P:ba.a(Ljava/awt/Component;)V#0",
-      "renamedSymbol": "P:ba.a(Ljava/awt/Component;)V#0",
+      "renamedSymbol": "P:AudioMixer.a(Ljava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178397,7 +178453,7 @@
     },
     {
       "symbol": "P:ba.a(Lkd;)V#0",
-      "renamedSymbol": "P:ba.a(LPcmStream;)V#0",
+      "renamedSymbol": "P:AudioMixer.a(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178408,7 +178464,7 @@
     },
     {
       "symbol": "P:ba.a(Lkd;I)V#0",
-      "renamedSymbol": "P:ba.a(LPcmStream;I)V#0",
+      "renamedSymbol": "P:AudioMixer.a(LPcmStream;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178419,7 +178475,7 @@
     },
     {
       "symbol": "P:ba.a(Lkd;I)V#1",
-      "renamedSymbol": "P:ba.a(LPcmStream;I)V#1",
+      "renamedSymbol": "P:AudioMixer.a(LPcmStream;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178430,7 +178486,7 @@
     },
     {
       "symbol": "P:ba.a([II)V#0",
-      "renamedSymbol": "P:ba.a([II)V#0",
+      "renamedSymbol": "P:AudioMixer.a([II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178441,7 +178497,7 @@
     },
     {
       "symbol": "P:ba.a([II)V#1",
-      "renamedSymbol": "P:ba.a([II)V#1",
+      "renamedSymbol": "P:AudioMixer.a([II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -178452,7 +178508,7 @@
     },
     {
       "symbol": "P:ba.b(I)V#0",
-      "renamedSymbol": "P:ba.b(I)V#0",
+      "renamedSymbol": "P:AudioMixer.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178463,7 +178519,7 @@
     },
     {
       "symbol": "P:ba.b(Lkd;)V#0",
-      "renamedSymbol": "P:ba.b(LPcmStream;)V#0",
+      "renamedSymbol": "P:AudioMixer.b(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190618,7 +190674,7 @@
     },
     {
       "symbol": "P:gd.a(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.a(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.skip(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192774,7 +192830,7 @@
     },
     {
       "symbol": "P:gd.b([III)V#0",
-      "renamedSymbol": "P:PcmSampleStream.b([III)V#0",
+      "renamedSymbol": "P:PcmSampleStream.mix([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192785,7 +192841,7 @@
     },
     {
       "symbol": "P:gd.b([III)V#1",
-      "renamedSymbol": "P:PcmSampleStream.b([III)V#1",
+      "renamedSymbol": "P:PcmSampleStream.mix([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192796,7 +192852,7 @@
     },
     {
       "symbol": "P:gd.b([III)V#2",
-      "renamedSymbol": "P:PcmSampleStream.b([III)V#2",
+      "renamedSymbol": "P:PcmSampleStream.mix([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -195865,7 +195921,7 @@
     },
     {
       "symbol": "P:hl.a(I)V#0",
-      "renamedSymbol": "P:hl.a(I)V#0",
+      "renamedSymbol": "P:hl.skip(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -195975,7 +196031,7 @@
     },
     {
       "symbol": "P:hl.b([III)V#0",
-      "renamedSymbol": "P:hl.b([III)V#0",
+      "renamedSymbol": "P:hl.mix([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -195986,7 +196042,7 @@
     },
     {
       "symbol": "P:hl.b([III)V#1",
-      "renamedSymbol": "P:hl.b([III)V#1",
+      "renamedSymbol": "P:hl.mix([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -195997,7 +196053,7 @@
     },
     {
       "symbol": "P:hl.b([III)V#2",
-      "renamedSymbol": "P:hl.b([III)V#2",
+      "renamedSymbol": "P:hl.mix([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -202707,7 +202763,7 @@
     },
     {
       "symbol": "P:kd.a(I)V#0",
-      "renamedSymbol": "P:PcmStream.a(I)V#0",
+      "renamedSymbol": "P:PcmStream.skip(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -202751,7 +202807,7 @@
     },
     {
       "symbol": "P:kd.b([III)V#0",
-      "renamedSymbol": "P:PcmStream.b([III)V#0",
+      "renamedSymbol": "P:PcmStream.mix([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -202762,7 +202818,7 @@
     },
     {
       "symbol": "P:kd.b([III)V#1",
-      "renamedSymbol": "P:PcmStream.b([III)V#1",
+      "renamedSymbol": "P:PcmStream.mix([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -202773,7 +202829,7 @@
     },
     {
       "symbol": "P:kd.b([III)V#2",
-      "renamedSymbol": "P:PcmStream.b([III)V#2",
+      "renamedSymbol": "P:PcmStream.mix([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -232463,7 +232519,7 @@
       "original": "ac.java",
       "renamed": "GameApplet.java",
       "inputSha256": "e1055997abf1bec6e1599762d738917927e22961cf250fa86e9d71d0ad15a542",
-      "outputSha256": "f1a3eeff07ed99b6ee7808d6104d688606d6f87c2bcb50d2912c82d5eaba9e0c",
+      "outputSha256": "64de8ee5c6d91dc0cc86bc40c10a25b777b29455d579e0b6139aa2cb16d4d3e9",
       "edits": [
         {
           "start": 60,
@@ -232471,6 +232527,13 @@
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 290,
+          "end": 292,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 734,
@@ -233450,10 +233513,17 @@
     },
     {
       "original": "ba.java",
-      "renamed": "ba.java",
+      "renamed": "AudioMixer.java",
       "inputSha256": "610ea6816629c40e2faf88afddcc37a177d94162fe315e37d0146ca926936401",
-      "outputSha256": "274ab70f5840b775dd6cd6927029cd6e867cba6481b36828e9a6c08ca5f3c671",
+      "outputSha256": "6756e434790c1fede5ab76873542cfbf3f1fb1a19e48fbb1f449940cebcebaff",
       "edits": [
+        {
+          "start": 44,
+          "end": 46,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
         {
           "start": 275,
           "end": 277,
@@ -233525,6 +233595,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 1392,
+          "end": 1394,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 1534,
           "end": 1536,
           "symbol": "B:ba.a([II)V#0",
@@ -233569,6 +233646,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 4523,
+          "end": 4524,
+          "symbol": "M:kd.b([III)V",
+          "original": "b",
+          "renamed": "mix"
+        },
+        {
           "start": 4635,
           "end": 4637,
           "symbol": "C:kd",
@@ -233583,11 +233667,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 4837,
+          "end": 4839,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 4925,
           "end": 4927,
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 5053,
+          "end": 5055,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 5058,
@@ -233632,6 +233730,90 @@
           "renamed": "JavaSoundAudioOutput"
         },
         {
+          "start": 5922,
+          "end": 5924,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6015,
+          "end": 6017,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6070,
+          "end": 6072,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6118,
+          "end": 6120,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6194,
+          "end": 6196,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6252,
+          "end": 6254,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6322,
+          "end": 6324,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6347,
+          "end": 6349,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6818,
+          "end": 6820,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 6912,
+          "end": 6914,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 7159,
+          "end": 7161,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 11693,
+          "end": 11694,
+          "symbol": "M:kd.a(I)V",
+          "original": "a",
+          "renamed": "skip"
+        },
+        {
           "start": 12045,
           "end": 12047,
           "symbol": "C:kd",
@@ -233644,6 +233826,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 12540,
+          "end": 12542,
+          "symbol": "M:ba.<init>()V",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 12778,
@@ -235581,7 +235770,7 @@
       "original": "d.java",
       "renamed": "d.java",
       "inputSha256": "3162ed15350ea903cce8657bb354a290e77fb77254a9d4c848effed5c0527dff",
-      "outputSha256": "95302b0931813a26763365adfd977d2c37b067364581ab072a12e954a946a5a8",
+      "outputSha256": "54915fb4a888d191dd02041925a546fa477a29256bab0ff50b1be0986da17356",
       "edits": [
         {
           "start": 323,
@@ -235589,6 +235778,34 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 1741,
+          "end": 1743,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 2053,
+          "end": 2055,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 4429,
+          "end": 4431,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 5000,
+          "end": 5002,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 6938,
@@ -235642,6 +235859,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 38074,
+          "end": 38076,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 38264,
           "end": 38266,
           "symbol": "C:gd",
@@ -235661,6 +235885,13 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 38796,
+          "end": 38798,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         }
       ]
     },
@@ -239520,7 +239751,7 @@
       "original": "gd.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "9912500bb74fbf1702445d593fdc709e975b559a07d39c329df8575253967ac0",
-      "outputSha256": "4c1799e9295bc89e402fe6298028df60ee91b029f6021d1963b686753dfb67fb",
+      "outputSha256": "c3232c25f7f45389363f34cdb1096848cc23d23d2cfcbbd2e2fc302d33f03e70",
       "edits": [
         {
           "start": 50,
@@ -239558,6 +239789,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 3875,
+          "end": 3877,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 3912,
           "end": 3914,
           "symbol": "C:gd",
@@ -239584,6 +239822,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 4208,
+          "end": 4210,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 4243,
@@ -239614,6 +239859,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 4824,
+          "end": 4826,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 4861,
           "end": 4863,
           "symbol": "C:gd",
@@ -239640,6 +239892,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 5222,
+          "end": 5224,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 5259,
@@ -239838,11 +240097,32 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 31230,
+          "end": 31232,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
+          "start": 31556,
+          "end": 31557,
+          "symbol": "M:gd.b([III)V",
+          "original": "b",
+          "renamed": "mix"
+        },
+        {
           "start": 31751,
           "end": 31753,
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 31976,
+          "end": 31977,
+          "symbol": "M:gd.a(I)V",
+          "original": "a",
+          "renamed": "skip"
         },
         {
           "start": 32031,
@@ -239908,6 +240188,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 44531,
+          "end": 44532,
+          "symbol": "M:gd.a(I)V",
+          "original": "a",
+          "renamed": "skip"
+        },
+        {
           "start": 44642,
           "end": 44644,
           "symbol": "C:ud",
@@ -239971,6 +240258,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 55422,
+          "end": 55424,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 55459,
           "end": 55461,
           "symbol": "C:gd",
@@ -239997,6 +240291,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 55755,
+          "end": 55757,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 55790,
@@ -240027,6 +240328,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 56370,
+          "end": 56372,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 56407,
           "end": 56409,
           "symbol": "C:gd",
@@ -240053,6 +240361,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 56768,
+          "end": 56770,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 56805,
@@ -242249,7 +242564,7 @@
       "original": "hl.java",
       "renamed": "hl.java",
       "inputSha256": "1f2fcb74036344b8897ae58b063fbff634783c341196fd5b668181756c1ee84a",
-      "outputSha256": "7b6bbb118699c9a63679eb39f941999a2915adba0fdf246968b9aab137f11206",
+      "outputSha256": "0cb2ee1edcc9e7c70345e644e1da1dac332976f8ac2d2f8a9384f1014e263ed5",
       "edits": [
         {
           "start": 61,
@@ -242273,6 +242588,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 193,
+          "end": 194,
+          "symbol": "M:hl.b([III)V",
+          "original": "b",
+          "renamed": "mix"
+        },
+        {
           "start": 1128,
           "end": 1135,
           "symbol": "F:gg.field_g:Lgg;",
@@ -242294,6 +242616,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 1436,
+          "end": 1437,
+          "symbol": "M:kd.a(I)V",
+          "original": "a",
+          "renamed": "skip"
+        },
+        {
           "start": 1465,
           "end": 1467,
           "symbol": "C:kd",
@@ -242313,6 +242642,13 @@
           "symbol": "F:gg.field_g:Lgg;",
           "original": "field_g",
           "renamed": "next"
+        },
+        {
+          "start": 2475,
+          "end": 2476,
+          "symbol": "M:hl.a(I)V",
+          "original": "a",
+          "renamed": "skip"
         },
         {
           "start": 3302,
@@ -245181,7 +245517,7 @@
       "original": "ka.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "b9d498304eadf4ded1694ce07828d6e1b113222a212d08192971537b6b04ae8c",
-      "outputSha256": "aaf146abffcb98edcdd7c624f88d192c810b4c4f7e7bb77d22f0aaea2e0dbbb2",
+      "outputSha256": "71c233b79df44463b65d4e51ffca972bb463893d73853ea0bc4a81124a609bac",
       "edits": [
         {
           "start": 44,
@@ -245203,6 +245539,13 @@
           "symbol": "F:ka.field_k:I",
           "original": "field_k",
           "renamed": "position"
+        },
+        {
+          "start": 186,
+          "end": 188,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 234,
@@ -247487,7 +247830,7 @@
       "original": "kd.java",
       "renamed": "PcmStream.java",
       "inputSha256": "ad12ced8659f13166ea997c7dd4099af24eff8d315ccb550a871c8b9d32ef160",
-      "outputSha256": "b569ea5a7bd4e7a4b4d1d4aeef720e8c263e57d4a227de01383df40d389bcc5f",
+      "outputSha256": "959fa2895910fb8c69bf4ca3c6c585e09dc6c85c0d82382d46c5bee2c996c773",
       "edits": [
         {
           "start": 53,
@@ -247518,11 +247861,39 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 208,
+          "end": 209,
+          "symbol": "M:kd.b([III)V",
+          "original": "b",
+          "renamed": "mix"
+        },
+        {
+          "start": 350,
+          "end": 351,
+          "symbol": "M:kd.b([III)V",
+          "original": "b",
+          "renamed": "mix"
+        },
+        {
+          "start": 409,
+          "end": 410,
+          "symbol": "M:kd.a(I)V",
+          "original": "a",
+          "renamed": "skip"
+        },
+        {
           "start": 450,
           "end": 452,
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 477,
+          "end": 478,
+          "symbol": "M:kd.a(I)V",
+          "original": "a",
+          "renamed": "skip"
         },
         {
           "start": 506,
@@ -249162,7 +249533,7 @@
       "original": "m.java",
       "renamed": "JavaSoundAudioOutput.java",
       "inputSha256": "2d958b3649100f21c6273334895b95a3549b37749dc312aebe850f004f38ab7a",
-      "outputSha256": "13069adc7eed64b2b60a065b1f82d8e987d0ade2b368375a93ea71d4d3f6cf81",
+      "outputSha256": "458c2508e44708147596e687988803b0c31e89ab690aa298d3e82e38a9f510fa",
       "edits": [
         {
           "start": 50,
@@ -249170,6 +249541,13 @@
           "symbol": "C:m",
           "original": "m",
           "renamed": "JavaSoundAudioOutput"
+        },
+        {
+          "start": 60,
+          "end": 62,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 896,
@@ -257112,8 +257490,15 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "4b067364d717248ea6b50bcce0bb0d0bf3ff5e761e5d8b20c57ddb8a2c82d951",
-      "outputSha256": "85a00d219c2d6761fd23a6c6bd055d9b68a9b92dfff97029d6c7e13cf95d074a",
+      "outputSha256": "603463ef9bb01115a0572f93392c94caae60401dfd8cbff5f3f55f79ba1b2852",
       "edits": [
+        {
+          "start": 88,
+          "end": 90,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
         {
           "start": 159,
           "end": 161,
@@ -257129,11 +257514,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 957,
+          "end": 959,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 1539,
           "end": 1541,
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameEntity"
+        },
+        {
+          "start": 1705,
+          "end": 1707,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         }
       ]
     },
@@ -259740,7 +260139,7 @@
       "original": "stellarshard.java",
       "renamed": "stellarshard.java",
       "inputSha256": "a8f31243b6bc3e79958dc16124f28b5ff43bd2bc95d8d805e17f8b5f4da9baa2",
-      "outputSha256": "5ccf33d5caab3d0144947aa5377505a8e6b6a8465f3bb04e1ab17bda516e3b69",
+      "outputSha256": "760f2309aed9edcaf8d1b71db378f27baf806cd8be382973ff39ff3b94d896c0",
       "edits": [
         {
           "start": 159,
@@ -260198,6 +260597,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 24203,
+          "end": 24205,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 24258,
           "end": 24260,
           "symbol": "C:ac",
@@ -260205,11 +260611,25 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 24271,
+          "end": 24273,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 24353,
           "end": 24355,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 24366,
+          "end": 24368,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 24520,
@@ -262903,6 +263323,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 124487,
+          "end": 124489,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
+        },
+        {
           "start": 124533,
           "end": 124535,
           "symbol": "C:gg",
@@ -263090,6 +263517,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 132041,
+          "end": 132043,
+          "symbol": "C:ba",
+          "original": "ba",
+          "renamed": "AudioMixer"
         },
         {
           "start": 132149,
@@ -268357,10 +268791,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "bd069e339f6b2836e1708101daf20075c499654d1c352a4f3dbf6e6e21a1fd6c",
+    "rulesSha256": "1b8d10267c939b24240dce3121f66fdf4b720721f24fad4486321279f1ed6315",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "6df1f39a2c62210a04fd746df610c97fcda89992969dcfa80613662ff25a99cf",
+    "outputTreeSha256": "65735390999736f5d2c2ddd502fb22207727ce7377b615bd2b9ebd30dfa56346",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

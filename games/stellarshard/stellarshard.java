@@ -651,9 +651,9 @@ public final class stellarshard extends rb implements cf {
               stackIn_62_0 = 22050;
               stackIn_62_1 = 0;
             }
-            ba.a(stackIn_62_0, stackIn_62_1 != 0, 10);
-            GameApplet.field_h = ba.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
-            PacketBuffer.field_m = ba.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
+            AudioMixer.a(stackIn_62_0, stackIn_62_1 != 0, 10);
+            GameApplet.field_h = AudioMixer.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
+            PacketBuffer.field_m = AudioMixer.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
             ll.field_c = new hl();
             nj.field_o = new hl();
             GameApplet.field_h.a(ll.field_c);
@@ -2883,7 +2883,7 @@ public final class stellarshard extends rb implements cf {
           IntrusiveDeque.a(true);
           jj.a(param0 + 19045);
           d.e();
-          ba.d();
+          AudioMixer.d();
           ag.a((byte) 126);
           IntrusiveNode.b((byte) -127);
           fb.c(-2918);
@@ -3155,7 +3155,7 @@ public final class stellarshard extends rb implements cf {
                           }
                           DelegatingCanvas.b((byte) 109);
                           this.d(-20880);
-                          var3 = new qh(22050, ba.field_m);
+                          var3 = new qh(22050, AudioMixer.field_m);
                           if (!pk.a(-12663, 0)) {
                             sb.field_e = new PcmSample[41];
                             if (var11 != 0) {

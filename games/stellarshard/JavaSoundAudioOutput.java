@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class JavaSoundAudioOutput extends ba {
+final class JavaSoundAudioOutput extends AudioMixer {
     private int field_x;
     private javax.sound.sampled.AudioFormat field_y;
     private javax.sound.sampled.SourceDataLine field_w;

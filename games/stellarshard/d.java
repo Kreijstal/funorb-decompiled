@@ -62,7 +62,7 @@ final class d extends p {
 
     private final void a(int param0, int param1) {
         if (this.field_B[param0] != null) {
-          this.field_B[param0].f(param1 * 256 / ba.field_m);
+          this.field_B[param0].f(param1 * 256 / AudioMixer.field_m);
         }
     }
 
@@ -77,7 +77,7 @@ final class d extends p {
 
     private final void a(int param0) {
         if (this.field_B[param0] != null) {
-          this.field_B[param0].g(ba.field_m >> 7);
+          this.field_B[param0].g(AudioMixer.field_m >> 7);
           this.field_B[param0] = null;
         }
     }
@@ -159,7 +159,7 @@ final class d extends p {
           !this.field_ab) {
           return -1;
         }
-        int var3 = ba.field_m;
+        int var3 = AudioMixer.field_m;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_db * this.field_z);
     }
@@ -180,7 +180,7 @@ final class d extends p {
               param2 = 256;
             }
           }
-          this.field_B[param0].b(ba.field_m >> 7, param1 * this.field_O * this.field_A >> 12, param2);
+          this.field_B[param0].b(AudioMixer.field_m >> 7, param1 * this.field_O * this.field_A >> 12, param2);
         }
     }
 
@@ -1048,7 +1048,7 @@ final class d extends p {
             param5 = 0;
           }
           stackIn_14_0 = this.field_y.field_j[param1];
-          stackIn_14_1 = param3 * 256 / ba.field_m;
+          stackIn_14_1 = param3 * 256 / AudioMixer.field_m;
           if (param2 == 0) {
             stackIn_15_2 = param4 * this.field_O * this.field_A >> 12;
           } else {
@@ -1064,7 +1064,7 @@ final class d extends p {
           ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.h(param2);
-            var7.b(ba.field_m >> 7, param4 * this.field_O * this.field_A >> 12, param5);
+            var7.b(AudioMixer.field_m >> 7, param4 * this.field_O * this.field_A >> 12, param5);
           }
           this.field_B[param0] = var7;
           if (this.field_k != null) {

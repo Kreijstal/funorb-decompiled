@@ -6,7 +6,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static sb field_k;
     static sb field_n;
     boolean field_g;
-    static ba field_h;
+    static AudioMixer field_h;
     static char[] field_i;
     static volatile int field_e;
     public static int field_m;
