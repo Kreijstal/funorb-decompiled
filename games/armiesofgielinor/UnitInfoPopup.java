@@ -120,14 +120,14 @@ final class UnitInfoPopup extends IntrusiveNode {
           SpellConfirmationDialog.field_j.drawWithOpacity(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
           var11 = WhirlpoolHasher.unitDefinitions[this.unit.unitType][12];
           if (var11 != -1) {
-            PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, QuickChatMenuCloseSupport.field_b, 40, 60 + var10);
+            PreparedAction.drawHorizontalThreeSliceWithOpacity(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, QuickChatMenuCloseSupport.field_b, 40, 60 + var10);
             if (var11 < ResourceClientErrorSupport.field_e.length) {
               ResourceClientErrorSupport.field_e[var11].drawAlpha(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
             }
           }
           var12 = this.unit.f(param2 + 11);
           if (var12 != -1) {
-            PreparedAction.a(-this.fadeOffset + 32 << 3, true, var9Lifetime1, QuickChatMenuCloseSupport.field_b, 40, var10 + 60);
+            PreparedAction.drawHorizontalThreeSliceWithOpacity(-this.fadeOffset + 32 << 3, true, var9Lifetime1, QuickChatMenuCloseSupport.field_b, 40, var10 + 60);
             ii.field_a[var12].drawScaledWithOpacity(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
           }
           return;
@@ -172,7 +172,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         return 3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_u = null;
         if (param0 > -24) {

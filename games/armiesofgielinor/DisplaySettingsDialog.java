@@ -146,7 +146,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
           this.modeGrid.field_Q = 83;
           this.modeGrid.setCellInsets(5, 57, 5);
           this.addChild((byte) 10, (Widget) (this.modeGrid));
-          this.classicModeButton = this.createModeButton((WidgetListener) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
+          this.classicModeButton = this.createModeButton((WidgetListener) (this), AlternateKeyedLoginCredentials.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
           if (resizeAvailable != 0) {
             this.resizableModeButton = this.createModeButton((WidgetListener) (this), Unit.field_n, HuffmanCodec.field_e, false);
           }
@@ -422,7 +422,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         }
     }
 
-    public static void p(int param0) {
+    public static void releaseStatics(int param0) {
         field_W = (byte[][]) null;
         field_ib = null;
         if (param0 != 0) {

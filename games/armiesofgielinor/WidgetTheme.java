@@ -69,7 +69,7 @@ final class WidgetTheme {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_u = null;
         if (param0 <= 75) {
@@ -199,7 +199,7 @@ final class WidgetTheme {
     final void fillRectangle(int alpha, int left, int top, boolean obfuscationGuard, int height, int width, int colour) {
         SoftwareRaster.fillRectangleBlended(left, top, width, height, colour, alpha);
         if (!obfuscationGuard) {
-          WidgetTheme.a((byte) 3);
+          WidgetTheme.releaseStatics((byte) 3);
         }
     }
 

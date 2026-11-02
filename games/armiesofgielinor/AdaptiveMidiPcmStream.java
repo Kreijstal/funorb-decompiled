@@ -145,7 +145,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 52) {
           CharSequence var2 = (CharSequence) null;
           AdaptiveMidiPcmStream.hasValidAccountNameShape((CharSequence) null, -50, false);

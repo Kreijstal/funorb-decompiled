@@ -500,7 +500,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
               discarded$0 = this.targetName.append(targetName);
             }
             var16Lifetime2 = 0;
-            var17 = titleStyle.font.textWidth(is.field_g);
+            var17 = titleStyle.font.textWidth(LeapYearSupport.field_g);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
@@ -526,7 +526,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(titleStyle, var18Lifetime3, var28[0], var16Lifetime2, is.field_g, 24);
+            var18Lifetime3 = this.a(titleStyle, var18Lifetime3, var28[0], var16Lifetime2, LeapYearSupport.field_g, 24);
             var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[6], var18Lifetime3);
             var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[9], var18Lifetime3);
             var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[5], var18Lifetime3);

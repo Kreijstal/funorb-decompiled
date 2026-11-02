@@ -76,7 +76,7 @@ final class PowerOfTwoSupport extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3) {
         RgbSprite var5 = null;
-        if (!cu.field_a) {
+        if (!BitLengthSupport.field_a) {
           return;
         }
         if (param0 != 26449) {

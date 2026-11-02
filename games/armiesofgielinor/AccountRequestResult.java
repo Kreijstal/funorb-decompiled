@@ -183,7 +183,7 @@ final class AccountRequestResult {
             }
           }
           if (null == var2 &&
-            !cu.field_c &&
+            !BitLengthSupport.field_c &&
             null == UnitCycler.field_g) {
             var2 = CacheEntry.field_w;
           }

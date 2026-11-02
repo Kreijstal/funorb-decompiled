@@ -276,7 +276,7 @@ final class MapLayout extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 0) {
           ResourceArchive var2 = (ResourceArchive) null;

@@ -7,7 +7,7 @@ final class EmailCheckResult {
     private boolean accepted;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
           String[] var2 = (String[]) null;
@@ -24,7 +24,7 @@ final class EmailCheckResult {
 
     final boolean isAccepted(int obfuscationGuard) {
         if (obfuscationGuard <= 8) {
-          EmailCheckResult.a(true);
+          EmailCheckResult.releaseStatics(true);
         }
         return this.accepted;
     }

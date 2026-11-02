@@ -223,7 +223,7 @@ final class RegionAnchor extends IntrusiveNode {
           for (var7 = 0; 5 > var7; var7++) {
             if ((var6 & 1 << var7) != 0 &&
               0 != (-16777216 & PlayerProfile.field_l[var7])) {
-              var4_int = fm.a(var4_int, PlayerProfile.field_l[var7], 789485328);
+              var4_int = SpriteSliceAndBlendSupport.compositeArgbColours(var4_int, PlayerProfile.field_l[var7], 789485328);
             }
           }
           stackIn_126_0 = var4_int;

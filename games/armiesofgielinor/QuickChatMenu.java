@@ -239,7 +239,7 @@ final class QuickChatMenu extends ClientUiComponent {
           ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, AccountNameFoldingSupport.field_b, FullscreenConfirmationDialog.field_Y, -87))].drawFadedToColour(param0, param4, param5, param1);
           ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(LocalAccountNameSupport.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].drawFadedToColour(param0, param4, param5, param1);
           ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].drawFadedToColour(param0, param4, param5, param1);
-          if (cu.field_a &&
+          if (BitLengthSupport.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {
             NineSliceFrame.activeFoliageSprites[6 + ConsoleExpression.field_p[param2] % 8].drawFadedToColour(param0, -40 + param4, param5, param1);

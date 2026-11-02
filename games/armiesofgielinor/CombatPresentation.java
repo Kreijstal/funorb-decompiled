@@ -353,7 +353,7 @@ final class CombatPresentation implements EventPresentation {
                   stackIn_55_1 = param1[var5[var6]];
                 }
               }
-              if (cu.field_a) {
+              if (BitLengthSupport.field_a) {
                 var6 = 0;
                 while (var6 < param0) {
                   stackIn_58_0 = param1[var5[var6]];
@@ -1379,7 +1379,7 @@ final class CombatPresentation implements EventPresentation {
                         var5++;
                         continue scanLoop5;
                       }
-                      stackIn_55_0 = cu.field_a ? 1 : 0;
+                      stackIn_55_0 = BitLengthSupport.field_a ? 1 : 0;
                       break;
                     }
                     if (stackIn_55_0 != 0) {
@@ -1898,7 +1898,7 @@ final class CombatPresentation implements EventPresentation {
             }
             var7 = stackIn_89_0;
             var8 = 0;
-            if (cu.field_a) {
+            if (BitLengthSupport.field_a) {
               if (this.field_o) {
                 var7 = this.field_w;
               }
@@ -3542,7 +3542,7 @@ final class CombatPresentation implements EventPresentation {
           if (stackIn_67_0 != 109) {
             return;
           }
-          if (cu.field_a) {
+          if (BitLengthSupport.field_a) {
             scanLoop3: while (true) {
               boolean decompiledFrameRemainder1 = true;
               if (var8.length <= var6_int) {

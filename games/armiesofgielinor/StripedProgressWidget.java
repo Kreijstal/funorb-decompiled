@@ -257,7 +257,7 @@ final class StripedProgressWidget extends Widget {
         if (SpellDefinitionTable.field_a) {
           var2[1] = (byte)AccountRegistrationDialog.bitwiseOr((int) var2[1], 2);
         }
-        if (cu.field_a) {
+        if (BitLengthSupport.field_a) {
           var2[1] = (byte)AccountRegistrationDialog.bitwiseOr((int) var2[1], 1);
         }
         MusicCrossfadeStream.a(0, 6, var2);

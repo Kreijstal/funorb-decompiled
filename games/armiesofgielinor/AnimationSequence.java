@@ -28,8 +28,8 @@ final class AnimationSequence {
           if (param0 != -8) {
             field_c = (String[]) null;
           }
-          while (lp.field_c.length > var1_int) {
-            FriendRequestSupport.field_c[0][var1_int] = lp.field_c[var1_int];
+          while (TextWidthSupport.field_c.length > var1_int) {
+            FriendRequestSupport.field_c[0][var1_int] = TextWidthSupport.field_c[var1_int];
             var1_int++;
           }
           var3 = 0;

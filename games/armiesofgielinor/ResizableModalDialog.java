@@ -302,7 +302,7 @@ abstract class ResizableModalDialog extends ModalDialog {
             field_Q = (String) null;
           }
           var6_int = ConsoleExpression.field_p[param4] + param4;
-          if (cu.field_a) {
+          if (BitLengthSupport.field_a) {
             var7_int = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param0, param1, -1);
             var8 = QuickChatMenuDisplaySupport.field_e[param4].terrainType;
             if (4 != var8 &&
@@ -317,27 +317,27 @@ abstract class ResizableModalDialog extends ModalDialog {
             var9 = EditableTextWidget.field_Q[QuickChatMenuDisplaySupport.field_e[param4].terrainType];
             if (var9 > -1) {
               if (2 == var9) {
-                GradientUiRenderer.multiplySprite(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
+                GradientUiRenderer.multiplySprite(AlternateKeyedLoginCredentials.activeStructureShadows[17], -10 + param3, param5 - 25);
               } else {
                 if (QuickChatMenuDisplaySupport.field_e[param4].terrainType == 3) {
                   MidiPcmStream.a((byte) -124, param3 + 30, param4 + ConsoleExpression.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
-                    GradientUiRenderer.multiplySprite(oq.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);
+                    GradientUiRenderer.multiplySprite(AlternateKeyedLoginCredentials.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);
                   } else {
                     if (var9 == 9) {
-                      GradientUiRenderer.multiplySprite(oq.activeStructureShadows[14 + var6_int % 2], -10 + param3, param5 - 30);
+                      GradientUiRenderer.multiplySprite(AlternateKeyedLoginCredentials.activeStructureShadows[14 + var6_int % 2], -10 + param3, param5 - 30);
                     } else {
                       if (8 != var9) {
                         if (var9 == 0) {
-                          GradientUiRenderer.multiplySprite(oq.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
+                          GradientUiRenderer.multiplySprite(AlternateKeyedLoginCredentials.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
                         } else {
                           if (4 == var9) {
                             AlphanumericTextSupport.a(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
                           }
                         }
                       } else {
-                        GradientUiRenderer.multiplySprite(oq.activeStructureShadows[var6_int % 2 + 11], -10 + param3, param5 - 55);
+                        GradientUiRenderer.multiplySprite(AlternateKeyedLoginCredentials.activeStructureShadows[var6_int % 2 + 11], -10 + param3, param5 - 55);
                       }
                     }
                   }

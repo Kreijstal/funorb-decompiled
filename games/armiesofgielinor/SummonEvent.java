@@ -197,7 +197,7 @@ final class SummonEvent extends GameEvent {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         if (param0 <= 103) {
           Battlefield var2 = (Battlefield) null;

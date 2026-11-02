@@ -119,7 +119,7 @@ abstract class CacheEntry extends DualLinkedNode {
               if (var9Lifetime1 == 248) {
                 tf.a((byte) -99, CombatEvent.d((byte) -127));
                 BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
-                TextSplitSupport.a((byte) -128);
+                TextSplitSupport.closeSessionSocket((byte) -128);
                 RasterViewportResizeHandler.field_b = false;
                 stackIn_31_0 = var9Lifetime1;
                 return stackIn_31_0;
@@ -145,7 +145,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 for (var12 = 0; var12 < var11; var12++) {
                   CampaignLookupSupport.field_b[var12] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
                 }
-                TextSplitSupport.a((byte) -128);
+                TextSplitSupport.closeSessionSocket((byte) -128);
                 RasterViewportResizeHandler.field_b = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
@@ -162,7 +162,7 @@ abstract class CacheEntry extends DualLinkedNode {
             } else {
               BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
             }
-            TextSplitSupport.a((byte) -127);
+            TextSplitSupport.closeSessionSocket((byte) -127);
             RasterViewportResizeHandler.field_b = false;
             stackIn_53_0 = MusicCrossfadeStream.deliveredOpcode;
             return stackIn_53_0;
@@ -172,7 +172,7 @@ abstract class CacheEntry extends DualLinkedNode {
           }
           if (MoveAttackRequest.sessionSocket == null) {
             if (RasterViewportResizeHandler.field_b) {
-              if (TileMetadata.b(0) > 30000L) {
+              if (TileMetadata.millisSinceLastPacketRead(0) > 30000L) {
                 BitmapTextWidgetPainter.field_r = ValidationState.field_a;
               } else {
                 BitmapTextWidgetPainter.field_r = DamageEvent.field_y;

@@ -30,7 +30,7 @@ final class NodeHashTable {
     }
 
     final static void a(int param0, int param1) {
-        fm.field_d[4] = param1;
+        SpriteSliceAndBlendSupport.field_d[4] = param1;
         if (param0 != -1) {
           NodeHashTable.a(87, 95);
         }

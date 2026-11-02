@@ -61,7 +61,7 @@ final class mv {
           if (param3 < 0) {
             return;
           }
-          if (cu.field_a) {
+          if (BitLengthSupport.field_a) {
             for (var5_intLifetime1 = -128; var5_intLifetime1 < 16; var5_intLifetime1++) {
               var6Lifetime1 = var5_intLifetime1;
               var7Lifetime1 = var5_intLifetime1;

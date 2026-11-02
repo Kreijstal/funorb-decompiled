@@ -54,7 +54,7 @@ final class UnitCycler {
           if (param3 < 62) {
             return;
           }
-          if (!cu.field_a) {
+          if (!BitLengthSupport.field_a) {
             var7 = 2;
           }
           for (var8 = -64; var8 < 16; var8++) {
@@ -89,7 +89,7 @@ final class UnitCycler {
               var17Lifetime2 = var17Lifetime2 + var16 * 4;
             }
           }
-          if (!cu.field_a) {
+          if (!BitLengthSupport.field_a) {
             return;
           }
           for (var8Lifetime1 = -59; 8 > var8Lifetime1; var8Lifetime1++) {

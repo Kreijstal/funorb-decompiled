@@ -30,7 +30,7 @@ final class TextCursor {
         return this.position >= this.length ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         effectsPlayer = null;
         field_g = null;
         if (param0 > -116) {

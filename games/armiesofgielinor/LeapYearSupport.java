@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class is {
+final class LeapYearSupport {
     static String field_f;
     static String field_d;
     static int field_b;
@@ -10,7 +10,7 @@ final class is {
     static int[] field_e;
     static String field_g;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isLeapYear(int param0, int param1) {
         if (param1 < 0) {
           return (param1 + 1) % 4 == 0 ? true : false;
         }

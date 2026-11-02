@@ -46,7 +46,7 @@ final class DateValiditySupport {
             DateValiditySupport.releaseStatics(4);
           }
           ViewportManager.detachKeyboard((java.awt.Component) ((Object) param0), (byte) 35);
-          dc.a((java.awt.Component) ((Object) param0), -37);
+          dc.detachPointerInput((java.awt.Component) ((Object) param0), -37);
           if (CampaignMission.field_I == null) {
             return;
           }

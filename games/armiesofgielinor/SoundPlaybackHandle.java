@@ -82,7 +82,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
         return "Done.";
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_p = null;
         if (param0 >= -33) {

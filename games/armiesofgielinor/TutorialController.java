@@ -834,7 +834,7 @@ final class TutorialController {
           var4 = var4 + (8 + PowerOfTwoSupport.field_n.maxAscent);
           var6 = -100 / ((15 - param0) / 42);
           if (!AnimationFrameSet.field_z.field_l) {
-            var7 = fm.field_c;
+            var7 = SpriteSliceAndBlendSupport.field_c;
             decompiledFrameRemainder0 = (var13 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -1743,8 +1743,8 @@ final class TutorialController {
                                                                               return;
                                                                             }
                                                                             DisplayModeOptionPainter.field_v = true;
-                                                                            stackIn_421_0 = !(cu.field_a);
-                                                                            cu.field_a = stackIn_421_0;
+                                                                            stackIn_421_0 = !(BitLengthSupport.field_a);
+                                                                            BitLengthSupport.field_a = stackIn_421_0;
                                                                             StripedProgressWidget.a(param1 ^ 1);
                                                                             if (var9 == 0) {
                                                                               return;
@@ -2581,7 +2581,7 @@ final class TutorialController {
               stackIn_43_4 = -2;
               if (var12 == 0) {
                 stackIn_27_4 = (stackIn_43_4 == ~(var9 % 2));
-                if (!CipherPacketBuffer.a(stackIn_43_3 != 0, stackIn_27_4)) {
+                if (!CipherPacketBuffer.exclusiveOr(stackIn_43_3 != 0, stackIn_27_4)) {
                   stackIn_31_3 = 0;
                 } else {
                   stackIn_31_3 = -1;
@@ -3493,7 +3493,7 @@ final class TutorialController {
           GradientUiRenderer.drawCenteredGradientText(AlphaDecodedSpriteSupport.field_o, IgnoreListLookupSupport.a(true, var3[4]), MatchConditionEntry.a(var5Lifetime1, (byte) 94), field_e, true);
           var5Lifetime1 = var5Lifetime1 + (8 + PowerOfTwoSupport.field_n.maxAscent);
           if (!TurnTimerDial.field_a.field_o) {
-            var7 = fm.field_c;
+            var7 = SpriteSliceAndBlendSupport.field_c;
             decompiledFrameRemainder0 = (var13 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -3794,7 +3794,7 @@ final class TutorialController {
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           this.g(RasterViewportResizeHandler.field_d, -118);
           var5Lifetime1 = 40 + (NineSliceFrame.field_e.textWidth(AnimationSkeleton.field_m) >> 1);
-          fm.a(QuickChatMenuCloseSupport.field_b, var5Lifetime1, IgnoreListLookupSupport.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
+          SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, var5Lifetime1, IgnoreListLookupSupport.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
           GradientUiRenderer.drawSolidText(AnimationSkeleton.field_m, IgnoreListLookupSupport.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
           if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 620 - var5Lifetime1), IgnoreListLookupSupport.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(QuickChatMenuCloseSupport.field_b[0].pixelHeight + 19, (byte) 94))) {
             AccountNameSelectionForm.field_F = 45;
@@ -3845,7 +3845,7 @@ final class TutorialController {
           }
           if (36 == itemId) {
             stackIn_25_0 = new StringBuilder().append(DisplacedUnitMarker.field_t[36]);
-            if (!cu.field_a) {
+            if (!BitLengthSupport.field_a) {
               stackIn_26_1 = NanoGameClock.field_k;
             } else {
               stackIn_26_1 = dc.field_s;
@@ -4609,7 +4609,7 @@ final class TutorialController {
             null == mu.field_a) {
             while (true) {
               if (Unit.pollKeyEvent((byte) 102)) {
-                if (ValidationState.a(121) &&
+                if (ValidationState.debugConsoleHandlesKey(121) &&
                   var4 == 0) {
                   continue;
                 }
@@ -4985,8 +4985,8 @@ final class TutorialController {
                   var8 < 354) {
                   GradientUiRenderer.drawCenteredGradientText(param1.children[var7_int].label, IgnoreListLookupSupport.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
                   var9 = -30 + (270 + (-(NineSliceFrame.field_e.textWidth(param1.children[var7_int].label) >> 1) - 25) >> 1);
-                  fm.a(DraggableWidgetContainer.field_Q, var9, IgnoreListLookupSupport.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
-                  fm.a(DraggableWidgetContainer.field_Q, var9, IgnoreListLookupSupport.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
+                  SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(DraggableWidgetContainer.field_Q, var9, IgnoreListLookupSupport.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
+                  SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(DraggableWidgetContainer.field_Q, var9, IgnoreListLookupSupport.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
                 }
               }
               param3 = this.a(param0, param1.children[var7_int], false, param3, param4, (byte) 126);

@@ -95,7 +95,7 @@ final class MoveAttackAction extends PreparedAction {
           for (var8Lifetime1 = 0; var8Lifetime1 < SpriteScrollBar.field_h.length; var8Lifetime1++) {
             stackIn_25_0 = SpriteScrollBar.field_h[var8Lifetime1];
             stackIn_26_1 = !(DirectByteStorage.field_k[var8Lifetime1] < 0);
-            var9Lifetime1 = lp.a(stackIn_25_0, stackIn_26_1, false);
+            var9Lifetime1 = TextWidthSupport.measureTextWidth(stackIn_25_0, stackIn_26_1, false);
             if (DirectByteStorage.field_k[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + LoginForm.field_E * 2;
             }
@@ -288,7 +288,7 @@ final class MoveAttackAction extends PreparedAction {
               param5 = param5 - (var9 - 640);
             }
           }
-          ArchiveLoadSequence.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
+          ArchiveLoadSequence.drawHorizontalThreeSliceWithBrightness(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

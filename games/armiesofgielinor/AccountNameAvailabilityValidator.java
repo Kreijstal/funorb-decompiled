@@ -113,7 +113,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_o = null;
         field_l = null;
@@ -135,7 +135,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (obfuscationGuard > 100) {
           return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, kq.field_M};
         }
-        AccountNameAvailabilityValidator.h(67);
+        AccountNameAvailabilityValidator.releaseStatics(67);
         return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, kq.field_M};
     }
 

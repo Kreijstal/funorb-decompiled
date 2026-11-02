@@ -103,7 +103,7 @@ abstract class TextLayout {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 0) {
-            TextLayout.a(-112);
+            TextLayout.releaseStatics(-112);
           }
           result = GridWidgetContainer.parseRadixInt(radix, true, text, 0);
           return result;
@@ -185,7 +185,7 @@ abstract class TextLayout {
         return this.lines.length;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -111) {
           CharSequence var2 = (CharSequence) null;
           TextLayout.parseRadixInt(-42, 6, (CharSequence) null);

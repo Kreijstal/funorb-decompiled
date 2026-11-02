@@ -138,7 +138,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (obfuscationGuard <= 119) {
           return;
         }
-        String sessionText = UnitModelPreview.b((byte) 61);
+        String sessionText = UnitModelPreview.readIncomingNullTerminatedString((byte) 61);
         TextSplitSupport.a(CombatEvent.d((byte) 47), 0, sessionText);
     }
 
@@ -434,7 +434,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                       break regionExit1;
                     default:
                       LoginCredentials.a((Throwable) null, obfuscationGuard ^ -100, "MGS1: " + CampaignProgress.b(false));
-                      TextSplitSupport.a((byte) -124);
+                      TextSplitSupport.closeSessionSocket((byte) -124);
                       break regionExit1;
                   }
                 }
@@ -466,7 +466,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           return;
         }
         LoginCredentials.a((Throwable) null, -115, "MGS2: " + CampaignProgress.b(false));
-        TextSplitSupport.a((byte) -126);
+        TextSplitSupport.closeSessionSocket((byte) -126);
     }
 
     protected NetworkGameShell() {
@@ -531,13 +531,13 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (CampaignMission.field_I != null) {
           MouseWheelSource.field_d = CampaignMission.field_I.takeRotation(9);
         }
-        if (TeamRoster.a(99)) {
+        if (TeamRoster.isSessionConnected(99)) {
           idleTickLimit = DualNodeHashTable.getNominalTickRate(-113) * 1200;
           if (this.forceDisconnect ||
             !(idleTickLimit >= bs.a((byte) 99)) &&
             !(MusicPatchPcmStream.getPointerIdleTicks(4) <= idleTickLimit)) {
             this.forceDisconnect = false;
-            TextSplitSupport.a((byte) -126);
+            TextSplitSupport.closeSessionSocket((byte) -126);
             er.b(-11);
             KeyedLoginCredentials.a(LobbyPlayer.field_bc, 10, 2);
             qf.b(56);
@@ -599,7 +599,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                   KeyedLoginCredentials.a(CampaignMenu.field_k, 10, 256);
                 }
               } else {
-                KeyedLoginCredentials.a(oq.field_k, 10, 256);
+                KeyedLoginCredentials.a(AlternateKeyedLoginCredentials.field_k, 10, 256);
               }
               MaskedTextEntryPainter.field_C = true;
             }
@@ -655,7 +655,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (StrongCacheEntry.field_E == 3 &&
           wh.a(DisplayModeOptionPainter.field_u, (byte) 127, LoginKind.field_g, CombatPresentation.field_M) &&
           wh.a(LoginKind.field_g, -27701)) {
-          cd.a(12);
+          cd.releaseStatics(12);
           EmailValidator.c((byte) 91);
           ChatMessageWriteSupport.field_b = false;
           UnitSpell.field_e = ConsoleParseException.field_a;

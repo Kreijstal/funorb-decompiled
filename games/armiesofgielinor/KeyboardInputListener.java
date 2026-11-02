@@ -7,7 +7,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
     static String field_c;
     static int field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = null;
         field_d = null;

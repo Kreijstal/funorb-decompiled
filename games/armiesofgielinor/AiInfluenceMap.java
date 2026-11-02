@@ -774,7 +774,7 @@ final class AiInfluenceMap {
             break;
           }
           if (var3 == null) {
-            TextSplitSupport.a((byte) -127);
+            TextSplitSupport.closeSessionSocket((byte) -127);
             return;
           }
           var4 = var14.readUnsignedByte(0);

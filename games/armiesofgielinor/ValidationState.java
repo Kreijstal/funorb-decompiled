@@ -5,7 +5,7 @@ final class ValidationState {
     static SpriteSheetDecoder field_b;
     static String field_a;
 
-    final static boolean a(int param0) {
+    final static boolean debugConsoleHandlesKey(int param0) {
         int var1 = -61 / ((-54 - param0) / 62);
         if (ToggleTurnSkipConsoleCommand.debugConsole != null) {
           return ToggleTurnSkipConsoleCommand.debugConsole.handleKey(-30847, DualNodeDeque.typedCharacter, PowerOfTwoSupport.keyCode);
@@ -27,7 +27,7 @@ final class ValidationState {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard) {
-            ValidationState.a(102);
+            ValidationState.debugConsoleHandlesKey(102);
           }
           tokens = new NodeDeque();
           cursor = new TextCursor(source);

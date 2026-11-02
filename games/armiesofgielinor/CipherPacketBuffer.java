@@ -20,7 +20,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.initializeOpcodeCipher((int[]) null, -64);
     }
 
-    static boolean a(boolean param0, boolean param1) {
+    static boolean exclusiveOr(boolean param0, boolean param1) {
         return param0 ^ param1;
     }
 

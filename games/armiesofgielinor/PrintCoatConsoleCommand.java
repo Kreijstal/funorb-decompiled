@@ -43,7 +43,7 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
         BattleViewportResizeHandler.loginDialog.replaceContent(new GuestPlayConfirmationForm(), (byte) 66);
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         if (param0 <= 111) {
           secondPreviousOpcode = 29;

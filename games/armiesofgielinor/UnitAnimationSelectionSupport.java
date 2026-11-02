@@ -62,7 +62,7 @@ final class UnitAnimationSelectionSupport {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);
           hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);
         }
-        TextSplitSupport.a((byte) -126);
+        TextSplitSupport.closeSessionSocket((byte) -126);
         if (param0) {
           playerProfile = (PlayerProfile) null;
         }

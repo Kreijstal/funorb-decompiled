@@ -281,7 +281,7 @@ final class QuickChatCategoryRepository {
                                     break regionExit1;
                                   default:
                                     LoginCredentials.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
-                                    TextSplitSupport.a((byte) -124);
+                                    TextSplitSupport.closeSessionSocket((byte) -124);
                                     break regionExit1;
                                 }
                               }
@@ -479,7 +479,7 @@ final class QuickChatCategoryRepository {
                   }
                 }
               }
-              ActionRequest.unitModels[var3][0] = var10.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
+              ActionRequest.unitModels[var3][0] = var10.createModel(SummonAction.field_x, SpriteSliceAndBlendSupport.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
               for (var6Lifetime2 = 1; var6Lifetime2 < ActionRequest.field_m[var3].length; var6Lifetime2++) {
                 ActionRequest.unitModels[var3][var6Lifetime2] = null;
               }
@@ -499,7 +499,7 @@ final class QuickChatCategoryRepository {
                 }
               }
             }
-            FullscreenConfirmationDialog.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
+            FullscreenConfirmationDialog.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, SpriteSliceAndBlendSupport.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
             if (((ModelMesh) (FullscreenConfirmationDialog.field_db[var3Lifetime1])).vertexCount == 0) {
               FullscreenConfirmationDialog.field_db[var3Lifetime1] = null;
             }

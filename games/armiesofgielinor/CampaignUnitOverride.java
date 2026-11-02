@@ -63,7 +63,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "error_js5crc");
                 if (var2 != null) {
-                  oq.field_k = uu.a(var2, (byte) -125);
+                  AlternateKeyedLoginCredentials.field_k = uu.a(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(param0 + 132, "error_js5io");
                 if (null != var2) {
@@ -819,7 +819,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_younotmember");
                 if (var2 != null) {
-                  is.field_a = uu.a(var2, (byte) -94);
+                  LeapYearSupport.field_a = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerneedsrating");
                 if (var2 != null) {
@@ -941,7 +941,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_0");
                 if (var2 != null) {
-                  is.field_g = uu.a(var2, (byte) -113);
+                  LeapYearSupport.field_g = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "rule_0_0");
                 if (var2 != null) {
@@ -1773,7 +1773,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "waitingfor_fonts");
                 if (var2 != null) {
-                  is.field_f = uu.a(var2, (byte) 98);
+                  LeapYearSupport.field_f = uu.a(var2, (byte) 98);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_soundeffects");
                 if (var2 != null) {
@@ -1827,7 +1827,7 @@ final class CampaignUnitOverride {
             void runChunk2() throws java.lang.RuntimeException {
                 var2 = NodeIterator.a(50, "loading_music");
                 if (null != var2) {
-                  is.field_d = uu.a(var2, (byte) 119);
+                  LeapYearSupport.field_d = uu.a(var2, (byte) 119);
                 }
                 var2 = NodeIterator.a(50, "loading_instruments");
                 if (null != var2) {
@@ -2358,7 +2358,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mp_cancelrematch");
                 if (var2 != null) {
-                  is.field_c = uu.a(var2, (byte) -99);
+                  LeapYearSupport.field_c = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "mp_cancelrematch_unrated");
                 if (var2 != null) {
@@ -2796,7 +2796,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fixed_size");
                 if (var2 != null) {
-                  oq.field_j = uu.a(var2, (byte) -118);
+                  AlternateKeyedLoginCredentials.field_j = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "graphics_config_resizable");
                 if (null != var2) {
@@ -2828,7 +2828,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "pleasewait_dotdotdot");
                 if (var2 != null) {
-                  fm.field_c = uu.a(var2, (byte) -117);
+                  SpriteSliceAndBlendSupport.field_c = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "serviceunavailable");
                 if (var2 != null) {

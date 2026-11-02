@@ -59,7 +59,7 @@ abstract class AiPlanningStrategy {
           var5 = null;
           if (FloorModSupport.socialListState != 2) {
             AiWeightProfile.field_d.inputEnabled = false;
-            CalendarSupport.field_c.text = fm.field_c;
+            CalendarSupport.field_c.text = SpriteSliceAndBlendSupport.field_c;
             if (1 != FloorModSupport.socialListState) {
               ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = ConsoleParseException.field_a;
               if (var19 != 0) {

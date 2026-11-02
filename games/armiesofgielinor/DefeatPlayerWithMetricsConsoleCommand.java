@@ -15,7 +15,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != -24872) {
-            DefeatPlayerWithMetricsConsoleCommand.g(125);
+            DefeatPlayerWithMetricsConsoleCommand.releaseStatics(125);
           }
           result = new ConsoleValue(ToastMessage.defeatPlayerWithMetricsForConsole(arguments[2].asInt(obfuscationGuard ^ -24870), (byte) -2, arguments[0].asInt(2), arguments[1].asInt(2)));
           return result;
@@ -61,7 +61,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
         try {
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           if (param0 != 1) {
-            DefeatPlayerWithMetricsConsoleCommand.g(111);
+            DefeatPlayerWithMetricsConsoleCommand.releaseStatics(111);
           }
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
@@ -139,7 +139,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
         super(commandName, parameterTypes, description);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 114) {
           RgbSprite var2 = (RgbSprite) null;
           DefeatPlayerWithMetricsConsoleCommand.a(-47, true, -89, 99, true, true, false, -24, false, (RgbSprite) null);

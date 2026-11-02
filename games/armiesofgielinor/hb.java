@@ -59,7 +59,7 @@ final class hb {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  TextSplitSupport.a((byte) -127);
+                  TextSplitSupport.closeSessionSocket((byte) -127);
                 }
                 EmailValidator.outgoingPacket.position = 0;
               }
@@ -109,7 +109,7 @@ final class hb {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  TextSplitSupport.a((byte) -127);
+                  TextSplitSupport.closeSessionSocket((byte) -127);
                 }
                 EmailValidator.outgoingPacket.position = 0;
               }

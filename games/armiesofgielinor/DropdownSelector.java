@@ -94,7 +94,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         }
     }
 
-    final void g(byte param0) {
+    final void notifySelectionChanged(byte param0) {
         if (this.listener instanceof DropdownSelectionListener) {
           ((DropdownSelectionListener) ((Object) this.listener)).selectionChanged(-109, this);
         }
@@ -296,7 +296,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               } else {
                 ek.field_d = AnimationFrameSet.field_E >> 2 & 3;
                 stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);
-                cu.field_a = stackIn_37_0;
+                BitLengthSupport.field_a = stackIn_37_0;
                 stackIn_40_0 = ((2 & AnimationFrameSet.field_E) != 0);
                 SpellDefinitionTable.field_a = stackIn_40_0;
                 if (3 <= ek.field_d) {

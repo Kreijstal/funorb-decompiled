@@ -15,7 +15,7 @@ final class dc extends IntrusiveNode {
     int[] field_t;
     int field_q;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachPointerInput(java.awt.Component param0, int param1) {
         try {
           if (param1 > -25) {
             dc.a(false, false);

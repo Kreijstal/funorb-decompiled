@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lp {
+final class TextWidthSupport {
     static int[] field_c;
     static int[][] mapThemesByArchive;
     static IndexedSprite[] field_b;
 
-    final static int a(String param0, boolean param1, boolean param2) {
+    final static int measureTextWidth(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;

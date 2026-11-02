@@ -113,7 +113,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             }
             if (updateType != 4) {
               LoginCredentials.a((Throwable) null, -66, "F1: " + CampaignProgress.b(false));
-              TextSplitSupport.a((byte) -125);
+              TextSplitSupport.closeSessionSocket((byte) -125);
               return;
             }
             FloorModSupport.socialListState = 1;

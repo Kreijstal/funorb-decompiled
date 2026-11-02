@@ -1125,7 +1125,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder2) &&
                               (decompiledFrameRemainder1)) {
                               this.message = null;
-                              this.a(3, 4, obfuscationGuard + 30685);
+                              this.focusCameraOnTile(3, 4, obfuscationGuard + 30685);
                               this.buttonMode = 2;
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1153,7 +1153,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder4) &&
                               (decompiledFrameRemainder3) &&
                               (decompiledFrameRemainder2)) {
-                              this.d(-4);
+                              this.queueScriptedSummon(-4);
                               this.message = TutorialController.field_f[2];
                               this.buttonMode = 0;
                               if (var4 == 0) {
@@ -1518,7 +1518,7 @@ class BattleTutorial {
                               this.buttonMode = 2;
                               this.message = null;
                               this.spawnEnemyWave(obfuscationGuard ^ -30659);
-                              this.a(13, 17, 26);
+                              this.focusCameraOnTile(13, 17, 26);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1728,7 +1728,7 @@ class BattleTutorial {
         SoftwareRaster.resetClip();
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void focusCameraOnTile(int param0, int param1, int param2) {
         if (param2 != 26) {
           return;
         }
@@ -1830,7 +1830,7 @@ class BattleTutorial {
         this.controller.field_fc = true;
     }
 
-    private final void d(int param0) {
+    private final void queueScriptedSummon(int param0) {
         this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 3, 4, 5, 0, true)));
         int var2 = -44 % ((-70 - param0) / 43);
     }

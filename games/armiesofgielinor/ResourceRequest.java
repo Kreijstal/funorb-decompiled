@@ -10,7 +10,7 @@ abstract class ResourceRequest extends DualLinkedNode {
     volatile boolean pending;
     boolean field_w;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         if (param0 >= -11) {
           field_y = 76;
@@ -38,7 +38,7 @@ abstract class ResourceRequest extends DualLinkedNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 900) {
-            ResourceRequest.e((byte) 15);
+            ResourceRequest.releaseStatics((byte) 15);
           }
           var3 = new CampaignParticipant();
           var3.participantId = packet.readUnsignedByte(0);
@@ -110,7 +110,7 @@ abstract class ResourceRequest extends DualLinkedNode {
             return;
           }
           if (param0 == null) {
-            param0 = param7.createModel(SummonAction.field_x, fm.field_a, var15, var16, var17);
+            param0 = param7.createModel(SummonAction.field_x, SpriteSliceAndBlendSupport.field_a, var15, var16, var17);
           }
           if (param3 != null) {
             param0 = param3.applyCurrentFrame(false, true, false, param0);

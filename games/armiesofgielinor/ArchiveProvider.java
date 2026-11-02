@@ -107,7 +107,7 @@ abstract class ArchiveProvider {
 
     abstract ArchiveIndex getIndex(int obfuscationGuard);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;
