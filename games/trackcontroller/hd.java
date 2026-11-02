@@ -64,7 +64,7 @@ final class hd extends di {
           if (param1 != 426) {
             this.field_u = (String) null;
           }
-          stackIn_9_0 = hf.field_a;
+          stackIn_9_0 = DiskArchiveStore.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

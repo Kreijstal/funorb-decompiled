@@ -3,7 +3,7 @@
  */
 final class lh extends AsyncRequest {
     int field_y;
-    hf field_A;
+    DiskArchiveStore field_A;
     byte[] field_z;
     static ud field_x;
     static long[][] field_B;

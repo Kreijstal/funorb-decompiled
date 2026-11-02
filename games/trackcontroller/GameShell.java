@@ -690,7 +690,7 @@ abstract class GameShell extends GameApplet {
         }
         if (gl.field_I == 3 &&
           l.a(ei.field_i, ha.field_x, (byte) -112, ok.field_G) &&
-          rc.a(-25, ok.field_G)) {
+          RasterBuffer.a(-25, ok.field_G)) {
           nj.b((byte) -98);
           LevelGrid.b((byte) -51);
           qi.field_k = gj.field_a;

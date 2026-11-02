@@ -215,7 +215,7 @@ final class MovingBlock extends IntrusiveNode {
             jc.field_a = l.field_m;
           }
           if (jc.field_a == l.field_m &&
-            hf.a(1, false)) {
+            DiskArchiveStore.a(1, false)) {
             var9Lifetime1 = ne.field_a.readUnsignedByte(16383);
             ne.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -232,7 +232,7 @@ final class MovingBlock extends IntrusiveNode {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                hf.a(va.a(93), false);
+                DiskArchiveStore.a(va.a(93), false);
                 qi.field_c = new Boolean(bg.a(ne.field_a, -2));
                 ne.field_a.position = 0;
               } else {
@@ -244,10 +244,10 @@ final class MovingBlock extends IntrusiveNode {
           }
           if (kl.field_a == jc.field_a) {
             var9Lifetime2 = 2;
-            if (hf.a(var9Lifetime2, false)) {
+            if (DiskArchiveStore.a(var9Lifetime2, false)) {
               var10Lifetime1 = ne.field_a.readUnsignedShort((byte) -94);
               ne.field_a.position = 0;
-              if (hf.a(var10Lifetime1, false)) {
+              if (DiskArchiveStore.a(var10Lifetime1, false)) {
                 var11 = ca.field_a.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   ca.field_a[var12] = ne.field_a.j(-1);

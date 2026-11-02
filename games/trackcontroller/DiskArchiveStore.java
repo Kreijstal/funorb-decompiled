@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hf {
+final class DiskArchiveStore {
     private int field_c;
     static le field_f;
     private BufferedCacheFile field_g;
@@ -37,7 +37,7 @@ final class hf {
           he.a(param9, 0, param3, param6);
           if (param4) {
             var22 = (na) null;
-            hf.a((BitmapFont) null, 9, -29, 58, false, 115, 108, (BitmapFont) null, 122, -19, (na) null, -127, 114, -93, (na) null, -79, 80, -6, (na) null, 93, 114);
+            DiskArchiveStore.a((BitmapFont) null, 9, -29, 58, false, 115, 108, (BitmapFont) null, 122, -19, (na) null, -127, 114, -93, (na) null, -79, 80, -6, (na) null, 93, 114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class hf {
           }
           try {
             if (param1) {
-              hf.a(99);
+              DiskArchiveStore.a(99);
             }
             var2_int = r.field_i.b(0);
             if (var2_int > 0) {
@@ -125,7 +125,7 @@ final class hf {
         }
     }
 
-    final byte[] a(byte param0, int param1) {
+    final byte[] read(byte param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$0 = 0;
@@ -261,7 +261,7 @@ final class hf {
         field_b = (byte[][]) null;
         if (param0 != 6) {
           na var2 = (na) null;
-          hf.a((BitmapFont) null, 27, 98, -128, true, -24, 31, (BitmapFont) null, 112, -78, (na) null, -60, 114, 126, (na) null, -28, 7, 29, (na) null, -35, -108);
+          DiskArchiveStore.a((BitmapFont) null, 27, 98, -128, true, -24, 31, (BitmapFont) null, 112, -78, (na) null, -60, 114, 126, (na) null, -28, 7, 29, (na) null, -35, -108);
         }
         field_a = null;
         field_f = null;
@@ -460,7 +460,7 @@ final class hf {
         }
     }
 
-    hf(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
+    DiskArchiveStore(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
         this.field_g = null;
         this.field_e = 65000;
         this.field_h = null;
@@ -474,7 +474,7 @@ final class hf {
         }
     }
 
-    final boolean a(int param0, int param1, byte[] param2, int param3) {
+    final boolean write(int param0, int param1, byte[] param2, int param3) {
         Object var5 = null;
         Object var5_ref = null;
         RuntimeException var5_ref2 = null;

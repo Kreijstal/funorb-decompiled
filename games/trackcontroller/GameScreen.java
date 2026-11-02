@@ -107,11 +107,11 @@ final class GameScreen {
             var6Lifetime1 = qh.field_b.levelIndex;
             if (RandomAccessCacheFile.field_b == 0 &&
               qh.field_b.levelIndex > 1) {
-              qh.field_b = gj.field_f[-2 + qh.field_b.levelIndex];
+              qh.field_b = gj.levels[-2 + qh.field_b.levelIndex];
             } else {
               if (RandomAccessCacheFile.field_b == 1 &&
-                gj.field_f.length > qh.field_b.levelIndex) {
-                qh.field_b = gj.field_f[qh.field_b.levelIndex];
+                gj.levels.length > qh.field_b.levelIndex) {
+                qh.field_b = gj.levels[qh.field_b.levelIndex];
               }
             }
             var6Lifetime1 = var6Lifetime1 - qh.field_b.levelIndex;
@@ -196,15 +196,15 @@ final class GameScreen {
     private final LevelData a(int param0, int param1, int param2) {
         int var4 = 0;
         param0 -= 359;
-        param2 = param2 - (bk.field_E.field_u + 62);
+        param2 = param2 - (bk.font.field_u + 62);
         if (param0 >= 0 &&
           param0 < 182 &&
           param2 >= 0 &&
           param2 < 390) {
           var4 = qh.field_b.levelIndex - (-((param2 - (mb.field_b - 2600)) / 26) + 100 + 8);
           if (var4 >= 0 &&
-            !(gj.field_f.length <= var4)) {
-            return gj.field_f[var4];
+            !(gj.levels.length <= var4)) {
+            return gj.levels[var4];
           }
         }
         if (param1 == 2600) {
@@ -232,7 +232,7 @@ final class GameScreen {
         if (param0 != -114) {
           this.field_d = 37;
         }
-        var10 = bk.field_E;
+        var10 = bk.font;
         var11 = var10;
         UiWidget.field_z[2].e(-UiWidget.field_z[2].field_t + 640 >> 1, 1);
         var3 = 74;
@@ -317,7 +317,7 @@ final class GameScreen {
         SoftwareRasterizer.f(386, 75, 102, 284, 3352864);
         if (jj.s(23)) {
           var2 = nd.field_I;
-          bk.field_E.b(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
+          bk.font.b(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
         } else {
           if (null == SpriteState.field_w) {
             SpriteState.field_w = hj.a(3, 10, 1, 10, (byte) -102);
@@ -367,10 +367,10 @@ final class GameScreen {
                       var11 = 1;
                     }
                     if (var7 < 10) {
-                      bk.field_E.a(var7 + 1 + ". ", 181, var6, var11, -1);
+                      bk.font.a(var7 + 1 + ". ", 181, var6, var11, -1);
                     }
-                    bk.field_E.c((String) (var10), 181, var6, var11, -1);
-                    bk.field_E.a(Integer.toString(var8), 487, var6, var11, -1);
+                    bk.font.c((String) (var10), 181, var6, var11, -1);
+                    bk.font.a(Integer.toString(var8), 487, var6, var11, -1);
                     if (var4 == var7 &&
                       he.field_f[this.field_c] != null) {
                       var12 = he.field_f[this.field_c];
@@ -387,7 +387,7 @@ final class GameScreen {
           } else {
             var2 = f.field_d;
           }
-          bk.field_E.b(ad.field_s, 320, 406, 0, -1);
+          bk.font.b(ad.field_s, 320, 406, 0, -1);
         }
         stackIn_54_0Lifetime1 = param0;
         stackIn_54_1Lifetime1 = -4;
@@ -395,7 +395,7 @@ final class GameScreen {
           this.a(52, false, false);
         }
         var3 = 224;
-        bk.field_E.b(var2, 255, var3, 0, -1);
+        bk.font.b(var2, 255, var3, 0, -1);
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4) {
@@ -468,15 +468,15 @@ final class GameScreen {
             stackIn_52_0 = kg.field_e;
             stackIn_53_1 = (!fi.field_i) ? 1 : 0;
             var10 = stackIn_52_0[stackIn_53_1];
-            var11 = bk.field_E.stringWidth(var7) - (-bk.field_E.charWidth(' ') - var10.field_s);
+            var11 = bk.font.stringWidth(var7) - (-bk.font.charWidth(' ') - var10.field_s);
             var12 = param1 + (156 - var11 >> 1);
-            bk.field_E.c(var7, var12, -2 + (bk.field_E.field_G + param2), var9Lifetime1, -1);
+            bk.font.c(var7, var12, -2 + (bk.font.field_G + param2), var9Lifetime1, -1);
             var10.e(var12 - (-var11 + var10.field_s), (1 - var10.field_v + 26 >> 1) + param2);
           } else {
-            bk.field_E.b(var7, 78 + param1, param2 - (-bk.field_E.field_G + 2), var9Lifetime1, -1);
+            bk.font.b(var7, 78 + param1, param2 - (-bk.font.field_G + 2), var9Lifetime1, -1);
           }
         } else {
-          bk.field_E.c(var7, param1 + 13, bk.field_E.field_G + param2 - 2, var9Lifetime1, -1);
+          bk.font.c(var7, param1 + 13, bk.font.field_G + param2 - 2, var9Lifetime1, -1);
           if (!this.a((byte) 60, var6)) {
             stackIn_42_0 = (!param0) ? 4473924 : 12303291;
           } else {
@@ -714,28 +714,28 @@ final class GameScreen {
                     if (kg.field_d == 98) {
                       RandomAccessCacheFile.field_b = 2;
                       if (qh.field_b.levelIndex > 1) {
-                        qh.field_b = gj.field_f[-2 + qh.field_b.levelIndex];
+                        qh.field_b = gj.levels[-2 + qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (99 == kg.field_d) {
                       RandomAccessCacheFile.field_b = 2;
-                      if (gj.field_f.length > qh.field_b.levelIndex) {
-                        qh.field_b = gj.field_f[qh.field_b.levelIndex];
+                      if (gj.levels.length > qh.field_b.levelIndex) {
+                        qh.field_b = gj.levels[qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (RandomAccessCacheFile.field_b == 0 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
                       if (qh.field_b.levelIndex > 1) {
-                        qh.field_b = gj.field_f[-2 + qh.field_b.levelIndex];
+                        qh.field_b = gj.levels[-2 + qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (RandomAccessCacheFile.field_b == 1 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
-                      if (qh.field_b.levelIndex < gj.field_f.length) {
-                        qh.field_b = gj.field_f[qh.field_b.levelIndex];
+                      if (qh.field_b.levelIndex < gj.levels.length) {
+                        qh.field_b = gj.levels[qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
@@ -748,23 +748,23 @@ final class GameScreen {
                         if (var4 < 0) {
                           var4 = 0;
                         }
-                        qh.field_b = gj.field_f[var4];
+                        qh.field_b = gj.levels[var4];
                         this.field_e.field_a = false;
                       }
                       if (kg.field_d == 105) {
                         var4Lifetime1 = 7 + qh.field_b.levelIndex;
-                        if (var4Lifetime1 >= gj.field_f.length) {
-                          var4Lifetime1 = gj.field_f.length - 1;
+                        if (var4Lifetime1 >= gj.levels.length) {
+                          var4Lifetime1 = gj.levels.length - 1;
                         }
-                        qh.field_b = gj.field_f[var4Lifetime1];
+                        qh.field_b = gj.levels[var4Lifetime1];
                         this.field_e.field_a = false;
                       }
                       if (kg.field_d == 102) {
                         this.field_e.field_a = false;
-                        qh.field_b = gj.field_f[0];
+                        qh.field_b = gj.levels[0];
                       }
                       if (kg.field_d == 103) {
-                        qh.field_b = gj.field_f[gj.field_f.length - 1];
+                        qh.field_b = gj.levels[gj.levels.length - 1];
                         this.field_e.field_a = false;
                       }
                       if (84 == kg.field_d &&
@@ -907,33 +907,33 @@ final class GameScreen {
           var7 = this.field_d;
         }
         if (var7 != -1) {
-          bk.field_E.b(wa.field_k[var7], 320, 224, 0, -1);
+          bk.font.b(wa.field_k[var7], 320, 224, 0, -1);
           if ((1 << var7 & var5) != 0) {
-            bk.field_E.b(mb.field_a, 320, 250, 0, -1);
+            bk.font.b(mb.field_a, 320, 250, 0, -1);
           } else {
-            bk.field_E.b(kb.field_c, 320, 250, 7, -1);
+            bk.font.b(kb.field_c, 320, 250, 7, -1);
           }
           if ((var5 & 1 << var7) != 0) {
             bb.field_b[var7].e(256, 282);
           } else {
             vj.field_a.e(256, 282);
           }
-          bk.field_E.a(gj.field_b[var7], 50, 302 - bk.field_E.field_G, 201, 1000, 0, -1, 0, 0, 26);
+          bk.font.a(gj.field_b[var7], 50, 302 - bk.font.field_G, 201, 1000, 0, -1, 0, 0, 26);
           var8Lifetime1 = 302;
-          bk.field_E.c(kc.field_a + 100 * rd.field_f[var7], 410, var8Lifetime1, 0, -1);
+          bk.font.c(kc.field_a + 100 * rd.field_f[var7], 410, var8Lifetime1, 0, -1);
           var3Lifetime1 = 410;
           var8Lifetime1 += 26;
-          bk.field_E.c(di.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
-          var3Lifetime1 = var3Lifetime1 + bk.field_E.stringWidth(di.field_l);
+          bk.font.c(di.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
+          var3Lifetime1 = var3Lifetime1 + bk.font.stringWidth(di.field_l);
           for (var9Lifetime1 = 0; rd.field_f[var7] > var9Lifetime1; var9Lifetime1++) {
-            mc.field_E.e(var3Lifetime1, -bk.field_E.field_G + var8Lifetime1);
+            mc.field_E.e(var3Lifetime1, -bk.font.field_G + var8Lifetime1);
             var3Lifetime1 = var3Lifetime1 + mc.field_E.field_t / 3;
           }
           return;
         }
-        bk.field_E.b(NodeHashTable.field_a, 320, 302, 0, -1);
+        bk.font.b(NodeHashTable.field_a, 320, 302, 0, -1);
         if (jj.s(39)) {
-          bk.field_E.b(SecondaryNodeDequeIterator.field_b, 320, 354, 0, -1);
+          bk.font.b(SecondaryNodeDequeIterator.field_b, 320, 354, 0, -1);
         }
         return;
     }
@@ -1101,7 +1101,7 @@ final class GameScreen {
             }
           } else {
             cl.a(nd.field_L, -10 + this.e((byte) 62), 20 + mf.field_f[this.field_c].length * mf.field_d[this.field_c], -10 + mf.field_h[this.field_c], 176, 4);
-            cl.a(nd.field_L, 349, 410, 52 + bk.field_E.field_u, 212, 4);
+            cl.a(nd.field_L, 349, 410, 52 + bk.font.field_u, 212, 4);
           }
         } else {
           cl.a(ha.field_m, 6, 436, 38, 436, 4);
@@ -1164,8 +1164,8 @@ final class GameScreen {
                         if (this.field_c != 14) {
                           break scanLoop1;
                         }
-                        var4 = 154 - (-bk.field_E.field_G + 2);
-                        bk.field_E.b(ui.field_n, 320, var4, 5, -1);
+                        var4 = 154 - (-bk.font.field_G + 2);
+                        bk.font.b(ui.field_n, 320, var4, 5, -1);
                         break scanLoop1;
                       }
                       UiWidget.field_z[3].e(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
@@ -1178,7 +1178,7 @@ final class GameScreen {
                         } else {
                           var4_ref_String = GameKeyHandler.field_f;
                         }
-                        bk.field_E.a(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
+                        bk.font.a(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
                       } else {
                         qh.field_b.a(100, (byte) -127, 67);
                         fd.field_d.e(-367, -162);
@@ -1194,9 +1194,9 @@ final class GameScreen {
                       var5 = this.a(kf.mouseX, 2600, fg.mouseY);
                       var6 = 269 - (-(26 * (1 - qh.field_b.levelIndex)) - mb.field_b);
                       var7 = 359;
-                      var8 = 62 + bk.field_E.field_u;
+                      var8 = 62 + bk.font.field_u;
                       SoftwareRasterizer.e(var7, var8, var7 + 182 + 10, var8 + 390);
-                      var9 = gj.field_f;
+                      var9 = gj.levels;
                       for (var10 = 0; var9.length > var10; var10++) {
                         var11 = var9[var10];
                         var12Lifetime1 = var11.name;
@@ -1217,8 +1217,8 @@ final class GameScreen {
                           var5 == var11) {
                           var13 = 1;
                         }
-                        bk.field_E.c(var12Lifetime1, 390, var6, var13, -1);
-                        bk.field_E.a(var11.levelIndex + ". ", 390, var6, var13, -1);
+                        bk.font.c(var12Lifetime1, 390, var6, var13, -1);
+                        bk.font.a(var11.levelIndex + ". ", 390, var6, var13, -1);
                         var6 += 26;
                       }
                       SoftwareRasterizer.d();
@@ -1228,23 +1228,23 @@ final class GameScreen {
                     break scanLoop1;
                   }
                   UiWidget.field_z[0].e(-UiWidget.field_z[0].field_t + 640 >> 1, 1);
-                  bk.field_E.b(qg.field_b, 320, bk.field_E.field_G + 154, 5, -1);
-                  stackIn_99_0 = bk.field_E;
+                  bk.font.b(qg.field_b, 320, bk.font.field_G + 154, 5, -1);
+                  stackIn_99_0 = bk.font;
                   stackIn_100_1 = (0 != oe.field_e);
                   stackIn_103_2 = (0 != ua.field_L.score);
                   stackIn_106_3 = (0 != ua.field_L.score);
-                  ((BitmapFont) (Object) stackIn_99_0).b(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + bk.field_E.field_G, 5, -1);
-                  stackIn_108_0 = bk.field_E;
+                  ((BitmapFont) (Object) stackIn_99_0).b(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + bk.font.field_G, 5, -1);
+                  stackIn_108_0 = bk.font;
                   stackIn_109_1 = (0 != ua.field_L.score);
                   stackIn_112_2 = (oe.field_e != 0);
                   stackIn_115_3 = (ua.field_L.score != 0);
-                  ((BitmapFont) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.field_E.field_G + 258, 5, -1);
-                  stackIn_117_0 = bk.field_E;
+                  ((BitmapFont) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.font.field_G + 258, 5, -1);
+                  stackIn_117_0 = bk.font;
                   stackIn_118_1 = (ua.field_L.score != 0);
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
                   stackIn_124_4 = (ua.field_L.score != 0);
-                  ((BitmapFont) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.field_E.field_G + 310, 5, -1);
+                  ((BitmapFont) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.font.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
                 UiWidget.field_z[1].e(-UiWidget.field_z[1].field_t + 640 >> 1, 1);
@@ -1343,7 +1343,7 @@ final class GameScreen {
                   oj.a(-127);
                 } else {
                   var6 = param1 ? 1 : 0;
-                  oi.a(26, DualLinkNode.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, DualLinkNode.field_l, -3748, var6 != 0, 18, 0, 0);
+                  oi.a(26, DualLinkNode.field_l, 26, bk.font, bk.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, var6 != 0, 18, 0, 0);
                 }
               }
               decompiledFrameRemainder0 = false;

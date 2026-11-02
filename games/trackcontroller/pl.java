@@ -203,10 +203,10 @@ final class pl {
           } else if (var2 == 1) {
             var3 = var27.readUnsignedShort((byte) -127);
             var4_long = var27.readLong((byte) 108);
-            var6_ref_aj = (aj) (ub.field_e.first(2));
+            var6_ref_aj = (aj) (ImageProducerRasterBuffer.field_e.first(2));
             while (var6_ref_aj != null) {
               if (~var6_ref_aj.field_q != ~var3) {
-                var6_ref_aj = (aj) (ub.field_e.next(param0 ^ -3580));
+                var6_ref_aj = (aj) (ImageProducerRasterBuffer.field_e.next(param0 ^ -3580));
                 continue;
               }
               break;

@@ -26,10 +26,10 @@ final class rf {
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (aj) (ub.field_e.first(param1 + 2));
+          var4 = (aj) (ImageProducerRasterBuffer.field_e.first(param1 + 2));
           while (var4 != null) {
             we.a(param0, var4, (byte) -47);
-            var4 = (aj) (ub.field_e.next(10));
+            var4 = (aj) (ImageProducerRasterBuffer.field_e.next(10));
           }
           if (param1 != 0) {
             field_d = (String) null;

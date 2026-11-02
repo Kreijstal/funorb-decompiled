@@ -21,7 +21,7 @@ final class wf {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hf.field_f != fd.field_h) {
+          if (DiskArchiveStore.field_f != fd.field_h) {
             return false;
           }
           var8 = new og(gl.field_E, param4);

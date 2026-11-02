@@ -3,7 +3,7 @@
  */
 final class gj {
     static int field_c;
-    static LevelData[] field_f;
+    static LevelData[] levels;
     static String[] field_b;
     static String field_a;
     static String field_d;
@@ -81,7 +81,7 @@ final class gj {
 
     public static void b(byte param0) {
         int var1 = 67 / ((param0 - 10) / 44);
-        field_f = null;
+        levels = null;
         field_a = null;
         field_e = null;
         field_d = null;

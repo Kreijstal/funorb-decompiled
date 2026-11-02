@@ -111,7 +111,7 @@ public final class TrackController extends GameShell {
               if (ib.field_a == -4) {
                 stackIn_21_0 = (jj.s(96)) ? 0 : 1;
                 ib.field_a = stackIn_21_0;
-                oi.a(26, DualLinkNode.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
+                oi.a(26, DualLinkNode.field_l, 26, bk.font, bk.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
               }
               if (ib.field_a == -3) {
                 if (jj.s(123)) {
@@ -282,7 +282,7 @@ public final class TrackController extends GameShell {
             nc.a(stackIn_54_0, -131);
           }
           if (nf.field_f) {
-            bk.field_E.c(Integer.toString(dh.field_p), 10, 40, 0, -1);
+            bk.font.c(Integer.toString(dh.field_p), 10, 40, 0, -1);
           }
           qd.a((java.awt.Canvas) (var7), 0, 0, param0 + 2741);
           return;
@@ -398,7 +398,7 @@ public final class TrackController extends GameShell {
         SocketArchiveRequestConnection.e(80);
         mb.b((byte) -36);
         hi.c((byte) -81);
-        hf.a(6);
+        DiskArchiveStore.a(6);
         lh.c((byte) -44);
         CachedArchiveSource.c(-3);
         RandomAccessCacheFile.b((byte) -121);
@@ -448,7 +448,7 @@ public final class TrackController extends GameShell {
         rf.a(0);
         SocketConnector.a(-88);
         dj.a(-60);
-        ub.a((byte) 12);
+        ImageProducerRasterBuffer.a((byte) 12);
         ca.a(118);
         ji.a((byte) -64);
         wl.d(-99);
@@ -604,7 +604,7 @@ public final class TrackController extends GameShell {
                 } else {
                   var2 = rk.s(-1);
                   if (var2 == 3) {
-                    oi.a(26, DualLinkNode.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
+                    oi.a(26, DualLinkNode.field_l, 26, bk.font, bk.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
                   } else {
                     if (2 != var2) {
                       if (var2 == 4) {
@@ -833,7 +833,7 @@ public final class TrackController extends GameShell {
                             var3_ref_byte__ = si.field_c.a("", param0 ^ -468, "tcfont");
                             var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 - 341);
                             var5_ref_oh = (BitmapFont) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
-                            bk.field_E = var5_ref_oh;
+                            bk.font = var5_ref_oh;
                             var33 = ((de) (var5_ref_oh)).field_M[0];
                             var19 = var33;
                             var6_ref_int__ = var19;
@@ -971,12 +971,12 @@ public final class TrackController extends GameShell {
             }
             if (null != rl.field_D) {
               mj.a(208);
-              gj.field_f = new LevelData[31];
+              gj.levels = new LevelData[31];
               var40 = rl.field_D.a("", param0 ^ -468, "levels.txt");
               var32 = new BufferedReader((Reader) ((Object) new InputStreamReader((InputStream) ((Object) new ByteArrayInputStream(var40)))));
               try {
                 for (var5 = 0; 31 > var5; var5++) {
-                  gj.field_f[var5] = new LevelData(1 + var5, var32.readLine());
+                  gj.levels[var5] = new LevelData(1 + var5, var32.readLine());
                 }
                 var32.close();
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -985,7 +985,7 @@ public final class TrackController extends GameShell {
                 throw new RuntimeException();
               }
               AsyncRequest.field_p = new GameScreen[17];
-              qh.field_b = gj.field_f[0];
+              qh.field_b = gj.levels[0];
               rl.field_D = null;
               for (var5 = 0; var5 < 17; var5++) {
                 AsyncRequest.field_p[var5] = new GameScreen(this, var5);
@@ -1004,7 +1004,7 @@ public final class TrackController extends GameShell {
             qi.d(54);
             return true;
           }
-          var3 = bk.field_E.field_u + bk.field_E.field_G;
+          var3 = bk.font.field_u + bk.font.field_G;
           mc.field_E = new Sprite(var3, var3);
           mc.field_E.a();
           dc.field_p.a(0, 0, var3, var3);
@@ -1135,20 +1135,20 @@ public final class TrackController extends GameShell {
           var17.field_o = 178;
           var27.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.field_E.b(na.field_d, 78, bk.field_E.field_G, 0, -1);
-          ba.field_b.b(bl.field_d, 78, ba.field_b.field_G + bk.field_E.field_G, 15252224, -1);
+          bk.font.b(na.field_d, 78, bk.font.field_G, 0, -1);
+          ba.field_b.b(bl.field_d, 78, ba.field_b.field_G + bk.font.field_G, 15252224, -1);
           var28.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.field_E.b(na.field_d, 78, bk.field_E.field_G, 1, -1);
-          ba.field_b.b(bl.field_d, 78, bk.field_E.field_G + ba.field_b.field_G, 15252224, -1);
+          bk.font.b(na.field_d, 78, bk.font.field_G, 1, -1);
+          ba.field_b.b(bl.field_d, 78, bk.font.field_G + ba.field_b.field_G, 15252224, -1);
           var11.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.field_E.b(ca.field_d, 78, bk.field_E.field_G, 0, -1);
-          ba.field_b.b(th.field_i, 78, ba.field_b.field_G + bk.field_E.field_G, 15252224, -1);
+          bk.font.b(ca.field_d, 78, bk.font.field_G, 0, -1);
+          ba.field_b.b(th.field_i, 78, ba.field_b.field_G + bk.font.field_G, 15252224, -1);
           var12.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.field_E.b(ca.field_d, 78, bk.field_E.field_G, 1, -1);
-          ba.field_b.b(th.field_i, 78, bk.field_E.field_G + ba.field_b.field_G, 15252224, -1);
+          bk.font.b(ca.field_d, 78, bk.font.field_G, 1, -1);
+          ba.field_b.b(th.field_i, 78, bk.font.field_G + ba.field_b.field_G, 15252224, -1);
           ia.field_b.a(-91);
           sg.field_a = null;
           qi.d(param0 - 407);

@@ -24,7 +24,7 @@ abstract class fh {
             if (null != kb.field_d.field_t) {
               sd.field_c = new BufferedCacheFile(kb.field_d.field_t, 5200, 0);
               kb.field_d.field_t = null;
-              var6 = new hf(255, sd.field_c, new BufferedCacheFile(kb.field_d.field_v, 12000, 0), 2097152);
+              var6 = new DiskArchiveStore(255, sd.field_c, new BufferedCacheFile(kb.field_d.field_v, 12000, 0), 2097152);
             }
             if (null != sd.field_c) {
               if (null == kh.field_e) {
@@ -34,9 +34,9 @@ abstract class fh {
                 kh.field_e[param1] = new BufferedCacheFile(kb.field_d.field_q[param1], 12000, 0);
                 kb.field_d.field_q[param1] = null;
               }
-              var7 = new hf(param1, sd.field_c, kh.field_e[param1], 2097152);
+              var7 = new DiskArchiveStore(param1, sd.field_c, kh.field_e[param1], 2097152);
             }
-            var8 = ij.field_d.a(103, param1, (hf) (var6), param3, (hf) (var7));
+            var8 = ij.field_d.a(103, param1, (DiskArchiveStore) (var6), param3, (DiskArchiveStore) (var7));
             var9 = 71 % ((param5 + 49) / 56);
             if (param2) {
               var8.b(6054);
@@ -88,36 +88,36 @@ abstract class fh {
         if (param0 != 520) {
           field_e = (oi) null;
           if (-1 == hd.field_o) {
-            if (!hf.a(1, false)) {
+            if (!DiskArchiveStore.a(1, false)) {
               return false;
             }
             hd.field_o = ne.field_a.readUnsignedByte(16383);
             ne.field_a.position = 0;
           }
           if (hd.field_o == -2) {
-            if (!hf.a(2, false)) {
+            if (!DiskArchiveStore.a(2, false)) {
               return false;
             }
             hd.field_o = ne.field_a.readUnsignedShort((byte) -76);
             ne.field_a.position = 0;
           }
-          return hf.a(hd.field_o, false);
+          return DiskArchiveStore.a(hd.field_o, false);
         }
         if (-1 == hd.field_o) {
-          if (!hf.a(1, false)) {
+          if (!DiskArchiveStore.a(1, false)) {
             return false;
           }
           hd.field_o = ne.field_a.readUnsignedByte(16383);
           ne.field_a.position = 0;
         }
         if (hd.field_o == -2) {
-          if (!hf.a(2, false)) {
+          if (!DiskArchiveStore.a(2, false)) {
             return false;
           }
           hd.field_o = ne.field_a.readUnsignedShort((byte) -76);
           ne.field_a.position = 0;
         }
-        return hf.a(hd.field_o, false);
+        return DiskArchiveStore.a(hd.field_o, false);
     }
 
     static {

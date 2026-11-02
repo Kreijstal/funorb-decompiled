@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ia {
-    static rc field_b;
+    static RasterBuffer field_b;
     static aa field_a;
 
     public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         if (!param0) {
-          field_b = (rc) null;
+          field_b = (RasterBuffer) null;
         }
     }
 
@@ -31,7 +31,7 @@ final class ia {
             stackIn_3_0 = 79;
             return stackIn_3_0;
           }
-          gl.field_E.a(hf.field_d, true, param0, LevelView.field_z);
+          gl.field_E.a(DiskArchiveStore.field_d, true, param0, LevelView.field_z);
           gl.field_E.b(true);
           while (mh.e(127)) {
             gl.field_E.a(md.field_d, 3931, kg.field_d);

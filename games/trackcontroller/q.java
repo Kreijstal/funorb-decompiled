@@ -76,7 +76,7 @@ final class q {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            rc.a(78, var1);
+            RasterBuffer.a(78, var1);
             LevelView.field_C.a(param0, -var2 + var1.position);
           }
           return;

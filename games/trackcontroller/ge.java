@@ -205,7 +205,7 @@ final class ge extends td implements jg, ButtonListener {
           while (true) {
             if (vd.field_K < 0) {
               ne.field_a.position = 0;
-              if (!hf.a(1, false)) {
+              if (!DiskArchiveStore.a(1, false)) {
                 return false;
               }
               vd.field_K = ne.field_a.e(false);

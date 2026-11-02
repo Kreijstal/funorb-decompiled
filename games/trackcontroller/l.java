@@ -89,7 +89,7 @@ final class l extends di {
             field_m = (ba) null;
           }
           if (this.a(-124, param0) != ef.field_b) {
-            stackIn_6_0 = hf.field_a;
+            stackIn_6_0 = DiskArchiveStore.field_a;
             return stackIn_6_0;
           }
           stackIn_4_0 = ob.field_v;

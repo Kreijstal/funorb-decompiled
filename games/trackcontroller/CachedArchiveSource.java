@@ -9,7 +9,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private ArchiveRequestConnection field_g;
     static Sprite field_p;
     private int field_m;
-    private hf field_w;
+    private DiskArchiveStore field_w;
     static oi field_f;
     static boolean field_x;
     private byte[] field_d;
@@ -17,7 +17,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private ArchiveIndex field_e;
     private sd field_i;
     private byte[] field_u;
-    private hf field_n;
+    private DiskArchiveStore field_n;
     private boolean field_j;
     private boolean field_z;
     private IntrusiveDeque field_s;
@@ -28,7 +28,7 @@ final class CachedArchiveSource extends ArchiveSource {
 
     final int b(int param0, int param1) {
         if (param1 != -21770) {
-          this.field_w = (hf) null;
+          this.field_w = (DiskArchiveStore) null;
         }
         AsyncRequest var3 = (AsyncRequest) (this.field_v.get(8434, (long)param0));
         if (var3 == null) {
@@ -112,7 +112,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] var4 = var3.g(param0 + 513);
         var3.unlink(-86);
         if (param0 != -1) {
-          this.field_n = (hf) null;
+          this.field_n = (DiskArchiveStore) null;
         }
         return var4;
     }
@@ -559,7 +559,7 @@ final class CachedArchiveSource extends ArchiveSource {
 
     }
 
-    CachedArchiveSource(int param0, hf param1, hf param2, ArchiveRequestConnection param3, sd param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, DiskArchiveStore param1, DiskArchiveStore param2, ArchiveRequestConnection param3, sd param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

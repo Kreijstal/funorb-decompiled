@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ub extends rc implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_f;
     static IntrusiveDeque field_e;
     private java.awt.image.ImageConsumer field_g;
@@ -13,7 +13,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
           return;
         }
         int var2 = -102 % ((15 - param0) / 43);
-        this.field_g.setPixels(0, 0, this.field_c, this.field_a, this.field_f, this.field_b, 0, this.field_c);
+        this.field_g.setPixels(0, 0, this.field_c, this.field_a, this.field_f, this.pixels, 0, this.field_c);
         this.field_g.imageComplete(2);
     }
 
@@ -26,7 +26,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
-          this.field_b = new int[param3 * param0 + 1];
+          this.pixels = new int[param3 * param0 + 1];
           this.field_c = param0;
           this.field_a = param3;
           this.field_f = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
@@ -134,7 +134,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    ub() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

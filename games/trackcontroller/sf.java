@@ -1813,7 +1813,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "create_emailvalid");
                 if (null != var2) {
-                  hf.field_a = ta.a(32200, var2);
+                  DiskArchiveStore.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_account_success");
                 if (null != var2) {

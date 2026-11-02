@@ -108,12 +108,12 @@ final class oe {
           sa.field_Q.a(false, true);
           ak.a(param3, param1, param2, 127);
           jh.a(-128);
-          fd.field_h = hf.field_f;
+          fd.field_h = DiskArchiveStore.field_f;
           if (param4 != -28484) {
             CharSequence var6 = (CharSequence) null;
             oe.a((CharSequence) null, (byte) 110, true);
           }
-          rk.field_X = hf.field_f;
+          rk.field_X = DiskArchiveStore.field_f;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

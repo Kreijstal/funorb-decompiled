@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-abstract class rc {
-    int[] field_b;
+abstract class RasterBuffer {
+    int[] pixels;
     int field_c;
     int field_a;
     java.awt.Image field_d;
@@ -92,7 +92,7 @@ abstract class rc {
             }
             if (param0 < 45) {
               var13 = (la) null;
-              rc.a(92, (la) null);
+              RasterBuffer.a(92, (la) null);
             }
             var4 = param1.position;
             param1.writeInt(false, var18.field_w);
@@ -230,7 +230,7 @@ abstract class rc {
           java.awt.Graphics var3 = (java.awt.Graphics) null;
           this.a(-118, (java.awt.Graphics) null, -61, 99);
         }
-        SoftwareRasterizer.a(this.field_b, this.field_c, this.field_a);
+        SoftwareRasterizer.a(this.pixels, this.field_c, this.field_a);
     }
 
     final static boolean a(int param0, Archive param1) {

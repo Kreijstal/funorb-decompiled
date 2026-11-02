@@ -15,8 +15,8 @@ final class jf extends IntrusiveNode {
         if (param0 != 640) {
           return;
         }
-        rk.field_X = hf.field_f;
-        fd.field_h = hf.field_f;
+        rk.field_X = DiskArchiveStore.field_f;
+        fd.field_h = DiskArchiveStore.field_f;
     }
 
     public static void d(int param0) {

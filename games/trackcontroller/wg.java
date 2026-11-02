@@ -165,7 +165,7 @@ final class wg {
         }
     }
 
-    final CachedArchiveSource a(int param0, int param1, hf param2, boolean param3, hf param4) {
+    final CachedArchiveSource a(int param0, int param1, DiskArchiveStore param2, boolean param3, DiskArchiveStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

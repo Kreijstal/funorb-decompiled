@@ -24,7 +24,7 @@ final class pi extends fh {
           if (param17 != 0) {
             return;
           }
-          hf.a(param19, param5, param3, param10, false, param11, param20, param14, param15, param7, new na(param12), param0, param1, param2, new na(param8), param6, param13, param9, new na(param4), param18, param16);
+          DiskArchiveStore.a(param19, param5, param3, param10, false, param11, param20, param14, param15, param7, new na(param12), param0, param1, param2, new na(param8), param6, param13, param9, new na(param4), param18, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

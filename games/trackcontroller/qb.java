@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qb extends rc {
+final class qb extends RasterBuffer {
     private java.awt.Component field_e;
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
@@ -21,10 +21,10 @@ final class qb extends rc {
         java.awt.image.DirectColorModel var6Lifetime1;
         java.awt.image.WritableRaster var7Lifetime1;
         if (param1 <= -37) {
-          this.field_b = new int[param0 * param3 + 1];
+          this.pixels = new int[param0 * param3 + 1];
           this.field_a = param3;
           this.field_c = param0;
-          var5 = new java.awt.image.DataBufferInt(this.field_b, this.field_b.length);
+          var5 = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_a), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_d = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
@@ -33,10 +33,10 @@ final class qb extends rc {
           return;
         }
         this.field_e = (java.awt.Component) null;
-        this.field_b = new int[param0 * param3 + 1];
+        this.pixels = new int[param0 * param3 + 1];
         this.field_a = param3;
         this.field_c = param0;
-        var5Lifetime1 = new java.awt.image.DataBufferInt(this.field_b, this.field_b.length);
+        var5Lifetime1 = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
         var6Lifetime1 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         var7Lifetime1 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6Lifetime1)).createCompatibleSampleModel(this.field_c, this.field_a), (java.awt.image.DataBuffer) ((Object) var5Lifetime1), (java.awt.Point) null);
         this.field_d = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6Lifetime1), var7Lifetime1, false, new Hashtable()));

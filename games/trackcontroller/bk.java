@@ -7,7 +7,7 @@ final class bk extends td implements a, ButtonListener {
     private ButtonWidget field_H;
     private lf field_K;
     static String field_G;
-    static BitmapFont field_E;
+    static BitmapFont font;
     nd field_I;
     private ButtonWidget field_F;
 
@@ -304,7 +304,7 @@ final class bk extends td implements a, ButtonListener {
     }
 
     public static void k(int param0) {
-        field_E = null;
+        font = null;
         if (param0 >= -71) {
           return;
         }

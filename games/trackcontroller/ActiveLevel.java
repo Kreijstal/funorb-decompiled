@@ -25,7 +25,7 @@ final class ActiveLevel extends LevelGrid {
     private int field_T;
     private int field_s;
     private int field_G;
-    private LevelData field_I;
+    private LevelData level;
     private int field_E;
     private int field_t;
     private int field_p;
@@ -206,12 +206,12 @@ final class ActiveLevel extends LevelGrid {
           fe.a(false, Model.field_P[2], param0 ^ 503);
           si.$cfr$intArgs$a$e9dea5688aa5(-68, 3);
           var4 = this.field_X >> 1;
-          var5 = this.field_I.field_v + var4;
+          var5 = this.level.field_v + var4;
           this.field_R = this.field_R + var5;
           this.score = this.score + var5;
-          this.field_y = dh.a((byte) -127, new String[]{Integer.toString(this.field_I.field_v), Integer.toString(var4), Integer.toString(var5)}, ob.field_o);
+          this.field_y = dh.a((byte) -127, new String[]{Integer.toString(this.level.field_v), Integer.toString(var4), Integer.toString(var5)}, ob.field_o);
           this.field_Y = 156;
-          var6 = bk.field_E.stringWidth(this.field_y) + 4;
+          var6 = bk.font.stringWidth(this.field_y) + 4;
           if (this.field_Y < var6) {
             this.field_Y = var6 + var6 % 26;
             this.field_Y = this.field_Y - this.field_Y % 26;
@@ -223,7 +223,7 @@ final class ActiveLevel extends LevelGrid {
             this.score = this.score + var5;
             this.field_R = this.field_R + var5;
             this.field_p = this.field_p + 1;
-            var6Lifetime1 = 4 + bk.field_E.stringWidth(this.field_L);
+            var6Lifetime1 = 4 + bk.font.stringWidth(this.field_L);
             if (this.field_Y < var6Lifetime1) {
               this.field_Y = var6Lifetime1 % 26 + var6Lifetime1;
               this.field_Y = this.field_Y - this.field_Y % 26;
@@ -233,16 +233,16 @@ final class ActiveLevel extends LevelGrid {
             this.field_W = this.field_W + 1;
           }
           this.field_t = -this.field_Y;
-          if (this.field_I.levelIndex == gj.field_f.length) {
+          if (this.level.levelIndex == gj.levels.length) {
             this.g(63);
           }
           if (Math.abs(this.score) > this.field_T) {
             vd.b(-1, 10, 23636);
           }
           this.field_A.a(-1, this.field_A.field_a, (byte) 100);
-          if (ArchiveIndex.field_i + 1 == this.field_I.levelIndex) {
-            ArchiveIndex.field_i = this.field_I.levelIndex;
-            var7_ref_dh = new dh(0, -1 + this.field_I.levelIndex, this.field_R, this.field_bb, this.field_cb, this.field_E);
+          if (ArchiveIndex.field_i + 1 == this.level.levelIndex) {
+            ArchiveIndex.field_i = this.level.levelIndex;
+            var7_ref_dh = new dh(0, -1 + this.level.levelIndex, this.field_R, this.field_bb, this.field_cb, this.field_E);
             if (!jj.s(param0 - 205)) {
               ij.a(var7_ref_dh, 5, -124);
             } else {
@@ -481,9 +481,9 @@ final class ActiveLevel extends LevelGrid {
             jj.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
             var7--;
           }
-          var8Lifetime2 = bk.field_E.stringWidth(pi.field_f);
-          bk.field_E.b(8, -1);
-          bk.field_E.a(pi.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
+          var8Lifetime2 = bk.font.stringWidth(pi.field_f);
+          bk.font.b(8, -1);
+          bk.font.a(pi.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
         }
         if (0 != this.field_s) {
           j.field_b[1].e(466, var6);
@@ -507,7 +507,7 @@ final class ActiveLevel extends LevelGrid {
               }
               if (var9 == 0) {
                 bb.field_b[var12].b(467, 26 + var6 + 71 + 10);
-                bk.field_E.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
+                bk.font.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
               }
               var9--;
               var10--;
@@ -518,7 +518,7 @@ final class ActiveLevel extends LevelGrid {
             var13 = var6 + (var12Lifetime1 * var12Lifetime1 >> 2);
             cl.a(nd.field_L, 457, 124, 71 + var13, 176, 4);
             bb.field_b[var11].b(467, 26 + (81 + var13));
-            bk.field_E.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
+            bk.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
           }
           j.field_b[2].e(466, var6);
           return;
@@ -1066,14 +1066,14 @@ final class ActiveLevel extends LevelGrid {
         int var6;
         Object var3Lifetime1;
         var6 = TrackController.field_F ? 1 : 0;
-        if (this.field_I.levelIndex != 1 &&
-          this.field_I.levelIndex != 3) {
+        if (this.level.levelIndex != 1 &&
+          this.level.levelIndex != 3) {
           return;
         }
         if (this.phase != 1) {
           return;
         }
-        if (this.field_I.levelIndex == 3) {
+        if (this.level.levelIndex == 3) {
           boolean decompiledFrameRemainder0 = true;
           if (this.playerRow == -2) {
             var3 = (MovingBlock) (this.movingBlocks.first(2));
@@ -1098,7 +1098,7 @@ final class ActiveLevel extends LevelGrid {
             }
           }
           cl.a(nd.field_L, 58, 98, 376, 332, 4);
-          bk.field_E.a(ki.field_a, 73, -bk.field_E.field_G + 386 + bk.field_E.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          bk.font.a(ki.field_a, 73, -bk.font.field_G + 386 + bk.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
           return;
         }
         var3Lifetime1 = null;
@@ -1152,15 +1152,15 @@ final class ActiveLevel extends LevelGrid {
         }
         if (var3Lifetime1 != null) {
           cl.a(nd.field_L, 110, 98, 376, 228, 4);
-          bk.field_E.a((String) (var3Lifetime1), 125, -bk.field_E.field_G + (bk.field_E.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
+          bk.font.a((String) (var3Lifetime1), 125, -bk.font.field_G + (bk.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
         }
-        if (this.field_I.levelIndex == 1 &&
+        if (this.level.levelIndex == 1 &&
           !param0) {
           if (fi.field_i) {
             return;
           }
           cl.a(nd.field_L, 58, 72, 64, 332, 4);
-          bk.field_E.a(uk.field_d, 73, -bk.field_E.field_G + 74 + bk.field_E.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          bk.font.a(uk.field_d, 73, -bk.font.field_G + 74 + bk.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
         }
         return;
     }
@@ -1196,8 +1196,8 @@ final class ActiveLevel extends LevelGrid {
         if (null == BufferedSocket.field_c) {
           BufferedSocket.field_c = new int[][]{new int[]{3, 2, 1, 4, 1, 2, 1, 0}, new int[]{1, 2, 3, 4, 1, 2, 0, 0}, new int[]{5, 4, 1, 4, 1, 0, 1, 0}, new int[]{1, 4, 3, 4, 0, 0, 0, 0}, new int[]{2, 2, 1, -4, 1, 2, 1, 0}, new int[]{1, 2, -4, -4, 2, 2, 0, 0}, new int[]{1, -4, -3, -4, -2, -2, 1, 0}, new int[]{-6, -2, -1, -4, -1, -2, -1, 0}};
         }
-        this.field_F = param0 != this.field_I ? true : false;
-        this.field_I = param0;
+        this.field_F = param0 != this.level ? true : false;
+        this.level = param0;
         super.a(param0, 107);
         this.playerRow = param0.a(-8299);
         this.playerColumn = param0.c((byte) 107);
@@ -1275,17 +1275,17 @@ final class ActiveLevel extends LevelGrid {
 
     final void a(boolean param0) {
         cl.a(nd.field_L, 457, 124, 10, 176, 4);
-        bk.field_E.c(nj.field_d, 471, 40, 5, -1);
-        bk.field_E.a(Integer.toString(this.field_T), 622, 40, 5, -1);
-        bk.field_E.c(ba.field_e, 471, 66, 5, -1);
-        bk.field_E.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
-        bk.field_E.c(hb.field_c, 471, 92, 5, -1);
-        bk.field_E.a(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
+        bk.font.c(nj.field_d, 471, 40, 5, -1);
+        bk.font.a(Integer.toString(this.field_T), 622, 40, 5, -1);
+        bk.font.c(ba.field_e, 471, 66, 5, -1);
+        bk.font.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
+        bk.font.c(hb.field_c, 471, 92, 5, -1);
+        bk.font.a(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
         if (param0) {
           return;
         }
-        bk.field_E.c(LevelView.field_r + this.field_I.levelIndex + u.field_k, 471, 118, 5, -1);
-        bk.field_E.a(this.field_I.name, 622, 118, 5, -1);
+        bk.font.c(LevelView.field_r + this.level.levelIndex + u.field_k, 471, 118, 5, -1);
+        bk.font.a(this.level.name, 622, 118, 5, -1);
     }
 
     private final IntrusiveDeque i(int param0) {
@@ -1493,7 +1493,7 @@ final class ActiveLevel extends LevelGrid {
           }
         }
         var2_ref = ButtonWidget.field_E;
-        if (this.field_I == gj.field_f[gj.field_f.length - 1]) {
+        if (this.level == gj.levels[gj.levels.length - 1]) {
           var2_ref = TrackController.field_C;
         }
         var3Lifetime2 = 0;
@@ -1503,14 +1503,14 @@ final class ActiveLevel extends LevelGrid {
         if (!this.field_F) {
           cl.a(nd.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
-          bk.field_E.b(this.field_y, 78 + this.field_t, this.field_C + bk.field_E.field_G, 5, -1);
-          bk.field_E.b(var2_ref, 78 + this.field_t, bk.field_E.field_G + this.field_C + 24, var3Lifetime2, -1);
+          bk.font.b(this.field_y, 78 + this.field_t, this.field_C + bk.font.field_G, 5, -1);
+          bk.font.b(var2_ref, 78 + this.field_t, bk.font.field_G + this.field_C + 24, var3Lifetime2, -1);
         } else {
           cl.a(nd.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
-          bk.field_E.b(this.field_y, 78 + this.field_t, this.field_C + bk.field_E.field_G - 26, 5, -1);
-          bk.field_E.b(this.field_L, this.field_t + 78, bk.field_E.field_G + this.field_C, 5, -1);
-          bk.field_E.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (bk.field_E.field_G - 2)), var3Lifetime2, -1);
+          bk.font.b(this.field_y, 78 + this.field_t, this.field_C + bk.font.field_G - 26, 5, -1);
+          bk.font.b(this.field_L, this.field_t + 78, bk.font.field_G + this.field_C, 5, -1);
+          bk.font.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (bk.font.field_G - 2)), var3Lifetime2, -1);
         }
         this.b(false, -28786);
         if (ak.field_b != -1) {
@@ -1523,7 +1523,7 @@ final class ActiveLevel extends LevelGrid {
         int var3 = TrackController.field_F ? 1 : 0;
         if (1 == this.phase) {
           wg.b(117);
-          this.a(this.field_I, param0 ^ 97);
+          this.a(this.level, param0 ^ 97);
         } else {
           if (this.phase != 2) {
           } else {
@@ -1531,11 +1531,11 @@ final class ActiveLevel extends LevelGrid {
             hl.a(10, 0);
             this.field_R = this.field_R + this.field_E;
             this.field_cb = this.field_cb - 1;
-            if (this.field_I.levelIndex >= gj.field_f.length) {
+            if (this.level.levelIndex >= gj.levels.length) {
               this.c(0, 114);
               sc.field_g = 14;
             } else {
-              this.a(gj.field_f[this.field_I.levelIndex], param0 ^ 120);
+              this.a(gj.levels[this.level.levelIndex], param0 ^ 120);
             }
           }
         }
@@ -1821,8 +1821,8 @@ final class ActiveLevel extends LevelGrid {
               ak.field_b = 6;
             }
           }
-          if (this.field_I.levelIndex != 1) {
-            if (3 == this.field_I.levelIndex &&
+          if (this.level.levelIndex != 1) {
+            if (3 == this.level.levelIndex &&
               eb.a(68, fg.mouseY, 10, 312, 386, kf.mouseX, 78)) {
               var3Lifetime1 = 1;
               if (this.playerRow == -2) {

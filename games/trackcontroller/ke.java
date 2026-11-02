@@ -72,8 +72,8 @@ final class ke {
               0 < NodeHashTableIterator.field_e) {
               fieldTemp$19 = NodeHashTableIterator.field_e - 1;
               NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
-              var2Lifetime4 = hf.field_b[fieldTemp$19];
-              hf.field_b[NodeHashTableIterator.field_e] = null;
+              var2Lifetime4 = DiskArchiveStore.field_b[fieldTemp$19];
+              DiskArchiveStore.field_b[NodeHashTableIterator.field_e] = null;
               return var2Lifetime4;
             }
             if (null == MovingBlock.field_i) {
@@ -119,8 +119,8 @@ final class ke {
           if (0 < NodeHashTableIterator.field_e) {
             fieldTemp$17 = NodeHashTableIterator.field_e - 1;
             NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
-            var2Lifetime6 = hf.field_b[fieldTemp$17];
-            hf.field_b[NodeHashTableIterator.field_e] = null;
+            var2Lifetime6 = DiskArchiveStore.field_b[fieldTemp$17];
+            DiskArchiveStore.field_b[NodeHashTableIterator.field_e] = null;
             return var2Lifetime6;
           }
           if (null == MovingBlock.field_i) {
@@ -160,8 +160,8 @@ final class ke {
           if (0 < NodeHashTableIterator.field_e) {
             fieldTemp$10 = NodeHashTableIterator.field_e - 1;
             NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
-            var2Lifetime1 = hf.field_b[fieldTemp$10];
-            hf.field_b[NodeHashTableIterator.field_e] = null;
+            var2Lifetime1 = DiskArchiveStore.field_b[fieldTemp$10];
+            DiskArchiveStore.field_b[NodeHashTableIterator.field_e] = null;
             return var2Lifetime1;
           }
           if (null == MovingBlock.field_i) {
@@ -207,8 +207,8 @@ final class ke {
         if (0 < NodeHashTableIterator.field_e) {
           fieldTemp$5 = NodeHashTableIterator.field_e - 1;
           NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
-          var2Lifetime3 = hf.field_b[fieldTemp$5];
-          hf.field_b[NodeHashTableIterator.field_e] = null;
+          var2Lifetime3 = DiskArchiveStore.field_b[fieldTemp$5];
+          DiskArchiveStore.field_b[NodeHashTableIterator.field_e] = null;
           return var2Lifetime3;
         }
         if (null == MovingBlock.field_i) {

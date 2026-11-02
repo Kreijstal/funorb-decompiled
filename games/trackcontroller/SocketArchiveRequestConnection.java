@@ -101,7 +101,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               jc.field_a = sg.field_d;
             }
             if (jc.field_a == sg.field_d &&
-              hf.a(1, false)) {
+              DiskArchiveStore.a(1, false)) {
               var6_int = ne.field_a.readUnsignedByte(16383);
               if (var6_int == 0) {
                 jc.field_a = md.field_e;
@@ -113,7 +113,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               ne.field_a.position = 0;
             }
             if (jc.field_a == md.field_e &&
-              hf.a(8, false)) {
+              DiskArchiveStore.a(8, false)) {
               MouseWheelInput.field_d = ne.field_a.readLong((byte) 110);
               ne.field_a.position = 0;
               md.a(af.field_o, param5, param1, -1, param0);
@@ -121,7 +121,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             }
             boolean decompiledFrameRemainder0 = true;
             if (ca.field_b == jc.field_a &&
-              hf.a(1, false)) {
+              DiskArchiveStore.a(1, false)) {
               var6_intLifetime1 = ne.field_a.readUnsignedByte(16383);
               kg.field_a = null;
               uk.field_c = var6_intLifetime1;

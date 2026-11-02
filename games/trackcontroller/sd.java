@@ -10,7 +10,7 @@ final class sd implements Runnable {
     int field_a;
     private Thread field_e;
 
-    final lh a(boolean param0, int param1, hf param2) {
+    final lh a(boolean param0, int param1, DiskArchiveStore param2) {
         lh var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
@@ -59,7 +59,7 @@ final class sd implements Runnable {
             sd.a((byte) 126);
           }
           var9 = new aj(param3, param2, param5, param6, param0, param8, param7);
-          ub.field_e.addLast((byte) -114, var9);
+          ImageProducerRasterBuffer.field_e.addLast((byte) -114, var9);
           we.a(param1, var9, (byte) 125);
           stackIn_3_0 = var9;
           return stackIn_3_0;
@@ -110,11 +110,11 @@ final class sd implements Runnable {
             }
             try {
               if (var7.field_y == 2) {
-                var7.field_A.a(-1023648016, (int)var7.field_m, var7.field_z, var7.field_z.length);
+                var7.field_A.write(-1023648016, (int)var7.field_m, var7.field_z, var7.field_z.length);
                 var7.field_w = false;
               } else {
                 if (var7.field_y == 3) {
-                  var7.field_z = var7.field_A.a((byte) -95, (int)var7.field_m);
+                  var7.field_z = var7.field_A.read((byte) -95, (int)var7.field_m);
                   var7.field_w = false;
                 } else {
                   var7.field_w = false;
@@ -135,7 +135,7 @@ final class sd implements Runnable {
         }
     }
 
-    final lh a(int param0, byte[] param1, hf param2, byte param3) {
+    final lh a(int param0, byte[] param1, DiskArchiveStore param2, byte param3) {
         lh var5 = null;
         RuntimeException var5_ref = null;
         lh stackIn_2_0 = null;
@@ -200,7 +200,7 @@ final class sd implements Runnable {
     }
 
     private final void a(boolean param0, lh param1) {
-        hf var5 = null;
+        DiskArchiveStore var5 = null;
         mb stackIn_3_0 = null;
         lh stackIn_3_1 = null;
         boolean stackIn_4_2 = false;
@@ -220,8 +220,8 @@ final class sd implements Runnable {
             this.field_a = this.field_a + 1;
             this.field_f.notifyAll();
             if (param0) {
-              var5 = (hf) null;
-              this.a(true, -108, (hf) null);
+              var5 = (DiskArchiveStore) null;
+              this.a(true, -108, (DiskArchiveStore) null);
             }
           }
           return;
@@ -239,7 +239,7 @@ final class sd implements Runnable {
         }
     }
 
-    final lh a(byte param0, int param1, hf param2) {
+    final lh a(byte param0, int param1, DiskArchiveStore param2) {
         lh var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -272,7 +272,7 @@ final class sd implements Runnable {
               var7 = (lh) (this.field_f.a((byte) 77));
             }
           }
-          var4.field_z = param2.a((byte) -123, param1);
+          var4.field_z = param2.read((byte) -123, param1);
           var4.field_w = false;
           var4.field_q = true;
           stackIn_16_0 = var4;

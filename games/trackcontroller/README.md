@@ -1,5 +1,5 @@
 # Reading Track Controller
 
-This pass names 56 reviewed classes in 298 source files. Unresolved roles keep their original names.
+This pass names 59 reviewed classes in 298 source files. Unresolved roles keep their original names.
 
 Start at `TrackController`; the shared engine (nodes, hash tables, packet buffer, sockets, input) uses the same role names as other FunOrb games.

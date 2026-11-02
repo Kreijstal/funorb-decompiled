@@ -29,14 +29,14 @@ class dd extends ic {
     }
 
     final static nj d(byte param0) {
-        if (hf.field_f == fd.field_h) {
+        if (DiskArchiveStore.field_f == fd.field_h) {
           throw new IllegalStateException();
         }
         if (param0 <= 82) {
           return (nj) null;
         }
         if (fd.field_h == cj.field_e) {
-          fd.field_h = hf.field_f;
+          fd.field_h = DiskArchiveStore.field_f;
           return MouseWheelInput.field_c;
         }
         return null;

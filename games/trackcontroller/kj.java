@@ -68,7 +68,7 @@ final class kj extends IntrusiveNode {
           }
           if (rk.field_X == cj.field_e &&
             param0.equals(vh.field_p)) {
-            rk.field_X = hf.field_f;
+            rk.field_X = DiskArchiveStore.field_f;
             stackIn_11_0 = fh.field_c;
             return stackIn_11_0;
           }
