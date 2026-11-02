@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ee {
-    static String field_f;
-    static String field_b;
+    static String textEndgameEntrapment;
+    static String tutorial1;
     static km field_e;
     static il field_a;
     static wl field_c;
@@ -161,11 +161,11 @@ final class ee {
     }
 
     public static void b(byte param0) {
-        field_b = null;
+        tutorial1 = null;
         field_c = null;
         field_d = null;
         field_a = null;
-        field_f = null;
+        textEndgameEntrapment = null;
         if (param0 <= 53) {
           return;
         }
@@ -173,8 +173,8 @@ final class ee {
     }
 
     static {
-        field_f = "<%0> cannot move";
-        field_b = "These are your pieces<br>Click to select one";
+        textEndgameEntrapment = "<%0> cannot move";
+        tutorial1 = "These are your pieces<br>Click to select one";
         field_d = "Loading sound effects";
         field_c = new wl();
     }

@@ -16,7 +16,7 @@ final class gn extends tg {
     private gn(String param0, cd param1) {
         this(param0, vi.field_g.field_l, param1);
         try {
-          this.field_w = vi.field_g.field_i;
+          this.listener = vi.field_g.field_i;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -60,10 +60,10 @@ final class gn extends tg {
         }
     }
 
-    private gn(String param0, ol param1, cd param2) {
+    private gn(String param0, WidgetListener param1, cd param2) {
         super(param0, param1, param2);
         try {
-          this.field_w = vi.field_g.field_i;
+          this.listener = vi.field_g.field_i;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

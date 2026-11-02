@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qm extends km {
-    static String field_Ob;
+    static String textError;
     static Sprite[] field_Kb;
     static IntrusiveDeque field_Mb;
     private km field_Fb;
@@ -162,7 +162,7 @@ final class qm extends km {
         if (param0 < 103) {
           field_Gb = (String) null;
         }
-        field_Ob = null;
+        textError = null;
         field_Kb = null;
         field_Mb = null;
     }
@@ -215,7 +215,7 @@ final class qm extends km {
         var15 = Virogrid.field_F ? 1 : 0;
         try {
           if (param2 < 111) {
-            field_Ob = (String) null;
+            textError = (String) null;
           }
           stackIn_5_0 = lg.field_a.field_Ib;
           stackIn_5_1 = 2 + pg.field_e;
@@ -451,7 +451,7 @@ final class qm extends km {
     }
 
     static {
-        field_Ob = "Error";
+        textError = "Error";
         field_Gb = "Show players in <%0>'s game";
         field_Hb = "Invite <%0> to this game";
     }

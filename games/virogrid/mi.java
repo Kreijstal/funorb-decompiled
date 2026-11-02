@@ -3,7 +3,7 @@
  */
 abstract class mi implements le {
     static String field_e;
-    static String field_f;
+    static String textRemovedFromGame;
     static int field_c;
     private long field_b;
     static String field_a;
@@ -11,7 +11,7 @@ abstract class mi implements le {
 
     final static boolean a(byte param0) {
         if (param0 >= -103) {
-          field_f = (String) null;
+          textRemovedFromGame = (String) null;
           return ih.field_b == null ? fe.field_Gb : true;
         }
         return ih.field_b == null ? fe.field_Gb : true;
@@ -84,7 +84,7 @@ abstract class mi implements le {
     }
 
     public static void e(int param0) {
-        field_f = null;
+        textRemovedFromGame = null;
         if (param0 != 12) {
           return;
         }
@@ -212,7 +212,7 @@ abstract class mi implements le {
     abstract wl f(int param0);
 
     static {
-        field_f = "Sorry, you were removed from the game you were playing. This happened either because you were disconnected for too long, or because the server was updated.";
+        textRemovedFromGame = "Sorry, you were removed from the game you were playing. This happened either because you were disconnected for too long, or because the server was updated.";
         field_e = "Unpacking music";
         field_a = "Hide private chat and appear offline to friends";
     }

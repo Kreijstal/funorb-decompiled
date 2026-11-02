@@ -6,7 +6,7 @@ abstract class mb extends dc {
     static int[][] field_db;
     static int[] field_bb;
     private int field_jb;
-    static String field_eb;
+    static String playernameHotseat1;
     static String field_mb;
     private int field_cb;
     private int field_hb;
@@ -200,12 +200,12 @@ abstract class mb extends dc {
         field_gb = null;
         field_mb = null;
         if (param0 >= 118) {
-          field_eb = null;
+          playernameHotseat1 = null;
           field_db = (int[][]) null;
           return;
         }
         field_db = (int[][]) null;
-        field_eb = null;
+        playernameHotseat1 = null;
         field_db = (int[][]) null;
     }
 
@@ -318,7 +318,7 @@ abstract class mb extends dc {
     }
 
     static {
-        field_eb = "Blue";
+        playernameHotseat1 = "Blue";
         field_gb = "Please enter your age in years";
         field_mb = "Create a free account to start using this feature";
     }

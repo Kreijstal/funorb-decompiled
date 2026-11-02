@@ -4,7 +4,7 @@
 final class rf {
     static int field_h;
     static int field_e;
-    static String field_f;
+    static String textYourcolour;
     static double field_c;
     static int field_b;
     static String field_j;
@@ -55,7 +55,7 @@ final class rf {
         field_j = null;
         field_i = (boolean[][]) null;
         field_a = null;
-        field_f = null;
+        textYourcolour = null;
         if (param0 != -24750) {
           return;
         }
@@ -66,7 +66,7 @@ final class rf {
     static {
         field_h = 0;
         field_j = "<%0> has won!";
-        field_f = "You are playing <%0>.";
+        textYourcolour = "You are playing <%0>.";
         field_d = "This is <%0>'s RuneScape clan if they have one.";
         field_c = Math.sqrt(2.0) / 2.0;
         field_a = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kd extends qe {
-    static Sprite[] field_p;
+    static Sprite[] viewIcons;
     private boolean field_s;
     static String field_r;
     private ci field_o;
@@ -15,7 +15,7 @@ final class kd extends qe {
         if (param0 >= -84) {
           kd.c(false);
         }
-        field_p = null;
+        viewIcons = null;
         field_n = null;
     }
 

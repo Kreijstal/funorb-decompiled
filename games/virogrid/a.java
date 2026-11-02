@@ -30,24 +30,24 @@ final class a extends cc {
           lc.field_e[3] = ql.field_j;
           lc.field_e[1] = ql.field_j;
           lc.field_e[7] = pi.field_d;
-          lc.field_e[11] = cm.field_j;
+          lc.field_e[11] = cm.hotseatmenulabel;
           lc.field_e[5] = ql.field_j;
           lc.field_e[8] = GameBoard.field_F;
           lc.field_e[6] = j.field_a;
           if (param0 != 69) {
             field_E = (int[]) null;
           }
-          lc.field_e[9] = qm.field_Ob;
+          lc.field_e[9] = qm.textError;
           de.field_pb = new String[29];
           lc.field_e[4] = ql.field_j;
-          lc.field_e[0] = mj.field_G;
+          lc.field_e[0] = mj.textGamename;
           de.field_pb[14] = sk.field_c;
           de.field_pb[13] = jm.field_d;
           de.field_pb[15] = sd.field_d;
           de.field_pb[4] = j.field_a;
-          de.field_pb[0] = cm.field_j;
+          de.field_pb[0] = cm.hotseatmenulabel;
           de.field_pb[16] = we.field_b;
-          de.field_pb[6] = rb.field_d;
+          de.field_pb[6] = rb.textFullscreenToggle;
           de.field_pb[9] = kg.field_h;
           de.field_pb[11] = th.field_s;
           de.field_pb[19] = hk.field_Gb;
@@ -55,21 +55,21 @@ final class a extends cc {
           de.field_pb[3] = GameBoard.field_F;
           de.field_pb[10] = cf.field_a;
           de.field_pb[12] = mf.field_i;
-          de.field_pb[8] = ai.field_b;
+          de.field_pb[8] = ai.textBack;
           de.field_pb[7] = lh.field_d;
-          de.field_pb[18] = hg.field_n;
-          de.field_pb[17] = ac.field_b;
+          de.field_pb[18] = hg.textPlayAgain;
+          de.field_pb[17] = ac.textDetail;
           de.field_pb[1] = ha.field_g;
           de.field_pb[5] = pi.field_d;
-          de.field_pb[23] = pj.field_e;
+          de.field_pb[23] = pj.textOptions;
           de.field_pb[28] = dh.field_v + ": ";
-          de.field_pb[27] = gh.field_Lb;
+          de.field_pb[27] = gh.hotseatoptionAilevelColon;
           de.field_pb[22] = wn.field_z;
-          de.field_pb[21] = sm.field_d;
-          de.field_pb[25] = pg.field_i;
+          de.field_pb[21] = sm.textRankingsBywinpercentage;
+          de.field_pb[25] = pg.hotseatoptionGridwidthColon;
           de.field_pb[20] = og.field_t[0];
           de.field_pb[24] = te.field_c;
-          de.field_pb[26] = rk.field_b;
+          de.field_pb[26] = rk.hotseatoptionTurndurationColon;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,19 +402,19 @@ final class a extends cc {
           }
           var2Lifetime2 = jl.a("TEXT_GAMENAME", true);
           if (null != var2Lifetime2) {
-            mj.field_G = i.a(-2022, var2Lifetime2);
+            mj.textGamename = i.a(-2022, var2Lifetime2);
           }
           var2Lifetime3 = jl.a("TEXT_CREATE_ACCOUNT1", true);
           if (var2Lifetime3 != null) {
-            pc.field_a = i.a(-2022, var2Lifetime3);
+            pc.textCreateAccount1 = i.a(-2022, var2Lifetime3);
           }
           var2Lifetime4 = jl.a("TEXT_CREATE_ACCOUNT2", true);
           if (var2Lifetime4 != null) {
-            dd.field_f = i.a(-2022, var2Lifetime4);
+            dd.textCreateAccount2 = i.a(-2022, var2Lifetime4);
           }
           var2Lifetime5 = jl.a("TEXT_FULLSCREEN_TOGGLE", true);
           if (null != var2Lifetime5) {
-            rb.field_d = i.a(param0 - 2042, var2Lifetime5);
+            rb.textFullscreenToggle = i.a(param0 - 2042, var2Lifetime5);
           }
           var2Lifetime6 = jl.a("TEXT_MODE", true);
           if (var2Lifetime6 != null) {
@@ -422,47 +422,47 @@ final class a extends cc {
           }
           var2Lifetime7 = jl.a("TEXT_DETAIL", true);
           if (null != var2Lifetime7) {
-            ac.field_b = i.a(-2022, var2Lifetime7);
+            ac.textDetail = i.a(-2022, var2Lifetime7);
           }
           var2Lifetime8 = jl.a("TEXT_OPTIONS", true);
           if (var2Lifetime8 != null) {
-            pj.field_e = i.a(-2022, var2Lifetime8);
+            pj.textOptions = i.a(-2022, var2Lifetime8);
           }
           var2Lifetime9 = jl.a("TEXT_RANKINGS_BYWINPERCENTAGE", true);
           if (null != var2Lifetime9) {
-            sm.field_d = i.a(-2022, var2Lifetime9);
+            sm.textRankingsBywinpercentage = i.a(-2022, var2Lifetime9);
           }
           var2Lifetime10 = jl.a("TEXT_YOURCOLOUR", true);
           if (null != var2Lifetime10) {
-            rf.field_f = i.a(-2022, var2Lifetime10);
+            rf.textYourcolour = i.a(-2022, var2Lifetime10);
           }
           var2Lifetime11 = jl.a("TEXT_OPPONENT", true);
           if (var2Lifetime11 != null) {
-            pc.field_e = i.a(-2022, var2Lifetime11);
+            pc.textOpponent = i.a(-2022, var2Lifetime11);
           }
           var2Lifetime12 = jl.a("TEXT_PLAYERS", true);
           if (var2Lifetime12 != null) {
-            lm.field_k = i.a(param0 ^ -2034, var2Lifetime12);
+            lm.textPlayers = i.a(param0 ^ -2034, var2Lifetime12);
           }
           var2Lifetime13 = jl.a("TEXT_YOUR_TURN_PLAYING", true);
           if (var2Lifetime13 != null) {
-            gf.field_B = i.a(-2022, var2Lifetime13);
+            gf.textYourTurnPlaying = i.a(-2022, var2Lifetime13);
           }
           var2Lifetime14 = jl.a("TEXT_X_TURN_PLAYING", true);
           if (null != var2Lifetime14) {
-            ie.field_b = i.a(-2022, var2Lifetime14);
+            ie.textXTurnPlaying = i.a(-2022, var2Lifetime14);
           }
           var2Lifetime15 = jl.a("TEXT_X_TURN", true);
           if (null != var2Lifetime15) {
-            hc.field_b = i.a(-2022, var2Lifetime15);
+            hc.textXTurn = i.a(-2022, var2Lifetime15);
           }
           var2Lifetime16 = jl.a("TEXT_COLOUR_WHITE", true);
           if (null != var2Lifetime16) {
-            pb.field_k = i.a(-2022, var2Lifetime16);
+            pb.textColourWhite = i.a(-2022, var2Lifetime16);
           }
           var2Lifetime17 = jl.a("TEXT_COLOUR_BLUE", true);
           if (null != var2Lifetime17) {
-            GameApplet.field_g = i.a(-2022, var2Lifetime17);
+            GameApplet.textColourBlue = i.a(-2022, var2Lifetime17);
           }
           var2Lifetime18 = jl.a("TEXT_DRAWN", true);
           if (var2Lifetime18 != null) {
@@ -474,27 +474,27 @@ final class a extends cc {
           }
           var2Lifetime20 = jl.a("TEXT_2D", true);
           if (var2Lifetime20 != null) {
-            sd.field_b = i.a(param0 ^ -2034, var2Lifetime20);
+            sd.text2d = i.a(param0 ^ -2034, var2Lifetime20);
           }
           var2Lifetime21 = jl.a("TEXT_3D", true);
           if (null != var2Lifetime21) {
-            GameKeyHandler.field_f = i.a(-2022, var2Lifetime21);
+            GameKeyHandler.text3d = i.a(-2022, var2Lifetime21);
           }
           var2Lifetime22 = jl.a("TEXT_SWITCH_2D", true);
           if (var2Lifetime22 != null) {
-            sl.field_a = i.a(-2022, var2Lifetime22);
+            sl.textSwitch2d = i.a(-2022, var2Lifetime22);
           }
           var2Lifetime23 = jl.a("TEXT_SWITCH_3D", true);
           if (null != var2Lifetime23) {
-            o.field_a = i.a(-2022, var2Lifetime23);
+            o.textSwitch3d = i.a(-2022, var2Lifetime23);
           }
           var2Lifetime24 = jl.a("TEXT_BACK", true);
           if (null != var2Lifetime24) {
-            ai.field_b = i.a(-2022, var2Lifetime24);
+            ai.textBack = i.a(-2022, var2Lifetime24);
           }
           var2Lifetime25 = jl.a("TEXT_NOT_AVAILABLE_IN_2D", true);
           if (null != var2Lifetime25) {
-            fn.field_g = i.a(-2022, var2Lifetime25);
+            fn.textNotAvailableIn2d = i.a(-2022, var2Lifetime25);
           }
           var2Lifetime26 = jl.a("TEXT_RESET_VIEW", true);
           if (var2Lifetime26 != null) {
@@ -502,198 +502,198 @@ final class a extends cc {
           }
           var2Lifetime27 = jl.a("TEXT_ERROR", true);
           if (null != var2Lifetime27) {
-            qm.field_Ob = i.a(-2022, var2Lifetime27);
+            qm.textError = i.a(-2022, var2Lifetime27);
           }
           if (param0 != 20) {
             field_E = (int[]) null;
           }
           var2Lifetime28 = jl.a("TEXT_PLAY_AGAIN", true);
           if (var2Lifetime28 != null) {
-            hg.field_n = i.a(-2022, var2Lifetime28);
+            hg.textPlayAgain = i.a(-2022, var2Lifetime28);
           }
           var2Lifetime29 = jl.a("TEXT_RATED_ACHIEVEMENTS", true);
           if (var2Lifetime29 != null) {
-            dg.field_G = i.a(param0 - 2042, var2Lifetime29);
+            dg.textRatedAchievements = i.a(param0 - 2042, var2Lifetime29);
           }
           var2Lifetime30 = jl.a("TEXT_ENDGAME_ENTRAPMENT", true);
           if (var2Lifetime30 != null) {
-            ee.field_f = i.a(-2022, var2Lifetime30);
+            ee.textEndgameEntrapment = i.a(-2022, var2Lifetime30);
           }
           var2Lifetime31 = jl.a("TEXT_ENDGAME_ENTRAPMENT_YOU", true);
           if (var2Lifetime31 != null) {
-            vc.field_db = i.a(-2022, var2Lifetime31);
+            vc.textEndgameEntrapmentYou = i.a(-2022, var2Lifetime31);
           }
           var2Lifetime32 = jl.a("TEXT_ENDGAME_BOARDFILLED", true);
           if (null != var2Lifetime32) {
-            rc.field_i = i.a(-2022, var2Lifetime32);
+            rc.textEndgameBoardfilled = i.a(-2022, var2Lifetime32);
           }
           var2Lifetime33 = jl.a("TEXT_ENDGAME_BOARDFILLED_YOU", true);
           if (null != var2Lifetime33) {
-            fh.field_a = i.a(-2022, var2Lifetime33);
+            fh.textEndgameBoardfilledYou = i.a(-2022, var2Lifetime33);
           }
           var2Lifetime34 = jl.a("TEXT_ENDGAME_BOARDFILLED_DRAW", true);
           if (var2Lifetime34 != null) {
-            vf.field_d = i.a(-2022, var2Lifetime34);
+            vf.textEndgameBoardfilledDraw = i.a(-2022, var2Lifetime34);
           }
           var2Lifetime35 = jl.a("TEXT_ENDGAME_NOPIECES", true);
           if (var2Lifetime35 != null) {
-            cg.field_e = i.a(-2022, var2Lifetime35);
+            cg.textEndgameNopieces = i.a(-2022, var2Lifetime35);
           }
           var2Lifetime36 = jl.a("TEXT_ENDGAME_NOPIECES_YOU", true);
           if (var2Lifetime36 != null) {
-            id.field_f = i.a(-2022, var2Lifetime36);
+            id.textEndgameNopiecesYou = i.a(-2022, var2Lifetime36);
           }
           var2Lifetime37 = jl.a("TEXT_ENDGAME_NOTIME", true);
           if (null != var2Lifetime37) {
-            dd.field_d = i.a(param0 ^ -2034, var2Lifetime37);
+            dd.textEndgameNotime = i.a(param0 ^ -2034, var2Lifetime37);
           }
           var2Lifetime38 = jl.a("TEXT_ENDGAME_NOTIME_YOU", true);
           if (null != var2Lifetime38) {
-            ao.field_Nb = i.a(-2022, var2Lifetime38);
+            ao.textEndgameNotimeYou = i.a(-2022, var2Lifetime38);
           }
           var2Lifetime39 = jl.a("TEXT_ENDGAME_RESIGNED", true);
           if (var2Lifetime39 != null) {
-            vm.field_a = i.a(param0 - 2042, var2Lifetime39);
+            vm.textEndgameResigned = i.a(param0 - 2042, var2Lifetime39);
           }
           var2Lifetime40 = jl.a("TEXT_ENDGAME_RESIGNED_YOU", true);
           if (null != var2Lifetime40) {
-            pg.field_a = i.a(param0 ^ -2034, var2Lifetime40);
+            pg.textEndgameResignedYou = i.a(param0 ^ -2034, var2Lifetime40);
           }
           var2Lifetime41 = jl.a("TEXT_VIEWCONTROLS_LEFT", true);
           if (var2Lifetime41 != null) {
-            mc.field_d = i.a(-2022, var2Lifetime41);
+            mc.textViewcontrolsLeft = i.a(-2022, var2Lifetime41);
           }
           var2Lifetime42 = jl.a("TEXT_VIEWCONTROLS_RIGHT", true);
           if (var2Lifetime42 != null) {
-            pn.field_C = i.a(-2022, var2Lifetime42);
+            pn.textViewcontrolsRight = i.a(-2022, var2Lifetime42);
           }
           var2Lifetime43 = jl.a("TEXT_VIEWCONTROLS_ZOOMOUT", true);
           if (null != var2Lifetime43) {
-            vb.field_i = i.a(param0 ^ -2034, var2Lifetime43);
+            vb.textViewcontrolsZoomout = i.a(param0 ^ -2034, var2Lifetime43);
           }
           var2Lifetime44 = jl.a("TEXT_VIEWCONTROLS_ZOOMIN", true);
           if (null != var2Lifetime44) {
-            MouseWheelInput.field_b = i.a(param0 ^ -2034, var2Lifetime44);
+            MouseWheelInput.textViewcontrolsZoomin = i.a(param0 ^ -2034, var2Lifetime44);
           }
           var2Lifetime45 = jl.a("TEXT_VIEWCONTROLS_CENTRE", true);
           if (var2Lifetime45 != null) {
-            ia.field_a = i.a(-2022, var2Lifetime45);
+            ia.textViewcontrolsCentre = i.a(-2022, var2Lifetime45);
           }
           var2Lifetime46 = jl.a("TEXT_VIEWCONTROLS_MODE", true);
           if (var2Lifetime46 != null) {
-            um.field_Kb = i.a(-2022, var2Lifetime46);
+            um.textViewcontrolsMode = i.a(-2022, var2Lifetime46);
           }
           var2Lifetime47 = jl.a("PLAYERNAME_HOTSEAT_2", true);
           if (var2Lifetime47 != null) {
-            em.field_e = i.a(param0 - 2042, var2Lifetime47);
+            em.playernameHotseat2 = i.a(param0 - 2042, var2Lifetime47);
           }
           var2Lifetime48 = jl.a("PLAYERNAME_HOTSEAT_1", true);
           if (var2Lifetime48 != null) {
-            mb.field_eb = i.a(param0 - 2042, var2Lifetime48);
+            mb.playernameHotseat1 = i.a(param0 - 2042, var2Lifetime48);
           }
           var2Lifetime49 = jl.a("TEXT_BOOTSEQUENCE", true);
           if (var2Lifetime49 != null) {
-            jk.field_e = i.a(-2022, var2Lifetime49);
+            jk.textBootsequence = i.a(-2022, var2Lifetime49);
           }
           var2Lifetime50 = jl.a("TEXT_BOOTSEQUENCE_HALLOWEEN", true);
           if (null != var2Lifetime50) {
-            ge.field_a = i.a(-2022, var2Lifetime50);
+            ge.textBootsequenceHalloween = i.a(-2022, var2Lifetime50);
           }
           var2Lifetime51 = jl.a("DETAIL_NAMES,0", true);
           if (var2Lifetime51 != null) {
-            cc.field_v[0] = i.a(-2022, var2Lifetime51);
+            cc.detailNames[0] = i.a(-2022, var2Lifetime51);
           }
           var2Lifetime52 = jl.a("DETAIL_NAMES,1", true);
           if (var2Lifetime52 != null) {
-            cc.field_v[1] = i.a(-2022, var2Lifetime52);
+            cc.detailNames[1] = i.a(-2022, var2Lifetime52);
           }
           var2Lifetime53 = jl.a("DETAIL_NAMES,2", true);
           if (var2Lifetime53 != null) {
-            cc.field_v[2] = i.a(-2022, var2Lifetime53);
+            cc.detailNames[2] = i.a(-2022, var2Lifetime53);
           }
           var2Lifetime54 = jl.a("DETAIL_NAMES,3", true);
           if (null != var2Lifetime54) {
-            cc.field_v[3] = i.a(param0 - 2042, var2Lifetime54);
+            cc.detailNames[3] = i.a(param0 - 2042, var2Lifetime54);
           }
           var2Lifetime55 = jl.a("achievement_names,0", true);
           if (null != var2Lifetime55) {
-            qk.field_d[0] = i.a(-2022, var2Lifetime55);
+            qk.achievementTitles[0] = i.a(-2022, var2Lifetime55);
           }
           var2Lifetime56 = jl.a("achievement_names,1", true);
           if (null != var2Lifetime56) {
-            qk.field_d[1] = i.a(-2022, var2Lifetime56);
+            qk.achievementTitles[1] = i.a(-2022, var2Lifetime56);
           }
           var2Lifetime57 = jl.a("achievement_names,2", true);
           if (null != var2Lifetime57) {
-            qk.field_d[2] = i.a(jd.a(param0, -2034), var2Lifetime57);
+            qk.achievementTitles[2] = i.a(jd.a(param0, -2034), var2Lifetime57);
           }
           var2Lifetime58 = jl.a("achievement_names,3", true);
           if (null != var2Lifetime58) {
-            qk.field_d[3] = i.a(-2022, var2Lifetime58);
+            qk.achievementTitles[3] = i.a(-2022, var2Lifetime58);
           }
           var2Lifetime59 = jl.a("achievement_names,4", true);
           if (null != var2Lifetime59) {
-            qk.field_d[4] = i.a(-2022, var2Lifetime59);
+            qk.achievementTitles[4] = i.a(-2022, var2Lifetime59);
           }
           var2Lifetime60 = jl.a("achievement_names,5", true);
           if (var2Lifetime60 != null) {
-            qk.field_d[5] = i.a(-2022, var2Lifetime60);
+            qk.achievementTitles[5] = i.a(-2022, var2Lifetime60);
           }
           var2Lifetime61 = jl.a("achievement_names,6", true);
           if (var2Lifetime61 != null) {
-            qk.field_d[6] = i.a(jd.a(param0, -2034), var2Lifetime61);
+            qk.achievementTitles[6] = i.a(jd.a(param0, -2034), var2Lifetime61);
           }
           var2Lifetime62 = jl.a("achievement_names,7", true);
           if (null != var2Lifetime62) {
-            qk.field_d[7] = i.a(param0 - 2042, var2Lifetime62);
+            qk.achievementTitles[7] = i.a(param0 - 2042, var2Lifetime62);
           }
           var2Lifetime63 = jl.a("achievement_names,8", true);
           if (null != var2Lifetime63) {
-            qk.field_d[8] = i.a(-2022, var2Lifetime63);
+            qk.achievementTitles[8] = i.a(-2022, var2Lifetime63);
           }
           var2Lifetime64 = jl.a("achievement_names,9", true);
           if (null != var2Lifetime64) {
-            qk.field_d[9] = i.a(-2022, var2Lifetime64);
+            qk.achievementTitles[9] = i.a(-2022, var2Lifetime64);
           }
           var2Lifetime65 = jl.a("achievement_criteria,0", true);
           if (null != var2Lifetime65) {
-            ak.field_b[0] = i.a(jd.a(param0, -2034), var2Lifetime65);
+            ak.achievementCriteria[0] = i.a(jd.a(param0, -2034), var2Lifetime65);
           }
           var2Lifetime66 = jl.a("achievement_criteria,1", true);
           if (null != var2Lifetime66) {
-            ak.field_b[1] = i.a(-2022, var2Lifetime66);
+            ak.achievementCriteria[1] = i.a(-2022, var2Lifetime66);
           }
           var2Lifetime67 = jl.a("achievement_criteria,2", true);
           if (null != var2Lifetime67) {
-            ak.field_b[2] = i.a(-2022, var2Lifetime67);
+            ak.achievementCriteria[2] = i.a(-2022, var2Lifetime67);
           }
           var2Lifetime68 = jl.a("achievement_criteria,3", true);
           if (var2Lifetime68 != null) {
-            ak.field_b[3] = i.a(-2022, var2Lifetime68);
+            ak.achievementCriteria[3] = i.a(-2022, var2Lifetime68);
           }
           var2Lifetime69 = jl.a("achievement_criteria,4", true);
           if (null != var2Lifetime69) {
-            ak.field_b[4] = i.a(-2022, var2Lifetime69);
+            ak.achievementCriteria[4] = i.a(-2022, var2Lifetime69);
           }
           var2Lifetime70 = jl.a("achievement_criteria,5", true);
           if (var2Lifetime70 != null) {
-            ak.field_b[5] = i.a(-2022, var2Lifetime70);
+            ak.achievementCriteria[5] = i.a(-2022, var2Lifetime70);
           }
           var2Lifetime71 = jl.a("achievement_criteria,6", true);
           if (var2Lifetime71 != null) {
-            ak.field_b[6] = i.a(-2022, var2Lifetime71);
+            ak.achievementCriteria[6] = i.a(-2022, var2Lifetime71);
           }
           var2Lifetime72 = jl.a("achievement_criteria,7", true);
           if (null != var2Lifetime72) {
-            ak.field_b[7] = i.a(-2022, var2Lifetime72);
+            ak.achievementCriteria[7] = i.a(-2022, var2Lifetime72);
           }
           var2Lifetime73 = jl.a("achievement_criteria,8", true);
           if (null != var2Lifetime73) {
-            ak.field_b[8] = i.a(-2022, var2Lifetime73);
+            ak.achievementCriteria[8] = i.a(-2022, var2Lifetime73);
           }
           var2Lifetime74 = jl.a("achievement_criteria,9", true);
           if (var2Lifetime74 != null) {
-            ak.field_b[9] = i.a(-2022, var2Lifetime74);
+            ak.achievementCriteria[9] = i.a(-2022, var2Lifetime74);
           }
           var2Lifetime75 = jl.a("text_login_or_discard", true);
           if (var2Lifetime75 != null) {
@@ -701,115 +701,115 @@ final class a extends cc {
           }
           var2Lifetime76 = jl.a("gameoptlabels,0", true);
           if (null != var2Lifetime76) {
-            RasterBuffer.field_e[0] = i.a(jd.a(param0, -2034), var2Lifetime76);
+            RasterBuffer.gameOptionLabels[0] = i.a(jd.a(param0, -2034), var2Lifetime76);
           }
           var2Lifetime77 = jl.a("gameoptlabels,1", true);
           if (null != var2Lifetime77) {
-            RasterBuffer.field_e[1] = i.a(-2022, var2Lifetime77);
+            RasterBuffer.gameOptionLabels[1] = i.a(-2022, var2Lifetime77);
           }
           var2Lifetime78 = jl.a("gameoptnames,0,0", true);
           if (null != var2Lifetime78) {
-            wc.field_c[0][0] = i.a(-2022, var2Lifetime78);
+            wc.gameOptionNames[0][0] = i.a(-2022, var2Lifetime78);
           }
           var2Lifetime79 = jl.a("gameoptnames,0,1", true);
           if (var2Lifetime79 != null) {
-            wc.field_c[0][1] = i.a(-2022, var2Lifetime79);
+            wc.gameOptionNames[0][1] = i.a(-2022, var2Lifetime79);
           }
           var2Lifetime80 = jl.a("gameoptnames,0,2", true);
           if (var2Lifetime80 != null) {
-            wc.field_c[0][2] = i.a(-2022, var2Lifetime80);
+            wc.gameOptionNames[0][2] = i.a(-2022, var2Lifetime80);
           }
           var2Lifetime81 = jl.a("gameoptnames,0,3", true);
           if (var2Lifetime81 != null) {
-            wc.field_c[0][3] = i.a(-2022, var2Lifetime81);
+            wc.gameOptionNames[0][3] = i.a(-2022, var2Lifetime81);
           }
           var2Lifetime82 = jl.a("gameoptnames,0,4", true);
           if (var2Lifetime82 != null) {
-            wc.field_c[0][4] = i.a(-2022, var2Lifetime82);
+            wc.gameOptionNames[0][4] = i.a(-2022, var2Lifetime82);
           }
           var2Lifetime83 = jl.a("gameoptnames,0,5", true);
           if (var2Lifetime83 != null) {
-            wc.field_c[0][5] = i.a(-2022, var2Lifetime83);
+            wc.gameOptionNames[0][5] = i.a(-2022, var2Lifetime83);
           }
           var2Lifetime84 = jl.a("gameoptnames,0,6", true);
           if (var2Lifetime84 != null) {
-            wc.field_c[0][6] = i.a(-2022, var2Lifetime84);
+            wc.gameOptionNames[0][6] = i.a(-2022, var2Lifetime84);
           }
           var2Lifetime85 = jl.a("gameoptnames,1,0", true);
           if (null != var2Lifetime85) {
-            wc.field_c[1][0] = i.a(-2022, var2Lifetime85);
+            wc.gameOptionNames[1][0] = i.a(-2022, var2Lifetime85);
           }
           var2Lifetime86 = jl.a("gameoptnames,1,1", true);
           if (null != var2Lifetime86) {
-            wc.field_c[1][1] = i.a(-2022, var2Lifetime86);
+            wc.gameOptionNames[1][1] = i.a(-2022, var2Lifetime86);
           }
           var2Lifetime87 = jl.a("gameoptnames,1,2", true);
           if (null != var2Lifetime87) {
-            wc.field_c[1][2] = i.a(-2022, var2Lifetime87);
+            wc.gameOptionNames[1][2] = i.a(-2022, var2Lifetime87);
           }
           var2Lifetime88 = jl.a("hotseatmenulabel", true);
           if (var2Lifetime88 != null) {
-            cm.field_j = i.a(param0 - 2042, var2Lifetime88);
+            cm.hotseatmenulabel = i.a(param0 - 2042, var2Lifetime88);
           }
           var2Lifetime89 = jl.a("hotseatoption_gridwidth_colon", true);
           if (var2Lifetime89 != null) {
-            pg.field_i = i.a(param0 - 2042, var2Lifetime89);
+            pg.hotseatoptionGridwidthColon = i.a(param0 - 2042, var2Lifetime89);
           }
           var2Lifetime90 = jl.a("hotseatoption_turnduration_colon", true);
           if (null != var2Lifetime90) {
-            rk.field_b = i.a(-2022, var2Lifetime90);
+            rk.hotseatoptionTurndurationColon = i.a(-2022, var2Lifetime90);
           }
           var2Lifetime91 = jl.a("hotseatoption_ailevel_colon", true);
           if (var2Lifetime91 != null) {
-            gh.field_Lb = i.a(-2022, var2Lifetime91);
+            gh.hotseatoptionAilevelColon = i.a(-2022, var2Lifetime91);
           }
           var2Lifetime92 = jl.a("ailevelnames,0", true);
           if (var2Lifetime92 != null) {
-            mh.field_i[0] = i.a(-2022, var2Lifetime92);
+            mh.aiLevelNames[0] = i.a(-2022, var2Lifetime92);
           }
           var2Lifetime93 = jl.a("ailevelnames,1", true);
           if (null != var2Lifetime93) {
-            mh.field_i[1] = i.a(-2022, var2Lifetime93);
+            mh.aiLevelNames[1] = i.a(-2022, var2Lifetime93);
           }
           var2Lifetime94 = jl.a("ailevelnames,2", true);
           if (var2Lifetime94 != null) {
-            mh.field_i[2] = i.a(-2022, var2Lifetime94);
+            mh.aiLevelNames[2] = i.a(-2022, var2Lifetime94);
           }
           var2Lifetime95 = jl.a("ailevelnames,3", true);
           if (var2Lifetime95 != null) {
-            mh.field_i[3] = i.a(-2022, var2Lifetime95);
+            mh.aiLevelNames[3] = i.a(-2022, var2Lifetime95);
           }
           var2Lifetime96 = jl.a("tutorial1", true);
           if (var2Lifetime96 != null) {
-            ee.field_b = i.a(-2022, var2Lifetime96);
+            ee.tutorial1 = i.a(-2022, var2Lifetime96);
           }
           var2Lifetime97 = jl.a("tutorial2", true);
           if (null != var2Lifetime97) {
-            gl.field_h = i.a(-2022, var2Lifetime97);
+            gl.tutorial2 = i.a(-2022, var2Lifetime97);
           }
           var2Lifetime98 = jl.a("tutorial3", true);
           if (var2Lifetime98 != null) {
-            fa.field_h = i.a(-2022, var2Lifetime98);
+            fa.tutorial3 = i.a(-2022, var2Lifetime98);
           }
           var2Lifetime99 = jl.a("tutorial4", true);
           if (var2Lifetime99 != null) {
-            jd.field_a = i.a(param0 ^ -2034, var2Lifetime99);
+            jd.tutorial4 = i.a(param0 ^ -2034, var2Lifetime99);
           }
           var2Lifetime100 = jl.a("text_removed_from_game", true);
           if (var2Lifetime100 != null) {
-            mi.field_f = i.a(param0 - 2042, var2Lifetime100);
+            mi.textRemovedFromGame = i.a(param0 - 2042, var2Lifetime100);
           }
           var2Lifetime101 = jl.a("text_lobby_pleaselogin", true);
           if (null != var2Lifetime101) {
-            he.field_cc = i.a(-2022, var2Lifetime101);
+            he.textLobbyPleaselogin = i.a(-2022, var2Lifetime101);
           }
           var2Lifetime102 = jl.a("instructions_pages,0", true);
           if (null != var2Lifetime102) {
-            em.field_b[0] = i.a(-2022, var2Lifetime102);
+            em.instructionPages[0] = i.a(-2022, var2Lifetime102);
           }
           var2Lifetime103 = jl.a("instructions_pages,1", true);
           if (null != var2Lifetime103) {
-            em.field_b[1] = i.a(-2022, var2Lifetime103);
+            em.instructionPages[1] = i.a(-2022, var2Lifetime103);
           }
           ql.field_m = null;
           return;

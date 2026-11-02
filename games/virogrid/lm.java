@@ -11,7 +11,7 @@ final class lm implements Runnable {
     PlatformTaskDispatcher field_b;
     static on field_e;
     static int field_j;
-    static String field_k;
+    static String textPlayers;
     static String field_c;
 
     public static void a(byte param0) {
@@ -20,7 +20,7 @@ final class lm implements Runnable {
           lm.a(85, 97, false, 87, -111);
         }
         field_g = null;
-        field_k = null;
+        textPlayers = null;
         field_e = null;
         field_i = null;
     }
@@ -207,7 +207,7 @@ final class lm implements Runnable {
         field_g = "Player Name: ";
         field_a = 500;
         field_i = new lc(10, 2, 2, 0);
-        field_k = "Players are <%0> and <%1>.";
+        textPlayers = "Players are <%0> and <%1>.";
         field_e = new on();
         field_c = "To <%0>: ";
     }

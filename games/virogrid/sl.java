@@ -9,7 +9,7 @@ final class sl {
     static String field_c;
     private gk field_d;
     private int field_f;
-    static String field_a;
+    static String textSwitch2d;
 
     private final void a(int param0, dm param1) {
         RuntimeException var3 = null;
@@ -136,7 +136,7 @@ final class sl {
 
     public static void a(int param0) {
         field_c = null;
-        field_a = null;
+        textSwitch2d = null;
         if (param0 == 1) {
           field_h = null;
           field_g = null;
@@ -182,6 +182,6 @@ final class sl {
     static {
         field_c = "Accept";
         field_g = "Concluded";
-        field_a = "3D mode";
+        textSwitch2d = "3D mode";
     }
 }

@@ -5,13 +5,13 @@ final class vg extends ec {
     static String field_E;
     static String[] field_J;
     static i field_B;
-    static v field_H;
+    static v smallFont;
     static String[] field_F;
     static GameSession field_I;
 
     public static void f(int param0) {
         field_E = null;
-        field_H = null;
+        smallFont = null;
         if (param0 > -100) {
           return;
         }
@@ -21,7 +21,7 @@ final class vg extends ec {
         field_J = null;
     }
 
-    private vg(int param0, int param1, int param2, int param3, ol param4, cd param5, UiWidget param6) {
+    private vg(int param0, int param1, int param2, int param3, WidgetListener param4, cd param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_x = param6;

@@ -53,7 +53,7 @@ final class kn extends ec {
     }
 
     public kn() {
-        super(0, 0, 0, 0, (ol) null, (cd) null);
+        super(0, 0, 0, 0, (WidgetListener) null, (cd) null);
         this.field_H = 256;
     }
 
@@ -323,7 +323,7 @@ final class kn extends ec {
     }
 
     kn(UiWidget param0) {
-        super(param0.field_l, param0.field_u, param0.field_g, param0.field_m, (ol) null, (cd) null);
+        super(param0.field_l, param0.field_u, param0.field_g, param0.field_m, (WidgetListener) null, (cd) null);
         try {
           param0.a(this.field_m, true, 0, 0, this.field_g);
           this.field_H = 256;

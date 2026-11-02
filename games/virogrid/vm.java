@@ -5,7 +5,7 @@ final class vm {
     static double[] field_d;
     static int field_c;
     static un field_b;
-    static String field_a;
+    static String textEndgameResigned;
     static boolean field_e;
 
     final static void a(byte param0, boolean param1) {
@@ -149,7 +149,7 @@ final class vm {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        textEndgameResigned = null;
         if (param0 >= -105) {
           return;
         }
@@ -158,7 +158,7 @@ final class vm {
     }
 
     static {
-        field_a = "<%0> resigned";
+        textEndgameResigned = "<%0> resigned";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

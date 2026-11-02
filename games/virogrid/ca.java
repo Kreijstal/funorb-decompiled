@@ -138,7 +138,7 @@ final class ca extends WidgetContainer implements bo, ta {
     }
 
     ca(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (ol) null);
+        super(0, 0, 310, 190, (WidgetListener) null);
         ej dupTemp$0 = null;
         ej dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -198,26 +198,26 @@ final class ca extends WidgetContainer implements bo, ta {
             this.field_P = new tg(og.field_k, (cd) null);
             this.field_E.field_C = false;
           }
-          this.field_E.field_w = (ol) ((Object) new cc(10000536));
-          this.field_K.field_w = (ol) ((Object) new a(10000536));
+          this.field_E.listener = (WidgetListener) ((Object) new cc(10000536));
+          this.field_K.listener = (WidgetListener) ((Object) new a(10000536));
           var6 = new hf();
-          this.field_F.field_w = (ol) ((Object) var6);
+          this.field_F.listener = (WidgetListener) ((Object) var6);
           if (this.field_P != null) {
-            this.field_P.field_w = (ol) ((Object) var6);
+            this.field_P.listener = (WidgetListener) ((Object) var6);
           }
           this.field_E.field_h = sn.field_n;
           if (this.field_J != null) {
-            this.field_J.field_w = (ol) ((Object) var6);
+            this.field_J.listener = (WidgetListener) ((Object) var6);
           }
           if (null != this.field_J) {
             this.field_J.field_h = mh.field_j;
           }
           if (!this.field_H) {
             if (!this.field_T) {
-              this.field_P.field_w = (ol) ((Object) new ti());
+              this.field_P.listener = (WidgetListener) ((Object) new ti());
             } else {
               this.field_P.field_h = fn.field_f;
-              this.field_P.field_w = (ol) ((Object) new ti());
+              this.field_P.listener = (WidgetListener) ((Object) new ti());
             }
           } else {
             this.field_P.field_h = pj.field_b;

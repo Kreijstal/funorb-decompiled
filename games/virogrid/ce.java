@@ -274,7 +274,7 @@ final class ce extends ec {
         }
     }
 
-    private ce(int param0, int param1, int param2, int param3, ol param4, cd param5, UiWidget param6, boolean param7, boolean param8) {
+    private ce(int param0, int param1, int param2, int param3, WidgetListener param4, cd param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_J = 2147483647;
         this.field_M = 2147483647;

@@ -102,11 +102,11 @@ class wa extends tg {
           this.field_k = 0;
           return;
         }
-        if (!(this.field_w instanceof gm)) {
+        if (!(this.listener instanceof gm)) {
           return;
         }
         if (param0 > 63) {
-          var13 = (gm) ((Object) this.field_w);
+          var13 = (gm) ((Object) this.listener);
           var14 = var13.a((UiWidget) (this), (byte) -124);
           var4 = var14.a(3209);
           var5 = var13.b((UiWidget) (this), true);
@@ -136,7 +136,7 @@ class wa extends tg {
         }
         var9 = (UiWidget) null;
         this.a((UiWidget) null, '*', 68, -11);
-        var11 = (gm) ((Object) this.field_w);
+        var11 = (gm) ((Object) this.listener);
         var12 = var11.a((UiWidget) (this), (byte) -124);
         var4Lifetime1 = var12.a(3209);
         var5Lifetime1 = var11.b((UiWidget) (this), true);
@@ -200,8 +200,8 @@ class wa extends tg {
           super.a(param0, 127, param2, param3);
           this.d((byte) 103);
           if (this.field_i == 1) {
-            if (this.field_w instanceof gm) {
-              var7 = (gm) ((Object) this.field_w);
+            if (this.listener instanceof gm) {
+              var7 = (gm) ((Object) this.listener);
               var6 = var7.a(param0, param3, hk.field_Jb, (UiWidget) (this), true, nl.field_u);
               if (var6 != -1) {
                 if (this.field_P &&
@@ -317,8 +317,8 @@ class wa extends tg {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
-            this.field_w instanceof gm) {
-            var8_int = ((gm) ((Object) this.field_w)).a(param3, param5, hk.field_Jb, (UiWidget) (this), true, nl.field_u);
+            this.listener instanceof gm) {
+            var8_int = ((gm) ((Object) this.listener)).a(param3, param5, hk.field_Jb, (UiWidget) (this), true, nl.field_u);
             if (-1 != var8_int) {
               stackIn_5_1 = var8_int;
             } else {
@@ -544,17 +544,17 @@ class wa extends tg {
         if (param0 != 37) {
           return;
         }
-        if (this.field_w == null) {
+        if (this.listener == null) {
           return;
         }
         if (param3 != 0) {
           return;
         }
-        this.field_w.a(param1, (UiWidget) (this), this.field_C, param2, -23294);
-        if (!(this.field_w instanceof gm)) {
+        this.listener.a(param1, (UiWidget) (this), this.field_C, param2, -23294);
+        if (!(this.listener instanceof gm)) {
           return;
         }
-        gm var8 = (gm) ((Object) this.field_w);
+        gm var8 = (gm) ((Object) this.listener);
         if (this.field_J != this.field_R) {
           var8.a((byte) -49, this.field_J, param1, (UiWidget) (this), this.field_R, param2);
         }
@@ -606,7 +606,7 @@ class wa extends tg {
         this.field_P = false;
         this.field_G = -1;
         try {
-          this.field_w = vi.field_g.field_h;
+          this.listener = vi.field_g.field_h;
           this.field_N = param2;
           this.a(param0, 81, true);
           this.field_T = true;

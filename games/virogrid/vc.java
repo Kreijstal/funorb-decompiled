@@ -4,7 +4,7 @@
 final class vc extends dc {
     private dg field_gb;
     static int[] field_eb;
-    static String field_db;
+    static String textEndgameEntrapmentYou;
     static int field_bb;
     private String field_lb;
     static Sprite[][] field_fb;
@@ -42,7 +42,7 @@ final class vc extends dc {
     }
 
     public static void g(byte param0) {
-        field_db = null;
+        textEndgameEntrapmentYou = null;
         field_eb = null;
         field_hb = null;
         if (param0 < 57) {
@@ -189,6 +189,6 @@ final class vc extends dc {
 
     static {
         field_eb = new int[]{1, 1, 1, 3, 2, 1, 1, 2, 5, 1};
-        field_db = "You cannot move";
+        textEndgameEntrapmentYou = "You cannot move";
     }
 }

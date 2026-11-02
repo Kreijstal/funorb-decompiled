@@ -19,7 +19,7 @@ final class he extends km {
     long field_gc;
     km field_bc;
     int field_ac;
-    static String field_cc;
+    static String textLobbyPleaselogin;
     km field_Vb;
     boolean field_dc;
     km field_Lb;
@@ -195,7 +195,7 @@ final class he extends km {
         field_Xb = null;
         field_pc = null;
         field_Jb = null;
-        field_cc = null;
+        textLobbyPleaselogin = null;
     }
 
     final boolean f(byte param0) {
@@ -390,6 +390,6 @@ final class he extends km {
     }
 
     static {
-        field_cc = "To play a multiplayer game, please either log in or create a free account.";
+        textLobbyPleaselogin = "To play a multiplayer game, please either log in or create a free account.";
     }
 }

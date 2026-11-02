@@ -5,10 +5,10 @@ final class rb {
     static String field_b;
     static int field_c;
     static int[] field_a;
-    static String field_d;
+    static String textFullscreenToggle;
 
     public static void a(byte param0) {
-        field_d = null;
+        textFullscreenToggle = null;
         field_b = null;
         field_a = null;
         if (param0 != -13) {
@@ -60,6 +60,6 @@ final class rb {
 
     static {
         field_b = "Accept <%0> into this game";
-        field_d = "Toggle fullscreen mode";
+        textFullscreenToggle = "Toggle fullscreen mode";
     }
 }

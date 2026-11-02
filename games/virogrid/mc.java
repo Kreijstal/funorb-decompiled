@@ -4,11 +4,11 @@
 import java.util.*;
 
 final class mc {
-    static v field_b;
+    static v menuFont;
     static int field_a;
     static String field_e;
     static Random field_c;
-    static String field_d;
+    static String textViewcontrolsLeft;
 
     final static byte[] a(byte[] param0, int param1) {
         byte[] stackIn_9_0 = null;
@@ -113,15 +113,15 @@ final class mc {
     }
 
     public static void a(boolean param0) {
-        field_d = null;
+        textViewcontrolsLeft = null;
         if (!param0) {
-          field_b = null;
+          menuFont = null;
           field_e = null;
           field_c = null;
           return;
         }
         mc.a(44, true, false, -98, 124, 89, 122);
-        field_b = null;
+        menuFont = null;
         field_e = null;
         field_c = null;
     }
@@ -130,6 +130,6 @@ final class mc {
         field_a = -1;
         field_e = "<%0> has lost connection.";
         field_c = new Random();
-        field_d = "Rotate camera left";
+        textViewcontrolsLeft = "Rotate camera left";
     }
 }

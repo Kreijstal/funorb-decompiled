@@ -244,7 +244,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
     }
 
     public qh() {
-        super(0, 0, 496, 0, (ol) null);
+        super(0, 0, 496, 0, (WidgetListener) null);
         this.field_I = new vd("", (cd) null, 12);
         this.field_J = new vd("", (cd) null, 100);
         this.field_D = new vd("", (cd) null, 100);
@@ -269,17 +269,17 @@ final class qh extends WidgetContainer implements im, ta, fc {
         this.field_E.a(new ci(this.field_E, this.field_Q), (byte) 125);
         this.field_S.a(new kk(this.field_S), (byte) 127);
         this.field_L.field_C = false;
-        this.field_L.field_w = (ol) ((Object) new hf());
-        this.field_F.field_w = (ol) ((Object) new ti());
-        this.field_I.field_w = (ol) ((Object) new cc(10000536));
+        this.field_L.listener = (WidgetListener) ((Object) new hf());
+        this.field_F.listener = (WidgetListener) ((Object) new ti());
+        this.field_I.listener = (WidgetListener) ((Object) new cc(10000536));
         cc dupTemp$0 = new cc(10000536);
-        this.field_D.field_w = (ol) ((Object) dupTemp$0);
-        this.field_J.field_w = (ol) ((Object) dupTemp$0);
-        this.field_S.field_w = (ol) ((Object) new cc(10000536));
-        this.field_P.field_w = (ol) ((Object) new ae());
+        this.field_D.listener = (WidgetListener) ((Object) dupTemp$0);
+        this.field_J.listener = (WidgetListener) ((Object) dupTemp$0);
+        this.field_S.listener = (WidgetListener) ((Object) new cc(10000536));
+        this.field_P.listener = (WidgetListener) ((Object) new ae());
         a dupTemp$1 = new a(10000536);
-        this.field_E.field_w = (ol) ((Object) dupTemp$1);
-        this.field_Q.field_w = (ol) ((Object) dupTemp$1);
+        this.field_E.listener = (WidgetListener) ((Object) dupTemp$1);
+        this.field_Q.listener = (WidgetListener) ((Object) dupTemp$1);
         String var2 = oi.a(new String[]{this.e((byte) -117), this.g((byte) -1)}, Js5Archive.field_m, 2);
         int var3 = 20;
         var3 = var3 + this.a(170, 126, pc.field_d, var3, this.field_J);

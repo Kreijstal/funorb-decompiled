@@ -10,7 +10,7 @@ final class ai {
     String field_g;
     static float field_c;
     String field_d;
-    static String field_b;
+    static String textBack;
 
     final static void a(int param0, um param1, int[] param2, String param3, long param4, String param5, int param6, km param7, int param8) {
         try {
@@ -27,7 +27,7 @@ final class ai {
     public static void b(boolean param0) {
         field_a = null;
         field_i = null;
-        field_b = null;
+        textBack = null;
         if (param0) {
           field_i = (String) null;
         }
@@ -62,6 +62,6 @@ final class ai {
 
     static {
         field_i = "Suggest muting this player";
-        field_b = "Back";
+        textBack = "Back";
     }
 }

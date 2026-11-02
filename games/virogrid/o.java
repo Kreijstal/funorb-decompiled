@@ -4,7 +4,7 @@
 final class o {
     static String field_c;
     static int[] field_d;
-    static String field_a;
+    static String textSwitch3d;
     static String[] field_b;
     static String field_f;
     static int field_e;
@@ -43,20 +43,20 @@ final class o {
         if (param0 > 45) {
           field_c = null;
           field_b = null;
-          field_a = null;
+          textSwitch3d = null;
           field_f = null;
           return;
         }
         field_e = -104;
         field_c = null;
         field_b = null;
-        field_a = null;
+        textSwitch3d = null;
         field_f = null;
     }
 
     static {
         field_c = "Please remove <%0> from your friend list first.";
-        field_a = "2D mode";
+        textSwitch3d = "2D mode";
         field_e = 0;
         field_f = "To Customer Support";
         field_b = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static String field_g;
+    static String textColourBlue;
     static int field_c;
     boolean field_i;
     public static int field_f;
@@ -118,7 +118,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var5 = null;
         try {
           if (param1 != 6) {
-            field_g = (String) null;
+            textColourBlue = (String) null;
           }
           lm.a(param1 - 6);
           Rasterizer.h(param2, param4, param3, param0);
@@ -889,9 +889,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public static void b(int param0) {
         try {
-          field_g = null;
+          textColourBlue = null;
           if (param0 != -6490) {
-            field_g = (String) null;
+            textColourBlue = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "uk.I(" + param0 + ')');
@@ -952,7 +952,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     static {
-        field_g = "blue";
+        textColourBlue = "blue";
     }
 
     private static int $cfr$lcmp(long left, long right) {

@@ -6,7 +6,7 @@ final class pj {
     static int[] field_d;
     static String field_b;
     static Js5Archive field_c;
-    static String field_e;
+    static String textOptions;
 
     final static void a(int param0) {
         String var2 = (String) null;
@@ -22,15 +22,15 @@ final class pj {
           field_c = null;
           field_b = null;
           field_d = null;
-          field_e = null;
+          textOptions = null;
           return;
         }
-        field_e = (String) null;
+        textOptions = (String) null;
         field_a = null;
         field_c = null;
         field_b = null;
         field_d = null;
-        field_e = null;
+        textOptions = null;
     }
 
     final static void a(int param0, int param1) {
@@ -77,6 +77,6 @@ final class pj {
     static {
         field_d = new int[256];
         field_b = "Warning: if you quit, you will lose any game you are in the middle of!";
-        field_e = "Options";
+        textOptions = "Options";
     }
 }

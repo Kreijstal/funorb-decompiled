@@ -5,7 +5,7 @@ abstract class RasterBuffer {
     static um field_d;
     static il field_j;
     static String field_k;
-    static String[] field_e;
+    static String[] gameOptionLabels;
     static String field_g;
     int[] field_l;
     int field_c;
@@ -32,7 +32,7 @@ abstract class RasterBuffer {
         field_i = null;
         field_g = null;
         field_m = null;
-        field_e = null;
+        gameOptionLabels = null;
         field_j = null;
         field_k = null;
         field_a = null;
@@ -253,7 +253,7 @@ abstract class RasterBuffer {
     }
 
     static {
-        field_e = new String[]{"Turn duration (seconds)", "Grid width"};
+        gameOptionLabels = new String[]{"Turn duration (seconds)", "Grid width"};
         field_k = "Playing";
         field_a = "Unfortunately we are unable to create an account for you at this time.";
         field_g = "Owner";

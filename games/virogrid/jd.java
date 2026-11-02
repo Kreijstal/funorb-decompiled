@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class jd {
-    static String field_a;
+    static String tutorial4;
     private java.util.zip.Inflater field_c;
     static String field_e;
     static String field_b;
@@ -118,7 +118,7 @@ final class jd {
         if (!param0) {
           return;
         }
-        field_a = null;
+        tutorial4 = null;
         field_d = null;
         field_b = null;
     }
@@ -448,7 +448,7 @@ final class jd {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 50) {
-              field_a = (String) null;
+              tutorial4 = (String) null;
             }
             if (param2.payload[param2.position] == 31 &&
               param2.payload[1 + param2.position] == -117) {
@@ -555,7 +555,7 @@ final class jd {
     }
 
     static {
-        field_a = "Dominate the grid<br>to achieve victory!";
+        tutorial4 = "Dominate the grid<br>to achieve victory!";
         field_e = "Enter name of friend to add to list";
     }
 }

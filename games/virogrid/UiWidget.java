@@ -9,7 +9,7 @@ class UiWidget extends IntrusiveNode {
     int field_g;
     int field_q;
     int field_l;
-    ol field_w;
+    WidgetListener listener;
     static int[] field_j;
     static java.awt.Canvas field_v;
     int field_m;
@@ -303,10 +303,10 @@ class UiWidget extends IntrusiveNode {
           if (this.f(true)) {
             discarded$3 = param3.append(" focused");
           }
-          if (this.field_w != null) {
+          if (this.listener != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_w instanceof UiWidget)) {
-              discarded$5 = param3.append(this.field_w);
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$5 = param3.append(this.listener);
               if (var6 != 0) {
                 param3 = this.a(param1, (byte) 119, param0 + 1, param3);
               }
@@ -457,8 +457,8 @@ class UiWidget extends IntrusiveNode {
           this.a(15, (Hashtable) null, (byte) 35, (StringBuilder) null);
         }
         if (0 == param3 &&
-          this.field_w != null) {
-          this.field_w.a(param1, this, true, param2, -23294);
+          this.listener != null) {
+          this.listener.a(param1, this, true, param2, -23294);
         }
     }
 
@@ -526,7 +526,7 @@ class UiWidget extends IntrusiveNode {
         this.field_k = 0;
     }
 
-    UiWidget(String param0, ol param1, cd param2) {
+    UiWidget(String param0, WidgetListener param1, cd param2) {
         RuntimeException runtimeException = null;
         gm var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -540,11 +540,11 @@ class UiWidget extends IntrusiveNode {
         this.field_q = 0;
         this.field_k = 0;
         try {
-          this.field_w = param1;
+          this.listener = param1;
           this.field_o = param2;
           this.field_n = param0;
-          if (this.field_w instanceof gm) {
-            var4 = (gm) ((Object) this.field_w);
+          if (this.listener instanceof gm) {
+            var4 = (gm) ((Object) this.listener);
             this.field_g = var4.a(this, false);
             this.field_m = var4.a(this, 80);
           }
@@ -575,7 +575,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, ol param4, cd param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetListener param4, cd param5) {
         this.field_q = 0;
         this.field_k = 0;
         try {
@@ -584,7 +584,7 @@ class UiWidget extends IntrusiveNode {
           this.field_l = param0;
           this.field_m = param3;
           this.field_o = param5;
-          this.field_w = param4;
+          this.listener = param4;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

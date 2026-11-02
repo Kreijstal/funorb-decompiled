@@ -5,7 +5,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static int[] field_h;
     static String field_g;
     static String field_a;
-    static String field_f;
+    static String text3d;
     static boolean field_c;
     static km field_b;
     static String field_e;
@@ -132,7 +132,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         field_g = null;
         field_h = null;
         field_a = null;
-        field_f = null;
+        text3d = null;
         field_e = null;
         field_b = null;
     }
@@ -255,7 +255,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     static {
         field_h = new int[8192];
-        field_f = "3D";
+        text3d = "3D";
         field_a = "Encouraging rule breaking";
         field_e = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vf {
-    static String field_d;
+    static String textEndgameBoardfilledDraw;
     static on field_b;
     static aj field_f;
     static String field_a;
@@ -21,7 +21,7 @@ final class vf {
     }
 
     public static void a(boolean param0) {
-        field_d = null;
+        textEndgameBoardfilledDraw = null;
         field_b = null;
         field_f = null;
         if (!param0) {
@@ -29,7 +29,7 @@ final class vf {
           field_a = null;
           return;
         }
-        field_d = (String) null;
+        textEndgameBoardfilledDraw = (String) null;
         field_e = null;
         field_a = null;
     }
@@ -51,7 +51,7 @@ final class vf {
         var5 = Virogrid.field_F ? 1 : 0;
         try {
           if (param1 != 8286) {
-            field_d = (String) null;
+            textEndgameBoardfilledDraw = (String) null;
           }
           var2_int = param0.length();
           if (var2_int == 0) {
@@ -93,7 +93,7 @@ final class vf {
     }
 
     static {
-        field_d = "Both players have the same number of pieces";
+        textEndgameBoardfilledDraw = "Both players have the same number of pieces";
         field_b = new on();
         field_a = "Try again";
         field_c = 360;

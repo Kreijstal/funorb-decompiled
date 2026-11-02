@@ -14,11 +14,11 @@ final class gl {
     static int[] field_c;
     static int[] field_b;
     static String field_a;
-    static String field_h;
+    static String tutorial2;
 
     public static void a(int param0) {
         field_a = null;
-        field_h = null;
+        tutorial2 = null;
         field_g = null;
         field_b = null;
         if (param0 != 3) {
@@ -455,6 +455,6 @@ final class gl {
         field_i = "Unpacking models";
         field_a = "Waiting for extra data";
         field_b = new int[8192];
-        field_h = "Move one space to clone<br>or two spaces to jump";
+        tutorial2 = "Move one space to clone<br>or two spaces to jump";
     }
 }

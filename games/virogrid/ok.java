@@ -154,7 +154,7 @@ final class ok extends WidgetContainer implements im, ta {
     }
 
     ok(b param0) {
-        super(0, 0, 288, 0, (ol) null);
+        super(0, 0, 288, 0, (WidgetListener) null);
         String var7 = null;
         int var3 = 0;
         aj var4 = null;
@@ -163,7 +163,7 @@ final class ok extends WidgetContainer implements im, ta {
         try {
           this.field_H = param0;
           this.field_I = new tg(md.field_c, (cd) null);
-          this.field_I.field_w = (ol) ((Object) new hf());
+          this.field_I.listener = (WidgetListener) ((Object) new hf());
           var7 = oi.a(new String[]{this.a((byte) 125), this.a(-18042)}, gh.field_Kb, 2);
           var3 = 20;
           var4 = new aj(dj.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);

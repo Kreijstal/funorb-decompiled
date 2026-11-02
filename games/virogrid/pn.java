@@ -5,7 +5,7 @@ import java.io.*;
 
 final class pn extends dk {
     static lc field_z;
-    static String field_C;
+    static String textViewcontrolsRight;
     static String field_A;
     static String field_w;
     private BufferedSocket field_B;
@@ -57,7 +57,7 @@ final class pn extends dk {
     }
 
     public static void c(boolean param0) {
-        field_C = null;
+        textViewcontrolsRight = null;
         field_z = null;
         field_A = null;
         if (!param0) {
@@ -230,7 +230,7 @@ final class pn extends dk {
             }
             this.field_k = 0;
             if (param0 >= 0) {
-              field_C = (String) null;
+              textViewcontrolsRight = (String) null;
             }
             this.field_f = hc.a(-9986);
             return;
@@ -254,11 +254,11 @@ final class pn extends dk {
     }
 
     final static void a(boolean param0) {
-        ok.field_L = hd.field_b.a(de.field_pb[14]);
+        ok.field_L = hd.standardFont.a(de.field_pb[14]);
         if (param0) {
           pn.a(-7, (byte) 94);
         }
-        int var1 = hd.field_b.a(de.field_pb[15]);
+        int var1 = hd.standardFont.a(de.field_pb[15]);
         if (!(var1 <= ok.field_L)) {
           ok.field_L = var1;
         }
@@ -522,7 +522,7 @@ final class pn extends dk {
 
     static {
         field_w = "Your email address is used to identify this account";
-        field_C = "Rotate camera right";
+        textViewcontrolsRight = "Rotate camera right";
         field_A = "<%0> wants to join";
         field_y = "This is your RuneScape clan if you have one.";
         field_z = new lc(4, 1, 1, 1);

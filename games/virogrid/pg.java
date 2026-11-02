@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg {
-    static String field_a;
+    static String textEndgameResignedYou;
     static int field_g;
     int field_d;
     static boolean field_h;
     static int field_e;
-    static String field_i;
+    static String hotseatoptionGridwidthColon;
     static String[] field_c;
     int field_b;
     int field_f;
@@ -15,7 +15,7 @@ final class pg {
 
     final static int a(boolean param0) {
         if (!param0) {
-          field_i = (String) null;
+          hotseatoptionGridwidthColon = (String) null;
           return lj.field_g;
         }
         return lj.field_g;
@@ -63,13 +63,13 @@ final class pg {
     public static void b(int param0) {
         field_c = null;
         field_j = null;
-        field_a = null;
+        textEndgameResignedYou = null;
         if (param0 != 8192) {
           pg.a((byte) 74);
-          field_i = null;
+          hotseatoptionGridwidthColon = null;
           return;
         }
-        field_i = null;
+        hotseatoptionGridwidthColon = null;
     }
 
     final static String a(int param0) {
@@ -92,8 +92,8 @@ final class pg {
     }
 
     static {
-        field_a = "You resigned";
-        field_i = "Grid width: <%0>";
+        textEndgameResignedYou = "You resigned";
+        hotseatoptionGridwidthColon = "Grid width: <%0>";
         field_c = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_j = new int[8192];
     }

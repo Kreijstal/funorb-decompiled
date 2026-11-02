@@ -6,14 +6,14 @@ final class cm extends IntrusiveNode {
     static String field_i;
     static km field_h;
     static String field_g;
-    static String field_j;
+    static String hotseatmenulabel;
 
     public static void c(int param0) {
         field_k = null;
         field_i = null;
         field_g = null;
         field_h = null;
-        field_j = null;
+        hotseatmenulabel = null;
         int var1 = 84 / ((56 - param0) / 52);
     }
 
@@ -190,6 +190,6 @@ final class cm extends IntrusiveNode {
     static {
         field_g = "Unrated game";
         field_i = "Public";
-        field_j = "Hotseat/Singleplayer";
+        hotseatmenulabel = "Hotseat/Singleplayer";
     }
 }

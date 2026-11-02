@@ -23,7 +23,7 @@ final class je extends ec {
     }
 
     public je() {
-        super(0, 0, mm.field_i, mn.field_a, (ol) null, (cd) null);
+        super(0, 0, mm.field_i, mn.field_a, (WidgetListener) null, (cd) null);
         this.field_F = new IntrusiveDeque();
     }
 
@@ -191,8 +191,8 @@ final class je extends ec {
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var7 = Virogrid.field_F ? 1 : 0;
-        if (null != this.field_w) {
-          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
+        if (null != this.listener) {
+          this.listener.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         if (param0 != 37) {
           return;

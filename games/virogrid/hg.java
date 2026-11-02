@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hg extends PacketBuffer {
-    static String field_n;
+    static String textPlayAgain;
     private int field_r;
     private mm field_s;
     static String field_o;
@@ -92,7 +92,7 @@ final class hg extends PacketBuffer {
         if (param0 != 103) {
           return;
         }
-        field_n = null;
+        textPlayAgain = null;
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
@@ -140,7 +140,7 @@ final class hg extends PacketBuffer {
     }
 
     static {
-        field_n = "Play again";
+        textPlayAgain = "Play again";
         field_q = new char[128];
         field_o = "This game has started.";
     }

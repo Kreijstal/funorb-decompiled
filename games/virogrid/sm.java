@@ -4,7 +4,7 @@
 final class sm {
     static byte[][] field_b;
     static volatile int field_a;
-    static String field_d;
+    static String textRankingsBywinpercentage;
     static String field_c;
 
     final static void a(float param0, boolean param1, boolean param2, String param3) {
@@ -25,14 +25,14 @@ final class sm {
         if (param0 != -1) {
           return;
         }
-        field_d = null;
+        textRankingsBywinpercentage = null;
         field_b = (byte[][]) null;
         field_c = null;
     }
 
     static {
         field_b = new byte[250][];
-        field_d = "By win %";
+        textRankingsBywinpercentage = "By win %";
         field_a = -1;
         field_c = "Match by...";
     }

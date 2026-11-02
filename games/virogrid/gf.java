@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class gf extends UiWidget implements ja {
     UiWidget[] field_E;
-    static String field_B;
+    static String textYourTurnPlaying;
     static String field_C;
     static lc field_z;
     static String field_D;
@@ -130,8 +130,8 @@ abstract class gf extends UiWidget implements ja {
         int var7;
         var7 = Virogrid.field_F ? 1 : 0;
         if (param3 == 0 &&
-          this.field_w != null) {
-          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
+          this.listener != null) {
+          this.listener.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         if (param0 != 37) {
           return;
@@ -357,7 +357,7 @@ abstract class gf extends UiWidget implements ja {
         }
     }
 
-    gf(int param0, int param1, int param2, int param3, ol param4) {
+    gf(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4, (cd) null);
     }
 
@@ -372,7 +372,7 @@ abstract class gf extends UiWidget implements ja {
           return null;
         }
         if (param0 != 16711935) {
-          field_B = (String) null;
+          textYourTurnPlaying = (String) null;
         }
         var6 = this.field_E;
         var2 = var6;
@@ -800,7 +800,7 @@ abstract class gf extends UiWidget implements ja {
         field_D = null;
         field_C = null;
         field_y = null;
-        field_B = null;
+        textYourTurnPlaying = null;
         field_x = null;
         int var1 = -19 / ((param0 - 70) / 41);
         field_A = null;
@@ -933,7 +933,7 @@ abstract class gf extends UiWidget implements ja {
     }
 
     static {
-        field_B = "Your turn - playing <%0> (<%1>)";
+        textYourTurnPlaying = "Your turn - playing <%0> (<%1>)";
         field_C = "Invalid date";
         field_D = "Real-life threats";
         field_z = new lc(6, 0, 4, 2);

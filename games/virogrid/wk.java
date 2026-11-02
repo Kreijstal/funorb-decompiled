@@ -177,7 +177,7 @@ final class wk extends WidgetContainer implements fc, ta {
     }
 
     public wk() {
-        super(0, 0, 496, 0, (ol) null);
+        super(0, 0, 496, 0, (WidgetListener) null);
         this.field_D = new vd("", (cd) null, 12);
         aj var1 = new aj(dk.field_j, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(GameKeyHandler.field_e, var1, (cd) null);
@@ -186,9 +186,9 @@ final class wk extends WidgetContainer implements fc, ta {
         this.field_D.field_h = sd.field_c;
         this.field_D.a(new di(this.field_D), (byte) 127);
         this.field_E.field_C = false;
-        this.field_E.field_w = (ol) ((Object) new hf());
-        this.field_G.field_w = (ol) ((Object) new ti());
-        this.field_D.field_w = (ol) ((Object) new cc(10000536));
+        this.field_E.listener = (WidgetListener) ((Object) new hf());
+        this.field_G.listener = (WidgetListener) ((Object) new ti());
+        this.field_D.listener = (WidgetListener) ((Object) new cc(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

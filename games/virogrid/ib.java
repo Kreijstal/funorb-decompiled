@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ib {
-    static Sprite[] field_b;
+    static Sprite[] frameSprites;
     static String field_a;
 
     final static void a(byte param0) {
@@ -41,11 +41,11 @@ final class ib {
     public static void a(int param0) {
         if (param0 >= -30) {
           field_a = (String) null;
-          field_b = null;
+          frameSprites = null;
           field_a = null;
           return;
         }
-        field_b = null;
+        frameSprites = null;
         field_a = null;
     }
 

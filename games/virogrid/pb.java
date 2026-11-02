@@ -6,7 +6,7 @@ final class pb extends IntrusiveNode {
     int field_o;
     int field_j;
     static km field_p;
-    static String field_k;
+    static String textColourWhite;
     static int[] field_i;
     pb field_q;
     static String field_l;
@@ -171,7 +171,7 @@ final class pb extends IntrusiveNode {
     public static void a(byte param0) {
         field_m = null;
         int var1 = -55 % ((-5 - param0) / 34);
-        field_k = null;
+        textColourWhite = null;
         field_p = null;
         field_i = null;
         field_l = null;
@@ -179,7 +179,7 @@ final class pb extends IntrusiveNode {
     }
 
     static {
-        field_k = "white";
+        textColourWhite = "white";
         field_i = new int[4];
         field_h = -1;
         field_n = "Passwords must be between 5 and 20 letters and numbers";

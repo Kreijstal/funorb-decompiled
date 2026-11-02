@@ -8,19 +8,19 @@ class WidgetContainer extends UiWidget implements ja {
     static km field_y;
     static String[] field_A;
     static int[] field_B;
-    IntrusiveDeque field_z;
+    IntrusiveDeque children;
     static int field_C;
 
-    WidgetContainer(int param0, int param1, int param2, int param3, ol param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4, (cd) null);
-        this.field_z = new IntrusiveDeque();
+        this.children = new IntrusiveDeque();
     }
 
     final int b(byte param0) {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
         int var2 = 0;
-        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_z);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         if (param0 != -39) {
           field_x = (String) null;
         }
@@ -54,7 +54,7 @@ class WidgetContainer extends UiWidget implements ja {
           if (param3 < 48) {
             field_C = 97;
           }
-          var5 = new IntrusiveDequeCursor(this.field_z);
+          var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiWidget) (var5.c(12677));
           while (var6 != null) {
             discarded$3 = param1.append('\n');
@@ -146,7 +146,7 @@ class WidgetContainer extends UiWidget implements ja {
 
     final void a(UiWidget param0, byte param1) {
         try {
-          this.field_z.a(param0, (byte) -58);
+          this.children.a(param0, (byte) -58);
           if (param1 != -78) {
             this.d(-16);
           }
@@ -166,7 +166,7 @@ class WidgetContainer extends UiWidget implements ja {
         RuntimeException decompiledCaughtException = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param5 != 0) {
             this.f(false);
           }
@@ -238,14 +238,14 @@ class WidgetContainer extends UiWidget implements ja {
           if (param0 != 2) {
             return true;
           }
-          if (this.field_z.b((byte) 32)) {
+          if (this.children.b((byte) 32)) {
             return false;
           }
-          var8 = new IntrusiveDequeCursor(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var8.a((byte) 48));
           while (var4 != null) {
             if (var4.f(true)) {
-              var5 = new IntrusiveDequeCursor(this.field_z);
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.b(1, var4);
               var6 = (UiWidget) (var5.a(-1));
               while (var6 != null) {
@@ -275,7 +275,7 @@ class WidgetContainer extends UiWidget implements ja {
 
     private final void d(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3 = (UiWidget) (var2.c(12677));
         if (param0 >= -17) {
           field_A = (String[]) null;
@@ -300,7 +300,7 @@ class WidgetContainer extends UiWidget implements ja {
         RuntimeException decompiledCaughtException = null;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
-          var10 = new IntrusiveDequeCursor(this.field_z);
+          var10 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var10.c(12677));
           while (var9 != null) {
             if (var9.b(false)) {
@@ -349,7 +349,7 @@ class WidgetContainer extends UiWidget implements ja {
         RuntimeException decompiledCaughtException = null;
         var5 = Virogrid.field_F ? 1 : 0;
         try {
-          var3 = new IntrusiveDequeCursor(this.field_z);
+          var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var3.c(12677));
           if (param1 != -8515) {
             this.f(false);
@@ -397,10 +397,10 @@ class WidgetContainer extends UiWidget implements ja {
           this.a(-9, (UiWidget) null);
         }
         if (param3 == 0 &&
-          this.field_w != null) {
-          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
+          this.listener != null) {
+          this.listener.a(param1, (UiWidget) (this), true, param2, -23294);
         }
-        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_z);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         UiWidget var6 = (UiWidget) (var5.a((byte) 48));
         while (var6 != null) {
           var6.a((byte) 37, this.field_l + param1, this.field_u + param2, param3);
@@ -410,7 +410,7 @@ class WidgetContainer extends UiWidget implements ja {
 
     final boolean f(boolean param0) {
         if (!param0) {
-          this.field_z = (IntrusiveDeque) null;
+          this.children = (IntrusiveDeque) null;
         }
         return this.c((byte) -3) != null ? true : false;
     }
@@ -428,17 +428,17 @@ class WidgetContainer extends UiWidget implements ja {
         RuntimeException decompiledCaughtException = null;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
-          if (this.field_z.b((byte) 95)) {
+          if (this.children.b((byte) 95)) {
             return false;
           }
           if (param0 != -16234) {
             return false;
           }
-          var8 = new IntrusiveDequeCursor(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var8.c(12677));
           while (var4 != null) {
             if (var4.f(true)) {
-              var5 = new IntrusiveDequeCursor(this.field_z);
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.a(param0 + 16150, var4);
               var6 = (UiWidget) (var5.b(41));
               while (var6 != null) {
@@ -476,7 +476,7 @@ class WidgetContainer extends UiWidget implements ja {
         RuntimeException decompiledCaughtException = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param2) {
             this.d((byte) -71);
           }
@@ -508,7 +508,7 @@ class WidgetContainer extends UiWidget implements ja {
 
     final void c(int param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != -1) {
           return;
         }
@@ -522,7 +522,7 @@ class WidgetContainer extends UiWidget implements ja {
     String d(int param0) {
         String var4 = null;
         int var5 = Virogrid.field_F ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3 = (UiWidget) (var2.c(12677));
         while (var3 != null) {
           var4 = var3.d(70);
@@ -543,7 +543,7 @@ class WidgetContainer extends UiWidget implements ja {
         UiWidget var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
-        var2 = new IntrusiveDequeCursor(this.field_z);
+        var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != -3) {
           field_x = (String) null;
         }
@@ -569,7 +569,7 @@ class WidgetContainer extends UiWidget implements ja {
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           super.a(param0, 114, param2, param3);
-          var5 = new IntrusiveDequeCursor(this.field_z);
+          var5 = new IntrusiveDequeCursor(this.children);
           if (param1 < 113) {
             field_C = 3;
           }
@@ -608,7 +608,7 @@ class WidgetContainer extends UiWidget implements ja {
         RuntimeException var7_ref = null;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
-          var7 = new IntrusiveDequeCursor(this.field_z);
+          var7 = new IntrusiveDequeCursor(this.children);
           var8 = (UiWidget) (var7.c(12677));
           while (var8 != null) {
             if (var8.b(false)) {

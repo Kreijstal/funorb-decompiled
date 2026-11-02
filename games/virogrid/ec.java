@@ -248,7 +248,7 @@ abstract class ec extends UiWidget implements ja {
         }
     }
 
-    ec(int param0, int param1, int param2, int param3, ol param4, cd param5) {
+    ec(int param0, int param1, int param2, int param3, WidgetListener param4, cd param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -313,8 +313,8 @@ abstract class ec extends UiWidget implements ja {
 
     void a(byte param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
-          this.field_w != null) {
-          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
+          this.listener != null) {
+          this.listener.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         if (param0 != 37) {
           field_y = (String) null;

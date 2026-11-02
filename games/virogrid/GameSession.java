@@ -90,18 +90,18 @@ final class GameSession {
             var2_ref_String = Integer.toString((this.turnTimer + 49) / 50);
             if (this.online) {
               if (this.board.currentPlayer == 0) {
-                stackIn_7_0 = GameApplet.field_g;
+                stackIn_7_0 = GameApplet.textColourBlue;
               } else {
-                stackIn_7_0 = pb.field_k;
+                stackIn_7_0 = pb.textColourWhite;
               }
               var3_ref_String = stackIn_7_0;
               if (this.board.currentPlayer == this.localPlayer) {
-                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String}, gf.field_B, 2);
+                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String}, gf.textYourTurnPlaying, 2);
               } else {
-                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String, this.board.playerNames[this.board.currentPlayer]}, ie.field_b, 2);
+                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String, this.board.playerNames[this.board.currentPlayer]}, ie.textXTurnPlaying, 2);
               }
             } else {
-              gh.field_Fb = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer], var2_ref_String}, hc.field_b, 2);
+              gh.field_Fb = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer], var2_ref_String}, hc.textXTurn, 2);
             }
           }
         }
@@ -125,7 +125,7 @@ final class GameSession {
           }
         }
         boolean decompiledFrameRemainder2 = true;
-        vg.field_H.a(gh.field_Fb);
+        vg.smallFont.a(gh.field_Fb);
         if (this.field_D && (!this.online ||
           this.board.currentPlayer == this.localPlayer)) {
           fieldTemp$1 = this.field_i + 1;
@@ -267,7 +267,7 @@ final class GameSession {
           if (this.board.finished) {
             this.field_q = 1;
             this.field_z = 0;
-            ve.field_v[0] = hg.field_n;
+            ve.field_v[0] = hg.textPlayAgain;
             ve.field_v[1] = sj.field_d;
           } else {
             ve.field_v[0] = null;
@@ -324,7 +324,7 @@ final class GameSession {
         var3Lifetime3 = 1;
         for (var4 = 0; var4 < 4; var4++) {
           if (null != ve.field_v[var4]) {
-            var5 = vg.field_H.a(ve.field_v[var4].toUpperCase());
+            var5 = vg.smallFont.a(ve.field_v[var4].toUpperCase());
             if (var5 > var3Lifetime3) {
               var3Lifetime3 = var5;
             }
@@ -558,25 +558,25 @@ final class GameSession {
                 if (this.board.playerWipedOut) {
                   if (this.online &&
                     this.localPlayer == 1 - this.board.currentPlayer) {
-                    var7_ref_StringLifetime1 = id.field_f;
+                    var7_ref_StringLifetime1 = id.textEndgameNopiecesYou;
                   } else {
-                    var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[-this.board.currentPlayer + 1]}, cg.field_e, 2);
+                    var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[-this.board.currentPlayer + 1]}, cg.textEndgameNopieces, 2);
                   }
                 } else {
                   if (this.board.field_r != 0) {
                     if (this.online &&
                       -this.board.currentPlayer + 1 == this.localPlayer) {
-                      var7_ref_StringLifetime1 = pg.field_a;
+                      var7_ref_StringLifetime1 = pg.textEndgameResignedYou;
                     } else {
-                      var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[1 - this.board.currentPlayer]}, vm.field_a, 2);
+                      var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[1 - this.board.currentPlayer]}, vm.textEndgameResigned, 2);
                     }
                   } else {
                     if (this.turnTimer <= 1) {
                       if (this.online &&
                         this.localPlayer == -this.board.currentPlayer + 1) {
-                        var7_ref_StringLifetime1 = ao.field_Nb;
+                        var7_ref_StringLifetime1 = ao.textEndgameNotimeYou;
                       } else {
-                        var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[1 - this.board.currentPlayer]}, dd.field_d, 2);
+                        var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[1 - this.board.currentPlayer]}, dd.textEndgameNotime, 2);
                       }
                     }
                   }
@@ -585,17 +585,17 @@ final class GameSession {
                 if (-1 != this.board.currentPlayer) {
                   if (this.online &&
                     this.board.currentPlayer == this.localPlayer) {
-                    var7_ref_StringLifetime1 = fh.field_a;
+                    var7_ref_StringLifetime1 = fh.textEndgameBoardfilledYou;
                   } else {
-                    var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rc.field_i, 2);
+                    var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rc.textEndgameBoardfilled, 2);
                   }
                 } else {
-                  var7_ref_StringLifetime1 = vf.field_d;
+                  var7_ref_StringLifetime1 = vf.textEndgameBoardfilledDraw;
                 }
               }
             }
-            var8 = hd.field_b.a(var6_ref_StringLifetime2) / 2;
-            var9 = mc.field_b.a(var7_ref_StringLifetime1) / 2;
+            var8 = hd.standardFont.a(var6_ref_StringLifetime2) / 2;
+            var9 = mc.menuFont.a(var7_ref_StringLifetime1) / 2;
             if (var9 > var8) {
               var8 = var9;
             }
@@ -620,10 +620,10 @@ final class GameSession {
             }
             Rasterizer.a(-var8 + var10, var12 + (-var13 + var11), var8 << 1, var13 << 1, 10, 0, 180);
             var4 = 1;
-            hd.field_b.c(var6_ref_StringLifetime2, var10, -2 + var11 + hd.field_b.field_H / 2, 16777215, -1);
-            var11 = var11 + (hd.field_b.field_H / 2 * 5 - 2);
+            hd.standardFont.c(var6_ref_StringLifetime2, var10, -2 + var11 + hd.standardFont.field_H / 2, 16777215, -1);
+            var11 = var11 + (hd.standardFont.field_H / 2 * 5 - 2);
             if (!(var7_ref_StringLifetime1.length() <= 0)) {
-              mc.field_b.c(var7_ref_StringLifetime1, var10, -2 + var11 + mc.field_b.field_H / 2, 16777215, -1);
+              mc.menuFont.c(var7_ref_StringLifetime1, var10, -2 + var11 + mc.menuFont.field_H / 2, 16777215, -1);
             }
           }
           if (!this.online) {
@@ -678,15 +678,15 @@ final class GameSession {
                 var12Lifetime1 = var11Lifetime2 + (32 + ve.field_B[var6Lifetime3]);
                 if (ve.field_A[var6Lifetime3] == 0) {
                   if (ve.field_v[var6Lifetime3] != null) {
-                    Rasterizer.e(var11Lifetime2, vg.field_H.field_G - (vg.field_H.field_H - var10Lifetime2), 32 + ve.field_B[var6Lifetime3], 18, 4, 1141646);
-                    vg.field_H.b(ve.field_p[var6Lifetime3].toUpperCase(), -(vg.field_H.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1);
+                    Rasterizer.e(var11Lifetime2, vg.smallFont.field_G - (vg.smallFont.field_H - var10Lifetime2), 32 + ve.field_B[var6Lifetime3], 18, 4, 1141646);
+                    vg.smallFont.b(ve.field_p[var6Lifetime3].toUpperCase(), -(vg.smallFont.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1);
                   }
                 } else {
                   if (ve.field_p[var6Lifetime3] != null) {
-                    vg.field_H.c(ve.field_p[var6Lifetime3].toUpperCase(), (var11Lifetime2 + var12Lifetime1) / 2 - (vg.field_H.a(ve.field_p[var6Lifetime3].toUpperCase()) >> 1), var10Lifetime2, var7Lifetime2, -1, 256 - ve.field_A[var6Lifetime3]);
+                    vg.smallFont.c(ve.field_p[var6Lifetime3].toUpperCase(), (var11Lifetime2 + var12Lifetime1) / 2 - (vg.smallFont.a(ve.field_p[var6Lifetime3].toUpperCase()) >> 1), var10Lifetime2, var7Lifetime2, -1, 256 - ve.field_A[var6Lifetime3]);
                   }
                   if (null != ve.field_v[var6Lifetime3]) {
-                    vg.field_H.c(ve.field_v[var6Lifetime3].toUpperCase(), -(vg.field_H.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1, ve.field_A[var6Lifetime3]);
+                    vg.smallFont.c(ve.field_v[var6Lifetime3].toUpperCase(), -(vg.smallFont.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1, ve.field_A[var6Lifetime3]);
                   }
                 }
               }
@@ -696,7 +696,7 @@ final class GameSession {
         if (this.online) {
           stackIn_125_0 = CellFlip.field_m;
           if (stackIn_125_0 != null) {
-            var4Lifetime1 = 18 + vg.field_H.a(CellFlip.field_m.toUpperCase());
+            var4Lifetime1 = 18 + vg.smallFont.a(CellFlip.field_m.toUpperCase());
             vi.field_k = vi.field_k + ((float)var4Lifetime1 - vi.field_k) * 0.5f;
             if (this.field_u == -2 &&
               param1) {
@@ -721,7 +721,7 @@ final class GameSession {
               var11Lifetime1 > 8) {
               Rasterizer.e(var9Lifetime1, var8Lifetime1, var10Lifetime1, var11Lifetime1, 4, 1141646);
             }
-            vg.field_H.b(CellFlip.field_m.toUpperCase(), ((int)vi.field_k >> 1) + var9Lifetime1, -2 + (we.field_c.field_J - 4), var6Lifetime1, -1, var7Lifetime1);
+            vg.smallFont.b(CellFlip.field_m.toUpperCase(), ((int)vi.field_k >> 1) + var9Lifetime1, -2 + (we.field_c.field_J - 4), var6Lifetime1, -1, var7Lifetime1);
           }
         }
         if (param0 != -16) {
@@ -898,21 +898,21 @@ final class GameSession {
                 var6 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rf.field_j, 2);
               }
             }
-            mc.field_b.c(var6, 320, 30, var7, -1);
-            var8 = mc.field_b.a(var6);
-            hd.field_b.a(var4, Math.min(186, 320 + (-16 - var8 / 2)), 30, 30136, -1);
-            hd.field_b.b(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
+            mc.menuFont.c(var6, 320, 30, var7, -1);
+            var8 = mc.menuFont.a(var6);
+            hd.standardFont.a(var4, Math.min(186, 320 + (-16 - var8 / 2)), 30, 30136, -1);
+            hd.standardFont.b(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
           } else {
             if (this.board.field_g) {
               var6_int = 1 - this.board.lastMovePlayer;
-              var7_ref_String = oi.a(new String[]{this.board.playerNames[var6_int]}, ee.field_f, 2);
+              var7_ref_String = oi.a(new String[]{this.board.playerNames[var6_int]}, ee.textEndgameEntrapment, 2);
               if (this.online &&
                 this.localPlayer == var6_int) {
-                var7_ref_String = vc.field_db;
+                var7_ref_String = vc.textEndgameEntrapmentYou;
                 var6 = var7_ref_String;
                 var6 = var7_ref_String;
               }
-              mc.field_b.c(var7_ref_String, 320, 30, 16777215, -1);
+              mc.menuFont.c(var7_ref_String, 320, 30, 16777215, -1);
             }
           }
         } else {
@@ -920,15 +920,15 @@ final class GameSession {
           pe.a(10, 1141646, 320, (byte) -124, 25);
           var16 = Integer.toString(this.board.pieceCounts[0]);
           var17 = Integer.toString(this.board.pieceCounts[1]);
-          hd.field_b.a(var16, 316, 30, 30136, -1);
-          hd.field_b.b(var17, 326, 30, 16777215, -1);
+          hd.standardFont.a(var16, 316, 30, 30136, -1);
+          hd.standardFont.b(var17, 326, 30, 16777215, -1);
           if (this.board.currentPlayer >= 0) {
             var5 = oi.a(new String[]{Integer.toString((-1 + (this.turnTimer + 50)) / 50)}, ej.field_O, 2);
             stackIn_5_0 = (this.board.currentPlayer == 0) ? 30136 : 16777215;
             var6_int = stackIn_5_0;
             if (this.online &&
               this.localPlayer == this.board.currentPlayer) {
-              stackIn_9_0 = mc.field_b;
+              stackIn_9_0 = mc.menuFont;
               stackIn_9_1 = vg.field_E;
               stackIn_9_2 = 124;
               stackIn_9_3 = 30;
@@ -938,18 +938,18 @@ final class GameSession {
                 stackIn_10_4 = var6_int;
               }
               ((v) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_10_4, -1);
-              mc.field_b.a(var5, 516, 30, 16777215, -1);
+              mc.menuFont.a(var5, 516, 30, 16777215, -1);
             } else {
               var14 = this.board.playerNames[this.board.currentPlayer];
               var7_ref_String = var14;
-              var8 = -hd.field_b.a(var17) + 268;
+              var8 = -hd.standardFont.a(var17) + 268;
               var9_ref_String = oi.a(new String[]{var14}, ec.field_y, 2);
-              while (var8 < hd.field_b.a(var9_ref_String)) {
+              while (var8 < hd.standardFont.a(var9_ref_String)) {
                 var15 = var7_ref_String.substring(0, var7_ref_String.length() - 1);
                 var7_ref_String = var15;
                 var9_ref_String = oi.a(new String[]{var15 + "..."}, ec.field_y, 2);
               }
-              stackIn_16_0 = mc.field_b;
+              stackIn_16_0 = mc.menuFont;
               stackIn_16_1 = var9_ref_String;
               stackIn_16_2 = 516;
               stackIn_16_3 = 30;
@@ -959,7 +959,7 @@ final class GameSession {
                 stackIn_17_4 = 30136;
               }
               ((v) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
-              mc.field_b.b(var5, 124, 30, 16777215, -1);
+              mc.menuFont.b(var5, 124, 30, 16777215, -1);
             }
           }
           var5_int = 0;
@@ -976,18 +976,18 @@ final class GameSession {
                   if ((((this.online &&
                     (this.board.turnCount <= 5)) ||
                     this.board.turnCount == 4)) && (!(!b.field_Db))) {
-                    var6 = jd.field_a;
+                    var6 = jd.tutorial4;
                   }
                 } else {
                   if (!(!b.field_Db)) {
-                    var6 = fa.field_h;
+                    var6 = fa.tutorial3;
                   }
                 }
                 break regionExit1;
               }
               if (b.field_Db) {
                 if (this.animator.selectedRow == -1) {
-                  var6 = ee.field_b;
+                  var6 = ee.tutorial1;
                   for (var7 = 0; var7 < this.board.cells.length; var7++) {
                     for (var8 = 0; this.board.cells[0].length > var8; var8++) {
                       if (~this.board.cells[var7][var8] == ~this.board.currentPlayer) {
@@ -996,7 +996,7 @@ final class GameSession {
                     }
                   }
                 } else {
-                  var6 = gl.field_h;
+                  var6 = gl.tutorial2;
                 }
               }
             }
@@ -1030,15 +1030,15 @@ final class GameSession {
             this.field_c > 0) {
             var6_int = 320;
             var7 = 224;
-            var8 = mc.field_b.c(this.field_a, 23320) + 16;
-            var9 = 16 + mc.field_b.a(this.field_a, 800, 20);
+            var8 = mc.menuFont.c(this.field_a, 23320) + 16;
+            var9 = 16 + mc.menuFont.a(this.field_a, 800, 20);
             var10 = (int)(8.0 * (1.0 + Math.cos((double)((float)id.field_r / 20.0f)))) + 2;
             for (var11 = 0; var11 < 9; var11++) {
               var12 = var10 * (9 - var11) >>> 3;
               Rasterizer.a(-(var8 / 2) + var6_int - var12, -var12 + (-(var9 / 2) + var7), var12 + var8 / 2 << 1, var9 / 2 + var12 << 1, 10, 1141646, this.field_c / 7);
             }
             Rasterizer.a(-(var8 / 2) + var6_int, -(var9 / 2) + var7, var8, var9, 10, 0, this.field_c);
-            mc.field_b.a(this.field_a, 320, 220, 0, 0, 16777215, -1, this.field_c, 1, 1, 20);
+            mc.menuFont.a(this.field_a, 320, 220, 0, 0, 16777215, -1, this.field_c, 1, 1, 20);
           }
         }
         if (param0 <= 65) {

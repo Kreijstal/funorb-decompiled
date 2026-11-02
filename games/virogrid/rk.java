@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rk {
-    static String field_b;
+    static String hotseatoptionTurndurationColon;
     static String field_a;
     static int field_e;
     static int field_c;
@@ -410,7 +410,7 @@ final class rk {
 
     public static void a(int param0) {
         field_h = null;
-        field_b = null;
+        hotseatoptionTurndurationColon = null;
         field_d = null;
         field_a = null;
         field_g = null;
@@ -436,7 +436,7 @@ final class rk {
 
     static {
         field_a = "Message game";
-        field_b = "Turn duration: <%0> seconds";
+        hotseatoptionTurndurationColon = "Turn duration: <%0> seconds";
         field_f = false;
         field_c = 0;
         field_g = "Not yet achieved";

@@ -94,7 +94,7 @@ final class ng extends nk {
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_R.a(param0 - 22280);
-          var31 = (gm) ((Object) this.field_w);
+          var31 = (gm) ((Object) this.listener);
           var9 = this.field_l + param1;
           var10 = var31.b(-587719039, (UiWidget) (this), param2) + (var31.a((UiWidget) (this), (byte) -123).a((byte) 20) >> 1);
           if (ImageProducerRasterBuffer.field_r != var6 &&
@@ -149,7 +149,7 @@ final class ng extends nk {
           this.e(-115);
           super.a(param0, param1, param2, param3);
           var6Lifetime1 = this.field_R.a(param0 - 22280);
-          var33 = (gm) ((Object) this.field_w);
+          var33 = (gm) ((Object) this.listener);
           var9Lifetime1 = this.field_l + param1;
           var10Lifetime1 = var33.b(-587719039, (UiWidget) (this), param2) + (var33.a((UiWidget) (this), (byte) -123).a((byte) 20) >> 1);
           if (ImageProducerRasterBuffer.field_r != var6Lifetime1 &&
@@ -193,7 +193,7 @@ final class ng extends nk {
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime2 = this.field_R.a(param0 - 22280);
-        var32 = (gm) ((Object) this.field_w);
+        var32 = (gm) ((Object) this.listener);
         var9Lifetime2 = this.field_l + param1;
         var10Lifetime2 = var32.b(-587719039, (UiWidget) (this), param2) + (var32.a((UiWidget) (this), (byte) -123).a((byte) 20) >> 1);
         if (ImageProducerRasterBuffer.field_r == var6Lifetime2) {

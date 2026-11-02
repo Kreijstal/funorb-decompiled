@@ -124,15 +124,15 @@ final class jb extends rd {
         }
     }
 
-    private jb(ol param0, boolean param1) {
-        super(0, 0, 0, 0, (ol) null);
+    private jb(WidgetListener param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetListener) null);
         try {
           this.field_G = (wa) ((Object) new vd("", (cd) null, 2));
           this.field_H = (wa) ((Object) new vd("", (cd) null, 2));
           this.field_F = (wa) ((Object) new vd("", (cd) null, 4));
-          this.field_F.field_w = param0;
-          this.field_H.field_w = param0;
-          this.field_G.field_w = param0;
+          this.field_F.listener = param0;
+          this.field_H.listener = param0;
+          this.field_G.listener = param0;
           this.field_E = param1 ? true : false;
           if (!this.field_E) {
             this.a((UiWidget) (this.field_G), (byte) -78);
@@ -147,7 +147,7 @@ final class jb extends rd {
         }
     }
 
-    jb(ol param0, boolean param1, int param2, int param3, int param4, int param5) {
+    jb(WidgetListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(param5, true, param3, param2, param4);

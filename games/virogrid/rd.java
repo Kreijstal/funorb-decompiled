@@ -4,7 +4,7 @@
 abstract class rd extends WidgetContainer implements fg {
     private al field_D;
 
-    rd(int param0, int param1, int param2, int param3, ol param4) {
+    rd(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4);
     }
 

@@ -10,7 +10,7 @@ final class dg extends UiWidget {
     private int field_y;
     private Sprite field_I;
     static km field_E;
-    static String field_G;
+    static String textRatedAchievements;
     private Sprite field_B;
     private int field_J;
     private int field_F;
@@ -174,7 +174,7 @@ final class dg extends UiWidget {
         this.field_B = this.field_A.c();
         this.field_I = new Sprite(this.field_m >> 1, this.field_m);
         if (param0 != 10) {
-          field_G = (String) null;
+          textRatedAchievements = (String) null;
         }
     }
 
@@ -184,7 +184,7 @@ final class dg extends UiWidget {
     }
 
     public static void a(byte param0) {
-        field_G = null;
+        textRatedAchievements = null;
         if (param0 <= 13) {
           return;
         }
@@ -272,7 +272,7 @@ final class dg extends UiWidget {
           param2 = param2 / 2;
           var5 = 2 + (int)((Math.cos((double)((float)id.field_r / 20.0f)) + 1.0) * 8.0);
           if (param1 > -123) {
-            field_G = (String) null;
+            textRatedAchievements = (String) null;
           }
           for (var6 = 0; 9 > var6; var6++) {
             var7 = (-var6 + 9) * var5 >>> 3;
@@ -317,6 +317,6 @@ final class dg extends UiWidget {
     }
 
     static {
-        field_G = "Achievements can only be obtained by playing Rated games";
+        textRatedAchievements = "Achievements can only be obtained by playing Rated games";
     }
 }

@@ -9,7 +9,7 @@ final class oi {
     static StringBuilder field_h;
     static volatile long field_b;
     static IntrusiveDeque field_a;
-    static MusicTrack[] field_c;
+    static MusicTrack[] musicTracks;
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         int discarded$0 = 0;
@@ -31,9 +31,9 @@ final class oi {
           var10.d(-16 + param0, param5 - 16);
         } else {
           if ((1 << param3 & rn.field_c) != 0) {
-            stackIn_4_0 = MouseWheelInput.field_d[param3];
+            stackIn_4_0 = MouseWheelInput.achievementIcons[param3];
           } else {
-            stackIn_4_0 = mj.field_F;
+            stackIn_4_0 = mj.unachievedIcon;
           }
           var9 = stackIn_4_0;
           var10 = var9;
@@ -144,11 +144,11 @@ final class oi {
           }
           var8Lifetime1 = stackIn_35_0;
           if (param1 != 2) {
-            mc.field_b.b(qk.field_d[var6Lifetime1].toUpperCase(), 320, 60 + var7Lifetime1, 8437759, -1);
+            mc.menuFont.b(qk.achievementTitles[var6Lifetime1].toUpperCase(), 320, 60 + var7Lifetime1, 8437759, -1);
             if ((rn.field_c & 1 << var6Lifetime1) == 0) {
-              vg.field_H.b(rk.field_g.toUpperCase(), 320, var7Lifetime1 + 78, 16711680, -1);
+              vg.smallFont.b(rk.field_g.toUpperCase(), 320, var7Lifetime1 + 78, 16711680, -1);
             } else {
-              vg.field_H.b(fl.field_j.toUpperCase(), 320, 78 + var7Lifetime1, 65280, -1);
+              vg.smallFont.b(fl.field_j.toUpperCase(), 320, 78 + var7Lifetime1, 65280, -1);
             }
           }
           var9 = (int)(Math.cos((double)((float)id.field_r / 50.0f)) * 76.0);
@@ -170,68 +170,68 @@ final class oi {
           var25 = var7Lifetime1 + 108;
           if (vc.field_eb[var6Lifetime1] >= 1) {
             if (var10 < 0) {
-              ad.field_b.a(-(var19 >> 1) + var9 + var24, -(var19 >> 1) + (var25 + (var9 / 2 + var10)), var19, var19);
+              ad.orbCoinIcon.a(-(var19 >> 1) + var9 + var24, -(var19 >> 1) + (var25 + (var9 / 2 + var10)), var19, var19);
             }
             if (vc.field_eb[var6Lifetime1] >= 2 &&
               var12 < 0) {
-              ad.field_b.a(var11 + var24 - (var20 >> 1), -(var20 >> 1) - var11 / 2 + (var25 + var12), var20, var20);
+              ad.orbCoinIcon.a(var11 + var24 - (var20 >> 1), -(var20 >> 1) - var11 / 2 + (var25 + var12), var20, var20);
             }
             if (3 <= vc.field_eb[var6Lifetime1] &&
               var14 < 0) {
-              ad.field_b.a(-(var21 >> 1) + (var24 + var13), -(var21 >> 1) - var13 / 2 + (var25 + var14), var21, var21);
+              ad.orbCoinIcon.a(-(var21 >> 1) + (var24 + var13), -(var21 >> 1) - var13 / 2 + (var25 + var14), var21, var21);
             }
             if (vc.field_eb[var6Lifetime1] >= 4 &&
               var16 < 0) {
-              ad.field_b.a(-(var22 >> 1) + var24 + var15, var16 + var25 - var15 / 2 - (var22 >> 1), var22, var22);
+              ad.orbCoinIcon.a(-(var22 >> 1) + var24 + var15, var16 + var25 - var15 / 2 - (var22 >> 1), var22, var22);
             }
             if (vc.field_eb[var6Lifetime1] >= 5 &&
               0 > var18) {
-              ad.field_b.a(var17 + var24 - (var23 >> 1), var25 - (var17 / 2 - var18 + (var23 >> 1)), var23, var23);
+              ad.orbCoinIcon.a(var17 + var24 - (var23 >> 1), var25 - (var17 / 2 - var18 + (var23 >> 1)), var23, var23);
             }
           }
           this.a(var24, 3624, false, var6Lifetime1, 128, var25);
           if (vc.field_eb[var6Lifetime1] >= 1) {
             if (var10 >= 0) {
-              ad.field_b.a(var24 - (-var9 + (var19 >> 1)), -(var19 >> 1) + var10 + var25 + var9 / 2, var19, var19);
+              ad.orbCoinIcon.a(var24 - (-var9 + (var19 >> 1)), -(var19 >> 1) + var10 + var25 + var9 / 2, var19, var19);
             }
             if (vc.field_eb[var6Lifetime1] >= 2 &&
               0 <= var12) {
-              ad.field_b.a(-(var20 >> 1) + var24 + var11, -(var20 >> 1) + var12 + var25 - var11 / 2, var20, var20);
+              ad.orbCoinIcon.a(-(var20 >> 1) + var24 + var11, -(var20 >> 1) + var12 + var25 - var11 / 2, var20, var20);
             }
             if (vc.field_eb[var6Lifetime1] >= 3 &&
               var14 >= 0) {
-              ad.field_b.a(var13 + var24 - (var21 >> 1), -(var21 >> 1) + (var14 + var25 - var13 / 2), var21, var21);
+              ad.orbCoinIcon.a(var13 + var24 - (var21 >> 1), -(var21 >> 1) + (var14 + var25 - var13 / 2), var21, var21);
             }
             if (vc.field_eb[var6Lifetime1] >= 4 &&
               var16 >= 0) {
-              ad.field_b.a(-(var22 >> 1) + var24 + var15, var16 + var25 - (var15 / 2 + (var22 >> 1)), var22, var22);
+              ad.orbCoinIcon.a(-(var22 >> 1) + var24 + var15, var16 + var25 - (var15 / 2 + (var22 >> 1)), var22, var22);
             }
             if (5 <= vc.field_eb[var6Lifetime1] &&
               var18 >= 0) {
-              ad.field_b.a(-(var23 >> 1) + var24 + var17, -(var23 >> 1) + (var18 - var17 / 2 + var25), var23, var23);
+              ad.orbCoinIcon.a(-(var23 >> 1) + var24 + var17, -(var23 >> 1) + (var18 - var17 / 2 + var25), var23, var23);
             }
           }
           if (param1 != 2) {
-            vg.field_H.b(qg.field_m.toUpperCase(), 320, var7Lifetime1 + 158, 8437759, -1);
-            vg.field_H.b(Integer.toString(h.field_c[var6Lifetime1]), 420, 158 + var7Lifetime1, 8437759, -1);
-            vg.field_H.b(DualLinkNode.field_i.toUpperCase(), 320, var7Lifetime1 + 178, 8437759, -1);
-            vg.field_H.b(Integer.toString(vc.field_eb[var6Lifetime1]), 420, var7Lifetime1 + 178, 8437759, -1);
-            stackIn_82_0 = vg.field_H;
+            vg.smallFont.b(qg.field_m.toUpperCase(), 320, var7Lifetime1 + 158, 8437759, -1);
+            vg.smallFont.b(Integer.toString(h.field_c[var6Lifetime1]), 420, 158 + var7Lifetime1, 8437759, -1);
+            vg.smallFont.b(DualLinkNode.field_i.toUpperCase(), 320, var7Lifetime1 + 178, 8437759, -1);
+            vg.smallFont.b(Integer.toString(vc.field_eb[var6Lifetime1]), 420, var7Lifetime1 + 178, 8437759, -1);
+            stackIn_82_0 = vg.smallFont;
             if (var8Lifetime1 == 0) {
               stackIn_83_1 = "???";
             } else {
-              stackIn_83_1 = ak.field_b[var6Lifetime1].toUpperCase();
+              stackIn_83_1 = ak.achievementCriteria[var6Lifetime1].toUpperCase();
             }
             ((v) (Object) stackIn_82_0).a(stackIn_83_1, 320, var7Lifetime1 + 92, 190, 80, 8437759, -1, 0, 0, 20);
           }
         } else {
           if (param1 != 2) {
             if (qm.i(20)) {
-              vg.field_H.c(pc.field_a.toUpperCase(), 320, 270, 8437759, -1);
-              vg.field_H.c(dd.field_f.toUpperCase(), 320, 290, 8437759, -1);
-              vg.field_H.a(kn.field_L.toUpperCase(), 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
+              vg.smallFont.c(pc.textCreateAccount1.toUpperCase(), 320, 270, 8437759, -1);
+              vg.smallFont.c(dd.textCreateAccount2.toUpperCase(), 320, 290, 8437759, -1);
+              vg.smallFont.a(kn.field_L.toUpperCase(), 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
             } else {
-              vg.field_H.a(kn.field_L.toUpperCase(), 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
+              vg.smallFont.a(kn.field_L.toUpperCase(), 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
             }
           }
         }
@@ -239,7 +239,7 @@ final class oi {
         if (qm.i(20)) {
           var8Lifetime2 -= 20;
         }
-        vg.field_H.c(dg.field_G.toUpperCase(), 320, var8Lifetime2, 8437759, -1);
+        vg.smallFont.c(dg.textRatedAchievements.toUpperCase(), 320, var8Lifetime2, 8437759, -1);
         if (!qm.i(20)) {
           ah.a(400, 100, 350, 1141646, 120);
         }
@@ -288,7 +288,7 @@ final class oi {
         if (this.field_e == 10) {
           return;
         }
-        var4 = -(hd.field_b.a(lc.field_e[this.field_e]) / 2) + 320;
+        var4 = -(hd.standardFont.a(lc.field_e[this.field_e]) / 2) + 320;
         if (param2 >= -61) {
           return;
         }
@@ -296,7 +296,7 @@ final class oi {
         if (this.field_e == 0) {
           Js5Archive.field_l.a(-(Js5Archive.field_l.field_j / 2) + 320, 20);
         } else {
-          hd.field_b.b(lc.field_e[this.field_e], var4, var5, 1141646, -1);
+          hd.standardFont.b(lc.field_e[this.field_e], var4, var5, 1141646, -1);
         }
         ah.a(400, 100, 72, 1141646, 120);
         for (var6 = 0; this.field_f.field_o > var6; var6++) {
@@ -315,7 +315,7 @@ final class oi {
             if (8 != this.field_e) {
               if (this.field_e == 9 &&
                 param1 != 2) {
-                hd.field_b.a(kn.field_J, 135, 78, 370, 180, 8437759, -1, 1, 0, 18);
+                hd.standardFont.a(kn.field_J, 135, 78, 370, 180, 8437759, -1, 1, 0, 18);
                 return;
               }
             } else {
@@ -442,7 +442,7 @@ final class oi {
     final static void a(boolean param0, int param1) {
         mi.a(param0, -8241);
         if (param1 != 6) {
-          field_c = (MusicTrack[]) null;
+          musicTracks = (MusicTrack[]) null;
         }
         we.a(false, param0);
     }
@@ -499,20 +499,20 @@ final class oi {
         }
         var3 = 1141646;
         if (param1 != 16290) {
-          field_c = (MusicTrack[]) null;
+          musicTracks = (MusicTrack[]) null;
         }
-        var4 = hd.field_b.field_H + 64;
+        var4 = hd.standardFont.field_H + 64;
         var5 = var4;
         if (ih.field_c == 3) {
-          var4 = var4 + vg.field_H.field_H;
+          var4 = var4 + vg.smallFont.field_H;
         }
         regionExit1: {
-          re.field_o.c(qe.field_j.toUpperCase(), 310, var5, var3, -1);
-          re.field_o.c(aj.field_h.toUpperCase(), 368, var4, var3, -1);
-          re.field_o.c(SpriteState.field_s.toUpperCase(), 420, var5, var3, -1);
-          re.field_o.c(ql.field_s.toUpperCase(), 458, var4, var3, -1);
+          re.tinyFont.c(qe.field_j.toUpperCase(), 310, var5, var3, -1);
+          re.tinyFont.c(aj.field_h.toUpperCase(), 368, var4, var3, -1);
+          re.tinyFont.c(SpriteState.field_s.toUpperCase(), 420, var5, var3, -1);
+          re.tinyFont.c(ql.field_s.toUpperCase(), 458, var4, var3, -1);
           var4 += 24;
-          re.field_o.c(SpriteState.field_o.toUpperCase(), 500, var5, var3, -1);
+          re.tinyFont.c(SpriteState.field_o.toUpperCase(), 500, var5, var3, -1);
           if (mm.field_j.field_s) {
             if (mm.field_j.field_j != null) {
               var6 = qg.field_s.toUpperCase();
@@ -527,7 +527,7 @@ final class oi {
                     var9 = 1;
                   }
                   stackIn_26_0 = 118;
-                  stackIn_26_1 = -vg.field_H.field_H - vg.field_H.field_G + var4;
+                  stackIn_26_1 = -vg.smallFont.field_H - vg.smallFont.field_G + var4;
                   stackIn_26_2 = 400;
                   stackIn_26_3 = 22;
                   if (var10 % 2 != 1) {
@@ -553,8 +553,8 @@ final class oi {
             var6 = wc.field_b.toUpperCase();
           }
         }
-        var4Lifetime1 = 120 + vg.field_H.field_H + 10 * ag.field_a[6] / 2;
-        vg.field_H.c(var6, 320, var4Lifetime1, 8437759, -1);
+        var4Lifetime1 = 120 + vg.smallFont.field_H + 10 * ag.field_a[6] / 2;
+        vg.smallFont.c(var6, 320, var4Lifetime1, 8437759, -1);
         return;
     }
 
@@ -562,7 +562,7 @@ final class oi {
         String var17 = null;
         int var10_int = param1 + param7 + param4;
         if (param6 != -1) {
-          vg.field_H.a(param6 + 1 + ". ", 140, param3, param5, -1);
+          vg.smallFont.a(param6 + 1 + ". ", 140, param3, param5, -1);
         }
         if (var10_int != 0) {
           param4 = (param4 * 200 + var10_int) / (var10_int * 2);
@@ -570,22 +570,22 @@ final class oi {
           param7 = (param7 * 200 + var10_int) / (var10_int * 2);
         }
         String var12 = param2;
-        vg.field_H.b(var12, 140, param3, param5, -1);
+        vg.smallFont.b(var12, 140, param3, param5, -1);
         String var13 = Integer.toString(param8);
-        vg.field_H.c(var13, 310, param3, param5, -1);
+        vg.smallFont.c(var13, 310, param3, param5, -1);
         String var14 = var10_int < 50 ? Integer.toString(var10_int) : "50+";
         String var11 = var14;
-        vg.field_H.c(var14, 368, param3, param5, -1);
+        vg.smallFont.c(var14, 368, param3, param5, -1);
         String var15 = param7 + "%";
-        vg.field_H.c(var15, 420, param3, param5, -1);
+        vg.smallFont.c(var15, 420, param3, param5, -1);
         String var16 = param1 + "%";
         if (param0 != 178) {
           return;
         }
         try {
-          vg.field_H.c(var16, 458, param3, param5, -1);
+          vg.smallFont.c(var16, 458, param3, param5, -1);
           var17 = param4 + "%";
-          vg.field_H.c(var17, 500, param3, param5, -1);
+          vg.smallFont.c(var17, 500, param3, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "oi.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -675,7 +675,7 @@ final class oi {
     }
 
     private final void b(byte param0) {
-        vg.field_H.c(mb.field_mb.toUpperCase(), 320, 197 + hd.field_b.field_H, 8437759, -1);
+        vg.smallFont.c(mb.field_mb.toUpperCase(), 320, 197 + hd.standardFont.field_H, 8437759, -1);
         if (param0 > -1) {
           this.a((byte) -58, false, -58, 36);
         }
@@ -920,13 +920,13 @@ final class oi {
                                     break regionExit1;
                                   case 27:
                                     if (this.field_f.c(-1)) {
-                                      ce.field_I = (ce.field_I + 1) % mh.field_i.length;
+                                      ce.field_I = (ce.field_I + 1) % mh.aiLevelNames.length;
                                       break regionExit1;
                                     }
                                     if (!this.field_f.d(26505)) {
                                       break regionExit2;
                                     }
-                                    ce.field_I = (mh.field_i.length - (1 - ce.field_I)) % mh.field_i.length;
+                                    ce.field_I = (mh.aiLevelNames.length - (1 - ce.field_I)) % mh.aiLevelNames.length;
                                     break regionExit1;
                                   case 25:
                                     break;
@@ -949,7 +949,7 @@ final class oi {
                                   co.field_l = bc.field_c;
                                   ka.a(true, (byte) 87);
                                 } else {
-                                  bc.field_c = cc.field_v.length - 1;
+                                  bc.field_c = cc.detailNames.length - 1;
                                   co.field_l = bc.field_c;
                                   ka.a(true, (byte) 87);
                                 }
@@ -958,7 +958,7 @@ final class oi {
                               if (this.field_f.c(-1)) {
                                 fieldTemp$0 = bc.field_c + 1;
                                 bc.field_c = bc.field_c + 1;
-                                if (fieldTemp$0 >= cc.field_v.length) {
+                                if (fieldTemp$0 >= cc.detailNames.length) {
                                   bc.field_c = 2;
                                 }
                                 co.field_l = bc.field_c;
@@ -1049,8 +1049,8 @@ final class oi {
     }
 
     private final void a(int param0, int param1, byte param2) {
-        String var4 = em.field_b[param0];
-        int var5 = vg.field_H.b(var4, 370);
+        String var4 = em.instructionPages[param0];
+        int var5 = vg.smallFont.b(var4, 370);
         int var7 = 100 % ((-48 - param2) / 63);
         int var6 = 16 + 18 * var5;
         ah.a(400, 100, 72, 1141646, 120);
@@ -1058,7 +1058,7 @@ final class oi {
         pe.a(73, 1141646, 120, (byte) -122, -1 + var6);
         pe.a(73, 1141646, 519, (byte) -110, -1 + var6);
         if (param1 != 2) {
-          vg.field_H.a(var4, 135, 78, 370, 180, 8437759, -1, 0, 0, 18);
+          vg.smallFont.a(var4, 135, 78, 370, 180, 8437759, -1, 0, 0, 18);
         }
     }
 
@@ -1129,10 +1129,10 @@ final class oi {
             var7 = de.field_pb[7];
             break;
           case 25:
-            var7 = oi.a(new String[]{wc.field_c[1][ll.field_b]}, var19, 2);
+            var7 = oi.a(new String[]{wc.gameOptionNames[1][ll.field_b]}, var19, 2);
             break;
           case 27:
-            var7 = oi.a(new String[]{mh.field_i[ce.field_I]}, var19, 2);
+            var7 = oi.a(new String[]{mh.aiLevelNames[ce.field_I]}, var19, 2);
             break;
           case 19:
             if (nf.field_g != 0) {
@@ -1143,7 +1143,7 @@ final class oi {
             var7 = stackIn_26_0;
             break;
           case 26:
-            var7 = oi.a(new String[]{wc.field_c[0][eg.field_y]}, var19, 2);
+            var7 = oi.a(new String[]{wc.gameOptionNames[0][eg.field_y]}, var19, 2);
             break;
           case 28:
             stackIn_16_0 = new StringBuilder().append(var19);
@@ -1157,18 +1157,18 @@ final class oi {
           case 17:
             stackIn_11_0 = new StringBuilder().append(var19);
             if (!gb.field_H.field_g) {
-              stackIn_12_1 = fn.field_g;
+              stackIn_12_1 = fn.textNotAvailableIn2d;
             } else {
-              stackIn_12_1 = cc.field_v[bc.field_c];
+              stackIn_12_1 = cc.detailNames[bc.field_c];
             }
             var7 = ((StringBuilder) (Object) stackIn_11_0).append(stackIn_12_1).toString();
             break;
           case 16:
             stackIn_6_0 = new StringBuilder().append(var19);
             if (gb.field_H.field_g) {
-              stackIn_7_1 = GameKeyHandler.field_f;
+              stackIn_7_1 = GameKeyHandler.text3d;
             } else {
-              stackIn_7_1 = sd.field_b;
+              stackIn_7_1 = sd.text2d;
             }
             var7 = ((StringBuilder) (Object) stackIn_6_0).append(stackIn_7_1).toString();
             break;
@@ -1176,7 +1176,7 @@ final class oi {
             break;
         }
         var20 = var7.toUpperCase();
-        var8 = mc.field_b.a(var20);
+        var8 = mc.menuFont.a(var20);
         var9 = this.c(108, param3);
         var10 = this.a((byte) -94, param3);
         var11 = this.d(22, param3);
@@ -1196,7 +1196,7 @@ final class oi {
           stackIn_57_0 = (param1) ? 12632256 : 7829367;
           var16 = stackIn_57_0;
         }
-        mc.field_b.b(var20, var12, var11 + mc.field_b.field_H, var16, -1);
+        mc.menuFont.b(var20, var12, var11 + mc.menuFont.field_H, var16, -1);
         if (var6 != 14 &&
           var6 != 15) {
           return;
@@ -1240,7 +1240,7 @@ final class oi {
 
     public static void c(int param0) {
         field_a = null;
-        field_c = null;
+        musicTracks = null;
         if (param0 < 76) {
           field_b = -59L;
         }

@@ -5,8 +5,8 @@ final class mj extends dm {
     private Object field_C;
     static String field_y;
     static int field_D;
-    static String field_G;
-    static Sprite field_F;
+    static String textGamename;
+    static Sprite unachievedIcon;
     static int field_E;
     static int field_z;
     static String field_A;
@@ -45,7 +45,7 @@ final class mj extends dm {
 
     final boolean d(int param0) {
         if (param0 < 65) {
-          field_F = (Sprite) null;
+          unachievedIcon = (Sprite) null;
           return false;
         }
         return false;
@@ -53,19 +53,19 @@ final class mj extends dm {
 
     public static void g(int param0) {
         if (param0 <= -96) {
-          field_G = null;
+          textGamename = null;
           field_y = null;
           field_B = null;
           field_A = null;
-          field_F = null;
+          unachievedIcon = null;
           return;
         }
         mj.g(125);
-        field_G = null;
+        textGamename = null;
         field_y = null;
         field_B = null;
         field_A = null;
-        field_F = null;
+        unachievedIcon = null;
     }
 
     final static boolean a(String param0, String param1, byte param2) {
@@ -115,7 +115,7 @@ final class mj extends dm {
 
     static {
         field_A = "Game";
-        field_G = "Virogrid";
+        textGamename = "Virogrid";
         field_D = 0;
         field_E = 0;
         field_y = "<%0> has entered a game.";

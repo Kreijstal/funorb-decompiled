@@ -631,13 +631,13 @@ final class oj extends km {
           }
           var4Lifetime1 = 0;
           if (wn.field_C == 2) {
-            var4Lifetime1 = vg.field_H.a(sl.field_a) + 17;
+            var4Lifetime1 = vg.smallFont.a(sl.textSwitch2d) + 17;
             if (var4Lifetime1 < 135) {
               var4Lifetime1 = 135;
             }
           } else {
             if (wn.field_C == 1) {
-              var4Lifetime1 = vg.field_H.a(o.field_a) + 17 + 8;
+              var4Lifetime1 = vg.smallFont.a(o.textSwitch3d) + 17 + 8;
             }
           }
           kd.field_t = kd.field_t + 0.10000000149011612f * (-kd.field_t + (float)var4Lifetime1);

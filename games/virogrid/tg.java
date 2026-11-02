@@ -13,7 +13,7 @@ class tg extends UiWidget {
     static int field_x;
     boolean field_C;
 
-    tg(String param0, ol param1, cd param2) {
+    tg(String param0, WidgetListener param1, cd param2) {
         super(param0, param1, param2);
         this.field_E = false;
         this.field_B = true;
@@ -281,7 +281,7 @@ class tg extends UiWidget {
         this.field_E = false;
         this.field_B = true;
         this.field_C = true;
-        this.field_w = vi.field_g.field_b;
+        this.listener = vi.field_g.field_b;
     }
 
     static {

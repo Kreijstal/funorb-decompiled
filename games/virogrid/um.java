@@ -8,7 +8,7 @@ final class um extends km {
     static volatile int field_Fb;
     static int field_Gb;
     qm field_Hb;
-    static String field_Kb;
+    static String textViewcontrolsMode;
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4) {
         if (this.field_Hb.f((byte) -87)) {
@@ -138,12 +138,12 @@ final class um extends km {
           um.e((byte) 120);
         }
         field_Ib = null;
-        field_Kb = null;
+        textViewcontrolsMode = null;
     }
 
     static {
         field_Fb = 0;
-        field_Kb = "Switch between a 3D and 2D view";
+        textViewcontrolsMode = "Switch between a 3D and 2D view";
         field_Ib = "Return to Main Menu";
     }
 }

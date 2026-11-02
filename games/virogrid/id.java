@@ -4,14 +4,14 @@
 final class id {
     int field_m;
     int field_k;
-    ol field_i;
+    WidgetListener field_i;
     int field_g;
     int field_s;
-    ol field_h;
-    ol field_j;
+    WidgetListener field_h;
+    WidgetListener field_j;
     e field_o;
-    static String field_f;
-    ol field_l;
+    static String textEndgameNopiecesYou;
+    WidgetListener field_l;
     int field_n;
     private boolean field_p;
     int field_e;
@@ -19,7 +19,7 @@ final class id {
     static int field_c;
     int field_q;
     static km field_a;
-    ol field_b;
+    WidgetListener field_b;
     private int field_d;
 
     final static void b(int param0) {
@@ -96,7 +96,7 @@ final class id {
           if (param0 != 24) {
             id.a((byte) -115);
           }
-          field_f = null;
+          textEndgameNopiecesYou = null;
           field_a = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ final class id {
         try {
           var3 = new aj(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_H + param1.field_G));
           var3.field_c = 16777215;
-          this.field_j = (ol) ((Object) var3);
+          this.field_j = (WidgetListener) ((Object) var3);
           var4 = new nl();
           var3.a(0, var4);
           this.field_s = 15658734;
@@ -165,7 +165,7 @@ final class id {
               var5[4] = (Sprite) ((Object) var6);
               var4.a((byte) 123, 4).a(true, 0).a(-8779, var5);
               var4.a((byte) 100, 5).a(-8779, sb.a(65793, (byte) 125, 0, 0, 0)).a(true, 0).b(true, -1);
-              this.field_l = (ol) ((Object) var4);
+              this.field_l = (WidgetListener) ((Object) var4);
               break;
             }
             var6.field_B[var7_int] = 1077952576;
@@ -177,14 +177,14 @@ final class id {
           var7.field_j = 0;
           var7.a(md.a(true, 8947848), 4);
           var7.a((byte) 86, 1).a(-8779, md.a(true, 11184810)).b(true, 2236962);
-          this.field_i = (ol) ((Object) new lj(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_i = (WidgetListener) ((Object) new lj(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$6 = new ql(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$7 = new rj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new nl();
           var3.a(0, var8);
           var8.a((byte) 78, 0).a(-8779, bm.a(7829367, 15658734, 10066329, (byte) -85)).b(true, 1118481).b(-1, -26973);
           var8.a((byte) 109, 4).a(true, 0).a(-8779, var5);
-          this.field_h = (ol) ((Object) var8);
+          this.field_h = (WidgetListener) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -634,7 +634,7 @@ final class id {
     }
 
     static {
-        field_f = "You have no pieces left";
+        textEndgameNopiecesYou = "You have no pieces left";
         field_c = 500;
     }
 }

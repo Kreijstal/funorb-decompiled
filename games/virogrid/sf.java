@@ -16,7 +16,7 @@ final class sf extends WidgetContainer implements ta {
     private e field_L;
 
     sf(sh param0, e param1, String param2) {
-        super(0, 0, 288, 0, (ol) null);
+        super(0, 0, 288, 0, (WidgetListener) null);
         int var4_int = 0;
         this.field_H = 0;
         try {
@@ -43,7 +43,7 @@ final class sf extends WidgetContainer implements ta {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new tg(param2, param0);
-          var4.field_w = (ol) ((Object) new hf());
+          var4.listener = (WidgetListener) ((Object) new hf());
           var5 = this.field_m - 2;
           this.a(this.field_m + 34, true, 0, 0, this.field_g);
           var4.a(30, true, var5, 7, -14 + this.field_g);

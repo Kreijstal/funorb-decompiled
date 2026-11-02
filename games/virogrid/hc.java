@@ -5,13 +5,13 @@ final class hc {
     static int field_c;
     static volatile int field_d;
     static long field_a;
-    static String field_b;
+    static String textXTurn;
 
     public static void a(boolean param0) {
         if (!param0) {
           return;
         }
-        field_b = null;
+        textXTurn = null;
     }
 
     final static String a(int param0, int param1, PacketBuffer param2) {
@@ -33,7 +33,7 @@ final class hc {
               var3_int = param1;
             }
             if (param0 != 128) {
-              field_b = (String) null;
+              textXTurn = (String) null;
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + ph.field_k.a(var4, param2.position, 0, var3_int, param2.payload, true);
@@ -119,6 +119,6 @@ final class hc {
     static {
         field_c = 4;
         field_d = 0;
-        field_b = "<%0>'s turn (<%1>)";
+        textXTurn = "<%0>'s turn (<%1>)";
     }
 }

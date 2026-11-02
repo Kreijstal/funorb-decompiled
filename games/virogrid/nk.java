@@ -22,11 +22,11 @@ class nk extends tg {
         field_J = null;
     }
 
-    nk(String param0, ol param1) {
+    nk(String param0, WidgetListener param1) {
         super(param0, (cd) null);
         this.field_L = null;
         try {
-          this.field_w = param1;
+          this.listener = param1;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -39,7 +39,7 @@ class nk extends tg {
         if (0 != param3) {
           return;
         }
-        gm var5 = (gm) ((Object) this.field_w);
+        gm var5 = (gm) ((Object) this.listener);
         pb var6 = this.field_L;
         if (var6 != null) {
           var7 = var5.a(param1, (UiWidget) (this), param0 ^ -7537);
@@ -75,7 +75,7 @@ class nk extends tg {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        this.a(((gm) ((Object) this.field_w)).a((UiWidget) (this), param3 ^ -12), true, param1, param2, param0);
+        this.a(((gm) ((Object) this.listener)).a((UiWidget) (this), param3 ^ -12), true, param1, param2, param0);
         if (param3 != -125) {
           this.b((byte) -28, -103, -84, -16);
         }
@@ -108,7 +108,7 @@ class nk extends tg {
           this.a((String) null, (byte) -61, 38);
         }
         var2 = 0;
-        var3 = (gm) ((Object) this.field_w);
+        var3 = (gm) ((Object) this.listener);
         var4 = var3.a((UiWidget) (this), (byte) -122);
         while (true) {
           var5 = this.field_n.indexOf("<hotspot=", var2);

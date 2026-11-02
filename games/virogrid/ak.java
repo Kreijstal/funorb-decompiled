@@ -6,10 +6,10 @@ import java.util.*;
 final class ak {
     static String field_c;
     static int field_a;
-    static String[] field_b;
+    static String[] achievementCriteria;
     static int[] field_f;
     static km[] field_d;
-    static Sprite field_e;
+    static Sprite lobbyIcon;
 
     final static void a(int param0, km param1) {
         km var5 = null;
@@ -85,7 +85,7 @@ final class ak {
 
     final static boolean b(int param0) {
         if (param0 != -31609) {
-          field_b = (String[]) null;
+          achievementCriteria = (String[]) null;
         }
         oc.field_l = true;
         hc.field_a = 15000L + hc.a(-9986);
@@ -131,12 +131,12 @@ final class ak {
     }
 
     public static void a(int param0) {
-        field_e = null;
+        lobbyIcon = null;
         if (param0 != 4472) {
           return;
         }
         field_c = null;
-        field_b = null;
+        achievementCriteria = null;
         field_d = null;
         field_f = null;
     }
@@ -293,7 +293,7 @@ final class ak {
 
     static {
         field_a = 1;
-        field_b = new String[]{"Play five Rated games", "Capture eight pieces in one move", "Win five Rated games", "Win by capturing all opposing pieces", "Win five Rated games in a row", "Lose five Rated games in a row", "Win by leaving the opponent unable to move", "Win a game using only jumps", "Play 55 Rated games", "Find the ghost during Hallowe'en"};
+        achievementCriteria = new String[]{"Play five Rated games", "Capture eight pieces in one move", "Win five Rated games", "Win by capturing all opposing pieces", "Win five Rated games in a row", "Lose five Rated games in a row", "Win by leaving the opponent unable to move", "Win a game using only jumps", "Play 55 Rated games", "Find the ghost during Hallowe'en"};
         field_c = "Open";
         field_f = new int[]{2, 14, 15, 6, 5, 16, 17, 12};
     }

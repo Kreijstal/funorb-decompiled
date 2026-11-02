@@ -77,7 +77,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void a(Js5Archive param0, byte param1, Js5Archive param2, Js5Archive param3, Js5Archive param4, Js5Archive param5) {
+    private final void loadGraphics(Js5Archive param0, byte param1, Js5Archive param2, Js5Archive param3, Js5Archive param4, Js5Archive param5) {
         int var10 = 0;
         Sprite discarded$0 = null;
         Sprite discarded$1 = null;
@@ -110,10 +110,10 @@ public final class Virogrid extends od {
         Sprite[][] var9 = null;
         var12 = field_F ? 1 : 0;
         try {
-          hd.field_b = a.a("", param5, -110, "font", param4);
-          vg.field_H = a.a("", param5, -95, "smallfont", param4);
-          mc.field_b = a.a("", param5, -120, "menufont", param4);
-          re.field_o = a.a("", param5, -110, "tinyfont", param4);
+          hd.standardFont = a.a("", param5, -110, "font", param4);
+          vg.smallFont = a.a("", param5, -95, "smallfont", param4);
+          mc.menuFont = a.a("", param5, -120, "menufont", param4);
+          re.tinyFont = a.a("", param5, -110, "tinyfont", param4);
           var13 = sn.a(param5, "starfield", "", false);
           sj.field_j = new Sprite(2560, 256);
           sj.field_j.b();
@@ -126,39 +126,39 @@ public final class Virogrid extends od {
           GameSession.field_y = ke.a("walk2", "", param5, 32370);
           wh.field_b = ke.a("walk3", "", param5, 32370);
           vb.field_l = new Sprite(640, 480);
-          ib.field_b = b.a("", param5, 7, "frame");
-          RasterBuffer.a(100, mc.field_b, 0, vg.field_H);
+          ib.frameSprites = b.a("", param5, 7, "frame");
+          RasterBuffer.a(100, mc.menuFont, 0, vg.smallFont);
           en.field_Kb = 16777215;
           la.field_k = 16777215;
           sf.field_I = 16777215;
           na.field_Hb = 8437759;
           jl.field_E = 16777215;
           ti.field_b = 8437759;
-          MouseWheelInput.field_d = ke.a(32, param5, "", "achievements_large");
-          mj.field_F = sn.a(param2, "unachieved", "basic", false);
-          ad.field_b = sn.a(param2, "orbcoin", "basic", false);
-          var8 = MouseWheelInput.field_d.length;
+          MouseWheelInput.achievementIcons = ke.a(32, param5, "", "achievements_large");
+          mj.unachievedIcon = sn.a(param2, "unachieved", "basic", false);
+          ad.orbCoinIcon = sn.a(param2, "orbcoin", "basic", false);
+          var8 = MouseWheelInput.achievementIcons.length;
           vd.field_Y = new Sprite[var8];
           qc.a(123);
           var9_int = -67 / ((param1 + 11) / 58);
           for (var10 = 0; var8 > var10; var10++) {
             var11 = new Sprite(32, 32);
             var11.b();
-            MouseWheelInput.field_d[var10].b(0, 0, 32, 32);
+            MouseWheelInput.achievementIcons[var10].b(0, 0, 32, 32);
             vd.field_Y[var10] = var11;
           }
           tn.field_b = new Sprite(32, 32);
           tn.field_b.b();
-          mj.field_F.b(0, 0, 32, 32);
+          mj.unachievedIcon.b(0, 0, 32, 32);
           ul.b((byte) 108);
-          kd.field_p = ke.a(32, param5, "", "viewicons");
+          kd.viewIcons = ke.a(32, param5, "", "viewicons");
           discarded$0 = this.b(131586, -9105, 30136);
           discarded$1 = this.b(263172, -9105, 6316128);
           var9 = new Sprite[2][];
           var9[0] = ke.a(32, param5, "", "turntime_icons");
           var9[1] = ke.a(32, param5, "", "gridwidth_icons");
-          nn.a(var9, var9, 2, ra.field_e, CellAnimator.field_a, param3, param2, true, -27871, wc.field_c, wc.field_c, RasterBuffer.field_e, wn.field_j, 2, ng.field_T);
-          ak.field_e = sn.a(param5, "lobbyicon", "", false);
+          nn.a(var9, var9, 2, ra.field_e, CellAnimator.field_a, param3, param2, true, -27871, wc.gameOptionNames, wc.gameOptionNames, RasterBuffer.gameOptionLabels, wn.field_j, 2, ng.field_T);
+          ak.lobbyIcon = sn.a(param5, "lobbyicon", "", false);
           fk.a(new vl(param0, param5, 8, 128));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,13 +292,13 @@ public final class Virogrid extends od {
             if (wm.field_w != null) {
               al.a(mi.field_e, param0 ^ -37, 80.0f);
               this.onCanvasCreated(true);
-              oi.field_c = new MusicTrack[4];
-              oi.field_c[0] = MusicTrack.a(wm.field_w, "", "ataxx titlescreen");
-              oi.field_c[1] = MusicTrack.a(wm.field_w, "", "tetralink ingame 1");
-              oi.field_c[2] = MusicTrack.a(wm.field_w, "", "tetralink ingame 2");
-              oi.field_c[3] = MusicTrack.a(wm.field_w, "", "tetralink ingame 3");
+              oi.musicTracks = new MusicTrack[4];
+              oi.musicTracks[0] = MusicTrack.a(wm.field_w, "", "ataxx titlescreen");
+              oi.musicTracks[1] = MusicTrack.a(wm.field_w, "", "tetralink ingame 1");
+              oi.musicTracks[2] = MusicTrack.a(wm.field_w, "", "tetralink ingame 2");
+              oi.musicTracks[3] = MusicTrack.a(wm.field_w, "", "tetralink ingame 3");
               for (var3_int = 0; var3_int < 4; var3_int++) {
-                vg.field_B.a(BufferedSocket.field_d, 0, af.field_g, oi.field_c[var3_int], 0);
+                vg.field_B.a(BufferedSocket.field_d, 0, af.field_g, oi.musicTracks[var3_int], 0);
               }
               vg.field_B.e(-1);
               af.field_g = null;
@@ -310,7 +310,7 @@ public final class Virogrid extends od {
             if (null != g.field_a) {
               al.a(aj.field_l, 13, 90.0f);
               this.onCanvasCreated(true);
-              this.a(gn.field_G, (byte) -105, ge.field_c, s.field_a, g.field_a, oj.field_Fb);
+              this.loadGraphics(gn.field_G, (byte) -105, ge.field_c, s.field_a, g.field_a, oj.field_Fb);
               s.field_a = null;
               g.field_a = null;
               sb.a(-82);
@@ -339,7 +339,7 @@ public final class Virogrid extends od {
             fh.a((byte) -89);
             qc.a(50, (byte) 111);
             bm.c(-111, 50);
-            ei.a(0, oi.field_c[0]);
+            ei.a(0, oi.musicTracks[0]);
             id.field_r = 0;
             return true;
           }
@@ -825,7 +825,7 @@ public final class Virogrid extends od {
                     }
                   }
                   vd.field_Y[var4_ref_hj.field_i].d(8, var5);
-                  hd.field_b.b(qk.field_d[var4_ref_hj.field_i], 48, hd.field_b.field_H + var5, 8437759, -1);
+                  hd.standardFont.b(qk.achievementTitles[var4_ref_hj.field_i], 48, hd.standardFont.field_H + var5, 8437759, -1);
                 }
               } else {
                 var4 = 24 + rh.a(-16118);
@@ -839,7 +839,7 @@ public final class Virogrid extends od {
             ij.a(-119, (16 - wa.field_K) * 256 / 16);
           }
           if (hd.field_d >= 2) {
-            hd.field_b.b(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
+            hd.standardFont.b(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
           }
           td.a(-30179, (java.awt.Canvas) (var8), 0, 0);
           return;
@@ -1110,7 +1110,7 @@ public final class Virogrid extends od {
                   } else {
                     if (var2_int == 3) {
                       a.field_D = false;
-                      GameSession.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, mc.field_b, 2, hd.field_b.field_A + hd.field_b.field_G, 8, -16824, true, 240);
+                      GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_A + hd.standardFont.field_G, 8, -16824, true, 240);
                     } else {
                       if (var2_int == 4) {
                         a.field_D = true;
@@ -1147,7 +1147,7 @@ public final class Virogrid extends od {
                       if (!dd.field_a) {
                         gb.a(-2, 0, false, 0);
                       } else {
-                        kn.field_J = mi.field_f;
+                        kn.field_J = mi.textRemovedFromGame;
                         gb.a(-2, 0, false, 9);
                       }
                       wm.c((byte) -86);
@@ -1363,7 +1363,7 @@ public final class Virogrid extends od {
               on.field_d = true;
               var8 = var7_ref_ic.board.playerNames[0];
               var9 = var7_ref_ic.board.playerNames[1];
-              var14 = oi.a(new String[]{var8, var9}, lm.field_k, 2);
+              var14 = oi.a(new String[]{var8, var9}, lm.textPlayers, 2);
               gf.a(mi.field_d, 0, false, var14, 1, var7_ref_ic.board.playerNames[0]);
             } else {
               dd.field_a = true;
@@ -1375,7 +1375,7 @@ public final class Virogrid extends od {
                   var9_int++;
                   var8 = var7_ref_ic.board.playerNames[var9_int];
                 }
-                var12 = oi.a(new String[]{var8}, pc.field_e, 2);
+                var12 = oi.a(new String[]{var8}, pc.textOpponent, 2);
                 gf.a(mi.field_d, 0, false, var12, 1, var7_ref_ic.board.playerNames[0]);
               }
               array$1 = new String[1];
@@ -1383,12 +1383,12 @@ public final class Virogrid extends od {
               stackIn_112_1 = array$1;
               stackIn_112_2 = 0;
               if (var6Lifetime2 != 0) {
-                stackIn_113_3 = pb.field_k;
+                stackIn_113_3 = pb.textColourWhite;
               } else {
-                stackIn_113_3 = GameApplet.field_g;
+                stackIn_113_3 = GameApplet.textColourBlue;
               }
               stackIn_112_1[stackIn_112_2] = stackIn_113_3;
-              var13 = oi.a(stackIn_112_0, rf.field_f, 2);
+              var13 = oi.a(stackIn_112_0, rf.textYourcolour, 2);
               gf.a(mi.field_d, 0, false, var13, 1, var7_ref_ic.board.playerNames[0]);
             }
             lj.b(122);
@@ -1887,7 +1887,7 @@ public final class Virogrid extends od {
                   wn.c(param0);
                   if (a.field_D) {
                     a.field_D = false;
-                    GameSession.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, mc.field_b, 2, hd.field_b.field_G + hd.field_b.field_A, 8, -16824, false, 240);
+                    GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_G + hd.standardFont.field_A, 8, -16824, false, 240);
                   }
                   if (bj.field_n) {
                     var3_int = bd.field_e;
@@ -1909,7 +1909,7 @@ public final class Virogrid extends od {
             }
           }
           if (-3 == hm.field_c) {
-            var8 = new String[]{mb.field_eb, em.field_e};
+            var8 = new String[]{mb.playernameHotseat1, em.playernameHotseat2};
             vg.field_I = new GameSession(false, eg.field_y, var8, 0, false, ll.field_b, ce.field_I);
             lj.b(101);
             stackIn_106_0 = (!pn.field_x) ? 0 : 1;

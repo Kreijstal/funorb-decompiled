@@ -3,10 +3,10 @@
  */
 final class dd {
     static String field_e;
-    static String field_d;
+    static String textEndgameNotime;
     static String field_c;
     static boolean field_a;
-    static String field_f;
+    static String textCreateAccount2;
     static jm field_b;
 
     final static boolean a(String param0, boolean param1) {
@@ -96,16 +96,16 @@ final class dd {
           return;
         }
         field_e = null;
-        field_f = null;
+        textCreateAccount2 = null;
         field_b = null;
-        field_d = null;
+        textEndgameNotime = null;
         field_c = null;
     }
 
     static {
         field_e = "Just play";
-        field_d = "<%0> ran out of time";
-        field_f = "start using this feature.";
+        textEndgameNotime = "<%0> ran out of time";
+        textCreateAccount2 = "start using this feature.";
         field_c = "Invalid password.";
     }
 }

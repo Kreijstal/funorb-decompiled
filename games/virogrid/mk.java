@@ -30,7 +30,7 @@ final class mk extends dc implements ta {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new tg(param0, param1);
-          var4.field_w = (ol) ((Object) new hf());
+          var4.listener = (WidgetListener) ((Object) new hf());
           var5 = -6 + this.field_m;
           this.field_m = this.field_m + 38;
           var4.a(30, true, var5, 15, -14 + this.field_g - 16);
@@ -166,7 +166,7 @@ final class mk extends dc implements ta {
           var4.field_m = 80;
           var4.field_l = 0;
           var4.field_g = this.field_g;
-          var4.field_w = (ol) ((Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.listener = (WidgetListener) ((Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -78);
           this.field_db = this.a(je.field_I, (cd) (this), (byte) 75);
           return;

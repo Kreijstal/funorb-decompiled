@@ -5,7 +5,7 @@ final class rc extends IntrusiveNode {
     qd[] field_g;
     short[] field_p;
     private int[] field_m;
-    static String field_i;
+    static String textEndgameBoardfilled;
     byte[] field_j;
     int field_q;
     byte[] field_n;
@@ -706,11 +706,11 @@ final class rc extends IntrusiveNode {
           rc.a(-32, -102);
         }
         field_h = null;
-        field_i = null;
+        textEndgameBoardfilled = null;
     }
 
     static {
-        field_i = "<%0> has the most pieces";
+        textEndgameBoardfilled = "<%0> has the most pieces";
         field_h = new String[255];
     }
 }

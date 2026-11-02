@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj implements ol {
+final class lj implements WidgetListener {
     static float field_r;
     private e field_p;
     static byte[][] field_j;
@@ -71,7 +71,7 @@ final class lj implements ol {
             var1_int = (1 + kn.field_B) % 3;
           }
           kn.field_B = var1_int;
-          ei.a(0, oi.field_c[var1_int + 1]);
+          ei.a(0, oi.musicTracks[var1_int + 1]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

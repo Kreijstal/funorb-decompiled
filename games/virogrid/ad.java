@@ -4,7 +4,7 @@
 final class ad {
     static String field_f;
     static String field_a;
-    static Sprite field_b;
+    static Sprite orbCoinIcon;
     static String field_j;
     private Js5Archive field_k;
     private sl field_d;
@@ -66,7 +66,7 @@ final class ad {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        orbCoinIcon = null;
         if (param0 != 90) {
           return;
         }

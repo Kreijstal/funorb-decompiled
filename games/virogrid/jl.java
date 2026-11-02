@@ -148,14 +148,14 @@ final class jl extends WidgetContainer implements ta {
     }
 
     public jl() {
-        super(0, 0, 476, 225, (ol) null);
+        super(0, 0, 476, 225, (WidgetListener) null);
         this.field_G = new tg(bj.field_g, (cd) null);
         this.field_H = new tg(ql.field_o, (cd) null);
         this.field_I = new tg(dd.field_e, (cd) null);
         hf var1 = new hf();
-        this.field_G.field_w = (ol) ((Object) var1);
-        this.field_H.field_w = (ol) ((Object) var1);
-        this.field_I.field_w = (ol) ((Object) var1);
+        this.field_G.listener = (WidgetListener) ((Object) var1);
+        this.field_H.listener = (WidgetListener) ((Object) var1);
+        this.field_I.listener = (WidgetListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;

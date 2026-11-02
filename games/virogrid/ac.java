@@ -5,7 +5,7 @@ final class ac {
     static IntrusiveDeque field_d;
     static ua field_c;
     static String field_a;
-    static String field_b;
+    static String textDetail;
     static boolean field_e;
 
     public static void a(int param0) {
@@ -15,7 +15,7 @@ final class ac {
           return;
         }
         field_c = null;
-        field_b = null;
+        textDetail = null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
@@ -82,6 +82,6 @@ final class ac {
     static {
         field_a = "Report abuse";
         field_e = false;
-        field_b = "Detail: ";
+        textDetail = "Detail: ";
     }
 }

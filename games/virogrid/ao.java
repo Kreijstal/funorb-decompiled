@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ao extends km {
-    static String field_Nb;
+    static String textEndgameNotimeYou;
     km field_Lb;
     um field_Ib;
     km field_Fb;
@@ -66,14 +66,14 @@ final class ao extends km {
 
     public static void g(int param0) {
         field_Jb = null;
-        field_Nb = null;
+        textEndgameNotimeYou = null;
         int var1 = 13 / ((-63 - param0) / 49);
         field_Eb = null;
         field_Kb = null;
     }
 
     static {
-        field_Nb = "You ran out of time";
+        textEndgameNotimeYou = "You ran out of time";
         field_Kb = new ob();
         field_Jb = "<%0> has left the lobby.";
         field_Hb = 0.0f;

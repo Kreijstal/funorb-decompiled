@@ -8,10 +8,10 @@ final class sd {
     static int field_e;
     static ga field_f;
     static km field_a;
-    static String field_b;
+    static String text2d;
 
     public static void a(byte param0) {
-        field_b = null;
+        text2d = null;
         field_f = null;
         if (param0 != 113) {
           return;
@@ -88,6 +88,6 @@ final class sd {
         field_e = 0;
         field_d = "Music: ";
         field_g = "Quick Chat game";
-        field_b = "2D";
+        text2d = "2D";
     }
 }

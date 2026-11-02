@@ -196,12 +196,12 @@ final class ij extends IntrusiveNode {
 
     final static void a(byte param0) {
         int var1 = id.field_r / 2;
-        String var2 = jk.field_e;
+        String var2 = jk.textBootsequence;
         if (db.b((byte) 13, 0)) {
-          var2 = ge.field_a;
+          var2 = ge.textBootsequenceHalloween;
         }
         String var3 = var2.substring(0, var1 <= var2.length() ? var1 : var2.length());
-        mc.field_b.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
+        mc.menuFont.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
         if (param0 != 105) {
           int[] var4 = (int[]) null;
           ij.a((int[]) null, 50, -10, -91, (int[]) null);

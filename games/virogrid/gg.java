@@ -161,7 +161,7 @@ abstract class gg extends WidgetContainer {
     }
 
     gg(je param0, int param1, int param2) {
-        super(-param1 + mm.field_i >> 1, -param2 + mn.field_a >> 1, param1, param2, (ol) null);
+        super(-param1 + mm.field_i >> 1, -param2 + mn.field_a >> 1, param1, param2, (WidgetListener) null);
         try {
           this.field_G = false;
           this.field_L = param0;

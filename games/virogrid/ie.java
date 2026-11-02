@@ -4,7 +4,7 @@
 abstract class ie {
     ri[] field_d;
     static float field_e;
-    static String field_b;
+    static String textXTurnPlaying;
     static kf field_a;
     static String field_c;
 
@@ -14,7 +14,7 @@ abstract class ie {
           ie.a(81, -82, 22, -52, -108, 64);
         }
         field_a = null;
-        field_b = null;
+        textXTurnPlaying = null;
     }
 
     final int a(byte param0) {
@@ -271,7 +271,7 @@ abstract class ie {
     }
 
     static {
-        field_b = "<%2>'s turn - playing <%0> (<%1>)";
+        textXTurnPlaying = "<%2>'s turn - playing <%0> (<%1>)";
         field_c = "Visit the Account Management section on the main site to view.";
     }
 }

@@ -6,7 +6,7 @@ import java.io.*;
 final class hd {
     static int field_d;
     static String field_c;
-    static v field_b;
+    static v standardFont;
     static r field_g;
     static String field_a;
     static int field_e;
@@ -17,7 +17,7 @@ final class hd {
         if (param0 != 3881) {
           hd.a(-33);
         }
-        field_b = null;
+        standardFont = null;
         field_g = null;
         field_c = null;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti implements ol {
+final class ti implements WidgetListener {
     private int field_f;
     static String field_a;
     static e field_g;

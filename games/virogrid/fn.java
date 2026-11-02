@@ -4,7 +4,7 @@
 final class fn {
     static km field_d;
     static String[] field_b;
-    static String field_g;
+    static String textNotAvailableIn2d;
     static String field_f;
     static IntrusiveDeque field_a;
     static int field_c;
@@ -197,7 +197,7 @@ final class fn {
         field_f = null;
         int var1 = -60 / ((30 - param0) / 54);
         field_a = null;
-        field_g = null;
+        textNotAvailableIn2d = null;
     }
 
     final static void a(int param0) {
@@ -323,7 +323,7 @@ final class fn {
 
     static {
         field_f = "Play the game without logging in just yet";
-        field_g = "2D - Fastest";
+        textNotAvailableIn2d = "2D - Fastest";
         field_b = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
         field_a = new IntrusiveDeque();
     }

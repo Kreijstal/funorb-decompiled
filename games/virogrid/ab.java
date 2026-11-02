@@ -12,12 +12,12 @@ final class ab extends gf implements ta {
     private tg field_N;
 
     ab(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (ol) null);
+        super(param0, param1, param2, param3, (WidgetListener) null);
         this.field_M = new jb(new cc(10000536), wd.field_a, 0, 0, 140, 25);
         this.field_M.a(2, new al());
         this.field_N = new tg(md.field_c, (cd) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_M), (UiWidget) ((Object) this.field_N)};
-        this.field_N.field_w = (ol) ((Object) new hf());
+        this.field_N.listener = (WidgetListener) ((Object) new hf());
         this.d(false);
     }
 

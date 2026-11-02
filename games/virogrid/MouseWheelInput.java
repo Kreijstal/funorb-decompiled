@@ -3,9 +3,9 @@
  */
 abstract class MouseWheelInput {
     static hh field_a;
-    static String field_b;
+    static String textViewcontrolsZoomin;
     static ob field_c;
-    static Sprite[] field_d;
+    static Sprite[] achievementIcons;
 
     abstract int a(int param0);
 
@@ -49,14 +49,14 @@ abstract class MouseWheelInput {
           return;
         }
         field_c = null;
-        field_b = null;
-        field_d = null;
+        textViewcontrolsZoomin = null;
+        achievementIcons = null;
     }
 
     abstract void a(int param0, java.awt.Component param1);
 
     static {
-        field_b = "Zoom in";
+        textViewcontrolsZoomin = "Zoom in";
         field_a = new hh();
     }
 }

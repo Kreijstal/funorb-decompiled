@@ -3,10 +3,10 @@
  */
 final class pc {
     static String field_d;
-    static String field_a;
+    static String textCreateAccount1;
     static String field_c;
     static long field_b;
-    static String field_e;
+    static String textOpponent;
 
     final static vh a(Js5Archive param0, int param1, String param2, String param3, Js5Archive param4) {
         int var5_int = 0;
@@ -120,8 +120,8 @@ final class pc {
     }
 
     public static void a(int param0) {
-        field_a = null;
-        field_e = null;
+        textCreateAccount1 = null;
+        textOpponent = null;
         field_c = null;
         if (param0 != -30114) {
           field_b = -39L;
@@ -132,9 +132,9 @@ final class pc {
     }
 
     static {
-        field_a = "Create a free account to";
+        textCreateAccount1 = "Create a free account to";
         field_c = "Show all game chat";
-        field_e = "Your opponent is <%0>.";
+        textOpponent = "Your opponent is <%0>.";
         field_d = "Email (Login):";
     }
 }

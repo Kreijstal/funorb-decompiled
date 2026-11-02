@@ -48,7 +48,7 @@ final class kl extends WidgetContainer implements ta {
           if (param1 < 13) {
             return;
           }
-          this.field_z.a(false);
+          this.children.a(false);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -60,13 +60,13 @@ final class kl extends WidgetContainer implements ta {
             this.field_F = new tg[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_F[var5] = new tg(this.field_H[var5], (cd) (this));
-              this.field_F[var5].field_w = (ol) ((Object) var4);
+              this.field_F[var5].listener = (WidgetListener) ((Object) var4);
               this.field_F[var5].field_h = jj.field_i;
               this.field_F[var5].a(15, true, 20 + 16 * var5, 0, 80);
               this.a((UiWidget) (this.field_F[var5]), (byte) -78);
             }
             this.field_F[var3_int] = new tg(rj.field_i, (cd) (this));
-            this.field_F[var3_int].field_w = (ol) ((Object) var4);
+            this.field_F[var3_int].listener = (WidgetListener) ((Object) var4);
             this.field_F[var3_int].a(15, true, 20 - (-(var3_int * 16) - 16), 0, 100);
             this.a((UiWidget) (this.field_F[var3_int]), (byte) -78);
             return;
@@ -193,7 +193,7 @@ final class kl extends WidgetContainer implements ta {
     }
 
     kl(fc param0) {
-        super(0, 0, 0, 0, (ol) null);
+        super(0, 0, 0, 0, (WidgetListener) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {

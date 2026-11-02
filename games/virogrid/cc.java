@@ -4,7 +4,7 @@
 class cc extends aj {
     static float field_x;
     static Sprite field_u;
-    static String[] field_v;
+    static String[] detailNames;
     static km field_w;
 
     final static lc[] a(byte param0) {
@@ -165,7 +165,7 @@ class cc extends aj {
         }
         field_w = null;
         field_u = null;
-        field_v = null;
+        detailNames = null;
     }
 
     cc(e param0, int param1) {
@@ -174,6 +174,6 @@ class cc extends aj {
 
     static {
         field_u = new Sprite(270, 70);
-        field_v = new String[]{"2D - Fastest", "2D - Best", "3D - Fastest", "3D - Best"};
+        detailNames = new String[]{"2D - Fastest", "2D - Best", "3D - Fastest", "3D - Best"};
     }
 }

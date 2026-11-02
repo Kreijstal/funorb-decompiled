@@ -390,7 +390,7 @@ abstract class wh {
                               } else {
                                 var3 = param1 ? 1 : 0;
                                 a.field_D = false;
-                                GameSession.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, mc.field_b, 2, hd.field_b.field_A + hd.field_b.field_G, 8, -16824, var3 != 0, 240);
+                                GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_A + hd.standardFont.field_G, 8, -16824, var3 != 0, 240);
                               }
                             }
                           }
@@ -454,7 +454,7 @@ abstract class wh {
                 a.field_D = false;
                 stackIn_58_0 = (!qm.i(20)) ? 1 : 0;
                 var3 = stackIn_58_0;
-                hk.a(8, 2, var3, 320, 8, hd.field_b.field_A, true, 240, ib.field_b, (byte) 118, ib.field_b, param1, hd.field_b.field_A + hd.field_b.field_G, he.field_cc, mc.field_b);
+                hk.a(8, 2, var3, 320, 8, hd.standardFont.field_A, true, 240, ib.frameSprites, (byte) 118, ib.frameSprites, param1, hd.standardFont.field_A + hd.standardFont.field_G, he.textLobbyPleaselogin, mc.menuFont);
               }
             }
           }

@@ -5,7 +5,7 @@ final class jk {
     static int field_c;
     static IntrusiveDeque field_a;
     static boolean[] field_d;
-    static String field_e;
+    static String textBootsequence;
     static km field_b;
     static String field_f;
 
@@ -24,7 +24,7 @@ final class jk {
     }
 
     public static void a(byte param0) {
-        field_e = null;
+        textBootsequence = null;
         field_d = null;
         field_b = null;
         field_f = null;
@@ -43,7 +43,7 @@ final class jk {
     static {
         field_a = new IntrusiveDeque();
         field_d = new boolean[]{false, false, false, false, false, false, false, false, false, true};
-        field_e = "Welcome to the Kolonia I Interactive Entertainment System!         <br>What do you want to play?                     <br>      <col=ffffff>Virogrid</col>           <br>Downloading classic Earth game-set...";
+        textBootsequence = "Welcome to the Kolonia I Interactive Entertainment System!         <br>What do you want to play?                     <br>      <col=ffffff>Virogrid</col>           <br>Downloading classic Earth game-set...";
         field_f = "Off";
     }
 }

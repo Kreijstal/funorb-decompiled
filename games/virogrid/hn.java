@@ -49,8 +49,8 @@ final class hn extends IntrusiveNode {
           return;
         }
         if (kh.field_d > 0) {
-          if (ak.field_e != null) {
-            ak.field_e.b(WidgetContainer.field_y.field_tb, 0);
+          if (ak.lobbyIcon != null) {
+            ak.lobbyIcon.b(WidgetContainer.field_y.field_tb, 0);
           }
           stackIn_9_0 = WidgetContainer.field_y;
           stackIn_10_1 = (param1) && (!ao.field_Gb);
@@ -60,7 +60,7 @@ final class hn extends IntrusiveNode {
           ((km) (Object) stackIn_13_0).a(stackIn_14_1, 24960);
         }
         if (0 < field_h) {
-          if (ak.field_e == null) {
+          if (ak.lobbyIcon == null) {
             stackIn_20_0 = ao.field_Eb;
             stackIn_21_1 = (param1) && (!ad.field_h);
             ((km) (Object) stackIn_20_0).a(stackIn_21_1, 24960);
@@ -68,7 +68,7 @@ final class hn extends IntrusiveNode {
             stackIn_25_1 = (param1) && (!ad.field_h);
             ((km) (Object) stackIn_24_0).a(stackIn_25_1, 24960);
           } else {
-            ak.field_e.b(ao.field_Eb.field_tb, 0);
+            ak.lobbyIcon.b(ao.field_Eb.field_tb, 0);
             stackIn_29_0 = ao.field_Eb;
             stackIn_30_1 = (param1) && (!ad.field_h);
             ((km) (Object) stackIn_29_0).a(stackIn_30_1, 24960);
@@ -78,7 +78,7 @@ final class hn extends IntrusiveNode {
           }
         } else {
           if (th.field_z > 0) {
-            if (ak.field_e == null) {
+            if (ak.lobbyIcon == null) {
               stackIn_42_0 = ao.field_Eb;
               stackIn_43_1 = (param1) && (!ad.field_h);
               ((km) (Object) stackIn_42_0).a(stackIn_43_1, 24960);
@@ -86,7 +86,7 @@ final class hn extends IntrusiveNode {
               stackIn_47_1 = (param1) && (!ad.field_h);
               ((km) (Object) stackIn_46_0).a(stackIn_47_1, 24960);
             } else {
-              ak.field_e.b(ao.field_Eb.field_tb, 0);
+              ak.lobbyIcon.b(ao.field_Eb.field_tb, 0);
               stackIn_51_0 = ao.field_Eb;
               stackIn_52_1 = (param1) && (!ad.field_h);
               ((km) (Object) stackIn_51_0).a(stackIn_52_1, 24960);

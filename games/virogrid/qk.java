@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qk {
-    static String[] field_d;
+    static String[] achievementTitles;
     static int field_b;
     private DualLinkNode field_c;
     private DualLinkNode field_a;
@@ -530,7 +530,7 @@ final class qk {
         if (param0 != 2) {
           field_b = -102;
         }
-        field_d = null;
+        achievementTitles = null;
     }
 
     final static void b(byte param0) {
@@ -665,6 +665,6 @@ final class qk {
 
     static {
         field_b = 64;
-        field_d = new String[]{"The Easy One", "Perfect Jump", "Virogrid Expert", "Total domination", "Winning streak", "You lose", "Entrapment", "Bunny Hopping", "Virogrid Addict", "Ghost Spotter"};
+        achievementTitles = new String[]{"The Easy One", "Perfect Jump", "Virogrid Expert", "Total domination", "Winning streak", "You lose", "Entrapment", "Bunny Hopping", "Virogrid Addict", "Ghost Spotter"};
     }
 }

@@ -3,7 +3,7 @@
  */
 final class fh {
     static boolean field_e;
-    static String field_a;
+    static String textEndgameBoardfilledYou;
     static String field_b;
     static ab field_c;
     static String field_d;
@@ -119,7 +119,7 @@ final class fh {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        textEndgameBoardfilledYou = null;
         field_d = null;
         field_c = null;
         if (param0 != 10061) {
@@ -129,7 +129,7 @@ final class fh {
     }
 
     static {
-        field_a = "You have the most pieces";
+        textEndgameBoardfilledYou = "You have the most pieces";
         field_b = "You cannot chat to <%0> because <%0> is offline in your friend list.";
         field_d = "Options";
     }
