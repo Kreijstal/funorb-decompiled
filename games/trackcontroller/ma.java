@@ -6,7 +6,7 @@ final class ma implements t {
     static int field_c;
     static String field_a;
 
-    final static de a(int param0, byte param1, int param2, ng[] param3, byte[] param4, int param5) {
+    final static de a(int param0, byte param1, int param2, IndexedSprite[] param3, byte[] param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
@@ -77,8 +77,8 @@ final class ma implements t {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = SoftwareRasterizer.field_i;
-          var13 = SoftwareRasterizer.field_d;
+          var45 = SoftwareRasterizer.pixels;
+          var13 = SoftwareRasterizer.stride;
           var14 = SoftwareRasterizer.field_k;
           if (param1 >= -120) {
             stackIn_6_0 = (de) null;
@@ -109,7 +109,7 @@ final class ma implements t {
               }
             }
             for (var24Lifetime1 = 0; var17.length > var24Lifetime1; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)SoftwareRasterizer.field_i[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)SoftwareRasterizer.pixels[var24Lifetime1];
             }
             var23Lifetime1 = 0;
             var24Lifetime2 = param2 * (var36[var16_int] + 1);
@@ -152,7 +152,7 @@ final class ma implements t {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class ma implements t {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class ma implements t {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

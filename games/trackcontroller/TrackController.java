@@ -26,7 +26,7 @@ public final class TrackController extends GameShell {
         if (dd.field_o == param0) {
           fieldTemp$0 = na.field_b + 1;
           na.field_b = na.field_b + 1;
-          if (fieldTemp$0 < 0 && (0 != SecondaryNodeDeque.field_a ||
+          if (fieldTemp$0 < 0 && (0 != SecondaryNodeDeque.mouseButton ||
             ni.field_m[84])) {
             na.field_b = 0;
           }
@@ -40,7 +40,7 @@ public final class TrackController extends GameShell {
                 SpriteState.field_p = 0;
               }
               if (ib.field_a != -1) {
-                tk.field_p[ib.field_a].c(-99);
+                AsyncRequest.field_p[ib.field_a].c(-99);
                 decompiledFrameRemainder1 = (null != ua.field_L);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = !(!ua.field_L.c(-127)))) {
@@ -73,11 +73,11 @@ public final class TrackController extends GameShell {
                   if (sc.field_g != -1) {
                     var2 = 0;
                     if (ib.field_a >= 0 &&
-                      tk.field_p.length > ib.field_a) {
-                      stackIn_69_0 = (!tk.field_p[ib.field_a].field_e.field_a) ? 0 : 1;
+                      AsyncRequest.field_p.length > ib.field_a) {
+                      stackIn_69_0 = (!AsyncRequest.field_p[ib.field_a].field_e.field_a) ? 0 : 1;
                       var2 = stackIn_69_0;
                     }
-                    tk.field_p[sc.field_g].a(param0 ^ 10412, var2 != 0);
+                    AsyncRequest.field_p[sc.field_g].a(param0 ^ 10412, var2 != 0);
                   }
                 } else {
                   sc.field_g = -1;
@@ -120,9 +120,9 @@ public final class TrackController extends GameShell {
                   if (oe.field_e != 0) {
                     ib.field_a = 16;
                   } else {
-                    if (ua.field_L.field_O == 0) {
+                    if (ua.field_L.score == 0) {
                       sc.field_g = ib.field_a;
-                      tk.field_p[sc.field_g].a(10412, false);
+                      AsyncRequest.field_p[sc.field_g].a(10412, false);
                       dd.field_o = 3;
                       decompiledFrameRemainder0 = false;
                     }
@@ -134,7 +134,7 @@ public final class TrackController extends GameShell {
               }
               if (decompiledFrameRemainder0) {
                 sc.field_g = ib.field_a;
-                tk.field_p[sc.field_g].a(10412, false);
+                AsyncRequest.field_p[sc.field_g].a(10412, false);
                 dd.field_o = 3;
               }
             } else {
@@ -226,7 +226,7 @@ public final class TrackController extends GameShell {
             if (ib.field_a == -1) {
               ua.field_L.h(24661);
             } else {
-              tk.field_p[ib.field_a].b(-1);
+              AsyncRequest.field_p[ib.field_a].b(-1);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -234,14 +234,14 @@ public final class TrackController extends GameShell {
             if (NodeHashTable.field_g >= 32) {
               if (-1 != sc.field_g &&
                 sc.field_g != -2) {
-                tk.field_p[sc.field_g].b(param0 - 161);
+                AsyncRequest.field_p[sc.field_g].b(param0 - 161);
               } else {
                 ua.field_L.h(24661);
               }
               var3Lifetime1 = -NodeHashTable.field_g + 63;
             } else {
               if (ib.field_a != -1) {
-                tk.field_p[ib.field_a].b(-1);
+                AsyncRequest.field_p[ib.field_a].b(-1);
               } else {
                 ua.field_L.h(param0 ^ 24821);
               }
@@ -256,7 +256,7 @@ public final class TrackController extends GameShell {
           }
           SoftwareRasterizer.d();
           if (ag.b(param0 - 142)) {
-            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k);
             var3Lifetime2 = GameApplet.g(48);
             var4Lifetime1 = var3Lifetime2 % 26;
             if (var4Lifetime1 != 0) {
@@ -269,7 +269,7 @@ public final class TrackController extends GameShell {
           if (0 != dd.field_o) {
             var3Lifetime3 = NodeHashTable.field_g << 3;
             if (var3Lifetime3 > 0) {
-              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, var3Lifetime3);
+              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, var3Lifetime3);
             }
           }
           if (ob.g(-26998) &&
@@ -403,7 +403,7 @@ public final class TrackController extends GameShell {
         gd.c(-3);
         RandomAccessCacheFile.b((byte) -121);
         rg.a(17883);
-        tk.f(48);
+        AsyncRequest.f(48);
         pl.c(-30877);
         w.b(true);
         bd.a(44);
@@ -483,7 +483,7 @@ public final class TrackController extends GameShell {
         ProxySocketConnector.a(true);
         kl.a(119);
         NodeHashTableIterator.a(31399);
-        hh.b((byte) 52);
+        SecondaryNodeDequeIterator.b((byte) 52);
         ti.c((byte) -121);
         ag.a(10);
         li.a((byte) 111);
@@ -615,7 +615,7 @@ public final class TrackController extends GameShell {
                     }
                   }
                   if (!ag.b(45)) {
-                    tk.field_p[ib.field_a].a(10412, true);
+                    AsyncRequest.field_p[ib.field_a].a(10412, true);
                   }
                 }
               }
@@ -677,7 +677,7 @@ public final class TrackController extends GameShell {
         if (IntrusiveNode.c(72)) {
           var2Lifetime1 = this.d((byte) 103);
           if (2 == var2Lifetime1) {
-            hh.a(-28717);
+            SecondaryNodeDequeIterator.a(-28717);
           }
         }
     }
@@ -735,7 +735,7 @@ public final class TrackController extends GameShell {
           byte[] var4_ref_byte__ = null;
           int var4 = 0;
           String var4_ref_String = null;
-          ng[] var4_ref_ng__ = null;
+          IndexedSprite[] var4_ref_ng__ = null;
           int var5 = 0;
           IOException var5_ref_IOException = null;
           BitmapFont var5_ref_oh = null;
@@ -984,11 +984,11 @@ public final class TrackController extends GameShell {
                 var5_ref_IOException = (IOException) (Object) decompiledCaughtException;
                 throw new RuntimeException();
               }
-              tk.field_p = new GameScreen[17];
+              AsyncRequest.field_p = new GameScreen[17];
               qh.field_b = gj.field_f[0];
               rl.field_D = null;
               for (var5 = 0; var5 < 17; var5++) {
-                tk.field_p[var5] = new GameScreen(this, var5);
+                AsyncRequest.field_p[var5] = new GameScreen(this, var5);
               }
               if (jj.s(125)) {
                 ib.field_a = 0;
@@ -1053,14 +1053,14 @@ public final class TrackController extends GameShell {
               var6 = 0;
               var7_intLifetime1 = 2;
               if (0 == var4 % 3) {
-                var5 = -2 + SoftwareRasterizer.field_d;
+                var5 = -2 + SoftwareRasterizer.stride;
               }
               if (3 > var4) {
                 var6 = SoftwareRasterizer.field_k - 2;
               }
               var8 = 2;
               if (var4 % 3 == 1) {
-                var7_intLifetime1 = SoftwareRasterizer.field_d;
+                var7_intLifetime1 = SoftwareRasterizer.stride;
               }
               if (3 == var4 ||
                 5 == var4) {

@@ -24,7 +24,7 @@ abstract class wj {
           rb.field_a = new sd(param1);
           ij.field_d = new wg(SecondaryNodeDeque.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ abstract class wj {
           } else {
             var3 = 1;
           }
-          if (null != tk.field_u) {
+          if (null != AsyncRequest.field_u) {
             return;
           }
           if (ag.field_b) {
@@ -67,7 +67,7 @@ abstract class wj {
           }
           return;
         }
-        if (null == tk.field_u) {
+        if (null == AsyncRequest.field_u) {
           og.field_rb = dj.a(0, 480, 640, (byte) 96, rg.field_c, 0);
           if (og.field_rb == null) {
             var3Lifetime1 = 3;
@@ -76,7 +76,7 @@ abstract class wj {
             var3Lifetime1 = 2;
           }
         } else {
-          og.field_rb = tk.field_u.c(0);
+          og.field_rb = AsyncRequest.field_u.c(0);
           ni.a(-127, 2);
           if (og.field_rb == null) {
             var3Lifetime1 = 3;
@@ -85,7 +85,7 @@ abstract class wj {
             var3Lifetime1 = 2;
           }
         }
-        if (null != tk.field_u) {
+        if (null != AsyncRequest.field_u) {
           return;
         }
         if (!ag.field_b) {

@@ -4,7 +4,7 @@
 final class pa {
     static IntrusiveDeque field_c;
     static long field_b;
-    static volatile int field_a;
+    static volatile int idleTicks;
 
     public static void a(byte param0) {
         if (param0 > -120) {
@@ -38,7 +38,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var2), "pa.B(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2), "pa.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -51,6 +51,6 @@ final class pa {
 
     static {
         field_c = new IntrusiveDeque();
-        field_a = 0;
+        idleTicks = 0;
     }
 }

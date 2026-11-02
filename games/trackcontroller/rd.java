@@ -66,8 +66,8 @@ final class rd {
           if (var7 == -1) {
             var7 = this.field_c.field_G + this.field_c.field_u;
           }
-          var8 = SoftwareRasterizer.field_d >> 2;
-          var9 = this.field_c.a(param0);
+          var8 = SoftwareRasterizer.stride >> 2;
+          var9 = this.field_c.stringWidth(param0);
           if (!param1) {
             this.field_g = (t) null;
           }
@@ -88,15 +88,15 @@ final class rd {
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_c.a(nf.field_g[var13Lifetime2]);
+              var14 = this.field_c.stringWidth(nf.field_g[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
             }
           }
           var12 = param3;
-          if (var9 + var12 + var5_int > SoftwareRasterizer.field_d) {
-            var12 = SoftwareRasterizer.field_d + (-var9 - var5_int);
+          if (var9 + var12 + var5_int > SoftwareRasterizer.stride) {
+            var12 = SoftwareRasterizer.stride + (-var9 - var5_int);
           }
           var13Lifetime1 = 32 + (-this.field_c.field_H + param2);
           if (var6 + var13Lifetime1 + var10 > SoftwareRasterizer.field_k) {
@@ -116,7 +116,7 @@ final class rd {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class rd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class rd {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -261,11 +261,11 @@ final class rd {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_c.a(param3);
+          var5_int = this.field_c.stringWidth(param3);
           var6 = this.field_c.field_H + this.field_c.field_u;
           var7 = param1;
-          if (SoftwareRasterizer.field_d < 6 + (var7 + var5_int)) {
-            var7 = -6 + (-var5_int + SoftwareRasterizer.field_d);
+          if (SoftwareRasterizer.stride < 6 + (var7 + var5_int)) {
+            var7 = -6 + (-var5_int + SoftwareRasterizer.stride);
           }
           var8 = param2 - (this.field_c.field_H - 32);
           if (6 + var6 + var8 > SoftwareRasterizer.field_k) {
@@ -288,7 +288,7 @@ final class rd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -338,8 +338,8 @@ final class rd {
           var5 = new Sprite[9];
           var16 = new d(32, 32);
           var18 = var16;
-          for (var7_int = 0; var7_int < var18.field_z.length; var7_int++) {
-            var16.field_z[var7_int] = 1077952576;
+          for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 118, 4).a(true, 19749).a(param0 ^ 13421758, var5);
@@ -364,14 +364,14 @@ final class rd {
           var9[4] = new Sprite(2, 1);
           var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_z = new int[]{6710886, 7829367};
-          var10[4].field_z = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new gi();
           var12 = new gi();
           var11.a(0, var9, (byte) -33);
           var12.a(0, var10, (byte) -33);
           var13 = new Sprite(7, 4);
-          var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, param0, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, param0, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new gi(var4, true);
           var14.a(var13.b(), -112);
           var13.d();
@@ -384,7 +384,7 @@ final class rd {
           var19 = new gi(var4, true);
           var19.a(var13, -119);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -409,7 +409,7 @@ final class rd {
         try {
           var3.writeByte(param0.field_k, (byte) -114);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rd.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rd.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

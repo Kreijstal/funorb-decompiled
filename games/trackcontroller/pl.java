@@ -46,7 +46,7 @@ final class pl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "pl.F(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "pl.F(" + param0 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class pl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class pl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

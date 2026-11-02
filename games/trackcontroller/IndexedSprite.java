@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends fd {
+final class IndexedSprite extends fd {
     int[] field_l;
     byte[] field_m;
 
@@ -11,33 +11,33 @@ final class ng extends fd {
         int var9Lifetime2;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_a;
-        int var3 = param0 + param1 * SoftwareRasterizer.field_d;
+        int var3 = param0 + param1 * SoftwareRasterizer.stride;
         int var4 = 0;
         int var5 = this.field_j;
         int var6 = this.field_c;
-        int var7 = SoftwareRasterizer.field_d - var6;
+        int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.field_b) {
-          var9 = SoftwareRasterizer.field_b - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.field_b;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRasterizer.field_d;
+          var3 = var3 + var9 * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer.field_g) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_g);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_a) {
-          var9Lifetime1 = SoftwareRasterizer.field_a - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.field_a;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.field_e) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_e;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -46,7 +46,7 @@ final class ng extends fd {
           var5 <= 0) {
           return;
         }
-        ng.b(SoftwareRasterizer.field_i, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.b(SoftwareRasterizer.pixels, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -143,33 +143,33 @@ final class ng extends fd {
         int var10Lifetime2;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_a;
-        int var4 = param0 + param1 * SoftwareRasterizer.field_d;
+        int var4 = param0 + param1 * SoftwareRasterizer.stride;
         int var5 = 0;
         int var6 = this.field_j;
         int var7 = this.field_c;
-        int var8 = SoftwareRasterizer.field_d - var7;
+        int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.field_b) {
-          var10 = SoftwareRasterizer.field_b - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.field_b;
+          param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRasterizer.field_d;
+          var4 = var4 + var10 * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.field_g) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_g);
+        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_a) {
-          var10Lifetime1 = SoftwareRasterizer.field_a - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.field_a;
+          param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
+        if (param0 + var7 > SoftwareRasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -178,10 +178,10 @@ final class ng extends fd {
           var6 <= 0) {
           return;
         }
-        ng.a(SoftwareRasterizer.field_i, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.a(SoftwareRasterizer.pixels, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    ng(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_g = param0;
         this.field_k = param1;
         this.field_b = param2;
@@ -192,7 +192,7 @@ final class ng extends fd {
         this.field_l = param7;
     }
 
-    ng(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_c = param0;
         this.field_g = param0;
         this.field_j = param1;

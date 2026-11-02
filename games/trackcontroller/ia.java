@@ -63,7 +63,7 @@ final class ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "ia.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "ia.B(" + param0 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class ia {
         try {
           da.field_n.a(!param0 ? true : false, param2, true, param3, param4, param1);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ia.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ia.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

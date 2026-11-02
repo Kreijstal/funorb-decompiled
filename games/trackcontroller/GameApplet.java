@@ -37,7 +37,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "re.getAppletContext()");
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "re.getAppletContext()");
         }
     }
 
@@ -61,7 +61,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var2_ref), "re.MA(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2_ref), "re.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "re.destroy()");
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "re.destroy()");
         }
     }
 
@@ -107,7 +107,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "re.HA(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "re.HA(" + param0 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) (var2), "re.LA(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) (var2), "re.LA(" + param0 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -369,7 +369,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "re.SA(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "re.SA(" + param0 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "re.stop()");
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "re.stop()");
         }
     }
 
@@ -426,7 +426,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "re.start()");
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "re.start()");
         }
     }
 
@@ -454,7 +454,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -615,7 +615,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw LevelGrid.a((Throwable) (var1), "re.run()");
+            throw LevelGrid.toClientException((Throwable) (var1), "re.run()");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -654,7 +654,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "re.QA(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "re.QA(" + param0 + ')');
         }
     }
 
@@ -686,7 +686,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "re.RA(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "re.RA(" + param0 + ')');
         }
     }
 
@@ -721,7 +721,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -749,7 +749,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "re.getDocumentBase()");
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "re.getDocumentBase()");
         }
     }
 
@@ -818,7 +818,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -883,7 +883,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "re.IA(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "re.IA(" + param0 + ')');
         }
     }
 
@@ -944,7 +944,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "re.JA(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "re.JA(" + param0 + ',' + param1 + ')');
         }
     }
 

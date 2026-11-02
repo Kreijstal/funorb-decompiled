@@ -14,7 +14,7 @@ final class nk extends IntrusiveNode {
           if (var1 == null) {
             var1 = new vg();
           }
-          var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_d, 11033, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, SoftwareRasterizer.field_b);
+          var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, 11033, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.field_k, SoftwareRasterizer.clipTop);
           cj.field_j.addLast((byte) -97, var1);
           return;
         }
@@ -22,7 +22,7 @@ final class nk extends IntrusiveNode {
         if (var1 == null) {
           var1 = new vg();
         }
-        var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_d, 11033, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, SoftwareRasterizer.field_b);
+        var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, 11033, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.field_k, SoftwareRasterizer.clipTop);
         cj.field_j.addLast((byte) -97, var1);
     }
 

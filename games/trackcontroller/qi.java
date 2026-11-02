@@ -109,7 +109,7 @@ final class qi {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class qi {
           param1.field_j = this.field_j;
           param1.field_a = this.field_a;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qi.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class qi {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class qi {
           bf.a((byte) -26, param0);
           nb.a(rk.field_Z, false, -16257);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class qi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ final class qi {
           }
           v.field_f = 0;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qi.D(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.D(" + param0 + ')');
         }
     }
 
@@ -522,7 +522,7 @@ final class qi {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(')').toString());
         }
     }
 

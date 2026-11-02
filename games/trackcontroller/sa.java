@@ -15,7 +15,7 @@ final class sa extends ok {
     private String field_O;
     private int field_S;
     private boolean field_L;
-    static volatile int field_M;
+    static volatile int pressX;
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_p + param1;
@@ -58,7 +58,7 @@ final class sa extends ok {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
         }
     }
 
@@ -142,13 +142,13 @@ final class sa extends ok {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     static {
         field_K = "Waiting for graphics";
         field_J = "Creating your account";
-        field_M = 0;
+        pressX = 0;
     }
 }

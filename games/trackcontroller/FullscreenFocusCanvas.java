@@ -16,7 +16,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             this.a((PlatformTaskDispatcher) null, -112);
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ih.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ih.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

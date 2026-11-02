@@ -129,7 +129,7 @@ final class ClientException extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
         }
     }
 

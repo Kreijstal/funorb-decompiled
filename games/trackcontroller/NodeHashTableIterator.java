@@ -47,7 +47,7 @@ final class NodeHashTableIterator implements Iterator {
         try {
           ha.a(param2, param0, param4.position, param4.payload, param3, (byte) 77, param1);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ee.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ee.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,8 +89,8 @@ final class NodeHashTableIterator implements Iterator {
         Sprite var3 = var7;
         int var4 = 0;
         int var5 = -14 / ((param2 - 55) / 41);
-        while (var3.field_z.length > var4) {
-          var7.field_z[var4] = param0;
+        while (var3.pixels.length > var4) {
+          var7.pixels[var4] = param0;
           var4++;
         }
         return var3;
@@ -102,7 +102,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_a = param0;
           this.a((byte) 73);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

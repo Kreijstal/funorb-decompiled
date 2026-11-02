@@ -47,7 +47,7 @@ final class gk {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -115,7 +115,7 @@ final class gk {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               pf.field_C[var6_int] = var13.readString(0);
             }
-            tk.a(var4, -14032, var5);
+            AsyncRequest.a(var4, -14032, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               mf.a(14, var15);
               if (var6_intLifetime1 == 0) {
@@ -171,7 +171,7 @@ final class gk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "gk.C(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "gk.C(" + param0 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class gk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

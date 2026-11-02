@@ -3,7 +3,7 @@
  */
 final class kf {
     static int field_c;
-    static int field_b;
+    static int mouseX;
     static Sprite[] field_d;
     static int field_a;
 
@@ -46,7 +46,7 @@ final class kf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class kf {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,6 +143,6 @@ final class kf {
     }
 
     static {
-        field_b = 0;
+        mouseX = 0;
     }
 }

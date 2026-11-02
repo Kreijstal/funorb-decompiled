@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends tk {
+final class hi extends AsyncRequest {
     byte field_B;
     int field_z;
     static int field_y;
@@ -39,7 +39,7 @@ final class hi extends tk {
         SoftwareRasterizer.a();
         PacketBuffer.a((byte) -78);
         if (256 > var5) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, -var5 + 256);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, -var5 + 256);
           GameShell.m(119);
           if (150 <= fb.field_a) {
             ej.field_d.d(var3 + 15, 10 + var4, var5);

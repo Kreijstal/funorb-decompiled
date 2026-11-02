@@ -9,7 +9,7 @@ abstract class GameShell extends GameApplet {
     static byte[][] field_z;
     private int field_u;
     static wb field_n;
-    static volatile int field_x;
+    static volatile int pressY;
     private boolean field_r;
     private boolean field_v;
     private boolean field_s;
@@ -56,7 +56,7 @@ abstract class GameShell extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                hh.b(128);
+                                SecondaryNodeDequeIterator.b(128);
                                 return;
                               }
                               if (var2 == 17) {
@@ -126,7 +126,7 @@ abstract class GameShell extends GameApplet {
             GameShell.n(-86);
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ch.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ch.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -325,7 +325,7 @@ abstract class GameShell extends GameApplet {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -506,7 +506,7 @@ abstract class GameShell extends GameApplet {
             this.a("reconnect", (byte) 100);
           }
           var3 = 8 % ((param0 + 14) / 33);
-          hh.a(-28717);
+          SecondaryNodeDequeIterator.a(-28717);
           af.a(-100, var2, fi.field_t);
           li.field_i = true;
           rk.field_eb = qg.a(false) + 15000L;
@@ -550,16 +550,16 @@ abstract class GameShell extends GameApplet {
         int var4Lifetime2;
         var6 = TrackController.field_F ? 1 : 0;
         var3 = 110 % ((param0 + 46) / 32);
-        if (tk.field_u != null) {
+        if (AsyncRequest.field_u != null) {
           if (og.field_rb == null) {
             var4_ref_java_awt_Container = PacketBuffer.c((byte) -128);
             var5 = var4_ref_java_awt_Container.getSize();
-            tk.field_u.a(0, var5.width, var5.height);
+            AsyncRequest.field_u.a(0, var5.width, var5.height);
           }
-          tk.field_u.b(true);
+          AsyncRequest.field_u.b(true);
         }
         ob.h(16473);
-        of.c((byte) 66);
+        of.publishInputState((byte) 66);
         if (!IterableNodeHashTable.a(-107) &&
           rl.field_N != 11) {
           vd.k(123);
@@ -574,7 +574,7 @@ abstract class GameShell extends GameApplet {
             !(uk.a(0) <= var4)) {
             this.field_s = false;
             GameKeyHandler.a((byte) 112);
-            hh.a(-28717);
+            SecondaryNodeDequeIterator.a(-28717);
             af.a(-93, 2, oc.field_k);
             dk.a(9888);
             li.field_i = true;
@@ -601,7 +601,7 @@ abstract class GameShell extends GameApplet {
           gj.field_c != 0) {
           if (gl.field_I >= 10) {
             if (rl.field_N >= 10) {
-              hh.a(-28717);
+              SecondaryNodeDequeIterator.a(-28717);
               if (gj.field_c != 3) {
                 if (gj.field_c != 4) {
                   if (2 != gj.field_c) {
@@ -811,7 +811,7 @@ abstract class GameShell extends GameApplet {
     }
 
     static {
-        field_x = 0;
+        pressY = 0;
         field_z = new byte[250][];
         field_y = new int[8192];
     }

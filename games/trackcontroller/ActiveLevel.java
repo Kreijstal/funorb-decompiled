@@ -9,13 +9,13 @@ final class ActiveLevel extends LevelGrid {
     private int field_Y;
     private int field_r;
     private int field_cb;
-    private int field_J;
+    private int phase;
     private int field_C;
     private cd field_A;
     private int field_X;
     private int field_x;
     private int field_R;
-    int field_O;
+    int score;
     private String field_L;
     private boolean field_F;
     private IntrusiveDeque field_S;
@@ -42,7 +42,7 @@ final class ActiveLevel extends LevelGrid {
     private boolean field_K;
     private ra field_u;
 
-    private final void a(int param0, int param1, int param2) {
+    private final void unlockAchievement(int param0, int param1, int param2) {
         if (param2 != -5383) {
           return;
         }
@@ -123,7 +123,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -174,11 +174,11 @@ final class ActiveLevel extends LevelGrid {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void setPhase(int param0, int param1) {
         int var8 = 0;
         int var3;
         int var4;
@@ -196,22 +196,22 @@ final class ActiveLevel extends LevelGrid {
         this.field_R = this.field_R - var3 * this.field_E;
         this.field_cb = this.field_cb + var3;
         this.field_bb = this.field_bb + var3;
-        if (param1 == this.field_J) {
+        if (param1 == this.phase) {
           return;
         }
         this.field_v = this.field_h;
-        this.field_J = param1;
-        var7 = this.field_J;
+        this.phase = param1;
+        var7 = this.phase;
         if (var7 == 2) {
           fe.a(false, pf.field_P[2], param0 ^ 503);
           si.$cfr$intArgs$a$e9dea5688aa5(-68, 3);
           var4 = this.field_X >> 1;
           var5 = this.field_I.field_v + var4;
           this.field_R = this.field_R + var5;
-          this.field_O = this.field_O + var5;
+          this.score = this.score + var5;
           this.field_y = dh.a((byte) -127, new String[]{Integer.toString(this.field_I.field_v), Integer.toString(var4), Integer.toString(var5)}, ob.field_o);
           this.field_Y = 156;
-          var6 = bk.field_E.a(this.field_y) + 4;
+          var6 = bk.field_E.stringWidth(this.field_y) + 4;
           if (this.field_Y < var6) {
             this.field_Y = var6 + var6 % 26;
             this.field_Y = this.field_Y - this.field_Y % 26;
@@ -220,10 +220,10 @@ final class ActiveLevel extends LevelGrid {
             this.field_p = 0;
           } else {
             this.field_L = RandomAccessCacheFile.field_e + (var5 << 1);
-            this.field_O = this.field_O + var5;
+            this.score = this.score + var5;
             this.field_R = this.field_R + var5;
             this.field_p = this.field_p + 1;
-            var6Lifetime1 = 4 + bk.field_E.a(this.field_L);
+            var6Lifetime1 = 4 + bk.field_E.stringWidth(this.field_L);
             if (this.field_Y < var6Lifetime1) {
               this.field_Y = var6Lifetime1 % 26 + var6Lifetime1;
               this.field_Y = this.field_Y - this.field_Y % 26;
@@ -236,7 +236,7 @@ final class ActiveLevel extends LevelGrid {
           if (this.field_I.field_x == gj.field_f.length) {
             this.g(63);
           }
-          if (Math.abs(this.field_O) > this.field_T) {
+          if (Math.abs(this.score) > this.field_T) {
             vd.b(-1, 10, 23636);
           }
           this.field_A.a(-1, this.field_A.field_a, (byte) 100);
@@ -253,57 +253,57 @@ final class ActiveLevel extends LevelGrid {
             if (10 != ArchiveIndex.field_i) {
               if (ArchiveIndex.field_i != 20) {
                 if (ArchiveIndex.field_i == 30) {
-                  this.a(252, 3, -5383);
+                  this.unlockAchievement(252, 3, -5383);
                 }
               } else {
-                this.a(253, 2, param0 - 5630);
+                this.unlockAchievement(253, 2, param0 - 5630);
               }
             } else {
-              this.a(254, 1, param0 ^ -5618);
+              this.unlockAchievement(254, 1, param0 ^ -5618);
             }
           } else {
-            this.a(255, 0, param0 ^ -5618);
+            this.unlockAchievement(255, 0, param0 ^ -5618);
           }
           if (this.field_p != 5) {
             if (10 == this.field_p) {
-              this.a(250, 5, param0 - 5630);
+              this.unlockAchievement(250, 5, param0 - 5630);
             } else {
               if (this.field_p == 20) {
-                this.a(249, 6, -5383);
+                this.unlockAchievement(249, 6, -5383);
               } else {
                 if (30 == this.field_p) {
-                  this.a(248, 7, -5383);
+                  this.unlockAchievement(248, 7, -5383);
                 }
               }
             }
           } else {
-            this.a(251, 4, param0 - 5630);
+            this.unlockAchievement(251, 4, param0 - 5630);
           }
-          if (this.field_O < 100000) {
-            if (50000 > this.field_O) {
-              if (this.field_O < 25000) {
-                if (this.field_O >= 10000) {
-                  this.a(247, 8, -5383);
+          if (this.score < 100000) {
+            if (50000 > this.score) {
+              if (this.score < 25000) {
+                if (this.score >= 10000) {
+                  this.unlockAchievement(247, 8, -5383);
                 }
               } else {
-                this.a(246, 9, -5383);
+                this.unlockAchievement(246, 9, -5383);
               }
             } else {
-              this.a(245, 10, param0 - 5630);
+              this.unlockAchievement(245, 10, param0 - 5630);
             }
           } else {
-            this.a(244, 11, -5383);
+            this.unlockAchievement(244, 11, -5383);
           }
           if (ui.a(0, true) &&
             20 == this.field_W) {
-            this.a(243, 12, param0 - 5630);
+            this.unlockAchievement(243, 12, param0 - 5630);
           }
           for (var7 = 0; var7 < 16; var7++) {
             for (var8 = 0; var8 < 16; var8++) {
               this.tileFlags[var7][var8] = RandomAccessCacheFile.a(this.tileFlags[var7][var8], -32641);
             }
           }
-          this.field_u = new ra(this.field_o, this.tileFlags, this.field_i, 16, 48, true);
+          this.field_u = new ra(this.field_o, this.tileFlags, this.targetLayout, 16, 48, true);
           this.field_u.field_h = this.field_h;
           return;
         }
@@ -431,7 +431,7 @@ final class ActiveLevel extends LevelGrid {
             var4Lifetime1 = 1;
           }
           if (var4Lifetime1 != 0) {
-            this.field_T = Math.abs(this.field_O);
+            this.field_T = Math.abs(this.score);
             hl.a(10, 0);
             sc.field_g = -2;
           }
@@ -481,7 +481,7 @@ final class ActiveLevel extends LevelGrid {
             jj.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
             var7--;
           }
-          var8Lifetime2 = bk.field_E.a(pi.field_f);
+          var8Lifetime2 = bk.field_E.stringWidth(pi.field_f);
           bk.field_E.b(8, -1);
           bk.field_E.a(pi.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
         }
@@ -527,7 +527,7 @@ final class ActiveLevel extends LevelGrid {
         return;
     }
 
-    private final boolean d(int param0) {
+    private final boolean matchesTargetLayout(int param0) {
         int var12 = 0;
         int var2;
         int var3;
@@ -560,15 +560,15 @@ final class ActiveLevel extends LevelGrid {
         if (this.b(this.tileFlags, (byte) -66) != this.field_w) {
           return false;
         }
-        var2 = this.a(this.field_i, 0);
-        var3 = this.a(this.field_i, (byte) -76);
+        var2 = this.a(this.targetLayout, 0);
+        var3 = this.a(this.targetLayout, (byte) -76);
         var4 = -var2 + this.a(this.tileFlags, 0);
         var5 = -var3 + this.a(this.tileFlags, (byte) -69);
-        var6 = this.field_i.length;
-        var7 = this.field_i[0].length;
+        var6 = this.targetLayout.length;
+        var7 = this.targetLayout[0].length;
         for (var8 = var2; var6 > var8; var8++) {
           for (var9 = var3; var7 > var9; var9++) {
-            if (~this.field_i[var8][var9] != ~this.a(this.tileFlags, var5 + var9, 21278, var4 + var8)) {
+            if (~this.targetLayout[var8][var9] != ~this.a(this.tileFlags, var5 + var9, 21278, var4 + var8)) {
               return false;
             }
           }
@@ -607,21 +607,21 @@ final class ActiveLevel extends LevelGrid {
         hl.a(10, 0);
         fe.a((param0 == 0), pf.field_P[param0], 256);
         if (param1 <= 110) {
-          this.b(27, 2);
+          this.setPhase(27, 2);
         }
         if (!jj.s(24)) {
           this.g(18);
           if (oe.field_e != 0) {
             sc.field_g = 16;
           } else {
-            if (0 != this.field_O) {
+            if (0 != this.score) {
               sc.field_g = 11;
             } else {
               sc.field_g = 1;
             }
           }
         } else {
-          if ((this.field_O | oe.field_e) == 0) {
+          if ((this.score | oe.field_e) == 0) {
             sc.field_g = 0;
           } else {
             sc.field_g = 15;
@@ -709,19 +709,19 @@ final class ActiveLevel extends LevelGrid {
           discarded$0 = this.a(true, -46, 126);
         }
         if (param0 &&
-          GameScreen.field_a) {
+          GameScreen.mouseMoved) {
           this.field_A.field_a = true;
         }
         if (param0 &&
-          uk.field_a == 1 &&
-          this.field_J != 2) {
+          uk.clickButton == 1 &&
+          this.phase != 2) {
           fieldTemp$1 = this.field_E;
           fieldTemp$2 = this.field_E + 1;
           this.field_E = this.field_E + 1;
           this.field_bb = this.field_bb ^ (fieldTemp$1 ^ fieldTemp$2);
           this.field_R = this.field_R - this.field_cb;
-          var3 = db.field_X - 467;
-          var4_int = wg.field_e - 138;
+          var3 = db.clickX - 467;
+          var4_int = wg.clickY - 138;
           if (0 <= var3 &&
             26 + ba.field_b.field_G > var4_int &&
             var3 < 156 &&
@@ -731,7 +731,7 @@ final class ActiveLevel extends LevelGrid {
             sc.field_g = stackIn_20_0;
             return;
           }
-          var4_intLifetime1 = wg.field_e - 178;
+          var4_intLifetime1 = wg.clickY - 178;
           if (var3 >= 0 &&
             26 + ba.field_b.field_G > var4_intLifetime1 &&
             156 > var3 &&
@@ -742,12 +742,12 @@ final class ActiveLevel extends LevelGrid {
           }
         }
         if (1 == SpriteState.field_p &&
-          1 == this.field_J) {
+          1 == this.phase) {
           si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
           sc.field_g = -2;
           return;
         }
-        if (2 == this.field_J) {
+        if (2 == this.phase) {
           this.a(150, param0);
           return;
         }
@@ -799,9 +799,9 @@ final class ActiveLevel extends LevelGrid {
           stackIn_62_0 = (ni.field_m[96]) ? -1 : 0;
           stackIn_65_1 = (ni.field_m[97]) ? 1 : 0;
           var8 = stackIn_62_0 + stackIn_65_1;
-          if (SecondaryNodeDeque.field_a != 0) {
-            var9 = (kf.field_b - 16) / 26;
-            var10 = (fg.field_a - 48) / 26;
+          if (SecondaryNodeDeque.mouseButton != 0) {
+            var9 = (kf.mouseX - 16) / 26;
+            var10 = (fg.mouseY - 48) / 26;
             if (var10 >= 0 &&
               var9 >= 0 &&
               16 > var10 &&
@@ -1002,7 +1002,7 @@ final class ActiveLevel extends LevelGrid {
             stackIn_206_1Lifetime1 = 8;
             si.$cfr$intArgs$a$e9dea5688aa5(stackIn_206_0Lifetime1, stackIn_206_1Lifetime1);
           } else {
-            if (SecondaryNodeDeque.field_a == 0) {
+            if (SecondaryNodeDeque.mouseButton == 0) {
               this.field_x = -1;
               this.field_G = -1;
             }
@@ -1052,9 +1052,9 @@ final class ActiveLevel extends LevelGrid {
           }
           break;
         }
-        stackIn_235_0Lifetime1 = this.d(102);
+        stackIn_235_0Lifetime1 = this.matchesTargetLayout(102);
         if (stackIn_235_0Lifetime1) {
-          this.b(247, 2);
+          this.setPhase(247, 2);
         }
         return;
     }
@@ -1070,7 +1070,7 @@ final class ActiveLevel extends LevelGrid {
           this.field_I.field_x != 3) {
           return;
         }
-        if (this.field_J != 1) {
+        if (this.phase != 1) {
           return;
         }
         if (this.field_I.field_x == 3) {
@@ -1189,7 +1189,7 @@ final class ActiveLevel extends LevelGrid {
         if (param0 > -120) {
           return true;
         }
-        return 2 == this.field_J ? true : false;
+        return 2 == this.phase ? true : false;
     }
 
     final void a(LevelData param0, int param1) {
@@ -1201,9 +1201,9 @@ final class ActiveLevel extends LevelGrid {
         super.a(param0, 107);
         this.field_D = param0.a(-8299);
         this.field_Z = param0.c((byte) 107);
-        this.field_w = this.b(this.field_i, (byte) -66);
+        this.field_w = this.b(this.targetLayout, (byte) -66);
         this.field_h = 0;
-        this.b(247, 1);
+        this.setPhase(247, 1);
         this.field_x = -1;
         if (param1 < 36) {
           return;
@@ -1225,7 +1225,7 @@ final class ActiveLevel extends LevelGrid {
           this.field_z = false;
           fe.a(true, pf.field_P[1], 256);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ri.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1269,7 +1269,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1381,7 +1381,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -1407,8 +1407,8 @@ final class ActiveLevel extends LevelGrid {
           stackIn_7_1 = !(this.field_z);
           super.a(stackIn_7_1, 0, true);
           fd.field_d.e(0, 0);
-          var2_int = kf.field_b - 467;
-          var3 = fg.field_a - 138;
+          var2_int = kf.mouseX - 467;
+          var3 = fg.mouseY - 138;
           if (var2_int >= 0) {
             if (26 + ba.field_b.field_G > var3) {
               if (var2_int < 156) {
@@ -1426,7 +1426,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             ai.field_a.e(0, 0);
           }
-          var3 = fg.field_a - 178;
+          var3 = fg.mouseY - 178;
           if (var2_int >= 0) {
             if (var3 < ba.field_b.field_G + 26) {
               if (var2_int < 156) {
@@ -1485,7 +1485,7 @@ final class ActiveLevel extends LevelGrid {
           }
           var2 = (me) (this.field_S.next(10));
         }
-        if (this.field_J == 1 &&
+        if (this.phase == 1 &&
           this.field_G != -1) {
           this.field_ab.d(16 + this.field_x * 26, this.field_G * 26 + 48, 127);
           if (this.field_U != -1) {
@@ -1521,13 +1521,13 @@ final class ActiveLevel extends LevelGrid {
     final void b(int param0) {
         int discarded$0 = 0;
         int var3 = TrackController.field_F ? 1 : 0;
-        if (1 == this.field_J) {
+        if (1 == this.phase) {
           wg.b(117);
           this.a(this.field_I, param0 ^ 97);
         } else {
-          if (this.field_J != 2) {
+          if (this.phase != 2) {
           } else {
-            this.field_T = Math.abs(this.field_O);
+            this.field_T = Math.abs(this.score);
             hl.a(10, 0);
             this.field_R = this.field_R + this.field_E;
             this.field_cb = this.field_cb - 1;
@@ -1602,7 +1602,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1667,7 +1667,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1719,7 +1719,7 @@ final class ActiveLevel extends LevelGrid {
           }
           this.tileFlags[param1.field_j + param1.field_s][param1.field_o + param1.field_r] = RandomAccessCacheFile.a(32640, ok.a(this.tileFlags[param1.field_s + param1.field_j][param1.field_r + param1.field_o], this.b(param1.field_j, (byte) -86, param1.field_o)));
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1727,13 +1727,13 @@ final class ActiveLevel extends LevelGrid {
         if (param0 <= 11) {
           this.c(100, 98);
         }
-        if (this.field_O <= 0) {
+        if (this.score <= 0) {
           return;
         }
         if (!jj.s(51) &&
           rk.field_bb == null) {
           SpriteState.field_w = null;
-          rk.field_bb = sd.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.field_O}, this.field_E);
+          rk.field_bb = sd.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.score}, this.field_E);
           return;
         }
     }
@@ -1770,7 +1770,7 @@ final class ActiveLevel extends LevelGrid {
         int var8;
         int var3Lifetime1;
         var8 = TrackController.field_F ? 1 : 0;
-        if (GameScreen.field_a) {
+        if (GameScreen.mouseMoved) {
           vg.field_p = false;
         }
         ak.field_b = -1;
@@ -1780,7 +1780,7 @@ final class ActiveLevel extends LevelGrid {
         while (this.field_o.length > var3) {
           var5 = this.field_a;
           for (var6 = 0; this.field_o[0].length > var6; var6++) {
-            if (eb.a(var5, fg.field_a, 10, 26, var2, kf.field_b, 26)) {
+            if (eb.a(var5, fg.mouseY, 10, 26, var2, kf.mouseX, 26)) {
               if (this.field_o[var3][var6] != 1) {
                 if (this.field_o[var3][var6] != 2) {
                   if (this.field_o[var3][var6] >= 3 &&
@@ -1810,11 +1810,11 @@ final class ActiveLevel extends LevelGrid {
           var3++;
         }
         if (this.field_u == null) {
-          if (eb.a(467, fg.field_a, 10, 156, 229, kf.field_b, 208)) {
+          if (eb.a(467, fg.mouseY, 10, 156, 229, kf.mouseX, 208)) {
             ak.field_b = 5;
           } else {
-            if (!eb.a(ai.field_a.field_r, fg.field_a, 10, ai.field_a.field_t, ai.field_a.field_o, kf.field_b, ai.field_a.field_q)) {
-              if (eb.a(bf.field_o.field_r, fg.field_a, 10, bf.field_o.field_t, bf.field_o.field_o, kf.field_b, bf.field_o.field_q)) {
+            if (!eb.a(ai.field_a.field_r, fg.mouseY, 10, ai.field_a.field_t, ai.field_a.field_o, kf.mouseX, ai.field_a.field_q)) {
+              if (eb.a(bf.field_o.field_r, fg.mouseY, 10, bf.field_o.field_t, bf.field_o.field_o, kf.mouseX, bf.field_o.field_q)) {
                 ak.field_b = 7;
               }
             } else {
@@ -1823,7 +1823,7 @@ final class ActiveLevel extends LevelGrid {
           }
           if (this.field_I.field_x != 1) {
             if (3 == this.field_I.field_x &&
-              eb.a(68, fg.field_a, 10, 312, 386, kf.field_b, 78)) {
+              eb.a(68, fg.mouseY, 10, 312, 386, kf.mouseX, 78)) {
               var3Lifetime1 = 1;
               if (this.field_D == -2) {
                 var4 = (me) (this.field_S.first(2));
@@ -1843,8 +1843,8 @@ final class ActiveLevel extends LevelGrid {
               }
             }
           } else {
-            if (!eb.a(68, fg.field_a, 10, 312, 74, kf.field_b, 52)) {
-              if (eb.a(120, fg.field_a, 10, 208, 386, kf.field_b, 78)) {
+            if (!eb.a(68, fg.mouseY, 10, 312, 74, kf.mouseX, 52)) {
+              if (eb.a(120, fg.mouseY, 10, 208, 386, kf.mouseX, 78)) {
                 ak.field_b = 11;
               }
             } else {
@@ -1852,9 +1852,9 @@ final class ActiveLevel extends LevelGrid {
             }
           }
         }
-        if (!eb.a(467, fg.field_a, 10, 156, 20, kf.field_b, 26)) {
-          if (!eb.a(467, fg.field_a, 10, 156, 46, kf.field_b, 26)) {
-            if (eb.a(467, fg.field_a, 10, 156, 72, kf.field_b, 26)) {
+        if (!eb.a(467, fg.mouseY, 10, 156, 20, kf.mouseX, 26)) {
+          if (!eb.a(467, fg.mouseY, 10, 156, 46, kf.mouseX, 26)) {
+            if (eb.a(467, fg.mouseY, 10, 156, 72, kf.mouseX, 26)) {
               ak.field_b = 9;
             }
           } else {
@@ -1863,7 +1863,7 @@ final class ActiveLevel extends LevelGrid {
         } else {
           ak.field_b = 8;
         }
-        if (eb.a(467, fg.field_a, 10, 156, 98, kf.field_b, 26)) {
+        if (eb.a(467, fg.mouseY, 10, 156, 98, kf.mouseX, 26)) {
           ak.field_b = 10;
         }
         if (vg.field_p ||
@@ -1880,17 +1880,17 @@ final class ActiveLevel extends LevelGrid {
         if (param0 > -21) {
           field_P = -65;
         }
-        tk.field_r = null;
+        AsyncRequest.field_r = null;
         gh.field_k = false;
         if (!vg.field_o) {
           var1 = si.field_d;
           if (var1 > 0) {
             if (var1 == 1) {
-              tk.field_r = ob.field_x;
+              AsyncRequest.field_r = ob.field_x;
             } else {
-              tk.field_r = dh.a((byte) -75, new String[]{Integer.toString(var1)}, PacketBuffer.field_l);
+              AsyncRequest.field_r = dh.a((byte) -75, new String[]{Integer.toString(var1)}, PacketBuffer.field_l);
             }
-            tk.field_r = fi.a(116, new CharSequence[]{(CharSequence) ((Object) tk.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
+            AsyncRequest.field_r = fi.a(116, new CharSequence[]{(CharSequence) ((Object) AsyncRequest.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
           }
           kb.field_a.t(20252);
           r.f(-635);

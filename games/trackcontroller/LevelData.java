@@ -122,7 +122,7 @@ final class LevelData extends LevelGrid {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class LevelData extends LevelGrid {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "ea.O(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "ea.O(" + param0 + ')');
         }
     }
 

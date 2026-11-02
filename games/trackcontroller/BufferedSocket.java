@@ -163,7 +163,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -333,82 +333,82 @@ final class BufferedSocket implements Runnable {
         try {
           var5_int = param2 + param4;
           var6 = param3 + param0;
-          if (SoftwareRasterizer.field_a >= param4) {
-            stackIn_4_0 = SoftwareRasterizer.field_a;
+          if (SoftwareRasterizer.clipLeft >= param4) {
+            stackIn_4_0 = SoftwareRasterizer.clipLeft;
           } else {
             stackIn_4_0 = param4;
           }
           var7 = stackIn_4_0;
-          if (SoftwareRasterizer.field_b < param3) {
+          if (SoftwareRasterizer.clipTop < param3) {
             stackIn_7_0 = param3;
           } else {
-            stackIn_7_0 = SoftwareRasterizer.field_b;
+            stackIn_7_0 = SoftwareRasterizer.clipTop;
           }
           var8 = stackIn_7_0;
-          if (SoftwareRasterizer.field_e > var5_int) {
+          if (SoftwareRasterizer.clipRight > var5_int) {
             stackIn_10_0 = var5_int;
           } else {
-            stackIn_10_0 = SoftwareRasterizer.field_e;
+            stackIn_10_0 = SoftwareRasterizer.clipRight;
           }
           var9 = stackIn_10_0;
           if (param1 != -28846) {
             field_a = (long[]) null;
           }
-          if (SoftwareRasterizer.field_g <= var6) {
-            stackIn_15_0 = SoftwareRasterizer.field_g;
+          if (SoftwareRasterizer.clipBottom <= var6) {
+            stackIn_15_0 = SoftwareRasterizer.clipBottom;
           } else {
             stackIn_15_0 = var6;
           }
           var10 = stackIn_15_0;
-          if (param4 >= SoftwareRasterizer.field_a &&
-            param4 < SoftwareRasterizer.field_e) {
-            var11 = param4 + var8 * SoftwareRasterizer.field_d;
+          if (param4 >= SoftwareRasterizer.clipLeft &&
+            param4 < SoftwareRasterizer.clipRight) {
+            var11 = param4 + var8 * SoftwareRasterizer.stride;
             var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              SoftwareRasterizer.field_i[var11] = 16777215;
-              var11 = var11 + SoftwareRasterizer.field_d * 2;
+              SoftwareRasterizer.pixels[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.stride * 2;
             }
           }
-          if (SoftwareRasterizer.field_b <= param3 &&
-            SoftwareRasterizer.field_g > var6) {
-            var11Lifetime1 = var7 + param3 * SoftwareRasterizer.field_d;
+          if (SoftwareRasterizer.clipTop <= param3 &&
+            SoftwareRasterizer.clipBottom > var6) {
+            var11Lifetime1 = var7 + param3 * SoftwareRasterizer.stride;
             var12Lifetime1 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              SoftwareRasterizer.field_i[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.pixels[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (SoftwareRasterizer.field_a <= var5_int &&
-            SoftwareRasterizer.field_e > var5_int) {
-            var11Lifetime2 = ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.field_d + var5_int;
+          if (SoftwareRasterizer.clipLeft <= var5_int &&
+            SoftwareRasterizer.clipRight > var5_int) {
+            var11Lifetime2 = ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride + var5_int;
             var12Lifetime2 = 1 + var10 - var8 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              SoftwareRasterizer.field_i[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_d * 2;
+              SoftwareRasterizer.pixels[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.stride * 2;
             }
           }
-          if (param3 >= SoftwareRasterizer.field_b &&
-            var6 < SoftwareRasterizer.field_g) {
-            var11Lifetime3 = SoftwareRasterizer.field_d * var6 + var7 + (1 & -param3 + var6);
+          if (param3 >= SoftwareRasterizer.clipTop &&
+            var6 < SoftwareRasterizer.clipBottom) {
+            var11Lifetime3 = SoftwareRasterizer.stride * var6 + var7 + (1 & -param3 + var6);
             var12Lifetime3 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              SoftwareRasterizer.field_i[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.pixels[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -416,7 +416,7 @@ final class BufferedSocket implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var5), "bc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var5), "bc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -619,7 +619,7 @@ final class BufferedSocket implements Runnable {
           this.field_b = this.field_k.getOutputStream();
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -158,7 +158,7 @@ final class ld {
                     return;
                   }
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_d;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.stride;
                   var25 = var25 + var27;
                   var29 = var29 + var31;
                   var30 = var30 + var32;
@@ -314,7 +314,7 @@ final class ld {
                 return;
               }
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_d;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.stride;
               var17_int = var17_int + var19;
               var26 = var26 + var28;
               var22 = var22 + var24;
@@ -336,7 +336,7 @@ final class ld {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param16).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param16).append(')').toString());
         }
     }
 

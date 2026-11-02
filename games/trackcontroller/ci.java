@@ -26,29 +26,29 @@ final class ci {
         if (!param3) {
           var6 = 0;
         } else {
-          var6 = (SoftwareRasterizer.field_d - 1) % param0;
+          var6 = (SoftwareRasterizer.stride - 1) % param0;
           var8 = var8 + (param0 - 1);
         }
         if (!param4) {
           var7 = 0;
         } else {
           var7 = (SoftwareRasterizer.field_k - 1) % param0;
-          var8 = var8 + (param0 - 1) * SoftwareRasterizer.field_d;
+          var8 = var8 + (param0 - 1) * SoftwareRasterizer.stride;
         }
-        var9 = var7 * SoftwareRasterizer.field_d + var6;
-        var10 = SoftwareRasterizer.field_d * param0 - (SoftwareRasterizer.field_d + param0 - 1) / param0 * param0;
+        var9 = var7 * SoftwareRasterizer.stride + var6;
+        var10 = SoftwareRasterizer.stride * param0 - (SoftwareRasterizer.stride + param0 - 1) / param0 * param0;
         for (var11 = var7; var11 < SoftwareRasterizer.field_k; var11 = var11 + param0) {
-          for (var12 = var6; var12 < SoftwareRasterizer.field_d; var12 = var12 + param0) {
-            var13 = SoftwareRasterizer.field_i[var9];
+          for (var12 = var6; var12 < SoftwareRasterizer.stride; var12 = var12 + param0) {
+            var13 = SoftwareRasterizer.pixels[var9];
             var14 = (var13 & 16711935) * param1 >>> 8 & 16711935;
             var13 = (var14 | (var13 & 65280) * param1 >>> 8 & 65280) + param2;
             var15 = param0;
             var16 = param0;
             var17 = var9 - var8;
-            var18 = SoftwareRasterizer.field_d;
+            var18 = SoftwareRasterizer.stride;
             if (!param3) {
-              if (var15 > SoftwareRasterizer.field_d - var12) {
-                var15 = SoftwareRasterizer.field_d - var12;
+              if (var15 > SoftwareRasterizer.stride - var12) {
+                var15 = SoftwareRasterizer.stride - var12;
               }
             } else {
               if (var15 > var12 + 1) {
@@ -73,7 +73,7 @@ final class ci {
               for (var20 = var15; var20 < 0; var20++) {
                 incrementValue$0 = var17;
                 var17++;
-                SoftwareRasterizer.field_i[incrementValue$0] = var13;
+                SoftwareRasterizer.pixels[incrementValue$0] = var13;
               }
               var17 = var17 + var18;
             }

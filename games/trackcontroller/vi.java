@@ -49,7 +49,7 @@ final class vi {
           try {
             this.field_b.reset();
           } catch (RuntimeException runtimeException) {
-            throw LevelGrid.a((Throwable) ((Object) runtimeException), "vi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "vi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

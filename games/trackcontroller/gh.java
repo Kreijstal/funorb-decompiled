@@ -71,7 +71,7 @@ final class gh implements t {
             this.field_d.a(param1.field_s, var13 + (param4 + param1.field_p), this.field_f + (param1.field_m + param2), -this.field_b - var13 + param1.field_x, -(this.field_b << 1) + param1.field_u, this.field_j, this.field_g, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "gh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class gh implements t {
           this.field_d = param0;
           this.field_i = param6;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

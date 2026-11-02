@@ -16,18 +16,18 @@ final class ei extends IntrusiveNode {
             Sprite var3 = (Sprite) null;
             ei.a((Sprite) null, -127);
           }
-          param1.addMouseListener(hd.field_p);
-          param1.addMouseMotionListener(hd.field_p);
-          param1.addFocusListener(hd.field_p);
+          param1.addMouseListener(hd.mouseHandler);
+          param1.addMouseMotionListener(hd.mouseHandler);
+          param1.addFocusListener(hd.mouseHandler);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ng a(int param0, ng param1, int[] param2) {
-        ng var3 = null;
+    final static IndexedSprite a(int param0, IndexedSprite param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        ng stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -35,7 +35,7 @@ final class ei extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ng(0, param0, 0);
+          var3 = new IndexedSprite(0, param0, 0);
           var3.field_c = param1.field_c;
           var3.field_a = param1.field_a;
           var3.field_j = param1.field_j;
@@ -62,7 +62,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -130,10 +130,10 @@ final class ei extends IntrusiveNode {
             var5 = new int[(param0.field_t + var2_int) * (var3 + param0.field_q)];
             for (var6 = 0; var6 < param0.field_q; var6++) {
               for (var7 = 0; param0.field_t > var7; var7++) {
-                var5[(var3 + var6) * var4 - (-var2_int - var7)] = param0.field_z[var7 + param0.field_t * var6];
+                var5[(var3 + var6) * var4 - (-var2_int - var7)] = param0.pixels[var7 + param0.field_t * var6];
               }
             }
-            param0.field_z = var5;
+            param0.pixels = var5;
             param0.field_t = param0.field_t + var2_int;
             param0.field_r = param0.field_r - var2_int;
             param0.field_o = param0.field_o - var3;
@@ -151,7 +151,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

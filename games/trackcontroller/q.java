@@ -83,7 +83,7 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1_ref), "q.D(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "q.D(" + param0 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class q {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

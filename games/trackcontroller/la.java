@@ -3,7 +3,7 @@
  */
 final class la extends PacketBuffer {
     private int field_r;
-    static volatile int field_s;
+    static volatile int liveMouseX;
     private nf field_n;
     static int[] field_p;
     static String field_q;
@@ -67,7 +67,7 @@ final class la extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class la extends PacketBuffer {
         try {
           this.field_n = new nf(param1);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class la extends PacketBuffer {
     }
 
     static {
-        field_s = -1;
+        liveMouseX = -1;
         field_p = new int[8192];
     }
 }

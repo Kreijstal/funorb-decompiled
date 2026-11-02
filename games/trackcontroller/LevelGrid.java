@@ -5,7 +5,7 @@ abstract class LevelGrid {
     static aa field_e;
     int field_h;
     private int field_k;
-    int[][] field_i;
+    int[][] targetLayout;
     int[][] tileFlags;
     byte[][] field_o;
     static int field_n;
@@ -103,9 +103,9 @@ abstract class LevelGrid {
             pd.a(param3[var5_int], 0, this.field_o[var5_int], 0, param3[var5_int].length);
             pd.a(param0[var5_int], 0, this.tileFlags[var5_int], 0, param0[var5_int].length);
           }
-          this.field_i = new int[param2.length][param2[0].length];
+          this.targetLayout = new int[param2.length][param2[0].length];
           for (var5_intLifetime1 = 0; var5_intLifetime1 < param2.length; var5_intLifetime1++) {
-            pd.a(param2[var5_intLifetime1], 0, this.field_i[var5_intLifetime1], 0, param2[0].length);
+            pd.a(param2[var5_intLifetime1], 0, this.targetLayout[var5_intLifetime1], 0, param2[0].length);
           }
           if (this.field_g) {
             var5_intLifetime2 = 6;
@@ -149,7 +149,7 @@ abstract class LevelGrid {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -157,18 +157,18 @@ abstract class LevelGrid {
         field_e = null;
         if (param0 != 107) {
           String var2 = (String) null;
-          LevelGrid.a((Throwable) null, (String) null);
+          LevelGrid.toClientException((Throwable) null, (String) null);
         }
     }
 
     void a(LevelData param0, int param1) {
         try {
-          this.a(param0.tileFlags, (byte) 50, param0.field_i, param0.field_o);
+          this.a(param0.tileFlags, (byte) 50, param0.targetLayout, param0.field_o);
           if (param1 <= 36) {
             this.field_f = 43;
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "sl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ abstract class LevelGrid {
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException toClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -264,7 +264,7 @@ abstract class LevelGrid {
         for (var6 = 0; 8 > var6; var6++) {
           var7 = param0 + this.field_k;
           for (var8 = 0; var8 < 6; var8++) {
-            var9 = this.field_i[var6][var8];
+            var9 = this.targetLayout[var6][var8];
             if (var9 >= 7 &&
               var9 < 38) {
               ii.field_r[var9].e(var7, var5);

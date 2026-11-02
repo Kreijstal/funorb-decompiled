@@ -5,7 +5,7 @@ final class wf {
     static int field_b;
     static String[] field_a;
     static int[] field_c;
-    static volatile int field_d;
+    static volatile int pendingClick;
 
     final static boolean a(byte param0, String param1, String param2, String param3, vd param4, boolean param5, int param6) {
         RuntimeException var7 = null;
@@ -69,14 +69,14 @@ final class wf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -43) {
-          field_d = 72;
+          pendingClick = 72;
           field_c = null;
           return;
         }
@@ -155,13 +155,13 @@ final class wf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
         field_a = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_c = new int[8192];
-        field_d = 0;
+        pendingClick = 0;
     }
 }

@@ -59,7 +59,7 @@ final class NodeHashTable {
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = param4.field_b[0] + ((var5_int >> 8) + param2.a(param3.substring(0, var7)));
+              var6 = param4.field_b[0] + ((var5_int >> 8) + param2.stringWidth(param3.substring(0, var7)));
             }
             if (var6 != -1) {
               param4.field_b[var7] = var6;
@@ -67,7 +67,7 @@ final class NodeHashTable {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param4.field_b[var7] = param4.field_b[0] + ((var5_int >> 8) + param2.a(param3.substring(0, 1 + var7)) - param2.a((char) var8));
+              param4.field_b[var7] = param4.field_b[0] + ((var5_int >> 8) + param2.stringWidth(param3.substring(0, 1 + var7)) - param2.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;
@@ -96,7 +96,7 @@ final class NodeHashTable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class NodeHashTable {
           param2.next.previous = param2;
           param2.key = param1;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class NodeHashTable {
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = param4.field_b[0] + ((var5_int >> 8) + param2.a(param3.substring(0, var7)));
+              var6 = param4.field_b[0] + ((var5_int >> 8) + param2.stringWidth(param3.substring(0, var7)));
             }
             if (var6 != -1) {
               param4.field_b[var7] = var6;
@@ -220,7 +220,7 @@ final class NodeHashTable {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param4.field_b[var7] = param4.field_b[0] + ((var5_int >> 8) + param2.a(param3.substring(0, 1 + var7)) - param2.a((char) var8));
+              param4.field_b[var7] = param4.field_b[0] + ((var5_int >> 8) + param2.stringWidth(param3.substring(0, 1 + var7)) - param2.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;
@@ -249,7 +249,7 @@ final class NodeHashTable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 }

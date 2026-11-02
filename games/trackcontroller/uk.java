@@ -5,15 +5,15 @@ final class uk {
     static String field_e;
     static String field_d;
     static int field_c;
-    static int field_a;
+    static int clickButton;
     static int field_b;
 
     final static int a(int param0) {
         if (param0 != 0) {
           field_d = (String) null;
-          return pa.field_a;
+          return pa.idleTicks;
         }
-        return pa.field_a;
+        return pa.idleTicks;
     }
 
     final static int a(CharSequence param0, int param1) {
@@ -25,7 +25,7 @@ final class uk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 10) {
-            field_a = 70;
+            clickButton = 70;
           }
           stackIn_3_0 = rd.a(8058, true, param0, 10);
           return stackIn_3_0;
@@ -39,7 +39,7 @@ final class uk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class uk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -113,6 +113,6 @@ final class uk {
         field_d = "Hover the mouse over items on the screen for tips on what they do.";
         field_e = "Cancel";
         field_c = -1;
-        field_a = 0;
+        clickButton = 0;
     }
 }

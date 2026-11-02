@@ -93,7 +93,7 @@ final class mh extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class mh extends IntrusiveNode {
             return false;
           }
           kg.field_d = mc.field_K[GameKeyHandler.field_d];
-          md.field_d = tk.field_o[GameKeyHandler.field_d];
+          md.field_d = AsyncRequest.field_o[GameKeyHandler.field_d];
           GameKeyHandler.field_d = 1 + GameKeyHandler.field_d & param0;
           stackIn_5_0 = true;
         }
@@ -637,7 +637,7 @@ final class mh extends IntrusiveNode {
           } else {
             stackIn_208_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
         }
     }
 

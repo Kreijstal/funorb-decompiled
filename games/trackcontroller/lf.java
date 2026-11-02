@@ -17,9 +17,9 @@ final class lf extends lb implements wk {
     final void a(int param0, int param1, byte param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_S = -param1 - this.field_p + kf.field_b;
+          this.field_S = -param1 - this.field_p + kf.mouseX;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lf.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lf.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class lf extends lb implements wk {
         try {
           this.field_V = param1;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lf.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lf.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class lf extends lb implements wk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -104,11 +104,11 @@ final class lf extends lb implements wk {
           return null;
         }
         if (param0 == 0) {
-          cj.a(true, this.field_x - this.field_S + kf.field_b, fg.field_a);
+          cj.a(true, this.field_x - this.field_S + kf.mouseX, fg.mouseY);
           return this.field_n;
         }
         lf.a(34, 125, (byte) -88, true);
-        cj.a(true, this.field_x - this.field_S + kf.field_b, fg.field_a);
+        cj.a(true, this.field_x - this.field_S + kf.mouseX, fg.mouseY);
         return this.field_n;
     }
 

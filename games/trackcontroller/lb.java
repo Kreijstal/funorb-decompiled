@@ -147,7 +147,7 @@ class lb extends rh {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ class lb extends rh {
           if (!(this.field_y instanceof dl)) {
             return false;
           }
-          var8_int = ((dl) ((Object) this.field_y)).a(param6, kf.field_b, 81, fg.field_a, param5, (UiWidget) (this));
+          var8_int = ((dl) ((Object) this.field_y)).a(param6, kf.mouseX, 81, fg.mouseY, param5, (UiWidget) (this));
           stackIn_6_1 = -19166;
           if (var8_int == -1) {
             stackIn_7_2 = 0;
@@ -239,7 +239,7 @@ class lb extends rh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ class lb extends rh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ class lb extends rh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ class lb extends rh {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -562,7 +562,7 @@ class lb extends rh {
           if (this.field_r == 1) {
             if (this.field_y instanceof dl) {
               var7 = (dl) ((Object) this.field_y);
-              var6 = var7.a(param0, kf.field_b, 119, fg.field_a, param1, (UiWidget) (this));
+              var6 = var7.a(param0, kf.mouseX, 119, fg.mouseY, param1, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_K &&
                   this.field_L > var6 &&
@@ -585,7 +585,7 @@ class lb extends rh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -610,7 +610,7 @@ class lb extends rh {
           this.field_P = true;
           this.field_I = qg.a(false);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -230,7 +230,7 @@ final class ff {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 

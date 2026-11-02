@@ -33,7 +33,7 @@ final class rk extends wd {
           this.field_cb = param0;
           this.field_S.field_J = (int)(param3 / 100.0f * 65536.0f);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class rk extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "rk.N(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "rk.N(" + param0 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class rk extends wd {
           this.field_W = false;
           this.a(false, this.field_S);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class rk extends wd {
             }
             var2 = 1;
           }
-          vi.field_f.a(-123, GameScreen.b(fg.field_a, param0 ^ param0, kf.field_b), GameScreen.b(wg.field_e, 0, db.field_X));
+          vi.field_f.a(-123, GameScreen.b(fg.mouseY, param0 ^ param0, kf.mouseX), GameScreen.b(wg.clickY, 0, db.clickX));
           if (vi.field_f.d(0)) {
             var1_int = 1;
           }
@@ -256,7 +256,7 @@ final class rk extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "rk.A(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "rk.A(" + param0 + ')');
         }
     }
 

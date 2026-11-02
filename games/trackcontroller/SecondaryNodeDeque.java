@@ -7,7 +7,7 @@ final class SecondaryNodeDeque implements Iterable {
     static ae field_d;
     DualLinkNode field_e;
     static int field_b;
-    static int field_a;
+    static int mouseButton;
     static volatile long field_c;
     static String field_f;
 
@@ -70,7 +70,7 @@ final class SecondaryNodeDeque implements Iterable {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,7 +84,7 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new hh(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final void a(DualLinkNode param0, int param1) {
@@ -101,14 +101,14 @@ final class SecondaryNodeDeque implements Iterable {
           }
           param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_f = null;
         if (param0 != 59) {
-          field_a = -62;
+          mouseButton = -62;
           field_d = null;
           return;
         }
@@ -161,7 +161,7 @@ final class SecondaryNodeDeque implements Iterable {
 
     static {
         field_c = 0L;
-        field_a = 0;
+        mouseButton = 0;
         field_f = "Unpacking levels";
     }
 }

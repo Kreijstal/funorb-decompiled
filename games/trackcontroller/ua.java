@@ -39,7 +39,7 @@ final class ua extends rh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ final class ua extends rh {
           this.field_J = this.field_J + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class ua extends rh {
           bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
           return;
         }
-        if (tk.field_t != var8) {
+        if (AsyncRequest.field_t != var8) {
           if (var8 == ef.field_b) {
             var13 = TrackController.field_D[2];
             var13.a(-(var13.field_t >> 1) + var5, var6 - (var13.field_q >> 1), 256);
@@ -152,7 +152,7 @@ final class ua extends rh {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

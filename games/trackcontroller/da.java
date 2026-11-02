@@ -33,7 +33,7 @@ final class da extends ae {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class da extends ae {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -379,7 +379,7 @@ final class da extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var2_ref), "da.L(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2_ref), "da.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -505,7 +505,7 @@ final class da extends ae {
             } else {
               stackIn_29_2 = "{...}";
             }
-            throw LevelGrid.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

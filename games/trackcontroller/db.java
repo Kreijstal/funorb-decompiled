@@ -3,12 +3,12 @@
  */
 abstract class db extends wd {
     private int field_U;
-    static int field_X;
+    static int clickX;
     private jb field_ab;
     private gl field_cb;
     private UiWidget field_V;
     private int field_T;
-    static volatile int field_bb;
+    static volatile int liveMouseButton;
     private int field_S;
     private int field_Y;
     private int field_W;
@@ -48,7 +48,7 @@ abstract class db extends wd {
           this.field_S = param4;
           this.b((byte) 19, param1);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ abstract class db extends wd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ abstract class db extends wd {
           this.a(false, this.field_cb);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "db.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "db.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -235,7 +235,7 @@ abstract class db extends wd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -253,31 +253,31 @@ abstract class db extends wd {
         try {
           var6_int = 0;
           var7 = 0;
-          if (param4 < SoftwareRasterizer.field_a) {
-            var7 = SoftwareRasterizer.field_a - param4;
-            param4 = SoftwareRasterizer.field_a;
+          if (param4 < SoftwareRasterizer.clipLeft) {
+            var7 = SoftwareRasterizer.clipLeft - param4;
+            param4 = SoftwareRasterizer.clipLeft;
             param3 = param3 - var7;
             var7 = var7 % param2.field_t;
             var6_int = var6_int + var7;
           }
           var8 = 0;
-          if (param1 < SoftwareRasterizer.field_b) {
-            var8 = -param1 + SoftwareRasterizer.field_b;
-            param1 = SoftwareRasterizer.field_b;
+          if (param1 < SoftwareRasterizer.clipTop) {
+            var8 = -param1 + SoftwareRasterizer.clipTop;
+            param1 = SoftwareRasterizer.clipTop;
             param0 = param0 - var8;
             var8 = var8 % param2.field_q;
             var6_int = var6_int + param2.field_t * var8;
           }
-          if (SoftwareRasterizer.field_e < param4 + param3) {
-            param3 = -param4 + SoftwareRasterizer.field_e;
+          if (SoftwareRasterizer.clipRight < param4 + param3) {
+            param3 = -param4 + SoftwareRasterizer.clipRight;
           }
-          if (param1 + param0 > SoftwareRasterizer.field_g) {
-            param0 = -param1 + SoftwareRasterizer.field_g;
+          if (param1 + param0 > SoftwareRasterizer.clipBottom) {
+            param0 = -param1 + SoftwareRasterizer.clipBottom;
           }
           if (param3 > 0 &&
             param0 > 0) {
-            var9 = param1 * SoftwareRasterizer.field_d + param4;
-            ra.a(var9, param2.field_t, param0, var8, (byte) -64, SoftwareRasterizer.field_i, param3, param2.field_z, -param3 + SoftwareRasterizer.field_d, var7, var6_int, param2.field_q);
+            var9 = param1 * SoftwareRasterizer.stride + param4;
+            ra.a(var9, param2.field_t, param0, var8, (byte) -64, SoftwareRasterizer.pixels, param3, param2.pixels, -param3 + SoftwareRasterizer.stride, var7, var6_int, param2.field_q);
             var10 = 77 / ((param5 - 56) / 53);
             return;
           }
@@ -292,12 +292,12 @@ abstract class db extends wd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     static {
-        field_X = 0;
-        field_bb = 0;
+        clickX = 0;
+        liveMouseButton = 0;
     }
 }

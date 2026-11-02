@@ -11,7 +11,7 @@ abstract class kd {
             field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "kd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "kd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

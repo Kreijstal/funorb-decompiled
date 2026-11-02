@@ -122,7 +122,7 @@ final class mb {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,9 +136,9 @@ final class mb {
         try {
           int var2_int = 45 / ((64 - param0) / 53);
           nk.b(false);
-          SoftwareRasterizer.a(param1.field_z, param1.field_s, param1.field_v);
+          SoftwareRasterizer.a(param1.pixels, param1.field_s, param1.field_v);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class mb {
           param0.field_j.field_k = param0;
           param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

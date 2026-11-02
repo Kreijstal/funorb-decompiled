@@ -100,14 +100,14 @@ final class pj extends db {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static ng a(Archive param0, int param1, int param2, int param3) {
+    final static IndexedSprite a(Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        ng stackIn_5_0 = null;
-        ng stackIn_7_0 = null;
+        IndexedSprite stackIn_5_0 = null;
+        IndexedSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -120,7 +120,7 @@ final class pj extends db {
             stackIn_7_0 = kj.a((byte) 106);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ng) null;
+          stackIn_5_0 = (IndexedSprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class pj extends db {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

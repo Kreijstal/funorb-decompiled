@@ -10,7 +10,7 @@ final class fj extends ok {
     private int field_Q;
     static java.math.BigInteger field_N;
     private int field_I;
-    static ng[] field_M;
+    static IndexedSprite[] field_M;
     static IntrusiveDeque field_H;
     private boolean field_J;
     static nb field_P;
@@ -29,7 +29,7 @@ final class fj extends ok {
           this.field_J = param8 ? true : false;
           this.field_L = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class fj extends ok {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_r = 0;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "fj.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "fj.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class fj extends ok {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class fj extends ok {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -245,8 +245,8 @@ final class fj extends ok {
           if ((!(this.field_B instanceof rh) ||
             ((rh) (this.field_B)).field_B) &&
             1 == this.field_r) {
-            var5_int = -this.field_K + (kf.field_b - param1);
-            var6 = -param0 + (-this.field_I + fg.field_a);
+            var5_int = -this.field_K + (kf.mouseX - param1);
+            var6 = -param0 + (-this.field_I + fg.mouseY);
             if ((this.field_p != var5_int ||
               this.field_m != var6)) {
               this.field_m = var6;
@@ -301,7 +301,7 @@ final class fj extends ok {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class fj extends ok {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var3), "fj.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var3), "fj.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

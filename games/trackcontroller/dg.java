@@ -128,7 +128,7 @@ final class dg extends UiWidget {
             param0.e(var6, param3);
           }
           GameShell.m(40);
-          if (SoftwareRasterizer.field_a <= param2 + this.field_O.field_t) {
+          if (SoftwareRasterizer.clipLeft <= param2 + this.field_O.field_t) {
             mb.a((byte) -72, this.field_G);
             param0.e(-this.field_M, 0);
             param0.e(2 * this.field_K - this.field_M, 0);
@@ -136,7 +136,7 @@ final class dg extends UiWidget {
             GameShell.m(53);
             this.field_G.e(param2, param3);
           }
-          if (var5_int - this.field_O.field_t > SoftwareRasterizer.field_e) {
+          if (var5_int - this.field_O.field_t > SoftwareRasterizer.clipRight) {
             return;
           }
           mb.a((byte) -57, this.field_G);
@@ -158,7 +158,7 @@ final class dg extends UiWidget {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class dg extends UiWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class dg extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

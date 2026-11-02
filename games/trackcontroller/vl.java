@@ -123,7 +123,7 @@ final class vl extends ok {
           if (var2_int >= 0) {
             var3 = 3158064;
             var4 = 16777120;
-            var5 = GameApplet.field_c.a(param1);
+            var5 = GameApplet.field_c.stringWidth(param1);
             var6 = GameApplet.field_c.field_H + GameApplet.field_c.field_u;
             var7 = 1;
             var8 = var6;
@@ -133,8 +133,8 @@ final class vl extends ok {
               var6 = var6 * var7;
             }
             var9 = ha.field_z;
-            if (var5 + var9 + 6 > SoftwareRasterizer.field_d) {
-              var9 = -6 - var5 + SoftwareRasterizer.field_d;
+            if (var5 + var9 + 6 > SoftwareRasterizer.stride) {
+              var9 = -6 - var5 + SoftwareRasterizer.stride;
             }
             var10 = 32 + (-GameApplet.field_c.field_H + kj.field_o);
             if (SoftwareRasterizer.field_k < var6 + var10 + 6) {
@@ -159,7 +159,7 @@ final class vl extends ok {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class vl extends ok {
           var3.field_E = true;
           var3.a((byte) -106, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "vl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "vl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

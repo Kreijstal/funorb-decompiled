@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hh implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static String field_b;
     private DualLinkNode field_d;
     private DualLinkNode field_c;
@@ -26,7 +26,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "hh.remove()");
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "hh.remove()");
         }
     }
 
@@ -37,7 +37,7 @@ final class hh implements Iterator {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hh.D(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hh.D(" + param0 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) (var1), "hh.next()");
+          throw LevelGrid.toClientException((Throwable) (var1), "hh.next()");
         }
     }
 
@@ -233,11 +233,11 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ')');
         }
     }
 
-    hh(SecondaryNodeDeque param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -259,7 +259,7 @@ final class hh implements Iterator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -274,13 +274,13 @@ final class hh implements Iterator {
           }
           qh.field_i = true;
           if (param0 != -28717) {
-            hh.b(-61);
+            SecondaryNodeDequeIterator.b(-61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "hh.A(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "hh.A(" + param0 + ')');
         }
     }
 

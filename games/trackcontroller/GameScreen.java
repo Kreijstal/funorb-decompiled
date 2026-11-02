@@ -7,7 +7,7 @@ final class GameScreen {
     private int field_c;
     cd field_e;
     private int field_h;
-    static boolean field_a;
+    static boolean mouseMoved;
     private int field_d;
     private int field_g;
 
@@ -43,7 +43,7 @@ final class GameScreen {
         while (mh.e(127)) {
           this.d((byte) -55);
         }
-        this.field_e.a(-118, this.a((byte) 6, kf.field_b, fg.field_a), this.a((byte) 6, db.field_X, wg.field_e));
+        this.field_e.a(-118, this.a((byte) 6, kf.mouseX, fg.mouseY), this.a((byte) 6, db.clickX, wg.clickY));
         if (this.field_e.field_e != -1) {
           this.a(this.field_e.field_e, false, true);
         }
@@ -51,39 +51,39 @@ final class GameScreen {
           this.field_c == 3) {
           var4 = -1;
           var5 = -1;
-          if (kf.field_b >= 576 &&
-            kf.field_b < 602) {
-            if (67 <= fg.field_a &&
-              fg.field_a < 93) {
+          if (kf.mouseX >= 576 &&
+            kf.mouseX < 602) {
+            if (67 <= fg.mouseY &&
+              fg.mouseY < 93) {
               var4 = 0;
             }
-            if (fg.field_a >= 431 &&
-              457 > fg.field_a) {
+            if (fg.mouseY >= 431 &&
+              457 > fg.mouseY) {
               var4 = 1;
             }
           }
-          if (null != this.a(kf.field_b, 2600, fg.field_a)) {
+          if (null != this.a(kf.mouseX, 2600, fg.mouseY)) {
             var4 = 2;
           }
-          if (db.field_X >= 576 &&
-            db.field_X < 602) {
-            if (67 <= wg.field_e &&
-              wg.field_e < 93) {
+          if (db.clickX >= 576 &&
+            db.clickX < 602) {
+            if (67 <= wg.clickY &&
+              wg.clickY < 93) {
               var5 = 0;
             }
-            if (wg.field_e >= 431 &&
-              457 > wg.field_e) {
+            if (wg.clickY >= 431 &&
+              457 > wg.clickY) {
               var5 = 1;
             }
           }
-          if (this.a(db.field_X, 2600, wg.field_e) != null) {
+          if (this.a(db.clickX, 2600, wg.clickY) != null) {
             var5 = 2;
           }
-          if (uk.field_a != 0) {
+          if (uk.clickButton != 0) {
             RandomAccessCacheFile.field_b = var5;
           }
           if (!this.field_e.e(0) && (this.field_e.field_a ||
-            field_a)) {
+            mouseMoved)) {
             if (0 <= var4) {
               RandomAccessCacheFile.field_b = var4;
               this.field_e.field_a = true;
@@ -95,7 +95,7 @@ final class GameScreen {
           }
           if (this.field_e.d(0)) {
             var6 = qh.field_b.field_x;
-            var7 = this.a(db.field_X, 2600, wg.field_e);
+            var7 = this.a(db.clickX, 2600, wg.clickY);
             if (var7 != null) {
               this.field_e.field_a = true;
               qh.field_b = var7;
@@ -118,12 +118,12 @@ final class GameScreen {
             mb.field_b = mb.field_b - var6Lifetime1 * 26;
           }
         }
-        if (uk.field_a != 0) {
-          this.field_g = wg.field_e;
-          this.field_h = db.field_X;
+        if (uk.clickButton != 0) {
+          this.field_g = wg.clickY;
+          this.field_h = db.clickX;
         }
         var4Lifetime1 = -1;
-        var5Lifetime1 = this.a((byte) 6, kf.field_b, fg.field_a);
+        var5Lifetime1 = this.a((byte) 6, kf.mouseX, fg.mouseY);
         if (var5Lifetime1 != -1) {
           var4Lifetime1 = this.b(79, var5Lifetime1);
         }
@@ -189,7 +189,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var3), "mg.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var3), "mg.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ final class GameScreen {
         SoftwareRasterizer.f(386, 75, 102, 284, 3352864);
         if (jj.s(23)) {
           var2 = nd.field_I;
-          bk.field_E.b(hh.field_b, 320, 406, 0, -1);
+          bk.field_E.b(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
         } else {
           if (null == SpriteState.field_w) {
             SpriteState.field_w = hj.a(3, 10, 1, 10, (byte) -102);
@@ -344,7 +344,7 @@ final class GameScreen {
                       null != rk.field_bb &&
                       ~rk.field_bb.field_j == ~SpriteState.field_w.field_q[di.field_i][var7] &&
                       ua.field_L != null &&
-                      var17[var7] == ua.field_L.field_O) {
+                      var17[var7] == ua.field_L.score) {
                       var4 = var7;
                     }
                     var9 = var3_ref_String__[var7];
@@ -353,7 +353,7 @@ final class GameScreen {
                   decompiledFrameRemainder0 = !(0 <= var4);
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameRemainder0 = (null != ua.field_L))) {
-                    var8 = ua.field_L.field_O;
+                    var8 = ua.field_L.score;
                     var4 = var7;
                     var9 = ue.field_a;
                   }
@@ -468,7 +468,7 @@ final class GameScreen {
             stackIn_52_0 = kg.field_e;
             stackIn_53_1 = (!fi.field_i) ? 1 : 0;
             var10 = stackIn_52_0[stackIn_53_1];
-            var11 = bk.field_E.a(var7) - (-bk.field_E.a(' ') - var10.field_s);
+            var11 = bk.field_E.stringWidth(var7) - (-bk.field_E.charWidth(' ') - var10.field_s);
             var12 = param1 + (156 - var11 >> 1);
             bk.field_E.c(var7, var12, -2 + (bk.field_E.field_G + param2), var9Lifetime1, -1);
             var10.e(var12 - (-var11 + var10.field_s), (1 - var10.field_v + 26 >> 1) + param2);
@@ -615,7 +615,7 @@ final class GameScreen {
           this.field_c == 7) {
           var3 = 1;
         }
-        this.field_e.a(var3, this.a((byte) 6, kf.field_b, fg.field_a), param1, 120);
+        this.field_e.a(var3, this.a((byte) 6, kf.mouseX, fg.mouseY), param1, 120);
         if (this.field_c == 2 ||
           3 == this.field_c) {
           mb.field_b = this.b((byte) 125);
@@ -863,10 +863,10 @@ final class GameScreen {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (kf.field_b >= var3 &&
-                kf.field_b <= (32 + var3) &&
-                fg.field_a >= var4 &&
-                fg.field_a <= (32 + var4)) {
+              if (kf.mouseX >= var3 &&
+                kf.mouseX <= (32 + var3) &&
+                fg.mouseY >= var4 &&
+                fg.mouseY <= (32 + var4)) {
                 var7 = var8;
                 SoftwareRasterizer.d(-2 + var3, var4 - 2, 36, 36, 6, 16711680);
               }
@@ -924,7 +924,7 @@ final class GameScreen {
           var3Lifetime1 = 410;
           var8Lifetime1 += 26;
           bk.field_E.c(di.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
-          var3Lifetime1 = var3Lifetime1 + bk.field_E.a(di.field_l);
+          var3Lifetime1 = var3Lifetime1 + bk.field_E.stringWidth(di.field_l);
           for (var9Lifetime1 = 0; rd.field_f[var7] > var9Lifetime1; var9Lifetime1++) {
             mc.field_E.e(var3Lifetime1, -bk.field_E.field_G + var8Lifetime1);
             var3Lifetime1 = var3Lifetime1 + mc.field_E.field_t / 3;
@@ -933,7 +933,7 @@ final class GameScreen {
         }
         bk.field_E.b(NodeHashTable.field_a, 320, 302, 0, -1);
         if (jj.s(39)) {
-          bk.field_E.b(hh.field_b, 320, 354, 0, -1);
+          bk.field_E.b(SecondaryNodeDequeIterator.field_b, 320, 354, 0, -1);
         }
         return;
     }
@@ -1191,7 +1191,7 @@ final class GameScreen {
                       stackIn_76_0 = (RandomAccessCacheFile.field_b != 1) ? 15252224 : 8110658;
                       var4 = stackIn_76_0;
                       ii.field_r[53].c(576, 431, var4);
-                      var5 = this.a(kf.field_b, 2600, fg.field_a);
+                      var5 = this.a(kf.mouseX, 2600, fg.mouseY);
                       var6 = 269 - (-(26 * (1 - qh.field_b.field_x)) - mb.field_b);
                       var7 = 359;
                       var8 = 62 + bk.field_E.field_u;
@@ -1231,19 +1231,19 @@ final class GameScreen {
                   bk.field_E.b(qg.field_b, 320, bk.field_E.field_G + 154, 5, -1);
                   stackIn_99_0 = bk.field_E;
                   stackIn_100_1 = (0 != oe.field_e);
-                  stackIn_103_2 = (0 != ua.field_L.field_O);
-                  stackIn_106_3 = (0 != ua.field_L.field_O);
+                  stackIn_103_2 = (0 != ua.field_L.score);
+                  stackIn_106_3 = (0 != ua.field_L.score);
                   ((BitmapFont) (Object) stackIn_99_0).b(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + bk.field_E.field_G, 5, -1);
                   stackIn_108_0 = bk.field_E;
-                  stackIn_109_1 = (0 != ua.field_L.field_O);
+                  stackIn_109_1 = (0 != ua.field_L.score);
                   stackIn_112_2 = (oe.field_e != 0);
-                  stackIn_115_3 = (ua.field_L.field_O != 0);
+                  stackIn_115_3 = (ua.field_L.score != 0);
                   ((BitmapFont) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.field_E.field_G + 258, 5, -1);
                   stackIn_117_0 = bk.field_E;
-                  stackIn_118_1 = (ua.field_L.field_O != 0);
+                  stackIn_118_1 = (ua.field_L.score != 0);
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
-                  stackIn_124_4 = (ua.field_L.field_O != 0);
+                  stackIn_124_4 = (ua.field_L.score != 0);
                   ((BitmapFont) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.field_E.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
@@ -1479,7 +1479,7 @@ final class GameScreen {
                                                               if (this.field_e.b(false)) {
                                                                 si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                                                                 if (jj.s(49)) {
-                                                                  if ((ua.field_L.field_O | oe.field_e) == 0) {
+                                                                  if ((ua.field_L.score | oe.field_e) == 0) {
                                                                     sc.field_g = 0;
                                                                   } else {
                                                                     sc.field_g = 15;
@@ -1490,7 +1490,7 @@ final class GameScreen {
                                                                   if (oe.field_e != 0) {
                                                                     sc.field_g = 16;
                                                                   } else {
-                                                                    if (ua.field_L.field_O == 0) {
+                                                                    if (ua.field_L.score == 0) {
                                                                       sc.field_g = 1;
                                                                     } else {
                                                                       sc.field_g = 11;
@@ -1514,7 +1514,7 @@ final class GameScreen {
                                                                     stackIn_156_1 = 0;
                                                                   }
                                                                   var6 = stackIn_155_0 + stackIn_156_1;
-                                                                  var7 = -var6 + kf.field_b - 78 << 2;
+                                                                  var7 = -var6 + kf.mouseX - 78 << 2;
                                                                   if (0 <= var7) {
                                                                     if (var7 >= 256) {
                                                                       da.a(256, (byte) -74);
@@ -1549,7 +1549,7 @@ final class GameScreen {
                                                                       stackIn_175_1 = param2 * mf.field_d[this.field_c];
                                                                     }
                                                                     var6 = stackIn_174_0 + stackIn_175_1;
-                                                                    var7Lifetime1 = -var6 + (kf.field_b - 78) << 2;
+                                                                    var7Lifetime1 = -var6 + (kf.mouseX - 78) << 2;
                                                                     if (var7Lifetime1 < 0) {
                                                                       qd.a(false, 0);
                                                                     } else {
@@ -1664,12 +1664,12 @@ final class GameScreen {
           this.field_e = new cd(mf.field_f[param1].length);
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
         field_f = 0;
-        field_a = false;
+        mouseMoved = false;
     }
 }

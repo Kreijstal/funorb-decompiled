@@ -16,7 +16,7 @@ final class ki {
         if (param1 != 0) {
           ki.a(false, -67, false);
           if (param0) {
-            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, 192);
+            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, 192);
             lh.a(param0, -94);
             return;
           }
@@ -25,7 +25,7 @@ final class ki {
           return;
         }
         if (param0) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, 192);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, 192);
           lh.a(param0, -94);
           return;
         }

@@ -26,7 +26,7 @@ final class qe extends PcmStream {
           param2.a(param0, (byte) -116, param1);
           param2.a(0, param3);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class qe extends PcmStream {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ final class qe extends PcmStream {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param5).append(')').toString());
         }
     }
 

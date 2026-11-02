@@ -60,7 +60,7 @@ final class aj extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -89,8 +89,8 @@ final class aj extends IntrusiveNode {
           }
           if (-1 == j.field_c &&
             nk.field_l == -1) {
-            nk.field_l = fg.field_a;
-            j.field_c = kf.field_b;
+            nk.field_l = fg.mouseY;
+            j.field_c = kf.mouseX;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
@@ -135,7 +135,7 @@ final class aj extends IntrusiveNode {
           ClientException.field_f = param1;
           if (!cd.field_j &&
             ib.field_d > vl.field_H &&
-            GameScreen.field_a) {
+            GameScreen.mouseMoved) {
             r.field_j = j.field_c;
             vl.field_H = 0;
             field_m = nk.field_l;
@@ -159,7 +159,7 @@ final class aj extends IntrusiveNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class aj extends IntrusiveNode {
           this.field_n = param1;
           this.field_o = param6;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "aj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "aj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

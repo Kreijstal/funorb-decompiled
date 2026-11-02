@@ -109,7 +109,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -143,8 +143,8 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             fe.field_L = 0;
           }
-          ha.field_z = kf.field_b;
-          kj.field_o = fg.field_a;
+          ha.field_z = kf.mouseX;
+          kj.field_o = fg.mouseY;
           if (param0 == -1) {
             if (var2 != 0) {
               GameApplet.field_k = true;
@@ -159,10 +159,10 @@ final class ProxySocketConnector extends SocketConnector {
         SpriteState.field_y = param0;
         if (!GameApplet.field_k &&
           fe.field_L < BufferedSocket.field_o &&
-          GameScreen.field_a) {
+          GameScreen.mouseMoved) {
           fe.field_L = 0;
-          kj.field_o = fg.field_a;
-          ha.field_z = kf.field_b;
+          kj.field_o = fg.mouseY;
+          ha.field_z = kf.mouseX;
         }
         if (GameApplet.field_k &&
           rk.field_Y == fe.field_L) {
@@ -382,7 +382,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

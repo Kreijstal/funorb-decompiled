@@ -69,7 +69,7 @@ final class ve extends ug {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class ve extends ug {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ final class ve extends ug {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 

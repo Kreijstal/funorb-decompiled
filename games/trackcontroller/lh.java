@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends tk {
+final class lh extends AsyncRequest {
     int field_y;
     hf field_A;
     byte[] field_z;

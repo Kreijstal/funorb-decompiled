@@ -49,7 +49,7 @@ final class cj extends rb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -77,11 +77,11 @@ final class cj extends rb {
           }
           var8 = this.a(param3, 115, param1, param2);
           var9 = var8;
-          var9.field_b[0] = param4 - param3.a(param1);
+          var9.field_b[0] = param4 - param3.stringWidth(param1);
           var9.field_b[param1.length()] = param4;
           NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-119, 0, param3, param1, var9);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "cj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -195,12 +195,12 @@ final class cj extends rb {
             var14 = new va(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
-              var14.field_b[var13.length()] = param0.a(var13);
+              var14.field_b[var13.length()] = param0.stringWidth(var13);
               stackIn_42_0 = -123;
               if (param2 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param0.a(var13), var13, 5, param5);
+                stackIn_43_1 = this.a(param0.stringWidth(var13), var13, 5, param5);
               }
               NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(stackIn_42_0, stackIn_43_1, param0, var13, var14);
             }
@@ -224,7 +224,7 @@ final class cj extends rb {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class cj extends rb {
           var1.d(0, 0);
           GameShell.m(124);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "cj.R(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.R(" + param0 + ')');
         }
     }
 
@@ -302,10 +302,10 @@ final class cj extends rb {
           var7 = this.a(param2, -103, param4, param1);
           var8 = var7;
           var7.field_b[0] = param3;
-          var8.field_b[param4.length()] = param2.a(param4) + param3;
+          var8.field_b[param4.length()] = param2.stringWidth(param4) + param3;
           NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-121, 0, param2, param4, var8);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "cj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -328,12 +328,12 @@ final class cj extends rb {
           this.field_m = 1;
           this.field_l = true;
           var8 = this.a(param1, 117, param2, param3);
-          var7 = param1.a(param2);
+          var7 = param1.stringWidth(param2);
           var8.field_b[0] = param4 - (var7 >> 1);
           var8.field_b[param2.length()] = (var7 >> 1) + param4;
           NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-125, 0, param1, param2, var8);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "cj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

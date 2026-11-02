@@ -13,7 +13,7 @@ final class gd extends ArchiveSource {
     static oi field_f;
     static boolean field_x;
     private byte[] field_d;
-    private tk field_t;
+    private AsyncRequest field_t;
     private ArchiveIndex field_e;
     private sd field_i;
     private byte[] field_u;
@@ -30,7 +30,7 @@ final class gd extends ArchiveSource {
         if (param1 != -21770) {
           this.field_w = (hf) null;
         }
-        tk var3 = (tk) (this.field_v.a(8434, (long)param0));
+        AsyncRequest var3 = (AsyncRequest) (this.field_v.a(8434, (long)param0));
         if (var3 == null) {
           return 0;
         }
@@ -38,8 +38,8 @@ final class gd extends ArchiveSource {
     }
 
     final void a(byte param0) {
-        tk discarded$0 = null;
-        tk discarded$1 = null;
+        AsyncRequest discarded$0 = null;
+        AsyncRequest discarded$1 = null;
         IntrusiveNode var2;
         int var3;
         int var4;
@@ -86,7 +86,7 @@ final class gd extends ArchiveSource {
           return;
         }
         if (param0 != 6054) {
-          this.field_t = (tk) null;
+          this.field_t = (AsyncRequest) null;
         }
         this.field_z = true;
         if (this.field_r == null) {
@@ -105,7 +105,7 @@ final class gd extends ArchiveSource {
     }
 
     final byte[] a(int param0, int param1) {
-        tk var3 = this.a(0, (byte) 98, param1);
+        AsyncRequest var3 = this.a(0, (byte) 98, param1);
         if (var3 == null) {
           return null;
         }
@@ -142,7 +142,7 @@ final class gd extends ArchiveSource {
           if (this.field_g.d(-18316)) {
             return null;
           }
-          this.field_t = (tk) ((Object) this.field_g.a(255, true, false, this.field_m, (byte) 0));
+          this.field_t = (AsyncRequest) ((Object) this.field_g.a(255, true, false, this.field_m, (byte) 0));
         }
         if (this.field_t.field_w) {
           return null;
@@ -163,7 +163,7 @@ final class gd extends ArchiveSource {
             this.field_g.b((byte) 107);
             this.field_e = null;
             if (!this.field_g.d(param0 ^ -18307)) {
-              this.field_t = (tk) ((Object) this.field_g.a(255, true, false, this.field_m, (byte) 0));
+              this.field_t = (AsyncRequest) ((Object) this.field_g.a(255, true, false, this.field_m, (byte) 0));
             } else {
               this.field_t = null;
             }
@@ -188,7 +188,7 @@ final class gd extends ArchiveSource {
             if (this.field_g.d(-18316)) {
               this.field_t = null;
             } else {
-              this.field_t = (tk) ((Object) this.field_g.a(255, true, false, this.field_m, (byte) 0));
+              this.field_t = (AsyncRequest) ((Object) this.field_g.a(255, true, false, this.field_m, (byte) 0));
             }
             return null;
           }
@@ -203,7 +203,7 @@ final class gd extends ArchiveSource {
         return this.field_e;
     }
 
-    private final tk a(int param0, byte param1, int param2) {
+    private final AsyncRequest a(int param0, byte param1, int param2) {
         Object stackIn_60_0 = null;
         byte stackIn_92_0 = 0;
         int stackIn_92_1 = 0;
@@ -218,7 +218,7 @@ final class gd extends ArchiveSource {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        tk var13 = null;
+        AsyncRequest var13 = null;
         byte[] var14 = null;
         byte[] var19 = null;
         byte[] var28 = null;
@@ -226,7 +226,7 @@ final class gd extends ArchiveSource {
         byte[] var30 = null;
         byte[] var31 = null;
         var11 = TrackController.field_F ? 1 : 0;
-        var13 = (tk) (this.field_v.a(8434, (long)param2));
+        var13 = (AsyncRequest) (this.field_v.a(8434, (long)param2));
         var4 = var13;
         if (var13 != null &&
           0 == param0 &&
@@ -270,11 +270,11 @@ final class gd extends ArchiveSource {
           }
           this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
         }
-        if (((tk) (var4)).field_w) {
+        if (((AsyncRequest) (var4)).field_w) {
           return null;
         }
         var6 = 72 % ((-59 - param1) / 50);
-        var19 = ((tk) (var4)).g(512);
+        var19 = ((AsyncRequest) (var4)).g(512);
         var14 = var19;
         var5 = var14;
         if (var4 instanceof lh) {
@@ -306,19 +306,19 @@ final class gd extends ArchiveSource {
                 }
                 this.field_d[param2] = (byte) 1;
               }
-              if (!((tk) (var4)).field_q) {
-                ((tk) (var4)).unlink(-59);
+              if (!((AsyncRequest) (var4)).field_q) {
+                ((AsyncRequest) (var4)).unlink(-59);
               }
               stackIn_60_0 = var4;
-              return (tk) (stackIn_60_0);
+              return (AsyncRequest) (stackIn_60_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (Exception) (Object) decompiledCaughtException;
             this.field_d[param2] = (byte)-1;
-            ((tk) (var4)).unlink(-122);
-            if (!((tk) (var4)).field_q) {
+            ((AsyncRequest) (var4)).unlink(-122);
+            if (!((AsyncRequest) (var4)).field_q) {
               return null;
             }
             if (!this.field_g.d(-18316)) {
@@ -359,8 +359,8 @@ final class gd extends ArchiveSource {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_g.b((byte) 113);
-          ((tk) (var4)).unlink(-90);
-          if (((tk) (var4)).field_q) {
+          ((AsyncRequest) (var4)).unlink(-90);
+          if (((AsyncRequest) (var4)).field_q) {
             if (this.field_g.d(-18316)) {
               return null;
             }
@@ -379,19 +379,19 @@ final class gd extends ArchiveSource {
             this.field_d[param2] = (byte) 1;
           }
         }
-        if (!((tk) (var4)).field_q) {
-          ((tk) (var4)).unlink(-52);
+        if (!((AsyncRequest) (var4)).field_q) {
+          ((AsyncRequest) (var4)).unlink(-52);
         }
-        return (tk) (var4);
+        return (AsyncRequest) (var4);
     }
 
     final void b(boolean param0) {
-        tk discarded$1 = null;
-        tk discarded$0 = null;
-        tk discarded$3 = null;
-        tk discarded$2 = null;
+        AsyncRequest discarded$1 = null;
+        AsyncRequest discarded$0 = null;
+        AsyncRequest discarded$3 = null;
+        AsyncRequest discarded$2 = null;
         int var2_int;
-        tk var2;
+        AsyncRequest var2;
         IntrusiveNode var3;
         int var4;
         int var5;
@@ -399,7 +399,7 @@ final class gd extends ArchiveSource {
         IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        tk var2Lifetime1;
+        AsyncRequest var2Lifetime1;
         IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
@@ -501,7 +501,7 @@ final class gd extends ArchiveSource {
                 decompiledFrameRemainder1 = (this.field_h);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0 = !(qg.a(false) < this.field_l))) {
-                  var2 = (tk) (this.field_v.b(-49));
+                  var2 = (AsyncRequest) (this.field_v.b(-49));
                   while (var2 != null) {
                     if (!var2.field_w) {
                       if (var2.field_v) {
@@ -513,7 +513,7 @@ final class gd extends ArchiveSource {
                         var2.field_v = true;
                       }
                     }
-                    var2 = (tk) (this.field_v.a((byte) 91));
+                    var2 = (AsyncRequest) (this.field_v.a((byte) 91));
                   }
                   decompiledFrameRemainder2 = false;
                 }
@@ -536,7 +536,7 @@ final class gd extends ArchiveSource {
           decompiledFrameRemainder1 = (this.field_h);
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0 = !(qg.a(false) < this.field_l))) {
-            var2Lifetime1 = (tk) (this.field_v.b(-49));
+            var2Lifetime1 = (AsyncRequest) (this.field_v.b(-49));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_w) {
                 if (var2Lifetime1.field_v) {
@@ -548,7 +548,7 @@ final class gd extends ArchiveSource {
                   var2Lifetime1.field_v = true;
                 }
               }
-              var2Lifetime1 = (tk) (this.field_v.a((byte) 91));
+              var2Lifetime1 = (AsyncRequest) (this.field_v.a((byte) 91));
             }
           }
         }
@@ -596,7 +596,7 @@ final class gd extends ArchiveSource {
           this.field_g = param3;
           this.field_i = param4;
           if (null != this.field_n) {
-            this.field_t = (tk) ((Object) this.field_i.a((byte) -113, this.field_m, this.field_n));
+            this.field_t = (AsyncRequest) ((Object) this.field_i.a((byte) -113, this.field_m, this.field_n));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -633,7 +633,7 @@ final class gd extends ArchiveSource {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -43,16 +43,16 @@ final class rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var2), "rf.E(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2), "rf.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0) {
         int var1 = 70 / ((param0 - 57) / 63);
-        if (null == tk.field_u) {
+        if (null == AsyncRequest.field_u) {
           return false;
         }
-        if (tk.field_u.a(32130)) {
+        if (AsyncRequest.field_u.a(32130)) {
           return true;
         }
         return false;
@@ -129,7 +129,7 @@ final class rf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -106,7 +106,7 @@ final class sf extends td implements m {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class sf extends td implements m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var2), "sf.G(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var2), "sf.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class sf extends td implements m {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1817,7 +1817,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_account_success");
                 if (null != var2) {
-                  tk.field_s = ta.a(32200, var2);
+                  AsyncRequest.field_s = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "invalid_name");
                 if (var2 != null) {
@@ -2980,7 +2980,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "createtouse");
                 if (null != var2) {
-                  hh.field_b = ta.a(32200, var2);
+                  SecondaryNodeDequeIterator.field_b = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "achievementsoffline");
                 if (var2 != null) {
@@ -3195,7 +3195,7 @@ final class sf extends td implements m {
                   } else {
                     stackIn_2636_2 = "{...}";
                   }
-                  throw LevelGrid.a((Throwable) ((Object) stackIn_2635_0), ((StringBuilder) (Object) stackIn_2635_1).append(stackIn_2636_2).append(')').toString());
+                  throw LevelGrid.toClientException((Throwable) ((Object) stackIn_2635_0), ((StringBuilder) (Object) stackIn_2635_1).append(stackIn_2636_2).append(')').toString());
                 }
                 if (var4 != 0) {
                   var5 = GameApplet.field_j;
@@ -3237,7 +3237,7 @@ final class sf extends td implements m {
           this.a(false, this.field_G);
           this.a(false, this.field_C);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "sf.<init>()");
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.<init>()");
         }
     }
 
@@ -3286,7 +3286,7 @@ final class sf extends td implements m {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3303,7 +3303,7 @@ final class sf extends td implements m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "sf.C(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "sf.C(" + param0 + ')');
         }
     }
 
@@ -3315,7 +3315,7 @@ final class sf extends td implements m {
             sf.j(105);
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
         }
     }
 
@@ -3331,7 +3331,7 @@ final class sf extends td implements m {
           gk.field_c.a(we.field_a, var5_int + 20, 20 + var6, this.field_x - 40, -50 + this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
           super.a(param0, param1, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3374,7 +3374,7 @@ final class sf extends td implements m {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

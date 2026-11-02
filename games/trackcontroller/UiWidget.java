@@ -22,7 +22,7 @@ class UiWidget extends IntrusiveNode {
     static String field_v;
     int field_x;
     rb field_k;
-    static ng[] field_j;
+    static IndexedSprite[] field_j;
 
     final static byte[] a(int param0, byte[] param1) {
         RuntimeException var2 = null;
@@ -84,7 +84,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -142,10 +142,10 @@ class UiWidget extends IntrusiveNode {
         if (param1) {
           if (NodeHashTableIterator.field_c != 0 &&
             var5 != 0) {
-            this.a(kf.field_b, param3, NodeHashTableIterator.field_c, param0, fg.field_a, this, (byte) 127);
+            this.a(kf.mouseX, param3, NodeHashTableIterator.field_c, param0, fg.mouseY, this, (byte) 127);
           }
-          if (uk.field_a != 0) {
-            if (!this.a(this, wg.field_e, db.field_X, uk.field_a, 0, param0, param3)) {
+          if (uk.clickButton != 0) {
+            if (!this.a(this, wg.clickY, db.clickX, uk.clickButton, 0, param0, param3)) {
               if (var5 != 0) {
                 this.f(-24174);
               }
@@ -153,9 +153,9 @@ class UiWidget extends IntrusiveNode {
               param1 = false;
             }
           }
-          if (0 == SecondaryNodeDeque.field_a &&
+          if (0 == SecondaryNodeDeque.mouseButton &&
             sc.field_h != 0) {
-            this.a(this, false, fg.field_a, param3, kf.field_b, param0);
+            this.a(this, false, fg.mouseY, param3, kf.mouseX, param0);
             var6 = rf.field_e;
             if (var6 != null) {
               if (var6.field_l instanceof n) {
@@ -166,11 +166,11 @@ class UiWidget extends IntrusiveNode {
           }
         } else {
           if (var5 != 0 &&
-            uk.field_a != 0) {
+            uk.clickButton != 0) {
             this.f(-24174);
           }
         }
-        sc.field_h = SecondaryNodeDeque.field_a;
+        sc.field_h = SecondaryNodeDeque.mouseButton;
         aj.a((byte) -127, this.e(0));
         return param1;
     }
@@ -210,7 +210,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ class UiWidget extends IntrusiveNode {
           if (param2 != -124) {
             return;
           }
-          var5_int = this.a(param1, param0, kf.field_b, false, fg.field_a) ? 1 : 0;
+          var5_int = this.a(param1, param0, kf.mouseX, false, fg.mouseY) ? 1 : 0;
           if (var5_int != (this.field_q ? 1 : 0)) {
             stackIn_7_1 = (var5_int != 0);
             this.field_q = stackIn_7_1;
@@ -290,7 +290,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ class UiWidget extends IntrusiveNode {
             this.field_o = 76;
           }
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "al.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "al.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -439,7 +439,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -487,7 +487,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -527,7 +527,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -572,7 +572,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -603,7 +603,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -657,7 +657,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -672,7 +672,7 @@ class UiWidget extends IntrusiveNode {
           this.field_u = param3;
           this.field_x = param2;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -118,7 +118,7 @@ final class ha extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class ha extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -200,10 +200,10 @@ final class ha extends IntrusiveNode {
           mk.field_b = param0;
           r.field_k = param3;
           sc.field_f = param2;
-          jk.a(SoftwareRasterizer.field_k / param1, -120, SoftwareRasterizer.field_d / 2);
+          jk.a(SoftwareRasterizer.field_k / param1, -120, SoftwareRasterizer.stride / 2);
           vb.a(param3.field_H, param0.field_H + param0.field_u, param1 - 107, param0.field_H, param3.field_H + param3.field_u);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

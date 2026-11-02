@@ -20,7 +20,7 @@ final class r extends IntrusiveNode {
           return;
         }
         if (ib.field_e == null) {
-          ib.field_e = new rk(gl.field_E, tk.field_r);
+          ib.field_e = new rk(gl.field_E, AsyncRequest.field_r);
         }
         gl.field_E.d((byte) -63, ib.field_e);
     }
@@ -110,7 +110,7 @@ final class r extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class r extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

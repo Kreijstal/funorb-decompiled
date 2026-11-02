@@ -45,7 +45,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var3 = ActiveLevel.field_V + 1 & 127;
             if (field_d != var3) {
               mc.field_K[ActiveLevel.field_V] = var2_int;
-              tk.field_o[ActiveLevel.field_V] = (char)0;
+              AsyncRequest.field_o[ActiveLevel.field_V] = (char)0;
               ActiveLevel.field_V = var3;
             }
           }
@@ -67,7 +67,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           param1.previous.next = param1;
           param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -175,14 +175,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = 1 + ActiveLevel.field_V & 127;
               if (field_d != var3) {
                 mc.field_K[ActiveLevel.field_V] = -1;
-                tk.field_o[ActiveLevel.field_V] = (char)var2_int;
+                AsyncRequest.field_o[ActiveLevel.field_V] = (char)var2_int;
                 ActiveLevel.field_V = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

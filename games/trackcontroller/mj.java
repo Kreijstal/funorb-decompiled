@@ -38,7 +38,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
         }
         stackIn_5_0 = mb.field_d;
         try {
@@ -54,7 +54,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var1_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
         }
     }
 

@@ -38,7 +38,7 @@ final class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1_ref), "lg.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1_ref), "lg.B(" + param0 + ')');
         }
     }
 

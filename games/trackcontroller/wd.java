@@ -77,7 +77,7 @@ abstract class wd extends hl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -170,8 +170,8 @@ abstract class wd extends hl {
         var7 = 0;
         var8 = param2;
         while (var7 < var4) {
-          if (SoftwareRasterizer.field_b <= var8 &&
-            SoftwareRasterizer.field_g > var8) {
+          if (SoftwareRasterizer.clipTop <= var8 &&
+            SoftwareRasterizer.clipBottom > var8) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_x;
@@ -184,7 +184,7 @@ abstract class wd extends hl {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  SoftwareRasterizer.field_i[param0 + (var8 * SoftwareRasterizer.field_d + var10)] = var13;
+                  SoftwareRasterizer.pixels[param0 + (var8 * SoftwareRasterizer.stride + var10)] = var13;
                 }
                 var10++;
               }
@@ -201,7 +201,7 @@ abstract class wd extends hl {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRasterizer.field_i[param0 + var8 * SoftwareRasterizer.field_d + var11] = var15;
+                    SoftwareRasterizer.pixels[param0 + var8 * SoftwareRasterizer.stride + var11] = var15;
                   }
                   var13Lifetime1++;
                   var11++;

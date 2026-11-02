@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tk extends DualLinkNode {
+abstract class AsyncRequest extends DualLinkNode {
     boolean field_q;
     volatile boolean field_w;
     static gf field_u;
@@ -24,7 +24,7 @@ abstract class tk extends DualLinkNode {
           field_s = null;
           return;
         }
-        tk.f(103);
+        AsyncRequest.f(103);
         field_o = null;
         field_u = null;
         field_r = null;
@@ -205,7 +205,7 @@ abstract class tk extends DualLinkNode {
         mj.field_d = 2147483647;
     }
 
-    tk() {
+    AsyncRequest() {
         this.field_w = true;
     }
 

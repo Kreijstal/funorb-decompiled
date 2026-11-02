@@ -4,7 +4,7 @@
 abstract class ArchiveSource {
     static jb field_c;
     static int field_b;
-    static volatile int field_a;
+    static volatile int liveMouseY;
     private static String field_z;
 
     abstract byte[] a(int param0, int param1);
@@ -24,6 +24,6 @@ abstract class ArchiveSource {
         field_z = "wi.J(";
         field_b = 9;
         field_c = new jb();
-        field_a = -1;
+        liveMouseY = -1;
     }
 }

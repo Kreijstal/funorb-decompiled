@@ -212,7 +212,7 @@ final class oj {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param6).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class oj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -260,15 +260,15 @@ final class oj {
           if (param0 > -74) {
             field_b = (java.security.SecureRandom) null;
           }
-          if (tk.field_u != null) {
-            tk.field_u.b(6391);
+          if (AsyncRequest.field_u != null) {
+            AsyncRequest.field_u.b(6391);
           }
           ki.field_f.requestFocus();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw LevelGrid.a((Throwable) ((Object) var1), "oj.D(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "oj.D(" + param0 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class oj {
           int var1_int = -25 % ((param0 + 56) / 60);
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ')');
         }
     }
 

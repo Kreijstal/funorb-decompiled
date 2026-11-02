@@ -62,7 +62,7 @@ final class dc extends ic {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -89,25 +89,25 @@ final class dc extends ic {
         }
         if (param3 < param15) {
           if (param0 > param15) {
-            ld.a(param14, param5, param8, param12, param4, param7, param13, param6, param15, param0, param10, param3, param9, true, param11, SoftwareRasterizer.field_i, param2);
+            ld.a(param14, param5, param8, param12, param4, param7, param13, param6, param15, param0, param10, param3, param9, true, param11, SoftwareRasterizer.pixels, param2);
             return;
           }
           if (param3 < param0) {
-            ld.a(param2, param6, param8, param11, param4, param9, param13, param5, param0, param15, param10, param3, param7, true, param12, SoftwareRasterizer.field_i, param14);
+            ld.a(param2, param6, param8, param11, param4, param9, param13, param5, param0, param15, param10, param3, param7, true, param12, SoftwareRasterizer.pixels, param14);
             return;
           }
-          ld.a(param10, param6, param11, param8, param7, param9, param5, param13, param3, param15, param2, param0, param4, true, param12, SoftwareRasterizer.field_i, param14);
+          ld.a(param10, param6, param11, param8, param7, param9, param5, param13, param3, param15, param2, param0, param4, true, param12, SoftwareRasterizer.pixels, param14);
           return;
         }
         if (param0 > param3) {
-          ld.a(param10, param5, param12, param8, param9, param7, param6, param13, param3, param0, param14, param15, param4, true, param11, SoftwareRasterizer.field_i, param2);
+          ld.a(param10, param5, param12, param8, param9, param7, param6, param13, param3, param0, param14, param15, param4, true, param11, SoftwareRasterizer.pixels, param2);
           return;
         }
         if (param0 <= param15) {
-          ld.a(param14, param13, param11, param12, param7, param4, param5, param6, param15, param3, param2, param0, param9, true, param8, SoftwareRasterizer.field_i, param10);
+          ld.a(param14, param13, param11, param12, param7, param4, param5, param6, param15, param3, param2, param0, param9, true, param8, SoftwareRasterizer.pixels, param10);
           return;
         }
-        ld.a(param2, param13, param12, param11, param9, param4, param6, param5, param0, param3, param14, param15, param7, true, param8, SoftwareRasterizer.field_i, param10);
+        ld.a(param2, param13, param12, param11, param9, param4, param6, param5, param0, param3, param14, param15, param7, true, param8, SoftwareRasterizer.pixels, param10);
     }
 
     private dc(int param0, int param1, int param2) {

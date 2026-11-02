@@ -289,7 +289,7 @@ abstract class MouseWheelInput {
         int var6Lifetime1;
         var13 = TrackController.field_F ? 1 : 0;
         try {
-          var5_int = param1.a(param3);
+          var5_int = param1.stringWidth(param3);
           if (param2 >= var5_int &&
             param3.indexOf("<br>") == -1) {
             param4[0] = param3;
@@ -306,7 +306,7 @@ abstract class MouseWheelInput {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param3.substring(var7, var9 + 1).trim();
-              var12 = param1.a(var11);
+              var12 = param1.stringWidth(var11);
               if (var12 >= param2) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;
@@ -354,7 +354,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

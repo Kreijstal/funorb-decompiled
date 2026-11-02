@@ -51,7 +51,7 @@ final class mi extends el {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw LevelGrid.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ')');
+            throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -82,7 +82,7 @@ final class mi extends el {
             regionExit3: {
               var6 = this.field_S.a((byte) -61);
               if (lh.field_x != var6 &&
-                var6 != tk.field_t) {
+                var6 != AsyncRequest.field_t) {
                 var5 = this.field_S.c(param3 ^ 19471);
                 if (var5 == null) {
                   var5 = this.field_R;
@@ -108,7 +108,7 @@ final class mi extends el {
         var9 = param1 + this.field_p;
         var10 = var8.a((UiWidget) (this), param3 ^ -29188, param2) + (var8.a((byte) 124, (UiWidget) (this)).a(12323) >> 1);
         if (var6Lifetime1 != lh.field_x &&
-          var6Lifetime1 != tk.field_t) {
+          var6Lifetime1 != AsyncRequest.field_t) {
           if (ef.field_b == var6Lifetime1) {
             var16 = TrackController.field_D[2];
             var16.a(var9, var10 - (var16.field_q >> 1), 256);
@@ -140,7 +140,7 @@ final class mi extends el {
           this.field_Q = this.field_Q + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mi.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mi.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class mi extends el {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class mi extends el {
           this.field_R = param1;
           this.a(param5, -3050, param3, param4, param2);
         } catch (RuntimeException runtimeException) {
-          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
