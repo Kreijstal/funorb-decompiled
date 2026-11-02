@@ -70,7 +70,7 @@ final class mk {
     final static void a(int param0, String param1, int param2, boolean param3, long param4, int param5) {
         int var7_int = 0;
         try {
-          nd.field_Lb.f(param5, (byte) -92);
+          nd.field_Lb.writeCipheredByte(param5, (byte) -92);
           nd.field_Lb.position = nd.field_Lb.position + 1;
           var7_int = nd.field_Lb.position;
           nd.field_Lb.a(-1, param4);

@@ -32,10 +32,10 @@ final class s {
 
     final static boolean b(int param0) {
         if (param0 == 63) {
-          return ~qb.field_N.field_cc == ~oj.field_c ? true : false;
+          return ~qb.field_N.field_cc == ~IsaacCipher.field_c ? true : false;
         }
         field_a = (PcmSample[]) null;
-        return ~qb.field_N.field_cc == ~oj.field_c ? true : false;
+        return ~qb.field_N.field_cc == ~IsaacCipher.field_c ? true : false;
     }
 
     final static void a(int param0, Sprite[] param1, byte param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, Sprite[] param11) {

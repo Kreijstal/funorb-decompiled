@@ -566,7 +566,7 @@ abstract class SpriteState extends DualLinkNode {
                   uf.a(param0, (byte) 108, var12.j(-98));
                 }
               } else {
-                oj.a(var12, (byte) 110, param6, var32);
+                IsaacCipher.a(var12, (byte) 110, param6, var32);
               }
             }
             var12 = (el) (var8.a((byte) -70));

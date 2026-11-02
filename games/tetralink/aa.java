@@ -240,7 +240,7 @@ final class aa extends hl {
           var7.unlinkSecondary(0);
           SocketConnector.field_c = SocketConnector.field_c - 1;
           var5 = nd.field_Lb;
-          var5.f(param1, (byte) -92);
+          var5.writeCipheredByte(param1, (byte) -92);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.a(3, false);

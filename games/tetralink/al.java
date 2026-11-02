@@ -51,7 +51,7 @@ class al implements kg, jh {
         int var8 = 0;
         try {
           var10 = nd.field_Lb;
-          var10.f(param3, (byte) -92);
+          var10.writeCipheredByte(param3, (byte) -92);
           var10.position = var10.position + 1;
           var7 = var10.position;
           var10.a(4, !param4 ? true : false);

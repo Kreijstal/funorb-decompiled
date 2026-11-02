@@ -209,7 +209,7 @@ final class dh implements m {
           }
           var1 = nd.field_Lb;
           while (jl.a(false)) {
-            var1.f(8, (byte) -92);
+            var1.writeCipheredByte(8, (byte) -92);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

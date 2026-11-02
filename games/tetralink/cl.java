@@ -769,7 +769,7 @@ final class cl {
         int var5;
         int var6;
         var6 = TetraLink.field_J;
-        if (a.field_a > oj.field_a.field_z) {
+        if (a.field_a > IsaacCipher.field_a.field_z) {
           return -1;
         }
         if (param1 != 58) {

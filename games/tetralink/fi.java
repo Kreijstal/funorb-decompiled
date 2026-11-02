@@ -167,7 +167,7 @@ final class fi extends lk implements dm {
             if (param1.field_i == 4) {
               var2_intLifetime1 = UrlFetchTask.field_j[param1.field_i];
             } else {
-              if (~param1.field_r == ~oj.field_c) {
+              if (~param1.field_r == ~IsaacCipher.field_c) {
                 var2_intLifetime1 = pg.field_f[param1.field_i];
               } else {
                 var2_intLifetime1 = UrlFetchTask.field_j[param1.field_i];
@@ -214,7 +214,7 @@ final class fi extends lk implements dm {
           if (param3 != 119) {
             field_Ab = (String[]) null;
           }
-          var4_int = param2.e(param0, (byte) -112);
+          var4_int = param2.readBits(param0, (byte) -112);
           if (0 == var4_int) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -223,11 +223,11 @@ final class fi extends lk implements dm {
             var4_int != param1.length) {
             param1 = new byte[var4_int];
           }
-          var5 = param2.e(3, (byte) -112);
-          var6 = (byte)param2.e(8, (byte) -112);
+          var5 = param2.readBits(3, (byte) -112);
+          var6 = (byte)param2.readBits(8, (byte) -112);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (byte)(var6 + param2.e(var5, (byte) -112));
+              param1[var7] = (byte)(var6 + param2.readBits(var5, (byte) -112));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

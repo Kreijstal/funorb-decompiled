@@ -886,7 +886,7 @@ final class Model extends fc {
           }
         }
         if (field_Z) {
-          oj.a(0, field_z, (byte) -63, var7 - 1, field_pb);
+          IsaacCipher.a(0, field_z, (byte) -63, var7 - 1, field_pb);
           if (this.field_U == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.c(field_z[var8Lifetime2]);

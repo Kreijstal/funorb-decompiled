@@ -46,7 +46,7 @@ final class qj {
 
     final static Sprite[] a(int param0, int param1) {
         Sprite[] var2 = new Sprite[9];
-        var2[4] = ce.a(param1, 64, oj.a(param0, param0));
+        var2[4] = ce.a(param1, 64, IsaacCipher.a(param0, param0));
         return var2;
     }
 

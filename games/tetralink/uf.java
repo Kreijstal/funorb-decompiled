@@ -30,14 +30,14 @@ final class uf {
           String var4 = (String) null;
           uf.a((String) null, false, false);
           var3 = nd.field_Lb;
-          var3.f(param0, (byte) -92);
+          var3.writeCipheredByte(param0, (byte) -92);
           var3.a(3, false);
           var3.a(8, false);
           var3.b(param2, false);
           return;
         }
         var3Lifetime1 = nd.field_Lb;
-        var3Lifetime1.f(param0, (byte) -92);
+        var3Lifetime1.writeCipheredByte(param0, (byte) -92);
         var3Lifetime1.a(3, false);
         var3Lifetime1.a(8, false);
         var3Lifetime1.b(param2, false);

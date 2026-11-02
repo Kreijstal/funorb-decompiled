@@ -141,7 +141,7 @@ public final class TetraLink extends ph {
         df.a((byte) -108);
         hm.a(118);
         BitPacketBuffer.j(29313);
-        oj.a((byte) 125);
+        IsaacCipher.a((byte) 125);
         kd.a(-84);
         me.b((byte) -92);
         l.b(9);
@@ -1800,7 +1800,7 @@ public final class TetraLink extends ph {
           if (!stackIn_38_0Lifetime1) {
             ua.a((byte) 123);
           }
-          var5 = oj.field_a.field_yb;
+          var5 = IsaacCipher.field_a.field_yb;
           if (tb.field_e &&
             mi.field_Pb) {
             stackIn_46_0 = cb.field_w;
@@ -1835,7 +1835,7 @@ public final class TetraLink extends ph {
           nn.field_X = true;
         }
         if (ed.field_O == -4) {
-          nd.field_Lb.f(9, (byte) -92);
+          nd.field_Lb.writeCipheredByte(9, (byte) -92);
           ed.field_O = kb.field_t;
           DualLinkDeque.field_e = true;
         }

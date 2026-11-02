@@ -281,7 +281,7 @@ final class ma {
           var8.unlinkSecondary(0);
           qi.field_q = qi.field_q - 1;
           var9 = nd.field_Lb;
-          var9.f(param2, (byte) -92);
+          var9.writeCipheredByte(param2, (byte) -92);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.a(1, param0);

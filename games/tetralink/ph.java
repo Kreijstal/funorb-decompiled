@@ -258,7 +258,7 @@ abstract class ph extends GameApplet {
             el.a(16, lk.q(13));
           }
           if (var4 == 10) {
-            nd.field_Lb.f(17, (byte) -92);
+            nd.field_Lb.writeCipheredByte(17, (byte) -92);
           }
           if (11 == var4) {
             in.a(lk.q(13), 63);
@@ -501,7 +501,7 @@ abstract class ph extends GameApplet {
                 this.i(92);
                 break;
               case 6:
-                oj.b((byte) -122);
+                IsaacCipher.b((byte) -122);
                 break;
               case 5:
                 MouseWheelInput.a(false);

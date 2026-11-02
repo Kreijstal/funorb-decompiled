@@ -329,7 +329,7 @@ final class vg extends hl {
           }
           var1_int = stackIn_6_0;
           if (var1_int != 0) {
-            stackIn_9_0 = oj.field_a.field_z;
+            stackIn_9_0 = IsaacCipher.field_a.field_z;
           } else {
             stackIn_9_0 = 480;
           }

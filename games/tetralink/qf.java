@@ -50,7 +50,7 @@ final class qf {
             var5 = (PlatformTaskDispatcher) null;
             qf.a(-37, -32, (PacketBuffer) null, (PlatformTaskDispatcher) null);
           }
-          if (oj.a(1, param1)) {
+          if (IsaacCipher.a(1, param1)) {
             stackIn_15_0 = sk.a(new String[]{param1}, tc.field_n, 123);
             return stackIn_15_0;
           }
@@ -68,7 +68,7 @@ final class qf {
             return stackIn_25_0;
           }
           var6 = nd.field_Lb;
-          var6.f(param2, (byte) -92);
+          var6.writeCipheredByte(param2, (byte) -92);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.a(0, false);

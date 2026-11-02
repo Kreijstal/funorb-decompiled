@@ -37,7 +37,7 @@ final class lc {
         int var2 = ma.field_f * ma.field_f;
         int var3 = -(th.field_g * th.field_g) + var2;
         int var4 = ja.field_f + var3 * (te.field_P - ja.field_f) / var2;
-        oj.field_a.a((byte) -116, 640, var4, 120, vi.field_d);
+        IsaacCipher.field_a.a((byte) -116, 640, var4, 120, vi.field_d);
         qh.a(5, eh.field_w, 640, te.field_P - 24, 1000000, fn.field_Q, 0);
     }
 

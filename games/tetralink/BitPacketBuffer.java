@@ -3,30 +3,30 @@
  */
 final class BitPacketBuffer extends PacketBuffer {
     static a field_z;
-    private int field_y;
-    private oj field_w;
+    private int bitPosition;
+    private IsaacCipher cipher;
     static String field_x;
     static String field_v;
 
-    final void e(boolean param0) {
-        this.field_y = 8 * this.position;
+    final void beginBitAccess(boolean param0) {
+        this.bitPosition = 8 * this.position;
         if (!param0) {
-          this.e(false);
+          this.beginBitAccess(false);
         }
     }
 
-    final int e(int param0, byte param1) {
+    final int readBits(int param0, byte param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var5 = 0;
         int var6 = TetraLink.field_J;
-        int var3 = this.field_y >> 3;
-        int var4 = 8 - (this.field_y & 7);
+        int var3 = this.bitPosition >> 3;
+        int var4 = 8 - (this.bitPosition & 7);
         int var5Lifetime1;
         if (param1 != -112) {
-          this.field_y = -52;
+          this.bitPosition = -52;
         } else {
-          this.field_y = this.field_y + param0;
+          this.bitPosition = this.bitPosition + param0;
           var5 = 0;
           while (param0 > var4) {
             incrementValue$0 = var3;
@@ -42,7 +42,7 @@ final class BitPacketBuffer extends PacketBuffer {
           }
           return var5;
         }
-        this.field_y = this.field_y + param0;
+        this.bitPosition = this.bitPosition + param0;
         var5Lifetime1 = 0;
         while (param0 > var4) {
           incrementValue$1 = var3;
@@ -76,7 +76,7 @@ final class BitPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param3; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param1[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_w.c(0));
+            param1[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.cipher.nextInt(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,21 +93,21 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int d(boolean param0) {
+    final int readCipheredByte(boolean param0) {
         int fieldTemp$0 = 0;
         if (param0) {
-          this.f(-44, (byte) -67);
+          this.writeCipheredByte(-44, (byte) -67);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_w.c(0) & 255;
+          return this.payload[fieldTemp$0] - this.cipher.nextInt(0) & 255;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_w.c(0) & 255;
+        return this.payload[fieldTemp$1] - this.cipher.nextInt(0) & 255;
     }
 
-    final void i(byte param0) {
-        this.position = (this.field_y + 7) / 8;
+    final void endBitAccess(byte param0) {
+        this.position = (this.bitPosition + 7) / 8;
         if (param0 <= 57) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           BitPacketBuffer.a(89, (BitPacketBuffer) null);
@@ -127,7 +127,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var3 = (BitPacketBuffer) null;
             BitPacketBuffer.a(116, (BitPacketBuffer) null);
           }
-          stackIn_5_0 = (1 == param1.e(1, (byte) -112));
+          stackIn_5_0 = (1 == param1.readBits(1, (byte) -112));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,29 +151,29 @@ final class BitPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void a(int[] param0, byte param1) {
+    final void setCipherSeed(int[] param0, byte param1) {
         try {
-          this.field_w = new oj(param0);
+          this.cipher = new IsaacCipher(param0);
           if (param1 != 33) {
-            this.e(true);
+            this.beginBitAccess(true);
           }
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "bc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void f(int param0, byte param1) {
+    final void writeCipheredByte(int param0, byte param1) {
         int fieldTemp$0 = 0;
         if (param1 != -92) {
           field_v = (String) null;
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(this.field_w.c(oj.a((int) param1, -92)) + param0);
+          this.payload[fieldTemp$0] = (byte)(this.cipher.nextInt(IsaacCipher.a((int) param1, -92)) + param0);
           return;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(this.field_w.c(oj.a((int) param1, -92)) + param0);
+        this.payload[fieldTemp$1] = (byte)(this.cipher.nextInt(IsaacCipher.a((int) param1, -92)) + param0);
     }
 
     public static void j(int param0) {

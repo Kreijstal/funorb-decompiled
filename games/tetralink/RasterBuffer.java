@@ -79,11 +79,11 @@ abstract class RasterBuffer {
         stackIn_16_11 = (ph.field_s) || (sj.field_a);
         dd.a(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8, stackIn_14_9 != 0, stackIn_14_10, stackIn_16_11);
         if (uf.field_b) {
-          nd.field_Lb.f(57, (byte) -92);
+          nd.field_Lb.writeCipheredByte(57, (byte) -92);
           uf.field_b = false;
         }
         if (PacketBuffer.field_p) {
-          nd.field_Lb.f(10, (byte) -92);
+          nd.field_Lb.writeCipheredByte(10, (byte) -92);
           PacketBuffer.field_p = false;
         }
     }

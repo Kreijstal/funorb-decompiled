@@ -279,12 +279,12 @@ final class li {
             stackIn_16_0 = da.field_c;
             return stackIn_16_0;
           }
-          if (oj.a(1, param1)) {
+          if (IsaacCipher.a(1, param1)) {
             stackIn_19_0 = sk.a(new String[]{param1}, ji.field_Vb, param2 + 119);
             return stackIn_19_0;
           }
           var5 = nd.field_Lb;
-          var5.f(param0, (byte) -92);
+          var5.writeCipheredByte(param0, (byte) -92);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.a(param2, false);

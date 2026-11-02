@@ -145,7 +145,7 @@ final class gg extends hm {
 
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
-        var2.f(param0, (byte) -92);
+        var2.writeCipheredByte(param0, (byte) -92);
         var2.a(1, false);
         var2.a(param1, false);
     }

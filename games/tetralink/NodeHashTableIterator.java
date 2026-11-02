@@ -28,23 +28,23 @@ final class NodeHashTableIterator implements Iterator {
         int var8 = 0;
         var8 = TetraLink.field_J;
         try {
-          var2_int = param1.e(8, (byte) -112);
+          var2_int = param1.readBits(8, (byte) -112);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = BitPacketBuffer.a(91, param1) ? 1 : 0;
           var4 = BitPacketBuffer.a(77, param1) ? 1 : 0;
           var5 = new id();
-          var5.field_q = (short)param1.e(16, (byte) -112);
+          var5.field_q = (short)param1.readBits(16, (byte) -112);
           var5.field_D = cc.a(var5.field_D, param1, 16, 0);
           var5.field_i = cc.a(var5.field_i, param1, 16, param0 ^ param0);
           var5.field_R = cc.a(var5.field_R, param1, 16, param0 ^ -16483);
-          var5.field_s = (short)param1.e(16, (byte) -112);
+          var5.field_s = (short)param1.readBits(16, (byte) -112);
           var5.field_K = cc.a(var5.field_K, param1, 16, 0);
           var5.field_I = cc.a(var5.field_I, param1, 16, param0 ^ -16483);
           var5.field_e = cc.a(var5.field_e, param1, 16, 0);
           if (var3 != 0) {
-            var5.field_O = (short)param1.e(16, (byte) -112);
+            var5.field_O = (short)param1.readBits(16, (byte) -112);
             var5.field_l = cc.a(var5.field_l, param1, 16, 0);
             var5.field_d = cc.a(var5.field_d, param1, 16, 0);
             var5.field_y = cc.a(var5.field_y, param1, 16, 0);
@@ -53,7 +53,7 @@ final class NodeHashTableIterator implements Iterator {
             var5.field_N = cc.a(var5.field_N, param1, 16, param0 + 16483);
           }
           if (var4 != 0) {
-            param1.e(16, (byte) -112);
+            param1.readBits(16, (byte) -112);
             var5.field_k = cc.a(var5.field_k, param1, 16, param0 ^ -16483);
             var5.field_p = cc.a(var5.field_p, param1, 16, 0);
             var5.field_A = cc.a(var5.field_A, param1, 16, 0);
@@ -191,26 +191,26 @@ final class NodeHashTableIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var7 = TetraLink.field_J;
         try {
-          var2_int = param0.e(8, (byte) -112);
+          var2_int = param0.readBits(8, (byte) -112);
           if (param1 < var2_int) {
             stackIn_3_0 = null;
             return (rm[]) (stackIn_3_0);
           }
-          var3 = param0.e(12, (byte) -112);
+          var3 = param0.readBits(12, (byte) -112);
           var4 = new rm[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (BitPacketBuffer.a(100, param0)) {
               var6 = new rm();
-              param0.e(24, (byte) -112);
-              param0.e(24, (byte) -112);
-              var6.field_j = param0.e(24, (byte) -112);
-              param0.e(9, (byte) -112);
-              param0.e(12, (byte) -112);
-              param0.e(12, (byte) -112);
-              param0.e(12, (byte) -112);
+              param0.readBits(24, (byte) -112);
+              param0.readBits(24, (byte) -112);
+              var6.field_j = param0.readBits(24, (byte) -112);
+              param0.readBits(9, (byte) -112);
+              param0.readBits(12, (byte) -112);
+              param0.readBits(12, (byte) -112);
+              param0.readBits(12, (byte) -112);
               var4[var5] = var6;
             } else {
-              var6_int = param0.e(rn.a((byte) -127, -1 + var5), (byte) -112);
+              var6_int = param0.readBits(rn.a((byte) -127, -1 + var5), (byte) -112);
               var4[var5] = var4[var6_int];
             }
           }

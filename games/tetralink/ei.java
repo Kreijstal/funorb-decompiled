@@ -347,7 +347,7 @@ final class ei {
           var6Lifetime2 = stackIn_79_0;
           stackIn_82_0 = (lb.field_R > 0) ? 256 : 128;
           var7Lifetime1 = stackIn_82_0;
-          var8Lifetime1 = 2 + oj.field_a.field_z - 20;
+          var8Lifetime1 = 2 + IsaacCipher.field_a.field_z - 20;
           for (var9Lifetime1 = 0; 18 > var9Lifetime1; var9Lifetime1++) {
             SoftwareRasterizer.e(0, var8Lifetime1 + var9Lifetime1, (int)ClientException.field_g + var9Lifetime1 / 2, var5Lifetime2, 128);
             SoftwareRasterizer.e((int)ClientException.field_g + var9Lifetime1 / 2, var8Lifetime1 + var9Lifetime1, 2, 16777215, 128);
@@ -355,7 +355,7 @@ final class ei {
           for (var9Lifetime1Lifetime1 = 0; var9Lifetime1Lifetime1 < 2; var9Lifetime1Lifetime1++) {
             SoftwareRasterizer.e(0, -var9Lifetime1Lifetime1 + (-1 + var8Lifetime1), -(var9Lifetime1Lifetime1 / 2) + ((int)ClientException.field_g + 1), 16777215, 128);
           }
-          go.field_g.b(da.field_i, -2 + ((int)ClientException.field_g - 1), oj.field_a.field_z - 2, var6Lifetime2, -1, var7Lifetime1);
+          go.field_g.b(da.field_i, -2 + ((int)ClientException.field_g - 1), IsaacCipher.field_a.field_z - 2, var6Lifetime2, -1, var7Lifetime1);
         }
     }
 
@@ -404,7 +404,7 @@ final class ei {
         int var12Lifetime1;
         var13 = TetraLink.field_J;
         if (!param5 &&
-          oj.field_a.field_z >= a.field_a) {
+          IsaacCipher.field_a.field_z >= a.field_a) {
           if (tm.field_t == 0) {
             if (param3) {
               this.field_l = a.field_a / 18;
@@ -414,7 +414,7 @@ final class ei {
             }
             if (this.field_b &&
               a.field_a != -1) {
-              var11 = -oj.field_a.field_z + (a.field_a + 16);
+              var11 = -IsaacCipher.field_a.field_z + (a.field_a + 16);
               if (var11 > 0 &&
                 var11 <= 16 &&
                 (float)aa.field_Nb < ClientException.field_g) {
@@ -431,7 +431,7 @@ final class ei {
               this.field_l = -1;
             }
             if (this.field_b) {
-              var11 = -oj.field_a.field_z + li.field_o + 16;
+              var11 = -IsaacCipher.field_a.field_z + li.field_o + 16;
               if (0 < var11 &&
                 var11 <= 16 &&
                 (float)ci.field_B < ClientException.field_g) {
@@ -930,7 +930,7 @@ final class ei {
         if (param0 <= 39) {
           field_h = (String) null;
         }
-        var2.f(param1, (byte) -92);
+        var2.writeCipheredByte(param1, (byte) -92);
         var2.a(1, false);
         var2.a(2, false);
     }
@@ -950,7 +950,7 @@ final class ei {
             }
           }
         } else {
-          nd.field_Lb.f(60, (byte) -92);
+          nd.field_Lb.writeCipheredByte(60, (byte) -92);
         }
     }
 
@@ -1248,7 +1248,7 @@ final class ei {
           this.field_r = -1;
           this.field_f = -1;
         } else {
-          nd.field_Lb.f(61, (byte) -92);
+          nd.field_Lb.writeCipheredByte(61, (byte) -92);
         }
         if (param0 != -1) {
           this.field_j = 122;
@@ -1349,7 +1349,7 @@ final class ei {
     }
 
     private final void a(int param0, int param1, boolean param2) {
-        nd.field_Lb.f(58, (byte) -92);
+        nd.field_Lb.writeCipheredByte(58, (byte) -92);
         nd.field_Lb.a(this.field_a.field_k, !param2 ? true : false);
         if (!param2) {
           this.c(-49);
@@ -1573,7 +1573,7 @@ final class ei {
         if (param0 != 0) {
           this.field_m = 46;
         }
-        nd.field_Lb.f(59, (byte) -92);
+        nd.field_Lb.writeCipheredByte(59, (byte) -92);
     }
 
     final void a(boolean param0, boolean param1) {

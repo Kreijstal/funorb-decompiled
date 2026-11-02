@@ -40,7 +40,7 @@ final class nl {
 
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
-        var2.f(param1, (byte) -92);
+        var2.writeCipheredByte(param1, (byte) -92);
         var2.a(2, false);
         if (param0 <= 55) {
           return;

@@ -29,10 +29,10 @@ final class bj {
             return;
           }
           lc.a((byte) 85);
-          oj.field_a.a(0, param0);
+          IsaacCipher.field_a.a(0, param0);
           if (null != bk.field_e) {
             if (cd.field_a) {
-              bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
+              bk.field_e.a(IsaacCipher.field_a.field_eb, param0, IsaacCipher.field_a.field_z, false);
             } else {
               bk.field_e = null;
             }

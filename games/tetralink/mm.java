@@ -196,7 +196,7 @@ final class mm extends um {
             return stackIn_21_0;
           }
           if (jd.a(var5, -6270, var7)) {
-            stackIn_25_0 = oj.field_f;
+            stackIn_25_0 = IsaacCipher.field_f;
             return stackIn_25_0;
           }
           if (mf.a((byte) -28, var7, var5)) {
@@ -206,7 +206,7 @@ final class mm extends um {
           if (!qa.a(16732, var5, var7)) {
             return ka.field_i;
           }
-          stackIn_32_0 = oj.field_f;
+          stackIn_32_0 = IsaacCipher.field_f;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

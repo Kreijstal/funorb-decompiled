@@ -250,21 +250,21 @@ final class ti {
           bd.field_g.field_kb = kf.a(true, bf.a((byte) -94, param4, "lobby", "dragbar_mouseover"));
           bd.field_g.field_pb = kf.a(true, bf.a((byte) -103, param4, "lobby", "dragbar_mouseheld"));
           bd.field_g.field_H = kf.a(true, bf.a((byte) -80, param4, "lobby", "dragbar_disabled"));
-          oj.field_j = new hl(0L, (hl) null);
-          oj.field_j.field_vb = ug.a(param4, (byte) -45, "upbutton", "lobby");
+          IsaacCipher.field_j = new hl(0L, (hl) null);
+          IsaacCipher.field_j.field_vb = ug.a(param4, (byte) -45, "upbutton", "lobby");
           if (param1 < 38) {
             var19 = (byte[]) null;
             ti.a((byte[]) null, (byte) -120, -19);
           }
-          oj.field_j.field_Ab = ug.a(param4, (byte) -45, "upbutton_mouseover", "lobby");
-          oj.field_j.field_sb = ug.a(param4, (byte) -45, "upbutton_mouseheld", "lobby");
-          oj.field_j.field_y = ug.a(param4, (byte) -45, "upbutton_disabled", "lobby");
+          IsaacCipher.field_j.field_Ab = ug.a(param4, (byte) -45, "upbutton_mouseover", "lobby");
+          IsaacCipher.field_j.field_sb = ug.a(param4, (byte) -45, "upbutton_mouseheld", "lobby");
+          IsaacCipher.field_j.field_y = ug.a(param4, (byte) -45, "upbutton_disabled", "lobby");
           bj.field_c = new hl(0L, (hl) null);
           bj.field_c.field_vb = ug.a(param4, (byte) -45, "downbutton", "lobby");
           bj.field_c.field_Ab = ug.a(param4, (byte) -45, "downbutton_mouseover", "lobby");
           bj.field_c.field_sb = ug.a(param4, (byte) -45, "downbutton_mouseheld", "lobby");
           bj.field_c.field_y = ug.a(param4, (byte) -45, "downbutton_disabled", "lobby");
-          qc.field_cb = new bl(0L, oj.field_j, bj.field_c, ak.field_a, bd.field_g);
+          qc.field_cb = new bl(0L, IsaacCipher.field_j, bj.field_c, ak.field_a, bd.field_g);
           nj.field_b = new ji(0L, (hl) null, cb.field_t, qc.field_cb, rb.field_Kb, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

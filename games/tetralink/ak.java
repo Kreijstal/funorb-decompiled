@@ -58,7 +58,7 @@ final class ak {
             }
             if (0 == nd.field_Lb.position &&
               (rj.field_n + 10000L) < k.a(0)) {
-              nd.field_Lb.f(param1, (byte) -92);
+              nd.field_Lb.writeCipheredByte(param1, (byte) -92);
             }
             if (nd.field_Lb.position > 0) {
               try {

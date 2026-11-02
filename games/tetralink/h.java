@@ -104,11 +104,11 @@ final class h {
     }
 
     final static void a(byte param0, boolean param1) {
-        oj.field_a.a(param1, 256);
+        IsaacCipher.field_a.a(param1, 256);
         int var3 = 72 % ((param0 - 58) / 42);
         lb var2 = bk.field_e;
         if (var2 != null) {
-          var2.a(oj.field_a.field_z, oj.field_a.field_eb, -23452);
+          var2.a(IsaacCipher.field_a.field_z, IsaacCipher.field_a.field_eb, -23452);
         }
     }
 

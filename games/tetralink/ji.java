@@ -134,7 +134,7 @@ final class ji extends hl {
           var8 = new BitPacketBuffer(param0.a("logo.fo3d", "", true));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -99);
-          var10.e(true);
+          var10.beginBitAccess(true);
           dh.field_n = NodeHashTableIterator.a(var10, 0);
           wa.field_f = new id[var3];
           da.field_b = new int[var3][];
@@ -144,7 +144,7 @@ final class ji extends hl {
           for (var4 = 0; var4 < var3; var4++) {
             wa.field_f[var4] = NodeHashTableIterator.a(param1 - 16484, var8);
           }
-          var10.i((byte) 123);
+          var10.endBitAccess((byte) 123);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

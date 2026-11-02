@@ -132,7 +132,7 @@ class ka extends hm {
               wh.field_c = 320.0 - wh.field_c;
             }
             ua.field_i = (double)(440 - (SoftwareRasterizer.field_e >> 1)) + 4.0 * (field_h[1] + (field_h[10] + (field_h[7] * var4 + field_h[4] * var2_double)) * var6);
-            if (oj.field_a.field_z > a.field_a) {
+            if (IsaacCipher.field_a.field_z > a.field_a) {
               if ((2 == ho.field_X ||
                 sn.field_a[81]) &&
                 (ab.field_T != -1 &&

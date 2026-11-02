@@ -83,7 +83,7 @@ final class q implements kg {
         int var5 = 0;
         BitPacketBuffer var4 = nd.field_Lb;
         int var5Lifetime1;
-        var4.f(param0, (byte) -92);
+        var4.writeCipheredByte(param0, (byte) -92);
         if (param1 == -118) {
           var4.position = var4.position + 1;
           var5 = var4.position;

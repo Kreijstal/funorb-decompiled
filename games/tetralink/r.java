@@ -34,7 +34,7 @@ final class r extends PcmStream {
         try {
           IntrusiveDequeCursor.a(0, NotificationToast.field_n, t.field_o, uf.field_g, u.field_b, sd.field_rb, tn.field_b, bk.field_i, param3, rh.field_N, NotificationToast.field_o, qc.field_cb);
           ec.field_n = bf.a((byte) -99, param0, "lobby", "chatfilter");
-          gk.field_a[0] = oj.field_h;
+          gk.field_a[0] = IsaacCipher.field_h;
           gk.field_a[2] = mk.field_f;
           gk.field_a[1] = am.field_a;
           db.a(param1, rn.field_e, 122);

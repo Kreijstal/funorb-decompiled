@@ -248,7 +248,7 @@ abstract class hn extends gn implements uc {
                 bf.field_n = kb.field_q.readUnsignedShort(127);
                 ua.field_a = new byte[bf.field_n];
                 for (var8 = 0; bf.field_n > var8; var8++) {
-                  ua.field_a[var8] = kb.field_q.readSignedByte(oj.a(param2, 1772090971));
+                  ua.field_a[var8] = kb.field_q.readSignedByte(IsaacCipher.a(param2, 1772090971));
                 }
               }
               ph.field_w = kb.field_q.readString((byte) 81);
@@ -286,11 +286,11 @@ abstract class hn extends gn implements uc {
               if (mb.field_C > 0) {
                 pg.field_m = true;
               }
-              nd.field_Lb.a(ai.field_e, (byte) 33);
+              nd.field_Lb.setCipherSeed(ai.field_e, (byte) 33);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ai.field_e[var8Lifetime1] = ai.field_e[var8Lifetime1] + 50;
               }
-              kb.field_q.a(ai.field_e, (byte) 33);
+              kb.field_q.setCipherSeed(ai.field_e, (byte) 33);
               stackIn_79_0 = ua.field_c;
               return stackIn_79_0;
             }

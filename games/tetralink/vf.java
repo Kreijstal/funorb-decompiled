@@ -472,7 +472,7 @@ final class vf {
                     return;
                   }
                   if (var2 == 23) {
-                    oj.field_c = ((PacketBuffer) ((Object) var1)).readLong(255);
+                    IsaacCipher.field_c = ((PacketBuffer) ((Object) var1)).readLong(255);
                     return;
                   }
                   fk.a(-126, (Throwable) null, "L1: " + hc.a(false));

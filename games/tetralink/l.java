@@ -376,7 +376,7 @@ final class l {
 
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
-        var2.f(param1, (byte) -92);
+        var2.writeCipheredByte(param1, (byte) -92);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.a(2, false);

@@ -222,7 +222,7 @@ final class el extends hl {
           var3 = var2 - th.field_g * th.field_g;
           param1 = param1 + var3 * (-param1 + te.field_P) / var2;
         }
-        oj.field_a.a((byte) -86, 640, param1, 120, vi.field_d);
+        IsaacCipher.field_a.a((byte) -86, 640, param1, 120, vi.field_d);
         qh.a(param0, eh.field_w, 640, te.field_P - 24, 1000000, fn.field_Q, 0);
     }
 

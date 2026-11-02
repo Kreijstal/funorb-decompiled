@@ -74,7 +74,7 @@ final class mi extends hl {
 
     final static void a(int param0, int param1, int param2) {
         BitPacketBuffer var3 = nd.field_Lb;
-        var3.f(param2, (byte) -92);
+        var3.writeCipheredByte(param2, (byte) -92);
         var3.a(param0, false);
         var3.a(10, false);
         var3.b(param1, false);

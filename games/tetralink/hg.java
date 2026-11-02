@@ -235,7 +235,7 @@ final class hg {
                           km.field_o[var9] = (byte) 0;
                         }
                       } else {
-                        km.field_o[var7 / 8] = (byte)oj.a((int) km.field_o[var7 / 8], 1 << pl.a(var7, 7));
+                        km.field_o[var7 / 8] = (byte)IsaacCipher.a((int) km.field_o[var7 / 8], 1 << pl.a(var7, 7));
                       }
                     }
                   } else {
@@ -469,7 +469,7 @@ final class hg {
                       lo.field_a[var18 / 8] = (byte)pl.a((int) lo.field_a[var18 / 8], ~(1 << pl.a(7, var18)));
                     }
                   } else {
-                    lo.field_a[(var9 + var6Lifetime4) / 8] = (byte)oj.a((int) lo.field_a[(var9 + var6Lifetime4) / 8], 1 << pl.a(var6Lifetime4 + var9, 7));
+                    lo.field_a[(var9 + var6Lifetime4) / 8] = (byte)IsaacCipher.a((int) lo.field_a[(var9 + var6Lifetime4) / 8], 1 << pl.a(var6Lifetime4 + var9, 7));
                   }
                 }
               }

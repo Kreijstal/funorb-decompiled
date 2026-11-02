@@ -671,7 +671,7 @@ final class g extends PcmStream {
           }
           nd.field_Nb = param2;
           var4 = nd.field_Lb;
-          var4.f(param0, (byte) -92);
+          var4.writeCipheredByte(param0, (byte) -92);
           var4.a(3, false);
           var4.a(11, false);
           var4.b(param2, false);
@@ -683,7 +683,7 @@ final class g extends PcmStream {
 
     final static void e(int param0, int param1, int param2) {
         BitPacketBuffer var3 = nd.field_Lb;
-        var3.f(param2, (byte) -92);
+        var3.writeCipheredByte(param2, (byte) -92);
         var3.a(3, false);
         var3.a(9, false);
         var3.b(param0, false);

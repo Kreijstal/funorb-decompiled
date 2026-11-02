@@ -19,7 +19,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         tb.field_j.a(param0, false);
         tb.field_j.b(param2, false);
         tb.field_j.a(ki.field_c, jg.field_c, -25035);
-        nd.field_Lb.f(18, (byte) -92);
+        nd.field_Lb.writeCipheredByte(18, (byte) -92);
         int fieldTemp$0 = nd.field_Lb.position + 1;
         nd.field_Lb.position = nd.field_Lb.position + 1;
         int var4 = fieldTemp$0;
@@ -63,7 +63,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static void a(int param0, int param1, long param2) {
         BitPacketBuffer var4 = nd.field_Lb;
-        var4.f(param1, (byte) -92);
+        var4.writeCipheredByte(param1, (byte) -92);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         int var6 = 16 % ((param0 + 59) / 54);

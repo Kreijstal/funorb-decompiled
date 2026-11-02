@@ -75,13 +75,13 @@ abstract class oi {
     final static void a(byte param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
         if (param0 == 126) {
-          var2.f(param1, (byte) -92);
+          var2.writeCipheredByte(param1, (byte) -92);
           var2.a(1, false);
           var2.a(3, false);
           return;
         }
         field_n = (int[]) null;
-        var2.f(param1, (byte) -92);
+        var2.writeCipheredByte(param1, (byte) -92);
         var2.a(1, false);
         var2.a(3, false);
     }

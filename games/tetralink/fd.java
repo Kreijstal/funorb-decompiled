@@ -37,7 +37,7 @@ final class fd extends ll {
         BitPacketBuffer var3 = null;
         try {
           var3 = nd.field_Lb;
-          var3.f(param1, (byte) -92);
+          var3.writeCipheredByte(param1, (byte) -92);
           int var4 = 76 % ((12 - param0) / 62);
           var3.a(param2.field_n, false);
           var3.a(param2.field_q, false);

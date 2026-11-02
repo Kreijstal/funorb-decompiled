@@ -108,7 +108,7 @@ final class cc implements kg {
         RuntimeException var4 = null;
         var8 = TetraLink.field_J;
         try {
-          var4_int = param1.e(param2, (byte) -112);
+          var4_int = param1.readBits(param2, (byte) -112);
           if (0 == var4_int) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -117,11 +117,11 @@ final class cc implements kg {
             var4_int != param0.length) {
             param0 = new short[var4_int];
           }
-          var5 = param1.e(4, (byte) -112);
-          var6 = (short)param1.e(16, (byte) -112);
+          var5 = param1.readBits(4, (byte) -112);
+          var6 = (short)param1.readBits(16, (byte) -112);
           if (param3 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)(var6 + param1.e(var5, (byte) -112));
+              param0[var7] = (short)(var6 + param1.readBits(var5, (byte) -112));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

@@ -199,7 +199,7 @@ class fk extends ae {
           return false;
         }
         if (param2 >= 1 &&
-          oj.a(param3, param0, 10121) >= param2) {
+          IsaacCipher.a(param3, param0, 10121) >= param2) {
           if (param1 != -40) {
             field_R = (String) null;
           }

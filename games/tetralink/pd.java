@@ -123,7 +123,7 @@ final class pd extends th {
                   this.field_s.a(this.field_q.field_K.position, var6, this.field_q.field_K.payload, 0);
                   if (0 != this.field_n) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_q.field_K.payload[var7 + this.field_q.field_K.position] = (byte)oj.a((int) this.field_q.field_K.payload[var7 + this.field_q.field_K.position], (int) this.field_n);
+                      this.field_q.field_K.payload[var7 + this.field_q.field_K.position] = (byte)IsaacCipher.a((int) this.field_q.field_K.payload[var7 + this.field_q.field_K.position], (int) this.field_n);
                     }
                   }
                   this.field_q.field_K.position = this.field_q.field_K.position + var6;
@@ -145,7 +145,7 @@ final class pd extends th {
                   this.field_s.a(this.field_m.position, var5, this.field_m.payload, 0);
                   if (this.field_n != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_m.payload[this.field_m.position + var6] = (byte)oj.a((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_n);
+                      this.field_m.payload[this.field_m.position + var6] = (byte)IsaacCipher.a((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_n);
                     }
                   }
                   this.field_m.position = this.field_m.position + var5;

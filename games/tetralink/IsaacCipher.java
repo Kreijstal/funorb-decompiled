@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj {
+final class IsaacCipher {
     private int[] field_d;
     private int[] field_g;
     static hl field_a;
@@ -129,12 +129,12 @@ final class oj {
             param4[var6] = var7;
             param1[param3] = param1[var6];
             param1[var6] = var8;
-            oj.a(param0, param1, (byte) -63, var6 - 1, param4);
-            oj.a(1 + var6, param1, (byte) -63, param3, param4);
+            IsaacCipher.a(param0, param1, (byte) -63, var6 - 1, param4);
+            IsaacCipher.a(1 + var6, param1, (byte) -63, param3, param4);
           }
           if (param2 != -63) {
             var14 = (String) null;
-            oj.a(126, (String) null);
+            IsaacCipher.a(126, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class oj {
         }
     }
 
-    final int c(int param0) {
+    final int nextInt(int param0) {
         if (param0 == this.field_e) {
           this.a(-27169);
           this.field_e = 256;
@@ -197,7 +197,7 @@ final class oj {
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) -99);
           if (param0 > -95) {
-            oj.b((byte) -78);
+            IsaacCipher.b((byte) -78);
           }
           var3 = (v) (tc.field_p.c(false));
           while (var3 != null) {
@@ -321,7 +321,7 @@ final class oj {
         int var5;
         var5 = TetraLink.field_J;
         if (param0 != -27169) {
-          this.c(54);
+          this.nextInt(54);
         }
         int fieldTemp$0 = this.field_k + 1;
         this.field_k = this.field_k + 1;
@@ -358,7 +358,7 @@ final class oj {
         int var2Lifetime2;
         if (param0 != 3) {
           String var12 = (String) null;
-          oj.a((el) null, (byte) -74, true, (String) null);
+          IsaacCipher.a((el) null, (byte) -74, true, (String) null);
         }
         int var4 = -1640531527;
         int var7 = -1640531527;
@@ -482,7 +482,7 @@ final class oj {
         this.field_e = 256;
     }
 
-    oj(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_d = new int[256];
@@ -506,7 +506,7 @@ final class oj {
 
     final static int a(int param0, int param1, int param2) {
         if (param2 != 10121) {
-          oj.a(-107, -60, -22);
+          IsaacCipher.a(-107, -60, -22);
         }
         if (param0 == 1 &&
           bn.a(param2 ^ 10120, param1)) {

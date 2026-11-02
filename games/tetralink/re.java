@@ -33,14 +33,14 @@ final class re extends ae {
         if (!param0) {
           re.e((byte) -39);
           if (ImageProducerRasterBuffer.c(-14688)) {
-            nd.field_Lb.f(1, (byte) -92);
+            nd.field_Lb.writeCipheredByte(1, (byte) -92);
             ak.a((byte) -86, 0);
           }
           mk.a(false);
           return;
         }
         if (ImageProducerRasterBuffer.c(-14688)) {
-          nd.field_Lb.f(1, (byte) -92);
+          nd.field_Lb.writeCipheredByte(1, (byte) -92);
           ak.a((byte) -86, 0);
         }
         mk.a(false);

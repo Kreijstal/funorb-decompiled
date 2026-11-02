@@ -116,7 +116,7 @@ final class gi {
                 }
                 var2 = vj.a(-96, "mu_chat_on");
                 if (var2 != null) {
-                  oj.field_h = ud.a(var2, -92);
+                  IsaacCipher.field_h = ud.a(var2, -92);
                 }
                 var2 = vj.a(-96, "mu_chat_friends");
                 if (var2 != null) {
@@ -1342,11 +1342,11 @@ final class gi {
                 }
                 var2 = vj.a(-78, "monthnames,3");
                 if (var2 != null) {
-                  hj.field_c[3] = ud.a(var2, oj.a(param0, -73));
+                  hj.field_c[3] = ud.a(var2, IsaacCipher.a(param0, -73));
                 }
                 var2 = vj.a(-74, "monthnames,4");
                 if (null != var2) {
-                  hj.field_c[4] = ud.a(var2, oj.a(param0, -119));
+                  hj.field_c[4] = ud.a(var2, IsaacCipher.a(param0, -119));
                 }
                 var2 = vj.a(param0 ^ -86, "monthnames,5");
                 if (var2 != null) {
@@ -1366,7 +1366,7 @@ final class gi {
                 }
                 var2 = vj.a(-96, "monthnames,9");
                 if (var2 != null) {
-                  hj.field_c[9] = ud.a(var2, oj.a(param0, -47));
+                  hj.field_c[9] = ud.a(var2, IsaacCipher.a(param0, -47));
                 }
                 var2 = vj.a(param0 - 119, "monthnames,10");
                 if (var2 != null) {
@@ -1374,7 +1374,7 @@ final class gi {
                 }
                 var2 = vj.a(-112, "monthnames,11");
                 if (var2 != null) {
-                  hj.field_c[11] = ud.a(var2, oj.a(param0, -91));
+                  hj.field_c[11] = ud.a(var2, IsaacCipher.a(param0, -91));
                 }
                 var2 = vj.a(param0 ^ -107, "create_welcome");
                 if (var2 != null) {
@@ -1613,7 +1613,7 @@ final class gi {
                 }
                 var2 = vj.a(-116, "create_alert_passcontainsname");
                 if (var2 != null) {
-                  oj.field_f = ud.a(var2, param0 - 111);
+                  IsaacCipher.field_f = ud.a(var2, param0 - 111);
                 }
                 var2 = vj.a(-128, "create_alert_passcontainsemail");
                 if (var2 != null) {
@@ -2877,7 +2877,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 ^ -122, "mustlogin3,2");
                 if (var2 != null) {
-                  e.field_b[2] = ud.a(var2, oj.a(param0, -74));
+                  e.field_b[2] = ud.a(var2, IsaacCipher.a(param0, -74));
                 }
                 var2 = vj.a(-78, "mustlogin3,3");
                 if (var2 != null) {
@@ -2893,7 +2893,7 @@ final class gi {
                 }
                 var2 = vj.a(-86, "mustlogin3,6");
                 if (null != var2) {
-                  e.field_b[6] = ud.a(var2, oj.a(param0, -49));
+                  e.field_b[6] = ud.a(var2, IsaacCipher.a(param0, -49));
                 }
                 var2 = vj.a(-107, "mustlogin3,7");
                 if (var2 != null) {
@@ -2917,7 +2917,7 @@ final class gi {
                 }
                 var2 = vj.a(-101, "mustlogin4,4");
                 if (var2 != null) {
-                  mm.field_x[4] = ud.a(var2, oj.a(param0, -108));
+                  mm.field_x[4] = ud.a(var2, IsaacCipher.a(param0, -108));
                 }
                 var2 = vj.a(-82, "mustlogin4,5");
                 if (null != var2) {
@@ -2949,15 +2949,15 @@ final class gi {
                 }
                 var2 = vj.a(-126, "mustlogin_alternate,4");
                 if (null != var2) {
-                  pj.field_g[4] = ud.a(var2, oj.a(param0, -61));
+                  pj.field_g[4] = ud.a(var2, IsaacCipher.a(param0, -61));
                 }
                 var2 = vj.a(-119, "mustlogin_alternate,5");
                 if (null != var2) {
-                  pj.field_g[5] = ud.a(var2, oj.a(param0, -80));
+                  pj.field_g[5] = ud.a(var2, IsaacCipher.a(param0, -80));
                 }
                 var2 = vj.a(-88, "mustlogin_alternate,6");
                 if (var2 != null) {
-                  pj.field_g[6] = ud.a(var2, oj.a(param0, -84));
+                  pj.field_g[6] = ud.a(var2, IsaacCipher.a(param0, -84));
                 }
                 var2 = vj.a(param0 ^ -117, "mustlogin_alternate,7");
                 if (var2 != null) {
@@ -2969,7 +2969,7 @@ final class gi {
                 }
                 var2 = vj.a(-107, "subscription_cost_monthly,1");
                 if (var2 != null) {
-                  tm.field_r[1] = ud.a(var2, oj.a(param0, -83));
+                  tm.field_r[1] = ud.a(var2, IsaacCipher.a(param0, -83));
                 }
                 var2 = vj.a(-120, "subscription_cost_monthly,2");
                 if (null != var2) {
@@ -2985,7 +2985,7 @@ final class gi {
                 }
                 var2 = vj.a(-121, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  tm.field_r[5] = ud.a(var2, oj.a(param0, -49));
+                  tm.field_r[5] = ud.a(var2, IsaacCipher.a(param0, -49));
                 }
                 var2 = vj.a(param0 - 112, "subscription_cost_monthly,6");
                 if (null != var2) {
@@ -3013,7 +3013,7 @@ final class gi {
                 }
                 var2 = vj.a(-121, "subscription_cost_monthly,12");
                 if (null != var2) {
-                  tm.field_r[12] = ud.a(var2, oj.a(param0, -37));
+                  tm.field_r[12] = ud.a(var2, IsaacCipher.a(param0, -37));
                 }
                 var2 = vj.a(-85, "sentence_separator");
                 if (null != var2) {

@@ -53,7 +53,7 @@ final class eo {
         try {
           var8 = nd.field_Lb;
           BitPacketBuffer var6 = var8;
-          var8.f(param2, (byte) -92);
+          var8.writeCipheredByte(param2, (byte) -92);
           var8.position = var8.position + 1;
           var7 = var8.position;
           var8.a(param4, false);

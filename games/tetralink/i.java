@@ -102,7 +102,7 @@ final class i {
 
     final static void a(boolean param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
-        var2.f(param1, (byte) -92);
+        var2.writeCipheredByte(param1, (byte) -92);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.a(5, !param0 ? true : false);
@@ -435,7 +435,7 @@ final class i {
     final static void a(int param0, eh param1, int param2) {
         int var4 = 0;
         BitPacketBuffer var5 = nd.field_Lb;
-        var5.f(param0, (byte) -92);
+        var5.writeCipheredByte(param0, (byte) -92);
         if (param2 != 0) {
           return;
         }

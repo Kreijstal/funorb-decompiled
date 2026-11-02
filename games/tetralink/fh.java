@@ -159,7 +159,7 @@ final class fh {
           }
           if (2 == SecondaryNodeDequeIterator.field_d &&
             !k.a(true)) {
-            if (oj.a(1, qj.field_a)) {
+            if (IsaacCipher.a(1, qj.field_a)) {
               var3 = sk.a(new String[]{ka.field_m}, sb.field_c, 119);
               if (var11 != 0) {
                 var3 = sk.a(new String[]{ka.field_m}, tl.field_Z, 119);

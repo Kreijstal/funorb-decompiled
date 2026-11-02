@@ -296,9 +296,9 @@ final class IntrusiveDequeCursor {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          oj.field_a = new hl(0L, param4);
+          IsaacCipher.field_a = new hl(0L, param4);
           IterableNodeHashTable.field_f = new hl(0L, param10);
-          oj.field_a.a((byte) 73, IterableNodeHashTable.field_f);
+          IsaacCipher.field_a.a((byte) 73, IterableNodeHashTable.field_f);
           var17 = new hl(0L, (hl) null);
           var17.field_fb = new IntrusiveDeque();
           id.field_M = new rb(0L, var17, param5, param11);
@@ -351,7 +351,7 @@ final class IntrusiveDequeCursor {
                 nj.field_f[var18].a((byte) 14, fh.field_f[var18]);
                 nj.field_f[var18].a((byte) -106, og.field_o[var18]);
                 nj.field_f[var18].c((byte) -96);
-                oj.field_a.a((byte) -111, nj.field_f[var18]);
+                IsaacCipher.field_a.a((byte) -111, nj.field_f[var18]);
                 v.field_r = v.field_r + 1;
               }
               var18++;
@@ -362,7 +362,7 @@ final class IntrusiveDequeCursor {
           if (decompiledNaturalLoopExit0) {
             nc.field_e = new hl(0L, param2);
             nc.field_e.field_jb = bd.field_f;
-            oj.field_a.a((byte) 47, nc.field_e);
+            IsaacCipher.field_a.a((byte) 47, nc.field_e);
             stackIn_28_0 = r.d(0) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&

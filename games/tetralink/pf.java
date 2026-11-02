@@ -102,7 +102,7 @@ final class pf {
     final void a(boolean param0) {
         String var3 = null;
         if (null != this.field_b &&
-          ~this.field_e != ~oj.field_c) {
+          ~this.field_e != ~IsaacCipher.field_c) {
           var3 = this.b(2);
           String var2 = var3;
           this.field_j.a(sk.a(new String[]{var3}, qm.field_a, 125), 1, 17);
@@ -312,7 +312,7 @@ final class pf {
           pf.a((String) null, -98, -98, 115L, (byte) 47);
           return;
         }
-        if (oj.field_c == this.field_e) {
+        if (IsaacCipher.field_c == this.field_e) {
           if (param0 == 19) {
             return;
           }
@@ -411,7 +411,7 @@ final class pf {
             return;
           }
           if (this.field_b != null) {
-            if (oj.field_c == this.field_e &&
+            if (IsaacCipher.field_c == this.field_e &&
               param0 != 2) {
               return;
             }

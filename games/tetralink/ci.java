@@ -244,7 +244,7 @@ final class ci extends mf {
               var25_int = 0;
               if (null != qb.field_N &&
                 s.b(63) &&
-                ~oj.field_c != ~var12.field_Nb) {
+                ~IsaacCipher.field_c != ~var12.field_Nb) {
                 if (null != var12.field_ac.field_jb) {
                   var26 = var12.field_ac.f(-19) + fn.field_Q * 2;
                   var12.field_ac.a((byte) -104, var26, var19, GameKeyHandler.field_d, var25_int);
@@ -326,7 +326,7 @@ final class ci extends mf {
                 continue;
               }
               var24Lifetime2 = null;
-              if (var12.field_Nb != oj.field_c) {
+              if (var12.field_Nb != IsaacCipher.field_c) {
                 if (var5_int != 0 &&
                   !var12.field_Tb) {
                   var24Lifetime2 = sk.a(new String[]{var20}, lh.field_w, 124);

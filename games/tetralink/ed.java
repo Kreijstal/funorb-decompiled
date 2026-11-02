@@ -117,7 +117,7 @@ final class ed extends en {
         }
         var3 = stackIn_5_0;
         if (var3 != 0) {
-          stackIn_8_0 = oj.field_a.field_z;
+          stackIn_8_0 = IsaacCipher.field_a.field_z;
         } else {
           stackIn_8_0 = 480;
         }

@@ -75,7 +75,7 @@ final class tb {
 
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
-        var2.f(param0, (byte) -92);
+        var2.writeCipheredByte(param0, (byte) -92);
         var2.a(1, false);
         if (param1 != -15289) {
           field_j = (PacketBuffer) null;

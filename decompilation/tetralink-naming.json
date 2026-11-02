@@ -412,6 +412,14 @@
       "renamedSymbol": "C:Sprite"
     },
     {
+      "symbol": "C:oj",
+      "originalName": "oj",
+      "to": "IsaacCipher",
+      "evidence": "Seeded from an int array; c(int) yields the next keystream value added to opcode bytes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IsaacCipher"
+    },
+    {
       "symbol": "C:pk",
       "originalName": "pk",
       "to": "WidgetContainer",
@@ -564,6 +572,22 @@
       "renamedSymbol": "F:TetraLink.notificationQueue:LIntrusiveDeque;"
     },
     {
+      "symbol": "F:bc.field_w:Loj;",
+      "originalName": "field_w",
+      "to": "cipher",
+      "evidence": "Opcode reads subtract and writes add the next value of this cipher.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:BitPacketBuffer.cipher:LIsaacCipher;"
+    },
+    {
+      "symbol": "F:bc.field_y:I",
+      "originalName": "field_y",
+      "to": "bitPosition",
+      "evidence": "Bit reads index the payload by this bit cursor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:BitPacketBuffer.bitPosition:I"
+    },
+    {
       "symbol": "F:bh.field_t:I",
       "originalName": "field_t",
       "to": "position",
@@ -706,6 +730,54 @@
       "evidence": "Assigns archives 3 through 16 to static holders.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TetraLink.loadArchives(I)V"
+    },
+    {
+      "symbol": "M:bc.a([IB)V",
+      "originalName": "a",
+      "to": "setCipherSeed",
+      "evidence": "Creates the IsaacCipher from the seed array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.setCipherSeed([IB)V"
+    },
+    {
+      "symbol": "M:bc.d(Z)I",
+      "originalName": "d",
+      "to": "readCipheredByte",
+      "evidence": "Reads a byte minus the next cipher value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.readCipheredByte(Z)I"
+    },
+    {
+      "symbol": "M:bc.e(IB)I",
+      "originalName": "e",
+      "to": "readBits",
+      "evidence": "Reads a variable number of bits at the bit cursor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.readBits(IB)I"
+    },
+    {
+      "symbol": "M:bc.e(Z)V",
+      "originalName": "e",
+      "to": "beginBitAccess",
+      "evidence": "Converts the byte cursor into a bit cursor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.beginBitAccess(Z)V"
+    },
+    {
+      "symbol": "M:bc.f(IB)V",
+      "originalName": "f",
+      "to": "writeCipheredByte",
+      "evidence": "Writes a byte plus the next cipher value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.writeCipheredByte(IB)V"
+    },
+    {
+      "symbol": "M:bc.i(B)V",
+      "originalName": "i",
+      "to": "endBitAccess",
+      "evidence": "Rounds the bit cursor up into a byte cursor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitPacketBuffer.endBitAccess(B)V"
     },
     {
       "symbol": "M:bg.a(I)V",
@@ -946,6 +1018,14 @@
       "evidence": "IntrusiveNode.unlink splices the node out of its neighbours and clears both links.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveNode.unlink(Z)V"
+    },
+    {
+      "symbol": "M:oj.c(I)I",
+      "originalName": "c",
+      "to": "nextInt",
+      "evidence": "Returns the next generated word of the cipher.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacCipher.nextInt(I)I"
     }
   ],
   "symbols": [
@@ -3756,9 +3836,9 @@
     },
     {
       "symbol": "C:oj",
-      "renamedSymbol": "C:oj",
+      "renamedSymbol": "C:IsaacCipher",
       "originalName": "oj",
-      "renamedName": "oj",
+      "renamedName": "IsaacCipher",
       "declaration": {
         "file": "oj.java",
         "start": 50,
@@ -7067,9 +7147,9 @@
     },
     {
       "symbol": "F:bc.field_w:Loj;",
-      "renamedSymbol": "F:BitPacketBuffer.field_w:Loj;",
+      "renamedSymbol": "F:BitPacketBuffer.cipher:LIsaacCipher;",
       "originalName": "field_w",
-      "renamedName": "field_w",
+      "renamedName": "cipher",
       "declaration": {
         "file": "bc.java",
         "start": 128,
@@ -7089,9 +7169,9 @@
     },
     {
       "symbol": "F:bc.field_y:I",
-      "renamedSymbol": "F:BitPacketBuffer.field_y:I",
+      "renamedSymbol": "F:BitPacketBuffer.bitPosition:I",
       "originalName": "field_y",
-      "renamedName": "field_y",
+      "renamedName": "bitPosition",
       "declaration": {
         "file": "bc.java",
         "start": 104,
@@ -28880,7 +28960,7 @@
     },
     {
       "symbol": "F:oj.field_a:Lhl;",
-      "renamedSymbol": "F:oj.field_a:Lhl;",
+      "renamedSymbol": "F:IsaacCipher.field_a:Lhl;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -28891,7 +28971,7 @@
     },
     {
       "symbol": "F:oj.field_b:I",
-      "renamedSymbol": "F:oj.field_b:I",
+      "renamedSymbol": "F:IsaacCipher.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -28902,7 +28982,7 @@
     },
     {
       "symbol": "F:oj.field_c:J",
-      "renamedSymbol": "F:oj.field_c:J",
+      "renamedSymbol": "F:IsaacCipher.field_c:J",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -28913,7 +28993,7 @@
     },
     {
       "symbol": "F:oj.field_d:[I",
-      "renamedSymbol": "F:oj.field_d:[I",
+      "renamedSymbol": "F:IsaacCipher.field_d:[I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -28924,7 +29004,7 @@
     },
     {
       "symbol": "F:oj.field_e:I",
-      "renamedSymbol": "F:oj.field_e:I",
+      "renamedSymbol": "F:IsaacCipher.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -28935,7 +29015,7 @@
     },
     {
       "symbol": "F:oj.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:oj.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:IsaacCipher.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -28946,7 +29026,7 @@
     },
     {
       "symbol": "F:oj.field_g:[I",
-      "renamedSymbol": "F:oj.field_g:[I",
+      "renamedSymbol": "F:IsaacCipher.field_g:[I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -28957,7 +29037,7 @@
     },
     {
       "symbol": "F:oj.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:oj.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:IsaacCipher.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -28968,7 +29048,7 @@
     },
     {
       "symbol": "F:oj.field_i:I",
-      "renamedSymbol": "F:oj.field_i:I",
+      "renamedSymbol": "F:IsaacCipher.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -28979,7 +29059,7 @@
     },
     {
       "symbol": "F:oj.field_j:Lhl;",
-      "renamedSymbol": "F:oj.field_j:Lhl;",
+      "renamedSymbol": "F:IsaacCipher.field_j:Lhl;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -28990,7 +29070,7 @@
     },
     {
       "symbol": "F:oj.field_k:I",
-      "renamedSymbol": "F:oj.field_k:I",
+      "renamedSymbol": "F:IsaacCipher.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -51628,7 +51708,7 @@
     },
     {
       "symbol": "L:bc.a([IB)V#0",
-      "renamedSymbol": "L:BitPacketBuffer.a([IB)V#0",
+      "renamedSymbol": "L:BitPacketBuffer.setCipherSeed([IB)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -51639,7 +51719,7 @@
     },
     {
       "symbol": "L:bc.d(Z)I#0",
-      "renamedSymbol": "L:BitPacketBuffer.d(Z)I#0",
+      "renamedSymbol": "L:BitPacketBuffer.readCipheredByte(Z)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -51650,7 +51730,7 @@
     },
     {
       "symbol": "L:bc.d(Z)I#1",
-      "renamedSymbol": "L:BitPacketBuffer.d(Z)I#1",
+      "renamedSymbol": "L:BitPacketBuffer.readCipheredByte(Z)I#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -51661,7 +51741,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#0",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#0",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -51672,7 +51752,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#1",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#1",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -51683,7 +51763,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#2",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#2",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -51694,7 +51774,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#3",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#3",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -51705,7 +51785,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#4",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#4",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -51716,7 +51796,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#5",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#5",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -51727,7 +51807,7 @@
     },
     {
       "symbol": "L:bc.e(IB)I#6",
-      "renamedSymbol": "L:BitPacketBuffer.e(IB)I#6",
+      "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#6",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -51738,7 +51818,7 @@
     },
     {
       "symbol": "L:bc.f(IB)V#0",
-      "renamedSymbol": "L:BitPacketBuffer.f(IB)V#0",
+      "renamedSymbol": "L:BitPacketBuffer.writeCipheredByte(IB)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -51749,7 +51829,7 @@
     },
     {
       "symbol": "L:bc.f(IB)V#1",
-      "renamedSymbol": "L:BitPacketBuffer.f(IB)V#1",
+      "renamedSymbol": "L:BitPacketBuffer.writeCipheredByte(IB)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -51760,7 +51840,7 @@
     },
     {
       "symbol": "L:bc.i(B)V#0",
-      "renamedSymbol": "L:BitPacketBuffer.i(B)V#0",
+      "renamedSymbol": "L:BitPacketBuffer.endBitAccess(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -150232,7 +150312,7 @@
     },
     {
       "symbol": "L:oj.<init>([I)V#0",
-      "renamedSymbol": "L:oj.<init>([I)V#0",
+      "renamedSymbol": "L:IsaacCipher.<init>([I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -150243,7 +150323,7 @@
     },
     {
       "symbol": "L:oj.<init>([I)V#1",
-      "renamedSymbol": "L:oj.<init>([I)V#1",
+      "renamedSymbol": "L:IsaacCipher.<init>([I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -150254,7 +150334,7 @@
     },
     {
       "symbol": "L:oj.a(B)V#0",
-      "renamedSymbol": "L:oj.a(B)V#0",
+      "renamedSymbol": "L:IsaacCipher.a(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -150265,7 +150345,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#0",
-      "renamedSymbol": "L:oj.a(I)V#0",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -150276,7 +150356,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#1",
-      "renamedSymbol": "L:oj.a(I)V#1",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -150287,7 +150367,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#2",
-      "renamedSymbol": "L:oj.a(I)V#2",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -150298,7 +150378,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#3",
-      "renamedSymbol": "L:oj.a(I)V#3",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -150309,7 +150389,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#4",
-      "renamedSymbol": "L:oj.a(I)V#4",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -150320,7 +150400,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#5",
-      "renamedSymbol": "L:oj.a(I)V#5",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -150331,7 +150411,7 @@
     },
     {
       "symbol": "L:oj.a(I)V#6",
-      "renamedSymbol": "L:oj.a(I)V#6",
+      "renamedSymbol": "L:IsaacCipher.a(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -150342,7 +150422,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#0",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#0",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -150353,7 +150433,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#1",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#1",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -150364,7 +150444,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#2",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#2",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -150375,7 +150455,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#3",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#3",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -150386,7 +150466,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#4",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#4",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -150397,7 +150477,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#5",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#5",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -150408,7 +150488,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/lang/String;)Z#6",
-      "renamedSymbol": "L:oj.a(ILjava/lang/String;)Z#6",
+      "renamedSymbol": "L:IsaacCipher.a(ILjava/lang/String;)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150419,7 +150499,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#0",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#0",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -150430,7 +150510,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#1",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#1",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -150441,7 +150521,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#10",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#10",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -150452,7 +150532,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#11",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#11",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -150463,7 +150543,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#12",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#12",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -150474,7 +150554,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#13",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#13",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -150485,7 +150565,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#14",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#14",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -150496,7 +150576,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#15",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#15",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#15",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -150507,7 +150587,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#16",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#16",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#16",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -150518,7 +150598,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#17",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#17",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#17",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -150529,7 +150609,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#18",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#18",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150540,7 +150620,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#2",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#2",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#2",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -150551,7 +150631,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#3",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#3",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -150562,7 +150642,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#4",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#4",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#4",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -150573,7 +150653,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#5",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#5",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#5",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -150584,7 +150664,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#6",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#6",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#6",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -150595,7 +150675,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#7",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#7",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -150606,7 +150686,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#8",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#8",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#8",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -150617,7 +150697,7 @@
     },
     {
       "symbol": "L:oj.a(I[IBI[I)V#9",
-      "renamedSymbol": "L:oj.a(I[IBI[I)V#9",
+      "renamedSymbol": "L:IsaacCipher.a(I[IBI[I)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -150628,7 +150708,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#0",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#0",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#0",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -150639,7 +150719,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#1",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#1",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#1",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -150650,7 +150730,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#10",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#10",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -150661,7 +150741,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#11",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#11",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -150672,7 +150752,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#12",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#12",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -150683,7 +150763,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#13",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#13",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -150694,7 +150774,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#14",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#14",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -150705,7 +150785,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#15",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#15",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#15",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -150716,7 +150796,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#16",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#16",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150727,7 +150807,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#2",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#2",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#2",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -150738,7 +150818,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#3",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#3",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#3",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -150749,7 +150829,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#4",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#4",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#4",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -150760,7 +150840,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#5",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#5",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -150771,7 +150851,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#6",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#6",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -150782,7 +150862,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#7",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#7",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -150793,7 +150873,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#8",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#8",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -150804,7 +150884,7 @@
     },
     {
       "symbol": "L:oj.a(Lel;BZLjava/lang/String;)V#9",
-      "renamedSymbol": "L:oj.a(Lel;BZLjava/lang/String;)V#9",
+      "renamedSymbol": "L:IsaacCipher.a(Lel;BZLjava/lang/String;)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -150815,7 +150895,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#0",
-      "renamedSymbol": "L:oj.b(B)V#0",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -150826,7 +150906,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#1",
-      "renamedSymbol": "L:oj.b(B)V#1",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -150837,7 +150917,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#10",
-      "renamedSymbol": "L:oj.b(B)V#10",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -150848,7 +150928,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#11",
-      "renamedSymbol": "L:oj.b(B)V#11",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -150859,7 +150939,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#12",
-      "renamedSymbol": "L:oj.b(B)V#12",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -150870,7 +150950,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#13",
-      "renamedSymbol": "L:oj.b(B)V#13",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -150881,7 +150961,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#14",
-      "renamedSymbol": "L:oj.b(B)V#14",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -150892,7 +150972,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#15",
-      "renamedSymbol": "L:oj.b(B)V#15",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#15",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -150903,7 +150983,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#16",
-      "renamedSymbol": "L:oj.b(B)V#16",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#16",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -150914,7 +150994,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#17",
-      "renamedSymbol": "L:oj.b(B)V#17",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#17",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -150925,7 +151005,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#18",
-      "renamedSymbol": "L:oj.b(B)V#18",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#18",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -150936,7 +151016,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#19",
-      "renamedSymbol": "L:oj.b(B)V#19",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#19",
       "originalName": "var6_intLifetime1",
       "renamedName": "var6_intLifetime1",
       "declaration": {
@@ -150947,7 +151027,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#2",
-      "renamedSymbol": "L:oj.b(B)V#2",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -150958,7 +151038,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#20",
-      "renamedSymbol": "L:oj.b(B)V#20",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#20",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -150969,7 +151049,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#21",
-      "renamedSymbol": "L:oj.b(B)V#21",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#21",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -150980,7 +151060,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#22",
-      "renamedSymbol": "L:oj.b(B)V#22",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#22",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -150991,7 +151071,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#23",
-      "renamedSymbol": "L:oj.b(B)V#23",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#23",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -151002,7 +151082,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#3",
-      "renamedSymbol": "L:oj.b(B)V#3",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -151013,7 +151093,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#4",
-      "renamedSymbol": "L:oj.b(B)V#4",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -151024,7 +151104,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#5",
-      "renamedSymbol": "L:oj.b(B)V#5",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151035,7 +151115,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#6",
-      "renamedSymbol": "L:oj.b(B)V#6",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -151046,7 +151126,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#7",
-      "renamedSymbol": "L:oj.b(B)V#7",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -151057,7 +151137,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#8",
-      "renamedSymbol": "L:oj.b(B)V#8",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#8",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -151068,7 +151148,7 @@
     },
     {
       "symbol": "L:oj.b(B)V#9",
-      "renamedSymbol": "L:oj.b(B)V#9",
+      "renamedSymbol": "L:IsaacCipher.b(B)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -151079,7 +151159,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#0",
-      "renamedSymbol": "L:oj.b(I)V#0",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -151090,7 +151170,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#1",
-      "renamedSymbol": "L:oj.b(I)V#1",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -151101,7 +151181,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#10",
-      "renamedSymbol": "L:oj.b(I)V#10",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -151112,7 +151192,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#11",
-      "renamedSymbol": "L:oj.b(I)V#11",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -151123,7 +151203,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#12",
-      "renamedSymbol": "L:oj.b(I)V#12",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#12",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151134,7 +151214,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#2",
-      "renamedSymbol": "L:oj.b(I)V#2",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -151145,7 +151225,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#3",
-      "renamedSymbol": "L:oj.b(I)V#3",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#3",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -151156,7 +151236,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#4",
-      "renamedSymbol": "L:oj.b(I)V#4",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -151167,7 +151247,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#5",
-      "renamedSymbol": "L:oj.b(I)V#5",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -151178,7 +151258,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#6",
-      "renamedSymbol": "L:oj.b(I)V#6",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -151189,7 +151269,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#7",
-      "renamedSymbol": "L:oj.b(I)V#7",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -151200,7 +151280,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#8",
-      "renamedSymbol": "L:oj.b(I)V#8",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -151211,7 +151291,7 @@
     },
     {
       "symbol": "L:oj.b(I)V#9",
-      "renamedSymbol": "L:oj.b(I)V#9",
+      "renamedSymbol": "L:IsaacCipher.b(I)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -151222,7 +151302,7 @@
     },
     {
       "symbol": "L:oj.c(I)I#0",
-      "renamedSymbol": "L:oj.c(I)I#0",
+      "renamedSymbol": "L:IsaacCipher.nextInt(I)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -200645,9 +200725,9 @@
     },
     {
       "symbol": "M:bc.a([IB)V",
-      "renamedSymbol": "M:BitPacketBuffer.a([IB)V",
+      "renamedSymbol": "M:BitPacketBuffer.setCipherSeed([IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCipherSeed",
       "declaration": {
         "file": "bc.java",
         "start": 5153,
@@ -200656,9 +200736,9 @@
     },
     {
       "symbol": "M:bc.d(Z)I",
-      "renamedSymbol": "M:BitPacketBuffer.d(Z)I",
+      "renamedSymbol": "M:BitPacketBuffer.readCipheredByte(Z)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "readCipheredByte",
       "declaration": {
         "file": "bc.java",
         "start": 3293,
@@ -200667,9 +200747,9 @@
     },
     {
       "symbol": "M:bc.e(IB)I",
-      "renamedSymbol": "M:BitPacketBuffer.e(IB)I",
+      "renamedSymbol": "M:BitPacketBuffer.readBits(IB)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "readBits",
       "declaration": {
         "file": "bc.java",
         "start": 347,
@@ -200678,9 +200758,9 @@
     },
     {
       "symbol": "M:bc.e(Z)V",
-      "renamedSymbol": "M:BitPacketBuffer.e(Z)V",
+      "renamedSymbol": "M:BitPacketBuffer.beginBitAccess(Z)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "beginBitAccess",
       "declaration": {
         "file": "bc.java",
         "start": 207,
@@ -200689,9 +200769,9 @@
     },
     {
       "symbol": "M:bc.f(IB)V",
-      "renamedSymbol": "M:BitPacketBuffer.f(IB)V",
+      "renamedSymbol": "M:BitPacketBuffer.writeCipheredByte(IB)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "writeCipheredByte",
       "declaration": {
         "file": "bc.java",
         "start": 5524,
@@ -200700,9 +200780,9 @@
     },
     {
       "symbol": "M:bc.i(B)V",
-      "renamedSymbol": "M:BitPacketBuffer.i(B)V",
+      "renamedSymbol": "M:BitPacketBuffer.endBitAccess(B)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "endBitAccess",
       "declaration": {
         "file": "bc.java",
         "start": 3731,
@@ -219158,9 +219238,9 @@
     },
     {
       "symbol": "M:oj.<init>([I)V",
-      "renamedSymbol": "M:oj.<init>([I)V",
+      "renamedSymbol": "M:IsaacCipher.<init>([I)V",
       "originalName": "oj",
-      "renamedName": "oj",
+      "renamedName": "IsaacCipher",
       "declaration": {
         "file": "oj.java",
         "start": 17579,
@@ -219169,7 +219249,7 @@
     },
     {
       "symbol": "M:oj.a(B)V",
-      "renamedSymbol": "M:oj.a(B)V",
+      "renamedSymbol": "M:IsaacCipher.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219180,7 +219260,7 @@
     },
     {
       "symbol": "M:oj.a(I)V",
-      "renamedSymbol": "M:oj.a(I)V",
+      "renamedSymbol": "M:IsaacCipher.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219191,7 +219271,7 @@
     },
     {
       "symbol": "M:oj.a(II)I",
-      "renamedSymbol": "M:oj.a(II)I",
+      "renamedSymbol": "M:IsaacCipher.a(II)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219202,7 +219282,7 @@
     },
     {
       "symbol": "M:oj.a(III)I",
-      "renamedSymbol": "M:oj.a(III)I",
+      "renamedSymbol": "M:IsaacCipher.a(III)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219213,7 +219293,7 @@
     },
     {
       "symbol": "M:oj.a(ILjava/lang/String;)Z",
-      "renamedSymbol": "M:oj.a(ILjava/lang/String;)Z",
+      "renamedSymbol": "M:IsaacCipher.a(ILjava/lang/String;)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219224,7 +219304,7 @@
     },
     {
       "symbol": "M:oj.a(I[IBI[I)V",
-      "renamedSymbol": "M:oj.a(I[IBI[I)V",
+      "renamedSymbol": "M:IsaacCipher.a(I[IBI[I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219235,7 +219315,7 @@
     },
     {
       "symbol": "M:oj.a(Lel;BZLjava/lang/String;)V",
-      "renamedSymbol": "M:oj.a(Lel;BZLjava/lang/String;)V",
+      "renamedSymbol": "M:IsaacCipher.a(Lel;BZLjava/lang/String;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219246,7 +219326,7 @@
     },
     {
       "symbol": "M:oj.b(B)V",
-      "renamedSymbol": "M:oj.b(B)V",
+      "renamedSymbol": "M:IsaacCipher.b(B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -219257,7 +219337,7 @@
     },
     {
       "symbol": "M:oj.b(I)V",
-      "renamedSymbol": "M:oj.b(I)V",
+      "renamedSymbol": "M:IsaacCipher.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -219268,9 +219348,9 @@
     },
     {
       "symbol": "M:oj.c(I)I",
-      "renamedSymbol": "M:oj.c(I)I",
+      "renamedSymbol": "M:IsaacCipher.nextInt(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "oj.java",
         "start": 5779,
@@ -233150,7 +233230,7 @@
     },
     {
       "symbol": "P:bc.a([IB)V#0",
-      "renamedSymbol": "P:BitPacketBuffer.a([IB)V#0",
+      "renamedSymbol": "P:BitPacketBuffer.setCipherSeed([IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -233161,7 +233241,7 @@
     },
     {
       "symbol": "P:bc.a([IB)V#1",
-      "renamedSymbol": "P:BitPacketBuffer.a([IB)V#1",
+      "renamedSymbol": "P:BitPacketBuffer.setCipherSeed([IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -233172,7 +233252,7 @@
     },
     {
       "symbol": "P:bc.d(Z)I#0",
-      "renamedSymbol": "P:BitPacketBuffer.d(Z)I#0",
+      "renamedSymbol": "P:BitPacketBuffer.readCipheredByte(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -233183,7 +233263,7 @@
     },
     {
       "symbol": "P:bc.e(IB)I#0",
-      "renamedSymbol": "P:BitPacketBuffer.e(IB)I#0",
+      "renamedSymbol": "P:BitPacketBuffer.readBits(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -233194,7 +233274,7 @@
     },
     {
       "symbol": "P:bc.e(IB)I#1",
-      "renamedSymbol": "P:BitPacketBuffer.e(IB)I#1",
+      "renamedSymbol": "P:BitPacketBuffer.readBits(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -233205,7 +233285,7 @@
     },
     {
       "symbol": "P:bc.e(Z)V#0",
-      "renamedSymbol": "P:BitPacketBuffer.e(Z)V#0",
+      "renamedSymbol": "P:BitPacketBuffer.beginBitAccess(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -233216,7 +233296,7 @@
     },
     {
       "symbol": "P:bc.f(IB)V#0",
-      "renamedSymbol": "P:BitPacketBuffer.f(IB)V#0",
+      "renamedSymbol": "P:BitPacketBuffer.writeCipheredByte(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -233227,7 +233307,7 @@
     },
     {
       "symbol": "P:bc.f(IB)V#1",
-      "renamedSymbol": "P:BitPacketBuffer.f(IB)V#1",
+      "renamedSymbol": "P:BitPacketBuffer.writeCipheredByte(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -233238,7 +233318,7 @@
     },
     {
       "symbol": "P:bc.i(B)V#0",
-      "renamedSymbol": "P:BitPacketBuffer.i(B)V#0",
+      "renamedSymbol": "P:BitPacketBuffer.endBitAccess(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280384,7 +280464,7 @@
     },
     {
       "symbol": "P:oj.<init>([I)V#0",
-      "renamedSymbol": "P:oj.<init>([I)V#0",
+      "renamedSymbol": "P:IsaacCipher.<init>([I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280395,7 +280475,7 @@
     },
     {
       "symbol": "P:oj.a(B)V#0",
-      "renamedSymbol": "P:oj.a(B)V#0",
+      "renamedSymbol": "P:IsaacCipher.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280406,7 +280486,7 @@
     },
     {
       "symbol": "P:oj.a(I)V#0",
-      "renamedSymbol": "P:oj.a(I)V#0",
+      "renamedSymbol": "P:IsaacCipher.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280417,7 +280497,7 @@
     },
     {
       "symbol": "P:oj.a(II)I#0",
-      "renamedSymbol": "P:oj.a(II)I#0",
+      "renamedSymbol": "P:IsaacCipher.a(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280428,7 +280508,7 @@
     },
     {
       "symbol": "P:oj.a(II)I#1",
-      "renamedSymbol": "P:oj.a(II)I#1",
+      "renamedSymbol": "P:IsaacCipher.a(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -280439,7 +280519,7 @@
     },
     {
       "symbol": "P:oj.a(III)I#0",
-      "renamedSymbol": "P:oj.a(III)I#0",
+      "renamedSymbol": "P:IsaacCipher.a(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280450,7 +280530,7 @@
     },
     {
       "symbol": "P:oj.a(III)I#1",
-      "renamedSymbol": "P:oj.a(III)I#1",
+      "renamedSymbol": "P:IsaacCipher.a(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -280461,7 +280541,7 @@
     },
     {
       "symbol": "P:oj.a(III)I#2",
-      "renamedSymbol": "P:oj.a(III)I#2",
+      "renamedSymbol": "P:IsaacCipher.a(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -280472,7 +280552,7 @@
     },
     {
       "symbol": "P:oj.a(ILjava/lang/String;)Z#0",
-      "renamedSymbol": "P:oj.a(ILjava/lang/String;)Z#0",
+      "renamedSymbol": "P:IsaacCipher.a(ILjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280483,7 +280563,7 @@
     },
     {
       "symbol": "P:oj.a(ILjava/lang/String;)Z#1",
-      "renamedSymbol": "P:oj.a(ILjava/lang/String;)Z#1",
+      "renamedSymbol": "P:IsaacCipher.a(ILjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -280494,7 +280574,7 @@
     },
     {
       "symbol": "P:oj.a(I[IBI[I)V#0",
-      "renamedSymbol": "P:oj.a(I[IBI[I)V#0",
+      "renamedSymbol": "P:IsaacCipher.a(I[IBI[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280505,7 +280585,7 @@
     },
     {
       "symbol": "P:oj.a(I[IBI[I)V#1",
-      "renamedSymbol": "P:oj.a(I[IBI[I)V#1",
+      "renamedSymbol": "P:IsaacCipher.a(I[IBI[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -280516,7 +280596,7 @@
     },
     {
       "symbol": "P:oj.a(I[IBI[I)V#2",
-      "renamedSymbol": "P:oj.a(I[IBI[I)V#2",
+      "renamedSymbol": "P:IsaacCipher.a(I[IBI[I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -280527,7 +280607,7 @@
     },
     {
       "symbol": "P:oj.a(I[IBI[I)V#3",
-      "renamedSymbol": "P:oj.a(I[IBI[I)V#3",
+      "renamedSymbol": "P:IsaacCipher.a(I[IBI[I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -280538,7 +280618,7 @@
     },
     {
       "symbol": "P:oj.a(I[IBI[I)V#4",
-      "renamedSymbol": "P:oj.a(I[IBI[I)V#4",
+      "renamedSymbol": "P:IsaacCipher.a(I[IBI[I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -280549,7 +280629,7 @@
     },
     {
       "symbol": "P:oj.a(Lel;BZLjava/lang/String;)V#0",
-      "renamedSymbol": "P:oj.a(Lel;BZLjava/lang/String;)V#0",
+      "renamedSymbol": "P:IsaacCipher.a(Lel;BZLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280560,7 +280640,7 @@
     },
     {
       "symbol": "P:oj.a(Lel;BZLjava/lang/String;)V#1",
-      "renamedSymbol": "P:oj.a(Lel;BZLjava/lang/String;)V#1",
+      "renamedSymbol": "P:IsaacCipher.a(Lel;BZLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -280571,7 +280651,7 @@
     },
     {
       "symbol": "P:oj.a(Lel;BZLjava/lang/String;)V#2",
-      "renamedSymbol": "P:oj.a(Lel;BZLjava/lang/String;)V#2",
+      "renamedSymbol": "P:IsaacCipher.a(Lel;BZLjava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -280582,7 +280662,7 @@
     },
     {
       "symbol": "P:oj.a(Lel;BZLjava/lang/String;)V#3",
-      "renamedSymbol": "P:oj.a(Lel;BZLjava/lang/String;)V#3",
+      "renamedSymbol": "P:IsaacCipher.a(Lel;BZLjava/lang/String;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -280593,7 +280673,7 @@
     },
     {
       "symbol": "P:oj.b(B)V#0",
-      "renamedSymbol": "P:oj.b(B)V#0",
+      "renamedSymbol": "P:IsaacCipher.b(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280604,7 +280684,7 @@
     },
     {
       "symbol": "P:oj.b(I)V#0",
-      "renamedSymbol": "P:oj.b(I)V#0",
+      "renamedSymbol": "P:IsaacCipher.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -280615,7 +280695,7 @@
     },
     {
       "symbol": "P:oj.c(I)I#0",
-      "renamedSymbol": "P:oj.c(I)I#0",
+      "renamedSymbol": "P:IsaacCipher.nextInt(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -302784,7 +302864,7 @@
       "original": "TetraLink.java",
       "renamed": "TetraLink.java",
       "inputSha256": "592224a5b82a203b7de08cb006b026a7374df016af524877e4b83c81fc4ae28b",
-      "outputSha256": "390692a4a82a384754b2e362e910b9125baa295e2a9e06f4a9cd9d9f1a22053f",
+      "outputSha256": "a5d482024f6eee04e716e249fa078fcaa1a34566db9911f15171fc79e51539aa",
       "edits": [
         {
           "start": 193,
@@ -302967,6 +303047,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 3257,
+          "end": 3259,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 3344,
@@ -303830,6 +303917,13 @@
           "renamed": "RasterBuffer"
         },
         {
+          "start": 64535,
+          "end": 64537,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 65032,
           "end": 65039,
           "symbol": "F:TetraLink.field_L:Lje;",
@@ -303877,6 +303971,13 @@
           "symbol": "M:je.a(Z)Lmc;",
           "original": "a",
           "renamed": "removeFirst"
+        },
+        {
+          "start": 65771,
+          "end": 65772,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 65834,
@@ -304655,7 +304756,7 @@
       "original": "aa.java",
       "renamed": "aa.java",
       "inputSha256": "76275e2da71fdc4c180e812c50162a76b431da98e5979dcc6fb531e4a32e77be",
-      "outputSha256": "8fdf62235ab33d4f9c634a522298bda603c5ddd91c7d572d788affeb543a156e",
+      "outputSha256": "081661c11b668a59111c01f0d2c2b57855a7135537e5e3d1c01b07535b46f1cc",
       "edits": [
         {
           "start": 104,
@@ -304768,6 +304869,13 @@
           "symbol": "C:ca",
           "original": "ca",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 9118,
+          "end": 9119,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 9156,
@@ -305706,7 +305814,7 @@
       "original": "ak.java",
       "renamed": "ak.java",
       "inputSha256": "a271eea845232e9ef71b84db2fc9efe564b8422384299c1ca2c7ca03c916f6d7",
-      "outputSha256": "255d827715bad5e6d761c175123cb06eed0aac94ff270825a977c9d9740788aa",
+      "outputSha256": "a317af423e8a5998a5c9a6dfb36b65b0f0943337afc2f99ab7407a4e758d1362",
       "edits": [
         {
           "start": 1923,
@@ -305714,6 +305822,13 @@
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 2008,
+          "end": 2009,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2073,
@@ -305777,7 +305892,7 @@
       "original": "al.java",
       "renamed": "al.java",
       "inputSha256": "7790d21c503433bc78e4c2bd9db99cb552185f89a1301f234a901cfcf1bfd4f3",
-      "outputSha256": "2fc4588832fde70560e8db84d3d0183404c3b355f6c55fe372d8fe249d236b7e",
+      "outputSha256": "d9fbb5fb163b98ea61c7c101f299d021c0bb39438309685284b9c90020fc0563",
       "edits": [
         {
           "start": 338,
@@ -305799,6 +305914,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1702,
+          "end": 1703,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 1741,
@@ -306229,7 +306351,7 @@
       "original": "bc.java",
       "renamed": "BitPacketBuffer.java",
       "inputSha256": "c209db18e3ccf026eb8b53470ba186cf27f0210b36e937b58d85f02da4ce3455",
-      "outputSha256": "3b9f8eac5c6b719b8bdda9b8f63385211b042ee2bd64c54a306a0c6ae659f89e",
+      "outputSha256": "9e88f16d7fe9f2c4426929a77a248f44f92b42700997037b0d2edea9d939da88",
       "edits": [
         {
           "start": 50,
@@ -306246,11 +306368,95 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 104,
+          "end": 111,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
+          "start": 125,
+          "end": 127,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 128,
+          "end": 135,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 207,
+          "end": 208,
+          "symbol": "M:bc.e(Z)V",
+          "original": "e",
+          "renamed": "beginBitAccess"
+        },
+        {
+          "start": 240,
+          "end": 247,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
           "start": 259,
           "end": 266,
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 306,
+          "end": 307,
+          "symbol": "M:bc.e(Z)V",
+          "original": "e",
+          "renamed": "beginBitAccess"
+        },
+        {
+          "start": 347,
+          "end": 348,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 528,
+          "end": 535,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
+          "start": 571,
+          "end": 578,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
+          "start": 657,
+          "end": 664,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
+          "start": 704,
+          "end": 711,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
+          "start": 719,
+          "end": 726,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
         },
         {
           "start": 881,
@@ -306272,6 +306478,20 @@
           "symbol": "F:bh.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 1279,
+          "end": 1286,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
+        },
+        {
+          "start": 1294,
+          "end": 1301,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
         },
         {
           "start": 1473,
@@ -306323,6 +306543,34 @@
           "renamed": "payload"
         },
         {
+          "start": 2585,
+          "end": 2592,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 2593,
+          "end": 2594,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 3293,
+          "end": 3294,
+          "symbol": "M:bc.d(Z)I",
+          "original": "d",
+          "renamed": "readCipheredByte"
+        },
+        {
+          "start": 3379,
+          "end": 3380,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 3428,
           "end": 3435,
           "symbol": "F:bh.field_t:I",
@@ -306349,6 +306597,20 @@
           "symbol": "F:bh.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 3530,
+          "end": 3537,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 3538,
+          "end": 3539,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
         },
         {
           "start": 3591,
@@ -306379,11 +306641,39 @@
           "renamed": "payload"
         },
         {
+          "start": 3689,
+          "end": 3696,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 3697,
+          "end": 3698,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 3731,
+          "end": 3732,
+          "symbol": "M:bc.i(B)V",
+          "original": "i",
+          "renamed": "endBitAccess"
+        },
+        {
           "start": 3761,
           "end": 3768,
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 3777,
+          "end": 3784,
+          "symbol": "F:bc.field_y:I",
+          "original": "field_y",
+          "renamed": "bitPosition"
         },
         {
           "start": 3833,
@@ -306449,6 +306739,13 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 4391,
+          "end": 4392,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
           "start": 5037,
           "end": 5039,
           "symbol": "M:bc.<init>([B)V",
@@ -306461,6 +306758,41 @@
           "symbol": "M:bc.<init>(I)V",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 5153,
+          "end": 5154,
+          "symbol": "M:bc.a([IB)V",
+          "original": "a",
+          "renamed": "setCipherSeed"
+        },
+        {
+          "start": 5213,
+          "end": 5220,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 5227,
+          "end": 5229,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 5286,
+          "end": 5287,
+          "symbol": "M:bc.e(Z)V",
+          "original": "e",
+          "renamed": "beginBitAccess"
+        },
+        {
+          "start": 5524,
+          "end": 5525,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 5675,
@@ -306491,6 +306823,27 @@
           "renamed": "payload"
         },
         {
+          "start": 5777,
+          "end": 5784,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 5785,
+          "end": 5786,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 5787,
+          "end": 5789,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 5882,
           "end": 5889,
           "symbol": "F:bh.field_t:I",
@@ -306517,6 +306870,27 @@
           "symbol": "F:bh.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 5980,
+          "end": 5987,
+          "symbol": "F:bc.field_w:Loj;",
+          "original": "field_w",
+          "renamed": "cipher"
+        },
+        {
+          "start": 5988,
+          "end": 5989,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 5990,
+          "end": 5992,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 6113,
@@ -309272,7 +309646,7 @@
       "original": "bj.java",
       "renamed": "bj.java",
       "inputSha256": "ab84397dba2341e1b2e2bcb674164d4e1a94292ebccbc1a09143dbbc8c6fb4a9",
-      "outputSha256": "c2e051699937cd8dbadcc8b69d18f1f84dd1eccec3e20dbb2d8320b1bd83970e",
+      "outputSha256": "6018805d39243518aaa0b50e42b83643b89cdbeeaf662bfff9da72de657cc61b",
       "edits": [
         {
           "start": 657,
@@ -309294,6 +309668,27 @@
           "symbol": "C:pk",
           "original": "pk",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 912,
+          "end": 914,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 1030,
+          "end": 1032,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 1059,
+          "end": 1061,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 1758,
@@ -309472,7 +309867,7 @@
       "original": "bn.java",
       "renamed": "bn.java",
       "inputSha256": "e8c75db136c16e39b7b9044d4e0f544dfb302a0ade191f089bbb7a403d59717f",
-      "outputSha256": "8e7fbbd652b02c4570b0fa004b8e6c6029ba33dd5abbec9d1f10509e2c5d38b0",
+      "outputSha256": "c4d2c9de4baa09d7bf71373d3584e5251990b5e92ce19c1e9c40c960aee5d1ca",
       "edits": [
         {
           "start": 1119,
@@ -309523,6 +309918,13 @@
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 2163,
+          "end": 2164,
+          "symbol": "M:bc.d(Z)I",
+          "original": "d",
+          "renamed": "readCipheredByte"
         },
         {
           "start": 2200,
@@ -310588,7 +310990,7 @@
       "original": "cc.java",
       "renamed": "cc.java",
       "inputSha256": "553aeba0cad57436dbac7daec6d98295f43f63e67f66b9119677fa4fa52c701e",
-      "outputSha256": "a243cb8f8c78d8928caf7bb6b7d42cb095aac974c12f8654c223a5451e2250b3",
+      "outputSha256": "a1db58b6e2d2f83d5b5919b00f8e743189cd84c6d0fefea700072ef429624baa",
       "edits": [
         {
           "start": 253,
@@ -310610,6 +311012,34 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 3464,
+          "end": 3465,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3758,
+          "end": 3759,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3808,
+          "end": 3809,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3964,
+          "end": 3965,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
         },
         {
           "start": 5782,
@@ -311139,7 +311569,7 @@
       "original": "ci.java",
       "renamed": "ci.java",
       "inputSha256": "e11a10e933d5f8512d82854fdc738a8a89ebe6ff2e5de5957d30a7aedd4aaf19",
-      "outputSha256": "7fd88c7632c417ebf2d44f8edf24edf3f5cae913edf3a1920d3c0f36a937f614",
+      "outputSha256": "b3e7aafa539c5749ec5c41af8bf10dfa79385afeea8bd7d5d6f2d3060b9009d1",
       "edits": [
         {
           "start": 1089,
@@ -311168,6 +311598,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 8827,
+          "end": 8829,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 9043,
@@ -311224,6 +311661,13 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameKeyHandler"
+        },
+        {
+          "start": 12448,
+          "end": 12450,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 13423,
@@ -311603,7 +312047,7 @@
       "original": "cl.java",
       "renamed": "cl.java",
       "inputSha256": "b5a2352bc3998dbe7a3414df3a37b2218dad2a2c588f71ba142a9965990b447f",
-      "outputSha256": "4ee193936734eeb4bf3599cc0b8c8573d46783be8b1b739128a67602c4982001",
+      "outputSha256": "e221f33580313305f0c550caab3f0eea7af5291457ba9e2ce5b45d41b75ecc5b",
       "edits": [
         {
           "start": 66,
@@ -311942,6 +312386,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "Sprite"
+        },
+        {
+          "start": 24788,
+          "end": 24790,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 27604,
@@ -313260,7 +313711,7 @@
       "original": "dh.java",
       "renamed": "dh.java",
       "inputSha256": "76692427ef5c1cb1ff5f061311a6366b15049c618a93d5b9edac1839b46e9038",
-      "outputSha256": "bc83949b6264026302a5cf618907a6110b011a78899e0c9f59488d0aaaa14f0d",
+      "outputSha256": "8f136325445f28483a101d0cb441cca41ed9468677b5b0b234f23683937c860b",
       "edits": [
         {
           "start": 105,
@@ -313450,6 +313901,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 6894,
+          "end": 6895,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 6943,
@@ -314494,7 +314952,7 @@
       "original": "ed.java",
       "renamed": "ed.java",
       "inputSha256": "ec2071c3b76bde179bd69e20dc5639dc0cc6c8aa53a28be413da52edcab875d5",
-      "outputSha256": "c1cf8e5077f5a880e8c41329de2f082956197e5c3807851e0717b02e65a3406b",
+      "outputSha256": "267a8f30c5060d4b4bfaba52b76fc0fe5291e68a5900ac8d610df236a8fd9573",
       "edits": [
         {
           "start": 370,
@@ -314502,6 +314960,13 @@
           "symbol": "C:na",
           "original": "na",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 4651,
+          "end": 4653,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 5345,
@@ -315466,7 +315931,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "930e54ab8f1453545dc159830db6c24dec5a20392c8bf6c0f25683ad0e4227de",
-      "outputSha256": "70871f95a1ec2a189706c468ad684cf61b8461b7bb5af0220d63af30ed906fad",
+      "outputSha256": "84de87d513dfffdb0f731edc7d05c1906edb954baa4e8ce79bfbe92d3a1807da",
       "edits": [
         {
           "start": 130,
@@ -315763,6 +316228,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 13395,
+          "end": 13397,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 13505,
           "end": 13507,
           "symbol": "C:ra",
@@ -315812,6 +316284,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 14031,
+          "end": 14033,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 14353,
           "end": 14355,
           "symbol": "C:oh",
@@ -315833,11 +316312,32 @@
           "renamed": "Sprite"
         },
         {
+          "start": 15673,
+          "end": 15675,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 16040,
+          "end": 16042,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 16178,
           "end": 16180,
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "ClientException"
+        },
+        {
+          "start": 16595,
+          "end": 16597,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 16731,
@@ -316300,6 +316800,20 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 34556,
+          "end": 34557,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
+          "start": 35060,
+          "end": 35061,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 35137,
           "end": 35139,
           "symbol": "C:oh",
@@ -316461,6 +316975,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 46903,
+          "end": 46904,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 47739,
           "end": 47741,
           "symbol": "C:wf",
@@ -316508,6 +317029,13 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "Archive"
+        },
+        {
+          "start": 50192,
+          "end": 50193,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 52003,
@@ -316608,6 +317136,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 57853,
+          "end": 57854,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 58334,
           "end": 58336,
           "symbol": "C:em",
@@ -316699,7 +317234,7 @@
       "original": "el.java",
       "renamed": "el.java",
       "inputSha256": "4b9e815a2627376aac285eb45e2e763f1cf437ffa9ea7d9343bf3bb20a870626",
-      "outputSha256": "ae58ebc4512d4765e5312faea8db7f684afd51272c8332bd280536b712664319",
+      "outputSha256": "9c95a3f825a16d9b58a6f25ddea18510ae6c5e1636b4eece9a3ba58baa9a892f",
       "edits": [
         {
           "start": 4863,
@@ -316889,6 +317424,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "Sprite"
+        },
+        {
+          "start": 6593,
+          "end": 6595,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 6947,
@@ -317661,7 +318203,7 @@
       "original": "eo.java",
       "renamed": "eo.java",
       "inputSha256": "f1e5054a2bcae6f627c16e6a184f64780cdbe5051df960cfedacdc86d793fcc1",
-      "outputSha256": "04c0bbdf6c6ab00b9b033ed9915090884bbc36c108921e634b67a70653918857",
+      "outputSha256": "30da6c8942d3bec14d8549f486de37b960b96b6876cee1ec147bc1114025a007",
       "edits": [
         {
           "start": 271,
@@ -317697,6 +318239,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1503,
+          "end": 1504,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 1541,
@@ -318393,7 +318942,7 @@
       "original": "fd.java",
       "renamed": "fd.java",
       "inputSha256": "c6518f21970fffa29a62d0961536f7294f0e45df2448e58ec85dc076d5aa7bba",
-      "outputSha256": "63f42f8f5b818fcab88388f68fe57a27c0b3d6330c6d8f1f2941ae4553320d39",
+      "outputSha256": "b3cf28e4ca951842aa47b7517617498c506e5fd3b3e44da6eed500f72cb864f7",
       "edits": [
         {
           "start": 958,
@@ -318401,6 +318950,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1033,
+          "end": 1034,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 1467,
@@ -318641,7 +319197,7 @@
       "original": "fh.java",
       "renamed": "fh.java",
       "inputSha256": "77f9b88c0f8e1e807534321bde944d449bd61dbd3c2097fd3ec7cf7788ef4175",
-      "outputSha256": "2adb7fa5bf4ec7739a796596301f7f0451fe81e33404ecf326d3a13e7fea4e1c",
+      "outputSha256": "261b45755f5ef25b49574a6c459cb8b3674913e468767558f542e0504a8614b6",
       "edits": [
         {
           "start": 3141,
@@ -318719,6 +319275,13 @@
           "symbol": "C:sf",
           "original": "sf",
           "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 5263,
+          "end": 5265,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 6138,
@@ -318893,7 +319456,7 @@
       "original": "fi.java",
       "renamed": "fi.java",
       "inputSha256": "09644940c01119f92da6289e3bd6419d5823108493e4d4796329d34189896483",
-      "outputSha256": "b387a75396a2a1d06d294f2a468f2e7f54f700c19339674834979350468d8e71",
+      "outputSha256": "e40b930c7785a05036d456e024ea6bdd48214722b9054757c489e98f0c03860c",
       "edits": [
         {
           "start": 743,
@@ -318945,6 +319508,13 @@
           "renamed": "UrlFetchTask"
         },
         {
+          "start": 5886,
+          "end": 5888,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 6023,
           "end": 6025,
           "symbol": "C:un",
@@ -318959,6 +319529,34 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 7599,
+          "end": 7600,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7891,
+          "end": 7892,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7940,
+          "end": 7941,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 8089,
+          "end": 8090,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
           "start": 13287,
           "end": 13289,
           "symbol": "C:em",
@@ -318971,7 +319569,7 @@
       "original": "fj.java",
       "renamed": "fj.java",
       "inputSha256": "d153682e8c2af1a84145737e47a6cfaea1c69ba8fd4313379f6286a9c4d71e0d",
-      "outputSha256": "6fb3ed457d181a1a6d5e5e3d515ea3e454911dba50c8eace66d2970d3494fe24",
+      "outputSha256": "29f4d14d1922c478e977cb6649d0ba010f45073f26d1992a9769c123118d8866",
       "edits": [
         {
           "start": 364,
@@ -318979,6 +319577,20 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "Sprite"
+        },
+        {
+          "start": 606,
+          "end": 608,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 791,
+          "end": 793,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 1500,
@@ -318993,7 +319605,7 @@
       "original": "fk.java",
       "renamed": "fk.java",
       "inputSha256": "8cc01f02651092b7918c3fbc8d9c7cfb70cf177a3938deb67f5941628d117430",
-      "outputSha256": "965d98fdb0ae4ded8ba0f5d25fcf0317de50fd9ca7f543214e04cbf3fa98c10f",
+      "outputSha256": "5e1f54661a1115b652a2fc4dba9483d9e81552f5855670cb915422f6c2b99c01",
       "edits": [
         {
           "start": 115,
@@ -319057,6 +319669,13 @@
           "symbol": "C:na",
           "original": "na",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 5972,
+          "end": 5974,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 7034,
@@ -319355,7 +319974,7 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "491d4585106cc8ce92b06816e19360976495a11bdd3220c6d849cb60a020c9b1",
-      "outputSha256": "65868b3e7a35dfb73b2922e7e9fced3d81d8ef6cfaf6f16919e2a2b1fe4a1c23",
+      "outputSha256": "870dea717c0848d37f539020d4e2bfe1de020ad19e08d683a6ec06072e866779",
       "edits": [
         {
           "start": 60,
@@ -319500,11 +320119,25 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 23865,
+          "end": 23866,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 24131,
           "end": 24133,
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 24167,
+          "end": 24168,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 25053,
@@ -320034,7 +320667,7 @@
       "original": "gg.java",
       "renamed": "gg.java",
       "inputSha256": "ecc76ad468028511c2c1de8ff595d2a31fae1d439505a65322dc234df36990bd",
-      "outputSha256": "2b6ff2a04a97bbf907c80d7fd4e0e689f2e2656a2780ebe4646983acc83f1cb4",
+      "outputSha256": "d141f90b60d597a1479dc5e26bca9f441d94fc5faca433d2f1c0527ba8278b0a",
       "edits": [
         {
           "start": 527,
@@ -320105,6 +320738,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 4439,
+          "end": 4440,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         }
       ]
     },
@@ -320162,7 +320802,7 @@
       "original": "gi.java",
       "renamed": "gi.java",
       "inputSha256": "28cd42674974b6a751eb9ed4b23539b34f63426f4433a46b21539714695d71db",
-      "outputSha256": "87e515add35fdfb8d241e3d0bd638d9ce0b378b9df2bfda714b34213882b628d",
+      "outputSha256": "d7828814c19277befa53d9e07a0da98d6018271004d65e83aa9cfd0727312715",
       "edits": [
         {
           "start": 143,
@@ -320205,6 +320845,13 @@
           "symbol": "C:je",
           "original": "je",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 4417,
+          "end": 4419,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 7996,
@@ -320424,6 +321071,34 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 53566,
+          "end": 53568,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 53735,
+          "end": 53737,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 54536,
+          "end": 54538,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 54875,
+          "end": 54877,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 55672,
           "end": 55674,
           "symbol": "C:kl",
@@ -320450,6 +321125,13 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "Archive"
+        },
+        {
+          "start": 64502,
+          "end": 64504,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 65372,
@@ -320555,6 +321237,69 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 113971,
+          "end": 113973,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 114627,
+          "end": 114629,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 115570,
+          "end": 115572,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 116871,
+          "end": 116873,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 117050,
+          "end": 117052,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 117228,
+          "end": 117230,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 117767,
+          "end": 117769,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 118464,
+          "end": 118466,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 119713,
+          "end": 119715,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 121119,
@@ -321750,7 +322495,7 @@
       "original": "h.java",
       "renamed": "h.java",
       "inputSha256": "789f677665da2620c6c743ddcf7586b48feba037aa98d94a0b4a84a833b97978",
-      "outputSha256": "d6270d551cfe6e374927f998327156e1ae81e131ea44a865d163eaa1e7e392ff",
+      "outputSha256": "7f538b619ad871ab7763c30c35184d7fa37551538dbe7a058cb988ae78ce2d28",
       "edits": [
         {
           "start": 65,
@@ -321800,6 +322545,27 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3626,
+          "end": 3628,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 3774,
+          "end": 3776,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 3794,
+          "end": 3796,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -322020,7 +322786,7 @@
       "original": "hg.java",
       "renamed": "hg.java",
       "inputSha256": "4f0b57981fc00cec154173f4c6028ac7592ba75a7636e61bd4b11869f629ad12",
-      "outputSha256": "3fc76ca4421a04157d39cfcd63ad4ce19ce5e154cb7ba5edb83537f2ddcc0f9d",
+      "outputSha256": "e57221e024d20dbb0d52c632fcf5ea9d567a9536f63e203a4c5d0d0822cb3e21",
       "edits": [
         {
           "start": 4283,
@@ -322124,6 +322890,13 @@
           "kind": "label"
         },
         {
+          "start": 8218,
+          "end": 8220,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 8741,
           "end": 8743,
           "symbol": "C:cn",
@@ -322215,6 +322988,13 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 17200,
+          "end": 17202,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 18606,
@@ -322983,7 +323763,7 @@
       "original": "hn.java",
       "renamed": "hn.java",
       "inputSha256": "73a6b7e72653a2206147db5e3b43d749f0a9e4e88afef571f575dba5cc155f4a",
-      "outputSha256": "46e45ddd15dc2a3007b10c3aa84bb8deaeebdfe5d4b122ff448bbead2beee032",
+      "outputSha256": "89270b35fe303ff4fc781ca57d429aa31d94e55a6437ab9e9df3dcc6c1acc39d",
       "edits": [
         {
           "start": 214,
@@ -323217,6 +323997,13 @@
           "renamed": "readSignedByte"
         },
         {
+          "start": 8966,
+          "end": 8968,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 9065,
           "end": 9066,
           "symbol": "M:bh.g(B)Ljava/lang/String;",
@@ -323236,6 +324023,20 @@
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 10575,
+          "end": 10576,
+          "symbol": "M:bc.a([IB)V",
+          "original": "a",
+          "renamed": "setCipherSeed"
+        },
+        {
+          "start": 10794,
+          "end": 10795,
+          "symbol": "M:bc.a([IB)V",
+          "original": "a",
+          "renamed": "setCipherSeed"
         },
         {
           "start": 11072,
@@ -323412,7 +324213,7 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "ee7e087d1a66d96187a9c0174ce4fd3b0805b6c4e23adb90e3aa0e51ebbaba67",
-      "outputSha256": "9af65cf35d143bb5a422a17b6d5627f56b31174b2f813b2fe57ab6a48306ac26",
+      "outputSha256": "93244a3a08ae1f0e9442ea0408ecf44444fa6d43d56e020df62278fdbec802ff",
       "edits": [
         {
           "start": 2058,
@@ -323427,6 +324228,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2553,
+          "end": 2554,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2589,
@@ -323630,6 +324438,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 13049,
+          "end": 13050,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 13156,
@@ -325604,7 +326419,7 @@
       "original": "ji.java",
       "renamed": "ji.java",
       "inputSha256": "9b79585aa6b85afe6d2cd2bc1fd86a1fd94ebe64bc83e576570f3104ecf8975b",
-      "outputSha256": "100455f1fc1b738136261418576bcf2b1dbb9cd4f1433ce7f8c8960a2a55a9e6",
+      "outputSha256": "3770c90a00e23f7a2f664083728971c5ff4ce3b9444665b15a509f90a9d6575d",
       "edits": [
         {
           "start": 394,
@@ -325656,6 +326471,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 5290,
+          "end": 5291,
+          "symbol": "M:bc.e(Z)V",
+          "original": "e",
+          "renamed": "beginBitAccess"
+        },
+        {
           "start": 5322,
           "end": 5324,
           "symbol": "C:lj",
@@ -325668,6 +326490,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 5621,
+          "end": 5622,
+          "symbol": "M:bc.i(B)V",
+          "original": "i",
+          "renamed": "endBitAccess"
         },
         {
           "start": 7655,
@@ -326227,7 +327056,7 @@
       "original": "ka.java",
       "renamed": "ka.java",
       "inputSha256": "d785ccc56031cfa5ff12bd30facc67f746fe4a1035bd51534c51ed89ff909543",
-      "outputSha256": "e460aff60286b5da126ca46a8c95a328ebaf13a1f6746951304771642593cd84",
+      "outputSha256": "ab5f62b88c7afd88a1caeeda635b7936a2d90a45cf58e49f33bfc41e2dee39c9",
       "edits": [
         {
           "start": 279,
@@ -326319,6 +327148,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 4269,
+          "end": 4271,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 4467,
@@ -328831,7 +329667,7 @@
       "original": "l.java",
       "renamed": "l.java",
       "inputSha256": "d2f8e74493e436e2ad351cfa36d238eb08943a20b4033097bfc33d5176c4f10a",
-      "outputSha256": "6283afb6da96cf5c090c473d4dc8f3734af20bbfde98127bb0f4e8c87b88d084",
+      "outputSha256": "7ec565efba08e3da9708c0e0d104eb3b5b334ee2f10a60fcb410da782fcac74e",
       "edits": [
         {
           "start": 154,
@@ -329121,6 +329957,13 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 15359,
+          "end": 15360,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 15395,
           "end": 15402,
           "symbol": "F:bh.field_t:I",
@@ -329373,7 +330216,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "55f4cc15de945efe2e457d1b6d8392773fc34e5ba76580b5a04fb25e7a1008ed",
-      "outputSha256": "58769db4e6afcf3e31e2b8fa7c8c6138a6ff3bc330456cd69337af6a4122b050",
+      "outputSha256": "435a21a217dc708b124cec0d7161c4c7b514aa3c510561acee0443a60405ed7b",
       "edits": [
         {
           "start": 240,
@@ -329381,6 +330224,13 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 1037,
+          "end": 1039,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -329890,7 +330740,7 @@
       "original": "li.java",
       "renamed": "li.java",
       "inputSha256": "3435cdbcbc637f76a5ea3fa905c6c22af33b9d9a302ead657b0591978301b0a3",
-      "outputSha256": "0586c2394835ba52dde509fc6a0d625c2443e489b9125e17ea8e1073a3f2c92a",
+      "outputSha256": "aba97ab600b8ae61a8b45887a31db7555689a2b40ff21381b813a96c4ffb5426",
       "edits": [
         {
           "start": 66,
@@ -330012,6 +330862,20 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 10486,
+          "end": 10488,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 10677,
+          "end": 10678,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 10715,
           "end": 10722,
           "symbol": "F:bh.field_t:I",
@@ -330122,7 +330986,7 @@
       "original": "lj.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "a7d31738e5289175e1f2481aa93dbff4726d09269da045f64581d01f68a93198",
-      "outputSha256": "5dafafbc22d49289bc1ebb69bca7c79362cb3537d1d77e9f88b71cabca700cbf",
+      "outputSha256": "85310b8dc4112d53537a8629b2534d88bed3f3a64331b8570a526d5021a2baa4",
       "edits": [
         {
           "start": 71,
@@ -330167,6 +331031,13 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 806,
+          "end": 807,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
           "start": 944,
           "end": 946,
           "symbol": "C:bc",
@@ -330179,6 +331050,34 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1079,
+          "end": 1080,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1346,
+          "end": 1347,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1628,
+          "end": 1629,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 2104,
+          "end": 2105,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
         },
         {
           "start": 2474,
@@ -330314,11 +331213,81 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 6807,
+          "end": 6808,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6970,
+          "end": 6971,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
           "start": 7085,
           "end": 7087,
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 7158,
+          "end": 7159,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7199,
+          "end": 7200,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7255,
+          "end": 7256,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7296,
+          "end": 7297,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7336,
+          "end": 7337,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7377,
+          "end": 7378,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7418,
+          "end": 7419,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7524,
+          "end": 7525,
+          "symbol": "M:bc.e(IB)I",
+          "original": "e",
+          "renamed": "readBits"
         },
         {
           "start": 8304,
@@ -330594,7 +331563,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "6ab1898536fa5f257d95db076d5864b7625f60bf7806da6dca2a4a1f8c543f15",
-      "outputSha256": "048c126edd28d696682cc0afefd7d5d05a4a6e2374fc7f7a192bdda208d835e1",
+      "outputSha256": "22e3aa211e9d2a55144925890f67b2ae91c51801757af7b0b101e36a50210e09",
       "edits": [
         {
           "start": 359,
@@ -330630,6 +331599,13 @@
           "symbol": "M:gb.e(I)V",
           "original": "e",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 10819,
+          "end": 10820,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 10857,
@@ -330870,7 +331846,7 @@
       "original": "md.java",
       "renamed": "SpriteState.java",
       "inputSha256": "02791a68fb56c1af58d99fc2f1012a3740aa4916e4cfd2c9d9d3242c16fecea4",
-      "outputSha256": "efeb7d093548b91d88b2c39333db5bb9ad3d668d5b263c029074d3bf806d5004",
+      "outputSha256": "b7e22486d93bfb96580fc72878c582164564fb3f97bbaae3c49b96a8b4782479",
       "edits": [
         {
           "start": 72,
@@ -331123,6 +332099,13 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameKeyHandler"
+        },
+        {
+          "start": 23231,
+          "end": 23233,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 24017,
@@ -331456,7 +332439,7 @@
       "original": "mi.java",
       "renamed": "mi.java",
       "inputSha256": "d88fba9741e2def6936c60ba5c6f6a6f8e7f85cc70543e6c42b164499d470cf3",
-      "outputSha256": "98c73c6507cb6b26f787fa6020ec8ce584ff6476a742ee342cb6a8e994aa545a",
+      "outputSha256": "034da4d175af40a555d1d90355bc4942313919f78e14a47c1189602547f859ed",
       "edits": [
         {
           "start": 375,
@@ -331506,6 +332489,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2831,
+          "end": 2832,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         }
       ]
     },
@@ -331520,8 +332510,15 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "d42b5e3ac03561e4db8ab55d8bd38090a52163b2d02c5d599dd44fee5c5d5169",
-      "outputSha256": "6686159df6e5526a18c7bd9b00e988ba2a5794922737751e8fddc31a24b4faf0",
+      "outputSha256": "d9d3c6086b2dba298f64cf1eca9f557e385c759891033906752a96b1469edde0",
       "edits": [
+        {
+          "start": 1818,
+          "end": 1819,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
         {
           "start": 1863,
           "end": 1870,
@@ -331697,7 +332694,7 @@
       "original": "mm.java",
       "renamed": "mm.java",
       "inputSha256": "e471b0e44a705eceb4eff9a1e23d2e89cf15042768337b668ec5dd316a4cffaf",
-      "outputSha256": "c023ae58465d51504d0737a0896af888ee237fe4bfe974995c31dbd924a8e4b9",
+      "outputSha256": "bd1325e151b6b4acc075ed5a8d318e3357c524c52b547f3b0247861907170d04",
       "edits": [
         {
           "start": 147,
@@ -331712,6 +332709,20 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 6695,
+          "end": 6697,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 6992,
+          "end": 6994,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -331719,7 +332730,7 @@
       "original": "mn.java",
       "renamed": "mn.java",
       "inputSha256": "7c5fee8c089d666405af4c0ceb1d305768da7f39f2a917d0e4dbc2f943eb0ebb",
-      "outputSha256": "7f4e0c41827b62120ad8109fc15e9f59f9105892571649ee2dec75c28389642c",
+      "outputSha256": "4e40e3816cf932275fc52969fd27e76d53b6283ed8748f81b1128a9539164be7",
       "edits": [
         {
           "start": 1047,
@@ -331743,11 +332754,39 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 4236,
+          "end": 4238,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 4286,
           "end": 4288,
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 4919,
+          "end": 4921,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 5253,
+          "end": 5255,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 5364,
+          "end": 5366,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -333077,7 +334116,7 @@
       "original": "nl.java",
       "renamed": "nl.java",
       "inputSha256": "fc09181e1b6ac866f54cdd44036e5daa6efeb013b321717ac7c0c2e932f8e242",
-      "outputSha256": "4345134cf8d98bf3d287c377361738c4111579a7a76245610c81d69fce1a8048",
+      "outputSha256": "c4c7e324f20f02153d6f436feddc3663b4374abf1707b1091c2fe83e34e0f822",
       "edits": [
         {
           "start": 110,
@@ -333099,6 +334138,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1142,
+          "end": 1143,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 1332,
@@ -333453,7 +334499,7 @@
       "original": "ob.java",
       "renamed": "Model.java",
       "inputSha256": "85dd5f1ab6de28007a0ad5cd16f8b34e42ddba5149e1616927d9c8a1c3b76423",
-      "outputSha256": "3351a8e85203c3f4cfe2f3769f161237415f09a0545caccb87e2518049d80c92",
+      "outputSha256": "03c685334361653e2e5a7748478d8c0a60f21c0659099c447497cda0306c7ae1",
       "edits": [
         {
           "start": 50,
@@ -333535,6 +334581,13 @@
           "original": "L45",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 35262,
+          "end": 35264,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 76589,
@@ -335711,7 +336764,7 @@
       "original": "oi.java",
       "renamed": "oi.java",
       "inputSha256": "c39f43c3c68a14782563ab80e0ce9025701e3d0d071c2749f27f7a2db87efba3",
-      "outputSha256": "62b652cdf4b7844735da0b4dd5f44a415f4b7132868be201d0a21b970a289301",
+      "outputSha256": "3b25267e0421f9ecc91b7976a500af9533a85c5985b5365df434417b755ff77f",
       "edits": [
         {
           "start": 198,
@@ -335747,6 +336800,20 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2893,
+          "end": 2894,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
+          "start": 3045,
+          "end": 3046,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 3398,
@@ -335794,16 +336861,51 @@
     },
     {
       "original": "oj.java",
-      "renamed": "oj.java",
+      "renamed": "IsaacCipher.java",
       "inputSha256": "0f1ba749e3c6045a4bb69225955f431ac67cd816276f8cb11e10caedce1e955a",
-      "outputSha256": "4cff1d6995bc604fb020127276d5ab9ad31924869494aae6365d5da9459ab53c",
+      "outputSha256": "923adcb1ce178e9117159ab8e095e415192a1f83a3691e7a098bb93fd18eacec",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
         {
           "start": 1319,
           "end": 1321,
           "symbol": "C:md",
           "original": "md",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 4617,
+          "end": 4619,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 4681,
+          "end": 4683,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 4823,
+          "end": 4825,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 5779,
+          "end": 5780,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
         },
         {
           "start": 6537,
@@ -335827,6 +336929,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 6900,
+          "end": 6902,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 7279,
           "end": 7280,
           "symbol": "M:bh.d(B)I",
@@ -335846,6 +336955,34 @@
           "symbol": "M:mc.b(Z)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 11624,
+          "end": 11625,
+          "symbol": "M:oj.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 12946,
+          "end": 12948,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 17579,
+          "end": 17581,
+          "symbol": "M:oj.<init>([I)V",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 18358,
+          "end": 18360,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -336152,7 +337289,7 @@
       "original": "on.java",
       "renamed": "on.java",
       "inputSha256": "c9d2b08b13ec92d8d2b3be67f64a2aa5ac9a8cdbb6419a2bd924ef8d4128b367",
-      "outputSha256": "bbc2c2a3e2e70d12e9b7091b85c50d0f7ee0c61ef58702f8326794fbfe1a110d",
+      "outputSha256": "c3159d1f3de2adfc52fbd4ec929e307a6238ee6d1f2661022700b5a2ee73d3e9",
       "edits": [
         {
           "start": 337,
@@ -336169,6 +337306,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 360,
+          "end": 362,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 1313,
           "end": 1315,
           "symbol": "C:ra",
@@ -336181,6 +337325,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1336,
+          "end": 1338,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 1551,
@@ -336197,6 +337348,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1574,
+          "end": 1576,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 1850,
           "end": 1852,
           "symbol": "C:ra",
@@ -336209,6 +337367,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1873,
+          "end": 1875,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -336373,7 +337538,7 @@
       "original": "pd.java",
       "renamed": "pd.java",
       "inputSha256": "b6f788141686ffae855e9e54f643a9191dbca71b48fcbec0dd21987087251779",
-      "outputSha256": "fd3b85199533dba5f2f44ccc1b304432cb0251977953eda850b24e6bfcabfdd9",
+      "outputSha256": "fbaf8cfd5bf8bd001f1efcad00ff96c8e5a9c39d4abcf7867db515f4af47ee2c",
       "edits": [
         {
           "start": 97,
@@ -336502,6 +337667,13 @@
           "renamed": "position"
         },
         {
+          "start": 4395,
+          "end": 4397,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 4427,
           "end": 4434,
           "symbol": "F:bh.field_u:[B",
@@ -336577,6 +337749,13 @@
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 5502,
+          "end": 5504,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 5526,
@@ -337012,7 +338191,7 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "ba3eae40783fb8b12093fc46cfab11cfb5cc798f609fdb694cc620e72ea39c07",
-      "outputSha256": "3c3fa04423de137fbd318ba0c2de1f0eeda42a38151f3d3dbf8fdccec6d17e89",
+      "outputSha256": "6d29615c5e7fee542f4115c9cf8d9255ad2f61f2090f8a1eae538c51c4e59e94",
       "edits": [
         {
           "start": 796,
@@ -337034,6 +338213,13 @@
           "symbol": "C:em",
           "original": "em",
           "renamed": "MatchSetup"
+        },
+        {
+          "start": 2896,
+          "end": 2898,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 6604,
@@ -337064,11 +338250,25 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 9823,
+          "end": 9825,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 10413,
           "end": 10415,
           "symbol": "C:sf",
           "original": "sf",
           "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 13300,
+          "end": 13302,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 15911,
@@ -337098,7 +338298,7 @@
       "original": "ph.java",
       "renamed": "ph.java",
       "inputSha256": "54ed1da48b4fce3027c50738e5a4442cce48a9013cb9cbf3361f6c54ee3e1cb7",
-      "outputSha256": "c0d674353827912cdf43d2e842941444ef7e1a17d94f8f45ba5f0c1a8da426ab",
+      "outputSha256": "b7ad5f185e850d8a181d9b887ed4c939d7db44bbf6f2d057b71f6bb76d936345",
       "edits": [
         {
           "start": 64,
@@ -337218,6 +338418,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 9082,
+          "end": 9083,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 9225,
@@ -337426,6 +338633,13 @@
           "original": "L1",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 16093,
+          "end": 16095,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 16173,
@@ -338062,7 +339276,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "873744b143218d580eb1961395d4572830f9009cb29a55bb0d6538dc4b45fd7c",
-      "outputSha256": "10e5d4d04d8164bcc8cab9c3471b49371a647d291d934be41b210c432c4ef07b",
+      "outputSha256": "7d47e5f752fd8d1d9fee4ce28755a321760edb8c3b46e47671362726a2501d0a",
       "edits": [
         {
           "start": 105,
@@ -338091,6 +339305,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2556,
+          "end": 2557,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2624,
@@ -338417,7 +339638,7 @@
       "original": "qe.java",
       "renamed": "GameKeyHandler.java",
       "inputSha256": "cf8cadf7080c928dbd10e49feb4d42e04ac970d621214eb09dac02bc22833216",
-      "outputSha256": "eb5a87176ba6163a7cac20a3a53f967195b93b34f1d4a5cf9198abe8423d9a8b",
+      "outputSha256": "d2cbff5191e971b385ee96648012c35fc21f12a402413c5a33fdcd2d7bb14a87",
       "edits": [
         {
           "start": 50,
@@ -338446,6 +339667,13 @@
           "symbol": "C:ca",
           "original": "ca",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 738,
+          "end": 739,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 795,
@@ -338495,6 +339723,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2339,
+          "end": 2340,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2375,
@@ -338558,7 +339793,7 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "d8fa6098ac79f469796559d1b3b414ee83ca4c68b53f18ab88e5827c45f803fc",
-      "outputSha256": "0355c4039e3a63dc09f9e8a6456ff8197f0feddabcb9e2fe7e507f26de6b5244",
+      "outputSha256": "cf9d49cb143d73847955dcf03b94517914373d3bac4485faa8113d18fb8350aa",
       "edits": [
         {
           "start": 307,
@@ -338603,6 +339838,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 1578,
+          "end": 1580,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 1807,
           "end": 1809,
           "symbol": "C:ha",
@@ -338615,6 +339857,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 2185,
+          "end": 2186,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2223,
@@ -338798,7 +340047,7 @@
       "original": "qj.java",
       "renamed": "qj.java",
       "inputSha256": "7cb954b831483e4c9554ed20d0253ee2fc595ce4dbe236c1e188b0a2b9350b4e",
-      "outputSha256": "4425abc18f8329d5b74cd048dcf8dc9f7bc6ab5f8738ac84b2275dc22a5bd9d1",
+      "outputSha256": "1d2eb5318794e5080f512b53a09e5bb338674a79063efb0d283263c85b9f0ac8",
       "edits": [
         {
           "start": 548,
@@ -338848,6 +340097,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1400,
+          "end": 1402,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 1638,
@@ -339376,7 +340632,7 @@
       "original": "r.java",
       "renamed": "r.java",
       "inputSha256": "3bd827472b80d2dceea6eddcae4df485301d47d098b942996282ae8e8dd77847",
-      "outputSha256": "5eaa03bb7c4f1009511fdec712380ea845c5c4b5beb55eba96a56e95def3d9b4",
+      "outputSha256": "29e238b9536e59934920e09da4a4e0f9e80197775fd1d1cc11c741b063a678b2",
       "edits": [
         {
           "start": 60,
@@ -339419,6 +340675,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "NotificationToast"
+        },
+        {
+          "start": 1266,
+          "end": 1268,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 3506,
@@ -339701,7 +340964,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "636a54b98342e7aa50b83896e5992398acf396170bfd57b46f2085094b8be1e5",
-      "outputSha256": "e1cad34df00d568b2343f14886d7b164d1319b9610a779b4696eda542a6e7e08",
+      "outputSha256": "936492dcfcc985375f6ce2e8653c2b69a257b7e35a40a7b8b5e93982c4b7e027",
       "edits": [
         {
           "start": 1071,
@@ -339711,11 +340974,25 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 1111,
+          "end": 1112,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 1237,
           "end": 1239,
           "symbol": "C:wm",
           "original": "wm",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 1275,
+          "end": 1276,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2278,
@@ -341404,7 +342681,7 @@
       "original": "s.java",
       "renamed": "s.java",
       "inputSha256": "da1ba78cb746f5518ef25e7ed2e283506c8a278a336ee9f6e31865fd494ac062",
-      "outputSha256": "f02e042591bc99e723b495aa65d26d9ae09d71a4389bf60b858fce9e1bf5e762",
+      "outputSha256": "a46b490a60f83725caf951514d61d19b8d334200f47ee988e3f3667084032131",
       "edits": [
         {
           "start": 89,
@@ -341421,11 +342698,25 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 941,
+          "end": 943,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 997,
           "end": 999,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 1049,
+          "end": 1051,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 1119,
@@ -342647,7 +343938,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "67e8d779cb73c606d57b1458edee3e64f8ad39a0be8c2702b0990803990acf23",
-      "outputSha256": "4cc565964e77194b9396a0505ca7b1748fbcc0ccfca2c29286e5c77def370112",
+      "outputSha256": "d03e23aff30c1de12fd6c8e713f658ad5438e4076d7345ad15ce406f32a1cc72",
       "edits": [
         {
           "start": 93,
@@ -342718,6 +344009,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2484,
+          "end": 2485,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2586,
@@ -343036,7 +344334,7 @@
       "original": "tg.java",
       "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "88330555b40ccd200b8666d7c9ab55f6dcc2dd1b2d97f16c34e6a77f20f5b8b2",
-      "outputSha256": "419c61845831c07523caea6d78b9189af7e5b56f130ed01bc6777dc671b7e7fb",
+      "outputSha256": "281e79be986300d1ddf21e4bd4b128aabf3a7ad1024b56b7626451e2017de8b8",
       "edits": [
         {
           "start": 50,
@@ -343417,11 +344715,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 10443,
+          "end": 10445,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 10486,
           "end": 10488,
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 10530,
+          "end": 10532,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 10554,
@@ -343450,6 +344762,20 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 12803,
+          "end": 12805,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 13147,
+          "end": 13149,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         }
       ]
     },
@@ -343626,7 +344952,7 @@
       "original": "ti.java",
       "renamed": "ti.java",
       "inputSha256": "6928561b4e115af6db58ed5894d5e0541fd374f205618a30b40e6a77c4f45f9e",
-      "outputSha256": "2ed0f8ba5c844e46ccb1e3febaaeece57c04709ecc804850648acedf6bbff413",
+      "outputSha256": "e2509fc803712f3e2ded60e1f31c83d9d377010e342862d5da474de56aec31c8",
       "edits": [
         {
           "start": 197,
@@ -343951,6 +345277,48 @@
           "renamed": "NotificationToast"
         },
         {
+          "start": 13223,
+          "end": 13225,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 13269,
+          "end": 13271,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 13475,
+          "end": 13477,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 13564,
+          "end": 13566,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 13653,
+          "end": 13655,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
+          "start": 14163,
+          "end": 14165,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 18607,
           "end": 18609,
           "symbol": "C:fa",
@@ -344077,7 +345445,7 @@
       "original": "tm.java",
       "renamed": "tm.java",
       "inputSha256": "86085b799d252eefa230778fa3911ca9343d5030c7469939b5100ba5ec3da71e",
-      "outputSha256": "199d4f108cb76b4c7b798a08f856381346acc56663d1f4de7fd190ad6f3c0310",
+      "outputSha256": "101bc4d313c3d876addfb88729b799361380286093a09f029c2f17839f79eced",
       "edits": [
         {
           "start": 948,
@@ -344085,6 +345453,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 5273,
+          "end": 5275,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 5339,
@@ -345309,7 +346684,7 @@
       "original": "uf.java",
       "renamed": "uf.java",
       "inputSha256": "2b8aa0ff81f7d5aa27c42b9fcfa704d0c320758035ccfc12bb390792e42273be",
-      "outputSha256": "89da8eb35294f8fc5178768815845eb5d2fd99b4802b1e855d0b381d865ca7b4",
+      "outputSha256": "6ef23172b3022fe6db0b464a9454a5d58cf2586f20b99947c37ec1efac3bdb3b",
       "edits": [
         {
           "start": 66,
@@ -345338,6 +346713,20 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 816,
+          "end": 817,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
+          "start": 1015,
+          "end": 1016,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 1279,
@@ -346310,7 +347699,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "73d761e216a8e86216c2102ee5207e17b52a99dec5ca211678dccecc31ba1875",
-      "outputSha256": "c5a5a50d37756a64a780994204ddc529408907521a54b533a67f67ff43d32b04",
+      "outputSha256": "5c42abf400bf9905af7502bb7b151c26827f694a7d54afb022e947dc3755965c",
       "edits": [
         {
           "start": 90,
@@ -346887,6 +348276,13 @@
           "renamed": "readVarInt"
         },
         {
+          "start": 19167,
+          "end": 19169,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
+        },
+        {
           "start": 19182,
           "end": 19184,
           "symbol": "C:bh",
@@ -347088,7 +348484,7 @@
       "original": "vg.java",
       "renamed": "vg.java",
       "inputSha256": "2ef8e79e04c97db15302cba5919db0a8ef11d48afe6c687cabfed479e0221a41",
-      "outputSha256": "8e8cd2b4f36b2fc721ec1f4e2987f093afedbd55277c62bb77a3d0c4ff0ba433",
+      "outputSha256": "9fc5ab5edaf0fa1b6c9c876c7ff3a3cdac3cc85485722c9c17b40d1501b8ffb0",
       "edits": [
         {
           "start": 1876,
@@ -347243,6 +348639,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 11117,
+          "end": 11119,
+          "symbol": "C:oj",
+          "original": "oj",
+          "renamed": "IsaacCipher"
         },
         {
           "start": 11539,
@@ -348972,7 +350375,7 @@
       "original": "wd.java",
       "renamed": "RasterBuffer.java",
       "inputSha256": "88f186559d2eff3a47e6a223f1ce44f590372abeadbc091023c4773b1746cc82",
-      "outputSha256": "f448a0c2c08b52143b50462201ae01d5c854b803f3201554a76c504dc9a30ae0",
+      "outputSha256": "00804df542ecb66855820d9e0e7c1d6af0aed04431824f82dba1c1e115b6d75b",
       "edits": [
         {
           "start": 53,
@@ -349003,11 +350406,25 @@
           "renamed": "RasterBuffer"
         },
         {
+          "start": 2462,
+          "end": 2463,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
+        },
+        {
           "start": 2533,
           "end": 2535,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2569,
+          "end": 2570,
+          "symbol": "M:bc.f(IB)V",
+          "original": "f",
+          "renamed": "writeCipheredByte"
         },
         {
           "start": 2598,
@@ -350084,10 +351501,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tetralink"
     },
-    "rulesSha256": "3f3d334254b171cb4c08a6758c8c53e4613392e012f5774c1c80ad520c8a8331",
+    "rulesSha256": "48f63bb3591d8bce631b55dc0152f7d21e2b7d05fed0df81fb675076e87c7a0d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
-    "outputTreeSha256": "0973bb19b591184f54cf17dc27c2dc7d022fb8971ae8238bcc71838831f22d63",
+    "outputTreeSha256": "b14c57e71ad7a9fae993b1e04ce14ad180673dd5d2be856a599d8e7b43c488db",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

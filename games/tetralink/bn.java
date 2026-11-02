@@ -64,7 +64,7 @@ final class bn extends IOException {
                 if (!stackIn_38_0) {
                   return false;
                 }
-                ti.field_e = kb.field_q.d(false);
+                ti.field_e = kb.field_q.readCipheredByte(false);
                 kb.field_q.position = 0;
                 rl.field_d = param1[ti.field_e];
               }

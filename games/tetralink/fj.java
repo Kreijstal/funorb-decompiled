@@ -26,14 +26,14 @@ final class fj {
     final int a(byte param0) {
         if (!this.field_l && (this.field_i != 2 ||
           0 >= this.field_k)) {
-          if (oj.field_c == this.field_r) {
+          if (IsaacCipher.field_c == this.field_r) {
             return 1;
           }
           if (param0 != -63) {
             this.a((byte) -16);
           }
           if (ji.field_Tb == 2 &&
-            oj.a(1, this.field_n)) {
+            IsaacCipher.a(1, this.field_n)) {
             return 1;
           }
           return 0;

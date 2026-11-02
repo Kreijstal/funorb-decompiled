@@ -157,7 +157,7 @@ final class tm extends um {
         try {
           nn.field_Y = param6;
           kn.field_a = param4;
-          oj.field_c = -1L;
+          IsaacCipher.field_c = -1L;
           hg.field_k = param6.length;
           FullscreenFocusCanvas.field_a = false;
           km.field_o = new byte[(kn.field_a + 7) / 8];
