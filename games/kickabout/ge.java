@@ -53,7 +53,7 @@ final class ge extends jd {
     }
 
     final String a(byte param0, String param1) {
-        l var3 = null;
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         String stackIn_6_0 = null;
@@ -64,8 +64,8 @@ final class ge extends jd {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_l instanceof cw) {
-            var3 = ((cw) ((Object) this.field_l)).a((byte) -115);
+          if (this.field_l instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -115);
             if (var3 != null) {
               if (var3.c(-24407) == he.field_yb &&
                 !param1.equals(this.field_l.field_q)) {
@@ -117,7 +117,7 @@ final class ge extends jd {
     }
 
     final rv a(String param0, int param1) {
-        l var3 = null;
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         rv stackIn_8_0 = null;
         rv stackIn_12_0 = null;
@@ -129,8 +129,8 @@ final class ge extends jd {
           if (param1 != -5) {
             field_j = (ff) null;
           }
-          if (this.field_l instanceof cw) {
-            var3 = ((cw) ((Object) this.field_l)).a((byte) -113);
+          if (this.field_l instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -113);
             if (var3 != null &&
               var3.c(-24407) != he.field_yb) {
               stackIn_8_0 = jt.field_Bb;

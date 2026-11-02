@@ -4,7 +4,7 @@
 final class un {
     static qt[] field_b;
     static r field_c;
-    static cn field_d;
+    static CoverageBitmapFont field_d;
     static int[] field_a;
     static CipherPacketBuffer field_e;
 
@@ -29,7 +29,7 @@ final class un {
         RuntimeException var3 = null;
         var4 = Kickabout.field_G;
         try {
-          ae.field_G = param1;
+          AccountRegistrationPanel.field_G = param1;
           sh.field_a = param0;
           if (param2 <= 45) {
             return;
@@ -110,12 +110,12 @@ final class un {
             }
             for (var2 = 0; us.field_i.length > var2; var2++) {
               if (us.field_i[var2] == param0 &&
-                uj.field_D[var2] > 0) {
-                dupTemp$4 = uj.field_D[var2] - 1;
+                SetLagCommand.field_D[var2] > 0) {
+                dupTemp$4 = SetLagCommand.field_D[var2] - 1;
                 arrayValue$5 = le.field_e[var2];
-                uj.field_D[var2] = dupTemp$4;
+                SetLagCommand.field_D[var2] = dupTemp$4;
                 var3 = arrayValue$5[dupTemp$4];
-                le.field_e[var2][uj.field_D[var2]] = null;
+                le.field_e[var2][SetLagCommand.field_D[var2]] = null;
                 return var3;
               }
             }
@@ -142,22 +142,22 @@ final class un {
           }
           for (var2Lifetime4 = 0; us.field_i.length > var2Lifetime4; var2Lifetime4++) {
             if (us.field_i[var2Lifetime4] == param0 &&
-              uj.field_D[var2Lifetime4] > 0) {
-              dupTemp$9 = uj.field_D[var2Lifetime4] - 1;
+              SetLagCommand.field_D[var2Lifetime4] > 0) {
+              dupTemp$9 = SetLagCommand.field_D[var2Lifetime4] - 1;
               arrayValue$10 = le.field_e[var2Lifetime4];
-              uj.field_D[var2Lifetime4] = dupTemp$9;
+              SetLagCommand.field_D[var2Lifetime4] = dupTemp$9;
               var3Lifetime4 = arrayValue$10[dupTemp$9];
-              le.field_e[var2Lifetime4][uj.field_D[var2Lifetime4]] = null;
+              le.field_e[var2Lifetime4][SetLagCommand.field_D[var2Lifetime4]] = null;
               return var3Lifetime4;
             }
           }
           return new byte[param0];
         }
-        if (0 < li.field_h) {
-          fieldTemp$11 = li.field_h - 1;
-          li.field_h = li.field_h - 1;
+        if (0 < ConsoleValue.field_h) {
+          fieldTemp$11 = ConsoleValue.field_h - 1;
+          ConsoleValue.field_h = ConsoleValue.field_h - 1;
           var2_ref_byte__Lifetime1 = vb.field_g[fieldTemp$11];
-          vb.field_g[li.field_h] = null;
+          vb.field_g[ConsoleValue.field_h] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 != 5000) {
@@ -173,12 +173,12 @@ final class un {
           if (null != le.field_e) {
             for (var2Lifetime1 = 0; us.field_i.length > var2Lifetime1; var2Lifetime1++) {
               if (us.field_i[var2Lifetime1] == param0 &&
-                uj.field_D[var2Lifetime1] > 0) {
-                dupTemp$21 = uj.field_D[var2Lifetime1] - 1;
+                SetLagCommand.field_D[var2Lifetime1] > 0) {
+                dupTemp$21 = SetLagCommand.field_D[var2Lifetime1] - 1;
                 arrayValue$22 = le.field_e[var2Lifetime1];
-                uj.field_D[var2Lifetime1] = dupTemp$21;
+                SetLagCommand.field_D[var2Lifetime1] = dupTemp$21;
                 var3Lifetime1 = arrayValue$22[dupTemp$21];
-                le.field_e[var2Lifetime1][uj.field_D[var2Lifetime1]] = null;
+                le.field_e[var2Lifetime1][SetLagCommand.field_D[var2Lifetime1]] = null;
                 return var3Lifetime1;
               }
             }
@@ -198,12 +198,12 @@ final class un {
           }
           for (var2Lifetime2 = 0; us.field_i.length > var2Lifetime2; var2Lifetime2++) {
             if (us.field_i[var2Lifetime2] == param0 &&
-              uj.field_D[var2Lifetime2] > 0) {
-              dupTemp$17 = uj.field_D[var2Lifetime2] - 1;
+              SetLagCommand.field_D[var2Lifetime2] > 0) {
+              dupTemp$17 = SetLagCommand.field_D[var2Lifetime2] - 1;
               arrayValue$18 = le.field_e[var2Lifetime2];
-              uj.field_D[var2Lifetime2] = dupTemp$17;
+              SetLagCommand.field_D[var2Lifetime2] = dupTemp$17;
               var3Lifetime2 = arrayValue$18[dupTemp$17];
-              le.field_e[var2Lifetime2][uj.field_D[var2Lifetime2]] = null;
+              le.field_e[var2Lifetime2][SetLagCommand.field_D[var2Lifetime2]] = null;
               return var3Lifetime2;
             }
           }
@@ -222,12 +222,12 @@ final class un {
         }
         for (var2Lifetime3 = 0; us.field_i.length > var2Lifetime3; var2Lifetime3++) {
           if (us.field_i[var2Lifetime3] == param0 &&
-            uj.field_D[var2Lifetime3] > 0) {
-            dupTemp$13 = uj.field_D[var2Lifetime3] - 1;
+            SetLagCommand.field_D[var2Lifetime3] > 0) {
+            dupTemp$13 = SetLagCommand.field_D[var2Lifetime3] - 1;
             arrayValue$14 = le.field_e[var2Lifetime3];
-            uj.field_D[var2Lifetime3] = dupTemp$13;
+            SetLagCommand.field_D[var2Lifetime3] = dupTemp$13;
             var3Lifetime3 = arrayValue$14[dupTemp$13];
-            le.field_e[var2Lifetime3][uj.field_D[var2Lifetime3]] = null;
+            le.field_e[var2Lifetime3][SetLagCommand.field_D[var2Lifetime3]] = null;
             return var3Lifetime3;
           }
         }

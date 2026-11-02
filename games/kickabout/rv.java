@@ -58,7 +58,7 @@ final class rv {
             var5 = (-up.field_p + 250 << 8) / 50;
           }
           PacketBuffer.a(110, ti.field_f);
-          t.c();
+          TriangleRasterizer.c();
           SoftwareRasterizer.b();
           fp.a((byte) 47);
           if (256 > var5) {
@@ -68,7 +68,7 @@ final class rv {
           if (up.field_p >= 150) {
             js.field_a.b(var3 + 15, var4 + 10, var5);
           } else {
-            ti.field_f.f(var3, var4);
+            ti.field_f.drawHalfSize(var3, var4);
           }
           var6 = -125 + up.field_p;
           if (0 < var6) {
@@ -85,13 +85,13 @@ final class rv {
             }
             if (20 > var6) {
               var7Lifetime5 = var6 * 256 / 20;
-              tm.field_v.c(var3, var4, var7Lifetime5);
+              ConsoleCommand.field_v.drawAdditive(var3, var4, var7Lifetime5);
             } else {
               if (var6 >= 30) {
                 var7Lifetime5 = (-(var6 * 256) + 12800) / 20;
-                tm.field_v.c(var3, var4, var7Lifetime5);
+                ConsoleCommand.field_v.drawAdditive(var3, var4, var7Lifetime5);
               } else {
-                tm.field_v.c(var3, var4, 256);
+                ConsoleCommand.field_v.drawAdditive(var3, var4, 256);
               }
             }
           }
@@ -115,7 +115,7 @@ final class rv {
           var5Lifetime1 = (-up.field_p + 250 << 8) / 50;
         }
         PacketBuffer.a(110, ti.field_f);
-        t.c();
+        TriangleRasterizer.c();
         SoftwareRasterizer.b();
         fp.a((byte) 47);
         if (256 > var5Lifetime1) {
@@ -147,7 +147,7 @@ final class rv {
             } else {
               if (20 > var6Lifetime1) {
                 var7Lifetime1 = var6Lifetime1 * 256 / 20;
-                tm.field_v.c(var3Lifetime1, var4Lifetime1, var7Lifetime1);
+                ConsoleCommand.field_v.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime1);
                 var6Lifetime1 = -140 + up.field_p;
                 if (0 < var6Lifetime1) {
                   var7Lifetime1 = 256;
@@ -158,7 +158,7 @@ final class rv {
                 }
               } else {
                 if (var6Lifetime1 < 30) {
-                  tm.field_v.c(var3Lifetime1, var4Lifetime1, 256);
+                  ConsoleCommand.field_v.drawAdditive(var3Lifetime1, var4Lifetime1, 256);
                   var6Lifetime1 = -140 + up.field_p;
                   if (0 < var6Lifetime1) {
                     var7Lifetime1 = 256;
@@ -169,7 +169,7 @@ final class rv {
                   }
                 } else {
                   var7Lifetime1 = (-(var6Lifetime1 * 256) + 12800) / 20;
-                  tm.field_v.c(var3Lifetime1, var4Lifetime1, var7Lifetime1);
+                  ConsoleCommand.field_v.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime1);
                   var6Lifetime1 = -140 + up.field_p;
                   if (0 < var6Lifetime1) {
                     var7Lifetime1 = 256;
@@ -184,19 +184,19 @@ final class rv {
           }
           return;
         }
-        ti.field_f.f(var3Lifetime1, var4Lifetime1);
+        ti.field_f.drawHalfSize(var3Lifetime1, var4Lifetime1);
         var6Lifetime2 = -125 + up.field_p;
         if (0 < var6Lifetime2 &&
           var6Lifetime2 < 50) {
           if (20 > var6Lifetime2) {
             var7Lifetime2 = var6Lifetime2 * 256 / 20;
-            tm.field_v.c(var3Lifetime1, var4Lifetime1, var7Lifetime2);
+            ConsoleCommand.field_v.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime2);
           } else {
             if (var6Lifetime2 < 30) {
-              tm.field_v.c(var3Lifetime1, var4Lifetime1, 256);
+              ConsoleCommand.field_v.drawAdditive(var3Lifetime1, var4Lifetime1, 256);
             } else {
               var7Lifetime2 = (-(var6Lifetime2 * 256) + 12800) / 20;
-              tm.field_v.c(var3Lifetime1, var4Lifetime1, var7Lifetime2);
+              ConsoleCommand.field_v.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime2);
             }
           }
         }

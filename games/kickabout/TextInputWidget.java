@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextInputWidget extends wi {
+class TextInputWidget extends TextButton {
     private boolean field_H;
     private long field_J;
     private int field_I;
@@ -65,8 +65,8 @@ class TextInputWidget extends wi {
     }
 
     private final void m(int param0) {
-        if (this.field_k instanceof sv) {
-          ((sv) (this.field_k)).a(-86, this);
+        if (this.field_k instanceof TextInputListener) {
+          ((TextInputListener) (this.field_k)).a(-86, this);
         }
         if (param0 <= 66) {
           this.field_Q = 66;
@@ -114,7 +114,7 @@ class TextInputWidget extends wi {
           String var3 = null;
           if (!param0) {
             var3 = (String) null;
-            this.a((String) null, (byte) -122, true);
+            this.setInputText((String) null, (byte) -122, true);
           }
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
@@ -137,12 +137,12 @@ class TextInputWidget extends wi {
         if (param0 > -57) {
           this.m(49);
         }
-        if (this.field_k instanceof sv) {
-          ((sv) (this.field_k)).a((byte) 113, this);
+        if (this.field_k instanceof TextInputListener) {
+          ((TextInputListener) (this.field_k)).a((byte) 113, this);
         }
     }
 
-    final void a(String param0, byte param1, boolean param2) {
+    final void setInputText(String param0, byte param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -223,7 +223,7 @@ class TextInputWidget extends wi {
         }
     }
 
-    TextInputWidget(String param0, jv param1, int param2) {
+    TextInputWidget(String param0, UiListener param1, int param2) {
         super(param0, param1);
         this.field_J = 0L;
         this.field_T = -1;
@@ -231,7 +231,7 @@ class TextInputWidget extends wi {
         try {
           this.field_r = nb.field_i.field_h;
           this.field_S = param2;
-          this.a(param0, (byte) -17, true);
+          this.setInputText(param0, (byte) -17, true);
           this.field_H = true;
           this.field_L = nj.a(-123);
         } catch (RuntimeException runtimeException) {
@@ -263,7 +263,7 @@ class TextInputWidget extends wi {
           if (param1 <= 108) {
             field_U = (String) null;
           }
-          pi.field_b.a(param0);
+          pi.field_b.addSubStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ class TextInputWidget extends wi {
           if (this.field_p == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
               var7 = (WidgetTextLayout) ((Object) this.field_r);
-              var6 = var7.a(n.field_m, (UiWidget) (this), el.field_A, param2, param3, 0);
+              var6 = var7.a(n.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param2, param3, 0);
               if (var6 != -1) {
                 if (this.field_G && var6 < this.field_T &&
                   this.field_Q < var6) {
@@ -305,7 +305,7 @@ class TextInputWidget extends wi {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int stackIn_6_1 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_21_0 = null;
@@ -316,13 +316,13 @@ class TextInputWidget extends wi {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           if (!(this.field_r instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_r)).a(n.field_m, (UiWidget) (this), el.field_A, param5, param1, 0);
+          var8_int = ((WidgetTextLayout) ((Object) this.field_r)).a(n.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param5, param1, 0);
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -563,7 +563,7 @@ class TextInputWidget extends wi {
           }
           if (param1) {
             var4 = (String) null;
-            this.a((String) null, (byte) -99, true);
+            this.setInputText((String) null, (byte) -99, true);
           }
           this.field_I = this.field_I + param0.length();
           this.field_Q = this.field_I;

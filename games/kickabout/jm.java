@@ -28,16 +28,16 @@ final class jm extends IntrusiveNode {
               if (param0 < 49) {
                 jm.a(93, true, 85);
               }
-              var4 = Class.forName("pm");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(30, param1, param2, param3);
+              var5.initialize(30, param1, param2, param3);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(30, param1, param2, param3);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(30, param1, param2, param3);
               stackIn_5_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_5_0);
             }

@@ -21,7 +21,7 @@ final class da extends IntrusiveNode {
     int field_q;
     int field_l;
     PcmSampleStream field_F;
-    to field_y;
+    PcmSample field_y;
     int field_C;
     static Sprite field_m;
     int field_s;
@@ -80,7 +80,7 @@ final class da extends IntrusiveNode {
           return mc.field_k[1];
         }
         if (9 == param1) {
-          return kb.field_E[6];
+          return WriteIntegersCommand.field_E[6];
         }
         if (param1 == 35) {
           return mc.field_k[1];
@@ -104,18 +104,18 @@ final class da extends IntrusiveNode {
         if (param0 < 64) {
           return;
         }
-        if (null == wi.field_v) {
-          wi.field_v = null;
+        if (null == TextButton.field_v) {
+          TextButton.field_v = null;
           ig.field_f = null;
           return;
         }
-        if (null != wi.field_v.field_g) {
-          wi.field_v.field_g.field_I = false;
-          wi.field_v = null;
+        if (null != TextButton.field_v.field_g) {
+          TextButton.field_v.field_g.field_I = false;
+          TextButton.field_v = null;
           ig.field_f = null;
           return;
         }
-        wi.field_v = null;
+        TextButton.field_v = null;
         ig.field_f = null;
     }
 
@@ -130,17 +130,17 @@ final class da extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        fi.a(tv.field_e, ai.field_H, 14594, dw.field_e, rj.field_b);
+        ConsoleParseException.a(tv.field_e, AccountTermsPanel.field_H, 14594, ConsoleEvaluationException.field_e, rj.field_b);
         int var1 = -41 / ((47 - param0) / 45);
     }
 
     final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3, int param4) {
-        lc.field_e = su.a(-3505, "");
+        DualLinkDequeIterator.field_e = su.a(-3505, "");
         if (param4 >= -118) {
           return;
         }
         try {
-          lc.field_e.a(false, (byte) 108);
+          DualLinkDequeIterator.field_e.a(false, (byte) 108);
           id.a(param0, param3, false, param2);
           lf.a(-93);
           mj.field_a = vj.field_a;

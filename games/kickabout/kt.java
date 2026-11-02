@@ -139,14 +139,14 @@ final class kt extends js {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lc.field_e.a((byte) -80) &&
-            !param1.equals(lc.field_e.a(3))) {
-            lc.field_e = su.a(-3505, param1);
+          if (DualLinkDequeIterator.field_e.a((byte) -80) &&
+            !param1.equals(DualLinkDequeIterator.field_e.a(3))) {
+            DualLinkDequeIterator.field_e = su.a(-3505, param1);
           }
           if (param0) {
             field_i = (hd) null;
           }
-          stackIn_7_0 = lc.field_e;
+          stackIn_7_0 = DualLinkDequeIterator.field_e;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

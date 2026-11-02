@@ -14,7 +14,7 @@ final class ci implements Iterable {
     static String field_e;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new lc(this));
+        return (Iterator) ((Object) new DualLinkDequeIterator(this));
     }
 
     final DualLinkNode a(byte param0) {

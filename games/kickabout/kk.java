@@ -44,7 +44,7 @@ final class kk {
     short[] field_T;
     static String field_L;
     short[] field_r;
-    static kg[] field_Q;
+    static IndexedSprite[] field_Q;
     int[] field_e;
     short field_k;
     short[] field_P;
@@ -57,8 +57,8 @@ final class kk {
           if (param0 != -101) {
             field_R = (hd) null;
           }
-          pb.field_E = new pd(ep.field_b, (String) null, hk.field_G, param2, param1);
-          we.field_a = new vo(wd.field_l, pb.field_E);
+          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, hk.field_G, param2, param1);
+          we.field_a = new vo(wd.field_l, IsSixCommand.field_E);
           wd.field_l.a(we.field_a, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -243,10 +243,10 @@ final class kk {
         }
     }
 
-    final static cn a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
-        cn stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -262,7 +262,7 @@ final class kk {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (cn) (stackIn_4_0);
+          return (CoverageBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -318,8 +318,8 @@ final class kk {
           if (param0 != -101) {
             field_R = (hd) null;
           }
-          pb.field_E = new pd(ep.field_b, (String) null, hk.field_G, param2, param1);
-          we.field_a = new vo(wd.field_l, pb.field_E);
+          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, hk.field_G, param2, param1);
+          we.field_a = new vo(wd.field_l, IsSixCommand.field_E);
           wd.field_l.a(we.field_a, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

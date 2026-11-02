@@ -93,7 +93,7 @@ abstract class MatchAgent {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = lt.field_a[qj.b(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], lo.field_j[0], var3);
+        Sprite var4 = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], lo.field_j[0], var3);
         tk.h((byte) -81);
         return var4;
     }
@@ -420,7 +420,7 @@ abstract class MatchAgent {
             this.a((byte) 17, (MatchAgent) null);
           }
           this.field_b = -hq.a(22531, 6, param0, 0) + 64;
-          if (mu.a(param0, (byte) -39)) {
+          if (ContentTransitionDialog.a(param0, (byte) -39)) {
             this.field_e = param0.l(4, param1 + 55) - 1;
           }
           return;

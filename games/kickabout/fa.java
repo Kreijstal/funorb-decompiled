@@ -11,7 +11,7 @@ final class fa extends IntrusiveNode {
     static String[] field_g;
 
     final static void b(int param0) {
-        kd.field_s = false;
+        DebugConsole.field_s = false;
         if (dr.field_g != null) {
           dr.field_g.a(5075);
         }
@@ -19,7 +19,7 @@ final class fa extends IntrusiveNode {
         if (0 != NodeHashTableIterator.field_b) {
           td.a(29);
         }
-        fb.field_I = 0;
+        NumericDateInputWidget.field_I = 0;
     }
 
     private fa() throws Throwable {
@@ -49,7 +49,7 @@ final class fa extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (cu.a(param2, param3, param0, 122)) {
-            stackIn_7_0 = ub.i((byte) 78);
+            stackIn_7_0 = ModalPanel.i((byte) 78);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

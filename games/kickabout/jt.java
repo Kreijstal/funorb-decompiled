@@ -120,7 +120,7 @@ final class jt extends hd implements lv {
               stackIn_10_2 = -2 + this.field_T;
               stackIn_10_3 = -2 + this.field_F - var6;
               stackIn_11_4 = (var2 != 0) ? false : true;
-              jg.a(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, var3 != 0, 4);
+              DraggableWidget.a(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, var3 != 0, 4);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -139,7 +139,7 @@ final class jt extends hd implements lv {
               stackIn_23_2 = -2 + this.field_T;
               stackIn_23_3 = -2 + this.field_F - var6;
               stackIn_24_4 = (var2 != 0) ? false : true;
-              jg.a(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, var3 != 0, 4);
+              DraggableWidget.a(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, var3 != 0, 4);
             } else {
               if (param0 == 0) {
                 stackIn_32_0 = var5;
@@ -147,7 +147,7 @@ final class jt extends hd implements lv {
                 stackIn_32_2 = -2 + this.field_T;
                 stackIn_32_3 = -2 + this.field_F - var6;
                 stackIn_33_4 = (var2 != 0) ? false : true;
-                jg.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_33_4, var3 != 0, 4);
+                DraggableWidget.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_33_4, var3 != 0, 4);
               } else {
                 this.field_Db = -70;
                 stackIn_40_0 = var5;
@@ -155,7 +155,7 @@ final class jt extends hd implements lv {
                 stackIn_40_2 = -2 + this.field_T;
                 stackIn_40_3 = -2 + this.field_F - var6;
                 stackIn_41_4 = (var2 != 0) ? false : true;
-                jg.a(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3 != 0, 4);
+                DraggableWidget.a(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3 != 0, 4);
               }
             }
           }
@@ -178,7 +178,7 @@ final class jt extends hd implements lv {
             stackIn_62_2 = -2 + this.field_T;
             stackIn_62_3 = -2 + this.field_F - var6;
             stackIn_63_4 = (var2 != 0) ? false : true;
-            jg.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4, var3 != 0, 4);
+            DraggableWidget.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4, var3 != 0, 4);
           } else {
             if (this.field_zb == 3) {
               if (2 != this.field_Db) {
@@ -194,10 +194,10 @@ final class jt extends hd implements lv {
                 stackIn_77_2 = -2 + this.field_T;
                 stackIn_77_3 = -2 + this.field_F - var6;
                 stackIn_78_4 = (var2 != 0) ? false : true;
-                jg.a(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
+                DraggableWidget.a(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
                 q.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
                 if (var2 == 0) {
-                  pb.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
+                  IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
                 }
                 if (var4 != 0) {
                   fc.field_h.c(this.field_F + (-fc.field_h.field_o + this.field_q >> 1), this.field_T + (-fc.field_h.field_v + this.field_mb >> 1) + 10);
@@ -217,10 +217,10 @@ final class jt extends hd implements lv {
               stackIn_90_2 = -2 + this.field_T;
               stackIn_90_3 = -2 + this.field_F - var6;
               stackIn_91_4 = (var2 != 0) ? false : true;
-              jg.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
+              DraggableWidget.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
               q.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
               if (var2 == 0) {
-                pb.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
+                IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
               }
               if (var4 != 0) {
                 fc.field_h.c(this.field_F + (-fc.field_h.field_o + this.field_q >> 1), this.field_T + (-fc.field_h.field_v + this.field_mb >> 1) + 10);
@@ -233,7 +233,7 @@ final class jt extends hd implements lv {
               stackIn_99_2 = -2 + this.field_T;
               stackIn_99_3 = -2 + this.field_F - var6;
               stackIn_100_4 = (var2 != 0) ? false : true;
-              jg.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_100_4, var3 != 0, 4);
+              DraggableWidget.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_100_4, var3 != 0, 4);
             } else {
               this.field_Db = -70;
               stackIn_107_0 = var5;
@@ -241,13 +241,13 @@ final class jt extends hd implements lv {
               stackIn_107_2 = -2 + this.field_T;
               stackIn_107_3 = -2 + this.field_F - var6;
               stackIn_108_4 = (var2 != 0) ? false : true;
-              jg.a(stackIn_107_0, stackIn_107_1, stackIn_107_2, stackIn_107_3, stackIn_108_4, var3 != 0, 4);
+              DraggableWidget.a(stackIn_107_0, stackIn_107_1, stackIn_107_2, stackIn_107_3, stackIn_108_4, var3 != 0, 4);
             }
           }
         }
         q.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
         if (var2 == 0) {
-          pb.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
+          IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
         }
         if (var4 != 0) {
           fc.field_h.c(this.field_F + (-fc.field_h.field_o + this.field_q >> 1), this.field_T + (-fc.field_h.field_v + this.field_mb >> 1) + 10);
@@ -261,7 +261,7 @@ final class jt extends hd implements lv {
           this.field_Db = param1;
           this.field_Cb = param0;
           this.field_q = 80;
-          this.field_Eb = ad.a(cm.field_M[this.field_zb], 26300);
+          this.field_Eb = ad.a(ResizableModalPanel.field_M[this.field_zb], 26300);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "jt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -429,7 +429,7 @@ final class jt extends hd implements lv {
               stackIn_11_2 = -48 + param0;
               stackIn_11_3 = var5;
               stackIn_12_4 = (this.i(-29050)) ? false : true;
-              jg.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_12_4, false, param1 ^ 19);
+              DraggableWidget.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_12_4, false, param1 ^ 19);
               decompiledFrameRemainder1 = false;
             }
             else {
@@ -448,7 +448,7 @@ final class jt extends hd implements lv {
               stackIn_21_2 = -48 + param0;
               stackIn_21_3 = var5;
               stackIn_22_4 = (this.i(-29050)) ? false : true;
-              jg.a(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_22_4, false, param1 ^ 19);
+              DraggableWidget.a(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_22_4, false, param1 ^ 19);
             } else {
               if (this.field_zb != 3) {
                 stackIn_26_0 = var4;
@@ -456,7 +456,7 @@ final class jt extends hd implements lv {
                 stackIn_26_2 = -48 + param0;
                 stackIn_26_3 = var5;
                 stackIn_27_4 = (this.i(-29050)) ? false : true;
-                jg.a(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, false, param1 ^ 19);
+                DraggableWidget.a(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, false, param1 ^ 19);
               } else {
                 if (this.field_Db != 1) {
                   stackIn_35_0 = var4;
@@ -464,7 +464,7 @@ final class jt extends hd implements lv {
                   stackIn_35_2 = -48 + param0;
                   stackIn_35_3 = var5;
                   stackIn_36_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_35_0, stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_35_0, stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, false, param1 ^ 19);
                 } else {
                   var5 += 8;
                   stackIn_31_0 = var4;
@@ -472,7 +472,7 @@ final class jt extends hd implements lv {
                   stackIn_31_2 = -48 + param0;
                   stackIn_31_3 = var5;
                   stackIn_32_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4, false, param1 ^ 19);
                 }
               }
             }
@@ -495,7 +495,7 @@ final class jt extends hd implements lv {
                 stackIn_93_2 = -48 + param0;
                 stackIn_93_3 = var5;
                 stackIn_94_4 = (this.i(-29050)) ? false : true;
-                jg.a(stackIn_93_0, stackIn_93_1, stackIn_93_2, stackIn_93_3, stackIn_94_4, false, param1 ^ 19);
+                DraggableWidget.a(stackIn_93_0, stackIn_93_1, stackIn_93_2, stackIn_93_3, stackIn_94_4, false, param1 ^ 19);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -514,7 +514,7 @@ final class jt extends hd implements lv {
                 stackIn_103_2 = -48 + param0;
                 stackIn_103_3 = var5;
                 stackIn_104_4 = (this.i(-29050)) ? false : true;
-                jg.a(stackIn_103_0, stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, false, param1 ^ 19);
+                DraggableWidget.a(stackIn_103_0, stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, false, param1 ^ 19);
               } else {
                 if (this.field_zb != 3) {
                   stackIn_108_0 = var4;
@@ -522,7 +522,7 @@ final class jt extends hd implements lv {
                   stackIn_108_2 = -48 + param0;
                   stackIn_108_3 = var5;
                   stackIn_109_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_108_0, stackIn_108_1, stackIn_108_2, stackIn_108_3, stackIn_109_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_108_0, stackIn_108_1, stackIn_108_2, stackIn_108_3, stackIn_109_4, false, param1 ^ 19);
                 } else {
                   if (this.field_Db != 1) {
                     stackIn_117_0 = var4;
@@ -530,7 +530,7 @@ final class jt extends hd implements lv {
                     stackIn_117_2 = -48 + param0;
                     stackIn_117_3 = var5;
                     stackIn_118_4 = (this.i(-29050)) ? false : true;
-                    jg.a(stackIn_117_0, stackIn_117_1, stackIn_117_2, stackIn_117_3, stackIn_118_4, false, param1 ^ 19);
+                    DraggableWidget.a(stackIn_117_0, stackIn_117_1, stackIn_117_2, stackIn_117_3, stackIn_118_4, false, param1 ^ 19);
                   } else {
                     var5 += 8;
                     stackIn_113_0 = var4;
@@ -538,7 +538,7 @@ final class jt extends hd implements lv {
                     stackIn_113_2 = -48 + param0;
                     stackIn_113_3 = var5;
                     stackIn_114_4 = (this.i(-29050)) ? false : true;
-                    jg.a(stackIn_113_0, stackIn_113_1, stackIn_113_2, stackIn_113_3, stackIn_114_4, false, param1 ^ 19);
+                    DraggableWidget.a(stackIn_113_0, stackIn_113_1, stackIn_113_2, stackIn_113_3, stackIn_114_4, false, param1 ^ 19);
                   }
                 }
               }
@@ -558,7 +558,7 @@ final class jt extends hd implements lv {
                 stackIn_49_2 = -48 + param0;
                 stackIn_49_3 = var5;
                 stackIn_50_4 = (this.i(-29050)) ? false : true;
-                jg.a(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
+                DraggableWidget.a(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
                 q.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
                 return;
               }
@@ -571,7 +571,7 @@ final class jt extends hd implements lv {
                 stackIn_71_2 = -48 + param0;
                 stackIn_71_3 = var5;
                 stackIn_72_4 = (this.i(-29050)) ? false : true;
-                jg.a(stackIn_71_0, stackIn_71_1, stackIn_71_2, stackIn_71_3, stackIn_72_4, false, param1 ^ 19);
+                DraggableWidget.a(stackIn_71_0, stackIn_71_1, stackIn_71_2, stackIn_71_3, stackIn_72_4, false, param1 ^ 19);
               } else {
                 if (this.field_Db != 1) {
                   stackIn_80_0 = var4;
@@ -579,7 +579,7 @@ final class jt extends hd implements lv {
                   stackIn_80_2 = -48 + param0;
                   stackIn_80_3 = var5;
                   stackIn_81_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_80_0, stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_81_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_80_0, stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_81_4, false, param1 ^ 19);
                 } else {
                   var5 += 8;
                   stackIn_76_0 = var4;
@@ -587,7 +587,7 @@ final class jt extends hd implements lv {
                   stackIn_76_2 = -48 + param0;
                   stackIn_76_3 = var5;
                   stackIn_77_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3, stackIn_77_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3, stackIn_77_4, false, param1 ^ 19);
                 }
               }
             } else {
@@ -598,7 +598,7 @@ final class jt extends hd implements lv {
                 stackIn_56_2 = -48 + param0;
                 stackIn_56_3 = var5;
                 stackIn_57_4 = (this.i(-29050)) ? false : true;
-                jg.a(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, false, param1 ^ 19);
+                DraggableWidget.a(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, false, param1 ^ 19);
               } else {
                 if (this.field_Db != 1) {
                   stackIn_65_0 = var4;
@@ -606,7 +606,7 @@ final class jt extends hd implements lv {
                   stackIn_65_2 = -48 + param0;
                   stackIn_65_3 = var5;
                   stackIn_66_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, false, param1 ^ 19);
                 } else {
                   var5 += 8;
                   stackIn_61_0 = var4;
@@ -614,7 +614,7 @@ final class jt extends hd implements lv {
                   stackIn_61_2 = -48 + param0;
                   stackIn_61_3 = var5;
                   stackIn_62_4 = (this.i(-29050)) ? false : true;
-                  jg.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_62_4, false, param1 ^ 19);
+                  DraggableWidget.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_62_4, false, param1 ^ 19);
                 }
               }
             }
@@ -702,7 +702,7 @@ final class jt extends hd implements lv {
         var5 = this.h(127) ? 1 : 0;
         if (!param1) {
           if (null != this.field_Ab) {
-            var6 = cm.field_M[this.field_zb];
+            var6 = ResizableModalPanel.field_M[this.field_zb];
             stackIn_9_0 = this.field_Ab;
             stackIn_10_1 = (var6 > this.field_Cb.field_x) ? false : true;
             stackIn_9_0.field_lb = stackIn_10_1;
@@ -710,9 +710,9 @@ final class jt extends hd implements lv {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
               } else {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0) {
@@ -741,7 +741,7 @@ final class jt extends hd implements lv {
         }
         if (!this.field_gb) {
           if (null != this.field_Ab) {
-            var6Lifetime1 = cm.field_M[this.field_zb];
+            var6Lifetime1 = ResizableModalPanel.field_M[this.field_zb];
             stackIn_34_0 = this.field_Ab;
             stackIn_35_1 = !(var6Lifetime1 > this.field_Cb.field_x);
             stackIn_34_0.field_lb = stackIn_35_1;
@@ -749,9 +749,9 @@ final class jt extends hd implements lv {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
               } else {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0 ||
@@ -782,12 +782,12 @@ final class jt extends hd implements lv {
             } else {
               stackIn_79_1 = vj.field_e;
             }
-            qd.$cfr$intArgs$a$b6210757cdab(stackIn_78_0, stackIn_79_1);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_78_0, stackIn_79_1);
           } else {
             if (var5 != 0) {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, li.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
               if (null != this.field_Ab) {
-                var6Lifetime2 = cm.field_M[this.field_zb];
+                var6Lifetime2 = ResizableModalPanel.field_M[this.field_zb];
                 stackIn_59_0 = this.field_Ab;
                 stackIn_60_1 = !(var6Lifetime2 > this.field_Cb.field_x);
                 stackIn_59_0.field_lb = stackIn_60_1;
@@ -795,9 +795,9 @@ final class jt extends hd implements lv {
                   this.field_Ab.field_Q &&
                   this.field_lb) {
                   if (!this.field_Ab.field_lb) {
-                    qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
                   } else {
-                    qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
                   }
                 }
                 this.field_Ab.c((byte) -109);
@@ -813,7 +813,7 @@ final class jt extends hd implements lv {
           }
         }
         if (null != this.field_Ab) {
-          var6Lifetime3 = cm.field_M[this.field_zb];
+          var6Lifetime3 = ResizableModalPanel.field_M[this.field_zb];
           stackIn_98_0 = this.field_Ab;
           stackIn_99_1 = (var6Lifetime3 > this.field_Cb.field_x) ? false : true;
           stackIn_98_0.field_lb = stackIn_99_1;
@@ -827,14 +827,14 @@ final class jt extends hd implements lv {
               }
             } else {
               if (!this.field_Ab.field_lb) {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.c((byte) -109);
                   this.field_Ab = null;
                 }
               } else {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.c((byte) -109);

@@ -7,7 +7,7 @@ final class te {
 
     final static void a(boolean param0, String param1) {
         try {
-          lh.field_A = param1;
+          BroadcastServerCommand.field_A = param1;
           if (!param0) {
             te.a(-69, -48, -126, true, -8);
           }
@@ -55,18 +55,18 @@ final class te {
         if (param3) {
           return (Sprite[]) null;
         }
-        Sprite dupTemp$0 = lh.a(param4, (byte) -96, param0);
+        Sprite dupTemp$0 = BroadcastServerCommand.a(param4, (byte) -96, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = lh.a(param2, (byte) -96, param0);
+        Sprite dupTemp$1 = BroadcastServerCommand.a(param2, (byte) -96, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param1 != 0) {
-          var6[4] = lh.a(param1, (byte) -96, 64);
+          var6[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
         }
         return var5;
     }

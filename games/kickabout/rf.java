@@ -138,7 +138,7 @@ final class rf {
         this.field_b.a(true, param3, param0, var6, var7, param2, param1);
         du.field_f.a(true, kk.field_R.field_q, 0, 0, sh.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
-        pj.field_E.a(true, -2 - TeamSelectionAgent.field_f + (kk.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
+        AlphaContainer.field_E.a(true, -2 - TeamSelectionAgent.field_f + (kk.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
         ph.field_f.a(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + kk.field_R.field_q) - 2, sh.field_c + 2, 18);
         ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (kk.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, kk.field_R.field_q, 92, 2, 0);
         nq.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
@@ -269,7 +269,7 @@ final class rf {
         String[] var3 = null;
         hd[] var4 = null;
         try {
-          var3 = new String[]{param0, lk.field_n, at.field_Jb};
+          var3 = new String[]{param0, ConsoleExpression.field_n, at.field_Jb};
           var4 = new hd[]{param1, kk.field_R, (hd) ((Object) nq.field_F)};
           this.field_b = new kf(0L, ge.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {

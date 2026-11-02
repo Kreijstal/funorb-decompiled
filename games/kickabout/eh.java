@@ -51,13 +51,13 @@ final class eh implements pk {
 
     public final boolean a(boolean param0) {
         Sprite var4 = null;
-        kg var5 = null;
+        IndexedSprite var5 = null;
         Sprite var6 = null;
         Sprite[] var7 = null;
         Sprite[] var8 = null;
         int var9 = 0;
         int var11_int = 0;
-        kg[] var10 = null;
+        IndexedSprite[] var10 = null;
         Sprite[][] var11 = null;
         Sprite[][] var12 = null;
         int var10_int = 0;
@@ -96,36 +96,36 @@ final class eh implements pk {
         if (v.field_b != null) {
           CipherPacketBuffer.k(61, 2);
           eo.field_q = wa.a((byte) 124, "lobby", bo.field_Cb, "logo");
-          eo.field_p = se.a(bo.field_Cb, -28, "lobby", "time");
-          eo.field_j = se.a(bo.field_Cb, -121, "lobby", "tournament_icons");
+          eo.field_p = ModalStack.a(bo.field_Cb, -28, "lobby", "time");
+          eo.field_j = ModalStack.a(bo.field_Cb, -121, "lobby", "tournament_icons");
           eo.field_j[0] = new Sprite(0, 0);
-          eo.field_m = se.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
+          eo.field_m = ModalStack.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
           eo.field_m[0] = new Sprite(0, 0);
-          eo.field_f = jo.a(bo.field_Cb, 17369, "lobby", "orb_icons");
-          se.a(bo.field_Cb, -127, "lobby", "players");
+          eo.field_f = DemoIntegersCommand.a(bo.field_Cb, 17369, "lobby", "orb_icons");
+          ModalStack.a(bo.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = eo.field_q;
           un.field_d = gm.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
-          q.field_d = qk.a("font", v.field_b, 75, "fonts", bo.field_Cb);
-          pb.field_C = qk.a("", var17, 105, "arialish12", var16);
+          q.field_d = Checkbox.a("font", v.field_b, 75, "fonts", bo.field_Cb);
+          IsSixCommand.field_C = Checkbox.a("", var17, 105, "arialish12", var16);
           var4 = new Sprite(16, 9);
           PacketBuffer.a(-64, var4);
-          SoftwareRasterizer.d(4, 4, 3, 7829367);
-          SoftwareRasterizer.d(4, 4, 2, 13421772);
+          SoftwareRasterizer.fillCircle(4, 4, 3, 7829367);
+          SoftwareRasterizer.fillCircle(4, 4, 2, 13421772);
           ta.e(122);
           var5 = eo.a(var4);
-          pb.field_C.a(new kg[]{var5}, new int[]{10});
+          IsSixCommand.field_C.a(new IndexedSprite[]{var5}, new int[]{10});
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
           LoggedGoal.a(var6, (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 77, "locked")), (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
           sh.field_g = nh.b(nh.a(var6));
-          nn.field_B = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
+          AccountChoicePanel.field_B = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
           tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
           GameAppletShell.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
           sk.a(-109, 100, 20);
           cg.field_K = wa.a((byte) 107, "menu", bo.field_Cb, "button_right_shine");
           kh.field_r = wa.a((byte) 116, "menu", bo.field_Cb, "button_small_shine");
           ap.field_l = wa.a((byte) 101, "menu", bo.field_Cb, "button_large_shine");
-          ig.field_a = se.a(bo.field_Cb, -119, "menu", "digifont");
+          ig.field_a = ModalStack.a(bo.field_Cb, -119, "menu", "digifont");
           sk.a(90, 100, 25);
           wt.field_z = ng.a("swatch_overlay", "menu", 2, bo.field_Cb);
           var7 = ng.a("arrows", "menu", 2, bo.field_Cb);
@@ -135,7 +135,7 @@ final class eh implements pk {
           sk.a(103, 100, 35);
           sk.a(-94, 100, 40);
           tb.field_q = ng.a("digits", "hud", 2, bo.field_Cb);
-          MouseInputHandler.field_g = se.a(bo.field_Cb, -121, "hud", "cones");
+          MouseInputHandler.field_g = ModalStack.a(bo.field_Cb, -121, "hud", "cones");
           SpriteState.field_p = ng.a("tutorial", "hud", 2, bo.field_Cb);
           tn.field_e = wa.a((byte) 114, "hud", bo.field_Cb, "arrow");
           IntrusiveDequeCursor.a(-128, wa.a((byte) 114, "hud", bo.field_Cb, "cursor"));
@@ -161,7 +161,7 @@ final class eh implements pk {
           }
           ArchiveIndex.field_m = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 96, "help_up"));
           bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
-          mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"), true);
+          mf.a(ModalStack.a(bo.field_Cb, -124, "menu", "tickbox"), true);
           sk.a(80, 100, 75);
           eq.field_h = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon"));
           CipherPacketBuffer.field_q = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
@@ -170,7 +170,7 @@ final class eh implements pk {
           fc.field_h = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 109, "lock_icon"));
           sk.a(90, 100, 80);
           es.field_f = bg.a("menu", bo.field_Cb, (byte) 78, "kit");
-          kb.field_E = ng.a("cups", "menu", 2, bo.field_Cb);
+          WriteIntegersCommand.field_E = ng.a("cups", "menu", 2, bo.field_Cb);
           jm.field_i = ng.a("cups_empty", "menu", 2, bo.field_Cb);
           sk.a(102, 100, 90);
           fn.field_d = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 88, "shelf"));
@@ -184,10 +184,10 @@ final class eh implements pk {
           int[] var15 = (int[]) null;
           uf.a(var11, id.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
           la.field_k = da.field_k;
-          qd.field_e = lr.field_n;
-          wi.field_z = ja.field_Z;
+          IndexedSpriteState.field_e = lr.field_n;
+          TextButton.field_z = ja.field_Z;
           pn.field_t = 0;
-          mr.a(false, 200);
+          ValidatedTextWidget.a(false, 200);
           sk.a(-61, 100, 95);
           m.a(var17, var16, 5198);
           bf.a(-70, rm.field_A, 0, nm.field_g, 0, 16777215);
@@ -198,47 +198,47 @@ final class eh implements pk {
         }
         if (ResourceArchive.field_f != null) {
           CipherPacketBuffer.k(61, 3);
-          cq.field_j = new Sprite(ResourceArchive.field_f.a("background_guy.png", "", 36), (java.awt.Component) ((Object) ln.l(64)));
-          mk.field_a = new Sprite(ResourceArchive.field_f.a("background.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
-          iu.field_k = new Sprite(ResourceArchive.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) ln.l(64)));
-          ai.field_E = new Sprite(ResourceArchive.field_f.a("botbar.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
+          cq.field_j = new Sprite(ResourceArchive.field_f.a("background_guy.png", "", 36), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          mk.field_a = new Sprite(ResourceArchive.field_f.a("background.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          iu.field_k = new Sprite(ResourceArchive.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          AccountTermsPanel.field_E = new Sprite(ResourceArchive.field_f.a("botbar.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           sk.a(-114, 23, 2);
-          vo.field_cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) ln.l(64))));
-          nn.field_C = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
-          du.field_i = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) ln.l(64))));
-          lb.field_L = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) ln.l(64))));
-          ll.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) ln.l(64))));
+          vo.field_cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountChoicePanel.field_C = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          du.field_i = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          TextHotspotWidget.field_L = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ll.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(122, 23, 4);
-          nn.field_K = new ArgbSprite(ResourceArchive.field_f.a("cone_1.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
-          re.field_o = new ArgbSprite(ResourceArchive.field_f.a("cone_2.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
-          uv.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) ln.l(64))));
-          uj.field_B = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) ln.l(64))));
+          AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.a("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          re.field_o = new ArgbSprite(ResourceArchive.field_f.a("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          uv.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SetLagCommand.field_B = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-114, 23, 6);
-          mf.field_Cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) ln.l(64))));
-          pw.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) ln.l(64))));
+          mf.field_Cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          pw.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-58, 23, 8);
-          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) ln.l(64))));
-          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) ln.l(64))));
+          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-105, 23, 10);
-          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) ln.l(64))));
-          gu.field_zb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
+          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          gu.field_zb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-61, 23, 12);
-          ae.field_H = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) ln.l(64))));
-          fv.field_b = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) ln.l(64))));
+          AccountRegistrationPanel.field_H = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          fv.field_b = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-85, 23, 14);
-          mg.field_g = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) ln.l(64))));
+          mg.field_g = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-49, 23, 16);
-          qt.field_u = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) ln.l(64))));
+          qt.field_u = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-98, 23, 18);
-          fn.field_f = new ArgbSprite(ResourceArchive.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) ln.l(64)));
-          kn.field_J = new Sprite(ResourceArchive.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) ln.l(64)));
+          fn.field_f = new ArgbSprite(ResourceArchive.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          kn.field_J = new Sprite(ResourceArchive.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           sk.a(126, 23, 20);
-          vl.field_g = new Sprite(ResourceArchive.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) ((Object) ln.l(64)));
-          eo.field_a = new ArgbSprite(ResourceArchive.field_f.a("arrow_on.png", "", 63), (java.awt.Component) ((Object) ln.l(64)));
-          eo.field_b = new ArgbSprite(ResourceArchive.field_f.a("arrow_off.png", "", 4), (java.awt.Component) ((Object) ln.l(64)));
+          vl.field_g = new Sprite(ResourceArchive.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          eo.field_a = new ArgbSprite(ResourceArchive.field_f.a("arrow_on.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          eo.field_b = new ArgbSprite(ResourceArchive.field_f.a("arrow_off.png", "", 4), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           sk.a(-89, 23, 23);
-          this.a(11264, new ArgbSprite(ResourceArchive.field_f.a("achievements_large.png", "", 63), (java.awt.Component) ((Object) ln.l(64))));
-          sf.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("ka_logo.png", "", 37), (java.awt.Component) ((Object) ln.l(64))));
+          this.a(11264, new ArgbSprite(ResourceArchive.field_f.a("achievements_large.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          sf.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("ka_logo.png", "", 37), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           ResourceArchive.field_f = null;
           dd.a((byte) 99);
           return false;
@@ -395,8 +395,8 @@ final class eh implements pk {
             var4++;
             oi.field_e[incrementValue$63] = new oh(ns.field_c, -68, 1143);
             for (var5Lifetime2 = 0; 7 > var5Lifetime2; var5Lifetime2++) {
-              var6Lifetime2 = el.a(29430, 40, 956);
-              var7Lifetime2 = el.a(29430, 70, var5Lifetime2 * 150 + 200);
+              var6Lifetime2 = BytePlusOneCommand.a(29430, 40, 956);
+              var7Lifetime2 = BytePlusOneCommand.a(29430, 70, var5Lifetime2 * 150 + 200);
               incrementValue$68 = var4;
               var4++;
               oi.field_e[incrementValue$68] = new oh(c.field_e, var6Lifetime2, var7Lifetime2);
@@ -420,10 +420,10 @@ final class eh implements pk {
             var4Lifetime1 = 0;
             incrementValue$40 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$40] = new oh(el.field_D, 0, 1375);
+            oi.field_e[incrementValue$40] = new oh(BytePlusOneCommand.field_D, 0, 1375);
             for (var5Lifetime1 = 0; 12 > var5Lifetime1; var5Lifetime1++) {
-              var6Lifetime1 = el.a(29430, 30, -300 + 100 * var5Lifetime1);
-              var7Lifetime1 = el.a(29430, 60, -290);
+              var6Lifetime1 = BytePlusOneCommand.a(29430, 30, -300 + 100 * var5Lifetime1);
+              var7Lifetime1 = BytePlusOneCommand.a(29430, 60, -290);
               if (p.a((byte) -24, 2) == 0) {
                 var6Lifetime1 = -var6Lifetime1 + 896;
                 var7Lifetime1 += 1724;
@@ -446,12 +446,12 @@ final class eh implements pk {
             oi.field_e[incrementValue$44] = new oh(je.field_h, 753, -69);
             incrementValue$45 = var4Lifetime1;
             var4Lifetime1++;
-            oi.field_e[incrementValue$45] = new oh(el.field_D, 1030, 568);
+            oi.field_e[incrementValue$45] = new oh(BytePlusOneCommand.field_D, 1030, 568);
             for (var5Lifetime1Lifetime1 = 0; var5Lifetime1Lifetime1 < 8; var5Lifetime1Lifetime1++) {
-              var6Lifetime1Lifetime1 = el.a(29430, 20, -170);
+              var6Lifetime1Lifetime1 = BytePlusOneCommand.a(29430, 20, -170);
               var7Lifetime1Lifetime1 = -50 + var5Lifetime1Lifetime1 / 2 * 400;
               if ((1 & var5Lifetime1Lifetime1) != 0) {
-                var7Lifetime1Lifetime1 = var7Lifetime1Lifetime1 + el.a(29430, 20, 60);
+                var7Lifetime1Lifetime1 = var7Lifetime1Lifetime1 + BytePlusOneCommand.a(29430, 20, 60);
               }
               incrementValue$46 = var4Lifetime1;
               var4Lifetime1++;
@@ -471,8 +471,8 @@ final class eh implements pk {
             oi.field_e[4] = new oh(c.field_e, 901, -252);
             oi.field_e[5] = new oh(var3, 1095, 963);
             oi.field_e[6] = new oh(c.field_e, 925, 1294);
-            oi.field_e[7] = new oh(el.field_D, -131, 957);
-            oi.field_e[8] = new oh(el.field_D, 924, 240);
+            oi.field_e[7] = new oh(BytePlusOneCommand.field_D, -131, 957);
+            oi.field_e[8] = new oh(BytePlusOneCommand.field_D, 924, 240);
           } else {
             if (rm.field_C == 3) {
               oi.field_e = new oh[]{};
@@ -503,7 +503,7 @@ final class eh implements pk {
         var5 = Kickabout.field_G;
         nm.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
         CipherPacketBuffer.k(param0 ^ 12774, 7);
-        t.a(0.6000000238418579f);
+        TriangleRasterizer.a(0.6000000238418579f);
         g.b(false);
         fn.i(18);
         ii.b(65280);
@@ -517,7 +517,7 @@ final class eh implements pk {
         iv.a(un.field_d, (byte) 113);
         sk.a(-89, 6, 3);
         uf.a((byte) -32);
-        cm.l(96);
+        ResizableModalPanel.l(96);
         sk.a(-49, 6, 5);
         GameLoopApplet.n((byte) -10);
         CipherPacketBuffer.k(61, 10);
@@ -528,19 +528,19 @@ final class eh implements pk {
         sk.a(-69, 4, 2);
         os.a(param0 - 12857);
         sk.a(-124, 4, 3);
-        b.field_U = (Sprite[]) ((Object) new ArgbSprite[kb.field_E.length]);
-        for (var2 = 0; var2 < kb.field_E.length; var2++) {
+        b.field_U = (Sprite[]) ((Object) new ArgbSprite[WriteIntegersCommand.field_E.length]);
+        for (var2 = 0; var2 < WriteIntegersCommand.field_E.length; var2++) {
           var3 = new ArgbSprite(40, 40);
           PacketBuffer.a(-100, var3);
-          kb.field_E[var2].c(0, 0);
+          WriteIntegersCommand.field_E[var2].c(0, 0);
           ta.e(param0 - 12637);
           for (var4 = 0; var3.field_y.length > var4; var4++) {
             if (var3.field_y[var4] != 0) {
               var3.field_y[var4] = hf.a(var3.field_y[var4], -16777216);
             }
           }
-          var3.a(-16777216);
-          var3.a(2130706432);
+          var3.addOutline(-16777216);
+          var3.addOutline(2130706432);
           b.field_U[var2] = (Sprite) ((Object) nh.b(var3));
         }
         CipherPacketBuffer.k(61, 11);
@@ -553,11 +553,11 @@ final class eh implements pk {
         jm.a(-5, false, -2);
         CipherPacketBuffer.k(61, 12);
         sk.a(-71, 4, 1);
-        nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, pb.field_C, un.field_d, new nk(), 20, 16777215, 30, new pa(true), 16777215, 9, new pa(false), 16777215);
+        nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, un.field_d, new nk(), 20, 16777215, 30, new pa(true), 16777215, 9, new pa(false), 16777215);
         sk.a(-57, 4, 2);
         nb.a((byte) -94);
         sk.a(75, 4, 3);
-        cm.a(param0 ^ 922092267, 50);
+        ResizableModalPanel.a(param0 ^ 922092267, 50);
         Kickabout.t(param0 - 826888154);
         CipherPacketBuffer.k(61, 13);
         oa.a(false, new md());
@@ -752,7 +752,7 @@ final class eh implements pk {
           if (param2 < 16) {
             eh.a((byte) 120);
           }
-          var6 = se.a(param1, -42, param0, param3);
+          var6 = ModalStack.a(param1, -42, param0, param3);
           var5 = var6;
           var6[3].field_v = var6[3].field_w;
           var6[1].field_o = var6[1].field_q;

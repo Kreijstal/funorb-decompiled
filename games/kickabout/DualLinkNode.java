@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     static byte[] field_j;
     static String field_m;
     static IntrusiveDeque field_g;
-    static kg[] field_h;
+    static IndexedSprite[] field_h;
     static int field_k;
     static int[] field_i;
 

@@ -133,7 +133,7 @@ final class LoggedPlayer {
         if (param0 != -3197) {
           field_k = (String) null;
         }
-        return nq.a(false, qi.field_o, ik.field_A);
+        return nq.a(false, qi.field_o, IntDoubleCommand.field_A);
     }
 
     public static void a(int param0) {

@@ -4,7 +4,7 @@
 final class nm {
     static Kickabout field_g;
     int[] field_e;
-    static oj field_d;
+    static LoadingProgressDialog field_d;
     private static int[] field_b;
     boolean field_j;
     private int[][] field_n;
@@ -14,7 +14,7 @@ final class nm {
     private int[] field_m;
     static int field_l;
     int field_h;
-    static dp field_k;
+    static ReverbPcmStream field_k;
     static String field_a;
 
     final static Sprite a(int param0, int param1, Sprite param2) {
@@ -76,7 +76,7 @@ final class nm {
     }
 
     private nm(ResourceArchive param0, int param1, String param2) {
-        this(param0, param1, param0.a((byte) -111, param2, param1));
+        this(param0, param1, param0.findFileId((byte) -111, param2, param1));
     }
 
     nm(ResourceArchive param0, String param1, String param2) {

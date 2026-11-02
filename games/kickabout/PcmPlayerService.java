@@ -36,7 +36,7 @@ class PcmPlayerService {
         int var9;
         Object var10;
         PcmStream var11;
-        dm var12;
+        AbstractPcmSample var12;
         int var13;
         PcmStream var14;
         int var15_int;
@@ -50,7 +50,7 @@ class PcmPlayerService {
         if (field_o) {
           var3 = var3 << 1;
         }
-        dv.a(param0, 0, var3);
+        ArrayOperations.a(param0, 0, var3);
         this.field_u = this.field_u - param1;
         if (this.field_c != null &&
           this.field_u <= 0) {
@@ -203,7 +203,7 @@ class PcmPlayerService {
               }
               ((PcmPlayerService) ((Object) stackIn_10_0)).field_k = new int[stackIn_10_1 * stackIn_11_2];
               ((PcmPlayerService) ((Object) var4)).field_p = param3;
-              ((PcmPlayerService) ((Object) var4)).a(param1);
+              ((PcmPlayerService) ((Object) var4)).initializeDevice(param1);
               ((PcmPlayerService) ((Object) var4)).field_r = (param3 & -1024) + 1024;
               if (((PcmPlayerService) ((Object) var4)).field_r > 16384) {
                 ((PcmPlayerService) ((Object) var4)).field_r = 16384;
@@ -249,7 +249,7 @@ class PcmPlayerService {
         param0.field_g = param1;
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initializeDevice(java.awt.Component param0) throws Exception {
     }
 
     final synchronized void d() {
@@ -302,7 +302,7 @@ class PcmPlayerService {
               if (this.field_r > 16384) {
                 this.field_r = 16384;
               }
-              this.f();
+              this.closeDevice();
               this.b(this.field_r);
               var3_int = 0;
               this.field_a = true;
@@ -322,7 +322,7 @@ class PcmPlayerService {
               } else {
                 if (this.field_l == 0 &&
                   this.field_n == 0) {
-                  this.f();
+                  this.closeDevice();
                   this.field_g = var1 + 2000L;
                   return;
                 }
@@ -336,7 +336,7 @@ class PcmPlayerService {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.f();
+            this.closeDevice();
             this.field_g = var1 + 2000L;
           }
           return;
@@ -372,7 +372,7 @@ class PcmPlayerService {
     void b(int param0) throws Exception {
     }
 
-    void f() {
+    void closeDevice() {
     }
 
     final synchronized void c() {
@@ -396,7 +396,7 @@ class PcmPlayerService {
             field_d = null;
           }
         }
-        this.f();
+        this.closeDevice();
         this.field_k = null;
         this.field_s = true;
     }

@@ -200,16 +200,16 @@ final class IsaacRandom {
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lk[] var2 = null;
+        ConsoleExpression[] var2 = null;
         RuntimeException var2_ref = null;
         StringBuilder var3 = null;
-        lk var5 = null;
+        ConsoleExpression var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         int var9 = 0;
         String var10 = null;
-        lk[] var11 = null;
+        ConsoleExpression[] var11 = null;
         var9 = Kickabout.field_G;
         try {
           var11 = w.a(param0, (byte) -21);

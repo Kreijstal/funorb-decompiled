@@ -215,7 +215,7 @@ final class sl extends hd {
                 discarded$9 = this.field_yb.append((char) var2);
               }
             }
-            if (se.a((byte) -118, (char) var2)) {
+            if (ModalStack.a((byte) -118, (char) var2)) {
               discarded$10 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
               if (cc.field_e == 84) {
@@ -278,7 +278,7 @@ final class sl extends hd {
                 discarded$5 = this.field_yb.append((char) var2Lifetime1);
               }
             }
-            if (se.a((byte) -118, (char) var2Lifetime1)) {
+            if (ModalStack.a((byte) -118, (char) var2Lifetime1)) {
               discarded$7 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
               if (cc.field_e == 84) {
@@ -356,7 +356,7 @@ final class sl extends hd {
             discarded$1 = this.field_yb.append((char) var2Lifetime3);
           }
         }
-        if (se.a((byte) -118, (char) var2Lifetime3)) {
+        if (ModalStack.a((byte) -118, (char) var2Lifetime3)) {
           discarded$3 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
           if (cc.field_e == 84) {

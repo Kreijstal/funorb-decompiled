@@ -27,7 +27,7 @@ final class wh extends IntrusiveNode {
         this.field_u = param0;
         this.field_o = param1 ? true : false;
         this.field_t = 0;
-        this.field_m.f(0);
+        this.field_m.setVolume(0);
     }
 
     final static void a(byte param0, vc[] param1) {
@@ -72,9 +72,9 @@ final class wh extends IntrusiveNode {
         if (param0 != 99) {
           this.e(81);
         }
-        this.field_m = PcmSampleStream.a(vg.field_Db[this.field_n].field_l, 100, var2, this.field_f);
+        this.field_m = PcmSampleStream.createAtRatePercentQ6(vg.field_Db[this.field_n].field_l, 100, var2, this.field_f);
         if (this.field_j) {
-          this.field_m.i();
+          this.field_m.playBackwardFromEnd();
         }
         if (!this.field_r) {
           TextInputWidget.a(this.field_m, 114);
@@ -93,19 +93,19 @@ final class wh extends IntrusiveNode {
         if (this.field_t < this.field_u) {
           var2 = this.field_t * (this.field_x / this.field_u);
           var2 = var2 * mn.field_a >> 8;
-          this.field_m.f(var2 >> 8);
+          this.field_m.setVolume(var2 >> 8);
         }
         this.field_t = this.field_t + 1;
     }
 
     private final void e(int param0) {
         int var3 = 0;
-        int var2 = ((to) (this.field_m.field_h)).field_i.length;
+        int var2 = ((PcmSample) (this.field_m.field_h)).field_i.length;
         if (!(this.field_m.g() < -(this.field_s << 9) + var2)) {
           if (this.field_l < this.field_s) {
             var3 = -(this.field_l * (this.field_x / this.field_s)) + this.field_x;
             var3 = var3 * mn.field_a >> 8;
-            this.field_m.f(var3 >> 8);
+            this.field_m.setVolume(var3 >> 8);
           }
           this.field_l = this.field_l + 1;
         }
@@ -134,7 +134,7 @@ final class wh extends IntrusiveNode {
     }
 
     final void f(byte param0) {
-        if (this.field_m.f()) {
+        if (this.field_m.isSamplePositionOutOfRange()) {
           if (0 == this.field_k) {
             this.c((byte) -109);
           } else {

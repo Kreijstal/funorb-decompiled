@@ -6,7 +6,7 @@ final class hq {
     static nm[] field_b;
     static boolean field_a;
     static int field_d;
-    static kg[] field_e;
+    static IndexedSprite[] field_e;
 
     final static boolean a(byte param0) {
         if (param0 != 10) {
@@ -57,7 +57,7 @@ final class hq {
     }
 
     final static void b(byte param0) {
-        if (kd.field_s) {
+        if (DebugConsole.field_s) {
           fa.b(-127);
         }
         if (param0 < 108) {

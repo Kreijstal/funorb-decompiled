@@ -325,12 +325,12 @@ class FootballerAgent extends MatchAgent {
           this.field_G = param1.l(4, 59);
           this.field_n = param1.l(2, 59) - 1;
           this.field_j = -1 + param1.l(2, param0 + 13977);
-          this.action = hq.a(param0 ^ -28255, kb.a(14, false), param1, 0);
+          this.action = hq.a(param0 ^ -28255, WriteIntegersCommand.a(14, false), param1, 0);
           this.field_L = hq.a(22531, 8, param1, 0);
           this.field_C = hq.a(22531, 9, param1, 0);
           this.aiWait = param1.l(3, param0 ^ -13927);
-          this.field_O = mu.a(param1, (byte) -39);
-          this.field_s = mu.a(param1, (byte) -39);
+          this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
+          this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
           this.field_k = mk.a(param1, 30, (byte) 6, 18);
           this.field_m = mk.a(param1, 30, (byte) 6, 18);
           this.field_r = mk.a(param1, 30, (byte) 6, 18);
@@ -401,47 +401,47 @@ class FootballerAgent extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_M = this.field_M + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
             this.field_w = this.field_w + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
             this.field_v = this.field_v + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
           }
           this.field_K = mk.a(param1, 25, (byte) 6, 0);
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_G = param1.l(4, 59);
             this.field_n = -1 + param1.l(2, param0 ^ 50);
             this.field_j = param1.l(2, 59) - 1;
           }
-          if (mu.a(param1, (byte) -39)) {
-            this.action = param1.l(kb.a(14, false), 59);
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+            this.action = param1.l(WriteIntegersCommand.a(14, false), 59);
             this.field_L = param1.l(8, param0 ^ 50);
           }
           this.field_C = hq.a(param0 ^ 22538, param0, param1, 0);
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.aiWait = param1.l(3, 59);
           }
-          if (mu.a(param1, (byte) -39)) {
-            this.field_O = mu.a(param1, (byte) -39);
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+            this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
             this.field_h = param1.l(4, 59);
             this.field_z = -5 + param1.l(9, 59);
             this.field_x = IsaacRandom.a(11, -30273, param1);
             this.field_P = IsaacRandom.a(11, -30273, param1);
           }
-          if (mu.a(param1, (byte) -39)) {
-            this.field_s = mu.a(param1, (byte) -39);
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+            this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
             this.field_k = mk.a(param1, 30, (byte) 6, 18);
             this.field_m = mk.a(param1, 30, (byte) 6, 18);
             this.field_r = mk.a(param1, 30, (byte) 6, 18);
             this.field_B = mk.a(param1, 30, (byte) 6, 18);
           }
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_A = param1.l(32, param0 ^ 50);
             this.field_g = param1.l(32, 59);
             this.field_q = param1.l(32, 59);
             this.field_D = param1.l(32, 59);
           }
           if (this.archetype == 4 &&
-            mu.a(param1, (byte) -39)) {
+            ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_o = param1.l(4, 59);
             this.field_t = param1.l(26, param0 + 50);
           }

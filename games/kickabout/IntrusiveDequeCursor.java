@@ -113,9 +113,9 @@ final class IntrusiveDequeCursor {
         try {
           bw.field_e = new Sprite[4];
           bw.field_e[1] = param1;
-          bw.field_e[0] = param1.b();
+          bw.field_e[0] = param1.copy();
           bw.field_e[0].a();
-          bw.field_e[2] = param1.b();
+          bw.field_e[2] = param1.copy();
           int var2_int = 50 % ((-82 - param0) / 42);
           bw.field_e[2].d();
           bw.field_e[3] = bw.field_e[2].f();

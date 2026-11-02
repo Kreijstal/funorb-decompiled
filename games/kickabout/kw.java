@@ -33,7 +33,7 @@ final class kw {
         eb.field_i[1] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
         eb.field_i[2] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
         eb.field_i[3] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
-        ph.field_e = new kg[4][3];
+        ph.field_e = new IndexedSprite[4][3];
         ph.field_e[0][0] = fw.a(bo.field_Cb, "stadium", true, "left_seats_1");
         ph.field_e[0][1] = fw.a(bo.field_Cb, "stadium", true, "left_seats_2");
         ph.field_e[0][2] = fw.a(bo.field_Cb, "stadium", true, "left_seats_3");
@@ -52,14 +52,14 @@ final class kw {
         ph.field_e[2][0] = fw.a(bo.field_Cb, "stadium", true, "right_seats_1");
         ph.field_e[2][1] = fw.a(bo.field_Cb, "stadium", true, "right_seats_2");
         ph.field_e[2][2] = fw.a(bo.field_Cb, "stadium", true, "right_seats_3");
-        bf.field_s = new kg[3][];
-        bf.field_s[0] = jo.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
-        bf.field_s[1] = jo.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
-        bf.field_s[2] = jo.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
-        ps.field_c = new kg[3][];
-        ps.field_c[0] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_1_mask");
-        ps.field_c[1] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_2_mask");
-        ps.field_c[2] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_3_mask");
+        bf.field_s = new IndexedSprite[3][];
+        bf.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
+        bf.field_s[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
+        bf.field_s[2] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
+        ps.field_c = new IndexedSprite[3][];
+        ps.field_c[0] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "bot_seats_1_mask");
+        ps.field_c[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "bot_seats_2_mask");
+        ps.field_c[2] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "bot_seats_3_mask");
         return -1;
     }
 
@@ -74,7 +74,7 @@ final class kw {
           throw new IllegalStateException();
         }
         aw.field_H = true;
-        hm.a(true, -91);
+        SumIntegersCommand.a(true, -91);
         vj.field_c = param0;
     }
 
@@ -154,7 +154,7 @@ final class kw {
         var3 = Kickabout.field_G;
         if (!qo.c((byte) -42)) {
           if (!dr.field_a) {
-            wt.field_x = el.field_A;
+            wt.field_x = BytePlusOneCommand.field_A;
             us.field_j = n.field_m;
             if (param1 >= -99) {
               kw.d((byte) -40);
@@ -171,7 +171,7 @@ final class kw {
             }
             var2 = stackIn_39_0;
           } else {
-            if (320 == el.field_A &&
+            if (320 == BytePlusOneCommand.field_A &&
               n.field_m == 240) {
               if (param1 >= -99) {
                 kw.d((byte) -40);
@@ -188,7 +188,7 @@ final class kw {
               }
               var2 = stackIn_10_0;
             } else {
-              wt.field_x = wt.field_x + (el.field_A - 320);
+              wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
               us.field_j = us.field_j + (-240 + n.field_m);
               wt.field_x = Math.max(0, Math.min(639, wt.field_x));
               us.field_j = Math.max(0, Math.min(479, us.field_j));
@@ -220,12 +220,12 @@ final class kw {
             !dr.field_a) {
             rm.a(false);
             if (!dr.field_a) {
-              wt.field_x = el.field_A;
+              wt.field_x = BytePlusOneCommand.field_A;
               us.field_j = n.field_m;
             } else {
-              if (320 != el.field_A ||
+              if (320 != BytePlusOneCommand.field_A ||
                 n.field_m != 240) {
-                wt.field_x = wt.field_x + (el.field_A - 320);
+                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
                 us.field_j = us.field_j + (-240 + n.field_m);
                 wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
@@ -264,7 +264,7 @@ final class kw {
           }
           if (param0) {
             if (!dr.field_a) {
-              wt.field_x = el.field_A;
+              wt.field_x = BytePlusOneCommand.field_A;
               us.field_j = n.field_m;
               if (param1 >= -99) {
                 kw.d((byte) -40);
@@ -281,7 +281,7 @@ final class kw {
               }
               var2 = stackIn_88_0;
             } else {
-              if (320 == el.field_A &&
+              if (320 == BytePlusOneCommand.field_A &&
                 n.field_m == 240) {
                 if (param1 >= -99) {
                   kw.d((byte) -40);
@@ -298,7 +298,7 @@ final class kw {
                 }
                 var2 = stackIn_59_0;
               } else {
-                wt.field_x = wt.field_x + (el.field_A - 320);
+                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
                 us.field_j = us.field_j + (-240 + n.field_m);
                 wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
@@ -329,12 +329,12 @@ final class kw {
             if (dr.field_a) {
               im.h(634588072);
               if (!dr.field_a) {
-                wt.field_x = el.field_A;
+                wt.field_x = BytePlusOneCommand.field_A;
                 us.field_j = n.field_m;
               } else {
-                if (320 != el.field_A ||
+                if (320 != BytePlusOneCommand.field_A ||
                   n.field_m != 240) {
-                  wt.field_x = wt.field_x + (el.field_A - 320);
+                  wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
                   us.field_j = us.field_j + (-240 + n.field_m);
                   wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                   us.field_j = Math.max(0, Math.min(479, us.field_j));
@@ -363,7 +363,7 @@ final class kw {
               var2 = stackIn_112_0;
             } else {
               if (!dr.field_a) {
-                wt.field_x = el.field_A;
+                wt.field_x = BytePlusOneCommand.field_A;
                 us.field_j = n.field_m;
                 if (param1 >= -99) {
                   kw.d((byte) -40);
@@ -390,8 +390,8 @@ final class kw {
                 }
                 return;
               }
-              if (320 != el.field_A) {
-                wt.field_x = wt.field_x + (el.field_A - 320);
+              if (320 != BytePlusOneCommand.field_A) {
+                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
                 us.field_j = us.field_j + (-240 + n.field_m);
                 wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
@@ -433,7 +433,7 @@ final class kw {
                   }
                   var2 = stackIn_182_0;
                 } else {
-                  wt.field_x = wt.field_x + (el.field_A - 320);
+                  wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
                   us.field_j = us.field_j + (-240 + n.field_m);
                   wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                   us.field_j = Math.max(0, Math.min(479, us.field_j));

@@ -21,7 +21,7 @@ final class wa {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = param2.b(param1, -1);
-          var5 = param2.a((byte) -95, param3, var4_int);
+          var5 = param2.findFileId((byte) -95, param3, var4_int);
           if (param0 <= 96) {
             field_b = (String) null;
           }
@@ -69,13 +69,13 @@ final class wa {
         if (param0 < -89) {
           var8 = new Sprite(108, 108);
           PacketBuffer.a(-118, var8);
-          SoftwareRasterizer.d(54, 54, 51, 255);
-          SoftwareRasterizer.d(54, 54, 43, 0);
+          SoftwareRasterizer.fillCircle(54, 54, 51, 255);
+          SoftwareRasterizer.fillCircle(54, 54, 43, 0);
           ts.a(param1, 0, 124);
           ta.e(117);
           var9 = new ArgbSprite(54, 54);
           PacketBuffer.a(-92, var9);
-          var8.f(0, 0);
+          var8.drawHalfSize(0, 0);
           ta.e(119);
           for (var4 = 0; var9.field_y.length > var4; var4++) {
             var9.field_y[var4] = hf.a(var9.field_y[var4] << 24, 1118668);
@@ -85,13 +85,13 @@ final class wa {
         wa.b((byte) 1);
         Sprite var6 = new Sprite(108, 108);
         PacketBuffer.a(-118, var6);
-        SoftwareRasterizer.d(54, 54, 51, 255);
-        SoftwareRasterizer.d(54, 54, 43, 0);
+        SoftwareRasterizer.fillCircle(54, 54, 51, 255);
+        SoftwareRasterizer.fillCircle(54, 54, 43, 0);
         ts.a(param1, 0, 124);
         ta.e(117);
         ArgbSprite var7 = new ArgbSprite(54, 54);
         PacketBuffer.a(-92, var7);
-        var6.f(0, 0);
+        var6.drawHalfSize(0, 0);
         ta.e(119);
         for (var4Lifetime1 = 0; var7.field_y.length > var4Lifetime1; var4Lifetime1++) {
           var7.field_y[var4Lifetime1] = hf.a(var7.field_y[var4Lifetime1] << 24, 1118668);

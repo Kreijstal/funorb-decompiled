@@ -6,7 +6,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
     private static int[] field_a;
     private static int field_b;
 
-    final int[] a(int param0) {
+    final int[] enumerateDisplayModes(int param0) {
         this.field_c.enumDisplayModes(param0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_a = new int[field_b];
         field_b = 0;

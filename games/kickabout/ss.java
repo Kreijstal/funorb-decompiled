@@ -50,8 +50,8 @@ final class ss {
         if (param0 != 88) {
           return true;
         }
-        if (null != wi.field_v &&
-          wi.field_v.a((byte) -52)) {
+        if (null != TextButton.field_v &&
+          TextButton.field_v.a((byte) -52)) {
           da.b(param0 ^ 21);
           return true;
         }

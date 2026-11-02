@@ -61,7 +61,7 @@ abstract class iq {
           return -2;
         }
         param2 = param2 - var5.field_q;
-        var5.c(-var5.field_s + param2, param1, param4);
+        var5.drawAdditive(-var5.field_s + param2, param1, param4);
         param2 -= 3;
         if (param3 >= 10) {
           param2 = iq.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);
@@ -205,7 +205,7 @@ abstract class iq {
           return -2;
         }
         param2 = param2 - var5.field_q;
-        var5.c(-var5.field_s + param2, param1, param4);
+        var5.drawAdditive(-var5.field_s + param2, param1, param4);
         param2 -= 3;
         if (param3 >= 10) {
           param2 = iq.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);

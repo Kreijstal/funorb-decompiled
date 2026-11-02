@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ri extends qv {
+class ri extends TextWidgetPainter {
     static int field_t;
     static String field_s;
     static sr field_u;
@@ -131,18 +131,18 @@ class ri extends qv {
         }
     }
 
-    final static void a(ResourceArchive param0, int[] param1, int param2, kg[] param3, ResourceArchive param4) {
+    final static void a(ResourceArchive param0, int[] param1, int param2, IndexedSprite[] param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        kg[] var5 = null;
+        IndexedSprite[] var5 = null;
         int[] var6 = null;
-        kg[] var6_array = null;
+        IndexedSprite[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var20 = null;
-        kg[] var21 = null;
+        IndexedSprite[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
@@ -158,7 +158,7 @@ class ri extends qv {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        uo var7 = null;
+        BinaryBitmapFont var7 = null;
         hd var8 = null;
         hd var9 = null;
         hd var10 = null;
@@ -174,11 +174,11 @@ class ri extends qv {
         var18 = Kickabout.field_G;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var21 = jo.a(param4, 17369, "lobby", "crowns");
+          var21 = DemoIntegersCommand.a(param4, 17369, "lobby", "crowns");
           var5 = var21;
           bk.field_e = var21.length;
           if (param3 != null) {
-            var6_array = new kg[param3.length + bk.field_e];
+            var6_array = new IndexedSprite[param3.length + bk.field_e];
             for (var7_int = 0; var7_int < bk.field_e; var7_int++) {
               var6_array[var7_int] = var21[var7_int];
             }
@@ -227,11 +227,11 @@ class ri extends qv {
           sh.field_c = 15;
           eb.field_b = 4;
           ig.field_c = 11;
-          el.field_I = 2;
+          BytePlusOneCommand.field_I = 2;
           mj.field_b = 2;
-          var7 = qk.a("largefont", param0, 75, "lobby", param4);
-          rq.field_E = qk.a("generalfont", param0, 87, "lobby", param4);
-          jw.field_Ab = qk.a("chatfont", param0, 112, "lobby", param4);
+          var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
+          rq.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
+          jw.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
           var7.a(var5, var25);
           rq.field_E.a(var5, var25);
           jw.field_Ab.a(var5, var25);
@@ -254,38 +254,38 @@ class ri extends qv {
           var11 = var10;
           var11.field_A = 1;
           qa.field_H = new hd(0L, var8);
-          qa.field_H.field_R = ClientException.a(se.a(param4, -22, "lobby", "heading"), (byte) 86);
-          jf.field_B = new hd(0L, (hd) null);
-          jf.field_B.field_R = tq.a(120, false, 8421504, 4210752, false, (byte) -46);
+          qa.field_H.field_R = ClientException.a(ModalStack.a(param4, -22, "lobby", "heading"), (byte) 86);
+          DoSomethingCommand.field_B = new hd(0L, (hd) null);
+          DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
           r.field_c = new hd(0L, (hd) null);
           r.field_c.field_R = fs.a(114, 3, 1, 6316128, 6316128, (byte) 92);
           pn.field_u = new hd(0L, (hd) null);
-          pn.field_u.field_R = ClientException.a(se.a(param4, 81, "lobby", "popup"), (byte) 63);
-          var12 = ClientException.a(se.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
-          var13 = se.a(param4, -122, "lobby", "button");
-          var14 = ClientException.a(se.a(param4, -122, "lobby", "tab_active"), (byte) 61);
-          ai.field_H = new hd(0L, var8);
-          ai.field_H.field_R = var14;
+          pn.field_u.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "popup"), (byte) 63);
+          var12 = ClientException.a(ModalStack.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
+          var13 = ModalStack.a(param4, -122, "lobby", "button");
+          var14 = ClientException.a(ModalStack.a(param4, -122, "lobby", "tab_active"), (byte) 61);
+          AccountTermsPanel.field_H = new hd(0L, var8);
+          AccountTermsPanel.field_H.field_R = var14;
           hl.field_f = new hd(0L, (hd) null);
           hl.field_f.field_N = wa.a((byte) 127, "lobby", param4, "closebutton");
           hl.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
           oi.field_i = new hd(0L, var8);
-          oi.field_i.field_R = tq.a(40, true, 3815994, 2039583, true, (byte) -46);
+          oi.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
           dn.field_zb = new hd(0L, var10);
           dn.field_zb.field_kb = 2;
-          dn.field_zb.field_R = tq.a(30, false, 3815994, 2039583, true, (byte) -46);
+          dn.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
           gw.field_a = new hd(0L, var10);
           gw.field_a.field_kb = 2;
-          gw.field_a.field_R = tq.a(30, false, 3815994, 2039583, false, (byte) -46);
+          gw.field_a.field_R = NotCommand.a(30, false, 3815994, 2039583, false, (byte) -46);
           pq.field_P = new hd(0L, var10);
           pq.field_P.field_kb = 2;
-          pq.field_P.field_R = tq.a(30, true, 3815994, 2039583, false, (byte) -46);
-          dw.field_e = new hd(0L, (hd) null);
-          dw.field_e.field_X = (BitmapFont) ((Object) rq.field_E);
-          dw.field_e.field_y = 13421772;
-          dw.field_e.field_xb = sh.field_c;
-          dw.field_e.field_p = 1;
-          ul.field_c = new hd(0L, dw.field_e);
+          pq.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
+          ConsoleEvaluationException.field_e = new hd(0L, (hd) null);
+          ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) rq.field_E);
+          ConsoleEvaluationException.field_e.field_y = 13421772;
+          ConsoleEvaluationException.field_e.field_xb = sh.field_c;
+          ConsoleEvaluationException.field_e.field_p = 1;
+          ul.field_c = new hd(0L, ConsoleEvaluationException.field_e);
           ul.field_c.field_hb = 8421504;
           ul.field_c.field_H = 16777215;
           ul.field_c.field_ab = 16777215;
@@ -295,18 +295,18 @@ class ri extends qv {
           var15.field_y = 16777215;
           var15.field_X = (BitmapFont) ((Object) var7);
           var15.field_xb = sh.field_c;
-          ip.field_c = new hd(0L, dw.field_e);
-          ip.field_c.field_R = tq.a(16, false, 2236962, 2236962, false, (byte) -46);
+          ip.field_c = new hd(0L, ConsoleEvaluationException.field_e);
+          ip.field_c.field_R = NotCommand.a(16, false, 2236962, 2236962, false, (byte) -46);
           ip.field_c.field_kb = 2;
-          kr.field_b = new hd(0L, dw.field_e);
-          kr.field_b.field_R = tq.a(16, false, 1513239, 1513239, false, (byte) -46);
+          kr.field_b = new hd(0L, ConsoleEvaluationException.field_e);
+          kr.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           kr.field_b.field_kb = 2;
           pw.field_J = new hd(0L, ip.field_c);
           pw.field_J.a(ul.field_c, (byte) -100);
           mp.field_f = new hd(0L, kr.field_b);
           mp.field_f.a(ul.field_c, (byte) -85);
-          var16 = se.a(param4, 108, "lobby", "button_mouseover");
-          su.field_b = new gu(pn.field_u, var12, dw.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
+          var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
+          su.field_b = new gu(pn.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
           MouseWheelInput.field_e = new hd(0L, ul.field_c);
           MouseWheelInput.field_e.field_R = var13;
           MouseWheelInput.field_e.field_eb = 1;
@@ -314,14 +314,14 @@ class ri extends qv {
           MouseWheelInput.field_e.field_O = 1;
           MouseWheelInput.field_e.field_cb = 1;
           MouseWheelInput.field_e.field_x = 1;
-          MouseWheelInput.field_e.field_rb = se.a(param4, 7, "lobby", "button_mouseheld");
-          MouseWheelInput.field_e.field_u = se.a(param4, -119, "lobby", "button_active");
-          MouseWheelInput.field_e.field_tb = se.a(param4, -119, "lobby", "button_disabled");
+          MouseWheelInput.field_e.field_rb = ModalStack.a(param4, 7, "lobby", "button_mouseheld");
+          MouseWheelInput.field_e.field_u = ModalStack.a(param4, -119, "lobby", "button_active");
+          MouseWheelInput.field_e.field_tb = ModalStack.a(param4, -119, "lobby", "button_disabled");
           MouseWheelInput.field_e.field_A = 1;
           ge.field_n = new hd(0L, ul.field_c);
           ge.field_n.field_A = 1;
-          ge.field_n.field_R = ClientException.a(se.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
-          ge.field_n.field_S = ClientException.a(se.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
+          ge.field_n.field_R = ClientException.a(ModalStack.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
+          ge.field_n.field_S = ClientException.a(ModalStack.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
           ge.field_n.field_u = var14;
           MouseInputHandler.field_b = new hd(0L, (hd) null);
           MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
@@ -341,51 +341,51 @@ class ri extends qv {
           um.field_d.field_x = 1;
           um.field_d.field_eb = 1;
           LoggedPlayer.field_r = new hd(0L, um.field_d);
-          mb.field_F = new hd(0L, um.field_d);
-          ev.field_D = new hd(0L, vg.field_Qb);
+          DisplayNameForm.field_F = new hd(0L, um.field_d);
+          LongPlusOneCommand.field_D = new hd(0L, vg.field_Qb);
           kn.field_F = new hd(0L, um.field_d);
           nj.field_d = new hd(0L, um.field_d);
           k.field_f = new hd(0L, um.field_d);
-          um.field_d.field_R = ClientException.a(se.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
-          um.field_d.field_S = ClientException.a(se.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
-          dupTemp$0 = ClientException.a(se.a(param4, -128, "lobby", "smallbutton_active"), (byte) -124);
+          um.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
+          um.field_d.field_S = ClientException.a(ModalStack.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
+          dupTemp$0 = ClientException.a(ModalStack.a(param4, -128, "lobby", "smallbutton_active"), (byte) -124);
           um.field_d.field_u = dupTemp$0;
           um.field_d.field_rb = dupTemp$0;
-          um.field_d.field_tb = ClientException.a(se.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
-          dc.field_a.field_R = ClientException.a(se.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
-          dc.field_a.field_S = ClientException.a(se.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
-          dc.field_a.field_rb = ClientException.a(se.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
-          vg.field_Qb.field_R = ClientException.a(se.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
-          vg.field_Qb.field_S = ClientException.a(se.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
-          vg.field_Qb.field_rb = ClientException.a(se.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
-          vg.field_Qb.field_tb = ClientException.a(se.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
-          LoggedPlayer.field_r.field_R = ClientException.a(se.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
-          LoggedPlayer.field_r.field_S = ClientException.a(se.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
-          LoggedPlayer.field_r.field_rb = ClientException.a(se.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
-          mb.field_F.field_R = ClientException.a(se.a(param4, -123, "lobby", "redbutton"), (byte) 93);
-          mb.field_F.field_S = ClientException.a(se.a(param4, -124, "lobby", "redbutton_mouseover"), (byte) -121);
-          mb.field_F.field_rb = ClientException.a(se.a(param4, -37, "lobby", "redbutton_mouseheld"), (byte) -101);
-          ev.field_D.field_R = ClientException.a(se.a(param4, -127, "lobby", "backbutton"), (byte) -116);
-          ev.field_D.field_S = ClientException.a(se.a(param4, -119, "lobby", "backbutton_mouseover"), (byte) -110);
-          ev.field_D.field_rb = ClientException.a(se.a(param4, 25, "lobby", "backbutton_mouseheld"), (byte) -3);
-          ev.field_D.field_tb = ClientException.a(se.a(param4, 0, "lobby", "backbutton_disabled"), (byte) -99);
-          k.field_f.field_R = ClientException.a(se.a(param4, 8, "lobby", "gameoptionbutton"), (byte) -20);
-          k.field_f.field_S = ClientException.a(se.a(param4, 53, "lobby", "gameoptionbutton_mouseover"), (byte) -5);
-          dupTemp$1 = ClientException.a(se.a(param4, -124, "lobby", "gameoptionbutton_active"), (byte) -121);
+          um.field_d.field_tb = ClientException.a(ModalStack.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
+          dc.field_a.field_R = ClientException.a(ModalStack.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
+          dc.field_a.field_S = ClientException.a(ModalStack.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
+          dc.field_a.field_rb = ClientException.a(ModalStack.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
+          vg.field_Qb.field_R = ClientException.a(ModalStack.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
+          vg.field_Qb.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
+          vg.field_Qb.field_rb = ClientException.a(ModalStack.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
+          vg.field_Qb.field_tb = ClientException.a(ModalStack.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
+          LoggedPlayer.field_r.field_R = ClientException.a(ModalStack.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
+          LoggedPlayer.field_r.field_S = ClientException.a(ModalStack.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
+          LoggedPlayer.field_r.field_rb = ClientException.a(ModalStack.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
+          DisplayNameForm.field_F.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "redbutton"), (byte) 93);
+          DisplayNameForm.field_F.field_S = ClientException.a(ModalStack.a(param4, -124, "lobby", "redbutton_mouseover"), (byte) -121);
+          DisplayNameForm.field_F.field_rb = ClientException.a(ModalStack.a(param4, -37, "lobby", "redbutton_mouseheld"), (byte) -101);
+          LongPlusOneCommand.field_D.field_R = ClientException.a(ModalStack.a(param4, -127, "lobby", "backbutton"), (byte) -116);
+          LongPlusOneCommand.field_D.field_S = ClientException.a(ModalStack.a(param4, -119, "lobby", "backbutton_mouseover"), (byte) -110);
+          LongPlusOneCommand.field_D.field_rb = ClientException.a(ModalStack.a(param4, 25, "lobby", "backbutton_mouseheld"), (byte) -3);
+          LongPlusOneCommand.field_D.field_tb = ClientException.a(ModalStack.a(param4, 0, "lobby", "backbutton_disabled"), (byte) -99);
+          k.field_f.field_R = ClientException.a(ModalStack.a(param4, 8, "lobby", "gameoptionbutton"), (byte) -20);
+          k.field_f.field_S = ClientException.a(ModalStack.a(param4, 53, "lobby", "gameoptionbutton_mouseover"), (byte) -5);
+          dupTemp$1 = ClientException.a(ModalStack.a(param4, -124, "lobby", "gameoptionbutton_active"), (byte) -121);
           k.field_f.field_u = dupTemp$1;
           k.field_f.field_rb = dupTemp$1;
-          k.field_f.field_tb = ClientException.a(se.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
-          kn.field_F.field_R = ClientException.a(se.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
-          kn.field_F.field_S = ClientException.a(se.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
-          dupTemp$2 = ClientException.a(se.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);
+          k.field_f.field_tb = ClientException.a(ModalStack.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
+          kn.field_F.field_R = ClientException.a(ModalStack.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
+          kn.field_F.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
+          dupTemp$2 = ClientException.a(ModalStack.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);
           kn.field_F.field_u = dupTemp$2;
           kn.field_F.field_rb = dupTemp$2;
-          nj.field_d.field_R = ClientException.a(se.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
-          nj.field_d.field_S = ClientException.a(se.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
-          dupTemp$3 = ClientException.a(se.a(param4, -123, "lobby", "chatfilterbutton_active"), (byte) -121);
+          nj.field_d.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
+          nj.field_d.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
+          dupTemp$3 = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton_active"), (byte) -121);
           nj.field_d.field_u = dupTemp$3;
           nj.field_d.field_rb = dupTemp$3;
-          var17 = se.a(param4, -121, "lobby", "checkbox");
+          var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
           hs.field_d = new om(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
           np.field_Hb = new hd(0L, (hd) null);
           np.field_Hb.field_R = kh.a((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
@@ -393,10 +393,10 @@ class ri extends qv {
           np.field_Hb.field_rb = kh.a((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
           np.field_Hb.field_tb = kh.a((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
           ts.field_a = new hd(0L, (hd) null);
-          ts.field_a.field_R = ClientException.a(se.a(param4, 108, "lobby", "dragbar"), (byte) 8);
-          ts.field_a.field_S = ClientException.a(se.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
-          ts.field_a.field_rb = ClientException.a(se.a(param4, -119, "lobby", "dragbar_mouseheld"), (byte) -123);
-          ts.field_a.field_tb = ClientException.a(se.a(param4, -27, "lobby", "dragbar_disabled"), (byte) -127);
+          ts.field_a.field_R = ClientException.a(ModalStack.a(param4, 108, "lobby", "dragbar"), (byte) 8);
+          ts.field_a.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
+          ts.field_a.field_rb = ClientException.a(ModalStack.a(param4, -119, "lobby", "dragbar_mouseheld"), (byte) -123);
+          ts.field_a.field_tb = ClientException.a(ModalStack.a(param4, -27, "lobby", "dragbar_disabled"), (byte) -127);
           sd.field_a = new hd(0L, (hd) null);
           sd.field_a.field_N = wa.a((byte) 110, "lobby", param4, "upbutton");
           sd.field_a.field_vb = wa.a((byte) 116, "lobby", param4, "upbutton_mouseover");
@@ -408,7 +408,7 @@ class ri extends qv {
           ci.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
           ci.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
           uk.field_b = new na(0L, sd.field_a, ci.field_b, np.field_Hb, ts.field_a);
-          lh.field_D = new al(0L, (hd) null, rj.field_b, uk.field_b, um.field_d, (String) null, (String) null);
+          BroadcastServerCommand.field_D = new al(0L, (hd) null, rj.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -477,7 +477,7 @@ class ri extends qv {
             var5 = (-var4 + 12 << 7) / 13;
             var6 = param0.field_o - var4;
             var7 = var4 / 4 + var4;
-            var12.c(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
+            var12.drawScaledSilhouette(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
           }
           ta.e(125);
           if (!param1) {
@@ -563,7 +563,7 @@ class ri extends qv {
         var13 = Kickabout.field_G;
         try {
           var4_int = -109 / ((-55 - param0) / 60);
-          dw.a(127, fj.field_a);
+          ConsoleEvaluationException.a(127, fj.field_a);
           if (null != ArchiveSource.field_b) {
             var5 = em.field_d;
             em.field_d.field_mb = 0;
@@ -620,7 +620,7 @@ class ri extends qv {
               var10 = var15;
               var10 = var15;
               var10 = var15;
-              var11Lifetime1 = nv.field_F.field_X.a(var15) + nv.field_F.field_X.a('.') * 3;
+              var11Lifetime1 = nv.field_F.field_X.a(var15) + nv.field_F.field_X.charWidth('.') * 3;
               if (16 == (GameKeyHandler.field_c & 48)) {
                 var10 = var15 + ".";
               }
@@ -656,9 +656,9 @@ class ri extends qv {
               if (null != la.field_k) {
                 ee.field_e = false;
                 tt.field_c = false;
-                if (hm.field_G == null) {
+                if (SumIntegersCommand.field_G == null) {
                   m.field_f = new boolean[ss.field_j];
-                  hm.field_G = new byte[ss.field_j];
+                  SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 var14 = 0;
                 var10_intLifetime1 = var14;
@@ -677,7 +677,7 @@ class ri extends qv {
                 if (GoalStateAgent.field_k.field_Q) {
                   var10 = null;
                   if (ee.field_e) {
-                    var10 = "<col=A00000>" + qk.field_H + "</col>";
+                    var10 = "<col=A00000>" + Checkbox.field_H + "</col>";
                     var12 = var10;
                     var10 = var12;
                     var12Lifetime1 = var10;

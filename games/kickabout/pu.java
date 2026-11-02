@@ -39,7 +39,7 @@ final class pu extends hd implements lv {
         }
         this.field_Cb.c(var6 + 8, 9 + var7);
         if (0 != this.field_Bb.field_h) {
-          SoftwareRasterizer.f(var6, var7 + 50, var4, 65793);
+          SoftwareRasterizer.drawHorizontalLine(var6, var7 + 50, var4, 65793);
           q.field_d.a(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
         }
     }
@@ -98,7 +98,7 @@ final class pu extends hd implements lv {
         int var22Lifetime1;
         var23 = Kickabout.field_G;
         try {
-          var24 = new vn(new vn[]{qd.field_j[param1]}, 1);
+          var24 = new vn(new vn[]{IndexedSpriteState.field_j[param1]}, 1);
           var26 = var24;
           if (param0) {
             var8_int = wc.field_e[param1];
@@ -226,7 +226,7 @@ final class pu extends hd implements lv {
         int fieldTemp$0 = or.field_d.field_n + 1;
         or.field_d.field_n = or.field_d.field_n + 1;
         int var4 = fieldTemp$0;
-        or.field_d.a(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
+        or.field_d.readBytes(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
         or.field_d.c(62, -var4 + or.field_d.field_n);
         int var5 = 83 % ((40 - param0) / 43);
     }
@@ -264,7 +264,7 @@ final class pu extends hd implements lv {
             this.field_N = (Sprite) ((Object) nh.b(this.field_Cb));
           }
           this.field_yb = rv.field_b[this.field_Bb.field_h].toUpperCase();
-          this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, kd.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
+          this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DebugConsole.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
           if (0 == this.field_Bb.field_h) {
             this.field_yb = '(' + this.field_yb + ')';
           } else {

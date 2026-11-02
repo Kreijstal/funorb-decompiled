@@ -96,7 +96,7 @@ final class kq extends hd {
           if (this.field_Kb) {
             eo.a(dc.field_b, 1);
             eo.a(dc.field_b, 2);
-            dc.field_b.f(this.field_F, this.field_T);
+            dc.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
               uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
@@ -111,7 +111,7 @@ final class kq extends hd {
             return;
           }
         }
-        dc.field_b.f(this.field_F, this.field_T);
+        dc.field_b.drawHalfSize(this.field_F, this.field_T);
         if (this.field_Hb) {
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
           uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));

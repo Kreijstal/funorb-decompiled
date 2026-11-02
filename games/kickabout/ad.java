@@ -100,64 +100,64 @@ final class ad {
                 stackIn_78_0 = -1;
                 return stackIn_78_0;
               }
-              stackIn_76_0 = qk.field_I[param0] >> 12;
+              stackIn_76_0 = Checkbox.field_I[param0] >> 12;
               return stackIn_76_0;
             }
             if (param0 >= 4096) {
               if (16384 > param0) {
-                stackIn_91_0 = qk.field_I[param0 >> 6] >> 9;
+                stackIn_91_0 = Checkbox.field_I[param0 >> 6] >> 9;
                 return stackIn_91_0;
               }
-              stackIn_89_0 = qk.field_I[param0 >> 8] >> 8;
+              stackIn_89_0 = Checkbox.field_I[param0 >> 8] >> 8;
               return stackIn_89_0;
             }
             if (1024 <= param0) {
-              stackIn_86_0 = qk.field_I[param0 >> 4] >> 10;
+              stackIn_86_0 = Checkbox.field_I[param0 >> 4] >> 10;
               return stackIn_86_0;
             }
-            stackIn_84_0 = qk.field_I[param0 >> 2] >> 11;
+            stackIn_84_0 = Checkbox.field_I[param0 >> 2] >> 11;
             return stackIn_84_0;
           }
           if (param0 < 16777216) {
             if (1048576 <= param0) {
               if (param0 < 4194304) {
-                stackIn_70_0 = qk.field_I[param0 >> 14] >> 5;
+                stackIn_70_0 = Checkbox.field_I[param0 >> 14] >> 5;
                 return stackIn_70_0;
               }
-              stackIn_68_0 = qk.field_I[param0 >> 16] >> 4;
+              stackIn_68_0 = Checkbox.field_I[param0 >> 16] >> 4;
               return stackIn_68_0;
             }
             if (param0 < 262144) {
-              stackIn_65_0 = qk.field_I[param0 >> 10] >> 7;
+              stackIn_65_0 = Checkbox.field_I[param0 >> 10] >> 7;
               return stackIn_65_0;
             }
-            stackIn_63_0 = qk.field_I[param0 >> 12] >> 6;
+            stackIn_63_0 = Checkbox.field_I[param0 >> 12] >> 6;
             return stackIn_63_0;
           }
           if (param0 >= 268435456) {
             if (1073741824 <= param0) {
-              stackIn_57_0 = qk.field_I[param0 >> 24] << var3_int;
+              stackIn_57_0 = Checkbox.field_I[param0 >> 24] << var3_int;
               return stackIn_57_0;
             }
             if (1 > var3_int) {
-              stackIn_55_0 = qk.field_I[param0 >> 22] >> -var3_int + 1;
+              stackIn_55_0 = Checkbox.field_I[param0 >> 22] >> -var3_int + 1;
             } else {
-              stackIn_55_0 = qk.field_I[param0 >> 22] << -1 + var3_int;
+              stackIn_55_0 = Checkbox.field_I[param0 >> 22] << -1 + var3_int;
             }
             return stackIn_55_0;
           }
           if (param0 >= 67108864) {
             if (var3_int >= 2) {
-              stackIn_47_0 = qk.field_I[param0 >> 20] << -2 + var3_int;
+              stackIn_47_0 = Checkbox.field_I[param0 >> 20] << -2 + var3_int;
             } else {
-              stackIn_47_0 = qk.field_I[param0 >> 20] >> -var3_int + 2;
+              stackIn_47_0 = Checkbox.field_I[param0 >> 20] >> -var3_int + 2;
             }
             return stackIn_47_0;
           }
           if (var3_int < 3) {
-            stackIn_42_0 = qk.field_I[param0 >> 18] >> -var3_int + 3;
+            stackIn_42_0 = Checkbox.field_I[param0 >> 18] >> -var3_int + 3;
           } else {
-            stackIn_42_0 = qk.field_I[param0 >> 18] << -3 + var3_int;
+            stackIn_42_0 = Checkbox.field_I[param0 >> 18] << -3 + var3_int;
           }
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ final class ad {
                 up.field_m = param0;
                 var2 = ib.a("returntotournament", param1 ^ -90);
                 if (var2 != null) {
-                  jo.field_B = kt.a(var2, true);
+                  DemoIntegersCommand.field_B = kt.a(var2, true);
                 }
                 var2 = ib.a("standalone_loading_strings,0", -112);
                 if (var2 != null) {
@@ -1129,7 +1129,7 @@ final class ad {
                 }
                 var2 = ib.a("keycode_right", -96);
                 if (var2 != null) {
-                  pb.field_A = var2[0] & 255;
+                  IsSixCommand.field_A = var2[0] & 255;
                 }
                 var2 = ib.a("keycode_up", -94);
                 if (null != var2) {
@@ -1161,7 +1161,7 @@ final class ad {
                 }
                 var2 = ib.a("title_detached", -107);
                 if (var2 != null) {
-                  qd.field_f = kt.a(var2, true);
+                  IndexedSpriteState.field_f = kt.a(var2, true);
                 }
                 var2 = ib.a("controls_attached,0", -95);
                 if (var2 != null) {
@@ -1205,7 +1205,7 @@ final class ad {
                 }
                 var2 = ib.a("tutorial", -106);
                 if (null != var2) {
-                  fb.field_C = kt.a(var2, true);
+                  NumericDateInputWidget.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("sandbox", -88);
                 if (var2 != null) {
@@ -1233,7 +1233,7 @@ final class ad {
                 }
                 var2 = ib.a("gotoauctions", param1 - 121);
                 if (null != var2) {
-                  lh.field_F = kt.a(var2, true);
+                  BroadcastServerCommand.field_F = kt.a(var2, true);
                 }
                 var2 = ib.a("login", -111);
                 if (var2 != null) {
@@ -2006,7 +2006,7 @@ final class ad {
                 }
                 var2 = ib.a("music", -103);
                 if (var2 != null) {
-                  kd.field_A = kt.a(var2, true);
+                  DebugConsole.field_A = kt.a(var2, true);
                 }
                 var2 = ib.a("menu_online_auctions", -109);
                 if (null != var2) {
@@ -2038,23 +2038,23 @@ final class ad {
                 }
                 var2 = ib.a("formation_ok", -120);
                 if (null != var2) {
-                  lk.field_i = kt.a(var2, true);
+                  ConsoleExpression.field_i = kt.a(var2, true);
                 }
                 var2 = ib.a("MENU_LABELS_AUTO_PASS,0", -108);
                 if (null != var2) {
-                  lb.field_K[0] = kt.a(var2, true);
+                  TextHotspotWidget.field_K[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("MENU_LABELS_AUTO_PASS,1", -115);
                 if (var2 != null) {
-                  lb.field_K[1] = kt.a(var2, true);
+                  TextHotspotWidget.field_K[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("MENU_LABELS_QUALITY,0", param1 ^ -95);
                 if (null != var2) {
-                  qv.field_d[0] = kt.a(var2, true);
+                  TextWidgetPainter.field_d[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("MENU_LABELS_QUALITY,1", -81);
                 if (null != var2) {
-                  qv.field_d[1] = kt.a(var2, true);
+                  TextWidgetPainter.field_d[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("extra_w1", -113);
                 if (null != var2) {
@@ -2182,7 +2182,7 @@ final class ad {
                 }
                 var2 = ib.a("formation_instructions2", -110);
                 if (var2 != null) {
-                  fr.field_I = kt.a(var2, true);
+                  NameSuggestionsPanel.field_I = kt.a(var2, true);
                 }
                 var2 = ib.a("formation_instructions3", -107);
                 if (var2 != null) {
@@ -2194,7 +2194,7 @@ final class ad {
                 }
                 var2 = ib.a("title_finished", -82);
                 if (var2 != null) {
-                  mu.field_S = kt.a(var2, true);
+                  ContentTransitionDialog.field_S = kt.a(var2, true);
                 }
                 var2 = ib.a("title_finished_alt", -120);
                 if (var2 != null) {
@@ -2354,11 +2354,11 @@ final class ad {
                 }
                 var2 = ib.a("name_has_left_the_game", param1 ^ -98);
                 if (null != var2) {
-                  mr.field_F = kt.a(var2, true);
+                  ValidatedTextWidget.field_F = kt.a(var2, true);
                 }
                 var2 = ib.a("name_has_resigned", param1 ^ -93);
                 if (var2 != null) {
-                  nn.field_L = kt.a(var2, true);
+                  AccountChoicePanel.field_L = kt.a(var2, true);
                 }
                 var2 = ib.a("name_is_offering_draw", param1 ^ -99);
                 if (var2 != null) {
@@ -2378,7 +2378,7 @@ final class ad {
                 }
                 var2 = ib.a("create_new_auction", param1 - 113);
                 if (var2 != null) {
-                  ir.field_B = kt.a(var2, true);
+                  ThreeCommand.field_B = kt.a(var2, true);
                 }
                 var2 = ib.a("create_new_auction_mouseover", -116);
                 if (var2 != null) {
@@ -2470,7 +2470,7 @@ final class ad {
                 }
                 var2 = ib.a("achievements", -103);
                 if (null != var2) {
-                  tq.field_C = kt.a(var2, true);
+                  NotCommand.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("gameplay", -95);
                 if (null != var2) {
@@ -2486,7 +2486,7 @@ final class ad {
                 }
                 var2 = ib.a("money_colon", param1 ^ -120);
                 if (null != var2) {
-                  pj.field_D = kt.a(var2, true);
+                  AlphaContainer.field_D = kt.a(var2, true);
                 }
                 var2 = ib.a("unrated_game_no_rewards", -80);
                 if (null != var2) {
@@ -2506,11 +2506,11 @@ final class ad {
                 }
                 var2 = ib.a("quickplay_only_money", -105);
                 if (var2 != null) {
-                  jg.field_I = kt.a(var2, true);
+                  DraggableWidget.field_I = kt.a(var2, true);
                 }
                 var2 = ib.a("you_have_X_credits", -122);
                 if (null != var2) {
-                  oj.field_Z = kt.a(var2, true);
+                  LoadingProgressDialog.field_Z = kt.a(var2, true);
                 }
                 var2 = ib.a("you_have_earned_X_credits", -113);
                 if (null != var2) {
@@ -2518,7 +2518,7 @@ final class ad {
                 }
                 var2 = ib.a("you_have_spent_X_credits", -105);
                 if (null != var2) {
-                  lc.field_b = kt.a(var2, true);
+                  DualLinkDequeIterator.field_b = kt.a(var2, true);
                 }
                 var2 = ib.a("leaving_you_with_X_credits", -127);
                 if (null != var2) {
@@ -2722,177 +2722,177 @@ final class ad {
                 }
                 var2 = ib.a("popup_header,0", -109);
                 if (var2 != null) {
-                  pb.field_G[0] = kt.a(var2, true);
+                  IsSixCommand.field_G[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,1", -116);
                 if (null != var2) {
-                  pb.field_G[1] = kt.a(var2, true);
+                  IsSixCommand.field_G[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,2", -96);
                 if (var2 != null) {
-                  pb.field_G[2] = kt.a(var2, true);
+                  IsSixCommand.field_G[2] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,3", -111);
                 if (var2 != null) {
-                  pb.field_G[3] = kt.a(var2, true);
+                  IsSixCommand.field_G[3] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,4", -96);
                 if (null != var2) {
-                  pb.field_G[4] = kt.a(var2, true);
+                  IsSixCommand.field_G[4] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,5", -80);
                 if (null != var2) {
-                  pb.field_G[5] = kt.a(var2, true);
+                  IsSixCommand.field_G[5] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,6", -106);
                 if (var2 != null) {
-                  pb.field_G[6] = kt.a(var2, true);
+                  IsSixCommand.field_G[6] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,7", -104);
                 if (null != var2) {
-                  pb.field_G[7] = kt.a(var2, true);
+                  IsSixCommand.field_G[7] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,8", -127);
                 if (null != var2) {
-                  pb.field_G[8] = kt.a(var2, true);
+                  IsSixCommand.field_G[8] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,9", -95);
                 if (null != var2) {
-                  pb.field_G[9] = kt.a(var2, true);
+                  IsSixCommand.field_G[9] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,10", -84);
                 if (null != var2) {
-                  pb.field_G[10] = kt.a(var2, true);
+                  IsSixCommand.field_G[10] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,11", param1 - 122);
                 if (null != var2) {
-                  pb.field_G[11] = kt.a(var2, true);
+                  IsSixCommand.field_G[11] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,12", param1 - 124);
                 if (var2 != null) {
-                  pb.field_G[12] = kt.a(var2, true);
+                  IsSixCommand.field_G[12] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,13", -106);
                 if (var2 != null) {
-                  pb.field_G[13] = kt.a(var2, true);
+                  IsSixCommand.field_G[13] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,14", param1 ^ -101);
                 if (null != var2) {
-                  pb.field_G[14] = kt.a(var2, true);
+                  IsSixCommand.field_G[14] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,15", -127);
                 if (null != var2) {
-                  pb.field_G[15] = kt.a(var2, true);
+                  IsSixCommand.field_G[15] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,16", -92);
                 if (null != var2) {
-                  pb.field_G[16] = kt.a(var2, true);
+                  IsSixCommand.field_G[16] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,17", -111);
                 if (null != var2) {
-                  pb.field_G[17] = kt.a(var2, true);
+                  IsSixCommand.field_G[17] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,18", -103);
                 if (null != var2) {
-                  pb.field_G[18] = kt.a(var2, true);
+                  IsSixCommand.field_G[18] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,19", param1 - 100);
                 if (null != var2) {
-                  pb.field_G[19] = kt.a(var2, true);
+                  IsSixCommand.field_G[19] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,20", param1 ^ -87);
                 if (var2 != null) {
-                  pb.field_G[20] = kt.a(var2, true);
+                  IsSixCommand.field_G[20] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,21", param1 - 88);
                 if (null != var2) {
-                  pb.field_G[21] = kt.a(var2, true);
+                  IsSixCommand.field_G[21] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,22", -80);
                 if (var2 != null) {
-                  pb.field_G[22] = kt.a(var2, true);
+                  IsSixCommand.field_G[22] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,23", -107);
                 if (var2 != null) {
-                  pb.field_G[23] = kt.a(var2, true);
+                  IsSixCommand.field_G[23] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,24", -128);
                 if (var2 != null) {
-                  pb.field_G[24] = kt.a(var2, true);
+                  IsSixCommand.field_G[24] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,25", param1 - 113);
                 if (var2 != null) {
-                  pb.field_G[25] = kt.a(var2, true);
+                  IsSixCommand.field_G[25] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,26", -103);
                 if (var2 != null) {
-                  pb.field_G[26] = kt.a(var2, true);
+                  IsSixCommand.field_G[26] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,27", -112);
                 if (var2 != null) {
-                  pb.field_G[27] = kt.a(var2, true);
+                  IsSixCommand.field_G[27] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,28", -90);
                 if (var2 != null) {
-                  pb.field_G[28] = kt.a(var2, true);
+                  IsSixCommand.field_G[28] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,29", -112);
                 if (null != var2) {
-                  pb.field_G[29] = kt.a(var2, true);
+                  IsSixCommand.field_G[29] = kt.a(var2, true);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {
                 var2 = ib.a("popup_header,30", -121);
                 if (null != var2) {
-                  pb.field_G[30] = kt.a(var2, true);
+                  IsSixCommand.field_G[30] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,31", param1 - 84);
                 if (null != var2) {
-                  pb.field_G[31] = kt.a(var2, true);
+                  IsSixCommand.field_G[31] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,32", -99);
                 if (null != var2) {
-                  pb.field_G[32] = kt.a(var2, true);
+                  IsSixCommand.field_G[32] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,33", -128);
                 if (null != var2) {
-                  pb.field_G[33] = kt.a(var2, true);
+                  IsSixCommand.field_G[33] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,34", -117);
                 if (var2 != null) {
-                  pb.field_G[34] = kt.a(var2, true);
+                  IsSixCommand.field_G[34] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,35", -114);
                 if (var2 != null) {
-                  pb.field_G[35] = kt.a(var2, true);
+                  IsSixCommand.field_G[35] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,36", -80);
                 if (null != var2) {
-                  pb.field_G[36] = kt.a(var2, true);
+                  IsSixCommand.field_G[36] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,37", -117);
                 if (null != var2) {
-                  pb.field_G[37] = kt.a(var2, true);
+                  IsSixCommand.field_G[37] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,38", -81);
                 if (null != var2) {
-                  pb.field_G[38] = kt.a(var2, true);
+                  IsSixCommand.field_G[38] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,39", -95);
                 if (var2 != null) {
-                  pb.field_G[39] = kt.a(var2, true);
+                  IsSixCommand.field_G[39] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,40", -111);
                 if (null != var2) {
-                  pb.field_G[40] = kt.a(var2, true);
+                  IsSixCommand.field_G[40] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,41", param1 ^ -82);
                 if (null != var2) {
-                  pb.field_G[41] = kt.a(var2, true);
+                  IsSixCommand.field_G[41] = kt.a(var2, true);
                 }
                 var2 = ib.a("popup_header,42", -114);
                 if (null != var2) {
-                  pb.field_G[42] = kt.a(var2, true);
+                  IsSixCommand.field_G[42] = kt.a(var2, true);
                 }
                 var2 = ib.a("duration", -115);
                 if (var2 != null) {
@@ -2900,7 +2900,7 @@ final class ad {
                 }
                 var2 = ib.a("you_were_outbidded", -103);
                 if (null != var2) {
-                  fi.field_b = kt.a(var2, true);
+                  ConsoleParseException.field_b = kt.a(var2, true);
                 }
                 var2 = ib.a("auction_unsuccessful", -120);
                 if (null != var2) {
@@ -2908,7 +2908,7 @@ final class ad {
                 }
                 var2 = ib.a("auction_won", -108);
                 if (var2 != null) {
-                  lk.field_e = kt.a(var2, true);
+                  ConsoleExpression.field_e = kt.a(var2, true);
                 }
                 var2 = ib.a("which_trinket", -92);
                 if (null != var2) {
@@ -2984,7 +2984,7 @@ final class ad {
                 }
                 var2 = ib.a("amateur_teams", -115);
                 if (null != var2) {
-                  lh.field_C = kt.a(var2, true);
+                  BroadcastServerCommand.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("no_one_in_league", -96);
                 if (null != var2) {
@@ -3024,7 +3024,7 @@ final class ad {
                 }
                 var2 = ib.a("stadium_locked_first_buy_X", -125);
                 if (null != var2) {
-                  li.field_e = kt.a(var2, true);
+                  ConsoleValue.field_e = kt.a(var2, true);
                 }
                 var2 = ib.a("reserve_is_buyout", -104);
                 if (null != var2) {
@@ -3036,7 +3036,7 @@ final class ad {
                 }
                 var2 = ib.a("buyout_at_max", -99);
                 if (var2 != null) {
-                  hm.field_E = kt.a(var2, true);
+                  SumIntegersCommand.field_E = kt.a(var2, true);
                 }
                 var2 = ib.a("buyout_at_min", -82);
                 if (var2 != null) {
@@ -3076,7 +3076,7 @@ final class ad {
                 }
                 var2 = ib.a("click_my_results_shorter", -119);
                 if (var2 != null) {
-                  tq.field_E = kt.a(var2, true);
+                  NotCommand.field_E = kt.a(var2, true);
                 }
                 var2 = ib.a("click_team_results", -115);
                 if (null != var2) {
@@ -3084,19 +3084,19 @@ final class ad {
                 }
                 var2 = ib.a("statname,0", -112);
                 if (var2 != null) {
-                  nn.field_G[0] = kt.a(var2, true);
+                  AccountChoicePanel.field_G[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("statname,1", -80);
                 if (var2 != null) {
-                  nn.field_G[1] = kt.a(var2, true);
+                  AccountChoicePanel.field_G[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("statname,2", -90);
                 if (null != var2) {
-                  nn.field_G[2] = kt.a(var2, true);
+                  AccountChoicePanel.field_G[2] = kt.a(var2, true);
                 }
                 var2 = ib.a("statname,3", -95);
                 if (var2 != null) {
-                  nn.field_G[3] = kt.a(var2, true);
+                  AccountChoicePanel.field_G[3] = kt.a(var2, true);
                 }
                 var2 = ib.a("spend", -90);
                 if (var2 != null) {
@@ -3116,7 +3116,7 @@ final class ad {
                 }
                 var2 = ib.a("replace", param1 ^ -87);
                 if (null != var2) {
-                  cj.field_E = kt.a(var2, true);
+                  DateInputWidget.field_E = kt.a(var2, true);
                 }
                 var2 = ib.a("sell", -116);
                 if (var2 != null) {
@@ -3132,7 +3132,7 @@ final class ad {
                 }
                 var2 = ib.a("experience", -123);
                 if (null != var2) {
-                  fi.field_d = kt.a(var2, true);
+                  ConsoleParseException.field_d = kt.a(var2, true);
                 }
                 var2 = ib.a("auction_info", -121);
                 if (var2 != null) {
@@ -3340,7 +3340,7 @@ final class ad {
                 }
                 var2 = ib.a("slot_type", -94);
                 if (var2 != null) {
-                  kd.field_u = kt.a(var2, true);
+                  DebugConsole.field_u = kt.a(var2, true);
                 }
                 var2 = ib.a("no_buyout", -113);
                 if (var2 != null) {
@@ -3356,7 +3356,7 @@ final class ad {
                 }
                 var2 = ib.a("outbidded", param1 ^ -119);
                 if (null != var2) {
-                  fb.field_O = kt.a(var2, true);
+                  NumericDateInputWidget.field_O = kt.a(var2, true);
                 }
                 var2 = ib.a("your_auctions", -95);
                 if (null != var2) {
@@ -3432,11 +3432,11 @@ final class ad {
                 }
                 var2 = ib.a("mouseover_kit_reason1", param1 ^ -116);
                 if (null != var2) {
-                  el.field_G = kt.a(var2, true);
+                  BytePlusOneCommand.field_G = kt.a(var2, true);
                 }
                 var2 = ib.a("mouseover_kit_reason2", -124);
                 if (null != var2) {
-                  ai.field_C = kt.a(var2, true);
+                  AccountTermsPanel.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("training_escape", -117);
                 if (null != var2) {
@@ -3452,7 +3452,7 @@ final class ad {
                 }
                 var2 = ib.a("player_maxed_no_exp", param1 - 81);
                 if (null != var2) {
-                  ae.field_M = kt.a(var2, true);
+                  AccountRegistrationPanel.field_M = kt.a(var2, true);
                 }
                 var2 = ib.a("no_user_found", -127);
                 if (null != var2) {
@@ -3516,11 +3516,11 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gameplay2,0", -112);
                 if (null != var2) {
-                  sa.field_d[0] = kt.a(var2, true);
+                  DelegatingCanvas.field_d[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay2,1", -107);
                 if (null != var2) {
-                  sa.field_d[1] = kt.a(var2, true);
+                  DelegatingCanvas.field_d[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay3,0", -106);
                 if (var2 != null) {
@@ -3532,11 +3532,11 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gameplay4,0", -118);
                 if (var2 != null) {
-                  sa.field_c[0] = kt.a(var2, true);
+                  DelegatingCanvas.field_c[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay4,1", -80);
                 if (var2 != null) {
-                  sa.field_c[1] = kt.a(var2, true);
+                  DelegatingCanvas.field_c[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay5", -108);
                 if (var2 != null) {
@@ -3754,23 +3754,23 @@ final class ad {
                 }
                 var2 = ib.a("instructions_league_diamond_division,0", -86);
                 if (var2 != null) {
-                  tm.field_q[0] = kt.a(var2, true);
+                  ConsoleCommand.field_q[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_league_diamond_division,1", -102);
                 if (null != var2) {
-                  tm.field_q[1] = kt.a(var2, true);
+                  ConsoleCommand.field_q[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_league_diamond_division,2", param1 ^ -113);
                 if (null != var2) {
-                  tm.field_q[2] = kt.a(var2, true);
+                  ConsoleCommand.field_q[2] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_league_diamond_division,3", -85);
                 if (null != var2) {
-                  tm.field_q[3] = kt.a(var2, true);
+                  ConsoleCommand.field_q[3] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_league_diamond_division,4", -124);
                 if (null != var2) {
-                  tm.field_q[4] = kt.a(var2, true);
+                  ConsoleCommand.field_q[4] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_league2,0", param1 - 90);
                 if (var2 != null) {
@@ -3826,11 +3826,11 @@ final class ad {
                 }
                 var2 = ib.a("MENU_LABELS_LOCK_MOUSE,0", -87);
                 if (null != var2) {
-                  ai.field_K[0] = kt.a(var2, true);
+                  AccountTermsPanel.field_K[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("MENU_LABELS_LOCK_MOUSE,1", -99);
                 if (var2 != null) {
-                  ai.field_K[1] = kt.a(var2, true);
+                  AccountTermsPanel.field_K[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("trap_mouse_disabled", -121);
                 if (null != var2) {
@@ -3866,7 +3866,7 @@ final class ad {
                 }
                 var2 = ib.a("player_wants_draw", -117);
                 if (null != var2) {
-                  pj.field_A = kt.a(var2, true);
+                  AlphaContainer.field_A = kt.a(var2, true);
                 }
                 var2 = ib.a("game_ended_on_agreed_draw", -127);
                 if (null != var2) {
@@ -3890,7 +3890,7 @@ final class ad {
                 }
                 var2 = ib.a("minprice", -112);
                 if (null != var2) {
-                  oj.field_T = kt.a(var2, true);
+                  LoadingProgressDialog.field_T = kt.a(var2, true);
                 }
                 var2 = ib.a("maxprice", -111);
                 if (var2 != null) {
@@ -3898,7 +3898,7 @@ final class ad {
                 }
                 var2 = ib.a("too_low", param1 - 119);
                 if (null != var2) {
-                  ik.field_E = kt.a(var2, true);
+                  IntDoubleCommand.field_E = kt.a(var2, true);
                 }
                 var2 = ib.a("too_high", param1 ^ -124);
                 if (null != var2) {
@@ -4110,7 +4110,7 @@ final class ad {
                 }
                 var2 = ib.a("posession_text", -109);
                 if (var2 != null) {
-                  dw.field_b = kt.a(var2, true);
+                  ConsoleEvaluationException.field_b = kt.a(var2, true);
                 }
                 var2 = ib.a("percentage_text", -113);
                 if (null != var2) {
@@ -4166,7 +4166,7 @@ final class ad {
                 }
                 var2 = ib.a("header_text", param1 ^ -102);
                 if (null != var2) {
-                  fb.field_S = kt.a(var2, true);
+                  NumericDateInputWidget.field_S = kt.a(var2, true);
                 }
                 var2 = ib.a("kick_text", -86);
                 if (null != var2) {
@@ -4178,7 +4178,7 @@ final class ad {
                 }
                 var2 = ib.a("name_owngoal_text", -115);
                 if (null != var2) {
-                  ae.field_P = kt.a(var2, true);
+                  AccountRegistrationPanel.field_P = kt.a(var2, true);
                 }
                 var2 = ib.a("tackle_col_names,0", -82);
                 if (null != var2) {
@@ -4218,7 +4218,7 @@ final class ad {
                 }
                 var2 = ib.a("stage_semifinal", -113);
                 if (null != var2) {
-                  qk.field_G = kt.a(var2, true);
+                  Checkbox.field_G = kt.a(var2, true);
                 }
                 var2 = ib.a("stage_quarterfinal", param1 ^ -122);
                 if (null != var2) {
@@ -4226,7 +4226,7 @@ final class ad {
                 }
                 var2 = ib.a("stage_qualifying", -125);
                 if (var2 != null) {
-                  qp.field_C = kt.a(var2, true);
+                  AccountMessagePanel.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("stage_inthefinal", -118);
                 if (var2 != null) {
@@ -4342,7 +4342,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_final_starts_in_X_seconds", -106);
                 if (var2 != null) {
-                  jo.field_C = kt.a(var2, true);
+                  DemoIntegersCommand.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("tournament_semi_starts_in_X_seconds", -125);
                 if (var2 != null) {
@@ -4378,7 +4378,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_fullwin", param1 - 88);
                 if (null != var2) {
-                  hm.field_C = kt.a(var2, true);
+                  SumIntegersCommand.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("tournament_resignquit", -90);
                 if (null != var2) {
@@ -4402,7 +4402,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_draw_tackles", -90);
                 if (var2 != null) {
-                  qk.field_F = kt.a(var2, true);
+                  Checkbox.field_F = kt.a(var2, true);
                 }
                 var2 = ib.a("tournament_draw_tackles2", param1 - 112);
                 if (var2 != null) {
@@ -4446,7 +4446,7 @@ final class ad {
                 }
                 var2 = ib.a("please_wait", param1 ^ -90);
                 if (null != var2) {
-                  ct.field_w = kt.a(var2, true);
+                  SingleChildContainer.field_w = kt.a(var2, true);
                 }
                 var2 = ib.a("leave_button", param1 ^ -81);
                 if (var2 != null) {
@@ -4577,7 +4577,7 @@ final class ad {
           if (param1 >= -33) {
             ad.a(47, false, -60);
           }
-          kd.field_s = true;
+          DebugConsole.field_s = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

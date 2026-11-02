@@ -464,8 +464,8 @@ abstract class hs {
               var10 = un.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;
-              SoftwareRasterizer.b(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
-              SoftwareRasterizer.b(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
+              SoftwareRasterizer.drawLine(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
+              SoftwareRasterizer.drawLine(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
             }
             param1 += 23;
           }

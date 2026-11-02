@@ -138,14 +138,14 @@ final class lo extends jd {
         try {
           if (gv.field_h == param2 &&
             param1 == jr.field_Kb &&
-            wi.field_C == param3 &&
+            TextButton.field_C == param3 &&
             param4 == gb.field_K &&
             MouseWheelInput.field_f == param5) {
             return;
           }
           gb.field_K = param4;
           gv.field_h = param2;
-          wi.field_C = param3;
+          TextButton.field_C = param3;
           stackIn_11_0 = param5;
           MouseWheelInput.field_f = stackIn_11_0;
           jr.field_Kb = param1;
@@ -171,12 +171,12 @@ final class lo extends jd {
           ta.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
           SoftwareRasterizer.b();
-          var8Lifetime1 = uv.b(-gb.field_K, wi.field_C, (byte) 2);
+          var8Lifetime1 = uv.b(-gb.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }
           var9 = wn.field_j.field_o;
-          sa.field_e = -(var9 * we.a(var8Lifetime1, false)) >> 17;
+          DelegatingCanvas.field_e = -(var9 * we.a(var8Lifetime1, false)) >> 17;
           lr.field_m = var9 * ei.a(var8Lifetime1, (byte) -23) >> 17;
           wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           ta.e(118);
@@ -239,7 +239,7 @@ final class lo extends jd {
         if (!param3) {
           var6.c(-(var6.field_o >> 1) + param1, -(var6.field_v >> 1) + param2);
         } else {
-          var6.f(param1 - (var6.field_o >> 1), param2 - (var6.field_v >> 1));
+          var6.drawHalfSize(param1 - (var6.field_o >> 1), param2 - (var6.field_v >> 1));
         }
     }
 
@@ -279,7 +279,7 @@ final class lo extends jd {
             return stackIn_11_0;
           }
           if (qe.a(true, var5)) {
-            stackIn_15_0 = tq.field_D;
+            stackIn_15_0 = NotCommand.field_D;
             return stackIn_15_0;
           }
           if (this.b(param1, (byte) -67)) {
@@ -294,7 +294,7 @@ final class lo extends jd {
             stackIn_22_0 = we.field_b;
             return stackIn_22_0;
           }
-          if (uj.a(68, var5, var6)) {
+          if (SetLagCommand.a(68, var5, var6)) {
             stackIn_26_0 = js.field_f;
             return stackIn_26_0;
           }
@@ -325,8 +325,8 @@ final class lo extends jd {
         int var8 = 0;
         int var9 = 0;
         int var10 = Kickabout.field_G;
-        uo var11 = pb.field_C;
-        uo var3 = var11;
+        BinaryBitmapFont var11 = IsSixCommand.field_C;
+        BinaryBitmapFont var3 = var11;
         int var9Lifetime1;
         if (param2 <= 44) {
           return;
@@ -338,12 +338,12 @@ final class lo extends jd {
           var7 = -(var6 >> 1) + param1;
           var8 = -34 + param0;
           SoftwareRasterizer.a(var7, var8, var4 + (var5 << 1), 69, 16777215, 30);
-          SoftwareRasterizer.h(var7 - 1, -1 + var8, 2 + (var4 + (var5 << 1)), 71, 16777215, 128);
+          SoftwareRasterizer.drawRectangleAlpha(var7 - 1, -1 + var8, 2 + (var4 + (var5 << 1)), 71, 16777215, 128);
           for (var9 = 1; var9 < 3; var9++) {
             SoftwareRasterizer.c(var7 + 4, var8 + (var9 * 22 - 1), -10 + var6, 16777215, 100);
           }
-          SoftwareRasterizer.f(var7 + var4, 4 + var8, 59, 16777215, 100);
-          SoftwareRasterizer.f(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
+          SoftwareRasterizer.drawVerticalLineAlpha(var7 + var4, 4 + var8, 59, 16777215, 100);
+          SoftwareRasterizer.drawVerticalLineAlpha(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
           var9Lifetime1 = 22 + var8 - 4;
           ((BitmapFont) ((Object) var3)).c(ns.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d(ns.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
@@ -361,13 +361,13 @@ final class lo extends jd {
         }
     }
 
-    final static li a(li[] param0, boolean param1, tm[] param2, String param3) throws dw {
+    final static ConsoleValue a(ConsoleValue[] param0, boolean param1, ConsoleCommand[] param2, String param3) throws ConsoleEvaluationException {
         int var5 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$0 = null;
-        li stackIn_5_0 = null;
+        ConsoleValue stackIn_5_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -406,7 +406,7 @@ final class lo extends jd {
             }
           }
           discarded$0 = var7.append(") is undefined.");
-          throw new dw(var7.toString());
+          throw new ConsoleEvaluationException(var7.toString());
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

@@ -12,7 +12,7 @@ final class ia {
     static String field_b;
 
     final static void a(boolean param0, int param1) {
-        lc.field_e.a(param0, (byte) -124);
+        DualLinkDequeIterator.field_e.a(param0, (byte) -124);
         if (param1 != -23249) {
           field_c = true;
         }

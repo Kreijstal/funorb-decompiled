@@ -64,10 +64,10 @@ final class cq extends IntrusiveNode {
         return fc.field_a + (q.field_b << 2) + (ng.field_a << 4);
     }
 
-    final static uo a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         java.applet.Applet var6 = null;
-        uo stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -189,7 +189,7 @@ final class cq extends IntrusiveNode {
     }
 
     final static void a(boolean param0, int param1) {
-        ir.a(param0, param1 + 16355);
+        ThreeCommand.a(param0, param1 + 16355);
         if (param1 != 0) {
           field_m = (StringBuilder) null;
         }
@@ -201,12 +201,12 @@ final class cq extends IntrusiveNode {
         int var7 = Kickabout.field_G;
         Sprite[] var8 = new Sprite[9];
         Sprite[] var4 = var8;
-        var8[0] = lh.a(param2, (byte) -96, param0);
+        var8[0] = BroadcastServerCommand.a(param2, (byte) -96, param0);
         for (var5 = 1; var5 < 9; var5++) {
           var8[var5] = var8[0];
         }
         int var6 = -119 % ((param3 - 38) / 60);
-        var8[4] = lh.a(param1, (byte) -96, 64);
+        var8[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
         return var4;
     }
 

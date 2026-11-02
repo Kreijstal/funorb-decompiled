@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nt extends hd implements lv {
-    private eg field_Eb;
+    private ModelMesh field_Eb;
     hd field_Jb;
     private int field_Db;
     static byte[] field_yb;
@@ -146,7 +146,7 @@ final class nt extends hd implements lv {
           PcmStreamMixer var5 = (PcmStreamMixer) null;
           nt.a(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
         }
-        la.field_e.f(-(la.field_e.field_o >> 2) + param2, param0 - (la.field_e.field_v >> 2));
+        la.field_e.drawHalfSize(-(la.field_e.field_o >> 2) + param2, param0 - (la.field_e.field_v >> 2));
     }
 
     final static int[] k(int param0) {
@@ -208,7 +208,7 @@ final class nt extends hd implements lv {
           SoftwareRasterizer.a(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215, var4);
         }
         if (var2 != 0) {
-          SoftwareRasterizer.f(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
+          SoftwareRasterizer.drawRoundedRectangle(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
         }
         if (null != this.field_Eb) {
           js.a(this.field_Eb, this.field_Db, la.field_e, -101);
@@ -229,7 +229,7 @@ final class nt extends hd implements lv {
             eo.a(la.field_e, 13421772);
             eo.a(la.field_e, 11184810);
           }
-          la.field_e.f(this.field_Jb.field_F + (-50 + this.field_Jb.field_q >> 1), (this.field_Jb.field_mb - 50 >> 1) + this.field_Jb.field_T);
+          la.field_e.drawHalfSize(this.field_Jb.field_F + (-50 + this.field_Jb.field_q >> 1), (this.field_Jb.field_mb - 50 >> 1) + this.field_Jb.field_T);
         }
         var5 = (this.field_Jb.field_q >> 1) + this.field_Jb.field_F;
         var6 = this.field_Jb.field_mb + this.field_Jb.field_T + 5;
@@ -288,7 +288,7 @@ final class nt extends hd implements lv {
         if (null == this.field_Eb ||
           var3 != this.field_Fb ||
           this.field_Ab != var4) {
-          this.field_Eb = df.a(this.field_Cb.field_m, ev.field_B[var4], true, ev.field_B[var3]).b(100, 4369, 20, -56, -20);
+          this.field_Eb = df.a(this.field_Cb.field_m, LongPlusOneCommand.field_B[var4], true, LongPlusOneCommand.field_B[var3]).b(100, 4369, 20, -56, -20);
           this.field_Fb = var3;
           this.field_Ab = var4;
         }
@@ -307,7 +307,7 @@ final class nt extends hd implements lv {
           if (this.field_Cb.field_k != -1) {
             if (hv.field_a[this.field_Cb.field_k] &&
               !c.a(this.field_Cb.field_k, 0, BufferedSocket.field_f)) {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, ja.field_W.toLowerCase());
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ja.field_W.toLowerCase());
             } else {
               stackIn_23_0 = -67;
               stackIn_23_1 = -18;
@@ -316,7 +316,7 @@ final class nt extends hd implements lv {
               } else {
                 stackIn_24_2 = ob.field_R;
               }
-              qd.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{kw.field_c[this.field_Cb.field_k].toLowerCase()}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{kw.field_c[this.field_Cb.field_k].toLowerCase()}));
             }
           }
           if (-1 != this.field_Cb.field_g) {
@@ -327,13 +327,13 @@ final class nt extends hd implements lv {
             } else {
               stackIn_30_2 = mc.field_l;
             }
-            qd.$cfr$intArgs$a$b6210757cdab(stackIn_29_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_29_0, vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
           }
           if (this.field_Cb.field_j) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, el.field_G);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, BytePlusOneCommand.field_G);
           }
           if (this.field_Cb.field_f != -1L) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, ai.field_C);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, AccountTermsPanel.field_C);
           }
         }
         if (this.field_sb == 1) {
@@ -376,12 +376,12 @@ final class nt extends hd implements lv {
               }
               var4 = param0.getCodeBase();
               var3 = qr.a(param0, var4, 3).getFile();
-              AppletJavaScriptBridge.a(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callWithArguments(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callWithArguments(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callWithArguments(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callWithArguments(new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callWithArguments(new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callWithArguments(new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks", 25449);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

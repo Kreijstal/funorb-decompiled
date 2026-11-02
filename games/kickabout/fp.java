@@ -54,8 +54,8 @@ class fp extends IntrusiveNode {
           Class var13 = (Class) null;
           fp.a(100, (Class) null);
         }
-        int var10 = ev.field_B[param1];
-        int var11 = ev.field_B[param6];
+        int var10 = LongPlusOneCommand.field_B[param1];
+        int var11 = LongPlusOneCommand.field_B[param6];
         boolean[][][] var12 = je.field_g[param0].field_l;
         return hs.a(param9, param5, param3, var10, var12[0], param4, var12[1], (byte) -92, param2, param8, var11);
     }
@@ -127,10 +127,10 @@ class fp extends IntrusiveNode {
           var8Lifetime1 = ei.a(var6Lifetime1, (byte) -23) >> 8;
           var9Lifetime1 = we.a(var6Lifetime1, false) >> 8;
           var12Lifetime1 = -33 / ((-50 - param0) / 49);
-          if (el.field_A != -1 &&
+          if (BytePlusOneCommand.field_A != -1 &&
             -1 != n.field_m) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = -320 + el.field_A;
+            var7Lifetime1 = -320 + BytePlusOneCommand.field_A;
             var8Lifetime1 = -n.field_m + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1));

@@ -44,16 +44,16 @@ final class gp extends ps {
               }
               var1 = (ag) (ps.field_a.c(param0 ^ -59));
             }
-            if (null == qd.field_c) {
+            if (null == IndexedSpriteState.field_c) {
               return;
             }
-            var1Lifetime1 = (ag) (qd.field_c.g(24009));
+            var1Lifetime1 = (ag) (IndexedSpriteState.field_c.g(24009));
             while (var1Lifetime1 != null) {
               stackIn_15_0 = var1Lifetime1.field_k.e((byte) -113);
               if (!stackIn_15_0) {
                 var1Lifetime1.c((byte) -109);
               }
-              var1Lifetime1 = (ag) (qd.field_c.c(33));
+              var1Lifetime1 = (ag) (IndexedSpriteState.field_c.c(33));
             }
           }
           return;
@@ -170,9 +170,9 @@ final class gp extends ps {
         }
     }
 
-    final static boolean a(byte param0, String param1, boolean param2, String param3, ae param4, int param5, String param6) {
+    final static boolean a(byte param0, String param1, boolean param2, String param3, AccountRegistrationPanel param4, int param5, String param6) {
         RuntimeException var7 = null;
-        jn var8 = null;
+        RegistrationRequestDialog var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -187,7 +187,7 @@ final class gp extends ps {
           if (wk.field_f != vj.field_a) {
             return false;
           }
-          var8 = new jn(wd.field_l, param4);
+          var8 = new RegistrationRequestDialog(wd.field_l, param4);
           wd.field_l.a(var8, false);
           if (!wq.c((byte) 59)) {
             ArchiveIndex.field_a = null;

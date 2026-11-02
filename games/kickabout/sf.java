@@ -18,8 +18,8 @@ final class sf extends qt {
 
     final static void a(int param0, int param1, CommonGame param2, boolean param3) {
         try {
-          jn.field_kb = param1;
-          tq.field_F = param2;
+          RegistrationRequestDialog.field_kb = param1;
+          NotCommand.field_F = param2;
           wp.field_c = param0;
           if (!param3) {
             sf.c(20, -118);

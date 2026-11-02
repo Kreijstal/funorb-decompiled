@@ -52,7 +52,7 @@ final class ek extends i {
         if (!param0) {
           return (ak) null;
         }
-        var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : nn.field_K;
+        var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : AccountChoicePanel.field_K;
         var3.field_g = param2 - 4;
         return var3;
     }
@@ -79,7 +79,7 @@ final class ek extends i {
           return;
         }
         if (var11.field_Eb.e((byte) -113)) {
-          SoftwareRasterizer.g(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
+          SoftwareRasterizer.darkenRectangle(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
         }
         pt.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
@@ -87,10 +87,10 @@ final class ek extends i {
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
             SoftwareRasterizer.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
-            SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
+            SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
           } else {
             if (var6_ref_at.field_gb) {
-              SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
+              SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
           }
           var6_ref_at.i((byte) -76);
@@ -107,13 +107,13 @@ final class ek extends i {
           var9 = this.field_H.field_Cb.a(15);
           SoftwareRasterizer.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.a(var7, 23, var6);
-          pb.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
+          IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
-            pb.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
+            IsSixCommand.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
         this.field_L.a(117, false);
-        pb.field_C.d(jw.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
+        IsSixCommand.field_C.d(jw.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {
@@ -173,7 +173,7 @@ final class ek extends i {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new tk(vb.a(0, var5), this.g((byte) -119), be.field_q, rr.field_b, it.field_m);
+        this.field_L = new tk(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
         this.field_L.a(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }

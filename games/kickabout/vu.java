@@ -209,25 +209,25 @@ final class vu extends hd {
           ar.a(15707, sn.field_e);
         }
         if (param0) {
-          if (wi.field_v != null) {
-            wi.field_v.a(param1, false);
+          if (TextButton.field_v != null) {
+            TextButton.field_v.a(param1, false);
           }
           nj.a(param1, -128);
           if (null != ck.field_b) {
             ck.field_b.a(104, param1);
           }
-          fb.a(30521, param1);
+          NumericDateInputWidget.a(30521, param1);
           return;
         }
         field_Db = true;
-        if (wi.field_v != null) {
-          wi.field_v.a(param1, false);
+        if (TextButton.field_v != null) {
+          TextButton.field_v.a(param1, false);
         }
         nj.a(param1, -128);
         if (null != ck.field_b) {
           ck.field_b.a(104, param1);
         }
-        fb.a(30521, param1);
+        NumericDateInputWidget.a(30521, param1);
     }
 
     static {

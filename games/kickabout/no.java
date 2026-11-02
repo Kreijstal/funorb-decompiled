@@ -142,7 +142,7 @@ final class no extends i {
 
     no() {
         super(9);
-        Sprite var1 = kb.field_E[-1 + kb.field_E.length];
+        Sprite var1 = WriteIntegersCommand.field_E[-1 + WriteIntegersCommand.field_E.length];
         String var2 = q.field_h[-1 + q.field_h.length];
         String var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[9], new String[]{var2});
         this.a(var3, this.field_t, var1, -117, this.field_u);

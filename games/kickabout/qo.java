@@ -5,28 +5,28 @@ import java.io.*;
 
 final class qo extends jd {
     static BitmapFont field_k;
-    static eg[] field_l;
+    static ModelMesh[] field_l;
     static String field_j;
 
     final static IntrusiveDeque d(byte param0) {
         IntrusiveDeque var1 = new IntrusiveDeque();
-        var1.a(new hm("sumIntegers", new Class[]{int[].class}, (String) null), 3);
-        var1.a(new kb("writeIntegers", new Class[]{int[].class}, (String) null), 3);
-        var1.a(new jo("demoIntegers", new Class[]{}, (String) null), 3);
-        var1.a(new jf("doSomething", new Class[]{String.class}, "Do something clever to a string to annoy TdR."), param0 - 23);
-        var1.a(new ir("three", new Class[]{}, (String) null), param0 ^ 25);
-        var1.a(new pb("isSix", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
+        var1.a(new SumIntegersCommand("sumIntegers", new Class[]{int[].class}, (String) null), 3);
+        var1.a(new WriteIntegersCommand("writeIntegers", new Class[]{int[].class}, (String) null), 3);
+        var1.a(new DemoIntegersCommand("demoIntegers", new Class[]{}, (String) null), 3);
+        var1.a(new DoSomethingCommand("doSomething", new Class[]{String.class}, "Do something clever to a string to annoy TdR."), param0 - 23);
+        var1.a(new ThreeCommand("three", new Class[]{}, (String) null), param0 ^ 25);
+        var1.a(new IsSixCommand("isSix", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
         if (param0 != 26) {
           qo.a(42, -71L, -88L);
         }
-        var1.a(new tq("not", new Class[]{Boolean.TYPE}, (String) null), param0 - 23);
-        var1.a(new ik("intDouble", new Class[]{Integer.TYPE}, (String) null), 3);
-        var1.a(new uc("intTriple", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
-        var1.a(new ev("LongPlusOne", new Class[]{Long.TYPE}, "Returns a long value. Useful for testing the auto-casts."), 3);
-        var1.a(new el("BytePlusOne", new Class[]{Byte.TYPE}, "Returns a byte. Should lose precision."), 3);
-        var1.a(new ls("big", new Class[]{}, (String) null), param0 - 23);
-        var1.a(new uj("set_lag", new Class[]{Integer.TYPE}, (String) null), param0 ^ 25);
-        var1.a(new lh("broadcast_server", new Class[]{String.class}, "Send a broadcast to ALL players in games and the lobby. Only for emergencies, it's filtered too incase someone tries to swear."), 3);
+        var1.a(new NotCommand("not", new Class[]{Boolean.TYPE}, (String) null), param0 - 23);
+        var1.a(new IntDoubleCommand("intDouble", new Class[]{Integer.TYPE}, (String) null), 3);
+        var1.a(new IntTripleCommand("intTriple", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
+        var1.a(new LongPlusOneCommand("LongPlusOne", new Class[]{Long.TYPE}, "Returns a long value. Useful for testing the auto-casts."), 3);
+        var1.a(new BytePlusOneCommand("BytePlusOne", new Class[]{Byte.TYPE}, "Returns a byte. Should lose precision."), 3);
+        var1.a(new BigCommand("big", new Class[]{}, (String) null), param0 - 23);
+        var1.a(new SetLagCommand("set_lag", new Class[]{Integer.TYPE}, (String) null), param0 ^ 25);
+        var1.a(new BroadcastServerCommand("broadcast_server", new Class[]{String.class}, "Send a broadcast to ALL players in games and the lobby. Only for emergencies, it's filtered too incase someone tries to swear."), 3);
         return var1;
     }
 
@@ -80,10 +80,10 @@ final class qo extends jd {
         Sprite var6 = new Sprite(108, 108);
         int var3Lifetime1;
         PacketBuffer.a(-110, var6);
-        SoftwareRasterizer.d(54, 54, 51, 204);
+        SoftwareRasterizer.fillCircle(54, 54, 51, 204);
         for (var2_int = 43; var2_int > 0; var2_int--) {
           var3 = 119 * var2_int / 43 + 34;
-          SoftwareRasterizer.d(54, 54, var2_int, var3);
+          SoftwareRasterizer.fillCircle(54, 54, var2_int, var3);
         }
         if (param0 != -22976) {
           qo.g(126);
@@ -91,7 +91,7 @@ final class qo extends jd {
         ta.e(param0 ^ -22987);
         ArgbSprite var2 = new ArgbSprite(54, 54);
         PacketBuffer.a(param0 ^ -23017, var2);
-        var6.f(0, 0);
+        var6.drawHalfSize(0, 0);
         ta.e(125);
         int var5 = 0;
         var3Lifetime1 = var5;
@@ -147,7 +147,7 @@ final class qo extends jd {
         try {
           CipherPacketBuffer var2_ref_ml = null;
           if (wt.field_A == null) {
-            wt.field_A = vl.field_c.a(true, uc.field_E, rl.field_o);
+            wt.field_A = vl.field_c.a(true, IntTripleCommand.field_E, rl.field_o);
           }
           if (wt.field_A.field_a == 0) {
             return false;
@@ -200,11 +200,11 @@ final class qo extends jd {
         if (param0 != 18) {
           field_j = (String) null;
         }
-        return fr.field_G;
+        return NameSuggestionsPanel.field_G;
     }
 
     static {
-        field_l = new eg[9];
+        field_l = new ModelMesh[9];
         field_j = "You have been removed from <%0>'s game.";
     }
 }

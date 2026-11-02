@@ -4,7 +4,7 @@
 final class r {
     static String field_e;
     static String[] field_a;
-    static kd field_d;
+    static DebugConsole field_d;
     static String[] field_b;
     static hd field_c;
 
@@ -29,7 +29,7 @@ final class r {
     final static void a(boolean param0) {
         UiWidget.h(0);
         if (null != ic.field_d) {
-          hm.a(-120, ic.field_d);
+          SumIntegersCommand.a(-120, ic.field_d);
         }
         gs.d(98);
         vp.c(-107);
@@ -64,7 +64,7 @@ final class r {
             return true;
           }
           if (this != bm.field_H) {
-            return jn.field_rb == this ? true : false;
+            return RegistrationRequestDialog.field_rb == this ? true : false;
           }
           return true;
         }
@@ -74,7 +74,7 @@ final class r {
         if (this == bm.field_H) {
           return true;
         }
-        if (jn.field_rb != this) {
+        if (RegistrationRequestDialog.field_rb != this) {
           return false;
         }
         return true;

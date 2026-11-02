@@ -141,7 +141,7 @@ final class tc extends DualLinkNode {
           if (wt.field_x > qj.field_e &&
             vo.field_cb.field_q + qj.field_e > wt.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
-            nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, cf.field_Db, (byte) -113);
           }
           return;
@@ -171,7 +171,7 @@ final class tc extends DualLinkNode {
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -198,7 +198,7 @@ final class tc extends DualLinkNode {
           if (wt.field_x > qj.field_e &&
             vo.field_cb.field_q + qj.field_e > wt.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
-            nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, cf.field_Db, (byte) -113);
             return;
           }
@@ -211,7 +211,7 @@ final class tc extends DualLinkNode {
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -222,7 +222,7 @@ final class tc extends DualLinkNode {
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -235,7 +235,7 @@ final class tc extends DualLinkNode {
           return;
         }
         if (ArchiveNetworkClient.field_i < us.field_j &&
-          nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
           ka.a(dc.field_d, cf.field_Db, (byte) -113);
           return;
         }
@@ -321,7 +321,7 @@ final class tc extends DualLinkNode {
         if (!param0) {
           param3 = 0;
         }
-        ir.a(rv.field_c[param2][param3][2], -88, rv.field_c[param2][param3][5], rv.field_c[param2][param3][4], rv.field_c[param2][param3][1], rv.field_c[param2][param3][0], rv.field_c[param2][param3][3]);
+        ThreeCommand.a(rv.field_c[param2][param3][2], -88, rv.field_c[param2][param3][5], rv.field_c[param2][param3][4], rv.field_c[param2][param3][1], rv.field_c[param2][param3][0], rv.field_c[param2][param3][3]);
         ic.a(rv.field_c[param2][param3][4], rv.field_c[param2][param3][5], rv.field_c[param2][param3][3], rv.field_c[param2][param3][0], rv.field_c[param2][param3][2], (byte) -113, rv.field_c[param2][param3][1]);
         if (param1 != 8710) {
           FootballerAgent var5 = (FootballerAgent) null;

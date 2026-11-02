@@ -261,7 +261,7 @@ final class hf {
           }
           while (var2_int < param0.length()) {
             var3 = param0.charAt(var2_int);
-            if (!se.a((byte) -113, (char) var3) &&
+            if (!ModalStack.a((byte) -113, (char) var3) &&
               !IntrusiveNode.a(12105, (char) var3)) {
               return true;
             }

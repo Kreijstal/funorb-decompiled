@@ -33,7 +33,7 @@ abstract class mc {
         vg.field_Wb = true;
         gl.field_c = null;
         b.field_N = null;
-        mu.field_Y = null;
+        ContentTransitionDialog.field_Y = null;
         h.field_e = null;
         if (param0 >= -82) {
           mc.a((byte) 24);

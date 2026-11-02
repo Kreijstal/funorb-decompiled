@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends wi {
+final class nv extends TextButton {
     static String field_G;
     private fu field_K;
     static int[] field_E;
@@ -21,11 +21,11 @@ final class nv extends wi {
         return this.field_K.a(1);
     }
 
-    final static cn a(int param0, byte[] param1) {
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        cn var3 = null;
-        cn stackIn_4_0 = null;
+        CoverageBitmapFont var3 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -35,7 +35,7 @@ final class nv extends wi {
           if (param1 == null) {
             return null;
           }
-          var3 = new cn(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, lt.field_a, pq.field_O);
+          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, lt.field_a, pq.field_O);
           tk.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -58,14 +58,14 @@ final class nv extends wi {
         var8 = Kickabout.field_G;
         if (cu.field_c != 0) {
           if (param4 == 0) {
-            be.field_i = null;
+            ConsolePanel.field_i = null;
           }
         } else {
           if (param4 > 0) {
-            be.field_i = new IntrusiveDeque();
+            ConsolePanel.field_i = new IntrusiveDeque();
           } else {
             if (param4 == 0) {
-              be.field_i = null;
+              ConsolePanel.field_i = null;
             }
           }
         }
@@ -126,7 +126,7 @@ final class nv extends wi {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -141,7 +141,7 @@ final class nv extends wi {
         int var14 = 0;
         var14 = Kickabout.field_G;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_H - param5 + param2;

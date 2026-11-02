@@ -113,7 +113,7 @@ final class hv {
             }
             if (param1.field_V.field_m == param2 &&
               param1.field_V.field_s == 0) {
-              lk.a(param2, param1, -96, var19);
+              ConsoleExpression.a(param2, param1, -96, var19);
               return;
             }
             if (var13 != 0 &&
@@ -171,7 +171,7 @@ final class hv {
         }
         try {
           cq.field_e = param0;
-          ae.field_D = h.a(17475);
+          AccountRegistrationPanel.field_D = h.a(17475);
           js.field_d = new IntrusiveDeque();
           bk.field_c = new gv[6];
         } catch (RuntimeException runtimeException) {

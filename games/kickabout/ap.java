@@ -68,7 +68,7 @@ final class ap extends js {
             for (var4 = 0; var4 < 5; var4++) {
               WidgetContainer.field_v[var3_int][var4] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
             }
-            kb.field_B[var3_int] = DualLinkDeque.a(107, new vn(new vn[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
+            WriteIntegersCommand.field_B[var3_int] = DualLinkDeque.a(107, new vn(new vn[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
           }
           sk.a(param0 + 111, 5, 2);
           var3 = new vn[9];
@@ -88,11 +88,11 @@ final class ap extends js {
           for (var4Lifetime1 = 0; var4Lifetime1 < 9; var4Lifetime1++) {
             if (var4Lifetime1 == 7) {
               var5 = new int[]{1000, -1000, 45, 532};
-              var6 = var5[0] * t.field_o[0] >> 16;
-              var7 = var5[0] * t.field_f[0] >> 16;
+              var6 = var5[0] * TriangleRasterizer.field_o[0] >> 16;
+              var7 = var5[0] * TriangleRasterizer.field_f[0] >> 16;
               qo.field_l[var4Lifetime1] = var3[var4Lifetime1].b(var5[2], var5[3], var6, var5[1], var7);
             } else {
-              qo.field_l[var4Lifetime1] = (eg) (var3[var4Lifetime1].a(110, 131072, 1, 1, 1));
+              qo.field_l[var4Lifetime1] = (ModelMesh) (var3[var4Lifetime1].a(110, 131072, 1, 1, 1));
             }
           }
           sk.a(72, 5, 4);
@@ -103,9 +103,9 @@ final class ap extends js {
           gw.field_f[4] = vn.a(param1, "", "fans/fan_05");
           of.field_f = vn.a(param1, "", "characters/torso");
           es.field_k = vn.a(param1, "", "characters/keeper_body_halloween");
-          qd.field_j = new vn[5];
+          IndexedSpriteState.field_j = new vn[5];
           for (var4Lifetime2 = 0; 5 > var4Lifetime2; var4Lifetime2++) {
-            qd.field_j[var4Lifetime2] = vn.a(param1, "", "characters/" + var9[var4Lifetime2] + "_head_halloween");
+            IndexedSpriteState.field_j[var4Lifetime2] = vn.a(param1, "", "characters/" + var9[var4Lifetime2] + "_head_halloween");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -431,11 +431,11 @@ final class ap extends js {
             var5.resigned) {
             var6 = r.field_e;
           } else {
-            var6 = mr.field_F;
+            var6 = ValidatedTextWidget.field_F;
           }
         } else if (!var7.resigned &&
           var5.resigned) {
-          var6 = nn.field_L;
+          var6 = AccountChoicePanel.field_L;
         } else {
           if (!var7.offerDraw &&
             var5.offerDraw) {
@@ -567,7 +567,7 @@ final class ap extends js {
 
     final void a(int param0, boolean param1) {
         int stackIn_24_0 = 0;
-        uo var3_ref_uo;
+        BinaryBitmapFont var3_ref_uo;
         la[] var3_ref_la__;
         int var3;
         int var4;
@@ -585,7 +585,7 @@ final class ap extends js {
           MidiPcmStream.a(false, (byte) -114);
         }
         if (!this.field_u) {
-          var3_ref_uo = pb.field_C;
+          var3_ref_uo = IsSixCommand.field_C;
           var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(bm.field_K) >> 1;
           SoftwareRasterizer.a(320 - var4, 223, var4 + var4, 34, 6, 65793, 128);
           ((BitmapFont) ((Object) var3_ref_uo)).d(bm.field_K, 320, 246, 16777215, -1);

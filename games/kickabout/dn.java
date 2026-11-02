@@ -19,7 +19,7 @@ final class dn extends hd {
         Sprite var3 = new Sprite(qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
         Sprite var2 = var3;
         PacketBuffer.a(-59, var3);
-        qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(0, 0);
+        qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
         ta.e(121);
         this.field_N = var2;
         this.field_mb = 5 + var2.field_v + 5;

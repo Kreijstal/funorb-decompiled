@@ -68,7 +68,7 @@ final class at extends hd {
           var12 = (BitmapFont) null;
           ve.field_S = su.a(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
           ic.field_a = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);
-          fr.field_E = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16777215, 0, 0);
+          NameSuggestionsPanel.field_E = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = SoftwareRasterizer.field_g;
           var6 = SoftwareRasterizer.field_f;
           var16 = SoftwareRasterizer.field_a;
@@ -78,7 +78,7 @@ final class at extends hd {
             SoftwareRasterizer.a(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          gk.field_h = h.a(param2 ^ -32, var4, ve.field_S, fr.field_E, ic.field_a);
+          gk.field_h = h.a(param2 ^ -32, var4, ve.field_S, NameSuggestionsPanel.field_E, ic.field_a);
           qa.field_E.field_jb = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,7 +139,7 @@ final class at extends hd {
         if (param0 != -76) {
           this.field_Db = 84;
         }
-        pb.field_C.c(this.field_Eb, this.field_F + 160, -6 + this.field_T + this.field_mb, this.c(true), -1);
+        IsSixCommand.field_C.c(this.field_Eb, this.field_F + 160, -6 + this.field_T + this.field_mb, this.c(true), -1);
     }
 
     static {

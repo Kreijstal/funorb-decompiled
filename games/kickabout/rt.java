@@ -334,8 +334,8 @@ final class rt extends i {
           this.field_P = 5;
         }
         ta.e(123);
-        c.field_b.f(40 + param1, param2 + 80);
-        pb.field_C.d(this.field_J.d(100), param1 + 90, param2 + 190, 16777215, -1);
+        c.field_b.drawHalfSize(40 + param1, param2 + 80);
+        IsSixCommand.field_C.d(this.field_J.d(100), param1 + 90, param2 + 190, 16777215, -1);
         eo.a(param1 + 40, 200 + param2, this.field_J.field_r, 3, true, 0);
         for (var4 = 0; var4 < 3; var4++) {
           var5 = this.field_O[var4].field_F;
@@ -348,12 +348,12 @@ final class rt extends i {
                 q.field_d.a(ne.field_L, 123 + var5, var6 + 19, 13382451, 65793);
               }
             } else {
-              SoftwareRasterizer.f(var5, var6, var7, var8, 8, 4473924);
+              SoftwareRasterizer.drawRoundedRectangle(var5, var6, var7, var8, 8, 4473924);
               q.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
             }
           } else {
             SoftwareRasterizer.a(var5, var6, var7, var8, 8, 65793, 128);
-            SoftwareRasterizer.f(var5, var6, var7, var8, 8, 10066329);
+            SoftwareRasterizer.drawRoundedRectangle(var5, var6, var7, var8, 8, 10066329);
             q.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
           }
           var9 = 0;

@@ -129,7 +129,7 @@ final class fv implements hc {
         String stackIn_21_2 = null;
         int var2;
         int var3;
-        uo var4;
+        BinaryBitmapFont var4;
         int var5;
         String[] var6;
         int var6_int;
@@ -153,12 +153,12 @@ final class fv implements hc {
         var4 = q.field_d;
         if (fp.field_e == 2) {
           var6 = new String[3];
-          var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, oj.field_Z, new String[]{ad.a(si.field_k, 26300)});
+          var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.a(si.field_k, 26300)});
           if (ag.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
             if (0 >= ag.field_h) {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, lc.field_b, new String[]{ad.a(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.a(Math.abs(ag.field_h), 26300)});
             } else {
               stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.a(Math.abs(ag.field_h), 26300)});
             }
@@ -192,16 +192,16 @@ final class fv implements hc {
           }
         } else {
           if (fp.field_e == 3) {
-            if (ai.field_G.c(-2)) {
+            if (AccountTermsPanel.field_G.c(-2)) {
               return;
             }
-            var6_int = 6 + ai.field_G.b(0);
-            var7 = ai.field_G.a(ok.field_c, iu.field_j, (byte) 77) + 7;
+            var6_int = 6 + AccountTermsPanel.field_G.b(0);
+            var7 = AccountTermsPanel.field_G.a(ok.field_c, iu.field_j, (byte) 77) + 7;
             var24 = ra.a(var2, var7, var6_int, 0, var3);
             var3 = var24[1];
             var2 = var24[0];
             SoftwareRasterizer.a(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
-            ai.field_G.a((byte) 77, 3 + var2, ok.field_c, na.field_Ib, i.field_x, cr.field_c, var3 + 3, iu.field_j);
+            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, na.field_Ib, i.field_x, cr.field_c, var3 + 3, iu.field_j);
           } else {
             if (fp.field_e == 6) {
               var6_int = pc.field_a.b(0) + 6;

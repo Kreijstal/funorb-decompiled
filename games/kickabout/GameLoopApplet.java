@@ -22,8 +22,8 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
             this.g(13);
             this.e(6);
             this.i(13);
-            uc.field_A[10] = -1;
-            uc.field_A[9] = -1;
+            IntTripleCommand.field_A[10] = -1;
+            IntTripleCommand.field_A[9] = -1;
             sn.field_g = new Vector();
             oa.a(false, (hc) (this));
           } catch (RuntimeException runtimeException) {
@@ -176,7 +176,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
                     ProxySocketConnector.field_e = true;
                   }
                 } else {
-                  dw.a(true, 0);
+                  ConsoleEvaluationException.a(true, 0);
                 }
               } else {
                 UiWidget.h(0);
@@ -273,7 +273,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
     final void b(byte param0) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
-        java.awt.Canvas var2 = ln.l(64);
+        java.awt.Canvas var2 = DropTargetWidget.l(64);
         if (uf.c(608)) {
           va.a(var2, pn.g(2368), 0);
           return;
@@ -284,7 +284,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         }
         if (!MouseWheelInput.field_b &&
           !la.a(100)) {
-          ju.a(100.0f, hm.field_H, (byte) 30);
+          ju.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
           FormationAgent.a(var2, -14142);
           return;
         }
@@ -355,7 +355,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         int var2;
         int var3;
         var3 = Kickabout.field_G;
-        while (dr.a(-125, uc.field_A)) {
+        while (dr.a(-125, IntTripleCommand.field_A)) {
           if (this.a(so.field_b, un.field_e, 1)) {
             continue;
           }

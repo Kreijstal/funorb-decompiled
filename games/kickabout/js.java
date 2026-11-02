@@ -9,7 +9,7 @@ abstract class js {
     static IntrusiveDeque field_d;
     static Sprite field_a;
 
-    final static Sprite a(eg param0, int param1, Sprite param2, int param3) {
+    final static Sprite a(ModelMesh param0, int param1, Sprite param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_4_0 = null;
@@ -22,8 +22,8 @@ abstract class js {
         try {
           PacketBuffer.a(-94, param2);
           SoftwareRasterizer.b();
-          t.c();
-          t.b(SoftwareRasterizer.field_g >> 1, 202);
+          TriangleRasterizer.c();
+          TriangleRasterizer.b(SoftwareRasterizer.field_g >> 1, 202);
           param0.a(0, param1, 0, 0, 0, 0, 0, 700);
           if (param3 >= -25) {
             stackIn_2_0 = (Sprite) null;
@@ -141,19 +141,19 @@ abstract class js {
               un.field_c = uk.field_c;
             }
             if (un.field_c == uk.field_c &&
-              uj.a((byte) -98, 1)) {
+              SetLagCommand.a((byte) -98, 1)) {
               var6_int = un.field_e.h((byte) -123);
               if (var6_int == 0) {
                 un.field_c = tl.field_c;
               } else {
                 ms.field_b = -1;
                 so.field_b = var6_int;
-                un.field_c = wv.field_fb;
+                un.field_c = AccountRequestDialog.field_fb;
               }
               un.field_e.field_n = 0;
             }
             if (un.field_c == tl.field_c &&
-              uj.a((byte) 115, 8)) {
+              SetLagCommand.a((byte) 115, 8)) {
               ld.field_c = un.field_e.i((byte) -124);
               un.field_e.field_n = 0;
               nc.a(param2, param3, FullscreenFocusCanvas.field_h, -16161, param5);
@@ -161,16 +161,16 @@ abstract class js {
             }
             boolean decompiledFrameRemainder0 = true;
             if (un.field_c == gr.field_c &&
-              uj.a((byte) -127, 1)) {
+              SetLagCommand.a((byte) -127, 1)) {
               var6_intLifetime1 = un.field_e.h((byte) -105);
               so.field_b = var6_intLifetime1;
-              lh.field_A = null;
+              BroadcastServerCommand.field_A = null;
               un.field_e.field_n = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (8 != var6_intLifetime1) {
                   ms.field_b = -1;
-                  un.field_c = wv.field_fb;
+                  un.field_c = AccountRequestDialog.field_fb;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -199,13 +199,13 @@ abstract class js {
               }
               if (!param3) {
                 stackIn_51_0 = (0 != (2 & var7));
-                kb.field_C = stackIn_51_0;
+                WriteIntegersCommand.field_C = stackIn_51_0;
                 stackIn_54_0 = ((4 & var7) != 0);
                 fc.field_f = stackIn_54_0;
                 stackIn_57_0 = ((var7 & 8) != 0);
                 PacketBuffer.field_l = stackIn_57_0;
                 if (PacketBuffer.field_l) {
-                  kb.field_C = true;
+                  WriteIntegersCommand.field_C = true;
                 }
                 stackIn_62_0 = ((16 & var7) != 0);
                 ib.field_E = stackIn_62_0;
@@ -235,15 +235,15 @@ abstract class js {
               }
               ArchiveSource.field_e = un.field_e.a(8);
               var12 = (CharSequence) ((Object) ArchiveSource.field_e);
-              kd.field_w = MatchAgent.a(0, var12);
+              DebugConsole.field_w = MatchAgent.a(0, var12);
               rl.field_n = un.field_e.h((byte) -128);
-              un.field_c = jn.field_rb;
+              un.field_c = RegistrationRequestDialog.field_rb;
               if (FullscreenFocusCanvas.field_h.a((byte) -109) != qq.field_K) {
                 if (FullscreenFocusCanvas.field_h.a((byte) -115) == ap.field_w) {
-                  ae.field_I.a(-122, so.a(-115));
+                  AccountRegistrationPanel.field_I.a(-122, so.a(-115));
                 }
               } else {
-                pb.field_F.a(-123, so.a(36));
+                IsSixCommand.field_F.a(-123, so.a(36));
               }
               vu.field_Db = false;
               if (var11 != null) {
@@ -252,14 +252,14 @@ abstract class js {
               if (eq.field_d <= 0 &&
                 !fc.field_f) {
                 try {
-                  AppletJavaScriptBridge.a(30858, "unzap", so.a(-110));
+                  AppletJavaScriptBridge.callWithoutArguments(30858, "unzap", so.a(-110));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  AppletJavaScriptBridge.a(new Object[]{bg.a((byte) 112, wq.field_d)}, so.a(param0 - 122), "zap", param0 + 25449);
+                  AppletJavaScriptBridge.callWithArguments(new Object[]{bg.a((byte) 112, wq.field_d)}, so.a(param0 - 122), "zap", param0 + 25449);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -276,7 +276,7 @@ abstract class js {
               stackIn_91_0 = so.field_b;
               return stackIn_91_0;
             }
-            if (wv.field_fb == un.field_c &&
+            if (AccountRequestDialog.field_fb == un.field_c &&
               ps.a(180)) {
               lr.b((byte) -116);
               if (so.field_b == 7 &&

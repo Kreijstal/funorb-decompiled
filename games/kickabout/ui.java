@@ -21,8 +21,8 @@ final class ui extends vv {
           if (null != rk.field_f) {
             rk.field_f.q(-123);
           }
-          pb.field_E = new pd(param0, param2, false, true, true);
-          we.field_a.a((byte) -122, (UiWidget) (pb.field_E));
+          IsSixCommand.field_E = new LoginForm(param0, param2, false, true, true);
+          we.field_a.a((byte) -122, (UiWidget) (IsSixCommand.field_E));
           if (param1 != 111) {
             field_y = true;
           }
@@ -86,7 +86,7 @@ final class ui extends vv {
           String var5 = (String) null;
           ui.a((String) null, (byte) 63, (String) null);
         }
-        mu.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
+        ContentTransitionDialog.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
     }
 
     final int a(int param0) {

@@ -131,7 +131,7 @@ final class ne extends dj {
             dupTemp$2 = bk.field_a[0];
             dupTemp$2.field_G = dupTemp$2.field_G | 1;
           }
-          if (field_G[pb.field_A]) {
+          if (field_G[IsSixCommand.field_A]) {
             dupTemp$3 = bk.field_a[0];
             dupTemp$3.field_G = dupTemp$3.field_G | 8;
           }
@@ -259,7 +259,7 @@ final class ne extends dj {
             eo.a(sn.field_k, 8947848);
             eo.a(sn.field_k, 4473924);
           }
-          sn.field_k.f(-(sn.field_k.field_o >> 2) + var6, var7 - (sn.field_k.field_v >> 2));
+          sn.field_k.drawHalfSize(-(sn.field_k.field_o >> 2) + var6, var7 - (sn.field_k.field_v >> 2));
         }
         if (n.field_d < 0) {
           ic.a(280, bg.field_q, false, (String) null, 240, false, true, 330 + this.field_j);
@@ -295,10 +295,10 @@ final class ne extends dj {
           SoftwareRasterizer.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
           while (s.field_M.length > var2) {
             var7 = s.field_M[var2];
-            var8 = pb.field_C.c(var7, 245, 16);
+            var8 = IsSixCommand.field_C.c(var7, 245, 16);
             if (var8 + var6 <= 396) {
               var2++;
-              var6 = var6 + (20 + pb.field_C.a(var7, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
+              var6 = var6 + (20 + IsSixCommand.field_C.a(var7, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
               continue;
             }
             break;
@@ -322,22 +322,22 @@ final class ne extends dj {
         int var5Lifetime1;
         int var6Lifetime1;
         var9 = Kickabout.field_G;
-        stackIn_3_0 = (ae.field_C == null) ? 0 : 1;
+        stackIn_3_0 = (AccountRegistrationPanel.field_C == null) ? 0 : 1;
         var2 = stackIn_3_0;
         if (var2 != 0) {
           ll.field_g.c(this.field_j + 490, 112);
         }
-        pb.field_C.a(gd.field_g, this.field_j + 60, 136, 16777215, -1);
+        IsSixCommand.field_C.a(gd.field_g, this.field_j + 60, 136, 16777215, -1);
         var3 = 40 + this.field_j;
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.a(var3, 150, 210, 200, 10, 65793, 140);
           un.field_d.a(qq.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
           for (var5 = 0; var5 < 2; var5++) {
             var6 = var5 * 120 + (var3 + 20);
-            pb.field_C.a(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
+            IsSixCommand.field_C.a(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
             var7 = 186 + 74 * var5;
             if (var5 == 0) {
-              stackIn_12_0 = jn.field_qb;
+              stackIn_12_0 = RegistrationRequestDialog.field_qb;
             } else {
               stackIn_12_0 = ki.field_q;
             }
@@ -355,7 +355,7 @@ final class ne extends dj {
         if (param0 != -128) {
           ne.j((byte) 0);
         }
-        pb.field_C.a(gf.field_d, 150 + this.field_j, 360, 300, 43, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(gf.field_d, 150 + this.field_j, 360, 300, 43, 16777215, -1, 0, 1, 16);
         if (var2 != 0) {
           var10 = 0;
           var4Lifetime1 = var10;
@@ -480,7 +480,7 @@ final class ne extends dj {
         boolean stackIn_22_3 = false;
         Sprite[] stackIn_27_0 = null;
         int stackIn_28_1 = 0;
-        uo stackIn_31_0 = null;
+        BinaryBitmapFont stackIn_31_0 = null;
         String stackIn_31_1 = null;
         int stackIn_32_2 = 0;
         int stackIn_38_0 = 0;
@@ -502,9 +502,9 @@ final class ne extends dj {
         Sprite var16;
         int var10Lifetime1;
         var13 = Kickabout.field_G;
-        stackIn_3_0 = (null == ae.field_C) ? 0 : 1;
+        stackIn_3_0 = (null == AccountRegistrationPanel.field_C) ? 0 : 1;
         var2 = stackIn_3_0;
-        pb.field_C.a(jr.field_Fb, 60 + this.field_j, 136, 16777215, -1);
+        IsSixCommand.field_C.a(jr.field_Fb, 60 + this.field_j, 136, 16777215, -1);
         var3 = this.field_j + 40;
         if (param0 != 96) {
           this.field_F = (up[]) null;
@@ -518,7 +518,7 @@ final class ne extends dj {
             stackIn_10_1 = 60;
           }
           var5 = stackIn_9_0 + stackIn_10_1;
-          un.field_d.a(sa.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
+          un.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, sn.field_k);
           SoftwareRasterizer.b();
           bk.field_a[var4].a(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
@@ -544,7 +544,7 @@ final class ne extends dj {
           var9 = new int[]{280, 280, 230, 330};
           if (var2 != 0) {
             for (var10 = 0; var10 < 4; var10++) {
-              stackIn_27_0 = ae.field_C[var4][var10];
+              stackIn_27_0 = AccountRegistrationPanel.field_C[var4][var10];
               if (var7[var10]) {
                 stackIn_28_1 = 1;
               } else {
@@ -555,24 +555,24 @@ final class ne extends dj {
               var14.c(var8[var10] - (var15.field_o >> 1), var9[var10] - (var15.field_v >> 1));
             }
           }
-          sn.field_k.f(var5 - (sn.field_k.field_o >> 2), -(sn.field_k.field_v >> 2) + 280);
-          stackIn_31_0 = pb.field_C;
+          sn.field_k.drawHalfSize(var5 - (sn.field_k.field_o >> 2), -(sn.field_k.field_v >> 2) + 280);
+          stackIn_31_0 = IsSixCommand.field_C;
           stackIn_31_1 = cu.field_d[var4];
           if (0 == var4) {
             stackIn_32_2 = 85;
           } else {
             stackIn_32_2 = 0;
           }
-          ((uo) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
+          ((BinaryBitmapFont) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
           if (bk.field_a[var4].action == 4) {
             stackIn_38_0 = (bk.field_a[var4].field_L > vf.field_I[4] - 13) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
           }
           var10Lifetime1 = stackIn_38_0;
-          pb.field_C.d(sa.field_c[var4], var3 + 137, 382, 16777215, -1);
+          IsSixCommand.field_C.d(DelegatingCanvas.field_c[var4], var3 + 137, 382, 16777215, -1);
           if (var2 != 0) {
-            stackIn_42_0 = kd.field_y[var4];
+            stackIn_42_0 = DebugConsole.field_y[var4];
             if (var10Lifetime1 == 0) {
               stackIn_43_1 = 0;
             } else {
@@ -627,7 +627,7 @@ final class ne extends dj {
         int var7 = Kickabout.field_G;
         int var5Lifetime1;
         SoftwareRasterizer.a(40 + this.field_j, 121, 560, 60, 10, 65793, param0);
-        pb.field_C.a(vc.field_H, this.field_j + 55, 131, 530, 40, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(vc.field_H, this.field_j + 55, 131, 530, 40, 16777215, -1, 0, 1, 16);
         int var2 = 40 + this.field_j;
         int[][] var3 = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 36, 80, 87}};
         for (var4 = 0; var4 < 2; var4++) {
@@ -638,7 +638,7 @@ final class ne extends dj {
           }
           var5Lifetime1 = 242;
           for (var6 = 0; var6 < hv.field_c[var4].length; var6++) {
-            var5Lifetime1 = var5Lifetime1 + (10 + 16 * pb.field_C.a(hv.field_c[var4][var6], 10 + var2, var5Lifetime1, 255, 1000, 16777215, -1, 0, 0, 16));
+            var5Lifetime1 = var5Lifetime1 + (10 + 16 * IsSixCommand.field_C.a(hv.field_c[var4][var6], 10 + var2, var5Lifetime1, 255, 1000, 16777215, -1, 0, 0, 16));
           }
           var2 += 285;
         }
@@ -679,7 +679,7 @@ final class ne extends dj {
           this.field_K[var3Lifetime1].h((byte) -122);
         }
         SoftwareRasterizer.a(this.field_j + 40, 120, 560, 50, 10, 65793, 140);
-        pb.field_C.a(sh.field_e, 70 + this.field_j, 126, 500, 40, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(sh.field_e, 70 + this.field_j, 126, 500, 40, 16777215, -1, 0, 1, 16);
         SoftwareRasterizer.a(this.field_j + 210, 178, 390, 225, 10, 65793, 140);
         this.field_E.a(94, false);
         pt.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
@@ -690,7 +690,7 @@ final class ne extends dj {
           un.field_d.a(bl.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
           eo.a(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
           var5 += 6;
-          var5 = var5 + pb.field_C.a(ng.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
+          var5 = var5 + IsSixCommand.field_C.a(ng.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
           var5 += 50;
         }
         var6Lifetime1 = -10 - var4 + var5;

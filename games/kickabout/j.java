@@ -70,7 +70,7 @@ final class j {
           SoftwareRasterizer.b();
           this.field_b.a(1200, 300, 48, 90, (byte) -105);
           ta.e(127);
-          wa.field_a.f(param2 - param0, -47 + param1);
+          wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
           if (ia.field_c) {
             this.field_b.field_R = var4;
             return;
@@ -81,7 +81,7 @@ final class j {
         SoftwareRasterizer.b();
         this.field_b.a(1200, 300, 48, 90, (byte) -105);
         ta.e(127);
-        wa.field_a.f(param2 - param0, -47 + param1);
+        wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
         if (!ia.field_c) {
           return;
         }

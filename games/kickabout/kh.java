@@ -81,7 +81,7 @@ final class kh {
 
     final static void a(int param0, dd param1, int param2, boolean param3, int param4) {
         dd stackIn_2_0;
-        eg stackIn_2_1;
+        ModelMesh stackIn_2_1;
         boolean stackIn_2_2;
         boolean stackIn_2_3;
         boolean stackIn_3_4 = false;
@@ -91,17 +91,17 @@ final class kh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        eg var7 = null;
+        ModelMesh var7 = null;
         try {
           stackIn_2_0 = (dd) (param1);
-          stackIn_2_1 = kb.field_B[param0];
+          stackIn_2_1 = WriteIntegersCommand.field_B[param0];
           stackIn_2_2 = param3;
           stackIn_2_3 = true;
           stackIn_3_4 = !(param3);
-          var7 = (eg) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
+          var7 = (ModelMesh) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
           PacketBuffer.a(102, vf.field_F);
           SoftwareRasterizer.b();
-          t.c();
+          TriangleRasterizer.c();
           if (FormationAgent.field_l == 3) {
             var6 = 256 + param2;
             if (var6 >= 2048) {
@@ -198,10 +198,10 @@ final class kh {
           return;
         }
         if (this.field_o > f.field_d) {
-          el.field_H = (this.field_o - f.field_d) / 2;
+          BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
         } else {
           if (0 < this.field_o) {
-            el.field_H = 0;
+            BytePlusOneCommand.field_H = 0;
           }
         }
         if (f.field_d == this.field_d &&
@@ -285,7 +285,7 @@ final class kh {
                   }
                 }
                 if (this.field_o > 0) {
-                  el.field_H = (this.field_o - f.field_d) / 2;
+                  BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
                 }
                 return;
               }
@@ -303,7 +303,7 @@ final class kh {
           }
         }
         if (this.field_o > 0) {
-          el.field_H = (this.field_o - f.field_d) / 2;
+          BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
         }
     }
 

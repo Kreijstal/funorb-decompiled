@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = VorbisSample.e(5) + 1;
           while (var2 < this.field_a) {
-            var4_int = VorbisSample.e(cm.a(true, this.field_a - var2));
+            var4_int = VorbisSample.e(ResizableModalPanel.a(true, this.field_a - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

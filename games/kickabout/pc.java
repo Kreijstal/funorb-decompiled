@@ -128,7 +128,7 @@ final class pc {
     final static void a(byte param0) {
         if (rk.field_f != null) {
           rk.field_f.q(-85);
-          ki.field_n = new mb();
+          ki.field_n = new DisplayNameForm();
           if (param0 > -8) {
             pc.a((byte) -11);
             we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
@@ -137,7 +137,7 @@ final class pc {
           we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
           return;
         }
-        ki.field_n = new mb();
+        ki.field_n = new DisplayNameForm();
         if (param0 <= -8) {
           we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
           return;

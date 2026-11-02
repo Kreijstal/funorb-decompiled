@@ -15,7 +15,7 @@ final class mi {
         return 3;
     }
 
-    final static int a(int param0, lk[] param1, int param2) {
+    final static int a(int param0, ConsoleExpression[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -96,8 +96,8 @@ final class mi {
           if (param2 < 114) {
             field_d = -66;
           }
-          ik.field_A = param0;
-          var6 = te.a(-94, fr.field_E, param4, ic.field_a, ve.field_S);
+          IntDoubleCommand.field_A = param0;
+          var6 = te.a(-94, NameSuggestionsPanel.field_E, param4, ic.field_a, ve.field_S);
           ad.a(var6, (byte) -115);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -272,7 +272,7 @@ final class hn extends IntrusiveNode {
         try {
           this.field_g = param1;
           this.field_i = param0;
-          if (qk.field_E[this.field_i] == this.field_g.length) {
+          if (Checkbox.field_E[this.field_i] == this.field_g.length) {
             return;
           }
           throw new IllegalStateException();

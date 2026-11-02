@@ -46,7 +46,7 @@ final class NodeHashTableIterator implements Iterator {
           if (param1 != 0) {
             field_b = -112;
           }
-          while (!jo.a(param0, false)) {
+          while (!DemoIntegersCommand.a(param0, false)) {
             var2_ref = param0.g(24009);
             while (var2_ref instanceof ak) {
               if (!(var2_ref.field_d instanceof ak)) {

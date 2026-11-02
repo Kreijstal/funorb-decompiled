@@ -74,7 +74,7 @@ final class tv {
     tv(boolean param0) {
         this.field_l = vp.field_e;
         this.field_g = ee.field_a;
-        this.field_p = cj.field_G;
+        this.field_p = DateInputWidget.field_G;
         this.field_h = sr.field_d;
         this.field_n = oh.field_f;
         if (!param0) {
@@ -82,7 +82,7 @@ final class tv {
         } else {
           this.field_r = gk.field_b;
         }
-        this.field_c = jn.field_ob;
+        this.field_c = RegistrationRequestDialog.field_ob;
         this.field_j = sc.field_E;
         this.field_m = lo.field_l;
         this.field_d = i.field_z;

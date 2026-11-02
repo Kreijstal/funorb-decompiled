@@ -76,7 +76,7 @@ final class od extends sr {
         StringBuilder stackIn_46_1 = null;
         String stackIn_47_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cn var4 = null;
+        CoverageBitmapFont var4 = null;
         RuntimeException var4_ref = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -145,7 +145,7 @@ final class od extends sr {
               if (~var9Lifetime1 == ~vt.field_c.field_g[var12].field_p) {
                 var13 = 1 + (rb.field_yb + var11 * rn.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
-                var15 = ct.a(true, var14);
+                var15 = SingleChildContainer.a(true, var14);
                 if (JaggrabDownloader.field_c &&
                   644 - et.field_c < wt.field_x &&
                   wt.field_x < 640 &&
@@ -158,23 +158,23 @@ final class od extends sr {
                 ((BitmapFont) ((Object) var4)).a(kn.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
                 if (vt.field_c.participantStatus[var12].d(3511)) {
                   if (vt.field_c.participantStatus[var12].offerDraw) {
-                    var17 = ((BitmapFont) ((Object) var4)).a(pj.field_A) + 12;
+                    var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
                     pt.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
                     SoftwareRasterizer.a(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);
-                    ((BitmapFont) ((Object) var4)).a(pj.field_A, 7 + (-et.field_c + 644 - rn.field_c - (2 + var17)), var13, 16777215, -1);
+                    ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-et.field_c + 644 - rn.field_c - (2 + var17)), var13, 16777215, -1);
                     ta.e(119);
                   }
                 } else {
                   var17 = 644 + (-et.field_c + 10);
                   var18 = ((BitmapFont) ((Object) var4)).a(kn.field_G[var12]);
-                  SoftwareRasterizer.b(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
-                  SoftwareRasterizer.b(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
+                  SoftwareRasterizer.drawLine(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
+                  SoftwareRasterizer.drawLine(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
                 }
                 var11++;
                 if (JaggrabDownloader.field_c) {
                   SoftwareRasterizer.a(629, var13 - 10, 6, 10, 0);
                   for (var17Lifetime1 = 0; var15 > var17Lifetime1; var17Lifetime1++) {
-                    SoftwareRasterizer.f(630, var13 - var17Lifetime1 - 2, 4, DualLinkNode.field_i[var17Lifetime1]);
+                    SoftwareRasterizer.drawHorizontalLine(630, var13 - var17Lifetime1 - 2, 4, DualLinkNode.field_i[var17Lifetime1]);
                   }
                 }
               }

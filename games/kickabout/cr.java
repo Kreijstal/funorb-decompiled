@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr implements gj {
+final class cr implements WidgetPainter {
     private BitmapFont field_h;
     private int field_a;
     static ff field_b;

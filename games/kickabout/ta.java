@@ -48,9 +48,9 @@ abstract class ta extends qt {
             df.field_I = new PacketBuffer(var7_int);
           }
           df.field_I.field_n = 0;
-          df.field_I.a(param3, param2, 1991220144, param4);
+          df.field_I.readBytes(param3, param2, 1991220144, param4);
           df.field_I.a((byte) 114, var7_int);
-          df.field_I.a(var13, (byte) 53);
+          df.field_I.encryptXtea(var13, (byte) 53);
           if (uf.field_c == null ||
             !(uf.field_c.field_f.length >= 100)) {
             uf.field_c = new PacketBuffer(100);
@@ -65,8 +65,8 @@ abstract class ta extends qt {
           }
           uf.field_c.g(param5 - 1207444482, param2);
           uf.field_c.a(param1, param6, param5 ^ 44);
-          param0.a(0, uf.field_c.field_n, 1991220144, uf.field_c.field_f);
-          param0.a(0, df.field_I.field_n, 1991220144, df.field_I.field_f);
+          param0.readBytes(0, uf.field_c.field_n, 1991220144, uf.field_c.field_f);
+          param0.readBytes(0, df.field_I.field_n, 1991220144, df.field_I.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ abstract class ta extends qt {
     }
 
     final static void e(int param0) {
-        qg var1 = (qg) (ik.field_C.h(-126));
+        qg var1 = (qg) (IntDoubleCommand.field_C.h(-126));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -117,7 +117,7 @@ abstract class ta extends qt {
           ta.a((PacketBuffer) null, (java.math.BigInteger) null, -77, 44, (byte[]) null, -52, (java.math.BigInteger) null);
         }
         SoftwareRasterizer.a(var1.field_h, var1.field_g, var1.field_j);
-        SoftwareRasterizer.e(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
+        SoftwareRasterizer.setClip(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
         var1.field_h = null;
         tk.field_Ab.a(var1, 3);
     }

@@ -5,7 +5,7 @@ abstract class ps {
     static IntrusiveDeque field_a;
     static hd field_b;
     static int field_e;
-    static kg[][] field_c;
+    static IndexedSprite[][] field_c;
     static int[] field_d;
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
@@ -90,16 +90,16 @@ abstract class ps {
     public static void b(int param0) {
         field_b = null;
         field_d = null;
-        field_c = (kg[][]) null;
+        field_c = (IndexedSprite[][]) null;
         field_a = null;
         if (param0 != -27680) {
-          field_c = (kg[][]) null;
+          field_c = (IndexedSprite[][]) null;
         }
     }
 
     final static boolean a(int param0) {
         if (ms.field_b == -1) {
-          if (!uj.a((byte) 52, 1)) {
+          if (!SetLagCommand.a((byte) 52, 1)) {
             return false;
           }
           ms.field_b = un.field_e.h((byte) -106);
@@ -109,14 +109,14 @@ abstract class ps {
           return false;
         }
         if (ms.field_b != -2) {
-          return uj.a((byte) -114, ms.field_b);
+          return SetLagCommand.a((byte) -114, ms.field_b);
         }
-        if (!uj.a((byte) 29, 2)) {
+        if (!SetLagCommand.a((byte) 29, 2)) {
           return false;
         }
         ms.field_b = un.field_e.a((byte) 81);
         un.field_e.field_n = 0;
-        return uj.a((byte) -114, ms.field_b);
+        return SetLagCommand.a((byte) -114, ms.field_b);
     }
 
     abstract kj a(byte param0);

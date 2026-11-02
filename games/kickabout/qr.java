@@ -122,10 +122,10 @@ final class qr {
           try {
             var6 = new byte[param0];
             var2 = var6;
-            if (pd.field_G != null) {
+            if (LoginForm.field_G != null) {
               try {
-                pd.field_G.a((byte) 4, 0L);
-                pd.field_G.a(param0 ^ 64, var6);
+                LoginForm.field_G.a((byte) 4, 0L);
+                LoginForm.field_G.a(param0 ^ 64, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var2[var3_int]) {
                     continue;
@@ -135,7 +135,7 @@ final class qr {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.a(0, 24, param0 ^ 1991220136, var2);
+                param1.readBytes(0, 24, param0 ^ 1991220136, var2);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class qr {
                 return;
               }
             }
-            param1.a(0, 24, param0 ^ 1991220136, var2);
+            param1.readBytes(0, 24, param0 ^ 1991220136, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

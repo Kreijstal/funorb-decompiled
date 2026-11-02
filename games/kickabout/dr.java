@@ -37,7 +37,7 @@ final class dr {
         int var7 = 0;
         var7 = Kickabout.field_G;
         try {
-          if (un.field_c != jn.field_rb) {
+          if (un.field_c != RegistrationRequestDialog.field_rb) {
             return false;
           }
           if (param0 >= -1) {
@@ -46,7 +46,7 @@ final class dr {
           var2_long = nj.a(-90);
           if (cu.field_c != 0 &&
             ll.field_i < 0) {
-            var4_ref_jm = (jm) (be.field_i.g(24009));
+            var4_ref_jm = (jm) (ConsolePanel.field_i.g(24009));
             if (var4_ref_jm != null &&
               var4_ref_jm.field_f < var2_long) {
               var4_ref_jm.c((byte) -109);
@@ -65,7 +65,7 @@ final class dr {
           while (true) {
             if (0 > ll.field_i) {
               un.field_e.field_n = 0;
-              if (!uj.a((byte) 83, 1)) {
+              if (!SetLagCommand.a((byte) 83, 1)) {
                 return false;
               }
               ll.field_i = un.field_e.k((byte) 107);
@@ -94,7 +94,7 @@ final class dr {
             for (var6 = 0; var6 < ms.field_b; var6++) {
               var5.field_k[var6] = un.field_e.field_f[var6];
             }
-            be.field_i.a(var5, 3);
+            ConsolePanel.field_i.a(var5, 3);
             ll.field_i = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

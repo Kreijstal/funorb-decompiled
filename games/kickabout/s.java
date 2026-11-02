@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends wi {
+final class s extends TextButton {
     int field_L;
     int field_H;
     int field_I;
@@ -12,7 +12,7 @@ final class s extends wi {
     static String field_F;
     int field_J;
 
-    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -24,7 +24,7 @@ final class s extends wi {
         int var12 = 0;
         var12 = Kickabout.field_G;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param2 + (-this.field_H + (-param5 - this.field_t));
@@ -76,12 +76,12 @@ final class s extends wi {
     final static ec j(int param0) {
         String var1 = null;
         if (param0 >= 33) {
-          var1 = ls.g(-26370);
+          var1 = BigCommand.g(-26370);
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new ec(ls.g(-26370), gu.b(-20010));
+          return new ec(BigCommand.g(-26370), gu.b(-20010));
         }
         return (ec) null;
     }

@@ -112,8 +112,8 @@ final class vp implements hc {
         if (null == td.field_c) {
           return -1;
         }
-        if (param1 >= ik.field_D &&
-          ik.field_D + td.field_c.field_q > param1 &&
+        if (param1 >= IntDoubleCommand.field_D &&
+          IntDoubleCommand.field_D + td.field_c.field_q > param1 &&
           rp.field_w <= param0 &&
           param0 < rp.field_w + td.field_c.field_w) {
           return 0;

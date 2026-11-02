@@ -8,7 +8,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile boolean field_e;
     private volatile int field_d;
 
-    final void a(java.awt.Component param0, boolean param1, int param2) {
+    final void setCursorVisible(java.awt.Component param0, boolean param1, int param2) {
         int var5 = 0;
         Object var6 = null;
         Throwable var8 = null;

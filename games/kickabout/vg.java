@@ -302,7 +302,7 @@ final class vg extends hd {
 
     final static void b(int param0, int param1) {
         sr.field_c = rt.field_G[param0];
-        ks.field_g = fi.field_g[param0];
+        ks.field_g = ConsoleParseException.field_g[param0];
         if (param1 != 31900) {
           field_Qb = (hd) null;
         }
@@ -344,7 +344,7 @@ final class vg extends hd {
           if (var5 > var3) {
             incrementValue$1 = var3;
             var3++;
-            var4 = var4 + this.field_Lb.field_X.a(this.field_Ub.charAt(incrementValue$1));
+            var4 = var4 + this.field_Lb.field_X.charWidth(this.field_Ub.charAt(incrementValue$1));
             continue;
           }
           break;
@@ -518,8 +518,8 @@ final class vg extends hd {
     final static String a(int param0) {
         int var1 = 100 / ((36 - param0) / 50);
         String var2 = "";
-        if (pb.field_E != null) {
-          var2 = pb.field_E.a(124);
+        if (IsSixCommand.field_E != null) {
+          var2 = IsSixCommand.field_E.a(124);
         }
         if (var2.length() == 0) {
           var2 = ue.f((byte) 99);
@@ -653,7 +653,7 @@ final class vg extends hd {
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
           var6 = Kickabout.field_G;
-          var2 = this.d(el.field_A - this.field_F - this.field_Lb.field_D, param0 ^ param0);
+          var2 = this.d(BytePlusOneCommand.field_A - this.field_F - this.field_Lb.field_D, param0 ^ param0);
           if (this.field_sb == 1) {
             this.a(var2, (byte) -112);
             this.field_Jb = true;

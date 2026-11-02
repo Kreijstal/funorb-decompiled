@@ -40,7 +40,7 @@ final class bt {
         int var9 = Kickabout.field_G;
         int var3 = af.field_b[param1 ? 0 : 1];
         int[] var4 = sm.field_o[param1 ? 0 : 1];
-        kg[] var5 = ph.field_e[param1 ? 0 : 2];
+        IndexedSprite[] var5 = ph.field_e[param1 ? 0 : 2];
         if (param0 > -125) {
           return (Sprite) null;
         }
@@ -55,7 +55,7 @@ final class bt {
         }
         var5[2].a(0, var7);
         ta.e(118);
-        pd.a(var6, 20684);
+        LoginForm.a(var6, 20684);
         return var6;
     }
 

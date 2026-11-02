@@ -141,11 +141,11 @@ final class rm extends qt {
 
     private final void g(byte param0) {
         if (param0 == -4) {
-          pb.field_C.d(sh.field_b, 192 + this.field_j, q.field_d.field_G + 275 - 38, 16777215, -1);
+          IsSixCommand.field_C.d(sh.field_b, 192 + this.field_j, q.field_d.field_G + 275 - 38, 16777215, -1);
           return;
         }
         field_B = (boolean[]) null;
-        pb.field_C.d(sh.field_b, 192 + this.field_j, q.field_d.field_G + 275 - 38, 16777215, -1);
+        IsSixCommand.field_C.d(sh.field_b, 192 + this.field_j, q.field_d.field_G + 275 - 38, 16777215, -1);
     }
 
     final static void e(int param0) {
@@ -182,12 +182,12 @@ final class rm extends qt {
         if (!param0) {
           if (!dr.field_a) {
             dr.field_a = true;
-            var1 = ln.l(64);
-            wt.field_x = el.field_A;
+            var1 = DropTargetWidget.l(64);
+            wt.field_x = BytePlusOneCommand.field_A;
             us.field_j = n.field_m;
             oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
             oo.field_c.a(-126, (java.awt.Component) ((Object) var1), false);
-            el.field_A = 320;
+            BytePlusOneCommand.field_A = 320;
             n.field_m = 240;
           }
           return;
@@ -195,12 +195,12 @@ final class rm extends qt {
         field_B = (boolean[]) null;
         if (!dr.field_a) {
           dr.field_a = true;
-          var1Lifetime1 = ln.l(64);
-          wt.field_x = el.field_A;
+          var1Lifetime1 = DropTargetWidget.l(64);
+          wt.field_x = BytePlusOneCommand.field_A;
           us.field_j = n.field_m;
           oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
           oo.field_c.a(-126, (java.awt.Component) ((Object) var1Lifetime1), false);
-          el.field_A = 320;
+          BytePlusOneCommand.field_A = 320;
           n.field_m = 240;
         }
     }
@@ -266,14 +266,14 @@ final class rm extends qt {
             return;
           }
           var5 = jw.field_Fb;
-          var11 = ug.field_e.field_i[wv.field_ib];
+          var11 = ug.field_e.field_i[AccountRequestDialog.field_ib];
           var6 = var11;
-          var7 = ug.field_e.field_o[wv.field_ib];
+          var7 = ug.field_e.field_o[AccountRequestDialog.field_ib];
           var8 = 0;
           for (var9 = 0; var9 < 10; var9++) {
             if (null != var11[var9]) {
               var4Lifetime1 = 16777215;
-              if (hm.a((byte) -101, var11[var9])) {
+              if (SumIntegersCommand.a((byte) -101, var11[var9])) {
                 var4Lifetime1 = 16750882;
                 var8 = 1;
               }

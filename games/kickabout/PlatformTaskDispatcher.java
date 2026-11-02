@@ -29,7 +29,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private MicrosoftCursorController field_n;
     static String field_u;
 
-    final PlatformTask a(int param0, Class[] param1, Class param2, String param3) {
+    final PlatformTask requestDeclaredField(int param0, Class[] param1, Class param2, String param3) {
         if (param0 != -30971) {
           this.field_k = (MicrosoftDisplayController) null;
         }
@@ -192,7 +192,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_f) {
                             Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_g, new Object[]{var14, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_n.a(var14, var3_int != 0, -106);
+                            this.field_n.setCursorVisible(var14, var3_int != 0, -106);
                           }
                           break;
                         }
@@ -252,7 +252,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 5:
                         if (this.field_f) {
-                          var8.field_b = this.field_k.a(0);
+                          var8.field_b = this.field_k.enumerateDisplayModes(0);
                         } else {
                           var8.field_b = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_i, new Object[]{});
                         }

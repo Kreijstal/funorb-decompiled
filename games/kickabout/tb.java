@@ -76,7 +76,7 @@ final class tb extends ArchiveNetworkClient {
             while (var2 != null) {
               this.field_d.field_n = 0;
               this.field_d.a(107, 1);
-              this.field_d.b((byte) 83, var2.field_l);
+              this.field_d.writeFiveByteValue((byte) 83, var2.field_l);
               this.field_x.a(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_b.a(127, var2);
               var2 = (ui) (this.field_h.b(0));
@@ -85,7 +85,7 @@ final class tb extends ArchiveNetworkClient {
             while (var2Lifetime1 != null) {
               this.field_d.field_n = 0;
               this.field_d.a(116, 0);
-              this.field_d.b((byte) 18, var2Lifetime1.field_l);
+              this.field_d.writeFiveByteValue((byte) 18, var2Lifetime1.field_l);
               this.field_x.a(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_j.a(127, var2Lifetime1);
               var2Lifetime1 = (ui) (this.field_c.b(0));
@@ -402,20 +402,20 @@ final class tb extends ArchiveNetworkClient {
         hd var3 = null;
         try {
           ll.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
-          ei.field_d = new al(0L, lh.field_D, le.field_a, qt.field_k);
-          nq.field_F = new al(0L, lh.field_D, md.field_j, pb.field_D);
+          ei.field_d = new al(0L, BroadcastServerCommand.field_D, le.field_a, qt.field_k);
+          nq.field_F = new al(0L, BroadcastServerCommand.field_D, md.field_j, IsSixCommand.field_D);
           kk.field_R = new hd(0L, (hd) null);
-          du.field_f = new hd(0L, dw.field_e);
+          du.field_f = new hd(0L, ConsoleEvaluationException.field_e);
           du.field_f.field_A = 1;
-          pj.field_E = new hd(0L, dn.field_zb, oh.field_h);
+          AlphaContainer.field_E = new hd(0L, dn.field_zb, oh.field_h);
           ph.field_f = new hd(0L, pq.field_P, vg.field_Vb);
           hj.field_h = new hd(0L, ul.field_c);
           kk.field_R.a((byte) -109, du.field_f);
-          kk.field_R.a((byte) -122, pj.field_E);
+          kk.field_R.a((byte) -122, AlphaContainer.field_E);
           kk.field_R.a((byte) -108, ph.field_f);
           kk.field_R.a((byte) -124, (hd) (ei.field_d));
           kk.field_R.a((byte) -108, hj.field_h);
-          ei.field_d.field_Cb.field_zb.a(dw.field_e, (byte) 87);
+          ei.field_d.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;
             tb.a(-39, (ResourceArchive) null);
@@ -424,7 +424,7 @@ final class tb extends ArchiveNetworkClient {
           var6 = ei.field_d.field_Cb.field_zb;
           var7 = var6;
           var7.field_A = 1;
-          nq.field_F.field_Cb.field_zb.a(dw.field_e, (byte) -128);
+          nq.field_F.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
           var3 = nq.field_F.field_Cb.field_zb;
           nq.field_F.field_Cb.field_zb.field_p = 1;
           var3.field_A = 1;
@@ -454,7 +454,7 @@ final class tb extends ArchiveNetworkClient {
               stackIn_6_2 = 3;
             }
             ((PacketBuffer) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
-            this.field_d.b((byte) 89, 0L);
+            this.field_d.writeFiveByteValue((byte) 89, 0L);
             this.field_x.a(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

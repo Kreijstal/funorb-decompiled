@@ -56,7 +56,7 @@ final class pt extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         try {
           tr.d(-12974);
-          SoftwareRasterizer.h(param2, param4, param0, param3);
+          SoftwareRasterizer.intersectClip(param2, param4, param0, param3);
           if (param1 != -22914) {
             field_e = -72;
           }
@@ -276,7 +276,7 @@ final class pt extends IntrusiveNode {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                jg.field_J = param1;
+                DraggableWidget.field_J = param1;
                 var2 = ni.a((byte) -110, "loginm3");
                 if (var2 != null) {
                   md.field_h = kt.a(var2, param0);
@@ -291,11 +291,11 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -53, "idlemessage20min");
                 if (null != var2) {
-                  uc.field_D = kt.a(var2, true);
+                  IntTripleCommand.field_D = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -108, "error_js5crc");
                 if (var2 != null) {
-                  cj.field_F = kt.a(var2, true);
+                  DateInputWidget.field_F = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -104, "error_js5io");
                 if (null != var2) {
@@ -363,7 +363,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -96, "mu_chat_friends");
                 if (var2 != null) {
-                  lk.field_n = kt.a(var2, true);
+                  ConsoleExpression.field_n = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -96, "mu_chat_off");
                 if (null != var2) {
@@ -375,7 +375,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -61, "mu_chat_public");
                 if (null != var2) {
-                  jg.field_F = kt.a(var2, param0);
+                  DraggableWidget.field_F = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -101, "mu_chat_ignore");
                 if (null != var2) {
@@ -383,7 +383,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -87, "mu_chat_tips");
                 if (var2 != null) {
-                  lb.field_H = kt.a(var2, true);
+                  TextHotspotWidget.field_H = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -122, "mu_chat_game");
                 if (var2 != null) {
@@ -399,7 +399,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -86, "mu_x_joined_your_game");
                 if (var2 != null) {
-                  tm.field_r = kt.a(var2, param0);
+                  ConsoleCommand.field_r = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -92, "mu_x_entered_other_game");
                 if (var2 != null) {
@@ -491,7 +491,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -115, "mu_lobby_name_rm");
                 if (var2 != null) {
-                  pb.field_D = kt.a(var2, true);
+                  IsSixCommand.field_D = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -116, "mu_lobby_location");
                 if (var2 != null) {
@@ -499,11 +499,11 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -60, "mu_gamelist_all_games");
                 if (var2 != null) {
-                  li.field_f = kt.a(var2, param0);
+                  ConsoleValue.field_f = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -123, "mu_gamelist_status");
                 if (null != var2) {
-                  fr.field_B = kt.a(var2, param0);
+                  NameSuggestionsPanel.field_B = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -55, "mu_gamelist_owner");
                 if (var2 != null) {
@@ -535,7 +535,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -74, "mu_options");
                 if (var2 != null) {
-                  ik.field_F = kt.a(var2, true);
+                  IntDoubleCommand.field_F = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -75, "mu_options_whocanjoin");
                 if (var2 != null) {
@@ -543,7 +543,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -124, "mu_options_players");
                 if (var2 != null) {
-                  qk.field_H = kt.a(var2, true);
+                  Checkbox.field_H = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -99, "mu_options_dontmind");
                 if (null != var2) {
@@ -667,7 +667,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -89, "mu_chat_lobby_hide");
                 if (var2 != null) {
-                  fi.field_a = kt.a(var2, true);
+                  ConsoleParseException.field_a = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -86, "mu_chat_game_show_all");
                 if (null != var2) {
@@ -699,7 +699,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -91, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  qv.field_g = kt.a(var2, true);
+                  TextWidgetPainter.field_g = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -76, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
@@ -823,7 +823,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -52, "reject");
                 if (null != var2) {
-                  jo.field_A = kt.a(var2, param0);
+                  DemoIntegersCommand.field_A = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -101, "invite");
                 if (null != var2) {
@@ -851,7 +851,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -121, "status_full");
                 if (null != var2) {
-                  oj.field_R = kt.a(var2, true);
+                  LoadingProgressDialog.field_R = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -82, "players_in_game");
                 if (null != var2) {
@@ -859,11 +859,11 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -89, "you_are_invited_to_xs_game");
                 if (null != var2) {
-                  wi.field_x = kt.a(var2, true);
+                  TextButton.field_x = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -98, "asking_to_join_xs_game");
                 if (null != var2) {
-                  uj.field_C = kt.a(var2, param0);
+                  SetLagCommand.field_C = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -105, "who_can_join");
                 if (var2 != null) {
@@ -915,7 +915,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -50, "multiconst_invite_only");
                 if (null != var2) {
-                  lk.field_m = kt.a(var2, param0);
+                  ConsoleExpression.field_m = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -96, "multiconst_clan");
                 if (null != var2) {
@@ -955,7 +955,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -70, "dob_enterforchat");
                 if (null != var2) {
-                  kd.field_v = kt.a(var2, true);
+                  DebugConsole.field_v = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -73, "tab_hidechattemporarily");
                 if (null != var2) {
@@ -1035,7 +1035,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -69, "gameopt_notunlocked");
                 if (null != var2) {
-                  wv.field_bb = kt.a(var2, true);
+                  AccountRequestDialog.field_bb = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -53, "gameopt_cannotbecombined1");
                 if (var2 != null) {
@@ -1087,7 +1087,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -103, "gameopt_trychanging1");
                 if (var2 != null) {
-                  oj.field_V = kt.a(var2, true);
+                  LoadingProgressDialog.field_V = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -64, "gameopt_trychanging2");
                 if (null != var2) {
@@ -1119,7 +1119,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -61, "gameopt_pleaseselectoption1");
                 if (null != var2) {
-                  kb.field_D = kt.a(var2, true);
+                  WriteIntegersCommand.field_D = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -108, "gameopt_pleaseselectoption2");
                 if (var2 != null) {
@@ -1149,7 +1149,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -93, "ra_title");
                 if (var2 != null) {
-                  fi.field_c = kt.a(var2, true);
+                  ConsoleParseException.field_c = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -103, "ra_mutethisplayer");
                 if (var2 != null) {
@@ -1201,7 +1201,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -72, "rule_pillar_1");
                 if (var2 != null) {
-                  cj.field_H = kt.a(var2, true);
+                  DateInputWidget.field_H = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -83, "rule_1_0");
                 if (var2 != null) {
@@ -1265,7 +1265,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -73, "pleasetryagain");
                 if (var2 != null) {
-                  ai.field_L = kt.a(var2, true);
+                  AccountTermsPanel.field_L = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -113, "pleasereenterpass");
                 if (null != var2) {
@@ -1289,7 +1289,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -101, "changedisplayname");
                 if (null != var2) {
-                  ir.field_C = kt.a(var2, param0);
+                  ThreeCommand.field_C = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -50, "returntohomepage");
                 if (var2 != null) {
@@ -1385,7 +1385,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -64, "warning_ifyouquit");
                 if (null != var2) {
-                  kd.field_x = kt.a(var2, true);
+                  DebugConsole.field_x = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -66, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
@@ -1629,7 +1629,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -109, "create_createanaccount");
                 if (null != var2) {
-                  dw.field_f = kt.a(var2, true);
+                  ConsoleEvaluationException.field_f = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -89, "create_username");
                 if (null != var2) {
@@ -1693,7 +1693,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -115, "create_select_alternative");
                 if (null != var2) {
-                  lb.field_G = kt.a(var2, true);
+                  TextHotspotWidget.field_G = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -50, "create_optin_news");
                 if (var2 != null) {
@@ -1717,7 +1717,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -116, "login_email");
                 if (var2 != null) {
-                  uj.field_A = kt.a(var2, param0);
+                  SetLagCommand.field_A = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -104, "login_username_tooltip");
                 if (var2 != null) {
@@ -1772,7 +1772,7 @@ final class pt extends IntrusiveNode {
                   field_i = (String) null;
                 }
                 if (var2 != null) {
-                  ev.field_A = kt.a(var2, true);
+                  LongPlusOneCommand.field_A = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -79, "create_password_confirm_tooltip");
                 if (null != var2) {
@@ -1820,7 +1820,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -96, "create_username_unavailable");
                 if (null != var2) {
-                  se.field_B = kt.a(var2, true);
+                  ModalStack.field_B = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -128, "create_username_available");
                 if (var2 != null) {
@@ -1840,7 +1840,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -50, "create_alert_doublespace");
                 if (var2 != null) {
-                  lb.field_N = kt.a(var2, true);
+                  TextHotspotWidget.field_N = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -56, "create_alert_passchars");
                 if (var2 != null) {
@@ -1848,7 +1848,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -58, "create_alert_passrepeated");
                 if (null != var2) {
-                  tq.field_D = kt.a(var2, param0);
+                  NotCommand.field_D = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -93, "create_alert_passlength");
                 if (var2 != null) {
@@ -1884,7 +1884,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -50, "create_alert_invalidage");
                 if (null != var2) {
-                  qp.field_F = kt.a(var2, true);
+                  AccountMessagePanel.field_F = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -63, "create_alert_yearrange");
                 if (var2 != null) {
@@ -1932,7 +1932,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -81, "friendlistfull");
                 if (null != var2) {
-                  jg.field_A = kt.a(var2, param0);
+                  DraggableWidget.field_A = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -70, "friendlistdupe");
                 if (null != var2) {
@@ -1952,7 +1952,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -101, "ignorenotfound");
                 if (null != var2) {
-                  jf.field_A = kt.a(var2, param0);
+                  DoSomethingCommand.field_A = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -62, "removeignorefirst");
                 if (var2 != null) {
@@ -1980,7 +1980,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -91, "text_removed_from_game");
                 if (null != var2) {
-                  uc.field_B = kt.a(var2, true);
+                  IntTripleCommand.field_B = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -87, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
@@ -2074,7 +2074,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -104, "loading_extradata");
                 if (null != var2) {
-                  hm.field_H = kt.a(var2, true);
+                  SumIntegersCommand.field_H = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -97, "loading_languages");
                 if (null != var2) {
@@ -2210,7 +2210,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -115, "menu");
                 if (var2 != null) {
-                  dw.field_a = kt.a(var2, true);
+                  ConsoleEvaluationException.field_a = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -97, "selectlevel");
                 if (null != var2) {
@@ -2314,7 +2314,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -112, "offerdraw");
                 if (var2 != null) {
-                  fb.field_N = kt.a(var2, true);
+                  NumericDateInputWidget.field_N = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -82, "canceldraw");
                 if (var2 != null) {
@@ -2930,7 +2930,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -78, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  mr.field_bb = kt.a(var2, true);
+                  ValidatedTextWidget.field_bb = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -117, "fs_focus");
                 if (var2 != null) {
@@ -3262,7 +3262,7 @@ final class pt extends IntrusiveNode {
                 if (var2 != null) {
                   kt.a(var2, true);
                 }
-                jg.field_J = null;
+                DraggableWidget.field_J = null;
             }
             void run() {
                 var3 = Kickabout.field_G;

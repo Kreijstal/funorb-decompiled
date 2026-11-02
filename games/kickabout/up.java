@@ -152,10 +152,10 @@ final class up implements lv {
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
         var2.a(112, 2);
-        var2.a(param1, er.field_h.length, param1 ^ 1991220144, er.field_h);
-        var2.a(param1 ^ 124, lk.field_l);
+        var2.readBytes(param1, er.field_h.length, param1 ^ 1991220144, er.field_h);
+        var2.a(param1 ^ 124, ConsoleExpression.field_l);
         var2.a(124, MidiPcmStream.field_C);
-        var2.a(0, rf.field_d.length, param1 + 1991220144, rf.field_d);
+        var2.readBytes(0, rf.field_d.length, param1 + 1991220144, rf.field_d);
         var2.c(62, -var3 + var2.field_n);
     }
 
@@ -1001,7 +1001,7 @@ final class up implements lv {
               while (this.field_h.length > var23) {
                 var20 = pa.field_g[this.field_h[var23]];
                 var21 = var20.d(false);
-                ((Sprite) ((Object) var21)).f(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
+                ((Sprite) ((Object) var21)).drawHalfSize(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
                 q.field_d.a(var20.f((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
                 var18 += 18;
                 var23++;

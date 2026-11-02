@@ -24,10 +24,10 @@ final class ac implements hc {
         int var2Lifetime1;
         if (field_c != -1) {
           var2 = -wf.field_A + 20;
-          SoftwareRasterizer.f(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
+          SoftwareRasterizer.drawRoundedRectangle(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
           SoftwareRasterizer.a(var2, 20, sh.field_d, 48, 10, 65793, 160);
           if (qe.field_i != null) {
-            qe.field_i[PacketBuffer.field_e[field_c]].g(var2, 28);
+            qe.field_i[PacketBuffer.field_e[field_c]].drawQuarterSize(var2, 28);
           }
           un.field_d.a(kw.field_c[field_c], var2 + 16 + 32, 49, 16777215, -1);
         }

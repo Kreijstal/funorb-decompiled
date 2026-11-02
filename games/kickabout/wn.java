@@ -15,7 +15,7 @@ final class wn {
 
     final static boolean a(byte param0) {
         int var1 = -55 / ((-40 - param0) / 36);
-        if (!be.e((byte) 127)) {
+        if (!ConsolePanel.e((byte) 127)) {
           return false;
         }
         if (f.field_c) {

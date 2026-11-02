@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei implements gj {
+final class ei implements WidgetPainter {
     private BitmapFont field_k;
     static String field_c;
     static boolean field_n;
@@ -57,19 +57,19 @@ final class ei implements gj {
           SoftwareRasterizer.a(param4 + param3.field_t, param2 + param3.field_g, param3.field_n, param3.field_i, this.field_m);
           var7 = param4 + (param3.field_t + var15.field_H);
           var8 = param3.field_g + (param2 + var15.field_G);
-          SoftwareRasterizer.d(var7, var8, var15.field_J, this.field_i);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_J, this.field_i);
           var12 = -80 % ((59 - param0) / 53);
           if (var15.field_I != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var15.field_I) / (double)var15.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_J);
             var13 = (int)(Math.cos(var9) * (double)var15.field_J);
-            SoftwareRasterizer.d(var11 + var7, var13 + var8, 1, this.field_g);
+            SoftwareRasterizer.fillCircle(var11 + var7, var13 + var8, 1, this.field_g);
           }
-          SoftwareRasterizer.d(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_L) / (double)var15.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_J);
           var13Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_J);
-          SoftwareRasterizer.b(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var14 = this.field_h + (var15.field_J + var15.field_H);
             this.field_k.a(param3.field_q, param4 - (-param3.field_t - var14), param2 + (param3.field_g + this.field_a), -var14 - this.field_h + param3.field_n, param3.field_i - (this.field_h << 1), this.field_l, this.field_j, 1, 1, 0);
@@ -167,7 +167,7 @@ final class ei implements gj {
             ei.a(0);
           }
           var63 = ba.field_q;
-          var61 = el.field_E;
+          var61 = BytePlusOneCommand.field_E;
           for (var13 = 0; param6.field_k > var13; var13++) {
             var14 = param3 * var61[var13] + (var62[var13] * param1 + param0 * var63[var13]) >> 8;
             if (var14 < 0) {
@@ -184,7 +184,7 @@ final class ei implements gj {
             }
             var14Lifetime2 = stackIn_16_0;
             var15 = param4 * var63[var13] + param2 * var62[var13] + var61[var13] * param7 >> 8;
-            stackIn_18_0 = mr.field_Y;
+            stackIn_18_0 = ValidatedTextWidget.field_Y;
             if (var15 < 0) {
               stackIn_19_1 = -var15;
             } else {
@@ -228,11 +228,11 @@ final class ei implements gj {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = fb.field_M[var15Lifetime1];
+            var22 = NumericDateInputWidget.field_M[var15Lifetime1];
             var23 = fk.field_k[var15Lifetime1];
-            var24 = fb.field_M[var16];
+            var24 = NumericDateInputWidget.field_M[var16];
             var25 = fk.field_k[var16];
-            var26 = fb.field_M[var17];
+            var26 = NumericDateInputWidget.field_M[var17];
             var27 = fk.field_k[var17];
             if (var18 == var19 &&
               var19 == var20) {

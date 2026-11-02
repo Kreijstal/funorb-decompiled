@@ -137,15 +137,15 @@ final class sp extends im {
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[2];
           if (this.field_Sb.field_h.length == 0) {
-            pb.field_C.d(hi.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
+            IsSixCommand.field_C.d(hi.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[3];
-          var3Lifetime1 = var3Lifetime1 + (this.field_Pb[4] + pb.field_C.a(this.field_Nb) >> 1);
+          var3Lifetime1 = var3Lifetime1 + (this.field_Pb[4] + IsSixCommand.field_C.a(this.field_Nb) >> 1);
           var6Lifetime1 = -5 + (this.field_q + this.field_F);
           if (var6Lifetime1 < var3Lifetime1) {
             var3Lifetime1 = var6Lifetime1;
           }
-          pb.field_C.c(this.field_Nb, var3Lifetime1, 17 + this.field_T, 16777215, -1);
+          IsSixCommand.field_C.c(this.field_Nb, var3Lifetime1, 17 + this.field_T, 16777215, -1);
           return;
         }
     }
@@ -156,7 +156,7 @@ final class sp extends im {
         }
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = lh.a(param1, (byte) -96, 64);
+        var3[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
         return var2;
     }
 
@@ -174,7 +174,7 @@ final class sp extends im {
     }
 
     final static void i(int param0) {
-        if (pb.field_B) {
+        if (IsSixCommand.field_B) {
           return;
         }
         int var1 = param0 + 81920 / hw.field_i;
@@ -278,7 +278,7 @@ final class sp extends im {
           this.field_Sb = param0;
           this.field_mb = 50;
           this.field_Fb = param2;
-          this.field_X = (BitmapFont) ((Object) pb.field_C);
+          this.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
           this.field_Pb = param1;
           this.field_Qb = param3;
           this.field_Mb = eo.b();

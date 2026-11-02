@@ -22,7 +22,7 @@ final class cf extends hd {
         field_Gb = null;
     }
 
-    final static lk a(int param0, sb param1) {
+    final static ConsoleExpression a(int param0, sb param1) {
         int fieldTemp$5 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
@@ -35,8 +35,8 @@ final class cf extends hd {
         int var6 = 0;
         int var7 = 0;
         int stackIn_13_0 = 0;
-        lk stackIn_15_0 = null;
-        lk stackIn_17_0 = null;
+        ConsoleExpression stackIn_15_0 = null;
+        ConsoleExpression stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -75,10 +75,10 @@ final class cf extends hd {
           }
           var6Lifetime1 = stackIn_13_0;
           if (param0 == -9323) {
-            stackIn_17_0 = new lk(var6Lifetime1, var2_int, var3.toString());
+            stackIn_17_0 = new ConsoleExpression(var6Lifetime1, var2_int, var3.toString());
             return stackIn_17_0;
           }
-          stackIn_15_0 = (lk) null;
+          stackIn_15_0 = (ConsoleExpression) null;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,7 +102,7 @@ final class cf extends hd {
           var7 = 80 / ((68 - param0) / 48);
           return;
         }
-        dr.field_g.a(false, param4, param4 - fb.field_I, param1, param5, param5);
+        dr.field_g.a(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
         var7Lifetime1 = 80 / ((68 - param0) / 48);
     }
 

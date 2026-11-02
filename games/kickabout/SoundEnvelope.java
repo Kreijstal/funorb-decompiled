@@ -14,11 +14,11 @@ final class SoundEnvelope {
     int field_j;
     private int[] field_i;
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         this.field_g = param0.h((byte) -106);
         this.field_b = param0.k(4);
         this.field_j = param0.k(4);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
     final void a() {
@@ -48,7 +48,7 @@ final class SoundEnvelope {
         return this.field_d - this.field_f >> 15;
     }
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_c = param0.h((byte) -119);
         this.field_e = new int[this.field_c];

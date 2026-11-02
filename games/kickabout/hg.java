@@ -13,7 +13,7 @@ final class hg extends i {
         String var2 = var6;
         String var3 = q.field_h[param0];
         String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[10], new String[]{var6, var3});
-        Sprite var5 = kb.field_E[param0];
+        Sprite var5 = WriteIntegersCommand.field_E[param0];
         this.a(var4, this.field_t, var5, -110, this.field_u);
         this.a(ds.a(this.field_y, 1), pg.a(false, 10), 1054928844);
     }
@@ -69,7 +69,7 @@ final class hg extends i {
           }
           if (kt.field_j != -1) {
             var2 = kt.field_j;
-            qd.b(38, -1);
+            IndexedSpriteState.b(38, -1);
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
@@ -81,7 +81,7 @@ final class hg extends i {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!lc.field_e.a((byte) -80)) {
+          if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

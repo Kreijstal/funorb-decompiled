@@ -212,7 +212,7 @@ final class fo extends jd {
           if (this.a(param1, -5) != jt.field_Bb) {
             return null;
           }
-          stackIn_6_0 = qp.field_F;
+          stackIn_6_0 = AccountMessagePanel.field_F;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

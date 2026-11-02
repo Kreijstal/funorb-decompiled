@@ -37,7 +37,7 @@ final class wf extends qt {
         if (param0 != -38) {
           this.field_B = (jr[]) null;
         }
-        this.field_R = eo.a(ir.field_B, 7126504, un.field_d, 162, true);
+        this.field_R = eo.a(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
         this.field_P = eo.a(vd.field_b, 16679959, un.field_d, 162, true);
         this.field_R.field_s = 10;
         this.field_R.field_J = 56;
@@ -48,7 +48,7 @@ final class wf extends qt {
         this.field_K.a(true, 420, 195, 51, 66);
         this.field_E = new jw[4];
         for (var2 = 0; 4 > var2; var2++) {
-          this.field_E[var2] = new jw(uf.field_e[var2], pb.field_C, 90);
+          this.field_E[var2] = new jw(uf.field_e[var2], IsSixCommand.field_C, 90);
           this.field_E[var2].field_s = var2 * 100 + 15;
           this.field_E[var2].field_J = 27;
           this.field_E[var2].field_Gb = true;
@@ -72,7 +72,7 @@ final class wf extends qt {
         this.field_L.a((byte) -115, (hd) (this.field_G));
     }
 
-    final static void a(int param0, int param1, kg param2, int param3) {
+    final static void a(int param0, int param1, IndexedSprite param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -234,11 +234,11 @@ final class wf extends qt {
         int[] var16 = null;
         var15 = Kickabout.field_G;
         try {
-          var16 = new int[]{uv.field_e, pb.field_A, rb.field_Kb, oc.field_e};
+          var16 = new int[]{uv.field_e, IsSixCommand.field_A, rb.field_Kb, oc.field_e};
           var3 = new Sprite(32, 32);
           PacketBuffer.a(-111, var3);
           for (var4_int = 15; var4_int < 19; var4_int++) {
-            SoftwareRasterizer.f(4, var4_int, 26, 592137);
+            SoftwareRasterizer.drawHorizontalLine(4, var4_int, 26, 592137);
           }
           var4 = 1.0f;
           var5 = 0.4000000059604645f;
@@ -249,7 +249,7 @@ final class wf extends qt {
           ta.e(117);
           var6 = new Sprite[4];
           for (var7_int = 0; 4 > var7_int; var7_int++) {
-            var6[var7_int] = var3.b();
+            var6[var7_int] = var3.copy();
           }
           var6[1].g();
           var6[2].d();
@@ -267,10 +267,10 @@ final class wf extends qt {
             PacketBuffer.a(-96, var13);
             param1.d(0, 0);
             if (var11 == 0) {
-              SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
             if (var9 == 0) {
-              var6[var10].f(-7 + (SoftwareRasterizer.field_g >> 1), var12 + 5);
+              var6[var10].drawHalfSize(-7 + (SoftwareRasterizer.field_g >> 1), var12 + 5);
             } else {
               var14 = mk.field_b[var16[var10]].toLowerCase();
               un.field_d.d(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
@@ -387,7 +387,7 @@ final class wf extends qt {
             stackIn_8_0 = BufferedSocket.field_t;
           }
           var3 = stackIn_8_0;
-          pb.field_C.d(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
+          IsSixCommand.field_C.d(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
         }
         if (la.a(param0 ^ -97)) {
           SoftwareRasterizer.a(this.field_j, 48, 640, 383, 0, 196);
@@ -395,7 +395,7 @@ final class wf extends qt {
         if (ds.field_g ||
           dg.field_e) {
           SoftwareRasterizer.a(this.field_j, 48, 640, 383, 0, 196);
-          pb.field_C.a(BufferedCacheFile.field_d, this.field_j, 0, 640, 480, 16777215, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(BufferedCacheFile.field_d, this.field_j, 0, 640, 480, 16777215, -1, 1, 1, 0);
         }
     }
 
@@ -476,7 +476,7 @@ final class wf extends qt {
               if (var7 >= param3) {
                 if (var7 == 0) {
                   var10_ref_jr = new jr(nc.field_b);
-                  var10_ref_jr.field_X = (BitmapFont) ((Object) pb.field_C);
+                  var10_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                   var10_ref_jr.field_mb = 50;
                   var10_ref_jr.field_y = 16777215;
                   var17.a(var10_ref_jr, 3);
@@ -485,7 +485,7 @@ final class wf extends qt {
                 var10_ref_jrLifetime2 = new jr(var18, gk.field_f);
                 var10_ref_jrLifetime2.field_y = 16777215;
                 var10_ref_jrLifetime2.field_mb = 50;
-                var10_ref_jrLifetime2.field_X = (BitmapFont) ((Object) pb.field_C);
+                var10_ref_jrLifetime2.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                 var8++;
                 var17.a(var10_ref_jrLifetime2, 3);
               }
@@ -497,7 +497,7 @@ final class wf extends qt {
             var9_ref_jr = new jr(ko.field_k);
             var9_ref_jr.field_mb = 50;
             var9_ref_jr.field_y = 16777215;
-            var9_ref_jr.field_X = (BitmapFont) ((Object) pb.field_C);
+            var9_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var8++;
             var17.a(var9_ref_jr, 3);
           }
@@ -510,7 +510,7 @@ final class wf extends qt {
             }
             var10_ref_jrLifetime1 = new jr(ui.field_w[var9], gk.field_f);
             var10_ref_jrLifetime1.field_mb = 50;
-            var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) pb.field_C);
+            var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var10_ref_jrLifetime1.field_y = 16777215;
             var6++;
             var17.a(var10_ref_jrLifetime1, 3);
@@ -537,7 +537,7 @@ final class wf extends qt {
           for (var12 = 0; var11 > var12; var12++) {
             this.field_B[var12] = new jr(gk.field_f);
             this.field_B[var12].field_mb = 50;
-            this.field_B[var12].field_X = (BitmapFont) ((Object) pb.field_C);
+            this.field_B[var12].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12].field_y = 16777215;
           }
           var12_ref_jr = (jr) (var17.g(24009));
@@ -549,7 +549,7 @@ final class wf extends qt {
           for (var12Lifetime1 = var11; var12Lifetime1 < this.field_B.length; var12Lifetime1++) {
             this.field_B[var12Lifetime1] = new jr(gk.field_f);
             this.field_B[var12Lifetime1].field_mb = 50;
-            this.field_B[var12Lifetime1].field_X = (BitmapFont) ((Object) pb.field_C);
+            this.field_B[var12Lifetime1].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12Lifetime1].field_y = 16777215;
           }
           if (this.field_T.a(false) + var6 == 0) {
@@ -617,7 +617,7 @@ final class wf extends qt {
         stackIn_6_2 = (ds.field_g) ? 0 : 1;
         stackIn_2_0.field_lb = (stackIn_3_1 & stackIn_6_2) != 0;
         if (this.field_R.field_gb) {
-          qd.$cfr$intArgs$a$b6210757cdab(-67, bg.field_v);
+          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, bg.field_v);
         }
         if ((3000L + this.field_J) >= nj.a(23)) {
           this.field_P.field_lb = false;
@@ -626,7 +626,7 @@ final class wf extends qt {
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {

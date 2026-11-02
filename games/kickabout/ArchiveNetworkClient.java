@@ -72,7 +72,7 @@ abstract class ArchiveNetworkClient {
           if (j.a((byte) -125, param2, param0)) {
             return false;
           }
-          if (uj.a(63, param0, param2)) {
+          if (SetLagCommand.a(63, param0, param2)) {
             return false;
           }
           if (!lj.a((byte) -120, param2, param0)) {
@@ -148,7 +148,7 @@ abstract class ArchiveNetworkClient {
     abstract void b(byte param0);
 
     final static void a(int param0, int param1, int param2, int param3) {
-        fb.field_R = param2;
+        NumericDateInputWidget.field_R = param2;
         if (param3 != 20) {
           return;
         }

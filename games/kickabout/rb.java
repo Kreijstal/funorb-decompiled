@@ -103,7 +103,7 @@ final class rb extends hd {
           pw.field_G.field_Ab.field_v = 0;
         }
         if (vg.field_Wb &&
-          mu.field_Y != null) {
+          ContentTransitionDialog.field_Y != null) {
           dg.field_a = true;
         }
         var9Lifetime1 = -pw.field_G.field_Ab.field_mb + (-pw.field_G.field_Ab.field_L + pw.field_G.field_zb.field_mb);
@@ -119,7 +119,7 @@ final class rb extends hd {
     final static void a(byte param0, String param1) {
         try {
           ek.field_M = param1;
-          qd.b(38, 12);
+          IndexedSpriteState.b(38, 12);
           if (param0 != -51) {
             field_Ib = (String) null;
           }
@@ -318,7 +318,7 @@ final class rb extends hd {
         this.field_Ob = -2;
         try {
           this.field_Eb = param12;
-          this.field_Gb = new hd(0L, param6, fi.field_c.toUpperCase());
+          this.field_Gb = new hd(0L, param6, ConsoleParseException.field_c.toUpperCase());
           this.field_Gb.field_A = 1;
           this.a((byte) -110, this.field_Gb);
           this.field_Ab = new hd(0L, param7);
@@ -393,7 +393,7 @@ final class rb extends hd {
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_X.a(cj.field_H);
+            var17Lifetime2 = param6.field_X.a(DateInputWidget.field_H);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -426,7 +426,7 @@ final class rb extends hd {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(var18Lifetime4, cj.field_H, var16Lifetime2, param6, var28[1], (byte) 119);
+            var18Lifetime4 = this.a(var18Lifetime4, DateInputWidget.field_H, var16Lifetime2, param6, var28[1], (byte) 119);
             var18Lifetime4 = this.a(-6305, this.field_Jb[16], var16Lifetime2, var18Lifetime4, var28[1]);
             var18Lifetime4 = this.a(-6305, this.field_Jb[17], var16Lifetime2, var18Lifetime4, var28[1]);
             var18Lifetime4 = this.a(-6305, this.field_Jb[18], var16Lifetime2, var18Lifetime4, var28[1]);

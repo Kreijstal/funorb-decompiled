@@ -5,7 +5,7 @@ class iv extends DualLinkNode {
     static String field_n;
     static PlatformTask field_o;
 
-    final static void a(cn param0, byte param1) {
+    final static void a(CoverageBitmapFont param0, byte param1) {
         int var15_int = 0;
         int var20 = 0;
         int var2_int = 0;
@@ -40,22 +40,22 @@ class iv extends DualLinkNode {
         try {
           var2_int = param0.a(ge.field_o[16]);
           var3 = param0.a(ge.field_o[17]);
-          jg.a(Math.max(var2_int, var3), param0, (byte) -46);
+          DraggableWidget.a(Math.max(var2_int, var3), param0, (byte) -46);
           var4 = new hd();
           var4.field_R = bn.field_B;
           var5 = new hd();
           var6 = new hd();
           var6.field_N = rk.field_g;
           var7 = new hd();
-          var7.field_N = rk.field_g.b();
+          var7.field_N = rk.field_g.copy();
           var7.field_N.a();
-          be.field_q = new hd();
-          be.field_q.field_y = 14540253;
-          be.field_q.field_p = 1;
-          be.field_q.field_A = 1;
-          be.field_q.field_X = (BitmapFont) ((Object) un.field_d);
+          ConsolePanel.field_q = new hd();
+          ConsolePanel.field_q.field_y = 14540253;
+          ConsolePanel.field_q.field_p = 1;
+          ConsolePanel.field_q.field_A = 1;
+          ConsolePanel.field_q.field_X = (BitmapFont) ((Object) un.field_d);
           rr.field_b = new ji("scrollbar", var6, var7, var5, var4, true);
-          it.field_m = new ji("scrollbar", be.field_q, be.field_q, be.field_q, be.field_q, true);
+          it.field_m = new ji("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
           ug.field_b = new Sprite[2][2];
           ug.field_b[0][0] = nm.a(16679959, -87, qt.field_u);
           ug.field_b[0][1] = nm.a(16679959, -104, mg.field_g);
@@ -265,7 +265,7 @@ class iv extends DualLinkNode {
           var17[25] = oc.field_b.toLowerCase();
           var17[14] = pr.field_b.toLowerCase();
           var17[20] = np.field_Gb;
-          var17[9] = tq.field_C;
+          var17[9] = NotCommand.field_C;
           var17[22] = ar.field_e;
           var17[16] = ar.field_e;
           var17[7] = fc.field_b;
@@ -355,7 +355,7 @@ class iv extends DualLinkNode {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_29_0 = lb.field_N;
+                    stackIn_29_0 = TextHotspotWidget.field_N;
                     return stackIn_29_0;
                   }
                 }

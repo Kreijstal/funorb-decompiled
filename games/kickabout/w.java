@@ -22,14 +22,14 @@ final class w implements hc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == qd.field_c) {
+          if (null == IndexedSpriteState.field_c) {
             stackIn_2_0 = null;
             return (ag) (stackIn_2_0);
           }
           var2_int = 119 / ((72 - param1) / 33);
           var3 = new ag(param0, param0);
-          qd.field_c.a(var3, 3);
-          vg.field_Bb.a(param0);
+          IndexedSpriteState.field_c.a(var3, 3);
+          vg.field_Bb.addSubStream(param0);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -263,7 +263,7 @@ final class w implements hc {
               var12.a((byte) -127, var12.field_dc);
               var12.field_Yb = new hd(0L, ul.field_c);
               var12.a((byte) -121, var12.field_Yb);
-              var12.field_Bb = new hd(0L, dw.field_e);
+              var12.field_Bb = new hd(0L, ConsoleEvaluationException.field_e);
               var12.a((byte) -128, var12.field_Bb);
               var12.b(param1);
               var12.field_Lb = new hd(0L, LoggedPlayer.field_r);
@@ -351,7 +351,7 @@ final class w implements hc {
                 if (!var12.field_Xb &&
                   !var12.field_hc) {
                   if (var12.field_yb) {
-                    var12.field_Ib.field_E = oj.field_R;
+                    var12.field_Ib.field_E = LoadingProgressDialog.field_R;
                   } else {
                     var12.field_Ib.field_E = ImageProducerRasterBuffer.field_m;
                   }
@@ -511,12 +511,12 @@ final class w implements hc {
                 var31 = var31 + sh.field_c * var39Lifetime1;
               }
               if (var12.field_hc) {
-                var12.field_dc.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wi.field_x, new String[]{var32});
+                var12.field_dc.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TextButton.field_x, new String[]{var32});
                 var12.field_dc.a(true, -(2 * eb.field_b) + var12.field_q, eb.field_b, var31, sh.field_c);
                 var31 = var31 + sh.field_c;
               }
               if (var12.field_Tb) {
-                var12.field_Yb.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, uj.field_C, new String[]{var32});
+                var12.field_Yb.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SetLagCommand.field_C, new String[]{var32});
                 var12.field_Yb.a(true, var12.field_q - 2 * eb.field_b, eb.field_b, var31, sh.field_c);
                 var31 = var31 + sh.field_c;
               }
@@ -596,7 +596,7 @@ final class w implements hc {
             if (0 != var12.field_sb &&
               !var12.b(-7)) {
               if (var12.field_Lb.field_sb == 0) {
-                kd.a(15, var12, param4, var32);
+                DebugConsole.a(15, var12, param4, var32);
               } else {
                 if (var12.field_Cb && (!var12.field_ic ||
                   !var12.field_Xb &&
@@ -619,17 +619,17 @@ final class w implements hc {
         }
     }
 
-    final static lk[] a(String param0, byte param1) {
+    final static ConsoleExpression[] a(String param0, byte param1) {
         int incrementValue$1 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
-        lk[] var3 = null;
+        ConsoleExpression[] var3 = null;
         int var4 = 0;
-        lk var5 = null;
+        ConsoleExpression var5 = null;
         int var6 = 0;
-        lk[] stackIn_3_0 = null;
-        lk[] stackIn_6_0 = null;
-        lk[] stackIn_11_0 = null;
+        ConsoleExpression[] stackIn_3_0 = null;
+        ConsoleExpression[] stackIn_6_0 = null;
+        ConsoleExpression[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -641,18 +641,18 @@ final class w implements hc {
             return stackIn_3_0;
           }
           var2 = fj.a(false, param0);
-          var3 = new lk[var2.a(false)];
+          var3 = new ConsoleExpression[var2.a(false)];
           if (param1 > -8) {
-            stackIn_6_0 = (lk[]) null;
+            stackIn_6_0 = (ConsoleExpression[]) null;
             return stackIn_6_0;
           }
           var4 = 0;
-          var5 = (lk) (var2.g(24009));
+          var5 = (ConsoleExpression) (var2.g(24009));
           while (var5 != null) {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (lk) (var2.c(33));
+            var5 = (ConsoleExpression) (var2.c(33));
           }
           ck.field_e = param0;
           sr.field_a = var3;

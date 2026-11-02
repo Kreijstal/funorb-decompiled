@@ -81,11 +81,11 @@ final class ha extends i {
         }
         var6 = param0;
         var6 = var6 ^ (long)(2 + param4);
-        var6 = ub.a(4, (byte) -80, var6);
+        var6 = ModalPanel.a(4, (byte) -80, var6);
         var6 = var6 ^ (long)(1 + param1);
-        var6 = ub.a(4, (byte) 115, var6);
+        var6 = ModalPanel.a(4, (byte) 115, var6);
         var6 = var6 ^ (long)(1 + param2);
-        var6 = ub.a(4, (byte) -119, var6);
+        var6 = ModalPanel.a(4, (byte) -119, var6);
         var8 = new Random(var6);
         var9 = new up();
         var9.field_c = true;
@@ -238,12 +238,12 @@ final class ha extends i {
                   var14 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(122, 100, var8);
                   var17 = 0;
                   var15 = var17;
-                  while (ct.field_v[param4].length > var17) {
-                    if (var14 <= ct.field_v[param4][var17]) {
+                  while (SingleChildContainer.field_v[param4].length > var17) {
+                    if (var14 <= SingleChildContainer.field_v[param4][var17]) {
                       var9.field_h[var13] = var17;
                       break;
                     }
-                    var14 = var14 - ct.field_v[param4][var17];
+                    var14 = var14 - SingleChildContainer.field_v[param4][var17];
                     var17++;
                   }
                 } else {

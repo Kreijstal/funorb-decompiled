@@ -14,7 +14,7 @@ final class jk extends IntrusiveNode {
     byte[] field_n;
     gl[] field_e;
     int field_j;
-    to[] field_l;
+    PcmSample[] field_l;
     static int field_h;
 
     final static boolean b(int param0) {
@@ -110,8 +110,8 @@ final class jk extends IntrusiveNode {
                 }
                 var9 = 23 * var9 >> 8;
                 var8 = var8 * 23 >> 8;
-                SoftwareRasterizer.d(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
-                SoftwareRasterizer.c(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
+                SoftwareRasterizer.fillCircle(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
+                SoftwareRasterizer.drawCircle(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
             var3 = (ob) (tb.field_w.field_V);
@@ -130,8 +130,8 @@ final class jk extends IntrusiveNode {
             }
             var5Lifetime1 = var5Lifetime1 * 23 >> 8;
             var4Lifetime1 = var4Lifetime1 * 23 >> 8;
-            SoftwareRasterizer.d(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
-            SoftwareRasterizer.c(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
+            SoftwareRasterizer.fillCircle(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
+            SoftwareRasterizer.drawCircle(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
             ta.e(125);
             return;
           }
@@ -186,7 +186,7 @@ final class jk extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_l[var8] = (to) (var7);
+                  this.field_l[var8] = (PcmSample) (var7);
                   this.field_q[var8] = 0;
                 }
               }
@@ -221,7 +221,7 @@ final class jk extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        we.field_a.a((byte) -124, (UiWidget) (new nn()));
+        we.field_a.a((byte) -124, (UiWidget) (new AccountChoicePanel()));
         if (param0 > -119) {
           jk.b(114);
         }
@@ -368,7 +368,7 @@ final class jk extends IntrusiveNode {
         int var31Lifetime1Lifetime1;
         try {
           this.field_e = new gl[128];
-          this.field_l = new to[128];
+          this.field_l = new PcmSample[128];
           this.field_n = new byte[128];
           this.field_p = new byte[128];
           this.field_k = new byte[128];

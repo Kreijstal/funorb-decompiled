@@ -264,25 +264,25 @@ final class ra extends dj {
             this.field_K[var12Lifetime4].h((byte) -123);
           }
           SoftwareRasterizer.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
-          pb.field_C.a(tr.field_c, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.a(tr.field_c, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           SoftwareRasterizer.a(210 + this.field_j, 178, 390, 225, 10, 65793, 140);
           var12Lifetime5 = 0;
           var13 = this.field_j + 230;
           var14 = var4;
           while (CipherPacketBuffer.field_s.length > var12Lifetime5) {
             var15_ref_String = CipherPacketBuffer.field_s[var12Lifetime5];
-            var16 = pb.field_C.c(var15_ref_String, var9, var10);
+            var16 = IsSixCommand.field_C.c(var15_ref_String, var9, var10);
             if (var14 + var16 > var6 + var4) {
               break;
             }
-            var14 = var14 + (var10 * pb.field_C.a(var15_ref_String, var13, var14, var9, 999, 16777215, -1, 0, 0, var10) + 20);
+            var14 = var14 + (var10 * IsSixCommand.field_C.a(var15_ref_String, var13, var14, var9, 999, 16777215, -1, 0, 0, var10) + 20);
             var12Lifetime5++;
           }
         }
         if (this.field_C == 1) {
           SoftwareRasterizer.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
           var6 -= 50;
-          pb.field_C.a(jb.field_h, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.a(jb.field_h, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           var4 += 50;
           for (var11Lifetime1 = 0; var11Lifetime1 < 2; var11Lifetime1++) {
             stackIn_26_0 = (1 != var11Lifetime1) ? 0 : 1;
@@ -298,13 +298,13 @@ final class ra extends dj {
             var14Lifetime1 = 40 + var7;
             for (var15 = 0; tn.field_g[var11Lifetime1].length > var15; var15++) {
               var26 = tn.field_g[var11Lifetime1][var15];
-              var14Lifetime1 = var14Lifetime1 + (15 + pb.field_C.a(var26, var13Lifetime1, var14Lifetime1, var9, 999, 16777215, -1, 0, 0, var10) * var10);
+              var14Lifetime1 = var14Lifetime1 + (15 + IsSixCommand.field_C.a(var26, var13Lifetime1, var14Lifetime1, var9, 999, 16777215, -1, 0, 0, var10) * var10);
             }
           }
         }
         if (this.field_C == 2) {
           SoftwareRasterizer.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
-          pb.field_C.a(ll.field_l, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.a(ll.field_l, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           SoftwareRasterizer.a(40 + this.field_j, 178, 275, 225, 10, 65793, 140);
           var4 = 195;
           var11Lifetime2 = 0;
@@ -313,10 +313,10 @@ final class ra extends dj {
           var13Lifetime2 = var4;
           while (var11Lifetime2 < re.field_b.length) {
             var14_ref_String = re.field_b[var11Lifetime2];
-            var15Lifetime1 = pb.field_C.c(var14_ref_String, var9, var10);
+            var15Lifetime1 = IsSixCommand.field_C.c(var14_ref_String, var9, var10);
             if (var15Lifetime1 + var13Lifetime2 <= var4 + var6) {
               var11Lifetime2++;
-              var13Lifetime2 = var13Lifetime2 + (20 + pb.field_C.a(var14_ref_String, var12Lifetime2, var13Lifetime2, var9, 999, 16777215, -1, 0, 0, var10) * var10);
+              var13Lifetime2 = var13Lifetime2 + (20 + IsSixCommand.field_C.a(var14_ref_String, var12Lifetime2, var13Lifetime2, var9, 999, 16777215, -1, 0, 0, var10) * var10);
               continue;
             }
             break;
@@ -392,7 +392,7 @@ final class ra extends dj {
               } else {
                 stackIn_67_3 = -(var18 >> 1);
               }
-              SoftwareRasterizer.b(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
+              SoftwareRasterizer.drawLine(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
               stackIn_69_0 = var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1);
               stackIn_69_1 = 1 + var13Lifetime2Lifetime1;
               stackIn_69_2 = var12Lifetime2Lifetime1 - (-(var17 << 1) + (var15Lifetime1Lifetime1 >> 1));
@@ -402,7 +402,7 @@ final class ra extends dj {
               } else {
                 stackIn_70_4 = -(var18 >> 1);
               }
-              SoftwareRasterizer.b(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
+              SoftwareRasterizer.drawLine(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
             }
             var13Lifetime2Lifetime1 = var13Lifetime2Lifetime1 + var18;
             if (var21 == var14Lifetime2 - 8 ||
@@ -432,7 +432,7 @@ final class ra extends dj {
             SoftwareRasterizer.a(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
             for (var15Lifetime2 = 0; va.field_y[var11Lifetime3].length > var15Lifetime2; var15Lifetime2++) {
               var27 = va.field_y[var11Lifetime3][var15Lifetime2];
-              var14Lifetime3 = var14Lifetime3 + (pb.field_C.a(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);
+              var14Lifetime3 = var14Lifetime3 + (IsSixCommand.field_C.a(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);
             }
           }
         }

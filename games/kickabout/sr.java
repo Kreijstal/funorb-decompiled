@@ -8,7 +8,7 @@ abstract class sr {
     int field_i;
     static String field_c;
     static lm field_l;
-    static lk[] field_a;
+    static ConsoleExpression[] field_a;
     static em field_f;
     static String field_d;
     static ResourceArchive field_h;
@@ -19,32 +19,32 @@ abstract class sr {
     final static void a(boolean param0, byte param1) {
         cq.a(param0, 0);
         if (param1 >= -20) {
-          field_a = (lk[]) null;
+          field_a = (ConsoleExpression[]) null;
         }
         vu.a(true, param0);
     }
 
     abstract int a(int param0);
 
-    final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
+    final static IndexedSprite[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
         Sprite[] array$0 = null;
-        kg[][] stackIn_3_0 = null;
+        IndexedSprite[][] stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_26_0 = 0;
-        kg[] var6;
-        kg[][] var7;
+        IndexedSprite[] var6;
+        IndexedSprite[][] var7;
         Sprite[][] var8;
         int var9;
         int var10;
         int var11;
-        kg var11_ref_kg;
+        IndexedSprite var11_ref_kg;
         int var12;
         int var13;
         int var15;
-        kg var15_ref_kg;
+        IndexedSprite var15_ref_kg;
         Sprite var16;
         int var16_int;
         int var17;
@@ -68,7 +68,7 @@ abstract class sr {
         int var19Lifetime1Lifetime1;
         int var9Lifetime1;
         var21 = Kickabout.field_G;
-        var6 = new kg[6];
+        var6 = new IndexedSprite[6];
         if (!param2) {
           stackIn_3_0 = ps.field_c;
         } else {
@@ -81,14 +81,14 @@ abstract class sr {
           var8[var9] = array$0;
           for (var10 = 0; var10 < var8[var9].length; var10++) {
             var11_ref_kg = var7[var9][var10];
-            var8[var9][var10] = var11_ref_kg.a();
-            pd.a(var8[var9][var10], 20684);
+            var8[var9][var10] = var11_ref_kg.toRgbSprite();
+            LoginForm.a(var8[var9][var10], 20684);
           }
         }
         stackIn_12_0 = (!param2) ? 59 : 50;
         var9Lifetime1 = stackIn_12_0;
         if (param3 > -65) {
-          return (kg[]) null;
+          return (IndexedSprite[]) null;
         }
         stackIn_17_0 = (param2) ? 34 : 33;
         var10Lifetime1 = stackIn_17_0;

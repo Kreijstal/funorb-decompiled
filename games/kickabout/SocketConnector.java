@@ -61,7 +61,7 @@ abstract class SocketConnector {
         field_b = null;
     }
 
-    final java.net.Socket c(int param0) throws IOException {
+    final java.net.Socket connectDirect(int param0) throws IOException {
         if (param0 != 16080938) {
           return (java.net.Socket) null;
         }

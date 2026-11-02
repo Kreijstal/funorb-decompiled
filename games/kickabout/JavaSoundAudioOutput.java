@@ -8,7 +8,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
     private byte[] field_v;
     private static String field_z;
 
-    final void f() {
+    final void closeDevice() {
         if (this.field_y != null) {
           this.field_y.close();
           this.field_y = null;
@@ -40,7 +40,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         return this.field_w - (this.field_y.available() >> (field_o ? 2 : 1));
     }
 
-    final void a(java.awt.Component param0) {
+    final void initializeDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;

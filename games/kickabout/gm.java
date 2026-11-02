@@ -22,7 +22,7 @@ final class gm extends FootballerAgent {
     int field_U;
     dd field_mb;
     private int field_X;
-    private eg field_gb;
+    private ModelMesh field_gb;
     boolean field_nb;
     boolean field_E;
     private boolean field_V;
@@ -32,12 +32,12 @@ final class gm extends FootballerAgent {
     boolean field_Z;
     private boolean field_Y;
 
-    final static cn a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        cn stackIn_3_0 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,7 +50,7 @@ final class gm extends FootballerAgent {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = param3.b(param4, -1);
-          var6 = param3.a((byte) -107, param2, var5_int);
+          var6 = param3.findFileId((byte) -107, param2, var5_int);
           if (param1 != 10) {
             var7 = (String) null;
             gm.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
@@ -135,15 +135,15 @@ final class gm extends FootballerAgent {
               ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
             var7 = ad.a(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
-            var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (pb.field_C.a(var7) >> 1)));
-            pb.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
+            var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.a(var7) >> 1)));
+            IsSixCommand.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
               var9 = mp.field_l;
-              var10 = Math.max(param2.field_F + 15, param2.field_F - (-66 + (pb.field_C.a(var9) >> 1)));
-              pb.field_C.a(var9, var10, 73 + param2.field_T, 13369344, 65793);
+              var10 = Math.max(param2.field_F + 15, param2.field_F - (-66 + (IsSixCommand.field_C.a(var9) >> 1)));
+              IsSixCommand.field_C.a(var9, var10, 73 + param2.field_T, 13369344, 65793);
             }
           } else {
-            pb.field_C.a(pn.field_A, param2.field_F + 18, 40 + param2.field_T, param2.field_q - 36, param2.field_mb - 50, 11184810, -1, 1, 0, 16);
+            IsSixCommand.field_C.a(pn.field_A, param2.field_F + 18, 40 + param2.field_T, param2.field_q - 36, param2.field_mb - 50, 11184810, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,8 +177,8 @@ final class gm extends FootballerAgent {
         }
         int[] var6 = !this.field_jb ? ParticipantStatus.field_f : dt.field_f;
         int[] var3 = var6;
-        int var4 = var6[0] * t.field_o[param0] >> 16;
-        int var5 = t.field_f[param0] * var6[0] >> 16;
+        int var4 = var6[0] * TriangleRasterizer.field_o[param0] >> 16;
+        int var5 = TriangleRasterizer.field_f[param0] * var6[0] >> 16;
         this.field_gb = this.field_hb.b(var6[2], var6[3], var4, var6[1], var5);
     }
 
@@ -195,13 +195,13 @@ final class gm extends FootballerAgent {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
-        t.c();
-        t.b(param2, param3);
+        TriangleRasterizer.c();
+        TriangleRasterizer.b(param2, param3);
         if (this.field_jb &&
           this.field_W != this.field_R) {
           this.b(this.field_R, (byte) 79);
         }
-        eg var8 = (eg) (this.field_mb.a(this.field_gb, false, true, true));
+        ModelMesh var8 = (ModelMesh) (this.field_mb.a(this.field_gb, false, true, true));
         int var7 = this.field_R;
         if (this.field_V) {
           var7 = 2047 & var7 + 1024;
@@ -239,7 +239,7 @@ final class gm extends FootballerAgent {
           var2 = (ih.field_c != 1) ? 62 : 68;
         }
         var2 = var2 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 2, MidiPcmStream.field_l);
-        var3 = tq.h(-2521);
+        var3 = NotCommand.h(-2521);
         var4 = IsaacRandom.a(true);
         if (512 > Math.abs((this.field_M >> 16) - var3) &&
           Math.abs(-var4 + (this.field_w >> 16)) < 512) {
@@ -267,7 +267,7 @@ final class gm extends FootballerAgent {
           if (ih.field_c == 2) {
             var6 += 10;
           }
-          he.a(var7, false, 240, tm.field_t + var6, var2);
+          he.a(var7, false, 240, ConsoleCommand.field_t + var6, var2);
         }
         this.field_ib = 20;
         return;
@@ -295,7 +295,7 @@ final class gm extends FootballerAgent {
         int var12;
         int var13;
         Sprite var14;
-        uo var15;
+        BinaryBitmapFont var15;
         int var16;
         int var17;
         int var18;
@@ -403,7 +403,7 @@ final class gm extends FootballerAgent {
             var11 = (double)(nj.a(35) % 300L) / 300.0;
             nh.a(kw.field_f, var9, 1.0, var11 + 1.0);
           }
-          kw.field_f.f(-64 + var3, -95 + var4);
+          kw.field_f.drawHalfSize(-64 + var3, -95 + var4);
           decompiledFrameRemainder0 = false;
         }
         else {
@@ -830,7 +830,7 @@ final class gm extends FootballerAgent {
         if (param0 >= -42) {
           field_S = (String) null;
         }
-        jo.a(param11, param8, param13, -103);
+        DemoIntegersCommand.a(param11, param8, param13, -103);
     }
 
     final void g(byte param0) {

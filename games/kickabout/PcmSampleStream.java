@@ -18,11 +18,11 @@ final class PcmSampleStream extends PcmStream {
     private int field_p;
     private int field_v;
 
-    final synchronized int m() {
+    final synchronized int getTargetVolume() {
         return this.field_j == -2147483648 ? 0 : this.field_j;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
+    private final static int mixForwardMonoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -70,14 +70,14 @@ final class PcmSampleStream extends PcmStream {
             if (this.field_r == 256 &&
               (this.field_l & 255) == 0) {
               if (PcmPlayerService.field_o) {
-                return PcmSampleStream.b(0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this);
+                return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this);
               }
-              return PcmSampleStream.b(((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this);
+              return PcmSampleStream.mixForwardMonoAligned(((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this);
             }
             if (PcmPlayerService.field_o) {
-              return PcmSampleStream.b(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this, this.field_r, param4);
+              return PcmSampleStream.mixForwardStereoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this, this.field_r, param4);
             }
-            return PcmSampleStream.b(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this, this.field_r, param4);
+            return PcmSampleStream.mixForwardMonoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this, this.field_r, param4);
           }
           var6 = param1 + this.field_k;
           if (var6 > param3) {
@@ -87,15 +87,15 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_r == 256 &&
             (this.field_l & 255) == 0) {
             if (!PcmPlayerService.field_o) {
-              param1 = PcmSampleStream.a(((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this);
+              param1 = PcmSampleStream.mixForwardMonoAlignedRamp(((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this);
             } else {
-              param1 = PcmSampleStream.a(0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this);
+              param1 = PcmSampleStream.mixForwardStereoAlignedRamp(0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this);
             }
           } else {
             if (!PcmPlayerService.field_o) {
-              param1 = PcmSampleStream.d(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this, this.field_r, param4);
+              param1 = PcmSampleStream.mixForwardMonoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this, this.field_r, param4);
             } else {
-              param1 = PcmSampleStream.b(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this, this.field_r, param4);
+              param1 = PcmSampleStream.mixForwardStereoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this, this.field_r, param4);
             }
           }
           this.field_k = this.field_k - param1;
@@ -106,8 +106,8 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized boolean f() {
-        return this.field_l < 0 || this.field_l >= ((to) (this.field_h)).field_i.length << 8;
+    final synchronized boolean isSamplePositionOutOfRange() {
+        return this.field_l < 0 || this.field_l >= ((PcmSample) (this.field_h)).field_i.length << 8;
     }
 
     final PcmStream b() {
@@ -124,7 +124,7 @@ final class PcmSampleStream extends PcmStream {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
+    private final static int mixReverseMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -177,7 +177,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void a(boolean param0) {
+    final synchronized void setReversePlayback(boolean param0) {
         this.field_r = (this.field_r ^ this.field_r >> 31) + (this.field_r >>> 31);
         if (!param0) {
           return;
@@ -192,14 +192,14 @@ final class PcmSampleStream extends PcmStream {
             if (this.field_r == -256 &&
               (this.field_l & 255) == 0) {
               if (PcmPlayerService.field_o) {
-                return PcmSampleStream.a(0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this);
+                return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this);
               }
-              return PcmSampleStream.a(((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this);
+              return PcmSampleStream.mixReverseMonoAligned(((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this);
             }
             if (PcmPlayerService.field_o) {
-              return PcmSampleStream.a(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this, this.field_r, param4);
+              return PcmSampleStream.mixReverseStereoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, 0, param3, param2, this, this.field_r, param4);
             }
-            return PcmSampleStream.a(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this, this.field_r, param4);
+            return PcmSampleStream.mixReverseMonoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, 0, param3, param2, this, this.field_r, param4);
           }
           var6 = param1 + this.field_k;
           if (var6 > param3) {
@@ -209,15 +209,15 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_r == -256 &&
             (this.field_l & 255) == 0) {
             if (!PcmPlayerService.field_o) {
-              param1 = PcmSampleStream.b(((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this);
+              param1 = PcmSampleStream.mixReverseMonoAlignedRamp(((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this);
             } else {
-              param1 = PcmSampleStream.b(0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this);
+              param1 = PcmSampleStream.mixReverseStereoAlignedRamp(0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this);
             }
           } else {
             if (!PcmPlayerService.field_o) {
-              param1 = PcmSampleStream.c(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this, this.field_r, param4);
+              param1 = PcmSampleStream.c(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_v, this.field_t, 0, var6, param2, this, this.field_r, param4);
             } else {
-              param1 = PcmSampleStream.a(0, 0, ((to) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this, this.field_r, param4);
+              param1 = PcmSampleStream.mixReverseStereoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_i, param0, this.field_l, param1, this.field_s, this.field_q, this.field_o, this.field_w, 0, var6, param2, this, this.field_r, param4);
             }
           }
           this.field_k = this.field_k - param1;
@@ -234,7 +234,7 @@ final class PcmSampleStream extends PcmStream {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        to var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -247,7 +247,7 @@ final class PcmSampleStream extends PcmStream {
           this.a(param2);
           return;
         }
-        var4 = (to) (this.field_h);
+        var4 = (PcmSample) (this.field_h);
         var5 = this.field_n << 8;
         var6 = this.field_u << 8;
         var7 = var4.field_i.length << 8;
@@ -409,7 +409,7 @@ final class PcmSampleStream extends PcmStream {
         return;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
+    private final static int mixReverseStereoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -502,7 +502,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
+    private final static int mixForwardStereoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -561,7 +561,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
+    private final static int mixReverseStereoAlignedRamp(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -718,7 +718,7 @@ final class PcmSampleStream extends PcmStream {
         return false;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
+    private final static int mixForwardStereoAlignedRamp(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -867,7 +867,7 @@ final class PcmSampleStream extends PcmStream {
         this.c((byte) -109);
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
+    private final static int mixForwardMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -924,7 +924,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_l >> 8;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
+    private final static int mixForwardStereoAligned(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -990,7 +990,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
+    private final static int mixReverseMonoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -1122,7 +1122,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_k = 0;
     }
 
-    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
+    private final static int mixForwardMonoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.field_s = param11.field_s - param11.field_o * param5;
@@ -1166,7 +1166,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
+    private final static int mixForwardStereoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1223,14 +1223,14 @@ final class PcmSampleStream extends PcmStream {
         this.h();
     }
 
-    final synchronized void i() {
+    final synchronized void playBackwardFromEnd() {
         this.field_r = (this.field_r ^ this.field_r >> 31) + (this.field_r >>> 31);
         this.field_r = -this.field_r;
-        this.field_l = ((to) (this.field_h)).field_i.length - 1 << 8;
+        this.field_l = ((PcmSample) (this.field_h)).field_i.length - 1 << 8;
     }
 
-    final synchronized void i(int param0) {
-        int var2 = ((to) (this.field_h)).field_i.length << 8;
+    final synchronized void setSamplePositionFixed(int param0) {
+        int var2 = ((PcmSample) (this.field_h)).field_i.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -1240,7 +1240,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_l = param0;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
+    private final static int mixReverseStereoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1298,7 +1298,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final static PcmSampleStream a(to param0, int param1, int param2, int param3) {
+    final static PcmSampleStream createAtRatePercentQ6(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_i == null) {
           return null;
         }
@@ -1308,7 +1308,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
+    private final static int mixReverseStereoAligned(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1382,10 +1382,10 @@ final class PcmSampleStream extends PcmStream {
         int var1 = this.field_v * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_p == 0) {
-          var1 = var1 - var1 * this.field_l / (((to) (this.field_h)).field_i.length << 8);
+          var1 = var1 - var1 * this.field_l / (((PcmSample) (this.field_h)).field_i.length << 8);
         } else {
           if (this.field_p >= 0) {
-            var1 = var1 - var1 * this.field_n / ((to) (this.field_h)).field_i.length;
+            var1 = var1 - var1 * this.field_n / ((PcmSample) (this.field_h)).field_i.length;
           }
         }
         return var1 > 255 ? 255 : var1;
@@ -1399,7 +1399,7 @@ final class PcmSampleStream extends PcmStream {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        to var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -1424,7 +1424,7 @@ final class PcmSampleStream extends PcmStream {
             this.h();
           }
         }
-        var2 = (to) (this.field_h);
+        var2 = (PcmSample) (this.field_h);
         var3 = this.field_n << 8;
         var4 = this.field_u << 8;
         var5 = var2.field_i.length << 8;
@@ -1568,7 +1568,7 @@ final class PcmSampleStream extends PcmStream {
         this.c((byte) -109);
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
+    private final static int mixReverseMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1630,7 +1630,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final static PcmSampleStream b(to param0, int param1, int param2, int param3) {
+    final static PcmSampleStream b(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_i == null) {
           return null;
         }
@@ -1640,7 +1640,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
+    private final static int mixForwardMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1714,7 +1714,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void setVolume(int param0) {
         this.b(param0 << 6, this.k());
     }
 
@@ -1722,12 +1722,12 @@ final class PcmSampleStream extends PcmStream {
         this.field_p = param0;
     }
 
-    final synchronized int e() {
+    final synchronized int getSampleStepMagnitude() {
         return this.field_r < 0 ? -this.field_r : this.field_r;
     }
 
-    private PcmSampleStream(to param0, int param1, int param2, int param3) {
-        this.field_h = (dm) ((Object) param0);
+    private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
+        this.field_h = (AbstractPcmSample) ((Object) param0);
         this.field_n = param0.field_h;
         this.field_u = param0.field_j;
         this.field_m = param0.field_g;

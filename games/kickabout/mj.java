@@ -15,7 +15,7 @@ final class mj {
         hl.field_e = ng.a(0, param1, param0 - 7, 11, true, 30);
         hq.field_e = ng.a(30, param1, param0 ^ 111, 11, false, 60);
         DualLinkNode.field_h = sr.a(60, param1, true, (byte) -67, 80, 11);
-        ub.field_G = sr.a(80, param1, false, (byte) -120, 95, 11);
+        ModalPanel.field_G = sr.a(80, param1, false, (byte) -120, 95, 11);
         c.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
         if (param0 != -39) {
           return;
@@ -24,7 +24,7 @@ final class mj {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = eb.field_i[var2_int];
             c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.h());
-            pd.a(c.field_f[var2_int], 20684);
+            LoginForm.a(c.field_f[var2_int], 20684);
             jm.a(100, 9863, var2_int + 96);
           }
           var7 = al.field_Bb[ih.field_c];
@@ -32,15 +32,15 @@ final class mj {
           var5 = var6;
           double[] var2 = var5;
           bf.field_x = fn.field_f.h();
-          LoggedGoal.field_o = kn.field_J.b();
-          od.field_p = vl.field_g.b();
+          LoggedGoal.field_o = kn.field_J.copy();
+          od.field_p = vl.field_g.copy();
           nh.a(bf.field_x.field_y, var7[0], var7[1], var7[2]);
           nh.a(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
           nh.a(od.field_p.field_y, var7[0], var7[1], var7[2]);
           wh.field_p = eo.b(bf.field_x);
-          tm.field_z = eo.a(wh.field_p);
-          pf.field_b = eo.b(tm.field_z);
-          mt.field_d = new Sprite(tm.field_z.field_o, LoggedGoal.field_o.field_v);
+          ConsoleCommand.field_z = eo.a(wh.field_p);
+          pf.field_b = eo.b(ConsoleCommand.field_z);
+          mt.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
           qj.field_a = new Sprite(od.field_p.field_o, bf.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
           LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
@@ -65,7 +65,7 @@ final class mj {
           if (!param0) {
             mj.a(-0.3391155972284911, 69, -1.3430351906994813, -0.23628554021572995);
           }
-          pi.field_b.b(param1);
+          pi.field_b.removeSubstream(param1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -362,7 +362,7 @@ class hd extends iv {
           hd.g(-41);
         }
         if (!dg.field_a &&
-          mu.field_Y == null) {
+          ContentTransitionDialog.field_Y == null) {
           var3 = 0;
         }
         if (NodeHashTableIterator.field_b == 0 &&
@@ -383,8 +383,8 @@ class hd extends iv {
             if (cq.field_m.length() > 0) {
               var4_ref_String = cq.field_m.toString();
               if (tb.a(var4_ref_String, -125)) {
-                wi.a((String) null, (String) null, 0, 2, ng.field_i, -125);
-                wi.a((String) null, (String) null, 0, 2, mg.field_e, -126);
+                TextButton.a((String) null, (String) null, 0, 2, ng.field_i, -125);
+                TextButton.a((String) null, (String) null, 0, 2, mg.field_e, -126);
               } else {
                 var5 = NodeHashTableIterator.field_b;
                 if (var5 == 0 &&
@@ -434,8 +434,8 @@ class hd extends iv {
               }
               if (uv.field_i != null) {
                 if (ol.field_R &&
-                  null != ct.field_x) {
-                  var7Lifetime6 = "[" + ct.field_x + "] ";
+                  null != SingleChildContainer.field_x) {
+                  var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
                   var7Lifetime6 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{uv.field_i.field_ec}) + "] ";
                 }
@@ -534,7 +534,7 @@ class hd extends iv {
         var9 = SoftwareRasterizer.field_e;
         var10 = SoftwareRasterizer.field_c;
         var11 = SoftwareRasterizer.field_h;
-        SoftwareRasterizer.h(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
+        SoftwareRasterizer.intersectClip(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
         var12 = 0;
         if (!ic.field_f &&
           param2 &&
@@ -554,7 +554,7 @@ class hd extends iv {
           }
           this.field_sb = 0;
         }
-        stackIn_31_1 = (!bd.field_D) && (SoftwareRasterizer.field_b <= el.field_A) && (el.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= n.field_m) && (n.field_m < SoftwareRasterizer.field_h);
+        stackIn_31_1 = (!bd.field_D) && (SoftwareRasterizer.field_b <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= n.field_m) && (n.field_m < SoftwareRasterizer.field_h);
         this.field_Q = stackIn_31_1;
         if (FootballerAgent.field_p == 0) {
           this.field_qb = 0;
@@ -574,11 +574,11 @@ class hd extends iv {
         if (var12 != 0) {
           ic.field_f = true;
         }
-        SoftwareRasterizer.e(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_qb != 0 &&
           this.field_Y) {
           this.field_J = -param4 - this.field_M + n.field_m;
-          this.field_s = -param0 + (-this.field_bb + el.field_A);
+          this.field_s = -param0 + (-this.field_bb + BytePlusOneCommand.field_A);
           if (this.field_s < 0) {
             this.field_s = 0;
           }
@@ -713,7 +713,7 @@ class hd extends iv {
           return;
         }
         var15 = SoftwareRasterizer.field_h;
-        SoftwareRasterizer.h(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
+        SoftwareRasterizer.intersectClip(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
         if (!this.field_z) {
           param4 = this.field_gb;
           stackIn_6_0 = (this.field_qb != 0);
@@ -862,7 +862,7 @@ class hd extends iv {
             var23_ref = (hd) (this.field_jb.c(33));
           }
         }
-        SoftwareRasterizer.e(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
         return;
     }
 

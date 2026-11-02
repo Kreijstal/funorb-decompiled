@@ -226,16 +226,16 @@ abstract class cv {
           ra.field_G = null;
           ce.field_I = 0;
           FormationAgent.field_f = po.a(cq.field_h, -4);
-          if (wi.field_B) {
+          if (TextButton.field_B) {
             sr.field_l = null;
-            wi.field_B = false;
+            TextButton.field_B = false;
           }
           if (al.field_Db) {
             um.field_e = null;
             al.field_Db = false;
             oa.b(-23217);
             mv.$cfr$intArgs$a$6121ff5511c4(119);
-            el.g(0);
+            BytePlusOneCommand.g(0);
           }
           if (mc.field_j) {
             vs.field_g = null;

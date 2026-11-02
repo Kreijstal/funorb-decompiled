@@ -176,7 +176,7 @@ final class po {
         js var3 = null;
         js var3Lifetime1;
         js var3Lifetime2;
-        if (fb.field_J == null) {
+        if (NumericDateInputWidget.field_J == null) {
           if (param0 == -27) {
             return;
           }
@@ -184,7 +184,7 @@ final class po {
           po.a((js) null, 65);
           return;
         }
-        if (!fb.field_J.a((byte) -122, param1)) {
+        if (!NumericDateInputWidget.field_J.a((byte) -122, param1)) {
           if (param0 == -27) {
             return;
           }
@@ -192,7 +192,7 @@ final class po {
           po.a((js) null, 65);
           return;
         }
-        fb.field_J = null;
+        NumericDateInputWidget.field_J = null;
         if (param0 == -27) {
           return;
         }

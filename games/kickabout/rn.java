@@ -64,7 +64,7 @@ final class rn {
           }
           var7 = fm.a(param0, 145);
           if (var7 == null) {
-            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, jf.field_A, new String[]{param0});
+            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
             return stackIn_10_0;
           }
           var7.c((byte) -109);
@@ -101,11 +101,11 @@ final class rn {
 
     final static int b(int param0, int param1) {
         if (param1 == 3) {
-          return t.field_f[param0 & 2047];
+          return TriangleRasterizer.field_f[param0 & 2047];
         }
         String var3 = (String) null;
         rn.a((String) null, -48, 14, (String) null);
-        return t.field_f[param0 & 2047];
+        return TriangleRasterizer.field_f[param0 & 2047];
     }
 
     public static void a(int param0) {

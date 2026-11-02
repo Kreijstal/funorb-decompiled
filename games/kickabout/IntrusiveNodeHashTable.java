@@ -137,7 +137,7 @@ final class IntrusiveNodeHashTable {
           ug.field_c = param1;
           sp.field_Hb = new Sprite[ug.field_c.length];
           for (var2_int = 0; var2_int < ug.field_c.length; var2_int++) {
-            var3 = ug.field_c[var2_int].b();
+            var3 = ug.field_c[var2_int].copy();
             var4 = 0;
             var5 = 0;
             for (var6 = -1 + var3.field_y.length; var6 >= 0; var6--) {

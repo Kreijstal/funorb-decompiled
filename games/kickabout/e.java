@@ -99,9 +99,9 @@ final class e extends js {
           var7 = 0;
           var8 = 0;
           if (null != uv.field_i && (null != ds.field_h ||
-            lh.field_E != null ||
+            BroadcastServerCommand.field_E != null ||
             null != so.field_f ||
-            hm.field_D != null)) {
+            SumIntegersCommand.field_D != null)) {
             for (var9 = 0; var9 < ss.field_j; var9++) {
               var10_int = uv.field_i.field_Eb[var9] & 255;
               if (ds.field_h != null &&
@@ -109,9 +109,9 @@ final class e extends js {
                 ds.field_h[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (lh.field_E != null &&
-                null != lh.field_E[var9]) {
-                var11_int = lh.field_E[var9][var10_int];
+              if (BroadcastServerCommand.field_E != null &&
+                null != BroadcastServerCommand.field_E[var9]) {
+                var11_int = BroadcastServerCommand.field_E[var9][var10_int];
                 if (0 != var11_int &&
                   !fv.field_d) {
                   var5_int = 1;
@@ -120,9 +120,9 @@ final class e extends js {
                   var6 = var11_int;
                 }
               }
-              if (null != hm.field_D &&
-                null != hm.field_D[var9]) {
-                var8 = var8 | hm.field_D[var9][var10_int];
+              if (null != SumIntegersCommand.field_D &&
+                null != SumIntegersCommand.field_D[var9]) {
+                var8 = var8 | SumIntegersCommand.field_D[var9][var10_int];
               }
               if (null != so.field_f &&
                 null != so.field_f[var9]) {
@@ -158,12 +158,12 @@ final class e extends js {
                 var12.a((byte) -127, var12.field_Ob);
               }
               var12.field_Ob.field_A = 2;
-              var12.field_zb = new hd(0L, dw.field_e);
+              var12.field_zb = new hd(0L, ConsoleEvaluationException.field_e);
               var12.a((byte) -112, var12.field_zb);
               var12.b(false);
               var12.field_Tb = new hd(0L, LoggedPlayer.field_r);
               var12.a((byte) -115, var12.field_Tb);
-              var12.field_Hb = new hd(0L, mb.field_F);
+              var12.field_Hb = new hd(0L, DisplayNameForm.field_F);
               var13 = 1;
               var12.a((byte) -121, var12.field_Hb);
             }
@@ -239,7 +239,7 @@ final class e extends js {
                   if (var12.field_Fb) {
                     var12.field_Lb.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_p, new String[]{var20});
                     var12.field_Tb.field_E = kw.field_a;
-                    var12.field_Hb.field_E = jo.field_A;
+                    var12.field_Hb.field_E = DemoIntegersCommand.field_A;
                   } else {
                     var12.field_Tb.field_E = nc.field_c;
                   }
@@ -323,7 +323,7 @@ final class e extends js {
                   ko.a(64, param3, var12.field_Ab);
                 }
               } else {
-                uc.a(var12.field_Ab, param3, 122);
+                IntTripleCommand.a(var12.field_Ab, param3, 122);
               }
             }
             var11 = var12;
@@ -413,9 +413,9 @@ final class e extends js {
                     !var12.field_Cb) {
                     var29 = 1;
                   }
-                  if (null != lh.field_E &&
-                    lh.field_E[var27_int] != null) {
-                    var30_int = lh.field_E[var27_int][var28];
+                  if (null != BroadcastServerCommand.field_E &&
+                    BroadcastServerCommand.field_E[var27_int] != null) {
+                    var30_int = BroadcastServerCommand.field_E[var27_int][var28];
                     if (var30_int != 0 &&
                       !fv.field_d &&
                       !var12.field_Cb) {
@@ -437,9 +437,9 @@ final class e extends js {
                       var29 = 1;
                     }
                   }
-                  if (null != hm.field_D &&
-                    hm.field_D[var27_int] != null &&
-                    (~var12.field_Pb & hm.field_D[var27_int][var28]) != 0) {
+                  if (null != SumIntegersCommand.field_D &&
+                    SumIntegersCommand.field_D[var27_int] != null &&
+                    (~var12.field_Pb & SumIntegersCommand.field_D[var27_int][var28]) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {
@@ -460,7 +460,7 @@ final class e extends js {
                 if (param0 == ClientException.field_c &&
                   np.a(47)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, oj.field_V, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_V, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + vg.field_Cb + (String) (var25);
                   }

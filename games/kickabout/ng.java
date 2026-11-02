@@ -14,12 +14,12 @@ final class ng {
     static Sprite[] field_j;
     static boolean field_e;
 
-    final static kg[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final static IndexedSprite[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         int var8_int = 0;
         int var10_int = 0;
         int stackIn_11_0 = 0;
-        kg[] var6;
-        kg var7_ref_kg;
+        IndexedSprite[] var6;
+        IndexedSprite var7_ref_kg;
         int var7;
         IntrusiveDeque var8;
         int var9;
@@ -28,13 +28,13 @@ final class ng {
         int var12;
         int var13;
         int var14;
-        kg[] var15;
+        IndexedSprite[] var15;
         Object var16;
         nr var17;
         int var9Lifetime1;
         var16 = null;
         var14 = Kickabout.field_G;
-        var15 = new kg[6];
+        var15 = new IndexedSprite[6];
         var6 = var15;
         if (!vi.field_n) {
           var7_ref_kg = eo.a(bt.a(-126, param4, param3));
@@ -122,7 +122,7 @@ final class ng {
         if (param0 != -4) {
           field_e = false;
         }
-        return nn.field_D;
+        return AccountChoicePanel.field_D;
     }
 
     final String a(byte param0) {
@@ -177,7 +177,7 @@ final class ng {
           if (param2 != 2) {
             field_j = (Sprite[]) null;
           }
-          var5 = param3.a((byte) -104, param0, var4_int);
+          var5 = param3.findFileId((byte) -104, param0, var4_int);
           stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

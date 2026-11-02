@@ -39,7 +39,7 @@ final class c {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (op.field_y != null && (param0 < 0 ||
-            un.field_c == jn.field_rb)) {
+            un.field_c == RegistrationRequestDialog.field_rb)) {
             if (0 == or.field_d.field_n &&
               (mp.field_i + 10000L) < nj.a(86)) {
               or.field_d.b(param0, (byte) 101);

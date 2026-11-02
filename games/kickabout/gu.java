@@ -118,7 +118,7 @@ final class gu extends hd {
         if (param4 <= 107) {
           return (ResourceArchive) null;
         }
-        return uj.a(param1, (byte) 112, param2, param0, false, param3);
+        return SetLagCommand.a(param1, (byte) 112, param2, param0, false, param3);
     }
 
     final void a(String param0, boolean param1, int param2, Sprite param3) {

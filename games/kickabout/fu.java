@@ -61,7 +61,7 @@ final class fu {
         }
         int[] var4 = new int[this.b(param0, 20151)];
         int[] var3 = var4;
-        dv.a(this.field_d, 0, var4, 0, this.field_d.length);
+        ArrayOperations.a(this.field_d, 0, var4, 0, this.field_d.length);
         this.field_d = var4;
     }
 
@@ -156,7 +156,7 @@ final class fu {
             return;
           }
           if (param1 != this.field_g) {
-            dv.a(this.field_d, param1 + 1, this.field_d, param1, this.field_g - param1);
+            ArrayOperations.a(this.field_d, param1 + 1, this.field_d, param1, this.field_g - param1);
           }
           this.field_g = this.field_g - 1;
           return;

@@ -113,7 +113,7 @@ final class nq extends i {
         Sprite var3 = null;
         try {
           var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[42], new String[]{param0});
-          var3 = kb.field_E[6];
+          var3 = WriteIntegersCommand.field_E[6];
           this.a(var2, this.field_t, var3, -99, this.field_u);
           this.a(ds.a(this.field_y, 1), pg.a(false, 42), 1054928844);
         } catch (RuntimeException runtimeException) {

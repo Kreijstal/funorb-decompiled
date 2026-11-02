@@ -5,10 +5,10 @@ final class q {
     static int[] field_e;
     static String field_f;
     static int field_b;
-    private lk[] field_g;
+    private ConsoleExpression[] field_g;
     int field_a;
     static String[] field_h;
-    static uo field_d;
+    static BinaryBitmapFont field_d;
     static String field_c;
 
     final static void a(hd param0, int param1, int param2, int param3, hd param4, byte[] param5, hd param6, int param7, int param8, int param9) {
@@ -102,9 +102,9 @@ final class q {
         }
     }
 
-    final lk a(byte param0) {
+    final ConsoleExpression a(byte param0) {
         if (param0 <= 55) {
-          return (lk) null;
+          return (ConsoleExpression) null;
         }
         int fieldTemp$0 = this.field_a;
         this.field_a = this.field_a + 1;
@@ -196,7 +196,7 @@ final class q {
     q(IntrusiveDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
-        lk var3 = null;
+        ConsoleExpression var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -204,15 +204,15 @@ final class q {
         RuntimeException var2 = null;
         this.field_a = 0;
         try {
-          this.field_g = new lk[param0.a(false)];
+          this.field_g = new ConsoleExpression[param0.a(false)];
           var2_int = 0;
-          var3 = (lk) (param0.g(24009));
+          var3 = (ConsoleExpression) (param0.g(24009));
           while (var3 != null) {
             var3.c((byte) -109);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_g[incrementValue$2] = var3;
-            var3 = (lk) (param0.c(33));
+            var3 = (ConsoleExpression) (param0.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

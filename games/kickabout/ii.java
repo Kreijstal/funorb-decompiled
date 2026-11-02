@@ -14,7 +14,7 @@ final class ii extends IntrusiveNode {
 
     final static void b(int param0) {
         int var1_int = 0;
-        eg var2 = null;
+        ModelMesh var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

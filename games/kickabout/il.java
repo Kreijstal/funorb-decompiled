@@ -107,7 +107,7 @@ final class il {
             stackIn_3_0 = kq.field_Ib;
             return stackIn_3_0;
           }
-          if (hm.a((byte) 86, param0)) {
+          if (SumIntegersCommand.a((byte) 86, param0)) {
             stackIn_7_0 = ec.field_g;
             return stackIn_7_0;
           }

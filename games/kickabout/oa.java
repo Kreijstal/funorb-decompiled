@@ -16,10 +16,10 @@ final class oa {
     }
 
     final static Sprite a(boolean param0, int param1, byte param2) {
-        kg[] var17 = null;
+        IndexedSprite[] var17 = null;
         int[] var15 = null;
         Sprite var16 = null;
-        kg[] var10 = null;
+        IndexedSprite[] var10 = null;
         int var4 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -43,12 +43,12 @@ final class oa {
           }
           var17[2].a(var7, 0);
           ta.e(122);
-          pd.a(var16, 20684);
+          LoginForm.a(var16, 20684);
           return var16;
         }
         oa.b(-53);
         var10 = ph.field_e[!param0 ? 3 : 1];
-        kg[] var14 = var10;
+        IndexedSprite[] var14 = var10;
         var4Lifetime1 = var10[0].field_a;
         int[] var12 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
         Sprite var13 = new Sprite(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
@@ -62,7 +62,7 @@ final class oa {
         }
         var14[2].a(var7Lifetime1, 0);
         ta.e(122);
-        pd.a(var13, 20684);
+        LoginForm.a(var13, 20684);
         return var13;
     }
 
@@ -86,7 +86,7 @@ final class oa {
             var8 += 128;
           }
           var10.a(108, var8);
-          var10.a(0, param5.length, 1991220144, param5);
+          var10.readBytes(0, param5.length, 1991220144, param5);
           var10.c(62, -var7 + var10.field_n);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

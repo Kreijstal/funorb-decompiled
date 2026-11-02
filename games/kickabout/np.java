@@ -300,12 +300,12 @@ final class np extends hd {
         }
         if (!la.a(100)) {
           if (vs.field_g != null) {
-            pd.a((byte) 70, 3, vs.field_g);
+            LoginForm.a((byte) 70, 3, vs.field_g);
           }
           ImageProducerRasterBuffer.c((byte) -77);
           if (ProxySocketConnector.field_e) {
             ProxySocketConnector.field_e = false;
-            dw.a(false, 0);
+            ConsoleEvaluationException.a(false, 0);
           }
         }
         eq.field_a = bn.field_A;

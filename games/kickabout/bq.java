@@ -45,7 +45,7 @@ final class bq {
           } else {
             stackIn_4_1 = ee.field_b;
           }
-          dw.a(stackIn_3_0, stackIn_4_1);
+          ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
           ni.field_l.a(0, dn.field_Cb.field_q, 0, -2 + (-40 + dn.field_Cb.field_mb), (byte) -80);
           ka.field_c.a(true, fm.field_C.field_q, 0, 0, sh.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
@@ -57,7 +57,7 @@ final class bq {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
           ((hd) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
-          jf.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
+          DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
           ClientException.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, TeamSelectionAgent.field_f);
           ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
           ci.field_h.a(true, fp.field_p.field_q, 0, 0, 30);
@@ -113,8 +113,8 @@ final class bq {
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (wi.field_z != null) {
-                      stackIn_49_0 = (wi.field_z[-4 + var6]) ? 1 : 0;
+                    if (TextButton.field_z != null) {
+                      stackIn_49_0 = (TextButton.field_z[-4 + var6]) ? 1 : 0;
                     } else {
                       stackIn_49_0 = 0;
                     }

@@ -176,30 +176,30 @@ final class dd {
         }
     }
 
-    final qc a(qc param0, boolean param1, boolean param2, boolean param3) {
-        qc var5 = null;
+    final ModelMeshBase a(ModelMeshBase param0, boolean param1, boolean param2, boolean param3) {
+        ModelMeshBase var5 = null;
         RuntimeException var5_ref = null;
-        qc stackIn_2_0 = null;
-        qc stackIn_5_0 = null;
+        ModelMeshBase stackIn_2_0 = null;
+        ModelMeshBase stackIn_5_0 = null;
         boolean stackIn_5_1 = false;
         boolean stackIn_5_2 = false;
         boolean stackIn_6_3;
-        qc stackIn_7_0 = null;
+        ModelMeshBase stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param3) {
-            stackIn_2_0 = (qc) null;
+            stackIn_2_0 = (ModelMeshBase) null;
             return stackIn_2_0;
           }
-          stackIn_5_0 = (qc) (param0);
+          stackIn_5_0 = (ModelMeshBase) (param0);
           stackIn_5_1 = param2;
           stackIn_5_2 = false;
           stackIn_6_3 = !(param1);
-          var5 = ((qc) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
-          var5.a(se.field_C, this.field_j, (ef) null, -1, 0, 0, param1);
+          var5 = ((ModelMeshBase) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
+          var5.applyAnimationFrame(ModalStack.field_C, this.field_j, (ef) null, -1, 0, 0, param1);
           stackIn_7_0 = var5;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

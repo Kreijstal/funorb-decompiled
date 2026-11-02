@@ -13,7 +13,7 @@ class PacketBuffer extends IntrusiveNode {
     static String field_k;
     static boolean field_l;
 
-    final void a(int param0, int param1, int param2, byte[] param3) {
+    final void readBytes(int param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -98,7 +98,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void g(int param0) {
-        qd.b(38, param0);
+        IndexedSpriteState.b(38, param0);
     }
 
     final int k(int param0) {
@@ -338,7 +338,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_f[fieldTemp$6] = (byte)(int)param1;
     }
 
-    final void b(byte param0, long param1) {
+    final void writeFiveByteValue(byte param0, long param1) {
         if (param0 < 2) {
           this.j(-37);
         }
@@ -745,13 +745,13 @@ class PacketBuffer extends IntrusiveNode {
           var8 = var7.toByteArray();
           this.field_n = 0;
           this.g(-1207444472, var8.length);
-          this.a(0, var8.length, 1991220144, var8);
+          this.readBytes(0, var8.length, 1991220144, var8);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "iw.IA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int[] param0, byte param1) {
+    final void encryptXtea(int[] param0, byte param1) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

@@ -145,7 +145,7 @@ final class b extends ta {
         int stackIn_61_1 = 0;
         hd var3;
         kq var4;
-        uo var5;
+        BinaryBitmapFont var5;
         String var6;
         ArgbSprite var7;
         int var8;
@@ -187,11 +187,11 @@ final class b extends ta {
           var3 = (hd) (this.field_Y.field_jb.c(33));
         }
         boolean decompiledFrameRemainder0 = true;
-        SoftwareRasterizer.g(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
+        SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
         un.field_d.a(oc.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
         var4 = this.field_L.j((byte) 21);
-        var5 = pb.field_C;
+        var5 = IsSixCommand.field_C;
         if (var4 == null) {
           var5.a(gu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
         } else {
@@ -229,7 +229,7 @@ final class b extends ta {
           if (var26.field_n == 100 &&
             100 == var26.field_o &&
             var26.field_g == 100) {
-            var5.a(ae.field_M, this.field_P.field_F + 10, this.field_P.field_T + 31, -20 + this.field_P.field_q, -60 + this.field_P.field_mb, 11184810, -1, 0, 1, 16);
+            var5.a(AccountRegistrationPanel.field_M, this.field_P.field_F + 10, this.field_P.field_T + 31, -20 + this.field_P.field_q, -60 + this.field_P.field_mb, 11184810, -1, 0, 1, 16);
           } else {
             var15_int = this.field_P.field_F + (-100 + this.field_P.field_q >> 1);
             var16 = 36 + this.field_P.field_T;
@@ -368,7 +368,7 @@ final class b extends ta {
             if (var8.j(256)) {
               stackIn_15_0 = mc.field_f;
             } else {
-              stackIn_15_0 = cj.field_E;
+              stackIn_15_0 = DateInputWidget.field_E;
             }
             var10 = stackIn_15_0;
             this.field_K[var7] = eo.a(var10, 7126504);
@@ -408,7 +408,7 @@ final class b extends ta {
         }
         this.field_I.field_E = tr.field_g.toLowerCase();
         this.field_W.field_E = q.field_f.toLowerCase();
-        this.field_P.field_E = fi.field_d.toLowerCase();
+        this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
         this.field_G.field_E = ca.field_d.toLowerCase();
         this.field_X.field_E = mp.field_k.toLowerCase();
         this.field_Q = eo.a(NodeHashTableIterator.field_c, 7126504);

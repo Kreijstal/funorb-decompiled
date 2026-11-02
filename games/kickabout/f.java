@@ -15,12 +15,12 @@ final class f {
         }
         if (param0 > 109) {
           var5 = tb.field_q[param1 % 10];
-          var5.c(-var5.field_s + param4, param3, param2);
+          var5.drawAdditive(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
         }
         f.$cfr$intArgs$a$8e2a9e3a0d15(-108, -67, -1, 23, 75);
         var5Lifetime1 = tb.field_q[param1 % 10];
-        var5Lifetime1.c(-var5Lifetime1.field_s + param4, param3, param2);
+        var5Lifetime1.drawAdditive(-var5Lifetime1.field_s + param4, param3, param2);
         return var5Lifetime1.field_q + param4 + 3;
     }
 
@@ -68,12 +68,12 @@ final class f {
         }
         if (param0 > 109) {
           var5 = tb.field_q[param1 % 10];
-          var5.c(-var5.field_s + param4, param3, param2);
+          var5.drawAdditive(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
         }
         f.$cfr$intArgs$a$8e2a9e3a0d15(-108, -67, -1, 23, 75);
         var5Lifetime1 = tb.field_q[param1 % 10];
-        var5Lifetime1.c(-var5Lifetime1.field_s + param4, param3, param2);
+        var5Lifetime1.drawAdditive(-var5Lifetime1.field_s + param4, param3, param2);
         return var5Lifetime1.field_q + param4 + 3;
     }
 }

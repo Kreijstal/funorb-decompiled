@@ -46,10 +46,10 @@ final class aw extends i {
         }
     }
 
-    final static kg a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        kg stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -57,12 +57,12 @@ final class aw extends i {
         try {
           if (!cu.a(param0, param2, param1, param3 ^ 123)) {
             stackIn_2_0 = null;
-            return (kg) (stackIn_2_0);
+            return (IndexedSprite) (stackIn_2_0);
           }
           if (param3 != 2) {
             field_G = (String) null;
           }
-          stackIn_6_0 = ub.h((byte) -128);
+          stackIn_6_0 = ModalPanel.h((byte) -128);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

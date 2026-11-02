@@ -42,21 +42,21 @@ final class nk extends dg {
         int[] var10 = var11;
         int[] var9 = var10;
         int[] var6 = var9;
-        SoftwareRasterizer.a(var11);
+        SoftwareRasterizer.saveClip(var11);
         if (param4 != 3) {
           nk.$cfr$intArgs$b$c4997cb15529(94);
         } else {
-          SoftwareRasterizer.e(param0, param2, param3 + param0, param2 + param1);
-          cq.field_j.c(-40 + param0, param2 - 290, 32);
-          SoftwareRasterizer.b(var11);
+          SoftwareRasterizer.setClip(param0, param2, param3 + param0, param2 + param1);
+          cq.field_j.drawAdditive(-40 + param0, param2 - 290, 32);
+          SoftwareRasterizer.restoreClip(var11);
           for (var7 = 0; var7 < 2; var7++) {
             SoftwareRasterizer.e(var7 + param0, var7 + param2, -var7 - var7 + param3, param1 - var7 - var7, 65793);
           }
           return;
         }
-        SoftwareRasterizer.e(param0, param2, param3 + param0, param2 + param1);
-        cq.field_j.c(-40 + param0, param2 - 290, 32);
-        SoftwareRasterizer.b(var11);
+        SoftwareRasterizer.setClip(param0, param2, param3 + param0, param2 + param1);
+        cq.field_j.drawAdditive(-40 + param0, param2 - 290, 32);
+        SoftwareRasterizer.restoreClip(var11);
         for (var7Lifetime1 = 0; var7Lifetime1 < 2; var7Lifetime1++) {
           SoftwareRasterizer.e(var7Lifetime1 + param0, var7Lifetime1 + param2, -var7Lifetime1 - var7Lifetime1 + param3, param1 - var7Lifetime1 - var7Lifetime1, 65793);
         }

@@ -94,7 +94,7 @@ final class vb {
                 for (var1_int = 0; var1_int < bv.field_l.length; var1_int++) {
                   stackIn_11_0 = (ih.field_c != 2) ? -60 : -120;
                   var2 = stackIn_11_0;
-                  var2 = el.a(29430, 15, var2);
+                  var2 = BytePlusOneCommand.a(29430, 15, var2);
                   var3 = 20 + var1_int * 45;
                   var4 = 6;
                   if (0 == p.a((byte) -24, 2)) {

@@ -124,7 +124,7 @@ final class io {
                                                                             vi.c((byte) -59);
                                                                           } else {
                                                                             if (this.field_m == 13) {
-                                                                              wv.field_ib = 0;
+                                                                              AccountRequestDialog.field_ib = 0;
                                                                             } else {
                                                                               if (this.field_m != 14) {
                                                                                 if (this.field_m != 19) {
@@ -155,7 +155,7 @@ final class io {
                                                                                   op.field_v = 2147483647;
                                                                                 }
                                                                               } else {
-                                                                                wv.field_ib = 1;
+                                                                                AccountRequestDialog.field_ib = 1;
                                                                               }
                                                                             }
                                                                           }
@@ -172,7 +172,7 @@ final class io {
                                                                 }
                                                               } else {
                                                                 if (e.field_m == null) {
-                                                                  dw.a(param1, 0);
+                                                                  ConsoleEvaluationException.a(param1, 0);
                                                                 } else {
                                                                   UiWidget.h(0);
                                                                 }
@@ -242,7 +242,7 @@ final class io {
         if (param1 != -27) {
           return;
         }
-        int var3 = cj.k(256);
+        int var3 = DateInputWidget.k(256);
         int var4 = var3 >> 3;
         int var5 = 17 != this.field_m ? IntrusiveNode.b((byte) -99) : sk.a((byte) 97);
         var5 = var5 + (param0 ? -var4 : var4);
@@ -253,7 +253,7 @@ final class io {
           var5 = var3;
         }
         if (this.field_m == 17) {
-          li.a(var5, (byte) 20);
+          ConsoleValue.a(var5, (byte) 20);
         }
         if (this.field_m == 16) {
           pe.a(var5, (byte) -121);
@@ -278,7 +278,7 @@ final class io {
           param2 &&
           param4 != this.field_f) {
           param4 = param4 + (wo.field_m - aw.field_J);
-          var6 = cj.k(param3 + 240);
+          var6 = DateInputWidget.k(param3 + 240);
           var7 = param4 * var6 / wo.field_m;
           if (var7 < 0) {
             var7 = 0;
@@ -287,7 +287,7 @@ final class io {
             var7 = var6;
           }
           if (this.field_m == 17) {
-            li.a(var7, (byte) 46);
+            ConsoleValue.a(var7, (byte) 46);
           }
           if (16 == this.field_m) {
             pe.a(var7, (byte) -121);
@@ -308,7 +308,7 @@ final class io {
           return;
         }
         try {
-          ai.field_G = param4;
+          AccountTermsPanel.field_G = param4;
           fp.field_e = 3;
           i.field_x = param0;
           cr.field_c = param6;
@@ -345,9 +345,9 @@ final class io {
             if (!bo.field_Cb.a(false, "stadium_icon")) {
               return;
             }
-            var7 = se.a(bo.field_Cb, 53, "stadium_icon", "park");
-            var8 = se.a(bo.field_Cb, param0 ^ 20, "stadium_icon", "beach");
-            var3 = se.a(bo.field_Cb, -121, "stadium_icon", "street");
+            var7 = ModalStack.a(bo.field_Cb, 53, "stadium_icon", "park");
+            var8 = ModalStack.a(bo.field_Cb, param0 ^ 20, "stadium_icon", "beach");
+            var3 = ModalStack.a(bo.field_Cb, -121, "stadium_icon", "street");
             var4 = new Sprite[12];
             for (var5 = 0; var5 < 4; var5++) {
               var4[var5] = var7[var5];
@@ -362,11 +362,11 @@ final class io {
             }
             var9 = bg.a("instructions", bo.field_Cb, (byte) 119, "arrowkey");
             var10 = bg.a("instructions", bo.field_Cb, (byte) 43, "key");
-            ae.field_C = wf.a(3, var9);
-            kd.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
+            AccountRegistrationPanel.field_C = wf.a(3, var9);
+            DebugConsole.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
             lt.field_d = new Sprite[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 - 2, ip.field_d[1], var10, 50)[1]};
             ll.field_g = bg.a("instructions", bo.field_Cb, (byte) 78, "mouse");
-            jn.field_qb = bg.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
+            RegistrationRequestDialog.field_qb = bg.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
             ki.field_q = bg.a("instructions", bo.field_Cb, (byte) 103, "mouse_right");
             ak.field_f = bg.a("instructions", bo.field_Cb, (byte) 106, "mouse_roller");
           }
@@ -406,13 +406,13 @@ final class io {
           param0 - (this.field_h >> 1) < us.field_j &&
           us.field_j < param0 + (this.field_h >> 1)) {
           if (49 == this.field_m) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, vs.field_l);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vs.field_l);
           }
           if (32 == this.field_m) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, nv.field_G);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, nv.field_G);
           }
           if (37 == this.field_m) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, gl.field_i);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, gl.field_i);
           }
         }
         stackIn_18_0 = (this.field_g) ? 1 : 0;
@@ -425,7 +425,7 @@ final class io {
         if (this.field_m != 32) {
           if (this.field_m == 49 &&
             qo.c((byte) -42)) {
-            stackIn_40_1 = ai.field_K;
+            stackIn_40_1 = AccountTermsPanel.field_K;
             if (pf.field_c) {
               stackIn_41_2 = 1;
             } else {
@@ -434,10 +434,10 @@ final class io {
             this.field_p = ((String) (Object) stackIn_40_1[stackIn_41_2]).toLowerCase();
           } else {
             if (this.field_m == 30) {
-              this.field_p = qv.field_d[tb.field_v].toLowerCase();
+              this.field_p = TextWidgetPainter.field_d[tb.field_v].toLowerCase();
             } else {
               if (this.field_m == 9) {
-                this.field_p = fb.field_N.toLowerCase();
+                this.field_p = NumericDateInputWidget.field_N.toLowerCase();
                 if (um.field_e != null &&
                   um.field_e.field_h >= 0 &&
                   um.field_e.field_o.participantStatus[um.field_e.field_h].offerDraw) {
@@ -447,7 +447,7 @@ final class io {
             }
           }
         } else {
-          stackIn_25_1 = lb.field_K;
+          stackIn_25_1 = TextHotspotWidget.field_K;
           if (!ei.field_n) {
             stackIn_26_2 = 0;
           } else {
@@ -466,7 +466,7 @@ final class io {
             stackIn_46_0 = sk.a((byte) 97);
           }
           var7 = stackIn_46_0;
-          var8 = var7 * wo.field_m / cj.k(256);
+          var8 = var7 * wo.field_m / DateInputWidget.k(256);
           for (var9 = 0; var9 < var8 - 1; var9++) {
             var10 = (-var9 + var8 - 1 << 8) / var8 >> 1;
             if (this.field_m == 17) {
@@ -590,9 +590,9 @@ final class io {
             if (49 == this.field_m &&
               !qo.c((byte) -42)) {
               param1 = 11184810;
-              this.field_n[0] = ae.a(var4 != 0, (byte) -52, 0, var5, param1);
+              this.field_n[0] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 0, var5, param1);
               this.field_n[1] = this.field_n[0];
-              this.field_n[2] = ae.a(var4 != 0, (byte) -52, 2, var5, param1);
+              this.field_n[2] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 2, var5, param1);
             } else {
               if (this.field_a == -5) {
                 this.field_n[0] = (Sprite) ((Object) ArchiveIndex.field_m);
@@ -601,7 +601,7 @@ final class io {
                 PacketBuffer.a(-104, var6);
                 pt.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
                 PacketBuffer.a(103, var6);
-                var6.c(0, 0, 60);
+                var6.drawAdditive(0, 0, 60);
                 ta.e(119);
                 var11 = new int[64];
                 var10 = var11;
@@ -614,9 +614,9 @@ final class io {
                 ta.e(125);
                 this.field_n[1] = (Sprite) ((Object) var6);
               } else {
-                this.field_n[0] = ae.a(var4 != 0, (byte) -52, 0, var5, param1);
-                this.field_n[1] = ae.a(var4 != 0, (byte) -52, 1, var5, param1);
-                this.field_n[2] = ae.a(var4 != 0, (byte) -52, 2, var5, param1);
+                this.field_n[0] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 0, var5, param1);
+                this.field_n[1] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 1, var5, param1);
+                this.field_n[2] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 2, var5, param1);
               }
             }
           } else {

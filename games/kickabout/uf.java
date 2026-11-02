@@ -8,7 +8,7 @@ final class uf {
     static PacketBuffer field_c;
     static String[] field_e;
 
-    final static void a(Sprite[][] param0, ResourceArchive param1, int[] param2, boolean param3, byte[] param4, kg[] param5, ResourceArchive param6, int param7, String[][] param8, String[][] param9, ResourceArchive param10, byte[] param11, String[] param12, int param13, String[] param14, Sprite[][] param15, int[] param16, int param17, int param18, String[] param19) {
+    final static void a(Sprite[][] param0, ResourceArchive param1, int[] param2, boolean param3, byte[] param4, IndexedSprite[] param5, ResourceArchive param6, int param7, String[][] param8, String[][] param9, ResourceArchive param10, byte[] param11, String[] param12, int param13, String[] param14, Sprite[][] param15, int[] param16, int param17, int param18, String[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -52,7 +52,7 @@ final class uf {
             uf.a((byte) -8);
           }
           na.h(0);
-          tq.g((byte) -47);
+          NotCommand.g((byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class uf {
     final static boolean c(int param0) {
         if (param0 != 608) {
           String[] var2 = (String[]) null;
-          uf.a((Sprite[][]) null, (ResourceArchive) null, (int[]) null, true, (byte[]) null, (kg[]) null, (ResourceArchive) null, 32, (String[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, 71, (String[]) null, (Sprite[][]) null, (int[]) null, -120, 61, (String[]) null);
+          uf.a((Sprite[][]) null, (ResourceArchive) null, (int[]) null, true, (byte[]) null, (IndexedSprite[]) null, (ResourceArchive) null, 32, (String[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, 71, (String[]) null, (Sprite[][]) null, (int[]) null, -120, 61, (String[]) null);
           if (hl.field_d < 20) {
             return true;
           }
@@ -209,13 +209,13 @@ final class uf {
               if (~var4 == ~var3) {
                 var5 = 16777215;
               }
-              if (ct.a(97, var4 - 1, 6) == var3) {
+              if (SingleChildContainer.a(97, var4 - 1, 6) == var3) {
                 var5 = 13619151;
               }
-              if (ct.a(param0 + 119, -2 + var4, 6) == var3) {
+              if (SingleChildContainer.a(param0 + 119, -2 + var4, 6) == var3) {
                 var5 = 11184810;
               }
-              if (var3 == ct.a(124, -3 + var4, 6)) {
+              if (var3 == SingleChildContainer.a(124, -3 + var4, 6)) {
                 var5 = 8947848;
               }
               PacketBuffer.a(-110, var8);

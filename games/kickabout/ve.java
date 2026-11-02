@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends cm implements vh {
+final class ve extends ResizableModalPanel implements ButtonListener {
     static String field_Q;
     static hd field_S;
-    private wi field_U;
+    private TextButton field_U;
     static IntrusiveDeque field_R;
     static int[] field_T;
 
@@ -35,7 +35,7 @@ final class ve extends cm implements vh {
         if (bo.field_Cb.a(param0, "park")) {
           BallAgent.field_u = true;
           bn.field_E = ng.a("benches", "park", 2, bo.field_Cb);
-          tm.field_w = bg.a("park", bo.field_Cb, (byte) 70, "hotdog");
+          ConsoleCommand.field_w = bg.a("park", bo.field_Cb, (byte) 70, "hotdog");
           pi.field_a = bg.a("park", bo.field_Cb, (byte) 59, "swing");
           RandomAccessCacheFile.field_c = bg.a("park", bo.field_Cb, (byte) 114, "slide");
           ng.field_j = ng.a("trees", "park", 2, bo.field_Cb);
@@ -87,11 +87,11 @@ final class ve extends cm implements vh {
         }
     }
 
-    private final wi a(byte param0, jv param1, String param2) {
-        wi var4 = null;
+    private final TextButton a(byte param0, UiListener param1, String param2) {
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        wi stackIn_3_0 = null;
+        TextButton stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -99,8 +99,8 @@ final class ve extends cm implements vh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new wi(param2, param1);
-          var4.field_r = (gj) ((Object) new op());
+          var4 = new TextButton(param2, param1);
+          var4.field_r = (WidgetPainter) ((Object) new op());
           var5 = this.field_i - 6;
           if (param0 != -53) {
             field_S = (hd) null;
@@ -140,7 +140,7 @@ final class ve extends cm implements vh {
         field_Q = (String) null;
     }
 
-    ve(se param0, hh param1) {
+    ve(ModalStack param0, hh param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -153,12 +153,12 @@ final class ve extends cm implements vh {
         try {
           var3 = null;
           if (tr.field_b == param1) {
-            var3 = mr.field_bb;
+            var3 = ValidatedTextWidget.field_bb;
           } else {
             if (param1 == hf.field_a) {
               this.field_i = this.field_i + 10;
               var3 = je.field_n;
-              if (ai.a(99)) {
+              if (AccountTermsPanel.a(99)) {
                 var3 = lj.field_k;
                 this.field_i = this.field_i + 20;
               }
@@ -169,14 +169,14 @@ final class ve extends cm implements vh {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (jv) null);
+          var4 = new UiWidget((String) (var3), (UiListener) null);
           var4.field_t = 0;
           var4.field_n = this.field_n;
           var4.field_g = 50;
           var4.field_i = 80;
-          var4.field_r = (gj) ((Object) new qv(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(-98, var4);
-          this.field_U = this.a((byte) -53, (jv) (this), pg.field_c);
+          this.field_U = this.a((byte) -53, (UiListener) (this), pg.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,13 +216,13 @@ final class ve extends cm implements vh {
           var8 = h.a(param0 + 45508);
           var1 = var8;
           if (var8 != null &&
-            ae.field_D != var8) {
+            AccountRegistrationPanel.field_D != var8) {
             var2 = 0;
             var3 = new String[10];
             while (10 > var2) {
               if (-var2 - 1 + vb.field_j >= 0) {
                 var4_ref_tv = fu.field_b[-var2 + (vb.field_j - 1)];
-                if (var4_ref_tv != ae.field_D) {
+                if (var4_ref_tv != AccountRegistrationPanel.field_D) {
                   if (null != var4_ref_tv.field_s) {
                     var3[var2] = var4_ref_tv.field_s.field_E;
                   }
@@ -238,7 +238,7 @@ final class ve extends cm implements vh {
                 gm.a(var3[var4], false, (byte) -116);
               }
             }
-            ae.field_D = var8;
+            AccountRegistrationPanel.field_D = var8;
           }
           if (e.field_j < 18) {
             e.field_j = e.field_j + 1;
@@ -269,8 +269,8 @@ final class ve extends cm implements vh {
         }
     }
 
-    public final void a(int param0, wi param1, int param2, byte param3, int param4) {
-        wi discarded$1 = null;
+    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+        TextButton discarded$1 = null;
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_7_0 = null;
@@ -280,7 +280,7 @@ final class ve extends cm implements vh {
         try {
           if (param3 < 64) {
             var7 = (String) null;
-            discarded$1 = this.a((byte) -118, (jv) null, (String) null);
+            discarded$1 = this.a((byte) -118, (UiListener) null, (String) null);
           }
           if (param1 != this.field_U) {
             return;

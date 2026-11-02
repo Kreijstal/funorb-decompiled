@@ -16,7 +16,7 @@ final class bf extends hs {
     private hd[] field_t;
     static gd field_y;
     private int field_l;
-    static kg[][] field_s;
+    static IndexedSprite[][] field_s;
     private int field_w;
     static ic field_m;
     static ArgbSprite field_x;
@@ -82,7 +82,7 @@ final class bf extends hs {
           stackIn_6_3 = var8;
           stackIn_6_4 = 10;
           stackIn_7_5 = (param3) ? 16777215 : 8947848;
-          SoftwareRasterizer.f(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+          SoftwareRasterizer.drawRoundedRectangle(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
         }
         var11 = (var7 - var9 >> 1) + var5;
         if (param0 > -72) {
@@ -272,7 +272,7 @@ final class bf extends hs {
 
     public static void b(byte param0) {
         field_m = null;
-        field_s = (kg[][]) null;
+        field_s = (IndexedSprite[][]) null;
         field_n = null;
         field_y = null;
         field_u = null;
@@ -320,17 +320,17 @@ final class bf extends hs {
           } else {
             stackIn_3_8 = 0;
           }
-          el.a(stackIn_2_0, stackIn_2_1, (np) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (np) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
             !CachedArchiveSource.c((byte) -121) &&
             null == uv.field_i &&
             ArchiveSource.field_b == null) {
-            if (!kb.field_C) {
-              var5 = wi.field_v;
+            if (!WriteIntegersCommand.field_C) {
+              var5 = TextButton.field_v;
               var6 = sp.field_Cb;
               var5.field_j.a(0, 14, var6);
             }
-            var7 = wi.field_v;
+            var7 = TextButton.field_v;
             var8 = em.field_c;
             var7.field_j.a(0, 20, var8);
           }
@@ -338,21 +338,21 @@ final class bf extends hs {
             !CachedArchiveSource.c((byte) -121) &&
             uv.field_i != null &&
             param0.field_n == uv.field_i.h((byte) -105)) {
-            if (!kb.field_C) {
-              var9 = wi.field_v;
+            if (!WriteIntegersCommand.field_C) {
+              var9 = TextButton.field_v;
               var10 = vo.field_db;
               var9.field_j.a(param1 ^ -60, 14, var10);
             }
-            var11 = wi.field_v;
+            var11 = TextButton.field_v;
             var12 = st.field_f;
             var11.field_j.a(0, 20, var12);
           }
-          wi.field_v.d(1);
-          wi.field_v.a(false, 0);
-          wi.field_v.a(param0.field_c, -118, param0.field_r);
-          wi.field_v.b(-120);
-          wi.field_v.a(param0, (byte) 11);
-          var13 = wi.field_v;
+          TextButton.field_v.d(1);
+          TextButton.field_v.a(false, 0);
+          TextButton.field_v.a(param0.field_c, -118, param0.field_r);
+          TextButton.field_v.b(-120);
+          TextButton.field_v.a(param0, (byte) 11);
+          var13 = TextButton.field_v;
           if (param1 != -60) {
             return;
           }

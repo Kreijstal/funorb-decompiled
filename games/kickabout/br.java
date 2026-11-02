@@ -6,7 +6,7 @@ final class br {
     static String field_b;
 
     final static void a(byte param0, int param1) {
-        String var2 = pb.field_G[35];
+        String var2 = IsSixCommand.field_G[35];
         String var4 = var2;
         var4 = var2;
         String var3 = lw.field_a[param1];

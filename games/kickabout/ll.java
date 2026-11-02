@@ -7,7 +7,7 @@ final class ll extends pf {
     private java.nio.ByteBuffer field_f;
     static String field_l;
     static Sprite field_g;
-    static cn field_o;
+    static CoverageBitmapFont field_o;
     static int[] field_j;
     static int field_i;
     static Sprite field_m;
@@ -16,7 +16,7 @@ final class ll extends pf {
     final static void c(byte param0) {
         NetworkGameClient.k((byte) -118);
         int var1 = 115 % ((param0 + 48) / 42);
-        ae.m(-19417);
+        AccountRegistrationPanel.m(-19417);
     }
 
     public static void b(byte param0) {

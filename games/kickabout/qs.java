@@ -118,7 +118,7 @@ final class qs extends ta {
         if (this.field_T.field_Fb != -1 &&
           this.field_U.field_sb == 1) {
           var4 = ic.field_h.field_q[this.field_T.field_Fb];
-          jf.a(64, ic.field_h.field_i[var4], var4);
+          DoSomethingCommand.a(64, ic.field_h.field_i[var4], var4);
         }
         var5 = 63 % ((param0 - 38) / 60);
         var7 = 0;
@@ -173,7 +173,7 @@ final class qs extends ta {
             return;
           }
           while (var1_int < 4) {
-            var2 = sh.field_a.field_P[ae.field_G][1 + var1_int];
+            var2 = sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int];
             if (0 < var2.field_C &&
               var2.action != 4) {
               mn.field_b[var1_int] = 16;

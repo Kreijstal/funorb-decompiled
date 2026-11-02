@@ -20,7 +20,7 @@ final class tr implements hc {
           tr.a(true);
         }
         var1.a((byte) -96, SoftwareRasterizer.field_e, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
-        ik.field_C.a(var1, 3);
+        IntDoubleCommand.field_C.a(var1, 3);
     }
 
     public final boolean a(byte param0) {
@@ -112,10 +112,10 @@ final class tr implements hc {
         int var17 = 0;
         var17 = Kickabout.field_G;
         try {
-          var13 = fr.a(param2, ra.field_F, true);
-          var14 = fr.a(param2, IntrusiveDeque.field_g, true);
-          var15 = fr.a(param2, gm.field_fb, true);
-          var16 = fr.a(param2, RandomAccessCacheFile.field_i, true);
+          var13 = NameSuggestionsPanel.a(param2, ra.field_F, true);
+          var14 = NameSuggestionsPanel.a(param2, IntrusiveDeque.field_g, true);
+          var15 = NameSuggestionsPanel.a(param2, gm.field_fb, true);
+          var16 = NameSuggestionsPanel.a(param2, RandomAccessCacheFile.field_i, true);
           var7 = rq.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
           var4 = jr.field_Mb;
           var9 = rq.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
@@ -356,7 +356,7 @@ final class tr implements hc {
             if (null != e.field_m) {
               UiWidget.h(0);
             } else {
-              dw.a(true, param0 - 11516);
+              ConsoleEvaluationException.a(true, param0 - 11516);
             }
             return true;
           }

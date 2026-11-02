@@ -296,7 +296,7 @@ final class ud extends qt {
         int var11;
         var11 = Kickabout.field_G;
         if (param4) {
-          df.field_H = ub.field_B;
+          df.field_H = ModalPanel.field_B;
           ParticipantStatus.a(param4, 1);
           if (ns.field_a > 0) {
             we.a(param7, param4, (byte) -119, param6);
@@ -327,7 +327,7 @@ final class ud extends qt {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
-                    df.field_H = ub.field_B;
+                    df.field_H = ModalPanel.field_B;
                   } else {
                     df.field_H = (ea.field_a - 640) / 2;
                   }
@@ -388,7 +388,7 @@ final class ud extends qt {
                 e.a(bf.field_u, param3, param2, param6, 92);
               }
             } else {
-              df.field_H = ub.field_B;
+              df.field_H = ModalPanel.field_B;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
@@ -420,7 +420,7 @@ final class ud extends qt {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
-                    df.field_H = ub.field_B;
+                    df.field_H = ModalPanel.field_B;
                   } else {
                     df.field_H = (ea.field_a - 640) / 2;
                   }
@@ -481,7 +481,7 @@ final class ud extends qt {
                 e.a(bf.field_u, param3, param2, param6, 92);
               }
             } else {
-              df.field_H = ub.field_B;
+              df.field_H = ModalPanel.field_B;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
@@ -549,9 +549,9 @@ final class ud extends qt {
         if (param2 != 17860) {
           return false;
         }
-        if (fb.field_J == null) {
+        if (NumericDateInputWidget.field_J == null) {
           if (!vg.field_Wb) {
-            if (kd.field_s) {
+            if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (9 == cc.field_e) {
@@ -584,11 +584,11 @@ final class ud extends qt {
           }
         } else {
           if (cc.field_e == 13) {
-            fb.field_J = null;
+            NumericDateInputWidget.field_J = null;
             return true;
           }
           if (!vg.field_Wb) {
-            if (kd.field_s) {
+            if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (9 == cc.field_e) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lg implements l {
+abstract class lg implements ValidationSource {
     static Sprite field_a;
     static String field_c;
     private long field_b;

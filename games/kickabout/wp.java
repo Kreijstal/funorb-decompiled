@@ -80,20 +80,20 @@ final class wp {
           MouseInputHandler.field_f = param2;
           ni.field_f = param10;
           fh.field_a = param7;
-          ir.field_D = param5;
+          ThreeCommand.field_D = param5;
           vc.field_D = param8;
           ue.field_k = param1;
           no.field_J = param14;
           rn.field_d = param0;
-          oj.field_Q = param12;
+          LoadingProgressDialog.field_Q = param12;
           oi.field_f = param3;
           ca.field_g = param6;
-          jd.field_d = se.a(param9, 70, "lobby", "gameprivacy");
-          CachedArchiveSource.field_m = se.a(param9, 86, "lobby", "ratedgame");
-          nv.field_L = se.a(param9, -6, "lobby", "opentome");
-          i.field_E = se.a(param9, -119, "lobby", "allowspectators");
+          jd.field_d = ModalStack.a(param9, 70, "lobby", "gameprivacy");
+          CachedArchiveSource.field_m = ModalStack.a(param9, 86, "lobby", "ratedgame");
+          nv.field_L = ModalStack.a(param9, -6, "lobby", "opentome");
+          i.field_E = ModalStack.a(param9, -119, "lobby", "allowspectators");
           WidgetContainer.field_w = new String[5];
-          WidgetContainer.field_w[0] = lk.field_m;
+          WidgetContainer.field_w[0] = ConsoleExpression.field_m;
           WidgetContainer.field_w[4] = TeamSelectionAgent.field_g;
           WidgetContainer.field_w[3] = bq.field_b;
           WidgetContainer.field_w[2] = bl.field_h;
@@ -107,25 +107,25 @@ final class wp {
             mc.field_d.a((byte) -107, ck.field_c);
           }
           mc.field_d.a((byte) -119, (hd) (bf.field_u));
-          bf.field_u.field_zb.a(dw.field_e, (byte) -128);
+          bf.field_u.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
           var23 = bf.field_u.field_zb;
           var24 = var23;
           bf.field_u.field_zb.field_p = 1;
           var24.field_A = 1;
-          li.field_a = new hd(0L, dw.field_e);
-          li.field_a.field_A = 1;
-          MouseWheelInput.field_a = new hd(0L, ev.field_D, ic.field_g.toUpperCase());
-          fp.field_o = new hd(0L, qa.field_H, li.field_f.toUpperCase());
+          ConsoleValue.field_a = new hd(0L, ConsoleEvaluationException.field_e);
+          ConsoleValue.field_a.field_A = 1;
+          MouseWheelInput.field_a = new hd(0L, LongPlusOneCommand.field_D, ic.field_g.toUpperCase());
+          fp.field_o = new hd(0L, qa.field_H, ConsoleValue.field_f.toUpperCase());
           bt.field_b = new hd(0L, cp.field_g);
-          va.field_w = new hd(0L, dn.field_zb, fr.field_B);
+          va.field_w = new hd(0L, dn.field_zb, NameSuggestionsPanel.field_B);
           qq.field_G = new hd(0L, gw.field_a, sn.field_j);
           if (param13 <= 23) {
             field_i = (String) null;
           }
-          qv.field_n = new hd(0L, gw.field_a, aj.field_c);
+          TextWidgetPainter.field_n = new hd(0L, gw.field_a, aj.field_c);
           df.field_G = new hd(0L, gw.field_a, hd.field_C);
-          cj.field_D = new hd(0L, gw.field_a, n.field_j);
-          jn.field_lb = new hd(0L, pq.field_P, ig.field_h);
+          DateInputWidget.field_D = new hd(0L, gw.field_a, n.field_j);
+          RegistrationRequestDialog.field_lb = new hd(0L, pq.field_P, ig.field_h);
           sp.field_Jb = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
           dr.field_d = new hd(0L, vg.field_Qb, vp.field_n.toUpperCase());
           dr.field_d.field_lb = ui.field_t;
@@ -148,18 +148,18 @@ final class wp {
           af.field_d.a((byte) -112, bt.field_b);
           bt.field_b.a((byte) -127, va.field_w);
           bt.field_b.a((byte) -118, qq.field_G);
-          bt.field_b.a((byte) -113, qv.field_n);
+          bt.field_b.a((byte) -113, TextWidgetPainter.field_n);
           if (ui.field_t) {
             bt.field_b.a((byte) -118, df.field_G);
           }
-          bt.field_b.a((byte) -128, cj.field_D);
-          bt.field_b.a((byte) -122, jn.field_lb);
+          bt.field_b.a((byte) -128, DateInputWidget.field_D);
+          bt.field_b.a((byte) -122, RegistrationRequestDialog.field_lb);
           bt.field_b.a((byte) -118, (hd) (sp.field_Jb));
           if (ui.field_t) {
             af.field_d.a((byte) -109, dr.field_d);
           }
           af.field_d.a((byte) -112, ps.field_b);
-          jw.field_Cb = new hd(0L, dw.field_e);
+          jw.field_Cb = new hd(0L, ConsoleEvaluationException.field_e);
           jw.field_Cb.field_p = 0;
           jw.field_Cb.field_A = 1;
           RandomAccessCacheFile.field_a = new hd(0L, dc.field_a, ap.field_x.toUpperCase());
@@ -167,26 +167,26 @@ final class wp {
           kk.field_j.a((byte) -112, jw.field_Cb);
           kk.field_j.a((byte) -113, RandomAccessCacheFile.field_a);
           w.field_e = new hd(0L, rj.field_b);
-          w.field_e.a(dw.field_e, (byte) -110);
+          w.field_e.a(ConsoleEvaluationException.field_e, (byte) -110);
           w.field_e.field_p = 1;
           var16 = w.field_e;
           var16.field_A = 1;
           fm.field_C = new hd(0L, (hd) null);
-          ka.field_c = new hd(0L, dw.field_e);
+          ka.field_c = new hd(0L, ConsoleEvaluationException.field_e);
           ka.field_c.field_A = 1;
           BufferedSocket.field_u = new hd(0L, dn.field_zb, oh.field_h);
-          jf.field_D = new hd(0L, pq.field_P, mt.field_b);
+          DoSomethingCommand.field_D = new hd(0L, pq.field_P, mt.field_b);
           ClientException.field_c = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
           fm.field_C.a((byte) -114, ka.field_c);
           fm.field_C.a((byte) -105, BufferedSocket.field_u);
           if (ui.field_t) {
-            fm.field_C.a((byte) -123, jf.field_D);
+            fm.field_C.a((byte) -123, DoSomethingCommand.field_D);
           }
           fm.field_C.a((byte) -122, (hd) (ClientException.field_c));
-          ac.field_b = new hd(0L, ev.field_D, ns.field_b.toUpperCase());
+          ac.field_b = new hd(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
           ci.field_h = new hd(0L, qa.field_H);
           sg.field_a = new hd(0L, cp.field_g);
-          MouseInputHandler.field_d = new hd(0L, oi.field_i, ik.field_F.toUpperCase());
+          MouseInputHandler.field_d = new hd(0L, oi.field_i, IntDoubleCommand.field_F.toUpperCase());
           rf.field_c = new vu[param4 + 4][];
           qr.field_b = new hd[4 + param4];
           qr.field_b[0] = new hd(0L, kr.field_b, mi.field_a);
@@ -195,7 +195,7 @@ final class wp {
             rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, jd.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= rn.field_d.length) {
-            qr.field_b[1] = new hd(0L, kr.field_b, qk.field_H);
+            qr.field_b[1] = new hd(0L, kr.field_b, Checkbox.field_H);
             array$0 = new vu[rn.field_d.length + 1];
             rf.field_c[1] = array$0;
             rf.field_c[1][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
@@ -229,11 +229,11 @@ final class wp {
               } else {
                 var19_ref = null;
               }
-              if (null != oj.field_Q) {
-                if (null == oj.field_Q[var17_intLifetime3]) {
+              if (null != LoadingProgressDialog.field_Q) {
+                if (null == LoadingProgressDialog.field_Q[var17_intLifetime3]) {
                   var20 = null;
                 } else {
-                  var20 = oj.field_Q[var17_intLifetime3][var18];
+                  var20 = LoadingProgressDialog.field_Q[var17_intLifetime3][var18];
                 }
               } else {
                 var20 = null;
@@ -257,7 +257,7 @@ final class wp {
           em.field_d = new hd(0L, vg.field_Qb);
           GoalStateAgent.field_k = new hd(0L, vg.field_Qb);
           nv.field_F = new hd(0L, ip.field_c);
-          nv.field_F.a(dw.field_e, (byte) -99);
+          nv.field_F.a(ConsoleEvaluationException.field_e, (byte) -99);
           var17 = nv.field_F;
           nv.field_F.field_p = 1;
           var17.field_A = 1;
@@ -280,7 +280,7 @@ final class wp {
           fp.field_p.a((byte) -112, em.field_d);
           fp.field_p.a((byte) -124, GoalStateAgent.field_k);
           fp.field_p.a((byte) -108, nv.field_F);
-          is.field_b = new hd(0L, ai.field_H, po.field_b.toUpperCase());
+          is.field_b = new hd(0L, AccountTermsPanel.field_H, po.field_b.toUpperCase());
           kt.field_i = new hd(0L, dc.field_a, bk.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -385,7 +385,7 @@ final class wp {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = lt.field_a[qj.b((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var22);
+            var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var22);
           } else {
             var16 = es.field_e[var2];
             var12 = var16;
@@ -397,7 +397,7 @@ final class wp {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hf.a(lt.field_a[qj.b((int) var21[var7], 255)], qj.b(-16777216, var16[var7] << 24));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var17));
           }
         }
         if (param0 >= -123) {

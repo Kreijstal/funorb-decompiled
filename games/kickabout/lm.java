@@ -90,7 +90,7 @@ final class lm extends js {
             stackIn_5_0 = rd.field_h;
             return stackIn_5_0;
           }
-          var3 = pb.a(true);
+          var3 = IsSixCommand.a(true);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.a(var2, -97)) {
@@ -275,7 +275,7 @@ final class lm extends js {
         var14 = h.a(17475);
         var4 = -84 / ((param0 - 38) / 60);
         if (this.field_g != var14) {
-          stackIn_12_1 = (!bt.field_e) && (this.field_g != var14) && (!hm.a((byte) -66, var14.field_q));
+          stackIn_12_1 = (!bt.field_e) && (this.field_g != var14) && (!SumIntegersCommand.a((byte) -66, var14.field_q));
           this.field_K = stackIn_12_1;
           this.field_g = var14;
         } else {
@@ -409,7 +409,7 @@ final class lm extends js {
           }
         } else {
           if (ph.field_a == 2) {
-            stackIn_84_1 = (param1) && (el.field_A >= this.field_m) && (570 + this.field_m >= el.field_A) && (n.field_m >= this.field_u) && (12 + this.field_u >= n.field_m);
+            stackIn_84_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_m) && (570 + this.field_m >= BytePlusOneCommand.field_A) && (n.field_m >= this.field_u) && (12 + this.field_u >= n.field_m);
             this.field_i = stackIn_84_1;
             if (this.field_h != ii.field_l) {
               var5_intLifetime5 = this.field_h - ii.field_l >> 3;
@@ -423,7 +423,7 @@ final class lm extends js {
                 }
               }
             }
-            stackIn_97_1 = (param1) && (el.field_A >= this.field_G) && (570 + this.field_G >= el.field_A) && (n.field_m >= this.field_q) && (this.field_q + 12 >= n.field_m);
+            stackIn_97_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_G) && (570 + this.field_G >= BytePlusOneCommand.field_A) && (n.field_m >= this.field_q) && (this.field_q + 12 >= n.field_m);
             this.field_U = stackIn_97_1;
             if (this.field_i) {
               if (FootballerAgent.field_p == 1) {
@@ -803,7 +803,7 @@ final class lm extends js {
     }
 
     private final void e(int param0) {
-        cn stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
         StringBuilder stackIn_2_1 = null;
         String stackIn_3_2 = null;
         int stackIn_11_0 = 0;
@@ -832,7 +832,7 @@ final class lm extends js {
         } else {
           stackIn_3_2 = this.field_r;
         }
-        ((cn) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
+        ((CoverageBitmapFont) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
         pt.a(640, -22914, 0, 88, 60);
         SoftwareRasterizer.a(224, 66, 372, 50, 8, 65793, 196);
         un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{kp.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
@@ -899,7 +899,7 @@ final class lm extends js {
         int var14_int = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
-        cn stackIn_10_0 = null;
+        CoverageBitmapFont stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         int stackIn_17_0 = 0;
@@ -993,7 +993,7 @@ final class lm extends js {
         } else {
           stackIn_11_2 = "";
         }
-        ((cn) (Object) stackIn_10_0).d(((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).toString(), 320, 50, 16777215, -1);
+        ((CoverageBitmapFont) (Object) stackIn_10_0).d(((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).toString(), 320, 50, 16777215, -1);
         var5 = 110;
         var6 = 40;
         var7 = (var5 << 1) / 3;
@@ -1117,7 +1117,7 @@ final class lm extends js {
             } else {
               stackIn_77_4 = var8 >> 1;
             }
-            SoftwareRasterizer.b(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3 + stackIn_77_4, 65793);
+            SoftwareRasterizer.drawLine(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3 + stackIn_77_4, 65793);
             stackIn_79_0 = (var5 >> 1) + var11;
             stackIn_79_1 = var12;
             stackIn_79_2 = var11 + ((var7 << 1) - (var5 >> 1));
@@ -1126,7 +1126,7 @@ final class lm extends js {
             } else {
               stackIn_80_3 = var8 >> 1;
             }
-            SoftwareRasterizer.b(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3 + var12, 65793);
+            SoftwareRasterizer.drawLine(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3 + var12, 65793);
             stackIn_82_0 = var11 + (var5 >> 1);
             stackIn_82_1 = var12 + 1;
             stackIn_82_2 = -(var5 >> 1) + (var11 + (var7 << 1));
@@ -1137,7 +1137,7 @@ final class lm extends js {
             } else {
               stackIn_83_5 = -(var8 >> 1);
             }
-            SoftwareRasterizer.b(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3 + (stackIn_82_4 + stackIn_83_5), 65793);
+            SoftwareRasterizer.drawLine(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3 + (stackIn_82_4 + stackIn_83_5), 65793);
           }
           var12 = var12 + var8;
           if (var14_int == -8 + var2 ||
@@ -1165,7 +1165,7 @@ final class lm extends js {
           un.field_d.d(eq.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
           ta.e(126);
           SoftwareRasterizer.a(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
-          kb.field_E[6].c(var11 + (var5 >> 1) - (kb.field_E[6].field_o - 4), -(kb.field_E[6].field_v >> 1) + var12);
+          WriteIntegersCommand.field_E[6].c(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
           var16 = var14.field_o;
           if (var16 < 0 &&
             var14.field_f >= 5) {
@@ -1184,7 +1184,7 @@ final class lm extends js {
             stackIn_107_0 = hi.field_w;
           }
           var18 = stackIn_107_0;
-          un.field_d.d(var18, 10 - (kb.field_E[6].field_o >> 1) + var11, 4 + var12, 16777215, -1);
+          un.field_d.d(var18, 10 - (WriteIntegersCommand.field_E[6].field_o >> 1) + var11, 4 + var12, 16777215, -1);
         }
     }
 

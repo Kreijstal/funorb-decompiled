@@ -13,7 +13,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     static String field_g;
     private java.awt.image.ColorModel field_h;
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         try {
           if (param1 != 10) {
             this.b((byte) 4);
@@ -25,7 +25,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Component param3) {
+    final void initialize(int param0, int param1, int param2, java.awt.Component param3) {
         this.field_e = param2;
         this.field_a = param1;
         this.field_b = new int[param1 * param2 + 1];
@@ -61,11 +61,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static ResourceArchive a(byte param0, int param1) {
         if (param0 <= -124) {
-          return uj.a(param1, (byte) -58, 1, false, false, true);
+          return SetLagCommand.a(param1, (byte) -58, 1, false, false, true);
         }
         PacketBuffer var3 = (PacketBuffer) null;
         ImageProducerRasterBuffer.a(81, 114, (PacketBuffer) null, 122, 17);
-        return uj.a(param1, (byte) -58, 1, false, false, true);
+        return SetLagCommand.a(param1, (byte) -58, 1, false, false, true);
     }
 
     private final synchronized void b(byte param0) {
@@ -222,7 +222,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (null == um.field_e) {
             ia.field_c = false;
-            var1 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+            var1 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
             var2 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
             if (var2 * var2 + var1 * var1 < 10000) {
               fieldTemp$0 = BufferedCacheFile.field_a + 1;
@@ -238,7 +238,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               IterableNodeHashTable.a(true, (byte) 89);
             } else {
               ia.field_c = false;
-              var1Lifetime4 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+              var1Lifetime4 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
               var2Lifetime4 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
               if (var2Lifetime4 * var2Lifetime4 + var1Lifetime4 * var1Lifetime4 < 10000) {
                 fieldTemp$1 = BufferedCacheFile.field_a + 1;
@@ -252,7 +252,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (ra.field_G.field_c == 0) {
             ia.field_c = false;
-            var1Lifetime5 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+            var1Lifetime5 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
             var2Lifetime5 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
             if (var2Lifetime5 * var2Lifetime5 + var1Lifetime5 * var1Lifetime5 < 10000) {
               fieldTemp$2 = BufferedCacheFile.field_a + 1;
@@ -268,7 +268,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return;
           }
           ia.field_c = false;
-          var1Lifetime6 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+          var1Lifetime6 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
           var2Lifetime6 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime6 * var2Lifetime6 + var1Lifetime6 * var1Lifetime6 < 10000) {
             fieldTemp$3 = BufferedCacheFile.field_a + 1;
@@ -285,7 +285,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
         if (null == um.field_e) {
           ia.field_c = false;
-          var1Lifetime1 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+          var1Lifetime1 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
           var2Lifetime1 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime1 * var2Lifetime1 + var1Lifetime1 * var1Lifetime1 < 10000) {
             fieldTemp$4 = BufferedCacheFile.field_a + 1;
@@ -302,7 +302,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               IterableNodeHashTable.a(true, (byte) 89);
             } else {
               ia.field_c = false;
-              var1Lifetime2 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+              var1Lifetime2 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
               var2Lifetime2 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
               if (var2Lifetime2 * var2Lifetime2 + var1Lifetime2 * var1Lifetime2 < 10000) {
                 fieldTemp$5 = BufferedCacheFile.field_a + 1;
@@ -315,7 +315,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return;
           }
           ia.field_c = false;
-          var1Lifetime2Lifetime1 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+          var1Lifetime2Lifetime1 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
           var2Lifetime2Lifetime1 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime2Lifetime1 * var2Lifetime2Lifetime1 + var1Lifetime2Lifetime1 * var1Lifetime2Lifetime1 < 10000) {
             fieldTemp$6 = BufferedCacheFile.field_a + 1;
@@ -328,7 +328,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
         if (cq.field_h.field_c == 0) {
           ia.field_c = false;
-          var1Lifetime3 = tq.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
+          var1Lifetime3 = NotCommand.h(-2521) - nv.field_E[BufferedCacheFile.field_a];
           var2Lifetime3 = IsaacRandom.a(true) - qt.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime3 * var2Lifetime3 + var1Lifetime3 * var1Lifetime3 < 10000) {
             fieldTemp$7 = BufferedCacheFile.field_a + 1;

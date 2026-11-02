@@ -26,7 +26,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (lw.field_e == null) {
             return;
           }
-          lb.field_M = 0;
+          TextHotspotWidget.field_M = 0;
           vf.field_G = param0.getX();
           gf.field_b = param0.getY();
           rp.field_A = true;
@@ -80,7 +80,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (lw.field_e != null) {
-            lb.field_M = 0;
+            TextHotspotWidget.field_M = 0;
             RandomAccessCacheFile.field_d = 0;
             rp.field_A = true;
             var2_int = param0.getModifiers();
@@ -120,7 +120,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == lw.field_e) {
             return;
           }
-          lb.field_M = 0;
+          TextHotspotWidget.field_M = 0;
           vf.field_G = param0.getX();
           gf.field_b = param0.getY();
           rp.field_A = true;
@@ -170,7 +170,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (null != lw.field_e) {
-            lb.field_M = 0;
+            TextHotspotWidget.field_M = 0;
             vf.field_G = -1;
             gf.field_b = -1;
             rp.field_A = true;
@@ -189,7 +189,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (lw.field_e != null) {
-            lb.field_M = 0;
+            TextHotspotWidget.field_M = 0;
             fp.field_w = param0.getX();
             UiWidget.field_l = param0.getY();
             nj.a(71);
@@ -241,7 +241,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (lw.field_e == null) {
             return;
           }
-          lb.field_M = 0;
+          TextHotspotWidget.field_M = 0;
           vf.field_G = param0.getX();
           gf.field_b = param0.getY();
           rp.field_A = true;
@@ -267,7 +267,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             field_a = (String) null;
           }
           is.field_a = param2;
-          rk.field_f = new wv(wd.field_l, fj.field_b, param0, hk.field_G, is.field_a);
+          rk.field_f = new AccountRequestDialog(wd.field_l, fj.field_b, param0, hk.field_G, is.field_a);
           wd.field_l.a(rk.field_f, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

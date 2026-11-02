@@ -39,7 +39,7 @@ final class eq {
     final static boolean a(boolean param0) {
         if (param0) {
           eq.a(21);
-          if (null != wi.field_v) {
+          if (null != TextButton.field_v) {
             return true;
           }
           if (ne.k((byte) -55)) {
@@ -53,7 +53,7 @@ final class eq {
           }
           return true;
         }
-        if (null != wi.field_v) {
+        if (null != TextButton.field_v) {
           return true;
         }
         if (ne.k((byte) -55)) {
@@ -85,7 +85,7 @@ final class eq {
           ig.field_g = vp.field_c;
           ps.field_e = 0;
           fp.field_l = new ko(2);
-          fp.field_l.a(vp.a(n.field_m, el.field_A, (byte) 42), 0, -1, param1);
+          fp.field_l.a(vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
           return;
         }
     }

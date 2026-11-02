@@ -11,7 +11,7 @@ final class rk {
     static Sprite field_g;
     static JaggrabDownloader field_d;
     static String[][] field_e;
-    static wv field_f;
+    static AccountRequestDialog field_f;
 
     rk(int param0, int param1, int param2) {
         int var14 = 0;
@@ -41,8 +41,8 @@ final class rk {
         PacketBuffer.a(114, var9);
         var10 = var8.field_o;
         var11 = var8.field_v;
-        var12 = -15 - ct.a(105, this.field_a - 27, var10);
-        var13 = -ct.a(-49, -64 + this.field_b, var11);
+        var12 = -15 - SingleChildContainer.a(105, this.field_a - 27, var10);
+        var13 = -SingleChildContainer.a(-49, -64 + this.field_b, var11);
         var8.d(var12, var13);
         var8.d(var12 + var10, var13);
         var8.d(var12, var11 + var13);

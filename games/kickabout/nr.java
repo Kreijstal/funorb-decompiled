@@ -6,7 +6,7 @@ import java.util.*;
 final class nr extends IntrusiveNode {
     static GameKeyHandler field_q;
     private int field_i;
-    private eg field_p;
+    private ModelMesh field_p;
     private int field_n;
     private dd field_h;
     static String field_l;
@@ -42,7 +42,7 @@ final class nr extends IntrusiveNode {
           }
           ClientException.a(param8, 0, param4);
           rn.a(param19, param6, param16, param9, param15, -110);
-          tm.a(param3, param1, false, param12);
+          ConsoleCommand.a(param3, param1, false, param12);
           ArchiveNetworkClient.a(param20, param14, param17, 20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,16 +89,16 @@ final class nr extends IntrusiveNode {
           param0 = 6 - param0;
         }
         this.field_h.a(param0, 111);
-        eg var5 = (eg) (this.field_h.a(this.field_p, false, true, true));
+        ModelMesh var5 = (ModelMesh) (this.field_h.a(this.field_p, false, true, true));
         nh.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + UiWidget.field_f.length, UiWidget.field_f);
         PacketBuffer.a(103, ok.field_d);
         SoftwareRasterizer.b();
-        t.c();
+        TriangleRasterizer.c();
         int var4 = 950;
-        t.b(128, 240);
+        TriangleRasterizer.b(128, 240);
         var5.a(0, this.field_n << 8, 0, 300, 0, 0, 0, var4);
         ta.e(param1 ^ -124);
-        ok.field_d.f(-64 + this.field_g, this.field_i - 120);
+        ok.field_d.drawHalfSize(-64 + this.field_g, this.field_i - 120);
     }
 
     final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {

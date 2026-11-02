@@ -76,17 +76,17 @@ final class pe {
             if (null != e.field_m &&
               e.field_m.field_b) {
               UiWidget.h(0);
-              mr.field_Z.a(new ve(mr.field_Z, hf.field_a), false);
+              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, hf.field_a), false);
             }
             return;
           }
-          mr.field_Z.a(gw.field_c, 31947, nq.field_J, true);
+          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, nq.field_J, true);
           if (param0 <= 104) {
             pe.b(104);
           }
-          mr.field_Z.n(2);
+          ValidatedTextWidget.field_Z.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            mr.field_Z.a(il.field_c, (byte) -91, cc.field_e);
+            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, cc.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -159,7 +159,7 @@ final class pe {
         }
     }
 
-    final static void a(eg param0, Sprite param1, int param2, int param3) {
+    final static void a(ModelMesh param0, Sprite param1, int param2, int param3) {
         try {
           PacketBuffer.a(-51, param1);
           SoftwareRasterizer.b();
@@ -167,8 +167,8 @@ final class pe {
             int[] var5 = (int[]) null;
             pe.a((la[]) null, (byte) 103, (int[]) null);
           }
-          t.c();
-          t.b(SoftwareRasterizer.field_g >> 1, 198);
+          TriangleRasterizer.c();
+          TriangleRasterizer.b(SoftwareRasterizer.field_g >> 1, 198);
           param0.a(0, 0, 0, 0, 0, 0, 0, 700);
           ta.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
@@ -181,7 +181,7 @@ final class pe {
           return;
         }
         try {
-          se.field_C = param1;
+          ModalStack.field_C = param1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -191,7 +191,7 @@ final class pe {
         fn.a(param0, (byte) -32);
         if (param1 >= -114) {
           Sprite var3 = (Sprite) null;
-          pe.a((eg) null, (Sprite) null, -104, -61);
+          pe.a((ModelMesh) null, (Sprite) null, -104, -61);
         }
     }
 

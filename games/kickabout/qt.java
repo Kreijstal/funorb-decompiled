@@ -163,7 +163,7 @@ class qt extends js {
             if (var3_ref_js == this &&
               var4_ref_js instanceof qt &&
               ((qt) (var4_ref_js)).field_m) {
-              ai.field_E.d(0, 430);
+              AccountTermsPanel.field_E.d(0, 430);
             } else {
               var5Lifetime1 = (ce.field_I << 9) / 24;
               if (256 < var5Lifetime1) {
@@ -172,10 +172,10 @@ class qt extends js {
               if (this == cq.field_h) {
                 var5Lifetime1 = -var5Lifetime1 + 256;
               }
-              ai.field_E.b(0, 430, var5Lifetime1);
+              AccountTermsPanel.field_E.b(0, 430, var5Lifetime1);
             }
           } else {
-            ai.field_E.d(0, 430);
+            AccountTermsPanel.field_E.d(0, 430);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < this.field_x.field_a; var3Lifetime2++) {
@@ -547,7 +547,7 @@ class qt extends js {
           var4 = stackIn_11_0;
           if (var4 != -1 &&
             null != fa.field_g[var4]) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, fa.field_g[var4]);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, fa.field_g[var4]);
           }
         }
         var9 = 0;

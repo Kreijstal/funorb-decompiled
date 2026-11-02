@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re implements gj {
+final class re implements WidgetPainter {
     static ko field_c;
     private int field_d;
     static String[] field_b;
@@ -62,7 +62,7 @@ final class re implements gj {
               if (var4 != ll.field_k.field_e) {
                 var5 = wt.field_v;
               } else {
-                var5 = fb.field_R;
+                var5 = NumericDateInputWidget.field_R;
               }
             }
             var6 = eq.field_c[var3];
@@ -124,7 +124,7 @@ final class re implements gj {
               cv.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
               var1_int = var1_int + la.field_c;
             } else {
-              sf.field_F.a(var6, var8Lifetime1, lk.field_g + var1_int, var5, -1);
+              sf.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
               var1_int = var1_int + (nr.field_j + aj.field_a + pr.field_d);
             }
           }
@@ -243,7 +243,7 @@ final class re implements gj {
           if (ArchiveIndex.field_t) {
             hl.field_e = null;
             DualLinkNode.field_h = null;
-            ub.field_G = null;
+            ModalPanel.field_G = null;
             hq.field_e = null;
             c.field_f = null;
             vd.a(0, 6);
@@ -380,13 +380,13 @@ final class re implements gj {
     }
 
     public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
-        qk var12 = null;
+        Checkbox var12 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
         try {
-          var12 = !(param3 instanceof qk) ? null : (qk) (param3);
+          var12 = !(param3 instanceof Checkbox) ? null : (Checkbox) (param3);
           if (var12 != null) {
             param1 = param1 & var12.field_y;
           }
@@ -398,11 +398,11 @@ final class re implements gj {
           var8 = param4 - (-param3.field_t - this.field_f);
           var9 = this.field_n + (param2 + param3.field_g);
           int var10 = -126 / ((59 - param0) / 53);
-          SoftwareRasterizer.d(var8, var9, this.field_h, this.field_g, 5592405);
+          SoftwareRasterizer.drawRectangleDropShadow(var8, var9, this.field_h, this.field_g, 5592405);
           SoftwareRasterizer.a(var8, var9, this.field_h, this.field_g, var7);
           if (var12.field_A) {
-            SoftwareRasterizer.b(var8, var9, this.field_h + var8, this.field_g + var9, 1);
-            SoftwareRasterizer.b(var8 + this.field_h, var9, var8, this.field_g + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_h + var8, this.field_g + var9, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_h, var9, var8, this.field_g + var9, 1);
           }
           if (null != this.field_m) {
             var11 = this.field_h + (this.field_f + this.field_i);

@@ -28,7 +28,7 @@ class aa extends ps {
             var6.a(102, 0);
           } else {
             var6.a(111, param2.field_o.length);
-            var6.a(0, param2.field_o.length, 1991220144, param2.field_o);
+            var6.readBytes(0, param2.field_o.length, 1991220144, param2.field_o);
           }
           var6.a(var4, false);
           var6.field_n = var6.field_n - 4;

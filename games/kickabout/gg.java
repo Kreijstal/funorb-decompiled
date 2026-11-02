@@ -65,15 +65,15 @@ final class gg extends hd {
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
             var6 = -var3_int + kk.field_B[var5Lifetime1];
             var7 = -var4 + or.field_a[var5Lifetime1];
-            mu.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
+            ContentTransitionDialog.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
           }
-          var5Lifetime2 = mu.field_Q[0] - 30;
+          var5Lifetime2 = ContentTransitionDialog.field_Q[0] - 30;
           var9 = 0;
           var6Lifetime1 = var9;
           while (var9 < 2) {
-            if (0 != mu.field_Q[var9]) {
-              kk.field_B[var9] = var5Lifetime2 * (-var3_int + kk.field_B[var9]) / mu.field_Q[var9] + var3_int;
-              or.field_a[var9] = var5Lifetime2 * (or.field_a[var9] - var4) / mu.field_Q[var9] + var4;
+            if (0 != ContentTransitionDialog.field_Q[var9]) {
+              kk.field_B[var9] = var5Lifetime2 * (-var3_int + kk.field_B[var9]) / ContentTransitionDialog.field_Q[var9] + var3_int;
+              or.field_a[var9] = var5Lifetime2 * (or.field_a[var9] - var4) / ContentTransitionDialog.field_Q[var9] + var4;
             }
             var9++;
           }
@@ -139,12 +139,12 @@ final class gg extends hd {
           if (param1 != 88) {
             return;
           }
-          li.field_c = new String[args.length];
+          ConsoleValue.field_c = new String[args.length];
           for (var2_int = 0; var2_int < args.length; var2_int++) {
-            li.field_c[var2_int] = args[var2_int];
+            ConsoleValue.field_c[var2_int] = args[var2_int];
           }
-          if (li.field_c.length != 0) {
-            if (li.field_c.length == 1) {
+          if (ConsoleValue.field_c.length != 0) {
+            if (ConsoleValue.field_c.length == 1) {
               stackIn_10_0 = cl.field_g;
             } else {
               stackIn_10_0 = ka.field_d;
@@ -152,9 +152,9 @@ final class gg extends hd {
             gu.field_Jb = stackIn_10_0;
             var4 = 0;
             var2_intLifetime1 = var4;
-            while (var4 < li.field_c.length) {
-              gu.field_Jb = gu.field_Jb + li.field_c[var4];
-              if (li.field_c.length - 1 > var4) {
+            while (var4 < ConsoleValue.field_c.length) {
+              gu.field_Jb = gu.field_Jb + ConsoleValue.field_c[var4];
+              if (ConsoleValue.field_c.length - 1 > var4) {
                 gu.field_Jb = gu.field_Jb + "   ";
               }
               var4++;

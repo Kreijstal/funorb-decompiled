@@ -128,12 +128,12 @@ final class rp extends ri {
               ig.field_g > vp.field_c &&
               var3 < n.field_m &&
               var3 + TextInputWidget.field_E.field_w > n.field_m) {
-              if (el.field_A > 269 - TextInputWidget.field_E.field_q &&
-                269 > el.field_A) {
+              if (BytePlusOneCommand.field_A > 269 - TextInputWidget.field_E.field_q &&
+                269 > BytePlusOneCommand.field_A) {
                 ig.field_g = vp.field_c;
               }
-              if (el.field_A > 586 &&
-                el.field_A < TextInputWidget.field_E.field_q + 586) {
+              if (BytePlusOneCommand.field_A > 586 &&
+                BytePlusOneCommand.field_A < TextInputWidget.field_E.field_q + 586) {
                 ig.field_g = vp.field_c;
               }
             }
@@ -141,7 +141,7 @@ final class rp extends ri {
           if (!param0) {
             return 0;
           }
-          fp.field_l.a(-21174, vp.a(n.field_m, el.field_A, (byte) 98), vp.a(vc.field_y, sm.field_q, (byte) 69));
+          fp.field_l.a(-21174, vp.a(n.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(vc.field_y, sm.field_q, (byte) 69));
           if (fp.field_l.c(-1)) {
             if (fp.field_l.field_e == 0) {
               stackIn_58_0 = 3;
@@ -217,10 +217,10 @@ final class rp extends ri {
 
     final static ff[] b(int param0) {
         if (param0 == -27666) {
-          return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, fi.field_e, vp.field_o, ge.field_j, kd.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+          return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, ge.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
         }
         field_A = true;
-        return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, fi.field_e, vp.field_o, ge.field_j, kd.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+        return new ff[]{eb.field_c, om.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, ge.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
     }
 
     rp(int param0) {

@@ -98,7 +98,7 @@ final class kn extends i {
           if (var6 != null &&
             var6.field_gb) {
             SoftwareRasterizer.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
-            SoftwareRasterizer.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
+            SoftwareRasterizer.drawRoundedRectangle(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
             qe.field_i[PacketBuffer.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
             un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
             var7 = new String[16];

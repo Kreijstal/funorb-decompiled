@@ -9,11 +9,11 @@ final class nc {
 
     final static void a(CommonGame param0, byte param1, int param2, boolean param3) {
         int var6 = 0;
-        cn var4 = null;
+        CoverageBitmapFont var4 = null;
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        cn var9 = null;
+        CoverageBitmapFont var9 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -93,7 +93,7 @@ final class nc {
           }
           or.field_d.field_n = or.field_d.field_n + 2;
           var5_int = or.field_d.field_n;
-          or.field_d.b(-116, cm.field_J);
+          or.field_d.b(-116, ResizableModalPanel.field_J);
           or.field_d.a(il.field_f, param3 ^ 1781875959);
           var6 = 0;
           if (fu.field_c) {
@@ -105,17 +105,17 @@ final class nc {
           if (param0) {
             var6 = var6 | 8;
           }
-          if (lh.field_A != null) {
+          if (BroadcastServerCommand.field_A != null) {
             var6 = var6 | 16;
           }
           or.field_d.a(103, var6);
-          var7 = sa.a(so.a(param3 ^ 16246), (byte) 116);
+          var7 = DelegatingCanvas.a(so.a(param3 ^ 16246), (byte) 116);
           if (var7 == null) {
             var7 = "";
           }
           or.field_d.a(14190, var7);
-          if (lh.field_A != null) {
-            or.field_d.a(lh.field_A, (byte) -127);
+          if (BroadcastServerCommand.field_A != null) {
+            or.field_d.a(BroadcastServerCommand.field_A, (byte) -127);
           }
           om.a(hn.field_h, or.field_d, (byte) -116, gl.field_a, bb.field_Nb);
           or.field_d.d(or.field_d.field_n - var5_int, 62);

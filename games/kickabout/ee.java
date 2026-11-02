@@ -18,16 +18,16 @@ final class ee {
 
     final static void b(byte param0) {
         if (rq.field_D != null) {
-          pi.field_b.b(rq.field_D);
+          pi.field_b.removeSubstream(rq.field_D);
         }
         if (param0 == -25) {
-          qd.field_c = null;
+          IndexedSpriteState.field_c = null;
           vg.field_Bb = null;
           rq.field_D = null;
           return;
         }
         field_e = false;
-        qd.field_c = null;
+        IndexedSpriteState.field_c = null;
         vg.field_Bb = null;
         rq.field_D = null;
     }
@@ -38,7 +38,7 @@ final class ee {
         }
         int var3 = hw.field_i * PacketBuffer.field_g.field_o >> 8;
         int var4 = PacketBuffer.field_g.field_o * hw.field_i >> 8;
-        int var5 = hw.field_i * sa.field_e >> 8;
+        int var5 = hw.field_i * DelegatingCanvas.field_e >> 8;
         int var6 = lr.field_m * hw.field_i >> 8;
         if (!MouseWheelInput.field_f) {
           eo.a(PacketBuffer.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);

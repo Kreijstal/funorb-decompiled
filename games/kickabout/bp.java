@@ -306,7 +306,7 @@ class bp extends hd {
         SoftwareRasterizer.a(this.field_F, this.field_T + 20, this.field_q, this.field_mb - 20, 16777215, 60);
         if (this.field_Cb.field_Eb.e((byte) -113)) {
           var2_ref_ji = this.field_Cb.field_Eb;
-          SoftwareRasterizer.g(3 + ((hd) ((Object) var2_ref_ji)).field_F, ((hd) ((Object) var2_ref_ji)).field_T, ((hd) ((Object) var2_ref_ji)).field_q - 6, ((hd) ((Object) var2_ref_ji)).field_mb);
+          SoftwareRasterizer.darkenRectangle(3 + ((hd) ((Object) var2_ref_ji)).field_F, ((hd) ((Object) var2_ref_ji)).field_T, ((hd) ((Object) var2_ref_ji)).field_q - 6, ((hd) ((Object) var2_ref_ji)).field_mb);
         }
         for (var2 = 0; var2 < this.field_Bb.length; var2++) {
           var13 = this.field_Bb[var2];
@@ -359,7 +359,7 @@ class bp extends hd {
             if (!var5.field_gb) {
               for (var8Lifetime1 = 0; var8Lifetime1 < this.field_Bb.length; var8Lifetime1++) {
                 if (!this.field_Bb[var8Lifetime1].field_gb) {
-                  SoftwareRasterizer.g(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb);
+                  SoftwareRasterizer.darkenRectangle(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb);
                 } else {
                   SoftwareRasterizer.a(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 2280703, 90);
                   stackIn_35_0 = (var8Lifetime1 == this.field_Bb.length - 1) ? 0 : 1;
@@ -373,7 +373,7 @@ class bp extends hd {
             }
             SoftwareRasterizer.e(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 65793);
             for (var8Lifetime1Lifetime1 = 0; var8Lifetime1Lifetime1 < 4; var8Lifetime1Lifetime1++) {
-              SoftwareRasterizer.h(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
+              SoftwareRasterizer.drawRectangleAlpha(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
             }
             for (var8Lifetime1Lifetime2 = 0; var8Lifetime1Lifetime2 < this.field_Bb.length; var8Lifetime1Lifetime2++) {
               if (this.field_Bb[var8Lifetime1Lifetime2].field_gb) {

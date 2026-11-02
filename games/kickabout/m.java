@@ -132,7 +132,7 @@ final class m {
           dj.field_D.a(true, var9_int, 0, param1, var12);
           var12 = var12 + param1;
           dj.field_D.field_R = fs.a(dj.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
-          mu.field_Y.a(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
+          ContentTransitionDialog.field_Y.a(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
           if (param0 != 49) {
             field_f = (boolean[]) null;
           }
@@ -239,7 +239,7 @@ final class m {
               or.field_d.a(123, 18);
               or.field_d.field_n = or.field_d.field_n + 2;
               var10 = or.field_d.field_n;
-              var11_ref_String = sa.a(so.a(50), (byte) 123);
+              var11_ref_String = DelegatingCanvas.a(so.a(50), (byte) 123);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -251,13 +251,13 @@ final class m {
             un.field_c = pf.field_e;
           }
           if (pf.field_e == un.field_c &&
-            uj.a((byte) 55, 1)) {
+            SetLagCommand.a((byte) 55, 1)) {
             var9Lifetime1 = un.field_e.h((byte) -116);
             un.field_e.field_n = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               un.field_c = id.field_t;
-              mr.field_X = new String[-100 + var9Lifetime1];
+              ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 wc.a((byte) -50, so.a(-71));
@@ -268,7 +268,7 @@ final class m {
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                uj.a((byte) 51, lt.a((byte) 40));
+                SetLagCommand.a((byte) 51, lt.a((byte) 40));
                 ep.field_f = new Boolean(ki.a(un.field_e, (byte) 93));
                 un.field_e.field_n = 0;
               } else {
@@ -280,13 +280,13 @@ final class m {
           }
           if (id.field_t == un.field_c) {
             var9Lifetime2 = 2;
-            if (uj.a((byte) -96, var9Lifetime2)) {
+            if (SetLagCommand.a((byte) -96, var9Lifetime2)) {
               var10Lifetime1 = un.field_e.a((byte) 81);
               un.field_e.field_n = 0;
-              if (uj.a((byte) -118, var10Lifetime1)) {
-                var11 = mr.field_X.length;
+              if (SetLagCommand.a((byte) -118, var10Lifetime1)) {
+                var11 = ValidatedTextWidget.field_X.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  mr.field_X[var12] = un.field_e.j(17);
+                  ValidatedTextWidget.field_X[var12] = un.field_e.j(17);
                 }
                 lr.b((byte) -116);
                 vu.field_Db = false;
@@ -393,7 +393,7 @@ final class m {
             var9 = (String) null;
             m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
           }
-          dv.a(this.field_j, 0, this.field_e, 32, 32);
+          ArrayOperations.a(this.field_j, 0, this.field_e, 32, 32);
           this.a((byte) 18);
           var4_int = 0;
           var5 = param2;

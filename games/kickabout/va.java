@@ -449,7 +449,7 @@ final class va extends hs {
         if (param0 >= -110) {
           this.field_s = -84;
         }
-        if (!var12[pb.field_A]) {
+        if (!var12[IsSixCommand.field_A]) {
           stackIn_26_0 = (var12[97]) ? 1 : 0;
         } else {
           stackIn_26_0 = 1;
@@ -461,17 +461,17 @@ final class va extends hs {
           if (!var12[rb.field_Kb] &&
             !var12[oc.field_e] &&
             !var12[uv.field_e] &&
-            !var12[pb.field_A]) {
+            !var12[IsSixCommand.field_A]) {
             if ((var12[98] ||
               var12[99] ||
               var12[96] ||
               var12[97])) {
-              tq.$cfr$intArgs$a$7ffe4b125357(50, false);
+              NotCommand.$cfr$intArgs$a$7ffe4b125357(50, false);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            tq.$cfr$intArgs$a$7ffe4b125357(50, true);
+            NotCommand.$cfr$intArgs$a$7ffe4b125357(50, true);
           }
         }
         if (this.field_l) {
@@ -603,7 +603,7 @@ final class va extends hs {
                 this.field_z = -1;
                 this.field_G = -1;
               } else {
-                this.field_z = ai.a(wt.field_x, 6784) - var4.f(-103);
+                this.field_z = AccountTermsPanel.a(wt.field_x, 6784) - var4.f(-103);
                 this.field_G = qj.a(-6779, us.field_j) - var4.a(true);
               }
             }
@@ -622,7 +622,7 @@ final class va extends hs {
                     this.field_k = false;
                   }
                   if (this.field_m) {
-                    this.b(qj.a(-6779, us.field_j), ai.a(wt.field_x, 6784), 1);
+                    this.b(qj.a(-6779, us.field_j), AccountTermsPanel.a(wt.field_x, 6784), 1);
                     this.field_m = false;
                   }
                 } else {
@@ -687,10 +687,10 @@ final class va extends hs {
           }
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4_int = 0; var4_int < 5; var4_int++) {
-              this.field_r.a(lb.a((gm) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
+              this.field_r.a(TextHotspotWidget.a((gm) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
             }
           }
-          this.field_r.a(mr.a((ob) (this.field_a.field_V), false), 3);
+          this.field_r.a(ValidatedTextWidget.a((ob) (this.field_a.field_V), false), 3);
           this.field_r.a(re.a(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
           this.field_r.a(re.a(false, 92), 3);
@@ -702,7 +702,7 @@ final class va extends hs {
               var4 = (ak) (param0.c(33));
             }
           }
-          uc.a(this.field_r, -22488);
+          IntTripleCommand.a(this.field_r, -22488);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1153,7 +1153,7 @@ final class va extends hs {
           this.a(param0, param3, 370);
           this.a((IntrusiveDeque) null, (byte) -97);
           var6_int = this.h(-41);
-          this.field_C = uj.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
+          this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
           this.field_l = true;
           sf.a(this.field_h, param1, param0, true);
           wt.a(0, param0, var6_int, this.field_C);
@@ -1312,8 +1312,8 @@ final class va extends hs {
           var2Lifetime2 = 370;
           var3Lifetime2 = -45;
           SoftwareRasterizer.e(ug.a(0, var2Lifetime2), lf.a((byte) -89, var3Lifetime2), 155 * hw.field_i >> 8, 45 * hw.field_i >> 8, 16711935);
-          ev.a(this.field_a, param0 ^ 72, 0);
-          ev.a(this.field_a, 48, 1);
+          LongPlusOneCommand.a(this.field_a, param0 ^ 72, 0);
+          LongPlusOneCommand.a(this.field_a, 48, 1);
         }
         if (LineupAgent.field_g &&
           this.field_a.phase == 4) {
@@ -1356,7 +1356,7 @@ final class va extends hs {
           ja.field_O)) {
           stackIn_8_0 = 50;
           stackIn_9_1 = (83 == param2);
-          tq.$cfr$intArgs$a$7ffe4b125357(stackIn_8_0, stackIn_9_1);
+          NotCommand.$cfr$intArgs$a$7ffe4b125357(stackIn_8_0, stackIn_9_1);
         }
         if (fm.a(false) &&
           ne.field_G[81] &&
@@ -1399,7 +1399,7 @@ final class va extends hs {
               }
               if (this.field_f) {
                 or.field_d.b(76, (byte) 98);
-                or.field_d.a(0, 8, 1991220144, this.field_t);
+                or.field_d.readBytes(0, 8, 1991220144, this.field_t);
               }
             }
           }
@@ -1429,7 +1429,7 @@ final class va extends hs {
         if (param0 > -92) {
           return;
         }
-        uc.a(this.field_r, -22488);
+        IntTripleCommand.a(this.field_r, -22488);
         is.a(7249);
         this.l(2115);
         GameKeyHandler.b(40);
@@ -1537,7 +1537,7 @@ final class va extends hs {
               var3_int = 1;
               oo.field_f = false;
             }
-            fo.a(var3_int != 0, -68, ki.g((byte) 60), hm.field_A, pe.a((byte) 92));
+            fo.a(var3_int != 0, -68, ki.g((byte) 60), SumIntegersCommand.field_A, pe.a((byte) 92));
           } else {
             if (!nq.i(-86)) {
               SoftwareRasterizer.b();

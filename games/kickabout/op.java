@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends qv {
+final class op extends TextWidgetPainter {
     static int[] field_z;
     static BufferedSocket field_y;
     private int field_s;
@@ -30,8 +30,8 @@ final class op extends qv {
         SoftwareRasterizer.b();
         SoftwareRasterizer.c(0, 0, jt.field_yb << 1, om.field_Bb << 1, 2, 16777215);
         SoftwareRasterizer.e(1, 1, -2 + (jt.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
-        SoftwareRasterizer.f(0, om.field_Bb, jt.field_yb << 1, 16777215);
-        SoftwareRasterizer.f(0, 1 + om.field_Bb, jt.field_yb << 1, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, om.field_Bb, jt.field_yb << 1, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 1 + om.field_Bb, jt.field_yb << 1, 16777215);
         vl.a(2, var1, true, 16777215).c(-var1 + jt.field_yb, om.field_Bb - var1);
         SoftwareRasterizer.c(jt.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
         SoftwareRasterizer.c(jt.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
@@ -46,7 +46,7 @@ final class op extends qv {
         pq.field_Q = new Sprite(2 + jt.field_yb, 2 + om.field_Bb);
         PacketBuffer.a(param0 + 363021421, pq.field_Q);
         SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
-        var7.f(1, 1);
+        var7.drawHalfSize(1, 1);
         ta.e(125);
     }
 
@@ -70,8 +70,8 @@ final class op extends qv {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof wi) {
-            param1 = param1 & ((wi) (param3)).field_y;
+          if (param3 instanceof TextButton) {
+            param1 = param1 & ((TextButton) (param3)).field_y;
           }
           if (!param1) {
             stackIn_13_0 = this.field_w;

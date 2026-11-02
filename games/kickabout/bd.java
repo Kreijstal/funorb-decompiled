@@ -130,7 +130,7 @@ final class bd extends qt {
             if (null == ug.field_a) {
               return;
             }
-            stackIn_13_0 = sa.field_a;
+            stackIn_13_0 = DelegatingCanvas.field_a;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = ug.field_a.getCodeBase();

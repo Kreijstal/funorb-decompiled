@@ -108,12 +108,12 @@ final class ol extends hs {
     }
 
     private final void i(int param0) {
-        cn stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         String stackIn_4_1 = null;
         int stackIn_4_2 = 0;
         int stackIn_4_3 = 0;
         int stackIn_8_4 = 0;
-        cn stackIn_11_0 = null;
+        CoverageBitmapFont stackIn_11_0 = null;
         String stackIn_11_1 = null;
         int stackIn_11_2 = 0;
         int stackIn_11_3 = 0;
@@ -130,12 +130,12 @@ final class ol extends hs {
         int stackIn_72_3;
         int stackIn_72_4;
         int stackIn_75_5;
-        cn stackIn_82_0;
+        CoverageBitmapFont stackIn_82_0;
         String stackIn_82_1;
         int stackIn_82_2;
         int stackIn_82_3;
         int stackIn_83_4 = 0;
-        cn stackIn_89_0;
+        CoverageBitmapFont stackIn_89_0;
         String stackIn_89_1;
         int stackIn_89_2;
         int stackIn_89_3;
@@ -146,7 +146,7 @@ final class ol extends hs {
         int stackIn_99_3;
         int stackIn_99_4;
         int stackIn_100_5 = 0;
-        cn stackIn_103_0;
+        CoverageBitmapFont stackIn_103_0;
         String stackIn_103_1;
         int stackIn_103_2;
         int stackIn_103_3;
@@ -157,7 +157,7 @@ final class ol extends hs {
         int stackIn_111_3;
         int stackIn_111_4;
         int stackIn_112_5 = 0;
-        cn stackIn_115_0;
+        CoverageBitmapFont stackIn_115_0;
         String stackIn_115_1;
         int stackIn_115_2;
         int stackIn_115_3;
@@ -168,12 +168,12 @@ final class ol extends hs {
         int stackIn_121_3;
         int stackIn_121_4;
         int stackIn_124_5 = 0;
-        cn stackIn_128_0;
+        CoverageBitmapFont stackIn_128_0;
         String stackIn_128_1;
         int stackIn_128_2;
         int stackIn_128_3;
         int stackIn_131_4 = 0;
-        cn stackIn_135_0;
+        CoverageBitmapFont stackIn_135_0;
         String stackIn_135_1;
         int stackIn_135_2;
         int stackIn_135_3;
@@ -184,7 +184,7 @@ final class ol extends hs {
         int stackIn_147_3;
         int stackIn_147_4;
         int stackIn_148_5 = 0;
-        cn stackIn_151_0;
+        CoverageBitmapFont stackIn_151_0;
         String stackIn_151_1;
         int stackIn_151_2;
         int stackIn_151_3;
@@ -195,7 +195,7 @@ final class ol extends hs {
         int stackIn_159_3;
         int stackIn_159_4;
         int stackIn_160_5 = 0;
-        cn stackIn_163_0;
+        CoverageBitmapFont stackIn_163_0;
         String stackIn_163_1;
         int stackIn_163_2;
         int stackIn_163_3;
@@ -235,7 +235,7 @@ final class ol extends hs {
           SoftwareRasterizer.a(22, 95, 596, 225, 10, 0, 96);
           pt.a(618, param0 ^ -16754303, 22, 305, 110);
           var2_int = this.field_ib;
-          un.field_d.d("<u=FFFFFF>" + dw.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
+          un.field_d.d("<u=FFFFFF>" + ConsoleEvaluationException.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           un.field_d.d(he.field_Ub.toUpperCase(), var2_int + 140, this.field_Q + 130, 16777215, -1);
           un.field_d.d(CommonGame.field_a.toUpperCase(), 500 + var2_int, this.field_Q + 130, 16777215, -1);
           var3 = this.field_Q + 140;
@@ -257,7 +257,7 @@ final class ol extends hs {
           } else {
             stackIn_8_4 = 65280;
           }
-          ((cn) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_8_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_8_4, -1);
           stackIn_11_0 = un.field_d;
           stackIn_11_1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(var6)});
           stackIn_11_2 = var4 - 40;
@@ -271,11 +271,11 @@ final class ol extends hs {
           } else {
             stackIn_15_4 = 65280;
           }
-          ((cn) (Object) stackIn_11_0).d(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_15_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_11_0).d(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_15_4, -1);
           var7 = var2_int + 60;
           var8 = this.field_Q + 140;
           pt.a(160 + var7, -22914, var7, var8 + 21, var8);
-          SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
+          SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
           un.field_d.d(ib.field_H, 80 + var7, 17 + var8, 16777215, -1);
           ta.e(124);
           var8 += 40;
@@ -336,7 +336,7 @@ final class ol extends hs {
             var8 = 140 + this.field_Q;
             var7 = var2_int + 420;
             pt.a(var7 + 160, param0 - 16800129, var7, var8 + 21, var8);
-            SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
             un.field_d.d(ib.field_H, var7 + 80, var8 + 17, 16777215, -1);
             ta.e(117);
             var8 += 40;
@@ -420,19 +420,19 @@ final class ol extends hs {
           } else {
             stackIn_83_4 = 65793;
           }
-          ((cn) (Object) stackIn_82_0).b(stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_82_0).b(stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, -1);
           var2_int += 596;
           stackIn_89_0 = un.field_d;
-          stackIn_89_1 = dw.field_b;
+          stackIn_89_1 = ConsoleEvaluationException.field_b;
           stackIn_89_2 = this.field_eb + 29;
-          stackIn_89_3 = 97 + this.field_db + (un.field_d.a(dw.field_b) >> 1);
+          stackIn_89_3 = 97 + this.field_db + (un.field_d.a(ConsoleEvaluationException.field_b) >> 1);
           if (!this.field_K &&
             !this.field_W) {
             stackIn_90_4 = 11184810;
           } else {
             stackIn_90_4 = 65793;
           }
-          ((cn) (Object) stackIn_89_0).b(stackIn_89_1, stackIn_89_2, stackIn_89_3, stackIn_90_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_89_0).b(stackIn_89_1, stackIn_89_2, stackIn_89_3, stackIn_90_4, -1);
           var9 = this.field_Q;
           un.field_d.d("<u=FFFFFF>" + qb.field_Vb.toUpperCase() + "</u>", 320 + var2_int, 125 + var9, 16777215, -1);
           var9 += 160;
@@ -471,7 +471,7 @@ final class ol extends hs {
             } else {
               stackIn_104_4 = 11184810;
             }
-            ((cn) (Object) stackIn_103_0).d(stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, -1);
+            ((CoverageBitmapFont) (Object) stackIn_103_0).d(stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, -1);
             ta.e(param0 - 16777088);
             pt.a(618, -22914, 22, 305, 110);
           }
@@ -498,7 +498,7 @@ final class ol extends hs {
             } else {
               stackIn_116_4 = 11184810;
             }
-            ((cn) (Object) stackIn_115_0).d(stackIn_115_1, stackIn_115_2, stackIn_115_3, stackIn_116_4, -1);
+            ((CoverageBitmapFont) (Object) stackIn_115_0).d(stackIn_115_1, stackIn_115_2, stackIn_115_3, stackIn_116_4, -1);
             ta.e(127);
             pt.a(618, -22914, 22, 305, 110);
           }
@@ -524,7 +524,7 @@ final class ol extends hs {
           } else {
             stackIn_131_4 = 65793;
           }
-          ((cn) (Object) stackIn_128_0).b(stackIn_128_1, stackIn_128_2, stackIn_128_3, stackIn_131_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_128_0).b(stackIn_128_1, stackIn_128_2, stackIn_128_3, stackIn_131_4, -1);
           var2_int += 596;
           stackIn_135_0 = un.field_d;
           stackIn_135_1 = qb.field_Vb;
@@ -536,7 +536,7 @@ final class ol extends hs {
           } else {
             stackIn_138_4 = 65793;
           }
-          ((cn) (Object) stackIn_135_0).b(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_138_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_135_0).b(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_138_4, -1);
           var9 = this.field_Q;
           un.field_d.d("<u=FFFFFF>" + rd.field_d.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           var9 += 160;
@@ -575,7 +575,7 @@ final class ol extends hs {
             } else {
               stackIn_152_4 = 11184810;
             }
-            ((cn) (Object) stackIn_151_0).d(stackIn_151_1, stackIn_151_2, stackIn_151_3, stackIn_152_4, -1);
+            ((CoverageBitmapFont) (Object) stackIn_151_0).d(stackIn_151_1, stackIn_151_2, stackIn_151_3, stackIn_152_4, -1);
             ta.e(117);
             pt.a(618, param0 ^ -16754303, 22, 305, 110);
           }
@@ -602,7 +602,7 @@ final class ol extends hs {
             } else {
               stackIn_164_4 = 65793;
             }
-            ((cn) (Object) stackIn_163_0).d(stackIn_163_1, stackIn_163_2, stackIn_163_3, stackIn_164_4, -1);
+            ((CoverageBitmapFont) (Object) stackIn_163_0).d(stackIn_163_1, stackIn_163_2, stackIn_163_3, stackIn_164_4, -1);
             ta.e(param0 - 16777089);
             pt.a(618, param0 ^ -16754303, 22, 305, 110);
           }
@@ -732,15 +732,15 @@ final class ol extends hs {
           }
           if (decompiledNaturalLoopExit0) {
             param4 += 6;
-            SoftwareRasterizer.b(159, param4 + 36, 159, 63 + param4, 4473924);
-            SoftwareRasterizer.b(160, param4 + 35, 160, 64 + param4, 11184810);
-            SoftwareRasterizer.b(161, 36 + param4, 161, param4 + 63, 4473924);
-            SoftwareRasterizer.b(469, 36 + param4, 469, param4 + 63, 4473924);
-            SoftwareRasterizer.b(470, param4 + 35, 470, param4 + 64, 11184810);
-            SoftwareRasterizer.b(471, param4 + 36, 471, 63 + param4, 4473924);
-            SoftwareRasterizer.b(33, param4 + 71, 602, param4 + 71, 4473924);
-            SoftwareRasterizer.b(32, 72 + param4, 603, param4 + 72, 11184810);
-            SoftwareRasterizer.b(33, 73 + param4, 602, 73 + param4, 4473924);
+            SoftwareRasterizer.drawLine(159, param4 + 36, 159, 63 + param4, 4473924);
+            SoftwareRasterizer.drawLine(160, param4 + 35, 160, 64 + param4, 11184810);
+            SoftwareRasterizer.drawLine(161, 36 + param4, 161, param4 + 63, 4473924);
+            SoftwareRasterizer.drawLine(469, 36 + param4, 469, param4 + 63, 4473924);
+            SoftwareRasterizer.drawLine(470, param4 + 35, 470, param4 + 64, 11184810);
+            SoftwareRasterizer.drawLine(471, param4 + 36, 471, 63 + param4, 4473924);
+            SoftwareRasterizer.drawLine(33, param4 + 71, 602, param4 + 71, 4473924);
+            SoftwareRasterizer.drawLine(32, 72 + param4, 603, param4 + 72, 11184810);
+            SoftwareRasterizer.drawLine(33, 73 + param4, 602, 73 + param4, 4473924);
             stackIn_25_0 = param3;
             stackIn_25_1 = 119;
           }
@@ -748,7 +748,7 @@ final class ol extends hs {
             return;
           }
           wq.a(param2, param1, param4, (byte) 32, IntrusiveNode.field_c, param0);
-          var6 = pj.field_D + "+" + ad.a(this.field_G, 26300);
+          var6 = AlphaContainer.field_D + "+" + ad.a(this.field_G, 26300);
           var6 = var6 + "<br>" + ss.field_e + ad.a(GameLoopApplet.field_E.field_x, 26300);
           wq.a(25, param1, param4, (byte) 32, var6, 140);
           stackIn_30_0 = new StringBuilder().append(bt.field_c);
@@ -812,7 +812,7 @@ final class ol extends hs {
             stackIn_30_0 = 1;
           }
           var7 = stackIn_30_0;
-          if (!var4[pb.field_A] &&
+          if (!var4[IsSixCommand.field_A] &&
             !var4[97] &&
             param2 != 97) {
             stackIn_40_0 = 0;
@@ -965,7 +965,7 @@ final class ol extends hs {
             this.field_Z = rl.field_u;
           }
           if (null != param0.field_X) {
-            this.field_Z = mu.field_S;
+            this.field_Z = ContentTransitionDialog.field_S;
             if (param0.field_X.score[1] > param0.field_X.score[0]) {
               this.field_Z = qq.field_J;
             }
@@ -1088,8 +1088,8 @@ final class ol extends hs {
           mv.$cfr$intArgs$a$6121ff5511c4(stackIn_76_0);
           this.field_fb = new Sprite[2];
           this.field_j = 256;
-          this.field_fb[0] = ae.a(true, (byte) -52, 0, 80, 7126504);
-          this.field_fb[1] = ae.a(true, (byte) -52, 1, 80, 7126504);
+          this.field_fb[0] = AccountRegistrationPanel.a(true, (byte) -52, 0, 80, 7126504);
+          this.field_fb[1] = AccountRegistrationPanel.a(true, (byte) -52, 1, 80, 7126504);
           if (this.field_p == null) {
             this.field_p = new int[this.field_a.playerCount][4];
           }
@@ -1154,7 +1154,7 @@ final class ol extends hs {
             SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             ta.e(param0 + 116);
             uv.a(var3 - 19, (byte) -82, -22 + var4);
-            pb.field_C.a(eq.field_b, -6 + var3, -16 + var4, 16777215, -1);
+            IsSixCommand.field_C.a(eq.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
           var2_int = 245;
           if (this.e(0, param0 ^ 51) &&
@@ -1167,7 +1167,7 @@ final class ol extends hs {
             SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             ta.e(126);
             uv.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
-            pb.field_C.a(eq.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
+            IsSixCommand.field_C.a(eq.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
           }
           if (this.field_S != 2) {
             if (0 == this.field_S ||
@@ -1304,9 +1304,9 @@ final class ol extends hs {
             var8 = 160;
             pt.a(4 + (var5_int + 320), -22914, var5_int, param2 + 21, param2);
             var9 = 80;
-            SoftwareRasterizer.i(var5_int, param2, var8, 42, 10, 65793);
-            SoftwareRasterizer.i(var6, param2, var9, 42, 10, 65793);
-            SoftwareRasterizer.i(var7, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var5_int, param2, var8, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var6, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var7, param2, var9, 42, 10, 65793);
             un.field_d.d(ib.field_H, var5_int + (var8 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(et.field_e, var6 + (var9 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(lt.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
@@ -1325,7 +1325,7 @@ final class ol extends hs {
                 break;
               }
               if (stackIn_23_0 != stackIn_23_1) {
-                var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ae.field_P, new String[]{this.field_a.field_S[var11_ref_ch.field_s].toLowerCase()});
+                var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountRegistrationPanel.field_P, new String[]{this.field_a.field_S[var11_ref_ch.field_s].toLowerCase()});
               }
               if (this.field_g == var11_ref_ch.field_s) {
                 var13 = 50;
@@ -1543,9 +1543,9 @@ final class ol extends hs {
               if (!um.field_e.field_s) {
                 if (this.field_N) {
                   if (this.field_a.field_e) {
-                    var4 = je.field_p + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, jg.field_I, new String[]{ad.a(this.field_G, 26300)});
+                    var4 = je.field_p + "<br>" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, DraggableWidget.field_I, new String[]{ad.a(this.field_G, 26300)});
                   } else {
-                    var4 = mc.field_b + "<br>" + vk.field_a + " " + tq.field_E;
+                    var4 = mc.field_b + "<br>" + vk.field_a + " " + NotCommand.field_E;
                   }
                 } else {
                   var4 = pe.field_c;
@@ -1553,7 +1553,7 @@ final class ol extends hs {
               } else {
                 var4 = ar.field_d;
                 if (um.field_e.field_q) {
-                  var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TeamSelectionAgent.field_m + " " + tq.field_E, new String[]{this.field_a.field_S[1 - this.field_g]});
+                  var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, TeamSelectionAgent.field_m + " " + NotCommand.field_E, new String[]{this.field_a.field_S[1 - this.field_g]});
                   if ((var13 != 0) &&
                     (!this.field_N)) {
                     var4 = pe.field_c;
@@ -1574,7 +1574,7 @@ final class ol extends hs {
                 }
               }
             }
-            var5 = pb.field_C.c(var4, 380, 16);
+            var5 = IsSixCommand.field_C.c(var4, 380, 16);
             wb.a(var4, 400, var5, -5 + (300 - var5), 120, 0);
           }
           return;
@@ -1897,21 +1897,21 @@ final class ol extends hs {
             this.field_eb = 600 + this.field_ib;
             this.field_x = 32 + (this.field_ib + 596);
             this.field_L = 1196 + this.field_ib;
-            stackIn_60_1 = (el.field_A >= this.field_H) && (el.field_A <= 570 + this.field_H) && (n.field_m >= this.field_jb) && (n.field_m <= this.field_jb + 12);
+            stackIn_60_1 = (BytePlusOneCommand.field_A >= this.field_H) && (BytePlusOneCommand.field_A <= 570 + this.field_H) && (n.field_m >= this.field_jb) && (n.field_m <= this.field_jb + 12);
             this.field_U = stackIn_60_1;
-            stackIn_73_1 = (el.field_A >= 16 + this.field_L) && (32 + this.field_L >= el.field_A) && (this.field_r <= n.field_m) && (n.field_m <= this.field_r + 195);
+            stackIn_73_1 = (BytePlusOneCommand.field_A >= 16 + this.field_L) && (32 + this.field_L >= BytePlusOneCommand.field_A) && (this.field_r <= n.field_m) && (n.field_m <= this.field_r + 195);
             this.field_D = stackIn_73_1;
-            stackIn_86_1 = (el.field_A >= this.field_T) && (el.field_A <= this.field_T + 570) && (this.field_kb + 12 <= n.field_m) && (n.field_m <= (this.field_kb + 24));
+            stackIn_86_1 = (BytePlusOneCommand.field_A >= this.field_T) && (BytePlusOneCommand.field_A <= this.field_T + 570) && (this.field_kb + 12 <= n.field_m) && (n.field_m <= (this.field_kb + 24));
             this.field_F = stackIn_86_1;
-            stackIn_99_1 = (this.field_L <= el.field_A) && (16 + this.field_L >= el.field_A) && (this.field_r <= n.field_m) && (n.field_m <= (this.field_r + 195));
+            stackIn_99_1 = (this.field_L <= BytePlusOneCommand.field_A) && (16 + this.field_L >= BytePlusOneCommand.field_A) && (this.field_r <= n.field_m) && (n.field_m <= (this.field_r + 195));
             this.field_C = stackIn_99_1;
-            stackIn_112_1 = ((16 + this.field_eb) <= el.field_A) && (el.field_A <= 32 + this.field_eb) && (n.field_m >= this.field_db) && (this.field_db + 195 >= n.field_m);
+            stackIn_112_1 = ((16 + this.field_eb) <= BytePlusOneCommand.field_A) && (BytePlusOneCommand.field_A <= 32 + this.field_eb) && (n.field_m >= this.field_db) && (this.field_db + 195 >= n.field_m);
             this.field_W = stackIn_112_1;
-            stackIn_125_1 = (this.field_v <= el.field_A) && ((this.field_v + 570) >= el.field_A) && (n.field_m >= (12 + this.field_A)) && ((this.field_A + 24) >= n.field_m);
+            stackIn_125_1 = (this.field_v <= BytePlusOneCommand.field_A) && ((this.field_v + 570) >= BytePlusOneCommand.field_A) && (n.field_m >= (12 + this.field_A)) && ((this.field_A + 24) >= n.field_m);
             this.field_t = stackIn_125_1;
-            stackIn_138_1 = (el.field_A >= this.field_eb) && (el.field_A <= (this.field_eb + 16)) && (this.field_db <= n.field_m) && (n.field_m <= this.field_db + 195);
+            stackIn_138_1 = (BytePlusOneCommand.field_A >= this.field_eb) && (BytePlusOneCommand.field_A <= (this.field_eb + 16)) && (this.field_db <= n.field_m) && (n.field_m <= this.field_db + 195);
             this.field_K = stackIn_138_1;
-            stackIn_151_1 = (el.field_A >= this.field_x) && (el.field_A <= 570 + this.field_x) && (n.field_m >= this.field_B) && (this.field_B + 12 >= n.field_m);
+            stackIn_151_1 = (BytePlusOneCommand.field_A >= this.field_x) && (BytePlusOneCommand.field_A <= 570 + this.field_x) && (n.field_m >= this.field_B) && (this.field_B + 12 >= n.field_m);
             this.field_y = stackIn_151_1;
             if (this.field_K &&
               WidgetContainer.field_A == 1 &&
@@ -2115,7 +2115,7 @@ final class ol extends hs {
             return stackIn_5_0;
           }
           if (param0 == 3) {
-            stackIn_15_0 = fb.field_S;
+            stackIn_15_0 = NumericDateInputWidget.field_S;
             return stackIn_15_0;
           }
           if (param0 != 1) {

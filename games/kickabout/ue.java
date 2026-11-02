@@ -98,7 +98,7 @@ final class ue extends IntrusiveNode {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
-        cn stackIn_31_0 = null;
+        CoverageBitmapFont stackIn_31_0 = null;
         String stackIn_32_1 = null;
         int[] stackIn_35_0 = null;
         int stackIn_36_1 = 0;
@@ -131,10 +131,10 @@ final class ue extends IntrusiveNode {
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
-          if (40 > jo.field_F.field_X.goalCount) {
+          if (40 > DemoIntegersCommand.field_F.field_X.goalCount) {
             return;
           }
-          var1_int = -40 + jo.field_F.field_X.goalCount;
+          var1_int = -40 + DemoIntegersCommand.field_F.field_X.goalCount;
           var2 = 69;
           if (var1_int < 30) {
             var2 = var1_int * 69 / 30;
@@ -187,18 +187,18 @@ final class ue extends IntrusiveNode {
               } else {
                 stackIn_32_1 = he.field_Ub;
               }
-              ((cn) (Object) stackIn_31_0).d(((String) (Object) stackIn_32_1).toUpperCase(), var14[var7], 290, 16777215, -1);
-              nb.field_j[var7].f(var14[var7] - 50, 170);
+              ((CoverageBitmapFont) (Object) stackIn_31_0).d(((String) (Object) stackIn_32_1).toUpperCase(), var14[var7], 290, 16777215, -1);
+              nb.field_j[var7].drawHalfSize(var14[var7] - 50, 170);
             }
-            tb.field_q[10].c(285, 180, var3);
-            stackIn_35_0 = jo.field_F.field_X.score;
+            tb.field_q[10].drawAdditive(285, 180, var3);
+            stackIn_35_0 = DemoIntegersCommand.field_F.field_X.score;
             if (var5Lifetime1 == 0) {
               stackIn_36_1 = 0;
             } else {
               stackIn_36_1 = 1;
             }
             var7Lifetime1 = stackIn_35_0[stackIn_36_1];
-            stackIn_38_0 = jo.field_F.field_X.score;
+            stackIn_38_0 = DemoIntegersCommand.field_F.field_X.score;
             if (var5Lifetime1 != 0) {
               stackIn_39_1 = 0;
             } else {
@@ -216,7 +216,7 @@ final class ue extends IntrusiveNode {
               var8 = 99;
             }
             stackIn_47_0 = (var5Lifetime1 == 0) ? 0 : 1;
-            if (stackIn_47_0 != jo.field_F.field_X.goalScorer) {
+            if (stackIn_47_0 != DemoIntegersCommand.field_F.field_X.goalScorer) {
               iq.$cfr$intArgs$a$8e2a9e3a0d15(-91, 180, 295, var7Lifetime1, var3);
               f.$cfr$intArgs$a$8e2a9e3a0d15(125, var8, var3, var4 + 180, 355);
               stackIn_54_0 = 122;

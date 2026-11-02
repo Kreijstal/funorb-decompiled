@@ -61,7 +61,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int a(da param0, int param1) {
+    private final int computeNoteSampleStep(da param0, int param1) {
         int stackIn_2_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -332,7 +332,7 @@ final class MidiPcmStream extends PcmStream {
         int var7 = Kickabout.field_G;
         try {
           this.a((byte) -123, param1);
-          this.field_k.a(param0.field_e);
+          this.field_k.parse(param0.field_e);
           this.field_D = 0L;
           this.field_r = param3 ? true : false;
           if (param2 != 101) {
@@ -340,11 +340,11 @@ final class MidiPcmStream extends PcmStream {
           }
           var5_int = this.field_k.e();
           for (var6 = 0; var6 < var5_int; var6++) {
-            this.field_k.c(var6);
-            this.field_k.d(var6);
+            this.field_k.seekTrack(var6);
+            this.field_k.readDelta(var6);
             this.field_k.b(var6);
           }
-          this.field_K = this.field_k.g();
+          this.field_K = this.field_k.nextTrack();
           this.field_H = this.field_k.field_e[this.field_K];
           this.field_P = this.field_k.e(this.field_H);
         } catch (RuntimeException runtimeException) {
@@ -359,7 +359,7 @@ final class MidiPcmStream extends PcmStream {
         boolean stackIn_20_3;
         da var5;
         int var6_int;
-        to var6;
+        PcmSample var6;
         da var7;
         da var8;
         int var9;
@@ -412,7 +412,7 @@ final class MidiPcmStream extends PcmStream {
         var7.field_s = -1;
         var7.field_v = 0;
         if (0 != this.field_s[param3]) {
-          var7.field_F = PcmSampleStream.b(var6, this.a(var7, -5), 0, this.a(true, var7));
+          var7.field_F = PcmSampleStream.b(var6, this.computeNoteSampleStep(var7, -5), 0, this.a(true, var7));
           stackIn_19_1 = false;
           stackIn_19_2 = var7;
           if (var11.field_r[param2] >= 0) {
@@ -424,7 +424,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.a(stackIn_19_1, stackIn_19_2, stackIn_20_3);
         } else {
-          var7.field_F = PcmSampleStream.b(var6, this.a(var7, -5), this.b(-101, var7), this.a(true, var7));
+          var7.field_F = PcmSampleStream.b(var6, this.computeNoteSampleStep(var7, -5), this.b(-101, var7), this.a(true, var7));
         }
         if (var11.field_r[param2] < 0) {
           var7.field_F.g(-1);
@@ -511,12 +511,12 @@ final class MidiPcmStream extends PcmStream {
             var5 = (int)((long)this.field_s[param1.field_q] * (long)var6 >> 6);
             if (var5 >= var4_int) {
               var5 = var4_int + var4_int - (1 + var5);
-              param1.field_F.a(true);
+              param1.field_F.setReversePlayback(true);
             }
           } else {
             var5 = (int)((long)this.field_s[param1.field_q] * (long)var4_int >> 6);
           }
-          param1.field_F.i(var5);
+          param1.field_F.setSamplePositionFixed(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -657,7 +657,7 @@ final class MidiPcmStream extends PcmStream {
             if (var3.field_F != null) {
               var3.field_F.e(PcmPlayerService.field_i / 100);
               if (var3.field_F.n()) {
-                this.field_m.field_i.a(var3.field_F);
+                this.field_m.field_i.addSubStream(var3.field_F);
               }
               var3.a(true);
             }
@@ -722,7 +722,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           param3.field_B = PcmPlayerService.field_i / 100;
           if (param3.field_s >= 0 && (param3.field_F == null ||
-            param3.field_F.f())) {
+            param3.field_F.isSamplePositionOutOfRange())) {
             param3.a(true);
             param3.c((byte) -109);
             if (0 < param3.field_E) {
@@ -741,7 +741,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_p = var6_int;
           }
-          param3.field_F.h(this.a(param3, -5));
+          param3.field_F.h(this.computeNoteSampleStep(param3, -5));
           var7 = param3.field_j;
           var8 = 0;
           param3.field_w = param3.field_w + 1;
@@ -825,7 +825,7 @@ final class MidiPcmStream extends PcmStream {
             param3.field_F.a(param4, param2, param1);
           }
           if (param3.field_F.n()) {
-            this.field_m.field_i.a(param3.field_F);
+            this.field_m.field_i.addSubStream(param3.field_F);
           }
           param3.a(true);
           if (0 <= param3.field_s) {
@@ -1240,21 +1240,21 @@ final class MidiPcmStream extends PcmStream {
               stackIn_28_0 = this.field_k.field_e[var2];
               stackIn_28_1 = var3;
               if (stackIn_28_0 == stackIn_28_1) {
-                this.field_k.c(var2);
-                var6 = this.field_k.f(var2);
+                this.field_k.seekTrack(var2);
+                var6 = this.field_k.readMessage(var2);
                 stackIn_7_0 = 1;
                 stackIn_7_1 = var6;
                 if (stackIn_7_0 != stackIn_7_1) {
                   if ((var6 & 128) != 0) {
                     this.d(5, var6);
                   }
-                  this.field_k.d(var2);
+                  this.field_k.readDelta(var2);
                   this.field_k.b(var2);
                   continue;
                 }
                 this.field_k.d();
                 this.field_k.b(var2);
-                if (this.field_k.a()) {
+                if (this.field_k.isDone()) {
                   if (this.field_x != null) {
                     this.a(this.field_r, 19134, this.field_x);
                     this.e(param0 ^ 0);
@@ -1262,7 +1262,7 @@ final class MidiPcmStream extends PcmStream {
                   }
                   if (this.field_r &&
                     var3 != 0) {
-                    this.field_k.a(var4);
+                    this.field_k.reset(var4);
                   } else {
                     this.a(true, false);
                     this.field_k.c();
@@ -1272,7 +1272,7 @@ final class MidiPcmStream extends PcmStream {
               }
               break;
             }
-            var2 = this.field_k.g();
+            var2 = this.field_k.nextTrack();
             var3 = this.field_k.field_e[var2];
             var4 = this.field_k.e(var3);
             continue scanLoop1;

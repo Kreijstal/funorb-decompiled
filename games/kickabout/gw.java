@@ -19,7 +19,7 @@ final class gw {
         var3 = Kickabout.field_G;
         try {
           var1 = or.field_d;
-          while (tm.b(-16000)) {
+          while (ConsoleCommand.b(-16000)) {
             var1.b(8, (byte) 94);
             fieldTemp$0 = var1.field_n + 1;
             var1.field_n = var1.field_n + 1;
@@ -127,14 +127,14 @@ final class gw {
             var8 = param5[1].field_o;
             param5[0].d(param2, param0, param4);
             param5[2].d(-var7 + param2 + param3, param0, param4);
-            SoftwareRasterizer.a(vi.field_q);
-            SoftwareRasterizer.h(param2 + var6_int, param0, param2 - (-param3 + var7), param5[1].field_v + param0);
+            SoftwareRasterizer.saveClip(vi.field_q);
+            SoftwareRasterizer.intersectClip(param2 + var6_int, param0, param2 - (-param3 + var7), param5[1].field_v + param0);
             var9 = param2 + var6_int;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
               param5[1].d(param2, param0, param4);
             }
-            SoftwareRasterizer.b(vi.field_q);
+            SoftwareRasterizer.restoreClip(vi.field_q);
             return;
           }
           return;
@@ -153,7 +153,7 @@ final class gw {
     }
 
     final static void a(int param0) {
-        fb.field_J = new bo(tv.field_e, ai.field_H, hl.field_f, dw.field_e, hs.field_d, ul.field_c);
+        NumericDateInputWidget.field_J = new bo(tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, hs.field_d, ul.field_c);
         if (param0 != 8) {
           field_a = (hd) null;
         }

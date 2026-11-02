@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends ct {
+final class cg extends SingleChildContainer {
     private int field_J;
     static String[] field_G;
     private String field_A;
@@ -31,7 +31,7 @@ final class cg extends ct {
           k.field_i = k.field_i + 1;
           if (ji.field_Hb == -1 &&
             lj.field_h == -1) {
-            ji.field_Hb = el.field_A;
+            ji.field_Hb = BytePlusOneCommand.field_A;
             lj.field_h = n.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -76,7 +76,7 @@ final class cg extends ct {
           }
           if (!nc.field_a &&
             us.field_e > k.field_i &&
-            el.field_C) {
+            BytePlusOneCommand.field_C) {
             k.field_i = 0;
             td.field_d = lj.field_h;
             ws.field_e = ji.field_Hb;
@@ -135,7 +135,7 @@ final class cg extends ct {
     }
 
     cg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (gj) null, (jv) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null, (UiListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;

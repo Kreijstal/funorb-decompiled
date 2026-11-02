@@ -4,7 +4,7 @@
 final class Bzip2Decoder {
     private static os field_a;
 
-    private final static int a(int param0, os param1) {
+    private final static int readBits(int param0, os param1) {
         int var2;
         while (param1.field_q < param0) {
           param1.field_z = param1.field_z << 8 | param1.field_y[param1.field_K] & 255;
@@ -25,14 +25,14 @@ final class Bzip2Decoder {
     }
 
     private final static byte e(os param0) {
-        return (byte)Bzip2Decoder.a(1, param0);
+        return (byte)Bzip2Decoder.readBits(1, param0);
     }
 
     private final static byte b(os param0) {
-        return (byte)Bzip2Decoder.a(8, param0);
+        return (byte)Bzip2Decoder.readBits(8, param0);
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -77,7 +77,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void a(os param0) {
+    private final static void buildSymbolMap(os param0) {
         int var1 = 0;
         param0.field_t = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -88,7 +88,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void d(os param0) {
+    private final static void decodeBlocks(os param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -204,10 +204,10 @@ final class Bzip2Decoder {
               }
             }
           }
-          Bzip2Decoder.a(param0);
+          Bzip2Decoder.buildSymbolMap(param0);
           var7 = param0.field_t + 2;
-          var8 = Bzip2Decoder.a(3, param0);
-          var9 = Bzip2Decoder.a(15, param0);
+          var8 = Bzip2Decoder.readBits(3, param0);
+          var9 = Bzip2Decoder.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
@@ -242,7 +242,7 @@ final class Bzip2Decoder {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = Bzip2Decoder.a(5, param0);
+            var17 = Bzip2Decoder.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -276,7 +276,7 @@ final class Bzip2Decoder {
                 var2 = param0.field_b[var6][var4];
               }
             }
-            Bzip2Decoder.a(param0.field_k[var6], param0.field_C[var6], param0.field_n[var6], param0.field_b[var6], var2, var3, var7);
+            Bzip2Decoder.buildHuffmanTables(param0.field_k[var6], param0.field_C[var6], param0.field_n[var6], param0.field_b[var6], var2, var3, var7);
             param0.field_L[var6] = var2;
           }
           var10 = param0.field_t + 1;
@@ -305,7 +305,7 @@ final class Bzip2Decoder {
           }
           var12--;
           var18 = var22;
-          var19 = Bzip2Decoder.a(var18, param0);
+          var19 = Bzip2Decoder.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
             var20 = Bzip2Decoder.e(param0);
@@ -408,7 +408,7 @@ final class Bzip2Decoder {
               }
               var12--;
               var18 = var22;
-              var19 = Bzip2Decoder.a(var18, param0);
+              var19 = Bzip2Decoder.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = Bzip2Decoder.e(param0);
@@ -439,7 +439,7 @@ final class Bzip2Decoder {
               }
               var12--;
               var18 = var22;
-              var19 = Bzip2Decoder.a(var18, param0);
+              var19 = Bzip2Decoder.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = Bzip2Decoder.e(param0);
@@ -606,7 +606,7 @@ final class Bzip2Decoder {
           field_a.field_z = 0;
           field_a.field_a = 0;
           field_a.field_H = 0;
-          Bzip2Decoder.d(field_a);
+          Bzip2Decoder.decodeBlocks(field_a);
           param1 = param1 - field_a.field_F;
           field_a.field_y = null;
           field_a.field_h = null;

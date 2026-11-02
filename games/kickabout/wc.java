@@ -4,20 +4,20 @@
 final class wc {
     int field_j;
     private boolean field_r;
-    gj field_h;
-    gj field_c;
+    WidgetPainter field_h;
+    WidgetPainter field_c;
     static int[] field_e;
     int field_f;
     int field_d;
-    gj field_l;
+    WidgetPainter field_l;
     BitmapFont field_a;
     static String field_q;
     int field_i;
     static sn field_k;
     int field_m;
-    gj field_o;
+    WidgetPainter field_o;
     private int field_b;
-    gj field_n;
+    WidgetPainter field_n;
     int field_p;
     static int[] field_g;
     int field_t;
@@ -49,7 +49,7 @@ final class wc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        SoftwareRasterizer.b(param2, param3, param4, param1, param0);
+        SoftwareRasterizer.drawLine(param2, param3, param4, param1, param0);
         if (!param5) {
           this.a(-95, 103, -98, -54, -82, true);
         }
@@ -108,13 +108,13 @@ final class wc {
         id var14 = null;
         id var19 = null;
         int var15 = Kickabout.field_G;
-        qv var17 = new qv(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_p + param0.field_G));
+        TextWidgetPainter var17 = new TextWidgetPainter(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_p + param0.field_G));
         id var14Lifetime1;
         id var14Lifetime2;
         var17.field_b = 16777215;
-        this.field_c = (gj) ((Object) var17);
+        this.field_c = (WidgetPainter) ((Object) var17);
         id var4 = new id();
-        var17.a(var4, (byte) -92);
+        var17.copyStyleTo(var4, (byte) -92);
         this.field_t = 5592405;
         var4.field_i = 15658734;
         this.field_a = param0;
@@ -142,21 +142,21 @@ final class wc {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, -12085).a(true, (byte) 113).a(true, var5);
           var4.a(5, -12085).a(true, gl.a(65793, (byte) 115, 0, 0, 0)).a(true, (byte) -90).b(param1 - 3424, -1);
-          this.field_l = (gj) ((Object) var4);
+          this.field_l = (WidgetPainter) ((Object) var4);
           var6 = new id(var4, true);
           var6.field_e = 0;
           var7 = new id(var4, true);
           var7.field_e = 0;
           var7.a(sp.a((byte) 26, 8947848), -23952);
           var7.a(1, -12085).a(true, sp.a((byte) 26, 11184810)).b(-2, 2236962);
-          this.field_o = (gj) ((Object) new re(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_o = (WidgetPainter) ((Object) new re(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new du(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new id();
-          var17.a(var8, (byte) -87);
+          var17.copyStyleTo(var8, (byte) -87);
           var8.a(0, param1 ^ -8811).a(true, ba.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
           var8.a(4, param1 ^ -8811).a(true, (byte) -58).a(true, var5);
-          this.field_h = (gj) ((Object) var8);
+          this.field_h = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -171,13 +171,13 @@ final class wc {
           var13 = new Sprite(7, 4);
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new id(var4, true);
-          var14.a(var13.b(), (byte) -95);
+          var14.a(var13.copy(), (byte) -95);
           var13.d();
           var14Lifetime1 = new id(var4, true);
-          var14Lifetime1.a(var13.b(), (byte) -114);
+          var14Lifetime1.a(var13.copy(), (byte) -114);
           var13.d();
           var14Lifetime2 = new id(var4, true);
-          var14Lifetime2.a(var13.b(), (byte) -101);
+          var14Lifetime2.a(var13.copy(), (byte) -101);
           var13.d();
           var19 = new id(var4, true);
           var19.a(var13, (byte) -90);
@@ -191,7 +191,7 @@ final class wc {
         String var3 = null;
         long var4 = 0L;
         try {
-          lb.field_F = true;
+          TextHotspotWidget.field_F = true;
           var2 = "tuhstatbut";
           if (param0 > -37) {
             wc.a(48);

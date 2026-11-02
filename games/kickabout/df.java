@@ -134,8 +134,8 @@ final class df extends dj {
           ms.a(wa.field_b, this.field_j + 40, 560, false, 0, 126);
           un.field_d.a(c.field_h.toLowerCase(), 56 + this.field_j, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
-            pb.field_C.c(CipherPacketBuffer.field_t[var3], 150 + this.field_j, 256 + 50 * var3, 16777215, -1);
-            pb.field_C.a(jq.field_a[var3], this.field_j + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
+            IsSixCommand.field_C.c(CipherPacketBuffer.field_t[var3], 150 + this.field_j, 256 + 50 * var3, 16777215, -1);
+            IsSixCommand.field_C.a(jq.field_a[var3], this.field_j + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
           }
         } else {
           if (this.field_C == 1) {
@@ -152,7 +152,7 @@ final class df extends dj {
               }
               for (var7 = 0; var7 < BallAgent.field_w[var3].length; var7++) {
                 var8 = BallAgent.field_w[var3][var7];
-                var6 = var6 + (20 + pb.field_C.a(var8, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
+                var6 = var6 + (20 + IsSixCommand.field_C.a(var8, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
               }
             }
             for (var3 = 0; var3 < 4; var3++) {
@@ -197,7 +197,7 @@ final class df extends dj {
           if (param0 >= -35) {
             df.c(true);
           }
-          re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
+          re.field_c.a(-21174, ts.b(n.field_m, BytePlusOneCommand.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
           if (re.field_c.c(-1)) {
             var1_int = 1;
           }

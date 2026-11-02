@@ -42,8 +42,8 @@ final class vi extends mc {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = mu.a(param1, (byte) -39) ? 1 : 0;
-          var4 = mu.a(param1, (byte) -39) ? 1 : 0;
+          var3 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
+          var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var5 = new kk();
           var5.field_b = (short)param1.l(16, 59);
           var5.field_f = nq.a(var5.field_f, param1, 16, -72);
@@ -70,10 +70,10 @@ final class vi extends mc {
             var5.field_i = nq.a(var5.field_i, param1, 16, -65);
             var5.field_K = nq.a(var5.field_K, param1, 16, -87);
           }
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             var5.field_o = nq.a(var5.field_o, param1, 16, 106);
           }
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             var5.field_G = bp.a(2280703, param1, var5.field_G, 16);
             var6 = 0;
             for (var7 = 0; var5.field_G.length > var7; var7++) {

@@ -34,10 +34,10 @@ final class BufferedCacheFile {
         var1 = lw.field_e;
         synchronized (var1) {
           FootballerAgent.field_p = RandomAccessCacheFile.field_d;
-          lb.field_M = lb.field_M + 1;
-          el.field_A = vf.field_G;
+          TextHotspotWidget.field_M = TextHotspotWidget.field_M + 1;
+          BytePlusOneCommand.field_A = vf.field_G;
           n.field_m = gf.field_b;
-          el.field_C = rp.field_A;
+          BytePlusOneCommand.field_C = rp.field_A;
           rp.field_A = false;
           WidgetContainer.field_A = vu.field_Fb;
           sm.field_q = fp.field_w;
@@ -158,11 +158,11 @@ final class BufferedCacheFile {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          el.a(jw.field_Ab, kr.field_b, kn.field_F, uk.field_b, nj.field_d, param0, r.field_c, jf.field_B, ul.field_c, dw.field_e, 5, ip.field_c);
-          il.field_d = se.a(param1, -127, "lobby", "chatfilter");
+          BytePlusOneCommand.a(jw.field_Ab, kr.field_b, kn.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
+          il.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = pa.field_j;
           IntrusiveDeque.field_h[param3] = gr.field_Q;
-          IntrusiveDeque.field_h[1] = lk.field_n;
+          IntrusiveDeque.field_h[1] = ConsoleExpression.field_n;
           at.a(rq.field_E, param2, (byte) -32);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ew.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -254,7 +254,7 @@ final class BufferedCacheFile {
             if (this.field_l != -1L &&
               this.field_m >= this.field_l &&
               (this.field_m + (long)param0) <= (this.field_l + (long)this.field_g)) {
-              dv.a(this.field_k, (int)(this.field_m - this.field_l), param3, param1, param0);
+              ArrayOperations.a(this.field_k, (int)(this.field_m - this.field_l), param3, param1, param0);
               this.field_m = this.field_m + (long)param0;
               return;
             }
@@ -270,7 +270,7 @@ final class BufferedCacheFile {
               if (var9_int > param0) {
                 var9_int = param0;
               }
-              dv.a(this.field_h, (int)(this.field_m - this.field_e), param3, param1, var9_int);
+              ArrayOperations.a(this.field_h, (int)(this.field_m - this.field_e), param3, param1, var9_int);
               param0 = param0 - var9_int;
               param1 = param1 + var9_int;
               this.field_m = this.field_m + (long)var9_int;
@@ -301,7 +301,7 @@ final class BufferedCacheFile {
               if (this.field_b < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_b;
               }
-              dv.a(this.field_h, 0, param3, param1, var9_intLifetime1Lifetime1);
+              ArrayOperations.a(this.field_h, 0, param3, param1, var9_intLifetime1Lifetime1);
               this.field_m = this.field_m + (long)var9_intLifetime1Lifetime1;
               param1 = param1 + var9_intLifetime1Lifetime1;
               param0 = param0 - var9_intLifetime1Lifetime1;
@@ -344,7 +344,7 @@ final class BufferedCacheFile {
               if (-1L < var9 &&
                 var11 > var9) {
                 var13 = (int)(var11 - var9);
-                dv.a(this.field_k, (int)(-this.field_l + var9), param3, (int)(-var5_long + var9) + var7, var13);
+                ArrayOperations.a(this.field_k, (int)(-this.field_l + var9), param3, (int)(-var5_long + var9) + var7, var13);
                 if (this.field_m < var11) {
                   param0 = (int)((long)param0 - (var11 - this.field_m));
                   this.field_m = var11;
@@ -408,7 +408,7 @@ final class BufferedCacheFile {
             if (this.field_l != -1L &&
               ((long)this.field_k.length + this.field_l) < (this.field_m + (long)param2)) {
               var5_int = (int)((long)this.field_k.length - (-this.field_l + this.field_m));
-              dv.a(param3, param0, this.field_k, (int)(this.field_m - this.field_l), var5_int);
+              ArrayOperations.a(param3, param0, this.field_k, (int)(this.field_m - this.field_l), var5_int);
               param2 = param2 - var5_int;
               this.field_m = this.field_m + (long)var5_int;
               param0 = param0 + var5_int;
@@ -422,7 +422,7 @@ final class BufferedCacheFile {
               if (this.field_l == -1L) {
                 this.field_l = this.field_m;
               }
-              dv.a(param3, param0, this.field_k, (int)(this.field_m - this.field_l), param2);
+              ArrayOperations.a(param3, param0, this.field_k, (int)(this.field_m - this.field_l), param2);
               this.field_m = this.field_m + (long)param2;
               if ((long)this.field_g < this.field_m - this.field_l) {
                 this.field_g = (int)(-this.field_l + this.field_m);
@@ -461,7 +461,7 @@ final class BufferedCacheFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              dv.a(param3, (int)((long)param0 - (-var5_long + this.field_m)), this.field_h, (int)(-this.field_e + var5_long), var9);
+              ArrayOperations.a(param3, (int)((long)param0 - (-var5_long + this.field_m)), this.field_h, (int)(-this.field_e + var5_long), var9);
             }
             this.field_m = this.field_m + (long)param2;
             return;
@@ -527,7 +527,7 @@ final class BufferedCacheFile {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            dv.a(this.field_k, (int)(var2 - this.field_l), this.field_h, (int)(-this.field_e + var2), var6);
+            ArrayOperations.a(this.field_k, (int)(var2 - this.field_l), this.field_h, (int)(-this.field_e + var2), var6);
           }
           this.field_g = 0;
           this.field_l = -1L;

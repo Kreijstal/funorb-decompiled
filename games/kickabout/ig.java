@@ -46,11 +46,11 @@ final class ig {
         try {
           param0 = param0 >> 1;
           vo.field_cb.c(param0 + qj.field_e, ArchiveNetworkClient.field_i);
-          nn.field_C.c(param0 + qj.field_e, 18 + ArchiveNetworkClient.field_i);
+          AccountChoicePanel.field_C.c(param0 + qj.field_e, 18 + ArchiveNetworkClient.field_i);
           var2_int = 2;
           if (CachedArchiveSource.field_s > 1) {
             for (var3 = 1; var3 < CachedArchiveSource.field_s; var3++) {
-              nn.field_C.c(qj.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
+              AccountChoicePanel.field_C.c(qj.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
               var2_int += 2;
             }
           }
@@ -139,7 +139,7 @@ final class ig {
           }
           var6 = (CharSequence) ((Object) param1);
           qi.field_o = MatchAgent.a(0, var6);
-          ik.field_A = param0;
+          IntDoubleCommand.field_A = param0;
           vg.field_Wb = true;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ig.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -152,7 +152,7 @@ final class ig {
         String[] stackIn_20_0 = null;
         String[] stackIn_23_0 = null;
         RuntimeException decompiledCaughtException = null;
-        uo var3 = null;
+        BinaryBitmapFont var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         String[] var5 = null;
@@ -183,7 +183,7 @@ final class ig {
         int var12Lifetime1;
         var15 = Kickabout.field_G;
         try {
-          var3 = pb.field_C;
+          var3 = IsSixCommand.field_C;
           var4 = 0;
           var16 = po.field_a;
           var5 = var16;
@@ -205,7 +205,7 @@ final class ig {
           if (param0) {
             stackIn_17_0 = PacketBuffer.field_k;
           } else {
-            stackIn_17_0 = qd.field_f;
+            stackIn_17_0 = IndexedSpriteState.field_f;
           }
           var19 = stackIn_17_0;
           var5_ref = var19;

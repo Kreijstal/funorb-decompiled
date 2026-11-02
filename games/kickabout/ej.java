@@ -74,21 +74,21 @@ final class ej extends hd {
         var3 = Kickabout.field_G;
         if (pt.field_e == this.field_Bb) {
           SoftwareRasterizer.a(-4 + this.field_F, this.field_T - 4, 40, 40, 2, 65793, 128);
-          SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+          SoftwareRasterizer.drawRoundedRectangle(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               } else {
                 if (this.field_Bb != 32) {
-                  pn.field_w.g(this.field_F, this.field_T);
+                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
                   if (jd.f(-1)) {
-                    ra.field_L.g(this.field_F, this.field_T);
+                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    pn.field_w.g(this.field_F, this.field_T);
+                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   }
                 }
               }
@@ -96,42 +96,42 @@ final class ej extends hd {
           } else {
             this.c(true);
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
                   if (!jd.f(-1)) {
-                    pn.field_w.g(this.field_F, this.field_T);
+                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    ra.field_L.g(this.field_F, this.field_T);
+                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 } else {
-                  pn.field_w.g(this.field_F, this.field_T);
+                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                 }
               } else {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               }
             }
           }
         } else {
           if (this.field_Bb == ob.field_C) {
             SoftwareRasterizer.a(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
-            SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+            SoftwareRasterizer.drawRoundedRectangle(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           }
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               } else {
                 if (this.field_Bb != 32) {
-                  pn.field_w.g(this.field_F, this.field_T);
+                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
                   if (!jd.f(-1)) {
-                    pn.field_w.g(this.field_F, this.field_T);
+                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    ra.field_L.g(this.field_F, this.field_T);
+                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 }
               }
@@ -139,20 +139,20 @@ final class ej extends hd {
           } else {
             this.c(true);
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
-              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
                   if (!jd.f(-1)) {
-                    pn.field_w.g(this.field_F, this.field_T);
+                    pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
-                    ra.field_L.g(this.field_F, this.field_T);
+                    ra.field_L.drawQuarterSize(this.field_F, this.field_T);
                   }
                 } else {
-                  pn.field_w.g(this.field_F, this.field_T);
+                  pn.field_w.drawQuarterSize(this.field_F, this.field_T);
                 }
               } else {
-                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
               }
             }
           }

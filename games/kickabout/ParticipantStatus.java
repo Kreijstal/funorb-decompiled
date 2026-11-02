@@ -98,18 +98,18 @@ final class ParticipantStatus extends MatchAgent {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mu.a(param0, (byte) -39)) {
+          if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
           }
           this.field_g = -1 + param0.l(3, 59);
           this.field_p = param0.l(3, param1 ^ 58) - param1;
-          this.field_k = mu.a(param0, (byte) -39);
-          this.offerDraw = mu.a(param0, (byte) -39);
-          this.resigned = mu.a(param0, (byte) -39);
-          this.departed = mu.a(param0, (byte) -39);
-          this.loadedPitch = mu.a(param0, (byte) -39);
-          this.rewardEligible = mu.a(param0, (byte) -39);
-          this.megamode = mu.a(param0, (byte) -39);
+          this.field_k = ContentTransitionDialog.a(param0, (byte) -39);
+          this.offerDraw = ContentTransitionDialog.a(param0, (byte) -39);
+          this.resigned = ContentTransitionDialog.a(param0, (byte) -39);
+          this.departed = ContentTransitionDialog.a(param0, (byte) -39);
+          this.loadedPitch = ContentTransitionDialog.a(param0, (byte) -39);
+          this.rewardEligible = ContentTransitionDialog.a(param0, (byte) -39);
+          this.megamode = ContentTransitionDialog.a(param0, (byte) -39);
           this.field_l = param0.l(8, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

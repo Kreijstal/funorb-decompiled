@@ -67,7 +67,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (nr.field_q != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
-              kd.a((char) var2_int, (byte) 80)) {
+              DebugConsole.a((char) var2_int, (byte) 80)) {
               var3 = du.field_j + 1 & 127;
               if (var3 != LineupAgent.field_n) {
                 bt.field_a[du.field_j] = -1;
@@ -151,7 +151,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (var8 != 0 &&
             var7 != 0) {
-            im.a(-12376, var16, var15 - var5, tm.field_z);
+            im.a(-12376, var16, var15 - var5, ConsoleCommand.field_z);
             im.a(-12376, var16, -var18 + var15, c.field_f[1]);
           }
           for (var22 = 0; var22 < 2; var22++) {
@@ -161,7 +161,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (var9 != 0) {
               im.a(-12376, var12 * var22 + var14, var17, qj.field_a);
-              wf.a(-840618968, var14 + var22 * var12, ub.field_G[var1_int], var17 + var5);
+              wf.a(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
             }
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < 3; var22Lifetime1++) {
@@ -213,8 +213,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             fj.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              fb.field_Q.length > var2_int) {
-              var2_int = fb.field_Q[var2_int];
+              NumericDateInputWidget.field_Q.length > var2_int) {
+              var2_int = NumericDateInputWidget.field_Q[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
@@ -272,8 +272,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             fj.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              fb.field_Q.length > var2_int) {
-              var2_int = fb.field_Q[var2_int] & -129;
+              NumericDateInputWidget.field_Q.length > var2_int) {
+              var2_int = NumericDateInputWidget.field_Q[var2_int] & -129;
             } else {
               var2_int = -1;
             }

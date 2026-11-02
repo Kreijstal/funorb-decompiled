@@ -31,7 +31,7 @@ final class fs {
         int var8 = SoftwareRasterizer.field_f;
         Sprite var9 = new Sprite(param1, param0 - param1 * 2);
         var9.e();
-        SoftwareRasterizer.g(0, 0, param1, -(2 * param1) + param0, param3, param4);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(2 * param1) + param0, param3, param4);
         Sprite var10 = new Sprite(param1, param1);
         var10.e();
         SoftwareRasterizer.a(0, 0, param1, param1, param3);

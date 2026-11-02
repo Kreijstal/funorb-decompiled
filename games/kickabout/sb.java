@@ -24,15 +24,15 @@ final class sb {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        gg var3 = se.a(param0, 2, param2);
+        gg var3 = ModalStack.a(param0, 2, param2);
         uv var4Lifetime1;
         if (!param1) {
           if (var3 != null) {
-            wi.field_v.a(false, 0);
-            var4 = wi.field_v;
+            TextButton.field_v.a(false, 0);
+            var4 = TextButton.field_v;
             var5_ref_String = qt.field_k;
             var4.field_j.a(0, 5, var5_ref_String);
-            var4Lifetime1 = wi.field_v;
+            var4Lifetime1 = TextButton.field_v;
             var5 = sm.field_q;
             var6 = vc.field_y;
             var4Lifetime1.field_j.a(0, 0, var5, var6, 0);
@@ -46,14 +46,14 @@ final class sb {
         if (param4 == 5) {
           nr.field_j = param1;
           jl.field_d = param2;
-          lk.field_g = param0;
+          ConsoleExpression.field_g = param0;
           la.field_c = param3;
           return;
         }
         field_h = (int[]) null;
         nr.field_j = param1;
         jl.field_d = param2;
-        lk.field_g = param0;
+        ConsoleExpression.field_g = param0;
         la.field_c = param3;
     }
 
@@ -77,9 +77,9 @@ final class sb {
     final static int a(int param0, int param1) {
         if (param1 > -121) {
           field_g = (String) null;
-          return t.field_o[2047 & param0];
+          return TriangleRasterizer.field_o[2047 & param0];
         }
-        return t.field_o[2047 & param0];
+        return TriangleRasterizer.field_o[2047 & param0];
     }
 
     final static void b(byte param0) {

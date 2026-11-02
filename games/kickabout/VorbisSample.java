@@ -39,7 +39,7 @@ final class VorbisSample extends IntrusiveNode {
     private byte[][] field_E;
     private static float[] field_f;
 
-    final to a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -89,10 +89,10 @@ final class VorbisSample extends IntrusiveNode {
         this.field_u = null;
         var12 = this.field_J;
         this.field_J = null;
-        return new to(this.field_k, var12, this.field_l, this.field_o, this.field_v);
+        return new PcmSample(this.field_k, var12, this.field_l, this.field_o, this.field_v);
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample load(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -259,7 +259,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = cm.a(true, var5 - 1);
+          var10 = ResizableModalPanel.a(true, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = sf.a(-5974, var11, var10);
           }
@@ -367,7 +367,7 @@ final class VorbisSample extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final to c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -399,7 +399,7 @@ final class VorbisSample extends IntrusiveNode {
           }
         }
         this.field_u = null;
-        return new to(this.field_k, var1, this.field_l, this.field_o, this.field_v);
+        return new PcmSample(this.field_k, var1, this.field_l, this.field_o, this.field_v);
     }
 
     private final float[] b(int param0) {
@@ -516,7 +516,7 @@ final class VorbisSample extends IntrusiveNode {
         int var18_intLifetime2;
         VorbisSample.a(this.field_E[param0], 0);
         VorbisSample.b();
-        var2 = VorbisSample.e(cm.a(true, field_g.length - 1));
+        var2 = VorbisSample.e(ResizableModalPanel.a(true, field_g.length - 1));
         var3 = field_K[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_B;
@@ -567,7 +567,7 @@ final class VorbisSample extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_c;
           var18_int = var14.field_a[var17_intLifetime2];
-          field_y[var18_int].a(field_j, var4 >> 1);
+          field_y[var18_int].applyFloor(field_j, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -635,7 +635,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = cm.a(true, var4 - 1);
+          var25Lifetime2 = ResizableModalPanel.a(true, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;

@@ -20,7 +20,7 @@ final class uv {
 
     private final boolean c(int param0, int param1, int param2) {
         if (param2 == 17) {
-          ck.field_b = new rb(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, tv.field_e, ai.field_H, hl.field_f, dw.field_e, hs.field_d, ul.field_c, this.field_k, this.field_b);
+          ck.field_b = new rb(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, hs.field_d, ul.field_c, this.field_k, this.field_b);
           return true;
         }
         if (param0 == -8985) {
@@ -243,7 +243,7 @@ final class uv {
             fp.field_g = param9;
             fu.field_c = param2;
             s.field_E = param1;
-            cm.field_J = param4;
+            ResizableModalPanel.field_J = param4;
             if (param0 <= 119) {
               var16 = (String) null;
               uv.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
@@ -254,12 +254,12 @@ final class uv {
             il.field_f = param10;
             pn.field_y = param11;
             vl.field_c = param8;
-            uc.field_E = param13;
+            IntTripleCommand.field_E = param13;
             if (vl.field_c.field_q == null) {
               return;
             }
             try {
-              pd.field_G = new BufferedCacheFile(vl.field_c.field_q, 64, 0);
+              LoginForm.field_G = new BufferedCacheFile(vl.field_c.field_q, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -314,9 +314,9 @@ final class uv {
         String var4_refLifetime1;
         var4 = null;
         if (param0 == 4) {
-          var12 = lh.a(param1, 100, this.field_k);
+          var12 = BroadcastServerCommand.a(param1, 100, this.field_k);
           if (var12 != null) {
-            wi.a((String) null, this.field_k, 0, 2, var12, -128);
+            TextButton.a((String) null, this.field_k, 0, 2, var12, -128);
           }
           if (param2 < -13) {
             return true;
@@ -328,7 +328,7 @@ final class uv {
           var5 = of.a(param1, (byte) 87, this.field_k);
           var4_ref = var5;
           if (var5 != null) {
-            wi.a((String) null, this.field_k, 0, 2, var5, -128);
+            TextButton.a((String) null, this.field_k, 0, 2, var5, -128);
           }
           if (param2 < -13) {
             return true;
@@ -340,7 +340,7 @@ final class uv {
           var10 = il.a(this.field_k, param1, (byte) 126);
           var4_refLifetime1 = var10;
           if (var10 != null) {
-            wi.a((String) null, this.field_k, 0, 2, var10, -128);
+            TextButton.a((String) null, this.field_k, 0, 2, var10, -128);
           }
           if (param2 < -13) {
             return true;
@@ -353,7 +353,7 @@ final class uv {
         }
         var11 = rn.a(this.field_a, 2, param1, this.field_k);
         if (var11 != null) {
-          wi.a((String) null, this.field_k, 0, 2, var11, -128);
+          TextButton.a((String) null, this.field_k, 0, 2, var11, -128);
         }
         if (param2 < -13) {
           return true;
@@ -400,7 +400,7 @@ final class uv {
             }
           }
         } else {
-          uc.a(this.field_b, param1, 122);
+          IntTripleCommand.a(this.field_b, param1, 122);
         }
         if (param2 == 2) {
           return true;
@@ -548,7 +548,7 @@ final class uv {
     }
 
     final static void a(boolean param0) {
-        qd.b(38, 17);
+        IndexedSpriteState.b(38, 17);
         if (param0) {
           uv.c(-102);
         }
@@ -589,7 +589,7 @@ final class uv {
               if (var6 != null) {
                 if (!BufferedCacheFile.a(121, this.field_k) &&
                   !PacketBuffer.field_l) {
-                  if (!kb.field_C) {
+                  if (!WriteIntegersCommand.field_C) {
                     this.field_j.a(0, 8, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var5}));
                   }
                   this.field_j.a(0, 18, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var5}));
@@ -637,7 +637,7 @@ final class uv {
             if (ng.field_a == 0) {
               this.field_j.a(param1 - 11, 12, sd.field_c);
             }
-            this.field_j.a(0, 13, fi.field_a);
+            this.field_j.a(0, 13, ConsoleParseException.field_a);
           }
           if (param0.field_c == 1) {
             if (0 == q.field_b) {
@@ -649,7 +649,7 @@ final class uv {
             if (0 == fc.field_a) {
               this.field_j.a(0, 12, SpriteState.field_u);
             }
-            this.field_j.a(0, 13, qv.field_g);
+            this.field_j.a(0, 13, TextWidgetPainter.field_g);
           }
           if (param1 == 11) {
             return;

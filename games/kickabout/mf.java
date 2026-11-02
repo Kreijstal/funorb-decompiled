@@ -21,7 +21,7 @@ final class mf extends hd {
           gk.field_a = param0;
           sq.field_F = new Sprite[2];
           for (var2_int = 0; 2 > var2_int; var2_int++) {
-            sq.field_F[var2_int] = gk.field_a[var2_int].b();
+            sq.field_F[var2_int] = gk.field_a[var2_int].copy();
             nh.a(sq.field_F[var2_int], 0.0, 0.0, 1.0);
           }
           if (!param1) {
@@ -197,7 +197,7 @@ final class mf extends hd {
           var6 = stackIn_4_0;
           var7 = new bc[var4];
           for (var8 = 0; var4 > var8; var8++) {
-            var7[var8] = lh.a(un.field_e, param0 + 18758);
+            var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
           }
           bf.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
           if (!param2 &&
@@ -226,7 +226,7 @@ final class mf extends hd {
               if (var10 < var7.length) {
                 var14 = var7[var10];
                 if (var14.field_a &&
-                  !hm.a((byte) 121, var14.field_f)) {
+                  !SumIntegersCommand.a((byte) 121, var14.field_f)) {
                   var9 = var14.field_g;
                 } else {
                   var10++;
@@ -239,7 +239,7 @@ final class mf extends hd {
                 var10 = var13;
                 while (var7.length > var13) {
                   var15 = var7[var13];
-                  if (hm.a((byte) 45, var15.field_f)) {
+                  if (SumIntegersCommand.a((byte) 45, var15.field_f)) {
                     var9 = var15.field_g;
                     break;
                   }
@@ -617,15 +617,15 @@ final class mf extends hd {
         df.field_F[6] = pq.field_M;
         df.field_F[0] = qs.field_H;
         ge.field_o = new String[57];
-        pd.field_M = new String[]{mc.field_g, MouseInputHandler.field_a};
-        ArchiveSource.field_d = new String[]{fb.field_C, iv.field_n, MouseInputHandler.field_a};
-        si.field_q = new String[]{s.field_F, lh.field_F};
+        LoginForm.field_M = new String[]{mc.field_g, MouseInputHandler.field_a};
+        ArchiveSource.field_d = new String[]{NumericDateInputWidget.field_C, iv.field_n, MouseInputHandler.field_a};
+        si.field_q = new String[]{s.field_F, BroadcastServerCommand.field_F};
         df.field_F[3] = rl.field_t;
         FullscreenFocusCanvas.field_i = new String[]{s.field_F, mc.field_g};
         fp.field_u = new String[]{s.field_F};
         df.field_F[2] = m.field_i;
         df.field_F[5] = fc.field_e;
-        nn.field_I = new String[]{ob.field_H, in.field_a, MouseInputHandler.field_a};
+        AccountChoicePanel.field_I = new String[]{ob.field_H, in.field_a, MouseInputHandler.field_a};
         ge.field_o[10] = nj.field_b;
         ge.field_o[12] = ns.field_b;
         ge.field_o[3] = sl.field_zb;
@@ -633,12 +633,12 @@ final class mf extends hd {
         ge.field_o[2] = ta.field_E;
         ge.field_o[25] = tk.field_Bb;
         ge.field_o[28] = pr.field_b;
-        ge.field_o[55] = jo.field_B;
+        ge.field_o[55] = DemoIntegersCommand.field_B;
         ge.field_o[8] = om.field_Eb;
         ge.field_o[27] = lg.field_c;
-        ge.field_o[9] = fb.field_N;
+        ge.field_o[9] = NumericDateInputWidget.field_N;
         ge.field_o[0] = bo.field_zb;
-        ge.field_o[6] = dw.field_a;
+        ge.field_o[6] = ConsoleEvaluationException.field_a;
         ge.field_o[5] = io.field_i;
         ge.field_o[1] = h.field_c;
         ge.field_o[7] = at.field_Fb;
@@ -651,7 +651,7 @@ final class mf extends hd {
         ge.field_o[43] = at.field_Fb;
         ge.field_o[45] = us.field_g;
         ge.field_o[39] = wq.field_f;
-        ge.field_o[41] = lk.field_i;
+        ge.field_o[41] = ConsoleExpression.field_i;
         ge.field_o[19] = io.field_c;
         ge.field_o[38] = sl.field_Ab;
         ge.field_o[47] = ni.field_e;
@@ -668,7 +668,7 @@ final class mf extends hd {
         ge.field_o[44] = DualLinkDeque.field_b;
         ge.field_o[13] = cu.field_f[0];
         ge.field_o[20] = ol.field_n;
-        ge.field_o[17] = kd.field_A;
+        ge.field_o[17] = DebugConsole.field_A;
         ge.field_o[34] = lo.field_m;
         ge.field_o[48] = oc.field_b.toUpperCase();
         ge.field_o[30] = "";
@@ -695,19 +695,19 @@ final class mf extends hd {
         fa.field_g[48] = ep.field_a;
         fa.field_g[45] = nd.field_a;
         rv.field_d[18] = ef.field_s;
-        rv.field_d[1] = jo.field_C;
+        rv.field_d[1] = DemoIntegersCommand.field_C;
         rv.field_d[4] = cp.field_a;
         rv.field_d[7] = rr.field_a;
         kp.field_g = new String[4];
         rv.field_d[22] = ni.field_n;
         rv.field_d[0] = rv.field_a;
         rv.field_d[5] = rq.field_B;
-        rv.field_d[10] = hm.field_C;
+        rv.field_d[10] = SumIntegersCommand.field_C;
         rv.field_d[17] = ParticipantStatus.field_r;
         rv.field_d[20] = ParticipantStatus.field_m;
         rv.field_d[21] = pf.field_a;
         rv.field_d[15] = dr.field_f;
-        rv.field_d[16] = qk.field_F;
+        rv.field_d[16] = Checkbox.field_F;
         rv.field_d[23] = aj.field_d;
         rv.field_d[6] = i.field_w;
         rv.field_d[9] = cg.field_L;
@@ -721,8 +721,8 @@ final class mf extends hd {
         rv.field_d[11] = bw.field_c;
         kp.field_g[0] = lt.field_b;
         kp.field_g[2] = ij.field_n;
-        kp.field_g[3] = qp.field_C;
-        kp.field_g[1] = qk.field_G;
+        kp.field_g[3] = AccountMessagePanel.field_C;
+        kp.field_g[1] = Checkbox.field_G;
         qb.field_Qb = new String[4];
         eb.field_g = new String[4];
         qb.field_Qb[0] = at.field_Bb;
@@ -780,7 +780,7 @@ final class mf extends hd {
           var6 = stackIn_4_0;
           var7 = new bc[var4];
           for (var8 = 0; var4 > var8; var8++) {
-            var7[var8] = lh.a(un.field_e, param0 + 18758);
+            var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
           }
           bf.field_y.a(param0 ^ -107, var7, nj.a(param0 + 186));
           if (!param2 &&
@@ -809,7 +809,7 @@ final class mf extends hd {
               if (var10 < var7.length) {
                 var14 = var7[var10];
                 if (var14.field_a &&
-                  !hm.a((byte) 121, var14.field_f)) {
+                  !SumIntegersCommand.a((byte) 121, var14.field_f)) {
                   var9 = var14.field_g;
                 } else {
                   var10++;
@@ -822,7 +822,7 @@ final class mf extends hd {
                 var10 = var13;
                 while (var7.length > var13) {
                   var15 = var7[var13];
-                  if (hm.a((byte) 45, var15.field_f)) {
+                  if (SumIntegersCommand.a((byte) 45, var15.field_f)) {
                     var9 = var15.field_g;
                     break;
                   }

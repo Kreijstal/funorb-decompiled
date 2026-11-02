@@ -121,12 +121,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (null != rq.field_A &&
               null == fa.field_k) {
               var6 = rq.field_A.getInsets();
-              ic.field_d.setLocation(el.field_H + var6.left, is.field_g + var6.top);
+              ic.field_d.setLocation(BytePlusOneCommand.field_H + var6.left, is.field_g + var6.top);
               if (Kickabout.field_G != 0) {
-                ic.field_d.setLocation(el.field_H, is.field_g);
+                ic.field_d.setLocation(BytePlusOneCommand.field_H, is.field_g);
               }
             } else {
-              ic.field_d.setLocation(el.field_H, is.field_g);
+              ic.field_d.setLocation(BytePlusOneCommand.field_H, is.field_g);
             }
           }
           this.b((byte) 82);
@@ -153,7 +153,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           VorbisSample.b(param0.a("", "headers.packvorbis", 110));
-          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
           var2.c();
           var3 = 116 % ((-33 - param1) / 60);
           return;
@@ -250,7 +250,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void shutdownShell(boolean param0, byte param1) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;
@@ -389,7 +389,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
 
-    final synchronized void f(byte param0) {
+    final synchronized void recreateCanvas(byte param0) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
@@ -425,18 +425,18 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ic.field_d = (java.awt.Canvas) ((Object) new sa((java.awt.Component) (this)));
+          ic.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ic.field_d));
           ic.field_d.setSize(f.field_d, vc.field_B);
           ic.field_d.setVisible(true);
           boolean decompiledSharedTail0 = (rq.field_A == var2);
           if (!decompiledSharedTail0) {
-            ic.field_d.setLocation(el.field_H, is.field_g);
+            ic.field_d.setLocation(BytePlusOneCommand.field_H, is.field_g);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = rq.field_A.getInsets();
-            ic.field_d.setLocation(el.field_H + var3.left, is.field_g + var3.top);
+            ic.field_d.setLocation(BytePlusOneCommand.field_H + var3.left, is.field_g + var3.top);
           }
           ic.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           ic.field_d.requestFocus();
@@ -613,15 +613,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                ct.i(-1);
-                this.f((byte) -105);
+                SingleChildContainer.i(-1);
+                this.recreateCanvas((byte) -105);
                 ea.field_f = jm.a(105, f.field_d, vc.field_B, (java.awt.Component) ((Object) ic.field_d));
                 this.g((byte) -76);
-                e.field_k = hm.h(3);
+                e.field_k = SumIntegersCommand.h(3);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (pq.field_I != 0L) {
-                    stackIn_99_0 = $cfr$lcmp(~nj.a(-51), ~pq.field_I);
+                    stackIn_99_0 = compareLongs(~nj.a(-51), ~pq.field_I);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 <= 0)) {
@@ -650,7 +650,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               bd.a((String) null, (Throwable) (var1), 1);
               this.a((byte) 60, "crash");
             }
-            this.a(true, (byte) -119);
+            this.shutdownShell(true, (byte) -119);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -675,8 +675,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           pq.field_I = nj.a(-99);
           aj.a(5000L, 1);
-          sa.field_a = null;
-          this.a(false, (byte) -113);
+          DelegatingCanvas.field_a = null;
+          this.shutdownShell(false, (byte) -113);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ah.destroy()");
         }
@@ -684,7 +684,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     abstract void e(byte param0);
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, String param5, int param6) {
+    final void startAppletShell(int param0, int param1, int param2, byte param3, int param4, String param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_23_0 = null;
@@ -710,7 +710,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               f.field_d = param1;
               uk.field_a = param1;
               ap.field_p = this;
-              el.field_H = 0;
+              BytePlusOneCommand.field_H = 0;
               if (param3 != -126) {
                 return;
               }
@@ -721,7 +721,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ug.field_a = so.a(31);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param5, param0, true);
               oo.field_c = dupTemp$0;
-              sa.field_a = dupTemp$0;
+              DelegatingCanvas.field_a = dupTemp$0;
               var8 = oo.field_c.a(1, (byte) 110, (Runnable) (this));
               while (true) {
                 if (var8.field_a == 0) {
@@ -822,7 +822,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           this.field_e = true;
           System.out.println("error_game_" + param1);
           try {
-            AppletJavaScriptBridge.a(30858, "loggedout", so.a(-90));
+            AppletJavaScriptBridge.callWithoutArguments(30858, "loggedout", so.a(-90));
           } catch (Throwable throwable) {
           }
           try {
@@ -852,7 +852,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
-            fb.field_T = ((var6_int >> 1) + 32000) / var6_int;
+            NumericDateInputWidget.field_T = ((var6_int >> 1) + 32000) / var6_int;
           }
           var6 = this;
           synchronized (var6) {
@@ -882,7 +882,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_c = 0L;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

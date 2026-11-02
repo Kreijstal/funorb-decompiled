@@ -325,11 +325,11 @@ final class fn {
         try {
           var1 = new Sprite(540, 140);
           PacketBuffer.a(param0 + 26, var1);
-          t.c();
+          TriangleRasterizer.c();
           SoftwareRasterizer.b();
           up.field_p = 0;
           fp.a((byte) -112);
-          var2 = var1.b();
+          var2 = var1.copy();
           var3 = 0;
           while (var3 < 15) {
             var2.a(-2, -2, 16777215);
@@ -342,8 +342,8 @@ final class fn {
           if (param0 != -128) {
             field_b = (ResourceArchive) null;
           }
-          tm.field_v.e();
-          var1.f(0, 0);
+          ConsoleCommand.field_v.e();
+          var1.drawHalfSize(0, 0);
           ta.e(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -434,7 +434,7 @@ final class fn {
                     var2.field_i.b(var2.field_j * mn.field_a + 128 >> 8);
                   }
                   var2.c((byte) -109);
-                  var2 = (ag) (qd.field_c.c(33));
+                  var2 = (ag) (IndexedSpriteState.field_c.c(33));
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -454,8 +454,8 @@ final class fn {
               }
             }
             if ((decompiledFrameCompleted0) &&
-              (qd.field_c != null)) {
-              var2 = (ag) (qd.field_c.g(24009));
+              (IndexedSpriteState.field_c != null)) {
+              var2 = (ag) (IndexedSpriteState.field_c.g(24009));
               while (var2 != null) {
                 if (var4 != 0) {
                   break scanLoop1;
@@ -466,7 +466,7 @@ final class fn {
                 } else {
                   var2.c((byte) -109);
                 }
-                var2 = (ag) (qd.field_c.c(33));
+                var2 = (ag) (IndexedSpriteState.field_c.c(33));
               }
             }
             wd.field_n[1] = param0;
@@ -562,14 +562,14 @@ final class fn {
             if (decompiledSharedTail1) {
               var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ar.field_a, new String[]{at.field_Kb});
             }
-            if (kd.field_s) {
-              wi.a((String) null, (String) null, 0, 2, (String) (var2), -115);
+            if (DebugConsole.field_s) {
+              TextButton.a((String) null, (String) null, 0, 2, (String) (var2), -115);
               hq.b((byte) 110);
             }
           }
           if (null == var2 &&
             !dg.field_a &&
-            mu.field_Y == null) {
+            ContentTransitionDialog.field_Y == null) {
             var2 = et.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -601,13 +601,13 @@ final class fn {
                 }
                 if (uv.field_i != null) {
                   if (!ol.field_R ||
-                    ct.field_x == null) {
+                    SingleChildContainer.field_x == null) {
                     var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{uv.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
-                      var4 = "[" + ct.field_x + "] ";
+                      var4 = "[" + SingleChildContainer.field_x + "] ";
                     }
                   } else {
-                    var4 = "[" + ct.field_x + "] ";
+                    var4 = "[" + SingleChildContainer.field_x + "] ";
                   }
                   var6 = 1;
                 }
@@ -626,14 +626,14 @@ final class fn {
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (kb.field_C)) {
+                (WriteIntegersCommand.field_C)) {
                 var4 = "<col=999999>" + var4 + MidiPcmStream.field_t + "</col>";
                 var5 = "";
               }
               var9 = FootballerAgent.field_i.a(var4);
               if (!vb.b(119)) {
                 if (ei.field_b.field_gb &&
-                  el.field_A - ei.field_b.field_F < var9) {
+                  BytePlusOneCommand.field_A - ei.field_b.field_F < var9) {
                   if (!PacketBuffer.field_l) {
                     var1 = MidiPcmStream.field_t;
                   } else {
@@ -689,7 +689,7 @@ final class fn {
           if (param0 != -9814) {
             field_g = (int[]) null;
           }
-          stackIn_10_0 = (this.field_h == 73) && (be.e((byte) 65));
+          stackIn_10_0 = (this.field_h == 73) && (ConsolePanel.e((byte) 65));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

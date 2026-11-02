@@ -169,7 +169,7 @@ final class na extends hd {
     final static void h(int param0) {
         m.field_m = new hd(0L, (hd) null);
         if (ui.field_t) {
-          m.field_m.a((byte) -127, li.field_a);
+          m.field_m.a((byte) -127, ConsoleValue.field_a);
         }
         m.field_m.a((byte) -114, mc.field_d);
         tn.field_d = new rf(qt.field_z, m.field_m);
@@ -338,8 +338,8 @@ final class na extends hd {
           var1_int = -nb.field_k + so.field_e;
           nb.field_k = qg.field_k - (var1_int >> 1);
           so.field_e = nb.field_k + var1_int;
-          hm.field_I = -(fr.field_G >> 1) + eh.field_e;
-          var2 = hm.field_I;
+          SumIntegersCommand.field_I = -(NameSuggestionsPanel.field_G >> 1) + eh.field_e;
+          var2 = SumIntegersCommand.field_I;
           for (var3 = param0; j.field_a.length > var3; var3++) {
             var4 = WidgetContainer.field_x[var3];
             if (0 > var4) {
@@ -364,16 +364,16 @@ final class na extends hd {
               var9 = stackIn_15_0;
               var2 = var2 + of.field_a;
               if (var9 != null) {
-                var9.a(var8 - vg.field_zb, tk.field_zb + (pb.field_H << 1), var2, (vg.field_zb << 1) + var7, 3);
+                var9.a(var8 - vg.field_zb, tk.field_zb + (IsSixCommand.field_H << 1), var2, (vg.field_zb << 1) + var7, 3);
               }
-              var2 = var2 + pb.field_H;
+              var2 = var2 + IsSixCommand.field_H;
             }
             if (var4 < 0) {
               sn.field_i.a(var6, var8, var2 + ClientException.field_f, var5, -1);
-              var2 = var2 + qp.field_H;
+              var2 = var2 + AccountMessagePanel.field_H;
             } else {
               sn.field_a.a(var6, var8, var2 + ag.field_g, var5, -1);
-              var2 = var2 + (pb.field_H + of.field_a + tk.field_zb);
+              var2 = var2 + (IsSixCommand.field_H + of.field_a + tk.field_zb);
             }
           }
           return;
@@ -819,7 +819,7 @@ final class na extends hd {
           for (var3_intLifetime2 = 0; er.field_h.length > var3_intLifetime2; var3_intLifetime2++) {
             er.field_h[var3_intLifetime2] = ((PacketBuffer) ((Object) var1)).j((byte) -82);
           }
-          lk.field_l = ((PacketBuffer) ((Object) var1)).h((byte) -110);
+          ConsoleExpression.field_l = ((PacketBuffer) ((Object) var1)).h((byte) -110);
           MidiPcmStream.field_C = ((PacketBuffer) ((Object) var1)).h((byte) -105);
           for (var3_intLifetime3 = 0; rf.field_d.length > var3_intLifetime3; var3_intLifetime3++) {
             rf.field_d[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).j((byte) -81);

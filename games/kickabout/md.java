@@ -23,7 +23,7 @@ final class md implements hc {
         int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {
           var11 = ih.a(21656, rp.field_z[param1][var4]);
-          var6 = hs.a(false, var4 % 3, var3, ev.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, ev.field_B[31]);
+          var6 = hs.a(false, var4 % 3, var3, LongPlusOneCommand.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, LongPlusOneCommand.field_B[31]);
           this.field_i[var4] = new gm(var6, var3, true);
           this.field_i[var4].field_G = 1;
           this.field_i[var4].g((byte) 127);
@@ -48,7 +48,7 @@ final class md implements hc {
         } else {
           if (!ng.a(param0 ^ 27302)) {
             if (vi.c(2915)) {
-              SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
               var1 = 1;
               ph.b(true);
             }

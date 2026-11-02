@@ -86,13 +86,13 @@ final class hr extends IntrusiveNode {
         var14 = Kickabout.field_G;
         try {
           var15 = j.a(-5275);
-          if (pb.field_B &&
+          if (IsSixCommand.field_B &&
             var15 != null) {
-            SoftwareRasterizer.a(0, 0, 640, 480, tm.field_x[ih.field_c][rm.field_C]);
+            SoftwareRasterizer.a(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][rm.field_C]);
             var2_int = var15.field_v;
             var3 = var15.field_v;
-            var4_int = -1 + ai.a(0, 6784) / var2_int;
-            var5 = 1 + ai.a(640, 6784) / var2_int;
+            var4_int = -1 + AccountTermsPanel.a(0, 6784) / var2_int;
+            var5 = 1 + AccountTermsPanel.a(640, 6784) / var2_int;
             var6 = qj.a(-6779, 0) / var3 - 1;
             var7 = qj.a(-6779, 640) / var3 + 1;
             for (var8 = var4_int; var8 < var5; var8++) {
@@ -102,13 +102,13 @@ final class hr extends IntrusiveNode {
                 var12 = ug.a(param0 + 48, var8 * var2_int + var2_int);
                 var13 = lf.a((byte) -97, var3 * var9 + var3);
                 SoftwareRasterizer.e(var10, var11, var12 - var10, var13 - var11, 65793);
-                pb.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
+                IsSixCommand.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
               }
             }
           }
           if (var15 != null) {
             if (bn.field_G != var15) {
-              ja.field_S = var15.b();
+              ja.field_S = var15.copy();
               bn.field_G = var15;
               ou.field_B = -1;
             }
@@ -192,7 +192,7 @@ final class hr extends IntrusiveNode {
               }
             }
           } else {
-            SoftwareRasterizer.a(0, 0, 640, 480, tm.field_x[ih.field_c][rm.field_C]);
+            SoftwareRasterizer.a(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][rm.field_C]);
           }
           if (lg.field_a != null) {
             var2_intLifetime2 = b.c(-29, -15);
@@ -208,7 +208,7 @@ final class hr extends IntrusiveNode {
               GameKeyHandler.a((byte) 92);
             }
             if (rm.field_C == 2) {
-              pd.a((byte) -79);
+              LoginForm.a((byte) -79);
             }
             if (bv.field_l != null) {
               var2_intLifetime3 = fp.field_f * 6 >> 8;

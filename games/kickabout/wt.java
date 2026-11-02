@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class wt extends UiWidget implements jp {
+abstract class wt extends UiWidget implements UiContainerMarker {
     static int field_v;
     static int field_x;
     static Sprite field_y;
@@ -37,7 +37,7 @@ abstract class wt extends UiWidget implements jp {
               for (var4_int = var4_int + param2; var4_int < this.field_w.length; var4_int = var4_int + param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
-                  var6.a(param0, param1 ^ -28)) {
+                  var6.focusNext(param0, param1 ^ -28)) {
                   return true;
                 }
               }
@@ -66,7 +66,7 @@ abstract class wt extends UiWidget implements jp {
         return this.a(true) != null ? true : false;
     }
 
-    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -81,7 +81,7 @@ abstract class wt extends UiWidget implements jp {
             var6 = (UiWidget) null;
             this.a(125, (UiWidget) null, 11, -44, 107, -118, 34);
           }
-          if (this.a(1, param3, param2, param1)) {
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.b(param1, param3, param2, param0 ^ -3421);
             this.a(param2, 10, param1, param3);
           }
@@ -160,7 +160,7 @@ abstract class wt extends UiWidget implements jp {
               discarded$8 = param3.append(' ');
             }
             if (var7 != null) {
-              var7.a(17883, param2 + 1, param0, param3);
+              var7.appendWidgetDiagnostics(17883, param2 + 1, param0, param3);
             } else {
               discarded$7 = param3.append("null");
             }
@@ -314,7 +314,7 @@ abstract class wt extends UiWidget implements jp {
         try {
           IntrusiveDequeCursor.field_b = param1;
           ek.field_G = param2;
-          tm.field_n = param3;
+          ConsoleCommand.field_n = param3;
           if (param0 != 0) {
             return;
           }
@@ -528,11 +528,11 @@ abstract class wt extends UiWidget implements jp {
         return var2;
     }
 
-    wt(int param0, int param1, int param2, int param3, gj param4) {
-        super(param0, param1, param2, param3, param4, (jv) null);
+    wt(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
-    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -556,7 +556,7 @@ abstract class wt extends UiWidget implements jp {
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_t, param6)) {
+              var10.handlePointerPress(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_t, param6)) {
               return true;
             }
           }
@@ -709,7 +709,7 @@ abstract class wt extends UiWidget implements jp {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_w[var4_int];
                 if (var6 != null &&
-                  var6.a(param1, 0)) {
+                  var6.focusNext(param1, 0)) {
                   return true;
                 }
               }
@@ -794,7 +794,7 @@ abstract class wt extends UiWidget implements jp {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -812,7 +812,7 @@ abstract class wt extends UiWidget implements jp {
           for (var4 = param1; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, param1 + 0)) {
+              var5.focusNext(param0, param1 + 0)) {
               return true;
             }
           }

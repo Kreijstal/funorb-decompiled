@@ -26,8 +26,8 @@ final class ip {
         int var1_intLifetime1;
         var4 = Kickabout.field_G;
         try {
-          t.c();
-          mr.field_Y = new int[260];
+          TriangleRasterizer.c();
+          ValidatedTextWidget.field_Y = new int[260];
           im.field_yb = 11;
           var1_int = 0;
           if (param0) {
@@ -35,13 +35,13 @@ final class ip {
           }
           while (var1_int < 256) {
             var2 = 15.0;
-            mr.field_Y[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            ValidatedTextWidget.field_Y[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
             var1_int++;
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (mr.field_Y.length > var5) {
-            mr.field_Y[var5] = 255;
+          while (ValidatedTextWidget.field_Y.length > var5) {
+            ValidatedTextWidget.field_Y[var5] = 255;
             var5++;
           }
           return;

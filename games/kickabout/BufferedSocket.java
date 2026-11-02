@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
         this.a(1);
     }
 
-    final int b(int param0) throws IOException {
+    final int readByte(int param0) throws IOException {
         if (this.field_e) {
           return 0;
         }
@@ -94,7 +94,7 @@ final class BufferedSocket implements Runnable {
           return;
         }
         fj.a(-45);
-        qd.b(38, 4);
+        IndexedSpriteState.b(38, 4);
     }
 
     public final void run() {

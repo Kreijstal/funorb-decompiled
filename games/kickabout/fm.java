@@ -22,7 +22,7 @@ final class fm extends qt {
         int var8;
         int var9;
         int var16;
-        uo var18;
+        BinaryBitmapFont var18;
         int[] var21;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -52,7 +52,7 @@ final class fm extends qt {
         SoftwareRasterizer.a(vu.field_Ib.field_F, vu.field_Ib.field_T, vu.field_Ib.field_q, vu.field_Ib.field_mb, 8, 0, 96);
         SoftwareRasterizer.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
         bq.field_d.a(46, false);
-        ub.field_D.a(97, false);
+        ModalPanel.field_D.a(97, false);
         vu.field_Ib.a(param0 + 84, false);
         pt.a(vu.field_Ib.field_F + vu.field_Ib.field_q, param0 - 22909, vu.field_Ib.field_F, vu.field_Ib.field_mb + vu.field_Ib.field_T, vu.field_Ib.field_T);
         var3 = (hd) (vu.field_Ib.field_Db.field_jb.g(24009));
@@ -63,7 +63,7 @@ final class fm extends qt {
           var3 = (hd) (vu.field_Ib.field_Db.field_jb.c(33));
         }
         ta.e(117);
-        var18 = pb.field_C;
+        var18 = IsSixCommand.field_C;
         var21 = BufferedSocket.field_f;
         if (pt.field_e == -1) {
           stackIn_9_0 = ob.field_C;
@@ -84,9 +84,9 @@ final class fm extends qt {
         SoftwareRasterizer.a(this.field_j + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
           if (!la.a(100)) {
-            pb.field_C.a(rt.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(rt.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           } else {
-            pb.field_C.a(sh.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(sh.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           }
           return;
         }
@@ -111,7 +111,7 @@ final class fm extends qt {
             var18.c(po.field_d, var7 + var13, var11, 16777215, -1);
             for (var14 = wc.field_g[var5] / 100; var14 > 0; var14--) {
               var15 = 5 * var14 + (var13 + (var7 - 2));
-              qs.field_R.f(var15, -14 + var11);
+              qs.field_R.drawHalfSize(var15, -14 + var11);
             }
             var11 += 9;
             var14Lifetime5 = 16;
@@ -139,7 +139,7 @@ final class fm extends qt {
           var18.c(po.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
           for (var14Lifetime3 = wc.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
             var15Lifetime2 = 5 * var14Lifetime3 + (var13Lifetime2 + (var7 - 2));
-            qs.field_R.f(var15Lifetime2, -14 + var11Lifetime2);
+            qs.field_R.drawHalfSize(var15Lifetime2, -14 + var11Lifetime2);
           }
           var11Lifetime2 += 9;
           var14Lifetime4 = 16;
@@ -168,7 +168,7 @@ final class fm extends qt {
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           for (var14Lifetime1 = wc.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
-            qs.field_R.f(var15Lifetime1, -14 + var11Lifetime1);
+            qs.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }
         } else {
           var12Lifetime1 = lw.field_a[var5];
@@ -184,7 +184,7 @@ final class fm extends qt {
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           for (var14Lifetime1 = wc.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
-            qs.field_R.f(var15Lifetime1, -14 + var11Lifetime1);
+            qs.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }
         }
         var11Lifetime1 += 9;
@@ -201,16 +201,16 @@ final class fm extends qt {
         hd var3 = null;
         int var4 = Kickabout.field_G;
         bq.field_d = eo.a(false);
-        ub.field_D = eo.a(true);
+        ModalPanel.field_D = eo.a(true);
         for (var2 = 0; 2 > var2; var2++) {
-          var3 = var2 == 0 ? bq.field_d : ub.field_D;
+          var3 = var2 == 0 ? bq.field_d : ModalPanel.field_D;
           var3.field_N.d();
           var3.field_vb.d();
           var3.field_r.d();
           var3.field_t.d();
         }
         bq.field_d.field_lb = false;
-        vu.field_Ib = new tk("Cabinet", ne.j((byte) 15), be.field_q, it.field_m);
+        vu.field_Ib = new tk("Cabinet", ne.j((byte) 15), ConsolePanel.field_q, it.field_m);
         vu.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;
@@ -234,14 +234,14 @@ final class fm extends qt {
         super.a((byte) 101, param1);
         bq.field_d.a(true, 32, 310 + this.field_j, 144, 32);
         int var3 = 41 % ((param0 - 38) / 60);
-        ub.field_D.a(true, 32, this.field_j + 310, 176, 32);
+        ModalPanel.field_D.a(true, 32, this.field_j + 310, 176, 32);
         vu.field_Ib.a(true, 300, 45 + this.field_j, 70, 200);
         if (0 < this.field_B) {
           this.field_B = this.field_B - 1;
           var4 = vu.field_Ib.field_Db.field_J;
           vu.field_Ib.b(0, param1);
           bq.field_d.b(0, param1);
-          ub.field_D.b(0, param1);
+          ModalPanel.field_D.b(0, param1);
           ob.field_C = -1;
           var5 = (hd) (vu.field_Ib.field_Db.field_jb.g(24009));
           while (var5 != null) {
@@ -286,7 +286,7 @@ final class fm extends qt {
         var4Lifetime1 = vu.field_Ib.field_Db.field_J;
         vu.field_Ib.b(0, param1);
         bq.field_d.b(0, param1);
-        ub.field_D.b(0, param1);
+        ModalPanel.field_D.b(0, param1);
         ob.field_C = -1;
         var5 = (hd) (vu.field_Ib.field_Db.field_jb.g(24009));
         while (var5 != null) {
@@ -340,7 +340,7 @@ final class fm extends qt {
           var3 = 1;
           ha.field_I = ha.field_I + 1;
         }
-        if (ub.field_D.field_qb == 1) {
+        if (ModalPanel.field_D.field_qb == 1) {
           var3 = 1;
           if (ha.field_I % 2 == 0) {
             vu.field_Ib.field_Db.field_v = vu.field_Ib.field_Db.field_v - 16;
@@ -367,10 +367,10 @@ final class fm extends qt {
             }
             var7 = vu.field_Ib.field_Db.field_mb;
             if (-(var6 + var5) <= vu.field_Ib.field_Db.field_L + (var7 - vu.field_Ib.field_Gb.field_mb)) {
-              ub.field_D.field_lb = true;
+              ModalPanel.field_D.field_lb = true;
             } else {
               vu.field_Ib.field_Db.field_v = -var5 - (-vu.field_Ib.field_Gb.field_mb + (vu.field_Ib.field_Db.field_L + var7));
-              ub.field_D.field_lb = false;
+              ModalPanel.field_D.field_lb = false;
             }
             return;
           }
@@ -393,10 +393,10 @@ final class fm extends qt {
         }
         var7Lifetime1 = vu.field_Ib.field_Db.field_mb;
         if (-(var6Lifetime1 + var5Lifetime1) <= vu.field_Ib.field_Db.field_L + (var7Lifetime1 - vu.field_Ib.field_Gb.field_mb)) {
-          ub.field_D.field_lb = true;
+          ModalPanel.field_D.field_lb = true;
         } else {
           vu.field_Ib.field_Db.field_v = -var5Lifetime1 - (-vu.field_Ib.field_Gb.field_mb + (vu.field_Ib.field_Db.field_L + var7Lifetime1));
-          ub.field_D.field_lb = false;
+          ModalPanel.field_D.field_lb = false;
         }
     }
 
@@ -477,10 +477,10 @@ final class fm extends qt {
         try {
           super.a(param0, param1, -70, param3);
           bq.field_d.a(true, 32, 310 + this.field_j, 144, 32);
-          ub.field_D.a(true, 32, 310 + this.field_j, 176, 32);
+          ModalPanel.field_D.a(true, 32, 310 + this.field_j, 176, 32);
           vu.field_Ib.a(true, 300, this.field_j + 45, 70, 200);
           bq.field_d.b(0, false);
-          ub.field_D.b(0, false);
+          ModalPanel.field_D.b(0, false);
           vu.field_Ib.b(0, false);
           if (param2 >= -28) {
             field_C = (hd) null;

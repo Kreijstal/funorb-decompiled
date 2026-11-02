@@ -136,13 +136,13 @@ final class bn extends qt {
           }
         }
         if (w.field_b.field_gb) {
-          qd.$cfr$intArgs$a$b6210757cdab(-67, IterableNodeHashTable.field_a);
+          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, IterableNodeHashTable.field_a);
         }
         var7 = 0;
         while (var7 < ha.field_H.length) {
           stackIn_42_0 = ha.field_H[var7].field_gb;
           if (stackIn_42_0) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, fu.field_f, new String[]{q.field_h[var7]}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, fu.field_f, new String[]{q.field_h[var7]}));
           }
           var7++;
         }
@@ -263,7 +263,7 @@ final class bn extends qt {
         SoftwareRasterizer.a(w.field_b.field_F, w.field_b.field_T + 4, w.field_b.field_q, w.field_b.field_mb - 5, 7829367, 128);
         if (jh.field_Hb.field_Eb.e((byte) -113)) {
           var3 = jh.field_Hb.field_Eb;
-          SoftwareRasterizer.g(3 + (((hd) ((Object) var3)).field_F + this.field_j), ((hd) ((Object) var3)).field_T, ((hd) ((Object) var3)).field_q - 6, ((hd) ((Object) var3)).field_mb);
+          SoftwareRasterizer.darkenRectangle(3 + (((hd) ((Object) var3)).field_F + this.field_j), ((hd) ((Object) var3)).field_T, ((hd) ((Object) var3)).field_q - 6, ((hd) ((Object) var3)).field_mb);
         }
         pt.a(640, -22914, 0, 135, 60);
         for (var3_int = 0; ha.field_H.length > var3_int; var3_int++) {
@@ -275,13 +275,13 @@ final class bn extends qt {
           if (var4 == 0) {
             jm.field_i[var3_int].b(ha.field_H[var3_int].field_F + 4, ha.field_H[var3_int].field_T - 2, 48);
           } else {
-            kb.field_E[var3_int].c(ha.field_H[var3_int].field_F + 4, ha.field_H[var3_int].field_T - 2);
+            WriteIntegersCommand.field_E[var3_int].c(ha.field_H[var3_int].field_F + 4, ha.field_H[var3_int].field_T - 2);
           }
         }
         ta.e(param0 ^ -122);
         SoftwareRasterizer.a(20 + je.field_k * 50 + this.field_j, 135, 48, 2, 0);
         SoftwareRasterizer.a(20 + this.field_j, 137, 348, 26, 0);
-        var3_ref = lh.field_C;
+        var3_ref = BroadcastServerCommand.field_C;
         if (je.field_k > 0 &&
           je.field_k < q.field_h.length) {
           var3_ref = q.field_h[je.field_k];
@@ -314,7 +314,7 @@ final class bn extends qt {
               jr.a(this.field_j + 194, -65, 290);
             }
           } else {
-            pb.field_C.d(sh.field_b, this.field_j + 194, 290, 16777215, -1);
+            IsSixCommand.field_C.d(sh.field_b, this.field_j + 194, 290, 16777215, -1);
           }
         }
         SoftwareRasterizer.a(jh.field_Hb.field_F, 4 + (jh.field_Hb.field_mb + jh.field_Hb.field_T), 4 + jh.field_Hb.field_q, 24, 0, 196);
@@ -327,9 +327,9 @@ final class bn extends qt {
         ta.e(param0 + 128);
         if (la.a(100) ||
           rr.field_f) {
-          SoftwareRasterizer.g(this.field_j, 48, 450, 382);
+          SoftwareRasterizer.darkenRectangle(this.field_j, 48, 450, 382);
           if (rr.field_f) {
-            pb.field_C.a(pi.field_d, this.field_j, 48, 450, 382, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(pi.field_d, this.field_j, 48, 450, 382, 16777215, -1, 1, 1, 0);
           }
         }
         super.a(param0, param1);

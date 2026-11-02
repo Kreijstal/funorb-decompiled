@@ -298,7 +298,7 @@ final class bb extends hd {
               }
               String var8 = (String) null;
               gp.a(var5, -128, NodeHashTableIterator.field_b, param3, at.field_Kb, (String) null);
-              gk.a(at.field_Kb, var5, ik.field_A, NodeHashTableIterator.field_b, (byte) -51);
+              gk.a(at.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
               fa.b(125);
               jm.b(68);
             } else {

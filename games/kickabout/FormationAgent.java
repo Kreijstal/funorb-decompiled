@@ -84,8 +84,8 @@ final class FormationAgent extends MatchAgent {
             FormationAgent.a((java.awt.Canvas) null, 103);
           }
           this.field_k[1] = param0.l(3, 59);
-          this.field_i[0] = mu.a(param0, (byte) -39);
-          this.field_i[1] = mu.a(param0, (byte) -39);
+          this.field_i[0] = ContentTransitionDialog.a(param0, (byte) -39);
+          this.field_i[1] = ContentTransitionDialog.a(param0, (byte) -39);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -163,7 +163,7 @@ final class FormationAgent extends MatchAgent {
           if (vj.field_c == 11) {
             dn.a(-127);
           }
-          ik.a(hw.field_j, ts.field_b, m.field_h, (byte) 84);
+          IntDoubleCommand.a(hw.field_j, ts.field_b, m.field_h, (byte) 84);
           su.a(param1 ^ -23390, 0, 0, param0);
           if (param1 != -14142) {
             var3 = (String) null;

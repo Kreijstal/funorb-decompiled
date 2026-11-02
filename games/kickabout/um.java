@@ -17,10 +17,10 @@ final class um {
           if (param0 != 114) {
             field_a = (String[][]) null;
           }
-          if (pd.field_G != null) {
+          if (LoginForm.field_G != null) {
             try {
-              pd.field_G.a((byte) 4, 0L);
-              pd.field_G.a(un.field_e.field_n, param0 + 12, 24, un.field_e.field_f);
+              LoginForm.field_G.a((byte) 4, 0L);
+              LoginForm.field_G.a(un.field_e.field_n, param0 + 12, 24, un.field_e.field_f);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

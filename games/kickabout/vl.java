@@ -177,8 +177,8 @@ final class vl {
         int var4 = (param1 << 1) + 1;
         Sprite var5 = new Sprite(var4, var4);
         PacketBuffer.a(56, var5);
-        SoftwareRasterizer.d(param1, param1, param1, param3);
-        SoftwareRasterizer.d(param1, param1, param1 - param0, 0);
+        SoftwareRasterizer.fillCircle(param1, param1, param1, param3);
+        SoftwareRasterizer.fillCircle(param1, param1, param1 - param0, 0);
         ta.e(120);
         if (!param2) {
           vl.a(8);

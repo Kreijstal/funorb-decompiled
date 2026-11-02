@@ -30,26 +30,26 @@ abstract class NetworkGameClient extends GameAppletShell {
         return bf.field_u.field_Ab;
     }
 
-    private final void h(int param0) {
-        uc.field_A[8] = -2;
-        uc.field_A[6] = -2;
-        uc.field_A[5] = -1;
-        uc.field_A[9] = -1;
-        uc.field_A[12] = -1;
-        uc.field_A[11] = -1;
-        uc.field_A[13] = -1;
-        uc.field_A[3] = -1;
-        uc.field_A[4] = -1;
-        uc.field_A[10] = -1;
-        uc.field_A[18] = 1;
-        uc.field_A[16] = -1;
-        uc.field_A[17] = -1;
-        uc.field_A[7] = -1;
-        uc.field_A[1] = 16;
+    private final void initializeAccountPacketLengths(int param0) {
+        IntTripleCommand.field_A[8] = -2;
+        IntTripleCommand.field_A[6] = -2;
+        IntTripleCommand.field_A[5] = -1;
+        IntTripleCommand.field_A[9] = -1;
+        IntTripleCommand.field_A[12] = -1;
+        IntTripleCommand.field_A[11] = -1;
+        IntTripleCommand.field_A[13] = -1;
+        IntTripleCommand.field_A[3] = -1;
+        IntTripleCommand.field_A[4] = -1;
+        IntTripleCommand.field_A[10] = -1;
+        IntTripleCommand.field_A[18] = 1;
+        IntTripleCommand.field_A[16] = -1;
+        IntTripleCommand.field_A[17] = -1;
+        IntTripleCommand.field_A[7] = -1;
+        IntTripleCommand.field_A[1] = 16;
         if (param0 != 0) {
           return;
         }
-        uc.field_A[2] = -2;
+        IntTripleCommand.field_A[2] = -2;
     }
 
     final void m(int param0) {
@@ -70,7 +70,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             da.a(0, 2);
           }
           if (hr.field_h[2]) {
-            hm.a(115, 3);
+            SumIntegersCommand.a(115, 3);
           }
           if (hr.field_h[3]) {
             kp.a(4, -56);
@@ -132,9 +132,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           field_t = (pk) null;
         }
         ie.field_G = param0;
-        ub.field_E = param2;
+        ModalPanel.field_E = param2;
         wf.field_Q = param6;
-        this.h(0);
+        this.initializeAccountPacketLengths(0);
         lm.d(-1);
     }
 
@@ -298,7 +298,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             SectorCacheStore.a((byte) -112, var3);
                           }
                         } else {
-                          qv.a(un.field_e, ms.field_b, -1, oo.field_c);
+                          TextWidgetPainter.a(un.field_e, ms.field_b, -1, oo.field_c);
                         }
                       } else {
                         this.c(false);
@@ -382,7 +382,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_q = false;
             lr.b((byte) -116);
             ws.a((byte) -31);
-            fc.a(uc.field_D, 2, -56);
+            fc.a(IntTripleCommand.field_D, 2, -56);
             TeamSelectionAgent.c(30929);
             fc.field_d = true;
             GoalStateAgent.field_g = 15000L + nj.a(-48);
@@ -442,7 +442,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   fc.a(st.field_o, 256, 79);
                 }
               } else {
-                fc.a(cj.field_F, 256, 96);
+                fc.a(DateInputWidget.field_F, 256, 96);
               }
               fc.field_d = true;
             }
@@ -469,7 +469,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (hl.field_d == 1) {
           if (vv.field_r != 0) {
-            qq.field_H = ImageProducerRasterBuffer.a((byte) -128, ub.field_E);
+            qq.field_H = ImageProducerRasterBuffer.a((byte) -128, ModalPanel.field_E);
           }
           bw.field_b = gu.a(false, ie.field_G, 1, true, 118);
           gs.field_c = gu.a(false, gr.field_y, 1, true, param0 ^ 125);
@@ -515,9 +515,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (null == qt.field_y) {
             qt.field_y = ia.a(55);
-            jo.field_D = us.a((byte) -88);
+            DemoIntegersCommand.field_D = us.a((byte) -88);
           }
-          nt.a(jo.field_D, up.field_k, param0 + 98, qt.field_y);
+          nt.a(DemoIntegersCommand.field_D, up.field_k, param0 + 98, qt.field_y);
           bw.field_b = null;
           gs.field_c = null;
           up.field_k = null;
@@ -560,8 +560,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!param1 &&
           mf.field_Ib) {
-          hm.a(-113, ic.field_d);
-          this.f((byte) -88);
+          SumIntegersCommand.a(-113, ic.field_d);
+          this.recreateCanvas((byte) -88);
           lp.a(ic.field_d, (byte) -64);
         }
         if (hr.field_h[8]) {
@@ -870,7 +870,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var29 = rf.field_c[3][var6Lifetime2];
               if (var4_int != 0 &&
                 var29.field_sb != 0) {
-                lk.field_l = var6Lifetime2;
+                ConsoleExpression.field_l = var6Lifetime2;
               }
               if (var29.field_Q &&
                 var6Lifetime2 > 0) {
@@ -885,7 +885,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 }
               }
               stackIn_158_0 = var29;
-              stackIn_159_1 = (var6Lifetime2 == lk.field_l);
+              stackIn_159_1 = (var6Lifetime2 == ConsoleExpression.field_l);
               stackIn_158_0.field_I = stackIn_159_1;
               stackIn_161_0 = var29;
               stackIn_162_1 = (var4_int != 0);
@@ -906,11 +906,11 @@ abstract class NetworkGameClient extends GameAppletShell {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (hm.field_D != null &&
-                  null != hm.field_D[var7] &&
-                  (~sb.field_a & hm.field_D[var7][var9]) > 0) {
+                if (SumIntegersCommand.field_D != null &&
+                  null != SumIntegersCommand.field_D[var7] &&
+                  (~sb.field_a & SumIntegersCommand.field_D[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = ps.a((byte) -126, hm.field_D[var7][var9] & ~sb.field_a);
+                  var15 = ps.a((byte) -126, SumIntegersCommand.field_D[var7][var9] & ~sb.field_a);
                 }
                 if (null != ds.field_h &&
                   null != ds.field_h[var7] &&
@@ -918,9 +918,9 @@ abstract class NetworkGameClient extends GameAppletShell {
                   ds.field_h[var7][var9]) {
                   var10 = 1;
                 }
-                if (lh.field_E != null &&
-                  null != lh.field_E[var7]) {
-                  var16 = lh.field_E[var7][var9];
+                if (BroadcastServerCommand.field_E != null &&
+                  null != BroadcastServerCommand.field_E[var7]) {
+                  var16 = BroadcastServerCommand.field_E[var7][var9];
                   if (var16 != 0 &&
                     !fv.field_d &&
                     eq.field_d <= 0) {
@@ -932,9 +932,9 @@ abstract class NetworkGameClient extends GameAppletShell {
                   }
                 }
                 if (param3) {
-                  if (qd.field_e != null) {
-                    if (null != qd.field_e[var7]) {
-                      stackIn_202_0 = (qd.field_e[var7][var9]) ? 1 : 0;
+                  if (IndexedSpriteState.field_e != null) {
+                    if (null != IndexedSpriteState.field_e[var7]) {
+                      stackIn_202_0 = (IndexedSpriteState.field_e[var7][var9]) ? 1 : 0;
                     } else {
                       stackIn_202_0 = 0;
                     }
@@ -982,9 +982,9 @@ abstract class NetworkGameClient extends GameAppletShell {
                 var9 >= 0 &&
                 la.field_k != null && (!param3 ||
                 !hw.field_k)) {
-                if (null == hm.field_G) {
+                if (null == SumIntegersCommand.field_G) {
                   m.field_f = new boolean[ss.field_j];
-                  hm.field_G = new byte[ss.field_j];
+                  SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 tt.field_c = false;
                 ee.field_e = false;
@@ -1025,11 +1025,11 @@ abstract class NetworkGameClient extends GameAppletShell {
               }
               if (var9 >= 0 &&
                 var17.field_Q) {
-                if (null == oj.field_Q) {
+                if (null == LoadingProgressDialog.field_Q) {
                   var18_ref = null;
                 } else {
-                  if (oj.field_Q[var7] != null) {
-                    var18_ref = oj.field_Q[var7][var9];
+                  if (LoadingProgressDialog.field_Q[var7] != null) {
+                    var18_ref = LoadingProgressDialog.field_Q[var7][var9];
                   } else {
                     var18_ref = null;
                   }
@@ -1060,7 +1060,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, IsaacRandom.field_h, new String[]{Integer.toString(mi.field_d), Integer.toString(lh.field_E[var7][var9])});
+                      var31 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, IsaacRandom.field_h, new String[]{Integer.toString(mi.field_d), Integer.toString(BroadcastServerCommand.field_E[var7][var9])});
                       var21 = var31;
                       var21 = var31;
                       if (var21 != null) {
@@ -1070,7 +1070,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = wv.field_bb;
+                      var22 = AccountRequestDialog.field_bb;
                       if (var15 > 0 &&
                         um.field_a != null &&
                         um.field_a.length >= var15 &&
@@ -1093,7 +1093,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   !tt.field_c) {
                   var22 = null;
                   if (ee.field_e) {
-                    var22 = "</col>" + qk.field_H + "<col=A00000>";
+                    var22 = "</col>" + Checkbox.field_H + "<col=A00000>";
                     var25 = var22;
                     var22 = var25;
                     var25Lifetime1 = var22;
@@ -1210,9 +1210,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (1 == var4) {
             var5_int = bo.a(s.j(61), (byte) -98, va.f(-1));
             if (-1 != var5_int) {
-              no.a(mr.field_X, var5_int, gd.field_b, -1);
+              no.a(ValidatedTextWidget.field_X, var5_int, gd.field_b, -1);
               gd.field_b = null;
-              mr.field_X = null;
+              ValidatedTextWidget.field_X = null;
             }
             var11 = v.d(83);
             if (var11 != null) {
@@ -1220,10 +1220,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = mu.a(12, qq.g((byte) -17), ls.g(-26370), ev.h(10326), he.a(320), la.b(820907312), this.field_r);
+            var5_intLifetime1 = ContentTransitionDialog.a(12, qq.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), he.a(320), la.b(820907312), this.field_r);
             if (var5_intLifetime1 != -1) {
-              vs.a(gd.field_b, mr.field_X, (byte) 122, var5_intLifetime1);
-              mr.field_X = null;
+              vs.a(gd.field_b, ValidatedTextWidget.field_X, (byte) 122, var5_intLifetime1);
+              ValidatedTextWidget.field_X = null;
               gd.field_b = null;
             }
           }
@@ -1236,7 +1236,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param0) {
               fc.field_d = false;
             } else {
-              var5_intLifetime2 = js.a(0, ls.g(-26370), this.field_o, false, ev.h(10326), this.field_r);
+              var5_intLifetime2 = js.a(0, BigCommand.g(-26370), this.field_o, false, LongPlusOneCommand.h(10326), this.field_r);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   fc.a(gd.field_b, var5_intLifetime2, 125);
@@ -1374,7 +1374,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.field_r = Integer.parseInt(var9);
             }
             DualLinkDeque.field_d = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param1, param3, this.field_B, (byte) -126, param2, param0, 32);
+            this.startAppletShell(param1, param3, this.field_B, (byte) -126, param2, param0, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
@@ -1398,8 +1398,8 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     final static void k(int param0) {
-        if (kd.field_s) {
-          SoftwareRasterizer.g(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c - SoftwareRasterizer.field_b, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
+        if (DebugConsole.field_s) {
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c - SoftwareRasterizer.field_b, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
           qa.field_E.a(46, false);
         }
         if (param0 != 1) {
@@ -1431,7 +1431,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (fc.field_d) {
           return -1;
         }
-        int var2 = js.a(0, ls.g(-26370), this.field_o, true, ev.h(10326), this.field_r);
+        int var2 = js.a(0, BigCommand.g(-26370), this.field_o, true, LongPlusOneCommand.h(10326), this.field_r);
         if (var2 == -1) {
           return -1;
         }

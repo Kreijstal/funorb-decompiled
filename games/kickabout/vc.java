@@ -73,7 +73,7 @@ final class vc extends fp {
           if (param1 != -1) {
             field_H = (String) null;
           }
-          ct.field_x = param0;
+          SingleChildContainer.field_x = param0;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "vc.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -197,15 +197,15 @@ final class vc extends fp {
         int var3 = 0;
         var4 = Kickabout.field_G;
         try {
-          wo.a(ar.field_c, (gm) (tq.field_F.b((byte) -96)), (byte) 118, 256);
+          wo.a(ar.field_c, (gm) (NotCommand.field_F.b((byte) -96)), (byte) 118, 256);
           if (param0 != 45) {
             vc.i((byte) 21);
           }
-          for (var1_int = 0; var1_int < tq.field_F.playerCount; var1_int++) {
-            if (tq.field_F.participantStatus[var1_int].d(3511) &&
-              wp.field_c == tq.field_F.field_g[var1_int].field_p) {
-              var2 = (gm) (tq.field_F.a((byte) -60, var1_int));
-              stackIn_14_0 = (jn.field_kb != var1_int) ? 160 : 256;
+          for (var1_int = 0; var1_int < NotCommand.field_F.playerCount; var1_int++) {
+            if (NotCommand.field_F.participantStatus[var1_int].d(3511) &&
+              wp.field_c == NotCommand.field_F.field_g[var1_int].field_p) {
+              var2 = (gm) (NotCommand.field_F.a((byte) -60, var1_int));
+              stackIn_14_0 = (RegistrationRequestDialog.field_kb != var1_int) ? 160 : 256;
               var3 = stackIn_14_0;
               wo.a(da.field_u[va.field_J], var2, (byte) -17, var3);
             }
@@ -232,7 +232,7 @@ final class vc extends fp {
         je.field_h = bg.a("beach", bo.field_Cb, (byte) 68, "bucket");
         c.field_e = bg.a("beach", bo.field_Cb, (byte) 76, "palmtree");
         FullscreenFocusCanvas.field_a = bg.a("beach", bo.field_Cb, (byte) 76, "starfish");
-        el.field_D = bg.a("beach", bo.field_Cb, (byte) 93, "icecream");
+        BytePlusOneCommand.field_D = bg.a("beach", bo.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
         tv.field_b = ng.a("stains", "beach", 2, bo.field_Cb);
         return -1;

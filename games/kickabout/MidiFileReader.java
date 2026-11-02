@@ -28,7 +28,7 @@ final class MidiFileReader {
         this.field_b[param0] = this.field_a.field_n;
     }
 
-    final void c(int param0) {
+    final void seekTrack(int param0) {
         this.field_a.field_n = this.field_b[param0];
     }
 
@@ -36,12 +36,12 @@ final class MidiFileReader {
         return this.field_f + (long)param0 * (long)this.field_c;
     }
 
-    final void d(int param0) {
+    final void readDelta(int param0) {
         int var2 = this.field_a.l(120);
         this.field_e[param0] = this.field_e[param0] + var2;
     }
 
-    final boolean a() {
+    final boolean isDone() {
         int var2 = 0;
         int var1 = this.field_b.length;
         for (var2 = 0; var2 < var1; var2++) {
@@ -89,7 +89,7 @@ final class MidiFileReader {
         return var4Lifetime1;
     }
 
-    final int g() {
+    final int nextTrack() {
         int var4 = 0;
         int var1;
         int var2;
@@ -107,7 +107,7 @@ final class MidiFileReader {
         return var2;
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_f = param0;
         int var3 = this.field_b.length;
@@ -115,7 +115,7 @@ final class MidiFileReader {
           this.field_e[var4] = 0;
           this.field_g[var4] = 0;
           this.field_a.field_n = this.field_d[var4];
-          this.d(var4);
+          this.readDelta(var4);
           this.field_b[var4] = this.field_a.field_n;
         }
     }
@@ -128,7 +128,7 @@ final class MidiFileReader {
         return this.field_b.length;
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -197,7 +197,7 @@ final class MidiFileReader {
         field_i = null;
     }
 
-    final int f(int param0) {
+    final int readMessage(int param0) {
         int var2 = this.a(param0);
         return var2;
     }
@@ -208,7 +208,7 @@ final class MidiFileReader {
 
     MidiFileReader(byte[] param0) {
         this.field_a = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.parse(param0);
     }
 
     static {

@@ -87,21 +87,21 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void o(int param0) {
-        fb.field_Q[47] = 73;
-        fb.field_Q[45] = 26;
-        fb.field_Q[46] = 72;
-        fb.field_Q[91] = 42;
-        fb.field_Q[93] = 43;
-        fb.field_Q[59] = 57;
-        fb.field_Q[44] = 71;
-        fb.field_Q[520] = 59;
-        fb.field_Q[222] = 58;
-        fb.field_Q[192] = 28;
+        NumericDateInputWidget.field_Q[47] = 73;
+        NumericDateInputWidget.field_Q[45] = 26;
+        NumericDateInputWidget.field_Q[46] = 72;
+        NumericDateInputWidget.field_Q[91] = 42;
+        NumericDateInputWidget.field_Q[93] = 43;
+        NumericDateInputWidget.field_Q[59] = 57;
+        NumericDateInputWidget.field_Q[44] = 71;
+        NumericDateInputWidget.field_Q[520] = 59;
+        NumericDateInputWidget.field_Q[222] = 58;
+        NumericDateInputWidget.field_Q[192] = 28;
         if (param0 != 255) {
           field_v = 'ￄ';
         }
-        fb.field_Q[92] = 74;
-        fb.field_Q[61] = 27;
+        NumericDateInputWidget.field_Q[92] = 74;
+        NumericDateInputWidget.field_Q[61] = 27;
     }
 
     final void l(byte param0) {
@@ -164,7 +164,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
         pa.b((byte) 92);
         tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
-        li.field_a.a(true, m.field_m.field_q, 0, 0, sh.field_c);
+        ConsoleValue.field_a.a(true, m.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
         if (param0) {
           var4 = (ResourceArchive) null;
@@ -194,14 +194,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         ((hd) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
         va.field_w.a(true, 68, 5, 5, 30);
         qq.field_G.a(true, 78, 75, 5, 30);
-        qv.field_n.a(true, 48, 155, 5, 30);
+        TextWidgetPainter.field_n.a(true, 48, 155, 5, 30);
         df.field_G.a(true, 48, 205, 5, 30);
         stackIn_17_0 = (ui.field_t) ? 250 : 200;
         var2 = stackIn_17_0;
-        stackIn_19_0 = cj.field_D;
+        stackIn_19_0 = DateInputWidget.field_D;
         stackIn_20_1 = (param0) ? false : true;
         ((hd) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
-        jn.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
+        RegistrationRequestDialog.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
         sp.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;
         dr.field_d.a(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);

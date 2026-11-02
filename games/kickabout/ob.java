@@ -122,7 +122,7 @@ final class ob extends BallAgent {
             if (ih.field_c == 2) {
               var6 -= 40;
             }
-            he.a(128, false, 240, var6 + jo.field_E, var5Lifetime1);
+            he.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
           }
           if (this.highFriction > 0) {
             var5Lifetime2 = this.e(92) >> 16;
@@ -182,8 +182,8 @@ final class ob extends BallAgent {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        t.c();
-        t.b(param1, param2);
+        TriangleRasterizer.c();
+        TriangleRasterizer.b(param1, param2);
         if (param4 != 300) {
           tv var7 = (tv) null;
           ob.a((byte) -13, (tv) null);
@@ -207,7 +207,7 @@ final class ob extends BallAgent {
 
     final static int a(int param0, int param1) {
         String var2 = null;
-        uo var3 = null;
+        BinaryBitmapFont var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -224,7 +224,7 @@ final class ob extends BallAgent {
           }
           var2 = ep.field_c[param0];
           var5 = 26 / ((param1 + 55) / 54);
-          var3 = pb.field_C;
+          var3 = IsSixCommand.field_C;
           var4 = 300;
           var6 = ((BitmapFont) ((Object) var3)).b(var2, var4);
           if (var6 > 3) {
@@ -496,8 +496,8 @@ final class ob extends BallAgent {
               var3 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{param1.field_l}) + "] ";
             }
             if (param1.field_c == 4 &&
-              null != ct.field_x) {
-              var3 = "[" + ct.field_x + "] ";
+              null != SingleChildContainer.field_x) {
+              var3 = "[" + SingleChildContainer.field_x + "] ";
             }
             if (param1.field_c == 3) {
               var3 = "[#" + param1.field_l + "] ";
@@ -662,7 +662,7 @@ final class ob extends BallAgent {
           var2 = (var2 << 7) / hw.field_i;
           this.a(300, 64, 64, var2, 300);
           ta.e(118);
-          kw.field_f.f(var3 - 32, -32 + var4);
+          kw.field_f.drawHalfSize(var3 - 32, -32 + var4);
         }
     }
 

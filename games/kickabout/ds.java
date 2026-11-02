@@ -39,7 +39,7 @@ final class ds {
             return stackIn_6_0;
           }
           for (var5 = 0; var3 > var5; var5++) {
-            if (mu.a(param0, (byte) -39)) {
+            if (ContentTransitionDialog.a(param0, (byte) -39)) {
               var6 = new gf();
               param0.l(24, param1 ^ -57);
               param0.l(24, 59);
@@ -50,7 +50,7 @@ final class ds {
               param0.l(12, 59);
               var4[var5] = var6;
             } else {
-              var6_int = param0.l(kb.a(-1 + var5, false), param1 ^ -57);
+              var6_int = param0.l(WriteIntegersCommand.a(-1 + var5, false), param1 ^ -57);
               var4[var5] = var4[var6_int];
             }
           }

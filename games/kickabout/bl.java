@@ -56,11 +56,11 @@ final class bl {
         }
         pq.field_Q.b(var2, var3, al.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
-          PacketBuffer.a(-45, jg.field_K);
+          PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.b();
-          ea.a(this.field_e.field_h, 0, false, jg.field_K.field_q, 0, -52);
+          ea.a(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           ta.e(119);
-          jg.field_K.b((-50 + jt.field_yb >> 1) + var2, (-20 + om.field_Bb >> 1) + var3, 96);
+          DraggableWidget.field_K.b((-50 + jt.field_yb >> 1) + var2, (-20 + om.field_Bb >> 1) + var3, 96);
         }
         if (this.field_e.field_f == 4) {
           pt.a(var2 + 1 + jt.field_yb, -22914, 1 + var2, om.field_Bb + var3 + 1, var3 + 1);
@@ -77,14 +77,14 @@ final class bl {
                 var9 = 16776960;
               }
               var5Lifetime1 = this.field_e.field_e[var6][var8][1] >> 16;
-              SoftwareRasterizer.d(var2 - (-1 - var4Lifetime1), var5Lifetime1 + var3 + 1, 3, var9);
-              SoftwareRasterizer.c(var4Lifetime1 + (var2 + 1), var5Lifetime1 + 1 + var3, 3, 65793);
+              SoftwareRasterizer.fillCircle(var2 - (-1 - var4Lifetime1), var5Lifetime1 + var3 + 1, 3, var9);
+              SoftwareRasterizer.drawCircle(var4Lifetime1 + (var2 + 1), var5Lifetime1 + 1 + var3, 3, 65793);
             }
           }
           var4Lifetime2 = this.field_e.field_n >> 16;
           var5Lifetime2 = this.field_e.field_l >> 16;
-          SoftwareRasterizer.d(var2 + 1 + var4Lifetime2, var5Lifetime2 + var3 + 1, 3, 16777215);
-          SoftwareRasterizer.c(var4Lifetime2 + (var2 + 1), 1 + var3 + var5Lifetime2, 3, 65793);
+          SoftwareRasterizer.fillCircle(var2 + 1 + var4Lifetime2, var5Lifetime2 + var3 + 1, 3, 16777215);
+          SoftwareRasterizer.drawCircle(var4Lifetime2 + (var2 + 1), 1 + var3 + var5Lifetime2, 3, 65793);
           ta.e(119);
         } else {
           if (0 > this.field_e.field_f) {
@@ -156,8 +156,8 @@ final class bl {
             this.field_i = false;
             return;
           }
-          if (this.field_l <= el.field_A &&
-            el.field_A <= this.field_a + this.field_l &&
+          if (this.field_l <= BytePlusOneCommand.field_A &&
+            BytePlusOneCommand.field_A <= this.field_a + this.field_l &&
             this.field_b <= n.field_m &&
             this.field_b + this.field_j >= n.field_m) {
             this.field_f = true;
@@ -171,7 +171,7 @@ final class bl {
             this.field_i = false;
           }
           if (this.field_f) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, ds.field_f);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ds.field_f);
           }
           if (this.field_i) {
             if (an.field_d) {
@@ -206,7 +206,7 @@ final class bl {
           this.field_j = 32 + om.field_Bb;
           this.field_k = param4;
           k.field_j = new Sprite(this.field_a, this.field_j - 32);
-          jg.field_K = new Sprite(50, 20);
+          DraggableWidget.field_K = new Sprite(50, 20);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

@@ -23,7 +23,7 @@ final class pw extends i {
             }
             if ((param1 == 0) &&
               (decompiledFrameRemainder0 = !(ad.field_f < an.field_c))) {
-              if (qd.field_g < ad.field_f) {
+              if (IndexedSpriteState.field_g < ad.field_f) {
                 return;
               }
               if (ng.field_e) {
@@ -31,7 +31,7 @@ final class pw extends i {
                   return;
                 }
                 if (!(an.field_c <= hk.field_L) ||
-                  !(hk.field_L <= qd.field_g)) {
+                  !(hk.field_L <= IndexedSpriteState.field_g)) {
                   return;
                 }
               }
@@ -217,7 +217,7 @@ final class pw extends i {
         var12 = Kickabout.field_G;
         super.a((byte) -124, param1, param2);
         wk.field_c.a(150 + param2, 23, param1 + 98);
-        pb.field_C.a(qa.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
+        IsSixCommand.field_C.a(qa.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
         if (param0 > -11) {
           field_J = (hd) null;
         }
@@ -229,10 +229,10 @@ final class pw extends i {
         var9 = 75 + var8 + 6;
         SoftwareRasterizer.a(-47 + var4, var6, 90, 75, 10, 65793, 128);
         SoftwareRasterizer.a(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
-        un.field_d.d(oj.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
-        pb.field_C.d(ad.a(an.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
+        un.field_d.d(LoadingProgressDialog.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
+        IsSixCommand.field_C.d(ad.a(an.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
         un.field_d.d(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
-        pb.field_C.d(ad.a(qd.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
+        IsSixCommand.field_C.d(ad.a(IndexedSpriteState.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
         SoftwareRasterizer.a(var5, var6, 160, 75, 10, 65793, 128);
         SoftwareRasterizer.a(var7, var8, 160, 75, 10, 65793, 128);
         SoftwareRasterizer.a(var4, var9, 260, 120, 10, 65793, 128);
@@ -247,42 +247,42 @@ final class pw extends i {
         uq.field_b.field_s = var4 + 10;
         uq.field_b.field_J = 27 + var6;
         SoftwareRasterizer.a(uq.field_b.field_s + 85, uq.field_b.field_J + 6, bd.field_A.field_q + 4, -4 + bd.field_A.field_mb, 7829367, 128);
-        pb.field_C.a('£', 91 + uq.field_b.field_s, uq.field_b.field_J + 19, 16777215);
+        IsSixCommand.field_C.a('£', 91 + uq.field_b.field_s, uq.field_b.field_J + 19, 16777215);
         uq.field_b.a(110, var10 != 0 & this.field_F);
         oa.field_b.field_J = 5 + (var8 - 13);
         oa.field_b.field_s = var4 + 10;
         SoftwareRasterizer.a(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, rt.field_F.field_q + 4, -4 + rt.field_F.field_mb, 7829367, 128);
         if (ng.field_e) {
-          pb.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
+          IsSixCommand.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
         }
         oa.field_b.a(94, var10 != 0 & this.field_I);
         kr.field_a.a(false, (byte) 46);
         if (ad.field_f < an.field_c) {
-          pb.field_C.d(ik.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
+          IsSixCommand.field_C.d(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
         } else {
-          if (qd.field_g >= ad.field_f) {
+          if (IndexedSpriteState.field_g >= ad.field_f) {
             if (ng.field_e &&
               ad.field_f > hk.field_L) {
-              pb.field_C.d(jw.field_Eb, var4 + 130, -8 + var6 + 75, 16711680, -1);
+              IsSixCommand.field_C.d(jw.field_Eb, var4 + 130, -8 + var6 + 75, 16711680, -1);
             }
           } else {
-            pb.field_C.d(rr.field_d, 130 + var4, 75 + var6 - 8, 16711680, -1);
+            IsSixCommand.field_C.d(rr.field_d, 130 + var4, 75 + var6 - 8, 16711680, -1);
           }
         }
         if (ng.field_e) {
           if (hk.field_L < an.field_c) {
-            pb.field_C.d(ik.field_E, 130 + var4, 75 + var8 - 8, 16711680, -1);
+            IsSixCommand.field_C.d(IntDoubleCommand.field_E, 130 + var4, 75 + var8 - 8, 16711680, -1);
           } else {
-            if (hk.field_L <= qd.field_g) {
+            if (hk.field_L <= IndexedSpriteState.field_g) {
               if (hk.field_L < ad.field_f) {
-                pb.field_C.d(f.field_b, 130 + var4, 67 + var8, 16711680, -1);
+                IsSixCommand.field_C.d(f.field_b, 130 + var4, 67 + var8, 16711680, -1);
               }
             } else {
-              pb.field_C.d(rr.field_d, 130 + var4, var8 + 67, 16711680, -1);
+              IsSixCommand.field_C.d(rr.field_d, 130 + var4, var8 + 67, 16711680, -1);
             }
           }
         } else {
-          pb.field_C.d(um.field_f, var4 + 130, var8 + 67, 16711680, -1);
+          IsSixCommand.field_C.d(um.field_f, var4 + 130, var8 + 67, 16711680, -1);
         }
         for (var11 = 0; var11 < 5; var11++) {
           of.field_d[var11].a(true, of.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), of.field_d[var11].field_mb);
@@ -320,7 +320,7 @@ final class pw extends i {
         ng.field_e = true;
         wk.field_c = GameLoopApplet.field_E.field_i[ArchiveNetworkClient.field_m];
         an.field_c = su.a((byte) -107, wk.field_c);
-        qd.field_g = af.a(wk.field_c, -31);
+        IndexedSpriteState.field_g = af.a(wk.field_c, -31);
         ad.field_f = an.field_c;
         kt.field_l = 8;
         hk.field_L = gp.a(wk.field_c, -576054046) <= 0 ? 1 : gp.a(wk.field_c, -576054046);
@@ -328,7 +328,7 @@ final class pw extends i {
         of.field_d = new hd[5];
         var9.field_y = 16777215;
         var9.field_ub = 65793;
-        var9.field_X = (BitmapFont) ((Object) pb.field_C);
+        var9.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         var9.field_D = 95;
         for (var3_int = 0; var3_int < 5; var3_int++) {
           of.field_d[var3_int] = new hd();
@@ -346,16 +346,16 @@ final class pw extends i {
         uq.field_b.field_A = 1;
         uq.field_b.field_mb = 24;
         uq.field_b.field_q = 240;
-        uq.field_b.field_X = (BitmapFont) ((Object) pb.field_C);
+        uq.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         oa.field_b = new hd();
         oa.field_b.field_B = 40;
         oa.field_b.field_mb = 60;
-        oa.field_b.field_X = (BitmapFont) ((Object) pb.field_C);
+        oa.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         oa.field_b.field_A = 1;
         oa.field_b.field_q = 240;
         oa.field_b.field_y = 16777215;
         hd var3 = new hd();
-        var3.field_X = (BitmapFont) ((Object) pb.field_C);
+        var3.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         var3.field_p = 1;
         var3.field_A = 1;
         var3.field_y = 16777215;
@@ -364,31 +364,31 @@ final class pw extends i {
         hd var5 = new hd();
         var5.field_B = 2;
         var5.field_y = 16777215;
-        var5.field_X = (BitmapFont) ((Object) pb.field_C);
+        var5.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         var5.field_D = 5;
         bd.field_A = new vg(0L, var3, var10, var5, 20);
         bd.field_A.field_R = null;
-        bd.field_A.a(-630, 5 + (uq.field_b.field_q >> 1) - 33, (uq.field_b.field_mb >> 2) - 2, 4 + (pb.field_C.field_G + pb.field_C.field_p), 67);
+        bd.field_A.a(-630, 5 + (uq.field_b.field_q >> 1) - 33, (uq.field_b.field_mb >> 2) - 2, 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
         uq.field_b.a((byte) -113, (hd) (bd.field_A));
         rt.field_F = new vg(0L, var3, var10, var5, 20);
         rt.field_F.field_R = null;
-        rt.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (pb.field_C.field_G + pb.field_C.field_p), 67);
+        rt.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
         oa.field_b.a((byte) -121, (hd) (rt.field_F));
         kr.field_a = new jw(LoggedPlayer.field_k.toLowerCase(), un.field_d);
         kr.field_a.field_J = 5;
         kr.field_a.field_s = 5 + (oa.field_b.field_q - kr.field_a.field_q >> 1);
         hk.field_I = eo.a(false, 0);
-        qp.field_L = eo.a(true, 0);
+        AccountMessagePanel.field_L = eo.a(true, 0);
         hq.field_c = eo.a(false, 0);
         fn.field_a = eo.a(true, 0);
-        qp.field_L.field_s = (uq.field_b.field_q >> 1) + ((qp.field_L.field_q >> 1) + qp.field_L.field_q);
+        AccountMessagePanel.field_L.field_s = (uq.field_b.field_q >> 1) + ((AccountMessagePanel.field_L.field_q >> 1) + AccountMessagePanel.field_L.field_q);
         fn.field_a.field_s = fn.field_a.field_q - (-(fn.field_a.field_q >> 1) - (oa.field_b.field_q >> 1));
         hk.field_I.field_s = -(hk.field_I.field_q >> 1) + (-(hk.field_I.field_q * 2) + (uq.field_b.field_q >> 1));
         hq.field_c.field_s = (oa.field_b.field_q >> 1) + (-(2 * hq.field_c.field_q) - (hq.field_c.field_q >> 1));
         fn.field_a.field_J = 35;
         hq.field_c.field_J = 35;
         uq.field_b.a((byte) -108, hk.field_I);
-        uq.field_b.a((byte) -125, qp.field_L);
+        uq.field_b.a((byte) -125, AccountMessagePanel.field_L);
         oa.field_b.a((byte) -117, hq.field_c);
         oa.field_b.a((byte) -115, fn.field_a);
         oa.field_b.a((byte) -113, (hd) (kr.field_a));
@@ -472,63 +472,63 @@ final class pw extends i {
         for (var3 = 0; var3 < 5; var3++) {
           if (of.field_d[var3].field_gb) {
             if (var3 == ee.field_d) {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, jh.field_Jb, new String[]{ni.field_k[var3]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, jh.field_Jb, new String[]{ni.field_k[var3]}));
             } else {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, kn.field_H, new String[]{ni.field_k[var3]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, kn.field_H, new String[]{ni.field_k[var3]}));
             }
           }
         }
-        if (qp.field_L.field_Q) {
-          if (ad.field_f == qd.field_g) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, vf.field_H);
+        if (AccountMessagePanel.field_L.field_Q) {
+          if (ad.field_f == IndexedSpriteState.field_g) {
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vf.field_H);
           } else {
             if (ng.field_e &&
               ad.field_f == hk.field_L) {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, ad.field_a);
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ad.field_a);
             } else {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_q, new String[]{ad.a(1, 26300)}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_q, new String[]{ad.a(1, 26300)}));
             }
           }
         }
         if (hk.field_I.field_Q) {
           if (an.field_c != ad.field_f) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, np.field_Ib, new String[]{ad.a(1, 26300)}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, np.field_Ib, new String[]{ad.a(1, 26300)}));
           } else {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, UiWidget.field_j);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, UiWidget.field_j);
           }
         }
         if (fn.field_a.field_Q) {
           if (ng.field_e) {
-            if (hk.field_L == qd.field_g) {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, hm.field_E);
+            if (hk.field_L == IndexedSpriteState.field_g) {
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, SumIntegersCommand.field_E);
             } else {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{ad.a(1, param0 ^ 26303)}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{ad.a(1, param0 ^ 26303)}));
             }
           } else {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
           }
         }
         if (hq.field_c.field_Q) {
           if (ng.field_e) {
             if (an.field_c != hk.field_L) {
               if (ad.field_f == hk.field_L) {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, sd.field_e);
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, sd.field_e);
               } else {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, up.field_d, new String[]{ad.a(1, 26300)}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, up.field_d, new String[]{ad.a(1, 26300)}));
               }
             } else {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, bn.field_C);
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, bn.field_C);
             }
           } else {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
           }
         }
-        stackIn_43_0 = qp.field_L;
+        stackIn_43_0 = AccountMessagePanel.field_L;
         stackIn_43_1 = ad.field_f;
         if (ng.field_e) {
           stackIn_44_2 = hk.field_L;
         } else {
-          stackIn_44_2 = qd.field_g;
+          stackIn_44_2 = IndexedSpriteState.field_g;
         }
         stackIn_47_1 = (stackIn_43_1 >= stackIn_44_2) ? false : true;
         stackIn_43_0.field_lb = stackIn_47_1;
@@ -536,7 +536,7 @@ final class pw extends i {
         stackIn_50_1 = (ad.field_f <= an.field_c) ? false : true;
         stackIn_49_0.field_lb = stackIn_50_1;
         stackIn_52_0 = fn.field_a;
-        stackIn_53_1 = (qd.field_g <= hk.field_L) ? false : true;
+        stackIn_53_1 = (IndexedSpriteState.field_g <= hk.field_L) ? false : true;
         stackIn_52_0.field_lb = stackIn_53_1 & ng.field_e;
         stackIn_55_0 = hq.field_c;
         stackIn_56_1 = (hk.field_L <= ad.field_f) ? false : true;
@@ -548,7 +548,7 @@ final class pw extends i {
           } else {
             stackIn_61_1 = hh.field_c;
           }
-          qd.$cfr$intArgs$a$b6210757cdab(stackIn_60_0, stackIn_61_1);
+          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_60_0, stackIn_61_1);
         }
         if (kr.field_a.field_sb == 1) {
           stackIn_66_0 = !(ng.field_e);
@@ -576,10 +576,10 @@ final class pw extends i {
         var4 = 0;
         var5 = 5;
         for (var6 = 0; var6 < 3; var6++) {
-          if (qp.field_L.field_qb == 1) {
+          if (AccountMessagePanel.field_L.field_qb == 1) {
             if (wo.field_o % var5 == 0) {
               if (!ng.field_e) {
-                stackIn_85_0 = qd.field_g;
+                stackIn_85_0 = IndexedSpriteState.field_g;
               } else {
                 stackIn_85_0 = hk.field_L;
               }
@@ -588,13 +588,13 @@ final class pw extends i {
                 if (ng.field_e) {
                   stackIn_89_0 = hk.field_L;
                 } else {
-                  stackIn_89_0 = qd.field_g;
+                  stackIn_89_0 = IndexedSpriteState.field_g;
                 }
                 if (stackIn_89_0 < ad.field_f) {
                   if (ng.field_e) {
                     stackIn_93_0 = hk.field_L;
                   } else {
-                    stackIn_93_0 = qd.field_g;
+                    stackIn_93_0 = IndexedSpriteState.field_g;
                   }
                   ad.field_f = stackIn_93_0;
                 }
@@ -618,10 +618,10 @@ final class pw extends i {
           }
           if (fn.field_a.field_qb == 1) {
             if (0 == wo.field_o % var5 &&
-              hk.field_L < qd.field_g) {
+              hk.field_L < IndexedSpriteState.field_g) {
               hk.field_L = hk.field_L + 1;
-              if (hk.field_L > qd.field_g) {
-                hk.field_L = qd.field_g;
+              if (hk.field_L > IndexedSpriteState.field_g) {
+                hk.field_L = IndexedSpriteState.field_g;
               }
               sp.c(60, param0 - 125);
               var4 = 1;
@@ -711,7 +711,7 @@ final class pw extends i {
         boolean decompiledFrameRemainder0 = true;
         var6Lifetime2 = stackIn_163_0;
         if (var6Lifetime2 >= an.field_c &&
-          qd.field_g >= var6Lifetime2 && (!ng.field_e ||
+          IndexedSpriteState.field_g >= var6Lifetime2 && (!ng.field_e ||
           !(var6Lifetime2 > hk.field_L))) {
           bd.field_A.b(16777215, (byte) 120);
           decompiledFrameRemainder0 = false;
@@ -728,7 +728,7 @@ final class pw extends i {
           }
           var7Lifetime1 = stackIn_176_0;
           if (an.field_c <= var7Lifetime1 &&
-            var7Lifetime1 <= qd.field_g &&
+            var7Lifetime1 <= IndexedSpriteState.field_g &&
             ad.field_f <= var7Lifetime1) {
             rt.field_F.b(16777215, (byte) 126);
           } else {
@@ -737,7 +737,7 @@ final class pw extends i {
         }
         var7Lifetime2 = 1;
         stackIn_183_0 = var7Lifetime2;
-        stackIn_184_1 = (qd.field_g < ad.field_f) ? 0 : 1;
+        stackIn_184_1 = (IndexedSpriteState.field_g < ad.field_f) ? 0 : 1;
         var7Lifetime3 = stackIn_183_0 & stackIn_184_1;
         stackIn_186_0 = var7Lifetime3;
         stackIn_187_1 = (an.field_c > ad.field_f) ? 0 : 1;
@@ -750,7 +750,7 @@ final class pw extends i {
           stackIn_195_1 = (hk.field_L < ad.field_f) ? 0 : 1;
           var7Lifetime4 = stackIn_194_0 & stackIn_195_1;
           stackIn_197_0 = var7Lifetime4;
-          stackIn_198_1 = (hk.field_L > qd.field_g) ? 0 : 1;
+          stackIn_198_1 = (hk.field_L > IndexedSpriteState.field_g) ? 0 : 1;
           var7Lifetime4 = stackIn_197_0 & stackIn_198_1;
           stackIn_200_0 = var7Lifetime4;
           stackIn_201_1 = (hk.field_L < an.field_c) ? 0 : 1;

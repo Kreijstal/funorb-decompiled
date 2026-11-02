@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ju extends lb {
+final class ju extends TextHotspotWidget {
     private String field_O;
     private int field_S;
     static boolean field_T;
-    private l field_R;
+    private ValidationSource field_R;
     private Sprite field_Q;
     static long[][] field_W;
     static long[] field_V;
@@ -45,14 +45,14 @@ final class ju extends lb {
             var7 = param3[1].field_o;
             param3[0].c(param0, param2);
             param3[2].c(param4 + param0 - var6, param2);
-            SoftwareRasterizer.a(vi.field_q);
-            SoftwareRasterizer.h(var5_int + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
+            SoftwareRasterizer.saveClip(vi.field_q);
+            SoftwareRasterizer.intersectClip(var5_int + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
             var8 = param0 + var5_int;
             var9 = param4 + (param0 - var6);
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param3[1].c(param0, param2);
             }
-            SoftwareRasterizer.b(vi.field_q);
+            SoftwareRasterizer.restoreClip(vi.field_q);
             return;
           }
           return;
@@ -91,7 +91,7 @@ final class ju extends lb {
         return Character.toTitleCase(param1);
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         Sprite[] var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -118,8 +118,8 @@ final class ju extends lb {
         }
     }
 
-    ju(l param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, fr.h((byte) 66));
+    ju(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
+        super(param1, NameSuggestionsPanel.h((byte) 66));
         try {
           this.field_R = param0;
           this.field_O = param1;
@@ -173,10 +173,10 @@ final class ju extends lb {
           var6Lifetime1 != en.field_p) {
           if (jt.field_Bb == var6Lifetime1) {
             var15 = LoggedPlayer.field_g[2];
-            var15.c(var9, var10 - (var15.field_w >> 1), 256);
+            var15.drawAdditive(var9, var10 - (var15.field_w >> 1), 256);
           } else if (var6Lifetime1 == he.field_yb) {
             var16 = LoggedPlayer.field_g[1];
-            var16.c(var9, var10 - (var16.field_w >> 1), 256);
+            var16.drawAdditive(var9, var10 - (var16.field_w >> 1), 256);
           }
         } else {
           var14 = LoggedPlayer.field_g[0];
@@ -191,9 +191,9 @@ final class ju extends lb {
             this.field_Q = new Sprite(var11, var12);
             PacketBuffer.a(70, this.field_Q);
           }
-          var14.b(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
+          var14.rotateSmooth(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
           ta.e(126);
-          this.field_Q.c(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
+          this.field_Q.drawAdditive(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
         }
     }
 

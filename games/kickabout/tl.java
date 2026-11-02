@@ -19,7 +19,7 @@ final class tl {
         if (param0 >= -115) {
           return -7;
         }
-        return lb.field_M;
+        return TextHotspotWidget.field_M;
     }
 
     final static void b(int param0) {
@@ -130,7 +130,7 @@ final class tl {
                 }
               }
               if (var21 != null &&
-                hm.a((byte) 78, var21)) {
+                SumIntegersCommand.a((byte) 78, var21)) {
                 var8[1][var13] = ArchiveSource.field_e;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
@@ -188,7 +188,7 @@ final class tl {
         }
     }
 
-    final static lk a(sb param0, boolean param1) {
+    final static ConsoleExpression a(sb param0, boolean param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -196,8 +196,8 @@ final class tl {
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
-        lk stackIn_3_0 = null;
-        lk stackIn_21_0 = null;
+        ConsoleExpression stackIn_3_0 = null;
+        ConsoleExpression stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -207,7 +207,7 @@ final class tl {
         var6 = Kickabout.field_G;
         try {
           if (param1) {
-            stackIn_3_0 = (lk) null;
+            stackIn_3_0 = (ConsoleExpression) null;
             return stackIn_3_0;
           }
           fieldTemp$2 = param0.field_c - 1;
@@ -238,7 +238,7 @@ final class tl {
           } else {
             var4Lifetime1 = ra.field_N;
           }
-          stackIn_21_0 = new lk(var4Lifetime1, var2_int, var5);
+          stackIn_21_0 = new ConsoleExpression(var4Lifetime1, var2_int, var5);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

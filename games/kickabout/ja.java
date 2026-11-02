@@ -56,7 +56,7 @@ final class ja extends ta {
           }
           if (!var4_ref_nt.field_Ib &&
             !var4_ref_nt.field_Kb) {
-            ub.a(var4_ref_nt.field_Cb.field_m, (byte) -38);
+            ModalPanel.a(var4_ref_nt.field_Cb.field_m, (byte) -38);
           }
           var4_ref_nt = (nt) (this.field_F.field_jb.c(33));
         }
@@ -66,7 +66,7 @@ final class ja extends ta {
           while (var6 != null) {
             if (0 != var6.field_sb) {
               if (var4 != 0) {
-                mr.a((byte) 74, var6.field_yb);
+                ValidatedTextWidget.a((byte) 74, var6.field_yb);
               } else {
                 kw.a(123, var6.field_yb);
               }
@@ -441,23 +441,23 @@ final class ja extends ta {
         int[] var12 = null;
         int var5 = 0;
         int var6 = 0;
-        eg var7 = null;
+        ModelMesh var7 = null;
         int var8 = 0;
         if (param1 < 99) {
           this.field_U = -111;
         }
         if (this.field_db != null) {
           var3 = ((int)(nj.a(75) % 5000L) << 11) / 5000;
-          t.c();
-          t.b(532 + this.field_j, 410);
+          TriangleRasterizer.c();
+          TriangleRasterizer.b(532 + this.field_j, 410);
           var12 = dt.field_f;
-          var5 = t.field_o[var3] * var12[0] >> 16;
-          var6 = var12[0] * t.field_f[var3] >> 16;
-          var7 = (eg) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));
+          var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
+          var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
+          var7 = (ModelMesh) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
-          var8 = Math.max(120, pb.field_C.a(this.field_T) + 30);
+          var8 = Math.max(120, IsSixCommand.field_C.a(this.field_T) + 30);
           SoftwareRasterizer.a(this.field_j + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
-          pb.field_C.d(this.field_T, 532 + this.field_j, 430, 16777215, -1);
+          IsSixCommand.field_C.d(this.field_T, 532 + this.field_j, 430, 16777215, -1);
           this.field_ab.a(123, false);
         }
     }

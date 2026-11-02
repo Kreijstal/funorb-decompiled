@@ -26,7 +26,7 @@ abstract class SpriteState extends DualLinkNode {
         var2.a(123, uv.field_i.field_bc);
         int var4 = (uv.field_i.field_Mb << 6) + uv.field_i.field_Wb;
         var2.a(106, var4);
-        var2.a(0, uv.field_i.field_Eb.length, param0 ^ 1991213509, uv.field_i.field_Eb);
+        var2.readBytes(0, uv.field_i.field_Eb.length, param0 ^ 1991213509, uv.field_i.field_Eb);
         var2.c(62, var2.field_n - var3);
     }
 
@@ -89,7 +89,7 @@ abstract class SpriteState extends DualLinkNode {
         var18 = null;
         var19 = Kickabout.field_G;
         try {
-          dw.a(7, ee.field_b);
+          ConsoleEvaluationException.a(7, ee.field_b);
           if (uv.field_i != null) {
             boolean decompiledFrameRemainder0 = true;
             ac.field_b.field_lb = true;
@@ -141,9 +141,9 @@ abstract class SpriteState extends DualLinkNode {
               var8 = GoalStateAgent.field_k;
               var10 = 2;
               if (la.field_k != null) {
-                if (hm.field_G == null) {
+                if (SumIntegersCommand.field_G == null) {
                   m.field_f = new boolean[ss.field_j];
-                  hm.field_G = new byte[ss.field_j];
+                  SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 for (var11_int = 0; ss.field_j > var11_int; var11_int++) {
                   m.field_f[var11_int] = false;
@@ -211,9 +211,9 @@ abstract class SpriteState extends DualLinkNode {
               }
               if (var10 >= 2) {
                 if ((null != ds.field_h ||
-                  null != lh.field_E ||
+                  null != BroadcastServerCommand.field_E ||
                   null != so.field_f ||
-                  null != hm.field_D)) {
+                  null != SumIntegersCommand.field_D)) {
                   var11_intLifetime1 = 0;
                   var12Lifetime1 = 0;
                   var13_int = 0;
@@ -226,9 +226,9 @@ abstract class SpriteState extends DualLinkNode {
                       ds.field_h[var16Lifetime1][var17_intLifetime1]) {
                       var11_intLifetime1 = 1;
                     }
-                    if (lh.field_E != null &&
-                      lh.field_E[var16Lifetime1] != null) {
-                      var18_int = lh.field_E[var16Lifetime1][var17_intLifetime1];
+                    if (BroadcastServerCommand.field_E != null &&
+                      BroadcastServerCommand.field_E[var16Lifetime1] != null) {
+                      var18_int = BroadcastServerCommand.field_E[var16Lifetime1][var17_intLifetime1];
                       if (var18_int != 0 &&
                         !fv.field_d) {
                         var11_intLifetime1 = 1;
@@ -240,9 +240,9 @@ abstract class SpriteState extends DualLinkNode {
                     regionExit3: {
                       if (null != so.field_f) {
                         if (so.field_f[var16Lifetime1] == null) {
-                          if (((null != hm.field_D)) &&
-                            ((null != hm.field_D[var16Lifetime1]))) {
-                            var15Lifetime1 = var15Lifetime1 | hm.field_D[var16Lifetime1][var17_intLifetime1];
+                          if (((null != SumIntegersCommand.field_D)) &&
+                            ((null != SumIntegersCommand.field_D[var16Lifetime1]))) {
+                            var15Lifetime1 = var15Lifetime1 | SumIntegersCommand.field_D[var16Lifetime1][var17_intLifetime1];
                           }
                           break regionExit3;
                         }
@@ -255,9 +255,9 @@ abstract class SpriteState extends DualLinkNode {
                           var11_intLifetime1 = 1;
                         }
                       }
-                      if (null != hm.field_D &&
-                        null != hm.field_D[var16Lifetime1]) {
-                        var15Lifetime1 = var15Lifetime1 | hm.field_D[var16Lifetime1][var17_intLifetime1];
+                      if (null != SumIntegersCommand.field_D &&
+                        null != SumIntegersCommand.field_D[var16Lifetime1]) {
+                        var15Lifetime1 = var15Lifetime1 | SumIntegersCommand.field_D[var16Lifetime1][var17_intLifetime1];
                       }
                     }
                   }
@@ -339,7 +339,7 @@ abstract class SpriteState extends DualLinkNode {
                     if (var12Lifetime2 != 0) {
                       var14 = gm.field_S + (String) (var11);
                     } else {
-                      var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, kb.field_D, new String[]{(String) (var11)});
+                      var14 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, WriteIntegersCommand.field_D, new String[]{(String) (var11)});
                     }
                   }
                   sn.field_e = "<col=A00000>" + var13_ref + "<br>" + var14;

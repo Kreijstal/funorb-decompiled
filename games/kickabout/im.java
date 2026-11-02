@@ -32,11 +32,11 @@ abstract class im extends hd {
         java.awt.Canvas var1 = null;
         if (dr.field_a) {
           dr.field_a = false;
-          var1 = ln.l(param0 ^ 634588136);
+          var1 = DropTargetWidget.l(param0 ^ 634588136);
           oo.field_c.a((byte) 53, us.field_j, wt.field_x, (java.awt.Component) ((Object) var1));
           oo.field_c.a(-118, (java.awt.Component) ((Object) var1), true);
           n.field_m = us.field_j;
-          el.field_A = wt.field_x;
+          BytePlusOneCommand.field_A = wt.field_x;
         }
         if (param0 == 634588072) {
           return;

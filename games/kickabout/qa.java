@@ -117,12 +117,12 @@ final class qa extends dj {
           un.field_d.a(ic.field_b.toLowerCase(), 370 + this.field_j, 172, 16777215, -1);
           var3 = this.field_j + 370;
           SoftwareRasterizer.a(var3, 186, 184, 174, 16777215, 30);
-          SoftwareRasterizer.h(var3 - 1, 185, 186, 176, 16777215, 128);
+          SoftwareRasterizer.drawRectangleAlpha(var3 - 1, 185, 186, 176, 16777215, 128);
           for (var4 = 0; var4 < 6; var4++) {
-            pb.field_C.c(q.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
-            pb.field_C.a(Integer.toString(ps.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
+            IsSixCommand.field_C.c(q.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
+            IsSixCommand.field_C.a(Integer.toString(ps.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
           }
-          SoftwareRasterizer.f(var3 + 127, 186, 174, 16777215, 128);
+          SoftwareRasterizer.drawVerticalLineAlpha(var3 + 127, 186, 174, 16777215, 128);
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
             SoftwareRasterizer.c(var3 + 4, 187 + 28 * var4Lifetime2 + 28, 174, 16777215, 30);
           }
@@ -142,19 +142,19 @@ final class qa extends dj {
             if (var4Lifetime1 == 0) {
               var7 += 60;
             }
-            while (var11 < tm.field_q.length) {
-              var8 = tm.field_q[var11];
-              var9 = pb.field_C.c(var8, 245, 16);
+            while (var11 < ConsoleCommand.field_q.length) {
+              var8 = ConsoleCommand.field_q[var11];
+              var9 = IsSixCommand.field_C.c(var8, 245, 16);
               if (var7 + var9 <= 396) {
                 var11++;
-                var7 = var7 + (16 * pb.field_C.a(var8, var6, var7, 245, 999, 16777215, -1, 0, 0, 16) + 25);
+                var7 = var7 + (16 * IsSixCommand.field_C.a(var8, var6, var7, 245, 999, 16777215, -1, 0, 0, 16) + 25);
                 continue;
               }
               break;
             }
           }
-          for (var4Lifetime1Lifetime1 = 0; kb.field_E.length > var4Lifetime1Lifetime1; var4Lifetime1Lifetime1++) {
-            kb.field_E[var4Lifetime1Lifetime1].d(30 * var4Lifetime1Lifetime1 + this.field_j + 50, 150);
+          for (var4Lifetime1Lifetime1 = 0; WriteIntegersCommand.field_E.length > var4Lifetime1Lifetime1; var4Lifetime1Lifetime1++) {
+            WriteIntegersCommand.field_E[var4Lifetime1Lifetime1].d(30 * var4Lifetime1Lifetime1 + this.field_j + 50, 150);
           }
         }
     }
@@ -176,7 +176,7 @@ final class qa extends dj {
         var9 = Kickabout.field_G;
         try {
           for (var1_int = 0; var1_int < mn.field_b.length; var1_int++) {
-            var2_ref_gm = (gm) (sh.field_a.field_P[ae.field_G][1 + var1_int]);
+            var2_ref_gm = (gm) (sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
             var3 = null;
             var4 = 0;
             if (var2_ref_gm.field_C > 0) {

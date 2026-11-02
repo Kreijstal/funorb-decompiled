@@ -10,7 +10,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private ArchiveNetworkClient field_l;
     static String field_p;
     private int field_h;
-    static ae field_u;
+    static AccountRegistrationPanel field_u;
     private byte[] field_x;
     private eb field_w;
     private byte[] field_r;
@@ -130,7 +130,7 @@ final class CachedArchiveSource extends ArchiveSource {
     final static void c(int param0) {
         try {
           if (param0 != 1) {
-            field_u = (ae) null;
+            field_u = (AccountRegistrationPanel) null;
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wm.J(" + param0 + ')');

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends lg implements sv, ft {
-    cj field_g;
+final class hl extends lg implements TextInputListener, ft {
+    DateInputWidget field_g;
     static hd field_f;
     static int field_d;
-    static kg[] field_e;
+    static IndexedSprite[] field_e;
 
     final static void a(boolean param0, hd param1) {
         hd var4 = null;
@@ -24,7 +24,7 @@ final class hl extends lg implements sv, ft {
             var2Lifetime1 = var4;
           }
           if (!param0) {
-            field_e = (kg[]) null;
+            field_e = (IndexedSprite[]) null;
           }
           param1.field_J = 0;
           param1.field_mb = 0;
@@ -113,7 +113,7 @@ final class hl extends lg implements sv, ft {
             return stackIn_13_0;
           }
           if (param0) {
-            this.field_g = (cj) null;
+            this.field_g = (DateInputWidget) null;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -139,10 +139,10 @@ final class ie extends i {
               et.field_d.participantStatus[1].field_g = 0;
               var4Lifetime2 = et.field_d.field_V.a(true);
               var5_intLifetime1 = et.field_d.field_V.c(879306160);
-              ik.a((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
-              ik.a((byte) -107, var4Lifetime2, 810, var5_intLifetime1, 510, 258, 1, 558);
-              ik.a((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
-              ik.a((byte) 45, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 3, 748);
+              IntDoubleCommand.a((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
+              IntDoubleCommand.a((byte) -107, var4Lifetime2, 810, var5_intLifetime1, 510, 258, 1, 558);
+              IntDoubleCommand.a((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
+              IntDoubleCommand.a((byte) 45, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 3, 748);
             } else {
               ig.a(false, (byte) 109, 4, 1);
             }
@@ -272,7 +272,7 @@ final class ie extends i {
           var5 = param1;
           while (true) {
             if (var5 >= var4.length) {
-              stackIn_18_0 = mr.a(param1 + 6, var3[var3.length - 1]);
+              stackIn_18_0 = ValidatedTextWidget.a(param1 + 6, var3[var3.length - 1]);
               return stackIn_18_0;
             }
             var6 = var4[var5];

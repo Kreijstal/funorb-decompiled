@@ -9,12 +9,12 @@ final class fw extends ta {
     static double field_G;
     private boolean field_F;
 
-    final static kg a(ResourceArchive param0, String param1, boolean param2, String param3) {
+    final static IndexedSprite a(ResourceArchive param0, String param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        kg stackIn_2_0 = null;
-        kg stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -25,11 +25,11 @@ final class fw extends ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            stackIn_2_0 = (kg) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var4_int = param0.b(param1, -1);
-          var5 = param0.a((byte) -70, param3, var4_int);
+          var5 = param0.findFileId((byte) -70, param3, var4_int);
           stackIn_4_0 = aw.a(var5, var4_int, param0, 2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class fw extends ta {
         int var3 = this.field_j + 18;
         SoftwareRasterizer.a(this.field_j + 10, 53, 365, 371, 65793, 96);
         SoftwareRasterizer.a(var3, 62, 348, 24, 6, 65793, 96);
-        pb.field_C.a(e.field_o, 30 + this.field_j, 80, 16777215, -1);
+        IsSixCommand.field_C.a(e.field_o, 30 + this.field_j, 80, 16777215, -1);
         SoftwareRasterizer.a(var3, 95, 348, 106, 10, 65793, 96);
         SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 96);
         SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 96);
@@ -122,16 +122,16 @@ final class fw extends ta {
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
             sh.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
           }
-          pb.field_C.a(fv.field_c, 70 + var3, 261, 16777215, -1);
-          pb.field_C.a(we.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(fv.field_c, 70 + var3, 261, 16777215, -1);
+          IsSixCommand.field_C.a(we.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
         }
         if (!this.field_I) {
           SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 228);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
             sh.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
           }
-          pb.field_C.a(fv.field_c, var3 + 70, 368, 16777215, -1);
-          pb.field_C.a(we.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(fv.field_c, var3 + 70, 368, 16777215, -1);
+          IsSixCommand.field_C.a(we.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
         }
         un.field_d.a(ca.field_a, this.field_j + 25, 115, 16777215, -1);
         un.field_d.a(lr.field_j, 25 + this.field_j, 223, 16777215, -1);
@@ -237,7 +237,7 @@ final class fw extends ta {
                   return stackIn_32_0;
                 }
               } else {
-                var1_int = je.field_e.b(1);
+                var1_int = je.field_e.readByte(1);
                 if (var1_int != 0) {
                   stackIn_27_0 = vk.a(param0 - 182, var1_int);
                   return stackIn_27_0;

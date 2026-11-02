@@ -7,26 +7,26 @@ final class ph {
     static String field_c;
     static String field_d;
     static int field_a;
-    static kg[][] field_e;
+    static IndexedSprite[][] field_e;
 
     final static boolean a(boolean param0) {
         if (!param0) {
           field_c = (String) null;
-          return !kb.field_C ? true : false;
+          return !WriteIntegersCommand.field_C ? true : false;
         }
-        return !kb.field_C ? true : false;
+        return !WriteIntegersCommand.field_C ? true : false;
     }
 
     final static void b(boolean param0) {
-        int var1 = uc.h((byte) -118);
+        int var1 = IntTripleCommand.h((byte) -118);
         int var2 = qo.e((byte) 18);
         if (param0) {
-          oi.field_g.a(nb.field_k - is.field_d, var2 + (jm.field_e << 1), hm.field_I - jm.field_e, var1 + (is.field_d << 1), 3);
+          oi.field_g.a(nb.field_k - is.field_d, var2 + (jm.field_e << 1), SumIntegersCommand.field_I - jm.field_e, var1 + (is.field_d << 1), 3);
           na.k(0);
           return;
         }
         field_c = (String) null;
-        oi.field_g.a(nb.field_k - is.field_d, var2 + (jm.field_e << 1), hm.field_I - jm.field_e, var1 + (is.field_d << 1), 3);
+        oi.field_g.a(nb.field_k - is.field_d, var2 + (jm.field_e << 1), SumIntegersCommand.field_I - jm.field_e, var1 + (is.field_d << 1), 3);
         na.k(0);
     }
 
@@ -62,7 +62,7 @@ final class ph {
     }
 
     public static void b(int param0) {
-        field_e = (kg[][]) null;
+        field_e = (IndexedSprite[][]) null;
         field_f = null;
         field_b = null;
         field_c = null;

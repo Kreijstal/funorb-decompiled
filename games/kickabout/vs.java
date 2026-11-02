@@ -115,11 +115,11 @@ final class vs {
           }
           var12 = mg.a(this.field_d, var9, var10, this.field_j, var11, (byte) 108);
           var12.field_mb.a(0, 99);
-          PacketBuffer.a(-81, tm.field_u);
+          PacketBuffer.a(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.b();
           var12.a(var8[this.field_d.field_q], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.field_q], (byte) -118);
           ta.e(122);
-          eo.a(tm.field_u, this.field_h);
+          eo.a(ConsoleCommand.field_u, this.field_h);
           var13 = (this.field_h.field_v - 2) * this.field_h.field_o;
           for (var14 = -this.field_h.field_o; 0 > var14; var14++) {
             var15 = this.field_h.field_y[var13];

@@ -47,7 +47,7 @@ final class su {
             if (param0 != 27744) {
               field_a = (Sprite) null;
             }
-            ea.field_f.a(param1, 10, param2, var4);
+            ea.field_f.drawImage(param1, 10, param2, var4);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -113,9 +113,9 @@ final class su {
         bl.field_m[wf.field_O] = param4;
         if (kt.field_g >= param4) {
           if (er.field_k <= param4) {
-            qp.field_G[wf.field_O] = param5;
+            AccountMessagePanel.field_G[wf.field_O] = param5;
             fo.field_j[wf.field_O] = param0;
-            ln.field_B[wf.field_O] = param2;
+            DropTargetWidget.field_B[wf.field_O] = param2;
             var6 = param5 - (-param0 - param2);
             if (var6 == 0) {
               stackIn_45_0 = 0;
@@ -138,9 +138,9 @@ final class su {
             return;
           }
           vi.field_s = param4;
-          qp.field_G[wf.field_O] = param5;
+          AccountMessagePanel.field_G[wf.field_O] = param5;
           fo.field_j[wf.field_O] = param0;
-          ln.field_B[wf.field_O] = param2;
+          DropTargetWidget.field_B[wf.field_O] = param2;
           var6 = param5 - (-param0 - param2);
           if (var6 == 0) {
             stackIn_32_0 = 0;
@@ -151,9 +151,9 @@ final class su {
         } else {
           lm.field_V = param4;
           if (er.field_k <= param4) {
-            qp.field_G[wf.field_O] = param5;
+            AccountMessagePanel.field_G[wf.field_O] = param5;
             fo.field_j[wf.field_O] = param0;
-            ln.field_B[wf.field_O] = param2;
+            DropTargetWidget.field_B[wf.field_O] = param2;
             var6 = param5 - (-param0 - param2);
             if (var6 == 0) {
               stackIn_5_0 = 0;
@@ -163,9 +163,9 @@ final class su {
             var7 = stackIn_5_0;
           } else {
             vi.field_s = param4;
-            qp.field_G[wf.field_O] = param5;
+            AccountMessagePanel.field_G[wf.field_O] = param5;
             fo.field_j[wf.field_O] = param0;
-            ln.field_B[wf.field_O] = param2;
+            DropTargetWidget.field_B[wf.field_O] = param2;
             var6 = param5 - (-param0 - param2);
             if (var6 == 0) {
               stackIn_18_0 = 0;

@@ -3,7 +3,7 @@
  */
 final class ki extends DualLinkNode {
     int field_v;
-    static mb field_n;
+    static DisplayNameForm field_n;
     up[] field_s;
     byte field_o;
     int field_u;
@@ -14,7 +14,7 @@ final class ki extends DualLinkNode {
 
     final static int a(int param0, byte param1, int param2) {
         if (param1 > -24) {
-          field_n = (mb) null;
+          field_n = (DisplayNameForm) null;
         }
         if (param2 >= 2) {
           return 2;
@@ -52,7 +52,7 @@ final class ki extends DualLinkNode {
           return TeamSelectionAgent.field_l;
         }
         if (!up.field_k.a(false)) {
-          return hm.field_H + " - " + up.field_k.e(-8185) + "%";
+          return SumIntegersCommand.field_H + " - " + up.field_k.e(-8185) + "%";
         }
         return uf.field_a;
     }
@@ -140,11 +140,11 @@ final class ki extends DualLinkNode {
               var11 = pf.field_d[var9];
               var6[0][var10] = sc.field_B[var11];
               var7[0][4 * var10] = bl.field_m[var11];
-              var7[0][1 + var10 * 4] = qp.field_G[var11];
+              var7[0][1 + var10 * 4] = AccountMessagePanel.field_G[var11];
               var7[0][2 + var10 * 4] = fo.field_j[var11];
-              var7[0][3 + 4 * var10] = ln.field_B[var11];
-              if (hm.a((byte) -89, sc.field_B[var11]) &&
-                ln.field_B[var11] + qp.field_G[var11] + fo.field_j[var11] == 0) {
+              var7[0][3 + 4 * var10] = DropTargetWidget.field_B[var11];
+              if (SumIntegersCommand.a((byte) -89, sc.field_B[var11]) &&
+                DropTargetWidget.field_B[var11] + AccountMessagePanel.field_G[var11] + fo.field_j[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -158,11 +158,11 @@ final class ki extends DualLinkNode {
               var11Lifetime1 = pf.field_d[var5 + var9Lifetime1];
               var6[1][var13] = sc.field_B[var11Lifetime1];
               var7[1][4 * var13] = bl.field_m[var11Lifetime1];
-              var7[1][1 + var13 * 4] = qp.field_G[var11Lifetime1];
+              var7[1][1 + var13 * 4] = AccountMessagePanel.field_G[var11Lifetime1];
               var7[1][var13 * 4 + 2] = fo.field_j[var11Lifetime1];
-              var7[1][4 * var13 + 3] = ln.field_B[var11Lifetime1];
-              if (hm.a((byte) 52, sc.field_B[var11Lifetime1]) &&
-                qp.field_G[var11Lifetime1] + fo.field_j[var11Lifetime1] + ln.field_B[var11Lifetime1] == 0) {
+              var7[1][4 * var13 + 3] = DropTargetWidget.field_B[var11Lifetime1];
+              if (SumIntegersCommand.a((byte) 52, sc.field_B[var11Lifetime1]) &&
+                AccountMessagePanel.field_G[var11Lifetime1] + fo.field_j[var11Lifetime1] + DropTargetWidget.field_B[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

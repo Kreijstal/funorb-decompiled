@@ -45,7 +45,7 @@ final class ts {
               var7 = param0 + (2048 * var5 + var6);
               var8 = 54 * we.a(var7, false) >> 16;
               var9 = ei.a(var7, (byte) -23) * -54 >> 16;
-              SoftwareRasterizer.b(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
+              SoftwareRasterizer.drawLine(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
             }
           }
           return;
@@ -82,20 +82,20 @@ final class ts {
             return stackIn_3_0;
           }
           var3_int = 0;
-          var4 = hm.field_I;
+          var4 = SumIntegersCommand.field_I;
           while (var3_int < j.field_a.length) {
             var5 = WidgetContainer.field_x[var3_int];
             if (var5 < 0) {
-              var4 = var4 + qp.field_H;
+              var4 = var4 + AccountMessagePanel.field_H;
             } else {
               var6 = ec.a(true, j.field_a[var3_int], -23044);
               var4 = var4 + of.field_a;
               var7 = -(var6 >> 1) + qg.field_k;
-              if (ec.a(-vg.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (vg.field_zb << 1), (pb.field_H << 1) + tk.field_zb)) {
+              if (ec.a(-vg.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (vg.field_zb << 1), (IsSixCommand.field_H << 1) + tk.field_zb)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (tk.field_zb + (pb.field_H << 1) + of.field_a);
+              var4 = var4 + (tk.field_zb + (IsSixCommand.field_H << 1) + of.field_a);
             }
             var3_int++;
           }

@@ -43,7 +43,7 @@ final class ResourceArchive {
           var4_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var7), param2 - 33);
           if (param2 != -10) {
             var6 = (String) null;
-            this.a(((byte[]) (this.field_e[3]))[2], (String) null, -100);
+            this.findFileId(((byte[]) (this.field_e[3]))[2], (String) null, -100);
           }
           if (!this.a((byte) -58, var4_int)) {
             return false;
@@ -426,7 +426,7 @@ final class ResourceArchive {
         return this.field_i.a(6999, param0);
     }
 
-    final int a(byte param0, String param1, int param2) {
+    final int findFileId(byte param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         CharSequence var5 = null;
@@ -588,7 +588,7 @@ final class ResourceArchive {
         if (2048.0 < la.field_d) {
           la.field_d = 2048.0;
         }
-        if (pb.field_B) {
+        if (IsSixCommand.field_B) {
           return;
         }
         int var7 = 81920 / hw.field_i - 320;
@@ -820,7 +820,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    dv.a(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayOperations.a(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -858,7 +858,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.k(4);
-                  dv.a(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayOperations.a(var43, var16, var40[var19], var39[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
                 }

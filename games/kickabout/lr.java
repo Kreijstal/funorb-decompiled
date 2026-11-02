@@ -59,7 +59,7 @@ final class lr extends hs {
             if (var3_int > 1) {
               stackIn_16_0 = b.field_J;
             } else {
-              stackIn_16_0 = fr.field_I;
+              stackIn_16_0 = NameSuggestionsPanel.field_I;
             }
             var2_ref_String = stackIn_16_0;
           } else {
@@ -70,14 +70,14 @@ final class lr extends hs {
         }
         stackIn_20_0 = (!this.e(0, 50)) ? 0 : 1;
         var3_intLifetime1 = stackIn_20_0;
-        var4Lifetime1 = 8 + pb.field_C.c(var2_ref_String, 185, 16);
+        var4Lifetime1 = 8 + IsSixCommand.field_C.c(var2_ref_String, 185, 16);
         var5 = -33 + (-var4Lifetime1 + this.c(342, 0));
         stackIn_22_0 = 10 + var4Lifetime1;
         stackIn_23_1 = (var3_intLifetime1 == 0) ? 0 : 60;
         var6 = stackIn_22_0 + stackIn_23_1;
-        SoftwareRasterizer.f(390, var5, 205, var6, 10, 983040);
+        SoftwareRasterizer.drawRoundedRectangle(390, var5, 205, var6, 10, 983040);
         SoftwareRasterizer.a(390, var5, 205, var6, 10, 65793, 140);
-        pb.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
+        IsSixCommand.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         this.d(param0 - 95);
         this.b(param0 ^ -2352, this.field_a.phaseTime);
         var2 = this.field_a.field_C.field_k[this.field_h];

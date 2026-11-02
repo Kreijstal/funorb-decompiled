@@ -14,7 +14,7 @@ class BallAgent extends MatchAgent {
     int modelId;
     int field_t;
     static boolean field_u;
-    static kg[] field_f;
+    static IndexedSprite[] field_f;
     boolean field_x;
     boolean field_k;
     static String field_g;
@@ -193,14 +193,14 @@ class BallAgent extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (mu.a(param0, (byte) -39)) {
+          if (ContentTransitionDialog.a(param0, (byte) -39)) {
             this.field_m = -1 + param0.l(2, param1 ^ 42);
             this.field_s = param0.l(3, 59);
           }
           if (param1 != 17) {
             return;
           }
-          if (mu.a(param0, (byte) -39)) {
+          if (ContentTransitionDialog.a(param0, (byte) -39)) {
             this.field_t = this.field_t + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
             this.field_p = this.field_p + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
             this.field_v = this.field_v + BufferedCacheFile.a((byte) 125, 20, param0, 0, 24, 30);
@@ -208,7 +208,7 @@ class BallAgent extends MatchAgent {
             this.field_h = this.field_h + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
             this.field_n = this.field_n + BufferedCacheFile.a((byte) 125, 18, param0, 0, 24, 30);
           }
-          if (!mu.a(param0, (byte) -39)) {
+          if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
           }
           this.uncatchable = hq.a(22531, 9, param0, 0);

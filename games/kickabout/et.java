@@ -37,7 +37,7 @@ final class et {
             PacketBuffer.a(param0 ^ 55, var9[var5]);
             param2.d(0, 0);
             if (var6 == 0) {
-              SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
             stackIn_12_0 = (var6 != 0) ? 2 : 0;
             var7 = stackIn_12_0;

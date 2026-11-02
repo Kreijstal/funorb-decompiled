@@ -67,17 +67,17 @@ final class DualLinkDeque {
         }
     }
 
-    final static eg a(int param0, vn param1) {
+    final static ModelMesh a(int param0, vn param1) {
         int var5 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4_int = 0;
-        eg var4 = null;
+        ModelMesh var4 = null;
         int var6 = 0;
         vn var7 = null;
         int var8 = 0;
         vn var9 = null;
-        eg stackIn_11_0 = null;
+        ModelMesh stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -97,7 +97,7 @@ final class DualLinkDeque {
             var9.field_l[var8] = (var9.field_l[var8] << 1) / 3;
             var8++;
           }
-          var4 = (eg) (var9.a(127, 131072, 10, 10, 10));
+          var4 = (ModelMesh) (var9.a(127, 131072, 10, 10, 10));
           for (var5 = 0; var5 < var4.field_n.length; var5++) {
             var4.field_n[var5] = -1;
           }

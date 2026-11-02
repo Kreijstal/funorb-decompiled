@@ -3,7 +3,7 @@
  */
 final class mp extends IntrusiveNode {
     static String field_k;
-    static jg field_g;
+    static DraggableWidget field_g;
     static int[] field_j;
     static int[] field_p;
     byte[] field_o;

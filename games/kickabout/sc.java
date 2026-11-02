@@ -22,7 +22,7 @@ final class sc extends qt {
         super.a(param0, 116);
         SoftwareRasterizer.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
         this.field_A.a(50, param0);
-        String var3 = ct.field_w.toLowerCase();
+        String var3 = SingleChildContainer.field_w.toLowerCase();
         int var4 = (int)Math.abs(-(nj.a(-58) / 1000L % 6L) + 3L);
         un.field_d.c(hv.field_d.toUpperCase(), (this.field_A.field_q >> 1) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> 1) + 6, 16777215, -1, this.field_C);
         for (var5 = 0; var4 > var5; var5++) {

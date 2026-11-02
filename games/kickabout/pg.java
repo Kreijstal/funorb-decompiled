@@ -8,7 +8,7 @@ final class pg {
     static String[] field_a;
 
     final static void a(int param0, boolean param1) {
-        ni.field_l = param1 ? new rf(lb.field_H, w.field_e) : new rf(c.field_d, fm.field_C);
+        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, fm.field_C);
         dn.field_Cb = new hd(0L, (hd) null);
         if (param0 == -35) {
           dn.field_Cb.a((byte) -110, (hd) (ni.field_l.field_b));
@@ -59,7 +59,7 @@ final class pg {
             }
             var2 = 1;
           }
-          ll.field_k.a(-21174, ResourceArchive.a(el.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, vc.field_y, (byte) -101));
+          ll.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, vc.field_y, (byte) -101));
           if (ll.field_k.c(-1)) {
             var1_int = 1;
           }
@@ -102,7 +102,7 @@ final class pg {
 
     final static String[] a(boolean param0, int param1) {
         if (param1 == 1) {
-          return nn.field_I;
+          return AccountChoicePanel.field_I;
         }
         if (param1 == 9) {
           return rd.field_e;
@@ -132,7 +132,7 @@ final class pg {
           return fs.field_a;
         }
         if (param1 == 25) {
-          return pd.field_M;
+          return LoginForm.field_M;
         }
         if (param0) {
           pg.a(false, -50);

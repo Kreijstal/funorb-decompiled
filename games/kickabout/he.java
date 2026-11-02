@@ -130,11 +130,11 @@ final class he extends hd {
           PcmSampleStream var2 = (PcmSampleStream) null;
           he.a((PcmSampleStream) null, false);
         }
-        if (!lc.field_e.a((byte) -80)) {
-          return lc.field_e.a(3);
+        if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
+          return DualLinkDequeIterator.field_e.a(3);
         }
         if (mj.field_a == nr.field_f) {
-          return lc.field_e.a(param0 ^ 323);
+          return DualLinkDequeIterator.field_e.a(param0 ^ 323);
         }
         return ep.field_b;
     }
@@ -158,7 +158,7 @@ final class he extends hd {
             var10 = (gm) (IntrusiveDequeCursor.field_b.a((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = lf.a((byte) -119, var10.field_bb >> 16);
-            if (!lb.a(var2, var3, param0 ^ 480)) {
+            if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
               var2 = 320;
               var3 = 240;
             }
@@ -220,7 +220,7 @@ final class he extends hd {
         RuntimeException var2 = null;
         try {
           if (null != vg.field_Bb) {
-            vg.field_Bb.b(param0);
+            vg.field_Bb.removeSubstream(param0);
           }
           if (!param1) {
             he.i(10);

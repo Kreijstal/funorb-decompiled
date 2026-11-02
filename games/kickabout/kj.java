@@ -106,8 +106,8 @@ final class kj {
         RuntimeException var5 = null;
         var10 = Kickabout.field_G;
         try {
-          SoftwareRasterizer.f(param2, param1, 1 + param4, 10000536);
-          SoftwareRasterizer.f(param2, param3 + param1, param4 + 1, param0);
+          SoftwareRasterizer.drawHorizontalLine(param2, param1, 1 + param4, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param2, param3 + param1, param4 + 1, param0);
           var5_int = 1;
           if (param1 + var5_int < SoftwareRasterizer.field_e) {
             var5_int = -param1 + SoftwareRasterizer.field_e;

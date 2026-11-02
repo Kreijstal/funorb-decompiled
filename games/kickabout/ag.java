@@ -28,7 +28,7 @@ final class ag extends IntrusiveNode {
     ag(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_i = param0;
-          this.field_j = param0.m();
+          this.field_j = param0.getTargetVolume();
           this.field_k = param1;
           this.field_i.b(128 + mn.field_a * this.field_j >> 8);
         } catch (RuntimeException runtimeException) {

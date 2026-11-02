@@ -4,7 +4,7 @@
 final class n {
     private ArchiveNetworkClient field_g;
     private PacketBuffer field_i;
-    static qv field_e;
+    static TextWidgetPainter field_e;
     static String[] field_f;
     static int field_m;
     private eb field_h;
@@ -168,7 +168,7 @@ final class n {
         int var6 = 0;
         try {
           jw.field_Cb.field_E = param1;
-          qv.field_f = true;
+          TextWidgetPainter.field_f = true;
           var2_int = ea.field_f.field_a;
           var3 = ea.field_f.field_e;
           int var4 = 59 % ((param0 + 57) / 43);
@@ -216,15 +216,15 @@ final class n {
             var4 = (String) null;
             n.a('[', (String) null, (byte) 89, (String) null);
           }
-          if (qp.field_G == null ||
-            !(param1 <= qp.field_G.length)) {
-            qp.field_G = new int[param1 * 2];
+          if (AccountMessagePanel.field_G == null ||
+            !(param1 <= AccountMessagePanel.field_G.length)) {
+            AccountMessagePanel.field_G = new int[param1 * 2];
           }
           if (null != fo.field_j &&
             param1 <= fo.field_j.length) {
-            if (ln.field_B == null ||
-              !(ln.field_B.length >= param1)) {
-              ln.field_B = new int[2 * param1];
+            if (DropTargetWidget.field_B == null ||
+              !(DropTargetWidget.field_B.length >= param1)) {
+              DropTargetWidget.field_B = new int[2 * param1];
             }
             if (null == w.field_a) {
               w.field_a = new int[param1 * 2];
@@ -281,9 +281,9 @@ final class n {
             return;
           }
           fo.field_j = new int[2 * param1];
-          if (ln.field_B == null ||
-            !(ln.field_B.length >= param1)) {
-            ln.field_B = new int[2 * param1];
+          if (DropTargetWidget.field_B == null ||
+            !(DropTargetWidget.field_B.length >= param1)) {
+            DropTargetWidget.field_B = new int[2 * param1];
           }
           if (null == w.field_a ||
             !(param1 <= w.field_a.length)) {
@@ -307,15 +307,15 @@ final class n {
               var4 = (String) null;
               n.a('[', (String) null, (byte) 89, (String) null);
             }
-            if (qp.field_G == null ||
-              !(param1 <= qp.field_G.length)) {
-              qp.field_G = new int[param1 * 2];
+            if (AccountMessagePanel.field_G == null ||
+              !(param1 <= AccountMessagePanel.field_G.length)) {
+              AccountMessagePanel.field_G = new int[param1 * 2];
             }
             if (null != fo.field_j &&
               param1 <= fo.field_j.length) {
-              if (ln.field_B == null ||
-                !(ln.field_B.length >= param1)) {
-                ln.field_B = new int[2 * param1];
+              if (DropTargetWidget.field_B == null ||
+                !(DropTargetWidget.field_B.length >= param1)) {
+                DropTargetWidget.field_B = new int[2 * param1];
               }
               if (null == w.field_a) {
                 w.field_a = new int[param1 * 2];
@@ -372,9 +372,9 @@ final class n {
               return;
             }
             fo.field_j = new int[2 * param1];
-            if (ln.field_B == null ||
-              !(ln.field_B.length >= param1)) {
-              ln.field_B = new int[2 * param1];
+            if (DropTargetWidget.field_B == null ||
+              !(DropTargetWidget.field_B.length >= param1)) {
+              DropTargetWidget.field_B = new int[2 * param1];
             }
             if (null == w.field_a ||
               !(param1 <= w.field_a.length)) {
@@ -398,15 +398,15 @@ final class n {
               var4 = (String) null;
               n.a('[', (String) null, (byte) 89, (String) null);
             }
-            if (qp.field_G == null ||
-              !(param1 <= qp.field_G.length)) {
-              qp.field_G = new int[param1 * 2];
+            if (AccountMessagePanel.field_G == null ||
+              !(param1 <= AccountMessagePanel.field_G.length)) {
+              AccountMessagePanel.field_G = new int[param1 * 2];
             }
             if (null != fo.field_j &&
               param1 <= fo.field_j.length) {
-              if (ln.field_B == null ||
-                !(ln.field_B.length >= param1)) {
-                ln.field_B = new int[2 * param1];
+              if (DropTargetWidget.field_B == null ||
+                !(DropTargetWidget.field_B.length >= param1)) {
+                DropTargetWidget.field_B = new int[2 * param1];
               }
               if (null == w.field_a) {
                 w.field_a = new int[param1 * 2];
@@ -465,9 +465,9 @@ final class n {
               return;
             }
             fo.field_j = new int[2 * param1];
-            if (ln.field_B == null ||
-              !(ln.field_B.length >= param1)) {
-              ln.field_B = new int[2 * param1];
+            if (DropTargetWidget.field_B == null ||
+              !(DropTargetWidget.field_B.length >= param1)) {
+              DropTargetWidget.field_B = new int[2 * param1];
             }
             if (null == w.field_a ||
               !(param1 <= w.field_a.length)) {
@@ -574,10 +574,10 @@ final class n {
         if (param0) {
           return false;
         }
-        if (null == mr.field_Z) {
+        if (null == ValidatedTextWidget.field_Z) {
           return false;
         }
-        if (null == mr.field_Z.h((byte) 18)) {
+        if (null == ValidatedTextWidget.field_Z.h((byte) 18)) {
           return false;
         }
         return true;

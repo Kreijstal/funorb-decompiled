@@ -127,7 +127,7 @@ final class ba extends sr {
         int var7Lifetime1Lifetime1;
         var9 = Kickabout.field_G;
         try {
-          nn.field_D = true;
+          AccountChoicePanel.field_D = true;
           ck.field_a = param2;
           if (ck.field_a == 0) {
             var3_int = SpriteState.a(cv.field_f, tt.field_a, -46, ta.field_C, vp.field_k);
@@ -167,7 +167,7 @@ final class ba extends sr {
           } else if (2 != ck.field_a) {
             if (ck.field_a == 3) {
               if (!oo.field_c.field_l) {
-                var3_int = SpriteState.a(cv.field_f, mr.field_bb, -46, ta.field_C, vp.field_k);
+                var3_int = SpriteState.a(cv.field_f, ValidatedTextWidget.field_bb, -46, ta.field_C, vp.field_k);
               } else {
                 var3_int = SpriteState.a(cv.field_f, fu.field_a, param1 - 52, ta.field_C, vp.field_k);
               }
@@ -238,9 +238,9 @@ final class ba extends sr {
               throw new IllegalStateException();
             }
             dn.field_Eb = new String[var4];
-            dv.a(ta.field_C, 0, dn.field_Eb, 0, var4);
+            ArrayOperations.a(ta.field_C, 0, dn.field_Eb, 0, var4);
             pg.field_a = new String[-1 + (-var4 + var3_int)];
-            dv.a(ta.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
+            ArrayOperations.a(ta.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_o, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -254,9 +254,9 @@ final class ba extends sr {
               throw new IllegalStateException();
             }
             pn.field_D = new String[var4];
-            dv.a(ta.field_C, 0, pn.field_D, 0, var4);
+            ArrayOperations.a(ta.field_C, 0, pn.field_D, 0, var4);
             cg.field_E = new String[var3_int - var4 - 1];
-            dv.a(ta.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
+            ArrayOperations.a(ta.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
             if (pn.field_D.length > dn.field_Eb.length) {
               stackIn_22_0 = pn.field_D.length;
             } else {
@@ -381,7 +381,7 @@ final class ba extends sr {
           if (ck.field_a == 2) {
             ll.field_k.a(-1, 0, -1, param0);
           } else {
-            ll.field_k.a(ResourceArchive.a(el.field_A, n.field_m, (byte) -127), param1 ^ 6, 0, param0);
+            ll.field_k.a(ResourceArchive.a(BytePlusOneCommand.field_A, n.field_m, (byte) -127), param1 ^ 6, 0, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -401,7 +401,7 @@ final class ba extends sr {
         if (param1) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
         }
-        mr.field_Z.a(0, 0, (byte) -103);
+        ValidatedTextWidget.field_Z.a(0, 0, (byte) -103);
         if (param0 <= 108) {
           field_n = (kk[]) null;
         }

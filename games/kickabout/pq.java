@@ -55,7 +55,7 @@ final class pq extends i {
             this.field_H.c(true);
             return;
           }
-          oj.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
+          LoadingProgressDialog.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
           this.field_H.c(true);
           return;
         }
@@ -71,7 +71,7 @@ final class pq extends i {
           this.field_H.c(true);
           return;
         }
-        oj.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
+        LoadingProgressDialog.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
         this.field_H.c(true);
     }
 
@@ -111,41 +111,41 @@ final class pq extends i {
             if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
               if (cq.e(15137) &&
                 !np.h((byte) 5)) {
-                pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
               if (this.field_H.field_Fb != -1 &&
                 gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
-            pb.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
+            IsSixCommand.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
           }
           if (!cq.e(15137)) {
             if (this.field_H.field_Fb == -1) {
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
               if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
             }
             return;
           }
           if (!np.h((byte) 5)) {
-            pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
           if (this.field_H.field_Fb != -1 &&
             gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-            pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
-          pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           return;
         }
         field_J = -68;
@@ -160,50 +160,50 @@ final class pq extends i {
             if (!cq.e(15137)) {
               if (this.field_H.field_Fb != -1 &&
                 gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
             if (!np.h((byte) 5)) {
-              pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+              IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             } else {
               if (this.field_H.field_Fb == -1) {
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
                 if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                  pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                  IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
                 } else {
-                  pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                  IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 }
               }
             }
             return;
           }
-          pb.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
+          IsSixCommand.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
         }
         if (!cq.e(15137)) {
           if (this.field_H.field_Fb == -1) {
-            pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           } else {
             if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-              pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             } else {
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             }
           }
         } else {
           if (!np.h((byte) 5)) {
-            pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_H.field_Fb == -1) {
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
               if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
             }
           }
@@ -220,7 +220,7 @@ final class pq extends i {
           throw new IllegalStateException();
         }
         aw.field_H = true;
-        hm.a(false, -112);
+        SumIntegersCommand.a(false, -112);
         vj.field_c = 0;
         if (param0 == 66) {
           return;

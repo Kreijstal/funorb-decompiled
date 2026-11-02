@@ -46,7 +46,7 @@ final class PcmStreamMixer extends PcmStream {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_e = var5;
-              this.a(var3.field_d, var3);
+              this.insertListenerByFrameOffset(var3.field_d, var3);
             } else {
               var3.field_e = 0;
               this.a(var3);
@@ -56,7 +56,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    private final void c(int[] param0, int param1, int param2) {
+    private final void mixChildStreams(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_k.g(24009));
         while (var4 != null) {
           var4.b(param0, param1, param2);
@@ -75,11 +75,11 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void removeSubstream(PcmStream param0) {
         param0.c((byte) -109);
     }
 
-    private final void a(IntrusiveNode param0, me param1) {
+    private final void insertListenerByFrameOffset(IntrusiveNode param0, me param1) {
         while (true) {
           if (param0 == this.field_i.field_c) {
             ug.a(param0, 16737894, param1);
@@ -126,16 +126,16 @@ final class PcmStreamMixer extends PcmStream {
         Object var6 = null;
         do {
           if (this.field_l < 0) {
-            this.c(param0, param1, param2);
+            this.mixChildStreams(param0, param1, param2);
             return;
           }
           if (this.field_j + param2 < this.field_l) {
             this.field_j = this.field_j + param2;
-            this.c(param0, param1, param2);
+            this.mixChildStreams(param0, param1, param2);
             return;
           }
           var4 = this.field_l - this.field_j;
-          this.c(param0, param1, var4);
+          this.mixChildStreams(param0, param1, var4);
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_j = this.field_j + var4;
@@ -146,7 +146,7 @@ final class PcmStreamMixer extends PcmStream {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_e = var7;
-              this.a(var5.field_d, var5);
+              this.insertListenerByFrameOffset(var5.field_d, var5);
             } else {
               var5.field_e = 0;
               this.a(var5);
@@ -156,7 +156,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void addSubStream(PcmStream param0) {
         this.field_k.a(0, param0);
     }
 

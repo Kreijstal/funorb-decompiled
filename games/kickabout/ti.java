@@ -129,11 +129,11 @@ final class ti {
             IntrusiveDeque.field_e.d(ss.field_c.field_s, 0);
             stackIn_5_0 = ss.field_c;
             stackIn_5_1 = 65;
-            stackIn_6_2 = (param1) && (!qv.field_f);
+            stackIn_6_2 = (param1) && (!TextWidgetPainter.field_f);
             ((hd) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
             stackIn_9_0 = af.field_d;
             stackIn_9_1 = 121;
-            stackIn_10_2 = (param1) && (!qv.field_f);
+            stackIn_10_2 = (param1) && (!TextWidgetPainter.field_f);
             ((hd) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
             if (param0 == 63) {
               if (!(0 >= fj.field_a) ||
@@ -196,11 +196,11 @@ final class ti {
           }
           stackIn_63_0 = ss.field_c;
           stackIn_63_1 = 65;
-          stackIn_64_2 = (param1) && (!qv.field_f);
+          stackIn_64_2 = (param1) && (!TextWidgetPainter.field_f);
           ((hd) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
           stackIn_67_0 = af.field_d;
           stackIn_67_1 = 121;
-          stackIn_68_2 = (param1) && (!qv.field_f);
+          stackIn_68_2 = (param1) && (!TextWidgetPainter.field_f);
           ((hd) (Object) stackIn_67_0).a(stackIn_67_1, stackIn_68_2);
         }
         if (param0 == 63) {

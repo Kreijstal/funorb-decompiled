@@ -88,9 +88,9 @@ final class pp extends PcmStream {
             param1.field_r = param0 * var5 + param1.field_r & 1048575;
             if (var6 <= param0) {
               if (this.field_l.field_s[param1.field_q] == 0) {
-                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.e(), param1.field_F.m(), param1.field_F.k());
+                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.getSampleStepMagnitude(), param1.field_F.getTargetVolume(), param1.field_F.k());
               } else {
-                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.e(), 0, param1.field_F.k());
+                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.getSampleStepMagnitude(), 0, param1.field_F.k());
                 stackIn_7_0 = this.field_l;
                 stackIn_7_1 = false;
                 stackIn_7_2 = (da) (param1);
@@ -316,8 +316,8 @@ final class pp extends PcmStream {
               var7 = var13;
               var13Lifetime2 = var11;
               var3 = var11;
-              var4_int = el.a(29430, 70, -220);
-              var5 = el.a(29430, 10, var2_int * 110 - 20);
+              var4_int = BytePlusOneCommand.a(29430, 70, -220);
+              var5 = BytePlusOneCommand.a(29430, 10, var2_int * 110 - 20);
               incrementValue$14 = var1_int;
               var1_int++;
               oi.field_e[incrementValue$14] = new oh(var11, var4_int, var5);
@@ -332,8 +332,8 @@ final class pp extends PcmStream {
               var7Lifetime2 = var12;
               var7Lifetime2 = var12;
               var3Lifetime1 = var12;
-              var4_intLifetime1 = el.a(29430, 70, 976);
-              var5Lifetime2 = el.a(29430, 1, -200 + 100 * var2_intLifetime1);
+              var4_intLifetime1 = BytePlusOneCommand.a(29430, 70, 976);
+              var5Lifetime2 = BytePlusOneCommand.a(29430, 1, -200 + 100 * var2_intLifetime1);
               incrementValue$13 = var1_int;
               var1_int++;
               oi.field_e[incrementValue$13] = new oh(var12, var4_intLifetime1, var5Lifetime2);
@@ -362,10 +362,10 @@ final class pp extends PcmStream {
             oi.field_e = new oh[28];
             var5Lifetime1 = 0;
             for (var6 = 0; var6 < 8; var6++) {
-              var7_int = el.a(param0 + 29429, 20, -170);
+              var7_int = BytePlusOneCommand.a(param0 + 29429, 20, -170);
               var8 = -50 + var6 / 2 * 400;
               if ((1 & var6) != 0) {
-                var8 = var8 + el.a(29430, 20, 120);
+                var8 = var8 + BytePlusOneCommand.a(29430, 20, 120);
               }
               incrementValue$1 = var5Lifetime1;
               var5Lifetime1++;
@@ -407,8 +407,8 @@ final class pp extends PcmStream {
                 stackIn_35_0 = ng.field_j[1];
               }
               var7Lifetime1Lifetime8 = stackIn_35_0;
-              var8Lifetime1 = el.a(29430, 50, 130 * var6Lifetime1 - 300);
-              var9 = el.a(29430, 50, -290);
+              var8Lifetime1 = BytePlusOneCommand.a(29430, 50, 130 * var6Lifetime1 - 300);
+              var9 = BytePlusOneCommand.a(29430, 50, -290);
               if ((1 & var6Lifetime1) == 0) {
                 var9 += 1674;
               }
@@ -426,8 +426,8 @@ final class pp extends PcmStream {
               oi.field_e[4] = new oh(ng.field_j[0], 690, -220);
               oi.field_e[5] = new oh(ng.field_j[1], 1086, 910);
               oi.field_e[6] = new oh(ng.field_j[0], 920, 1294);
-              oi.field_e[7] = new oh(tm.field_w, -150, 940);
-              oi.field_e[8] = new oh(tm.field_w, 925, 214);
+              oi.field_e[7] = new oh(ConsoleCommand.field_w, -150, 940);
+              oi.field_e[8] = new oh(ConsoleCommand.field_w, 925, 214);
               return;
             }
             if (rm.field_C != 3) {
@@ -483,15 +483,15 @@ final class pp extends PcmStream {
               }
               var11 = param4.field_F;
               if (this.field_l.field_s[param4.field_q] != 0) {
-                param4.field_F = PcmSampleStream.b(param4.field_y, var11.e(), 0, var11.k());
+                param4.field_F = PcmSampleStream.b(param4.field_y, var11.getSampleStepMagnitude(), 0, var11.k());
                 stackIn_11_0 = this.field_l;
                 stackIn_11_1 = false;
                 stackIn_11_2 = (da) (param4);
                 stackIn_12_3 = !(0 <= param4.field_g.field_r[param4.field_e]);
                 ((MidiPcmStream) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
-                param4.field_F.c(var9, var11.m());
+                param4.field_F.c(var9, var11.getTargetVolume());
               } else {
-                param4.field_F = PcmSampleStream.b(param4.field_y, var11.e(), var11.m(), var11.k());
+                param4.field_F = PcmSampleStream.b(param4.field_y, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.k());
               }
               if (param4.field_g.field_r[param4.field_e] < 0) {
                 param4.field_F.g(-1);
@@ -501,7 +501,7 @@ final class pp extends PcmStream {
               if (!var11.n()) {
                 continue;
               }
-              this.field_i.a(var11);
+              this.field_i.addSubStream(var11);
             }
           }
           param4.field_F.a(param3, param2, param1);

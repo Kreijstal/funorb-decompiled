@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jw extends hd {
-    static uo field_Ab;
+    static BinaryBitmapFont field_Ab;
     private int field_zb;
     private String field_Hb;
     static String field_yb;
@@ -231,9 +231,9 @@ final class jw extends hd {
                     var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                     return;
                   }
-                  var7 = uc.h(40);
+                  var7 = IntTripleCommand.h(40);
                   if (0 <= var7) {
-                    SoftwareRasterizer.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
+                    SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
                   }
                 }
                 this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
@@ -270,9 +270,9 @@ final class jw extends hd {
         if (param0 &&
           this.field_lb &&
           !this.field_gb) {
-          var7Lifetime1 = uc.h(40);
+          var7Lifetime1 = IntTripleCommand.h(40);
           if (0 <= var7Lifetime1) {
-            SoftwareRasterizer.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
+            SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
           }
         }
         this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);

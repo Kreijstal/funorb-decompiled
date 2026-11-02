@@ -118,15 +118,15 @@ final class qe {
         var19 = Kickabout.field_G;
         try {
           if (param3 >= 0 &&
-            t.field_k > param6) {
+            TriangleRasterizer.field_k > param6) {
             if (param7 < 0 &&
               param8 < 0 &&
               param1 < 0) {
               return;
             }
-            if (param7 >= t.field_b &&
-              t.field_b <= param8 &&
-              t.field_b <= param1) {
+            if (param7 >= TriangleRasterizer.field_b &&
+              TriangleRasterizer.field_b <= param8 &&
+              TriangleRasterizer.field_b <= param1) {
               return;
             }
             if (param2 != -2178) {
@@ -191,14 +191,14 @@ final class qe {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = t.field_q[param6];
+                var16Lifetime2 = TriangleRasterizer.field_q[param6];
                 while (param6 < param0) {
                   var17 = var9_int >> 16;
-                  if (t.field_b > var17) {
+                  if (TriangleRasterizer.field_b > var17) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (0 != var18) {
-                      if (var18 + var17 >= t.field_b) {
-                        var18 = -1 - var17 + t.field_b;
+                      if (var18 + var17 >= TriangleRasterizer.field_b) {
+                        var18 = -1 - var17 + TriangleRasterizer.field_b;
                       }
                       if (var17 < 0) {
                         vj.a(param5, var16Lifetime2, var18 + var17, param4, 108);
@@ -207,13 +207,13 @@ final class qe {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        var17 < t.field_b) {
+                        var17 < TriangleRasterizer.field_b) {
                         vj.a(param5, var17 + var16Lifetime2, var18, param4, -26);
                       }
                     }
                   }
                   param6++;
-                  if (param6 >= t.field_k) {
+                  if (param6 >= TriangleRasterizer.field_k) {
                     return;
                   }
                   var10 = var10 + var12;
@@ -242,19 +242,19 @@ final class qe {
               var9_int = var9_int + param6 * var11;
               param6 = 0;
             }
-            var15Lifetime1 = t.field_q[param6];
+            var15Lifetime1 = TriangleRasterizer.field_q[param6];
             while (param6 < param3) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < t.field_b) {
+              if (var16Lifetime1 < TriangleRasterizer.field_b) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 == 0) {
                   if (0 <= var16Lifetime1 &&
-                    var16Lifetime1 < t.field_b) {
+                    var16Lifetime1 < TriangleRasterizer.field_b) {
                     vj.a(param5, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param4, 104);
                   }
                 } else {
-                  if (t.field_b <= var16Lifetime1 + var17Lifetime1) {
-                    var17Lifetime1 = t.field_b + (-var16Lifetime1 - 1);
+                  if (TriangleRasterizer.field_b <= var16Lifetime1 + var17Lifetime1) {
+                    var17Lifetime1 = TriangleRasterizer.field_b + (-var16Lifetime1 - 1);
                   }
                   if (var16Lifetime1 < 0) {
                     vj.a(param5, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param4, 114);
@@ -264,7 +264,7 @@ final class qe {
                 }
               }
               param6++;
-              if (t.field_k <= param6) {
+              if (TriangleRasterizer.field_k <= param6) {
                 return;
               }
               var9_int = var9_int + var11;
@@ -356,7 +356,7 @@ final class qe {
           if (this.field_d.length <= this.field_e) {
             var9 = new oc[2 * this.field_e];
             var7 = var9;
-            dv.a(this.field_d, 0, var9, 0, this.field_e);
+            ArrayOperations.a(this.field_d, 0, var9, 0, this.field_e);
             this.field_d = var9;
           }
           var8 = new oc();

@@ -53,7 +53,7 @@ abstract class jb extends IntrusiveNode {
               if (null != this.field_o &&
                 null != this.field_o[var3] &&
                 this.field_i[var3].field_gb) {
-                qd.$cfr$intArgs$a$b6210757cdab(-67, this.field_o[var3]);
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, this.field_o[var3]);
               }
             }
             this.field_q = 4096;

@@ -134,7 +134,7 @@ final class CommonGame {
               this.aiTick = param0.l(8, 59);
               break;
             }
-            this.bigHeadMode = mu.a(param0, (byte) -39);
+            this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
           }
           param0.l((byte) 115);
           return;
@@ -3125,8 +3125,8 @@ final class CommonGame {
             this.winner = param0.l(3, 59) - 3;
             var4_int = 0;
             while (this.playerCount > var4_int) {
-              this.field_g[var4_int].field_l = mu.a(param0, (byte) -39);
-              this.field_g[var4_int].field_i = mu.a(param0, (byte) -39);
+              this.field_g[var4_int].field_l = ContentTransitionDialog.a(param0, (byte) -39);
+              this.field_g[var4_int].field_i = ContentTransitionDialog.a(param0, (byte) -39);
               stackIn_85_0 = var4_int;
               stackIn_85_1 = param1;
               if (var7 != 0) {
@@ -3228,7 +3228,7 @@ final class CommonGame {
               this.aiTick = param0.l(8, 59);
               break;
             }
-            this.bigHeadMode = mu.a(param0, (byte) -39);
+            this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
           }
           param0.l((byte) 95);
           return;

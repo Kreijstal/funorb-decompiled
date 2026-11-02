@@ -40,7 +40,7 @@ final class fj {
     final static void a(int param0) {
         wd.field_l.k(119);
         if (nm.field_d == null) {
-          nm.field_d = new oj(wd.field_l, st.field_m);
+          nm.field_d = new LoadingProgressDialog(wd.field_l, st.field_m);
         }
         wd.field_l.a(nm.field_d, false);
         if (param0 == -45) {
@@ -78,15 +78,15 @@ final class fj {
             if (34 != var4 &&
               var4 != 39) {
               if (40 == var4) {
-                var2.a(new lk(si.field_g, -1 + var3.field_c), 3);
+                var2.a(new ConsoleExpression(si.field_g, -1 + var3.field_c), 3);
                 continue;
               }
               if (41 == var4) {
-                var2.a(new lk(RasterBuffer.field_c, var3.field_c - 1), 3);
+                var2.a(new ConsoleExpression(RasterBuffer.field_c, var3.field_c - 1), 3);
                 continue;
               }
               if (var4 == 44) {
-                var2.a(new lk(bp.field_Gb, -1 + var3.field_c), 3);
+                var2.a(new ConsoleExpression(bp.field_Gb, -1 + var3.field_c), 3);
                 continue;
               }
               var2.a(tl.a(var3, false), 3);

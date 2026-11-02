@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends wi {
+final class gb extends TextButton {
     private int field_L;
     static int field_K;
     static String field_I;
     static String field_H;
     static boolean field_F;
     static Sprite[] field_G;
-    private l field_J;
+    private ValidationSource field_J;
 
     public static void a(byte param0) {
         int var1 = 84 / ((-83 - param0) / 35);
@@ -63,32 +63,32 @@ final class gb extends wi {
           if (null == nq.field_G) {
             nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
-            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+            var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
-            nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
+            nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
           if (nq.field_G.field_q < var9) {
             nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
-            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+            var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
-            nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
+            nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
           if (nq.field_G.field_w < var10) {
             nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
-            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+            var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
-            nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
+            nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
           PacketBuffer.a(116, nq.field_G);
           SoftwareRasterizer.b();
-          var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
+          var15.rotateSmooth(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
           ta.e(120);
-          nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
+          nq.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
           return;
         }
         if (var8 == en.field_p) {
@@ -98,47 +98,47 @@ final class gb extends wi {
           if (null == nq.field_G) {
             nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
-            var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+            var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
-            nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
+            nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
           if (nq.field_G.field_q < var9Lifetime1) {
             nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
-            var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+            var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
-            nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
+            nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
           if (nq.field_G.field_w < var10Lifetime1) {
             nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
-            var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+            var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
-            nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
+            nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
           PacketBuffer.a(116, nq.field_G);
           SoftwareRasterizer.b();
-          var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
+          var16.rotateSmooth(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
           ta.e(120);
-          nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
+          nq.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
           return;
         }
         if (jt.field_Bb == var8) {
           var13 = LoggedPlayer.field_g[2];
-          var13.c(-(var13.field_q >> 1) + var5, -(var13.field_w >> 1) + var6, 256);
+          var13.drawAdditive(-(var13.field_q >> 1) + var5, -(var13.field_w >> 1) + var6, 256);
           return;
         }
         if (var8 != he.field_yb) {
           return;
         }
         Sprite var12 = LoggedPlayer.field_g[1];
-        var12.c(-(var12.field_q >> 1) + var5, var6 - (var12.field_w >> 1), 256);
+        var12.drawAdditive(-(var12.field_q >> 1) + var5, var6 - (var12.field_w >> 1), 256);
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -164,7 +164,7 @@ final class gb extends wi {
         }
     }
 
-    gb(l param0) {
+    gb(ValidationSource param0) {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements jp {
+class WidgetContainer extends UiWidget implements UiContainerMarker {
     static int[] field_x;
     IntrusiveDeque field_y;
     static String[] field_w;
@@ -11,7 +11,7 @@ class WidgetContainer extends UiWidget implements jp {
     static int field_A;
     static vn[][] field_v;
 
-    UiWidget a(boolean param0) {
+    UiWidget findFocusedChild(boolean param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         UiWidget var3 = null;
@@ -59,8 +59,8 @@ class WidgetContainer extends UiWidget implements jp {
         }
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, gj param4) {
-        super(param0, param1, param2, param3, param4, (jv) null);
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
         this.field_y = new IntrusiveDeque();
     }
 
@@ -101,7 +101,7 @@ class WidgetContainer extends UiWidget implements jp {
                 var5.a(395869153, var4);
                 var6 = (UiWidget) (var5.a(0));
                 while (var6 != null) {
-                  stackOut_20_0 = var6.a(param0, 0);
+                  stackOut_20_0 = var6.focusNext(param0, 0);
                   stackIn_30_0 = stackOut_20_0;
                   stackIn_21_0 = stackOut_20_0;
                   if (stackIn_21_0) {
@@ -133,7 +133,7 @@ class WidgetContainer extends UiWidget implements jp {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -154,7 +154,7 @@ class WidgetContainer extends UiWidget implements jp {
           var4 = (UiWidget) (var3.a((byte) -97));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
-            stackOut_6_0 = var4.a(param0, 0);
+            stackOut_6_0 = var4.focusNext(param0, 0);
             stackIn_14_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
             if (var5 == 0) {
@@ -210,7 +210,7 @@ class WidgetContainer extends UiWidget implements jp {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -238,7 +238,7 @@ class WidgetContainer extends UiWidget implements jp {
                 break scanLoop1;
               }
               if (stackIn_6_0) {
-                if (var9.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_t, param6)) {
+                if (var9.handlePointerPress(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_t, param6)) {
                   return true;
                 }
                 var9 = (UiWidget) (var8.a(0));
@@ -273,7 +273,7 @@ class WidgetContainer extends UiWidget implements jp {
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != 84) {
-            this.a((UiWidget) null, -46);
+            this.focusNext((UiWidget) null, -46);
           }
           var3 = (UiWidget) (var2.a((byte) -99));
           while (var3 != null) {
@@ -374,7 +374,7 @@ class WidgetContainer extends UiWidget implements jp {
                 var5.a((byte) 104, (IntrusiveNode) (var4));
                 var6 = (UiWidget) (var5.b((byte) 46));
                 while (var6 != null) {
-                  stackOut_19_0 = var6.a(param0, 0);
+                  stackOut_19_0 = var6.focusNext(param0, 0);
                   stackIn_29_0 = stackOut_19_0;
                   stackIn_20_0 = stackOut_19_0;
                   if (stackIn_20_0) {
@@ -453,7 +453,7 @@ class WidgetContainer extends UiWidget implements jp {
         try {
           var6_int = -127 % ((param5 - 63) / 51);
           pt.a(160 + param3, -22914, param3, param4 + 21, param4);
-          SoftwareRasterizer.i(param3, param4, 160, 42, 10, 65793);
+          SoftwareRasterizer.fillRoundedRectangle(param3, param4, 160, 42, 10, 65793);
           ta.e(123);
           if (param2 != null) {
             un.field_d.d(param2, 80 + param3, 17 + param4, 16777215, -1);
@@ -524,7 +524,7 @@ class WidgetContainer extends UiWidget implements jp {
         int var13Lifetime1;
         var19 = Kickabout.field_G;
         try {
-          var5_int = cm.a(true, 3 * (-param2 + param3));
+          var5_int = ResizableModalPanel.a(true, 3 * (-param2 + param3));
           var6 = param2 * 3;
           var7 = -10 + var5_int;
           if (param0 != -336184828) {
@@ -547,10 +547,10 @@ class WidgetContainer extends UiWidget implements jp {
             stackIn_12_0 = stackOut_11_0;
             if (var19 == 0) {
               if (stackIn_12_0) {
-                var12 = fb.field_M[var9];
+                var12 = NumericDateInputWidget.field_M[var9];
                 var13 = fk.field_k[var9];
-                var14 = -var12 + fb.field_M[var10];
-                var15 = fb.field_M[var11] - var12;
+                var14 = -var12 + NumericDateInputWidget.field_M[var10];
+                var15 = NumericDateInputWidget.field_M[var11] - var12;
                 var16 = fk.field_k[var10] - var13;
                 var17 = fk.field_k[var11] - var13;
               }
@@ -644,7 +644,7 @@ class WidgetContainer extends UiWidget implements jp {
           if (param0 <= 10) {
             this.field_y = (IntrusiveDeque) null;
           }
-          stackIn_7_0 = (null != this.a(false));
+          stackIn_7_0 = (null != this.findFocusedChild(false));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -823,7 +823,7 @@ class WidgetContainer extends UiWidget implements jp {
               discarded$3 = param0.append(' ');
               var7++;
             }
-            var6.a(param3 ^ 9586, 1 + param2, param1, param0);
+            var6.appendWidgetDiagnostics(param3 ^ 9586, 1 + param2, param1, param0);
             var6 = (UiWidget) (var5.a(0));
           }
           return;
@@ -899,7 +899,7 @@ class WidgetContainer extends UiWidget implements jp {
         }
     }
 
-    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -912,7 +912,7 @@ class WidgetContainer extends UiWidget implements jp {
           if (param0 != 17883) {
             field_v = (vn[][]) null;
           }
-          if (this.a(1, param3, param2, param1)) {
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.b(param1, param3, param2, param0 - 36451);
             this.a(param3, param2, param1, 24745);
           }

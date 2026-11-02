@@ -7,17 +7,17 @@ final class ul {
     static String field_a;
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        cj.a(eb.field_b, el.field_I, sh.field_c, param2, false, param1, param3);
+        DateInputWidget.a(eb.field_b, BytePlusOneCommand.field_I, sh.field_c, param2, false, param1, param3);
         if (!param0) {
           int[] var5 = (int[]) null;
-          ul.a((kg) null, (byte) -34, (int[]) null);
+          ul.a((IndexedSprite) null, (byte) -34, (int[]) null);
         }
     }
 
-    final static kg a(kg param0, byte param1, int[] param2) {
-        kg var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        kg stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -25,7 +25,7 @@ final class ul {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new kg(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_a = param0.field_a;
           var3.field_i = param0.field_i;
           var3.field_d = param0.field_d;
@@ -247,7 +247,7 @@ final class ul {
         int var11 = 0;
         try {
           var11 = -64 / ((-60 - param4) / 50);
-          var10_int = 8 + pb.field_C.c(param9, -10 + (param5 - 10), param6);
+          var10_int = 8 + IsSixCommand.field_C.c(param9, -10 + (param5 - 10), param6);
           if (param3) {
             stackIn_4_0 = param7;
             if (param1 > 0) {
@@ -255,7 +255,7 @@ final class ul {
             } else {
               stackIn_5_1 = -4;
             }
-            SoftwareRasterizer.f(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
+            SoftwareRasterizer.drawRoundedRectangle(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
             stackIn_7_0 = param7;
             stackIn_7_1 = param2;
             if (0 >= param1) {
@@ -265,7 +265,7 @@ final class ul {
             }
             SoftwareRasterizer.a(stackIn_7_0, stackIn_7_1 + stackIn_8_2, param5, var10_int, 10, 65793, 140);
           }
-          pb.field_C.a(param9, param7 + 10, param2, -10 + param5 - 10, param0, 16777215, -1, param8, param1, param6);
+          IsSixCommand.field_C.a(param9, param7 + 10, param2, -10 + param5 - 10, param0, 16777215, -1, param8, param1, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

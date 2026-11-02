@@ -650,7 +650,7 @@ final class gr {
         }
         int[] var6 = new int[9];
         int[] var4 = var6;
-        dv.a(this.field_q, 0, var6, 0, 9);
+        ArrayOperations.a(this.field_q, 0, var6, 0, 9);
         int var5 = var6[param2];
         var6[param2] = var6[param0];
         var6[param0] = var5;
@@ -1034,7 +1034,7 @@ final class gr {
                     !this.field_a[var5Lifetime7][-1 + var6Lifetime3]) {
                     throw new IllegalStateException("User tried to buy a Pitch when they don't own the previous tier " + param0.toString());
                   }
-                  var7Lifetime1 = cm.field_M[var6Lifetime3];
+                  var7Lifetime1 = ResizableModalPanel.field_M[var6Lifetime3];
                   if (var7Lifetime1 > this.field_x) {
                     throw new IllegalStateException("User bought a Pitch but could not afford it " + param0.toString());
                   }

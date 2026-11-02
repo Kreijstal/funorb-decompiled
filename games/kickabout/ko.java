@@ -67,7 +67,7 @@ final class ko {
           this.field_i = 0;
         }
         if (this.field_i == 0 && (this.field_g ||
-          el.field_C)) {
+          BytePlusOneCommand.field_C)) {
           if (param1 < 0) {
             if (this.field_g) {
               this.field_e = -1;

@@ -29,7 +29,7 @@ final class ni extends IntrusiveNode {
             var3 = (String) null;
             ni.a((byte) 34, (String) null);
           }
-          stackIn_3_0 = jg.field_J.a(param1, "", 4);
+          stackIn_3_0 = DraggableWidget.field_J.a(param1, "", 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,13 +68,13 @@ final class ni extends IntrusiveNode {
         if (PacketBuffer.field_l) {
           return la.field_a.a(il.field_c, (byte) 127, cc.field_e);
         }
-        if (kd.field_s) {
+        if (DebugConsole.field_s) {
           return NodeHashTableIterator.a(param1, -14, param0);
         }
         if (sq.b(param3 + 20963, param0, param1)) {
           return true;
         }
-        if (!kb.field_C) {
+        if (!WriteIntegersCommand.field_C) {
           return hd.a(false, param2, param0);
         }
         return false;

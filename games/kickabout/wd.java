@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd extends IntrusiveNode {
-    static se field_l;
+    static ModalStack field_l;
     static String field_g;
     int field_p;
     int field_m;
@@ -38,7 +38,7 @@ final class wd extends IntrusiveNode {
         var8 = Kickabout.field_G;
         try {
           if (param2 <= 33) {
-            field_l = (se) null;
+            field_l = (ModalStack) null;
           }
           var9 = PacketBuffer.field_h;
           var3 = var9;

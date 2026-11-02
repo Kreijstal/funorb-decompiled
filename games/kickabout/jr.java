@@ -61,7 +61,7 @@ final class jr extends im {
                       tb.a((byte) 126, 4);
                       sp.c(53, 9);
                     } else {
-                      oj.a(-45, this.field_Hb);
+                      LoadingProgressDialog.a(-45, this.field_Hb);
                     }
                   }
                 } else {
@@ -182,7 +182,7 @@ final class jr extends im {
             } else {
               if (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) {
                 if (GameLoopApplet.field_E.b(30524, this.field_Hb.field_a)) {
-                  q.field_d.c(fb.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
+                  q.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
                 }
               } else {
                 q.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
@@ -222,7 +222,7 @@ final class jr extends im {
             }
             var4 = var4 + this.field_Db[2];
             if (this.field_Hb.field_m.field_h.length == 0) {
-              pb.field_C.d(hi.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
+              IsSixCommand.field_C.d(hi.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
             }
             var4 = var4 + this.field_Db[3];
             var7Lifetime1 = this.field_y;
@@ -250,9 +250,9 @@ final class jr extends im {
           }
           if (this.field_Db == null) {
             if (this.field_Ib != null) {
-              SoftwareRasterizer.f(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
+              SoftwareRasterizer.drawRoundedRectangle(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
               SoftwareRasterizer.a((-320 + this.field_q >> 1) + this.field_F, this.field_T + 23, 320, 27, 8, 65793, 160);
-              pb.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
+              IsSixCommand.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
             jr.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends qv {
+final class id extends TextWidgetPainter {
     static byte[] field_u;
     private hf[] field_w;
     static r field_t;
@@ -36,7 +36,7 @@ final class id extends qv {
         UiWidget var8 = null;
         var7 = Kickabout.field_G;
         try {
-          super.a(param0, (byte) -112);
+          super.copyStyleTo(param0, (byte) -112);
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_w[var4_int];
@@ -56,7 +56,7 @@ final class id extends qv {
               }
             }
           } else {
-            dv.a(this.field_w, 0, param0.field_w, 0, 6);
+            ArrayOperations.a(this.field_w, 0, param0.field_w, 0, 6);
           }
           if (param2 >= -97) {
             var8 = (UiWidget) null;
@@ -157,16 +157,16 @@ final class id extends qv {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, ResourceArchive param3) {
         int var11_int = 0;
-        kg[] var5 = null;
-        kg[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        kg[] var10 = null;
+        IndexedSprite[] var10 = null;
         Sprite var11 = null;
         Sprite var12 = null;
         int var13 = 0;
-        kg[] var14 = null;
+        IndexedSprite[] var14 = null;
         Sprite var15 = null;
         int[][] var16 = null;
         Sprite var17 = null;
@@ -188,10 +188,10 @@ final class id extends qv {
         int var9Lifetime1;
         var13 = Kickabout.field_G;
         try {
-          sk.field_a = se.a(param3, -9, "commonui", "frame_top");
-          vb.field_a = se.a(param3, -120, "commonui", "frame_bottom");
+          sk.field_a = ModalStack.a(param3, -9, "commonui", "frame_top");
+          vb.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
           aa.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
-          IntrusiveDequeCursor.field_a = se.a(param3, -29, "commonui", "button");
+          IntrusiveDequeCursor.field_a = ModalStack.a(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ng.a("validation", "commonui", 2, param3);
           qo.field_k = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo12", param3, "commonui"));
           gf.field_a = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo14", param3, "commonui"));
@@ -201,11 +201,11 @@ final class id extends qv {
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);
           fw.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
-          var5 = jo.a(param3, 17369, "commonui", "screen_options");
-          dw.field_d = new kg[4];
-          BallAgent.field_f = new kg[4];
-          kk.field_Q = new kg[4];
-          var6 = new kg[][]{kk.field_Q, BallAgent.field_f, dw.field_d};
+          var5 = DemoIntegersCommand.a(param3, 17369, "commonui", "screen_options");
+          ConsoleEvaluationException.field_d = new IndexedSprite[4];
+          BallAgent.field_f = new IndexedSprite[4];
+          kk.field_Q = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{kk.field_Q, BallAgent.field_f, ConsoleEvaluationException.field_d};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -279,19 +279,19 @@ final class id extends qv {
         RuntimeException var6 = null;
         hf var7 = null;
         int var8 = 0;
-        wi var10 = null;
+        TextButton var10 = null;
         hf var11 = null;
         hf var12 = null;
         hf var13 = null;
         hf var14 = null;
         hf var15 = null;
         try {
-          if (param3 instanceof wi) {
+          if (param3 instanceof TextButton) {
             stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (wi) (stackIn_3_0);
+          var10 = (TextButton) (stackIn_3_0);
           pt.a(param3.field_t + (param4 + param3.field_n), -22914, param3.field_t + param4, param3.field_i + (param2 + param3.field_g), param2 + param3.field_g);
           if (var10 != null) {
             param1 = param1 & var10.field_y;

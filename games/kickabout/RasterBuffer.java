@@ -8,7 +8,7 @@ abstract class RasterBuffer {
     java.awt.Image field_d;
     int field_e;
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void drawImage(int param0, int param1, int param2, java.awt.Graphics param3);
 
     final static void a(int param0, Sprite[] param1, int param2, int param3) {
         Sprite var4 = null;
@@ -61,12 +61,12 @@ abstract class RasterBuffer {
             if (3 == rm.field_C) {
               var11 = param1[p.a((byte) -24, 3)];
               var4 = var11;
-              var5 = el.a(29430, 10, 896 - var11.field_o >> 1);
-              var6 = el.a(29430, 10, 50 - (var11.field_v >> 1));
+              var5 = BytePlusOneCommand.a(29430, 10, 896 - var11.field_o >> 1);
+              var6 = BytePlusOneCommand.a(29430, 10, 50 - (var11.field_v >> 1));
               var11.c(var5 + param2, var6 + param3);
               var4.c(param2 + var5, -var11.field_v - var6 + (1344 + param3));
-              var5Lifetime1 = el.a(29430, 10, -var11.field_o + 896 >> 1);
-              var6 = el.a(29430, 10, 1344 - var11.field_v >> 1);
+              var5Lifetime1 = BytePlusOneCommand.a(29430, 10, -var11.field_o + 896 >> 1);
+              var6 = BytePlusOneCommand.a(29430, 10, 1344 - var11.field_v >> 1);
               param1[p.a((byte) -24, 3)].c(var5Lifetime1 + param2, param3 + var6);
             }
           } else {
@@ -75,14 +75,14 @@ abstract class RasterBuffer {
             for (var6 = 0; var6 < 3; var6++) {
               var13 = param1[var6];
               var7_ref_ut = var13;
-              var8 = el.a(29430, 10, var12[var6] + (896 - var13.field_o >> 1));
-              var9 = el.a(29430, 10, 60 - ((var13.field_v >> 1) - var14[var6]));
+              var8 = BytePlusOneCommand.a(29430, 10, var12[var6] + (896 - var13.field_o >> 1));
+              var9 = BytePlusOneCommand.a(29430, 10, 60 - ((var13.field_v >> 1) - var14[var6]));
               var13.c(var8 + param2, var9 + param3);
               var7_ref_ut.c(var8 + param2, -var13.field_v - var9 + (1344 + param3));
             }
             var6_ref_ut = param1[p.a((byte) -24, 3)];
-            var7 = el.a(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
-            var8 = el.a(29430, 10, 1344 - var6_ref_ut.field_v >> 1);
+            var7 = BytePlusOneCommand.a(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
+            var8 = BytePlusOneCommand.a(29430, 10, 1344 - var6_ref_ut.field_v >> 1);
             var6_ref_ut.c(var7 + param2, var8 + param3);
           }
           if (param0 < 71) {
@@ -111,14 +111,14 @@ abstract class RasterBuffer {
     }
 
     final static void a(int param0) {
-        vu.field_Ib = new tk("Cabinet", ne.j((byte) 15), be.field_q, it.field_m);
+        vu.field_Ib = new tk("Cabinet", ne.j((byte) 15), ConsolePanel.field_q, it.field_m);
         vu.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 != 20164) {
           field_c = 125;
         }
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Component param3);
+    abstract void initialize(int param0, int param1, int param2, java.awt.Component param3);
 
     final static String[] a(String param0, int param1, byte param2) {
         StringBuilder discarded$0 = null;

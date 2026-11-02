@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vo extends mu {
+final class vo extends ContentTransitionDialog {
     static String field_db;
     static Sprite field_cb;
     static int field_bb;
     static int[][] field_eb;
 
-    vo(se param0, UiWidget param1) {
+    vo(ModalStack param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -196,7 +196,7 @@ final class vo extends mu {
           pq.field_O = new byte[io.field_l][];
           var17.field_n = -(io.field_l * 8) + param1.length - 7;
           kw.field_i = var17.a((byte) 81);
-          ai.field_J = var17.a((byte) 81);
+          AccountTermsPanel.field_J = var17.a((byte) 81);
           var3 = 1 + (var17.h((byte) -116) & 255);
           for (var4 = 0; var4 < io.field_l; var4++) {
             IsaacRandom.field_f[var4] = var16.a((byte) 81);

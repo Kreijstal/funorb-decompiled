@@ -8,7 +8,7 @@ final class nb {
     static int field_k;
     static String field_g;
     static wc field_i;
-    to field_l;
+    PcmSample field_l;
     static int[] field_e;
     static Sprite[] field_j;
     boolean field_d;
@@ -60,7 +60,7 @@ final class nb {
           return false;
         }
         if (param0 == 32) {
-          this.field_l = VorbisSample.a(sr.field_h, this.field_a, "").c();
+          this.field_l = VorbisSample.load(sr.field_h, this.field_a, "").c();
           this.field_d = true;
           return true;
         }
@@ -124,7 +124,7 @@ final class nb {
         }
     }
 
-    nb(to param0) {
+    nb(PcmSample param0) {
         this.field_l = null;
         this.field_d = false;
         try {

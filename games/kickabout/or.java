@@ -29,7 +29,7 @@ final class or {
           }
           for (var2 = 1; var2 < qe.field_b.length; var2++) {
             var3 = qe.field_b[var2];
-            dv.a(nb.field_e, var2 << 4, nb.field_e, var1_int, var3);
+            ArrayOperations.a(nb.field_e, var2 << 4, nb.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -133,7 +133,7 @@ final class or {
           }
           eo.b(var14, var15, var16, 16777045);
           SoftwareRasterizer.e(var12, var13, var14, var15, 16776960, 160);
-          SoftwareRasterizer.h(var12 - (var20 >> 1), var13 - (var21 >> 1), var20, var21, 16776960, 160);
+          SoftwareRasterizer.drawRectangleAlpha(var12 - (var20 >> 1), var13 - (var21 >> 1), var20, var21, 16776960, 160);
           SoftwareRasterizer.a(var12 - (var18 >> 1), 10 + var13, var18, 6, 65793);
           SoftwareRasterizer.a(-(var18 >> 1) + var12 + 1, var13 + 11, -2 + var18 - var17, 4, 13369344);
           SoftwareRasterizer.c(1 + (var12 - (var18 >> 1)), var13 + 12, -2 + (var18 - var17), 16777215, 220);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jd extends lg implements sv {
+abstract class jd extends lg implements TextInputListener {
     static String field_e;
     static int[] field_h;
     static String[] field_i;
@@ -28,15 +28,15 @@ abstract class jd extends lg implements sv {
         var3 = var8.h((byte) -112);
         stackIn_3_0 = ((128 & var3) != 0);
         lo.field_l = stackIn_3_0;
-        jn.field_ob = 127 & var3;
+        RegistrationRequestDialog.field_ob = 127 & var3;
         ie.field_F = var8.h((byte) -108);
         i.field_z = var8.i((byte) -124);
-        if (jn.field_ob != 2) {
+        if (RegistrationRequestDialog.field_ob != 2) {
           sc.field_E = 0;
-          cj.field_G = 0;
+          DateInputWidget.field_G = 0;
         } else {
           sc.field_E = var8.a((byte) 81);
-          cj.field_G = var8.i(-119);
+          DateInputWidget.field_G = var8.i(-119);
         }
         stackIn_9_0 = (var8.h((byte) -116) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -46,11 +46,11 @@ abstract class jd extends lg implements sv {
         } else {
           hr.field_f = sr.field_d;
         }
-        if (jn.field_ob == 1) {
+        if (RegistrationRequestDialog.field_ob == 1) {
           oh.field_f = var8.a((byte) 81);
           vp.field_e = var8.a(42);
         } else {
-          if (jn.field_ob == 4) {
+          if (RegistrationRequestDialog.field_ob == 4) {
             oh.field_f = var8.a((byte) 81);
             vp.field_e = var8.a(42);
           } else {
@@ -144,7 +144,7 @@ abstract class jd extends lg implements sv {
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         po.a(-27, param1);
-        jg.a(param0, (byte) -26, param1, param3);
+        DraggableWidget.a(param0, (byte) -26, param1, param3);
         if (param2 != 14686) {
           field_g = (int[]) null;
         }
@@ -215,15 +215,15 @@ abstract class jd extends lg implements sv {
         var3 = var8.h((byte) -112);
         stackIn_3_0 = ((128 & var3) != 0);
         lo.field_l = stackIn_3_0;
-        jn.field_ob = 127 & var3;
+        RegistrationRequestDialog.field_ob = 127 & var3;
         ie.field_F = var8.h((byte) -108);
         i.field_z = var8.i((byte) -124);
-        if (jn.field_ob != 2) {
+        if (RegistrationRequestDialog.field_ob != 2) {
           sc.field_E = 0;
-          cj.field_G = 0;
+          DateInputWidget.field_G = 0;
         } else {
           sc.field_E = var8.a((byte) 81);
-          cj.field_G = var8.i(-119);
+          DateInputWidget.field_G = var8.i(-119);
         }
         stackIn_9_0 = (var8.h((byte) -116) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -233,11 +233,11 @@ abstract class jd extends lg implements sv {
         } else {
           hr.field_f = sr.field_d;
         }
-        if (jn.field_ob == 1) {
+        if (RegistrationRequestDialog.field_ob == 1) {
           oh.field_f = var8.a((byte) 81);
           vp.field_e = var8.a(42);
         } else {
-          if (jn.field_ob == 4) {
+          if (RegistrationRequestDialog.field_ob == 4) {
             oh.field_f = var8.a((byte) 81);
             vp.field_e = var8.a(42);
           } else {

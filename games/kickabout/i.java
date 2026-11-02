@@ -71,7 +71,7 @@ class i extends jb {
         int var4Lifetime1;
         var16 = Kickabout.field_G;
         try {
-          if (null == ae.field_C) {
+          if (null == AccountRegistrationPanel.field_C) {
             return;
           }
           if (param0 != 70) {
@@ -117,7 +117,7 @@ class i extends jb {
             var7 = -22 + var3.a(true);
             var8_ref_int__ = new int[]{var6 - 60, var6 + 60, var6, var6};
             var9_ref_int__ = new int[]{var7, var7, -60 + var7, 60 + var7};
-            stackIn_38_0 = ae.field_C;
+            stackIn_38_0 = AccountRegistrationPanel.field_C;
             if (!cl.field_d) {
               stackIn_39_1 = 1;
             } else {
@@ -141,7 +141,7 @@ class i extends jb {
           if (var2 != 0) {
             stackIn_49_0 = (4 != var3.action) ? 0 : 1;
             var4Lifetime1 = stackIn_49_0;
-            stackIn_51_0 = kd.field_y;
+            stackIn_51_0 = DebugConsole.field_y;
             if (!cl.field_d) {
               stackIn_52_1 = 1;
             } else {
@@ -296,7 +296,7 @@ class i extends jb {
         if (param0 >= -11) {
           return;
         }
-        pb.field_C.a(this.field_v, -15 + this.b(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(this.field_v, -15 + this.b(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
         if (this.field_t != null) {
           this.field_t.a((var7 >> 1) + var5, 23, (this.field_t.b(0) >> 1) + (var4 + 15));
           return;
@@ -339,7 +339,7 @@ class i extends jb {
               this.field_s = this.field_s - (this.field_D.field_o + 15);
             }
           }
-          this.field_C = pb.field_C.c(this.field_v, this.field_s, 16);
+          this.field_C = IsSixCommand.field_C.c(this.field_v, this.field_s, 16);
           stackIn_9_1 = this.field_C;
           if (this.field_D != null) {
             stackIn_10_2 = this.field_D.field_v;
@@ -393,7 +393,7 @@ class i extends jb {
     }
 
     i(int param0, lv param1) {
-        this(param0, param1, pb.field_G[param0], gd.field_e[param0]);
+        this(param0, param1, IsSixCommand.field_G[param0], gd.field_e[param0]);
     }
 
     void a(int param0, int param1) {

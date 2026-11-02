@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rq extends qt {
-    static dp field_D;
+    static ReverbPcmStream field_D;
     static String field_B;
-    static uo field_E;
+    static BinaryBitmapFont field_E;
     static java.awt.Frame field_A;
 
     public static void a(boolean param0) {
@@ -23,7 +23,7 @@ final class rq extends qt {
 
     final void a(int param0, boolean param1) {
         super.a(param0, param1);
-        uo var3 = pb.field_C;
+        BinaryBitmapFont var3 = IsSixCommand.field_C;
         int var4 = 20 + this.field_j;
         int var5 = this.field_j + 360;
         int var6 = ((BitmapFont) ((Object) var3)).field_p + ((BitmapFont) ((Object) var3)).field_G;
@@ -108,7 +108,7 @@ final class rq extends qt {
           try {
             Thread.sleep(param1);
             if (param0 != -93) {
-              field_E = (uo) null;
+              field_E = (BinaryBitmapFont) null;
               return;
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {

@@ -108,7 +108,7 @@ final class jj extends PcmStream {
           if (this.field_j[0] != null &&
             var7Lifetime1 <= this.field_j[0].length) {
             for (var8 = 0; this.field_j.length > var8; var8++) {
-              dv.a(this.field_j[var8], 0, var7Lifetime1);
+              ArrayOperations.a(this.field_j[var8], 0, var7Lifetime1);
             }
           } else {
             for (var8 = 0; var8 < this.field_j.length; var8++) {

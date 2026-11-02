@@ -16,14 +16,14 @@ class UiWidget extends IntrusiveNode {
     String field_u;
     int field_o;
     static volatile int field_l;
-    jv field_k;
+    UiListener field_k;
     int field_p;
     int field_g;
     static int[] field_f;
-    gj field_r;
+    WidgetPainter field_r;
 
     public final String toString() {
-        return this.a(17883, 0, new Hashtable(), new StringBuilder()).toString();
+        return this.appendWidgetDiagnostics(17883, 0, new Hashtable(), new StringBuilder()).toString();
     }
 
     final static int a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
@@ -57,7 +57,7 @@ class UiWidget extends IntrusiveNode {
           if (param4) {
             var5_int++;
           }
-          var6 = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, var5_int, pd.field_E);
+          var6 = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, var5_int, LoginForm.field_E);
           while (var6 > 0) {
             if (param0) {
               var6--;
@@ -94,22 +94,22 @@ class UiWidget extends IntrusiveNode {
             param4 = false;
           }
           if (param0) {
-            stackIn_44_0 = q.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-103, q.field_e.length, pd.field_E)];
+            stackIn_44_0 = q.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-103, q.field_e.length, LoginForm.field_E)];
             return stackIn_44_0;
           }
           if (param1) {
-            stackIn_34_0 = cd.field_a[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-123, cd.field_a.length, pd.field_E)];
+            stackIn_34_0 = cd.field_a[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-123, cd.field_a.length, LoginForm.field_E)];
             return stackIn_34_0;
           }
           if (param3) {
-            stackIn_42_0 = tm.field_y[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, tm.field_y.length, pd.field_E)];
+            stackIn_42_0 = ConsoleCommand.field_y[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, ConsoleCommand.field_y.length, LoginForm.field_E)];
             return stackIn_42_0;
           }
           if (param4) {
-            stackIn_40_0 = qr.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, qr.field_e.length, pd.field_E)];
+            stackIn_40_0 = qr.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, qr.field_e.length, LoginForm.field_E)];
             return stackIn_40_0;
           }
-          stackIn_38_0 = q.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, q.field_e.length, pd.field_E)];
+          stackIn_38_0 = q.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, q.field_e.length, LoginForm.field_E)];
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ class UiWidget extends IntrusiveNode {
           if (null != this.field_r) {
             discarded$4 = param1.append(" renderer=");
             if (this.field_r instanceof UiWidget) {
-              param1 = this.a(17883, 1 + param0, param2, param1);
+              param1 = this.appendWidgetDiagnostics(17883, 1 + param0, param2, param1);
             } else {
               discarded$5 = param1.append(this.field_r);
             }
@@ -163,7 +163,7 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_k instanceof UiWidget)) {
               discarded$7 = param1.append(this.field_k);
             } else {
-              param1 = this.a(17883, param0 + 1, param2, param1);
+              param1 = this.appendWidgetDiagnostics(17883, param0 + 1, param2, param1);
             }
           }
           return;
@@ -208,7 +208,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a((byte) -98, param2, param3, el.field_A, n.field_m) ? 1 : 0;
+          var5_int = this.a((byte) -98, param2, param3, BytePlusOneCommand.field_A, n.field_m) ? 1 : 0;
           stackIn_3_0 = (this.field_m) ? 0 : 1;
           if (var5_int != 0) {
             stackIn_6_1 = 0;
@@ -241,7 +241,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -272,11 +272,11 @@ class UiWidget extends IntrusiveNode {
 
     void g(int param0) {
         if (param0 != 84) {
-          this.field_r = (gj) null;
+          this.field_r = (WidgetPainter) null;
         }
     }
 
-    UiWidget(String param0, jv param1) {
+    UiWidget(String param0, UiListener param1) {
         this(param0, nb.field_i.field_c, param1);
     }
 
@@ -309,7 +309,7 @@ class UiWidget extends IntrusiveNode {
         if (null == e.field_m) {
           return;
         }
-        hm.a(param0 ^ -120, e.field_m);
+        SumIntegersCommand.a(param0 ^ -120, e.field_m);
         if (param0 != 0) {
           UiWidget.g((byte) 9);
         }
@@ -348,7 +348,7 @@ class UiWidget extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -376,17 +376,17 @@ class UiWidget extends IntrusiveNode {
     final boolean a(int param0, int param1, int param2, boolean param3) {
         int var5;
         int var7;
-        jg var6;
+        DraggableWidget var6;
         var7 = Kickabout.field_G;
         this.a((byte) 12, this, param2, param0);
         var5 = this.b(73) ? 1 : 0;
         if (param3) {
           if (id.field_v != 0 &&
             var5 != 0) {
-            this.a(n.field_m, this, param2, el.field_A, param0, id.field_v, param1 ^ 31923);
+            this.a(n.field_m, this, param2, BytePlusOneCommand.field_A, param0, id.field_v, param1 ^ 31923);
           }
           if (WidgetContainer.field_A != 0) {
-            if (this.a(true, param0, sm.field_q, this, vc.field_y, param2, WidgetContainer.field_A)) {
+            if (this.handlePointerPress(true, param0, sm.field_q, this, vc.field_y, param2, WidgetContainer.field_A)) {
               param3 = false;
             } else {
               if (var5 != 0) {
@@ -396,11 +396,11 @@ class UiWidget extends IntrusiveNode {
           }
           if (FootballerAgent.field_p == 0 &&
             vg.field_Ob != 0) {
-            this.a(param0, n.field_m, el.field_A, this, param1 ^ -31948, param2);
+            this.a(param0, n.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
             var6 = mp.field_g;
             if (var6 != null) {
               if (var6.field_k instanceof co) {
-                ((co) (var6.field_k)).a(var6, (ln) null, 14578);
+                ((co) (var6.field_k)).a(var6, (DropTargetWidget) null, 14578);
               }
               mp.field_g = null;
             }
@@ -426,7 +426,7 @@ class UiWidget extends IntrusiveNode {
         return false;
     }
 
-    final boolean a(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    final boolean beginWidgetDiagnosticVisit(int param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -472,7 +472,7 @@ class UiWidget extends IntrusiveNode {
         }
         int var4 = param2;
         if (var4 == 80) {
-          return this.a(this, 0);
+          return this.focusNext(this, 0);
         }
         var4 = 41 / ((41 - param1) / 57);
         return false;
@@ -518,7 +518,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder appendWidgetDiagnostics(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -533,7 +533,7 @@ class UiWidget extends IntrusiveNode {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(1, param3, param2, param1)) {
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.b(param1, param3, param2, -18568);
           }
           stackIn_7_0 = (StringBuilder) (param3);
@@ -581,7 +581,7 @@ class UiWidget extends IntrusiveNode {
           this.field_p = 0;
           if (param4 != -1) {
             UiWidget var8 = (UiWidget) null;
-            this.a((UiWidget) null, 108);
+            this.focusNext((UiWidget) null, 108);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "fd.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -600,7 +600,7 @@ class UiWidget extends IntrusiveNode {
         this.field_o = 0;
     }
 
-    UiWidget(String param0, gj param1, jv param2) {
+    UiWidget(String param0, WidgetPainter param1, UiListener param2) {
         RuntimeException runtimeException = null;
         WidgetTextLayout var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -649,7 +649,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, gj param4, jv param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5) {
         this.field_s = 0;
         this.field_o = 0;
         try {

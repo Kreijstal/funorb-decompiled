@@ -187,11 +187,11 @@ final class tt {
         }
     }
 
-    final static uo a(int param0, byte[] param1) {
-        uo var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_5_0 = null;
-        uo stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -202,9 +202,9 @@ final class tt {
           }
           if (param1 == null) {
             stackIn_5_0 = null;
-            return (uo) (stackIn_5_0);
+            return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new uo(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, pq.field_O);
+          var2 = new BinaryBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, pq.field_O);
           tk.h((byte) -82);
           stackIn_7_0 = var2;
           return stackIn_7_0;

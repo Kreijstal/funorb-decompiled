@@ -81,8 +81,8 @@ final class wb extends hs {
             var7 = un.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
-            SoftwareRasterizer.b(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
-            SoftwareRasterizer.b(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
+            SoftwareRasterizer.drawLine(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
+            SoftwareRasterizer.drawLine(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
           }
           pt.a(76, -22914, 0, 480, 0);
           SoftwareRasterizer.a(52, var4Lifetime1, 486, 21, 7, 65793, 128);
@@ -129,9 +129,9 @@ final class wb extends hs {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         try {
-          if (kd.field_z.field_sb != 0 &&
+          if (DebugConsole.field_z.field_sb != 0 &&
             !PacketBuffer.field_l) {
-            if (!kb.field_C) {
+            if (!WriteIntegersCommand.field_C) {
               vg.field_Wb = true;
             } else {
               hp.b(0);
@@ -139,7 +139,7 @@ final class wb extends hs {
           }
           if (vg.field_Wb) {
             m.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
-            mu.field_Y.b(0, param2);
+            ContentTransitionDialog.field_Y.b(0, param2);
             if (param2) {
               if (0 != gl.field_c.field_sb) {
                 vg.field_Wb = false;

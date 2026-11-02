@@ -16,7 +16,7 @@ final class oh {
         if (param0 != -14954) {
           field_d = (dg) null;
         }
-        stackIn_6_0 = (op.field_y != null) && (jn.field_rb == un.field_c);
+        stackIn_6_0 = (op.field_y != null) && (RegistrationRequestDialog.field_rb == un.field_c);
         return stackIn_6_0;
     }
 

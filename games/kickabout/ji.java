@@ -124,7 +124,7 @@ final class ji extends hd {
             if (!td.field_b) {
               return;
             }
-            SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
             tn.field_f.a(125, param1);
             return;
           }
@@ -132,7 +132,7 @@ final class ji extends hd {
             if (!td.field_b) {
               return;
             }
-            SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
             tn.field_f.a(125, param1);
             return;
           }
@@ -140,12 +140,12 @@ final class ji extends hd {
             return;
           }
           if (td.field_b) {
-            SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
             tn.field_f.a(125, param1);
           }
           return;
         }
-        if (!qv.field_f) {
+        if (!TextWidgetPainter.field_f) {
           if (param0 <= 10) {
             field_Eb = (String) null;
           }
@@ -157,7 +157,7 @@ final class ji extends hd {
             return;
           }
         } else {
-          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
           kk.field_j.a(77, param1);
           if (param0 <= 10) {
             field_Eb = (String) null;
@@ -175,7 +175,7 @@ final class ji extends hd {
             }
           }
         }
-        SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
         tn.field_f.a(125, param1);
     }
 

@@ -138,7 +138,7 @@ final class bg extends DualLinkNode {
             return stackIn_2_0;
           }
           var4_int = param1.b(param0, -1);
-          var5 = param1.a((byte) -126, param3, var4_int);
+          var5 = param1.findFileId((byte) -126, param3, var4_int);
           stackIn_4_0 = ArchiveSource.a(param1, var4_int, (byte) 89, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

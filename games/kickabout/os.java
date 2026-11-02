@@ -247,8 +247,8 @@ final class os {
           var11 = var23Lifetime1 * param3[11] + param3[9] * var21Lifetime1 + param3[10] * var22Lifetime1 >> 16;
           var24Lifetime1 = -48 / ((9 - param4) / 45);
           var10 = param3[8] * var23Lifetime1 + var21Lifetime1 * param3[6] + param3[7] * var22Lifetime1 >> -im.field_yb + 16;
-          var21Lifetime2 = t.field_p;
-          var22Lifetime2 = t.field_e;
+          var21Lifetime2 = TriangleRasterizer.field_p;
+          var22Lifetime2 = TriangleRasterizer.field_e;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -270,7 +270,7 @@ final class os {
               }
               else {
                 if (stackIn_56_0 <= stackIn_56_1) {
-                  fb.field_M[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  NumericDateInputWidget.field_M[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   fk.field_k[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   ld.field_e[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 > var8) {
@@ -308,17 +308,17 @@ final class os {
                   var26Lifetime1Lifetime1 = param0.field_J[var23Lifetime2];
                   jd.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime2Lifetime1 >> 16) + var9;
                   un.field_a[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var26Lifetime1Lifetime1 * var19 >> 16);
-                  ir.field_A[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime2Lifetime1 * var14) >> 16);
+                  ThreeCommand.field_A[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime2Lifetime1 * var14) >> 16);
                   var24Lifetime2Lifetime1 = param0.field_O[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_H[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_D[var23Lifetime2];
-                  qp.field_I[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16) + var9;
+                  AccountMessagePanel.field_I[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16) + var9;
                   ib.field_C[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16);
                   hg.field_I[var23Lifetime2] = (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime2Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime2Lifetime1 = param0.field_a[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
-                  li.field_g[var23Lifetime2] = (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16) + var9;
+                  ConsoleValue.field_g[var23Lifetime2] = (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16) + var9;
                   jl.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16 >> 16) + var10;
                   gp.field_g[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + (var24Lifetime2Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
@@ -356,7 +356,7 @@ final class os {
                   var21Lifetime2 = param0.field_v[var18];
                   pv.field_F[var18] = var9 * var19 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
                   ba.field_q[var18] = var16 * var21Lifetime2 + (var19 * var10 + var13 * var20) >> 16;
-                  el.field_E[var18] = var14 * var20 + (var11 * var19 + var21Lifetime2 * var17) >> 16;
+                  BytePlusOneCommand.field_E[var18] = var14 * var20 + (var11 * var19 + var21Lifetime2 * var17) >> 16;
                   var18++;
                 }
               }

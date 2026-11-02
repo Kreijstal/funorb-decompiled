@@ -33,7 +33,7 @@ final class kp {
           }
           var2 = ap.field_j.g(24009);
           while (var2 != null) {
-            lb.a((byte) -105, param0);
+            TextHotspotWidget.a((byte) -105, param0);
             var2 = ap.field_j.c(33);
           }
           if (param1 > -36) {

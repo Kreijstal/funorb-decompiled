@@ -56,24 +56,24 @@ final class jh extends bp {
         field_Ib = null;
     }
 
-    final static lk a(q param0, int param1) throws fi {
-        lk stackIn_3_0 = null;
-        lk stackIn_10_0 = null;
-        lk stackIn_23_0 = null;
-        lk stackIn_28_0 = null;
+    final static ConsoleExpression a(q param0, int param1) throws ConsoleParseException {
+        ConsoleExpression stackIn_3_0 = null;
+        ConsoleExpression stackIn_10_0 = null;
+        ConsoleExpression stackIn_23_0 = null;
+        ConsoleExpression stackIn_28_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4 = 0;
-        lk var5 = null;
-        lk var6 = null;
-        lk var7 = null;
+        ConsoleExpression var5 = null;
+        ConsoleExpression var6 = null;
+        ConsoleExpression var7 = null;
         var4 = Kickabout.field_G;
         try {
           if (param1 != 1422) {
-            stackIn_3_0 = (lk) null;
+            stackIn_3_0 = (ConsoleExpression) null;
             return stackIn_3_0;
           }
           var5 = param0.a((byte) 82);
@@ -82,19 +82,19 @@ final class jh extends bp {
             pv.field_H != var5.field_k &&
             ra.field_N != var5.field_k) {
             if (var5.field_k != vu.field_Ab) {
-              throw new fi(var5.field_f);
+              throw new ConsoleParseException(var5.field_f);
             }
             if (param0.a(6)) {
-              throw new fi(var5.field_f);
+              throw new ConsoleParseException(var5.field_f);
             }
             var6 = param0.a((byte) 94);
             if (si.field_g != var6.field_k) {
-              throw new fi(var6.field_f);
+              throw new ConsoleParseException(var6.field_f);
             }
             var5.field_j = new IntrusiveDeque();
             while (true) {
               if (param0.a(6)) {
-                throw new fi(var5.field_f);
+                throw new ConsoleParseException(var5.field_f);
               }
               if (param0.a((byte) 90).field_k == RasterBuffer.field_c) {
                 stackIn_23_0 = var5;
@@ -103,7 +103,7 @@ final class jh extends bp {
               param0.field_a = param0.field_a - 1;
               var5.field_j.a(jh.a(param0, 1422), 3);
               if (param0.a(6)) {
-                throw new fi(var5.field_f);
+                throw new ConsoleParseException(var5.field_f);
               }
               var7 = param0.a((byte) 72);
               if (RasterBuffer.field_c == var7.field_k) {
@@ -115,7 +115,7 @@ final class jh extends bp {
               }
               break;
             }
-            throw new fi(var7.field_f);
+            throw new ConsoleParseException(var7.field_f);
           }
           stackIn_10_0 = var5;
           return stackIn_10_0;

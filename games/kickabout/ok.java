@@ -9,9 +9,9 @@ final class ok {
     static boolean field_c;
     static String[] field_b;
 
-    final static eg a(int param0, int param1, Random param2) {
+    final static ModelMesh a(int param0, int param1, Random param2) {
         int var7 = 0;
-        eg stackIn_10_0 = null;
+        ModelMesh stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -47,8 +47,8 @@ final class ok {
             }
           }
           var18 = ParticipantStatus.field_f;
-          var8 = var18[0] * t.field_o[1024] >> 16;
-          var9 = t.field_f[1024] * var18[0] >> 16;
+          var8 = var18[0] * TriangleRasterizer.field_o[1024] >> 16;
+          var9 = TriangleRasterizer.field_f[1024] * var18[0] >> 16;
           stackIn_10_0 = var11.b(var18[2], var18[3], var8, var18[1], var9);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
