@@ -10,7 +10,7 @@ final class j implements Iterator {
     private IntrusiveNode field_d;
     static boolean field_g;
     private int field_c;
-    static Sprite[] field_k;
+    static Sprite[] chatFilterIcons;
     static e field_h;
     static int field_l;
     static int field_b;
@@ -18,7 +18,7 @@ final class j implements Iterator {
     private gk field_j;
 
     public static void b(int param0) {
-        field_k = null;
+        chatFilterIcons = null;
         int var1 = 97 % ((-32 - param0) / 44);
         field_a = null;
         field_h = null;

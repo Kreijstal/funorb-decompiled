@@ -19,7 +19,7 @@ final class vj {
     final static void a(Js5Archive param0, Js5Archive param1, boolean param2, boolean param3) {
         try {
           kb.a(pl.field_a, IntrusiveDequeCursor.field_e, ub.field_z, ti.field_h, ke.field_u, da.field_n, IntrusiveDeque.field_a, wn.field_m, param2, -112, em.chatFont, nb.field_r);
-          j.field_k = ke.a(32, param1, "lobby", "chatfilter");
+          j.chatFilterIcons = ke.a(32, param1, "lobby", "chatfilter");
           hn.field_i[1] = ng.field_Y;
           hn.field_i[0] = Js5Archive.field_g;
           hn.field_i[2] = jk.field_f;

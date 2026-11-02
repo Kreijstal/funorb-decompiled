@@ -15,7 +15,7 @@ final class qg extends IntrusiveNode {
     static Sprite[] frameBottomSprites;
     int field_o;
     static int field_n;
-    static Sprite field_u;
+    static Sprite displayNameChangedIcon;
     static il field_h;
     static int field_w;
     static int field_g;
@@ -99,7 +99,7 @@ final class qg extends IntrusiveNode {
 
     public static void a(int param0) {
         field_h = null;
-        field_u = null;
+        displayNameChangedIcon = null;
         field_s = null;
         field_l = null;
         frameBottomSprites = null;

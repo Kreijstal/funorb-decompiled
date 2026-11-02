@@ -166,8 +166,8 @@ final class gk implements Iterable {
                 if (null != var7.field_Jb &&
                   !var7.field_Jb.equals("")) {
                   var7.field_Mb.field_ab = var11;
-                  var7.field_Mb.normalSprite = qg.field_u;
-                  var7.field_Mb.a(0, pg.field_e, qg.field_u.field_u + 3, (byte) -94, var9);
+                  var7.field_Mb.normalSprite = qg.displayNameChangedIcon;
+                  var7.field_Mb.a(0, pg.field_e, qg.displayNameChangedIcon.field_u + 3, (byte) -94, var9);
                   var12 = 1;
                 }
                 var7.field_Gb.field_bb = var11;
@@ -181,7 +181,7 @@ final class gk implements Iterable {
                 var13 = 0;
                 var14 = var7.field_K - 82;
                 if (var12 != 0) {
-                  var13 = qg.field_u.field_u + 3;
+                  var13 = qg.displayNameChangedIcon.field_u + 3;
                   var14 = var14 - var13;
                 }
                 stackIn_37_0 = var7.field_Eb;

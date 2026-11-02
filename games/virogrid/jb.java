@@ -6,7 +6,7 @@ final class jb extends rd {
     private wa field_F;
     private wa field_G;
     private boolean field_E;
-    static Sprite[] field_I;
+    static Sprite[] gamePrivacyIcons;
     private wa field_H;
 
     final boolean h(int param0) {
@@ -213,7 +213,7 @@ final class jb extends rd {
         if (param0 != -99) {
           return;
         }
-        field_I = null;
+        gamePrivacyIcons = null;
     }
 
     final int g(int param0) {

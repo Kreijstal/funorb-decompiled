@@ -383,7 +383,7 @@ final class pi {
               var12.field_Yb.a(var33_intLifetime1, pg.field_e, -2 + (-var33_intLifetime1 + 365), (byte) -80, var31);
               var34_int = dl.field_b;
               if ((var14Lifetime1 & 1 << rf.field_h) != 0) {
-                var51_ref = jb.field_I[var12.field_fc];
+                var51_ref = jb.gamePrivacyIcons[var12.field_fc];
                 var12.field_rc.normalSprite = var51_ref;
                 var12.field_rc.a(var34_int, var12.field_Yb.field_ub, var51_ref.field_u, (byte) -58, 0);
                 var34_int = var34_int + (dl.field_b + var51_ref.field_u);
@@ -395,7 +395,7 @@ final class pi {
                   stackIn_82_0 = 1;
                 }
                 var36 = stackIn_82_0;
-                stackIn_84_0 = lc.field_c;
+                stackIn_84_0 = lc.openToMeIcons;
                 if (var36 != 0) {
                   stackIn_85_1 = 1;
                 } else {
@@ -407,13 +407,13 @@ final class pi {
                 var34_int = var34_int + (dl.field_b + var52_ref.field_u);
               }
               if ((1 << qn.field_K & var14Lifetime1) != 0) {
-                var53_ref = ph.field_m[var12.field_lc - 1];
+                var53_ref = ph.allowSpectatorsIcons[var12.field_lc - 1];
                 var12.field_Fb.normalSprite = var53_ref;
                 var12.field_Fb.a(var34_int, var12.field_Yb.field_ub, var53_ref.field_u, (byte) -50, 0);
                 var34_int = var34_int + (dl.field_b + var53_ref.field_u);
               }
               if ((1 << bl.field_z & var14Lifetime1) != 0) {
-                stackIn_92_0 = CellAnimator.field_f;
+                stackIn_92_0 = CellAnimator.ratedGameIcons;
                 if (var12.field_Ub) {
                   stackIn_93_1 = 1;
                 } else {

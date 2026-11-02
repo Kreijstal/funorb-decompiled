@@ -24,7 +24,7 @@ final class jd {
         try {
           if (param0 != -685) {
             var5 = (rm[]) null;
-            jd.a((Js5Archive) null, (byte) -118, (int[]) null, (Js5Archive) null, (rm[]) null);
+            jd.loadLobbyResources((Js5Archive) null, (byte) -118, (int[]) null, (Js5Archive) null, (rm[]) null);
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
@@ -127,7 +127,7 @@ final class jd {
         this(-1, 1000000, 1000000);
     }
 
-    final static void a(Js5Archive param0, byte param1, int[] param2, Js5Archive param3, rm[] param4) {
+    final static void loadLobbyResources(Js5Archive param0, byte param1, int[] param2, Js5Archive param3, rm[] param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;

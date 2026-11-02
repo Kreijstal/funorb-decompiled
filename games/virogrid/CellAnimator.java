@@ -6,7 +6,7 @@ final class CellAnimator {
     bi field_j;
     int field_e;
     int selectedColumn;
-    static Sprite[] field_f;
+    static Sprite[] ratedGameIcons;
     static int[] field_i;
     byte[][] displayedCells;
     static byte[] field_a;
@@ -88,7 +88,7 @@ final class CellAnimator {
 
     final static ka a(byte param0, int param1) {
         if (param0 <= 63) {
-          field_f = (Sprite[]) null;
+          ratedGameIcons = (Sprite[]) null;
         }
         ka var2 = new ka();
         tf.field_a.a(var2, (byte) -50);
@@ -111,9 +111,9 @@ final class CellAnimator {
         field_a = null;
         field_i = null;
         if (param0 != -314) {
-          field_f = (Sprite[]) null;
+          ratedGameIcons = (Sprite[]) null;
         }
-        field_f = null;
+        ratedGameIcons = null;
     }
 
     final void resetToBoard(boolean param0) {

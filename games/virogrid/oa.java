@@ -30,7 +30,7 @@ final class oa extends ba {
         SpriteWidget var7 = null;
         SpriteWidget var3 = null;
         try {
-          qg.field_u = sn.a(param1, "display_name_changed", "basic", false);
+          qg.displayNameChangedIcon = sn.a(param1, "display_name_changed", "basic", false);
           ve.field_q = new ao(0L, gg.field_K, dc.field_Z, hm.field_a);
           lg.field_a = new ao(0L, gg.field_K, kh.field_a, a.field_A);
           dg.field_E = new SpriteWidget(0L, (SpriteWidget) null);

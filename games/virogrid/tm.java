@@ -290,10 +290,10 @@ final class tm extends IntrusiveNode {
           GameSession.field_f = param13;
           th.field_p = param10;
           GameBoard.field_d = param8;
-          jb.field_I = ke.a(32, param5, "lobby", "gameprivacy");
-          CellAnimator.field_f = ke.a(32, param5, "lobby", "ratedgame");
-          lc.field_c = ke.a(32, param5, "lobby", "opentome");
-          ph.field_m = ke.a(32, param5, "lobby", "allowspectators");
+          jb.gamePrivacyIcons = ke.a(32, param5, "lobby", "gameprivacy");
+          CellAnimator.ratedGameIcons = ke.a(32, param5, "lobby", "ratedgame");
+          lc.openToMeIcons = ke.a(32, param5, "lobby", "opentome");
+          ph.allowSpectatorsIcons = ke.a(32, param5, "lobby", "allowspectators");
           cj.field_b = new String[5];
           cj.field_b[1] = ob.field_a;
           cj.field_b[0] = vi.field_j;
@@ -394,7 +394,7 @@ final class tm extends IntrusiveNode {
           f.field_f[0] = new SpriteWidget(0L, ke.field_u, ul.field_b);
           oe.field_b[0] = new hk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            oe.field_b[0][var17_int + 1] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, jb.field_I[var17_int], cj.field_b[var17_int]);
+            oe.field_b[0][var17_int + 1] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, jb.gamePrivacyIcons[var17_int], cj.field_b[var17_int]);
           }
           if (2 <= vj.field_b.length) {
             f.field_f[1] = new SpriteWidget(0L, ke.field_u, wg.field_d);
@@ -406,7 +406,7 @@ final class tm extends IntrusiveNode {
             }
           }
           f.field_f[2] = new SpriteWidget(0L, ke.field_u, field_i);
-          oe.field_b[2] = new hk[]{new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, gn.field_I), new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, ph.field_m[0], vi.field_f), new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, ph.field_m[1], ej.field_F)};
+          oe.field_b[2] = new hk[]{new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, gn.field_I), new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, ph.allowSpectatorsIcons[0], vi.field_f), new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, ph.allowSpectatorsIcons[1], ej.field_F)};
           if (qi.field_f > 1) {
             f.field_f[3] = new SpriteWidget(0L, ke.field_u, sm.field_c);
             array$1 = new hk[1 + qi.field_f];

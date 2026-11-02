@@ -275,7 +275,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final boolean c(byte param0, boolean param1) {
+    private final boolean advanceLoading(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -1046,7 +1046,7 @@ public final class Virogrid extends od {
           stackIn_8_1 = (ih.field_b != null);
           this.a(stackIn_8_1, 121);
           if (i.field_w) {
-            this.t(param0 ^ 13);
+            this.openArchives(param0 ^ 13);
             i.field_w = false;
           }
           id.field_r = id.field_r + 1;
@@ -1058,14 +1058,14 @@ public final class Virogrid extends od {
             this.m(1);
             if (j.a(-1)) {
               if (MouseInputHandler.b(66)) {
-                discarded$0 = this.c((byte) -42, false);
+                discarded$0 = this.advanceLoading((byte) -42, false);
               }
               return;
             }
           }
           if (!i.field_H) {
             jb.a(og.field_b, param0 + 45);
-            if (this.c((byte) -42, true)) {
+            if (this.advanceLoading((byte) -42, true)) {
               i.field_H = true;
             }
           } else {
@@ -2036,7 +2036,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void t(int param0) {
+    private final void openArchives(int param0) {
         try {
           if (null != uh.field_e) {
             a.a(20, uh.field_e);

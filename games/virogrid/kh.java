@@ -173,19 +173,19 @@ final class kh {
           ai.a(param1, (um) null, (int[]) null, (String) null, 0L, (String) null, -1, param0, 60);
           if (param1 == 0) {
             var9 = md.field_e;
-            var11 = j.field_k[0];
+            var11 = j.chatFilterIcons[0];
             var29 = var11;
             var29Lifetime3 = var11;
             var10 = vb.field_d;
             var9.field_a.a(var10, (byte) 89, 11, var11);
             var12 = md.field_e;
-            var14 = j.field_k[1];
+            var14 = j.chatFilterIcons[1];
             var29Lifetime4 = var14;
             var29Lifetime5 = var14;
             var13 = ql.field_p;
             var12.field_a.a(var13, (byte) 89, 12, var14);
             var15 = md.field_e;
-            var17 = j.field_k[2];
+            var17 = j.chatFilterIcons[2];
             var29Lifetime6 = var17;
             var29Lifetime7 = var17;
             var16 = f.field_h;
@@ -193,19 +193,19 @@ final class kh {
           }
           if (1 == param1) {
             var18 = md.field_e;
-            var20 = j.field_k[0];
+            var20 = j.chatFilterIcons[0];
             var29Lifetime1 = var20;
             var29Lifetime1Lifetime1 = var20;
             var19 = pc.field_c;
             var18.field_a.a(var19, (byte) 89, 11, var20);
             var21 = md.field_e;
-            var23 = j.field_k[1];
+            var23 = j.chatFilterIcons[1];
             var29Lifetime1Lifetime2 = var23;
             var29Lifetime1Lifetime3 = var23;
             var22 = oa.field_u;
             var21.field_a.a(var22, (byte) 89, 12, var23);
             var24 = md.field_e;
-            var26 = j.field_k[2];
+            var26 = j.chatFilterIcons[2];
             var29Lifetime1Lifetime4 = var26;
             var29Lifetime1Lifetime5 = var26;
             var25 = la.field_m;
@@ -213,15 +213,15 @@ final class kh {
           }
           if (param1 == 2) {
             var27 = md.field_e;
-            var29Lifetime2 = j.field_k[0];
+            var29Lifetime2 = j.chatFilterIcons[0];
             var28 = bf.field_s;
             var27.field_a.a(var28, (byte) 89, 11, var29Lifetime2);
             var30 = md.field_e;
-            var32 = j.field_k[1];
+            var32 = j.chatFilterIcons[1];
             var31 = ql.field_f;
             var30.field_a.a(var31, (byte) 89, 12, var32);
             var33 = md.field_e;
-            var35 = j.field_k[2];
+            var35 = j.chatFilterIcons[2];
             var34 = mi.field_a;
             var33.field_a.a(var34, (byte) 89, 13, var35);
           }

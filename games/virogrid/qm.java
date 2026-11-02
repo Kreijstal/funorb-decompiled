@@ -252,15 +252,15 @@ final class qm extends SpriteWidget {
             var8 = 0;
             if (var6.field_Jb != null &&
               !var6.field_Jb.equals("")) {
-              var6.field_Mb.normalSprite = qg.field_u;
+              var6.field_Mb.normalSprite = qg.displayNameChangedIcon;
               var6.field_Mb.field_ab = 16737894;
               var8 = 1;
-              var6.field_Mb.a(0, pg.field_e, qg.field_u.field_u + 3, (byte) -60, 0);
+              var6.field_Mb.a(0, pg.field_e, qg.displayNameChangedIcon.field_u + 3, (byte) -60, 0);
             }
             var9 = 0;
             var10 = var6.field_K;
             if (var8 != 0) {
-              var9 = qg.field_u.field_u + 3;
+              var9 = qg.displayNameChangedIcon.field_u + 3;
               var10 = var10 - var9;
             }
             stackIn_21_0 = var6.field_Eb;

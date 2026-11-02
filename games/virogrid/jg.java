@@ -241,7 +241,7 @@ final class jg {
         int var20_int = 0;
         RuntimeException var20 = null;
         try {
-          jd.a(param15, (byte) 99, param17, param4, param11);
+          jd.loadLobbyResources(param15, (byte) 99, param17, param4, param11);
           oa.a((byte) -117, param4);
           tm.a(param19, 126, param12, param9, param14, param4, param5, param7, param2, param8, param6, param1, param18, param3, args);
           var20_int = -124 % ((param16 + 36) / 51);

@@ -55,7 +55,7 @@ final class ac {
                 kh.a(var5, var4_int, 20435);
               }
               var6 = id.a(var4_int, (byte) 119);
-              og.field_g[var4_int].normalSprite = j.field_k[var6];
+              og.field_g[var4_int].normalSprite = j.chatFilterIcons[var6];
               th.field_o[var4_int].field_V = hn.field_i[var6];
             }
           }

@@ -263,7 +263,7 @@ final class BufferedSocket implements Runnable {
           return;
         }
         ib.b(-94);
-        nf.a(td.field_j, j.field_k[0].field_u, pg.field_e, oc.field_k, -27, qi.field_d);
+        nf.a(td.field_j, j.chatFilterIcons[0].field_u, pg.field_e, oc.field_k, -27, qi.field_d);
     }
 
     protected final void finalize() {
